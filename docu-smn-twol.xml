@@ -1,0 +1,48 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V1.3//EN" "document-v13.dtd">
+<document>
+  <header>
+    <title>Documentation of the twol-smn.txt file</title>
+  </header>
+  <body>
+    <section id="Documentation_of_the_twol-smn.txt_file" >
+      <title>Documentation of the twol-smn.txt file</title>
+      <p>This file is written in the Koskenniemi-style twolc format. Given the frequent many-to-many-alternations in Inari Sá grammar, it would probably be better to write it in xfst.</p>
+      <p>Needless to say, the rule set is still preliminary.</p>
+      <section id="Alphabet_and_sets" >
+        <title>Alphabet and sets</title>
+        <p>The parser uses Latin 1 plus digraphs c1 d1 n1 s1 t1 z1 for the Sá letters, as in Northern Sámi. In addition, some morphographemes (h2, b3, etc) are added, this is for letter not undergoing the same changes as other h, b, etc.</p>
+        <p>The X1, Q1 etc. are diacritical symbols triggering morphophonological processes such as consonant gradation, etc.</p>
+      </section>
+      <section id="The_rules" >
+        <title>The rules</title>
+        <section id="Vowel_lengthening" >
+          <title>Vowel lengthening</title>
+          <p>tbw.</p>
+        </section>
+        <section id="Stem_vowel_alternation" >
+          <title>Stem vowel alternation</title>
+          <p>There are rules for vowel lenghtening (inserting V) and for â to a triggered by WeG and a lenghtening diacriticon X4.</p>
+        </section>
+        <section id="Consonant_gradation" >
+          <title>Consonant gradation</title>
+          <section id="Deletion_rule" >
+            <title>Deletion rule</title>
+            <p>The quantitative gradation is covered by the rule &quot;Gradation: Double Consonant&quot;, deleting the second of a double consonant in WeG environments.</p>
+          </section>
+          <section id="Change_rules" >
+            <title>Change rules</title>
+            <p>The parser contains the following alternation rules:</p>
+            <source>&quot;Qualitative Gradation of Simple Consonant&quot;
+&quot;III-I Gradation&quot;
+&quot;t:d1&quot;
+&quot;h:v&quot;
+</source>
+            <p>
+<!-- hhmts start -->Last modified: Mon Nov 15 09:12:30 2004 <!-- hhmts end -->            </p>
+          </section>
+        </section>
+      </section>
+    </section>
+  </body>
+</document>
