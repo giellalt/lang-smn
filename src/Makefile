@@ -14,9 +14,9 @@ ismn.fst: ../bin/ismn.fst
 	@printf "load ../bin/smn.save \n\
 	invert net \n\
 	save stack ../bin/ismn.fst \n\
-	quit \n" > /tmp/ismn-fst-script
-	@xfst < /tmp/ismn-fst-script
-	@rm -f /tmp/ismn-fst-script
+	quit \n" > ../../tmp/ismn-fst-script
+	@xfst < ../../tmp/ismn-fst-script
+	@rm -f ../../tmp/ismn-fst-script
 
 
 # This goal is to build the final analyser. It depends on all the files.
@@ -30,9 +30,9 @@ smn.fst: ../bin/smn.fst
 	@printf "read regex @\"../bin/smn.save\" .o. \
 	@\"../bin/caseconv.fst\"  ; \n\
 	save stack ../bin/smn.fst \n\
-	quit \n" > /tmp/smn-fst-script
-	@xfst < /tmp/smn-fst-script
-	@rm -f /tmp/smn-fst-script
+	quit \n" > ../../tmp/smn-fst-script
+	@xfst < ../../tmp/smn-fst-script
+	@rm -f ../../tmp/smn-fst-script
 
 
 # The second goal is to build the caseconv.fst file
@@ -47,9 +47,9 @@ caseconv.fst: ../bin/caseconv.fst
 	@echo
 	@printf "read regex < case.regex \n\
 	save stack ../bin/caseconv.fst \n\
-	quit \n" > /tmp/caseconv-script
-	@xfst < /tmp/caseconv-script
-	@rm -f /tmp/caseconv-script
+	quit \n" > ../../tmp/caseconv-smn-script
+	@xfst < ../../tmp/caseconv-smn-script
+	@rm -f ../../tmp/caseconv-smn-script
 
 
 # Another goal is to build a preprocessor.This goal depends on tok.txt
@@ -63,9 +63,9 @@ tok.fst: ../bin/tok.fst
 	@echo
 	@printf "source tok.txt \n\
 	save stack ../bin/tok.fst \n\
-	quit \n" > /tmp/tok-script
-	@xfst < /tmp/tok-script
-	@rm -f /tmp/tok-script
+	quit \n" > ../../tmp/tok-smn-script
+	@xfst < ../../tmp/tok-smn-script
+	@rm -f ../../tmp/tok-smn-script
 
 
 # The first goal is to build smn.save
@@ -89,9 +89,9 @@ smn.save: ../bin/smn.save
 	read-rules ../bin/twol-smn.bin \n\
 	compose-result \n\
 	save-result ../bin/smn.save \n\
-	quit \n" > /tmp/smn-save-script
-	@lexc < /tmp/smn-save-script
-	rm -f /tmp/smn-save-script
+	quit \n" > ../../tmp/smn-save-script
+	@lexc < ../../tmp/smn-save-script
+	rm -f ../../tmp/smn-save-script
 
 # The second goal is to build twol-smn.bin
 # This goal depends on twol-smn.txt
@@ -109,9 +109,9 @@ twol-smn.bin: ../bin/twol-smn.bin
 	@printf "read-grammar twol-smn.txt \n\
 	compile \n\
 	save-binary ../bin/twol-smn.bin \n\
-	quit \n" > /tmp/twol-smn-script
-	@twolc < /tmp/twol-smn-script
-	@rm -f /tmp/twol-smn-script
+	quit \n" > ../../tmp/twol-smn-script
+	@twolc < ../../tmp/twol-smn-script
+	@rm -f ../../tmp/twol-smn-script
 
 
 # Removing all binary files:
