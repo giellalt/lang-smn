@@ -1,0 +1,308 @@
+Multichar_Symbols
+ +N +A +Adv +V
+ +Pron +CS +CC +Adp +Po +Pr +Interj +Pcle
+ +Pers +Dem +Interr +Refl +Recipr +Rel +Indef
+ +Sg +Pl +Nom +Gen +Acc +Ill +Ine +Ela +Com +Ess +Par +Abe
+ +PxSg1 +PxSg2 +PxSg3 +PxDu1 +PxDu2 +PxDu3 +PxPl1 +PxPl2 +PxPl3
+ +Comp +Superl +Actor
+ +Clt +Attr
+ +Pass +Ind +Prs +Prt +Pot +Cond +Imprt +ImprtII +Sup
+ +Sg1 +Sg2 +Sg3 +Du1 +Du2 +Du3 +Pl1 +Pl2 +Pl3
+ +Inf +Act +Ger +GerII +ConNeg +Neg +PrsPrc +PrfPrc +VGen +VAbess
+ +CLB +PUNCT +HYPH +PAR
+ e1 c1 d1 i1 n1 o1 s1 t1 u1 z1
+ C1 D1 N1 S1 T1 Z1
+ g2 m2 n2 h2
+ b3 d3 g3 m3 h3
+ X1 X2 X3 X4 X5 X6 X7 X8 X9
+ Q1 Q2 Q3 Q4 Q5 Q6 Q7 Q8 Q9
+ Y1 Y2 Y3 Y4 Y5 Y6 Y7 Y8 Y9
+
+
+! =================================================
+! Basic lexica, pointing to the other lexicon files
+! =================================================
+  
+LEXICON Root
+ NounRoot ;
+! ProperNoun ;
+! AdjectiveRoot ;
+ VerbRoot ;
+! Adverb ;
+! Particle ;
+! Subjunction ;
+! Conjunction ;
+! Adposition ;
+! Postposition ;
+! Preposition ;
+! Interjection ;
+ Pronoun ;
+! Numeral ;
+ Punctuation ;
+
+
+
+! ======================
+! Sublexica for NounRoot
+! ======================
+
+
+! Even-syllable stems
+! -------------------
+
+! 2syll stems
+! - - - - - -
+
+LEXICON SOLLA 
+ +N: SOLLA-NEP ;
+ +N:X1 SOLLA-OBL ;
+ +N:X2 SOLLA-OBLSHORT ;
+
+! 4syll stems
+! - - - - - - 
+
+
+! Nominal substems
+! - - - - - - - -  
+
+LEXICON SOLLA-NEP
+ +Sg+Nom: K ;
+ +Ess:n K ;
+ +Par:d K ;
+
+LEXICON SOLLA-OBL
+ +Sg+Gen: K ;
+ +Sg+Acc: K ;
+ +Sg+Ill:n K ;
+ +Sg+Loc:st K ;
+ +Sg+Com:X3in K ;
+ +Sg+Com:X3·in K ;
+ +Pl+Nom:X4h K ;
+ +Pl+Gen:i K ;
+ +Pl+Acc:id K ;
+ +Pl+Ill:X3id K ;
+ +Pl+Ill:X3·id K ;
+ +Pl+Loc:in K ;
+
+
+LEXICON SOLLA-OBLSHORT
+ +Sg+Abe:tt·· K ;
+ +Pl+Gen:i K ;
+ +Pl+Com:iguim K ;
+ +Pl+Abe:itt·· K ;
+
+! Odd-syllable stems
+! ------------------
+
+LEXICON LITTER
+# ;
+
+LEXICON JIEREEH
+# ;
+
+
+
+
+! Odd-syllable stems, sublexica
+! - - - - - - - - - - - - - - - 
+
+
+
+
+
+! Contracted stems
+! ----------------
+
+
+
+
+! ===========================
+! Sublexica for AdjectiveRoot
+! ===========================
+
+! Even-syllable stems
+! -------------------
+
+! Odd-syllable stems
+! ------------------
+! Contracted stems
+! ----------------
+
+! Comparation
+! -----------
+ 
+
+! Comparative
+! -----------
+
+
+! Superlative
+! -----------
+
+
+
+
+
+! ======================
+! Sublexica for VerbRoot
+! ======================
+
+! Even-syllable stems
+! -------------------
+
+! Odd-syllable stems
+! ------------------
+! Contracted stems
+! ----------------
+
+
+! Intermediate suffix lexica
+! --------------------------
+
+
+! Final suffix lexica
+! -------------------
+
+! Suffix series I
+! - - - - - - - - 
+
+LEXICON EVEN-I
++Sg1:m K ;
++Sg2:h K ;
++Sg3:j K ;
++Du1:jm K ;
++Du2:jd K ;
++Du3:jn K ;
++Pl1:jm K ;
++Pl2:jd K ;
++Pl3:i K ;
+
+LEXICON POT-I
++Sg1:eem K ;
++Sg2:eeh K ;
++Sg3: K ;
++Du1:een K ;
++Du2:vettee K ;
++Du3:uv K ;
++Pl1:ep K ;
++Pl2:vetted1 K ;
++Pl3:eh K ;
+
+
+! Suffix series II
+! - - - - - - - - 
+
+LEXICON ODD-II
++Sg1:m K ;
++Sg2:h K ;
++Sg3:j K ;
++Du1:jm K ;
++Du2:jd K ;
++Du3:jn K ;
++Pl1:jm K ;
++Pl2:jd K ;
++Pl3:i K ;
+
+LEXICON ODD-II-DU
++Du1:jm K ;
++Du2:jd K ;
++Du3:jn K ;
+
+! Other series
+! - - - - - - 
+
+
+! Auxiliary verbs
+! ---------------
+
+LEXICON NEG
++Prs+Sg1:jiem K ;
++Prs+Sg2:jieh K ;
++Prs+Sg3:ij K ;
++Prs+Du1:i‰n K ;
++Prs+Du1:e‰n K ;
++Prs+Du2:eppee K ;
++Prs+Du3:i‰v· K ;
++Prs+Du3:e‰v· K ;
++Prs+Pl1:ep K ;
++Prs+Pl2:epped1 K ;
++Prs+Pl3:i‰ K ;
++Prs+Pl3:e‰v· K ;
+
++Imprt+Sg1:i‰llum  K ;
++Imprt+Sg1:e‰llum  K ;
++Imprt+Sg2:ele K ;
++Imprt+Sg3:i‰llus K ;
++Imprt+Sg3:e‰llus K ;
++Imprt+Du1:i‰lloon K ;
++Imprt+Du1:e‰lloon K ;
++Imprt+Du2:ellee K ;
++Imprt+Du3:i‰llus K ;
++Imprt+Du3:e‰llus K ;
++Imprt+Pl1:i‰llup K ;
++Imprt+Pl1:e‰llup K ;
++Imprt+Pl2:elled1 K ;
++Imprt+Pl3:i‰llus K ;
++Imprt+Pl3:e‰llus K ;
+
++Opt+Sg2:e‰lu K ;
++Opt+Sg2:i‰lu K ;
++Opt+Du2:e‰llu K ;
++Opt+Du2:i‰llu K ;
++Opt+Pl2:e‰llud1 K ;
++Opt+Pl2:i‰llud1 K ;
+
++Sup:am‚s K ;
++Sup:emis K ;
+
+LEXICON LEDE
++Inf:led1e K ;
+
+! Present
++Prs+Sg1:lam K ;
++Prs+Sg2:lah K ;
++Prs+Sg3:lii K ;
++Prs+Du1:leen K ;
++Prs+Du1:laan K ;
++Prs+Du1:l··n K ;
++Prs+Du2:leppee K ;
++Prs+Du3:lava K ;
++Prs+Du3:l·v· K ;
++Prs+Pl1:lep K ;
++Prs+Pl2:lepped1 K ;
++Prs+Pl3:laa K ;
++Prs+Pl3:l·· K ;
+
+! Past
++Prt+Sg1:lijjim K ;
++Prt+Sg2:lijjih K ;
++Prt+Sg3:lai K ;
++Prt+Sg3:lei K ;
++Prt+Du1:l·im K ;
++Prt+Du1:l··im K ;
++Prt+Du1:leim K ;
++Prt+Du2:l·id K ;
++Prt+Du2:l··id K ;
++Prt+Du2:leid K ;
++Prt+Du3:l·in K ;
++Prt+Du3:l··in K ;
++Prt+Du3:lein K ;
++Prt+Pl1:leim K ;
++Prt+Pl2:leid K ;
++Prt+Pl3:lijjii K ;
+
+! Conditional
++Cond+Prs:lic1c1 ODD-II ;
++Cond+Prs:lic1c1i ODD-II-DU ;
+
+!Potential
++Pot+Prs:lez1z1 POT-I ;
+
+
+! Sublexica for possessive suffixes
+! =================================
+
+
+LEXICON K
+ # ;
+! +Clt:clitic # ;

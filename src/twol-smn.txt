@@ -1,0 +1,146 @@
+Alphabet
+ a á â ä b c d e f g h i j k l m n o õ p q
+ r s t u v w x y z æ ä ø ö å %- ':0 
+ c1 d1 n1 t1 s1 z1
+
+! c1 d1 n1 s1 t1 z1 as in Northern Sámi
+
+ A Á Â Å B C D E F G H I J K L M N O Õ P Q2
+ R S T U V W X Y Z Æ Ä Ø Ö 
+ C1 D1 G1 G2 K1 N1 T1 S1 Q Q1 Z1
+
+ É Ó Ú Í À È Ò Ù Ì Ë Ü Ï Ê Ô Û Î Ã Ý þ Ð
+ é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý þ ð ß ª ß ç
+
+ h2:h g2:g m2:m n2:n 
+ b3:b d3:d g3:g m3:m h3:h 
+
+ X1:0 X2:0 X3:0 X4:0 X5:0 X6:0 X7:0 X8:0 X9:0
+ Q1:0 Q2:0 Q3:0 Q4:0 Q5:0 Q6:0 Q7:0 Q8:0 Q9:0 Q:0
+ Y1:0 Y2:0 Y3:0 Y4:0 Y5:0 Y6:0 Y7:0 Y8:0 ;
+
+Sets
+ Vow = a á â ä e i o u y æ ø ö å
+       é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý 
+       A Á Â Ä E I O U Y Æ Ø Ö Å
+       É Ó Ú Í À È Ò Ú Ì Ë Ü Ï Ê Ô Û Î Ã Ý ;
+ Cns = b c c1 d d1 f g h j k l m n n1 
+       p q r s s1 t t1 v w x z z1
+       B C C1 D D1 F G H J K L M N N1
+       P Q R S S1 T T1 V W X Z Z1 ;
+! DelCns = g2 m2 n2 h2 ;
+ WeG = X1 X2 ;
+ WG2 = Q9 ;
+ StemCns = b b3 d d3 g g2 g3 h h2 h3 j l m m2 m3 n n2 ñ r s ;
+ Dummy = X1 X2 X3 X4 ;
+
+
+Rules
+
+
+! Consonant alternations in certain pos
+! -------------------------------------
+
+
+! Vowel lengthening
+! -----------------
+
+
+
+
+
+! Stem vowel alternations
+! -----------------------
+
+! General alternations
+! - - - - - - - - - - 
+
+"Stem Vowel Lengthening in Weak Grade"
+ 0:Vx <=> Vx _ Cns: Cns: Vow: X1:0 ;
+      where Vx in ( i e ä á â a o u ) ;
+! tullâ : tuulâX2
+
+"Stem Vowel Change in Comitative"
+ Vx:Vy <=> _ X1:0 X3:0 ;
+       where Vx in ( â e )
+	     Vy in ( á i )
+	     matched ;
+! mielgâ : mielgX3áin
+! alge : olgijn
+! and the umlaut must be fixed as well...
+
+
+! â-stem alternations
+! - - - - - - - - - -
+
+"â:a in NomPl"
+ â:a <=> _ X1:0 X4:0 ;
+! tulla : tuulah
+
+
+! a-stem alternations
+! - - - - - - - - - -
+
+
+! e-stem alternations
+! - - - - - - - - - -
+
+
+! o-stem alternations
+! - - - - - - - - - -
+
+
+! alternations valid for several stem types
+! - - - - - - - - - - - - - - - - - - - - -
+
+
+
+
+
+! Diphtong simplification
+! -----------------------
+
+
+
+ 
+
+! Consonant gradation rules
+! -------------------------
+
+! Deletion rules
+! - - - - - - - -
+
+
+"Gradation: Double Consonant" !káffe:káfes
+  Cx:0 <=> Vow: (0:) Cy _ Vow ( StemCns:) (:StemCns) (Dummy:*) WeG: ;
+	where Cx in (p t k b d g m n n1 d1 s z r s1 z1 l)
+	      Cy in (p t k b d g m n n1 d1 s z r s1 z1 l)
+	      matched ;
+
+
+! Change rules
+! - - - - - - 
+
+
+"Qualitative Gradation of Simple Consonant"
+Cx:Cy <=> Vow: (0:) _ Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ;
+      where Cx in ( p t k c c1 h )
+	    Cy in ( v d1 h s j v )
+	    matched ;
+
+"III-I Gradation" ! tentative rule
+Cx:Cy <=> Vow: Cx:0 (0:) _ Vow: ( StemCns:) (:StemCns) (Dummy:*) WG2: ;
+      where Cx in ( p t k c c1 h )
+	    Cy in ( v d1 h s j v )
+	    matched ;
+
+
+"t:d1"
+ t:d1 <=> Vow:* (0:) _ ( t:0 ) Vow: WeG: ;
+
+
+"h:v"
+ h:v <=> Vow:* (0:) _ Vow: WeG: ;
+
+
+
