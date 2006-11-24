@@ -1,16 +1,16 @@
 Alphabet
- a á â ä b c d e f g h i j k l m n o õ p q
- r s t u v w x y z æ ä ø ö å %- ':0 
+ a Ã¡ Ã¢ Ã¤ b c d e f g h i j k l m n o Ãµ p q
+ r s t u v w x y z Ã¦ Ã¤ Ã¸ Ã¶ Ã¥ %- ':0 
  c1 d1 n1 t1 s1 z1
 
-! c1 d1 n1 s1 t1 z1 as in Northern Sámi
+! c1 d1 n1 s1 t1 z1 as in Northern SÃ¡mi
 
- A Á Â Å B C D E F G H I J K L M N O Õ P Q2
- R S T U V W X Y Z Æ Ä Ø Ö 
+ A Ã Ã‚ Ã… B C D E F G H I J K L M N O Ã• P Q2
+ R S T U V W X Y Z Ã† Ã„ Ã˜ Ã– 
  C1 D1 G1 G2 K1 N1 T1 S1 Q Q1 Z1
 
- É Ó Ú Í À È Ò Ù Ì Ë Ü Ï Ê Ô Û Î Ã İ ş Ğ
- é ó ú í à è ò ù ì ë ü ï ê ô û î ã ı ş ğ ß ª ß ç
+ Ã‰ Ã“ Ãš Ã Ã€ Ãˆ Ã’ Ã™ ÃŒ Ã‹ Ãœ Ã ÃŠ Ã” Ã› Ã Ãƒ Ã Ã¾ Ã
+ Ã© Ã³ Ãº Ã­ Ã  Ã¨ Ã² Ã¹ Ã¬ Ã« Ã¼ Ã¯ Ãª Ã´ Ã» Ã® Ã£ Ã½ Ã¾ Ã° ÃŸ Âª ÃŸ Ã§
 
  h2:h g2:g m2:m n2:n 
  b3:b d3:d g3:g m3:m h3:h 
@@ -20,10 +20,10 @@ Alphabet
  Y1:0 Y2:0 Y3:0 Y4:0 Y5:0 Y6:0 Y7:0 Y8:0 ;
 
 Sets
- Vow = a á â ä e i o u y æ ø ö å
-       é ó ú í à è ò ù ì ë ü ï ê ô û î ã ı 
-       A Á Â Ä E I O U Y Æ Ø Ö Å
-       É Ó Ú Í À È Ò Ú Ì Ë Ü Ï Ê Ô Û Î Ã İ ;
+ Vow = a Ã¡ Ã¢ Ã¤ e i o u y Ã¦ Ã¸ Ã¶ Ã¥
+       Ã© Ã³ Ãº Ã­ Ã  Ã¨ Ã² Ã¹ Ã¬ Ã« Ã¼ Ã¯ Ãª Ã´ Ã» Ã® Ã£ Ã½ 
+       A Ã Ã‚ Ã„ E I O U Y Ã† Ã˜ Ã– Ã…
+       Ã‰ Ã“ Ãš Ã Ã€ Ãˆ Ã’ Ãš ÃŒ Ã‹ Ãœ Ã ÃŠ Ã” Ã› Ã Ãƒ Ã ;
  Cns = b c c1 d d1 f g h j k l m n n1 
        p q r s s1 t t1 v w x z z1
        B C C1 D D1 F G H J K L M N N1
@@ -31,7 +31,7 @@ Sets
 ! DelCns = g2 m2 n2 h2 ;
  WeG = X1 X2 ;
  WG2 = Q9 ;
- StemCns = b b3 d d3 g g2 g3 h h2 h3 j l m m2 m3 n n2 ñ r s ;
+ StemCns = b b3 d d3 g g2 g3 h h2 h3 j l m m2 m3 n n2 Ã± r s ;
  Dummy = X1 X2 X3 X4 ;
 
 
@@ -57,24 +57,24 @@ Rules
 
 "Stem Vowel Lengthening in Weak Grade"
  0:Vx <=> Vx _ Cns: Cns: Vow: X1:0 ;
-      where Vx in ( i e ä á â a o u ) ;
-! tullâ : tuulâX2
+      where Vx in ( i e Ã¤ Ã¡ Ã¢ a o u ) ;
+! tullÃ¢ : tuulÃ¢X2
 
 "Stem Vowel Change in Comitative"
  Vx:Vy <=> _ X1:0 X3:0 ;
-       where Vx in ( â e )
-	     Vy in ( á i )
+       where Vx in ( Ã¢ e )
+	     Vy in ( Ã¡ i )
 	     matched ;
-! mielgâ : mielgX3áin
+! mielgÃ¢ : mielgX3Ã¡in
 ! alge : olgijn
 ! and the umlaut must be fixed as well...
 
 
-! â-stem alternations
+! Ã¢-stem alternations
 ! - - - - - - - - - -
 
-"â:a in NomPl"
- â:a <=> _ X1:0 X4:0 ;
+"Ã¢:a in NomPl"
+ Ã¢:a <=> _ X1:0 X4:0 ;
 ! tulla : tuulah
 
 
@@ -111,7 +111,7 @@ Rules
 ! - - - - - - - -
 
 
-"Gradation: Double Consonant" !káffe:káfes
+"Gradation: Double Consonant" !kÃ¡ffe:kÃ¡fes
   Cx:0 <=> Vow: (0:) Cy _ Vow ( StemCns:) (:StemCns) (Dummy:*) WeG: ;
 	where Cx in (p t k b d g m n n1 d1 s z r s1 z1 l)
 	      Cy in (p t k b d g m n n1 d1 s z r s1 z1 l)
