@@ -15,7 +15,7 @@ ismn.fst: ../bin/ismn.fst
 	invert net \n\
 	save stack ../bin/ismn.fst \n\
 	quit \n" > ../../tmp/ismn-fst-script
-	@xfst < ../../tmp/ismn-fst-script
+	@xfst -utf8 < ../../tmp/ismn-fst-script
 	@rm -f ../../tmp/ismn-fst-script
 
 
@@ -31,7 +31,7 @@ smn.fst: ../bin/smn.fst
 	@\"../bin/caseconv.fst\"  ; \n\
 	save stack ../bin/smn.fst \n\
 	quit \n" > ../../tmp/smn-fst-script
-	@xfst < ../../tmp/smn-fst-script
+	@xfst -utf8 < ../../tmp/smn-fst-script
 	@rm -f ../../tmp/smn-fst-script
 
 
@@ -48,7 +48,7 @@ caseconv.fst: ../bin/caseconv.fst
 	@printf "read regex < case.regex \n\
 	save stack ../bin/caseconv.fst \n\
 	quit \n" > ../../tmp/caseconv-smn-script
-	@xfst < ../../tmp/caseconv-smn-script
+	@xfst -utf8 < ../../tmp/caseconv-smn-script
 	@rm -f ../../tmp/caseconv-smn-script
 
 
@@ -64,7 +64,7 @@ tok.fst: ../bin/tok.fst
 	@printf "source tok.txt \n\
 	save stack ../bin/tok.fst \n\
 	quit \n" > ../../tmp/tok-smn-script
-	@xfst < ../../tmp/tok-smn-script
+	@xfst -utf8 < ../../tmp/tok-smn-script
 	@rm -f ../../tmp/tok-smn-script
 
 
@@ -90,7 +90,7 @@ smn.save: ../bin/smn.save
 	compose-result \n\
 	save-result ../bin/smn.save \n\
 	quit \n" > ../../tmp/smn-save-script
-	@lexc < ../../tmp/smn-save-script
+	@lexc -utf8 < ../../tmp/smn-save-script
 	rm -f ../../tmp/smn-save-script
 
 # The second goal is to build twol-smn.bin
@@ -110,7 +110,7 @@ twol-smn.bin: ../bin/twol-smn.bin
 	compile \n\
 	save-binary ../bin/twol-smn.bin \n\
 	quit \n" > ../../tmp/twol-smn-script
-	@twolc < ../../tmp/twol-smn-script
+	@twolc -utf8 < ../../tmp/twol-smn-script
 	@rm -f ../../tmp/twol-smn-script
 
 
