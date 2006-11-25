@@ -1,13 +1,13 @@
 Alphabet
  a á â ä b c d e f g h i j k l m n o õ p q
  r s t u v w x y z æ ä ø ö å %- ':0 
- c1 d1 n1 t1 s1 z1
+ č đ ŋ ŧ š ž
 
-! c1 d1 n1 s1 t1 z1 as in Northern Sámi
+! č đ ŋ š ŧ ž as in Northern Sámi
 
  A Á Â Å B C D E F G H I J K L M N O Õ P Q2
  R S T U V W X Y Z Æ Ä Ø Ö 
- C1 D1 G1 G2 K1 N1 T1 S1 Q Q1 Z1
+ č Đ G1 G2 K1 Ŋ Ŧ Š Q Q1 Ž
 
  É Ó Ú Í À È Ò Ù Ì Ë Ü Ï Ê Ô Û Î Ã Ý þ Ð
  é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý þ ð ß ª ß ç
@@ -24,10 +24,10 @@ Sets
        é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý 
        A Á Â Ä E I O U Y Æ Ø Ö Å
        É Ó Ú Í À È Ò Ú Ì Ë Ü Ï Ê Ô Û Î Ã Ý ;
- Cns = b c c1 d d1 f g h j k l m n n1 
-       p q r s s1 t t1 v w x z z1
-       B C C1 D D1 F G H J K L M N N1
-       P Q R S S1 T T1 V W X Z Z1 ;
+ Cns = b c č d đ f g h j k l m n ŋ 
+       p q r s š t ŧ v w x z ž
+       B C č D D1 F G H J K L M N N1
+       P Q R S S1 T T1 V W X Z Ž ;
 ! DelCns = g2 m2 n2 h2 ;
  WeG = X1 X2 ;
  WG2 = Q9 ;
@@ -113,8 +113,8 @@ Rules
 
 "Gradation: Double Consonant" !káffe:káfes
   Cx:0 <=> Vow: (0:) Cy _ Vow ( StemCns:) (:StemCns) (Dummy:*) WeG: ;
-	where Cx in (p t k b d g m n n1 d1 s z r s1 z1 l)
-	      Cy in (p t k b d g m n n1 d1 s z r s1 z1 l)
+	where Cx in (p t k b d g m n ŋ đ s z r š ž l)
+	      Cy in (p t k b d g m n ŋ đ s z r š ž l)
 	      matched ;
 
 
@@ -124,19 +124,19 @@ Rules
 
 "Qualitative Gradation of Simple Consonant"
 Cx:Cy <=> Vow: (0:) _ Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ;
-      where Cx in ( p t k c c1 h )
-	    Cy in ( v d1 h s j v )
+      where Cx in ( p t k c č h )
+	    Cy in ( v đ h s j v )
 	    matched ;
 
 "III-I Gradation" ! tentative rule
 Cx:Cy <=> Vow: Cx:0 (0:) _ Vow: ( StemCns:) (:StemCns) (Dummy:*) WG2: ;
-      where Cx in ( p t k c c1 h )
-	    Cy in ( v d1 h s j v )
+      where Cx in ( p t k c č h )
+	    Cy in ( v đ h s j v )
 	    matched ;
 
 
-"t:d1"
- t:d1 <=> Vow:* (0:) _ ( t:0 ) Vow: WeG: ;
+"t:đ"
+ t:đ <=> Vow:* (0:) _ ( t:0 ) Vow: WeG: ;
 
 
 "h:v"
