@@ -1,13 +1,15 @@
 Alphabet
  a á â ä b c d e f g h i j k l m n o õ p q
- r s t u v w x y z æ ä ø ö å %- ':0 
+ r s t u v w x y z æ ä ø ö å
  č đ ŋ ŧ š ž
 
 ! č đ ŋ š ŧ ž as in Northern Sámi
 
- A Á Â Å B C D E F G H I J K L M N O Õ P Q2
- R S T U V W X Y Z Æ Ä Ø Ö 
- č Đ G1 G2 K1 Ŋ Ŧ Š Q Q1 Ž
+ A Á Â Å B C D E F G H I J K L M N O Õ P Q
+ R S T U V W X Y Z Æ Ä Ø Ö Å 
+ Č Đ Ŋ Ŧ Š Ž 
+
+ %- ':0 
 
  É Ó Ú Í À È Ò Ù Ì Ë Ü Ï Ê Ô Û Î Ã Ý þ Ð
  é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý þ ð ß ª ß ç
@@ -17,7 +19,8 @@ Alphabet
 
  X1:0 X2:0 X3:0 X4:0 X5:0 X6:0 X7:0 X8:0 X9:0
  Q1:0 Q2:0 Q3:0 Q4:0 Q5:0 Q6:0 Q7:0 Q8:0 Q9:0 Q:0
- Y1:0 Y2:0 Y3:0 Y4:0 Y5:0 Y6:0 Y7:0 Y8:0 ;
+ Y1:0 Y2:0 Y3:0 Y4:0 Y5:0 Y6:0 Y7:0 Y8:0 
+ %^SHV:0 ;
 
 Sets
  Vow = a á â ä e i o u y æ ø ö å
@@ -55,9 +58,9 @@ Rules
 ! General alternations
 ! - - - - - - - - - - 
 
-"Stem Vowel Lengthening in Weak Grade"
- 0:Vx <=> Vx _ Cns: Cns: Vow: X2:0 ;
-      where Vx in ( i e ä á â a o u ) ;
+!"Stem Vowel Lengthening in Weak Grade"
+! 0:Vx <=> Vx _ Cns: Cns: Vow: X2:0 ;
+!      where Vx in ( i e ä á â a o u ) ;
 ! tullâ : tuulâX2
 
 "Stem Vowel Change in Comitative"
@@ -90,6 +93,15 @@ Rules
 ! - - - - - - - - - -
 
 
+! Cns stem alternations
+! - - - - - - - - - -
+
+"Long vowel shortening in Cns stems"
+Vx:0 <=> Cns:* Vx _ Cns %^SHV:0 ;
+     where Vx in (á i);
+
+
+
 ! alternations valid for several stem types
 ! - - - - - - - - - - - - - - - - - - - - -
 
@@ -112,7 +124,7 @@ Rules
 
 
 "Gradation: Double Consonant" !káffe:káfes
-  Cx:0 <=> Vow: (0:) Cy _ Vow ( StemCns:) (:StemCns) (Dummy:*) WeG: ;
+  Cx:0 <=> Vow: Cy _ Vow ( StemCns:) (:StemCns) (Dummy:*) WeG: ;
 	where Cx in (p t k b d g m n ŋ đ s z r š ž l)
 	      Cy in (p t k b d g m n ŋ đ s z r š ž l)
 	      matched ;
@@ -142,24 +154,24 @@ Rules
 
 
 "Qualitative Gradation of Simple Consonant"
-Cx:Cy <=> Vow: (0:) _ Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ;
+Cx:Cy <=> Vow:  _ Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ;
       where Cx in ( p t k c č h )
 	    Cy in ( v đ h s j v )
 	    matched ;
 
 "III-I Gradation" ! tentative rule
-Cx:Cy <=> Vow: Cx:0 (0:) _ Vow: ( StemCns:) (:StemCns) (Dummy:*) WG2: ;
+Cx:Cy <=> Vow: Cx:0  _ Vow: ( StemCns:) (:StemCns) (Dummy:*) WG2: ;
       where Cx in ( p t k c č h )
 	    Cy in ( v đ h s j v )
 	    matched ;
 
 
 "t:đ"
- t:đ <=> Vow:* (0:) _ ( t:0 ) Vow: WeG: ;
+ t:đ <=> Vow:*  _ ( t:0 ) Vow: WeG: ;
 
 
 "h:v"
- h:v <=> Vow:* (0:) _ (c|č|t) Vow: WeG: ;
+ h:v <=> Vow:*  _ (c|č|t) Vow: WeG: ;
 
 
 ! "kk:h" ákku
