@@ -6,7 +6,7 @@ Multichar_Symbols
  +Sg +Pl +Nom +Gen +Acc +Ill +Ine +Ela +Com +Ess +Par +Abe
  +PxSg1 +PxSg2 +PxSg3 +PxDu1 +PxDu2 +PxDu3 +PxPl1 +PxPl2 +PxPl3
  +Comp +Superl +Actor
- +Clt +Attr
+ +Qst +Foc +Attr
  +Pass +Ind +Prs +Prt +Pot +Cond +Imprt +ImprtII +Sup
  +Sg1 +Sg2 +Sg3 +Du1 +Du2 +Du3 +Pl1 +Pl2 +Pl3
  +Inf +Act +Ger +GerII +ConNeg +Neg +PrsPrc +PrfPrc +VGen +VAbess
@@ -17,7 +17,7 @@ Multichar_Symbols
  X1 X2 X3 X4 X5 X6 X7 X8 X9
  Q1 Q2 Q3 Q4 Q5 Q6 Q7 Q8 Q9
  Y1 Y2 Y3 Y4 Y5 Y6 Y7 Y8 Y9
-
+ %^SHV
 
 ! =================================================
 ! Basic lexica, pointing to the other lexicon files
@@ -109,11 +109,13 @@ LEXICON KUOSA
 ! Odd-syllable stems
 ! ------------------
 
-LEXICON LITTER
-# ;
+LEXICON LITTER ! 2nd syll vowel does not alternate
+ +N: ODD-SUFF-LONGSTEM ;
+ +N: ODD-SUFF-SHORTSTEM ;
 
-LEXICON JIEREEH
-# ;
+LEXICON JIEREEH ! 2nd syll vowel shortenes
+ +N:      ODD-SUFF-LONGSTEM ;
+ +N:%^SHV ODD-SUFF-SHORTSTEM ;
 
 LEXICON IMMEEL
 # ;
@@ -130,8 +132,31 @@ LEXICON UAIVAT
 ! Odd-syllable stems, sublexica
 ! - - - - - - - - - - - - - - - 
 
+LEXICON ODD-SUFF-LONGSTEM
+ +Sg+Nom: K ;
+ +Sg+Gen: K ;
+ +Sg+Acc: K ;
+ +Sg+Ill:%>ân K ;
 
+LEXICON ODD-SUFF-SHORTSTEM
+ +Sg+Loc:%>ist K ;
+ +Sg+Com:%>áin K ;
+ +Sg+Com:%>ááin K ;
+ +Sg+Abe:%>ttáá K ;
+ +Ess:%>in K ;
+ +Par:%>id K ;
+ +Sg+Nom:%>eh K ;
+ +Sg+Gen:%>ij K ;
+ +Sg+Acc:%>ijd K ;
+ +Sg+Ill:%>áid K ;
+ +Sg+Ill:%>ááid K ;
+ +Sg+Loc:%>ijn K ;
+ +Sg+Com:%>ijgijn K ;
+ +Sg+Com:%>ijgui'm K ;
+ +Sg+Abe:%>ijttáá K ;
 
+!LEXICON ODD-SUFF-MIXSTEM
+! # ;
 
 
 ! Contracted stems
@@ -174,6 +199,9 @@ LEXICON UAIVAT
 ! Even-syllable stems
 ! -------------------
 
+LEXICON VUOLLAD
++V: EVEN-I ;
+
 ! Odd-syllable stems
 ! ------------------
 ! Contracted stems
@@ -191,46 +219,46 @@ LEXICON UAIVAT
 ! - - - - - - - - 
 
 LEXICON EVEN-I
-+Sg1:m K ;
-+Sg2:h K ;
-+Sg3:j K ;
-+Du1:jm K ;
-+Du2:jd K ;
-+Du3:jn K ;
-+Pl1:jm K ;
-+Pl2:jd K ;
-+Pl3:i K ;
++Sg1:%>m K ;
++Sg2:%>h K ;
++Sg3:%>X1 K ;
++Du1:%>een K ;
++Du2:%>vettee K ;
++Du3:%>v K ;
++Pl1:%>jm K ;
++Pl2:%>jd K ;
++Pl3:%>i K ;
 
 LEXICON POT-I
-+Sg1:eem K ;
-+Sg2:eeh K ;
++Sg1:%>eem K ;
++Sg2:%>eeh K ;
 +Sg3: K ;
-+Du1:een K ;
-+Du2:vettee K ;
-+Du3:uv K ;
-+Pl1:ep K ;
-+Pl2:vetteđ K ;
-+Pl3:eh K ;
++Du1:%>een K ;
++Du2:%>vettee K ;
++Du3:%>uv K ;
++Pl1:%>ep K ;
++Pl2:%>vetteđ K ;
++Pl3:%>eh K ;
 
 
 ! Suffix series II
 ! - - - - - - - - 
 
 LEXICON ODD-II
-+Sg1:m K ;
-+Sg2:h K ;
-+Sg3:j K ;
-+Du1:jm K ;
-+Du2:jd K ;
-+Du3:jn K ;
-+Pl1:jm K ;
-+Pl2:jd K ;
-+Pl3:i K ;
++Sg1:%>m K ;
++Sg2:%>h K ;
++Sg3:%>j K ;
++Du1:%>jm K ;
++Du2:%>jd K ;
++Du3:%>jn K ;
++Pl1:%>jm K ;
++Pl2:%>jd K ;
++Pl3:%>i K ;
 
 LEXICON ODD-II-DU
-+Du1:jm K ;
-+Du2:jd K ;
-+Du3:jn K ;
++Du1:%>jm K ;
++Du2:%>jd K ;
++Du3:%>jn K ;
 
 ! Other series
 ! - - - - - - 
@@ -328,5 +356,11 @@ LEXICON LEDE
 
 
 LEXICON K
- # ;
++Qst:go # ;
++Foc:gân # ;
++Foc:gâs # ;
++Foc:ges # ;
++Foc:gis # ;
++Foc:gin # ;
+
 ! +Clt:clitic # ;
