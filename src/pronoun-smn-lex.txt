@@ -1,0 +1,159 @@
+! Pronouns
+! ========
+
+! Pointing to all the pronominal subgroups
+LEXICON Pronoun
+Personal ;
+Demonstrative ;
+Reflexive ;
+! Reciprocal ;
+Interrogative ;
+! Relative ;
+! Indefinite ;
+
+
+! Personal pronouns
+! -----------------
+
+LEXICON Personal
+mun+Pron+Pers:m perspron ;
+tun+Pron+Pers:t perspron ;
+sun+Pron+Pers:s perspron ;
+
+LEXICON perspron
+:u	    perspronsgdu ;
+:i	    perspronpl ;
+
+
+LEXICON perspronsgdu
++Sg+Nom:n	K ;
++Sg+Gen:u	      K ;
++Sg+Acc:u	      K ;
++Sg+Ill:njin	      K ;
++Sg+Loc:st	      K ;
++Sg+Loc:ste	      K ;
++Sg+Com:in	      K ;
++Sg+Com:uin	      K ;
++Sg+Abe:utáá	      K ;
++Sg+Ess:nen	      K ;
++Sg+Par:d1e	      K ;
++Du+Nom:oi	K ;
++Du+Gen:nnuu	      K ;
++Du+Acc:nnuu	      K ;
++Du+Ill:nnui	      K ;
++Du+Loc:nnust	      K ;
++Du+Com:nnuin	      K ;
++Du+Com:nnuuin	      K ;
++Du+Abe:nnuuttáá      K ;
++Du+Ess:nnun	      K ;
++Du+Par:nnud	      K ;
+
+LEXICON perspronpl
++Pl+Nom:j		K ;
++Pl+Gen:i	      K ;
++Pl+Acc:j	      K ;
++Pl+Ill:jjân	      K ;
++Pl+Loc:st	      K ;
++Pl+Loc:ste	      K ;
++Pl+Com:iguim	      K ;
++Pl+Abe:ittáá	      K ;
++Pl+Ess:nen	      K ;
++Pl+Par:d1e	      K ;
+
+
+
+! Demonstrative pronouns
+! ----------------------
+
+LEXICON Demonstrative
+tot+Pron+Dem:	TOT ;
+tuot+Pron+Dem:	TUOT ;
+tot+Pron+Dem+Sg+Ill:toos K ;
+tuot+Pron+Dem+Sg+Ill:tuos K ;
+tot+Pron+Dem+Pl+Ill:tooid K ;
+
+LEXICON TOT
+:to	TO-TUO ;
+:ta	TA-TYE ;
+
+LEXICON TUOT
+:tuo	TO-TUO ;
+:tye	TA-TYE ;
+
+LEXICON TO-TUO
++Sg+Nom:t	K ;
++Sg+Gen:n	K ;
++Sg+Acc:m	K ;
++Sg+Com:in	K ;
++Sg+Abe:ntáá	K ;
++Pl+Nom:h	K ;
++Pl+Gen:i	K ;
++Pl+Ill:id	K ;
++Pl+Com:iguim	K ;
++Pl+Abe:ittáá	K ;
+
+LEXICON TA-TYE
++Sg+Loc:st	K ;
++Sg+Ess:nen	K ;
++Sg+Par:d1e	K ;
++Pl+Acc:id	K ;
++Pl+Loc:in	K ;
+
+
+
+
+! Reflexive pronouns
+! ------------------
+
+LEXICON Reflexive
+# ;
+
+! Interrogative pronouns
+! ----------------------
+
+LEXICON Interrogative
+mii+Pron+Interr:m	MK ;
+kii+Pron+Interr:k	MK ;
+mii+Pron+Interr:moo	MK-long ;
+kii+Pron+Interr:kiä	MK-long ;
+mii+Pron+Interr:mo	MK-short ;
+kii+Pron+Interr:kiä	MK-short ;
+mii+Pron+Interr:ma	MK-low ;
+kii+Pron+Interr:kiä	MK-low ;
+mii+Pron+Interr:ma	MK-front ;
+kii+Pron+Interr:ke	MK-front ;
+
+mii+Pron+Interr+Sg+Acc:maid    K ; ! The exceptions
+mii+Pron+Interr+Sg+Acc:mon     K ;
+mii+Pron+Interr+Sg+Com:mooin   K ;
+mii+Pron+Interr+Pl+Acc:mooi    K ;
+mii+Pron+Interr+Pl+Com:mooiguim	 K ;
+mii+Pron+Interr+Pl+Abe:mooittáá	 K ;
+kii+Pron+Interr+Sg+Acc:kiäm    K ;
+kii+Pron+Interr+Sg+Loc:kest    K ;
+kii+Pron+Interr+Pl+Loc:kein    K ;
+
+
+LEXICON MK
++Sg+Nom:ii	K ;
+
+LEXICON MK-long
++Sg+Ill:s	K ;
++Pl+Com:iguim	K ;
+
+LEXICON MK-short
++Sg+Gen:n	K ;
++Sg+Com:in	K ;
++Sg+Abe:nttáá	K ;
++Pl+Nom:h	K ;
++Pl+Gen:i	K ;
++Pl+Abe:ittáá	K ;
+
+LEXICON MK-low
++Sg+Loc:st	K ;
++Pl+Acc:id	K ;
++Pl+Loc:in	K ;
+
+LEXICON MK-front
++Ess:nen	K ;
++Par:d1e	K ;
