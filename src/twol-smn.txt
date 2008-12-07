@@ -19,7 +19,7 @@ Alphabet
  h2:h g2:g m2:m n2:n 
  b3:b d3:d g3:g m3:m h3:h 
 
- X1:0 X2:0 X3:0 X4:0 X5:0 X6:0 X7:0 X8:0 X9:0
+ %^WG1:0 X2:0 %^SVL:0 X4:0 X5:0 X6:0 X7:0 X8:0 X9:0
  Q1:0 Q2:0 Q3:0 Q4:0 Q5:0 Q6:0 Q7:0 Q8:0 Q9:0 Q:0
  Y1:0 Y2:0 Y3:0 Y4:0 Y5:0 Y6:0 Y7:0 Y8:0 
  %^SHV:0 %^CPL:0 ;
@@ -34,10 +34,9 @@ Sets
        B C č D D1 F G H J K L M N N1
        P Q R S S1 T T1 V W X Z Ž ;
 ! DelCns = g2 m2 n2 h2 ;
- WeG = X1 X2  ;
- WG2 = Q9 ;
+ WeG = %^WG1 X2 %^CPL ;
  StemCns = b b3 d d3 g g2 g3 h h2 h3 j l m m2 m3 n n2 ñ r s ;
- Dummy = X1 X2 X3 X4 ;
+ Dummy = %^WG1 X2 %^SVL X4 ;
 
 
 Rules
@@ -60,17 +59,13 @@ Rules
 ! General alternations
 ! - - - - - - - - - - 
 
-!"Stem Vowel Lengthening in Weak Grade"
-! 0:Vx <=> Vx _ Cns: Cns: Vow: X2:0 ;
-!      where Vx in ( i e ä á â a o u ) ;
-! tullâ : tuulâX2
 
 "Stem Vowel Change in Comitative"
- Vx:Vy <=> _ X1:0 X3:0 ;
+ Vx:Vy <=> _  %^SVL:0 ;
        where Vx in ( â e )
 	     Vy in ( á i )
 	     matched ;
-! mielgâ : mielgX3áin
+! mielgâ : mielg%^SVLáin
 ! alge : olgijn
 ! and the umlaut must be fixed as well...
 
@@ -78,9 +73,6 @@ Rules
 ! â-stem alternations
 ! - - - - - - - - - -
 
-"â:a in NomPl"
- â:a <=> _ X1:0 X4:0 ;
-! tulla : tuulah
 
 
 ! a-stem alternations
@@ -188,3 +180,10 @@ Cx:Vx <=> Vx _ Cx Vow %^CPL: ;
       where Cx in ( l p )
       	    Vx in ( u a )
 	    mixed ;
+
+!€ tullâ^CPL
+!€ tuulâ0
+
+! Hmm, do not like this rule, but the alternative is insertion, 
+! also not good, or eventually a long baseform *tuullâ or *tuu7llâ, 
+! where u7 is there just to be deleted unless in weak grade contexts.
