@@ -18,10 +18,19 @@ Multichar_Symbols
  e1 i1 o1 u1
  g2 m2 n2 h2
  b3 d3 g3 m3 h3
- X1 X2 X3 X4 X5 X6 X7 X8 X9
+ %^WG1 X2    X4 X5 X6 X7 X8 X9
  Q1 Q2 Q3 Q4 Q5 Q6 Q7 Q8 Q9
  Y1 Y2 Y3 Y4 Y5 Y6 Y7 Y8 Y9
- %^SHV %^CPL
+ %^SHV  ! 2nd syll vowel shortenes
+ %^CPL  ! Weak grade and Compensatory lengthening tullâ tuulâ
+ %^SVL  ! Stem vowel lengthening tullâ : tuulá-
+! Documenting the dummies 
+! %^WG1 = WeG Half-long in verbs
+! X2 = WeG (SOLLA-OBLSHORT) tullâ : tulâX2
+! %^SVL = Sg Com, Pl Ill
+! X4 = Pl Nom
+
+
 
 ! =================================================
 ! Basic lexica, pointing to the other lexicon files
@@ -93,13 +102,13 @@ LEXICON SOLLA-OBL
  +Sg+Acc: K ;
  +Sg+Ill:n K ;
  +Sg+Loc:st K ;
- +Sg+Com:X3in K ;
- +Sg+Com:X3áin K ;
+ +Sg+Com:%^SVLin K ;
+ +Sg+Com:%^SVLáin K ;
  +Pl+Nom:X4h K ;
  +Pl+Gen:i K ;
  +Pl+Acc:id K ;
- +Pl+Ill:X3id K ;
- +Pl+Ill:X3áid K ;
+ +Pl+Ill:%^SVLid K ;
+ +Pl+Ill:%^SVLáid K ;
  +Pl+Loc:in K ;
 
 
@@ -119,7 +128,7 @@ LEXICON LITTER ! 2nd syll vowel does not alternate
  +N: ODD-SUFF-LONGSTEM ;
  +N: ODD-SUFF-SHORTSTEM ;
 
-LEXICON JIEREEH ! 2nd syll vowel shortenes
+LEXICON JIEREEH ! 2nd syll vowel shortening
  +N:      ODD-SUFF-LONGSTEM ;
  +N:%^SHV ODD-SUFF-SHORTSTEM ;
 
@@ -227,7 +236,7 @@ LEXICON VUOLLAD
 LEXICON EVEN-I
 +Sg1:%>m K ;
 +Sg2:%>h K ;
-+Sg3:%>X1 K ;
++Sg3:%>%^WG1 K ;
 +Du1:%>een K ;
 +Du2:%>vettee K ;
 +Du3:%>v K ;
