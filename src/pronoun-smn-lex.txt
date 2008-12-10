@@ -17,49 +17,53 @@ Interrogative ;
 ! -----------------
 
 LEXICON Personal
-mun+Pron+Pers:m perspron ;
-tun+Pron+Pers:t perspron ;
-sun+Pron+Pers:s perspron ;
+mun+Pron+Pers+Sg1:mu perspronsg ;
+tun+Pron+Pers+Sg2:tu perspronsg ;
+sun+Pron+Pers+Sg3:su perspronsg ;
+mun+Pron+Pers+Du1:mu persprondu ;
+tun+Pron+Pers+Du2:tu persprondu ;
+sun+Pron+Pers+Du3:su persprondu ;
+mun+Pron+Pers+Pl1:mi perspronpl ;
+tun+Pron+Pers+Pl2:ti perspronpl ;
+sun+Pron+Pers+Pl3:si perspronpl ;
 
-LEXICON perspron
-:u	    perspronsgdu ;
-:i	    perspronpl ;
 
+LEXICON perspronsg
++Nom:n	K ;
++Gen:u	      K ;
++Acc:u	      K ;
++Ill:njin	      K ;
++Loc:st	          K ;
++Loc:ste	      K ;
++Com:'in	          K ;
++Com:uin	      K ;
++Abe:uttáá	      K ;
++Ess:nen	      K ;
++Par:đe	      K ;
 
-LEXICON perspronsgdu
-+Sg+Nom:n	K ;
-+Sg+Gen:u	      K ;
-+Sg+Acc:u	      K ;
-+Sg+Ill:njin	      K ;
-+Sg+Loc:st	      K ;
-+Sg+Loc:ste	      K ;
-+Sg+Com:in	      K ;
-+Sg+Com:uin	      K ;
-+Sg+Abe:utáá	      K ;
-+Sg+Ess:nen	      K ;
-+Sg+Par:d1e	      K ;
-+Du+Nom:oi	K ;
-+Du+Gen:nnuu	      K ;
-+Du+Acc:nnuu	      K ;
-+Du+Ill:nnui	      K ;
-+Du+Loc:nnust	      K ;
-+Du+Com:nnuin	      K ;
-+Du+Com:nnuuin	      K ;
-+Du+Abe:nnuuttáá      K ;
-+Du+Ess:nnun	      K ;
-+Du+Par:nnud	      K ;
+LEXICON persprondu
++Nom:oi	K ;
++Gen:nnuu	      K ;
++Acc:nnuu	      K ;
++Ill:nnui	      K ;
++Loc:nnust	      K ;
++Com:nnuin	      K ;
++Com:nnuuin	      K ; !^NG^
++Abe:nnuuttáá      K ;
++Ess:nnun	      K ;
++Par:nnud	      K ;
 
 LEXICON perspronpl
-+Pl+Nom:j		K ;
-+Pl+Gen:i	      K ;
-+Pl+Acc:j	      K ;
-+Pl+Ill:jjân	      K ;
-+Pl+Loc:st	      K ;
-+Pl+Loc:ste	      K ;
-+Pl+Com:iguim	      K ;
-+Pl+Abe:ittáá	      K ;
-+Pl+Ess:nen	      K ;
-+Pl+Par:d1e	      K ;
++Nom:j		K ;
++Gen:i	      K ;
++Acc:j	      K ;
++Ill:jjân	      K ;
++Loc:st	      K ;
++Loc:'ste	      K ;
++Com:igui'm	      K ;
++Abe:ittáá	      K ;
++Ess:nen	      K ;
++Par:đe	      K ;
 
 
 
@@ -71,7 +75,7 @@ tot+Pron+Dem:	TOT ;
 tuot+Pron+Dem:	TUOT ;
 tot+Pron+Dem+Sg+Ill:toos K ;
 tuot+Pron+Dem+Sg+Ill:tuos K ;
-tot+Pron+Dem+Pl+Ill:tooid K ;
+!tot+Pron+Dem+Pl+Ill:tooid K ;
 
 LEXICON TOT
 :to	TO-TUO ;
@@ -79,26 +83,36 @@ LEXICON TOT
 
 LEXICON TUOT
 :tuo	TO-TUO ;
-:tye	TA-TYE ;
+:tye	TYE ;
+:ta     TA ;
 
 LEXICON TO-TUO
 +Sg+Nom:t	K ;
 +Sg+Gen:n	K ;
 +Sg+Acc:m	K ;
-+Sg+Com:in	K ;
-+Sg+Abe:ntáá	K ;
++Sg+Com:oin	K ;
++Sg+Com:'in K ;
++Sg+Abe:nttáá	K ;
 +Pl+Nom:h	K ;
 +Pl+Gen:i	K ;
-+Pl+Ill:id	K ;
-+Pl+Com:iguim	K ;
++Pl+Ill:'id	K ;
++Pl+Ill:oid	K ;
++Pl+Com:igui'm	K ;
 +Pl+Abe:ittáá	K ;
 
-LEXICON TA-TYE
+LEXICON TA
 +Sg+Loc:st	K ;
 +Sg+Ess:nen	K ;
-+Sg+Par:d1e	K ;
++Sg+Par:đe	K ;
 +Pl+Acc:id	K ;
 +Pl+Loc:in	K ;
+
+LEXICON TYE
++Sg+Loc:s't	K ;
++Sg+Ess:'nen	K ;
++Sg+Par:'đe	K ;
++Pl+Acc:i'd	K ;
++Pl+Loc:i'n	K ;
 
 
 
@@ -114,33 +128,38 @@ LEXICON Reflexive
 
 LEXICON Interrogative
 mii+Pron+Interr:m	MK ;
-kii+Pron+Interr:k	MK ;
 mii+Pron+Interr:moo	MK-long ;
-kii+Pron+Interr:kiä	MK-long ;
 mii+Pron+Interr:mo	MK-short ;
-kii+Pron+Interr:kiä	MK-short ;
 mii+Pron+Interr:ma	MK-low ;
-kii+Pron+Interr:kiä	MK-low ;
 mii+Pron+Interr:ma	MK-front ;
+
+kii+Pron+Interr:k	MK ;
+kii+Pron+Interr:kiä	MK-long ;
+kii+Pron+Interr:kiä	MK-short ;
+kii+Pron+Interr:kiä	MK-low ;
 kii+Pron+Interr:ke	MK-front ;
 
 mii+Pron+Interr+Sg+Acc:maid    K ; ! The exceptions
 mii+Pron+Interr+Sg+Acc:mon     K ;
 mii+Pron+Interr+Sg+Com:mooin   K ;
 mii+Pron+Interr+Pl+Acc:mooi    K ;
-mii+Pron+Interr+Pl+Com:mooiguim	 K ;
+!mii+Pron+Interr+Pl+Com:mooiguim	 K ; ! already in MK-long
 mii+Pron+Interr+Pl+Abe:mooittáá	 K ;
-kii+Pron+Interr+Sg+Acc:kiäm    K ;
-kii+Pron+Interr+Sg+Loc:kest    K ;
-kii+Pron+Interr+Pl+Loc:kein    K ;
 
+kii+Pron+Interr+Sg+Acc:kiäm    K ;
+kii+Pron+Interr+Sg+Loc:kest    K ; 
+kii+Pron+Interr+Sg+Loc:kiäs't    K ; 
+kii+Pron+Interr+Pl+Loc:kein    K ; 
+kii+Pron+Interr+Pl+Loc:kiäi'n    K ; 
 
 LEXICON MK
 +Sg+Nom:ii	K ;
 
 LEXICON MK-long
 +Sg+Ill:s	K ;
++Pl+Ill:'id K ;
 +Pl+Com:iguim	K ;
++Pl+Abe:ittáá K ;
 
 LEXICON MK-short
 +Sg+Gen:n	K ;
@@ -152,9 +171,12 @@ LEXICON MK-short
 
 LEXICON MK-low
 +Sg+Loc:st	K ;
-+Pl+Acc:id	K ;
++Pl+Acc:i'd	K ;
 +Pl+Loc:in	K ;
 
 LEXICON MK-front
 +Ess:nen	K ;
-+Par:d1e	K ;
++Par:đe	K ;
++Pl+Acc:id	K ;
+
+
