@@ -8,8 +8,9 @@ Alphabet
  A Á Â Å B C D E F G H I J K L M N O Õ P Q
  R S T U V W X Y Z Æ Ä Ø Ö Å 
  Č Đ Ŋ Ŧ Š Ž 
-
- %- ':0 
+ '
+ 
+ %-  
  %>:0 %^:0 !deleting suffix and syllable boundaries.
 
  É Ó Ú Í À È Ò Ù Ì Ë Ü Ï Ê Ô Û Î Ã Ý þ Ð testing without
@@ -23,7 +24,7 @@ Alphabet
  Q1:0 Q2:0 Q3:0 Q4:0 Q5:0 Q6:0 Q7:0 Q8:0 Q9:0 
  Y1:0 Y2:0 Y3:0 Y4:0 Y5:0 Y6:0 Y7:0 Y8:0 
 
- %^SHV:0 %^CPL:0 %^SVL:0  %^WG1:0 ;
+ %^SHV:0 %^CPL:0 %^SVL:0  %^WG1:0 %^VLOW:0 ;
 
 Sets
  Vow = a á â ä e i o u y æ ø ö å
@@ -37,7 +38,7 @@ Sets
 ! DelCns = g2 m2 n2 h2 ;
  WeG = %^WG1 X2 %^CPL ;
  StemCns = b b3 d d3 g g2 g3 h h2 h3 j l m m2 m3 n n2 ñ r s ;
- Dummy = %^WG1 X2 %^SVL X4 ;
+ Dummy = %^WG1 X2 %^SVL X4 %^VLOW ;
 
 
 Rules
@@ -94,6 +95,15 @@ Rules
 "Long vowel shortening in Cns stems"
 Vx:0 <=> Cns:* Vx _ Cns %^SHV:0 ;
      where Vx in (á i);
+
+
+"Vowel lowering in Contracted Stems"
+Vx:Vy <=> _ Cns+ %^VLOW: ; 
+      where Vx in (u a)
+            Vy in (o á)
+            matched ;
+
+
 
 
 
@@ -188,3 +198,11 @@ Cx:Vx <=> Vx _ Cx Vow %^CPL: ;
 ! Hmm, do not like this rule, but the alternative is insertion, 
 ! also not good, or eventually a long baseform *tuullâ or *tuu7llâ, 
 ! where u7 is there just to be deleted unless in weak grade contexts.
+
+!Idas regler för verb
+!
+!"Even syllabic verbs present sg, monophpt E I"
+! Vx:Vy <=>  _ C+ (V) %>: %^1UML:0 ;
+! 	where Vx in (i e u)
+! 	      Vy in (æ a å)
+! 	matched ;
