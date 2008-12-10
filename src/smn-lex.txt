@@ -15,7 +15,7 @@ Multichar_Symbols
  +Sg1 +Sg2 +Sg3 +Du1 +Du2 +Du3 +Pl1 +Pl2 +Pl3
  +Inf +Act +Ger +GerII +ConNeg +Neg +PrsPrc +PrfPrc +VGen +VAbess
  +CLB +PUNCT +HYPH +PAR +LEFT +RIGHT
- e1 i1 o1 u1
+ e1 i1 o1 u1 
  g2 m2 n2 h2
  b3 d3 g3 m3 h3
  %^WG1 X2    X4 X5 X6 X7 X8 X9
@@ -24,6 +24,7 @@ Multichar_Symbols
  %^SHV  ! 2nd syll vowel shortenes
  %^CPL  ! Weak grade and Compensatory lengthening tullâ tuulâ
  %^SVL  ! Stem vowel lengthening tullâ : tuulá-
+ %^VLOW ! Vowel lowering in 3rd sg of contract verbs tuhhid:tohhee
 ! Documenting the dummies 
 ! %^WG1 = WeG Half-long in verbs
 ! X2 = WeG (SOLLA-OBLSHORT) tullâ : tulâX2
@@ -217,6 +218,7 @@ LEXICON ODD-SUFF-SHORTSTEM
 ! -------------------
 
 LEXICON VUOLLAD
++V:%>â  VINF ;
 +V: EVEN-I ;
 
 ! Odd-syllable stems
@@ -224,6 +226,14 @@ LEXICON VUOLLAD
 ! Contracted stems
 ! ----------------
 
+LEXICON TUHHID
+
++V:%>i  VINF ;
++V+Ind+Prs:%>ii V_SG12 ;
++V+Ind+Prs:%^VLOW%>ee V_SG3 ;
+
+LEXICON VINF
++Inf:đ K ;
 
 ! Intermediate suffix lexica
 ! --------------------------
@@ -276,6 +286,27 @@ LEXICON ODD-II-DU
 +Du1:%>jm K ;
 +Du2:%>jd K ;
 +Du3:%>jn K ;
+
+! Person-number suffixes
+
+LEXICON V_SG12
++Sg1:%>m K ;
++Sg2:%>h K ;
+
+LEXICON V_SG3
++Sg3:%>%^WG1 K ;
+
+LEXICON V_DU
++Du1:%>een K ;
++Du2:%>vettee K ;
++Du3:%>v K ;
+
+LEXICON V_PL
++Pl1:%>jm K ;
++Pl2:%>jd K ;
++Pl3:%>i K ;
+
+
 
 ! Other series
 ! - - - - - - 
