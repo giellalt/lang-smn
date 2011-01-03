@@ -430,7 +430,7 @@ savefile:
 	@echo
 	@echo "*** Go to $$GTHOME and make the required transducer: ***"
 	@echo
-	@cd $(SRCDIR)/ && $(MAKE) $(notdir $(SAVEFILE)) TARGET=smn
+	@cd $(SRCDIR)/ && $(MAKE) $(notdir $(SAVEFILE)) GTLANG=smn
 
 # Word form generation:
 # ---------------------
@@ -595,9 +595,9 @@ twol-test-norm: twol-norm twol-extract
 # Make sure there are up-to-date twol binaries:
 twol: twol-desc twol-norm
 twol-desc:
-	@cd $(SRCDIR)/ && $(MAKE) TARGET=smn twol-descriptive
+	@cd $(SRCDIR)/ && $(MAKE) GTLANG=smn twol-descriptive
 twol-norm:
-	@cd $(SRCDIR)/ && $(MAKE) TARGET=smn twol
+	@cd $(SRCDIR)/ && $(MAKE) GTLANG=smn twol
 
 
 twol-pos: TYPE=pos
