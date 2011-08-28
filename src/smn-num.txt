@@ -12,6 +12,48 @@
 ! Other licensing options are available upon request, please contact
 ! giellatekno@hum.uit.no or divvun@samediggi.no
 
+
+Multichar_Symbols
+
+@U.DATE.1@
+@U.DATE.2@
+@U.DATE.3@
+@U.DATE.4@
+@U.DATE.5@
+@U.DATE.6@
+@U.DATE.7@
+@U.DATE.8@
+@U.DATE.9@
+@U.DATE.10@
+@U.DATE.11@
+@U.DATE.12@
+@U.DATE.13@
+@U.DATE.14@
+@U.DATE.15@
+@U.DATE.16@
+@U.DATE.17@
+@U.DATE.18@
+@U.DATE.19@
+@U.DATE.20@
+@U.DATE.21@
+@U.DATE.22@
+@U.DATE.23@
+@U.DATE.24@
+@U.DATE.25@
+@U.DATE.26@
+@U.DATE.27@
+@U.DATE.28@
+@U.DATE.29@
+@U.DATE.30@
+@U.DATE.31@
+
+! Note! the diacritic marks in this file are only part of the lower
+! representation. This means they can only be used from number to letter
+! conversion of date and month representation, not the other way around.
+! In order to get a two-way conversion, they must be added to the 
+! upper level as well.
+
+
 LEXICON Root
 HUNDREDSM ;		! 200M
 čyeti:1 HUNDREDM ;	! 100M
@@ -253,9 +295,14 @@ oovce:9 LOHKAI ;
 
 LEXICON LOHKAI
 nubáloh: # ;
+:%. LOGAAT ;
+
+LEXICON LOGAAT
+nuppelogát: # ; ! sme, fix.
 
 LEXICON TENS
 love:1%0 # ;
+logát:1%0%. # ; ! sme, fix.
 kyeht:2 LOGI ;
 kulm:3 LOGI ;
 nelji:4 LOGI ;
@@ -270,6 +317,10 @@ lov:%0 # ;
 lov: ONES ;
 
 LEXICON ONES
+CARDINAL ;
+ORDINAL ;
+
+LEXICON CARDINAL
 ohtâ:1 # ;
 kyehti:2 # ;
 kulmâ:3 # ;
@@ -279,4 +330,17 @@ kuttâ:6 # ;
 čiččâm:7 # ;
 käävci:8 # ;
 oovce:9 # ;
+
+
+LEXICON ORDINAL		   ! sme, fix
+vuosttaš:1%.     # ;   ! sme, fix
+nubbi:2%.   # ;		   ! sme, fix
+goalmmát:3%.   # ;	   ! sme, fix
+njealját:4%. # ;	   ! sme, fix
+viđát:5%.   # ;		   ! sme, fix
+guđát:6%.   # ;		   ! sme, fix
+čihččet:7%.    # ;	   ! sme, fix
+gávccát:8%.   # ;	   ! sme, fix
+ovccát:9%.    # ;	   ! sme, fix
+
 
