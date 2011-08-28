@@ -83,65 +83,47 @@ LEXICON Root
 ! Even-syllable stems
 ! -------------------
 
-! 2syll stems
+! 1. 2syll stems
 ! - - - - - -
 
-LEXICON SOLLA 
- +N: SOLLA-NEP ; ! Strong grade
+! 1.1. Vowel final
+! 1.1.1 Even-syllabic â-, u- and i-stems
+
+LEXICON SOLLA ! SM1
+ +N: EVEN-NEP ; ! Strong grade
  +N:%^CPL SOLLA-OBL ;
  +N:X2 SOLLA-OBLSHORT ;
 
-LEXICON LUCCA
- SOLLA-NEP ; ! Strong grade
- SOLLA-OBL ;
+LEXICON LUCCA ! SM3
+ +N: EVEN-NEP ; ! Strong grade
+ +N:%^CPL SOLLA-OBL ;
+ +N:X2 SOLLA-OBLSHORT ;
 
 
-LEXICON KIETA
+LEXICON KIETA ! SM5
+ +N: EVEN-NEP ; ! Strong grade
+ +N: SOLLA-OBL ; ! No compulsatory lengthening
+ +N:X2 SOLLA-OBLSHORT ;
+
+LEXICON KUSSA ! SM6
 SOLLA ; ! fix
 
-LEXICON KUSSA
-SOLLA ; ! fix
+LEXICON KUOSA ! SM7
+KIETA ; ! fix
 
-LEXICON KUOSA
-SOLLA ; ! fix
+! 1.1.2 Even-syllabic á/a- and o-stems
 
-! 4syll stems
-! - - - - - - 
-
-
-! Nominal substems
-! - - - - - - - -  
-
-LEXICON SOLLA-NEP
- +Sg+Nom: K ;     ! tullâ
- +Ess:n K ;       ! tullân
- +Par:d K ;       ! tullâd
-
-LEXICON SOLLA-OBL
- +Sg+Gen: K ;   	    ! tuulâ
- +Sg+Acc: K ;		    ! tuulâ
- +Sg+Ill:n K ;		    ! tuulân   tuuḷân half/long ḷ
- +Sg+Loc:st K ;		    ! tuulâst
- +Sg+Com:%^SVLin K ;    ! tulláin
- +Sg+Com:%^SVLáin K ;   ! tullááin
- +Pl+Nom:X4h K ;	    ! tuulah
- +Pl+Gen:i K ;		    ! tuulâi
- +Pl+Acc:id K ;		    ! tuulâid
- +Pl+Ill:%^SVLid K ;    ! tuul´did
- +Pl+Ill:%^SVLáid K ;   ! tuulááid
- +Pl+Loc:in K ;		    ! tullâin
-
-! kieđâ - Gen Sg
-! kietâ - Nom Sg
-! kiettân Ess
+LEXICON PINO ! SM14
+ +N: EVEN-NEP ; ! Strong grade
+ +N:%^CPL PINO-OBL ;
+ +N:X2 SOLLA-OBLSHORT ;
 
 
-LEXICON SOLLA-OBLSHORT
- +Sg+Abe:ttáá K ;   ! tulâttáá
- +Pl+Gen:i K ;
- +Pl+Com:iguim K ;
- +Pl+Abe:ittáá K ;
+LEXICON RITA ! SM15
+PINO ; ! Identical?
 
+LEXICON KASNATTAS
+LITTER ;
 
 ! Odd-syllable stems
 ! ------------------
@@ -200,6 +182,91 @@ LEXICON ODD-SUFF-SHORTSTEM
 ! ----------------
 
 
+
+
+! Nominal substems
+! - - - - - - - -  
+
+LEXICON EVEN-NEP
+ +Sg+Nom: K ;     ! tullâ
+ +Ess:n K ;       ! tullân
+ +Par:d K ;       ! tullâd
+
+LEXICON SOLLA-OBL
+ +Sg+Gen: K ;   	    ! tuulâ
+ +Sg+Acc: K ;		    ! tuulâ
+ +Sg+Ill:n K ;		    ! tuulân   tuuḷân half/long ḷ
+ +Sg+Loc:st K ;		    ! tuulâst
+ +Sg+Com:%^SVLin K ;    ! tulláin
+ +Sg+Com:%^SVLáin K ;   ! tullááin
+ +Pl+Nom:X4h K ;	    ! tuulah
+ +Pl+Gen:i K ;		    ! tuulâi
+ +Pl+Acc:id K ;		    ! tuulâid
+ +Pl+Ill:%^SVLid K ;    ! tuul´did
+ +Pl+Ill:%^SVLáid K ;   ! tuulááid
+ +Pl+Loc:in K ;		    ! tullâin
+
+! kieđâ - Gen Sg
+! kietâ - Nom Sg
+! kiettân Ess
+
+
+LEXICON SOLLA-OBLSHORT
+ +Sg+Abe:ttáá K ;   ! tulâttáá
+ +Pl+Gen:i K ;
+ +Pl+Com:iguim K ;
+ +Pl+Abe:ittáá K ;
+
+
+LEXICON PINO-OBL ! Now = solla, fix!!!
+ +Sg+Gen: K ;   	    ! tuulâ
+ +Sg+Acc: K ;		    ! tuulâ
+ +Sg+Ill:n K ;		    ! tuulân   tuuḷân half/long ḷ
+ +Sg+Loc:st K ;		    ! tuulâst
+ +Sg+Com:%^SVLin K ;    ! tulláin
+ +Sg+Com:%^SVLáin K ;   ! tullááin
+ +Pl+Nom:X4h K ;	    ! tuulah
+ +Pl+Gen:i K ;		    ! tuulâi
+ +Pl+Acc:id K ;		    ! tuulâid
+ +Pl+Ill:%^SVLid K ;    ! tuul´did
+ +Pl+Ill:%^SVLáid K ;   ! tuulááid
+ +Pl+Loc:in K ;		    ! tullâin
+
+
+
+! 3.6.2. Gen sg odd-syllabic
+
+LEXICON SAMMILAS ! SM150
+LAS-COMMON ;
+:ii LAS-SUF ;
+
+LEXICON COHASAS
+LAS-COMMON ;
+:áá LAS-SUF ;
+
+LEXICON MAJEMUS
+LAS-COMMON ;
+:ui LAS-SUF ;
+
+LEXICON LAS-COMMON 
++N+Sg+Nom:âš K ;
++N+Sg+Ill:âžân K ;
++N+Sg+Abe:ááttáá K ;
++N+Ess:âžžân K ;
++N+Par:âžžâd K ;
+
+LEXICON LAS-SUF
++N+Sg+Gen: K ;
++N+Sg+Acc: K ;
++N+Sg+Loc:st K ;
++N+Sg+Com:jn K ;
++N+Pl+Nom:h K ;
++N+Pl+Gen:j K ;
++N+Pl+Acc:jd K ;
++N+Pl+Ill:jd K ;
++N+Pl+Loc:jn K ;
++N+Pl+Com:jgui'm K ;
++N+Pl+Abe:h K ;
 
 
 ! ===========================
