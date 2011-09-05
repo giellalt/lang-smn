@@ -149,8 +149,8 @@ Vx:Vy <=> _ Cns+ Vow:* %^VLOW: ;
 
 "Gradation: Double Consonant" !káffe:káfes
   Cx:0 <=> Vow: Cy _ Vow ( StemCns:) (:StemCns) (Dummy:*) WeG: ;
-	where Cx in (p t k b d g m n ŋ đ s z r š ž l)
-	      Cy in (p t k b d g m n ŋ đ s z r š ž l)
+	where Cx in (p t k b d g m n ŋ đ s z r š ž l c č v h )
+	      Cy in (p t k b d g m n ŋ đ s z r š ž l c č v h )
 	      matched ;
 
 "Gradation: i + Shortening"
@@ -184,25 +184,18 @@ Vx:Vy <=> _ Cns+ Vow:* %^VLOW: ;
 
 "Qualitative Gradation of Simple Consonant"
 Cx:Cy <=> Vow:  _ Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ;
-      where Cx in ( p t k c č h )
-	        Cy in ( v đ h s j v )
+      where Cx in ( k c )
+	        Cy in ( h s )
 	    matched ;
 
-!"III-I Gradation" ! tentative rule
-!Cx:Cy <=> Vow: Cx:0  _ Vow: ( StemCns:) (:StemCns) (Dummy:*) WG2: ;
-!      where Cx in ( p t k c č h )
-!	    Cy in ( v đ h s j v )
-!	    matched ;
-
-
-"t:đ"
- t:đ <=> Vow:+  _  Vow: WeG: ;
-! t:đ <=> Vow:*  _ ( t:0 ) Vow: WeG: ;
-! the outcommented version was wrong:
-! * VttV -> VđtV
-
-"h:v"
- h:v <=> Vow:*  _ (c|č|t) Vow: WeG: ;
+"Quantitative Gradation"
+ Cx:Cy <=> Vow:+ (Cx) _  Vow: (StemCns:) (:StemCns) (Dummy:*) WeG: ;
+	where Cx in ( p t č h )
+		  Cy in ( v đ j v )
+	matched ;
+	
+"h:v in Front of Voiceless Dentals"
+ h:v <=> Vow:*  _ [c|č|t] Vow: WeG: ;
 
 
 ! "kk:h" ákku
@@ -213,10 +206,21 @@ Cx:Cy <=> Vow:  _ Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ;
 ! - - - - - - - - - - - - - - -
 
 "Compensatory lengthening"
-Cx:Vx <=> Vx _ Cx Vow %^CPL: ;
-      where Cx in ( l p p )
-      	    Vx in ( u a ä )
-	    mixed ;
+0:Vx <=> Vx _ Cx Cx:0 ;
+	where Vx in ( a e i o u )
+		  Cx in ( p t k l r )
+	mixed ;
+
+
+!Cx:Vx <=> Vx _ Cx Vow %^CPL: ;
+!      where Cx in ( l p p )
+!      	    Vx in ( u a ä )
+!	    mixed ;
+
+
+! konsonanten skal bli til nabovokalen.
+
+
 
 !€ tullâ^CPL
 !€ tuulâ0
