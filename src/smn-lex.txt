@@ -40,6 +40,8 @@ Multichar_Symbols
 %^SHV  ! 2nd syll vowel shortenes
 %^CPL  ! Weak grade and Compensatory lengthening tullâ tuulâ
 %^VLOW ! Vowel lowering in 3rd sg of contract verbs tuhhid:tohhe
+%^XST  ! Extra strong Ess Par
+%^IA  ! á in front of Com Sg and Ill Pl i
 %^ODDSHV ! Cns shortening in C|# and shortvow in Inf etc
 %^ODDLV ! Cns shortening in C|# and longvow in inf etc
 
@@ -65,8 +67,6 @@ LEXICON Root
  Subjunction ;
  Conjunction ;
  Adposition ;
-! Postposition ;
-! Preposition ;
  Interjection ;
  Pronoun ;
  Numeral ;
@@ -100,8 +100,9 @@ LEXICON LUCCA ! SM3
 
 
 LEXICON KIETA ! SM5
- +N: EVEN-NEP ; ! Strong grade
- +N: SOLLA-OBL ; ! No compulsatory lengthening
+ +N: EVEN-N ; ! Strong grade kietâ
+ +N:%^XST EVEN-EP ; ! Stronger grade kiettâ 
+ +N: SOLLA-OBL ; ! Weak grade kieđâ
  +N:X2 SOLLA-OBLSHORT ;
 
 LEXICON KUSSA ! SM6
@@ -152,36 +153,6 @@ LITTER ; ! fix
 
 
 
-! Odd-syllable stems, sublexica
-! - - - - - - - - - - - - - - - 
-
-LEXICON ODD-SUFF-LONGSTEM
- +Sg+Nom: K ;
- +Sg+Gen: K ;
- +Sg+Acc: K ;
- +Sg+Ill:%>ân K ;
-
-LEXICON ODD-SUFF-SHORTSTEM
- +Sg+Loc:%>ist K ;
- +Sg+Com:%>áin K ;
- +Sg+Com:%>ááin K ;
- +Sg+Abe:%>ttáá K ;
- +Ess:%>in K ;
- +Par:%>id K ;
- +Pl+Nom:%>eh K ;
- +Pl+Gen:%>ij K ;
- +Pl+Acc:%>ijd K ;
- +Pl+Ill:%>áid K ;
- +Pl+Ill:%>ááid K ;
- +Pl+Loc:%>ijn K ;
- +Pl+Com:%>ijgijn K ;
- +Pl+Com:%>ijgui'm K ;
- +Pl+Abe:%>ijttáá K ;
-
-!LEXICON ODD-SUFF-MIXSTEM
-! # ;
-
-
 ! Contracted stems
 ! ----------------
 
@@ -192,7 +163,13 @@ LEXICON ODD-SUFF-SHORTSTEM
 ! - - - - - - - -  
 
 LEXICON EVEN-NEP
+ EVEN-N ;   ! strong:   tullâ, kietâ
+ EVEN-EP ;  ! stronger: tullân, kiettân
+
+LEXICON EVEN-N
  +Sg+Nom: K ;     ! tullâ
+
+LEXICON EVEN-EP
  +Ess:n K ;       ! tullân
  +Par:d K ;       ! tullâd
 
@@ -201,14 +178,13 @@ LEXICON SOLLA-OBL
  +Sg+Acc: K ;		    ! tuulâ
  +Sg+Ill:%>n K ;		    ! tuulân   tuuḷân half/long ḷ
  +Sg+Loc:%>st K ;		    ! tuulâst
-! +Sg+Com:%^SVLin K ;    ! tulláin ?
- +Sg+Com:%>áin K ;   ! tullááin
+ +Sg+Com:%>%^IAin K ;   ! tullááin
  +Pl+Nom:X4%>h K ;	    ! tuulah
  +Pl+Gen:%>i K ;		    ! tuulâi
  +Pl+Acc:%>id K ;		    ! tuulâid
  +Pl+Ill:%>id K ;    ! tuul´did
- +Pl+Ill:%>áid K ;   ! tuulááid
- +Pl+Loc:%>in K ;		    ! tullâin
+! +Pl+Ill:%>áid K ;   ! tuulááid
+ +Pl+Loc:%>%^IAin K ;		    ! tullâin
 
 ! kieđâ - Gen Sg
 ! kietâ - Nom Sg
@@ -218,7 +194,7 @@ LEXICON SOLLA-OBL
 LEXICON SOLLA-OBLSHORT
  +Sg+Abe:%>ttáá K ;   ! tulâttáá
 !+Pl+Gen:%>i K ;
- +Pl+Com:%>iguim K ;
+ +Pl+Com:%>iguin K ;
  +Pl+Abe:%>ittáá K ;
 
 
@@ -227,16 +203,16 @@ LEXICON PINO-OBL ! Now = solla, fix!!!
  +Sg+Acc: K ;		    ! tuulâ
  +Sg+Ill:%>n K ;		    ! tuulân   tuuḷân half/long ḷ
  +Sg+Loc:%>st K ;		    ! tuulâst
- +Sg+Com:%>in K ;    ! tulláin
- +Sg+Com:%>áin K ;   ! tullááin
+ +Sg+Com:%>%^IAin K ;    ! tulláin
+! +Sg+Com:%>áin K ;   ! tullááin (sub?)
  +Pl+Nom:%>X4h K ;	    ! tuulah
  +Pl+Gen:%>i K ;		    ! tuulâi
  +Pl+Acc:%>id K ;		    ! tuulâid
 !+Pl+Ill:%>%^SVLid K ;    ! tuul´did
 !+Pl+Ill:%>%^SVLáid K ;   ! tuulááid
  +Pl+Ill:%>id K ;    ! tuul´did
- +Pl+Ill:%>áid K ;   ! tuulááid
- +Pl+Loc:in K ;		    ! tullâin
+! +Pl+Ill:%>áid K ;   ! tuulááid
+ +Pl+Loc:%>%^IAin K ;		    ! tullâin
 
 
 
@@ -271,8 +247,43 @@ LEXICON LAS-SUF
 +N+Pl+Acc:%>jd K ;
 +N+Pl+Ill:%>jd K ;
 +N+Pl+Loc:%>jn K ;
-+N+Pl+Com:%>jgui'm K ;
++N+Pl+Com:%>jguin K ;
 +N+Pl+Abe:%>h K ;
+
+
+
+
+
+! Odd-syllable stems, sublexica
+! - - - - - - - - - - - - - - - 
+
+LEXICON ODD-SUFF-LONGSTEM
+ +Sg+Nom: K ;
+ +Sg+Gen: K ;
+ +Sg+Acc: K ;
+ +Sg+Ill:%>ân K ;
+
+LEXICON ODD-SUFF-SHORTSTEM
+ +Sg+Loc:%>ist K ;
+ +Sg+Com:%>áin K ;
+! +Sg+Com:%>ááin K ;
+ +Sg+Abe:%>ttáá K ;
+ +Ess:%>in K ;
+ +Par:%>id K ;
+ +Pl+Nom:%>eh K ;
+ +Pl+Gen:%>ij K ;
+ +Pl+Acc:%>ijd K ;
+ +Pl+Ill:%>áid K ;
+! +Pl+Ill:%>ááid K ;
+ +Pl+Loc:%>ijn K ;
+! +Pl+Com:%>ijgijn K ;
+ +Pl+Com:%>ijguin K ;
+ +Pl+Abe:%>ijttáá K ;
+
+!LEXICON ODD-SUFF-MIXSTEM
+! # ;
+
+
 
 
 ! ===========================
