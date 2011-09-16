@@ -21,8 +21,9 @@ Multichar_Symbols
  +N +A +Adv +V
  +Pron +CS +CC +Adp +Po +Pr +Interj +Pcle
  +Pers +Dem +Interr +Refl +Recipr +Rel +Indef
- +Sg +Pl +Nom +Gen +Acc +Ill +Ine +Ela +Com +Ess +Par +Abe
- +PxSg1 +PxSg2 +PxSg3 +PxDu1 +PxDu2 +PxDu3 +PxPl1 +PxPl2 +PxPl3
+ +Sg +Pl 
+ +Nom +Gen +Acc +Ill +Ine +Ela +Com +Ess +Par +Abe 
+ +PxSg1 +PxSg2 +PxSg3 +PxDu1 +PxDu2 +PxDu3 +PxPl1 +PxPl2 +PxPl3 
  +Comp +Superl +Actor
  +Qst +Foc +Attr
  +Pass +Ind +Prs +Prt +Pot +Cond +Imprt +ImprtII +Sup
@@ -91,18 +92,19 @@ LEXICON Root
 LEXICON SOLLA ! SM1
  +N: EVEN-NEP ; ! Strong grade
  +N:%^CPL SOLLA-OBL ;
- +N:X2 SOLLA-OBLSHORT ;
+ +N:X2  SOLLA-OBLSHORT ;
 
 LEXICON LUCCA ! SM3
  +N: EVEN-NEP ; ! Strong grade
- +N:%^CPL SOLLA-OBL ;
- +N:X2 SOLLA-OBLSHORT ;
+ +N:%^CPL SOLLA-OBL ;   ! %^CPL WeG and lengthening
+ +N:X2  SOLLA-OBLSHORT ; ! %^CPL WeG, no lengthening
 
 
 LEXICON KIETA ! SM5
  +N: EVEN-N ; ! Strong grade kietâ
  +N:%^XST EVEN-EP ; ! Stronger grade kiettâ 
- +N: SOLLA-OBL ; ! Weak grade kieđâ
+ +N: ILL-SG ; ! Weak grade kieđâ, can be X2
+ +N:%^CPL NON-ILL-OBL ; ! Weak grade kieđâ, can be X2
  +N:X2 SOLLA-OBLSHORT ;
 
 LEXICON KUSSA ! SM6
@@ -125,7 +127,7 @@ PINO ; ! Identical?
 
 LEXICON ALGE
 +N:e EVEN-NEP ;
-!+N
+
 
 LEXICON KASNATTAS
 LITTER ;
@@ -152,11 +154,8 @@ LITTER ; ! fix
 
 
 
-
 ! Contracted stems
 ! ----------------
-
-
 
 
 ! Nominal substems
@@ -170,30 +169,31 @@ LEXICON EVEN-N
  +Sg+Nom: K ;     ! tullâ
 
 LEXICON EVEN-EP
- +Ess:n K ;       ! tullân
- +Par:d K ;       ! tullâd
+ +Ess:%>n K ;       ! tullân
+ +Par:%>d K ;       ! tullâd
 
 LEXICON SOLLA-OBL
+ ILL-SG ;
+ NON-ILL-OBL ;
+
+
+LEXICON NON-ILL-OBL 
  +Sg+Gen: K ;   	    ! tuulâ
  +Sg+Acc: K ;		    ! tuulâ
- +Sg+Ill:%>n K ;		    ! tuulân   tuuḷân half/long ḷ
  +Sg+Loc:%>st K ;		    ! tuulâst
  +Sg+Com:%>%^IAin K ;   ! tullááin
  +Pl+Nom:X4%>h K ;	    ! tuulah
  +Pl+Gen:%>i K ;		    ! tuulâi
  +Pl+Acc:%>id K ;		    ! tuulâid
  +Pl+Ill:%>id K ;    ! tuul´did
-! +Pl+Ill:%>áid K ;   ! tuulááid
  +Pl+Loc:%>%^IAin K ;		    ! tullâin
 
-! kieđâ - Gen Sg
-! kietâ - Nom Sg
-! kiettân Ess
+LEXICON ILL-SG
+ +Sg+Ill:%>n K ;		    ! tuulân   tuuḷân half/long ḷ
 
 
 LEXICON SOLLA-OBLSHORT
  +Sg+Abe:%>ttáá K ;   ! tulâttáá
-!+Pl+Gen:%>i K ;
  +Pl+Com:%>iguin K ;
  +Pl+Abe:%>ittáá K ;
 
@@ -204,16 +204,11 @@ LEXICON PINO-OBL ! Now = solla, fix!!!
  +Sg+Ill:%>n K ;		    ! tuulân   tuuḷân half/long ḷ
  +Sg+Loc:%>st K ;		    ! tuulâst
  +Sg+Com:%>%^IAin K ;    ! tulláin
-! +Sg+Com:%>áin K ;   ! tullááin (sub?)
  +Pl+Nom:%>X4h K ;	    ! tuulah
  +Pl+Gen:%>i K ;		    ! tuulâi
  +Pl+Acc:%>id K ;		    ! tuulâid
-!+Pl+Ill:%>%^SVLid K ;    ! tuul´did
-!+Pl+Ill:%>%^SVLáid K ;   ! tuulááid
  +Pl+Ill:%>id K ;    ! tuul´did
-! +Pl+Ill:%>áid K ;   ! tuulááid
  +Pl+Loc:%>%^IAin K ;		    ! tullâin
-
 
 
 ! 3.6.2. Gen sg odd-syllabic
