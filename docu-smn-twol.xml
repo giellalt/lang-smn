@@ -1,63 +1,58 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
+"http://forrest.apache.org/dtd/document-v20.dtd">
 <document xml:lang="en">
-  <header>
-    <title>Documentation of the twol-smn.txt file</title>
-    <authors>
-      <person email="trond.trosterud@hum.uit.no" name="Trond Trosterud" />
-    </authors>
-  </header>
-  <body>
-    <section>
+   <header>
       <title>Documentation of the twol-smn.txt file</title>
-
-      <p>This file is written in the Koskenniemi-style twolc
-      format. Given the frequent many-to-many-alternations in Inari Sá
-      grammar, it would probably be better to write it in xfst.</p>
-      
-      <p>Needless to say, the rule set is still preliminary.</p>
-
+      <authors>
+         <person email="trond.trosterud@hum.uit.no" name="Trond Trosterud"/>
+      </authors>
+   </header>
+   <body>
       <section>
-        <title>Alphabet and sets</title>
-
-        <p>The parser uses Latin 1 plus digraphs c1 d1 n1 s1 t1 z1 for
-        the Sámi letters. In addition, some morphographemes (h2, b3,
-        etc) are added, this is for letters not undergoing the same
-        changes as other h, b, etc.</p>
-
-        <p>The X1, Q1 etc. are diacritical symbols triggering morphophonological processes such as consonant gradation, etc.</p>
-      </section>
-      <section>
-        <title>The rules</title>
-        <section>
-          <title>Vowel lengthening</title>
-          <p>tbw.</p>
-        </section>
-        <section>
-          <title>Stem vowel alternation</title>
-          <p>There are rules for vowel lenghtening (inserting V) and for â to a triggered by WeG and a lenghtening diacriticon X4.</p>
-        </section>
-        <section>
-          <title>Consonant gradation</title>
-          <section>
-            <title>Deletion rule</title>
-            <p>The quantitative gradation is covered by the rule &quot;Gradation: Double Consonant&quot;, deleting the second of a double consonant in WeG environments.</p>
-          </section>
-          <section>
-            <title>Change rules</title>
-            <p>The parser contains the following alternation rules:</p>
-
-
-            <source>&quot;Qualitative Gradation of Simple Consonant&quot;
-&quot;III-I Gradation&quot;
-&quot;t:d1&quot;
-&quot;h:v&quot;
+         <title>Documentation of the twol-smn.txt file</title>
+         <p><a href="https://victorio.uit.no/langtech/trunk/gt/smn/src/twol-smn.txt">The twol-smn.txt file</a> is
+         written in the Koskenniemi-style twolc format. The rule set is still preliminary.</p>
+         <section>
+            <title>Alphabet and sets</title>
+            <p>The parser uses the official Inari Sámi orthography, as it is presented in Matti Morottaa's
+            <em>Anarâškielâ ravvuuh</em> (that is: without the additional symbols used in Sammallahti/Morottaja
+            dictionary. In addition, some morphographemes (h2, b3, etc) are added, this is for letters not undergoing
+            the same changes as other h, b, etc.</p>
+            <p>The X1, Q1 etc. are diacritical symbols triggering morphophonological processes such as consonant
+            gradation, etc. We are about to change the diacritical symbols to more mnemonic tags.</p>
+         </section>
+         <section>
+            <title>The rules</title>
+            <section>
+               <title>Vowel lengthening</title>
+               <p>tbw.</p>
+            </section>
+            <section>
+               <title>Stem vowel alternation</title>
+               <p>There are rules for vowel lenghtening (inserting V) and for â to a triggered by WeG and a lenghtening
+               diacriticon X4.</p>
+            </section>
+            <section>
+               <title>Consonant gradation</title>
+               <section>
+                  <title>Deletion rule</title>
+                  <p>The quantitative gradation is covered by the rule "Gradation: Double Consonant", deleting the
+                  second of a double consonant in WeG environments.</p>
+               </section>
+               <section>
+                  <title>Change rules</title>
+                  <p>The parser contains the following alternation rules:</p>
+                  <source>"Qualitative Gradation of Simple Consonant"
+"III-I Gradation"
+"t:d1"
+"h:v"
 </source>
-
-          </section>
-        </section>
+               </section>
+            </section>
+         </section>
+         <p class="last_modified">Last modified: $Date$, by $Author:
+         boerre $</p>
       </section>
-      <p class="last_modified">Last modified: $Date$, by $Author$</p>
-    </section>
-  </body>
+   </body>
 </document>
