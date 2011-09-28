@@ -46,6 +46,7 @@ Alphabet
 %^ODDSHV:0
 %^ODDLV:0
 %^XST:0 %^IA:0
+%^ILL:0 
 ;
 
 Sets
@@ -72,13 +73,18 @@ Sets
 Rules
 
 
-! Consonant alternations in certain pos
-! -------------------------------------
 
+! Root vowel shortening
 
-! Vowel lengthening
-! -----------------
+"Root Vowel Shortening in EAP"
+Vx:0 <=> Vx _ Cns:* Vow X2:0 ;
+       where Vx in ( a ) ;
+       
+!€ šaaluX2%>ittáá
+!€ ša0lu00ittáá
 
+! Diphtong simplification
+! -----------------------
 
 
 
@@ -86,18 +92,7 @@ Rules
 ! Stem vowel alternations
 ! -----------------------
 
-! General alternations
-! - - - - - - - - - - 
 
-
-! "Stem Vowel Change in Comitative"
-!  Vx:Vy <=> _  %^SVL:0 ;
-!        where Vx in ( â e )
-!   	         Vy in ( á i )
-! 	     matched ;
-! mielgâ : mielg%^SVLáin
-! alge : olgijn
-! and the umlaut must be fixed as well...
 
 "Adjust to á before Com Sg and Ill Pl"
  â:á <=> _ (Dummy:*) %>: %^IA: i [ n | d ] ;	
@@ -110,23 +105,15 @@ Rules
 "e stem to a"
  e:a <=> [a|e] Cns+: %>: _ ; 
 
+! "Stem Vowel Change in Comitative"
+!  Vx:Vy <=> _  %^SVL:0 ;
+!        where Vx in ( â e )
+!   	         Vy in ( á i )
+! 	     matched ;
+! mielgâ : mielg%^SVLáin
+! alge : olgijn
+! and the umlaut must be fixed as well...
 	
-	
-! â-stem alternations
-! - - - - - - - - - -
-
-
-
-! a-stem alternations
-! - - - - - - - - - -
-
-
-! e-stem alternations
-! - - - - - - - - - -
-
-
-! o-stem alternations
-! - - - - - - - - - -
 
 
 ! Cns stem alternations
@@ -146,13 +133,6 @@ Vx:Vy <=> _ Cns+ Vow:* %^VLOW: ;
 
 
 
-
-! alternations valid for several stem types
-! - - - - - - - - - - - - - - - - - - - - -
-
-
-! Diphtong simplification
-! -----------------------
 
 
 ! Consonant gradation rules
