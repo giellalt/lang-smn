@@ -41,7 +41,9 @@ Alphabet
  Q1:0 Q2:0 Q3:0 Q4:0 Q5:0 Q6:0 Q7:0 Q8:0 Q9:0 
  Y1:0 Y2:0 Y3:0 Y4:0 Y5:0 Y6:0 Y7:0 Y8:0 
 
- %^SHV:0 %^CPL:0 %^SVL:0  %^WG1:0 %^VLOW:0 
+ %^SHV:0 
+ %^CPL:0 %^SCPL:0 
+ %^SVL:0  %^WG1:0 %^VLOW:0 
 %^ODDC:0
 %^ODDSHV:0
 %^ODDLV:0
@@ -65,7 +67,7 @@ Sets
 ! DelCns = g2 m2 n2 h2 ;
  WeG = %^WG1 X2 %^CPL ;
  StemCns = b b3 d d3 g g2 g3 h h2 h3 j l m m2 m3 n n2 ŋ r s ;
- Dummy = %^WG1 X2 %^SVL X4 %^VLOW %^CPL %^ODDC %^ODDLV %^ODDSHV 
+ Dummy = %^WG1 X2 %^SVL X4 %^VLOW %^CPL %^SCPL %^ODDC %^ODDLV %^ODDSHV 
          %^XST %^IA ;
  ODD = %^ODDC %^ODDLV %^ODDSHV ;
 
@@ -144,7 +146,7 @@ Vx:Vy <=> _ Cns+ Vow:* %^VLOW: ;
 ! - - - - - - - - - - - - - - -
 
 "Compensatory lengthening"
-¥:Vx <=> Vx _ Cns:* Vow:* (:StemCns) %^CPL: ;
+¥:Vx <=> Vx _ Cns:* Vow:* (:StemCns) [ %^CPL: | %^SCPL: ] ;
 	where Vx in ( a e i o u ) ;
 
 ! Deletion rules
