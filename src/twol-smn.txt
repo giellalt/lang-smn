@@ -153,6 +153,12 @@ Vx:Vy <=> _ Cns+ Vow:* %^VLOW: ;
 ! - - - - - - - -
 
 
+"Gradation: Single Consonant"
+ Cx:Cy <=> Vow (Vow:) _  Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ;
+ 	where Cx in ( p t h k c )
+ 		  Cy in ( v đ v h s )
+ 		  matched ;
+
 "Gradation: Double Consonant" !káffe:káfes
   Cx:0 <=> Vow: Cy _ Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ;
 	where Cx in (p b d g m n ŋ d s z r š ž l v )
@@ -160,22 +166,17 @@ Vx:Vy <=> _ Cns+ Vow:* %^VLOW: ;
 	      matched ;
 ! p t k š č c h đ
 
-"Gradation: Single Consonant"
- Cx:Cy <=> Vow (Vow:) _  Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ;
- 	where Cx in ( p t h k c )
- 		  Cy in ( v đ v h s )
- 		  matched ;
-
 "Gradation: xx:y 1"
  Cx:0 <=> Vow (Vow:) _ Cx:Cy Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ;
- 	where Cx in ( t p k č c )
- 		  Cy in ( đ v h j s )
+ 	where Cx in ( t k č c )
+ 		  Cy in ( đ h j s )
  		  matched ;
+! p in previous rule instead. We need both pp:p and pp:v.
 
 "Gradation: xx:y 2"
  Cx:Cy <=> Vow (Vow:) Cx: _ Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ;
- 	where Cx in ( t p k č c )
- 		  Cy in ( đ v h j s )
+ 	where Cx in ( t k č c )
+ 		  Cy in ( đ h j s )
  		  matched ;
 
 "xkk:xk Gradation"
