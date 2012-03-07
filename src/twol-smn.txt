@@ -23,10 +23,13 @@ Alphabet
  A Á Â Å B C D E F G H I J K L M N O Õ P Q
  R S T U V W X Y Z Æ Ä Ø Ö Å 
  Č Đ Ŋ Ŧ Š Ž 
- ':0
+ ':0 %-
  
- %-  
- %>:0 %^:0 !deleting suffix and syllable boundaries.
+! Literal quotes and angles must be escaped (cf morpheme boundaries further down):
+ »7     ! »
+ «7     ! «
+ %[%>%] ! >
+ %[%<%] ! <
 
  É Ó Ú Í À È Ò Ù Ì Ë Ü Ï Ê Ô Û Î Ã Ý þ Ð testing without
  é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý þ ð 
@@ -49,6 +52,16 @@ Alphabet
 %^ODDLV:0
 %^XST:0 %^IA:0
 %^ILL:0 
+
+! Morpheme boundaries:
+ «  ! Derivational prefix
+ »  ! Derivational suffix
+ %< ! Inflectional prefx
+ %> ! Inflectional suffix
+ #  ! Word boundary for both lexicalised and dynamic compounds
+ %^ ! (exceptional) soft hyphenation point
+
+! End of alphabet definitions
 ;
 
 Sets
