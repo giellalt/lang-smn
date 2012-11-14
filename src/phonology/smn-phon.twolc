@@ -1,0 +1,299 @@
+! Divvun & Giellatekno - open source grammars for Sámi and other languages
+! Copyright © 2000-2010 The University of Tromsø & the Norwegian Sámi Parliament
+! http://giellatekno.uit.no & http://divvun.no
+!
+! This program is free software; you can redistribute and/or modify
+! this file under the terms of the GNU General Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version. The GNU General Public License
+! is found at http://www.gnu.org/licenses/gpl.html. It is
+! also available in the file $GTHOME/LICENSE.txt.
+!
+! Other licensing options are available upon request, please contact
+! giellatekno@hum.uit.no or divvun@samediggi.no
+
+Alphabet
+ a á â ä b c d e f g h i j k l m n o õ p q
+ r s t u v w x y z æ ä ø ö å
+ č đ ŋ ŧ š ž
+ ¥:0 ! Vowel lengthening
+
+! č đ ŋ š ŧ ž as in Northern Sámi
+
+ A Á Â Å B C D E F G H I J K L M N O Õ P Q
+ R S T U V W X Y Z Æ Ä Ø Ö Å 
+ Č Đ Ŋ Ŧ Š Ž 
+ ':0 %-
+ 
+! Literal quotes and angles must be escaped (cf morpheme boundaries further down):
+ »7     ! »
+ «7     ! «
+ %[%>%] ! >
+ %[%<%] ! <
+
+ É Ó Ú Í À È Ò Ù Ì Ë Ü Ï Ê Ô Û Î Ã Ý þ Ð testing without
+ é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý þ ð 
+ ß ª ß ç
+
+ h2:h g2:g m2:m n2:n 
+ b3:b d3:d g3:g m3:m h3:h 
+ k2:k
+
+
+      X2:0      X4:0 X5:0 X6:0 X7:0 X8:0 X9:0
+ Q1:0 Q2:0 Q3:0 Q4:0 Q5:0 Q6:0 Q7:0 Q8:0 Q9:0 
+ Y1:0 Y2:0 Y3:0 Y4:0 Y5:0 Y6:0 Y7:0 Y8:0 
+
+ %^SHV:0 
+ %^CPL:0 %^SCPL:0 
+ %^SVL:0  %^WG1:0 %^VLOW:0 
+%^ODDC:0
+%^ODDSHV:0
+%^ODDLV:0
+%^XST:0 %^IA:0
+%^ILL:0 
+
+! Morpheme boundaries:
+ «  ! Derivational prefix
+ »  ! Derivational suffix
+ %< ! Inflectional prefx
+ %> ! Inflectional suffix
+ #  ! Word boundary for both lexicalised and dynamic compounds
+ %^ ! (exceptional) soft hyphenation point
+
+! End of alphabet definitions
+;
+
+Sets
+ Vow = a á â ä e i o u y æ ø ö å
+       é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý 
+       A Á Â Ä E I O U Y Æ Ø Ö Å
+       É Ó Ú Í À È Ò Ú Ì Ë Ü Ï Ê Ô Û Î Ã Ý 
+       ¥ ;
+ Cns = b c č d đ f g h j k l m n ŋ 
+       p q r s š t ŧ v w x z ž
+       B C č D Đ F G H J K L M N Ŋ
+       P Q R S Š T Ŧ V W X Z Ž 
+       ht g2 m2 n2 
+       b3 d3 g3 m3 h3 
+       k2 ;
+! DelCns = g2 m2 n2 h2 ;
+ WeG = %^WG1 X2 %^CPL ;
+ StemCns = b b3 d d3 g g2 g3 h h2 h3 j l m m2 m3 n n2 ŋ r s ;
+ Dummy = %^WG1 X2 %^SVL X4 %^VLOW %^CPL %^SCPL %^ODDC %^ODDLV %^ODDSHV 
+         %^XST %^IA ;
+ ODD = %^ODDC %^ODDLV %^ODDSHV ;
+
+
+Rules
+
+
+
+! Root vowel shortening
+
+"Root Vowel Shortening in EAP"
+Vx:0 <=> Vx _ Cns:* Vow X2:0 ;
+       where Vx in ( a e o u ä ) ;
+       
+       
+!€ šaaluX2%>ittáá
+!€ ša0lu00ittáá
+
+! Diphtong simplification
+! -----------------------
+
+
+
+
+! Stem vowel alternations
+! -----------------------
+
+
+
+"Adjust to á before Com Sg and Ill Pl"
+ â:á <=> _ (Dummy:*) %>: %^IA: i [ n | d ] ;	
+! No, we do the short one instead, as Matti Morottaja
+
+"j after i-stem"
+ i:j <=> i (Dummy:*) %>: (Dummy:*) _  ;	
+
+! XXX not finished
+"e stem to a"
+ e:a <=> [a|e] Cns+: %>: _ ; 
+
+! "Stem Vowel Change in Comitative"
+!  Vx:Vy <=> _  %^SVL:0 ;
+!        where Vx in ( â e )
+!   	         Vy in ( á i )
+! 	     matched ;
+! mielgâ : mielg%^SVLáin
+! alge : olgijn
+! and the umlaut must be fixed as well...
+	
+
+
+! Cns stem alternations
+! - - - - - - - - - -
+
+"Long vowel shortening in Cns stems"
+Vx:0 <=> Cns:* Vx _ Cns %^SHV:0 ;
+     where Vx in (á i);
+
+
+"Vowel lowering in Contracted Stems"
+Vx:Vy <=> _ Cns+ Vow:* %^VLOW: ; 
+      where Vx in (u a)
+            Vy in (o á)
+            matched ;
+
+
+
+
+
+
+! Consonant gradation rules
+! -------------------------
+
+
+! Compensatory lengthening rule
+! - - - - - - - - - - - - - - -
+
+"Compensatory lengthening"
+¥:Vx <=> Vx _ Cns:* Vow:* (:StemCns) [ %^CPL: | %^SCPL: ] ;
+	where Vx in ( a e i o u ) ;
+
+! Deletion rules
+! - - - - - - - -
+
+
+"Gradation: Single Consonant"
+ Cx:Cy <=> Vow (Vow:) _  Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ;
+ 	where Cx in ( p t h k c )
+ 		  Cy in ( v đ v h s )
+ 		  matched ;
+
+"Gradation: Double Consonant" !káffe:káfes
+  Cx:0 <=> Vow: Cy: _ Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ;
+	where Cx in (p b d g m n ŋ d s z r š ž l v )
+	      Cy in (p b d g m n ŋ d s z r š ž l v )
+	      matched ;
+! p t k š č c h đ, 
+! Note: added : to Cy to allow for pp:v subrule below
+
+"Gradation: pp:v"
+  p:v <=> Vow: p: _ Vow ( StemCns:) (:StemCns) (Dummy:*) WeG: ;
+
+"Gradation: xx:y 1"
+ Cx:0 <=> Vow (Vow:) _ Cx:Cy Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ;
+ 	where Cx in ( t k č c )
+ 		  Cy in ( đ h j s )
+ 		  matched ;
+! p in previous rule instead. We need both pp:p and pp:v.
+
+"Gradation: xx:y 2"
+ Cx:Cy <=> Vow (Vow:) Cx: _ Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ;
+ 	where Cx in ( t k č c )
+ 		  Cy in ( đ h j s )
+ 		  matched ;
+ 
+
+"xkk:xk Gradation"
+ k:0 <=> Vow: Cx _ k Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ;
+	where Cx in ( ŋ r ) ;
+	
+"xtt:xt Gradation"
+ t:0 <=> Vow: Cx _ t Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ;
+	where Cx in ( i l n r ) ;
+	
+"xcc:xc Gradation"
+ c:0 <=> Vow: Cx _ c Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ;
+	where Cx in ( i l n r ) ;
+	
+"xpp:xp Gradation"
+ p:0 <=> Vow: Cx _ p Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ;
+	where Cx in ( l m r v ) ;
+	
+"xss:xs Gradation"
+ s:0 <=> Vow: Cx _ s Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ;
+	where Cx in ( l n r ) ;
+	
+"xčč:xč Gradation"
+ č:0 <=> Vow: Cx _ č Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ;
+	where Cx in ( l r ) ;
+	
+"xšš:xš Gradation"
+ š:0 <=> Vow: Cx _ s Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ;
+	where Cx in ( l r ) ;
+	
+"nnj:nj Gradation"
+ n:0 <=> Vow: n _ j Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ;
+
+	
+
+	
+! Change rules
+! - - - - - - 
+
+
+	
+"h:v in Front of Voiceless Dentals"
+ h:v <=> Vow:*  _ (s) [c|č|t] Vow: WeG: ;
+
+
+"Consonant Lengthening"
+ 0:Cx <=> Vow _ Cx Vow: %^XST: ;
+ 	where Cx in ( t l s ) ;
+
+
+! "i To j in High Vowel Suffixes"
+!  i:j <=> %>: ( g u ) i _ [d|n] ;
+ ! oohoid
+ ! kuolijd
+
+! "kk:h" ákku
+! Cannot have kk as underlying form, because of kukká.
+
+
+
+!Cx:Vx <=> Vx _ Cx Vow %^CPL: ;
+!      where Cx in ( l p p )
+!      	    Vx in ( u a ä )
+!	    mixed ;
+
+
+! konsonanten skal bli til nabovokalen.
+
+
+
+!€ tullâ^CPL
+!€ tuulâ0
+
+! Hmm, do not like this rule, but the alternative is insertion, 
+! also not good, or eventually a long baseform *tuullâ or *tuu7llâ, 
+! where u7 is there just to be deleted unless in weak grade contexts.
+
+!Idas regler för verb
+!
+!"Even syllabic verbs present sg, monophpt E I"
+! Vx:Vy <=>  _ C+ (V) %>: %^1UML:0 ;
+! 	where Vx in (i e u)
+! 	      Vy in (æ a å)
+! 	matched ;
+
+
+! Odd-syllabic verb rules
+! - - - - - - - - - - - - 
+
+"t Shortening in Odd-Syllabic Verbs"
+t:0 <=> t _ ODD:0 [#:0|%>: Cns] ;
+
+!€ cie'lâtt#
+!€ cie'lât0#
+
+"V-Context Vowel Shortening in Odd-Syllabic Verbs"
+Vx:0 <=> Vx _ %^ODDSHV:0 %>: Vow ;
+     where Vx in (á a i e o);
+
+"C-Context Vowel Shortening in Odd-Syllabic Verbs"
+Vx:0 <=> Vx _ %^ODDLV:0 %>: [Cns|#:0] ;
+     where Vx in (á a i e o);
