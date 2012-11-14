@@ -34,7 +34,6 @@ GT_LEXC_SRCS=\
 			stems/nouns.lexc		   \
 			stems/numerals.lexc		   \
 			stems/particles.lexc	   \
-			stems/prefixes.lexc		   \
 			stems/pronouns.lexc		   \
 			stems/punctuation.lexc	   \
 			stems/smn-propernouns.lexc \
