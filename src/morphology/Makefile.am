@@ -22,11 +22,9 @@ GT_LEXC_ROOT=root.lexc
 GT_LEXC_SRCS=\
 			clitics.lexc			   \
 			root.lexc				   \
-			affixes/adjectives.lexc	   \
 			affixes/nouns.lexc		   \
 			affixes/propernouns.lexc   \
 			affixes/verbs.lexc		   \
-			stems/adjectives.lexc	   \
 			stems/adpositions.lexc	   \
 			stems/adverbs.lexc		   \
 			stems/conjunctions.lexc	   \
