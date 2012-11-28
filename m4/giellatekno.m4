@@ -135,6 +135,14 @@ AS_IF([test "x$enable_voikko" = "xyes"],
       [AC_PATH_PROG([ZIP], [zip], [false])
        AS_IF([test "x$ZIP" = "xfalse"],
              [AC_MSG_ERROR([zip is required for voikko speller packages])])])
+
+# Enable Hunspell production - default is 'no'
+AC_ARG_ENABLE([hunspell],
+              [AS_HELP_STRING([--enable-hunspell],
+                              [enable hunspell building @<:@default=no@:>@])],
+              [enable_hunspell=$enableval],
+              [enable_hunspell=no])
+AM_CONDITIONAL([WANT_HUNSPELL], [test "x$enable_hunspell" != xno])
 ]) # gt_ENABLE_TARGETS
 
 AC_DEFUN([gt_PRINT_FOOTER],
