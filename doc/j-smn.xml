@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
+"http://forrest.apache.org/dtd/document-v20.dtd">
+<document xml:lang="en">
+   <header>
+      <title>Documentation on Inari Sámi</title>
+      <authors>
+         <person email="trond.trosterud@hum.uit.no" name="Trond Trosterud"/>
+      </authors>
+   </header>
+   <body>
+      <section>
+         <title>Documentation on Inari Sámi</title>
+         <p/>
+         <ul>
+            <li><a href="docu-smn-background.html">Background information on the Inari Saami project</a></li>
+         </ul>
+         <section>
+            <title>The source files</title>
+            <ul>
+               <li><strong><a href="docu-smn-twol.html">Documentation</a></strong> of the <a
+               href="https://victorio.uit.no/langtech/trunk/gt/smn/src/twol-smn.txt"><code>twol-smn.txt</code></a> rule
+               file</li>
+               <li><strong><a href="docu-smn-lex.html">Documentation</a></strong> of <a
+               href="https://victorio.uit.no/langtech/trunk/gt/smn/src/">the lexicon files</a></li>
+            </ul>
+         </section>
+         <section>
+            <title>Testing</title>
+            <p>We have two test routines for Inari Sámi:</p>
+            <ol>
+               <li>In gt/smn/testing: <code>make n-paradigm WORD=testword</code></li>
+               <li>In gt/: <code>make fsttest GTLANG=smn</code></li>
+            </ol>
+            <p>The first routine runs against noun-codes.txt.</p>
+            <p>The second routine uses the file <a
+            href="https://victorio.uit.no/langtech/trunk/gt/smn/testing/smn-tests.yaml">smn/testing/smn-tests.yaml</a>.
+            Feel free to add paradigms.</p>
+            <p>No test routines yet.</p>
+         </section>
+         <p class="last_modified">Last modified: $Date$, by $Author:
+         trond $</p>
+      </section>
+   </body>
+</document>
