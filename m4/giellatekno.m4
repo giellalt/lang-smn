@@ -144,6 +144,14 @@ AS_IF([test "x$enable_voikko" = "xyes" -a "x$gt_prog_hfst" != xno],
              [enable_voikko=no
               AC_MSG_WARN([zip missing, spellers disabled])])])
 
+# Enable Oahpa transducers - default is 'no'
+AC_ARG_ENABLE([oahpa],
+              [AS_HELP_STRING([--enable-oahpa],
+                              [enable oahpa transducers @<:@default=no@:>@])],
+              [enable_oahpa=$enableval],
+              [enable_oahpa=no])
+AM_CONDITIONAL([WANT_OAHPA], [test "x$enable_oahpa" != xno])
+
 # Enable Hunspell production - default is 'no'
 AC_ARG_ENABLE([hunspell],
               [AS_HELP_STRING([--enable-hunspell],
@@ -164,7 +172,11 @@ cat<<EOF
     * hfst speller automaton: $enable_spellerautomat
     * voikko support: $enable_voikko
     * yaml tests enabled: $enable_yamltests
-to build, test and install:
+    * Oahpa transducers enabled: $enable_oahpa
+
+For more ./configure options, run ./configure --help
+
+To build, test and install:
     make
     make check
     make install
