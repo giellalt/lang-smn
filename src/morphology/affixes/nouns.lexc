@@ -16,31 +16,31 @@
 
 
 ! ======================
-! Sublexica for NounRoot
+!! !!!Sublexica for NounRoot
 ! ======================
 
 
-! Even-syllable stems
+!! !!Even-syllable stems
 ! -------------------
 
-! 1. 2syll stems
+!! !!1. 2syll stems
 ! - - - - - -
 
-! 1.1. Vowel final
-! 1.1.1 Even-syllabic â-, u- and i-stems
+!! !!1.1. Vowel final
+!! !1.1.1 Even-syllabic â-, u- and i-stems
 
-LEXICON SOLLA ! SM1
+LEXICON SOLLA  !!= * __@CODE@__ SM1
  +N: EVEN-NEP ; ! Strong grade
  +N:%^CPL EVEN_WEAK ;
  +N:X2  EVEN_WEAKSHORT ; ! Abe + Com Sg
 
-LEXICON LUCCA ! SM3
+LEXICON LUCCA  !!= * __@CODE@__ SM3
  +N: EVEN-NEP ;          ! Strong grade
  +N:%^CPL EVEN_WEAK ;    ! %^CPL WeG and lengthening
  +N:X2  EVEN_WEAKSHORT ; ! X2 WeG, no lengthening
 
 
-LEXICON KIETA ! SM5
+LEXICON KIETA  !!= * __@CODE@__ SM5
  +N: EVEN-N ;           ! Strong grade kietâ
  +N:%^XST EVEN-EP ;     ! Stronger grade kiettâ 
  +N: ILL-SG ;           ! Weak grade kieđâ, can be X2
@@ -48,29 +48,29 @@ LEXICON KIETA ! SM5
  +N:X2 EVEN_WEAKSHORT ;
 
 
-LEXICON KYELI ! i-e-á
+LEXICON KYELI  !!= * __@CODE@__ i-e-á
  +N: EVEN-N ;           ! Strong grade kietâ
  +N:%^XST EVEN-EP ;     ! Stronger grade kiettâ 
  +N: ILL-SG ;           ! Weak grade kieđâ, can be X2
  +N:%^CPL NON-ILL-OBL ; ! Weak grade kieđâ, can be X2
  +N:X2 EVEN_WEAKSHORT ;
 
-LEXICON ERGI ! i-i-á
+LEXICON ERGI  !!= * __@CODE@__ i-i-á
  +N: EVEN-N ;           ! Strong grade kietâ
  +N:%^XST EVEN-EP ;     ! Stronger grade kiettâ 
  +N:%^ILL ILL-SG ;           ! Weak grade kieđâ, can be X2
  +N:%^CPL NON-ILL-OBL ; ! Weak grade kieđâ, can be X2
  +N:X2 EVEN_WEAKSHORT ;
 
-LEXICON KUMPPI ! i-i-i
+LEXICON KUMPPI  !!= * __@CODE@__ i-i-i
 SOLLA ;
 
-LEXICON KUSSA ! SM6
+LEXICON KUSSA  !!= * __@CODE@__ SM6
  +N: EVEN-NEP ; ! Strong grade
  +N: EVEN_MIXED_OBL ;
  +N:X2  EVEN_WEAKSHORT ;
 
-LEXICON EVEN_MIXED_OBL 
+LEXICON EVEN_MIXED_OBL  !!= * __@CODE@__
  +Sg+Gen:%^CPL K ;   	    ! kuusâ
  +Sg+Acc:%^CPL K ;		    ! kuusâ
  +Sg+Ill:%^CPL%>n K ;	    ! kuusân   tuuḷân half/long ḷ
@@ -84,18 +84,18 @@ LEXICON EVEN_MIXED_OBL
 
 
 
-LEXICON KUOSA ! SM7
+LEXICON KUOSA  !!= * __@CODE@__ SM7
 KIETA ; ! fix
 
-! 1.1.2 Even-syllabic á/a- and o-stems
+!! !!1.1.2 Even-syllabic á/a- and o-stems
 
-LEXICON PINO ! SM14
+LEXICON PINO  !!= * __@CODE@__ SM14
  +N: EVEN-NEP ;       ! Strong grade
  +N:%^CPL PINO-OBL ;
  +N:X2 EVEN_WEAKSHORT ;
 
 
-LEXICON RITA ! SM15
+LEXICON RITA  !!= * __@CODE@__ SM15
 !!€gt-norm:Noun - vašo: # â-stems Morottaja
 !!€ vašo   vašo+N+Sg+Nom
 !!€ vašo   vašo+N+Sg+Gen
@@ -103,33 +103,33 @@ LEXICON RITA ! SM15
 PINO ; ! Identical?
 
 
-LEXICON ALGE
+LEXICON ALGE  !!= * __@CODE@__
 +N:e EVEN-NEP ;
 
 
 
 
 
-! Nominal substems
+!! !!Nominal substems
 ! - - - - - - - -  
 
-LEXICON EVEN-NEP
+LEXICON EVEN-NEP !!= * __@CODE@__
  EVEN-N ;   ! strong:   tullâ, kietâ
  EVEN-EP ;  ! stronger: tullân, kiettân
 
-LEXICON EVEN-N
+LEXICON EVEN-N !!= * __@CODE@__
  +Sg+Nom: K ;     ! tullâ
 
-LEXICON EVEN-EP
+LEXICON EVEN-EP !!= * __@CODE@__
  +Ess:%>n K ;       ! tullân
  +Par:%>d K ;       ! tullâd
 
-LEXICON EVEN_WEAK
+LEXICON EVEN_WEAK !!= * __@CODE@__
  ILL-SG ;
  NON-ILL-OBL ;
 
 
-LEXICON NON-ILL-OBL 
+LEXICON NON-ILL-OBL  !!= * __@CODE@__
  +Sg+Gen: K ;   	    ! tuulâ
  +Sg+Acc: K ;		    ! tuulâ
  +Sg+Loc:%>st K ;		! tuulâst
@@ -140,17 +140,17 @@ LEXICON NON-ILL-OBL
  +Pl+Ill:%>id K ;       ! tuul´did
  +Pl+Loc:%>%^IAin K ;   ! tullâin
 
-LEXICON ILL-SG
+LEXICON ILL-SG !!= * __@CODE@__
  +Sg+Ill:%>n K ;	    ! tuulân   tuuḷân half/long ḷ
 
 
-LEXICON EVEN_WEAKSHORT
+LEXICON EVEN_WEAKSHORT !!= * __@CODE@__
  +Sg+Abe:%>ttáá K ;   ! tulâttáá
  +Pl+Com:%>iguin K ;
  +Pl+Abe:%>ittáá K ;
 
 
-LEXICON PINO-OBL ! Now = solla, fix!!!
+LEXICON PINO-OBL  !!= * __@CODE@__ Now = solla, fix!!!
  +Sg+Gen: K ;   	    ! tuulâ
  +Sg+Acc: K ;		    ! tuulâ
  +Sg+Ill:%>n K ;		! tuulân   tuuḷân half/long ḷ
