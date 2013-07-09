@@ -12,52 +12,17 @@
 ! Other licensing options are available upon request, please contact
 ! giellatekno@hum.uit.no or divvun@samediggi.no
 
-! ===================================== !
-! Phonological converter for North Sámi !
-! ===================================== !
+! ====================================== !
+! Phonological converter for Inari Saami !
+! ====================================== !
 
-! To eventual curious readers
-! This file tries out conversion from Sámi orthography to a phonetic
-! translation based upon IPA. There is a switch at the end to get 
-! different formats: SAMPA, Fenno-Ugric transcription or Finnish
-! orthography.
-
-! Usage: Compile sme as usual:
-! make GTLANG=sme
-! Pipe text through the analyser:
-! cat text | preprocess | lookup -flags mbTT bin/phon-sme.fst | ..
-
-!We may also add POS tagging:
-! cat corp/pedkorpus.txt | preprocess | lookup -flags mbTT -utf8 bin/pos-sme.fst | tr '\t' '+' | cut -d"+" -f1,3 | uniq | lookup -flags mbTT -utf8 bin/phon-sme.fst | cut -f2 | l
-
-! In order to make this better we should uniq the closed POS before giving them
-! to the phonological analyser (TODO: Check whether output is ok).
-
-! We might also add syllable boundaries. Here the simple version:
-!cat corp/pedkorpus.txt | preprocess | lookup -flags mbTT -utf8 bin/hyphrules-sme.fst | cut -f2 | lookup -flags mbTT -utf8 bin/phon-sme.fst | cut -f2 | tr '\n' ' '  | see
-
-! echo "dat lea 123" | preprocess | 
-! lookup -flags mbTT -utf8 bin/sme-num.fst | cut -f2 |
-! lookup -flags mbTT -utf8 bin/hyphrules-sme.fst | cut -f2 | 
-! lookup -flags mbTT -utf8 bin/phon-sme.fst | cut -f2 | tr '\n' ' ' | l
+! This is based upon the North Saami converter.
 
 
-!echo <<defining POS tags...>>
-!
-!define POSTAG %+N -> %+N,
-!              %+A -> %+A, 
-!              %+V -> %+V,
-!              %+Adv -> %+X, 
-!              %+Pron -> %+X,
-!              %+CS -> %+X,
-!              %+CC -> %+X,
-!              %+Adp -> %+X,
-!              %+Po -> %+X,
-!              %+Pr -> %+X,
-!              %+Interj -> %+X,
-!              %+Pcle -> %+X,
-!              %+Num -> %+X, 
-!              %+CLB -> %+CLB ;
+
+
+
+
 
 
 echo <<defining Vow and Cns...>>
@@ -67,9 +32,9 @@ echo <<defining Vow and Cns...>>
 define Vow       [ a | á | e | i | o | u | y | æ | ø | å | ä | ö | 
                    A | Á | E | I | O | U | Y | Æ | Ø | Å | Ä | Ö | 
                    é | ó | ú | í | à | è | ò | ù | ì | ë | ü | ï | 
-                   â | ê | ô | û | î | ã | ý |
+                   â | ê | ô | û | î | ã | ý | õ |
                    É | Ó | Ú | Í | À | È | Ò | Ù | Ì | Ë | Ü | Ï | 
-                   Â | Ê | Ô | Û | Î | Ã | Ý |
+                   Â | Ê | Ô | Û | Î | Ã | Ý | Õ |
                    ɑ | ə | ă | ĕ | ĭ | ŭ | ŏ |
                    ː ] ;
 
