@@ -23,7 +23,8 @@ JSP_PAGES=root-morphology.jspwiki        \
 		verbs-stems.jspwiki              \
 		nouns-affixes.jspwiki            \
 		propernouns-affixes.jspwiki      \
-		verbs-affixes.jspwiki
+		verbs-affixes.jspwiki \
+		smn-phon-phonology.jspwiki
 # clitics-morphology.jspwiki       \
 # compounding-morphology.jspwiki   \
 # abbreviations-stems.jspwiki      \
