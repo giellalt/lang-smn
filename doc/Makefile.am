@@ -14,16 +14,16 @@ JSP_PAGES=root-morphology.jspwiki        \
 		adpositions-stems.jspwiki        \
 		adverbs-stems.jspwiki            \
 		conjunctions-stems.jspwiki       \
+		nouns-affixes.jspwiki            \
 		nouns-stems.jspwiki              \
 		numerals-stems.jspwiki           \
 		particles-stems.jspwiki          \
 		pronouns-stems.jspwiki           \
+		propernouns-affixes.jspwiki      \
 		punctuation-stems.jspwiki        \
 		subjunctions-stems.jspwiki       \
-		verbs-stems.jspwiki              \
-		nouns-affixes.jspwiki            \
-		propernouns-affixes.jspwiki      \
 		verbs-affixes.jspwiki \
+		verbs-stems.jspwiki              \
 		smn-phon-phonology.jspwiki
 # clitics-morphology.jspwiki       \
 # compounding-morphology.jspwiki   \
