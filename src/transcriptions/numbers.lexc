@@ -47,6 +47,9 @@ Multichar_Symbols
 @U.DATE.30@
 @U.DATE.31@
 
+
+  +Use/NG    ! Do not generate, for isme-ped.fst and apertium
+
 ! Note! the diacritic marks in this file are only part of the lower
 ! representation. This means they can only be used from number to letter
 ! conversion of date and month representation, not the other way around.
@@ -99,8 +102,10 @@ ohtâ:1 LOHKAIM ;
 kyehti:2 LOHKAIM ;
 kulmâ:3 LOHKAIM ;
 nelji:4 LOHKAIM ;
-vittâ:5 LOHKAIM ;
-kutta:6 LOHKAIM ;
+vittâ+Use/NG:5 LOHKAIM ;
+kuttâ+Use/NG:6 LOHKAIM ;
+vitt:5 LOHKAIM ;
+kutt:6 LOHKAIM ;
 čiččâm:7 LOHKAIM ;
 käävci:8 LOHKAIM ;
 oovce:9 LOHKAIM ;
@@ -143,12 +148,12 @@ LEXICON MILJON
 
 LEXICON OVERTHOUSANDS
 HUNDREDST ;		! x00.000.000
-čuođi:1 HUNDREDT ;	! 100.000.000
+čyeđe:1 HUNDREDT ;	! 100.000.000
 :%0 TENST ;		!  20.000.000
 :%0 TEENST ;		!  10.000.000
 :%0%0 TWOST ;		!   2.000.000
 :%0%0 SEVENST ;		!   7.000.000
-duhát:%0%01 THOUSAND ;	!   1.000.000
+tuhháát:%0%01 THOUSAND ;	!   1.000.000
 :%0%0%0 UNDERTHOUSAND ;	
 :%0%0%0%0 TENS ;
 :%0%0%0%0 TEENS ;
@@ -167,7 +172,7 @@ käävci:8 SEVENCUODIT ;	! 800000-899999
 oovce:9 SEVENCUODIT ;	! 900000-999999
 
 LEXICON TWOCUODIT
-čuođi: HUNDREDT ;	! 100000-199999
+čyeđe: HUNDREDT ;	! 100000-199999
 
 LEXICON SEVENCUODIT
 čyettiid: HUNDREDT ;
@@ -188,8 +193,10 @@ ohtâ:1 LOHKAIT ;
 kyehti:2 LOHKAIT ;
 kulmâ:3 LOHKAIT ;
 nelji:4 LOHKAIT ;
-vittâ:5 LOHKAIT ;
-kuttâ:6 LOHKAIT ;
+vittâ+Use/NG:5 LOHKAIT ;
+kuttâ+Use/NG:6 LOHKAIT ;
+vitt:5 LOHKAIT ;
+kutt:6 LOHKAIT ;
 čiččâm:7 LOHKAIT ;
 käävci:8 LOHKAIT ;
 oovce:9 LOHKAIT ;
@@ -199,7 +206,8 @@ nubáloh: THOUSANDS ;
 
 LEXICON TENST
 kyehtlov:2 LOGIT ;
-kulmlov:3 LOGIT ;
+kulmâlov:3 LOGIT ;
+kulmlov+Use/NG:3 LOGIT ;
 neljilov:4 LOGIT ;
 vittlov:5 LOGIT ;
 kuttlov:6 LOGIT ;
@@ -287,10 +295,10 @@ oht:1 LOHKAI ;
 kyeht:2 LOHKAI ;
 kulm:3 LOHKAI ;
 nelji:4 LOHKAI ;
-vit:5 LOHKAI ;
-kut:6 LOHKAI ;
+vitt:5 LOHKAI ;
+kutt:6 LOHKAI ;
 čiččâm:7 LOHKAI ;
-kävc:8 LOHKAI ;
+käävci:8 LOHKAI ;
 oovce:9 LOHKAI ;
 
 LEXICON LOHKAI
@@ -304,7 +312,8 @@ LEXICON TENS
 love:1%0 # ;
 lovváád:1%0%. # ; 
 kyeht:2 LOGI ;
-kulm:3 LOGI ;
+kulm+Use/NG:3 LOGI ;
+kulmâ:3 LOGI ;
 nelji:4 LOGI ;
 vitt:5 LOGI ;
 kutt:6 LOGI ;
