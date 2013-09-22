@@ -91,7 +91,10 @@ Rule section
 !!Root vowel shortening
 
 __Root Vowel Shortening in EAP__  
-
+{{{
+ Vx:0 <=> Vx _ Cns:* Vow X2:0 ; 
+        where Vx in ( a e o u ä ) ; 
+}}}       
 
 
 !!Diphtong simplification
@@ -106,13 +109,22 @@ Not written.
 
 
 __Adjust â to á before Com Sg and Ill Pl__  
+{{{
+  â:á <=> _ (Dummy:*) %>: %^IA: i [ n | d ] ; 
+}}}       
 
 Should we do the short one instead, as Matti Morottaja?
 
 __i as j after i-stem__  
+{{{
+  i:j <=> i (Dummy:*) %>: (Dummy:*) _  ; 	
+}}}       
 
 
 __e stem to a__ , this is not finished
+{{{
+  e:a <=> [a|e] Cns+: %>: _ ;  
+}}}       
 
 
 
@@ -120,9 +132,19 @@ __e stem to a__ , this is not finished
 !!Cns stem alternations
 
 __Long vowel shortening in Cns stems__  
+{{{
+ Vx:0 <=> Cns:* Vx _ Cns %^SHV:0 ; 
+      where Vx in (á i); 
+}}}       
 
 
 __Vowel lowering in Contracted Stems__  
+{{{
+ Vx:Vy <=> _ Cns+ Vow:* %^VLOW: ;  
+       where Vx in (u a)       
+             Vy in (o á)       
+             matched ; 
+}}}       
 
 
 
@@ -137,6 +159,10 @@ __Vowel lowering in Contracted Stems__
 
 
 __Compensatory lengthening__  
+{{{
+ ¥:Vx <=> Vx _ Cns:* Vow:* (:StemCns) [ %^CPL: | %^SCPL: ] ; 
+ 	where Vx in ( a e i o u ) ; 
+}}}       
 
 
 
@@ -148,32 +174,92 @@ __Compensatory lengthening__
 
 
 __Gradation: Single Consonant__  
+{{{
+  Cx:Cy <=> Vow (Vow:) _  Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ; 
+  	where Cx in ( p t h k c )       
+  		  Cy in ( v đ v h s )       
+  		  matched ; 
+}}}       
 
 __Gradation: Double Consonant __  as for káffe:káfes
+{{{
+   Cx:0 <=> Vow: Cy: _ Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ; 
+ 	where Cx in (p b d g m n ŋ d s z r š ž l v )       
+ 	      Cy in (p b d g m n ŋ d s z r š ž l v )       
+ 	      matched ; 
+}}}
+
 
 __Gradation: pp:v__  
+{{{
+   p:v <=> Vow: p: _ Vow ( StemCns:) (:StemCns) (Dummy:*) WeG: ; 
+}}}       
 
 __Gradation: xx:y 1__  
+{{{
+  Cx:0 <=> Vow (Vow:) _ Cx:Cy Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ; 
+  	where Cx in ( t k č c )       
+  		  Cy in ( đ h j s )       
+  		  matched ; 
+}}}       
+
 p in previous rule instead. We need both pp:p and pp:v.
 
 __Gradation: xx:y 2__  
+{{{
+  Cx:Cy <=> Vow (Vow:) Cx: _ Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ; 
+  	where Cx in ( t k č c )       
+  		  Cy in ( đ h j s )       
+  		  matched ; 
+}}}
 
 
 __xkk:xk Gradation__  
+{{{
+  k:0 <=> Vow: Cx _ k Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ; 
+ 	where Cx in ( ŋ r ) ; 
+}}}       
 
 __xtt:xt Gradation__  
+{{{
+  t:0 <=> Vow: Cx _ t Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ; 
+ 	where Cx in ( i l n r ) ; 
+}}}       
 
 __xcc:xc Gradation__  
+{{{
+  c:0 <=> Vow: Cx _ c Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ; 
+ 	where Cx in ( i l n r ) ; 
+}}}       
 
 __xpp:xp Gradation__  
+{{{
+  p:0 <=> Vow: Cx _ p Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ; 
+ 	where Cx in ( l m r v ) ; 
+}}}       
 
 __xss:xs Gradation__  
+{{{
+  s:0 <=> Vow: Cx _ s Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ; 
+ 	where Cx in ( l n r ) ; 
+}}}       
 
 __xčč:xč Gradation__  
+{{{
+  č:0 <=> Vow: Cx _ č Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ; 
+ 	where Cx in ( l r ) ; 
+}}}       
 
 __xšš:xš Gradation__  
+{{{
+  š:0 <=> Vow: Cx _ s Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ; 
+ 	where Cx in ( l r ) ; 
+}}}       
 
 __nnj:nj Gradation__  
+{{{
+  n:0 <=> Vow: n _ j Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ; 
+}}}       
 
 
 
@@ -183,9 +269,16 @@ __nnj:nj Gradation__
 
 
 __h:v in Front of Voiceless Dentals__  
+{{{
+  h:v <=> Vow:*  _ (s) [c|č|t] Vow: WeG: ; 
+}}}       
 
 
 __Consonant Lengthening__  
+{{{
+  0:Cx <=> Vow _ Cx Vow: %^XST: ; 
+  	where Cx in ( t l s ) ; 
+}}}       
 
 
 
@@ -201,8 +294,19 @@ __Consonant Lengthening__
 !!Odd-syllabic verb rules
 
 __t Shortening in Odd-Syllabic Verbs__  
+{{{
+ t:0 <=> t _ ODD:0 [#:0|%>: Cns] ; 
+}}}       
 
 
 __V-Context Vowel Shortening in Odd-Syllabic Verbs__  
+{{{
+ Vx:0 <=> Vx _ %^ODDSHV:0 %>: Vow ; 
+      where Vx in (á a i e o); 
+}}}       
 
 __C-Context Vowel Shortening in Odd-Syllabic Verbs__  
+{{{
+ Vx:0 <=> Vx _ %^ODDLV:0 %>: [Cns|#:0] ; 
+      where Vx in (á a i e o); 
+}}}       
