@@ -48,17 +48,12 @@ Alphabet
  b3:b d3:d g3:g m3:m h3:h 				   !!= * @CODE@
  k2:k									   !!= * @CODE@
 
-!! Different triggers, many of these are not in use
+!! Different triggers
 
-      X2:0      X4:0 X5:0 X6:0 X7:0 X8:0 X9:0  !!= * @CODE@
- Q1:0 Q2:0 Q3:0 Q4:0 Q5:0 Q6:0 Q7:0 Q8:0 Q9:0  !!= * @CODE@ 
- Y1:0 Y2:0 Y3:0 Y4:0 Y5:0 Y6:0 Y7:0 Y8:0 	   !!= * @CODE@
-
-!! More triggers, in the new format, we prefer to use these
-
- %^SHV:0 				     !!= * @CODE@
- %^CPL:0 %^SCPL:0 		     !!= * @CODE@
- %^SVL:0  %^WG1:0 %^VLOW:0   !!= * @CODE@
+%^WGSH:0       !!= * @CODE@
+%^SHV:0 				     !!= * @CODE@
+%^CPL:0 %^SCPL:0 		     !!= * @CODE@
+%^SVL:0  %^WG1:0 %^VLOW:0   !!= * @CODE@
 %^ODDC:0				     !!= * @CODE@
 %^ODDSHV:0				     !!= * @CODE@
 %^ODDLV:0				     !!= * @CODE@
@@ -92,10 +87,10 @@ Sets
        ht g2 m2 n2 							   !!= @CODE@ 
        b3 d3 g3 m3 h3 						   !!= @CODE@ 
        k2 ;									   !!= @CODE@ 
- WeG = %^WG1 X2 %^CPL ;						   !!= * @CODE@ 
+ WeG = %^WG1 %^WGSH %^CPL ;						   !!= * @CODE@ 
  StemCns = b b3 d d3 g g2 g3 h h2 h3 		   !!= * @CODE@ 
            j l m m2 m3 n n2 ŋ r s ;			   !!= @CODE@ 
- Dummy = %^WG1 X2 %^SVL X4 %^VLOW %^CPL %^SCPL !!= * @CODE@ 
+ Dummy = %^WG1 %^WGSH %^SVL %^VLOW %^CPL %^SCPL !!= * @CODE@ 
          %^ODDC %^ODDLV %^ODDSHV 			   !!= @CODE@ 
          %^XST %^IA ;						   !!= @CODE@ 
  ODD = %^ODDC %^ODDLV %^ODDSHV ;			   !!= * @CODE@ 
@@ -119,11 +114,11 @@ Rules
 "Root Vowel Shortening in EAP"
 !! __@RULENAME@__  
 !! {{{
-Vx:0 <=> Vx _ Cns:* Vow X2:0 ; !!= @CODE@
+Vx:0 <=> Vx _ Cns:* Vow %^WGSH:0 ; !!= @CODE@
        where Vx in ( a e o u ä ) ; !!= @CODE@
 !! }}}       
        
-!€ šaaluX2%>ittáá
+!€ šaalu^WGSH>ittáá
 !€ ša0lu00ittáá
 
 !! !!Diphtong simplification
@@ -245,7 +240,13 @@ Vx:Vy <=> _ Cns+ Vow:* %^VLOW: ; !!= @CODE@
 "Gradation: pp:v"
 !! __@RULENAME@__  
 !! {{{
-  p:v <=> Vow: p: _ Vow FacultativeStemCns WeG: ; !!= @CODE@
+  p:v <=> [Vow: - ¥:] p: _ Vow FacultativeStemCns WeG: ; !!= @CODE@
+!! }}}       
+
+"Gradation: pp:v 2"
+!! __@RULENAME@__  
+!! {{{
+  p:0 <=> [Vow: - ¥:] _ p: Vow FacultativeStemCns WeG: ; !!= @CODE@
 !! }}}       
 
 "Gradation: xx:y 1"
