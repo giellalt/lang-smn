@@ -32,7 +32,7 @@
 LEXICON SOLLA  !!= * __@CODE@__ SM1
  +N: EVEN-NEP ; ! Strong grade
  +N:%^CPL EVEN_WEAK ;
- +N:X2  EVEN_WEAKSHORT ; ! Abe + Com Sg
+ +N:%^WGSH  EVEN_WEAKSHORT ; ! Abe + Com Sg
 
 
 LEXICON KIELA  !!= * __@CODE@__ SM2
@@ -41,7 +41,7 @@ KIETA ; ! Obviously wrong, so fix this.
 LEXICON LUCCA  !!= * __@CODE@__ SM3
  +N: EVEN-NEP ;          ! Strong grade
  +N:%^CPL EVEN_WEAK ;    ! %^CPL WeG and lengthening
- +N:X2  EVEN_WEAKSHORT ; ! X2 WeG, no lengthening
+ +N:%^WGSH  EVEN_WEAKSHORT ; ! %^WGSH WeG, no lengthening
 
 
 LEXICON RUTTA  !!= * __@CODE@__ SM4
@@ -50,14 +50,14 @@ KIETA ; ! Obviously wrong, so fix this.
 LEXICON KIETA  !!= * __@CODE@__ SM5
  +N: EVEN-N ;           ! Strong grade kietâ
  +N:%^XST EVEN-EP ;     ! Stronger grade kiettâ 
- +N: ILL-SG ;           ! Weak grade kieđâ, can be X2
- +N:%^CPL NON-ILL-OBL ; ! Weak grade kieđâ, can be X2
- +N:X2 EVEN_WEAKSHORT ;
+ +N: ILL-SG ;           ! Weak grade kieđâ, can be %^WGSH
+ +N:%^CPL NON-ILL-OBL ; ! Weak grade kieđâ, can be %^WGSH
+ +N:%^WGSH EVEN_WEAKSHORT ;
 
 LEXICON KUSSA  !!= * __@CODE@__ SM6
  +N: EVEN-NEP ; ! Strong grade
  +N: EVEN_MIXED_OBL ;
- +N:X2  EVEN_WEAKSHORT ;
+ +N:%^WGSH  EVEN_WEAKSHORT ;
 
 LEXICON KUOSA  !!= * __@CODE@__ SM7
 KIETA ; ! fix
@@ -78,16 +78,16 @@ KUOSA ;
 LEXICON KYELI  !!= * __@CODE@__ i-e-á
  +N: EVEN-N ;           ! Strong grade kietâ
  +N:%^XST EVEN-EP ;     ! Stronger grade kiettâ 
- +N: ILL-SG ;           ! Weak grade kieđâ, can be X2
- +N:%^CPL NON-ILL-OBL ; ! Weak grade kieđâ, can be X2
- +N:X2 EVEN_WEAKSHORT ;
+ +N: ILL-SG ;           ! Weak grade kieđâ, can be %^WGSH
+ +N:%^CPL NON-ILL-OBL ; ! Weak grade kieđâ, can be %^WGSH
+ +N:%^WGSH EVEN_WEAKSHORT ;
 
 LEXICON ERGI  !!= * __@CODE@__ i-i-á
  +N: EVEN-N ;           ! Strong grade kietâ
  +N:%^XST EVEN-EP ;     ! Stronger grade kiettâ 
- +N:%^ILL ILL-SG ;           ! Weak grade kieđâ, can be X2
- +N:%^CPL NON-ILL-OBL ; ! Weak grade kieđâ, can be X2
- +N:X2 EVEN_WEAKSHORT ;
+ +N:%^ILL ILL-SG ;           ! Weak grade kieđâ, can be %^WGSH
+ +N:%^CPL NON-ILL-OBL ; ! Weak grade kieđâ, can be %^WGSH
+ +N:%^WGSH EVEN_WEAKSHORT ;
 
 LEXICON KUMPPI  !!= * __@CODE@__ i-i-i
 SOLLA ;
@@ -111,7 +111,7 @@ LEXICON EVEN_MIXED_OBL  !!= * __@CODE@__
 LEXICON PINO  !!= * __@CODE@__ SM14
  +N: EVEN-NEP ;       ! Strong grade
  +N:%^CPL PINO-OBL ;
- +N:X2 EVEN_WEAKSHORT ;
+ +N:%^WGSH EVEN_WEAKSHORT ;
 
 
 LEXICON RITA  !!= * __@CODE@__ SM15
@@ -153,7 +153,7 @@ LEXICON NON-ILL-OBL  !!= * __@CODE@__
  +Sg+Acc: K ;		    ! tuulâ
  +Sg+Loc:%>st K ;		! tuulâst
  +Sg+Com:%>%^IAin K ;   ! tullááin
- +Pl+Nom:X4%>h K ;	    ! tuulah
+ +Pl+Nom:%^WG1%>h K ;	    ! tuulah
  +Pl+Gen:%>i K ;		! tuulâi
  +Pl+Acc:%>id K ;       ! tuulâid
  +Pl+Ill:%>id K ;       ! tuul´did
@@ -175,7 +175,7 @@ LEXICON PINO-OBL  !!= * __@CODE@__ Now = solla, fix!!!
  +Sg+Ill:%>n K ;		! tuulân   tuuḷân half/long ḷ
  +Sg+Loc:%>st K ;       ! tuulâst
  +Sg+Com:%>%^IAin K ;   ! tulláin
- +Pl+Nom:%>X4h K ;	    ! tuulah
+ +Pl+Nom:%>%^WG1h K ;	    ! tuulah
  +Pl+Gen:%>i K ;	    ! tuulâi
  +Pl+Acc:%>id K ;	    ! tuulâid
  +Pl+Ill:%>id K ;       ! tuul´did
