@@ -101,6 +101,13 @@ Sets
  ODD = %^ODDC %^ODDLV %^ODDSHV ;			   !!= * @CODE@ 
 
 
+!! !!!Definitions
+Definitions
+
+!! {{{
+FacultativeStemCns = (StemCns:) (:StemCns) (Dummy:*) ; !!= @CODE@
+!! }}}
+
 !! !!! Rule section
 
 Rules
@@ -198,7 +205,7 @@ Vx:Vy <=> _ Cns+ Vow:* %^VLOW: ; !!= @CODE@
 !! __@RULENAME@__  
 !! {{{
 ¥:Vx <=> Vx _ Cns:* Vow:* (:StemCns) [ %^CPL: | %^SCPL: ] ; !!= @CODE@
-	where Vx in ( a e i o u ) ; !!= @CODE@
+	where Vx in ( a e i o u ) ;                         !!= @CODE@
 !! }}}       
 
 
@@ -217,7 +224,7 @@ Vx:Vy <=> _ Cns+ Vow:* %^VLOW: ; !!= @CODE@
 "Gradation: Single Consonant"
 !! __@RULENAME@__  
 !! {{{
- Cx:Cy <=> Vow (Vow:) _  Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ; !!= @CODE@
+ Cx:Cy <=> Vow (Vow:) _  Vow: FacultativeStemCns WeG: ; !!= @CODE@
  	where Cx in ( p t h k c )       !!= @CODE@
  		  Cy in ( v đ v h s )       !!= @CODE@
  		  matched ; !!= @CODE@
@@ -226,7 +233,7 @@ Vx:Vy <=> _ Cns+ Vow:* %^VLOW: ; !!= @CODE@
 "Gradation: Double Consonant" 
 !! __@RULENAME@__  as for káffe:káfes
 !! {{{
-  Cx:0 <=> Vow: Cy: _ Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ; !!= @CODE@
+  Cx:0 <=> Vow: Cy: _ Vow: FacultativeStemCns WeG: ; !!= @CODE@
 	where Cx in (p b d g m n ŋ d s z r š ž l v )       !!= @CODE@
 	      Cy in (p b d g m n ŋ d s z r š ž l v )       !!= @CODE@
 	      matched ; !!= @CODE@
@@ -238,13 +245,13 @@ Vx:Vy <=> _ Cns+ Vow:* %^VLOW: ; !!= @CODE@
 "Gradation: pp:v"
 !! __@RULENAME@__  
 !! {{{
-  p:v <=> Vow: p: _ Vow ( StemCns:) (:StemCns) (Dummy:*) WeG: ; !!= @CODE@
+  p:v <=> Vow: p: _ Vow FacultativeStemCns WeG: ; !!= @CODE@
 !! }}}       
 
 "Gradation: xx:y 1"
 !! __@RULENAME@__  
 !! {{{
- Cx:0 <=> Vow (Vow:) _ Cx:Cy Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ; !!= @CODE@
+ Cx:0 <=> Vow (Vow:) _ Cx:Cy Vow: FacultativeStemCns WeG: ; !!= @CODE@
  	where Cx in ( t k č c )       !!= @CODE@
  		  Cy in ( đ h j s )       !!= @CODE@
  		  matched ; !!= @CODE@
@@ -255,7 +262,7 @@ Vx:Vy <=> _ Cns+ Vow:* %^VLOW: ; !!= @CODE@
 "Gradation: xx:y 2"
 !! __@RULENAME@__  
 !! {{{
- Cx:Cy <=> Vow (Vow:) Cx: _ Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ; !!= @CODE@
+ Cx:Cy <=> Vow (Vow:) Cx: _ Vow: FacultativeStemCns WeG: ; !!= @CODE@
  	where Cx in ( t k č c )       !!= @CODE@
  		  Cy in ( đ h j s )       !!= @CODE@
  		  matched ; !!= @CODE@
@@ -267,56 +274,56 @@ Vx:Vy <=> _ Cns+ Vow:* %^VLOW: ; !!= @CODE@
 "xkk:xk Gradation"
 !! __@RULENAME@__  
 !! {{{
- k:0 <=> Vow: Cx _ k Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ; !!= @CODE@
+ k:0 <=> Vow: Cx _ k Vow: FacultativeStemCns WeG: ; !!= @CODE@
 	where Cx in ( ŋ r ) ; !!= @CODE@
 !! }}}       
 	
 "xtt:xt Gradation"
 !! __@RULENAME@__  
 !! {{{
- t:0 <=> Vow: Cx _ t Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ; !!= @CODE@
+ t:0 <=> Vow: Cx _ t Vow: FacultativeStemCns WeG: ; !!= @CODE@
 	where Cx in ( i l n r ) ; !!= @CODE@
 !! }}}       
 	
 "xcc:xc Gradation"
 !! __@RULENAME@__  
 !! {{{
- c:0 <=> Vow: Cx _ c Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ; !!= @CODE@
+ c:0 <=> Vow: Cx _ c Vow: FacultativeStemCns WeG: ; !!= @CODE@
 	where Cx in ( i l n r ) ; !!= @CODE@
 !! }}}       
 	
 "xpp:xp Gradation"
 !! __@RULENAME@__  
 !! {{{
- p:0 <=> Vow: Cx _ p Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ; !!= @CODE@
+ p:0 <=> Vow: Cx _ p Vow: FacultativeStemCns WeG: ; !!= @CODE@
 	where Cx in ( l m r v ) ; !!= @CODE@
 !! }}}       
 	
 "xss:xs Gradation"
 !! __@RULENAME@__  
 !! {{{
- s:0 <=> Vow: Cx _ s Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ; !!= @CODE@
+ s:0 <=> Vow: Cx _ s Vow: FacultativeStemCns WeG: ; !!= @CODE@
 	where Cx in ( l n r ) ; !!= @CODE@
 !! }}}       
 	
 "xčč:xč Gradation"
 !! __@RULENAME@__  
 !! {{{
- č:0 <=> Vow: Cx _ č Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ; !!= @CODE@
+ č:0 <=> Vow: Cx _ č Vow: FacultativeStemCns WeG: ; !!= @CODE@
 	where Cx in ( l r ) ; !!= @CODE@
 !! }}}       
 	
 "xšš:xš Gradation"
 !! __@RULENAME@__  
 !! {{{
- š:0 <=> Vow: Cx _ s Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ; !!= @CODE@
+ š:0 <=> Vow: Cx _ s Vow: FacultativeStemCns WeG: ; !!= @CODE@
 	where Cx in ( l r ) ; !!= @CODE@
 !! }}}       
 	
 "nnj:nj Gradation"
 !! __@RULENAME@__  
 !! {{{
- n:0 <=> Vow: n _ j Vow: ( StemCns:) (:StemCns) (Dummy:*) WeG: ; !!= @CODE@
+ n:0 <=> Vow: n _ j Vow: FacultativeStemCns WeG: ; !!= @CODE@
 !! }}}       
 
 	
