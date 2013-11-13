@@ -82,7 +82,7 @@ define VowNotIAO    [ Vow - IAO ] ;
 define VowNotY      [ Vow - Y   ] ;
 define VowNotOslash [ Vow - Oslash   ] ;  ! Renamed from VowNotØ to avoid non-ASCII chars
 define VowNotUI     [ Vow - UI  ] ;
-
+define LongVow      [ a a | e e | i i | o o | u u | á á | ä ä | ö ö ] ;
 
 define Cns [ b | c | č | d | đ | f | g | h | j | k | l | m | n | ŋ |
              B | C | Č | D | Đ | F | G | H | J | K | L | M | N | Ŋ |
@@ -98,7 +98,7 @@ define Sgm  [ Cns | Vow ] ;
 
 echo << Rules>>
 
-
+define afterlong   [..] -> %^ ||                LongVow Cns* _ Cns Vow ;
 define beforedipht [..] -> %^ ||      Vow                    _ dipht ;  !a^ie, e^ao, o^uo, u^ea etc! Any diphth, bled by savetripht later on.
 define nodipht     [..] -> %^ ||  Cns Vow                    _ VowNot2ndVow (Sgm) ; !e^å, e^ä etc
 !define notripht   [..] -> %^ ||  Cns Vow     VowNot2ndVow   _ U (Sgm) ; ! Not needed?
@@ -173,7 +173,8 @@ echo <<Combining...>>
 read regex [
 !notripht
 !.o.
-beforedipht
+afterlong
+.o. beforedipht
 .o. nodipht
 .o. NotOslhYdi
 .o. NotOAdipht
