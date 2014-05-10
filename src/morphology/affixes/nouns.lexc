@@ -30,7 +30,7 @@
 !! !1.1.1 Even-syllabic â-, u- and i-stems
 
 LEXICON SOLLA  !!= * __@CODE@__ SM1
- +N: EVEN-NEP ; ! Strong grade
+ +N: EVEN_NEP ; ! Strong grade
  +N:%^CPL EVEN_WEAK ;
  +N:%^WGSH  EVEN_WEAKSHORT ; ! Abe + Com Sg
 
@@ -39,7 +39,7 @@ LEXICON KIELA  !!= * __@CODE@__ SM2
 KIETA ; ! Obviously wrong, so fix this.
 
 LEXICON LUCCA  !!= * __@CODE@__ SM3
- +N: EVEN-NEP ;          ! Strong grade
+ +N: EVEN_NEP ;          ! Strong grade
  +N:%^CPL EVEN_WEAK ;    ! %^CPL WeG and lengthening
  +N:%^WGSH  EVEN_WEAKSHORT ; ! %^WGSH WeG, no lengthening
 
@@ -48,14 +48,14 @@ LEXICON RUTTA  !!= * __@CODE@__ SM4
 KIETA ; ! Obviously wrong, so fix this.
 
 LEXICON KIETA  !!= * __@CODE@__ SM5
- +N: EVEN-N ;           ! Strong grade kietâ
- +N:%^XST EVEN-EP ;     ! Stronger grade kiettâ 
- +N: ILL-SG ;           ! Weak grade kieđâ, can be %^WGSH
- +N:%^CPL NON-ILL-OBL ; ! Weak grade kieđâ, can be %^WGSH
+ +N: EVEN_N ;           ! Strong grade kietâ
+ +N:%^XST EVEN_EP ;     ! Stronger grade kiettâ 
+ +N: ILL_SG ;           ! Weak grade kieđâ, can be %^WGSH
+ +N:%^CPL NON_ILL_OBL ; ! Weak grade kieđâ, can be %^WGSH
  +N:%^WGSH EVEN_WEAKSHORT ;
 
 LEXICON KUSSA  !!= * __@CODE@__ SM6
- +N: EVEN-NEP ; ! Strong grade
+ +N: EVEN_NEP ; ! Strong grade
  +N: EVEN_MIXED_OBL ;
  +N:%^WGSH  EVEN_WEAKSHORT ;
 
@@ -76,17 +76,17 @@ KUOSA ;
 
 
 LEXICON KYELI  !!= * __@CODE@__ i-e-á
- +N: EVEN-N ;           ! Strong grade kietâ
- +N:%^XST EVEN-EP ;     ! Stronger grade kiettâ 
- +N: ILL-SG ;           ! Weak grade kieđâ, can be %^WGSH
- +N:%^CPL NON-ILL-OBL ; ! Weak grade kieđâ, can be %^WGSH
+ +N: EVEN_N ;           ! Strong grade kietâ
+ +N:%^XST EVEN_EP ;     ! Stronger grade kiettâ 
+ +N: ILL_SG ;           ! Weak grade kieđâ, can be %^WGSH
+ +N:%^CPL NON_ILL_OBL ; ! Weak grade kieđâ, can be %^WGSH
  +N:%^WGSH EVEN_WEAKSHORT ;
 
 LEXICON ERGI  !!= * __@CODE@__ i-i-á
- +N: EVEN-N ;           ! Strong grade kietâ
- +N:%^XST EVEN-EP ;     ! Stronger grade kiettâ 
- +N:%^ILL ILL-SG ;           ! Weak grade kieđâ, can be %^WGSH
- +N:%^CPL NON-ILL-OBL ; ! Weak grade kieđâ, can be %^WGSH
+ +N: EVEN_N ;           ! Strong grade kietâ
+ +N:%^XST EVEN_EP ;     ! Stronger grade kiettâ 
+ +N:%^ILL ILL_SG ;           ! Weak grade kieđâ, can be %^WGSH
+ +N:%^CPL NON_ILL_OBL ; ! Weak grade kieđâ, can be %^WGSH
  +N:%^WGSH EVEN_WEAKSHORT ;
 
 LEXICON KUMPPI  !!= * __@CODE@__ i-i-i
@@ -109,8 +109,8 @@ LEXICON EVEN_MIXED_OBL  !!= * __@CODE@__
 !! !!1.1.2 Even-syllabic á/a- and o-stems
 
 LEXICON PINO  !!= * __@CODE@__ SM14
- +N: EVEN-NEP ;       ! Strong grade
- +N:%^CPL PINO-OBL ;
+ +N: EVEN_NEP ;       ! Strong grade
+ +N:%^CPL PINO_OBL ;
  +N:%^WGSH EVEN_WEAKSHORT ;
 
 
@@ -118,12 +118,14 @@ LEXICON RITA  !!= * __@CODE@__ SM15
 !!€gt-norm:Noun - vašo: # â-stems Morottaja
 !!€ vašo   vašo+N+Sg+Nom
 !!€ vašo   vašo+N+Sg+Gen
+ +N:%^WG1 EVEN_NEP ;       ! Weak grade
+ +N:¥ EVEN_INVERSE ;
 
 PINO ; ! Identical?
 
 
 LEXICON ALGE  !!= * __@CODE@__
-+N:e EVEN-NEP ;
++N:e EVEN_NEP ;
 
 
 
@@ -132,23 +134,35 @@ LEXICON ALGE  !!= * __@CODE@__
 !! !!Nominal substems
 ! - - - - - - - -  
 
-LEXICON EVEN-NEP !!= * __@CODE@__
- EVEN-N ;   ! strong:   tullâ, kietâ
- EVEN-EP ;  ! stronger: tullân, kiettân
+LEXICON EVEN_INVERSE
+ +Sg+Ill:%>n K ;		! tuulân   tuuḷân half/long ḷ
+ +Sg+Loc:%>st K ;       ! tuulâst
+ +Sg+Com:%>in K ;   ! tulláin
+ +Pl+Nom:%>h K ;	    ! tuulah
+ +Pl+Gen:%>i K ;	    ! tuulâi
+ +Pl+Acc:%>id K ;	    ! tuulâid
+ +Pl+Ill:%>id K ;       ! tuul´did
+ +Pl+Loc:%>in K ;   ! tullâin
 
-LEXICON EVEN-N !!= * __@CODE@__
+
+
+LEXICON EVEN_NEP !!= * __@CODE@__
+ EVEN_N ;   ! strong:   tullâ, kietâ
+ EVEN_EP ;  ! stronger: tullân, kiettân
+
+LEXICON EVEN_N !!= * __@CODE@__
  +Sg+Nom: K ;     ! tullâ
 
-LEXICON EVEN-EP !!= * __@CODE@__
+LEXICON EVEN_EP !!= * __@CODE@__
  +Ess:%>n K ;       ! tullân
  +Par:%>d K ;       ! tullâd
 
 LEXICON EVEN_WEAK !!= * __@CODE@__
- ILL-SG ;
- NON-ILL-OBL ;
+ ILL_SG ;
+ NON_ILL_OBL ;
 
 
-LEXICON NON-ILL-OBL  !!= * __@CODE@__
+LEXICON NON_ILL_OBL  !!= * __@CODE@__
  +Sg+Gen: K ;   	    ! tuulâ
  +Sg+Acc: K ;		    ! tuulâ
  +Sg+Loc:%>st K ;		! tuulâst
@@ -159,7 +173,7 @@ LEXICON NON-ILL-OBL  !!= * __@CODE@__
  +Pl+Ill:%>id K ;       ! tuul´did
  +Pl+Loc:%>%^IAin K ;   ! tullâin
 
-LEXICON ILL-SG !!= * __@CODE@__
+LEXICON ILL_SG !!= * __@CODE@__
  +Sg+Ill:%>n K ;	    ! tuulân   tuuḷân half/long ḷ
 
 
@@ -169,7 +183,7 @@ LEXICON EVEN_WEAKSHORT !!= * __@CODE@__
  +Pl+Abe:%>ittáá K ;
 
 
-LEXICON PINO-OBL  !!= * __@CODE@__ Now = solla, fix!!!
+LEXICON PINO_OBL  !!= * __@CODE@__ Now = solla, fix!!!
  +Sg+Gen: K ;   	    ! tuulâ
  +Sg+Acc: K ;		    ! tuulâ
  +Sg+Ill:%>n K ;		! tuulân   tuuḷân half/long ḷ
@@ -203,12 +217,12 @@ LEXICON KASNATTAS
 LITTER ;
 
 LEXICON LITTER ! 2nd syll vowel does not alternate
- +N: ODD-SUFF-LONGSTEM ;
- +N: ODD-SUFF-SHORTSTEM ;
+ +N: ODD_SUFF-LONGSTEM ;
+ +N: ODD_SUFF_SHORTSTEM ;
 
 LEXICON JIEREEH ! 2nd syll vowel shortening
- +N:      ODD-SUFF-LONGSTEM ;
- +N:%^SHV ODD-SUFF-SHORTSTEM ;
+ +N:      ODD_SUFF-LONGSTEM ;
+ +N:%^SHV ODD_SUFF_SHORTSTEM ;
 
 LEXICON IMMEEL
 LITTER ; ! fix
@@ -229,25 +243,25 @@ LITTER ; ! fix
 ! 3.6.2. Gen sg odd-syllabic
 
 LEXICON SAMMILAS ! SM150
-LAS-COMMON ;
-:%>ii LAS-SUF ;
+LAS_COMMON ;
+:%>ii LAS_SUF ;
 
 LEXICON COHASAS
-LAS-COMMON ;
-:%>áá LAS-SUF ;
+LAS_COMMON ;
+:%>áá LAS_SUF ;
 
 LEXICON MAJEMUS
-LAS-COMMON ;
-:%>ui LAS-SUF ;
+LAS_COMMON ;
+:%>ui LAS_SUF ;
 
-LEXICON LAS-COMMON 
+LEXICON LAS_COMMON 
 +N+Sg+Nom:âš K ;
 +N+Sg+Ill:âžân K ;
 +N+Sg+Abe:ááttáá K ;
 +N+Ess:âžžân K ;
 +N+Par:âžžâd K ;
 
-LEXICON LAS-SUF
+LEXICON LAS_SUF
 +N+Sg+Gen: K ;
 +N+Sg+Acc: K ;
 +N+Sg+Loc:%>st K ;
@@ -267,13 +281,13 @@ LEXICON LAS-SUF
 ! Odd-syllable stems, sublexica
 ! - - - - - - - - - - - - - - - 
 
-LEXICON ODD-SUFF-LONGSTEM
+LEXICON ODD_SUFF-LONGSTEM
  +Sg+Nom: K ;
  +Sg+Gen: K ;
  +Sg+Acc: K ;
  +Sg+Ill:%>ân K ;
 
-LEXICON ODD-SUFF-SHORTSTEM
+LEXICON ODD_SUFF_SHORTSTEM
  +Sg+Loc:%>ist K ;
  +Sg+Com:%>áin K ;
 ! +Sg+Com:%>ááin K ;
@@ -290,7 +304,7 @@ LEXICON ODD-SUFF-SHORTSTEM
  +Pl+Com:%>ijguin K ;
  +Pl+Abe:%>ijttáá K ;
 
-!LEXICON ODD-SUFF-MIXSTEM
+!LEXICON ODD_SUFF_MIXSTEM
 ! # ;
 
 
