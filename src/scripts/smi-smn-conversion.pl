@@ -21,7 +21,7 @@ while(<>) {
 	s/BETFAGE/BERN/g ;
 	s/DUORTNUS/BERN/g ;
 	s/ERVASTI/ACCRA/g ;
-	s/DUBAI/BERN/g ;
+#	s/DUBAI/BERN/g ;
 	s/BETFAGE/BERN/g ;
 
 
