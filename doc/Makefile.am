@@ -22,6 +22,8 @@ JSP_PAGES=root-morphology.jspwiki        \
 		propernouns-affixes.jspwiki      \
 		punctuation-stems.jspwiki        \
 		subjunctions-stems.jspwiki       \
+		smi-propernouns-stems.jspwiki       \
+		smn-propernouns-stems.jspwiki       \
 		verbs-affixes.jspwiki \
 		verbs-stems.jspwiki              \
 		smn-phon-phonology.jspwiki
