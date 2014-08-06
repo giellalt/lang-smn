@@ -38,17 +38,17 @@ GT_LEXC_SRCS=\
 			stems/verbs.lexc
 
 # Set this to the names of all generated lexc files, if any
-GENERATED_LEXC_SRCS=$(srcdir)/stems/smi-$(GTLANG)-propernouns.lexc
+GENERATED_LEXC_SRCS=$(srcdir)/generated_files/smi-$(GTLANG)-propernouns.lexc
 
 # Set this to the names of all source xml files, if any
 GT_XML_SRCS=
 
-$(srcdir)/stems/smi-propernouns.lexc: \
+$(srcdir)/generated_files/smi-propernouns.lexc: \
 			$(GTCORE)/gtdshared/smi/src/morphology/stems/smi-propernouns.lexc
 	$(AM_V_GEN)cp -f $< $@
 
-$(srcdir)/stems/smi-$(GTLANG)-propernouns.lexc: \
-		$(srcdir)/stems/smi-propernouns.lexc \
+$(srcdir)/generated_files/smi-$(GTLANG)-propernouns.lexc: \
+		$(srcdir)/generated_files/smi-propernouns.lexc \
 		$(srcdir)/stems/$(GTLANG)-propernouns.lexc
 	$(AM_V_GEN)rm -f $@ && \
 	cp -f $(srcdir)/stems/$(GTLANG)-propernouns.lexc $@ && \
@@ -56,7 +56,6 @@ $(srcdir)/stems/smi-$(GTLANG)-propernouns.lexc: \
 	echo "! <--- Dump from SMI -->" >> $@ && \
 	echo "" >> $@ && \
 	$(top_srcdir)/src/scripts/smi-$(GTLANG)-conversion.pl $< >> $@
-
 
 include $(top_srcdir)/am-shared/src-morphology-dir-include.am
 
