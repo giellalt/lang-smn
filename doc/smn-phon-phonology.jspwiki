@@ -5,9 +5,7 @@
 The Inari Saami letters
  *  a á â ä b c d e f g h i j k l m n o õ p q 
  *  r s t u v w x y z æ ä ø ö å			   
- *  č đ ŋ ŧ š ž							   
- *  ¥:0  for Vowel lengthening
-
+ *  č đ ŋ ŧ š ž				 			   
 
  *  A Á Â Å B C D E F G H I J K L M N O Õ P Q 
  *  R S T U V W X Y Z Æ Ä Ø Ö Å 			   
@@ -35,6 +33,18 @@ Different archiphonemes
 
 Different triggers
 
+2014
+ * %^WG:0 					     
+ * %^RV:0 %^SV:0 			     
+ * %^RC:0					     
+ * %^RLEN:0 %^LLEN:0 %^SLEN:0   
+ * %^CLEN:0				     
+
+ *  ¥:0                         for Vowel lengthening, to be deleted
+
+
+... 2013 
+
  * %^WGSH:0       
  * %^SHV:0 				     
  * %^CPL:0 %^SCPL:0 		     
@@ -45,6 +55,8 @@ Different triggers
  * %^XST:0 %^IA:0			     
  * %^ILL:0 				     
 
+
+Morpheme boundaries:
  *  «   Derivational prefix
  *  »   Derivational suffix
  *  %<  Inflectional prefx
@@ -69,12 +81,20 @@ Sets
         ht g2 m2 n2 							    
         b3 d3 g3 m3 h3 						    
         k2 ;									    
- *  WeG = %^WG1 %^WGSH %^CPL ;						    
+  Seg = Vow Cns ;							    
+ *  WeG = %^WG1 %^WGSH %^CPL %^WG ;		        
  *  StemCns = b b3 d d3 g g2 g3 h h2 h3 		    
             j l m m2 m3 n n2 ŋ r s ;			    
+
+
  *  Dummy = %^WG1 %^WGSH %^SVL %^VLOW %^CPL %^SCPL  
-          %^ODDC %^ODDLV %^ODDSHV 			    
-          %^XST %^IA ;						    
+          %^ODDC %^ODDLV %^ODDSHV 			     
+ *          %^XST %^IA 	                        
+ *          %^WG	                     
+ *          %^RV %^SV   			     
+ *          %^RC					     
+ *          %^RLEN %^LLEN %^SLEN        
+ *          %^CLEN				         
  *  ODD = %^ODDC %^ODDLV %^ODDSHV ;			    
 
 
@@ -87,6 +107,33 @@ Sets
 Rule section
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Earlier rules
 
 
 !!Root vowel shortening
