@@ -50,6 +50,16 @@ Alphabet
 
 !! Different triggers
 
+!! ! 2014
+%^WG:0 					     !!= * @CODE@
+%^RV:0 %^SV:0 			     !!= * @CODE@
+%^RC:0					     !!= * @CODE@
+%^RLEN:0 %^LLEN:0 %^SLEN:0   !!= * @CODE@
+%^CLEN:0				     !!= * @CODE@
+
+
+!! ! ... 2013 
+
 %^WGSH:0       !!= * @CODE@
 %^SHV:0 				     !!= * @CODE@
 %^CPL:0 %^SCPL:0 		     !!= * @CODE@
@@ -59,6 +69,7 @@ Alphabet
 %^ODDLV:0				     !!= * @CODE@
 %^XST:0 %^IA:0			     !!= * @CODE@
 %^ILL:0 				     !!= * @CODE@
+
 
 ! Morpheme boundaries:
  «  !!= * @CODE@ Derivational prefix
@@ -87,12 +98,23 @@ Sets
        ht g2 m2 n2 							   !!= @CODE@ 
        b3 d3 g3 m3 h3 						   !!= @CODE@ 
        k2 ;									   !!= @CODE@ 
- WeG = %^WG1 %^WGSH %^CPL ;						   !!= * @CODE@ 
+ Seg = Vow Cns ;							   !!= @CODE@ 
+ WeG = %^WG1 %^WGSH %^CPL %^WG ;		       !!= * @CODE@ 
  StemCns = b b3 d d3 g g2 g3 h h2 h3 		   !!= * @CODE@ 
            j l m m2 m3 n n2 ŋ r s ;			   !!= @CODE@ 
+
+Arch = %^WG %^RV %^SV ; 
+Len = %^RLEN %^LLEN %^SLEN ;
+           
  Dummy = %^WG1 %^WGSH %^SVL %^VLOW %^CPL %^SCPL !!= * @CODE@ 
-         %^ODDC %^ODDLV %^ODDSHV 			   !!= @CODE@ 
-         %^XST %^IA ;						   !!= @CODE@ 
+         %^ODDC %^ODDLV %^ODDSHV 			    !!= @CODE@ 
+         %^XST %^IA 	                        !!= * @CODE@
+         %^WG	                     !!= * @CODE@
+         %^RV %^SV   			     !!= * @CODE@
+         %^RC					     !!= * @CODE@
+         %^RLEN %^LLEN %^SLEN        !!= * @CODE@
+         %^CLEN				         !!= * @CODE@
+         ;			
  ODD = %^ODDC %^ODDLV %^ODDSHV ;			   !!= * @CODE@ 
 
 
@@ -107,6 +129,81 @@ FacultativeStemCns = (StemCns:) (:StemCns) (Dummy:*) ; !!= @CODE@
 
 Rules
 
+
+
+"Quantitative weak grade"
+Cx:0 <=> Cx _ Vow %^WG: ; 
+       where Cx in ( b s t k č d ) ;
+       
+! k i ^RV s s á ^WG
+! k i 0   s 0 á 0
+
+"Qualtitative weak grade"
+Cx:Cy <=> _ Cz %^RC: Vow %^WG: ; 
+       where Cx in ( k h ) 
+             Cy in ( v v ) 
+             Cz in ( s č ) 
+             matched ;
+       
+! r á ^RV k s á ^WG
+! r á 0   v s á 0
+
+
+"Root vowel lengthening"
+%^RV:Vx <=> Vx _ [ ?* - %>: ] %^RLEN: ;
+        except  
+            Vx _ [ ?* - %>: ] %^LLEN: ;
+        where Vx in ( i á u ) ; ! pending...
+
+! k i ^RV s s á ^RLEN > n
+! k i i   s s á 0     0 n
+
+"Low root vowel lengthening"
+%^RV:Vx <=> Vx _ [ ?* - %>: ] %^LLEN: ;
+        except 
+            Vx _ [ ?* - %>: ] %^RLEN: ;
+        where Vx in ( á u ) ; ! pending...
+
+! f á ^RV d d á ^LLEN 
+! f á á   d d á 0    
+
+!"Consonant lengthening after qualitative weak grade"
+!%^RC:Cz <=> Cz _ Vow  %^WG: %^CLEN: ; 
+!        where     Cz in ( s č ) ;
+
+"Consonant lengthening after qualitative weak grade"        
+%^RC:Cz <=> Cx: Cz _ Vow %^WG: %^CLEN: ; 
+       where Cx in ( k h ) 
+             Cz in ( s č ) 
+             matched ;
+       
+
+"Suffix vowel lengthening"
+%^SV:Vx <=> Vx _ [ ?* - %>: ] %^SLEN: ;
+        where Vx in ( á ) ; ! pending...
+
+! k i ^RV s s á ^SV ^SLEN > s t
+! k i 0   s s á á   0     0 s t
+
+"Consonant shortening after root vowel lengthening"
+Cx:0 <=> %^RV: _ Cx [ Seg* - %>: ] %^RLEN: ;          
+        where Cx in ( b s t k č d ) ; 
+
+! k i ^RV s s á ^RLEN > n 
+! k i 0   0 s á 0     0 n
+
+"Consonant shortening after low root vowel lengthening"
+Cx:0 <=> %^RV: _ Cx [ Seg* - %>: ] %^LLEN: ;          
+        where Cx in ( b s t k č d ) ; 
+
+
+
+
+
+
+
+
+!! !!! Earlier rules
 
 
 !! !!Root vowel shortening
