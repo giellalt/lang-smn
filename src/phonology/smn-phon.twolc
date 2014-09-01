@@ -19,10 +19,7 @@ Alphabet
 !! The Inari Saami letters
  a á â ä b c d e f g h i j k l m n o õ p q !!= * @CODE@
  r s t u v w x y z æ ä ø ö å			   !!= * @CODE@
- č đ ŋ ŧ š ž							   !!= * @CODE@
- ¥:0 !!= * @CODE@ for Vowel lengthening
-
-! č đ ŋ š ŧ ž as in Northern Sámi
+ č đ ŋ ŧ š ž				 			   !!= * @CODE@
 
  A Á Â Å B C D E F G H I J K L M N O Õ P Q !!= * @CODE@
  R S T U V W X Y Z Æ Ä Ø Ö Å 			   !!= * @CODE@
@@ -50,15 +47,17 @@ Alphabet
 
 !! Different triggers
 
-!! ! 2014
+!! !! 2014
 %^WG:0 					     !!= * @CODE@
 %^RV:0 %^SV:0 			     !!= * @CODE@
 %^RC:0					     !!= * @CODE@
 %^RLEN:0 %^LLEN:0 %^SLEN:0   !!= * @CODE@
 %^CLEN:0				     !!= * @CODE@
 
+ ¥:0                        !!= * @CODE@ for Vowel lengthening, to be deleted
 
-!! ! ... 2013 
+
+!! !! ... 2013 
 
 %^WGSH:0       !!= * @CODE@
 %^SHV:0 				     !!= * @CODE@
@@ -71,13 +70,13 @@ Alphabet
 %^ILL:0 				     !!= * @CODE@
 
 
-! Morpheme boundaries:
- «  !!= * @CODE@ Derivational prefix
- »  !!= * @CODE@ Derivational suffix
- %< !!= * @CODE@ Inflectional prefx
- %> !!= * @CODE@ Inflectional suffix
- #  !! * hashtag Word boundary for both lexicalised and dynamic compounds
- %^ !!= * @CODE@ (exceptional) soft hyphenation point
+!! Morpheme boundaries:
+! «   @CODE@ Derivational prefix
+! »   @CODE@ Derivational suffix
+! %<  @CODE@ Inflectional prefx
+ %>:0 @CODE@ Inflectional suffix
+! #   hashtag Word boundary for both lexicalised and dynamic compounds
+! %^  @CODE@ (exceptional) soft hyphenation point
 
 !! End of alphabet definitions
 
@@ -103,8 +102,8 @@ Sets
  StemCns = b b3 d d3 g g2 g3 h h2 h3 		   !!= * @CODE@ 
            j l m m2 m3 n n2 ŋ r s ;			   !!= @CODE@ 
 
-Arch = %^WG %^RV %^SV ; 
-Len = %^RLEN %^LLEN %^SLEN ;
+Arch = %^WG %^RC %^RV %^SV ; 
+Len = %^RLEN %^LLEN %^SLEN %^CLEN ;
            
  Dummy = %^WG1 %^WGSH %^SVL %^VLOW %^CPL %^SCPL !!= * @CODE@ 
          %^ODDC %^ODDLV %^ODDSHV 			    !!= @CODE@ 
@@ -132,14 +131,14 @@ Rules
 
 
 "Quantitative weak grade"
-Cx:0 <=> Cx _ Vow %^WG: ; 
+Cx:0 <=> _ Cx (%^RC:) Vow %^WG: ; 
        where Cx in ( b s t k č d ) ;
        
-! k i ^RV s s á ^WG
-! k i 0   s 0 á 0
+! k i ^RV s s ^RC á ^WG
+! k i 0   s 0 0   á 0
 
 "Qualtitative weak grade"
-Cx:Cy <=> _ Cz %^RC: Vow %^WG: ; 
+Cx:Cy <=> _ Cz (%^RC:) Vow %^WG: ; 
        where Cx in ( k h ) 
              Cy in ( v v ) 
              Cz in ( s č ) 
@@ -167,16 +166,18 @@ Cx:Cy <=> _ Cz %^RC: Vow %^WG: ;
 ! f á ^RV d d á ^LLEN 
 ! f á á   d d á 0    
 
-!"Consonant lengthening after qualitative weak grade"
-!%^RC:Cz <=> Cz _ Vow  %^WG: %^CLEN: ; 
-!        where     Cz in ( s č ) ;
-
 "Consonant lengthening after qualitative weak grade"        
 %^RC:Cz <=> Cx: Cz _ Vow %^WG: %^CLEN: ; 
        where Cx in ( k h ) 
              Cz in ( s č ) 
              matched ;
        
+"Consonant lengthening after quantitative weak grade"        
+%^RC:Cz <=> Cz: Cz _ Vow %^WG: %^CLEN: ; 
+       where Cz in ( b s t k č d  ) ;
+       
+! k i ^RV s s ^RC á ^WG ^CLEN > i n
+! k i 0   0 s s   á 0   0     0 i n
 
 "Suffix vowel lengthening"
 %^SV:Vx <=> Vx _ [ ?* - %>: ] %^SLEN: ;
@@ -186,14 +187,14 @@ Cx:Cy <=> _ Cz %^RC: Vow %^WG: ;
 ! k i 0   s s á á   0     0 s t
 
 "Consonant shortening after root vowel lengthening"
-Cx:0 <=> %^RV: _ Cx [ Seg* - %>: ] %^RLEN: ;          
+Cx:0 <=> %^RV: _ Cx [ [ Seg: | Arch: ]*  - %>: ] %^RLEN: ;          
         where Cx in ( b s t k č d ) ; 
 
-! k i ^RV s s á ^RLEN > n 
-! k i 0   0 s á 0     0 n
+! k i ^RV s s ^RC á ^RLEN > n 
+! k i i   0 s 0   á 0     0 n
 
 "Consonant shortening after low root vowel lengthening"
-Cx:0 <=> %^RV: _ Cx [ Seg* - %>: ] %^LLEN: ;          
+Cx:0 <=> %^RV: _ Cx [  [ Seg: | Arch: ]* - %>: ] %^LLEN: ;          
         where Cx in ( b s t k č d ) ; 
 
 
