@@ -92,13 +92,13 @@ Sets
        ¥ ;									   !!= @CODE@ 
  Cns = b c č d đ f g h j k l m n ŋ 			   !!= * @CODE@ 
        p q r s š t ŧ v w x z ž				   !!= @CODE@ 
-       B C č D Đ F G H J K L M N Ŋ			   !!= @CODE@ 
+       B C Č D Đ F G H J K L M N Ŋ			   !!= @CODE@ 
        P Q R S Š T Ŧ V W X Z Ž 				   !!= @CODE@ 
        ht g2 m2 n2 							   !!= @CODE@ 
        b3 d3 g3 m3 h3 						   !!= @CODE@ 
        k2 ;									   !!= @CODE@ 
  Seg = Vow Cns ;							   !!= @CODE@ 
- WeG = %^WG1 %^WGSH %^CPL %^WG ;		       !!= * @CODE@ 
+!X! WeG = %^WG1 %^WGSH %^CPL %^WG ;		       !!= * @CODE@ 
  StemCns = b b3 d d3 g g2 g3 h h2 h3 		   !!= * @CODE@ 
            j l m m2 m3 n n2 ŋ r s ;			   !!= @CODE@ 
 
@@ -114,7 +114,7 @@ Len = %^RLEN %^LLEN %^SLEN %^CLEN ;
 !X!         %^RLEN %^LLEN %^SLEN        !!= * @CODE@
 !X!         %^CLEN				         !!= * @CODE@
 !X!         ;			
- ODD = %^ODDC %^ODDLV %^ODDSHV ;			   !!= * @CODE@ 
+!X!  ODD = %^ODDC %^ODDLV %^ODDSHV ;			   !!= * @CODE@ 
 
 
 !! !!!Definitions
@@ -137,6 +137,8 @@ Cx:0 <=> _ Cx (%^RC:) Vow %^WG: [ ?* - Len: ] ;
 ! k i ^RV s s ^RC á ^WG
 ! k i 0   0 s 0   á 0
 
+! k:k i:i ^RV:0 s:0 s:s ^RC:0 á:á ^WG:0
+
 "Consonant shortening after root vowel lengthening"
 Cx:0 <=> %^RV: _ Cx [ [ Seg: | Arch: ]*  - %>: ] %^RLEN: ;          
        except 
@@ -156,16 +158,20 @@ Cx:0 <=> %^RV: _ Cx [  [ Seg: | Arch: ]* - %>: ] %^LLEN: ;
 ! f á á   0 d 0   á 0     0 n
 
 
-"Qualtitative weak grade"
+"Qualitative weak grade"
 Cx:Cy <=> _ Cz (%^RC:) Vow %^WG: ; 
        where Cx in ( k h ) 
              Cy in ( v v ) 
              Cz in ( s č ) 
              matched ;
        
-! r á ^RV k s á ^WG
-! r á 0   v s á 0
+! r á ^RV k s ^RC á ^WG
+! r á 0   v s 0   á 0
 
+! č u ^RV h č ^RC á ^WG ^CLEN > i n
+! č u 0   v č č   á 0   0     0 i n 
+
+! č:č u:u ^RV:0 h:v č:č ^RC:č á:á ^WG:0 ^CLEN:0 >:0 i:i n:n
 
 "Root vowel lengthening"
 %^RV:Vx <=> Vx _ [ ?* - %>: ] %^RLEN: ;
@@ -190,6 +196,9 @@ Cx:Cy <=> _ Cz (%^RC:) Vow %^WG: ;
        where Cx in ( k h ) 
              Cz in ( s č ) 
              matched ;
+
+! č u ^RV h č ^RC á ^WG ^CLEN > i n
+! č u 0   v č č   á 0   0     0 i n 
        
 "Consonant lengthening after quantitative weak grade"        
 %^RC:Cz <=> Cz: Cz _ Vow %^WG: %^CLEN: ; 
