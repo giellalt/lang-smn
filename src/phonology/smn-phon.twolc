@@ -44,7 +44,8 @@ Alphabet
  h2:h g2:g m2:m n2:n 					   !!= * @CODE@
  b3:b d3:d g3:g m3:m h3:h 				   !!= * @CODE@
  k2:k									   !!= * @CODE@
-
+%^P:p %^K:k %^Č:č %^H:h %^T:t
+ 
 !! Different triggers
 
 !! !! 2014
@@ -96,7 +97,8 @@ Sets
        P Q R S Š T Ŧ V W X Z Ž 				   !!= @CODE@ 
        ht g2 m2 n2 							   !!= @CODE@ 
        b3 d3 g3 m3 h3 						   !!= @CODE@ 
-       k2 ;									   !!= @CODE@ 
+       k2 
+       %^P %^K %^Č %^H %^T ;									   !!= @CODE@ 
  Seg = Vow Cns ;							   !!= @CODE@ 
 !X! WeG = %^WG1 %^WGSH %^CPL %^WG ;		       !!= * @CODE@ 
  StemCns = b b3 d d3 g g2 g3 h h2 h3 		   !!= * @CODE@ 
@@ -140,18 +142,18 @@ Cx:0 <=> _ Cx (%^RC:) Vow %^WG: [ ?* - Len: ] ;
 ! k:k i:i ^RV:0 s:0 s:s ^RC:0 á:á ^WG:0
 
 "Consonant shortening after root vowel lengthening"
-Cx:0 <=> %^RV: _ Cx [ [ Seg: | Arch: ]*  - %>: ] %^RLEN: ;          
+Cx:0 <=> %^RV: _ :Cx [ [ Seg: | Arch: ]*  - %>: ] %^RLEN: ;          
        except 
-               _ Cx (%^RC:) Vow %^WG: [ ?* - Len: ] ;
+               _ :Cx (%^RC:) Vow %^WG: [ ?* - Len: ] ;
         where Cx in ( b s t k č d ) ; 
 
 ! k i ^RV s s ^RC á ^RLEN > n 
 ! k i i   0 s 0   á 0     0 n
 
 "Consonant shortening after low root vowel lengthening"
-Cx:0 <=> %^RV: _ Cx [  [ Seg: | Arch: ]* - %>: ] %^LLEN: ;          
+Cx:0 <=> %^RV: _ :Cx [  [ Seg: | Arch: ]* - %>: ] %^LLEN: ;          
        except 
-               _ Cx (%^RC:) Vow %^WG: [ ?* - Len: ] ;
+               _ :Cx (%^RC:) Vow %^WG: [ ?* - Len: ] ;
         where Cx in ( b s t k č d ) ; 
 
 ! f á ^RV d d ^RC á ^LLEN > n
@@ -173,6 +175,25 @@ Cx:Cy <=> _ Cz (%^RC:) Vow %^WG: ;
 
 ! č:č u:u ^RV:0 h:v č:č ^RC:č á:á ^WG:0 ^CLEN:0 >:0 i:i n:n
 
+"xx:y gradation in Aanaarsaami words (change)"
+Cx:Cy <=> _ %^RC: Vow %^WG: ;
+    where Cx in ( %^P %^K %^Č %^H %^T )
+          Cy in (   v   h   j   v   đ )
+          matched ; 
+
+! s u ^RV k ^K ^RC á ^WG
+! s u 0   0  h   0 á  0
+
+"xx:y gradation in Aanaarsaami words (deletion)"
+Cz:0 <=> _ Cx:Cy %^RC: Vow %^WG: ;
+    where Cz in (   p   k   č   h   t )
+          Cx in ( %^P %^K %^Č %^H %^T )
+          Cy in (   v   h   j   v   đ )
+          matched ; 
+
+! s u ^RV k ^K ^RC á ^WG
+! s u 0   0  h   0 á  0
+
 "Root vowel lengthening"
 %^RV:Vx <=> Vx _ [ ?* - %>: ] %^RLEN: ;
         except  
@@ -192,13 +213,16 @@ Cx:Cy <=> _ Cz (%^RC:) Vow %^WG: ;
 ! f á á   d d á 0    
 
 "Consonant lengthening after qualitative weak grade"        
-%^RC:Cz <=> Cx: Cz _ Vow %^WG: %^CLEN: ; 
-       where Cx in ( k h ) 
-             Cz in ( s č ) 
+%^RC:Cz <=> Cx: :Cz _ Vow %^WG: %^CLEN: ; 
+       where Cx in ( k h k ) 
+             Cz in ( s č h ) 
              matched ;
 
 ! č u ^RV h č ^RC á ^WG ^CLEN > i n
 ! č u 0   v č č   á 0   0     0 i n 
+
+! s u ^RV k ^K  ^RC á ^WG ^CLEN > i n
+! s u 0   0 h    h  á 0   0     0 i n
        
 "Consonant lengthening after quantitative weak grade"        
 %^RC:Cz <=> Cz: Cz _ Vow %^WG: %^CLEN: ; 
@@ -207,12 +231,14 @@ Cx:Cy <=> _ Cz (%^RC:) Vow %^WG: ;
 ! k i ^RV s s ^RC á ^WG ^CLEN > i n
 ! k i 0   0 s s   á 0   0     0 i n
 
+
+
 "Suffix vowel lengthening"
-%^SV:Vx <=> Vx _ [ ?* - %>: ] %^SLEN: ;
+%^SV:Vx <=> Vx [ ?* - %>: ] _ %^SLEN: ;
         where Vx in ( á ) ; ! pending...
 
-! k i ^RV s s á ^SV ^SLEN > s t
-! k i 0   s s á á   0     0 s t
+! k i ^RV s s ^RC á ^WG ^CLEN ^SV ^SLEN > s t
+! k i 0   0 s s   á 0   0     á   0     0 s t
 
 !X!
 !X!
