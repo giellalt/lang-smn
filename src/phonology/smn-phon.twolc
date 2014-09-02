@@ -54,6 +54,7 @@ Alphabet
 %^RC:0					     !!= * @CODE@
 %^RLEN:0 %^LLEN:0 %^SLEN:0   !!= * @CODE@
 %^CLEN:0				     !!= * @CODE@
+%^RVL:0
 
  ¥:0                        !!= * @CODE@ for Vowel lengthening, to be deleted
 
@@ -104,8 +105,10 @@ Sets
  StemCns = b b3 d d3 g g2 g3 h h2 h3 		   !!= * @CODE@ 
            j l m m2 m3 n n2 ŋ r s ;			   !!= @CODE@ 
 
-Arch = %^WG %^RC %^RV %^SV ; 
+Arch = %^WG %^RC %^RV %^SV %^RVL ; 
 Len = %^RLEN %^LLEN %^SLEN %^CLEN ;
+
+Dummy = Arch Len ;
            
 !X! Dummy = %^WG1 %^WGSH %^SVL %^VLOW %^CPL %^SCPL !!= * @CODE@ 
 !X!         %^ODDC %^ODDLV %^ODDSHV 			    !!= @CODE@ 
@@ -134,7 +137,7 @@ Rules
 
 "Quantitative weak grade"
 Cx:0 <=> _ Cx (%^RC:) Vow %^WG: [ ?* - Len: ] ; 
-       where Cx in ( b s t k č d l ) ;
+       where Cx in ( p b s t k č d l ) ;
        
 ! k i ^RV s s ^RC á ^WG
 ! k i 0   0 s 0   á 0
@@ -145,7 +148,7 @@ Cx:0 <=> _ Cx (%^RC:) Vow %^WG: [ ?* - Len: ] ;
 Cx:0 <=> %^RV: _ :Cx [ [ Seg: | Arch: ]*  - %>: ] %^RLEN: ;          
        except 
                _ :Cx (%^RC:) Vow %^WG: [ ?* - Len: ] ;
-        where Cx in ( b s t k č d ) ; 
+        where Cx in ( p b s t k č d ) ; 
 
 ! k i ^RV s s ^RC á ^RLEN > n 
 ! k i i   0 s 0   á 0     0 n
@@ -154,7 +157,7 @@ Cx:0 <=> %^RV: _ :Cx [ [ Seg: | Arch: ]*  - %>: ] %^RLEN: ;
 Cx:0 <=> %^RV: _ :Cx [  [ Seg: | Arch: ]* - %>: ] %^LLEN: ;          
        except 
                _ :Cx (%^RC:) Vow %^WG: [ ?* - Len: ] ;
-        where Cx in ( b s t k č d ) ; 
+        where Cx in ( p b s t k č d ) ; 
 
 ! f á ^RV d d ^RC á ^LLEN > n
 ! f á á   0 d 0   á 0     0 n
@@ -198,7 +201,7 @@ Cz:0 <=> _ Cx:Cy %^RC: Vow %^WG: ;
 %^RV:Vx <=> Vx _ [ ?* - %>: ] %^RLEN: ;
         except  
             Vx _ [ ?* - %>: ] %^LLEN: ;
-        where Vx in ( i á u ) ; ! pending...
+        where Vx in ( i á a u ) ; ! pending...
 
 ! k i ^RV s s á ^RLEN > n
 ! k i i   s s á 0     0 n
@@ -207,7 +210,7 @@ Cz:0 <=> _ Cx:Cy %^RC: Vow %^WG: ;
 %^RV:Vx <=> Vx _ [ ?* - %>: ] %^LLEN: ;
         except 
             Vx _ [ ?* - %>: ] %^RLEN: ;
-        where Vx in ( á u ) ; ! pending...
+        where Vx in ( á a u ) ; ! pending...
 
 ! f á ^RV d d á ^LLEN 
 ! f á á   d d á 0    
@@ -226,7 +229,7 @@ Cz:0 <=> _ Cx:Cy %^RC: Vow %^WG: ;
        
 "Consonant lengthening after quantitative weak grade"        
 %^RC:Cz <=> Cz: Cz _ Vow %^WG: %^CLEN: ; 
-       where Cz in ( b s t k č d  ) ;
+       where Cz in ( p b s t k č d  ) ;
        
 ! k i ^RV s s ^RC á ^WG ^CLEN > i n
 ! k i 0   0 s s   á 0   0     0 i n
@@ -239,6 +242,29 @@ Cz:0 <=> _ Cx:Cy %^RC: Vow %^WG: ;
 
 ! k i ^RV s s ^RC á ^WG ^CLEN ^SV ^SLEN > s t
 ! k i 0   0 s s   á 0   0     á   0     0 s t
+
+"i to j in suffixes following i stems"
+i:j <=> i [ Arch: | Seg: ]* %>: _ ;
+
+! s ä ä m ^RC i %^RVL %> i n 
+! s ä ä m 0   i 0     0  j n
+
+! s k a ^RV p p ^RC i ^WG ^LLEN > i
+! s k a a   0 p 0   i 0   0     > j
+
+"Root vowel lowering"
+Vx:Vy <=> _   Vx: Cns [ ?* - %>: ] %^RVL: ;
+          Vx: _   Cns [ ?* - %>: ] %^RVL: ;
+          where Vx in ( ä )
+                Vy in ( a )
+                matched ;
+
+"Root diphthong lowering"
+Vx:Vy <=> _   Vx: Cns [ ?* - %>: ] %^RVL: ;
+          Vx: _   Cns [ ?* - %>: ] %^RVL: ;
+          where Vx in ( u á )
+                Vy in ( o o )
+                matched ;
 
 !X!
 !X!
