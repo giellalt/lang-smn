@@ -55,6 +55,7 @@ Alphabet
 %^RLEN:0 %^LLEN:0 %^SLEN:0   !!= * @CODE@
 %^CLEN:0				     !!= * @CODE@
 %^RVL:0
+%^CSH:0 
 
  ¥:0                        !!= * @CODE@ for Vowel lengthening, to be deleted
 
@@ -272,7 +273,22 @@ Vx:Vy <=> _   Vx: Cns [ ?* - %>: ] %^RVL: ;
           where Vx in ( u á )
                 Vy in ( o o )
                 matched ;
+                
+"Consonant shortening (not weak grade)"
+Cx:0 <=> _ Cx (%^RC:) Vow:* Cns %^CSH: [ ?* - Len: ] ; 
+       where Cx in ( p b s t k c č d g z ž v l m n ŋ r š ) ;
+              
+! k a p p e e r ^CSH > i s t   
+! k a 0 p 0 e r 0    0 i s t
+    
+"Vowel shortening (with consonant shortening)"
+Vx:0 <=>  _ Vx Cns %^CSH: [ ?* - Len: ] ;
+    where Vx in ( a e o á ä ) ;
+    
+! k a p p e e r ^CSH > i s t   
+! k a 0 p 0 e r 0    0 i s t    
 
+    
 !XX
 !XX
 !XX
