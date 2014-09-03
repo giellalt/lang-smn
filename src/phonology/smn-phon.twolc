@@ -137,7 +137,7 @@ Rules
 
 "Quantitative weak grade"
 Cx:0 <=> _ Cx (%^RC:) Vow %^WG: [ ?* - Len: ] ; 
-       where Cx in ( p b s t k č d l ) ;
+       where Cx in ( p b s t k c č d g z ž v l m n ŋ r š ) ;
        
 ! k i ^RV s s ^RC á ^WG
 ! k i 0   0 s 0   á 0
@@ -148,7 +148,7 @@ Cx:0 <=> _ Cx (%^RC:) Vow %^WG: [ ?* - Len: ] ;
 Cx:0 <=> %^RV: _ :Cx [ [ Seg: | Arch: ]*  - %>: ] %^RLEN: ;          
        except 
                _ :Cx (%^RC:) Vow %^WG: [ ?* - Len: ] ;
-        where Cx in ( p b s t k č d ) ; 
+        where Cx in ( p b s t k c č d g z ž v l m n ŋ r š ) ; 
 
 ! k i ^RV s s ^RC á ^RLEN > n 
 ! k i i   0 s 0   á 0     0 n
@@ -157,13 +157,20 @@ Cx:0 <=> %^RV: _ :Cx [ [ Seg: | Arch: ]*  - %>: ] %^RLEN: ;
 Cx:0 <=> %^RV: _ :Cx [  [ Seg: | Arch: ]* - %>: ] %^LLEN: ;          
        except 
                _ :Cx (%^RC:) Vow %^WG: [ ?* - Len: ] ;
-        where Cx in ( p b s t k č d ) ; 
+        where Cx in ( p b s t k c č d g z ž v l m n ŋ r š ) ; 
 
 ! f á ^RV d d ^RC á ^LLEN > n
 ! f á á   0 d 0   á 0     0 n
 
+"Qualitative weak grade x:y"
+Cx:Cy <=> :Vow _ Vow %^WG: ; 
+       where Cx in ( c p t h č ) 
+             Cy in ( s v đ v j ) 
+             matched ;
+       
 
-"Qualitative weak grade"
+
+"Qualitative weak grade xy:zy"
 Cx:Cy <=> _ Cz (%^RC:) Vow %^WG: ; 
        where Cx in ( k h ) 
              Cy in ( v v ) 
@@ -217,8 +224,8 @@ Cz:0 <=> _ Cx:Cy %^RC: Vow %^WG: ;
 
 "Consonant lengthening after qualitative weak grade"        
 %^RC:Cz <=> Cx: :Cz _ Vow %^WG: %^CLEN: ; 
-       where Cx in ( k h k ) 
-             Cz in ( s č h ) 
+       where Cx in ( l r m ŋ n k h k ) 
+             Cz in ( p p p k t s č h ) 
              matched ;
 
 ! č u ^RV h č ^RC á ^WG ^CLEN > i n
@@ -229,7 +236,7 @@ Cz:0 <=> _ Cx:Cy %^RC: Vow %^WG: ;
        
 "Consonant lengthening after quantitative weak grade"        
 %^RC:Cz <=> Cz: Cz _ Vow %^WG: %^CLEN: ; 
-       where Cz in ( p b s t k č d  ) ;
+       where Cz in ( p b s t k c č d g z ž v l m n ŋ r š ) ;
        
 ! k i ^RV s s ^RC á ^WG ^CLEN > i n
 ! k i 0   0 s s   á 0   0     0 i n
@@ -238,7 +245,7 @@ Cz:0 <=> _ Cx:Cy %^RC: Vow %^WG: ;
 
 "Suffix vowel lengthening"
 %^SV:Vx <=> Vx [ ?* - %>: ] _ %^SLEN: ;
-        where Vx in ( á ) ; ! pending...
+        where Vx in ( á o e a ) ; ! pending...
 
 ! k i ^RV s s ^RC á ^WG ^CLEN ^SV ^SLEN > s t
 ! k i 0   0 s s   á 0   0     á   0     0 s t
