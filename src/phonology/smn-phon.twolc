@@ -243,13 +243,16 @@ Cz:0 <=> _ Cx:Cy %^RC: Vow %^WG: ;
 ! k i 0   0 s s   á 0   0     0 i n
 
 
-
 "Suffix vowel lengthening"
 %^SV:Vx <=> Vx [ ?* - %>: ] _ %^SLEN: ;
-        where Vx in ( á o e a ) ; ! pending...
+            Vx _ [ ?* - %>: ]  Cns %^SLEN: ;
+        where Vx in ( á o e a i ) ; ! pending...
 
 ! k i ^RV s s ^RC á ^WG ^CLEN ^SV ^SLEN > s t
 ! k i 0   0 s s   á 0   0     á   0     0 s t
+
+! h u k s i ^SV m ^SLEN > i s t
+! h u k s i i   m 0     0 i s t 
 
 "i to j in suffixes following i stems"
 i:j <=> i [ Arch: | Len: ]* %>: _ ;
