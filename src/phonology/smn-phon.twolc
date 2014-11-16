@@ -49,23 +49,25 @@ Alphabet
 !! Different triggers
 
 !! !! 2014
-%^WG:0 					     !!= * @CODE@
-%^RV:0 %^SV:0 			     !!= * @CODE@
-%^RC:0					     !!= * @CODE@
-%^RLEN:0 %^LLEN:0 %^SLEN:0   !!= * @CODE@
-%^CLEN:0				     !!= * @CODE@
-%^RVL:0
-%^CSH:0 
 
- ¥:0                        !!= * @CODE@ for Vowel lengthening, to be deleted
+%^WG:0   !!= * @CODE@ Weak grade trigger
+%^RLEN:0 !!= * @CODE@ Root vowel lengthening (impl. WG)
+%^SLEN:0 !!= * @CODE@ Suffix vowel lengthening 
+%^LLEN:0 !!= * @CODE@ Low (á) root vowel lengthening (impl. WG)
+%^CLEN:0 !!= * @CODE@ Consonant lengthening in qual WG
+%^RV:0   !!= * @CODE@ Root vowel dummy
+%^SV:0   !!= * @CODE@ Suffix vowel dummy
+%^RC:0   !!= * @CODE@ Root consonant dummy
+%^RVL:0  !!= * @CODE@ Root vowel lowering
+%^CSH:0  !!= * @CODE@ Consonant shortening (not WG)
 
 
 !! !! ... 2013 
 
-%^WGSH:0       !!= * @CODE@
+%^WGSH:0                     !!= * @CODE@
 %^SHV:0 				     !!= * @CODE@
 %^CPL:0 %^SCPL:0 		     !!= * @CODE@
-%^SVL:0  %^WG1:0 %^VLOW:0   !!= * @CODE@
+%^SVL:0  %^WG1:0 %^VLOW:0    !!= * @CODE@
 %^ODDC:0				     !!= * @CODE@
 %^ODDSHV:0				     !!= * @CODE@
 %^ODDLV:0				     !!= * @CODE@
@@ -111,19 +113,8 @@ Len = %^RLEN %^LLEN %^SLEN %^CLEN ;
 
 Dummy = Arch Len ;
            
-!XX Dummy = %^WG1 %^WGSH %^SVL %^VLOW %^CPL %^SCPL 
-!XX         %^ODDC %^ODDLV %^ODDSHV 			   
-!XX         %^XST %^IA 	                        
-!XX         %^WG	                     
-!XX         %^RV %^SV   			     
-!XX         %^RC					     
-!XX         %^RLEN %^LLEN %^SLEN        
-!XX         %^CLEN				        
-!XX         ;			
-!XX  ODD = %^ODDC %^ODDLV %^ODDSHV ;	
 
 
-!Definitions
 !Definitions
 
 ! {{{
@@ -147,8 +138,8 @@ Cx:0 <=> _ Cx (%^RC:) Vow %^WG: [ ?* - Len: ] ;
 
 "Consonant shortening after root vowel lengthening"
 Cx:0 <=> %^RV: _ :Cx [ [ Seg: | Arch: ]*  - %>: ] %^RLEN: ;          
-       except 
-               _ :Cx (%^RC:) Vow %^WG: [ ?* - Len: ] ;
+!       except 
+!f               _ :Cx (%^RC:) Vow %^WG: [ ?* - Len: ] ;
         where Cx in ( p b s t k c č d g z ž v l m n ŋ r š ) ; 
 
 ! k i ^RV s s ^RC á ^RLEN > n 
@@ -156,8 +147,8 @@ Cx:0 <=> %^RV: _ :Cx [ [ Seg: | Arch: ]*  - %>: ] %^RLEN: ;
 
 "Consonant shortening after low root vowel lengthening"
 Cx:0 <=> %^RV: _ :Cx [  [ Seg: | Arch: ]* - %>: ] %^LLEN: ;          
-       except 
-               _ :Cx (%^RC:) Vow %^WG: [ ?* - Len: ] ;
+!       except 
+!               _ :Cx (%^RC:) Vow %^WG: [ ?* - Len: ] ;
         where Cx in ( p b s t k c č d g z ž v l m n ŋ r š ) ; 
 
 ! f á ^RV d d ^RC á ^LLEN > n
@@ -216,8 +207,8 @@ Cz:0 <=> _ Cx:Cy %^RC: Vow %^WG: ;
 
 "Low root vowel lengthening"
 %^RV:Vx <=> Vx _ [ ?* - %>: ] %^LLEN: ;
-        except 
-            Vx _ [ ?* - %>: ] %^RLEN: ;
+!        except 
+!            Vx _ [ ?* - %>: ] %^RLEN: ;
         where Vx in ( á a u ) ; ! pending...
 
 ! f á ^RV d d á ^LLEN 
