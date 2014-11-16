@@ -49,6 +49,16 @@ Alphabet
 !! Different triggers
 
 !! !! 2014
+%^WG:0 					     !!= * @CODE@
+%^RV:0 %^SV:0 			     !!= * @CODE@
+%^RC:0					     !!= * @CODE@
+%^RLEN                       !!= * @CODE@  Root vowel lengthening (impl. WG)
+%^SLEN                       !!= * @CODE@  Suffix vowel lengthening 
+%^LLEN                       !!= * @CODE@  Low (á) root vowel lengthening (impl. WG)
+%^CLEN                       !!= * @CODE@  Consonant lengthening in qual WG
+
+%^RVL:0
+%^CSH:0 
 
 %^WG:0   !!= * @CODE@ Weak grade trigger
 %^RLEN:0 !!= * @CODE@ Root vowel lengthening (impl. WG)
@@ -125,42 +135,80 @@ Dummy = Arch Len ;
 
 Rules
 
-
-
 "Quantitative weak grade xx:x"
-Cx:0 <=> _ Cx (%^RC:) Vow %^WG: [ ?* - Len: ] ; 
+!Cx:0 <=>       _ Cx (%^RC:) Vow              %^WG: [ ?* - Len: ] ; 
+!               _ Cx (%^RC:) Vow:* Cns %^CSH:       [ ?* - Len: ] ;
+Cx:0 <=>       _ Cx (%^RC:) [ Vow:* Cns %^CSH:  | Vow   %^WG: ]    [ ?* - Len: ] ;
+         %^RV: _ :Cx [ [ Seg: | Arch: ]* - %>: ] %^RLEN: ;      
+         %^RV: _ :Cx [ [ Seg: | Arch: ]* - %>: ] %^LLEN: ;          
+ !    except 
+ !             _ :Cx (%^RC:) Vow %^WG: [ ?* - Len: ] ;
        where Cx in ( p b s t k c č d g z ž v l m n ŋ r š ) ;
        
 ! k i ^RV s s ^RC á ^WG
 ! k i 0   0 s 0   á 0
-
 ! k:k i:i ^RV:0 s:0 s:s ^RC:0 á:á ^WG:0
 
-"Consonant shortening after root vowel lengthening"
-Cx:0 <=> %^RV: _ :Cx [ [ Seg: | Arch: ]*  - %>: ] %^RLEN: ;          
-!       except 
-!f               _ :Cx (%^RC:) Vow %^WG: [ ?* - Len: ] ;
-        where Cx in ( p b s t k c č d g z ž v l m n ŋ r š ) ; 
+!"Consonant shortening (not weak grade)"
+!Cx:0 <=> _ Cx (%^RC:) Vow:* Cns %^CSH: [ ?* - Len: ] ; 
+!       where Cx in ( p b s t k c č d g z ž v l m n ŋ r š ) ;
+! k a p p e e r ^CSH > i s t   
+! k a 0 p 0 e r 0    0 i s t
 
+
+!=============================
+    
+!"Consonant shortening after root vowel lengthening"
+!Cx:0 <=> %^RV: _ :Cx [ [ Seg: | Arch: ]*  - %>: ] %^RLEN: ;          
+!       except 
+!               _ :Cx (%^RC:) Vow %^WG: [ ?* - Len: ] ;
+!        where Cx in ( p b s t k c č d g z ž v l m n ŋ r š ) ; 
 ! k i ^RV s s ^RC á ^RLEN > n 
 ! k i i   0 s 0   á 0     0 n
-
+!"Consonant shortening after low root vowel lengthening"
+!Cx:0 <=> %^RV: _ :Cx [  [ Seg: | Arch: ]* - %>: ] %^LLEN: ;          
+!       except 
+!               _ :Cx (%^RC:) Vow %^WG: [ ?* - Len: ] ;
+!        where Cx in ( p b s t k c č d g z ž v l m n ŋ r š ) ; 
 "Consonant shortening after low root vowel lengthening"
 Cx:0 <=> %^RV: _ :Cx [  [ Seg: | Arch: ]* - %>: ] %^LLEN: ;          
 !       except 
 !               _ :Cx (%^RC:) Vow %^WG: [ ?* - Len: ] ;
         where Cx in ( p b s t k c č d g z ž v l m n ŋ r š ) ; 
-
 ! f á ^RV d d ^RC á ^LLEN > n
 ! f á á   0 d 0   á 0     0 n
+
+!=================================
+
+
+! xx:y
+
+"xx:y gradation in Aanaarsaami words (change)"
+Cx:Cy <=> _ %^RC: Vow %^WG: ;
+    where Cx in ( %^P %^K %^Č %^H %^T )
+          Cy in (   v   h   j   v   đ )
+          matched ; 
+
+"xx:y gradation in Aanaarsaami words (deletion)"
+Cz:0 <=> _ Cx:Cy %^RC: Vow %^WG: ;
+    where Cz in (   p   k   č   h   t )
+          Cx in ( %^P %^K %^Č %^H %^T )
+          Cy in (   v   h   j   v   đ )
+          matched ; 
+
+! s u ^RV k ^K ^RC á ^WG
+! s u 0   0  h   0 á  0
+
+
+
+
+
 
 "Qualitative weak grade x:y"
 Cx:Cy <=> :Vow _ Vow %^WG: ; 
        where Cx in ( c p t h č ) 
              Cy in ( s v đ v j ) 
              matched ;
-       
-
 
 "Qualitative weak grade xy:zy"
 Cx:Cy <=> _ Cz (%^RC:) Vow %^WG: ; 
@@ -177,24 +225,6 @@ Cx:Cy <=> _ Cz (%^RC:) Vow %^WG: ;
 
 ! č:č u:u ^RV:0 h:v č:č ^RC:č á:á ^WG:0 ^CLEN:0 >:0 i:i n:n
 
-"xx:y gradation in Aanaarsaami words (change)"
-Cx:Cy <=> _ %^RC: Vow %^WG: ;
-    where Cx in ( %^P %^K %^Č %^H %^T )
-          Cy in (   v   h   j   v   đ )
-          matched ; 
-
-! s u ^RV k ^K ^RC á ^WG
-! s u 0   0  h   0 á  0
-
-"xx:y gradation in Aanaarsaami words (deletion)"
-Cz:0 <=> _ Cx:Cy %^RC: Vow %^WG: ;
-    where Cz in (   p   k   č   h   t )
-          Cx in ( %^P %^K %^Č %^H %^T )
-          Cy in (   v   h   j   v   đ )
-          matched ; 
-
-! s u ^RV k ^K ^RC á ^WG
-! s u 0   0  h   0 á  0
 
 "Root vowel lengthening"
 %^RV:Vx <=> Vx _ [ ?* - %>: ] %^RLEN: ;
@@ -271,13 +301,6 @@ Vx:Vy <=> _   Vx: Cns [ ?* - %>: ] %^RVL: ;
                 Vy in ( o o )
                 matched ;
                 
-"Consonant shortening (not weak grade)"
-Cx:0 <=> _ Cx (%^RC:) Vow:* Cns %^CSH: [ ?* - Len: ] ; 
-       where Cx in ( p b s t k c č d g z ž v l m n ŋ r š ) ;
-              
-! k a p p e e r ^CSH > i s t   
-! k a 0 p 0 e r 0    0 i s t
-    
 "Vowel shortening (with consonant shortening)"
 Vx:0 <=>  _ Vx Cns %^CSH: [ ?* - Len: ] ;
     where Vx in ( a e o á ä ) ;
@@ -285,306 +308,3 @@ Vx:0 <=>  _ Vx Cns %^CSH: [ ?* - Len: ] ;
 ! k a p p e e r ^CSH > i s t   
 ! k a 0 p 0 e r 0    0 i s t    
 
-    
-!XX
-!XX
-!XX
-!XX
-!XX
-!XX
-!XX££ !££ Earlier rules
-!XX
-!XX
-!XX££ ££Root vowel shortening
-!XX
-!XX"Root Vowel Shortening in EAP"
-!XX££ __@RULENAME@__  
-!XX££ {{{
-!XXVx:0 <=> Vx _ Cns:* Vow %^WGSH:0 ; ££= @CODE@
-!XX       where Vx in ( a e o u ä ) ; ££= @CODE@
-!XX££ }}}       
-!XX       
-!XX!€ šaalu^WGSH>ittáá
-!XX!€ ša0lu00ittáá
-!XX
-!XX££ ££Diphtong simplification
-!XX
-!XX
-!XX££ Not written.
-!XX
-!XX
-!XX££ ££Stem vowel alternations
-!XX
-!XX
-!XX
-!XX
-!XX"Adjust â to á before Com Sg and Ill Pl"
-!XX££ __@RULENAME@__  
-!XX££ {{{
-!XX â:á <=> _ (Dummy:*) %>: %^IA: i [ n | d ] ; ££= @CODE@
-!XX££ }}}       
-!XX 	
-!XX££ Should we do the short one instead, as Matti Morottaja?
-!XX
-!XX"i as j after i-stem"
-!XX££ __@RULENAME@__  
-!XX££ {{{
-!XX i:j <=> i (Dummy:*) %>: (Dummy:*) _  ; ££= @CODE@	
-!XX££ }}}       
-!XX
-!XX
-!XX"e stem to a"
-!XX££ __@RULENAME@__ , this is not finished
-!XX££ {{{
-!XX e:a <=> [a|e] Cns+: %>: _ ; ££= @CODE@ 
-!XX££ }}}       
-!XX
-!XX! "Stem Vowel Change in Comitative"
-!XX!  Vx:Vy <=> _  %^SVL:0 ;
-!XX!        where Vx in ( â e )
-!XX!   	         Vy in ( á i )
-!XX! 	     matched ;
-!XX! mielgâ : mielg%^SVLáin
-!XX! alge : olgijn
-!XX! and the umlaut must be fixed as well...
-!XX	
-!XX
-!XX
-!XX££ ££Cns stem alternations
-!XX! - - - - - - - - - -
-!XX
-!XX"Long vowel shortening in Cns stems"
-!XX££ __@RULENAME@__  
-!XX££ {{{
-!XXVx:0 <=> Cns:* Vx _ Cns %^SHV:0 ; ££= @CODE@
-!XX     where Vx in (á i); ££= @CODE@
-!XX££ }}}       
-!XX
-!XX
-!XX"Vowel lowering in Contracted Stems"
-!XX££ __@RULENAME@__  
-!XX££ {{{
-!XXVx:Vy <=> _ Cns+ Vow:* %^VLOW: ; ££= @CODE@ 
-!XX      where Vx in (u a)       ££= @CODE@
-!XX            Vy in (o á)       ££= @CODE@
-!XX            matched ; ££= @CODE@
-!XX££ }}}       
-!XX
-!XX
-!XX
-!XX
-!XX
-!XX
-!XX££ ££Consonant gradation rules
-!XX
-!XX
-!XX
-!XX££ !Compensatory lengthening rule
-!XX
-!XX
-!XX"Compensatory lengthening"
-!XX££ __@RULENAME@__  
-!XX££ {{{
-!XX¥:Vx <=> Vx _ Cns:* Vow:* (:StemCns) [ %^CPL: | %^SCPL: ] ; ££= @CODE@
-!XX	where Vx in ( a e i o u ) ;                         ££= @CODE@
-!XX££ }}}       
-!XX
-!XX
-!XX
-!XX!Cx:Vx <=> Vx _ Cx Vow %^CPL: ;
-!XX!      where Cx in ( l p p )
-!XX!      	    Vx in ( u a ä )
-!XX!	    mixed ;
-!XX
-!XX
-!XX
-!XX
-!XX££ !Deletion rules
-!XX
-!XX
-!XX"Gradation: Single Consonant"
-!XX££ __@RULENAME@__  
-!XX££ {{{
-!XX Cx:Cy <=> Vow (Vow:) _  Vow: FacultativeStemCns WeG: ; ££= @CODE@
-!XX 	where Cx in ( p t h k c )       ££= @CODE@
-!XX 		  Cy in ( v đ v h s )       ££= @CODE@
-!XX 		  matched ; ££= @CODE@
-!XX££ }}}       
-!XX
-!XX"Gradation: Double Consonant" 
-!XX££ __@RULENAME@__  as for káffe:káfes
-!XX££ {{{
-!XX  Cx:0 <=> Vow: Cy: _ Vow: FacultativeStemCns WeG: ; ££= @CODE@
-!XX	where Cx in (p b d g m n ŋ d s z r š ž l v )       ££= @CODE@
-!XX	      Cy in (p b d g m n ŋ d s z r š ž l v )       ££= @CODE@
-!XX	      matched ; ££= @CODE@
-!XX££ }}}
-!XX
-!XX! p t k š č c h đ, 
-!XX! Note: added : to Cy to allow for pp:v subrule below
-!XX
-!XX"Gradation: pp:v"
-!XX££ __@RULENAME@__  
-!XX££ {{{
-!XX  p:v <=> [Vow: - ¥:] p: _ Vow FacultativeStemCns WeG: ; ££= @CODE@
-!XX££ }}}       
-!XX
-!XX"Gradation: pp:v 2"
-!XX££ __@RULENAME@__  
-!XX££ {{{
-!XX  p:0 <=> [Vow: - ¥:] _ p: Vow FacultativeStemCns WeG: ; ££= @CODE@
-!XX££ }}}       
-!XX
-!XX"Gradation: xx:y 1"
-!XX££ __@RULENAME@__  
-!XX££ {{{
-!XX Cx:0 <=> Vow (Vow:) _ Cx:Cy Vow: FacultativeStemCns WeG: ; ££= @CODE@
-!XX 	where Cx in ( t k č c )       ££= @CODE@
-!XX 		  Cy in ( đ h j s )       ££= @CODE@
-!XX 		  matched ; ££= @CODE@
-!XX££ }}}       
-!XX
-!XX££ p in previous rule instead. We need both pp:p and pp:v.
-!XX
-!XX"Gradation: xx:y 2"
-!XX££ __@RULENAME@__  
-!XX££ {{{
-!XX Cx:Cy <=> Vow (Vow:) Cx: _ Vow: FacultativeStemCns WeG: ; ££= @CODE@
-!XX 	where Cx in ( t k č c )       ££= @CODE@
-!XX 		  Cy in ( đ h j s )       ££= @CODE@
-!XX 		  matched ; ££= @CODE@
-!XX££ }}}
-!XX
-!XX! tt : đ verbeissä -- toimii (?): tiettiđ : tieđ-
-!XX! tt : t nomineissa -- ei toimi hattâ : haatâ
-!XX
-!XX"xkk:xk Gradation"
-!XX££ __@RULENAME@__  
-!XX££ {{{
-!XX k:0 <=> Vow: Cx _ k Vow: FacultativeStemCns WeG: ; ££= @CODE@
-!XX	where Cx in ( ŋ r ) ; ££= @CODE@
-!XX££ }}}       
-!XX	
-!XX"xtt:xt Gradation"
-!XX££ __@RULENAME@__  
-!XX££ {{{
-!XX t:0 <=> Vow: Cx _ t Vow: FacultativeStemCns WeG: ; ££= @CODE@
-!XX	where Cx in ( i l n r ) ; ££= @CODE@
-!XX££ }}}       
-!XX	
-!XX"xcc:xc Gradation"
-!XX££ __@RULENAME@__  
-!XX££ {{{
-!XX c:0 <=> Vow: Cx _ c Vow: FacultativeStemCns WeG: ; ££= @CODE@
-!XX	where Cx in ( i l n r ) ; ££= @CODE@
-!XX££ }}}       
-!XX	
-!XX"xpp:xp Gradation"
-!XX££ __@RULENAME@__  
-!XX££ {{{
-!XX p:0 <=> Vow: Cx _ p Vow: FacultativeStemCns WeG: ; ££= @CODE@
-!XX	where Cx in ( l m r v ) ; ££= @CODE@
-!XX££ }}}       
-!XX	
-!XX"xss:xs Gradation"
-!XX££ __@RULENAME@__  
-!XX££ {{{
-!XX s:0 <=> Vow: Cx _ s Vow: FacultativeStemCns WeG: ; ££= @CODE@
-!XX	where Cx in ( l n r ) ; ££= @CODE@
-!XX££ }}}       
-!XX	
-!XX"xčč:xč Gradation"
-!XX££ __@RULENAME@__  
-!XX££ {{{
-!XX č:0 <=> Vow: Cx _ č Vow: FacultativeStemCns WeG: ; ££= @CODE@
-!XX	where Cx in ( l r ) ; ££= @CODE@
-!XX££ }}}       
-!XX	
-!XX"xšš:xš Gradation"
-!XX££ __@RULENAME@__  
-!XX££ {{{
-!XX š:0 <=> Vow: Cx _ s Vow: FacultativeStemCns WeG: ; ££= @CODE@
-!XX	where Cx in ( l r ) ; ££= @CODE@
-!XX££ }}}       
-!XX	
-!XX"nnj:nj Gradation"
-!XX££ __@RULENAME@__  
-!XX££ {{{
-!XX n:0 <=> Vow: n _ j Vow: FacultativeStemCns WeG: ; ££= @CODE@
-!XX££ }}}       
-!XX
-!XX	
-!XX
-!XX	
-!XX££ !Change rules
-!XX
-!XX
-!XX	
-!XX"h:v in Front of Voiceless Dentals"
-!XX££ __@RULENAME@__  
-!XX££ {{{
-!XX h:v <=> Vow:*  _ (s) [c|č|t] Vow: WeG: ; ££= @CODE@
-!XX££ }}}       
-!XX
-!XX
-!XX"Consonant Lengthening"
-!XX££ __@RULENAME@__  
-!XX££ {{{
-!XX 0:Cx <=> Vow _ Cx Vow: %^XST: ; ££= @CODE@
-!XX 	where Cx in ( t l s ) ; ££= @CODE@
-!XX££ }}}       
-!XX
-!XX
-!XX! "i To j in High Vowel Suffixes"
-!XX!  i:j <=> %>: ( g u ) i _ [d|n] ;
-!XX ! oohoid
-!XX ! kuolijd
-!XX
-!XX! "kk:h" ákku
-!XX! Cannot have kk as underlying form, because of kukká.
-!XX
-!XX
-!XX
-!XX! Turning cns into vow.
-!XX
-!XX!€ tullâ^CPL
-!XX!€ tuulâ0
-!XX
-!XX! Hmm, do not like this rule, but the alternative is insertion, 
-!XX! also not good, or eventually a long baseform *tuullâ or *tuu7llâ, 
-!XX! where u7 is there just to be deleted unless in weak grade contexts.
-!XX
-!XX!Idas rules for verbs
-!XX
-!XX!"Even syllabic verbs present sg, monophpt E I"
-!XX! Vx:Vy <=>  _ C+ (V) %>: %^1UML:0 ;
-!XX! 	where Vx in (i e u)
-!XX! 	      Vy in (æ a å)
-!XX! 	matched ;
-!XX
-!XX
-!XX££ ££Odd-syllabic verb rules
-!XX! - - - - - - - - - - - - 
-!XX
-!XX"t Shortening in Odd-Syllabic Verbs"
-!XX££ __@RULENAME@__  
-!XX££ {{{
-!XXt:0 <=> t _ ODD:0 [#:0|%>: Cns] ; ££= @CODE@
-!XX££ }}}       
-!XX
-!XX!€ cie'lâtt#
-!XX!€ cie'lât0#
-!XX
-!XX"V-Context Vowel Shortening in Odd-Syllabic Verbs"
-!XX££ __@RULENAME@__  
-!XX££ {{{
-!XXVx:0 <=> Vx _ %^ODDSHV:0 %>: Vow ; ££= @CODE@
-!XX     where Vx in (á a i e o); ££= @CODE@
-!XX££ }}}       
-!XX
-!XX"C-Context Vowel Shortening in Odd-Syllabic Verbs"
-!XX££ __@RULENAME@__  
-!XX££ {{{
-!XXVx:0 <=> Vx _ %^ODDLV:0 %>: [Cns|#:0] ; ££= @CODE@
-!XX     where Vx in (á a i e o); ££= @CODE@
-!XX££ }}}       
