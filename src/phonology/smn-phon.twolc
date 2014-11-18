@@ -287,13 +287,24 @@ Cx:0 <=> _ Cx (%^RC:) Vow:* Cns %^CSH: [ ?* - Len: ] ;
               
 ! k a p p e e r ^CSH > i s t   
 ! k a 0 p 0 e r 0    0 i s t
+!htest k a p:0 p e:0 e r ^CSH:0 >:0 i s t
     
-"Vowel shortening (with consonant shortening)"
-Vx:0 <=>  _ Vx Cns %^CSH: [ ?* - Len: ] ;
+"Vowel shortening (when consonant shortening)"
+Vx:0 <=>  _ Vx Cns Cns %^CSH: [ ?* - Len: ] ;
     where Vx in ( a e o á ä ) ;
     
-! k a p p e e r ^CSH > i s t   
-! k a 0 p 0 e r 0    0 i s t    
+!htest k a a:0 v p u g ^CSH:0 >:0 i s t
+
+"â to a in front of plural h"
+â:a <=> _ %>:0 h ;
+
+!htest h a ^RV:a t:0 t â:a ^WG:0 ^LLEN:0 >:0 h
+
+"â to á in front of sg com and pl ill"
+â:á <=> _ %^WG:0 %^CLEN:0 %>:0 i [d|n] ;
+!htest h a ^RV:0 t:0 t 0:t â:á ^WG:0 ^CLEN:0 >:0 i n
+
+
 
     
 !XX
