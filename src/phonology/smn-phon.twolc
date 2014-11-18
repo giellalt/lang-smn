@@ -49,15 +49,20 @@ Alphabet
 !! Different triggers
 
 !! !! 2014
-%^WG:0 					     !!= * @CODE@
-%^RV:0 %^SV:0 			     !!= * @CODE@
-%^RC:0					     !!= * @CODE@
-%^RLEN:0 %^LLEN:0 %^SLEN:0   !!= * @CODE@
-%^CLEN:0				     !!= * @CODE@
-%^RVL:0
-%^CSH:0 
+%^WG:0 					     !!= * @CODE@ weak grade
+%^RV:0	 				     !!= * @CODE@ root vowel
+%^SV:0 					     !!= * @CODE@ stem vowel
+%^RC:0					     !!= * @CODE@ root consonant
+%^RLEN:0                     !!= * @CODE@ root lengthening
+%^LLEN:0                     !!= * @CODE@ low vow lengthening
+%^SLEN:0                     !!= * @CODE@ hmm lengthening
+%^CLEN:0				     !!= * @CODE@ cons lengthening
+%^RVL:0                      !!= * @CODE@ root vow lemngth
+%^CSH:0                      !!= * @CODE@ cons shortening
+%^DIPH:0                     !!= * @CODE@ diphthongisation
+%^IA:0                       !!= * @CODE@ i to á (more)
 
- ¥:0                        !!= * @CODE@ for Vowel lengthening, to be deleted
+ ¥:0                         !!= * @CODE@ for Vowel lengthening, to be deleted
 
 
 !! !! ... 2013 
@@ -289,11 +294,20 @@ Cx:0 <=> _ Cx (%^RC:) Vow:* Cns %^CSH: [ ?* - Len: ] ;
 ! k a 0 p 0 e r 0    0 i s t
 !htest k a p:0 p e:0 e r ^CSH:0 >:0 i s t
     
-"Vowel shortening (when consonant shortening)"
-Vx:0 <=>  _ Vx Cns Cns %^CSH: [ ?* - Len: ] ;
+"Vowel shortening (with consonant shortening)"
+Vx:0 <=>  _ Vx Cns %^CSH: [ ?* - Len: ] ;
+    where Vx in ( a e o á ä ) ;
+    
+! k a p p e e r ^CSH > i s t   
+! k a 0 p 0 e r 0    0 i s t    
+!htest k a p:0 p e:0 e r ^CSH:0 >:0 i s t
+
+"Stem vowel shortening (when consonant shortening)"
+Vx:0 <=>  _ Vx Cns (Cns) (Vow:) Vow Cns %^CSH: [ ?* - Len: ] ;
     where Vx in ( a e o á ä ) ;
     
 !htest k a a:0 v p u g ^CSH:0 >:0 i s t
+    
 
 "â to a in front of plural h"
 â:a <=> _ %>:0 h ;
@@ -303,6 +317,39 @@ Vx:0 <=>  _ Vx Cns Cns %^CSH: [ ?* - Len: ] ;
 "â to á in front of sg com and pl ill"
 â:á <=> _ %^WG:0 %^CLEN:0 %>:0 i [d|n] ;
 !htest h a ^RV:0 t:0 t 0:t â:á ^WG:0 ^CLEN:0 >:0 i n
+
+"ee to iä diphthong 1"
+e:i <=> _ e: Cns: Cns Vow: Cns %^DIPH:0 ;
+
+"ee to iä diphthong 2"
+e:ä <=> e: _ Cns: Cns Vow: Cns %^DIPH:0 ;
+
+!htest e:i e:ä b b i:á r
+
+"i:á in some contexts"
+i:ä <=> _ Cns (%^DIPH:0) %^IA:0 ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
