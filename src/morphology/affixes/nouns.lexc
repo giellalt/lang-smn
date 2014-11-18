@@ -31,8 +31,6 @@ LEXICON KISSA ! No root vowel lengthening
 +N+Pl+Gen:%^WG%>i # ;        ! kisái
 +N+Pl+Acc:%^WG%^CLEN%>id # ; ! kissáid
 +N+Pl+Loc:%^WG%^CLEN%>in # ; ! kissáin
-!+N+Sg+Com:%>in # ;           ! kissáin 
-!+N+Pl+Ill:%>id # ;           ! kissáid
 KISSA-FADDA ; ! forms common to KISSA and FADDA
 
 LEXICON FADDA 
@@ -55,6 +53,32 @@ LEXICON KISSA-FADDA ! forms common to KISSA and FADDA
 +N+Pl+Abe:%^WG%>ittáá # ;    ! kisáittáá  
 +N+Sg+Com:%^WG%^CLEN%>in # ; ! kissáin, rávssáin, fáddáin
 +N+Pl+Ill:%^WG%^CLEN%>id # ; ! kissáid, rávssáid, fáddáid
+
+
+LEXICON SOLLA  !!= * __@CODE@__ SM1
++N+Sg+Gen:%^WG%^LLEN # ;     ! fáádá, ráávsá
++N+Sg+Acc:%^WG%^LLEN # ;     ! fáádá, ráávsá
++N+Sg+Loc:%^WG%^LLEN%>st # ; ! fáádást, ráávsást
++N+Pl+Nom:%^WG%^LLEN%>h # ;  ! fáádáh, ráávsáh
++N+Pl+Gen:%^WG%^LLEN%>i # ;  ! fáádái, ráávsái
++N+Pl+Acc:%^WG%^LLEN%>id # ; ! fáádáid, ráávsáid
++N+Pl+Loc:%^WG%^LLEN%>in # ; ! fáádáin, ráávsáin
+KISSA-FADDA ; ! forms common to KISSA and FADDA
+
+! +N: EVEN_NEP ; ! Strong grade
+! +N:%^CPL EVEN_WEAK ;
+! +N:%^WGSH  EVEN_WEAKSHORT ; ! Abe + Com Sg
+
+
+
+
+LEXICON KIETA  !!= * __@CODE@__ SM5
+FADDA ; ! Pitää olla toinenlainen: todo.
+! +N: EVEN_N ;           ! Strong grade kietâ
+! +N:%^XST EVEN_EP ;     ! Stronger grade kiettâ 
+! +N: ILL_SG ;           ! Weak grade kieđâ, can be %^WGSH
+! +N:%^CPL NON_ILL_OBL ; ! Weak grade kieđâ, can be %^WGSH
+! +N:%^WGSH EVEN_WEAKSHORT ;
 
 
 LEXICON SAAMI 
@@ -140,39 +164,27 @@ LEXICON CEVEDECL
 !! !!1.1. Vowel final
 !! !1.1.1 Even-syllabic â-, u- and i-stems
 
-LEXICON SOLLA  !!= * __@CODE@__ SM1
- +N: EVEN_NEP ; ! Strong grade
- +N:%^CPL EVEN_WEAK ;
- +N:%^WGSH  EVEN_WEAKSHORT ; ! Abe + Com Sg
-
 
 LEXICON KIELA  !!= * __@CODE@__ SM2
 KIETA ; ! Obviously wrong, so fix this.
 
 LEXICON LUCCA  !!= * __@CODE@__ SM3
- +N: EVEN_NEP ;          ! Strong grade
- +N:%^CPL EVEN_WEAK ;    ! %^CPL WeG and lengthening
- +N:%^WGSH  EVEN_WEAKSHORT ; ! %^WGSH WeG, no lengthening
-
+SOLLA ;
+! +N: EVEN_NEP ;          ! Strong grade
+! +N:%^CPL EVEN_WEAK ;    ! %^CPL WeG and lengthening
+! +N:%^WGSH  EVEN_WEAKSHORT ; ! %^WGSH WeG, no lengthening
 
 LEXICON RUTTA  !!= * __@CODE@__ SM4
-KIETA ; ! Obviously wrong, so fix this.
-
-LEXICON KIETA  !!= * __@CODE@__ SM5
-FADDA ;
-! +N: EVEN_N ;           ! Strong grade kietâ
-! +N:%^XST EVEN_EP ;     ! Stronger grade kiettâ 
-! +N: ILL_SG ;           ! Weak grade kieđâ, can be %^WGSH
-! +N:%^CPL NON_ILL_OBL ; ! Weak grade kieđâ, can be %^WGSH
-! +N:%^WGSH EVEN_WEAKSHORT ;
+SOLLA ; ! kánske
 
 LEXICON RITA
 KIETA ; ! A wild guess.
 
 LEXICON KUSSA  !!= * __@CODE@__ SM6
- +N: EVEN_NEP ; ! Strong grade
- +N: EVEN_MIXED_OBL ;
- +N:%^WGSH  EVEN_WEAKSHORT ;
+SOLLA ;
+! +N: EVEN_NEP ; ! Strong grade
+! +N: EVEN_MIXED_OBL ;
+! +N:%^WGSH  EVEN_WEAKSHORT ;
 
 LEXICON KUOSA  !!= * __@CODE@__ SM7
 KIETA ; ! fix
