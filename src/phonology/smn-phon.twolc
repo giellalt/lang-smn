@@ -71,7 +71,7 @@ Alphabet
 %^SHV:0 				     !!= * @CODE@
 %^CPL:0 %^SCPL:0 		     !!= * @CODE@
 %^SVL:0  %^WG1:0 %^VLOW:0   !!= * @CODE@
-%^ODDC:0				     !!= * @CODE@
+%^ODDC:0				     !!= * @CODE@ shorten cns in odd-syll stems before C, #
 %^ODDSHV:0				     !!= * @CODE@
 %^ODDLV:0				     !!= * @CODE@
 %^XST:0 %^IA:0			     !!= * @CODE@
@@ -114,7 +114,7 @@ Sets
 Arch = %^WG %^RC %^RV %^SV %^RVL ; 
 Len = %^RLEN %^LLEN %^SLEN %^CLEN ;
 
-Dummy = Arch Len ;
+Dummy = Arch Len %^ODDC ;
            
 !XX Dummy = %^WG1 %^WGSH %^SVL %^VLOW %^CPL %^SCPL 
 !XX         %^ODDC %^ODDLV %^ODDSHV 			   

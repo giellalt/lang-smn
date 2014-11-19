@@ -22,9 +22,21 @@
 !! !!Even-syllable stems
 !    -------------------
 
-LEXICON VUOLLAD  !!= * __@CODE@__
-+V:%>â  VINF ;
-+V: EVEN-I ;
+LEXICON 2SYLL_V_ÂD  !!= * __@CODE@__
++V:â  VINF ;
++V+Ind+Prs: EVEN-I ;
+
+LEXICON 2SYLL_V_ED  !!= * __@CODE@__
++V:e  VINF ;
++V+Ind+Prs: EVEN-I ;
+
+LEXICON 2SYLL_V_ID  !!= * __@CODE@__
++V:i  VINF ;
++V+Ind+Prs: EVEN-I ;
+
+LEXICON 2SYLL_V_UD  !!= * __@CODE@__
++V:u  VINF ;
++V+Ind+Prs: EVEN-I ;
 
 !! !!Odd-syllable stems
 ! ------------------
@@ -32,17 +44,30 @@ LEXICON VUOLLAD  !!= * __@CODE@__
 LEXICON LEKKASID  !!= * __@CODE@__ SM51, no length change in stem
 +V:       ODDVLEX ;
 
-
-LEXICON CIELATTID  !!= * __@CODE@__ SM57, consonant change only
-+V:%^ODDC ODDVLEX ; ! Dia to shorten C before C|#
+LEXICON CIELATTID  !!= * __@CODE@__ SM57, consonant and vowel change
++V:%^ODDC ODDVLEX ; ! Diacriticn %^ODDC to shorten C before C and #
 
 LEXICON VYEJETTID  !!= * __@CODE@__ SM53. short V in Inf
-+V:%^ODDSHV ODDVLEX ; ! Dia to shorten V 
++V:%^ODDSHVi VINF ; ! Diacriticn to shorten V 
++V:          ODDVLEX_fin ;
+
+LEXICON PUTESTID  !!= * __@CODE@__ SM53. short V in Inf
++V:%^ODDSHV ODDVLEX ; ! Diacriticn to shorten V 
 
 LEXICON IALLAATTID  !!= * __@CODE@__ SM52, long V in Inf
-+V:%^ODDLV ODDVLEX ;
++V: ODDVLEX ;
+
+
+
+
+!! !Inflecting odd-syllabic verbs
+! ----------------
 
 LEXICON ODDVLEX  !!= * __@CODE@__
+:%>i         VINF		   ;
+ODDVLEX_fin ;
+
+LEXICON ODDVLEX_fin
 +Ind+Prs:%>â VSUF_SG1 ;
 +Ind+Prs:%>â VSUF_SG2 ;
 +Ind+Prs:    VSUF_SG3 ;
@@ -53,7 +78,6 @@ LEXICON ODDVLEX  !!= * __@CODE@__
 +Ind+Prs:%>á VSUF_PL2 ;
 +Ind+Prs:%>je VSUF_PL3 ;
 +Ind+Prt:%>i ODD-II ;
-:%>i         VINF		   ;
 :%>ijj       VPRSPRC	   ;
 :%>â         VPRFPRCACT	   ;
 :%>u         VPRFPRCPASS   ;
@@ -73,7 +97,7 @@ LEXICON ODDVLEX  !!= * __@CODE@__
 
 
 LEXICON COKKAD  !!= * __@CODE@__
-+V:%>  VINF ;
++V:  VINF ;
 +V+Ind+Prs:%>á VSUF_SG1 ;
 +V+Ind+Prs:%>á VSUF_SG2 ;
 +V+Ind+Prs:%>á VSUF_SG3 ;
@@ -100,7 +124,7 @@ LEXICON PALLAD !!= * __@CODE@__
 
 LEXICON TUHHID !!= * __@CODE@__
 
-+V:%>i  VINF ;
++V:i  VINF ;
 +V+Ind+Prs:%>ii VSUF_SG1 ;
 +V+Ind+Prs:%>ii VSUF_SG2 ;
 +V+Ind+Prs:%^VLOW%>ee VSUF_SG3 ;
@@ -135,7 +159,7 @@ LEXICON RAMMUD !!= * __@CODE@__
 
 
 LEXICON VINF !!= * __@CODE@__
-+Inf:đ K ;
++Inf:%>đ K ;
 
 LEXICON VPRSPRC !!= * __@CODE@__
 +PrsPrc:ee K ;
@@ -183,15 +207,16 @@ LEXICON VACTIO !!= * __@CODE@__
 ! - - - - - - - - 
 
 LEXICON EVEN-I !!= * __@CODE@__
-+Sg1:%>m K ;
-+Sg2:%>h K ;
-+Sg3:%>%^WG1 K ;
-+Du1:%>een K ;
-+Du2:%>vettee K ;
-+Du3:%>v K ;
-+Pl1:%>jm K ;
-+Pl2:%>jd K ;
-+Pl3:%>i K ;
+                       ! âđ 	eđ 		iđ 	uđ ođ
++Sg1:%^WG%>m K ;	   ! â  	a/á		á  	u	o
++Sg2:%^WG%>h K ;	   ! a  	a/á		á	u	o
++Sg3:%^WG% K ;		   ! a/á  	a/á		á	u	o
++Du1:%>een K ;		   ! e   	e		e	o	o
++Du2:%^WG%>vettee K ;  ! â/a  	e		i	u	o
++Du3:%>v K ;		   ! â  	e		i	u	o
++Pl1:%>p K ;		   ! â  	e		i	u	o
++Pl2:%^WG%>vetteđ K ;  ! â/a  	e		i	u	o
++Pl3:%^WG%>h K ;	   ! e/i  	e		i	u	o
 
 LEXICON POT-I !!= * __@CODE@__
 +Sg1:%>eem K ;
@@ -337,7 +362,7 @@ LEXICON VSUF_SG2 !!= * __@CODE@__
 +Sg2:%>h K ;
 
 LEXICON VSUF_SG3 !!= * __@CODE@__
-+Sg3:%> K ;
++Sg3: K ;
 
 LEXICON VSUF_DU1 !!= * __@CODE@__
 +Du1:%>n K ;
