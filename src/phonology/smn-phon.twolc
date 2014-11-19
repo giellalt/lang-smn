@@ -41,7 +41,8 @@ Alphabet
 
 !! Different archiphonemes
 
- h2:h g2:g m2:m n2:n 					   !!= * @CODE@
+ h2:h g2:g m2:m n2:n 					   !!= * @CODE@ remove!
+ h8:h g8:g m8:m n8:n t8:t					   !!= * @CODE@
  b3:b d3:d g3:g m3:m h3:h 				   !!= * @CODE@
  k2:k									   !!= * @CODE@
 %^P:p %^K:k %^Č:č %^H:h %^T:t
@@ -61,6 +62,7 @@ Alphabet
 %^CSH:0                      !!= * @CODE@ cons shortening
 %^DIPH:0                     !!= * @CODE@ diphthongisation
 %^IA:0                       !!= * @CODE@ i to á (more)
+%^FCD:0                       !!= * @CODE@  Final consonant deletion
 
  ¥:0                         !!= * @CODE@ for Vowel lengthening, to be deleted
 
@@ -104,12 +106,14 @@ Sets
        P Q R S Š T Ŧ V W X Z Ž 				   !!= @CODE@ 
        ht g2 m2 n2 							   !!= @CODE@ 
        b3 d3 g3 m3 h3 						   !!= @CODE@ 
+       m8 n8 t8
        k2 
        %^P %^K %^Č %^H %^T ;									   !!= @CODE@ 
  Seg = Vow Cns ;							   !!= @CODE@ 
  WeG = %^WG1 %^WGSH %^CPL %^WG ;		  
  StemCns = b b3 d d3 g g2 g3 h h2 h3 		   !!= * @CODE@ 
-           j l m m2 m3 n n2 ŋ r s ;			   !!= @CODE@ 
+           j l m m2 m3 m8 n n8 n2 ŋ r s 
+           t8 ;			   !!= @CODE@ 
 
 Arch = %^WG %^RC %^RV %^SV %^RVL ; 
 Len = %^RLEN %^LLEN %^SLEN %^CLEN ;
@@ -142,8 +146,6 @@ Rules
 
 
 "Quantitative weak grade xx:x"
-!Cx:0 <=> _ Cx (%^RC:) Vow %^WG: [ ?* - Len: ] ; 
-!       where Cx in ( p b s t k c č d g z ž v l m n ŋ r š ) ;
 Cx:0 <=> _ Cy: (%^RC:) Vow %^WG: [ ?* - Len: ] ; 
        where Cx in ( p b s t k c č d g z ž v l m n ŋ r š p   k   č   h   t  ) 
              Cy in ( p b s t k c č d g z ž v l m n ŋ r š %^P %^K %^Č %^H %^T ) 
@@ -175,7 +177,7 @@ Cx:0 <=> %^RV: _ :Cx [  [ Seg: | Arch: ]* - %>: ] %^LLEN: ;
 
 
 "Qualitative weak grade x:y"
-Cx:Cy <=> :Vow _ Vow %^WG: ; 
+Cx:Cy <=> :Vow _ (%^RC:) :Vow (Cns:) (Cns:) %^WG: ; 
        where Cx in ( c p t h č ) 
              Cy in ( s v đ v j ) 
              matched ;
@@ -183,7 +185,7 @@ Cx:Cy <=> :Vow _ Vow %^WG: ;
 
 
 "Qualitative weak grade xy:zy"
-Cx:Cy <=> _ Cz (%^RC:) Vow %^WG: ; 
+Cx:Cy <=> _ Cz (%^RC:) Vow (Cns:) %^WG: ; 
        where Cx in ( k h ) 
              Cy in ( v v ) 
              Cz in ( s č ) 
@@ -215,7 +217,7 @@ Cx:Cy <=> _ %^RC: Vow %^WG: ;
 %^RV:Vx <=> Vx _ [ ?* - %>: ] %^RLEN: ;
         except  
             Vx _ [ ?* - %>: ] %^LLEN: ;
-        where Vx in ( i á a u ) ; ! pending...
+        where Vx in ( i á a o u ) ; ! pending...
 
 ! k i ^RV s s á ^RLEN > n
 ! k i i   s s á 0     0 n
@@ -230,7 +232,7 @@ Cx:Cy <=> _ %^RC: Vow %^WG: ;
 ! f á á   d d á 0    
 
 "Consonant lengthening after qualitative weak grade"        
-%^RC:Cz <=> Cx: :Cz _ Vow %^WG: %^CLEN: ; 
+%^RC:Cy <=> Cx: :Cz _ Vow %^WG: %^CLEN: ; 
        where Cx in ( l r m ŋ n k h k ) 
              Cz in ( p p p k t s č h ) 
              matched ;
@@ -319,17 +321,27 @@ Vx:0 <=>  _ Vx Cns (Cns) (Vow:) Vow Cns %^CSH: [ ?* - Len: ] ;
 !htest h a ^RV:0 t:0 t 0:t â:á ^WG:0 ^CLEN:0 >:0 i n
 
 "ee to iä diphthong 1"
-e:i <=> _ e: Cns: Cns Vow: Cns %^DIPH:0 ;
-
+e:i <=> _ Vx: Cns: Cns Vow: Cns %^DIPH:0 ;
+    where Vx in (%^RV e) ;
+    
 "ee to iä diphthong 2"
-e:ä <=> e: _ Cns: Cns Vow: Cns %^DIPH:0 ;
+%^RV:ä <=> e: _ Cns: Cns Vow: Cns %^DIPH:0 ;
 
 !htest e:i e:ä b b i:á r
+!htest č e:i ^RV:ä p ^RC:p e:á t8:t
 
 "i:á in some contexts"
-i:ä <=> _ Cns (%^DIPH:0) %^IA:0 ;
+i:á <=> _ Cns (%^DIPH:0) %^IA:0 ;
 
 
+"Word Final Deletion of n8 m8 t8"                   ! beatnag8:beana
+  Cx:0 <=> Vow _  Cy: (%^WG:0) %^FCD:0 ;      ! luopmán8:luomi
+			where Cx in (n8 m8 t8) 
+			      Cy in (n  m  t )
+			      matched ; 
+			
+"e:á in stem v of syll"			 
+e:á <=> _ t8:t ; 
 
 
 
