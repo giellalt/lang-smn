@@ -62,7 +62,7 @@ Alphabet
 %^CSH:0                      !!= * @CODE@ cons shortening
 %^DIPH:0                     !!= * @CODE@ diphthongisation
 %^IA:0                       !!= * @CODE@ i to á (more)
-%^FCD:0                       !!= * @CODE@  Final consonant deletion
+%^FCD:0                      !!= * @CODE@  Final consonant deletion
 
  ¥:0                         !!= * @CODE@ for Vowel lengthening, to be deleted
 
@@ -357,10 +357,12 @@ i:á <=> _ Cns (%^DIPH:0) %^IA:0 ;
 
 "Word Final Deletion of n8 m8 t8"                 
 !! __@RULENAME@__ 
-  Cx:0 <=> Vow _  Cy: (%^WG:0) %^FCD:0 ;      ! luopmán8:luomi
+  Cx:0 <=> Vow: _  Cy: (%^WG:0) %^FCD:0 ;      ! luopmán8:luomi
 			where Cx in (n8 m8 t8) 
 			      Cy in (n  m  t )
 			      matched ; 
+
+!htest l u o p:0 m á:i n8:0 ^WG:0 ^FCD:0
 			
 "e:á in stem v of syll"	
 !! __@RULENAME@__ 		 
