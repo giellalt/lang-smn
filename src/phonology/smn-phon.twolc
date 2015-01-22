@@ -20,6 +20,7 @@ Alphabet
  a á â ä b c d e f g h i j k l m n o õ p q !!= * @CODE@
  r s t u v w x y z æ ä ø ö å			   !!= * @CODE@
  č đ ŋ ŧ š ž				 			   !!= * @CODE@
+ ṃ ṇ ŋ̣ ṿ ṣ ṛ đ̣ ḷ 			 			   !!= * @CODE@
 
  A Á Â Å B C D E F G H I J K L M N O Õ P Q !!= * @CODE@
  R S T U V W X Y Z Æ Ä Ø Ö Å 			   !!= * @CODE@
@@ -42,7 +43,7 @@ Alphabet
 !! Different archiphonemes
 
  h2:h g2:g m2:m n2:n 					   !!= * @CODE@ remove!
- m7:m n7:n ŋ7:ŋ v7:v s7:s r7:r đ7:đ		   !!= * @CODE@
+ m7:ṃ n7:ṇ ŋ7:ŋ̣ v7:ṿ s7:ṣ r7:ṛ đ7:đ̣	l7:ḷ	   !!= * @CODE@
  h8:h g8:g m8:m n8:n t8:t					   !!= * @CODE@		
  b3:b d3:d g3:g m3:m h3:h 				   !!= * @CODE@
  k2:k									   !!= * @CODE@
@@ -107,7 +108,9 @@ Sets
        P Q R S Š T Ŧ V W X Z Ž 				   !!= @CODE@ 
        ht g2 k2 m2 n2 							   !!= @CODE@ 
        b3 d3 g3 m3 h3 						   !!= @CODE@ 
-       m7 n7 ŋ7 v7 s7 r7 đ7				   !!= @CODE@ 
+       m7 n7 ŋ7 v7 s7 r7 đ7	l7			   !!= @CODE@ 
+       ṃ ṇ ŋ̣ ṿ ṣ ṛ đ̣ ḷ	 			 			   !!= * @CODE@
+
        m8 n8 t8				   !!= @CODE@ 
        %^P %^K %^Č %^H %^T ;									   !!= @CODE@ 
  Seg = Vow Cns ;							   !!= @CODE@ 
@@ -183,8 +186,8 @@ Cx:0 <=> %^RV: _ :Cx [  [ Seg: | Arch: ]* - %>: ] %^LLEN: ;
 "Qualitative weak grade x:y"
 !! __@RULENAME@__ tupe : tuve
 Cx:Cy <=> :Vow _ (%^RC:) :Vow (Cns:) (Cns:) %^WG: ; 
-       where Cx in ( c p t h č ) 
-             Cy in ( s v đ v j ) 
+       where Cx in ( c p t h č ṃ ṇ ŋ̣ ṿ ṣ ṛ đ̣ ḷ ) 
+             Cy in ( s v đ v j m n ŋ v s r đ l ) 
              matched ;
        
 
