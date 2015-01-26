@@ -23,7 +23,7 @@ while(<>) {
 	s/ERVASTI/ACCRA/g ;
 #	s/DUBAI/BERN/g ;
 	s/BETFAGE/BERN/g ;
-	s/fkagsK/K/g ;
+	s/fkagK/K/g ;
 
 
 
