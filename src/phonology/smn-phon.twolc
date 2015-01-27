@@ -20,7 +20,7 @@ Alphabet
  a á â ä b c d e f g h i j k l m n o õ p q !!= * @CODE@
  r s t u v w x y z æ ä ø ö å			   !!= * @CODE@
  č đ ŋ ŧ š ž				 			   !!= * @CODE@
- ṃ ṇ ŋ̣ ṿ ṣ ṛ đ̣ ḷ 			 			   !!= * @CODE@
+ ṃ ṇ ŋ̣ ṿ ṣ ṣ̌ ṛ đ̣ ḷ 			 			   !!= * @CODE@
 
  A Á Â Å B C D E F G H I J K L M N O Õ P Q !!= * @CODE@
  R S T U V W X Y Z Æ Ä Ø Ö Å 			   !!= * @CODE@
@@ -47,32 +47,32 @@ lkjsdf
  h2:h g2:g m2:m n2:n 					   !!= * @CODE@ remove
  ! m7:ṃ n7:ṇ ŋ7:ŋ̣ v7:ṿ s7:ṣ r7:ṛ đ7:đ̣ l7:ḷ j7:j̣ h7:ḥ š7:ṣ̌ ! with dots
    m7:m n7:n ŋ7:ŋ v7:v s7:s r7:r đ7:đ l7:l j7:j h7:h š7:š !!= * @CODE@ without dots
- h8:h g8:g m8:m n8:n t8:t					   !!= * @CODE@		
- b3:b d3:d g3:g m3:m h3:h 				   !!= * @CODE@
- k2:k									   !!= * @CODE@
+  h8:h g8:g m8:m n8:n t8:t				   !!= * @CODE@	to be documented
+  b3:b d3:d g3:g m3:m h3:h 				   !!= * @CODE@ to be documented
+  k2:k									   !!= * @CODE@ to be documented
 %^P:p %^K:k %^Č:č %^H:h %^T:t              !!= * @CODE@
  
 !! Different triggers
 
 !! !! 2014
-%^WG:0 					     !!= * @CODE@ weak grade
-%^RV:0	 				     !!= * @CODE@ root vowel
-%^SV:0 					     !!= * @CODE@ stem vowel
-%^RC:0					     !!= * @CODE@ root consonant
-%^RLEN:0                     !!= * @CODE@ root lengthening
-%^LLEN:0                     !!= * @CODE@ low vow lengthening
-%^SLEN:0                     !!= * @CODE@ hmm lengthening
-%^CLEN:0				     !!= * @CODE@ cons lengthening
-%^RVL:0                      !!= * @CODE@ root vow lemngth
-%^CSH:0                      !!= * @CODE@ cons shortening
-%^DIPH:0                     !!= * @CODE@ diphthongisation
-%^IA:0                       !!= * @CODE@ i to á (more)
-%^FCD:0                      !!= * @CODE@  Final consonant deletion
+%^WG:0 		!!= * @CODE@ weak grade
+%^RV:0	 	!!= * @CODE@ root vowel
+%^SV:0 		!!= * @CODE@ stem vowel
+%^RC:0		!!= * @CODE@ root consonant
+%^RLEN:0    !!= * @CODE@ root lengthening
+%^LLEN:0    !!= * @CODE@ low vow lengthening
+%^SLEN:0    !!= * @CODE@ hmm lengthening
+%^CLEN:0	!!= * @CODE@ cons lengthening
+%^RVL:0     !!= * @CODE@ root vow lemngth
+%^CSH:0     !!= * @CODE@ cons shortening
+%^DIPH:0    !!= * @CODE@ diphthongisation
+%^IA:0      !!= * @CODE@ i to á (more)
+%^FCD:0     !!= * @CODE@  Final consonant deletion
 
- ¥:0                         !!= * @CODE@ for Vowel lengthening, to be deleted
+ ¥:0        !!= * @CODE@ for Vowel lengthening, to be deleted
 
 
-!! !! ... 2013 
+!! !! ... 2013 , these are old, and kept while awaiting a revision
 
 %^WGSH:0       !!= * @CODE@
 %^SHV:0 				     !!= * @CODE@
@@ -85,7 +85,11 @@ lkjsdf
 %^ILL:0 				     !!= * @CODE@
 
 
-!! Morpheme boundaries:
+!! !!Morpheme boundaries:
+
+!! Here we define the suffix border >
+!! The other borders (for derivations and compounds are not implemented yet.
+
 ! «   @CODE@ Derivational prefix
 ! »   @CODE@ Derivational suffix
 ! %<  @CODE@ Inflectional prefx
@@ -140,10 +144,8 @@ Dummy = Arch Len %^ODDC ;
 
 
 !Definitions
-!Definitions
-
 ! {{{
-!XXFacultativeStemCns = (StemCns:) (:StemCns) (Dummy:*) ;
+! XXFacultativeStemCns = (StemCns:) (:StemCns) (Dummy:*) ;
 ! }}}
 
 !! !!!Rule section
@@ -159,12 +161,9 @@ Cx:0 <=> _ Cy: (%^RC:) Vow %^WG: [ ?* - Len: ] ;
              Cy in ( p b s t k c č d g z ž v l m n ŋ r š %^P %^K %^Č %^H %^T ) 
 			matched ;
 			
-
 !%^P %^K %^Č %^H %^T        
-! k i ^RV s s ^RC á ^WG
-! k i 0   0 s 0   á 0
-
 !htest k:k i:i ^RV:0 s:0 s:s ^RC:0 á:á ^WG:0
+
 
 "Consonant shortening after root vowel lengthening"
 !! __@RULENAME@__ kissá : kiisá
@@ -173,8 +172,8 @@ Cx:0 <=> %^RV: _ :Cx [ [ Seg: | Arch: ]*  - %>: ] %^RLEN: ;
                _ :Cx (%^RC:) Vow %^WG: [ ?* - Len: ] ;
         where Cx in ( p b s t k c č d g z ž v l m n ŋ r š ) ; 
 
-! k i ^RV s s ^RC á ^RLEN > n 
-! k i i   0 s 0   á 0     0 n
+!htest k i ^RV:i s:0 s ^RC:0 á ^RLEN:0 >:0 n
+
 
 "Consonant shortening after low root vowel lengthening"
 !! __@RULENAME@__ fáddá : fáádá
@@ -192,7 +191,8 @@ Cx:Cy <=> :Vow _ (%^RC:) :Vow (Cns:) (Cns:) %^WG: ;
        where Cx in ( c p t h č ṃ ṇ ŋ̣ ṿ ṣ ṛ đ̣ ḷ ) 
              Cy in ( s v đ v j m n ŋ v s r đ l ) 
              matched ;
-       
+!        where Cx in ( c p t h č m7 n7 ŋ7 v7 s7 r7 đ7 l7 š7 )
+!              Cy in ( s v đ v j m  n  ŋ  v  s  r  đ  l  š  )        
 
 
 "Qualitative weak grade xy:zy"
@@ -204,7 +204,7 @@ Cx:Cy <=> _ Cz (%^RC:) Vow (Cns:) %^WG: ;
              matched ;
        
 !htest r á ^RV:0 k:v s ^RC:0 á ^WG:0
-!htst č u ^RV:0 h:v č ^RC:0 á ^WG:0 ^CLEN:0 >:0 i n
+!htest č u ^RV:0 h:v č ^RC:0 á ^WG:0 ^CLEN:0 >:0 i n
 
 
 "xx:y gradation in Aanaarsaami words (change)"
@@ -222,9 +222,8 @@ Cx:Cy <=> _ %^RC: Vow %^WG: ;
 !          Cy in (   v   h   j   v   đ )
 !          matched ; 
 
-! s u ^RV k ^K ^RC á ^WG
-! s u 0   0  h   0 á  0
-!htest s u ^RV:0 k:0 ^RC:0 á ^WG:0
+!htest s u ^RV:0 k:0 ^K:h ^RC:0 á ^WG:0
+
 
 "Root vowel lengthening"
 !! __@RULENAME@__ kissán --> kiissán
@@ -233,67 +232,55 @@ Cx:Cy <=> _ %^RC: Vow %^WG: ;
             Vx _ [ ?* - %>: ] %^LLEN: ;
         where Vx in ( i á a o u ) ; ! pending...
 
-! k i ^RV s s á ^RLEN > n
-! k i i   s s á 0     0 n
+!htest k i ^RV:i s s á ^RLEN:0 >:0 n
 
 "Low root vowel lengthening"
+!! __@RULENAME@__ fáddá ~ fááddá
 %^RV:Vx <=> Vx _ [ ?* - %>: ] %^LLEN: ;
         except 
             Vx _ [ ?* - %>: ] %^RLEN: ;
         where Vx in ( á a u ) ; ! pending...
 
-! f á ^RV d d á ^LLEN 
-! f á á   d d á 0    
+!htest f á ^RV:á d d á ^LLEN:0
 
 "Consonant lengthening after qualitative weak grade"  
-!! __@RULENAME@__       
-%^RC:Cy <=> Cx: :Cz _ Vow %^WG: %^CLEN: ; 
+!! __@RULENAME@__  č to čč for čuhčá + in ~ čuvččáin
+%^RC:Cz <=> Cx: :Cz _ Vow %^WG: %^CLEN: ; 
        where Cx in ( l r m ŋ n k h k ) 
              Cz in ( p p p k t s č h ) 
              matched ;
 
-! č u ^RV h č ^RC á ^WG ^CLEN > i n
-! č u 0   v č č   á 0   0     0 i n 
+!htest č u ^RV:0 h:v č ^RC:č á ^WG:0 ^CLEN:0 >:0 i n
+!htest s u ^RV:0 k:0 ^K:h ^RC:h á ^WG:0 ^CLEN:0 >:0 i n
 
-! s u ^RV k ^K  ^RC á ^WG ^CLEN > i n
-! s u 0   0 h    h  á 0   0     0 i n
        
 "Consonant lengthening after quantitative weak grade"        
-!! __@RULENAME@__ 
+!! __@RULENAME@__  ss in weak grade for kissáin
 %^RC:Cz <=> Cz: Cz _ Vow %^WG: %^CLEN: ; 
        where Cz in ( p b s t k c č d g z ž v l m n ŋ r š ) ;
        
-! k i ^RV s s ^RC á ^WG ^CLEN > i n
-! k i 0   0 s s   á 0   0     0 i n
+!htest k i ^RV:0 s:0 s ^RC:s á ^WG:0 ^CLEN:0 >:0 i n
 
 
 "Suffix vowel lengthening"
-!! __@RULENAME@__ 
+!! __@RULENAME@__ long á in kissáást
 %^SV:Vx <=> Vx [ ?* - %>: ] _                  %^SLEN: ;
             Vx              _ [ ?* - %>: ] Cns %^SLEN: ;
         where Vx in ( á o e a i ) ; ! pending...
 
-! k i ^RV s s ^RC á ^WG ^CLEN ^SV ^SLEN > s t
-! k i 0   0 s s   á 0   0     á   0     0 s t
-
-! m i ^RV l l ^RC o ^WG ^CLEN ^SV ^SLEN > s t
-! m i 0   0 l l   o 0   0     o   0     0 s t
-
-! h u k s i ^SV m ^SLEN > i s t
-! h u k s i i   m 0     0 i s t 
+!htest k i ^RV:0 s:0 s ^RC:s á ^WG:0 ^CLEN:0 ^SV:á ^SLEN:0 >:0 s t
+!htest m i ^RV:0 l:0 l ^RC:0 o ^WG:0 ^CLEN:0 ^SV:o ^SLEN:0 >:0 s t
+!htest h u k s i ^SV:i m ^SLEN:0 >:0 i s t
 
 "i to j in suffixes following i stems"
-!! __@RULENAME@__ 
+!! __@RULENAME@__ -jn for  -in in säämijn
 i:j <=> i [ Arch: | Len: ]* %>: _ ;
 
-! s ä ä m ^RC i %^RVL %> i n 
-! s ä ä m 0   i 0     0  j n
-
-! s k a ^RV p p ^RC i ^WG ^LLEN > i
-! s k a a   0 p 0   i 0   0     > j
+!htest s ä ä m ^RC:0 i ^RVL:0 i:j n  
+!htest s k a ^RV:a p:0 p ^RC:0 i ^WG:0 ^LLEN:0 >:0 i:j
 
 "Root vowel lowering"
-!! __@RULENAME@__ 
+!! __@RULENAME@__ ä to a
 Vx:Vy <=> _   Vx: Cns [ ?* - %>: ] %^RVL: ;
           Vx: _   Cns [ ?* - %>: ] %^RVL: ;
           where Vx in ( ä )
@@ -301,7 +288,7 @@ Vx:Vy <=> _   Vx: Cns [ ?* - %>: ] %^RVL: ;
                 matched ;
 
 "Root diphthong lowering"
-!! __@RULENAME@__ 
+!! __@RULENAME@__  
 Vx:Vy <=> _   Vx: Cns [ ?* - %>: ] %^RVL: ;
           Vx: _   Cns [ ?* - %>: ] %^RVL: ;
           where Vx in ( u á )
@@ -309,25 +296,21 @@ Vx:Vy <=> _   Vx: Cns [ ?* - %>: ] %^RVL: ;
                 matched ;
                 
 "Consonant shortening (not weak grade)"
-!! __@RULENAME@__ 
+!! __@RULENAME@__ p to p for kappeer ~ kaperist
 Cx:0 <=> _ Cx (%^RC:) Vow:* Cns %^CSH: [ ?* - Len: ] ; 
        where Cx in ( p b s t k c č d g z ž v l m n ŋ r š ) ;
               
-! k a p p e e r ^CSH > i s t   
-! k a 0 p 0 e r 0    0 i s t
-!htest k a p:0 p e:0 e r ^CSH:0 >:0 i s t
+!htest k a p:0 p e:0 e r ^CSH:0 >:0 i s t               
     
 "Vowel shortening (with consonant shortening)"
-!! __@RULENAME@__ 
+!! __@RULENAME@__ e to 0 for kappeer ~ kaperist
 Vx:0 <=>  _ Vx Cns %^CSH: [ ?* - Len: ] ;
     where Vx in ( a e o á ä ) ;
     
-! k a p p e e r ^CSH > i s t   
-! k a 0 p 0 e r 0    0 i s t    
 !htest k a p:0 p e:0 e r ^CSH:0 >:0 i s t
 
 "Stem vowel shortening (when consonant shortening)"
-!! __@RULENAME@__ 
+!! __@RULENAME@__ a to 0 for kaavpug ~ kavpugist
 Vx:0 <=>  _ Vx Cns (Cns) (Vow:) Vow Cns %^CSH: [ ?* - Len: ] ;
     where Vx in ( a e o á ä ) ;
     
@@ -335,36 +318,37 @@ Vx:0 <=>  _ Vx Cns (Cns) (Vow:) Vow Cns %^CSH: [ ?* - Len: ] ;
     
 
 "â to a in front of plural h"
-!! __@RULENAME@__ 
+!! __@RULENAME@__ âh to ah
 â:a <=> _ %>:0 h ;
 
 !htest h a ^RV:a t:0 t â:a ^WG:0 ^LLEN:0 >:0 h
 
 "â to á in front of sg com and pl ill"
-!! __@RULENAME@__ 
+!! __@RULENAME@__ -âid to -áid
 â:á <=> _ %^WG:0 %^CLEN:0 %>:0 i [d|n] ;
+
 !htest h a ^RV:0 t:0 t 0:t â:á ^WG:0 ^CLEN:0 >:0 i n
 
 "ee to iä diphthong 1"
-!! __@RULENAME@__ 
+!! __@RULENAME@__ the e:i part
 e:i <=> _ Vx: Cns: Cns Vow: Cns %^DIPH:0 ;
     where Vx in (%^RV e) ;
     
 "ee to iä diphthong 2"
-!! __@RULENAME@__ 
+!! __@RULENAME@__ the part giving ä from ^RV
 %^RV:ä <=> e: _ Cns: Cns Vow: Cns %^DIPH:0 ;
 
 !htest e:i e:ä b b i:á r
 !htest č e:i ^RV:ä p ^RC:p e:á t8:t
 
 "i:á in some contexts"
-!! __@RULENAME@__ 
+!! __@RULENAME@__ for i stems
 i:á <=> _ Cns (%^DIPH:0) %^IA:0 ;
 
 
 "Word Final Deletion of n8 m8 t8"                 
-!! __@RULENAME@__ 
-  Cx:0 <=> Vow: _  Cy: (%^WG:0) %^FCD:0 ;      ! luopmán8:luomi
+!! __@RULENAME@__  for luopmán8:luomi
+  Cx:0 <=> Vow: _  Cy: (%^WG:0) %^FCD:0 ;      
 			where Cx in (n8 m8 t8) 
 			      Cy in (n  m  t )
 			      matched ; 
@@ -372,7 +356,7 @@ i:á <=> _ Cns (%^DIPH:0) %^IA:0 ;
 !htest l u o p:0 m á:i n8:0 ^WG:0 ^FCD:0
 			
 "e:á in stem v of syll"	
-!! __@RULENAME@__ 		 
+!! __@RULENAME@__ in front of t8:t	 
 e:á <=> _ t8:t ; 
 
 
