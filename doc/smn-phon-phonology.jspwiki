@@ -6,7 +6,7 @@ The Inari Saami letters
  *  a á â ä b c d e f g h i j k l m n o õ p q 
  *  r s t u v w x y z æ ä ø ö å			   
  *  č đ ŋ ŧ š ž				 			   
- *  ṃ ṇ ŋ̣ ṿ ṣ ṛ đ̣ ḷ 			 			   
+ *  ṃ ṇ ŋ̣ ṿ ṣ ṣ̌ ṛ đ̣ ḷ 			 			   
 
  *  A Á Â Å B C D E F G H I J K L M N O Õ P Q 
  *  R S T U V W X Y Z Æ Ä Ø Ö Å 			   
@@ -31,32 +31,32 @@ Different archiphonemes
 
  *  h2:h g2:g m2:m n2:n 					    remove
  *    m7:m n7:n ŋ7:ŋ v7:v s7:s r7:r đ7:đ l7:l j7:j h7:h š7:š  without dots
- *  h8:h g8:g m8:m n8:n t8:t					   		
- *  b3:b d3:d g3:g m3:m h3:h 				   
- *  k2:k									   
+ *   h8:h g8:g m8:m n8:n t8:t				   	to be documented
+ *   b3:b d3:d g3:g m3:m h3:h 				    to be documented
+ *   k2:k									    to be documented
  * %^P:p %^K:k %^Č:č %^H:h %^T:t              
 
 Different triggers
 
 2014
- * %^WG:0 					      weak grade
- * %^RV:0	 				      root vowel
- * %^SV:0 					      stem vowel
- * %^RC:0					      root consonant
- * %^RLEN:0                      root lengthening
- * %^LLEN:0                      low vow lengthening
- * %^SLEN:0                      hmm lengthening
- * %^CLEN:0				      cons lengthening
- * %^RVL:0                       root vow lemngth
- * %^CSH:0                       cons shortening
- * %^DIPH:0                      diphthongisation
- * %^IA:0                        i to á (more)
- * %^FCD:0                        Final consonant deletion
+ * %^WG:0 		 weak grade
+ * %^RV:0	 	 root vowel
+ * %^SV:0 		 stem vowel
+ * %^RC:0		 root consonant
+ * %^RLEN:0     root lengthening
+ * %^LLEN:0     low vow lengthening
+ * %^SLEN:0     hmm lengthening
+ * %^CLEN:0	 cons lengthening
+ * %^RVL:0      root vow lemngth
+ * %^CSH:0      cons shortening
+ * %^DIPH:0     diphthongisation
+ * %^IA:0       i to á (more)
+ * %^FCD:0       Final consonant deletion
 
- *  ¥:0                          for Vowel lengthening, to be deleted
+ *  ¥:0         for Vowel lengthening, to be deleted
 
 
-... 2013 
+... 2013 , these are old, and kept while awaiting a revision
 
  * %^WGSH:0       
  * %^SHV:0 				     
@@ -69,7 +69,11 @@ Different triggers
  * %^ILL:0 				     
 
 
-Morpheme boundaries:
+!!Morpheme boundaries:
+
+Here we define the suffix border >
+The other borders (for derivations and compounds are not implemented yet.
+
 
 End of alphabet definitions
 
@@ -101,7 +105,6 @@ Sets
 
 
 
-
 !!!Rule section
 
 
@@ -122,7 +125,6 @@ __Consonant shortening after low root vowel lengthening__ fáddá : fáádá
 __Qualitative weak grade x:y__ tupe : tuve
 
 
-
 __Qualitative weak grade xy:zy__ ráksá : ráávsá
 
 
@@ -132,59 +134,59 @@ __xx:y gradation in Aanaarsaami words (change)__
 
 
 
+
 __Root vowel lengthening__ kissán --> kiissán
 
 
+__Low root vowel lengthening__ fáddá ~ fááddá
 
 
-__Consonant lengthening after qualitative weak grade  __       
-
-
-
-__Consonant lengthening after quantitative weak grade        __ 
+__Consonant lengthening after qualitative weak grade  __  č to čč for čuhčá + in ~ čuvččáin
 
 
 
-__Suffix vowel lengthening__ 
+__Consonant lengthening after quantitative weak grade        __  ss in weak grade for kissáin
 
 
 
-
-__i to j in suffixes following i stems__ 
-
+__Suffix vowel lengthening__ long á in kissáást
 
 
-__Root vowel lowering__ 
-
-__Root diphthong lowering__ 
-
-__Consonant shortening (not weak grade)__ 
+__i to j in suffixes following i stems__ -jn for  -in in säämijn
 
 
-__Vowel shortening (with consonant shortening)__ 
+__Root vowel lowering__ ä to a
+
+__Root diphthong lowering__  
+
+__Consonant shortening (not weak grade)__ p to p for kappeer ~ kaperist
 
 
-__Stem vowel shortening (when consonant shortening)__ 
+__Vowel shortening (with consonant shortening)__ e to 0 for kappeer ~ kaperist
+
+
+__Stem vowel shortening (when consonant shortening)__ a to 0 for kaavpug ~ kavpugist
 
 
 
-__â to a in front of plural h__ 
+__â to a in front of plural h__ âh to ah
 
 
-__â to á in front of sg com and pl ill__ 
-
-__ee to iä diphthong 1__ 
-
-__ee to iä diphthong 2__ 
+__â to á in front of sg com and pl ill__ -âid to -áid
 
 
-__i:á in some contexts__ 
+__ee to iä diphthong 1__ the e:i part
+
+__ee to iä diphthong 2__ the part giving ä from ^RV
 
 
-__Word Final Deletion of n8 m8 t8                 __ 
+__i:á in some contexts__ for i stems
 
 
-__e:á in stem v of syll	__ 		 
+__Word Final Deletion of n8 m8 t8                 __  for luopmán8:luomi
+
+
+__e:á in stem v of syll	__ in front of t8:t	 
 
 
 
