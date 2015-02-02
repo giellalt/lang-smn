@@ -68,37 +68,22 @@
 
  * %^P %^K %^Č %^H %^T         for pp:v etc. gradation
 
- *  e1 i1 o1 u1               
- *  g2 m2 n2 h2               
- *  b3 d3 g3 m3 h3            
  *  m7 n7 ŋ7 v7 s7 š7 r7 đ7 j7 l7 h7  
  *  h8 g8 m8 n8 t8					   
 
- *  %^WG1                       is weak grade and Half-long in verbs
- *  X2                         is WeG (EVEN_WEAKSHORT) tullâ / tulâX2
- *  X4                         is Pl Nom (and?)
-!These might not be in use:
 
- *           X4 X5 X6 X7 X8 X9 
- *  Q1 Q2 Q3 Q4 Q5 Q6 Q7 Q8 Q9 
- *  Y1 Y2 Y3 Y4 Y5 Y6 Y7 Y8 Y9 
-
-!These are in use:
-
- * %^WG1    Weak grade
- * %^WGSH   Weak grad and shortening (old X2)
- * %^SHV   is 2nd syll vowel shortenes
- * %^CPL   is Weak grade and Compensatory lengthening tullâ tuulâ
- * %^SCPL  is Strong grade but still Compensatory lengthening kussâ : kuussâ (sic)
- * %^VLOW  is Vowel lowering in 3rd sg of contract verbs tuhhid:tohhe
- * %^XST   is Extra strong Ess Par
- * %^IA    is á in front of Com Sg and Ill Pl i
+ * %^CPL     is Weak grade and Compensatory lengthening tullâ tuulâ
+ * %^DIPH    makes diphthongs from long vowels
+ * %^IA       i to á,  in front of Com Sg and Ill Pl i
+ * %^ILL     is á and root vowel change in Ill Sg of i-stems
+ * %^ODDC    is Cns shortening in C|# 
+ * %^ODDLV   is Cns shortening in C|# and longvow in inf etc
  * %^ODDSHV  is Cns shortening in C|# and shortvow in Inf etc
- * %^ODDLV  is Cns shortening in C|# and longvow in inf etc
- * %^ODDC  is Cns shortening in C|# 
- * %^ILL  is á and root vowel change in Ill Sg of i-stems
- * %^DIPH  makes diphthongs from long vowels
- * %^IA   i to á
+ * %^SCPL    is Strong grade but still Compensatory lengthening kussâ : kuussâ (sic)
+ * %^SHV     is 2nd syll vowel shortenes
+ * %^VLOW    is Vowel lowering in 3rd sg of contract verbs tuhhid:tohhe
+ * %^WGSH    Weak grad and shortening (old X2)
+ * %^XST     is Extra strong Ess Par
 
 !These are from the 2014 Inari course
 
@@ -137,9 +122,13 @@ to control position-based compounding restrictions for nominals. Their use is
 handled automatically if combined with +CmpN/xxx tags. If not used, they will
 do no harm.
  | @P.CmpFrst.FALSE@ | Require that words tagged as such only appear first
+ | @D.CmpPref.TRUE@ | Block such words from entering ENDLEX
+ | @P.CmpPref.FALSE@ | Block these words from making further compounds
  | @D.CmpLast.TRUE@ | Block such words from entering R
  | @D.CmpNone.TRUE@ | Combines with the next tag to prohibit compounding
  | @U.CmpNone.FALSE@ | Combines with the prev tag to prohibit compounding
+ | @P.CmpOnly.TRUE@ | Sets a flag to indicate that the word has passed R
+ | @D.CmpOnly.FALSE@ | Disallow words coming directly from root.
 
 Use the following flag diacritics to control downcasing of derived proper
 nouns (e.g. Finnish Pariisi -> pariisilainen). See e.g. North Sámi for how to use
