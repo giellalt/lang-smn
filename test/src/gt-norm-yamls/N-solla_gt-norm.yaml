@@ -1,0 +1,40 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+#  xerox:
+#    Gen: ../../../src/generator-gt-norm.xfst
+#    Morph: ../../../src/analyser-gt-norm.xfst
+#    App: lookup
+
+Tests:
+
+# Huomaa
+# yks. nominatiivi, illatiivi, essiivi, partitiivi: vahva aste, muut sijat heikkoasteisia
+# yks. illatiivissa on pidentymä: 1. tavun vokaali pitenee ja konsonantiston l on puolipitkä
+# Yksikön abessiivi: heikon asteen lyhentymä: 1. tavun vokaali lyhenee
+# Monikon nominatiivi: vokaalimuutos 2. tavussa: â > a / _h
+# Monikon komitatiivi: heikon asteen lyhentymä: 1. tavun vokaali lyhenee
+# Mikäli 1. tavussa on diftongi ja keskuskonsonantistossa puolipitkä yksinäisvokaali, 1. tavun diftongi on pitkä. Se lyhenee em. kohdissa (y.abess. ja m.kom.): kieLâ; kie'lâttáá, kie'lâiguin
+# Mikäli 1. tavussa on diftongi ja keskuskonsonantistossa kvalitatiivinen astevaihtelu, diftongi lyhenee y. abess. ja m. kom., samoin keskuskonsonantiston 1. osa: kuor'gâ; kuo'rgâttáá, kuo'rgâiguin
+
+
+
+  Noun - sollâ:
+    sollâ+N+Sg+Nom: sollâ
+    sollâ+N+Sg+Gen: soolâ
+    sollâ+N+Sg+Acc: soolâ
+    sollâ+N+Sg+Ill: soolân
+    sollâ+N+Sg+Loc: soolâst
+    sollâ+N+Sg+Com: sooláin
+    sollâ+N+Sg+Abe: solâttáá
+    sollâ+N+Ess: sollân
+    sollâ+N+Par: sollâd
+    sollâ+N+Pl+Nom: soolah
+    sollâ+N+Pl+Gen: soolâi
+    sollâ+N+Pl+Acc: soolâid
+    sollâ+N+Pl+Ill: sooláid
+    sollâ+N+Pl+Loc: soolâin
+    sollâ+N+Pl+Com: solâiguin
+    sollâ+N+Pl+Abe: solâittáá
+
