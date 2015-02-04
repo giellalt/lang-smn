@@ -157,7 +157,7 @@ Rules
 
 "Quantitative weak grade xx:x 1"
 !! __@RULENAME@__ kissá : kisá
-Cx:0 <=> _ Cy: (%^RC:) Vow %^WG: [ ?* - Len: ] ; 
+Cx:0 <=> _ Cy: (%^RC:) Vow (%^RC:) (%^SV:) %^WG: [ ?* - Len: ] ; 
        where Cx in ( p b s7 t k c č d g z ž v l m n ŋ r š  p   k   č   h   t  ) 
              Cy in ( p b s  t k c č d g z ž v l m n ŋ r š  %^P %^K %^Č %^H %^T ) 
 			matched ;
@@ -265,10 +265,11 @@ Cx:0 <=> _ Cx (%^RC:) Vow:* Cns %^CSH: [ ?* - Len: ] ;
        
 "Consonant lengthening after quantitative weak grade"        
 !! __@RULENAME@__  ss in weak grade for kissáin
-%^RC:Cz <=> Cz: Cz _ Vow %^WG: %^CLEN: ; 
+%^RC:Cz <=> Cz: Cz _ Vow (%^SV:) %^WG: %^CLEN: ; 
        where Cz in ( p b s t k c č d g z ž v l m n ŋ r š ) ;
        
 !htest k i ^RV:0 s:0 s ^RC:s á ^WG:0 ^CLEN:0 >:0 i n
+!htest n j a ^RV:0 m:0 m ^RC:m a ^SV:0 ^WG:0 ^CLEN:0 
 
 !! !Consonant deletion
 
