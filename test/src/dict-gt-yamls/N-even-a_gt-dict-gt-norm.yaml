@@ -1,0 +1,53 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+#  xerox:
+#    Gen: ../../../src/generator-gt-norm.xfst
+#    Morph: ../../../src/analyser-gt-norm.xfst
+#    App: lookup
+
+Tests:
+
+# Huom.
+# sgLoc: äänteenmuutos 2. tavussa: a > aa (jälkitavun vokaali kahdentuu). 
+# Iso kirjain risuaidan sisällä tarkoittaa puolipitkää konsonanttia. 
+# Taivutus muutoin sama kuin sollâ-sanassa. 
+
+  Noun - njamma: # a-stems 
+    njamma+N+Sg+Nom: njamma # sanassa kvantitatiivinen astevaihtelu: pitkä geminaattakonsonantti vaihtelee puolipitkän yksinäiskonsonantin kanssa
+    njamma+N+Sg+Gen: njama # njaMa; voi ääntää /njaaMaa/
+    njamma+N+Sg+Acc: njama # njaMa; samoin täällä
+    njamma+N+Sg+Ill: njaaman # njaaMan
+    njamma+N+Sg+Loc: njammaast # heikon asteen pidentymä
+    njamma+N+Sg+Com: njammain # heikon asteen pidentymä
+    njamma+N+Ess: njamman
+    njamma+N+Par: njammad
+    njamma+N+Pl+Nom: njamah # njaMah / njaaMaah/
+    njamma+N+Pl+Gen: njamai # njaMai / njaaMaai/
+    njamma+N+Pl+Acc: njammaid # heikon asteen pidentymä
+    njamma+N+Pl+Ill: njammaid # heikon asteen pidentymä
+    njamma+N+Pl+Loc: njammain # heikon asteen pidentymä
+    njamma+N+Pl+Com: njamaijguin # njaMaiguin # täällä lyhentymätyyppi; ääntyy lyhyenä kuten kirjoitetaan
+    njamma+N+Pl+Abe: njamaittáá # njaMaittáá # samoin täällä lyhentymätyyppi
+
+ 
+ 
+  Noun - teltta: # a-stems 
+ 
+    teltta+N+Sg+Nom: teltta # ks. äänteenmuutosten systematiaa njamma-sanasta; astevaihtelu: kvalitatiivinen
+    teltta+N+Sg+Gen: telta # ääntyy pidempänä /teeltaa/
+    teltta+N+Sg+Acc: telta # ks. sgGen
+    teltta+N+Sg+Ill: teeltan
+    teltta+N+Sg+Loc: telttaast
+    teltta+N+Sg+Com: telttain
+    teltta+N+Ess: telttan
+    teltta+N+Par: telttad
+    teltta+N+Pl+Nom: teltah
+    teltta+N+Pl+Gen: teltai
+    teltta+N+Pl+Akk: telttaid
+    teltta+N+Pl+Ill: telttaid
+    teltta+N+Pl+Loc: telttain
+    teltta+N+Pl+Com: teltaiguin # ääntyy: te'ltaiguin, siis 1. tavun e ja 2. tavun a hieman venytettyinä
+    teltta+N+Pl+Abe: teltaittáá # ks. PlCom. kommentti. Samoin täällä
+
