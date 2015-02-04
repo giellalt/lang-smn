@@ -20,7 +20,7 @@ Alphabet
  a á â ä b c d e f g h i j k l m n o õ p q !!= * @CODE@
  r s t u v w x y z æ ä ø ö å			   !!= * @CODE@
  č đ ŋ ŧ š ž				 			   !!= * @CODE@
- ṃ ṇ ŋ̣ ṿ ṣ ṣ̌ ṛ đ̣ ḷ 			 			   !!= * @CODE@
+ ṃ ṇ ŋ̣ ṿ ṣ ṛ đ̣ ḷ j̣ ḥ ṣ̌  	   !!= * @CODE@
 
  A Á Â Å B C D E F G H I J K L M N O Õ P Q !!= * @CODE@
  R S T U V W X Y Z Æ Ä Ø Ö Å 			   !!= * @CODE@
@@ -36,7 +36,6 @@ Alphabet
 
 
 !! Accented letters, just in case
-lkjsdf
 
  É Ó Ú Í À È Ò Ù Ì Ë Ü Ï Ê Ô Û Î Ã Ý þ Ð   !!= * @CODE@
  é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý þ ð   !!= * @CODE@
@@ -116,16 +115,15 @@ Sets
        P Q R S Š T Ŧ V W X Z Ž 				   !!= @CODE@ 
        ht g2 k2 m2 n2 							   !!= @CODE@ 
        b3 d3 g3 m3 h3 						   !!= @CODE@ 
-       m7 n7 ŋ7 v7 s7 r7 đ7	l7			   !!= @CODE@ 
-       ṃ ṇ ŋ̣ ṿ ṣ ṛ đ̣ ḷ	 			 			   !!= * @CODE@
+       m7 n7 ŋ7 v7 s7 r7 đ7	l7 j7 h7 š7		   !!= @CODE@ 
+       ṃ  ṇ  ŋ̣  ṿ  ṣ  ṛ  đ̣  ḷ  j̣  ḥ  ṣ̌         !!= * @CODE@
 
-       m8 n8 t8				   !!= @CODE@ 
-       %^P %^K %^Č %^H %^T ;									   !!= @CODE@ 
+       m8 n8 t8				                   !!=* @CODE@ 
+       %^P %^K %^Č %^H %^T ;                   !!= * @CODE@ 
  Seg = Vow Cns ;							   !!= @CODE@ 
  WeG = %^WG1 %^WGSH %^CPL %^WG ;		  
  StemCns = b b3 d d3 g g2 g3 h h2 h3 		   !!= * @CODE@ 
-           j l m m2 m3 m8 n n8 n2 ŋ r s 
-           t8 ;			   !!= @CODE@ 
+           j l m m2 m3 m8 n n8 n2 ŋ r s  ;     !!= * @CODE@ 
 
 Arch = %^WG %^RC %^RV %^SV %^RVL ; 
 Len = %^RLEN %^LLEN %^SLEN %^CLEN ;
@@ -157,11 +155,18 @@ Rules
 
 !! !Gradation
 
-"Quantitative weak grade xx:x"
+"Quantitative weak grade xx:x 1"
 !! __@RULENAME@__ kissá : kisá
 Cx:0 <=> _ Cy: (%^RC:) Vow %^WG: [ ?* - Len: ] ; 
-       where Cx in ( p b s7 t k c č d g z ž v7 l7 m7 n7 ŋ7 r7 š7  p   k   č   h   t  ) 
-             Cy in ( p b s  t k c č d g z ž v  l  m  n  ŋ  r  š %^P %^K %^Č %^H %^T ) 
+       where Cx in ( p b s7 t k c č d g z ž v l m n ŋ r š  p   k   č   h   t  ) 
+             Cy in ( p b s  t k c č d g z ž v l m n ŋ r š  %^P %^K %^Č %^H %^T ) 
+			matched ;
+			
+"Quantitative weak grade xx:x 2"
+!! __@RULENAME@__ kissá : kisá
+Cx:Cy <=> Cx:0 _  (%^RC:) Vow %^WG: [ ?* - Len: ] ; 
+       where Cx in ( m n ŋ v s r đ l ) 
+             Cy in ( ṃ ṇ ŋ̣ ṿ ṣ ṛ đ̣ ḷ ) 
 			matched ;
 			
 !%^P %^K %^Č %^H %^T        
@@ -173,9 +178,6 @@ Cx:Cy <=> :Vow _ (%^RC:) :Vow (Cns:) (Cns:) %^WG: ;
        where Cx in ( c p t h č ṃ ṇ ŋ̣ ṿ ṣ ṛ đ̣ ḷ ) 
              Cy in ( s v đ v j m n ŋ v s r đ l ) 
              matched ;
-!        where Cx in ( c p t h č m7 n7 ŋ7 v7 s7 r7 đ7 l7 š7 )
-!              Cy in ( s v đ v j m  n  ŋ  v  s  r  đ  l  š  )        
-
 
 "Qualitative weak grade xy:zy"
 !! __@RULENAME@__ ráksá : ráávsá
@@ -209,12 +211,23 @@ Cx:Cy <=> _ %^RC: Vow %^WG: ;
 
 !! !Consonant shortening
 
-"Consonant shortening after root vowel lengthening"
-!! __@RULENAME@__ kissá : kiisá
-Cx:0 <=> %^RV: _ :Cx [ [ Seg: | Arch: ]*  - %>: ] %^RLEN: ;          
+"Consonant shortening after root vowel lengthening 1"
+!! __@RULENAME@__ kissá : kiiṣán
+Cx:0 <=> %^RV: _ :Cy [ [ Seg: | Arch: ]*  - %>: ] %^RLEN: ;          
        except 
-               _ :Cx (%^RC:) Vow %^WG: [ ?* - Len: ] ;
-        where Cx in ( p b s t k c č d g z ž v l m n ŋ r š ) ; 
+               _ :Cy (%^RC:) Vow %^WG: [ ?* - Len: ] ;
+        where Cx in ( p b s t k c č d đ g z ž v l j h m n ŋ r š )  
+              Cy in ( p b ṣ t k c č d đ̣ g z ž ṿ ḷ j̣ ḥ ṃ ṇ ŋ̣ ṛ ṣ̌ ) 
+              matched ;
+
+"Consonant shortening after root vowel lengthening 2"
+!! __@RULENAME@__ kissá : kiiṣán
+Cx:Cy  <=> %^RV: Cx: _ [ [ Seg: | Arch: ]*  - %>: ] %^RLEN: ;          
+       except 
+                Cx: _ (%^RC:) Vow %^WG: [ ?* - Len: ] ;
+        where Cx in ( p b s t k c č d đ g z ž v l j h m n ŋ r š )  
+              Cy in ( p b ṣ t k c č d đ̣ g z ž ṿ ḷ j̣ ḥ ṃ ṇ ŋ̣ ṛ ṣ̌ ) 
+              matched ;
 
 !htest k i ^RV:i s:0 s ^RC:0 á ^RLEN:0 >:0 n
 
@@ -298,7 +311,7 @@ Cx:0 <=> _ Cx (%^RC:) Vow:* Cns %^CSH: [ ?* - Len: ] ;
 
 "Suffix vowel lengthening"
 !! __@RULENAME@__ long á in kissáást
-%^SV:Vx <=> Vx [ ?* - %>: ] _                  %^SLEN: ;
+%^SV:Vx <=> Vx [ ?* - %>: ] _  (%^WG:) (%^CLEN:)    %^SLEN: ;
             Vx              _ [ ?* - %>: ] Cns %^SLEN: ;
         where Vx in ( á o e a i ) ; ! pending...
 
