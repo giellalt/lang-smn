@@ -59,6 +59,30 @@ endif # CAN_HFST
 #################################################
 #### Add language-specific build rules here: ####
 
+generator-raw-gt-desc.hfst: generator-raw-gt-desc.tmp.hfst \
+					filters/remove-halflong-dotbelow.hfst            \
+					filters/remove-letter-acute-accent.hfst            
+	$(AM_V_RGX2FST)$(PRINTF) "\
+				@\"filters/remove-letter-acute-accent.hfst\" \
+			.o. @\"filters/remove-halflong-dotbelow.hfst\"               \
+			.o. @\"$<\" \
+			;" \
+		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --xerox-composition=ON \
+		> $@
+
+analyser-raw-gt-desc.xfst: analyser-raw-gt-desc.tmp.xfst \
+					filters/remove-halflong-dotbelow.xfst            \
+					filters/remove-letter-acute-accent.xfst            
+	$(AM_V_XFST)$(PRINTF) "read regex \
+				@\"filters/remove-letter-acute-accent.xfst\" \
+			.o. @\"filters/remove-halflong-dotbelow.xfst\"               \
+			.o. @\"$<\" \
+			;\n\
+		 save stack $@\n\
+		 quit\n" | $(XFST) $(VERBOSITY)
+
+
+
 ##################################################################
 #### END: Add local processing instructions ABOVE this line ######
 ##################################################################
