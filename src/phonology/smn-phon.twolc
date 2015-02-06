@@ -20,7 +20,7 @@ Alphabet
  a á â ä b c d e f g h i j k l m n o õ p q !!= * @CODE@
  r s t u v w x y z æ ä ø ö å			   !!= * @CODE@
  č đ ŋ ŧ š ž				 			   !!= * @CODE@
- ṃ ṇ ŋ̣ ṿ ṣ ṛ đ̣ ḷ j̣ ḥ ṣ̌  	   !!= * @CODE@
+! ṃ ṇ ŋ̣ ṿ ṣ ṛ đ̣ ḷ j̣ ḥ ṣ̌  	   !!= * @CODE@
 
  A Á Â Å B C D E F G H I J K L M N O Õ P Q !!= * @CODE@
  R S T U V W X Y Z Æ Ä Ø Ö Å 			   !!= * @CODE@
@@ -43,8 +43,8 @@ Alphabet
 
 !! Different archiphonemes
 
- ! m7:ṃ n7:ṇ ŋ7:ŋ̣ v7:ṿ s7:ṣ r7:ṛ đ7:đ̣ l7:ḷ j7:j̣ h7:ḥ š7:ṣ̌ ! with dots
-   m7:m n7:n ŋ7:ŋ v7:v s7:s r7:r đ7:đ l7:l j7:j h7:h š7:š !!= * @CODE@ without dots
+  m7:ṃ n7:ṇ ŋ7:ŋ̣ v7:ṿ s7:ṣ r7:ṛ đ7:đ̣ l7:ḷ j7:j̣ h7:ḥ š7:ṣ̌ ! with dots
+!  m7:m n7:n ŋ7:ŋ v7:v s7:s r7:r đ7:đ l7:l j7:j h7:h š7:š !!= * @CODE@ without dots
   h8:h g8:g m8:m n8:n t8:t				   !!= * @CODE@	to be documented
   k2:k									   !!= * @CODE@ to be documented
 %^P:p %^K:k %^Č:č %^H:h %^T:t              !!= * @CODE@
@@ -161,14 +161,14 @@ Cx:0 <=> _ Cy: (%^RC:) Vow (%^RC:) (%^SV:) %^WG: [ ?* - Len: ] ;
        where Cx in ( p b s7 t k c č d g z ž v l m n ŋ r š  p   k   č   h   t  ) 
              Cy in ( p b s  t k c č d g z ž v l m n ŋ r š  %^P %^K %^Č %^H %^T ) 
 			matched ;
-			
+
 "Quantitative weak grade xx:x 2"
 !! __@RULENAME@__ kissá : kisá
 Cx:Cy <=> Cx:0 _  (%^RC:) Vow %^WG: [ ?* - Len: ] ; 
        where Cx in ( m n ŋ v s r đ l ) 
              Cy in ( ṃ ṇ ŋ̣ ṿ ṣ ṛ đ̣ ḷ ) 
 			matched ;
-			
+
 !%^P %^K %^Č %^H %^T        
 !htest k:k i:i ^RV:0 s:0 s:s ^RC:0 á:á ^WG:0
 
@@ -214,8 +214,9 @@ Cx:Cy <=> _ %^RC: Vow %^WG: ;
 "Consonant shortening after root vowel lengthening 1"
 !! __@RULENAME@__ kissá : kiiṣán
 Cx:0 <=> %^RV: _ :Cy [ [ Seg: | Arch: ]*  - %>: ] %^RLEN: ;          
-       except 
-               _ :Cy (%^RC:) Vow %^WG: [ ?* - Len: ] ;
+! Commenting out except, it seems logically wrong (only one RLEN context)
+!       except 
+!               _ :Cy (%^RC:) Vow %^WG: [ ?* - Len: ] ;
         where Cx in ( p b s t k c č d đ g z ž v l j h m n ŋ r š )  
               Cy in ( p b ṣ t k c č d đ̣ g z ž ṿ ḷ j̣ ḥ ṃ ṇ ŋ̣ ṛ ṣ̌ ) 
               matched ;
@@ -223,8 +224,9 @@ Cx:0 <=> %^RV: _ :Cy [ [ Seg: | Arch: ]*  - %>: ] %^RLEN: ;
 "Consonant shortening after root vowel lengthening 2"
 !! __@RULENAME@__ kissá : kiiṣán
 Cx:Cy  <=> %^RV: Cx: _ [ [ Seg: | Arch: ]*  - %>: ] %^RLEN: ;          
-       except 
-                Cx: _ (%^RC:) Vow %^WG: [ ?* - Len: ] ;
+! Commenting out except, it seems logically wrong (only one RLEN context)
+!       except 
+!                Cx: _ (%^RC:) Vow %^WG: [ ?* - Len: ] ;
         where Cx in ( p b s t k c č d đ g z ž v l j h m n ŋ r š )  
               Cy in ( p b ṣ t k c č d đ̣ g z ž ṿ ḷ j̣ ḥ ṃ ṇ ŋ̣ ṛ ṣ̌ ) 
               matched ;
@@ -235,8 +237,9 @@ Cx:Cy  <=> %^RV: Cx: _ [ [ Seg: | Arch: ]*  - %>: ] %^RLEN: ;
 "Consonant shortening after low root vowel lengthening"
 !! __@RULENAME@__ fáddá : fáádá
 Cx:0 <=> %^RV: _ :Cx [  [ Seg: | Arch: ]* - %>: ] %^LLEN: ;          
-       except 
-               _ :Cx (%^RC:) Vow %^WG: [ ?* - Len: ] ;
+! Commenting out except, it seems logically wrong (only one LLEN context)
+!       except 
+!               _ :Cx (%^RC:) Vow %^WG: [ ?* - Len: ] ;
         where Cx in ( p b s t k c č d g z ž v l m n ŋ r š ) ; 
 
 !htest f á ^RV:á d:0 d ^RC:0 á ^LLEN:0 >:0 n
@@ -291,8 +294,9 @@ Cx:0 <=> _ Cx (%^RC:) Vow:* Cns %^CSH: [ ?* - Len: ] ;
 "Root vowel lengthening"
 !! __@RULENAME@__ kissán --> kiissán
 %^RV:Vx <=> Vx _ [ ?* - %>: ] %^RLEN: ;
-        except  
-            Vx _ [ ?* - %>: ] %^LLEN: ;
+! Commenting out except, it seems logically wrong (only one RLEN context)
+!        except   ! removing except...
+!            Vx _ [ ?* - %>: ] %^LLEN: ;
         where Vx in ( i á a o u ) ; ! pending...
 !htest k e ^RV:e p ^RC:p i d e:0 m ^RLEN:0 >:0 i s t
 
@@ -303,8 +307,9 @@ Cx:0 <=> _ Cx (%^RC:) Vow:* Cns %^CSH: [ ?* - Len: ] ;
 "Low root vowel lengthening"
 !! __@RULENAME@__ fáddá ~ fááddá
 %^RV:Vx <=> Vx _ [ ?* - %>: ] %^LLEN: ;
-        except 
-            Vx _ [ ?* - %>: ] %^RLEN: ;
+! Commenting out except, it seems logically wrong (only one RLEN context)
+!        except    ! removing except
+!            Vx _ [ ?* - %>: ] %^RLEN: ;
         where Vx in ( á a u ) ; ! pending...
 
 !htest f á ^RV:á d d á ^LLEN:0
