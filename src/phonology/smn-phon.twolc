@@ -317,8 +317,8 @@ Cx:0 <=> _ Cx (%^RC:) Vow:* Cns %^CSH: \Len: ;
 
 "Suffix vowel lengthening"
 !! __@RULENAME@__ long á in kissáást
-%^SV:Vx <=> Vx [ ?* - %>: ] _  (%^WG:) (%^CLEN:)    %^SLEN: ;
-            Vx              _ [ ?* - %>: ] Cns %^SLEN: ;
+%^SV:Vx <=> Vx \%>:* _         (%^WG:) (%^CLEN:) %^SLEN: ;
+            Vx       _ \%>:* Cns                  %^SLEN: ;
         where Vx in ( á o e a i ) ; ! pending...
 
 !htest k i ^RV:0 s:0 s ^RC:s á ^WG:0 ^CLEN:0 ^SV:á ^SLEN:0 >:0 s t
@@ -354,19 +354,19 @@ i:j <=> i [ Arch: | Len: ]* %>: _ ;
 
 "Root vowel lowering"
 !! __@RULENAME@__ ä to a
-Vx:Vy <=> _   Vx: Cns [ ?* - %>: ] %^RVL: ;
-          Vx: _   Cns [ ?* - %>: ] %^RVL: ;
+Vx:Vy <=>     _ Vx: Cns \%>:* %^RVL: ;
+          Vx: _     Cns \%>:* %^RVL: ;
           where Vx in ( ä )
                 Vy in ( a )
-                matched ;
+          matched ;
 
 "Root diphthong lowering"
 !! __@RULENAME@__  
-Vx:Vy <=> _   Vx: Cns [ ?* - %>: ] %^RVL: ;
-          Vx: _   Cns [ ?* - %>: ] %^RVL: ;
+Vx:Vy <=>     _ Vx: Cns \%>: %^RVL: ;
+          Vx: _     Cns \%>: %^RVL: ;
           where Vx in ( u á )
                 Vy in ( o o )
-                matched ;
+          matched ;
                 
   
 
