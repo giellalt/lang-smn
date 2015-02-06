@@ -157,14 +157,14 @@ Rules
 
 "Quantitative weak grade xx:x 1"
 !! __@RULENAME@__ kissá : kisá
-Cx:0 <=> _ Cy: (%^RC:) Vow (%^RC:) (%^SV:) %^WG: [ ?* - Len: ] ; 
+Cx:0 <=> _ Cy: (%^RC:) Vow (%^RC:) (%^SV:) %^WG: \[Len: - %^RLEN:] ; 
        where Cx in ( p b s7 t k c č d g z ž v l m n ŋ r š  p   k   č   h   t  ) 
              Cy in ( p b s  t k c č d g z ž v l m n ŋ r š  %^P %^K %^Č %^H %^T ) 
 			matched ;
 
 "Quantitative weak grade xx:x 2"
 !! __@RULENAME@__ kissá : kisá
-Cx:Cy <=> Cx:0 _  (%^RC:) Vow %^WG: [ ?* - Len: ] ; 
+Cx:Cy <=> Cx:0 _  (%^RC:) Vow %^WG: \Len: ; 
        where Cx in ( m n ŋ v s r đ l ) 
              Cy in ( ṃ ṇ ŋ̣ ṿ ṣ ṛ đ̣ ḷ ) 
 			matched ;
@@ -246,7 +246,7 @@ Cx:0 <=> %^RV: _ :Cx \%>:* %^LLEN: ;
 
 "Consonant shortening (not weak grade)"
 !! __@RULENAME@__ p to p for kappeer ~ kaperist
-Cx:0 <=> _ Cx (%^RC:) Vow:* Cns %^CSH: [ ?* - Len: ] ; 
+Cx:0 <=> _ Cx (%^RC:) Vow:* Cns %^CSH: \Len: ; 
        where Cx in ( p b s t k c č d g z ž v l m n ŋ r š ) ;
               
 !htest k a p:0 p e:0 e r ^CSH:0 >:0 i s t               
@@ -329,14 +329,14 @@ Cx:0 <=> _ Cx (%^RC:) Vow:* Cns %^CSH: [ ?* - Len: ] ;
     
 "Vowel shortening (with consonant shortening)"
 !! __@RULENAME@__ e to 0 for kappeer ~ kaperist
-Vx:0 <=>  _ Vx Cns %^CSH: [ ?* - Len: ] ;
+Vx:0 <=>  _ Vx Cns %^CSH: \Len: ;
     where Vx in ( a e o á ä ) ;
     
 !htest k a p:0 p e:0 e r ^CSH:0 >:0 i s t
 
 "Stem vowel shortening (when consonant shortening)"
 !! __@RULENAME@__ a to 0 for kaavpug ~ kavpugist
-Vx:0 <=>  _ Vx Cns (Cns) (Vow:) Vow Cns %^CSH: [ ?* - Len: ] ;
+Vx:0 <=>  _ Vx Cns (Cns) (Vow:) Vow Cns %^CSH: \Len: ;
     where Vx in ( a e o á ä ) ;
     
 !htest k a a:0 v p u g ^CSH:0 >:0 i s t
