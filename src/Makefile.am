@@ -63,9 +63,9 @@ analyser-%.hfst: analyser-%.tmp.hfst                        \
 					filters/remove-halflong-dotbelow.hfst   \
 					filters/remove-letter-acute-accent.hfst            
 	$(AM_V_RGX2FST)$(PRINTF) "                               \
-				@\"filters/remove-letter-acute-accent.hfst\" \
+				@\"$<\"                                      \
+			.o. @\"filters/remove-letter-acute-accent.hfst\" \
 			.o. @\"filters/remove-halflong-dotbelow.hfst\"   \
-			.o. @\"$<\"                                      \
 			;" \
 		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --xerox-composition=ON \
 		| $(HFST_INVERT) \
@@ -76,9 +76,9 @@ generator-gt-%.hfst: generator-gt-%.tmp.hfst                \
 					filters/remove-halflong-dotbelow.hfst   \
 					filters/remove-letter-acute-accent.hfst            
 	$(AM_V_RGX2FST)$(PRINTF) "                               \
-				@\"filters/remove-letter-acute-accent.hfst\" \
+				@\"$<\"                                      \
+			.o. @\"filters/remove-letter-acute-accent.hfst\" \
 			.o. @\"filters/remove-halflong-dotbelow.hfst\"   \
-			.o. @\"$<\"                                      \
 			;" \
 		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --xerox-composition=ON \
 		> $@
@@ -88,9 +88,9 @@ analyser-gt-%.xfst: analyser-gt-%.tmp.xfst                  \
 					filters/remove-halflong-dotbelow.xfst   \
 					filters/remove-letter-acute-accent.xfst            
 	$(AM_V_XFST)$(PRINTF) "read regex                        \
-				@\"filters/remove-letter-acute-accent.xfst\" \
+				@\"$<\"                                      \
+			.o. @\"filters/remove-letter-acute-accent.xfst\" \
 			.o. @\"filters/remove-halflong-dotbelow.xfst\"   \
-			.o. @\"$<\"                                      \
 			;\n\
 		 save stack $@\n\
 		 quit\n" | $(XFST) $(VERBOSITY)
@@ -101,9 +101,9 @@ analyser-disamb-gt-%.xfst: analyser-disamb-gt-%.tmp.xfst    \
 					filters/remove-halflong-dotbelow.xfst   \
 					filters/remove-letter-acute-accent.xfst            
 	$(AM_V_XFST)$(PRINTF) "read regex                        \
-				@\"filters/remove-letter-acute-accent.xfst\" \
+				@\"$<\"                                      \
+			.o. @\"filters/remove-letter-acute-accent.xfst\" \
 			.o. @\"filters/remove-halflong-dotbelow.xfst\"   \
-			.o. @\"$<\"                                      \
 			;\n\
 		 save stack $@\n\
 		 quit\n" | $(XFST) $(VERBOSITY)
@@ -112,9 +112,9 @@ generator-%.xfst: generator-%.tmp.xfst                      \
 					filters/remove-halflong-dotbelow.xfst   \
 					filters/remove-letter-acute-accent.xfst            
 	$(AM_V_XFST)$(PRINTF) "read regex                        \
-				@\"filters/remove-letter-acute-accent.xfst\" \
+				@\"$<\"                                      \
+			.o. @\"filters/remove-letter-acute-accent.xfst\" \
 			.o. @\"filters/remove-halflong-dotbelow.xfst\"   \
-			.o. @\"$<\"                                      \
 			;\n\
 		 invert net\n\
 		 save stack $@\n\
