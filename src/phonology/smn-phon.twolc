@@ -213,7 +213,7 @@ Cx:Cy <=> _ %^RC: Vow %^WG: ;
 
 "Consonant shortening after root vowel lengthening 1"
 !! __@RULENAME@__ kissá : kiiṣán
-Cx:0 <=> %^RV: _ :Cy [ [ Seg: | Arch: ]*  - %>: ] %^RLEN: ;          
+Cx:0 <=> %^RV: _ :Cy \%>:* %^RLEN: ;          
 ! Commenting out except, it seems logically wrong (only one RLEN context)
 !       except 
 !               _ :Cy (%^RC:) Vow %^WG: [ ?* - Len: ] ;
@@ -223,7 +223,7 @@ Cx:0 <=> %^RV: _ :Cy [ [ Seg: | Arch: ]*  - %>: ] %^RLEN: ;
 
 "Consonant shortening after root vowel lengthening 2"
 !! __@RULENAME@__ kissá : kiiṣán
-Cx:Cy  <=> %^RV: Cx: _ [ [ Seg: | Arch: ]*  - %>: ] %^RLEN: ;          
+Cx:Cy  <=> %^RV: Cx: _ \%>:* %^RLEN: ;          
 ! Commenting out except, it seems logically wrong (only one RLEN context)
 !       except 
 !                Cx: _ (%^RC:) Vow %^WG: [ ?* - Len: ] ;
@@ -236,7 +236,7 @@ Cx:Cy  <=> %^RV: Cx: _ [ [ Seg: | Arch: ]*  - %>: ] %^RLEN: ;
 
 "Consonant shortening after low root vowel lengthening"
 !! __@RULENAME@__ fáddá : fáádá
-Cx:0 <=> %^RV: _ :Cx [  [ Seg: | Arch: ]* - %>: ] %^LLEN: ;          
+Cx:0 <=> %^RV: _ :Cx \%>:* %^LLEN: ;          
 ! Commenting out except, it seems logically wrong (only one LLEN context)
 !       except 
 !               _ :Cx (%^RC:) Vow %^WG: [ ?* - Len: ] ;
@@ -293,7 +293,7 @@ Cx:0 <=> _ Cx (%^RC:) Vow:* Cns %^CSH: [ ?* - Len: ] ;
 
 "Root vowel lengthening"
 !! __@RULENAME@__ kissán --> kiissán
-%^RV:Vx <=> Vx _ [ ?* - %>: ] %^RLEN: ;
+%^RV:Vx <=> Vx _ \%>:* %^RLEN: ;
 ! Commenting out except, it seems logically wrong (only one RLEN context)
 !        except   ! removing except...
 !            Vx _ [ ?* - %>: ] %^LLEN: ;
@@ -306,7 +306,7 @@ Cx:0 <=> _ Cx (%^RC:) Vow:* Cns %^CSH: [ ?* - Len: ] ;
 
 "Low root vowel lengthening"
 !! __@RULENAME@__ fáddá ~ fááddá
-%^RV:Vx <=> Vx _ [ ?* - %>: ] %^LLEN: ;
+%^RV:Vx <=> Vx _ \%>:* %^LLEN: ;
 ! Commenting out except, it seems logically wrong (only one RLEN context)
 !        except    ! removing except
 !            Vx _ [ ?* - %>: ] %^RLEN: ;
