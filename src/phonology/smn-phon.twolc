@@ -197,8 +197,8 @@ Cx:Cy <=> Cx:0 _  (%^RC:) Vow %^WG: \Len: ;
 "Qualitative weak grade x:y"
 !! __@RULENAME@__ tupe : tuve
 Cx:Cy <=> :Vow _ (%^RC:0) :Vow (Cns:) (Cns:) %^WG: ; 
-       where Cx in ( c p t h č ṃ ṇ ŋ̣ ṿ ṣ ṛ đ̣ ḷ ) 
-             Cy in ( s v đ v j m n ŋ v s r đ l ) 
+       where Cx in ( c p t h č m7 n7 ŋ7 v7 s7 r7 đ7 l7 ) 
+             Cy in ( s v đ v j m  n  ŋ  v  s  r  đ  l  ) 
              matched ;
 
 "Qualitative weak grade xy:zy"
@@ -281,15 +281,6 @@ Cx:Cy  <=> %^RV: Cx: _  (%^RC:) Vow  %^RLEN: ;
 !€ kii0s0á00n
 !htest k i ^RV:i s:0 s ^RC:0 á ^RLEN:0 >:0 n
 
-
-!"Consonant shortening after low root vowel lengthening"
-!!! __@RULENAME@__ fáddá : fáádá
-!Cx:0 <=> %^RV: _ :Cx \%>:* %^LLEN: ;          
-!! Commenting out except, it seems logically wrong (only one LLEN context)
-!!       except 
-!!               _ :Cx (%^RC:) Vow %^WG: [ ?* - Len: ] ;
-!        where Cx in ( p b s t k c č d g z ž v l m n ŋ r š ) ; 
-!
 !htest f á ^RV:á d:0 d ^RC:0 á ^LLEN:0 >:0 n
 
 "Consonant shortening (not weak grade)"
@@ -351,11 +342,11 @@ Cx:0 <=> _ Cx (%^RC:) Vow:* Cns %^CSH: \Len: ;
 "Root vowel lengthening"
 !! __@RULENAME@__ kissán --> kiissán
 %^RV:Vx <=> Vx _ \%>:* %^RLEN: ;
+        where Vx in ( i á a o u ) ; ! pending...
+!htest k e ^RV:e p ^RC:p i d e:0 m ^RLEN:0 >:0 i s t
 ! Commenting out except, it seems logically wrong (only one RLEN context)
 !        except   ! removing except...
 !            Vx _ [ ?* - %>: ] %^LLEN: ;
-        where Vx in ( i á a o u ) ; ! pending...
-!htest k e ^RV:e p ^RC:p i d e:0 m ^RLEN:0 >:0 i s t
 
 !€ ki^RVssá^RLEN>n
 !€ kiissá00n
@@ -376,8 +367,9 @@ Cx:0 <=> _ Cx (%^RC:) Vow:* Cns %^CSH: \Len: ;
 
 "Suffix vowel lengthening"
 !! __@RULENAME@__ long á in kissáást
-%^SV:Vx <=> Vx \%>:* _         (%^WG:) (%^CLEN:) %^SLEN: ;
-            Vx       _ \%>:* Cns                  %^SLEN: ;
+!%^SV:Vx <=> Vx \%>:* _         (%^WG:) (%^CLEN:) %^SLEN: ;
+!            Vx       _ \%>:* Cns                  %^SLEN: ;
+%^SV:Vx <=> Vx       _ Dummy:* Cns                  %^SLEN: ;
         where Vx in ( á o e a i ) ; ! pending...
 
 !€ ki^RVss^RCá^WG^CLEN^SV^SLEN>st
@@ -397,7 +389,8 @@ Cx:0 <=> _ Cx (%^RC:) Vow:* Cns %^CSH: \Len: ;
     
 "Vowel shortening (with consonant shortening)"
 !! __@RULENAME@__ e to 0 for kappeer ~ kaperist
-Vx:0 <=>  _ Vx Cns %^CSH: \Len: ;
+!Vx:0 <=>  _ Vx Cns %^CSH: \Len: ;
+Vx:0 <=>  _ Vx Cns %^CSH: %>: ;
     where Vx in ( a e o á ä ) ;
     
 !€ kappeer^CSH>ist
