@@ -159,9 +159,14 @@ Rules
 "Quantitative weak grade xx:x 1"
 !! __@RULENAME@__ kissá : kisá
 Cx:0 <=> _ Cy: (%^RC:) Vow (%^RC:) (%^SV:) %^WG: \[Len: - %^RLEN:] ; 
-       where Cx in ( p b s t k c č d   g z ž v l     m n ŋ r š  p   k   č   h   t  ) 
-             Cy in ( p b s t k c č d   g z ž v l     m n ŋ r š  %^P %^K %^Č %^H %^T ) 
-			matched ;
+       where Cx in (                                            p   k   č   h   t  ) 
+             Cy in (                                            %^P %^K %^Č %^H %^T ) 
+       matched ;
+
+! Original set:
+!      where Cx in ( p b s t k c č d   g z ž v l     m n ŋ r š  p   k   č   h   t  ) 
+!            Cy in ( p b s t k c č d   g z ž v l     m n ŋ r š  %^P %^K %^Č %^H %^T ) 
+!      matched ;
 
 ! From "Consonant shortening after root vowel lengthening 1" below:
 !      where Cx in ( p b s t k c č d đ g z ž v l j h m n ŋ r š )  
@@ -221,6 +226,19 @@ Cx:Cy <=> _ %^RC: Vow %^WG: ;
 
 !htest s u ^RV:0 k:0 ^K:h ^RC:0 á ^WG:0
 
+!! !Combined shortening after root vowel lengthening and quantitative weka grade
+"shortening after root vowel lengthening and quantitative weka grade"
+!! __@RULENAME@__ kissá : kiiṣán
+Cx:0 <=> %^RV: _   :Cy \%>:*                                    %^RLEN: ;
+         %^RV: _   :Cx \%>:*                                    %^LLEN: ;
+               _ Cx: (%^RC:) Vow (%^RC:) (%^SV:) %^WG: \[Len: - %^RLEN:] ; 
+! Commenting out except, it seems logically wrong (only one RLEN context)
+!       except 
+!               _ :Cy (%^RC:) Vow %^WG: [ ?* - Len: ] ;
+        where Cx in ( p b s t k c č d   g z ž v l     m n ŋ r š )  
+              Cy in ( p b ṣ t k c č d   g z ž ṿ ḷ     ṃ ṇ ŋ̣ ṛ ṣ̌ ) 
+              matched ;
+
 
 !! !Consonant shortening
 
@@ -231,9 +249,13 @@ Cx:0 <=> %^RV: _ :Cy \%>:* %^RLEN: ;
 ! Commenting out except, it seems logically wrong (only one RLEN context)
 !       except 
 !               _ :Cy (%^RC:) Vow %^WG: [ ?* - Len: ] ;
-        where Cx in ( p b s t k c č d đ g z ž v l j h m n ŋ r š )  
-              Cy in ( p b ṣ t k c č d đ̣ g z ž ṿ ḷ j̣ ḥ ṃ ṇ ŋ̣ ṛ ṣ̌ ) 
-              matched ;
+        where Cx in (                 đ           j h           )
+              Cy in (                 đ̣           j̣ ḥ           )
+        matched ;
+! Original:
+!       where Cx in ( p b s t k c č d đ g z ž v l j h m n ŋ r š )
+!             Cy in ( p b ṣ t k c č d đ̣ g z ž ṿ ḷ j̣ ḥ ṃ ṇ ŋ̣ ṛ ṣ̌ )
+!       matched ;
 
 "Consonant shortening after root vowel lengthening 2"
 !! __@RULENAME@__ kissá : kiiṣán
