@@ -122,9 +122,15 @@ generator-%.xfst: generator-%.tmp.xfst                      \
 
 # Do NOT apply the accent removal filters to the normative
 # dictionary generator (both hfst and xfst):
-generator-dict-gt-norm.hfst generator-dict-gt-norm.xfst: \
-		generator-dict-gt-norm.%: generator-dict-gt-norm.tmp.%
+generator-dict-gt-norm.hfst: generator-dict-gt-norm.tmp.hfst
 	$(AM_V_CP)cp -f $< $@
+
+generator-dict-gt-norm.xfst: generator-dict-gt-norm.tmp.xfst
+	$(AM_V_XFST)$(PRINTF) "\
+		 load stack $<\n\
+		 invert net\n\
+		 save stack $@\n\
+		 quit\n" | $(XFST) $(VERBOSITY)
 
 ##################################################################
 #### END: Add local processing instructions ABOVE this line ######
