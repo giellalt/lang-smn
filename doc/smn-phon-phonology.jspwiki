@@ -75,8 +75,14 @@ Different triggers
 !!Morpheme boundaries:
 
 Here we define the suffix border >
-The other borders (for derivations and compounds are not implemented yet.
+The other borders are not used yet, but still defined:
 
+ ;«: Derivational prefix
+ ;»: Derivational suffix
+ ;%<: Inflectional prefx
+ ;%>: Inflectional suffix
+ ;#: Word boundary for both lexicalised and dynamic compounds
+ ;%^: (exceptional) soft hyphenation point
 
 End of alphabet definitions
 
@@ -142,8 +148,10 @@ __Consonant shortening after root vowel lengthening 2__ kissá : kiiṣán
 
 
 
-__Consonant shortening after low root vowel lengthening__ fáddá : fáádá
-
+__Consonant shortening after root vowel lengthening 2__ fáddá : fáádá
+Commenting out except, it seems logically wrong (only one LLEN context)
+      except 
+              _ :Cx (%^RC:) Vow %^WG: [ ?* - Len: ] ;
 
 __Consonant shortening (not weak grade)__ p to p for kappeer ~ kaperist
 
