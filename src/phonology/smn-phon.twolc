@@ -234,14 +234,15 @@ Cx:Cy <=> _ %^RC: Vow (%^SV:) %^WG: ;
 
 !! !Consonant shortening
 
-"shortening after root vowel lengthening and quantitative weka grade"
+"shortening after RV lengthening, quantitative weak grade, CS (not weak grade)"
 !! __@RULENAME@__ kissá : kiiṣán
 Cx:0 <=> %^RV: _   :Cy Dummy:*                                    %^RLEN: ;
          %^RV: _   :Cy Dummy:*                                    %^LLEN: ;
-               _ Cx: (%^RC:) Vow (%^RC:) (%^SV:) %^WG: ; !\[Len: - %^RLEN:] ; 
+               _ Cx: (%^RC:) Vow  (%^RC:) (%^SV:) %^WG: ; !\[Len: - %^RLEN:] ; 
+               _ Cx  (%^RC:) Vow:* Cns %^CSH: [Dummy: - Len:]* %>:0 ; 
         where Cx in ( p b s t k c č d   g z ž v l     m n ŋ r š )  
               Cy in ( p b ṣ t k c č d   g z ž ṿ ḷ     ṃ ṇ ŋ̣ ṛ ṣ̌ ) 
-              matched ;
+        matched ;
 
 "Consonant shortening after root vowel lengthening 1"
 !! _@RULENAME@__ kissá : kiiṣán
@@ -264,10 +265,10 @@ Cx:Cy  <=> %^RV: Cx: _  (%^RC:) Vow  %^RLEN: ;
 
 !htest f á ^RV:á d:0 d ^RC:0 á ^LLEN:0 >:0 n
 
-"Consonant shortening (not weak grade)"
-!! __@RULENAME@__ pp to p for kappeer ~ kaperist
-Cx:0 <=> _ Cx (%^RC:) Vow:* Cns %^CSH: [Dummy: - Len:]* %>:0 ; 
-       where Cx in ( p b s t k c č d g z ž v l m n ŋ r š ) ;
+!"Consonant shortening (not weak grade)"
+!!! __@RULENAME@__ pp to p for kappeer ~ kaperist
+!Cx:0 <=> _ Cx (%^RC:) Vow:* Cns %^CSH: [Dummy: - Len:]* %>:0 ; 
+!       where Cx in ( p b s t k c č d g z ž v l m n ŋ r š ) ;
               
 !€ kappeer^CSH>ist
 !€ ka0p0er00ist
