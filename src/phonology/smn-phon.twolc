@@ -196,7 +196,7 @@ Cx:Cy <=> Cx:0 _  (%^RC:) Vow %^WG: \Len: ;
 
 "Qualitative weak grade x:y"
 !! __@RULENAME@__ tupe : tuve
-Cx:Cy <=> :Vow _ (%^RC:) :Vow (Cns:) (Cns:) %^WG: ; 
+Cx:Cy <=> :Vow _ (%^RC:0) :Vow (Cns:) (Cns:) %^WG: ; 
        where Cx in ( c p t h č ṃ ṇ ŋ̣ ṿ ṣ ṛ đ̣ ḷ ) 
              Cy in ( s v đ v j m n ŋ v s r đ l ) 
              matched ;
@@ -238,26 +238,28 @@ Cx:Cy <=> _ %^RC: Vow %^WG: ;
 Cx:0 <=> %^RV: _   :Cy \%>:*                                    %^RLEN: ;
          %^RV: _   :Cx \%>:*                                    %^LLEN: ;
                _ Cx: (%^RC:) Vow (%^RC:) (%^SV:) %^WG: \[Len: - %^RLEN:] ; 
-! Commenting out except, it seems logically wrong (only one RLEN context)
-!       except 
-!               _ :Cy (%^RC:) Vow %^WG: [ ?* - Len: ] ;
         where Cx in ( p b s t k c č d   g z ž v l     m n ŋ r š )  
               Cy in ( p b ṣ t k c č d   g z ž ṿ ḷ     ṃ ṇ ŋ̣ ṛ ṣ̌ ) 
               matched ;
+! Commenting out except, it seems logically wrong (only one RLEN context)
+!       except 
+!               _ :Cy (%^RC:) Vow %^WG: [ ?* - Len: ] ;
 
 
 !! !Consonant shortening
 
 "Consonant shortening after root vowel lengthening 1"
 !! __@RULENAME@__ kissá : kiiṣán
-Cx:0 <=> %^RV: _ :Cy \%>:* %^RLEN: ;
-         %^RV: _ :Cx \%>:* %^LLEN: ;
-! Commenting out except, it seems logically wrong (only one RLEN context)
-!       except 
-!               _ :Cy (%^RC:) Vow %^WG: [ ?* - Len: ] ;
+!Cx:0 <=> %^RV: _ :Cy \%>:* %^RLEN: ;
+!         %^RV: _ :Cx \%>:* %^LLEN: ;
+Cx:0 <=> %^RV: _ :Cy (%^RC:) Vow %^RLEN: ;
+         %^RV: _ :Cx (%^RC:) Vow %^LLEN: ;
         where Cx in (                 đ           j h           )
               Cy in (                 đ̣           j̣ ḥ           )
         matched ;
+! Commenting out except, it seems logically wrong (only one RLEN context)
+!       except 
+!               _ :Cy (%^RC:) Vow %^WG: [ ?* - Len: ] ;
 ! Original:
 !       where Cx in ( p b s t k c č d đ g z ž v l j h m n ŋ r š )
 !             Cy in ( p b ṣ t k c č d đ̣ g z ž ṿ ḷ j̣ ḥ ṃ ṇ ŋ̣ ṛ ṣ̌ )
@@ -265,12 +267,12 @@ Cx:0 <=> %^RV: _ :Cy \%>:* %^RLEN: ;
 
 "Consonant shortening after root vowel lengthening 2"
 !! __@RULENAME@__ kissá : kiiṣán
-Cx:Cy  <=> %^RV: Cx: _ \%>:* %^RLEN: ;          
+Cx:Cy  <=> %^RV: Cx: _  (%^RC:) Vow  %^RLEN: ;          
+        where Cx in ( s đ v l j h m n ŋ r š )  
+              Cy in ( ṣ đ̣ ṿ ḷ j̣ ḥ ṃ ṇ ŋ̣ ṛ ṣ̌ ) 
 ! Commenting out except, it seems logically wrong (only one RLEN context)
 !       except 
 !                Cx: _ (%^RC:) Vow %^WG: [ ?* - Len: ] ;
-        where Cx in ( s đ v l j h m n ŋ r š )  
-              Cy in ( ṣ đ̣ ṿ ḷ j̣ ḥ ṃ ṇ ŋ̣ ṛ ṣ̌ ) 
 !        where Cx in ( p b s t k c č d đ g z ž v l j h m n ŋ r š )  
 !              Cy in ( p b ṣ t ḳ c č d đ̣ g z ž ṿ ḷ j̣ ḥ ṃ ṇ ŋ̣ ṛ ṣ̌ ) 
               matched ;
@@ -291,7 +293,7 @@ Cx:Cy  <=> %^RV: Cx: _ \%>:* %^RLEN: ;
 !htest f á ^RV:á d:0 d ^RC:0 á ^LLEN:0 >:0 n
 
 "Consonant shortening (not weak grade)"
-!! __@RULENAME@__ p to p for kappeer ~ kaperist
+!! __@RULENAME@__ pp to p for kappeer ~ kaperist
 Cx:0 <=> _ Cx (%^RC:) Vow:* Cns %^CSH: \Len: ; 
        where Cx in ( p b s t k c č d g z ž v l m n ŋ r š ) ;
               
