@@ -324,7 +324,7 @@ Cx:Cy  <=> %^RV: Cx: _  (%^RC:) Vow  %^RLEN: ;
 "Root vowel lengthening"
 !! __@RULENAME@__ kissán --> kiissán
 %^RV:Vx <=> Vx _ \%>:* %^RLEN: ;
-        where Vx in ( i á a o u ) ; ! pending...
+        where Vx in ( i     o   ) ; ! pending...
 !htest k e ^RV:e p ^RC:p i d e:0 m ^RLEN:0 >:0 i s t
 ! Commenting out except, it seems logically wrong (only one RLEN context)
 !        except   ! removing except...
@@ -334,13 +334,14 @@ Cx:Cy  <=> %^RV: Cx: _  (%^RC:) Vow  %^RLEN: ;
 !€ kiissá00n
 !htest k i ^RV:i s s á ^RLEN:0 >:0 n
 
-"Low root vowel lengthening"
+"Low root vowel lengthening + root vowel lengthening"
 !! __@RULENAME@__ fáddá ~ fááddá
 %^RV:Vx <=> Vx _ \%>:* %^LLEN: ;
+            Vx _ \%>:* %^RLEN: ;
 ! Commenting out except, it seems logically wrong (only one RLEN context)
 !        except    ! removing except
 !            Vx _ [ ?* - %>: ] %^RLEN: ;
-        where Vx in ( á a u ) ; ! pending...
+        where Vx in (   á a   u ) ; ! pending...
 
 !€ fá^RVddá^LLEN
 !€ fááddá0
