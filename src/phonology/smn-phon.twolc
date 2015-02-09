@@ -89,14 +89,14 @@ Alphabet
 !! !!Morpheme boundaries:
 
 !! Here we define the suffix border >
-!! The other borders (for derivations and compounds are not implemented yet.
+!! The other borders are not used yet, but still defined:
 
-! «   @CODE@ Derivational prefix
-! »   @CODE@ Derivational suffix
-! %<  @CODE@ Inflectional prefx
- %>:0 @CODE@ Inflectional suffix
-! #   hashtag Word boundary for both lexicalised and dynamic compounds
-! %^  @CODE@ (exceptional) soft hyphenation point
+ «  !! ;@CODE@: Derivational prefix
+ »  !! ;@CODE@: Derivational suffix
+ %< !! ;@CODE@: Inflectional prefx
+ %> !! ;@CODE@: Inflectional suffix
+ #  !! ;@CODE@: Word boundary for both lexicalised and dynamic compounds
+ %^ !! ;@CODE@: (exceptional) soft hyphenation point
 
 !! End of alphabet definitions
 
@@ -214,7 +214,8 @@ Cx:Cy <=> _ %^RC: Vow %^WG: ;
 
 "Consonant shortening after root vowel lengthening 1"
 !! __@RULENAME@__ kissá : kiiṣán
-Cx:0 <=> %^RV: _ :Cy \%>:* %^RLEN: ;          
+Cx:0 <=> %^RV: _ :Cy \%>:* %^RLEN: ;
+         %^RV: _ :Cx \%>:* %^LLEN: ;
 ! Commenting out except, it seems logically wrong (only one RLEN context)
 !       except 
 !               _ :Cy (%^RC:) Vow %^WG: [ ?* - Len: ] ;
@@ -237,14 +238,14 @@ Cx:Cy  <=> %^RV: Cx: _ \%>:* %^RLEN: ;
 !htest k i ^RV:i s:0 s ^RC:0 á ^RLEN:0 >:0 n
 
 
-"Consonant shortening after low root vowel lengthening"
-!! __@RULENAME@__ fáddá : fáádá
-Cx:0 <=> %^RV: _ :Cx \%>:* %^LLEN: ;          
-! Commenting out except, it seems logically wrong (only one LLEN context)
-!       except 
-!               _ :Cx (%^RC:) Vow %^WG: [ ?* - Len: ] ;
-        where Cx in ( p b s t k c č d g z ž v l m n ŋ r š ) ; 
-
+!"Consonant shortening after low root vowel lengthening"
+!!! __@RULENAME@__ fáddá : fáádá
+!Cx:0 <=> %^RV: _ :Cx \%>:* %^LLEN: ;          
+!! Commenting out except, it seems logically wrong (only one LLEN context)
+!!       except 
+!!               _ :Cx (%^RC:) Vow %^WG: [ ?* - Len: ] ;
+!        where Cx in ( p b s t k c č d g z ž v l m n ŋ r š ) ; 
+!
 !htest f á ^RV:á d:0 d ^RC:0 á ^LLEN:0 >:0 n
 
 "Consonant shortening (not weak grade)"
