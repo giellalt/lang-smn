@@ -112,7 +112,7 @@ generator-%.xfst: generator-%.tmp.xfst                      \
 					filters/remove-halflong-dotbelow.xfst   \
 					filters/remove-letter-acute-accent.xfst            
 	$(AM_V_XFST)$(PRINTF) "read regex                        \
-				@\"$<\".i                                    \
+				@\"$<\"                                      \
 			.o. @\"filters/remove-letter-acute-accent.xfst\" \
 			.o. @\"filters/remove-halflong-dotbelow.xfst\"   \
 			;\n\
