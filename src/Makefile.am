@@ -122,7 +122,8 @@ generator-%.xfst: generator-%.tmp.xfst                      \
 
 # Do NOT apply the accent removal filters to the normative
 # dictionary generator (both hfst and xfst):
-generator-dict-gt-norm.%: generator-dict-gt-norm.tmp.%
+generator-dict-gt-norm.hfst generator-dict-gt-norm.xfst: \
+		generator-dict-gt-norm.%: generator-dict-gt-norm.tmp.%
 	$(AM_V_CP)cp -f $< $@
 
 ##################################################################
