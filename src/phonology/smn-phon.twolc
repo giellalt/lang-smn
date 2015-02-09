@@ -159,9 +159,21 @@ Rules
 "Quantitative weak grade xx:x 1"
 !! __@RULENAME@__ kissá : kisá
 Cx:0 <=> _ Cy: (%^RC:) Vow (%^RC:) (%^SV:) %^WG: \[Len: - %^RLEN:] ; 
-       where Cx in ( p b s t k c č d g z ž v l m n ŋ r š  p   k   č   h   t  ) 
-             Cy in ( p b s t k c č d g z ž v l m n ŋ r š  %^P %^K %^Č %^H %^T ) 
+       where Cx in ( p b s t k c č d   g z ž v l     m n ŋ r š  p   k   č   h   t  ) 
+             Cy in ( p b s t k c č d   g z ž v l     m n ŋ r š  %^P %^K %^Č %^H %^T ) 
 			matched ;
+
+! From "Consonant shortening after root vowel lengthening 1" below:
+!      where Cx in ( p b s t k c č d đ g z ž v l j h m n ŋ r š )  
+!            Cy in ( p b ṣ t k c č d đ̣ g z ž ṿ ḷ j̣ ḥ ṃ ṇ ŋ̣ ṛ ṣ̌ ) 
+! The source of the conflict messages: We say in both rules that X:0 <=> - the
+! problem is that we require this change always and only in BOTH contexts, and
+! that is of course impossible. The way to solve this is to identify the subset
+! of consonant pairs that is the same for both rules, and then merge the rules
+! for this set, by specifying two alternative contexts. For the remaining con-
+! sonant pairs (i.e. pairs with complementary distribution) should be kept in
+! the old rules. This should remove the conflicts.
+
 
 "Quantitative weak grade xx:x 2"
 !! __@RULENAME@__ kissá : kisá
