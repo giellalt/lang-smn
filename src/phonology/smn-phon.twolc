@@ -423,8 +423,8 @@ i:j <=> i [ Arch: | Len: ]* %>: _ ;
 
 "Root vowel lowering"
 !! __@RULENAME@__ ä to a
-Vx:Vy <=>     _ Vx: Cns \%>:* %^RVL: ;
-          Vx: _     Cns \%>:* %^RVL: ;
+Vx:Vy <=>     _ Vx: Cns Dummy:* %^RVL: ;
+          Vx: _     Cns Dummy:* %^RVL: ;
           where Vx in ( ä )
                 Vy in ( a )
           matched ;
@@ -463,10 +463,10 @@ e:i <=> _ Vx: Cns: Cns Vow: Cns %^DIPH:0 ;
 !htest e:i e:ä b b i:á r
 !htest č e:i ^RV:ä p ^RC:p e:á t8:t
 
-"i:á in some contexts"
+!"i:á in some contexts"
 !! __@RULENAME@__ for i stems
-i:á <=> _ Cns (%^DIPH:0) %^IA:0 ;
-
+!i:á <=> _ Cns (%^DIPH:0) %^IA:0 %>: ;
+! mystic...
 		
 "e:á in stem v of syll"	
 !! __@RULENAME@__ in front of t8:t	 
