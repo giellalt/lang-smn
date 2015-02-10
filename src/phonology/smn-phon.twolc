@@ -66,7 +66,7 @@ Alphabet
 %^DIPH:0    !!= * @CODE@ diphthongisation
 %^IA:0      !!= * @CODE@ i to á (more)
 %^FCD:0     !!= * @CODE@  Final consonant deletion
-
+%^EE:0      !!= * @CODE@  Final vowel deletion in ee stems
  ¥:0        !!= * @CODE@ for Vowel lengthening, to be deleted
 
 
@@ -126,7 +126,7 @@ Sets
  StemCns = b b3 d d3 g g2 g3 h h2 h3 		   !!= * @CODE@ 
            j l m m2 m3 m8 n n8 n2 ŋ r s  ;     !!= * @CODE@ 
 
-Arch = %^WG %^RC %^RV %^SV %^RVL ;    !!= * @CODE@ 
+Arch = %^WG %^RC %^RV %^SV %^RVL %^EE ;    !!= * @CODE@ 
 Len = %^RLEN %^LLEN %^SLEN %^CLEN ;    !!= * @CODE@ 
 
 Dummy = Arch Len %^ODDC ;    !!= * @CODE@ 
@@ -386,8 +386,9 @@ Vx:0 <=>  _ Vx Cns (Cns) (Vow:) Vow Cns %^CSH: \Len: ;
     where Vx in ( a e o á ä ) ;
     
 !htest k a a:0 v p u g ^CSH:0 >:0 i s t
-    
-e : 0 <=> e_%^EE
+
+"Shortening e in ee stems"    
+e:0 <=> e _ %^EE: ;
 
 
 !! !Vowel changes
