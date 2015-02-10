@@ -156,12 +156,27 @@ Rules
 
 !! !Gradation
 
-"Quantitative weak grade xx:x 1"
+"Quantitative weak grade xx:y 1"
 !! __@RULENAME@__ kissá : kisá
 Cx:0 <=> _ Cy: (%^RC:) Vow (%^RC:) (%^SV:) %^WG: ; !\[Len: - %^RLEN:] ; 
-       where Cx in (                                            p   k   č   h   t  ) 
-             Cy in (                                            %^P %^K %^Č %^H %^T ) 
+       where Cx in ( p   k   č   h   t   ) 
+             Cy in ( %^P %^K %^Č %^H %^T ) 
        matched ;
+
+"Quantitative weak grade xx:y 2"
+!! __@RULENAME@__ kissá : kisá
+Cx:0 <=> _ Cy: (%^RC:) Vow (%^RC:) (%^SV:) %^WG: ; !\[Len: - %^RLEN:] ; 
+       where Cx in ( p   k   č   h   t   ) 
+             Cy in ( %^P %^K %^Č %^H %^T ) 
+       matched ;
+
+"xx:y gradation in Aanaarsaami words (change)"
+!! __@RULENAME@__ 
+Cx:Cy <=> _ %^RC: Vow (%^SV:) %^WG: ;
+    where Cx in ( %^P %^K %^Č %^H %^T )
+          Cy in (   v   h   j   v   đ )
+          matched ; 
+
 
 ! Original set:
 !      where Cx in ( p b s t k c č d   g z ž v l     m n ŋ r š  p   k   č   h   t  ) 
@@ -180,9 +195,14 @@ Cx:0 <=> _ Cy: (%^RC:) Vow (%^RC:) (%^SV:) %^WG: ; !\[Len: - %^RLEN:] ;
 ! the old rules. This should remove the conflicts.
 
 
+"Quantitative weak grade xx:x 1"
+!! __@RULENAME@__ kissá : kisá
+Cx:0 <=> _ Cx:   (%^RC:) Vow %^WG: \Len: ; 
+       where Cx in ( m n ŋ v s r đ l ) ;
+
 "Quantitative weak grade xx:x 2"
 !! __@RULENAME@__ kissá : kisá
-Cx:Cy <=> Cx:0 _  (%^RC:) Vow %^WG: \Len: ; 
+Cx:Cy <=> Cx: _  (%^RC:) Vow %^WG: \Len: ; 
        where Cx in ( m n ŋ v s r đ l ) 
              Cy in ( ṃ ṇ ŋ̣ ṿ ṣ ṛ đ̣ ḷ ) 
 			matched ;
@@ -212,13 +232,6 @@ Cx:Cy <=> _ Cz (%^RC:) Vow (Cns:) %^WG: ;
 !htest r á ^RV:0 k:v s ^RC:0 á ^WG:0
 !htest č u ^RV:0 h:v č ^RC:0 á ^WG:0 ^CLEN:0 >:0 i n
 
-
-"xx:y gradation in Aanaarsaami words (change)"
-!! __@RULENAME@__ 
-Cx:Cy <=> _ %^RC: Vow (%^SV:) %^WG: ;
-    where Cx in ( %^P %^K %^Č %^H %^T )
-          Cy in (   v   h   j   v   đ )
-          matched ; 
 
 
 !"xx:y gradation in Aanaarsaami words (deletion)"
