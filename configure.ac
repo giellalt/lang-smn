@@ -172,6 +172,9 @@ AC_CONFIG_FILES([tools/shellscripts/usmn-gt.sh], \
 
 #### BEGIN: Add language-specific scripts below here: ####
 
+AC_CONFIG_FILES([test/src/morphology/testnounlemmas.sh], \
+      [chmod a+x test/src/morphology/testnounlemmas.sh])
+      
 ############ END: Language-specific scripts. #############
 
 # This must be near the end of all configure.ac files:
