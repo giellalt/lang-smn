@@ -174,6 +174,10 @@ AC_CONFIG_FILES([tools/shellscripts/usmn-gt.sh], \
 
 AC_CONFIG_FILES([test/src/morphology/testnounlemmas.sh], \
       [chmod a+x test/src/morphology/testnounlemmas.sh])
+AC_CONFIG_FILES([test/src/morphology/generate-verb-lemmas.sh], \
+      [chmod a+x test/src/morphology/generate-verb-lemmas.sh])
+AC_CONFIG_FILES([test/src/morphology/generate-adjective-lemmas.sh], \
+      [chmod a+x test/src/morphology/generate-adjective-lemmas.sh])
       
 ############ END: Language-specific scripts. #############
 
