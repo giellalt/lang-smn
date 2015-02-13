@@ -20,21 +20,22 @@ GT_LEXC_ROOT=root.lexc
 
 # Set this to the names of all regular lexc source files:
 GT_LEXC_SRCS_L1_L2=\
-			clitics.lexc			   \
-			root.lexc				   \
-			affixes/adjectives.lexc		   \
-			affixes/nouns.lexc		   \
+			clitics.lexc	   \
+			root.lexc	  \
+			compounding.lexc   \
+			affixes/adjectives.lexc	   \
+			affixes/nouns.lexc	   \
 			affixes/propernouns.lexc   \
-			affixes/verbs.lexc		   \
+			affixes/verbs.lexc	   \
 			stems/adpositions.lexc	   \
-			stems/adverbs.lexc		   \
-			stems/adjectives.lexc		   \
+			stems/adverbs.lexc	   \
+			stems/adjectives.lexc	   \
 			stems/conjunctions.lexc	   \
 			stems/interjections.lexc   \
-			stems/nouns.lexc		   \
-			stems/numerals.lexc		   \
+			stems/nouns.lexc	   \
+			stems/numerals.lexc	   \
 			stems/particles.lexc	   \
-			stems/pronouns.lexc		   \
+			stems/pronouns.lexc	   \
 			stems/punctuation.lexc	   \
 			stems/subjunctions.lexc	   \
 			stems/verbs.lexc
