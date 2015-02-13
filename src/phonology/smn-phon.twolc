@@ -45,7 +45,7 @@ Alphabet
 
   m7:ṃ n7:ṇ ŋ7:ŋ̣ v7:ṿ s7:ṣ r7:ṛ đ7:đ̣ l7:ḷ j7:j̣ h7:ḥ š7:ṣ̌ !!= * @CODE@  with dots
   h8:h g8:g m8:m n8:n t8:t				   !!= * @CODE@	to be documented
-  k2:k									   !!= * @CODE@ to be documented
+  k2:k	m9:m							   !!= * @CODE@ to be documented
 %^P:p %^K:k %^Č:č %^H:h %^T:t              !!= * @CODE@
  
 !! Different triggers
@@ -67,6 +67,7 @@ Alphabet
 %^IA:0      !!= * @CODE@ i to á (more)
 %^FCD:0     !!= * @CODE@  Final consonant deletion
 %^EE:0      !!= * @CODE@  Final vowel deletion in ee stems
+%^UU:0      !!= * @CODE@  Final vowel deletion in uu stems
  ¥:0        !!= * @CODE@ for Vowel lengthening, to be deleted
 
 
@@ -126,7 +127,7 @@ Sets
  StemCns = b b3 d d3 g g2 g3 h h2 h3 		   !!= * @CODE@ 
            j l m m2 m3 m8 n n8 n2 ŋ r s  ;     !!= * @CODE@ 
 
-Arch = %^WG %^RC %^RV %^SV %^RVL %^EE ;    !!= * @CODE@ 
+Arch = %^WG %^RC %^RV %^SV %^RVL %^EE %^UU ;    !!= * @CODE@ 
 Len = %^RLEN %^LLEN %^SLEN %^CLEN ;    !!= * @CODE@ 
 
 Dummy = Arch Len %^ODDC ;    !!= * @CODE@ 
@@ -329,6 +330,11 @@ Cx:Cy  <=> %^RV: Cx: _  (%^RC:) Vow  %^RLEN: ;
 
 !htest l u o p:0 m á:i n8:0 ^WG:0 ^FCD:0
 	
+"Word Final m9 to n"
+ m9:n <=> _ %>: [.#.|Cns] ;
+
+!€ puhelim9>ntáá
+!€ puhelin0ttáá
 
 !! !!Vowel rules
 
