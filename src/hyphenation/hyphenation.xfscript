@@ -23,7 +23,7 @@ define Vow       [ a | á | e | i | o | u | y | æ | ø | å | ä | ö |
 é | ó | ú | í | à | è | ò | ù | ì | ë | ü | ï | â | ê | ô | û | î | ã | ý
 É | Ó | Ú | Í | À | È | Ò | Ù | Ì | Ë | Ü | Ï | Â | Ê | Ô | Û | Î | Ã | Ý ] ;
 
-define 2ndVow [ e | a | u | o | i | y | ø | E | A | U | O | I | Y | Ø ] ;
+define 2ndVow [ e | a | u | o | i | á | y | ø | E | A | U | O | I | Á | Y | Ø ] ;
 
 !define 3dVow [ u | U ] ;
 
@@ -46,6 +46,7 @@ define Oslash   [ ø | Ø ] ; ! Renamed from Ø to avoid non-ASCII chars
 define UI  [ u | U | i | I ] ;
 
 
+define UAAdipht [ u á | U á | U Á ] ;
 define IEdipht [ i e | I e | I E ] ;
 define UOdipht [ u o | U o | U O ] ;
 define EAdipht [ e a | E a | E A ] ;
@@ -66,7 +67,7 @@ define IOdipht [ i o | I o | I O ] ; ! skiold, nation
 
 
 
-define dipht [ IEdipht | UOdipht | EAdipht | OAdipht | OUdipht | AUdipht |
+define dipht [ IEdipht | UAAdipht | UOdipht | EAdipht | OAdipht | OUdipht | AUdipht |
                EUdipht | AEdipht | OslashYdipht | OEdipht | IOslashdipht | IOdipht] ;
 
 !define tripht [ EAUtripht | IEUtripht ] ;
@@ -168,6 +169,8 @@ define removedouble2 %^ -> 0 || _ %- ;
 define removedouble3 %# -> 0 || %- _ ;
 define removedouble4 %# -> 0 || _ %- ;
 
+define readablehyphen %^ -> %- ;
+
 echo <<Combining...>>
 
 read regex [
@@ -210,6 +213,7 @@ afterlong
 .o. removedouble2
 .o. removedouble3
 .o. removedouble4
+.o. readablehyphen
  ] ;
 
 
