@@ -404,14 +404,13 @@ LEXICON SAAMI
 +N+Sg+Com:%^RVL%>in K ; ! kissáin, rávssáin, fáddáin
 +N+Pl+Ill:%^RVL%>id K ; ! kissáid, rávssáid, fáddáid
 
-LEXICON KAPPEER 
+LEXICON KAPPEER-COMMON 
 +N+Sg+Nom: K ;        		   		! kappeer
 +N+Sg+Gen: K ;    		 			! kappeer
 +N+Sg+Acc: K ;     		 			! kappeer 
 +N+Sg+Ill:%^CSH%^RVSH%>ân K ;		! kaperân
 +N+Sg+Loc:%^CSH%^RVSH%>ist K ; 		! kaperist 
 +N+Sg+Com:%^CSH%^RVSH%>áin K ;		! kaperáin
-+N+Sg+Abe:%>ttáá K ;				! kappeerttáá
 +N+Ess:%^CSH%^RVSH%>in K ; 			! kaperin 
 +N+Par:%^CSH%^RVSH%>id K ; 			! kaperid
 +N+Pl+Nom:%^CSH%^RVSH%>eh K ;  		! kapereh
@@ -422,6 +421,9 @@ LEXICON KAPPEER
 +N+Pl+Com:%^CSH%^RVSH%>ijguin K ; 	! kaperijguin
 +N+Pl+Abe:%^CSH%^RVSH%>ijttáá K ;   ! kaperijttáá 
 
+LEXICON KAPPEER
+KAPPEER-COMMON ; 
++N+Sg+Abe:%>ttáá K ;				! kappeerttáá
 
 LEXICON HUKSIM 
 +N+Sg+Nom: K ;               ! huksim
@@ -657,7 +659,23 @@ KAPPEER ;
 ! ------------------
 
 LEXICON SODDADEM
-KAPPEER ;
++N+Sg+Nom: K ;          !  šoddâdem
++N+Sg+Gen: K ;          !  šoddâdem
++N+Sg+Acc: K ;          !  šoddâdem
++N+Sg+Loc:%^SFV%>ist K ;     !  šoddâdmist
++N+Pl+Nom:%^SFV%>eh K ;      !  šoddâdmeh
++N+Pl+Gen:%^SFV%>ij K ;      !  šoddâdmij
++N+Pl+Acc:%^SFV%>ijd K ;     !  šoddâdmijd
++N+Pl+Loc:%^SFV%>ijn K ;     !  šoddâdmijn
++N+Sg+Ill:%^SFV%>ân K ;      !  šoddâdmân
++N+Sg+Abe:%>ttáá K ;    !  šoddâdemttáá
++N+Ess:%^SFV%>in K ;         !  šoddâdmin
++N+Par:%^SFV%>id K ;         !  šoddâdmid
++N+Pl+Com:%^SFV%>ijguin K ;  !  šoddâdmijguin
++N+Pl+Abe:%^SFV%>ijttáá K ;  !  šoddâdmijttáá
++N+Sg+Com:%^SFV%>áin K ;     !  šoddâdmáin
++N+Pl+Ill:%^SFV%>áid K ;     !  šoddâdmáid
+
 
 LEXICON KEPIDEM
 +N+Sg+Nom: K ;               ! kappeer
@@ -679,11 +697,17 @@ LEXICON KEPIDEM
 
 
 LEXICON POTTAAK
-KAPPEER ;
+:%^RC KAPPEER-COMMON ; 
++N+Sg+Abe:%>ttáá K ;		! haamittáá
+                                ! pottaakttáá
+
+LEXICON KAHHAAN
+:%^SC KAPPEER-COMMON ; 
++N+Sg+Abe:%>ttáá K ;		! kahhaanttáá
 
 LEXICON PIEHAIN
-KAPPEER ;
-
+:%^SFV%^SC KAPPEER-COMMON ; 
++N+Sg+Abe:%>ttáá K ;		! piehâinttáá
 
 LEXICON LITTER !!= * @CODE* MO Ib 2nd syll vowel does not alternate
  +N: ODD_SUFF_LONGSTEM ; 
