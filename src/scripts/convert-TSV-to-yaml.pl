@@ -11,6 +11,9 @@ my $UCVow = "AÂÁEIOUYÄÖ";
 my $Cns = "bcčdđfghjklmnŋprsštvz";
 my $UCCns = "BCČDĐFGHJKLMNŊPRSŠTVZ";
 
+# gt-norm or dict-gt-norm? Default is dict:
+my $gtnorm = "";
+
 # Print yaml header:
 print "Config:\n";
 print "  hfst:\n";
@@ -24,6 +27,7 @@ print "Tests:\n";
 
 while (<>) {
     chomp;
+    ### Convert upper case letters as follows: ###
     # V -> vˊ || ~V _ C:
     s/([^$UCVow])([$UCVow])([$Cns$UCCns])/$1\l$2ˊ$3/g;
     # V1 V2 -> v1 v2:
@@ -36,6 +40,11 @@ while (<>) {
     s/([$Vow])([$UCCns])([$Cns])/$1\l$2ˊ$3/g;
     # C -> c:
     s/([$UCCns])/\l$1/g;
+
+    # If we convert for gtnorm, remove dot under and apostrophe:
+    s/[ˊ̣]//g if $gtnorm ne "";
+
+    # Split the input string in the relevant fields:
     (my $SgNom, $SgGen, $SgIll, $SgLoc, $SgCom, $SgAbe, $Ess, $PlNom,
         $PlGen, $PlAcc, $PlIll, $PlLoc, $PlCom, $PlAbe, $rest) =
         split /\t/ ;
@@ -50,7 +59,12 @@ while (<>) {
     print "    $lemma+N+Sg+Abe:   $SgAbe\n";
     print "    $lemma+N+Ess:      $Ess\n";
     print "    $lemma+N+Pl+Nom:   $PlNom\n";
-    print "    $lemma+N+Pl+Gen:   $PlGen\n";
+    if ( $PlGen =~ / / ) {
+        $PlGen =~ s/ /, /g;
+        print "    $lemma+N+Pl+Gen:  [$PlGen]\n";
+    } else {
+        print "    $lemma+N+Pl+Gen:   $PlGen\n";
+    }
     print "    $lemma+N+Pl+Acc:   $PlAcc\n";
     print "    $lemma+N+Pl+Ill:   $PlIll\n";
     print "    $lemma+N+Pl+Loc:   $PlLoc\n";
