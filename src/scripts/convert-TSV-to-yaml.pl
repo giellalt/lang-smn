@@ -47,7 +47,7 @@ while (<>) {
     chomp;
     ### Convert upper case letters as follows: ###
     # V -> vˊ || ~V _ C:
-    s/([^$UCVow])([$UCVow])([$Cns$UCCns])/$1\l$2ˊ$3/g;
+    s/([^$UCVow])([$UCVow])([i$Cns$UCCns])/$1\l$2ˊ$3/g;
     # V1 V2 -> v1 v2:
     s/([$UCVow])([$UCVow])/\l$1\l$2/g;
     # C -> c || v i _ v:
