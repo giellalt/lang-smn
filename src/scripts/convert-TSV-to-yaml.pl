@@ -56,7 +56,12 @@ while (<>) {
     print "    $lemma+N+Sg+Ill:   $SgIll\n";
     print "    $lemma+N+Sg+Loc:   $SgLoc\n";
     print "    $lemma+N+Sg+Com:   $SgCom\n";
-    print "    $lemma+N+Sg+Abe:   $SgAbe\n";
+    if ( $SgAbe =~ / / ) {
+        $SgAbe =~ s/ /, /g;
+        print "    $lemma+N+Sg+Abe:  [$SgAbe]\n";
+    } else {
+        print "    $lemma+N+Sg+Abe:   $SgAbe\n";
+    }
     print "    $lemma+N+Ess:      $Ess\n";
     print "    $lemma+N+Pl+Nom:   $PlNom\n";
     if ( $PlGen =~ / / ) {
