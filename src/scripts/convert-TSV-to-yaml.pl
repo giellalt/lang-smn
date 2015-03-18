@@ -14,14 +14,32 @@ my $UCCns = "BCČDĐFGHJKLMNŊPRSŠTVZ";
 # gt-norm or dict-gt-norm? Default is dict:
 my $gtnorm = "";
 
+my $fst="dict-gt-norm";
+$fst = "gt-norm" if $gtnorm ne "";
+
+my @WordForms = ("+Sg+Nom",
+                 "+Sg+Gen",
+                 "+Sg+Ill",
+                 "+Sg+Loc",
+                 "+Sg+Com",
+                 "+Sg+Abe",
+                    "+Ess",
+                 "+Pl+Nom",
+                 "+Pl+Gen",
+                 "+Pl+Acc",
+                 "+Pl+Ill",
+                 "+Pl+Loc",
+                 "+Pl+Com",
+                 "+Pl+Abe");
+
 # Print yaml header:
 print "Config:\n";
 print "  hfst:\n";
-print "    Gen: ../../../src/generator-dict-gt-norm.hfst\n";
-print "    Morph: ../../../src/analyser-dict-gt-norm.hfst\n";
+print "    Gen: ../../../src/generator-$fst.hfst\n";
+print "    Morph: ../../../src/analyser-$fst.hfst\n";
 print "  xerox:\n";
-print "    Gen: ../../../src/generator-dict-gt-norm.xfst\n";
-print "    Morph: ../../../src/analyser-dict-gt-norm.xfst\n";
+print "    Gen: ../../../src/generator-$fst.xfst\n";
+print "    Morph: ../../../src/analyser-$fst.xfst\n";
 print "\n";
 print "Tests:\n";
 
@@ -45,35 +63,16 @@ while (<>) {
     s/[ˊ̣]//g if $gtnorm ne "";
 
     # Split the input string in the relevant fields:
-    (my $SgNom, $SgGen, $SgIll, $SgLoc, $SgCom, $SgAbe, $Ess, $PlNom,
-        $PlGen, $PlAcc, $PlIll, $PlLoc, $PlCom, $PlAbe, $rest) =
-        split /\t/ ;
-    (my $lemma = $SgNom ) =~ s/[ˊ̣]//g ;
-    $rest = "";
+    my @testentries = split /\t/ ;
+    (my $lemma = $testentries[0]) =~ s/[ˊ̣]//g ;
     print "  Noun - $lemma:\n";
-    print "    $lemma+N+Sg+Nom:   $SgNom\n";
-    print "    $lemma+N+Sg+Gen:   $SgGen\n";
-    print "    $lemma+N+Sg+Ill:   $SgIll\n";
-    print "    $lemma+N+Sg+Loc:   $SgLoc\n";
-    print "    $lemma+N+Sg+Com:   $SgCom\n";
-    if ( $SgAbe =~ / / ) {
-        $SgAbe =~ s/ /, /g;
-        print "    $lemma+N+Sg+Abe:  [$SgAbe]\n";
-    } else {
-        print "    $lemma+N+Sg+Abe:   $SgAbe\n";
+    for my $i (0 .. $#WordForms) {
+        if ( $testentries[$i] =~ / / ) {
+            $testentries[$i] =~ s/ /, /g;
+            print "    $lemma+N$WordForms[$i]: [$testentries[$i]]\n";
+        } else {
+            print "    $lemma+N$WordForms[$i]:  $testentries[$i]\n";
+        }
     }
-    print "    $lemma+N+Ess:      $Ess\n";
-    print "    $lemma+N+Pl+Nom:   $PlNom\n";
-    if ( $PlGen =~ / / ) {
-        $PlGen =~ s/ /, /g;
-        print "    $lemma+N+Pl+Gen:  [$PlGen]\n";
-    } else {
-        print "    $lemma+N+Pl+Gen:   $PlGen\n";
-    }
-    print "    $lemma+N+Pl+Acc:   $PlAcc\n";
-    print "    $lemma+N+Pl+Ill:   $PlIll\n";
-    print "    $lemma+N+Pl+Loc:   $PlLoc\n";
-    print "    $lemma+N+Pl+Com:   $PlCom\n";
-    print "    $lemma+N+Pl+Abe:   $PlAbe\n";
     print "\n";
 }
