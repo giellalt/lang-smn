@@ -64,7 +64,12 @@ while (<>) {
 
     # Split the input string in the relevant fields:
     my @testentries = split /\t/ ;
+    # Get the lemma from the first field:
     (my $lemma = $testentries[0]) =~ s/[ˊ̣]//g ;
+    # ... but if it is empty, get it from PlNom instead:
+    if ( $lemma eq "" ) {
+        ($lemma = $testentries[7]) =~ s/[ˊ̣]//g ;
+    }
     print "  Noun - $lemma:\n";
     for my $i (0 .. $#WordForms) {
         if ( $testentries[$i] eq "" ) {
