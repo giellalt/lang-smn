@@ -67,7 +67,10 @@ while (<>) {
     (my $lemma = $testentries[0]) =~ s/[ˊ̣]//g ;
     print "  Noun - $lemma:\n";
     for my $i (0 .. $#WordForms) {
-        if ( $testentries[$i] =~ / / ) {
+        if ( $testentries[$i] eq "" ) {
+            next;
+        }
+        elsif ( $testentries[$i] =~ / / ) {
             $testentries[$i] =~ s/ /, /g;
             print "    $lemma+N$WordForms[$i]: [$testentries[$i]]\n";
         } else {
