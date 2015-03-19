@@ -43,9 +43,11 @@ Alphabet
 
 !! Different archiphonemes
 
-  m7:ṃ n7:ṇ ŋ7:ŋ̣ v7:ṿ s7:ṣ r7:ṛ đ7:đ̣ l7:ḷ j7:j̣ h7:ḥ š7:ṣ̌ !!= * @CODE@  with dots
+  m7:ṃ n7:ṇ ŋ7:ŋ̣ s7:ṣ r7:ṛ đ7:đ̣ l7:ḷ j7:j̣ h7:ḥ š7:ṣ̌ !!= * @CODE@  with dots
+  v7:ṿ 
   h8:h g8:g m8:m n8:n t8:t				   !!= * @CODE@	to be documented
   k2:k	m9:m							   !!= * @CODE@ to be documented
+  p4:p ! pääpp4ir
 %^P:p %^K:k %^Č:č %^H:h %^T:t              !!= * @CODE@
  
 !! Different triggers
@@ -121,6 +123,7 @@ Sets
        b3 d3 g3 m3 h3 						   !!= @CODE@ 
        m7 n7 ŋ7 v7 s7 r7 đ7	l7 j7 h7 š7		   !!= @CODE@ 
        ṃ  ṇ  ŋ̣  ṿ  ṣ  ṛ  đ̣  ḷ  j̣  ḥ  ṣ̌         !!= * @CODE@
+       p4
 
        m8 n8 t8				                   !!=* @CODE@ 
        %^P %^K %^Č %^H %^T ;                   !!= * @CODE@ 
@@ -129,7 +132,7 @@ Sets
  StemCns = b b3 d d3 g g2 g3 h h2 h3 		   !!= * @CODE@ 
            j l m m2 m3 m8 n n8 n2 ŋ r s  ;     !!= * @CODE@ 
 
-Arch = %^WG %^RC %^RV %^SV %^RVL %^EE %^UU %^RVSH  ;    !!= * @CODE@ 
+Arch = %^WG %^RC %^RV %^SV %^RVL %^EE %^UU %^RVSH %^DIPH  ;    !!= * @CODE@ 
 Len = %^RLEN %^LLEN %^SLEN %^CLEN ;    !!= * @CODE@ 
 
 Dummy = Arch Len %^ODDC ;    !!= * @CODE@ 
@@ -143,31 +146,58 @@ Rules
 !! !Consonant gradation
 
 "X:x halflong to short gradation"
-Cx:Cy <=> Vow _ Vow (Cns) %^WG:0 ;
+Cx:Cy <=> Vow _ Vow (Cns) (Dummy:) %^WG:0 ;
 	where Cx in (m7 n7 ŋ7 r7 s7 š7 j7 v7 đ7 l7 )
 		  Cy in (m  n  ŋ  r  s  š  j  v  đ  l  )
 		  matched;
 
 "x:y gradation"
-Cx:Cy <=> Vow _ Vow (Cns) %^WG:0 ;
-	where Cx in (c č  h  p t)
-		  Cy in (s j7 v7 v đ)
+Cx:Cy <=> Vow _ Vow (Cns) (Dummy:) %^WG:0 ;
+	where Cx in (c č h p4 t)
+              Cy in (s j̣ ṿ v  đ)
 		  matched;
 
-"xx:x gradation"
-Cx:0 <=> Vow Cx _ Vow (Cns) %^WG:0 ;
-	where Cx in (b d g p t k c č f l z ž ) ;
+!€ käähir^WG
+!€ kääṿir0
+!€
 
-"xx:X long to halflog gradation 1"
-Cx:0 <=> Vow _ Cx: Vow (Cns) %^WG:0 ;
-	where Cx in (l m n ŋ r s v ) ;
+!€ käähir
+!€ käähir
 
-"xx:X long to halflog gradation 2"
-Cx:Cy <=> Vow Cx: _ Vow (Cns) %^WG:0 ;
-	where Cx in (l  m  n  ŋ  r  s  v  ) 
-		  Cy in (l7 m7 n7 ŋ7 r7 s7 v7 )
+!"xx:x gradation"
+!Cx:0 <=> Vow _  Cx: Vow (Cns) (Dummy:) %^WG:0 ;
+!	where Cx in (b d g p t k c č f l z ž ) ;
+
+!"xx:X long to halflong gradation 1"
+!Cx:0 <=> Vow _ Cx: Vow (Cns) (Dummy:) %^WG:0 ;
+!	where Cx in (l m n ŋ r s v ) ;
+!
+!"xx:X long to halflong gradation 2"
+!Cx:Cy <=> Vow Cx: _ Vow (Cns) (Dummy:) %^WG:0 ;
+!	where Cx in (l m n ŋ r s v  ) 
+!		  Cy in (ḷ ṃ ṇ ŋ̣ ṛ ṣ ṿ  )
+!		  matched ;
+
+"xx:y long to halflong gradation 1" ! hh:V, kk:h, pp:v, čč:J
+Cx:0 <=> Vow _ Cy: Vow (Cns) (Dummy:) %^WG:0 ;
+	where Cx in ( h  k p  č ) 
+	      Cy in ( h  k p4 č )
 		  matched ;
 
+!€ pääpp4ir^DIPH^WG
+!€ pää0 vir00
+!htest
+
+"xx:y long to halflong gradation 2" ! hh:V, kk:h, pp:v, čč:J
+Cx:Cy <=> Vow Cz: _ Vow (Cns) (Dummy:) %^WG:0 ;
+	where Cx in ( h  k p4 č ) 
+	      Cy in ( v7 h v j7 ) 
+	      Cz in ( h k p č ) 
+		  matched ;
+
+!€ pääpp4ir^DIPH^WG
+!€ pää0 vir00
+!htest p ä ä p:0 p4:v i r ^DIPH:0 ^WG:0
 
 !! !Consonant shortening
        
@@ -268,7 +298,7 @@ t:0 <=> _ %>: t t ;
 !htest h a a m i t:0 >:0 t t á á 
 
 "Inversion of 'in' to 'nj'"
-%^SC:j <=> n _ (%^CSH:) (%^RVSH:) %>: ; 
+%^SC:j <=> n (%^SFV:) _ (%^CSH:) (%^RVSH:) %>: ; 
 
 !€ pieˊhâin^SFV^SC^CSH^RVSH>ist
 !€ pie0hâ0n0j000ist
