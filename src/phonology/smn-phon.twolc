@@ -137,6 +137,39 @@ Dummy = Arch Len %^ODDC ;    !!= * @CODE@
 !! !!!Rule section
 
 Rules
+
+!! !!Consonant rules
+
+!! !Consonant gradation
+
+"X:x halflong to short gradation"
+Cx:Cy <=> Vow _ Vow (Cns) %^WG:0 ;
+	where Cx in (m7 n7 ŋ7 r7 s7 š7 j7 v7 đ7 l7 )
+		  Cy in (m  n  ŋ  r  s  š  j  v  đ  l  )
+		  matched;
+
+"x:y gradation"
+Cx:Cy <=> Vow _ Vow (Cns) %^WG:0 ;
+	where Cx in (c č  h  p t)
+		  Cy in (s j7 v7 v đ)
+		  matched;
+
+"xx:x gradation"
+Cx:0 <=> Vow Cx _ Vow (Cns) %^WG:0 ;
+	where Cx in (b d g p t k c č f l z ž ) ;
+
+"xx:X long to halflog gradation 1"
+Cx:0 <=> Vow _ Cx: Vow (Cns) %^WG:0 ;
+	where Cx in (l m n ŋ r s v ) ;
+
+"xx:X long to halflog gradation 2"
+Cx:Cy <=> Vow Cx: _ Vow (Cns) %^WG:0 ;
+	where Cx in (l  m  n  ŋ  r  s  v  ) 
+		  Cy in (l7 m7 n7 ŋ7 r7 s7 v7 )
+		  matched ;
+
+
+!! !Consonant shortening
        
 "Consonant shortening (not weak grade)"
 !!! __@RULENAME@__ pp to p for kappeer ~ kaperist
