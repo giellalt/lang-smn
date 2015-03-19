@@ -48,6 +48,7 @@ Alphabet
   h8:h g8:g m8:m n8:n t8:t				   !!= * @CODE@	to be documented
   k2:k	m9:m							   !!= * @CODE@ to be documented
   p4:p ! pääpp4ir
+  k4:k č4:č r4:r l4:l h4:h
 %^P:p %^K:k %^Č:č %^H:h %^T:t              !!= * @CODE@
  
 !! Different triggers
@@ -132,8 +133,8 @@ Sets
  StemCns = b b3 d d3 g g2 g3 h h2 h3 		   !!= * @CODE@ 
            j l m m2 m3 m8 n n8 n2 ŋ r s  ;     !!= * @CODE@ 
 
-Arch = %^WG %^RC %^RV %^SV %^RVL %^EE %^UU %^RVSH %^DIPH  ;    !!= * @CODE@ 
-Len = %^RLEN %^LLEN %^SLEN %^CLEN ;    !!= * @CODE@ 
+Arch = %^WG %^RC %^RV %^SV %^RVL %^EE %^UU %^RVSH %^DIPH   ;    !!= * @CODE@ 
+Len = %^RLEN %^LLEN %^SLEN %^CLEN %^LSH ;    !!= * @CODE@ 
 
 Dummy = Arch Len %^ODDC ;    !!= * @CODE@ 
            
@@ -164,9 +165,15 @@ Cx:Cy <=> Vow _ Vow (Cns) (Dummy:) %^WG:0 ;
 !€ käähir
 !€ käähir
 
-!"xx:x gradation"
-!Cx:0 <=> Vow _  Cx: Vow (Cns) (Dummy:) %^WG:0 ;
-!	where Cx in (b d g p t k c č f l z ž ) ;
+"xx:x gradation"
+Cx:0 <=> Vow _  Cx: (Dummy:) Vow (Vow) (Cns) (Dummy:) %^WG:0 ;
+	where Cx in ( b d g p t k c č f l z ž r ) ;
+
+!€ kopp^RCâ^WG^LLEN>st
+!€ ko0p0â000st
+!htest k o p:0 p ^RC:0 â ^WG:0 ^LLEN:0 >:0 s t 
+
+
 
 !"xx:X long to halflong gradation 1"
 !Cx:0 <=> Vow _ Cx: Vow (Cns) (Dummy:) %^WG:0 ;
@@ -180,8 +187,9 @@ Cx:Cy <=> Vow _ Vow (Cns) (Dummy:) %^WG:0 ;
 
 "xx:y long to halflong gradation 1" ! hh:V, kk:h, pp:v, čč:J
 Cx:0 <=> Vow _ Cy: Vow (Vow:) (Cns) (Dummy:) %^WG:0 ;
+         Vow (Dummy:) _ Cy: (Dummy:) Vow (Dummy:) %^WG:0 ;
 	where Cx in ( h  k p  č ) 
-	      Cy in ( h  k p4 č )
+	      Cy in ( h4  k4 p4 č4 )
 		  matched ;
 
 !€ pääpp4ir^DIPH^WG
@@ -190,7 +198,8 @@ Cx:0 <=> Vow _ Cy: Vow (Vow:) (Cns) (Dummy:) %^WG:0 ;
 
 "xx:y long to halflong gradation 2" ! hh:V, kk:h, pp:v, čč:J
 Cx:Cy <=> Vow Cz: _ Vow (Vow:) (Cns) (Dummy:) %^WG:0 ;
-	where Cx in ( h  k p4 č ) 
+          Vow (Dummy:) Cz: _ (Dummy:) Vow (Dummy:) %^WG:0 ;
+	where Cx in ( h4  k4 p4 č4 ) 
 	      Cy in ( ṿ  h v  j̣ ) 
 	      Cz in ( h  k p  č ) 
 		  matched ;
@@ -198,6 +207,20 @@ Cx:Cy <=> Vow Cz: _ Vow (Vow:) (Cns) (Dummy:) %^WG:0 ;
 !€ pääpp4ir^DIPH^WG
 !€ pää0 vir00
 !htest p ä ä p:0 p4:v i r ^DIPH:0 ^WG:0
+
+!€ su^RVkk4^RCá^SV^WG^CLEN^SLEN>st
+!€ su0  0 hh  áá  0  0    0    0st
+!htest s u ^RV:0 k:0 k4:h ^RC:h á:á ^SV:á ^WG:0 ^CLEN:0 ^SLEN:0 >:0 s t
+
+"yx:zx gradation"
+Cx:Cy <=> _ (ˊ:) Cz Vow (Dummy:) %^WG: ;
+       where Cx in ( h4 k4 h4 ) 
+             Cy in ( v  v  v )
+             Cz in ( t  s  č ) 
+       matched ;
+
+!€ liähˊtu^SV^WG^CLEN^SLEN>st
+!€ liäv0tu00000st
 
 !! !Consonant shortening
        
@@ -222,6 +245,10 @@ Cx:0 <=> _ Cx  [ Vow:  ]* Cns (%^RC:) (%^SC:) %^CSH: (%^RVSH:) %>: ;
 !€ vinnjooh^CSH^RVSH>ist
 !€ vi0nj0oh000ist
 !htest v i n:0 n j o:0 o h ^CSH:0 ^RVSH:0 >:0 i s t 
+
+!€ paakkeet^CSH>ân
+!€ paa0keet00ân
+!htest p a a k:0 k e e t ^CSH:0 >:0 â n
 
 "Vowel shortening"
 !! __@RULENAME@__ e to 0 for kappeer ~ kaperist
@@ -308,3 +335,20 @@ t:0 <=> _ %>: t t ;
 !€ kahhaan^SC^CSH^RVSH>ist
 !€ ka0ha0n0j000ist
 !htest
+
+"Consonant lengthening after weak grade"
+%^RC:Cx <=> Cy: _ Vow (Dummy:) %^WG: (Dummy:) %^CLEN: ;
+        where Cy in ( h4 k4 č4 p4 p ) 
+              Cx in ( v  h  j  v  p ) 
+        matched ;
+
+!€ su^RVkk4^RCá^SV^WG^CLEN^SLEN>st
+!€ su0  0 hh  áá  0  0    0    0st
+!htest s u ^RV:0 k:0 k4:h ^RC:h á:á ^SV:á ^WG:0 ^CLEN:0 ^SLEN:0 >:0 s t
+
+!€ kopp^RCâ^WG^LSH^CLEN>in
+!€ ko0ppá0000in
+!htest k o p:0 p:p ^RC:p â:á ^WG:0 ^LSH:0 ^CLEN:0 >:0 i n
+
+
+
