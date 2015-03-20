@@ -154,6 +154,7 @@ Cx:Cy <=> Vow _ Vow (Cns) (Dummy:) %^WG:0 ;
 
 "x:y gradation"
 Cx:Cy <=> Vow _ Vow (Cns) (Dummy:) %^WG:0 ;
+          Vow _ k4:h Vow (Cns) (Dummy:) %^WG:0 ;
 	where Cx in (c č h p4 t)
               Cy in (s j̣ ṿ v  đ)
 		  matched;
@@ -164,6 +165,7 @@ Cx:Cy <=> Vow _ Vow (Cns) (Dummy:) %^WG:0 ;
 
 !€ käähir
 !€ käähir
+
 
 "xx:x gradation"
 Cx:0 <=> Vow _  Cx: (Dummy:) Vow (Vow) (Cns) (Dummy:) %^WG:0 ;
@@ -188,7 +190,7 @@ Cx:0 <=> Vow _  Cx: (Dummy:) Vow (Vow) (Cns) (Dummy:) %^WG:0 ;
 "xx:y long to halflong gradation 1" ! hh:V, kk:h, pp:v, čč:J
 Cx:0 <=> Vow _ Cy: Vow (Vow:) (Cns) (Dummy:) %^WG:0 ;
          Vow (Dummy:) _ Cy: (Dummy:) Vow (Dummy:) %^WG:0 ;
-	where Cx in ( h  k p  č ) 
+	where Cx in ( h   k  p  č ) 
 	      Cy in ( h4  k4 p4 č4 )
 		  matched ;
 
@@ -200,8 +202,8 @@ Cx:0 <=> Vow _ Cy: Vow (Vow:) (Cns) (Dummy:) %^WG:0 ;
 Cx:Cy <=> Vow Cz: _ Vow (Vow:) (Cns) (Dummy:) %^WG:0 ;
           Vow (Dummy:) Cz: _ (Dummy:) Vow (Dummy:) %^WG:0 ;
 	where Cx in ( h4  k4 p4 č4 ) 
-	      Cy in ( ṿ  h v  j̣ ) 
-	      Cz in ( h  k p  č ) 
+	      Cy in ( ṿ   h  v  j̣ ) 
+	      Cz in ( h   k  p  č ) 
 		  matched ;
 
 !€ pääpp4ir^DIPH^WG
@@ -213,7 +215,7 @@ Cx:Cy <=> Vow Cz: _ Vow (Vow:) (Cns) (Dummy:) %^WG:0 ;
 !htest s u ^RV:0 k:0 k4:h ^RC:h á:á ^SV:á ^WG:0 ^CLEN:0 ^SLEN:0 >:0 s t
 
 "yx:zx gradation"
-Cx:Cy <=> _ (ˊ:) Cz Vow (Dummy:) %^WG: ;
+Cx:Cy <=> _ (ˊ:) Cz Vow (Cns) (Dummy:) %^WG: ;
        where Cx in ( h4 k4 h4 ) 
              Cy in ( v  v  v )
              Cz in ( t  s  č ) 
@@ -221,6 +223,35 @@ Cx:Cy <=> _ (ˊ:) Cz Vow (Dummy:) %^WG: ;
 
 !€ liähˊtu^SV^WG^CLEN^SLEN>st
 !€ liäv0tu00000st
+
+!€ pih4tâs^WG
+!€ pi vtâs0
+
+"xy:wz gradation"
+k4:h <=> Vow t:đ _ Vow (Cns) (Dummy:) %^WG: ;
+
+!€ totk4os^WG
+!€ tođ hos0
+
+!htest t o t:đ k4:h o s ^WG:0 
+
+"xyy:xy gradation"
+Cy:0 <=> Cx: _ Cy: Vow (Cns) %^WG: ;
+      where Cx in ( i i l l l l l l m m n n n r r r r r r v ) 
+            Cy in ( c t c p s t č š p č c s t c p s t č š p ) 
+      matched ;
+
+!€ riänttus^WG
+!€ riän0tus0
+
+"xxy:xy gradation"
+Cx:0 <=> Cx: _ Cy: Vow (Cns) %^WG: ;
+      where Cx in ( n ) 
+            Cy in ( j )
+      matched ;
+
+!€ koonnjâl^WG
+!€ koon0jâl0 
 
 !! !Consonant shortening
        
