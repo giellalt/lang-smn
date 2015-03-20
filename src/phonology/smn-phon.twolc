@@ -61,7 +61,7 @@ Alphabet
 %^SC:0          !!= * @CODE@ suffix consonant
 %^RLEN:0    !!= * @CODE@ root lengthening
 %^LLEN:0    !!= * @CODE@ low vow lengthening
-%^SLEN:0    !!= * @CODE@ hmm lengthening
+%^SLEN:0    !!= * @CODE@ stem vowel lengthening
 %^CLEN:0	!!= * @CODE@ cons lengthening
 %^RVL:0     !!= * @CODE@ root vow length
 %^CSH:0     !!= * @CODE@ cons shortening
@@ -315,6 +315,10 @@ Vx:0 <=> _ Cns %^SFV: %>: ;
 !€ ruávást^RC^CSH^RVSH>ist
 !€ ruávást0000ist
 !htest r u á v á s t ^RC:0 ^CSH:0 ^RVSH:0 >:0 i s t
+
+"Stem vowel e deletion before 2nd syllable ij"
+e:0 <=> _ %^WG: (Dummy:*) %>: i j ; 
+
 
 "Assimilation of root consonant and double suffix consonant"
 t:0 <=> _ %>: t t ; 
