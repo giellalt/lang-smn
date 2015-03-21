@@ -172,7 +172,6 @@ LEXICON MERKKA !!Vartalotyyppi CVC1C2C2V Even-a-circ
 +N+Pl+Abe:%^WG%^LSH%>ittáá K ; 		! merhâittáá
 
 LEXICON NJUNE
-
 +N+Sg+Nom: K ;						! njun7e
 +N+Sg+Gen:%^WG K ;					! njune
 +N+Sg+Acc:%^WG K ;					! njune
@@ -491,8 +490,8 @@ LEXICON ERGI  !!= * __@CODE@__ i-i-á
 LEXICON XERGI
         EVEN_N ;           ! Strong grade kietâ
  :%^XST EVEN_EP ;     ! Stronger grade kiettâ 
- :%^ILL ILL_SG ;           ! Weak grade kieđâ, can be %^WGSH
- :%^CPL NON_ILL_OBL ; ! Weak grade kieđâ, can be %^WGSH
+! :%^ILL ILL_SG ;           ! Weak grade kieđâ, can be %^WGSH
+! :%^CPL NON_ILL_OBL ; ! Weak grade kieđâ, can be %^WGSH
  :%^WGSH EVEN_WEAKSHORT ;
 
 
@@ -594,8 +593,27 @@ LEXICON LEIBI
 
 
 LEXICON ALGE  !!= * __@CODE@__
-+N: EVEN_NEP ;
-+N:%^WG EVEN_WEAK ;
+LODDE ;
+
+LEXICON LODDE
++N+Sg+Nom: K ;                          ! lodde
++N+Sg+Gen:%^WG K ;                      ! lode
++N+Sg+Acc:%^WG K ;                      ! lode
++N+Sg+Ill:%^RLEN%^CSH%^ILL%>n K ;  ! loodán; 
++N+Sg+Loc:%^WG%^CLEN%^SLEN%>st K ;      ! loddeest
++N+Sg+Com:%^WG%>ijn  K ;            ! luddijn
++N+Sg+Abe:%^WG%>ttáá K ;                ! lodettáá
++N+Ess:%>n K ;                          ! lodden
++N+Par:%>d K ;                          ! lodded
++N+Pl+Nom:%^WG%>h K ;                   ! lodeh 
++N+Pl+Gen:%^WG%^RLEN%>ij K ;        ! luudij 
++N+Pl+Acc:%^WG%^RLEN%>ijd K ;    ! luudijd
++N+Pl+Ill:%^WG%^CLEN%>ijd K ;   ! luddijd
++N+Pl+Loc:%^WG%^RLEN%>ijn K ;       ! luudijn
++N+Pl+Com:%^WG%>ijguin K ;       ! ludijguin
++N+Sg+Abe:%^WG%>ijttáá K ;       ! ludijttáá
+
+
 
 LEXICON ALME
 ALGE ;
@@ -629,11 +647,7 @@ LEXICON EVEN_EP !!= * __@CODE@__
  +Par:%>d K ;       ! tullâd
 
 LEXICON EVEN_WEAK !!= * __@CODE@__
- ILL_SG ;
- NON_ILL_OBL ;
 
-
-LEXICON NON_ILL_OBL  !!= * __@CODE@__
  +Sg+Gen: K ;   	    ! tuulâ
  +Sg+Acc: K ;		    ! tuulâ
  +Sg+Loc:%>st K ;		! tuulâst
@@ -643,9 +657,6 @@ LEXICON NON_ILL_OBL  !!= * __@CODE@__
  +Pl+Acc:%>id K ;       ! tuulâid
  +Pl+Ill:%>id K ;       ! tuul´did
  +Pl+Loc:%^IA%>in K ;   ! tullâin
-
-LEXICON ILL_SG !!= * __@CODE@__
- +Sg+Ill:%>n K ;	    ! tuulân   tuuḷân half/long ḷ
 
 
 LEXICON EVEN_WEAKSHORT !!= * __@CODE@__
