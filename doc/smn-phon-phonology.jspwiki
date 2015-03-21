@@ -33,6 +33,7 @@ Different archiphonemes
  *   h8:h g8:g m8:m n8:n t8:t				   	to be documented
  *   k2:k	m9:m							    to be documented
  * %^P:p %^K:k %^Č:č %^H:h %^T:t              
+ *  %^A:á 			      loddán but algan, default is á.
 
 Different triggers
 
@@ -44,7 +45,7 @@ Different triggers
  * %^SC:0           suffix consonant
  * %^RLEN:0     root lengthening
  * %^LLEN:0     low vow lengthening
- * %^SLEN:0     hmm lengthening
+ * %^SLEN:0     stem vowel lengthening
  * %^CLEN:0	 cons lengthening
  * %^RVL:0      root vow length
  * %^CSH:0      cons shortening
@@ -63,7 +64,7 @@ Different triggers
  * %^CPL:0 			     
  * %^DIPH:0 			     
  * %^IA:0			     	 
- * %^ILL:0 				 
+ * %^ILL:0 				  e to a/á in ill etc
  * %^ODDC:0				  shorten cns in odd-syll stems before C, #
  * %^ODDLV:0				 
  * %^ODDSHV:0				 
@@ -72,7 +73,6 @@ Different triggers
  * %^VLOW:0   				 
  * %^WGSH:0       			 
  * %^XST:0 			     
-
 
 !!Morpheme boundaries:
 
@@ -95,7 +95,7 @@ Sets
         é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý 	    
         A Á Â Ä E I O U Y Æ Ø Ö Å			    
         É Ó Ú Í À È Ò Ú Ì Ë Ü Ï Ê Ô Û Î Ã Ý 	    
-        ¥ ;									    
+        ¥ %^RV %^SV ;									    
  *  Cns = b c č d đ f g h j k l m n ŋ 			    
         p q r s š t ŧ v w x z ž				    
         B C Č D Đ F G H J K L M N Ŋ			    
@@ -110,7 +110,7 @@ Sets
  *  StemCns = b b3 d d3 g g2 g3 h h2 h3 		    
  *            j l m m2 m3 m8 n n8 n2 ŋ r s  ;      
 
- * Arch = %^WG %^RC %^RV %^SV %^RVL %^EE %^UU %^RVSH %^DIPH   ;     
+ * Arch = %^WG %^RC %^RV %^SV %^RVL %^EE %^UU %^RVSH %^DIPH %^SC %^CSC %^ILL  ;     
  * Len = %^RLEN %^LLEN %^SLEN %^CLEN %^LSH ;     
 
  * Dummy = Arch Len %^ODDC ;     
@@ -138,9 +138,36 @@ Sets
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 !Consonant shortening
 
 __Consonant shortening (not weak grade)__ pp to p for kappeer ~ kaperist
+
 
 
 
@@ -154,6 +181,20 @@ __Vowel shortening__ e to 0 for kappeer ~ kaperist
 
 
 __Suffix vowel lengthening__ long á in kissáást
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
