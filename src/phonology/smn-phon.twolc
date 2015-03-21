@@ -176,8 +176,6 @@ k4:h <=> Vow t: _ Vow (Cns) (Dummy:) %^WG: ;
 
 "xx:x gradation"
 Cx:0 <=> Vow: _ (ˊ:) Cx (Dummy:) Vow (Vow) (Cns) %^WG:0  ;
-!         Vow: _  Cx  Vow:*   (Cns) (%^RC:) (%^SC:) (%^RLEN:) %^CSH: (%^RVSH:) (%^ILL:) %>: ; ! not wg
-!         Vow: _  n j Vow:*    Cns  (%^RC:) (%^SC:)           %^CSH: (%^RVSH:) %>: ; ! not wg
 	where Cx in ( b d g p t k c č f l z ž r l m n ŋ r s š v ) ;
 
 !€ kopp^RCâ^WG^LLEN>st
@@ -227,7 +225,6 @@ Cx:Cy <=> _ (ˊ:) Cz Vow (Cns) (Dummy:) %^WG: ;
 
 !€ totk4os^WG
 !€ tođ hos0
-
 !htest t o t:đ k4:h o s ^WG:0 
 
 "xyy:xy gradation"
@@ -262,7 +259,7 @@ Cy:Cz <=> Vow: (%^RV:) Cx: Cy: _ Vow (Cns) %^WG: ;
 		  Cz in ( h  h h h  )
 		  matched ;
 
-"xyy:xy gradation 1"
+"xyy:xy gradation"
 Cy:0 <=> Vow: (%^RV:) Cx: _ Cy: Vow (Cns) %^WG: ;
 	where Cx in ( i4 l n r l m r v i4 l l l l n n r r r r )
 		  Cy in ( t  t t t p p p p c  c č s š c s c č s š ) 
@@ -272,12 +269,10 @@ Cy:0 <=> Vow: (%^RV:) Cx: _ Cy: Vow (Cns) %^WG: ;
 
 !€ aˆRVi4kkâ^WG
 !€ a0i0há0
-
 !htest a ^RV:0 i4:i k:0 k:h â ^WG:0
 
 !€ vieltti^WG
 !€ viel0ti0
-
 !htest v i e l t:0 t i ^WG:0
 
 
@@ -287,30 +282,21 @@ Cy:0 <=> Vow: (%^RV:) Cx: _ Cy: Vow (Cns) %^WG: ;
 		  Cy in (d l đ ž l m t t č d l m v b d g j m n s v ŋ š ž n d h j z ž c s t č b d f g h j m n r s t v ŋ š k m n p t v k h d g k j l m n r z đ ŋ ž b f g j m g k m p t )
 		  matched;
 
-"xˊy:xy gradation"
+"xˊy:xy gradation for i4"
 ˊ:0 <=> Vow i4: _ Cx Vow (Cns) (Dummy:) %^WG:0 ;
 	where Cx in (b  d  g  l  m  n  r  v  z  ŋ ) ;
 
 
 
 
-"nj to nnj lengthening (not strong grade)"
-%^RC:n <=>  Vow: (%^RV:) n: n _ j  Vow (Cns:) %^WG: %^CLEN: %>: ;
+  
+!! !Other Consonant Rules
 
-!€ kunnjo^WG^CLEN
-!€ kun0njo00
-  
-!€ koonnjâl^WG
-!€ koon0jâl0 
-  
-!! !Consonant shortening
        
 "Consonant shortening (not weak grade)"
 !!! __@RULENAME@__ pp to p for kappeer ~ kaperist
 Cx:0 <=> _ Cx  [ Vow:  ]* (Cns) (%^RC:) (%^SC:) (%^RLEN:) %^CSH: (%^RVSH:) %>: ;
        where Cx in ( s v m n ŋ š h ) ;
-!       where Cx in ( p b s t k c č d g z ž v l m n ŋ r š h ) ;  ! the full gang     
-
  
 !€ kappeer^CSH^RVSH>ist
 !€ ka0p0er000ist
@@ -331,6 +317,57 @@ Cx:0 <=> _ Cx  [ Vow:  ]* (Cns) (%^RC:) (%^SC:) (%^RLEN:) %^CSH: (%^RVSH:) %>: ;
 !€ paakkeet^CSH>ân
 !€ paa0keet00ân
 !htest p a a k:0 k e e t ^CSH:0 >:0 â n
+
+"nj to nnj lengthening (not strong grade)"
+%^RC:n <=>  Vow: (%^RV:) n: n _ j  Vow (Cns:) %^WG: %^CLEN: %>: ;
+
+!€ kunnjo^WG^CLEN
+!€ kun0njo00
+  
+!€ koonnjâl^WG
+!€ koon0jâl0 
+  
+  
+"Lengthen root consonant after vowel shortening"
+%^RC:Cx <=> Vow Cx _ %^CSH: ;
+        where Cx in ( p t k ) ; 
+
+!€ haamit^RC^CSH^RVSH>ist
+!€ h0amitt000ist
+!htest h a:0 a m i t ^RC:t ^CSH:0 ^RVSH:0 >:0 i s t
+
+!€ ruávást^RC^CSH^RVSH>ist
+!€ ruávást0000ist
+!htest r u á v á s t ^RC:0 ^CSH:0 ^RVSH:0 >:0 i s t
+
+
+"Assimilation of root consonant and double suffix consonant"
+t:0 <=> _ %>: t t ; 
+
+!€ haamit>ttáá
+!€ haami00ttáá
+
+!htest h a a m i t:0 >:0 t t á á 
+
+
+"Consonant lengthening after weak grade"
+%^RC:Cx <=> Cy: _ Vow (Dummy:) %^WG: (Dummy:) %^CLEN: ;
+        where Cy in ( h4 k4 č4 p4 p ) 
+              Cx in ( v  h  j  v  p ) 
+        matched ;
+
+!€ su^RVkk4^RCá^SV^WG^CLEN^SLEN>st
+!€ su0  0 hh  áá  0  0    0    0st
+!htest s u ^RV:0 k:0 k4:h ^RC:h á:á ^SV:á ^WG:0 ^CLEN:0 ^SLEN:0 >:0 s t
+
+!€ kopp^RCâ^WG^LSH^CLEN>in
+!€ ko0ppá0000in
+!htest k o p:0 p:p ^RC:p â:á ^WG:0 ^LSH:0 ^CLEN:0 >:0 i n
+
+
+
+
+!! !!Vowel rules
 
 "Vowel shortening"
 !! __@RULENAME@__ e to 0 for kappeer ~ kaperist
@@ -389,17 +426,6 @@ Vx:0 <=> _ Cns %^SFV: %>: ;
 !htest p i e ˊ:0 h â i:0 n ^SFV:0 ^SC:j ^CSH:0 ^RVSH:0 >:0 i s t
 
 
-"Lengthen root consonant after vowel shortening"
-%^RC:Cx <=> Vow Cx _ %^CSH: ;
-        where Cx in ( p t k ) ; 
-
-!€ haamit^RC^CSH^RVSH>ist
-!€ h0amitt000ist
-!htest h a:0 a m i t ^RC:t ^CSH:0 ^RVSH:0 >:0 i s t
-
-!€ ruávást^RC^CSH^RVSH>ist
-!€ ruávást0000ist
-!htest r u á v á s t ^RC:0 ^CSH:0 ^RVSH:0 >:0 i s t
 
 "Stem vowel e deletion before 2nd syllable ij"
 e:0 <=> _ (Dummy:*) %>: i j ; 
@@ -425,15 +451,7 @@ e:á <=> [o|i|u] (%^RV:) Cns:+ _ %^RLEN: %^CSH: %^ILL: ;
 %^A:a <=> a (%^RV:) Cns:* e: (Dummy:*) %>: _ ;
 
 
-
-
-"Assimilation of root consonant and double suffix consonant"
-t:0 <=> _ %>: t t ; 
-
-!€ haamit>ttáá
-!€ haami00ttáá
-
-!htest h a a m i t:0 >:0 t t á á 
+!! !!Other rules
 
 "Inversion of 'in' to 'nj'"
 %^SC:j <=> n (%^SFV:) _ (%^CSH:) (%^RVSH:) %>: ; 
@@ -446,20 +464,5 @@ t:0 <=> _ %>: t t ;
 !€ kahhaan^SC^CSH^RVSH>ist
 !€ ka0ha0n0j000ist
 !htest
-
-"Consonant lengthening after weak grade"
-%^RC:Cx <=> Cy: _ Vow (Dummy:) %^WG: (Dummy:) %^CLEN: ;
-        where Cy in ( h4 k4 č4 p4 p ) 
-              Cx in ( v  h  j  v  p ) 
-        matched ;
-
-!€ su^RVkk4^RCá^SV^WG^CLEN^SLEN>st
-!€ su0  0 hh  áá  0  0    0    0st
-!htest s u ^RV:0 k:0 k4:h ^RC:h á:á ^SV:á ^WG:0 ^CLEN:0 ^SLEN:0 >:0 s t
-
-!€ kopp^RCâ^WG^LSH^CLEN>in
-!€ ko0ppá0000in
-!htest k o p:0 p:p ^RC:p â:á ^WG:0 ^LSH:0 ^CLEN:0 >:0 i n
-
 
 
