@@ -50,7 +50,8 @@ Alphabet
   p4:p ! pääpp4ir
   k4:k č4:č r4:r l4:l h4:h
 %^P:p %^K:k %^Č:č %^H:h %^T:t              !!= * @CODE@
- 
+ %^A:á 			     !!= * @CODE@ loddán but algan, default is á.
+
 !! Different triggers
 
 !! !! 2014
@@ -80,7 +81,7 @@ Alphabet
 %^CPL:0 			     !!= * @CODE@
 %^DIPH:0 			     !!= * @CODE@
 %^IA:0			     	 !!= * @CODE@
-%^ILL:0 				 !!= * @CODE@
+%^ILL:0 				 !!= * @CODE@ e to a/á in ill etc
 %^ODDC:0				 !!= * @CODE@ shorten cns in odd-syll stems before C, #
 %^ODDLV:0				 !!= * @CODE@
 %^ODDSHV:0				 !!= * @CODE@
@@ -90,7 +91,6 @@ Alphabet
 %^WGSH:0       			 !!= * @CODE@
 %^XST:0 			     !!= * @CODE@
 %^SFV:0
-
 
 !! !!Morpheme boundaries:
 
@@ -115,7 +115,7 @@ Sets
        é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý 	   !!= @CODE@ 
        A Á Â Ä E I O U Y Æ Ø Ö Å			   !!= @CODE@ 
        É Ó Ú Í À È Ò Ú Ì Ë Ü Ï Ê Ô Û Î Ã Ý 	   !!= @CODE@ 
-       ¥ ;									   !!= @CODE@ 
+       ¥ %^RV %^SV ;									   !!= @CODE@ 
  Cns = b c č d đ f g h j k l m n ŋ 			   !!= * @CODE@ 
        p q r s š t ŧ v w x z ž				   !!= @CODE@ 
        B C Č D Đ F G H J K L M N Ŋ			   !!= @CODE@ 
@@ -124,7 +124,7 @@ Sets
        b3 d3 g3 m3 h3 						   !!= @CODE@ 
        m7 n7 ŋ7 v7 s7 r7 đ7	l7 j7 h7 š7		   !!= @CODE@ 
        ṃ  ṇ  ŋ̣  ṿ  ṣ  ṛ  đ̣  ḷ  j̣  ḥ  ṣ̌         !!= * @CODE@
-       p4
+       p4 %^RC %^SC
 
        m8 n8 t8				                   !!=* @CODE@ 
        %^P %^K %^Č %^H %^T ;                   !!= * @CODE@ 
@@ -133,7 +133,7 @@ Sets
  StemCns = b b3 d d3 g g2 g3 h h2 h3 		   !!= * @CODE@ 
            j l m m2 m3 m8 n n8 n2 ŋ r s  ;     !!= * @CODE@ 
 
-Arch = %^WG %^RC %^RV %^SV %^RVL %^EE %^UU %^RVSH %^DIPH   ;    !!= * @CODE@ 
+Arch = %^WG %^RC %^RV %^SV %^RVL %^EE %^UU %^RVSH %^DIPH %^SC %^CSC %^ILL  ;    !!= * @CODE@ 
 Len = %^RLEN %^LLEN %^SLEN %^CLEN %^LSH ;    !!= * @CODE@ 
 
 Dummy = Arch Len %^ODDC ;    !!= * @CODE@ 
@@ -168,7 +168,9 @@ Cx:Cy <=> Vow _ Vow (Cns) (Dummy:) %^WG:0 ;
 
 
 "xx:x gradation"
-Cx:0 <=> Vow _  Cx: (Dummy:) Vow (Vow) (Cns) (Dummy:) %^WG:0 ;
+Cx:0 <=> Vow: _  Cx: (Dummy:) Vow (Vow) (Cns) %^WG:0  ;
+         Vow: _  Cx  Vow:*   (Cns) (%^RC:) (%^SC:) (%^RLEN:) %^CSH: (%^RVSH:) (%^ILL:) %>: ; ! not wg
+         Vow: _  n j Vow:*    Cns  (%^RC:) (%^SC:)           %^CSH: (%^RVSH:) %>: ; ! not wg
 	where Cx in ( b d g p t k c č f l z ž r ) ;
 
 !€ kopp^RCâ^WG^LLEN>st
@@ -188,7 +190,7 @@ Cx:0 <=> Vow _  Cx: (Dummy:) Vow (Vow) (Cns) (Dummy:) %^WG:0 ;
 !		  matched ;
 
 "xx:y long to halflong gradation 1" ! hh:V, kk:h, pp:v, čč:J
-Cx:0 <=> Vow _ Cy: Vow (Vow:) (Cns) (Dummy:) %^WG:0 ;
+Cx:0 <=> Vow: _ Cy: Vow (Vow:) (Cns) (Dummy:) %^WG:0 ;
          Vow (Dummy:) _ Cy: (Dummy:) Vow (Dummy:) %^WG:0 ;
 	where Cx in ( h   k  p  č ) 
 	      Cy in ( h4  k4 p4 č4 )
@@ -257,10 +259,12 @@ Cx:0 <=> Cx: _ Cy: Vow (Cns) %^WG: ;
        
 "Consonant shortening (not weak grade)"
 !!! __@RULENAME@__ pp to p for kappeer ~ kaperist
-Cx:0 <=> _ Cx  [ Vow:  ]* Cns (%^RC:) (%^SC:) %^CSH: (%^RVSH:) %>: ;
+Cx:0 <=> _ Cx  [ Vow:  ]* (Cns) (%^RC:) (%^SC:) (%^RLEN:) %^CSH: (%^RVSH:) %>: ;
          _ n j  [ Vow:  ]* Cns (%^RC:) (%^SC:) %^CSH: (%^RVSH:) %>: ;    !   /!\ RISKY /!\
-       where Cx in ( p b s t k c č d g z ž v l m n ŋ r š h ) ;
+       where Cx in ( s v m n ŋ š h ) ;
+!       where Cx in ( p b s t k c č d g z ž v l m n ŋ r š h ) ;  ! the full gang     
 
+ 
 !€ kappeer^CSH^RVSH>ist
 !€ ka0p0er000ist
 !htest k a p:0 p e:0 e r ^CSH:0 ^RVSH:0 >:0 i s t
@@ -321,6 +325,9 @@ Vx:0 <=>  _ Vx Cns (%^RC:) (%^SC:) (%^CSH:) %^RVSH: %>: ;
 !htest m i ^RV:0 l:0 l ^RC:0 o ^WG:0 ^CLEN:0 ^SV:o ^SLEN:0 >:0 s t
 !htest h u k s i ^SV:i m ^SLEN:0 >:0 i s t
 
+
+
+
 "Fleeting vowel before suffix"
 Vx:0 <=> _ Cns %^SFV: %>: ;
          _ Cns %^SFV: (%^SC:) (%^CSH:) (%^RVSH:) %>: ;
@@ -348,7 +355,29 @@ Vx:0 <=> _ Cns %^SFV: %>: ;
 !htest r u á v á s t ^RC:0 ^CSH:0 ^RVSH:0 >:0 i s t
 
 "Stem vowel e deletion before 2nd syllable ij"
-e:0 <=> _ %^WG: (Dummy:*) %>: i j ; 
+e:0 <=> _ (Dummy:*) %>: i j ; 
+
+ 
+"Stem vowel e to a for a root vowel."
+e:a <=> a (%^RV:) Cns:+ _ %^RLEN: %^CSH: %^ILL: ;
+
+"Stem vowel e to á for other root vowel."
+e:á <=> [o|i|u] (%^RV:) Cns:+ _ %^RLEN: %^CSH: %^ILL: ;
+
+!€ a^RVlge^RVL>^An
+!€ aalg00an
+!€ lo^RVdde^RVL>^An 
+!€ loodde000an 
+
+
+"Root vowel change in bisyllabic e stems"
+%^RV:Vx <=> Vx _ Cns:* e: %^RLEN: ;
+	where Vx in ( a i o u ) ;
+
+"Illative suffix change in bisyllabic e stems"
+%^A:a <=> a (%^RV:) Cns:* e: (Dummy:*) %>: _ ;
+
+
 
 
 "Assimilation of root consonant and double suffix consonant"
