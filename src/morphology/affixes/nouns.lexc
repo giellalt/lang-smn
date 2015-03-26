@@ -37,50 +37,58 @@ KISSA ;
 LEXICON nounstems !!= __@CODE@__: these words should be classified
 LITTER ; !! We just send them to KISSA for the time being. 
 
-LEXICON KISSA ! No root vowel lengthening
-+N+Sg+Gen:%^WG K ;           ! kisá
-+N+Sg+Acc:%^WG K ;           ! kisá
-+N+Sg+Loc:%^SV%^WG%^CLEN%^SLEN%>st K ; ! kissáást
-+N+Pl+Nom:%^WG%>h K ;        ! kisáh
-+N+Pl+Gen:%^WG%>i K ;        ! kisái
-+N+Pl+Acc:%^WG%^CLEN%>id K ; ! kissáid
-+N+Pl+Loc:%^WG%^CLEN%>in K ; ! kissáin
-KISSA-FADDA ; ! forms common to KISSA and FADDA
 
-LEXICON FADDA 
+LEXICON FADDA  ! This might be the standard even syllabi lexicon
++N+Sg+Nom: K ;               ! kissá
 +N+Sg+Gen:%^WG%^LLEN K ;     ! fáádá, ráávsá
 +N+Sg+Acc:%^WG%^LLEN K ;     ! fáádá, ráávsá
-+N+Sg+Loc:%^WG%^LLEN%>st K ; ! fáádást, ráávsást
-+N+Pl+Nom:%^WG%^LLEN%>h K ;  ! fáádáh, ráávsáh
-+N+Pl+Gen:%^WG%^LLEN%>i K ;  ! fáádái, ráávsái
-+N+Pl+Acc:%^WG%^LLEN%>id K ; ! fáádáid, ráávsáid
-+N+Pl+Loc:%^WG%^LLEN%>in K ; ! fáádáin, ráávsáin
-KISSA-FADDA ; ! forms common to KISSA and FADDA
-
-LEXICON KISSA-FADDA ! forms common to KISSA and FADDA
-+N+Sg+Nom: K ;               ! kissá
 +N+Sg+Ill:%^RLEN%>n K ;      ! kiisán
++N+Sg+Loc:%^WG%^LLEN%>st K ; ! fáádást, ráávsást
++N+Sg+Com:%^WG%^CLEN%>in K ; ! kissáin, rávssáin, fáddáin DIFFERS HERE FROM KUTKA
 +N+Sg+Abe:%^WG%>ttáá K ;     ! kisáttáá 
 +N+Ess:%>n K ;            ! kissán
 +N+Par:%>d K ;            ! kissád
++N+Pl+Nom:%^WG%^LLEN%>h K ;  ! fáádáh, ráávsáh
++N+Pl+Gen:%^WG%^LLEN%>i K ;  ! fáádái, ráávsái
++N+Pl+Acc:%^WG%^LLEN%>id K ; ! fáádáid, ráávsáid
++N+Pl+Ill:%^WG%^CLEN%>id K ; ! kissáid, rávssáid, fáddáid
++N+Pl+Loc:%^WG%^LLEN%>in K ; ! fáádáin, ráávsáin
 +N+Pl+Com:%^WG%>iguin K ;    ! kisáiguin 
 +N+Pl+Abe:%^WG%>ittáá K ;    ! kisáittáá  
+
+
+
+LEXICON KISSA ! No root vowel lengthening
++N+Sg+Nom: K ;               ! kissá
++N+Sg+Gen:%^WG K ;           ! kisá
++N+Sg+Acc:%^WG K ;           ! kisá
++N+Sg+Ill:%^RLEN%>n K ;      ! kiisán
++N+Sg+Loc:%^SV%^WG%^CLEN%^SLEN%>st K ; ! kissáást
 +N+Sg+Com:%^WG%^CLEN%>in K ; ! kissáin, rávssáin, fáddáin
++N+Sg+Abe:%^WG%>ttáá K ;     ! kisáttáá 
++N+Ess:%>n K ;            ! kissán
++N+Par:%>d K ;            ! kissád
++N+Pl+Nom:%^WG%>h K ;        ! kisáh
++N+Pl+Gen:%^WG%>i K ;        ! kisái
++N+Pl+Acc:%^WG%^CLEN%>id K ; ! kissáid
 +N+Pl+Ill:%^WG%^CLEN%>id K ; ! kissáid, rávssáid, fáddáid
++N+Pl+Loc:%^WG%^CLEN%>in K ; ! kissáin
++N+Pl+Com:%^WG%>iguin K ;    ! kisáiguin 
++N+Pl+Abe:%^WG%>ittáá K ;    ! kisáittáá  
 
 
 LEXICON AAIGA
 
 +N+Sg+Nom:%^WG K ;			! aaigâ
-+N+Sg+Gen: K ; 				! aiguu  ! Please mark stem vowel change â > uu.
-+N+Sg+Acc: K ;				! aiguu   ! here too
++N+Sg+Gen:%^UUu K ; 				! aiguu  ! Please mark stem vowel change â > uu.
++N+Sg+Acc:%^UUu K ;				! aiguu   ! here too
 +N+Sg+Ill:%^UU%>i K ; 		! aigui ! Please mark %^UU still in twolc, shortening uu > u
 +N+Sg+Loc:%^UU%>st K ; 		! aigust
 +N+Sg+Com:%^UU%>in K ;		! aiguin
-+N+Sg+Abe:%>ttáá K ;		! aiguuttáá
++N+Sg+Abe:%^UUu%>ttáá K ;		! aiguuttáá
 +N+Ess:%^WG%>n K ;			! aaigân
 +N+Par:%^WG%>d K ;			! aaigâd
-+N+Pl+Nom:%>h K ;			! aiguuh
++N+Pl+Nom:%^UUu%>h K ;			! aiguuh
 +N+Pl+Gen:%^UU%>i K ;		! aigui
 +N+Pl+Acc:%^UU%>id K ;		! aiguid
 +N+Pl+Ill:%^UU%>id K ; 		! aiguid
@@ -90,7 +98,74 @@ LEXICON AAIGA
 
 
 
-LEXICON APINA
+! the other lexica go here
+
+LEXICON KUTKA ! Vartalotyyppi CVCCV Even-a-circ
+
++N+Sg+Nom: K ;    			 		! kutkâ
++N+Sg+Gen:%^WG%^LLEN K ;     		! kuuđhâ
++N+Sg+Acc:%^WG%^LLEN K ;     		! kuuđhâ
++N+Sg+Ill:%^RLEN%>n K ;      		! kuutkân
++N+Sg+Loc:%^WG%^LLEN%>st K ; 		! kuuđhâst
++N+Sg+Com:%^WG%^LSH%^CLEN%>in K; 	! kuđháin  differs here from FADDA
++N+Sg+Abe:%^WG%^LSH%>ttáá K ;		! kuđhâttáá
++N+Ess:%>n K ;						! kutkân
++N+Par:%>d K ;						! kutkâd
++N+Pl+Nom:%^WG%^LLEN%>h K ;  		! kuuđhah
++N+Pl+Gen:%^WG%^LLEN%>i K ;  		! kuuđhâi
++N+Pl+Acc:%^WG%^LLEN%>id K ; 		! kuuđhâid
++N+Pl+Ill:%^WG%^LSH%^CLEN%>id K ;	! kuđháid 
++N+Pl+Loc:%^WG%^LLEN%>in K ;		! kuuđhâin
++N+Pl+Com:%^WG%^LSH%>iguin K ;		! kuđhâiguin
++N+Pl+Abe:%^WG%^LSH%>ittáá K ; 		! kuđhâittáá
+
+
+
+
+! this differs from KUTKA in one respect
+
+LEXICON SOLLA  !!= * __@CODE@__ SM1
+
++N+Sg+Nom: K;				 		! sollâ
++N+Sg+Gen:%^WG%^LLEN K ;     		! soolâ
++N+Sg+Acc:%^WG%^LLEN K ;     		! soolâ
++N+Sg+Ill:%^RLEN%^CSH%>n K ;		! soolân
++N+Sg+Loc:%^WG%^LLEN%>st K ; 		! soolâst
++N+Sg+Com:%^WG%^LSH%^CLEN%>in K ; 	! solláin
++N+Sg+Abe:%^WG%^LSH%>ttáá K ;		! solâttáá
++N+Ess:%>n K ;						! sollân
++N+Par:%>d K ;						! sollâd
++N+Pl+Nom:%^WG%^LLEN%>h K ;  		! soolah
++N+Pl+Gen:%^WG%^LLEN%>i K ;  		! soolâi
++N+Pl+Acc:%^WG%^LLEN%>id K ; 		! soolâid
++N+Pl+Ill:%^WG%^LLEN%>id K ;		! solláid
++N+Pl+Loc:%^WG%^LLEN%>in K ; 		! soolâin
++N+Pl+Com:%^WG%^LSH%>iguin K ;		! solâiguin
++N+Pl+Abe:%^WG%^LSH%>ittáá K ;		! solâittáá
+
+
+LEXICON SPELLA ! Forms common to sollâ, consonant (l) half long everywhere where l is written as short
+SOLLA ;
+!+N+Sg+Nom: K;				 		! spellâ
+!+N+Sg+Gen:%^WG%^LLEN K ;     		! speelâ
+!+N+Sg+Acc:%^WG%^LLEN K ;     		! speelâ
+!+N+Sg+Ill:%^RLEN%^CSH%>n K ;		! speelân
+!+N+Sg+Loc:%^WG%^LLEN%>st K ; 		! speelâst
+!+N+Sg+Com:%^WG%^LSH%^CLEN%>in K ; 	! spelláin
+!+N+Sg+Abe:%^WG%^LSH%>ttáá K ;		! spelâttáá
+!+N+Ess:%>n K ;						! spellân
+!+N+Par:%>d K ;						! spellâd
+!+N+Pl+Nom:%^WG%^LLEN%>h K ;  		! speelah
+!+N+Pl+Gen:%^WG%^LLEN%>i K ;  		! speelâi
+!+N+Pl+Acc:%^WG%^LLEN%>id K ; 		! speelâid
+!+N+Pl+Ill:%^WG%^LLEN%>id K ;		! spelláid
+!+N+Pl+Loc:%^WG%^LLEN%>in K ; 		! speelâin
+!+N+Pl+Com:%^WG%^LSH%>iguin K ;		! spelâiguin 
+!+N+Pl+Abe:%^WG%^LSH%>ittáá K ;		! spelâittáá
+
+
+
+LEXICON APINA ! this is for loanwords without stem change
 
 +N+Sg+Nom: K ;				! apina
 +N+Sg+Gen: K ; 				! apina
@@ -109,108 +184,6 @@ LEXICON APINA
 +N+Pl+Com:%>iguin K ; 		! apinaiguin
 +N+Pl+Abe:%>ittáá K ; 		! apinaittáá
 
-
-LEXICON AIGI ! still to be completed with twolc
-
-+N+Sg+Nom: K ;                 ! äigi
-+N+Sg+Gen:%^WG K ;             ! ääigi
-+N+Sg+Acc:%^WG K ;             ! ääigi
-+N+Sg+Ill:%^RVL%^IA%>n K ;     ! ááigán ! ää>áá twolc, root vowal change
-+N+Sg+Loc:%^WG%>st K ;         ! ääigist
-+N+Sg+Com:%^WG%^RVSH%>jn K ;   ! aigijn ! ää > 0a _ij (SgComPlIllPlComPlAbe) twolc
-+N+Sg+Abe:%^WG%^RVSH%>ttáá     ! äigittáá
-+N+Ess:%>n  K ;                 ! äigin
-+N+Par:%>d  K ;                 ! äigid
-+N+Pl+Nom:%^WG%>h K ;           ! ääigih
-+N+Pl+Gen:%^WG%>j K ;           ! aaigij ! ää > aa _ij twolc (Pl Gen, Pl Acc, PlLoc)
-+N+Pl+Acc:%^WG%>jd K ;          ! aaigijd ! ää > aa _ij twolc
-+N+Pl+Ill:%^WG%^RVSH%>jd K ;    ! aigijd ! ää > 0a_ij twolc
-+N+Pl+Loc:%^WG%>jn  K ;         ! aaigijn ! ää > aa_ij twolc
-+N+Pl+Com:%^WG%^RVSH%>jguin K ;    ! aigijguin ! ää > 0a_ij
-+N+Pl+Abe:%^WG%^RVSH%>jttáá K ;     ! aigijttáá
-
-
-LEXICON HERTTA !Vartalotyyppi CVC1C2C2V Even-a-circ
-
-+N+Sg+Nom: K ;    			 		! herttâ
-+N+Sg+Gen:%^WG%^LLEN K ;     		! heertâ
-+N+Sg+Acc:%^WG%^LLEN K ;     		! heertâ
-+N+Sg+Ill:%^RLEN%>n K ;      		! heertân
-+N+Sg+Loc:%^WG%^LLEN%>st K ; 		! heertâst
-+N+Sg+Com:%^WG%^LSH%^CLEN%>in K; 	! herttáin
-+N+Sg+Abe:%^WG%^LSH%>ttáá K ;		! hertâttáá
-+N+Ess:%>n K ;						! herttân
-+N+Par:%>d K ;						! herttâd
-+N+Pl+Nom:%^WG%^LLEN%>h K ;  		! heertah
-+N+Pl+Gen:%^WG%^LLEN%>i K ;  		! heertâi
-+N+Pl+Acc:%^WG%^LLEN%>id K ; 		! heertâid
-+N+Pl+Ill:%^WG%^LSH%^CLEN%>id K ;	! herttáid 
-+N+Pl+Loc:%^WG%^LLEN%>in K ;		! heertâin
-+N+Pl+Com:%^WG%^LSH%>iguin K ;		! hertâiguin
-+N+Pl+Abe:%^WG%^LSH%>ittáá K ; 		! hertâittáá
-
-
-LEXICON KAAMUV  ! To be worked out, now just added
-
-+N+Sg+Nom:%^RV K ;    			 	! kaamuv
-+N+Sg+Gen:%^RVSH K ;                ! kammuu
-+N+Sg+Acc:           K ;     		! kammuu
-+N+Sg+Ill:   K ;      	         	! kammui
-+N+Sg+Loc:%>st K ; 		            ! kammust
-+N+Sg+Com:%>in K; 	                ! kammuin
-+N+Sg+Abe:%>ttáá K ;	           	! kammuuttáá
-+N+Ess:%>n K ;						! kamuvin
-+N+Par:%>d K ;						! kamuvid
-+N+Pl+Nom:%>h K ;  		            ! kammuuh
-+N+Pl+Gen:%>i K ;  		            ! kammui
-+N+Pl+Acc:%>id K ; 		            ! kammuid
-+N+Pl+Ill:%>id K ;	                ! kammuid 
-+N+Pl+Loc:%>in K ;		            ! kammuin
-+N+Pl+Com:%>iguin K ;	          	! kammuiguin
-+N+Pl+Abe:%>ittáá K ; 	         	! kammuittáá
-
-
-
-LEXICON KUTKA ! Vartalotyyppi CVCCV Even-a-circ
-
-+N+Sg+Nom: K ;    			 		! kutkâ
-+N+Sg+Gen:%^WG%^LLEN K ;     		! kuuđhâ
-+N+Sg+Acc:%^WG%^LLEN K ;     		! kuuđhâ
-+N+Sg+Ill:%^RLEN%>n K ;      		! kuutkân
-+N+Sg+Loc:%^WG%^LLEN%>st K ; 		! kuuđhâst
-+N+Sg+Com:%^WG%^LSH%^CLEN%>in K; 	! kuđháin
-+N+Sg+Abe:%^WG%^LSH%>ttáá K ;		! kuđhâttáá
-+N+Ess:%>n K ;						! kutkân
-+N+Par:%>d K ;						! kutkâd
-+N+Pl+Nom:%^WG%^LLEN%>h K ;  		! kuuđhah
-+N+Pl+Gen:%^WG%^LLEN%>i K ;  		! kuuđhâi
-+N+Pl+Acc:%^WG%^LLEN%>id K ; 		! kuuđhâid
-+N+Pl+Ill:%^WG%^LSH%^CLEN%>id K ;	! kuđháid 
-+N+Pl+Loc:%^WG%^LLEN%>in K ;		! kuuđhâin
-+N+Pl+Com:%^WG%^LSH%>iguin K ;		! kuđhâiguin
-+N+Pl+Abe:%^WG%^LSH%>ittáá K ; 		! kuđhâittáá
-
-
-
-
-LEXICON MERKKA !!Vartalotyyppi CVC1C2C2V Even-a-circ
-
-+N+Sg+Nom: K ;    			 		! merkkâ
-+N+Sg+Gen:%^WG%^LLEN K ;     		! meerhâ
-+N+Sg+Acc:%^WG%^LLEN K ;     		! meerhâ
-+N+Sg+Ill:%^RLEN%>n K ;      		! meerkân
-+N+Sg+Loc:%^WG%^LLEN%>st K ; 		! meerhâst
-+N+Sg+Com:%^WG%^LSH%^CLEN%>in K; 	! merháin
-+N+Sg+Abe:%^WG%^LSH%>ttáá K ;		! merhâttáá
-+N+Ess:%>n K ;						! merkkân
-+N+Par:%>d K ;						! merkkâd
-+N+Pl+Nom:%^WG%^LLEN%>h K ;  		! meerhah
-+N+Pl+Gen:%^WG%^LLEN%>i K ;  		! meerhâi
-+N+Pl+Acc:%^WG%^LLEN%>id K ; 		! meerhâid
-+N+Pl+Ill:%^WG%^LSH%^CLEN%>id K ;	! merháid 
-+N+Pl+Loc:%^WG%^LLEN%>in K ;		! meerhâin
-+N+Pl+Com:%^WG%^LSH%>iguin K ;		! merhâiguin
-+N+Pl+Abe:%^WG%^LSH%>ittáá K ; 		! merhâittáá
 
 LEXICON NJUNE
 +N+Sg+Nom: K ;						! njun7e
@@ -231,88 +204,6 @@ LEXICON NJUNE
 +N+Pl+Abe:%^WG%>ttáá K ;			! njunijttáá !! stem e > 0
 
 
-
-LEXICON NIEIDA	!! Vartalotyyppi CV1V2C1C2V Even-a-circ
-
-!! Kysymyksiä: Heikko aste + SgIll: diftongi pitkä, paitsi PlCom + PlAbe: dift. lyhentymä. Merkintöjä ei näy tässä.  
-
-+N+Sg+Nom: K ;    			 		! nieiˊdâ
-+N+Sg+Gen:%^WG%^LLEN K ;     		! nieidâ
-+N+Sg+Acc:%^WG%^LLEN K ;     		! nieidâ
-+N+Sg+Ill:%^RLEN%>n K ;      		! nieidân
-+N+Sg+Loc:%^WG%^LLEN%>st K ; 		! nieidâst
-+N+Sg+Com:%^WG%^LSH%^CLEN%>in K; 	! nieiˊdáin
-+N+Sg+Abe:%^WG%^LSH%>ttáá K ;		! nieˊidâttáá
-+N+Ess:%>n K ;						! nieiˊdân
-+N+Par:%>d K ;						! nieiˊdâd
-+N+Pl+Nom:%^WG%^LLEN%>h K ;  		! nieidah
-+N+Pl+Gen:%^WG%^LLEN%>i K ;  		! nieidâi, nieˊdâi
-+N+Pl+Acc:%^WG%^LLEN%>id K ; 		! nieidâid
-+N+Pl+Ill:%^WG%^LSH%^CLEN%>id K ;	! nieiˊdáid 
-+N+Pl+Loc:%^WG%^LLEN%>in K ;		! nieidâin
-+N+Pl+Com:%^WG%^LSH%>iguin K ;		! nieˊidâiguin
-+N+Pl+Abe:%^WG%^LSH%>ittáá K ; 		! nieˊidâittáá
-
-
-
-LEXICON SILBA ! Tarkista yhteys leksikkoon LEXICON SOLLA
-
-+N+Sg+Nom: K ;    			 		! silbâ
-+N+Sg+Gen:%^WG%^LLEN K ;     		! siilbâ
-+N+Sg+Acc:%^WG%^LLEN K ;     		! siilbâ
-+N+Sg+Ill:%^RLEN%>n K ;      		! siilbân
-+N+Sg+Loc:%^WG%^LLEN%>st K ; 		! siilbâst
-+N+Sg+Com:%^WG%^LSH%^CLEN%>in K; 	! silbáin
-+N+Sg+Abe:%^WG%^LSH%>ttáá K ;		! silbâttáá
-+N+Ess:%>n K ;						! silbân
-+N+Par:%>d K ;						! silbâd
-+N+Pl+Nom:%^WG%^LLEN%>h K ;  		! siilbah
-+N+Pl+Gen:%^WG%^LLEN%>i K ;  		! siilbâi
-+N+Pl+Acc:%^WG%^LLEN%>id K ; 		! siilbâid
-+N+Pl+Ill:%^WG%^LSH%^CLEN%>id K ;	! silbáid 
-+N+Pl+Loc:%^WG%^LLEN%>in K ;		! siilbâin
-+N+Pl+Com:%^WG%^LSH%>iguin K ;		! silbâiguin
-+N+Pl+Abe:%^WG%^LSH%>ittáá K ; 		! silbâittáá
-
-
-
-LEXICON SOLLA  !!= * __@CODE@__ SM1
-+N+Sg+Nom: K;				 		! sollâ
-+N+Sg+Gen:%^WG%^LLEN K ;     		! soolâ
-+N+Sg+Acc:%^WG%^LLEN K ;     		! soolâ
-+N+Sg+Ill:%^RLEN%^CSH%>n K ;		! soolân
-+N+Sg+Loc:%^WG%^LLEN%>st K ; 		! soolâst
-+N+Sg+Com:%^WG%^LSH%^CLEN%>in K ; 	! solláin
-+N+Sg+Abe:%^WG%^LSH%>ttáá K ;		! solâttáá
-+N+Ess:%>n K ;						! sollân
-+N+Par:%>d K ;						! sollâd
-+N+Pl+Nom:%^WG%^LLEN%>h K ;  		! soolah
-+N+Pl+Gen:%^WG%^LLEN%>i K ;  		! soolâi
-+N+Pl+Acc:%^WG%^LLEN%>id K ; 		! soolâid
-+N+Pl+Ill:%^WG%^LLEN%>id K ;		! solláid
-+N+Pl+Loc:%^WG%^LLEN%>in K ; 		! soolâin
-+N+Pl+Com:%^WG%^LSH%>iguin K ;		! solâiguin
-+N+Pl+Abe:%^WG%^LSH%>ittáá K ;		! solâittáá
-
-
-LEXICON SPELLA ! Forms common to sollâ, consonant (l) half long everywhere where l is written as short
-
-+N+Sg+Nom: K;				 		! spellâ
-+N+Sg+Gen:%^WG%^LLEN K ;     		! speelâ
-+N+Sg+Acc:%^WG%^LLEN K ;     		! speelâ
-+N+Sg+Ill:%^RLEN%%^CSH%>n K ;		! speelân
-+N+Sg+Loc:%^WG%^LLEN%>st K ; 		! speelâst
-+N+Sg+Com:%^WG%^LSH%^CLEN%>in K ; 	! spelláin
-+N+Sg+Abe:%^WG%^LSH%>ttáá K ;		! spelâttáá
-+N+Ess:%>n K ;						! spellân
-+N+Par:%>d K ;						! spellâd
-+N+Pl+Nom:%^WG%^LLEN%>h K ;  		! speelah
-+N+Pl+Gen:%^WG%^LLEN%>i K ;  		! speelâi
-+N+Pl+Acc:%^WG%^LLEN%>id K ; 		! speelâid
-+N+Pl+Ill:%^WG%^LLEN%>id K ;		! spelláid
-+N+Pl+Loc:%^WG%^LLEN%>in K ; 		! speelâin
-+N+Pl+Com:%^WG%^LLEN%>iguin K ;		! spelâiguin
-+N+Pl+Abe:%^WG%^LSH%>ittáá K ;		! spelâittáá
 
 
 LEXICON POOVSA ! soovsa
@@ -367,6 +258,130 @@ LEXICON PUUVSAH ! Plural tantum
 
 
 
+
+
+
+
+
+LEXICON HERTTA !Vartalotyyppi CVC1C2C2V Even-a-circ
+KUTKA ;
+
+!+N+Sg+Nom: K ;    			 		! herttâ
+!+N+Sg+Gen:%^WG%^LLEN K ;     		! heertâ
+!+N+Sg+Acc:%^WG%^LLEN K ;     		! heertâ
+!+N+Sg+Ill:%^RLEN%>n K ;      		! heertân
+!+N+Sg+Loc:%^WG%^LLEN%>st K ; 		! heertâst
+!+N+Sg+Com:%^WG%^LSH%^CLEN%>in K; 	! herttáin
+!+N+Sg+Abe:%^WG%^LSH%>ttáá K ;		! hertâttáá
+!+N+Ess:%>n K ;						! herttân
+!+N+Par:%>d K ;						! herttâd
+!+N+Pl+Nom:%^WG%^LLEN%>h K ;  		! heertah
+!+N+Pl+Gen:%^WG%^LLEN%>i K ;  		! heertâi
+!+N+Pl+Acc:%^WG%^LLEN%>id K ; 		! heertâid
+!+N+Pl+Ill:%^WG%^LSH%^CLEN%>id K ;	! herttáid 
+!+N+Pl+Loc:%^WG%^LLEN%>in K ;		! heertâin
+!+N+Pl+Com:%^WG%^LSH%>iguin K ;		! hertâiguin
+!+N+Pl+Abe:%^WG%^LSH%>ittáá K ; 		! hertâittáá
+
+
+LEXICON MERKKA !!Vartalotyyppi CVC1C2C2V Even-a-circ
+KUTKA ;
+
+!+N+Sg+Nom: K ;    			 		! merkkâ
+!+N+Sg+Gen:%^WG%^LLEN K ;     		! meerhâ
+!+N+Sg+Acc:%^WG%^LLEN K ;     		! meerhâ
+!+N+Sg+Ill:%^RLEN%>n K ;      		! meerkân
+!+N+Sg+Loc:%^WG%^LLEN%>st K ; 		! meerhâst
+!+N+Sg+Com:%^WG%^LSH%^CLEN%>in K; 	! merháin
+!+N+Sg+Abe:%^WG%^LSH%>ttáá K ;		! merhâttáá
+!+N+Ess:%>n K ;						! merkkân
+!+N+Par:%>d K ;						! merkkâd
+!+N+Pl+Nom:%^WG%^LLEN%>h K ;  		! meerhah
+!+N+Pl+Gen:%^WG%^LLEN%>i K ;  		! meerhâi
+!+N+Pl+Acc:%^WG%^LLEN%>id K ; 		! meerhâid
+!+N+Pl+Ill:%^WG%^LSH%^CLEN%>id K ;	! merháid 
+!+N+Pl+Loc:%^WG%^LLEN%>in K ;		! meerhâin
+!+N+Pl+Com:%^WG%^LSH%>iguin K ;		! merhâiguin
+!+N+Pl+Abe:%^WG%^LSH%>ittáá K ; 		! merhâittáá
+
+
+
+LEXICON NIEIDA	!! Vartalotyyppi CV1V2C1C2V Even-a-circ
+
+!! Kysymyksiä: Heikko aste + SgIll: diftongi pitkä, paitsi PlCom + PlAbe: dift. lyhentymä. Merkintöjä ei näy tässä.  
+KUTKA ;
+
+!+N+Sg+Nom: K ;    			 		! nieiˊdâ
+!+N+Sg+Gen:%^WG%^LLEN K ;     		! nieidâ
+!+N+Sg+Acc:%^WG%^LLEN K ;     		! nieidâ
+!+N+Sg+Ill:%^RLEN%>n K ;      		! nieidân
+!+N+Sg+Loc:%^WG%^LLEN%>st K ; 		! nieidâst
+!+N+Sg+Com:%^WG%^LSH%^CLEN%>in K; 	! nieiˊdáin
+!+N+Sg+Abe:%^WG%^LSH%>ttáá K ;		! nieˊidâttáá
+!+N+Ess:%>n K ;						! nieiˊdân
+!+N+Par:%>d K ;						! nieiˊdâd
+!+N+Pl+Nom:%^WG%^LLEN%>h K ;  		! nieidah
+!+N+Pl+Gen:%^WG%^LLEN%>i K ;  		! nieidâi, nieˊdâi
+!+N+Pl+Acc:%^WG%^LLEN%>id K ; 		! nieidâid
+!+N+Pl+Ill:%^WG%^LSH%^CLEN%>id K ;	! nieiˊdáid 
+!+N+Pl+Loc:%^WG%^LLEN%>in K ;		! nieidâin
+!+N+Pl+Com:%^WG%^LSH%>iguin K ;		! nieˊidâiguin
+!+N+Pl+Abe:%^WG%^LSH%>ittáá K ; 		! nieˊidâittáá
+!
+
+
+LEXICON SILBA ! Tarkista yhteys leksikkoon LEXICON SOLLA
+KUTKA ;
+
+!+N+Sg+Nom: K ;    			 		! silbâ
+!+N+Sg+Gen:%^WG%^LLEN K ;     		! siilbâ
+!+N+Sg+Acc:%^WG%^LLEN K ;     		! siilbâ
+!+N+Sg+Ill:%^RLEN%>n K ;      		! siilbân
+!+N+Sg+Loc:%^WG%^LLEN%>st K ; 		! siilbâst
+!+N+Sg+Com:%^WG%^LSH%^CLEN%>in K; 	! silbáin
+!+N+Sg+Abe:%^WG%^LSH%>ttáá K ;		! silbâttáá
+!+N+Ess:%>n K ;						! silbân
+!+N+Par:%>d K ;						! silbâd
+!+N+Pl+Nom:%^WG%^LLEN%>h K ;  		! siilbah
+!+N+Pl+Gen:%^WG%^LLEN%>i K ;  		! siilbâi
+!+N+Pl+Acc:%^WG%^LLEN%>id K ; 		! siilbâid
+!+N+Pl+Ill:%^WG%^LSH%^CLEN%>id K ;	! silbáid 
+!+N+Pl+Loc:%^WG%^LLEN%>in K ;		! siilbâin
+!+N+Pl+Com:%^WG%^LSH%>iguin K ;		! silbâiguin
+!+N+Pl+Abe:%^WG%^LSH%>ittáá K ; 		! silbâittáá
+
+
+
+
+
+LEXICON KIETA  !!= * __@CODE@__ SM5
+FADDA ; ! Pitää olla toinenlainen: todo.
+
+
+LEXICON SAAMI 
++N+Sg+Nom: K ;               ! sääm7i !please add m + dot
++N+Sg+Gen:%^WG K ;           ! säämi
++N+Sg+Acc:%^WG K ;           ! säämi
++N+Sg+Ill:%>n K ;               ! sáám7án !please add ä>á rules (twolc)
++N+Sg+Loc:%>st K ;           ! säämist
++N+Sg+Com:%>jn   K ;             ! saamijn  ! please add ä > a _ ij (twolc)
++N+Sg+Abe:%^RVSH%>ttáá  K ;  ! sämittáá
++N+Sg+Ess:%^CLEN%>n  K ;     ! säämmin
++N+Sg+Par:%^CLEN%>d K ;            ! säämmid
++N+Pl+Nom:%^WG%>h K ;        ! säämih
++N+Pl+Gen:%^WG%>j K ;            ! saamij
++N+Pl+Acc:%^WG%>jd K ;          ! saamijd
++N+Pl+Ill:%^WG%>jd K ;          ! saamijd
++N+Pl+Loc:%^WG%>jn K ;          ! saamijn
++N+Pl+Com:%^WG%^CSH%>jguin K ;  ! samijguin
++N+Sg+Abe:%^WG%>jttáá K ;        ! samijttáá 
+
+
+
+
+
+
+
 LEXICON TAHHEE !!= * @CODE@ ee-final contract
 
 +N+Sg+Nom: K ;						! tahhee
@@ -385,6 +400,27 @@ LEXICON TAHHEE !!= * @CODE@ ee-final contract
 +N+Sg+Loc:%^EE%>in K ;				! tahhein
 +N+Sg+Com:%^EE%>iguin K ;			! tahheiguin
 +N+Sg+Abe:%>ittáá K ; 				! tahheittáá
+
+
+
+LEXICON KAAMUV  ! To be worked out, now just added
+
++N+Sg+Nom:%^RV K ;    			 	! kaamuv
++N+Sg+Gen:%^RVSH K ;                ! kammuu
++N+Sg+Acc:           K ;     		! kammuu
++N+Sg+Ill:   K ;      	         	! kammui
++N+Sg+Loc:%>st K ; 		            ! kammust
++N+Sg+Com:%>in K; 	                ! kammuin
++N+Sg+Abe:%>ttáá K ;	           	! kammuuttáá
++N+Ess:%>n K ;						! kamuvin
++N+Par:%>d K ;						! kamuvid
++N+Pl+Nom:%>h K ;  		            ! kammuuh
++N+Pl+Gen:%>i K ;  		            ! kammui
++N+Pl+Acc:%>id K ; 		            ! kammuid
++N+Pl+Ill:%>id K ;	                ! kammuid 
++N+Pl+Loc:%>in K ;		            ! kammuin
++N+Pl+Com:%>iguin K ;	          	! kammuiguin
++N+Pl+Abe:%>ittáá K ; 	         	! kammuittáá
 
 
 LEXICON EEHID 
@@ -434,31 +470,6 @@ LEXICON PIIVTAS
 +N+Pl+Com:%>ijguin K ;    !  
 +N+Pl+Abe:%>ijttáá K ;    !   
 +N+Pl+Ill:%>áid K ; ! 
-
-
-
-LEXICON KIETA  !!= * __@CODE@__ SM5
-FADDA ; ! Pitää olla toinenlainen: todo.
-
-
-LEXICON SAAMI 
-+N+Sg+Nom: K ;               ! sääm7i !please add m + dot
-+N+Sg+Gen:%^WG K ;           ! säämi
-+N+Sg+Acc:%^WG K ;           ! säämi
-+N+Sg+Ill:%>n K ;               ! sáám7án !please add ä>á rules (twolc)
-+N+Sg+Loc:%>st K ;           ! säämist
-+N+Sg+Com:%>jn   K ;             ! saamijn  ! please add ä > a _ ij (twolc)
-+N+Sg+Abe:%^RVSH%>ttáá  K ;  ! sämittáá
-+N+Sg+Ess:%^CLEN%>n  K ;     ! säämmin
-+N+Sg+Par:%^CLEN%>d K ;            ! säämmid
-+N+Pl+Nom:%^WG%>h K ;        ! säämih
-+N+Pl+Gen:%^WG%>j K ;            ! saamij
-+N+Pl+Acc:%^WG%>jd K ;          ! saamijd
-+N+Pl+Ill:%^WG%>jd K ;          ! saamijd
-+N+Pl+Loc:%^WG%>jn K ;          ! saamijn
-+N+Pl+Com:%^WG%^CSH%>jguin K ;  ! samijguin
-+N+Sg+Abe:%^WG%>
-jttáá K ;        ! samijttáá 
 
 
 LEXICON KAPPEER-COMMON 
@@ -746,18 +757,18 @@ LEXICON SODDADEM
 +N+Sg+Nom: K ;          !  šoddâdem
 +N+Sg+Gen: K ;          !  šoddâdem
 +N+Sg+Acc: K ;          !  šoddâdem
-+N+Sg+Ill: K ;          ! šoddâdmân
 +N+Sg+Loc:%^SFV%>ist K ;     !  šoddâdmist
-+N+Sg+Com: K ;              ! šoddâdmáin
-+N+Sg+Abe: K ;              ! šoddâdemttáá
-+N+Ess:%^SFV%>in K ;         !  šoddâdmin
-+N+Par:%^SFV%>id K ;         !  šoddâdmid
 +N+Pl+Nom:%^SFV%>eh K ;      !  šoddâdmeh
 +N+Pl+Gen:%^SFV%>ij K ;      !  šoddâdmij
 +N+Pl+Acc:%^SFV%>ijd K ;     !  šoddâdmijd
 +N+Pl+Loc:%^SFV%>ijn K ;     !  šoddâdmijn
++N+Sg+Ill:%^SFV%>ân K ;      !  šoddâdmân
++N+Sg+Abe:%>ttáá K ;    !  šoddâdemttáá
++N+Ess:%^SFV%>in K ;         !  šoddâdmin
++N+Par:%^SFV%>id K ;         !  šoddâdmid
 +N+Pl+Com:%^SFV%>ijguin K ;  !  šoddâdmijguin
 +N+Pl+Abe:%^SFV%>ijttáá K ;  !  šoddâdmijttáá
++N+Sg+Com:%^SFV%>áin K ;     !  šoddâdmáin
 +N+Pl+Ill:%^SFV%>áid K ;     !  šoddâdmáid
 
 
