@@ -56,11 +56,11 @@ EXTEDITOR=@SEE@
 ### don't use extract-lemmas.sh ###
 # Hent ut lemmaer fra den nouns.lexc, bortsett fra utkommmenterte (^\!), 
 # dem som krever sammensetning (CmpN/Only|ShCmp|RCmpnd| Rreal | R | Rnoun),
-# LexSub (som blir filtrert bort fra normgenerator). Lemmaene lagres som filtered-nouns
+# Err/Lex (som blir filtrert bort fra normgenerator). Lemmaene lagres som filtered-nouns
 
 grep ";" $source_file | \
   egrep -v "^(\!|\@|<)" | \
-  egrep -v '(CmpN/Only|ShCmp|RCmpnd| Rreal | R | Rnoun |\+V\+|LexSub)' | \
+  egrep -v '(CmpN/Only|ShCmp|RCmpnd| Rreal | R | Rnoun |\+V\+|\+Err\/Lex)' | \
   sed 's/% /€/g' | sed 's/%:/¢/g' |  tr ":+" " " | cut -d " " -f1 | \
   tr -d "%" | tr "€" " " | tr "¢" ":" | sort -u > $lemmas
 
@@ -69,7 +69,7 @@ grep ";" $source_file | \
 
 grep ";" $source_file | \
   egrep -v "^(\!|\@|<)" | \
-  egrep -v '(ShCmp|LexSub)' | \
+  egrep -v '(ShCmp|\+Err\/Lex)' | \
   egrep "( R | Rreal | Rnoun)" | tr ":+" " " | cut -d " " -f1 | \
   sed 's/$/viessu/' >> $lemmas
 
@@ -113,7 +113,7 @@ sed 's/$/+N+Sg+Nom/' $lemmas | $lookuptool $generator_file.$suffix | \
 # legg til +N+Cmp#viessu+N+Sg+Nom og generer. Lagre i generated-nouns.
 
 grep ";" $lemmas | \
-  egrep -v "^(\!|\@|<)" | egrep -v '(ShCmp|LexSub)' |\
+  egrep -v "^(\!|\@|<)" | egrep -v '(ShCmp|\+Err\/Lex)' |\
   egrep "( R | Rreal | Rnoun)" | tr ":+" " " | cut -d " " -f1 |\
   sed 's/$/+N+Cmp#litter+N+Sg+Nom/' | $lookuptool $generator_file.$suffix |\
   cut -f2 | grep -v '^$' >> $generated_lemmas.$f.txt
@@ -122,7 +122,7 @@ grep ";" $lemmas | \
 # legg til +N+Cmp-#litter+N+Sg+Nom og generer. Lagre i generated-nouns.
 
 grep ";" $lemmas |\
-  egrep -v "^(\!|\@|<)" | grep -v '(ShCmp|LexSub)' | grep "RHyph" |\
+  egrep -v "^(\!|\@|<)" | grep -v '(ShCmp|\+Err\/Lex)' | grep "RHyph" |\
   tr ":+" " " | cut -d " " -f1 | sed 's/$/+N+Cmp-#litter+N+Sg+Nom/' |\
   $lookuptool $generator_file.$suffix |\
   cut -f2 | grep "\-" | cut -d "-" -f1 >> $generated_lemmas.$f.txt
