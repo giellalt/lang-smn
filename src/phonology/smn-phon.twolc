@@ -58,6 +58,7 @@ Alphabet
 %^WG:0 		!!= * @CODE@ weak grade
 %^RV:0	 	!!= * @CODE@ root vowel
 %^SV:0 		!!= * @CODE@ stem vowel
+%^SVLOW:0		!!= * @CODE@ stem vowel lowering â>á and u>o
 %^RC:0		!!= * @CODE@ root consonant
 %^SC:0          !!= * @CODE@ suffix consonant
 %^RLEN:0    !!= * @CODE@ root lengthening
@@ -136,7 +137,7 @@ Sets
 Arch = %^WG %^RC %^RV %^SV %^RVL %^EE %^UU %^RVSH %^DIPH %^SC %^CSC %^ILL  ;    !!= * @CODE@ 
 Len = %^RLEN %^LLEN %^SLEN %^CLEN %^LSH ;    !!= * @CODE@ 
 
-Dummy = Arch Len %^ODDC ;    !!= * @CODE@ 
+Dummy = Arch Len %^ODDC %^SVLOW ;    !!= * @CODE@ 
            
 !! !!!Rule section
 
@@ -295,8 +296,8 @@ Cy:0 <=> Vow: (%^RV:) Cx: _ Cy: Vow (Cns) %^WG: ;
        
 "Consonant shortening (not weak grade)"
 !!! __@RULENAME@__ pp to p for kappeer ~ kaperist
-Cx:0 <=> _ Cx  [ Vow:  ]* (Cns) (%^RC:) (%^SC:) (%^RLEN:) %^CSH: (%^RVSH:) %>: ;
-       where Cx in ( s v m n ŋ š h ) ;
+Cx:0 <=> _ Cx  (%^RC:) [ Vow:  ]* (Cns) (%^RC:) (%^SC:) (%^RLEN:) %^CSH: (%^RVSH:) %>: ;
+       where Cx in ( s v m n ŋ š h l p d k ) ;
  
 !€ kappeer^CSH^RVSH>ist
 !€ ka0p0er000ist
@@ -351,9 +352,9 @@ t:0 <=> _ %>: t t ;
 
 
 "Consonant lengthening after weak grade"
-%^RC:Cx <=> Cy: _ Vow (Dummy:) %^WG: (Dummy:) %^CLEN: ;
-        where Cy in ( h4 k4 č4 p4 p ) 
-              Cx in ( v  h  j  v  p ) 
+%^RC:Cx <=> Cy: _ Vow: (Dummy:) %^WG: (Dummy:) %^CLEN: ;
+        where Cy in ( h4 k4 č4 p4 p l d m s ) 
+              Cx in ( v  h  j  v  p l d m s ) 
         matched ;
 
 !€ su^RVkk4^RCá^SV^WG^CLEN^SLEN>st
@@ -443,8 +444,24 @@ e:á <=> [o|i|u] (%^RV:) Cns:+ _ %^RLEN: %^CSH: %^ILL: ;
 !€ loodde000an 
 
 
+"Stem vowel â to a in Pl Nom -h"
+â:a <=> _ (%^WG:) (%^RLEN:) %> h ;
+
+!€ so^RVll^RCâ^WG^RLEN>h
+!€ soo0l0a000h
+
+"Stem vowel â>á and u>o change before i"
+Vx:Vy <=> _ (Dummy:*) %^SVLOW:0 ;
+	where Vx in ( â u )
+		  Vy in ( á o )
+		  matched ;
+
+!€ so^RVll^RCâ^WG^LSH^CLEN^SVLOW>in
+!€ so00llá00000in
+
+
 "Root vowel change in bisyllabic e stems"
-%^RV:Vx <=> Vx _ Cns:* e: %^RLEN: ;
+%^RV:Vx <=> Vx _ Cns:* (%^RC:) Vow: (%^WG:) %^RLEN: ;
 	where Vx in ( a i o u ) ;
 
 "Illative suffix change in bisyllabic e stems"
