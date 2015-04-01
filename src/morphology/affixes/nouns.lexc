@@ -144,22 +144,22 @@ LEXICON KUTKA ! Vartalotyyppi CVCCV Even-a-circ
 
 ! this differs from KUTKA in one respect
 
-LEXICON SOLLA  !!= * __@CODE@__ SM1
+LEXICON SOLLA  !!= * __@CODE@__ SM1, RLEN, earlier LLEN
 
 +N+Sg+Nom: K;				 		! sollâ
-+N+Sg+Gen:%^WG%^LLEN K ;     		! soolâ
-+N+Sg+Acc:%^WG%^LLEN K ;     		! soolâ
++N+Sg+Gen:%^WG%^RLEN K ;     		! soolâ
++N+Sg+Acc:%^WG%^RLEN K ;     		! soolâ
 +N+Sg+Ill:%^RLEN%^CSH%>n K ;		! soolân
-+N+Sg+Loc:%^WG%^LLEN%>st K ; 		! soolâst
-+N+Sg+Com:%^WG%^LSH%^CLEN%>in K ; 	! solláin
++N+Sg+Loc:%^WG%^RLEN%>st K ; 		! soolâst
++N+Sg+Com:%^WG%^LSH%^CLEN%^SVLOW%>in K ; 	! solláin
 +N+Sg+Abe:%^WG%^LSH%>ttáá K ;		! solâttáá
 +N+Ess:%>n K ;						! sollân
 +N+Par:%>d K ;						! sollâd
-+N+Pl+Nom:%^WG%^LLEN%>h K ;  		! soolah
-+N+Pl+Gen:%^WG%^LLEN%>i K ;  		! soolâi
-+N+Pl+Acc:%^WG%^LLEN%>id K ; 		! soolâid
-+N+Pl+Ill:%^WG%^LLEN%>id K ;		! solláid
-+N+Pl+Loc:%^WG%^LLEN%>in K ; 		! soolâin
++N+Pl+Nom:%^WG%^RLEN%>h K ;  		! soolah
++N+Pl+Gen:%^WG%^RLEN%>i K ;  		! soolâi
++N+Pl+Acc:%^WG%^RLEN%>id K ; 		! soolâid
++N+Pl+Ill:%^WG%^CLEN%^SVLOW%>id K ; ! solláid
++N+Pl+Loc:%^WG%^RLEN%>in K ; 		! soolâin
 +N+Pl+Com:%^WG%^LSH%>iguin K ;		! solâiguin
 +N+Pl+Abe:%^WG%^LSH%>ittáá K ;		! solâittáá
 
@@ -210,7 +210,7 @@ LEXICON NJUNE
 +N+Sg+Gen:%^WG K ;					! njune
 +N+Sg+Acc:%^WG K ;					! njune
 +N+Sg+Ill:%>n K ;					! njun7án ! e>á
-+N+Sg+Loc:%^WG%^LLEN%^RVL%>st K ;	! njuuneest
++N+Sg+Loc:%^WG%^LLEN%>st K ;	! njuuneest ! earlier also %^RVL
 +N+Sg+Com:%^WG%^CLEN%>in K ;		! njunnijn
 +N+Sg+Abe:%^WG%>ttáá K ;			! njunettáá
 +N+Ess:%^CLEN%^RVL%>n K ;			! njunneen
@@ -306,9 +306,6 @@ KUTKA ;
 !+N+Pl+Abe:%^WG%^LSH%>ittáá K ; 	! hertâittáá
 
 
-LEXICON MERKKA !!Vartalotyyppi CVC1C2C2V Even-a-circ
-KUTKA ;
-
 !+N+Sg+Nom: K ;    			 		! merkkâ
 !+N+Sg+Gen:%^WG%^LLEN K ;     		! meerhâ
 !+N+Sg+Acc:%^WG%^LLEN K ;     		! meerhâ
@@ -352,7 +349,7 @@ KUTKA ;
 
 
 LEXICON SILBA ! Tarkista yhteys leksikkoon LEXICON SOLLA
-KUTKA ;
+SOLLA ;
 
 !+N+Sg+Nom: K ;    			 		! silbâ
 !+N+Sg+Gen:%^WG%^LLEN K ;     		! siilbâ
@@ -610,18 +607,13 @@ LEXICON KIELA
 !! | PlCom | kie’lâiguin   | njuo’lâiguin   | molâiguin
 !! | PlAbe | kie’lâittáá   | njuo’lâittáá   | molâittáá
 
-KIETA ; ! Obviously wrong, so fix this.
-
+SOLLA ; ! Obviously wrong, so fix this.
 
 LEXICON RUTTA  !!= * __@CODE@__ SM4
 SOLLA ; ! kánske
 
-LEXICON RITA
-KIETA ; ! A wild guess.
-
 LEXICON KUOSA  !!= * __@CODE@__ SM7
 KIETA ; ! fix
-
 
 LEXICON RUOCA !!= * __@CODE@__ SM8
 KUOSA ; 
@@ -635,15 +627,15 @@ KUOSA ;
 LEXICON KYELI  !!= * __@CODE@__ i-e-á
 KISSA ;
 
-
 LEXICON KUMPPI  !!= * __@CODE@__ i-i-i
 SOLLA ;
 
+!! !e stem lexica
 
 LEXICON ALGE  !!= * __@CODE@__
 LODDE ;
 
-LEXICON LODDE
+LEXICON LODDE  !!= * __@CODE@__
 +N+Sg+Nom: K ;                     ! lodde
 +N+Sg+Gen:%^WG K ;                 ! lode
 +N+Sg+Acc:%^WG K ;                 ! lode
@@ -776,24 +768,6 @@ LEXICON VEESKIR
 PIIVTAS ; ! fix
 
 
-LEXICON TIMES
-+N+Sg+Nom: K ;     
-+N+Sg+Gen: K ;     
-+N+Sg+Acc: K ;     
-+N+Sg+Loc:%>ist K ; 
-+N+Pl+Nom:%>eh K ;  
-+N+Pl+Gen:%>ij K ;  
-+N+Pl+Acc:%>ijd K ; 
-+N+Pl+Loc:%>ijn K ; 
-+N+Sg+Ill:%>ân K ; 
-+N+Sg+Abe:%>ttáá K ; 
-   +N+Ess:%>in K ;   
-   +N+Par:%>id K ;     
-+N+Pl+Com:%>ijguin K ; 
-+N+Pl+Abe:%>ijttáá K ; 
-+N+Sg+Com:%>áin K ; 
-+N+Pl+Ill:%>áid K ; 
-
 ! Contracted stems
 ! ----------------
 
@@ -869,7 +843,6 @@ LEXICON ODD_SUFF_LONGSTEM
 LEXICON ODD_SUFF_SHORTSTEM
  +Sg+Loc:%>ist K ;
  +Sg+Com:%>áin K ;
-! +Sg+Com:%>ááin K ;
  +Sg+Abe:%>ttáá K ;
  +Ess:%>in K ;
  +Par:%>id K ;
@@ -882,6 +855,7 @@ LEXICON ODD_SUFF_SHORTSTEM
 ! +Pl+Com:%>ijgijn K ;
  +Pl+Com:%>ijguin K ;
  +Pl+Abe:%>ijttáá K ;
+
 
 
 
