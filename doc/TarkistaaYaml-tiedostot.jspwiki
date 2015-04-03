@@ -1,0 +1,43 @@
+
+Yaml-tiedostot ovat kolmessa hakemistossa:
+
+* test/src/dict-gt-yamls (sanakirja-ortografialle)
+* test/src/gt-norm-yamls (viralliselle ortografialle)
+* test/src/gt-desc-yamls (deskriptiiviselle analyysiohjelmalle, ei vielä käytössä)
+
+Tiedostot tehdään näin:
+
+# Ensin rakennetaan / tarkistetaan ne dict-gt-yamls-hakemistossa
+# Sitten tehdään kopio, poistetaan pistemerkinnän ja apostrofit, ja 
+  tallennetaan lopputulos gt-desc-yamls-hakemistoon
+  
+Dublettien poisto (ks. alh.) pitää myös miellummin tapahtua ensin 
+dict-gt-yamls-hakemistossa, ja sen jälkeen kopioidaan ne 
+gt-norm-yamls-hakemistoon.
+
+
+!!!Tehtäviä
+
+!!Tarkistaminen
+
+On erittäin tärkeä, että yaml-tiedostoihin voi luottaa. Ne pitää siis tarkistaa.
+Jokaisen hakemiston svn-lokissa käy ilmi, missä tilassa tiedosto on.
+
+On mahdollista tarkistaa, että tiedostot ovat samanlaisia hakemistoissa
+{{dict-gt-yamls}} ja {{gt-norm-yamls}}. Jos eivät ole, niin jotain  on pielessä.
+
+!!Dublettien poisto
+
+Paradigmat on nyt saatu kolmen tien kautta
+
+# Jokaisella sanalla on oma tiedosto, esim: N-sajos_gt-norm.yaml
+# Sanat on ryhmitelty vartalotyypin mukaan, esim parilliset e-tavut: N-even-e_gt-norm.yaml
+# Sanat on otettu taulukoista, esim: N-subst-2tav-reduced-e_gt-norm.yaml
+
+Emme halua samaa paradigmaa monta kertaa. Haluamme miellummin paradigat tyypittäin kuin
+yksitellen. Tehtävänä on siis:
+
+* poista yksittäisten sanojen tiedostot, jos niiden paradigmat löytyvät jo ryhmätiedostoista
+* ryhmitellä jäljellä olevat yksittäiset sanatiedostot
+
+ 
