@@ -40,4 +40,31 @@ yksitellen. Tehtävänä on siis:
 * poista yksittäisten sanojen tiedostot, jos niiden paradigmat löytyvät jo ryhmätiedostoista
 * ryhmitellä jäljellä olevat yksittäiset sanatiedostot
 
- 
+Dublettien määrä saa esille esim. tarkistamalla, onko identtisiä yksikön nominatiivimuotoja
+hakemistossa:
+
+{{{
+cat test/src/dict-gt-yamls/*l|grep '+Sg+Nom'|sort|uniq -d
+cat test/src/gt-norm-yamls/*l|grep '+Sg+Nom'|sort|uniq -d
+}}} 
+
+Näiten komentojan vastaus pitää olla nolla ("ei dubletteja"). Dublettien pitää etsiä,
+ja sitten vertailla.
+
+* jos ne eivät ole identtisiä, niin tarkistetaan kumpi on oikein, korjaa, ja säilyttää 
+  oikean
+* jos ne ovat identtisia, niin poistetaan se paradigma, joka on yksittäisessä 
+  tiedostossa tai väärässä tiedostossa)
+  
+Sanotaan, että komennosta kävi ilmi, että immeel-sana löytyi kahdesti gt-norm-yamls-hakemistosta.
+Sitten voi kirjoittaa
+
+{{{
+grep immeel test/src/gt-norm-yamls/*
+}}}
+
+Silloin ilmestyy kaksi paradigmaa. Tarkista, että ne ovat identtisiä, ja poista
+toisen.
+
+  
+
