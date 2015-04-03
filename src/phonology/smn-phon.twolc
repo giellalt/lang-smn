@@ -49,7 +49,7 @@ Alphabet
   k2:k	m9:m							   !!= * @CODE@ to be documented
   p4:p ! pääpp4ir
   k4:k č4:č r4:r l4:l h4:h i4:i
-%^P:p %^K:k %^Č:č %^H:h %^T:t              !!= * @CODE@
+ %^P:p %^K:k %^Č:č %^H:h %^T:t              !!= * @CODE@
  %^A:á 			     !!= * @CODE@ loddán but algan, default is á.
 
 !! Different triggers
@@ -67,10 +67,13 @@ Alphabet
 %^CLEN:0	!!= * @CODE@ cons lengthening
 %^RVL:0     !!= * @CODE@ root vow length
 %^CSH:0     !!= * @CODE@ cons shortening
+%^VSH:0     !!= * @CODE@ vow shortening
 %^LSH:0     !!= * @CODE@ low vow shortening
 %^RVSH:0	!!= * @CODE@ root vow shortening
 %^DIPH:0    !!= * @CODE@ diphthongisation
 %^IA:0      !!= * @CODE@ i to á (more)
+%^ÁE:0      !!= * @CODE@ á to e (more)
+%^ÁI:0      !!= * @CODE@ á to i (more)
 %^FCD:0     !!= * @CODE@  Final consonant deletion
 %^EE:0      !!= * @CODE@  Final vowel deletion in ee stems
 %^UU:0      !!= * @CODE@  Final vowel deletion in uu stems
@@ -80,8 +83,6 @@ Alphabet
 !! !! ... 2013 , these are old, and kept while awaiting a revision
 
 %^CPL:0 			     !!= * @CODE@
-%^DIPH:0 			     !!= * @CODE@
-%^IA:0			     	 !!= * @CODE@
 %^ILL:0 				 !!= * @CODE@ e to a/á in ill etc
 %^ODDC:0				 !!= * @CODE@ shorten cns in odd-syll stems before C, #
 %^ODDLV:0				 !!= * @CODE@
@@ -134,7 +135,7 @@ Sets
  StemCns = b b3 d d3 g g2 g3 h h2 h3 		   !!= * @CODE@ 
            j l m m2 m3 m8 n n8 n2 ŋ r s  ;     !!= * @CODE@ 
 
-Arch = %^WG %^RC %^RV %^SV %^RVL %^EE %^UU %^RVSH %^DIPH %^SC %^CSC %^ILL  ;    !!= * @CODE@ 
+Arch = %^WG %^RC %^RV %^SFV %^SV %^RVL %^EE %^UU %^RVSH %^DIPH %^SC %^CSC %^ILL %^ÁE %^ÁI ;    !!= * @CODE@ 
 Len = %^RLEN %^LLEN %^SLEN %^CLEN %^LSH ;    !!= * @CODE@ 
 
 Dummy = Arch Len %^ODDC %^SVLOW ;    !!= * @CODE@ 
@@ -150,14 +151,14 @@ Rules
 "X:x halflong to short gradation"
 Cx:Cy <=> Vow: _ Vow (Cns) (Dummy:*) %^WG:0 ;
 	where Cx in (m7 n7 ŋ7 r7 s7 š7 j7 v7 đ7 l7 )
-		  Cy in (m  n  ŋ  r  s  š  j  v  đ  l  )
+              Cy in (m  n  ŋ  r  s  š  j  v  đ  l  )
 		  matched;
 
 "x:y gradation" ! t:đ in a separate rule
 Cx:Cy <=> Vow: _ Vow (Cns) (Dummy:*) %^WG:0 ;
           Vow: _ k4:h Vow (Cns) (Dummy:*) %^WG:0 ;
 	where Cx in (c č h p4 )
-          Cy in (s j̣ ṿ ṿ  )
+              Cy in (s j̣ ṿ ṿ  )
 		  matched;
 
 !€ käähir^WG
@@ -174,10 +175,9 @@ t:đ <=> Vow: _ (k4:) Vow (Cns) (Dummy:*) %^WG:0 ;
 k4:h <=> Vow: t: _ Vow (Cns) (Dummy:*) %^WG: ;
 
 
-
 "xx:x gradation"
-Cx:0 <=> Vow: _ (ˊ:) Cx (%^RC:) Vow (Vow) (Cns) (Dummy:*) %^WG:0  ;
-	where Cx in ( b d g p t k c č f l z ž r l m n ŋ r s š v ) ;
+Cx:0 <=> Vow: _ (ˊ:) Cx (%^RC:) Vow: (Vow) (Cns:) (Dummy:*) %^WG:0  ;
+	where Cx in ( b d g p t k c č f z ž l m n ŋ r s š v ) ;
 
 !€ kopp^RCâ^WG^LLEN>st
 !€ ko0p0â00>st
@@ -185,7 +185,7 @@ Cx:0 <=> Vow: _ (ˊ:) Cx (%^RC:) Vow (Vow) (Cns) (Dummy:*) %^WG:0  ;
 
 
 "xx:y long to halflong gradation 1" ! hh:V, kk:h, pp:v, čč:J
-Cx:0 <=> Vow: _ Cy: Vow (Vow:) (Cns) (Dummy:*) %^WG:0 ;
+Cx:0 <=> Vow: _ Cy: Vow: (Vow:) (Cns:) (Dummy:*) %^WG:0 ;
          Vow (Dummy:) _ Cy: (Dummy:) Vow (Dummy:*) %^WG:0 ;
 	where Cx in ( h   k  p  č ) 
 	      Cy in ( h4  k4 p4 č4 )
@@ -196,7 +196,7 @@ Cx:0 <=> Vow: _ Cy: Vow (Vow:) (Cns) (Dummy:*) %^WG:0 ;
 !htest
 
 "xx:y long to halflong gradation 2" ! hh:V, kk:h, pp:v, čč:J
-Cx:Cy <=> Vow Cz: _ Vow (Vow:) (Cns) (Dummy:*) %^WG:0 ;
+Cx:Cy <=> Vow Cz: _ Vow (Vow:) (Cns:) (Dummy:*) %^WG:0 ;
           Vow (Dummy:) Cz: _ (Dummy:) Vow (Dummy:*) %^WG:0 ;
 	where Cx in ( h4  k4 p4 č4 ) 
 	      Cy in ( ṿ   h  v  j̣ ) 
@@ -211,8 +211,10 @@ Cx:Cy <=> Vow Cz: _ Vow (Vow:) (Cns) (Dummy:*) %^WG:0 ;
 !€ su0  0 hh  áá  0  0    0    0st
 !htest s u ^RV:0 k:0 k4:h ^RC:h á:á ^SV:á ^WG:0 ^CLEN:0 ^SLEN:0 >:0 s t
 
+!htest č i ä p:0 p4:v á t ^WG:0 ^FCD:0
+
 "yx:zx gradation"
-Cx:Cy <=> _ (ˊ:) Cz Vow (Cns) (Dummy:*) %^WG: ;
+Cx:Cy <=> _ (ˊ:) Cz Vow (Cns:) (Dummy:*) %^WG: ;
        where Cx in ( h4 k4 h4 h4 ) 
              Cy in ( v  v  v  v  )
              Cz in ( t  s  č  c  ) 
@@ -227,16 +229,16 @@ Cx:Cy <=> _ (ˊ:) Cz Vow (Cns) (Dummy:*) %^WG: ;
 !€ totk4os^WG
 !€ tođ hos0
 !htest t o t:đ k4:h o s ^WG:0 
-
-"xyy:xy gradation"
-Cy:0 <=> Cx: _ Cy: Vow (Cns) %^WG: ;
-      where Cx in ( i i l l l l l l m m n n n r r r r r r v ) 
-            Cy in ( c t c p s t č š p č c s t c p s t č š p ) 
-      matched ;
-
-!€ riänttus^WG
-!€ riän0tus0
-
+ 
+!!! "xyy:xy gradation"
+!!! Cy:0 <=> Cx: _ Cy: Vow (Cns) %^WG: ;
+!!!       where Cx in ( i i l l l l l l m m n n n r r r r r r v ) 
+!!!             Cy in ( c t c p s t č š p č c s t c p s t č š p ) 
+!!!       matched ;
+!!! 
+!!! !€ riänttus^WG
+!!! !€ riän0tus0
+ 
 "xxy:xy gradation for nnj"
 Cx:0 <=> Cx: _ Cy: Vow (Cns) %^WG: ;
       where Cx in ( n ) 
@@ -245,6 +247,22 @@ Cx:0 <=> Cx: _ Cy: Vow (Cns) %^WG: ;
 
 !€ koonnjâl^WG
 !€ koon0jâl0 
+
+"xyy:xy gradation"
+Cy:0 <=> Vow: (%^RV:) Cx: _ Cy: Vow (Cns) %^WG: ;
+	where Cx in ( i4 l n r l m r v i4 l l l l n n r r r r )
+              Cy in ( t  t t t p p p p c  c č s š c s c č s š ) 
+	matched ;
+
+! s š c č p t 
+
+!€ aˆRVi4kkâ^WG
+!€ a0i0há0
+!htest a ^RV:0 i4:i k:0 k:h â ^WG:0
+
+!€ vieltti^WG
+!€ viel0ti0
+!htest v i e l t:0 t i ^WG:0
 
 "xyy:xz gradation 1"
 Cy:0 <=> Vow: (%^RV:) Cx:Cz _ Cy: Vow (Cns) %^WG: ;
@@ -260,33 +278,15 @@ Cy:Cz <=> Vow: (%^RV:) Cx: Cy: _ Vow (Cns) %^WG: ;
 		  Cz in ( h  h h h h  )
 		  matched ;
 
-"xyy:xy gradation"
-Cy:0 <=> Vow: (%^RV:) Cx: _ Cy: Vow (Cns) %^WG: ;
-	where Cx in ( i4 l n r l m r v i4 l l l l n n r r r r )
-		  Cy in ( t  t t t p p p p c  c č s š c s c č s š ) 
-	matched ;
-
-! s š c č p t 
-
-!€ aˆRVi4kkâ^WG
-!€ a0i0há0
-!htest a ^RV:0 i4:i k:0 k:h â ^WG:0
-
-!€ vieltti^WG
-!€ viel0ti0
-!htest v i e l t:0 t i ^WG:0
-
-
 "xˊy:xy gradation"
 ˊ:0 <=> Vow: Cx _ Cy Vow (Cns) (Dummy:*) %^WG:0 ;
-	where Cx in (b b b b h h h h h j j j j l l l l l l l l l l l m n n n n n p p p p r r r r r r r r r r r r r r s s s s s s t t v v v v v v v v v v v v v đ đ đ đ đ ŋ š š š š )
-		  Cy in (d l đ ž l m t t č d l m v b d g j m n s v ŋ š ž n d h j z ž c s t č b d f g h j m n r s t v ŋ š k m n p t v k h d g h k j l m n r z đ ŋ ž b f g j m g k m p t )
+     where Cx in (b b b b h h h h j j j j l l l l l l l l l l l m n n n n n p p p p r r r r r r r r r r r r r r s s s s s s t t v v v v v v v v v v v v v đ đ đ đ đ ŋ š š š š )
+           Cy in (d l đ ž l m t č d l m v b d g j m n s v ŋ š ž n d h j z ž c s t č b d f g h j m n r s t v ŋ š k m n p t v k h d g h k j l m n r z đ ŋ ž b f g j m g k m p t )
 		  matched;
 
 "xˊy:xy gradation for i4"
 ˊ:0 <=> Vow: i4: _ Cx Vow (Cns) (Dummy:*) %^WG:0 ;
 	where Cx in (b  d  g  l  m  n  r  v  z  ŋ ) ;
-
 
 
 
@@ -296,8 +296,10 @@ Cy:0 <=> Vow: (%^RV:) Cx: _ Cy: Vow (Cns) %^WG: ;
        
 "Consonant shortening (not weak grade)"
 !!! __@RULENAME@__ pp to p for kappeer ~ kaperist
-Cx:0 <=> _ Cx  (%^RC:) [ Vow:  ]* (Cns) (%^RC:) (%^SC:) (%^RLEN:) %^CSH: (%^RVSH:) %>: ;
-       where Cx in ( s v m n ŋ š h l p d k ) ;
+Cy:0 <=> Cx _  (%^RC:) [ Vow:  ]* (Cns) (Cns) (%^RC:) (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) %^CSH: (%^RVSH:) %>: ;
+       where Cx in ( s v m n ŋ š h l p d k h  p  t g r ) 
+             Cy in ( s v m n ŋ š h l p d k h4 p4 t g r ) 
+       matched ;
  
 !€ kappeer^CSH^RVSH>ist
 !€ ka0p0er000ist
@@ -313,22 +315,23 @@ Cx:0 <=> _ Cx  (%^RC:) [ Vow:  ]* (Cns) (%^RC:) (%^SC:) (%^RLEN:) %^CSH: (%^RVSH
 
 !€ vinnjooh^CSH^RVSH>ist
 !€ vi0nj0oh000ist
-!htest v i n:0 n j o:0 o h ^CSH:0 ^RVSH:0 >:0 i s t 
+!htest v i n n:0 j o:0 o h ^CSH:0 ^RVSH:0 > i s t 
 
 !€ paakkeet^CSH>ân
 !€ paa0keet00ân
 !htest p a a k:0 k e e t ^CSH:0 >:0 â n
 
-"nj to nnj lengthening (not strong grade)"
-%^RC:n <=>  Vow: (%^RV:) n: n _ j  Vow (Cns:) %^WG: %^CLEN: %>: ;
+!€ nahhaar^CSH>ân
+!€ na0h0ar00ân
+!htest n a h:0 h a a r ^CSH:0 > â n
 
-!€ kunnjo^WG^CLEN
-!€ kun0njo00
-  
-!€ koonnjâl^WG
-!€ koon0jâl0 
-  
-  
+"nnj to nj shortening"
+n:0 <=> n _ j Vow (Cns:) %^CSH: %>: ;
+
+!€ konnjâl^CSH>ân
+!€ kon0jâl00ân
+
+ 
 "Lengthen root consonant after vowel shortening"
 %^RC:Cx <=> Vow Cx _ %^CSH: ;
         where Cx in ( p t k ) ; 
@@ -370,11 +373,24 @@ t:0 <=> _ %>: t t ;
 
 !! !!Vowel rules
 
-"Vowel shortening"
-!! __@RULENAME@__ e to 0 for kappeer ~ kaperist
-Vx:0 <=>  _ Vx Cns (%^RC:) (%^SC:) (%^CSH:) %^RVSH: %>: ;
-          _ Vx Seg:* (%^RC:) (%^SC:) (%^CSH:) %^RVSH: %>: ; 
-    where Vx in ( a e o á ä u y i ) ;
+"Vowel change "
+Cx:Cy <=> _ (Cns:) Cz: %^WG: ; 
+       where Cx in ( á á )
+             Cy in ( e i )
+             Cz in ( %^ÁE %^ÁI ) 
+       matched ;
+
+!€ puttás^ÁE^WG
+!€ pu0tes00
+!htest p u t:0 t á:e s ^ÁE:0 ^WG:0
+
+"Vowel shortening with consonant shortening"
+Vx:0 <=> _ Vx Seg:* (Dummy:*) %^CSH: (Dummy:*) %>: ;
+        where Vx in ( a e o á ä u y i ) ;
+
+!€ koonnjâl^CSH>ân
+!€ k0on0jâl0>ân
+!htest k o:0 o n n:0 j â l ^CSH:0 > â n
 
 !€ kappeer^CSH^RVSH>ist
 !€ ka0p0er000ist
@@ -392,6 +408,17 @@ Vx:0 <=>  _ Vx Cns (%^RC:) (%^SC:) (%^CSH:) %^RVSH: %>: ;
 !€ ka0ha0n0j000ist
 !htest
 
+"Vowel shortening (no consonant shortening)"
+!!! __@RULENAME@__ 
+Vy:0 <=> _ Vx   (Cns) (Cns) (%^RC:) (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) %^VSH: (%^RVSH:) %>: ;
+       where Vx in ( a e i o u á ä ) 
+             Vy in ( a e i o u á ä ) 
+       matched ;
+
+!€ kiirrâs^VSH>ân
+!€ ki0rrâs0>ân
+!htest k i i:0 r r â s ^VSH:0 > â n 
+ 
 "Suffix vowel lengthening"
 !! __@RULENAME@__ long á in kissáást
 %^SV:Vx <=> Vx       _ Dummy:* Cns                  %^SLEN: ;
@@ -467,6 +494,13 @@ Vx:Vy <=> _ (Dummy:*) %^SVLOW:0 ;
 "Illative suffix change in bisyllabic e stems"
 %^A:a <=> a (%^RV:) Cns:* e: (Dummy:*) %>: _ ;
 
+"Root vowel change for á to ä with i in second syllable"
+á:ä <=> _ á: Cns:* :i Cns: %^ÁI: ;
+     á: _ Cns:* :i Cns: %^ÁI: ;
+
+!€ páápp4ár^ÁI^WG
+!€ pää0vir00
+!htest p á:ä á:ä p:0 p4:v á:i r ^ÁI:0 ^WG:0
 
 !! !!Other rules
 
@@ -483,3 +517,18 @@ Vx:Vy <=> _ (Dummy:*) %^SVLOW:0 ;
 !htest
 
 
+"Word final consonant deletion of n m t"                 
+!! __@RULENAME@__ for vaskâm:vaaskâ
+Cx:0 <=> _ (%^WG:) %^FCD: ;      
+         where Cx in (n m t) ;
+
+!€ va^RVskâm^WG^FCD
+!€ vaaskâ00
+!htest v a ^RV:a s k â m:0 ^WG:0 ^FCD:0
+	
+!"Word Final m9 to n"
+!m9:n <=> _ %>: [.#.|Cns] ;
+!
+!!€ puhelim9>ntáá
+!!€ puhelin0ttáá
+ 
