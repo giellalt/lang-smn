@@ -18,7 +18,8 @@
 ! ==========================
 
 
-!! !!1. Even-syllable stems
+!! !!Table of content
+!! !1. Even-syllable stems
 !! !Two-syllabic
 !! * â-stems SOLLA
 !! * á-stems FADDA, KISSA
@@ -35,6 +36,13 @@
 !! * 2.2 Stems without consonant gradation
 !! !3. Ohter cases, all kind of changes
 
+!! !!!The lexica themselves
+
+!! Most of the lexica point at other lexica at the
+!! moment (marked with "> LEXNAME", they shall eventually
+!! be unified.
+
+!! !!Some ad hoc lexica
 
 LEXICON KAKSI !!= * @CODE@ ad hoc two syllable stem
 KISSA ;
@@ -45,22 +53,22 @@ LITTER ;
 LEXICON NELJA !!= * @CODE@ ad hoc three syllable stem
 KISSA ;
 
-LEXICON LAAVU
+LEXICON LAAVU !!= __@CODE@__: > KISSA
 KISSA ;
 
-LEXICON TAVLU
+LEXICON TAVLU !!= __@CODE@__:  > KISSA
 KISSA ;
 
-LEXICON PARGO
+LEXICON PARGO  !!= __@CODE@__: > KISSA
 KISSA ;
 
-!! !!!2014
 
 LEXICON nounstems !!= __@CODE@__: these words should be classified
 LITTER ; !! We just send them to LITTER for the time being. 
 
+!! !!twosyllabic stem lexica
 
-LEXICON FADDA  ! This might be the standard even syllabi lexicon
+LEXICON FADDA  !!= __@CODE@__:  This might be the standard even syllabi lexicon
 +N+Sg+Nom: K ;               ! kissá
 +N+Sg+Gen:%^WG%^LLEN K ;     ! fáádá, ráávsá
 +N+Sg+Acc:%^WG%^LLEN K ;     ! fáádá, ráávsá
@@ -80,7 +88,7 @@ LEXICON FADDA  ! This might be the standard even syllabi lexicon
 
 
 
-LEXICON KISSA ! No root vowel lengthening
+LEXICON KISSA !!= __@CODE@__:  No root vowel lengthening
 +N+Sg+Nom: K ;               ! kissá
 +N+Sg+Gen:%^WG K ;           ! kisá
 +N+Sg+Acc:%^WG K ;           ! kisá
@@ -99,7 +107,7 @@ LEXICON KISSA ! No root vowel lengthening
 +N+Pl+Abe:%^WG%>ittáá K ;    ! kisáittáá  
 
 
-LEXICON AAIGA
+LEXICON AAIGA!!= __@CODE@__: 
 
 +N+Sg+Nom: K ;			! aaigâ %^WG?
 +N+Sg+Gen:%^UUu K ; 		! aiguu Please mark stem vowel change â > uu.
@@ -120,9 +128,9 @@ LEXICON AAIGA
 
 
 
-! the other lexica go here
 
-LEXICON KUTKA ! Vartalotyyppi CVCCV Even-a-circ
+
+LEXICON KUTKA !!= __@CODE@__:  Vartalotyyppi CVCCV Even-a-circ
 
 +N+Sg+Nom: K ;    			 		! kutkâ
 +N+Sg+Gen:%^WG%^LLEN K ;     		! kuuđhâ
@@ -153,8 +161,8 @@ LEXICON SOLLA  !!= * __@CODE@__ SM1, RLEN, earlier LLEN
 +N+Sg+Loc:%^WG%^RLEN%>st K ; 		! soolâst
 +N+Sg+Com:%^WG%^LSH%^CLEN%^SVLOW%>in K ; 	! solláin
 +N+Sg+Abe:%^WG%^LSH%>ttáá K ;		! solâttáá
-+N+Ess:%>n K ;						! sollân
-+N+Par:%>d K ;						! sollâd
++N+Ess:%^CLEN%>n K ;						! sollân
++N+Par:%^CLEN%>d K ;						! sollâd
 +N+Pl+Nom:%^WG%^RLEN%>h K ;  		! soolah
 +N+Pl+Gen:%^WG%^RLEN%>i K ;  		! soolâi
 +N+Pl+Acc:%^WG%^RLEN%>id K ; 		! soolâid
@@ -164,28 +172,11 @@ LEXICON SOLLA  !!= * __@CODE@__ SM1, RLEN, earlier LLEN
 +N+Pl+Abe:%^WG%^LSH%>ittáá K ;		! solâittáá
 
 
-LEXICON SPELLA ! Forms common to sollâ, consonant (l) half long everywhere where l is written as short
+LEXICON SPELLA !!= * __@CODE@__ > SOLLA,  Forms common to sollâ, consonant (l) half long everywhere where l is written as short
 SOLLA ;
-!+N+Sg+Nom: K;				 		! spellâ
-!+N+Sg+Gen:%^WG%^LLEN K ;     		! speelâ
-!+N+Sg+Acc:%^WG%^LLEN K ;     		! speelâ
-!+N+Sg+Ill:%^RLEN%^CSH%>n K ;		! speelân
-!+N+Sg+Loc:%^WG%^LLEN%>st K ; 		! speelâst
-!+N+Sg+Com:%^WG%^LSH%^CLEN%>in K ; 	! spelláin
-!+N+Sg+Abe:%^WG%^LSH%>ttáá K ;		! spelâttáá
-!+N+Ess:%>n K ;						! spellân
-!+N+Par:%>d K ;						! spellâd
-!+N+Pl+Nom:%^WG%^LLEN%>h K ;  		! speelah
-!+N+Pl+Gen:%^WG%^LLEN%>i K ;  		! speelâi
-!+N+Pl+Acc:%^WG%^LLEN%>id K ; 		! speelâid
-!+N+Pl+Ill:%^WG%^LLEN%>id K ;		! spelláid
-!+N+Pl+Loc:%^WG%^LLEN%>in K ; 		! speelâin
-!+N+Pl+Com:%^WG%^LSH%>iguin K ;		! spelâiguin 
-!+N+Pl+Abe:%^WG%^LSH%>ittáá K ;		! spelâittáá
 
 
-
-LEXICON APINA ! this is for loanwords without stem change
+LEXICON APINA !!= __@CODE@__:  this is for loanwords without stem change
 
 +N+Sg+Nom: K ;			! apina
 +N+Sg+Gen: K ; 			! apina
@@ -205,7 +196,7 @@ LEXICON APINA ! this is for loanwords without stem change
 +N+Pl+Abe:%>ittáá K ; 	! apinaittáá
 
 
-LEXICON NJUNE
+LEXICON NJUNE !!= __@CODE@__:  !!= * __@CODE@__ 
 +N+Sg+Nom: K ;						! njun7e
 +N+Sg+Gen:%^WG K ;					! njune
 +N+Sg+Acc:%^WG K ;					! njune
@@ -226,7 +217,7 @@ LEXICON NJUNE
 
 
 
-LEXICON POOVSA ! soovsa
+LEXICON POOVSA !!= __@CODE@__:  soovsa
 +N+Sg+Nom:%^WG%^FCD K ;			! poovsâ
 +N+Sg+Gen: K ;				! poksâm
 +N+Sg+Acc: K ;				! poksâm
@@ -246,7 +237,7 @@ LEXICON POOVSA ! soovsa
 
 
 
-LEXICON PUHELIN		! Only a few words in this category
+LEXICON PUHELIN		!!= __@CODE@__:  Only a few words in this category
 +N+Sg+Nom: 	K ;				! puhelin
 +N+Sg+Gen:	K ;				! puhelin
 +N+Sg+Acc:	K ;				! puhelin
@@ -264,7 +255,7 @@ LEXICON PUHELIN		! Only a few words in this category
 +N+Pl+Com:%>ijguin	K ;		! puhelimijguin
 +N+Pl+Abe:%>ijttáá	K ;		! puhelimijttáá
 
-LEXICON PUUVSAH ! Plural tantum
+LEXICON PUUVSAH !!= __@CODE@__:  Plural tantum
 +N+Sg+Nom: R ; 						! puksâ ! especially in compounds
 +N+Pl+Nom:%^WG%>h K ;				! puuvsah
 +N+Pl+Gen:%^WG%>i K ; 				! puuvsâi
@@ -278,102 +269,33 @@ LEXICON PUUVSAH ! Plural tantum
 
 
 
-LEXICON AIGI
+LEXICON AIGI  !!= __@CODE@__:  > KUTKA (?)
 KUTKA ;
 
-LEXICON NJAMMA
+LEXICON NJAMMA  !!= __@CODE@__: > KUTKA (?)
+KUTKA ;
+
+LEXICON HERTTA !!= __@CODE@__: > KUTKA Vartalotyyppi CVC1C2C2V Even-a-circ
 KUTKA ;
 
 
-LEXICON HERTTA !Vartalotyyppi CVC1C2C2V Even-a-circ
-KUTKA ;
 
-!+N+Sg+Nom: K ;    			 		! herttâ
-!+N+Sg+Gen:%^WG%^LLEN K ;     		! heertâ
-!+N+Sg+Acc:%^WG%^LLEN K ;     		! heertâ
-!+N+Sg+Ill:%^RLEN%>n K ;      		! heertân
-!+N+Sg+Loc:%^WG%^LLEN%>st K ; 		! heertâst
-!+N+Sg+Com:%^WG%^LSH%^CLEN%>in K; 	! herttáin
-!+N+Sg+Abe:%^WG%^LSH%>ttáá K ;		! hertâttáá
-!+N+Ess:%>n K ;						! herttân
-!+N+Par:%>d K ;						! herttâd
-!+N+Pl+Nom:%^WG%^LLEN%>h K ;  		! heertah
-!+N+Pl+Gen:%^WG%^LLEN%>i K ;  		! heertâi
-!+N+Pl+Acc:%^WG%^LLEN%>id K ; 		! heertâid
-!+N+Pl+Ill:%^WG%^LSH%^CLEN%>id K ;	! herttáid 
-!+N+Pl+Loc:%^WG%^LLEN%>in K ;		! heertâin
-!+N+Pl+Com:%^WG%^LSH%>iguin K ;		! hertâiguin
-!+N+Pl+Abe:%^WG%^LSH%>ittáá K ; 	! hertâittáá
-
-
-!+N+Sg+Nom: K ;    			 		! merkkâ
-!+N+Sg+Gen:%^WG%^LLEN K ;     		! meerhâ
-!+N+Sg+Acc:%^WG%^LLEN K ;     		! meerhâ
-!+N+Sg+Ill:%^RLEN%>n K ;      		! meerkân
-!+N+Sg+Loc:%^WG%^LLEN%>st K ; 		! meerhâst
-!+N+Sg+Com:%^WG%^LSH%^CLEN%>in K; 	! merháin
-!+N+Sg+Abe:%^WG%^LSH%>ttáá K ;		! merhâttáá
-!+N+Ess:%>n K ;						! merkkân
-!+N+Par:%>d K ;						! merkkâd
-!+N+Pl+Nom:%^WG%^LLEN%>h K ;  		! meerhah
-!+N+Pl+Gen:%^WG%^LLEN%>i K ;  		! meerhâi
-!+N+Pl+Acc:%^WG%^LLEN%>id K ; 		! meerhâid
-!+N+Pl+Ill:%^WG%^LSH%^CLEN%>id K ;	! merháid 
-!+N+Pl+Loc:%^WG%^LLEN%>in K ;		! meerhâin
-!+N+Pl+Com:%^WG%^LSH%>iguin K ;		! merhâiguin
-!+N+Pl+Abe:%^WG%^LSH%>ittáá K ; 	! merhâittáá
-
-
-
-LEXICON NIEIDA	!! Vartalotyyppi CV1V2C1C2V Even-a-circ
+LEXICON NIEIDA	!!= __@CODE@__:  > KUTKA Vartalotyyppi CV1V2C1C2V Even-a-circ
 
 !! Kysymyksiä: Heikko aste + SgIll: diftongi pitkä, paitsi PlCom + PlAbe: dift. lyhentymä. Merkintöjä ei näy tässä.  
 KUTKA ;
 
-!+N+Sg+Nom: K ;    			 		! nieiˊdâ
-!+N+Sg+Gen:%^WG%^LLEN K ;     		! nieidâ
-!+N+Sg+Acc:%^WG%^LLEN K ;     		! nieidâ
-!+N+Sg+Ill:%^RLEN%>n K ;      		! nieidân
-!+N+Sg+Loc:%^WG%^LLEN%>st K ; 		! nieidâst
-!+N+Sg+Com:%^WG%^LSH%^CLEN%>in K; 	! nieiˊdáin
-!+N+Sg+Abe:%^WG%^LSH%>ttáá K ;		! nieˊidâttáá
-!+N+Ess:%>n K ;						! nieiˊdân
-!+N+Par:%>d K ;						! nieiˊdâd
-!+N+Pl+Nom:%^WG%^LLEN%>h K ;  		! nieidah
-!+N+Pl+Gen:%^WG%^LLEN%>i K ;  		! nieidâi, nieˊdâi
-!+N+Pl+Acc:%^WG%^LLEN%>id K ; 		! nieidâid
-!+N+Pl+Ill:%^WG%^LSH%^CLEN%>id K ;	! nieiˊdáid 
-!+N+Pl+Loc:%^WG%^LLEN%>in K ;		! nieidâin
-!+N+Pl+Com:%^WG%^LSH%>iguin K ;		! nieˊidâiguin
-!+N+Pl+Abe:%^WG%^LSH%>ittáá K ; 	! nieˊidâittáá
 
 
-LEXICON SILBA ! Tarkista yhteys leksikkoon LEXICON SOLLA
+LEXICON SILBA !!= __@CODE@__: > SOLLA  Tarkista yhteys leksikkoon LEXICON SOLLA
 SOLLA ;
 
-!+N+Sg+Nom: K ;    			 		! silbâ
-!+N+Sg+Gen:%^WG%^LLEN K ;     		! siilbâ
-!+N+Sg+Acc:%^WG%^LLEN K ;     		! siilbâ
-!+N+Sg+Ill:%^RLEN%>n K ;      		! siilbân
-!+N+Sg+Loc:%^WG%^LLEN%>st K ; 		! siilbâst
-!+N+Sg+Com:%^WG%^LSH%^CLEN%>in K; 	! silbáin
-!+N+Sg+Abe:%^WG%^LSH%>ttáá K ;		! silbâttáá
-!+N+Ess:%>n K ;						! silbân
-!+N+Par:%>d K ;						! silbâd
-!+N+Pl+Nom:%^WG%^LLEN%>h K ;  		! siilbah
-!+N+Pl+Gen:%^WG%^LLEN%>i K ;  		! siilbâi
-!+N+Pl+Acc:%^WG%^LLEN%>id K ; 		! siilbâid
-!+N+Pl+Ill:%^WG%^LSH%^CLEN%>id K ;	! silbáid 
-!+N+Pl+Loc:%^WG%^LLEN%>in K ;		! siilbâin
-!+N+Pl+Com:%^WG%^LSH%>iguin K ;		! silbâiguin
-!+N+Pl+Abe:%^WG%^LSH%>ittáá K ; 	! silbâittáá
 
 
-
-LEXICON KIETA  !!= * __@CODE@__ SM5
+LEXICON KIETA  !!= * __@CODE@__ SM5  > FADDA
 FADDA ; ! Pitää olla toinenlainen: todo.
 
-LEXICON SAAMI 
+LEXICON SAAMI !!= __@CODE@__: 
 +N+Sg+Nom: K ;                 ! sääm7i !please add m + dot
 +N+Sg+Gen:%^WG K ;             ! säämi
 +N+Sg+Acc:%^WG K ;             ! säämi
@@ -418,7 +340,7 @@ LEXICON TAHHEE !!= * @CODE@ ee-final contract
 
 
 
-LEXICON KAAMUV  ! To be worked out, now just added
+LEXICON KAAMUV  !!= __@CODE@__:  To be worked out, now just added
 
 +N+Sg+Nom:%^RV K ;        ! kaamuv
 +N+Sg+Gen:%^RVSH K ;      ! kammuu
@@ -438,7 +360,7 @@ LEXICON KAAMUV  ! To be worked out, now just added
 +N+Pl+Abe:%>ittáá K ;     ! kammuittáá
 
 
-LEXICON EEHID 
+LEXICON EEHID !!= __@CODE@__: 
 
 +N+Sg+Nom: K ;				! eehid
 +N+Sg+Gen: K ;				! eehid
@@ -458,11 +380,11 @@ LEXICON EEHID
 
 
 
-LEXICON RUOTAS
+LEXICON RUOTAS !!= __@CODE@__: nom sg only, to be fixed
 +N+Sg+Nom: # ;
 
 
-LEXICON PIIVTAS
+LEXICON PIIVTAS !!= __@CODE@__: 
 +N+Sg+Nom:%^WG K ;
 +N+Sg+Gen: K ;     
 +N+Sg+Acc: K ;     
@@ -481,7 +403,7 @@ LEXICON PIIVTAS
 +N+Pl+Ill:%>áid K ; 
 
 
-LEXICON KAPPEER-COMMON 
+LEXICON KAPPEER-COMMON  !!= __@CODE@__: 
 +N+Sg+Nom: K ;        		   		! kappeer
 +N+Sg+Gen: K ;    		 			! kappeer
 +N+Sg+Acc: K ;     		 			! kappeer 
@@ -498,11 +420,11 @@ LEXICON KAPPEER-COMMON
 +N+Pl+Com:%^CSH%^RVSH%>ijguin K ; 	! kaperijguin
 +N+Pl+Abe:%^CSH%^RVSH%>ijttáá K ;   ! kaperijttáá 
 
-LEXICON KAPPEER
+LEXICON KAPPEER !!= __@CODE@__: 
 KAPPEER-COMMON ; 
 +N+Sg+Abe:%>ttáá K ;				! kappeerttáá
 
-LEXICON HUKSIM 
+LEXICON HUKSIM  !!= __@CODE@__: 
 +N+Sg+Nom: K ;               ! huksim
 +N+Sg+Gen: K ;               
 +N+Sg+Acc: K ;               
@@ -521,7 +443,7 @@ LEXICON HUKSIM
 +N+Pl+Abe:%^SLEN%>ijttáá K ;    !   
 
  
-LEXICON PAAVIR
+LEXICON PAAVIR !!= __@CODE@__: 
 
 +N+Sg+Nom:%^WG K ;
 +N+Sg+Gen: K ;     
@@ -540,18 +462,18 @@ LEXICON PAAVIR
 +N+Pl+Abe:%^CSH%>ijttáá K ;    !   
 +N+Pl+Ill:%^CSH%>áid K ; 
 
-LEXICON PUTTAL
+LEXICON PUTTAL !!= * __@CODE@__ > LITTER
 LITTER ;
 
 
-LEXICON ERGI  !!= * __@CODE@__ i-i-á
+LEXICON ERGI  !!= * __@CODE@__ i-i-á > SAAMI
 SAAMI ;
 
-LEXICON XERGI
-# ;
+LEXICON XERGI  !!= * __@CODE@__ Dummy only
++Sg+Nom: # ;
 
 
-LEXICON CEVE-COMMON
+LEXICON CEVE-COMMON !!= * __@CODE@__ 
 +N+Sg+Nom:%^WG%^FCD K ;       ! čeve
 +N+Sg+Gen: K ;     ! čiäppát
 +N+Sg+Acc: K ;     ! čiäppát
@@ -568,7 +490,7 @@ LEXICON CEVE-COMMON
 +N+Pl+Com:%^RC%^CSH%>ijguin K ;  ! čiäpáttijguin
 +N+Pl+Abe:%^RC%^CSH%>ijttáá K ;  ! čiäpáttijttáá
 
-LEXICON CEVE
+LEXICON CEVE !!= * __@CODE@__ > CEVE_COMMON (+ Sg+Abe)
 CEVE-COMMON ;
 +N+Sg+Abe:%^RC%>táá K ; ! čiäppáttáá
 
@@ -578,6 +500,9 @@ CEVE-COMMON ;
 
 
 !! !!!Earlier
+
+!! These are now moved to other lexica, 
+!! they should be unified.
 
 !! !!Even-syllable stems
 ! -------------------
@@ -589,8 +514,9 @@ CEVE-COMMON ;
 !! !1.1.1 Even-syllabic â-, u- and i-stems
 
 
-LEXICON KIELA
+LEXICON KIELA !!= __@CODE@__: > SOLLA
 !! !Lexicon @LEXNAME@
+SOLLA ; 
 !!
 !! The lexicon @LEXNAME@ covers two-syllabic stems ending in -â, with the VC
 !! skeleton CVVC7V, where C7 is a half-long consonant. The half-long consonant
@@ -614,27 +540,24 @@ LEXICON KIELA
 !! | PlCom | kie’lâiguin   | njuo’lâiguin   | molâiguin
 !! | PlAbe | kie’lâittáá   | njuo’lâittáá   | molâittáá
 
-SOLLA ; ! Obviously wrong, so fix this.
 
-LEXICON RUTTA  !!= * __@CODE@__ SM4
-SOLLA ; ! kánske
 
-LEXICON KUOSA  !!= * __@CODE@__ SM7
-KIETA ; ! fix
+LEXICON KUOSA  !!= * __@CODE@__ SM7  > SOLLA
+SOLLA ; ! fix
 
-LEXICON RUOCA !!= * __@CODE@__ SM8
-KUOSA ; 
+LEXICON RUOCA !!= * __@CODE@__ SM8  > SOLLA
+SOLLA ; 
 
-LEXICON KIEHA !!= * __@CODE@__ SM9
-KUOSA ; 
+LEXICON KIEHA !!= * __@CODE@__ SM9  > SOLLA
+SOLLA ; 
 
-LEXICON CULGA !!= * __@CODE@__ SM10
-KUOSA ; 
+LEXICON CULGA !!= * __@CODE@__ SM10 > SOLLA
+SOLLA ; 
 
-LEXICON KYELI  !!= * __@CODE@__ i-e-á
+LEXICON KYELI  !!= * __@CODE@__ i-e-á  > SOLLA, PROBABLY WRONG
 KISSA ;
 
-LEXICON KUMPPI  !!= * __@CODE@__ i-i-i
+LEXICON KUMPPI  !!= * __@CODE@__ i-i-i > SOLLA (?)
 SOLLA ;
 
 !! !e stem lexica
@@ -659,7 +582,7 @@ LEXICON ALGE  !!= * __@CODE@__
 
 
 
-LEXICON ALME
+LEXICON ALME  !!= __@CODE@__:  > ALGE
 ALGE ;
 
  
@@ -676,17 +599,19 @@ ALGE ;
 
 
 !! !!Four-syllable stems
+!    ===================
 
 
-LEXICON KASNATTAS
+LEXICON KASNATTAS !!= __@CODE@__: to kappeer ???
 KAPPEER ;
 
 
 
-! Odd-syllable stems
-! ------------------
+!! !!Odd-syllable stems
+!    ===================
 
-LEXICON SODDADEM
+
+LEXICON SODDADEM !!= __@CODE@__: 
 +N+Sg+Nom: K ;              ! šoddâdem
 +N+Sg+Gen: K ;              ! šoddâdem
 +N+Sg+Acc: K ;              ! šoddâdem
@@ -705,7 +630,7 @@ LEXICON SODDADEM
 +N+Pl+Ill:%^SFV%>áid K ;    ! šoddâdmáid
 
 
-LEXICON KEPIDEM
+LEXICON KEPIDEM  !!= __@CODE@__: 
 +N+Sg+Nom: K ;            ! kepidem
 +N+Sg+Gen: K ;            ! kepidem
 +N+Sg+Acc: K ;            ! kepidem 
@@ -725,16 +650,16 @@ LEXICON KEPIDEM
 +N+Pl+Ill:%^CSH%>áid K ; 
 
 
-LEXICON POTTAAK
+LEXICON POTTAAK  !!= __@CODE@__: 
 :%^RC KAPPEER-COMMON ; 
 +N+Sg+Abe:%>ttáá K ; ! haamittáá
                      ! pottaakttáá
 
-LEXICON KAHHAAN
+LEXICON KAHHAAN  !!= __@CODE@__: 
 :%^SC KAPPEER-COMMON ; 
 +N+Sg+Abe:%>ttáá K ;		! kahhaanttáá
 
-LEXICON PIEHAIN
+LEXICON PIEHAIN  !!= __@CODE@__: 
 :%^SFV%^SC KAPPEER-COMMON ; 
 +N+Sg+Abe:%>ttáá K ;		! piehâinttáá
 
@@ -743,7 +668,7 @@ LEXICON LITTER !!= * @CODE* MO Ib 2nd syll vowel does not alternate
  +N: ODD_SUFF_SHORTSTEM ;
 
 
-LEXICON NAVER
+LEXICON NAVER  !!= __@CODE@__: 
 +N+Sg+Nom:%^WG K ;
 +N+Sg+Gen: K ;     
 +N+Sg+Acc: K ;     
@@ -761,7 +686,7 @@ LEXICON NAVER
 +N+Pl+Abe:%^CSH%>ijttáá K ; 
 +N+Pl+Ill:%^CSH%>áid K ; 
 
-LEXICON KIIRAS
+LEXICON KIIRAS  !!= __@CODE@__: 
 +N+Sg+Nom:%^WG K ;
 +N+Sg+Gen: K ;     
 +N+Sg+Acc: K ;     
@@ -781,36 +706,36 @@ LEXICON KIIRAS
 
 
 
-LEXICON KOLGOOH
+LEXICON KOLGOOH  !!= * __@CODE@__ > KAPPEER
 KAPPEER ; ! fix
 
-LEXICON UAIVAT
+LEXICON UAIVAT !!= * __@CODE@__ > KAPPEER
 KAPPEER ; ! fix
 
-LEXICON VEESKIR
+LEXICON VEESKIR !!= * __@CODE@__ > PIIVTAS
 !KAPPEER ; ! fix
 PIIVTAS ; ! fix
 
 
-! Contracted stems
-! ----------------
+!! !!Contracted stems
+!    ================
 
 
-! 3.6.2. Gen sg odd-syllabic
+!! 3.6.2. Gen sg odd-syllabic
 
-LEXICON SAMMILAS ! SM150
+LEXICON SAMMILAS !!= __@CODE@__:  SM150
 : LAS_COMMON ;
 :%>ii LAS_SUF ;
 
-LEXICON COHASAS
+LEXICON COHASAS  !!= __@CODE@__: 
 : LAS_COMMON ;
 :%>áá LAS_SUF ;
 
-LEXICON PUTTALAS
+LEXICON PUTTALAS  !!= __@CODE@__: 
 :a LAS_COMMON ;
 :%>a LAS_SUF ;
 
-LEXICON MAJEMUS
+LEXICON MAJEMUS  !!= * __@CODE@__ 
 +N+Sg+Nom:uš K ;
 +N+Sg+Gen:uu K ;
 +N+Sg+Acc:uu K ;
@@ -830,14 +755,14 @@ LEXICON MAJEMUS
  
 :%>ui LAS_SUF ;
 
-LEXICON LAS_COMMON 
+LEXICON LAS_COMMON !!= * __@CODE@__ 
 +N+Sg+Nom:âš K ;
 +N+Sg+Ill:âžân K ;
 +N+Sg+Abe:ááttáá K ;
 +N+Ess:âžžân K ;
 +N+Par:âžžâd K ;
 
-LEXICON LAS_SUF
+LEXICON LAS_SUF  !!= * __@CODE@__ 
 +N+Sg+Gen: K ;
 +N+Sg+Acc: K ;
 +N+Sg+Ill: K ;
@@ -855,16 +780,16 @@ LEXICON LAS_SUF
 
 
 
-! Odd-syllable stems, sublexica
+!! !! Odd-syllable stems, sublexica
 ! - - - - - - - - - - - - - - - 
 
-LEXICON ODD_SUFF_LONGSTEM
+LEXICON ODD_SUFF_LONGSTEM  !!= * __@CODE@__ 
  +Sg+Nom: K ;
  +Sg+Gen: K ;
  +Sg+Acc: K ;
  +Sg+Ill:%>ân K ;
 
-LEXICON ODD_SUFF_SHORTSTEM
+LEXICON ODD_SUFF_SHORTSTEM  !!= * __@CODE@__ 
  +Sg+Loc:%>ist K ;
  +Sg+Com:%>áin K ;
  +Sg+Abe:%>ttáá K ;
@@ -886,6 +811,105 @@ LEXICON ODD_SUFF_SHORTSTEM
 
 
 
-! Sublexica for possessive suffixes
+!! !!Sublexica for possessive suffixes
 ! =================================
+
+!! To be written.
+
+
+
+!! !! Old notes, see these for paradigms
+
+
+!+N+Sg+Nom: K ;    			 		! silbâ
+!+N+Sg+Gen:%^WG%^LLEN K ;     		! siilbâ
+!+N+Sg+Acc:%^WG%^LLEN K ;     		! siilbâ
+!+N+Sg+Ill:%^RLEN%>n K ;      		! siilbân
+!+N+Sg+Loc:%^WG%^LLEN%>st K ; 		! siilbâst
+!+N+Sg+Com:%^WG%^LSH%^CLEN%>in K; 	! silbáin
+!+N+Sg+Abe:%^WG%^LSH%>ttáá K ;		! silbâttáá
+!+N+Ess:%>n K ;						! silbân
+!+N+Par:%>d K ;						! silbâd
+!+N+Pl+Nom:%^WG%^LLEN%>h K ;  		! siilbah
+!+N+Pl+Gen:%^WG%^LLEN%>i K ;  		! siilbâi
+!+N+Pl+Acc:%^WG%^LLEN%>id K ; 		! siilbâid
+!+N+Pl+Ill:%^WG%^LSH%^CLEN%>id K ;	! silbáid 
+!+N+Pl+Loc:%^WG%^LLEN%>in K ;		! siilbâin
+!+N+Pl+Com:%^WG%^LSH%>iguin K ;		! silbâiguin
+!+N+Pl+Abe:%^WG%^LSH%>ittáá K ; 	! silbâittáá
+
+!+N+Sg+Nom: K ;    			 		! nieiˊdâ
+!+N+Sg+Gen:%^WG%^LLEN K ;     		! nieidâ
+!+N+Sg+Acc:%^WG%^LLEN K ;     		! nieidâ
+!+N+Sg+Ill:%^RLEN%>n K ;      		! nieidân
+!+N+Sg+Loc:%^WG%^LLEN%>st K ; 		! nieidâst
+!+N+Sg+Com:%^WG%^LSH%^CLEN%>in K; 	! nieiˊdáin
+!+N+Sg+Abe:%^WG%^LSH%>ttáá K ;		! nieˊidâttáá
+!+N+Ess:%>n K ;						! nieiˊdân
+!+N+Par:%>d K ;						! nieiˊdâd
+!+N+Pl+Nom:%^WG%^LLEN%>h K ;  		! nieidah
+!+N+Pl+Gen:%^WG%^LLEN%>i K ;  		! nieidâi, nieˊdâi
+!+N+Pl+Acc:%^WG%^LLEN%>id K ; 		! nieidâid
+!+N+Pl+Ill:%^WG%^LSH%^CLEN%>id K ;	! nieiˊdáid 
+!+N+Pl+Loc:%^WG%^LLEN%>in K ;		! nieidâin
+!+N+Pl+Com:%^WG%^LSH%>iguin K ;		! nieˊidâiguin
+!+N+Pl+Abe:%^WG%^LSH%>ittáá K ; 	! nieˊidâittáá
+
+
+
+!+N+Sg+Nom: K ;    			 		! herttâ
+!+N+Sg+Gen:%^WG%^LLEN K ;     		! heertâ
+!+N+Sg+Acc:%^WG%^LLEN K ;     		! heertâ
+!+N+Sg+Ill:%^RLEN%>n K ;      		! heertân
+!+N+Sg+Loc:%^WG%^LLEN%>st K ; 		! heertâst
+!+N+Sg+Com:%^WG%^LSH%^CLEN%>in K; 	! herttáin
+!+N+Sg+Abe:%^WG%^LSH%>ttáá K ;		! hertâttáá
+!+N+Ess:%>n K ;						! herttân
+!+N+Par:%>d K ;						! herttâd
+!+N+Pl+Nom:%^WG%^LLEN%>h K ;  		! heertah
+!+N+Pl+Gen:%^WG%^LLEN%>i K ;  		! heertâi
+!+N+Pl+Acc:%^WG%^LLEN%>id K ; 		! heertâid
+!+N+Pl+Ill:%^WG%^LSH%^CLEN%>id K ;	! herttáid 
+!+N+Pl+Loc:%^WG%^LLEN%>in K ;		! heertâin
+!+N+Pl+Com:%^WG%^LSH%>iguin K ;		! hertâiguin
+!+N+Pl+Abe:%^WG%^LSH%>ittáá K ; 	! hertâittáá
+
+
+!+N+Sg+Nom: K ;    			 		! merkkâ
+!+N+Sg+Gen:%^WG%^LLEN K ;     		! meerhâ
+!+N+Sg+Acc:%^WG%^LLEN K ;     		! meerhâ
+!+N+Sg+Ill:%^RLEN%>n K ;      		! meerkân
+!+N+Sg+Loc:%^WG%^LLEN%>st K ; 		! meerhâst
+!+N+Sg+Com:%^WG%^LSH%^CLEN%>in K; 	! merháin
+!+N+Sg+Abe:%^WG%^LSH%>ttáá K ;		! merhâttáá
+!+N+Ess:%>n K ;						! merkkân
+!+N+Par:%>d K ;						! merkkâd
+!+N+Pl+Nom:%^WG%^LLEN%>h K ;  		! meerhah
+!+N+Pl+Gen:%^WG%^LLEN%>i K ;  		! meerhâi
+!+N+Pl+Acc:%^WG%^LLEN%>id K ; 		! meerhâid
+!+N+Pl+Ill:%^WG%^LSH%^CLEN%>id K ;	! merháid 
+!+N+Pl+Loc:%^WG%^LLEN%>in K ;		! meerhâin
+!+N+Pl+Com:%^WG%^LSH%>iguin K ;		! merhâiguin
+!+N+Pl+Abe:%^WG%^LSH%>ittáá K ; 	! merhâittáá
+
+
+!+N+Sg+Nom: K;				 		! spellâ
+!+N+Sg+Gen:%^WG%^LLEN K ;     		! speelâ
+!+N+Sg+Acc:%^WG%^LLEN K ;     		! speelâ
+!+N+Sg+Ill:%^RLEN%^CSH%>n K ;		! speelân
+!+N+Sg+Loc:%^WG%^LLEN%>st K ; 		! speelâst
+!+N+Sg+Com:%^WG%^LSH%^CLEN%>in K ; 	! spelláin
+!+N+Sg+Abe:%^WG%^LSH%>ttáá K ;		! spelâttáá
+!+N+Ess:%>n K ;						! spellân
+!+N+Par:%>d K ;						! spellâd
+!+N+Pl+Nom:%^WG%^LLEN%>h K ;  		! speelah
+!+N+Pl+Gen:%^WG%^LLEN%>i K ;  		! speelâi
+!+N+Pl+Acc:%^WG%^LLEN%>id K ; 		! speelâid
+!+N+Pl+Ill:%^WG%^LLEN%>id K ;		! spelláid
+!+N+Pl+Loc:%^WG%^LLEN%>in K ; 		! speelâin
+!+N+Pl+Com:%^WG%^LSH%>iguin K ;		! spelâiguin 
+!+N+Pl+Abe:%^WG%^LSH%>ittáá K ;		! spelâittáá
+
+
+
 
