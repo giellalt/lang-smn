@@ -33,7 +33,7 @@ Literal quotes and angles must be escaped (cf morpheme boundaries further down):
  *   m7:ṃ n7:ṇ ŋ7:ŋ̣ s7:ṣ r7:ṛ đ7:đ̣ l7:ḷ j7:j̣ h7:ḥ š7:ṣ̌   with dots
  *   h8:h g8:g m8:m n8:n t8:t				   	to be documented
  *   k2:k	m9:m							    to be documented
- * %^P:p %^K:k %^Č:č %^H:h %^T:t              
+ *  %^P:p %^K:k %^Č:č %^H:h %^T:t              
  *  %^A:á 			      loddán but algan, default is á.
 
 !!Different triggers
@@ -44,7 +44,6 @@ Archiphonemes
  * %^WG:0 		 weak grade
  * %^RV:0	 	 root vowel
  * %^SV:0 		 stem vowel
- * %^SVLOW:0		 stem vowel lowering â>á and u>o
  * %^RC:0		 root consonant
  * %^SC:0       suffix consonant
 
@@ -57,21 +56,22 @@ Triggers
  * %^CLEN:0	 cons lengthening
  * %^RVL:0      root vow length
  * %^CSH:0      cons shortening
+ * %^VSH:0      vow shortening
  * %^LSH:0      low vow shortening
  * %^RVSH:0	 root vow shortening
  * %^DIPH:0     diphthongisation
  * %^IA:0       i to á (more)
- * %^FCD:0      Final consonant deletion
- * %^EE:0       Final vowel deletion in ee stems
- * %^UU:0       Final vowel deletion in uu stems
+ * %^ÁE:0       á to e (more)
+ * %^ÁI:0       á to i (more)
+ * %^FCD:0       Final consonant deletion
+ * %^EE:0        Final vowel deletion in ee stems
+ * %^UU:0        Final vowel deletion in uu stems
  *  ¥:0         for Vowel lengthening, to be deleted
 
 
 !... 2013 , these are old, and kept while awaiting a revision
 
  * %^CPL:0 			     
- * %^DIPH:0 			     
- * %^IA:0			     	 
  * %^ILL:0 				  e to a/á in ill etc
  * %^ODDC:0				  shorten cns in odd-syll stems before C, #
  * %^ODDLV:0				 
@@ -118,7 +118,7 @@ Sets
  *  StemCns = b b3 d d3 g g2 g3 h h2 h3 		    
  *            j l m m2 m3 m8 n n8 n2 ŋ r s  ;      
 
- * Arch = %^WG %^RC %^RV %^SV %^RVL %^EE %^UU %^RVSH %^DIPH %^SC %^CSC %^ILL  ;     
+ * Arch = %^WG %^RC %^RV %^SFV %^SV %^RVL %^EE %^UU %^RVSH %^DIPH %^SC %^CSC %^ILL %^ÁE %^ÁI ;     
  * Len = %^RLEN %^LLEN %^SLEN %^CLEN %^LSH ;     
 
  * Dummy = Arch Len %^ODDC %^SVLOW ;     
@@ -150,9 +150,14 @@ Sets
 
 
 
+"xyy:xy gradation"
+Cy:0 <=> Cx: _ Cy: Vow (Cns) %^WG: ;
+      where Cx in ( i i l l l l l l m m n n n r r r r r r v ) 
+            Cy in ( c t c p s t č š p č c s t c p s t č š p ) 
+      matched ;
 
-
-
+!€ riänttus^WG
+!€ riän0tus0
 
 
 
@@ -200,13 +205,19 @@ __Consonant shortening (not weak grade)__ pp to p for kappeer ~ kaperist
 
 !!Vowel rules
 
-__Vowel shortening__ e to 0 for kappeer ~ kaperist
 
 
 
+
+
+
+
+
+__Vowel shortening (no consonant shortening)__ 
 
 
 __Suffix vowel lengthening__ long á in kissáást
+
 
 
 
@@ -240,4 +251,10 @@ __Suffix vowel lengthening__ long á in kissáást
 
 
 
+
+__Word final consonant deletion of n m t                 __ for vaskâm:vaaskâ
+
+
+* __puhelim9>ntáá__
+* __puhelin0ttáá__
 
