@@ -16,7 +16,8 @@
 
 Alphabet   
 
-!! The Inari Saami letters
+!! !!The Inari Saami letters
+
  a á â ä b c d e f g h i j k l m n o õ p q !!= * @CODE@
  r s t u v w x y z æ ä ø ö å			   !!= * @CODE@
  č đ ŋ ŧ š ž				 			   !!= * @CODE@
@@ -27,7 +28,7 @@ Alphabet
  ˊ  %- 							   !!= * @CODE@
  ':0   !!= @CODE@ this to zero
 
-!! Accented letters, just in case
+!! !Accented letters, just in case
 
  É Ó Ú Í À È Ò Ù Ì Ë Ü Ï Ê Ô Û Î Ã Ý þ Ð   !!= * @CODE@
  é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý þ ð   !!= * @CODE@
@@ -41,7 +42,7 @@ Alphabet
 
 
 
-!! Different archiphonemes
+!! !Different archiphonemes
 
   m7:ṃ n7:ṇ ŋ7:ŋ̣ s7:ṣ r7:ṛ đ7:đ̣ l7:ḷ j7:j̣ h7:ḥ š7:ṣ̌ !!= * @CODE@  with dots
   v7:ṿ 
@@ -52,15 +53,20 @@ Alphabet
  %^P:p %^K:k %^Č:č %^H:h %^T:t              !!= * @CODE@
  %^A:á 			     !!= * @CODE@ loddán but algan, default is á.
 
-!! Different triggers
+!! !!Different triggers
 
-!! !! 2014
+!! ! 2014
+
+!! Archiphonemes
 %^WG:0 		!!= * @CODE@ weak grade
 %^RV:0	 	!!= * @CODE@ root vowel
 %^SV:0 		!!= * @CODE@ stem vowel
-%^SVLOW:0		!!= * @CODE@ stem vowel lowering â>á and u>o
 %^RC:0		!!= * @CODE@ root consonant
-%^SC:0          !!= * @CODE@ suffix consonant
+%^SC:0      !!= * @CODE@ suffix consonant
+
+!! Triggers
+
+%^SVLOW:0	!!= * @CODE@ stem vowel lowering â>á and u>o
 %^RLEN:0    !!= * @CODE@ root lengthening
 %^LLEN:0    !!= * @CODE@ low vow lengthening
 %^SLEN:0    !!= * @CODE@ stem vowel lengthening
@@ -80,7 +86,7 @@ Alphabet
  ¥:0        !!= * @CODE@ for Vowel lengthening, to be deleted
 
 
-!! !! ... 2013 , these are old, and kept while awaiting a revision
+!! !... 2013 , these are old, and kept while awaiting a revision
 
 %^CPL:0 			     !!= * @CODE@
 %^ILL:0 				 !!= * @CODE@ e to a/á in ill etc
@@ -230,14 +236,14 @@ Cx:Cy <=> _ (ˊ:) Cz Vow (Cns:) (Dummy:*) %^WG: ;
 !€ tođ hos0
 !htest t o t:đ k4:h o s ^WG:0 
  
-!!! "xyy:xy gradation"
-!!! Cy:0 <=> Cx: _ Cy: Vow (Cns) %^WG: ;
-!!!       where Cx in ( i i l l l l l l m m n n n r r r r r r v ) 
-!!!             Cy in ( c t c p s t č š p č c s t c p s t č š p ) 
-!!!       matched ;
-!!! 
-!!! !€ riänttus^WG
-!!! !€ riän0tus0
+! "xyy:xy gradation"
+! Cy:0 <=> Cx: _ Cy: Vow (Cns) %^WG: ;
+!       where Cx in ( i i l l l l l l m m n n n r r r r r r v ) 
+!             Cy in ( c t c p s t č š p č c s t c p s t č š p ) 
+!       matched ;
+! 
+! !€ riänttus^WG
+! !€ riän0tus0
  
 "xxy:xy gradation for nnj"
 Cx:0 <=> Cx: _ Cy: Vow (Cns) %^WG: ;
@@ -343,6 +349,19 @@ n:0 <=> n _ j Vow (Cns:) %^CSH: %>: ;
 !€ ruávást^RC^CSH^RVSH>ist
 !€ ruávást0000ist
 !htest r u á v á s t ^RC:0 ^CSH:0 ^RVSH:0 >:0 i s t
+
+"Lengthening of half-long root consonant 1"
+Cx:Cy <=> Vow _ %^RC: Vow  %^CLEN: %>: [n|d] ;
+	where Cx in ( l7 )
+		  Cy in ( l ) 
+		  matched ;
+
+"Lengthening of half-long root consonant 2"
+%^RC:Cx <=> Vow :Cx _ Vow  %^CLEN: %>: [n|d] ;
+	where Cx in ( l ) ;
+
+!€ kiel7^RCâ^CLEN>n
+!€ kiellâ0n
 
 
 "Assimilation of root consonant and double suffix consonant"
