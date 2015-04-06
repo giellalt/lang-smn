@@ -30,57 +30,49 @@ Literal quotes and angles must be escaped (cf morpheme boundaries further down):
 
 !Different archiphonemes
 
- *   m7:ṃ n7:ṇ ŋ7:ŋ̣ s7:ṣ r7:ṛ đ7:đ̣ l7:ḷ j7:j̣ h7:ḥ š7:ṣ̌   with dots
- *   h8:h g8:g m8:m n8:n t8:t				   	to be documented
- *   k2:k	m9:m							    to be documented
- *  %^P:p %^K:k %^Č:č %^H:h %^T:t              
- *  %^A:á 			      loddán but algan, default is á.
-
-!!Different triggers
-
-! 2014
-
-Archiphonemes
- * %^WG:0 		 weak grade
- * %^RV:0	 	 root vowel
- * %^SV:0 		 stem vowel
- * %^RC:0		 root consonant
- * %^SC:0       suffix consonant
-
-Triggers
-
- * %^SVLOW:0	 stem vowel lowering â>á and u>o
- * %^RLEN:0     root lengthening
- * %^LLEN:0     low vow lengthening
- * %^SLEN:0     stem vowel lengthening
- * %^CLEN:0	 cons lengthening
- * %^RVL:0      root vow length
- * %^CSH:0      cons shortening
- * %^VSH:0      vow shortening
- * %^LSH:0      low vow shortening
- * %^RVSH:0	 root vow shortening
- * %^DIPH:0     diphthongisation
- * %^IA:0       i to á (more)
- * %^ÁE:0       á to e (more)
- * %^ÁI:0       á to i (more)
- * %^FCD:0       Final consonant deletion
- * %^EE:0        Final vowel deletion in ee stems
- * %^UU:0        Final vowel deletion in uu stems
- *  ¥:0         for Vowel lengthening, to be deleted
+ * k2:k								   to be documented
+ * p4:p                                   pääpp4ir
+ * k4:k č4:č r4:r l4:l h4:h i4:i           to be documented
+ * m7:ṃ n7:ṇ ŋ7:ŋ̣ s7:ṣ r7:ṛ đ7:đ̣ l7:ḷ       with dots
+ * j7:j̣ h7:ḥ š7:ṣ̌  v7:ṿ                    with dots
+ * h8:h g8:g m8:m n8:n t8:t			  	to be documented
+ * m9:m				    			   to be documented
+ * %^P:p %^K:k %^Č:č %^H:h %^T:t          obsolete ?
+ * %^A:á 	           		              loddán but algan, default is á.
 
 
-!... 2013 , these are old, and kept while awaiting a revision
+!More abstract archiphonemes
 
- * %^CPL:0 			     
- * %^ILL:0 				  e to a/á in ill etc
- * %^ODDC:0				  shorten cns in odd-syll stems before C, #
- * %^ODDLV:0				 
- * %^ODDSHV:0				 
- * %^SCPL:0 		    	 
- * %^SHV:0 				 
- * %^VLOW:0   				 
- * %^WGSH:0       			 
- * %^XST:0 			     
+ * %^RC:0		 = root consonant
+ * %^RV:0	 	 = root vowel
+ * %^SC:0       = suffix consonant
+ * %^SV:0 		 = stem vowel
+
+!Triggers
+
+ * %^CLEN:0	 = cons lengthening
+ * %^CSH:0      = cons shortening
+ * %^EE:0       = Final vowel deletion in ee stems
+ * %^FCD:0      = Final consonant deletion
+ * %^IA:0       = i to á (more)
+ * %^ILL:0 	 = e to a/á in ill etc
+ * %^LLEN:0     = low vow lengthening
+ * %^LSH:0      = low vow shortening
+ * %^ODDC:0	 = shorten cns in odd-syll stems before C, #
+ * %^ODDSHV:0	 = Cns shortening in C|# and shortvow in Inf etc
+ * %^RLEN:0     = root lengthening
+ * %^RVL:0      = root vow length
+ * %^RVSH:0	 = root vow shortening
+ * %^SFV:0   	 = fleeting vowel before suffix
+ * %^SLEN:0     = stem vowel lengthening
+ * %^SVF:0	     = stem vowel lowering â>á and u>o
+ * %^SVLOW:0	 = stem vowel lowering â>á and u>o
+ * %^UU:0       = Final vowel deletion in uu stems
+ * %^VLOW:0   	 = Vowel lowering in 3rd sg of contract verbs tuhhid:tohhe
+ * %^VSH:0      = vow shortening
+ * %^WG:0 		 = weak grade trigger
+ * %^ÁE:0       = á to e (more)
+ * %^ÁI:0       = á to i (more)
 
 !!Morpheme boundaries:
 
@@ -130,36 +122,50 @@ Sets
 
 !Consonant gradation
 
+=> __X:x halflong to short gradation__  
+
+=> __x:y gradation __  Note that t:đ is in a separate rule
+
+
+
+=> __t:đ gradation __  
+
+=> __tk:đh gradation__  
+
+
+=> __xx:x gradation__  
+
+
+
+=> __xx:y long to halflong gradation 1 __   hh:V, kk:h, pp:v, čč:J
+
+
+=> __xx:y long to halflong gradation 2 __  hh:V, kk:h, pp:v, čč:J
+
+
+
+
+=> __yx:zx gradation__  
 
 
 
 
 
+=> __xxy:xy gradation for nnj__  
+
+
+=> __xyy:xy gradation__  
 
 
 
 
+=> __xyy:xz gradation 1__  
 
+=> __xyy:xz gradation 2 __  
 
+=> __xˊy:xy gradation__  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+=> __xˊy:xy gradation for i4__  
 
 
 
@@ -167,7 +173,7 @@ Sets
 !Other Consonant Rules
 
 
-__Consonant shortening (not weak grade)__ pp to p for kappeer ~ kaperist
+=> __Consonant shortening (not weak grade)__ pp to p for kappeer ~ kaperist
 
 
 
@@ -175,20 +181,25 @@ __Consonant shortening (not weak grade)__ pp to p for kappeer ~ kaperist
 
 
 
+=> __nnj to nj shortening__  
 
 
 
 
 
 
+=> __Lengthening of half-long root consonant 1__  
+
+=> __Lengthening of half-long root consonant 2__  
+
+
+
+=> __Assimilation of root consonant and double suffix consonant__  
 
 
 
 
-
-
-
-
+=> __Consonant lengthening after weak grade__  
 
 
 
@@ -197,6 +208,20 @@ __Consonant shortening (not weak grade)__ pp to p for kappeer ~ kaperist
 
 !!Vowel rules
 
+=> __Vowel change __  
+
+
+=> __Vowel shortening with consonant shortening__  
+
+
+
+
+
+
+=> __Vowel shortening (no consonant shortening)__ 
+
+
+=> __Suffix vowel lengthening__ long á in kissáást
 
 
 
@@ -205,48 +230,44 @@ __Consonant shortening (not weak grade)__ pp to p for kappeer ~ kaperist
 
 
 
-__Vowel shortening (no consonant shortening)__ 
-
-
-__Suffix vowel lengthening__ long á in kissáást
+=> __Fleeting vowel before suffix__  
 
 
 
 
 
+=> __Stem vowel e deletion before 2nd syllable ij__  
+
+
+=> __Stem vowel e to a for a root vowel.__  
+
+=> __Stem vowel e to á for other root vowel.__  
 
 
 
+=> __Stem vowel â to a in Pl Nom -h__  
+
+
+=> __Stem vowel â>á and u>o change before i__  
 
 
 
+=> __Root vowel change in bisyllabic e stems__  
 
+=> __Illative suffix change in bisyllabic e stems__  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+=> __Root vowel change for á to ä with i in second syllable__  
 
 
 !!Other rules
 
+=> __Inversion of in to nj__  
 
 
 
 
 
-__Word final consonant deletion of n m t                 __ for vaskâm:vaaskâ
+=> __Word final consonant deletion of n m t                 __ for vaskâm:vaaskâ
 
 
-* __puhelim9>ntáá__
-* __puhelin0ttáá__
 
