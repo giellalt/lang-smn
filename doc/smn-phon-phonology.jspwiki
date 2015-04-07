@@ -58,6 +58,7 @@ Literal quotes and angles must be escaped (cf morpheme boundaries further down):
  * %^ILL:0 	 = e to a/á in ill etc
  * %^LLEN:0     = low vow lengthening
  * %^LSH:0      = low vow shortening
+ * %^MONO:0      monophtongization of diphthongs
  * %^ODDC:0	 = shorten cns in odd-syll stems before C, #
  * %^ODDSHV:0	 = Cns shortening in C|# and shortvow in Inf etc
  * %^RLEN:0     = root lengthening
@@ -69,7 +70,7 @@ Literal quotes and angles must be escaped (cf morpheme boundaries further down):
  * %^SVLOW:0	 = stem vowel lowering â>á and u>o
  * %^UU:0       = Final vowel deletion in uu stems
  * %^VLOW:0   	 = Vowel lowering in 3rd sg of contract verbs tuhhid:tohhe
- * %^VSH:0      = vow shortening
+ * %^RVSH:0      = vow shortening
  * %^WG:0 		 = weak grade trigger
  * %^ÁE:0       = á to e (more)
  * %^ÁI:0       = á to i (more)
@@ -113,7 +114,7 @@ Sets
  * Arch = %^WG %^RC %^RV %^SFV %^SV %^RVL %^EE %^UU %^RVSH %^DIPH %^SC %^CSC %^ILL %^ÁE %^ÁI ;     
  * Len = %^RLEN %^LLEN %^SLEN %^CLEN %^LSH ;     
 
- * Dummy = Arch Len %^ODDC %^SVLOW ;     
+ * Dummy = Arch Len %^ODDC %^SVLOW %^MONO ;     
 
 !!!Rule section
 
@@ -188,9 +189,9 @@ Sets
 
 
 
-=> __Lengthening of half-long root consonant 1__  
+=> __Lengthening of half-long root consonant 1__  for l-dot to ll
 
-=> __Lengthening of half-long root consonant 2__  
+=> __Lengthening of half-long root consonant 2__   for l-dot to ll  
 
 
 
@@ -204,12 +205,17 @@ Sets
 
 
 
+!Other consonant rules
+
+=> __Word final consonant deletion of n m t                 __ for vaskâm:vaaskâ
+
+
+
 
 
 !!Vowel rules
 
-=> __Vowel change __  
-
+!First syllable rules
 
 => __Vowel shortening with consonant shortening__  
 
@@ -219,6 +225,32 @@ Sets
 
 
 => __Vowel shortening (no consonant shortening)__ 
+
+
+
+
+
+=> __Root vowel change in bisyllabic stems__  
+
+
+=> __Root vowel change for á to ä with i in second syllable__  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+!Second syllable rules
+
+=> __Vowel change á to e or i in 3syll__  
 
 
 => __Suffix vowel lengthening__ long á in kissáást
@@ -252,22 +284,13 @@ Sets
 
 
 
-=> __Root vowel change in bisyllabic e stems__  
-
 => __Illative suffix change in bisyllabic e stems__  
-
-=> __Root vowel change for á to ä with i in second syllable__  
 
 
 !!Other rules
 
 => __Inversion of in to nj__  
 
-
-
-
-
-=> __Word final consonant deletion of n m t                 __ for vaskâm:vaaskâ
 
 
 
