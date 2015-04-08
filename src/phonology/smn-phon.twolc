@@ -75,8 +75,8 @@ j7:j̣ h7:ḥ š7:ṣ̌  v7:ṿ                  !!= * @CODE@  with dots
 %^RLEN:0    !!= * @CODE@ = root lengthening
 %^RVL:0     !!= * @CODE@ = root vow length
 %^RVSH:0	!!= * @CODE@ = root vow shortening
-%^SFV:0   	!!= * @CODE@ = fleeting vowel before suffix
 %^SLEN:0    !!= * @CODE@ = stem vowel lengthening
+%^SFV:0   	!!= * @CODE@ = Deleting fleeting vowel before suffix
 %^SVF:0	    !!= * @CODE@ = stem vowel lowering â>á and u>o
 %^SVLOW:0	!!= * @CODE@ = stem vowel lowering â>á and u>o
 %^UU:0      !!= * @CODE@ = Final vowel deletion in uu stems
@@ -127,10 +127,13 @@ Sets
  StemCns = b b3 d d3 g g2 g3 h h2 h3 		   !!= * @CODE@ 
            j l m m2 m3 m8 n n8 n2 ŋ r s  ;     !!= * @CODE@ 
 
-Arch = %^WG %^RC %^RV %^SFV %^SV %^RVL %^EE %^UU %^RVSH %^DIPH %^SC %^CSC %^ILL %^ÁE %^ÁI ;    !!= * @CODE@ 
+Arch = %^RC %^RV %^SV %^SC  ;                !!= * @CODE@ 
 Len = %^RLEN %^LLEN %^SLEN %^CLEN %^LSH ;    !!= * @CODE@ 
 
-Dummy = Arch Len %^ODDC %^SVLOW %^MONO ;    !!= * @CODE@ 
+
+Dummy = %^CLEN %^CSH %^EE %^FCD %^IA %^ILL %^LLEN %^LSH %^MONO %^ODDC %^ODDSHV             !!= * @CODE@ 
+        %^RLEN %^RVL %^RVSH %^SFV %^SLEN %^SVF %^SVLOW %^UU %^VLOW %^RVSH %^WG %^ÁE %^ÁI ;  !!= * @CODE@ 
+
            
 !! !!!Rule section
 
@@ -195,7 +198,10 @@ Cx:0 <=> Vow: _ Cy: Vow: (Vow:) (Cns:) (Dummy:*) %^WG:0 ;
 
 !€ pääpp4ir^DIPH^WG
 !€ pää0 vir00
-!htest
+!htest p ä ä p:0 p4: i r ^DIPH:0 ^WG:0
+
+!€ le^RVkk^RCâ^WG^RLEN
+!€ lee0hâ00
 
 "xx:y long to halflong gradation 2" 
 !! => __@RULENAME@__  hh:V, kk:h, pp:v, čč:J
@@ -465,7 +471,7 @@ Vy:0 <=> _ Vx   (Cns) (Cns) (%^RC:) (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) %^RVSH: %
 "Root vowel lenghtening in bisyllabic stems"
 !! => __@RULENAME@__  
 %^RV:Vx <=> Vx _ Cns:* (%^RC:) Vow: (%^SV:) (%^WG:) %^RLEN: ;
-	where Vx in ( a i o u ) ;
+	where Vx in ( a e i o u ) ;
 
 !htest s o ^RV:o l:0 l ^RC:0 â ^WG:0 ^RLEN:0
 
@@ -562,13 +568,7 @@ Cx:Cy <=> _ (Cns:) Cz: %^WG: ;
 
 "Fleeting vowel before suffix"
 !! => __@RULENAME@__  
-Vx:0 <=> _ Cns %^SFV: %>: ;
-         _ Cns %^SFV: (%^SC:) (%^CSH:) (%^RVSH:) %>: ;
-        where Vx in ( e i ) ;
-
-!€ šoddâdem^SFV>ist
-!€ šoddâd0m00ist
-!htest š o d d â d e:0 m ^SFV:0 > i s t
+i:0 <=> _ Cns %^SFV: (%^SC:) (%^CSH:) (%^RVSH:) %>: ;
 
 !€ pieˊhâin^SFV^SC^CSH^RVSH>ist
 !€ pie0hâ0n0j000ist
@@ -578,7 +578,12 @@ Vx:0 <=> _ Cns %^SFV: %>: ;
 
 "Stem vowel e deletion before 2nd syllable ij"
 !! => __@RULENAME@__  
-e:0 <=> _ (Dummy:*) %>: i j ; 
+e:0 <=> Cns: _ (Dummy:*) %>: i j ;
+        Cns: _ Cns %^SFV: (%^SC:) (%^CSH:) (%^RVSH:) %>: ; 
+
+!€ šoddâdem^SFV>ist
+!€ šoddâd0m00ist
+!htest š o d d â d e:0 m ^SFV:0 > i s t
 
  
 "Stem vowel e to a for a root vowel."
