@@ -119,9 +119,9 @@ Sets
        m7 n7 ŋ7 v7 s7 r7 đ7	l7 j7 h7 š7		   !!= @CODE@ 
        ṃ  ṇ  ŋ̣  ṿ  ṣ  ṛ  đ̣  ḷ  j̣  ḥ  ṣ̌         !!= * @CODE@
        p4 %^RC %^SC
-
        m8 n8 t8				                   !!=* @CODE@ 
        %^P %^K %^Č %^H %^T ;                   !!= * @CODE@ 
+ Geminate = b d g p t k c č f z ž l m n ŋ r s š v ;
  Seg = Vow Cns ;							   !!= * @CODE@ 
  WeG = %^WG1 %^WGSH %^CPL %^WG ;		  
  StemCns = b b3 d d3 g g2 g3 h h2 h3 		   !!= * @CODE@ 
@@ -171,10 +171,14 @@ t:đ <=> Vow: _ (k4:) Vow (Cns) (Dummy:*) %^WG:0 ;
 k4:h <=> Vow: t: _ Vow (Cns) (Dummy:*) %^WG: ;
 
 
-"xx:x gradation"
+"xx:x gradation 1"
 !! => __@RULENAME@__  
 Cx:0 <=> Vow: _ (ˊ:) Cx (%^RC:) Vow: (Vow) (Cns:) (Dummy:*) %^WG:0  ;
 	where Cx in ( b d g p t k c č f z ž l m n ŋ r s š v ) ;
+
+!"xx:x gradation 2"
+!!! => __@RULENAME@__  
+!%^RV:ˊ <=> Vow _ Geminate: (ˊ:) Geminate (%^RC:) Vow: (Vow) (Cns:) (Dummy:*) %^WG:0  ;
 
 !€ kopp^RCâ^WG^LLEN>st
 !€ ko0p0â00>st
@@ -458,7 +462,7 @@ Vy:0 <=> _ Vx   (Cns) (Cns) (%^RC:) (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) %^RVSH: %
 
 
 
-"Root vowel change in bisyllabic stems"
+"Root vowel lenghtening in bisyllabic stems"
 !! => __@RULENAME@__  
 %^RV:Vx <=> Vx _ Cns:* (%^RC:) Vow: (%^SV:) (%^WG:) %^RLEN: ;
 	where Vx in ( a i o u ) ;
