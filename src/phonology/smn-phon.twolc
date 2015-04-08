@@ -68,7 +68,6 @@ j7:j̣ h7:ḥ š7:ṣ̌  v7:ṿ                  !!= * @CODE@  with dots
 %^IA:0      !!= * @CODE@ = i to á (more)
 %^ILL:0 	!!= * @CODE@ = e to a/á in ill etc
 %^LLEN:0    !!= * @CODE@ = low vow lengthening
-%^LSH:0     !!= * @CODE@ = low vow shortening
 %^MONO:0    !!= * @CODE@  monophtongization of diphthongs
 %^ODDC:0	!!= * @CODE@ = shorten cns in odd-syll stems before C, #
 %^ODDSHV:0	!!= * @CODE@ = Cns shortening in C|# and shortvow in Inf etc
@@ -128,11 +127,12 @@ Sets
            j l m m2 m3 m8 n n8 n2 ŋ r s  ;     !!= * @CODE@ 
 
 Arch = %^RC %^RV %^SV %^SC  ;                !!= * @CODE@ 
-Len = %^RLEN %^LLEN %^SLEN %^CLEN %^LSH ;    !!= * @CODE@ 
+Len = %^RLEN %^LLEN %^SLEN %^CLEN ;    !!= * @CODE@ 
 
 
-Dummy = %^CLEN %^CSH %^EE %^FCD %^IA %^ILL %^LLEN %^LSH %^MONO %^ODDC %^ODDSHV             !!= * @CODE@ 
-        %^RLEN %^RVL %^RVSH %^SFV %^SLEN %^SVF %^SVLOW %^UU %^VLOW %^RVSH %^WG %^ÁE %^ÁI ;  !!= * @CODE@ 
+Dummy = %^CLEN %^CSH %^EE %^FCD %^IA %^ILL %^LLEN %^MONO %^ODDC %^ODDSHV 
+        %^RLEN %^RVL %^RVSH %^SFV %^SLEN                     !!= * @CODE@ 
+        %^SVF %^SVLOW %^UU %^VLOW %^RVSH %^WG %^ÁE %^ÁI ;  !!= * @CODE@ 
 
            
 !! !!!Rule section
@@ -399,9 +399,9 @@ t:0 <=> _ %>: t t ;
 !€ su0  0 hh  áá  0  0    0    0st
 !htest s u ^RV:0 k:0 k4:h ^RC:h á:á ^SV:á ^WG:0 ^CLEN:0 ^SLEN:0 > s t
 
-!€ kopp^RCâ^WG^LSH^CLEN>in
+!€ kopp^RCâ^WG^CLEN>in
 !€ ko0ppá0000in
-!htest k o p:0 p:p ^RC:p â:á ^WG:0 ^LSH:0 ^CLEN:0 > i n
+!htest k o p:0 p:p ^RC:p â:á ^WG:0 ^CLEN:0 > i n
 
 
 !! !Other consonant rules
@@ -486,7 +486,7 @@ Vy:0 <=> _ Vx   (Cns) (Cns) (%^RC:) (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) %^RVSH: %
 
 "Monophthongisation rule 1"
 !Vx:Vy <=> _ Vz: Cns:* i %>: j ;
-Vx:Vy <=> _ Vz: Cns:* i Dummy:* %>: j ;
+Vx:Vy <=> _ Vz: Cns:* i %^WG: %>: j ;
 	where Vx in ( i u ä )
 		  Vy in ( e o a )
 		  Vz in ( ä á ä )
@@ -501,7 +501,7 @@ Vx:Vy <=> _ Vz: Cns:* i Dummy:* %>: j ;
 !htest k u:o á:o t:đ i %^WG > j
 
 "Monophthongisation rule 2"
-Vx:Vy <=> Vz: _ Cns:* i Dummy:* %>: j ;
+Vx:Vy <=> Vz: _ Cns:* i %^WG: %>: j ;
 	where Vx in ( ä á ä )
 		  Vy in ( e o a )
 		  Vz in ( i u ä )
@@ -514,21 +514,27 @@ Vx:Vy <=> Vz: _ Cns:* i Dummy:* %>: j ;
 !ye	uá
 
 "e to iä in Illative and Sg3 1"
+!! => __@RULENAME@__  
 e:i <=> _ %^RV: Cns:+ Vow: %^ILL: ;
 
 "e to iä in Illative and Sg3 2"
+!! => __@RULENAME@__  
 %^RV:ä <=> e: _ Cns:+ Vow: %^ILL: ;
 
 "ie to iä in Illative and Sg3"
+!! => __@RULENAME@__  
 e:ä <=> i _  Cns:+ Vow: %^ILL: ;
 
 "ä to á in Illative and Sg3"
+!! => __@RULENAME@__  
 ä:á <=> [.#.|Cns] _  Cns:+ Vow: %^ILL: ;
 
 "ye to uá in Illative and Sg3 1"
+!! => __@RULENAME@__  
 y:u <=> _ e:  Cns:+ Vow: %^ILL: ;
 
 "ye to uá in Illative and Sg3 2"
+!! => __@RULENAME@__  
 e:á <=> y: _  Cns:+ Vow: %^ILL: ;
 
 !! !Second syllable rules
@@ -578,7 +584,7 @@ i:0 <=> _ Cns %^SFV: (%^SC:) (%^CSH:) (%^RVSH:) %>: ;
 
 "Stem vowel e deletion before 2nd syllable ij"
 !! => __@RULENAME@__  
-e:0 <=> Cns: _ (Dummy:*) %>: i j ;
+e:0 <=> Cns: _ (Dummy:) (Dummy:) %>: i j ;
         Cns: _ Cns %^SFV: (%^SC:) (%^CSH:) (%^RVSH:) %>: ; 
 
 !€ šoddâdem^SFV>ist
@@ -592,7 +598,7 @@ e:a <=> a (%^RV:) Cns:+ _ %^RLEN: %^CSH: %^ILL: ;
 
 "Stem vowel e to á for other root vowel."
 !! => __@RULENAME@__  
-e:á <=> [o|i|u] (%^RV:) Cns:+ _ %^RLEN: %^CSH: %^ILL: ;
+e:á <=> [o|i|u] (%^RV:) Cns:+ _ %^RLEN: %^CSH: %^ILL: %>: ;
 
 !€ a^RVlge^RVL>^An
 !€ aalg00an
@@ -614,8 +620,8 @@ Vx:Vy <=> _ (Dummy:*) %^SVLOW:0 ;
 		  Vy in ( á o )
 		  matched ;
 
-!€ so^RVll^RCâ^WG^LSH^CLEN^SVLOW>in
-!€ so00llá00000in
+!€ so^RVll^RCâ^WG^CLEN^SVLOW>in
+!€ so00llá0000in
 
 
 "Illative suffix change in bisyllabic e stems"
