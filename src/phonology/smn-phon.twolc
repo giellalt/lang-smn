@@ -115,11 +115,10 @@ Sets
        P Q R S Š T Ŧ V W X Z Ž 				   !!= @CODE@ 
        ht g2 k2 m2 n2 							   !!= @CODE@ 
        b3 d3 g3 m3 h3 						   !!= @CODE@ 
+       p4 k4 č4 r4 l4 h4
        m7 n7 ŋ7 v7 s7 r7 đ7	l7 j7 h7 š7		   !!= @CODE@ 
        ṃ  ṇ  ŋ̣  ṿ  ṣ  ṛ  đ̣  ḷ  j̣  ḥ  ṣ̌         !!= * @CODE@
-       p4 %^RC %^SC
-       m8 n8 t8				                   !!=* @CODE@ 
-       %^P %^K %^Č %^H %^T ;                   !!= * @CODE@ 
+       %^RC %^SC ;
  Geminate = b d g p t k c č f z ž l m n ŋ r s š v ;
  Seg = Vow Cns ;							   !!= * @CODE@ 
  WeG = %^WG1 %^WGSH %^CPL %^WG ;		  
@@ -429,7 +428,7 @@ Cx:0 <=> _ (%^WG:) %^FCD: ;
 
 "Vowel shortening with consonant shortening"
 !! => __@RULENAME@__  
-Vx:0 <=> _ Vx Seg:* ([%^RC:|%^SC:]) %^CSH: (Dummy:*) %>: ;
+Vx:0 <=> _ Vx Cns: Cns:+ ([%^RC:|%^SC:]) %^CSH: (Dummy:*) %>: ;
         where Vx in ( a e o á ä u y i ) ;
 
 !  ([%^RC:|%^SC:])  was earlier (Dummy:*), but we changed to avoid conflict
@@ -456,7 +455,7 @@ Vx:0 <=> _ Vx Seg:* ([%^RC:|%^SC:]) %^CSH: (Dummy:*) %>: ;
 
 "Vowel shortening (no consonant shortening)"
 !! => __@RULENAME@__ 
-Vy:0 <=> _ Vx   (Cns) (Cns) (%^RC:) (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) %^RVSH: %>: ;
+Vy:0 <=> _ Vx   Cns: (Cns:) (%^RC:) Vow (Cns) (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) %^RVSH: %>: ;
        where Vx in ( a e i o u á ä ) 
              Vy in ( a e i o u á ä ) 
        matched ;
@@ -474,6 +473,10 @@ Vy:0 <=> _ Vx   (Cns) (Cns) (%^RC:) (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) %^RVSH: %
 	where Vx in ( a e i o u ) ;
 
 !htest s o ^RV:o l:0 l ^RC:0 â ^WG:0 ^RLEN:0
+!htest l e ^RV:e k:0 k4:h ^RC:0 â ^WG:0 ^RLEN:0
+
+!€ le^RVkk4^RCâ^WG^RLEN
+!€ lee0h0â00
 
 "Root vowel change for á to ä with i in second syllable"
 !! => __@RULENAME@__  
