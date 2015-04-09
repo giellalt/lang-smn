@@ -144,10 +144,12 @@ Rules
 
 "X:x halflong to short gradation"
 !! => __@RULENAME@__  
-Cx:Cy <=> Vow: _ Vow (Cns) (Dummy:*) %^WG:0 ;
+Cx:Cy <=> Vow: _ (%^RC:) Vow (Cns) (Dummy:*) %^WG:0 ;
 	where Cx in (m7 n7 ŋ7 r7 s7 š7 j7 v7 đ7 l7 )
           Cy in (m  n  ŋ  r  s  š  j  v  đ  l  )
 		  matched;
+!€ mool7^RCâ^WG^SVLOW
+!€ moˊl0â00
 
 "x:y gradation" 
 !! => __@RULENAME@__  Note that t:đ is in a separate rule
@@ -312,8 +314,8 @@ Cy:Cz <=> Vow: (%^RV:) Cx: Cy: _ Vow (Cns) %^WG: ;
 "Consonant shortening (not weak grade)"
 !! => __@RULENAME@__ pp to p for kappeer ~ kaperist
 Cy:0 <=> Cx _  (%^RC:) [ Vow:  ]* (Cns) (Cns) (%^RC:) (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) (%^RLEN:) %^CSH: (%^RVSH:) %>: ;
-       where Cx in ( s v m n ŋ š h l p d k h  p  t g r ) 
-             Cy in ( s v m n ŋ š h l p d k h4 p4 t g r ) 
+       where Cx in ( s v m n ŋ š h l p d k k  h  p  t g r č  ) 
+             Cy in ( s v m n ŋ š h l p d k k4 h4 p4 t g r č4 ) 
        matched ;
  
 !€ kappeer^CSH^RVSH>ist
@@ -453,9 +455,9 @@ Vx:0 <=> _ Vx Cns: Cns:+ ([%^RC:|%^SC:]) %^CSH: (Dummy:*) %>: ;
 !€ ka0ha0n0j000ist
 !htest
 
-"Vowel shortening (no consonant shortening)"
+"Vowel shortening (no consonant shortening) in consonant stems"
 !! => __@RULENAME@__ 
-Vy:0 <=> _ Vx   Cns: (Cns:) (%^RC:) Vow (Cns) (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) %^RVSH: %>: ;
+Vy:0 <=> _ Vx   Cns: (Cns:) (%^RC:) Vow :Cns (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) %^RVSH: %>: ;
        where Vx in ( a e i o u á ä ) 
              Vy in ( a e i o u á ä ) 
        matched ;
@@ -464,13 +466,20 @@ Vy:0 <=> _ Vx   Cns: (Cns:) (%^RC:) Vow (Cns) (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:)
 !€ ki0rrâs0>ân
 !htest k i i:0 r r â s ^RVSH:0 > â n 
  
+"Vowel shortening (no consonant shortening) in vowel stems"
+!! => __@RULENAME@__ 
+Vy:ˊ <=> Vx _  Cns: (Cns:) (%^RC:) Vow (%^WG:) (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) %^RVSH: %>: ;
+       where Vx in ( a e i o u y á ä ) 
+             Vy in ( a e i o u y á ä ) 
+       matched ;
+
 
 
 
 "Root vowel lenghtening in bisyllabic stems"
 !! => __@RULENAME@__  
 %^RV:Vx <=> Vx _ Cns:* (%^RC:) Vow: (%^SV:) (%^WG:) %^RLEN: ;
-	where Vx in ( a e i o u ) ;
+	where Vx in ( a e i o u y) ;
 
 !htest s o ^RV:o l:0 l ^RC:0 â ^WG:0 ^RLEN:0
 !htest l e ^RV:e k:0 k4:h ^RC:0 â ^WG:0 ^RLEN:0
@@ -616,7 +625,7 @@ e:á <=> [o|i|u] (%^RV:) Cns:+ _ %^RLEN: %^CSH: %^ILL: %>: ;
 !€ so^RVll^RCâ^WG^RLEN>h
 !€ soo0l0a000h
 
-"Stem vowel â>á and u>o change before i"
+"Stem vowel â > á and u > o change before i"
 !! => __@RULENAME@__  
 Vx:Vy <=> _ (Dummy:*) %^SVLOW:0 ;
 	where Vx in ( â u )
