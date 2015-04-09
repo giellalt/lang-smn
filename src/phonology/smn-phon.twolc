@@ -144,7 +144,7 @@ Rules
 
 "X:x halflong to short gradation"
 !! => __@RULENAME@__  
-Cx:Cy <=> Vow: _ (%^RC:) Vow (Cns) (Dummy:*) %^WG:0 ;
+Cx:Cy <=> Vow: _ (%^RC:) Vow (%^SV:) (Cns) (Dummy:*) %^WG:0 ;
 	where Cx in (m7 n7 ŋ7 r7 s7 š7 j7 v7 đ7 l7 )
           Cy in (m  n  ŋ  r  s  š  j  v  đ  l  )
 		  matched;
@@ -153,7 +153,7 @@ Cx:Cy <=> Vow: _ (%^RC:) Vow (Cns) (Dummy:*) %^WG:0 ;
 
 "x:y gradation" 
 !! => __@RULENAME@__  Note that t:đ is in a separate rule
-Cx:Cy <=> Vow: _ Vow (Cns) (Dummy:*) %^WG:0 ;
+Cx:Cy <=> Vow: _ Vow (%^SV:) (Cns) (Dummy:*) %^WG:0 ;
           Vow: _ k4:h Vow (Cns) (Dummy:*) %^WG:0 ;
 	where Cx in (c č h p4 )
               Cy in (s j̣ ṿ ṿ  )
@@ -167,16 +167,16 @@ Cx:Cy <=> Vow: _ Vow (Cns) (Dummy:*) %^WG:0 ;
 
 "t:đ gradation" 
 !! => __@RULENAME@__  
-t:đ <=> Vow: _ (k4:) Vow (Cns) (Dummy:*) %^WG:0 ;
+t:đ <=> Vow: _ (k4:) Vow (%^SV:) (Cns) (Dummy:*) %^WG:0 ;
 
 "tk:đh gradation"
 !! => __@RULENAME@__  
-k4:h <=> Vow: t: _ Vow (Cns) (Dummy:*) %^WG: ;
+k4:h <=> Vow: t: _ Vow (%^SV:) (Cns) (Dummy:*) %^WG: ;
 
 
 "xx:x gradation 1"
 !! => __@RULENAME@__  
-Cx:0 <=> Vow: _ (ˊ:) Cx (%^RC:) Vow: (Vow) (Cns:) (Dummy:*) %^WG:0  ;
+Cx:0 <=> Vow: _ (ˊ:) Cx (%^RC:) Vow: (%^SV:) (Vow) (Cns:) (Dummy:*) %^WG:0  ;
 	where Cx in ( b d g p t k c č f z ž l m n ŋ r s š v ) ;
 
 !"xx:x gradation 2"
@@ -224,7 +224,7 @@ Cx:Cy <=> Vow Cz: _ (%^RC:) Vow (Vow:) (Cns:) (Dummy:*) %^WG:0 ;
 
 "yx:zx gradation"
 !! => __@RULENAME@__  
-Cx:Cy <=> _ (ˊ:) Cz (%^RC:) Vow (Cns:) (Dummy:*) %^WG: ;
+Cx:Cy <=> _ (ˊ:) Cz (%^RC:) Vow (%^SV:) (Cns:) (Dummy:*) %^WG: ;
        where Cx in ( h4 k4 h4 h4 ) 
              Cy in ( v  v  v  v  )
              Cz in ( t  s  č  c  ) 
@@ -251,7 +251,7 @@ Cx:Cy <=> _ (ˊ:) Cz (%^RC:) Vow (Cns:) (Dummy:*) %^WG: ;
  
 "xxy:xy gradation for nnj"
 !! => __@RULENAME@__  
-Cx:0 <=> Cx: _ Cy: Vow (Cns) %^WG: ;
+Cx:0 <=> Cx: _ Cy: Vow (%^SV:) (Cns) %^WG: ;
       where Cx in ( n ) 
             Cy in ( j )
       matched ;
@@ -261,7 +261,7 @@ Cx:0 <=> Cx: _ Cy: Vow (Cns) %^WG: ;
 
 "xyy:xy gradation"
 !! => __@RULENAME@__  
-Cy:0 <=> Vow: (%^RV:) Cx: _ Cy: Vow (Cns) %^WG: ;
+Cy:0 <=> Vow: (%^RV:) Cx: _ Cy: Vow (%^SV:) (Cns) %^WG: ;
 	where Cx in ( i4 l n r l m r v i4 l l l l n n r r r r )
               Cy in ( t  t t t p p p p c  c č s š c s c č s š ) 
 	matched ;
@@ -278,7 +278,7 @@ Cy:0 <=> Vow: (%^RV:) Cx: _ Cy: Vow (Cns) %^WG: ;
 
 "xyy:xz gradation 1"
 !! => __@RULENAME@__  
-Cy:0 <=> Vow: (%^RV:) Cx:Cz _ Cy: (%^RC:) Vow (Cns) %^WG: ;
+Cy:0 <=> Vow: (%^RV:) Cx:Cz _ Cy: (%^RC:) Vow (%^SV:)  (Cns) %^WG: ;
 	where Cx in ( i4 j l r v )
 		  Cy in ( k  k k k k )
 		  Cz in ( i  j l r v )
@@ -286,7 +286,7 @@ Cy:0 <=> Vow: (%^RV:) Cx:Cz _ Cy: (%^RC:) Vow (Cns) %^WG: ;
 
 "xyy:xz gradation 2" 
 !! => __@RULENAME@__  
-Cy:Cz <=> Vow: (%^RV:) Cx: Cy: _ (%^RC:) Vow (Cns) %^WG: ;
+Cy:Cz <=> Vow: (%^RV:) Cx: Cy: _ (%^RC:) Vow (%^SV:) (Cns) %^WG: ;
 	where Cx in ( i4 j l r v  )
 		  Cy in ( k  k k k k  )
 		  Cz in ( h  h h h h  )
@@ -294,14 +294,14 @@ Cy:Cz <=> Vow: (%^RV:) Cx: Cy: _ (%^RC:) Vow (Cns) %^WG: ;
 
 "xˊy:xy gradation"
 !! => __@RULENAME@__  
-ˊ:0 <=> Vow: Cx _ Cy Vow (Cns) (Dummy:*) %^WG:0 ;
+ˊ:0 <=> Vow: Cx _ Cy Vow (%^SV:) (Cns) (Dummy:*) %^WG:0 ;
      where Cx in (b b b b h h h h j j j j l l l l l l l l l l l m n n n n n p p p p r r r r r r r r r r r r r r s s s s s s t t v v v v v v v v v v v v v đ đ đ đ đ ŋ š š š š )
            Cy in (d l đ ž l m t č d l m v b d g j m n s v ŋ š ž n d h j z ž c s t č b d f g h j m n r s t v ŋ š k m n p t v k h d g h k j l m n r z đ ŋ ž b f g j m g k m p t )
 		  matched;
 
 "xˊy:xy gradation for i4"
 !! => __@RULENAME@__  
-ˊ:0 <=> Vow: i4: _ Cx Vow (Cns) (Dummy:*) %^WG:0 ;
+ˊ:0 <=> Vow: i4: _ Cx Vow (%^SV:) (Cns) (Dummy:*) %^WG:0 ;
 	where Cx in (b  d  g  l  m  n  r  v  z  ŋ ) ;
 
 
