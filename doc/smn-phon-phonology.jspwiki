@@ -54,15 +54,14 @@ Literal quotes and angles must be escaped (cf morpheme boundaries further down):
  * %^IA:0       = i to á (more)
  * %^ILL:0 	 = e to a/á in ill etc
  * %^LLEN:0     = low vow lengthening
- * %^LSH:0      = low vow shortening
  * %^MONO:0      monophtongization of diphthongs
  * %^ODDC:0	 = shorten cns in odd-syll stems before C, #
  * %^ODDSHV:0	 = Cns shortening in C|# and shortvow in Inf etc
  * %^RLEN:0     = root lengthening
  * %^RVL:0      = root vow length
  * %^RVSH:0	 = root vow shortening
- * %^SFV:0   	 = fleeting vowel before suffix
  * %^SLEN:0     = stem vowel lengthening
+ * %^SFV:0   	 = Deleting fleeting vowel before suffix
  * %^SVF:0	     = stem vowel lowering â>á and u>o
  * %^SVLOW:0	 = stem vowel lowering â>á and u>o
  * %^UU:0       = Final vowel deletion in uu stems
@@ -102,16 +101,17 @@ Sets
         b3 d3 g3 m3 h3 						    
         m7 n7 ŋ7 v7 s7 r7 đ7	l7 j7 h7 š7		    
  *        ṃ  ṇ  ŋ̣  ṿ  ṣ  ṛ  đ̣  ḷ  j̣  ḥ  ṣ̌         
-
- *        %^P %^K %^Č %^H %^T ;                    
  *  Seg = Vow Cns ;							    
  *  StemCns = b b3 d d3 g g2 g3 h h2 h3 		    
  *            j l m m2 m3 m8 n n8 n2 ŋ r s  ;      
 
- * Arch = %^WG %^RC %^RV %^SFV %^SV %^RVL %^EE %^UU %^RVSH %^DIPH %^SC %^CSC %^ILL %^ÁE %^ÁI ;     
- * Len = %^RLEN %^LLEN %^SLEN %^CLEN %^LSH ;     
+ * Arch = %^RC %^RV %^SV %^SC  ;                 
+ * Len = %^RLEN %^LLEN %^SLEN %^CLEN ;     
 
- * Dummy = Arch Len %^ODDC %^SVLOW %^MONO ;     
+
+ *         %^RLEN %^RVL %^RVSH %^SFV %^SLEN                      
+ *         %^SVF %^SVLOW %^UU %^VLOW %^RVSH %^WG %^ÁE %^ÁI ;   
+
 
 !!!Rule section
 
@@ -131,11 +131,14 @@ Sets
 => __tk:đh gradation__  
 
 
-=> __xx:x gradation__  
+=> __xx:x gradation 1__  
+
+=> __xx:x gradation 1__  
 
 
 
 => __xx:y long to halflong gradation 1 __   hh:V, kk:h, pp:v, čč:J
+
 
 
 => __xx:y long to halflong gradation 2 __  hh:V, kk:h, pp:v, čč:J
@@ -221,13 +224,16 @@ Sets
 
 
 
-=> __Vowel shortening (no consonant shortening)__ 
+=> __Vowel shortening (no consonant shortening) in consonant stems__ 
+
+
+=> __Vowel shortening (no consonant shortening) in vowel stems__ 
 
 
 
 
+=> __Root vowel lenghtening in bisyllabic stems__  
 
-=> __Root vowel change in bisyllabic stems__  
 
 
 => __Root vowel change for á to ä with i in second syllable__  
@@ -239,11 +245,17 @@ Sets
 
 
 
+=> __e to iä in Illative and Sg3 1__  
 
+=> __e to iä in Illative and Sg3 2__  
 
+=> __ie to iä in Illative and Sg3__  
 
+=> __ä to á in Illative and Sg3__  
 
+=> __ye to uá in Illative and Sg3 1__  
 
+=> __ye to uá in Illative and Sg3 2__  
 
 !Second syllable rules
 
@@ -264,8 +276,8 @@ Sets
 
 
 
-
 => __Stem vowel e deletion before 2nd syllable ij__  
+
 
 
 => __Stem vowel e to a for a root vowel.__  
@@ -277,7 +289,7 @@ Sets
 => __Stem vowel â to a in Pl Nom -h__  
 
 
-=> __Stem vowel â>á and u>o change before i__  
+=> __Stem vowel â > á and u > o change before i__  
 
 
 
