@@ -392,9 +392,14 @@ t:0 <=> _ %>: t t ;
 "Consonant lengthening after weak grade"
 !! => __@RULENAME@__  
 %^RC:Cx <=> Cy: _ Vow: (%^SV:) %^WG: (Dummy:) %^CLEN: ;
-        where Cy in ( h4 k4 č4 p4 p l d m s ) 
-              Cx in ( v  h  j  v  p l d m s ) 
+        where Cy in ( k4 č4 p4 p l d m s ) 
+              Cx in ( h  j  v  p l d m s ) 
         matched ;
+
+"Consonant lengthening after h4 initial weak grade"
+!! => __@RULENAME@__  
+%^RC:Cx <=> h4: Cx _ Vow: (%^SV:) %^WG: (Dummy:) %^CLEN: ;
+        where Cx in ( v  č  s  t  c  ) ;
 
 !€ su^RVkk4^RCá^SV^WG^CLEN^SLEN>st
 !€ su0  0 hh  áá  0  0    0    0st
