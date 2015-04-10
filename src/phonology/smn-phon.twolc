@@ -162,35 +162,47 @@ Cx:Cy <=> Vow: _ Vow (%^SV:) (Cns) (Dummy:*) %^WG:0 ;
 !€ käähir^WG
 !€ kääṿir0
 
-!€ käähir
-!€ käähir
-
 "t:đ gradation" 
-!! => __@RULENAME@__  
+!! => __@RULENAME@__ for ito : iđo
 t:đ <=> Vow: _ (k4:) Vow (%^SV:) (Cns) (Dummy:*) %^WG:0 ;
 
 "tk:đh gradation"
-!! => __@RULENAME@__  
+!! => __@RULENAME@__  for atka : ađha
 k4:h <=> Vow: t: _ Vow (%^SV:) (Cns) (Dummy:*) %^WG: ;
 
-
 "xx:x gradation 1"
-!! => __@RULENAME@__  
+!! => __@RULENAME@__  for 
 Cx:0 <=> Vow: _ (ˊ:) Cx (%^RC:) Vow: (%^SV:) (Vow) (Cns:) (Dummy:*) %^WG:0  ;
 	where Cx in ( b d g p t k c č f z ž l m n ŋ r s š v ) ;
-
-!"xx:x gradation 2"
-!!! => __@RULENAME@__  
-!%^RV:ˊ <=> Vow _ Geminate: (ˊ:) Geminate (%^RC:) Vow: (Vow) (Cns:) (Dummy:*) %^WG:0  ;
 
 !€ kopp^RCâ^WG^LLEN>st
 !€ ko0p0â00>st
 
 "xX:X gradation"
-Cx:0 <=> Vow: _ Cy: (%^RC:) Vow (Vow:) (Cns:) (Dummy:*) %^WG:0 ;
+!! => __@RULENAME@__  for njamma : njaṃa
+Cx:0 <=> Vow: _ Cy: (%^RC:) Vow (Vow:) (Cns:) (Dummy:*) %^WG:0 [.#.|%>:] ;
 	where Cx in ( l  r  s  h  m  n  đ  ) 
 	      Cy in ( l7 r7 s7 h7 m7 n7 đ7 ) 
 		  matched ;
+
+!€ nja^RVmm7^RCa^SV^WG
+!€ nja0ṃ0a00
+
+"xX:x gradation when we have lengthening"
+Cy:0 <=> Vow: Cx: _ (%^RC:) Vow (Vow:) (Cns:) (Dummy:*) %^WG:0 %^CLEN: %>: ;
+	where Cx in ( l  r  s  h  m  n  đ  ) 
+	      Cy in ( l7 r7 s7 h7 m7 n7 đ7 ) 
+		  matched ;
+
+"Consonant lengthening after half-long weak grade"
+!! => __@RULENAME@__  
+%^RC:Cx <=> _ Cy: Vow: (%^SV:) %^WG: (Dummy:) %^CLEN: ;
+        where Cy in ( l7 r7 s7 h7 m7 n7 đ7) 
+              Cx in ( l  r  s  h  m  n  đ ) 
+        matched ;
+
+!€ nja^RVmm7^RCa^SV^WG^CLEN>st
+!€ nja00mmaa00>st
 
 
 "xx:y long to something else gradation 1" 
@@ -375,12 +387,13 @@ t:0 <=> _ %>: t t ;
 
 
 
-"Consonant lengthening after weak grade"
+"Ordinary consonant lengthening after weak grade"
 !! => __@RULENAME@__  
 %^RC:Cx <=> Cy: _ Vow: (%^SV:) %^WG: (Dummy:) %^CLEN: ;
-        where Cy in ( k4 č4 p4 p l d m s l7 r7 s7 h7 m7 n7 đ7) 
-              Cx in ( h  j  v  p l d m s l  r  s  h  m  n  đ ) 
+        where Cy in ( k4 č4 p4 p l d m s )
+              Cx in ( h  j  v  p l d m s ) 
         matched ;
+
 
 !€ kass7^RV^a^SV^WG^CLEN
 
