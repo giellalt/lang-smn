@@ -70,19 +70,19 @@ LITTER ; !! We just send them to LITTER for the time being.
 
 LEXICON FADDA  !!= __@CODE@__:  This might be the standard even syllabi lexicon
 +N+Sg+Nom: K ;               ! kissá
-+N+Sg+Gen:%^WG%^LLEN K ;     ! fáádá, ráávsá
-+N+Sg+Acc:%^WG%^LLEN K ;     ! fáádá, ráávsá
++N+Sg+Gen:%^WG%^RLEN K ;     ! fáádá, ráávsá
++N+Sg+Acc:%^WG%^RLEN K ;     ! fáádá, ráávsá
 +N+Sg+Ill:%^RLEN%>n K ;      ! kiisán
-+N+Sg+Loc:%^WG%^LLEN%>st K ; ! fáádást, ráávsást
++N+Sg+Loc:%^WG%^RLEN%>st K ; ! fáádást, ráávsást
 +N+Sg+Com:%^WG%^CLEN%>in K ; ! kissáin, rávssáin, fáddáin DIFFERS FROM KUTKA
 +N+Sg+Abe:%^WG%>ttáá K ;     ! kisáttáá 
 +N+Ess:%>n K ;               ! kissán
 +N+Par:%>d K ;               ! kissád
-+N+Pl+Nom:%^WG%^LLEN%>h K ;  ! fáádáh, ráávsáh
-+N+Pl+Gen:%^WG%^LLEN%>i K ;  ! fáádái, ráávsái
-+N+Pl+Acc:%^WG%^LLEN%>id K ; ! fáádáid, ráávsáid
++N+Pl+Nom:%^WG%^RLEN%>h K ;  ! fáádáh, ráávsáh
++N+Pl+Gen:%^WG%^RLEN%>i K ;  ! fáádái, ráávsái
++N+Pl+Acc:%^WG%^RLEN%>id K ; ! fáádáid, ráávsáid
 +N+Pl+Ill:%^WG%^CLEN%>id K ; ! kissáid, rávssáid, fáddáid
-+N+Pl+Loc:%^WG%^LLEN%>in K ; ! fáádáin, ráávsáin
++N+Pl+Loc:%^WG%^RLEN%>in K ; ! fáádáin, ráávsáin
 +N+Pl+Com:%^WG%>iguin K ;    ! kisáiguin 
 +N+Pl+Abe:%^WG%>ittáá K ;    ! kisáittáá  
 
@@ -127,14 +127,33 @@ LEXICON AAIGA!!= __@CODE@__:
 +N+Pl+Abe:%^UU%>ittáá K ; 	! aiguittáá
 
 
+LEXICON NIEIDA
+
++N+Sg+Nom: K ;				! nieiˊdâ
++N+Sg+Gen:%^WG K ; 			! nieidâ
++N+Sg+Acc:%^WG K ; 			! nieidâ
++N+Sg+Ill:%^RLEN K ;		! nieidân
++N+Sg+Loc:%^WG%^RLEN K ;	! nieidâst
++N+Sg+Com:%^SVLOW  K ;		! nieiˊdáin
++N+Sg+Abe:%^WG%^RVSH K ;	! nieˊidâttáá
++N+Sg+Ess:%>n K ;			! nieiˊdân
++N+Sg+Par:%>d K ;			! nieiˊdâd
++N+Pl+Nom:%^WG K ; 			! nieidah
++N+Pl+Gen:%^WG K ; 			! nieidâi
++N+Pl+Gen:%^WG%^RVSH K ; 	! nieˊidâi
++N+Pl+Acc:%^WG K ;			! nieidâid
++N+Pl+Ill:%^SVLOW K ; 		! nieiˊdáid
++N+Pl+Loc:%^WG K ;			! nieidâin
++N+Pl+Com:%^WG%^RVSH K ;	! nieˊidâiguin
++N+Pl+Abe:%^WG%^RVSH K ; 	! nieˊidâittáá
 
 
 
 LEXICON KUTKA !!= __@CODE@__:  Vartalotyyppi CVCCV Even-a-circ
 
 +N+Sg+Nom: K ;    			 		! kutkâ
-+N+Sg+Gen:%^WG%^LLEN K ;     		! kuuđhâ
-+N+Sg+Acc:%^WG%^LLEN K ;     		! kuuđhâ
++N+Sg+Gen:%^WG%^RLEN K ;     		! kuuđhâ
++N+Sg+Acc:%^WG%^RLEN K ;     		! kuuđhâ
 +N+Sg+Ill:%^RLEN%>n K ;      		! kuutkân
 +N+Sg+Loc:%^WG%^LLEN%>st K ; 		! kuuđhâst
 +N+Sg+Com:%^WG%^CLEN%>in K; 	! kuđháin differs here from FADDA
@@ -234,8 +253,8 @@ LEXICON MOOLA
 +N+Pl+Acc:%^WG%>id K ; 			! moolâid
 +N+Pl+Ill:%^WG%^SVLOW%>id K ; 	! mooláid
 +N+Pl+Loc:%^WG%>in K ; 		! moolâin
-+N+Pl+Com:%^WG%^RVSH%>iguin K ;	! mo´lâiguin
-+N+Pl+Abe:%^WG%^RVSH%>ittáá K ;	! mo´lâittáá
++N+Pl+Com:%^WG%^RVSH%>iguin K ;	! moˊlâiguin
++N+Pl+Abe:%^WG%^RVSH%>ittáá K ;	! moˊlâittáá
 
 
 
@@ -277,12 +296,6 @@ LEXICON NJAMMA  !!= __@CODE@__: > KUTKA (?)
 LEXICON HERTTA !!= __@CODE@__: > KUTKA Vartalotyyppi CVC1C2C2V Even-a-circ
 KUTKA ;
 
-
-
-LEXICON NIEIDA	!!= __@CODE@__:  > KUTKA Vartalotyyppi CV1V2C1C2V Even-a-circ
-
-!! Kysymyksiä: Heikko aste + SgIll: diftongi pitkä, paitsi PlCom + PlAbe: dift. lyhentymä. Merkintöjä ei näy tässä.  
-KUTKA ;
 
 
 
@@ -415,18 +428,6 @@ SOLLA ;
 !! | PlAbe | kie’lâittáá   | njuo’lâittáá   | molâittáá
 
 
-
-LEXICON KUOSA  !!= * __@CODE@__ SM7  > SOLLA
-SOLLA ; ! fix
-
-LEXICON RUOCA !!= * __@CODE@__ SM8  > SOLLA
-SOLLA ; 
-
-LEXICON KIEHA !!= * __@CODE@__ SM9  > SOLLA
-SOLLA ; 
-
-LEXICON CULGA !!= * __@CODE@__ SM10 > SOLLA
-SOLLA ; 
 
 LEXICON KYELI  !!= * __@CODE@__ i-e-á  > SOLLA, PROBABLY WRONG
 SAAMI ;
