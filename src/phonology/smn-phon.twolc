@@ -207,7 +207,7 @@ Cx:Cy <=> Vow Cz: _ (%^RC:) Vow (Vow:) (Cns:) (Dummy:*) %^WG:0 ;
 		  matched ;
 
 !€ su^RVkk4^RCá^SV^WG^CLEN^SLEN>st
-!€ su0  0 hh  áá  0  0    0    0st
+!€ su0  0 hh  áá  0  0    0    >st
 
 !htest č i ä p:0 p4:v á t ^WG:0 ^FCD:0
 
@@ -220,7 +220,7 @@ Cx:Cy <=> _ (ˊ:) Cz (%^RC:) Vow (%^SV:) (Cns:) (Dummy:*) %^WG: ;
        matched ;
 
 !€ liähˊtu^SV^WG^CLEN^SLEN>st
-!€ liäv0tu00000st
+!€ liäv0tu0000>st
 
 !€ pih4tâs^WG
 !€ pi vtâs0
@@ -305,29 +305,29 @@ Cy:0 <=> Cx _  (%^RC:) [ Vow:  ]* (Cns) (Cns) (%^RC:) (%^SFV:) (%^SC:) (%^ÁI:) 
        matched ;
  
 !€ kappeer^CSH^RVSH>ist
-!€ ka0p0er000ist
+!€ ka0p0er00>ist
 
 !€ haavvâr^CSH^RVSH>ist
-!€ h0a0vâr000ist
+!€ h0a0vâr00>ist
 
 !€ pottáák^RC^CSH^RVSH>ist
-!€ pot00ákk000ist
+!€ pot00ákk00>ist
 
 !€ vinnjooh^CSH^RVSH>ist
-!€ vi0nj0oh000ist
+!€ vi0nj0oh00>ist
 
 !€ paakkeet^CSH>ân
-!€ paa0keet00ân
+!€ paa0keet0>ân
 
 !€ nahhaar^CSH>ân
-!€ na0h0ar00ân
+!€ na0h0ar0>ân
 
 "nnj to nj shortening"
 !! => __@RULENAME@__  
 n:0 <=> n _ j Vow (Cns:) %^CSH: %>: ;
 
 !€ konnjâl^CSH>ân
-!€ kon0jâl00ân
+!€ kon0jâl0>ân
 
  
 "Lengthen root consonant after vowel shortening"
@@ -335,10 +335,10 @@ n:0 <=> n _ j Vow (Cns:) %^CSH: %>: ;
         where Cx in ( p t k ) ; 
 
 !€ haamit^RC^CSH^RVSH>ist
-!€ h0amitt000ist
+!€ h0amitt00>ist
 
 !€ ruávást^RC^CSH^RVSH>ist
-!€ ruávást0000ist
+!€ ruávást000>ist
 
 "Lengthening of half-long root consonant 1"
 !! => __@RULENAME@__  for l-dot to ll
@@ -353,7 +353,7 @@ Cx:Cy <=> Vow _ %^RC: Vow  %^CLEN: %>: [n|d] ;
 	where Cx in ( l  r  s  h  m  n  đ  ) ;
 
 !€ kiel7^RCâ^CLEN>n
-!€ kiellâ0n
+!€ kiellâ>n
 
 
 "Assimilation of root consonant and double suffix consonant"
@@ -361,7 +361,7 @@ Cx:Cy <=> Vow _ %^RC: Vow  %^CLEN: %>: [n|d] ;
 t:0 <=> _ %>: t t ; 
 
 !€ haamit>ttáá
-!€ haami00ttáá
+!€ haami0>ttáá
 
 
 "Consonant lengthening after weak grade"
@@ -377,10 +377,10 @@ t:0 <=> _ %>: t t ;
         where Cx in ( v  č  s  t  c  ) ;
 
 !€ su^RVkk4^RCá^SV^WG^CLEN^SLEN>st
-!€ su0  0 hh  áá  0  0    0    0st
+!€ su0  0 hh  áá  0  0    0    >st
 
 !€ kopp^RCâ^WG^CLEN>in
-!€ ko0ppá0000in
+!€ ko0ppá000>in
 
 
 !! !Other consonant rules
@@ -396,8 +396,8 @@ Cx:0 <=> _ (%^WG:) %^FCD: ;
 !"Word Final m9 to n"
 !m9:n <=> _ %>: [.#.|Cns] ;
 !
-!€ puhelim9>ntáá
-!€ puhelin0ttáá
+!€ puhelim9>ttáá
+!€ puhelin>ttáá
  
 
 
@@ -416,17 +416,17 @@ Vx:0 <=> _ Vx Cns: Cns:+ ([%^RC:|%^SC:]) %^CSH: (Dummy:*) %>: ;
 !€ k0on0jâl0>ân
 
 !€ kappeer^CSH^RVSH>ist
-!€ ka0p0er000ist
+!€ ka0p0er00>ist
 
 !€ čäällim^CSH^RVSH>ist
-!€ č0ä0lim000ist
+!€ č0ä0lim00>ist
 
 !€ muusik^RC^CSH^RVSH>ist
-!€ m0usikk000ist
+!€ m0usikk00>ist
 
 
 !€ kahhaan^SC^CSH^RVSH>ist
-!€ ka0ha0n0j000ist
+!€ ka0ha0n0j00>ist
 
 "Vowel shortening (no consonant shortening) in consonant stems"
 !! => __@RULENAME@__ 
@@ -473,9 +473,7 @@ Vx:Vy <=> _ Vz: Cns:* i %^WG: %>: j ;
 	matched ;
 
 !€ kuáti^WG>j
-!€ koođi00j
-
-!htest k u:o á:o t:đ i %^WG > j
+!€ koođi0>j
 
 "Monophthongisation rule 2"
 Vx:Vy <=> Vz: _ Cns:* i %^WG: %>: j ;
@@ -533,13 +531,13 @@ Cx:Cy <=> _ (Cns:) Cz: %^WG: ;
         where Vx in ( á o e a i ) ; ! pending...
 
 !€ ki^RVss^RCá^WG^CLEN^SV^SLEN>st
-!€ ki00ssá00á00st
+!€ ki00ssá00á0>st
 
 !€ mi^RVll^RCo^WG^CLEN^SV^SLEN>st
-!€ mi00llo00o00st
+!€ mi00llo00o0>st
 
 !€ huksi^SVm^SLEN>ist
-!€ huksiim00ist
+!€ huksiim0>ist
 
 
 "Fleeting vowel before suffix"
@@ -547,7 +545,7 @@ Cx:Cy <=> _ (Cns:) Cz: %^WG: ;
 i:0 <=> _ Cns %^SFV: (%^SC:) (%^CSH:) (%^RVSH:) %>: ;
 
 !€ pieˊhâin^SFV^SC^CSH^RVSH>ist
-!€ pie0hâ0n0j000ist
+!€ pie0hâ0n0j00>ist
 
 
 
@@ -569,10 +567,10 @@ e:a <=> a (%^RV:) Cns:+ _ %^RLEN: %^CSH: %^ILL: ;
 e:á <=> [o|i|u] (%^RV:) Cns:+ _ %^RLEN: %^CSH: %^ILL: %>: ;
 
 !€ a^RVlge^RVL>^An
-!€ aalg00an
+!€ aalg0>an
 
 !€ lo^RVdde^RVL>^An 
-!€ loodde000an 
+!€ loodde00>an 
 
 
 "Stem vowel â to a in Pl Nom -h"
@@ -580,7 +578,7 @@ e:á <=> [o|i|u] (%^RV:) Cns:+ _ %^RLEN: %^CSH: %^ILL: %>: ;
 â:a <=> _ (%^WG:) (%^RLEN:) %> h ;
 
 !€ so^RVll^RCâ^WG^RLEN>h
-!€ soo0l0a000h
+!€ soo0l0a00>h
 
 "Stem vowel â > á and u > o change before i"
 !! => __@RULENAME@__  
@@ -605,8 +603,8 @@ Vx:Vy <=> _ (Dummy:*) %^SVLOW:0 ;
 %^SC:j <=> n (%^SFV:) _ (%^CSH:) (%^RVSH:) %>: ; 
 
 !€ pieˊhâin^SFV^SC^CSH^RVSH>ist
-!€ pie0hâ0n0j000ist
+!€ pie0hâ0n0j00>ist
 
 !€ kahhaan^SC^CSH^RVSH>ist
-!€ ka0ha0n0j000ist
+!€ ka0ha0n0j00>ist
 
