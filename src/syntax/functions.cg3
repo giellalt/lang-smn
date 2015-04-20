@@ -1192,7 +1192,7 @@ MAP:r315 (@APP-Pron<) TARGET (N Nom) IF (-1 (N Gen) OR (Pers Gen) LINK *-1 CC BA
 
 MAP:r316 (@APP-N<) TARGET (N Nom) IF (*-1 ("nugo") OR ("sihke") BARRIER APP-BOUNDARY LINK -1 COMMA LINK -1 (N Nom))(*1 EOS BARRIER APP-BOUNDARY) ;
 MAP:r317 (@APP-Pron<) TARGET (N Nom) IF (*-1 ("nugo") OR ("sihke") BARRIER APP-BOUNDARY LINK -1 COMMA LINK -1 (Pron Nom))(*1 EOS BARRIER APP-BOUNDARY) ;	
-	#$ Návetgoađis ledje ealut, nugo sávzzat, gáiccat ja gusat. 
+	#$Návetgoađis ledje ealut, nugo sávzzat, gáiccat ja gusat.
 	
 MAP:r318 (@APP-N<) TARGET (N Nom) IF (*-1 ("nugo") OR ("sihke") BARRIER APP-BOUNDARY LINK -1 COMMA LINK -1 (N Nom) LINK *-1 BOS BARRIER APP-BOUNDARY)(*1 COMMA BARRIER APP-BOUNDARY LINK 1 VFIN) ;
 MAP:r319 (@APP-Pron<) TARGET (N Nom) IF (*-1 ("nugo") OR ("sihke") BARRIER APP-BOUNDARY LINK -1 COMMA LINK -1 (Pron Nom) LINK *-1 BOS BARRIER APP-BOUNDARY)(*1 COMMA BARRIER APP-BOUNDARY LINK 1 VFIN) ;
@@ -1520,7 +1520,7 @@ MAP:advl> (@ADVL>) TARGET ADVL OR TIME-N + Gen OR (Sem/Route Gen) ((*1 FMAINV OR
 	#$ Guovdageainnu guovllut gal leat vel mu mielas sestojuvvon oalle bures dássážii, movt šat guhká.
 	
 MAP:advl>cs (@ADVL>CS) TARGET Adv (*-1 BOS BARRIER NOT-ADV)(1 CS LINK *1 FMAINV) ;
-	#$ Danne go ..
+	#$Danne go ..
 
 #!! * __<advlPoPr__ (@<ADVL) if mainverb to the left.
 MAP:<advlPoPr (@<ADVL) TARGET Po OR Pr (*-1 FMAINV BARRIER SV-BOUNDARY) ;
