@@ -58,6 +58,7 @@ j7:j̣ h7:ḥ š7:ṣ̌  v7:ṿ                  !!= * @CODE@  with dots
 %^RV:0	 	!!= * @CODE@ = root vowel
 %^SC:0      !!= * @CODE@ = suffix consonant
 %^SV:0 		!!= * @CODE@ = stem vowel
+%^RVD:0		!!= * @CODE@ = root vowel  diftongisation
 
 !! !Triggers
 
@@ -125,7 +126,7 @@ Sets
  StemCns = b b3 d d3 g g2 g3 h h2 h3 		   !!= * @CODE@ 
            j l m m2 m3 m8 n n8 n2 ŋ r s  ;     !!= * @CODE@ 
 
-Arch = %^RC %^RV %^SV %^SC ;            		  !!= * @CODE@ 
+Arch = %^RC %^RV %^SV %^SC %^RVD ;                !!= * @CODE@ 
 Len = %^RLEN %^LLEN %^SLEN %^CLEN ;    			!!= * @CODE@ 
 
 
@@ -465,6 +466,7 @@ Vy:ˊ <=> Vx _  Cns: (Cns:) (%^RC:) Vow (%^WG:) (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE
 !€ pää0vir00
 
 "Monophthongisation rule 1"
+!! => __@RULENAME@__  
 !Vx:Vy <=> _ Vz: Cns:* i %>: j ;
 Vx:Vy <=> _ Vz: Cns:* i %^WG: %>: j ;
 	where Vx in ( i u ä )
@@ -487,6 +489,7 @@ Vx:Vy <=> Vz: _ Cns:* i %^WG: %>: j ;
 !ie	iä
 !ä	á
 !ye	uá
+
 
 "e to iä in Illative and Sg3 1"
 !! => __@RULENAME@__  
@@ -511,6 +514,7 @@ y:u <=> _ e:  Cns:+ Vow: %^ILL: ;
 "ye to uá in Illative and Sg3 2"
 !! => __@RULENAME@__  
 e:á <=> y: _  Cns:+ Vow: %^ILL: ;
+
 
 !! !Second syllable rules
 
