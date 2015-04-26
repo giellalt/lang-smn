@@ -235,7 +235,7 @@ Cx:Cy <=> _ (ˊ:) Cz (%^RC:) Vow (%^SV:) (Cns:) (Dummy:*) %^WG: ;
 
 
 "xyy:xy gradation A"
-Cy:0 <=> :Vow (%^RV:) Cx: _ Cy: (%^RC:) Vow (%^SV:%^SV) (Cns) %^WG: ;
+Cy:0 <=> :Vow (%^RV:) Cx: _ Cy: (%^RC:) Vow (%^SV:) (Cns) %^WG: ;
       where Cx in ( l l l l l l m m n n n ŋ r r r r r r v ) 
             Cy in ( c p s t č š p č c s t k c p s t č š p ) 
       matched ;
@@ -401,20 +401,45 @@ t:0 <=> _ %>: t t ;
 
 "Consonant lengthening after xx:x weak grade"
 !! => __@RULENAME@__  
-%^RC:Cx <=> [:Vow|%^RV:] Cy: Cy _ Vow: (%^SV:) %^WG: (Dummy:) %^CLEN: ;
-        where Cy in ( k4 č4 p4 p l d m s ) 
-              Cx in ( h  j  v  p l d m s ) 
-        matched ;
+%^RC:Cx <=> [:Vow|%^RV:] Cx: Cx _ Vow: (%^SV:) %^WG: (Dummy:) %^CLEN: ;
+        where Cx in ( p l d m s ) ;
 
 !€ ka^RVss^RCa^SV^WG^CLEN^SLEN>st
 !€ ka00ssaa000>st
 
 "Consonant lengthening after x:y weak grade"
 !! => __@RULENAME@__  
-%^RC:Cx <=> [:Vow|%^RV:] Cy: Cy _ Vow: (%^SV:) %^WG: (Dummy:) %^CLEN: ;
-        where Cy in ( k4 č4 p4 p l d m s ) 
-              Cx in ( h  j  v  p l d m s ) 
+%^RC:Cx <=> [:Vow|%^RV:] Cx: _ Vow: (%^SV:) %^WG: (Dummy:) %^CLEN: ;
+        where Cx in ( p l d m s ) ;
+
+
+
+"Consonant lengthening after xx:x weak grade with special consonant on upper side"
+!! => __@RULENAME@__  
+%^RC:Cx <=> [:Vow|%^RV:] Cy: Cy: _ Vow: (%^SV:) %^WG: (Dummy:) %^CLEN: ;
+        where Cy in ( k4 č4 p4 ) 
+              Cx in ( h  j  v  ) 
         matched ;
+
+!€ ka^RVss^RCa^SV^WG^CLEN^SLEN>st
+!€ ka00ssaa000>st
+
+"Consonant lengthening after x:y weak grade with special consonant on upper side"
+!! => __@RULENAME@__  
+%^RC:Cx <=> [:Vow|%^RV:] Cy: _ Vow: (%^SV:) %^WG: (Dummy:) %^CLEN: ;
+        where Cy in ( k4 č4 p4 ) 
+              Cx in ( h  j  v  ) 
+        matched ;
+
+
+
+
+
+
+
+
+
+
 
 
 "Consonant lengthening after h4 initial weak grade"
