@@ -19,6 +19,7 @@ Alphabet
 !! !!The Inari Saami letters
 
  a á â ä b c d e f g h i j k l m n o õ p q !!= * @CODE@
+ â:a â:á
  r s t u v w x y z æ ä ø ö å			   !!= * @CODE@
  č đ ŋ ŧ š ž				 			   !!= * @CODE@
 
@@ -33,6 +34,8 @@ Alphabet
  É Ó Ú Í À È Ò Ù Ì Ë Ü Ï Ê Ô Û Î Ã Ý þ Ð   !!= * @CODE@
  é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý þ ð   !!= * @CODE@
  ß ª ß ç								   !!= * @CODE@
+
+ 
  
 !! Literal quotes and angles must be escaped (cf morpheme boundaries further down):
  »7     !! * »
@@ -139,6 +142,10 @@ Dummy = %^CLEN %^CSH %^EE %^FCD %^IA %^ILL %^LLEN %^MONO %^ODDC %^ODDSHV
         %^RLEN %^RVL %^RVSH %^SFV %^SLEN                     !!= * @CODE@ 
         %^SVF %^SVLOW %^UU %^VLOW %^RVSH %^WG %^ÁE %^ÁI ;  !!= * @CODE@ 
 
+
+Definitions
+
+ChangeReducedA =  %^SVLOW:  ;
            
 !! !!!Rule section
 
@@ -239,8 +246,8 @@ Cx:Cy <=> _ (ˊ:) Cz (%^RC:) Vow (%^SV:) (Cns:) (Dummy:*) %^WG: ;
 
 "xyy:xy gradation A"
 Cy:0 <=> :Vow (%^RV:) Cx: _ Cy: (%^RC:) Vow (%^SV:) (Cns) %^WG: ;
-      where Cx in ( l l l l l l m m n n n ŋ r r r r r r r v ) 
-            Cy in ( c p s t č š p č c s t k c p k s t č š p ) 
+      where Cx in ( i4 l l l l l l l m m n n n ŋ r r r r r r r v ) 
+            Cy in ( k  c k p s t č š p č c s t k c p k s t č š p ) 
       matched ;
 
 !€ riänttus^WG
@@ -277,8 +284,8 @@ Cy:0 <=> Vow: (%^RV:) Cx: _ Cy: Vow (%^SV:) (Cns) %^WG: ;
 !€ vieltti^WG
 !€ viel0ti0
 
-"rkk:rk gradation"
-k:0 <=> [r|l|i4:] _ k (%^RC:) Vow (Cns) %^WG: ;
+!"kk:rk gradation"
+!k:0 <=> i4: _ k (%^RC:) Vow (Cns) %^WG: ;
  
 "xxy:xy gradation for nnj"
 !! => __@RULENAME@__  
@@ -649,7 +656,7 @@ e:á <=> [o|i|u] (%^RV:) Cns:+ _ (%^RLEN:) (%^CSH:) %^ILL: %>: ;
 
 "Stem vowel â to a in Pl Nom -h"
 !! => __@RULENAME@__  
-â:a <=> _ (%^WG:) (%^RLEN:) %> h ;
+â:a <=> _ (%^WG:) (%^RLEN:) %> h .#. ;
 
 !€ so^RVll^RCâ^WG^RLEN>h
 !€ soo0l0a00>h
@@ -660,9 +667,11 @@ Vx:Vy <=> _ (%^WG:) (%^RLEN:) %^SVLOW:0  ; ! Does not work for cases u>o
 	where Vx in ( â u )
 		  Vy in ( á o )
 		  matched ;
+"â just as â"
+â:â <=> _ ~$ChangeReducedA ;
 
 !€ so^RVll^RCâ^WG^RLEN^SVLOW>in 
-!€ soo0l0á000>in
+!€ soo00lá000>in
 
 
 !€ so^RVll^RCâ^WG^CLEN^SVLOW>in
