@@ -49,6 +49,7 @@ k4:k č4:č r4:r l4:l h4:h t4:t         !!= * @CODE@  these are consonants that 
 i4:i                                  !!= * @CODE@  this is the underlying i consonant
 m7:ṃ n7:ṇ ŋ7:ŋ̣ s7:ṣ r7:ṛ đ7:đ̣ l7:ḷ    !!= * @CODE@  with dots
 j7:j̣ h7:ḥ š7:ṣ̌  v7:ṿ                  !!= * @CODE@  with dots
+h:ṿ č:j̣ 
 %^A:á 	           		              !!= * @CODE@ loddán but algan, default is á.
 
 
@@ -158,10 +159,10 @@ Cx:Cy <=> Vow: _ (%^RC:) Vow (%^SV:) (Cns) (Dummy:*) %^WG:0 ;
 
 "x:y gradation" 
 !! => __@RULENAME@__  Note that t:đ is in a separate rule
-Cx:Cy <=> Vow: _ (%^RC:) Vow (%^SV:) (Cns) (Dummy:*) %^WG:0 \%^CLEN: ;
-          Vow: _ k4:h Vow (Cns) (Dummy:*) %^WG:0 ;
-	where Cx in (c č h p4 )
-          Cy in (s j̣ ṿ ṿ  )
+Cx:Cy <=> Vow: _ (%^RC:) Vow (%^SV:) (Cns) %^WG:0 \%^CLEN: ;
+!          Vow: _ k4:h Vow (Cns) (Dummy:*) %^WG:0 ;  ! Revise this one, there is no ack4a : asha
+	where Cx in (c č h )
+          Cy in (s j̣ ṿ )
 		  matched;
 
 !€ käähir^WG
@@ -178,6 +179,8 @@ t:đ <=> Vow: _ (k4:) Vow (%^SV:) (Cns) (Dummy:*) %^WG:0 ;
 !! => __@RULENAME@__    for atka : ađha
 k4:h <=> Vow: t: _ Vow (%^SV:) (Cns) (Dummy:*) %^WG: ;
 
+!€ mä^RVtk4i^WG
+!€ määđhi0
 
 "xx:x gradation 1"
 !! => __@RULENAME@__  
@@ -199,12 +202,12 @@ Cx:0 <=> Vow: _ Cy: (%^RC:) Vow: (Vow:) (Cns:) (Dummy:*) %^WG:0 ;
 	      Cy in ( h4  k4 p4 č4 )
 		  matched ;
 
-!€ le^RVkk^RCâ^WG^RLEN
+!€ le^RVkk4^RCâ^WG^RLEN
 !€ lee0hâ00
 
 "xx:y long to something else gradation 2" 
 !! => __@RULENAME@__  hh:V, kk:h, pp:v, čč:J
-Cx:Cy <=> Vow Cz: _ (%^RC:) Vow (Vow:) (Cns:) (Dummy:*) %^WG:0 ;
+Cx:Cy <=> Vow         Cz: _ (%^RC:) Vow (Vow:) (Cns:) (Dummy:*) %^WG:0 ;
           Vow (%^RV:) Cz: _ (%^RC:) Vow (Dummy:*) %^WG:0 ;
 	where Cx in ( h4  k4 p4 č4 ) 
 	      Cy in ( ṿ   h  v  j̣ ) 
@@ -236,8 +239,8 @@ Cx:Cy <=> _ (ˊ:) Cz (%^RC:) Vow (%^SV:) (Cns:) (Dummy:*) %^WG: ;
 
 "xyy:xy gradation A"
 Cy:0 <=> :Vow (%^RV:) Cx: _ Cy: (%^RC:) Vow (%^SV:) (Cns) %^WG: ;
-      where Cx in ( l l l l l l m m n n n ŋ r r r r r r v ) 
-            Cy in ( c p s t č š p č c s t k c p s t č š p ) 
+      where Cx in ( l l l l l l m m n n n ŋ r r r r r r r v ) 
+            Cy in ( c p s t č š p č c s t k c p k s t č š p ) 
       matched ;
 
 !€ riänttus^WG
@@ -275,7 +278,7 @@ Cy:0 <=> Vow: (%^RV:) Cx: _ Cy: Vow (%^SV:) (Cns) %^WG: ;
 !€ viel0ti0
 
 "rkk:rk gradation"
-k:0 <=> r _ k4: (%^RC:) Vow (Cns) %^WG: ;
+k:0 <=> [r|l|i4:] _ k (%^RC:) Vow (Cns) %^WG: ;
  
 "xxy:xy gradation for nnj"
 !! => __@RULENAME@__  
@@ -288,21 +291,15 @@ Cx:0 <=> Cx: _ Cy: Vow (%^SV:) (Cns) %^WG: ;
 !€ koon0jâl0 
 
 
-"xyy:xz gradation 1"
+"xyy:xz gradation for k:h 1"
 !! => __@RULENAME@__  
-Cy:0 <=> Vow: (%^RV:) Cx:Cz _ Cy: (%^RC:) Vow (%^SV:)  (Cns) %^WG: ;
-	where Cx in ( i4 j l r v )
-		  Cy in ( k  k k k k )
-		  Cz in ( i  j l r v )
-		  matched ;
+k:0 <=> Vow: (%^RV:) Cx: _ k4: (%^RC:) Vow (%^SV:)  (Cns) %^WG: ;
+	where Cx in ( i4 j l r v ) ;
 
-"xyy:xz gradation 2" 
+"xyy:xz gradation for k:h 2" 
 !! => __@RULENAME@__  
-Cy:Cz <=> Vow: (%^RV:) Cx: Cy: _ (%^RC:) Vow (%^SV:) (Cns) %^WG: ;
-	where Cx in ( i4 j l r v  )
-		  Cy in ( k  k k k k  )
-		  Cz in ( h  h h h h  )
-		  matched ;
+k4:h <=> Vow: (%^RV:) Cx: k: _ (%^RC:) Vow (%^SV:) (Cns) %^WG: ;
+	where Cx in ( i4 j l r v  ) ;
 
 "xˊy:xy gradation"
 !! => __@RULENAME@__  
@@ -636,18 +633,18 @@ e:0 <=> Cns: _ (Dummy:) (Dummy:) %>: i j ;
 "Stem vowel e to a for a root vowel."
 !! => __@RULENAME@__  
 e:a <=> a (%^RV:) Cns:+ _ (%^RLEN:) (%^CSH:) %^ILL: ;
-!€ a^RVlg e ^SLEN >n
-!€ a a lg a 0 > n
+!€ a^RVlge^SLEN>n
+!€ aalga0>n
 
 "Stem vowel e to á for other root vowel."
 !! => __@RULENAME@__  
 e:á <=> [o|i|u] (%^RV:) Cns:+ _ (%^RLEN:) (%^CSH:) %^ILL: %>: ;
 
 !€ a^RVlge^RVL>^An
-!€ aalg0>an
+!€ aalg00>an
 
 !€ lo^RVdde^RVL>^An 
-!€ loodde00>an 
+!€ loodde0>an 
 
 
 "Stem vowel â to a in Pl Nom -h"
@@ -687,5 +684,5 @@ Vx:Vy <=> _ (%^WG:) (%^RLEN:) %^SVLOW:0  ; ! Does not work for cases u>o
 !€ pie0hâ0n0j00>ist
 
 !€ kahhaan^SC^CSH^RVSH>ist
-!€ ka0ha0n0j00>ist
+!€ ka0ha0nj00>ist
 
