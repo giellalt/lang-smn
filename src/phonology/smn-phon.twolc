@@ -19,7 +19,7 @@ Alphabet
 !! !!The Inari Saami letters
 
  a á â ä b c d e f g h i j k l m n o õ p q !!= * @CODE@
- â:a â:á
+! â:a â:á
  r s t u v w x y z æ ä ø ö å			   !!= * @CODE@
  č đ ŋ ŧ š ž				 			   !!= * @CODE@
 
@@ -52,7 +52,7 @@ k4:k č4:č r4:r l4:l h4:h t4:t         !!= * @CODE@  these are consonants that 
 i4:i                                  !!= * @CODE@  this is the underlying i consonant
 m7:ṃ n7:ṇ ŋ7:ŋ̣ s7:ṣ r7:ṛ đ7:đ̣ l7:ḷ    !!= * @CODE@  with dots
 j7:j̣ h7:ḥ š7:ṣ̌  v7:ṿ                  !!= * @CODE@  with dots
-h:ṿ č:j̣ 
+!h:ṿ č:j̣ 
 %^A:á 	           		              !!= * @CODE@ loddán but algan, default is á.
 
 
@@ -145,7 +145,7 @@ Dummy = %^CLEN %^CSH %^EE %^FCD %^IA %^ILL %^LLEN %^MONO %^ODDC %^ODDSHV
 
 Definitions
 
-ChangeReducedA =  %^SVLOW:  ;
+ChangeReducedA =  [ %^SVLOW: | %> h ] ;
            
 !! !!!Rule section
 
@@ -607,7 +607,6 @@ Cx:Cy <=> _ (Cns:) Cz: %^WG: ;
 !! => __@RULENAME@__ long á in kissáást
 %^SV:Vx <=> Vx       _ Dummy:* (:Cns)                  %^SLEN: ;
         where Vx in ( á o e a i ) ; ! pending...
-        matched ;
 
 !€ ki^RVss^RCá^WG^CLEN^SV^SLEN>st
 !€ ki00ssá00á0>st
@@ -630,8 +629,8 @@ i:0 <=> _ Cns %^SFV: (%^SC:) (%^CSH:) (%^RVSH:) %>: ;
 
 "Stem vowel e deletion before 2nd syllable ij"
 !! => __@RULENAME@__  
-e:0 <=> Cns: _ (Dummy:) (Dummy:) %>: i j ;
-        Cns: _ Cns %^SFV: (%^SC:) (%^CSH:) (%^RVSH:) %>: ; 
+!e:0 <=> Cns: _ (Dummy:) (Dummy:) %>: i j ; unclear target !?
+e:0 <=> Cns: _ Cns %^SFV: (%^SC:) (%^CSH:) (%^RVSH:) %>: ; 
 
 !€ šoddâdem^SFV>ist
 !€ šoddâd0m00ist
@@ -656,19 +655,23 @@ e:á <=> [o|i|u] (%^RV:) Cns:+ _ (%^RLEN:) (%^CSH:) %^ILL: %>: ;
 
 "Stem vowel â to a in Pl Nom -h"
 !! => __@RULENAME@__  
-â:a <=> _ (%^WG:) (%^RLEN:) %> h .#. ;
+â:a <=> :Cns (%^RC:) _ (%^UU:|%^SV:) (%^WG:) (%^RLEN:) %> h ;
+
+
 
 !€ so^RVll^RCâ^WG^RLEN>h
 !€ soo0l0a00>h
 
 "Stem vowel â > á and u > o change before i"
 !! => __@RULENAME@__  
-Vx:Vy <=> _ (%^WG:) (%^RLEN:) %^SVLOW:0  ; ! Does not work for cases u>o
+Vx:Vy <=> _ (%^WG:) (%^RLEN:|%^CLEN:) %^SVLOW:0  ; ! Does not work for cases u>o
 	where Vx in ( â u )
 		  Vy in ( á o )
 		  matched ;
-"â just as â"
-â:â <=> _ ~$ChangeReducedA ;
+
+		  
+!"â just as â"
+!â:â <=> _ ~$ChangeReducedA ;
 
 !€ so^RVll^RCâ^WG^RLEN^SVLOW>in 
 !€ soo00lá000>in
