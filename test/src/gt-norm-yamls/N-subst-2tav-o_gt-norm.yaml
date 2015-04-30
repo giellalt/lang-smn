@@ -1,21 +1,23 @@
 Config:
   hfst:
     Gen: ../../../src/generator-gt-norm.hfst
-    Morph: ../../../src/analyser-gt-norm.hfst
+    Morph: ../../../src/analyser-dict-gt-norm.hfst
   xerox:
     Gen: ../../../src/generator-gt-norm.xfst
-    Morph: ../../../src/analyser-gt-norm.xfst
+    Morph: ../../../src/analyser-dict-gt-norm.xfst
     App: lookup
 
 Tests:
   Noun - šaddo:
     šaddo+N+Sg+Nom:  šaddo
     šaddo+N+Sg+Gen:  šado
+    šaddo+N+Sg+Acc:  šado
     šaddo+N+Sg+Ill:  šaadon
     šaddo+N+Sg+Loc:  šaddoost
     šaddo+N+Sg+Com:  šaddoin
     šaddo+N+Sg+Abe:  šadottáá
     šaddo+N+Ess:  šaddon
+    šaddo+N+Par:  šaddod
     šaddo+N+Pl+Nom:  šadoh
     šaddo+N+Pl+Gen:  šadoi
     šaddo+N+Pl+Acc:  šaddoid
@@ -27,13 +29,15 @@ Tests:
   Noun - avdo:
     avdo+N+Sg+Nom:  avdo
     avdo+N+Sg+Gen:  aavdo
+    avdo+N+Sg+Acc:  aavdo
     avdo+N+Sg+Ill:  aavdon
     avdo+N+Sg+Loc:  aavdost
     avdo+N+Sg+Com:  avdoin
     avdo+N+Sg+Abe:  avdottáá
     avdo+N+Ess:  avdon
+    avdo+N+Par:  avdod
     avdo+N+Pl+Nom:  aavdoh
-    avdo+N+Pl+Gen:  aavdoi
+    avdo+N+Pl+Gen:  [aavdoi, avdoi]
     avdo+N+Pl+Acc:  aavdoid
     avdo+N+Pl+Ill:  aavdoid
     avdo+N+Pl+Loc:  aavdoin
@@ -43,11 +47,13 @@ Tests:
   Noun - tango:
     tango+N+Sg+Nom:  tango
     tango+N+Sg+Gen:  tango
+    tango+N+Sg+Acc:  tango
     tango+N+Sg+Ill:  tangon
     tango+N+Sg+Loc:  tangoost
     tango+N+Sg+Com:  tangoin
     tango+N+Sg+Abe:  tangottáá
     tango+N+Ess:  tangon
+    tango+N+Par:  tangon
     tango+N+Pl+Nom:  tangoh
     tango+N+Pl+Gen:  tangoi
     tango+N+Pl+Acc:  tangoid
@@ -59,11 +65,13 @@ Tests:
   Noun - pargo:
     pargo+N+Sg+Nom:  pargo
     pargo+N+Sg+Gen:  pargo
+    pargo+N+Sg+Acc:  pargo
     pargo+N+Sg+Ill:  paargon
     pargo+N+Sg+Loc:  pargoost
     pargo+N+Sg+Com:  pargoin
     pargo+N+Sg+Abe:  pargottáá
     pargo+N+Ess:  pargon
+    pargo+N+Ess:  pargod
     pargo+N+Pl+Nom:  pargoh
     pargo+N+Pl+Gen:  pargoi
     pargo+N+Pl+Acc:  pargoid
@@ -75,11 +83,13 @@ Tests:
   Noun - taho:
     taho+N+Sg+Nom:  taho
     taho+N+Sg+Gen:  tavo
+    taho+N+Sg+Gen:  tavo
     taho+N+Sg+Ill:  tahon
-    taho+N+Sg+Loc:  taavoost
+    taho+N+Sg+Loc:  tavvoost
     taho+N+Sg+Com:  tavvoin
     taho+N+Sg+Abe:  tavottáá
     taho+N+Ess:  tahhoon
+    taho+N+Par: tahhood
     taho+N+Pl+Nom:  tavoh
     taho+N+Pl+Gen:  tavoi
     taho+N+Pl+Acc:  tavoid
@@ -91,11 +101,13 @@ Tests:
   Noun - lajo:
     lajo+N+Sg+Nom:  lajo
     lajo+N+Sg+Gen:  lajo
+    lajo+N+Sg+Gen:  lajo
     lajo+N+Sg+Ill:  lajon
     lajo+N+Sg+Loc:  laajoost
     lajo+N+Sg+Com:  lajoin
     lajo+N+Sg+Abe:  lajottáá
     lajo+N+Ess:  laijoon
+    lajo-N-Par: laijood
     lajo+N+Pl+Nom:  lajoh
     lajo+N+Pl+Gen:  lajoi
     lajo+N+Pl+Acc:  lajoid
@@ -107,11 +119,13 @@ Tests:
   Noun - vajo:
     vajo+N+Sg+Nom:  vajo
     vajo+N+Sg+Gen:  vajo
+    vajo+N+Sg+Acc:  vajo
     vajo+N+Sg+Ill:  vajon
     vajo+N+Sg+Loc:  vaajoost
     vajo+N+Sg+Com:  vajoin
     vajo+N+Sg+Abe:  vajottáá
     vajo+N+Ess:  vaijoon
+    vajo+N+Par:  vaijood
     vajo+N+Pl+Nom:  vajoh
     vajo+N+Pl+Gen:  vajoi
     vajo+N+Pl+Acc:  vajoid
@@ -123,11 +137,13 @@ Tests:
   Noun - lahko:
     lahko+N+Sg+Nom:  lahko
     lahko+N+Sg+Gen:  lahko
+    lahko+N+Sg+Acc:  lahko
     lahko+N+Sg+Ill:  laahkon
     lahko+N+Sg+Loc:  lahkoost
     lahko+N+Sg+Com:  lahkoin
     lahko+N+Sg+Abe:  lahkottáá
     lahko+N+Ess:  lahkon
+    lahko+N+Par:  lahkon
     lahko+N+Pl+Nom:  lahkoh
     lahko+N+Pl+Gen:  lahkoi
     lahko+N+Pl+Acc:  lahkoid
@@ -584,21 +600,21 @@ Tests:
     pisso+N+Pl+Com:  pisoiguin
     pisso+N+Pl+Abe:  pisoittáá
 
-  Noun - Ito:
-    Ito+N+Sg+Nom:  Ito
-    Ito+N+Sg+Gen:  iđo
-    Ito+N+Sg+Ill:  iton
-    Ito+N+Sg+Loc:  iiđoost
-    Ito+N+Sg+Com:  iiđooin
-    Ito+N+Sg+Abe:  iđottáá
-    Ito+N+Ess:  ittoon
-    Ito+N+Pl+Nom:  iđoh
-    Ito+N+Pl+Gen:  iđoi
-    Ito+N+Pl+Acc:  iđoid
-    Ito+N+Pl+Ill:  iiđooid
-    Ito+N+Pl+Loc:  iđoin
-    Ito+N+Pl+Com:  iđoiguin
-    Ito+N+Pl+Abe:  iđoittáá
+  Noun - ito:
+    ito+N+Sg+Nom:  ito
+    ito+N+Sg+Gen:  iđo
+    ito+N+Sg+Ill:  iton
+    ito+N+Sg+Loc:  iiđoost
+    ito+N+Sg+Com:  iiđooin
+    ito+N+Sg+Abe:  iđottáá
+    ito+N+Ess:  ittoon
+    ito+N+Pl+Nom:  iđoh
+    ito+N+Pl+Gen:  iđoi
+    ito+N+Pl+Acc:  iđoid
+    ito+N+Pl+Ill:  iiđooid
+    ito+N+Pl+Loc:  iđoin
+    ito+N+Pl+Com:  iđoiguin
+    ito+N+Pl+Abe:  iđoittáá
 
   Noun - kisto:
     kisto+N+Sg+Nom:  kisto
@@ -673,7 +689,7 @@ Tests:
     nijtto+N+Sg+Abe:  nijtottáá
     nijtto+N+Ess:  nijtton
     nijtto+N+Pl+Nom:  nijtoh
-    nijtto+N+Pl+Gen: [niijtoi, ni´jtoi]
+    nijtto+N+Pl+Gen: [niijtoi, nijtoi]
     nijtto+N+Pl+Acc:  niijtoid
     nijtto+N+Pl+Ill:  nijttoid
     nijtto+N+Pl+Loc:  niijtoin
@@ -689,7 +705,7 @@ Tests:
     sijvo+N+Sg+Abe:  sijvottáá
     sijvo+N+Ess:  sijvon
     sijvo+N+Pl+Nom: [sijvoh, siijvoh]
-    sijvo+N+Pl+Gen: [siijvoi, si´jvoi]
+    sijvo+N+Pl+Gen: [siijvoi, sijvoi]
     sijvo+N+Pl+Acc:  siijvoid
     sijvo+N+Pl+Ill:  sijvoid
     sijvo+N+Pl+Loc:  siijvoin
