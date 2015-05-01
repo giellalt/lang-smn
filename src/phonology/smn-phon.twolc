@@ -87,6 +87,7 @@ j7:j̣ h7:ḥ š7:ṣ̌  v7:ṿ                  !!= * @CODE@  with dots
 %^SFV:0   	!!= * @CODE@ = Deleting fleeting vowel before suffix
 %^SVF:0	    !!= * @CODE@ = stem vowel lowering â>á and u>o
 %^SVLOW:0	!!= * @CODE@ = stem vowel lowering â>á and u>o
+%^
 %^UU:0      !!= * @CODE@ = Final vowel deletion in uu stems
 %^VLOW:0   	!!= * @CODE@ = Vowel lowering in 3rd sg of contract verbs tuhhid:tohhe
 %^WG:0 		!!= * @CODE@ = weak grade trigger
@@ -197,14 +198,38 @@ Cx:0 <=> Vow: _ (ˊ:) Cx (%^RC:) Vow: (%^SV:) (Vow) (Cns:) %^WG:0  ;
 ˊ:0 <=> Vow: Cx: _ Cx (%^RC:) Vow: (%^SV:) (Vow) (Cns:) %^WG:0  ;
 	where Cx in ( b d g p t k c č f z ž l m n ŋ r s š v ) ;
 
-"Consonant shortening (not weak grade) 1"
+!"Consonant shortening (not weak grade) final part"
+!!! * __@RULENAME@__ pp to p for kappeer ~ kaperist
+!Cy:0 <=> Cx: (ˊ:) _  (%^RC:) [ Vow:  ]* (Cns) (Cns) (%^RC:) (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) (%^RLEN:) (%^DLEN:) %^CSH: (%^RVSH:) %>: ;
+!       where Cx in ( s v m n ŋ š h l p d k k  h  p  t g r č  ) 
+!             Cy in ( s v m n ŋ š h l p d k k4 h4 p4 t g r č4 ) 
+!       matched ;
+
+
+
+"Consonant shortening (not weak grade) pp:p etc"
 !! * __@RULENAME@__ pp to p for kappeer ~ kaperist
 Cy:0 <=> Cx (ˊ:) _  (%^RC:) [ Vow:  ]* (Cns) (Cns) (%^RC:) (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) (%^RLEN:) (%^DLEN:) %^CSH: (%^RVSH:) %>: ;
-       where Cx in ( s v m n ŋ š h l p d k k  h  p  t g r č  ) 
-             Cy in ( s v m n ŋ š h l p d k k4 h4 p4 t g r č4 ) 
+       where Cx in ( s š p d k k  p  t g č  ) 
+             Cy in ( s š p d k k4 p4 t g č4 ) 
        matched ;
 
-"Consonant shortening (not weak grade) 2"
+"Consonant shortening (not weak grade) final part (half-long)"
+!! * __@RULENAME@__ pp to p for kappeer ~ kaperist
+Cy:0 <=> Cx: (ˊ:) _  (%^RC:) [ Vow:  ]* (Cns) (Cns) (%^RC:) (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) (%^RLEN:) (%^DLEN:) %^CSH: (%^RVSH:) %>: ;
+       where Cx in ( v m n ŋ h l h  r ) 
+             Cy in ( v m n ŋ h l h4 r ) 
+       matched ;
+
+"Consonant shortening (not weak grade) first part (half-long)"
+!! * __@RULENAME@__ pp to p for kappeer ~ kaperist
+Cx:Cy <=> _ (ˊ:) Cz:  (%^RC:) [ Vow:  ]* (Cns) (Cns) (%^RC:) (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) (%^RLEN:) (%^DLEN:) %^CSH: (%^RVSH:) %>: ;
+       where Cx in ( v m n ŋ h l h  r ) 
+             Cy in ( ṿ ṃ ṇ ŋ̣ ḥ ḷ ḥ  ṛ ) 
+             Cz in ( v m n ŋ h l h4 r ) 
+       matched ;
+
+"Consonant shortening (not weak grade) hyphen"
 !! * __@RULENAME@__ pp to p for kappeer ~ kaperist
 ˊ:0 <=> Cx _ Cy:  (%^RC:) [ Vow:  ]* (Cns) (Cns) (%^RC:) (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) (%^RLEN:) (%^DLEN:) %^CSH: (%^RVSH:) %>: ;
        where Cx in ( s v m n ŋ š h l p d k k  h  p  t g r č  ) 
@@ -236,10 +261,10 @@ Cx:0 <=> Vow: _ Cy: (%^RC:) Vow: (Vow:) (Cns:) (Dummy:*) %^WG:0 ;
 
 "xx:y long to something else gradation 2" 
 !! * __@RULENAME@__  hh:V, kk:h, pp:v, čč:J here we change second part, k4:h in kk4:h etc.
-Cx:Cy <=> Vow         Cz: _ (%^RC:) Vow (Vow:) (Cns:) (Dummy:*) %^WG:0 ;
-          Vow (%^RV:) Cz: _ (%^RC:) Vow (Dummy:*) %^WG:0 ;
+Cx:Cy <=> Vow         Cz: _ (%^RC:) Vow: (Vow:) (Cns:) (Dummy:*) %^WG:0 ;
+          Vow (%^RV:) Cz: _ (%^RC:) Vow: (Dummy:*) %^WG:0 ;
 	where Cx in ( h4  k4 p4 č4 ) 
-	      Cy in ( ṿ   h  v  j̣ ) 
+	      Cy in ( ṿ   h  v  j̣ ) 
 	      Cz in ( h   k  p  č ) 
 		  matched ;
 
@@ -633,14 +658,24 @@ e:á <=> y: _  Cns:+ Vow: %^ILL: ;
 
 "Vowel change á to e or i in 3syll"
 !! * __@RULENAME@__ puttás- > putes, triggers are ^ÁE and ^ÁI
-Cx:Cy <=> _ (Cns:) Cz: %^WG: ; 
-       where Cx in ( á á )
-             Cy in ( e i )
-             Cz in ( %^ÁE %^ÁI ) 
+Vx:Vy <=> _ (Cns:) Vz: %^WG: ; 
+       where Vx in ( á    á    a   )
+             Vy in ( e    i    e   )
+             Vz in ( %^ÁE %^ÁI %^ÁE) 
        matched ;
 
 !€ puttás^ÁE^WG
 !€ pu0tes00
+
+"Vowel shortening  áá and to e or i in 3syll"
+!! * __@RULENAME@__ puttás- > putes, triggers are ^ÁE and ^ÁI
+Vx:0 <=> _ Vx: (Cns:) Vz: [%^WG:|%^CSH:] ; 
+       where Vx in ( á    á    a   )
+             Vz in ( %^ÁE %^ÁI %^ÁE) 
+       matched ;
+
+!€ nahh4aar^ÁE^WG
+!€ na0ṿ0er00
 
 "Suffix vowel lengthening"
 !! * __@RULENAME@__ long á in kissáást
@@ -728,6 +763,7 @@ u:o <=> _ (%^UU:|%^SV:) (%^WG:) (%^RLEN:|%^CLEN:) %^SVLOW:  ;
 !! * __@RULENAME@__  changes ^A to a, check this
 %^A:a <=> a (%^RV:) Cns:* e: (Dummy:*) %>: _ ;
 
+"
 
 !! !!Other rules
 
