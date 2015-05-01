@@ -11,6 +11,7 @@ use utf8;
 
 while(<>) {
 	s/generator-dict-gt/generator-gt/g ;
+	s/analyser-dict-gt/analyser-gt/g ;
 	s/ˊ//g ; # remove accent letter
 	s/̣//g ;  # remove half-long dot
 
