@@ -186,7 +186,7 @@ t:đ <=> Vow: _ (k4:) (%^RC:) :Vow (%^SV:) (Cns) (Dummy:*) %^WG:0 ;
 
 "k:h gradation for kk and tk"
 !! * __@RULENAME@__    for atka : ađha
-k4:h <=> Vow: [t:|k:] _ (%^RC:) :Vow (%^SV:) (Cns) (Dummy:*) (%^RLEN:) %^WG: ;
+k4:h <=> Vow: [t:|k:] _ (%^RC:) :Vow (%^SV:) (Cns) %^WG: ;
 
 !€ mä^RVtk4i^WG
 !€ määđhi0
@@ -198,19 +198,16 @@ k4:h <=> Vow: [t:|k:] _ (%^RC:) :Vow (%^SV:) (Cns) (Dummy:*) (%^RLEN:) %^WG: ;
 
 "xx:x gradation"
 !! * __@RULENAME@__  tikká:tiká, deleting the first k, etc.
-Cx:0 <=> Vow: _ (ˊ:) Cx (%^RC:) Vow: (%^SV:) (Vow) (Cns:) (Dummy:*) %^WG:0  ;
-	where Cx in ( b d g p t k c č f z ž l m n ŋ r s š v ) ;
-
-"xˊx:x gradation"
-!! * __@RULENAME@__  tikká:tiká, deleting the first k, etc.
-ˊ:0 <=> Vow: Cx: _ Cx (%^RC:) Vow: (%^SV:) (Vow) (Cns:) %^WG:0  ;
+Cx:0 <=> Vow: _ (ˊ:) Cx (%^RC:) Vow: (%^SV:) (Vow) (Cns:) (Dummy:*) %^WG:0 [%>|.#.] ;
 	where Cx in ( b d g p t k c č f z ž l m n ŋ r s š v ) ;
 
 
+"ˊ to zero gradation"
+ˊ:0 <=> Vow: Cns _ Cns Vow (%^SV:) (Cns) (Dummy:*) %^WG:0 ;
 
 !"Consonant shortening (not weak grade) final part"
 !!! * __@RULENAME@__ pp to p for kappeer ~ kaperist
-!Cy:0 <=> Cx: (ˊ:) _  (%^RC:) [ Vow:  ]* (Cns) (Cns) (%^RC:)  (%^ÁI:|%^ÁE:) (%^SFV:) (%^SC:) (%^RLEN:) (%^DLEN:) %^CSH: (%^RVSH:) %>: ;
+!Cy:0 <=> Cx: (ˊ:) _  (%^RC:) [ Vow:  ]* (Cns) (Cns) (%^RC:)  (%^ÁI:|%^ÁE:) (%^SFV:) (%^SC:) (%^RLEN:) (%^DLEN:) %^CSH: (%^RVSH:) [%>|.#.] ;
 !       where Cx in ( s v m n ŋ š h l p d k k  h  p  t g r č  ) 
 !             Cy in ( s v m n ŋ š h l p d k k4 h4 p4 t g r č4 ) 
 !       matched ;
@@ -219,7 +216,7 @@ Cx:0 <=> Vow: _ (ˊ:) Cx (%^RC:) Vow: (%^SV:) (Vow) (Cns:) (Dummy:*) %^WG:0  ;
 
 "Consonant shortening (not weak grade) pp:p etc"
 !! * __@RULENAME@__ pp to p for kappeer ~ kaperist
-Cy:0 <=> Cx (ˊ:) _  (%^RC:) [Vow:]* (Cns) (Cns) (%^ÁI:|%^ÁE:) (%^SC:) (%^SFV:) (%^RLEN:) (%^DLEN:) %^CSH: (%^RVSH:) %>: ;
+Cy:0 <=> Cx (ˊ:) _  (%^RC:) [Vow:]* (Cns) (Cns) (%^ÁI:|%^ÁE:) (%^SC:) (%^SFV:) (%^RLEN:) (%^DLEN:) %^CSH: (%^RVSH:) [%>|.#.] ;
        where Cx in ( s š p d k k  p  t g č  ) 
              Cy in ( s š p d k k4 p4 t g č4 ) 
        matched ;
@@ -227,19 +224,19 @@ Cy:0 <=> Cx (ˊ:) _  (%^RC:) [Vow:]* (Cns) (Cns) (%^ÁI:|%^ÁE:) (%^SC:) (%^SFV:
 !€ čiäpp4^RCát^ÁE^SC^CSH>ân
 !€ čiäp00át0t0>ân
 
-!€ čiäpp4^RCát^ÁE^SC^WG^FCD
-!€ čiäp00át0t0>ân
+!€ čiäpp4^RCát^ÁE^SC^WG^FCD>ân
+!€ čiäp00át0t0000>ân
 
 "Consonant shortening (not weak grade) final part (half-long)"
 !! * __@RULENAME@__ pp to p for kappeer ~ kaperist
-Cy:0 <=> Cx: (ˊ:) _  (%^RC:) [ Vow:  ]* (Cns) (Cns) (%^ÁI:|%^ÁE:) (%^SC:) (%^SFV:) (%^RLEN:) (%^DLEN:) %^CSH: (%^RVSH:) %>: ;
+Cy:0 <=> Cx: (ˊ:) _  (%^RC:) [ Vow:  ]* (Cns) (Cns) (%^ÁI:|%^ÁE:) (%^SC:) (%^SFV:) (%^RLEN:) (%^DLEN:) %^CSH: (%^RVSH:) [%>|.#.] ;
        where Cx in ( v m n ŋ h l h  r ) 
              Cy in ( v m n ŋ h l h4 r ) 
        matched ;
 
 "Consonant shortening (not weak grade) first part (half-long)"
 !! * __@RULENAME@__ pp to p for kappeer ~ kaperist
-Cx:Cy <=> Vow: _ (ˊ:) Cz:  (%^RC:) [ Vow:  ]* (Cns) (Cns) (%^ÁI:|%^ÁE:) (%^SC:) (%^SFV:) (%^RLEN:) (%^DLEN:) %^CSH: (%^RVSH:) %>: ;
+Cx:Cy <=> Vow: _ (ˊ:) Cz:  (%^RC:) [ Vow:  ]* (Cns) (Cns) (%^ÁI:|%^ÁE:) (%^SC:) (%^SFV:) (%^RLEN:) (%^DLEN:) %^CSH: (%^RVSH:) [%>|.#.] ;
        where Cx in ( v m n ŋ h l h  r ) 
              Cy in ( ṿ ṃ ṇ ŋ̣ ḥ ḷ ḥ  ṛ ) 
              Cz in ( v m n ŋ h l h4 r ) 
@@ -247,7 +244,7 @@ Cx:Cy <=> Vow: _ (ˊ:) Cz:  (%^RC:) [ Vow:  ]* (Cns) (Cns) (%^ÁI:|%^ÁE:) (%^SC
 
 "Consonant shortening (not weak grade) hyphen"
 !! * __@RULENAME@__ pp to p for kappeer ~ kaperist
-ˊ:0 <=> Cx _ Cy:  (%^RC:) [ Vow:  ]* (Cns) (Cns) (%^ÁI:|%^ÁE:) (%^SC:) (%^SFV:) (%^RLEN:) (%^DLEN:) %^CSH: (%^RVSH:) %>: ;
+ˊ:0 <=> Cx _ Cy:  (%^RC:) [ Vow:  ]* (Cns) (Cns) (%^ÁI:|%^ÁE:) (%^SC:) (%^SFV:) (%^RLEN:) (%^DLEN:) %^CSH: (%^RVSH:) [%>|.#.] ;
        where Cx in ( s v m n ŋ š h l p d k k  h  p  t g r č  ) 
              Cy in ( s v m n ŋ š h l p d k k4 h4 p4 t g r č4 ) 
        matched ;
@@ -323,22 +320,6 @@ Cy:0 <=> Vow: (%^RV:) Cx: _ Cy: Vow (%^SV:) (Cns) %^WG: ;
 	matched ;
 
 
-! Old version 
-! "xyy:xy gradation A"
-! Cy:0 <=> Cx: _ Cy: (%^RC:) Vow (Cns) %^WG: ;
-!       where Cx in ( i i l l l l l l m m n n n ŋ r r r r r r v ) 
-!             Cy in ( c t c p s t č š p č c s t k c p s t č š p ) 
-!       matched ;
-! 
-! !€ riänttus^WG
-! !€ riän0tus0
-! 
-! "xyy:xy gradation B"
-! !! * __@RULENAME@__  
-! Cy:0 <=> Vow: (%^RV:) Cx: _ Cy: Vow (%^SV:) (Cns) %^WG: ;
-! 	where Cx in ( i4 l n r l m r v i4 l l l l n n r r r r )
-!           Cy in ( t  t t t p p p p c  c č s š c s c č s š ) 
-! 	matched ;
 
 !€ a^RVi4kk4â^WG
 !€ a0i0há0
@@ -370,18 +351,6 @@ k:0 <=> Vow: (%^RV:) Cx: _ k4: (%^RC:) Vow (%^SV:)  (Cns) %^WG: ;
 k4:h <=> Vow: (%^RV:) Cx: k: _ (%^RC:) Vow (%^SV:) (Cns) %^WG: ;
 	where Cx in ( i4 j l r v  ) ;
 
-"xˊy:xy gradation"
-!! => __@RULENAME@__  
-ˊ:0 <=> Vow: Cx _ Cy Vow (%^SV:) (Cns) (Dummy:*) %^WG:0 ;
-     where Cx in (b b b b h h h h j j j j l l l l l l l l l l l m n n n n n p p p p r r r r r r r r r r r r r r s s s s s s t t v v v v v v v v v v v v v đ đ đ đ đ ŋ š š š š i4 i4 i4 i4 i4 i4 i4 i4 i4 i4 )
-           Cy in (d l đ ž l m t č d l m v b d g j m n s v ŋ š ž n d h j z ž c s t č b d f g h j m n r s t v ŋ š k m n p t v k h d g h k j l m n r z đ ŋ ž b f g j m g k m p t b  d  g  l  m  n  r  v  z  ŋ  )
-		  matched;
-
-!"xˊy:xy gradation for i4"
-!!! * __@RULENAME@__  , this rule deletes the ˊ mark when first consonant is i4
-!ˊ:0 <=> Vow: i4: _ Cx Vow (%^SV:) (Cns) (Dummy:*) %^WG:0 ;
-!	where Cx in (b  d  g  l  m  n  r  v  z  ŋ ) ;
-
 
 
   
@@ -409,7 +378,7 @@ k4:h <=> Vow: (%^RV:) Cx: k: _ (%^RC:) Vow (%^SV:) (Cns) %^WG: ;
 
 "nnj to nj shortening"
 !! * __@RULENAME@__  special rule, e.g. konnjâl -> konjâlân
-n:0 <=> n _ j Vow (Cns:) %^CSH: %>: ;
+n:0 <=> n _ j Vow (Cns:) %^CSH: [%>|.#.] ;
 
 !€ konnjâl^CSH>ân
 !€ kon0jâl0>ân
@@ -433,7 +402,7 @@ Cx:Cy <=> Vow: _ %^RC: :Vow (%^SV:) (%^RVSH:) %^CLEN: (%^SVLOW:) %>:  ;
 
 "Lengthening of half-long root consonant 2"
 !! * __@RULENAME@__   for l-dot to ll, changing ^RC to second l in ll
-%^RC:Cy <=> Vow: Cx: _ :Vow  (%^SV:) (%^WG:) (%^RVSH:) %^CLEN: (%^SVLOW:) %>: ;
+%^RC:Cy <=> Vow: Cx: _ :Vow  (%^SV:) (%^WG:) (%^RVSH:) %^CLEN: (%^SVLOW:) [%>|.#.] ;
 	where Cx in ( l7 r7 s7 h7 m7 n7 đ7 )
 		  Cy in ( l  r  s  h  m  n  đ  ) 
 		  matched ;
@@ -450,7 +419,7 @@ Cx:Cy <=> Vow: _ %^RC: :Vow (%^SV:) (%^WG:) (%^RVSH:) %^CLEN: (%^SVLOW:) %>:  ;
 
 "Lengthening of short root consonant 2"
 !! * __@RULENAME@__   for h to vv
-%^RC:Cy <=> Vow: Cx: _ :Vow  (%^SV:) (%^WG:) (%^RVSH:) %^CLEN: (%^SVLOW:) %>: ;
+%^RC:Cy <=> Vow: Cx: _ :Vow  (%^SV:) (%^WG:) (%^RVSH:) %^CLEN: (%^SVLOW:) [%>|.#.] ;
 	where Cx in (  h )
 		  Cy in (  v ) 
 		  matched ;
@@ -554,7 +523,7 @@ Cx:0 <=> _  (%^ÁE:) (%^SC:) (%^WG:) %^FCD: ;
  
 "Vowel shortening with consonant shortening" 
 !! * __@RULENAME@__  for koonjâl -> konjâlân
-Vx:0 <=> _ Vx Seg:* ([%^RC:|%^SC:]) %^CSH: (Dummy:*) %>: ;
+Vx:0 <=> _ Vx Seg:* ([%^RC:|%^SC:]) %^CSH: (Dummy:*) [%>|.#.] ;
         where Vx in ( a e o á ä u y i ) ;
 
 !  ([%^RC:|%^SC:])  was earlier (Dummy:*), but we changed to avoid conflict
@@ -577,7 +546,7 @@ Vx:0 <=> _ Vx Seg:* ([%^RC:|%^SC:]) %^CSH: (Dummy:*) %>: ;
 
 "Vowel shortening (no consonant shortening) in consonant stems"
 !! * __@RULENAME@__ kiirrâs- to kirrâsân
-Vy:0 <=> _ Vx   Cns: (Cns:) (%^RC:) Vow :Cns (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) (%^CLEN:) %^RVSH: %>: ;
+Vy:0 <=> _ Vx   Cns: (Cns:) (%^RC:) Vow :Cns (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) (%^CLEN:) %^RVSH: [%>|.#.] ;
        where Vx in ( a e i o u á ä ) 
              Vy in ( a e i o u á ä ) 
        matched ;
@@ -587,7 +556,7 @@ Vy:0 <=> _ Vx   Cns: (Cns:) (%^RC:) Vow :Cns (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) 
  
 "Vowel shortening (no consonant shortening) in vowel stems"
 !! * __@RULENAME@__ (example?)
-Vy:ˊ <=> Vx _  Cns: (Cns:) (%^RC:) Vow (%^WG:) (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) %^RVSH: %>: ;
+Vy:ˊ <=> Vx _  Cns: (Cns:) (%^RC:) Vow (%^WG:) (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) %^RVSH: [%>|.#.] ;
        where Vx in ( a e i o u y á ä ) 
              Vy in ( a e i o u y á ä ) 
        matched ;
@@ -642,15 +611,15 @@ Vx:Vy <=> Vz: _ Cns:* i %^WG: %>: j ;
 
 "e to iä in Illative and Sg3 1"
 !! * __@RULENAME@__  Part 1: e to i
-e:i <=> _ %^RV: Cns:+ Vow: %^ILL: ;
+e:i <=> _ %^RV: Cns:+ Vow: %^ILL: %> ;
 
 "e to iä in Illative and Sg3 2"
 !! * __@RULENAME@__  Part 2: ^RV to ä
-%^RV:ä <=> e:i _ Cns:+ Vow: %^ILL: ;
+%^RV:ä <=> :i _ Cns:+ Vow: %^ILL: %> ;
 
 "ie to iä in Illative and Sg3"
 !! * __@RULENAME@__  ... with ^ILL as trigger
-e:ä <=> i _  Cns:+ Vow: %^ILL: ;
+e:ä <=> i _  Cns:+ Vow: %^ILL: %> ;
 
 "ä to á in Illative and Sg3"
 !! * __@RULENAME@__  ... after .#. or Cns, with ^ILL as trigger
@@ -705,14 +674,14 @@ Vx:0 <=> _ Vx: (Cns:) Vz: [%^WG:|%^CSH:] ;
 
 "Fleeting vowel before suffix"
 !! * __@RULENAME@__ deletes -i- in piehâin to piehânjist 
-i:0 <=> _ Cns %^SFV: (%^SC:) (%^CSH:) (%^RVSH:) %>: ;
+i:0 <=> _ Cns %^SFV: (%^SC:) (%^CSH:) (%^RVSH:) [%>|.#.] ;
 
 !€ pieˊhâin^SFV^SC^CSH^RVSH>ist
 !€ pie0hâ0n0j00>ist
 
 "Inversion of in to nj"
 !! * __@RULENAME@__  adds -j-  in piehâin to piehânjist  
-%^SC:j <=> n (%^SFV:) _ (%^CSH:) (%^RVSH:) %>: ; 
+%^SC:j <=> n (%^SFV:) _ (%^CSH:) (%^RVSH:) [%>|.#.] ; 
 
 !€ pieˊhâin^SFV^SC^CSH^RVSH>ist
 !€ pie0hâ0n0j00>ist
@@ -725,7 +694,7 @@ i:0 <=> _ Cns %^SFV: (%^SC:) (%^CSH:) (%^RVSH:) %>: ;
 "Stem vowel e deletion before 2nd syllable ij"
 !! * __@RULENAME@__  hmm have a look at this
 !e:0 <=> Cns: _ (Dummy:) (Dummy:) %>: i j ; unclear target !?
-e:0 <=> Cns: _ Cns %^SFV: (%^SC:) (%^CSH:) (%^RVSH:) %>: ; 
+e:0 <=> Cns: _ Cns %^SFV: (%^SC:) (%^CSH:) (%^RVSH:) [%>|.#.] ; 
 
 !€ šoddâdem^SFV>ist
 !€ šoddâd0m0>ist
@@ -739,7 +708,7 @@ e:a <=> a (%^RV:) Cns:+ _ (%^RLEN:) (%^CSH:) %^ILL: ;
 
 "Stem vowel e to á for other root vowel."
 !! * __@RULENAME@__  
-e:á <=> [o|i|u] (%^RV:) Cns:+ _ (%^RLEN:) (%^CSH:) %^ILL: %>: ;
+e:á <=> [o|i|u] (%^RV:) Cns:+ _ (%^RLEN:) (%^CSH:) %^ILL: [%>|.#.] ;
 
 
 
@@ -755,7 +724,7 @@ e:á <=> [o|i|u] (%^RV:) Cns:+ _ (%^RLEN:) (%^CSH:) %^ILL: %>: ;
 
 "Stem vowel â > á change before i"
 !! * __@RULENAME@__ sollâ to sooláid 
-â:á <=> _ (%^UU:|%^SV:) (%^WG:) (%^RLEN:|%^CLEN:) %^SVLOW:  ; 
+â:á <=> _ (%^UU:|%^SV:) (%^WG:) (%^RLEN:|%^CLEN:) %^SVLOW: %> i ; 
 
 !€ so^RVll^RCâ^WG^RLEN^SVLOW>in 
 !€ soo00lá000>in
