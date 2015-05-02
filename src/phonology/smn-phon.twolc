@@ -434,6 +434,8 @@ Cx:Cy <=> Vow: _ %^RC: :Vow (%^SV:) (%^RVSH:) %^CLEN: (%^SVLOW:) %>:  ;
 		  Cy in ( l  r  s  h  m  n  đ  ) 
 		  matched ;
 
+!€ kol7^RCe^CLEN
+!€ kolle0
 
 "Lengthening of short root consonant 1"
 !! * __@RULENAME@__  for h to vv
@@ -480,11 +482,12 @@ t:0 <=> _ %>: t t ;
 
 
 
-"Consonant lengthening after xx:x weak grade with special consonant on upper side"
+"Consonant lengthening after xx:x and xy:zy weak grade with special consonant on upper side"
 !! * __@RULENAME@__  as previous rule, but for k4, č4, p4
-%^RC:Cx <=> [:Vow|%^RV:] Cy: Cy: _ Vow: (%^SV:) %^WG: (Dummy:) %^CLEN: ;
-        where Cy in ( k4 č4 p4 ) 
-              Cx in ( h  j  v  ) 
+%^RC:Cx <=> [:Vow|%^RV:] Cy: Cz: _ Vow: (%^SV:) %^WG: (Dummy:) %^CLEN: ;
+        where Cy in ( k4 č4 p4 k4 ) 
+              Cz in ( k4 č4 p4 s  ) 
+              Cx in ( h  j  v  s  ) 
         matched ;
 
 "Consonant lengthening after x:y weak grade"
