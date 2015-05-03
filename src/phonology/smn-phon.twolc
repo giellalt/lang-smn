@@ -154,7 +154,7 @@ Rules
 
 "X:x halflong to short gradation"
 !! * __@RULENAME@__  mool7â to moolâ
-Cx:Cy <=> Vow: _ (%^RC:) Vow (%^SV:) (Cns) (Dummy:*) %^WG:0 ;
+Cx:Cy <=> Vow: _ (%^RC:) Vow (%^SV:) (Cns) %^WG:0 ;
 	where Cx in (m7 n7 ŋ7 r7 s7 š7 j7 v7 đ7 l7 )
           Cy in (m  n  ŋ  r  s  š  j  v  đ  l  )
 		  matched;
@@ -179,7 +179,7 @@ Cx:Cy <=> Vow: _ (%^RC:0) Vow (%^SV:) (Cns:) %^WG:0 (%^RLEN:|%^RVSH:) (%^SLEN:) 
 
 "t:đ gradation" 
 !! * __@RULENAME@__   for ito : iđo
-t:đ <=> Vow: _ (k4:) (%^RC:) :Vow (%^SV:) (Cns) (Dummy:*) %^WG:0 ;
+t:đ <=> Vow: _ (k4:) (%^RC:) :Vow (%^SV:) (Cns) %^WG:0 ;
 
 !€ jo^RVtk4^RCâ^WG^RLEN
 !€ joođh0â00
@@ -198,12 +198,12 @@ k4:h <=> Vow: [t:|k:] _ (%^RC:) :Vow (%^SV:) (Cns) %^WG: ;
 
 "xx:x gradation"
 !! * __@RULENAME@__  tikká:tiká, deleting the first k, etc.
-Cx:0 <=> Vow: _ (ˊ:) Cx (%^RC:) Vow: (%^SV:) (Vow) (Cns:) (Dummy:*) %^WG:0 [%>|.#.] ;
+Cx:0 <=> Vow: _ (ˊ:) Cx (%^RC:) Vow: (%^SV:) (Vow) (Cns:)  %^WG:0 [%>|.#.] ;
 	where Cx in ( b d g p t k c č f z ž l m n ŋ r s š v ) ;
 
 
 "ˊ to zero gradation"
-ˊ:0 <=> Vow: Cns _ Cns Vow (%^SV:) (Cns) (Dummy:*) %^WG:0 ;
+ˊ:0 <=> Vow: Cns _ Cns Vow (%^SV:) (Cns)  %^WG:0 ;
 
 !"Consonant shortening (not weak grade) final part"
 !!! * __@RULENAME@__ pp to p for kappeer ~ kaperist
@@ -254,7 +254,7 @@ Cx:Cy <=> Vow: _ (ˊ:) Cz:  (%^RC:) [ Vow:  ]* (Cns) (Cns) (%^ÁI:|%^ÁE:) (%^SC
 
 
 "xx:x gradation 2"
-%^RV:ˊ <=> Vow _ Geminate: (ˊ:) Geminate (%^RC:) Vow: (%^SV:) (Vow) (Cns:) (Dummy:*) %^WG:0 [%> | .#.] ;
+%^RV:ˊ <=> Vow _ Geminate: (ˊ:) Geminate (%^RC:) Vow: (%^SV:) (Vow) (Cns:) %^WG:0 [%> | .#.] ;
 
 
 !€ kopp^RCâ^WG^LLEN>st
@@ -263,8 +263,8 @@ Cx:Cy <=> Vow: _ (ˊ:) Cz:  (%^RC:) [ Vow:  ]* (Cns) (Cns) (%^ÁI:|%^ÁE:) (%^SC
 
 "xx:y long to something else gradation 1" 
 !! * __@RULENAME@__   hh:V, kk:h, pp:v, čč:J, deleting first part, k:0 in kk4:h etc
-Cx:0 <=> Vow: _ Cy: (%^RC:) Vow: (Vow:) (Cns:) (Dummy:*) %^WG:0 ;
-         Vow (%^RV:) _ Cy: (%^RC:) Vow (Dummy:*) %^WG:0 ;
+Cx:0 <=> Vow: _ Cy: (%^RC:) Vow: (Vow:) (Cns:) %^WG:0 ;
+         Vow (%^RV:) _ Cy: (%^RC:) Vow  %^WG:0 ;
 	where Cx in ( h   k  p  č ) 
 	      Cy in ( h4  k4 p4 č4 )
 		  matched ;
@@ -274,8 +274,8 @@ Cx:0 <=> Vow: _ Cy: (%^RC:) Vow: (Vow:) (Cns:) (Dummy:*) %^WG:0 ;
 
 "xx:y long to something else gradation 2" 
 !! * __@RULENAME@__  hh:V, kk:h, pp:v, čč:J here we change second part, k4:h in kk4:h etc.
-Cx:Cy <=> Vow         Cz: _ (%^RC:) Vow: (Vow:) (Cns:) (Dummy:*) %^WG:0 ;
-          Vow (%^RV:) Cz: _ (%^RC:) Vow: (Dummy:*) %^WG:0 ;
+Cx:Cy <=> Vow         Cz: _ (%^RC:) Vow: (Vow:) (Cns:)  %^WG:0 ;
+          Vow (%^RV:) Cz: _ (%^RC:) Vow:  %^WG:0 ;
 	where Cx in ( h4  p4 č4 ) 
 	      Cy in ( ṿ   v  j̣ ) 
 	      Cz in ( h   p  č ) 
@@ -285,7 +285,7 @@ Cx:Cy <=> Vow         Cz: _ (%^RC:) Vow: (Vow:) (Cns:) (Dummy:*) %^WG:0 ;
 
 "xy:zy gradation"
 !! * __@RULENAME@__  ht:vt, we use h4 
-Cx:v <=> _ (ˊ:) Cz (%^RC:) Vow (%^SV:) (Cns:) (Dummy:*) %^WG: ;
+Cx:v <=> _ (ˊ:) Cz (%^RC:) Vow (%^SV:) (Cns:)  %^WG: ;
        where Cx in ( h4 k4 h4 h4 ) 
              Cz in ( t  s  č  c  ) 
        matched ;
@@ -447,7 +447,7 @@ t:0 <=> _ %>: t t ;
 
 "Consonant lengthening after xx:x weak grade"
 !! * __@RULENAME@__  for locative kassaast, which is lengthened weak grade
-%^RC:Cx <=> Vow: Cx: Cx _ Vow: (%^SV:) %^WG: (Dummy:) %^CLEN: ;
+%^RC:Cx <=> Vow: Cx: Cx _ Vow: (%^SV:) %^WG: %^CLEN: ;
         where Cx in ( p l d m s g ) ;
 
 !€ ka^RVss^RCa^SV^WG^CLEN^SLEN>st
@@ -457,7 +457,7 @@ t:0 <=> _ %>: t t ;
 
 "Consonant lengthening after xx:x and xy:zy weak grade with special consonant on upper side"
 !! * __@RULENAME@__  as previous rule, but for k4, č4, p4
-%^RC:Cx <=> [:Vow|%^RV:] Cy: Cz: _ Vow: (%^SV:) %^WG: (Dummy:) %^CLEN: ;
+%^RC:Cx <=> [:Vow|%^RV:] Cy: Cz: _ Vow: (%^SV:) %^WG: %^CLEN: ;
         where Cy in ( k4 č4 p4 k4 h4 ) 
               Cz in ( k4 č4 p4 s  c ) 
               Cx in ( h  j  v  s  c ) 
@@ -465,14 +465,14 @@ t:0 <=> _ %>: t t ;
 
 "Consonant lengthening after x:y weak grade"
 !! * __@RULENAME@__  , here we lengthen the lower y consonant, spaha -> spavvaast
-%^RC:Cx <=> [:Vow|%^RV:] Cx: _ Vow: (%^SV:) %^WG: (Dummy:) %^CLEN: ;
+%^RC:Cx <=> [:Vow|%^RV:] Cx: _ Vow: (%^SV:) %^WG: %^CLEN: ;
         where Cx in ( p l d m s ) ;
 
 
 
 "Consonant lengthening after x:y weak grade with special consonant on upper side"
 !! * __@RULENAME@__  as previous rule, but for k4, č4, p4
-%^RC:Cx <=> [:Vow|%^RV:] (Cz:) Cy: _ Vow: (%^SV:) %^WG: (Dummy:) %^CLEN: ;
+%^RC:Cx <=> [:Vow|%^RV:] (Cz:) Cy: _ Vow: (%^SV:) %^WG:  %^CLEN: ;
         where Cy in ( k4 č4 p4 ) 
               Cx in ( h  j  v  ) 
               Cz in ( k  č  p  ) 
@@ -488,11 +488,6 @@ t:0 <=> _ %>: t t ;
 
 
 
-
-"Consonant lengthening after h4 initial weak grade"
-!! * __@RULENAME@__  lengthening weak grade of kk4 gives hh
-%^RC:Cx <=> h4: Cx _ Vow: (%^SV:) %^WG: (Dummy:) %^CLEN: ;
-        where Cx in ( v  č  s  t  c  ) ;
 
 !€ su^RVkk4^RCá^SV^WG^CLEN^SLEN>st
 !€ su00hháá000>st
@@ -523,7 +518,7 @@ Cx:0 <=> _  (%^ÁE:) (%^SC:) (%^WG:) %^FCD: ;
  
 "Vowel shortening with consonant shortening" 
 !! * __@RULENAME@__  for koonjâl -> konjâlân
-Vx:0 <=> _ Vx Seg:* ([%^RC:|%^SC:]) %^CSH: (Dummy:*) [%>|.#.] ;
+Vx:0 <=> _ Vx Seg:* ([%^RC:|%^SC:]) %^CSH: (%^RVSH:|%^ILL:) [%>|.#.] ;
         where Vx in ( a e o á ä u y i ) ;
 
 !  ([%^RC:|%^SC:])  was earlier (Dummy:*), but we changed to avoid conflict
@@ -659,7 +654,7 @@ Vx:0 <=> _ Vx: (Cns:) Vz: [%^WG:|%^CSH:] ;
 
 "Suffix vowel lengthening"
 !! * __@RULENAME@__ long á in kissáást
-%^SV:Vx <=> Vx       _ Dummy:* (:Cns)                  %^SLEN: ;
+%^SV:Vx <=> Vx       _  (:Cns)      (%^WG:) (%^CLEN:)            %^SLEN: ;
         where Vx in ( á o e a i ) ; ! pending...
 
 !€ ki^RVss^RCá^WG^CLEN^SV^SLEN>st
@@ -739,9 +734,9 @@ u:o <=> _ (%^UU:|%^SV:) (%^WG:) (%^RLEN:|%^CLEN:) %^SVLOW:  ;
 
 
 
-"Illative suffix change in bisyllabic e stems"
-!! * __@RULENAME@__  changes ^A to a, check this
-%^A:a <=> a (%^RV:) Cns:* e: (Dummy:*) %>: _ ;
+!"Illative suffix change in bisyllabic e stems"
+! * __@RULENAME@__  changes ^A to a, check this
+!%^A:a <=> a (%^RV:) Cns:* e: (Dummy:*) %>: _ ;
 
 
 
