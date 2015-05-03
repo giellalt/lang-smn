@@ -489,7 +489,7 @@ t:0 <=> _ %>: t t ;
 !€ su^RVkk4^RCá^SV^WG^CLEN^SLEN>st
 !€ su00hháá000>st
 
-!€ kopp^RCâ^WG^CLEN%^SVN>in
+!€ kopp^RCâ^WG^CLEN^SVN>in
 !€ ko0ppá00>in
 
 
@@ -532,9 +532,15 @@ Vx:0 <=> _ Vx Seg:* ([%^RC:|%^SC:]) %^CSH: (%^RVSH:|%^ILL:) [%>|.#.] ;
 !€ muusik^SC^CSH^RVSH>ist
 !€ m0usikk00>ist
 
-
 ! kahhaan^SC^CSH^RVSH>ist
 ! ka0ha0n0j00>ist
+
+"Vowel shortening with weak grade" 
+!! * __@RULENAME@__  for mool7â to moˊlâ
+Vx:0 <=> _ Vx Seg:* ([%^RC:|%^SC:]) %^WG: %^RVSH: [%>|.#.] ;
+        where Vx in ( a e o á ä u y i ) ;
+
+
 
 "Vowel shortening (no consonant shortening) in consonant stems"
 !! * __@RULENAME@__ kiirrâs- to kirrâsân
@@ -560,7 +566,7 @@ Vy:ˊ <=> Vx _  Cns: (Cns:) (%^RC:) Vow (%^WG:) (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE
 
 "Root vowel lenghtening in bisyllabic stems"
 !! * __@RULENAME@__  lekkâ : leehá-
-%^RV:Vx <=> Vx _ Cns:* (%^RC:) Vow: (%^SV:) (%^WG:) %^RLEN: ;
+%^RV:Vx <=> Vx _ Cns:* (%^RC:) Vow: (%^SV:) (Cns:) (%^WG:) %^RLEN: ;
 	where Vx in ( a e i o u y ä á ) ;
 
 !€ le^RVkk4^RCâ^WG^RLEN
