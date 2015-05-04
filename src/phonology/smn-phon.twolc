@@ -27,7 +27,7 @@ Alphabet
  R S T U V W X Y Z Æ Ä Ø Ö Å 			   !!= * @CODE@
  Č Đ Ŋ Ŧ Š Ž  							   !!= * @CODE@
  ˊ  %- 							   !!= * @CODE@
- ':0   !!= @CODE@ this to zero
+ ':0   !!= * @CODE@ this to zero
 
 !! !Accented letters, just in case
 
@@ -53,12 +53,12 @@ i4:i                                  !!= * @CODE@  this is the underlying i con
 m7:ṃ n7:ṇ ŋ7:ŋ̣ s7:ṣ r7:ṛ đ7:đ̣ l7:ḷ    !!= * @CODE@  with dots
 j7:j̣ h7:ḥ š7:ṣ̌  v7:ṿ                  !!= * @CODE@  with dots
 !h:ṿ č:j̣  
-!%^A:á 	           		              !!= * @CODE@ loddán but algan, default is á.
+!%^A:á 	           		      loddán but algan, default is á.
 
 
 !! !More abstract archiphonemes
 
-!%^A:0		!!= * @CODE@ = algan lodán
+!%^A:0		 = algan lodán
 %^RC:0		!!= * @CODE@ = root consonant, lengthened by ^CLEN
 %^RD:0		!!= * @CODE@ = root diphtong, shortened by by ^DSH
 %^RV:0	 	!!= * @CODE@ = root vowel, lengthened by ^RLEN
@@ -88,9 +88,9 @@ j7:j̣ h7:ḥ š7:ṣ̌  v7:ṿ                  !!= * @CODE@  with dots
 %^ÁE:0      !!= * @CODE@ = á to e (more) in 3-syll
 %^ÁI:0      !!= * @CODE@ = á to i (more) in 3-syll
 
-!%^ODDC:0   != * @CODE@ = shorten cns in odd-syll stems before C, #  (not in use)
-!%^ODDSHV:0 != * @CODE@ = Cns shortening in C|# and shortvow in Inf etc  (not in use)
-!%^RVD:0    != * @CODE@ = root vowel  diftongisation
+!%^ODDC:0     shorten cns in odd-syll stems before C, #  (not in use)
+!%^ODDSHV:0   Cns shortening in C|# and shortvow in Inf etc  (not in use)
+!%^RVD:0      root vowel  diftongisation
 
 !! !!Morpheme boundaries:
 
@@ -206,7 +206,7 @@ Cx:0 <=> Vow: _ (ˊ:) Cx (%^RC:) Vow: (%^SV:) (Vow) (Cns:) (%^ÁI:|%^ÁE:) %^WG:
 ˊ:0 <=> Vow: Cns: _ Cns (%^RC:) Vow: (%^SFV:) (%^SV:) (Vow) (Cns:) (%^DSH:) %^WG:0 (%^RLEN:) (%^CLEN:) (%^SLEN:) [%>|.#.]  ;
 
 !"Consonant shortening (not weak grade) final part"
-!!! * __@RULENAME@__ pp to p for kappeer ~ kaperist
+! * __@RULENAME@__ pp to p for kappeer ~ kaperist
 !Cy:0 <=> Cx: (ˊ:) _  (%^RC:) [ Vow:  ]* (Cns) (Cns) (%^RC:)  (%^ÁI:|%^ÁE:) (%^SFV:) (%^SC:) (%^RLEN:) (%^DLEN:) %^CSH: (%^RVSH:) [%>|.#.] ;
 !       where Cx in ( s v m n ŋ š h l p d k k  h  p  t g r č  ) 
 !             Cy in ( s v m n ŋ š h l p d k k4 h4 p4 t g r č4 ) 
@@ -425,7 +425,7 @@ Cx:Cy <=> Vow: _ %^RC: :Vow (%^SV:) (%^WG:) (%^RVSH:) %^CLEN: (%^SVLOW:) %>:  ;
 !€ ka00ssaa000>st
 
 !"Lengthening of half-long root consonant 2"
-!!! * __@RULENAME@__   for l-dot to ll  
+! * __@RULENAME@__   for l-dot to ll  
 !%^RC:Cx <=> Vow :Cx _ Vow  %^CLEN: %>: [n|d] ;
 !	where Cx in ( l  r  s  h  m  n  đ  ) ;
 
@@ -634,6 +634,7 @@ e:á <=> y: _  Cns:+ Vow: %^ILL: ;
 !! !Diphthong rules
 
 "Shortening diphthong"
+!! * __@RULENAME@__ RD to ˊ
 %^RD:ˊ <=> _ Cns:+ Vow: %^DSH: ;
 
 !! !Second syllable rules
