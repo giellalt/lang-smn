@@ -1,11 +1,13 @@
 Config:
   hfst:
     Gen: ../../../src/generator-gt-norm.hfst
-    Morph: ../../../src/analyser-dict-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
   xerox:
     Gen: ../../../src/generator-gt-norm.xfst
-    Morph: ../../../src/analyser-dict-gt-norm.xfst
-    App: lookup
+    Morph: ../../../src/analyser-gt-norm.xfst
+  App: lookup
+
+# ok
 
 Tests:
   Noun - šaddo:
@@ -53,7 +55,7 @@ Tests:
     taŋgo+N+Sg+Com:  taŋgoin
     taŋgo+N+Sg+Abe:  taŋgottáá
     taŋgo+N+Ess:  taŋgon
-    taŋgo+N+Par:  taŋgon
+    taŋgo+N+Par:  taŋgod
     taŋgo+N+Pl+Nom:  taŋgoh
     taŋgo+N+Pl+Gen:  taŋgoi
     taŋgo+N+Pl+Acc:  taŋgoid
@@ -71,7 +73,7 @@ Tests:
     pargo+N+Sg+Com:  pargoin
     pargo+N+Sg+Abe:  pargottáá
     pargo+N+Ess:  pargon
-    pargo+N+Par:  pargod
+    pargo+N+Ess:  pargod
     pargo+N+Pl+Nom:  pargoh
     pargo+N+Pl+Gen:  pargoi
     pargo+N+Pl+Acc:  pargoid
@@ -143,7 +145,7 @@ Tests:
     savo+N+Sg+Com:  savoin
     savo+N+Sg+Abe:  savottáá
     savo+N+Ess:  savvoon
-    savo+N+Par:  savvood
+    savo+N+Par: savvood
     savo+N+Pl+Nom:  savoh
     savo+N+Pl+Gen:  savoi
     savo+N+Pl+Acc:  savoid
@@ -161,7 +163,7 @@ Tests:
     vašo+N+Sg+Com:  vašoin
     vašo+N+Sg+Abe:  vašottáá
     vašo+N+Ess:  vaššoon
-    vašo+N+Par:  vaššood
+    vašo+N+Par: vaššood 
     vašo+N+Pl+Nom:  vašoh
     vašo+N+Pl+Gen:  vašoi
     vašo+N+Pl+Acc:  vašoid
@@ -210,7 +212,7 @@ Tests:
   Noun - jasko:
     jasko+N+Sg+Nom:  jasko
     jasko+N+Sg+Gen:  jasko
-    jasko+N+Sg+Gen:  jasko
+    jasko+N+Sg+Acc:  jasko
     jasko+N+Sg+Ill:  jaaskon
     jasko+N+Sg+Loc:  jaskoost
     jasko+N+Sg+Com:  jaskoin
@@ -289,7 +291,7 @@ Tests:
     piano+N+Sg+Com:  pianoin
     piano+N+Sg+Abe:  pianottáá
     piano+N+Ess:  pianon
-    piano+N+Par:  pianon
+    piano+N+Par:  pianod
     piano+N+Pl+Nom:  pianoh
     piano+N+Pl+Gen:  pianoi
     piano+N+Pl+Acc:  pianoid
@@ -325,7 +327,7 @@ Tests:
     pircco+N+Sg+Com:  pirccoin
     pircco+N+Sg+Abe:  pircottáá
     pircco+N+Ess:  pirccon
-    pircco+N+Par:  pirccon
+    pircco+N+Par:  pirccod
     pircco+N+Pl+Nom:  pircoh
     pircco+N+Pl+Gen:  pircoi
     pircco+N+Pl+Acc:  pirccoid
@@ -357,13 +359,13 @@ Tests:
     rijdo+N+Sg+Gen:  rijdo
     rijdo+N+Sg+Acc:  rijdo
     rijdo+N+Sg+Ill:  riijdon
-    rijdo+N+Sg+Loc: [rijdoost, riijdost]
+    rijdo+N+Sg+Loc: [riijdost, rijdoost]
     rijdo+N+Sg+Com:  rijdoin
     rijdo+N+Sg+Abe:  rijdottáá
     rijdo+N+Ess:  rijdon
     rijdo+N+Par:  rijdod
     rijdo+N+Pl+Nom:  rijdoh
-    rijdo+N+Pl+Gen:  rijdoi
+    rijdo+N+Pl+Gen:  [riijdoi, rijdoi]
     rijdo+N+Pl+Acc:  rijdoid
     rijdo+N+Pl+Ill:  rijdoid
     rijdo+N+Pl+Loc:  rijdoin
@@ -375,7 +377,7 @@ Tests:
     pivdo+N+Sg+Gen:  pivdo
     pivdo+N+Sg+Acc:  pivdo
     pivdo+N+Sg+Ill:  piivdon
-    pivdo+N+Sg+Loc: [pivdoost, piivdost]
+    pivdo+N+Sg+Loc: [piivdost, pivdoost]
     pivdo+N+Sg+Com:  pivdoin
     pivdo+N+Sg+Abe:  pivdottáá
     pivdo+N+Ess:  pivdon
@@ -397,6 +399,7 @@ Tests:
     šiljo+N+Sg+Com:  šiljoin
     šiljo+N+Sg+Abe:  šiljottáá
     šiljo+N+Ess:  šiljon
+    šiljo+N+Par:  šiljod
     šiljo+N+Pl+Nom:  šiljoh
     šiljo+N+Pl+Gen:  šiljoi
     šiljo+N+Pl+Acc:  šiljoid
@@ -414,6 +417,7 @@ Tests:
     vihko+N+Sg+Com:  vihkoin
     vihko+N+Sg+Abe:  vihkottáá
     vihko+N+Ess:  vihkon
+    vihko+N+Par:  vihkod
     vihko+N+Pl+Nom:  vihkoh
     vihko+N+Pl+Gen:  vihkoi
     vihko+N+Pl+Acc:  vihkoid
@@ -431,6 +435,7 @@ Tests:
     kirkko+N+Sg+Com:  kirhoin
     kirkko+N+Sg+Abe:  kirhottáá
     kirkko+N+Ess:  kirkkon
+    kirkko+N+Par:  kirkkod
     kirkko+N+Pl+Nom:  kirhoh
     kirkko+N+Pl+Gen:  kirhoi
     kirkko+N+Pl+Acc:  kirhoid
@@ -448,10 +453,11 @@ Tests:
     ilo+N+Sg+Com: [iilooin, iiloin]
     ilo+N+Sg+Abe:  ilottáá
     ilo+N+Ess:  illoon
+    ilo+N+Par:  illood
     ilo+N+Pl+Nom:  iloh
     ilo+N+Pl+Gen:  iloi
     ilo+N+Pl+Acc:  iloid
-    ilo+N+Pl+Ill:  illoid
+    ilo+N+Pl+Ill:  iloid
     ilo+N+Pl+Loc:  iloin
     ilo+N+Pl+Com:  iloiguin
     ilo+N+Pl+Abe:  iloittáá
@@ -465,6 +471,7 @@ Tests:
     hillo+N+Sg+Com:  hilloin
     hillo+N+Sg+Abe:  hilottáá
     hillo+N+Ess:  hillon
+    hillo+N+Par:  hillod
     hillo+N+Pl+Nom:  hiloh
     hillo+N+Pl+Gen:  hiloi
     hillo+N+Pl+Acc:  hilloid
@@ -473,22 +480,23 @@ Tests:
     hillo+N+Pl+Com:  hiloiguin
     hillo+N+Pl+Abe:  hiloittáá
 
-  Noun - millo:
-    millo+N+Sg+Nom:  millo
-    millo+N+Sg+Gen:  milo
-    millo+N+Sg+Acc:  milo
-    millo+N+Sg+Ill:  miilon
-    millo+N+Sg+Loc:  milloost
-    millo+N+Sg+Com:  milloin
-    millo+N+Sg+Abe:  milottáá
-    millo+N+Ess:     millon
-    millo+N+Pl+Nom:  miloh
-    millo+N+Pl+Gen:  miloi
-    millo+N+Pl+Acc:  milloid
-    millo+N+Pl+Ill:  milloid
-    millo+N+Pl+Loc:  miloin
-    millo+N+Pl+Com:  miloiguin
-    millo+N+Pl+Abe:  miloittáá
+  Noun - millo: # o-stems
+    millo+N+Sg+Nom: millo
+    millo+N+Sg+Gen: milo
+    millo+N+Sg+Acc: milo
+    millo+N+Sg+Ill: miilon
+    millo+N+Sg+Loc: milloost
+    millo+N+Sg+Com: milloin
+    millo+N+Pl+Abe: milottáá
+    millo+N+Ess:    millon
+    millo+N+Par:    millod
+    millo+N+Pl+Nom: miloh
+    millo+N+Pl+Gen: miloi
+    millo+N+Pl+Acc: milloid
+    millo+N+Pl+Ill: milloid
+    millo+N+Pl+Loc: milloin
+    millo+N+Pl+Com: miloiguin
+    millo+N+Pl+Abe: miloittáá
 
   Noun - himo:
     himo+N+Sg+Nom:  himo
@@ -496,9 +504,10 @@ Tests:
     himo+N+Sg+Acc:  himo
     himo+N+Sg+Ill:  himon
     himo+N+Sg+Loc:  hiimoost
-    himo+N+Sg+Com: [hiimooin, hiimoin]
+    himo+N+Sg+Com: [hiimooin, himoin]
     himo+N+Sg+Abe:  himottáá
     himo+N+Ess:  himmoon
+    himo+N+Par:  himmood
     himo+N+Pl+Nom:  himoh
     himo+N+Pl+Gen:  himoi
     himo+N+Pl+Acc:  himoid
@@ -516,6 +525,7 @@ Tests:
     pino+N+Sg+Com:  pinoin
     pino+N+Sg+Abe:  pinottáá
     pino+N+Ess:  pinnoon
+    pino+N+Par:  pinnood
     pino+N+Pl+Nom:  pinoh
     pino+N+Pl+Gen:  pinoi
     pino+N+Pl+Acc:  pinoid
@@ -550,6 +560,7 @@ Tests:
     tinno+N+Sg+Com:  tinnoin
     tinno+N+Sg+Abe:  tinottáá
     tinno+N+Ess:  tinnoon
+    tinno+N+Par:  tinnood
     tinno+N+Pl+Nom:  tinoh
     tinno+N+Pl+Gen:  tinoi
     tinno+N+Pl+Acc:  tinoid
@@ -566,7 +577,8 @@ Tests:
     kirno+N+Sg+Loc:  kirnoost
     kirno+N+Sg+Com:  kirnoin
     kirno+N+Sg+Abe:  kirnottáá
-    kirno+N+Ess:  kirnon
+    kirno+N+Ess:     kirnon
+    kirno+N+Par:     kirnod
     kirno+N+Pl+Nom:  kirnoh
     kirno+N+Pl+Gen:  kirnoi
     kirno+N+Pl+Acc:  kirnoid
@@ -584,6 +596,7 @@ Tests:
     lippo+N+Sg+Com:  lippoin
     lippo+N+Sg+Abe:  lipottáá
     lippo+N+Ess:  lippon
+    lippo+N+Par:  lippod
     lippo+N+Pl+Nom:  lipoh
     lippo+N+Pl+Gen:  lipoi
     lippo+N+Pl+Acc:  lippoid
@@ -601,6 +614,7 @@ Tests:
     rippo+N+Sg+Com:  rippoin
     rippo+N+Sg+Abe:  ripottáá
     rippo+N+Ess:  rippon
+    rippo+N+Par:  rippod
     rippo+N+Pl+Nom:  ripoh
     rippo+N+Pl+Gen:  ripoi
     rippo+N+Pl+Acc:  rippoid
@@ -618,6 +632,7 @@ Tests:
     nitro+N+Sg+Com:  nitroin
     nitro+N+Sg+Abe:  nitrottáá
     nitro+N+Ess:  nitron
+    nitro+N+Par:  nitrod
     nitro+N+Pl+Nom:  nitroh
     nitro+N+Pl+Gen:  nitroi
     nitro+N+Pl+Acc:  nitroid
@@ -635,6 +650,7 @@ Tests:
     pisso+N+Sg+Com:  pissoin
     pisso+N+Sg+Abe:  pisottáá
     pisso+N+Ess:  pisson
+    pisso+N+Par:  pissod
     pisso+N+Pl+Nom:  pisoh
     pisso+N+Pl+Gen:  pisoi
     pisso+N+Pl+Acc: [pisoid, pissoid]
@@ -652,6 +668,7 @@ Tests:
     ito+N+Sg+Com:  iiđooin
     ito+N+Sg+Abe:  iđottáá
     ito+N+Ess:  ittoon
+    ito+N+Par:  ittood
     ito+N+Pl+Nom:  iđoh
     ito+N+Pl+Gen:  iđoi
     ito+N+Pl+Acc:  iđoid
@@ -669,6 +686,7 @@ Tests:
     kisto+N+Sg+Com:  kistoin
     kisto+N+Sg+Abe:  kistottáá
     kisto+N+Ess:  kiston
+    kisto+N+Par:  kistod
     kisto+N+Pl+Nom:  kistoh
     kisto+N+Pl+Gen:  kistoi
     kisto+N+Pl+Acc:  kistoid
@@ -686,6 +704,7 @@ Tests:
     listo+N+Sg+Com:  listoin
     listo+N+Sg+Abe:  listottáá
     listo+N+Ess:  liston
+    listo+N+Par:  listod
     listo+N+Pl+Nom:  listoh
     listo+N+Pl+Gen:  listoi
     listo+N+Pl+Acc:  listoid
@@ -703,6 +722,7 @@ Tests:
     litto+N+Sg+Com:  littoin
     litto+N+Sg+Abe:  litottáá
     litto+N+Ess:  litton
+    litto+N+Par:  littod
     litto+N+Pl+Nom:  litoh
     litto+N+Pl+Gen:  litoi
     litto+N+Pl+Acc:  littoid
@@ -720,6 +740,7 @@ Tests:
     mitto+N+Sg+Com:  mittoin
     mitto+N+Sg+Abe:  mitottáá
     mitto+N+Ess:  mitton
+    mitto+N+Par:  mittod
     mitto+N+Pl+Nom:  mitoh
     mitto+N+Pl+Gen:  mitoi
     mitto+N+Pl+Acc:  mittoid
@@ -737,6 +758,7 @@ Tests:
     nijtto+N+Sg+Com:  nijttoin
     nijtto+N+Sg+Abe:  nijtottáá
     nijtto+N+Ess:  nijtton
+    nijtto+N+Ess:  nijttod
     nijtto+N+Pl+Nom:  nijtoh
     nijtto+N+Pl+Gen: [niijtoi, nijtoi]
     nijtto+N+Pl+Acc:  niijtoid
@@ -754,7 +776,8 @@ Tests:
     sijvo+N+Sg+Com:  sijvoin
     sijvo+N+Sg+Abe:  sijvottáá
     sijvo+N+Ess:  sijvon
-    sijvo+N+Pl+Nom: [sijvoh, siijvoh]
+    sijvo+N+Par:  sijvod
+    sijvo+N+Pl+Nom: [siijvoh, sijvoh]
     sijvo+N+Pl+Gen: [siijvoi, sijvoi]
     sijvo+N+Pl+Acc:  siijvoid
     sijvo+N+Pl+Ill:  sijvoid
@@ -781,20 +804,21 @@ Tests:
 
   Noun - huilo:
     huilo+N+Sg+Nom:  huilo
-    huilo+N+Sg+Gen:  hUilo
-    huilo+N+Sg+Acc:  hUilo
+    huilo+N+Sg+Gen:  huilo
+    huilo+N+Sg+Acc:  huilo
     huilo+N+Sg+Ill:  huuilon
     huilo+N+Sg+Loc:  huiloost
     huilo+N+Sg+Com:  huiloin
-    huilo+N+Sg+Abe:  hUilottáá
+    huilo+N+Sg+Abe:  huilottáá
     huilo+N+Ess:  huilon
-    huilo+N+Pl+Nom:  hUiloh
-    huilo+N+Pl+Gen:  hUiloi
-    huilo+N+Pl+Acc:  huuiloid
+    huilo+N+Par:  huilod
+    huilo+N+Pl+Nom:  huiloh
+    huilo+N+Pl+Gen:  huiloi
+    huilo+N+Pl+Acc:  huiloid
     huilo+N+Pl+Ill:  huiloid
-    huilo+N+Pl+Loc:  hUiloin
-    huilo+N+Pl+Com:  hUiloiguin
-    huilo+N+Pl+Abe:  hUiloittáá
+    huilo+N+Pl+Loc:  huiloin
+    huilo+N+Pl+Com:  huiloiguin
+    huilo+N+Pl+Abe:  huiloittáá
 
   Noun - tobdo:
     tobdo+N+Sg+Nom:  tobdo
@@ -805,6 +829,7 @@ Tests:
     tobdo+N+Sg+Com:  tobdoin
     tobdo+N+Sg+Abe:  tobdottáá
     tobdo+N+Ess:  tobdon
+    tobdo+N+Par:  tobdod
     tobdo+N+Pl+Nom:  tobdoh
     tobdo+N+Pl+Gen:  tobdoi
     tobdo+N+Pl+Acc:  tobdoid
@@ -822,6 +847,7 @@ Tests:
     oljo+N+Sg+Com:  oljoin
     oljo+N+Sg+Abe:  oljottáá
     oljo+N+Ess:  oljon
+    oljo+N+Par:  oljod
     oljo+N+Pl+Nom:  oljoh
     oljo+N+Pl+Gen:  oljoi
     oljo+N+Pl+Acc:  oljoid
@@ -839,6 +865,7 @@ Tests:
     okko+N+Sg+Com:  ohhoin
     okko+N+Sg+Abe:  ohottáá
     okko+N+Ess:  okkon
+    okko+N+Par:  okkod
     okko+N+Pl+Nom:  ohoh
     okko+N+Pl+Gen:  ohoi
     okko+N+Pl+Acc:  ohoid
@@ -856,9 +883,10 @@ Tests:
     osko+N+Sg+Com:  oskoin
     osko+N+Sg+Abe:  oskottáá
     osko+N+Ess:  oskon
+    osko+N+Par:  oskod
     osko+N+Pl+Nom:  oskoh
     osko+N+Pl+Gen:  oskoi
-    osko+N+Pl+Acc:  oskoidoskoid
+    osko+N+Pl+Acc:  oskoid
     osko+N+Pl+Ill:  oskoid
     osko+N+Pl+Loc:  oskoin
     osko+N+Pl+Com:  oskoiguin
@@ -873,6 +901,7 @@ Tests:
     koško+N+Sg+Com:  koškoin
     koško+N+Sg+Abe:  koškottáá
     koško+N+Ess:  koškon
+    koško+N+Par:  koškod
     koško+N+Pl+Nom:  koškoh
     koško+N+Pl+Gen:  koškoi
     koško+N+Pl+Acc:  koškoid
@@ -890,10 +919,11 @@ Tests:
     kolo+N+Sg+Com:  koloin
     kolo+N+Sg+Abe:  kolottáá
     kolo+N+Ess:  kolloon
+    kolo+N+Par:  kollood
     kolo+N+Pl+Nom:  koloh
     kolo+N+Pl+Gen:  koloi
     kolo+N+Pl+Acc:  koloid
-    kolo+N+Pl+Ill:  kolloid
+    kolo+N+Pl+Ill:  koloid
     kolo+N+Pl+Loc:  koloin
     kolo+N+Pl+Com:  koloiguin
     kolo+N+Pl+Abe:  koloittáá
@@ -907,6 +937,7 @@ Tests:
     ronno+N+Sg+Com:  ronnoin
     ronno+N+Sg+Abe:  ronottáá
     ronno+N+Ess:  ronnon
+    ronno+N+Par:  ronnod
     ronno+N+Pl+Nom:  ronoh
     ronno+N+Pl+Gen:  ronoi
     ronno+N+Pl+Acc:  ronnoid
@@ -924,6 +955,7 @@ Tests:
     joto+N+Sg+Com:  jođoin
     joto+N+Sg+Abe:  jođottáá
     joto+N+Ess:  jottoon
+    joto+N+Par:  jottood
     joto+N+Pl+Nom:  jođoh
     joto+N+Pl+Gen:  jođoi
     joto+N+Pl+Acc:  jođoid
@@ -941,6 +973,7 @@ Tests:
     roto+N+Sg+Com:  rođoin
     roto+N+Sg+Abe:  rođottáá
     roto+N+Ess:  rottoon
+    roto+N+Par:  rottood
     roto+N+Pl+Nom:  rođoh
     roto+N+Pl+Gen:  rođoi
     roto+N+Pl+Acc:  rođoid
@@ -958,6 +991,7 @@ Tests:
     potto+N+Sg+Com:  pottoin
     potto+N+Sg+Abe:  potottáá
     potto+N+Ess:  potton
+    potto+N+Par:  pottod
     potto+N+Pl+Nom:  potoh
     potto+N+Pl+Gen:  potoi
     potto+N+Pl+Acc:  pottoid
@@ -975,6 +1009,7 @@ Tests:
     torvo+N+Sg+Com:  torvoin
     torvo+N+Sg+Abe:  torvottáá
     torvo+N+Ess:  torvon
+    torvo+N+Par:  torvod
     torvo+N+Pl+Nom:  torvoh
     torvo+N+Pl+Gen:  torvoi
     torvo+N+Pl+Acc:  torvoid
@@ -992,6 +1027,7 @@ Tests:
     kođo+N+Sg+Com:  kođoin
     kođo+N+Sg+Abe:  kođottáá
     kođo+N+Ess:  kođđoon
+    kođo+N+Par:  kođđood
     kođo+N+Pl+Nom:  kođoh
     kođo+N+Pl+Gen:  kođoi
     kođo+N+Pl+Acc:  kođoid
@@ -1009,6 +1045,7 @@ Tests:
     uddo+N+Sg+Com:  uddoin
     uddo+N+Sg+Abe:  udottáá
     uddo+N+Ess:  uddon
+    uddo+N+Par:  uddod
     uddo+N+Pl+Nom:  udoh
     uddo+N+Pl+Gen:  udoi
     uddo+N+Pl+Acc:  uddoid
@@ -1026,6 +1063,7 @@ Tests:
     muddo+N+Sg+Com:  muddoin
     muddo+N+Sg+Abe:  mudottáá
     muddo+N+Ess:  muddon
+    muddo+N+Par:  muddod
     muddo+N+Pl+Nom:  mudoh
     muddo+N+Pl+Gen:  mudoi
     muddo+N+Pl+Acc:  muddoid
@@ -1043,6 +1081,7 @@ Tests:
     puddo+N+Sg+Com:  puddoin
     puddo+N+Sg+Abe:  pudottáá
     puddo+N+Ess:  puddon
+    puddo+N+Par:  puddod
     puddo+N+Pl+Nom:  pudoh
     puddo+N+Pl+Gen:  pudoi
     puddo+N+Pl+Acc:  puddoid
@@ -1060,6 +1099,7 @@ Tests:
     suddo+N+Sg+Com:  suddoin
     suddo+N+Sg+Abe:  sudottáá
     suddo+N+Ess:  suddon
+    suddo+N+Par:  suddod
     suddo+N+Pl+Nom:  sudoh
     suddo+N+Pl+Gen:  sudoi
     suddo+N+Pl+Acc:  suddoid
@@ -1077,6 +1117,7 @@ Tests:
     purdo+N+Sg+Com:  purdoin
     purdo+N+Sg+Abe:  purdottáá
     purdo+N+Ess:  purdon
+    purdo+N+Par:  purdod
     purdo+N+Pl+Nom:  purdoh
     purdo+N+Pl+Gen:  purdoi
     purdo+N+Pl+Acc:  purdoid
@@ -1094,6 +1135,7 @@ Tests:
     ruŋgo+N+Sg+Com:  ruŋgoin
     ruŋgo+N+Sg+Abe:  ruŋgottáá
     ruŋgo+N+Ess:  ruŋgon
+    ruŋgo+N+Par:  ruŋgod
     ruŋgo+N+Pl+Nom:  ruŋgoh
     ruŋgo+N+Pl+Gen:  ruŋgoi
     ruŋgo+N+Pl+Acc:  ruŋgoid
@@ -1111,9 +1153,10 @@ Tests:
     urkko+N+Sg+Com:  urkkoin
     urkko+N+Sg+Abe:  urkottáá
     urkko+N+Ess:  urkkon
+    urkko+N+Par:  urkkod
     urkko+N+Pl+Nom:  urkoh
     urkko+N+Pl+Gen:  urkoi
-    urkko+N+Pl+Acc:  urkoid
+    urkko+N+Pl+Acc:  urkkoid
     urkko+N+Pl+Ill:  urkkoid
     urkko+N+Pl+Loc:  urkoin
     urkko+N+Pl+Com:  urkoiguin
@@ -1128,6 +1171,7 @@ Tests:
     lukko+N+Sg+Com:  luhhoin
     lukko+N+Sg+Abe:  luhottáá
     lukko+N+Ess:  lukkon
+    lukko+N+Par:  lukkod
     lukko+N+Pl+Nom:  luhoh
     lukko+N+Pl+Gen:  luhoi
     lukko+N+Pl+Acc:  luhoid
@@ -1145,6 +1189,7 @@ Tests:
     puško+N+Sg+Com:  puškoin
     puško+N+Sg+Abe:  puškottáá
     puško+N+Ess:  puškon
+    puško+N+Par:  puškod
     puško+N+Pl+Nom:  puškoh
     puško+N+Pl+Gen:  puškoi
     puško+N+Pl+Acc:  puškoid
@@ -1162,9 +1207,10 @@ Tests:
     ullo+N+Sg+Com:  ulloin
     ullo+N+Sg+Abe:  ulottáá
     ullo+N+Ess:  ullon
+    ullo+N+Par:  ullod
     ullo+N+Pl+Nom:  uloh
     ullo+N+Pl+Gen:  uloi
-    ullo+N+Pl+Acc:  uloid
+    ullo+N+Pl+Acc:  ulloid
     ullo+N+Pl+Ill:  ulloid
     ullo+N+Pl+Loc:  uloin
     ullo+N+Pl+Com:  uloiguin
@@ -1176,13 +1222,14 @@ Tests:
     kulo+N+Sg+Acc:  kulo
     kulo+N+Sg+Ill:  kulon
     kulo+N+Sg+Loc:  kuuloost
-    kulo+N+Sg+Com:  kuulooin
+    kulo+N+Sg+Com:  kuloin
     kulo+N+Sg+Abe:  kulottáá
     kulo+N+Ess:  kulloon
+    kulo+N+Par:  kullood
     kulo+N+Pl+Nom:  kuloh
     kulo+N+Pl+Gen:  kuloi
     kulo+N+Pl+Acc:  kuloid
-    kulo+N+Pl+Ill:  kulloid
+    kulo+N+Pl+Ill:  kuloid
     kulo+N+Pl+Loc:  kuloin
     kulo+N+Pl+Com:  kuloiguin
     kulo+N+Pl+Abe:  kuloittáá
@@ -1193,7 +1240,7 @@ Tests:
     humo+N+Sg+Acc:  humo
     humo+N+Sg+Ill:  huumon
     humo+N+Sg+Loc:  huumoost
-    humo+N+Sg+Com:  huumooin
+    humo+N+Sg+Com:  humoin
     humo+N+Sg+Abe:  humottáá
     humo+N+Ess:  hummoon
     humo+N+Pl+Nom:  humoh
@@ -1213,6 +1260,7 @@ Tests:
     sutto+N+Sg+Com:  suttoin
     sutto+N+Sg+Abe:  sutottáá
     sutto+N+Ess:  sutton
+    sutto+N+Par:  suttod
     sutto+N+Pl+Nom:  sutoh
     sutto+N+Pl+Gen:  sutoi
     sutto+N+Pl+Acc: [sutoid, suttoid]
