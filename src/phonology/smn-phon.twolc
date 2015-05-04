@@ -47,53 +47,51 @@ Alphabet
 
 !! !Different archiphonemes
 
-p4:p                                  !!= * @CODE@ pääpp4ir these are consonants that do not change in cg
-k4:k č4:č r4:r l4:l h4:h t4:t         !!= * @CODE@  these are consonants that do not change in cg
+
+p4:p  t4:t k4:k č4:č r4:r l4:l h4:h   !!= * @CODE@  these are consonants that change in cg
 i4:i                                  !!= * @CODE@  this is the underlying i consonant
 m7:ṃ n7:ṇ ŋ7:ŋ̣ s7:ṣ r7:ṛ đ7:đ̣ l7:ḷ    !!= * @CODE@  with dots
 j7:j̣ h7:ḥ š7:ṣ̌  v7:ṿ                  !!= * @CODE@  with dots
 !h:ṿ č:j̣  
-%^A:á 	           		              !!= * @CODE@ loddán but algan, default is á.
+!%^A:á 	           		              !!= * @CODE@ loddán but algan, default is á.
 
 
 !! !More abstract archiphonemes
 
-%^A:0		!!= * @CODE@ = algan lodán
-%^RC:0		!!= * @CODE@ = root consonant
-%^RD:0		!!= * @CODE@ = root diphtong
-%^RV:0	 	!!= * @CODE@ = root vowel
-%^SC:0      !!= * @CODE@ = stem consonant, perhaps suffix consonant
-%^SV:0 		!!= * @CODE@ = stem vowel
+!%^A:0		!!= * @CODE@ = algan lodán
+%^RC:0		!!= * @CODE@ = root consonant, lengthened by ^CLEN
+%^RD:0		!!= * @CODE@ = root diphtong, shortened by by ^DSH
+%^RV:0	 	!!= * @CODE@ = root vowel, lengthened by ^RLEN
+%^SC:0      !!= * @CODE@ = stem consonant, lengthened by ??  (suffix cns?)
+%^SV:0 		!!= * @CODE@ = stem vowel, lengthened by ^SLEN
 
 !! !Triggers
 
 %^CLEN:0	!!= * @CODE@ = cons lengthening
 %^CSH:0     !!= * @CODE@ = cons shortening
-%^DLEN:0    !!= * @CODE@ = Diphtong lengthening
+%^DLEN:0    !!= * @CODE@ = Diphtong lengthening (remove?)
 %^DSH:0     !!= * @CODE@ = Diphtong shortening
-%^EE:0      !!= * @CODE@ = Final vowel deletion in ee stems
-%^FCD:0     !!= * @CODE@ = Final consonant deletion
-%^IA:0      !!= * @CODE@ = i to á (more)
-%^ILL:0 	!!= * @CODE@ = e to a/á in ill etc
-%^LLEN:0    !!= * @CODE@ = low vow lengthening
-%^MONO:0    !!= * @CODE@  monophtongization of diphthongs
-%^ODDC:0	!!= * @CODE@ = shorten cns in odd-syll stems before C, #
-%^ODDSHV:0	!!= * @CODE@ = Cns shortening in C|# and shortvow in Inf etc
-%^RVD:0		!!= * @CODE@ = root vowel  diftongisation
+%^EE:0      !!= * @CODE@ = Final vowel deletion in ee stems (not in use)
+%^FCD:0     !!= * @CODE@ = Final consonant deletion 
+%^IA:0      !!= * @CODE@ = i to á (more) (not in use)
+%^ILL:0     !!= * @CODE@ = e to a/á in ill etc (change name to EA?)
+%^LLEN:0    !!= * @CODE@ = low vow lengthening (not in use)
+%^MONO:0    !!= * @CODE@ = monophtongization of diphthongs  (not in use)
 %^RLEN:0    !!= * @CODE@ = root lengthening
-%^RVL:0     !!= * @CODE@ = root vow length
-%^RVSH:0	!!= * @CODE@ = root vow shortening
+%^RVSH:0    !!= * @CODE@ = root vow shortening
 %^SLEN:0    !!= * @CODE@ = stem vowel lengthening
-%^SFV:0   	!!= * @CODE@ = Deleting fleeting vowel before suffix
-%^SVF:0	    !!= * @CODE@ = stem vowel lowering â>á and u>o
-%^SVLOW:0	!!= * @CODE@ = stem vowel lowering â>á and u>o
-%^
+%^SFV:0     !!= * @CODE@ = Deleting fleeting vowel before suffix
+%^SVLOW:0   !!= * @CODE@ = stem vowel lowering â>á and u>o
 %^UU:0      !!= * @CODE@ = Final vowel deletion in uu stems
-%^VLOW:0   	!!= * @CODE@ = Vowel lowering in 3rd sg of contract verbs tuhhid:tohhe
-%^WG:0 		!!= * @CODE@ = weak grade trigger
-%^ÁE:0      !!= * @CODE@ = á to e (more)
-%^ÁI:0      !!= * @CODE@ = á to i (more)
-%^WCLEN:0     !!= * @CODE@ = weak grade and consonant lengthening
+%^VLOW:0    !!= * @CODE@ = Vowel lowering in 3rd sg of contract verbs tuhhid:tohhe
+%^WG:0      !!= * @CODE@ = weak grade trigger
+%^ÁE:0      !!= * @CODE@ = á to e (more) in 3-syll
+%^ÁI:0      !!= * @CODE@ = á to i (more) in 3-syll
+
+!%^ODDC:0   != * @CODE@ = shorten cns in odd-syll stems before C, #  (not in use)
+!%^ODDSHV:0 != * @CODE@ = Cns shortening in C|# and shortvow in Inf etc  (not in use)
+!%^RVD:0    != * @CODE@ = root vowel  diftongisation
+
 !! !!Morpheme boundaries:
 
 !! Here we define the suffix border >
@@ -117,7 +115,7 @@ Sets
        é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý 	   !!= @CODE@ 
        A Á Â Ä E I O U Y Æ Ø Ö Å			   !!= @CODE@ 
        É Ó Ú Í À È Ò Ú Ì Ë Ü Ï Ê Ô Û Î Ã Ý 	   !!= @CODE@ 
-       ¥ %^RV %^RD %^SV ;					   !!= @CODE@ 
+       %^RV %^RD %^SV ;						   !!= @CODE@ 
  Cns = b c č d đ f g h j k l m n ŋ 			   !!= * @CODE@ 
        p q r s š t ŧ v w x z ž				   !!= @CODE@ 
        B C Č D Đ F G H J K L M N Ŋ			   !!= @CODE@ 
@@ -205,7 +203,7 @@ Cx:0 <=> Vow: _ (ˊ:) Cx (%^RC:) Vow: (%^SV:) (Vow) (Cns:) (%^ÁI:|%^ÁE:) %^WG:
 !€ cuo00z0â00
 
 "ˊ to zero gradation"
-ˊ:0 <=> Vow: Cns: _ Cns (%^RC:) Vow: (%^SFV:) (%^SV:) (Vow) (Cns:) %^WG:0 (%^RLEN:)(%^CLEN:)(%^SLEN:)[%>|.#.]  ;
+ˊ:0 <=> Vow: Cns: _ Cns (%^RC:) Vow: (%^SFV:) (%^SV:) (Vow) (Cns:) %^WG:0 (%^RLEN:) (%^CLEN:) (%^SLEN:) [%>|.#.]  ;
 
 !"Consonant shortening (not weak grade) final part"
 !!! * __@RULENAME@__ pp to p for kappeer ~ kaperist
@@ -214,7 +212,8 @@ Cx:0 <=> Vow: _ (ˊ:) Cx (%^RC:) Vow: (%^SV:) (Vow) (Cns:) (%^ÁI:|%^ÁE:) %^WG:
 !             Cy in ( s v m n ŋ š h l p d k k4 h4 p4 t g r č4 ) 
 !       matched ;
 
-
+!€ nie^RDi4ˊdâ^WG
+!€ nie0i0dâ0
 
 "Consonant shortening (not weak grade) pp:p etc"
 !! * __@RULENAME@__ pp to p for kappeer ~ kaperist
