@@ -430,16 +430,16 @@ n:0 <=> n _ j Vow (Cns:) %^CSH: [%>|.#.] ;
 
 "Lengthening of half-long root consonant 1"
 !! * __@RULENAME@__  for l-dot to ll, changing l7 to first l in ll
-Cx:Cy <=> Vow: _ %^RC: :Vow (%^SV:) (%^RVSH:) %^CLEN: (%^SVLOW:) %>:  ;
-	where Cx in ( l7 r7 s7 h7 m7 n7 đ7 )
-		  Cy in ( l  r  s  h  m  n  đ  ) 
+Cx:Cy <=> Vow: _ %^RC: :Vow (%^SV:) (%^WG:) (%^RVSH:) %^CLEN: (%^SVLOW:) %>:  ;
+	where Cx in ( l7 r7 s7 h7 m7 n7 đ7 v7 )
+		  Cy in ( l  r  s  h  m  n  đ  v ) 
 		  matched ;
 
 "Lengthening of half-long root consonant 2"
 !! * __@RULENAME@__   for l-dot to ll, changing ^RC to second l in ll
 %^RC:Cy <=> Vow: Cx: _ :Vow  (%^SV:) (%^WG:) (%^RVSH:) %^CLEN: (%^SVLOW:) [%>|.#.] ;
-	where Cx in ( l7 r7 s7 h7 m7 n7 đ7 )
-		  Cy in ( l  r  s  h  m  n  đ  ) 
+	where Cx in ( l7 r7 s7 h7 m7 n7 đ7 v7 )
+		  Cy in ( l  r  s  h  m  n  đ  v ) 
 		  matched ;
 
 !€ kol7^RCe^CLEN
@@ -483,7 +483,7 @@ t:0 <=> _ %>: t t ;
 "Consonant lengthening after xx:x weak grade"
 !! * __@RULENAME@__  for locative kassaast, which is lengthened weak grade
 %^RC:Cx <=> Vow: Cx: Cx _ Vow: (%^SV:) %^WG: %^CLEN: ;
-        where Cx in ( p l d m s g r ) ;
+        where Cx in ( p l d m s g r v ) ;
 
 !€ ka^RVss^RCa^SV^WG^CLEN^SLEN>st
 !€ ka00ssaa000>st
@@ -501,7 +501,7 @@ t:0 <=> _ %>: t t ;
 "Consonant lengthening after x:y weak grade"
 !! * __@RULENAME@__  , here we lengthen the lower y consonant, spaha -> spavvaast
 %^RC:Cx <=> [:Vow|%^RV:] Cx: _ Vow: (%^SV:) %^WG: %^CLEN: ;
-        where Cx in ( p l d m s r ) ;
+        where Cx in ( p l d m s r v ) ;
 
 
 
