@@ -1,0 +1,57 @@
+
+Here are some tips for efficient testing:
+
+!!!Using ./configure
+
+In order to test only the analysers you want, you may get rid of the other ones,
+by deleting all generated files, with the command:
+
+{{{
+make clean
+}}}
+
+Then configure the system as you want it. The following command
+gives you only the analysers and generators for the dictionary 
+orthography, and not the ordinary analysers:
+
+{{{
+./configure --disable-analysers --disable-generators --enable-dicts
+}}}
+
+Then compile by writing
+
+{{{
+make
+}}}
+
+Now, the command {{make check}} will give only the dictionary yaml files.
+
+
+!!!Comparing the yaml reports
+
+You may want to know exactly which yaml files are 
+affected by your last file changes, and which are not. It may e.g. be
+important to check whether something (and if so: what)
+has become worse. The following procedure will tell you just that:
+
+# Write ''make check'' in a __new__ terminal window.
+# copy the whole output (''cmd A cmd C'') in a SubEthaEdit document
+# In SubEthaEdit, select all text, press ''ctrl alt cmd P'' and type
+  {{grep YAML}}
+# The result is the result of all tests (see example below).
+  This file may now be saved, as ''test1'', or something
+# After some work, repeat the procedure, save as ''test2''
+# compare the to by the command {{diff test1 test2}}
+
+This is what the file looks like:
+
+{{{
+YAML test 1: generator-dict-gt-norm.xfst + dict-gt-yamls/N-aarran_dict-gt-norm.gen.yaml - 16/0/16 PASS
+YAML test 2: generator-dict-gt-norm.xfst + dict-gt-yamls/N-caallim_dict-gt-norm.gen.yaml - 15/1/16 FAIL
+YAML test 3: generator-dict-gt-norm.xfst + dict-gt-yamls/N-caskes_dict-gt-norm.gen.yaml - 13/3/16 FAIL
+...
+}}}
+
+Advice: Intermediate files like test1, test2 may just be deleted. If you
+want to save them for reference, give them a date, and save them in the
+{{misc}} folder. There they will be invisible to the {{svn status}} command.
