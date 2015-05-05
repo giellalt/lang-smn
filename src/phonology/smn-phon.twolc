@@ -126,7 +126,7 @@ Sets
        m7 n7 ŋ7 v7 s7 r7 đ7	l7 j7 h7 š7		   !!= @CODE@ 
        ṃ  ṇ  ŋ̣  ṿ  ṣ  ṛ  đ̣  ḷ  j̣  ḥ  ṣ̌         !!= * @CODE@
        %^RC %^RD %^SC  ˊ ;
- Geminate = b d g p t k c č f z ž l m n ŋ r s š v ;
+ Geminate = b d g p t k k4 c č f z ž l m n ŋ r s š v ;
  Seg = Vow Cns ;							   !!= * @CODE@ 
  WeG = %^WG1 %^WGSH %^CPL %^WG ;		  !!= * @CODE@
  StemCns = b b3 d d3 g g2 g3 h h2 h3 		   !!= * @CODE@ 
@@ -142,6 +142,37 @@ Dummy = %^CLEN %^CSH %^EE %^FCD %^IA %^ILL %^LLEN %^MONO %^ODDC %^ODDSHV    !!= 
 
 
            
+!! !!!Definition section
+
+!! Trying to introduce a WG right context, so far resulting in drop in performance.
+
+Definitions
+
+WeakGrade = (%^RC:) :Vow (%^SFV:) (%^SV:) (Vow) (Cns:) (%^ÁI:|%^ÁE:) (%^DSH:) %^WG:0 (%^RLEN:|%^RVSH:) (%^CLEN:) (%^SLEN:) (%^SVLOW:) [%>|.#.] ;
+    
+! The original list of right contexts, in the same order as below, 
+! just count the instances of WeakGrade to see what it replaced. 
+! (this list will be deleted when dust settles):
+! 
+! (%^RC:) Vow  (%^SV:) (Cns:) %^WG:0 (%^RLEN:|%^RVSH:) (%^SLEN:) (%^SVLOW:) [%>|.#.] ;
+! (%^RC:) :Vow (%^SV:) (Cns) %^WG:0 ;
+! (%^RC:) :Vow (%^SV:) (Cns) %^WG: ;
+! (%^RC:) Vow: (%^SV:) (Vow) (Cns:) (%^ÁI:|%^ÁE:) %^WG:0 (%^RLEN:)(%^CLEN:)(%^SLEN:)(%^SVLOW:) [%>|.#.] ;
+! (%^RC:) Vow: (%^SV:) (Vow) (Cns:) (%^ÁI:|%^ÁE:) %^WG:0 (%^RLEN:)(%^CLEN:)(%^SLEN:)(%^SVLOW:) [%>|.#.] ;
+! (%^RC:) Vow: (%^SFV:) (%^SV:) (Vow) (Cns:) (%^DSH:) %^WG:0 (%^RLEN:) (%^CLEN:) (%^SLEN:) [%>|.#.]  ;
+! (%^RC:) Vow: (%^SV:) (Vow) (Cns:) %^WG:0 (%^RVSH:0)  %>: [ t | i | .#. ] ;
+! (%^RC:) Vow: (Vow:) (Cns:) %^WG:0 ; 
+! (%^RC:) Vow  %^WG:0 ;
+! (%^RC:) Vow: (Vow:) (Cns:)  %^WG:0 ;
+! (%^RC:) Vow:  %^WG:0 ;
+! (%^RC:) Vow (%^SV:) (Cns:) %^WG: ;
+! (%^RC:) Vow (%^SV:) (Cns) %^WG: ;
+! (%^SV:) (Cns) %^WG: ;
+! (%^SV:) (Cns) %^WG: ;
+! (%^RC:) Vow (%^SV:)  (Cns) %^WG: ;
+! (%^RC:) Vow (%^SV:) (Cns) %^WG: ;
+            
+           
 !! !!!Rule section
 
 Rules
@@ -152,7 +183,7 @@ Rules
 
 "X:x halflong to short gradation"
 !! * __@RULENAME@__  mool7â to moolâ
-Cx:Cy <=> Vow: _ (%^RC:) Vow (%^SV:) (Cns) %^WG:0 ;
+Cx:Cy <=> Vow: _ WeakGrade ;
 	where Cx in (m7 n7 ŋ7 r7 s7 š7 j7 v7 đ7 l7 )
           Cy in (m  n  ŋ  r  s  š  j  v  đ  l  )
 		  matched;
@@ -163,8 +194,8 @@ Cx:Cy <=> Vow: _ (%^RC:) Vow (%^SV:) (Cns) %^WG:0 ;
 
 "x:y gradation" 
 !! * __@RULENAME@__ c to s etc, note that t:đ is in a separate rule
+! Cx:Cy <=> Vow: _ WeakGrade ;
 Cx:Cy <=> Vow: _ (%^RC:0) Vow (%^SV:) (Cns:) %^WG:0 (%^RLEN:|%^RVSH:) (%^SLEN:) (%^SVLOW:) [%>|.#.] ;
-!          Vow: _ k4:h Vow (Cns) (Dummy:*) %^WG:0 ;  ! Revise this one, there is no ack4a : asha
 	where Cx in (c č h )
           Cy in (s j̣ ṿ )
 		  matched;
@@ -177,14 +208,16 @@ Cx:Cy <=> Vow: _ (%^RC:0) Vow (%^SV:) (Cns:) %^WG:0 (%^RLEN:|%^RVSH:) (%^SLEN:) 
 
 "t:đ gradation" 
 !! * __@RULENAME@__   for ito : iđo
-t:đ <=> Vow: _ (k4:) (%^RC:) :Vow (%^SV:) (Cns) %^WG:0 ;
+t:đ <=> Vow: _ (k4:) WeakGrade ;
+!t:đ <=> Vow: _ (k4:) (%^RC:) :Vow (%^SV:) (Cns) %^WG:0 ;
 
 !€ jo^RVtk4^RCâ^WG^RLEN
 !€ joođh0â00
 
 "k:h gradation for kk and tk"
 !! * __@RULENAME@__    for atka : ađha
-k4:h <=> Vow: [t:|k:] _ (%^RC:) :Vow (%^SV:) (Cns) %^WG: ;
+k4:h <=> Vow: [t:|k:] _ WeakGrade ;
+!k4:h <=> Vow: [t:|k:] _ (%^RC:) :Vow (%^SV:) (Cns) %^WG: ;
 
 !€ mä^RVtk4i^WG^RLEN
 !€ määđhi00
@@ -195,7 +228,8 @@ k4:h <=> Vow: [t:|k:] _ (%^RC:) :Vow (%^SV:) (Cns) %^WG: ;
 
 "xX:X gradation"
 !! * __@RULENAME@__  mm7:m7 etc
-Cx:0 <=> Vow: _ Cy: (%^RC:) Vow: (%^SV:) (Vow) (Cns:) (%^ÁI:|%^ÁE:) %^WG:0 (%^RLEN:)(%^CLEN:)(%^SLEN:)(%^SVLOW:) [%>|.#.] ;
+Cx:0 <=> Vow: _ Cy WeakGrade ;
+!Cx:0 <=> Vow: _ Cy (%^RC:) Vow: (%^SV:) (Vow) (Cns:) (%^ÁI:|%^ÁE:) %^WG:0 (%^RLEN:)(%^CLEN:)(%^SLEN:)(%^SVLOW:) [%>|.#.] ;
 	where Cx in ( l  m  n  ŋ  r  s  š  v  ) 
 	      Cy in ( l7 m7 n7 ŋ7 r7 s7 š7 v7 ) 
 	matched ;
@@ -203,7 +237,10 @@ Cx:0 <=> Vow: _ Cy: (%^RC:) Vow: (%^SV:) (Vow) (Cns:) (%^ÁI:|%^ÁE:) %^WG:0 (%^
 
 "xx:x gradation"
 !! * __@RULENAME@__  tikká:tiká, deleting the first k, etc.
-Cx:0 <=> Vow: _ (ˊ:) Cx (%^RC:) Vow: (%^SV:) (Vow) (Cns:) (%^ÁI:|%^ÁE:) %^WG:0 (%^RLEN:)(%^CLEN:)(%^SLEN:)(%^SVLOW:) [%>|.#.] ;
+!Cx:0 <=> Vow: _ (ˊ:) Cx WeakGrade ;
+!Cx:0 <=> Vow: _ (ˊ:) Cx (%^RC:) Vow: (%^SV:) (Vow) (Cns:) (%^ÁI:|%^ÁE:) %^WG:0 (%^RLEN:)(%^CLEN:)(%^SLEN:)(%^SVLOW:) [%>|.#.] ; ref
+Cx:0 <=> Vow: _ (ˊ:) Cx (%^RC:) :Vow (%^SV:) (Vow) (Cns:) (%^ÁI:|%^ÁE:) (%^DSH:) %^WG:0 (%^RLEN:|%^RVSH:)(%^CLEN:)(%^SLEN:)(%^SVLOW:) [%>|.#.] ;
+!                       (%^RC:) :Vow (%^SFV:) (%^SV:) (Vow) (Cns:) (%^ÁI:|%^ÁE:) (%^DSH:) %^WG:0 (%^RLEN:|%^RVSH:) (%^CLEN:) (%^SLEN:) (%^SVLOW:) [%>|.#.] ;
 	where Cx in ( b d g p t k c č f z ž l m n ŋ r s š v ) ;
 
 !€ cuozˊz^RCâ^WG^RLEN
@@ -266,6 +303,9 @@ Cx:Cy <=> Vow: _ (ˊ:) Cz:  (%^RC:) [ Vow:  ]* (Cns) (Cns) (%^ÁI:|%^ÁE:) (%^SC
 !pumppu puˊmputtáá
 !áimu áˊimuttáá áˊimuiguin
 !á%^RVi4mu 
+
+!€ so^RVllâ^WG^RVSH>ttáá
+!€ soˊ0lâ00>ttáá
 
 "xx:y long to something else gradation 1" 
 !! * __@RULENAME@__   hh:V, kk:h, pp:v, čč:J, deleting first part, k:0 in kk4:h etc
@@ -348,13 +388,11 @@ Cx:0 <=> Cx: _ Cy: Vow (%^SV:) (Cns) %^WG: ;
 
 "xyy:xz gradation for k:h 1"
 !! * __@RULENAME@__  first k goes to 0
-k:0 <=> Vow: (%^RV:) Cx: _ k4: (%^RC:) Vow (%^SV:)  (Cns) %^WG: ;
-	where Cx in ( i4 j l r v ) ;
+k:0 <=> Vow: (%^RV:) [i4:|j|l|r|v] _ k4: (%^RC:) Vow (%^SV:)  (Cns) %^WG: ;
 
 "xyy:xz gradation for k:h 2" 
 !! * __@RULENAME@__  second k goes to h
-k4:h <=> Vow: (%^RV:) Cx: k: _ (%^RC:) Vow (%^SV:) (Cns) %^WG: ;
-	where Cx in ( i4 j l r v  ) ;
+k4:h <=> Vow: (%^RV:) [i4:|j|l|r|v] k: _ (%^RC:) Vow (%^SV:) (Cns) %^WG: ;
 
 
 
