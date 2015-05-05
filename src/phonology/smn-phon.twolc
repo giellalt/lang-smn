@@ -148,7 +148,7 @@ Dummy = %^CLEN %^CSH %^EE %^FCD %^IA %^ILL %^LLEN %^MONO %^ODDC %^ODDSHV    !!= 
 
 Definitions
 
-WeakGrade = (%^RC:) :Vow (%^SFV:) (%^SV:) (Vow) (Cns:) (%^ÁI:|%^ÁE:) (%^DSH:) %^WG:0 (%^RLEN:|%^RVSH:) (%^CLEN:) (%^SLEN:) (%^SVLOW:) [%>|.#.] ;
+WeakGrade = (%^RC:) :Vow (%^SFV:) (%^SV:) (Vow) (Cns:) (%^ÁI:|%^ÁE:) (%^DSH:) %^WG:0 (%^RLEN:|%^RVSH:)  (%^SLEN:) (%^SVLOW:) [%>|.#.] ;
     
 ! The original list of right contexts, in the same order as below, 
 ! just count the instances of WeakGrade to see what it replaced. 
@@ -431,15 +431,15 @@ n:0 <=> n _ j Vow (Cns:) %^CSH: [%>|.#.] ;
 "Lengthening of half-long root consonant 1"
 !! * __@RULENAME@__  for l-dot to ll, changing l7 to first l in ll
 Cx:Cy <=> Vow: _ %^RC: :Vow (%^SV:) (%^RVSH:) %^CLEN: (%^SVLOW:) %>:  ;
-	where Cx in ( l7 r7 s7 h7 m7 n7 đ7 v7 )
-		  Cy in ( l  r  s  h  m  n  đ v ) 
+	where Cx in ( l7 r7 s7 h7 m7 n7 đ7 v7 ŋ7 )
+		  Cy in ( l  r  s  h  m  n  đ v ŋ ) 
 		  matched ;
 
 "Lengthening of half-long root consonant 2"
 !! * __@RULENAME@__   for l-dot to ll, changing ^RC to second l in ll
 %^RC:Cy <=> Vow: Cx: _ :Vow  (%^SV:) (%^WG:) (%^RVSH:) %^CLEN: (%^SVLOW:) [%>|.#.] ;
-	where Cx in ( l7 r7 s7 h7 m7 n7 đ7 v7 )
-		  Cy in ( l  r  s  h  m  n  đ v ) 
+	where Cx in ( l7 r7 s7 h7 m7 n7 đ7 v7 ŋ7 )
+		  Cy in ( l  r  s  h  m  n  đ v ŋ ) 
 		  matched ;
 
 !€ kol7^RCe^CLEN
@@ -455,13 +455,24 @@ Cx:Cy <=> Vow: _ %^RC: :Vow (%^SV:) (%^WG:) (%^RVSH:) %^CLEN: (%^SVLOW:) %>:  ;
 "Lengthening of short root consonant 2"
 !! * __@RULENAME@__   for h to vv
 %^RC:Cy <=> Vow: Cx: _ :Vow  (%^SV:) (%^WG:) (%^RVSH:) %^CLEN: (%^SVLOW:) [%>|.#.] ;
-	where Cx in (  h )
-		  Cy in (  v ) 
+	where Cx in (  h )  
+		  Cy in (  v )   
 		  matched ;
 
-
+! piir %^RC u %^CLEN %> n
 !€ ka^RVss^RCa^SV^WG^CLEN^SLEN>st
 !€ ka00ssaa000>st
+
+"Lengthening of consonant for essive"
+!! * __@RULENAME@__   piiru piirrun niisu niissun
+%^RC:Cy <=> Vow: Cx _ Vow  %^CLEN: %>: [ n | d ] ;
+	where Cx in ( t r s )  
+		  Cy in (  t r s )   
+		  matched ;
+
+! piir %^RC u %^CLEN %> n
+
+
 
 !"Lengthening of half-long root consonant 2"
 ! * __@RULENAME@__   for l-dot to ll  
@@ -575,16 +586,24 @@ Vx:0 <=> _ Vx Seg:* ([%^RC:|%^SC:]) %^CSH: (%^RVSH:|%^ILL:) [%>|.#.] ;
 
 
 
-
 "Vowel shortening (no consonant shortening) in consonant stems"
 !! * __@RULENAME@__ kiirrâs- to kirrâsân
-Vy:0 <=> _ Vx   Cns: (Cns:) (%^RC:) Vow :Cns (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) (%^CLEN:) %^RVSH: [%>|.#.] ;
+Vy:0 <=> _ Vx   Cns: (Cns:) (%^RC:) Vow  :Cns (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) (%^CLEN:) %^RVSH: [%>|.#.] ;
        where Vx in ( a e i o u á ä ) 
              Vy in ( a e i o u á ä ) 
        matched ;
 
 !€ kiirrâs^RVSH>ân
 !€ ki0rrâs0>ân
+ 
+"Vowel shortening in front two consonants and i-suffix"
+!! * __@RULENAME@__ ráávhu- to rávhoid
+Vy:0 <=> _ Vx   Cns: Cns Vow:  %^WG: %^SVLOW: %> [ i4: | i ] ;
+       where Vx in ( a e i o u á ä ) 
+             Vy in ( a e i o u á ä ) 
+       matched ;
+
+  
  
 "Vowel shortening (no consonant shortening) in vowel stems"
 !! * __@RULENAME@__ (example?)
