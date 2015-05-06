@@ -148,8 +148,8 @@ Dummy = %^CLEN %^CSH %^EE %^FCD %^IA %^ILL %^LLEN %^MONO %^ODDC %^ODDSHV    !!= 
 
 Definitions
 
-WeakGrade = (%^RC:) :Vow (%^SFV:) (%^SV:) (Vow) (Cns:) (%^ÁI:|%^ÁE:) (%^DSH:) %^WG:0 (%^RLEN:|%^RVSH:)  [%>|.#.] ;
-    
+!WeakGrade = (%^RC:) :Vow (%^SFV:) (%^SV:) (Vow) (Cns:) (%^ÁI:|%^ÁE:) (%^DSH:) %^WG:0 (%^RLEN:|%^RVSH:)  [%>|.#.] ;
+WeakGrade = (%^RC:) :Vow (%^SFV:) (%^SV:) (Vow) (Cns:) (%^ÁI:|%^ÁE:) (%^DSH:) %^WG:0 (%^RLEN:|%^RVSH:)  (%^SLEN:) (%^SVLOW:) [%>|.#.] ;    
 ! The original list of right contexts, in the same order as below, 
 ! just count the instances of WeakGrade to see what it replaced. 
 ! (this list will be deleted when dust settles):
@@ -716,8 +716,8 @@ Vx:0 <=> _ Vx: (Cns:) Vz: [%^WG:|%^CSH:] ;
 
 "Suffix vowel lengthening"
 !! * __@RULENAME@__ long á in kissáást
-%^SV:Vx <=> Vx       _  (:Cns)      (%^WG:) (%^CLEN:)            %^SLEN: ;
-        where Vx in ( á o e a i ) ; ! pending...
+%^SV:Vx <=> Vx:  _ (:Cns)  (%^DSH:) (%^WG:) (%^CLEN:) %^SLEN: (%^SVLOW: ) %>: ;
+        where Vx in ( á o e a i u ) ; ! pending...
 
 !€ ki^RVss^RCá^SV^WG^CLEN^SLEN>st
 !€ ki00ssáá000>st
@@ -791,9 +791,8 @@ e:á <=> [o|i|u] (%^RV:) Cns:+ _ (%^RLEN:) (%^CSH:) %^ILL: [%>|.#.] ;
 
 "Stem vowel u > o change before i"
 !! * __@RULENAME@__  ... check this, add test
-u:o <=> _ (%^UU:|%^SV:|%^DSH:) (%^WG:) (%^RLEN:|%^CLEN:) %^SVLOW:  ; 
+u:o <=> _ (%^UU:|%^SV:) (%^DSH:) (%^WG:) (%^RLEN:|%^CLEN:) (%^RLEN:) %^SVLOW:  ; 
 ! Does not work for cases u>o
-
 
 
 !"Illative suffix change in bisyllabic e stems"
