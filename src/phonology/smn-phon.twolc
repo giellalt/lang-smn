@@ -690,8 +690,9 @@ e:á <=> y: _  Cns:+ Vow: %^ILL: ;
 !! !Diphthong rules
 
 "Shortening diphthong"
-!! * __@RULENAME@__ RD to ˊ
-%^RD:ˊ <=> _ Cns:+ Vow: %^DSH: ;
+!! * __@RULENAME@__ RD to ˊ muátu muáˊđoost
+%^RD:ˊ <=> _ Cns:+ Vow: (%^SV:) %^DSH: ;
+
 
 !! !Second syllable rules
 
@@ -719,7 +720,7 @@ Vx:0 <=> _ Vx: (Cns:) Vz: [%^WG:|%^CSH:] ;
 "Suffix vowel lengthening"
 !! * __@RULENAME@__ long á in kissáást
 %^SV:Vx <=> Vx:  _ (:Cns)  (%^DSH:) (%^WG:) (%^CLEN:) %^SLEN: (%^SVLOW: ) %>: ;
-        where Vx in ( á o e a i u ) ; ! pending...
+        where Vx in ( á o e a i ) ; ! pending...
 
 !€ ki^RVss^RCá^SV^WG^CLEN^SLEN>st
 !€ ki00ssáá000>st
@@ -729,6 +730,12 @@ Vx:0 <=> _ Vx: (Cns:) Vz: [%^WG:|%^CSH:] ;
 
 !€ huksi^SVm^SLEN>ist
 !€ huksiim0>ist
+
+"Suffix vowel lengthening o"
+!! * __@RULENAME@__ stááḷu stááloost
+%^SV:o <=> u:  _ %^DSH: %^WG: %^CLEN: %^SLEN: %^SVLOW: %>  ; 
+
+
 
 
 "Fleeting vowel before suffix"
@@ -791,10 +798,11 @@ e:á <=> [o|i|u] (%^RV:) Cns:+ _ (%^RLEN:) (%^CSH:) %^ILL: [%>|.#.] ;
 !€ so^RVll^RCâ^WG^CLEN^SVLOW>in
 !€ so00llá000>in
 
-"Stem vowel u > o change before i"
+"Stem vowel u > o change before suffix"
 !! * __@RULENAME@__  ... check this, add test
-u:o <=> _ (%^UU:|%^SV:) (%^DSH:) (%^WG:) (%^RLEN:|%^CLEN:) (%^RLEN:) %^SVLOW:  ; 
-! Does not work for cases u>o
+u:o <=> Cns: _ (%^UU:|%^SV:) (%^DSH:) (%^WG:) (%^RVSH:) (%^RLEN:|%^CLEN:) (%^SLEN:) %^SVLOW:  ; 
+! stááḷu stááloust
+
 
 
 !"Illative suffix change in bisyllabic e stems"
