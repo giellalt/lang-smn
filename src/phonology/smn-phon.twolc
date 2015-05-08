@@ -78,7 +78,7 @@ j7:j̣ h7:ḥ š7:ṣ̌  v7:ṿ                  !!= * @CODE@  with dots
 %^LLEN:0    !!= * @CODE@ = low vow lengthening (not in use)
 %^MONO:0    !!= * @CODE@ = monophtongization of diphthongs  (not in use)
 %^RLEN:0    !!= * @CODE@ = root lengthening, with ^RD
-%^RVSH:0    !!= * @CODE@ = root vow shortening - máán7%^RCu máˊnuttáá - when WG and suffix: 0 | t | i
+%^RVSH:0    !!= * @CODE@ = root vow shortening - máán7%^RCu máˊnuttáá 
 %^SLEN:0    !!= * @CODE@ = stem vowel lengthening
 %^SFV:0     !!= * @CODE@ = Deleting fleeting vowel before suffix
 %^SVLOW:0   !!= * @CODE@ = stem vowel lowering â>á and u>o - árppu árppoin
@@ -126,7 +126,7 @@ Sets
        m7 n7 ŋ7 v7 s7 r7 đ7	l7 j7 h7 š7		   !!= @CODE@ 
        ṃ  ṇ  ŋ̣  ṿ  ṣ  ṛ  đ̣  ḷ  j̣  ḥ  ṣ̌         !!= * @CODE@
        %^RC %^RD %^SC  ˊ ;
- Geminate = b d g p t k k4 c č f z ž l m n ŋ r s š v đ j ;
+ Geminate = b d g p t k k4 c č f z ž l m n ŋ r s š v đ j l7 n7 ;
  Seg = Vow Cns ;							   !!= * @CODE@ 
  WeG = %^WG1 %^WGSH %^CPL %^WG ;		  !!= * @CODE@
  StemCns = b b3 d d3 g g2 g3 h h2 h3 		   !!= * @CODE@ 
@@ -240,7 +240,7 @@ Cx:0 <=> Vow: _ (ˊ:) Cx (%^RC:) :Vow (%^SV:) (Vow) (Cns:) (%^ÁI:|%^ÁE:) (%^DS
 
 "ˊ to zero gradation"
 ˊ:0 <=> Vow: (%^RD:) Cns: _ Cns: (Cns) (%^RC:) Vow: (%^SFV:) (%^SV:) (Vow) (Cns:) (%^DSH:) %^WG:0 (%^RLEN:) (%^CLEN:) (%^SLEN:) [%>|.#.]  ;
- !        Vow: Cns: _ Cns Vow: %^CSH:0 %>  ; !nieidân suá%^RDi4ˊttu
+ !        Vow: Cns: _ Cns Vow: %^CSH:0 %>  ; !nieidân suá%^RDi4ˊttu  puá%^RDlˊl7u
 
 !"Consonant shortening (not weak grade) final part"
 ! * __@RULENAME@__ pp to p for kappeer ~ kaperist
@@ -253,7 +253,7 @@ Cx:0 <=> Vow: _ (ˊ:) Cx (%^RC:) :Vow (%^SV:) (Vow) (Cns:) (%^ÁI:|%^ÁE:) (%^DS
 !€ nie0i0dâ0
 
 "Consonant shortening (not weak grade) pp:p etc"
-!! * __@RULENAME@__ pp to p for kappeer ~ kaperist
+!! * __@RULENAME@__ pp to p for kappeer ~ kaperist 
 Cy:0 <=> Cx (ˊ:) _  (%^RC:) [Vow:]* (Cns) (Cns) (%^ÁI:|%^ÁE:) (%^SC:) (%^SFV:) (%^RLEN:) (%^DLEN:) %^CSH: (%^RVSH:) [%>|.#.] ;
        where Cx in ( s š p d k k  p  t g č  z c ) 
              Cy in ( s š p d k k4 p4 t g č4 z c ) 
@@ -267,7 +267,7 @@ Cy:0 <=> Cx (ˊ:) _  (%^RC:) [Vow:]* (Cns) (Cns) (%^ÁI:|%^ÁE:) (%^SC:) (%^SFV:
 !€ čiäp00át0t00>ân
 
 "Consonant shortening (not weak grade) final part (half-long)"
-!! * __@RULENAME@__ pp to p for kappeer ~ kaperist
+!! * __@RULENAME@__ pp to p for kappeer ~ kaperist 
 Cy:0 <=> Cx: (ˊ:) _  (%^RC:) [ Vow:  ]* (Cns) (Cns) (%^ÁI:|%^ÁE:)  (%^DSH:) (%^SC:) (%^SFV:) (%^RLEN:) (%^DLEN:) %^CSH: (%^RVSH:) [%>|.#.] ;
        where Cx in ( v m n ŋ h l h  r ) 
              Cy in ( v m n ŋ h l h4 r ) 
@@ -284,8 +284,8 @@ Cx:Cy <=> Vow: _ (ˊ:) Cz:  (%^RC:) [ Vow:  ]* (Cns) (Cns) (%^ÁI:|%^ÁE:) (%^DS
 "Consonant shortening (not weak grade) hyphen"
 !! * __@RULENAME@__ 
 ˊ:0 <=> Cx: _ Cy: (j) (%^RC:) [ Vow:  ]* (Cns) (Cns) (%^ÁI:|%^ÁE:) (%^DSH:) (%^SC:) (%^SFV:) (%^RLEN:) (%^DLEN:) %^CSH: (%^RVSH:) %> ;
-       where Cx in ( s v m n ŋ š h l p d k k  h  p  t g r č  z ) 
-             Cy in ( s v m n ŋ š h l p d k k4 h4 p4 t g r č4 z )  
+       where Cx in ( s v m n ŋ š h l p d k k  h  p  t g r č  z l ) 
+             Cy in ( s v m n ŋ š h l p d k k4 h4 p4 t g r č4 z  l7 )  
        matched ;
 
 !€ pie^RDgˊg^RCâ^DLEN^CSH>n
@@ -293,30 +293,36 @@ Cx:Cy <=> Vow: _ (ˊ:) Cz:  (%^RC:) [ Vow:  ]* (Cns) (Cns) (%^ÁI:|%^ÁE:) (%^DS
 
 
 "xx:x gradation 2"
-%^RV:ˊ <=> Vow _ [ Geminate: | i4: ] (ˊ:) Geminate:+ (%^RC:) Vow: (%^SV:) (Vow) (Cns:) %^WG:0 (%^RVSH:0)  %>: [ t | i | .#. ] ;
+%^RV:ˊ <=> Vow _ [ Geminate: | i4: ] (ˊ:) Geminate:+ (%^RC:) Vow: (%^DSH:) (%^SV:) (Vow) (Cns:) %^WG:0 (%^RVSH:0)  %>: [ t | i | .#. ] ;
 
-!ká%^RVllu%^RLEN
+
 !pumppu puˊmputtáá
-!áimu áˊimuttáá áˊimuiguin
+!áimu áˊimuttáá áˊimuiguin kállu káˊḷui
 !á%^RVi4mu 
 
 !€ so^RVllâ^WG^RVSH>ttáá
 !€ soˊ0lâ00>ttáá
 
-"xx:x gradation 3"
-%^RV:ˊ <=> Vow _ Geminate: Geminate: Vow: (%^DSH:) %^CSH:0 %^RVSH:0  %> ; !kállu káˊḷui
+!€ ká%^RVll7u%^DSH%^WG>i
+!€ káˊ0ḷu00>i
+
+"RV in xx:x gradation 3"
+%^RV:ˊ <=> Vow _ Geminate: Geminate: Vow: (%^DSH:) %^CSH:0 %^RVSH:0  %> ; !
 
 
 "xx:y long to something else gradation 1" 
 !! * __@RULENAME@__   hh:V, kk:h, pp:v, čč:J, deleting first part, k:0 in kk4:h etc
-Cx:0 <=> Vow: _  (ˊ:) Cy: (%^RC:) Vow: (Vow:) (Cns:) %^WG:0   ; !kk4%^RC - 0k4%^RC
+Cx:0 <=> Vow: _  (ˊ:) Cy: (%^RC:) Vow: (Vow:) (Cns:) (%^DSH:) %^WG:0   ; !kk4%^RC - 0k4%^RC  puáˊḷui
          Vow: (%^RV: | %^RD: ) _  (ˊ:) Cy: (%^RC:) Vow:  %^WG:0 ;
-	where Cx in ( h   k  p  č ) 
-	      Cy in ( h4  k4 p4 č4 )
+	where Cx in ( h   k  p  č l n ) 
+	      Cy in ( h4  k4 p4 č4 l7 n7)
 		  matched ;
 
 !€ le^RVkk4^RCâ^WG^RLEN
 !€ lee0h0â00
+
+!€ puá%^RDlˊl7u%^DSH%^WG%>i
+!€ puáˊ00ḷu00>i
 
 "xx:y long to something else gradation 2" 
 !! * __@RULENAME@__  hh:V, kk:h, pp:v, čč:J here we change second part, k4:h in kk4:h etc.
@@ -328,6 +334,23 @@ Cx:Cy <=> Vow:         Cz: (ˊ:) _  (%^RC:) Vow: (Vow:) (Cns:)  %^WG:0 ;
 		  matched ;
 
 !htest č i ä p:0 p4:v á t ^WG:0 ^FCD:0
+
+
+"xˊx7:xˊx and xx7:xx as default" 
+!! * __@RULENAME@__  
+Cx:Cy <=> Vow:  Cy: (ˊ:) _  Vow: \[%^WG:0 | %^DSH:0 ] ;
+	where Cx in ( l7 n7 ) 
+	      Cy in ( l  n)
+		  matched ;
+
+!€ puá%^RDlˊl7u>
+!€ puá0lˊlu>
+
+!€ puá%^RDlˊl7u%^DSH%^WG%>ttáá
+!€ puáˊ00ḷu00>ttáá
+
+!€ ká%^RVll7u%>
+!€ ká0llu>
 
 "xy:zy gradation"
 !! * __@RULENAME@__  ht:vt, we use h4 
