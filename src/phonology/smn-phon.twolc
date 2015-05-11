@@ -126,7 +126,7 @@ Sets
        m7 n7 ŋ7 v7 s7 r7 đ7	l7 j7 h7 š7		   !!= @CODE@ 
        ṃ  ṇ  ŋ̣  ṿ  ṣ  ṛ  đ̣  ḷ  j̣  ḥ  ṣ̌         !!= * @CODE@
        %^RC %^RD %^SC  ˊ ;
- Geminate = b d g p t k k4 c č f z ž l m n ŋ r s š v đ j l7 n7 ;
+ Geminate = b d g p t k k4 c č f z ž l m n ŋ r s š v đ j l7 n7 s7 r7 ;
  Seg = Vow Cns ;							   !!= * @CODE@ 
  WeG = %^WG1 %^WGSH %^CPL %^WG ;		  !!= * @CODE@
  StemCns = b b3 d d3 g g2 g3 h h2 h3 		   !!= * @CODE@ 
@@ -315,9 +315,9 @@ Cy:0 <=> Cx  _  %^RC: Vow: (%^RLEN:)  %^CSH: (%^RVSH:) [%>|.#.] ;
 !!€ pie0g000â00>n
 !
 
-"xx:x gradation 2"
+"xx:x gradation 2, RV:ˊ when WG"
 !! * __@RULENAME@__ kállu káˊḷui
-%^RV:ˊ <=> Vow _ [ Geminate: | i4: ] (ˊ:) [ Geminate:+ | t4: ] (%^RC:) Vow: (%^DSH:) (%^SV:) (Vow) (Cns:) %^WG:0 (%^RVSH:0)  %>: [ t | i | .#. ] ;
+%^RV:ˊ <=> Vow _ [ Geminate: | i4: ] (ˊ:) [ Geminate:+ | t4: ] (%^RC:) Vow: (%^DSH:) (%^SV:) (Vow) (Cns:) %^WG:0 (%^RVSH:0)  %>  \[s | n | d | h ];
            
 
 !pumppu puˊmputtáá
@@ -331,18 +331,17 @@ Cy:0 <=> Cx  _  %^RC: Vow: (%^RLEN:)  %^CSH: (%^RVSH:) [%>|.#.] ;
 !€ ká%^RVll7u%^DSH%^WG>i
 !€ káˊ0ḷu00>i
 
-"RV:ˊ in xx:x gradation 3"
+"RV:ˊ in xx:x gradation 3, RV:ˊ when RVSH"
 !! * __@RULENAME@__ CSH
 %^RV:ˊ <=> Vow _ Geminate: Geminate: Vow: (%^DSH:) %^CSH:0 %^RVSH:0  %> ; !
-
 
 "xx:y long to something else gradation 1, weak grade" 
 !! * __@RULENAME@__   hh:V, kk:h, pp:v, čč:J, deleting first part, k:0 in kk4:h etc
 Cx:0 <=> Vow: _  (ˊ:) Cy: (%^RC:) Vow: (Vow:) (Cns:) (%^DSH:) %^WG:0   ; !kk4%^RC - 0k4%^RC  puáˊḷui
          Vow: (%^RV: | %^RD: ) _  (ˊ:) Cy: (%^RC:) Vow:  %^WG:0 ;
          Vow: (%^RV: | %^RD: ) _ (ˊ:) Cy:  Vow: (%^RLEN:) %^CSH:0 ;
-	where Cx in ( h  t k  p  č l n ) 
-	      Cy in ( h4 t4 k4 p4 č4 l7 n7)
+	where Cx in ( h  t k  p  č l n s r ) 
+	      Cy in ( h4 t4 k4 p4 č4 l7 n7 s7 r7)
 		  matched ;
 
 !€ le^RVkk4^RCâ^WG^RLEN
@@ -363,11 +362,11 @@ Cx:Cy <=> Vow:         Cz: (ˊ:) _  (%^RC:) Vow: (Vow:) (Cns:)  %^WG:0 ;
 !htest č i ä p:0 p4:v á t ^WG:0 ^FCD:0
 
 
-"xˊx7:xˊx and xx7:xx as default" 
+"xˊx7:xˊx and xx7:xx as default when not WG nor DSH" 
 !! * __@RULENAME@__  
-Cx:Cy <=> Vow:  Cy: (ˊ:) _  Vow: \[%^WG:0 | %^DSH:0 ] ;
-	where Cx in ( l7 n7 ) 
-	      Cy in ( l  n)
+Cx:Cy <=> Vow:  Cy: (ˊ:) _  Vow: \[%^WG:0 | %^DSH:0 | %^RLEN:0 ] ;
+	where Cx in ( l7 n7 s7 r7) 
+	      Cy in ( l  n s r )
 		  matched ;
 
 !€ puá%^RDlˊl7u>
@@ -398,22 +397,31 @@ Cx:v <=> (ˊ:) _ Cz (%^RC:) Vow (%^SV:) (Cns:) %^WG: ;
 
 
 "xyy:xy gradation A"
-!! * __@RULENAME@__  Perhaps merge this with next
-Cy:0 <=> :Vow (%^RV:) Cx: _ Cy: (%^RC:) Vow (%^SV:) (Cns) %^WG: %>  ;  
-          Cx: _ Cy:  Vow (%^RLEN:)  %^CSH:   ;  
-      where Cx in ( i4 l l l l l l l m m n n n ŋ r r r r r r r v ) 
-            Cy in ( k  c k p s t č š p č c s t k c p k s t č š p ) 
+!! * __@RULENAME@__  
+Cy:0 <=> :Vow (%^RV:) Cx: _ Cz: (%^RC:) Vow (%^SV:) (Cns) %^WG: (%^RLEN:) (%^RVSH:) %>  ;  
+          Cx: _ Cz:  Vow (%^RLEN:)  %^CSH:   ;  
+      where Cx in ( i4 i4 i4 l l l l l l l m m n n n ŋ r r r r r r r v ) 
+            Cy in ( c  t  k  c k p s t č š p č c s t k c p k s t č š p ) 
+            Cz in (  c  t  k  c k p s t č š p č c s t k c p k s t č š p ) 
       matched ;
+
+!€ á%^RVrppu%^WG%^RLEN>
+!€ áár0pu00>
+
+!€ á%^RVrppu%^WG%^RVSH%>ttáá
+!€ áˊr0pu00>ttáá
 
 !€ riänttus^WG
 !€ riän0tus0
 
-"xyy:xy gradation B"
-!! * __@RULENAME@__  this contains i4 pairs !suá%^RDi4ˊttu
-Cy:0 <=> Vow: (%^RV:) (%^RD:) Cx: (ˊ:) _ Cy: Vow (%^SV:) (Cns) [ %^WG: | %^CSH: ] ; 
-	where Cx in ( i4  i4 )
-          Cy in ( t   c  ) 
-	matched ;
+
+
+!"xyy:xy gradation B"
+!!! * __@RULENAME@__  this contains i4 pairs !suá%^RDi4ˊttu
+!Cy:0 <=> Vow: (%^RV:) (%^RD:) Cx: (ˊ:) _ Cy: Vow (%^SV:) (Cns) [ %^WG: | %^CSH: ] ; 
+!	where Cx in ( i4  i4 )
+!          Cy in ( t   c  ) 
+!	matched ;
 
 
 
@@ -436,11 +444,15 @@ Cx:0 <=> Cx: _ Cy: Vow (%^SV:) (Cns) %^WG: ;
 
 
 
-"xyy:xz gradation for k:h 1"
+"xyy:xz gradation for k4:h, first xyy:xy"
 !! * __@RULENAME@__  first k goes to 0
-k:0 <=> Vow: (%^RV:) [i4:|j|l|r|v] _ k4: (%^RC:) Vow (%^SV:)  (Cns) %^WG: ;
+k:0 <=> Vow: (%^RV:) [i4:|j|l|r|v] _ k4: (%^RC:) Vow (%^SV:)  (Cns) (%^RLEN:)[ %^WG: | %^CSH:] ;
 
-"xyy:xz gradation for k:h 2" 
+!€ pá%^RVrkk4u%^RLEN%^CSH%>n
+!€ páár0ku00>n 
+
+
+"xyy:xz gradation for k4:h 2" 
 !! * __@RULENAME@__  second k goes to h
 k4:h <=> Vow: (%^RV:) [i4:|j|l|r|v] k: _ (%^RC:) Vow (%^SV:) (Cns) %^WG: ;
 
