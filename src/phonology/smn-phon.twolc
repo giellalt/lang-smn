@@ -74,7 +74,7 @@ j7:j̣ h7:ḥ š7:ṣ̌  v7:ṿ                  !!= * @CODE@  with dots
 %^EE:0      !!= * @CODE@ = Final vowel deletion in ee stems (not in use)
 %^FCD:0     !!= * @CODE@ = Final consonant deletion 
 %^IA:0      !!= * @CODE@ = i to á (more) (not in use)
-%^ILL:0     !!= * @CODE@ = e to a/á in ill etc (change name to EA?)
+%^EA:0     !!= * @CODE@ = e to a/á in ill etc (change name to EA?)
 %^LLEN:0    !!= * @CODE@ = low vow lengthening (not in use)
 %^MONO:0    !!= * @CODE@ = monophtongization of diphthongs  (not in use)
 %^RLEN:0    !!= * @CODE@ = root lengthening, with ^RD
@@ -136,7 +136,7 @@ Arch = %^RC %^RV %^SV %^SC %^RVD ;                !!= * @CODE@
 Len = %^RLEN %^LLEN %^SLEN %^CLEN ;    			!!= * @CODE@ 
 
 
-Dummy = %^CLEN %^CSH %^EE %^FCD %^IA %^ILL %^LLEN %^MONO %^ODDC %^ODDSHV    !!= * @CODE@
+Dummy = %^CLEN %^CSH %^EE %^FCD %^IA %^EA %^LLEN %^MONO %^ODDC %^ODDSHV    !!= * @CODE@
         %^RLEN %^RVL %^RVSH %^SFV %^SLEN                     !!=  @CODE@ 
         %^SVF %^SVLOW %^UU %^VLOW %^RVSH %^WG %^ÁE %^ÁI ;  !!=  @CODE@ 
 
@@ -621,7 +621,7 @@ Cx:0 <=> _  (%^ÁE:) (%^SC:) (%^WG:) %^FCD: ;
  
 "Vowel shortening with consonant shortening" 
 !! * __@RULENAME@__  for koonjâl -> konjâlân
-Vx:0 <=> _ Vx Seg:* ([%^RC:|%^SC:]) %^CSH: (%^RVSH:|%^ILL:) [%>|.#.] ;
+Vx:0 <=> _ Vx Seg:* ([%^RC:|%^SC:]) %^CSH: (%^RVSH:|%^EA:) [%>|.#.] ;
         where Vx in ( a e o á ä u y i ) ;
 
 !  ([%^RC:|%^SC:])  was earlier (Dummy:*), but we changed to avoid conflict
@@ -720,30 +720,46 @@ Vx:Vy <=> Vz: _ Cns:* i %^WG: %>: j ;
 !ä	á
 !ye	uá
 
+"Root vowel change before suffix j"
+!! * __@RULENAME@__  alge : olgijn
+Vx:Vy <=> _  %^RV: Cns: Cns:  e: (%^WG:) (%^RLEN:)  %> j ; 
+       where Vx in ( a o )
+             Vy in ( o u) 
+       matched ;
+
+"Root vowel lengtning and vowel change before suffix j"
+!! * __@RULENAME@__  alge : oolgijn
+%^RV:Vy <=> Vx:  _  Cns: Cns:  e: %^RLEN:  %> j ; 
+       where Vx in ( a o )
+             Vy in ( o u) 
+       matched ;
+
+!€ a%^RVlge%^RLEN%>jd
+!€ oolgi>jd
 
 "e to iä in Illative and Sg3 1"
 !! * __@RULENAME@__  Part 1: e to i; ergi -> iärgán 1
-e:i <=> _ %^RV: Cns:+ Vow: %^ILL: %> ;
+e:i <=> _ %^RV: Cns:+ Vow: %^EA: %> ;
 
 "e to iä in Illative and Sg3 2"
 !! * __@RULENAME@__  Part 2: ^RV to ä; ergi -> iärgán 2 (e+e(RV) -> i + ä
-%^RV:ä <=> e: _ Cns:+ Vow: %^ILL: %> ;
+%^RV:ä <=> e: _ Cns:+ Vow: %^EA: %> ;
 
 "ie to iä in Illative and Sg3"
 !! * __@RULENAME@__  ... with ^ILL as trigger; kiem´ni -> kiämnán
-e:ä <=> i _  Cns:+ Vow: %^ILL: %> ;
+e:ä <=> i _  Cns:+ Vow: %^EA: %> ;
 
 "ä to á in Illative and Sg3"
 !! * __@RULENAME@__  ... after .#. or Cns, with ^ILL as trigger; kiem´ni -> kiämnán
-ä:á <=> [.#.|Cns] _  Cns:+ Vow: %^ILL: ;
+ä:á <=> [.#.|Cns] _  Cns:+ Vow: %^EA: ;
 
 "ye to uá in Illative and Sg3 1" 
 !! * __@RULENAME@__  Part 1 of ye to uá for kyeli : kuálán
-y:u <=> _ e:  Cns:+ Vow: %^ILL: ;
+y:u <=> _ e:  Cns:+ Vow: %^EA: ;
 
 "ye to uá in Illative and Sg3 2"
 !! * __@RULENAME@__  Part 2 of ye to uá for kyeli : kuálán
-e:á <=> y: _  Cns:+ Vow: %^ILL: ;
+e:á <=> y: _  Cns:+ Vow: %^EA: ;
 
 
 !! !Diphthong rules
@@ -831,7 +847,7 @@ e:0 <=> Cns: _ Cns %^SFV: (%^SC:) (%^CSH:) (%^RVSH:) [%>|.#.] ;
  
 "Stem vowel e to a for a root vowel."
 !! * __@RULENAME@__  alge to aalgan
-e:a <=> a (%^RV:) Cns:+ _ (%^RLEN:) (%^CSH:) %^ILL: ;
+e:a <=> a (%^RV:) Cns:+ _ (%^RLEN:) (%^CSH:) %^EA: ;
 
 !rejected:
 !€ a^RVlge^SLEN>n
@@ -839,7 +855,7 @@ e:a <=> a (%^RV:) Cns:+ _ (%^RLEN:) (%^CSH:) %^ILL: ;
 
 "Stem vowel e to á for other root vowel."
 !! * __@RULENAME@__  
-e:á <=> [o|i|u] (%^RV:) Cns:+ _ (%^RLEN:) (%^CSH:) %^ILL: [%>|.#.] ;
+e:á <=> [o|i|u] (%^RV:) Cns:+ _ (%^RLEN:) (%^CSH:) %^EA: [%>|.#.] ;
 
 
 
@@ -863,6 +879,10 @@ e:á <=> [o|i|u] (%^RV:) Cns:+ _ (%^RLEN:) (%^CSH:) %^ILL: [%>|.#.] ;
 !€ so^RVll^RCâ^WG^CLEN^SVLOW>in
 !€ so00llá000>in
 
+
+"Stem vowel change e:i before suffix j"
+!! * __@RULENAME@__ 
+e:i <=> Cns:  _  (%^WG:) (%^RLEN:)  %> j ; 
 
 
 "Stem vowel u > o change before suffix"
