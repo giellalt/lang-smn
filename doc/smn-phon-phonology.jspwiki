@@ -56,7 +56,7 @@ Literal quotes and angles must be escaped (cf morpheme boundaries further down):
  * %^EE:0       = Final vowel deletion in ee stems (not in use)
  * %^FCD:0      = Final consonant deletion 
  * %^IA:0       = i to á (more) (not in use)
- * %^ILL:0      = e to a/á in ill etc (change name to EA?)
+ * %^EA:0      = e to a/á in ill etc (change name to EA?)
  * %^LLEN:0     = low vow lengthening (not in use)
  * %^MONO:0     = monophtongization of diphthongs  (not in use)
  * %^RLEN:0     = root lengthening, with ^RD
@@ -111,7 +111,7 @@ Sets
  * Len = %^RLEN %^LLEN %^SLEN %^CLEN ;    			 
 
 
- * Dummy = %^CLEN %^CSH %^EE %^FCD %^IA %^ILL %^LLEN %^MONO %^ODDC %^ODDSHV    
+ * Dummy = %^CLEN %^CSH %^EE %^FCD %^IA %^EA %^LLEN %^MONO %^ODDC %^ODDSHV    
           %^RLEN %^RVL %^RVSH %^SFV %^SLEN                      
           %^SVF %^SVLOW %^UU %^VLOW %^RVSH %^WG %^ÁE %^ÁI ;   
 
@@ -143,10 +143,11 @@ Trying to introduce a WG right context, so far resulting in drop in performance.
 * __t:đ gradation __   for ito : iđo
 
 
-* __k4:h gradation for kk and tk__    for atka : ađha
+* __k4:h gradation for kk4 and tk4__    for atka : ađha
 
 
 
+* __t4:đ gradation for tt4 __  ruttâ ruuđâ
 
 
 * __xx:x gradation__  tikká:tiká, deleting the first k, etc.
@@ -155,27 +156,33 @@ Trying to introduce a WG right context, so far resulting in drop in performance.
 
 
 
-* __Consonant shortening (not weak grade) pp:p etc__ pp to p for kappeer ~ kaperist 
+
+* __Consonant shortening (not weak grade) pp:p etc__ pp to p for kappeer ~ kaperist, ss:s, šš:š dd:d kk4:k pp4:p tt:t gg:g čč4:č zz:z cc:c tt4:t
+
+
+
+* __Consonant shortening (not weak grade) pp:p etc__ pp to p for kappeer ~ kaperist, ss:s, šš:š dd:d kk4:k pp4:p tt:t gg:g čč4:č zz:z cc:c tt4:t
+* __čiäpp4^RCát^ÁE^SC^CSH>ân__
+* __čiäp00át0t0>ân__
+* __ru%^RVtt4â%^RLEN%^CSH%>n__
+* __ruut0â00>n__
+* __čiäpp4^RCát^ÁE^SC^WG^FCD>ân__
+* __čiäp00át0t00>ân__
+* __Consonant shortening (not weak grade) pp:p etc__ vv:v, mm:m, nn:n ŋŋ:ŋ ll:l hh4:h rr:r  
+* __Consonant shortening (not weak grade) pp:p etc__ 
+* __Consonant shortening (not weak grade) pp:p etc__ 
+* __pie^RDgˊg^RCâ^DLEN^CSH>n__
+* __pie0g000â00>n__
+
+* __xx:x gradation 2, RV:ˊ when WG__ kállu káˊḷui
 
 
 
 
-* __Consonant shortening (not weak grade) final part (half-long)__ pp to p for kappeer ~ kaperist 
 
-* __Consonant shortening (not weak grade) first part (half-long)__ pp to p for kappeer ~ kaperist
+* __RV:ˊ in xx:x gradation 3, RV:ˊ when RVSH__ CSH
 
-* __Consonant shortening (not weak grade) hyphen__ 
-
-
-
-
-
-
-
-
-
-
-* __xx:y long to something else gradation 1 __   hh:V, kk:h, pp:v, čč:J, tt. deleting first part, k:0 in kk4:h etc
+* __xx:y long to something else gradation 1, weak grade __   hh:V, kk:h, pp:v, čč:J, deleting first part, k:0 in kk4:h etc
 
 
 
@@ -183,7 +190,7 @@ Trying to introduce a WG right context, so far resulting in drop in performance.
 
 
 
-* __xˊx7:xˊx and xx7:xx as default __  
+* __xˊx7:xˊx and xx7:xx as default when not WG nor DSH __  
 
 
 
@@ -196,23 +203,30 @@ Trying to introduce a WG right context, so far resulting in drop in performance.
 
 
 
-* __xyy:xy gradation A__  Perhaps merge this with next
-
-
-* __xyy:xy gradation B__  this contains i4 pairs !suá%^RDi4ˊttu
+* __xyy:xy gradation A__  
 
 
 
 
 
 
-* __xxy:xy gradation for nnj__  special case
+* __xyy:xy gradation A__  this contains i4 pairs !suá%^RDi4ˊttu
 
 
 
-* __xyy:xz gradation for k:h 1__  first k goes to 0
 
-* __xyy:xz gradation for k:h 2 __  second k goes to h
+
+
+* __xxy:xy gradation for nnj weakgrade__  special case
+
+
+
+
+* __xyy:xz gradation for k4:h, first xyy:xy__  first k goes to 0
+
+
+
+* __xyy:xz gradation for k4:h 2 __  second k goes to h
 
 
 
@@ -225,13 +239,10 @@ Trying to introduce a WG right context, so far resulting in drop in performance.
 
 
 
+* __nnj to nj shortening not weak grade__  special rule, e.g. konnjâl -> konjâlân
 
 
-* __nnj to nj shortening__  special rule, e.g. konnjâl -> konjâlân
-
-
-
-* __Lengthen stem consonant after earlier shortening__  e.g. tt in hamittist
+* __nnj to nj shortening not weak grade__  e.g. tt in hamittist
 
 
 
@@ -257,26 +268,18 @@ Trying to introduce a WG right context, so far resulting in drop in performance.
 
 
 
-* __Consonant lengthening after xx:x weak grade__  for locative kassaast, which is lengthened weak grade
+* __Assimilation of root consonant and double suffix consonant__  for locative kassaast, which is lengthened weak grade
 
 
 
 
-* __Consonant lengthening after xx:x and xy:zy weak grade with special consonant on upper side__  as previous rule, but for k4, č4, p4
+* __Consonant lengthening after xx:x and xy:zy weak grade with x4 on upper side__  as previous rule, but for k4, č4, p4
 
-* __Consonant lengthening after x:y weak grade__  , here we lengthen the lower y consonant, spaha -> spavvaast
-
-
-
-* __Consonant lengthening after x:y weak grade with special consonant on upper side__  as previous rule, but for k4, č4, p4
+* __Consonant lengthening after x:y weak grade, to x:yy__  , here we lengthen the lower y consonant, spaha -> spavvaast
 
 
 
-
-
-
-
-
+* __Consonant lengthening after x:y weak grade with x4 on upper side__  as previous rule, but for k4, č4, p4
 
 
 
@@ -287,7 +290,6 @@ Trying to introduce a WG right context, so far resulting in drop in performance.
 !Other consonant rules
 
 * __Word final consonant deletion of n m t                 __ for vaskâm:vaaskâ
-
 
 
 
@@ -331,16 +333,20 @@ Trying to introduce a WG right context, so far resulting in drop in performance.
 * __Monophthongisation rule 2__  á:o in pairs like kuátij -> koođij 
 
 
+* __Root vowel change before suffix j__  alge : olgijn
 
-* __e to iä in Illative and Sg3 1__  Part 1: e to i
+* __Root vowel lengtning and vowel change before suffix j__  alge : oolgijn
 
-* __e to iä in Illative and Sg3 2__  Part 2: ^RV to ä
 
-* __ie to iä in Illative and Sg3__  ... with ^ILL as trigger
+* __e to iä in Illative and Sg3 1__  Part 1: e to i; ergi -> iärgán 1
 
-* __ä to á in Illative and Sg3__  ... after .#. or Cns, with ^ILL as trigger
+* __e to iä in Illative and Sg3 2__  Part 2: ^RV to ä; ergi -> iärgán 2 (e+e(RV) -> i + ä
 
-* __ye to uá in Illative and Sg3 1__  Part 1 of ye to uá for kyeli : kuálán
+* __ie to iä in Illative and Sg3__  ... with ^ILL as trigger; kiem´ni -> kiämnán
+
+* __ä to á in Illative and Sg3__  ... after .#. or Cns, with ^ILL as trigger; kiem´ni -> kiämnán
+
+* __ye to uá in Illative and Sg3 1 __  Part 1 of ye to uá for kyeli : kuálán
 
 * __ye to uá in Illative and Sg3 2__  Part 2 of ye to uá for kyeli : kuálán
 
@@ -381,6 +387,7 @@ Trying to introduce a WG right context, so far resulting in drop in performance.
 
 * __Stem vowel e to a for a root vowel.__  alge to aalgan
 
+
 * __Stem vowel e to á for other root vowel.__  
 
 
@@ -395,6 +402,8 @@ Trying to introduce a WG right context, so far resulting in drop in performance.
 
 
 
+
+* __Stem vowel change e:i before suffix j__ 
 
 
 * __Stem vowel u > o change before suffix__  ... check this, add test
