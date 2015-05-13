@@ -16,6 +16,28 @@ SUBDIRS = . fstbased listbased
 # analyser-speller-gt-norm.xfst: analyser-speller-gt-norm.tmp.xfst
 #	build rules
 
+generator-speller-gt-norm.hfst: generator-speller-gt-norm.tmp.hfst \
+				$(top_builddir)/src/filters/remove-halflong-dotbelow.hfst   \
+				$(top_builddir)/src/filters/remove-letter-acute-accent.hfst            
+	$(AM_V_HXFST)$(PRINTF) "read regex                                       \
+			@\"$<\"                                                          \
+		.o. @\"$(top_builddir)/src/filters/remove-letter-acute-accent.hfst\" \
+		.o. @\"$(top_builddir)/src/filters/remove-halflong-dotbelow.hfst\"   \
+			;\n\
+		 save stack $@\n\
+		 quit\n" | $(HFST_XFST) $(VERBOSITY)
+
+analyser-speller-gt-norm.xfst: analyser-speller-gt-norm.tmp.xfst \
+				$(top_builddir)/src/filters/remove-halflong-dotbelow.xfst   \
+				$(top_builddir)/src/filters/remove-letter-acute-accent.xfst            
+	$(AM_V_XFST)$(PRINTF) "read regex                                        \
+			@\"$<\"                                                          \
+		.o. @\"$(top_builddir)/src/filters/remove-letter-acute-accent.xfst\" \
+		.o. @\"$(top_builddir)/src/filters/remove-halflong-dotbelow.xfst\"   \
+			;\n\
+		 save stack $@\n\
+		 quit\n" | $(XFST) $(VERBOSITY)
+
 
 # END: Local processing
 #########################################
