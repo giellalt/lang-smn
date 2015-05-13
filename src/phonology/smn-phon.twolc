@@ -126,7 +126,7 @@ Sets
        m7 n7 ŋ7 v7 s7 r7 đ7	l7 j7 h7 š7		   !!= @CODE@ 
        ṃ  ṇ  ŋ̣  ṿ  ṣ  ṛ  đ̣  ḷ  j̣  ḥ  ṣ̌         !!= * @CODE@
        %^RC %^RD %^SC  ˊ ;
- Geminate = b d g p h t k k4 c č f z ž l m n ŋ r s š v đ j l7 n7 s7 r7 m7 ;
+ Geminate = b d g p h t k k4 c č f z ž l m n ŋ r s š v đ j l7 n7 s7 r7 m7 i4 ;
  Seg = Vow Cns ;							   !!= * @CODE@ 
  WeG = %^WG1 %^WGSH %^CPL %^WG ;		  !!= * @CODE@
  StemCns = b b3 d d3 g g2 g3 h h2 h3 		   !!= * @CODE@ 
@@ -247,7 +247,7 @@ Cx:0 <=> Vow: _ (ˊ:) Cx (%^RC:) :Vow (%^SV:) (Vow) (Cns:) (%^ÁI:|%^ÁE:) (%^DS
 !€ cuo00z0â00
 
 "ˊ to zero gradation"
-ˊ:0 <=> Vow: (%^RD:) Cns: _ Cns: (Cns) (%^RC:) Vow: (%^SFV:) (%^SV:) (Vow) (Cns:) (%^DSH:) [ %^WG:0 | %^CSH:0 ] (%^RLEN:) (%^CLEN:) (%^SLEN:) [%>|.#.]  ;
+ˊ:0 <=> Vow: (%^RD:) Cns: _ Cns: (Cns) (%^RC:) Vow: (%^SFV:) (%^SV:) (Vow) (Cns:) (%^DSH:)(%^RLEN:) [ %^WG:0 | %^CSH:0 ]  (%^CLEN:) (%^SLEN:) [%>|.#.]  ;
  !        Vow: Cns: _ Cns Vow: %^CSH:0 %>  ; !nieidân suá%^RDi4ˊttu  puá%^RDlˊl7u
 
 !"Consonant shortening (not weak grade) final part"
@@ -511,14 +511,14 @@ Cx:Cy <=> Vow: _ %^RC: :Vow (%^SV:) (%^RVSH:) %^CLEN: (%^SVLOW:)  (%^SLEN:)  %>:
 
 "Lengthening of short root consonant 1"
 !! * __@RULENAME@__  for h to vv
-Cx:Cy <=> Vow: _ %^RC: :Vow (%^WG:) (%^RVSH:) %^CLEN: (%^SVLOW:)  %>:  ;
+Cx:Cy <=> Vow: _ %^RC: :Vow (%^SV:) (%^WG:) (%^RVSH:) %^CLEN: (%^SVLOW:) (%^SLEN:)  %> \[ n | d ]  ;
 	where Cx in (  h p )
 		  Cy in (  v v ) 
 		  matched ;
 
 "Lengthening of short root consonant 2"
-!! * __@RULENAME@__   for h to vv lo%^RVp%^RCe%^WG%^CLEN%>jn  lo%^RVp%^RCe%^SV%^CLEN%^SLEN%>n
-%^RC:Cy <=> Vow: Cx: _ :Vow  (%^WG:) (%^RVSH:) %^CLEN: (%^SVLOW:) [%>|.#.] ;
+!! * __@RULENAME@__   for h to vv 
+%^RC:Cy <=> Vow: Cx: _ :Vow  (%^SV:) (%^WG:) (%^RVSH:) %^CLEN: (%^SVLOW:) (%^SLEN:) %> \[ n | d ] ;
 	where Cx in (  h )  
 		  Cy in (  v  )   
 		  matched ;
@@ -527,15 +527,21 @@ Cx:Cy <=> Vow: _ %^RC: :Vow (%^WG:) (%^RVSH:) %^CLEN: (%^SVLOW:)  %>:  ;
 !€ ka^RVss^RCa^SV^WG^CLEN^SLEN>st
 !€ ka00ssaa000>st
 
+
+!€ va%^RVh%^RCe%^SV%^WG%^CLEN%^SLEN%>st
+!€ va0vvee000>st
+
 "Lengthening of consonant for essive"
-!! * __@RULENAME@__   piiru piirrun niisu niissun
-%^RC:Cy <=> Vow: Cx _ Vow  %^CLEN: %>: [ n | d ] ;
-	where Cx in ( t r s )  
-		  Cy in (  t r s )   
+!! * __@RULENAME@__   piiru piirrun niisu niissun 
+%^RC:Cy <=> Vow: Cx _ Vow (%^SV:)  %^CLEN: (%^SLEN:) %>: [ n | d ] ;
+	where Cx in ( t r s h )  
+		  Cy in (  t r s h )   
 		  matched ;
 
 ! piir %^RC u %^CLEN %> n
 
+!€ va%^RVh%^RCe%^SV%^CLEN%^SLEN%>n
+!€ va0hhee00>n
 
 
 !"Lengthening of half-long root consonant 2"
