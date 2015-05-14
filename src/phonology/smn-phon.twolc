@@ -316,8 +316,8 @@ Cy:0 <=> Cx  _  %^RC: Vow: (%^RLEN:)  %^CSH: (%^RVSH:) (%^EA:) [%>|.#.] ;
 !             Cy in ( s v m n ŋ š h l p d k k4 h4 p4 t g r č4 z  l7 )  
 !       matched ;
 !
-!!€ pie^RDgˊg^RCâ^DLEN^CSH>n
-!!€ pie0g000â00>n
+!pie^RDgˊg^RCâ^DLEN^CSH>n
+! pie0g000â00>n
 !
 
 "xx:x gradation 2, RV:ˊ when WG"
@@ -402,7 +402,7 @@ Cx:Cy <=> Vow:  Cy: (ˊ:) _  Vow: \[%^WG:0 | %^DSH:0 | %^RLEN:0 ] ;
 
 "xy:zy gradation"
 !! * __@RULENAME@__  ht:vt, we use h4 
-Cx:v <=> (ˊ:) _ Cz (%^RC:) Vow (%^SV:) (Cns:) %^WG: ;
+Cx:v <=>  _ (ˊ:) Cz (%^RC:) Vow (%^SV:) (Cns:) %^WG: ;
 ! was before the change: <=> _ (´:)
        where Cx in ( h4 k4 h4 h4 ) 
              Cz in ( t  s  č  c  ) 
@@ -595,12 +595,21 @@ t:0 <=> _ %>: t t ;
 
 
 "Consonant lengthening after xx:x and xy:zy weak grade with x4 on upper side"
-!! * __@RULENAME@__  as previous rule, but for k4, č4, p4 
-%^RC:Cx <=> [:Vow|%^RV:] Cy: Cz: _ Vow: (%^SV:) %^WG: %^CLEN: ;
+!! * __@RULENAME@__  as previous rule, but for k4, č4, p4  
+%^RC:Cx <=> [:Vow|%^RV: | %^RD:] Cy: (ˊ:) Cz: _ Vow: (%^SV:) %^WG: %^CLEN: ;
         where Cy in ( k  č  p  k  h ) 
               Cz in ( k4 č4 p4 s  c ) 
               Cx in ( h  j  v  s  c ) 
         matched ;
+
+"Consonant lengthening after xy:zy weak grade with k4ss and h4čč"
+!! * __@RULENAME@__  as previous rule, but for  čuhčá čuvččáin kuá%^RDh4ˊč%^RCá%^WG%^CLEN%>in
+%^RC:Cx <=> [:Vow|%^RV: | %^RD:] Cy: (ˊ:) Cz: _ Vow:  %^WG: %^CLEN: ;
+        where Cy in ( k4 h4) 
+              Cz in ( s  č) 
+              Cx in (  s č ) 
+        matched ;
+
 
 "Consonant lengthening after x:y weak grade, to x:yy, with %^SV"
 !! * __@RULENAME@__  , here we lengthen the lower y consonant, spaha -> spavvaast  ko%^RVp%^RCe%^SV%^CLEN%^SLEN%>n
