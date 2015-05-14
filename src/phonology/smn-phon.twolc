@@ -248,7 +248,7 @@ Cx:0 <=> Vow: _ (ˊ:) Cx (%^RC:) :Vow (%^SV:) (Vow) (Cns:) (%^ÁI:|%^ÁE:) (%^DS
 
 "ˊ to zero gradation"
 !! * __@RULENAME@__ when ^WG or ^CSH
-ˊ:0 <=> Vow: (%^RD:) Cns: _ Cns: (Cns) (%^RC:) Vow: (%^SFV:) (%^SV:) (Vow) (Cns:) (%^DSH:) %^WG:0  ([%^RLEN: | %^CLEN: ]) (%^SLEN:) [%>|.#.]  ; ! no RVSH?
+ˊ:0 <=> Vow: (%^RD:) Cns: _ Cns: (Cns) (%^RC:) Vow: (%^SFV:) (%^SV:) (Vow) (Cns:) (%^DSH:) %^WG:0   (%^RLEN: ) (%^SLEN:) [%>|.#.]  ; ! no RVSH?
          Vow: (%^RD:) Cns: _ Cns: (Cns) (%^RC:) Vow: (%^SFV:) (Vow) (Cns:)  (%^RLEN: ) %^CSH:0   [%>|.#.]  ; !no SC? no RVSH? no ^EA?
 
 
@@ -521,10 +521,10 @@ Cx:Cy <=> Vow: _ %^RC: :Vow (%^SV:) (%^WG:) (%^RVSH:) %^CLEN: (%^SVLOW:) (%^SLEN
 		  matched ;
 
 "Lengthening of short root consonant 2"
-!! * __@RULENAME@__   for h to vv 
+!! * __@RULENAME@__   for h to vv  p to vv
 %^RC:Cy <=> Vow: Cx: _ :Vow  (%^SV:) (%^WG:) (%^RVSH:) %^CLEN: (%^SVLOW:) (%^SLEN:) %> \[ n | d ] ;
-	where Cx in (  h )  
-		  Cy in (  v  )   
+	where Cx in (  h p )  
+		  Cy in (  v v )   
 		  matched ;
 
 ! piir %^RC u %^CLEN %> n
@@ -534,6 +534,8 @@ Cx:Cy <=> Vow: _ %^RC: :Vow (%^SV:) (%^WG:) (%^RVSH:) %^CLEN: (%^SVLOW:) (%^SLEN
 
 !€ va%^RVh%^RCe%^SV%^WG%^CLEN%^SLEN%>st
 !€ va0vvee000>st
+
+
 
 "Lengthening of consonant for essive"
 !! * __@RULENAME@__   piiru piirrun niisu niissun 
@@ -576,16 +578,16 @@ t:0 <=> _ %>: t t ;
 
 
 "Consonant lengthening after xx:x and xy:zy weak grade with x4 on upper side"
-!! * __@RULENAME@__  as previous rule, but for k4, č4, p4
+!! * __@RULENAME@__  as previous rule, but for k4, č4, p4 
 %^RC:Cx <=> [:Vow|%^RV:] Cy: Cz: _ Vow: (%^SV:) %^WG: %^CLEN: ;
         where Cy in ( k  č  p  k  h ) 
               Cz in ( k4 č4 p4 s  c ) 
               Cx in ( h  j  v  s  c ) 
         matched ;
 
-"Consonant lengthening after x:y weak grade, to x:yy"
-!! * __@RULENAME@__  , here we lengthen the lower y consonant, spaha -> spavvaast
-%^RC:Cx <=> [:Vow|%^RV:] Cx: _ Vow: (%^SV:) %^WG: %^CLEN: ;
+"Consonant lengthening after x:y weak grade, to x:yy, with %^SV"
+!! * __@RULENAME@__  , here we lengthen the lower y consonant, spaha -> spavvaast  ko%^RVp%^RCe%^SV%^CLEN%^SLEN%>n
+%^RC:Cx <=> [:Vow|%^RV:] Cx: _ Vow: %^SV: (%^WG: ) %^CLEN: ;
         where Cx in ( p l d m s r v ) ;
 
 
@@ -683,6 +685,7 @@ Vy:ˊ <=> Vx _  Cns: (Cns:) (%^RC:) Vow:  (%^DSH:) (%^WG:) (%^SFV:) (%^SC:) (%^�
              Vy in ( a e i o u y á ä ) 
        matched ;
 
+!This one doesn't exist in yaml:
 !€ mool7^RCâ^WG^RVSH>ttáá
 !€ moˊl0â00>ttáá
 
