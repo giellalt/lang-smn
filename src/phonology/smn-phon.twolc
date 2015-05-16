@@ -755,8 +755,8 @@ Vy:ˊ <=> Vx _  Cns: (Cns:) (%^RC:) Vow:  (%^DSH:) (%^WG:) (%^SFV:) (%^SC:) (%^�
 
 "Monophthongisation rule 1"
 !! * __@RULENAME@__  u:o in pairs like kuátij -> koođij
-!Vx:Vy <=> _ Vz: Cns:* i %>: j ;
-Vx:Vy <=> _ Vz: Cns:* i %^WG: %>: j ;
+!Vx:Vy <=> _ Vz: Cns:* i %>: i: ;
+Vx:Vy <=> _ Vz: Cns:* i %^WG: %>: i: ;
 	where Vx in ( i u ä )
 		  Vy in ( e o a )
 		  Vz in ( ä á ä )
@@ -767,7 +767,7 @@ Vx:Vy <=> _ Vz: Cns:* i %^WG: %>: j ;
 
 "Monophthongisation rule 2"
 !! * __@RULENAME@__  á:o in pairs like kuátij -> koođij 
-Vx:Vy <=> Vz: _ Cns:* i %^WG: %>: j ;
+Vx:Vy <=> Vz: _ Cns:* i %^WG: %>: i: ;
 	where Vx in ( ä á ä )
 		  Vy in ( e o a )
 		  Vz in ( i u ä )
@@ -781,7 +781,7 @@ Vx:Vy <=> Vz: _ Cns:* i %^WG: %>: j ;
 
 "Root vowel change before suffix j"
 !! * __@RULENAME@__  alge : olgijn ko%^RVv7%^RCe%^WG%^CLEN%>jn
-Vx:Vy <=> _  %^RV: Cns:+  e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> j ; 
+Vx:Vy <=> _  %^RV: Cns:+  e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> i: ; 
        where Vx in ( a o )
              Vy in ( o u) 
        matched ;
@@ -792,7 +792,7 @@ Vx:Vy <=> _  %^RV: Cns:+  e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> j ;
 
 "Root vowel lengtning with vowel change before suffix j"
 !! * __@RULENAME@__  alge : oolgijn 
-%^RV:Vy <=> Vx:  _  Cns:+  e: %^WG: %^RLEN:  %> j ; 
+%^RV:Vy <=> Vx:  _  Cns:+  e: %^WG: %^RLEN:  %> i: ; 
        where Vx in ( a o )
              Vy in ( o u ) 
        matched ;
@@ -901,7 +901,7 @@ i:0 <=> _ Cns %^SFV: (%^SC:) (%^CSH:) (%^RVSH:) [%>|.#.] ;
 
 "Stem vowel e deletion before 2nd syllable ij"
 !! * __@RULENAME@__  hmm have a look at this
-!e:0 <=> Cns: _ (Dummy:) (Dummy:) %>: i j ; unclear target !?
+!e:0 <=> Cns: _ (Dummy:) (Dummy:) %>: i: j ; unclear target !?
 e:0 <=> Cns: _ Cns %^SFV: (%^SC:) (%^CSH:) (%^RVSH:) [%>|.#.] ; 
 
 !€ šoddâdem^SFV>ist
@@ -943,9 +943,9 @@ e:á <=> [o|i|u] (%^RV:) Cns:+ _ (%^RLEN:) (%^CSH:) %^EA: [%>|.#.] ;
 !€ so00llá000>in
 
 
-"Stem vowel change e:i before suffix j"
+"Stem vowel change e:i before suffix i"
 !! * __@RULENAME@__ 
-e:i <=> Cns:  _  (%^WG:) ([ %^RLEN: | %^CLEN: ])  %> j ; 
+e:i <=> Cns:  _  (%^WG:) ([ %^RLEN: | %^CLEN: ])  %> i: ; 
 
 "Stem vowel u > o change before suffix"
 !! * __@RULENAME@__  ... check this, add test
@@ -953,9 +953,9 @@ u:o <=> Cns: _ (%^UU:|%^SV:) (%^DSH:) (%^WG:) (%^RVSH:) (%^RLEN:|%^CLEN:) (%^SLE
 ! stááḷu stááloust
 
 
-"Suffix j:i for a-stems"
+"Suffix i:j for i and e-stems"
 !! * __@RULENAME@__ spavvain
-j:i <=> a %^WG: ([%^CLEN: |%^RLEN: ])  %> _ ; 
+i:j <=> [i: | e: ] (%^WG:) ([%^CLEN: |%^RLEN: ]) (%^EA:)  %> _ ; 
 
 
 !"Illative suffix change in bisyllabic e stems"
