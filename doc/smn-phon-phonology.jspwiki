@@ -37,6 +37,7 @@ Literal quotes and angles must be escaped (cf morpheme boundaries further down):
  * i4:i                                    this is the underlying i consonant
  * m7:ṃ n7:ṇ ŋ7:ŋ̣ s7:ṣ r7:ṛ đ7:đ̣ l7:ḷ      with dots
  * j7:j̣ h7:ḥ š7:ṣ̌  v7:ṿ                    with dots
+ * h5:h                                    these consonants do not change in WG
 
 
 !More abstract archiphonemes
@@ -95,6 +96,10 @@ Sets
         A Á Â Ä E I O U Y Æ Ø Ö Å			    
         É Ó Ú Í À È Ò Ú Ì Ë Ü Ï Ê Ô Û Î Ã Ý 	    
         %^RV %^RD %^SV ;						    
+ *  RealVow = a á â ä e i o u y æ ø ö å		    
+        é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý 	    
+        A Á Â Ä E I O U Y Æ Ø Ö Å			    
+        É Ó Ú Í À È Ò Ú Ì Ë Ü Ï Ê Ô Û Î Ã Ý ;    
  *  Cns = b c č d đ f g h j k l m n ŋ 			    
         p q r s š t ŧ v w x z ž				    
         B C Č D Đ F G H J K L M N Ŋ			    
@@ -105,24 +110,15 @@ Sets
         m7 n7 ŋ7 v7 s7 r7 đ7	l7 j7 h7 š7		    
  *        ṃ  ṇ  ŋ̣  ṿ  ṣ  ṛ  đ̣  ḷ  j̣  ḥ  ṣ̌         
  *  Seg = Vow Cns ;							    
- *  WeG = %^WG1 %^WGSH %^CPL %^WG ;		  
  *  StemCns = b b3 d d3 g g2 g3 h h2 h3 		    
  *            j l m m2 m3 m8 n n8 n2 ŋ r s  ;      
 
- * Arch = %^RC %^RV %^SV %^SC %^RVD ;                 
- * Len = %^RLEN %^LLEN %^SLEN %^CLEN ;    			 
-
-
- * Dummy = %^CLEN %^CSH %^EE %^FCD %^IA %^EA %^LLEN %^MONO %^ODDC %^ODDSHV    
-          %^RLEN %^RVL %^RVSH %^SFV %^SLEN                      
-          %^SVF %^SVLOW %^UU %^VLOW %^RVSH %^WG %^ÁE %^ÁI ;   
 
 
 
 !!!Definition section
 
 Trying to introduce a WG right context, so far resulting in drop in performance.
-
 
 
 
@@ -133,109 +129,29 @@ Trying to introduce a WG right context, so far resulting in drop in performance.
 
 !Consonant gradation
 
-* __X:x halflong to short gradation__  mool7â to moolâ
+* __x7:x ja x:y WG gradation, also for n7j__  WG gives x7:x and x:y, except when CLEN  
 
 
 
-* __x:y gradation __ c to s etc, note that t:đ is in a separate rule
 
+* __n7j to nnj consonant lengthning__  special rule, suán7ju : suánnjun for Par and Ess
 
+* __RV:ˊ in x:y gradation __  saˊj̣e
 
 
-* __t:đ gradation __   for ito : iđo riä%^RDtˊk4á
 
 
-* __k4:h gradation for kk4 and tk4__    for atka : ađha
 
+mool7â to moolâ		  
 
 
-* __t4:đ gradation for tt4 __  ruttâ ruuđâ
 
 
+* __tˊk4:đh gradation, part 1, getting t:đ __   for ito : iđo riä%^RDtˊk4á  utke+N+Sg+Gen:  uˊđhe  riätká+N+Sg+Gen:  riäđhá  riä%^RDtˊk4á
 
-* __xx:x gradation__  tikká:tiká, deleting the first k, etc.
 
 
-* __ˊ to zero gradation__ when ^WG or ^CSH
 
-
-
-
-
-
-* __Consonant shortening (not weak grade) pp:p etc__ pp to p for kappeer ~ kaperist, ss:s, šš:š dd:d kk4:k pp4:p tt:t gg:g čč4:č zz:z cc:c tt4:t
-
-
-
-* __Consonant shortening (not weak grade) pp:p etc__ pp to p for kappeer ~ kaperist, ss:s, šš:š dd:d kk4:k pp4:p tt:t gg:g čč4:č zz:z cc:c tt4:t
-* __Consonant shortening (not weak grade) pp:p etc__ vv:v, mm:m, nn:n ŋŋ:ŋ ll:l hh4:h rr:r  
-* __Consonant shortening (not weak grade) pp:p etc__ 
-* __Consonant shortening (not weak grade) pp:p etc__ 
-
-* __xx:x gradation 2, RV:ˊ when WG__ kállu káˊḷui Lene: removed \h because of ALGE lexicon
-
-
-
-
-
-* __RV:ˊ in xx:x gradation 3, RV:ˊ when RVSH__ CSH
-
-* __xx:y long to something else gradation 1, weak grade __   hh:V, kk:h, pp:v, čč:J, deleting first part, k:0 in kk4:h etc 
-
-
-
-
-* __xx:y long to something else gradation 2 __  hh:V, kk:h, pp:v, čč:J here we change second part, k4:h in kk4:h etc.
-
-
-* __xx:x7 gradation for ^CSH illative 1 __   ku%^RVrrâ%^RLEN%^CSH%>n
-
-
-* __xx:x7 gradation for ^CSH illative 2 __   ku%^RVrrâ%^RLEN%^CSH%>n
-
-
-
-* __xˊx7:xˊx and xx7:xx as default when not WG nor DSH __  
-
-
-
-
-
-* __xy:zy gradation__  ht:vt, we use h4 
-
-
-
-
-
-
-
-* __xyy:xy gradation A__   
-
-
-
-
-
-
-* __xyy:xy gradation A__  this contains i4 pairs !suá%^RDi4ˊttu
-
-
-
-
-
-
-* __xxy:xy gradation for nnj weakgrade__  special case
-
-
-
-
-* __xyy:xz gradation for k4:h, first xyy:xy__  first k goes to 0
-
-
-
-
-* __xyy:xz gradation for k4:h 2 __  second k goes to h 
-
-* __xˊx:yˊy gradation for k4:h 3, puákˊku __  second k goes to h 
 
 
 !Other Consonant Rules
@@ -245,36 +161,20 @@ Trying to introduce a WG right context, so far resulting in drop in performance.
 
 
 
-
 * __nnj to nj shortening not weak grade__  special rule, e.g. konnjâl -> konjâlân
 
 
-* __n7j to nj weak grade__  special rule, suán7ju suánju 
-
-
-* __n7j to nnj consonant lengthning__  special rule, suán7ju suánnjun
-
-
-
-* __n7j to nnj consonant lengthning__  e.g. tt in hamittist
-
-
-
-* __Lengthening of half-long root consonant 1__  for l-dot to ll, changing l7 to first l in ll
-
-* __Lengthening of half-long root consonant 2__   for l-dot to ll, changing ^RC to second l in ll
-
-
-* __Lengthening of short root consonant 1__  for h to vv
-
-* __Lengthening of short root consonant 2__   for h to vv  p to vv
 
 
 
 
 
+* __Lengthening of half-long root consonant n7:n 1__  for l-dot to ll, changing l7 to first l in ll
 
-* __Lengthening of consonant for essive__   piiru piirrun niisu niissun 
+
+* __Lengthening of half-long root consonant n7 : nn 2__   for l-dot to ll, changing ^RC to second l in ll  muáđoin
+
+* __Lengthening of consonant for Ess/Par__   piiru piirrun niisu niissun vahe vahheen
 
 
 
@@ -282,26 +182,33 @@ Trying to introduce a WG right context, so far resulting in drop in performance.
 
 
 
-* __Assimilation of root consonant and double suffix consonant__  delet t in haamit in front of -ttáá, avoid -tttáá
+* __kol7^RCe^CLEN__
+* __kolle0__
+
+* __Lengthening of h and p to vv, for everything except Ess/Par 1__  for h to vv p to vv čääc%^RCi
+
+* __Lengthening of h and p to vv, for everything except Ess/Par 2__   for h to vv  p to vv   
 
 
 
-* __Assimilation of root consonant and double suffix consonant__  for locative kassaast, which is lengthened weak grade
 
 
 
 
-* __Consonant lengthening after xx:x and xy:zy weak grade with x4 on upper side__  as previous rule, but for k4, č4, p4  
-
-* __Consonant lengthening after xy:zy weak grade with k4ss and h4čč__  as previous rule, but for  čuhčá čuvččáin kuá%^RDh4ˊč%^RCá%^WG%^CLEN%>in
-
-
-* __Consonant lengthening after x:y weak grade, to x:yy, with %^SV__  , here we lengthen the lower y consonant, spaha -> spavvaast  ko%^RVp%^RCe%^SV%^CLEN%^SLEN%>n
 
 
 
-* __Consonant lengthening after x:y weak grade with x4 on upper side__  as previous rule, but for k4, č4, p4
 
+* __Lengthening of h and p to vv, for everything except Ess/Par 2__  delet t in haamit in front of -ttáá, avoid -tttáá
+
+
+
+
+
+* __Lengthening of h and p to vv, for everything except Ess/Par 2__  as previous rule, but for k4, č4, p4  
+* __Lengthening of h and p to vv, for everything except Ess/Par 2__  as previous rule, but for  čuhčá čuvččáin kuá%^RDh4ˊč%^RCá%^WG%^CLEN%>in
+* __Lengthening of h and p to vv, for everything except Ess/Par 2__  , here we lengthen the lower y consonant, spaha -> spavvaast  ko%^RVp%^RCe%^SV%^CLEN%^SLEN%>n
+* __Lengthening of h and p to vv, for everything except Ess/Par 2__  as previous rule, but for k4, č4, p4
 
 
 
@@ -311,7 +218,7 @@ Trying to introduce a WG right context, so far resulting in drop in performance.
 
 !Other consonant rules
 
-* __Word final consonant deletion of n m t                 __ for vaskâm:vaaskâ
+* __Lengthening of h and p to vv, for everything except Ess/Par 2__ for vaskâm:vaaskâ
 
 
 
@@ -341,7 +248,6 @@ Trying to introduce a WG right context, so far resulting in drop in performance.
 * __Vowel shortening (no consonant shortening) in vowel stems__ (example?)
 
 
-* __RV:ˊ in x:y gradation __  saˊj̣e
 
 
 * __Root vowel lenghtening in bisyllabic stems__  lekkâ : leehá- 
