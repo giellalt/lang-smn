@@ -72,7 +72,7 @@ h5:h                                  !!= * @CODE@  these consonants do not chan
 %^EE:0      !!= * @CODE@ = Final vowel deletion in ee stems (not in use)
 %^FCD:0     !!= * @CODE@ = Final consonant deletion 
 %^IA:0      !!= * @CODE@ = i to á (more) (not in use)
-%^EA:0     !!= * @CODE@ = e to a/á in ill etc (change name to EA?)
+%^EA:0     !!= * @CODE@ = e to a/á in ill etc
 %^LLEN:0    !!= * @CODE@ = low vow lengthening (not in use)
 %^MONO:0    !!= * @CODE@ = monophtongization of diphthongs  (not in use)
 %^RLEN:0    !!= * @CODE@ = root lengthening, with ^RD
@@ -538,9 +538,24 @@ e:i <=> _ %^RV: Cns:+ Vow: %^EA: %> ;
 !! * __@RULENAME@__  ... with ^ILL as trigger; kiem´ni -> kiämnán
 e:ä <=> i _  Cns:+ Vow: %^EA: %> ;
 
-"ä to á in Illative and Sg3"
-!! * __@RULENAME@__  ... after .#. or Cns, with ^ILL as trigger; kiem´ni -> kiämnán
-ä:á <=> [.#.|Cns] _  Cns:+ Vow: %^EA: ;
+!"ä to á in Illative and Sg3"
+!!! * __@RULENAME@__  ... after .#. or Cns, with ^ILL as trigger; kiem´ni -> kiämnán
+!ä:á <=> [.#.|Cns] _  Cns:+ Vow: %^EA: ;
+
+"ää to áá in Illative and Sg3"
+!! * __@RULENAME@__  ... for säämi > sáámán
+ä:á <=> _  [ä:|%^RV:] Cns:+ :á %^EA: ;
+        ä: _          Cns:+ :á %^EA: ;
+
+!€ sääm7^RCi^EA>n
+!€ sááṃ0á0>n
+
+"äRV to áá in Illative and Sg3"
+!! * __@RULENAME@__  ... for täsni -> táásnán
+%^RV:á <=> ä: _  Cns:+ :á %^EA: ;
+
+!€ tä^RVsni^EA>n
+!€ táásná0>n
 
 "ye to uá in Illative and Sg3 1" 
 !! * __@RULENAME@__  Part 1 of ye to uá for kyeli : kuálán
@@ -549,6 +564,7 @@ y:u <=> _ e:  Cns:+ Vow: %^EA: ;
 "ye to uá in Illative and Sg3 2"
 !! * __@RULENAME@__  Part 2 of ye to uá for kyeli : kuálán
 e:á <=> y: _  Cns:+ Vow: %^EA: ;
+
 
 
 !! !Diphthong rules
@@ -646,6 +662,10 @@ e:a <=> a (%^RV:) Cns:+ _ (%^RLEN:) (%^CSH:) %^EA: ;
 !! * __@RULENAME@__  
 e:á <=> [o|i|u] (%^RV:) Cns:+ _ (%^RLEN:) (%^CSH:) %^EA: [%>|.#.] ;
 
+
+"Stem vowel i to á for other root vowel."
+!! * __@RULENAME@__  e.g. säämi > Ill sáámán
+i:á <=> [:e|:i|:ä|:á] (%^RV:) Cns:+ _ (%^RLEN:) (%^CSH:) %^EA: [%>|.#.] ;
 
 
 
