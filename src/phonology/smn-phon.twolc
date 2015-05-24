@@ -142,7 +142,8 @@ Sets
 
 Definitions
 
-WeakGrade =  :RealVow  (%^SV:)  (%^DSH:) %^WG:0    ;    
+WeakGrade =  :RealVow (Cns:) (%^SV:) (%^DSH:) %^WG:0    ;    !!= @CODE@ the general definition
+
 
 !! !!!Rule section
 
@@ -157,8 +158,8 @@ Rules
 Cx:Cy <=> Vow: _ (%^RC: ) (j) WeakGrade \%^CLEN:0 ;
           Vow: _ %^RC:  j RealVow:  %^CLEN:0 ; !n7j: Par and Ess
           Vow: _ %^RC:  j RealVow: %^WG:0 %^CLEN:0 %^SVLOW:0 ; !n7j: Com
-	where Cx in ( m7 n7 ŋ7 r7 s7 š7 j7 v7 đ7 l7 h p t c č )  
-          Cy in ( m  n  ŋ  r  s  š  j  v  đ  l  ṿ v đ s j̣ )  
+	where Cx in ( m7 n7 ŋ7 r7 s7 š7 j7 v7 đ7 l7 h p c č )  
+          Cy in ( m  n  ŋ  r  s  š  j  v  đ  l  ṿ v s j̣ )  
 		  matched ;
 
 !€ suá%^RDn7%^RCju^WG>
@@ -201,7 +202,10 @@ Cx:Cy <=> Vow: _ (%^RC: ) (j) WeakGrade \%^CLEN:0 ;
 
 "tˊk4:đh gradation, part 1, getting t:đ" 
 !! * __@RULENAME@__   for ito : iđo riä%^RDtˊk4á  utke+N+Sg+Gen:  uˊđhe  riätká+N+Sg+Gen:  riäđhá  riä%^RDtˊk4á
-t:đ <=> Vow: _ (ˊ:) k4: WeakGrade ;
+t:đ <=> Vow: _  (ˊ:) k4: (%^RC:) WeakGrade ;
+        Vow: _  %^RC:   j RealVow: %^WG:0 %^CLEN:0 %^SVLOW:0 ; !n7j: Com
+        Vow: _ (%^RC:) (j) WeakGrade \%^CLEN:0 ;
+        Vow: _  %^RC:   j RealVow:  %^CLEN:0 ; !n7j: Par and Ess
 
 
 !€ jo^RVtk4^RCâ^WG^RLEN
@@ -209,7 +213,7 @@ t:đ <=> Vow: _ (ˊ:) k4: WeakGrade ;
 
 "k4:h gradation for kk4 and tk4"
 !! * __@RULENAME@__    for atka : ađha
-k4:h <=> Vow: [t:|k:] (ˊ:) _ WeakGrade ;
+k4:h <=> Vow: [t:|k:] (ˊ:) _ (%^RC:) WeakGrade (%^RLEN:) ;
 !k4:h <=> Vow: [t:|k:] _ (%^RC:) :Vow (%^SV:) (Cns) %^WG: ;
 
 !€ mä^RVtk4i^WG^RLEN
@@ -284,9 +288,6 @@ n:0 <=> n _ j Vow (Cns:) %^CSH: [%>|.#.] ;
 
 
 
-!€ suá^RDn7^RCju^WG>   
-!€ suá0nnju0>
-
 !€ suá^RDn7^RCju^CLEN>n
 !€ suá0nnju0>n
 !€ haamit^SC^CSH^RVSH>ist
@@ -308,10 +309,10 @@ n:0 <=> n _ j Vow (Cns:) %^CSH: [%>|.#.] ;
 
 "Lengthening of half-long root consonant n7:n 1"
 !! * __@RULENAME@__  for l-dot to ll, changing l7 to first l in ll
-Cx:Cy <=> Vow: _ %^RC: :Vow  %^CLEN:   %>  ;
-          Vow: _ %^RC: :Vow %^SV: %^WG:  %^CLEN: %^SLEN:  %> ; !Loc  
-          Vow: _ %^RC: :Vow  %^WG:  %^CLEN:   %> ; !Com  %^WG%^CLEN
-          Vow: _ %^RC: :Vow %^SV: %^CLEN: %^SLEN:  %>  ; !Par Ess
+Cx:Cy <=> Vow: _ %^RC: :Vow              %^CLEN:         %> ;
+          Vow: _ %^RC: :Vow %^SV: %^WG:  %^CLEN: %^SLEN: %> ; !Loc  
+          Vow: _ %^RC: :Vow       %^WG:  %^CLEN:         %> ; !Com  %^WG%^CLEN
+          Vow: _ %^RC: :Vow %^SV:        %^CLEN: %^SLEN: %> ; !Par Ess
 	where Cx in ( l7 r7 s7 h7 m7 n7 đ7 v7 ŋ7 j7 š7 )
 		  Cy in ( l  r  s  h  m  n  đ  v  ŋ  i  š  ) 
 		  matched ;
@@ -540,7 +541,7 @@ Vx:Vy <=> _ Vz: Cns:* i %^WG: %> :j ;
 		  Vz in ( ä á )
 	matched ;
 
-"Monophthongisation rule 1"
+"Monophthongisation rule ä:a"
 !! * __@RULENAME@__  u:o in pairs like kuátij -> koođij
 ä:a <=> _ [ä:|%^RV:] Cns:* i %^WG: (%^RVSH:) %> :j ;
 
@@ -764,7 +765,7 @@ u:o <=> Cns: _ (%^UU:|%^SV:) (%^DSH:) (%^WG:) (%^RVSH:) (%^RLEN:|%^CLEN:) (%^SLE
 
 "Suffix i:j for i and e-stems"
 !! * __@RULENAME@__  
-i:j <=> [i: | e: ] (%^WG:) ([%^CLEN: |%^RLEN: ]) (%^EA:)  %> _ [d|n|g|t|%>|.#.]; 
+i:j <=> [i: | e: ] (%^WG:) ([%^CLEN: |%^RLEN:|%^RVSH:]) (%^EA:)  %> _ [d|n|g|t|%>|.#.]; 
 
 
 !"Illative suffix change in bisyllabic e stems"
