@@ -167,12 +167,13 @@ Cx:Cy <=> Vow: _ (%^RC: ) (j) WeakGrade \%^CLEN:0 ;
 
 !iše:i%^RVš7%^RCe VAHE ;  %^SV%^WG%^CLEN%^SLEN%>st
 
-"RV:ˊ in x:y gradation "
+"RV:ˊ in x:y gradation and root vowel shortening"
 !! * __@RULENAME@__  saˊj̣e (now line 2 is justa copy from Vx:ˊ. Shorten the context !
-%^RV:ˊ <=> Vow: _ Cns: (%^RC:) [e: | o: | a: | á: ] ( [%^EA: | %^WG: ] )  %> ; 
+!%^RV:ˊ <=> Vow: _ Cns: (%^RC:) [e: | o: | a: | á: ] ( [%^EA: | %^WG: ] )  %> ; 
+%^RV:ˊ <=> Vow: _ Cns: (%^RC:) [e: | o: | a: | á: ] (%^WG:)  %> ; 
            Vow: _  Cns: (Cns:) (%^RC:) Vow:  (%^DSH:) (%^WG:) (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) %^RVSH: (%^SVLOW:) [%>|.#.] ;
 ! For reference: copied in to be edited:
-!Vy:ˊ <=> Vx _  Cns: (Cns:) (%^RC:) Vow:  (%^DSH:) (%^WG:) (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) %^RVSH: (%^SVLOW:) [%>|.#.] ;
+   !Vy:ˊ <=> Vx _  Cns: (Cns:) (%^RC:) Vow:  (%^DSH:) (%^WG:) (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) %^RVSH: (%^SVLOW:) [%>|.#.] ;
 
 
 !pááj7%^RCá
@@ -205,6 +206,24 @@ t:đ <=> Vow: _ (ˊ:) k4: WeakGrade ;
 
 !€ jo^RVtk4^RCâ^WG^RLEN
 !€ joođh0â00
+
+"k4:h gradation for kk4 and tk4"
+!! * __@RULENAME@__    for atka : ađha
+k4:h <=> Vow: [t:|k:] (ˊ:) _ WeakGrade ;
+!k4:h <=> Vow: [t:|k:] _ (%^RC:) :Vow (%^SV:) (Cns) %^WG: ;
+
+!€ mä^RVtk4i^WG^RLEN
+!€ määđhi00
+
+!€ su^RVkk4^RCá^SV^WG^CLEN^SLEN>st
+!€ su00hháá000>st
+
+"t4:đ gradation for tt4" 
+!! * __@RULENAME@__  ruttâ ruuđâ
+t4:đ <=> t: _ Vow: %^WG: ;
+
+!€ ru%^RVtt4â%^WG%^RLEN>
+!€ ruu0đâ00>
 
          
 
@@ -439,7 +458,7 @@ Cx:Cy <=> Vow: _ %^RC: :Vow (%^SV:) %^WG: %^CLEN: ([%^SVLOW: |%^SLEN: | %^RVSH:]
  
 "Vowel shortening with consonant shortening" 
 !! * __@RULENAME@__  for koonjâl -> konjâlân
-Vx:0 <=> _ Vx Seg:* ([%^RC:|%^SC:]) %^CSH: (%^RVSH:|%^EA:) [%>|.#.] ;
+Vx:0 <=> [Seg:|.#.] _ Vx Seg:* ([%^RC:|%^SC:]) %^CSH: (%^RVSH:|%^EA:) [%>|.#.] ;
         where Vx in ( a e o á ä u y i ) ;
 
 !  ([%^RC:|%^SC:])  was earlier (Dummy:*), but we changed to avoid conflict
@@ -463,7 +482,7 @@ Vx:0 <=> _ Vx Seg:* ([%^RC:|%^SC:]) %^CSH: (%^RVSH:|%^EA:) [%>|.#.] ;
 
 "Vowel shortening (no consonant shortening) in consonant stems"
 !! * __@RULENAME@__ kiirrâs- to kirrâsân
-Vy:0 <=> _ Vx   Cns: (Cns:) (%^RC:) Vow  :Cns (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) (%^CLEN:) %^RVSH: [%>|.#.] ;
+Vy:0 <=> Seg: _ Vx   Cns: (Cns:) (%^RC:) Vow  :Cns (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) (%^CLEN:) %^RVSH: [%>|.#.] ;
        where Vx in ( a e i o u á ä ) 
              Vy in ( a e i o u á ä ) 
        matched ;
@@ -665,7 +684,7 @@ Vx:0 <=> _ Vx: (Cns:) Vz: [%^WG:|%^CSH:] ;
 
 "Fleeting vowel before suffix"
 !! * __@RULENAME@__ deletes -i- in piehâin to piehânjist 
-i:0 <=> _ Cns %^SFV: (%^SC:) (%^CSH:) (%^RVSH:) %> ;
+i:0 <=> Seg: _ Cns %^SFV: (%^SC:) (%^CSH:) (%^RVSH:) %> ;
 
 !rejected:
 !€ pieˊhâin^SFV^SC^CSH^RVSH>ist
@@ -745,7 +764,7 @@ u:o <=> Cns: _ (%^UU:|%^SV:) (%^DSH:) (%^WG:) (%^RVSH:) (%^RLEN:|%^CLEN:) (%^SLE
 
 "Suffix i:j for i and e-stems"
 !! * __@RULENAME@__  
-i:j <=> [i: | e: ] (%^WG:) ([%^CLEN: |%^RLEN: ]) (%^EA:)  %> _ ; 
+i:j <=> [i: | e: ] (%^WG:) ([%^CLEN: |%^RLEN: ]) (%^EA:)  %> _ [d|n|g|t|%>|.#.]; 
 
 
 !"Illative suffix change in bisyllabic e stems"
