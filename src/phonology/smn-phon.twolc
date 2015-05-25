@@ -189,7 +189,7 @@ Cx:Cy <=> Vow: _ (%^RC: ) (j) WeakGrade \%^CLEN:0 ;
 ![13/16][FAIL] páájá+N+Pl+Ill => Unexpected results: páájáid
 
 
-!! mool7â to moolâ		  
+! mool7â to moolâ:		  
 		  
 !€ mool7^RCâ^WG>
 !€ mool0â0>
@@ -200,7 +200,7 @@ Cx:Cy <=> Vow: _ (%^RC: ) (j) WeakGrade \%^CLEN:0 ;
 !€ juá%^RDh%^RCu%^DSH%^WG%>ttáá
 !€ juáˊṿ0u00>ttáá
 
-"tˊk4:đh gradation, part 1, getting t:đ" 
+"t:đ, also tˊk4:đh gradation, part 1" 
 !! * __@RULENAME@__   for ito : iđo riä%^RDtˊk4á  utke+N+Sg+Gen:  uˊđhe  riätká+N+Sg+Gen:  riäđhá  riä%^RDtˊk4á
 t:đ <=> Vow: _  (ˊ:) k4: (%^RC:) WeakGrade ;
         Vow: _  %^RC:   j RealVow: %^WG:0 %^CLEN:0 %^SVLOW:0 ; !n7j: Com
@@ -264,7 +264,7 @@ t4:đ <=> t: _ Vow: %^WG: ;
 !! !Consonant shortening
 
 ! "Word final consonant deletion of n m t"                 
-! !! * __@RULENAME@__ for vaskâm:vaaskâ
+! !! * RULENAME for vaskâm:vaaskâ
 ! Cx:0 <=> _  (%^ÁE:) (%^SC:) (%^WG:) %^FCD: ;      
 !          where Cx in (n m t) ;
 
@@ -344,9 +344,9 @@ Cx:Cy <=> Vow: _ %^RC: :Vow              %^CLEN:         %> ;
 
 
 
-!!rejected:
-!!€ kol7^RCe^CLEN
-!!€ kolle0
+!rejected:
+!€ kol7^RCe^CLEN
+!€ kolle0
 
 "Lengthening of h and p to vv, for everything except Ess/Par 1"
 !! * __@RULENAME@__  for h to vv p to vv čääc%^RCi
@@ -398,7 +398,7 @@ Cx:Cy <=> Vow: _ %^RC: :Vow (%^SV:) %^WG: %^CLEN: ([%^SVLOW: |%^SLEN: | %^RVSH:]
 
 
 !"Consonant lengthening after xx:x and xy:zy weak grade with x4 on upper side"
-!!! * __@RULENAME@__  as previous rule, but for k4, č4, p4  
+!  * __@RULENAME@__  as previous rule, but for k4, č4, p4  
 !%^RC:Cx <=> [:Vow|%^RV: | %^RD:] Cy: (ˊ:) Cz: _ Vow: (%^SV:) %^WG: %^CLEN: ;
 !        where Cy in ( k  č  p  k  h ) 
 !              Cz in ( k4 č4 p4 s  c ) 
@@ -406,7 +406,7 @@ Cx:Cy <=> Vow: _ %^RC: :Vow (%^SV:) %^WG: %^CLEN: ([%^SVLOW: |%^SLEN: | %^RVSH:]
 !        matched ;
 !
 !"Consonant lengthening after xy:zy weak grade with k4ss and h4čč"
-!!! * __@RULENAME@__  as previous rule, but for  čuhčá čuvččáin kuá%^RDh4ˊč%^RCá%^WG%^CLEN%>in
+! * __@RULENAME@__  as previous rule, but for  čuhčá čuvččáin kuá%^RDh4ˊč%^RCá%^WG%^CLEN%>in
 !%^RC:Cx <=> [:Vow|%^RV: | %^RD:] Cy: (ˊ:) Cz: _ Vow:  %^WG: %^CLEN: ;
 !        where Cy in ( k4 h4) 
 !              Cz in ( s  č) 
@@ -415,14 +415,14 @@ Cx:Cy <=> Vow: _ %^RC: :Vow (%^SV:) %^WG: %^CLEN: ([%^SVLOW: |%^SLEN: | %^RVSH:]
 !
 !
 !"Consonant lengthening after x:y weak grade, to x:yy, with %^SV"
-!!! * __@RULENAME@__  , here we lengthen the lower y consonant, spaha -> spavvaast  ko%^RVp%^RCe%^SV%^CLEN%^SLEN%>n
+! * __@RULENAME@__  , here we lengthen the lower y consonant, spaha -> spavvaast  ko%^RVp%^RCe%^SV%^CLEN%^SLEN%>n
 !%^RC:Cx <=> [:Vow|%^RV:] Cx: _ Vow: %^SV: (%^WG: ) %^CLEN: ;
 !        where Cx in ( p l d m s r v ) ;
 !
 !
 !
 !"Consonant lengthening after x:y weak grade with x4 on upper side"
-!!! * __@RULENAME@__  as previous rule, but for k4, č4, p4
+! * __@RULENAME@__  as previous rule, but for k4, č4, p4
 !%^RC:Cx <=> [:Vow|%^RV:] (Cz:) Cy: _ Vow: (%^SV:) %^WG:  %^CLEN: ;
 !        where Cy in ( k4 č4 p4 ) 
 !              Cx in ( h  j  v  ) 
@@ -433,11 +433,29 @@ Cx:Cy <=> Vow: _ %^RC: :Vow (%^SV:) %^WG: %^CLEN: ([%^SVLOW: |%^SLEN: | %^RVSH:]
 
 !! !Other consonant rules
 
+"xˊx7:xˊx and xx7:xx as default when not WG | DSH | RLEN" 
+!! * __@RULENAME@__  
+Cx:Cy <=> Vow:  Cy: (ˊ:) _  Vow: \[%^WG:0 | %^DSH:0 | %^RLEN:0 ] ;
+		  Vow:  Cy: (ˊ:) _  Vow: %^WG:0  %^CLEN:0  ;
+	where Cx in ( l7 n7 s7 š7 r7 m7 v7) 
+	      Cy in ( l  n s š r m v)
+		  matched ;
+
+!€ puá%^RDlˊl7u>
+!€ puá0lˊlu>
+
+!€ puá%^RDlˊl7u%^DSH%^WG%>ttáá
+!€ puáˊ00ḷu00>ttáá
+
+!€ ká%^RVll7u%>
+!€ ká0llu>
+
+
 !! (outcommented)
 
 
 !"Assimilation of root consonant and double suffix consonant"
-!!! * __@RULENAME@__  delet t in haamit in front of -ttáá, avoid -tttáá
+! * __@RULENAME@__  delet t in haamit in front of -ttáá, avoid -tttáá
 !t:0 <=> _ %> t t ; 
 
 !€ haamit>ttáá
@@ -461,8 +479,6 @@ Cx:Cy <=> Vow: _ %^RC: :Vow (%^SV:) %^WG: %^CLEN: ([%^SVLOW: |%^SLEN: | %^RVSH:]
 !! * __@RULENAME@__  for koonjâl -> konjâlân
 Vx:0 <=> [Seg:|.#.] _ Vx Seg:* ([%^RC:|%^SC:]) %^CSH: (%^RVSH:|%^EA:) [%>|.#.] ;
         where Vx in ( a e o á ä u y i ) ;
-
-!  ([%^RC:|%^SC:])  was earlier (Dummy:*), but we changed to avoid conflict
 
 !€ koonnjâl^CSH>ân
 !€ k0on0jâl0>ân
@@ -494,7 +510,7 @@ Vy:0 <=> Seg: _ Vx   Cns: (Cns:) (%^RC:) Vow  :Cns (%^SFV:) (%^SC:) (%^ÁI:) (%^
  
 "Vowel shortening in front two consonants and i-suffix"
 !! * __@RULENAME@__ ráávhu- to rávhoid
-Vy:0 <=> _ Vx   Cns: [ Cns: - %^RC:0 ] Vow:  %^WG: (%^CLEN:) %^SVLOW: %> [ i4: | i ] ;
+Vy:0 <=> _ Vx   Cns: [ Cns: - %^RC:0 ] Vow:  %^WG: (%^CLEN:) %^SVLOW: %> i  ;
        where Vx in ( a e i o u á ä ) 
              Vy in ( a e i o u á ä ) 
        matched ;
@@ -542,7 +558,7 @@ Vx:Vy <=> _ Vz: Cns:* i %^WG: %> :j ;
 	matched ;
 
 "Monophthongisation rule ä:a"
-!! * __@RULENAME@__  u:o in pairs like kuátij -> koođij
+!! * __@RULENAME@__ 
 ä:a <=> _ [ä:|%^RV:] Cns:* i %^WG: (%^RVSH:) %> :j ;
 
 !€ sääm7^RCi^WG^RVSH>in
@@ -765,7 +781,7 @@ u:o <=> Cns: _ (%^UU:|%^SV:) (%^DSH:) (%^WG:) (%^RVSH:) (%^RLEN:|%^CLEN:) (%^SLE
 
 "Suffix i:j for i and e-stems"
 !! * __@RULENAME@__  
-i:j <=> [i: | e: ] (%^WG:) ([%^CLEN: |%^RLEN:|%^RVSH:]) (%^EA:)  %> _ [d|n|g|t|%>|.#.]; 
+i:j <=> [i: | e: ] (%^DSH:) (%^WG:) ([%^CLEN: |%^RLEN:|%^RVSH: | %^SVLOW:]) (%^EA:)  %> _ [d|n|g|t|%>|.#.]; 
 
 
 !"Illative suffix change in bisyllabic e stems"
