@@ -501,7 +501,6 @@ Vy:0 <=> Seg: _ Vx   Cns: (Cns:) (%^RC:) Vow  :Cns (%^SFV:) (%^SC:) (%^ÁI:) (%^
 "Vowel shortening in front two consonants and i-suffix"
 !! * __@RULENAME@__ ráávhu- : rávhoid, čääci : čassijn
 Vy:0 <=> Vx: _  Cns: [ Cns: - %^RC:0 ] Vow:  %^WG: (%^CLEN:) %^SVLOW: %> i:  ;
-!         Vx: _  Cns: %^RC:0  i: %^DSH: %^WG: %^RVSH: %> i:  ;
        where Vx in ( a e i o u á ä ) 
              Vy in ( a e i o u á ä ) 
        matched ;
@@ -550,9 +549,9 @@ Vx:Vy <=> _ Vz: Cns:* i %^WG: %> :j ;
 	matched ;
 
 "Monophthongisation rule ä:a"
-!! * __@RULENAME@__  čääci : čassijn %^DSH%^WG%^RVSH
+!! * __@RULENAME@__  čääci:čassijn, läbži:labžijn
 ä:a <=> _ [ä:|%^RV:] Cns:+ i (%^DSH:) %^WG: (%^RVSH:) %> i: ;
-        _  ä:        Cns: %^RC:   i %^WG: %^CLEN: %^SVLOW: %> i: ;
+        _ [ ä: |%^RV: ] Cns: Cns:   i %^WG: %^CLEN: %^SVLOW: %> i: ; !čääci:čassijn, läbži:labžijn
 
 !€ sääm7^RCi^WG^RVSH>in
 !€ saam0i00>jn
@@ -630,14 +629,18 @@ e:ä <=> i _  Cns:+ Vow: %^EA: %> ;
 !€ tä^RVsni^EA>n
 !€ táásná0>n
 
-"ye to uá in Illative and Sg3 1" 
-!! * __@RULENAME@__  Part 1 of ye to uá for kyeli : kuálán
-y:u <=> _ e:  Cns:+ Vow: %^EA: ;
+"ye to uá og uo, part 1" 
+!! * __@RULENAME@__  Part 1 of ye to uá for kyeli : kuálán kye%^RDl7%^RC
+y:u <=> _ e: %^RD:  Cns:+ Vow: %^EA: ;
+        _ :o %^RD:  Cns:+ i: (%^DSH:) %^WG: %> i: ;
 
-"ye to uá in Illative and Sg3 2"
+"ye to uá, part 2"
 !! * __@RULENAME@__  Part 2 of ye to uá for kyeli : kuálán
-e:á <=> y: _  Cns:+ Vow: %^EA: ;
+e:á <=> y: _ %^RD:  Cns:+ Vow: %^EA: ;
 
+"ye to uo, part 2 "
+!! * __@RULENAME@__  Part 2 of ye to uá for kyeli : kuolijn
+e:o <=> y: _ %^RD:  Cns:+ i: (%^DSH:) %^WG: %> i: ;
 
 
 !! !Diphthong rules
@@ -737,8 +740,8 @@ e:á <=> [o|i|u] (%^RV:) Cns:+ _ (%^RLEN:) (%^CSH:) %^EA: [%>|.#.] ;
 
 
 "Stem vowel i to á for other root vowel."
-!! * __@RULENAME@__  e.g. säämi > Ill sáámán
-i:á <=> [:e|:i|:ä|:á] (%^RV:) Cns:+ _ (%^RLEN:) (%^CSH:) %^EA: [%>|.#.] ;
+!! * __@RULENAME@__  e.g. säämi > Ill sáámán kye%^RDl7%^RC
+i:á <=> [:e|:i|:ä|:á] ([%^RV: | %^RD: ]) Cns:+ _ (%^RLEN:) (%^CSH:) %^EA: [%>|.#.] ;
 
 
 
