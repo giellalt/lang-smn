@@ -153,11 +153,9 @@ Rules
 
 !! !Consonant gradation
 
-"x7:x ja x:y WG gradation, also for n7j"
+"x7:x ja x:y WG gradation"
 !! * __@RULENAME@__  WG gives x7:x and x:y, except when CLEN  
-Cx:Cy <=> Vow: _ (%^RC: ) (j) WeakGrade \%^CLEN:0 ;
-          Vow: _ %^RC:  j RealVow:  %^CLEN:0 ; !n7j: Par and Ess
-          Vow: _ %^RC:  j RealVow: %^WG:0 %^CLEN:0 %^SVLOW:0 ; !n7j: Com
+Cx:Cy <=> Vow: _ (%^RC: )  WeakGrade \%^CLEN:0 ;
 	where Cx in ( m7 n7 ŋ7 r7 s7 š7 j7 v7 đ7 l7 h p c č )  
           Cy in ( m  n  ŋ  r  s  š  j  v  đ  l  ṿ v s j̣ )  
 		  matched ;
@@ -167,6 +165,14 @@ Cx:Cy <=> Vow: _ (%^RC: ) (j) WeakGrade \%^CLEN:0 ;
 
 
 !iše:i%^RVš7%^RCe VAHE ;  %^SV%^WG%^CLEN%^SLEN%>st
+
+"n7j:nj WG gradation"
+!! * __@RULENAME@__  WG gives x7:x and x:y, except when CLEN  
+n7:n <=> Vow: _ (%^RC: ) j WeakGrade \%^CLEN:0 ;
+          Vow: _ %^RC:  j RealVow:  %^CLEN:0 ; !n7j: Par and Ess
+          Vow: _ %^RC:  j RealVow: %^WG:0 %^CLEN:0 %^SVLOW:0 ; !n7j: Com
+
+
 
 
 "xx:x gradation"
@@ -200,7 +206,7 @@ Cx:Cy <=> Vow:  Cz: _  WeakGrade (%^RLEN:) %> ;
 
 "RV:ˊ in x:y gradation and root vowel shortening"
 !! * __@RULENAME@__  saˊj̣e (now line 2 is justa copy from Vx:ˊ. Shorten the context !
-%^RV:ˊ <=> Vow: _ Cns: (%^RC:) [e: | o: | a: | á: ] ( [%^EA: | %^WG: ] )  %> ; 
+%^RV:ˊ <=> Vow: _ Cns: (%^RC:) [e: | o: | a: | á: ] %^WG:    %> ; !removed EA because of conflict
 !%^RV:ˊ <=> Vow: _ Cns: (%^RC:) [e: | o: | a: | á: ] (%^WG:)  %> ;  ! reverted to EA -- why exclude? include gives 
            Vow: _ Cns: (Cns:) (%^RC:) Vow:  (%^WG:) (%^RVSH:) (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) %^RVSH: (%^SVLOW:) [%>|.#.] ;
 
@@ -276,7 +282,7 @@ k4:h <=> Vow: [t:|k4:] (ˊ:) _  WeakGrade (%^RLEN:) ;
 
 "t4:đ gradation for tt4" 
 !! * __@RULENAME@__  ruttâ ruuđâ
-t4:đ <=> t: _ Vow: %^WG: ;
+t4:đ <=> t: _ WeakGrade ;
 
 !€ ru%^RVtt4â%^WG%^RLEN>
 !€ ruu0đâ00>
@@ -598,9 +604,9 @@ Vy:0 <=> Vx: _  Cns: [ Cns: - %^RC:0 ] Vow:  %^WG: (%^CLEN:) %^SVLOW: %> i:  ;
 !! !First syllable vowel lengthening
 
 "Root vowel lenghtening in bisyllabic stems"
-!! * __@RULENAME@__  lekkâ : leehá- 
-%^RV:Vx <=> Vx: _ Cns:* (%^RC:) Vow: (%^SV:) (Cns:) (%^WG:) %^RLEN: ;
-	where Vx in ( a e i o u y ä á ) ;
+!! * __@RULENAME@__  lekkâ : leehá-  meecij
+%^RV:Vx <=> Vx: _ Cns:+ Vow: (%^SV:) (Cns:) (%^WG:) %^RLEN: %>  ;
+	where Vx in ( a e i o u y á ) ; !removed ä
 
 !€ le^RVkk4^RCâ^WG^RLEN
 !€ lee0h0â00
@@ -639,9 +645,10 @@ Vx:Vy <=> _ Vz: Cns:* i %^WG: %> :j ;
 	matched ;
 
 "Monophthongisation rule ä:a"
-!! * __@RULENAME@__  čääci:čassijn, läbži:labžijn
-ä:a <=> _ [ä:|%^RV:] Cns:+ i %^WG: (%^RVSH:) (%^RVSH:) %> i: ;
-        _ [ ä: |%^RV: ] Cns: Cns:   i %^WG: %^CLEN: %^SVLOW: %> i: ; !čääci:čassijn, läbži:labžijn
+!! * __@RULENAME@__  čääci:čassijn, läbži:labžijn ä%^RVi4gi%^WG%^RLEN%>id
+ä:a <=> _ [ä:|%^RV:] Cns:+ i %^WG: (%^RVSH:) %> i: ;
+        _ [ ä: |%^RV: ] Cns:+   i %^WG: [%^CLEN: |%^RLEN: ]  %^SVLOW: %> i: ; !čääci:čassijn, läbži:labžijn
+        _ %^RV:  Cns:+   i %^WG: %^RLEN:  %> i: ; !ä%^RVi4gi%^WG%^RLEN%>id
 
 !€ sääm7^RCi^WG^RVSH>in
 !€ saam0i00>jn
@@ -681,11 +688,14 @@ Vx:Vy <=> _  %^RV: Cns:+  e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> i: ;
 
 "e to iä, part 1"
 !! * __@RULENAME@__  Part 1: e to i; ergi -> iärgán 1, veerdi : viärdán
-e:i <=> _ Vow: Cns:+ Vow: %^EA: %> ;
+e:i <=> Cns: _ Vow: Cns:+ Vow: %^EA: %> ;
+
 
 "e to iä in Illative and Sg3 2"
 !! * __@RULENAME@__  Part 2: ^RV to ä; ergi -> iärgán 2 (e+e(RV) -> i + ä
 %^RV:ä <=> e: _ Cns:+ Vow: %^EA: %> ;
+           ä: _ Cns:+ i: %^WG: %^RLEN: %> \i: ;
+
 
 "ie to iä in Illative and Sg3"
 !! * __@RULENAME@__  ... with ^ILL as trigger; kiem´ni -> kiämnán, veerdi : viärdán
@@ -709,6 +719,11 @@ e:ä <=> [i | e: ] _  Cns:+ Vow: %^EA: %> ;
 
 !€ tä^RVsni^EA>n
 !€ táásná0>n
+
+"äRV to aa "
+!! * __@RULENAME@__  äigi aaigijd
+%^RV:a <=> ä:a _  Cns:+ i: %^WG: %^RLEN: %> i: ;
+
 
 "ye to uá og uo, part 1" 
 !! * __@RULENAME@__  Part 1 of ye to uá for kyeli : kuálán 
@@ -846,7 +861,7 @@ e:i <=> Cns:  _  (%^WG:) ([ %^RLEN: | %^CLEN: ])  %> i: ;
 
 "Stem vowel u > o change before suffix"
 !! * __@RULENAME@__  ... check this, add test
-u:o <=> Cns: _ (%^UU:|%^SV:) (%^WG:) (%^RVSH:) (%^RVSH:) (%^RLEN:|%^CLEN:) (%^SLEN:) %^SVLOW:  ; 
+u:o <=> Cns: _ (%^UU:|%^SV:) (%^WG:) (%^RVSH:) (%^RLEN:|%^CLEN:) (%^SLEN:) %^SVLOW:  ; 
 ! stááḷu stááloust
 
 
