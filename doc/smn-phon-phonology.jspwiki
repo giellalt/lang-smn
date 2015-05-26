@@ -43,7 +43,7 @@ Literal quotes and angles must be escaped (cf morpheme boundaries further down):
 !More abstract archiphonemes
 
  * %^RC:0		 = root cons., lengthened by ^CLEN - máán%RCu máánnun
- * %^RD:0		 = root dipht., shortened by by ^DSH - vuá%^RDg'gu vuáˊguttáá
+ * %^RD:0		 = root dipht., shortened by by ^RVSH - vuá%^RDg'gu vuáˊguttáá
  * %^RV:0	 	 = root vowel, lengthened by ^RLEN - ta%^RVvlu taavlu and ^RV:ˊ when WG and suffix: 0 | t | i
  * %^SC:0       = stem cons, %^SC:j, pluss lengthen after earlier shortening by %^CSH, see lyeme
  * %^SV:0 		 = stem vowel, lengthened by ^SLEN u:uu - táálu%^SV tááloost
@@ -53,7 +53,7 @@ Literal quotes and angles must be escaped (cf morpheme boundaries further down):
  * %^CLEN:0	 = cons lengthening, with ^RC
  * %^CSH:0      = cons shortening, laaŋkku - laaŋkun
  * %^DLEN:0     = Diphtong lengthening (remove?)
- * %^DSH:0      = Diphtong shortening
+ * %^RVSH:0      = Diphtong shortening
  * %^EE:0       = Final vowel deletion in ee stems (not in use)
  * %^FCD:0      = Final consonant deletion 
  * %^IA:0       = i to á (more) (not in use)
@@ -71,7 +71,7 @@ Literal quotes and angles must be escaped (cf morpheme boundaries further down):
  * %^ÁE:0       = á to e (more) in 3-syll
  * %^ÁI:0       = á to i (more) in 3-syll
 
- * %^ODDSHV:0      =  Cns shortening in C|# and shortvow in Inf etc  (not in use)
+ * %^ODRVSHV:0      =  Cns shortening in C|# and shortvow in Inf etc  (not in use)
  * %^ODDC:0        =  shorten cns in odd-syll stems before C, #  (not in use)
 
 !!Morpheme boundaries:
@@ -121,7 +121,7 @@ Sets
 Trying to introduce a WG right context, so far resulting in drop in performance.
 
 
- WeakGrade =  :RealVow (Cns:) (%^SV:) (%^DSH:) %^WG:0    ;     the general definition
+ WeakGrade =  :RealVow (Cns:) (%^SV:) %^WG:0  (%^RVSH:)   ;     the general definition
 
 
 !!!Rule section
@@ -136,7 +136,37 @@ Trying to introduce a WG right context, so far resulting in drop in performance.
 
 
 
+
+* __xx:x gradation__  säppi sääpi
+
+
+
+
+* __xx:y long to something else gradation weak grade, part 1 __   hh:V, kk:h, pp:v, čč:J, deleting first part, k:0 in kk4:h etc 
+
+
+
+
+
+
 * __RV:ˊ in x:y gradation and root vowel shortening__  saˊj̣e (now line 2 is justa copy from Vx:ˊ. Shorten the context !
+
+
+
+
+
+
+
+
+
+
+
+!Diphthong rules
+
+* __Shortening diphthong__ RD to ˊ muátu muáˊđoost
+
+
+* __Long vowel shortening (no consonant shortening) in vowel stems__ (example?)
 
 
 
@@ -199,7 +229,7 @@ Trying to introduce a WG right context, so far resulting in drop in performance.
 * __Lengthening of half-long root consonant n7:n 1__  for l-dot to ll, changing l7 to first l in ll
 
 
-* __Lengthening root consonant j7:ij 1__ 
+* __Lengthening root consonant j7:ij 1__  for saje:sa%^RVj7%^RCe NJUNE "sija" ;
 
 
 * __Lengthening of half-long root consonant n7 : nn 2__   for l-dot to ll, changing ^RC to second l in ll  muáđoin
@@ -232,18 +262,13 @@ Trying to introduce a WG right context, so far resulting in drop in performance.
 
 
 
-* __n7j to nnj consonant lengthning__  as previous rule, but for k4, č4, p4  
-* __n7j to nnj consonant lengthning__  as previous rule, but for  čuhčá čuvččáin kuá%^RDh4ˊč%^RCá%^WG%^CLEN%>in
-* __n7j to nnj consonant lengthning__  , here we lengthen the lower y consonant, spaha -> spavvaast  ko%^RVp%^RCe%^SV%^CLEN%^SLEN%>n
-* __n7j to nnj consonant lengthning__  as previous rule, but for k4, č4, p4
 
 
 !Other consonant rules
 
-* __xˊx7:xˊx and xx7:xx as default when not WG | DSH | RLEN __  
+* __xˊx7:xˊx and xx7:xx as default when not WG | RVSH | RLEN __  
 
 
-* __n7j to nnj consonant lengthning__  delet t in haamit in front of -ttáá, avoid -tttáá
 
 
 
@@ -262,9 +287,10 @@ Trying to introduce a WG right context, so far resulting in drop in performance.
 
 !!Vowel rules
 
-!First syllable rules
+!First syllable vowel shortening
 
 * __Vowel shortening with consonant shortening __  for koonjâl -> konjâlân
+
 
 
 
@@ -280,14 +306,23 @@ Trying to introduce a WG right context, so far resulting in drop in performance.
 
 
 
-* __Vowel shortening (no consonant shortening) in vowel stems__ (example?)
 
 
 
 
+!First syllable vowel lengthening
 
 * __Root vowel lenghtening in bisyllabic stems__  lekkâ : leehá- 
 
+
+* __Root vowel lengtning with vowel change before suffix i__  alge : oolgijn 
+
+
+
+
+
+
+!First syllable vowel change
 
 * __Root vowel change for á to ä with i in second syllable__  päävir
 
@@ -307,14 +342,12 @@ Trying to introduce a WG right context, so far resulting in drop in performance.
 
 
 
-* __Root vowel lengtning with vowel change before suffix i__  alge : oolgijn 
 
-
-* __e to iä in Illative and Sg3 1__  Part 1: e to i; ergi -> iärgán 1
+* __e to iä, part 1__  Part 1: e to i; ergi -> iärgán 1, veerdi : viärdán
 
 * __e to iä in Illative and Sg3 2__  Part 2: ^RV to ä; ergi -> iärgán 2 (e+e(RV) -> i + ä
 
-* __ie to iä in Illative and Sg3__  ... with ^ILL as trigger; kiem´ni -> kiämnán
+* __ie to iä in Illative and Sg3__  ... with ^ILL as trigger; kiem´ni -> kiämnán, veerdi : viärdán
 
 * __ie to iä in Illative and Sg3__  ... after .#. or Cns, with ^ILL as trigger; kiem´ni -> kiämnán
 
@@ -324,16 +357,12 @@ Trying to introduce a WG right context, so far resulting in drop in performance.
 * __äRV to áá in Illative and Sg3__  ... for täsni -> táásnán
 
 
-* __ye to uá og uo, part 1 __  Part 1 of ye to uá for kyeli : kuálán kye%^RDl7%^RC
+* __ye to uá og uo, part 1 __  Part 1 of ye to uá for kyeli : kuálán 
 
-* __ye to uá in Illative and Sg3 2__  Part 2 of ye to uá for kyeli : kuálán
+* __ye to uá, part 2__  Part 2 of ye to uá for kyeli : kuálán
 
 * __ye to uo, part 2 __  Part 2 of ye to uá for kyeli : kuolijn
 
-
-!Diphthong rules
-
-* __Shortening diphthong__ RD to ˊ muátu muáˊđoost
 
 
 !Second syllable rules
