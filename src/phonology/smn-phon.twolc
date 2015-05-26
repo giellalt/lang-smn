@@ -177,17 +177,24 @@ n7:n <=> Vow: _ (%^RC: ) j WeakGrade \%^CLEN:0 ;
 
 "xx:x gradation"
 !! * __@RULENAME@__  säppi sääpi
-Cx:0 <=> Vow: _ (ˊ:) Cx: WeakGrade (%^RLEN:) %> ;
+Cx:0 <=> Vow: _ (ˊ:) Cx: WeakGrade (%^RLEN:) %> ; !päddi : päädi
+         Vow: _ Cx: Vow: %^CSH: (%^EA: ) %> ; !päddi : páádán
 	where Cx in ( b d g p t k c č f z ž l m n ŋ r s š v ) ;
 
 !€ cuozˊz^RCâ^WG^RLEN
 !€ cuo00z0â00
 
 
+"ˊ to zero gradation"
+!! * __@RULENAME@__ when ^WG or ^CSH
+ˊ:0 <=> Vow: Cns: _ Cns:+  Vow: [ %^WG:0 |%^CSH: ]  [ %^RLEN: | %^RVSH: | %^EA: ] [%>|.#.]  ; ! no RVSH?
+
+
 
 "xx:y to something else gradation weak grade, part 1" 
 !! * __@RULENAME@__   hh:V, kk:h, pp:v, čč:J, deleting first part, k:0 in kk4:h etc pä%^RVk4k4i
 Cx:0 <=> Vow: _ Cy: (%^RC:) WeakGrade (%^RLEN:) %> ;
+         Vow: _ Cy: Vow: %^CSH: (%^EA: ) %> ;
 	where Cx in ( h  t 	k4  p  č  l  n  s  r  š  m  v) 
 	      Cy in ( h4 t4 k4 p4 č4 l7 n7 s7 r7 š7 m7 v7)
 		  matched ;
@@ -207,7 +214,6 @@ Cx:Cy <=> Vow:  Cz: _  WeakGrade (%^RLEN:) %> ;
 "RV:ˊ in x:y gradation and root vowel shortening"
 !! * __@RULENAME@__  saˊj̣e (now line 2 is justa copy from Vx:ˊ. Shorten the context !
 %^RV:ˊ <=> Vow: _ Cns: (%^RC:) [e: | o: | a: | á: ] %^WG:    %> ; !removed EA because of conflict
-!%^RV:ˊ <=> Vow: _ Cns: (%^RC:) [e: | o: | a: | á: ] (%^WG:)  %> ;  ! reverted to EA -- why exclude? include gives 
            Vow: _ Cns: (Cns:) (%^RC:) Vow:  (%^WG:) (%^RVSH:) (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) %^RVSH: (%^SVLOW:) [%>|.#.] ;
 
 ! For reference: copied in to be edited:
@@ -317,6 +323,24 @@ Cx:v <=>  _ (ˊ:) Cz (%^RC:) Vow (%^SV: ) (Cns:) %^WG: ;
 
 !€ totk4os^WG
 !€ tođhos0
+
+"xyy:xy gradation A"
+!! * __@RULENAME@__   
+Cy:0 <=> :Vow ([%^RV: | %^RD: ]) Cx: (ˊ: ) _ Cz: (%^RC:) Vow (%^SV:) (Cns)  %^WG: ( [%^RLEN: |%^RVSH:]) %>  ;  
+          Cx: (ˊ:) _ Cz:  Vow (%^RLEN:)  %^CSH:   ;  
+      where Cx in ( i4 i4 i4 l l l l l l l m m n n n ŋ r r r r r r r v ) 
+            Cy in ( c  t  k  c k p s t č š p č c s t k c p k s t č š p ) 
+            Cz in (  c  t  k  c k p s t č š p č c s t k c p k s t č š p ) 
+      matched ;
+
+!€ á%^RVrppu%^WG%^RLEN>
+!€ áár0pu00>
+
+!€ á%^RVrppu%^WG%^RVSH%>ttáá
+!€ áˊr0pu00>ttáá
+
+!€ riänttus^WG
+!€ riän0tus0
 
 
 
@@ -509,8 +533,8 @@ Cx:Cy <=> Vow: _ %^RC: :Vow (%^SV:) %^WG: %^CLEN: ([%^SVLOW: |%^SLEN: | %^RVSH:]
 
 "xˊx7:xˊx and xx7:xx as default when not WG | RVSH | RLEN" 
 !! * __@RULENAME@__  
-Cx:Cy <=> Vow:  Cy: (ˊ:) _  Vow: \[%^WG:0 | %^RVSH:0 | %^RLEN:0 ] ;
-		  Vow:  Cy: (ˊ:) _  Vow: %^WG:0  %^CLEN:0  ;
+Cx:Cy <=> Vow:  Cy (ˊ:) _  Vow: \[%^WG:0 | %^RVSH:0 | %^RLEN:0 ] ;
+		  Vow:  Cy (ˊ:) _  Vow: %^WG:0  %^CLEN:0  ;
 	where Cx in ( l7 n7 s7 š7 r7 m7 v7) 
 	      Cy in ( l  n s š r m v)
 		  matched ;
@@ -552,7 +576,7 @@ Cx:Cy <=> Vow:  Cy: (ˊ:) _  Vow: \[%^WG:0 | %^RVSH:0 | %^RLEN:0 ] ;
 "Vowel shortening with consonant shortening" 
 !! * __@RULENAME@__  for koonjâl -> konjâlân
 Vx:0 <=> [Seg:|.#.] _ Vx Seg:* ([%^RC:|%^SC:]) %^CSH: (%^RVSH:|%^EA:) [%>|.#.] ;
-        where Vx in ( a e o á ä u y i ) ;
+        where Vx in ( a o á ä u y i ) ; !removed e
 
 !€ koonnjâl^CSH>ân
 !€ k0on0jâl0>ân
@@ -688,34 +712,34 @@ Vx:Vy <=> _  %^RV: Cns:+  e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> i: ;
 
 "e to iä, part 1"
 !! * __@RULENAME@__  Part 1: e to i; ergi -> iärgán 1, veerdi : viärdán
-e:i <=> Cns: _ Vow: Cns:+ Vow: %^EA: %> ;
+e:i <=> Cns: _ Vow: Cns:+ Vow: (%^CSH:) %^EA: %> ;
 
 
 "e to iä in Illative and Sg3 2"
 !! * __@RULENAME@__  Part 2: ^RV to ä; ergi -> iärgán 2 (e+e(RV) -> i + ä
-%^RV:ä <=> e: _ Cns:+ Vow: %^EA: %> ;
+%^RV:ä <=> e: _ Cns:+ Vow: (%^CSH:) %^EA: %> ;
            ä: _ Cns:+ i: %^WG: %^RLEN: %> \i: ;
 
 
 "ie to iä in Illative and Sg3"
 !! * __@RULENAME@__  ... with ^ILL as trigger; kiem´ni -> kiämnán, veerdi : viärdán
-e:ä <=> [i | e: ] _  Cns:+ Vow: %^EA: %> ;
+e:ä <=> [i | e: ]  _ (%^RD:) Cns: (ˊ:) Cns:* Vow: (%^CSH:) %^EA: %> ; !sieidi siäidán
 
 !"ä to á in Illative and Sg3"
 !!! * __@RULENAME@__  ... after .#. or Cns, with ^ILL as trigger; kiem´ni -> kiämnán
-!ä:á <=> [.#.|Cns] _  Cns:+ Vow: %^EA: ;
+!ä:á <=> [.#.|Cns] _  Cns:+ Vow: (%^CSH:) %^EA: ;
 
 "ää to áá in Illative and Sg3"
 !! * __@RULENAME@__  ... for säämi > sáámán
-ä:á <=> _  [ä:|%^RV:] Cns:+ :á %^EA: ;
-        ä: _          Cns:+ :á %^EA: ;
+ä:á <=> _  :á Cns:+ :á (%^CSH:) %^EA: %> n ;
+        ä: _          Cns:+ :á (%^CSH:) %^EA: %> n ;
 
 !€ sääm7^RCi^EA>n
 !€ sááṃ0á0>n
 
 "äRV to áá in Illative and Sg3"
 !! * __@RULENAME@__  ... for täsni -> táásnán
-%^RV:á <=> ä: _  Cns:+ :á %^EA: ;
+%^RV:á <=> ä: _  Cns:+ :á (%^CSH:) %^EA: ;
 
 !€ tä^RVsni^EA>n
 !€ táásná0>n
@@ -726,13 +750,13 @@ e:ä <=> [i | e: ] _  Cns:+ Vow: %^EA: %> ;
 
 
 "ye to uá og uo, part 1" 
-!! * __@RULENAME@__  Part 1 of ye to uá for kyeli : kuálán 
-y:u <=> _ e: %^RD:  Cns:+ Vow: %^EA: ;
-        _ :o %^RD:  Cns:+ i: %^WG: (%^RVSH:) %> i: ;
+!! * __@RULENAME@__  Part 1 of ye to uá for kyeli : kuálán  pye%^RDi4ˊdi%^CSH%^EA%>n
+y:u <=> _ e: %^RD:  Cns: (ˊ:) Cns:* Vow: (%^CSH:) %^EA: %> ;
+        _ :o %^RD:  Cns: (ˊ:) Cns:* i: %^WG: (%^RVSH:) %> i: ;
 
 "ye to uá, part 2"
 !! * __@RULENAME@__  Part 2 of ye to uá for kyeli : kuálán
-e:á <=> y: _ %^RD:  Cns:+ Vow: %^EA: ;
+e:á <=> y: _ %^RD:  Cns:+ Vow: (%^CSH:) %^EA: ;
 
 "ye to uo, part 2 "
 !! * __@RULENAME@__  Part 2 of ye to uá for kyeli : kuolijn
