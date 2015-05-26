@@ -410,17 +410,26 @@ Cx:Cy <=> Vow: _ %^RC: :Vow              %^CLEN:      %> ;
           Vow: _ %^RC: :Vow %^SV: %^WG:  %^CLEN: %^SLEN: %> ; !Loc  
           Vow: _ %^RC: :Vow       %^WG:  %^CLEN: (%^SVLOW:)   %> ; !Com  %^WG%^CLEN
           Vow: _ %^RC: :Vow %^SV:        %^CLEN: %^SLEN: %> ; !Par Ess
-	where Cx in ( l7 r7 s7 h7 m7 n7 đ7 v7 ŋ7 š7 j7 )
-		  Cy in ( l  r  s  h  m  n  đ  v  ŋ  š  j ) 
+	where Cx in ( l7 r7 s7 h7 m7 n7 đ7 v7 ŋ7 š7 )
+	      Cy in ( l  r  s  h  m  n  đ  v  ŋ  š  ) 
 		  matched ;
 
-
+"Lengthening of half-long root consonant j7:j 1"
+!! * __@RULENAME@__  for l-dot to ll, changing l7 to first l in ll
+j7:j <=>  Vow: _ %^RC: :Vow %^SV: %^WG:  %^CLEN: %^SLEN: %> ; !Loc  
+          Vow: _ %^RC: :Vow       %^WG:  %^CLEN: (%^SVLOW:)   %> ; !Com  %^WG%^CLEN
+         !Vow: _ %^RC: :Vow              %^CLEN:      %> ;
+         
 "Lengthening root consonant j7:ij 1"
 !! * __@RULENAME@__  for saje:sa%^RVj7%^RCe NJUNE "sija" ;
-j7:i <=> Vow: _ %^RC: :Vow %^SV: %^CLEN: %^SLEN: %> ; !Par Ess
+j7:i <=> Vow: _ %^RC: :Vow       %^CLEN:         %> ; !Par Ess
+         Vow: _ %^RC: :Vow %^SV: %^CLEN: %^SLEN: %> ; !Par Ess
 
 !€ sa^RVj7^RCe^SV^CLEN^SLEN>n
 !€ sa0ijee00>n
+
+!€ pááj7^RCá^CLEN>n
+!€ páá0ijá00>n
 
 "Lengthening of half-long root consonant n7 : nn 2"
 !! * __@RULENAME@__   for l-dot to ll, changing ^RC to second l in ll  muáđoin
