@@ -58,7 +58,7 @@ h5:h                                  !!= * @CODE@  these consonants do not chan
 
 !%^A:0		 = algan lodán
 %^RC:0		!!= * @CODE@ = root cons., lengthened by ^CLEN - máán%RCu máánnun
-%^RD:0		!!= * @CODE@ = root dipht., shortened by by ^DSH - vuá%^RDg'gu vuáˊguttáá
+%^RD:0		!!= * @CODE@ = root dipht., shortened by by ^RVSH - vuá%^RDg'gu vuáˊguttáá
 %^RV:0	 	!!= * @CODE@ = root vowel, lengthened by ^RLEN - ta%^RVvlu taavlu and ^RV:ˊ when WG and suffix: 0 | t | i
 %^SC:0      !!= * @CODE@ = stem cons, %^SC:j, pluss lengthen after earlier shortening by %^CSH, see lyeme
 %^SV:0 		!!= * @CODE@ = stem vowel, lengthened by ^SLEN u:uu - táálu%^SV tááloost
@@ -68,7 +68,7 @@ h5:h                                  !!= * @CODE@  these consonants do not chan
 %^CLEN:0	!!= * @CODE@ = cons lengthening, with ^RC
 %^CSH:0     !!= * @CODE@ = cons shortening, laaŋkku - laaŋkun
 %^DLEN:0    !!= * @CODE@ = Diphtong lengthening (remove?)
-%^DSH:0     !!= * @CODE@ = Diphtong shortening
+%^RVSH:0     !!= * @CODE@ = Diphtong shortening
 %^EE:0      !!= * @CODE@ = Final vowel deletion in ee stems (not in use)
 %^FCD:0     !!= * @CODE@ = Final consonant deletion 
 %^IA:0      !!= * @CODE@ = i to á (more) (not in use)
@@ -86,7 +86,7 @@ h5:h                                  !!= * @CODE@  these consonants do not chan
 %^ÁE:0      !!= * @CODE@ = á to e (more) in 3-syll
 %^ÁI:0      !!= * @CODE@ = á to i (more) in 3-syll
 
-%^ODDSHV:0     !!= * @CODE@ =  Cns shortening in C|# and shortvow in Inf etc  (not in use)
+%^ODRVSHV:0     !!= * @CODE@ =  Cns shortening in C|# and shortvow in Inf etc  (not in use)
 %^ODDC:0       !!= * @CODE@ =  shorten cns in odd-syll stems before C, #  (not in use)
 !%^RVD:0      root vowel  diftongisation
 
@@ -142,7 +142,7 @@ Sets
 
 Definitions
 
-WeakGrade =  :RealVow (Cns:) (%^SV:) (%^DSH:) %^WG:0    ;    !!= @CODE@ the general definition
+WeakGrade =  :RealVow (Cns:) (%^SV:) %^WG:0  (%^RVSH:)   ;    !!= @CODE@ the general definition
 
 
 !! !!!Rule section
@@ -170,13 +170,33 @@ Cx:Cy <=> Vow: _ (%^RC: ) (j) WeakGrade \%^CLEN:0 ;
 
 "RV:ˊ in x:y gradation and root vowel shortening"
 !! * __@RULENAME@__  saˊj̣e (now line 2 is justa copy from Vx:ˊ. Shorten the context !
-!%^RV:ˊ <=> Vow: _ Cns: (%^RC:) [e: | o: | a: | á: ] ( [%^EA: | %^WG: ] )  %> ; 
-%^RV:ˊ <=> Vow: _ Cns: (%^RC:) [e: | o: | a: | á: ] (%^WG:)  %> ; 
-           Vow: _  Cns: (Cns:) (%^RC:) Vow:  (%^DSH:) (%^WG:) (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) %^RVSH: (%^SVLOW:) [%>|.#.] ;
+%^RV:ˊ <=> Vow: _ Cns: (%^RC:) [e: | o: | a: | á: ] ( [%^EA: | %^WG: ] )  %> ; 
+!%^RV:ˊ <=> Vow: _ Cns: (%^RC:) [e: | o: | a: | á: ] (%^WG:)  %> ;  ! reverted to EA -- why exclude? include gives 
+           Vow: _ Cns: (Cns:) (%^RC:) Vow:  (%^WG:) (%^RVSH:) (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) %^RVSH: (%^SVLOW:) [%>|.#.] ;
 
 ! For reference: copied in to be edited:
-   !Vy:ˊ <=> Vx _  Cns: (Cns:) (%^RC:) Vow:  (%^DSH:) (%^WG:) (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) %^RVSH: (%^SVLOW:) [%>|.#.] ;
+   !Vy:ˊ <=> Vx _  Cns: (Cns:) (%^RC:) Vow:  (%^RVSH:) (%^WG:) (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) %^RVSH: (%^SVLOW:) [%>|.#.] ;
 
+
+!                 shorter   shortest           long
+! RV: aRV ->    , aˊ / ? ,   a0 / default,     aa / RLEN  = saje
+! ---
+! aa> aa  ->      aˊ & RVSH  ie0 / default  			  = saahâ
+! RD: ieRD ->  , ieˊ / RVSH,  ie0 / default     			  = kielâ
+
+!! !Diphthong rules
+
+"Shortening diphthong"
+!! * __@RULENAME@__ RD to ˊ muátu muáˊđoost
+%^RD:ˊ <=> _ Cns:+ Vow: (%^SV:) %^WG: %^RVSH: ;
+
+
+"Long vowel shortening (no consonant shortening) in vowel stems"
+!! * __@RULENAME@__ (example?)
+Vy:ˊ <=> Vx: _  Cns: (Cns:) (%^RC:) Vow:  (%^WG:) (%^RVSH:) (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) %^RVSH: (%^SVLOW:) [%>|.#.] ;
+       where Vx in ( a e i o u y á ä ) 
+             Vy in ( a e i o u y á ä ) 
+       matched ;
 
 
 ! mool7â to moolâ:		  
@@ -187,8 +207,10 @@ Cx:Cy <=> Vow: _ (%^RC: ) (j) WeakGrade \%^CLEN:0 ;
 !€ käähir^WG>
 !€ kääṿir0>
 
-!€ juá%^RDh%^RCu%^DSH%^WG%>ttáá
+!€ juá%^RDh%^RCu%^WG%^RVSH%>ttáá
 !€ juáˊṿ0u00>ttáá
+
+
 
 "t:đ, also tˊk4:đh gradation, part 1" 
 !! * __@RULENAME@__   for ito : iđo riä%^RDtˊk4á  utke+N+Sg+Gen:  uˊđhe  riätká+N+Sg+Gen:  riäđhá  riä%^RDtˊk4á
@@ -309,9 +331,11 @@ Cx:Cy <=> Vow: _ %^RC: :Vow              %^CLEN:      %> ;
 
 
 "Lengthening root consonant j7:ij 1"
-!! * __@RULENAME@__ 
-j7:i <=> Vow: _ %^RC: :Vow %^CLEN: %> ; !Par Ess
+!! * __@RULENAME@__  for saje:sa%^RVj7%^RCe NJUNE "sija" ;
+j7:i <=> Vow: _ %^RC: :Vow %^SV: %^CLEN: %^SLEN: %> ; !Par Ess
 
+!€ sa^RVj7^RCe^SV^CLEN^SLEN>n
+!€ sa0ijee00>n
 
 "Lengthening of half-long root consonant n7 : nn 2"
 !! * __@RULENAME@__   for l-dot to ll, changing ^RC to second l in ll  muáđoin
@@ -423,9 +447,9 @@ Cx:Cy <=> Vow: _ %^RC: :Vow (%^SV:) %^WG: %^CLEN: ([%^SVLOW: |%^SLEN: | %^RVSH:]
 
 !! !Other consonant rules
 
-"xˊx7:xˊx and xx7:xx as default when not WG | DSH | RLEN" 
+"xˊx7:xˊx and xx7:xx as default when not WG | RVSH | RLEN" 
 !! * __@RULENAME@__  
-Cx:Cy <=> Vow:  Cy: (ˊ:) _  Vow: \[%^WG:0 | %^DSH:0 | %^RLEN:0 ] ;
+Cx:Cy <=> Vow:  Cy: (ˊ:) _  Vow: \[%^WG:0 | %^RVSH:0 | %^RLEN:0 ] ;
 		  Vow:  Cy: (ˊ:) _  Vow: %^WG:0  %^CLEN:0  ;
 	where Cx in ( l7 n7 s7 š7 r7 m7 v7) 
 	      Cy in ( l  n s š r m v)
@@ -434,7 +458,7 @@ Cx:Cy <=> Vow:  Cy: (ˊ:) _  Vow: \[%^WG:0 | %^DSH:0 | %^RLEN:0 ] ;
 !€ puá%^RDlˊl7u>
 !€ puá0lˊlu>
 
-!€ puá%^RDlˊl7u%^DSH%^WG%>ttáá
+!€ puá%^RDlˊl7u%^WG%^RVSH%>ttáá
 !€ puáˊ00ḷu00>ttáá
 
 !€ ká%^RVll7u%>
@@ -463,7 +487,7 @@ Cx:Cy <=> Vow:  Cy: (ˊ:) _  Vow: \[%^WG:0 | %^DSH:0 | %^RLEN:0 ] ;
 
 !! !!Vowel rules
 
-!! !First syllable rules
+!! !First syllable vowel shortening
  
 "Vowel shortening with consonant shortening" 
 !! * __@RULENAME@__  for koonjâl -> konjâlân
@@ -484,6 +508,7 @@ Vx:0 <=> [Seg:|.#.] _ Vx Seg:* ([%^RC:|%^SC:]) %^CSH: (%^RVSH:|%^EA:) [%>|.#.] ;
 
 ! kahhaan^SC^CSH^RVSH>ist
 ! ka0ha0n0j00>ist
+
 
 
 
@@ -509,19 +534,14 @@ Vy:0 <=> Vx: _  Cns: [ Cns: - %^RC:0 ] Vow:  %^WG: (%^CLEN:) %^SVLOW: %> i:  ;
 !€ m0ávvo000>in
   
  
-"Vowel shortening (no consonant shortening) in vowel stems"
-!! * __@RULENAME@__ (example?)
-Vy:ˊ <=> Vx: _  Cns: (Cns:) (%^RC:) Vow:  (%^DSH:) (%^WG:) (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) %^RVSH: (%^SVLOW:) [%>|.#.] ;
-       where Vx in ( a e i o u y á ä ) 
-             Vy in ( a e i o u y á ä ) 
-       matched ;
-
 
 !This one doesn't exist in yaml:
 !€ mool7^RCâ^WG^RVSH>ttáá
 !€ moˊl0â00>ttáá
 
 
+
+!! !First syllable vowel lengthening
 
 "Root vowel lenghtening in bisyllabic stems"
 !! * __@RULENAME@__  lekkâ : leehá- 
@@ -530,6 +550,22 @@ Vy:ˊ <=> Vx: _  Cns: (Cns:) (%^RC:) Vow:  (%^DSH:) (%^WG:) (%^SFV:) (%^SC:) (%^
 
 !€ le^RVkk4^RCâ^WG^RLEN
 !€ lee0h0â00
+
+"Root vowel lengtning with vowel change before suffix i"
+!! * __@RULENAME@__  alge : oolgijn 
+%^RV:Vy <=> Vx:  _  Cns:+  e: %^WG: %^RLEN:  %> i: ; 
+       where Vx in ( a o )
+             Vy in ( o u ) 
+       matched ;
+
+!€ a%^RVlge%^RLEN%>jd
+!€ oolgi>jd
+
+
+
+
+
+!! !First syllable vowel change
 
 "Root vowel change for á to ä with i in second syllable"
 !! * __@RULENAME@__  päävir
@@ -550,7 +586,7 @@ Vx:Vy <=> _ Vz: Cns:* i %^WG: %> :j ;
 
 "Monophthongisation rule ä:a"
 !! * __@RULENAME@__  čääci:čassijn, läbži:labžijn
-ä:a <=> _ [ä:|%^RV:] Cns:+ i (%^DSH:) %^WG: (%^RVSH:) %> i: ;
+ä:a <=> _ [ä:|%^RV:] Cns:+ i %^WG: (%^RVSH:) (%^RVSH:) %> i: ;
         _ [ ä: |%^RV: ] Cns: Cns:   i %^WG: %^CLEN: %^SVLOW: %> i: ; !čääci:čassijn, läbži:labžijn
 
 !€ sääm7^RCi^WG^RVSH>in
@@ -588,15 +624,6 @@ Vx:Vy <=> _  %^RV: Cns:+  e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> i: ;
 !€ ku0vvi00>jn
 
 
-"Root vowel lengtning with vowel change before suffix i"
-!! * __@RULENAME@__  alge : oolgijn 
-%^RV:Vy <=> Vx:  _  Cns:+  e: %^WG: %^RLEN:  %> i: ; 
-       where Vx in ( a o )
-             Vy in ( o u ) 
-       matched ;
-
-!€ a%^RVlge%^RLEN%>jd
-!€ oolgi>jd
 
 "e to iä in Illative and Sg3 1"
 !! * __@RULENAME@__  Part 1: e to i; ergi -> iärgán 1
@@ -632,7 +659,7 @@ e:ä <=> i _  Cns:+ Vow: %^EA: %> ;
 "ye to uá og uo, part 1" 
 !! * __@RULENAME@__  Part 1 of ye to uá for kyeli : kuálán kye%^RDl7%^RC
 y:u <=> _ e: %^RD:  Cns:+ Vow: %^EA: ;
-        _ :o %^RD:  Cns:+ i: (%^DSH:) %^WG: %> i: ;
+        _ :o %^RD:  Cns:+ i: %^WG: (%^RVSH:) %> i: ;
 
 "ye to uá, part 2"
 !! * __@RULENAME@__  Part 2 of ye to uá for kyeli : kuálán
@@ -640,14 +667,8 @@ e:á <=> y: _ %^RD:  Cns:+ Vow: %^EA: ;
 
 "ye to uo, part 2 "
 !! * __@RULENAME@__  Part 2 of ye to uá for kyeli : kuolijn
-e:o <=> y: _ %^RD:  Cns:+ i: (%^DSH:) %^WG: %> i: ;
+e:o <=> y: _ %^RD:  Cns:+ i: %^WG: (%^RVSH:) %> i: ;
 
-
-!! !Diphthong rules
-
-"Shortening diphthong"
-!! * __@RULENAME@__ RD to ˊ muátu muáˊđoost
-%^RD:ˊ <=> _ Cns:+ Vow: (%^SV:) %^DSH: ;
 
 
 !! !Second syllable rules
@@ -676,7 +697,7 @@ Vx:0 <=> _ Vx: (Cns:) Vz: [%^WG:|%^CSH:] ;
 
 "Suffix vowel lengthening"
 !! * __@RULENAME@__ long á in kissáást
-%^SV:Vx <=> Vx:  _ (:Cns)  (%^DSH:) (%^WG:) (%^CLEN:) (%^RLEN:) %^SLEN: (%^SVLOW: ) %> ;
+%^SV:Vx <=> Vx:  _ (:Cns)  (%^WG:) (%^RVSH:) (%^CLEN:) (%^RLEN:) %^SLEN: (%^SVLOW: ) %> ;
         where Vx in ( á o e a i ) ; ! pending...
 
 !€ ki^RVss^RCá^SV^WG^CLEN^SLEN>st
@@ -690,9 +711,9 @@ Vx:0 <=> _ Vx: (Cns:) Vz: [%^WG:|%^CSH:] ;
 
 "Suffix vowel lengthening o"
 !! * __@RULENAME@__ stááḷu stááloost
-%^SV:o <=> u:  _ %^DSH: %^WG: %^SLEN: %^SVLOW: %>  ; 
+%^SV:o <=> u:  _ %^WG: %^RVSH: %^SLEN: %^SVLOW: %>  ; 
 
-!€ táál7%^RCu%^SV%^DSH%^WG%^SLEN%^SVLOW%>st
+!€ táál7%^RCu%^SV%^WG%^RVSH%^SLEN%^SVLOW%>st
 !€ táál0oo0000>st
 
 "Fleeting vowel before suffix"
@@ -771,13 +792,13 @@ e:i <=> Cns:  _  (%^WG:) ([ %^RLEN: | %^CLEN: ])  %> i: ;
 
 "Stem vowel u > o change before suffix"
 !! * __@RULENAME@__  ... check this, add test
-u:o <=> Cns: _ (%^UU:|%^SV:) (%^DSH:) (%^WG:) (%^RVSH:) (%^RLEN:|%^CLEN:) (%^SLEN:) %^SVLOW:  ; 
+u:o <=> Cns: _ (%^UU:|%^SV:) (%^WG:) (%^RVSH:) (%^RVSH:) (%^RLEN:|%^CLEN:) (%^SLEN:) %^SVLOW:  ; 
 ! stááḷu stááloust
 
 
 "Suffix i:j for i and e-stems"
 !! * __@RULENAME@__  
-i:j <=> [i: | e: ] (%^DSH:) (%^WG:) ([%^CLEN: |%^RLEN:|%^RVSH:]) (%^SVLOW:) (%^EA:)  %> _ [d|n|g|t|%>|.#.]; 
+i:j <=> [i: | e: ] (%^WG:) (%^RVSH:) ([%^CLEN: |%^RLEN:|%^RVSH:]) (%^SVLOW:) (%^EA:)  %> _ [d|n|g|t|%>|.#.]; 
 
 
 !"Illative suffix change in bisyllabic e stems"
