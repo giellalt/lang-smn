@@ -189,21 +189,31 @@ Cx:0 <=> Vow: _ (ˊ:) Cx: WeakGrade (%^RLEN:) %> ; !päddi : päädi
 !! * __@RULENAME@__ when ^WG or ^CSH
 ˊ:0 <=> Vow: Cns: _ Cns:+  Vow:  %^WG:0 ([%^RLEN: | %^RVSH:] ) [%>|.#.]  ; 
         Vow: Cns: _ Cns:+  Vow: (%^RLEN:) %^CSH: (%^EA:)  [%>|.#.]  ;  
+        Vow:  č:  _ č4: WeakGrade %^CLEN: %^SVLOW: %> ; !kiäčˊču kiäj̣u kiä%^RDčˊč4u%^WG%^CLEN%^SVLOW
+
 
 
 "xx:y to something else gradation weak grade, part 1" 
 !! * __@RULENAME@__   hh:V, kk:h, pp:v, čč:J, deleting first part, k:0 in kk4:h etc pä%^RVk4k4i
 Cx:0 <=> Vow: _ (ˊ:) Cy: (%^RC:) WeakGrade (%^RLEN:) %> ;
          Vow: _ (ˊ:) Cy: Vow: %^CSH: (%^EA: ) %> ;
-	where Cx in ( h  t 	k4  p  č  l  n  s  r  š  m  v) 
-	      Cy in ( h4 t4 k4 p4 č4 l7 n7 s7 r7 š7 m7 v7)
+	where Cx in ( h  t 	k4 p    l  n  s  r  š  m  v) 
+	      Cy in ( h4 t4 k4 p4  l7 n7 s7 r7 š7 m7 v7)
 		  matched ;
+
+
+"čč4:j  part 1" 
+!! * __@RULENAME@__   
+č:0 <=> Vow: _ (ˊ:) č4: (%^RC:) WeakGrade (%^RLEN:) %> ;
+        Vow:  _ (ˊ:) č4:  WeakGrade %^CLEN: %^SVLOW: %> ; !kiäčˊču kiäj̣u kiä%^RDčˊč4u%^WG%^CLEN%^SVLOW
+         Vow: _ (ˊ:) č4: Vow: %^CSH: (%^EA: ) %> ;
 
 
 
 "xx:y to something else gradation weak grade, part 2" 
 !! * __@RULENAME@__  hh:V, kk:h, pp:v, čč:J here we change second part, k4:h in kk4:h etc. 
-Cx:Cy <=> Vow:  Cz: _  WeakGrade (%^RLEN:) %> ;
+Cx:Cy <=> Vow:  Cz: (ˊ:) _  WeakGrade (%^RLEN:) %> ;
+          Vow:  Cz: (ˊ:) _  WeakGrade %^CLEN: %^SVLOW: %> ; !kiäčˊču kiäj̣u kiä%^RDčˊč4u%^WG%^CLEN%^SVLOW
 	where Cx in ( h4  p4 č4 ) 
 	      Cy in ( ṿ   v  j̣ ) 
 	      Cz in ( h   p  č ) 
@@ -275,9 +285,10 @@ t:đ <=> Vow: _  (ˊ:) k4: (%^RC:) WeakGrade ;
 !€ jo^RVtk4^RCâ^WG^RLEN
 !€ joođh0â00
 
-"k4:h gradation for kk4 and tk4"
-!! * __@RULENAME@__    for atka : ađha pä%^RVk4k4i päh4t%^RCi luá%^RDk4ˊk4á%^WG%^CLEN%^SVLOW%>id
+"k4:h gradation for k4k4, tk4, rkk4"
+!! * __@RULENAME@__    for atka : ađha 
 k4:h <=> Vow: [t:|k4:] (ˊ:) _  WeakGrade ([%^RLEN: |%^CLEN:] ) (%^SVLOW:) ;
+         Vow: [l | r | v ] (ˊ:) k: _  WeakGrade (%^CLEN: ) (%^SVLOW:) ; !rˊkk	rh
          Vow: _ (ˊ:) k4:  WeakGrade %^CLEN: (%^SVLOW:) %> ;
          
 !€ mä^RVtk4i^WG^RLEN
@@ -285,6 +296,13 @@ k4:h <=> Vow: [t:|k4:] (ˊ:) _  WeakGrade ([%^RLEN: |%^CLEN:] ) (%^SVLOW:) ;
 
 !€ su^RVkk4^RCá^SV^WG^CLEN^SLEN>st
 !€ su00hháá000>st
+
+"k:0 gradation for k4k4, tk4, rkk4"
+!! * __@RULENAME@__    for atka : ađha 
+k:0 <=> Vow: [l | r | v ] (ˊ:) _ k4:h  WeakGrade (%^CLEN: ) (%^SVLOW:) ; !rˊkk	rh
+        Vow: [l | r | v ] (ˊ:) _ k4:k Vow:  %^CSH: %> ; !rˊkk rk miä%^RDrˊkk4á
+
+
 
 "t4:đ gradation for tt4" 
 !! * __@RULENAME@__  ruttâ ruuđâ
@@ -896,9 +914,9 @@ i:á <=> [:e|:i|:ä|:á] ([%^RV: | %^RD: ]) Cns:+ _ (%^RLEN:) (%^CSH:) %^EA: [%>
 !! * __@RULENAME@__ 
 e:i <=> Cns:  _  (%^WG:) ([ %^RLEN: | %^CLEN: ])  %> i: ; 
 
-"Stem vowel u > o change before suffix"
-!! * __@RULENAME@__  ... check this, add test
-u:o <=> Cns: _ (%^UU:|%^SV:) (%^WG:) (%^RVSH:) (%^RLEN:|%^CLEN:) (%^SLEN:) %^SVLOW:  ; 
+"Stem vowel u:o change before suffix"
+!! * __@RULENAME@__  ... check this, add test máát%^RCu
+u:o <=> Cns: _ ([%^UU:|%^SV:]) (%^WG:) (%^RVSH:) (%^RLEN:|%^CLEN:) (%^SLEN:) %^SVLOW:  ; 
 ! stááḷu stááloust
 
 
