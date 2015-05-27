@@ -244,25 +244,23 @@ Cx:Cy <=> Vow:  Cz: (ˊ:) _  WeakGrade (%^RLEN:) (%^SVLOW:) %> ; !! weak grade:
 
 "RV:ˊ in x:y gradation and root vowel shortening"
 !! * __@RULENAME@__  saˊj̣e (now line 2 is justa copy from Vx:ˊ. Shorten the context !
-%^RV:ˊ <=> Vow: _ Cns: (%^RC:) [e: | o: | a: | á: ] (%^WG:|%^EA:)    %> ; !removed EA because of conflict
-           Vow: _ Cns: (Cns:) (%^RC:) Vow:  (%^WG:) (%^RVSH:) (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) %^RVSH: (%^SVLOW:) [%>|.#.] ;
-
-! For reference: copied in to be edited:
-   !Vy:ˊ <=> Vx _  Cns: (Cns:) (%^RC:) Vow:  (%^RVSH:) (%^WG:) (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) %^RVSH: (%^SVLOW:) [%>|.#.] ;
-
+%^RV:ˊ <=> [Vow: - e:] _ Cns: (%^RC:) [e: | o: | a: | á: ] (%^WG:|%^EA:)    %> ; ! eRV ->e' ?
+                   Vow: _  Cns: (Cns:) (%^RC:) Vow:  %^WG: %^RVSH: (%^SVLOW:) [%>|.#.] ;
 
 !                  shorter   shortest           long
-! RV: aRV ->    ,  aˊ / RVSH,   a0 / default,     aa / RLEN  = saje
-! ---
-! aa> aa  ->      aˊ / RVSH,  ie0 / default  			  = saahâ
-! RD: ieRD ->  , ieˊ / RVSH,  ie0 / default     			  = kielâ
-
-
-! a : a´
-! aa: a
+! RV: aRV ->    ,  aˊ / RVSH,   a0 / default,     aa / RLEN  = saje     = %^RV:ˊ <=> [Vow: - e:] _ 
+! aa> aa  ->      aˊ / RVSH,  ie0 / default  			     = saahâ    =   Vy:ˊ <=> Vx _ ...
+! RD: ieRD ->  , ieˊ / RVSH,  ie0 / default     			 = kielâ    = %^RD:ˊ <=> _ ...
 
 
 
+"Long vowel shortening (no consonant shortening) in vowel stems"
+!! * __@RULENAME@__ (example?), no ^CSH, since that gives Vy:0
+!Vy:ˊ <=> Vx: _  Cns: (Cns:) (%^RC:) Vow:  (%^WG:) (%^RVSH:) (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) %^RVSH: (%^SVLOW:) [%>|.#.] ;
+Vy:ˊ <=> Vx: _  Cns: (Cns:) (%^RC:) Vow:  %^WG: %^RVSH: (%^SVLOW:) [%>|.#.] ;
+       where Vx in ( a e i o u y á ä ) 
+             Vy in ( a e i o u y á ä ) 
+       matched ;
 
 
 
@@ -271,15 +269,7 @@ Cx:Cy <=> Vow:  Cz: (ˊ:) _  WeakGrade (%^RLEN:) (%^SVLOW:) %> ; !! weak grade:
 "Shortening diphthong"
 !! * __@RULENAME@__ RD to ˊ muátu muáˊđoost
 %^RD:ˊ <=> _ Cns:+ Vow: (%^SV:) %^WG: %^RVSH: ;
-!%^RV:ˊ <=> _ Cns:+ Vow: (%^SV:) %^WG: %^RVSH: ;
-! RV still does not give as good result as RD, will look at it tonight.
-
-"Long vowel shortening (no consonant shortening) in vowel stems"
-!! * __@RULENAME@__ (example?)
-Vy:ˊ <=> Vx: _  Cns: (Cns:) (%^RC:) Vow:  (%^WG:) (%^RVSH:) (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) %^RVSH: (%^SVLOW:) [%>|.#.] ;
-       where Vx in ( a e i o u y á ä ) 
-             Vy in ( a e i o u y á ä ) 
-       matched ;
+! RV still does not give as good result as RD.
 
 
 ! mool7â to moolâ:		  
@@ -782,14 +772,13 @@ Vx:Vy <=> _  %^RV: Cns:+  e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> i: ;
 
 "e to iä, part 1"
 !! * __@RULENAME@__  Part 1: e to i; ergi -> iärgán 1, veerdi : viärdán
-e:i <=> Cns: _ Vow: Cns:+ Vow: (%^CSH:) %^EA: %> ;
+e:i <=> Cns: _ Vow: Cns:+ i: (%^CSH:) %^EA: %> ;
 
 
 "e to iä in Illative and Sg3 2"
 !! * __@RULENAME@__  Part 2: ^RV to ä; ergi -> iärgán 2 (e+e(RV) -> i + ä
-%^RV:ä <=> e: _ Cns:+ Vow: (%^CSH:) %^EA: %> ;
-           ä: _ Cns:+ i: %^WG: %^RLEN: %> \i: ;
-
+%^RV:ä <=> e: _ Cns:+ i: (%^CSH:) %^EA: %> ;
+           ä: _ Cns:+ i:  %^WG: %^RLEN: %> \i: ;
 
 "ie to iä in Illative and Sg3"
 !! * __@RULENAME@__  ... with ^ILL as trigger; kiem´ni -> kiämnán, veerdi : viärdán
