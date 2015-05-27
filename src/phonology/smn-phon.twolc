@@ -408,9 +408,11 @@ Cy:0 <=> :Vow ([%^RV: | %^RD: ]) Cx: (ˊ: ) _ Cz: (%^RC:) Vow (%^SV:) (Cns)  %^W
 
 
 
-"nnj to nj shortening not weak grade"
-!! * __@RULENAME@__  special rule, e.g. konnjâl -> konjâlân
-n:0 <=> n _ j Vow (Cns:) %^CSH: [%>|.#.] ;
+"nnj to nj shortening weak grade and consonant shortening"
+!! * __@RULENAME@__  special rule, e.g. konnjâl -> konjâlân puá%^RDnˊnjá
+n:0 <=> n (ˊ:) _ j Vow (Cns:) (%^RLEN:) %^CSH: [%>|.#.] ;
+        n (ˊ:) _ j WeakGrade [%>|.#.] ;
+        n (ˊ:) _ j WeakGrade %^CLEN: %^SLEN: [%>|.#.] ;
 
 !€ konnjâl^CSH>ân
 !€ kon0jâl0>ân
@@ -519,8 +521,6 @@ Cx:Cy <=> Vow: _ %^RC: :Vow (%^SV:) %^WG: %^CLEN: ([%^SVLOW: |%^SLEN: | %^RVSH:]
 !€ va%^RVh%^RCe%^SV%^WG%^CLEN%^SLEN%>st
 !€ va0vvee000>st
 
-!YAML test 34: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_saaha1_dict-gt-norm.gen.yaml - 11/5/16 FAIL  MAANU, ii heive
-!YAML test 35: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_saaha_dict-gt-norm.gen.yaml - 14/3/17 FAIL
 
 !€ va%^RVh%^RCe%^SV%^CLEN%^SLEN%>n
 !€ va0hhee00>n
@@ -560,31 +560,6 @@ Cx:0 <=> _  Cx:Cy Vow: %^RLEN: %^CSH: %> n ;
             Cy in ( ṛ ḷ ṇ ŋ̣ ṃ ) 
       matched ;
 
-
-!"Consonant lengthening after xy:zy weak grade with k4ss and h4čč"
-! * __@RULENAME@__  as previous rule, but for  čuhčá čuvččáin kuá%^RDh4ˊč%^RCá%^WG%^CLEN%>in
-!%^RC:Cx <=> [:Vow|%^RV: | %^RD:] Cy: (ˊ:) Cz: _ Vow:  %^WG: %^CLEN: ;
-!        where Cy in ( k4 h4) 
-!              Cz in ( s  č) 
-!              Cx in (  s č ) 
-!        matched ;
-!
-!
-!"Consonant lengthening after x:y weak grade, to x:yy, with %^SV"
-! * __@RULENAME@__  , here we lengthen the lower y consonant, spaha -> spavvaast  ko%^RVp%^RCe%^SV%^CLEN%^SLEN%>n
-!%^RC:Cx <=> [:Vow|%^RV:] Cx: _ Vow: %^SV: (%^WG: ) %^CLEN: ;
-!        where Cx in ( p l d m s r v ) ;
-!
-!
-!
-!"Consonant lengthening after x:y weak grade with x4 on upper side"
-! * __@RULENAME@__  as previous rule, but for k4, č4, p4
-!%^RC:Cx <=> [:Vow|%^RV:] (Cz:) Cy: _ Vow: (%^SV:) %^WG:  %^CLEN: ;
-!        where Cy in ( k4 č4 p4 ) 
-!              Cx in ( h  j  v  ) 
-!              Cz in ( k  č  p  ) 
-!        matched ;
-!
 
 
 !! !Other consonant rules
