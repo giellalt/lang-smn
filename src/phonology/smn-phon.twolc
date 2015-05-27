@@ -301,8 +301,9 @@ t:đ <=> Vow: _  (ˊ:) k4: (%^RC:) WeakGrade ;
 "k4:h gradation for k4k4, tk4, rkk4"
 !! * __@RULENAME@__    for atka : ađha 
 k4:h <=> Vow: [t:|k4:] (ˊ:) _  WeakGrade ([%^RLEN: |%^CLEN:] ) (%^SVLOW:) ;
+         Vow: k4: (ˊ:) _ WeakGrade %^CLEN: %^SLEN: ;
          Vow: [l | r | v ] (ˊ:) k: _  WeakGrade (%^CLEN: ) (%^SVLOW:) ; !rˊkk	rh
-         Vow: _ (ˊ:) k4:  WeakGrade %^CLEN: (%^SVLOW:) %> ;
+         Vow: _ (ˊ:) k4: WeakGrade %^CLEN: ([%^SVLOW: | %^SLEN: ]) %> ;
          
 !€ mä%^RVtk4i^WG^RLEN>
 !€ määđhi00>
@@ -536,11 +537,11 @@ Cx:Cy <=> Vow: _ %^RC: :Vow (%^SV:) %^WG: %^CLEN: ([%^SVLOW: |%^SLEN: | %^RVSH:]
 
 
 "Consonant lengthening after xx:x and xy:zy weak grade with x4 on upper side"
-!! * __@RULENAME@__  as previous rule, but for k4, č4, p4  
-%^RC:Cx <=> Vow:  Cy: (ˊ:) Cz: _ WeakGrade %^CLEN: ;
-        where Cy in ( k  č  p  k  h h4 h4 ) 
-              Cz in ( k4 č4 p4 s  c t  č ) 
-              Cx in ( h  j  v  s  c t  č ) 
+!! * __@RULENAME@__  as previous rule, but for k4, č4, p4  kukse:kuvssijn 
+%^RC:Cx <=> Vow:  Cy: (ˊ:) Cz: _ WeakGrade %^CLEN: \%^SLEN: ; 
+        where Cy in ( k  č  p  k  h h4 h4 k4 ) 
+              Cz in ( k4 č4 p4 s  c t  č s ) 
+              Cx in ( h  j  v  s  c t  č s ) 
         matched ;
 
 
@@ -686,9 +687,9 @@ Vy:0 <=> Vx: _  Cns: [ Cns: - %^RC:0 ] Vow:  %^WG: (%^CLEN:) %^SVLOW: %> i:  ;
 
 "Root vowel lenghtening in bisyllabic stems"
 !! * __@RULENAME@__  lekkâ : leehá-  meecij
-%^RV:Vx <=> Vx: _ Cns:+ Vow: (%^SV:) (Cns:) %^WG:  %^RLEN: (%^SLEN: ) %>  ; !lu%^RVčč4â
+%^RV:Vx <=> Vx: _ Cns:+ Vow:  (Cns:) %^WG:  %^RLEN: (%^SLEN: ) %>  ; !lu%^RVčč4â
             Vx: _ Cns: Cns: Vow:  %^WG:  %^RLEN: %^SVLOW:  %>  ;
-            Vx: _ Cns:+ Vow: (%^SV:) (Cns:) %^RLEN:  %^CSH: %>  ;
+            Vx: _ Cns:+ Vow:  (Cns:) %^RLEN:  %^CSH: (%^EA:) %>  ;
 	where Vx in ( a e i o u y á ) ; !removed ä
 
 !€ le^RVkk4^RCâ^WG^RLEN
