@@ -184,13 +184,25 @@ n7:n <=> Vow: _ (%^RC: ) j WeakGrade \%^CLEN:0 ; !! weak grade
 "xx:x consonant gradation and shortening"
 !! * __@RULENAME@__  e.g. säppi:sääpi, päddi:páádán, weak grade or consonant shortening for illativ
 Cx:0 <=> Vow: _ (ˊ:) Cx: WeakGrade (%^RLEN:) (%^SVLOW:) %> ; !! weak grade päddi : päädi tullâ:tuuláin
-         Vow: _ (ˊ:) Cx: Vow:  %^CSH: (%^EA: ) %> ; !! consonant shortening for illativ, päddi : páádán
-	where Cx in ( b d g p t k c č f z ž l m n ŋ r s š v ) ;
+         Vow: _ (ˊ:) Cx: Vow: (%^RLEN:)  %^CSH: (%^EA: ) %> ; !! consonant shortening for illativ, päddi : páádán
+	where Cx in ( b d g p t k c č f z ž   m  s š v ) ; !lnŋr
 
 !cuozˊzâ:cuozâ
 
 !€ cuo%^RDzˊzâ^WG^RLEN>
 !€ cuo000zâ00>
+
+!váddu:váádun
+
+!€ vá%^RVddu%^RLEN%^CSH%>n
+!€ váá0du00%>n
+
+"xx:x consonant shortening for consonants belonging to two different patterns"
+!! * __@RULENAME@__  e.g. säppi:sääpi, päddi:páádán, weak grade or consonant shortening for illativ
+Cx:0 <=> Vow: _ (ˊ:) Cx: WeakGrade (%^RLEN:) (%^SVLOW:) %> ; !! weak grade päddi : päädi tullâ:tuuláin
+         Vow: _ (ˊ:) Cx: Vow:  %^CSH: (%^EA: ) %> ; !! consonant shortening for illativ, päddi : páádán RLEN?
+	where Cx in ( l n ŋ r ) ; !
+
 
 
 "ˊ to zero gradation"
@@ -290,8 +302,8 @@ t:đ <=> Vow: _  (ˊ:) k4: (%^RC:) WeakGrade ;
         Vow: _  %^RC:   j RealVow:  %^CLEN:0 ; ! Par and Ess
 
 
-!€ jo^RVtk4^RCâ^WG^RLEN
-!€ joođh0â00
+!€ jo%^RVtk4â^WG^RLEN>
+!€ joođhâ00>
 
 "k4:h gradation for k4k4, tk4, rkk4"
 !! * __@RULENAME@__    for atka : ađha 
@@ -299,16 +311,16 @@ k4:h <=> Vow: [t:|k4:] (ˊ:) _  WeakGrade ([%^RLEN: |%^CLEN:] ) (%^SVLOW:) ;
          Vow: [l | r | v ] (ˊ:) k: _  WeakGrade (%^CLEN: ) (%^SVLOW:) ; !rˊkk	rh
          Vow: _ (ˊ:) k4:  WeakGrade %^CLEN: (%^SVLOW:) %> ;
          
-!€ mä^RVtk4i^WG^RLEN
-!€ määđhi00
+!€ mä%^RVtk4i^WG^RLEN>
+!€ määđhi00>
 
 !€ su^RVkk4^RCá^SV^WG^CLEN^SLEN>st
 !€ su00hháá000>st
 
-"k:0 gradation for k4k4, tk4, rkk4"
-!! * __@RULENAME@__    for atka : ađha 
-k:0 <=> Vow: [l | r | v ] (ˊ:) _ k4:h  WeakGrade (%^CLEN: ) (%^SVLOW:) ; !rˊkk	rh
-        Vow: [l | r | v ] (ˊ:) _ k4:k Vow:  %^CSH: %> ; !rˊkk rk miä%^RDrˊkk4á
+"k:0 gradation for xkk4"
+!! * __@RULENAME@__  for lkk4, rkk4, vkk4
+k:0 <=> Vow: [l | r | v ] (ˊ:) _ k4:h  WeakGrade (%^CLEN: ) (%^SVLOW:) ; !! WeakGrade 
+        Vow: [l | r | v ] (ˊ:) _ k4:k Vow:  %^CSH: %> ; !! consonant shortening for illativ
 
 
 
