@@ -5,20 +5,20 @@
 !!The Inari Saami letters
 
  *  a á â ä b c d e f g h i j k l m n o õ p q 
- *  r s t u v w x y z æ ä ø ö å			   
- *  č đ ŋ ŧ š ž				 			   
+   r s t u v w x y z æ ä ø ö å			   
+   č đ ŋ ŧ š ž				 			   
 
  *  A Á Â Å B C D E F G H I J K L M N O Õ P Q 
- *  R S T U V W X Y Z Æ Ä Ø Ö Å 			   
- *  Č Đ Ŋ Ŧ Š Ž  							   
+   R S T U V W X Y Z Æ Ä Ø Ö Å 			   
+   Č Đ Ŋ Ŧ Š Ž  							   
  *  ˊ  %- 							   
  *  ':0    this to zero
 
 !Accented letters, just in case
 
  *  É Ó Ú Í À È Ò Ù Ì Ë Ü Ï Ê Ô Û Î Ã Ý þ Ð   
- *  é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý þ ð   
- *  ß ª ß ç								   
+   é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý þ ð   
+   ß ª ß ç								   
 
 
 
@@ -35,8 +35,8 @@ Literal quotes and angles must be escaped (cf morpheme boundaries further down):
 
  * p4:p  t4:t k4:k č4:č r4:r l4:l h4:h     these are consonants that change in cg
  * i4:i                                    this is the underlying i consonant
- * m7:ṃ n7:ṇ ŋ7:ŋ̣ s7:ṣ r7:ṛ đ7:đ̣ l7:ḷ      with dots
- * j7:j̣ h7:ḥ š7:ṣ̌  v7:ṿ                    with dots
+ * m7:ṃ n7:ṇ ŋ7:ŋ̣ s7:ṣ r7:ṛ đ7:đ̣ l7:ḷ      
+  j7:j̣ h7:ḥ š7:ṣ̌  v7:ṿ                    with dots
  * h5:h                                    these consonants do not change in WG
 
 
@@ -44,7 +44,7 @@ Literal quotes and angles must be escaped (cf morpheme boundaries further down):
 
  * %^RC:0		 = root cons., lengthened by ^CLEN - máán%RCu máánnun
  * %^RD:0		 = root dipht., shortened by by ^RVSH - vuá%^RDg'gu vuáˊguttáá
- * %^RV:0	 	 = root vowel, lengthened by ^RLEN - ta%^RVvlu taavlu and ^RV:ˊ when WG and suffix: 0 | t | i
+ * %^RV:0	 	 = root vowel, lengthened by ^RLEN - ta%^RVvlu taavlu and ^RV:ˊ when WG and suffix is 0, t, i
  * %^SC:0       = stem cons, %^SC:j, pluss lengthen after earlier shortening by %^CSH, see lyeme
  * %^SV:0 		 = stem vowel, lengthened by ^SLEN u:uu - táálu%^SV tááloost
 
@@ -106,20 +106,22 @@ Sets
         P Q R S Š T Ŧ V W X Z Ž 				    
         ht g2 k2 m2 n2 							    
         b3 d3 g3 m3 h3 						    
- *        p4 k4 č4 r4 l4 h4 t4 i4                        
- *        h5                                       
+        p4 k4 č4 r4 l4 h4 t4 i4                  
+         h5                                       
         m7 n7 ŋ7 v7 s7 r7 đ7	l7 j7 h7 š7		    
- *        ṃ  ṇ  ŋ̣  ṿ  ṣ  ṛ  đ̣  ḷ  j̣  ḥ  ṣ̌         
+         ṃ  ṇ  ŋ̣  ṿ  ṣ  ṛ  đ̣  ḷ  j̣  ḥ  ṣ̌          
+         %^RC %^SC  ˊ ;                          
+ *  Geminate = b d g p h t k c č f z l m n ŋ r s š v  ;    check these
  *  Seg = Vow Cns ;							    
  *  StemCns = b b3 d d3 g g2 g3 h h2 h3 		    
- *            j l m m2 m3 m8 n n8 n2 ŋ r s  ;      
+            j l m m2 m3 m8 n n8 n2 ŋ r s  ;      
 
 
 
 
 !!!Definition section
 
-Trying to introduce a WG right context, so far resulting in drop in performance.
+Introducing a WG right context
 
 
  WeakGrade =  :RealVow (Cns:) (%^SV:) %^WG:0  (%^RVSH:)   ;     the general definition
@@ -132,66 +134,66 @@ Trying to introduce a WG right context, so far resulting in drop in performance.
 
 !Consonant gradation
 
-* __x7:x ja x:y consonant gradation__  WG gives x7:x and x:y, when there is no consonantlengthning  
+* __x7:x ja x:y consonant gradation__ \\  WG gives x7:x and x:y, when there is no consonantlengthning  
 
 
 
 
 
 
-* __n7j:nj consonant gradation and lengthning__   n7:n in the combinataion n7j:nj 
-weak grade
-consonantlengthning
-weak grade and consonant lengthning 
+* __n7j:nj consonant gradation and lengthning__ \\   n7:n in the combinataion n7j:nj 
+1) weak grade
+2) consonantlengthning
+3) weak grade and consonant lengthning 
 
 
 
 
-* __xx:x consonant gradation and shortening__  e.g. säppi:sääpi, päddi:páádán, weak grade or consonant shortening for illativ
-weak grade päddi : päädi tullâ:tuuláin
-consonant shortening for illativ, päddi : páádán
+* __xx:x consonant gradation and shortening__ \\  e.g. säppi:sääpi, päddi:páádán, weak grade or consonant shortening for illativ
+1) weak grade päddi : päädi tullâ:tuuláin
+2) consonant shortening for illativ, päddi : páádán
 
 
 
 
 
-* __xx:x consonant shortening for consonants belonging to two different patterns__  e.g. säppi:sääpi, päddi:páádán, weak grade or consonant shortening for illativ
-weak grade päddi : päädi tullâ:tuuláin
-consonant shortening for illativ, päddi : páádán RLEN?
+* __xx:x consonant shortening for consonants belonging to two different patterns__ \\  e.g. säppi:sääpi, päddi:páádán, weak grade or consonant shortening for illativ
+1) weak grade päddi : päädi tullâ:tuuláin
+2) consonant shortening for illativ, päddi : páádán RLEN?
 
 
 
-* __ˊ to zero gradation__ when weak grade or consonant shortening for illativ
-weak grade
- consonant shortening for illativ
-weak grade and consonant lengthning, kiäčˊču kiäj̣u 
+* __ˊ to zero gradation__ \\ when weak grade or consonant shortening for illativ
+1) weak grade
+ 2) consonant shortening for illativ
+3) weak grade and consonant lengthning, kiäčˊču kiäj̣u 
 
 
 
 
-* __xx:y to something else, consonant gradation and shortening, part 1 __   hh:V, kk:h, pp:v, čč:J, deleting first part, k:0 in kk4:h etc 
-weak grade: ruttâ:ruuđáin
-consonant shortening for illativ
+* __xx:y to something else, consonant gradation and shortening, part 1 __ \\   hh:V, kk:h, pp:v, čč:J, deleting first part, k:0 in kk4:h etc 
+1) weak grade: ruttâ:ruuđáin
+2) consonant shortening for illativ
 
 
-* __č:0 in čč4:j,  part 1 __   
-weak grade: luččâ:luučân
-weak grade and consonant lengthning kiäčˊču:kiäj̣u 
-consonant shortening for illativ: luččâ:luučân
+* __č:0 in čč4:j,  part 1 __ \\   
+1) weak grade: luččâ:luučân
+2) weak grade and consonant lengthning kiäčˊču:kiäj̣u 
+3) consonant shortening for illativ: luččâ:luučân
 
 
 
-* __xx:y to something else, consonant gradation, part 2 __  hh:V, kk:h, pp:v, čč:J here we change second part, k4:h in kk4:h etc. 
-weak grade:
-weak grade and consonant lengthning kiäčˊču:kiäj̣u 
+* __xx:y to something else, consonant gradation, part 2 __ \\  hh:V, kk:h, pp:v, čč:J here we change second part, k4:h in kk4:h etc. 
+1) weak grade:
+2) weak grade and consonant lengthning kiäčˊču:kiäj̣u 
 
-* __RV:ˊ in weak grade or root vowel shortening__  saˊj̣e (now line 2 is justa copy from Vx:ˊ. Shorten the context !
+* __RV:ˊ in weak grade or root vowel shortening__ \\  saˊj̣e 
 
 
 
 
 
-* __Long vowel shortening (no consonant shortening) in vowel stems__ (example?), no ^CSH, since that gives Vy:0
+* __Long vowel shortening (no consonant shortening) in vowel stems__ \\ (example?), no ^CSH, since that gives Vy:0
 
 
 
@@ -203,59 +205,57 @@ weak grade and consonant lengthning kiäčˊču:kiäj̣u
 
 
 
-* __t:đ, also tˊk4:đh gradation, part 1 __   for ito : iđo riä%^RDtˊk4á  utke+N+Sg+Gen:  uˊđhe  riätká+N+Sg+Gen:  riäđhá  riä%^RDtˊk4á
+* __t:đ, also tˊk4:đh gradation, part 1 __ \\   for ito : iđo riä%^RDtˊk4á  utke+N+Sg+Gen:  uˊđhe  riätká+N+Sg+Gen:  riäđhá  riä%^RDtˊk4á
 
 
 
-* __k4:h gradation for k4k4, tk4, rkk4__    for atka : ađha 
+* __k4:h gradation for k4k4, tk4, rkk4__ \\    for atka : ađha 
 
 
 
-* __k:0 gradation for xkk4__  for lkk4, rkk4, vkk4
-WeakGrade 
-consonant shortening for illativ
+* __k:0 gradation for xkk4__ \\  for lkk4, rkk4, vkk4
+1) WeakGrade 
+2) consonant shortening for illativ
 
 
 
-* __t4:đ gradation for tt4 __  ruttâ ruuđâ
+* __t4:đ gradation for tt4 __ \\  ruttâ ruuđâ
 
 
 
 
 
-!Other Consonant Rules
 
 
 
 
-* __xy:zy gradation__  ht:vt, we use h4 
+* __xy:zy gradation__ \\  ht:vt, we use h4 
 
 
 
 
-* __xyy:xy gradation A__   
+* __xyy:xy gradation A__ \\   
 
 
 
 
 
+* __xx:x7 gradation for ^CSH illative 1 __ \\   ku%^RVrrâ%^RLEN%^CSH%>n so%^RVllâ%^RLEN%^CSH%>n
 
 
-
-
+* __xx:x7 gradation for ^CSH illative 2 __ \\   ku%^RVrrâ%^RLEN%^CSH%>n so%^RVllâ%^RLEN%^CSH%>n
 
 
 
 !Consonant shortening
 
-* RULENAME for vaskâm:vaaskâ
 
 
 
 
 
 
-* __nnj to nj shortening weak grade and consonant shortening__  special rule, e.g. konnjâl -> konjâlân puá%^RDnˊnjá
+* __nnj to nj shortening weak grade and consonant shortening__ \\  special rule, e.g. konnjâl -> konjâlân puá%^RDnˊnjá
 
 
 
@@ -270,30 +270,28 @@ consonant shortening for illativ
 
 
 
-* __Lengthening of half-long root consonant n7:n 1__  for l-dot to ll, changing l7 to first l in ll
+* __Lengthening of half-long root consonant n7:n 1__ \\  for l-dot to ll, changing l7 to first l in ll
 
-* __Lengthening of half-long root consonant j7:j 1__  for l-dot to ll, changing l7 to first l in ll
+* __Lengthening of half-long root consonant j7:j 1__ \\  for l-dot to ll, changing l7 to first l in ll
 
-* __Lengthening root consonant j7:ij 1__  for saje:sa%^RVj7%^RCe NJUNE "sija" ;
-
-
-
-* __Lengthening of half-long root consonant n7 : nn 2__   for l-dot to ll, changing ^RC to second l in ll  muáđoin
-
-* __Lengthening of consonant for Ess/Par__   piiru piirrun niisu niissun vahe vahheen
+* __Lengthening root consonant j7:ij 1__ \\  for saje:sa%^RVj7%^RCe NJUNE "sija" ;
 
 
+
+* __Lengthening of half-long root consonant n7 : nn 2__ \\   for l-dot to ll, changing ^RC to second l in ll  muáđoin
+
+* __Lengthening of consonant for Ess/Par__ \\   piiru piirrun niisu niissun vahe vahheen
 
 
 
 
 
 
-* __Lengthening of h and p to vv, for everything except Ess/Par 1__  for h to vv p to vv čääc%^RCi
-
-* __Lengthening of h and p to vv, for everything except Ess/Par 2__   for h to vv  p to vv   
 
 
+* __Lengthening of h and p to vv, for everything except Ess/Par 1__ \\  for h to vv p to vv čääc%^RCi
+
+* __Lengthening of h and p to vv, for everything except Ess/Par 2__ \\   for h to vv  p to vv   
 
 
 
@@ -304,29 +302,23 @@ consonant shortening for illativ
 
 
 
-* __n7j to nnj consonant lengthning__  special rule, suán7ju : suánnjun for Par and Ess
+
+
+* __n7j to nnj consonant lengthning__ \\  special rule, suán7ju : suánnjun for Par and Ess
 
 
 
-* __Consonant lengthening after xx:x and xy:zy weak grade with x4 on upper side__  as previous rule, but for k4, č4, p4  kukse:kuvssijn  
-
-
-* __xx:x7 gradation for ^CSH illative 1 __   ku%^RVrrâ%^RLEN%^CSH%>n so%^RVllâ%^RLEN%^CSH%>n
-
-
-* __xx:x7 gradation for ^CSH illative 2 __   ku%^RVrrâ%^RLEN%^CSH%>n so%^RVllâ%^RLEN%^CSH%>n
+* __Consonant lengthening after xx:x and xy:zy weak grade with x4 on upper side__ \\  as previous rule, but for k4, č4, p4  kukse:kuvssijn  
 
 
 
 !Other consonant rules
 
-* __xˊx7:xˊx and xx7:xx as default when not WG | RVSH | RLEN __  
+* __xˊx7:xˊx and xx7:xx as default when not WG | RVSH | RLEN __ \\  
 
 
 
 
-
-(outcommented)
 
 
 
@@ -345,7 +337,7 @@ consonant shortening for illativ
 
 
 
-* __Vowel shortening with consonant shortening __  for koonjâl -> konjâlân
+* __Vowel shortening with consonant shortening __ \\  for koonjâl -> konjâlân
 
 
 
@@ -355,26 +347,26 @@ consonant shortening for illativ
 
 
 
-* __Vowel shortening (no consonant shortening) in consonant stems__ kiirrâs- to kirrâsân
+* __Vowel shortening (no consonant shortening) in consonant stems__ \\ kiirrâs- to kirrâsân
 
 
-* __Vowel shortening in front two consonants and i-suffix__ ráávhu- : rávhoid, čääci : čassijn
+* __Vowel shortening in front two consonants and i-suffix__ \\ ráávhu- : rávhoid, čääci : čassijn
 
 
 
 
 
-* __Vowel shortening for uá __  for uábbi -> obbijn  
+* __Vowel shortening for uá __ \\  for uábbi -> obbijn  
 
 
 
 !First syllable vowel lengthening
 
-* __Root vowel lenghtening in bisyllabic stems__  lekkâ : leehá-  meecij
+* __Root vowel lenghtening in bisyllabic stems__ \\  lekkâ : leehá-  meecij
 
 
 
-* __Root vowel lengtning with vowel change before suffix i__  alge : oolgijn 
+* __Root vowel lengtning with vowel change before suffix i__ \\  alge : oolgijn 
 
 
 
@@ -383,110 +375,109 @@ consonant shortening for illativ
 
 !First syllable vowel change
 
-* __Root vowel change for á to ä with i in second syllable__  päävir
+* __Root vowel change for á to ä with i in second syllable__ \\  päävir
 
 
 
 
-* __Shortening diphthong__ RD to ˊ muátu muáˊđoost
+* __Shortening diphthong__ \\ RD to ˊ muátu muáˊđoost
 
-* __Monophthongisation rule 1__  u:o in pairs like kuátij -> koođij
+* __Monophthongisation rule 1__ \\  u:o in pairs like kuátij -> koođij
 
-* __Monophthongisation rule ä:a__  čääci:čassijn, läbži:labžijn ä%^RVi4gi%^WG%^RLEN%>id
-
-
-
-
-
-* __Monophthongisation rule 2__  á:o in pairs like kuátij -> koođij 
-
-
-* __Root vowel change before suffix i__  alge : olgijn ko%^RVv7%^RCe%^WG%^CLEN%>jn
+* __Monophthongisation rule ä:a__ \\  čääci:čassijn, läbži:labžijn ä%^RVi4gi%^WG%^RLEN%>id
 
 
 
 
-* __e to iä, part 1__  Part 1: e to i; ergi -> iärgán 1, veerdi : viärdán
+
+* __Monophthongisation rule 2__ \\  á:o in pairs like kuátij -> koođij 
 
 
-* __e to iä in Illative and Sg3 2__  Part 2: ^RV to ä; ergi -> iärgán 2 (e+e(RV) -> i + ä
-
-* __ie to iä in Illative and Sg3__  ... with ^ILL as trigger; kiem´ni -> kiämnán, veerdi : viärdán
-
-* __ie to iä in Illative and Sg3__  ... after .#. or Cns, with ^ILL as trigger; kiem´ni -> kiämnán
-
-* __ää to áá in Illative and Sg3__  ... for säämi > sáámán
+* __Root vowel change before suffix i__ \\  alge : olgijn ko%^RVv7%^RCe%^WG%^CLEN%>jn
 
 
-* __äRV to áá in Illative and Sg3__  ... for täsni -> táásnán
 
 
-* __äRV to aa __  äigi aaigijd
+* __e to iä, part 1__ \\  Part 1: e to i; ergi -> iärgán 1, veerdi : viärdán
 
 
-* __ye to uá og uo, part 1 __  Part 1 of ye to uá for kyeli : kuálán  pye%^RDi4ˊdi%^CSH%^EA%>n
+* __e to iä in Illative and Sg3 2__ \\  Part 2: ^RV to ä; ergi -> iärgán 2 (e+e(RV) -> i + ä
 
-* __ye to uá, part 2__  Part 2 of ye to uá for kyeli : kuálán
+* __ie to iä in Illative and Sg3__ \\  ... with ^ILL as trigger; kiem´ni -> kiämnán, veerdi : viärdán
 
-* __ye to uo, part 2 __  Part 2 of ye to uá for kyeli : kuolijn
+
+* __ää to áá in Illative and Sg3__ \\  ... for säämi > sáámán
+
+
+* __äRV to áá in Illative and Sg3__ \\  ... for täsni -> táásnán
+
+
+* __äRV to aa __ \\  äigi aaigijd
+
+
+* __ye to uá og uo, part 1 __ \\  Part 1 of ye to uá for kyeli : kuálán  pye%^RDi4ˊdi%^CSH%^EA%>n
+
+* __ye to uá, part 2__ \\  Part 2 of ye to uá for kyeli : kuálán
+
+* __ye to uo, part 2 __ \\  Part 2 of ye to uá for kyeli : kuolijn
 
 
 
 !Second syllable rules
 
-* __Vowel change á to e or i in 3syll__ puttás- > putes, triggers are ^ÁE and ^ÁI
+* __Vowel change á to e or i in 3syll__ \\ puttás- > putes, triggers are ^ÁE and ^ÁI
 
 
-* __Vowel shortening  áá and to e or i in 3syll__ puttás- > putes, triggers are ^ÁE and ^ÁI
+* __Vowel shortening  áá and to e or i in 3syll__ \\ puttás- > putes, triggers are ^ÁE and ^ÁI
 
 
-* __Suffix vowel lengthening__ long á in kissáást
-
-
-
-
-* __Suffix vowel lengthening o__ stááḷu stááloost
-
-
-* __Fleeting vowel before suffix__ deletes -i- in piehâin to piehânjist 
-
-
-* __Inversion of in to nj__  adds -j-  in piehâin to piehânjist  
+* __Suffix vowel lengthening__ \\ long á in kissáást
 
 
 
 
-
-* __Stem vowel e deletion before 2nd syllable ij__  hmm have a look at this
-
+* __Suffix vowel lengthening o__ \\ stááḷu stááloost
 
 
-* __Stem vowel e to a for a root vowel.__  alge to aalgan
+* __Fleeting vowel before suffix__ \\ deletes -i- in piehâin to piehânjist 
 
 
-* __Stem vowel e to á for other root vowel.__  
-
-
-* __Stem vowel i to á for other root vowel.__  e.g. säämi > Ill sáámán kye%^RDl7%^RC
-
-
-
-* __Stem vowel â to a in Pl Nom -h__  silbâ to siilbah
+* __Inversion of in to nj__ \\  adds -j-  in piehâin to piehânjist  
 
 
 
 
-* __Stem vowel â > á change before i__ sollâ to sooláid 
+
+* __Stem vowel e deletion before 2nd syllable ij__ \\  hmm have a look at this
+
+
+
+* __Stem vowel e to a for a root vowel.__ \\  alge to aalgan
+
+
+* __Stem vowel e to á for other root vowel.__ \\  
+
+
+* __Stem vowel i to á for other root vowel.__ \\  e.g. säämi > Ill sáámán kye%^RDl7%^RC
+
+
+
+* __Stem vowel â to a in Pl Nom -h__ \\  silbâ to siilbah
 
 
 
 
-* __Stem vowel change e:i before suffix i__ 
-
-* __Stem vowel u:o change before suffix__  ... check this, add test máát%^RCu
+* __Stem vowel â > á change before i__ \\ sollâ to sooláid 
 
 
-* __Suffix i:j for i and e-stems__  
+
+
+* __Stem vowel change e:i before suffix i__ \\ 
+
+* __Stem vowel u:o change before suffix__ \\  ... check this, add test máát%^RCu
+
+
+* __Suffix i:j for i and e-stems__ \\  
 
 
 
