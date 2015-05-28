@@ -649,7 +649,7 @@ Vy:0 <=> Vx: _  Cns: [ Cns: - %^RC:0 ] Vow:  %^WG: (%^CLEN:) %^SVLOW: %> i:  ;
 %^RV:Vx <=> Vx _ Cns:+  :RealVow  (%^SV:) %^WG:0   %^RLEN: (%^SLEN: ) %>  ; !lu%^RVčč4â 
             Vx _ Cns: Cns: Vow:  %^WG:  %^RLEN: %^SVLOW:  %>  ;
             Vx _ Cns: Cns: Vow: %^RLEN: %^EA: %>  ; !nijbe niijbán
-            Vx _ Cns:+ Vow:  (Cns:) %^RLEN:  %^CSH: (%^EA:) %>  ;
+            Vx _ Cns:+ Vow:  (Cns:) %^RLEN:  %^CSH: (%^EA:) %>  ; !conflict
 	where Vx in ( a e i o u y á ) ; !removed ä
 
 !€ le^RVkk4^RCâ^WG^RLEN
@@ -690,14 +690,26 @@ Vy:0 <=> Vx: _  Cns: [ Cns: - %^RC:0 ] Vow:  %^WG: (%^CLEN:) %^SVLOW: %> i:  ;
 %^RD:ˊ <=> _ Cns:+ Vow: (%^SV:) %^WG: %^RVSH: ;
 ! RV still does not give as good result as RD.
 
-"Monophthongisation rule 1"
+"Monophthongisation rule i:e"
+!! * __@RULENAME@__ \\  u:o in pairs like kuátij -> koođij
+Vx:Vy <=> _ Vz: Cns:* i %^WG: %> i: ;  !Her
+!         _ Vz:0 %^RD: Cns:* i %^WG: %^CLEN: %^SVLOW: %> i:  ;
+	where Vx in ( i )
+		  Vy in ( e )
+		  Vz in ( ä)
+	matched ;
+
+"Monophthongisation rule u:o"
 !! * __@RULENAME@__ \\  u:o in pairs like kuátij -> koođij
 Vx:Vy <=> _ Vz: Cns:* i %^WG: %> i: ;  !Her
          _ Vz:0 %^RD: Cns:* i %^WG: %^CLEN: %^SVLOW: %> i:  ;
-	where Vx in ( i u )
-		  Vy in ( e o )
-		  Vz in ( ä á )
+         _ Vz: %^RD: Cns:* i %^WG: %^RLEN: %> i: ; 
+	where Vx in ( u )
+		  Vy in ( o )
+		  Vz in ( á )
 	matched ;
+
+
 
 "Monophthongisation rule ä:a"
 !! * __@RULENAME@__ \\  čääci:čassijn, läbži:labžijn ä%^RVi4gi%^WG%^RLEN%>id
@@ -717,7 +729,8 @@ Vx:Vy <=> _ Vz: Cns:* i %^WG: %> i: ;  !Her
 
 "Monophthongisation rule 2"
 !! * __@RULENAME@__ \\  á:o in pairs like kuátij -> koođij 
-Vx:Vy <=> Vz: _ Cns:* i %^WG:  %> i: ;
+Vx:Vy <=> Vz: _  Cns:* i %^WG:   %> i: ;
+          Vz:Vy _ %^RD: Cns:* i %^WG: %^RLEN:  %> i: ;
 	where Vx in ( ä á ä )
 		  Vy in ( e o a )
 		  Vz in ( i u ä )
@@ -780,17 +793,19 @@ e:ä <=> [i | e: ]  _ (%^RD:) Cns: (ˊ:) Cns:* Vow: (%^RLEN:)  (%^CSH:) %^EA: %>
 
 
 "ye to uá og uo, part 1" 
-!! * __@RULENAME@__ \\  Part 1 of ye to uá for kyeli : kuálán  pye%^RDi4ˊdi%^CSH%^EA%>n
-y:u <=> _ e: %^RD:  Cns: (ˊ:) Cns:* Vow: (%^CSH:) %^EA: %> ;
-        _ :o %^RD:  Cns: (ˊ:) Cns:* i: %^WG: (%^RVSH:) %> i: ;
+!! * __@RULENAME@__ \\  Part 1 of ye to uá for kyeli : kuálán  pye%^RDi4ˊdi%^CSH%^EA%>n sye%^RDi4ˊni
+y:u <=> _ e: %^RD:  Cns:+ Vow: (%^RLEN:) (%^CSH:) %^EA: %> ;
+        _ :o %^RD:  Cns:+ i: %^WG: ([%^RVSH: |%^RLEN:] ) %> i: ;
+        _ :o %^RD:  Cns:+ i: %^WG: %^CLEN: %^SVLOW: %> i: ;
 
 "ye to uá, part 2"
 !! * __@RULENAME@__ \\  Part 2 of ye to uá for kyeli : kuálán
-e:á <=> y: _ %^RD:  Cns:+ Vow: (%^CSH:) %^EA: ;
+e:á <=> y: _ %^RD:  Cns:+ Vow: (%^RLEN:) (%^CSH:) %^EA: %> ;
 
 "ye to uo, part 2 "
 !! * __@RULENAME@__ \\  Part 2 of ye to uá for kyeli : kuolijn
-e:o <=> y: _ %^RD:  Cns:+ i: %^WG: (%^RVSH:) %> i: ;
+e:o <=> y: _ %^RD:  Cns:+ i: %^WG: ([%^RVSH: |%^RLEN:]) %> i: ;
+        y:  _ %^RD:  Cns:+ i: %^WG: %^CLEN: %^SVLOW: %> i: ;
 
 
 
