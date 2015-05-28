@@ -182,7 +182,7 @@ n7:n <=> Vow: _ (%^RC: ) j WeakGrade \%^CLEN:0 ; !! 1) weak grade
 
 
 "xx:x consonant gradation and shortening"
-!! * __@RULENAME@__ \\  e.g. säppi:sääpi, päddi:páádán, weak grade or consonant shortening for illativ
+!! * __@RULENAME@__ \\   weak grade or consonant shortening for illativ
 Cx:0 <=> Vow: _ (ˊ:) Cx: WeakGrade (%^RLEN:) (%^SVLOW:) %> ; !! 1) weak grade päddi : päädi tullâ:tuuláin
          Vow: _ (ˊ:) Cx: Vow: (%^RLEN:)  %^CSH: (%^EA: ) %> ; !! 2) consonant shortening for illativ, päddi : páádán
 	where Cx in ( b d g p t k c č f z ž s š v ) ; !lnŋr
@@ -198,7 +198,7 @@ Cx:0 <=> Vow: _ (ˊ:) Cx: WeakGrade (%^RLEN:) (%^SVLOW:) %> ; !! 1) weak grade p
 !€ váá0du00%>n
 
 "xx:x consonant shortening for consonants belonging to two different patterns"
-!! * __@RULENAME@__ \\  e.g. säppi:sääpi, päddi:páádán, weak grade or consonant shortening for illativ
+!! * __@RULENAME@__ \\   weak grade or consonant shortening for illativ
 Cx:0 <=> Vow: _ (ˊ:) Cx: WeakGrade (%^RLEN:) (%^SVLOW:) %> ; !! 1) weak grade päddi : päädi tullâ:tuuláin
          Vow: _ (ˊ:) Cx: Vow:  %^CSH: (%^EA: ) %> ; !! 2) consonant shortening for illativ, päddi : páádán RLEN?
 	where Cx in ( l n ŋ r m ) ; !
@@ -259,7 +259,6 @@ Cx:Cy <=> Vow:  Cz: (ˊ:) _  WeakGrade (%^RLEN:) (%^SVLOW:) %> ; !! 1) weak grad
 
 "Long vowel shortening (no consonant shortening) in vowel stems"
 !! * __@RULENAME@__ \\ (example?), no ^CSH, since that gives Vy:0
-!Vy:ˊ <=> Vx: _  Cns: (Cns:) (%^RC:) Vow:  (%^WG:) (%^RVSH:) (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) %^RVSH: (%^SVLOW:) [%>|.#.] ;
 Vy:ˊ <=> Vx: _  Cns:+ (%^RC:) Vow:  %^WG: %^RVSH: (%^SVLOW:) [%>|.#.] ;
        where Vx in ( a e i o u y á ä ) 
              Vy in ( a e i o u y á ä ) 
@@ -274,8 +273,13 @@ Vy:ˊ <=> Vx: _  Cns:+ (%^RC:) Vow:  %^WG: %^RVSH: (%^SVLOW:) [%>|.#.] ;
 !€ mool7^RCâ^WG>
 !€ mool0â0>
 
+
+!käähir to kääṿir
+
 !€ käähir^WG>
 !€ kääṿir0>
+
+!juáhu to juáˊṿuttáá
 
 !€ juá%^RDh%^RCu%^WG%^RVSH%>ttáá
 !€ juáˊṿ0u00>ttáá
@@ -283,8 +287,8 @@ Vy:ˊ <=> Vx: _  Cns:+ (%^RC:) Vow:  %^WG: %^RVSH: (%^SVLOW:) [%>|.#.] ;
 
 
 "t:đ, also tˊk4:đh gradation, part 1" 
-!! * __@RULENAME@__ \\   for ito : iđo riä%^RDtˊk4á  utke+N+Sg+Gen:  uˊđhe  riätká+N+Sg+Gen:  riäđhá  riä%^RDtˊk4á
-t:đ <=> Vow: _  (ˊ:) k4: (%^RC:) WeakGrade ;
+!! * __@RULENAME@__ \\   
+t:đ <=> Vow: _  (ˊ:) k4: (%^RC:) WeakGrade ; !for ito : iđo 
         Vow: _  %^RC:   j RealVow: %^WG:0 %^CLEN:0 %^SVLOW:0 ; ! Com
         Vow: _ (%^RC:) (j) WeakGrade (%^CLEN:0) ;
         Vow: _  %^RC:   j RealVow:  %^CLEN:0 ; ! Par and Ess
@@ -300,11 +304,11 @@ k4:h <=> Vow: [t:|k4:] (ˊ:) _  WeakGrade ([%^RLEN: |%^CLEN:] ) (%^SVLOW:) ;
          Vow: [l | r | v ] (ˊ:) k: _  WeakGrade (%^CLEN: ) (%^SVLOW:) ; !rˊkk	rh
          Vow: _ (ˊ:) k4: WeakGrade %^CLEN: ([%^SVLOW: | %^SLEN: ]) %> ;
          
-!€ mä%^RVtk4i^WG^RLEN>
-!€ määđhi00>
+!€ mä%^RVtk4i^WG^RLEN>.#.
+!€ määđhi00>.#.
 
-!€ su^RVkk4^RCá^SV^WG^CLEN^SLEN>st
-!€ su00hháá000>st
+!€ su%^RVk4k4á^SV^WG^CLEN^SLEN>st
+!€ su0hháá000>st
 
 "k:0 gradation for xkk4"
 !! * __@RULENAME@__ \\  for lkk4, rkk4, vkk4
@@ -320,18 +324,16 @@ t4:đ <=> t: _ WeakGrade ;
 !€ ru%^RVtt4â%^WG%^RLEN>
 !€ ruu0đâ00>
 
-         
-
-!€ suá%^RDn7%^RCju  
-!€ suá0nj0u
-
-       
+        
+!rejected:       
 !€ kappeer^CSH^RVSH>ist
 !€ kap00er00>ist
 
+!rejected:       
 !€ haavvâr^CSH^RVSH>ist
 !€ h0aṿ0âr00>ist
 
+!rejected:       
 !€ pottáák^SC^CSH^RVSH>ist
 !€ pot00ákk00>ist
 
@@ -365,6 +367,7 @@ Cy:0 <=> :Vow ([%^RV: | %^RD: ]) Cx: (ˊ: ) _ Cz: (%^RC:) Vow (%^SV:) (Cns)  %^W
 !€ á%^RVrppu%^WG%^RVSH%>ttáá
 !€ áˊr0pu00>ttáá
 
+!rejected
 !€ riänttus^WG
 !€ riän0tus0
 
@@ -378,13 +381,19 @@ Cx:Cy <=> Cx: _ Vow: %^RLEN: %^CSH: %> n ;
 
 
 "xx:x7 gradation for ^CSH illative 2" 
-!! * __@RULENAME@__ \\   ku%^RVrrâ%^RLEN%^CSH%>n so%^RVllâ%^RLEN%^CSH%>n
+!! * __@RULENAME@__ \\    
 Cx:0 <=> _  Cx:Cy Vow: %^RLEN: %^CSH: %> n ;
       where Cx in ( r l n ŋ m ) 
             Cy in ( ṛ ḷ ṇ ŋ̣ ṃ ) 
       matched ;
 
+!kurrâ kuuṛân
+!€ ku%^RVrrâ%^RLEN%^CSH%>n
+!€ kuu0ṛâ00>n
 
+!sollâ sooḷân
+!€ so%^RVllâ%^RLEN%^CSH%>n
+!€ soo0ḷâ00>n
 
 !! !Consonant shortening
 
@@ -417,15 +426,16 @@ n:0 <=> n (ˊ:) _ j Vow (Cns:) (%^RLEN:) %^CSH: [%>|.#.] ;
 
 !€ suá^RDn7^RCju^CLEN>n
 !€ suá0nnju0>n
+
+!rejected:
 !€ haamit^SC^CSH^RVSH>ist
 !€ h0amitt00>ist
 
 
-!€ su^RVkk4^RCá^SV^WG^CLEN^SLEN>st
-!€ su00hháá000>st
+!€ su^RVk4k4á^SV^WG^CLEN^SLEN>st
+!€ su0hháá000>st
 
-!strange:
-
+!rejected:
 !€ kopp^RCâ^WG^CLEN^SVN>in
 !€ ko0pp0á000>in
 
@@ -458,8 +468,8 @@ j7:i <=> Vow: _ %^RC: :Vow       %^CLEN:         %> ; !Par Ess
 !€ sa^RVj7^RCe^SV^CLEN^SLEN>n
 !€ sa0ijee00>n
 
-!€ pááj7^RCá^CLEN>n
-!€ páá0ijá00>n
+!€ pááj7%^RCá^CLEN>n
+!€ pááijá0>n
 
 "Lengthening of half-long root consonant n7 : nn 2"
 !! * __@RULENAME@__ \\   for l-dot to ll, changing ^RC to second l in ll  muáđoin
@@ -479,13 +489,14 @@ j7:i <=> Vow: _ %^RC: :Vow       %^CLEN:         %> ; !Par Ess
 		  matched ;
 
 
-!iše:i%^RVš7%^RCe VAHE ;  %^SV%^WG%^CLEN%^SLEN%>st
-!vahe:va%^RVh%^RCe VAHE ; ! sääm%^RCi
 
-!kiehâ:kie%^RDh%^RCâ KIEHA ; ! SM9 +N+Sg+Com:%^WG%^CLEN%^SVLOW%>in K ; ! kievváin
+!kiehâ  kievváin
+!€ kie%^RDh%^RCâ%^WG%^CLEN%^SVLOW%>in
+!€ kie0vvá000>in
 
-
-
+!iše iššeest
+!€ i%^RVš7%^RCe%^SV%^WG%^CLEN%^SLEN%>st
+!€ i0ššee000>st
 
 !rejected:
 !€ kol7^RCe^CLEN
@@ -507,17 +518,15 @@ Cx:Cy <=> Vow: _ %^RC: :Vow (%^SV:) %^WG: %^CLEN: ([%^SVLOW: |%^SLEN: | %^RVSH:]
 
 
 
-! äšši:ä%^RVšši SAAMI "asia" ;
-
-! piir %^RC u %^CLEN %> n
+!rejected:
 !€ ka^RVss^RCa^SV^WG^CLEN^SLEN>st
 !€ ka00ssaa000>st
 
-
+!vahe vavveest
 !€ va%^RVh%^RCe%^SV%^WG%^CLEN%^SLEN%>st
 !€ va0vvee000>st
 
-
+!vahe vahheen
 !€ va%^RVh%^RCe%^SV%^CLEN%^SLEN%>n
 !€ va0hhee00>n
 
@@ -767,10 +776,10 @@ Vx:Vy <=> _  %^RV: Cns:+  e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> i: ;
 e:i <=> Cns: _ Vow: Cns:+ i: (%^RLEN:)  (%^CSH:) %^EA: %> ;
 
 
-"e to iä in Illative and Sg3 2"
-!! * __@RULENAME@__ \\  Part 2: ^RV to ä; ergi -> iärgán 2 (e+e(RV) -> i + ä
-%^RV:ä <=> e:i _ Cns:+ i: (%^RLEN:)  (%^CSH:) %^EA: %> ;
-           ä: _ Cns:+ i:  %^WG: %^RLEN: %> \i: ;
+"e:iä and ä:ää in Illative and Sg3 2"
+!! * __@RULENAME@__ \\  Part 2: ^RV to ä; 
+%^RV:ä <=> e:i _ Cns:+ i: (%^RLEN:)  (%^CSH:) %^EA: %> ; ! 1) e:iä, ergi -> iärgán 2 (e+e(RV) -> i + ä
+           ä: _ Cns:+ i:  %^WG: %^RLEN: %> \i: ; ! 2) ä:ää
 
 "ie to iä in Illative and Sg3"
 !! * __@RULENAME@__ \\  ... with ^ILL as trigger; kiem´ni -> kiämnán, veerdi : viärdán
