@@ -80,6 +80,7 @@ h5:h  y5:y                                !!= * @CODE@  these do not change
 %^SLEN:0    !!= * @CODE@ = stem vowel lengthening
 %^SFV:0     !!= * @CODE@ = Deleting fleeting vowel before suffix
 %^SVLOW:0   !!= * @CODE@ = stem vowel lowering â>á and u>o - árppu árppoin
+%^SVSH:0   !!= * @CODE@ = stem vowel shortening kappeer kaperân
 %^UU:0      !!= * @CODE@ = Final vowel deletion in uu stems
 %^VLOW:0    !!= * @CODE@ = Vowel lowering in 3rd sg of contract verbs tuhhid:tohhe
 %^WG:0      !!= * @CODE@ = weak grade trigger
@@ -185,6 +186,7 @@ n7:n <=> Vow: _ (%^RC: ) j WeakGrade \%^CLEN:0 ; !! 1) weak grade
 !! * __@RULENAME@__ \\   weak grade or consonant shortening for illativ
 Cx:0 <=> Vow: _ (ˊ:) Cx: WeakGrade (%^RLEN:) (%^SVLOW:) %> ; !! 1) weak grade päddi : päädi tullâ:tuuláin
          Vow: _ (ˊ:) Cx: Vow: (%^RLEN:)  %^CSH: (%^EA: ) %> ; !! 2) consonant shortening for illativ, päddi : páádán
+         Vow: _ (ˊ:) Cx: Vow: Vow Cns  %^CSH: %^SVSH: %> ; !! 2) consonant shortening for illativ, päddi : páádán
 	where Cx in ( b d g p t k c č f z ž s š v ) ; !lnŋr
 
 !cuozˊzâ:cuozâ
@@ -922,6 +924,12 @@ e:i <=> Cns:  _  (%^WG:) ([ %^RLEN: | %^CLEN: ])  %> i: ;
 u:o <=> Cns: _ ([%^UU:|%^SV:]) (%^WG:) (%^RVSH:) (%^RLEN:|%^CLEN:) (%^SLEN:) %^SVLOW:  ; 
 ! stááḷu stááloust
 
+"Second vowel shortening for e and o in 3syll consonant stems"
+Vx:0 <=> _ Vx [r|d|m|n|k] %^CSH: %^SVSH: %> ;
+    where Vx in ( e o a á ) ;
+    
+!€ kappeer^CSH^RVSH%>ân
+!€ kap00er00>ân
 
 !! !Suffix vowel rules
 
