@@ -66,5 +66,50 @@ grep immeel test/src/gt-norm-yamls/*
 Silloin ilmestyy kaksi paradigmaa. Tarkista, että ne ovat identtisiä, ja poista
 toisen.
 
+!!Leksikon parantaminen yamlin avulla
+
+Idea on seuraava:
+
+Jos perussana, esim. ''äigi'', menee läpi yamlista, niin kaikki leksikon yhdyssanat, joiden 
+viimeinen osa on ''äigi'', menevät myös läpi, mikäli niiden vartalon muoto on sama kuin itse
+''äigi''-sanan. Tarkistus tapahtuu esim. näin, yksi yaml-tiedosto kerrallaan:
+
+!Kerää kaikki yaml-tiedoston sanat
+
+{{{
+grep Ess test/src/dict-gt-yamls/N-lex_aigi_dict-gt-norm.gen.yaml |cut -d"+" -f1|tr -d ' '|sed 's/$/:/'|sed 's/^/^/' > basewords
+grep -f basewords src/morphology/stems/nouns.lexc |grep -v AIGI
+grep -f basewords src/morphology/stems/nouns.lexc |cut -d " " -f1|sort|see
+}}}
   
+Ensimmäinen komento kerää kaikki sanat. Toinen tarkistaa, että kaikki kuuluvat samaan leksikkoon, ja kolmas antaa jokaisen sanan vartalon.
+
+!Kerää kaikki sanat, joilla on yaml-tiedoston sanat viimeisenä osana
+
+{{{
+grep Ess test/src/dict-gt-yamls/N-lex_aigi_dict-gt-norm.gen.yaml |cut -d"+" -f1|tr -d ' '|sed 's/$/:/' > allwords
+grep -f allwords src/morphology/stems/nouns.lexc |grep -v AIGI
+grep -f allwords src/morphology/stems/nouns.lexc |cut -d " " -f1|rev|sort|rev|see
+}}}
+
+Ensimmäinen komento kerää kaikki yaml-tiedoston sanat, mutta tällä kertaa ilman ^-merkkiä. 
+Näin saadaan kaikki sanat, jotka __loppuvat__ yaml-tiedoston sanoihin. Toinen komento
+tarkistaa, onko muu leksikko kuin yaml-tiedoston leksikko käytössä (tässä: AIGI). 
+Kolmas komento listaa kaikki sanat, mutta käänteisjärjestyksessä. Näin on helpompaa tarkistaa,
+että kaikki vartalot ovat samanlaisia.
+
+!Korjaa mahdolliset virheet
+
+Jos joku vartalo poikkeaa yaml-tiedoston vartalosta, sen on korjattava, 
+__mutta stems/nouns.lexc-tiedostossa__, eikä näissä generoiduissa tiedostoissa.
+
+Muista kääntää (kirjoittamalla "make") ennen sisääntsekkausta, varmistakseesi, ettei mitään 
+ole mennyt teknisesti pieleen.
+
+!Seuraava yaml-tiedosto
+
+Samat komennot toimivat myös seuraavalle yaml-tiedostolle, kun vaan muistaa laittaa
+uusi tiedostonnimi ja uusi leksikonnimi (alga, ALGA, ... jne).
+Kirjoittamalla "> allwords" luodaan uusi allwords-tiedosto, ja vanhat sanat ovat sitten poissa.
+
 
