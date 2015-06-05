@@ -635,7 +635,8 @@ Vx:0 <=> [Seg:|.#.] _ Vx Seg:* ([%^RC:|%^SC:]) %^CSH: (%^RVSH:|%^EA:) [%>|.#.] ;
 
 "Vowel shortening (no consonant shortening) in consonant stems"
 !! * __@RULENAME@__ \\ kiirrâs- to kirrâsân
-Vy:0 <=> Seg: _ Vx   Cns: (Cns:) (%^RC:) Vow  :Cns (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) (%^CLEN:) %^RVSH: [%>|.#.] ;
+Vy:0 <=> Seg: _ Vx Cns: (Cns:) (%^RC:) Vow  :Cns (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) (%^CLEN:) %^RVSH: [%>|.#.] ;
+              _ Vx (i) Cns:+ â: %^UU: %> [i|u|s] ;
        where Vx in ( a e i o u á ä ) 
              Vy in ( a e i o u á ä ) 
        matched ;
@@ -935,9 +936,15 @@ u:o <=> Cns: _ ([%^UU:|%^SV:]) (%^WG:) (%^RVSH:) (%^RLEN:|%^CLEN:) (%^SLEN:) %^S
 "Second vowel shortening for e and o in 3syll consonant stems"
 Vx:0 <=> _ Vx [r|d|m|n|k] %^CSH: %^SVSH: %> ;
     where Vx in ( e o a á ) ;
-    
+
 !€ kappeer^CSH^RVSH%>ân
 !€ kap00er00>ân
+
+"Stem vowel â to u before UU symbol"
+â:u <=> _ %^UU: %> [i|u|s] ;
+    
+!€ aaigâ^UU>u
+!€ a0igu0>u
 
 !! !Suffix vowel rules
 
