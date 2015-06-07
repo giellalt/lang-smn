@@ -193,7 +193,7 @@ n7:n <=> Vow: _ (%^RC: ) j WeakGrade \%^CLEN:0 ; !! 1) weak grade
 !! * __@RULENAME@__ \\   weak grade or consonant shortening for illativ
 Cx:0 <=> Vow: _ (ˊ:) Cx: WeakGrade (%^RLEN:) (%^SVLOW:) %> ; !! 1) weak grade päddi : päädi tullâ:tuuláin
          Vow: _ (ˊ:) Cx: Vow: (%^RLEN:)  %^CSH: (%^EA: ) %> ; !! 2) consonant shortening for illativ, päddi : páádán
-         Vow: _ (ˊ:) Cx: Vow: Vow Cns  %^CSH: %^SVSH: %> ; !! 2) consonant shortening for illativ, päddi : páádán
+         Vow: _ (ˊ:) Cx: Vow: (Vow:) Cns: (Cns:) %^CSH: (%^SVSH:) [%>|.#.] ;         
 	where Cx in ( b d g p t k c č f z ž s š v ) ; !lnŋr
 
 !cuozˊzâ:cuozâ
@@ -384,6 +384,7 @@ Cy:0 <=> :Vow ([%^RV: | %^RD: ]) Cx: (ˊ: ) _ Cz: (%^RC:) Vow (%^SV:) (Cns)  %^W
 "xx:x7 gradation for ^CSH illative 1" 
 !! * __@RULENAME@__ \\   ku%^RVrrâ%^RLEN%^CSH%>n so%^RVllâ%^RLEN%^CSH%>n
 Cx:Cy <=> Cx: _ Vow: %^RLEN: %^CSH: %> n ;
+          Cx: _ Vow: (Vow:) Cns: (Cns:) %^CSH: (%^SVSH:) [%>|.#.] ;
       where Cx in ( r l n ŋ m) 
             Cy in ( ṛ ḷ ṇ ŋ̣ ṃ ) 
       matched ;
@@ -392,6 +393,7 @@ Cx:Cy <=> Cx: _ Vow: %^RLEN: %^CSH: %> n ;
 "xx:x7 gradation for ^CSH illative 2" 
 !! * __@RULENAME@__ \\    
 Cx:0 <=> _  Cx:Cy Vow: %^RLEN: %^CSH: %> n ;
+         _  Cx:Cy Vow: (Vow:) Cns: (Cns:) %^CSH: (%^SVSH:) [%>|.#.] ;
       where Cx in ( r l n ŋ m ) 
             Cy in ( ṛ ḷ ṇ ŋ̣ ṃ ) 
       matched ;
@@ -611,9 +613,9 @@ Cx:Cy <=> Vow:  Cy (ˊ:) _  Vow: \[%^WG:0 | %^RVSH:0 | %^RLEN:0 ] ;
 
  
 "Vowel shortening with consonant shortening" 
-!! * __@RULENAME@__ \\  for koonjâl -> konjâlân
-Vx:0 <=> [Seg:|.#.] _ Vx Seg:* ([%^RC:|%^SC:]) %^CSH: (%^RVSH:|%^EA:) [%>|.#.] ;
-        where Vx in ( a o á ä u y i ) ; !removed e
+!! * __@RULENAME@__ \\  for  
+Vx:0 <=>  _ Vx: Cns:+ Vow: (Vow:) Cns: (Cns:) %^CSH: (%^SVSH:) [%>|.#.] ;
+        where Vx in ( a o á ä u y i e ) ;
 
 !€ koonnjâl^CSH>ân
 !€ k0on0jâl0>ân
@@ -630,6 +632,8 @@ Vx:0 <=> [Seg:|.#.] _ Vx Seg:* ([%^RC:|%^SC:]) %^CSH: (%^RVSH:|%^EA:) [%>|.#.] ;
 ! kahhaan^SC^CSH^RVSH>ist
 ! ka0ha0n0j00>ist
 
+!€ aarrân^CSH>ân
+!€ arr
 
 
 
@@ -725,6 +729,8 @@ Vx:Vy <=> _  %^RV: Cns:+  e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> i: ;
 "Shortening diphthong"
 !! * __@RULENAME@__ \\ RD to ˊ muátu muáˊđoost
 %^RD:ˊ <=> _ Cns:+ Vow: (%^SV:) %^WG: %^RVSH: ;
+            Vow: _ Cns:+ Vow: (Vow:) Cns: (Cns:) %^CSH: (%^SVSH:) [%>|.#.] ;
+
 ! RV still does not give as good result as RD.
 
 "Vowel shortening for uá" 
