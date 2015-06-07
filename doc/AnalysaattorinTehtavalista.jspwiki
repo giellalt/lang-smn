@@ -7,24 +7,39 @@ että tehtävät ovat järjestyksessä
 
 !!!Testaustiedostot
 
-* [Tarkistaa yaml-tiedostot|TarkistaaYaml-tiedostot.html]
-* Tarkistaa taulukot (GoogleDocs)
-** Parilliset ja parittomat taulukot tehty
-   Supistumavartalot pitää vielä tehdä.
+* [Tarkistaa substantiivien yaml-tiedostot|TarkistaaYaml-tiedostot.html]
+* Kirjoitta yaml-tiedostoja verbeihin
+
 
 !!!Lemmat
 
-!!Korjata lemmalistat
+!!Korjata substantiivien lemmalistat
 
-Sanakirjan sanat on lisätty, paitsi tietyt verbit
+Nyt suurin osaa yamltiedostoista menee läpi. Se tarkoittaa,
+että yaml-paradigmat jotka menevät läpi, voivat toimia 
+mallivartaloina myös lemmalistan stems/nouns.lexc muille 
+vartaloille.
 
-Verbit:
+* katso stems/nouns.lexc
+* jokainen yamlissa toimiva sana voi toimia mallina muille
+  sanoille, esim yhdyssanoille. 
 
-# Muut kuin -ut-verbit: 
-## Oikolue ja vaihda oikeaan luokkaan
-# -ut-erbit
-## Lisätä ne
-## luokitella ne
+Seuraavat kaksi esimerkkikomento antaa kaikki lokatiivit, jotka eivät toimi, 
+ja POTTAAK-leksikon kaikki monikon abessiivit.
+
+{{{
+cat src/morphology/stems/nouns.lexc | grep ";"|cut -d":" -f1|sed 's/$/+N+Sg+Loc/'|dsmnDict|grep '?'
+cat src/morphology/stems/nouns.lexc | grep "POTTAAK"|cut -d":" -f1|sed 's/$/+N+Pl+Abe/'|dsmnDict
+}}}
+
+!!Korjata puuttuvat nominatiivit
+
+Komento {{make check}} antaa listan substantiiveista, joille emme 
+pysty generoimaan nominatiivia
+({{test/src/morphology/missing_nouns_lemmas.xfst.txt }}) ja
+muodot, jotka saadaan yrittäessä.
+({{test/src/morphology/generated-nouns.xfst.txt}})
+Tavoite: Tänään puutuu 98 nominatiivia, luku pitää olla 0.
 
 !!Suljetut luokat, joilla morfologia
  
@@ -44,45 +59,11 @@ voi olla suljettujen luokien edustajia, ne pitää
 
 !!!Taivutusmorfologia
 
-!!Morfofonologia
-
-* Puuttuvat AV ([avoimet tapaukset|OpenIssuesInConsonantGradation.html])
-* Ensimmäisen tavun vokalismi
-* Vartalovokaalit
-* Konsonanttipidennykset
-
-!!Substantiivien sija-luku-paradigmat
-
-!Parittomat substantiivit
-
-# Morfofonologian mukaan
-
-!Parilliset substantiivit
-
-â-vartalot voivat toimia lähtökohtana.
-Voi olla, että vartalotyypieistä monet lyödään yhteen.
-
-!Supistumavartalot
-
-Nämä viimeisinä.
 
 !!Omistusliitteet
 
-Nämä ovat osittain riippumattomia muista prosessista, 
-ne voidaan siis lisätä odottaessa.
+Nämä voidaan nyt lisätä. Ks. 
 
-!!!Vartalot
-
-# Subatantiivien vatalosysteemin löytääminen
-# Twolc-säännöt sen mukaan
-# Substantiivilistan lisäämimem
-# Adjektiivit joukkoon
-
-Sama prosedyyri verbeille.
-
-# Verbien luokitus
-# Twolc-säännöt
-# Verbilistan lisääminen
 
 
 !!Verbit
