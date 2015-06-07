@@ -189,11 +189,11 @@ n7:n <=> Vow: _ (%^RC: ) j WeakGrade \%^CLEN:0 ; !! 1) weak grade
 
 
 
-"xx:x consonant gradation and shortening"
+"xx:x consonant gradation and shortening and x:x shortening"
 !! * __@RULENAME@__ \\   weak grade or consonant shortening for illativ
 Cx:0 <=> Vow: _ (ˊ:) Cx: WeakGrade (%^RLEN:) (%^SVLOW:) %> ; !! 1) weak grade päddi : päädi tullâ:tuuláin
          Vow: _ (ˊ:) Cx: Vow: (%^RLEN:)  %^CSH: (%^EA: ) %> ; !! 2) consonant shortening for illativ, päddi : páádán
-         Vow: _ (ˊ:) Cx: Vow: (Vow:) Cns: (Cns:) %^CSH: (%^SVSH:) [%>|.#.] ;         
+         Vow: _ (ˊ:) Cx: Vow: (Vow:) Cns: (Cns:) %^CSH: (%^SVSH:) [%>|.#.] ; !! 3)         
 	where Cx in ( b d g p t k c č f z ž s š v h ) ; !lnŋr
 
 !cuozˊzâ:cuozâ
@@ -205,6 +205,7 @@ Cx:0 <=> Vow: _ (ˊ:) Cx: WeakGrade (%^RLEN:) (%^SVLOW:) %> ; !! 1) weak grade p
 
 !€ vá%^RVddu%^RLEN%^CSH%>n
 !€ váá0du00%>n
+
 
 "xx:x consonant shortening for consonants belonging to two different patterns"
 !! * __@RULENAME@__ \\   weak grade or consonant shortening for illativ
@@ -268,14 +269,16 @@ Cx:Cy <=> Vow:  Cz: (ˊ:) _  WeakGrade (%^RLEN:) (%^SVLOW:) %> ; !! 1) weak grad
 
 "Long vowel shortening (no consonant shortening) in vowel stems"
 !! * __@RULENAME@__ \\ (example?), no ^CSH, since that gives Vy:0
-Vy:ˊ <=> Vx: _  Cns:+ (%^RC:) Vow:  %^WG: %^RVSH: (%^SVLOW:) [%>|.#.] ;
-         Vx: _  Cns:+         Vow:  Cns: %^RVSH: %^CSH: %^SVSH: [%>|.#.] ; !kaavpug^RVSH^CSH^SVSH
+Vy:ˊ <=> Vx: _  Cns:+ (%^RC:) Vow:  %^WG: %^RVSH: (%^SVLOW:) [%>|.#.] ; !! 1)
+         Vx: _  Cns:+         Vow:  Cns: %^RVSH: %^CSH: %^SVSH: [%>|.#.] ; !! 2) kaavpug:kaˊvpugân 
        where Vx in ( a e i o u y á ä ) 
              Vy in ( a e i o u y á ä ) 
        matched ;
 
 
-
+!kaavpug:kaˊvpugân
+!€ kaavpug^RVSH^CSH^SVSH%>ân
+!€ kaˊvpug000>ân
 
 
 ! mool7â to moolâ:		  
@@ -293,7 +296,6 @@ Vy:ˊ <=> Vx: _  Cns:+ (%^RC:) Vow:  %^WG: %^RVSH: (%^SVLOW:) [%>|.#.] ;
 
 !€ juá%^RDh%^RCu%^WG%^RVSH%>ttáá
 !€ juáˊṿ0u00>ttáá
-
 
 
 "t:đ, also tˊk4:đh gradation, part 1" 
@@ -382,14 +384,18 @@ Cy:0 <=> :Vow ([%^RV: | %^RD: ]) Cx: (ˊ: ) _ Cz: (%^RC:) Vow (%^SV:) (Cns)  %^W
 !€ riän0tus0
 
 
-"xx:x7 gradation for ^CSH illative 1" 
+"xx:x7 gradation for ^CSH illative 1, and x:x7 for ^CSH" 
 !! * __@RULENAME@__ \\   ku%^RVrrâ%^RLEN%^CSH%>n so%^RVllâ%^RLEN%^CSH%>n
-Cx:Cy <=> Cx: _ Vow: %^RLEN: %^CSH: %> n ;
-          Cx: _ Vow: (Vow:) Cns: (Cns:) %^CSH: (%^SVSH:) [%>|.#.] ; 
-           %^RD: _ Vow: Vow: Cns: %^CSH: %^SVSH: [%>|.#.] ; !iä%^RDláán
+Cx:Cy <=> Cx: _ Vow: %^RLEN: %^CSH: %> n ; !! 1)
+          Cx: _ Vow: (Vow:) Cns: (Cns:) %^CSH: (%^SVSH:) [%>|.#.] ; !! 2) 
+           %^RD: _ Vow: Vow: Cns: %^CSH: %^SVSH: [%>|.#.] ; !! 3) consonant shortening for consonant stems, iäláán : iäˊḷánân      
       where Cx in ( r l n ŋ m) 
             Cy in ( ṛ ḷ ṇ ŋ̣ ṃ ) 
       matched ;
+
+!iäláán:iäˊḷánân 
+!€ iä%^RDláán%^CSH%^SVSH%>ân
+!€ iäˊḷ0án00>ân
 
 
 "xx:x7 gradation for ^CSH illative 2" 
@@ -738,8 +744,8 @@ Vx:Vy <=> _  %^RV: Cns:+  e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> i: ;
 
 "Shortening diphthong"
 !! * __@RULENAME@__ \\ RD to ˊ muátu muáˊđoost
-%^RD:ˊ <=> _ Cns:+ Vow: (%^SV:) %^WG: %^RVSH: ;
-            Vow: _ Cns:+ Vow: (Vow:) Cns: (Cns:) %^CSH: (%^SVSH:) [%>|.#.] ;
+%^RD:ˊ <=> _ Cns:+ Vow: (%^SV:) %^WG: %^RVSH: ; !! 1)
+            Vow: _ Cns:+ Vow: (Vow:) Cns: (Cns:) %^CSH: (%^SVSH:) [%>|.#.] ; !! 2) iäláán : iäˊḷánân
 
 ! RV still does not give as good result as RD.
 
@@ -949,12 +955,18 @@ e:i <=> Cns:  _  (%^WG:) ([ %^RLEN: | %^CLEN: | %^RVSH: ]) (%^SVLOW:)  %> i: ;
 u:o <=> Cns: _ ([%^UU:|%^SV:]) (%^WG:) (%^RVSH:) (%^RLEN:|%^CLEN:) (%^SLEN:) %^SVLOW:  ; 
 ! stááḷu stááloust
 
-"Second vowel shortening for e and o in 3syll consonant stems"
-Vx:0 <=> _ Vx: [r (g)|d|m|n (s|t)|(n|r)t|h|k (s)|l (m)|g|š (n)] %^CSH: %^SVSH: %> ; !eemeed^CSH^SVSH
+"Second vowel shortening in 3syll consonant stems"
+Vx:0 <=> _ Vx: Cns:+ %^CSH: %^SVSH: %> ; !eemeed : emedân
     where Vx in ( e o a á u ) ;
 
-!€ kappeer^CSH^RVSH%>ân
-!€ kap00er00>ân
+!eemeed:emedân
+
+!€ eemeed%^CSH%^SVSH%>ân
+!€ 0em0ed00>ân
+
+
+!€ kappeer^CSH^SVSH%>ân
+!€ ka0p0er00>ân
 
 "Stem vowel â to u before UU symbol"
 â:u <=> _ %^UU: %> [i|u|s] ;
