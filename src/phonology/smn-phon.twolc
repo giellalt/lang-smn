@@ -419,7 +419,7 @@ Cx:0 <=> _  Cx:Cy Vow: %^RLEN: %^CSH: %> n ; !! 1)
  Cx:0 <=> _  (%^ÁE:) (%^SC:) (%^WG:) %^FCD: ;      
           where Cx in (n m t) ;
 
-!rejected:
+!rejected, look at this:
 !€ va^RVskâm^RLEN^FCD
 !€ vaaskâ000
 	
@@ -448,7 +448,7 @@ n:0 <=> n (ˊ:) _ j Vow (Cns:) (%^RLEN:) %^CSH: [%>|.#.] ; !! 1)
 !€ suá^RDn7^RCju^CLEN>n
 !€ suá0nnju0>n
 
-!rejected:
+!rejected, look at tis:
 !€ haamit^SC^CSH^RVSH>ist
 !€ h0amitt00>ist
 
@@ -603,6 +603,7 @@ Cx:Cy <=> Vow:  Cy (ˊ:) _  Vow: \[%^WG:0 | %^RVSH:0 | %^RLEN:0 ] ;
 ! * __@RULENAME@__  delet t in haamit in front of -ttáá, avoid -tttáá
 !t:0 <=> _ %> t t ; 
 
+!Rejected, look at this:
 !€ haamit>ttáá
 !€ haami0>ttáá
 
@@ -624,9 +625,10 @@ Vx:0 <=>  _ Vx: Cns:+ Vow: (Vow:) Cns: (Cns:) %^CSH: (%^SVSH:) [%>|.#.] ;
 !€ kappeer^CSH^SVSH>ist
 !€ ka0p0er00>ist
 
-!€ čäällim^CSH^RVSH>ist
-!€ č0äḷ0im00>ist
+!€ čäällim^CSH>ist
+!€ č0ä0ḷim0>ist
 
+!This is not correct, Check it:
 !€ muusik^SC^CSH^RVSH>ist
 !€ m0usikk00>ist
 
@@ -659,12 +661,10 @@ Vy:0 <=> Vx: _  Cns: [ Cns: - %^RC:0 ] Vow:  %^WG: (%^CLEN:) %^SVLOW: %> i:  ;
        matched ;
 
 !€ mááh%^RCu%^WG%^CLEN%^SVLOW%>in
-!€ m0ávvo000>in
+!€ má0vvo000>in
   
  
-
-!This one doesn't exist in yaml:
-!€ mool7^RCâ^WG^RVSH>ttáá
+!€ mool7%^RCâ^WG^RVSH>ttáá
 !€ moˊl0â00>ttáá
 
 
@@ -706,7 +706,7 @@ Vy:0 <=> Vx: _  Cns: [ Cns: - %^RC:0 ] Vow:  %^WG: (%^CLEN:) %^SVLOW: %> i:  ;
 á:ä <=>    _ á: Cns:* :i Cns: %^ÁI: [.#.|%>] ;
         á: _    Cns:* :i Cns: %^ÁI: [.#.|%>] ;
 
-!rejected:
+!rejected, look at this:
 !€ páápp4ár^ÁI^WG>
 !€ pää0vir00>
 
@@ -765,8 +765,8 @@ Vx:Vy <=> _ Vz: Cns:* i %^WG: %> i: ;  !Her
         _ [ ä: |%^RV: ] Cns:+   i %^WG: [%^CLEN: |%^RLEN: ]  %^SVLOW: %> i: ; !čääci:čassijn, läbži:labžijn
         _ %^RV:  Cns:+   i %^WG: %^RLEN:  %> i: ; !ä%^RVi4gi%^WG%^RLEN%>id
 
-!€ sääm7^RCi^WG^RVSH>in
-!€ saam0i00>jn
+!€ sääm7^RCi^WG>in
+!€ saam0i0>jn
 
 
 !€ sääm7%^RCi%^WG%>id
@@ -918,8 +918,6 @@ i:á <=> [:e|:i|:ä|:á] ([%^RV: | %^RD: ]) Cns:+ _ (%^RLEN:) (%^CSH:) %^EA: [%>
 !€ so%^RVllâ^WG^RLEN^SVLOW%>in 
 !€ soo0lá000>in
 
-!€ so^RVll^RCâ^WG^CLEN^SVLOW>in
-!€ so00llá000>in
 
 
 "Stem vowel change e:i before suffix i"
@@ -946,7 +944,8 @@ Vx:0 <=> _ Vx: Cns:+ %^CSH: %^SVSH: %> ; !eemeed : emedân
 
 "Stem vowel â to u before UU symbol"
 â:u <=> _ %^UU: %> [i|u|s] ;
-    
+
+!Rejected, look at this:    
 !€ aaigâ^UU>u
 !€ a0igu0>u
 
@@ -957,8 +956,8 @@ Vx:0 <=> _ Vx: Cns:+ %^CSH: %^SVSH: %> ; !eemeed : emedân
 %^SV:Vx <=> Vx:  _ (:Cns)  (%^WG:) (%^RVSH:) (%^CLEN:) (%^RLEN:) %^SLEN: (%^SVLOW: ) %> ;
         where Vx in ( á o u e a i ) ; ! pending...
 
-!€ ki^RVss^RCá^SV^WG^CLEN^SLEN>st
-!€ ki00ssáá000>st
+!€ ki%^RVss7á^SV^WG^CLEN^SLEN>st
+!€ ki0ssáá000>st
 
 !€ mi^RVll^RCo^SV^WG^CLEN^SLEN>st
 !€ mi00lloo000>st
