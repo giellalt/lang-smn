@@ -211,8 +211,8 @@ Cx:0 <=> Vow: _ (ˊ:) Cx: WeakGrade (%^RLEN:) (%^SVLOW:) %> ; !! 1) weak grade p
 
 "xx:x consonant shortening for consonants belonging to two different patterns"
 !! * __@RULENAME@__ \\   weak grade or consonant shortening for illativ
-Cx:0 <=> Vow: _ (ˊ:) Cx: WeakGrade (%^RLEN:) (%^SVLOW:) %> ; !! 1) weak grade päddi : päädi tullâ:tuuláin
-         Vow: _ (ˊ:) Cx: Vow:  %^CSH: (%^EA: ) %> ; !! 2) consonant shortening for illativ, päddi : páádán RLEN?
+Cx:0 <=> Vow: _ (ˊ:) Cx: WeakGrade ([%^RLEN: |%^RVSH:] ) (%^SVLOW:) %> ; !! 1) weak grade päddi : päädi tullâ:tuuláin
+         Vow: _ (ˊ:) Cx: Vow:  %^CSH: ( [%^EA:|%^RVSH:]  ) %> ; !! 2) consonant shortening for illativ, päddi : páádán RLEN?
 	where Cx in ( l n ŋ r m ) ; !
 
 !luččâ:luuj̣áin 
@@ -642,7 +642,7 @@ Vx:0 <=>  _ Vx: Cns:+ Vow: (Vow:) Cns: (Cns:) %^CSH: (%^SVSH:) [%>|.#.] ;
 
 
 "Vowel shortening (no consonant shortening) in consonant stems"
-!! * __@RULENAME@__ \\ kiirrâs- to kirrâsân
+!! * __@RULENAME@__ \\ kiirrâs- to kirrâsân, 
 Vy:0 <=> Seg: _ Vx Cns: (Cns:) (%^RC:) Vow  :Cns (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) (%^CLEN:) %^RVSH: [%>|.#.] ;
               _ Vx (i) Cns:+ â: %^UU: %> [i|u|s] ;
        where Vx in ( a e i o u á ä ) 
@@ -656,6 +656,7 @@ Vy:0 <=> Seg: _ Vx Cns: (Cns:) (%^RC:) Vow  :Cns (%^SFV:) (%^SC:) (%^ÁI:) (%^Á
 "Vowel shortening in front of two consonants and i-suffix"
 !! * __@RULENAME@__ \\ ráávhu- : rávhoid, čääci : čassijn
 Vy:0 <=> Vx: _  Cns: [ Cns: - %^RC:0 ] Vow:  %^WG: (%^CLEN:) %^SVLOW: %> i:  ;
+         Vx: _  Cns:+ Vow: (%^CSH:) %^RVSH:  %>  ; !kaamuv kammust
        where Vx in ( a e i o u á ä ) 
              Vy in ( a e i o u á ä ) 
        matched ;
