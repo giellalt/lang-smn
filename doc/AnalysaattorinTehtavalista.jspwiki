@@ -20,15 +20,24 @@ että yaml-paradigmat jotka menevät läpi, voivat toimia
 mallivartaloina myös lemmalistan stems/nouns.lexc muille 
 vartaloille.
 
+* tee make check
+* ota leksikko, joka toimii, esim. EEMEED
+* ota kaikki EEMEED-tapaukset stems-tiedostosta
+**  {{grep EEMEED src/morphology/stems/nouns.lexc|see}}
+* tarkista, että niiden vartalo on samanlainen kuin esimerkkisanojen vartalot
+* jos ei, katso toimiiko
 * katso stems/nouns.lexc
 * jokainen yamlissa toimiva sana voi toimia mallina muille
   sanoille, esim yhdyssanoille. 
+  
+ 
+!Muotojen tarkistaminen
 
 Seuraavat kaksi esimerkkikomento antaa kaikki lokatiivit, jotka eivät toimi, 
 ja POTTAAK-leksikon kaikki monikon abessiivit.
 
 {{{
-cat src/morphology/stems/nouns.lexc | grep ";"|cut -d":" -f1|sed 's/$/+N+Sg+Loc/'|dsmnDict|grep '?'
+cat src/morphology/stems/nouns.lexc | grep ";"|grep -v PUUVSAH|cut -d":" -f1|sed 's/$/+N+Sg+Loc/'|dsmnDict|grep '?'
 cat src/morphology/stems/nouns.lexc | grep "POTTAAK"|cut -d":" -f1|sed 's/$/+N+Pl+Abe/'|dsmnDict
 }}}
 
