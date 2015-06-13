@@ -23,26 +23,39 @@
 !    -------------------
 
 LEXICON 2SYLL_V_ÂD  !!= * __@CODE@__
-+V:â  VINF ;
-+V+Ind+Prs:â EVEN-I ;
-+V+Cond:â%^WGčč EVEN_CONDSUF ;
++V:â  VINFINITES ;
++V+Ind:â EVEN_IND ;
++V+Pot:â EVEN_POT ;
++V+Cond:â%^WGčč EVEN_COND ;
 
 LEXICON 2SYLL_V_ED  !!= * __@CODE@__
-+V:e  VINF ;
-+V+Ind+Prs: EVEN-I ;
++V:e  VINFINITES ;
++V+Ind:e EVEN_IND ;
++V+Pot:e EVEN_POT ;
++V+Cond:e%^WGčč EVEN_COND ;
 
 LEXICON 2SYLL_V_ID  !!= * __@CODE@__
-+V:i  VINF ;
-+V+Ind+Prs: EVEN-I ;
-
-LEXICON 2SYLL_V_UD  !!= * __@CODE@__
-+V:u  VINF ;
-+V+Ind+Prs: EVEN-I ;
++V:i  VINFINITES ;
++V+Ind:i EVEN_IND ;
++V+Pot:i EVEN_POT ;
++V+Cond:i%^WGčč EVEN_COND ;
 
 LEXICON 2SYLL_V_OD  !!= * __@CODE@__
-+V:o  VINF ;
-+V+Ind+Prs: EVEN-I ;
++V:o  VINFINITES ;
++V+Ind: EVEN_IND ;
++V+Pot:o EVEN_POT ;
++V+Cond:o%^WGčč EVEN_COND ;
 
+
+
+
+! Here I have two versions for -uđ. That is
+! one too much. These are to be merged.
+LEXICON 2SYLL_V_UD  !!= * __@CODE@__
++V:u  VINFINITES ;
++V+Ind: EVEN_IND ;
++V+Pot:u EVEN_POT ;
++V+Cond:u%^WGčč EVEN_COND ;
 
 LEXICON AIGUD
 +V+Inf:%>đ K ;
@@ -118,7 +131,7 @@ LEXICON CIELATTID  !!= * __@CODE@__ SM57, consonantand vowel change
 +V:%^ODDC ODDVLEX ; ! Diacriticn %^ODDC to shorten C before C and #
 
 LEXICON VYEJETTID  !!= * __@CODE@__ SM53. short V in Inf
-+V:%^ODDSHVi VINF ; ! Diacriticn to shorten V 
++V:%^ODDSHVi VINFINITES ; ! Diacriticn to shorten V 
 +V:          ODDVLEX_fin ;
 
 LEXICON PUTESTID  !!= * __@CODE@__ SM53. short V in Inf
@@ -134,7 +147,7 @@ LEXICON IALLAATTID  !!= * __@CODE@__ SM52, long V in Inf
 ! ----------------
 
 LEXICON ODDVLEX  !!= * __@CODE@__
-:%>i         VINF		   ;
+:%>i         VINFINITES		   ;
 ODDVLEX_fin ;
 
 LEXICON ODDVLEX_fin
@@ -156,8 +169,6 @@ LEXICON ODDVLEX_fin
 :%>i         VNEGPOT	   ;
              VABE		   ;
              VGER		   ;
-             VGERII		   ;
-             VGERIII	   ;
              VACTIO		   ;
 
 
@@ -167,7 +178,7 @@ LEXICON ODDVLEX_fin
 
 
 LEXICON COKKAD  !!= * __@CODE@__
-+V:  VINF ;
++V:ä  VINFINITES ;
 +V+Ind+Prs:%>á VSUF_SG1 ;
 +V+Ind+Prs:%>á VSUF_SG2 ;
 +V+Ind+Prs:%>á VSUF_SG3 ;
@@ -181,7 +192,7 @@ LEXICON COKKAD  !!= * __@CODE@__
 
 LEXICON PALLAD !!= * __@CODE@__
 
-+V:  VINF ;
++V:a  VINFINITES ;
 +V+Ind+Prs:%>a VSUF_SG1 ;
 +V+Ind+Prs:%>a VSUF_SG2 ;
 +V+Ind+Prs:%>a VSUF_SG3 ;
@@ -194,7 +205,7 @@ LEXICON PALLAD !!= * __@CODE@__
 
 LEXICON TUHHID !!= * __@CODE@__
 
-+V:i  VINF ;
++V:i  VINFINITES ;
 +V+Ind+Prs:%>ii VSUF_SG1 ;
 +V+Ind+Prs:%>ii VSUF_SG2 ;
 +V+Ind+Prs:%^VLOW%>ee VSUF_SG3 ;
@@ -207,7 +218,7 @@ LEXICON TUHHID !!= * __@CODE@__
 
 LEXICON RAMMUD !!= * __@CODE@__
 
-+V:  VINF ;
++V:u  VINFINITES ;
 +V+Ind+Prs:%>uu VSUF_SG1 ;
 +V+Ind+Prs:%>uu VSUF_SG2 ;
 +V+Ind+Prs:%^VLOW%>oo VSUF_SG3 ;
@@ -227,6 +238,18 @@ LEXICON RAMMUD !!= * __@CODE@__
 !! !!Final suffix lexica
 !    -------------------
 
+
+LEXICON VINFINITES !!= * __@CODE@__
+VINF ;
+VPRSPRC ;
+VPRFPRCACT ;
+VPRFPRCPASS ;
+VNEGPRSINDIMP ;
+VNEGCOND ;
+VNEGPOT ;
+VABE ;
+VGER ;
+VACTIO ;
 
 LEXICON VINF !!= * __@CODE@__
 +Inf:%>đ K ;
@@ -251,9 +274,9 @@ LEXICON VNEGPOT !!= * __@CODE@__
 +ConNeg+Pot:žžii K ;
 
 LEXICON VABE !!= * __@CODE@__
-+Abe:%>hánnáá K ;
-+Abe:%>hinnáá K ;
-+Abe:%>hennáá K ;
++VAbess:%>hánnáá K ;
++VAbess:%>hinnáá K ;
++VAbess:%>hennáá K ;
 
 LEXICON VGER !!= * __@CODE@__
 +Ger:%>dijn K ;
@@ -263,20 +286,21 @@ LEXICON VGER !!= * __@CODE@__
 +Ger+PxSg2:%>dijnâd K ;
 +Ger+PxSg3:%>dijnes K ;
 
-LEXICON VGERII !!= * __@CODE@__
-+GerII:%>min K ;
-
-LEXICON VGERIII !!= * __@CODE@__
-+GerIII:%>mist K ;
-
 LEXICON VACTIO !!= * __@CODE@__
-+Actio:%>im K ;
++Actio:%>m K ;
++Actio+Ess:%>min K ;
++Actio+Loc:%>mist K ;
 
 
 !! !!Suffix series I
 ! - - - - - - - - 
 
-LEXICON EVEN-I !!= * __@CODE@__
+LEXICON EVEN_IND !!= * __@CODE@__
+
++Prs: EVEN_I_PRS ;
++Prt: EVEN_I_PRT ;
+
+LEXICON EVEN_I_PRS 
                        ! âđ 	eđ 		iđ 	uđ ođ
 +Sg1:%^WG%>m K ;	   ! â  	a/á		á  	u	o
 +Sg2:%^WG%>h K ;	   ! a  	a/á		á	u	o
@@ -288,7 +312,20 @@ LEXICON EVEN-I !!= * __@CODE@__
 +Pl2:%^WG%>vetteđ K ;  ! â/a  	e		i	u	o
 +Pl3:%^WG%>h K ;	   ! e/i  	e		i	u	o
 
-LEXICON POT-I !!= * __@CODE@__
+LEXICON EVEN_I_PRT
+
++Sg1:%^CSH%>im K ;
++Sg2:%^CSH%>ih K ;
++Sg3:%^WG%>i K ;
++Du1:%^RLEN%^WG%>áim K ;
++Du2:%^RLEN%^WG%>áid K ;
++Du3:%^RLEN%^WG%>áin K ;
++Pl1:%^WG%>im K ;
++Pl2:%^WG%>id K ;
++Pl3:%^RLEN%>ii K ;
+
+
+LEXICON EVEN_POT !!= * __@CODE@__
 +Sg1:%>eem K ;
 +Sg2:%>eeh K ;
 +Sg3: K ;
@@ -299,7 +336,7 @@ LEXICON POT-I !!= * __@CODE@__
 +Pl2:%>vetteđ K ;
 +Pl3:%>eh K ;
 
-LEXICON EVEN_CONDSUF
+LEXICON EVEN_COND
 +Sg1:%>im K ;
 +Sg2:%>ih K ;
 +Sg3:%>ij K ;
@@ -425,7 +462,7 @@ LEXICON LEDE-COMMON !!= * __@CODE@__
 +Cond+Prs:ličči ODD-II-DU ;
 
 !Potential
-+Pot+Prs:ležž POT-I ;
++Pot+Prs:ležž EVEN_POT ;
 
 +PrfPrc:lamaš K ;
 
