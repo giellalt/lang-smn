@@ -860,8 +860,6 @@ LEXICON KIIRAS  !!= __@CODE@__
 
 
 
-LEXICON KOLGOOH  !!= @CODE@ > EEMEED
-EEMEED ; ! fix
 
 LEXICON UAIVAT !!= @CODE@ > EEMEED
 EEMEED ; ! fix
@@ -891,7 +889,16 @@ LEXICON KAAMUV  !!= __@CODE@__
 +N+Pl+Abe:%^RVSH%>ittáá K ;     ! kammuittáá
 
 
-LEXICON EEMEED  !!= __@CODE@__ contains onl Sg Nom, Fix !!
+LEXICON KOLGOOH  !!= @CODE@ > Pl+Loc koˊlgoohijn and then to EEMEED/KOLGOOH
++N+Pl+Loc:%^CSH%>ijn K ;	! koˊlgoohijn
+EEMEED/KOLGOOH ;
+
+
+LEXICON EEMEED  !!= __@CODE@__ > Pl+Loc emedijn and then to EEMEED/KOLGOOH
++N+Pl+Loc:%^CSH%^SVSH%>ijn K ;	! emedijn
+EEMEED/KOLGOOH ;
+
+LEXICON EEMEED/KOLGOOH  !!= __@CODE@__ 
 +N+Sg+Nom: K ;					! eemeed
 +N+Sg+Gen: K ;					! eemeed
 +N+Sg+Acc: K ;					! eemeed
@@ -905,7 +912,6 @@ LEXICON EEMEED  !!= __@CODE@__ contains onl Sg Nom, Fix !!
 +N+Pl+Gen:%^CSH%^SVSH%>ij K ;		! emedij
 +N+Pl+Acc:%^CSH%^SVSH%>ijd K ;	! emedijd
 +N+Pl+Ill:%^CSH%^SVSH%>áid K ;	! emedáid
-+N+Pl+Loc:%^CSH%^SVSH%>ijn K ;	! emedijn
 +N+Pl+Com:%^CSH%^SVSH%>ijguin K ;	! emedijguin
 +N+Pl+Abe:%^CSH%^SVSH%>ijttáá K ;	! emedijttáá
 
@@ -973,23 +979,6 @@ LEXICON KAAVPUG  !!= __@CODE@__ NAG blank, RVSH, CSH, SVSH for the rest
 +N+Pl+Com:%^RVSH%^CSH%^SVSH%>ijguin K ; 	! 
 +N+Pl+Abe:%^RVSH%^CSH%^SVSH%>ijttáá K ;   !  
 
-LEXICON VINNJOOH  !!= __@CODE@__ NAG blank, CSH, SVSH for the rest
-+N+Sg+Nom: K ;        		   		! 
-+N+Sg+Gen: K ;    		 			! 
-+N+Sg+Acc: K ;     		 			! 
-+N+Sg+Ill:%^CSH%^SVSH%>ân K ;		! 
-+N+Sg+Loc:%^CSH%^SVSH%>ist K ; 		! 
-+N+Sg+Com:%^CSH%^SVSH%>áin K ;		! 
-+N+Sg+Abe:%>ttáá K ;				! 
-+N+Ess:%^CSH%^SVSH%>in K ; 			! 
-+N+Par:%^CSH%^SVSH%>id K ; 			! 
-+N+Pl+Nom:%^CSH%^SVSH%>eh K ;  		! 
-+N+Pl+Gen:%^CSH%^SVSH%>ij K ;  		! 
-+N+Pl+Acc:%^CSH%^SVSH%>ijd K ; 		! 
-+N+Pl+Ill:%^CSH%^SVSH%>áid K ; 		! 
-+N+Pl+Loc:%^CSH%^SVSH%>ijn K ; 		! 
-+N+Pl+Com:%^CSH%^SVSH%>ijguin K ; 	! 
-+N+Pl+Abe:%^CSH%^SVSH%>ijttáá K ;   !  
 
 
 LEXICON HUKSIM  !!= __@CODE@__ NGA + Abe blank, SLEN for the rest
