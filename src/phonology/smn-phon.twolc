@@ -247,7 +247,7 @@ Cx:0 <=> Vow: _ (ˊ:) Cy: (%^RC:) WeakGrade (%^RLEN:) (%^SVLOW:) %> ; !! 1) weak
 
 
 "xx:y to something else, consonant gradation, part 2" 
-!! * __@RULENAME@__ \\  hh:V, kk:h, pp:v, čč:J here we change second part, k4:h in kk4:h etc. 
+!! * __@RULENAME@__ \\  hh:V, kk:h, pp:v, čč:J here we change second part, 
 Cx:Cy <=> Vow:  Cz: (ˊ:) _  WeakGrade (%^RLEN:) (%^SVLOW:) %> ; !! 1) weak grade:
           Vow:  Cz: (ˊ:) _  WeakGrade %^CLEN: %^SVLOW: %> ; !! 2) weak grade and consonant lengthning kiäčˊču:kiäj̣u 
 	where Cx in ( h4  p4 č4 ) 
@@ -416,7 +416,7 @@ Cx:0 <=> _  Cx:Cy Vow: %^RLEN: %^CSH: %> n ; !! 1)
 
 "Word final consonant deletion of n m t, 3st stems"                 
 !!  * __@RULENAME@__ for vaskâm:vaaskâ
- Cx:0 <=> _  (%^ÁE:) (%^SC:) (%^WG:) %^FCD: ;      
+Cx:0 <=> _  (%^ÁE:) (%^SC:) (%^WG:) %^FCD: ;      
           where Cx in (n m t) ;
 
 !rejected, look at this:
@@ -733,7 +733,7 @@ Vx:Vy <=> _  %^RV: Cns:+  e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> i: ;
 ! RV still does not give as good result as RD.
 
 "Vowel shortening for uá" 
-!! * __@RULENAME@__ \\  for uábbi -> obbijn  
+!! * __@RULENAME@__ \\  for uábbi -> obbijn  čuá%^RDl7%^RCi%^WG%>in
 á:0 <=> u: _ %^RD: Cns:+ i %^WG: %^CLEN: %^SVLOW: %> i:  ;
         u: _ %^RD: Cns:+ i %^WG: %^RVSH: %> i:  ;
 
@@ -762,7 +762,7 @@ Vx:Vy <=> _ Vz: Cns:* i %^WG: %> i: ;  !Her
 
 "Monophthongisation rule ä:a"
 !! * __@RULENAME@__ \\  čääci:čassijn, läbži:labžijn 
-ä:a <=> _ [ä:|%^RV:] Cns:+ i %^WG: (%^RVSH:) %> i: ;
+ä:a <=> _ [ä:|%^RV:] Cns:+ i %^WG: ([%^RVSH: |%^RLEN:] ) %> i: ;
         _ [ ä: |%^RV: ] Cns:+   i %^WG: [%^CLEN: |%^RLEN: ]  %^SVLOW: %> i: ; !čääci:čassijn, läbži:labžijn
         _ %^RV:  Cns:+   i %^WG: %^RLEN:  %> i: ; !ä%^RVi4gi%^WG%^RLEN%>id
 
@@ -777,7 +777,7 @@ Vx:Vy <=> _ Vz: Cns:* i %^WG: %> i: ;  !Her
 "Monophthongisation rule 2"
 !! * __@RULENAME@__ \\  á:o in pairs like kuátij -> koođij 
 Vx:Vy <=> Vz: _  Cns:* i %^WG:   %> i: ;
-          Vz:Vy _ %^RD: Cns:* i %^WG: %^RLEN:  %> i: ;
+          Vz:Vy _ (%^RD:) Cns:* i %^WG: %^RLEN:  %> i: ;
 	where Vx in ( ä á ä )
 		  Vy in ( e o a )
 		  Vz in ( i u ä )
