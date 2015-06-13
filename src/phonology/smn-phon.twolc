@@ -89,7 +89,6 @@ h5:h  y5:y                                !!= * @CODE@  these do not change
 
 %^ODRVSHV:0     !!= * @CODE@ =  Cns shortening in C|# and shortvow in Inf etc  (not in use)
 %^ODDC:0       !!= * @CODE@ =  shorten cns in odd-syll stems before C, #  (not in use)
-!%^RVD:0      root vowel  diftongisation
 
 !! !!Morpheme boundaries:
 
@@ -193,7 +192,8 @@ n7:n <=> Vow: _ (%^RC: ) j WeakGrade \%^CLEN:0 ; !! 1) weak grade
 !! * __@RULENAME@__ \\   weak grade or consonant shortening for illativ
 Cx:0 <=> Vow: _ (ˊ:) Cx: WeakGrade (%^RLEN:) (%^SVLOW:) %> ; !! 1) weak grade päddi:päädi tullâ:tuuláin
          Vow: _ (ˊ:) Cx: Vow: (%^RLEN:)  %^CSH: (%^EA: ) %> ; !! 2) consonant shortening for illativ, päddi:páádán
-         Vow: _ (ˊ:) Cx: Vow: (Vow:) Cns: (Cns:) %^CSH: (%^SVSH:) [%>|.#.] ; !! 3) consonant shortening 3st stems kahhaan:kahanân   
+         Vow: _ (ˊ:) Cx: Vow: (Vow:) Cns: (Cns:) %^CSH: (%^SVSH:) [%>|.#.] ; !! 3) consonant shortening 3st stems kahhaan:kahanân 
+         %^RD: _  Cx: Vow: Cns:+ (%^RLEN:)  %^CSH: %>  ; !piäggálm
 	where Cx in ( b d g p t k c č f z ž s š v h ) ; !lnŋr kahhaanj
 
 !cuozˊzâ:cuozâ
@@ -585,7 +585,7 @@ Cx:Cy <=> Vow: _ %^RC: :Vow (%^SV:) %^WG: %^CLEN: ([%^SVLOW: |%^SLEN: | %^RVSH:]
 !! * __@RULENAME@__ \\  
 Cx:Cy <=> Vow:  Cy (ˊ:) _  Vow: \[%^WG:0 | %^RVSH:0 | %^RLEN:0 ] ;
 		  Vow:  Cy (ˊ:) _  Vow: %^WG:0  %^CLEN:0  ;
-		  Vow:  _ (ˊ:) Cy j Vow:+ Cns  %>  ; !vi%^RVn7njooh
+		  Vow:  _ (ˊ:) Cy j Vow:+ Cns (%^RLEN:) (%^CSH:)  %>  ; !vi%^RVn7njooh %^RLEN%^CSH 605
 	where Cx in ( l7 n7 s7 š7 r7 m7 v7) 
 	      Cy in ( l  n s š r m v)
 		  matched ;
@@ -603,7 +603,7 @@ Cx:Cy <=> Vow:  Cy (ˊ:) _  Vow: \[%^WG:0 | %^RVSH:0 | %^RLEN:0 ] ;
 
 "Assimilation of root consonant and double suffix consonant"
 !! * __@RULENAME@__  delet t in front of -ttáá, avoid -tttáá
-t:0 <=> _ %> t t ; 
+t:0  <=> _ (%^RLEN:) (%^CSH:) %> t t ; 
 
 !€ haamit>ttáá
 !€ haami0>ttáá
