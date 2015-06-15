@@ -42,7 +42,7 @@ LEXICON 2SYLL_V_ID  !!= * __@CODE@__
 
 LEXICON 2SYLL_V_OD  !!= * __@CODE@__
 +V:o  VINFINITES ;
-+V+Ind: EVEN_IND ;
++V+Ind:o EVEN_IND ;
 +V+Pot:o EVEN_POT ;
 +V+Cond:o%^WGčč EVEN_COND ;
 
@@ -58,9 +58,12 @@ LEXICON 2SYLL_V_UD  !!= * __@CODE@__
 +V+Cond:u%^WGčč EVEN_COND ;
 
 LEXICON AIGUD
-+V+Inf:%>đ K ;
++V:u  VINFINITES ;
 +V+Ind+Prs: AIGUD_PRS ;
 +V+Ind+Prt: AIGUD_PRT ;
++V+Pot:u EVEN_POT ;
++V+Cond:u%^WGčč EVEN_COND ;
+
 
 LEXICON AIGUD_PRS
 +Sg1:%^WG%^RLEN%>m K ;
@@ -151,25 +154,68 @@ LEXICON ODDVLEX  !!= * __@CODE@__
 ODDVLEX_fin ;
 
 LEXICON ODDVLEX_fin
-+Ind+Prs:%>â VSUF_SG1 ;
-+Ind+Prs:%>â VSUF_SG2 ;
-+Ind+Prs:    VSUF_SG3 ;
-+Ind+Prs:    VSUF_DU1 ;
-+Ind+Prs:    VSUF_DU2 ;
-+Ind+Prs:    VSUF_DU3 ;
-+Ind+Prs:    VSUF_PL1 ;
-+Ind+Prs:%>á VSUF_PL2 ;
-+Ind+Prs:%>je VSUF_PL3 ;
-+Ind+Prt:%>i ODD-II ;
-:%>ijj       VPRSPRC	   ;
-:%>â         VPRFPRCACT	   ;
-:%>u         VPRFPRCPASS   ;
-:            VNEGPRSINDIMP ;
-:%>i         VNEGCOND	   ;
-:%>i         VNEGPOT	   ;
-             VABE		   ;
-             VGER		   ;
-             VACTIO		   ;
++Ind+Prs+Sg1:%>âm K ;
++Ind+Prs+Sg2:%>ah K ;
++Ind+Prs+Sg3:    K ;
++Ind+Prs+Du1:%>een K ;
++Ind+Prs+Du2:%>vettee K ;
++Ind+Prs+Du3:%>ává   K ;
++Ind+Prs+Pl1:%>ep K ;
++Ind+Prs+Pl2:%>vetteđ K ;
++Ind+Prs+Pl3:%>eh K ;
+
++Ind+Prt+Sg1:%>im K ;
++Ind+Prt+Sg2:%>ih K ;
++Ind+Prt+Sg3:%>ij    K ;
+
++Ind+Prt+Du1:%>áim K ;
++Ind+Prt+Du1:%>ááim K ;
++Ind+Prt+Du2:%>áid K ;
++Ind+Prt+Du2:%>ááid K ;
++Ind+Prt+Du3:%>áin  K ;
++Ind+Prt+Du3:%>ááin  K ;
+
++Ind+Prt+Pl1:%>ijm K ;
++Ind+Prt+Pl2:%>ijd K ;
++Ind+Prt+Pl3:%>ii K ;
+
++Cond+Sg1:%>iččim K ;
++Cond+Sg2:%>iččih K ;
++Cond+Sg3:%>iččij K ;
+
++Cond+Du1:%>iččijm K ;
++Cond+Du1:%>iččiijm K ;
++Cond+Du2:%>iččijd K ;
++Cond+Du2:%>iččiijd K ;
++Cond+Du3:%>iččijn K ;
++Cond+Du3:%>iččiijn K ;
+
++Cond+Pl1:%>iččijm K ;
++Cond+Pl2:%>iččijd K ;
++Cond+Pl3:%>iččii K ;
+
++Pot+Sg1:%>ižžeem K ;
++Pot+Sg2:%>ižžeeh K ;
++Pot+Sg3:%>iš K ;
++Pot+Du1:%>ižžeen K ;
++Pot+Du2:%>išvettee K ;
++Pot+Du3:%>ižává K ;
++Pot+Pl1:%>ižžep K ;
++Pot+Pl2:%>išvetted K ;
++Pot+Pl3:%>ižeh K ;
+
+
+!+Ind+Prt:%>i ODD-II ;
+
+!:%>ijj       VPRSPRC	   ;
+!:%>â         VPRFPRCACT	   ;
+!:%>u         VPRFPRCPASS   ;
+!:            VNEGPRSINDIMP ;
+!:%>i         VNEGCOND	   ;
+!:%>i         VNEGPOT	   ;
+!             VABE		   ;
+!             VGER		   ;
+!             VACTIO		   ;
 
 
 
