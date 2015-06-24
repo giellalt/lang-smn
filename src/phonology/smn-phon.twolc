@@ -194,6 +194,7 @@ Cx:0 <=> Vow: _ (ˊ:) Cx: WeakGrade (%^RLEN:) (%^SVLOW:) %> ; !! 1) weak grade p
          Vow: _ (ˊ:) Cx: Vow: (%^RLEN:)  %^CSH: (%^EA: ) %> ; !! 2) consonant shortening for illativ, päddi:páádán
          Vow: _ (ˊ:) Cx: Vow: (Vow:) Cns: (Cns:) %^CSH: (%^SVSH:) [%>|.#.] ; !! 3) consonant shortening 3st stems kahhaan:kahanân 
          %^RD: _  Cx: Vow: Cns:+ (%^RLEN:)  %^CSH: %>  ; !piäggálm
+         Vow: _  Cx: Vow: (%^SV:) Cns:  %^WG: (%^SLEN:) %^FCD: %> ; !! 3) riessâm : riesâ
 	where Cx in ( b d g p t k c č f z ž s š v h ) ; !lnŋr kahhaanj
 
 !cuozˊzâ:cuozâ
@@ -213,8 +214,19 @@ Cx:0 <=> Vow: _ (ˊ:) Cx: WeakGrade (%^RLEN:) (%^SVLOW:) %> ; !! 1) weak grade p
 !! * __@RULENAME@__ \\   weak grade or consonant shortening for illativ
 Cx:0 <=> Vow: _ (ˊ:) Cx: WeakGrade ([%^RLEN: |%^RVSH:] ) (%^SVLOW:) %> ; !! 1) weak grade päddi : päädi tullâ:tuuláin
          Vow: _ (ˊ:) Cx: Vow:  %^CSH: ( [%^EA:|%^RVSH:]  ) %> ; !! 2) consonant shortening for illativ, päddi : páádán RLEN?
-         Vow: _  Cx: Vow: %^SV: Cns:  %^WG: %^FCD: %> ; !! 3) luammán : lyeme luá%^RDmmá%^SVn
+         Vow: _  Cx: Vow: (%^SV:) Cns:  %^WG: (%^SLEN:) %^FCD: %> ; !! 3) luammán : lyeme luá%^RDmmá%^SVn
 	where Cx in ( l n ŋ r m ) ; !
+
+
+"s:0, 1. part of ss:ṣ"
+!! * __@RULENAME@__
+s:0 <=>  Vow: _  s: Vow: (%^SV:) Cns:  %^SC: %^RVSH: %^CSH: %>  ; !! riessâm : rieˊṣâmân
+
+
+"s:0, 2. part of ss:ṣ"
+!! * __@RULENAME@__
+s:ṣ <=>  Vow: s:0 _ Vow: (%^SV:) Cns:  %^SC: %^RVSH: %^CSH: %>  ; !! riessâm : rieˊṣâmân
+
 
 !luččâ:luuj̣áin 
 
@@ -387,9 +399,9 @@ Cy:0 <=> :Vow ([%^RV: | %^RD: ]) Cx: (ˊ: ) _ Cz: (%^RC:) Vow (%^SV:) (Cns)  %^W
 !! * __@RULENAME@__ \\   
 Cx:Cy <=> Cx: _ Vow: %^RLEN: %^CSH: %> n ; !! 1) 2st stems hellá:heeḷán
           Cx: _ Vow: (Vow:) Cns: (Cns:) %^CSH: (%^SVSH:) [%>|.#.] ; !! 2) 3st stems aarrân:aṛânân, iššeed:iṣ̌edân, but not for kiärunj:kiäˊrunjân, jiereeh:jieˊrehân
-          Cx: _ Vow:  %^SV: Cns: %^SC: %^RVSH: %^CSH: %> ; !! 3) siämmun siäˊṃunân
-      where Cx in ( r l n ŋ m š) 
-            Cy in ( ṛ ḷ ṇ ŋ̣ ṃ ṣ̌) 
+          Cx: _ Vow:  (%^SV:) Cns: %^SC: %^RVSH: %^CSH: %> ; !! 3) siämmun siäˊṃunân
+      where Cx in ( r l n ŋ m š ) 
+            Cy in ( ṛ ḷ ṇ ŋ̣ ṃ ṣ̌ ) 
       matched ;
 
 !iäláán:iäˊḷánân  
@@ -401,7 +413,7 @@ Cx:Cy <=> Cx: _ Vow: %^RLEN: %^CSH: %> n ; !! 1) 2st stems hellá:heeḷán
 !! * __@RULENAME@__ \\    
 Cx:0 <=> _  Cx:Cy Vow: %^RLEN: %^CSH: %> n ; !! 1) 2st hellá:heeḷán
          _  Cx:Cy Vow: (Vow:) Cns: (Cns:) %^CSH: (%^SVSH:) [%>|.#.] ; !! 2) 3st stems aarrân:aṛânân
-         _ Cx: Vow:  %^SV: Cns: %^SC: %^RVSH: %^CSH: %> ; !! 3) siämmun siäˊṃunân
+         _ Cx: Vow:  (%^SV:) Cns: %^SC: %^RVSH: %^CSH: %> ; !! 3) siämmun siäˊṃunân
       where Cx in ( r l n ŋ m ) 
             Cy in ( ṛ ḷ ṇ ŋ̣ ṃ ) 
       matched ;
@@ -418,7 +430,7 @@ Cx:0 <=> _  Cx:Cy Vow: %^RLEN: %^CSH: %> n ; !! 1) 2st hellá:heeḷán
 
 "Word final consonant deletion of n m t, 3st stems"                 
 !!  * __@RULENAME@__ for vaskâm:vaaskâ
-Cx:0 <=> _  (%^ÁE:) (%^SC:) (%^WG:) %^FCD: ;      
+Cx:0 <=> _  (%^ÁE:) (%^SC:) (%^WG:) (%^SLEN:) %^FCD: ;      
           where Cx in (n m t) ;
 
 !rejected, look at this:
@@ -738,7 +750,7 @@ Vx:Vy <=> _  %^RV: Cns:+  e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> i: ;
 %^RD:ˊ <=> _ Cns:+ Vow: (%^SV:) %^WG: %^RVSH: ; !! 1)
             Vow: _ Cns:+ Vow: (Vow:) Cns: (Cns:) [%^CSH:|%^RVSH:]  (%^SVSH:) [%>|.#.] ; !! 2) iäláán : iäˊḷánân
             _ Cns:0 Cns Vow:+ Cns:+ %^RLEN:0 %^CSH:0 %> ; !! 3) for  l and g as part of cosonant patterns ll:l and gg:g
-            _ Cns:+ Vow:  %^SV: Cns: %^SC: %^RVSH: %^CSH: %> ; !! 3) siämmun siäˊṃunân
+            _ Cns:+ Vow:  (%^SV:) Cns: %^SC: %^RVSH: %^CSH: %> ; !! 3) siämmun siäˊṃunân
 
 
 ! RV still does not give as good result as RD.
@@ -862,6 +874,14 @@ e:á <=> y: _ %^RD:  Cns:+ Vow: (%^RLEN:) (%^CSH:) %^EA: %> ;
 e:o <=> y: _ %^RD:  Cns:+ i: %^WG: ([%^RVSH: |%^RLEN:]) %> i: ;
         y:  _ %^RD:  Cns:+ i: %^WG: %^CLEN: %^SVLOW: %> i: ;
 
+"uá to ye, part 1" 
+!! * __@RULENAME@__ \\  Part 1 luámmán : lyeme
+u:y <=> _ :e %^RD: Cns:+ Vow: %^SV: Cns: %^WG: (%^SLEN:) %^FCD: %> ;
+
+"uá to ye, part 2"
+!! * __@RULENAME@__ \\  Part 2 luámmán : lyeme
+á:e <=> :y _ %^RD: Cns:+ Vow: %^SV: Cns: %^WG: (%^SLEN:) %^FCD: %> ;
+        :e  %^RD: Cns:+ _  %^SV:  Cns: %^WG: (%^SLEN:) %^FCD:  %> ; !luá%^RDmmá%^SVn:lyeme %^WG%^FCD
 
 
 !! !Second syllable rules
@@ -973,6 +993,11 @@ Vx:0 <=> _ Vx: Cns:+ %^CSH: %^SVSH: %> ; !eemeed : emedân
 !! * __@RULENAME@__ \\ long á in kissáást
 %^SV:Vx <=> Vx:  _ (:Cns)  (%^WG:) (%^RVSH:) (%^CLEN:) (%^RLEN:) %^SLEN: (%^SVLOW: ) %> ;
         where Vx in ( á o u e a i ) ; ! pending...
+
+
+"Suffix vowel lengthening SV:e"
+!! * __@RULENAME@__
+%^SV:e  <=> á: _ Cns:  %^WG: %^SLEN: %^FCD: %> ;
 
 !€ ki%^RVss7á^SV^WG^CLEN^SLEN>st
 !€ ki0ssáá000>st
