@@ -399,7 +399,7 @@ Cy:0 <=> :Vow ([%^RV: | %^RD: ]) Cx: (ˊ: ) _ Cz: (%^RC:) Vow (%^SV:) (Cns)  %^W
 !! * __@RULENAME@__ \\   
 Cx:Cy <=> Cx: _ Vow: %^RLEN: %^CSH: %> n ; !! 1) 2st stems hellá:heeḷán
           Cx: _ Vow: (Vow:) Cns: (Cns:) %^CSH: (%^SVSH:) [%>|.#.] ; !! 2) 3st stems aarrân:aṛânân, iššeed:iṣ̌edân, but not for kiärunj:kiäˊrunjân, jiereeh:jieˊrehân
-          Cx: _ Vow:  (%^SV:) Cns: %^SC: %^RVSH: %^CSH: %> ; !! 3) siämmun siäˊṃunân
+          Cx: _ Vow:  (%^SV:) Cns: %^SC: %^RVSH: %^CSH: %> ; !! 3) siämmun siäˊṃunân luá%^RDmmá%^SVn%^SC%^RVSH%^CSH%>in
       where Cx in ( r l n ŋ m š ) 
             Cy in ( ṛ ḷ ṇ ŋ̣ ṃ ṣ̌ ) 
       matched ;
@@ -540,14 +540,14 @@ j7:i <=> Vow: _ %^RC: :Vow       %^CLEN:         %> ; !Par Ess
 
 "Lengthening of h and p to vv, for everything except Ess/Par 1"
 !! * __@RULENAME@__ \\  for h to vv p to vv čääc%^RCi
-Cx:Cy <=> Vow: _ %^RC: :Vow (%^SV:) %^WG: (%^RVSH:) %^CLEN: ([%^SVLOW: |%^SLEN:])  %> \[ n | d ]  ;
+Cx:Cy <=> Vow: _ (:ˊ) %^RC: :Vow (%^SV:) %^WG: (%^RVSH:) %^CLEN: ([%^SVLOW: |%^SLEN:])  %> \[ n | d ]  ;
 	where Cx in ( h p c )
 		  Cy in ( v v s ) 
 		  matched ;
 
 "Lengthening of h and p to vv, for everything except Ess/Par 2"
 !! * __@RULENAME@__ \\   for h to vv  p to vv   
-%^RC:Cy <=> Vow: Cx: _ :Vow  (%^SV:) %^WG: (%^RVSH:) %^CLEN: ([%^SVLOW: |%^SLEN:]) %> \[ n | d ] ;
+%^RC:Cy <=> Vow: Cx: (:ˊ) _ :Vow  (%^SV:) %^WG: (%^RVSH:) %^CLEN: ([%^SVLOW: |%^SLEN:]) %> \[ n | d ] ;
 	where Cx in ( h p c )  
 		  Cy in ( v v s )   
 		  matched ;
@@ -590,10 +590,10 @@ Cx:Cy <=> Vow: _ %^RC: :Vow (%^SV:) %^WG: (%^RVSH:) %^CLEN: ([%^SVLOW: |%^SLEN:]
 %^RC:č <=> Vow:  č  _ Vow %^CLEN:  ; 
 
 
-"Mark consonant length after diphthong for Pl Ill, čielˊgijd"
-0:ˊ <=> %^RD: Cx: _ Cy: Vow: %^WG: %^CLEN: (%^SVLOW:) %> i: d ; !! now for čielˊgijd, but can be widened
-        where Cx in ( l ) 
-              Cy in ( g ) 
+"Mark consonant length after diphthong for Pl Ill"
+0:ˊ <=> %^RD: Cx: _ :Cy Vow: %^WG: %^RVSH: %^CLEN:  %> i: [d | n ] ; !! %^WG%^RVSH%^CLEN
+        where Cx in ( l h) 
+              Cy in ( g v ) 
         matched ;
 
 
@@ -864,6 +864,7 @@ e:ä <=> [i | e: ]  _ (%^RD:) Cns: (ˊ:) Cns:* Vow: (%^RLEN:)  (%^CSH:) %^EA: %>
 y:u <=> _ e: %^RD:  Cns:+ Vow: (%^RLEN:) (%^CSH:) %^EA: %> ;
         _ :o %^RD:  Cns:+ i: %^WG: ([%^RVSH: |%^RLEN:] ) %> i: ;
         _ :o %^RD:  Cns:+ i: %^WG: %^CLEN: %^SVLOW: %> i: ;
+        _ :o %^RD:  Cns: 0:ˊ  Cns: i:  %^WG: %^RVSH: %^CLEN: %> i: ;
 
 "ye to uá, part 2"
 !! * __@RULENAME@__ \\  Part 2 of ye to uá for kyeli : kuálán
@@ -873,6 +874,7 @@ e:á <=> y: _ %^RD:  Cns:+ Vow: (%^RLEN:) (%^CSH:) %^EA: %> ;
 !! * __@RULENAME@__ \\  Part 2 of ye to uá for kyeli : kuolijn
 e:o <=> y: _ %^RD:  Cns:+ i: %^WG: ([%^RVSH: |%^RLEN:]) %> i: ;
         y:  _ %^RD:  Cns:+ i: %^WG: %^CLEN: %^SVLOW: %> i: ;
+        y: _  %^RD:  Cns: 0:ˊ Cns: i:  %^WG: %^RVSH: %^CLEN: %> i: ;
 
 "uá to ye, part 1" 
 !! * __@RULENAME@__ \\  Part 1 luámmán : lyeme
