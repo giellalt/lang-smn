@@ -2,7 +2,9 @@
 
 # script to generate paradigms for generating word forms
 # command:
-# sh generate_para.sh PATTERN
+# sh generate_contlex_para.sh PATTERN
+# example, when you are in smn:
+# sh devtools/generate_contlex_para.sh LAAVU | dsmnDict | see
 
 PATTERN=$1
 L_FILE="in.txt"
