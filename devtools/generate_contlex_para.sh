@@ -8,7 +8,7 @@
 
 PATTERN=$1
 L_FILE="in.txt"
-grep $PATTERN src/morphology/stems/nouns.lexc |cut -d ':' -f1>$L_FILE
+cut -d '!' -f1 src/morphology/stems/nouns.lexc | grep $PATTERN | cut -d ':' -f1>$L_FILE
 
 P_FILE="test/data/testnounpradigm.txt"
 
