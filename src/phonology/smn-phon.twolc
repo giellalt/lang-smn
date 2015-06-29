@@ -599,6 +599,19 @@ Cx:Cy <=> Vow: _ (:ˊ) %^RC: :Vow (%^SV:) %^WG: (%^RVSH:) %^CLEN: ([%^SVLOW: |%^
         matched ;
 
 
+"From weak to exstra strong, part 1"
+Cx:Cy <=>  _  %^RC: u i:0 %^UU: %> ; ! puásui:poccuu puá%^RDs%^RCui%^UU%>u
+        where Cx in ( s ) 
+              Cy in ( c ) 
+        matched ;
+
+"From weak to exstra strong, part 2"
+%^RC:Cy <=>  Cx:  _ u i:0 %^UU: %> ; ! puásui:poccuu puá%^RDs%^RCui%^UU%>u
+        where Cx in ( s ) 
+              Cy in ( c ) 
+        matched ;
+
+
 !! !Other consonant rules
 
 "xˊx7:xˊx and xx7:xx" 
@@ -753,6 +766,7 @@ Vx:Vy <=> _  %^RV: Cns:+  e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> i: ;
             Vow: _ Cns:+ Vow: (Vow:) Cns: (Cns:) [%^CSH:|%^RVSH:]  (%^SVSH:) [%>|.#.] ; !! 2) iäláán : iäˊḷánân
             _ Cns:0 Cns Vow:+ Cns:+ %^RLEN:0 %^CSH:0 %> ; !! 3) for  l and g as part of cosonant patterns ll:l and gg:g
             _ Cns:+ Vow:  (%^SV:) Cns: %^SC: %^RVSH: %^CSH: %> ; !! 3) siämmun siäˊṃunân
+            _ Cns:+ Vow:+ %^UU: %^RVSH: %> ; !! 4) puáˊsujin puá%^RDs%^RCui%^UU%^RVSH
 
 
 ! RV still does not give as good result as RD.
@@ -761,6 +775,7 @@ Vx:Vy <=> _  %^RV: Cns:+  e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> i: ;
 !! * __@RULENAME@__ \\  for uábbi -> obbijn  čuá%^RDl7%^RCi%^WG%>in
 á:0 <=> u: _ %^RD: Cns:+ i %^WG: %^CLEN: %^SVLOW: %> i:  ;
         u: _ %^RD: Cns:+ i %^WG: %^RVSH: %> i:  ;
+        u: _ %^RD: Cns:+ u i:0 %^UU: %> ; ! puásui:poccuu
 
 
 "Monophthongisation rule i:e"
@@ -778,6 +793,7 @@ Vx:Vy <=> _ Vz: Cns:* i %^WG: %> i: ;  !Her
          _ Vz:0 %^RD: Cns:* i %^WG: %^CLEN: %^SVLOW: %> i:  ;
          _ Vz: %^RD: Cns:* i %^WG: (%^RLEN:) %> i: ; 
          _ Vz:0 %^RD: Cns:+ i %^WG: %^RVSH: %> i: ;
+         _ Vz:0 %^RD: Cns:+ u i:0 %^UU: %> ; ! puásui:poccuu puá%^RDs%^RCui%^UU%>u
 	where Vx in ( u )
 		  Vy in ( o )
 		  Vz in ( á )
@@ -901,7 +917,7 @@ Vx:Vy <=> _ (Cns:) Vz: %^WG: (%^FCD:) ;
 !€ puttás^ÁE^WG>
 !€ pu0tes00>
 
-"Vowel shortening  áá and aa to e or i in 3syll"
+"Stemvowel shortening  áá and aa to e or i in 3syll"
 !! * __@RULENAME@__ \\ puttás- > putes, triggers are ^ÁE and ^ÁI
 Vx:0 <=> _ Vx: (Cns:) Vz: [%^WG:|%^CSH:] ; 
        where Vx in ( á    á    a   )
@@ -947,7 +963,7 @@ i:á <=> [:e|:i|:ä|:á] ([%^RV: | %^RD: ]) Cns:+ _ (%^RLEN:) (%^CSH:) %^EA: [%>
 
 "Stem vowel â to a in Pl Nom -h"
 !! * __@RULENAME@__ \\  silbâ to siilbah
-â:a <=> :Cns (%^RC:) _ (%^UU:|%^SV:) (%^WG:) (%^RLEN:|%^DLEN:) %> h ;
+â:a <=> :Cns (%^RC:) _ (%^SV:) (%^WG:) (%^RLEN:|%^DLEN:) %> h ;
 
 
 !€ so^RVllâ^WG^RLEN>h
@@ -984,8 +1000,12 @@ Vx:0 <=> _ Vx: Cns:+ %^CSH: %^SVSH: %> ; !eemeed : emedân
 !€ kappeer^CSH^SVSH>ân
 !€ ka0p0er00>ân
 
-"Stem vowel â to u before UU symbol"
-â:u <=> _ %^UU: %> [i|u|s] ;
+"Stem vowel change before UU symbol"
+Vx:Vy <=> _ %^UU: (%^RVSH:) %>  ; ! aaigâ:aaigâ AAIGA puásui:puás%^RCui PUASUI
+	where Vx in ( â i )
+          Vy in ( u 0 ) 
+	matched ;
+
 
 !Rejected, look at this:    
 !€ aaigâ^UU>u
