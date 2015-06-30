@@ -146,7 +146,6 @@ Definitions
 
 WeakGrade =  (RealVow:) :RealVow  (Cns:) ([%^SV:|%^ÁI:|%^ÁE:]) %^WG:0  (%^RVSH:)   ;   
 
-!WeakGrade =  :RealVow  (Cns:) ([%^SV:|%^ÁI:|%^ÁE:]) %^WG:0  (%^RVSH:)   ;   (previous)
 
 !! As we look at more cases, the WeakGrade definition tends to be longer. 
 !! We want to keep it short, but we want the code to work Thus, we document.
@@ -294,7 +293,7 @@ Vy:ˊ <=> Vx: _  Cns:+ (%^RC:) Vow:  %^WG: %^RVSH: (%^SVLOW:) [%>|.#.] ; !! 1) 2
 
 "Underlying long vowel shortening iä:eˊ"
 !! * __@RULENAME@__ \\ 
-Vy:ˊ <=> Vx: _  Cns:+ Vow:  Cns: %^ÁI: %^WG: %^RVSH:  [%>|.#.] ; !! 1) 3st stems viäsˊkár%^ÁI%^WG%^RVSH 
+Vy:ˊ <=> Vx: _  Cns:+ Vow:  Cns: %^ÁI: %^WG: %^RVSH:  [%>|.#.] ; !! 1) 3st stems viäsˊkár
        where Vx in ( i ) 
              Vy in ( ä ) 
        matched ;
@@ -442,7 +441,7 @@ Cx:0 <=> _  Cx:Cy Vow: %^RLEN: %^CSH: %> n ; !! 1) 2st hellá:heeḷán
 "Word final consonant deletion of n m t, 3st stems"                 
 !!  * __@RULENAME@__ for vaskâm:vaaskâ
 Cx:0 <=> _  (%^ÁE:) (%^SC:) (%^WG:) (%^SLEN:) %^FCD: ;      
-          where Cx in (n m t) ;
+          where Cx in (n m t v j) ;
 
 !rejected, look at this:
 !€ va^RVskâm^RLEN^FCD
@@ -616,24 +615,24 @@ Cx:Cy <=> Vow: _ (:ˊ) %^RC: :Vow (%^SV:) %^WG: (%^RVSH:) %^CLEN: ([%^SVLOW: |%^
 
 
 "From exstra strong to weak, part 1 cc:s, rr:r"
-Cy:0 <=>  Cx: _  Vow:+ %^UU: ([%^RVSH:|%^RLEN:]) %> ; ! poccuu:puásui  kiepˊpu:kiepâ
-          Cx: ˊ:0  _ Vow:+  %^UU: ([%^RVSH:|%^RLEN:]) %> ; ! cuobˊbuu:cuábui
-       where Cx in ( c r b l t p) 
-             Cy in ( c r b l t p) 
+Cy:0 <=>  Cx: _  Vow:+  %^UU: ([%^RVSH:|%^RLEN:]) %> ; ! poccuu:puásui  kiepˊpu:kiepâ
+          Cx: ˊ:0  _ Vow:+ (%^ÁI:)  %^UU: ([%^RVSH:|%^RLEN:]) %> ; ! cuobˊbuu:cuábui
+       where Cx in ( c r b l t p h) 
+             Cy in ( c r b l t p h) 
         matched ;
 
 "From exstra strong to weak, remove ˊ "
-ˊ:0 <=>  Cx: _  Cy: Vow:+  %^UU: ([%^RVSH:|%^RLEN:]) %> ; 
-       where Cx in  ( k b l l t p) 
-              Cy in ( s b l g t p) 
+ˊ:0 <=>  Cx: _  Cy: Vow:+ (%^ÁI:)  %^UU: ([%^RVSH:|%^RLEN:]) %> ; 
+       where Cx in  ( k b l l t p h) 
+              Cy in ( s b l g t p h) 
         matched ;
 
 
 "From exstra strong to weak, part 2"
-Cx:Cy <=>   _ Cx:  Vow:+  %^UU: ([%^RVSH:|%^RLEN:]) %> ; ! poccuu:puásui 
-            _  ˊ: s Vow:+  %^UU: ([%^RVSH:|%^RLEN:]) %> ; ! kuokˊsuu:kuávsui
-        where Cx in ( c k ) 
-              Cy in ( s v ) 
+Cx:Cy <=>   _ (ˊ:) Cx:  Vow:+ (%^ÁI:) %^UU: ([%^RVSH:|%^RLEN:]) %> ; ! poccuu:puásui 
+            _  ˊ: s Vow:+  (%^ÁI:) %^UU: ([%^RVSH:|%^RLEN:]) %> ; ! kuokˊsuu:kuávsui
+        where Cx in ( c k h ) 
+              Cy in ( s v ṿ ) 
         matched ;
 
 "In front of %^UU – i4j:j"
@@ -850,6 +849,7 @@ Vx:Vy <=> _ Vz: Cns:* i %^WG: %> i: ;  !Her
 Vx:Vy <=> Vz: _  Cns:* i %^WG:   %> i: ;
           Vz:Vy _ (%^RD:) Cns:* i %^WG: %^RLEN:  %> i: ;
           Vz:  _ Cns:* Vow: Cns: %^ÁI: %^WG: %^RLEN: [%>|.#.] ; !viäsˊkár : veeskir viäskár%^ÁI
+          Vz:  _ %^RD: Cns:* Vow:  %^ÁI: %^UU: [%>|.#.] ; !puáhˊháá pooṿij
 	where Vx in ( ä á ä )
 		  Vy in ( e o a )
 		  Vz in ( i u ä )
@@ -954,6 +954,7 @@ u:y <=> _ :e %^RD: Cns:+ Vow: %^SV: Cns: %^WG: (%^SLEN:) %^FCD: %> ;
 "Second syllable vowel change á to e or i in 3syll stems"
 !! * __@RULENAME@__ \\ puttás- > putes, triggers are ^ÁE and ^ÁI
 Vx:Vy <=> _ (Cns:) Vz: %^WG: (%^FCD:) ;  !viäskár%^ÁI
+          _  Vz: %^UU: ; !puáhˊháá pooṿij
        where Vx in ( á    á    a   )
              Vy in ( e    i    e   )
              Vz in ( %^ÁE %^ÁI %^ÁE) 
@@ -1030,6 +1031,7 @@ e:i <=> Cns:  _  (%^WG:) ([ %^RLEN: | %^CLEN: | %^RVSH: ]) (%^SVLOW:)  %> i: ;
 "Stem vowel u:o change before suffix"
 !! * __@RULENAME@__ \\  
 u:o <=> Cns: _ ([%^UU:|%^SV:]) (%^WG:) (%^RVSH:) (%^RLEN:|%^CLEN:) (%^SLEN:) %^SVLOW:  ; 
+		_  á:o %^RD: Cns:+ Vow: %^ÁI: %^UU: ; !puáhˊháá : pooṿij
 ! stááḷu stááloust
 
 "Second vowel shortening in 3syll consonant stems"
