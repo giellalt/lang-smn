@@ -129,7 +129,7 @@ Sets
        m7 n7 ŋ7 v7 s7 r7 đ7	l7 j7 h7 š7		   !!= @CODE@ 
        ṃ  ṇ  ŋ̣  ṿ  ṣ  ṛ  đ̣  ḷ  j̣  ḥ  ṣ̌         !!=  @CODE@ 
        %^RC %^SC  ˊ ;                         !!=  @CODE@ 
- Geminate = b d g p h t k c č f z l m n ŋ r s š v  ;  !!= * @CODE@  check these
+ Geminate = b d g p h t k c f z l m n ŋ r s š v  ;  !!= * @CODE@  
  Seg = Vow Cns ;							   !!= * @CODE@ 
  StemCns = b b3 d d3 g g2 g3 h h2 h3 		   !!= * @CODE@ 
            j l m m2 m3 m8 n n8 n2 ŋ r s  ;     !!= @CODE@ 
@@ -284,8 +284,15 @@ Cx:Cy <=> Vow:  Cz: (ˊ:) _  WeakGrade (%^RLEN:) (%^SVLOW:) %> ; !! 1) weak grad
 
 "Long vowel shortening (no consonant shortening)"
 !! * __@RULENAME@__ \\ (example?), no ^CSH, since that gives Vy:0
-Vy:ˊ <=> Vx: _  Cns:+ (%^RC:) Vow:  %^WG: %^RVSH: (%^SVLOW:) [%>|.#.] ; !! 1) 2st stems
+Vy:ˊ <=> Vx: _ [Cns: - č: ] Cns:* (%^RC:) Vow:  %^WG: %^RVSH: (%^SVLOW:) [%>|.#.] ; !! 1) 2st stems
          Vx: _  Cns:+         Vow:  Cns: %^RVSH: %^CSH: %^SVSH: [%>|.#.] ; !! 2) 3st stems kaavpug:kaˊvpugân 
+       where Vx in ( a e i o u y á ä ) 
+             Vy in ( a e i o u y á ä ) 
+       matched ;
+
+"Long vowel shortening, č:j̣ "
+!! * __@RULENAME@__ \\ special rule for getting ej̣ittáá instead of eˊj̣ittáá.
+Vy:0 <=> Vx: _ č: (%^RC:) Vow:  %^WG: %^RVSH: (%^SVLOW:) [%>|.#.] ; !! 1) 2st stems
        where Vx in ( a e i o u y á ä ) 
              Vy in ( a e i o u y á ä ) 
        matched ;
