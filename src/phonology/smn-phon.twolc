@@ -599,16 +599,29 @@ Cx:Cy <=> Vow: _ (:ˊ) %^RC: :Vow (%^SV:) %^WG: (%^RVSH:) %^CLEN: ([%^SVLOW: |%^
         matched ;
 
 
-"From weak to exstra strong, part 1"
-Cx:Cy <=>  _  %^RC: u i:0 %^UU: %> ; ! puásui:poccuu puá%^RDs%^RCui%^UU%>u
-        where Cx in ( s ) 
-              Cy in ( c ) 
+"From exstra strong to weak, part 1 cc:s, rr:r"
+Cy:0 <=>  Cx: _   u %^UU: (%^RVSH:) %> ; ! poccuu:puásui
+          Cx: ˊ:0  _ u  %^UU: (%^RVSH:) %> ; ! cuobˊbuu:cuábui
+       where Cx in ( c r b l) 
+             Cy in ( c r b l) 
         matched ;
 
-"From weak to exstra strong, part 2"
-%^RC:Cy <=>  Cx:  _ u i:0 %^UU: %> ; ! puásui:poccuu puá%^RDs%^RCui%^UU%>u
-        where Cx in ( s ) 
-              Cy in ( c ) 
+"From exstra strong to weak, remove ˊ "
+ˊ:0 <=>  Cx: _  Cy: u  %^UU: (%^RVSH:) %> ; 
+       where Cx in ( k b l l) 
+              Cy in ( s b l g) 
+        matched ;
+
+
+"From exstra strong to weak, part 2"
+Cx:Cy <=>   _ Cx:  u  %^UU: (%^RVSH:) %> ; ! poccuu:puásui 
+            _  ˊ: s u  %^UU: (%^RVSH:) %> ; ! kuokˊsuu:kuávsui
+        where Cx in ( c k ) 
+              Cy in ( s v ) 
+        matched ;
+
+"From exstra strong to weak, ij:j"
+i:0 <=>   _ j  u  %^UU: (%^RVSH:) %> ; ! poijuu:puájui 
         matched ;
 
 
@@ -766,7 +779,7 @@ Vx:Vy <=> _  %^RV: Cns:+  e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> i: ;
             Vow: _ Cns:+ Vow: (Vow:) Cns: (Cns:) [%^CSH:|%^RVSH:]  (%^SVSH:) [%>|.#.] ; !! 2) iäláán : iäˊḷánân
             _ Cns:0 Cns Vow:+ Cns:+ %^RLEN:0 %^CSH:0 %> ; !! 3) for  l and g as part of cosonant patterns ll:l and gg:g
             _ Cns:+ Vow:  (%^SV:) Cns: %^SC: %^RVSH: %^CSH: %> ; !! 3) siämmun siäˊṃunân
-            _ Cns:+ Vow:+ %^UU: %^RVSH: %> ; !! 4) puáˊsujin puá%^RDs%^RCui%^UU%^RVSH
+            _ Cns:+ Vow:+ %^UU: %^RVSH: %> ; !! 4) puáˊsujin
 
 
 ! RV still does not give as good result as RD.
@@ -775,7 +788,6 @@ Vx:Vy <=> _  %^RV: Cns:+  e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> i: ;
 !! * __@RULENAME@__ \\  for uábbi -> obbijn  čuá%^RDl7%^RCi%^WG%>in
 á:0 <=> u: _ %^RD: Cns:+ i %^WG: %^CLEN: %^SVLOW: %> i:  ;
         u: _ %^RD: Cns:+ i %^WG: %^RVSH: %> i:  ;
-        u: _ %^RD: Cns:+ u i:0 %^UU: %> ; ! puásui:poccuu
 
 
 "Monophthongisation rule i:e"
@@ -793,7 +805,6 @@ Vx:Vy <=> _ Vz: Cns:* i %^WG: %> i: ;  !Her
          _ Vz:0 %^RD: Cns:* i %^WG: %^CLEN: %^SVLOW: %> i:  ;
          _ Vz: %^RD: Cns:* i %^WG: (%^RLEN:) %> i: ; 
          _ Vz:0 %^RD: Cns:+ i %^WG: %^RVSH: %> i: ;
-         _ Vz:0 %^RD: Cns:+ u i:0 %^UU: %> ; ! puásui:poccuu puá%^RDs%^RCui%^UU%>u
 	where Vx in ( u )
 		  Vy in ( o )
 		  Vz in ( á )
@@ -1002,8 +1013,8 @@ Vx:0 <=> _ Vx: Cns:+ %^CSH: %^SVSH: %> ; !eemeed : emedân
 
 "Stem vowel change before UU symbol"
 Vx:Vy <=> _ %^UU: (%^RVSH:) %>  ; ! aaigâ:aaigâ AAIGA puásui:puás%^RCui PUASUI
-	where Vx in ( â i )
-          Vy in ( u 0 ) 
+	where Vx in ( â  )
+          Vy in ( u  ) 
 	matched ;
 
 
