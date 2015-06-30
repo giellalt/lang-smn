@@ -234,11 +234,12 @@ s:ṣ <=>  Vow: s:0 _ Vow: (%^SV:) Cns:  %^SC: %^RVSH: %^CSH: %>  ; !! riessâm 
 !€ luu0j̣á000>in
 
 "ˊ to zero gradation"
-!! * __@RULENAME@__ \\ when weak grade or consonant shortening for illativ
+!! * __@RULENAME@__ \\ when weak grade or consonant shortening
 ˊ:0 <=> Vow: Cns: _ Cns:+  Vow:  %^WG:0 ([%^RLEN: | %^RVSH:] ) [%>|.#.]  ;  !! 1) weak grade
         Vow: Cns: _ Cns:+  Vow: (%^RLEN:) %^CSH: (%^EA:)  [%>|.#.]  ; !!  2) consonant shortening for illativ
         Vow: č:   _ č4: WeakGrade %^CLEN: %^SVLOW: %> ; !! 3) weak grade and consonant lengthning, kiäčˊču kiäj̣u 
         Vow: RealVow:0 %^RD:  Cns:  _ Cns:+  WeakGrade %^CLEN: %^SVLOW: %> ; !! 4) uábˊbi:obbijn
+		Cns: _ Cns:+ Vow:  Cns: %^ÁI: %^WG:  ; !! 5) viäsˊkár
 
 
 
@@ -288,6 +289,14 @@ Vy:ˊ <=> Vx: _  Cns:+ (%^RC:) Vow:  %^WG: %^RVSH: (%^SVLOW:) [%>|.#.] ; !! 1) 2
          Vx: _  Cns:+         Vow:  Cns: %^RVSH: %^CSH: %^SVSH: [%>|.#.] ; !! 2) 3st stems kaavpug:kaˊvpugân 
        where Vx in ( a e i o u y á ä ) 
              Vy in ( a e i o u y á ä ) 
+       matched ;
+
+
+"Underlying long vowel shortening iä:eˊ"
+!! * __@RULENAME@__ \\ 
+Vy:ˊ <=> Vx: _  Cns:+ Vow:  Cns: %^ÁI: %^WG: %^RVSH:  [%>|.#.] ; !! 1) 3st stems viäsˊkár%^ÁI%^WG%^RVSH 
+       where Vx in ( i ) 
+             Vy in ( ä ) 
        matched ;
 
 
@@ -800,7 +809,8 @@ Vx:Vy <=> _  %^RV: Cns:+  e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> i: ;
 "Monophthongisation rule i:e"
 !! * __@RULENAME@__ \\  
 Vx:Vy <=> _ Vz: Cns:* i %^WG: %> i: ;  
-!         _ Vz:0 %^RD: Cns:* i %^WG: %^CLEN: %^SVLOW: %> i:  ;
+          _ Vz: Cns:* Vow: Cns %^ÁI: %^WG: [%^RLEN:|%^RVSH:] [%>|.#.]  ; !viäskár veeskir
+!         _ Vz:0 %^RD: Cns:* i %^WG: %^CLEN: %^SVLOW: %> i:  ; 
 	where Vx in ( i )
 		  Vy in ( e )
 		  Vz in ( ä)
@@ -839,6 +849,7 @@ Vx:Vy <=> _ Vz: Cns:* i %^WG: %> i: ;  !Her
 !! * __@RULENAME@__ \\  á:o in pairs like kuátij -> koođij, säämi -> saamij 
 Vx:Vy <=> Vz: _  Cns:* i %^WG:   %> i: ;
           Vz:Vy _ (%^RD:) Cns:* i %^WG: %^RLEN:  %> i: ;
+          Vz:  _ Cns:* Vow: Cns: %^ÁI: %^WG: %^RLEN: [%>|.#.] ; !viäsˊkár : veeskir viäskár%^ÁI
 	where Vx in ( ä á ä )
 		  Vy in ( e o a )
 		  Vz in ( i u ä )
@@ -942,7 +953,7 @@ u:y <=> _ :e %^RD: Cns:+ Vow: %^SV: Cns: %^WG: (%^SLEN:) %^FCD: %> ;
 
 "Second syllable vowel change á to e or i in 3syll stems"
 !! * __@RULENAME@__ \\ puttás- > putes, triggers are ^ÁE and ^ÁI
-Vx:Vy <=> _ (Cns:) Vz: %^WG: (%^FCD:) ; 
+Vx:Vy <=> _ (Cns:) Vz: %^WG: (%^FCD:) ;  !viäskár%^ÁI
        where Vx in ( á    á    a   )
              Vy in ( e    i    e   )
              Vz in ( %^ÁE %^ÁI %^ÁE) 
