@@ -1,0 +1,66 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-dict-gt-norm.hfst
+    Morph: ../../../src/analyser-dict-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-dict-gt-norm.xfst
+    Morph: ../../../src/analyser-dict-gt-norm.xfst
+    App: lookup
+
+Tests:
+
+# This yaml is for contraction stems -uv (in North Saami these are 3-syllabic; as you see in Aanaar Saami there are still some forms left from the former 3-syllabic system)
+
+  Noun - kaamuv: # ok, MLO; cons gradation m:mm
+    kaamuv+N+Sg+Nom: kaamuv
+    kaamuv+N+Sg+Gen: kammuu
+    kaamuv+N+Sg+Acc: kammuu
+    kaamuv+N+Sg+Ill: kammui
+    kaamuv+N+Sg+Loc: kammust
+    kaamuv+N+Sg+Com: kammuin
+    kaamuv+N+Sg+Abe: kammuuttáá
+    kaamuv+N+Ess: kamuvin
+    kaamuv+N+Par: kamuvid
+    kaamuv+N+Pl+Nom: kammuuh
+    kaamuv+N+Pl+Gen: kammui
+    kaamuv+N+Pl+Acc: kammuid
+    kaamuv+N+Pl+Ill: kammuid
+    kaamuv+N+Pl+Loc: kammuin
+    kaamuv+N+Pl+Com: kammuiguin
+    kaamuv+N+Pl+Abe: kammuittáá
+
+  Noun - peenuv: # ok, MLO; cons gradation n:nn
+    peenuv+N+Sg+Nom: peenuv
+    peenuv+N+Sg+Gen: pennuu
+    peenuv+N+Sg+Acc: pennuu
+    peenuv+N+Sg+Ill: pennui
+    peenuv+N+Sg+Loc: pennust # pennâgist a well-known rare variant; must be accepted
+    peenuv+N+Sg+Com: pennuin
+    peenuv+N+Sg+Abe: pennuuttáá
+    peenuv+N+Ess: penuvin # also pennâgin must be accepted
+    peenuv+N+Par: penuvid # also pennâgid must be accepted
+    peenuv+N+Pl+Nom: pennuuh
+    peenuv+N+Pl+Gen: pennui
+    peenuv+N+Pl+Acc: pennuid
+    peenuv+N+Pl+Ill: pennuid
+    peenuv+N+Pl+Loc: pennuin
+    peenuv+N+Pl+Com: pennuiguin
+    peenuv+N+Pl+Abe: pennuittáá
+
+  Noun - poovij: # ok, MLO - see also puáhháán-yaml with an odd mixed paradigm; here cons gradation v7:hh
+    poovij+N+Sg+Nom: pooṿij
+    poovij+N+Sg+Gen: puáhˊháá
+    poovij+N+Sg+Acc: puáhˊháá
+    poovij+N+Sg+Ill: puáhˊhái
+    poovij+N+Sg+Loc: puáhˊhást
+    poovij+N+Sg+Com: puáhˊháin
+    poovij+N+Sg+Abe: puáhˊhááttáá
+    poovij+N+Ess: puáˊhánin
+    poovij+N+Par: puáˊhánid
+    poovij+N+Pl+Nom: puáhˊhááh
+    poovij+N+Pl+Gen: puáhˊhái
+    poovij+N+Pl+Acc: puáhˊháid
+    poovij+N+Pl+Ill: puáhˊháid
+    poovij+N+Pl+Loc: puáhˊháin
+    poovij+N+Pl+Com: puáhˊháiguin
+    poovij+N+Pl+Abe: puáhˊháittáá
