@@ -12,59 +12,370 @@
 ! Other licensing options are available upon request, please contact
 ! giellatekno@hum.uit.no or feedback@divvun.no
 
-!! !!Numerals
 
+!! !!!Inari Saami number <-> text
 
 LEXICON num
-+Num: # ;
++Num: numsg ;
+
+LEXICON numsg
++Sg+Nom: # ;
 
 
-LEXICON Numeral !!= * __@CODE@__
+LEXICON Numeral
+HUNDREDSM ;		! 200M
+čyeti HUNDREDM ;	! 100M
+TENSM ;			! 20-99M
+TEENSM ;		! 10-19M
+ONESM ;			! 1-9M
+HUNDREDST ;		! 200000-999999
+HUNDREDST ;		! 200000-999999
+čyeti  HUNDREDT ;	! 100000-100999
+TENST ;			! 20000-99999,10000-10999
+TEENST ;		! 11000-19999
+ONEST ;			! 2000-9999
+tuhháát  THOUSAND ;	! 1000-1999
+UNDERTHOUSAND ;		! 100-999
+TENS ;			! 20-99
+TEENS ;			! 10-19
+ONES ;			! 1-9
 
-okta num ;       !!= @CODE@
+LEXICON HUNDREDSM
+kyehti   CUODIM ;
+kulmâ  CUODIM ;
+nelji  CUODIM ;
+vittâ  CUODIM ;
+kuttâ  CUODIM ;
+čiččâm  CUODIM ;
+käävci  CUODIM ;
+oovce  CUODIM ;
+
+LEXICON CUODIM
+čyeti HUNDREDM ;
+
+LEXICON HUNDREDM
+TENSM ;
+TEENSM ;
+  ONESM ;
+ MILJON ;
+
+LEXICON TEENSM
+  TEENM ;
+
+LEXICON TEENM
+ohtâ  LOHKAIM ;
+kyehti  LOHKAIM ;
+kulmâ  LOHKAIM ;
+nelji  LOHKAIM ;
+vittâ+Use/NG:vittâ  LOHKAIM ;
+kuttâ+Use/NG:kuttâ  LOHKAIM ;
+vitt  LOHKAIM ;
+kutt  LOHKAIM ;
+čiččâm  LOHKAIM ;
+käävci  LOHKAIM ;
+oovce  LOHKAIM ;
+
+LEXICON LOHKAIM
+nubáloh MILJON ;
+
+LEXICON TENSM
+love  MILJON ;
+kyehti  LOGIM ;
+kulmâ  LOGIM ;
+nelji  LOGIM ;
+vittâ  LOGIM ;
+kuttâ  LOGIM ;
+čiččâm  LOGIM ;
+käävci  LOGIM ;
+oovce  LOGIM ;
+
+LEXICON LOGIM
+love  MILJON ;
+love ONESM ;
+
+LEXICON ONESM
+miljon%   OVERTHOUSANDS ;
+kyehti  MILJON ;
+kulmâ  MILJON ;
+nelji  MILJON ;
+vittâ  MILJON ;
+kuttâ  MILJON ;
+čiččâm  MILJON ;
+käävci  MILJON ;
+oovce  MILJON ; 
+
+LEXICON MILJON
+% miljona%  OVERTHOUSANDS ;
+
+! =================
+! Under the million
+! =================
+
+LEXICON OVERTHOUSANDS
+HUNDREDST ;		! x00.000.000
+čyeđe  HUNDREDT ;	! 100.000.000
+  TENST ;		!  20.000.000
+  TEENST ;		!  10.000.000
+  TWOST ;		!   2.000.000
+  SEVENST ;		!   7.000.000
+tuhháát THOUSAND ;	!   1.000.000
+ UNDERTHOUSAND ;	
+  TENS ;
+  TEENS ;
+  ONES ;
+  num ;	!  x000000
 
 
-käävci num "kahdeksan" ;
-kähcilov num "kahdeksankymmentä" ;
-káávcád num "kahdeksas" ;
-kävcinubáloh num ;
-kuávttáá:kuávˊttáá num "kahden" ;
-kyehti:kyehˊti num "kaksi" ;
-kyehtlov:kyehˊtlov num "kaksikymmentä" ;
-kyehti:kyehˊti num "kaksitoista" ;
-nubbe num ;
-kyehtnubáloh:kyehˊtnubáloh num ;
-kuálmád num "kolmas" ;
-kulmâ num "kolme" ;
-kulmâlov num "kolmekymmentä" ;
-kulmânubáloh num "kolmetoista" ;
-kuuđâd num "kuudes" ;
-kutlov num "kuusikymmentä" ;
-kuttâ num ;
-kutnubáloh num ;
-love:lov7e num "kymmenen" ;
-lovvááh num "kymmenet" ;
-lovváád num ;
-nelji num "neljä" ;
-neljilov num "neljäkymmentä" ;
-niäljád num "neljäs" ;
-neljinubáloh num "neljätoista" ;
-čuáđáád:čuáˊđáád num "sadas" ;
-čiččâm num "seitsemän" ;
-čiččâmlov num "seitsemänkymmentä" ;
-čiččâmčyeđe:čiččâmčyeˊđe num "seitsemänsataa" ;
-čiččâmnubáloh num "seitsemäntoista" ;
-čiččâd num "seitsemäs" ;
-nubáloh num "toistakymmentä" ;
-viiđâd num "viides" ;
-vittâ num "viisi" ;
-vitlov num "viisikymmentä" ;
-vitnubáloh num ;
-vittâčyeđe:vittâčyeˊđe num "viisisataa" ;
-vitnubáloh num "viisitoista" ;
-oovce num "yhdeksän" ;
-ohcelov num "yhdeksänkymmentä" ;
-oovcenubáloh num "yhdeksäntoista" ;
-oovcád num "yhdeksäs" ;
-ohtâ num "yksi" ;
-ohtnubáloh num "yksitoista" ;
+LEXICON HUNDREDST
+kyehti   TWOCUODIT ;	! 200000-299999
+kulmâ  TWOCUODIT ;	! 300000-399999
+nelji  TWOCUODIT ;	! 400000-499999
+vittâ  TWOCUODIT ;	! 500000-599999
+kuttâ  TWOCUODIT ;	! 600000-699999
+čiččâm  SEVENCUODIT ;	! 700000-799999
+käävci  SEVENCUODIT ;	! 800000-899999
+oovce  SEVENCUODIT ;	! 900000-999999
+
+LEXICON TWOCUODIT
+čyeđe  HUNDREDT ;	! 100000-199999
+
+LEXICON SEVENCUODIT
+čyeđe HUNDREDT ;
+
+LEXICON HUNDREDT	! X = 1-9, Y = 0-9
+TENST ;			! X2XYYY, X10YYY
+TEENST ;		! X1XYYY
+ohtâ TWOTHOUSANDS ; ! Same tuhháát as 2000
+  ONEST ;		! XX0YYY
+ THOUSANDS ;	! X00YYY
+
+LEXICON TEENST
+  TEENT ;
+
+LEXICON TEENT
+love  THOUSANDS ;
+ohtâ  LOHKAIT ;
+kyehti  LOHKAIT ;
+kulmâ  LOHKAIT ;
+nelji  LOHKAIT ;
+vitt  LOHKAIT ;
+vittâ+Use/NG:vittâ  LOHKAIT ;
+kutt  LOHKAIT ;
+kuttâ+Use/NG:kuttâ  LOHKAIT ;
+čiččâm  LOHKAIT ;
+käävci  LOHKAIT ;
+oovce  LOHKAIT ;
+
+LEXICON LOHKAIT
+nubáloh THOUSANDS ;
+
+LEXICON TENST
+kyehtlov  LOGIT ;
+kulmâlov  LOGIT ;
+kulmlov+Use/NG:kulmlov  LOGIT ;
+neljilov  LOGIT ;
+vittlov  LOGIT ;
+kuttlov  LOGIT ;
+čiččâmlov  LOGIT ;
+kähcilov  LOGIT ;
+ohcelov  LOGIT ;
+
+LEXICON LOGIT
+  THOUSANDS ;
+ohtâ  THOUSANDS ;
+ONEST ;
+
+LEXICON ONEST
+TWOST ;			! 2000-6999
+SEVENST ;               ! 7000-9999
+
+LEXICON THOUSANDS
+tuhháát  THOUSAND ;    ! 1000-1999
+
+LEXICON TWOST
+kyeht  TWOTHOUSANDS ;
+kulmâ  TWOTHOUSANDS ;
+nelji  TWOTHOUSANDS ;
+vittâ  TWOTHOUSANDS ;
+kuttâ  TWOTHOUSANDS ;
+
+LEXICON SEVENST
+čiččâm  SEVENTHOUSANDS ;
+käävci  SEVENTHOUSANDS ;
+oovce  SEVENTHOUSANDS ;
+
+LEXICON TWOTHOUSANDS      ! 2000 - 6999
+tuhháát THOUSAND ;
+
+LEXICON SEVENTHOUSANDS ! 7000 - 9999
+tuhháát THOUSAND ;
+
+
+LEXICON THOUSAND
+UNDERTHOUSAND ;	   ! 1100-1999
+  TENS ;	   ! 1020-1099
+  TEENS ;	   ! 1010-1019
+  ONES ;	   ! 1001-1009
+  num ;	   ! 1000
+
+!===========================
+!Here starts the 999 numbers
+!===========================
+
+LEXICON UNDERTHOUSAND
+SEVENHUNDREDS ;
+TWOHUNDREDS ;
+čyeti  HUNDRED ;
+
+
+LEXICON SEVENHUNDREDS ! 700-900 with +Par
+čiččâm  SEVENCUODI ;
+käävci  SEVENCUODI ;
+ohce  SEVENCUODI ;
+
+LEXICON TWOHUNDREDS ! 200-699 with +Acc
+kyehti  CUODI ;
+kyeht+Use/NG:kyeht  CUODI ;
+kulmâ  CUODI ;
+kulm+Use/NG:kulm  CUODI ;
+nelji  CUODI ;
+vittâ  CUODI ;
+vitt+Use/NG:vitt  CUODI ;
+vit+Use/NG:vit  CUODI ;
+kuttâ  CUODI ;
+kutt+Use/NG:kutt  CUODI ;
+kut+Use/NG:kut  CUODI ;
+
+LEXICON SEVENCUODI ! 700-900 with +Par
+čyeđe HUNDRED ;
+čyet HUNDRED ;
+
+LEXICON CUODI ! 200-699 with +Acc
+čyeđe HUNDRED ;
+čyet HUNDRED ;
+
+LEXICON HUNDRED
+TENS ;
+TEENS ;
+  ONES ;
+ num ;
+
+LEXICON TEENS
+  TEEN ;
+
+LEXICON TEEN
+oht  LOHKAI ;
+kyeht  LOHKAI ;
+kulmâ  LOHKAI ;
+kulm+Use/NG:kulm LOHKAI ;
+nelji  LOHKAI ;
+vitt  LOHKAI ;
+vit+Use/NG:vit LOHKAI ;
+kutt  LOHKAI ;
+kut+Use/NG:kut LOHKAI ;
+čiččâm  LOHKAI ;
+käävci  LOHKAI ;
+oovce  LOHKAI ;
+
+LEXICON LOHKAI
+nubáloh num ;
+ LOGAAT ;
+
+LEXICON LOGAAT
+nubálovváád  num ; 
+
+LEXICON TENS
+love  num ;
+lovváád   num ; 
+kyeht  LOGI ;
+kulm+Use/NG:kulm  LOGI ;
+kulmâ  LOGI ;
+nelji  LOGI ;
+vit+Use/NG:vit  LOGI ;
+vitt  LOGI ;
+kut+Use/NG:kut  LOGI ;
+kutt  LOGI ;
+čiččâm  LOGI ;
+kähci  LOGI ;
+ohce  LOGI ;
+
+LEXICON LOGI
+lov  num ;
+lov ONES ;
+
+LEXICON ONES
+CARDINAL ;
+ORDINAL ;
+
+LEXICON CARDINAL
+ohtâ  num ;
+kyehti  num ;
+kulmâ  num ;
+nelji  num ;
+vittâ  num ;
+kuttâ  num ;
+čiččâm  num ;
+käävci  num ;
+oovce  num ;
+
+
+LEXICON ORDINAL		   
+vuossâmuš      num ;   
+nubbe  num ;		   
+kuálmád   num ;	   
+niäljád num ;	   
+viiđâd   num ;		   
+kuuđâd   num ;		   
+čiččâd    num ;	   
+káávcád   num ;	   
+oovcád    num ;	   
+
+
+!From the original numeral file
+!käävci num "kahdeksan" ;
+!kähcilov num "kahdeksankymmentä" ;
+!káávcád num "kahdeksas" ;
+!kävcinubáloh num ;
+!kuávttáá:kuávˊttáá num "kahden" ;
+!kyehti:kyehˊti num "kaksi" ;
+!kyehtlov:kyehˊtlov num "kaksikymmentä" ;
+!kyehti:kyehˊti num "kaksitoista" ;
+!nubbe num ;
+!kyehtnubáloh:kyehˊtnubáloh num ;
+!kuálmád num "kolmas" ;
+!kulmâ num "kolme" ;
+!kulmâlov num "kolmekymmentä" ;
+!kulmânubáloh num "kolmetoista" ;
+!kuuđâd num "kuudes" ;
+!kutlov num "kuusikymmentä" ;
+!kuttâ num ;
+!kutnubáloh num ;
+!love:lov7e num "kymmenen" ;
+!lovvááh num "kymmenet" ;
+!lovváád num ;
+!nelji num "neljä" ;
+!neljilov num "neljäkymmentä" ;
+!niäljád num "neljäs" ;
+!neljinubáloh num "neljätoista" ;
+!čuáđáád:čuáˊđáád num "sadas" ;
+!čiččâm num "seitsemän" ;
+!čiččâmlov num "seitsemänkymmentä" ;
+!čiččâmčyeđe:čiččâmčyeˊđe num "seitsemänsataa" ;
+!čiččâmnubáloh num "seitsemäntoista" ;
+!čiččâd num "seitsemäs" ;
+!nubáloh num "toistakymmentä" ;
+!viiđâd num "viides" ;
+!vittâ num "viisi" ;
+!vitlov num "viisikymmentä" ;
+!vitnubáloh num ;
+!vittâčyeđe:vittâčyeˊđe num "viisisataa" ;
+!vitnubáloh num "viisitoista" ;
+!oovce num "yhdeksän" ;
+!ohcelov num "yhdeksänkymmentä" ;
+!oovcenubáloh num "yhdeksäntoista" ;
+!oovcád num "yhdeksäs" ;
+!ohtâ num "yksi" ;
+!ohtnubáloh num "yksitoista" ;
+
+
+
