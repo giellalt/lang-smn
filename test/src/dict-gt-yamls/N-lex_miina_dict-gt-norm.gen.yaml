@@ -1,0 +1,28 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-dict-gt-norm.hfst
+    Morph: ../../../src/analyser-dict-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-dict-gt-norm.xfst
+    Morph: ../../../src/analyser-dict-gt-norm.xfst
+    App: lookup
+
+Tests:
+
+  Noun - miina: # ok 1B v-g, VVCC > VC, C > C1
+    miina+N+Sg+Nom: miina
+    miina+N+Sg+Gen: miina
+    miina+N+Sg+Acc: miina
+    miina+N+Sg+Ill: miinan
+    miina+N+Sg+Loc: miinast
+    miina+N+Sg+Com: miináin
+    miina+N+Sg+Abe: miinattáá
+    miina+N+Ess: miinan
+    miina+N+Par: miinad
+    miina+N+Pl+Nom: miinah
+    miina+N+Pl+Gen: miinaij
+    miina+N+Pl+Acc: miinaijd
+    miina+N+Pl+Ill: miináid
+    miina+N+Pl+Loc: miináijn
+    miina+N+Pl+Com: miinaijguin
+    miina+N+Pl+Abe: miinaijttáá
