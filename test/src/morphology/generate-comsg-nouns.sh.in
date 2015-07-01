@@ -1,6 +1,6 @@
 
 # Pick lemmas
-egrep -v '^\!' ../../../src/morphology/stems/nouns.lexc | grep ¢ |cut -d ' ' -f1,2 |  tr '+:' ' ' | cut -d ' ' -f1 | sed 's/$/+N+Sg+Com/' | $LOOKUP $GTHOME/langs/smn/src/generator-dict-gt-norm.xfst | sort -u > generatedSgComforms
+egrep -v '^\!' ../../../src/morphology/stems/nouns.lexc | grep ¢ |cut -d ' ' -f1,2 |  tr '+:' ' ' | cut -d ' ' -f1 | sed 's/$/+N+Sg+Com/' | $LOOKUP $GTHOME/langs/smn/src/generator-dict-gt-norm.xfst |cut -f2 | sort -u > generatedSgComforms
 
 # Pick SgCom forms
 egrep -v '^\!' ../../../src/morphology/stems/nouns.lexc |grep ¢ |cut -d '¢' -f2 | tr ',' ' '| cut -d ' ' -f1 | sort -u  > listedSgComforms
