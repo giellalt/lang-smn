@@ -178,6 +178,7 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 +OLang/SME  		  !!= * @CODE@
 +OLang/SWE  		  !!= * @CODE@
 +OLang/UND  		  !!= * @CODE@
++CmpNP/None
 
 !! !!Flag diacritics
 !! We have manually optimised the structure of our lexicon using following
@@ -216,6 +217,7 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 LEXICON Root   !!= @CODE@
  @U.Cap.Obl@ ProperNoun          ;
  @U.Cap.Opt@ ProperNoun          ;
+ ProperNoun-smi-nocomp ;
  NounRoot ;
  AdjectiveRoot ;
  VerbRoot ;
@@ -230,6 +232,12 @@ LEXICON Root   !!= @CODE@
 ! Acronym ;
  Punctuation ;
  Abbreviation ;
+
+LEXICON ProperNoun   !!= * __@CODE@__ 
+                  ProperNoun-smn ; 
+ @U.CmpHyph.TRUE@ ProperNoun-smi-nocomp ; ! Lexicon for short names - always require hyphen
+                  ProperNoun-smi ;
+                  ProperNoun-smi-nocomp ;
 
 
 
