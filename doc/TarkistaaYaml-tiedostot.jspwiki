@@ -5,47 +5,51 @@ Yaml-tiedostot ovat kolmessa hakemistossa:
 * test/src/gt-norm-yamls (viralliselle ortografialle)
 * test/src/gt-desc-yamls (deskriptiiviselle analyysiohjelmalle, ei vielä käytössä)
 
-Tiedostot tehdään näin:
+Tässä vaiheessa käytetään ainoastaan dict-gt-yamls.
 
-# Ensin rakennetaan / tarkistetaan ne dict-gt-yamls-hakemistossa
-# Sitten tehdään kopio, poistetaan pistemerkinnän ja apostrofit, ja 
-  tallennetaan lopputulos gt-desc-yamls-hakemistoon
-  
-Dublettien poisto (ks. alh.) pitää myös miellummin tapahtua ensin 
-dict-gt-yamls-hakemistossa, ja sen jälkeen kopioidaan ne 
-gt-norm-yamls-hakemistoon.
 
 
 !!!Tehtäviä
 
-!!Tarkistaminen
+!!Yaml-tiedostojen laatiminen
+
+Jokaiselle jatkoleksikolle pitää olla oma yaml-tiedosto
+
+!!Sisällön tarkistaminen
 
 On erittäin tärkeä, että yaml-tiedostoihin voi luottaa. Ne pitää siis tarkistaa.
 Jokaisen hakemiston svn-lokissa käy ilmi, missä tilassa tiedosto on.
 
-On mahdollista tarkistaa, että tiedostot ovat samanlaisia hakemistoissa
-{{dict-gt-yamls}} ja {{gt-norm-yamls}}. Jos eivät ole, niin jotain  on pielessä.
+Tehokas tapa tarkistaa on ajaa "make check" ja katsoa FAIL-rivit. Monesti fst 
+on oikeassa, ja yaml väärässä.
+
+!!Kuuluvatko paradigmat kyseiseen yaml-tiedostoon?
+
+Jokaiselle jatkoleksikolle pitää olla oma yaml-tiedosto. Kyseessä yaml-tiedostossa
+pitää vastaavasti olla vain oman jatkoleksikon sanoja. Työn aikana siirretään sanat
+leksikosta toiseen, eli on tärkeä pitää yaml-tiedostot ajan tasalla. Se tehdään näin
+(tässä esimerkkinä jatkoleksikko KISSA):
+
+{{{
+cat N-lex_kissa_dict-gt-norm.gen.yaml|grep Ess|cut -d"+" -f1|tr -d ' '|sed 's/^/^/'|sed 's/$/:/' > lista
+grep -f lista ../../../src/morphology/stems/nouns.lexc|grep -v KISSA
+}}}
+
+Ensimmäinen komento poimii kaikki perusmuodot, laittaa symboolit ^ ja : eteen ja taakse, ja
+tallentaa listan tiedostoon "lista". Toinen komento poimii saman listan avulla kaikki
+jatkoleksikot stems-tiedostosta. Tässä katsotaan grep -v -kommennon avulla, onko sanoja, 
+jotka eivät kuulu tiedostoon.
+
+
+
 
 !!Dublettien poisto
 
-Paradigmat on nyt saatu kolmen tien kautta
-
-# Jokaisella sanalla on oma tiedosto, esim: N-sajos_gt-norm.yaml
-# Sanat on ryhmitelty vartalotyypin mukaan, esim parilliset e-tavut: N-even-e_gt-norm.yaml
-# Sanat on otettu taulukoista, esim: N-subst-2tav-reduced-e_gt-norm.yaml
-
-Emme halua samaa paradigmaa monta kertaa. Haluamme miellummin paradigat tyypittäin kuin
-yksitellen. Tehtävänä on siis:
-
-* poista yksittäisten sanojen tiedostot, jos niiden paradigmat löytyvät jo ryhmätiedostoista
-* ryhmitellä jäljellä olevat yksittäiset sanatiedostot
-
-Dublettien määrä saa esille esim. tarkistamalla, onko identtisiä yksikön nominatiivimuotoja
-hakemistossa:
+Ei haluta samasta sanasta kahta paradigmaa. Dubletit löytyvät esim näillä komennolla:
 
 {{{
 cat test/src/dict-gt-yamls/*l|grep '+Sg+Nom'|sort|uniq -d
-cat test/src/gt-norm-yamls/*l|grep '+Sg+Nom'|sort|uniq -d
+cat test/src/dict-gt-yamls/*l|grep '+Ess'|sort|uniq -d
 }}} 
 
 Näiten komentojan vastaus pitää olla nolla ("ei dubletteja"). Dublettien pitää etsiä,
@@ -53,11 +57,8 @@ ja sitten vertailla.
 
 * jos ne eivät ole identtisiä, niin tarkistetaan kumpi on oikein, korjaa, ja säilyttää 
   oikean
-* jos ne ovat identtisia, niin poistetaan se paradigma, joka on yksittäisessä 
-  tiedostossa tai väärässä tiedostossa)
+* jos ne ovat identtisia, niin poistetaan se paradigma, joka on väärässä tiedostossa)
   
-Sanotaan, että komennosta kävi ilmi, että immeel-sana löytyi kahdesti gt-norm-yamls-hakemistosta.
-Sitten voi kirjoittaa
 
 {{{
 grep immeel test/src/gt-norm-yamls/*
