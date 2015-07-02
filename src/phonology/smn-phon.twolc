@@ -526,8 +526,13 @@ j7:j <=>  Vow: _ %^RC: :Vow %^SV: %^WG:  %^CLEN: %^SLEN: %> ; !Loc
          
 "Lengthening root consonant j7:ij 1"
 !! * __@RULENAME@__ \\  for saje:saijeen
-j7:i <=> Vow: _ %^RC: :Vow       %^CLEN:         %> ; !Par Ess
+j7:i <=> Vow: _ %^RC: :Vow (%^RVSH:)  %^CLEN:         %> ; !Par Ess
          Vow: _ %^RC: :Vow %^SV: %^CLEN: %^SLEN: %> ; !Par Ess
+
+"Lengthening root consonant j7:ij part 2"
+!! * __@RULENAME@__ \\  
+%^RC:j <=> Vow: j7:i _ :Vow %^RVSH: %^CLEN:         %> ; !Par Ess
+
 
 !€ sa^RVj7^RCe^SV^CLEN^SLEN>n
 !€ sa0ijee00>n
@@ -736,6 +741,12 @@ Vy:0 <=> Vx: _  Cns: [ Cns: - %^RC:0 ] Vow:  %^WG: (%^CLEN:) %^SVLOW: %> i:  ; !
        where Vx in ( a e i o u á ä ) 
              Vy in ( a e i o u á ä ) 
        matched ;
+
+
+"Vowel shortening eej to eij"
+!! * __@RULENAME@__ \\  leeji : leijijn  
+e:0  <=> e _  j7: %^RC: Vow:  %^RVSH: %^CLEN:  %>  ; !!  
+
 
 !€ mááh^RCu^WG^CLEN^SVLOW>in
 !€ má0vvo000>in
@@ -952,7 +963,7 @@ e:ä <=> [i | e: ]  _ (%^RD:) Cns: (ˊ:) Cns:* Vow: (%^RLEN:)  (%^CSH:) %^EA: %>
 "ye to uá og uo, part 1" 
 !! * __@RULENAME@__ \\  Part 1 of ye to uá for kyeli : kuálán 
 y:u <=> _ e: %^RD:  Cns:+ Vow: (%^RLEN:) (%^CSH:) %^EA: %> ;
-        _ :o %^RD:  Cns:+ i: %^WG: ([%^RVSH: |%^RLEN:] ) %> i: ;
+        _ :o %^RD:  Cns:+ i: (%^WG:) ([%^RVSH: |%^RLEN:] ) (%^CLEN:) %> i: ; !sye%^RDj7%^RCi%^RVSH%^CLEN%>in
         _ :o %^RD:  Cns:+ i: %^WG: %^CLEN: %^SVLOW: %> i: ;
         _ :o %^RD:  Cns: 0:ˊ  Cns: i:  %^WG: %^RVSH: %^CLEN: %> i: ;
 
@@ -962,7 +973,7 @@ e:á <=> y: _ %^RD:  Cns:+ Vow: (%^RLEN:) (%^CSH:) %^EA: %> ;
 
 "ye to uo, part 2 "
 !! * __@RULENAME@__ \\  Part 2 of ye to uá for kyeli : kuolijn
-e:o <=> y: _ %^RD:  Cns:+ i: %^WG: ([%^RVSH: |%^RLEN:]) %> i: ;
+e:o <=> y: _ %^RD:  Cns:+ i: (%^WG:) ([%^RVSH: |%^RLEN:] ) (%^CLEN:) %> i: ;
         y:  _ %^RD:  Cns:+ i: %^WG: %^CLEN: %^SVLOW: %> i: ;
         y: _  %^RD:  Cns: 0:ˊ Cns: i:  %^WG: %^RVSH: %^CLEN: %> i: ;
 
