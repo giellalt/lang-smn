@@ -131,6 +131,7 @@ Sets
        %^RC %^SC  ˊ ;                         !!=  @CODE@ 
  Geminate = b d g p h t k c f z l m n ŋ r s š v  ;  !!= * @CODE@  
  Seg = Vow Cns ;							   !!= * @CODE@ 
+ NotSuffixBorder = Vow Cns %^WG %^CLEN %^RLEN %^RVSH ; !!= * @CODE@ 
  StemCns = b b3 d d3 g g2 g3 h h2 h3 		   !!= * @CODE@ 
            j l m m2 m3 m8 n n8 n2 ŋ r s  ;     !!= @CODE@ 
 
@@ -1086,7 +1087,7 @@ u:0 <=> _ â %^UU: ([%^RVSH:|%^RLEN:]) %>  ;
 
 "Suffix vowel lengthening"
 !! * __@RULENAME@__ \\ long á in kissáást
-%^SV:Vx <=> Vx:  _ :* %^SLEN: (%^SVLOW: ) %> ;
+%^SV:Vx <=> Vx:  _  NotSuffixBorder:+ %^SLEN: (%^SVLOW: ) %> ;
         where Vx in ( á o u e a i ) ; ! pending... já%^RVm%^RCá%^SVlgm%^RLEN%^CLEN%^SLEN%>
 
 
