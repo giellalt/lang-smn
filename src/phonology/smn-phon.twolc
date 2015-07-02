@@ -1089,7 +1089,12 @@ u:0 <=> _ â %^UU: ([%^RVSH:|%^RLEN:]) %>  ;
 "Suffix vowel lengthening"
 !! * __@RULENAME@__ \\ long á in kissáást
 %^SV:Vx <=> Vx:  _  NotSuffixBorder:* %^SLEN:  %> ;
-        where Vx in ( á o u e a i ) ; ! pending... já%^RVm%^RCá%^SVlgm%^RLEN%^CLEN%^SLEN%>
+        where Vx in ( á o u e a i ) ; !  já%^RVm%^RCá%^SVlgm%^RLEN%^CLEN%^SLEN%>
+
+"Suffix vowel lengthening when SVLOW"
+!! * __@RULENAME@__ \\ preventing conflict with u %^SV:o
+%^SV:Vx <=> Vx:  _  NotSuffixBorder:* %^SLEN: %^SVLOW:  %> ;
+        where Vx in ( á o e a i ) ; ! 
 
 
 "Suffix vowel lengthening SV:e"
