@@ -108,5 +108,45 @@ TODO:
 
 !! punctuation.lexc - should be ok
 
+!!!Dependencies
+
+!!POS internal dependencies
+
+For all fst work the following dependencies hold
+(for words without morphology several steps may be skipped):
+
+# Linguistic ground work
+# Yaml files and other test setup
+# Plan of attack
+# lexc and twolc work for the words in the yamlfiles
+# yaml testing and refinement until yamlfiles are 100%
+# go through lexicon file for all members of the contlex
+
+!!Dependencies between POS within the fst
+
+* N before A
+* N before Prop
+* N, V, A before derivation
+* N before Px
+
+Otherwise there are no dependencies between the POS.
+
+!!Dependencies between fst and dict and mt
+
+# fst good enough to generate a substantial part of N, V, A paradigms
+# an useful Neahttadigisánit with click-in-text
+# fst with all POS done (but errors and holes here and there)
+# good NDS with paradigm generation
+
+!!Dependencies between fst and mt
+
+
+# fst good enough to generate a substantial part of N, V, A paradigms
+# alpha version of MT
+# fst with all POS done (but errors and holes here and there)
+# start working on MT transfer rules
+
+Bidix and fst are not dependent upon each other, but it is easier to 
+collect data to bidix with a good fst for text analysis.
 
 
