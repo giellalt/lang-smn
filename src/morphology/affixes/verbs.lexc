@@ -22,48 +22,17 @@
 !! !!Even-syllable stems
 !    -------------------
 
+
 LEXICON 2SYLL  !!= * __@CODE@__
-+V: VINFINITES ;
++V:  VINFINITES ;
 +V+Ind: EVEN_IND ;
 +V+Pot: EVEN_POT ;
 +V+Cond:%^WGčč EVEN_COND ;
 
 
-LEXICON 2SYLL_V_ÂD  !!= * __@CODE@__
-+V:â  VINFINITES ;
-+V+Ind: EVEN_IND ;
-+V+Pot:â EVEN_POT ;
-+V+Cond:â%^WGčč EVEN_COND ;
-! 
 
-LEXICON 2SYLL_V_ED  !!= * __@CODE@__
-+V:e  VINFINITES ;
-+V+Ind:e EVEN_IND ;
-+V+Pot:e EVEN_POT ;
-+V+Cond:e%^WGčč EVEN_COND ;
-
-LEXICON 2SYLL_V_ID  !!= * __@CODE@__
-+V:i  VINFINITES ;
-+V+Ind:i EVEN_IND ;
-+V+Pot:i EVEN_POT ;
-+V+Cond:i%^WGčč EVEN_COND ;
-
-LEXICON 2SYLL_V_OD  !!= * __@CODE@__
-+V:o  VINFINITES ;
-+V+Ind:o EVEN_IND ;
-+V+Pot:o EVEN_POT ;
-+V+Cond:o%^WGčč EVEN_COND ;
-
-
-
-
-! Here I have two versions for -uđ. That is
-! one too much. These are to be merged.
-LEXICON 2SYLL_V_UD  !!= * __@CODE@__
-+V:u  VINFINITES ;
-+V+Ind: EVEN_IND ;
-+V+Pot:u EVEN_POT ;
-+V+Cond:u%^WGčč EVEN_COND ;
+! Here I have another version for -uđ. 
+! It must be merged with 2SYLL
 
 LEXICON AIGUD
 +V:u  VINFINITES ;
@@ -158,7 +127,7 @@ LEXICON IALLAATTID  !!= * __@CODE@__ SM52, long V in Inf
 ! ----------------
 
 LEXICON ODDVLEX  !!= * __@CODE@__
-:%>i         VINFINITES		   ;
+V_ODD_INFINITES		   ;
 ODDVLEX_fin ;
 
 LEXICON ODDVLEX_fin
@@ -177,11 +146,11 @@ LEXICON ODDVLEX_fin
 +Ind+Prt+Sg3:%>ij    K ;
 
 +Ind+Prt+Du1:%>áim K ;
-+Ind+Prt+Du1:%>ááim K ;
+!+Ind+Prt+Du1:%>ááim K ;
 +Ind+Prt+Du2:%>áid K ;
-+Ind+Prt+Du2:%>ááid K ;
+!+Ind+Prt+Du2:%>ááid K ; ! only á ?
 +Ind+Prt+Du3:%>áin  K ;
-+Ind+Prt+Du3:%>ááin  K ;
+!+Ind+Prt+Du3:%>ááin  K ;
 
 +Ind+Prt+Pl1:%>ijm K ;
 +Ind+Prt+Pl2:%>ijd K ;
@@ -212,18 +181,79 @@ LEXICON ODDVLEX_fin
 +Pot+Pl2:%>išvetted K ;
 +Pot+Pl3:%>ižeh K ;
 
++Imprt+Sg1:%>um # ;
++Imprt+Sg2:%> # ;
++Imprt+Sg3:%>us # ;
++Imprt+Du1:%>oon # ;
++Imprt+Du2:%>ee # ;
++Imprt+Du3:%>us # ;
++Imprt+Pl1:%>op # ;
++Imprt+Pl2:%>iđ # ;
++Imprt+Pl3:%>us # ;
 
-!+Ind+Prt:%>i ODD-II ;
++Ind+Prs+ConNeg: K ;
++Ind+Prt+ConNeg: K ;
++Cond+ConNeg%>ižžii K ;
++Pot+ConNeg%>iččoo K ;
 
-!:%>ijj       VPRSPRC	   ;
-!:%>â         VPRFPRCACT	   ;
-!:%>u         VPRFPRCPASS   ;
-!:            VNEGPRSINDIMP ;
-!:%>i         VNEGCOND	   ;
-!:%>i         VNEGPOT	   ;
-!             VABE		   ;
-!             VGER		   ;
-!             VACTIO		   ;
+! kuldâl  kuldâliđ
+! tuubdâst  tu’bdâstiđ￼
+! mieđeet  mie’đettiđ￼
+! máttát  máttááttiđ
+
+
+LEXICON V_ODD_INFINITES !!= * __@CODE@__
+VINF ;
+VPRSPRC ;
+VPRFPRCACT ;
+VPRFPRCPASS ;
+VNEGPRSINDIMP ;
+VNEGCOND ;
+VNEGPOT ;
+VABE ;
+VGER ;
+VACTIO ;
+
+LEXICON V_ODD_INF !!= * __@CODE@__
++Inf:%>iđ K ;
+
+LEXICON V_ODD_PRSPRC !!= * __@CODE@__
++PrsPrc:%>ee K ;
+
+LEXICON V_ODD_PRFPRCACT !!= * __@CODE@__
++PrfPrc:%>âm K ;
+
+LEXICON V_ODD_PRFPRCPASS !!= * __@CODE@__
++PrfPrc+Pass:m K ;
+
+LEXICON V_ODD_NEGPRSINDIMP !!= * __@CODE@__
++Ind+Prs+ConNeg: K ;
++Imp+Prs+ConNeg: K ;
+
+LEXICON V_ODD_NEGCOND !!= * __@CODE@__
++Cond+ConNeg:ččii K ;
+
+LEXICON V_ODD_NEGPOT !!= * __@CODE@__
++Pot+ConNeg:žžii K ;
+
+LEXICON V_ODD_ABE !!= * __@CODE@__
++VAbess:%>hánnáá K ;
++VAbess:%>hinnáá K ;
++VAbess:%>hennáá K ;
+
+LEXICON V_ODD_GER !!= * __@CODE@__
++Ger:%>dijn K ;
++Ger+PxSg1:%>dijnán K ;
++Ger+PxSg1:%>dijnân K ;
++Ger+PxSg2:%>dijnád K ;
++Ger+PxSg2:%>dijnâd K ;
++Ger+PxSg3:%>dijnes K ;
+
+LEXICON V_ODD_ACTIO !!= * __@CODE@__
++Actio:%>m K ;
++Actio+Ill:%>mân K ;
++Actio+Ess:%>min K ;
++Actio+Loc:%>mist K ;
 
 
 
@@ -318,14 +348,14 @@ LEXICON VPRFPRCPASS !!= * __@CODE@__
 +PrfPrc+Pass:m K ;
 
 LEXICON VNEGPRSINDIMP !!= * __@CODE@__
-+ConNeg+Ind+Prs: K ;
-+ConNeg+Imp+Prs: K ;
++Ind+Prs+ConNeg: K ;
++Imp+Prs+ConNeg: K ;
 
 LEXICON VNEGCOND !!= * __@CODE@__
-+ConNeg+Cond:ččii K ;
++Cond+ConNeg:ččii K ;
 
 LEXICON VNEGPOT !!= * __@CODE@__
-+ConNeg+Pot:žžii K ;
++Pot+ConNeg:žžii K ;
 
 LEXICON VABE !!= * __@CODE@__
 +VAbess:%>hánnáá K ;
@@ -342,8 +372,9 @@ LEXICON VGER !!= * __@CODE@__
 
 LEXICON VACTIO !!= * __@CODE@__
 +Actio:%>m K ;
-+Actio+Ess:%>min K ;
++Actio+Ill:%>mân K ;
 +Actio+Loc:%>mist K ;
++Actio+Ess:%>min K ;
 
 
 !! !!Suffix series I
