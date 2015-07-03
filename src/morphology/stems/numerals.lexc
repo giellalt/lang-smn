@@ -15,6 +15,7 @@
 
 !! !!!Inari Saami number <-> text
 
+
 LEXICON num
 +Num: numsg ;
 
@@ -39,6 +40,12 @@ UNDERTHOUSAND ;		! 100-999
 TENS ;			! 20-99
 TEENS ;			! 10-19
 ONES ;			! 1-9
+ARABIC          ; ! for the arabic numerals !
+ROMAN           ; ! for the roman numerals  !
+NUM-PREFIXES    ; ! for §34 etc.            !
+ISOLATED-NUMEXP ; ! for ½ etc.                      !
+
+
 
 LEXICON HUNDREDSM
 kyehti   CUODIM ;
@@ -382,28 +389,28 @@ oovcád    num ;
 
 
 LEXICON NUM-PREFIXES 
- §+Use/Circ:§       ARABIC ; ! §24
- §§+Use/Circ:§§     ARABIC ; ! §§24
- §% +Use/Circ:§%    ARABIC ; ! § 24
- §§% +Use/Circ:§§%  ARABIC ; ! §§ 24
- %-+Use/Circ:%- ARABIC ; ! -24
- %‒+Use/Circ:%‒ ARABIC ; ! -24 U+2012
- %–+Use/Circ:%– ARABIC ; ! -24 U+2013
- %—+Use/Circ:%— ARABIC ; ! -24 U+2014
- %―+Use/Circ:%― ARABIC ; ! -24 U+2015
- %++Use/Circ:%+ ARABIC ; ! <plus>24
- %-% +Use/Circ:%-%  ARABIC ; ! - 24
- %‒% +Use/Circ:%‒%  ARABIC ; ! - 24 U+2012
- %–% +Use/Circ:%–%  ARABIC ; ! - 24 U+2013
- %—% +Use/Circ:%—%  ARABIC ; ! - 24 U+2014
- %―% +Use/Circ:%―%  ARABIC ; ! - 24 U+2015
- %+% +Use/Circ:%+%  ARABIC ; ! <plus> 24
- %*+Use/Circ:%* ARABIC ; ! *24
- %$+Use/Circ:%$ ARABIC ; ! $24
- %€+Use/Circ:%€ ARABIC ; ! €24
- %<+Use/Circ:%[%<%] ARABIC ; ! <24
- %>+Use/Circ:%[%>%] ARABIC ; ! >24
- s%.+Use/Circ:s%. ARABIC ; ! s.24
+ §:§       ARABIC ; ! §24
+ §§:§§     ARABIC ; ! §§24
+ §% :§%    ARABIC ; ! § 24
+ §§% :§§%  ARABIC ; ! §§ 24
+ %-:%- ARABIC ; ! -24
+ %‒:%‒ ARABIC ; ! -24 U+2012
+ %–:%– ARABIC ; ! -24 U+2013
+ %—:%— ARABIC ; ! -24 U+2014
+ %―:%― ARABIC ; ! -24 U+2015
+ %+:%+ ARABIC ; ! <plus>24
+ %-% :%-%  ARABIC ; ! - 24
+ %‒% :%‒%  ARABIC ; ! - 24 U+2012
+ %–% :%–%  ARABIC ; ! - 24 U+2013
+ %—% :%—%  ARABIC ; ! - 24 U+2014
+ %―% :%―%  ARABIC ; ! - 24 U+2015
+ %+% :%+%  ARABIC ; ! <plus> 24
+ %*:%* ARABIC ; ! *24
+ %$:%$ ARABIC ; ! $24
+ %€:%€ ARABIC ; ! €24
+ %<:%[%<%] ARABIC ; ! <24
+ %>:%[%>%] ARABIC ; ! >24
+ s%.:s%. ARABIC ; ! s.24
 	
 
 
@@ -440,37 +447,37 @@ LEXICON ARABIC
 %0 ARABICLOOPCOLL ;
 
 LEXICON ARABICLOOP
- +Use/Circ: ARABIC ;					!
- %-+Use/Circ:%- ARABIC;	      ! 1-2    multipart numbers	!
- %–+Use/Circ:%– ARABIC;	      ! 1–2    multipart numbers	!
- %—+Use/Circ:%— ARABIC;	      ! 1—2    multipart numbers	!
- %.%-+Use/Circ:%.%- ARABIC;	      ! 1.-2   multipart numbers	!
- %.%–+Use/Circ:%.%– ARABIC;	      ! 1.–2   multipart numbers	!
- %.%—+Use/Circ:%.%— ARABIC;	      ! 1.—2   multipart numbers	!
- %-% +Use/Circ:%-%  ARABIC;	      ! 1- 2   multipart numbers	!
- %–% +Use/Circ:%–%  ARABIC;	      ! 1– 2   multipart numbers	!
- %—% +Use/Circ:%—%  ARABIC;	      ! 1— 2   multipart numbers	!
- % %-+Use/Circ:% %- ARABIC;	      ! 1 -2   multipart numbers	!
- % %–+Use/Circ:% %– ARABIC;	      ! 1 –2   multipart numbers	!
- % %—+Use/Circ:% %— ARABIC;	      ! 1 —2   multipart numbers	!
- % %-% +Use/Circ:% %-%  ARABIC;	      ! 1 - 2  multipart numbers	!
- % %–% +Use/Circ:% %–%  ARABIC;	      ! 1 – 2  multipart numbers	!
- % %—% +Use/Circ:% %—%  ARABIC;	      ! 1 — 2  multipart numbers	!
- % %-%-% +Use/Circ:% %-%-%  ARABIC;	      ! 1 -- 2 multipart numbers	!
- % %–%–% +Use/Circ:% %–%–%  ARABIC;	      ! 1 –– 2 multipart numbers	!
- % %—%—% +Use/Circ:% %—%—%  ARABIC;	      ! 1 —— 2 multipart numbers	!
- % %-+Use/Circ:% %- ARABICDELIMITER;   ! 1 -   multipart numbers		!
- % %–+Use/Circ:% %– ARABICDELIMITER;   ! 1 –   multipart numbers		!
- % %—+Use/Circ:% %— ARABICDELIMITER;   ! 1 —   multipart numbers		!
- % %-%-+Use/Circ:% %-%- ARABICDELIMITER;   ! 1 --  multipart numbers		!
- % %–%–+Use/Circ:% %–%– ARABICDELIMITER;   ! 1 ––  multipart numbers		!
- % %—%—+Use/Circ:% %—%— ARABICDELIMITER;   ! 1 ——  multipart numbers		!
- %.+Use/Circ:%. ARABIC;							!
- %,+Use/Circ:%, ARABIC;							!
- %+Use/Circ: ARABIC ;							!
- % +Use/Circ:%  ARABIC;	   ! Allowing for "23 500". !			
- +Use/Circ: ARABIC ;	   ! Allowing for "23 500" w/nbsp (initial char is alt-space)	!
- %/+Use/Circ:%/ ARABIC;	   ! 24/12			!		
+ : ARABIC ;					!
+ %-:%- ARABIC;	      ! 1-2    multipart numbers	!
+ %–:%– ARABIC;	      ! 1–2    multipart numbers	!
+ %—:%— ARABIC;	      ! 1—2    multipart numbers	!
+ %.%-:%.%- ARABIC;	      ! 1.-2   multipart numbers	!
+ %.%–:%.%– ARABIC;	      ! 1.–2   multipart numbers	!
+ %.%—:%.%— ARABIC;	      ! 1.—2   multipart numbers	!
+ %-% :%-%  ARABIC;	      ! 1- 2   multipart numbers	!
+ %–% :%–%  ARABIC;	      ! 1– 2   multipart numbers	!
+ %—% :%—%  ARABIC;	      ! 1— 2   multipart numbers	!
+ % %-:% %- ARABIC;	      ! 1 -2   multipart numbers	!
+ % %–:% %– ARABIC;	      ! 1 –2   multipart numbers	!
+ % %—:% %— ARABIC;	      ! 1 —2   multipart numbers	!
+ % %-% :% %-%  ARABIC;	      ! 1 - 2  multipart numbers	!
+ % %–% :% %–%  ARABIC;	      ! 1 – 2  multipart numbers	!
+ % %—% :% %—%  ARABIC;	      ! 1 — 2  multipart numbers	!
+ % %-%-% :% %-%-%  ARABIC;	      ! 1 -- 2 multipart numbers	!
+ % %–%–% :% %–%–%  ARABIC;	      ! 1 –– 2 multipart numbers	!
+ % %—%—% :% %—%—%  ARABIC;	      ! 1 —— 2 multipart numbers	!
+ % %-:% %- ARABICDELIMITER;   ! 1 -   multipart numbers		!
+ % %–:% %– ARABICDELIMITER;   ! 1 –   multipart numbers		!
+ % %—:% %— ARABICDELIMITER;   ! 1 —   multipart numbers		!
+ % %-%-:% %-%- ARABICDELIMITER;   ! 1 --  multipart numbers		!
+ % %–%–:% %–%– ARABICDELIMITER;   ! 1 ––  multipart numbers		!
+ % %—%—:% %—%— ARABICDELIMITER;   ! 1 ——  multipart numbers		!
+ %.:%. ARABIC;							!
+ %,:%, ARABIC;							!
+ %: ARABIC ;							!
+ % :%  ARABIC;	   ! Allowing for "23 500". !			
+ : ARABIC ;	   ! Allowing for "23 500" w/nbsp (initial char is alt-space)	!
+ %/:%/ ARABIC;	   ! 24/12			!		
 !%' ARABIC ;	   ! Since ' denotes cons.grad. This is not optimal either. 
 !+A+Ord:%. # ;
  ,%-+Num:,%-       # ; ! 10,-
@@ -479,7 +486,7 @@ LEXICON ARABICLOOP
  %%+Num+Nom:%%     # ; ! 50%. It is wrong, but 75 % of us write "75%".
  % %%+Num+Nom:% %% # ;! We must analyse the correct ones as well... 50 % etc.
  +Num: ARABICDELIMITER ; ! list of number-case delimiters
-! +Num: RHyph  ;          ! Hyphen and +Use/Circ added appropriately in RHyph
+! +Num: RHyph  ;          ! Hyphen and  added appropriately in RHyph
 ! +Num:%-# NUMERALCOMPOUNDS  ;
 
 LEXICON ARABICLOOPORD
@@ -580,70 +587,70 @@ LEXICON ARABICCASECOLL
 ! ------------------ !
 
 LEXICON ROMAN						!^C^
- +Use/Circ: ROM-THOUSAND ;						!
- +Use/Circ: ROM-HUNDRED ;						!
- +Use/Circ: ROM-TEN ;							!
- +Use/Circ: ROM-ONE ;							!
+ : ROM-THOUSAND ;						!
+ : ROM-HUNDRED ;						!
+ : ROM-TEN ;							!
+ : ROM-ONE ;							!
 
 LEXICON ROM-THOUSAND              	!^C^
- M+Use/Circ:M ROM-THOUSAND-TAG;				!
- MM+Use/Circ:MM ROM-THOUSAND-TAG;				!
- MMM+Use/Circ:MMM ROM-THOUSAND-TAG;				!
- MMMM+Use/Circ:MMMM ROM-THOUSAND-TAG;			!
- MMMMM+Use/Circ:MMMMM ROM-THOUSAND-TAG;			!
+ M:M ROM-THOUSAND-TAG;				!
+ MM:MM ROM-THOUSAND-TAG;				!
+ MMM:MMM ROM-THOUSAND-TAG;				!
+ MMMM:MMMM ROM-THOUSAND-TAG;			!
+ MMMMM:MMMMM ROM-THOUSAND-TAG;			!
 
 LEXICON ROM-THOUSAND-TAG			!^C^
- +Use/Circ: ROMNUMTAG ;						!
- +Use/Circ: ROM-HUNDRED ;						!
- +Use/Circ: ROM-SPLIT	;						!
+ : ROMNUMTAG ;						!
+ : ROM-HUNDRED ;						!
+ : ROM-SPLIT	;						!
 
 LEXICON ROM-HUNDRED					!^C^
- C+Use/Circ:C ROM-HUNDRED-TAG;				!
- CC+Use/Circ:CC ROM-HUNDRED-TAG;				!
- CCC+Use/Circ:CCC ROM-HUNDRED-TAG;				!
- CD+Use/Circ:CD ROM-HUNDRED-TAG;				!
- D+Use/Circ:D ROM-HUNDRED-TAG;				!
- DC+Use/Circ:DC ROM-HUNDRED-TAG;				!
- DCC+Use/Circ:DCC ROM-HUNDRED-TAG;				!
- DCCC+Use/Circ:DCCC ROM-HUNDRED-TAG;				!
- CM+Use/Circ:CM ROM-HUNDRED-TAG;				!
+ C:C ROM-HUNDRED-TAG;				!
+ CC:CC ROM-HUNDRED-TAG;				!
+ CCC:CCC ROM-HUNDRED-TAG;				!
+ CD:CD ROM-HUNDRED-TAG;				!
+ D:D ROM-HUNDRED-TAG;				!
+ DC:DC ROM-HUNDRED-TAG;				!
+ DCC:DCC ROM-HUNDRED-TAG;				!
+ DCCC:DCCC ROM-HUNDRED-TAG;				!
+ CM:CM ROM-HUNDRED-TAG;				!
 
 LEXICON ROM-HUNDRED-TAG				!^C^
- +Use/Circ: ROMNUMTAG ;						!
- +Use/Circ: ROM-TEN ;							!
- +Use/Circ: ROM-SPLIT ;						!
+ : ROMNUMTAG ;						!
+ : ROM-TEN ;							!
+ : ROM-SPLIT ;						!
 
 LEXICON ROM-TEN						!^C^
- X+Use/Circ:X ROM-TEN-TAG;					!
- XX+Use/Circ:XX ROM-TEN-TAG;					!
- XXX+Use/Circ:XXX ROM-TEN-TAG;					!
- XL+Use/Circ:XL ROM-TEN-TAG;					!
- L+Use/Circ:L ROM-TEN-TAG;					!
- LX+Use/Circ:LX ROM-TEN-TAG;					!
- LXX+Use/Circ:LXX ROM-TEN-TAG;					!
- LXXX+Use/Circ:LXXX ROM-TEN-TAG;					!
- XC+Use/Circ:XC ROM-TEN-TAG;					!
+ X:X ROM-TEN-TAG;					!
+ XX:XX ROM-TEN-TAG;					!
+ XXX:XXX ROM-TEN-TAG;					!
+ XL:XL ROM-TEN-TAG;					!
+ L:L ROM-TEN-TAG;					!
+ LX:LX ROM-TEN-TAG;					!
+ LXX:LXX ROM-TEN-TAG;					!
+ LXXX:LXXX ROM-TEN-TAG;					!
+ XC:XC ROM-TEN-TAG;					!
 
 LEXICON ROM-TEN-TAG					!^C^
- +Use/Circ: ROMNUMTAG ;						!
- +Use/Circ: ROM-ONE ;							!
- +Use/Circ: ROM-SPLIT ;						!
+ : ROMNUMTAG ;						!
+ : ROM-ONE ;							!
+ : ROM-SPLIT ;						!
 
 LEXICON ROM-ONE						!^C^
- I+Use/Circ:I ROM-ONE-TAG;					!
- II+Use/Circ:II ROM-ONE-TAG;					!
- III+Use/Circ:III ROM-ONE-TAG;					!
- IV+Use/Circ:IV ROM-ONE-TAG;					!
- V+Use/Circ:V ROM-ONE-TAG;					!
- VI+Use/Circ:VI ROM-ONE-TAG;					!
- VII+Use/Circ:VII ROM-ONE-TAG;					!
- VIII+Use/Circ:VIII ROM-ONE-TAG;					!
- IX+Use/Circ:IX ROM-ONE-TAG;					!
+ I:I ROM-ONE-TAG;					!
+ II:II ROM-ONE-TAG;					!
+ III:III ROM-ONE-TAG;					!
+ IV:IV ROM-ONE-TAG;					!
+ V:V ROM-ONE-TAG;					!
+ VI:VI ROM-ONE-TAG;					!
+ VII:VII ROM-ONE-TAG;					!
+ VIII:VIII ROM-ONE-TAG;					!
+ IX:IX ROM-ONE-TAG;					!
 
 LEXICON ROM-ONE-TAG					!^C^
- +Use/Circ: ROMNUMTAG ;						!
+ : ROMNUMTAG ;						!
 ! +N: ROMNUMTAG ;					!^C^ !The Olav viđeš fix (Roman V now gets A)
- +Use/Circ: ROM-SPLIT ;						!
+ : ROM-SPLIT ;						!
 
 ! Here, we split the Roman numerals, in order to account for cases like "Kapihtal II-IV".
 ! We may send this first part directly to ROM-TAG below (and get the +Num tag), or we may
@@ -653,68 +660,68 @@ LEXICON ROM-ONE-TAG					!^C^
 ! trick.
 
 LEXICON ROM-SPLIT						!^C^
- +Use/Circ:%- 2ROMAN ; ! II-VI, etc.				!
+ :%- 2ROMAN ; ! II-VI, etc.				!
 
 
 ! Here goes loop 2.
 
 LEXICON 2ROMAN							!^C^
- +Use/Circ: 2ROM-THOUSAND ;						!
- +Use/Circ: 2ROM-HUNDRED ;							!
- +Use/Circ: 2ROM-TEN ;								!
- +Use/Circ: 2ROM-ONE ;								!
+ : 2ROM-THOUSAND ;						!
+ : 2ROM-HUNDRED ;							!
+ : 2ROM-TEN ;								!
+ : 2ROM-ONE ;								!
 
 LEXICON 2ROM-THOUSAND              		!^C^
- M+Use/Circ:M 2ROM-THOUSAND-TAG;					!
- MM+Use/Circ:MM 2ROM-THOUSAND-TAG;					!
- MMM+Use/Circ:MMM 2ROM-THOUSAND-TAG;				!
- MMMM+Use/Circ:MMMM 2ROM-THOUSAND-TAG;				!
- MMMMM+Use/Circ:MMMMM 2ROM-THOUSAND-TAG;				!
+ M:M 2ROM-THOUSAND-TAG;					!
+ MM:MM 2ROM-THOUSAND-TAG;					!
+ MMM:MMM 2ROM-THOUSAND-TAG;				!
+ MMMM:MMMM 2ROM-THOUSAND-TAG;				!
+ MMMMM:MMMMM 2ROM-THOUSAND-TAG;				!
 
 LEXICON 2ROM-THOUSAND-TAG				!^C^
- +Use/Circ: ROMNUMTAG ;							!
- +Use/Circ: 2ROM-HUNDRED ;							!
+ : ROMNUMTAG ;							!
+ : 2ROM-HUNDRED ;							!
 
 LEXICON 2ROM-HUNDRED					!^C^
- C+Use/Circ:C 2ROM-HUNDRED-TAG;					!
- CC+Use/Circ:CC 2ROM-HUNDRED-TAG;					!
- CCC+Use/Circ:CCC 2ROM-HUNDRED-TAG;					!
- CD+Use/Circ:CD 2ROM-HUNDRED-TAG;					!
- D+Use/Circ:D 2ROM-HUNDRED-TAG;					!
- DC+Use/Circ:DC 2ROM-HUNDRED-TAG;					!
- DCC+Use/Circ:DCC 2ROM-HUNDRED-TAG;					!
- DCCC+Use/Circ:DCCC 2ROM-HUNDRED-TAG;				!
- CM+Use/Circ:CM 2ROM-HUNDRED-TAG;					!
+ C:C 2ROM-HUNDRED-TAG;					!
+ CC:CC 2ROM-HUNDRED-TAG;					!
+ CCC:CCC 2ROM-HUNDRED-TAG;					!
+ CD:CD 2ROM-HUNDRED-TAG;					!
+ D:D 2ROM-HUNDRED-TAG;					!
+ DC:DC 2ROM-HUNDRED-TAG;					!
+ DCC:DCC 2ROM-HUNDRED-TAG;					!
+ DCCC:DCCC 2ROM-HUNDRED-TAG;				!
+ CM:CM 2ROM-HUNDRED-TAG;					!
 
 LEXICON 2ROM-HUNDRED-TAG				!^C^
- +Use/Circ: ROMNUMTAG ;							!
- +Use/Circ: 2ROM-TEN ;								!
+ : ROMNUMTAG ;							!
+ : 2ROM-TEN ;								!
 
 LEXICON 2ROM-TEN						!^C^
- X+Use/Circ:X 2ROM-TEN-TAG;						!
- XX+Use/Circ:XX 2ROM-TEN-TAG;						!
- XXX+Use/Circ:XXX 2ROM-TEN-TAG;						!
- XL+Use/Circ:XL 2ROM-TEN-TAG;						!
- L+Use/Circ:L 2ROM-TEN-TAG;						!
- LX+Use/Circ:LX 2ROM-TEN-TAG;						!
- LXX+Use/Circ:LXX 2ROM-TEN-TAG;						!
- LXXX+Use/Circ:LXXX 2ROM-TEN-TAG;					!
- XC+Use/Circ:XC 2ROM-TEN-TAG;						!
+ X:X 2ROM-TEN-TAG;						!
+ XX:XX 2ROM-TEN-TAG;						!
+ XXX:XXX 2ROM-TEN-TAG;						!
+ XL:XL 2ROM-TEN-TAG;						!
+ L:L 2ROM-TEN-TAG;						!
+ LX:LX 2ROM-TEN-TAG;						!
+ LXX:LXX 2ROM-TEN-TAG;						!
+ LXXX:LXXX 2ROM-TEN-TAG;					!
+ XC:XC 2ROM-TEN-TAG;						!
 
 LEXICON 2ROM-TEN-TAG					!^C^
- +Use/Circ: ROMNUMTAG ;							!
- +Use/Circ: 2ROM-ONE ;								!
+ : ROMNUMTAG ;							!
+ : 2ROM-ONE ;								!
 
 LEXICON 2ROM-ONE						!^C^
- I+Use/Circ:I 2ROM-ONE-TAG;						!
- II+Use/Circ:II 2ROM-ONE-TAG;						!
- III+Use/Circ:III 2ROM-ONE-TAG;						!
- IV+Use/Circ:IV 2ROM-ONE-TAG;						!
- V+Use/Circ:V 2ROM-ONE-TAG;						!
- VI+Use/Circ:VI 2ROM-ONE-TAG;						!
- VII+Use/Circ:VII 2ROM-ONE-TAG;						!
- VIII+Use/Circ:VIII 2ROM-ONE-TAG;					!
- IX+Use/Circ:IX 2ROM-ONE-TAG;						!
+ I:I 2ROM-ONE-TAG;						!
+ II:II 2ROM-ONE-TAG;						!
+ III:III 2ROM-ONE-TAG;						!
+ IV:IV 2ROM-ONE-TAG;						!
+ V:V 2ROM-ONE-TAG;						!
+ VI:VI 2ROM-ONE-TAG;						!
+ VII:VII 2ROM-ONE-TAG;						!
+ VIII:VIII 2ROM-ONE-TAG;					!
+ IX:IX 2ROM-ONE-TAG;						!
 
 LEXICON 2ROM-ONE-TAG
  ROMNUMTAG ;
@@ -751,11 +758,11 @@ LEXICON ROMNUMTAGOBL
 
       
 LEXICON ISOLATED-NUMEXP					!^C^
- ½+Num+Use/Circ:½ # ;						!
- ¹+Num+Use/Circ:¹ # ;						!
- ²+Num+Use/Circ:² # ;						!
- ³+Num+Use/Circ:³ # ;						!
- ¼+Num+Use/Circ:¼ # ;						!
+ ½+Num:½ # ;						!
+ ¹+Num:¹ # ;						!
+ ²+Num:² # ;						!
+ ³+Num:³ # ;						!
+ ¼+Num:¼ # ;						!
 
 
 
