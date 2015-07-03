@@ -1,15 +1,92 @@
 !!!General tasks 2015
-In the autumn we will make a plan for the MT work. In this document is only dictionary and FST
+In the autumn we will make a plan for the MT work. In this document is only for dictionary and FST
 
 * Project leader (__Trond__)
 * Linguistic work coordination (__ML__)
 * Dictionary coordination (__Trond__)
 * FST coordination (__Lene__)
 * MT implementation (__Francis__)
-* Dictionary transfer and other pipelines, ja smn Korp (__Cip__)
+* Dictionary transfer (__Ciprian__)
+* Data for NDS dictionaries in both directions (__Ciprian__)
+* SMN Korp (__Ciprian__)
+
+!! July
+Workers in July:
+* Miina 4 weeks
+* Ciprian 4 weeks
+* ML first weeks and perhaps last weeks
+* Trond some mornings
+
+!!Works to be done:
+
+!Time allocation
+* 50% dict
+* 25% verbs
+* 25% noun lexicon improvement (stems and contlex) 
+
+!!Tasks
+! verbs
+* linguistics <== get the landscape clear 
+* (yamls + ling descr of mf processes)
+* Principles for yamls:
+* Following the grouping in the grammar
+** Bisyllabics: all stem vowels + root vowels in order to cope with lowering
+** Trisyllabics:  types are there already
+** Contracted: in principle as for the bi/tri above
+* lexc + twolc <== thereafter do analysis
+* __Trond__ to give scripts to Cip / document it
+* __Trond__ to give POS-generating pipelines for fin to Cip
 
 
-!!! smn-fin-smn dictionary launching
+! nouns
+* yamls and FST
+** today: 14000 tests for 660 lemmata
+* lexicon (minipara, stems)
+* the lexicon must match morphology (add contlex and correct stem)
+** Priority to 1784 ones marked with __nounstems__ of 10640 total 
+
+! adjectives <== get the landscape clear
+* linguistics
+* yaml
+
+! other POS <== get the POS right
+* check
+
+!Dictionaries: 
+* dictionary adjustment and dialectic process
+* Cip has analysed the dictionary
+* adding POS to words from Finnish
+
+{{{
+Cip: Both fin2smn and smn2fin. How much manual work remains to see
+Cip: Also sme -> fin / fin -> smn. Manual work
+}}}
+
+We may make the POS invisible in the NDS interface, for the POS we are not sure about
+* show the POS: N, V (A), Pron
+* do not show: the other POS
+
+Methodology:
+# understand and analyse
+# divide the dictionary, convert the unproblematic parts
+# work on the problematic parts, resolve problems part by part <==
+## problems:  vs , what comes after hash, ...
+# back to step 2 and repeat
+
+we have yaml tests for 660 lemmas, but we have 10600 nouns in the lexicon
+miniparadigms have two goals:
+
+# as documentation to get the correct contlex and stem
+# as a regression test
+
+{{{
+com, loc, ill, gen
+muotâ:muotˊtu AAIGA "lumi" ; !¢muotˊtuin, muotˊtust, muotˊtui, muotˊtuu
+                             !&scripted miniparadigm candidates
+                             !¢checked miniparadigm candidates
+}}}
+
+!! smn-fin-smn dictionary launching
 * Present the dictionary to the users (__ML, Miina__)
 ** Present the dictionary at the schools and universities
 *** Ivalo, Inari, Oulun Yliopisto, Helsingin Yliopisto 
@@ -27,15 +104,15 @@ TODO:
 ** improve presentation of paradigms and morphological information (__Erika__)
 ** add context to paradigms  (__Erika__)
 ** look at homonyms (get the correct translation and the correct paradigm) (__Erika__)
-* Improve the columns (__Cip, Miina, ML, Trond__)
+* Improve the columns (__Ciprian, Miina, ML, Trond__)
 
 !! Dictionary: sme-smn transfer - deadline for 1-2 is August 5?, for the cifu presentation
 
 The tool itself could be launched much later, as another tool than smn-fin-smn 
 
 TODO:
-# correct columns in input excel dict files (__Cip; ML, Miina, Trond__)
-# make transfer sme-fin + fin-smn (__Cip__)
+# correct columns in input excel dict files (__Ciprian; ML, Miina, Trond__)
+# make transfer sme-fin + fin-smn (__Ciprian__)
 # improve coverage
 ## Find holes (lacunas) in the dictionary (__Trond__)
 ## add missing translations  (__ML, Miina__)
@@ -112,7 +189,7 @@ TODO:
 
 !!POS internal dependencies
 
-For all fst work the following dependencies hold
+For all FST work the following dependencies hold
 (for words without morphology several steps may be skipped):
 
 # Linguistic ground work
@@ -122,7 +199,7 @@ For all fst work the following dependencies hold
 # yaml testing and refinement until yamlfiles are 100%
 # go through lexicon file for all members of the contlex
 
-!!Dependencies between POS within the fst
+!!Dependencies between POS within the FST
 
 * N before A
 * N before Prop
@@ -131,22 +208,171 @@ For all fst work the following dependencies hold
 
 Otherwise there are no dependencies between the POS.
 
-!!Dependencies between fst and dict and mt
+!!Dependencies between FST and dict and MT
 
-# fst good enough to generate a substantial part of N, V, A paradigms
+# FST good enough to generate a substantial part of N, V, A paradigms
 # an useful Neahttadigisánit with click-in-text
-# fst with all POS done (but errors and holes here and there)
+# FST with all POS done (but errors and holes here and there)
 # good NDS with paradigm generation
 
-!!Dependencies between fst and mt
+!!Dependencies between FST and MT
 
 
-# fst good enough to generate a substantial part of N, V, A paradigms
+# FST good enough to generate a substantial part of N, V, A paradigms
 # alpha version of MT
-# fst with all POS done (but errors and holes here and there)
+# FST with all POS done (but errors and holes here and there)
 # start working on MT transfer rules
 
-Bidix and fst are not dependent upon each other, but it is easier to 
-collect data to bidix with a good fst for text analysis.
+Bidix and FST are not dependent upon each other, but it is easier to 
+collect data to bidix with a good FST for text analysis.
+
+!!!General tasks 2015
+In the autumn we will make a plan for the MT work. In this document is only dictionary and FST
+
+* Project leader (__Trond__)
+* Linguistic work coordination (__ML__)
+* Dictionary coordination (__Trond__)
+* FST coordination (__Lene__)
+* MT implementation (__Francis__)
+* Dictionary transfer and other pipelines, ja smn Korp (__Cip__)
 
 
+!!! smn-fin-smn dictionary launching
+* Present the dictionary to the users (__ML, Miina__)
+** Present the dictionary at the schools and universities
+*** Ivalo, Inari, Oulun Yliopisto, Helsingin Yliopisto 
+* Present the dictionary to the public (__ML, Miina__) in September
+** Saami parliament
+** Press: YLE, Ávvir, Inarilainen, Lapinkansa, Helsingin Saanomat (make a happening!)
+
+!! Dictionary: smn-fin-smn - deadline August 25?
+A test version of the dictionary is online
+
+TODO:
+* improve the dictionary interface
+** localisation in Inari Saami (__ML__)
+** improve information in the interface (__Erika__)
+** improve presentation of paradigms and morphological information (__Erika__)
+** add context to paradigms  (__Erika__)
+** look at homonyms (get the correct translation and the correct paradigm) (__Erika__)
+* Improve the columns (__Cip, Miina, ML, Trond__)
+
+!! Dictionary: sme-smn transfer - deadline for 1-2 is August 5?, for the cifu presentation
+
+The tool itself could be launched much later, as another tool than smn-fin-smn 
+
+TODO:
+# correct columns in input excel dict files (__Ciprian; ML, Miina, Trond__)
+# make transfer sme-fin + fin-smn (__Ciprian__)
+# improve coverage
+## Find holes (lacunas) in the dictionary (__Trond__)
+## add missing translations  (__ML, Miina__)
+# put the dictionary online (__Ryan__)
+# improve the interface  (__ML__)
+# launch the dictionary, when? how?
+
+!!!Testing FST
+# Automatic testing (make check)
+## yaml-files
+## generating of lemmas
+## generating of miniparadigms
+# Analysis
+## Analysis of texts (__Erika__)
+## Coverage: creating missing lists, adding words to analyser 
+# Testing of analysator and dictonary (__ML, Miina__)
+
+
+!!!Morphology
+!!nouns.lexc - first priority
+
+TODO:
+* test setup
+** make yaml-files (__ML, Miina__)
+** add mini-paradigms in the stem file (__ML, Miina__)
+* stems file  (__ML, Miina, Erika__)
+** correct stems and give correct contlex
+** classify ''nounstems''  (over 1750 unclassified entries)
+* affix-file (__Lene, ML__)
+* twolc work (__Lene__)
+
+!!verbs.lexc - second priority
+TODO:
+* test setup
+** make yaml-files (__ML, Miina, Trond__)
+** add mini-paradigms in the stem file (__ML, Miina__)
+* affix-file (__Trond, ML__)
+
+!!adjectives.lexc - third priority
+TODO:
+* test setup
+** make yaml-files (__ML, Miina?, Trond__)
+** add mini-paradigms in the stem file (__ML, Miina?__)
+** ensure nom sg test routines
+* affix-file (__Lene, ML, Trond__)
+* twolc work (__Lene__)
+* correct stems and give correct contlex (__ML, Miina?__)
+
+
+!!smn-propernouns.lexc:
+TODO:
+* Classifisy the place names in the file, and make new lexicons (copy from nouns) (__Erika__)
+** jävri AIGI > JAVRI, N+Prop+Sem/Plc
+* Add smn person names (ask Mattus) (__Lene__)
+* Classifisy person names and make lexicons (__Erika__)
+* Redirect smi-propernouns.lexc to smn  (__Lene__)
+* Adjust affixes/propernouns.lexc (__Lene, Erika__)
+
+!! abbreviations, acronyms - copy from sme
+* Adjust to smn (__Erika__)
+
+!! numerals, pronouns
+* Test and correct (__Erika__)
+* add more pronouns (take from text books, analysis) (__Erika__)
+
+!! adverbs, adpositions, conjunctions, subjunctions, particles, interjections
+* Check PoS (__Erika__)
+** move words to other files
+** add more lemmas (take from text books, analysis)
+
+!! punctuation.lexc - should be ok
+
+!!!Dependencies
+
+!!POS internal dependencies
+
+For all FST work the following dependencies hold
+(for words without morphology several steps may be skipped):
+
+# Linguistic ground work
+# Yaml files and other test setup
+# Plan of attack
+# lexc and twolc work for the words in the yamlfiles
+# yaml testing and refinement until yamlfiles are 100%
+# go through lexicon file for all members of the contlex
+
+!!Dependencies between POS within the FST
+
+* N before A
+* N before Prop
+* N, V, A before derivation
+* N before Px
+
+Otherwise there are no dependencies between the POS.
+
+!!Dependencies between FST and dict and MT
+
+# FST good enough to generate a substantial part of N, V, A paradigms
+# an useful Neahttadigisánit with click-in-text
+# FST with all POS done (but errors and holes here and there)
+# good NDS with paradigm generation
+
+!!Dependencies between FST and MT
+
+
+# FST good enough to generate a substantial part of N, V, A paradigms
+# alpha version of MT
+# FST with all POS done (but errors and holes here and there)
+# start working on MT transfer rules
+
+Bidix and FST are not dependent upon each other, but it is easier to 
+collect data to bidix with a good FST for text analysis.
