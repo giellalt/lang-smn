@@ -86,6 +86,7 @@ h5:h  y5:y i5:i                       !!= * @CODE@  these do not change
 %^WG:0      !!= * @CODE@ = weak grade trigger
 %^ÁE:0      !!= * @CODE@ = á to e (more) in 3-syll
 %^ÁI:0      !!= * @CODE@ = á to i (more) in 3-syll
+%^EWG:0
 
 %^ODRVSHV:0     !!= * @CODE@ =  Cns shortening in C|# and shortvow in Inf etc  (not in use)
 %^ODDC:0       !!= * @CODE@ =  shorten cns in odd-syll stems before C, #  (not in use)
@@ -239,7 +240,7 @@ s:ṣ <=>  Vow: s:0 _ Vow: (%^SV:) Cns:  %^SC: %^RVSH: %^CSH: %>  ; !! riessâm 
         Vow: Cns: _ Cns:+  Vow: (%^RLEN:) %^CSH: (%^EA:)  [%>|.#.]  ; !!  2) consonant shortening for illativ
         Vow: č:   _ č4: WeakGrade %^CLEN: %^SVLOW: %> ; !! 3) weak grade and consonant lengthning, kiäčˊču kiäj̣u 
         Vow: RealVow:0 %^RD:  Cns:  _ Cns:+  WeakGrade %^CLEN: %^SVLOW: %> ; !! 4) uábˊbi:obbijn
-		Cns: _ Cns:+ Vow:  Cns: (%^ÁI:) %^WG:  ; !! 5) viäsˊkár kuo%^RDlˊbân
+		Cns: _ Cns:+ Vow:+  Cns: (%^ÁI:) %^WG:  ; !! 5) viäsˊkár kuo%^RDlˊbân uái4ˊváát%^WG
 
 
 
@@ -302,7 +303,7 @@ Vy:0 <=> Vx: _ č: (%^RC:) Vow:  %^WG: %^RVSH: (%^SVLOW:) [%>|.#.] ; !! 1) 2st s
 
 "Underlying long vowel shortening iä:eˊ"
 !! * __@RULENAME@__ \\ 
-Vy:ˊ <=> Vx: _  Cns:+ Vow:  Cns: %^ÁI: %^WG: %^RVSH:  [%>|.#.] ; !! 1) 3st stems viäsˊkár
+Vy:ˊ <=> Vx: _  Cns:+ Vow:  Cns: [%^ÁI:|%^ÁE:] [%^WG:|%^EWG:] %^RVSH:  [%>|.#.] ; !! 1) 3st stems viäsˊkár veˊskirin, časkes čaˊskes ča%^RVskas%^ÁE
        where Vx in ( i ) 
              Vy in ( ä ) 
        matched ;
@@ -633,16 +634,16 @@ Cx:Cy <=> Vow: _ (:ˊ) %^RC: :Vow (%^SV:) %^WG: (%^RVSH:) %^CLEN: ([%^SVLOW: |%^
 
 
 "From exstra strong to weak, part 1 cc:s, rr:r"
-Cy:0 <=>  Cx: _  Vow:+  %^UU: ([%^RVSH:|%^RLEN:]) %> ; ! poccuu:puásui  kiepˊpu:kiepâ
-          Cx: ˊ:0  _ Vow:+ (%^ÁI:)  %^UU: ([%^RVSH:|%^RLEN:]) %> ; ! cuobˊbuu:cuábui
+Cy:0 <=>  Cx: _  Vow:+ (Cns) [%^UU: | %^EWG: ]  ([%^RVSH:|%^RLEN:]) %> ; ! poccuu:puásui  kiepˊpu:kiepâ iäbˊbár%^ÁI
+          Cx: ˊ:0  _ Vow:+ (Cns) (%^ÁI:)  [%^UU: | %^EWG: ] ([%^RVSH:|%^RLEN:]) %> ; ! cuobˊbuu:cuábui
        where Cx in ( c r b l t p h) 
              Cy in ( c r b l t p h) 
         matched ;
 
 "From exstra strong to weak, remove ˊ "
-ˊ:0 <=>  Cx: _  Cy: Vow:+ (%^ÁI:)  %^UU: ([%^RVSH:|%^RLEN:]) %> ; 
-       where Cx in  ( k b l l t p h) 
-              Cy in ( s b l g t p h) 
+ˊ:0 <=>  Cx: _  Cy: Vow:+ (Cns) (%^ÁI:)  [%^UU: | %^EWG: ] ([%^RVSH:|%^RLEN:]) %> ; !viäsˊkár%^ÁI
+       where Cx in  ( k b l l t p h s) 
+              Cy in ( s b l g t p h k) 
         matched ;
 
 
@@ -841,7 +842,7 @@ Vx:Vy <=> _  %^RV: Cns:+  e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> i: ;
 "Monophthongisation rule i:e"
 !! * __@RULENAME@__ \\  
 Vx:Vy <=> _ Vz: Cns:* i %^WG: %> i: ;  
-          _ Vz: Cns:* Vow: Cns %^ÁI: %^WG: [%^RLEN:|%^RVSH:] [%>|.#.]  ; !viäskár veeskir
+          _ Vz: Cns:* Vow: Cns %^ÁI: [%^WG:|%^EWG:] [%^RLEN:|%^RVSH:] [%>|.#.]  ; !viäskár veeskir
 !         _ Vz:0 %^RD: Cns:* i %^WG: %^CLEN: %^SVLOW: %> i:  ; 
 	where Vx in ( i )
 		  Vy in ( e )
@@ -881,7 +882,7 @@ Vx:Vy <=> _ Vz: Cns:* i %^WG: %> i: ;  !Her
 !! * __@RULENAME@__ \\  á:o in pairs like kuátij -> koođij, säämi -> saamij 
 Vx:Vy <=> Vz: _  Cns:* i %^WG:   %> i: ;
           Vz:Vy _ (%^RD:) Cns:* i %^WG: %^RLEN:  %> i: ;
-          Vz:  _ Cns:* Vow: Cns: %^ÁI: %^WG: %^RLEN: [%>|.#.] ; !viäsˊkár : veeskir viäskár%^ÁI
+          Vz:  _ Cns:* Vow: Cns: %^ÁI: [%^WG:|%^EWG:] %^RLEN: [%>|.#.] ; !viäsˊkár : veeskir viäsˊkár%^ÁI
           Vz:  _ %^RD: Cns:* Vow:  %^ÁI: %^UU: [%>|.#.] ; !puáhˊháá pooṿij
 	where Vx in ( ä á ä )
 		  Vy in ( e o a )
@@ -991,7 +992,7 @@ u:y <=> _ :e %^RD: Cns:+ Vow: %^SV: Cns: %^WG: (%^SLEN:) %^FCD: %> ;
 
 "Second syllable vowel change á to e or i in 3syll stems"
 !! * __@RULENAME@__ \\ puttás- > putes, triggers are ^ÁE and ^ÁI
-Vx:Vy <=> _ (Cns:) Vz: %^WG: (%^FCD:) ;  !viäskár%^ÁI
+Vx:Vy <=> _ (Cns:) Vz: [%^WG: |%^EWG: ] (%^FCD:) ;  !viäsˊkár%^ÁI ča%^RVskas%^ÁE
           _  Vz: %^UU: ; !puáhˊháá pooṿij
        where Vx in ( á    á    a   )
              Vy in ( e    i    e   )
@@ -1074,7 +1075,7 @@ u:o <=> Cns: _ ([%^UU:|%^SV:]) (%^WG:) (%^RVSH:) (%^RLEN:|%^CLEN:) (%^SLEN:) %^S
 
 "Second vowel shortening in 3syll consonant stems"
 !! * __@RULENAME@__ \\ eemeed : emedân
-Vx:0 <=> _ Vx: Cns:+ %^CSH: %^SVSH: %> ; !eemeed : emedân
+Vx:0 <=> _ Vx: Cns:+ (%^CSH:|%^WG:) %^SVSH: %> ; !eemeed : emedân
     where Vx in ( e o a á u i ) ;
 
 !eemeed:emedân
