@@ -40,8 +40,8 @@ Seuraavat kaksi esimerkkikomento antaa kaikki lokatiivit, jotka eivät toimi,
 ja POTTAAK-leksikon kaikki monikon abessiivit.
 
 {{{
-cat src/morphology/stems/nouns.lexc | grep ";"|grep -v PUUVSAH|cut -d":" -f1|sed 's/$/+N+Sg+Loc/'|dsmnDict|grep '?'
-cat src/morphology/stems/nouns.lexc | grep "POTTAAK"|cut -d":" -f1|sed 's/$/+N+Pl+Abe/'|dsmnDict
+cat src/morphology/stems/nouns.lexc | grep ";"| cut -d ';' -f1 | grep -v PUUVSAH|cut -d":" -f1|sed 's/$/+N+Sg+Loc/'|dsmnDict|grep '?'
+cat src/morphology/stems/nouns.lexc |  grep ";"| cut -d ';' -f1 | grep "POTTAAK"|cut -d":" -f1|sed 's/$/+N+Pl+Abe/'|dsmnDict
 }}}
 
 !!Korjata puuttuvat nominatiivit
