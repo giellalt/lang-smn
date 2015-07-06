@@ -9,7 +9,7 @@
 TESTS=
 
 # Add your shell scripts for running tests requiring only a generator:
-GENERATION_TESTS_IN=generate-comsg-nouns.sh.in 
+GENERATION_TESTS_IN=generate-noun-lemmas.sh.in 
 
 
 #					generate-adjective-lemmas.sh.in  \
