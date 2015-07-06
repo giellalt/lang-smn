@@ -1,0 +1,490 @@
+Last login: Mon Jul  6 10:02:45 on ttys002
+tf4-hsl-m0019:~ marjaliisa$ cd main/langs/smn/
+tf4-hsl-m0019:smn marjaliisa$ svn up
+Updating '.':
+At revision 117039.
+tf4-hsl-m0019:smn marjaliisa$ make check
+
+*** Compiling the smn language. ***
+
+CDPATH="${ZSH_VERSION+.}:" && cd . && /bin/sh /Users/marjaliisa/main/langs/smn/build-aux/missing autoconf
+Making check in .
+
+*** Compiling the smn language. ***
+
+CDPATH="${ZSH_VERSION+.}:" && cd . && /bin/sh /Users/marjaliisa/main/langs/smn/build-aux/missing autoconf
+make[1]: Nothing to be done for `check-am'.
+Making check in src
+Making check in phonology
+make[2]: Nothing to be done for `check'.
+Making check in morphology
+make[2]: Nothing to be done for `check'.
+Making check in filters
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  check-am
+make[3]: Nothing to be done for `check-am'.
+Making check in phonetics
+make[2]: Nothing to be done for `check'.
+Making check in hyphenation
+make[2]: Nothing to be done for `check'.
+Making check in orthography
+make[2]: Nothing to be done for `check'.
+Making check in syntax
+make[2]: Nothing to be done for `check'.
+Making check in transcriptions
+make[2]: Nothing to be done for `check'.
+Making check in tagsets
+make[2]: Nothing to be done for `check'.
+Making check in .
+make[2]: Nothing to be done for `check-am'.
+Making check in tools
+Making check in spellcheckers
+Making check in .
+make[3]: Nothing to be done for `check-am'.
+Making check in fstbased
+Making check in weighting
+make[4]: Nothing to be done for `check'.
+Making check in filters
+make[4]: Nothing to be done for `check'.
+Making check in .
+make[4]: Nothing to be done for `check-am'.
+Making check in hfst
+make[4]: Nothing to be done for `check'.
+Making check in foma
+make[4]: Nothing to be done for `check'.
+Making check in listbased
+Making check in filters
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  check-am
+make[5]: Nothing to be done for `check-am'.
+Making check in .
+make[4]: Nothing to be done for `check-am'.
+Making check in grammarcheckers
+make[2]: Nothing to be done for `check'.
+Making check in shellscripts
+make[2]: Nothing to be done for `check'.
+Making check in preprocess
+make[2]: Nothing to be done for `check'.
+Making check in mt
+Making check in apertium
+Making check in filters
+make[4]: Nothing to be done for `check'.
+Making check in tagsets
+make[4]: Nothing to be done for `check'.
+Making check in .
+make[4]: Nothing to be done for `check-am'.
+make[3]: Nothing to be done for `check-am'.
+make[2]: Nothing to be done for `check-am'.
+Making check in doc
+make[1]: Nothing to be done for `check'.
+Making check in test
+Making check in src
+Making check in phonology
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  check-TESTS
+twolc> install-binary ../../../src/phonology/smn-phon.compose.xfst
+Reading "../../../src/phonology/smn-phon.compose.xfst"
+0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
+0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
+0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
+0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
+0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
+0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
+0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
+0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
+0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
+0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
+0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
+0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
+0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
+0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
+0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
+0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
+0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
+0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
+0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
+0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
+0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
+0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
+0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
+twolc> install-lexicon ../../../src/morphology/lexicon.xfst
+0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
+6.0 Mb. 82904 states, 139958 arcs, Circular.
+twolc> pair-test-file positive-pairs.txt positive-pairs-out.txt
+opening "positive-pairs.txt"
+.......................................................................
+twolc> quit
+Bye!
+XFAIL: pair-test-positive.sh
+    No negative test pairs in ./../../../src/phonology/smn-phon.twolc
+SKIP: pair-test-negative.sh
+===============================================
+1 test behaved as expected (1 expected failure)
+(1 test was not run)
+===============================================
+Making check in orthography
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  check-TESTS
+
+YAML test 1: inituppercase.lookup.xfst + ./initcaptests_inituppercase.gen.yaml - 6/0/6 PASS
+SUMMARY for the generating inituppercase fst(s): PASSES: 6 / FAILS: 0 / TOTAL: 6
+PASS: run-initcaps-genyaml-testcases.sh
+=============
+1 test passed
+=============
+Making check in morphology
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  check-TESTS
+==================
+All 0 tests passed
+==================
+Making check in syntax
+make[3]: Nothing to be done for `check'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  check-TESTS
+
+** No YAML files matching: ./dict-gt-yamls/*_dict-gt-desc.ana.yaml
+SKIP: run-dict-gt-desc-anayaml-testcases.sh
+
+YAML test 1: generator-dict-gt-norm.xfst + dict-gt-yamls/A-haaitis_dict-gt-norm.gen.yaml - 0/16/16 FAIL
+
+To rerun with more details, please triple-click, copy and paste the following:
+
+pushd /Users/marjaliisa/main/langs/smn/test/src; /opt/local/bin/python3.3 /Users/marjaliisa/main/gtcore/scripts/morph-test.py -c -i -v -S xerox --app "/usr/local/bin/lookup -flags mbTT" --gen ././../../src/generator-dict-gt-norm.xfst --lexical ./dict-gt-yamls/A-haaitis_dict-gt-norm.gen.yaml; popd
+
+YAML test 2: generator-dict-gt-norm.xfst + dict-gt-yamls/A-haanis_dict-gt-norm.gen.yaml - 1/15/16 FAIL
+
+To rerun with more details, please triple-click, copy and paste the following:
+
+pushd /Users/marjaliisa/main/langs/smn/test/src; /opt/local/bin/python3.3 /Users/marjaliisa/main/gtcore/scripts/morph-test.py -c -i -v -S xerox --app "/usr/local/bin/lookup -flags mbTT" --gen ././../../src/generator-dict-gt-norm.xfst --lexical ./dict-gt-yamls/A-haanis_dict-gt-norm.gen.yaml; popd
+
+YAML test 3: generator-dict-gt-norm.xfst + dict-gt-yamls/A-hurskes_dict-gt-norm.gen.yaml - 1/15/16 FAIL
+
+To rerun with more details, please triple-click, copy and paste the following:
+
+pushd /Users/marjaliisa/main/langs/smn/test/src; /opt/local/bin/python3.3 /Users/marjaliisa/main/gtcore/scripts/morph-test.py -c -i -v -S xerox --app "/usr/local/bin/lookup -flags mbTT" --gen ././../../src/generator-dict-gt-norm.xfst --lexical ./dict-gt-yamls/A-hurskes_dict-gt-norm.gen.yaml; popd
+
+YAML test 4: generator-dict-gt-norm.xfst + dict-gt-yamls/A-kiargus_dict-gt-norm.gen.yaml - 4/14/18 FAIL
+
+To rerun with more details, please triple-click, copy and paste the following:
+
+pushd /Users/marjaliisa/main/langs/smn/test/src; /opt/local/bin/python3.3 /Users/marjaliisa/main/gtcore/scripts/morph-test.py -c -i -v -S xerox --app "/usr/local/bin/lookup -flags mbTT" --gen ././../../src/generator-dict-gt-norm.xfst --lexical ./dict-gt-yamls/A-kiargus_dict-gt-norm.gen.yaml; popd
+
+YAML test 5: generator-dict-gt-norm.xfst + dict-gt-yamls/N-3lex_aarran_dict-gt-norm.gen.yaml - 160/0/160 PASS
+YAML test 6: generator-dict-gt-norm.xfst + dict-gt-yamls/N-3lex_ceve_dict-gt-norm.gen.yaml - 18/0/18 PASS
+YAML test 7: generator-dict-gt-norm.xfst + dict-gt-yamls/N-3lex_eemeed_dict-gt-norm.gen.yaml - 446/0/446 PASS
+YAML test 8: generator-dict-gt-norm.xfst + dict-gt-yamls/N-3lex_huksim_dict-gt-norm.gen.yaml - 96/0/96 PASS
+YAML test 9: generator-dict-gt-norm.xfst + dict-gt-yamls/N-3lex_kaavpug_dict-gt-norm.gen.yaml - 16/0/16 PASS
+YAML test 10: generator-dict-gt-norm.xfst + dict-gt-yamls/N-3lex_kepidem_dict-gt-norm.gen.yaml - 208/0/208 PASS
+YAML test 11: generator-dict-gt-norm.xfst + dict-gt-yamls/N-3lex_kyeppir_dict-gt-norm.gen.yaml - 16/1/17 FAIL
+
+To rerun with more details, please triple-click, copy and paste the following:
+
+pushd /Users/marjaliisa/main/langs/smn/test/src; /opt/local/bin/python3.3 /Users/marjaliisa/main/gtcore/scripts/morph-test.py -c -i -v -S xerox --app "/usr/local/bin/lookup -flags mbTT" --gen ././../../src/generator-dict-gt-norm.xfst --lexical ./dict-gt-yamls/N-3lex_kyeppir_dict-gt-norm.gen.yaml; popd
+
+YAML test 12: generator-dict-gt-norm.xfst + dict-gt-yamls/N-3lex_litter_dict-gt-norm.gen.yaml - 112/0/112 PASS
+YAML test 13: generator-dict-gt-norm.xfst + dict-gt-yamls/N-3lex_lyeme_dict-gt-norm.gen.yaml - 72/3/75 FAIL
+
+To rerun with more details, please triple-click, copy and paste the following:
+
+pushd /Users/marjaliisa/main/langs/smn/test/src; /opt/local/bin/python3.3 /Users/marjaliisa/main/gtcore/scripts/morph-test.py -c -i -v -S xerox --app "/usr/local/bin/lookup -flags mbTT" --gen ././../../src/generator-dict-gt-norm.xfst --lexical ./dict-gt-yamls/N-3lex_lyeme_dict-gt-norm.gen.yaml; popd
+
+YAML test 14: generator-dict-gt-norm.xfst + dict-gt-yamls/N-3lex_naver_dict-gt-norm.gen.yaml - 49/82/131 FAIL
+
+To rerun with more details, please triple-click, copy and paste the following:
+
+pushd /Users/marjaliisa/main/langs/smn/test/src; /opt/local/bin/python3.3 /Users/marjaliisa/main/gtcore/scripts/morph-test.py -c -i -v -S xerox --app "/usr/local/bin/lookup -flags mbTT" --gen ././../../src/generator-dict-gt-norm.xfst --lexical ./dict-gt-yamls/N-3lex_naver_dict-gt-norm.gen.yaml; popd
+
+YAML test 15: generator-dict-gt-norm.xfst + dict-gt-yamls/N-3lex_paavir_dict-gt-norm.gen.yaml - 5/27/32 FAIL
+
+To rerun with more details, please triple-click, copy and paste the following:
+
+pushd /Users/marjaliisa/main/langs/smn/test/src; /opt/local/bin/python3.3 /Users/marjaliisa/main/gtcore/scripts/morph-test.py -c -i -v -S xerox --app "/usr/local/bin/lookup -flags mbTT" --gen ././../../src/generator-dict-gt-norm.xfst --lexical ./dict-gt-yamls/N-3lex_paavir_dict-gt-norm.gen.yaml; popd
+
+YAML test 16: generator-dict-gt-norm.xfst + dict-gt-yamls/N-3lex_piehain_dict-gt-norm.gen.yaml - 84/12/96 FAIL
+
+To rerun with more details, please triple-click, copy and paste the following:
+
+pushd /Users/marjaliisa/main/langs/smn/test/src; /opt/local/bin/python3.3 /Users/marjaliisa/main/gtcore/scripts/morph-test.py -c -i -v -S xerox --app "/usr/local/bin/lookup -flags mbTT" --gen ././../../src/generator-dict-gt-norm.xfst --lexical ./dict-gt-yamls/N-3lex_piehain_dict-gt-norm.gen.yaml; popd
+
+YAML test 17: generator-dict-gt-norm.xfst + dict-gt-yamls/N-3lex_piehanj_dict-gt-norm.gen.yaml - 77/3/80 FAIL
+
+To rerun with more details, please triple-click, copy and paste the following:
+
+pushd /Users/marjaliisa/main/langs/smn/test/src; /opt/local/bin/python3.3 /Users/marjaliisa/main/gtcore/scripts/morph-test.py -c -i -v -S xerox --app "/usr/local/bin/lookup -flags mbTT" --gen ././../../src/generator-dict-gt-norm.xfst --lexical ./dict-gt-yamls/N-3lex_piehanj_dict-gt-norm.gen.yaml; popd
+
+YAML test 18: generator-dict-gt-norm.xfst + dict-gt-yamls/N-3lex_piivtas_dict-gt-norm.gen.yaml - 136/101/237 FAIL
+
+To rerun with more details, please triple-click, copy and paste the following:
+
+pushd /Users/marjaliisa/main/langs/smn/test/src; /opt/local/bin/python3.3 /Users/marjaliisa/main/gtcore/scripts/morph-test.py -c -i -v -S xerox --app "/usr/local/bin/lookup -flags mbTT" --gen ././../../src/generator-dict-gt-norm.xfst --lexical ./dict-gt-yamls/N-3lex_piivtas_dict-gt-norm.gen.yaml; popd
+
+YAML test 19: generator-dict-gt-norm.xfst + dict-gt-yamls/N-3lex_poovij_dict-gt-norm.gen.yaml - 32/0/32 PASS
+YAML test 20: generator-dict-gt-norm.xfst + dict-gt-yamls/N-3lex_poovsa_dict-gt-norm.gen.yaml - 112/0/112 PASS
+YAML test 21: generator-dict-gt-norm.xfst + dict-gt-yamls/N-3lex_pottaak_dict-gt-norm.gen.yaml - 176/0/176 PASS
+YAML test 22: generator-dict-gt-norm.xfst + dict-gt-yamls/N-3lex_soddadem_dict-gt-norm.gen.yaml - 32/0/32 PASS
+YAML test 23: generator-dict-gt-norm.xfst + dict-gt-yamls/N-3lex_uaivat_dict-gt-norm.gen.yaml - 32/0/32 PASS
+YAML test 24: generator-dict-gt-norm.xfst + dict-gt-yamls/N-3lex_veeskir_dict-gt-norm.gen.yaml - 36/0/36 PASS
+YAML test 25: generator-dict-gt-norm.xfst + dict-gt-yamls/N-4lex_kunagas_dict-gt-norm.gen.yaml - 80/0/80 PASS
+YAML test 26: generator-dict-gt-norm.xfst + dict-gt-yamls/N-4lex_manuttep_dict-gt-norm.gen.yaml - 13/3/16 FAIL
+
+To rerun with more details, please triple-click, copy and paste the following:
+
+pushd /Users/marjaliisa/main/langs/smn/test/src; /opt/local/bin/python3.3 /Users/marjaliisa/main/gtcore/scripts/morph-test.py -c -i -v -S xerox --app "/usr/local/bin/lookup -flags mbTT" --gen ././../../src/generator-dict-gt-norm.xfst --lexical ./dict-gt-yamls/N-4lex_manuttep_dict-gt-norm.gen.yaml; popd
+
+YAML test 27: generator-dict-gt-norm.xfst + dict-gt-yamls/N-4lex_puhelin_dict-gt-norm.gen.yaml - 32/0/32 PASS
+YAML test 28: generator-dict-gt-norm.xfst + dict-gt-yamls/N-Clex_aaiga_dict-gt-norm.gen.yaml - 0/96/96 FAIL
+
+To rerun with more details, please triple-click, copy and paste the following:
+
+pushd /Users/marjaliisa/main/langs/smn/test/src; /opt/local/bin/python3.3 /Users/marjaliisa/main/gtcore/scripts/morph-test.py -c -i -v -S xerox --app "/usr/local/bin/lookup -flags mbTT" --gen ././../../src/generator-dict-gt-norm.xfst --lexical ./dict-gt-yamls/N-Clex_aaiga_dict-gt-norm.gen.yaml; popd
+
+YAML test 29: generator-dict-gt-norm.xfst + dict-gt-yamls/N-Clex_kaamuv_dict-gt-norm.gen.yaml - 49/0/49 PASS
+YAML test 30: generator-dict-gt-norm.xfst + dict-gt-yamls/N-Clex_kaarbis_dict-gt-norm.gen.yaml - Traceback (most recent call last):
+  File "/Users/marjaliisa/main/gtcore/scripts/morph-test.py", line 687, in <module>
+    main()
+  File "/Users/marjaliisa/main/gtcore/scripts/morph-test.py", line 678, in main
+    ui = UI()
+  File "/Users/marjaliisa/main/gtcore/scripts/morph-test.py", line 669, in __init__
+    self.test = MorphTest(self.parse_args())
+  File "/Users/marjaliisa/main/gtcore/scripts/morph-test.py", line 252, in __init__
+    self.load_config(self.args.test_file)
+  File "/Users/marjaliisa/main/gtcore/scripts/morph-test.py", line 274, in load_config
+    self.config = TestFile(yaml_load_ordered(open(fn)), args.section)
+  File "/Users/marjaliisa/main/gtcore/scripts/morph-test.py", line 105, in yaml_load_ordered
+    return yaml.load(f, _OrderedDictYAMLLoader)
+  File "/opt/local/Library/Frameworks/Python.framework/Versions/3.3/lib/python3.3/site-packages/yaml/__init__.py", line 72, in load
+    return loader.get_single_data()
+  File "/opt/local/Library/Frameworks/Python.framework/Versions/3.3/lib/python3.3/site-packages/yaml/constructor.py", line 35, in get_single_data
+    node = self.get_single_node()
+  File "/opt/local/Library/Frameworks/Python.framework/Versions/3.3/lib/python3.3/site-packages/yaml/composer.py", line 36, in get_single_node
+    document = self.compose_document()
+  File "/opt/local/Library/Frameworks/Python.framework/Versions/3.3/lib/python3.3/site-packages/yaml/composer.py", line 55, in compose_document
+    node = self.compose_node(None, None)
+  File "/opt/local/Library/Frameworks/Python.framework/Versions/3.3/lib/python3.3/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/opt/local/Library/Frameworks/Python.framework/Versions/3.3/lib/python3.3/site-packages/yaml/composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "/opt/local/Library/Frameworks/Python.framework/Versions/3.3/lib/python3.3/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/opt/local/Library/Frameworks/Python.framework/Versions/3.3/lib/python3.3/site-packages/yaml/composer.py", line 127, in compose_mapping_node
+    while not self.check_event(MappingEndEvent):
+  File "/opt/local/Library/Frameworks/Python.framework/Versions/3.3/lib/python3.3/site-packages/yaml/parser.py", line 98, in check_event
+    self.current_event = self.state()
+  File "/opt/local/Library/Frameworks/Python.framework/Versions/3.3/lib/python3.3/site-packages/yaml/parser.py", line 439, in parse_block_mapping_key
+    "expected <block end>, but found %r" % token.id, token.start_mark)
+yaml.parser.ParserError: while parsing a block mapping
+  in "./dict-gt-yamls/N-Clex_kaarbis_dict-gt-norm.gen.yaml", line 12, column 3
+expected <block end>, but found '<block mapping start>'
+  in "./dict-gt-yamls/N-Clex_kaarbis_dict-gt-norm.gen.yaml", line 48, column 4
+FAIL
+
+To rerun with more details, please triple-click, copy and paste the following:
+
+pushd /Users/marjaliisa/main/langs/smn/test/src; /opt/local/bin/python3.3 /Users/marjaliisa/main/gtcore/scripts/morph-test.py -c -i -v -S xerox --app "/usr/local/bin/lookup -flags mbTT" --gen ././../../src/generator-dict-gt-norm.xfst --lexical ./dict-gt-yamls/N-Clex_kaarbis_dict-gt-norm.gen.yaml; popd
+
+YAML test 31: generator-dict-gt-norm.xfst + dict-gt-yamls/N-Clex_olmoos_dict-gt-norm.gen.yaml - 0/16/16 FAIL
+
+To rerun with more details, please triple-click, copy and paste the following:
+
+pushd /Users/marjaliisa/main/langs/smn/test/src; /opt/local/bin/python3.3 /Users/marjaliisa/main/gtcore/scripts/morph-test.py -c -i -v -S xerox --app "/usr/local/bin/lookup -flags mbTT" --gen ././../../src/generator-dict-gt-norm.xfst --lexical ./dict-gt-yamls/N-Clex_olmoos_dict-gt-norm.gen.yaml; popd
+
+YAML test 32: generator-dict-gt-norm.xfst + dict-gt-yamls/N-Clex_puasui_dict-gt-norm.gen.yaml - 127/1/128 FAIL
+
+To rerun with more details, please triple-click, copy and paste the following:
+
+pushd /Users/marjaliisa/main/langs/smn/test/src; /opt/local/bin/python3.3 /Users/marjaliisa/main/gtcore/scripts/morph-test.py -c -i -v -S xerox --app "/usr/local/bin/lookup -flags mbTT" --gen ././../../src/generator-dict-gt-norm.xfst --lexical ./dict-gt-yamls/N-Clex_puasui_dict-gt-norm.gen.yaml; popd
+
+YAML test 33: generator-dict-gt-norm.xfst + dict-gt-yamls/N-Clex_tahhee_dict-gt-norm.gen.yaml - 16/0/16 PASS
+YAML test 34: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_aigi_dict-gt-norm.gen.yaml - 609/0/609 PASS
+YAML test 35: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_alga_dict-gt-norm.gen.yaml - 51/0/51 PASS
+YAML test 36: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_alge_dict-gt-norm.gen.yaml - 459/0/459 PASS
+YAML test 37: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_alme_dict-gt-norm.gen.yaml - 18/0/18 PASS
+YAML test 38: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_apina_dict-gt-norm.gen.yaml - 265/0/265 PASS
+YAML test 39: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_avra_dict-gt-norm.gen.yaml - 51/0/51 PASS
+YAML test 40: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_caaci_dict-gt-norm.gen.yaml - 51/0/51 PASS
+YAML test 41: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_fadda_dict-gt-norm.gen.yaml - 137/0/137 PASS
+YAML test 42: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_kieha_dict-gt-norm.gen.yaml - 134/0/134 PASS
+YAML test 43: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_kiela_dict-gt-norm.gen.yaml - 34/0/34 PASS
+YAML test 44: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_kirkko_dict-gt-norm.gen.yaml - 80/0/80 PASS
+YAML test 45: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_kissa_dict-gt-norm.gen.yaml - Traceback (most recent call last):
+  File "/Users/marjaliisa/main/gtcore/scripts/morph-test.py", line 687, in <module>
+    main()
+  File "/Users/marjaliisa/main/gtcore/scripts/morph-test.py", line 678, in main
+    ui = UI()
+  File "/Users/marjaliisa/main/gtcore/scripts/morph-test.py", line 669, in __init__
+    self.test = MorphTest(self.parse_args())
+  File "/Users/marjaliisa/main/gtcore/scripts/morph-test.py", line 252, in __init__
+    self.load_config(self.args.test_file)
+  File "/Users/marjaliisa/main/gtcore/scripts/morph-test.py", line 274, in load_config
+    self.config = TestFile(yaml_load_ordered(open(fn)), args.section)
+  File "/Users/marjaliisa/main/gtcore/scripts/morph-test.py", line 105, in yaml_load_ordered
+    return yaml.load(f, _OrderedDictYAMLLoader)
+  File "/opt/local/Library/Frameworks/Python.framework/Versions/3.3/lib/python3.3/site-packages/yaml/__init__.py", line 72, in load
+    return loader.get_single_data()
+  File "/opt/local/Library/Frameworks/Python.framework/Versions/3.3/lib/python3.3/site-packages/yaml/constructor.py", line 35, in get_single_data
+    node = self.get_single_node()
+  File "/opt/local/Library/Frameworks/Python.framework/Versions/3.3/lib/python3.3/site-packages/yaml/composer.py", line 36, in get_single_node
+    document = self.compose_document()
+  File "/opt/local/Library/Frameworks/Python.framework/Versions/3.3/lib/python3.3/site-packages/yaml/composer.py", line 55, in compose_document
+    node = self.compose_node(None, None)
+  File "/opt/local/Library/Frameworks/Python.framework/Versions/3.3/lib/python3.3/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/opt/local/Library/Frameworks/Python.framework/Versions/3.3/lib/python3.3/site-packages/yaml/composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "/opt/local/Library/Frameworks/Python.framework/Versions/3.3/lib/python3.3/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/opt/local/Library/Frameworks/Python.framework/Versions/3.3/lib/python3.3/site-packages/yaml/composer.py", line 127, in compose_mapping_node
+    while not self.check_event(MappingEndEvent):
+  File "/opt/local/Library/Frameworks/Python.framework/Versions/3.3/lib/python3.3/site-packages/yaml/parser.py", line 98, in check_event
+    self.current_event = self.state()
+  File "/opt/local/Library/Frameworks/Python.framework/Versions/3.3/lib/python3.3/site-packages/yaml/parser.py", line 439, in parse_block_mapping_key
+    "expected <block end>, but found %r" % token.id, token.start_mark)
+yaml.parser.ParserError: while parsing a block mapping
+  in "./dict-gt-yamls/N-lex_kissa_dict-gt-norm.gen.yaml", line 12, column 3
+expected <block end>, but found '<block mapping start>'
+  in "./dict-gt-yamls/N-lex_kissa_dict-gt-norm.gen.yaml", line 30, column 4
+FAIL
+
+To rerun with more details, please triple-click, copy and paste the following:
+
+pushd /Users/marjaliisa/main/langs/smn/test/src; /opt/local/bin/python3.3 /Users/marjaliisa/main/gtcore/scripts/morph-test.py -c -i -v -S xerox --app "/usr/local/bin/lookup -flags mbTT" --gen ././../../src/generator-dict-gt-norm.xfst --lexical ./dict-gt-yamls/N-lex_kissa_dict-gt-norm.gen.yaml; popd
+
+YAML test 46: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_kumppi_dict-gt-norm.gen.yaml - 153/0/153 PASS
+YAML test 47: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_kurkka_dict-gt-norm.gen.yaml - 119/0/119 PASS
+YAML test 48: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_kutka_dict-gt-norm.gen.yaml - 102/0/102 PASS
+YAML test 49: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_kyeli_dict-gt-norm.gen.yaml - 102/0/102 PASS
+YAML test 50: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_laavu_dict-gt-norm.gen.yaml - 391/0/391 PASS
+YAML test 51: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_laigu_dict-gt-norm.gen.yaml - 408/0/408 PASS
+YAML test 52: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_lajo_dict-gt-norm.gen.yaml - 256/0/256 PASS
+YAML test 53: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_maanu_dict-gt-norm.gen.yaml - 85/0/85 PASS
+YAML test 54: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_moola_dict-gt-norm.gen.yaml - 68/0/68 PASS
+YAML test 55: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_nieida_dict-gt-norm.gen.yaml - 119/0/119 PASS
+YAML test 56: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_nijbe_dict-gt-norm.gen.yaml - 112/0/112 PASS
+YAML test 57: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_njamma_dict-gt-norm.gen.yaml - 135/0/135 PASS
+YAML test 58: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_njuhca_dict-gt-norm.gen.yaml - 68/0/68 PASS
+YAML test 59: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_njune_dict-gt-norm.gen.yaml - 153/0/153 PASS
+YAML test 60: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_okko_dict-gt-norm.gen.yaml - 32/0/32 PASS
+YAML test 61: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_piegga_dict-gt-norm.gen.yaml - 17/0/17 PASS
+YAML test 62: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_pudda_dict-gt-norm.gen.yaml - 202/0/202 PASS
+YAML test 63: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_puuvsah_dict-gt-norm.gen.yaml - 7/0/7 PASS
+YAML test 64: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_saaha1_dict-gt-norm.gen.yaml - 17/0/17 PASS
+YAML test 65: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_saami_dict-gt-norm.gen.yaml - 34/0/34 PASS
+YAML test 66: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_sijvo_dict-gt-norm.gen.yaml - 80/0/80 PASS
+YAML test 67: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_solla_dict-gt-norm.gen.yaml - 187/0/187 PASS
+YAML test 68: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_spaha_dict-gt-norm.gen.yaml - 16/0/16 PASS
+YAML test 69: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_taalu2_dict-gt-norm.gen.yaml - 134/0/134 PASS
+YAML test 70: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_taho_dict-gt-norm.gen.yaml - 16/0/16 PASS
+YAML test 71: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_tavlu_dict-gt-norm.gen.yaml - 202/0/202 PASS
+YAML test 72: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_teltta_dict-gt-norm.gen.yaml - 34/0/34 PASS
+YAML test 73: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_vaddu_dict-gt-norm.gen.yaml - 308/0/308 PASS
+YAML test 74: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_vahe_dict-gt-norm.gen.yaml - 70/0/70 PASS
+YAML test 75: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_vaso_dict-gt-norm.gen.yaml - 16/0/16 PASS
+YAML test 76: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_vuaggu_dict-gt-norm.gen.yaml - 526/0/526 PASS
+YAML test 77: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_vuaru_dict-gt-norm.gen.yaml - 16/0/16 PASS
+YAML test 78: generator-dict-gt-norm.xfst + dict-gt-yamls/N-lex_vyehi_dict-gt-norm.gen.yaml - 33/0/33 PASS
+YAML test 79: generator-dict-gt-norm.xfst + dict-gt-yamls/N-plex_skerreeh_dict-gt-norm.gen.yaml - 14/0/14 PASS
+YAML test 80: generator-dict-gt-norm.xfst + dict-gt-yamls/V-3lex_cegattid_dict-gt-norm.gen.yaml - 39/25/64 FAIL
+
+To rerun with more details, please triple-click, copy and paste the following:
+
+pushd /Users/marjaliisa/main/langs/smn/test/src; /opt/local/bin/python3.3 /Users/marjaliisa/main/gtcore/scripts/morph-test.py -c -i -v -S xerox --app "/usr/local/bin/lookup -flags mbTT" --gen ././../../src/generator-dict-gt-norm.xfst --lexical ./dict-gt-yamls/V-3lex_cegattid_dict-gt-norm.gen.yaml; popd
+
+YAML test 81: generator-dict-gt-norm.xfst + dict-gt-yamls/V-3lex_cielattid_dict-gt-norm.gen.yaml - 0/58/58 FAIL
+
+To rerun with more details, please triple-click, copy and paste the following:
+
+pushd /Users/marjaliisa/main/langs/smn/test/src; /opt/local/bin/python3.3 /Users/marjaliisa/main/gtcore/scripts/morph-test.py -c -i -v -S xerox --app "/usr/local/bin/lookup -flags mbTT" --gen ././../../src/generator-dict-gt-norm.xfst --lexical ./dict-gt-yamls/V-3lex_cielattid_dict-gt-norm.gen.yaml; popd
+
+YAML test 82: generator-dict-gt-norm.xfst + dict-gt-yamls/V-3lex_kuikettid_dict-gt-norm.gen.yaml - 0/58/58 FAIL
+
+To rerun with more details, please triple-click, copy and paste the following:
+
+pushd /Users/marjaliisa/main/langs/smn/test/src; /opt/local/bin/python3.3 /Users/marjaliisa/main/gtcore/scripts/morph-test.py -c -i -v -S xerox --app "/usr/local/bin/lookup -flags mbTT" --gen ././../../src/generator-dict-gt-norm.xfst --lexical ./dict-gt-yamls/V-3lex_kuikettid_dict-gt-norm.gen.yaml; popd
+
+YAML test 83: generator-dict-gt-norm.xfst + dict-gt-yamls/V-3lex_mustalid_dict-gt-norm.gen.yaml - 83/23/106 FAIL
+
+To rerun with more details, please triple-click, copy and paste the following:
+
+pushd /Users/marjaliisa/main/langs/smn/test/src; /opt/local/bin/python3.3 /Users/marjaliisa/main/gtcore/scripts/morph-test.py -c -i -v -S xerox --app "/usr/local/bin/lookup -flags mbTT" --gen ././../../src/generator-dict-gt-norm.xfst --lexical ./dict-gt-yamls/V-3lex_mustalid_dict-gt-norm.gen.yaml; popd
+
+YAML test 84: generator-dict-gt-norm.xfst + dict-gt-yamls/V-3lex_pappaattid_dict-gt-norm.gen.yaml - 72/124/196 FAIL
+
+To rerun with more details, please triple-click, copy and paste the following:
+
+pushd /Users/marjaliisa/main/langs/smn/test/src; /opt/local/bin/python3.3 /Users/marjaliisa/main/gtcore/scripts/morph-test.py -c -i -v -S xerox --app "/usr/local/bin/lookup -flags mbTT" --gen ././../../src/generator-dict-gt-norm.xfst --lexical ./dict-gt-yamls/V-3lex_pappaattid_dict-gt-norm.gen.yaml; popd
+
+YAML test 85: generator-dict-gt-norm.xfst + dict-gt-yamls/V-3lex_putestid_dict-gt-norm.gen.yaml - 0/138/138 FAIL
+
+To rerun with more details, please triple-click, copy and paste the following:
+
+pushd /Users/marjaliisa/main/langs/smn/test/src; /opt/local/bin/python3.3 /Users/marjaliisa/main/gtcore/scripts/morph-test.py -c -i -v -S xerox --app "/usr/local/bin/lookup -flags mbTT" --gen ././../../src/generator-dict-gt-norm.xfst --lexical ./dict-gt-yamls/V-3lex_putestid_dict-gt-norm.gen.yaml; popd
+
+YAML test 86: generator-dict-gt-norm.xfst + dict-gt-yamls/V-lex_aigud_dict-gt-norm.gen.yaml - 7/37/44 FAIL
+
+To rerun with more details, please triple-click, copy and paste the following:
+
+pushd /Users/marjaliisa/main/langs/smn/test/src; /opt/local/bin/python3.3 /Users/marjaliisa/main/gtcore/scripts/morph-test.py -c -i -v -S xerox --app "/usr/local/bin/lookup -flags mbTT" --gen ././../../src/generator-dict-gt-norm.xfst --lexical ./dict-gt-yamls/V-lex_aigud_dict-gt-norm.gen.yaml; popd
+
+YAML test 87: generator-dict-gt-norm.xfst + dict-gt-yamls/V-lex_anneed_dict-gt-norm.gen.yaml - 110/26/136 FAIL
+
+To rerun with more details, please triple-click, copy and paste the following:
+
+pushd /Users/marjaliisa/main/langs/smn/test/src; /opt/local/bin/python3.3 /Users/marjaliisa/main/gtcore/scripts/morph-test.py -c -i -v -S xerox --app "/usr/local/bin/lookup -flags mbTT" --gen ././../../src/generator-dict-gt-norm.xfst --lexical ./dict-gt-yamls/V-lex_anneed_dict-gt-norm.gen.yaml; popd
+
+YAML test 88: generator-dict-gt-norm.xfst + dict-gt-yamls/V-lex_caallid_dict-gt-norm.gen.yaml - 178/49/227 FAIL
+
+To rerun with more details, please triple-click, copy and paste the following:
+
+pushd /Users/marjaliisa/main/langs/smn/test/src; /opt/local/bin/python3.3 /Users/marjaliisa/main/gtcore/scripts/morph-test.py -c -i -v -S xerox --app "/usr/local/bin/lookup -flags mbTT" --gen ././../../src/generator-dict-gt-norm.xfst --lexical ./dict-gt-yamls/V-lex_caallid_dict-gt-norm.gen.yaml; popd
+
+YAML test 89: generator-dict-gt-norm.xfst + dict-gt-yamls/V-lex_cuarvud_dict-gt-norm.gen.yaml - 124/11/135 FAIL
+
+To rerun with more details, please triple-click, copy and paste the following:
+
+pushd /Users/marjaliisa/main/langs/smn/test/src; /opt/local/bin/python3.3 /Users/marjaliisa/main/gtcore/scripts/morph-test.py -c -i -v -S xerox --app "/usr/local/bin/lookup -flags mbTT" --gen ././../../src/generator-dict-gt-norm.xfst --lexical ./dict-gt-yamls/V-lex_cuarvud_dict-gt-norm.gen.yaml; popd
+
+YAML test 90: generator-dict-gt-norm.xfst + dict-gt-yamls/V-lex_koccod_dict-gt-norm.gen.yaml - 137/43/180 FAIL
+
+To rerun with more details, please triple-click, copy and paste the following:
+
+pushd /Users/marjaliisa/main/langs/smn/test/src; /opt/local/bin/python3.3 /Users/marjaliisa/main/gtcore/scripts/morph-test.py -c -i -v -S xerox --app "/usr/local/bin/lookup -flags mbTT" --gen ././../../src/generator-dict-gt-norm.xfst --lexical ./dict-gt-yamls/V-lex_koccod_dict-gt-norm.gen.yaml; popd
+
+YAML test 91: generator-dict-gt-norm.xfst + dict-gt-yamls/V-lex_lede_dict-gt-norm.gen.yaml - 29/33/62 FAIL
+
+To rerun with more details, please triple-click, copy and paste the following:
+
+pushd /Users/marjaliisa/main/langs/smn/test/src; /opt/local/bin/python3.3 /Users/marjaliisa/main/gtcore/scripts/morph-test.py -c -i -v -S xerox --app "/usr/local/bin/lookup -flags mbTT" --gen ././../../src/generator-dict-gt-norm.xfst --lexical ./dict-gt-yamls/V-lex_lede_dict-gt-norm.gen.yaml; popd
+
+YAML test 92: generator-dict-gt-norm.xfst + dict-gt-yamls/V-lex_luuhad_dict-gt-norm.gen.yaml - 48/231/279 FAIL
+
+To rerun with more details, please triple-click, copy and paste the following:
+
+pushd /Users/marjaliisa/main/langs/smn/test/src; /opt/local/bin/python3.3 /Users/marjaliisa/main/gtcore/scripts/morph-test.py -c -i -v -S xerox --app "/usr/local/bin/lookup -flags mbTT" --gen ././../../src/generator-dict-gt-norm.xfst --lexical ./dict-gt-yamls/V-lex_luuhad_dict-gt-norm.gen.yaml; popd
+
+SUMMARY for the generating dict-gt-norm fst(s): PASSES: 9186 / FAILS: 1261 / TOTAL: 10447
+XFAIL: run-dict-gt-norm-genyaml-testcases.sh
+===============================================
+1 test behaved as expected (1 expected failure)
+(1 test was not run)
+===============================================
+Making check in tools
+Making check in spellcheckers
+Making check in fstbased
+Making check in hfst
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  check-TESTS
+==================
+All 0 tests passed
+==================
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  check-TESTS
+==================
+All 0 tests passed
+==================
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  check-TESTS
+==================
+All 0 tests passed
+==================
+Making check in mt
+Making check in apertium
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  check-TESTS
+==================
+All 0 tests passed
+==================
+make[4]: Nothing to be done for `check-am'.
+make[3]: Nothing to be done for `check-am'.
+make[2]: Nothing to be done for `check-am'.
+tf4-hsl-m0019:smn marjaliisa$ 
