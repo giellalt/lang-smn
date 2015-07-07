@@ -1,0 +1,36 @@
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+
+Tests:
+
+  Noun - karrii: # MLO, ok 
+    karrii+N+Sg+Nom:  karrii
+    karrii+N+Sg+Gen:  karrii
+    karrii+N+Sg+Acc:  karrii
+    karrii+N+Sg+Ill:  [karriijân, karrij]     
+    karrii+N+Sg+Loc:  karrist 
+    karrii+N+Sg+Com:  karrijn 
+    karrii+N+Sg+Abe:  karriittáá
+    karrii+N+Ess:   	karrin
+    karrii+N+Par:  karrid
+    karrii+N+Pl+Nom:  karriih
+    karrii+N+Pl+Gen:  karrij
+    karrii+N+Pl+Acc:  karrijd
+    karrii+N+Pl+Ill:  karrijd
+    karrii+N+Pl+Loc:  karrijn
+    karrii+N+Pl+Com: karrijguin
+    karrii+N+Pl+Abe: karrijttáá
+
+
+# karrii is a rare word nowadays. Inflection checked with Ilmari Mattus and Matti Morottaja:
+#IM: Eeči tuálvui poccuid karrij.
+#MM: Knows karrij-form but would rather use j: karriijân. Late Lesk-Ant Uulá preferred long forms for Sg Ill. For the system it would be better to use actively karriijân and to accept karrij as Sg Ill (if someone would be able to produce it). 
+
+#Both IM and MM: Karrist lii čääci.
+# MM: produced ess + par with i: karrin, karrid. He advised to use ij for Pl forms, except Pl Nom. 
+
