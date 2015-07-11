@@ -116,7 +116,7 @@ for f in $fsttype; do
 ###### Test comopunds: #######
         sed 's/$/+N+Cmp#litter+N+Sg+Nom/' $comp_lemmas \
             | $lookup_tool $generator_file.$suffix \
-            | cut -f2 | grep -v '^$' | sed '/litter$//' \
+            | cut -f2 | grep -v '^$' | sed 's/litter$//' \
             >> $generated_lemmas.$f.txt
 
         # Hent ut lemmaer fra nouns.lexc som krever sammensetning med
