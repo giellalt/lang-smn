@@ -132,10 +132,11 @@ LIST Interj = Interj ;
 LIST Num = Num ;
 LIST Prop = Prop ;
 
-LIST Mal = Mal ;
-LIST Fem = Fem ;
-LIST Sur = Sur ;
+LIST Sem/Mal = Sem/Mal ;
+LIST Sem/Fem = Sem/Fem ;
+LIST Sem/Sur = Sem/Sur ;
 
+LIST ABBR = ABBR ;
 LIST CS = CS ;
 LIST CC = CC ;
 LIST Pcle = Pcle ;
@@ -143,6 +144,7 @@ LIST CLB = CLB ;
 LIST PUNCT = PUNCT ;
 LIST LEFT = LEFT ;
 LIST RIGHT = RIGHT ;
+LIST COMMA = "," ;
 
 LIST TITLE = "prof" "cand.philol" ;
 
@@ -171,7 +173,11 @@ SET VFIN = Ind OR Imp ;
 LIST INFV = "aelkedh" "båetedh" "edtjedh" "galkedh" "maehtedh" "provhkedh" "sjïdtedh" ; 
 # These are often followed by an infitive. To the set belong also some verbs which are not in the lex: tjoeveridh tjoeredh
 
+SET FIRSTNAME = (Prop Sem/Fem) OR (Prop Sem/Mal) ;
 
+LIST PROP = (N Prop);
+
+SET COMMON-N = N - Prop;
 
 
 # ============== #
@@ -186,6 +192,20 @@ SECTION
 # Cycle 0
 
 REMOVE ("Da" N) IF (0 ("dïhte"));
+
+#!! ! Rules for giving Attr to names, e.g. Ole Attr Kåven.
+
+
+LIST PROP-ATTR = Sem/Mal Sem/Sur Sem/Fem ;
+
+#!! * __PropAttr__ 
+SUBSTITUTE:PropAttr (Sg Nom) (Attr) PROP-ATTR + Nom (NOT 0 Attr LINK *1 PROP-ATTR BARRIER WORD - ABBR OR COMMA)(NEGATE 0 Sem/Sur LINK -1 FIRSTNAME LINK 2 FIRSTNAME LINK 1 Sem/Sur) ;
+SUBSTITUTE:Attr (Sg Nom) (Attr) PROP-ATTR + Nom (NEGATE -1 Prop)(1 ("ja") OR ("dahje") OR ("dehe") LINK 1 (Prop Attr) LINK *1 (N Prop Sem/Sur)) ;
+SUBSTITUTE:Attr (Prop Sem/Mal Sg Nom) (Prop Sem/Mal Attr) ("Hearrá") (1 ("Ipmil")) ;
+	#$ Dá leaba Brita ja Ove Kåven.
+
+#!! Remove unwanted analyses
+REMOVE:divAttr (Prop Allegro Attr) OR (Prop Attr Gen) OR (Prop Attr Acc) OR (Prop Pl Attr) ;
 
 
 # Verbs
@@ -241,7 +261,7 @@ LIST @OBJ = @OBJ ;
 LIST @OPRED = @OPRED ; 
 LIST @PCLE = @PCLE ; 
 LIST @PCLE-COMPL = @PCLE-COMPL ; 
-LIST @PROP> = @PROP> ;
+LIST @>N = @>N ;
 LIST @PrcN> = @PrcN> ; 
 LIST @PronN< = @PronN< ; 
 LIST @PronN> = @PronN> ; 
@@ -263,14 +283,14 @@ MAP (@CC) TARGET CC ;
 MAP (@CS) TARGET CS ;
 
 
-MAP (@PROP>) TARGET (Prop Attr);
+MAP (@>N) TARGET (Prop Attr);
 
 MAP (@INTERJ) TARGET Interj ;
 
 MAP (@PCLE) TARGET Pcle ;
 
   	
-ADD (@TITLE) TARGET TITLE IF (1 Prop LINK 0 Fem OR Mal OR Sur);
+ADD (@TITLE) TARGET TITLE IF (1 Prop LINK 0 PROP-ATTR);
 
 MAP (@DN>) TARGET (Dem Nom) IF (*1 NP-HEAD + Nom BARRIER NPNH);
 MAP (@AN>) TARGET (A Attr) IF (*1 NP-HEAD + Nom BARRIER NPNH);
