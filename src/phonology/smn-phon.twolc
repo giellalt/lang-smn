@@ -338,7 +338,6 @@ t:đ <=> Vow: _  (ˊ:) k4: (%^RC:) WeakGrade ; !for ito : iđo
         Vow: _  %^RC:   j RealVow: %^WG:0 %^CLEN:0 %^SVLOW:0 ; ! Com
         Vow: _ (%^RC:) (j) WeakGrade (%^CLEN:0) ;
         Vow: _  %^RC:   j RealVow:  %^CLEN:0 ; ! Par and Ess
-        Vow: _  t:  RealVow: Cns  %^EWG:0 ; ! njuottâs:njuođâs
 
 
 !€ jo^RVtk4â^WG^RLEN>
@@ -370,13 +369,16 @@ k:0 <=> Vow: [l | r | v | i4: | đ ] (ˊ:) _ k4:h  WeakGrade (%^CLEN: ) (%^SVLOW
 
 
 "t4:đ gradation for tt4" 
-!! * __@RULENAME@__ \\  ruttâ ruuđâ
-t4:đ <=> t: _ WeakGrade ;
-
+!! * __@RULENAME@__ 
+t4:đ <=> t: (ˊ:) _ WeakGrade ; !! 1) ruttâ ruuđâ
+         t: (ˊ:) _ Vow:+ %^EWG: ; !! 2) tietˊtu tieđâ
 !€ ru^RVtt4â^WG^RLEN>
 !€ ruu0đâ00>
 
-        
+ 
+"t:0 foran t4" 
+!! * __@RULENAME@__ 
+t:0 <=> _ (ˊ:) t4: Vow:+ %^EWG: ; !! 1) tietˊtu tieđâ        
 
 !rejected:       
 !€ haavvâr^CSH^RVSH>ist
@@ -641,39 +643,39 @@ Cx:Cy <=> Vow: _ (:ˊ) %^RC: :Vow (%^SV:) %^WG: (%^RVSH:) %^CLEN: ([%^SVLOW: |%^
 
 
 "From exstra strong to weak, part 1 cc:s, rr:r"
-Cy:0 <=>  Cx: (ˊ:0) _  Vow:+ (Cns) (%^ÁI:) %^EWG:  ([%^RVSH:|%^RLEN:]) %> ; !! poccuu:puásui  kiepˊpu:kiepâ iäbˊbár%^ÁI cuobˊbuu:cuábui
-!          Cx: (ˊ:0)  _ Vow:+ (Cns) (%^ÁI:)  %^EWG: ([%^RVSH:|%^RLEN:]) %> ; ! cuobˊbuu:cuábui
+Cy:0 <=>  Cx: (ˊ:0) _  Vow:+ (Cns) (%^ÁI:) %^EWG:  ([%^RVSH:|%^RLEN:]) [%>|.#.] ; !! poccuu:puásui  kiepˊpu:kiepâ iäbˊbár%^ÁI cuobˊbuu:cuábui
+!          Cx: (ˊ:0)  _ Vow:+ (Cns) (%^ÁI:)  %^EWG: ([%^RVSH:|%^RLEN:]) [%>|.#.] ; ! cuobˊbuu:cuábui
        where Cx in ( b c đ g h l n r t p p  đ  n  r ) 
              Cy in ( b c đ g h l n r t p p4 đ7 n7 r7 ) 
         matched ;
 
 "From exstra strong to weak, remove ˊ "
-ˊ:0 <=>  Cx: _  Cy: Vow:+ (Cns) (%^ÁI:)  %^EWG: ([%^RVSH:|%^RLEN:]) %> ; !viäsˊkár%^ÁI kuo%^RDk4ˊsu kuo%^RDk4ˊsu
-       where Cx in  ( k4 b l l t p h s r r n n) 
-              Cy in ( s  b l g t p h k v m n n7) 
+ˊ:0 <=>  Cx: _  Cy: Vow:+ (Cns) (%^ÁI:)  %^EWG: ([%^RVSH:|%^RLEN:]) [%>|.#.] ; !viäsˊkár%^ÁI kuo%^RDk4ˊsu kuo%^RDk4ˊsu
+       where Cx in  ( k4 b l l t p h s r r n n  t) 
+              Cy in ( s  b l g t p h k v m n n7 t4) 
         matched ;
 
 
 "From exstra strong to weak, part 2"
-Cx:Cy <=>   _ (ˊ:) Cz:  Vow:+ (Cns) (%^ÁI:) %^EWG: ([%^RVSH:|%^RLEN:]) %> ; !! 1) poccuu:puásui  páápp4ár%^ÁI
-!            _  ˊ: s Vow:+  (%^ÁI:) %^EWG: (%^RVSH:|%^RLEN:) %> ; !! 2) kuo%^RDk4ˊsu:kuávsui
-        where Cx in ( c k4 h p h4 ) 
-              Cy in ( s v  ṿ v v) 
-              Cz in ( c s  h p4 t) 
+Cx:Cy <=>   _ (ˊ:) Cz:  Vow:+ (Cns) (%^ÁI:) %^EWG: ([%^RVSH:|%^RLEN:]) [%>|.#.] ; !! 1) poccuu:puásui  páápp4ár%^ÁI
+!            _  ˊ: s Vow:+  (%^ÁI:) %^EWG: (%^RVSH:|%^RLEN:) [%>|.#.] ; !! 2) kuo%^RDk4ˊsu:kuávsui
+        where Cx in ( c k4 h p  h4 ) 
+              Cy in ( s v  ṿ v  v  ) 
+              Cz in ( c s  h p4 t  ) 
         matched ;
 
 "In front of %^EWG – i4j:j"
-i4:0 <=>   _ j  Vow:+ (Cns)  %^EWG: ([%^RVSH:|%^RLEN:]) %> ; ! poijuu:puájui  va%^RVi4jâs
+i4:0 <=>   _ j  Vow:+ (Cns)  %^EWG: ([%^RVSH:|%^RLEN:]) [%>|.#.] ; ! poijuu:puájui  va%^RVi4jâs
 
 
 !! !Other consonant rules
 
 "xˊx7:xˊx and xx7:xx" 
 !! * __@RULENAME@__ \\   
-Cx:Cy <=> Vow:  Cy (ˊ:) _  Vow: (Cns) (%^CLEN:) %> ;
+Cx:Cy <=> Vow:  Cy (ˊ:) _  Vow: (Cns) (%^CLEN:) [%>|.#.] ;
 		  Vow:  Cy (ˊ:) _  Vow: %^WG:  %^CLEN:  ;
-		  Vow:  Cy (ˊ:) _  Vow: %^SV: %^WG: %^CLEN: %^SLEN: %> ;
-		  Vow:  _ (ˊ:) Cy j Vow:+ Cns (%^RLEN:) (%^CSH:)  %>  ; !vi%^RVn7njooh
+		  Vow:  Cy (ˊ:) _  Vow: %^SV: %^WG: %^CLEN: %^SLEN: [%>|.#.] ;
+		  Vow:  _ (ˊ:) Cy j Vow:+ Cns (%^RLEN:) (%^CSH:)  [%>|.#.]  ; !vi%^RVn7njooh
 	where Cx in ( l7 n7 s7 š7 r7 m7 v7 đ7) 
 	      Cy in ( l  n  s  š  r  m  v  đ)
 		  matched ;
@@ -839,13 +841,13 @@ u:o <=>   _  %^RV: Cns:+ u:o %^SV: %^WG: %^SLEN:  %^SVLOW:  [%>|.#.]  ;
 
 
 "Shortening diphthong"
-!! * __@RULENAME@__ \\ RD to ˊ muátu muáˊđoost  mie%^RDlˊgâs
+!! * __@RULENAME@__ \\ RD to ˊ muátu muáˊđoost  mie%^RDlˊgâs čiermih
 %^RD:ˊ <=> _ Cns:+ Vow: (Cns) (%^SV:) %^WG: %^RVSH: ; !! 1)
             Vow: _ Cns:+ Vow: (Vow:) Cns: (Cns:) [%^CSH:|%^RVSH:]  (%^SVSH:) [%>|.#.] ; !! 2) iäláán : iäˊḷánân
             _ Cns:0 Cns Vow:+ Cns:+ %^RLEN:0 %^CSH:0 %> ; !! 3) for  l and g as part of cosonant patterns ll:l and gg:g
             _ Cns:+ Vow:  (%^SV:) Cns: %^SC: %^RVSH: %^CSH: %> ; !! 3) siämmun siäˊṃunân
             _ Cns:+ Vow: %^EWG: %^RVSH: %> ; !! 4) poccu : puáˊsujin 
-            _ Cns:+ Vow:+ Cns:+ Vow: Cns: %^RVSH: %> ; !! 5) čuoˊṿânem  suo%^RDnjârd
+            _ Cns:+ Vow:+ Cns:+ (Vow:) (Cns:) %^RVSH: %> ; !! 5) čuoˊṿânem  suo%^RDnjârd
 
 
 ! RV still does not give as good result as RD.
@@ -1106,7 +1108,7 @@ Vx:0 <=> _ Vx: Cns:+ (%^CSH:|%^WG:) %^SVSH: %> ; !eemeed : emedân
 
 "Stem vowel u:0 in front of â"
 !! * __@RULENAME@__ \\ aiguu:aaigâ
-u:0 <=> _ â %^EWG: ([%^RVSH:|%^RLEN:]) %>  ; 
+u:0 <=> _ â %^EWG: ([%^RVSH:|%^RLEN:])   ; 
 
 
 !Rejected, look at this:    
