@@ -255,6 +255,8 @@ Cx:0 <=> Vow: _ (ˊ:) Cy: (%^RC:) WeakGrade (%^RLEN:) (%^SVLOW:) %> ; !! 1) weak
 	      Cy in ( h4 h4 t4 k4 p4  l7 n7 s7 r7 š7 m7 v7  đ7)
 		  matched ;
 
+!čapp4o%^SVs
+
 "č:0 in čč4:j,  part 1" 
 !! * __@RULENAME@__ \\   
 č:0 <=> Vow: _ (ˊ:) č4: (%^RC:) WeakGrade (%^RLEN:) (%^SVLOW:) %> ; !! 1) weak grade: luččâ:luučân
@@ -278,6 +280,8 @@ Cx:Cy <=> Vow:  Cz: (ˊ:) _  WeakGrade (%^RLEN:) (%^SVLOW:) %> ; !! 1) weak grad
 %^RV:ˊ <=> [Vow: - e:] _ Cns: (%^RC:)  [e: | o: | a: | á: ] (%^WG:|%^EA:)    %> ; ! eRV ->e' ? iˊṣ̌e vaˊhe
                        _ Cns:+  WeakGrade   %> ; !laŋkku laˊŋkuttáá
                   Vow: _ Cns:+  Vow:  [%^WG: | %^EWG:] %^RVSH: (%^SVLOW:) [%>|.#.] ;
+                  Vow: _ Cns:+  Vow: %^SV: Cns %^EWG: %^RVSH:  [%>|.#.] ;
+                  Vow: _ Cns:+  Vow:  %^SV: Cns %^RVSH: %^CSH:  %> ;
                   Vow  _ Cns: Cns: (j) Vow: Vow Cns %^CSH: %^SVSH: %> ; !kilgool kiˊlgolân kolgooh koˊlgoohijn vinnjoo	
 
 !                  shorter   shortest           long
@@ -293,8 +297,14 @@ Vy:ˊ <=> Vx: _ [Cns: - č: ] Cns:* (%^RC:) Vow:  %^WG: %^RVSH: (%^SVLOW:) [%>|.
          Vx: _  Cns:+         Vow:  Cns: %^RVSH: %^CSH: %^SVSH: [%>|.#.] ; !! 2) 3st stems kaavpug:kaˊvpugân 
          Vx: _ Cns:+ Vow: (%^SV:) Cns:+ Vow: Cns:  %^RVSH: [%>|.#.] ; !táálhudem koomerdem
        where Vx in ( a e i o u y á ä ) 
-             Vy in ( a e i o u y á ä ) 
+             Vy in ( a e i o u y á ä) 
        matched ;
+
+"From ij7 to ˊj"
+!! * __@RULENAME@__ \\ 
+i:ˊ <=>  Vow: _ j  Vow: %^SV: Cns %^EWG: %^RVSH:  [%>|.#.] ; !! 1) saijos:saˊjos
+         Vow: _ j  Vow:  %^SV: Cns %^RVSH: %^CSH:  %> ; !! 2) saijos:saˊj̣osin
+
 
 "Long vowel shortening, č:j̣ "
 !! * __@RULENAME@__ \\ special rule for getting ej̣ittáá instead of eˊj̣ittáá.
@@ -535,8 +545,9 @@ Cx:Cy <=> Vow: _ %^RC: :Vow              %^CLEN:      %> ;
 "Lengthening of half-long root consonant j7:j 1"
 !! * __@RULENAME@__ \\  for l-dot to ll, changing l7 to first l in ll
 j7:j <=>  Vow: _ %^RC: :Vow %^SV: %^WG:  %^CLEN: %^SLEN: %> ; !Loc  
-          Vow: _ %^RC: :Vow       %^WG:  %^CLEN: (%^SVLOW:)   %> ; !Com  %^WG%^CLEN
-         !Vow: _ %^RC: :Vow              %^CLEN:      %> ;
+          Vow: _ %^RC: :Vow       %^WG:  %^CLEN: (%^SVLOW:)   %> ; 
+         _ Vow: %^SV: Cns %^EWG: %^RVSH: ;
+ 
          
 "Lengthening root consonant j7:ij 1"
 !! * __@RULENAME@__ \\  for saje:saijeen
@@ -865,7 +876,7 @@ u:o <=>   _  %^RV: Cns:+ u:o %^SV: %^WG: %^SLEN:  %^SVLOW:  [%>|.#.]  ;
 "Monophthongisation rule i:e"
 !! * __@RULENAME@__ \\  
 Vx:Vy <=> _ Vz: Cns:* i %^WG: %> i: ;  
-          _ Vz: Cns:* Vow: Cns %^ÁI: [%^WG:|%^EWG:] ([%^RLEN:|%^RVSH:]) [%>|.#.]  ; !viäskár veeskir viäsˊkár%^ÁI%^EWG%^RLEN
+          _ Vz: Cns:* Vow: Cns %^ÁI: [%^WG:|%^EWG:] ([%^RLEN:|%^RVSH:]) [%>|.#.]  ; !! 1)viäskár veeskir iäbˊbár eebir 
 !         _ Vz:0 %^RD: Cns:* i %^WG: %^CLEN: %^SVLOW: %> i:  ; 
 	where Vx in ( i )
 		  Vy in ( e )
