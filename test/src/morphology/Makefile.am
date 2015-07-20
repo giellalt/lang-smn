@@ -26,6 +26,7 @@ endif # WANT_GENERATION
 XFAIL_TESTS=generate-comsg-nouns.sh  \
 			generate-noun-lemmas.sh       \
 			generate-adjective-lemmas.sh       \
+			generate-verb-lemmas.sh       \
 			generate-propernoun-lemmas.sh
 
 
