@@ -304,9 +304,9 @@ i4:ˊ <=>  Vow: _ j7:  Vow:+ Cns [%^EWG:|%^WG:] %^SVSH:  [%>|.#.] ; !! 1) saijos
 "Long vowel shortening, č:j̣ "
 !! * __@RULENAME@__ \\ special rule for getting ej̣ittáá instead of eˊj̣ittáá.
 Vy:0 <=> Vx: _ č: (%^RC:) Vow:  %^WG: %^RVSH: (%^SVLOW:) [%>|.#.] ; !! 1) 2st stems
-       where Vx in ( a e i o u y á ä ) 
-             Vy in ( a e i o u y á ä ) 
-       matched ;
+     where Vx in ( a e i o u y á ä ) 
+           Vy in ( a e i o u y á ä ) 
+     matched ;
 
 
 "Underlying long vowel shortening iä:eˊ"
@@ -550,13 +550,13 @@ j7:i <=> Vow: _ %^RC: :Vow (%^RVSH:)  %^CLEN:         %> ; !Par Ess
 !€ pááj7^RCá^CLEN>n
 !€ pááijá0>n
 
-"Lengthening of half-long root consonant n7 : nn 2"
+"Lengthening of half-long root consonant x7 : xx 2"
 !! * __@RULENAME@__ \\   for l-dot to ll, changing ^RC to second l in ll  muáđoin
 %^RC:Cy <=> Vow: Cx: _ :Vow  %^CLEN:   %> ; !
             Vow: Cx: _ :Vow %^SV: %^WG:  %^CLEN: %^SLEN:  %> ;
             Vow: Cx: _ :Vow  %^WG:  %^CLEN: (%^SVLOW:)   %> ; !Com  %^WG%^CLEN
             Vow: Cx: _ :Vow %^SV: %^CLEN: %^SLEN:  %>  ; !Par Ess
-            Vow: Cx: _  Vow:+ Cns:+ Vow: Cns: %^SFV: (%^RLEN:) %^CLEN:  ; !! 5) čuovvânmijn 
+            Vow: Cx: _  Vow:+ Cns:+ Vow: Cns: %^SFV: (%^RLEN:) %^CLEN:  ; !! 5) čuovânem:čuovvânmijn 
 	where Cx in ( l7 r7 s7 h7 m7 n7 đ7 v7 ŋ7 j7 š7 )
 		  Cy in ( l  r  s  h  m  n  đ  v  ŋ  j  š  ) 
 		  matched ;
@@ -691,8 +691,11 @@ Cx:Cy <=> Vow:  Cy (ˊ:) _  Vow: (Cns) (%^ÁE:) (%^CLEN:) [%>|.#.] ;
 
 "Assimilation of root consonant t"
 !! * __@RULENAME@__  delet t in front of -ttáá, avoid -tttáá
-t:0  <=> _ (%^RLEN:) (%^CSH:) %> t t ; 
-        i t _ e:0 m ; ! vajoiditmáin
+Cx:0  <=> _ (%^RLEN:) (%^CSH:) %> Cy Cy ; 
+        Vow Cy _ [â:|e:] m %^SFV: ; ! vajoidittem vajoiditmáin
+	where Cx in ( d t š) 
+	      Cy in ( d t š)
+		  matched ;
 
 !€ haamit>ttáá
 !€ haami0>ttáá
@@ -1051,7 +1054,7 @@ i:0 <=> Vow _ n j ([%^CSH: |%^RLEN:] ) %^SVSH: [%>|.#.] ;
 
 "Limes vowel deletion"
 !! * __@RULENAME@__ \\ 
-Vx:0 <=> Cns _ Cns %^SFV: ; 
+Vx:0 <=> Cns: _ Cns %^SFV: ; 
        where Vx in ( e â ) ;
 
 
