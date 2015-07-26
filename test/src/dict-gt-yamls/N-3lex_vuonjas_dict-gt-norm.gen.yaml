@@ -1,0 +1,28 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-dict-gt-norm.hfst
+    Morph: ../../../src/analyser-dict-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-dict-gt-norm.xfst
+    Morph: ../../../src/analyser-dict-gt-norm.xfst
+    App: lookup
+
+Tests:
+
+  Noun - vuonjâš: # Checked with Matti Morottaja & Pekka Sammallahti; double čč should be the 1st form; č at least accepted, also recommended, if possible 
+    vuonjâš+N+Sg+Nom: vuonjâš
+    vuonjâš+N+Sg+Gen: vuonnjâš
+    vuonjâš+N+Sg+Acc: vuonnjâš
+    vuonjâš+N+Sg+Ill: [vuoˊnjâččân, vuoˊnjâčân]
+    vuonjâš+N+Sg+Loc: [vuoˊnjâččist, vuoˊnjâčist]
+    vuonjâš+N+Sg+Com: [vuoˊnjâččáin, vuoˊnjâčáin]
+    vuonjâš+N+Sg+Abe: vuonnjâšttáá
+    vuonjâš+N+Ess: vuoˊnjâččin
+    vuonjâš+N+Par: vuoˊnjâččid
+    vuonjâš+N+Pl+Nom: [vuoˊnjâččeh, vuoˊnjâčeh]
+    vuonjâš+N+Pl+Gen: [vuoˊnjâččij, vuoˊnjâčij]
+    vuonjâš+N+Pl+Acc: [vuoˊnjâččijd, vuoˊnjâčijd]
+    vuonjâš+N+Pl+Ill: [vuoˊnjâččáid, vuoˊnjâčáid]
+    vuonjâš+N+Pl+Loc: [vuoˊnjâččijn, vuoˊnjâčijn]
+    vuonjâš+N+Pl+Com: [vuoˊnjâččijguin, vuoˊnjâčijguin]
+    vuonjâš+N+Pl+Abe: [vuoˊnjâččijttáá, vuoˊnjâčijttáá]
