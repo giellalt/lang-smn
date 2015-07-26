@@ -229,8 +229,8 @@ Cx:0 <=> Vow: _ (ˊ:) Cx: WeakGrade ([%^RVSH: |%^RLEN:]) ([%^SVLOW: | %^SLEN:]) 
 
 "ˊ to zero gradation"
 !! * __@RULENAME@__ \\ when weak grade or consonant shortening 
-ˊ:0 <=> Vow: Cns: _ Cns:+  WeakGrade \%^CLEN:   ; ! ([%^RLEN: | %^RVSH:] ) [%>|.#.]  ;  !! 1) weak grade, mie%^RDlˊgâs
-        Vow: Cns: _ Cns:+  Vow: (%^EA:)  %^CSH: ; ! (%^RLEN:)  [%>|.#.]  ; !!  2) consonant shortening for illativ
+ˊ:0 <=> Vow: Cns: _ Cns:+  WeakGrade \%^CLEN:   ; !! 1) weak grade, mie%^RDlˊgâs
+        Vow: Cns: _ Cns:+  Vow: (%^EA:)  %^CSH: ; !!  2) consonant shortening for illativ
         Vow: č:   _ č4: WeakGrade %^CLEN: %^SVLOW: %> ; !! 3) weak grade and consonant lengthning, kiäčˊču kiäj̣u 
         Vow: RealVow:0 %^RD:  Cns:  _ Cns:+  WeakGrade %^CLEN: %^SVLOW: %> ; !! 4) uábˊbi:obbijn
 
@@ -264,9 +264,9 @@ Cx:Cy <=> Vow:  Cz: (ˊ:) _  WeakGrade  ; !! 1) weak grade:
 
 "RV:ˊ in weak grade or root vowel shortening"
 !! * __@RULENAME@__ \\  saˊj̣e 
-%^RV:ˊ <=>          _ Cns:+  WeakGrade   %> ; !laŋkku laˊŋkuttáá lá%^RVbbás%^ÁI%^WG%^RVSH%>in
-                    _ Cns:+ Vow: (Cns) (Triggers: - %^RLEN:)*   %^RVSH: (%^CLEN:) (%^SVLOW:) %> ; !si%^RVjvo%^WG%^RVSH%^CLEN%>in
-                  Vow  _ Cns:+ (j) Vow:+ Cns [%^CSH:|%^WG: | %^EWG:] %^SVSH: %> ; !kilgool kiˊlgolân kolgooh koˊlgoohijn vinnjoo	a%^RVlmoos
+%^RV:ˊ <=>  _ Cns:+  WeakGrade   %> ; !
+            _ Cns:+ Vow: (Cns) (Triggers: - %^RLEN:)*   %^RVSH: (%^CLEN:) (%^SVLOW:) %> ; !si%^RVjvo%^WG%^RVSH%^CLEN%>in
+       Vow  _ Cns:+ (j) Vow:+ Cns [%^CSH:|%^WG: | %^EWG:] %^SVSH: %> ; !kilgool kiˊlgolân kolgooh koˊlgoohijn vinnjoo	a%^RVlmoos
 
 
 "Long vowel shortening (no consonant shortening)"
@@ -500,10 +500,8 @@ Cx:Cy <=> Vow: _ %^RC: :Vow Seg:* Triggers:* %^CLEN: ;
 
 "Lengthening of half-long root consonant j7:j 1"
 !! * __@RULENAME@__ \\  
-j7:j <=>  !Vow: _ %^RC: :Vow %^SV: %^WG:  %^CLEN: %^SLEN: %> ; !Loc  
-          !Vow: _ %^RC: :Vow       %^WG:  %^CLEN: (%^SVLOW:)   %> ; 
-         i4: _ Vow:+ Cns %^EWG: (%^SVSH:) [%>|.#.] ;
-         i4: _ Vow:+ Cns ( %^SVSH:) [%>|.#.] ;
+j7:j <=> i4: _ Vow:+ Cns (%^EWG:) (%^SVSH:) [%>|.#.] ;
+!         i4: _ Vow:+ Cns ( %^SVSH:) [%>|.#.] ;
  
          
 "Lengthening root consonant j7:ij 1"
@@ -753,7 +751,7 @@ Vx:0 <=> Vy _ %^EE: ;
 "Root vowel ä:ää lenghtening"
 !! * __@RULENAME@__ \\ special rule, for avoiding conflict
 %^RV:ä <=> ä _ Cns:+ Vow:+ Cns:+ Vow: Cns: %^SFV: %^RLEN: %^CLEN: ; !! 5) vä%^RVr7%^RCid
-           á: _ Cns:* :i (%^SV:) Cns: %^ÁI: (%^FCD:) [%^EWG:|%^WG:] %^RLEN: [%>|.#.] ;
+           á:ä _ Cns:* :i (%^SV:) Cns: %^ÁI: (%^FCD:) [%^EWG:|%^WG:] %^RLEN: [%>|.#.] ;
 
 
 "Root vowel lengtning with vowel change before suffix i"
@@ -775,7 +773,7 @@ Vx:0 <=> Vy _ %^EE: ;
 "Root vowel change for á to ä with i in second syllable"
 !! * __@RULENAME@__ \\  päävir já%^RVh4h4á%^SVl%^ÁI%^EWG%^RLEN%>
 á:ä <=>    _ [á:|%^RV:] Cns:* :i (%^SV:) Cns: %^ÁI: [%^EWG:|%^WG:] [%^RLEN:|%^RVSH:] [%>|.#.] ; !! 1) pááppár:päävir
-        á: _    Cns:* :i (%^SV:) Cns: %^ÁI: %^EWG: %^RLEN: [%>|.#.] ;  !! 2) pááppár:päävir
+        á:ä _    Cns:* :i (%^SV:) Cns: %^ÁI: %^EWG: %^RLEN: [%>|.#.] ;  !! 2) pááppár:päävir
          _  á: Cns:+ Vow: Cns  %^ÁI:  %^WG:  %^RVSH:  %> i  ; !! 3) pááppár:pävirin
 
 !rejected, look at this:
@@ -1062,7 +1060,7 @@ u:o <=> Cns: _ ([%^EWG:|%^SV:]) (%^WG:) (%^RVSH:) (%^RLEN:|%^CLEN:) (%^SLEN:) %^
 
 "Second vowel shortening in 3syll consonant stems"
 !! * __@RULENAME@__ \\ eemeed : emedân
-Vx:0 <=> _ Vx: Cns:+ (%^CSH:|%^WG:|%^EWG:) %^SVSH: %> ; !eemeed : emedân sai4j7oos
+Vx:0 <=> _ Vx: (Cns:+) (%^CSH:|%^WG:|%^EWG:) %^SVSH:  ; !eemeed : emedân sai4j7oos
     where Vx in ( e o a á u i ) ;
 
 !eemeed:emedân
@@ -1074,13 +1072,10 @@ Vx:0 <=> _ Vx: Cns:+ (%^CSH:|%^WG:|%^EWG:) %^SVSH: %> ; !eemeed : emedân sai4j7
 !€ kappeer^CSH^SVSH>ân
 !€ ka0p0er00>ân
 
-"Stem vowel u:0 in front of â"
+"Stem vowel u:0 in front of â and u"
 !! * __@RULENAME@__ \\ aiguu:aaigâ
 u:0 <=> _ â %^WG: ([%^RVSH:|%^RLEN:])   ; 
-
-"Stem vowel o:0 in front of u"
-!! * __@RULENAME@__ \\ kuččo>um to kuččum
-u:0 <=> _ %^CSH: %> u   ; 
+       _ %^CSH: %> u   ;
 
 ! this rule should be generalised, we talk about a ban on o>u strings
 
@@ -1100,7 +1095,6 @@ u:0 <=> _ %^CSH: %> u   ;
 %^SV:Vx <=> Vx:  _  [NotSuffixBorder: - %^EWG: ]* %^SLEN: %^SVLOW:  %> ;
         where Vx in ( á o e a i ) ; ! 
 
-!luá%^RDmm7á%^SVn%^FCD%^EWG%^SLEN
 
 "Suffix vowel lengthening SV:e"
 !! * __@RULENAME@__
