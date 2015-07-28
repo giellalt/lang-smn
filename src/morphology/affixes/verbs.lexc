@@ -67,8 +67,8 @@ LEXICON EVEN_IND_ED
 +Prs+Sg3:á K ;             
 +Prs+Du1:e%^CLEN%>en K ;   
 +Prs+Du2:%^CSH%>vettee K ; 
-+Prs+Du3:â%>v K ;          
-+Prs+Pl1:â%>p K ;          
++Prs+Du3:i%>v K ;          
++Prs+Pl1:i%>p K ;          
 +Prs+Pl2:â%^CSH%>vetteđ K ;
 +Prs+Pl3:e%^CSH%>h K ;     
 
@@ -86,20 +86,20 @@ LEXICON EVEN_IND_ED
 
 LEXICON 2SYLL_ID  !!= * __@CODE@__
 +V:i  VINFINITES ;
-+V+Ind:i EVEN_IND_ID ;
++V+Ind: EVEN_IND_ID ;
 +V+Pot:i EVEN_POT ;
 +V+Cond:i%^WGčč EVEN_COND ;
 
 LEXICON EVEN_IND_ID
-+Prs+Sg1:â%^WG%>m K ;      
-+Prs+Sg2:а%^WG%>h K ;      
-+Prs+Sg3:á K ;             
++Prs+Sg1:á%^WG%>m K ;      
++Prs+Sg2:á%^WG%>h K ;      
++Prs+Sg3:á%^CSH K ;             
 +Prs+Du1:e%^CLEN%>en K ;   
-+Prs+Du2:%^CSH%>vettee K ; 
-+Prs+Du3:â%>v K ;          
-+Prs+Pl1:â%>p K ;          
-+Prs+Pl2:â%^CSH%>vetteđ K ;
-+Prs+Pl3:e%^CSH%>h K ;     
++Prs+Du2:i%^CSH%>vettee K ; 
++Prs+Du3:i%>v K ;          
++Prs+Pl1:i%>p K ;          
++Prs+Pl2:i%^CSH%>vetteđ K ;
++Prs+Pl3:i%^CSH%>h K ;     
 
 +Prt+Sg1:i%>m K ;
 +Prt+Sg2:i%>h K ;
@@ -441,7 +441,9 @@ LEXICON COKKAD  !!= * __@CODE@__
 +V: VINF_SHORT_VOW ;
 +V:á VINF_LONG_VOW ;
 +V+Cond:áčč EVEN_COND ;
-+V+Pot:áž EVEN_POT ;
++V+Pot:á CONTR_POT ;
++V+Imprt:á CONTR_IMPRT ;
+
 +V+Ind+Prs+Sg1:%>ám K ;
 +V+Ind+Prs+Sg2:%>áh K ;
 +V+Ind+Prs+Sg3:%>á K ;
@@ -468,7 +470,9 @@ LEXICON PALLAD !!= * __@CODE@__
 +V: VINF_SHORT_VOW ;
 +V:a VINF_LONG_VOW ;
 +V+Cond:ačč EVEN_COND ;
-+V+Pot:až EVEN_POT ;
++V+Pot:a CONTR_POT ;
++V+Imprt:a CONTR_IMPRT ;
+
 +V+Ind+Prs+Sg1:%>am K ;
 +V+Ind+Prs+Sg2:%>ah K ;
 +V+Ind+Prs+Sg3:%>a K ;
@@ -495,7 +499,8 @@ LEXICON TUHHID !!= * __@CODE@__
 +V: VINF_SHORT_VOW ;
 +V:i VINF_LONG_VOW ;
 +V+Cond:ičč EVEN_COND ;
-+V+Pot:iž EVEN_POT ;
++V+Pot:i CONTR_POT ;
++V+Imprt:i CONTR_IMPRT ;
 +V+Ind+Prs+Sg1:%>im K ;
 +V+Ind+Prs+Sg2:%>ih K ;
 +V+Ind+Prs+Sg3:%>e K ;
@@ -522,7 +527,8 @@ LEXICON RAMMUD !!= * __@CODE@__
 +V:u VINF_LONG_VOW ;
 
 +V+Cond:učč EVEN_COND ;
-+V+Pot:už EVEN_POT ;
++V+Pot:u CONTR_POT ;
++V+Imprt:u CONTR_IMPRT ;
 
 +V+Ind+Prs+Sg1:%>um K ;
 +V+Ind+Prs+Sg2:%>uh K ;
@@ -543,6 +549,39 @@ LEXICON RAMMUD !!= * __@CODE@__
 +V+Ind+Prt+Pl1:%>im  K ;
 +V+Ind+Prt+Pl2:%>id  K ;
 +V+Ind+Prt+Pl3:%>jii  K ;
+
+
+
+LEXICON CONTR_POT !!= * __@CODE@__
++Sg1:%>žeem K ;
++Sg2:%>žeeh K ;
++Sg3:%>š K ;
++Du1:%>žeen K ;
++Du2:%>švettee K ;
++Du3:%>žává K ;
++Pl1:%>žep K ;
++Pl2:%>švetteđ K ;
++Pl3:%>žeh K ;
+
+LEXICON CONTR_IMPRT
++Sg1:%>jum # ;
++Sg2:%> # ;
++Sg3:%>jus # ;
++Du1:%>joon # ;
++Du2:%>jee # ;
++Du3:%>jus # ;
++Pl1:%>jop # ;
++Pl2:%>đ # ;
++Pl3:%>jus # ;
+
+
+
+
+
+
+
+
+
 
 !! !!Intermediate suffix lexica
 ! --------------------------
@@ -652,16 +691,17 @@ LEXICON EVEN_I_PRT
 +Pl3:%^RLEN%>ii K ;
 
 
+
 LEXICON EVEN_POT !!= * __@CODE@__
-+Sg1:%>eem K ;
-+Sg2:%>eeh K ;
-+Sg3: K ;
-+Du1:%>een K ;
-+Du2:%>vettee K ;
-+Du3:%>uv K ;
-+Pl1:%>ep K ;
-+Pl2:%>vetteđ K ;
-+Pl3:%>eh K ;
++Sg1:%>žeem K ;
++Sg2:%>žeeh K ;
++Sg3:%>š K ;
++Du1:%>žeen K ;
++Du2:%>švettee K ;
++Du3:%>žuv K ;
++Pl1:%>žep K ;
++Pl2:%>švetteđ K ;
++Pl3:%>žeh K ;
 
 LEXICON EVEN_COND
 +Sg1:%>im K ;
