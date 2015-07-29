@@ -34,10 +34,10 @@ Literal quotes and angles must be escaped (cf morpheme boundaries further down):
 
 
  * p4:p  t4:t k4:k č4:č r4:r l4:l h4:h     these are consonants that change in cg
- * i4:i                     	          this is the underlying i consonant
+ * i4:i        i2:i             	          this is the underlying i consonant
  * m7:ṃ n7:ṇ ŋ7:ŋ̣ s7:ṣ r7:ṛ đ7:đ̣ l7:ḷ      
   j7:j̣ h7:ḥ š7:ṣ̌  v7:ṿ                    with dots
- * h5:h  y5:y i5:i                         these do not change 
+ * h5:h  y5:y i5:i                      these do not change 
 
 
 !More abstract archiphonemes
@@ -52,7 +52,7 @@ Literal quotes and angles must be escaped (cf morpheme boundaries further down):
 
  * %^CLEN:0	 = cons lengthening, with ^RC
  * %^CSH:0      = cons shortening, laaŋkku - laaŋkun
- * %^DLEN:0     = Diphtong lengthening (remove?)
+ * %^DLEN:0     = Diphtong lengthening (remove?) (not in use)
  * %^RVSH:0      = Diphtong shortening
  * %^EE:0       = Final vowel deletion in ee stems (not in use)
  * %^FCD:0      = Final consonant deletion 
@@ -72,6 +72,8 @@ Literal quotes and angles must be escaped (cf morpheme boundaries further down):
  * %^ÁE:0       = á to e (more) in 3-syll
  * %^ÁI:0       = á to i (more) in 3-syll
  * %^EWG:0      = from extra strong to weak, e.g. pp:v
+ * %^EI:0       = e to i
+
 
  * %^ODRVSHV:0      =  Cns shortening in C|# and shortvow in Inf etc  (not in use)
  * %^ODDC:0        =  shorten cns in odd-syll stems before C, #  (not in use)
@@ -93,12 +95,12 @@ End of alphabet definitions
 
 Sets
 
- *  Vow = a á â ä e i o u y æ ø ö å y5			    
+ *  Vow = a á â ä e i o u y æ ø ö å y5	i2		    
         é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý 	    
         A Á Â Ä E I O U Y Æ Ø Ö Å			    
         É Ó Ú Í À È Ò Ú Ì Ë Ü Ï Ê Ô Û Î Ã Ý 	    
         %^RV %^RD %^SV ;						    
- *  RealVow = a á â ä e i o u y æ ø ö å y5		    
+ *  RealVow = a á â ä e i o u y æ ø ö å y5	i2	    
         é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý 	    
         A Á Â Ä E I O U Y Æ Ø Ö Å			    
         É Ó Ú Í À È Ò Ú Ì Ë Ü Ï Ê Ô Û Î Ã Ý ;    
@@ -115,7 +117,8 @@ Sets
          %^RC %^SC  ˊ ;                          
  *  Geminate = b d g p h t k c f z l m n ŋ r s š v  ;    
  *  Seg = Vow Cns ;							    
- *  NotSuffixBorder = Vow Cns %^WG %^CLEN %^RLEN %^RVSH ;  
+ *  NotSuffixBorder = Vow %^FCD Cns %^SFV %^EWG %^CSH %^WG %^CLEN %^RLEN %^SVLOW %^RVSH %^ÁE %^ÁI %^EA ;  
+ *  Triggers =  %^SFV %^FCD %^WG %^EWG %^CSH %^CLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^ÁI ;  
  *  StemCns = b b3 d d3 g g2 g3 h h2 h3 		    
             j l m m2 m3 m8 n n8 n2 ŋ r s  ;      
 
@@ -125,7 +128,7 @@ Sets
 !!!Definition section
 
 Introducing a WG right context 
-{{{WeakGrade =  (RealVow:) :RealVow  (Cns:) ([%^SV:|%^ÁI:|%^ÁE:]) %^WG:0  (%^RVSH:) ; }}}  
+{{{WeakGrade =  (RealVow:) :RealVow  (Cns:) ([%^SV:|%^ÁI:|%^ÁE:]) (%^FCD:) %^WG:0   ; }}}  
 
 
 
@@ -146,6 +149,7 @@ We want to keep it short, but we want the code to work Thus, we document.
 
 
 
+* __č:j7 consonant gradation__ \\ 
 
 
 
@@ -159,10 +163,6 @@ We want to keep it short, but we want the code to work Thus, we document.
 
 
 * __xx:x consonant gradation and shortening and x:x shortening__ \\   weak grade or consonant shortening for illativ
-1) weak grade päddi:päädi tullâ:tuuláin
-2) consonant shortening for illativ, päddi:páádán
-3) consonant shortening 3st stems kahhaan:kahanân 
-3) riessâm : riesâ
 
 
 
@@ -171,53 +171,44 @@ We want to keep it short, but we want the code to work Thus, we document.
 * __xx:x consonant shortening for consonants belonging to two different patterns__ \\   weak grade or consonant shortening for illativ
 1) weak grade päddi : päädi tullâ:tuuláin
 2) consonant shortening for illativ, päddi : páádán RLEN?
-3) luammán : lyeme luá%^RDmmá%^SVn
-
-
-* __s:0, 1. part of ss:ṣ__
-riessâm : rieˊṣâmân
-
-
-* __s:0, 2. part of ss:ṣ__
-riessâm : rieˊṣâmân
 
 
 
 
-* __ˊ to zero gradation__ \\ when weak grade or consonant shortening
+* __ˊ to zero gradation__ \\ when weak grade or consonant shortening 
 1) weak grade, mie%^RDlˊgâs
  2) consonant shortening for illativ
 3) weak grade and consonant lengthning, kiäčˊču kiäj̣u 
 4) uábˊbi:obbijn
-5) viäsˊkár kuo%^RDlˊbân uái4ˊváát%^WG
 
 
 
-* __xx:y to something else, consonant gradation and shortening, part 1 __ \\   hh:V, kk:h, pp:v, čč:J, deleting first part, k:0 in kk4:h etc 
-1) weak grade: ruttâ:ruuđáin
+* __xx:y to something else, consonant gradation and shortening, part 1 __ \\   hh:V, kk:h, pp:v, čč:J, deleting first part, k:0 in kk4:h etc  
+1) weak grade: ruttâ:ruuđáin 
 2) consonant shortening for illativ
 3) consonant shortening for páápp4ár%^ÁI
 
 
 * __č:0 in čč4:j,  part 1 __ \\   
 1) weak grade: luččâ:luučân
-2) weak grade and consonant lengthning kiäčˊču:kiäj̣u 
 3) consonant shortening for illativ: luččâ:luučân
 
 
 
 * __xx:y to something else, consonant gradation, part 2 __ \\  hh:V, kk:h, pp:v, čč:J here we change second part, 
-1) weak grade:
-2) weak grade and consonant lengthning kiäčˊču:kiäj̣u 
+1) weak grade: 
 
 * __RV:ˊ in weak grade or root vowel shortening__ \\  saˊj̣e 
-
-
 
 
 * __Long vowel shortening (no consonant shortening)__ \\ (example?), no ^CSH, since that gives Vy:0
 1) 2st stems
 2) 3st stems kaavpug:kaˊvpugân 
+
+* __From i4j7 to ˊj__ \\ sai4j7oos 
+1) saijos:saˊjos
+
+
 
 * __Long vowel shortening, č:j̣ __ \\ special rule for getting ej̣ittáá instead of eˊj̣ittáá.
 1) 2st stems
@@ -277,7 +268,6 @@ riessâm : rieˊṣâmân
 * __xx:x7 gradation for ^CSH illative 1, and x:x7 for ^CSH __ \\   
 1) 2st stems hellá:heeḷán
 2) 3st stems aarrân:aṛânân, iššeed:iṣ̌edân, but not for kiärunj:kiäˊrunjân, jiereeh:jieˊrehân
-3) siämmun siäˊṃunân luá%^RDmmá%^SVn%^SC%^RVSH%^CSH%>in
 
 
 
@@ -285,7 +275,6 @@ riessâm : rieˊṣâmân
 * __xx:x7 gradation for ^CSH illative 2 __ \\    
 1) 2st hellá:heeḷán
 2) 3st stems aarrân:aṛânân
-3) siämmun siäˊṃunân
 
 
 
@@ -294,19 +283,13 @@ riessâm : rieˊṣâmân
  * __Word final consonant deletion                 __ for vaskâm:vaaskâ
 
 
-
- * __Final m in stems, mn to m  __ for puhelim :  puhelin   
-
- * __Final m in stems, mn to m  __ for puhelim :  puhelinttáá   
+ * __Final m in stems, mn to n  __ for puhelim :  puhelin   
 
 
 * __nnj to nj shortening weak grade and consonant shortening__ \\  special rule, e.g. konnjâl -> konjâlân puá%^RDnˊnjá
 1) 
-2)
-3)
+2)lonnjâ:loonjáin
 
-* __nnj to nj shortening weak grade and consonant shortening__ \\  special rule, e.g. konnjâl -> konjâlân puá%^RDnˊnjá
-* __nnj to nj shortening weak grade and consonant shortening__ \\  special rule, e.g. konnjâl -> konjâlân puá%^RDnˊnjá
 
 
 
@@ -321,24 +304,21 @@ riessâm : rieˊṣâmân
 
 
 
-* __Lengthening of half-long root consonant n7:n 1__ \\  for l-dot to ll, changing l7 to first l in ll
-5) čuovvânmijn  čuo%^RDv7%^RCânm%^RLEN%^CLEN%>ân
+* __Lengthening of half-long root consonant x7:x 1__ \\  for l-dot to ll, changing l7 to first l in ll
 
+* __Lengthening of half-long root consonant j7:j 1__ \\  
 
-* __Lengthening of half-long root consonant j7:j 1__ \\  for l-dot to ll, changing l7 to first l in ll
 
 * __Lengthening root consonant j7:ij 1__ \\  for saje:saijeen
 
-* __Lengthening root consonant j7:ij part 2__ \\  
 
 
 
 
-* __Lengthening of half-long root consonant n7 : nn 2__ \\   for l-dot to ll, changing ^RC to second l in ll  muáđoin
-5) čuovvânmijn 
+* __Lengthening of half-long root consonant x7 : xx 2__ \\  
 
 * __Lengthening of consonant, e.g. for Ess/Par__ \\   piiru piirrun niisu niissun vahe vahheen
-5) keeppidmân  ke%^RVp%^RCidm%^RLEN%^CLEN%>ân
+5) keeppidmân  ke%^RVp%^RCidem%^RLEN%^CLEN%>ân
 
 
 
@@ -369,25 +349,24 @@ riessâm : rieˊṣâmân
 
 
 
-poccuu:puásui  kiepˊpu:kiepâ iäbˊbár%^ÁI cuobˊbuu:cuábui
+poccuu:puásui  kiepˊpu:kiepâ iäbˊbár%^ÁI cuobˊbuu:cuábui kie%^RDllâs
 
 
 
 1) poccuu:puásui  páápp4ár%^ÁI
-2) kuo%^RDk4ˊsu:kuávsui
 
 
 
 !Other consonant rules
 
-* __xˊx7:xˊx and xx7:xx __ \\   
+* __xˊx7:xˊx and xx7:xx __ \\  
 
 
 
 
 
 
-* __Assimilation of root consonant and double suffix consonant__  delet t in front of -ttáá, avoid -tttáá
+* __Assimilation of root consonant t__  delet t in front of -ttáá, avoid -tttáá
 
 
 
@@ -395,9 +374,6 @@ poccuu:puásui  kiepˊpu:kiepâ iäbˊbár%^ÁI cuobˊbuu:cuábui
 
 !First syllable vowel shortening
 
-
-
-* __Root vowel shortening with consonant shortening 3st stems __ \\  for  aarrân:aṛânân ^ÁI
 
 
 
@@ -410,16 +386,17 @@ poccuu:puásui  kiepˊpu:kiepâ iäbˊbár%^ÁI cuobˊbuu:cuábui
 * __Vowel shortening (no consonant shortening) in consonant stems__ \\ kiirrâs- to kirrâsân, 
 
 
-* __Vowel shortening in front of two consonants and i-suffix__ \\ ráávhu- : rávhoid, 
-1)
+* __Vowel shortening VV:V__ \\ ráávhu- : rávhoid, käähir%^CSH%>id
 2) čääci : čassijn
 3) kaamuv kammust
-4) kiiško%^SVd
-5) pááppár : pävirid
-
+4) kiiško%^SVdem
 
 * __Vowel shortening eej to eij__ \\  leeji : leijijn  
  
+
+
+* __Stem vowel shortening in front of__ \\ 
+
 
 
 
@@ -428,8 +405,9 @@ poccuu:puásui  kiepˊpu:kiepâ iäbˊbár%^ÁI cuobˊbuu:cuábui
 
 !First syllable vowel lengthening
 
-* __Root vowel lenghtening in many stems__ \\  lekkâ : leehá-  meecij
-5) keeppidmân  ke%^RVp%^RCidm%^RLEN%^CLEN%>ân
+* __Root vowel lenghtening in many stems__ \\  lekkâ : leehá-  meecij ko%^RVppâin
+1) 2st and 3st
+2) 4st 
 
 
 
@@ -446,7 +424,7 @@ poccuu:puásui  kiepˊpu:kiepâ iäbˊbár%^ÁI cuobˊbuu:cuábui
 
 !First syllable vowel change
 
-* __Root vowel change for á to ä with i in second syllable__ \\  päävir ká%^RVrbás%^ÁI%^WG%^RLEN%>  ká%^RVrbás%^ÁI%^WG%^RVSH%>in čuá%^RDgˊgás%^ÁI%^WG%^RLEN%>
+* __Root vowel change for á to ä with i in second syllable__ \\  päävir já%^RVh4h4á%^SVl%^ÁI%^EWG%^RLEN%>
 1) pááppár:päävir
 2) pááppár:päävir
 3) pááppár:pävirin
@@ -464,13 +442,9 @@ poccuu:puásui  kiepˊpu:kiepâ iäbˊbár%^ÁI cuobˊbuu:cuábui
 
 
 
-* __Shortening diphthong__ \\ RD to ˊ muátu muáˊđoost  mie%^RDlˊgâs čiermih vuá%^RDlá%^RVSH%>áš
-1)
+* __Shortening diphthong__ \\ RD to ˊ muátu muáˊđoost  mie%^RDlˊgâs čiermih vuá%^RDlá%^RVSH%>áš luá%^RDmm7á%^SVn
+not suoˊijijn
 2) iäláán : iäˊḷánân
-3) for  l and g as part of cosonant patterns ll:l and gg:g
-3) siämmun siäˊṃunân
-4) poccu : puáˊsujin 
-5) čuoˊṿânem  suo%^RDnjârd
 
 
 
@@ -478,6 +452,7 @@ poccuu:puásui  kiepˊpu:kiepâ iäbˊbár%^ÁI cuobˊbuu:cuábui
 
 
 * __Monophthongisation rule i:e__ \\  
+1)viäskár veeskir iäbˊbár eebir 
 
 * __Monophthongisation rule u:o__ \\  u:o in pairs like kuátij -> koođij čuá%^RDl7%^RCi%^WG%>in
 
@@ -494,7 +469,7 @@ poccuu:puásui  kiepˊpu:kiepâ iäbˊbár%^ÁI cuobˊbuu:cuábui
 
 
 
-* __Monophthongisation rule 2__ \\  á:o in pairs like kuátij -> koođij, säämi -> saamij 
+* __Monophthongisation rule 2__ \\  á:o in pairs like kuátij -> koođij, säämi -> saamij  
 
 
 
@@ -502,7 +477,7 @@ poccuu:puásui  kiepˊpu:kiepâ iäbˊbár%^ÁI cuobˊbuu:cuábui
 * __Diphthongisation e to iä, part 1__ \\  
 1) Part 1: e to i; ergi -> iärgán 1, veerdi : viärdán
 
-* __č:ij part 1__ \\  
+* __č4:ij part 1__ \\  
 1) eeč%^RCi:eijijn
 
 
@@ -518,7 +493,6 @@ poccuu:puásui  kiepˊpu:kiepâ iäbˊbár%^ÁI cuobˊbuu:cuábui
 
 
 * __Diphthongisation uo:uá for %^EWG__ \\   
-
 
 * __Diphthongisation o:uá for %^EWG, part 2__ \\   
 
@@ -548,26 +522,27 @@ poccuu:puásui  kiepˊpu:kiepâ iäbˊbár%^ÁI cuobˊbuu:cuábui
 
 !Second syllable rules
 
-* __Second syllable vowel change á to e or i in 3syll stems__ \\ puttás- > putes, triggers are ^ÁE and ^ÁI
+* __Second syllable vowel change á to e or i in 3syll stems__ \\ puttás- > putes, triggers are ^ÁE and ^ÁI já%^RVh4h4á%^SVl%^ÁI%^EWG%^RLEN%>
 
 
 * __Stemvowel shortening  áá and aa to e or i in 3syll__ \\ puttás- > putes, triggers are ^ÁE and ^ÁI
 
 
-* __Fleeting vowel before suffix __ \\ deletes -i- in piehâin to pieˊhânân pie%^RDhâin
+* __Fleeting vowel before suffix __ \\ deletes -i- in piehâin to pieˊhânân pie%^RDhâin piä%^RDi4ppáin
 
 
 
 
-* __Stem vowel e deletion before 2nd syllable ij__ \\  hmm have a look at this
+
+
+* __Limes vowel deletion__ \\ 
 
 
 
 * __Stem vowel e to a for a root vowel.__ \\  alge to aalgan
 
 
-* __Stem vowel e to á for other root vowel.__ \\  
-
+* __Stem vowel e to á for other root vowel__ \\  
 
 * __Stem vowel i to á for other root vowel.__ \\  e.g. säämi > Ill sáámán 
 
@@ -582,7 +557,10 @@ poccuu:puásui  kiepˊpu:kiepâ iäbˊbár%^ÁI cuobˊbuu:cuábui
 
 
 
-* __Stem vowel change e:i before suffix i__ \\ 
+* __Stem vowel change e:i before suffix__ \\ 
+mánuttep : mánuttiäpán
+
+* __Stem vowel i2:e__ \\ 
 
 * __Stem vowel u:o change before suffix__ \\  
 
@@ -592,7 +570,7 @@ poccuu:puásui  kiepˊpu:kiepâ iäbˊbár%^ÁI cuobˊbuu:cuábui
 
 
 
-* __Stem vowel u:0 in front of â__ \\ aiguu:aaigâ
+* __Stem vowel u:0 in front of â and u__ \\ aiguu:aaigâ
 
 
 
@@ -620,10 +598,8 @@ poccuu:puásui  kiepˊpu:kiepâ iäbˊbár%^ÁI cuobˊbuu:cuábui
 
 
 
-
 !!Other rules
 
-* __Inversion of in to nj__ \\  adds -j-  in piehâin to piehânjist  
 
 
 * __Final consonant x:xx__ \\  pottáák potákkân  
