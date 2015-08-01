@@ -647,7 +647,7 @@ Cx:Cy <=> Vow:  Cy (ˊ:) _  Vow:+ (Cns) (%^ÁE:) (%^CLEN:) [%>|.#.] ;
 
 
 
-"Assimilation of root consonant t"
+"Assimilation of consonants t d š"
 !! * __@RULENAME@__  delet t in front of -ttáá, avoid -tttáá
 Cx:0  <=> _ (%^CSH:) (%^RLEN:) %> Cy Cy ; 
         Vow Cy _ [â:|e:] m %^SFV: ; ! vajoidittem vajoiditmáin
@@ -686,24 +686,18 @@ Cx:0  <=> _ (%^CSH:) (%^RLEN:) %> Cy Cy ;
 
 
 
-"Vowel shortening (no consonant shortening) in consonant stems"
-!! * __@RULENAME@__ \\ kiirrâs- to kirrâsân, 
-Vy:0 <=> Seg: _ Vx Cns: (Cns:) (%^RC:) Vow  :Cns (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) (%^CLEN:) %^RVSH: [%>|.#.] ;
-       where Vx in ( a e i o u á ä ) 
-             Vy in ( a e i o u á ä ) 
-       matched ;
-
 !rejected:
 !€ kiirrâs^RVSH>ân
 !€ k0irrâs0>ân
  
 "Vowel shortening VV:V"
 !! * __@RULENAME@__ \\ ráávhu- : rávhoid, käähir%^CSH%>id
-Vy:0 <=> Vx: _  [[Cns: Cns:] - [Cns: :0]] Vow: (Cns:) [Triggers: - %^RVSH:]* %> i: ;
+Vy:0 <=> Vx: _  Cns: [ Cns: - %^RC:0 ] Vow:  %^WG: (%^CLEN:) %^SVLOW: %> i: ; !!1 1)
          Vx: _  Cns:+ Vow:  %^WG: %^RVSH: %^CLEN:  %> i:  ; !! 2) čääci : čassijn
-         Vx: _  Cns:+ Vow: (%^CSH:) %^RVSH:  %>  ; !! 3) kaamuv kammust
+         Vx: _  Cns:+ Vow: (%^CSH:) %^RVSH: (%^SVLOW:)  %>  ; !! 3) kaamuv kammust
          Vx _ Cns Cns Vow: %^SV: Cns:+ Vow: Cns %^SFV: %^RLEN: (%^CLEN:) %^SLEN: %> ; !! 4) kiiško%^SVdem
 		 Vx: _ [Cns:+ - č4:] Vow:+ Cns:+ (%^ÁI:) %^CSH: (%^SVSH:) [%>|.#.] ; ! pááppár : pápárân
+		 Seg: _ Vx Cns: (Cns:) (%^RC:) Vow  :Cns (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) (%^CLEN:) %^RVSH: [%>|.#.] ;
        where Vx in ( a e i o u á ä ) 
              Vy in ( a e i o u á ä ) 
        matched ;
@@ -965,8 +959,8 @@ u:y <=> _ á: %^RD: Cns:+ Vow: %^SV: Cns: %^FCD: %^EWG: (%^SLEN:)  %> ;
 
 "Second syllable vowel change á to e or i in 3syll stems"
 !! * __@RULENAME@__ \\ puttás- > putes, triggers are ^ÁE and ^ÁI já%^RVh4h4á%^SVl%^ÁI%^EWG%^RLEN%>
-Vx:Vy <=> _ (%^SV:) (Cns:)  Vz: [%^WG: |%^EWG: ]  ;  !viäsˊkár%^ÁI ča%^RVskas%^ÁE páápp4ár%^ÁI
-          _  Vz: %^EWG: ; !puáhˊháá pooṿij
+Vx:Vy <=> Cns: _ (%^SV:) (Cns:)  Vz: [%^WG: |%^EWG: ]  ;  !viäsˊkár%^ÁI ča%^RVskas%^ÁE páápp4ár%^ÁI
+          Cns: _  Vz: %^EWG: ; !puáhˊháá pooṿij
        where Vx in ( á    á    a   )
              Vy in ( e    i    e   )
              Vz in ( %^ÁE %^ÁI %^ÁE) 
@@ -1104,7 +1098,7 @@ Vx:0 <=> _ â Triggers:*  %>   ;
 
 "Suffix vowel lengthening o"
 !! * __@RULENAME@__ \\ stááḷu stááloost
-%^SV:o <=> u:  _ %^WG: (%^RVSH:) %^SLEN: %^SVLOW: %>  ; 
+%^SV:o <=> u:  _ (Cns:) Triggers:* %^SLEN: %^SVLOW: %>  ; 
 
 !€ táál7^RCu^SV^WG^RVSH^SLEN^SVLOW>st
 !€ táál0oo0000>st
