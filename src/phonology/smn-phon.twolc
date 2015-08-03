@@ -399,9 +399,9 @@ Cx:v <=>  _ (ˊ:) Cz (%^RC:) Vow (%^SV: ) (Cns:)  (%^FCD:) %^WG: ;
 !! * __@RULENAME@__ \\   
 Cy:0 <=> :Vow (Vow:) Cx: (ˊ: ) _ Cz: (%^RC:) WeakGrade \%^CLEN:   ;  
           Cx: (ˊ:) _ Cz:  Vow (%^EA:) %^CSH:    ;  
-      where Cx in ( j i4 i4 j i4 l l l l l l l m m n n n ŋ r r r r r r r r v v v ) 
-            Cy in ( p c  t  t k  c k p s t č š p č c s t k c č p k s t č š c p t ) 
-            Cz in ( p c  t  t k  c k p s t č š p č c s t k c č p k s t č š c p t) 
+      where Cx in ( j i4 i4 j j i4 l l l l l l l m m n n n ŋ r r r r r r r r v v v ) 
+            Cy in ( p c  t  s t k  c k p s t č š p č c s t k c č p k s t č š c p t ) 
+            Cz in ( p c  t  s t k  c k p s t č š p č c s t k c č p k s t č š c p t) 
       matched ;
 
 !€ á^RVrppu^WG^RLEN>
@@ -622,7 +622,7 @@ Cx:Cy <=>   _ (ˊ:) Cz:  Vow:+ (Cns) (%^ÁI:) %^EWG: ([%^RVSH:|%^RLEN:|%^SVSH:])
         matched ;
 
 "In front of %^EWG – i4j:j"
-i4:0 <=>   _ j  Vow:+ (Cns)  %^EWG: ([%^RVSH:|%^RLEN:]) [%>|.#.] ; ! poijuu:puájui  va%^RVi4jâs
+i4:0 <=>   _ [j | j7:]  Vow:+ (Cns)  [%^EWG: | %^CSH:] ([%^RVSH:|%^RLEN:]) (%^SVSH:) [%>|.#.] ; ! poijuu:puájui  va%^RVi4jâs
 
 
 !! !Other consonant rules
@@ -698,8 +698,8 @@ Vy:0 <=> Vx: _  Cns: [ Cns: - %^RC:0 ] Vow:  %^WG: (%^CLEN:) %^SVLOW: %> i: ; !!
          Vx _ Cns Cns Vow: %^SV: Cns:+ Vow: Cns %^SFV: %^RLEN: (%^CLEN:) %^SLEN: %> ; !! 4) kiiško%^SVdem
 		 Vx: _ [Cns:+ - č4:] Vow:+ Cns:+ (%^ÁI:) %^CSH: (%^SVSH:) [%>|.#.] ; ! pááppár : pápárân
 		 Seg: _ Vx Cns: (Cns:) (%^RC:) Vow  :Cns (%^SFV:) (%^SC:) (%^ÁI:) (%^ÁE:) (%^CLEN:) %^RVSH: [%>|.#.] ;
-       where Vx in ( a e i o u á ä ) 
-             Vy in ( a e i o u á ä ) 
+       where Vx in ( a e i o u á ä y ) 
+             Vy in ( a e i o u á ä y ) 
        matched ;
 
 "Vowel shortening eej to eij"
@@ -1051,7 +1051,7 @@ u:o <=> Cns: _ ([%^EWG:|%^SV:]) (%^WG:) (%^RVSH:) (%^RLEN:|%^CLEN:) (%^SLEN:) %^
 "Second vowel shortening in 3syll consonant stems"
 !! * __@RULENAME@__ \\ eemeed : emedân
 Vx:0 <=> _ Vx: (Cns:+) (%^CSH:|%^WG:|%^EWG:) %^SVSH:  ; !eemeed : emedân sai4j7oos
-    where Vx in ( e o a á u i ) ;
+    where Vx in ( e o a á u i y ä ) ;
 
 !eemeed:emedân
 
@@ -1065,7 +1065,7 @@ Vx:0 <=> _ Vx: (Cns:+) (%^CSH:|%^WG:|%^EWG:) %^SVSH:  ; !eemeed : emedân sai4j7
 "Stem vowel:0 in front of â"
 !! * __@RULENAME@__ \\ aiguu:aaigâ
 Vx:0 <=> _ â Triggers:*  %>   ; 
-    where Vx in ( e o a á u i ) ;
+    where Vx in ( e o a á u i y ä) ;
 
 ! this rule should be generalised, we talk about a ban on o>u strings
 
@@ -1075,12 +1075,12 @@ Vx:0 <=> _ â Triggers:*  %>   ;
 "Suffix vowel lengthening"
 !! * __@RULENAME@__ \\ long á in kissáást
 %^SV:Vx <=> Vx:  _  [NotSuffixBorder: - %^EWG: ]* %^SLEN:  %> ;
-        where Vx in ( á o u e a i ) ; !  
+        where Vx in ( á o u e a i y ä ) ; !  
 
 "Suffix vowel lengthening when SVLOW"
 !! * __@RULENAME@__ \\ preventing conflict with u %^SV:o
 %^SV:Vx <=> Vx:  _  [NotSuffixBorder: - %^EWG: ]* %^SLEN: %^SVLOW:  %> ;
-        where Vx in ( á o e a i ) ; ! 
+        where Vx in ( á o e a i y ä ) ; ! 
 
 
 "Suffix vowel lengthening SV:e"
