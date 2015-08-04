@@ -67,7 +67,6 @@ h5:h  y5:y i5:i                    !!= * @CODE@  these do not change
 
 %^CLEN:0	!!= * @CODE@ = cons lengthening, with ^RC
 %^CSH:0     !!= * @CODE@ = cons shortening, laaŋkku - laaŋkun
-%^DLEN:0    !!= * @CODE@ = Diphtong lengthening (remove?) (not in use)
 %^RVSH:0     !!= * @CODE@ = Diphtong shortening
 %^EE:0      !!= * @CODE@ = Final vowel deletion in ee stems (not in use)
 %^FCD:0     !!= * @CODE@ = Final consonant deletion 
@@ -76,12 +75,10 @@ h5:h  y5:y i5:i                    !!= * @CODE@  these do not change
 %^LLEN:0    !!= * @CODE@ = low vow lengthening (not in use)
 %^MONO:0    !!= * @CODE@ = monophtongization of diphthongs  (not in use)
 %^RLEN:0    !!= * @CODE@ = root lengthening, with ^RD
-%^RVSH:0    !!= * @CODE@ = root vow shortening - máán7%^RCu mánuttáá 
 %^SLEN:0    !!= * @CODE@ = stem vowel lengthening
 %^SFV:0     !!= * @CODE@ = Deleting fleeting vowel before suffix
 %^SVLOW:0   !!= * @CODE@ = stem vowel lowering â>á and u>o - árppu árppoin
 %^SVSH:0   !!= * @CODE@ = stem vowel shortening kappeer kaperân
-%^UU:0      !!= * @CODE@ = Final vowel deletion in uu stems
 %^VLOW:0    !!= * @CODE@ = Vowel lowering in 3rd sg of contract verbs tuhhid:tohhe
 %^WG:0      !!= * @CODE@ = weak grade trigger
 %^ÁE:0      !!= * @CODE@ = á to e (more) in 3-syll
@@ -670,9 +667,9 @@ Vx:0 <=> Vy _ %^EE: ;
 !€ njuunee000>st
 
 "Root vowel ä:ää lenghtening"
-!! * __@RULENAME@__ \\ special rule, for avoiding conflict
+!! * __@RULENAME@__ \\ special rule, for avoiding conflict spä%^RVi4lih%^EWG%^RLEN
 %^RV:ä <=> ä _ Cns:+ Vow:+ Cns:+ Vow: Cns: %^SFV: %^RLEN: %^CLEN: ; !! 5) vä%^RVr7%^RCid
-           á:ä _ Cns:* :i (%^SV:) Cns: %^ÁI: (%^FCD:) [%^EWG:|%^WG:] %^RLEN: [%>|.#.] ;
+           :ä _ Cns:* :i (%^SV:) Cns: (%^ÁI:) (%^FCD:) [%^EWG:|%^WG:] %^RLEN: [%>|.#.] ; !spääilih
 
 
 "Root vowel lengtning with vowel change before suffix i"
@@ -712,8 +709,8 @@ Vx:Vy <=> _  %^RV: Cns:+  e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> i: ;
 
 "Root vowel change u:o, special rule for olmooš"
 !! * __@RULENAME@__ \\  ulmu : olmooš. Waiting for more lemmas. u%^RVlmu%^SV%^WG%^SLEN%^SVLOW%>š
-u:o <=>   _  %^RV: Cns:+ u:o %^SV: %^WG: %^SLEN:  %^SVLOW:  [%>|.#.]  ;
-         _  %^RV: Cns:+ u:o %^WG: %^RVSH:  %^SVLOW:  [%>|.#.]  ; 
+u:o <=>   _  Cns:+ u:o %^SV: %^WG: %^SLEN:  %^SVLOW:  [%>|.#.]  ; !%^SV%^WG%^SLEN%^SVLOW%>š
+         _  Cns:+ u:o %^WG:  %^SVLOW:  [%>|.#.]  ; 
 
 
 
