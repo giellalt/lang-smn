@@ -276,7 +276,7 @@ Vy:0 <=> Vx: _ [Cns: - č4: ] Cns:* (%^RC:) Vow:  %^WG: %^RVSH: (%^SVLOW:) [%>|.
 
 "From i4j7 to j"
 !! * __@RULENAME@__ \\ sai4j7oos 
-i4:0 <=>  Vow: _ [j:|j7:]  Vow:+ Cns [%^EWG:|%^WG:|%^CSH:] ; ! %^SVSH:  [%>|.#.] ; !! 1) saijos:sajos
+i4:0 <=>  Vow: _ [j:|j7:]  Vow:+ (Cns) [%^EWG:|%^WG:|%^CSH:] ; ! %^SVSH:  [%>|.#.] ; !! 1) saijos:sajos po%^RVi4ju%^EWG%>i
 
 
 "Long vowel shortening, č:j̣ "
@@ -591,7 +591,7 @@ Cx:Cy <=> Vow:  _ %^RC: :Vow+ Cns:* [Triggers: - [%^SFV:| %^FCD:]]* %^CLEN: ([%^
 
 "From extra strong to weak, part 1 cc:s, rr:r"
 !! * __@RULENAME@__ \\  
-Cy:0 <=>  Cx:  _  Vow:+ (Cns:) ([%^ÁI:|%^ÁE:]) (%^FCD:) %^EWG: ; !  !! poccuu:puásui  kieppu:kiepâ iäbbár%^ÁI cuobbuu:cuábui kiellâs
+Cy:0 <=>  [Cx: | .#. ]  _  Vow:+ (Cns:) ([%^ÁI:|%^ÁE:]) (%^FCD:) %^EWG: ; !  !! poccuu:puásui  kieppu:kiepâ iäbbár%^ÁI cuobbuu:cuábui kiellâs
        where Cx in ( b c č đ d g h k l l  m m  n ŋ r t p p  đ  n   r s s  š ) 
              Cy in ( b c č đ d g h k l l7 m m7 n ŋ r t p p4 đ7 n7 r7 s7 s š) 
         matched ;
@@ -616,7 +616,7 @@ Cx:Cy <=>   _  Cz:  Vow:+ (Cns) (%^ÁI:) %^EWG: ([%^RVSH:|%^RLEN:|%^SVSH:]) [%>|
 
 "Assimilation of consonants t d š"
 !! * __@RULENAME@__  delet t in front of -ttáá, avoid -tttáá
-Cx:0  <=>  Vow _ (%^CSH:) (%^RLEN:) %> Cy Cy ; 
+Cx:0  <=>  Seg: _ (%^CSH:) (%^RLEN:) %> Cy Cy ; 
         Vow Cy _ [â:|e:] m %^SFV: ; ! vajoidittem vajoiditmáin
 	where Cx in ( d t š) 
 	      Cy in ( d t š)
@@ -695,7 +695,7 @@ Vx:0 <=> Vy _ %^EE: ;
 
 "Root vowel lenghtening in many stems"
 !! * __@RULENAME@__ \\  lekkâ : leehá-  meecij ko%^RVppâin
-%^RV:Vx <=> Vx _ Cns:+  Vow: (Vow:)  (Cns:) (Triggers: - %^RLEN:)*   %^RLEN: ; !! 1) 2st and 3st
+%^RV:Vx <=> Vx _ [Cns:+ - h:+]  Vow: (Vow:)  (Cns:) (Triggers: - %^RLEN:)*   %^RLEN: ; !! 1) 2st and 3st
             Vx _ Cns: (Cns:) Vow:+ Cns:+ Vow: Cns: %^SFV: %^RLEN:  ; !! 2) 4st 
 	where Vx in ( a e i o u y á ) ; !ä in a special rule
 		
@@ -829,6 +829,16 @@ Vx:Vy <=> Vz: _  Cns:+ i %^WG:   %> i: ;
 !! * __@RULENAME@__ \\  
 e:i <=> \Vow: _ Vow: Cns:+ [i2:|e:|i:] %^EA: (%^CSH:) (%^RLEN:)   %> ; !! 1) Part 1: e to i; ergi -> iärgán 1, veerdi : viärdán
 
+"Root vowel ahhu to áhu in C-stems"
+!! * __@RULENAME@__ \\  ahhu:áhu
+a:á <=> \Vow: _ %^RV: h: h u %^WG: (%^RLEN:) %> ;
+
+"Root vowel ahhu to ááhu in C-stems"
+!! * __@RULENAME@__ \\  ahhu:ááhu
+%^RV:á <=> \Vow: a: _ h: h u %^WG: %^RLEN: %> ;
+
+
+
 "č4:ij part 1"
 !! * __@RULENAME@__ \\  
 č4:i <=> Vow: _ %^RC:  WeakGrade %^CLEN: %^SVLOW: %> ; !! 1) eeč%^RCi:eijijn
@@ -853,7 +863,7 @@ e:i <=> \Vow: _ Vow: Cns:+ [i2:|e:|i:] %^EA: (%^CSH:) (%^RLEN:)   %> ; !! 1) Par
 
 "Diphthongisation uo:uá for %^EWG"
 !! * __@RULENAME@__ \\   
-o:á <=> u _ Cns:+ u: %^EWG: (%^RVSH:) %> ; ! 1) cuobbuu cuábui
+o:á <=> u _ Cns:+ u: [%^EWG:|%^WG:] ([%^RVSH:|%^RLEN:]) %> ; ! 1) cuobbuu cuábui, kuođhu
         u _ Cns:+ á %^CSH: ;
 
 "Diphthongisation o:uá for %^EWG, part 2"
@@ -1064,12 +1074,13 @@ Vx:0 <=> _ â Triggers:*  %>   ;
 !€ táál0oo0000>st
 
 "Suffix i5:j for lexicon APINA"
+!! * __@RULENAME@__ \\ salijn
 i5:j  <=> Cns i %> _ ;
-! salijn
+
 
 "Suffix i5:0 for lexicon APINA"
+!! * __@RULENAME@__ \\ timotein oboen
 i5:0 <=> Vow [i | e] %> _ ;
-! timotein oboen
 
 
 "Suffix i:j for i and e-stems"
