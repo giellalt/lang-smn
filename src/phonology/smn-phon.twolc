@@ -62,6 +62,7 @@ h5:h  y5:y i5:i                    !!= * @CODE@  these do not change
 %^RV:0	 	!!= * @CODE@ = root vowel, lengthened by ^RLEN - ta%^RVvlu taavlu 
 %^SC:0      !!= * @CODE@ = stem cons, %^SC:j, pluss lengthen after earlier shortening by %^CSH, see lyeme
 %^SV:0 		!!= * @CODE@ = stem vowel, lengthened by ^SLEN u:uu - táálu%^SV tááloost
+%^V			!!= * @CODE@ = vowel copy
 
 !! !Triggers
 
@@ -1038,6 +1039,10 @@ i5:0 <=> Vow [i | e] %> _ ;
 i:j <=> [i: | e: | i2: ] (%^EA:) (%^WG:)   ([%^RLEN:|%^RVSH:]) (%^CLEN:)  (%^SVLOW:)   %> _ [d|n|g|t|%>|.#.];  
 
 
+"Vowel copy in suffix"
+%^V:Vx <=> Vx %> _ ;
+!! * __@RULENAME@__ \\  for imperative Sg3, at least
+	where Vx in ( a á i u o ) ;
 
 
 
@@ -1058,4 +1063,13 @@ i:j <=> [i: | e: | i2: ] (%^EA:) (%^WG:)   ([%^RLEN:|%^RVSH:]) (%^CLEN:)  (%^SVL
 !rejected:
 !€ kahhaan^SC^CSH^RVSH>ist
 !€ ka0ha0nj00>ist
+
+
+
+
+"Potential vowel shortening for contract verbs"
+!! * __@RULENAME@__ \\  -áážep becomes -áš etc.
+Vx:0 <=> Vx _ %> š [%>|v|j] ;
+	where Vx in (a á i o u ) ;
+
 
