@@ -415,16 +415,17 @@ LEXICON 3v
 LEKKASID ;
 
 LEXICON LEKKASID  !!= * __@CODE@__ SM51, no length change in stem
-+V+Ind+Prt+Du1:%>ááim K ;
-+V+Ind+Prt+Du2:%>ááid K ; ! only á ?
-+V+Ind+Prt+Du3:%>ááin  K ;
++V+Ind+Prt+Du1+Use/NG:%>ááim K ;
++V+Ind+Prt+Du2+Use/NG:%>ááid K ; ! only á ?
++V+Ind+Prt+Du3+Use/NG:%>ááin  K ;
 
 +V:       ODDVLEX ;
 
 LEXICON CIELATTID  !!= * __@CODE@__ SM57, consonantand vowel change
-+V+Ind+Prt+Du1:%>ááim K ;
-+V+Ind+Prt+Du2:%>ááid K ; ! only á ?
-+V+Ind+Prt+Du3:%>ááin  K ;
+! Are these in or out?
+! +V+Ind+Prt+Du1:%>ááim K ;
+! +V+Ind+Prt+Du2:%>ááid K ; ! only á ?
+! +V+Ind+Prt+Du3:%>ááin  K ;
 
 +V:%^ODDC ODDVLEX ; ! Diacriticn %^ODDC to shorten C before C and #
 
@@ -476,11 +477,11 @@ LEXICON ODDVLEX_fin
 +Cond+Sg3:%>ičij K ;
 
 +Cond+Du1:%>iččijm K ;
-+Cond+Du1:%>iččiijm K ;
++Cond+Du1+Use/NG:%>iččiijm K ;
 +Cond+Du2:%>iččijd K ;
-+Cond+Du2:%>iččiijd K ;
++Cond+Du2+Use/NG:%>iččiijd K ;
 +Cond+Du3:%>iččijn K ;
-+Cond+Du3:%>iččiijn K ;
++Cond+Du3+Use/NG:%>iččiijn K ;
 
 +Cond+Pl1:%>iččijm K ;
 +Cond+Pl2:%>iččijd K ;
@@ -506,10 +507,6 @@ LEXICON ODDVLEX_fin
 +Imprt+Pl2:%>iđ # ;
 +Imprt+Pl3:%>us # ;
 
-+Ind+Prs+ConNeg: K ;
-+Ind+Prt+ConNeg:%>âm K ;
-+Cond+ConNeg:%>iččii K ;
-+Pot+ConNeg:%>ižžii K ;
 
 ! kuldâl  kuldâliđ
 ! tuubdâst  tu’bdâstiđ￼
@@ -518,46 +515,28 @@ LEXICON ODDVLEX_fin
 
 
 LEXICON V_ODD_INFINITES !!= * __@CODE@__
-V_ODD_INF ;
-V_ODD_PRSPRC ;
-V_ODD_PRFPRCACT ;
-V_ODD_PRFPRCPASS ;
-V_ODD_NEGPRSINDIMP ;
-V_ODD_NEGCOND ;
-V_ODD_NEGPOT ;
-V_ODD_ABE ;
-V_ODD_GER ;
-V_ODD_ACTIO ;
-
-LEXICON V_ODD_INF !!= * __@CODE@__
 +Inf:%>iđ K ;
 
-LEXICON V_ODD_PRSPRC !!= * __@CODE@__
 +PrsPrc:%>ijjee K ;
-+PrsPrc:%>eijee K ;
++PrsPrc+Use/NG:%>eijee K ;
 
-LEXICON V_ODD_PRFPRCACT !!= * __@CODE@__
 +PrfPrc:%>im K ;
-
-LEXICON V_ODD_PRFPRCPASS !!= * __@CODE@__
 +PrfPrc+Pass:%>em K ;
 
-LEXICON V_ODD_NEGPRSINDIMP !!= * __@CODE@__
 +Ind+Prs+ConNeg: K ;
++Ind+Prt+ConNeg:%>im K ;
++Cond+ConNeg:%>iččii K ;
++Pot+ConNeg:%>ižžii K ;
 +Imp+Prs+ConNeg: K ;
 
-LEXICON V_ODD_NEGCOND !!= * __@CODE@__
-+Cond+ConNeg:%>iččii K ;
-
-LEXICON V_ODD_NEGPOT !!= * __@CODE@__
-+Pot+ConNeg:%>ižžii K ;
-
-LEXICON V_ODD_ABE !!= * __@CODE@__
 +VAbess:%>hánnáá K ;
 +VAbess+Err/Orth:%>hinnáá K ;
 +VAbess+Err/Orth:%>hennáá K ;
 
-LEXICON V_ODD_GER !!= * __@CODE@__
++Actio:%>em K ;
++Actio+Ill:%>mân K ;
++Actio+Ess:%>min K ;
++Actio+Loc:%>mist K ;
 +Actio+Com:%>dijn K ;
 +Actio+Com+PxSg1:%>dijnán K ;
 +Actio+Com+PxSg1:%>dijnân K ;
@@ -565,11 +544,6 @@ LEXICON V_ODD_GER !!= * __@CODE@__
 +Actio+Com+PxSg2:%>dijnâd K ;
 +Actio+Com+PxSg3:%>dijnes K ;
 
-LEXICON V_ODD_ACTIO !!= * __@CODE@__
-+Actio:%>em K ;
-+Actio+Ill:%>mân K ;
-+Actio+Ess:%>min K ;
-+Actio+Loc:%>mist K ;
 
 
 
