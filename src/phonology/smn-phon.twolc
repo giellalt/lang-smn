@@ -86,6 +86,7 @@ h5:h  y5:y i5:i                    !!= * @CODE@  these do not change
 %^ÁI:0      !!= * @CODE@ = á to i (more) in 3-syll
 %^EWG:0     !!= * @CODE@ = from extra strong to weak, e.g. pp:v
 %^EI:0      !!= * @CODE@ = e to i
+%^AO:0      !!= * @CODE@ = a to o
 
  
 %^ODRVSHV:0    !!= * @CODE@ =  Cns shortening in C|# and shortvow in Inf etc  (not in use)
@@ -976,7 +977,7 @@ e:a <=> a (%^RV:) Cns:+ _ %^EA: ;
 !€ aalga000>n
 
 "Stem vowel e to á for other root vowel"
-!! * __@RULENAME@__ \\  
+!! * __@RULENAME@__ \\  if e stem
 e:á <=> [o|i|u] (%^RV:) Cns:+ _ %^EA:  (%^CSH:) ([%^RLEN: |%^RVSH:] ) [%>|.#.] ;
 
 "Stem vowel i to á for other root vowel."
@@ -984,7 +985,9 @@ e:á <=> [o|i|u] (%^RV:) Cns:+ _ %^EA:  (%^CSH:) ([%^RLEN: |%^RVSH:] ) [%>|.#.] 
 Vx:á <=> [:e|:i|:ä|:á] (%^RV:)  Cns:+ _  %^EA: (%^CSH:) ([%^RLEN: |%^RVSH:] ) [%>|.#.] [i: | n | d] ;
     where Vx in ( i i2 ) ;
 
-
+"Stem vowel á to a for a root vowel"
+!! * __@RULENAME@__ \\  trying this as a phonological rule for -eđ verbs
+á:a <=> a (%^RV:) Cns:+ _ Triggers:* %> ;
 
 "Stem vowel â to a in Pl Nom -h"
 !! * __@RULENAME@__ \\  silbâ to siilbah
