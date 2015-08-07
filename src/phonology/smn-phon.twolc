@@ -988,6 +988,10 @@ e:á <=> [o|i|u] (%^RV:) Cns:+ _ %^EA:  (%^CSH:) ([%^RLEN: |%^RVSH:] ) [%>|.#.] 
 Vx:á <=> [:e|:i|:ä|:á] (%^RV:)  Cns:+ _  %^EA: (%^CSH:) ([%^RLEN: |%^RVSH:] ) [%>|.#.] [i: | n | d] ;
     where Vx in ( i i2 ) ;
 
+"Stem vowel i to e in front of j"
+i:e <=> Cns _ (%^VLOW:) %> [j Vow|e] ;
+
+
 "Stem vowel á to a for a root vowel"
 !! * __@RULENAME@__ \\  trying this as a phonological rule for -eđ verbs
 á:a <=> a (%^RV:) Cns:+ _ Triggers:* %> ;
@@ -1011,8 +1015,8 @@ Vx:á <=> [:e|:i|:ä|:á] (%^RV:)  Cns:+ _  %^EA: (%^CSH:) ([%^RLEN: |%^RVSH:] )
 
 "Stem vowel change e:i before suffix"
 !! * __@RULENAME@__ \\ 
-e:i <=> Cns:  _  [Triggers: - %^EA:]*  %> i: ; 
-        Cns:  _ %> ä p ; !! mánuttep : mánuttiäpán
+e:i <=> Cns: _  [Triggers: - %^EA:]*  %> i: ; 
+        Cns: _  %> ä p ; !! mánuttep : mánuttiäpán
         
 "Stem vowel i2:e"
 !! * __@RULENAME@__ \\ 
@@ -1021,7 +1025,8 @@ i2:e <=> _ Triggers:+ %> \[i: |n | d] ;
 "Stem vowel u:o change before suffix"
 !! * __@RULENAME@__ \\  
 u:o <=> Cns: _ ([%^EWG:|%^SV:]) (%^WG:) (%^RVSH:) (%^RLEN:|%^CLEN:) (%^SLEN:) %^SVLOW:  ; 
-		_  á:o Cns:+ Vow: %^ÁI: %^EWG: ; !puáhháá : pooṿij
+		     _  á:o Cns:+ Vow: %^ÁI: %^EWG: ; !puáhháá : pooṿij
+ 		Cns  _ (%^VLOW:) %> [ j Vow | o ] ;
 ! stááḷu stááloust
 
 "Second vowel shortening in 3syll consonant stems"
