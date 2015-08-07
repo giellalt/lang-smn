@@ -10,81 +10,64 @@ In the autumn we will make a plan for the MT work. In this document is only for 
 * Data for NDS dictionaries in both directions (__Ciprian__)
 * SMN Korp (__Ciprian__)
 
-!! July
-Workers in July:
-* Miina 4 weeks
-* Ciprian 4 weeks
-* ML first weeks and perhaps last weeks
-* Trond some mornings
+!! August
+Workers in August
+* Trond
+* Lene 
+* ML
+* Erika
+* Ciprian partly
 
 !!Works to be done:
 
 !Time allocation
-* 50% dict
-* 25% verbs
-* 25% noun lexicon improvement (stems and contlex) 
+* Bidix
+* Twolc
+* Verbs
+* Nouns
+* Oulu presentation
 
 !!Tasks
 ! verbs
-* linguistics <== get the landscape clear 
-* (yamls + ling descr of mf processes)
+* linguistics: 
+** [Finish the verbal inflection overview|VerbalInflection.html]
+** (yamls as needed)
 * Principles for yamls:
 * Following the grouping in the grammar
 ** Bisyllabics: all stem vowels + root vowels in order to cope with lowering
 ** Trisyllabics:  types are there already
 ** Contracted: in principle as for the bi/tri above
 * lexc + twolc <== thereafter do analysis
-* __Trond__ to give scripts to Cip / document it
-* __Trond__ to give POS-generating pipelines for fin to Cip
-
 
 ! nouns
-* yamls and FST
-** today: 14000 tests for 660 lemmata
-* lexicon (minipara, stems)
-* the lexicon must match morphology (add contlex and correct stem)
-** Priority to 1784 ones marked with __nounstems__ of 10640 total 
+* Finish the fst to let yamls through
+* Lexicon:
+** Appr 200 __nounstems__ left
 
 ! adjectives <== get the landscape clear
-* linguistics
-* yaml
+* Linguistics:
+** attr forms
+** map the stems to the nominal classes, prefix A_contlex
+** Allocate 1122 __adjstems__
 
-! other POS <== get the POS right
-* check
+! other, closed POS <== get the POS right
+* check fst up against grammar
+
+!Lexicon
+* Work with missing lists 
+** situation 7.8.15: coverage = 68%, including names, corpus = 1,1 mill)
+
+{{{
+For reference: Command:
+cat misc/boundsmn.txt |preprocess|grep '[a-z]'|wc -l
+cat misc/boundsmn.txt |preprocess|grep '[a-z]'|usmn|grep '?'|wc -l
+}}}
 
 !Dictionaries: 
-* dictionary adjustment and dialectic process
-* Cip has analysed the dictionary
-* adding POS to words from Finnish
+* Finish bidix (Cip, Miina)
+* Redo finsmn NDS
+* Oulu presentation
 
-{{{
-Cip: Both fin2smn and smn2fin. How much manual work remains to see
-Cip: Also sme -> fin / fin -> smn. Manual work
-}}}
-
-We may make the POS invisible in the NDS interface, for the POS we are not sure about
-* show the POS: N, V (A), Pron
-* do not show: the other POS
-
-Methodology:
-# understand and analyse
-# divide the dictionary, convert the unproblematic parts
-# work on the problematic parts, resolve problems part by part <==
-## problems:  vs , what comes after hash, ...
-# back to step 2 and repeat
-
-we have yaml tests for 660 lemmas, but we have 10600 nouns in the lexicon
-miniparadigms have two goals:
-
-# as documentation to get the correct contlex and stem
-# as a regression test
-
-{{{
-com, loc, ill, gen
-muotâ:muotˊtu AAIGA "lumi" ; !¢muotˊtuin, muotˊtust, muotˊtui, muotˊtuu
-                             !&scripted miniparadigm candidates
-                             !¢checked miniparadigm candidates
-}}}
 
 !! smn-fin-smn dictionary launching
 * Present the dictionary to the users (__ML, Miina__)
