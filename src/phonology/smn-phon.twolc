@@ -51,7 +51,7 @@ p4:p  t4:t k4:k č4:č r4:r l4:l h4:h   !!= * @CODE@  these are consonants that 
 i4:i        i2:i             	        !!= * @CODE@  this is the underlying i consonant
 m7:m n7:n ŋ7:ŋ s7:s r7:r đ7:đ l7:l    !!= * @CODE@  
 j7:j h7:h š7:š  v7:v                  !!=  @CODE@  with dots
-h5:h  y5:y i5:i                    !!= * @CODE@  these do not change 
+h5:h  y5:y i5:i u5:u                   !!= * @CODE@  these do not change 
 
 
 !! !More abstract archiphonemes
@@ -281,6 +281,7 @@ Vy:0 <=> Vx: _ [Cns: - č4: ] Cns:* (%^RC:) Vow:  %^WG: %^RVSH: (%^SVLOW:) [%>|.
 !! * __@RULENAME@__ \\ sai4j7oos 
 i4:0 <=>  Vow: _ [j:|j7:]  Vow:+ (Cns) [%^EWG:|%^WG:|%^CSH:] ; ! %^SVSH:  [%>|.#.] ; !! 1) saijos:sajos po%^RVi4ju%^EWG%>i
 
+!vuái4jus
 
 "Long vowel shortening, č:j̣ "
 !! * __@RULENAME@__ \\ special rule for getting ej̣ittáá instead of ej̣ittáá.
@@ -397,9 +398,9 @@ Cx:v <=>  _  Cz (%^RC:) Vow:+ (%^SV: ) (Cns:)  (%^FCD:) %^WG: ;
 !! * __@RULENAME@__ \\   
 Cy:0 <=> :Vow (Vow:) Cx: _ Cz: (%^RC:) WeakGrade \%^CLEN:   ;  
           Cx:  _ Cz:  Vow (%^EA:) %^CSH:    ;  
-      where Cx in ( j i4 i4 j j i4 l l l l l l l m m n n n ŋ r r r r r r r r v v v ) 
-            Cy in ( p c  t  s t k  c k p s t č š p č c s t k c č p k s t č š c p t ) 
-            Cz in ( p c  t  s t k  c k p s t č š p č c s t k c č p k s t č š c p t) 
+      where Cx in ( j i4 i4 j j i4 i4 l l l l l l l m m n n n ŋ r r r r r r r r v v v ) 
+            Cy in ( p c  t  s t k  p  c k p s t č š p č c s t k c č p k s t č š c p t ) 
+            Cz in ( p c  t  s t k  p  c k p s t č š p č c s t k c č p k s t č š c p t) 
       matched ;
 
 !€ á^RVrppu^WG^RLEN>
@@ -449,7 +450,7 @@ m:0 <=>  _ n  [%>|.#.] ;
 !! * __@RULENAME@__ \\  special rule, e.g. konnjâl -> konjâlân puánnjá
 n:0 <=> n  _ j ConsonantShorting \%^CLEN: ; !! 1) 
         n  _ j WeakGrade \%^CLEN: ; !! 2)lonnjâ:loonjáin
-        n7:n  _ j Vow:+ Cns %^CSH: %^SVSH: %> ; !vinnjooh:viṇjohân
+        [n7:n|n]  _ j Vow:+ Cns ([%^ÁI:|%^ÁE:]) [%^CSH:|%^EWG:] ; !vinnjooh:viṇjohân
 
 
 !€ konnjâl^CSH>ân
@@ -596,8 +597,8 @@ Cx:Cy <=> Vow:  _ %^RC: :Vow+ Cns:* [Triggers: - [%^SFV:| %^FCD:]]* %^CLEN: ([%^
 "From extra strong to weak, part 1 cc:s, rr:r"
 !! * __@RULENAME@__ \\  
 Cy:0 <=>  [Cx: | .#. | # ]  _  Vow:+ (Cns:) ([%^ÁI:|%^ÁE:]) (%^FCD:) %^EWG: ; !  !! poccuu:puásui  kieppu:kiepâ iäbbár%^ÁI cuobbuu:cuábui kiellâs
-       where Cx in ( b c č đ d g h k l l  m m  n ŋ r t p p  đ  n   r s s  š ) 
-             Cy in ( b c č đ d g h k l l7 m m7 n ŋ r t p p4 đ7 n7 r7 s7 s š) 
+       where Cx in ( b c č đ d g h k l l  m m  n ŋ r t p p  đ  n   r s s  š v z ž) 
+             Cy in ( b c č đ d g h k l l7 m m7 n ŋ r t p p4 đ7 n7 r7 s7 s š v z ž) 
         matched ;
 
 
