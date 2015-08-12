@@ -32,7 +32,7 @@ LEXICON VerbRoot
 !! * 3-syllabic
 !! ** LEKKASID (no stem change)
 !! ** CIELATTID (stem-final tt shortening) cielâttiđ: cielât
-!! ** VYEJETTID (2syll vow short in Inf, long in Sg3) vyejettiđ: vyejeet
+!! ** VYEJETTID (2syll vow short in Inf, long in Sg3, 1st syll V lengthening) vyejettiđ: vyejeet
 !! ** PUTESTID (cns and vow lengthening) putestiđ: putteest
 !! ** IALLAATTID (stem-final tt shortening + 2syll vow shortening) iällááttiđ: iällát
 !! * Contracted j-stems
@@ -72,8 +72,22 @@ raattâđ:raatt 2SYLL_AD "rämistä" ;
 ! ===================
 
 ! YAML 2SYLL_AD
-vuollâđ:vuoll 2SYLL_AD ; !!= * @CODE@ long list ok
-moonnâđ:moonn 2SYLL_AD ; !!= * @CODE@
+
+! Root vowel = Prs Pl3, modeled after nouns
+luuhâđ:lo%^RVh%^RC 2SYLL_AD ;  !
+njaahâđ:njääh%^RC 2SYLL_AD ;   ! CAACI 
+kiessâđ:kies%^RC 2SYLL_AD ;    !
+viiššâđ:vi%^RVš%^RC 2SYLL_AD ; !
+vuollâđ:vyel%^RC 2SYLL_AD ;    ! KYELI
+moonnâđ:ma%^RVn%^RC 2SYLL_AD ; ! NJUNE
+
+! root vowel = Inf
+! luuhâđ:luuh%^RC 2SYLL_AD ;
+! njaahâđ:njaah%^RC 2SYLL_AD ;
+! kiessâđ:kiess 2SYLL_AD ;
+! viiššâđ:viišš 2SYLL_AD ;
+! vuollâđ:vuoll 2SYLL_AD ; !!= * @CODE@ long list ok
+! moonnâđ:moonn 2SYLL_AD ; !!= * @CODE@
 
 ! yaml anneed
 
@@ -623,7 +637,6 @@ juoigâđ:juoi4ˊg 2SYLL_AD ;
 njuolgâđ:njuolˊg 2SYLL_AD ;
 ruovgâđ:ruovˊg 2SYLL_AD ;
 haahâđ:haah%^RC 2SYLL_AD ;
-njaahâđ:njaah%^RC 2SYLL_AD ;
 čaahâđ:čaah%^RC 2SYLL_AD ;
 keehâđ:keeh%^RC 2SYLL_AD ;
 miehâđ:mieh%^RC 2SYLL_AD ;
@@ -632,7 +645,6 @@ njiihâđ:njiih%^RC 2SYLL_AD ;
 hoohâđ:hooh%^RC 2SYLL_AD ;
 soohâđ:sooh%^RC 2SYLL_AD ;
 čuohâđ:čuoh%^RC 2SYLL_AD ;
-luuhâđ:luuh%^RC 2SYLL_AD ;
 nuuhâđ:nuuh%^RC 2SYLL_AD ;
 suuhâđ:suuh%^RC 2SYLL_AD ;
 čuuhâđ:čuuh%^RC 2SYLL_AD ;
@@ -1051,7 +1063,6 @@ juksâđ:ju%^RVks 2SYLL_AD ;
 kupsâđ:ku%^RVps 2SYLL_AD ;
 karsâđ:ka%^RVrs 2SYLL_AD ;
 peessâđ:peess 2SYLL_AD ;
-kiessâđ:kiess 2SYLL_AD ;
 viessâđ:viess 2SYLL_AD ;
 cissâđ:ci%^RVss 2SYLL_AD ;
 poossâđ:pooss 2SYLL_AD ;
@@ -1317,7 +1328,6 @@ puohčâđ:puohˊč 2SYLL_AD ;
 iiŋŋâđ:iiŋŋ 2SYLL_AD ;
 spiiđđâđ:spiiđđ 2SYLL_AD ;
 riiššâđ:riišš 2SYLL_AD ;
-viiššâđ:viišš 2SYLL_AD ;
 vuoiŋâđ:vuoiˊŋ 2SYLL_AD ;
 spolččâđ:spo%^RVlčč 2SYLL_AD ;
 koččâđ:ko%^RVčč 2SYLL_AD ;
@@ -4665,13 +4675,13 @@ ostodiđ:ostod 3v ;
 tivodiđ:tivod 3v ;
 kočodiđ:kočod 3v ;
 iberdiđ:ib%^RCe%^SVrd PUTESTID ;
-mogerdiđ:mogerd 3v ;
-piškerdiđ:piˊškerd 3v ;
-komerdiđ:komerd 3v ;
-kaverdiđ:kaverd 3v ;
-kazerdiđ:kazerd 3v ;
-skiđerdiđ:skiđerd 3v ;
-mođerdiđ:mođerd 3v ;
+mogerdiđ:moge%^SVrd PUTESTID ;
+piškerdiđ:piˊške%^SVrd PUTESTID ;
+komerdiđ:kome%^SVrd PUTESTID ;
+kaverdiđ:kave%^SVrd PUTESTID ;
+kazerdiđ:kaze%^SVrd PUTESTID ;
+skiđerdiđ:skiđe%^SVrd PUTESTID ;
+mođerdiđ:mođe%^SVrd PUTESTID ;
 käđirdiđ:käđird 3v ;
 kiđordiđ:kiđord 3v ;
 skuážurdiđ:skuáˊžurd 3v ;
@@ -5061,13 +5071,13 @@ vuojâliđ:vuoˊjâl 3v ;
 ucâliđ:ucâl 3v ;
 jehâliđ:jehâl 3v ;
 rohâliđ:rohâl 3v ;
-tohâliđ:tohâl 3v ;
-luhâliđ:luhâl 3v ;
-čuhâliđ:čuhâl 3v ;
+tohâliđ:to%^RVhâl VYEJETTID ;
+luhâliđ:lu%^RVhâl VYEJETTID ;
+čuhâliđ:ču%^RVhâl VYEJETTID ;
 čiehâliđ:čieˊhâl 3v ;
 vonnâliđ:vonnâl 3v ;
 kiesâliđ:kieˊsâl 3v ;
-potâliđ:potâl 3v ;
+potâliđ:po%^RVtâl VYEJETTID ;
 jutâliđ:jutâl 3v ;
 sačâliđ:sačâl 3v ;
 ročâliđ:ročâl 3v ;
