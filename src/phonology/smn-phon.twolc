@@ -111,7 +111,7 @@ h5:h  y5:y i5:i                    !!= * @CODE@  these do not change
 !! !!! Sets
 
 Sets
- Vow = a á â ä e i o u y æ ø ö å y5	i2		   !!= * @CODE@ 
+ Vow = a á â ä e i o u y æ ø ö å y5	i2 i5		   !!= * @CODE@ 
        é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý 	   !!= @CODE@ 
        A Á Â Ä E I O U Y Æ Ø Ö Å			   !!= @CODE@ 
        É Ó Ú Í À È Ò Ú Ì Ë Ü Ï Ê Ô Û Î Ã Ý 	   !!= @CODE@ 
@@ -829,6 +829,10 @@ Vx:Vy <=> Vz:   _ Cns:+ i %^WG:   %> i: ;
 !ä	á
 !ye	uá
 
+"Diphthongisation i5ä to ie"
+!! * __@RULENAME@__ \\  
+ä:e <=> i5: _ Cns: Cns:+ á: s [%^ÁI:|%^ÁE:] %^EWG: [%^RVSH:|%^RLEN:] %> ; !viäkk4ás : viehis
+
 
 
 "Diphthongisation e to iä, part 1"
@@ -857,9 +861,10 @@ a:á <=> \Vow: _ %^RV: h: h u %^WG: (%^RLEN:) %> ;
 
 
 "Diphthongisation e:iä and lengthening ä:ää in Illative and Sg3 2"
-!! * __@RULENAME@__ \\  Part 2: ^RV to ä; 
+!! * __@RULENAME@__ \\  Part 2: ^RV to ä; ke%^RVrttu%^WG%^RLEN%>š
 %^RV:ä <=> e:i _ Cns:+ i: %^EA:  (%^CSH:) (%^RLEN:)   %> ; ! 1) e:iä, ergi -> iärgán 2 (e+e(RV) -> i + ä
            ä: _ Cns:+ i:  %^WG: %^RLEN: %> \i: ; ! 2) ä:ää
+!           e:i _ Cns:+ u: %^WG:  %> ; !kiärtuš
 
 
 "Diphthongisation o:uá for %^EWG, part 1"
@@ -922,12 +927,10 @@ e:o <=> y: _  Cns:+ :i (%^WG:) ([%^RVSH: |%^RLEN:] ) (%^CLEN:) %> i: ;
 "uá to ye, part 1" 
 !! * __@RULENAME@__ \\  Part 1 luámmán : lyeme čuággás%^ÁI%^WG%^RLEN%>
 u:y <=> _ á: Cns:+ Vow:+ Cns: [%^ÁI:|%^ÁE:] (%^FCD:) %^EWG: ; ! [%^RLEN:|%^RVSH:] [%>|.#.] ;
-        !_ á: Cns:+ Vow: %^SV: Cns: %^FCD: %^EWG: (%^SLEN:)  %> ;
 
 "uá to ye, part 2"
 !! * __@RULENAME@__ \\  Part 2 luámmán : lyeme
 á:e <=> u: _ Cns:+ Vow: %^SV: Cns: %^FCD: %^EWG: (%^SLEN:) [%>|.#.] ;
-        !:e  Cns:+ _  %^SV:  Cns: %^FCD:  %^EWG:  (%^SLEN:) [%>|.#.]  ; !luámmá%^SVn%^FCD%^WG
         :y _ Cns:+ Vow:+ Cns: [%^ÁI:|%^ÁE:] (%^FCD:) %^EWG: ; ! [%^RLEN:|%^RVSH:] [%>|.#.] ; !cuággás : cyegis čuággás%^ÁI%^WG%^RLEN
 
 
@@ -1094,6 +1097,7 @@ i5:j  <=> Cns i %> _ ;
 "Suffix i5:0 for lexicon APINA"
 !! * __@RULENAME@__ \\ timotein oboen
 i5:0 <=> Vow [i | e] %> _ ;
+         _ ä:e Cns: Cns:+ Vow: Cns %^ÁE: %^EWG: %^RVSH: %>  ; !pi5äll7ás%^ÁE
 
 
 "Suffix i:j for i and e-stems"
