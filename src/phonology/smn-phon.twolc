@@ -777,6 +777,27 @@ u:o <=>  [.#. | #] _  Cns:+ u:o %^SV: %^WG: %^SLEN:  %^SVLOW:  [%>|.#.]  ; !%^SV
          [.#.|#] _  Cns:+ u:o %^WG:  %^SVLOW:  [%>|.#.]  ; 
 
 
+"Root vowel á:a for contract verbs"
+á:a <=> [Cns|.#.] _ Cns:+ u   %> \[j Vow|o] ;
+        [Cns|.#.] _ Cns:+ i2: %> \[j Vow|e] ;
+
+"Root vowel a:o for contract verbs"
+a:o <=> [Cns|.#.] _ Cns:+ u   %> \[j Vow|o] ;
+        [Cns|.#.] _ Cns:+ i2: %> \[j Vow|e] ;
+
+"Root vowel o:u for contract verbs"
+o:u <=> [Cns|.#.] _ Cns:+ u   %> \[j Vow|o] ;
+        [Cns|.#.] _ Cns:+ i2: %> \[j Vow|e] ;
+
+!€ tohhi2>đ
+!€ tuhhi>đ
+
+!"Root vowel change for contract verbs"
+!Vx:Vy <=> [Cns|.#.] _ Cns:+ :o %> [j [e|i] |o ] ;
+!	where Vx in (á a o)
+!		  Vy in (a o u)
+!		  matched ;
+
 
 !! !First syllable diphthong rules
 
@@ -794,6 +815,7 @@ u:o <=>  [.#. | #] _  Cns:+ u:o %^SV: %^WG: %^SLEN:  %^SVLOW:  [%>|.#.]  ; !%^SV
 !! * __@RULENAME@__ \\  
 Vx:Vy <=> _ Vz: Cns:* i %^WG: %> i: ;  
           _ Vz: Cns:* Vow: Cns [%^ÁI:|%^ÁE:] [%^WG:|%^EWG:] ([%^RLEN:|%^RVSH:]) [%>|.#.]  ; !! 1)viäskár veeskir iäbbár eebir 
+          _ Vz: Cns:+ i2: %>  \[j Vow|i|e] ;
 	where Vx in ( i )
 		  Vy in ( e )
 		  Vz in ( ä )
@@ -805,6 +827,7 @@ Vx:Vy <=> _ Vz: Cns:* i %^WG: %> i: ;  !Her
          _ Vz:0 Cns:* i %^WG: %^CLEN: %^SVLOW: %> i:  ;
          _ Vz: Cns:* i %^WG: (%^RLEN:) %> i: ; 
          _ Vz:0 Cns:+ i %^WG: %^RVSH: %> i: ;
+         _ Vz:0 Cns:+ i2: %> \[j Vow|i|e] ;
 	where Vx in ( u )
 		  Vy in ( o )
 		  Vz in ( á )
@@ -818,6 +841,8 @@ Vx:Vy <=> _ Vz: Cns:* i %^WG: %> i: ;  !Her
         _ [ ä: |%^RV: ] Cns:+   i %^WG: [%^CLEN: |%^RLEN: ]  %^SVLOW: %> i: ; !čääci:čassijn, läbži:labžijn
         _ %^RV:  Cns:+   i %^WG: %^RLEN:  %> i: ; !ä%^RVi4gi%^WG%^RLEN%>id
         _ ä:0  Cns:+ Vow:  %^WG: %^RVSH: %^CLEN:  %> i:  ; !! čääci : čassijn
+        _ ä:0 Cns:+ i2: %> [j|e|o] ;
+    ä:0 _     Cns:+ i2: %> [j|e|o] ;
 
 
 !€ sääm7^RCi^WG>in
@@ -853,7 +878,8 @@ Vx:Vy <=> Vz:   _ Cns:+ i %^WG:   %> i: ;
 !! * __@RULENAME@__ \\  
 ä:e <=> i5: _ Cns: Cns:+ á: s [%^ÁI:|%^ÁE:] %^EWG: [%^RVSH:|%^RLEN:] %> ; !viäkk4ás : viehis
 
-
+"Diphthong rule uá to uo"
+á:o <=> u _ Cns:+ u %> [i|u|š|đ|v|p] ;
 
 "Diphthongisation e to iä, part 1"
 !! * __@RULENAME@__ \\  
@@ -1015,7 +1041,8 @@ Vx:á <=> [:e|:i|:ä|:á] (%^RV:)  Cns:+ _  %^EA: (%^CSH:) ([%^RLEN: |%^RVSH:] )
     where Vx in ( i i2 ) ;
 
 "Stem vowel i to e in front of j"
-i:e <=> Cns _ (%^VLOW:) %> [j Vow|e] ;
+Vx:e <=> Cns _ (%^VLOW:) %> [j Vow|e] ;
+	where Vx in (i i2) ;
 
 
 "Stem vowel á to a for a root vowel"
@@ -1046,7 +1073,10 @@ e:i <=> Cns: _  [Triggers: - %^EA:]*  %> i: ;
         
 "Stem vowel i2:e"
 !! * __@RULENAME@__ \\ 
-i2:e <=> _ Triggers:+ %> \[i: |n | d] ;
+i2:e <=> _ Triggers:+ %> \[i: |n|d|j] ;
+
+!€ tohhi2>đ
+!€ tuhhi
 
 "Stem vowel u:o change before suffix"
 !! * __@RULENAME@__ \\  
