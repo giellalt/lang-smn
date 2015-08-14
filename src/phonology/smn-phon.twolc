@@ -51,7 +51,7 @@ p4:p  t4:t k4:k č4:č r4:r l4:l h4:h   !!= * @CODE@  these are consonants that 
 i4:i        i2:i             	        !!= * @CODE@  this is the underlying i consonant
 m7:m n7:n ŋ7:ŋ s7:s r7:r đ7:đ l7:l    !!= * @CODE@  
 j7:j h7:h š7:š  v7:v                  !!=  @CODE@  with dots
-h5:h  y5:y i5:i u5:u ŋ5:ŋ t5:t c5:c l5:l t5:t !!= * @CODE@  these do not change 
+h5:h  y5:y i5:i j5:j u5:u ŋ5:ŋ t5:t c5:c l5:l t5:t !!= * @CODE@  these do not change 
  
 
 !! !More abstract archiphonemes
@@ -111,7 +111,7 @@ h5:h  y5:y i5:i u5:u ŋ5:ŋ t5:t c5:c l5:l t5:t !!= * @CODE@  these do not chang
 !! !!! Sets
 
 Sets
- Vow = a á â ä e i o u y æ ø ö å y5	i2 i5		   !!= * @CODE@ 
+ Vow = a á â ä e i o u y æ ø ö å y5	i2 i5 		   !!= * @CODE@ 
        é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý 	   !!= @CODE@ 
        A Á Â Ä E I O U Y Æ Ø Ö Å			   !!= @CODE@ 
        É Ó Ú Í À È Ò Ú Ì Ë Ü Ï Ê Ô Û Î Ã Ý 	   !!= @CODE@ 
@@ -127,7 +127,7 @@ Sets
        ht g2 k2 m2 n2 							   !!= @CODE@ 
        b3 d3 g3 m3 h3 						   !!= @CODE@ 
        p4 k4 č4 r4 l4 h4 t4 i4                  !!= @CODE@
-       h5 ŋ5 t5 c5 l5 t5                                      !!=  @CODE@
+       h5 ŋ5 t5 c5 l5 t5  j5                                    !!=  @CODE@
        m7 n7 ŋ7 v7 s7 r7 đ7	l7 j7 h7 š7		   !!= @CODE@ 
        %^RC %^SC   ;                         !!=  @CODE@ 
  Geminate = b d g p h t k c f z l m n ŋ r s š v  ;  !!= * @CODE@  
@@ -493,8 +493,8 @@ n:0 <=> n  _ j ConsonantShorting \%^CLEN: ; !! 1)
 
 "Final consonant x:xx"
 !! * __@RULENAME@__ \\  pottáák potákkân  
-%^SC:Vx <=> Vx _ %^CSH: %^SVSH: [%>|.#.] ; 
-        where Vx in ( k l n p t ) ;
+%^SC:Cx <=> Cx _ %^CSH: %^SVSH: [%>|.#.] ; 
+        where Cx in ( k l n p t ) ;
 
 
 !rejected:
@@ -537,7 +537,7 @@ j7:i <=> Vow: _ %^RC: :Vow (%^RVSH:)  %^CLEN:         %> ; !Par Ess
 !! * __@RULENAME@__ \\   piiru piirrun niisu niissun vahe vahheen
 %^RC:Cy <=> Vow: Cx: _ Vow (%^SV:)  Cns:* [%^CLEN: (%^SLEN:)|%^SVSH:] %> \[Vow: | s ] ; 
             Vow: Cx: _ Vow           Cns         %^CLEN:  %> \[ i:|s]  ;
-            Vow: Cx: _ Vow: Cns:+ Vow: Cns: %^SFV: (%^RLEN:) %^CLEN: %^SLEN: %>   ; 
+            Vow: [Cx - h5 ] _ Vow: Cns:+  (%^RLEN:) %^CLEN: (%^SLEN:) %>   ; !! 3) kepidem : keeppidmân
 	where Cx in ( v t r s h h5 c m p)  
 		  Cy in ( v t r s h h c m p)   
 		  matched ;
@@ -641,7 +641,8 @@ p4:v <=> Vow: _ Vow: (Cns:) %^EWG: ;
 "Assimilation of consonants t d š"
 !! * __@RULENAME@__  delet t in front of -ttáá, avoid -tttáá
 Cx:0  <=>  Seg: _ (%^CSH:) (%^RLEN:) %> Cy Cy ; 
-        Vow Cy _ [â:|e:] m %^SFV: ; ! vajoidittem vajoiditmáin
+           Vow: Cx _ %> m ;
+!        Vow Cy _ [â:|e:] m %^SFV: ; ! vajoidittem vajoiditmáin
 	where Cx in ( d t š) 
 	      Cy in ( d t š)
 		  matched ;
@@ -686,10 +687,10 @@ Cx:0  <=>  Seg: _ (%^CSH:) (%^RLEN:) %> Cy Cy ;
 Vy:0 <=> Vx: _  Cns: [ Cns: - %^RC:0 ] Vow:  %^WG: (%^CLEN:) %^SVLOW: %> i: ; !! 1)
          Vx: _  Cns:+ Vow:  %^WG: %^RVSH: %^CLEN:  %> i:  ; !! 2) čääci : čassijn
          Vx: _  Cns:+ Vow:+ (%^CSH:) %^RVSH: (%^SVLOW:)  %>  ; !! 3) kaamuv kammust
-         Vx _ Cns Cns Vow: %^SV: Cns:+ Vow: Cns %^SFV: %^RLEN: (%^CLEN:) %^SLEN: %> ; !! 4) kiiško%^SVdem
+!         Vx _ Cns Cns Vow: %^SV: Cns:+ Vow: Cns %^SFV: %^RLEN: (%^CLEN:) %^SLEN: %> ; !! 4) kiiško%^SVdem
 		 Vx: _ [Cns:+ - č4:] Vow:+ Cns:+ (%^ÁI:) %^CSH: (%^SVSH:) [%>|.#.] ; ! pááppár : pápárân páápp4ár%^ÁI%^EWG%^RVSH%>id
 		 Vx: _ [Cns:+ - č4:] Vow:+ Cns:+ (%^ÁI:) %^EWG: %^RVSH: [%>|.#.] ; ! pááppár : pápárân páápp4ár%^ÁI%^EWG%^RVSH%>id
-		 Seg: _ Vx Cns: (Cns:) (%^RC:) Vow  :Cns (%^SFV:) (%^SC:) ([%^ÁI:|%^ÁE:]) (%^CLEN:) %^RVSH: [%>|.#.] ;
+!		 Seg: _ Vx Cns: (Cns:) (%^RC:) Vow  :Cns (%^SFV:) (%^SC:) ([%^ÁI:|%^ÁE:]) (%^CLEN:) %^RVSH: [%>|.#.] ;
        where Vx in ( a e i o u á ä y ) 
              Vy in ( a e i o u á ä y ) 
        matched ;
@@ -720,8 +721,8 @@ Vx:0 <=> Vy _ %^EE: ;
 
 "Root vowel lenghtening in many stems"
 !! * __@RULENAME@__ \\  lekkâ : leehá-  meecij ko%^RVppâin
-%^RV:Vx <=> Vx _ Cns:+  Vow: (Vow:)  (Cns:+) (Triggers: - %^RLEN:)*   %^RLEN: ; !! 1) 2st and 3st
-            Vx _ Cns: (Cns:) Vow:+ Cns:+ Vow: Cns: %^SFV: %^RLEN:  ; !! 2) 4st 
+%^RV:Vx <=> Vx _ [Cns:+ - [h: h ]]  Vow: (Vow:)  (Cns:+) (Triggers: - %^RLEN:)*   %^RLEN: ; !! 1) 2st and 3st
+!            Vx _ Cns: (Cns:) Vow:+ Cns:+ Vow: Cns: %^SFV: %^RLEN:  ; !! 2) 4st 
 	where Vx in ( a e i o u y á ) ; !ä in a special rule
 		
 !€ le^RVkk4â^WG^RLEN>
@@ -732,7 +733,7 @@ Vx:0 <=> Vy _ %^EE: ;
 
 "Root vowel ä:ää lenghtening"
 !! * __@RULENAME@__ \\ special rule, for avoiding conflict spä%^RVi4lih%^EWG%^RLEN
-%^RV:ä <=> ä _ Cns:+ Vow:+ Cns:+ Vow: Cns: %^SFV: %^RLEN: %^CLEN: ; !! 5) vä%^RVr7%^RCid
+%^RV:ä <=> ä _ Cns:+ Vow:+ Cns:+ %^RLEN: %^CLEN: ; !! 5) vä%^RVr7%^RCid
            :ä _ Cns:* :i (%^SV:) Cns: (%^ÁI:) (%^FCD:) [%^EWG:|%^WG:] %^RLEN: [%>|.#.] ; !spääilih
 
 
