@@ -84,35 +84,42 @@ LEXICON SOLLA_ALGA  !!= __@CODE@__ SM1, RLEN, earlier LLEN !rlen svlow, sgcom/pl
 
 
 LEXICON KIEHA !!= __@CODE@__
-+N+Sg+Com:%^WG%^CLEN%^SVLOW%>in K ; ! kievváin
-+N+Ess:%>n K ;						! kiehân 
-+N+Par:%>d K ;						! kiehâd 
-+N+Pl+Ill:%^WG%^CLEN%^SVLOW%>id K ; ! kievváid
++N: X_KIEHA ;
+
+LEXICON X_KIEHA !!= __@CODE@__
++Sg+Com:%^WG%^CLEN%^SVLOW%>in K ; ! kievváin
++Ess:%>n K ;						! kiehân 
++Par:%>d K ;						! kiehâd 
++Pl+Ill:%^WG%^CLEN%^SVLOW%>id K ; ! kievváid
 KIEHA_KIELA ;
 
 LEXICON KIELA !!= __@CODE@__ WG, blank Ill, DLEN, RVSH, SVLOW 
-+N+Sg+Com:%^WG%^SVLOW%>in K ; 		! kieláin
-+N+Ess:%^CLEN%>n K ;				! kiellân # puolipitkä > pitkä
-+N+Par:%^CLEN%>d K ;				! kiellâd # puolipitkä > pitkä
-+N+Pl+Ill:%^WG%^SVLOW%>id K ; ! kieláid
++N: X_KIELA ;
+
+
+LEXICON X_KIELA !!= __@CODE@__ WG, blank Ill, DLEN, RVSH, SVLOW 
++Sg+Com:%^WG%^SVLOW%>in K ; 		! kieláin
++Ess:%^CLEN%>n K ;				! kiellân # puolipitkä > pitkä
++Par:%^CLEN%>d K ;				! kiellâd # puolipitkä > pitkä
++Pl+Ill:%^WG%^SVLOW%>id K ; ! kieláid
 KIEHA_KIELA ;
 
 LEXICON KIEHA_KIELA !!= __@CODE@__
-+N+Sg+Nom: K;				 		! kiehâ
-+N+SgNomCmp: R ;
-+N+Sg+Gen:%^WG K ;     				! kievâ
-+N+Sg+Acc:%^WG K ;     				! kievâ
-+N+Sg+Ill:%>n K ;					! kiehân
-+N+Sg+Loc:%^WG%>st K ; 				! kievâst
-+N+Sg+Abe:%^WG%^RVSH%>ttáá K ;		! kievâttáá
-+N+Pl+Nom:%^WG%>h K ;  				! kievah
-+N+Pl+Gen:%^WG%>i K ;				! kievâi 
-+N+Pl+Gen:%^WG%^RVSH%>i K ;  		! kievâi
-+N+Pl+Acc:%^WG%>id K ; 				! kievâid
-+N+Pl+Loc:%^WG%>in K ; 				! kievâin
-+N+Pl+Com:%^WG%^RVSH%>iguin K ;		! kievâiguin
-+N+Pl+Com+Err/Orth:%^WG%^RVSH%>igijn K ;		! kievâiguin
-+N+Pl+Abe:%^WG%^RVSH%>ittáá K ;		! kievâittáá
++Sg+Nom: K;				 		! kiehâ
++SgNomCmp: R ;
++Sg+Gen:%^WG K ;     				! kievâ
++Sg+Acc:%^WG K ;     				! kievâ
++Sg+Ill:%>n K ;					! kiehân
++Sg+Loc:%^WG%>st K ; 				! kievâst
++Sg+Abe:%^WG%^RVSH%>ttáá K ;		! kievâttáá
++Pl+Nom:%^WG%>h K ;  				! kievah
++Pl+Gen:%^WG%>i K ;				! kievâi 
++Pl+Gen:%^WG%^RVSH%>i K ;  		! kievâi
++Pl+Acc:%^WG%>id K ; 				! kievâid
++Pl+Loc:%^WG%>in K ; 				! kievâin
++Pl+Com:%^WG%^RVSH%>iguin K ;		! kievâiguin
++Pl+Com+Err/Orth:%^WG%^RVSH%>igijn K ;		! kievâiguin
++Pl+Abe:%^WG%^RVSH%>ittáá K ;		! kievâittáá
 
 
 
@@ -379,30 +386,36 @@ LEXICON KUMPPI  !!= * __@CODE@__ i-i-i > SOLLA (?); MLO: no, difference in sg Co
 +N+Pl+Abe:%^WG%>ittáá K ;			! kumpijttáá
 
 LEXICON SAAMI   !!= __@CODE@__ to LAAVU after fix in twolc?  saämijn > saamijn when %^WG%^CLEN%^SVLOW
-+N+Sg+Nom: K ;                 ! sääm7i,
-+N+SgNomCmp: R ;
-+N+Sg+Gen:%^WG K ;          ! säämi,
-+N+Sg+Acc:%^WG K ;      ! säämi,
-+N+Sg+Ill:%^EA%>n K ;          ! sáám7án ä>á !, 
-+N+Sg+Loc:%^WG%>st K ;         ! säämist
-+N+Sg+Com:%^WG%^RLEN%>in   K ;       ! saamijn  # please add ä > a _ ij (twolc)
-+N+Sg+Abe:%^WG%^RVSH%>ttáá  K ; ! sämittáá
-+N+Ess:%^CLEN%>n  K ;          ! säämmin
-+N+Par:%^CLEN%>d K ;           ! säämmid
-VAARIH ;
++N: X_SAAMI ;
 
+LEXICON X_SAAMI   !!= __@CODE@__ to LAAVU after fix in twolc?  saämijn > saamijn when %^WG%^CLEN%^SVLOW
++Sg+Nom: K ;                 ! sääm7i,
++SgNomCmp: R ;
++Sg+Gen:%^WG K ;          ! säämi,
++Sg+Acc:%^WG K ;      ! säämi,
++Sg+Ill:%^EA%>n K ;          ! sáám7án ä>á !, 
++Sg+Loc:%^WG%>st K ;         ! säämist
++Sg+Com:%^WG%^RLEN%>in   K ;       ! saamijn  # please add ä > a _ ij (twolc)
++Sg+Abe:%^WG%^RVSH%>ttáá  K ; ! sämittáá
++Ess:%^CLEN%>n  K ;          ! säämmin
++Par:%^CLEN%>d K ;           ! säämmid
+X_VAARIH ;
 
 LEXICON VAARIH   !!= __@CODE@__ plurals for SAAMI
-+N+Sg+Nom: R ;                 ! 
-+N+Pl+Nom:%^WG%>h K ;          ! säämih
-+N+Pl+Gen:%^WG%>i K ;          ! saamij
-+N+Pl+Gen:%^WG%^RVSH%>i K ;    ! samij
-+N+Pl+Acc:%^WG%>id K ;         ! saamijd
-+N+Pl+Ill:%^WG%>id K ;         ! saamijd
-+N+Pl+Loc:%^WG%>in K ;         ! saamijn
-+N+Pl+Com:%^WG%^RVSH%>iguin K ; ! samijguin
-+N+Pl+Com+Err/Orth:%^WG%^RVSH%>igijn K ; ! samijguin
-+N+Pl+Abe:%^WG%^RVSH%>ittáá K ; ! samijttáá
++N: X_VAARIH ;
+
+
+LEXICON X_VAARIH   !!= __@CODE@__ plurals for SAAMI
++Sg+Nom: R ;                 ! 
++Pl+Nom:%^WG%>h K ;          ! säämih
++Pl+Gen:%^WG%>i K ;          ! saamij
++Pl+Gen:%^WG%^RVSH%>i K ;    ! samij
++Pl+Acc:%^WG%>id K ;         ! saamijd
++Pl+Ill:%^WG%>id K ;         ! saamijd
++Pl+Loc:%^WG%>in K ;         ! saamijn
++Pl+Com:%^WG%^RVSH%>iguin K ; ! samijguin
++Pl+Com+Err/Orth:%^WG%^RVSH%>igijn K ; ! samijguin
++Pl+Abe:%^WG%^RVSH%>ittáá K ; ! samijttáá
 
 
 LEXICON CAACI !!= __@CODE@__ WG, Ill EA, Com CLEN SVLOW, Ess CLEN
@@ -778,24 +791,27 @@ LEXICON SKERREEH !!= __@CODE@__  Plural tantum, as PUUVSAH, but w/o WG
 
 
 LEXICON APINA !!= __@CODE@__  this is for loanwords without stem change
-+N+Sg+Nom: K ;			! apina
-+N+SgNomCmp: R ;
-+N+Sg+Gen: K ; 			! apina
-+N+Sg+Acc: K ; 			! apina
-+N+Sg+Ill:%>n K ; 		! apinan
-+N+Sg+Loc:%>st K ; 		! apinast
-+N+Sg+Com:%>i5n K ; 		! apinain
-+N+Sg+Abe:%>ttáá K ; 	! apinattáá
-+N+Ess:%>n K ; 			! apinan
-+N+Par:%>d K ;			! apinad
-+N+Pl+Nom:%>h K ; 		! apinah
-+N+Pl+Gen:%>i K ; 		! apinai
-+N+Pl+Acc:%>id K ; 		! apinaid
-+N+Pl+Ill:%>id K ; 		! apinaid
-+N+Pl+Loc:%>in K ;		! apinain
-+N+Pl+Com:%>iguin K ; 	! apinaiguin
-+N+Pl+Com+Err/Orth:%>igijn K ; 	! apinaiguin
-+N+Pl+Abe:%>ittáá K ; 	! apinaittáá
++N: X_APINA ;
+
+LEXICON X_APINA !!= __@CODE@__  this is for loanwords without stem change
++Sg+Nom: K ;			! apina
++SgNomCmp: R ;
++Sg+Gen: K ; 			! apina
++Sg+Acc: K ; 			! apina
++Sg+Ill:%>n K ; 		! apinan
++Sg+Loc:%>st K ; 		! apinast
++Sg+Com:%>i5n K ; 		! apinain
++Sg+Abe:%>ttáá K ; 	! apinattáá
++Ess:%>n K ; 			! apinan
++Par:%>d K ;			! apinad
++Pl+Nom:%>h K ; 		! apinah
++Pl+Gen:%>i K ; 		! apinai
++Pl+Acc:%>id K ; 		! apinaid
++Pl+Ill:%>id K ; 		! apinaid
++Pl+Loc:%>in K ;		! apinain
++Pl+Com:%>iguin K ; 	! apinaiguin
++Pl+Com+Err/Orth:%>igijn K ; 	! apinaiguin
++Pl+Abe:%>ittáá K ; 	! apinaittáá
 
 
 
@@ -1067,7 +1083,7 @@ LEXICON VANHIMEH !!= __@CODE@__ plurals for LITTER
 
 
 LEXICON NAVER  !!= __@CODE@__  (to be unified?) 
-+N+Sg+Nom:%^WG K ; !naver
++N+Sg+Nom:%^WG%^SVSH K ; !naver
 +N+SgNomCmp:%^WG R ;
 +N+Sg+Gen: K ;   !nahhaar    
 +N+Sg+Acc: K ;      !nahhaar
@@ -1187,45 +1203,31 @@ LEXICON X_PAPAREH !!= __@CODE@__ plural forms
 
 
 LEXICON ALMOS !!= __@CODE@__ 
-+N+Sg+Nom:%^EWG%^SVSH%> K ;	! almos
-+N+SgNomCmp:%^EWG%^SVSH%>  R ;
-+N+Sg+Gen: K ;     			! almoos  a%^RVlmoos
-+N+Sg+Acc: K ;    			 ! almoos
-+N+Sg+Ill:%^WG%^SVSH%>ân K ; 			! almosân
-+N+Sg+Loc:%^WG%^SVSH%>ist K ; ! almosist
-+N+Sg+Com:%^WG%^SVSH%>áin K ; ! almosáin
-+N+Sg+Abe:%>ttáá K ; ! almoosttáá
-+N+Ess:%^EWG%^SVSH%>in K ;   ! almosin 
-+N+Ess:%^WG%^SVSH%>in K ;   !   
-+N+Par:%^EWG%^SVSH%>id K ;	! almosid
-+N+Par:%^WG%^SVSH%>id K ;	! 
-+N+Pl+Nom:%^WG%^SVSH%>eh K ;  ! almoseh
-+N+Pl+Gen:%^WG%^SVSH%>ij K ;  ! almosij
-+N+Pl+Acc:%^WG%^SVSH%>ijd K ; ! almosijd
-+N+Pl+Ill:%^WG%^SVSH%>áid K ; ! almosáid
-+N+Pl+Loc:%^WG%^SVSH%>ijn K ; ! almosijn
-+N+Pl+Com:%^WG%^SVSH%>ijguin K ;  ! almosijguin
-+N+Pl+Com+Err/Orth:%^WG%^SVSH%>ijgijn K ;  ! almosijguin
-+N+Pl+Abe:%^WG%^SVSH%>ijttáá K ;  ! almosijttáá
++N: X_ALMOS ;
+
+LEXICON X_ALMOS !!= __@CODE@__ 
++Sg+Nom:%^EWG%^SVSH%> K ;	! almos
++SgNomCmp:%^EWG%^SVSH%>  R ;
++Sg+Gen: K ;     			! almoos  a%^RVlmoos
++Sg+Acc: K ;    			 ! almoos
++Sg+Ill:%^WG%^SVSH%>ân K ; 			! almosân
++Sg+Loc:%^WG%^SVSH%>ist K ; ! almosist
++Sg+Com:%^WG%^SVSH%>áin K ; ! almosáin
++Sg+Abe:%>ttáá K ; ! almoosttáá
++Ess:%^EWG%^SVSH%>in K ;   ! almosin 
++Ess:%^WG%^SVSH%>in K ;   !   
++Par:%^EWG%^SVSH%>id K ;	! almosid
++Par:%^WG%^SVSH%>id K ;	! 
++Pl+Nom:%^WG%^SVSH%>eh K ;  ! almoseh
++Pl+Gen:%^WG%^SVSH%>ij K ;  ! almosij
++Pl+Acc:%^WG%^SVSH%>ijd K ; ! almosijd
++Pl+Ill:%^WG%^SVSH%>áid K ; ! almosáid
++Pl+Loc:%^WG%^SVSH%>ijn K ; ! almosijn
++Pl+Com:%^WG%^SVSH%>ijguin K ;  ! almosijguin
++Pl+Com+Err/Orth:%^WG%^SVSH%>ijgijn K ;  ! almosijguin
++Pl+Abe:%^WG%^SVSH%>ijttáá K ;  ! almosijttáá
 
 
-!LEXICON POTAS   __@CODE@__  (potás:pottáás ALMOS)
-!+N+Sg+Nom:%^CSH%^SVSH K ;        ! potás
-!+N+Sg+Gen: K ;    		 			! pottáás
-!+N+Sg+Acc: K ;     		 			! pottáás 
-!+N+Sg+Ill:%^CSH%^SVSH%>ân K ;		! potásân
-!+N+Sg+Loc:%^CSH%^SVSH%>ist K ; 		! potásist 
-!+N+Sg+Com:%^CSH%^SVSH%>áin K ;		! potásáin
-!+N+Sg+Abe:%>ttáá K ; 				! pottáásttáá
-!+N+Ess:%^CSH%^SVSH%>in K ; 			! potásin 
-!+N+Par:%^CSH%^SVSH%>id K ; 			! potásid
-!+N+Pl+Nom:%^CSH%^SVSH%>eh K ; 	 	! potáseh
-!+N+Pl+Gen:%^CSH%^SVSH%>ij K ; 		! potásij
-!+N+Pl+Acc:%^CSH%^SVSH%>ijd K ; 		! potásijd
-!+N+Pl+Ill:%^CSH%^SVSH%>áid K ; 		! potásáid
-!+N+Pl+Loc:%^CSH%^SVSH%>ijn K ; 		! potásijn
-!+N+Pl+Com:%^CSH%^SVSH%>ijguin K ; 	! potásijguin
-!+N+Pl+Abe:%^CSH%^SVSH%>ijttáá K ;   ! potásijttáá
 
 
 LEXICON KIIRAS  !!= __@CODE@__ 
@@ -2281,27 +2283,33 @@ LEXICON ODD_SUFF_SHORTSTEM  !!= * __@CODE@__
 
 
 LEXICON TAHHEE !!= __@CODE@__ ee-final contract, -ei instead of -ij
-+N+Sg+Nom: K ;				! tahhee
-+N+SgNomCmp: R ;
-+N+Sg+Gen: K ;				! tahhee
-+N+Sg+Acc: K ;				! tahhee
-+N+Sg+Ill:%^EE%>i K ;		! tahhei ! stem e > 0
-+N+Sg+Loc:%^EE%>st K ; 		! tahhest ! stem e > 0
-+N+Sg+Com:%^EE%>in K ;		! tahhein
-+N+Sg+Abe:%>ttáá K ;		! tahheettáá
-+N+Ess:%^EE%>n	K ;			! tahhen
-+N+Par:%^EE%>d	K ;			! tahhed
-KILDEEH ;
++N: X_TAHHEE ;
+
+LEXICON X_TAHHEE !!= __@CODE@__ ee-final contract, -ei instead of -ij
++Sg+Nom: K ;				! tahhee
++SgNomCmp: R ;
++Sg+Gen: K ;				! tahhee
++Sg+Acc: K ;				! tahhee
++Sg+Ill:%^EE%>i K ;		! tahhei ! stem e > 0
++Sg+Loc:%^EE%>st K ; 		! tahhest ! stem e > 0
++Sg+Com:%^EE%>in K ;		! tahhein
++Sg+Abe:%>ttáá K ;		! tahheettáá
++Ess:%^EE%>n	K ;			! tahhen
++Par:%^EE%>d	K ;			! tahhed
+X_KILDEEH ;
 
 LEXICON KILDEEH !!= __@CODE@__ ee-final contract, plural forms
-+N+Pl+Nom:%>h K ;			! tahheeh
-+N+Pl+Gen:%^EE%>i K; 		! tahhei
-+N+Pl+Acc:%^EE%>id K ; 		! tahheid
-+N+Pl+Ill:%^EE%>id K ; 		! tahheid
-+N+Pl+Loc:%^EE%>in K ;		! tahhein
-+N+Pl+Com:%^EE%>iguin K ;	! tahheiguin
-+N+Pl+Com+Err/Orth:%^EE%>igijn K ;	! tahheiguin
-+N+Pl+Abe:%^EE%>ittáá K ; 	! tahheittáá
++N: X_KILDEEH ;
+
+LEXICON X_KILDEEH !!= __@CODE@__ ee-final contract, plural forms
++Pl+Nom:%>h K ;			! tahheeh
++Pl+Gen:%^EE%>i K; 		! tahhei
++Pl+Acc:%^EE%>id K ; 		! tahheid
++Pl+Ill:%^EE%>id K ; 		! tahheid
++Pl+Loc:%^EE%>in K ;		! tahhein
++Pl+Com:%^EE%>iguin K ;	! tahheiguin
++Pl+Com+Err/Orth:%^EE%>igijn K ;	! tahheiguin
++Pl+Abe:%^EE%>ittáá K ; 	! tahheittáá
 
 
 
