@@ -1,0 +1,47 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-dict-gt-norm.hfst
+    Morph: ../../../src/analyser-dict-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-dict-gt-norm.xfst
+    Morph: ../../../src/analyser-dict-gt-norm.xfst
+    App: lookup
+
+Tests:
+
+  Adjective - čavos: # MLO, ok; this is an adjective
+    čavos+A+Sg+Aom: čavos
+    čavos+A+Sg+Gen: čappoos
+    čavos+A+Sg+Acc: čappoos
+    čavos+A+Sg+Ill: čaposân
+    čavos+A+Sg+Loc: čaposist
+    čavos+A+Sg+Com: čaposáin
+    čavos+A+Sg+Abe: čappoosttáá
+    čavos+A+Ess: [čaposin, čavosin]
+    čavos+A+Par: [čaposid, čavosid]
+    čavos+A+Pl+Aom: čaposeh
+    čavos+A+Pl+Gen: čaposij
+    čavos+A+Pl+Acc: čaposijd
+    čavos+A+Pl+Ill: čaposáid
+    čavos+A+Pl+Loc: čaposijn
+    čavos+A+Pl+Com: čaposijguin
+    čavos+A+Pl+Abe: čaposijttáá
+
+  Adjective - almos: # MLO, ok; this is an adjective
+    almos+A+Sg+Aom: almos             
+    almos+A+Sg+Gen: almoos
+    almos+A+Sg+Acc: almoos
+    almos+A+Sg+Ill: almosân
+    almos+A+Sg+Loc: almosist
+    almos+A+Sg+Com: almosáin
+    almos+A+Sg+Abe: almoosttáá
+    almos+A+Ess: almosin                
+    almos+A+Par: almosid                
+    almos+A+Pl+Aom: almoseh
+    almos+A+Pl+Gen: almosij
+    almos+A+Pl+Acc: almosijd
+    almos+A+Pl+Ill: almosáid
+    almos+A+Pl+Loc: almosijn
+    almos+A+Pl+Com: almosijguin
+    almos+A+Pl+Abe: almosijttáá
+
