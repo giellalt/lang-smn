@@ -28,6 +28,8 @@ LEXICON adjstems
 ! Even-syllable stems
 ! -------------------
 
+LEXICON ATTR
++A+Attr:  K ;
 
 
 LEXICON A_AVALAS
@@ -49,7 +51,7 @@ LEXICON A_CISSAAS  !!= __@CODE@__
 
 
 LEXICON ALKKEE
-+A+Attr:älkkees K ;
++A+Attr:s K ; ! muálkkáás
 +A+Sg+Nom: K ;  ! These should find a lexicon in nouns.lexc
 +A+Sg+Gen: K ;
 +A+Sg+Acc: K ;
@@ -66,12 +68,11 @@ LEXICON ALKKEE
 +N+Pl+Loc:%>in K ;
 +N+Pl+Com:%>iguin K ;
 +N+Pl+Abe:%>ittáá K ;
- 
+
 LEXICON KOOIDAS
-!! Adj - kooidâs: # attr. koidâ
-+A+Attr:%^FCD K ;
-! Awaiting analysis, just send it to odd.
++A+Attr:%^FCD # ;     !attr. koidâ
 +A: X_PIIVTAS ; 
+
 ! For reference, this is what we want:
 !+A+Sg+Nom:kooidâs K ;
 !+A+Sg+Gen:koidâs K ;
@@ -97,16 +98,17 @@ LEXICON KUBDUV
  +A:v ODD_SUFF_SHORTSTEM ;
 
 LEXICON NJUORAS
-+A+Attr: # ;
-+A+Sg+Nom:%^WG # ;
++A+Attr:%^RVSH K ; !omâs
++A+Sg+Nom:%^WG K ;
 
 LEXICON PASTEL
 +A+Attr: # ;
 +A+Sg+Nom: # ;
 
 LEXICON MUSTOTTEM
-+A+Attr: # ;
-+A+Sg+Nom: # ;
++A+Attr:es # ;
++A+Attr:emes # ;
++A+Sg+Nom:em # ;
 
 LEXICON ASITTEM
 +A+Attr: # ;
@@ -217,6 +219,16 @@ LEXICON A_TAHHEE
 LEXICON A_AARRAN
 +A+Attr:  K ; !placeholder
 +A: X_AARRAN	  ;
+
+LEXICON A_KYELI
++A+Attr:  K ; 
++A: X_KYELI	  ;
+
+LEXICON A_KIELA
++A+Attr:  K ; 
++A: X_KIELA	  ;
+
+
 
 LEXICON MAJEMUS  !!= __@CODE@__ 
 +A+Sg+Nom:%>š K ;
