@@ -20,7 +20,6 @@ while(<>) {
 	s/RONDANE-LOAN/BERN/g ;
 	s/BETFAGE/BERN/g ;
 	s/DUORTNUS/BERN/g ;
-	s/ERVASTI/ACCRA/g ;
 #	s/DUBAI/BERN/g ;
 	s/BETFAGE/BERN/g ;
 	s/fkagK/K/g ;
