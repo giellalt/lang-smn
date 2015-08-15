@@ -42,7 +42,7 @@ LEXICON A_AVALAS
 
 LEXICON A_PIIVTAS  !!= __@CODE@__ ! see also KOOIDAS, diff in attr; inflection is the same than in A_PIIVTAS
 +A+Attr:%^RVSH%^CSH  K ; ! suoˊtâs < suotâs
-+A: KOOIDAS ;
+ KOOIDAS_COMMON ;
 
 
 LEXICON A_CISSAAS  !!= __@CODE@__ 
@@ -70,7 +70,10 @@ LEXICON ALKKEE
 +N+Pl+Abe:%>ittáá K ;
 
 LEXICON KOOIDAS
-+A+Attr:%^FCD # ;     !attr. koidâ
++A+Attr:%^FCD%^RVSH K ;     !attr. koidâ
+KOOIDAS_COMMON ;
+
+LEXICON KOOIDAS_COMMON
 +A+Sg+Nom:%^RLEN K ;  ! kooidâs These should find a lexicon in nouns.lexc; see A_PIIVTAS (difference in attr)
 +A+Sg+Gen: K ; ! koidâs
 +A+Sg+Acc: K ; ! koidâs
@@ -135,14 +138,10 @@ LEXICON NJUORAS
 +A+Pl+Abe:%^RVSH%^CSH%>ijttáá  K ; ! njuoˊṛâsijttáá
 
 
-LEXICON PASTEL
-+A+Attr: # ; ! attr. pastelis (no change); should be A_LITTER
-+A+Sg+Nom: # ;
-
 LEXICON MUSTOTTEM
-+A+Attr:es # ;
-+A+Attr:emes # ;
-+A+Sg+Nom:em # ;
++A+Attr:s # ;
++A+Attr:mes # ;
++A+Sg+Nom:m # ;
 
 LEXICON ASITTEM
 +A+Attr: # ;
@@ -200,7 +199,7 @@ LEXICON CEPPI
 ! Fix for adjectives moved from the noun lexicon
 
 LEXICON A_LITTER
-+A+Attr:  K ; !placeholder
++A+Attr:is  K ; !
 +A: ODD_SUFF_LONGSTEM ;
 +A: ODD_SUFF_SHORTSTEM ;
 
@@ -218,7 +217,7 @@ LEXICON A_KOLME !!= @CODE@ ad hoc three syllable stem > LITTER
 +A: ODD_SUFF_SHORTSTEM ;
 
 LEXICON A_VEESKIR
-+A+Attr:  K ; !placeholder
++A+Attr:  K ; !placeholder stuorrâ
 +A: X_VEESKIR	  ;
 
 LEXICON A_PAAVIR
@@ -238,9 +237,6 @@ LEXICON A_APINA
 +A+Attr:  K ; !placeholder
 +A: X_APINA	  ;
 
-LEXICON A_KIEHA
-+A+Attr:  K ; !placeholder
-+A: X_KIEHA	  ;
 
 LEXICON A_SAAMI
 +A+Attr:  K ; !placeholder
@@ -292,10 +288,11 @@ LEXICON MAJEMUS  !!= __@CODE@__
 LEXICON X_EEHID	  
 +Sg+Nom: # ;
 
-LEXICON X_KOLME	  
-+Sg+Nom: # ;
+LEXICON NELJA !!= @CODE@ ad hoc three syllable stem >
++A+Sg+Nom: K ;
 
-
+LEXICON UANIHAS
++A: LAS_COMMON ;
 
 
 ! Odd-syllable stems
