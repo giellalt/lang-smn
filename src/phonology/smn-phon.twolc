@@ -1114,7 +1114,7 @@ e:i <=> Cns: _  [Triggers: - %^EA:]*  %> i: ;
         
 "Stem vowel i2:e"
 !! * __@RULENAME@__ \\ 
-i2:e <=> _ Triggers:+ %> \[i: |n|d|j] ;
+i2:e <=> _ (%^SV:e) Triggers:+ %> \[i: |n|d|j] ; !hyeneest
 
 !€ tohhi2>đ
 !€ tuhhi
@@ -1165,8 +1165,11 @@ Vx:0 <=> _ â Triggers:*  %>   ;
 
 "Suffix vowel lengthening"
 !! * __@RULENAME@__ \\ long á in kissáást
-%^SV:Vx <=> Vx:  _  [NotSuffixBorder: - %^EWG: ]* %^SLEN:  %> ;
-        where Vx in ( á o u e a i y ä ) ; !  
+%^SV:Vy <=> Vx:  _  [NotSuffixBorder: - %^EWG: ]* %^SLEN:  %> ; ! hyeneest
+       where Vx in ( á o u e a i i2 y ä )
+             Vy in ( á o u e a i e y ä ) 
+       matched ;
+
 
 "Suffix vowel lengthening when SVLOW"
 !! * __@RULENAME@__ \\ preventing conflict with u %^SV:o
