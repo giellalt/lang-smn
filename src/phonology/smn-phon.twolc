@@ -774,21 +774,23 @@ Vx:Vy <=> _  %^RV: Cns:+  e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> i: ;
 
 "Root vowel change u:o, special rule for olmooš and contract verbs"
 !! * __@RULENAME@__ \\  ulmu : olmooš. Waiting for more lemmas. u%^RVlmu%^SV%^WG%^SLEN%^SVLOW%>š
-u:o <=>  [.#. | #] _  Cns:+ u:o %^SV: %^WG: %^SLEN:  %^SVLOW:  [%>|.#.]  ; !%^SV%^WG%^SLEN%^SVLOW%>š
-           [.#.|#] _  Cns:+ u:o %^WG:  %^SVLOW:  [%>|.#.]  ; 
-                   _ á: Cns:+ i2:i %> [i|i2:i|Cns] Sgm:* %> ; 
+u:o <=>  [.#.|#] _    Cns:+ u:o %^SV: %^WG: %^SLEN:  %^SVLOW:  [%>|.#.]  ; !%^SV%^WG%^SLEN%^SVLOW%>š
+         [.#.|#] _    Cns:+ u:o %^WG:  %^SVLOW:  [%>|.#.]  ; 
+                 _ á: Cns:+ i2:i %> [i|i2:i|Cns] Sgm:* %> ; 
+
+! [i|i2:i|Cns] Sgm:* %> = NOT e>je, e>e
 
 "Root vowel á:a for contract verbs"
-á:a <=> [Cns|.#.] _ Cns:+ u2:   %> \[j Vow|o] ;
-        [Cns|.#.] _ Cns:+ i2:i %> [i|i2:i|Cns] Sgm:* %> ;
+á:a <=> [Cns|.#.] _ Cns:+ u2:  %> [u|i|i2:i|Cns] Sgm:* %> ;
+        [Cns|.#.] _ Cns:+ i2:i %>   [i|i2:i|Cns] Sgm:* %> ;
 
 "Root vowel a:o for contract verbs"
-a:o <=> [Cns|.#.] _ Cns:+ u2:   %> \[j Vow|o] ;
-        [Cns|.#.] _ Cns:+ i2:i %> [i|i2:i|Cns] Sgm:* %> ;
+a:o <=> [Cns|.#.] _ Cns:+ u2:  %> [u|i|i2:i|Cns] Sgm:* %> ;
+        [Cns|.#.] _ Cns:+ i2:i %>   [i|i2:i|Cns] Sgm:* %> ;
 
 "Root vowel o:u for contract verbs"
-o:u <=> [Cns|.#.] _ Cns:+ u2:   %> \[j Vow|o] ;
-        [Cns|.#.] _ Cns:+ i2:i %> [i|i2:i|Cns] Sgm:* %> ;
+o:u <=> [Cns|.#.] _ Cns:+ u2:  %> [u|i|i2:i|Cns] Sgm:* %> ;
+        [Cns|.#.] _ Cns:+ i2:i %>   [i|i2:i|Cns] Sgm:* %> ;
 
 !"Root vowel á:a for contract verbs"
 !á:a <=> [Cns|.#.] _ Cns:+ u2:   %> \[j Vow|o] ;
@@ -826,12 +828,27 @@ o:u <=> [Cns|.#.] _ Cns:+ u2:   %> \[j Vow|o] ;
     
 
 
-"Monophthongisation rule i:e"
+"Monophthongisation rule iä:ee 1"
 !! * __@RULENAME@__ \\  
 i:e <=> _ ä: Cns:* i %^WG: %> i: ;  
-          _ ä: Cns:* Vow: Cns [%^ÁI:|%^ÁE:] [%^WG:|%^EWG:] ([%^RLEN:|%^RVSH:]) [%>|.#.]  ; !! 1)viäskár veeskir iäbbár eebir 
-          _ ä: Cns:+ i2: %>  \[j Vow|i|e] ;
-          _ ä: Cns:+ u2: %> [o|j Vow] ;
+        _ ä: Cns:* Vow: Cns [%^ÁI:|%^ÁE:] [%^WG:|%^EWG:] ([%^RLEN:|%^RVSH:]) [%>|.#.]  ; !! 1)viäskár veeskir iäbbár eebir 
+
+"iä:e rule 1"        
+i:0 <=> [.#.|Cns] _ ä: Cns:+ i2: %> \[j Vow|i|e] ;
+        [.#.|Cns] _ ä: Cns:+ u2: %> [o|j Vow] ;
+
+
+
+"iä:e and iä:ee rule 2"
+ä:e <=> i:  _ Cns:+ i %^WG:   %> i: ;
+        i:e _ Cns:+ i %^WG: %^RLEN:  %> i: ;
+        i:e _ Cns:+ :i Cns: %^ÁI: [%^WG:|%^EWG:] %^RLEN: [%>|.#.] ; !viäskár%^ÁI%^EWG%^RLEN
+        i:  _ Cns:+ Vow:  %^ÁI: %^EWG: [%>|.#.] ; !puáhháá pooṿij
+        i: _ Cns:+ u2: %> [o|j Vow] ;
+
+
+!€ siämmu2>đ>
+!€ s0emmu>đ>
 
 "Monophthongisation rule u:o"
 !! * __@RULENAME@__ \\  u:o in pairs like kuátij -> koođij čuál7%^RCi%^WG%>in
@@ -896,22 +913,7 @@ Vx:Vy <=> Vz:   _ Cns:+ i %^WG:   %> i: ;
 		  matched ;
 !conflict Vz  _ Cns:+ [:i|:e] Cns: [%^ÁI:|%^ÁE:] [%^WG:|%^EWG:] ([%^RVSH:|%^RLEN:]) [%>|.#.]  ; !riäggás%^ÁI%^WG%^RVSH>in 
 
-"iä:e rule 2"
-ä:e <=> i:   _ Cns:+ i %^WG:   %> i: ;
-        i:e _ Cns:+ i %^WG: %^RLEN:  %> i: ;
-        i:e _ Cns:+ :i Cns: %^ÁI: [%^WG:|%^EWG:] %^RLEN: [%>|.#.] ; !viäskár:veeskir  viäskár%^ÁI%^EWG%^RLEN
-        i:   _ Cns:+ Vow:  %^ÁI: %^EWG: [%>|.#.] ; !puáhháá pooṿij
-        i: _ Cns:+ u2: %> [o|j Vow] ;
 
-
-!€ siämmu2>đ>
-!€ s0emmu>đ>
-
-!nom	ill
-!e^RV	iä
-!ie	iä
-!ä	á
-!ye	uá
 
 "Diphthongisation i5ä to ie"
 !! * __@RULENAME@__ \\  
@@ -1214,7 +1216,7 @@ i:j <=> [i: | e: | i2: ] (%^EA:) (%^WG:)   ([%^RLEN:|%^RVSH:]) (%^CLEN:)  (%^SVL
 
 
 "Vowel copy in suffix"
-%^V:Vx <=> Vx %> _ ;
+%^V:Vx <=> :Vx %> _ ;
 !! * __@RULENAME@__ \\  for imperative Sg3, at least
 	where Vx in ( a á i u o ) ;
 
