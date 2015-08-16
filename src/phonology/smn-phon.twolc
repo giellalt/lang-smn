@@ -828,13 +828,10 @@ o:u <=> [Cns|.#.] _ Cns:+ u2:   %> \[j Vow|o] ;
 
 "Monophthongisation rule i:e"
 !! * __@RULENAME@__ \\  
-Vx:Vy <=> _ Vz: Cns:* i %^WG: %> i: ;  
-          _ Vz: Cns:* Vow: Cns [%^ÁI:|%^ÁE:] [%^WG:|%^EWG:] ([%^RLEN:|%^RVSH:]) [%>|.#.]  ; !! 1)viäskár veeskir iäbbár eebir 
-          _ Vz: Cns:+ i2: %>  \[j Vow|i|e] ;
-	where Vx in ( i )
-		  Vy in ( e )
-		  Vz in ( ä )
-	matched ;
+i:e <=> _ ä: Cns:* i %^WG: %> i: ;  
+          _ ä: Cns:* Vow: Cns [%^ÁI:|%^ÁE:] [%^WG:|%^EWG:] ([%^RLEN:|%^RVSH:]) [%>|.#.]  ; !! 1)viäskár veeskir iäbbár eebir 
+          _ ä: Cns:+ i2: %>  \[j Vow|i|e] ;
+          _ ä: Cns:+ u2: %> [o|j Vow] ;
 
 "Monophthongisation rule u:o"
 !! * __@RULENAME@__ \\  u:o in pairs like kuátij -> koođij čuál7%^RCi%^WG%>in
@@ -893,17 +890,19 @@ Vx:Vy <=> Vz:   _ Cns:+ i %^WG:   %> i: ;
           Vz:Vy _ Cns:+ i %^WG: %^RLEN:  %> i: ;
           Vz:Vy _ Cns:+ :i Cns: %^ÁI: [%^WG:|%^EWG:] %^RLEN: [%>|.#.] ; !viäskár:veeskir  viäskár%^ÁI%^EWG%^RLEN
           Vz:   _ Cns:+ Vow:  %^ÁI: %^EWG: [%>|.#.] ; !puáhháá pooṿij
-	where Vx in ( ä á ä )
-		  Vy in ( e o a )
-		  Vz in ( i u ä )
+	where Vx in ( á ä )
+		  Vy in ( o a )
+		  Vz in ( u ä )
 		  matched ;
 !conflict Vz  _ Cns:+ [:i|:e] Cns: [%^ÁI:|%^ÁE:] [%^WG:|%^EWG:] ([%^RVSH:|%^RLEN:]) [%>|.#.]  ; !riäggás%^ÁI%^WG%^RVSH>in 
 
-"iä:e rule 1"
-i:0 <=> _ ä: Cns:+ u2: %> [o|j Vow] ;
-
 "iä:e rule 2"
-ä:e <=> i: _ Cns:+ u2: %> [o|j Vow] ;
+ä:e <=> i:   _ Cns:+ i %^WG:   %> i: ;
+        i:e _ Cns:+ i %^WG: %^RLEN:  %> i: ;
+        i:e _ Cns:+ :i Cns: %^ÁI: [%^WG:|%^EWG:] %^RLEN: [%>|.#.] ; !viäskár:veeskir  viäskár%^ÁI%^EWG%^RLEN
+        i:   _ Cns:+ Vow:  %^ÁI: %^EWG: [%>|.#.] ; !puáhháá pooṿij
+        i: _ Cns:+ u2: %> [o|j Vow] ;
+
 
 !€ siämmu2>đ>
 !€ s0emmu>đ>
