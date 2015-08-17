@@ -186,7 +186,7 @@ Cx:Cy <=> Vow: _ (%^RC: )  WeakGrade ([%^RVSH:|%^RLEN:]) (%^SLEN:) (%^SVLOW:) %>
 !iṣ̌e:iše
 
 !€ i^RVš7^RCe^WG>
-!€ iš0e0>
+!€ i0š0e0>
 
 
 
@@ -653,6 +653,8 @@ Cx:0  <=>  Sgm: _ (%^CSH:) (%^RLEN:) %> Cy Cy ;
 
 
 !! !!Vowel rules
+!  =============
+!  =============
 
 !! !First syllable vowel shortening
 
@@ -701,7 +703,7 @@ Vy:0 <=> Vx: _  Cns: [ Cns: - %^RC:0 ] Vow:  %^WG: (%^CLEN:) %^SVLOW: %> i: ; !!
 e:0  <=> e _  j7: %^RC: Vow:  %^RVSH: %^CLEN:  %>  ; !!  
 
 
-"Stem vowel shortening in front of"
+"Stem vowel shortening in front of ^EE"
 !! * __@RULENAME@__ \\ 
 Vx:0 <=> Vy _ %^EE: ;
        where Vx in ( e o u ) 
@@ -735,7 +737,7 @@ Vx:0 <=> Vy _ %^EE: ;
 "Root vowel ä:ää lenghtening"
 !! * __@RULENAME@__ \\ special rule, for avoiding conflict spä%^RVi4lih%^EWG%^RLEN
 %^RV:ä <=> ä _ Cns:+ Vow:+ Cns:+ %^RLEN: %^CLEN: ; !! 5) vä%^RVr7%^RCid
-           :ä _ Cns:* :i (%^SV:) Cns: (%^ÁI:) (%^FCD:) [%^EWG:|%^WG:] %^RLEN: [%>|.#.] ; !spääilih
+          :ä _ Cns:* :i (%^SV:) Cns: (%^ÁI:) (%^FCD:) [%^EWG:|%^WG:] %^RLEN: [%>|.#.] ; !spääilih
 
 
 "Root vowel lengtning with vowel change before suffix i"
@@ -773,17 +775,6 @@ a:o <=> _  %^RV: Cns:+  e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> i: ;
 !! * __@RULENAME@__ \\  alge : olgijn 
 o:u <=> _  %^RV: Cns:+  e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> i: ; 
 
-"Monophthongisation rule u:o and root vowel change u:o, special rule for olmooš and contract verbs"
-!! * __@RULENAME@__ \\  ulmu : olmooš. Waiting for more lemmas. u%^RVlmu%^SV%^WG%^SLEN%^SVLOW%>š
-u:o <=>  [.#.|#] _     Cns:+ u:o %^SV: %^WG: %^SLEN:  %^SVLOW: [%>|.#.]  ; !%^SV%^WG%^SLEN%^SVLOW%>š
-         [.#.|#] _     Cns:+ u:o       %^WG:          %^SVLOW: [%>|.#.]  ; 
-                 _ á:  Cns:+ u2:                               %> [:u|i|i2:i|Cns - j] Sgm:* %> ;
-                 _ á:  Cns:+ i2:i                              %>    [i|i2:i|Cns]     Sgm:* %> ; 
-                 _ á:  Cns:* i %^WG:                           %> i: ; 
-                 _ á:0 Cns:* i %^WG:          %^CLEN: %^SVLOW: %> i:  ;
-                 _ á:  Cns:* i %^WG:                 (%^RLEN:) %> i: ; 
-                 _ á:0 Cns:+ i %^WG:                   %^RVSH: %> i: ;
-
 
 "Root vowel á:a for contract verbs"
 !! * __@RULENAME@__ 
@@ -800,39 +791,15 @@ a:o <=> [Cns|.#.] _ Cns:+ u2:  %> [:u|i|i2:i|Cns - j] Sgm:* %> ;
 o:u <=> [Cns|.#.] _ Cns:+ u2:  %> [:u|i|i2:i|Cns - j] Sgm:* %> ;
         [Cns|.#.] _ Cns:+ i2:i %>    [i|i2:i|Cns] Sgm:* %> ;
 
-!"Root vowel á:a for contract verbs"
-!á:a <=> [Cns|.#.] _ Cns:+ u2:   %> \[j Vow|o] ;
-!        [Cns|.#.] _ Cns:+ i2: %> \[j Vow|e] ;
-!
-!"Root vowel a:o for contract verbs"
-!a:o <=> [Cns|.#.] _ Cns:+ u2:   %> \[j Vow|o] ;
-!        [Cns|.#.] _ Cns:+ i2: %> \[j Vow|e] ;
-!
-!"Root vowel o:u for contract verbs"
-!o:u <=> [Cns|.#.] _ Cns:+ u2:   %> \[j Vow|o] ;
-!        [Cns|.#.] _ Cns:+ i2: %> \[j Vow|e] ;
 
 !€ tohhi2>đ
 !€ tuhhi>đ
-
-!"Root vowel change for contract verbs"
-!Vx:Vy <=> [Cns|.#.] _ Cns:+ :o %> [j [e|i] |o ] ;
-!	where Vx in (á a o)
-!		  Vy in (a o u)
-!		  matched ;
 
 
 !! !First syllable diphthong rules
 
 
 ! RV still does not give as good result as RD.
-
-"Vowel shortening for uá" 
-!! * __@RULENAME@__ \\  for uábbi -> obbijn  čuál7%^RCi%^WG%>in
-á:0 <=> u: _ Cns:+ i %^WG: %^CLEN: %^SVLOW: %> i:  ;
-        u: _ Cns:+ i %^WG: %^RVSH: %> i:  ;
-        u: _ Cns:+ u %^RVSH: %>  ; ! uáinu
-        u: _ Cns:+ i2:i %> [i|i2:i|Cns] Sgm:* %> ; 
 
 
 "Monophthongisation rule iä:ee 1"
@@ -894,28 +861,47 @@ i:0 <=> [.#.|Cns] _ ä: Cns:+ i2:i %>    [i|i2:i|Cns] Sgm:* %> ;
 !€ stäävi2>jeh>
 !€ stääve>jeh>
 
+"Monophthongisation rule uá:o0 part 2: Vowel shortening for uá" 
+!! * __@RULENAME@__ \\  for uábbi -> obbijn  čuál7%^RCi%^WG%>in
+á:0 <=> u: _ Cns:+ i %^WG: %^CLEN: %^SVLOW: %> i:  ;
+        u: _ Cns:+ i %^WG: %^RVSH: %> i:  ;
+        u: _ Cns:+ u %^RVSH: %>  ; ! uáinu
+        u: _ Cns:+ i2:i %> [i|i2:i|Cns] Sgm:* %> ; 
+        u: _ Cns:+ u2:  %> [u|Cns - j] Sgm:* %> ; 
+
+"Monophthongisation rule u:o and root vowel change u:o, special rule for olmooš and contract verbs"
+!! * __@RULENAME@__ \\  ulmu : olmooš. Waiting for more lemmas. u%^RVlmu%^SV%^WG%^SLEN%^SVLOW%>š
+u:o <=>  [.#.|#] _     Cns:+ u:o %^SV: %^WG: %^SLEN:  %^SVLOW: [%>|.#.]  ; !%^SV%^WG%^SLEN%^SVLOW%>š
+         [.#.|#] _     Cns:+ u:o       %^WG:          %^SVLOW: [%>|.#.]  ; 
+                 _ á:  Cns:+ u2:                               %> [:u|i|i2:i|Cns - j] Sgm:* %> ;
+                 _ á:  Cns:+ i2:i                              %>    [i|i2:i|Cns]     Sgm:* %> ; 
+                 _ á:  Cns:* i %^WG:                           %> i: ; 
+                 _ á:0 Cns:* i %^WG:          %^CLEN: %^SVLOW: %> i:  ;
+                 _ á:  Cns:* i %^WG:                 (%^RLEN:) %> i: ; 
+                 _ á:0 Cns:+ i %^WG:                   %^RVSH: %> i: ;
 
 
-"Monophthongisation rule 2"
+
+"á:o and ä:a for uo and ää, second vowel"
 !! * __@RULENAME@__ \\  á:o in pairs like kuátij -> koođij, säämi -> saamij  
-Vx:Vy <=> Vz:   _ Cns:+ i %^WG:   %> i: ;
-          Vz:Vy _ Cns:+ i %^WG: %^RLEN:  %> i: ;
-          Vz:Vy _ Cns:+ :i Cns: %^ÁI: [%^WG:|%^EWG:] %^RLEN: [%>|.#.] ; !viäskár:veeskir  viäskár%^ÁI%^EWG%^RLEN
-          Vz:   _ Cns:+ Vow:  %^ÁI: %^EWG: [%>|.#.] ; !puáhháá pooṿij
-	where Vx in ( á á  ä )
-		  Vy in ( o o  a )
-		  Vz in ( u u5 ä )
-		  matched ;
+ä:a   <=> ä:  _ Cns:+ i %^WG:   %> i: ;
+          ä:a _ Cns:+ i %^WG: %^RLEN:  %> i: ;
+          ä:a _ Cns:+ :i Cns: %^ÁI: [%^WG:|%^EWG:] %^RLEN: [%>|.#.] ; !viäskár:veeskir  viäskár%^ÁI%^EWG%^RLEN
+          ä:  _ Cns:+ Vow:  %^ÁI: %^EWG: [%>|.#.] ; !puáhháá pooṿij
 !conflict Vz  _ Cns:+ [:i|:e] Cns: [%^ÁI:|%^ÁE:] [%^WG:|%^EWG:] ([%^RVSH:|%^RLEN:]) [%>|.#.]  ; !riäggás%^ÁI%^WG%^RVSH>in 
+
+"Diphthong rule uá to uo"
+á:o <=> [u|u5:] _ Cns:+ :u %> [i|u|Cns - j] Sgm:* %> ;
+        u:      _ Cns:+ i %^WG:   %> i: ;
+        u:o     _ Cns:+ i %^WG: %^RLEN:  %> i: ;
+        u:o     _ Cns:+ :i Cns: %^ÁI: [%^WG:|%^EWG:] %^RLEN: [%>|.#.] ; !viäskár:veeskir  viäskár%^ÁI%^EWG%^RLEN
+        u:      _ Cns:+ Vow:  %^ÁI: %^EWG: [%>|.#.] ; !puáhháá pooṿij
 
 
 
 "Diphthongisation i5ä to ie"
 !! * __@RULENAME@__ \\  
 ä:e <=> i5: _ Cns: Cns:+ á: s [%^ÁI:|%^ÁE:] %^EWG: [%^RVSH:|%^RLEN:] %> ; !viäkk4ás : viehis
-
-"Diphthong rule uá to uo"
-á:o <=> u _ Cns:+ :u %> [i|u|š|đ|v|p] ;
 
 "Diphthongisation e to iä, part 1"
 !! * __@RULENAME@__ \\  
