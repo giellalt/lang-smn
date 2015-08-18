@@ -1091,7 +1091,7 @@ Vx:e <=> Cns _ (%^VLOW:) %> [j Vow|e] ;
 
 "Stem vowel â > á change before i"
 !! * __@RULENAME@__ \\ sollâ to sooláid 
-â:á <=> _ (%^SV:) (%^WG:) (%^RLEN:|%^CLEN:) %^SVLOW: %> i: ; 
+â:á <=> _ (%^SV:) (%^WG:) (%^RLEN:|%^CLEN:|%^SLEN:) %^SVLOW: %> i: ; 
 
 !€ so^RVllâ^WG^RLEN^SVLOW>in 
 !€ soo0lá000>in
@@ -1105,7 +1105,7 @@ e:i <=> Cns: _  [Triggers: - %^EA:]*  %> i: ;
         
 "Stem vowel i2:e"
 !! * __@RULENAME@__ \\ 
-i2:e <=> _ (%^SV:e) Triggers:+ %> \[i: |n|d|j] ; !hyeneest
+i2:e <=> _ (%^SV:) Triggers:+ %> \[i: |n|d|j] ; !hyeneest
 
 !€ tohhi2>đ
 !€ tuhhi
@@ -1155,22 +1155,11 @@ Vx:0 <=> _ â Triggers:*  %>   ;
 !! !Suffix vowel rules
 
 "Suffix vowel lengthening"
-!! * __@RULENAME@__ \\ long á in kissáást
-%^SV:Vy <=> Vx:  _  [NotSuffixBorder: - %^EWG: ]* %^SLEN:  %> ; ! hyeneest
-       where Vx in ( á o u e a i i2 y ä )
-             Vy in ( á o u e a i e y ä ) 
-       matched ;
+!! * __@RULENAME@__ \\ long á in kissáást, nuorâ : nuorááin, hyeni:hyeneest
+%^SV:Vx <=> :Vx  _  NotSuffixBorder:* %^SLEN:   ; ! hyeneest
+       where Vx in ( á o u e a i   y ä  ) ; !nuorâ : nuorááin
 
 
-"Suffix vowel lengthening when SVLOW"
-!! * __@RULENAME@__ \\ preventing conflict with u %^SV:o
-%^SV:Vx <=> Vx:  _  [NotSuffixBorder: - %^EWG: ]* %^SLEN: %^SVLOW:  %> ;
-        where Vx in ( á o e a i y ä ) ; ! 
-
-
-"Suffix vowel lengthening SV:e"
-!! * __@RULENAME@__
-%^SV:e  <=> :e _ Cns: %^FCD:  %^EWG: %^SLEN:  %> ;
 
 !€ ki^RVss7á^SV^WG^CLEN^SLEN>st
 !€ ki0ssáá000>st
@@ -1181,9 +1170,6 @@ Vx:0 <=> _ â Triggers:*  %>   ;
 !€ huksi^SVm^SLEN>ist
 !€ huksiim0>ist
 
-"Suffix vowel lengthening o"
-!! * __@RULENAME@__ \\ stááḷu stááloost
-%^SV:o <=> u:  _ (Cns:) Triggers:* %^SLEN: %^SVLOW: %>  ; 
 
 !€ táál7^RCu^SV^WG^RVSH^SLEN^SVLOW>st
 !€ táál0oo0000>st
