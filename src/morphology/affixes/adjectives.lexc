@@ -52,6 +52,8 @@ LEXICON A_CISSAAS  !!= __@CODE@__
 LEXICON ALKKEE
 +A+Attr:s K ; ! muálkkáás
 ALKKEE_COMMON ;
++A:%^SVSH COMP ;
++A: SUPERL ; ! váiváámus hoppuumus
 
 LEXICON PYECCEE
 +A+Attr: K ; ! attr. pyeccee ! Inflection like in ALKKEE
@@ -88,10 +90,15 @@ LEXICON KOSKES
 LEXICON KOOIDAS
 +A+Attr:%^FCDâ%^RVSH K ;     !attr. koidâ
 +A: X_PIIVTAS ;
++A:u COMP ; !uđđâsub lieggâsub korrâsub
++A:u SUPERL ;
 
 LEXICON UCES
-+A+Attr:%^FCDâ K ;     !attr. uccâ
-+A+Sg+Nom: K ;
++A+Attr:â K ;     !attr. uccâ
++A+Sg+Nom:%^WG%>s K ;
++A: COMP ;
++A: SUPERL ;
+
 
 
 !LEXICON KOOIDAS_COMMON
@@ -174,6 +181,8 @@ LEXICON OLMOOSMETTUM
 LEXICON PUIGA
 +A+Attr: # ; ! pu´igâ
 +A+Sg+Nom: # ;
++A: COMP ;
++A: SUPERL ;
 
 
 LEXICON AARRAD
@@ -183,7 +192,9 @@ LEXICON AARRAD
 LEXICON HIAJU
 +A+Attr:s # ; ! hiäjus
 +A: X_VUAGGU ;
- 
++A: COMP ;
++A: SUPERL ;
+
  
 LEXICON MUCCAD 
 !! Adj - muččâd: # attr. mu´čis
@@ -210,10 +221,15 @@ LEXICON CEPPI
 !! Adj - čeppi: # attr. če´pis
 +A+Attr:%^WG%>s K ;
 +A: X_AIGI ;
++A:%^WG COMP ;
++A:%^WG SUPERL ;
 
 LEXICON HUMO
 +A+Attr:%^WG%>s K ;
 +A: X_NJUNE ;
++A: COMP ;
++A: SUPERL ;
+
 
 LEXICON A_VUALAAS !!= __@CODE@__ 
 +A+Sg+Nom:%^SV%^SLEN%>š K ; 							! kamevuálááš
@@ -241,10 +257,14 @@ LEXICON PASTIL
 +A+Attr:%>is  K ; !
 +A: ODD_SUFF_LONGSTEM ;
 +A: ODD_SUFF_SHORTSTEM ;
++A:u  COMP ; !fiskâdub fiskâduboh fijnásuboi vaigâdub tergâdub pehtilub
++A:u  SUPERL ; ! 
+
 
 LEXICON FISKAD
-+A+Attr:%^WG%>is # ; ! fiskis
++A+Attr:i%^WG%>s # ; ! fiskis
 :âd PASTIL ;
+
 
 LEXICON A_EEHID
 +A+Attr:  K ; !placeholder
@@ -267,6 +287,8 @@ LEXICON STYERES
 +A+Attr:uorrâ  K ; ! stuorrâ
 +A+Sg+Nom:yeres K ;	! 
 +A+SgNomCmp:uorrâ R ;
++A:uárráá COMP ;
++A:uárráá SUPERL ;
 
 
 LEXICON HAANIS
@@ -313,12 +335,16 @@ LEXICON RUAVIS
 LEXICON PYERI
 +A+Attr:  K ; 
 +A: X_KYELI	  ;
++A: COMP ;
++A: SUPERL ;
 
 LEXICON NUORA
 +A+Attr:  K ; 
 +A: X_KIELA	  ;
 +A+Sg+Com:%^SV%^SLEN%^SVLOW%>in K ; 		! nuorááin
 +A+Pl+Ill:%^SV%^SLEN%^SVLOW%>id K ; 		! nuorááid
++A: COMP ;
++A: SUPERL ;
 
 
 
@@ -357,6 +383,8 @@ LEXICON NELJA !!= @CODE@ ad hoc three syllable stem >
 LEXICON UANIHAS
 +A+Sg+Nom:âš K ;
 +A:%>á LAS_SUF ;
++A:u 4COMP ;
++A:u 4SUPERL ;
 
 
 ! Odd-syllable stems
@@ -367,13 +395,26 @@ LEXICON UANIHAS
 ! Comparation
 ! -----------
  
+LEXICON COMP
++Comp+Sg+Nom:b K ;
++Comp:bo X_APINA ;
++Attr:bo K ;
 
-! Comparative
-! -----------
+
+LEXICON SUPERL
++Superl:mus X_LITTER ;
++Attr:mus K ;
+
+LEXICON 4COMP
++Comp+Sg+Nom:b K ;
++Comp:bo X_APINA ;
++Attr:b K ;
 
 
-! Superlative
-! -----------
+LEXICON 4SUPERL
++Superl:mos X_LITTER ;
++Attr:mos K ;
+
 
 
 
