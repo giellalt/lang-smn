@@ -39,10 +39,15 @@ LEXICON ANOLAS
 !! Case endings in the affixes/nouns.lexc file.
 +A+Attr:âš K ;
 +A: LAS_COMMON ; 
++A:%> COMP ;
++A:%>u MOS ; ! tehálumos
+
 
 LEXICON SUOTAS  !!= __@CODE@__ ! see also KOOIDAS, diff in attr; inflection is the same than in SUOTAS
 +A+Attr:%^CSH  K ; ! suotâs < suotâs
 +A: X_PIIVTAS ;
++A:%^RVSH%>u COMP ;
++A:%^RVSH%>u MOS ; ! 
 
 LEXICON A_CISSAAS  !!= __@CODE@__ 
 +A+Attr:  K ; !placeholder
@@ -52,8 +57,8 @@ LEXICON A_CISSAAS  !!= __@CODE@__
 LEXICON ALKKEE
 +A+Attr:s K ; ! muálkkáás
 ALKKEE_COMMON ;
-+A:%^SVSH COMP ;
-+A: MUS ; ! váiváámus hoppuumus
++A:%^SVSH%> COMPe ;
++A:%> MUS ; ! váiváámus hoppuumus
 
 LEXICON PYECCEE
 +A+Attr: K ; ! attr. pyeccee ! Inflection like in ALKKEE
@@ -86,18 +91,20 @@ LEXICON A_INDECL
 LEXICON KOSKES
 +A+Attr:%^FCD K ;     !attr. koške
 +A: X_PIIVTAS ;
++A:%>u COMP ; !
++A:%>u MOS ;
 
 LEXICON KOOIDAS
 +A+Attr:%^FCDâ%^RVSH K ;     !attr. koidâ
 +A: X_PIIVTAS ;
-+A:u COMP ; !uđđâsub lieggâsub korrâsub
-+A:u MOS ;
++A:%>u COMP ; !uđđâsub lieggâsub korrâsub
++A:%>u MOS ;
 
 LEXICON UCES
 +A+Attr:â K ;     !attr. uccâ
 +A+Sg+Nom:%^WG%>s K ;
-+A: COMP ;
-+A: MUS ;
++A:s%> COMP ;
++A:%> MUS ;
 
 
 
@@ -181,8 +188,8 @@ LEXICON OLMOOSMETTUM
 LEXICON PUIGA
 +A+Attr: # ; ! pu´igâ
 +A+Sg+Nom: # ;
-+A: COMP ;
-+A: MUS ;
++A:%> COMP ;
++A:%> MUS ;
 
 
 LEXICON AARRAD
@@ -192,8 +199,8 @@ LEXICON AARRAD
 LEXICON HIAJU
 +A+Attr:s # ; ! hiäjus
 +A: X_VUAGGU ;
-+A: COMP ;
-+A: MUS ;
++A:%> COMP ;
++A:%> MUS ;
 
  
 LEXICON MUCCAD 
@@ -221,14 +228,14 @@ LEXICON CEPPI
 !! Adj - čeppi: # attr. če´pis
 +A+Attr:%^WG%>s K ;
 +A: X_AIGI ;
-+A:%^WG COMP ;
-+A:%^WG MUS ;
++A:%^WG%> COMPe ;
++A:%^WG%> MUS ;
 
 LEXICON HUMO
 +A+Attr:%^WG%>s K ;
 +A: X_NJUNE ;
-+A: COMP ;
-+A: MUS ;
++A:%> COMPe ;
++A:%> MUS ;
 
 
 LEXICON A_VUALAAS !!= __@CODE@__ 
@@ -257,8 +264,8 @@ LEXICON PASTIL
 +A+Attr:%>is  K ; !
 +A: ODD_SUFF_LONGSTEM ;
 +A: ODD_SUFF_SHORTSTEM ;
-+A:u  COMP ; !fiskâdub fiskâduboh fijnásuboi vaigâdub tergâdub pehtilub
-+A:u  MUS ; ! 
++A:%>u  COMP ; !fiskâdub fiskâduboh fijnásuboi vaigâdub tergâdub pehtilub
++A:%>u  MOS ; ! 
 
 
 LEXICON FISKAD
@@ -282,25 +289,24 @@ LEXICON A_KOLME !!= @CODE@ ad hoc three syllable stem > LITTER
 LEXICON HAAITIS
 +A+Attr:%^EWG%^RVSH  K ; !rähis
 +A: X_PAAVIR	  ;
-+A:u%^WG COMP ;
-+A:u COMP ;
-+A:u%^WG MOS ;
++A:%>u COMP ;
++A:%>u MOS ;
 
 
 LEXICON STYERES
 +A+Attr:uorrâ  K ; ! stuorrâ
 +A+Sg+Nom:yeres K ;	! 
 +A+SgNomCmp:uorrâ R ;
-+A:uárráá COMPe ;
-+A:uárráá MUS ;
++A:uárráá%> COMPe ;
++A:uárráá%> MUS ;
 
 
 LEXICON HAANIS
 +A+Attr:  K ; !placeholder
 +A: X_PAAVIR	  ;
 +A+Sg+Abe:%^CSH%>ttáá K ; ! hánásttáá
-+A:u%^WG COMP ;
-+A:u%^WG MOS ;
++A:%^WG%>u COMP ;
++A:%^WG%>u MOS ;
 
 LEXICON A_KUNAGAS
 +A+Attr:  K ; !placeholder
@@ -341,16 +347,16 @@ LEXICON RUAVIS
 LEXICON PYERI
 +A+Attr:  K ; 
 +A: X_KYELI	  ;
-+A: COMP ;
-+A: MUS ;
++A:%> COMPe ;
++A:%> MUS ;
 
 LEXICON NUORA
 +A+Attr:  K ; 
 +A: X_KIELA	  ;
 +A+Sg+Com:%^SV%^SLEN%^SVLOW%>in K ; 		! nuorááin
 +A+Pl+Ill:%^SV%^SLEN%^SVLOW%>id K ; 		! nuorááid
-+A: COMP ;
-+A: MUS ;
++A:%> COMPe ;
++A:%> MUS ;
 
 
 
@@ -389,8 +395,8 @@ LEXICON NELJA !!= @CODE@ ad hoc three syllable stem >
 LEXICON UANIHAS
 +A+Sg+Nom:âš K ;
 +A:%>á LAS_SUF ;
-+A:u COMP ;
-+A:u MOS ;
++A:%>u COMP ;
++A:%>u MOS ;
 
 
 ! Odd-syllable stems
@@ -416,11 +422,13 @@ LEXICON COMP
 LEXICON MUS
 +Superl:mus X_LITTER ;
 +Attr:mus K ;
++Superl+Der/avt+Adv:mus%>ávt K ;
 
 
 LEXICON MOS
 +Superl:mos X_LITTER ;
 +Attr:mos K ;
++Superl+Der/avt+Adv:mos%>ávt K ;
 
 
 
