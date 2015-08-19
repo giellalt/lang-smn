@@ -133,8 +133,8 @@ Sets
        %^RC %^SC   ;                         !!=  @CODE@ 
  Geminate = b d g p h t k c f z l m n ŋ r s š v  ;  !!= * @CODE@  
  Sgm = Vow Cns ;							   !!= * @CODE@ 
- NotSuffixBorder = Vow %^FCD Cns %^SFV %^EWG %^CSH %^WG %^CLEN %^SLEN %^RLEN %^SVLOW %^RVSH %^ÁE %^ÁI %^EA ; !!= * @CODE@ 
- Triggers =  %^SFV %^FCD %^WG %^EWG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^ÁI ; !!= * @CODE@ 
+ NotSuffixBorder = Vow %^FCD Cns %^SFV %^EWG %^CSH %^WG %^CLEN %^SLEN %^RLEN %^SVLOW %^RVSH %^ÁE %^ÁI %^EA %^SVSH ; !!= * @CODE@ 
+ Triggers =  %^SFV %^FCD %^WG %^EWG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^ÁI %^SVSH ; !!= * @CODE@ 
  StemCns = b b3 d d3 g g2 g3 h h2 h3 		   !!= * @CODE@ 
            j l m m2 m3 m8 n n8 n2 ŋ r s  ;     !!= @CODE@ 
 
@@ -217,7 +217,6 @@ Cx:0 <=> Vow: _  Cx: WeakGrade \%^CLEN: ;
 !! * __@RULENAME@__ \\ 3syll verbs in -tt lose t in front of cns-initial suff
 t:0 <=> [Vow:|%^SV:] _ t: WeakGrade \%^CLEN: ;
         [Vow:|%^SV:] _ t: ConsonantShorting \%^CLEN:  ;
-        [RealVow:|%^SV:] _ t: %^SVSH: %> ;
         [RealVow:|%^SV:] _ t: Triggers:* %> [.#.|Cns:] ;
 
 !€ kulluutt^SVSH>
@@ -915,6 +914,7 @@ u:o <=>  [.#.|#] _     Cns:+ u:o %^SV: %^WG: %^SLEN:  %^SVLOW: [%>|.#.]  ; !%^SV
 "Diphthongisation e to iä, part 1"
 !! * __@RULENAME@__ \\  
 e:i <=> \Vow: _ Vow: Cns:+ [i2:|e:|i:] %^EA: (%^CSH:) (%^RLEN:)   %> ; !! 1) Part 1: e to i; ergi -> iärgán 1, veerdi : viärdán
+       \Vow: _ %^RV: Cns:+ u [%^EWG:|%^WG:] ;  ! čevžuin čiävžui
 
 "Root vowel ahhu to áhu in C-stems"
 !! * __@RULENAME@__ \\  ahhu:áhu
@@ -941,7 +941,7 @@ a:á <=> \Vow: _ %^RV: h: h u %^WG: (%^RLEN:) %> ;
 !! * __@RULENAME@__ \\  Part 2: ^RV to ä; ke%^RVrttu%^WG%^RLEN%>š
 %^RV:ä <=> e:i _ Cns:+ i: %^EA:  (%^CSH:) (%^RLEN:)   %> ; ! 1) e:iä, ergi -> iärgán 2 (e+e(RV) -> i + ä
            ä: _ Cns:+ i:  %^WG: %^RLEN: %> \i: ; ! 2) ä:ää
-!           e:i _ Cns:+ u: %^WG:  %> ; !kiärtuš
+           e:i _ Cns:+ u: [%^EWG:|%^WG:]   ; !kiärtuš čevžuin čiävžui
 
 
 "Diphthongisation o:uá for %^EWG, part 1"
