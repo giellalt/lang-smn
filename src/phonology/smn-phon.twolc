@@ -170,8 +170,8 @@ Rules
 "x:y consonant gradation"
 !! * __@RULENAME@__ \\  WG gives x7:x and x:y, when there is no consonant lengthning  
 Cx:Cy <=> Vow: _ (%^RC: )  WeakGrade ([%^RVSH:|%^RLEN:]) (%^SLEN:) (%^SVLOW:) %> ;
-	where Cx in (  h p c )   !č
-          Cy in ( v v s )   !j7
+	where Cx in ( h p c h7 )   !č
+          Cy in ( v v s v  )   !j7
 		  matched ;
 
 
@@ -748,15 +748,20 @@ Vx:0 <=> Vy _ %^EE: ;
           :ä _ Cns:* :i (%^SV:) Cns: (%^ÁI:) (%^FCD:) [%^EWG:|%^WG:] %^RLEN: [%>|.#.] ; !spääilih
 
 
-"Root vowel lengtning with vowel change before suffix i"
+"Root vowel o lengthening with vowel change before suffix i"
 !! * __@RULENAME@__ \\  alge : oolgijn 
-%^RV:Vy <=> Vx:Vy  _  Cns:+  e: %^WG: %^RLEN:  %> i: ; 
-       where Vx in ( a o )
-             Vy in ( o u ) 
-       matched ;
+%^RV:o <=> a:o  _  Cns:+  e:     %^WG:  %^RLEN:  %> i: ; 
 
 !€ a^RVlge^WG^RLEN>id
 !€ oolgi00>jd
+
+"Root vowel u lengtning with vowel change before suffix i"
+!! * __@RULENAME@__ \\  alge : oolgijn 
+%^RV:u <=> o:u  _  Cns:+  e:     %^WG:  %^RLEN:  %> i: ; 
+           o:u  _  Cns:+  [â|a] (%^WG:) %^RLEN:  %> [đ|m|v|p] ;    ! XXX uferdig Trond
+
+!€ lo^RVh^RCâ>đ
+!€ luuh0â>đ
 
 
 
@@ -779,25 +784,25 @@ Vx:0 <=> Vy _ %^EE: ;
 !! * __@RULENAME@__ \\  alge : olgijn 
 a:o <=> _  %^RV: Cns:+  e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> i: ; 
 
-"Root vowel change o:u before suffix i"
-!! * __@RULENAME@__ \\  alge : olgijn 
-o:u <=> _  %^RV: Cns:+  e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> i: ; 
 
 
 "Root vowel á:a for contract verbs"
 !! * __@RULENAME@__ 
-á:a <=> [Cns|.#.] _ Cns:+ u2:  %> [:u|i|i2:i|Cns - j] Sgm:* %> ;
-        [Cns|.#.] _ Cns:+ i2:i %>    [i|i2:i|Cns] Sgm:* %> ;
+á:a <=> [Cns|.#.]    _    Cns:+ u2:  %> [:u|i|i2:i|Cns - j] Sgm:* %> ;
+        [Cns|.#.]    _    Cns:+ i2:i %>    [i|i2:i|Cns] Sgm:* %> ;
+        [Cns|.#.]    _ á: Cns:+ %^VLOW: [â|a] %> ;
+        [Cns|.#.] á: _    Cns:+ %^VLOW: [â|a] %> ;
 
 "Root vowel a:o for contract verbs"
 !! * __@RULENAME@__ 
 a:o <=> [Cns|.#.] _ Cns:+ u2:  %> [:u|i|i2:i|Cns - j] Sgm:* %> ;
         [Cns|.#.] _ Cns:+ i2:i %>    [i|i2:i|Cns] Sgm:* %> ;
 
-"Root vowel o:u for contract verbs"
+"Root vowel o:u for contract verbs and Root vowel change o:u before suffix i"
 !! * __@RULENAME@__ 
 o:u <=> [Cns|.#.] _ Cns:+ u2:  %> [:u|i|i2:i|Cns - j] Sgm:* %> ;
         [Cns|.#.] _ Cns:+ i2:i %>    [i|i2:i|Cns] Sgm:* %> ;
+                  _  %^RV: Cns:+  e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> [i:|đ|m|v|p] ; !!  alge : olgijn 
 
 
 !€ tohhi2>đ
