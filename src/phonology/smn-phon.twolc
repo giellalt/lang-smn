@@ -89,6 +89,8 @@ h5:h  y5:y i5:i j5:j u5:u ŋ5:ŋ t5:t c5:c l5:l t5:t !!= * @CODE@  these do not 
 %^EWG:0     !!= * @CODE@ = from extra strong to weak, e.g. pp:v
 %^EI:0      !!= * @CODE@ = e to i
 %^AO:0      !!= * @CODE@ = a to o
+%^VHIGH:0   !!= * @CODE@ = hightening of vowels for verbs o to uu, a to oo
+
 
  
 %^ODRVSHV:0    !!= * @CODE@ =  Cns shortening in C|# and shortvow in Inf etc  (not in use)
@@ -966,6 +968,7 @@ a:á <=> \Vow: _ %^RV: h: h u %^WG: (%^RLEN:) %> ;
 o:á <=> u _ Cns:+ u: [%^EWG:|%^WG:] ([%^RVSH:|%^RLEN:]) %> ; ! 1) cuobbuu cuábui, kuođhu
         u _ Cns:+ á %^CSH: ;
         u _ Cns:+ â %^EA: %^CSH: ;
+        u _ Cns:+ [o|u] %^VHIGH: %> ; !! 4) vuoll- > vuállus
 
 "Diphthongisation o:uá for %^EWG, part 2"
 !! * __@RULENAME@__ \\   
@@ -1031,7 +1034,7 @@ u:y <=> _ á: Cns:+ Vow:+ Cns: [%^ÁI:|%^ÁE:] (%^FCD:) %^EWG: ; ! [%^RLEN:|%^RV
         :y _ Cns:+ Vow:+ Cns: [%^ÁI:|%^ÁE:] (%^FCD:) %^EWG: ; ! [%^RLEN:|%^RVSH:] [%>|.#.] ; !cuággás : cyegis čuággás%^ÁI%^WG%^RLEN
 
 "uo to ye, part 2"
-o:e <=> u:y _ Cns:+ [e ([%^WG:|%^CLEN:]) %> e|%^CSH: %> h] ;
+o:e <=> u:y _ Cns:+ [e ([%^WG:|%^CLEN:]) %> e|i %^CSH: %> h] ;
 !vyelleen, vyeleem,vyelih
 
 !! !Second syllable rules
