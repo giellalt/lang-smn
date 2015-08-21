@@ -206,12 +206,12 @@ LEXICON 2SYLL_AD  !!= * __@CODE@__
 
 
 LEXICON VINFINITES_AD
-+Inf:â%>đ K ;
++Inf:â%^VHIGH%^RLEN%>đ K ;
 
 +Ind+Prs+ConNeg:â%^WG%^RLEN K ;
 +Cond+ConNeg:â%^WG%^RLEN%>ččii K ;
 +Pot+ConNeg:â%^WG%^RLEN%>žžii K ;
-+Imp+Prs+ConNeg:â%^WG%^RLEN K ;
++Imprt+Prs+ConNeg:â%^WG%^RLEN K ;
 
 +PrfPrc+Pass:m K ;
 +PrfPrc:m K ;
@@ -255,6 +255,83 @@ LEXICON EVEN_IND_AD
 +Prt+Pl3:i%^CLEN%>i K ;
 
 
+
+
+
+
+LEXICON VUOLLAD  !!= * __@CODE@__ ye to ua
++V:  VINFINITES_VUOLLAD ;
++V+Ind: EVEN_IND_VUOLLAD ;
++V+Pot: EVEN_POT_VUOLLAD ;
++V+Cond:â%^WGčč EVEN_COND ;
+
+
+LEXICON VINFINITES_VUOLLAD
++Inf:â%>đ K ;
+
++Ind+Prs+ConNeg:â%^WG K ;
++Ind+Prt+ConNeg:â%>m K ;
++Cond+ConNeg:â%^WG%>ččii K ;
++Pot+ConNeg:i%^WG%>i3 K ;
++Imprt+Prs+ConNeg:â%^WG K ;
+
++PrfPrc+Pass:%>m K ;
++PrfPrc:%>m K ;
++PrsPrc:e%>e K ; 
+
++VAbess+Err/Orth:â%^WG%>hennáá K ;
++VAbess+Err/Orth:â%^WG%>hinnáá K ;
++VAbess:â%^WG%>hánnáá K ;
+
++Actio+Com+PxSg1:â%^WG%>dijnân K ;
++Actio+Com+PxSg2:â%^WG%>dijnâd K ;
++Actio+Com+PxSg3+Err/Orth:â%^WG%>dijnes K ;
++Actio+Com+PxSg3:â%^WG%>dijnis K ;
++Actio+Com:â%^WG%>dijn K ;
++Actio+Ess:â%^WG%>min K ;
++Actio+Ill:â%^WG%>mân K ;
++Actio+Loc:â%^WG%>mist K ;
+    +Actio:â%^WG%>m K ;
+
+
+
+LEXICON EVEN_IND_VUOLLAD
++Prs+Sg1:â%^WG%>m K ;     
++Prs+Sg2:â%^WG%>h K ;     
++Prs+Sg3:â%^EA%^CSH K ;       
++Prs+Du1:e%^CLEN%>en K ;  
++Prs+Du2:â%^CSH%>vettee K ;
++Prs+Du3:â%>v K ;         
++Prs+Pl1:â%>p K ;             
++Prs+Pl2:â%^CSH%>vetteđ K ;  
++Prs+Pl3:i%^CSH%>h K ;             ! loheh
+
++Prt+Sg1:i%>m K ;
++Prt+Sg2:i%>h K ;
++Prt+Sg3:â%^WG%>i K ;
++Prt+Du1:á%^WG%>im K ; ! not %^CLEN?
++Prt+Du2:á%^WG%>id K ; ! not %^CLEN?
++Prt+Du3:á%^WG%>in K ; ! not %^CLEN?
++Prt+Pl1:i%^WG%>m K ;
++Prt+Pl2:i%^WG%>d K ;
++Prt+Pl3:i%^CLEN%>i3 K ;
+
+
+LEXICON EVEN_POT_VUOLLAD !!= * __@CODE@__
++Sg1:e%^WG%>em K ;
++Sg2:e%^WG%>eh K ;
++Sg3:â%^WG%>š K ;
++Du1:â%^WG%>šeen K ;
++Du2:â%^WG%>švettee K ;
++Du3:â%^WG%>žava K ;
++Pl1:â%^WG%>žep K ;
++Pl2:â%^WG%>švetteđ K ;
++Pl3:â%^WG%>žeh K ;
+
+
+
+
+
 !! !ED verbs
 
 LEXICON 2SYLL_ED  !!= * __@CODE@__ yaml anneed
@@ -269,7 +346,7 @@ LEXICON VINFINITES_ED
 +Ind+Prs+ConNeg:e%^WG K ;
 +Cond+ConNeg:á%>ččii K ;
 +Pot+ConNeg:á%^WG%^RLEN%>žžii K ;
-+Imp+Prs+ConNeg:e%^WG K ;
++Imprt+Prs+ConNeg:e%^WG K ;
 
 +PrfPrc+Pass:á%>m K ;
 +PrfPrc:á%>m K ;
@@ -328,7 +405,7 @@ LEXICON VINFINITES_EED
 +Ind+Prs+ConNeg:e%^WG K ;
 +Cond+ConNeg:á%>ččii K ;
 +Pot+ConNeg:á%^WG%^RLEN%>žžii K ;
-+Imp+Prs+ConNeg:e%^WG K ;
++Imprt+Prs+ConNeg:e%^WG K ;
 
 +PrfPrc+Pass:á%>ám K ;
 +PrfPrc:á%>ám K ;
@@ -383,7 +460,7 @@ LEXICON JUAVVID
 +V+Ind+Prs+ConNeg: K ;
 +V+Cond+ConNeg:ččii K ;
 +V+Pot+ConNeg:žžii K ;
-+V+Imp+Prs+ConNeg: K ;
++V+Imprt+Prs+ConNeg: K ;
 
 +V+Ind+Prs+Sg3:á%^EA%^CSH K ; 
 +V+Ind+Prt+Sg3:â%^WG%>i K ;
@@ -404,7 +481,7 @@ LEXICON VINFINITES_ID
 +Ind+Prs+ConNeg: K ;
 +Cond+ConNeg:ččii K ;
 +Pot+ConNeg:žžii K ;
-+Imp+Prs+ConNeg: K ;
++Imprt+Prs+ConNeg: K ;
 
 +PrfPrc+Pass:m K ;
 +PrfPrc:m K ;
@@ -461,7 +538,7 @@ LEXICON VINFINITES_OD
 +Ind+Prs+ConNeg: K ;
 +Cond+ConNeg:ččii K ;
 +Pot+ConNeg:žžii K ;
-+Imp+Prs+ConNeg: K ;
++Imprt+Prs+ConNeg: K ;
 
 +PrfPrc+Pass:m K ;
 +PrfPrc:m K ;
@@ -542,7 +619,7 @@ LEXICON VINFINITES_OOD
 
 
 LEXICON EVEN_IND_OOD
-+Prs+Sg1:%^WG%>m K ;    
++Prs+Sg1:%^WG%>m K ;    ! vah^RCo^WG>m
 +Prs+Sg2:%^WG%>h K ;    
 +Prs+Sg3: K ;           
 +Prs+Du1:%^CLEN%>on K ; 
@@ -577,7 +654,7 @@ LEXICON VINFINITES_UD !!= * __@CODE@__
 +Ind+Prs+ConNeg: K ;
 +Cond+ConNeg:ččii K ;
 +Pot+ConNeg:žžii K ;
-+Imp+Prs+ConNeg: K ;
++Imprt+Prs+ConNeg: K ;
 
 +PrfPrc+Pass:m K ;
 +PrfPrc:m K ;
@@ -666,9 +743,9 @@ LEXICON LEKKASID  !!= * __@CODE@__ SM51, no length change in stem
 
 LEXICON CIELATTID  !!= * __@CODE@__ SM57, consonant and vowel change
 ! Are these in or out?
- +V+Ind+Prt+Du1:%>ááim K ; ! these separate, perhaps skip
- +V+Ind+Prt+Du2:%>ááid K ; ! only á ?
- +V+Ind+Prt+Du3:%>ááin  K ;
+! +V+Ind+Prt+Du1:%>ááim K ; ! these separate, perhaps skip
+! +V+Ind+Prt+Du2:%>ááid K ; ! only á ?
+! +V+Ind+Prt+Du3:%>ááin  K ;
 
 +V: ODDVLEX ; ! Diacriticn %^ODDC to shorten C before C and #
 
@@ -747,7 +824,7 @@ LEXICON VYEJETTID  !!= * __@CODE@__ SM53. short V in Inf
 +V+Ind+Prt+ConNeg:%>âm K ;
 +V+Cond+ConNeg:%>iččii K ;
 +V+Pot+ConNeg:%>ižžii K ;
-+V+Imp+Prs+ConNeg: K ;
++V+Imprt+Prs+ConNeg: K ;
 
 +V+VAbess:%>hánnáá K ;
 +V+VAbess+Err/Orth:%>hinnáá K ;
@@ -844,7 +921,7 @@ LEXICON PUTESTID_LEX
 +Ind+Prt+ConNeg:%>âm K ;
 +Cond+ConNeg:%>iččii K ;
 +Pot+ConNeg:%>ižžii K ;
-+Imp+Prs+ConNeg: K ;
++Imprt+Prs+ConNeg: K ;
 
 +VAbess:%^CLEN%^SLEN%>hánnáá K ;
 +VAbess+Err/Orth:%>hinnáá K ;
@@ -971,7 +1048,7 @@ LEXICON COKKIITTID_LEX
 +Ind+Prt+ConNeg:%>âm K ;
 +Cond+ConNeg:%>iččii K ;
 +Pot+ConNeg:%>ižžii K ;
-+Imp+Prs+ConNeg: K ;
++Imprt+Prs+ConNeg: K ;
 
 +VAbess:%^SVSH%>hánnáá K ;
 +VAbess+Err/Orth:%^SVSH%>hinnáá K ;
@@ -1056,7 +1133,7 @@ LEXICON ODDVLEX  !!= * __@CODE@__
 +Ind+Prt+ConNeg:%>âm K ;
 +Cond+ConNeg:%>iččii K ;
 +Pot+ConNeg:%>ižžii K ;
-+Imp+Prs+ConNeg: K ;
++Imprt+Prs+ConNeg: K ;
 
 +VAbess:%>hánnáá K ;
 +VAbess+Err/Orth:%>hinnáá K ;
@@ -1265,7 +1342,7 @@ LEXICON VINF_LONG_VOW
 
 
 +Ind+Prs+ConNeg: K ;
-+Imp+Prs+ConNeg: K ;
++Imprt+Prs+ConNeg: K ;
 +Cond+ConNeg:%>ččii K ;
 +Pot+ConNeg:%>žii K ;
 
