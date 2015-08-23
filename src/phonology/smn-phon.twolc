@@ -134,8 +134,8 @@ Sets
        %^RC %^SC   ;                         !!=  @CODE@ 
  Geminate = b d g p h t k c f z l m n ŋ r s š v  ;  !!= * @CODE@  
  Sgm = Vow Cns ;							   !!= * @CODE@ 
- NotSuffixBorder = Vow %^FCD Cns %^SFV %^EWG %^CSH %^WG %^CLEN %^SLEN %^RLEN %^SVLOW %^RVSH %^ÁE %^ÁI %^EA %^SVSH %^VHIGH ; !!= * @CODE@ 
- Triggers =  %^SFV %^FCD %^WG %^EWG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^ÁI %^SVSH %^VHIGH ; !!= * @CODE@ 
+ NotSuffixBorder = Vow %^FCD Cns %^SFV %^EWG %^CSH %^WG %^CLEN %^SLEN %^RLEN %^SVLOW %^RVSH %^ÁE %^ÁI %^EA %^SVSH ; !!= * @CODE@ 
+ Triggers =  %^SFV %^FCD %^WG %^EWG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^ÁI %^SVSH ; !!= * @CODE@ 
  StemCns = b b3 d d3 g g2 g3 h h2 h3 		   !!= * @CODE@ 
            j l m m2 m3 m8 n n8 n2 ŋ r s  ;     !!= @CODE@ 
 
@@ -149,9 +149,7 @@ Sets
 
 Definitions
 
-WeakGrade =  (RealVow:) :RealVow (Vow:)  (Cns:+) 
-            (%^VHIGH:) ([%^SV:|%^ÁI:|%^ÁE:|%^EA:]) (%^FCD:) 
-            %^WG:0     ;   
+WeakGrade =  (RealVow:) :RealVow (Vow:)  (Cns:+) ([%^SV:|%^ÁI:|%^ÁE:|%^EA:]) (%^FCD:) %^WG:0     ;   
 ConsonantShorting =  (RealVow:) :RealVow (Vow:) (Cns:+) (%^RVSH:) ([%^SV:|%^ÁI:|%^ÁE:|%^EA:]) (%^FCD:) %^CSH:0 ;   
 
 !! As we look at more cases, the WeakGrade definition tends to be longer. 
@@ -732,7 +730,7 @@ Vx:0 <=> Vy _ %^EE: ;
 
 "Root vowel lenghtening in many stems"
 !! * __@RULENAME@__ \\  lekkâ : leehá-  meecij ko%^RVppâin
-%^RV:Vx <=> :Vx _ [Cns:+ - [h: h ]]  Vow: (Vow:)  (Cns:+) (Triggers: - %^RLEN:)*   %^RLEN: ; !! 1) 2st and 3st
+%^RV:Vx <=> Vx _ [Cns:+ - [h: h ]]  Vow: (Vow:)  (Cns:+) (Triggers: - %^RLEN:)*   %^RLEN: ; !! 1) 2st and 3st
 !            Vx _ Cns: (Cns:) Vow:+ Cns:+ Vow: Cns: %^SFV: %^RLEN:  ; !! 2) 4st 
 	where Vx in ( a e i o u y á ) ; !ä in a special rule
 		
@@ -750,9 +748,8 @@ Vx:0 <=> Vy _ %^EE: ;
 
 "Root vowel o lengthening with vowel change before suffix i"
 !! * __@RULENAME@__ \\  alge : oolgijn 
-%^RV:o <=> a:o _ Cns:+ e: %^WG:  %^RLEN:  %> i: ; 
-           a:o _ Cns:+ u  %^CSH: %^RLEN:  %>    ;
-           a:o _ Cns:+ â  %^VHIGH: (%^WG:) (%^RLEN:) %> ;
+%^RV:o <=> a:o  _  Cns:+  e:     %^WG:  %^RLEN:  %> i: ; 
+           a:o  _  Cns:+  u      %^CSH: %^RLEN:  %>    ;
 
 !€ a^RVlge^WG^RLEN>id
 !€ oolgi00>jd
@@ -775,12 +772,9 @@ Vx:0 <=> Vy _ %^EE: ;
 
 "Root vowel change for á to ä with i in second syllable"
 !! * __@RULENAME@__ \\  päävir 
-á:ä <=>   _ [ á:|%^RV:] Cns:* :i (%^SV:) Cns: %^ÁI: [%^EWG:|%^WG:] [%^RLEN:|%^RVSH:] [%>|.#.] ; !! 1) pááppár:päävir
-       á: _   Cns:* :i (%^SV:) Cns: %^ÁI: %^EWG: %^RLEN: [%>|.#.] ;  !! 2) pááppár:päävir
-[.#.|Cns] _ (%^RV:) Cns:+ [e|i] %^VHIGH: (%^RLEN:) %> ;
-
+á:ä <=>    _ [ á:|%^RV:] Cns:* :i (%^SV:) Cns: %^ÁI: [%^EWG:|%^WG:] [%^RLEN:|%^RVSH:] [%>|.#.] ; !! 1) pááppár:päävir
+        á: _   Cns:* :i (%^SV:) Cns: %^ÁI: %^EWG: %^RLEN: [%>|.#.] ;  !! 2) pááppár:päävir
 !         _ [ á:|%^RV:] Cns:+ :i         Cns  %^ÁI:  %^EWG:  %^RVSH:  %> ; !i  ; !! 3) pááppár:pävirin páápp4ár%^ÁI%^EWG%^RVSH%>id
-
 
 !rejected, look at this:
 
@@ -807,15 +801,12 @@ a:o <=> _  %^RV: Cns:+  e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> i: ;
 a:o <=> [Cns|.#.] _       Cns:+ u2:  %> [:u|i|i2:i|Cns - j] Sgm:* %> ;
         [Cns|.#.] _       Cns:+ i2:i %>    [i|i2:i|Cns] Sgm:* %> ;
         [Cns|.#.] _ %^RV: Cns:+ u %^CSH: %^RLEN: %> ;
-        [Cns|.#.] _ %^RV: Cns:+ â %^VHIGH: (%^WG:) (%^RLEN:) %> ;
-
 
 "Root vowel o:u for contract verbs and Root vowel change o:u before suffix i"
 !! * __@RULENAME@__ 
-o:u <=> [Cns|.#.] _ Cns:+ u2:        %> [:u|i|i2:i|Cns - j] Sgm:* %> ;
-        [Cns|.#.] _ Cns:+ i2:i       %>    [i|i2:i|Cns] Sgm:* %> ;
-                  _  %^RV: Cns:+ e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> [i:|đ|m|v|p] ; !!  alge : olgijn 
-        [Cns|.#.] _ %^RV: Cns:+  â %^VHIGH: (%^RLEN:) %> ;
+o:u <=> [Cns|.#.] _ Cns:+ u2:  %> [:u|i|i2:i|Cns - j] Sgm:* %> ;
+        [Cns|.#.] _ Cns:+ i2:i %>    [i|i2:i|Cns] Sgm:* %> ;
+                  _  %^RV: Cns:+  e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> [i:|đ|m|v|p] ; !!  alge : olgijn 
 
 
 !€ tohhi2>đ
