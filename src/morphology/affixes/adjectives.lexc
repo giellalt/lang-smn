@@ -84,25 +84,26 @@ LEXICON ALKKEE_COMMON
 +N+Pl+Abe:%>ittáá K ;
 
 
-LEXICON A_LITTER
-+A+Attr:%>â K ;    ! keppâ
-+A+Attr:%>isâs K ;    ! keppisâs
-+A+Sg+Nom:%>is K ;	! keppis
-+A+Sg+Gen:%>is K ; ! keppis
-+A+Sg+Acc:%>is K ; ! keppis
-+A+Sg+Ill:%>ân K ; ! keppisân
-+A+Sg+Loc:%>ist K ; ! keppisist
-+A+Sg+Com:%>áin K ; ! keppisáin
-+A+Sg+Abe:%>ttáá K ; ! keppisttáá
-+A+Ess:%>in K ; ! keppisin
-+A+Par:%>id K ; ! keppisid
-+A+Pl+Nom:%>eh K ; ! keppiseh
-+N+Pl+Gen:%>ij K ; ! keppisij
-+N+Pl+Acc:%>ijd K ; ! keppisijd
-+N+Pl+Ill:%>áid K ; ! keppisáid
-+N+Pl+Loc:%>ijn K ; ! keppisijn
-+N+Pl+Com:%>ijguin K ; ! keppisijguin
-+N+Pl+Abe:%>ijttáá K ; ! keppisijttáá
+LEXICON KEPPIS	
++A+Attr:%^FCDâ%> K ;    ! keppâ
++A: A_LITTER ;
+!+A+Attr:%>isâs K ;    ! keppisâs
+!+A+Sg+Nom:%>is K ;	! keppis
+!+A+Sg+Gen:%>is K ; ! keppis
+!+A+Sg+Acc:%>is K ; ! keppis
+!+A+Sg+Ill:%>ân K ; ! keppisân
+!+A+Sg+Loc:%>ist K ; ! keppisist
+!+A+Sg+Com:%>áin K ; ! keppisáin
+!+A+Sg+Abe:%>ttáá K ; ! keppisttáá
+!+A+Ess:%>in K ; ! keppisin
+!+A+Par:%>id K ; ! keppisid
+!+A+Pl+Nom:%>eh K ; ! keppiseh
+!+N+Pl+Gen:%>ij K ; ! keppisij
+!+N+Pl+Acc:%>ijd K ; ! keppisijd
+!+N+Pl+Ill:%>áid K ; ! keppisáid
+!+N+Pl+Loc:%>ijn K ; ! keppisijn
+!+N+Pl+Com:%>ijguin K ; ! keppisijguin
+!+N+Pl+Abe:%>ijttáá K ; ! keppisijttáá
 
 
 LEXICON A_INDECL
@@ -257,23 +258,8 @@ LEXICON HIAJU
  
 LEXICON MUCCAD 
 !! Adj - muččâd: # attr. mu´čis
-+A+Attr:  K ;
-+A+Sg+Nom:  K ;
-+A+Sg+Gen:  K ;
-+A+Sg+Acc:  K ;
-+A+Sg+Ill:ân  K ;
-+A+Sg+Loc:ist  K ;
-+A+Sg+Com:áin  K ;
-+A+Sg+Abe:ttáá  K ;
-+A+Ess:in  K ;
-+A+Par:id  K ;
-+A+Pl+Nom:eh  K ;
-+A+Pl+Gen:ij  K ;
-+A+Pl+Acc:ijd  K ;
-+A+Pl+Ill:áid  K ;
-+A+Pl+Loc:ijn  K ;
-+A+Pl+Com:iguin  K ;
-+A+Pl+Abe:ijttáá  K ;
++A+Attr:i%^WG%>s # ; ! mučis
++A:âd A_LITTER ;
 
 
 LEXICON CEPPI
@@ -314,6 +300,9 @@ LEXICON A_VUALAAS !!= __@CODE@__
 
 LEXICON PASTIL
 +A+Attr:%>is  K ; !
+A_LITTER ;
+
+LEXICON A_LITTER
 +A: ODD_SUFF_LONGSTEM ;
 +A: ODD_SUFF_SHORTSTEM ;
 +A:%>u  COMP ; !fiskâdub fiskâduboh fijnásuboi vaigâdub tergâdub pehtilub
@@ -322,7 +311,8 @@ LEXICON PASTIL
 
 LEXICON FISKAD
 +A+Attr:i%^WG%>s # ; ! fiskis
-:âd PASTIL ;
++A+Attr:%>is  K ; !
+:âd A_LITTER ;
 
 
 LEXICON A_EEHID
@@ -335,8 +325,7 @@ LEXICON A_EEMEED
 
 LEXICON A_KOLME !!= @CODE@ ad hoc three syllable stem > LITTER
 +A+Attr:  K ; !placeholder
-+A: ODD_SUFF_LONGSTEM ;
-+A: ODD_SUFF_SHORTSTEM ;
++A: A_LITTER ;
 
 LEXICON HAAITIS
 +A+Attr:%^EWG%^RVSH  K ; !rähis
