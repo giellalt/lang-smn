@@ -197,7 +197,7 @@ Cx:Cy <=> Vow: _ (%^RC: )  WeakGrade ([%^RVSH:|%^RLEN:]) (%^SLEN:) (%^SVLOW:) %>
 !! * __@RULENAME@__ \\   weak grade or consonant shortening for illativ
 Cx:0 <=> Vow: _  Cx: WeakGrade \%^CLEN: ;
          Vow: _  Cx: ConsonantShorting \%^CLEN:  ;
-	where Cx in ( b c č d đ f g h k l m n ŋ r s š v z ž ) ; !lnŋr kahhaanj 
+	where Cx in ( b c č d đ f g h k l m n ŋ r s š v z ž ) ; !  
 
 !€ vi^RVššâ^RVSH^CSH>vettee
 !€ vi00šâ00>vettee
@@ -249,8 +249,8 @@ t:0 <=> [Vow:|%^SV:] _ t: WeakGrade \%^CLEN: ; !! 1)
 Cx:0 <=> Vow: _  Cy: (%^RC:) WeakGrade \%^CLEN: ; !! 1) weak grade: ruttâ:ruuđáin 
          Vow: _  Cy: Vow: (%^EA: ) %^CSH: (%^RLEN:)  %> ; !! 2) consonant shortening for illativ
          Vow: _  Cy: Vow:+  Cns ([%^ÁI:|%^ÁE:]) %^CSH: ([%^RLEN: | %^RVSH:])  (%^SVSH:)  %> ; !! 3) consonant shortening for pááppár%^ÁI viäkk4ás%^ÁI
-	where Cx in ( h   t  k p   ) 
-	      Cy in ( h4  t4 k4 p )
+	where Cx in ( h  t  k  p ) 
+	      Cy in ( h4 t4 k4 p )
 		  matched ;
 
 
@@ -536,15 +536,15 @@ j:i <=> Vow: _ %^RC: :Vow (%^RVSH:)  %^CLEN:         %> ; !Par Ess
 "Lengthening of half-long root consonant x:xx"
 !! * __@RULENAME@__ \\  
 %^RC:Cy <=> Vow: Cx: _ :Vow+ Sgm:* Triggers:* %^CLEN: ;
- 	where Cx in ( l r s h m n đ j v ŋ  š )
- 		  Cy in ( l r s h m n đ j v ŋ  š ) 
+ 	where Cx in ( č g k l r s h m n đ j v ŋ  š )
+ 		  Cy in ( č g k l r s h m n đ j v ŋ  š ) 
  		  matched ;
 
 "Lengthening of consonant, e.g. for Ess/Par"
 !! * __@RULENAME@__ \\   piiru piirrun niisu niissun vahe vahheen
 %^RC:Cy <=> Vow: Cx:   _ Vow (%^SV:)  Cns:* [%^CLEN: (%^SLEN:)|%^SVSH:] %> \[Vow: | s ] ; 
             Vow: Cx:   _ Vow           Cns         %^CLEN:  %> \[ i:|s]  ;
-            Vow: Cx:   _ Vow: (i:) Cns:+    %^CLEN: (%^RLEN:)    ; !! 3) kepidem : keeppidmân
+            Vow: (i4:) Cx:   _ Vow: (i:) Cns:+    %^CLEN: (%^RLEN:)    ; !! 3) kepidem : keeppidmân
 	where Cx in ( v t h5 c p)  
 	      Cy in ( v t h  c p)   
 		  matched ;
@@ -608,8 +608,8 @@ Cx:Cy <=> Vow:  _ %^RC: :Vow+ Cns:* [Triggers: - [%^SFV:| %^FCD:]]* %^CLEN: ([%^
 !! * __@RULENAME@__ \\  as previous rule, but for k4, č4, p  kukse:kuvssijn  
 %^RC:Cx <=> Vow:  Cy:  Cz: _ WeakGrade %^CLEN: \%^SLEN: ; 
         where Cy in (   č  p  k  h h4 h4 h4 k4 ) 
-              Cz in (  č4 p s  c t  č c s ) 
-              Cx in (   j  v  s  c t  č c s ) 
+              Cz in (  č4  p  s  c t  č  c  s ) 
+              Cx in (   j  v  s  c t  č  c  s ) 
         matched ;
 
 "Consonant lengthening č:čč"
@@ -620,16 +620,17 @@ Cx:Cy <=> Vow:  _ %^RC: :Vow+ Cns:* [Triggers: - [%^SFV:| %^FCD:]]* %^CLEN: ([%^
 
 "From extra strong to weak, part 1 cc:s, rr:r"
 !! * __@RULENAME@__ \\  
-Cy:0 <=>  [Cx: | .#. | # ]  _  Vow:+ (Cns:+) ([%^ÁI:|%^ÁE:]) (%^FCD:) %^EWG: ; !  !! poccuu:puásui  kieppu:kiepâ iäbbár%^ÁI cuobbuu:cuábui kiellâs
-       where Cx in ( b c č đ d g h k l m n ŋ r t p    r s š v z ž) 
-             Cy in ( b c č đ d g h k l m  n ŋ r t p  r s š v z ž) 
+Cy:0 <=>  [Cx: | .#. | # ]  _  Vow:+ (Cns:+) ([%^ÁI:|%^ÁE:]) (%^FCD:) %^EWG: ; !  !! poccuu:puásui  kieppu:kiepâ  cuobbuu:cuábui kiellâs
+       where Cx in ( b c č đ d g h k l m n ŋ r t p r s š v z ž) 
+             Cy in ( b c č đ d g h k l m n ŋ r t p r s š v z ž) 
         matched ;
 
+        !sku%^RVi4pper%^EWG%^RLEN
 
 
 "From extra strong to weak, part 2"
 !! * __@RULENAME@__ \\  
-Cx:Cy <=>   _  Cz:  Vow:+ (Cns) ([%^ÁI:|%^ÁE:]) %^EWG: ([%^RVSH:|%^RLEN:|%^SVSH:]) [%>|.#.] ; !! 1) poccuu:puásui  pááppár%^ÁI
+Cx:Cy <=> [ Vow: |.#. | # ]  _  Cz:  Vow:+ (Cns) ([%^ÁI:|%^ÁE:]) %^EWG: ([%^RVSH:|%^RLEN:|%^SVSH:]) [%>|.#.] ; !! 1) poccuu:puásui  pááppár%^ÁI
         where Cx in ( c k4 h p  h4 h4 h4 ) 
               Cy in ( s v  v v  v  v  v ) 
               Cz in ( c s  h p t  č  c ) 
@@ -742,7 +743,7 @@ Vx:0 <=> Vy _ %^EE: ;
 
 "Root vowel ä:ää lenghtening"
 !! * __@RULENAME@__ \\ special rule, for avoiding conflict spä%^RVi4lih%^EWG%^RLEN
-%^RV:ä <=> ä _ Cns:+ Vow:+ Cns:+ %^RLEN: %^CLEN: ; !! 5) vä%^RVr%^RCid
+%^RV:ä <=> ä _ Cns:+ Vow:+ Cns:+  %^CLEN: %^RLEN: ; !! 5) vä%^RVr%^RCid
           :ä _ Cns:* :i (%^SV:) Cns: (%^ÁI:) (%^FCD:) [%^EWG:|%^WG:] %^RLEN: [%>|.#.] ; !spääilih
 
 
