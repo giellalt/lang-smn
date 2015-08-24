@@ -197,7 +197,7 @@ Cx:Cy <=> Vow: _ (%^RC: )  WeakGrade ([%^RVSH:|%^RLEN:]) (%^SLEN:) (%^SVLOW:) %>
 !! * __@RULENAME@__ \\   weak grade or consonant shortening for illativ
 Cx:0 <=> Vow: _  Cx: WeakGrade \%^CLEN: ;
          Vow: _  Cx: ConsonantShorting \%^CLEN:  ;
-	where Cx in ( b c č d đ f g h k l m n ŋ r s š v z ž ) ; !  
+	where Cx in ( b c č d đ f g h k l m n ŋ r s š t v z ž ) ; !  
 
 !€ vi^RVššâ^RVSH^CSH>vettee
 !€ vi00šâ00>vettee
@@ -219,22 +219,15 @@ Cx:0 <=> Vow: _  Cx: WeakGrade \%^CLEN: ;
 
 "tt:t  - final consonant and consonant gradation"
 !! * __@RULENAME@__ \\ 3syll verbs in -tt lose t in front of cns-initial suff
-t:0 <=> [Vow:|%^SV:] _ t: WeakGrade \%^CLEN: ; !! 1)
-        [Vow:|%^SV:] _ t: ConsonantShorting \%^CLEN:  ; !! 2)
-        [RealVow:|%^SV:] _ t: Triggers:* %> \Vow: ; !! 3) uáivátt : uáivát
+t:0 <=>  [RealVow:|%^SV:] _ t: Triggers:* %> \Vow: ; !! 3) uáivátt : uáivát
         Vow: Vow: _ t: %> â n  ; !! 4) uáiváátt>ân uáiváátân
+        Vow: _  t: Vow:+  (Cns:+) ([%^ÁI:|%^ÁE:]) %^EWG: ; !! 1) tiettu tieđâ        
 
 !€ kulluutt^SVSH>
 !€ kullu00t0>
 
 !€ las^RCe^SVtt^CLEN^SLEN>
 !€ lassee0t00>
-!
-!"xx:x consonant shortening for consonants belonging to two different patterns"
-! * __@RULENAME@__ \\   weak grade or consonant shortening for illativ
-!Cx:0 <=> Vow: _  Cx: WeakGrade ([%^RVSH: |%^RLEN:]) ([%^SVLOW: | %^SLEN:]) %> ; !! 1) weak grade päddi : päädi tullâ:tuuláin
-!         Vow: _  Cx: Vow: (%^EA: ) %^CSH: ( %^RVSH:) %> ; !! 2) consonant shortening for illativ, päddi : páádán RLEN?
-!	where Cx in ( l n ŋ r m ) ; !
 
 
 !luččâ:luuj̣áin 
@@ -249,8 +242,8 @@ t:0 <=> [Vow:|%^SV:] _ t: WeakGrade \%^CLEN: ; !! 1)
 Cx:0 <=> Vow: _  Cy: (%^RC:) WeakGrade \%^CLEN: ; !! 1) weak grade: ruttâ:ruuđáin 
          Vow: _  Cy: Vow: (%^EA: ) %^CSH: (%^RLEN:)  %> ; !! 2) consonant shortening for illativ
          Vow: _  Cy: Vow:+  Cns ([%^ÁI:|%^ÁE:]) %^CSH: ([%^RLEN: | %^RVSH:])  (%^SVSH:)  %> ; !! 3) consonant shortening for pááppár%^ÁI viäkk4ás%^ÁI
-	where Cx in ( h  t  k  p ) 
-	      Cy in ( h4 t4 k4 p )
+	where Cx in ( h  k  p ) 
+	      Cy in ( h4 k4 p )
 		  matched ;
 
 
@@ -333,6 +326,8 @@ t:đ <=> Vow: _   k4: (%^RC:) WeakGrade ; !for ito : iđo
         Vow: _ (%^RC:) (j) WeakGrade (%^CLEN:0) ;
         Vow: _  %^RC:   j RealVow:  %^CLEN:0 ; ! Par and Ess
         Vow: _  (k4:) Vow:+ (Cns:) ([%^ÁI:|%^ÁE:]) %^EWG: ;
+        Vow:  t:  _ WeakGrade %^RLEN: ; !! 1) ruttâ ruuđâ
+        Vow: t:  _ Vow:+ (Cns:+) ([%^ÁI:|%^ÁE:]) %^EWG: ; !! 2) tiettu:tieđâ čuottâlm:čuođâlm
 
 !€ jo^RVtk4â^WG^RLEN>
 !€ joođhâ00>
@@ -382,17 +377,7 @@ k:0 <=> Vow: [l | r | v | i4: | đ ]  _ k4:h  WeakGrade (%^CLEN: ) (%^SVLOW:) ; 
 
 
 
-"t4:đ gradation for tt4" 
-!! * __@RULENAME@__ 
-t4:đ <=> t:  _ WeakGrade ; !! 1) ruttâ ruuđâ
-         t:  _ Vow:+ (Cns:+) ([%^ÁI:|%^ÁE:]) %^EWG: ; !! 2) tiettu:tieđâ čuottâlm:čuođâlm
-!€ ru^RVtt4â^WG^RLEN>
-!€ ruu0đâ00>
 
- 
-"t:0 foran t4" 
-!! * __@RULENAME@__ 
-t:0 <=> _  t4: Vow:+  (Cns:+) ([%^ÁI:|%^ÁE:]) %^EWG: ; !! 1) tiettu tieđâ        
 
 !rejected:       
 !€ haavvâr^CSH^RVSH>ist
@@ -435,15 +420,6 @@ Cy:0 <=> :Vow (Vow:) Cx: _ Cz: (%^RC:) WeakGrade \%^CLEN:   ;
 !€ riänttus^WG>
 !€ riän0tus0>
 
-
-
-
-
-!"xx:x gradation for ^CSH illative 2" 
-! * __@RULENAME@__ \\    
-!Cx:0 <=> _  Cx Vow: %^CSH: %^RLEN: %> n ; !! 1) 2st hellá:heeḷán
-!         _  Cx Vow: (Vow:) Cns: (Cns:) %^CSH: (%^SVSH:) [%>|.#.] ; !! 2) 3st stems aarrân:aṛânân
-!      where Cx in ( r l n ŋ m )  ;
 
 !kurrâ kuuṛân
 !€ ku^RVrrâ^RLEN^CSH>n
@@ -620,7 +596,7 @@ Cx:Cy <=> Vow:  _ %^RC: :Vow+ Cns:* [Triggers: - [%^SFV:| %^FCD:]]* %^CLEN: ([%^
 
 "From extra strong to weak, part 1 cc:s, rr:r"
 !! * __@RULENAME@__ \\  
-Cy:0 <=>  [Cx: | .#. | # ]  _  Vow:+ (Cns:+) ([%^ÁI:|%^ÁE:]) (%^FCD:) %^EWG: ; !  !! poccuu:puásui  kieppu:kiepâ  cuobbuu:cuábui kiellâs
+Cy:0 <=>  [Vow: | .#. | # ] Cx:  _  Vow:+ (Cns:+) ([%^ÁI:|%^ÁE:]) (%^FCD:) %^EWG: ; !  !! poccuu:puásui  kieppu:kiepâ  cuobbuu:cuábui kiellâs
        where Cx in ( b c č đ d g h k l m n ŋ r t p r s š v z ž) 
              Cy in ( b c č đ d g h k l m n ŋ r t p r s š v z ž) 
         matched ;
@@ -650,7 +626,6 @@ p:v <=> Vow: _ Vow: (Cns:) %^EWG: ;
 !! * __@RULENAME@__  delet t in front of -ttáá, avoid -tttáá
 Cx:0  <=>  Sgm: (Cy:) _ (%^CSH:) (%^RLEN:) %> Cy Cy ; 
            Vow: Cx _ %> m ;
-!        Vow Cy _ [â:|e:] m %^SFV: ; ! vajoidittem vajoiditmáin
 	where Cx in ( d t š) 
 	      Cy in ( d t š)
 		  matched ;
@@ -697,10 +672,8 @@ Cx:0  <=>  Sgm: (Cy:) _ (%^CSH:) (%^RLEN:) %> Cy Cy ;
 Vy:0 <=> Vx: _  Cns: [ Cns: - %^RC:0 ] Vow:  %^WG: (%^CLEN:) %^SVLOW: %> i: ; !! 1)
          Vx: _  Cns:+ Vow:  %^WG: %^RVSH: %^CLEN:  %> i:  ; !! 2) čääci : čassijn
          Vx: _  Cns:+ Vow:+ (Cns) (%^CSH:) %^RVSH: (%^SVLOW:)  %>  ; !! 3) kaamuv kammust
-!         Vx _ Cns Cns Vow: %^SV: Cns:+ Vow: Cns %^SFV: %^RLEN: (%^CLEN:) %^SLEN: %> ; !! 4) kiiško%^SVdem
 		 Vx: _ [Cns:+ - č4:] Vow:+ Cns:+ (%^ÁI:) %^CSH: (%^SVSH:) [%>|.#.] ; ! pááppár : pápárân pááppár%^ÁI%^EWG%^RVSH%>id
 		 Vx: _ [Cns:+ - č4:] Vow:+ Cns:+ (%^ÁI:) %^EWG: %^RVSH: [%>|.#.] ; ! pááppár : pápárân pááppár%^ÁI%^EWG%^RVSH%>id
-!		 Sgm: _ Vx Cns: (Cns:) (%^RC:) Vow  :Cns (%^SFV:) (%^SC:) ([%^ÁI:|%^ÁE:]) (%^CLEN:) %^RVSH: [%>|.#.] ;
        where Vx in ( a e i o u á ä y ) 
              Vy in ( a e i o u á ä y ) 
        matched ;
@@ -732,7 +705,6 @@ Vx:0 <=> Vy _ %^EE: ;
 "Root vowel lenghtening in many stems"
 !! * __@RULENAME@__ \\  lekkâ : leehá-  meecij ko%^RVppâin
 %^RV:Vx <=> Vx _ [Cns:+ - [h: h ]]  Vow: (Vow:)  (Cns:+) (Triggers: - %^RLEN:)*   %^RLEN: ; !! 1) 2st and 3st
-!            Vx _ Cns: (Cns:) Vow:+ Cns:+ Vow: Cns: %^SFV: %^RLEN:  ; !! 2) 4st 
 	where Vx in ( a e i o u y á ) ; !ä in a special rule
 		
 !€ le^RVkk4â^WG^RLEN>
@@ -775,7 +747,6 @@ Vx:0 <=> Vy _ %^EE: ;
 !! * __@RULENAME@__ \\  päävir 
 á:ä <=>    _ [ á:|%^RV:] Cns:* :i (%^SV:) Cns: %^ÁI: [%^EWG:|%^WG:] [%^RLEN:|%^RVSH:] [%>|.#.] ; !! 1) pááppár:päävir
         á: _   Cns:* :i (%^SV:) Cns: %^ÁI: %^EWG: %^RLEN: [%>|.#.] ;  !! 2) pááppár:päävir
-!         _ [ á:|%^RV:] Cns:+ :i         Cns  %^ÁI:  %^EWG:  %^RVSH:  %> ; !i  ; !! 3) pááppár:pävirin pááppár%^ÁI%^EWG%^RVSH%>id
 
 !rejected, look at this:
 
