@@ -50,8 +50,9 @@ Alphabet
 p4:p  t4:t k4:k č4:č  l4:l h4:h   !!= * @CODE@  these are consonants that change in cg
 i4:i                    	        !!= * @CODE@  this is the underlying i consonant
 i2:i u2:u         	        !!= * @CODE@  this is final i, u in contract verbs etc changing to e, o
-i3:i   i6:0        	        !!= * @CODE@  this is invariant i
-h5:h č5:č  y5:y i5:i j5:j u5:u ŋ5:ŋ r5:r t5:t c5:c l5:l t5:t !!= * @CODE@  these do not change 
+i3:i           	        !!= * @CODE@  this is invariant i
+a5:a i5:i u5:u y5:y                  !!= * @CODE@  these do not change 
+c5:c h5:h j5:j l5:l ŋ5:ŋ r5:r t5:t  !!= * @CODE@  these do not change 
  
 
 !! !More abstract archiphonemes
@@ -1106,7 +1107,8 @@ Vx:e <=> Cns _ (%^VLOW:) %> [j Vow|e] ;
 
 "Stem vowel á to a for a root vowel"
 !! * __@RULENAME@__ \\  trying this as a phonological rule for -eđ verbs
-á:a <=> a (%^RV:) Cns:+ _  (%^VLOW:) %> ;
+á:a <=> a (%^RV:) Cns:+ _  %^CSH: %> ;
+
 
 "Stem vowel â to a in Pl Nom -h"
 !! * __@RULENAME@__ \\  silbâ to siilbah
