@@ -535,16 +535,16 @@ j:i <=> Vow: _ %^RC: :Vow   %^CLEN:  (%^RVSH:)       %> ; !Par Ess
 
 "Lengthening of half-long root consonant x:xx"
 !! * __@RULENAME@__ \\  
-%^RC:Cy <=> Vow: (i4:) Cx: _ :Vow+ Sgm:* Triggers:* %^CLEN: ;
- 	where Cx in ( č g k l r s h m n đ j v ŋ p  š )
- 		  Cy in ( č g k l r s h m n đ j v ŋ p š ) 
+%^RC:Cy <=> Vow:  Cx: _ :Vow+ Sgm:* Triggers:* %^CLEN: ;
+ 	where Cx in ( č g k l r s h m n đ j v ŋ  š )
+ 		  Cy in ( č g k l r s h m n đ j v ŋ š ) 
  		  matched ;
 
 "Lengthening of consonant, e.g. for Ess/Par"
 !! * __@RULENAME@__ \\   piiru piirrun niisu niissun vahe vahheen suop%^RCâinj%^CLEN%^RLEN%^SVSH
 %^RC:Cy <=> Vow: Cx:   _ Vow (%^SV:)  Cns:* [%^CLEN: (%^SLEN:)|%^SVSH:] %> \[Vow: | s ] ; 
             Vow: Cx:   _ Vow           Cns         %^CLEN:  %> \[ i:|s]  ;
-            Vow: Cx:Cy _ Vow: (i:) Cns:+   %^CLEN: (%^RLEN:) ([%^SLEN:|%^SVSH:]) %>   ; !! 3) kepidem : keeppidmân
+            Vow: (i4:) Cx:Cy _ Vow: (i:) Cns:+   %^CLEN: (%^RLEN:) ([%^SLEN:|%^SVSH:]) %>   ; !! 3) kepidem : keeppidmân
 	where Cx in ( v t h5 c p)  
 	      Cy in ( v t h  c p)   
 		  matched ;
