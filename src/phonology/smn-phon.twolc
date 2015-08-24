@@ -47,11 +47,11 @@ Alphabet
 !! !Different archiphonemes
 
 
-p4:p  t4:t k4:k č4:č  l4:l h4:h   !!= * @CODE@  these are consonants that change in cg
+p4:p  t4:t k4:k č4:č r4:r l4:l h4:h   !!= * @CODE@  these are consonants that change in cg
 i4:i                    	        !!= * @CODE@  this is the underlying i consonant
 i2:i u2:u         	        !!= * @CODE@  this is final i, u in contract verbs etc changing to e, o
 i3:i           	        !!= * @CODE@  this is invariant i
-h5:h  y5:y i5:i j5:j u5:u ŋ5:ŋ t5:t c5:c l5:l t5:t r5:r !!= * @CODE@  these do not change 
+h5:h  y5:y i5:i j5:j u5:u ŋ5:ŋ t5:t c5:c l5:l t5:t !!= * @CODE@  these do not change 
  
 
 !! !More abstract archiphonemes
@@ -128,8 +128,8 @@ Sets
        P Q R S Š T Ŧ V W X Z Ž 				   !!= @CODE@ 
        ht g2 k2 m2 n2 							   !!= @CODE@ 
        b3 d3 g3 m3 h3 						   !!= @CODE@ 
-       k4 č4 r4 l4 h4 t4 i4                  !!= @CODE@
-       h5 j5 ŋ5 t5 c5 l5 t5  r5                                     !!=  @CODE@
+       p4 k4 č4 r4 l4 h4 t4 i4                  !!= @CODE@
+       h5 j5 ŋ5 t5 c5 l5 t5                                      !!=  @CODE@
        m7 n7 ŋ7 v7 s7 r7 đ7	l7 j7 h7 š7		   !!= @CODE@ 
        %^RC %^SC   ;                         !!=  @CODE@ 
  Geminate = b d g p h t k c f z l m n ŋ r s š v  ;  !!= * @CODE@  
@@ -197,7 +197,7 @@ Cx:Cy <=> Vow: _ (%^RC: )  WeakGrade ([%^RVSH:|%^RLEN:]) (%^SLEN:) (%^SVLOW:) %>
 !! * __@RULENAME@__ \\   weak grade or consonant shortening for illativ
 Cx:0 <=> Vow: _  Cx: WeakGrade \%^CLEN: ;
          Vow: _  Cx: ConsonantShorting \%^CLEN:  ;
-	where Cx in ( b c č d đ f g h k l m n ŋ r s š t v z ž ) ; !  
+	where Cx in ( b c č d đ f g h k l m n ŋ p r s š v z ž ) ; !lnŋr kahhaanj 
 
 !€ vi^RVššâ^RVSH^CSH>vettee
 !€ vi00šâ00>vettee
@@ -219,15 +219,22 @@ Cx:0 <=> Vow: _  Cx: WeakGrade \%^CLEN: ;
 
 "tt:t  - final consonant and consonant gradation"
 !! * __@RULENAME@__ \\ 3syll verbs in -tt lose t in front of cns-initial suff
-t:0 <=>  [RealVow:|%^SV:] _ t: Triggers:* %> \Vow: ; !! 3) uáivátt : uáivát
+t:0 <=> [Vow:|%^SV:] _ t: WeakGrade \%^CLEN: ; !! 1)
+        [Vow:|%^SV:] _ t: ConsonantShorting \%^CLEN:  ; !! 2)
+        [RealVow:|%^SV:] _ t: Triggers:* %> \Vow: ; !! 3) uáivátt : uáivát
         Vow: Vow: _ t: %> â n  ; !! 4) uáiváátt>ân uáiváátân
-        Vow: _  t: Vow:+  (Cns:+) ([%^ÁI:|%^ÁE:]) %^EWG: ; !! 1) tiettu tieđâ        
 
 !€ kulluutt^SVSH>
 !€ kullu00t0>
 
 !€ las^RCe^SVtt^CLEN^SLEN>
 !€ lassee0t00>
+!
+!"xx:x consonant shortening for consonants belonging to two different patterns"
+! * __@RULENAME@__ \\   weak grade or consonant shortening for illativ
+!Cx:0 <=> Vow: _  Cx: WeakGrade ([%^RVSH: |%^RLEN:]) ([%^SVLOW: | %^SLEN:]) %> ; !! 1) weak grade päddi : päädi tullâ:tuuláin
+!         Vow: _  Cx: Vow: (%^EA: ) %^CSH: ( %^RVSH:) %> ; !! 2) consonant shortening for illativ, päddi : páádán RLEN?
+!	where Cx in ( l n ŋ r m ) ; !
 
 
 !luččâ:luuj̣áin 
@@ -241,9 +248,9 @@ t:0 <=>  [RealVow:|%^SV:] _ t: Triggers:* %> \Vow: ; !! 3) uáivátt : uáivát
 !! * __@RULENAME@__ \\   hh:V, kk:h, pp:v, čč:J, deleting first part, k:0 in kk4:h etc  
 Cx:0 <=> Vow: _  Cy: (%^RC:) WeakGrade \%^CLEN: ; !! 1) weak grade: ruttâ:ruuđáin 
          Vow: _  Cy: Vow: (%^EA: ) %^CSH: (%^RLEN:)  %> ; !! 2) consonant shortening for illativ
-         Vow: _  Cy: Vow:+  Cns ([%^ÁI:|%^ÁE:]) %^CSH: ([%^RLEN: | %^RVSH:])  (%^SVSH:)  %> ; !! 3) consonant shortening for pááppár%^ÁI viäkk4ás%^ÁI
-	where Cx in ( h  k  p ) 
-	      Cy in ( h4 k4 p )
+         Vow: _  Cy: Vow:+  Cns ([%^ÁI:|%^ÁE:]) %^CSH: ([%^RLEN: | %^RVSH:])  (%^SVSH:)  %> ; !! 3) consonant shortening for páápp4ár%^ÁI viäkk4ás%^ÁI
+	where Cx in ( h   t  k p   ) 
+	      Cy in ( h4  t4 k4 p4 )
 		  matched ;
 
 
@@ -326,8 +333,6 @@ t:đ <=> Vow: _   k4: (%^RC:) WeakGrade ; !for ito : iđo
         Vow: _ (%^RC:) (j) WeakGrade (%^CLEN:0) ;
         Vow: _  %^RC:   j RealVow:  %^CLEN:0 ; ! Par and Ess
         Vow: _  (k4:) Vow:+ (Cns:) ([%^ÁI:|%^ÁE:]) %^EWG: ;
-        Vow:  t:  _ WeakGrade %^RLEN: ; !! 1) ruttâ ruuđâ
-        Vow: t:  _ Vow:+ (Cns:+) ([%^ÁI:|%^ÁE:]) %^EWG: ; !! 2) tiettu:tieđâ čuottâlm:čuođâlm
 
 !€ jo^RVtk4â^WG^RLEN>
 !€ joođhâ00>
@@ -377,7 +382,17 @@ k:0 <=> Vow: [l | r | v | i4: | đ ]  _ k4:h  WeakGrade (%^CLEN: ) (%^SVLOW:) ; 
 
 
 
+"t4:đ gradation for tt4" 
+!! * __@RULENAME@__ 
+t4:đ <=> t:  _ WeakGrade ; !! 1) ruttâ ruuđâ
+         t:  _ Vow:+ (Cns:+) ([%^ÁI:|%^ÁE:]) %^EWG: ; !! 2) tiettu:tieđâ čuottâlm:čuođâlm
+!€ ru^RVtt4â^WG^RLEN>
+!€ ruu0đâ00>
 
+ 
+"t:0 foran t4" 
+!! * __@RULENAME@__ 
+t:0 <=> _  t4: Vow:+  (Cns:+) ([%^ÁI:|%^ÁE:]) %^EWG: ; !! 1) tiettu tieđâ        
 
 !rejected:       
 !€ haavvâr^CSH^RVSH>ist
@@ -420,6 +435,15 @@ Cy:0 <=> :Vow (Vow:) Cx: _ Cz: (%^RC:) WeakGrade \%^CLEN:   ;
 !€ riänttus^WG>
 !€ riän0tus0>
 
+
+
+
+
+!"xx:x gradation for ^CSH illative 2" 
+! * __@RULENAME@__ \\    
+!Cx:0 <=> _  Cx Vow: %^CSH: %^RLEN: %> n ; !! 1) 2st hellá:heeḷán
+!         _  Cx Vow: (Vow:) Cns: (Cns:) %^CSH: (%^SVSH:) [%>|.#.] ; !! 2) 3st stems aarrân:aṛânân
+!      where Cx in ( r l n ŋ m )  ;
 
 !kurrâ kuuṛân
 !€ ku^RVrrâ^RLEN^CSH>n
@@ -512,15 +536,15 @@ j:i <=> Vow: _ %^RC: :Vow (%^RVSH:)  %^CLEN:         %> ; !Par Ess
 "Lengthening of half-long root consonant x:xx"
 !! * __@RULENAME@__ \\  
 %^RC:Cy <=> Vow: Cx: _ :Vow+ Sgm:* Triggers:* %^CLEN: ;
- 	where Cx in ( č g k l r s h m n đ j v ŋ  š )
- 		  Cy in ( č g k l r s h m n đ j v ŋ  š ) 
+ 	where Cx in ( l r s h m n đ j v ŋ  š )
+ 		  Cy in ( l r s h m n đ j v ŋ  š ) 
  		  matched ;
 
 "Lengthening of consonant, e.g. for Ess/Par"
 !! * __@RULENAME@__ \\   piiru piirrun niisu niissun vahe vahheen
 %^RC:Cy <=> Vow: Cx:   _ Vow (%^SV:)  Cns:* [%^CLEN: (%^SLEN:)|%^SVSH:] %> \[Vow: | s ] ; 
             Vow: Cx:   _ Vow           Cns         %^CLEN:  %> \[ i:|s]  ;
-            Vow: (i4:) Cx:   _ Vow: (i:) Cns:+    %^CLEN: (%^RLEN:)    ; !! 3) kepidem : keeppidmân
+            Vow: Cx:Cy _ Vow: Cns:+  (%^RLEN:) %^CLEN: (%^SLEN:) %>   ; !! 3) kepidem : keeppidmân
 	where Cx in ( v t h5 c p)  
 	      Cy in ( v t h  c p)   
 		  matched ;
@@ -581,40 +605,39 @@ Cx:Cy <=> Vow:  _ %^RC: :Vow+ Cns:* [Triggers: - [%^SFV:| %^FCD:]]* %^CLEN: ([%^
 
 
 "Consonant lengthening after xx:x and xy:zy weak grade with x4 on upper side"
-!! * __@RULENAME@__ \\  as previous rule, but for k4, č4, p  kukse:kuvssijn  
+!! * __@RULENAME@__ \\  as previous rule, but for k4, č4, p4  kukse:kuvssijn  
 %^RC:Cx <=> Vow:  Cy:  Cz: _ WeakGrade %^CLEN: \%^SLEN: ; 
         where Cy in (   č  p  k  h h4 h4 h4 k4 ) 
-              Cz in (  č4  p  s  c t  č  c  s ) 
-              Cx in (   j  v  s  c t  č  c  s ) 
+              Cz in (  č4 p4 s  c t  č c s ) 
+              Cx in (   j  v  s  c t  č c s ) 
         matched ;
 
 "Consonant lengthening č:čč"
-!! * __@RULENAME@__ \\  as previous rule, but for k4, č4, p  kukse:kuvssijn  
+!! * __@RULENAME@__ \\  as previous rule, but for k4, č4, p4  kukse:kuvssijn  
 %^RC:č <=> Vow:  č4:  _ Vow %^CLEN:  ; 
 
 
 
 "From extra strong to weak, part 1 cc:s, rr:r"
 !! * __@RULENAME@__ \\  
-Cy:0 <=>  [Vow: | .#. | # ] Cx:  _  Vow:+ (Cns:+) ([%^ÁI:|%^ÁE:]) (%^FCD:) %^EWG: ; !  !! poccuu:puásui  kieppu:kiepâ  cuobbuu:cuábui kiellâs
-       where Cx in ( b c č đ d g h k l m n ŋ r t p r s š v z ž) 
-             Cy in ( b c č đ d g h k l m n ŋ r t p r s š v z ž) 
+Cy:0 <=>  [Cx: | .#. | # ]  _  Vow:+ (Cns:+) ([%^ÁI:|%^ÁE:]) (%^FCD:) %^EWG: ; !  !! poccuu:puásui  kieppu:kiepâ iäbbár%^ÁI cuobbuu:cuábui kiellâs
+       where Cx in ( b c č đ d g h k l m n ŋ r t p  p  r s š v z ž) 
+             Cy in ( b c č đ d g h k l m  n ŋ r t p p4 r s š v z ž) 
         matched ;
 
-        !sku%^RVi4pper%^EWG%^RLEN
 
 
 "From extra strong to weak, part 2"
 !! * __@RULENAME@__ \\  
-Cx:Cy <=> [ Vow: |.#. | # ]  _  Cz:  Vow:+ (Cns) ([%^ÁI:|%^ÁE:]) %^EWG: ([%^RVSH:|%^RLEN:|%^SVSH:]) [%>|.#.] ; !! 1) poccuu:puásui  pááppár%^ÁI
+Cx:Cy <=>   _  Cz:  Vow:+ (Cns) ([%^ÁI:|%^ÁE:]) %^EWG: ([%^RVSH:|%^RLEN:|%^SVSH:]) [%>|.#.] ; !! 1) poccuu:puásui  páápp4ár%^ÁI
         where Cx in ( c k4 h p  h4 h4 h4 ) 
               Cy in ( s v  v v  v  v  v ) 
-              Cz in ( c s  h p t  č  c ) 
+              Cz in ( c s  h p4 t  č  c ) 
         matched ;
 
-"From extra strong to weak, p:v"
+"From extra strong to weak, p4:v"
 !! * __@RULENAME@__ \\  
-p:v <=> Vow: _ Vow: (Cns:) %^EWG: ;
+p4:v <=> Vow: _ Vow: (Cns:) %^EWG: ;
 
 !! !Other consonant rules
 
@@ -626,6 +649,7 @@ p:v <=> Vow: _ Vow: (Cns:) %^EWG: ;
 !! * __@RULENAME@__  delet t in front of -ttáá, avoid -tttáá
 Cx:0  <=>  Sgm: (Cy:) _ (%^CSH:) (%^RLEN:) %> Cy Cy ; 
            Vow: Cx _ %> m ;
+!        Vow Cy _ [â:|e:] m %^SFV: ; ! vajoidittem vajoiditmáin
 	where Cx in ( d t š) 
 	      Cy in ( d t š)
 		  matched ;
@@ -672,8 +696,10 @@ Cx:0  <=>  Sgm: (Cy:) _ (%^CSH:) (%^RLEN:) %> Cy Cy ;
 Vy:0 <=> Vx: _  Cns: [ Cns: - %^RC:0 ] Vow:  %^WG: (%^CLEN:) %^SVLOW: %> i: ; !! 1)
          Vx: _  Cns:+ Vow:  %^WG: %^RVSH: %^CLEN:  %> i:  ; !! 2) čääci : čassijn
          Vx: _  Cns:+ Vow:+ (Cns) (%^CSH:) %^RVSH: (%^SVLOW:)  %>  ; !! 3) kaamuv kammust
-		 Vx: _ [Cns:+ - č4:] Vow:+ Cns:+ (%^ÁI:) %^CSH: (%^SVSH:) [%>|.#.] ; ! pááppár : pápárân pááppár%^ÁI%^EWG%^RVSH%>id
-		 Vx: _ [Cns:+ - č4:] Vow:+ Cns:+ (%^ÁI:) %^EWG: %^RVSH: [%>|.#.] ; ! pááppár : pápárân pááppár%^ÁI%^EWG%^RVSH%>id
+!         Vx _ Cns Cns Vow: %^SV: Cns:+ Vow: Cns %^SFV: %^RLEN: (%^CLEN:) %^SLEN: %> ; !! 4) kiiško%^SVdem
+		 Vx: _ [Cns:+ - č4:] Vow:+ Cns:+ (%^ÁI:) %^CSH: (%^SVSH:) [%>|.#.] ; ! pááppár : pápárân páápp4ár%^ÁI%^EWG%^RVSH%>id
+		 Vx: _ [Cns:+ - č4:] Vow:+ Cns:+ (%^ÁI:) %^EWG: %^RVSH: [%>|.#.] ; ! pááppár : pápárân páápp4ár%^ÁI%^EWG%^RVSH%>id
+!		 Sgm: _ Vx Cns: (Cns:) (%^RC:) Vow  :Cns (%^SFV:) (%^SC:) ([%^ÁI:|%^ÁE:]) (%^CLEN:) %^RVSH: [%>|.#.] ;
        where Vx in ( a e i o u á ä y ) 
              Vy in ( a e i o u á ä y ) 
        matched ;
@@ -705,6 +731,7 @@ Vx:0 <=> Vy _ %^EE: ;
 "Root vowel lenghtening in many stems"
 !! * __@RULENAME@__ \\  lekkâ : leehá-  meecij ko%^RVppâin
 %^RV:Vx <=> Vx _ [Cns:+ - [h: h ]]  Vow: (Vow:)  (Cns:+) (Triggers: - %^RLEN:)*   %^RLEN: ; !! 1) 2st and 3st
+!            Vx _ Cns: (Cns:) Vow:+ Cns:+ Vow: Cns: %^SFV: %^RLEN:  ; !! 2) 4st 
 	where Vx in ( a e i o u y á ) ; !ä in a special rule
 		
 !€ le^RVkk4â^WG^RLEN>
@@ -715,7 +742,7 @@ Vx:0 <=> Vy _ %^EE: ;
 
 "Root vowel ä:ää lenghtening"
 !! * __@RULENAME@__ \\ special rule, for avoiding conflict spä%^RVi4lih%^EWG%^RLEN
-%^RV:ä <=> ä _ Cns:+ Vow:+ Cns:+  %^CLEN: %^RLEN: ; !! 5) vä%^RVr%^RCid
+%^RV:ä <=> ä _ Cns:+ Vow:+ Cns:+ %^RLEN: %^CLEN: ; !! 5) vä%^RVr%^RCid
           :ä _ Cns:* :i (%^SV:) Cns: (%^ÁI:) (%^FCD:) [%^EWG:|%^WG:] %^RLEN: [%>|.#.] ; !spääilih
 
 
@@ -747,10 +774,11 @@ Vx:0 <=> Vy _ %^EE: ;
 !! * __@RULENAME@__ \\  päävir 
 á:ä <=>    _ [ á:|%^RV:] Cns:* :i (%^SV:) Cns: %^ÁI: [%^EWG:|%^WG:] [%^RLEN:|%^RVSH:] [%>|.#.] ; !! 1) pááppár:päävir
         á: _   Cns:* :i (%^SV:) Cns: %^ÁI: %^EWG: %^RLEN: [%>|.#.] ;  !! 2) pááppár:päävir
+!         _ [ á:|%^RV:] Cns:+ :i         Cns  %^ÁI:  %^EWG:  %^RVSH:  %> ; !i  ; !! 3) pááppár:pävirin páápp4ár%^ÁI%^EWG%^RVSH%>id
 
 !rejected, look at this:
 
-!€ pááppár^ÁI^WG>
+!€ páápp4ár^ÁI^WG>
 !€ pää0vir00>
 
 
@@ -1012,7 +1040,7 @@ o:e <=> u:y _ Cns:+ [e ([%^WG:|%^CLEN:]) %> e|i %^CSH: %> h] ;
 
 "Second syllable vowel change á to e or i in 3syll stems"
 !! * __@RULENAME@__ \\ puttás- > putes, triggers are ^ÁE and ^ÁI já%^RVh4h4á%^SVl%^ÁI%^EWG%^RLEN%>
-Vx:Vy <=> Cns: _ (%^SV:) (Cns:)  Vz: (%^FCD:) %^EWG:   ;  !viäskár%^ÁI ča%^RVskas%^ÁE pááppár%^ÁI
+Vx:Vy <=> Cns: _ (%^SV:) (Cns:)  Vz: (%^FCD:) %^EWG:   ;  !viäskár%^ÁI ča%^RVskas%^ÁE páápp4ár%^ÁI
           Cns: _  Vz: %^EWG: ; !puáhháá poovij
           Cns: Vx: _ s  Vz: %^EWG: ; !lohhes
        where Vx in ( á    á    a   )
@@ -1034,9 +1062,9 @@ Vx:0 <=> Cns: _ Vx: (Cns:) Vz: [%^EWG:|%^CSH:] ;
 !€ nahh4aar^ÁE^WG>
 !€ na0v0er00>
 
-"Fleeting i before suffix" ! 
+"Fleeting vowel before suffix" ! 
 !! * __@RULENAME@__ \\ deletes -i- in piehâin to piehânân piehâin piäi4ppáin
-i:0 <=> Vow _ n j (%^CLEN:) (%^RLEN: ) %^SVSH: [%>|.#.] ;
+i:0 <=> Vow _ n j ([%^CSH: |%^RLEN:] ) %^SVSH: [%>|.#.] ;
 
 
 
