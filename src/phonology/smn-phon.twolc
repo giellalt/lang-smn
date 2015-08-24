@@ -541,10 +541,10 @@ j:i <=> Vow: _ %^RC: :Vow   %^CLEN:  (%^RVSH:)       %> ; !Par Ess
  		  matched ;
 
 "Lengthening of consonant, e.g. for Ess/Par"
-!! * __@RULENAME@__ \\   piiru piirrun niisu niissun vahe vahheen
+!! * __@RULENAME@__ \\   piiru piirrun niisu niissun vahe vahheen suop%^RCâinj%^CLEN%^RLEN%^SVSH
 %^RC:Cy <=> Vow: Cx:   _ Vow (%^SV:)  Cns:* [%^CLEN: (%^SLEN:)|%^SVSH:] %> \[Vow: | s ] ; 
             Vow: Cx:   _ Vow           Cns         %^CLEN:  %> \[ i:|s]  ;
-            Vow: Cx:Cy _ Vow: Cns:+   %^CLEN: (%^RLEN:) (%^SLEN:) %>   ; !! 3) kepidem : keeppidmân
+            Vow: Cx:Cy _ Vow: (i:) Cns:+   %^CLEN: (%^RLEN:) ([%^SLEN:|%^SVSH:]) %>   ; !! 3) kepidem : keeppidmân
 	where Cx in ( v t h5 c p)  
 	      Cy in ( v t h  c p)   
 		  matched ;
@@ -568,14 +568,14 @@ j:i <=> Vow: _ %^RC: :Vow   %^CLEN:  (%^RVSH:)       %> ; !Par Ess
 
 "Lengthening of root consonant x:yy 1"
 !! * __@RULENAME@__ \\  
-Cx:Cy <=> Vow:  _ %^RC: :Vow+ Cns:* [Triggers: - [%^SFV:| %^FCD:]]* %^CLEN: ([%^SVLOW: |%^SLEN:]) %> [ i:|s] ;
+Cx:Cy <=> Vow:  _ %^RC: :Vow+ Cns:* [Triggers: - [%^SFV:| %^FCD:]]* %^CLEN: (%^RVSH:) ([%^SVLOW: |%^SLEN:]) %> [ i:|s] ;
 	where Cx in ( h p c )
 		  Cy in ( v v s ) 
 		  matched ;
 
 "Lengthening of root consonant x:yy 2"
 !! * __@RULENAME@__ \\  
-%^RC:Cy <=> Vow: Cx:Cy _ :Vow+ Cns:* [Triggers: - [%^SFV:| %^FCD:]]* %^CLEN: ([%^SVLOW: |%^SLEN:]) %> [ i:|s] ;
+%^RC:Cy <=> Vow: Cx:Cy _ :Vow+ Cns:* [Triggers: - [%^SFV:| %^FCD:]]* %^CLEN:  (%^RVSH:) ([%^SVLOW: |%^SLEN:]) %> [ i:|s] ;
 	where Cx in ( h p c )
 		  Cy in ( v v s ) 
 		  matched ;
@@ -1064,7 +1064,7 @@ Vx:0 <=> Cns: _ Vx: (Cns:) Vz: [%^EWG:|%^CSH:] ;
 
 "Fleeting vowel before suffix" ! 
 !! * __@RULENAME@__ \\ deletes -i- in piehâin to piehânân piehâin piäi4ppáin
-i:0 <=> Vow _ n j ([%^CSH: |%^RLEN:] ) %^SVSH: [%>|.#.] ;
+i:0 <=> Vow _ n j (%^CLEN:) (%^RLEN:) %^SVSH: [%>|.#.] ;
 
 
 
