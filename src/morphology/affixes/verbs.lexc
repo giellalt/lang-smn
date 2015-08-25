@@ -198,7 +198,33 @@ LEXICON LEDE !!= * __@CODE@__
 
 !! !AD verbs
 
+!! !Partial paradigms
+
+LEXICON 2SYLL_AASSAD
+! AASSAD is like 2SŦLL_AD, but has
+! -a- as root vowel
++Prt+Sg3:â%^WG%^CLEN%>i K ;
++Prt+Du1:á%^WG%^CLEN%>im K ;
++Prt+Du2:á%^WG%^CLEN%>id K ;
++Prt+Du3:á%^WG%^CLEN%>in K ;
++Prt+Pl1:i%^WG%^CLEN%>m K ;
++Prt+Pl2:i%^WG%^CLEN%>d K ;
+2SYLL_AD_REST ;
+
 LEXICON 2SYLL_AD  !!= * __@CODE@__
++Prt+Sg3:â%^WG%>i K ;
++Prt+Du1:á%^WG%>im K ;
++Prt+Du2:á%^WG%>id K ;
++Prt+Du3:á%^WG%>in K ;
++Prt+Pl1:i%^WG%>m K ;
++Prt+Pl2:i%^WG%>d K ;
+2SYLL_AD_REST ;
+
+
+!! !Rest paradigms
+
+LEXICON 2SYLL_AD_REST
+
 +V:  VINFINITES_AD ;
 +V+Ind: EVEN_IND_AD ;
 +V+Pot:â EVEN_POT ;
@@ -207,7 +233,8 @@ LEXICON 2SYLL_AD  !!= * __@CODE@__
 
 
 LEXICON VINFINITES_AD
-+Inf:â%^VHIGH%^RLEN%>đ K ;
++Inf:â%^RLEN%>đ K ;
+!+Inf:â%^VHIGH%^RLEN%>đ K ;
 
 +Ind+Prs+ConNeg:â%^WG%^RLEN K ;
 +Ind+Prt+ConNeg:â%>m K ;
@@ -236,7 +263,7 @@ LEXICON VINFINITES_AD
 
 
 LEXICON EVEN_IND_AD
-+Prs+Sg1:â%^VHIGH%^WG%^RLEN%>m K ;     
++Prs+Sg1:â%^WG%^RLEN%>m K ;     
 +Prs+Sg2:â%^WG%^RLEN%>h K ;     
 +Prs+Sg3:á%^CSH K ;       
 +Prs+Du1:e%^CLEN%>en K ;  
@@ -248,29 +275,30 @@ LEXICON EVEN_IND_AD
 
 +Prt+Sg1:i%>m K ;
 +Prt+Sg2:i%>h K ;
-+Prt+Sg3:â%^WG%>i K ;
-+Prt+Du1:á%^WG%^CLEN%>im K ;
-+Prt+Du2:á%^WG%^CLEN%>id K ;
-+Prt+Du3:á%^WG%^CLEN%>in K ;
-+Prt+Pl1:i%^WG%>m K ;
-+Prt+Pl2:i%^WG%>d K ;
+! see above
 +Prt+Pl3:i%^CLEN%>i K ;
 
 LEXICON EVEN_IMPRT_AD
 +Sg1:o%^CLEN%>om K ;
-+Sg2:â%^VHIGH%^RLEN%^WG%> K ;
++Sg2:â%^RLEN%^WG%> K ;
 +Sg3:o%^WG%>s K ;
 +Du1:o%^CLEN%>on K ;
 +Du2:e%^CLEN%>e K ;
 +Du3:o%^CLEN%>os K ;
-+Pl1:u%^VHIGH%^CLEN%>p K ;
-+Pl2:â%^VHIGH%^RLEN%>o K ;
++Pl1:u%^CLEN%>p K ;
++Pl2:â%^RLEN%>o K ;
 +Pl3:o%^CLEN%>os K ;
 
+!+Sg2:â%^VHIGH%^RLEN%^WG%> K ;
+!+Sg3:o%^WG%>s K ;
+!+Du1:o%^CLEN%>on K ;
+!+Du2:e%^CLEN%>e K ;
+!+Du3:o%^CLEN%>os K ;
+!+Pl1:u%^VHIGH%^CLEN%>p K ;
+!+Pl2:â%^VHIGH%^RLEN%>o K ;
 
 
-
-
+!! !Full paradigms
 
 LEXICON 2SYLL_VIISSAD  !!= * __@CODE@__
 +V:  VINFINITES_VIISSAD ;
