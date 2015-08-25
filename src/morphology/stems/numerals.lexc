@@ -310,28 +310,35 @@ vitt:vi%^RV LOGItt ;
 kut:ku%^RV LOGItt ;
 kutt:ku%^RV LOGItt ;
 čiččâm:čičč5âm LOGIm ;
-kähci:kä%^RVh4c%^RCi LOGI ;
-ohce:o%^RVh4c%^RCe LOGI ;
+kähci:kä%^RVh4c%^RCi LOGIhc ;
+ohce:o%^RVh4c%^RCe LOGIhc ;
 
 LEXICON LOGIi
-love+Num: LOVEi ;
-lov+Num: LOVi ;
+love+Num: iLOVE ;
+lov+Num: iLOV ;
 lov ONES ;
 
+LEXICON LOGIhc
+love+Num: hcLOVE ;
+lov+Num: hcLOV ;
+lov ONES ;
+
+
 LEXICON LOGItt
-love+Num: LOVEtt ;
-lov+Num: LOVtt ;
+love+Num: ttLOVE ;
+lov+Num: ttLOV
+ ;
 lov ONES ;
 
 
 LEXICON LOGI
-love+Num: LOVE ;
+love+Num: plussLOVE ;
 lov+Num: LOV ;
 lov ONES ;
 
 LEXICON LOGIm
-love+Num: LOVEm ;
-lov+Num: LOVm ;
+love+Num: mLOVE ;
+lov+Num: mLOV ;
 lov ONES ;
 
 
@@ -349,7 +356,7 @@ kuttâ+Num:ku%^RVtt4 VITTA ;
 čiččâm+Num:čiččâm CICCAM ;
 käävci+Num:käävc%^RCi KYEHTI ;
 oovce+Num:oovc%^RCe KYEHTI ;
-love+Num: onlyLOVE ;
+love+Num: LOVE ;
 
 
 
@@ -366,7 +373,7 @@ LEXICON KYEHTI
 +Pl+Acc:%^WG%^RLEN%>id K ; !oovtâid K ;
 +Pl+Gen:%^WG%^RLEN%>i K ; !oovtâi K ;
 +Pl+Gen:%^WG%^RVSH%>i K ; !oovtâi K ;
-+Pl+Ill:%^WG%^CLEN%>id K ; !ovttáid K ;
++Pl+Ill:%^WG%^CLEN%^RVSH%>id K ; !ovttáid K ;
 +Pl+Loc:%^WG%^RLEN%>in K ; !oovtâin K ;
 +Pl+Com:%^WG%^RVSH%>iguin K ; !ovtâiguin K ;
 +Pl+Abe:%^WG%^RVSH%>ittáá K ; !ovtâittáá K ;
@@ -426,13 +433,13 @@ LEXICON CICCAM !to be checked
 +Pl+Abe:i%>ittáá K ; !ovtâittáá K ;
 
 
-LEXICON LOVi 
+LEXICON iLOV 
 +Sg+Nom:lov K ; !love kyehtlov
 +Sg+Acc:lov K ; !love kyehtlov
 +Sg+Gen:i6%^WG%>lov K ; !love K ; kyehtlov
 LOV_OBLi ;
 
-LEXICON LOVEi 
+LEXICON iLOVE 
 +Sg+Nom:love K ; !love 
 +Sg+Acc:love K ; !love
 +Sg+Gen:i6%^WG%>love K ; !love K ;
@@ -460,13 +467,11 @@ LEXICON LOV
 +Sg+Gen:%^WG%^RLEN%>lov K ; !love K ; kuulmâlov
 LOV_OBL ;
 
-LEXICON LOVE 
+LEXICON plussLOVE 
 +Sg+Nom:love K ; !love 
 +Sg+Acc:love K ; !love
 +Sg+Gen:%^WG%>love K ; !love K ;
 LOV_OBL ;
-
-
 
 LEXICON LOV_OBL 
 +Sg+Ill+Err/Orth:%^WG%>lová%>n K ; ! lován K ;
@@ -484,7 +489,37 @@ LEXICON LOV_OBL
 +Pl+Com:%^WG%>iluvi%>jguin K ; !luvijguin K ; kuovtijluvijguin
 +Pl+Abe:%^WG%>iluvi%>jttáá K ; !luvijttáá K ; kuovtijluvijttáá
 
-LEXICON LOVtt 
+
+LEXICON hcLOV 
++Sg+Nom:lov K ; !love kyehtlov
++Sg+Acc:lov K ; !love kyehtlov
++Sg+Gen:%^WG%^RLEN%>lov K ; !love K ; kuulmâlov
+hcLOV_OBL ;
+
+LEXICON hcLOVE 
++Sg+Nom:love K ; !love 
++Sg+Acc:love K ; !love
++Sg+Gen:%^WG%>love K ; !love K ;
+hcLOV_OBL ;
+
+LEXICON hcLOV_OBL 
++Sg+Ill+Err/Orth:%^WG%>lová%>n K ; ! lován K ;
++Sg+Ill:%^WG%^RLEN%>lohá%>n K ; ! kyevtlohán K ; kyevtlohán
++Sg+Loc:%^WG%^RLEN%>lovve%>est K ; ! lovveest K ; kyevtlovveest
++Sg+Abe:%^WG%>love%>ttáá K ; ! lovettáá K ; kyevtlovettáá
++Sg+Com:%^WG%^CLEN%>inluvvi%>jn K ; !   luvvijn kuovttijnluvvijn
++Ess:%>lovve%>en  K ; ! lovveen	 K ; kyehtinlovveen
++Pl+Nom:%^WG%^RLEN%>hlove%>h K ; !loveh K ; kyevtihloveh
++Pl+Acc:%^WG%^RLEN%>idluuvi%>jd K ; !luuvijd K ; kuovtijdluuvijd
++Pl+Gen:%^RLEN%>iluvi%>j K ; !luuvij K ;
++Pl+Gen:%^WG%>iluvi%>j K ; !luvij K ; kuovtijluvij
++Pl+Ill:%^WG%^SVLOW%>idluvvi%>jd K ; !luvvijd K ; kuovttijdluvvijd
++Pl+Loc:%^WG%^RLEN%>inluuvi%>jn K ; !luuvijn K ; kuovtijnluuvijn
++Pl+Com:%^WG%>iluvi%>jguin K ; !luvijguin K ; kuovtijluvijguin
++Pl+Abe:%^WG%>iluvi%>jttáá K ; !luvijttáá K ; kuovtijluvijttáá
+
+
+LEXICON ttLOV 
 +Sg+Nom:tlov K ; !vitlov
 +Sg+Nom:ttlov K ; !vittlov
 +Sg+Acc:tlov K ; !vitlov
@@ -492,7 +527,7 @@ LEXICON LOVtt
 +Sg+Gen:đâlov K ; !love kyehtlov
 LOV_OBLtt ;
 
-LEXICON LOVEtt 
+LEXICON ttLOVE 
 +Sg+Nom:tlove K ; !love 
 +Sg+Nom:ttlove K ; !love 
 +Sg+Acc:tlove K ; !love 
@@ -517,21 +552,21 @@ LEXICON LOV_OBLtt
 +Pl+Com:đâ%>iluvi%>jguin K ; !luvijguin K ; kuovtijluvijguin
 +Pl+Abe:đâ%>iluvi%>jttáá K ; !luvijttáá K ; kuovtijluvijttáá
 
-LEXICON LOVm 
+LEXICON mLOV
 +Sg+Nom:%>lov K ; !love kyehtlov
 +Sg+Acc:%>lov K ; !love kyehtlov
 +Sg+Gen:%>lov K ; !love K ; kuulmâlov
-LOV_OBLm ;
+mLOV_OBL ;
 
-LEXICON LOVEm 
+LEXICON mLOVE
 +Sg+Nom:%>love K ; !love 
 +Sg+Acc:%>love K ; !love
 +Sg+Gen:%>love K ; !love K ;
-LOV_OBLm ;
+mLOV_OBL ;
 
 
 
-LEXICON LOV_OBLm 
+LEXICON mLOV_OBL
 +Sg+Ill+Err/Orth:%>lová%>n K ; ! lován K ;
 +Sg+Ill:%>lohá%>n K ; ! kyevtlohán K ; kyevtlohán
 +Sg+Loc:%>lovve%>est K ; ! lovveest K ; kyevtlovveest
@@ -548,7 +583,7 @@ LEXICON LOV_OBLm
 +Pl+Abe:i%>iluvi%>jttáá K ; !luvijttáá K ; kuovtijluvijttáá
 
 
-LEXICON onlyLOVE 
+LEXICON LOVE 
 +Sg+Nom:love K ; !love 
 +Sg+Acc:love K ; !love
 +Sg+Gen:love K ; !love K ;
