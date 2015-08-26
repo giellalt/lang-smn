@@ -88,7 +88,6 @@ LEXICON ACCRA  !!= * __@CODE@__ SM1
 +Sg+Ill:%>n K ;	
 +Sg+Loc:%>st K ;	
 +Sg+Com:%>n K ;  
-+SgNomCmp: Rhyph ;
  :%> RProp ; 
  
 LEXICON ERVASTI  !!= * __@CODE@__ 
@@ -98,8 +97,7 @@ LEXICON ERVASTI  !!= * __@CODE@__
 +Sg+Ill:i%>i K ;	
 +Sg+Loc:i%>st K ;	
 +Sg+Com:i%>in K ; 
-+SgNomCmp: Rhyph ;  
- :%> RProp ; 
+ :i%> RProp ; 
  
 LEXICON LONDON
  +Sg+Nom: K ;   	    
@@ -108,7 +106,6 @@ LEXICON LONDON
  +Sg+Ill:%>ân K ;	
  +Sg+Loc:%>ist K ;	
  +Sg+Com:%>áin K ; 
- +SgNomCmp: Rhyph ;  
  :%> RProp ; 
 
 LEXICON C-FI-NEN
@@ -118,8 +115,7 @@ LEXICON C-FI-NEN
  +Sg+Ill:%>sin K ;		! Koskisâžân
  +Sg+Loc:%>sist K ;		! Koskisiist
  +Sg+Com:%>sin K ; 		! Koskisáin
- +SgNomCmp: Rhyph ;  
- :%> RProp ; 
+ :nen%> RProp ; 
 
 LEXICON BERN
  +Sg+Nom: K ;   	    
@@ -129,19 +125,8 @@ LEXICON BERN
  +Sg+Loc:%>ist K ;	
  +Sg+Loc:%>âst K ;	
  +Sg+Com:%>in K ;   
- +SgNomCmp: Rhyph ;
  :%> RProp ; 
  
-LEXICON ANAR 	! MLO comment: Goes to EEMEED
- +N+Prop+Sg+Nom: K ;   	    ! Aanaar
- +N+Prop+Sg+Gen: K ;   		! Aanaar
- +N+Prop+Sg+Acc: K ;		! Aanaar
- +N+Prop+Sg+Ill:%>ân K ;	! Anarân
- +N+Prop+Sg+Loc:%>ist K ;	! Anarist
- +N+Prop+Sg+Com:%>áin K ;   ! Anaráin
- +N+SgNomCmp: Rhyph ;
- :%> RProp ; 
-
  
 
 LEXICON ACCRA-LOAN-obj
@@ -271,7 +256,6 @@ LEXICON DUBAI
  +Sg+Ill:%>ian K ;	
  +Sg+Loc:%>iast K ;	
  +Sg+Com:%>iin K ;   
- +SgNomCmp: Rhyph ;
  :%> RProp ; 
 
 LEXICON DUBAI-mal
@@ -364,7 +348,6 @@ LEXICON NYSTØ
  +Sg+Ill:%>an K ;	
  +Sg+Loc:%>ast K ;	
  +Sg+Com:%>in K ;   
- +SgNomCmp: Rhyph ;
  :%> RProp ; 
 
 LEXICON PIPPI-LOAN-plc
@@ -410,6 +393,19 @@ LEXICON RONDANE-sur
 LEXICON RONDANE
 ACCRA ;
 
+LEXICON AANAAR-plc 	! MLO comment: Goes to EEMEED
+ +N+Prop+Sem/Plc: AANAAR ;
+
+ 
+LEXICON AANAAR 	! MLO comment: Goes to EEMEED
+ +Sg+Nom: K ;   	    ! Aanaar
+ +Sg+Gen: K ;   		! Aanaar
+ +Sg+Acc: K ;		! Aanaar
+ +Sg+Ill:%^RVSH%^SVSH%>ân K ;	! Anarân
+ +Sg+Loc:%^RVSH%^SVSH%>ist K ;	! Anarist
+ +Sg+Com:%^RVSH%^SVSH%>áin K ;   ! Anaráin
+ :%> RProp ; 
+
 
 LEXICON JAVRI-plc !!= __@CODE@__ jävri, jeggi
 +N+Prop+Sem/Plc: JAVRI ;
@@ -422,8 +418,6 @@ LEXICON JAVRI-mal !!= __@CODE@__
 !lexicons for smn names
 LEXICON JAVRI !!= __@CODE@__ similar to AIGI, but only Sg. Some case forms should be deleted for placenames? 
 +Sg+Nom: K ;                         !  jävri
-+SgNomCmp: Rhyph ;
- :%> RProp ; 
 +Sg+Gen:%^WG%^RLEN K ;               ! jäävri
 +Sg+Acc:%^WG%^RLEN K ;               !  jäävri
 +Sg+Ill:%^EA%^CSH%^RLEN%>n K ;       ! jáávrán
@@ -432,6 +426,7 @@ LEXICON JAVRI !!= __@CODE@__ similar to AIGI, but only Sg. Some case forms shoul
 +Sg+Abe:%^WG%^RVSH%>ttáá K ;         ! jävrittáá
 +Ess:%^CLEN%>n K ;                         !  jävrin
 +Par:%^CLEN%>d K ;                         !  jävrid
+ :%> RProp ; 
 
 
 LEXICON JAAVRIH-plc !!= __@CODE@__  JAVRI-plurals, e.g. Kähteejäävrih
@@ -439,8 +434,6 @@ LEXICON JAAVRIH-plc !!= __@CODE@__  JAVRI-plurals, e.g. Kähteejäävrih
 
 
 LEXICON JAAVRIH !!= __@CODE@__  plurals for JAVRI
-+PlNomCmp:%^WG%^RLEN%>h Rhyph ;
- :%> RProp ; 
 +Pl+Nom:%^WG%^RLEN%>h K ;            ! jäävrih
 +Pl+Gen:%^WG%^RLEN%>i K ;            ! jaavrij
 +Pl+Gen:%^WG%^RVSH%>i K ;            ! javrij
@@ -449,6 +442,7 @@ LEXICON JAAVRIH !!= __@CODE@__  plurals for JAVRI
 +Pl+Loc:%^WG%^RLEN%>in K ;           ! jaavrijn
 +Pl+Com:%^WG%^RVSH%>iguin K ;        ! javrijguin
 +Pl+Com+Err/Orth:%^WG%^RVSH%>igijn K ;        ! javrijgijn
+ :%^WG%^RLEN%>h%> RProp ;
 
 
 LEXICON VAARI-plc !!= __@CODE@__ 
@@ -472,8 +466,6 @@ LEXICON VAARI-ani !!= __@CODE@__
 
 LEXICON VAARI   !!= __@CODE@__ to SAAMI
 +Sg+Nom: K ;                 ! sääm7i,
-+SgNomCmp: Rhyph ;
- :%> RProp ; 
 +Sg+Gen:%^WG K ;          ! säämi,
 +Sg+Acc:%^WG K ;      ! säämi,
 +Sg+Ill:%^EA%>n K ;          ! sáám7án ä>á !, 
@@ -482,14 +474,13 @@ LEXICON VAARI   !!= __@CODE@__ to SAAMI
 +Sg+Abe:%^WG%^RVSH%>ttáá  K ; ! sämittáá
 +Ess:%^CLEN%>n  K ;          ! säämmin
 +Par:%^CLEN%>d K ;           ! säämmid
+ :%> RProp ; 
 
 LEXICON VAARIH-plc !!= __@CODE@__  VAARI-plurals
 +N+Prop+Sem/Plc: VAARIH ;
 
 
 LEXICON VAARIH   !!= __@CODE@__ VAARI-plurals
-+PlNomCmp: Rhyph ;
- :%> RProp ; 
 +Pl+Nom:%^WG%>h K ;          ! säämih
 +Pl+Gen:%^WG%>i K ;          ! saamij
 +Pl+Gen:%^WG%^RVSH%>i K ;    ! samij
@@ -499,6 +490,7 @@ LEXICON VAARIH   !!= __@CODE@__ VAARI-plurals
 +Pl+Com:%^WG%^RVSH%>iguin K ; ! samijguin
 +Pl+Com+Err/Orth:%^WG%^RVSH%>igijn K ; ! samijguin
 +Pl+Abe:%^WG%^RVSH%>ittáá K ; ! samijttáá
+ :%^WG%>h%> RProp ; 
 
 
 LEXICON CIELGI-plc !!= __@CODE@__ to CAACI
@@ -507,8 +499,6 @@ LEXICON CIELGI-plc !!= __@CODE@__ to CAACI
 
 LEXICON CIELGI !!= __@CODE@__ to CAACI
 +Sg+Nom: K ;               ! čääci
-+SgNomCmp: Rhyph ;
- :%> RProp ; 
 +Sg+Gen:%^WG K ;     ! čääsi
 +Sg+Acc:%^WG K ;     ! čääsi
 +Sg+Ill:%^EA%>n K ;      ! čáácán
@@ -517,6 +507,7 @@ LEXICON CIELGI !!= __@CODE@__ to CAACI
 +Sg+Abe:%^WG%^RVSH%>ttáá K ;     ! čäsittáá 
 +Ess:%^CLEN%>n K ;               ! čääccin
 +Par:%^CLEN%>d K ;               ! čääccid 
+ :%> RProp ; 
 
 
 LEXICON LUOBAL-plc !!= __@CODE@__ Similar to VEESKIR
@@ -525,8 +516,6 @@ LEXICON LUOBAL-plc !!= __@CODE@__ Similar to VEESKIR
 
 LEXICON LUOBAL !!= @CODE@ Similar to VEESKIR
 +Sg+Nom:%^EWG%^RLEN K ;	! veeskir
-+SgNomCmp: Rhyph ;
- :%> RProp ; 
 +Sg+Gen: K ;     			! viäskár máállás%^ÁI
 +Sg+Acc: K ;    			 ! viäskár
 +Sg+Ill:%>ân K ; 			! viäskárân
@@ -535,6 +524,7 @@ LEXICON LUOBAL !!= @CODE@ Similar to VEESKIR
 +Sg+Abe:%>ttáá K ; ! viäskárttáá
 +Ess:%^EWG%^RVSH%>in K ;   ! veskirin 
 +Ess:%>in K ;   ! viäskárin 
+ :%^EWG%^RLEN%> RProp ; 
 
 
 LEXICON LUOBBALEH-plc !!= __@CODE@__ Plural to LUOBAL-plc
@@ -550,6 +540,7 @@ LEXICON LUOBBALEH !!= @CODE@ plural forms
 +Pl+Com:%>ijguin K ;  ! viäskárijguin
 +Pl+Com+Err/Orth:%>ijgijn K ;  ! viäskárijguin
 +Pl+Abe:%>ijttáá K ;  ! viäskárijttáá
+ :%>eh%> RProp ; 
 
 
 LEXICON JUUHA-plc !!= __@CODE@__ similar to KIEHA
@@ -558,8 +549,6 @@ LEXICON JUUHA-plc !!= __@CODE@__ similar to KIEHA
 
 LEXICON JUUHA !!= __@CODE@__ similar to KIEHA
 +Sg+Nom: K;				 		! kiehâ
-+SgNomCmp: Rhyph ;
- :%> RProp ; 
 +Sg+Gen:%^WG K ;     				! kievâ
 +Sg+Acc:%^WG K ;     				! kievâ
 +Sg+Ill:%>n K ;					! kiehân
@@ -568,6 +557,7 @@ LEXICON JUUHA !!= __@CODE@__ similar to KIEHA
 +Sg+Com:%^WG%^CLEN%^SVLOW%>in K ; ! kievváin
 +Ess:%>n K ;						! kiehân 
 +Par:%>d K ;						! kiehâd 
+ :%> RProp ; 
 
 
 LEXICON KUOSKA-mal !!= __@CODE@__ similar to ALGA. kuoska, 
@@ -586,8 +576,6 @@ LEXICON KUOSKA-plc !!= __@CODE@__ similar to ALGA. kuoska,
 
 LEXICON KUOSKA !rlen svlow, ess:- !!= __@CODE@__ Similar to ALGA.  
 +Sg+Nom: K ;				 		! sollâ
-+SgNomCmp: Rhyph ;
- :%> RProp ; 
 +Sg+Gen:%^WG%^RLEN K ;     		! soolâ
 +Sg+Acc:%^WG%^RLEN K ;     		! soolâ
 +Sg+Ill:%^CSH%^RLEN%>n K ;		! soolân
@@ -596,6 +584,7 @@ LEXICON KUOSKA !rlen svlow, ess:- !!= __@CODE@__ Similar to ALGA.
 +Sg+Com:%^WG%^CLEN%^SVLOW%>in  K ;			! algáin
 +Ess:%>n K ;						! algân
 +Par:%>d K ;						! algâd
+ :%> RProp ; 
 
 
 LEXICON VUONA-plc !!= __@CODE@__ similar to ALGA
@@ -604,8 +593,6 @@ LEXICON VUONA-plc !!= __@CODE@__ similar to ALGA
 
 LEXICON VUONA !!= __@CODE@__ similar to ALGA
 +Sg+Nom: K;				 		!  
-+SgNomCmp: Rhyph ;
- :%> RProp ; 
 +Sg+Gen:%^WG%^RLEN K ;     		! soolâ
 +Sg+Acc:%^WG%^RLEN K ;     		! soolâ
 +Sg+Ill:%^CSH%^RLEN%>n K ;		! soolân
@@ -614,6 +601,7 @@ LEXICON VUONA !!= __@CODE@__ similar to ALGA
 +Sg+Abe:%^WG%>ttáá K ;		! solâttáá
 +Ess:%>n K ;						! algân
 +Par:%>d K ;						! algâd
+ :%> RProp ; 
 
 
 LEXICON LUOHTA-plc !!= __@CODE@__ similar to VADDU 
@@ -622,8 +610,6 @@ LEXICON LUOHTA-plc !!= __@CODE@__ similar to VADDU
 
 LEXICON LUOHTA !!= __@CODE@__ similar to VADDU
 +Sg+Nom: K ;               ! váddu 
-+SgNomCmp: Rhyph ;
- :%> RProp ; 
 +Sg+Gen:%^WG%^RLEN K ;     ! váádu
 +Sg+Acc:%^WG%^RLEN K ;     ! váádu
 +Sg+Ill:%^CSH%^RLEN%>n K ;      ! váádun
@@ -632,6 +618,7 @@ LEXICON LUOHTA !!= __@CODE@__ similar to VADDU
 +Sg+Abe:%^WG%^RVSH%>ttáá K ;     ! váduttáá 
 +Ess:%>n K ;               ! váddun
 +Par:%>d K ;               ! váddud 
+ :%> RProp ; 
 
 
 LEXICON LAADUH-plc !!= __@CODE@__ Plural to LUOHTA-plc
@@ -648,6 +635,7 @@ LEXICON LAADUH !!= __@CODE@__
 +Pl+Com:%^WG%^RVSH%>iguin K ;    ! váduiguin 
 +Pl+Com+Err/Orth:%^WG%^RVSH%>igijn K ;    ! váduiguin 
 +Pl+Abe:%^WG%^RVSH%>ittáá K ;    ! váduittáá  
+ :%^WG%^RLEN%>h%> RProp ; 
 
 
 LEXICON MOKKE-plc !!= __@CODE@__ similar to ALGE 
@@ -656,8 +644,6 @@ LEXICON MOKKE-plc !!= __@CODE@__ similar to ALGE
 
 LEXICON MOKKE !!= __@CODE@__ similar to ALGE
 +Sg+Nom: K ;						! alge
-+SgNomCmp: Rhyph ;
- :%> RProp ; 
 +Sg+Gen:%^WG K ; 					! alge
 +Sg+Acc:%^WG K ; 					! alge
 +Sg+Ill:%^EA%^CSH%^RLEN%>n K ; 	! aalgan
@@ -666,6 +652,7 @@ LEXICON MOKKE !!= __@CODE@__ similar to ALGE
 +Sg+Abe:%^WG%>ttáá K ; 		! algettáá
 +Ess:%>n K ; 			! algen
 +Par:%>d K ; 			! alged
+ :%> RProp ; 
 
 
 LEXICON UAIVAS-plc !!= __@CODE@__ similar to KUAVDAS. 
@@ -675,8 +662,6 @@ LEXICON UAIVAS-plc !!= __@CODE@__ similar to KUAVDAS.
 LEXICON UAIVAS !!= __@CODE@__   similar to KUAVDAS
 +Sg+Nom:â%^WG%^RLEN%>š K ; 		! kuávdâš piäivâš
 +Sg+Nom:%^WG%^RLEN%>š K ; 		! kuávdáš piäiváš
-+SgNomCmp: Rhyph ;
- :%> RProp ; 
 +Sg+Gen:%^SV%^SLEN%> K ; 			! kuávdáá piäiváá
 +Sg+Acc:%^SV%^SLEN%> K ;			! kuávdáá piäiváá
 +Sg+Ill:%^WG%^RVSH%>žân K ;	! kuávdážân piäiváážân
@@ -688,6 +673,7 @@ LEXICON UAIVAS !!= __@CODE@__   similar to KUAVDAS
 +Ess:%^WG%^RLEN%>žin K ;			! kuávdáážin
 +Par:%^WG%^RLEN%>žid K ; 			! kuávdáážid
 +Par:%^WG%^RVSH%>žid K ;		! kuávdážid
+ :â%^WG%^RLEN%>š%> RProp ; 
 
 
 LEXICON SUALUI-plc !!= __@CODE@__ similar to PUASUI and KUAVSUI. 
@@ -706,7 +692,6 @@ LEXICON SUALUI  !!= __@CODE@__ similar to PUASUI and KUAVSUI
 +Sg+Abe:%^SV%^SLEN%>ttáá K ;  		   		! kuoksuuttáá
 +Ess:%^EWG%^RVSH%>jin K ;     ! kuávsujin
 +Par:%^EWG%^RVSH%>jid K ;     ! kuávsujid
-+SgNomCmp: Rhyph ;
  :%> RProp ; 
 
 
@@ -723,6 +708,7 @@ LEXICON SUOLLUUH  !!= __@CODE@__ SUALUI-plc plurals
 +Pl+Com:%>iguin K ;     		! kuoksuiguin
 +Pl+Com+Err/Orth:%>igijn K ;     		! kuoksuiguin
 +Pl+Abe:%>ittáá K ;    		! kuoksuittáá
+ :%^SV%^SLEN%>h%> RProp ; 
 
 
 LEXICON ROTO-plc !!= __@CODE@__ similar to LAJO and X_LAJO 
@@ -731,7 +717,6 @@ LEXICON ROTO-plc !!= __@CODE@__ similar to LAJO and X_LAJO
 
 LEXICON ROTO  !!= __@CODE@__ similar to LAJO and X_LAJO
 +Sg+Nom: K ;  !laj̣o
-+SgNomCmp: Rhyph ;
  :%> RProp ; 
 +Sg+Gen:%^WG K ;  !lajo
 +Sg+Acc:%^WG K ;  !lajo
@@ -758,6 +743,7 @@ LEXICON KURRA  !!= __@CODE@__ similar to SOLLA
 +Sg+Ill:%^CSH%^RLEN%>n K ;		! soolân
 +Sg+Loc:%^WG%^RLEN%>st K ; 		! soolâst
 +Sg+Abe:%^WG%>ttáá K ;		! solâttáá
+ :%> RProp ; 
 
 
 LEXICON LASSA-plc !!= __@CODE@__ similar to FADDA
@@ -766,7 +752,6 @@ LEXICON LASSA-plc !!= __@CODE@__ similar to FADDA
 
 LEXICON LASSA  !!= __@CODE@__:  Similar to FADDA
 +Sg+Nom: K ;               ! kissá
-+SgNomCmp: Rhyph ;
 +Sg+Gen:%^WG%^RLEN K ;     ! fáádá, ráávsá
 +Sg+Acc:%^WG%^RLEN K ;     ! fáádá, ráávsá
 +Sg+Ill:%^CSH%^RLEN%>n K ;      ! kiisán CSH?
@@ -775,6 +760,7 @@ LEXICON LASSA  !!= __@CODE@__:  Similar to FADDA
 +Sg+Abe:%^WG%>ttáá K ;     ! kisáttáá 
 +Ess:%>n K ;               ! kissán
 +Par:%>d K ;               ! kissád
+ :%> RProp ; 
 
 
 LEXICON SUANJU-plc !!= __@CODE@__ similar to LAAVU
@@ -791,6 +777,7 @@ LEXICON SUANJU !!= __@CODE@__ similar to LAAVU
 +N+Sg+Abe:%^WG%^RVSH%>ttáá K ;     ! lávuttáá 
 +N+Ess:%^CLEN%>n K ;               ! láávvun
 +N+Par:%^CLEN%>d K ;               ! láávvud 
+ :%> RProp ; 
 
 
 LEXICON NYERI-plc !!= __@CODE@__ similar to KYELI
@@ -807,6 +794,7 @@ LEXICON NYERI  !!= __@CODE@__ similar to KYELI
 +Sg+Abe:%^WG%^RVSH%>ttáá K ;  ! kyelettáá
 +Ess:%^CLEN%>n K ;     ! kyellin
 +Par:%^CLEN%>d K ; 					! kyellid
+ :%> RProp ; 
 
 
 LEXICON POHE-plc !!= __@CODE@__ similar to VAHE
@@ -815,7 +803,6 @@ LEXICON POHE-plc !!= __@CODE@__ similar to VAHE
 
 LEXICON POHE !!= __@CODE@__ similar to VAHE
 +Sg+Nom: K ; 						! vahe
-+SgNomCmp: Rhyph ;
 +Sg+Gen:%^WG K ;					! vave
 +Sg+Acc:%^WG K ;					! vave
 +Sg+Ill:%^EA%>n K ; 				! vahan
@@ -824,6 +811,7 @@ LEXICON POHE !!= __@CODE@__ similar to VAHE
 +Sg+Abe:%^WG%>ttáá K ; 			! vavettáá
 +Ess:%^SV%^CLEN%^SLEN%>n K ; 			! vahheen
 +Par:%^SV%^CLEN%^SLEN%>d K ; 		! vahheed
+ :%> RProp ; 
 
 
 LEXICON EENNAM-plc !!= __@CODE@__ similar to EEMEED
@@ -840,6 +828,7 @@ LEXICON EENNAM  !!= __@CODE@__ similar to EEMEED
 +Sg+Abe:%>ttáá K ;		! eemeedttáá
 +Ess:%^CSH%^SVSH%>in K ;		! emedin
 +Par:%^CSH%^SVSH%>id K ;		! emedid
+ :%> RProp ; 
 
 
 LEXICON ENAMEH-plc !!= __@CODE@__ similar to EEMEED
@@ -855,6 +844,7 @@ LEXICON ENAMEH  !!= __@CODE@__  plurals for EEMEED
 +Pl+Com:%^CSH%^SVSH%>ijguin K ;	! emedijguin
 +Pl+Com+Err/Orth:%^CSH%^SVSH%>ijgijn K ;	! emedijguin
 +Pl+Abe:%^CSH%^SVSH%>ijttáá K ;	! emedijttáá
+ :%^CSH%^SVSH%>eh%> RProp ; 
 
 
 LEXICON CUAJA-plc !!= __@CODE@__ similar to TAALU2
@@ -871,6 +861,7 @@ LEXICON CUAJA !!= __@CODE@__ similar to TAALU2
 +Sg+Abe:%^WG%^RVSH%^SVLOW%>ttáá K ;     ! vuárottáá
 +Ess:%^CLEN%>n K ;               ! vuárrun
 +Par:%^CLEN%>d K ;               ! vuárrud
+ :%> RProp ; 
 
 
 LEXICON KUOLBA-plc !!= __@CODE@__ similar to POOVSA
@@ -887,6 +878,7 @@ LEXICON KUOLBA !!= __@CODE@__  similar to POOVSA
 +Sg+Abe:%>ttáá K ; 		! poksâmttáá
 +Ess:%^FCD%^WG%^RLEN%>n K ;			! poovsân
 +Par:%^FCD%^WG%^RLEN%>d K ;			! poovsâd
+ :%^FCD%^WG%^RLEN%> RProp ; 
 
 
 LEXICON KAAVA-plc !!= __@CODE@__ similar to KIELA
@@ -903,6 +895,7 @@ LEXICON KAAVA !!= __@CODE@__ similar to KIELA
 +Sg+Ill:%>n K ;					! kiehân
 +Sg+Loc:%^WG%>st K ; 				! kievâst
 +Sg+Abe:%^WG%^RVSH%>ttáá K ;		! kievâttáá
+ :%> RProp ; 
 
 
 LEXICON JAAVRAS-plc !!= __@CODE@__  
@@ -911,13 +904,13 @@ LEXICON JAAVRAS-plc !!= __@CODE@__
 
 LEXICON JAAVRAS !!= __@CODE@__  
 +Sg+Nom:%^RLEN%>š K ; 			! jáávráš
-+SgNomCmp:%^RLEN%>š  Rhyph ;
 +Sg+Gen:%^SV%^SLEN%>  K ; 	! jávráá
 +Sg+Acc:%^SV%^SLEN%>  K ; 	!  jávráá
 +Sg+Ill:%>žân K ;	!  jávrážân  ! 1 'suolluužân' found in corpus, ask ML
 +Sg+Loc:%^SV%^SLEN%>st K ; !   jávráást
 +Sg+Com:%>in K ; 	! jávráin 
 +Sg+Abe:%^SV%^SLEN%>ttáá K ; ! jávrááttáá 
+ :%^RLEN%>š%> RProp ; 
 
 
 LEXICON VUONAS-plc !!= __@CODE@__ 
@@ -926,13 +919,13 @@ LEXICON VUONAS-plc !!= __@CODE@__
 
 LEXICON VUONAS !!= __@CODE@__  
 +Sg+Nom:%^RLEN%>š K ; 			! vuonâš
-+SgNomCmp:%^RLEN%>š  Rhyph ;
 +Sg+Gen:%>  K ; 	! vuonii
 +Sg+Acc:%>  K ; 	!  vuonii
 +Sg+Ill:%>žân K ;	!  vuonâžân
 +Sg+Loc:%>st K ; !   vuoniist
 +Sg+Com:%>in K ; 	! vuonijn 
 +Sg+Abe:%>ttáá K ; ! vuoniittáá 
+ :%^RLEN%>š%> RProp ; 
 
 
 LEXICON KALDEE-plc !!= __@CODE@__  Similar to TAHHEE
@@ -941,7 +934,6 @@ LEXICON KALDEE-plc !!= __@CODE@__  Similar to TAHHEE
 
 LEXICON KALDEE !!= __@CODE@__ Similar to TAHHEE
 +Sg+Nom: K ;				! tahhee
-+SgNomCmp: R ;
 +Sg+Gen: K ;				! tahhee
 +Sg+Acc: K ;				! tahhee
 +Sg+Ill:%^EE%>i K ;		! tahhei ! stem e > 0
@@ -950,6 +942,7 @@ LEXICON KALDEE !!= __@CODE@__ Similar to TAHHEE
 +Sg+Abe:%>ttáá K ;		! tahheettáá
 +Ess:%^EE%>n	K ;			! tahhen
 +Par:%^EE%>d	K ;			! tahhed
+ :%> RProp ; 
 
 
 LEXICON TUPE-plc !!= __@CODE@__  Similar to NJUNE
@@ -967,6 +960,7 @@ LEXICON TUPE !!= __@CODE@__  Similar to NJUNE
 +Sg+Abe:%^WG%>ttáá K ;		! njunettáá
 +Ess:%^SV%^CLEN%^SLEN%>n K ;			! njunneen
 +Par:%^SV%^CLEN%^SLEN%>d K ;			! njunneed
+ :%> RProp ; 
 
 
 LEXICON VASE-plc !!= __@CODE@__  Similar to VAHE
@@ -983,6 +977,7 @@ LEXICON VASE !!= __@CODE@__
 +Sg+Abe:%^WG%>ttáá K ; 			! vavettáá
 +Ess:%^SV%^CLEN%^SLEN%>n K ; 			! vahheen
 +Par:%^SV%^CLEN%^SLEN%>d K ; 		! vahheed
+ :%> RProp ; 
 
 
 LEXICON NIJTTO-plc !!= __@CODE@__  Similar to SIJVO
@@ -991,7 +986,6 @@ LEXICON NIJTTO-plc !!= __@CODE@__  Similar to SIJVO
 
 LEXICON NIJTTO  !!= __@CODE@__
 +Sg+Nom: K ;  ! sijvo
-+SgNomCmp: R ;
 +Sg+Gen:%^WG%^RLEN K ;  ! siijvo
 +Sg+Gen:%^WG%^RVSH K ;  ! sijvo
 +Sg+Acc:%^WG%^RLEN K ;  ! siijvo
@@ -1002,6 +996,7 @@ LEXICON NIJTTO  !!= __@CODE@__
 +Sg+Abe:%^WG%^RVSH%>ttáá K ;  !sijvottáá
 +Ess:%>n    K ;  !sijvon
 +Par:%>d    K ; ! sijvod
+ :%> RProp ; 
 
 
 LEXICON AALAAS-plc !!= __@CODE@__  Similar to ALGAAS
@@ -1013,7 +1008,6 @@ LEXICON AALAAS !!= __@CODE@__
 +Ess:%>žin K ;		! algažin
 +Par:%>žid K ;		! algažid
 +Sg+Nom:%^SV%^SLEN%>š K ; 							! cissááš
-+SgNomCmp:%^SV%^SLEN%>š  R ;
 +Sg+Gen:%^SV%^SLEN%> K ; 							! cissáá
 +Sg+Acc:%^SV%^SLEN%> K ;					! cissáá
 +Sg+Ill:%^SV%^SLEN%^SVLOW%>žân K ;		! cissáážân
@@ -1022,6 +1016,7 @@ LEXICON AALAAS !!= __@CODE@__
 +Sg+Abe:%^SV%^SLEN%>ttáá K ; 				! cissááttáá
 +Ess:%^SV%^SLEN%^SVLOW%>žin K ;			! cissáážin
 +Par:%^SV%^SLEN%^SVLOW%>žid K ; 		! cissáážid
+ :%^SV%^SLEN%>š%> RProp ; 
 
 
 LEXICON SIALGAS-plc !!= __@CODE@__  Similar to KUAVDAS
@@ -1031,7 +1026,6 @@ LEXICON SIALGAS-plc !!= __@CODE@__  Similar to KUAVDAS
 LEXICON SIALGAS !!= __@CODE@__  
 +Sg+Nom:%^WG%^RLEN%>š K ; 		! kuávdáš piäiváš
 +Sg+Nom+Err/Orth:â%^WG%^RLEN%>š K ; 		! kuávdâš piäivâš
-+SgNomCmp:%^WG%^RLEN%>š  R ;
 +Sg+Gen:%^SV%^SLEN%> K ; 			! kuávdáá piäiváá
 +Sg+Acc:%^SV%^SLEN%> K ;			! kuávdáá piäiváá
 +Sg+Ill:%^WG%^RVSH%>žân K ;	! kuávdážân piäiváážân
@@ -1043,6 +1037,7 @@ LEXICON SIALGAS !!= __@CODE@__
 +Ess:%^WG%^RLEN%>žin K ;			! kuávdáážin
 +Par:%^WG%^RLEN%>žid K ; 			! kuávdáážid
 +Par:%^WG%^RVSH%>žid K ;		! kuávdážid
+ :%^WG%^RLEN%>š%> RProp ; 
 
 
 LEXICON LADDUUH-plc !!= __@CODE@__  Similar to SPALVAAS plural
@@ -1057,6 +1052,7 @@ LEXICON LADDUUH !!= __@CODE@__
 +Pl+Com:%>iguin K ; 		! spálváiguin
 +Pl+Com+Err/Orth:%>igijn K ; 		! spálváiguin
 +Pl+Abe:%>ittáá K ; 		! spálváittáá
+ :%^SV%^SLEN%>h%> RProp ; 
 
 
 LEXICON flagK
