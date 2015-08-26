@@ -171,7 +171,7 @@ Rules
 
 "x:y consonant gradation"
 !! * __@RULENAME@__ \\  WG gives x:x and x:y, when there is no consonant lengthning  
-Cx:Cy <=> Vow: _ (%^RC: )  WeakGrade ([%^RVSH:|%^RLEN:]) (%^SLEN:) (%^SVLOW:) %> ;
+Cx:Cy <=> Vow: _ (%^RC: )  WeakGrade (%^VHIGH:) ([%^RVSH:|%^RLEN:]) (%^SLEN:) (%^SVLOW:) %> ;
 	where Cx in ( h p c )   !č
           Cy in ( v v s  )   !j
 		  matched ;
@@ -766,8 +766,8 @@ Vx:0 <=> Vy _ %^EE: ;
 "Root vowel u lengtning with vowel change before suffix i"
 !! * __@RULENAME@__ \\  alge : oolgijn 
 %^RV:u <=> o:u  _  Cns:+  e:     %^WG:  %^RLEN:  %> i: ; 
-           o:u  _  Cns:+  [â|a] (%^WG:) %^RLEN:  %> [đ|m|v|p] ;    ! XXX uferdig Trond
-
+!           o:u  _  Cns:+  [â|a] (%^WG:) %^RLEN:  %> [đ|m|v|p] ;    ! XXX uferdig Trond
+           o:u  _  Cns:+  [â|a] (%^WG:|%^CSH:) (%^CLEN:)  %^VHIGH: %^RLEN: ;
 !€ lo^RVh^RCâ^RLEN>đ
 !€ luuh0â0>đ
 
@@ -814,7 +814,7 @@ a:o <=> [Cns|.#.] _       Cns:+ u2:  %> [:u|i|i2:i|Cns - j] Sgm:* %> ;
 o:u <=> [Cns|.#.] _ Cns:+ u2:  %> [:u|i|i2:i|Cns - j] Sgm:* %> ;
         [Cns|.#.] _ Cns:+ i2:i %>    [i|i2:i|Cns] Sgm:* %> ;
                   _  %^RV: Cns:+  e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> [i:|đ|m|v|p] ; !!  alge : olgijn 
-
+        [Cns|.#.] _  %^RV: Cns:+  [â|a] (%^WG:|%^CSH:) (%^CLEN:) %^VHIGH: ; ! XXX ny
 
 !€ tohhi2>đ
 !€ tuhhi>đ
