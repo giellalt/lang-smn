@@ -735,8 +735,8 @@ Vx:0 <=> Vy _ %^EE: ;
 !! * __@RULENAME@__ \\  lekkâ : leehá-  meecij ko%^RVppâin
 %^RV:Vy <=> Vx _ [Cns:+ - [h: h ]]  Vow: (Vow:)  (Cns:+) (Triggers: - %^RLEN:)*   %^RLEN: ; !! 1) 2st and 3st
 !            Vx: _ Cns: (Cns:) Vow:+ Cns:+ Vow: Cns: %^SFV: %^RLEN:  ; !! 2) 4st 
-       where Vx in (a e i o u y á A E I O U Á ) ! Ánná:Ááná
-             Vy in (a e i o u y á a e i o u á) 
+       where Vx in (a e i o y á A E I O Á ) ! Ánná:Ááná u, U in separate rule Root vowel u length
+             Vy in (a e i o y á a e i o á) 
        matched ;
 
 		
@@ -766,12 +766,14 @@ Vx:0 <=> Vy _ %^EE: ;
 "Root vowel u lengtning with vowel change before suffix i"
 !! * __@RULENAME@__ \\  alge : oolgijn 
 %^RV:u <=> o:u  _  Cns:+  e:     %^WG:  %^RLEN:  %> i: ; 
-!           o:u  _  Cns:+  [â|a] (%^WG:) %^RLEN:  %> [đ|m|v|p] ;    ! XXX uferdig Trond
-           o:u  _  Cns:+  [â|a] (%^WG:|%^CSH:) (%^CLEN:)  %^VHIGH: %^RLEN: ;
+           o:u  _  Cns:+  [â|a|i] (%^WG:|%^CSH:) (%^CLEN:)  %^VHIGH: %^RLEN: ;
+          [U|u] _ [Cns:+ - [h: h ]]  Vow: (Vow:) (Cns:+) (Triggers: - %^RLEN:)* %^RLEN: ; 
+          
 !€ lo^RVh^RCâ^RLEN>đ
 !€ luuh0â0>đ
 
-
+!€ lo^RVh^RCá^WG^VHIGH^RLEN>im
+!€ luuv0á000im
 
 
 
@@ -813,12 +815,14 @@ a:o <=> [Cns|.#.] _       Cns:+ u2:  %> [:u|i|i2:i|Cns - j] Sgm:* %> ;
 !! * __@RULENAME@__ 
 o:u <=> [Cns|.#.] _ Cns:+ u2:  %> [:u|i|i2:i|Cns - j] Sgm:* %> ;
         [Cns|.#.] _ Cns:+ i2:i %>    [i|i2:i|Cns] Sgm:* %> ;
-                  _  %^RV: Cns:+  e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> [i:|đ|m|v|p] ; !!  alge : olgijn 
-        [Cns|.#.] _  %^RV: Cns:+  [â|a] (%^WG:|%^CSH:) (%^CLEN:) %^VHIGH: ; ! XXX ny
+                  _ %^RV: Cns:+  e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> [i:|đ|m|v|p] ; !!  alge : olgijn 
+        [Cns|.#.] _ %^RV: Cns:+  [â|a|i] (%^WG:|%^CSH:) (%^CLEN:) %^VHIGH: ; ! XXX ny
 
 !€ tohhi2>đ
 !€ tuhhi>đ
 
+!€ lo^RVh^RCá^WG^VHIGH^RLEN>im
+!€ luuv0á000>im
 
 !! !First syllable diphthong rules
 
