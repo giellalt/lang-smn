@@ -203,12 +203,12 @@ LEXICON LEDE !!= * __@CODE@__
 LEXICON 2SYLL_AASSAD
 ! AASSAD is like 2SŦLL_AD, but has
 ! -a- as root vowel
-+V+Ind+Prt+Sg3:â%^WG%^CLEN%>i K ;
-+V+Ind+Prt+Du1:á%^WG%^CLEN%>im K ;
-+V+Ind+Prt+Du2:á%^WG%^CLEN%>id K ;
-+V+Ind+Prt+Du3:á%^WG%^CLEN%>in K ;
-+V+Ind+Prt+Pl1:i%^WG%^CLEN%>m K ;
-+V+Ind+Prt+Pl2:i%^WG%^CLEN%>d K ;
++V+Ind+Prt+Sg3:â%^WG%>i K ;
++V+Ind+Prt+Du1:á%^WG%>im K ;
++V+Ind+Prt+Du2:á%^WG%>id K ;
++V+Ind+Prt+Du3:á%^WG%>in K ;
++V+Ind+Prt+Pl1:i%^WG%>m K ;
++V+Ind+Prt+Pl2:i%^WG%>d K ;
 2SYLL_AD_REST ;
 
 LEXICON 2SYLL_AD  !!= * __@CODE@__
@@ -384,7 +384,7 @@ LEXICON EVEN_POT_VIISSAD !!= * __@CODE@__
 
 
 LEXICON EVEN_IMPRT_VIISSAD
-+Sg2:â%^WG%^VHIGH%^RLEN%> K ;
++Sg2:â%^WG%^RLEN%> K ;
 +Sg3:o%^WG%^RVSH%>s K ;
 +Du1:o%^CLEN%^RVSH%>on K ;
 +Du2:e%^CLEN%^RVSH%>e K ;
@@ -409,7 +409,7 @@ LEXICON VINFINITES_VUOLLAD
 
 +Ind+Prs+ConNeg:â%^WG K ;
 +Ind+Prt+ConNeg:â%>m K ;
-+Cond+ConNeg:â%^WG%>ččii K ;
++Cond+ConNeg:â%^WG%^RVSH%>ččii K ;
 +Pot+ConNeg:i%^WG%>i3 K ;
 +Imprt+Prs+ConNeg:â%^WG K ;
 
@@ -558,7 +558,7 @@ LEXICON EVEN_IMPRT_ED
 LEXICON 2SYLL_EED  !!= * __@CODE@__ yaml anneed
 +V: VINFINITES_EED ;
 +V+Ind: EVEN_IND_EED ;
-+V+Pot:e EVEN_POT ;
++V+Pot: EVEN_POT_EED ;
 +V+Cond:a%^WG%>čč EVEN_COND ; ! anneeđ a, jotteeđ á.
 +V+Imprt: EVEN_IMPRT_EED ;
 
@@ -593,8 +593,8 @@ LEXICON VINFINITES_EED
 
 LEXICON EVEN_IND_EED
 +Prs+Sg1:a%^WG%>m K ;      
-+Prs+Sg2:а5%^WG%>h K ;      
-+Prs+Sg3:a K ;             
++Prs+Sg2:а%^WG%>h K ;      
++Prs+Sg3:a%^CSH K ;             
 +Prs+Du1:e%^CLEN%>en K ;   
 +Prs+Du2:e%^CSH%>vettee K ; 
 +Prs+Du3:e%>ev K ;          
@@ -605,23 +605,34 @@ LEXICON EVEN_IND_EED
 +Prt+Sg1:i%>m K ;
 +Prt+Sg2:i%>h K ;
 +Prt+Sg3:â%^WG%>i K ;
-+Prt+Du1:á%^WG%^CLEN%>im K ;
-+Prt+Du2:á%^WG%^CLEN%>id K ;
-+Prt+Du3:á%^WG%^CLEN%>in K ;
-+Prt+Pl1:i%^WG%>m K ;
-+Prt+Pl2:i%^WG%>d K ;
++Prt+Du1:á%^WG%>ijm K ;
++Prt+Du2:á%^WG%>ijd K ;
++Prt+Du3:á%^WG%>ijn K ;
++Prt+Pl1:i%^WG%>jm K ;
++Prt+Pl2:i%^WG%>jd K ;
 +Prt+Pl3:i%^CLEN%>i K ;
 
 
+LEXICON EVEN_POT_EED !!= * __@CODE@__
++Sg1:e%^WG%^RLEN%>em K ;
++Sg2:e%^WG%^RLEN%>eh K ;
++Sg3:i%^WG%^RLEN%>š K ;
++Du1:i%^WG%^RVSH%>žeen K ;
++Du2:i%^WG%^RLEN%>švettee K ;
++Du3:i%^WG%^RVSH%>žává K ;
++Pl1:i%^WG%^RVSH%>žep K ;
++Pl2:i%^WG%^RLEN%>švetteđ K ;
++Pl3:i%^WG%^RVSH%>žeh K ;
+
+
 LEXICON EVEN_IMPRT_EED
-+Sg1:o%^CLEN%>om K ;
-+Sg2:â%^VHIGH%^RLEN%^WG%> K ;
++Sg2:%^WG%> K ;
 +Sg3:o%^WG%>s K ;
 +Du1:o%^CLEN%>on K ;
 +Du2:e%^CLEN%>e K ;
 +Du3:o%^CLEN%>os K ;
-+Pl1:u%^VHIGH%^CLEN%>p K ;
-+Pl2:â%^VHIGH%^RLEN%>o K ;
++Pl1:o%^CLEN%>op K ;
++Pl2:e%^CLEN%>eđ K ;
 +Pl3:o%^CLEN%>os K ;
 
 
