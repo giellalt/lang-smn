@@ -201,25 +201,9 @@ LEXICON VAANIS
 +A: X_PAAVIR	  ;
 
 
-LEXICON NJAALGIS
-+A+Attr: K ;    ! njaalgâ
-+A+Attr:%>is K ;    ! keppisâs
-+A+Sg+Nom:%> K ;	! keppis
-+A+Sg+Gen:%>is K ; ! keppis
-+A+Sg+Acc:%>is K ; ! keppis
-+A+Sg+Ill:%>ân K ; ! keppisân
-+A+Sg+Loc:%>ist K ; ! keppisist
-+A+Sg+Com:%>áin K ; ! keppisáin
-+A+Sg+Abe:%>ttáá K ; ! keppisttáá
-+A+Ess:%>in K ; ! keppisin
-+A+Par:%>id K ; ! keppisid
-+A+Pl+Nom:%>eh K ; ! keppiseh
-+N+Pl+Gen:%>ij K ; ! keppisij
-+N+Pl+Acc:%>ijd K ; ! keppisijd
-+N+Pl+Ill:%>áid K ; ! keppisáid
-+N+Pl+Loc:%>ijn K ; ! keppisijn
-+N+Pl+Com:%>ijguin K ; ! keppisijguin
-+N+Pl+Abe:%>ijttáá K ; ! keppisijttáá
+LEXICON NJAALGIS ! Attr. not in the lexicon
++A: X_KAARBIS ;
++A:%> COMPo ;
 
 
 LEXICON MUSTOTTEM
@@ -311,7 +295,7 @@ LEXICON A_LITTER
 
 LEXICON FISKAD
 +A+Attr:i%^WG%>s # ; ! fiskis
-+A+Attr:%>is  K ; !
++A+Attr:âd%>is  K ; !
 :âd A_LITTER ;
 
 
@@ -457,15 +441,26 @@ LEXICON eCOMP !!= * __@CODE@__
 +Comp: eCOMP-SUF ;
 +Comp+Attr:eb K ;
  
- 
 LEXICON COMP !!= * __@CODE@__
-+Comp+Sg+Nom:b K ;
-+Comp:bo X_APINA ;
-+Comp+Attr:bo K ;
++Comp:b COMP-SUF ;
++Comp+Attr: K ;
+ 
+ 
+LEXICON COMPo !!= * __@CODE@__
++Comp:b oCOMP-SUF ;
++Comp+Attr: K ;
 
 LEXICON eCOMP-SUF  !!= * __@CODE@__ 
 +Sg+Nom:eb K ;
  :b COMP-SUF ;
+
+LEXICON oCOMP-SUF  !!= * __@CODE@__ 
++Sg+Nom: K ;
++Sg+Gen: K ;
++Sg+Acc: K ;
++Sg+Loc:b%>oost K ;
++Pl+Nom:%>oh K ;
+
 
 LEXICON COMP-SUF  !!= * __@CODE@__ 
 +Sg+Nom: K ;
