@@ -12,6 +12,8 @@
 ! Other licensing options are available upon request, please contact
 ! giellatekno@hum.uit.no or feedback@divvun.no
 
+
+
 !! !!!Alphabet 
 
 Alphabet   
@@ -71,15 +73,11 @@ i6:0 !!= * @CODE@ a fake vowel, to get WG rules to function, e.g. kyehtlov (kyeh
 %^CLEN:0	!!= * @CODE@ = cons lengthening, with ^RC
 %^CSH:0     !!= * @CODE@ = cons shortening, laaŋkku - laaŋkun
 %^RVSH:0    !!= * @CODE@ = Diphtong shortening
-%^EE:0      !!= * @CODE@ = Final vowel deletion in ee stems (not in use)
+%^EE:0      !!= * @CODE@ = Final vowel deletion in ee stems
 %^FCD:0     !!= * @CODE@ = Final consonant deletion 
-%^IA:0      !!= * @CODE@ = i to á (more) (not in use)
 %^EA:0      !!= * @CODE@ = e to a/á in ill etc
-%^LLEN:0    !!= * @CODE@ = low vow lengthening (not in use)
-%^MONO:0    !!= * @CODE@ = monophtongization of diphthongs  (not in use)
 %^RLEN:0    !!= * @CODE@ = root lengthening, with ^RD
 %^SLEN:0    !!= * @CODE@ = stem vowel lengthening
-%^SFV:0     !!= * @CODE@ = Deleting fleeting vowel before suffix
 %^SVLOW:0   !!= * @CODE@ = stem vowel lowering â>á and u>o - árppu árppoin
 %^SVSH:0    !!= * @CODE@ = stem vowel shortening kappeer kaperân
 %^VLOW:0    !!= * @CODE@ = Vowel lowering in 3rd sg of contract verbs tuhhid:tohhe
@@ -87,7 +85,6 @@ i6:0 !!= * @CODE@ a fake vowel, to get WG rules to function, e.g. kyehtlov (kyeh
 %^ÁE:0      !!= * @CODE@ = á to e (more) in 3-syll
 %^ÁI:0      !!= * @CODE@ = á to i (more) in 3-syll
 %^EWG:0     !!= * @CODE@ = from extra strong to weak, e.g. pp:v
-%^EI:0      !!= * @CODE@ = e to i
 %^AO:0      !!= * @CODE@ = a to o
 %^VHIGH:0   !!= * @CODE@ = hightening of vowels for verbs o to uu, a to oo
 
@@ -95,6 +92,8 @@ i6:0 !!= * @CODE@ a fake vowel, to get WG rules to function, e.g. kyehtlov (kyeh
  
 %^ODRVSHV:0    !!= * @CODE@ =  Cns shortening in C|# and shortvow in Inf etc  (not in use)
 %^ODDC:0       !!= * @CODE@ =  shorten cns in odd-syll stems before C, #  (not in use)
+
+!SV|ÁE|ÁI  EA|SC FCD  EWG|WG|CSH  CLEN  RVSH|RLEN   SLEN|SVSH  SLOW
 
 !! !!Morpheme boundaries:
 
@@ -136,8 +135,8 @@ Sets
        %^RC %^SC   ;                         !!=  @CODE@ 
  Geminate = b d g p h t k c f z l m n ŋ r s š v  ;  !!= * @CODE@  
  Sgm = Vow Cns ;							   !!= * @CODE@ 
- NotSuffixBorder = Vow %^FCD Cns %^SFV %^EWG %^CSH %^WG %^CLEN %^SLEN %^RLEN %^SVLOW %^RVSH %^ÁE %^ÁI %^EA %^SVSH ; !!= * @CODE@ 
- Triggers =  %^SFV %^FCD %^WG %^EWG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^ÁI %^SVSH ; !!= * @CODE@ 
+ NotSuffixBorder = Vow %^FCD Cns %^EWG %^CSH %^WG %^CLEN %^SLEN %^RLEN %^SVLOW %^RVSH %^ÁE %^ÁI %^EA %^SVSH ; !!= * @CODE@ 
+ Triggers =   %^FCD %^WG %^EWG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^ÁI %^SVSH ; !!= * @CODE@ 
  StemCns = b b3 d d3 g g2 g3 h h2 h3 		   !!= * @CODE@ 
            j l m m2 m3 m8 n n8 n2 ŋ r s  ;     !!= @CODE@ 
 
@@ -152,7 +151,7 @@ Sets
 Definitions
 
 WeakGrade =  (RealVow:) :RealVow (Vow:)  (Cns:+) ([%^SV:|%^ÁI:|%^ÁE:|%^EA:]) (%^FCD:) %^WG:0     ;   
-ConsonantShorting =  (RealVow:) :RealVow (Vow:) (Cns:+) (%^RVSH:) ([%^SV:|%^ÁI:|%^ÁE:|%^EA:]) (%^FCD:) %^CSH:0 ;   
+ConsonantShorting =  (RealVow:) :RealVow (Vow:) (Cns:+) ([%^SV:|%^ÁI:|%^ÁE:|%^EA:]) (%^FCD:) %^CSH:0 ;   
 
 !! As we look at more cases, the WeakGrade definition tends to be longer. 
 !! We want to keep it short, but we want the code to work Thus, we document.
@@ -506,9 +505,6 @@ n:0 <=> n  _ j ConsonantShorting \%^CLEN: ; !! 1)
         where Cx in ( k l n p t ) ;
 
 
-!rejected:
-!€ piehâin^SFV^SC^CSH^RVSH>ist
-!€ piehâ0n0j00>ist
 
 !rejected:
 !€ kahhaan^SC^CSH^RVSH>ist
@@ -571,14 +567,14 @@ j:i <=> Vow: _ %^RC: :Vow   %^CLEN:  (%^RVSH:)       %> ; !Par Ess
 
 "Lengthening of root consonant x:yy 1"
 !! * __@RULENAME@__ \\  
-Cx:Cy <=> Vow:  _ %^RC: :Vow+ Cns:* [Triggers: - [%^SFV:| %^FCD:]]* %^CLEN: (%^RVSH:) ([%^SVLOW: |%^SLEN:]) %> [ i:|s] ;
+Cx:Cy <=> Vow:  _ %^RC: :Vow+ Cns:* [Triggers: -  %^FCD:]* %^CLEN: (%^RVSH:) ([%^SVLOW: |%^SLEN:]) %> [ i:|s] ;
 	where Cx in ( h p c )
 		  Cy in ( v v s ) 
 		  matched ;
 
 "Lengthening of root consonant x:yy 2"
 !! * __@RULENAME@__ \\  
-%^RC:Cy <=> Vow: Cx:Cy _ :Vow+ Cns:* [Triggers: - [%^SFV:| %^FCD:]]* %^CLEN:  (%^RVSH:) ([%^SVLOW: |%^SLEN:]) %> [ i:|s] ;
+%^RC:Cy <=> Vow: Cx:Cy _ :Vow+ Cns:* [Triggers: - %^FCD:]* %^CLEN:  (%^RVSH:) ([%^SVLOW: |%^SLEN:]) %> [ i:|s] ;
 	where Cx in ( h p c )
 		  Cy in ( v v s ) 
 		  matched ;
@@ -652,7 +648,6 @@ p4:v <=> Vow: _ Vow: (Cns:) %^EWG: ;
 !! * __@RULENAME@__  delet t in front of -ttáá, avoid -tttáá
 Cx:0  <=>  Sgm: (Cy:) _ (%^CSH:) (%^RLEN:) %> Cy Cy ; 
            Vow: Cx _ %> m ;
-!        Vow Cy _ [â:|e:] m %^SFV: ; ! vajoidittem vajoiditmáin
 	where Cx in ( d t š) 
 	      Cy in ( d t š)
 		  matched ;
@@ -699,10 +694,8 @@ Cx:0  <=>  Sgm: (Cy:) _ (%^CSH:) (%^RLEN:) %> Cy Cy ;
 Vy:0 <=> Vx: _  Cns:+ [ Cns: - %^RC:0 ] Vow:  %^WG: (%^CLEN:) %^SVLOW: %> i: ; !! 1)
          Vx: _  Cns:+ Vow:  %^WG: %^CLEN:  %^RVSH:  %> i:  ; !! 2) čääci : čassijn
          Vx: _  Cns:+ Vow:+ (Cns) (%^CSH:) %^RVSH: (%^SVLOW:)  %>  ; !! 3) kaamuv kammust
-!         Vx _ Cns Cns Vow: %^SV: Cns:+ Vow: Cns %^SFV: (%^CLEN:) %^RLEN:  %^SLEN: %> ; !! 4) kiiško%^SVdem
 		 Vx: _ [Cns:+ - č4:] Vow:+ Cns:+ (%^ÁI:) %^CSH: (%^SVSH:) [%>|.#.] ; ! pááppár : pápárân páápp4ár%^ÁI%^EWG%^RVSH%>id
 		 Vx: _ [Cns:+ - č4:] Vow:+ Cns:+ (%^ÁI:) %^EWG: %^RVSH: [%>|.#.] ; ! pááppár : pápárân páápp4ár%^ÁI%^EWG%^RVSH%>id
-!		 Sgm: _ Vx Cns: (Cns:) (%^RC:) Vow  :Cns (%^SFV:) (%^SC:) ([%^ÁI:|%^ÁE:]) (%^CLEN:) %^RVSH: [%>|.#.] ;
        where Vx in ( a e i o u á ä y A E I O U Á Ä ) 
              Vy in ( a e i o u á ä y a e i o u á ä ) 
        matched ;
@@ -734,7 +727,7 @@ Vx:0 <=> Vy _ %^EE: ;
 "Root vowel lenghtening in many stems"
 !! * __@RULENAME@__ \\  lekkâ : leehá-  meecij ko%^RVppâin
 %^RV:Vy <=> Vx _ [Cns:+ - [h: h ]]  Vow: (Vow:)  (Cns:+) (Triggers: - %^RLEN:)*   %^RLEN: ; !! 1) 2st and 3st
-!            Vx: _ Cns: (Cns:) Vow:+ Cns:+ Vow: Cns: %^SFV: %^RLEN:  ; !! 2) 4st 
+!            Vx: _ Cns: (Cns:) Vow:+ Cns:+ Vow: Cns:  %^RLEN:  ; !! 2) 4st 
        where Vx in (a e i o y á A E I O Á ) ! Ánná:Ááná u, U in separate rule Root vowel u length
              Vy in (a e i o y á a e i o á) 
        matched ;
@@ -1076,18 +1069,6 @@ Vx:0 <=> Cns: _ Vx: (Cns:) Vz: [%^EWG:|%^CSH:] ;
 "Fleeting vowel before suffix" ! 
 !! * __@RULENAME@__ \\ deletes -i- in piehâin to piehânân piehâin piäi4ppáin
 i:0 <=> Vow _ n j (%^CLEN:) (%^RLEN:) %^SVSH: [%>|.#.] ;
-
-
-
-
-
-!€ šoddâdem^SFV>ist
-!€ šoddâd0m0>ist
-
-"Limes vowel deletion"
-!! * __@RULENAME@__ \\ 
-Vx:0 <=> Cns: _ Cns %^SFV: ; 
-       where Vx in ( e â ) ;
 
 
  
