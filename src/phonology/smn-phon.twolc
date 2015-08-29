@@ -73,7 +73,7 @@ i6:0 !!= * @CODE@ a fake vowel, to get WG rules to function, e.g. kyehtlov (kyeh
 %^CLEN:0	!!= * @CODE@ = cons lengthening, with ^RC
 %^CSH:0     !!= * @CODE@ = cons shortening, laaŋkku - laaŋkun
 %^RVSH:0    !!= * @CODE@ = Diphtong shortening
-%^EE:0      !!= * @CODE@ = Final vowel deletion in ee stems
+%^EE:0      !!= * @CODE@ = Final vowel deletion in ee, oo, uu, áá stems
 %^FCD:0     !!= * @CODE@ = Final consonant deletion 
 %^EA:0      !!= * @CODE@ = e to a/á in ill etc
 %^RLEN:0    !!= * @CODE@ = root lengthening, with ^RD
@@ -707,10 +707,8 @@ e:0  <=> e _  j: %^RC: Vow:  %^CLEN:  %^RVSH:  %>  ; !!
 
 "Stem vowel shortening in front of ^EE"
 !! * __@RULENAME@__ \\ 
-Vx:0 <=> Vy _ %^EE: ;
-       where Vx in ( e o u ) 
-             Vy in ( e o u ) 
-       matched ;
+Vx:0 <=> Vx _ %^EE: ;
+       where Vx in ( e o u á i a)  ;
 
 
 
