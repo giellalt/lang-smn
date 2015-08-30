@@ -1,4 +1,6 @@
 
+
+
 !!!Alphabet 
 
 
@@ -56,15 +58,11 @@ Literal quotes and angles must be escaped (cf morpheme boundaries further down):
  * %^CLEN:0	 = cons lengthening, with ^RC
  * %^CSH:0      = cons shortening, laaŋkku - laaŋkun
  * %^RVSH:0     = Diphtong shortening
- * %^EE:0       = Final vowel deletion in ee stems (not in use)
+ * %^EE:0       = Final vowel deletion in ee, oo, uu, áá stems
  * %^FCD:0      = Final consonant deletion 
- * %^IA:0       = i to á (more) (not in use)
  * %^EA:0       = e to a/á in ill etc
- * %^LLEN:0     = low vow lengthening (not in use)
- * %^MONO:0     = monophtongization of diphthongs  (not in use)
  * %^RLEN:0     = root lengthening, with ^RD
  * %^SLEN:0     = stem vowel lengthening
- * %^SFV:0      = Deleting fleeting vowel before suffix
  * %^SVLOW:0    = stem vowel lowering â>á and u>o - árppu árppoin
  * %^SVSH:0     = stem vowel shortening kappeer kaperân
  * %^VLOW:0     = Vowel lowering in 3rd sg of contract verbs tuhhid:tohhe
@@ -72,7 +70,6 @@ Literal quotes and angles must be escaped (cf morpheme boundaries further down):
  * %^ÁE:0       = á to e (more) in 3-syll
  * %^ÁI:0       = á to i (more) in 3-syll
  * %^EWG:0      = from extra strong to weak, e.g. pp:v
- * %^EI:0       = e to i
  * %^AO:0       = a to o
  * %^VHIGH:0    = hightening of vowels for verbs o to uu, a to oo
 
@@ -80,6 +77,7 @@ Literal quotes and angles must be escaped (cf morpheme boundaries further down):
 
  * %^ODRVSHV:0     =  Cns shortening in C|# and shortvow in Inf etc  (not in use)
  * %^ODDC:0        =  shorten cns in odd-syll stems before C, #  (not in use)
+
 
 !!Morpheme boundaries:
 
@@ -119,8 +117,8 @@ Sets
          %^RC %^SC   ;                          
  *  Geminate = b d g p h t k c f z l m n ŋ r s š v  ;    
  *  Sgm = Vow Cns ;							    
- *  NotSuffixBorder = Vow %^FCD Cns %^SFV %^EWG %^CSH %^WG %^CLEN %^SLEN %^RLEN %^SVLOW %^RVSH %^ÁE %^ÁI %^EA %^SVSH ;  
- *  Triggers =  %^SFV %^FCD %^WG %^EWG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^ÁI %^SVSH ;  
+ *  NotSuffixBorder = Vow %^FCD Cns %^EWG %^CSH %^WG %^CLEN %^SLEN %^RLEN %^SVLOW %^RVSH %^ÁE %^ÁI %^EA %^SVSH ;  
+ *  Triggers =   %^FCD %^WG %^EWG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^ÁI %^SVSH ;  
  *  StemCns = b b3 d d3 g g2 g3 h h2 h3 		    
             j l m m2 m3 m8 n n8 n2 ŋ r s  ;      
 
@@ -392,7 +390,6 @@ poccuu:puásui  kieppu:kiepâ iäbbár%^ÁI cuobbuu:cuábui kiellâs
 1)
 2) čääci : čassijn
 3) kaamuv kammust
-4) kiiško%^SVdem
 
 * __Vowel shortening eej to eij__ \\  leeji : leijijn  
  
@@ -457,6 +454,8 @@ poccuu:puásui  kieppu:kiepâ iäbbár%^ÁI cuobbuu:cuábui kiellâs
 
 
 
+!ä rules
+
 * __Monophthongisation rule iä:ee 1__ \\  
 1)viäskár veeskir iäbbár eebir 
 
@@ -468,12 +467,24 @@ poccuu:puásui  kieppu:kiepâ iäbbár%^ÁI cuobbuu:cuábui kiellâs
 
 
 
-
-
-* __Monophthongisation rule ä:a__ \\  čääci:čassijn, läbži:labžijn 
+* __Different rules for ä:a, first vowel (or only vowel)__ \\  čääci:čassijn, läbži:labžijn 
 čääci : čassijn
 
 
+* __ää to aa, second vowel__ \\  á:o in pairs like kuátij -> koođij, säämi -> saamij  
+
+
+
+* __ää to áá in Illative and Sg3__ \\  ... for säämi > sáámán
+
+
+* __ää to áá in Illative and Sg3__ \\  ... for säämi > sáámán
+
+
+* __äRV to áá in Illative and Sg3__ \\  ... for täsni -> táásnán
+
+
+* __Vowel lengthening äRV to aa __ \\  äigi aaigijd
 
 
 
@@ -481,13 +492,18 @@ poccuu:puásui  kieppu:kiepâ iäbbár%^ÁI cuobbuu:cuábui kiellâs
 
 
 
+
+
+
+
+
+!á and uá rules
 
 * __Monophthongisation rule uá:o0 part 2: Vowel shortening for uá __ \\  for uábbi -> obbijn  čuál%^RCi%^WG%>in
 
 * __Monophthongisation rule u:o and root vowel change u:o, special rule for olmooš and contract verbs__ \\  ulmu : olmooš. Waiting for more lemmas. u%^RVlmu%^SV%^WG%^SLEN%^SVLOW%>š
 
 
-* __ää to aa, second vowel__ \\  á:o in pairs like kuátij -> koođij, säämi -> saamij  
 
 * __Diphthong rule uá to uo__ \\  
 
@@ -528,13 +544,6 @@ poccuu:puásui  kieppu:kiepâ iäbbár%^ÁI cuobbuu:cuábui kiellâs
 * __ie to iä in Illative and Sg3__ \\  ... with ^ILL as trigger; kiem´ni -> kiämnán, veerdi : viärdán
 
 
-* __ää to áá in Illative and Sg3__ \\  ... for säämi > sáámán
-
-
-* __äRV to áá in Illative and Sg3__ \\  ... for täsni -> táásnán
-
-
-* __Vowel lengthening äRV to aa __ \\  äigi aaigijd
 
 
 * __ye to uá og uo, part 1 __ \\  Part 1 of ye to uá for kyeli : kuálán 
@@ -561,13 +570,6 @@ poccuu:puásui  kieppu:kiepâ iäbbár%^ÁI cuobbuu:cuábui kiellâs
 
 
 
-
-
-
-* __Limes vowel deletion__ \\ 
-
-
-
 * __Stem vowel e to a for a root vowel.__ \\  alge to aalgan
 
 
@@ -581,7 +583,7 @@ poccuu:puásui  kieppu:kiepâ iäbbár%^ÁI cuobbuu:cuábui kiellâs
 * __Stem vowel á to a for a root vowel__ \\  trying this as a phonological rule for -eđ verbs
 
 
-* __Stem vowel â to a in Pl Nom -h__ \\  silbâ to siilbah
+* __Stem vowel â to a in Pl Nom -h__ \\  silbâ to siilbah  %^WG%^RLEN%>hlove%>h
 
 
 
