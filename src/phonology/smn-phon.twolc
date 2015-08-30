@@ -87,6 +87,7 @@ i6:0 !!= * @CODE@ a fake vowel, to get WG rules to function, e.g. kyehtlov (kyeh
 %^EWG:0     !!= * @CODE@ = from extra strong to weak, e.g. pp:v
 %^AO:0      !!= * @CODE@ = a to o
 %^VHIGH:0   !!= * @CODE@ = hightening of vowels for verbs o to uu, a to oo
+%^VBACK:0   !!= * @CODE@ = back vowels for verbs, ä to a (when needed, normally 2syll a|â is enough
 
 
  
@@ -852,20 +853,20 @@ i:0 <=> [.#.|Cns] _ ä: Cns:+ i2:i %>    [i|i2:i|Cns] Sgm:* %> ;
 ä:a <=>      _ [ä:|%^RV:] Cns:+ i    %^WG: ([%^RVSH:|%^RLEN:]) %> i: ;
              _ [ä:|%^RV:] Cns:+ i    %^WG:  [%^CLEN:|%^RLEN: ]  (%^SVLOW:) %> i: ; !čääci:čassijn
              _     %^RV:  Cns:+ i    %^WG:   %^RLEN:           %> i: ; !ä%^RVi4gi%^WG%^RLEN%>id
-             _ ä:0        Cns:+ Vow: %^WG:   %^CLEN:  %^RVSH:  %> i:  ; !! čääci : čassijn
+             _ ä:         Cns:+ Vow: %^WG:   %^CLEN:  %^RVSH:  %> i:  ; !! čääci : čassijn
              _ ä:a        Cns:+ i2:i                           %> [i|i2:i|Cns] Sgm:* %> ;
    [.#.|Cns] _            Cns:+ i2:i                           %> [i|i2:i|Cns] Sgm:* %> ;
-   [.#.|Cns] _ ä:a       Cns:+ [a|â] (%^EA:) (%^WG:|%^CSH:)  %>        ; ! to be written
+   [.#.|Cns] _ ä:         Cns:+ [a|â|i %^VBACK:] (%^EA:) (%^WG:|%^CSH:)   %>        ; ! to be written
    
 
 "ää to aa, second vowel"
 !! * __@RULENAME@__ \\  á:o in pairs like kuátij -> koođij, säämi -> saamij  
 ä:a   <=> ä:  _ Cns:+ i                %^WG:                  %> i: ;
-          ä:a _ Cns:+ i                %^WG: %^RLEN:          %> i: ;
-          ä:a _ Cns:+ :i   Cns: %^ÁI: [%^WG:|%^EWG:] %^RLEN: [%>|.#.] ; !viäskár:veeskir  viäskár%^ÁI%^EWG%^RLEN
+          ä:  _ Cns:+ i                %^WG: %^RLEN:          %> i: ;
+          ä:  _ Cns:+ :i   Cns: %^ÁI: [%^WG:|%^EWG:] %^RLEN: [%>|.#.] ; !viäskár:veeskir  viäskár%^ÁI%^EWG%^RLEN
           ä:  _ Cns:+ Vow:      %^ÁI:  %^EWG:                [%>|.#.] ; !puáhháá poovij
           ä:  _ Cns:+ i2:i                                    %> [i|i2:i|Cns] Sgm:* %> ;
-          ä:a _ Cns:+ [a|â]  (%^EA:) (%^WG:|%^CSH:)   %>        ; ! to be written
+          ä:  _ Cns:+ [a|â|i %^VBACK:]  (%^EA:) (%^WG:|%^CSH:)   %>        ; ! to be written
 
 !conflict Vz  _ Cns:+ [:i|:e] Cns: [%^ÁI:|%^ÁE:] [%^WG:|%^EWG:] ([%^RVSH:|%^RLEN:]) [%>|.#.]  ; !riäggás%^ÁI%^WG%^RVSH>in 
 
@@ -931,7 +932,7 @@ i:0 <=> [.#.|Cns] _ ä: Cns:+ i2:i %>    [i|i2:i|Cns] Sgm:* %> ;
         u: _ Cns:+ i %^WG: %^RVSH: %> i:  ;
         u: _ Cns:+ u %^RVSH: %>  ; ! uáinu
         u: _ Cns:+ i2:i %> [i|i2:i|Cns] Sgm:* %> ; 
-        u: _ Cns:+ u2:  %> [:u|i|i2:i|Cns - j] Sgm:* %> ; 
+        u: _ Cns:+ u2:  %> [:u|i|i2:i|Cns - j] Sgm:* %> ; !*
 
 "Monophthongisation rule u:o and root vowel change u:o, special rule for olmooš and contract verbs"
 !! * __@RULENAME@__ \\  ulmu : olmooš. Waiting for more lemmas. u%^RVlmu%^SV%^WG%^SLEN%^SVLOW%>š
@@ -950,8 +951,8 @@ u:o <=>  [.#.|#] _     Cns:+ u:o %^SV: %^WG: %^SLEN:  %^SVLOW: [%>|.#.]  ; !%^SV
 
 "Diphthong rule uá to uo"
 !! * __@RULENAME@__ \\  
-á:o <=> u    _ Cns:+ u2:u %> [i|:u|Cns - j] Sgm:* %> ;
-        u5:  _ Cns:+ u2:u %> [i|:u|Cns - j] Sgm:* %> ;
+á:o <=> u5:  _ Cns:+ u2:u %> [i|:u|Cns - j] Sgm:* %> ; !uá to uo
+!       u    _ Cns:+ u2:u %> [i|:u|Cns - j] Sgm:* %> ; ! needed?
         u:   _ Cns:+ i %^WG:   %> i: ;
         u:o  _ Cns:+ i %^WG: %^RLEN:  %> i: ;
         u:o  _ Cns:+ :i Cns: %^ÁI: [%^WG:|%^EWG:] %^RLEN: [%>|.#.] ; !viäskár:veeskir  viäskár%^ÁI%^EWG%^RLEN
