@@ -24,17 +24,17 @@ POS=nouns
 ### in ###
 source_file=${srcdir}/../../../src/morphology/stems/${POS}.lexc
 generator_file=./../../../src/generator-gt-norm
-analyser_file=./../../../src/analyser-gt-norm
+# analyser_file=./../../../src/analyser-gt-norm # XXX as adj
 
 ### out ###
 lemmas=./filtered-${POS}
 comp_lemmas=./filtered-comp-${POS}
 hycomp_lemmas=./filtered-hycomp-${POS}
-all_lemmas=./all-${POS}
+# all_lemmas=./all-${POS} # XXX as adj
 generated_lemmas=./generated-${POS}
 result_file=missing_${POS}_lemmas
 gen_result_file=generated_missing_${POS}_lemmas
-ana_result_file=analysed_missing_${POS}_lemmas
+# ana_result_file=analysed_missing_${POS}_lemmas # XXX as adj
 
 # SKIP if source file does not exist:
 if [ ! -f $source_file ]; then
