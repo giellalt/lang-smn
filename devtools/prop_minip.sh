@@ -4,8 +4,8 @@
 # command:
 # sh generate_contlex_para.sh PATTERN
 # example, when you are in smn:
-# sh devtools/prop_minip.sh VUONA | dsmnNorm | see
-# sh devtools/prop_minip.sh Hirškikkâ | dsmnNorm | see
+# sh devtools/prop_minip.sh VUONA | dsmnNorm | less
+# sh devtools/prop_minip.sh Hirškikkâ | dsmnNorm 
 
 
 PATTERN=$1
