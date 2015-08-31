@@ -42,6 +42,7 @@ LEXICON ANOLAS
 +A:%> COMP ;
 +A:%>u MOS ; ! tehálumos
 +A:âš ADJ_DER ;
++A+SgNomCmp:âš R ;
 
 
 LEXICON SUOTAS  !!= __@CODE@__ ! see also KOOIDAS, diff in attr; inflection is the same than in SUOTAS
@@ -50,10 +51,12 @@ LEXICON SUOTAS  !!= __@CODE@__ ! see also KOOIDAS, diff in attr; inflection is t
 +A:%^RVSH%>u COMP ;
 +A:%^RVSH%>u MOS ; ! 
 +A: ADJ_DER ;
++A+SgNomCmp:%^EWG%^RLEN R ;
 
 LEXICON A_CISSAAS  !!= __@CODE@__ 
 +A+Attr:  K ; !placeholder
 +A: X_CISSAAS ;
++A+SgNomCmp:%^SV%^SLEN%>š  R ;
 
 
 LEXICON MUOTTII
@@ -90,11 +93,13 @@ LEXICON ALKKEE_COMMON
 +A: X_TAHHEE ;
 +A:%^SVSH%> COMPe ; ! assab
 +A:%> MUS ; ! váiváámus hoppuumus
++A+SgNomCmp:  R ;
 
 
 LEXICON KEPPIS	
 +A+Attr:%^FCDâ%> K ;    ! keppâ
  A_LITTER ;
++A+SgNomCmp:  R ;
 
 
 !forms here for reference
@@ -120,12 +125,14 @@ LEXICON KEPPIS
 LEXICON A_INDECL
 +A+Attr: K ;    ! kulhijdum
 +A+Sg+Nom: K ;  ! kulhijdum
++A+SgNomCmp:  R ;
 
 LEXICON KOSKES
 +A+Attr:%^FCD%^EWG K ;     !attr. koške
 +A: X_VEESKIR ;
 +A:%>u COMP ; !
 +A:%>u MOS ;
++A+SgNomCmp:%^EWG%^RLEN R ;
 
 LEXICON KOOIDAS
 +A+Attr:%^FCDâ%^RVSH K ;     !attr. koidâ
@@ -133,6 +140,7 @@ LEXICON KOOIDAS
 +A:%>u COMP ; !uđđâsub lieggâsub korrâsub
 +A:%>u MOS ;
 +A: ADJ_DER ;
++A+SgNomCmp:%^EWG%^RLEN R ;
 
 LEXICON UCES
 +A+Attr:â K ;     !attr. uccâ
@@ -140,6 +148,7 @@ LEXICON UCES
 +A:s%> COMP ;
 +A:%> MUS ;
 +A:s ADJ_DER ;
++A+SgNomCmp:â R ;
 
 
 
@@ -162,6 +171,7 @@ LEXICON KUBDUV ! doesn't fit with KAAMUV because of kubduvân, kubduvist
 +A+Pl+Com:%>ijguin K ;     ! kubduvijguin
 +A+Pl+Com+Err/Orth:%>ijgijn K ;     ! 
 +A+Pl+Abe:%>ijttáá K ;     ! kubduvijttáá
++A+SgNomCmp: R ;
 
 
 LEXICON LAGAN
@@ -171,57 +181,63 @@ LEXICON NJUORAS
 +A+Attr:%^EWG K ; !njuorâs
 +A: X_RUONAS ;
 +A: ADJ_DER ;
++A+SgNomCmp:%^EWG%^RLEN R ;
 
 
 LEXICON HAANIS
 +A+Attr:%^EWG%^RVSH%> K ; ! hänis
 +A: X_PAAVIR	  ;
++A+SgNomCmp:%^EWG%^RLEN R ;
 
 LEXICON VAANIS
 +A+Attr:%^FCD%^EWG%^RVSH K ; ! väni
 +A: X_PAAVIR	  ;
++A+SgNomCmp:%^EWG%^RLEN R ;
 
 
 LEXICON NJAALGIS ! Attr. not in the lexicon
 +A:s X_KAARBIS ;
 +A:%> COMPo ;
++A+SgNomCmp:%^EWG%^RLEN R ;
 
 
 LEXICON MUSTOTTEM
-+A+Attr:s # ;
-+A+Attr:mes # ;
-+A+Sg+Nom:m # ;
++A+Attr:s K;
++A+Attr:mes K ;
++A+Sg+Nom:m K ;
++A+SgNomCmp:m R ;
 
-LEXICON ASITTEM
-+A+Attr: # ;
-+A+Sg+Nom: # ;
 
 LEXICON OLMOOSMETTUM
-+A+Attr: # ;
-+A+Sg+Nom: # ;
++A+Attr: K ;
++A+Sg+Nom: K ;
++A+SgNomCmp: R ;
 
 
 ! upper:lower contlex "koriste" ; ! kommentára
 
 LEXICON PUIGA
-+A+Attr: # ; ! pu´igâ
-+A+Sg+Nom: # ;
++A+Attr: K ; ! pu´igâ
++A+Sg+Nom: K ;
 +A:%> COMP ;
 +A:%> MUS ;
++A+SgNomCmp: R ;
 
 
 LEXICON AARRAD
-+A+Attr: # ; ! arâdis
-+A+Sg+Nom: # ;
- 
++A+Attr: K ; ! arâdis
++A+Sg+Nom: K ;
++A+SgNomCmp: R ;
+
 LEXICON HIAJU
-+A+Attr:s # ; ! hiäjus
++A+Attr:s K ; ! hiäjus
 +A: X_VUAGGU ;
 +A:%> COMP ;
 +A:%> MUS ;
++A+SgNomCmp: R ;
 
  
-LEXICON MUCCAD 
+LEXICON MUCCAD !not in use 
 !! Adj - muččâd: # attr. mu´čis
 +A+Attr:i%^WG%>s # ; ! mučis
 :âd A_LITTER ;
@@ -233,12 +249,14 @@ LEXICON CEPPI
 +A: X_AIGI ;
 +A:%^WG%> COMPe ;
 +A:%^WG%> MUS ;
++A+SgNomCmp: R ;
 
 LEXICON HUMO
 +A+Attr:%^WG%>s K ;
 +A: X_NJUNE ;
 +A:%> COMPe ;
 +A:%> MUS ;
++A+SgNomCmp: R ;
 
 
 LEXICON A_VUALAAS !!= __@CODE@__ 
@@ -259,6 +277,7 @@ LEXICON A_VUALAAS !!= __@CODE@__
 +A+Pl+Com:%>iguin K ; 						! cissáiguin
 +A+Pl+Com+Err/Orth:%>igijn K ; 						! cissáiguin
 +A+Pl+Abe:%>ittáá K ; 						! cissáittáá
++A+SgNomCmp:%^SV%^SLEN%>š R ;
 
 
 ! Fix for adjectives moved from the noun lexicon
@@ -267,6 +286,7 @@ LEXICON PASTIL
 +A+Attr:%>is  K ; !
 A_LITTER ;
 +A: ADJ_DER ;
++A+SgNomCmp: R ;
 
 LEXICON A_LITTER
 +A: ODD_SUFF_LONGSTEM ;
@@ -279,16 +299,19 @@ LEXICON FISKAD
 +A+Attr:i%^WG%>s # ; ! fiskis
 +A+Attr:âd%>is  K ; !
 :âd A_LITTER ;
++A+SgNomCmp:i%^WG%>s R ;
 
 
 LEXICON A_EEHID
 +A+Attr:  K ; !placeholder
 +A: X_EEHID	  ;
++A+SgNomCmp: R ;
 
 LEXICON A_EEMEED
 +A+Attr:  K ; !placeholder
 +A: X_EEMEED ;
 +A: ADJ_DER ;
++A+SgNomCmp: R ;
 
 LEXICON A_KOLME !!= @CODE@ ad hoc three syllable stem > LITTER
 +A+Attr:  K ; !placeholder
@@ -299,38 +322,36 @@ LEXICON HAAITIS
 +A: X_PAAVIR	  ;
 +A:%>u COMP ;
 +A:%>u MOS ;
++A+SgNomCmp:%^EWG%^RLEN R ;
 
 
 LEXICON STYERES
 +A+Attr:%^FCDâ  K ; ! stuorrâ
-+A+SgNomCmp:%^FCDâ R ;
 +A:%^FCD%^SLEN%> COMPe ;
 +A+Err/Orth:%^FCD%> COMPe ;
 +A:%^FCD%^SLEN%> MUS ;
 +A+Err/Orth:%^FCD%> MUS ;
 +A: X_VEESKIR ; !correct cont.lex ?
++A+SgNomCmp:%^FCDâ R ;
 
 LEXICON A_KUNAGAS
 +A+Attr:  K ; !placeholder
 +A:s X_KUNAGAS	  ;
-
++A+SgNomCmp: R ;
 
 LEXICON ALMOS
 +A+Attr:  K ; !placeholder
 +A: X_SAJOS	  ;
++A+SgNomCmp:%^EWG%^SVSH  R ;
 
 LEXICON A_APINA
 +A+Attr:  K ; !placeholder
 +A: X_APINA	  ;
-
++A+SgNomCmp: R ;
 
 LEXICON LAAMI
 +A+Attr:  K ; !lämis
 +A: X_SAAMI	  ;
-
-LEXICON A_TAHHEE
-+A+Attr:  K ; !placeholder
-+A: X_TAHHEE	  ;
 
 LEXICON PYERI
 +A+Attr:  K ; 
