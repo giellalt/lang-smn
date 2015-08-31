@@ -1051,6 +1051,7 @@ LEXICON X_STEVILEH  !!= __@CODE@__  plurals for EEMEED
 
 LEXICON LITTER !!= __@CODE@__ MO Ib 2nd syll vowel does not alternate
  +N: X_LITTER ; 
+ +N+SgNomCmp: R ;
 
 LEXICON X_LITTER !!= __@CODE@__ 
  ODD_SUFF_LONGSTEM ; 
@@ -1323,6 +1324,7 @@ LEXICON VEESKIR !!= @CODE@
 
 LEXICON PIIVTAS !!= __@CODE@__ WG NEP,  blank for the rest
 +N: X_VEESKIR ;
++N+SgNomCmp:%^EWG%^RLEN R ;
 
 
 LEXICON X_VEESKIR !!= @CODE@ 
@@ -1431,6 +1433,7 @@ LEXICON X_RUONAS !!= __@CODE@__ WG NEP,  blank for the rest
 
 LEXICON KUALUS !!= __@CODE@__  like RUONAS, except for Sg+Nom gets only WG instead of EWG
 +N+Sg+Nom:%^WG%^RLEN K ;	! kuálus 
++N+SgNomCmp:%^WG%^RLEN R ;
 +N+Sg+Gen: K ;     			! kuállus
 +N+Sg+Acc: K ;    			 ! kuállus
 +N+Sg+Ill:%>ân K ; 			! kuállusân
@@ -1447,28 +1450,6 @@ LEXICON KUALUS !!= __@CODE@__  like RUONAS, except for Sg+Nom gets only WG inste
 +N+Pl+Com:%>ijguin K ;  ! kuállusijguin
 +N+Pl+Com+Err/Orth:%>ijgijn K ;  ! kuállusijguin
 +N+Pl+Abe:%>ijttáá K ;  ! kuállusijttáá
-
-
-
-!LEXICON X_PIIVTAS !!= __@CODE@__ WG NEP,  blank for the rest
-!+Sg+Nom:%^EWG%^RLEN K ;	! piivtâs OBS: piätus piättus 
-!+SgNomCmp:%^EWG%^RLEN R ;
-!+Sg+Gen: K ;     			! pihtâs ! This is the stem
-!+Sg+Acc: K ;    			 ! pihtâs
-!+Sg+Ill:%>ân K ; 			! pihtâsân
-!+Sg+Loc:%>ist K ; ! pihtâsist
-!+Sg+Com:%>áin K ; ! pihtâsáin
-!+Sg+Abe:%>ttáá K ; ! pihtâsttáá
-!+Ess:%^WG%>in K ;   ! pivtâsin 
-!+Par:%^WG%>id K ;	! pivtâsid
-!+Pl+Nom:%>eh K ;  ! pihtâseh
-!+Pl+Gen:%>ij K ;  ! pihtâsij
-!+Pl+Acc:%>ijd K ; ! pihtâsijd
-!+Pl+Ill:%>áid K ; ! pihtâsáid
-!+Pl+Loc:%>ijn K ; ! pihtâsijn
-!+Pl+Com:%>ijguin K ;  ! pihtâsijguin
-!+Pl+Com+Err/Orth:%>ijgijn K ;  ! pihtâsijguin
-!+Pl+Abe:%>ijttáá K ;  ! pihtâsijttáá
 
 
 
@@ -1529,28 +1510,6 @@ LEXICON CEVE !!= @CODE@ only for this lemma. It could go to LYEME but needs modi
 +N+Pl+Com:iäpáttijguin K ;
 +N+Pl+Com+Err/Orth:iäpáttijgijn K ;
 +N+Pl+Abe:iäpáttijttáá K ;
-
-
-!CEVE_COMMON ; 
-!+N+Sg+Abe:%^SC%>ttáá K ; ! čiäppáttáá
-!
-!LEXICON CEVE_COMMON  
-!+N+Sg+Nom:%^WG%^FCD K ;       ! čeve
-!+N+Sg+Gen: K ;     ! čiäppát
-!+N+Sg+Acc: K ;     ! čiäppát
-!+N+Sg+Ill:%^CSH%^RVSH%>ân K ;      ! čiäpáttân
-!+N+Sg+Loc:%^SC%^CSH%>ist K ;     ! čiäpáttist
-!+N+Sg+Com:%^SC%^CSH%>áin K ;     ! čiäpáttáin
-!+N+Sg+Abe:%^FCD%>ttáá K ;     ! čiäppáttáá
-!+N+Ess:%^WG%^CLEN%^SLEN%>n K ;         ! čevveen
-!+N+Par:%^WG%^CLEN%^SLEN%>d K ;         ! čevveed
-!+N+Pl+Nom:%^SC%^CSH%>eh K ;      ! čiäpátteh
-!+N+Pl+Gen:%^SC%^CSH%>ij K ;      ! čiäpáttij
-!+N+Pl+Acc:%^SC%^CSH%>ijd K ;     ! čiäpáttijd
-!+N+Pl+Ill:%^SC%^CSH%>áid K ;     ! čiäpáttáid
-!+N+Pl+Loc:%^SC%^CSH%>ijn K ;     ! čiäpáttijn
-!+N+Pl+Com:%^SC%^CSH%>ijguin K ;  ! čiäpáttijguin
-!+N+Pl+Abe:%^SC%^CSH%>ijttáá K ;  ! čiäpáttijttáá
 
 
 LEXICON LYEME !!= __@CODE@__
