@@ -143,9 +143,9 @@ LEXICON KOOIDAS
 +A+SgNomCmp:%^EWG%^RLEN R ;
 
 LEXICON FIIJNES
-+A+Attr:%^FCDâ K ;     !attr. koidâ
-+A+Attr:%^FCD%^RLENâ K ;     !attr. koidâ
-+A: X_VEESKIR ;
++A+Attr:%^FCDâ K ;     !attr. fijnâ
++A+Attr:%^FCD%^RLENâ K ;     !attr. fiijnâ
++A: X_KAARBIS ;
 +A:%>u COMP ; !uđđâsub lieggâsub korrâsub
 +A:%>u MOS ;
 +A: ADJ_DER ;
@@ -194,7 +194,6 @@ LEXICON NJUORAS
 +A: ADJ_DER ;
 +A+SgNomCmp:%^EWG%^RLEN R ;
 
-
 LEXICON HAANIS
 +A+Attr:%^EWG%^RVSH%> K ; ! hänis
 +A: X_PAAVIR	  ;
@@ -207,9 +206,10 @@ LEXICON VAANIS
 
 
 LEXICON NJAALGIS ! Attr. not in the lexicon
-+A:s X_KAARBIS ;
-+A:%> COMPo ;
-+A+SgNomCmp:%^EWG%^RLEN R ;
++A: X_KAARBIS ;
++A:%>u COMPo ; !njálgásub njá%^RVlgás%^ÁI
++A+SgNomCmp:%^EWG%^RVSH R ;
++A:%^EWG%^RVSH ADJ_DER ; !njälgisvuođâ
 
 
 LEXICON MUSTOTTEM
@@ -248,12 +248,6 @@ LEXICON HIAJU
 +A+SgNomCmp: R ;
 
  
-LEXICON MUCCAD !not in use 
-!! Adj - muččâd: # attr. mu´čis
-+A+Attr:i%^WG%>s # ; ! mučis
-:âd A_LITTER ;
-
-
 LEXICON CEPPI
 !! Adj - čeppi: # attr. če´pis
 +A+Attr:%^WG%>s K ;
@@ -261,6 +255,7 @@ LEXICON CEPPI
 +A:%^WG%> COMPe ;
 +A:%^WG%> MUS ;
 +A+SgNomCmp: R ;
+ A_DER ;
 
 LEXICON HUMO
 +A+Attr:%^WG%>s K ;
@@ -320,12 +315,8 @@ LEXICON JUOLLAD
 +A+SgNomCmp:i%^WG%>s R ;
 
 
-LEXICON A_EEHID
-+A+Attr:  K ; !placeholder
-+A: X_EEHID	  ;
-+A+SgNomCmp: R ;
 
-LEXICON A_EEMEED
+LEXICON SOOHAD
 +A+Attr:  K ; !placeholder
 +A: X_EEMEED ;
 +A: ADJ_DER ;
@@ -410,8 +401,6 @@ LEXICON MAJEMUS  !!= __@CODE@__
 ! These shall be added to the respective noun
 ! lexica, as was done for fkv.
 
-LEXICON X_EEHID	  
-+Sg+Nom: # ;
 
 LEXICON NELJA !!= @CODE@ ad hoc three syllable stem >
 +A+Sg+Nom: K ;
