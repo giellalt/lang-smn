@@ -24,34 +24,32 @@ LEXICON adjstems
 +A+Attr: K ;
 +A+Sg+Nom: K ;
 
-
-! Even-syllable stems
-! -------------------
-
 LEXICON ATTR
 +A+Attr:  K ;
 
 
-LEXICON ANOLAS
+! Even-syllable stems
+! -------------------
 
-!! Adj - pooliitlâš: # attr. pooliitlâš; 
-!! puolikongruenssi mahdollinen (#-paikat), puolikongr. asemesta SgNom.
-!! Case endings in the affixes/nouns.lexc file.
-+A+Attr:âš K ;
-+A: LAS_COMMON ; 
-+A:%> COMP ;
-+A:%>u MOS ; ! tehálumos
-+A:âš ADJ_DER ;
-+A+SgNomCmp:âš R ;
-
-
-LEXICON SUOTAS  !!= __@CODE@__ ! see also KOOIDAS, diff in attr; inflection is the same than in SUOTAS
-+A+Attr:%^EWG%^RVSH  K ; ! suotâs < suotâs
-+A: X_VEESKIR ;
-+A:%^RVSH%>u COMP ;
-+A:%^RVSH%>u MOS ; ! 
+LEXICON ALKKEE
++A+Attr:s K ; ! älkkees
+ALKKEE_COMMON ;
 +A: ADJ_DER ;
-+A+SgNomCmp:%^EWG%^RLEN R ;
+
+LEXICON PYECCEE
++A+Attr: K ; ! attr. pyeccee ! Inflection like in ALKKEE
+ ALKKEE_COMMON ;
+
+
+LEXICON ALKKEE_COMMON
++A: X_TAHHEE ;
++A:%^SVSH%> COMPe ; ! assab
++A:%> MUS ; ! váiváámus hoppuumus
++A+SgNomCmp:  R ;
+
+
+
+
 
 LEXICON A_CISSAAS  !!= __@CODE@__ 
 +A+Attr:  K ; !placeholder
@@ -79,21 +77,6 @@ LEXICON MUOTTII
 
 
 
-LEXICON ALKKEE
-+A+Attr:s K ; ! älkkees
-ALKKEE_COMMON ;
-+A: ADJ_DER ;
-
-LEXICON PYECCEE
-+A+Attr: K ; ! attr. pyeccee ! Inflection like in ALKKEE
- ALKKEE_COMMON ;
-
-
-LEXICON ALKKEE_COMMON
-+A: X_TAHHEE ;
-+A:%^SVSH%> COMPe ; ! assab
-+A:%> MUS ; ! váiváámus hoppuumus
-+A+SgNomCmp:  R ;
 
 
 LEXICON KEPPIS	
@@ -129,27 +112,28 @@ LEXICON A_INDECL
 
 LEXICON KOSKES
 +A+Attr:%^FCD%^EWG K ;     !attr. koške
+A_VEESKIR ;
+
+LEXICON KOOIDAS
++A+Attr:%^FCDâ%^RVSH K ;     !attr. koidâ
+A_VEESKIR ;
+
+LEXICON FIIJNES
++A+Attr:%^FCD%^RLENâ K ;     !attr. fiijnâ
++A+Attr:%^FCDâ%^RVSH K ;     !attr. fijnâ
+A_VEESKIR ;
+
+LEXICON SUOTAS  !!= __@CODE@__ ! 
++A+Attr:%^EWG%^RVSH  K ; ! suotâs < suotâs
+A_VEESKIR ;
+
+
+LEXICON A_VEESKIR
 +A: X_VEESKIR ;
 +A:%>u COMP ; !
 +A:%>u MOS ;
 +A+SgNomCmp:%^EWG%^RLEN R ;
 
-LEXICON KOOIDAS
-+A+Attr:%^FCDâ%^RVSH K ;     !attr. koidâ
-+A: X_VEESKIR ;
-+A:%>u COMP ; !uđđâsub lieggâsub korrâsub
-+A:%>u MOS ;
-+A: ADJ_DER ;
-+A+SgNomCmp:%^EWG%^RLEN R ;
-
-LEXICON FIIJNES
-+A+Attr:%^FCDâ K ;     !attr. fijnâ
-+A+Attr:%^FCD%^RLENâ K ;     !attr. fiijnâ
-+A: X_KAARBIS ;
-+A:%>u COMP ; !uđđâsub lieggâsub korrâsub
-+A:%>u MOS ;
-+A: ADJ_DER ;
-+A+SgNomCmp:%^EWG%^RLEN R ;
 
 LEXICON UCES
 +A+Attr:â K ;     !attr. uccâ
@@ -211,6 +195,9 @@ LEXICON NJAALGIS ! Attr. not in the lexicon
 +A+SgNomCmp:%^EWG%^RVSH R ;
 +A:%^EWG%^RVSH ADJ_DER ; !njälgisvuođâ
 
+LEXICON AARRAD
++A+Attr: K ; ! arâdis
++A+SgNomCmp: R ;
 
 LEXICON MUSTOTTEM
 +A+Attr:s K;
@@ -234,11 +221,6 @@ LEXICON PUIGA
 +A:%> MUS ;
 +A+SgNomCmp: R ;
 
-
-LEXICON AARRAD
-+A+Attr: K ; ! arâdis
-+A+Sg+Nom: K ;
-+A+SgNomCmp: R ;
 
 LEXICON HIAJU
 +A+Attr:s K ; ! hiäjus
@@ -376,25 +358,6 @@ LEXICON NUORA
 
 
 
-LEXICON MAJEMUS  !!= __@CODE@__ 
-+A+Sg+Nom:%>š K ;
-+A+SgNomCmp:%>š R ;
-+A+Sg+Gen:%^SV%^SLEN K ;
-+A+Sg+Acc:%^SV%^SLEN K ;
-+A+Sg+Ill:%>žân K ;
-+A+Sg+Loc:%^SV%^SLEN%>st K ;
-+A+Sg+Com:%>in K ;
-+A+Sg+Abe:%^SV%^SLEN%>ttáá K ;
-+A+Ess:%>žžân K ;
-+A+Par:%>žžâd K ;
-+A+Pl+Nom:%^SV%^SLEN%>h K ;
-+A+Pl+Gen:%>i K ;
-+A+Pl+Acc:%>id K ;
-+A+Pl+Ill:%>id K ;
-+A+Pl+Loc:%>in K ;
-+A+Pl+Com:%>iguin K ;
-+A+Pl+Com+Err/Orth:%>igijn K ;
-+A+Pl+Abe:%>ittáá K ;
 
 
 
@@ -405,6 +368,19 @@ LEXICON MAJEMUS  !!= __@CODE@__
 LEXICON NELJA !!= @CODE@ ad hoc three syllable stem >
 +A+Sg+Nom: K ;
 +N+Sg+Nom: K ;
+
+
+! Odd-syllable stems
+! ------------------
+
+
+! Contracted stems
+! ----------------
+
+
+! 4 syll stems
+! ----------------
+
 
 LEXICON UANIHAS
 +A+Sg+Nom:âš K ;
@@ -420,16 +396,47 @@ LEXICON UNOHAS
 +A:%>u COMP ;
 +A:%>u MOS ;
 
-LEXICON SUP_ADJ
-+A: MUS ;
 
-! Odd-syllable stems
-! ------------------
-! Contracted stems
-! ----------------
+LEXICON ANOLAS
+
+!! Adj - pooliitlâš: # attr. pooliitlâš; 
+!! puolikongruenssi mahdollinen (#-paikat), puolikongr. asemesta SgNom.
+!! Case endings in the affixes/nouns.lexc file.
++A+Attr:âš K ;
++A: LAS_COMMON ; 
++A:%> COMP ;
++A:%>u MOS ; ! tehálumos
++A:âš ADJ_DER ;
++A+SgNomCmp:âš R ;
+
 
 ! Comparation
 ! -----------
+
+
+LEXICON MAJEMUS  !!= __@CODE@__ 
++A+Superl+Sg+Nom:%>š K ;
++A+Superl+SgNomCmp:%>š R ;
++A+Superl+Sg+Gen:%^SV%^SLEN K ;
++A+Superl+Sg+Acc:%^SV%^SLEN K ;
++A+Superl+Sg+Ill:%>žân K ;
++A+Superl+Sg+Loc:%^SV%^SLEN%>st K ;
++A+Superl+Sg+Com:%>in K ;
++A+Superl+Sg+Abe:%^SV%^SLEN%>ttáá K ;
++A+Superl+Ess:%>žžân K ;
++A+Superl+Par:%>žžâd K ;
++A+Superl+Pl+Nom:%^SV%^SLEN%>h K ;
++A+Superl+Pl+Gen:%>i K ;
++A+Superl+Pl+Acc:%>id K ;
++A+Superl+Pl+Ill:%>id K ;
++A+Superl+Pl+Loc:%>in K ;
++A+Superl+Pl+Com:%>iguin K ;
++A+Superl+Pl+Com+Err/Orth:%>igijn K ;
++A+Superl+Pl+Abe:%>ittáá K ;
+ 
+LEXICON SUP_ADJ
++A: MUS ;
+ 
  
 LEXICON COMPe !!= * __@CODE@__
 +Comp:b COMP-SUF ;
