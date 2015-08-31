@@ -4,8 +4,8 @@
 # command:
 # sh generate_contlex_para.sh PATTERN
 # example, when you are in smn:
-# sh devtools/adj_minip.sh HUMO | dsmnNorm | see
-# sh devtools/adj_minip.sh hyeni | dsmnNorm | see
+# sh devtools/adj_minip.sh HUMO | dsmnNorm | less
+# sh devtools/adj_minip.sh hyeni | dsmnNorm 
 
 
 PATTERN=$1
