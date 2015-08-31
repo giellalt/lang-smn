@@ -26,8 +26,11 @@ generator_file=./../../../src/generator-gt-norm
 
 ### out ###
 lemmas=./filtered-adjectives
+suplemmas=./superlative-adjectives
+attrlemmas=./attribute-adjectives
+alllemmas=./all_lemma-adjectives
 generated_lemmas=./generated-adjectives
-result_file=${srcdir}/missing_adjective_lemmas.txt
+result_file=./missing_adjective_lemmas.txt
 
 # FAIL if source file does not exist:
 if [ ! -f $sourcefile ]; then
@@ -53,20 +56,54 @@ fi
 EXTEDITOR=@SEE@
 
 ##### Extract lemmas #####
-### don't use extract-lemmas.sh ###
+### don't use extract-lemmas.sh ### Why???
 # Hent ut lemmaer fra adjective.lexc, bortsett fra utkommmenterte (^\!), 
 # dem som krever sammensetning (CmpN/Only|ShCmp|RCmpnd| Rreal | R | Rnoun),
 # Err/Lex (som blir filtrert bort fra normgenerator). Lemmaene lagres som filtered-adjectives
 
-grep ";" $source_file | \
-  egrep -v "^(\!|\@|<)" | \
-  egrep -v '(CmpN/Only|ShCmp|RCmpnd| Rreal | R | Rnoun |\+V\+|\+Err\/Lex)' | \
-  sed 's/% /€/g' | sed 's/%:/¢/g' |  tr ":+" " " | cut -d " " -f1 | \
-  tr -d "%" | tr "€" " " | tr "¢" ":" | sort -u > $lemmas
+#grep ";" $source_file | \
+#  egrep -v "^(\!|\@|<)" | \
+#  egrep -v '(CmpN/Only|ShCmp|RCmpnd| Rreal | R | SUP| Rnoun |\+V\+|\+Err\/Lex)' | \
+#  sed 's/% /€/g' | sed 's/%:/¢/g' |  tr ":+" " " | cut -d " " -f1 | \
+#  tr -d "%" | tr "€" " " | tr "¢" ":" | sort -u > $lemmas
+
+@GTCORE@/scripts/extract-lemmas.sh \
+  --exclude '(CmpN/Only|ShCmp|RCmpnd| Rreal | R | SUP| Rnoun |\+V\+)' \
+    $source_file > $lemmas
+
+#grep ";" $source_file | \
+#  egrep -v "^(\!|\@|<)" | \
+#  egrep  " SUP" | \
+#  egrep -v '(CmpN/Only|ShCmp|RCmpnd| Rreal | R | Rnoun |\+V\+|\+Err\/Lex)' | \
+#  sed 's/% /€/g' | sed 's/%:/¢/g' |  tr ":+" " " | cut -d " " -f1 | \
+#  tr -d "%" | tr "€" " " | tr "¢" ":" | sort -u > $suplemmas
+
+@GTCORE@/scripts/extract-lemmas.sh \
+  --include ' SUP' \
+  --exclude '(CmpN/Only|ShCmp|RCmpnd| Rreal | R | Rnoun |\+V\+)' \
+    $source_file > $suplemmas
+
+#grep ";" $source_file | \
+#  egrep -v "^(\!|\@|<)" | \
+#  egrep  " ATTR" | \
+#  egrep -v '(CmpN/Only|ShCmp|RCmpnd| Rreal | R | Rnoun |\+V\+|\+Err\/Lex)' | \
+#  sed 's/% /€/g' | sed 's/%:/¢/g' |  tr ":+" " " | cut -d " " -f1 | \
+#  tr -d "%" | tr "€" " " | tr "¢" ":" | sort -u > $attrlemmas
+
+@GTCORE@/scripts/extract-lemmas.sh \
+  --include ' ATTR' \
+  --exclude '(CmpN/Only|ShCmp|RCmpnd| Rreal | R | Rnoun |\+V\+)' \
+    $source_file > $attrlemmas
 
 # evt. denne, sjekk skilnaden:
 # @GTCORE@/scripts/extract-lemmas.sh \
-# 	$sourcefile "(CmpN/Last)" > $lemmas
+#   --exclude '(pattern)' \
+#   --include '(pattern)' \
+# 	$sourcefile > $lemmas
+#
+# Skriptet fjernar alltid desse, dvs at ein treng ikkje spesifisera dei:
+#
+# (LEXICON| K |ENDLEX|\+Err\/Lex)
 
 
 ###### Start testing: #######
@@ -94,29 +131,32 @@ for f in $fsttype; do
 ###### Test non-comopunds: #######
 		# generate nouns in Singular, extract the resulting generated lemma,
 		# store it:
-# Generer lemmaer i adjectives med +N+Sg+Nom, lagre i generated-adjectives
+# Generer lemmaer i adjectives med +A+Sg+Nom, lagre i generated-adjectives
         sed 's/$/+A+Sg+Nom/' $lemmas | $lookuptool $generator_file.$suffix | \
           cut -f2 | grep -v "A+" | grep -v "^$" | sort -u > $generated_lemmas.$f.txt		
-		
-# Generer plurale lemmaer i filtered-adjectives med +N+Pl+Nom (som ikke lar seg generer med +N+Sg+Nom).
-# Lagre dem i generated-adjectives
-		sed 's/$/+A+Sg+Nom/' $lemmas | $lookuptool $generator_file.$suffix | \
-		cut -f2 | grep "A+" | cut -d "+" -f1 | sed 's/$/+A+Pl+Nom/' | \
-		$lookuptool $generator_file.$suffix | \
-		cut -f2 | grep -v "^$" >> $generated_lemmas.$f.txt 
 
+# Generer lemmaer i adjectives med +A+Superl+Sg+Nom, lagre i generated-adjectives
+        sed 's/$/+A+Superl+Sg+Nom/' $suplemmas | $lookuptool $generator_file.$suffix | \
+          cut -f2 | grep -v "A+" | grep -v "^$" | sort -u >> $generated_lemmas.$f.txt		
+
+# Generer lemmaer i adjectives med +A+Attr, lagre i generated-adjectives
+        sed 's/$/+A+Attr/' $attrlemmas | $lookuptool $generator_file.$suffix | \
+          cut -f2 | grep -v "A+" | grep -v "^$" | sort -u >> $generated_lemmas.$f.txt		
+
+		
 
 ###### Collect results: #######
 		# Sort and compare original input with resulting output - the diff is
 		# stored and opened in SEE:
 
 # Sorter, unifiser
-		sort -u -o $lemmas $lemmas 
+        cat $lemmas $attrlemmas $suplemmas  > $alllemmas
+		sort -u -o $alllemmas $alllemmas 
 		sort -u -o $generated_lemmas.$f.txt $generated_lemmas.$f.txt 
 
 # Sammenlikne: Former som er i lemmalista med ikke i lista med genererte former,
 # lagre i missingadjectiveLemmas.txt. Formene generes med  +A+Sg+Nom for enklere debugging.
-		comm -23 $lemmas $generated_lemmas.$f.txt |\
+		comm -23 $alllemmas $generated_lemmas.$f.txt |\
 		grep -v '^$' | sed 's/$/+A+Sg+Nom/' |\
 		$lookuptool $generator_file.$suffix > $result_file.$f.txt
 
@@ -135,7 +175,7 @@ for f in $fsttype; do
 done
 
 # When done, remove the generated data file:
-rm -f $lemmas
+rm -f $lemmas $attrlemmas $suplemmas $alllemmas
 
 # At least one of the Xerox or HFST tests failed:
 if [ "$Fail" = "1" ]; then
