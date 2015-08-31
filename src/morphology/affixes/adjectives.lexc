@@ -345,11 +345,10 @@ LEXICON HAAITIS
 
 LEXICON STYERES
 +A+Attr:%^FCDâ  K ; ! stuorrâ
-+A:%^FCD%^SLEN%> COMPe ;
-+A+Err/Orth:%^FCD%> COMPe ;
-+A:%^FCD%^SLEN%> MUS ;
-+A+Err/Orth:%^FCD%> MUS ;
-+A: X_VEESKIR ; !correct cont.lex ?
++A:%^FCD CCOMPe ;
++A:%^FCD%^SLEN%> CMUS ;
++A+Err/Orth:%^FCD%> CMUS ;
++A: X_KAARBIS ; !
 +A+SgNomCmp:%^FCDâ R ;
 
 LEXICON A_KUNAGAS
@@ -446,7 +445,13 @@ LEXICON SUP_ADJ
 LEXICON COMPe !!= * __@CODE@__
 +Comp:b COMP-SUF ;
 +Comp+Attr:b K ;
-+Comp+Der/Dimin:bâš K ; !need paradigm
++Comp+Der/Dimin:bâš K ; !needs lexicon
+
+LEXICON CCOMPe !!= * __@CODE@__
++Comp:b CCOMP-SUF ;
++Comp+Attr:b K ;
++Comp+Der/Dimin:bâš K ; !needs lexicon
+
 
 LEXICON eCOMP !!= * __@CODE@__
 +Comp: eCOMP-SUF ;
@@ -472,30 +477,44 @@ LEXICON oCOMP-SUF  !!= * __@CODE@__
 +Sg+Loc:b%>oost K ;
 +Pl+Nom:%>oh K ;
 
-
-LEXICON COMP-SUF  !!= * __@CODE@__ 
+LEXICON CCOMP-SUF  !!= * __@CODE@__ 
 +Sg+Nom: K ;
 +Sg+Gen: K ;
 +Sg+Acc: K ;
-+Sg+Ill:%>ân K ;
-+Sg+Loc:%>ist K ;
-+Sg+Com:%>áin K ;
+COMP-SUF_COMMON ;
+
+
+LEXICON COMP-SUF  !!= * __@CODE@__ 
++Sg+Nom:%^SLEN K ;
++Sg+Gen:%^SLEN K ;
++Sg+Acc:%^SLEN K ;
+COMP-SUF_COMMON ;
+
+LEXICON COMP-SUF_COMMON
++Sg+Ill:%^SLEN%>ân K ;
++Sg+Loc:%^SLEN%>ist K ;
++Sg+Com:%^SLEN%>áin K ;
 +Sg+Abe:%>ttáá K ;
-+Ess:%>in K ;
-+Par:%>id K ;
++Ess:%^SLEN%>in K ;
++Par:%^SLEN%>id K ;
 +Pl+Nom:%^SLEN%>eh K ;
-+Pl+Gen:%>ij K ;
-+Pl+Acc:%>ijd K ;
-+Pl+Ill:%>áid K ;
++Pl+Gen:%^SLEN%>ij K ;
++Pl+Acc:%^SLEN%>ijd K ;
++Pl+Ill:%^SLEN%>áid K ;
 !+Pl+Ill:%>ááid K ;
-+Pl+Loc:%>ijn K ;
-+Pl+Com+Err/Orth:%>ijgijn K ;
-+Pl+Com:%>ijguin K ;
-+Pl+Abe:%>ijttáá K ;
++Pl+Loc:%^SLEN%>ijn K ;
++Pl+Com+Err/Orth:%^SLEN%>ijgijn K ;
++Pl+Com:%^SLEN%>ijguin K ;
++Pl+Abe:%^SLEN%>ijttáá K ;
 
 
 LEXICON MUS !!= * __@CODE@__
 +Superl: MUS-SUF ;
++Superl+Attr:mus K ;
++Superl+Der/avt+Adv:mus%>ávt K ;
+
+LEXICON CMUS !!= * __@CODE@__
++Superl: CMUS-SUF ;
 +Superl+Attr:mus K ;
 +Superl+Der/avt+Adv:mus%>ávt K ;
 
@@ -544,6 +563,27 @@ LEXICON MUSj-SUF !!= * __@CODE@__
 +Pl+Com+Err/Orth:mušâijgijn K ;
 +Pl+Com:muiguin K ;
 +Pl+Abe:muittáá K ;
+
+LEXICON CMUS-SUF !!= * __@CODE@__
++Sg+Nom:muuh K ;
++Sg+Gen:mui K ;
++Sg+Acc:muid K ;
++Sg+Ill:muid K ;
++Sg+Loc:muust K ;
++Sg+Com:muin K ;
++Sg+Abe:muuttáá K ;
++Ess:mussân K ;
++Par:mussâd K ;
++Pl+Nom:muuh K ;
++Pl+Gen:mui K ;
++Pl+Acc:muid K ; !7 stuárráámussáid 6 stuárráámusâid
++Pl+Ill:muid K ;
+!+Pl+Ill:%>ááid K ;
++Pl+Loc:muin K ;
++Pl+Com+Err/Orth:muigijn K ;
++Pl+Com:muiguin K ;
++Pl+Abe:muittáá K ;
+
 
 LEXICON ADJ_DER
 +Der/vuota:vuot%^RCâ KIELA ;
