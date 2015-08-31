@@ -4,7 +4,9 @@
 # command:
 # sh generate_contlex_para.sh PATTERN
 # example, when you are in smn:
-# sh devtools/generate_contlex_para.sh LAAVU | dsmnDict | see
+# sh devtools/adj_minip.sh HUMO | dsmnNorm | see
+# sh devtools/adj_minip.sh hyeni | dsmnNorm | see
+
 
 PATTERN=$1
 L_FILE="in.txt"
