@@ -11,6 +11,7 @@ if CAN_DOCC
 
 JSP_PAGES=root-morphology.jspwiki        \
 		adjectives-stems.jspwiki         \
+        adjectives-affixes.jspwiki         \
 		adpositions-stems.jspwiki        \
 		adverbs-stems.jspwiki            \
 		conjunctions-stems.jspwiki       \
@@ -35,7 +36,6 @@ JSP_PAGES=root-morphology.jspwiki        \
 # interjections-stems.jspwiki      \
 # propernouns-stems.jspwiki        \
 # smi-propernouns-stems.jspwiki    \
-# adjectives-affixes.jspwiki       \
 ALLINONE_JSP_PAGE=$(srcdir)/$(GTLANG).jspwiki
 
 LINKS=$(srcdir)/Links.jspwiki
