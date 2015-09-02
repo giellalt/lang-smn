@@ -246,7 +246,7 @@ A_LITTER ;
 +A+SgNomCmp: R ;
 
 LEXICON FISKAD !!= __@CODE@__ directing to A_LITTER, attr. fiskis (fikâdis)
-+A+Attr:i%^WG%>s # ; ! fiskis
++A+Attr:i%^WG%>s K ; ! fiskis
 +A+Attr+Err/Orth:âd%>is K ;
 :âd A_LITTER ;
 +A:%^WG%>u COMPo ; 
@@ -254,17 +254,18 @@ LEXICON FISKAD !!= __@CODE@__ directing to A_LITTER, attr. fiskis (fikâdis)
 +A+SgNomCmp:i%^WG%>s R ;
 +A: A_VUOTA ;
 +A: A_ADV ; !muččâdávt
++A:i%^WG%>s A_LAGAN ; !čapisláván
 
 
 LEXICON JUOLLAD !!= __@CODE@__ directing to A_LITTER, attr, juolis, juolâdis, juolâdâs
-+A+Attr:i%^WG%>s # ; ! juolis
++A+Attr:i%^WG%>s K ; ! juolis
 +A+Attr:âd%^WG%>is  K ; !
 +A+Attr:âd%^WG%>âs  K ; !
 :âd A_LITTER ;
 +A:%^WG%>u COMPo ; 
 +A:%>u MOS ;
 +A+SgNomCmp:i%^WG%>s R ;
-+A: A_VUOTA ;
++A: A_VUOTA ; 
 
 
 LEXICON A_LITTER !!= __@CODE@__ directing to X_LITTER, no attr.
@@ -426,8 +427,10 @@ LEXICON ANOLAS !!= __@CODE@__ directing to LAS_COMMON, attr, -âš
 +A: A_ADV ; !máhđulávt
 
 LEXICON LAGAN !!= __@CODE@__ directing to A_LITTER, attr. -lágán
-+A+Attr: K ;
- A_LITTER ;
++A+Attr:lágán K ;
++A+Attr:láván K ;
+:lágán A_LITTER ;
+:láván A_LITTER ;
 
 LEXICON MUSTOTTEM !!= __@CODE@__ not all forms. attr. -es
 +A+Attr:s K;
@@ -626,4 +629,7 @@ LEXICON A_VUOTA  !!= * __@CODE@__ for derivation
 
 LEXICON A_ADV  !!= * __@CODE@__ for derivation
 +Der/avt+Adv:ávt K ;
+
+LEXICON A_LAGAN  !!= * __@CODE@__ for derivation
++Der/lagan+A: LAGAN ;
 
