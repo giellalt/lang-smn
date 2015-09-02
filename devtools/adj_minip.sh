@@ -6,7 +6,8 @@
 # example, when you are in smn:
 # sh devtools/adj_minip.sh HUMO | dsmnNorm | less
 # sh devtools/adj_minip.sh hyeni | dsmnNorm 
-
+LOOKUP= $(which lookup)
+GTHOME= $(echo $GTHOME)
 
 PATTERN=$1
 L_FILE="in.txt"
@@ -18,7 +19,7 @@ for lemma in $(cat $L_FILE);
 do
  for form in $(cat $P_FILE);
  do
-   echo "${lemma}${form}"
+   echo "${lemma}${form}" | $LOOKUP $GTHOME/langs/smn/src/generator-gt-norm.xfst
  done
 done
 
