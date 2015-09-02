@@ -780,17 +780,9 @@ Vy:0 <=> Vx: _  Cns:+ Vow:  Cns: [%^ÁI:|%^ÁE:] [%^WG:|%^EWG:] %^RVSH:  [%>|.#.
 
 !! !First syllable vowel change
 
-"Root vowel change for á to ä with i in second syllable"
-!! * __@RULENAME@__ \\  päävir 
-á:ä <=>    _ [ á:|%^RV:] Cns:* :i (%^SV:) Cns: %^ÁI: [%^EWG:|%^WG:] [%^RLEN:|%^RVSH:] [%>|.#.] ; !! 1) pááppár:päävir
-        á: _   Cns:* :i (%^SV:) Cns: %^ÁI: %^EWG: %^RLEN: [%>|.#.] ;  !! 2) pááppár:päävir
-!         _ [ á:|%^RV:] Cns:+ :i         Cns  %^ÁI:  %^EWG:  %^RVSH:  %> ; !i  ; !! 3) pááppár:pävirin páápp4ár%^ÁI%^EWG%^RVSH%>id
 
-!rejected, look at this:
 
-!€ páápp4ár^ÁI^WG>
-!€ pää0vir00>
-
+!! a rules
 
 "Root vowel change a:o before suffix i"
 !! * __@RULENAME@__ \\  alge : olgijn 
@@ -798,19 +790,12 @@ a:o <=> _  %^RV: Cns:+  e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> i: ;
 
 
 
-"Root vowel á:a for verbs"
-!! * __@RULENAME@__ 
-á:a <=> [Cns|.#.]    _    Cns:+ u2:  %> [:u|i|i2:i|Cns - j] Sgm:* %> ;
-        [Cns|.#.]    _    Cns:+ i2:i %>    [i|i2:i|Cns] Sgm:* %> ;
-        [Cns|.#.]    _ á: Cns:+ %^VLOW: [â|a] %> ;
-        [Cns|.#.] á: _    Cns:+ %^VLOW: [â|a] %> ;
-        [Cns|.#.]    _  %^RV:   Cns:+ u %>    [m|h|u] ; ! 2st verb pákkuđ: pakkum/h/u
-
 "Root vowel a:o for contract verbs"
 !! * __@RULENAME@__ 
 a:o <=> [Cns|.#.] _       Cns:+ u2:  %> [:u|i|i2:i|Cns - j] Sgm:* %> ;
         [Cns|.#.] _       Cns:+ i2:i %>    [i|i2:i|Cns] Sgm:* %> ;
         [Cns|.#.] _ %^RV: Cns:+ u %^CSH: %^RLEN: %> [m|đ|u] ;
+
 
 "Root vowel o:u for contract verbs and Root vowel change o:u before suffix i"
 !! * __@RULENAME@__ 
@@ -953,6 +938,29 @@ i:0 <=> [.#.|Cns] _ ä: Cns:+ i2:i %>    [i|i2:i|Cns] Sgm:* %> ;
 !€ stääve>jeh>
 
 
+!! á
+
+"Root vowel change for á to ä with i in second syllable"
+!! * __@RULENAME@__ \\  päävir 
+á:ä <=>    _ [ á:|%^RV:] Cns:* :i (%^SV:) Cns: %^ÁI: [%^EWG:|%^WG:] [%^RLEN:|%^RVSH:] [%>|.#.] ; !! 1) pááppár:päävir
+        á: _   Cns:* :i (%^SV:) Cns: %^ÁI: %^EWG: %^RLEN: [%>|.#.] ;  !! 2) pááppár:päävir
+!         _ [ á:|%^RV:] Cns:+ :i         Cns  %^ÁI:  %^EWG:  %^RVSH:  %> ; !i  ; !! 3) pááppár:pävirin páápp4ár%^ÁI%^EWG%^RVSH%>id
+
+!rejected, look at this:
+
+!€ páápp4ár^ÁI^WG>
+!€ pää0vir00>
+
+
+"Root vowel á:a for verbs"
+!! * __@RULENAME@__ 
+á:a <=> [Cns|.#.]    _    Cns:+ u2:  %> [:u|i|i2:i|Cns - j] Sgm:* %> ;
+        [Cns|.#.]    _    Cns:+ i2:i %>    [i|i2:i|Cns] Sgm:* %> ;
+        [Cns|.#.]    _ á: Cns:+ %^VLOW: [â|a] %> ;
+        [Cns|.#.] á: _    Cns:+ %^VLOW: [â|a] %> ;
+        [Cns|.#.]    _  %^RV:   Cns:+ u %>    [m|h|u] ; ! 2st verb pákkuđ: pakkum/h/u
+
+
 !! !á and uá rules
 
 "Monophthongisation rule uá:o0 part 2: Vowel shortening for uá" 
@@ -1026,6 +1034,12 @@ a:á <=> \Vow: _ %^RV: h: h u %^WG: (%^RLEN:) %> ;
            ä: _ Cns:+ i:  %^WG: %^RLEN: %> \i: ; ! 2) ä:ää
            e:i _ Cns:+ u: %^EWG:   ; !kiärtuš čevžuin čiävžui
 
+"ie to iä in Illative and Sg3"
+!! * __@RULENAME@__ \\  ... with ^ILL as trigger; kiem´ni -> kiämnán, veerdi : viärdán
+e:ä <=> [i | e: ]  _  Cns:+ Vow:  %^EA: (%^CSH:) ;
+
+
+
 
 "Diphthongisation o:uá for %^EWG, part 1"
 !! * __@RULENAME@__ \\   
@@ -1042,11 +1056,6 @@ o:á <=> u _ Cns:+ u: [%^EWG:|%^WG:] ([%^RVSH:|%^RLEN:]) %> ; ! 1) cuobbuu cuáb
 "Diphthongisation o:uá for %^EWG, part 2"
 !! * __@RULENAME@__ \\   
 o:u <=>  _ %^RV:á Cns:+ u:  %^EWG: (%^RVSH:) %> ; ! 1) poccuu puásui
-
-
-"ie to iä in Illative and Sg3"
-!! * __@RULENAME@__ \\  ... with ^ILL as trigger; kiem´ni -> kiämnán, veerdi : viärdán
-e:ä <=> [i | e: ]  _  Cns:+ Vow:  %^EA: (%^CSH:) ;
 
 
 
@@ -1087,6 +1096,9 @@ u:y <=> _ á: Cns:+ Vow:+ Cns: [%^ÁI:|%^ÁE:] (%^FCD:) %^EWG: ; ! [%^RLEN:|%^RV
 "uo to ye, part 2"
 o:e <=> u:y _ Cns:+ [e ([%^WG:|%^CLEN:]) %> e|i %^CSH: %> h] ;
 !vyelleen, vyeleem,vyelih
+
+
+
 
 !! !Second syllable rules
 
