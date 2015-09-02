@@ -8,10 +8,8 @@
 morf_codes="+N+Sg+Nom \
             +N+Sg+Gen \
             +N+Sg+Ill \
-            +N+Sg+Com \
-            +N+Pl+Nom \
-            +N+Pl+Com \
-            +N+Ess"
+            +N+Sg+Loc \
+            +N+Sg+Com"
 
 # Lexicon source file for lexicons and lemmas:
 source_file=src/morphology/stems/nouns.lexc
@@ -23,7 +21,7 @@ exception_lexicons="(flagK)"
 generator_file=src/generator-gt-norm
 
 # How many lemmas maximally for each lexicon:
-lemmacount=10
+lemmacount=2
 
 # Specify path to $GTCORE - we don't use Autotools for these scripts:
 gtcore=$GTCORE
