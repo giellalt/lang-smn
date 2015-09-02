@@ -4,14 +4,17 @@
 # command:
 # sh generate_contlex_para.sh PATTERN
 # example, when you are in smn:
-# sh devtools/adj_minip.sh HUMO | dsmnNorm | less
-# sh devtools/adj_minip.sh hyeni | dsmnNorm 
+# sh devtools/adj_minip.sh HUMO  | less
+# sh devtools/adj_minip.sh hyeni 
+# Only get the lemma you ask for:
+# sh devtools/adj_minip.sh '^hyeni[:+]' 
+
 LOOKUP=$(echo $LOOKUP)
 GTHOME=$(echo $GTHOME)
 
 PATTERN=$1
 L_FILE="in.txt"
-cut -d '!' -f1 src/morphology/stems/adjectives.lexc | grep $PATTERN | cut -d ':' -f1>$L_FILE
+cut -d '!' -f1 src/morphology/stems/adjectives.lexc | egrep $PATTERN | cut -d ':' -f1>$L_FILE
 
 P_FILE="test/data/testadjparadigm.txt"
 
