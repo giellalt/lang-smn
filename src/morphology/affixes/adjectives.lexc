@@ -140,14 +140,31 @@ LEXICON NJUORAS !!= __@CODE@__ directing to X_RUONAS, attr. njuorâs
 
 
 LEXICON HAANIS !!= __@CODE@__ directing to X_PAAVIR, attr. hänis
-+A+Attr:%^EWG%^RVSH%> K ; ! hänis
++A+Attr:%^EWG%^RVSH K ; ! hänis
 +A: X_PAAVIR	  ;
-+A:%^WG%>u COMPo ; 
++A:%>u COMPo ; 
++A:%>u MOS ;
 +A+SgNomCmp:%^EWG%^RLEN R ;
 +A:%^EWG%^RVSH A_VUOTA ;
 
-LEXICON HAAITIS !!= __@CODE@__ directing to X_PAAVIR, attr. rähis, different from HAANIS ?
+LEXICON KIARGUS_nocomp !!= __@CODE@__  like HAANIS, directing to X_PAAVIR, 
++A+Attr:%^EWG%^RVSH K ; ! 
++A: X_PAAVIR	  ;
++A+SgNomCmp:%^EWG%^RLEN R ;
++A:%^EWG%^RVSH A_VUOTA ;
+
+
+LEXICON HAAITIS !!= __@CODE@__ directing to X_PAAVIR, attr. rähis
 +A+Attr:%^EWG%^RVSH  K ; !rähis
++A: X_PAAVIR	  ;
++A:%^WG%>u COMPo ; 
++A:%>u MOS ;
++A+SgNomCmp:%^EWG%^RLEN R ;
++A: A_VUOTA ;
+
+LEXICON HEEITUG !!= __@CODE@__ directing to X_PAAVIR, attr. heitugis, heitugâs
++A+Attr:%^WG%^RVSH%>is  K ; !heitugis
++A+Attr:%^WG%^RVSH%>âs  K ; !heitugâs
 +A: X_PAAVIR	  ;
 +A:%^WG%>u COMPo ; 
 +A:%>u MOS ;
@@ -404,9 +421,11 @@ LEXICON UANIHAS !!= __@CODE@__ directing to LAS_SUF, attr, -âš
 +A+Sg+Nom:âš K ;
 +A+Attr:is K ;
 +A:%>á LAS_SUF ;
-+A:%>u COMP ;
++A:%>u COMPo ;
 +A:%>u MOS ;
 +A: A_ADV ;
++A:is A_VUOTA ;
+
 
 LEXICON UNOHAS !!= __@CODE@__ directing to LAS_SUF, attr, -is
 +A+Sg+Nom:âs K ;
@@ -607,15 +626,16 @@ LEXICON MUSj-SUF !!= * __@CODE@__
 +Pl+Abe:muittáá K ;
 
 LEXICON CMUS-SUF !!= * __@CODE@__
-+Sg+Nom:muuh K ;
-+Sg+Gen:mui K ;
-+Sg+Acc:muid K ;
-+Sg+Ill:muid K ;
++Sg+Nom:mus K ;
++Sg+Gen:mus K ;
++Sg+Acc:mus K ;
++Sg+Ill:mui K ;
++Sg+Ill:musân K ;
 +Sg+Loc:muust K ;
 +Sg+Com:muin K ;
 +Sg+Abe:muuttáá K ;
-+Ess:mussân K ;
-+Par:mussâd K ;
++Ess:mužžân K ;
++Par:mužžâd K ;
 +Pl+Nom:muuh K ;
 +Pl+Gen:mui K ;
 +Pl+Acc:muid K ; !7 stuárráámussáid 6 stuárráámusâid
