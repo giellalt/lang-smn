@@ -505,6 +505,7 @@ j:i <=> Vow: _ %^RC: :Vow   %^CLEN:  (%^RVSH:)       %> ; !Par Ess
 %^RC:Cy <=> Vow: Cx:   _ Vow (%^SV:)  Cns:* [%^CLEN: (%^SLEN:)|%^SVSH:] %> \[Vow: | s ] ; 
             Vow: Cx:   _ Vow           Cns         %^CLEN:  %> \[ i:|s]  ;
             Vow: (i4:) Cx:Cy _ Vow: (i:) Cns:+   %^CLEN: (%^RLEN:) ([%^SLEN:|%^SVSH:]) %>   ; !! 3) kepidem : keeppidmân
+            Vow:  Cx: _ :Vow+ Sgm:* Triggers:* %^CLEN: ; ! XXX sjekk
 	where Cx in ( v t h5 c p)  
 	      Cy in ( v t h  c p)   
 		  matched ;
@@ -740,6 +741,7 @@ Vy:0 <=> Vx: _  Cns:+ Vow:  Cns: [%^ÁI:|%^ÁE:] [%^WG:|%^EWG:] %^RVSH:  [%>|.#.
 !! * __@RULENAME@__ \\  lekkâ : leehá-  meecij ko%^RVppâin
 %^RV:Vy <=> Vx _ [Cns:+ - [h: h ]]  Vow: (Vow:)  (Cns:+) (Triggers: - %^RLEN:)*   %^RLEN: ; !! 1) 2st and 3st
 !            Vx: _ Cns: (Cns:) Vow:+ Cns:+ Vow: Cns:  %^RLEN:  ; !! 2) 4st 
+             Vx: _ Cns:+ (%^WG:) (%^CLEN:) (%^VHIGH:) %^RLEN: ;
        where Vx in (a e i o y á A E I O Á ) ! Ánná:Ááná u, U in separate rule Root vowel u length
              Vy in (a e i o y á a e i o á) 
        matched ;
@@ -792,7 +794,7 @@ Vy:0 <=> Vx: _  Cns:+ Vow:  Cns: [%^ÁI:|%^ÁE:] [%^WG:|%^EWG:] %^RVSH:  [%>|.#.
 "Root vowel change a:o before suffix i"
 !! * __@RULENAME@__ \\  alge : olgijn 
 a:o <=> _ %^RV: Cns:+  e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> i: ; 
-        _ %^RV: Cns:+ Vow: (%^WG:|%^CSH:) (%^CLEN:) %^VHIGH: ;
+        _ (%^RV:) Cns:+ Vow: (%^WG:|%^CSH:) (%^CLEN:) %^VHIGH: ;
 
 
 
@@ -1162,7 +1164,8 @@ Vx:e <=> Cns _ (%^VLOW:) %> [j Vow|e] ;
 
 "Stem vowel á to a for a root vowel"
 !! * __@RULENAME@__ \\  trying this as a phonological rule for -eđ verbs
-á:a <=> a (%^RV:) Cns:+ _  %^CSH: %> ;
+!á:a <=> a (%^RV:) Cns:+ _  %^CSH: %> ;
+á:a <=> a (%^RV:) Cns:+ _  [%^CSH:|%^WG:] %> ;
 
 
 "Stem vowel â to a in Pl Nom -h"
