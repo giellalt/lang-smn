@@ -94,7 +94,11 @@ i6:0 !!= * @CODE@ a fake vowel, to get WG rules to function, e.g. kyehtlov (kyeh
 %^ODRVSHV:0    !!= * @CODE@ =  Cns shortening in C|# and shortvow in Inf etc  (not in use)
 %^ODDC:0       !!= * @CODE@ =  shorten cns in odd-syll stems before C, #  (not in use)
 
-!SV|ÁE|ÁI|EE  EA|SC FCD  EWG|WG|CSH  CLEN  RVSH|RLEN   SLEN|SVSH  SVLOW
+
+!! Trigger ordering in twolc and lexc, from left to right:
+!!{{{
+!! SV|ÁE|ÁI|EE  AO|EA|SC  FCD  EWG|WG|CSH  CLEN  VHIGH  RVSH|RLEN  SLEN|SVSH  SVLOW
+!!}}}
 
 !! !!Morpheme boundaries:
 
@@ -755,8 +759,9 @@ Vy:0 <=> Vx: _  Cns:+ Vow:  Cns: [%^ÁI:|%^ÁE:] [%^WG:|%^EWG:] %^RVSH:  [%>|.#.
 
 "Root vowel o lengthening with vowel change before suffix i"
 !! * __@RULENAME@__ \\  alge : oolgijn 
-%^RV:o <=> a:o  _  Cns:+  e:     %^WG:  %^RLEN:  %> i: ; 
-           a:o  _  Cns:+  u      %^CSH: %^RLEN:  %> [m|đ|u]   ;
+%^RV:o <=> a:o  _  Cns:+  e:     %^WG:   %^RLEN:  %> i: ; 
+           a:o  _  Cns:+  u      %^CSH:  %^RLEN:  %> [m|đ|u]   ;
+           a:o  _  Cns:+ Vow:    (%^WG:|%^CSH:) (%^CLEN:) %^VHIGH: %^RLEN: ;
 
 !€ a^RVlge^WG^RLEN>id
 !€ oolgi00>jd
@@ -786,7 +791,8 @@ Vy:0 <=> Vx: _  Cns:+ Vow:  Cns: [%^ÁI:|%^ÁE:] [%^WG:|%^EWG:] %^RVSH:  [%>|.#.
 
 "Root vowel change a:o before suffix i"
 !! * __@RULENAME@__ \\  alge : olgijn 
-a:o <=> _  %^RV: Cns:+  e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> i: ; 
+a:o <=> _ %^RV: Cns:+  e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> i: ; 
+        _ %^RV: Cns:+ Vow: (%^WG:|%^CSH:) (%^CLEN:) %^VHIGH: ;
 
 
 
@@ -904,7 +910,7 @@ i:0 <=> [.#.|Cns] _ ä: Cns:+ i2:i %>    [i|i2:i|Cns] Sgm:* %> ;
 !! * __@RULENAME@__ \\  ... for täsni -> táásnán
 %^RV:á <=> ä: _  Cns:+ :á %^EA: (%^CSH:) %^RLEN:  ;
 
-!€ tä^RVsni^RLEN^EA^CSH>n
+!€ tä^RVsni^EA^CSH^RLEN>n
 !€ táásná000>n
 
 "Vowel lengthening äRV to aa "
@@ -1136,7 +1142,7 @@ i:0 <=> Vow _ n j (%^CLEN:) (%^RLEN:) %^SVSH: [%>|.#.] ;
 !! * __@RULENAME@__ \\  alge to aalgan
 e:a <=> a (%^RV:) Cns:+ _ %^EA: ;
 
-!€ a^RVlge^RLEN^EA^CSH>n
+!€ a^RVlge^EA^CSH^RLEN>n
 !€ aalga000>n
 
 "Stem vowel e to á for other root vowel"
