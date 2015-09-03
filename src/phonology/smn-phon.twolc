@@ -88,6 +88,7 @@ i6:0 !!= * @CODE@ a fake vowel, to get WG rules to function, e.g. kyehtlov (kyeh
 %^AO:0      !!= * @CODE@ = a to o
 %^VHIGH:0   !!= * @CODE@ = hightening of vowels for verbs o to uu, a to oo
 %^VBACK:0   !!= * @CODE@ = back vowels for verbs, ä to a (when needed, normally 2syll a|â is enough
+%^BLOCK:0   !!= * @CODE@ = This symbol just to block otherwise triggering contexts
 
 
  
@@ -895,8 +896,8 @@ i:0 <=> [.#.|Cns] _ ä: Cns:+ i2:i %>    [i|i2:i|Cns] Sgm:* %> ;
 
 "ää to áá in Illative and Sg3"
 !! * __@RULENAME@__ \\  ... for säämi > sáámán
-ä:á <=>          _  :á Cns:+ [:á|u]  %^EA: (%^CSH:|%^WG:) (%^RLEN:) %>  ;    
-              ä: _  Cns:+ [:á|u]  %^EA: (%^CSH:|%^WG:) (%^RLEN:) %>  ;
+ä:á <=>          _  :á    Cns:+ [:á|u]  %^EA: (%^CSH:|%^WG:) (%^RLEN:) %>  ;    
+              ä: _        Cns:+ [:á|u]  %^EA: (%^CSH:|%^WG:) (%^RLEN:) %>  ;
     [.#.|Cns]    _  %^RV: Cns:+ [:á|u|o]  %^EA: %^CSH:   %>  ;  
 
 !€ sääm^RCi^EA>n
@@ -910,14 +911,15 @@ i:0 <=> [.#.|Cns] _ ä: Cns:+ i2:i %>    [i|i2:i|Cns] Sgm:* %> ;
 
 "äRV to áá in Illative and Sg3"
 !! * __@RULENAME@__ \\  ... for täsni -> táásnán
-%^RV:á <=> ä: _  Cns:+ :á %^EA: (%^CSH:) %^RLEN:  ;
+%^RV:á <=> ä:á _  Cns:+ :á %^EA: (%^CSH:) %^RLEN:  ;
 
 !€ tä^RVsni^EA^CSH^RLEN>n
 !€ táásná000>n
 
 "Vowel lengthening äRV to aa "
 !! * __@RULENAME@__ \\  äigi aaigijd
-%^RV:a <=> ä:a _  Cns:+ i: %^WG: %^RLEN: %> i: ;
+%^RV:a <=> ä: _  Cns:+ i: %^WG: %^RLEN: %> i: ;
+           ä: _  Cns:+ [á|u] %^EA: %^WG: %^RLEN: %> ;
 
 
 
@@ -1070,7 +1072,7 @@ o:u <=>  _ %^RV:á Cns:+ u:  %^EWG: (%^RVSH:) %> ; ! 1) poccuu puásui
 
 "ye to uá og uo, part 1" 
 !! * __@RULENAME@__ \\  Part 1 of ye to uá for kyeli : kuálán 
-y:u <=> _ e:  Cns:+ Vow: %^EA: ((%^CSH:) %^RLEN:)  %> ;
+y:u <=> _ e:  Cns:+ Vow: %^EA: ((%^CSH:|%^WG:) %^RLEN:)  %> ;
         _ :o  Cns:+ :i (%^WG:) (%^CLEN:)  ([%^RVSH: |%^RLEN:] ) %> i: ; !syej%^RCi%^RVSH%^CLEN%>in
         _ :o  Cns:+ :i %^WG: %^CLEN: %^SVLOW: %> i: ;
         _ :o  Cns:  Cns: :i  %^WG: %^CLEN:  %^RVSH: %> i: ;
@@ -1078,7 +1080,7 @@ y:u <=> _ e:  Cns:+ Vow: %^EA: ((%^CSH:) %^RLEN:)  %> ;
 
 "ye to uá, part 2"
 !! * __@RULENAME@__ \\  Part 2 of ye to uá for kyeli : kuálán
-e:á <=> y: _  Cns:+ Vow: %^EA: (%^CSH:) (%^RLEN:)  %>  ;
+e:á <=> y: _  Cns:+ Vow: %^EA: (%^CSH:|%^WG:) (%^RLEN:)  %>  ;
 
 "ye to uo, part 2 "
 !! * __@RULENAME@__ \\  Part 2 of ye to uá for kyeli : kuolijn
