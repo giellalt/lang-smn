@@ -34,7 +34,7 @@ LEXICON ATTR !!= __@CODE@__ for stems with only attribute form
 LEXICON ALKKEE  !!= __@CODE@__ directing to X_TAHHEE, attr. älkkees
 +A+Attr:s K ; ! älkkees
 ALKKEE_COMMON ;
-+A: A_VUOTA ;
++A:%> A_VUOTA ;
 
 LEXICON PYECCEE  !!= __@CODE@__ directing to X_TAHHEE, attr. pyeccee
 +A+Attr: K ; 
@@ -54,7 +54,7 @@ LEXICON UCES !!= __@CODE@__ not yet done, attr uccâ
 +A:es%> COMP ;
 +A:â%^WG%> MUS ;
 +A:e%^WG%> MUS ;
-+A:e A_VUOTA ;
++A:e%> A_VUOTA ;
 +A+SgNomCmp:â R ;
 +A+SgNomCmp: R ;
 
@@ -65,6 +65,7 @@ LEXICON PUIGA !!= __@CODE@__ not yet done, attr puigâ
 +A:%> COMP ;
 +A:%> MUS ;
 +A+SgNomCmp: R ;
++A:%> A_VUOTA ;
 
 
 LEXICON HIAJU !!= __@CODE@__ directing to X_VUAGGU, attr. hiäjus
@@ -78,10 +79,11 @@ LEXICON HIAJU !!= __@CODE@__ directing to X_VUAGGU, attr. hiäjus
 LEXICON CEPPI !!= __@CODE@__ directing to X_AIGI, attr. čepis
 +A+Attr:%^WG%>s K ;
 +A: X_AIGI ;
-+A:%^WG%> COMPe ;
++A:%^WG%^CLEN%> COMPe ;
++A+Err/Orth:%^WG%> COMPe ;
 +A:%^WG%> MUS ;
 +A+SgNomCmp: R ;
-+A: A_VUOTA ;
++A:%> A_VUOTA ;
 
 LEXICON HERKKI !!= __@CODE@__ directing to X_KIRKKO, attr. herhis
 +A+Attr:%^WG%>s K ;
@@ -89,7 +91,7 @@ LEXICON HERKKI !!= __@CODE@__ directing to X_KIRKKO, attr. herhis
 +A:%^WG%> COMPe ;
 +A:%^WG%> MUS ;
 +A+SgNomCmp: R ;
-+A: A_VUOTA ;
++A:%> A_VUOTA ;
 
 
 LEXICON HUMO !!= __@CODE@__ directing to X_NJUNE, attr. humos
@@ -134,7 +136,7 @@ LEXICON NJUORAS !!= __@CODE@__ directing to X_RUONAS, attr. njuorâs
 +A: X_RUONAS ;
 +A:%^WG%>u COMPo ; 
 +A:%>u MOS ;
-+A: A_VUOTA ;
++A:%> A_VUOTA ;
 +A:%^WG A_ADV ; !ruávásávt kiärásávt
 +A+SgNomCmp:%^EWG%^RLEN R ;
 
@@ -145,13 +147,13 @@ LEXICON HAANIS !!= __@CODE@__ directing to X_PAAVIR, attr. hänis
 +A:%>u COMPo ; 
 +A:%>u MOS ;
 +A+SgNomCmp:%^EWG%^RLEN R ;
-+A:%^EWG%^RVSH A_VUOTA ;
++A:%^EWG%^RVSH%> A_VUOTA ;
 
 LEXICON KIARGUS_nocomp !!= __@CODE@__  like HAANIS, directing to X_PAAVIR, 
 +A+Attr:%^EWG%^RVSH K ; ! 
 +A: X_PAAVIR	  ;
 +A+SgNomCmp:%^EWG%^RLEN R ;
-+A:%^EWG%^RVSH A_VUOTA ;
++A:%^EWG%^RVSH%> A_VUOTA ;
 
 
 LEXICON HAAITIS !!= __@CODE@__ directing to X_PAAVIR, attr. rähis
@@ -160,7 +162,7 @@ LEXICON HAAITIS !!= __@CODE@__ directing to X_PAAVIR, attr. rähis
 +A:%^WG%>u COMPo ; 
 +A:%>u MOS ;
 +A+SgNomCmp:%^EWG%^RLEN R ;
-+A: A_VUOTA ;
++A:%> A_VUOTA ;
 
 LEXICON HEEITUG !!= __@CODE@__ directing to X_PAAVIR, attr. heitugis, heitugâs
 +A+Attr:%^WG%^RVSH%>is  K ; !heitugis
@@ -169,7 +171,7 @@ LEXICON HEEITUG !!= __@CODE@__ directing to X_PAAVIR, attr. heitugis, heitugâs
 +A:%^WG%>u COMPo ; 
 +A:%>u MOS ;
 +A+SgNomCmp:%^EWG%^RLEN R ;
-+A: A_VUOTA ;
++A:%> A_VUOTA ;
 
 
 LEXICON VAANIS !!= __@CODE@__ directing to  X_PAAVIR, attr. väni
@@ -178,7 +180,7 @@ LEXICON VAANIS !!= __@CODE@__ directing to  X_PAAVIR, attr. väni
 +A:%^WG%>u COMPo ; 
 +A:%>u MOS ;
 +A+SgNomCmp:%^EWG%^RLEN R ;
-+A:%^EWG%^RVSH A_VUOTA ;
++A:%^EWG%^RVSH%> A_VUOTA ;
 +A:%^EWG%^RVSH A_ADV ;
 
 
@@ -187,7 +189,7 @@ LEXICON NJAALGIS !!= __@CODE@__ directing to  X_KAARBIS, Attr. not in the lexico
 +A:%^WG%>u COMPo ; !njálgásub njá%^RVlgás%^ÁI
 +A:%>u MOS ;
 +A+SgNomCmp:%^EWG%^RVSH R ;
-+A:%^EWG%^RVSH A_VUOTA ; !njälgisvuođâ
++A:%^EWG%^RVSH%> A_VUOTA ; !njälgisvuođâ
 
 LEXICON KOSKES !!= __@CODE@__ directing to  A_VEESKIR, attr. koške
 +A+Attr:%^FCD%^EWG K ;     !attr. koške
@@ -195,7 +197,7 @@ A_VEESKIR ;
 +A:%^WG%>u COMPo ; 
 +A:%>u MOS ;
 
-+A:%^EWG A_VUOTA ;
++A:%^EWG%> A_VUOTA ;
 
 LEXICON FIIJNES !!= __@CODE@__ directing to  A_VEESKIR, attr. fiijnâ and fijnâ
 +A+Attr:%^FCD%^RLENâ K ;     !attr. fiijnâ
@@ -206,7 +208,7 @@ LEXICON KOOIDAS !!= __@CODE@__ directing to  A_VEESKIR, attr. koidâ
 A_VEESKIR ;
 +A:%>u COMPo ; 
 +A:%>u MOS ;
-+A:%^EWG A_VUOTA ;
++A:%^EWG%> A_VUOTA ;
 +A: A_ADV ;
 
 
@@ -214,8 +216,11 @@ LEXICON SUOTAS  !!= __@CODE@__ directing to  A_VEESKIR, attr. suotâs
 +A+Attr:%^EWG%^RVSH  K ; ! suotâs, vädis 
 A_VEESKIR ;
 +A:%>u COMPo ; 
-+A:%>u MOS ;
-+A:%^EWG A_VUOTA ;
++A:%^WG%>u COMPo ; 
++A+Err/Orth:%>u COMPo ; 
++A:%^WG%>u MOS ;
++A+Err/Orth:%>u MOS ;
++A:%^EWG%> A_VUOTA ;
 +A: A_ADV ; !ollásávt
 
 
@@ -228,10 +233,10 @@ LEXICON KEPPIS !!= __@CODE@__ directing to A_LITTER, attr. keppâ
 +A+Attr:â%> K ;    ! keppâ
 +A+Attr:is%>is K ;    ! keppisis
 :is A_LITTER ;
-+A:%^WG%>u COMPo ; 
-+A:%>u MOS ;
-+A+SgNomCmp:  R ;
-+A:is A_VUOTA ;
++A:is%>u COMPo ; 
++A:is%>u MOS ;
++A+SgNomCmp:is  R ;
++A:is%> A_VUOTA ;
 +A:âs A_ADV ;
 
 
@@ -257,9 +262,9 @@ LEXICON KEPPIS !!= __@CODE@__ directing to A_LITTER, attr. keppâ
 LEXICON PASTIL !!= __@CODE@__ directing to A_LITTER, attr. pastelis; adj is PASTEL
 +A+Attr:%>is  K ; !
 A_LITTER ;
-+A:%^WG%>u COMPo ; 
++A:%>u COMPo ; 
 +A:%>u MOS ;
-+A: A_VUOTA ;
++A:%> A_VUOTA ;
 +A: A_ADV ; !njyebžilávt
 +A+SgNomCmp: R ;
 
@@ -267,10 +272,10 @@ LEXICON FISKAD !!= __@CODE@__ directing to A_LITTER, attr. fiskis (fikâdis)
 +A+Attr:i%^WG%>s K ; ! fiskis
 +A+Attr+Err/Orth:âd%>is K ;
 :âd A_LITTER ;
-+A:%^WG%>u COMPo ; 
-+A:%>u MOS ;
++A:âd%>u COMPo ; 
++A:âd%>u MOS ;
 +A+SgNomCmp:i%^WG%>s R ;
-+A: A_VUOTA ;
++A:%> A_VUOTA ;
 +A: A_ADV ; !muččâdávt
 +A+Attr:i%^WG%>s A_LAGAN ; !čapisláván
 
@@ -283,7 +288,7 @@ LEXICON JUOLLAD !!= __@CODE@__ directing to A_LITTER, attr, juolis, juolâdis, j
 +A:%^WG%>u COMPo ; 
 +A:%>u MOS ;
 +A+SgNomCmp:i%^WG%>s R ;
-+A: A_VUOTA ; 
++A:%> A_VUOTA ; 
 
 
 LEXICON A_LITTER !!= __@CODE@__ directing to X_LITTER, no attr.
@@ -299,7 +304,7 @@ LEXICON ALMOS !!= __@CODE@__ directing to X_SAJOS, attr. almos
 +A:%^WG%>u COMPo ; 
 +A:%>u MOS ;
 +A+SgNomCmp:%^EWG%^SVSH  R ;
-+A: A_VUOTA ;
++A:%> A_VUOTA ;
 
 
 LEXICON A_APINA !!= __@CODE@__ directing to X_APINA, attr. apina
@@ -314,7 +319,7 @@ LEXICON SOOHAD !!= __@CODE@__ directing to X_EEMEED, attr. sohâdis
 +A: X_EEMEED ;
 +A:%^WG%>u COMPo ; 
 +A:%>u MOS ;
-+A: A_VUOTA ;
++A:%> A_VUOTA ;
 +A:%^WG A_ADV ; !jotelávt
 +A+SgNomCmp: R ;
 
@@ -343,7 +348,7 @@ LEXICON KUBDUV !!= __@CODE@__ . It doesn't fit with KAAMUV because of kubduvân,
 +A+Pl+Com+Err/Orth:%>ijgijn K ;     ! 
 +A+Pl+Abe:%>ijttáá K ;     ! kubduvijttáá
 +A+SgNomCmp: R ;
-+A: A_VUOTA ;
++A:%> A_VUOTA ;
 +A+Attr:%^FCDâg A_ADV  ;     !kubdâgávt 
 
 
@@ -358,8 +363,19 @@ LEXICON STYERES !!= __@CODE@__ directing to X_KAARBIS, attr. stuorrâ
 +A:%^FCD CCOMPe ;
 +A:%^FCD%^SLEN%> CMUS ;
 +A+Err/Orth:%^FCD%> CMUS ;
++A+Err/Orth:%^FCD%>u COMPo ; 
++A+Err/Orth:%^FCD%>u MOS ; 
 +A: X_KAARBIS ; !
 +A+SgNomCmp:%^FCDâ R ;
++A:%^EWG%^RLEN%> A_VUOTA ;
+
+LEXICON RIGES !!= __@CODE@__ directing to X_KAARBIS, attr. riges, 3st comparision
++A+Attr:%^EWG%^RLEN%>  K ; ! riges
++A:%>u COMPo ; 
++A:%>u MOS ; 
++A: X_KAARBIS ; !
++A+SgNomCmp:%^FCDâ R ;
++A:%^EWG%^RLEN%> A_VUOTA ;
 
 
 LEXICON A_CISSAAS !!= __@CODE@__ directing to  X_CISSAAS, not in use yet
@@ -423,7 +439,7 @@ LEXICON UANIHAS !!= __@CODE@__ directing to LAS_SUF, attr, -âš
 +A:%>u COMPo ;
 +A:%>u MOS ;
 +A: A_ADV ;
-+A:is A_VUOTA ;
++A:is%> A_VUOTA ;
 
 
 LEXICON UNOHAS !!= __@CODE@__ directing to LAS_SUF, attr, -is
@@ -442,7 +458,7 @@ LEXICON ANOLAS !!= __@CODE@__ directing to LAS_COMMON, attr, -âš
 +A: LAS_COMMON ; 
 +A:%> COMP ;
 +A:%>u MOS ; ! tehálumos
-+A:âš A_VUOTA ;
++A:âš%> A_VUOTA ;
 +A+SgNomCmp:âš R ;
 +A: A_ADV ; !máhđulávt
 
@@ -451,6 +467,7 @@ LEXICON LAGAN !!= __@CODE@__ directing to A_LITTER, attr. -lágán
 +A+Attr:láván K ;
 :lágán A_LITTER ;
 :láván A_LITTER ;
+!+A:%>u MOS ; ! jiešlágánumosáid
 
 LEXICON MUSTOTTEM !!= __@CODE@__ not all forms. attr. -es
 +A+Attr:s K;
@@ -469,7 +486,7 @@ LEXICON OLMOOSMETTUM !!= __@CODE@__, not all forms. attr. = Sg. Nom.
 +A+Attr: K ;
 +A+Sg+Nom: K ;
 +A+SgNomCmp: R ;
-+A: A_VUOTA ;
++A:%> A_VUOTA ;
 +A: A_ADV ;
 
 !! !!Comparision
