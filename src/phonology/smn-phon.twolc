@@ -744,7 +744,7 @@ Vy:0 <=> Vx: _  Cns:+ Vow:  Cns: [%^ÁI:|%^ÁE:] [%^WG:|%^EWG:] %^RVSH:  [%>|.#.
 !            Vx: _ Cns: (Cns:) Vow:+ Cns:+ Vow: Cns:  %^RLEN:  ; !! 2) 4st 
              Vx: _ Cns:+ (%^WG:) (%^CLEN:) (%^VHIGH:) %^RLEN: ;
        where Vx in (a e i o y á A E I O Á ) ! Ánná:Ááná u, U in separate rule Root vowel u length
-             Vy in (a e i o y á a e i o á) 
+             Vy in (a e i o y á a e i o á ) 
        matched ;
 
 		
@@ -757,6 +757,7 @@ Vy:0 <=> Vx: _  Cns:+ Vow:  Cns: [%^ÁI:|%^ÁE:] [%^WG:|%^EWG:] %^RVSH:  [%>|.#.
 "Root vowel ä:ää lenghtening"
 !! * __@RULENAME@__ \\ special rule, for avoiding conflict spä%^RVi4lih%^EWG%^RLEN
 %^RV:ä <=> ä _ Cns:+ Vow:+ Cns:+  %^CLEN: %^RLEN: ; !! 5) vä%^RVr%^RCid
+           ä _ Cns:+ (%^WG:) (%^CLEN:) (%^VHIGH:) %^RLEN: ;  ! This must be checked
           :ä _ Cns:* :i (%^SV:) Cns: (%^ÁI:) (%^FCD:) [%^EWG:|%^WG:] %^RLEN: [%>|.#.] ; !spääilih
 
 
@@ -891,7 +892,7 @@ i:0 <=> [.#.|Cns] _ ä: Cns:+ i2:i %>    [i|i2:i|Cns] Sgm:* %> ;
 "äRV to áá in Illative and Sg3"
 !! * __@RULENAME@__ \\  ... for täsni -> táásnán
 %^RV:á <=> ä: _  Cns:+ :á %^EA: (%^CSH:) %^RLEN:  ;
-           ä: _  Cns:+ [u|á|o] (%^WG:) (%^CLEN:) %^VHIGH: ;  ! čevžuin čiävžui
+           ä: _  Cns:+ [u|á|o] (%^WG:) (%^CLEN:) %^VHIGH: %^RLEN: ;  ! čevžuin čiävžui RLEN added
 
 !€ tä^RVsni^EA^CSH^RLEN>n
 !€ táásná000>n
@@ -1060,7 +1061,7 @@ o:u <=>  _ %^RV:á Cns:+ u:  %^EWG: (%^RVSH:) %> ; ! 1) poccuu puásui
 
 "ye to uá og uo, part 1" 
 !! * __@RULENAME@__ \\  Part 1 of ye to uá for kyeli : kuálán 
-y:u <=> _ e:  Cns:+ Vow: %^EA: ((%^CSH:|%^WG:) %^RLEN:)  %> ;
+y:u <=> _ e:  Cns:+ Vow: %^EA: ((%^CSH:|%^WG:) %^RLEN:)  %> ;  
         _ :o  Cns:+ :i (%^WG:) (%^CLEN:)  ([%^RVSH: |%^RLEN:] ) %> i: ; !syej%^RCi%^RVSH%^CLEN%>in
         _ :o  Cns:+ :i %^WG: %^CLEN: %^SVLOW: %> i: ;
         _ :o  Cns:  Cns: :i  %^WG: %^CLEN:  %^RVSH: %> i: ;
