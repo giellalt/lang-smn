@@ -43,7 +43,7 @@ LEXICON PYECCEE  !!= __@CODE@__ directing to X_TAHHEE, attr. pyeccee
 
 LEXICON ALKKEE_COMMON !!= __@CODE@__ common for ALKKEE and PYECCEE
 +A: X_TAHHEE ;
-+A:%^SVSH%> COMPe ; ! assab
++A:b%^SVSH COMPe ; ! assab
 +A:%> MUS ; ! váiváámus hoppuumus
 +A+SgNomCmp:  R ;
 
@@ -79,17 +79,17 @@ LEXICON HIAJU !!= __@CODE@__ directing to X_VUAGGU, attr. hiäjus
 LEXICON CEPPI !!= __@CODE@__ directing to X_AIGI, attr. čepis
 +A+Attr:%^WG%>s K ;
 +A: X_AIGI ;
-+A:%^WG COMPe ;
++A:b%^WG COMPe ;
 +A:%^WG%> MUS ;
 +A+SgNomCmp: R ;
 +A:%> A_VUOTA ;
 
 
-LEXICON KUKKE !!= __@CODE@__ directing to X_ALGE, attr. 
+LEXICON KUKKE !!= __@CODE@__ directing to X_ALGE, attr. kuhes
 +A+Attr:%^WG%>s K ;
 +A: X_ALGE ;
-+A:%^SV%^WG%^CLEN COMPe ;
-+A+Err/Orth:%^WG COMPe ;
++A:%^SVb%^WG COMPclen ;
++A+Err/Orth:b%^WG COMPe ;
 +A:%^WG%> MUS ;
 +A+SgNomCmp: R ;
 +A:%> A_VUOTA ;
@@ -98,7 +98,7 @@ LEXICON KUKKE !!= __@CODE@__ directing to X_ALGE, attr.
 LEXICON HERKKI !!= __@CODE@__ directing to X_KIRKKO, attr. herhis
 +A+Attr:%^WG%>s K ;
 +A: X_KIRKKO ;
-+A:%^WG%> COMPe ;
++A:b%^WG COMPe ;
 +A:%^WG%> MUS ;
 +A+SgNomCmp: R ;
 +A:%> A_VUOTA ;
@@ -107,14 +107,14 @@ LEXICON HERKKI !!= __@CODE@__ directing to X_KIRKKO, attr. herhis
 LEXICON HUMO !!= __@CODE@__ directing to X_NJUNE, attr. humos
 +A+Attr:%^WG%>s K ;
 +A: X_NJUNE ;
-+A:%> COMPe ;
++A:b COMPe ;
 +A:%> MUS ;
 +A+SgNomCmp: R ;
 
 LEXICON JULME !!= __@CODE@__ directing to X_OKKO, attr. julmes
 +A+Attr:%^WG%>s K ;
 +A: X_OKKO ;
-+A:%> COMPe ;
++A:b COMPe ;
 +A:%> MUS ;
 +A+SgNomCmp: R ;
 
@@ -132,7 +132,7 @@ LEXICON PYERI !!= __@CODE@__ directing to X_KYELI, attr. pyeri
 LEXICON NUORA !!= __@CODE@__ directing to X_KIELA, attr. nuora
 +A+Attr:  K ; 
 +A: X_KIELA	  ;
-+A:%> COMPe ;
++A:b COMPe ;
 +A:%> MUS ;
 
 
@@ -215,7 +215,6 @@ KOOIDAS ;
 
 LEXICON KOOIDAS !!= __@CODE@__ directing to  A_VEESKIR, attr. koidâ
 +A+Attr:%^FCDâ%^RVSH K ;     !attr. koidâ
-+A+Attr: K ;     !attr. koidâs
 A_VEESKIR ;
 +A:%>u COMPo ; 
 +A:%>u MOS ;
@@ -529,9 +528,15 @@ LEXICON OLMOOSMETTUM !!= __@CODE@__, not all forms. attr. = Sg. Nom.
  
  
 LEXICON COMPe !!= * __@CODE@__ NUORA uses this lexicon
-+Comp:b COMP-SUF ;
-+Comp+Attr:b%^RLEN K ;
-+Comp+Der/Dimin:bâš K ; !needs lexicon
++Comp: COMP-SUF ;
++Comp+Attr:%^RLEN K ;
++Comp+Der/Dimin:âš K ; !needs lexicon
+
+LEXICON COMPclen !!= * __@CODE@__ NUORA uses this lexicon
++Comp: COMP-SUFclen ;
++Comp+Attr:%^RLEN K ;
++Comp+Der/Dimin:âš K ; !needs lexicon
+
 
 LEXICON CCOMPe !!= * __@CODE@__ STYERES uses this lexicon
 +Comp:b CCOMP-SUF ;
@@ -562,13 +567,13 @@ LEXICON oCOMP-SUF  !!= * __@CODE@__
 +Sg+Acc:b K ;
 +Sg+Ill:ub%>on K ;
 +Sg+Loc:bb%>oost K ;
-+Sg+Com:bb%>oin K ;
++Sg+Com:b%>oin K ;
 +Sg+Abe:b%>ttáá K ;
 +Ess:bb%>on K ;
 +Par:bb%>od K ;
 +Pl+Nom:b%>oh K ;
 +Pl+Gen:b%>oi K ;
-+Pl+Acc:bb%>oid K ;
++Pl+Acc:b%>oid K ;
 +Pl+Ill:bb%>oid K ;
 +Pl+Loc:bb%>oin K ;
 +Pl+Com:b%>oiguin K ;
@@ -578,16 +583,6 @@ LEXICON CCOMP-SUF  !!= * __@CODE@__  STYERES uses this lexicon
 +Sg+Nom: K ;
 +Sg+Gen: K ;
 +Sg+Acc: K ;
-COMP-SUF_COMMON ;
-
-
-LEXICON COMP-SUF  !!= * __@CODE@__ 
-+Sg+Nom:%^SLEN K ;
-+Sg+Gen:%^SLEN K ;
-+Sg+Acc:%^SLEN K ;
-COMP-SUF_COMMON ;
-
-LEXICON COMP-SUF_COMMON  !!= * __@CODE@__
 +Sg+Ill:%^SLEN%>ân K ;
 +Sg+Loc:%^SLEN%>ist K ;
 +Sg+Com:%^SLEN%>áin K ;
@@ -609,6 +604,43 @@ LEXICON COMP-SUF_COMMON  !!= * __@CODE@__
 +Pl+Com+Err/Orth:%>ijguin K ;
 +Pl+Abe:%^SLEN%>ijttáá K ;
 +Pl+Abe+Err/Orth:%>ijttáá K ;
+
+
+LEXICON COMP-SUF  !!= * __@CODE@__ 
++Sg+Nom:%^RLEN%^SLEN K ;
++Sg+Gen:%^RLEN%^SLEN K ;
++Sg+Acc:%^RLEN%^SLEN K ;
++Sg+Ill:%>ân K ;
++Sg+Loc:%>ist K ;
++Sg+Com:%>áin K ;
++Sg+Abe:%^RLEN%^SLEN%>ttáá K ;
++Ess:%>in K ;
++Par:%>id K ;
++Pl+Nom:%>eh K ;
++Pl+Gen:%>ij K ;
++Pl+Acc:%>ijd K ;
++Pl+Ill:%>áid K ;
++Pl+Loc:%>ijn K ;
++Pl+Com:%>ijguin K ;
++Pl+Abe:%>ijttáá K ;
+
+LEXICON COMP-SUFclen  !!= * __@CODE@__ 
++Sg+Nom:%^CLEN%^SLEN K ;
++Sg+Gen:%^CLEN%^SLEN K ;
++Sg+Acc:%^CLEN%^SLEN K ;
++Sg+Ill:%>ân K ;
++Sg+Loc:%>ist K ;
++Sg+Com:%>áin K ;
++Sg+Abe:%^CLEN%^SLEN%>ttáá K ;
++Ess:%>in K ;
++Par:%>id K ;
++Pl+Nom:%>eh K ;
++Pl+Gen:%>ij K ;
++Pl+Acc:%>ijd K ;
++Pl+Ill:%>áid K ;
++Pl+Loc:%>ijn K ;
++Pl+Com:%>ijguin K ;
++Pl+Abe:%>ijttáá K ;
 
  
 LEXICON SUP_MUS  !!= * __@CODE@__
