@@ -145,7 +145,7 @@ LEXICON NJUORAS !!= __@CODE@__ directing to X_RUONAS, attr. njuorâs
 +A+Attr:%^EWG K ; !njuorâs
 +A: X_RUONAS ;
 +A:%^WG%>u COMPo ; 
-+A:%>u MOS ;
++A:%^WG%>u MOS ;
 +A:%> A_VUOTA ;
 +A:%^WG A_ADV ; !ruávásávt kiärásávt
 +A+SgNomCmp:%^EWG%^RLEN R ;
@@ -215,6 +215,7 @@ KOOIDAS ;
 
 LEXICON KOOIDAS !!= __@CODE@__ directing to  A_VEESKIR, attr. koidâ
 +A+Attr:%^FCDâ%^RVSH K ;     !attr. koidâ
++A+Attr: K ;     !attr. koidâs
 A_VEESKIR ;
 +A:%>u COMPo ; 
 +A:%>u MOS ;
@@ -307,12 +308,18 @@ LEXICON A_LITTER !!= __@CODE@__ directing to X_LITTER, no attr.
 !fiskâdub fiskâduboh fijnásuboi vaigâdub tergâdub pehtilub
 
 
+LEXICON CAVOS_nocomp !!= __@CODE@__ directing to X_SAJOS, attr. almos
++A+Attr:  K ; !
++A: X_SAJOS	  ;
++A+SgNomCmp:%^EWG%^SVSH  R ;
++A:%> A_VUOTA ;
+
 
 LEXICON ALMOS !!= __@CODE@__ directing to X_SAJOS, attr. almos
-+A+Attr:  K ; !placeholder
++A+Attr:  K ; !
 +A: X_SAJOS	  ;
-+A:%^WG%>u COMPo ; 
-+A:%>u MOS ;
++A:%^WG%^SVSH%>u COMPo ; 
++A:%^SVSH%>u MOS ;
 +A+SgNomCmp:%^EWG%^SVSH  R ;
 +A:%> A_VUOTA ;
 
@@ -320,6 +327,14 @@ LEXICON ALMOS !!= __@CODE@__ directing to X_SAJOS, attr. almos
 LEXICON A_APINA !!= __@CODE@__ directing to X_APINA, attr. apina
 +A+Attr:  K ; !placeholder
 +A: X_APINA	  ;
++A+SgNomCmp: R ;
+
+LEXICON SOOHAD_nocomp !!= __@CODE@__ directing to X_EEMEED, attr. sohâdis
++A+Attr:%^WG%^SVSH%>is  K ; !sapedis, sapedâs
++A+Attr:%^WG%^SVSH%>âs  K ; !
++A: X_EEMEED ;
++A:%> A_VUOTA ;
++A:%^WG A_ADV ; !jotelávt
 +A+SgNomCmp: R ;
 
 
@@ -466,7 +481,7 @@ LEXICON LAGAN !!= __@CODE@__ directing to A_LITTER, attr. -lágán
 
 LEXICON RAPPADAS
 +A+Attr:is K ;
-+A: X_RASTAGAS ;
++A:á X_RASTAGAS ;
 
 !+A+Sg+Nom:â%>š K ; ! rappâdâš
 !+A+Sg+Gen:%>áá K ; 			! rappâdáá
@@ -573,9 +588,9 @@ LEXICON COMP-SUF  !!= * __@CODE@__
 COMP-SUF_COMMON ;
 
 LEXICON COMP-SUF_COMMON  !!= * __@CODE@__
-+Sg+Ill:%>ân K ;
-+Sg+Loc:%>ist K ;
-+Sg+Com:%>áin K ;
++Sg+Ill:%^SLEN%>ân K ;
++Sg+Loc:%^SLEN%>ist K ;
++Sg+Com:%^SLEN%>áin K ;
 +Sg+Abe:%>ttáá K ;
 +Ess:%^SLEN%>in K ;
 +Par:%^SLEN%>id K ;
@@ -669,24 +684,33 @@ LEXICON MUSj-SUF !!= * __@CODE@__
 
 LEXICON CMUS-SUF !!= * __@CODE@__
 +Sg+Nom:mus K ;
-+Sg+Gen:mus K ;
-+Sg+Acc:mus K ;
++Sg+Gen:muu K ;
++Sg+Acc:muu K ;
 +Sg+Ill:mui K ;
 +Sg+Ill:musân K ;
 +Sg+Loc:muust K ;
 +Sg+Com:muin K ;
 +Sg+Abe:muuttáá K ;
 +Ess:mužžân K ;
++Ess:mussân K ;
 +Par:mužžâd K ;
++Par:mussâd K ;
 +Pl+Nom:muuh K ;
++Pl+Nom:musah K ;
 +Pl+Gen:mui K ;
++Pl+Gen:musâi K ;
 +Pl+Acc:muid K ; !7 stuárráámussáid 6 stuárráámusâid
++Pl+Acc:musâid K ; !7 stuárráámussáid 6 stuárráámusâid
 +Pl+Ill:muid K ;
++Pl+Ill:mussáid K ;
 !+Pl+Ill:%>ááid K ;
 +Pl+Loc:muin K ;
++Pl+Loc:musâin K ;
 +Pl+Com+Err/Orth:muigijn K ;
 +Pl+Com:muiguin K ;
++Pl+Com:musâiguin K ;
 +Pl+Abe:muittáá K ;
++Pl+Abe:musâittáá K ;
 
 
 LEXICON A_VUOTA  !!= * __@CODE@__ for derivation
