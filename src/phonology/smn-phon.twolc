@@ -98,7 +98,7 @@ i6:0 !!= * @CODE@ a fake vowel, to get WG rules to function, e.g. kyehtlov (kyeh
 
 !! Trigger ordering in twolc and lexc, from left to right:
 !!{{{
-!! SV|ÁE|ÁI|EE  AO|EA|SC  FCD  EWG|WG|CSH  CLEN  VHIGH  RVSH|RLEN  SLEN|SVSH  SVLOW
+!! SV|ÁE|ÁI|EE  AO|EA|SC  FCD  EWG|WG|CSH  CLEN  VHIGH|VBACK  RVSH|RLEN  SLEN|SVSH  SVLOW
 !!}}}
 
 !! !!Morpheme boundaries:
@@ -238,7 +238,7 @@ t:0 <=> [Vow:|%^SV:] _ t: WeakGrade \%^CLEN: ; !! 1)
 
 !€ las^RCe^SVtt^CLEN^SLEN>
 !€ lassee0t00>
-!
+!FRV:a
 !"xx:x consonant shortening for consonants belonging to two different patterns"
 ! * __@RULENAME@__ \\   weak grade or consonant shortening for illativ
 !Cx:0 <=> Vow: _  Cx: WeakGrade ([%^RVSH: |%^RLEN:]) ([%^SVLOW: | %^SLEN:]) %> ; !! 1) weak grade päddi : päädi tullâ:tuuláin
@@ -660,6 +660,7 @@ Vy:0 <=> Vx: _  Cns:+ [ Cns: - %^RC:0 ] Vow:  %^WG: (%^CLEN:) %^SVLOW: %> i: ; !
 		 Vx: _ [Cns:+ - č4:] Vow:+ Cns:+ ([%^ÁI:|%^ÁE:]) %^CSH: (%^SVSH:) [%>|.#.] ; ! pááppár : pápárân páápp4ár%^ÁI%^EWG%^RVSH%>id
 		 Vx: _ [Cns:+ - č4:] Vow:+ Cns:+ ([%^ÁI:|%^ÁE:]) %^EWG: %^RVSH: [%>|.#.] ; ! pááppár : pápárân viijđás%^ÁE%^EWG%^RVSH> 
 		 Vx: _ Cns:+ Vow %^CLEN: %^RVSH:  %> ;  ! njääh^RCe^CLEN^RVSH> = njähhe>
+		 Vx: _ Cns:+ Vow %^VBACK: %^RVSH:  %> ;  ! njääh^RCe^CLEN^RVSH> = njähhe>
        where Vx in ( a e i o u á ä y A E I O U Á Ä ) 
              Vy in ( a e i o u á ä y a e i o u á ä ) 
        matched ;
@@ -848,21 +849,19 @@ i:0 <=> [.#.|Cns] _ ä: Cns:+ i2:i %>    [i|i2:i|Cns] Sgm:* %> ;
 !       i: _  Cns:+ u2: %> [o|j Vow] ;
         i: _  Cns:+ u2: %> [:u|i|i2:i|Cns - j] Sgm:* %> ;
 
-
 !€ siämmu2>đ>
 !€ s0emmu>đ>
 
 "Different rules for ä:a, first vowel (or only vowel)"
 !! * __@RULENAME@__ \\  čääci:čassijn, läbži:labžijn
-ä:a <=>      _ [ä:|%^RV:] Cns:+ i    %^WG: ([%^RVSH:|%^RLEN:]) %> i: ;
+ä:a <=>      _ [ä:|%^RV:] Cns:+ i   (%^WG:) %^VBACK: ([%^RVSH:|%^RLEN:]) %> ;
+             _ [ä:|%^RV:] Cns:+ i    %^WG: ([%^RVSH:|%^RLEN:]) %> i: ;
              _ [ä:|%^RV:] Cns:+ i    %^WG:  [%^CLEN:|%^RLEN: ]  (%^SVLOW:) %> i: ; !čääci:čassijn
              _     %^RV:  Cns:+ i    %^WG:   %^RLEN:           %> i: ; !ä%^RVi4gi%^WG%^RLEN%>id
              _ ä:0        Cns:+ Vow: %^WG:   %^CLEN:  %^RVSH:  %> i:  ; !! čääci : čassijn
              _ ä:a        Cns:+ i2:i                           %> [i|i2:i|Cns] Sgm:* %> ;
    [.#.|Cns] _            Cns:+ i2:i                           %> [i|i2:i|Cns] Sgm:* %> ;
-             _ ä:         Cns:+ [a|â|i %^VBACK:] (%^EA:) (%^WG:|%^CSH:) (%^RVSH:)  %>        ; !  (%^RVSH:)
-   
-   
+             _ ä:         Cns:+ [a|â|i %^VBACK:] (%^EA:) (%^WG:|%^CSH:) (%^RVSH:)  %>        ; !  (%^RVSH:)   
 
 "ää to aa, second vowel"
 !! * __@RULENAME@__ \\  á:o in pairs like kuátij -> koođij, säämi -> saamij
@@ -871,7 +870,7 @@ i:0 <=> [.#.|Cns] _ ä: Cns:+ i2:i %>    [i|i2:i|Cns] Sgm:* %> ;
           ä:a _ Cns:+ :i   Cns: %^ÁI: [%^WG:|%^EWG:] %^RLEN: [%>|.#.] ; !viäskár:veeskir  viäskár%^ÁI%^EWG%^RLEN
           ä:  _ Cns:+ Vow:      %^ÁI:  %^EWG:                [%>|.#.] ; !puáhháá poovij
           ä:  _ Cns:+ i2:i                                    %> [i|i2:i|Cns] Sgm:* %> ;
-          ä:  _ Cns:+ [a|â|i %^VBACK:]  (%^EA:) (%^WG:|%^CSH:)   %>        ; ! to be written
+          ä:  _ Cns:+ [a|â (%^VBACK:)|i %^VBACK:]  (%^EA:) (%^WG:|%^CSH:)   %>        ; ! to be written
 !         ä:a _ Cns:+ [a|â]  (%^EA:) (%^WG:|%^CSH:)   %>        ; ! to be written
 
 
@@ -900,7 +899,8 @@ i:0 <=> [.#.|Cns] _ ä: Cns:+ i2:i %>    [i|i2:i|Cns] Sgm:* %> ;
 "Vowel lengthening äRV to aa "
 !! * __@RULENAME@__ \\  äigi aaigijd
 %^RV:a <=> ä: _  Cns:+ i: %^WG: %^RLEN: %> i: ;
-           ä: _  Cns:+ [á|u] %^EA: %^WG: %^RLEN: %> ;
+           ä: _  Cns:+ [á|u] %^EA: %^WG:          %^RLEN: %> ;
+           ä: _  Cns:+ [á|u]       %^WG: %^VBACK: %^RLEN: %> ;
 
 
 
