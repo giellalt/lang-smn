@@ -25,15 +25,16 @@ while(<>) {
 	s/fkagK/K/g ;
 
 
-	s/^//g ;
+	s/\^//g ;
 	s/b9/b/g ;
+	s/e9/e/g ;
 	s/d9/d/g ;
 	s/g9/g/g ;
 	s/h9/h/g ;
 	s/j9/j/g ;
 	s/k9/k/g ;
-	s/m9/m/g ;
-	s/n9/n5/g ;
+	s/m9/m5/g ;
+	s/n9/n/g ;
 	s/p9/p/g ;
 	s/r9/r/g ;
 	s/s9/s/g ;
@@ -42,8 +43,9 @@ while(<>) {
 	s/æ9/æ/g ;
 	s/7 / /g ;
 	s/8 / /g ;
-	s/9 / /g ;
 	s/tt /tt5 /g ;
+	s/mn /m5n /g ;
+	s/9 / /g ;
 
 	# SMJ escape char insertion:
 #	s/ss /ss9 /g ;
