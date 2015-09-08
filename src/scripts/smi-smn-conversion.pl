@@ -17,7 +17,7 @@ while(<>) {
 	s/BALAK/ANAR/g ;
 	s/HAWAII/ACCRA/g ;
 	s/SKANIK/SULLOT/g ;
-	s/RONDANE-LOAN/BERN/g ;
+#	s/RONDANE-LOAN/BERN/g ;
 	s/BETFAGE/BERN/g ;
 	s/DUORTNUS/BERN/g ;
 #	s/DUBAI/BERN/g ;
@@ -35,6 +35,7 @@ while(<>) {
 	s/k9/k/g ;
 	s/m9/m5/g ;
 	s/n9/n/g ;
+	s/o9/o/g ;
 	s/p9/p/g ;
 	s/r9/r/g ;
 	s/s9/s/g ;
