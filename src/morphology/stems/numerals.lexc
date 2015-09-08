@@ -384,7 +384,7 @@ LEXICON KYEHTI
 +Num+Pl+Loc:%^WG%^RLEN%>in K ; !oovtâin K ;
 +Num+Pl+Com:%^WG%^RVSH%>iguin K ; !ovtâiguin K ;
 +Num+Pl+Abe:%^WG%^RVSH%>ittáá K ; !ovtâittáá K ;
-
++Num:%^WG%^RLEN%> NUM_DER ;
 
 
 LEXICON OHTA
@@ -419,6 +419,7 @@ LEXICON KULMA_VITTA
 +Num+Pl+Loc:â%^WG%^RLEN%>in K ; !viiđâin  
 +Num+Pl+Com:â%^WG%>iguin K ; !viđâiguin  
 +Num+Pl+Abe:â%^WG%>ittáá K ; !viđâittáá  
++Num:â%^WG%^RLEN%> NUM_DER ;
 
 
 
@@ -438,12 +439,15 @@ LEXICON CICCAM !to be checked
 +Num+Pl+Loc:á%>in K ; !oovtâin K ;
 +Num+Pl+Com:i%>iguin K ; !ovtâiguin K ;
 +Num+Pl+Abe:i%>ittáá K ; !ovtâittáá K ;
++Num:%> NUM_DER ;
 
 
 LEXICON iLOV 
 +Num+Sg+Nom:lov K ; !love kyehtlov
 +Num+Sg+Acc:lov K ; !love kyehtlov
 +Num+Sg+Gen:i6%^WG%>lov K ; !love K ; kyehtlov
++Num:i6%^WG%>lov%> NUM_DER ;
+
 LOV_OBLi ;
 
 LEXICON iLOVE 
@@ -472,6 +476,7 @@ LEXICON LOV
 +Num+Sg+Nom:lov K ; !love kyehtlov
 +Num+Sg+Acc:lov K ; !love kyehtlov
 +Num+Sg+Gen:%^WG%^RLEN%>lov K ; !love K ; kuulmâlov
++Num:%^WG%^RLEN%>lov%> NUM_DER ;
 LOV_OBL ;
 
 LEXICON plussLOVE 
@@ -497,16 +502,21 @@ LEXICON LOV_OBL
 +Num+Pl+Abe:%^WG%>iluvi%>jttáá K ; !luvijttáá K ; kuovtijluvijttáá
 
 
+
 LEXICON hcLOV 
 +Num+Sg+Nom:lov K ; ! kähcilov
 +Num+Sg+Acc:lov K ; ! kähcilov
 +Num+Sg+Gen:%^WG%^RLEN%>lov K ; ! käävcilov
++Num:%^WG%^RLEN%>lov%> NUM_DER ;
+
 hcLOV_OBL ;
 
 LEXICON hcLOVE 
 +Num+Sg+Nom:love K ; !love 
 +Num+Sg+Acc:love K ; !love
 +Num+Sg+Gen:%^WG%>love K ; !love K ;
++Num:%^WG%>love%> NUM_DER ;
+
 hcLOV_OBL ;
 
 LEXICON hcLOV_OBL 
@@ -627,6 +637,7 @@ LEXICON CYETI
 +Num+Pl+Com:%^WG%^RVSH%>iguin K ;	 		! kuolijguin
 +Num+Pl+Com+Err/Orth:%^WG%^RVSH%>igijn K ;	 		! kuolijguin
 +Num+Pl+Abe:%^WG%^RVSH%>ittáá K ;			! kuolijttáá
++Num:%^WG%^RVSH%> NUM_DER ;
 
 LEXICON MISCNUM 			
 pelnub num ;
@@ -635,6 +646,7 @@ pelnubčyeđe num ;
 maŋgâ:ma%^RVŋg KULMA ;
 maŋgâčyet:maaŋgâ#čyet CYETI ;
 maŋgâlov:maaŋgâ#lov LOV ;
+
 
 
 LEXICON ORDINAL		   
@@ -794,11 +806,8 @@ LEXICON ARABICDELIMITER
  +Err/Orth:   ARABICCASE  ; ! This is the 1984s case.
  +Err/Orth:%' ARABICCASE  ; ! This is the 1984's case.
  +Err/Orth:%- ARABICCASE  ; ! This is the 1984-s case.
- +Der/ihasas:-ihás ANOLASJ  ;
- +Der/ihasas+Err/Orth:-ihas ANOLASJ  ;
- +Der/nummeersas:-nummeers ANOLASJ  ;
- +Der/piaivasas:piäivás ANOLASJ  ;
- +Der/kiardasas:kiärdás ANOLASJ  ;
+ :- NUM_DER ;
+  ARAB_DER ;
 
 LEXICON ARABICDELIMITERORD
 ! :          ARABICCASE0   ; ! This is the 1984:s case.
@@ -1024,6 +1033,15 @@ LEXICON ROMNUMTAGOBL
  +Ess:%>n        # ;
  +Par:%>d        # ;
 
+LEXICON ARAB_DER ! only for arabics
+ +Der/nummeersas:-nummeers ANOLASJ  ;
+
+
+LEXICON NUM_DER ! both for arabics and words
+ +Der/ihasas:ihás ANOLASJ  ;
+ +Der/ihasas+Err/Orth:ihas ANOLASJ  ;
+ +Der/piaivasas:piäivás ANOLASJ  ;
+ +Der/kiardasas:kiärdás ANOLASJ  ;
 
 
 
