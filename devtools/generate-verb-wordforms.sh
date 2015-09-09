@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # A short shell script to test word form generation for all continuation
-# lexicons except the ones listed in the exception list.
+# lexicons except the ones listed in the exception list. 
 
 ######### USER Variables - change these to your liking: #########
 # Codes for the word forms to be generated - list as many or few as needed:
