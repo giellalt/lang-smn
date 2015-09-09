@@ -746,7 +746,6 @@ Vy:0 <=> Vx: _ č4: (%^RC:) Vow:  %^WG: %^RVSH: (%^SVLOW:) [%>|.#.] ; !! 1) 2st 
        where Vx in (a e i o y á A E I O Á ) ! Ánná:Ááná u, U in separate rule Root vowel u length
              Vy in (a e i o y á a e i o á ) 
        matched ;
-
 		
 !€ le^RVkk4â^WG^RLEN>
 !€ lee0hâ00>
@@ -754,12 +753,17 @@ Vy:0 <=> Vx: _ č4: (%^RC:) Vow:  %^WG: %^RVSH: (%^SVLOW:) [%>|.#.] ; !! 1) 2st 
 !€ nju^RVne^SV^WG^RLEN^SLEN>st
 !€ njuunee000>st
 
-"Root vowel ä:ää lenghtening"
+"Root vowel ä:ää lenghtening and diphthongisation e:iä"
 !! * __@RULENAME@__ \\ special rule, for avoiding conflict spä%^RVi4lih%^EWG%^RLEN
-%^RV:ä <=> ä _ Cns:+ Vow:+ Cns:+  %^CLEN: %^RLEN: ; !! 5) vä%^RVr%^RCid
-!           ä _ Cns:+ Vow:+ (%^WG:) (%^CLEN:) (%^VHIGH:) %^RLEN: ;  ! This must be checked, added Vow:+¨
-          :ä _ Cns:* :i (%^SV:) Cns: (%^ÁI:) (%^FCD:) [%^EWG:|%^WG:] %^RLEN: [%>|.#.] ; !spääilih
+%^RV:ä <=> ä _ Cns:+            Vow:+ Cns:+  %^CLEN: %^RLEN: ; !! 5) vä%^RVr%^RCid
+           ä _ [Cns:+ - [h: h]] Vow: (Vow:)  (Cns:+) (Triggers: - %^RLEN:)*   %^RLEN: ;
+          :ä _ Cns:*  :i (%^SV:)          Cns: (%^ÁI:) (%^FCD:) [%^EWG:|%^WG:] %^RLEN: [%>|.#.] ; !spääilih
+          ä: _ Cns:+  i:                                                 %^WG: %^RLEN: %> \i: ; 
+         e:i _ Cns:+  i:                        %^EA:            (%^CSH:)     (%^RLEN:) %> ; ! 1) e:iä, 
+         e:i _ Cns:+  u:                                          %^EWG:   ; !kiärtuš čevžuin čiävžui
+         e:i _ Cns:+ [u|á|o] (%^WG:) (%^CLEN:) %^VHIGH: ;  ! čevžuin čiävžui
 
+!ergi -> iärgán
 
 "Root vowel o lengthening with vowel change before suffix i"
 !! * __@RULENAME@__ \\  alge : oolgijn 
@@ -900,7 +904,7 @@ i:0 <=> [.#.|Cns] _ ä: Cns:+ i2:i %>    [i|i2:i|Cns] Sgm:* %> ;
 
 "Vowel lengthening äRV to aa "
 !! * __@RULENAME@__ \\  äigi aaigijd
-%^RV:a <=> ä: _  Cns:+ i: %^WG: %^RLEN: %> i: ;
+%^RV:a <=> ä: _  Cns:+ i: (%^WG:) (%^VBACK:) %^RLEN: %> i: ;
            ä: _  Cns:+ [á|u] %^EA: %^WG:          %^RLEN: %> ;
            ä: _  Cns:+ [á|u]       %^WG: %^VBACK: %^RLEN: %> ;
 
@@ -1025,13 +1029,6 @@ a:á <=> \Vow: _ %^RV: h: h u %^WG: (%^RLEN:) %> ;
 %^RC:j <=> Vow: č4:i  _   WeakGrade %^CLEN: %^SVLOW: %> ; !! 1) eeč%^RCi:eijijn
 
 
-
-"Diphthongisation e:iä and lengthening ä:ää in Illative and Sg3 2"
-!! * __@RULENAME@__ \\  Part 2: ^RV to ä; ke%^RVrttu%^WG%^RLEN%>š
-%^RV:ä <=> e:i _ Cns:+ i: %^EA:  (%^CSH:) (%^RLEN:)   %> ; ! 1) e:iä, ergi -> iärgán 2 (e+e(RV) -> i + ä
-           ä: _ Cns:+ i:  %^WG: %^RLEN: %> \i: ; ! 2) ä:ää
-           e:i _ Cns:+ u: %^EWG:   ; !kiärtuš čevžuin čiävžui
-           e:i _ Cns:+ [u|á|o] (%^WG:) (%^CLEN:) %^VHIGH: ;  ! čevžuin čiävžui
 
 
 "ie to iä in Illative and Sg3"
