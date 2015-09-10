@@ -1592,65 +1592,57 @@ LEXICON C_KAAMUV  !!= __@CODE@__
 +N+SgNomCmp:%^WG%^RLEN  R ;
 
 LEXICON X_KAAMUV  !!= __@CODE@__
-+Sg+Nom:%^WG%^RLEN K ;   	! kaamuv
-+Sg+Gen:%^FCDu K ;  			 	! kammuu 
-+Sg+Acc:%^FCDu K ;   			! kammuu
-+Sg+Ill:%^FCD%>i   K ;       		! kammui
-+Sg+Loc:%^FCD%>st K ;        		! kammust
-+Sg+Com:%^FCD%>in K;        		 ! kammuin
-+Sg+Abe:%^FCDu%>ttáá K ;  		    ! kammuuttáá
-+Ess:%^CSH%>in K ;           ! kamuvin
-+Par:%^CSH%>id K ;            ! kamuvid
-+Pl+Nom:%^FCDu%>h K ;         ! kammuuh
-+Pl+Gen:%^FCD%>i K ;         ! kammui
-+Pl+Acc:%^FCD%>id K ;        ! kammuid
-+Pl+Ill:%^FCD%>id K ;        ! kammuid 
-+Pl+Loc:%^FCD%>in K ;        ! kammuin
-+Pl+Com:%^FCD%>iguin K ;     ! kammuiguin
-+Pl+Com+Err/Orth:%^FCD%>igijn K ;     ! kammuiguin
-+Pl+Abe:%^FCD%>ittáá K ;     ! kammuittáá
++Sg+Nom:%^WG%^RLEN%>v K ;   	! kaamuv
++Ess:%^CSH%>vin K ;           ! kamuvin
++Par:%^CSH%>vid K ;            ! kamuvid
+X_KAAMUV_COMMON ;
+
+LEXICON X_KAAMUV_COMMON  !!= __@CODE@__
++Sg+Gen:%^SV%^SLEN K ;  			 	! kammuu 
++Sg+Acc:%^SV%^SLEN K ;   			! kammuu
++Sg+Ill:%>i   K ;       		! kammui
++Sg+Loc:%>st K ;        		! kammust
++Sg+Com:%>in K;        		 ! kammuin
++Sg+Abe:%^SV%^SLEN%>ttáá K ;  		    ! kammuuttáá
++Pl+Nom:%^SV%^SLEN%>h K ;         ! kammuuh
++Pl+Gen:%>i K ;         ! kammui
++Pl+Acc:%>id K ;        ! kammuid
++Pl+Ill:%>id K ;        ! kammuid 
++Pl+Loc:%>in K ;        ! kammuin
++Pl+Com:%>iguin K ;     ! kammuiguin
++Pl+Com+Err/Orth:%>igijn K ;     ! kammuiguin
++Pl+Abe:%>ittáá K ;     ! kammuittáá
 
 
-LEXICON  C_POOVIJC  !!= __@CODE@__ could be possible to make a common solution with C_KAAMUV, but with Sg+Nom as its own.
+
+LEXICON C_POOVIJC  !!= __@CODE@__ 
++v1+N+Sg+Nom:%^ÁI%^EWG%>j K ;   	! poovij
++v1+N+Sg+Nom:%^ÁI%^EWG%>j K ;   	! poovij
++v1+N+Ess:%^CSH%>nin K ;           ! puáhánin
++v1+N+Par:%^CSH%>nid K ;            ! puáhánid
++v1+N: X_KAAMUV_COMMON ;
++v2: 3POOVIJ ;
+
+
+LEXICON 3POOVIJ  !!= __@CODE@__
 +N+Sg+Nom:%^ÁI%^EWG%>j K ;   	! poovij
 +N+SgNomCmp:%^ÁI%^EWG%>j  R ;
-+N+Sg+Gen:á K ;  			 	! puáhháá 
-+N+Sg+Acc:á K ;   			! puáhháá
-+N+Sg+Ill:%>i   K ;       		! puáhhái
-+N+Sg+Loc:%>st K ;        		! puáhhást
-+N+Sg+Com:%>in K;        		 ! puáhháin
-+N+Sg+Abe:á%>ttáá K ;  		    ! puáhhááttáá
-+N+Ess:%^WG%>nin K ;           ! puáhánin
-+N+Par:%^WG%>nid K ;            ! puáhánid
-+N+Pl+Nom:á%>h K ;         ! puáhhááh
-+N+Pl+Gen:%>i K ;         ! puáhhái
-+N+Pl+Acc:%>id K ;        ! puáhháid
-+N+Pl+Ill:%>id K ;        ! puáhháid 
-+N+Pl+Loc:%>in K ;        ! puáhháin
-+N+Pl+Com:%>iguin K ;     ! puáhháiguin
-+N+Pl+Com+Err/Orth:%>igijn K ;     ! puáhháiguin
-+N+Pl+Abe:%>ittáá K ;     ! puáhháittáá
-
-
-LEXICON C_POOVIJ2  !!= __@CODE@__
-+N+Sg+Nom:%^ÁI%^EWG%>j K ;   	! poovij
-+N+SgNomCmp:%^ÁI%^EWG%>j  R ;
-+N+Sg+Gen:á K ;  			 	! puáhháá 
-+N+Sg+Acc:á K ;   			! puáhháá
-+N+Sg+Ill:%^WG%>njân   K ;       		! puáhhái
-+N+Sg+Loc:%^WG%>njist K ;        		! puáhhást
-+N+Sg+Com:%^WG%>njáin K;        		 ! puáhháin
-+N+Sg+Abe:á%>njttáá K ;  		    ! puáhhááttáá
-+N+Ess:%^WG%>njin K ;           ! puáhánin
-+N+Par:%^WG%>njid K ;            ! puáhánid
-+N+Pl+Nom:%^WG%>njeh K ;         ! puáhhááh
-+N+Pl+Gen:%^WG%>njij K ;         ! puáhhái
-+N+Pl+Acc:%^WG%>njijd K ;        ! puáhháid
-+N+Pl+Ill:%^WG%>njáid K ;        ! puáhháid 
-+N+Pl+Loc:%^WG%>njijn K ;        ! puáhháin
-+N+Pl+Com:%^WG%>njijguin K ;     ! puáhháiguin
-+N+Pl+Com+Err/Orth:%^WG%>njijgijn K ;     ! puáhháiguin
-+N+Pl+Abe:%^WG%>njijttáá K ;     ! puáhháittáá
++N+Sg+Gen:%^SV%^SLEN K ;  			 	! puáhháá 
++N+Sg+Acc:%^SV%^SLEN K ;   			! puáhháá
++N+Sg+Ill:%^CSH%>njân   K ;       		! puáhánjân 
++N+Sg+Loc:%^CSH%>njist K ;        		! puáhánjist 
++N+Sg+Com:%^CSH%>njáin K;        		 ! puáhánjáin 
++N+Sg+Abe:%^SV%^SLEN%>njttáá K ;  		    ! puáhháánjttáá 
++N+Ess:%^CSH%>njin K ;           ! puáhánjin
++N+Par:%^CSH%>njid K ;            ! puáhánjid
++N+Pl+Nom:%^CSH%>njeh K ;         ! puáhánjeh
++N+Pl+Gen:%^CSH%>njij K ;         ! puáhánjij
++N+Pl+Acc:%^CSH%>njijd K ;        ! puáhánjijd
++N+Pl+Ill:%^CSH%>njáid K ;        ! puáhánjáid 
++N+Pl+Loc:%^CSH%>njijn K ;        ! puáhánjijn
++N+Pl+Com:%^CSH%>njijguin K ;     ! puáhánjijguin
++N+Pl+Com+Err/Orth:%^CSH%>njijgijn K ;     ! puáhánjijgijn
++N+Pl+Abe:%^CSH%>njijttáá K ;     ! puáhánjijttáá
 
 
 LEXICON C_OLMOOS  !!= __@CODE@__ lexicon for olmooš
