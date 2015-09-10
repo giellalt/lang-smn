@@ -310,10 +310,10 @@ ALGE ;
 
 LEXICON ALGE !!= __@CODE@__
 +N: X_ALGE ;
++N+SgNomCmp: R ;
 
 LEXICON X_ALGE !!= __@CODE@__
 +Sg+Nom: K ;						! alge
-+SgNomCmp: R ;
 +Sg+Gen:%^WG K ; 					! alge
 +Sg+Acc:%^WG K ; 					! alge
 +Sg+Ill:%^EA%^CSH%^RLEN%>n K ; 	! aalgan
@@ -412,6 +412,7 @@ LEXICON X_SAAMI   !!= __@CODE@__ to LAAVU after fix in twolc?  saämijn > saamij
 +Sg+Abe:%^WG%^RVSH%>ttáá  K ; ! sämittáá
 +Ess:%^CLEN%>n  K ;          ! säämmin
 +Par:%^CLEN%>d K ;           ! säämmid
++Sg+SgNomCmp: R ;                 ! 
 X_SAANIH ;
 
 LEXICON SAANIH   !!= __@CODE@__ plurals for SAAMI
@@ -419,7 +420,6 @@ LEXICON SAANIH   !!= __@CODE@__ plurals for SAAMI
 
 
 LEXICON X_SAANIH   !!= __@CODE@__ plurals for SAAMI
-+Sg+Nom: R ;                 ! 
 +Pl+Nom:%^WG%>h K ;          ! säämih
 +Pl+Gen:%^WG%>i K ;          ! saamij
 +Pl+Gen:%^WG%^RVSH%>i K ;    ! samij
@@ -799,7 +799,7 @@ LEXICON TAVLU !!= __@CODE@__
 
 
 LEXICON PUUVSAH !!= __@CODE@__  Plural tantum
-+N+Sg+Nom: R ; 						! puksâ ! especially in compounds
++N+SgNomCmp: R ; 						! puksâ ! especially in compounds
 +N+Pl+Nom:%>h K ;				! puuvsah
 +N+Pl+Nom:%^WG%>h K ;				! puuvsah
 +N+Pl+Gen:%^WG%>i K ; 				! puuvsâi
@@ -811,7 +811,6 @@ LEXICON PUUVSAH !!= __@CODE@__  Plural tantum
 +N+Pl+Abe:%^WG%>ittáá K ; 		! puvsâittáá
 
 LEXICON SKERREEH !!= __@CODE@__  Plural tantum, as PUUVSAH, but w/o WG
-+N+Sg+Nom: R ; 				
 +N+Pl+Nom:%>h K ;			
 +N+Pl+Gen:%^EE%>i K ; 			
 +N+Pl+Acc:%^EE%>id K ; 			
@@ -1047,10 +1046,10 @@ LEXICON X_EEMEED  !!= __@CODE@__
 +Sg+Abe:%>ttáá K ;		! eemeedttáá
 +Ess:%^CSH%^SVSH%>in K ;		! emedin
 +Par:%^CSH%^SVSH%>id K ;		! emedid
+ +N+SgNomCmp: R ;
 X_STEVILEH ;
 
 LEXICON X_STEVILEH  !!= __@CODE@__  plurals for EEMEED
-+Sg+Nom: R ;					! eemeed
 +Pl+Nom:%^CSH%^SVSH%>eh K ;		! emedeh
 +Pl+Gen:%^CSH%^SVSH%>ij K ;		! emedij
 +Pl+Acc:%^CSH%^SVSH%>ijd K ;	! emedijd
@@ -1420,7 +1419,6 @@ LEXICON JESANEH !!= __@CODE@__ plurals for AARRAN
 +N: X_JESANEH ;
 
 LEXICON X_JESANEH !!= __@CODE@__ plurals for AARRAN
-+Sg+Nom: R ;					! aarrân
 +Pl+Nom:%^CSH%>eh K ;	! aṛâneh
 +Pl+Gen:%^CSH%>ij K ;	! aṛânij
 +Pl+Acc:%^CSH%>ijd K ;	! aṛânijd
@@ -1576,7 +1574,6 @@ LEXICON HUKSIM  !!= __@CODE@__ NGA + Abe blank, SLEN for the rest
 VALJIIMEH ;
 
 LEXICON VALJIIMEH  !!= __@CODE@__ plurals for HUKSIM
-+N+Sg+Nom: R ;               ! huksim
 +N+Pl+Nom:%^SLEN%>eh K ;     ! huksiimeh
 +N+Pl+Gen:%^SLEN%>ij K ;  	! huksiimij
 +N+Pl+Acc:%^SLEN%>ijd K ;     ! huksiimijd    
@@ -1623,7 +1620,6 @@ SOKSAMEH ;
 
 
 LEXICON SOKSAMEH !!= __@CODE@__  plurals for POOVSA
-+N+Sg+Nom:%^FCD%^WG%^RLEN R ;			! poovsâ
 +N+Pl+Nom:%>eh K ;			! poksâmeh
 +N+Pl+Gen:%>ij K ;			! poksâmij
 +N+Pl+Acc:%>ijd K ;			! poksâmijd
@@ -1639,10 +1635,10 @@ LEXICON SOKSAMEH !!= __@CODE@__  plurals for POOVSA
 
 LEXICON KAAMUV  !!= __@CODE@__
 +N: X_KAAMUV ;
++N+SgNomCmp:%^WG%^RLEN  R ;
 
 LEXICON X_KAAMUV  !!= __@CODE@__
 +Sg+Nom:%^WG%^RLEN K ;   	! kaamuv
-+SgNomCmp:%^WG%^RLEN  R ;
 +Sg+Gen:%^FCDu K ;  			 	! kammuu 
 +Sg+Acc:%^FCDu K ;   			! kammuu
 +Sg+Ill:%^FCD%>i   K ;       		! kammui
@@ -2043,10 +2039,10 @@ LEXICON KAAHUS !!= __@CODE@__
 
 LEXICON RASTAGAS  !!= __@CODE@__ 
 +N: X_RASTAGAS ;
++N+SgNomCmp:â%>š  R ;
 
 LEXICON X_RASTAGAS  !!= __@CODE@__ 
 +Sg+Nom:â%>š K ; 		! rástágâš
-+SgNomCmp:â%>š  R ;
 +Sg+Gen:%^SV%^SLEN%> K ; 		! rástágáá
 +Sg+Acc:%^SV%^SLEN%> K ; 		! rástágáá
 +Sg+Ill:â%>žân K ;	! rástágâžân
