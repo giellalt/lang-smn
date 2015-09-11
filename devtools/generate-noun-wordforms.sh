@@ -29,7 +29,7 @@ gtcore=$GTCORE
 
 
 ################## DO NOT CHANGE BELOW HERE!!! ##################
-source $gtcore/scripts/generate-wordforms-for-cont_lexes.sh \
+source devtools/generate-wordforms-for-cont_lexes.sh \
         "$gtcore" \
         "$morf_codes" \
         "$source_file" \
