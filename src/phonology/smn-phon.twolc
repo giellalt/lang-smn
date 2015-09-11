@@ -674,7 +674,7 @@ Vy:0 <=> Vx: _ [Cns: - č4:] Cns:* (%^RC:) Vow:  %^WG: %^RVSH: (%^SVLOW:) [%>|.#
          Vx: _  Cns:+         Vow:  Cns: %^CSH: %^RVSH: %^SVSH: [%>|.#.] ; !! 2) 3syll kaavpug:kavpugân 
          Vx: _  Cns:+         Vow: (%^SV:) Cns:+ Vow: Cns:  %^RVSH: [%>|.#.] ; !táálhudem koomerdem
        where Vx in ( a e i o u y á ä ) 
-             Vy in ( a e i o u y á ä) 
+             Vy in ( a e i o u y á ä ) 
        matched ;
 
 
@@ -783,12 +783,19 @@ Vy:0 <=> Vx: _ č4: (%^RC:) Vow:  %^WG: %^RVSH: (%^SVLOW:) [%>|.#.] ; !! 1) 2st 
 
 "Root vowel u lengtning with vowel change before suffix i"
 !! * __@RULENAME@__ \\  alge : oolgijn 
-%^RV:u <=> o:u  _  Cns:+  e:     %^WG:  %^RLEN:  %> i: ; 
-           o:u  _  Cns:+  [â|a|i|á|u] (%^WG:|%^CSH:) (%^CLEN:)  %^VHIGH: %^RLEN: ;
-          [U|u] _ [Cns:+ - [h: h ]]  Vow: (Vow:) (Cns:+) (Triggers: - %^VHIGH:)* %^RLEN: ; 
+%^RV:u <=>  :u  _  Cns:+  e:     %^WG:  %^RLEN:  %> i: ; 
+            :u  _  Cns:+  [â|a|i|á|u] (%^WG:|%^CSH:) (%^CLEN:)  %^VHIGH: %^RLEN: ;
+          [U|u] _ [Cns:+ - [h: h]]  Vow: (Vow:) (Cns:+) (Triggers: - %^VHIGH:)* %^RLEN: ; 
+
+!%^RV:u <=> o:u  _  Cns:+  e:     %^WG:  %^RLEN:  %> i: ; 
+!           o:u  _  Cns:+  [â|a|i|á|u] (%^WG:|%^CSH:) (%^CLEN:)  %^VHIGH: %^RLEN: ;
+!          [U|u] _ [Cns:+ - [h: h]]  Vow: (Vow:) (Cns:+) (Triggers: - %^VHIGH:)* %^RLEN: ; 
           
 !€ lo^RVh^RCâ^RLEN>đ
 !€ luuh0â0>đ
+
+!€ mu^RVšti^WG^VHIGH^RLEN>j
+!€ muušti000>j
 
 !€ lo^RVh^RCá^WG^VHIGH^RLEN>im
 !€ luuv0á000im
@@ -801,18 +808,13 @@ Vy:0 <=> Vx: _ č4: (%^RC:) Vow:  %^WG: %^RVSH: (%^SVLOW:) [%>|.#.] ; !! 1) 2st 
 
 !! a rules
 
-"Root vowel change a:o before suffix i"
+"Root vowel change a:o before suffix i and for contract verbs"
 !! * __@RULENAME@__ \\  alge : olgijn 
-a:o <=> [Cns|.#.|#]: _ %^RV: Cns:+  e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> i: ; 
+a:o <=> [Cns|.#.|#] _  %^RV:  Cns:+ e:   (%^WG:) ([%^RLEN: |%^CLEN:] )  %> i: ; 
         [Cns|.#.|#] _ (%^RV:) Cns:+ Vow: (%^WG:|%^CSH:) (%^CLEN:) %^VHIGH: ;
-
-
-
-"Root vowel a:o for contract verbs"
-!! * __@RULENAME@__ 
-a:o <=> [Cns|.#.] _       Cns:+ u2:  %> [:u|i|i2:i|Cns - j] Sgm:* %> ;
-        [Cns|.#.] _       Cns:+ i2:i %>    [i|i2:i|Cns] Sgm:* %> ;
-        [Cns|.#.] _ %^RV: Cns:+ u %^CSH: %^RLEN: %> [m|đ|u] ;
+        [Cns|.#.]   _  %^RV:  Cns:+ u    %^CSH: %^RLEN: %> [m|đ|u] ; ! contr
+        [Cns|.#.]   _         Cns:+ u2:        %> [:u|i|i2:i|Cns - j] Sgm:* %> ; ! contr
+        [Cns|.#.]   _         Cns:+ i2:i       %> [i|i2:i|Cns]        Sgm:* %> ; ! contr
 
 
 "Root vowel o:u for contract verbs and Root vowel change o:u before suffix i"
@@ -820,7 +822,7 @@ a:o <=> [Cns|.#.] _       Cns:+ u2:  %> [:u|i|i2:i|Cns - j] Sgm:* %> ;
 o:u <=> [Cns|.#.] _         Cns:+  u2:  %> [:u|i|i2:i|Cns - j] Sgm:* %> ;
         [Cns|.#.] _         Cns:+  i2:i %>    [i|i2:i|Cns] Sgm:* %> ;
                   _  %^RV:  Cns:  (Cns:) e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> [i:|đ|m|v|p] ; !!  alge : olgijn, not ohce 
-        \Vow: _ (%^RV:) Cns:+  [â|a|i|á|u] (%^WG:|%^CSH:) (%^CLEN:) %^VHIGH: ; ! XXX ny
+            \Vow: _ (%^RV:) Cns:+  [â|a|i|á|u] (%^WG:|%^CSH:) (%^CLEN:) %^VHIGH: ; ! XXX ny
 
 !€ tohhi2>đ
 !€ tuhhi>đ
@@ -871,6 +873,7 @@ i:0 <=> [.#.|Cns] _ ä: Cns:+ i2:i %>    [i|i2:i|Cns] Sgm:* %> ;
              _ [ä:|%^RV:] Cns:+ [a|â] (%^EA:) (%^WG:|%^CSH:) (%^RVSH:)  %>        ; !  (%^RVSH:)   
              _ ä:         Cns:+ i  (%^EA:) (%^WG:|%^CSH:) %^VBACK: (%^RVSH:)  %>        ; !  (%^RVSH:)   
 !            _ ä:         Cns:+ i  (%^EA:) (%^WG:|%^CSH:) %^VBACK: (%^RVSH:)  %>        ; !  (%^RVSH:)                
+ [Cns|.#.|#] _ (%^RV:) Cns:+ Vow: (%^WG:|%^CSH:) (%^CLEN:) %^VHIGH: ;
 
 "ää to aa, second vowel"
 !! * __@RULENAME@__ \\  á:o in pairs like kuátij -> koođij, säämi -> saamij
@@ -1162,7 +1165,7 @@ Vx:e <=> Cns _ (%^VLOW:) %> [j Vow|e] ;
 "Stem vowel á to a for a root vowel"
 !! * __@RULENAME@__ \\  trying this as a phonological rule for -eđ verbs
 !á:a <=> a (%^RV:) Cns:+ _  %^CSH: %> ;
-á:a <=> a (%^RV:) Cns:+ _  [%^CSH:|%^WG:|%^EWG:] %> ;
+á:a <=> a (%^RV:) Cns:+ _  [%^CSH:|%^WG:] %> ;
 
 
 "Stem vowel â to a in Pl Nom -h"
