@@ -26,24 +26,33 @@ With this one you check that there is no technical issues. Read the report.
 * usmn, usmnNorm – analyse the forms, e.g. nieidáin
 * dsmn, dsmnNorm - generate the forms, e.g. nieidâ+N+Sg+Com
 
-Do you have a new analyser and generator? How to check the date/time:
+Do you have a new analyser and generator? How to check the date/time for when you analyser/generator was compiled:
 * ll src/
 
 !! Scripts as a help to look at the generated forms
-When you are in langs/smn
-{{{sh devtools/noun_minip.sh nieidâ
-sh devtools/adj_minip.sh uánehâš
-sh devtools/noun_minip.sh PIIVTAS | less
+When you are in langs/smn - the quick command:
+{{{sh devtools/noun_minip.sh nieidâ }}}
+{{{sh devtools/adj_minip.sh uánehâš }}}
+
+Get only the correct lemma:
+{{{sh devtools/noun_minip.sh '^nieidâ[:+]' }}}
+
+Look at all lemmas going to the same continuation lexicon:
+{{{sh devtools/noun_minip.sh PIIVTAS | less
 sh devtools/adj_minip.sh KOOIDAS | less }}}
 
 !! Test the miniparadigms in the stem files
 Look at all forms:
-{{grep '¢' src/morphology/stems/nouns.lexc | cut -d '¢' -f2 | cut -d '!' -f1 |preprocess |grep '[a-z]' |usmn |less }}
 
-Get the missing list:
-{{grep '¢' src/morphology/stems/nouns.lexc | cut -d '¢' -f2 | cut -d '!' -f1 |preprocess |grep '[a-z]' |usmn |grep '\?' | less }}
+{{grep '¢' src/morphology/stems/nouns.lexc | cut -d '¢' -f2 | cut -d '!' -f1 |preprocess |grep '[a-z]' |usmnNorm |less }}
+
+Get the forms which are not recognized by the analyser:
+
+{{grep '¢' src/morphology/stems/nouns.lexc | cut -d '¢' -f2 | cut -d '!' -f1 |preprocess |grep '[a-z]' |usmnNorm |grep '\?' | less }}
 
 !! Help to compare the lexicons
+You get a list in html (Safari) of all continuation lexicons with example words.
+
 When you are in langs/smn
 
 * sh devtools/generate-noun-wordforms.sh
