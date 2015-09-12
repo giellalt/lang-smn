@@ -742,7 +742,7 @@ Vy:0 <=> Vx: _ č4: (%^RC:) Vow:  %^WG: %^RVSH: (%^SVLOW:) [%>|.#.] ; !! 1) 2st 
 !! * __@RULENAME@__ \\  lekkâ : leehá-  meecij ko%^RVppâin
 %^RV:Vy <=> Vx _ [Cns:+ - [h: h ]]  Vow: (Vow:)  (Cns:+) (Triggers: - %^RLEN:)*   %^RLEN: ; !! 1) 2st and 3st
 !            Vx: _ Cns: (Cns:) Vow:+ Cns:+ Vow: Cns:  %^RLEN:  ; !! 2) 4st 
-             :Vx _ Cns:+ (%^WG:) (%^CLEN:) (%^VHIGH:) %^RLEN: ; ! 
+             :Vx _ Cns:+ (%^WG:) (%^CLEN:) (%^VHIGH:|%^VBACK:) %^RLEN: ; ! does not work, missing Vow
        where Vx in (a e i o y á A E I O Á ) ! Ánná:Ááná u, U in separate rule Root vowel u length
              Vy in (a e i o y á a e i o á ) 
        matched ;
@@ -917,7 +917,7 @@ i:0 <=> \Vow: _ ä: Cns:+ i2:i %>    [i|i2:i|Cns] Sgm:* %> ; !! * i:0 for iđ C 
 
 "Vowel lengthening äRV to aa "
 !! * __@RULENAME@__ \\  äigi aaigijd
-%^RV:a <=> ä:a _  Cns:+ i: (%^WG:) (%^VBACK:) %^RLEN: %> i: ;
+%^RV:a <=> ä:a _  Cns:+ i: (%^WG:) (%^VBACK:) %^RLEN: %> [i:|j] ;
            ä:a _  Cns:+ [á|u] %^EA: %^WG:          %^RLEN: %> ;
            ä:a _  Cns:+ [á|u]       %^WG: %^VBACK: %^RLEN: %> ;
 
@@ -1165,8 +1165,9 @@ Vx:e <=> Cns _ (%^VLOW:) %> [j Vow|e] ;
 "Stem vowel á to a for a root vowel"
 !! * __@RULENAME@__ \\  trying this as a phonological rule for -eđ verbs
 !á:a <=> a (%^RV:) Cns:+ _  %^CSH: %> ;
-á:a <=> a (%^RV:) Cns:+ _  [%^CSH:|%^WG:] %> ;
+á:a <=> \Vow: a (%^RV:) Cns:+ _  ([%^CSH:|%^WG:]) %> ; 
 
+! kalgá -> kalga
 
 "Stem vowel â to a in Pl Nom -h"
 !! * __@RULENAME@__ \\  silbâ to siilbah  %^WG%^RLEN%>hlove%>h
