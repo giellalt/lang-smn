@@ -245,9 +245,9 @@ LEXICON EVEN_IND_AASSAD
 +Prt+Sg1:i%^VBACK%>m K ; 	! %^VBACK
 +Prt+Sg2:i%^VBACK%>h K ; 	! %^VBACK
 +Prt+Sg3:â%^WG%>i K ; 		
-+Prt+Du1:á%^WG%^CLEN%^VBACK%>im K ;
-+Prt+Du2:á%^WG%^CLEN%^VBACK%>id K ;
-+Prt+Du3:á%^WG%^CLEN%^VBACK%^%>in K ; 	
++Prt+Du1:á%^WG%^CLEN%^VBACK%^RVSH%>im K ;
++Prt+Du2:á%^WG%^CLEN%^VBACK%^RVSH%>id K ;
++Prt+Du3:á%^WG%^CLEN%^VBACK%^RVSH%>in K ; 	
 +Prt+Pl1:â%^WG%>im K ; 
 +Prt+Pl2:â%^WG%>id K ; 
 +Prt+Pl3:i%^CLEN%^VBACK%^RVSH%>i3 K ; 	
@@ -954,16 +954,16 @@ LEXICON 2SYLL_ED  !!= * __@CODE@__ kalveđ
 +V: VINFINITES_ED ;
 +V+Ind: EVEN_IND_ED ;
 +V+Pot: EVEN_POT_ED ;
-+V+Cond:a%^WG%>čč EVEN_COND ; ! anneeđ a, jotteeđ á.
++V+Cond:á%^WG%>čč EVEN_COND ; ! anneeđ a, jotteeđ á.
 +V+Imprt: EVEN_IMPRT_ED ;
 
 LEXICON VINFINITES_ED
 +Inf:e%>đ K ;
 
 +Ind+Prs+ConNeg:e%^WG K ;
-+Ind+Prt+ConNeg:a%>m K ;
-+Cond+ConNeg:a%>ččii K ;
-+Pot+ConNeg:a%^WG%>a K ;
++Ind+Prt+ConNeg:á%>m K ;
++Cond+ConNeg:á%>ččii K ;
++Pot+ConNeg:á%^WG%>a K ;
 +Imprt+ConNeg:e%^WG K ;
 
 +PrfPrc+Pass:á%>m K ;
@@ -1117,20 +1117,20 @@ LEXICON 2SYLL_EED  !!= * __@CODE@__ yaml anneed
 +V: VINFINITES_EED ;
 +V+Ind: EVEN_IND_EED ;
 +V+Pot: EVEN_POT_EED ;
-+V+Cond:a%^WG%>čč EVEN_COND ; ! anneeđ a, jotteeđ á.
++V+Cond:á%^WG%>čč EVEN_COND ; ! anneeđ a, jotteeđ á.
 +V+Imprt: EVEN_IMPRT_EED ;
 
 LEXICON VINFINITES_EED
 +Inf:e%^CLEN%>eđ K ;
 
 +Ind+Prs+ConNeg:e%^WG K ;
-+Ind+Prt+ConNeg:a%^CLEN%>am K ;
-+Cond+ConNeg:á%^WG%>ččii K ;
-+Pot+ConNeg:a%^WG%^RLEN%>a K ;
++Ind+Prt+ConNeg:á%^CLEN%>ám K ;
++Cond+ConNeg:á%^WG%>ččii K ; !twolc á:a if a stem
++Pot+ConNeg:á%^WG%^RLEN%>á K ; !twolc á:a if a stem
 +Imprt+ConNeg:e%^WG K ;
 
-+PrfPrc+Pass:a%^CLEN%>am K ;
-+PrfPrc:a%^CLEN%>am K ;
++PrfPrc+Pass:á%^CLEN%>ám K ;
++PrfPrc:á%^CLEN%>ám K ; !twolc á:a if a stem
 +PrsPrc:e%^CLEN%>e K ;
 
 +VAbess+Err/Orth:e%^WG%>hennáá K ;
@@ -1716,6 +1716,12 @@ LEXICON EVEN_POT_ORROOD !!= * __@CODE@__
 
 !! !UD verbs
 
+LEXICON 2SYLL_KUARRUD  !!= * __@CODE@__ long dipht => -o
++V+Imprt+Sg2:o%^WG%^VHIGH%^RLEN%> K ;
++V+Prs+ConNeg:o%^WG%^RLEN%> K ;
++V+Actio+Com:o%^WG%>dijn K ;
+2SYLL_UD ; ! the rest as the normal verbform
+
 LEXICON 2SYLL_UD  !!= * __@CODE@__
 +V:  VINFINITES_UD ; ! pákkuđ has a PASS according to this contlex
 +V+Ind:u EVEN_IND_UD ;
@@ -1754,12 +1760,12 @@ LEXICON VINFINITES_UD !!= * __@CODE@__
 LEXICON EVEN_IND_UD !!= * __@CODE@__
 +Prs+Sg1:%^WG%^RLEN%>m K ;      
 +Prs+Sg2:%^WG%^RLEN%>h K ;      
-+Prs+Sg3: K ;             ! CSH
++Prs+Sg3:%^CSH K ;             ! CSH
 +Prs+Du1:%^CLEN%^SVLOW%>on K ;  
-+Prs+Du2:%>vettee K ; ! CSH
++Prs+Du2:%^CSH%>vettee K ; ! CSH
 +Prs+Du3:%>v K ;          
 +Prs+Pl1:%>p K ;          
-+Prs+Pl2:%>vetteđ K ; ! CSH
++Prs+Pl2:%^CSH%>vetteđ K ; ! CSH
 +Prs+Pl3:%>h4 K ; ! reusing h4 to prevent á to a !CSH
 
 +Prt+Sg1:%>m K ;
