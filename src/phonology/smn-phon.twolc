@@ -97,9 +97,11 @@ i6:0 !!= * @CODE@ a fake vowel, to get WG rules to function, e.g. kyehtlov (kyeh
 
 
 !! Trigger ordering in twolc and lexc, from left to right:
+
 !!{{{
 !! SV|ÁE|ÁI|EE  AO|EA|SC  FCD  EWG|WG|CSH  CLEN  VHIGH|VBACK  RVSH|RLEN  SLEN|SVSH  SVLOW
 !!}}}
+
 
 !! !!Morpheme boundaries:
 
@@ -156,7 +158,6 @@ Sets
 
 Definitions
 
-!WeakGrade =  (RealVow:) :RealVow (Vow:) (Cns:+) (%^VBACK:) ([%^SV:|%^ÁI:|%^ÁE:|%^EA:]) (%^FCD:) %^WG:0     ;   
 WeakGrade =  (RealVow:) :RealVow (Vow:) (Cns:+) ([%^SV:|%^ÁI:|%^ÁE:|%^EA:]) (%^FCD:) %^WG:0 (%^VBACK:)     ;   
 ConsonantShorting =  (RealVow:) :RealVow (Vow:) (Cns:+) ([%^SV:|%^ÁI:|%^ÁE:|%^EA:]) (%^FCD:) %^CSH:0 ;   
 
@@ -232,6 +233,7 @@ t:0 <=> [Vow:|%^SV:] _ t: WeakGrade \%^CLEN: ; !! 1)
         [Vow:|%^SV:] _ t: ConsonantShorting \%^CLEN:  ; !! 2)
         [RealVow:|%^SV:] _ t: Triggers:* %> \Vow: ; !! 3) uáivátt : uáivát
         Vow: Vow: _ t: %> â n  ; !! 4) uáiváátt>ân uáiváátân
+!        Vow _ t4:đ :Vow WeakGrade ;  ! OIOI
 
 !€ kulluutt^SVSH>
 !€ kullu00t0>
@@ -298,6 +300,8 @@ t:đ <=> Vow: _   k4: (%^RC:) WeakGrade ; !for ito : iđo
         Vow: _ (%^RC:) (j) WeakGrade (%^CLEN:0) ;
         Vow: _  %^RC:   j RealVow:  %^CLEN:0 ; ! Par and Ess
         Vow: _  (k4:) Vow:+ (Cns:) ([%^ÁI:|%^ÁE:]) %^EWG: ;
+!        t:0  _ :Vow WeakGrade ;  ! OIOI
+
 
 !€ jo^RVtk4â^WG^RLEN>
 !€ joođhâ00>
@@ -504,10 +508,10 @@ j:i <=> Vow: _ %^RC: :Vow   %^CLEN:  (%^RVSH:)       %> ; !Par Ess
 
 "Lengthening of consonant, e.g. for Ess/Par"
 !! * __@RULENAME@__ \\   piiru piirrun niisu niissun vahe vahheen suop%^RCâinj%^CLEN%^RLEN%^SVSH
-%^RC:Cy <=> Vow: Cx:   _ Vow (%^SV:)  Cns:* [%^CLEN: (%^SLEN:)|%^SVSH:] %> \[Vow: | s ] ; 
-            Vow: Cx:   _ Vow           Cns         %^CLEN:  %> \[ i:|s]  ;
-            Vow: (i4:) Cx:Cy _ Vow: (i:) Cns:+   %^CLEN: (%^RLEN:) ([%^SLEN:|%^SVSH:]) %>   ; !! 3) kepidem : keeppidmân
-            Vow:  Cx: _ :Vow+ Sgm:* [Triggers: - %^WG: ]* %^CLEN: ; ! XXX sjekk
+%^RC:Cy <=> Vow:       Cx:   _  Vow (%^SV:) Cns:* [%^CLEN: (%^SLEN:)|%^SVSH:] %> \[Vow: | s ] ; 
+            Vow:       Cx:   _  Vow         Cns    %^CLEN:  %> \[ i:|s]  ;
+            Vow: (i4:) Cx:Cy _  Vow: (i:)   Cns:+  %^CLEN: (%^RLEN:) ([%^SLEN:|%^SVSH:]) %>   ; !! 3) kepidem:keeppidmân
+            Vow:       Cx:   _ :Vow+ Sgm:*  [Triggers: - %^WG: ]* %^CLEN: ; ! XXX sjekk
 	where Cx in ( v t h5 c p)  
 	      Cy in ( v t h  c p)   
 		  matched ;
@@ -868,16 +872,16 @@ i:0 <=> \Vow: _ ä: Cns:+ i2:i %>    [i|i2:i|Cns] Sgm:* %> ; !! * i:0 for iđ C 
 
 "Different rules for ä:a, first vowel (or only vowel)"
 !! * __@RULENAME@__ \\  čääci:čassijn, läbži:labžijn
-ä:a <=>      _ [ä:|%^RV:] Cns:+ i   (%^WG:) %^VBACK: ([%^RVSH:|%^RLEN:]) %> ;
-             _ [ä:|%^RV:] Cns:+ i    %^WG: ([%^RVSH:|%^RLEN:]) %> i: ;
-             _ [ä:|%^RV:] Cns:+ i    %^WG:  [%^CLEN:|%^RLEN: ]  (%^SVLOW:) %> i: ; !čääci:čassijn
-             _     %^RV:  Cns:+ i    %^WG:   %^RLEN:           %> i: ; !ä%^RVi4gi%^WG%^RLEN%>id
-             _ ä:0        Cns:+ Vow: %^WG:   %^CLEN:  %^RVSH:  %> i:  ; !! čääci : čassijn
-             _ ä:a        Cns:+ i2:i                           %> [i|i2:i|Cns] Sgm:* %> ;
-   [.#.|Cns] _            Cns:+ i2:i                           %> [i|i2:i|Cns] Sgm:* %> ;
-             _ [ä:|%^RV:] Cns:+ [a|â] (%^EA:) (%^WG:|%^CSH:) (%^RVSH:)  %>        ; !  (%^RVSH:)   
-             _ ä:         Cns:+ i  (%^EA:) (%^WG:|%^CSH:) %^VBACK: (%^RVSH:)  %>        ; !  (%^RVSH:)   
-!            _ ä:         Cns:+ i  (%^EA:) (%^WG:|%^CSH:) %^VBACK: (%^RVSH:)  %>        ; !  (%^RVSH:)                
+ä:a <=>      _ [ä:|%^RV:] Cns:+ i   (%^WG:) %^VBACK: ([%^RVSH:|%^RLEN:])            %> ;
+             _ [ä:|%^RV:] Cns:+ i    %^WG:          ([%^RVSH:|%^RLEN:])             %> i: ;
+             _ [ä:|%^RV:] Cns:+ i    %^WG:           [%^CLEN:|%^RLEN: ]  (%^SVLOW:) %> i: ; !čääci:čassijn
+             _     %^RV:  Cns:+ i    %^WG:                    %^RLEN:               %> i: ; !ä%^RVi4gi%^WG%^RLEN%>id
+             _ ä:0        Cns:+ Vow: %^WG:                        %^CLEN:  %^RVSH:  %> i:  ; !! čääci : čassijn
+             _ ä:a        Cns:+ i2:i                                                %> [i|i2:i|Cns] Sgm:* %> ; !cntrV
+   [.#.|Cns] _            Cns:+ i2:i                                                %> [i|i2:i|Cns] Sgm:* %> ; !cntrV
+             _ [ä:|%^RV:] Cns:+ [a|â] (%^EA:) (%^WG:|%^CSH:) (%^RVSH:)              %> ; 
+             _ ä:         Cns:+ i (%^EA:) (%^WG:|%^CSH:) %^VBACK: (%^RVSH:)  %>       ; 
+!            _ ä:         Cns:+ i (%^EA:) (%^WG:|%^CSH:) %^VBACK: (%^RVSH:)  %>        ;
  [Cns|.#.|#] _ (%^RV:) Cns:+ Vow: (%^WG:|%^CSH:) (%^CLEN:) %^VHIGH: ; 
  [Cns|.#.|#] _ ä:      Cns:+ Vow: (%^WG:|%^CSH:) (%^CLEN:) %^VHIGH: ;
        \Vow: _ ä:      Cns:+ Vow:   %^WG:         (%^CLEN:) %^VBACK: %> ;
@@ -904,14 +908,16 @@ i:0 <=> \Vow: _ ä: Cns:+ i2:i %>    [i|i2:i|Cns] Sgm:* %> ; !! * i:0 for iđ C 
 
 "ää to áá in Illative and Sg3"
 !! * __@RULENAME@__ \\  ... for säämi > sáámán
-ä:á <=>          _  :á    Cns:+ [:á|u]  %^EA: (%^CSH:|%^WG:) (%^RLEN:) %>  ;    
+ä:á <=>          _   :á    Cns:+ [:á|u]  %^EA: (%^CSH:|%^WG:) (%^RLEN:) %>  ;    !:á
               ä: _        Cns:+ [:á|u]  %^EA: (%^CSH:|%^WG:) (%^RLEN:) %>  ;
+                 _   ä:0  Cns:+ [:á|u]  %^EA: (%^CSH:|%^WG:) (%^CLEN:) %^RVSH: %>  ;    ! ny: %%^EA%^CLEN%^RVSH
     [.#.|Cns]    _  %^RV: Cns:+ [:á|u|o]  %^EA: [%^CSH:|%^RVSH:]   %>  ;  
-        [Cns|.#.|#] _ %^RV: Cns:+ [u|á|o] (%^WG:) (%^CLEN:) %^VHIGH: ;  ! čevžuin čiävžui
+     [Cns|.#.|#] _ %^RV: Cns:+ [u|á|o] (%^WG:) (%^CLEN:) %^VHIGH: ;  ! čevžuin čiävžui
 
 !€ sääm^RCi^EA>n
 !€ sáám0á0>n
 
+!€ njääh^RV0^EA^CLEN^RVSH>on
 
 "äRV to áá in Illative and Sg3"
 !! * __@RULENAME@__ \\  ... for täsni -> táásnán
@@ -1077,7 +1083,7 @@ o:u <=>  _ %^RV:á Cns:+ u:  %^EWG: (%^RVSH:) %> ; ! 1) poccuu puásui
 "ye to uá og uo, part 1" 
 !! * __@RULENAME@__ \\  Part 1 of ye to uá for kyeli : kuálán 
 y:u <=> _ e:  Cns:+ Vow: %^EA: ((%^CSH:|%^WG:) %^RLEN:)  %> ;  
-        _ :o  Cns:+ :i (%^WG:) (%^CLEN:) (%^VBACK:|%^VHIGH:) ([%^RVSH: |%^RLEN:] ) %> i: ; !syej%^RCi%^RVSH%^CLEN%>in
+        _ :o  Cns:+ :i (%^WG:) (%^CLEN:) (%^VBACK:|%^VHIGH:) ([%^RVSH: |%^RLEN:] ) %> [i:|j] ; !syej%^RCi%^RVSH%^CLEN%>in
         _ :o  Cns:+ :i %^WG: %^CLEN: %^SVLOW: %> i: ;
         _ :o  Cns:  Cns: :i  %^WG: %^CLEN:  %^RVSH: %> i: ;
         _ :o  Cns:+ i2:i %> [i|i2:i|Cns] Sgm:* %> ; 
@@ -1087,11 +1093,11 @@ y:u <=> _ e:  Cns:+ Vow: %^EA: ((%^CSH:|%^WG:) %^RLEN:)  %> ;
 "ye to uá, part 2"
 !! * __@RULENAME@__ \\  Part 2 of ye to uá for kyeli : kuálán
 e:á <=> y: _  Cns:+ Vow: %^EA: (%^CSH:|%^WG:) (%^RLEN:)  %>  ;
-        y: _  Cns:+ [u|á|o] (%^WG:) (%^CLEN:) (%^VHIGH:|%^VBACK:) %> ;  ! čevžuin čiävžui
+        y: _  Cns:+ [u|á|o] (%^WG:) (%^CLEN:) (%^VHIGH:|%^VBACK:) (%^RLEN:) %> ;  ! čevžuin čiävžui
 
 "ye to uo, part 2 "
 !! * __@RULENAME@__ \\  Part 2 of ye to uá for kyeli : kuolijn
-e:o <=> y: _  Cns:+ :i (%^WG:) (%^CLEN:) ([%^RVSH: |%^RLEN:] )  %> i: ;
+e:o <=> y: _  Cns:+ :i (%^WG:) (%^CLEN:) (%^VBACK:) ([%^RVSH: |%^RLEN:] )  %> [i:|j] ;
         y: _  Cns:+ :i %^WG: %^CLEN: %^SVLOW: %> i: ;
         y: _  Cns: Cns: :i  %^WG: %^CLEN: %^RVSH: %> i: ;
         y: _  Cns:+ i2:i %> [i|i2:i|Cns] Sgm:* %> ; 
@@ -1171,7 +1177,8 @@ Vx:e <=> Cns _ (%^VLOW:) %> [j [Vow - â]|e] ; !not hit karri>jân
 "Stem vowel á to a for a root vowel"
 !! * __@RULENAME@__ \\  trying this as a phonological rule for -eđ verbs
 !á:a <=> a (%^RV:) Cns:+ _  %^CSH: %> ;
-á:a <=> \Vow: a (%^RV:) Cns:+ _  ([%^CSH:|%^WG:]) %> ; 
+á:a <=> \Vow: a (%^RV:) Cns:+ _  ([%^CSH:|%^WG:])  (%^CLEN:) (%^RLEN:) %> ; 
+        \Vow: a (%^RV:) Cns:+ :a  ([%^CSH:|%^WG:]) (%^CLEN:) (%^RLEN:) %> _ ; 
 
 ! kalgá -> kalga
 
