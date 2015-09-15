@@ -24,6 +24,11 @@ With this one you check that there is no technical issues. Read the report.
 !genererated missing nouns, adjectives, verbs, propernouns
 * These are dynamic tests, and tests all the lemmas in the stemfiles, also the new lemmas you just added. Testing that it is possible to generate the lemmas as base form. This test does not test the inflection, but very often the testing still reveal if a lemma has got the wrong continuation lexicon.
 
+!! make check only in test/src/morphology/
+Test only genererating of nouns, adjectives, verbs, propernouns (no yaml-tests). Two ways:
+* cd test/src/morphology/ and then  "make check" or in smn-directory:
+* make check SUBDIRS=test/src/morphology/
+
 !! test the work
 * usmn, usmnNorm – analyse the forms, e.g. nieidáin
 
