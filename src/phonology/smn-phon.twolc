@@ -535,14 +535,14 @@ j:i <=> Vow: _ %^RC: :Vow   %^CLEN:  (%^RVSH:)       %> ; !Par Ess
 
 "Lengthening of root consonant x:yy 1"
 !! * __@RULENAME@__ \\  
-Cx:Cy <=> Vow:  _ %^RC: :Vow+ Cns:* [Triggers: -  %^FCD:]* %^CLEN: (%^RVSH:) ([%^SVLOW: |%^SLEN:]) %> [ i:|s] ;
+Cx:Cy <=> Vow:  _ %^RC: :Vow+ Cns:* [Triggers: -  %^FCD:]* %^CLEN: (%^RVSH:) ([%^SVLOW: |%^SLEN:]) %> [ i:|s|u] ;
 	where Cx in ( h p c )
 		  Cy in ( v v s ) 
 		  matched ;
 
 "Lengthening of root consonant x:yy 2"
 !! * __@RULENAME@__ \\  
-%^RC:Cy <=> Vow: Cx:Cy _ :Vow+ Cns:* [Triggers: - %^FCD:]* %^CLEN:  (%^RVSH:) ([%^SVLOW: |%^SLEN:]) %> [ i:|s] ;
+%^RC:Cy <=> Vow: Cx:Cy _ :Vow+ Cns:* [Triggers: - %^FCD:]* %^CLEN:  (%^RVSH:) ([%^SVLOW: |%^SLEN:]) %> [ i:|s|u] ;
 	where Cx in ( h p c )
 		  Cy in ( v v s ) 
 		  matched ;
@@ -999,13 +999,12 @@ u:o <=>  [.#.|#] _     Cns:+ u:o %^SV: %^WG: %^SLEN:  %^SVLOW: [%>|.#.]  ; !%^SV
          [.#.|#] _     Cns:+ u:o       %^WG:          %^SVLOW: [%>|.#.]  ; 
                  _ á:  Cns:+ u2:                               %> [:u|i|i2:i|Cns - j] Sgm:* %> ;
                  _ á:  Cns:+ i2:i                              %>    [i|i2:i|Cns]     Sgm:* %> ; 
-!                _ á:  Cns:* i %^WG:                           %> i: ; ! rydd neste
-                 _ á:  Cns:+ i %^WG:                           %>  ; 
      [Cns|.#.|#] _ á:  Cns:+ i        (%^WG:)         %^VBACK: %>  ;   ! oođđim            
                  _ á:0 Cns:* i %^WG:          %^CLEN: %^SVLOW: %> i:  ;
-                 _ á:  Cns:* i %^WG:                 (%^RLEN:) %> i: ; 
-                 _ á:0 Cns:+ i %^WG:                   %^RVSH: %> i: ;
     		     _  á:o Cns:+ Vow: %^ÁI: %^EWG: ; !puáhháá : poovij ! XXX
+                 _ á:0 Cns:+ i %^WG:                   %^RVSH: %> i: ;
+                 _ á:  Cns:* i %^WG:                 (%^RLEN:) %> i: ; 
+!                _ á:  Cns:+ i %^WG:                           %>  ; 
                  
 
 !€ uáinu2>đ
