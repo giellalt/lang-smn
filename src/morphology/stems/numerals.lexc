@@ -821,7 +821,8 @@ LEXICON ARABICDELIMITER
  +Err/Orth:%' ARABICCASE  ; ! This is the 1984's case.
  +Err/Orth:%- ARABICCASE  ; ! This is the 1984-s case.
  :- NUM_DER ;
-  ARAB_DER ;
+ :- ARAB_DER ;
+ +Cmp-#loho:-lo%^RVh%^RCo 2KIRKKO ; 
 
 LEXICON ARABICDELIMITERORD
 ! :          ARABICCASE0   ; ! This is the 1984:s case.
@@ -1048,8 +1049,9 @@ LEXICON ROMNUMTAGOBL
  +Par:%>d        # ;
 
 LEXICON ARAB_DER ! only for arabics
- +Der/nummeersas:-nummeers ANOLASJ  ;
- +Der/asahas:-ahas ANOLASJ  ;
+ +Der/nummeersas:nummeers ANOLASJ  ;
+ +Der/asahas:ahas ANOLASJ  ;
+
 
 
 LEXICON NUM_DER ! both for arabics and words
@@ -1062,7 +1064,6 @@ LEXICON NUM_DER ! both for arabics and words
  +Der/loonjag:loonjâg PASTIL  ;
  +Der/jienasas:jienâs ANOLASJ ;
  +Der/ivvaas:ivváá A_VUALAAS ;
-
 
 
 ! A final section with some isolated numeral expresssions !
