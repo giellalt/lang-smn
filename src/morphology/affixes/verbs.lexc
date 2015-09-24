@@ -1738,9 +1738,10 @@ LEXICON EVEN_POT_ORROOD !!= * __@CODE@__
 
 LEXICON 2SYLL_KUARRUD  !!= * __@CODE@__ long dipht => -o
 +V:  VINFINITES_KUARRUD ; ! pákkuđ has a PASS according to this contlex
-+V+Ind:u EVEN_IND_KUARRUD ;
++V+Ind: EVEN_IND_KUARRUD ;
 +V+Pot: EVEN_POT_KUARRUD ;
 +V+Cond:u%^WG%>čč EVEN_COND ;
++V+Cond:o%^WG%>čč EVEN_COND ;
 +V+Imprt: EVEN_IMPRT_KUARRUD ;
 
 
@@ -1748,13 +1749,15 @@ LEXICON VINFINITES_KUARRUD !!= * __@CODE@__
 +Inf:u%>đ K ;
 
 +Ind+Prs+ConNeg:u%^WG%^RLEN%> K ;
++Ind+Prs+ConNeg:o%^WG%^RVSH%> K ;
 +Ind+Prt+ConNeg:u2m K ;
-+Cond+ConNeg:u2%^WG%>ččii K ;
-+Pot+ConNeg:u%>u K ;
++Cond+ConNeg:u2%^WG%^RLEN%>ččii K ;
++Cond+ConNeg:o%^WG%^RVSH%>ččii K ;
++Pot+ConNeg:u2%>u K ;
 +Imprt+ConNeg:u2 K ;
 
 +PrfPrc+Pass:u2%>m K ;
-+PrfPrc:u2%>m K ;
++PrfPrc:u%>m K ;
 +PrsPrc:o%^SVLOW%>o K ;
 
 !+V+Prs+ConNeg:o%^WG%^RLEN%> K ; These 3 should be checked. 
@@ -1763,22 +1766,28 @@ LEXICON VINFINITES_KUARRUD !!= * __@CODE@__
 
 +VAbess+Err/Orth:u%^WG%>hennáá K ;
 +VAbess+Err/Orth:u%^WG%>hinnáá K ;
++VAbess+Err/Orth:o%^WG%>hennáá K ;
++VAbess+Err/Orth:o%^WG%>hinnáá K ;
 +VAbess:u%^WG%>hánnáá K ;
++VAbess:o%^WG%>hánnáá K ;
 
 +Actio+Com+PxSg1:u2%>dijnân K ;
 +Actio+Com+PxSg2:u2%>dijnâd K ;
 +Actio+Com+PxSg3+Err/Orth:u%>dijnes K ;
 +Actio+Com+PxSg3:u2%>dijnis K ;
 +Actio+Com:u2%^WG%>dijn K ;
++Actio+Com:o%^WG%>dijn K ;
 !+Actio+Com:o%^WG%>dijn K ;
-+Actio+Ess:u2%>min K ;
-+Actio+Ill:u2%>mân K ;
-+Actio+Loc:u2%>mist K ;
-+Actio:u2%>m K ;
++Actio+Ess:u%^CSH%>min K ;
++Actio+Ill:u%^CSH%>mân K ;
++Actio+Loc:u%^CSH%>mist K ;
++Actio:u%>m K ;
 
 LEXICON EVEN_IND_KUARRUD !!= * __@CODE@__
-+Prs+Sg1:u%^WG%^RLEN%>m K ;      
-+Prs+Sg2:u%^WG%^RLEN%>h K ;      
++Prs+Sg1:u%^WG%^RLEN%>m K ;
++Prs+Sg1:o%^WG%^RLEN%>m K ;
++Prs+Sg2:u%^WG%^RLEN%>h K ; 
++Prs+Sg2:o%^WG%^RLEN%>h K ; 
 +Prs+Sg3:u%^CSH K ;
 +Prs+Du1:o%^CLEN%>on K ;  
 +Prs+Du2:u%^CSH%>vettee K ; ! CSH
@@ -1787,35 +1796,48 @@ LEXICON EVEN_IND_KUARRUD !!= * __@CODE@__
 +Prs+Pl2:u%^CSH%>vetteđ K ; ! CSH
 +Prs+Pl3:u%^CSH%>h4 K ; ! reusing h4 to prevent á to a !CSH
 
-+Prt+Sg1:u%^WG%>m K ;
-+Prt+Sg2:u%^WG%>h K ;
++Prt+Sg1:u2%^RLEN%>m K ;
++Prt+Sg2:u2%^RLEN%>h K ;
 +Prt+Sg3:u%^WG%^RLEN%>i K ;
-+Prt+Du1:u%^WG%>im K ;
-+Prt+Du2:u%^WG%>id K ;
-+Prt+Du3:u%^WG%>in K ;
++Prt+Sg3:o%^WG%^RVSH%>i K ;
++Prt+Du1:u%^WG%^RLEN%>im K ;
++Prt+Du1:o%^WG%^RVSH%>im K ;
++Prt+Du2:u%^WG%^RLEN%>id K ;
++Prt+Du2:o%^WG%^RVSH%>id K ;
++Prt+Du3:u%^WG%^RLEN%>in K ;
++Prt+Du3:o%^WG%^RVSH%>in K ;
 +Prt+Pl1:u%^WG%^RLEN%>im K ;
++Prt+Pl1:o%^WG%^RVSH%>im K ;
 +Prt+Pl2:u%^WG%^RLEN%>id K ;
-+Prt+Pl3:u%^CLEN%>u K ;
++Prt+Pl2:o%^WG%^RVSH%>id K ;
++Prt+Pl3:u2%^CLEN%>u K ;
 
 
 LEXICON EVEN_POT_KUARRUD !!= * __@CODE@__
-+Sg1:o%^CLEN%>om K ;
-+Sg2:o%^CLEN%>oh K ;
++Sg1:o%^WG%>om K ;
++Sg2:o%^WG%>oh K ;
 +Sg3:u%^WG%^RLEN%>š K ;
 +Du1:u%^WG%>žeen K ;
++Du1:o%^WG%>žeen K ;
 +Du2:u%^WG%^RLEN%>švettee K ;
-+Du3:u%^WG%^RVSH%>žává K ;
-+Pl1:u%^WG%^RVSH%>žep K ;
++Du2:o%^WG%>švettee K ;
++Du3:u%^WG%^RLEN%>žává K ;
++Du3:o%^WG%^RVSH%>žává K ;
++Pl1:u%^WG%^RLEN%>žep K ;
++Pl1:o%^WG%^RVSH%>žep K ;
 +Pl2:u%^WG%^RLEN%>švetteđ K ;
-+Pl3:u%^WG%^RVSH%>žeh K ;
++Pl2:o%^WG%^RVSH%>švetteđ K ;
++Pl3:u%^WG%^RLEN%>žeh K ;
++Pl3:o%^WG%^RVSH%>žeh K ;
 
 LEXICON EVEN_IMPRT_KUARRUD
 +Sg2:u2%^WG%^RLEN%> K ;
++Sg2:o%^WG%^RVSH%> K ;
 +Sg3:u2%^WG%^RLEN%>s K ;
 +Du1:o%^CLEN%>on K ;
 +Du2:o%^CLEN%>o K ;
 +Du3:u2%^CLEN%>s K ;
-+Pl1:o%^CLEN%^RLEN%>op K ;
++Pl1:u2%^CLEN%^RLEN%>p K ;
 +Pl2:u%>đ K ;
 +Pl3:u2%^CLEN%^RLEN%>s K ;
 
