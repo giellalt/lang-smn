@@ -1402,19 +1402,85 @@ LEXICON 2SYLL_ID  !!= * __@CODE@__
 
 COMMON_ID ;
 
-LEXICON 2SYLL_TIETTID  !!= * __@CODE@__
-+V+Ind+Prs+ConNeg:e%%^RLEN K ;
-+V+Sg2:e%^WG%^VHIGH%^RLEN%> K ;  ! CHANGE
-+VAbess+Err/Orth:e%^RV%^RVSH%>hennáá K ;
-+VAbess+Err/Orth:e%^RV%^RVSH%>hinnáá K ;
-+VAbess:e%^RV%^RVSH%>hánnáá K ;
 
-+Actio+Com+PxSg1:e%>dijnân K ;
-+Actio+Com+PxSg2:e%>dijnâd K ;
-+Actio+Com+PxSg3+Err/Orth:e%>dijnes K ;
-+Actio+Com+PxSg3:e%>dijnis K ;
-+Actio+Com:e%>dijn K ;
-COMMON_ID ;
+LEXICON 2SYLL_TIETTID  !!= * __@CODE@__
+
++V:  VINFINITES_TIETTID ;
++V+Ind: EVEN_IND_TIETTID ;
++V+Pot: EVEN_POT_TIETTID ;
++V+Cond:á%^EA%^WG%^RVSH%>čč EVEN_COND ;
++V+Imprt: EVEN_IMPRT_TIETTID ;
+
+
+LEXICON VINFINITES_TIETTID
++Inf:i%>đ K ;
+
++Ind+Prs+ConNeg:e%^WG%^RVSH K ;
++Ind+Prt+ConNeg:á%^EA%^VHIGH%>m K ;
++Cond+ConNeg:á%^WG%^RVSH%>ččii K ;
++Pot+ConNeg:á%^WG%^EA%^VHIGH%>á K ;
++PrfPrc:á%^VHIGH%>m K ;
++PrsPrc:e%^RVSH%>e K ;
+
++V+Ind+Prs+ConNeg:e%^RVSH K ;
++VAbess+Err/Orth:e%^WG%^RVSH%>hennáá K ;
++VAbess+Err/Orth:e%^WG%^RVSH%>hinnáá K ;
++VAbess:e%^WG%^RVSH%>hánnáá K ;
+
++Actio+Com+PxSg1:e%^WG%>dijnân K ;
++Actio+Com+PxSg2:e%^WG%>dijnâd K ;
++Actio+Com+PxSg3+Err/Orth:e%^WG%>dijnes K ;
++Actio+Com+PxSg3:e%^WG%>dijnis K ;
++Actio+Com:e%^WG%>dijn K ;
++Actio+Ess:i%^CSH%>min K ;
++Actio+Ill:i%^CSH%>mân K ;
++Actio+Loc:i%^CSH%>mist K ;
++Actio:i%>m K ;
+
+LEXICON EVEN_IND_TIETTID
++Prs+Sg1:á%^EA%^WG%^RVSH%>m K ;      
++Prs+Sg2:á%^EA%^WG%^RVSH%>h K ;      
++Prs+Sg3:á%^EA%^CSH K ;             
++Prs+Du1:e%^CLEN%^RVSH%>en K ;   
++Prs+Du2:i%^CSH%^RVSH%>vettee K ; 
++Prs+Du3:i%>v K ;          
++Prs+Pl1:i%>p K ;          
++Prs+Pl2:i%^CSH%^RVSH%>vetteđ K ;
++Prs+Pl3:i%^CSH%>h K ;     
+
++Prt+Sg1:i%>m K ;
++Prt+Sg2:i%>h K ;
++Prt+Sg3:i%^WG%>j K ;
++Prt+Du1:i%^WG%>jm K ;
++Prt+Du2:i%^WG%>jd K ;
++Prt+Du3:i%^WG%>jn K ;
++Prt+Pl1:i%^WG%>jm K ;
++Prt+Pl2:i%^WG%>jd K ;
++Prt+Pl3:i%^RVSH%>i3 K ;
+
+
+LEXICON EVEN_POT_TIETTID !!= * __@CODE@__
++Sg1:e%^WG%>em K ;
++Sg2:e%^WG%>eh K ;
++Sg3:i%^WG%>š K ;
++Du1:i%^WG%^RVSH%>žeen K ;
++Du2:i%^WG%>švettee K ;
++Du3:i%^WG%^RVSH%>žává K ;
++Pl1:i%^WG%^RVSH%>žep K ;
++Pl2:i%^WG%>švetteđ K ;
++Pl3:i%^WG%^RVSH%>žeh K ;
+
+
+LEXICON EVEN_IMPRT_TIETTID
++Sg2:e%^WG%> K ;
++Sg3:u%^EA%^WG%>s K ;
++Du1:o%^EA%^CLEN%>on K ;
++Du2:e%^CLEN%>e K ;
++Du3:u%^EA%^CLEN%>s K ;
++Pl1:u%^EA%^CLEN%>p K ;
++Pl2:i%>đ K ;
++Pl3:u%^EA%^CLEN%>s K ;
+
 
 LEXICON COMMON_ID  !!= * __@CODE@__
 +V: VINFINITES_ID ;
