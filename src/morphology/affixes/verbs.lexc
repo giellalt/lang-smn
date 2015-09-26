@@ -2208,7 +2208,7 @@ LEXICON EVEN_IND_UD !!= * __@CODE@__
 +Prs+Du3:%>v K ;          
 +Prs+Pl1:%>p K ;          
 +Prs+Pl2:%>vetteđ K ; ! CSH
-+Prs+Pl3:%>h4 K ; ! reusing h4 to prevent á to a !CSH
++Prs+Pl3:%^VBACK%>h4 K ; ! reusing h4 to prevent á to a !CSH
 
 +Prt+Sg1:%>m K ;
 +Prt+Sg2:%>h K ;
@@ -2232,6 +2232,83 @@ LEXICON EVEN_POT_UD !!= * __@CODE@__
 +Pl3:u%^WG%>žeh K ;
 
 LEXICON EVEN_IMPRT_UD
++Sg2:u%^WG%^VHIGH%^RLEN%> K ;
++Sg3:u%^WG%^RLEN%>s K ;
++Du1:o%^CLEN%>on K ;
++Du2:o%^CLEN%>o K ;
++Du3:u%^CLEN%>s K ;
++Pl1:u%^CLEN%^VHIGH%>p K ;
++Pl2:u%^VHIGH%>đ K ;
++Pl3:u%^CLEN%>s K ;
+
+LEXICON 2SYLL_OAZZUD  !!= * __@CODE@__
++V:  VINFINITES_OAZZUD ; ! pákkuđ has a PASS according to this contlex
++V+Ind: EVEN_IND_OAZZUD ;
++V+Pot: EVEN_POT_OAZZUD ;
++V+Cond:u%^WG%>čč EVEN_COND ;
++V+Imprt: EVEN_IMPRT_OAZZUD ;
+
+LEXICON VINFINITES_OAZZUD !!= * __@CODE@__
++Inf:u%>đ K ;
+
++Ind+Prs+ConNeg:u%^WG%^RLEN%> K ;
++Ind+Prt+ConNeg:u2m K ;
++Cond+ConNeg:u2%^WG%>ččii K ;
++Pot+ConNeg:u2%>u K ;
++Imprt+ConNeg:u2 K ;
+
++PrfPrc+Pass:u2%>m K ;
++PrfPrc:u%>m K ;
++PrsPrc:o%^SVLOW%>o K ;
+
++VAbess+Err/Orth:u%^WG%>hennáá K ;
++VAbess+Err/Orth:u%^WG%>hinnáá K ;
++VAbess:u%^WG%>hánnáá K ;
+
++Actio+Com+PxSg1:u%>dijnân K ;
++Actio+Com+PxSg2:u%>dijnâd K ;
++Actio+Com+PxSg3+Err/Orth:u%>dijnes K ;
++Actio+Com+PxSg3:u%>dijnis K ;
++Actio+Com:u%^WG%>dijn K ;
+!+Actio+Com:o%^WG%>dijn K ;
++Actio+Ess:u%>min K ;
++Actio+Ill:u%>mân K ;
++Actio+Loc:u%>mist K ;
++Actio:u%>m K ;
+
+LEXICON EVEN_IND_OAZZUD !!= * __@CODE@__
++Prs+Sg1:u%^WG%>m K ;      
++Prs+Sg2:u%^WG%>h K ;      
++Prs+Sg3:u%^CLEN K ;             ! CSH
++Prs+Du1:o%^CLEN%>on K ;  
++Prs+Du2:u%>vettee K ; ! CSH
++Prs+Du3:u%>v K ;          
++Prs+Pl1:u%>p K ;          
++Prs+Pl2:u%>vetteđ K ; ! CSH
++Prs+Pl3:u%>h4 K ; ! reusing h4 to prevent á to a !CSH
+
++Prt+Sg1:u2%>m K ;
++Prt+Sg2:u2%>h K ;
++Prt+Sg3:u%^WG%>i K ;
++Prt+Du1:o%^WG%^CLEN%>im K ;
++Prt+Du2:o%^WG%^CLEN%>id K ;
++Prt+Du3:o%^WG%^CLEN%>in K ;
++Prt+Pl1:u%^WG%>im K ;
++Prt+Pl2:u%^WG%>id K ;
++Prt+Pl3:u2%>u K ;
+
+LEXICON EVEN_POT_OAZZUD !!= * __@CODE@__
++Sg1:o%^CLEN%>om K ;
++Sg2:o%^CLEN%>oh K ;
++Sg3:u%^WG%^RLEN%>š K ;
++Du1:u%^WG%>žeen K ;
++Du2:u%^WG%^RLEN%>švettee K ;
++Du3:u%^WG%>žává K ;
++Pl1:u%^WG%>žep K ;
++Pl2:u%^WG%^RLEN%>švetteđ K ;
++Pl3:u%^WG%>žeh K ;
+
+LEXICON EVEN_IMPRT_OAZZUD
 +Sg2:u%^WG%^VHIGH%^RLEN%> K ;
 +Sg3:u%^WG%^RLEN%>s K ;
 +Du1:o%^CLEN%>on K ;
