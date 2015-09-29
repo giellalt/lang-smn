@@ -11,11 +11,11 @@ make clean
 }}}
 
 Then configure the system as you want it. The following command
-gives you only the analysers and generators for the dictionary 
-orthography, and not the ordinary analysers:
+gives you the analysers and generators for xfst.
+
 
 {{{
-./configure --disable-analysers --disable-generators --enable-dicts
+./configure
 }}}
 
 Then compile by writing
@@ -24,8 +24,7 @@ Then compile by writing
 make
 }}}
 
-Now, the command {{make check}} will give only the dictionary yaml files.
-
+Now, the command {{make check}} will test both the yaml files and the lemma generation.
 
 !!!Comparing the yaml reports
 
