@@ -158,7 +158,7 @@ Sets
 
 Definitions
 
-WeakGrade =  (RealVow:) :RealVow (Vow:) (Cns:+) ([%^SV:|%^ÁI:|%^ÁE:|%^EA:]) (%^FCD:) %^WG:0 (%^VBACK:)     ;   
+WeakGrade =  (RealVow:) :RealVow (Vow:) (Cns:+) ([%^SV:|%^ÁI:|%^ÁE:|%^EA:]) (%^FCD:) %^WG:0      ;   
 ConsonantShorting =  (RealVow:) :RealVow (Vow:) (Cns:+) ([%^SV:|%^ÁI:|%^ÁE:|%^EA:]) (%^FCD:) %^CSH:0 ;   
 
 !! As we look at more cases, the WeakGrade definition tends to be longer. 
@@ -178,7 +178,7 @@ Rules
 
 "x:y consonant gradation"
 !! * __@RULENAME@__ \\  WG gives x:x and x:y, when there is no consonant lengthning  
-Cx:Cy <=> Vow: _ (%^RC: )  WeakGrade (%^VHIGH:) ([%^RVSH:|%^RLEN:]) (%^SLEN:) (%^SVLOW:) %> ;
+Cx:Cy <=> Vow: _ (%^RC: )  WeakGrade ([%^VHIGH:|%^VBACK:]) ([%^RVSH:|%^RLEN:]) (%^SLEN:) (%^SVLOW:) %> ;
 	where Cx in ( h p c )   !č
           Cy in ( v v s  )   !j
 		  matched ;
@@ -243,7 +243,7 @@ t:0 <=> [Vow:|%^SV:] _ t: WeakGrade \%^CLEN: ; !! 1)
 !FRV:a
 !"xx:x consonant shortening for consonants belonging to two different patterns"
 ! * __@RULENAME@__ \\   weak grade or consonant shortening for illativ
-!Cx:0 <=> Vow: _  Cx: WeakGrade ([%^RVSH: |%^RLEN:]) ([%^SVLOW: | %^SLEN:]) %> ; !! 1) weak grade päddi : päädi tullâ:tuuláin
+!Cx:0 <=> Vow: _  Cx: WeakGrade (%^VBACK:) ([%^RVSH: |%^RLEN:]) ([%^SVLOW: | %^SLEN:]) %> ; !! 1) weak grade päddi : päädi tullâ:tuuláin
 !         Vow: _  Cx: Vow: (%^EA: ) %^CSH: ( %^RVSH:) %> ; !! 2) consonant shortening for illativ, päddi : páádán RLEN?
 !	where Cx in ( l n ŋ r m ) ; !
 
@@ -297,7 +297,7 @@ i4:0 <=>  Vow: _ j:  Vow:+ (Cns) [%^EWG:|%^WG:|%^CSH:] ; ! %^SVSH:  [%>|.#.] ; !
 !! * __@RULENAME@__ \\   
 t:đ <=> Vow: _   k4: (%^RC:) WeakGrade ; !for ito : iđo 
         Vow: _  %^RC:   j RealVow: %^WG:0 %^CLEN:0 %^SVLOW:0 ; ! Com
-        Vow: _ (%^RC:) (j) WeakGrade (%^CLEN:0) ;
+        Vow: _ (%^RC:) (j) WeakGrade  ;
         Vow: _  %^RC:   j RealVow:  %^CLEN:0 ; ! Par and Ess
         Vow: _  (k4:) Vow:+ (Cns:) ([%^ÁI:|%^ÁE:]) %^EWG: ;
 !        t:0  _ :Vow WeakGrade ;  ! OIOI
@@ -342,7 +342,7 @@ h4:0 <=>  Cns Vow: (Vow:0) h:  _  Vow:+  Cns [%^ÁI:|%^ÁE:]  %^EWG:  ; !  loves
 
 "k:0 gradation for xkk4"
 !! * __@RULENAME@__ \\  for lkk4, rkk4, vkk4
-k:0 <=> Vow: [l | r | v | i4: | đ ]  _ k4:h  WeakGrade (%^CLEN: ) (%^SVLOW:) ; !! 1) WeakGrade 
+k:0 <=> Vow: [l | r | v | i4: | đ ]  _ k4:h  WeakGrade (%^CLEN: ) (%^VBACK:) (%^SVLOW:) ; !! 1) WeakGrade 
         Vow: [l | r | v | i4: | đ ]  _ k4:k Vow: (%^EA:) %^CSH: (%^RLEN:)   %> ; !! 2) consonant shortening for illativ
         Vow: [l | r | v | i4: | đ  ]  _ k4:h Vow:+ (Cns:) ([%^ÁI:|%^ÁE:]) %^EWG:  ; !rkk	rh
         Vow: :Vow  _ k4:h Vow:+ (Cns:) ([%^ÁI:|%^ÁE:]) %^EWG: %^RLEN:  ; !kuuhâs rá%^RVkk4ás%^ÁI 
