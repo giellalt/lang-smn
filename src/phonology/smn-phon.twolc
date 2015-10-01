@@ -144,7 +144,7 @@ Sets
  Geminate = b d g p h t k c f z l m n ŋ r s š v  ;  !!= * @CODE@  
  Sgm = Vow Cns ;							   !!= * @CODE@ 
  NotSuffixBorder = Vow %^FCD Cns %^EWG %^CSH %^WG %^CLEN %^SLEN %^RLEN %^SVLOW %^RVSH %^ÁE %^ÁI %^EA %^SVSH ; !!= * @CODE@ 
- Triggers =   %^FCD %^WG %^EWG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^ÁI %^SVSH %^VHIGH ; !!= * @CODE@ 
+ Triggers =   %^FCD %^WG %^EWG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^ÁI %^SVSH %^VHIGH %^VBACK ; !!= * @CODE@ 
  StemCns = b b3 d d3 g g2 g3 h h2 h3 		   !!= * @CODE@ 
            j l m m2 m3 m8 n n8 n2 ŋ r s  ;     !!= @CODE@ 
 
@@ -772,7 +772,7 @@ Vy:0 <=> Vx: _ č4: (%^RC:) Vow:  %^WG: %^RVSH: (%^SVLOW:) [%>|.#.] ; !! 1) 2st 
 %^RV:ä <=> ä _ Cns:+            Vow:+ Cns:+  %^CLEN: %^RLEN: ; !! 5) vä%^RVr%^RCid
            ä _ [Cns:+ - [h: h]] Vow: (Vow:)  (Cns:+) (Triggers: - %^RLEN:)*   %^RLEN: ;
           :ä _ Cns:*  :i (%^SV:)          Cns: (%^ÁI:) (%^FCD:) [%^EWG:|%^WG:] %^RLEN: [%>|.#.] ; !spääilih
-          ä: _ Cns:+  i:                                                 %^WG: %^RLEN: %> \i: ; 
+          ä _ Cns:+  i:                                                 %^WG: %^RLEN: %> \i: ; 
          e:i _ Cns:+  i:                        %^EA:            (%^CSH:)     (%^RLEN:) %> ; ! 1) e:iä, 
          e:i _ Cns:+  u:                                          %^EWG:   ; !kiärtuš čevžuin čiävžui
          e:i _ Cns:+ [u|á|o] ([%^WG:|%^CSH:]) (%^CLEN:) %^VHIGH: ;  ! čevžuin čiävžui
@@ -878,7 +878,7 @@ i:0 <=> \Vow: _ ä: Cns:+ i2:i %>    [i|i2:i|Cns] Sgm:* %> ; !! * i:0 for iđ C 
 "Different rules for ä:a, first vowel (or only vowel)"
 !! * __@RULENAME@__ \\  čääci:čassijn, läbži:labžijn
 ä:a <=>      _ [ä:|%^RV:] Cns:+ [i|â|a|á]   (%^WG:) (%^CLEN:) %^VBACK: ([%^RVSH:|%^RLEN:])            %> ;
-             _ [ä:|%^RV:] Cns:+ i    %^WG:          ([%^RVSH:|%^RLEN:])             %> i: ;
+             _ [ä:|%^RV:] Cns:+ i    %^WG:          ([%^RVSH:|%^RLEN:])             %> [i:|i3:] ; !staaviim
              _ [ä:|%^RV:] Cns:+ i    %^WG:           [%^CLEN:|%^RLEN: ]  (%^SVLOW:) %> i: ; !čääci:čassijn
              _     %^RV:  Cns:+ i    %^WG:                    %^RLEN:               %> i: ; !ä%^RVi4gi%^WG%^RLEN%>id
              _ ä:0        Cns:+ Vow: %^WG:                        %^CLEN:  %^RVSH:  %> i:  ; !! čääci : čassijn
@@ -886,9 +886,6 @@ i:0 <=> \Vow: _ ä: Cns:+ i2:i %>    [i|i2:i|Cns] Sgm:* %> ; !! * i:0 for iđ C 
    [.#.|Cns] _            Cns:+ i2:i                                                %> [i|i2:i|Cns] Sgm:* %> ; !cntrV
              _ [ä:|%^RV:] Cns:+ [a|â] (%^EA:) (%^WG:|%^CSH:) (%^RVSH:)              %> ; 
              _ ä:         Cns:+ i (%^EA:) (%^WG:|%^CSH:) %^VBACK: (%^RVSH:)  %>       ; 
-!            _ ä:         Cns:+ i (%^EA:) (%^WG:|%^CSH:) %^VBACK: (%^RVSH:)  %>        ;
-! [Cns|.#.|#] _ (%^RV:) Cns:+ Vow: (%^WG:|%^CSH:) (%^CLEN:) %^VHIGH: ;  !causes conflict, doesn't look correct
-! [Cns|.#.|#] _ ä:      Cns:+ Vow: (%^WG:|%^CSH:) (%^CLEN:) %^VHIGH: ; !causes conflict, doesn't look correct
        \Vow: _ ä:      Cns:+ Vow:   %^WG:         (%^CLEN:) %^VBACK: %> ;
             ä:a _     Cns:+ i   %^CLEN: %^VBACK:   %>       ; !paaccim
 
@@ -1297,7 +1294,7 @@ i5:0 <=> o  e %> _ ;
 
 "Suffix i:j for i and e-stems"
 !! * __@RULENAME@__ \\  
-i:j <=> [i: | e: | i2: | i3: ] (%^EA:) (%^WG:)  (%^CLEN:)  ([%^RLEN:|%^RVSH:])  (%^SVLOW:)   %> _ [l|d|n|g|t|%>|.#.];  
+i:j <=> [i: | e: | i2: | i3: ] Triggers:*   %> _ [l|d|n|m|g|t|%>|.#.];  
 
 
 "Vowel copy in suffix"
