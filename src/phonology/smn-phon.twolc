@@ -328,6 +328,7 @@ k:h <=> Vow: _  k4:h WeakGrade %^CLEN: ; !puáhhoin
 !! * __@RULENAME@__ \\   
 h4:v <=> Vow: :Vow h:  _  Vow:+  Cns [%^ÁI:|%^ÁE:]  %^EWG: %^RLEN: ; ! jäävvil siävus but loves
 		 Vow: Vow: _ Vow: Cns %^EWG: [%^RLEN:|%^RVSH:] ;!			
+		 Vow: _ %^RC: WeakGrade  ; !	peehiđ:piävám	
          
 "h:v gradation for hh4"
 !! * __@RULENAME@__ \\   
@@ -512,8 +513,8 @@ j:i <=> Vow: _ %^RC: :Vow   %^CLEN:  (%^RVSH:)       %> ; !Par Ess
             Vow:       Cx:   _  Vow         Cns    %^CLEN:  %> \[ i:|s]  ;
             Vow: (i4:) Cx:Cy _  Vow: (i:)   Cns:+  %^CLEN: (%^RLEN:) ([%^SLEN:|%^SVSH:]) %>   ; !! 3) kepidem:keeppidmân
             Vow:       Cx:   _ :Vow+ Sgm:*  [Triggers: - %^WG: ]* %^CLEN: ; ! XXX sjekk
-	where Cx in ( v t h5 c p)  
-	      Cy in ( v t h  c p)   
+	where Cx in ( v t h5 c p h4)  
+	      Cy in ( v t h  c p h )   
 		  matched ;
 
 !kiär%^RCun%^CLEN%>ttáá
@@ -534,16 +535,16 @@ j:i <=> Vow: _ %^RC: :Vow   %^CLEN:  (%^RVSH:)       %> ; !Par Ess
 
 
 "Lengthening of root consonant x:yy 1"
-!! * __@RULENAME@__ \\  
-Cx:Cy <=> Vow:  _ %^RC: :Vow+ Cns:* [Triggers: -  %^FCD:]* %^WG: %^CLEN: (%^VHIGH:) (%^RVSH:) ([%^SVLOW: |%^SLEN:]) %> [ i:|s|u|o|ž] ;
+!! * __@RULENAME@__ \\ 
+Cx:Cy <=> Vow:  _ %^RC: :Vow+ Cns:* [Triggers: -  %^FCD:]* %^WG: %^CLEN: ([%^VHIGH:|%^VBACK:]) (%^RVSH:) ([%^SVLOW: |%^SLEN:]) %> [ m|i:|s|u|o|ž] ;
 	where Cx in ( h p c )
 		  Cy in ( v v s ) 
 		  matched ;
 
 "Lengthening of root consonant x:yy 2"
-!! * __@RULENAME@__ \\  
-%^RC:Cy <=> Vow: Cx:Cy _ :Vow+ Cns:* [Triggers: - %^FCD:]* %^WG: %^CLEN: (%^VHIGH:)  (%^RVSH:) ([%^SVLOW: |%^SLEN:]) %> [ i:|s|u|o|ž] ;
-	where Cx in ( h p c )
+!! * __@RULENAME@__ \\ 
+%^RC:Cy <=> Vow: Cx:Cy _ :Vow+ Cns:* [Triggers: - %^FCD:]* %^WG: %^CLEN: ([%^VHIGH:|%^VBACK:])  (%^RVSH:) ([%^SVLOW: |%^SLEN:]) %> [ m|i:|s|u|o|ž] ;
+	where Cx in ( h4 p c )
 		  Cy in ( v v s ) 
 		  matched ;
 
@@ -1170,7 +1171,8 @@ e:á <=> [o|i|u] (%^RV:) Cns:+ _ %^EA:  (%^CSH:) ([%^RLEN: |%^RVSH:] ) [%>|.#.] 
 
 "Stem vowel i to á for other root vowel."
 !! * __@RULENAME@__ \\  e.g. säämi > Ill sáámán 
-Vx:á <=> [:e|:i|:ä|:á] (%^RV:)  Cns:+ _  %^EA: (%^CSH:) ([%^RLEN: |%^RVSH:] ) [%>|.#.] [i: | n | d | m] ; !uábbám
+Vx:á <=> [:e|:i|:ä|:á] (%^RV:)  Cns:+ _  %^EA: (%^CSH:) ([%^RLEN: |%^RVSH:] ) [%>|.#.] [i: | n | d | m ] ; !uábbám
+         Vow:   Cns:+ _  %^EA: Triggers:* %> Cns: ; ! iännásis
     where Vx in ( i i2 i3 ) ;
 
 "Stem vowel i to e in front of j"
