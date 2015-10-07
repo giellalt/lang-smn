@@ -668,7 +668,7 @@ muáddi:muáddi KYEHTI ;
 
 LEXICON ORDINAL		   
 vuossâmuš+A+Ord:vuossâ MUSj-SUF ; 
-vuossâmuš+A+Ord+Der/luokkalas:vuosâ%>luokkal ANOLASJ ; 
+vuossâmuš+A+Ord:vuosâ ORD-SAS ; 
 vuosmuš+A+Ord:vuos MUSj-SUF "ensimmäinen" ;	!¢vuosmuin, vuosmust, vuosmui, vuosmuš  
 vuosmuš+A+Ord+Err/Orth:vuoss MUSj-SUF "ensimmäinen" ;	!
 nubbe+A+Ord:nu%^RVbbe  nubbecase ;		   
@@ -682,15 +682,19 @@ oovcád+A+Ord:oovcád ORDINALInfl ;
 
 LEXICON ORDINALInfl
  X_PAAVIR_not_Par ;
-+Der/luokkalas:%>luokkal ANOLASJ ;
-
+ ORD-SAS ;
+ 
 LEXICON CICCADInfl
  X_LITTER_not_Par ;
-+Der/luokkalas:%>luokkal ANOLASJ ;
+ ORD-SAS ;
 
+LEXICON ORD-SAS
++Cmp#luokkâ:»»»#luokkal DER-SAS ;
 
 LEXICON nubbecase
 X_ALGE ;
+ ORD-SAS ;
+
 !+Sg+Nom:nubbe K ;
 !+Sg+Acc:nube K ;
 !+Sg+Gen:nube K ;
@@ -708,8 +712,7 @@ X_ALGE ;
 !+Pl+Loc:nuubijn K ;
 !+Pl+Com:nubijguin K ;
 !+Pl+Abe:nubijttáá K ;
-+Der/luokkalas:nube%>luokkal ANOLASJ ;
-
+ 
 !From the original numeral file
 !kävcinubáloh num ;
 !kuávttáá:kuávˊttáá num "kahden" ;
@@ -837,7 +840,7 @@ LEXICON ARABICDELIMITER
  +Err/Orth:%' ARABICCASE  ; ! This is the 1984's case.
  +Err/Orth:%- ARABICCASE  ; ! This is the 1984-s case.
  :- NUM_DER ;
- :- ARAB_DER ;
+ : ARAB_DER ;
  : Rhyph ;
  +Cmp-#loho:-lo%^RVh%^RCo 2NJAMMA ; 
 
@@ -1066,22 +1069,25 @@ LEXICON ROMNUMTAGOBL
  +Par:%>d        # ;
 
 LEXICON ARAB_DER ! only for arabics
- +Der/nummeersas:nummeers ANOLASJ  ;
- +Der/asahas:ahas ANOLASJ  ;
+ +Cmp-#nummeer:»»»-nummeers DER-SAS ;
+ +Der/ahasas:ahas ANOLASJ  ;
 
 
 
 LEXICON NUM_DER ! both for arabics and words
 ! +Der/ihasas:ihás ANOLASJ  ;
- +Der/ihasas+Err/Orth:ihas ANOLASJ  ;
- +Der/piaivasas:piäivás ANOLASJ  ;
- +Der/kiardasas:kiärdás ANOLASJ  ;
- +Der/cievag:čievâg PASTIL  ;
- +Der/jienag:jienâg PASTIL  ;
- +Der/loonjag:loonjâg PASTIL  ;
- +Der/jienasas:jienâs ANOLASJ ;
++Cmp#:»»»# NUM-SAS ;
+ 
+LEXICON NUM-SAS
+ihe:ihás DER-SAS ;
+ihe+Err/Orth:ihas DER-SAS ;
+peivi:piäivás DER-SAS ;
+kerdi:kiärdás DER-SAS ;
+jienâ:jienâs DER-SAS ;
+čiehâ:čievâg DER-AG ;
+jienâ:jienâg DER-AG ;
+loonjâ:loonjâg DER-AG ;
  +Der/ivvaas:ivváá A_VUALAAS ;
- SAS ;
 
 
 ! A final section with some isolated numeral expresssions !
