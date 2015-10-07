@@ -135,7 +135,7 @@ LEXICON 2KIELA !!= __@CODE@__ WG, blank Ill, DLEN, RVSH, SVLOW
 +N+Pl+Gen:%^WG%^RLEN%>id CPXsuff ;  !kieđâidis
 +N+Pl+Acc:%^WG%^RLEN%>id CPXsuff ;  !kieđâidis
 +N+Pl+Com:%^WG%^RLEN%>id CPXsuffCOM ;  !kieđâidiskuin
-:%> N_DER ;
+:%^WG%> Ngen_DER ;
 
 
 LEXICON X_KIELA !!= __@CODE@__ WG, blank Ill, DLEN, RVSH, SVLOW 
@@ -331,7 +331,7 @@ LEXICON X_ALGE !!= __@CODE@__
 +Pl+Com:%^WG%>iguin K ; 		! olgijguin
 +Pl+Com+Err/Orth:%^WG%>igijn K ; 		! olgijguin
 +Pl+Abe:%^WG%>ittáá K ;		! olgijttáá
-:%> N_DER ;
+:%^WG%> Ngen_DER ;
 
 
 LEXICON 2NIJBE !!= __@CODE@__ 
@@ -736,6 +736,15 @@ LEXICON 2VUAGGU !!= __@CODE@__
 +N: X_VUAGGU ;
 +N+Cmp/SgNom: R ;
 +N+Sg+Ill:s CPXsuff ;
++N+Sg+Gen:%^WG VPXsuff ;  !
++N+Sg+Acc:%^WG VPXsuff ;  !
++N+Sg+Loc:%^WG%>st VPXsuff ;  !
++N+Sg+Com:%^WG%^CLEN%>in VPXsuff ;  !
++N+Pl+Gen:%^WG%>id CPXsuff ;  !
++N+Pl+Acc:%^WG%>id CPXsuff ;  ! 
++N+Pl+Com:%^WG%>id CPXsuffCOM ;  ! 
+
+
 
 LEXICON X_VUAGGU !!= __@CODE@__ 
 +Sg+Nom: K ;               ! vuággu
@@ -1085,7 +1094,7 @@ LEXICON X_STEVILEH  !!= __@CODE@__  plurals for 3EEMEED
 LEXICON 3LITTER !!= __@CODE@__ MO Ib 2nd syll vowel does not alternate
  +N: X_LITTER ; 
  +N+Cmp/SgNom: R ;
-:%> N_DER ;
+:%> Ngen_DER ;
 
 LEXICON X_LITTER !!= __@CODE@__ 
  ODD_SUFF_LONGSTEM ; 
@@ -1755,7 +1764,7 @@ LEXICON S_AAIGA !!= __@CODE@__
 +N+Pl+Com:%>iguin K ;	! aiguiguin
 +N+Pl+Com+Err/Orth:%>igijn K ;	! aiguiguin
 +N+Pl+Abe:%>ittáá K ; 	! aiguittáá
-:%^SV%^SLEN%> N_DER ;
+:%^SV%^SLEN%> Ngen_DER ;
 
 
 LEXICON S_KARRII !!= __@CODE@__
@@ -2208,8 +2217,9 @@ LEXICON X_KILDEEH !!= __@CODE@__ ee-final contract, plural forms
 !! !!Derivations
 ! =================================
 
-LEXICON N_DER   !!= __@CODE@__ for Der/vuolasas
-+Der/vuolasas:vuálásâš K ; 
+LEXICON Ngen_DER   !!= __@CODE@__ 
++Der/vuálásâš:vuálás ANOLASJ ; 
++Der/lâš:l ANOLASJ ; 
 
 LEXICON SAS !!= * __@CODE@__ gives :»»» and goes to SASCont
 +Cmp#:»»»# SASCont ;
