@@ -192,6 +192,7 @@ SECTION
 # Cycle 0
 
 REMOVE ("Da" N) IF (0 ("dïhte"));
+SELECT Adv (0 ("ain") LINK -1 BOS) ;
 
 #!! ! Rules for giving Attr to names, e.g. Ole Attr Kåven.
 
@@ -215,8 +216,13 @@ IFF:IsItConNeg ConNeg (*-1 Neg BARRIER ConNeg);
 # Imperative
 REMOVE:NotImpIfWord Imp IF (*-1 NOT-ADV-INT-PCLE BARRIER CS OR CC);
 REMOVE:NotIndIfImpAndExcl Ind IF (NOT *-1 Neg)(0 Imp)(*1 ("excl") BARRIER Ind);
-       ## 
 
+#SubjNom + VFIN
+SELECT (Sg Nom) IF (-1 BOS)(1 VFIN + Sg3) ;
+
+SELECT PrfPrc IF (*-1 ("leđe") BARRIER NOT-ADV) ;
+
+SELECT (Ord Acc) IF (1C (N Acc)) ; 
 
 #########                            #############
 #########         SYNTAX             #############
