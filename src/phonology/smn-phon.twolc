@@ -743,7 +743,7 @@ Vy:0 <=> Vx: _ č4: (%^RC:) Vow:  %^WG: %^RVSH: (%^SVLOW:) [%>|.#.] ; !! 1) 2st 
 "Root vowel lenghtening in many stems"
 !! * __@RULENAME@__ \\  lekkâ : leehá-  meecij ko%^RVppâin
 %^RV:Vy <=> Vx _ [Cns:+ - [h: h ]]  Vow: (Vow:)  (Cns:+) (Triggers: - %^RLEN:)*   %^RLEN: ; !! 1) 2st and 3st
-             :Vx _ Cns:+ (%^WG:) (%^CLEN:) (%^VHIGH:|%^VBACK:) %^RLEN: ; ! does not work, missing Vow
+!             :Vx _ Cns:+ (%^WG:) (%^CLEN:) (%^VHIGH:|%^VBACK:) %^RLEN: ; ! does not work, missing Vow
        where Vx in (a e i o y á A E I O Á ) ! Ánná:Ááná u, U in separate rule Root vowel u length
              Vy in (a e i o y á a e i o á ) 
        matched ;
@@ -764,10 +764,10 @@ Vy:0 <=> Vx: _ č4: (%^RC:) Vow:  %^WG: %^RVSH: (%^SVLOW:) [%>|.#.] ; !! 1) 2st 
 
 
 "Root vowel ä:ää lenghtening and diphthongisation e:iä"
-!! * __@RULENAME@__ \\ special rule, for avoiding conflict spä%^RVi4lih%^EWG%^RLEN
+!! * __@RULENAME@__ \\ special rule, for avoiding conflict spä%^RVi4lih%^EWG%^RLEN, 
 %^RV:ä <=> ä _ Cns:+            Vow:+ Cns:+  %^CLEN: %^RLEN: ; !! 5) vä%^RVr%^RCid
            ä _ [Cns:+ - [h: h]] Vow: (Vow:)  (Cns:+) (Triggers: - %^RLEN:)*   %^RLEN: ;
-          :ä _ Cns:*  :i (%^SV:)          Cns: (%^ÁI:) (%^FCD:) [%^EWG:|%^WG:] %^RLEN: [%>|.#.] ; !spääilih
+!          :ä _ Cns:*  :i (%^SV:)          Cns: (%^ÁI:) (%^FCD:) [%^EWG:|%^WG:] %^RLEN: [%>|.#.] ; !já%^RVhhá%^SVl%^ÁI%^EWG%^RLEN>
           ä _ Cns:+  i:                                                 %^WG: %^RLEN: %> \i: ; 
          e:i _ Cns:+  i:                        %^EA:            (%^CSH:)     (%^RLEN:) %> ; ! 1) e:iä, 
          e:i _ Cns:+  u:                                          %^EWG:   ; !kiärtuš čevžuin čiävžui
@@ -961,10 +961,10 @@ i:0 <=> \Vow: _ ä: Cns:+ i2:i %>    [i|i3:i|Cns] Sgm:* %> ; !! * i:0 for iđ C 
 !! á
 
 "Root vowel change for á to ä with i in second syllable"
-!! * __@RULENAME@__ \\  päävir 
+!! * __@RULENAME@__ \\  päävir , já%^RVhhá%^SVl%^ÁI%^EWG%^RLEN>
 á:ä <=>    _ [ á:|%^RV:] Cns:* :i (%^SV:) Cns: %^ÁI: [%^EWG:|%^WG:] [%^RLEN:|%^RVSH:] [%>|.#.] ; !! 1) pááppár:päävir
         á: _   Cns:* :i (%^SV:) Cns: %^ÁI: %^EWG: %^RLEN: [%>|.#.] ;  !! 2) pááppár:päävir
-!         _ [ á:|%^RV:] Cns:+ :i         Cns  %^ÁI:  %^EWG:  %^RVSH:  %> ; !i  ; !! 3) pááppár:pävirin páápp4ár%^ÁI%^EWG%^RVSH%>id
+!        _ [ á:|%^RV:] Cns:+ :i         Cns  %^ÁI:  %^EWG:  %^RVSH:  %> ; !i  ; !! 3) pááppár:pävirin páápp4ár%^ÁI%^EWG%^RVSH%>id
 
 !rejected, look at this:
 
@@ -1035,11 +1035,11 @@ e:i <=>  [Cns|.#.|#] _  Vow: Cns:+ [i2:|e:|i:|i3:] %^EA: (%^CSH:) (%^RLEN:)   %>
 
 "Root vowel ahhu to áhu in C-stems"
 !! * __@RULENAME@__ \\  ahhu:áhu
-a:á <=> [Cns|.#.|#] _ %^RV: h: h u %^WG: (%^RLEN:) %> ;
+a:á <=> [Cns|.#.|#] _ %^RV: h: h u %^CSH: (%^RLEN:) %> ;
 
 "Root vowel ahhu to ááhu in C-stems"
 !! * __@RULENAME@__ \\  ahhu:ááhu
-%^RV:á <=> [Cns|.#.|#] a: _ h: h u %^WG: %^RLEN: %> ;
+%^RV:á <=> [Cns|.#.|#] a: _ h: h u %^CSH: %^RLEN: %> ;
 
 
 
