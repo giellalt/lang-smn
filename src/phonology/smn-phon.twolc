@@ -260,8 +260,8 @@ t:0 <=> [Vow:|%^SV:] _ t: WeakGrade \%^CLEN: ; !! 1)
 Cx:0 <=> Vow: _  Cy: (%^RC:) WeakGrade \%^CLEN: ; !! 1) weak grade: ruttâ:ruuđáin 
          Vow: _  Cy: Vow: (%^EA: )  %^CSH:(%^VHIGH:) (%^RLEN:)  %> ; !! 2) consonant shortening for illativ
          Vow: _  Cy: Vow:+  Cns ([%^ÁI:|%^ÁE:]) %^CSH: ([%^RLEN: | %^RVSH:])  (%^SVSH:)  %> ; !! 3) consonant shortening for páápp4ár%^ÁI viäkk4ás%^ÁI
-	where Cx in ( t  k  p   ) 
-	      Cy in ( t4 k4 p4 )
+	where Cx in ( h t  k  p   ) 
+	      Cy in ( h t4 k4 p4 )
 		  matched ;
 
 
@@ -742,8 +742,7 @@ Vy:0 <=> Vx: _ č4: (%^RC:) Vow:  %^WG: %^RVSH: (%^SVLOW:) [%>|.#.] ; !! 1) 2st 
 
 "Root vowel lenghtening in many stems"
 !! * __@RULENAME@__ \\  lekkâ : leehá-  meecij ko%^RVppâin
-!%^RV:Vy <=> Vx _ [Cns:+ - [h: h ]]  Vow: (Vow:)  (Cns:+) (Triggers: - %^RLEN:)*   %^RLEN: ; !! 1) 2st and 3st
-%^RV:Vy <=> Vx _ Cns:+   Vow: (Vow:)  (Cns:+) (Triggers: - %^RLEN:)*   %^RLEN: ; !! 1) 2st and 3st
+%^RV:Vy <=> Vx _ [Cns:+ - [h: h ]]  Vow: (Vow:)  (Cns:+) (Triggers: - %^RLEN:)*   %^RLEN: ; !! 1) 2st and 3st
              :Vx _ Cns:+ (%^WG:) (%^CLEN:) (%^VHIGH:|%^VBACK:) %^RLEN: ; ! does not work, missing Vow
        where Vx in (a e i o y á A E I O Á ) ! Ánná:Ááná u, U in separate rule Root vowel u length
              Vy in (a e i o y á a e i o á ) 
@@ -767,8 +766,7 @@ Vy:0 <=> Vx: _ č4: (%^RC:) Vow:  %^WG: %^RVSH: (%^SVLOW:) [%>|.#.] ; !! 1) 2st 
 "Root vowel ä:ää lenghtening and diphthongisation e:iä"
 !! * __@RULENAME@__ \\ special rule, for avoiding conflict spä%^RVi4lih%^EWG%^RLEN
 %^RV:ä <=> ä _ Cns:+            Vow:+ Cns:+  %^CLEN: %^RLEN: ; !! 5) vä%^RVr%^RCid
-!           ä _ [Cns:+ - [h: h]] Vow: (Vow:)  (Cns:+) (Triggers: - %^RLEN:)*   %^RLEN: ;
-           ä _ Cns:+  Vow: (Vow:)  (Cns:+) (Triggers: - %^RLEN:)*   %^RLEN: ;
+           ä _ [Cns:+ - [h: h]] Vow: (Vow:)  (Cns:+) (Triggers: - %^RLEN:)*   %^RLEN: ;
           :ä _ Cns:*  :i (%^SV:)          Cns: (%^ÁI:) (%^FCD:) [%^EWG:|%^WG:] %^RLEN: [%>|.#.] ; !spääilih
           ä _ Cns:+  i:                                                 %^WG: %^RLEN: %> \i: ; 
          e:i _ Cns:+  i:                        %^EA:            (%^CSH:)     (%^RLEN:) %> ; ! 1) e:iä, 
@@ -1248,7 +1246,7 @@ Vx:0 <=> _ Vx: (Cns:+) (%^FCD:) (%^CSH:|%^WG:|%^EWG:) %^SVSH:  ; !eemeed : emed�
 "Stem vowel:0 in front of â"
 !! * __@RULENAME@__ \\ aiguu:aaigâ
 Vx:0 <=> _ â Triggers:*  [%>|#]   ; 
-         _ (%^SV:) (Cns:0) ([%^ÁE:|%^ÁI:]) %^FCD: (%^RLEN:) â ; !Triggers:* [%>|#] ; !stuárrá%^SVs%^ÁE
+         Cns: _ (%^SV:) (Cns:0) ([%^ÁE:|%^ÁI:]) %^FCD: (%^RLEN:) â ; !Triggers:* [%>|#] ; !stuárrá%^SVs%^ÁE
     where Vx in ( â e o a á u i y ä) ;
 
 ! this rule should be generalised, we talk about a ban on o>u strings
