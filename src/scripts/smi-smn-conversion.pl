@@ -23,6 +23,7 @@ while(<>) {
 #	s/DUBAI/BERN/g ;
 	s/BETFAGE/BERN/g ;
 	s/fkagK/K/g ;
+	s/Maarit LONDON/Maarit MAARIT/g ;
 
 
 	s/\^//g ;
