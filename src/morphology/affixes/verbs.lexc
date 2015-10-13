@@ -728,6 +728,28 @@ LEXICON EVEN_POT_KOLGAD !!= * __@CODE@__
 !+Pl1:u%^CLEN%>p K ;
 !+Pl2:â%^RLEN%>o K ;
 
+LEXICON 2SYLL_KULGAD   !!= * __@CODE@__
+
+!! Distinct from SODDAD with short vowel in past tense
+
++V:  VINFINITES_SODDAD ;
++V+Ind+Prs: EVEN_PRS_SODDAD ;
++V+Ind+Prt: EVEN_PRT_KULGAD ;
++V+Pot: EVEN_POT_SODDAD ;
++V+Cond+Prs:â%^WG%^VHIGH%>čč EVEN_COND ;
++V+Imprt: EVEN_IMPRT_SODDAD ;
+
+LEXICON EVEN_PRT_KULGAD
++Sg1:i%^VHIGH%>m K ;
++Sg2:i%^VHIGH%>h K ;
++Sg3:â%^WG%^VHIGH%^RLEN%>i3 K ;
++Du1:á%^WG%^VHIGH%>im K ; ! SODDAD RLEN
++Du2:á%^WG%^VHIGH%>id K ; ! SODDAD RLEN
++Du3:á%^WG%^VHIGH%>in K ; ! SODDAD RLEN
++Pl1:â%^WG%^VHIGH%^RLEN%>im K ;
++Pl2:â%^WG%^VHIGH%^RLEN%>id K ;
++Pl3:i%^CLEN%^VHIGH%>i3 K ;
+
 LEXICON 2SYLL_SODDAD  !!= * __@CODE@__
 
 ! kalgâđ | kaalgâm | á-á  | kälgih  | kalgim | kä%^RVlg 
@@ -736,7 +758,8 @@ LEXICON 2SYLL_SODDAD  !!= * __@CODE@__
 ! ä>a, a>o, o>u
 
 +V:  VINFINITES_SODDAD ;
-+V+Ind: EVEN_IND_SODDAD ;
++V+Ind+Prs: EVEN_PRS_SODDAD ;
++V+Ind+Prt: EVEN_PRT_SODDAD ;
 +V+Pot: EVEN_POT_SODDAD ;
 +V+Cond+Prs:â%^WG%^VHIGH%>čč EVEN_COND ;
 +V+Imprt: EVEN_IMPRT_SODDAD ;
@@ -747,7 +770,7 @@ LEXICON VINFINITES_SODDAD
 +Ind+Prs+ConNeg:â%^WG%^VHIGH%^RLEN K ;
 +Ind+Prt+ConNeg:â%^VHIGH%>m K ;
 +Cond+Prs+ConNeg:â%^WG%^VHIGH%>ččii K ;
-+Pot+ConNeg:i%^VHIGH%>i K ;
++Pot+ConNeg:i%^VHIGH%>i5 K ;
 +Imprt+ConNeg:â%^WG%^VHIGH%^RLEN K ;
 
 +PrfPrc+Der/Pass:â%^VHIGH%>m K ;
@@ -772,26 +795,27 @@ LEXICON VINFINITES_SODDAD
 +Actio:â%^VHIGH%>m K ;
 +Der/NomAct:â%^VHIGH%>m 3LITTER ;
 
-LEXICON EVEN_IND_SODDAD
-+Prs+Sg1:â%^WG%^VHIGH%^RLEN%>m K ;     
-+Prs+Sg2:a%^WG%^VHIGH%^RLEN%>h K ;     
-+Prs+Sg3:á K ;       ! iätá (CSH tt-t), šadda, viggá
-+Prs+Du1:e%^CLEN%>en K ;  
-+Prs+Du2:â%^VHIGH^RVSH%>vettee K ; ! etâvettee (CSH) šoddâvettee, viggâvettee
-+Prs+Du3:â%^VHIGH%>v K ;         
-+Prs+Pl1:â%^VHIGH%>p K ;             
-+Prs+Pl2:â%^VHIGH%^RVSH%>vetteđ K ;  
-+Prs+Pl3:e%>h K ;  ! loheh
+LEXICON EVEN_PRS_SODDAD
++Sg1:â%^WG%^VHIGH%^RLEN%>m K ;     
++Sg2:a%^WG%^VHIGH%^RLEN%>h K ;     
++Sg3:á K ;       ! iätá (CSH tt-t), šadda, viggá
++Du1:e%^CLEN%>en K ;  
++Du2:â%^VHIGH^RVSH%>vettee K ; ! etâvettee (CSH) šoddâvettee, viggâvettee
++Du3:â%^VHIGH%>v K ;         
++Pl1:â%^VHIGH%>p K ;             
++Pl2:â%^VHIGH%^RVSH%>vetteđ K ;  
++Pl3:e%>h K ;  ! loheh
 
-+Prt+Sg1:i%^VHIGH%>m K ;
-+Prt+Sg2:i%^VHIGH%>h K ;
-+Prt+Sg3:â%^WG%^VHIGH%^RLEN%>i3 K ;
-+Prt+Du1:á%^WG%^VHIGH%^RLEN%>im K ; ! SODDAD RLEN
-+Prt+Du2:á%^WG%^VHIGH%^RLEN%>id K ; ! SODDAD RLEN
-+Prt+Du3:á%^WG%^VHIGH%^RLEN%>in K ; ! SODDAD RLEN
-+Prt+Pl1:â%^WG%^VHIGH%^RLEN%>im K ;
-+Prt+Pl2:â%^WG%^VHIGH%^RLEN%>id K ;
-+Prt+Pl3:i%^CLEN%^VHIGH%>i3 K ;
+LEXICON EVEN_PRT_SODDAD
++Sg1:i%^VHIGH%>m K ;
++Sg2:i%^VHIGH%>h K ;
++Sg3:â%^WG%^VHIGH%^RLEN%>i3 K ;
++Du1:á%^WG%^VHIGH%^RLEN%>im K ; ! SODDAD RLEN
++Du2:á%^WG%^VHIGH%^RLEN%>id K ; ! SODDAD RLEN
++Du3:á%^WG%^VHIGH%^RLEN%>in K ; ! SODDAD RLEN
++Pl1:â%^WG%^VHIGH%^RLEN%>im K ;
++Pl2:â%^WG%^VHIGH%^RLEN%>id K ;
++Pl3:i%^CLEN%^VHIGH%>i3 K ;
 
 LEXICON EVEN_IMPRT_SODDAD
 +Sg2:â%^WG%^VHIGH%^RLEN%> K ;
@@ -1718,9 +1742,9 @@ LEXICON EVEN_IND_PAACCID
 +Prt+Sg1:i%^CLEN%^VBACK%>m K ;
 +Prt+Sg2:i%^CLEN%^VBACK%>h K ;
 +Prt+Sg3:i%^WG%^VBACK%>i K ;
-+Prt+Du1:i%^WG%^CLEN%^VBACK%^RVSH%>im K ; !pääc%^RC
-+Prt+Du2:i%^WG%^CLEN%^VBACK%^RVSH%>id K ;
-+Prt+Du3:i%^WG%^CLEN%^VBACK%^RVSH%>in K ;
++Prt+Du1:i%^WG%^CLEN%^VBACK%>im K ; !pääc%^RC
++Prt+Du2:i%^WG%^CLEN%^VBACK%>id K ;
++Prt+Du3:i%^WG%^CLEN%^VBACK%>in K ;
 +Prt+Pl1:i%^WG%^VBACK%>im K ;
 +Prt+Pl2:i%^WG%^VBACK%>id K ;
 +Prt+Pl3:i%^CLEN%^VBACK%^RVSH%>i3 K ;
@@ -2413,12 +2437,12 @@ LEXICON VINFINITES_UD !!= * __@CODE@__
 +Inf:u%>đ K ;
 
 +Ind+Prs+ConNeg:u%^WG%^RLEN%> K ;
-+Ind+Prt+ConNeg:u2%>m K ;
++Ind+Prt+ConNeg:u%>m K ; ! u2
 +Cond+Prs+ConNeg:u2%^WG%>ččii K ;
-+Pot+ConNeg:u2%>u K ;
++Pot+ConNeg:u%>u K ; ! u2
 +Imprt+ConNeg:u2 K ;
 
-+PrfPrc+Der/Pass:u2%>m K ;
++PrfPrc+Der/Pass:u%>m K ; ! u2
 +PrfPrc:u%>m K ;
 +PrsPrc:o%^SVLOW%>o K ;
 
@@ -2450,15 +2474,15 @@ LEXICON EVEN_IND_UD !!= * __@CODE@__
 +Prs+Pl2:u%>vetteđ K ; ! CSH
 +Prs+Pl3:u%>h5 K ; ! reusing h4 to prevent á to a !CSH
 
-+Prt+Sg1:u2%>m K ;
-+Prt+Sg2:u2%>h K ;
++Prt+Sg1:u%>m K ; ! u2
++Prt+Sg2:u%>h K ; ! u2
 +Prt+Sg3:u%^WG%^RLEN%>i K ;
 +Prt+Du1:u%^WG%^CLEN%^SVLOW%>im K ;
 +Prt+Du2:u%^WG%^CLEN%^SVLOW%>id K ;
 +Prt+Du3:u%^WG%^CLEN%^SVLOW%>in K ;
 +Prt+Pl1:u%^WG%^RLEN%>im K ;
 +Prt+Pl2:u%^WG%^RLEN%>id K ;
-+Prt+Pl3:u2%>u K ;
++Prt+Pl3:u%>u K ; ! u2
 
 LEXICON EVEN_POT_UD !!= * __@CODE@__
 +Sg1:o%^CLEN%>om K ;
