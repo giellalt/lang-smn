@@ -2,7 +2,7 @@
 !!!Testing is important, before you check in your work
 
 !!make
-With this one you check that there is no technical issues. Read the report.
+With "make" you check that there are no technical issues. Read the report.
 
 !Typical issues:
 * ERROR: Sublexicon is mentioned but not defined. (PYERRI)
@@ -14,29 +14,36 @@ With this one you check that there is no technical issues. Read the report.
 * ERROR: Compilation aborted because of 1 parse error. line 11634: syntax error at "suoraan" 
 ** look at line 11634 in src/morphology/lexicon.lexc, but you must correct the error in the sourcefile!
 * Segmentation fault: 11, Error 139
-** can be e.g. > instead of %>. Look at what you have done yourself, or at the last svn-log-mail, if it is not your own work.
+** can be e.g. that there is in lexc the symbol > instead of %>  . Look at what you have done yourself, or at the last svn-log-mail, if it is not your own work.
 
 
 !! make check
-!yaml-tests - they are static and tests the same lemmas every time
+With "make check" you also check the morphology:
+
+!yaml-tests. 
+* These are static and test the same lemmas every time.
 * yaml tests are good for testing changes in twolc and in the paradigms in lexc 
 
-!genererated missing nouns, adjectives, verbs, propernouns
-* These are dynamic tests, and tests all the lemmas in the stemfiles, also the new lemmas you just added. Testing that it is possible to generate the lemmas as base form. This test does not test the inflection, but very often the testing still reveal if a lemma has got the wrong continuation lexicon.
+!genererating of all stems - get list of missing lemmas: nouns, adjectives, verbs, propernouns 
+* These are dynamic tests, and tests all the lemmas in the stem files, also the new lemmas you just added. 
+* Tests if it is possible to generate the lemmas as base form. This test does not test the inflection, but very often the testing still reveal if a lemma has got the wrong continuation lexicon.
 
-!! Test only genererating of stems
-Test only genererating of nouns, adjectives, verbs, propernouns (no yaml-tests):
-* sh test/check_lemmas.sh
+!! Test only genererating of all stems
+Test only genererating of nouns, adjectives, verbs, propernouns (no yaml-tests) with this command:
+!sh test/check_lemmas.sh
 
 !! test the work
-* usmn, usmnNorm – analyse the forms, e.g. nieidáin
+Analyse the forms:
+! usmn, usmnNorm 
+analyse e.g. nieidáin
 
-If you don't get any analysis, only a ?, then you should generate the word:
+If you don't get any analysis, only ?, then you should generate the word:
 
-* dsmn, dsmnNorm - generate the forms, e.g. nieidâ+N+Sg+Com
+! dsmn, dsmnNorm 
+generate the forms, e.g. nieidâ+N+Sg+Com
 
-Do you have a new analyser and generator? How to check the date/time for when you analyser/generator was compiled:
-* ll src/
+Are you not quite sure that you you have a new analyser and generator? How to check the date/time for when you analyser/generator was compiled:
+! ll src/
 
 !! Scripts as a help to look at the generated forms
 When you are in langs/smn - the quick command:
@@ -44,7 +51,7 @@ When you are in langs/smn - the quick command:
 {{{sh devtools/adj_minip.sh uánehâš }}} 
 {{{sh devtools/prop_minip.sh Aanaar }}} 
 
-Get only the correct lemma:
+Get only the correct lemma and not compounds:
 {{{sh devtools/noun_minip.sh '^nieidâ[:+]' }}}
 
 Look at all lemmas going to the same continuation lexicon:
