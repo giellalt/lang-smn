@@ -6,8 +6,18 @@
 ######### USER Variables - change these to your liking: #########
 # Codes for the word forms to be generated - list as many or few as needed:
 morf_codes="+V+Inf \
+            +V+Ind+Prs+Sg1 \
             +V+Ind+Prs+Sg3 \
+            +V+Ind+Prs+Du1 \
+            +V+Ind+Prs+Du2 \
+            +V+Ind+Prs+Du3 \
+            +V+Ind+Prs+Pl1 \
+            +V+Ind+Prs+Pl2 \
+            +V+Ind+Prs+Pl3 \
+            +V+Ind+Prt+Sg1 \
+            +V+Ind+Prt+Sg3 \
             +V+Ind+Prt+Pl1 \
+            +V+Ind+Prt+Pl3 \
             +V+Ind+Prs+ConNeg \
             +V+PrfPrc"
 
