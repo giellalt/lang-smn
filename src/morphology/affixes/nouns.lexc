@@ -58,8 +58,28 @@ LEXICON 2ALGA  !!= __@CODE@__ 2VADDU has CLEN for Sg+Com and Pl+Ill , rlen svlow
 +N+Ess:%>n K ;						! algân
 +N+Par:%>d K ;						! algâd
 +N+Pl+Ill:%^WG%^CLEN%^SVLOW%>id K ; 			! algáid
-
-SOLLA_ALGA ;
++N+Sg+Nom: K;				 		! sollâ
++N+Cmp/SgNom: R ; !áimupoccee
++N+Sg+Gen:%^WG%^RLEN K ;     		! soolâ
++N+Sg+Acc:%^WG%^RLEN K ;     		! soolâ
++N+Sg+Ill:%^CSH%^RLEN%>n K ;		! soolân
++N+Sg+Loc:%^WG%^RLEN%>st K ; 		! soolâst
++N+Sg+Abe:%^WG%>ttáá K ;		! solâttáá
++N+Pl+Nom:%^WG%^RLEN%>h K ;  		! soolah
++N+Pl+Gen:%^WG%^RLEN%>i K ;			! soolâi 
++N+Pl+Gen+Use/NG:%^WG%>i K ;  		! solâi
++N+Pl+Acc:%^WG%^RLEN%>id K ; 		! soolâid
++N+Pl+Loc:%^WG%^RLEN%>in K ; 		! soolâin
++N+Pl+Com:%^WG%>iguin K ;		! solâiguin
++N+Pl+Com+Err/Orth:%^WG%>igijn K ;		! 
++N+Pl+Abe:%^WG%>ittáá K ;		! solâittáá
++N+Sg+Gen:%^WG VPXsuff ;  ! 
++N+Sg+Acc:%^WG VPXsuff ;  ! 
++N+Sg+Com:%^WG%^CLEN%^SVLOW%>in CPXsuff ;  ! 
++N+Pl+Gen:%^WG%>id CPXsuff ;  !
++N+Pl+Acc:%^WG%>id CPXsuff ;  !
++N+Pl+Com:%^WG%>id CPXsuffCOM ;  !
++N+Der/Dimin: S_KAANDAS ; !kaandâš nieidâš
 
 
 LEXICON 2SOLLA  !!= __@CODE@__ SM1, RLEN, earlier LLEN !rlen svlow, sgcom/plill:rlen  ess:clen
@@ -67,9 +87,6 @@ LEXICON 2SOLLA  !!= __@CODE@__ SM1, RLEN, earlier LLEN !rlen svlow, sgcom/plill:
 +N+Ess:%^CLEN%>n K ;				! sollân
 +N+Par:%^CLEN%>d K ;				! sollâd
 +N+Pl+Ill:%^WG%^RLEN%^SVLOW%>id K ; ! sooláid
-SOLLA_ALGA ;
-
-LEXICON SOLLA_ALGA  !!= __@CODE@__ SM1, RLEN, earlier LLEN  rlen svlow, sgcom/plill:rlen  ess:clen
 +N+Sg+Nom: K;				 		! sollâ
 +N+Cmp/SgNom: R ; !áimupoccee
 +N+Sg+Gen:%^WG%^RLEN K ;     		! soolâ
@@ -2180,7 +2197,8 @@ LEXICON ODD_SUFF_SHORTSTEM  !!= * __@CODE@__
 
 LEXICON C_LOHHEE
 +N+NomAg: X_TAHHEE ;  !!= __@CODE@__ ee-final contract nomen agentis
- 
++N+Cmp/SgNom: R ;
+
 LEXICON C_TAHHEE !!= __@CODE@__ ee-final contract, -ei instead of -ij not-nomen-agentis
 +N: X_TAHHEE ;
 +N+Cmp/SgNom: R ;
