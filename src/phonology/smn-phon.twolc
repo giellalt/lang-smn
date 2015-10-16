@@ -49,7 +49,7 @@ Alphabet
 !! !Different archiphonemes
 
 
-p4:p  k4:k  l4:l    !!= * @CODE@  these are consonants that change in cg
+p4:p  k4:k  l4:l t4:t   !!= * @CODE@  these are consonants that change in cg
 i4:i                    	        !!= * @CODE@  this is the underlying i consonant
 i2:i u2:u         	        !!= * @CODE@  this is final i, u in contract verbs etc changing to e, o
 i3:i           	        !!= * @CODE@  this is invariant i
@@ -137,7 +137,7 @@ Sets
        P Q R S Š T Ŧ V W X Z Ž 				   !!= @CODE@ 
        ht g2 k2 m2 n2 							   !!= @CODE@ 
        b3 d3 g3 m3 h3 						   !!= @CODE@ 
-       p4 k4 r4 l4  i4                  !!= @CODE@
+       p4 k4 r4 l4  i4  t4                !!= @CODE@
        h5 j5 ŋ5 t5 c5 l5 t5                                      !!=  @CODE@
        m7 n7 ŋ7 v7 s7 r7 đ7	l7 j7 h7 š7		   !!= @CODE@ 
        %^RC %^SC   ;                         !!=  @CODE@ 
@@ -229,11 +229,11 @@ Cx:0 <=> Vow: _  Cx: WeakGrade \%^CLEN: ;
 
 "tt:t  - final consonant and consonant gradation"
 !! * __@RULENAME@__ \\ 3syll verbs in -tt lose t in front of cns-initial suff
-t:0 <=> [Vow:|%^SV:] _ t: WeakGrade \%^CLEN: ; !! 1)
-        [Vow:|%^SV:] _ t: ConsonantShorting \%^CLEN:  ; !! 2)
+t:0 <=> [Vow:|%^SV:] _ [t:|t4:] WeakGrade \%^CLEN: ; !! 1)
+        [Vow:|%^SV:] _ [t:|t4:] ConsonantShorting \%^CLEN:  ; !! 2)
         [RealVow:|%^SV:] _ t: Triggers:* %> \Vow: ; !! 3) uáivátt : uáivát
         Vow: Vow: _ t: %> â n  ; !! 4) uáiváátt>ân uáiváátân
-         Vow:  _  t: Vow:+  (Cns:+) ([%^ÁI:|%^ÁE:]) %^EWG: ; !! 1) tiettu tieđâ  njuottâs%^EWG%^RLEN> hittáás%^ÁE%^EWG%^RLEN>
+         Vow:  _  [t:|t4:] Vow:+  (Cns:+) ([%^ÁI:|%^ÁE:]) %^EWG: ; !! 1) tiettu tieđâ  njuottâs%^EWG%^RLEN> hittáás%^ÁE%^EWG%^RLEN>
 
 !€ kulluutt^SVSH>
 !€ kullu00t0>
@@ -343,20 +343,23 @@ k:0 <=> Vow: [l | r | v | i4: | đ ]  _ k4:h  WeakGrade (%^CLEN: ) (%^VBACK:) (%
 
 
 
-"t:đ gradation for tt" 
+"t4:đ gradation for tt" 
 !! * __@RULENAME@__ 
-t:đ <=> \:ä Vow: t:  _  [â: | u: | u: â | á: | o: | o: o: ]  (Cns:+) ([%^ÁI:|%^ÁE:]) %^EWG: ; !! 2) tiettu:tieđâ čuottâlm:čuođâlm njuottâs
+t4:đ <=> t:0  _  Vow:+  (Cns:+) ([%^ÁI:|%^ÁE:]) %^EWG: ; !! 2) tiettu:tieđâ čuottâlm:čuođâlm njuottâs
 		Vow: %^RV: t:0  _ (u:0) â: %^WG: (%^VHIGH:) (%^RLEN:) (%^SVLOW:) %> ; !! 1) ruttâ ruuđâ 
+
+
+!t:đ <=> \:ä Vow: t:  _  [â: | u: | u: â | á: | o: | o: o: ]  (Cns:+) ([%^ÁI:|%^ÁE:]) %^EWG: ; !! 2) tiettu:tieđâ čuottâlm:čuođâlm njuottâs
+!		Vow: %^RV: t:0  _ (u:0) â: %^WG: (%^VHIGH:) (%^RLEN:) (%^SVLOW:) %> ; !! 1) ruttâ ruuđâ 
 ! ru%^RVttâ%^WG%^RLEN e%^RVttâ%^WG%^RLEN%^SVLOW>im
+
+
 
 
 !€ ru^RVttâ^WG^RLEN>
 !€ ruu0đâ00>
 
  
-!"t:0 foran t" 
-!!! * __@RULENAME@__ 
-!t:0 <=> _  t: Vow:+  (Cns:+) ([%^ÁI:|%^ÁE:]) %^EWG: ; !! 1) tiettu tieđâ        
 
 !rejected:       
 !€ haavvâr^CSH^RVSH>ist
