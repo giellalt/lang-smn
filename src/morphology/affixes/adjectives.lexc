@@ -37,19 +37,28 @@ LEXICON ATTR !!= __@CODE@__ for stems with only attribute form
 
 LEXICON ALKKEE  !!= __@CODE@__ directing to X_TAHHEE, attr. älkkees
 +A+Attr:s K ; ! älkkees
++A+Sg+Ill:%>jân K ;		! Adjective illative eejân
+ALKKEE_COMMON ;
++A:%> A_VUOTA ;
+
+LEXICON MAKKUU  !!= __@CODE@__ directing to X_TAHHEE, attr. älkkees
++A+Attr:s K ; ! älkkees
++A+Sg+Ill:%^EE%>vân K ;		! Adjective illative uvân
 ALKKEE_COMMON ;
 +A:%> A_VUOTA ;
 
 LEXICON PYECCEE  !!= __@CODE@__ directing to X_TAHHEE, attr. pyeccee
 +A+Attr: K ; 
- ALKKEE_COMMON ;
++A+Sg+Ill:%>jân K ;		! Adjective illative eejân
+ALKKEE_COMMON ;
 
 
 LEXICON ALKKEE_COMMON !!= __@CODE@__ common for ALKKEE and PYECCEE
 +A: X_TAHHEE ;
-+A:b%^SVSH COMPe ; ! assab
++A: VVCOMPe ; ! assab
 +A:%> MUS ; ! váiváámus hoppuumus
 +A+Cmp/SgNom:  R ;
+
 
 
 LEXICON UCES !!= __@CODE@__ not yet done, attr uccâ
@@ -613,6 +622,16 @@ LEXICON COMPe !!= * __@CODE@__ NUORA uses this lexicon
 +Comp+Attr:%^RLEN K ;
 +Comp+Der/Dimin:âš K ; !needs lexicon
 
+
+LEXICON VVCOMPe !!= * __@CODE@__ NUORA uses this lexicon
++Comp: VVCOMP-SUF ;
++Comp+Attr:b%^SVSH%^RLEN K ;
++Comp+Der/Dimin:b%^SVSHâš K ; !needs lexicon
+
+
+
+
+
 LEXICON COMPclen !!= * __@CODE@__ NUORA uses this lexicon
 +Comp: COMP-SUFclen ;
 +Comp+Attr:%^RLEN K ;
@@ -661,6 +680,7 @@ LEXICON oCOMP-SUF  !!= * __@CODE@__
 +Pl+Com:b%>oiguin K ;
 +Pl+Abe:b%>oittáá K ;
 
+
 LEXICON CCOMP-SUF  !!= * __@CODE@__  STYERES uses this lexicon
 +Sg+Nom: K ;
 +Sg+Gen: K ;
@@ -705,6 +725,27 @@ LEXICON COMP-SUF  !!= * __@CODE@__
 +Pl+Loc:%>ijn K ;
 +Pl+Com:%>ijguin K ;
 +Pl+Abe:%>ijttáá K ;
+
+
+LEXICON VVCOMP-SUF  !!= * __@CODE@__ 
++Sg+Nom:b%^SVSH%^RLEN%^SLEN K ;
++Sg+Gen:b%^SVSH%^RLEN%^SLEN K ;
++Sg+Acc:b%^SVSH%^RLEN%^SLEN K ;
+
++Sg+Ill:b%>ân K ;
++Sg+Loc:b%>ist K ;
++Sg+Com:b%>áin K ;
++Sg+Abe:b%^SVSH%^RLEN%^SLEN%>ttáá K ;
++Ess:b%>in K ;
++Par:b%>id K ;
++Pl+Nom:b%>eh K ;
++Pl+Gen:b%>ij K ;
++Pl+Acc:b%>ijd K ;
++Pl+Ill:b%>áid K ;
++Pl+Loc:b%>ijn K ;
++Pl+Com:b%>ijguin K ;
++Pl+Abe:b%>ijttáá K ;
+
 
 LEXICON COMP-SUFclen  !!= * __@CODE@__ 
 +Sg+Nom:%^CLEN%^SLEN K ;
