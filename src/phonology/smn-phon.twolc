@@ -207,7 +207,7 @@ Cx:Cy <=> Vow: _ (%^RC: )  WeakGrade ([%^VHIGH:|%^VBACK:]) ([%^RVSH:|%^RLEN:]) (
 "xx:x consonant gradation and shortening and x:x shortening"
 !! * __@RULENAME@__ \\   weak grade or consonant shortening for illativ
 Cx:0 <=> Vow: _  Cy: WeakGrade \%^CLEN: ;
-         Vow: _  Cy: ConsonantShorting \%^CLEN:  ;
+         Vow: _  Cy: ConsonantShorting \%^CLEN:  ; !
 	where Cx in ( b c c  č  d đ f g h j k l m n ŋ p r s š v z ž ) !t
 	      Cy in ( b c c4 č4 d đ f g h j k l m n ŋ p r s š v z ž )
 		  matched ;
@@ -311,9 +311,13 @@ k4:h <=> Vow: [t:|k:]  _  WeakGrade  ;
          Vow: [l | r | v | i4: | đ ]  k: _  WeakGrade ;
          Vow: [l | r | v | i4: | đ ]  k: _ Vow:+ (Cns:) ([%^ÁI:|%^ÁE:]) %^EWG:  ; !rkk	rh
 
-"k:h gradation for kk4"
+"xx:yy gradation for xx4"
 !! * __@RULENAME@__ \\   
-k:h <=> Vow: _  k4:h WeakGrade %^CLEN: ; !puáhhoin
+Cx:Cy <=> Vow: _  Cz:Cy WeakGrade %^CLEN: ; !puáhhoin
+	where Cx in ( k  c ) 
+	      Cy in ( h  s ) 
+	      Cz in ( k4 c4 ) 
+		  matched ;
 
          
 !€ mä^RVtk4i^WG^RLEN>.#.
@@ -351,7 +355,7 @@ k:0 <=> Vow: [l | r | v | i4: | đ ]  _ k4:h  WeakGrade (%^CLEN: ) (%^VBACK:) (%
 
 "x4:z gradation for xx4" 
 !! * __@RULENAME@__ 
-Cy:Cz <=> Cx:0  _  WeakGrade ; !! 2) čuottâlm:čuođâlm njuottâs 
+Cy:Cz <=> Cx:  _  WeakGrade ; !! 2) čuottâlm:čuođâlm njuottâs 
 		  Cx:0  _ Vow:+ Cns:*  Triggers:*  %^EWG: ; !! 1) ruttâ ruuđâ  tiettu:tieđâ
        where Cx in ( t  c  č ) 
              Cy in ( t4 c4 č4 ) 
