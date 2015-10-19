@@ -11,7 +11,7 @@ morf_codes="+A+Sg+Nom \
             +A+Sg+Loc \
             +A+Pl+Nom \
             +A+Attr \
-            +A+Comp+Sg+Nom"
+            +A+Comp+Pl+Nom"
             
 
 # Lexicon source file for lexicons and lemmas:
@@ -24,14 +24,14 @@ exception_lexicons="(SUP|adjstems|ATTR)"
 generator_file=src/generator-gt-norm
 
 # How many lemmas maximally for each lexicon:
-lemmacount=5
+lemmacount=3
 
 # Specify path to $GTCORE - we don't use Autotools for these scripts:
 gtcore=$GTCORE
 
 
 ################## DO NOT CHANGE BELOW HERE!!! ##################
-source $gtcore/scripts/generate-wordforms-for-cont_lexes.sh \
+source devtools/generate-wordforms-for-cont_lexes.sh \
         "$gtcore" \
         "$morf_codes" \
         "$source_file" \
