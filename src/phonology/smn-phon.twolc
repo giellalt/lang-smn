@@ -49,7 +49,7 @@ Alphabet
 !! !Different archiphonemes
 
 
-p4:p  k4:k  l4:l t4:t   !!= * @CODE@  these are consonants that change in cg
+p4:p  k4:k  l4:l t4:t č4:č c4:c   !!= * @CODE@  these are consonants that change in cg
 i4:i                    	        !!= * @CODE@  this is the underlying i consonant
 i2:i u2:u         	        !!= * @CODE@  this is final i, u in contract verbs etc changing to e, o
 i3:i           	        !!= * @CODE@  this is invariant i
@@ -137,8 +137,8 @@ Sets
        P Q R S Š T Ŧ V W X Z Ž 				   !!= @CODE@ 
        ht g2 k2 m2 n2 							   !!= @CODE@ 
        b3 d3 g3 m3 h3 						   !!= @CODE@ 
-       p4 k4 r4 l4  i4  t4                !!= @CODE@
-       h5 j5 ŋ5 t5 c5 l5 t5                                      !!=  @CODE@
+       p4 k4 r4 l4  i4  t4 c4 č4                !!= @CODE@
+       h5 j5 ŋ5 t5 c5 l5 t5                     !!=  @CODE@
        m7 n7 ŋ7 v7 s7 r7 đ7	l7 j7 h7 š7		   !!= @CODE@ 
        %^RC %^SC   ;                         !!=  @CODE@ 
  Geminate = b d g p h t k c f z l m n ŋ r s š v  ;  !!= * @CODE@  
@@ -206,9 +206,12 @@ Cx:Cy <=> Vow: _ (%^RC: )  WeakGrade ([%^VHIGH:|%^VBACK:]) ([%^RVSH:|%^RLEN:]) (
 
 "xx:x consonant gradation and shortening and x:x shortening"
 !! * __@RULENAME@__ \\   weak grade or consonant shortening for illativ
-Cx:0 <=> Vow: _  Cx: WeakGrade \%^CLEN: ;
-         Vow: _  Cx: ConsonantShorting \%^CLEN:  ;
-	where Cx in ( b c d đ f g h j k l m n ŋ p r s š v z ž ) ; !lnŋr kahhaanj 
+Cx:0 <=> Vow: _  Cy: WeakGrade \%^CLEN: ;
+         Vow: _  Cy: ConsonantShorting \%^CLEN:  ;
+	where Cx in ( b c c  č  d đ f g h j k l m n ŋ p r s š v z ž ) !t
+	      Cy in ( b c c4 č4 d đ f g h j k l m n ŋ p r s š v z ž )
+		  matched ;
+
 
 !€ vi^RVššâ^RVSH^CSH>vettee
 !€ vi00šâ00>vettee
@@ -346,10 +349,14 @@ k:0 <=> Vow: [l | r | v | i4: | đ ]  _ k4:h  WeakGrade (%^CLEN: ) (%^VBACK:) (%
 
 
 
-"t4:đ gradation for tt4" 
-!! * __@RULENAME@__ e%^RVtt4e%^WG%^RLEN%>em
-t4:đ <=> t:0  _  WeakGrade ; !! 2) čuottâlm:čuođâlm njuottâs hiđes:hitt4áás%^ÁE HAANIS ;
-		 t:0  _ Vow:+ Cns:*  Triggers:*  %^EWG: ; !! 1) ruttâ ruuđâ  tiettu:tieđâ
+"x4:z gradation for xx4" 
+!! * __@RULENAME@__ 
+Cy:Cz <=> Cx:0  _  WeakGrade ; !! 2) čuottâlm:čuođâlm njuottâs 
+		  Cx:0  _ Vow:+ Cns:*  Triggers:*  %^EWG: ; !! 1) ruttâ ruuđâ  tiettu:tieđâ
+       where Cx in ( t  c  č ) 
+             Cy in ( t4 c4 č4 ) 
+             Cz in ( đ  s  j ) 
+       matched ;
 
 
 !t:đ <=> \:ä Vow: t:  _  [â: | u: | u: â | á: | o: | o: o: ]  (Cns:+) ([%^ÁI:|%^ÁE:]) %^EWG: ; !! 2) tiettu:tieđâ čuottâlm:čuođâlm njuottâs
