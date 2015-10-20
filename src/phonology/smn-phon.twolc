@@ -244,8 +244,8 @@ Cx:Cy <=> Vow:  _ %^RC: :Vow+ Cns:* [Triggers: -  %^FCD:]* %^WG: %^CLEN: (%^VHIG
 !! * __@RULENAME@__ \\   weak grade or consonant shortening for illativ
 Cx:0 <=> Vow: _  Cy: WeakGrade \%^CLEN: ;
          Vow: _  Cy: ConsonantShorting \%^CLEN:  ; !
-	where Cx in ( b c c  č  d đ f g h j k l m n ŋ p r s š v z ž ) !t
-	      Cy in ( b c c4 č4 d đ f g h j k l m n ŋ p r s š v z ž )
+	where Cx in ( b c c  č  d đ f g  j k l m n ŋ p r s š v z ž ) !t, h
+	      Cy in ( b c c4 č4 d đ f g  j k l m n ŋ p r s š v z ž ) 
 		  matched ;
 
 
@@ -360,13 +360,21 @@ h:0 <=>  Cns Vow: (Vow:0) h:  _  Vow:+  Cns [%^ÁI:|%^ÁE:]  %^EWG:  ; !  loves 
          Cns Vow: Vow: h:  _  Vow:  [%^ÁI:|%^ÁE:]  %^EWG: %> [i: |j] ; !poovij
                      o: h: _  [u:|o:]+ (Cns:) %^EWG: ; !puávui:puohhu
 
+
+"h:0 the other rule"
+h:0 <=> Vow: _  h: WeakGrade \%^CLEN: ;
+         Vow: _  h: ConsonantShorting \%^CLEN:  ; !
+         Vow: _  h: (%^RC:) WeakGrade \%^CLEN: ; !! 1) weak grade: ruttâ:ruuđáin 
+         Vow: _  h: Vow: (%^EA: )  %^CSH:(%^VHIGH:) (%^RLEN:)  %> ; !! 2) consonant shortening for illativ
+         Vow: _  h: Vow:+  Cns ([%^ÁI:|%^ÁE:]) %^CSH: ([%^RLEN: | %^RVSH:])  (%^SVSH:)  %> ; !! 3) consonant shortening for páápp4ár%^ÁI viäkk4ás%^ÁI
+
 "xx:y to something else, consonant gradation and shortening, part 1" 
 !! * __@RULENAME@__ \\   hh:V, kk:h, pp:v,  deleting first part, k:0 in kk4:h etc  
 Cx:0 <=> Vow: _  Cy: (%^RC:) WeakGrade \%^CLEN: ; !! 1) weak grade: ruttâ:ruuđáin 
          Vow: _  Cy: Vow: (%^EA: )  %^CSH:(%^VHIGH:) (%^RLEN:)  %> ; !! 2) consonant shortening for illativ
          Vow: _  Cy: Vow:+  Cns ([%^ÁI:|%^ÁE:]) %^CSH: ([%^RLEN: | %^RVSH:])  (%^SVSH:)  %> ; !! 3) consonant shortening for páápp4ár%^ÁI viäkk4ás%^ÁI
-	where Cx in ( h k  p   ) !t
-	      Cy in ( h k4 p4 )
+	where Cx in ( k  p   ) !t
+	      Cy in ( k4 p4 )
 		  matched ;
 
 "xx:y to something else, consonant gradation, part 2" 
