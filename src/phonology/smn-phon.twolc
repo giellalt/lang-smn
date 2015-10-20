@@ -178,18 +178,49 @@ Rules
 
 "x:y consonant gradation"
 !! * __@RULENAME@__ \\  WG gives x:x and x:y, when there is no consonant lengthning  
-Cx:Cy <=> Vow: _ (%^RC: )  WeakGrade ([%^VHIGH:|%^VBACK:]) ([%^RVSH:|%^RLEN:]) (%^SLEN:) (%^SVLOW:) %> ;
+Cx:Cy <=> Vow: _ (%^RC: )  WeakGrade  ([%^VHIGH:|%^VBACK:]) ([%^RVSH:|%^RLEN:]) (%^SLEN:) (%^SVLOW:) %> ;
           Vow: _ Vow: Cns: [%^ÁI:|%^ÁE:] %^EWG: ; !cuávis:cu5áhás%^ÁI
 	where Cx in ( h p c )   !č 
-          Cy in ( v v s )   !j
+              Cy in ( v v s )   !j
 		  matched ;
-
 
 !€ suá^RDn^RCju^WG>
 !€ suá0n0ju0>
 
 !€ va^RVh%^RCo^WG^CLEN>im
 !€ va0v0o00>im
+
+"Lengthening of root consonant x:yy 1"
+!! * __@RULENAME@__ \\  
+Cx:Cy <=> Vow:  _ %^RC: :Vow+ Cns:* [Triggers: -  %^FCD:]* %^WG: %^CLEN: (%^VHIGH:|%^VBACK:) (%^RVSH:) ([%^SVLOW: |%^SLEN:]) %> [ i:|s|u|o|ž] ;
+	where Cx in ( h p c )
+	      Cy in ( v v s ) 
+		  matched ;
+
+"Lengthening of root consonant x:yy 2"
+!! * __@RULENAME@__ \\  
+%^RC:Cy <=> Vow: Cx:Cy _ :Vow+ Cns:* [Triggers: - %^FCD:]* %^WG: %^CLEN: (%^VHIGH:|%^VBACK:) (%^RVSH:) ([%^SVLOW: |%^SLEN:]) %> [ i:|s|u|o|ž] ;
+	where Cx in ( h p c )
+	      Cy in ( v v s ) 
+		  matched ;
+
+
+!kassa:kassaast
+!€ ka^RVss^RCa^SV^WG^CLEN^SLEN>st
+!€ ka0ss0aa000>st
+
+!vahe vavveest
+!€ va^RVh^RCe^SV^WG^CLEN^SLEN>st
+!€ va0vvee000>st
+
+!vahe vahheen
+!€ va^RVh^RCe^SV^CLEN^SLEN>n
+!€ va0hhee00>n
+
+
+
+
+
 
 "č:j consonant gradation"
 !! * __@RULENAME@__ \\ 
@@ -278,9 +309,9 @@ Cx:0 <=> Vow: _  Cy: (%^RC:) WeakGrade \%^CLEN: ; !! 1) weak grade: ruttâ:ruuđ
 
 "xx:y to something else, consonant gradation, part 2" 
 !! * __@RULENAME@__ \\  hh:V, kk:h, pp:v, čč:J here we change second part, 
-Cx:Cy <=> Vow:  Cz:  _  WeakGrade  ; !! 1) weak grade: 
-          Vow: Cz:  _ Vow: Cns: %^EWG: ; 
-          Vow:  Cz: _ :i %^SV: Cns %^ÁI: %^WG: %^RVSH: %> ;
+Cx:Cy <=> Vow: Cz: _  WeakGrade  ; !! 1) weak grade: 
+          Vow: Cz: _  Vow: Cns: %^EWG: ; 
+          Vow: Cz: _ :i %^SV: Cns %^ÁI: %^WG: %^RVSH: %> ;
 	where Cx in ( h ) 
 	      Cy in ( v ) 
 	      Cz in ( h ) 
@@ -333,10 +364,10 @@ Cx:Cy <=> Vow: _  Cz:Cy WeakGrade %^CLEN: ; !puáhhoin
 
 "h:v gradation for hh"
 !! * __@RULENAME@__ \\   já%^RVhhá%^SVl%^ÁI%^EWG%^RLEN>
-h:v <=> Vow: :Vow  h: _     Vow:+ Cns [%^ÁI:|%^ÁE:] %^EWG: %^RLEN: ; ! jäävvil siävus but loves
-		Vow:  Vow:    _     Vow:  Cns               %^EWG: [%^RLEN:|%^RVSH:] ;!			
- 		      Vow:    _ h:  Vow:+ Cns [%^ÁI:|%^ÁE:] %^EWG: ; !jäävvil and loves
-     Cns Vow: Vow:    _ h:0 Vow:      [%^ÁI:|%^ÁE:] %^EWG: %> [i: |j] ; !poovij
+h:v <=> Vow: :Vow h: _     Vow:+ Cns [%^ÁI:|%^ÁE:] %^EWG: %^RLEN: ; ! jäävvil siävus but loves
+	Vow:  Vow:   _     Vow:  Cns               %^EWG: [%^RLEN:|%^RVSH:] ;!			
+              Vow:   _ h:  Vow:+ Cns [%^ÁI:|%^ÁE:] %^EWG: ; !jäävvil and loves
+     Cns Vow: Vow:   _ h:0 Vow:      [%^ÁI:|%^ÁE:] %^EWG: %> [i: |j] ; !poovij
                   o: _ h:0 [u:|o:]+ (Cns:) %^EWG: ; !puávui:puohhu
  
 
@@ -559,32 +590,6 @@ j:i <=> Vow: _ %^RC: :Vow       %^CLEN:  (%^RVSH:)       %> ; !Par Ess
 !€ kolle0>
 
 
-"Lengthening of root consonant x:yy 1"
-!! * __@RULENAME@__ \\  
-Cx:Cy <=> Vow:  _ %^RC: :Vow+ Cns:* [Triggers: -  %^FCD:]* %^WG: %^CLEN: (%^VHIGH:|%^VBACK:) (%^RVSH:) ([%^SVLOW: |%^SLEN:]) %> [ i:|s|u|o|ž] ;
-	where Cx in ( h p c )
-		  Cy in ( v v s ) 
-		  matched ;
-
-"Lengthening of root consonant x:yy 2"
-!! * __@RULENAME@__ \\  
-%^RC:Cy <=> Vow: Cx:Cy _ :Vow+ Cns:* [Triggers: - %^FCD:]* %^WG: %^CLEN: (%^VHIGH:|%^VBACK:) (%^RVSH:) ([%^SVLOW: |%^SLEN:]) %> [ i:|s|u|o|ž] ;
-	where Cx in ( h p c )
-		  Cy in ( v v s ) 
-		  matched ;
-
-
-!kassa:kassaast
-!€ ka^RVss^RCa^SV^WG^CLEN^SLEN>st
-!€ ka0ss0aa000>st
-
-!vahe vavveest
-!€ va^RVh^RCe^SV^WG^CLEN^SLEN>st
-!€ va0vvee000>st
-
-!vahe vahheen
-!€ va^RVh^RCe^SV^CLEN^SLEN>n
-!€ va0hhee00>n
 
 !€ kiel^RCâ^CLEN>n
 !€ kiellâ0>n
