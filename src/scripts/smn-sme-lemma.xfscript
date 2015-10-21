@@ -1,10 +1,19 @@
 
-! File to make sme into quasi-smn
-define Vow = [ a e i o u ] ;
+! File to make smn into quasi-sme
 
-define initp  p -> b  || [.#.|h] _  ;
-define initt  t -> d  || [.#.|m] _  ;
-define initk  k -> g  || [.#.|m|t|h] _  ;
+! to compile
+! xfst -f smn-sme-lemma.xfscript
+
+! to use:
+! cat list | lookup smnsme.fst
+
+
+
+define Vow = [ a | e | i | o | u | ä | á | â | y ] ;
+
+define initp  p -> b  || [.#.|h|â] _  ;
+define initt  t -> d  || [.#.|m|â] _  ;
+define initk  k -> g  || [.#.|m|t|h|â] _  ;
 
 define dnnn [ n n -> d n ,
               v n -> v d n ,
@@ -35,7 +44,6 @@ define uaVow  u á -> o a ;
 define iaVow  i ä -> e a ;
 define yeVow  y e -> u o ;
 
-               
 define finalt [ b | đ | g | p | d | h ] -> t || _ .#. ;
 
 define finalm m -> n || _ .#. ;
@@ -43,14 +51,13 @@ define finale e -> i || _ .#. ;
 
 define aaVow       [ a a | á á ] -> á ;
 define aeaeVow       ä ä -> á ;
-define eeVow     e e -> e a || _ ;
+define eeVow     e e -> e a  ;
 define iiVow       i i -> i ;
 define ooVow       o o -> o ;
 define uuVow       u u -> u ;
 
-! k - hk | hkk+V
-
-! e - ea veigi - veaigi
+define reducedA â -> a ;
+               
 
 read regex [ 
 initp
@@ -71,6 +78,7 @@ initp
 .o. iiVow
 .o. ooVow
 .o. uuVow
+.o. reducedA
 ] ;
 
 invert net ;

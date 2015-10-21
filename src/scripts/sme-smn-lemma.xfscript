@@ -1,10 +1,19 @@
 
 ! File to make sme into quasi-smn
-define Vow = [ a e i o u ] ;
 
-define initp b -> p  || .#. _ ;
-define initt d -> t  || .#. _ ;
-define initk g -> k  || .#. _ ;
+! to compile:
+
+! xfst -f sme-smn-lemma.xfscript
+
+! to use:
+! cat list | lookup smesmn.fst
+
+
+define Vow  [ a|e|i|o|u|á ] ;
+
+define initp b -> p  || [.#.|%-] _ ;
+define initt d -> t  || [.#.|%-] _ ;
+define initk g -> k  || [.#.|%-] _ ;
 
 define dnnn [  d n -> n n ,
              v d n -> v n ,
@@ -18,7 +27,7 @@ define dnnn [  d n -> n n ,
                k s -> p s 
               ] ;
 
-define VowIK   i t -> š t , i k -> š k || Vow _ ;
+define VowIK   i t -> š t , i k -> š k  || Vow _ ;
 
 define hppttkk [ h p p -> p p ,
                  h t t -> t t ,
@@ -27,6 +36,12 @@ define hppttkk [ h p p -> p p ,
                  h č č -> č č 
                  ] ;
 
+define hptk    [ h p -> p p ,
+                 h t -> t t ,
+                 h k -> k k ,
+                 h c -> c c ,
+                 h č -> č č 
+                 ] ;
 
 define aVow [ á -> ä  ] ;
 
@@ -47,6 +62,7 @@ initp
 .o. dnnn
 .o. VowIK
 .o. hppttkk
+.o. hptk
 .o. uaVow
 .o. iaVow
 .o. yeVow
@@ -57,5 +73,5 @@ initp
 invert net ;
 
 
-save stack sme2smn.fst
+save stack smesmn.fst
 
