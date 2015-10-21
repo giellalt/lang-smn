@@ -192,14 +192,14 @@ Cx:Cy <=> Vow: _ (%^RC: )  WeakGrade  ([%^VHIGH:|%^VBACK:]) ([%^RVSH:|%^RLEN:]) 
 
 "Lengthening of root consonant x:yy 1"
 !! * __@RULENAME@__ \\  
-Cx:Cy <=> Vow:  _ %^RC: :Vow+ Cns:* [Triggers: -  %^FCD:]* %^WG: %^CLEN: (%^VHIGH:|%^VBACK:) (%^RVSH:) ([%^SVLOW: |%^SLEN:]) %> [ i:|s|u|o|ž] ;
+Cx:Cy <=> Vow:  _ %^RC: :Vow+ Cns:* [Triggers: -  %^FCD:]* %^WG: %^CLEN: (%^VHIGH:|%^VBACK:) (%^RVSH:) ([%^SVLOW: |%^SLEN:]) %> [ i:|s|u|o|ž|e h | e m] ;
 	where Cx in ( h p c )
 	      Cy in ( v v s ) 
 		  matched ;
 
 "Lengthening of root consonant x:yy 2"
 !! * __@RULENAME@__ \\  
-%^RC:Cy <=> Vow: Cx:Cy _ :Vow+ Cns:* [Triggers: - %^FCD:]* %^WG: %^CLEN: (%^VHIGH:|%^VBACK:) (%^RVSH:) ([%^SVLOW: |%^SLEN:]) %> [ i:|s|u|o|ž] ;
+%^RC:Cy <=> Vow: Cx:Cy _ :Vow+ Cns:* [Triggers: - %^FCD:]* %^WG: %^CLEN: (%^VHIGH:|%^VBACK:) (%^RVSH:) ([%^SVLOW: |%^SLEN:]) %> [ i:|s|u|o|ž |e h | e m] ;
 	where Cx in ( h p c )
 	      Cy in ( v v s ) 
 		  matched ;
@@ -351,7 +351,7 @@ h:v <=> Vow: :Vow h: _     Vow:+ Cns [%^ÁI:|%^ÁE:] %^EWG: %^RLEN: ; ! jäävvi
               Vow:   _ h:  Vow:+ Cns [%^ÁI:|%^ÁE:] %^EWG: ; !jäävvil and loves
      Cns Vow: Vow:   _ h:0 Vow:      [%^ÁI:|%^ÁE:] %^EWG: %> [i: |j] ; !poovij
                   o: _ h:0 [u:|o:]+ (Cns:) %^EWG: ; !puávui:puohhu
- 
+ !				Vow: _ h:v Vow: %^WG: %^CLEN: ;
 
 "h:0 for hh"
 !! * __@RULENAME@__ \\   
@@ -364,13 +364,13 @@ h:0 <=>  Cns Vow: (Vow:0) h:  _  Vow:+  Cns [%^ÁI:|%^ÁE:]  %^EWG:  ; !  loves 
 h:0 <=> Vow: _  h: WeakGrade \%^CLEN: ;
          Vow: _  h: ConsonantShorting \%^CLEN:  ; !
          Vow: _  h: (%^RC:) WeakGrade \%^CLEN: ; !! 1) weak grade: ruttâ:ruuđáin 
-         Vow: _  h: Vow: (%^EA: )  %^CSH:(%^VHIGH:) (%^RLEN:)  %> ; !! 2) consonant shortening for illativ
+         Vow: _  h: Vow: (%^EA: )  %^CSH: (%^VHIGH:) (%^RLEN:)  %> ; !! 2) consonant shortening for illativ
          Vow: _  h: Vow:+  Cns ([%^ÁI:|%^ÁE:]) %^CSH: ([%^RLEN: | %^RVSH:])  (%^SVSH:)  %> ; !! 3) consonant shortening for páápp4ár%^ÁI viäkk4ás%^ÁI
 
 "xx:y to something else, consonant gradation and shortening, part 1" 
 !! * __@RULENAME@__ \\   hh:V, kk:h, pp:v,  deleting first part, k:0 in kk4:h etc  
 Cx:0 <=> Vow: _  Cy: (%^RC:) WeakGrade \%^CLEN: ; !! 1) weak grade: ruttâ:ruuđáin 
-         Vow: _  Cy: Vow: (%^EA: )  %^CSH:(%^VHIGH:) (%^RLEN:)  %> ; !! 2) consonant shortening for illativ
+         Vow: _  Cy: Vow: (%^EA: )  %^CSH: (%^VHIGH:) (%^RLEN:)  %> ; !! 2) consonant shortening for illativ
          Vow: _  Cy: Vow:+  Cns ([%^ÁI:|%^ÁE:]) %^CSH: ([%^RLEN: | %^RVSH:])  (%^SVSH:)  %> ; !! 3) consonant shortening for páápp4ár%^ÁI viäkk4ás%^ÁI
 	where Cx in ( k  p   ) !t
 	      Cy in ( k4 p4 )
@@ -381,7 +381,7 @@ Cx:0 <=> Vow: _  Cy: (%^RC:) WeakGrade \%^CLEN: ; !! 1) weak grade: ruttâ:ruuđ
 Cx:Cy <=> Vow: Cz: _  WeakGrade  ; !! 1) weak grade: 
           Vow: Cz: _  Vow: Cns: %^EWG: ; 
           Vow: Cz: _ :i %^SV: Cns %^ÁI: %^WG: %^RVSH: %> ;
-	where Cx in ( h ) 
+	where Cx in ( h) 
 	      Cy in ( v ) 
 	      Cz in ( h ) 
 		  matched ;
@@ -1090,7 +1090,7 @@ u:o <=>  [.#.|#] _     Cns:+ u:o %^SV: %^WG: %^SLEN:  %^SVLOW: [%>|.#.]  ; !%^SV
 
 
 "Diphthongisation e to iä, part 1"
-!! * __@RULENAME@__ \\  
+!! * __@RULENAME@__ \\   
 e:i <=>  [Cns|.#.|#] _  Vow: Cns:+ [i2:|e:|i:|i3:] %^EA: (%^CSH:) (%^RLEN:)   %> ; !! 1) Part 1: e to i; ergi -> iärgán 1, veerdi : viärdán
          [Cns|.#.|#] _ %^RV: Cns:+ u %^EWG: ;  ! čevžuin čiävžui
          [Cns|.#.|#] _ %^RV: Cns:+ [u|á|o] ([%^WG:|%^CSH:]) (%^CLEN:) %^VHIGH: ;  ! čevžuin čiävžui
