@@ -1,0 +1,80 @@
+
+! File to make sme into quasi-smn
+define Vow = [ a e i o u ] ;
+
+define initp  p -> b  || [.#.|h] _  ;
+define initt  t -> d  || [.#.|m] _  ;
+define initk  k -> g  || [.#.|m|t|h] _  ;
+
+define dnnn [ n n -> d n ,
+              v n -> v d n ,
+              i n -> i d n ,
+              l m -> l b m ,
+              r m -> r b m ,
+              i j -> d j ,
+              m m -> p m ,
+              h č -> k č ,
+              k t -> k t , 
+              š t -> i t , 
+              š k -> i k ,
+              p t -> k t ,
+              p s -> k s 
+              ] ;
+
+define hppttkk [ p p -> h p p ,
+                 t t -> h t t ,
+                 k k -> h k k ,
+                 c c -> h c c ,
+                 č č -> h č č 
+                 ] ;
+
+
+define aVow [ ä -> á , â -> a ] ;
+
+define uaVow  u á -> o a ;
+define iaVow  i ä -> e a ;
+define yeVow  y e -> u o ;
+
+               
+define finalt [ b | đ | g | p | d | h ] -> t || _ .#. ;
+
+define finalm m -> n || _ .#. ;
+define finale e -> i || _ .#. ;
+
+define aaVow       [ a a | á á ] -> á ;
+define aeaeVow       ä ä -> á ;
+define eeVow     e e -> e a || _ ;
+define iiVow       i i -> i ;
+define ooVow       o o -> o ;
+define uuVow       u u -> u ;
+
+! k - hk | hkk+V
+
+! e - ea veigi - veaigi
+
+read regex [ 
+initp
+.o. initt
+.o. initk    
+.o. dnnn
+.o. hppttkk
+.o. uaVow
+.o. iaVow
+.o. yeVow
+.o. aVow
+.o. finalt
+.o. finalm
+.o. finale
+.o. aaVow
+.o. aeaeVow
+.o. eeVow
+.o. iiVow
+.o. ooVow
+.o. uuVow
+] ;
+
+invert net ;
+
+
+save stack f.fst
+
