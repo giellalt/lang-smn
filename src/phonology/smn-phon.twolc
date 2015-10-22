@@ -270,7 +270,7 @@ Cx:0 <=> Vow: _  Cy: WeakGrade \%^CLEN: ;
 !! * __@RULENAME@__ \\ 3syll verbs in -tt lose t in front of cns-initial suff
 t:0 <=> [Vow:|%^SV:] _ [t:|t4:] WeakGrade \%^CLEN: ; !! 1)
         [Vow:|%^SV:] _ [t:|t4:] ConsonantShorting \%^CLEN:  ; !! 2)
-        [RealVow:|%^SV:] _ t: Triggers:* %> \Vow: ; !! 3) uáivátt : uáivát
+        [RealVow:|%^SV:] _ [t:|t4:] Triggers:* %> \Vow: ; !! 3) uáivátt : uáivát
         Vow: Vow: _ t: %> â n  ; !! 4) uáiváátt>ân uáiváátân
          Vow:  _  [t:|t4:] Vow:+  (Cns:+) ([%^ÁI:|%^ÁE:]) %^EWG: ; !! 1) tiettu tieđâ  njuottâs%^EWG%^RLEN> hittáás%^ÁE%^EWG%^RLEN>
 
@@ -673,7 +673,10 @@ Cx:0  <=>  Sgm: (Cy:) _ (%^CSH:) (%^RLEN:) %> Cy Cy ;
 
 "Wordfinal consonants part 1"
 !! * __@RULENAME@__  e%^RVlâčč
-č:0  <=>  Vow: _ č: Triggers:* %> \Sgm: ;
+Cx:0  <=>  Vow: _ Cy: Triggers:* %> \Sgm: ;
+	where Cx in ( d č) 
+	      Cy in ( d č)
+		  matched ;
 
 "Wordfinal consonants part 2"
 !! * __@RULENAME@__  e%^RVlâčč
