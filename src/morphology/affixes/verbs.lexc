@@ -35,7 +35,7 @@
 !! * 2-syllabic: 2SYLL_ etc. (classified according to infinitive suffix)
 !! * 3-syllabic
 !! * 4-syllabic
-!! * Unclassified: verbstems, 3v, 4v, MERIDUDX
+!! * Unclassified: verbstems, 3v, 4v, C_MERIDUDX
 
 !! !!The lexica
 
@@ -79,16 +79,16 @@
 
 !! !Threesyllabic
 !! * 3v (unclassified)
-!! ** LEKKASID (no stem change)
-!! ** CIELATTID (stem-final tt shortening) cielâttiđ: cielât Length change in stem: Consonant change only
-!! ** VYEJETTID (2syll vow short in Inf, long in Sg3, 1st syll V lengthening) vyejettiđ vyejeet
-!! ** PUTESTID (cns and vow lengthening) putestiđ: putteest Length change in stem: Short V in Inf (before V)
-!! ** COKKIITTID (stem-final tt shortening + 2syll vow shortening cokkiittiđ cokkit. 
-!! *** difference in negation + Action Ess, Loc.. compared to COKKIITTID)  
+!! ** 3_LEKKASID (no stem change)
+!! ** 3_CIELATTID (stem-final tt shortening) cielâttiđ: cielât Length change in stem: Consonant change only
+!! ** 3_VYEJETTID (2syll vow short in Inf, long in Sg3, 1st syll V lengthening) vyejettiđ vyejeet
+!! ** 3_PUTESTID (cns and vow lengthening) putestiđ: putteest Length change in stem: Short V in Inf (before V)
+!! ** 3_COKKIITTID (stem-final tt shortening + 2syll vow shortening cokkiittiđ cokkit. 
+!! *** difference in negation + Action Ess, Loc.. compared to 3_COKKIITTID)  
 !! *** Length change in stem: Long V in Inf (before C#).
-!! ** KUIKETTID	 
-!! ** MERIDID	 
-!! ** ADELID
+!! ** 3_KUIKETTID	 
+!! ** 3_MERIDID	 
+!! ** 3_ADELID
 !! ** 3_UTTID
 
 !! !4-syllabic
@@ -104,9 +104,9 @@
 !! ** C_TUHHID (ej-contracted) 
 !! ** C_RAMMUD (oj-contracted) 
 !! * Contracted v-stems
-!! ** TABAHTUD (Sg3 -uvá)
-!! ** MERIDUD (Sg3 uvvoo)
-!! ** MERIDUDX (unclassified)
+!! ** C_TABAHTUD (Sg3 -uvá)
+!! ** C_MERIDUD (Sg3 uvvoo)
+!! ** C_MERIDUDX (unclassified)
 
 !! !Unclassified verbs
 !! * verbstem (no info)
@@ -118,7 +118,7 @@
 !! !!ad-hoc lexicon
 
 LEXICON verbstem
-LEKKASID ;
+3_LEKKASID ;
 
 !! !!Auxiliaries
 
@@ -2815,25 +2815,25 @@ LEXICON EVEN_COND !!= * __@CODE@__
 !! !!Odd-syllable stems
 ! ------------------
 
-LEXICON KUIKETTID
-LEKKASID ; ! this has lengthening of ^RV for Cns-initial suff
+LEXICON 3_KUIKETTID
+3_LEKKASID ; ! this has lengthening of ^RV for Cns-initial suff
 
-LEXICON 3v   !!= * __@CODE@__ unclassified, redirected to LEKKASID
-LEKKASID ; !morhedeijee
+LEXICON 3v   !!= * __@CODE@__ unclassified, redirected to 3_LEKKASID
+3_LEKKASID ; !morhedeijee
 
-LEXICON 4v   !!= * __@CODE@__ unclassified, redirected to LEKKASID
-LEKKASID ;
+LEXICON 4v   !!= * __@CODE@__ unclassified, redirected to 3_LEKKASID
+3_LEKKASID ;
 
 
 
-LEXICON LEKKASID  !!= * __@CODE@__ SM51, no length change in stem
+LEXICON 3_LEKKASID  !!= * __@CODE@__ SM51, no length change in stem
 +V+Ind+Prt+Du1+Err/Orth:%>ááim K ; ! these separate, perhaps skip
 +V+Ind+Prt+Du2+Err/Orth:%>ááid K ; ! only á ?
 +V+Ind+Prt+Du3+Err/Orth:%>ááin  K ;
 
 +V:   ODDVLEX ;
 
-LEXICON CIELATTID  !!= * __@CODE@__ SM57, consonant and vowel change
+LEXICON 3_CIELATTID  !!= * __@CODE@__ SM57, consonant and vowel change
 ! Are these in or out?
 ! +V+Ind+Prt+Du1:%>ááim K ; ! these separate, perhaps skip
 ! +V+Ind+Prt+Du2:%>ááid K ; ! only á ?
@@ -2841,7 +2841,7 @@ LEXICON CIELATTID  !!= * __@CODE@__ SM57, consonant and vowel change
 
 +V: ODDVLEX ; ! Diacriticn %^ODDC to shorten C before C and #
 
-LEXICON VYEJETTID  !!= * __@CODE@__ SM53. short V in Inf
+LEXICON 3_VYEJETTID  !!= * __@CODE@__ SM53. short V in Inf
 +V+Ind+Prt+Du1+Err/Orth:%>ááim K ; ! these separate, perhaps skip
 +V+Ind+Prt+Du2+Err/Orth:%>ááid K ; ! only á ?
 +V+Ind+Prt+Du3+Err/Orth:%>ááin  K ;
@@ -2933,14 +2933,14 @@ LEXICON VYEJETTID  !!= * __@CODE@__ SM53. short V in Inf
 +V+Der/NomAg:ei4jee C_TAHHEE ;
 
 
-LEXICON ADELID  !!= * __@CODE@__ SM53. short V in Inf
+LEXICON 3_ADELID  !!= * __@CODE@__ SM53. short V in Inf
 +V+Ind+Prt+Du1+Err/Orth:%>ááim K ; ! these separate, perhaps skip
 +V+Ind+Prt+Du2+Err/Orth:%>ááid K ; ! only á ?
 +V+Ind+Prt+Du3+Err/Orth:%>ááin  K ;
-+V: ADELID_LEX ; 
++V: 3_ADELID_LEX ; 
 
 
-LEXICON ADELID_LEX
+LEXICON 3_ADELID_LEX
 +Inf:%>iđ K ;
 
 +Ind+Prs+Sg1:%>âm K ;
@@ -3032,13 +3032,13 @@ LEXICON ADELID_LEX
 
 
 
-LEXICON MERIDID  !!= * __@CODE@__ SM53. short V in Inf
+LEXICON 3_MERIDID  !!= * __@CODE@__ SM53. short V in Inf
 +V+Ind+Prt+Du1+Err/Orth:%>ááim K ; ! these separate, perhaps skip
 +V+Ind+Prt+Du2+Err/Orth:%>ááid K ; ! only á ?
 +V+Ind+Prt+Du3+Err/Orth:%>ááin  K ;
-+V: MERIDID_LEX ; ! Diacriticn to shorten V 
++V: 3_MERIDID_LEX ; ! Diacriticn to shorten V 
 
-LEXICON MERIDID_LEX
+LEXICON 3_MERIDID_LEX
 +Inf:%>iđ K ;
 
 +Ind+Prs+Sg1:%>âm K ;
@@ -3130,13 +3130,13 @@ LEXICON MERIDID_LEX
 
 
 
-LEXICON PUTESTID  !!= * __@CODE@__ SM53. short V in Inf
+LEXICON 3_PUTESTID  !!= * __@CODE@__ SM53. short V in Inf
 +V+Ind+Prt+Du1+Err/Orth:%>ááim K ; ! these separate, perhaps skip
 +V+Ind+Prt+Du2+Err/Orth:%>ááid K ; ! only á ?
 +V+Ind+Prt+Du3+Err/Orth:%>ááin  K ;
-+V: PUTESTID_LEX ; ! Diacriticn to shorten V 
++V: 3_PUTESTID_LEX ; ! Diacriticn to shorten V 
 
-LEXICON PUTESTID_LEX
+LEXICON 3_PUTESTID_LEX
 +Inf:%>iđ K ;
 
 +Ind+Prs+Sg1:%>âm K ;
@@ -3228,8 +3228,8 @@ LEXICON PUTESTID_LEX
 
 !LEXICON IALLAATTID  !!= * __@CODE@__ SM52, long V in Inf
 !
-!+V: COKKIITTID_LEX ; ! Diacriticn to shorten V 
-! Unified with COKKIITTID; Commented out by MLO. 
+!+V: 3_COKKIITTID_LEX ; ! Diacriticn to shorten V 
+! Unified with 3_COKKIITTID; Commented out by MLO. 
 !+V+Actio+Ill:%^SVSH%>mân K ;
 !+V+Actio+Ess:%^SVSH%>min K ;
 !+V+Actio+Loc:%^SVSH%>mist K ;
@@ -3239,8 +3239,8 @@ LEXICON PUTESTID_LEX
 !+V+Actio+Com+PxSg3:%^SVSH%>dijnis K ;
 !+V+Ind+Prs+ConNeg:%^SVSH K ;
 
-LEXICON COKKIITTID  !!= * __@CODE@__ SM52, long V in Inf
-+V: COKKIITTID_LEX ; ! Diacriticn to shorten V 
+LEXICON 3_COKKIITTID  !!= * __@CODE@__ SM52, long V in Inf
++V: 3_COKKIITTID_LEX ; ! Diacriticn to shorten V 
 
 +V+Actio+Ill:%^SVSH%>mân K ;
 +V+Actio+Ess:%^SVSH%>min K ;
@@ -3251,7 +3251,7 @@ LEXICON COKKIITTID  !!= * __@CODE@__ SM52, long V in Inf
 +V+Actio+Com+PxSg3:%^SVSH%>dijnis K ;
 +V+Ind+Prs+ConNeg:%^SVSH K ;
 
-LEXICON COKKIITTID_LEX
+LEXICON 3_COKKIITTID_LEX
 +Inf:%>iđ K ;
 
 +Ind+Prs+Sg1:%>âm K ;
@@ -3630,7 +3630,7 @@ LEXICON VINF_LONG_VOW
 
 !! ! v stems
 
-LEXICON TABAHTUD  !!= * __@CODE@__ Sg3 -vá
+LEXICON C_TABAHTUD  !!= * __@CODE@__ Sg3 -vá
 +V+Inf:uđ			     K ;
 
 +V+Ind+Prs+Sg1:uum	     K ;
@@ -3698,10 +3698,10 @@ LEXICON TABAHTUD  !!= * __@CODE@__ Sg3 -vá
 +V+VAbess:uuhánnáá	     K ;
 +V+Der/NomAct:u%^SVm NELJA ;
 
-LEXICON MERIDUDX ! temporary, perhaps not at all here.
-MERIDUD ;
+LEXICON C_MERIDUDX ! temporary, perhaps not at all here.
+C_MERIDUD ;
 
-LEXICON MERIDUD  !!= * __@CODE@__ Sg3 -vvoo
+LEXICON C_MERIDUD  !!= * __@CODE@__ Sg3 -vvoo
 +V+Inf:uđ				 K ;
 
 +V+Ind+Prs+Sg1:uum		 K ;
