@@ -31,14 +31,14 @@ exception_lexicons="(flagK)"
 generator_file=src/generator-gt-norm
 
 # How many lemmas maximally for each lexicon:
-lemmacount=10
+lemmacount=4
 
 # Specify path to $GTCORE - we don't use Autotools for these scripts:
 gtcore=$GTCORE
 
 
 ################## DO NOT CHANGE BELOW HERE!!! ##################
-source $gtcore/scripts/generate-wordforms-for-cont_lexes.sh \
+source devtools/generate-wordforms-for-cont_lexes.sh \
         "$gtcore" \
         "$morf_codes" \
         "$source_file" \
