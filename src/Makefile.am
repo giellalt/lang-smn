@@ -78,9 +78,11 @@ analyser-%.hfst: analyser-%.tmp.hfst                        \
 # We need to specify -gt- to avoid applying the filters to the raw fst:
 generator-gt-%.hfst: generator-gt-%.tmp.hfst                \
 					filters/remove-halflong-dotbelow.hfst   \
-					filters/remove-letter-acute-accent.hfst            
+					filters/remove-letter-acute-accent.hfst \
+					filters/make-optional-lang_hom-tags.hfst
 	$(AM_V_RGX2FST)$(PRINTF) "                               \
-				@\"$<\"                                      \
+				@\"filters/make-optional-lang_hom-tags.hfst\" \
+			.o. @\"$<\"                                      \
 			.o. @\"filters/remove-letter-acute-accent.hfst\" \
 			.o. @\"filters/remove-halflong-dotbelow.hfst\"   \
 			;" \
@@ -114,9 +116,11 @@ analyser-disamb-gt-%.xfst: analyser-disamb-gt-%.tmp.xfst    \
 
 generator-%.xfst: generator-%.tmp.xfst                      \
 					filters/remove-halflong-dotbelow.xfst   \
-					filters/remove-letter-acute-accent.xfst            
+					filters/remove-letter-acute-accent.xfst \
+					filters/make-optional-lang_hom-tags.xfst
 	$(AM_V_XFST)$(PRINTF) "read regex                        \
-				@\"$<\"                                      \
+				@\"filters/make-optional-lang_hom-tags.xfst\" \
+			.o. @\"$<\"                                      \
 			.o. @\"filters/remove-letter-acute-accent.xfst\" \
 			.o. @\"filters/remove-halflong-dotbelow.xfst\"   \
 			;\n\
