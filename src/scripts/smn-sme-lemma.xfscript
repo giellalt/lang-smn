@@ -9,26 +9,28 @@
 
 
 
-define Vow = [ a | e | i | o | u | ä | á | â | y ] ;
+define Vow  [ a | e | o | u | ä | á | â | y ] ;
+define Cns  [ b | c | d | f | g | h | j | k | l 
+             | m | n | p | r | s | t | v | č | đ 
+             | ŋ | š | ž ] ;
+
+define Sgm = [ Vow | Cns ] ;
 
 define initp  p -> b  || [.#.|h|â] _  ;
 define initt  t -> d  || [.#.|m|â] _  ;
 define initk  k -> g  || [.#.|m|t|h|â] _  ;
 
-define dnnn [ n n -> d n ,
-              v n -> v d n ,
-              i n -> i d n ,
-              l m -> l b m ,
-              r m -> r b m ,
-              i j -> d j ,
-              m m -> p m ,
-              h č -> k č ,
-              k t -> k t , 
-              š t -> i t , 
-              š k -> i k ,
-              p t -> k t ,
-              p s -> k s 
-              ] ;
+define Rulednnn n n -> d n    || Vow _ Vow ;
+define Rulevn   v n -> v d n  || Vow _ Vow ;
+define Rulelm   l m -> l b m  || Vow _ Vow ;
+define Rulerm   r m -> r b m  || Vow _ Vow ;
+define Rulemm   m m -> p m    || Vow _ Vow ;
+define Rulehch  h č -> k č    || Vow _ Vow ;
+define Rulehk   h k -> r k    || Vow _ Vow ;
+define Rulest   š t -> i t    || Vow _ Vow ;
+define Rulesk   š k -> i k    || Vow _ Vow ;
+define Rulept   p t -> k t    || Vow _ Vow ;
+define Ruleps   p s -> k s    || Vow _ Vow ;
 
 define hppttkk [ p p -> h p p ,
                  t t -> h t t ,
@@ -41,7 +43,7 @@ define hppttkk [ p p -> h p p ,
 define aVow [ ä -> á , â -> a ] ;
 
 define uaVow  u á -> o a ;
-define iaVow  i ä -> e a ;
+define iaVow  i [ä|e] -> e a ;
 define yeVow  y e -> u o ;
 
 define finalt [ b | đ | g | p | d | h ] -> t || _ .#. ;
@@ -51,8 +53,7 @@ define finale e -> i || _ .#. ;
 
 define aaVow       [ a a | á á ] -> á ;
 define aeaeVow       ä ä -> á ;
-define eeVow     e e -> e a  ;
-define iiVow       i i -> i ;
+define eeVow     e e -> e a  || [.#.|Cns+] _ ;
 define ooVow       o o -> o ;
 define uuVow       u u -> u ;
 
@@ -64,7 +65,17 @@ read regex [
 initp
 .o. initt
 .o. initk    
-.o. dnnn
+.o. Rulednnn  ! n n -> d n    || Vow _ Vow ;
+.o. Rulevn    ! v n -> v d n  || Vow _ Vow ;
+.o. Rulelm    ! l m -> l b m  || Vow _ Vow ;
+.o. Rulerm    ! r m -> r b m  || Vow _ Vow ;
+.o. Rulemm    ! m m -> p m    || Vow _ Vow ;
+.o. Rulehch   ! h č -> k č    || Vow _ Vow ;
+.o. Rulehk    ! h k -> r k    || Vow _ Vow ;
+.o. Rulest    ! š t -> i t    || Vow _ Vow ;
+.o. Rulesk    ! š k -> i k    || Vow _ Vow ;
+.o. Rulept    ! p t -> k t    || Vow _ Vow ;
+.o. Ruleps    ! p s -> k s    || Vow _ Vow ;
 .o. hppttkk
 .o. uaVow
 .o. iaVow
@@ -76,7 +87,6 @@ initp
 .o. aaVow
 .o. aeaeVow
 .o. eeVow
-.o. iiVow
 .o. ooVow
 .o. uuVow
 .o. reducedA
