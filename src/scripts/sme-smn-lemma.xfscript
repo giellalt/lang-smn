@@ -15,8 +15,11 @@ define initp b -> p  || [.#.|%-] _ ;
 define initt d -> t  || [.#.|%-] _ ;
 define initk g -> k  || [.#.|%-] _ ;
 
+
+define CdnCn [ v d n -> v n 
+             ] ;
+
 define dnnn [  d n -> n n ,
-             v d n -> v n ,
              i d n -> i n ,
              l b m -> l m ,
              r b m -> r m ,
@@ -59,6 +62,7 @@ read regex [
 initp
 .o. initt
 .o. initk    
+.o. CdnCnn
 .o. dnnn
 .o. VowIK
 .o. hppttkk
