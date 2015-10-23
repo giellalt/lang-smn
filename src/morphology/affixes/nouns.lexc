@@ -60,6 +60,7 @@ LEXICON 2ALGA  !!= __@CODE@__ 2VADDU has CLEN for Sg+Com and Pl+Ill , rlen svlow
 +N+Pl+Ill:%^WG%^CLEN%^SVLOW%>id K ; 			! algáid
 +N+Sg+Nom: K;				 		! sollâ
 +N+Cmp/SgNom: R ; !áimupoccee
++N+Cmp/SgGen:%^WG%^RLEN R ; !
 +N+Sg+Gen:%^WG%^RLEN K ;     		! soolâ
 +N+Sg+Acc:%^WG%^RLEN K ;     		! soolâ
 +N+Sg+Ill:%^CSH%^RLEN%>n K ;		! soolân
@@ -89,6 +90,7 @@ LEXICON 2SOLLA  !!= __@CODE@__ SM1, RLEN, earlier LLEN !rlen svlow, sgcom/plill:
 +N+Pl+Ill:%^WG%^RLEN%^SVLOW%>id K ; ! sooláid
 +N+Sg+Nom: K;				 		! sollâ
 +N+Cmp/SgNom: R ; !áimupoccee
++N+Cmp/SgGen:%^WG%^RLEN R ; !
 +N+Sg+Gen:%^WG%^RLEN K ;     		! soolâ
 +N+Sg+Acc:%^WG%^RLEN K ;     		! soolâ
 +N+Sg+Ill:%^CSH%^RLEN%>n K ;		! soolân
@@ -125,6 +127,7 @@ KIEHA_KIELA ;
 LEXICON 2KIELA !!= __@CODE@__ WG, blank Ill, DLEN, RVSH, SVLOW 
 +N: X_KIELA ;
 +N+Cmp/SgNom: R ;
++N+Cmp/SgGen:%^WG R ;
 +N+Sg+Gen: VPXsuff ;  !sajes
 +N+Sg+Acc: VPXsuff ;  !sajes
 +N+Sg+Loc:%>st VPXsuff ;  !sajestis sajasis ill
@@ -163,6 +166,7 @@ LEXICON KIEHA_KIELA !!= __@CODE@__
 LEXICON 2TELTTA   !!= __@CODE@__
 +N+Sg+Nom: K ;    			 	
 +N+Cmp/SgNom: R ;
++N+Cmp/SgGen:%^WG R ;
 +N+Sg+Gen:%^WG K ; 				! telta    		
 +N+Sg+Acc:%^WG K ;     			! telta
 +N+Sg+Ill:%^CSH%^RLEN%>n K ;	! teeltan
@@ -186,6 +190,7 @@ LEXICON 2TELTTA   !!= __@CODE@__
 LEXICON 2FADDA  !!= __@CODE@__:  This might be the standard even syllabi lexicon
 +N+Sg+Nom: K ;               ! kissá
 +N+Cmp/SgNom: R ;
++N+Cmp/SgGen:%^WG%^RLEN R ;
 +N+Sg+Gen:%^WG%^RLEN K ;     ! fáádá, ráávsá
 +N+Sg+Acc:%^WG%^RLEN K ;     ! fáádá, ráávsá
 +N+Sg+Ill:%^CSH%^RLEN%>n K ;      ! kiisán CSH?
@@ -208,6 +213,7 @@ LEXICON 2FADDA  !!= __@CODE@__:  This might be the standard even syllabi lexicon
 LEXICON 2KISSA !!= __@CODE@__  No root vowel lengthening
 +N: X_KISSA ;
 +N+Cmp/SgNom: R ;
++N+Cmp/SgGen:%^WG R ;
 
 LEXICON X_KISSA !!= __@CODE@__  
 +Sg+Nom: K ;               ! kissá
@@ -241,11 +247,14 @@ LEXICON 2TAHO !!= __@CODE@__ only for taho, similar to 2LAJO except from Pl+Ill,
 +N+Sg+Loc:%^SV%^WG%^CLEN%^SLEN%>st K ;  !tavvoost+N+Pl+Ill:%^WG%^CLEN%>id K ;  !tavvoid
 +N+Pl+Ill:%^WG%^CLEN%>id K ;  !tavvoid
 +N: LAJO_TAHO ;
++N+Cmp/SgNom: R ;
++N+Cmp/SgGen:%^WG R ;
 
 
 LEXICON 2LAJO  !!= __@CODE@__
 +N:  X_LAJO ;
 +N+Cmp/SgNom: R ;
++N+Cmp/SgGen:%^WG R ;
 
 LEXICON X_LAJO  !!= __@CODE@__
 +Sg+Com:%^WG%>in K ;  !lajoin
@@ -274,6 +283,7 @@ LEXICON LAJO_TAHO
 LEXICON 2NJUNE !!= __@CODE@__ almost similar to 2LAJO
 +N: X_NJUNE ;
 +N+Cmp/SgNom: R ;
++N+Cmp/SgGen: R ;
 +N+Sg+Gen: VPXsuff ;  !sajes
 +N+Sg+Acc: VPXsuff ;  !sajes
 +N+Sg+Loc:%>sti VPXsuff ;  !sajestis sajasis ill
@@ -310,6 +320,7 @@ LEXICON 2ALME !!= __@CODE@__
 LEXICON 2ALGE !!= __@CODE@__
 +N: X_ALGE ;
 +N+Cmp/SgNom: R ;
++N+Cmp/SgGen:%^WG R ;
 +N+Sg+Gen: VPXsuff ;  !sajes
 +N+Sg+Acc: VPXsuff ;  !sajes
 +N+Sg+Com:%^WG%^CLEN%>in CPXsuff ;  ! 
@@ -343,6 +354,7 @@ LEXICON X_ALGE !!= __@CODE@__
 LEXICON 2NIJBE !!= __@CODE@__ 
 +N+Sg+Nom: K ;						! nijbe 
 +N+Cmp/SgNom: R ;
++N+Cmp/SgGen:%^WG%^RLEN R ;
 +N+Sg+Gen:%^WG%^RLEN K ; 			! niijbe
 +N+Sg+Acc:%^WG%^RLEN K ; 			! niijbe
 +N+Sg+Ill:%^EA%^RLEN%>n K ; 	! niijbán
@@ -364,6 +376,7 @@ LEXICON 2NIJBE !!= __@CODE@__
 LEXICON 2VAHE !!= __@CODE@__
 +N+Sg+Nom: K ; 						! vahe
 +N+Cmp/SgNom: R ;
++N+Cmp/SgGen:%^WG R ;
 +N+Sg+Gen:%^WG K ;					! vave
 +N+Sg+Acc:%^WG K ;					! vave
 +N+Sg+Ill:%^EA%>n K ; 				! vahan
@@ -386,6 +399,7 @@ LEXICON 2VAHE !!= __@CODE@__
 LEXICON 2KUMPPI  !!= __@CODE@__ i-i-i > 2SOLLA (?); MLO: no, difference in sg Com and pl Ill
 +N+Sg+Nom: K ;							! kumppi
 +N+Cmp/SgNom: R ;
++N+Cmp/SgGen:%^WG%^RLEN R ;
 +N+Sg+Gen:%^WG%^RLEN K ; 				! kuumpi
 +N+Sg+Acc:%^WG%^RLEN K ; 				! kuumpi
 +N+Sg+Ill:%^CSH%^RLEN%>n K ; 				! kuumpin
@@ -459,6 +473,7 @@ CAACI_VYEHI ;
 LEXICON CAACI_VYEHI !!= __@CODE@__ WG, Ill EA, Com CLEN SVLOW, Ess CLEN
 +N+Sg+Nom: K ;               ! čääci
 +N+Cmp/SgNom:%^RVSH%> R ; !čäcipoccee
++N+Cmp/SgGen:%^WG%> R ; !
 +N+Cmp/SgNom:  Rhyph ; !
 +N+Sg+Gen:%^WG K ;     ! čääsi
 +N+Sg+Acc:%^WG K ;     ! čääsi
@@ -480,6 +495,7 @@ LEXICON CAACI_VYEHI !!= __@CODE@__ WG, Ill EA, Com CLEN SVLOW, Ess CLEN
 LEXICON 2AIGI !!= __@CODE@__ similar to 2VADDU except from EA for Sg+Ill
 +N: X_AIGI ;
 +N+Cmp/SgNom: R ;                         ! äigi eeč%^RCi
++N+Cmp/SgGen:%^WG%^RLEN R ;                         ! äigi eeč%^RCi
 +N+Sg+Gen:%^WG%^RLEN VPXsuff ;  !sajes
 +N+Sg+Acc:%^WG%^RLEN VPXsuff ;  !sajes 
 +N+Sg+Ill:%^EA%>s CPXsuff ; !sajasis ill páikkásis
@@ -529,6 +545,7 @@ LEXICON X_SAAGIH !!= __@CODE@__  plurals for 2AIGI
 LEXICON 2KYELI  !!= __@CODE@__ i-e-á, similar to 2ALGE, except from -i some places. 
 +N: X_KYELI ;
 +N+Cmp/SgNom: R ;
++N+Cmp/SgGen:%^WG%^RVSH R ;
 +N+Sg+Gen:%^WG%^RVSH VPXsuff ;  !sajes
 +N+Sg+Acc:%^WG%^RVSH VPXsuff ;  !sajes 
 +N+Sg+Ill:%^EA%>s CPXsuff ; !sajasis ill páikkásis
@@ -550,6 +567,7 @@ LEXICON 2SYEJI  !!= __@CODE@__ i-e-á,
 +N+Pl+Ill:%^CLEN%^RVSH%>id K ; 				! suoijijd
 +N: KYELI_SYEJI ;
 +N+Cmp/SgNom: R ;
++N+Cmp/SgGen:%^WG%^RVSH R ;
 +N+Sg+Gen:%^WG%^RVSH VPXsuff ;  !sajes
 +N+Sg+Acc:%^WG%^RVSH VPXsuff ;  !sajes 
 +N+Sg+Ill:%^EA%>s CPXsuff ; !sajasis ill páikkásis
@@ -581,11 +599,13 @@ LEXICON KYELI_SYEJI  !!= __@CODE@__ i-e-á,
 
 LEXICON 2KIRKKO  !!= __@CODE@__  > KIRKKO, but WG for Sg+Loc: 
 +N+Cmp/SgNom: R ;
++N+Cmp/SgGen:%^WG R ;
 +N+Sg+Loc:%^SV%^WG%^SLEN%>st K ;   !kirhoost
 KIRKKO ;
 
 LEXICON 2NJAMMA   !!= __@CODE@__ > KIRKKO, but WG CLEN for Sg+Loc: loho:lovvoost
 +N+Cmp/SgNom: R ;
++N+Cmp/SgGen:%^WG R ;
 +N+Sg+Loc:%^SV%^WG%^CLEN%^SLEN%>st K ; 	
 KIRKKO ;
 
@@ -622,6 +642,7 @@ LEXICON KIRKKO  !!= __@CODE@__
 LEXICON 2SIJVO  !!= __@CODE@__
 +N+Sg+Nom: K ;  ! sijvo
 +N+Cmp/SgNom: R ;
++N+Cmp/SgGen:%^WG%^RLEN R ;
 +N+Sg+Gen:%^WG%^RLEN K ;  ! siijvo
 +N+Sg+Gen:%^WG%^RVSH K ;  ! sijvo
 +N+Sg+Acc:%^WG%^RLEN K ;  ! siijvo
@@ -647,7 +668,8 @@ LEXICON 2SIJVO  !!= __@CODE@__
 
 LEXICON 2VASO !!= __@CODE@__ only for vašo, similar to 2LAJO except from Sg+Loc, almost similar to 2SPAHA and 2TAHO. Blank Nom, Ill, Ess SV CLEN SLEN, otherwise WG
 +N+Sg+Nom:%^RVSH K ;  !vaṣ̌o
-+N+Cmp/SgNom:%^RVSH%> R ;
++N+Cmp/SgNom:%^RVSH R ;
++N+Cmp/SgGen:%^WG%^RVSH R ;
 +N+Cmp/SgNom:  Rhyph ;
 +N+Sg+Gen:%^WG K ;  !tavo
 +N+Sg+Acc:%^WG K ;  !tavo
@@ -670,6 +692,7 @@ LEXICON 2VASO !!= __@CODE@__ only for vašo, similar to 2LAJO except from Sg+Loc
 LEXICON 2OKKO !!= __@CODE@__ Pl+Acc WG, Pl+Ill WG CLEN
 +N: X_OKKO ;
 +N+Cmp/SgNom: R ;
++N+Cmp/SgGen:%^WG%^RVSH R ;
 
 LEXICON X_OKKO !!= __@CODE@__ Pl+Acc WG, Pl+Ill WG CLEN
 +Sg+Nom: K ;  !okko
@@ -694,6 +717,7 @@ LEXICON X_OKKO !!= __@CODE@__ Pl+Acc WG, Pl+Ill WG CLEN
 LEXICON 2MAANU !!= __@CODE@__ WG, blank Ill, RVSH, CLEN for Ess/Par
 +N+Sg+Nom: K ;               ! mááṇu
 +N+Cmp/SgNom: R ;
++N+Cmp/SgGen:%^WG R ;
 +N+Sg+Gen:%^WG K ;     ! máánu
 +N+Sg+Acc:%^WG K ;     ! máánu
 +N+Sg+Ill:%>n K ;      ! mááṇun
@@ -716,6 +740,7 @@ LEXICON 2MAANU !!= __@CODE@__ WG, blank Ill, RVSH, CLEN for Ess/Par
 LEXICON 2LAAVU !!= __@CODE@__ WG, Ill EA, Com SVLOW, Ess CLEN
 +N+Sg+Nom: K ;               ! láávu
 +N+Cmp/SgNom: R ;
++N+Cmp/SgGen:%^WG R ;
 +N+Sg+Gen:%^WG K ;     ! láávu
 +N+Sg+Acc:%^WG K ;     ! láávu
 +N+Sg+Ill:%>n K ;      ! láávun
@@ -745,6 +770,7 @@ LEXICON 2LAAVU !!= __@CODE@__ WG, Ill EA, Com SVLOW, Ess CLEN
 LEXICON 2VUAGGU !!= __@CODE@__ 
 +N: X_VUAGGU ;
 +N+Cmp/SgNom: R ;
++N+Cmp/SgGen:%^WG R ;
 +N+Sg+Ill:s CPXsuff ;
 +N+Sg+Gen:%^WG VPXsuff ;  !
 +N+Sg+Acc:%^WG VPXsuff ;  !
@@ -809,6 +835,7 @@ LEXICON 2TAALU2 !!= __@CODE@__ one variant for Pl+Gen, plus 2VUARU
 LEXICON 2VUARU !!= __@CODE@__ Blank Nom, Ill, CLEN Ess, otherwise WG RVSH, SVLOW
 +N+Sg+Nom: K ;               ! vuáṛu
 +N+Cmp/SgNom: R ; !stáálupoccee
++N+Cmp/SgGen:%^WG%^RVSH%^SVLOW R ;
 +N+Sg+Gen:%^WG%^RVSH%^SVLOW K ;    ! vuáro
 +N+Sg+Acc:%^WG%^RVSH%^SVLOW K ;           ! vuáro
 +N+Sg+Ill:%>n K ;      ! vuáṛun
@@ -838,6 +865,7 @@ LEXICON 2VUARU !!= __@CODE@__ Blank Nom, Ill, CLEN Ess, otherwise WG RVSH, SVLOW
 LEXICON 2TAVLU !!= __@CODE@__ 
 +N+Sg+Nom: K ;               ! lanttu
 +N+Cmp/SgNom: R ;
++N+Cmp/SgGen:%^WG%^RLEN R ;
 +N+Sg+Gen:%^WG%^RLEN K ;     ! laantu
 +N+Sg+Acc:%^WG%^RLEN K ;     ! laantu
 +N+Sg+Ill:%^CSH%^RLEN%>n K ;  ! laantun
@@ -883,6 +911,7 @@ LEXICON 2SKERREEH !!= __@CODE@__  Plural tantum, as 2PUUVSAH, but w/o WG
 LEXICON APINA !!= __@CODE@__  this is for loanwords without stem change
 +N: X_APINA ;
 +N+Cmp/SgNom: R ;
++N+Cmp/SgGen: R ;
 
 LEXICON X_APINA !!= __@CODE@__  this is for loanwords without stem change
 +Sg+Nom: K ;			! apina
@@ -913,6 +942,7 @@ LEXICON X_APINA !!= __@CODE@__  this is for loanwords without stem change
 LEXICON 4KUNAGAS !!= __@CODE@__ >
 +N: X_KUNAGAS ;
 +N+Cmp/SgNom:%^FCD%> R ;
++N+Cmp/SgGen:%^FCD R ;
 
 LEXICON X_KUNAGAS !!= __@CODE@__  this is for loanwords without stem change, 3-syll. cons end
 +Sg+Nom:%^FCD K ;				! kunâgâs
@@ -941,6 +971,7 @@ LEXICON X_KUNAGAS !!= __@CODE@__  this is for loanwords without stem change, 3-s
 LEXICON 4CAHALIG  !!= __@CODE@__
 +N+Sg+Nom: K ;              ! čáhálig
 +N+Cmp/SgNom: R ;
++N+Cmp/SgGen: R ;
 +N+Sg+Gen: K ;            	! čáhálig   
 +N+Sg+Acc: K ;              ! čáhálig
 +N+Sg+Ill:%>án K ;     		! čáháligán
@@ -962,6 +993,7 @@ LEXICON 4CAHALIG  !!= __@CODE@__
 LEXICON 4MANUTTEP   !!= __@CODE@__ 
 +N+Sg+Nom:%>p K ;				! mánuttep
 +N+Cmp/SgNom:%>p R ;
++N+Cmp/SgGen:%>ve R ;
 +N+Sg+Gen:%>ve	K ;				! mánutteve
 +N+Sg+Acc:%>ve	K ;				! mánutteve
 +N+Sg+Ill:%>äpán	K ;			! mánuttiäpán	
@@ -983,6 +1015,8 @@ LEXICON 4MANUTTEP   !!= __@CODE@__
 
 LEXICON 4PUHELIN		!!= __@CODE@__  Only a few words in this category
 +N+Sg+Nom:n K ;				! puhelin
++N+Cmp/SgNom:n R ;
++N+Cmp/SgGen:n R ;
 +N+Sg+Gen:n	K ;					! puhelin
 +N+Sg+Acc:n	K ;					! puhelin
 +N+Sg+Ill:%>ân	K ;				! puhelimân			
@@ -1003,6 +1037,7 @@ LEXICON 4PUHELIN		!!= __@CODE@__  Only a few words in this category
 LEXICON 2KOLLIISTALLAM  !!= __@CODE@__
 +N+Sg+Nom:lâm K ;               ! kolliistâllâm
 +N+Cmp/SgNom:lám R ;
++N+Cmp/SgGen:lám R ;
 +N+Sg+Gen:lâm K ;            	! kolliistâllâm   
 +N+Sg+Acc:lâm K ;               ! kolliistâllâm
 +N+Sg+Ill:m%>ân K ;     ! kolliistâlmân
