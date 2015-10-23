@@ -49,6 +49,7 @@ while(<>) {
 	s/tt /tt5 /g ;
 	s/mn /m5n /g ;
 	s/d /d5 /g ;
+	s/l /l5 /g ;
 	s/9 / /g ;
 
 	# SMJ escape char insertion:
