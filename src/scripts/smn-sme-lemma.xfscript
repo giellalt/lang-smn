@@ -15,7 +15,7 @@ define Cns  [ b | c | d | f | g | h | j | k | l
              | m | n | p | r | s | t | v | č | đ 
              | ŋ | š | ž ] ;
 
-define Sgm = [ Vow | Cns ] ;
+define Sgm  [ Vow | Cns ] ;
 
 define initp  p -> b  || [.#.|h|â] _  ;
 define initt  t -> d  || [.#.|m|â] _  ;
@@ -30,7 +30,7 @@ define Rulerv   r v -> r v v  || Vow _ Vow Cns ;
 define Rulemm   m m -> p m    || Vow _ Vow ;
 define Rulehch  h č -> k č    || Vow _ Vow ;
 define Rulehk   h k -> r k    || Vow _ Vow ;
-define Rulest   š t -> i t    || Vow _ Vow ;
+define Rulest   š t -> i t    || .#. Cns* [Vow - â] _ Vow (Cns) .#. ;
 define Rulesk   š k -> i k    || Vow _ Vow ;
 define Rulept   p t -> k t    || Vow _ Vow ;
 define Ruleps   p s -> k s    || Vow _ Vow ;
@@ -66,7 +66,13 @@ define uuVow       u u -> u ;
 
 define reducedA â -> a ;
 
-define suffixes v u o t a -> v u o h t a ;
+define sufvuota v u o t a -> v u o h t a  || Vow Cns Sgm* _ .#. ;
+define sufiiv   i i v -> i i v a 		  || Vow Cns Sgm* _ .#. ;
+define sufiik   i i k -> i h k k a 		  || Vow Cns Sgm* _ .#. ;
+define sufent   e n t -> e a n t a 		  || Vow Cns Sgm* _ .#. ;
+define sufttit   h t t i t	 -> h i t	  || Vow Cns Sgm* _ .#. ;
+
+define clusters d t -> t t ;                
 
                
 
@@ -103,7 +109,12 @@ initp
 .o. ooVow
 .o. uuVow
 .o. reducedA
-.o. suffixes
+.o. sufvuota   ! v u o t a -> v u o h t a  || Vow Cns Sgm* _ .#. ;
+.o. sufiiv     ! i i v -> i i v a 		  || Vow Cns Sgm* _ .#. ;
+.o. sufiik     ! i i k -> i h k k a 		  || Vow Cns Sgm* _ .#. ;
+.o. sufent     ! e n t -> e a n t a 		  || Vow Cns Sgm* _ .#. ;
+.o. sufttit    !  h t t i t	 -> h i t	  || Vow Cns Sgm* _ .#. ;
+.o. clusters
 ] ;
 
 invert net ;
