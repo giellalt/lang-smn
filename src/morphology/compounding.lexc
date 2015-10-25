@@ -5,17 +5,16 @@ LEXICON  Rnoun
 
 LEXICON R
 !+Cmp#:# # ; ! For turning off compounding during testing
- +Cmp#:# NounRoot ;
- +Cmp-#:#- NounRoot ;
+ +Cmp#:# nounflag ;
+ +Cmp-#:#- nounflag ;
  +Cmp/SplitR:- # ;
-! +Cmp@D.compound.block@#:@D.compound.block@# NounRoot ;
-! +Cmp@D.compound.block@#-:@D.compound.block@#- ProperNoun ;
 
+LEXICON nounflag
+ NounRoot ;
+ @P.NeedNoun.ON@ VerbRoot ; !means that the only allowed when @C.NeedNoun@, because of ENDLEX @D.NeedNoun.ON@ 
 
 LEXICON Rhyph
  +Cmp-#:0#- NounRoot ;
-! +Cmp@D.compound.block@#-:@D.compound.block@#- NounRoot ;
-! +Cmp@D.compound.block@#-:@D.compound.block@#- ProperNoun ;
 
 LEXICON RProp                         !!≈ !!!@CODE@
  +Cmp-#nommâ:»»»-nommâs DER-SAS ; ! Jovnâ-nommâsâš
@@ -24,3 +23,4 @@ LEXICON RProp                         !!≈ !!!@CODE@
  +Cmp-#:#- ProperNoun-smn ;
  +Cmp-#:#- NounRoot ;
  +Cmp/SplitR:- # ;
+
