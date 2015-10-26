@@ -122,7 +122,11 @@ i6:0 !!= * @CODE@ a fake vowel, to get WG rules to function, e.g. kyehtlov (kyeh
 !! !!! Sets
 
 Sets
- Vow = a á â ä e i o u u2 y æ ø ö å y5 o5	i2 i5 i3 i6		   !!= * @CODE@ 
+ Vow = a á â ä e i o u u2 y æ ø ö å 
+       i2 u2
+       i3
+       a5 á5 i5 u5 y5 o5 ä5 		   !!= * @CODE@ 
+       i6
        é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý 	   !!= @CODE@ 
        A Á Â Ä E I O U Y Æ Ø Ö Å			   !!= @CODE@ 
        É Ó Ú Í À È Ò Ú Ì Ë Ü Ï Ê Ô Û Î Ã Ý 	   !!= @CODE@ 
@@ -138,7 +142,7 @@ Sets
        ht g2 k2 m2 n2 							   !!= @CODE@ 
        b3 d3 g3 m3 h3 						   !!= @CODE@ 
        p4 k4 r4 l4  i4  t4 c4 č4                !!= @CODE@
-       h5 j5 ŋ5 t5 c5 l5 t5 d5                    !!=  @CODE@
+       h5 j5 ŋ5 t5 c5 l5 t5 d5 r5                    !!=  @CODE@
        m7 n7 ŋ7 v7 s7 r7 đ7	l7 j7 h7 š7		   !!= @CODE@ 
        %^RC %^SC   ;                         !!=  @CODE@ 
  Geminate = b d g p h t k c f z l m n ŋ r s š v  ;  !!= * @CODE@  
@@ -441,9 +445,9 @@ Cx:v <=>  _  Cz (%^RC:) Vow:+ (%^SV: ) (Cns:)  (%^FCD:) %^WG: ;
 Cy:0 <=> :Vow (Vow:) Cx: _ Cz: (%^RC:) WeakGrade \%^CLEN:   ;  
           Cx:  _ Cz:  Vow (Cns) (%^EA:) %^CSH:    ;   !he%^RVi4ttug
           Cx:  _ Cz:  Vow:+ (Cns) ([%^ÁI:|%^ÁE:]) %^EWG:    ;   !he%^RVi4ttug
-      where Cx in ( j i4 j j i4 i4 i4 i4 l l l l l l l m m n n n ŋ r r r r r r r r v v v v v ) 
-            Cy in ( p c  s t k  l p  t  c k p s t č š p č c s t k c č p k s t č š c d k p t ) 
-            Cz in ( p c  s t k  l p  t  c k p s t č š p č c s t k c č p k s t č š c d k p t) 
+      where Cx in ( j i4 i4 j j i4 i4 i4 i4 l l l l l l l m m n n n ŋ r r r r r r r r v v v v v ) 
+            Cy in ( p c  s  s t k  l  p  t  c k p s t č š p č c s t k c č p k s t č š c d k p t ) 
+            Cz in ( p c  s  s t k  l  p  t  c k p s t č š p č c s t k c č p k s t č š c d k p t ) 
       matched ;
 
 !€ á^RVrppu^WG^RLEN>
@@ -607,9 +611,9 @@ j:i <=> Vow: _ %^RC: :Vow       %^CLEN:  (%^RVSH:)       %> ; !Par Ess
 "Consonant lengthening after xx:x and xy:zy weak grade with x4 on upper side"
 !! * __@RULENAME@__ \\  as previous rule, but for k4, č, p4  kukse:kuvssijn  
 %^RC:Cx <=> Vow:  Cy:  Cz: _ WeakGrade %^CLEN: \%^SLEN: ; 
-        where Cy in ( č  p  k  h h  h l l h k4 v ) 
-              Cz in ( č  p4 s  c t  č c č c s c ) 
-              Cx in ( j  v  s  c t  č c č c s c ) 
+        where Cy in ( č  p  k  m h h  h l l h k4 v ) 
+              Cz in ( č  p4 s  s c t  č c č c s  c ) 
+              Cx in ( j  v  s  s c t  č c č c s  c ) 
         matched ;
 
 
