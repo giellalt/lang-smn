@@ -41,21 +41,28 @@
 
 !! !Twosyllabic
 
-!! * 2SYLL_AD
-!! ** 2SYLL_AASSAD
+!! ** 2SYLL_AD - vuoidâđ kiihâđ
+!! ** 2SYLL_AASSAD - aassâđ ääss
+!! *** Ind+Prs: 
+!! *** Sg3: áásá, á%^EA%^CSH 
+!! *** ConNeg: rootvowel like Inf, 
+!! *** Prt+Sg1: +Prt+Sg1:i%^VBACK%>m
+!! ** 2SYLL_MOONNAD - moonnâđ ma%^RVnn
+!! *** Ind+Prs: Sg3: mana, á%^CSH
+!! *** ConNeg: rootvowel like Inf
+!! *** Inf: +Inf:â%^VHIGH%^RLEN%>đ (functions also for ääss)
+!! ** 2SYLL_TOOHAD - toohâđ, Ind+Prs: Sg3: taha, ConNeg: rootvowel like Inf
+!! ** 2SYLL_TOOLLAD - toollâđ, Ind+Prs: Sg3: tuálá, ConNeg: rootvowel like Sg3
+!! ** 2SYLL_VIISSAD - viiššâđ, Ind+Prs: Sg3: višá, ConNeg: rootvowel like Inf
+!! ** 2SYLL_KIESSAD - kiessâđ, Ind+Prs: Sg3: kiäsá, ConNeg: rootvowel like Inf
+!! ** 2SYLL_VUOLLAD - vuollâđ, Ind+Prs: Sg3: vuálá, ConNeg: rootvowel like Inf
 !! ** 2SYLL_ETTAD
 !! ** 2SYLL_KALGAD
 !! ** 2SYLL_KAVNAD  as ETTAD but with VBACK
-!! ** 2SYLL_KIESSAD
 !! ** 2SYLL_KOLGAD
 !! ** 2SYLL_KULGAD
-!! ** 2SYLL_MOONNAD
 !! ** 2SYLL_OPPAD
-!! ** 2SYLL_TOOHAD
-!! ** 2SYLL_TOOLLAD
 !! ** 2SYLL_SODDAD
-!! ** 2SYLL_VIISSAD
-!! ** VUOLLAD
 !! * 2SYLL_ED
 !! ** 2SYLL_PIHTED
 !! * 2SYLL_EED
@@ -265,7 +272,7 @@ LEXICON LEDE !!= * __@CODE@__
 
 !! !Partial paradigms
 
-LEXICON 2SYLL_AASSAD
+LEXICON 2SYLL_AASSAD ! aassâđ
 +V: VINFINITES_AASSAD ;
 +V+Ind: EVEN_IND_AASSAD ;
 +V+Pot: EVEN_POT_AASSAD ;
@@ -345,19 +352,6 @@ LEXICON EVEN_IMPRT_AASSAD
 
 LEXICON 2SYLL_AD  !!= * __@CODE@__
 
-! this to be restored to old system
-+V+Ind+Prt+Sg3:â%^WG%^VHIGH%^RLEN%>i K ;
-+V+Ind+Prt+Du1:á%^WG%^VHIGH%^RLEN%>im K ;
-+V+Ind+Prt+Du2:á%^WG%^CLEN%^VHIGH%>id K ;
-+V+Ind+Prt+Du3:á%^WG%^VHIGH%^RLEN%>in K ;
-+V+Ind+Prt+Pl1:â%^WG%^VHIGH%^RLEN%>im K ;
-+V+Ind+Prt+Pl2:â%^WG%^VHIGH%^RLEN%>id K ;
-2SYLL_AD_REST ;
-
-!! !Rest paradigms
-
-LEXICON 2SYLL_AD_REST
-
 +V:  VINFINITES_AD ;
 +V+Ind: EVEN_IND_AD ;
 +V+Pot: EVEN_POT_AD ;
@@ -408,7 +402,12 @@ LEXICON EVEN_IND_AD
 
 +Prt+Sg1:i%^VHIGH%^RLEN%>m K ;
 +Prt+Sg2:i%^VHIGH%^RLEN%>h K ;
-! see above
++Prt+Sg3:â%^WG%^VHIGH%^RLEN%>i K ;
++Prt+Du1:á%^WG%^VHIGH%^RLEN%>im K ;
++Prt+Du2:á%^WG%^CLEN%^VHIGH%>id K ;
++Prt+Du3:á%^WG%^VHIGH%^RLEN%>in K ;
++Prt+Pl1:â%^WG%^VHIGH%^RLEN%>im K ;
++Prt+Pl2:â%^WG%^VHIGH%^RLEN%>id K ;
 +Prt+Pl3:i%^CLEN%^VHIGH%>i3 K ;
 
 LEXICON EVEN_IMPRT_AD
@@ -1184,7 +1183,6 @@ LEXICON 2SYLL_MOONNAD  !!= * __@CODE@__
 
 LEXICON VINFINITES_MOONNAD
 +Inf:â%^VHIGH%^RLEN%>đ K ;
-!+Inf:â%^VHIGH%^RLEN%>đ K ;
 
 +Ind+Prs+ConNeg:â%^WG%^VHIGH%^RLEN K ;
 +Ind+Prt+ConNeg:â%^VHIGH%^RLEN%>m K ;
@@ -1214,8 +1212,8 @@ LEXICON VINFINITES_MOONNAD
 +Der/NomAct:â%^VHIGH%^RLEN%>m 3LITTER ;
 
 LEXICON EVEN_IND_MOONNAD
-+Prs+Sg1:â%^WG%^VHIGH%^RLEN%>m K ;     
-+Prs+Sg2:a%^WG%^VHIGH%^RLEN%>h K ;     
++Prs+Sg1:â%^WG%^VHIGH%>m K ;     
++Prs+Sg2:a%^WG%^VHIGH%>h K ;     
 +Prs+Sg3:á%^CSH K ;       
 +Prs+Du1:e%^CLEN%>en K ;  
 +Prs+Du2:â%^CSH%^VHIGH%>vettee K ;
