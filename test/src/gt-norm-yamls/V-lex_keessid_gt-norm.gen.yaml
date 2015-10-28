@@ -1,0 +1,33 @@
+
+Config:
+  hfst:
+    Gen: ../../../src/generator-dict-gt-norm.hfst
+    Morph: ../../../src/analyser-dict-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-dict-gt-norm.xfst
+    Morph: ../../../src/analyser-dict-gt-norm.xfst
+    App: lookup
+
+Tests:
+
+  Verb - keessiđ: #generated from FST; MLO checked
+    keessiđ+V+Inf: keessiđ
+    keessiđ+V+Ind+Prs+Sg1: kiäsám
+    keessiđ+V+Ind+Prs+Sg3: kiäsá #ok
+    keessiđ+V+Ind+Prs+Pl3: keesih #keesih
+    keessiđ+V+Ind+Prt+Sg1: keessim
+    keessiđ+V+Ind+Prt+Sg3: keesij #corpus
+    keessiđ+V+Ind+Prs+ConNeg: keesi # ok
+    keessiđ+V+PrfPrc: kiässám #mij keesijm
+
+
+  Verb - seevviđ: #generated from FST; MLO checked
+    seevviđ+V+Inf: seevviđ
+    seevviđ+V+Ind+Prs+Sg1: siävám #ok
+    seevviđ+V+Ind+Prs+Sg3: siävá #ok
+    seevviđ+V+Ind+Prs+Pl3: seevih
+    seevviđ+V+Ind+Prt+Sg1: seevvim
+    seevviđ+V+Ind+Prt+Sg3: seevij
+    seevviđ+V+Ind+Prs+ConNeg: seevi #ok
+    seevviđ+V+PrfPrc: siävvám
+
