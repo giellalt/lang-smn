@@ -2034,8 +2034,8 @@ LEXICON EVEN_POT_UAINID !!= * __@CODE@__
 +Pl3:i%^WG%^VBACK%^RVSH%>žeh K ;
 
 LEXICON EVEN_IMPRT_UAINID
-+Sg2:e%^WG%> K ;
-+Sg2++Err/Orth:i%^WG%> K ;
++Sg2+Err/Orth:e%^WG%> K ;
++Sg2:i%^WG%> K ;
 +Sg3:u%^WG%>s K ;
 +Du1:o%^CLEN%>on K ;
 +Du2:e%^CLEN%>e K ;
@@ -2146,20 +2146,62 @@ LEXICON JUAVVID
 +V+Imprt: EVEN_IMPRT_ID ;
 
 LEXICON 2SYLL_ID  !!= * __@CODE@__
-+V+Ind+Prs+ConNeg:i%^WG%^RLEN K ;
-! +V+Sg2:i%^WG%^VHIGH%^RLEN%> K ;  ! This is wrong, check this
-+V+VAbess+Err/Orth:i%^CSH%>hennáá K ;
-+V+VAbess+Err/Orth:i%^CSH%>hinnáá K ;
-+V+VAbess:i%^WG%^RVSH%>hánnáá K ;
 
-!These grammatical forms are also in COMMON_ID
-!+V+Actio+Com+PxSg1:i%^RVSH%>dijnân K ;
-!+V+Actio+Com+PxSg2:i%^RVSH%>dijnâd K ;
-!+V+Actio+Com+PxSg3+Err/Orth:i%^RVSH%>dijnes K ;
-!+V+Actio+Com+PxSg3:i%^RVSH%>dijnis K ;
-!+V+Actio+Com:i%^RVSH%>dijn K ;
++V: VINFINITES_ID ;
++V+Ind: EVEN_IND_ID ;
++V+Pot: EVEN_POT_ID ;
++V+Cond+Prs:á%^WG%^VHIGH%>čč EVEN_COND ; ! 
++V+Imprt: EVEN_IMPRT_ID ;
 
-COMMON_ID ;
+LEXICON VINFINITES_ID
++Inf:i%>đ K ;
+
++Ind+Prt+ConNeg:á%^VHIGH%>m K ;  ! 
++Cond+Prs+ConNeg:á%^WG%^VHIGH%>ččii K ;  ! 
++Pot+ConNeg:á%^WG%^CLEN%^VHIGH%>á K ;  ! 
++Imprt+ConNeg:i K ;
++Ind+Prs+ConNeg:i%^WG%^RLEN K ;
++V+Sg2:i%^WG%^VHIGH%^RLEN%> K ;  ! This is wrong, check this
++VAbess+Err/Orth:i%^CSH%>hennáá K ;
++VAbess+Err/Orth:i%^CSH%>hinnáá K ;
++VAbess:i%^WG%^RVSH%>hánnáá K ;
+
++PrfPrc+Der/Pass:u%^VHIGH%>m K ;  !  ! MISSING
++PrfPrc:á%^VHIGH%>m K ;  ! 
++PrfPrc+Err/Orth:â%^VHIGH%>m K ;  ! 
++PrsPrc:e%^CLEN%^RVSH%>e K ;
++Der/NomAg:e%^CLEN%^RVSH%>e C_TAHHEE ; !vuástáväldee, oovdânpyehtee ok
+
++Actio+Com:i%^WG%^RVSH%>dijn K ;
++Actio+Ess:i%^RVSH%>min K ;
++Actio+Ill:i%^RVSH%>mân K ;
++Actio+Loc:i%^RVSH%>mist K ;
++Actio:i%>m K ;
++Der/NomAct:i%^RVSH%>m 3HUKSIM ;
++Der/kyetti:i%^WG%^RVSH%>škyett4 4SYLL_KYETTID ; !vyelgiškuođij kevtiškyettiđ rähtiškyettiđ
++Der/kyetti:e%^WG%^RVSH%>škyett4 4SYLL_KYETTID ; !eeleškyettiđ
+
+LEXICON EVEN_IND_ID
++Prs+Sg1:á%^WG%^VHIGH%^RLEN%>m K ;   ! 
++Prs+Sg2:á%^WG%^VHIGH%^RLEN%>h K ;   ! 
++Prs+Sg3:á%^VHIGH K ;              ! 
++Prs+Du1:e%^CLEN%^RVSH%>en K ;   
++Prs+Du2:i%^RVSH%>vettee K ; 
++Prs+Du3:i%>v K ;          
++Prs+Pl1:i%>p K ;          
++Prs+Pl2:i%^RVSH%>vetteđ K ;
++Prs+Pl3:i%>h K ;     
+
++Prt+Sg1:i%^VBACK%>m K ;
++Prt+Sg2:i%^VBACK%>h K ;
++Prt+Sg3:i%^WG%^VBACK%^RLEN%>i K ;
++Prt+Du1:i%^WG%^CLEN%^VBACK%^RVSH%>im K ;
++Prt+Du2:i%^WG%^CLEN%^VBACK%^RVSH%>id K ;
++Prt+Du3:i%^WG%^CLEN%^VBACK%^RVSH%>in K ;
++Prt+Pl1:i%^WG%^VBACK%^RLEN%>im K ;
++Prt+Pl2:i%^WG%^VBACK%^RLEN%>id K ;
++Prt+Pl3:i%^CLEN%^VBACK%^RVSH%>i3 K ;
+
 
 LEXICON 2SYLL_EELLID  !!= * __@CODE@__ iälám iälá eelih ij ele
 
@@ -2305,7 +2347,7 @@ LEXICON 2SYLL_PAACCID  !!= * __@CODE@__
 +V+Actio+Com+PxSg2:i%>dijnâd K ;
 +V+Actio+Com+PxSg3+Err/Orth:i%>dijnes K ;
 +V+Actio+Com+PxSg3:i%>dijnis K ;
-+V+Actio+Com:e%>dijn K ;
++V+Actio+Com+Err/Orth:e%>dijn K ;
 
 +V: VINFINITES_PAACCID ;
 +V+Ind: EVEN_IND_PAACCID ;
@@ -2447,7 +2489,7 @@ LEXICON 2SYLL_VYEIJID_COMMON  !!= * __@CODE@__
 +V+Actio+Com+PxSg2:i%>dijnâd K ;
 +V+Actio+Com+PxSg3+Err/Orth:i%>dijnes K ;
 +V+Actio+Com+PxSg3:i%>dijnis K ;
-+V+Actio+Com:e%>dijn K ;
++V+Actio+Com+Err/Orth:e%>dijn K ;
 
 +V: VINFINITES_VYEIJID ;
 +V+Pot: EVEN_POT_VYEIJID ;
@@ -2592,7 +2634,7 @@ LEXICON VINFINITES_TIETTID
 +PrsPrc:e%^RVSH%>e K ;
 +Der/NomAg:e%^RVSH%>e C_TAHHEE ;
 
-+Ind+Prs+ConNeg:e%^RVSH K ;
++Ind+Prs+ConNeg+Err/Orth:e%^RVSH K ;
 +VAbess+Err/Orth:e%^WG%^RVSH%>hennáá K ;
 +VAbess+Err/Orth:e%^WG%^RVSH%>hinnáá K ;
 +VAbess:e%^WG%^RVSH%>hánnáá K ;
@@ -2651,57 +2693,6 @@ LEXICON EVEN_IMPRT_TIETTID
 +Pl1:u%^EA%^CLEN%>p K ;
 +Pl2:i%>đ K ;
 +Pl3:u%^EA%^CLEN%>s K ;
-
-LEXICON COMMON_ID  !!= * __@CODE@__
-+V: VINFINITES_ID ;
-+V+Ind: EVEN_IND_ID ;
-+V+Pot: EVEN_POT_ID ;
-+V+Cond+Prs:á%^WG%^VHIGH%>čč EVEN_COND ; ! 
-+V+Imprt: EVEN_IMPRT_ID ;
-
-LEXICON VINFINITES_ID
-+Inf:i%>đ K ;
-
-+Ind+Prt+ConNeg:á%^VHIGH%>m K ;  ! 
-+Cond+Prs+ConNeg:á%^WG%^VHIGH%>ččii K ;  ! 
-+Pot+ConNeg:á%^WG%^CLEN%^VHIGH%>á K ;  ! 
-+Imprt+ConNeg:i K ;
-
-+PrfPrc+Der/Pass:u%^VHIGH%>m K ;  !  ! MISSING
-+PrfPrc:á%^VHIGH%>m K ;  ! 
-+PrfPrc+Err/Orth:â%^VHIGH%>m K ;  ! 
-+PrsPrc:e%^CLEN%^RVSH%>e K ;
-+Der/NomAg:e%^CLEN%^RVSH%>e C_TAHHEE ; !vuástáväldee, oovdânpyehtee ok
-
-+Actio+Com:i%^WG%^RVSH%>dijn K ;
-+Actio+Ess:i%^RVSH%>min K ;
-+Actio+Ill:i%^RVSH%>mân K ;
-+Actio+Loc:i%^RVSH%>mist K ;
-+Actio:i%>m K ;
-+Der/NomAct:i%^RVSH%>m 3HUKSIM ;
-+Der/kyetti:i%^WG%^RVSH%>škyett4 4SYLL_KYETTID ; !vyelgiškuođij kevtiškyettiđ rähtiškyettiđ
-+Der/kyetti:e%^WG%^RVSH%>škyett4 4SYLL_KYETTID ; !eeleškyettiđ
-
-LEXICON EVEN_IND_ID
-+Prs+Sg1:á%^WG%^VHIGH%^RLEN%>m K ;   ! 
-+Prs+Sg2:á%^WG%^VHIGH%^RLEN%>h K ;   ! 
-+Prs+Sg3:á%^VHIGH K ;              ! 
-+Prs+Du1:e%^CLEN%^RVSH%>en K ;   
-+Prs+Du2:i%^RVSH%>vettee K ; 
-+Prs+Du3:i%>v K ;          
-+Prs+Pl1:i%>p K ;          
-+Prs+Pl2:i%^RVSH%>vetteđ K ;
-+Prs+Pl3:i%>h K ;     
-
-+Prt+Sg1:i%^VBACK%>m K ;
-+Prt+Sg2:i%^VBACK%>h K ;
-+Prt+Sg3:i%^WG%^VBACK%^RLEN%>i K ;
-+Prt+Du1:i%^WG%^CLEN%^VBACK%^RVSH%>im K ;
-+Prt+Du2:i%^WG%^CLEN%^VBACK%^RVSH%>id K ;
-+Prt+Du3:i%^WG%^CLEN%^VBACK%^RVSH%>in K ;
-+Prt+Pl1:i%^WG%^VBACK%^RLEN%>im K ;
-+Prt+Pl2:i%^WG%^VBACK%^RLEN%>id K ;
-+Prt+Pl3:i%^CLEN%^VBACK%^RVSH%>i3 K ;
 
 LEXICON EVEN_IMPRT_ID
 +Sg2:i%^WG%^VHIGH%^RLEN K ;  ! 
