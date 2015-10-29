@@ -3960,23 +3960,36 @@ LEXICON C_TUHHID !!= * __@CODE@__
 +V+Imprt+Pl2:%>đ K ;
 +V+Imprt+Pl3:%>jus K ;
 
-LEXICON C_RAMMUD !!= * __@CODE@__
 
+LEXICON C_CAALLUD  !!= * __@CODE@__ shortens long vow in certain forms
+:%^RVSH C_RAMMUD_VARYING_ROOTVOWEL ; ! vowel shortening
+        C_RAMMUD_REST ;  ! common behaviour
+! Cf: čaalluđ:čáállu2 C_RAMMUD ; !¢čalluum čálloo
+
+LEXICON C_RAMMUD !!= * __@CODE@__ does not shorten vowel
+C_RAMMUD_VARYING_ROOTVOWEL ; ! no vowel shortening
+C_RAMMUD_REST ; ! common behaviour
+! cf: staaruđ:stááru2 C_RAMMUD ; !¢ staaruum stáároo
+
+LEXICON C_RAMMUD_VARYING_ROOTVOWEL
++V+Ind+Prs+Sg1:%>um K ;
++V+Ind+Prs+Sg3:%>o K ; ! jf. C_TUHHID
++V+Ind+Prs+Pl3:%>jeh K ;
++V+Ind+Prt+Pl3:%>jii  K ;
+
+LEXICON C_RAMMUD_REST  !!= ** __@CODE@__ common for the two previous
 +V: VINF_SHORT_VOW ;
 +V:%>u VINF_LONG_VOW ;
 
 +V+Cond+Prs:%>učč EVEN_COND ;
 +V+Imprt: CONTR_IMPRT ;
 
-+V+Ind+Prs+Sg1:%>um K ;
 +V+Ind+Prs+Sg2:%>uh K ;
-+V+Ind+Prs+Sg3:%>o K ; ! jf. C_TUHHID
 +V+Ind+Prs+Du1:%>jeen K ;
 +V+Ind+Prs+Du2:%>uvettee K ;
 +V+Ind+Prs+Du3:%>v K ;
 +V+Ind+Prs+Pl1:%>p K ;
 +V+Ind+Prs+Pl2:%>uvetteđ K ;
-+V+Ind+Prs+Pl3:%>jeh K ;
 
 +V+Ind+Prt+Sg1:%>jim K ;
 +V+Ind+Prt+Sg2:%>jih  K ;
@@ -3986,7 +3999,6 @@ LEXICON C_RAMMUD !!= * __@CODE@__
 +V+Ind+Prt+Du3:%>in  K ;
 +V+Ind+Prt+Pl1:%>im  K ;
 +V+Ind+Prt+Pl2:%>id  K ;
-+V+Ind+Prt+Pl3:%>jii  K ;
 
 +V+Pot+Sg1:%>užeem K ;
 +V+Pot+Sg2:%>užeeh K ;
