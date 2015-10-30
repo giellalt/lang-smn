@@ -51,7 +51,7 @@ Alphabet
 
 p4:p  k4:k  l4:l t4:t č4:č c4:c   !!= * @CODE@  these are consonants that change in cg
 i4:i                    	        !!= * @CODE@  this is the underlying i consonant
-i2:i u2:u         	        !!= * @CODE@  this is final i, u in contract verbs etc changing to e, o
+i2:i u2:u â2:â        	        !!= * @CODE@  this is final i, u in contract verbs etc changing to e, o
 i3:i           	        !!= * @CODE@  this is invariant i
 a5:a á5:á i5:i u5:u y5:y o5:o  ä5:ä               !!= * @CODE@  these do not change 
 c5:c č5:č d5:d h5:h j5:j l5:l m5:m ŋ5:ŋ r5:r t5:t  !!= * @CODE@  these do not change 
@@ -123,7 +123,7 @@ i6:0 !!= * @CODE@ a fake vowel, to get WG rules to function, e.g. kyehtlov (kyeh
 
 Sets
  Vow = a á â ä e i o u u2 y æ ø ö å 
-       i2 u2
+       i2 u2 â2
        i3
        a5 á5 i5 u5 y5 o5 ä5 		   !!= * @CODE@ 
        i6
@@ -131,9 +131,9 @@ Sets
        A Á Â Ä E I O U Y Æ Ø Ö Å			   !!= @CODE@ 
        É Ó Ú Í À È Ò Ú Ì Ë Ü Ï Ê Ô Û Î Ã Ý 	   !!= @CODE@ 
        %^RV %^RD %^SV ;						   !!= @CODE@ 
- RealVow = a á â ä e i o u y æ ø ö å y5	i2 i5 i3 i6	   !!= * @CODE@ 
+ RealVow = a á â ä e i o u y æ ø ö å y5	i2 i5 i3 i6	â2   !!= * @CODE@ 
        é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý 	   !!= @CODE@ 
-       A Á Â Ä E I O U Y Æ Ø Ö Å i6			   !!= @CODE@ 
+       A Á Â Ä E I O U Y Æ Ø Ö Å 		   !!= @CODE@ 
        É Ó Ú Í À È Ò Ú Ì Ë Ü Ï Ê Ô Û Î Ã Ý ;   !!= @CODE@ 
  Cns = b c č d đ f g h j k l m n ŋ 			   !!= * @CODE@ 
        p q r s š t ŧ v w x z ž				   !!= @CODE@ 
@@ -372,7 +372,7 @@ h:0 <=> Vow: _  h: WeakGrade \%^CLEN: ;
 "xx:y to something else, consonant gradation and shortening, part 1" 
 !! * __@RULENAME@__ \\   hh:V, kk:h, pp:v,  deleting first part, k:0 in kk4:h etc  
 Cx:0 <=> Vow: _  Cy: (%^RC:) WeakGrade \%^CLEN: ; !! 1) weak grade: ruttâ:ruuđáin 
-         Vow: _  Cy: Vow: (%^EA: )  %^CSH: (%^VHIGH:) (%^RLEN:)  %> ; !! 2) consonant shortening for illativ
+         Vow: _  Cy: Vow: (%^EA: )  %^CSH: (%^VHIGH:) ([%^RLEN: | %^RVSH:])  %> ; !! 2) consonant shortening for illativ
          Vow: _  Cy: Vow:+  Cns ([%^ÁI:|%^ÁE:]) %^CSH: ([%^RLEN: | %^RVSH:])  (%^SVSH:)  %> ; !! 3) consonant shortening for páápp4ár%^ÁI viäkk4ás%^ÁI
 	where Cx in ( k  p   ) !t
 	      Cy in ( k4 p4 )
@@ -1165,13 +1165,13 @@ y:u <=> _ e:  Cns:+ Vow: %^EA: (%^CSH:|%^WG:) (%^RLEN:)  %> ;
         _ :o  Cns:+ :i %^WG: %^CLEN: %^SVLOW: %> i: ;
         _ :o  Cns:  Cns: :i  %^WG: %^CLEN:  %^RVSH: %> [i:|i3:] ;
         _ :o  Cns:+ i2:i %> [i|i3:i|Cns] Sgm:* %> ; 
-        _ e:  Cns:+ [u|á|o|i6:] (%^CSH:|%^WG:) (%^CLEN:) %^VHIGH: ;  ! čevžuin čiävžui evt. â for PrfPrc Err/Orth
+        _ e:  Cns:+ [u|á|o|i6:|â2:] (%^CSH:|%^WG:) (%^CLEN:) %^VHIGH: ;  ! čevžuin čiävžui evt. â for PrfPrc Err/Orth
 
 
 "ye to uá, part 2"
 !! * __@RULENAME@__ \\  Part 2 of ye to uá for kyeli : kuálán
 e:á <=> y: _  Cns:+ Vow: %^EA: (%^CSH:|%^WG:) (%^RLEN:)  %>  ;
-        y: _  Cns:+ [u|á|o|i6:] (%^CSH:|%^WG:) (%^CLEN:) (%^VHIGH:|%^VBACK:) (%^RLEN:) %> \l ;  ! čevžuin čiävžui evt. â for PrfPrc Err/Orth
+        y: _  Cns:+ [u|á|o|i6:|â2:] (%^CSH:|%^WG:) (%^CLEN:) (%^VHIGH:|%^VBACK:) (%^RLEN:) %> \l ;  ! čevžuin čiävžui evt. â for PrfPrc Err/Orth
 
 "ye to uo, part 2 "
 !! * __@RULENAME@__ \\  Part 2 of ye to uá for kyeli : kuolijn
