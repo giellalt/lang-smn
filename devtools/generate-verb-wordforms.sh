@@ -8,30 +8,30 @@
 morf_codes="+V+Inf \
             +V+Ind+Prs+Sg1 \
             +V+Ind+Prs+Sg3 \
+            +V+Ind+Prs+ConNeg \
+            +V+Ind+Prs+Pl3 \
             +V+Ind+Prs+Du1 \
+            +V+Ind+Prt+Sg1 \
+            +V+PrfPrc \
             +V+Ind+Prs+Du2 \
             +V+Ind+Prs+Du3 \
             +V+Ind+Prs+Pl1 \
             +V+Ind+Prs+Pl2 \
-            +V+Ind+Prs+Pl3 \
-            +V+Ind+Prt+Sg1 \
             +V+Ind+Prt+Sg3 \
             +V+Ind+Prt+Pl1 \
-            +V+Ind+Prt+Pl3 \
-            +V+Ind+Prs+ConNeg \
-            +V+PrfPrc"
+            +V+Ind+Prt+Pl3"
 
 # Lexicon source file for lexicons and lemmas:
 source_file=src/morphology/stems/verbs.lexc
 
 # Lexicons that should NOT be used to extract lemmas (egrep expression):
-exception_lexicons="(flagK)"
+exception_lexicons="(4|3)"
 
 # FST used for generation, MINUS suffix:
 generator_file=src/generator-gt-norm
 
 # How many lemmas maximally for each lexicon:
-lemmacount=4
+lemmacount=6
 
 # Specify path to $GTCORE - we don't use Autotools for these scripts:
 gtcore=$GTCORE
