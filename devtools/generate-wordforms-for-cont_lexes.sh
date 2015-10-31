@@ -118,7 +118,6 @@ grep ";" $@ \
    | tr -s ' ' \
    | cut -d' ' -f2 \
    | grep -v ';' \
-   | grep  'ID' \
    | exclgrep "$exception_lexicons" \
    | sort -u
 }
