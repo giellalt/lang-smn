@@ -55,6 +55,7 @@ i2:i u2:u â2:â        	        !!= * @CODE@  this is final i, u in contract ve
 i3:i           	        !!= * @CODE@  this is invariant i
 a5:a á5:á i5:i u5:u y5:y o5:o  ä5:ä               !!= * @CODE@  these do not change 
 c5:c č5:č d5:d h5:h j5:j l5:l m5:m ŋ5:ŋ r5:r t5:t  !!= * @CODE@  these do not change 
+j6:0 !!= * @CODE@ a fake consonant, to get EWG rules to function, e.g. puávui
 i6:0 !!= * @CODE@ a fake vowel, to get WG rules to function, e.g. kyehtlov (kyehti6lov)
  '7:' !!= * @CODE@ is the real apostroph
 
@@ -142,8 +143,7 @@ Sets
        ht g2 k2 m2 n2 							   !!= @CODE@ 
        b3 d3 g3 m3 h3 						   !!= @CODE@ 
        p4 k4 r4 l4  i4  t4 c4 č4                !!= @CODE@
-       h5 j5 ŋ5 t5 c5 l5 t5 d5 r5                    !!=  @CODE@
-       m7 n7 ŋ7 v7 s7 r7 đ7	l7 j7 h7 š7		   !!= @CODE@ 
+       h5 j5 ŋ5 t5 c5 l5 t5 d5 r5 j6                   !!=  @CODE@
        %^RC %^SC   ;                         !!=  @CODE@ 
  Geminate = b d g p h t k c f z l m n ŋ r s š v  ;  !!= * @CODE@  
  Sgm = Vow Cns ;							   !!= * @CODE@ 
@@ -353,13 +353,13 @@ h:v <=> Vow: :Vow h: _     Vow:+ Cns [%^ÁI:|%^ÁE:] %^EWG: %^RLEN: ; ! jäävvi
 	Vow:  Vow:   _     Vow:  Cns               %^EWG: [%^RLEN:|%^RVSH:] ;!			
               Vow:   _ h:  Vow:+ Cns [%^ÁI:|%^ÁE:] %^EWG: ; !jäävvil and loves
      Cns Vow: Vow:   _ h:0 Vow:      [%^ÁI:|%^ÁE:] %^EWG: %> [i: |j] ; !poovij
-                  o: _ h:0 [u:|o:]+ (Cns:) %^EWG: ; !puávui:puohhu
+!                  o: _ h:0 [u:|o:]+ (Cns:) %^EWG: ; !puávui:puohhu Makes conflict
 
 "h:0 for hh"
 !! * __@RULENAME@__ \\   
 h:0 <=>  Cns Vow: (Vow:0) h:  _  Vow:+  Cns [%^ÁI:|%^ÁE:]  %^EWG:  ; !  loves jävilid but jäävvil puáhhá%^ÁI%^EWG%>j
          Cns Vow: Vow: h:  _  Vow:  [%^ÁI:|%^ÁE:]  %^EWG: %> [i: |j] ; !poovij
-                     o: h: _  [u:|o:]+ (Cns:) %^EWG: ; !puávui:puohhu
+!                     o: h: _  [u:|o:]+ Cns: %^EWG: ; !puávui:puohhu Makes conflict
 
 
 "h:0 the other rule"
@@ -574,7 +574,6 @@ j:i <=> Vow: _ %^RC: :Vow       %^CLEN:  (%^RVSH:)       %> ; !Par Ess
 
 "Lengthening of t:tt for Ess/Par"
 !! * __@RULENAME@__ \\  neet%^RCi3%^CLEN%>n %^SV%^CLEN%^SLEN%>n
-!%^RC:t <=> Vow: Vow: t _ Vow: (%^SV:) Cns:* %^CLEN: (%^SLEN:) %> ;
 %^RC:t <=> Vow: t _ Vow: (%^SV:) Cns:* %^CLEN: (%^VHIGH:|%^VBACK:)  (%^RLEN:) (%^SLEN:) %> ;
 
 !€ put^RCe^SVst^CLEN^SLEN>
@@ -633,11 +632,6 @@ Cy:0 <=>   [\Cns: Cx: | .#. | # ]  _  Vow:+ (Cns:+) ([%^ÁI:|%^ÁE:]) (%^FCD:) %
         matched ;
 
 
-
-
-!"From extra strong to weak, rčč:rč"
-!!! * __@RULENAME@__ \\  
-!č:0 <=>  r č: _  Vow:+ (Cns:+) ([%^ÁI:|%^ÁE:]) (%^FCD:) %^EWG: ; !  morčes
 
 "From extra strong to weak, part 2"
 !! * __@RULENAME@__ \\  
@@ -726,10 +720,7 @@ Vy:0 <=> Vx: _  Cns:+ [ Cns: - %^RC:0 ] Vow:  %^WG: (%^CLEN:) %^SVLOW: %> i: ; !
 		 Vx: _ [Cns:+ - č:] Vow:+ Cns:+ ([%^ÁI:|%^ÁE:]) %^CSH: (%^SVSH:) [%>|.#.] ; ! pááppár : pápárân páápp4ár%^ÁI%^EWG%^RVSH%>id
 		 Vx: _ [Cns:+ - č:] Vow:+ Cns:+ ([%^ÁI:|%^ÁE:]) (%^FCD:) %^EWG: %^RVSH: [%>|.#.] ; ! pááppár : pápárân viijđás%^ÁE%^EWG%^RVSH> 
 		 Vx: _ Cns:+ Vow (%^EA:) (%^CLEN:) %^RVSH:  %> ;  ! njääh^RCe^CLEN^RVSH> = njähhe>
-!		 Vx: _ Cns:+ Vow (%^EA:) %^CLEN: %^RVSH:  %> ;  ! njääh^RCe^CLEN^RVSH> = njähhe>
-		 Vx: _ Cns:+ Vow (%^WG:) (%^CLEN:) %^VBACK: %^RVSH:  %> ;  ! njääh^RCe^CLEN^RVSH> = njähhe>
-!		 Vx: _ Cns:+ Vow  %^WG: %^RVSH:  %> ;  ! čäälli^WG^RVSH>hánnáá
-!		 Vx: _ Cns:+ Vow %^RVSH:  %> ;  ! čäälli^WG^RVSH>hánnáá
+		 Vx: _ Cns:+ Vow (%^WG:) (%^CLEN:) %^VBACK: %^RVSH:  %> ;  ! njääh^RCe^CLEN^RVSH> = njähhe> 
        where Vx in ( a e i o u á ä y A E I O U Á Ä ) 
              Vy in ( a e i o u á ä y a e i o u á ä ) 
        matched ;
@@ -808,7 +799,6 @@ Vy:0 <=> Vx: _ č: (%^RC:) Vow:  %^WG: %^RVSH: (%^SVLOW:) [%>|.#.] ; !! 1) 2st s
 "Root vowel lenghtening in many stems"
 !! * __@RULENAME@__ \\  lekkâ : leehá-  meecij ko%^RVppâin
 %^RV:Vy <=> Vx _ [Cns:+ - [h: h ]]  Vow: (Vow:)  (Cns:+) (Triggers: - %^RLEN:)* (â)   %^RLEN: ; !! 1) 2st and 3st
-!             :Vx _ Cns:+ (%^WG:) (%^CLEN:) (%^VHIGH:|%^VBACK:) %^RLEN: ; ! does not work, missing Vow
        where Vx in (a e i o y á A E I O Á ) ! Ánná:Ááná u, U in separate rule Root vowel u length
              Vy in (a e i o y á a e i o á ) 
        matched ;
@@ -1059,7 +1049,7 @@ i:0 <=> \Vow: _ ä: Cns:+ i2:i %>    [i|i3:i|Cns] Sgm:* %> ; !! **  i:0 for iđ 
 !! * __@RULENAME@__ \\  for uábbi -> obbijn  čuál%^RCi%^WG%>in
 á:0 <=> u: _ Cns:+ i %^WG: %^CLEN: %^SVLOW: %> i:  ;
         u: _ Cns:+ i %^WG: %^RVSH: %> i:  ;
-        u: _ Cns:+ [i|u|â] (%^WG:) %^VBACK: %^RVSH: %>   ;
+        u: _ Cns:+ [i|u|â] ([%^WG:|%^CSH:]) %^VBACK: %^RVSH: %>   ; !sopâvetteđ 
         u: _ Cns:+ u %^RVSH: %>  ; ! uáinu
         u: _ Cns:+ i2:i %> [i|i3:i|Cns] Sgm:* %> ; 
         u: _ Cns:+ u2: (%^CLEN:)  %> [:u|i|i3:i|Cns - j] Sgm:* %> ; !*
@@ -1071,7 +1061,7 @@ u:o <=>  [.#.|#] _     Cns:+ u:o %^SV: %^WG: %^SLEN:  %^SVLOW: [%>|.#.]  ; !%^SV
                  _ á:  Cns:+ u2:             (%^CLEN:)            %> [:u|i|i3:i|Cns - j] Sgm:* %> ;
                  _ á:  Cns:+ i2:i                              %>    [i|i3:i|Cns]     Sgm:* %> ; 
      [Cns|.#.|#] _ á:  Cns:+ [i|â|a|á]        (%^WG:)         %^VBACK: (%^RLEN:) %>  ;   ! oođđim            
-                 _ á:0 Cns:+ [i|u|â] (%^WG:) %^VBACK: %^RVSH: %>   ;
+                 _ á:0 Cns:+ [i|u|â] ([%^WG:|%^CSH:]) %^VBACK: %^RVSH: %>   ; !sopâvetteđ
                  _ á:0 Cns:* i %^WG:          %^CLEN: %^SVLOW: %> i:  ;
     		     _  á:o Cns:+ Vow: %^ÁI: %^EWG: ; !puáhháá : poovij ! XXX
                  _ á:0 Cns:+ i %^WG:                   %^RVSH: %> i: ;
@@ -1165,7 +1155,7 @@ y:u <=> _ e:  Cns:+ Vow: %^EA: (%^CSH:|%^WG:) (%^RLEN:)  %> ;
         _ :o  Cns:+ :i %^WG: %^CLEN: %^SVLOW: %> i: ;
         _ :o  Cns:  Cns: :i  %^WG: %^CLEN:  %^RVSH: %> [i:|i3:] ;
         _ :o  Cns:+ i2:i %> [i|i3:i|Cns] Sgm:* %> ; 
-        _ e:  Cns:+ [u|á|o|i6:|â2:] (%^CSH:|%^WG:) (%^CLEN:) %^VHIGH: ;  ! čevžuin čiävžui evt. â for PrfPrc Err/Orth
+        _ e:  Cns:+ [u|á|o|i6:|â2:] (%^CSH:|%^WG:) (%^CLEN:) %^VHIGH: ([%^RVSH: |%^RLEN:] ) %> ;  ! čevžuin čiävžui evt. â for PrfPrc Err/Orth
 
 
 "ye to uá, part 2"
