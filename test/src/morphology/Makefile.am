@@ -26,6 +26,7 @@ endif # WANT_GENERATION
 XFAIL_TESTS=generate-verb-lemmas.sh  
 
 
+
 # Make sure all tests scripts are included in the distributed tarballs:
 EXTRA_DIST=$(TESTS) $(GENERATION_TESTS_IN)
 
