@@ -126,12 +126,19 @@ LEXICON 2KIEHA !!= __@CODE@__
 +N: X_KIEHA ;
 +N+Cmp/SgNom: R ;
 
+LEXICON 2KIEHA_PL !!= __@CODE@__
++N:  X_KIEHA_PL ;
++N:  X_KIEHA_KIELA_PL ;
+
 LEXICON X_KIEHA !!= __@CODE@__
 +Sg+Com:%^WG%^CLEN%^SVLOW%>in K ; ! kievváin
 +Ess:%>n K ;						! kiehân 
 +Par:%>d K ;						! kiehâd 
-+Pl+Ill:%^WG%^CLEN%^SVLOW%>id K ; ! kievváid
 KIEHA_KIELA ;
+X_KIEHA_PL ;
+
+LEXICON X_KIEHA_PL
++Pl+Ill:%^WG%^CLEN%^SVLOW%>id K ; ! kievváid
 
 LEXICON 2KIELA !!= __@CODE@__ WG, blank Ill, DLEN, RVSH, SVLOW 
 +N: X_KIELA ;
@@ -141,19 +148,23 @@ LEXICON 2KIELA !!= __@CODE@__ WG, blank Ill, DLEN, RVSH, SVLOW
 +N+Sg+Acc: VPXsuff ;  !sajes
 +N+Sg+Loc:%>st CPXsuff ;  !sajestis sajasis ill
 +N+Sg+Com:%^WG%^SVLOW%>in CPXsuff ;  ! 
+2KUOLAH ;
+
+LEXICON 2KUOLAH
 +N+Pl+Gen:%^WG%^RLEN%>id CPXsuff ;  !kieđâidis
 +N+Pl+Acc:%^WG%^RLEN%>id CPXsuff ;  !kieđâidis
 +N+Pl+Com:%^WG%^RLEN%>id CPXsuffCOM ;  !kieđâidiskuin
++N+Pl+Ill:%^WG%^SVLOW%>id K ; ! kieláid
 +N:%^WG%> Gen_DER ;
 +N:%> Nom_DER ;
-
++N:  X_KIEHA_KIELA_PL ;
 
 LEXICON X_KIELA !!= __@CODE@__ WG, blank Ill, DLEN, RVSH, SVLOW 
 +Sg+Com:%^WG%^SVLOW%>in K ; 		! kieláin
 +Ess:%^CLEN%>n K ;				! kiellân # puolipitkä > pitkä
 +Par:%^CLEN%>d K ;				! kiellâd # puolipitkä > pitkä
-+Pl+Ill:%^WG%^SVLOW%>id K ; ! kieláid
 KIEHA_KIELA ;
+
 
 LEXICON KIEHA_KIELA !!= __@CODE@__
 +Sg+Nom: K;				 		! kiehâ
@@ -163,9 +174,9 @@ LEXICON KIEHA_KIELA !!= __@CODE@__
 +Sg+Loc:%^WG%>st K ; 				! kievâst
 +Sg+Abe:%^WG%^RVSH%>ttáá K ;		! kievâttáá
 +Der/Dimin: S_KAANDAS ; !kieđâš
-2KUOLAH ;
+X_KIEHA_KIELA_PL ;
 
-LEXICON 2KUOLAH
+LEXICON X_KIEHA_KIELA_PL
 +Pl+Nom:%^WG%>h K ;  				! kievah
 +Pl+Gen:%^WG%>i K ;				! kievâi 
 +Pl+Gen+Use/NG:%^WG%^RVSH%>i K ;  		! kievâi
