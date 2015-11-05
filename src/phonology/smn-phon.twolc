@@ -616,13 +616,20 @@ j:i <=> Vow: _ %^RC: :Vow       %^CLEN:  (%^RVSH:)       %> ; !Par Ess
               Cx in ( j  v  s p  s k c t  č c č p c s  c š t c č ) 
         matched ;
 
+"Consonant lengthening xy:xyy"
+!! * __@RULENAME@__ \\  as previous rule, but for k4, č, p4  kukse:kuvssijn  
+%^RC:Cx <=> Vow:  Cy:  Cz: _ Vow:+ Cns:+ %^CLEN:  ; 
+        where Cy in ( k m  m ŋ h h  h l l l h r r r v v ) 
+              Cz in ( s p  s k c t  č c č p c c š t c č ) 
+              Cx in ( s p  s k c t  č c č p c c š t c č ) 
+        matched ;
+
 
 
 "Consonant lengthening č:čč"
 !! * __@RULENAME@__ \\  as previous rule, č:čč 
 %^RC:č <=>  Vow:  č _ :Vow+ Cns:*  %^CLEN: ; ! eeč%^RCi%^CLEN%>n
 
-!%^RC:č <=> Vow:  č:  _ Vow %^CLEN:  ;  %^RC:Cy <=> Vow:  Cx: _ :Vow+ Sgm:* Triggers:* %^CLEN: ;
 
 
 "From extra strong to weak, part 1 cc:s, rr:r"
