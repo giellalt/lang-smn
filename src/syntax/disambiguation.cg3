@@ -331,6 +331,18 @@ INCLUDE ../../../sme/src/syntax/disambiguation.cg3 ;
 
 SECTION
 
+# NP internal agreement
+
+REMOVE Dem + Loc + Attr IF (0 Dem + Gen)(1C N + Gen) ;
+REMOVE Dem + Ill + Attr IF (0 Dem + Gen)(1C N + Gen) ;
+
+REMOVE Dem + Loc + Attr IF (0 Dem + Ill)(1C N + Ill) ;
+REMOVE Dem + Gen IF (0 Dem + Ill)(1C N + Ill) ;
+
+REMOVE Dem IF (0 Adv)(1 VFIN) ;
+## Toos lii pieijâm nuotâ Tuomo Nikkola.
+
+
 
 REMOVE (@X);
 
