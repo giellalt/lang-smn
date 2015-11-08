@@ -81,7 +81,7 @@ i6:0 !!= * @CODE@ a fake vowel, to get WG rules to function, e.g. kyehtlov (kyeh
 %^SLEN:0    !!= * @CODE@ = stem vowel lengthening
 %^SVLOW:0   !!= * @CODE@ = stem vowel lowering â>á and u>o - árppu árppoin
 %^SVSH:0    !!= * @CODE@ = stem vowel shortening kappeer kaperân
-%^VLOW:0    !!= * @CODE@ = Vowel lowering in 3rd sg of contract verbs tuhhid:tohhe
+%^VLOW:0    !!= * @CODE@ = Vowel lowering in 3rd sg of contract verbs tuhhid:tohhe, not in use
 %^WG:0      !!= * @CODE@ = weak grade trigger
 %^ÁE:0      !!= * @CODE@ = á to e (more) in 3-syll
 %^ÁI:0      !!= * @CODE@ = á to i (more) in 3-syll
@@ -1038,8 +1038,8 @@ i:0 <=> \Vow: _ ä: Cns:+ i2:i %>    [i|i3:i|Cns] Sgm:* %> ; !! **  i:0 for iđ 
 !! * __@RULENAME@__ 
 á:a <=> [Cns|.#.|#]    _       Cns:+ u2:  %> [:u|i|i3:i|Cns - j] Sgm:* %> ;
         [Cns|.#.]    _       Cns:+ i2:i %>    [i|i3:i|Cns] Sgm:* %> ;
-        [Cns|.#.]    _ á:    Cns:+ %^VLOW: [â|a] %> ;
-        [Cns|.#.] á: _       Cns:+ %^VLOW: [â|a] %> ;
+!        [Cns|.#.]    _ á:    Cns:+ %^VLOW: [â|a] %> ; !VLOW not in use
+!        [Cns|.#.] á: _       Cns:+ %^VLOW: [â|a] %> ; !VLOW not in use
         [Cns|.#.]    _ %^RV: Cns:+ u: %^VBACK: %>   ; ! 2st verb pákkuđ: pakkum/h/u
 !       [Cns|.#.]    _ %^RV: Cns:+ [u2:|u] %>    [m|h|u] ; ! 2st verb pákkuđ: pakkum/h/u
 
@@ -1244,7 +1244,7 @@ Vx:á <=> [:e|:i|:ä|:á] (%^RV:)  Cns:+ _  %^EA: (%^CSH:) ([%^RLEN: |%^RVSH:] )
 
 "Stem vowel i to e in front of j"
 !! * __@RULENAME@__ \\  
-Vx:e <=> Cns _ (%^VLOW:) %> [j [Vow - â]|e] ; !not hit karri>jân
+Vx:e <=> Cns _ (%^VLOW:) %> [j [Vow - â]|e] ; !not hit karri>jân !%^VLOW: not in use
 	where Vx in (i i2) ;
 
 
