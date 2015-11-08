@@ -178,7 +178,7 @@ Rules
 Cx:Cy <=> Vow: _ (%^RC: )  WeakGrade  ([%^VHIGH:|%^VBACK:]) ([%^RVSH:|%^RLEN:]) (%^SLEN:) (%^SVLOW:) %> ;
           Vow: _ Vow: Cns: [%^ÁI:|%^ÁE:] %^EWG: ; !cuávis:cu5áhás%^ÁI
 	where Cx in ( h p c )   !č 
-              Cy in ( v v s )   !j
+          Cy in ( v v s )   !j
 		  matched ;
 
 !€ suá^RDn^RCju^WG>
@@ -240,8 +240,8 @@ Cx:Cy <=> Vow:  _ %^RC: :Vow+ Cns:* [Triggers: -  %^FCD:]* %^WG: %^CLEN: (%^VHIG
 !! * __@RULENAME@__ \\   weak grade or consonant shortening for illativ
 Cx:0 <=> Vow: _  Cy: WeakGrade \%^CLEN: ;
          Vow: _  Cy: ConsonantShorting \%^CLEN:  ; !
-	where Cx in ( b c c  č  d đ f g  j k l m n ŋ p r s š v z ž ) !t, h
-	      Cy in ( b c c4 č4 d đ f g  j k l m n ŋ p r s š v z ž ) 
+	where Cx in ( b c c  č  č d đ f g  j k l m n ŋ p r s š v z ž ) !t, h
+	      Cy in ( b c c4 č4 č d đ f g  j k l m n ŋ p r s š v z ž ) 
 		  matched ;
 
 
@@ -289,7 +289,7 @@ t:0 <=> [Vow:|%^SV:] _ [t:|t4:] WeakGrade \%^CLEN: ; !! 1)
 
 "č:0 in čč:j,  part 1" 
 !! * __@RULENAME@__ \\   
-č:0 <=> Vow: _  č: WeakGrade ; !! 1) weak grade: luččâ:luučân lu%^RVččâ
+č:0 <=> Vow: _  č: WeakGrade \%^CLEN: ; !! 1) weak grade: luččâ:luučân lu%^RVččâ
         Vow: _  č4: Vow: Cns: %^EWG: ; 
         Vow: _  č: Vow:+ Cns:* (%^EA: ) %^CSH: ([%^RLEN:|%^RVSH:]) (%^SVSH:)   %> ; !! 3) consonant shortening: luččâ:luučân paččeem%^CSH%^SVSH%>ân
 
@@ -436,7 +436,7 @@ Cx:v <=>  _  Cz (%^RC:) Vow:+ (%^SV: ) (Cns:)  (%^FCD:) %^WG: ;
 "xyy:xy gradation A"
 !! * __@RULENAME@__ \\   há%^RVi4ttás%^ÁI
 Cy:0 <=> :Vow (Vow:) Cx: _ Cz: (%^RC:) WeakGrade \%^CLEN:   ;  
-          Cx:  _ Cz:  Vow (Cns) (%^EA:) %^CSH:    ;   !he%^RVi4ttug
+          Cx:  _ Cz:  Vow (Cns) (%^EA:) %^CSH:    ;   !he%^RVi4ttug 
           Cx:  _ Cz:  Vow:+ (Cns) ([%^ÁI:|%^ÁE:]) %^EWG:    ;   !he%^RVi4ttug
       where Cx in ( j i4 i4 j j i4 i4 i4 i4 l l l l l l l m m m n n n ŋ r r r r r r r r v v v v v ) 
             Cy in ( p c  s  s t k  l  p  t  c k p s t č š p č s c s t k c č p k s t č š c d k p t ) 
@@ -549,9 +549,9 @@ j:i <=> Vow: _ %^RC: :Vow       %^CLEN:  (%^RVSH:)       %> ; !Par Ess
 
 
 "Lengthening of half-long root consonant x:xx"
-!! * __@RULENAME@__ \\  
+!! * __@RULENAME@__ \\  riččá
 %^RC:Cy <=> Vow:  Cx: _ :Vow+ Sgm:* Triggers:* %^CLEN: ;
- 	where Cx in ( b d g k l r s h m n đ j v ŋ p š z ž t ) 
+ 	where Cx in ( b d g k l r s h m n đ j v ŋ p š z ž t )  !not functioning for t:tt 
  	      Cy in ( b d g k l r s h m n đ j v ŋ p š z ž t ) 
  		  matched ;
 
