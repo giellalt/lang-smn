@@ -41,13 +41,13 @@ Literal quotes and angles must be escaped (cf morpheme boundaries further down):
  * i3:i           	          this is invariant i
  * a5:a á5:á i5:i u5:u y5:y o5:o  ä5:ä                 these do not change 
  * c5:c č5:č d5:d h5:h j5:j l5:l m5:m ŋ5:ŋ r5:r t5:t    these do not change 
+ * j6:0  a fake consonant, to get EWG rules to function, e.g. puávui
  * i6:0  a fake vowel, to get WG rules to function, e.g. kyehtlov (kyehti6lov)
  *  '7:'  is the real apostroph
 
 !More abstract archiphonemes
 
  * %^RC:0		 = root cons., lengthened by ^CLEN - máán%RCu máánnun
- * %^RD:0		 = root dipht., shortened by by ^RVSH - vuá%^RDggu vuáguttáá
  * %^RV:0	 	 = root vowel, lengthened by ^RLEN - ta%^RVvlu taavlu 
  * %^SC:0       = stem cons, %^SC:j, pluss lengthen after earlier shortening by %^CSH, see lyeme
  * %^SV:0 		 = stem vowel, lengthened by ^SLEN u:uu - táálu%^SV tááloost
@@ -58,27 +58,21 @@ Literal quotes and angles must be escaped (cf morpheme boundaries further down):
  * %^CLEN:0	 = cons lengthening, with ^RC
  * %^CSH:0      = cons shortening, laaŋkku - laaŋkun
  * %^RVSH:0     = Diphtong shortening
- * %^EE:0       = Final vowel deletion in ee, oo, uu, áá stems
+ * %^EE:0       = Final vowel deletion in ee, oo, uu, áá stems, not in use
  * %^FCD:0      = Final consonant deletion 
  * %^EA:0       = e to a/á in ill etc
  * %^RLEN:0     = root lengthening, with ^RD
  * %^SLEN:0     = stem vowel lengthening
  * %^SVLOW:0    = stem vowel lowering â>á and u>o - árppu árppoin
  * %^SVSH:0     = stem vowel shortening kappeer kaperân
- * %^VLOW:0     = Vowel lowering in 3rd sg of contract verbs tuhhid:tohhe
+ * %^VLOW:0     = Vowel lowering in 3rd sg of contract verbs tuhhid:tohhe, not in use
  * %^WG:0       = weak grade trigger
  * %^ÁE:0       = á to e (more) in 3-syll
  * %^ÁI:0       = á to i (more) in 3-syll
  * %^EWG:0      = from extra strong to weak, e.g. pp:v
- * %^AO:0       = a to o
  * %^VHIGH:0    = hightening of vowels for verbs o to uu, a to oo
  * %^VBACK:0    = back vowels for verbs, ä to a (when needed, normally 2syll a|â is enough
  * %^BLOCK:0    = This symbol just to block otherwise triggering contexts
-
-
-
- * %^ODRVSHV:0     =  Cns shortening in C|# and shortvow in Inf etc  (not in use)
- * %^ODDC:0        =  shorten cns in odd-syll stems before C, #  (not in use)
 
 
 Trigger ordering in twolc and lexc, from left to right:
@@ -121,8 +115,7 @@ Sets
         ht g2 k2 m2 n2 							    
         b3 d3 g3 m3 h3 						    
         p4 k4 r4 l4  i4  t4 c4 č4                
-         h5 j5 ŋ5 t5 c5 l5 t5 d5 r5                    
-        m7 n7 ŋ7 v7 s7 r7 đ7	l7 j7 h7 š7		    
+         h5 j5 ŋ5 t5 c5 l5 t5 d5 r5 j6                   
          %^RC %^SC   ;                          
  *  Geminate = b d g p h t k c f z l m n ŋ r s š v  ;    
  *  Sgm = Vow Cns ;							    
@@ -207,7 +200,7 @@ We want to keep it short, but we want the code to work Thus, we document.
 
 * __č:0 in čč:j,  part 1 __ \\   
 1) weak grade: luččâ:luučân lu%^RVččâ
-3) consonant shortening: luččâ:luučân
+3) consonant shortening: luččâ:luučân paččeem%^CSH%^SVSH%>ân
 
 
 
@@ -327,7 +320,7 @@ We want to keep it short, but we want the code to work Thus, we document.
 
 
 
-* __Lengthening of half-long root consonant x:xx__ \\  
+* __Lengthening of half-long root consonant x:xx__ \\  riččá
 
 * __Lengthening of consonant, e.g. for Ess/Par__ \\   piiru piirrun niisu niissun vahe vahheen suop%^RCâinj%^CLEN%^RLEN%^SVSH
 3) kepidem:keeppidmân
@@ -351,18 +344,18 @@ We want to keep it short, but we want the code to work Thus, we document.
 
 * __Consonant lengthening after xx:x and xy:zy weak grade with x4 on upper side__ \\  as previous rule, but for k4, č, p4  kukse:kuvssijn  
 
+* __Consonant lengthening xy:xyy__ \\ 
+
 
 
 * __Consonant lengthening č:čč__ \\  as previous rule, č:čč 
+
 
 
 * __From extra strong to weak, part 1 cc:s, rr:r__ \\  
 poccuu:puásui  kieppu:kiepâ iäbbár%^ÁI cuobbuu:cuábui kiellâs
 
 
-
-
-* __From extra strong to weak, part 1 cc:s, rr:r__ \\  
 
 * __From extra strong to weak, part 2__ \\  
 1) poccuu:puásui  páápp4ár%^ÁI o%^RVht%^RCâ%^EWG%^RLEN>
@@ -412,8 +405,6 @@ poccuu:puásui  po%^RVccu %^EWG%^RVSH%>jin
 
  
 
-
-* __Stem vowel shortening in front of ^EE__ \\ 
 
 
 
@@ -469,7 +460,6 @@ poccuu:puásui  po%^RVccu %^EWG%^RVSH%>jin
 
 
 
-
 !First syllable vowel change
 
 
@@ -509,7 +499,7 @@ a rules
 čääci : čassijn
 
 
-* __ää to aa, second vowel__ \\  á:o in pairs like kuátij -> koođij, säämi -> saamij
+* __ää to aa, second vowel__ \\  á:o in pairs like kuátij -> koođij, säämi -> saamij čäällu%^VBACK%>m
 
 
 
@@ -544,7 +534,6 @@ a rules
 
 
 * __Root vowel á:a for verbs__ 
-
 
 
 
@@ -586,14 +575,14 @@ a rules
 * __Diphthongisation o:uá for %^EWG, part 1__ \\   
 
 * __Diphthongisation uo:uá for %^EWG__ \\   
-4) vuoll- > vuállus
+4) vuoll- > vuállus ruáttá
 
 * __Diphthongisation o:uá for %^EWG, part 2__ \\   
 
 
 
 
-* __ye to uá og uo, part 1 __ \\  Part 1 of ye to uá for kyeli : kuálán 
+* __ye to uá og uo, part 1 __ \\  Part 1 of ye to uá for kyeli : kuálán  
 
 
 * __ye to uá, part 2__ \\  Part 2 of ye to uá for kyeli : kuálán
@@ -704,5 +693,8 @@ Suffix consonant rules
 
 
 * __Potential vowel shortening for contract verbs__ \\  -áážep becomes -áš etc.
+
+
+
 
 
