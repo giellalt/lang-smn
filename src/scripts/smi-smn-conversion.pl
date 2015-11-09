@@ -25,9 +25,17 @@ while(<>) {
 	s/fkagK/K/g ;
 	s/Maarit LONDON/Maarit MAARIT/g ;
 
+# loanwords with compound border over identical vowels
 
+	s/Hjarteelva/Hjarte-elva/g ;
+	s/Indreeide/Indre-eide/g ;
+	s/Lilleeng/Lille-eng/g ;
+	s/Simleelva/Simle-elva/g ;
+
+
+# sme special symbols
 	s/\^//g ;
-	s/á /á5 /g ;
+	s/á /á5 /g ; # final á would otherwise be a in smn
 	s/b9/b/g ;
 	s/e9/e/g ;
 	s/d9/d/g ;
