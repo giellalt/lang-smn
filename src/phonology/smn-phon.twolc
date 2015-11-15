@@ -140,8 +140,8 @@ Sets
        %^RC %^SC   ;                         !!=  @CODE@ 
  Geminate = b d g p h t k c f z l m n ŋ r s š v  ;  !!= * @CODE@  
  Sgm = Vow Cns ;							   !!= * @CODE@ 
- NotSuffixBorder = Vow %^FCD Cns %^EWG %^CSH %^WG %^CLEN %^SLEN %^RLEN %^SVLOW %^RVSH %^ÁE %^ÁI %^EA %^SVSH ; !!= * @CODE@ 
- Triggers =   %^FCD %^WG %^EWG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^ÁI %^SVSH %^VHIGH %^VBACK ; !!= * @CODE@ 
+ NotSuffixBorder = Vow %^FCD Cns %^CSH %^WG %^CLEN %^SLEN %^RLEN %^SVLOW %^RVSH %^ÁE %^ÁI %^EA %^SVSH ; !!= * @CODE@ 
+ Triggers =   %^FCD %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^ÁI %^SVSH %^VHIGH %^VBACK ; !!= * @CODE@ 
  StemCns = b b3 d d3 g g2 g3 h h2 h3 		   !!= * @CODE@ 
            j l m m2 m3 m8 n n8 n2 ŋ r s  ;     !!= @CODE@ 
 
@@ -176,8 +176,8 @@ Rules
 "x:y consonant gradation"
 !! * __@RULENAME@__ \\  WG gives x:x and x:y, when there is no consonant lengthning  
 Cx:Cy <=> Vow: _ (%^RC: )  WeakGrade  ([%^VHIGH:|%^VBACK:]) ([%^RVSH:|%^RLEN:]) (%^SLEN:) (%^SVLOW:) %> ;
-	where Cx in ( h p c )   !č 
-          Cy in ( v v s )   !j
+	where Cx in ( h p c č )   !č 
+          Cy in ( v v s j )   !j
 		  matched ;
 
 !€ suá^RDn^RCju^WG>
@@ -214,13 +214,6 @@ Cx:Cy <=> Vow:  _ %^RC: :Vow+ Cns:* [Triggers: -  %^FCD:]* %^WG: %^CLEN: (%^VHIG
 !€ va0hhee00>n
 
 
-
-
-
-
-"č:j consonant gradation"
-!! * __@RULENAME@__ \\ 
-č:j <=> Vow: _ (%^RC: )  WeakGrade \%^CLEN: ;
 
 "č:0 consonant gradation clen"
 !! * __@RULENAME@__ \\ 
@@ -307,7 +300,6 @@ t:đ <=> Vow: _   k4: (%^RC:) WeakGrade ; !
         Vow: _  %^RC:   j RealVow: %^WG:0 %^CLEN:0 %^SVLOW:0 ; ! Com
         Vow: _ (%^RC:) (j) WeakGrade  ;
         Vow: _  %^RC:   j RealVow:  %^CLEN:0 ; ! Par and Ess
-!        t:0  _ :Vow WeakGrade ;  ! OIOI
 
 
 !€ jo^RVtk4â^WG^RLEN>
@@ -332,20 +324,22 @@ Cx:Cy <=> Vow: _  Cz:Cy WeakGrade %^CLEN: ; !puáhhoin
 
 !€ su^RVkk4á^SV^WG^CLEN^SLEN>st
 !€ su0hháá000>st
-!
-!"h:v gradation for hh"
-! * __@RULENAME@__ \\   já%^RVhhá%^SVl%^ÁI%^EWG%^RLEN>
-!h:v <=> Vow: :Vow h: _     Vow:+ Cns [%^ÁI:|%^ÁE:] %^EWG: %^RLEN: ; ! jäävvil siävus but loves
+
+"h:v gradation for hh"
+!! * __@RULENAME@__ \\   já%^RVhhá%^SVl%^ÁI%^WG%^CLEN%^RLEN>
+h:v <=> Vow:  _ h:  Vow:+ Cns ([%^ÁI:|%^ÁE:]) %^WG:  %^CLEN: ; !jäävvil and loves
+
+!Vow: :Vow h: _     Vow:+ Cns [%^ÁI:|%^ÁE:] %^WG: %^CLEN: %^RLEN: ; ! jäävvil 
 !	Vow:  Vow:   _     Vow:  Cns               %^EWG: [%^RLEN:|%^RVSH:] ;!			
-!              Vow:   _ h:  Vow:+ Cns [%^ÁI:|%^ÁE:] %^EWG: ; !jäävvil and loves
+!              Vow:   _ h:  Vow:+ Cns [%^ÁI:|%^ÁE:] %^WG:  %^CLEN: ; !jäävvil and loves
 !     Cns Vow: Vow:   _ h:0 Vow:      [%^ÁI:|%^ÁE:] %^EWG: %> [i: |j] ; !poovij
-!!                  o: _ h:0 [u:|o:]+ (Cns:) %^EWG: ; !puávui:puohhu Makes conflict
-!!
+!                  o: _ h:0 [u:|o:]+ (Cns:) %^EWG: ; !puávui:puohhu Makes conflict
+!
 !"h:0 for hh"
 ! * __@RULENAME@__ \\   
 !h:0 <=>  Cns Vow: (Vow:0) h:  _  Vow:+  Cns [%^ÁI:|%^ÁE:]  %^EWG:  ; !  loves jävilid but jäävvil puáhhá%^ÁI%^EWG%>j
 !         Cns Vow: Vow: h:  _  Vow:  [%^ÁI:|%^ÁE:]  %^EWG: %> [i: |j] ; !poovij
-!!                     o: h: _  [u:|o:]+ Cns: %^EWG: ; !puávui:puohhu Makes conflict
+!                     o: h: _  [u:|o:]+ Cns: %^EWG: ; !puávui:puohhu Makes conflict
 !
 
 "h:0 the other rule"
@@ -408,7 +402,7 @@ Cy:Cz <=> Cx:  _  WeakGrade ; !! 2) čuottâlm:čuođâlm njuottâs
 
 "xy:zy gradation"
 !! * __@RULENAME@__ \\  ht:vt, we use h 
-Cx:v <=>  _  Cz (%^RC:) Vow:+ (%^SV: ) (Cns:)  (%^FCD:) %^WG: ;
+Cx:v <=>  _  Cz (%^RC:) Vow:+ (%^SV: ) (Cns:) ([%^ÁI:|%^ÁE:])  (%^FCD:) %^WG: ;
          _  Cz t Vow (%^FCD:) %^WG: ; !pi%^RVhtâs 
        where Cx in ( h k4 h h ) 
              Cz in ( t s  č c  ) 
@@ -440,14 +434,6 @@ Cy:0 <=> :Vow (Vow:) Cx: _ Cz: (%^RC:) WeakGrade \%^CLEN:   ;
 !€ riän0tus0>
 
 
-
-
-
-!"xx:x gradation for ^CSH illative 2" 
-! * __@RULENAME@__ \\    
-!Cx:0 <=> _  Cx Vow: %^CSH: %^RLEN: %> n ; !! 1) 2st hellá:heeḷán
-!         _  Cx Vow: (Vow:) Cns: (Cns:) %^CSH: (%^SVSH:) [%>|.#.] ; !! 2) 3st stems aarrân:arânân
-!      where Cx in ( r l n ŋ m )  ;
 
 !kurrâ kuurân
 !€ ku^RVrrâ^RLEN^CSH>n
@@ -628,7 +614,7 @@ Cx:0  <=>  Sgm: (Cy:) _ (%^CSH:) (%^RLEN:) %> Cy Cy ;
 "Wordfinal consonants part 1"
 !! * __@RULENAME@__  e%^RVlâčč
 Cx:0  <=>  Vow: _ Cy: (%^CLEN:) (%^RLEN:) (%^SLEN:|%^SVSH:) %> \Sgm: ;
-          Vow: _  Cy: Triggers:* %> m ; ! jurdâččmân:jurdâšmân ju%^RVrdâčč%^RLEN%>mân
+          Vow: _  [Cy | č:š] Triggers:* %> m ; ! jurdâččmân:jurdâšmân ju%^RVrdâčč%^RLEN%>mân
 	where Cx in ( d č š l h) 
 	      Cy in ( d č š l č)
 		  matched ;
@@ -782,7 +768,7 @@ Vy:0 <=> Vx: _ č: (%^RC:) Vow:  %^WG: %^RVSH: (%^SVLOW:) [%>|.#.] ; !! 1) 2st s
 !! * __@RULENAME@__ \\ special rule, for avoiding conflict spä%^RVi4lih%^WG%^RLEN, 
 %^RV:ä <=> ä _ Cns:+            Vow:+ Cns:+  %^CLEN: %^RLEN: ; !! 5) vä%^RVr%^RCid
            ä _ [Cns:+ - [h: h]] Vow: (Vow:)  (Cns:+) (Triggers: - %^RLEN:)*   %^RLEN: ;
-          :ä _ Cns:*  :i (%^SV:)          Cns %^ÁI: %^WG: %^RLEN: %> ; !já%^RVhhá%^SVl%^ÁI%^WG%^RLEN>
+          :ä _ Cns:*  :i (%^SV:)          Cns %^ÁI: %^WG: (%^CLEN:) %^RLEN: %> ; !já%^RVhhá%^SVl%^ÁI%^WG%^RLEN>
           ä _ Cns:+  i:                                                 %^WG: %^RLEN: %> \i: ; 
          e:i _ Cns:+  i:                        %^EA:            (%^CSH:)     (%^RLEN:) %> ; ! 1) e:iä, 
          e:i _ Cns:+ [u|á|o] ([%^WG:|%^CSH:]) (%^CLEN:) %^VHIGH: ;  ! čevžuin čiävžui
@@ -840,6 +826,9 @@ o:u <=> [Cns|.#.] _         Cns:+  u2:  %> [:u|i|i3:i|Cns - j] Sgm:* %> ;
         [Cns|.#.] _         Cns:+  i2:i %>    [i|i3:i|Cns] Sgm:* %> ;
                   _  %^RV:  Cns:  (Cns:) e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> [i:|m|v|p] ; !!  alge : olgijn, not ohce removed đ because of inf.
             \Vow: _ (%^RV:) Cns:+  [â|a|i|á|u] (%^WG:|%^CSH:) (%^CLEN:) %^VHIGH: ; ! XXX ny
+
+             \Vow: _ %^RV:á Cns:+ u [i4: | j | š | ž]  %^WG: (%^RVSH:) %> ;  ! 1) poccuu puásui
+
 
 !€ tohhi2>đ
 !€ tuhhi>đ
@@ -1054,6 +1043,7 @@ a:á <=> [Cns|.#.|#] _ %^RV: Cns: Cns: u %^CSH: (%^RLEN:) %> [š|ž] ;
 "Root vowel aa:áá in C-stems with stemvowel u, part 2"
 !! * __@RULENAME@__ \\  ahhu:ááhu
 %^RV:á <=> [Cns|.#.|#] a: _ Cns: Cns: u %^CSH: %^RLEN: %>  [š|ž] ;
+                \Vow: o: _ Cns:+ u [i4: | j | š | ž]  %^WG: (%^RVSH:) %> ;  ! 1) poccu puásui
 
 
 
@@ -1078,20 +1068,20 @@ e:ä <=> [i | e: ] _  Cns:+ Vow:  %^EA: (%^CSH:) ;
 
 
 
-"Diphthongisation o:uá for ^WG, part 1"
-!! * __@RULENAME@__ \\   
-%^RV:á <=> o: _ Cns:+ u  %^WG: (%^RVSH:)  %> [i | j] ; ! 1) poccuu puásui po^RVrru^EWG>i
+!"Diphthongisation o:uá for ^WG, part 1"
+! * __@RULENAME@__ \\   
+!%^RV:á <=> o: _ Cns:+ u  %^WG: (%^RVSH:)  %> [i | j] ; ! 1) poccuu puásui po^RVrru^EWG>i
 
 "Diphthongisation uo:uá for ^WG"
 !! * __@RULENAME@__ \\   
-o:á <=> u _ Cns:+ u: %^WG: ([%^RVSH:|%^RLEN:]) %> ; ! 1) cuobbuu cuábui, kuođhu po^RVrru^EWG>i
-        u _ Cns:+ á %^CSH: ;
+o:á <=> u _ Cns:+ u: [i4: | j | š | ž] %^WG: ([%^RVSH:|%^RLEN:]) %> ; ! 1) cuobbuu cuábui, kuođhu po^RVrru^EWG>i
+ 		u _ Cns:+ á %^CSH: ;
         u _ Cns:+ â %^EA: %^CSH: ;
         u _ Cns:+ [o|u|á|i] %^VHIGH: %> ; !! 4) vuoll- > vuállus ruáttá
 
-"Diphthongisation o:uá for ^WG, part 2"
-!! * __@RULENAME@__ \\   
-o:u <=>  _ %^RV:á Cns:+ u  %^WG: (%^RVSH:) %> [i | j] ; ! 1) poccuu puásui
+!"Diphthongisation o:uá for ^WG, part 2"
+! * __@RULENAME@__ \\   
+!o:u <=>  _ %^RV:á Cns:+ u  %^WG: (%^RVSH:) %> [i | j] ; ! 1) poccuu puásui
 
 
 
@@ -1110,7 +1100,7 @@ y:u <=> _ e:  Cns:+ Vow: %^EA: (%^CSH:|%^WG:) (%^RLEN:)  %> ;
 
 "ye to uá, part 2"
 !! * __@RULENAME@__ \\  Part 2 of ye to uá for kyeli : kuálán
-e:á <=> y: _  Cns:+ Vow: %^EA: (%^CSH:|%^WG:) (%^RLEN:)  %>  ;
+e:á <=> y: _  Cns:+ Vow: %^EA: (%^CSH:|%^WG:) (%^RLEN:)  %> \[i:|j |i3:| š | ž ]  ;
         y: _  Cns:+ [u|á|o|i6:|â2:] (%^CSH:|%^WG:) (%^CLEN:) (%^VHIGH:|%^VBACK:) (%^RLEN:) %> \[l|i] ;  ! not ryetáim:
 
 "ye to uo, part 2 "
