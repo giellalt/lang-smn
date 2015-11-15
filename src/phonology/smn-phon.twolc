@@ -155,8 +155,8 @@ Sets
 
 Definitions
 
-WeakGrade =  (RealVow:) [:RealVow |i6:] (Vow:) (Cns:+) ([%^SV:|%^ÁI:|%^ÁE:|%^EA:]) (%^FCD:) %^WG:0      ;   
-ConsonantShorting =  (RealVow:) [:RealVow |i6:] (Vow:) (Cns:+) ([%^SV:|%^ÁI:|%^ÁE:|%^EA:]) (%^FCD:) %^CSH:0 ;   
+WeakGrade =  (RealVow:) [:RealVow - č: |i6:] (Vow:) (Cns:+) ([%^SV:|%^ÁI:|%^ÁE:|%^EA:]) (%^FCD:) %^WG:0      ;   
+ConsonantShorting =  (RealVow:) [:RealVow - č: |i6:] (Vow:) (Cns:+) ([%^SV:|%^ÁI:|%^ÁE:|%^EA:]) (%^FCD:) %^CSH:0 ;   
 
 !! As we look at more cases, the WeakGrade definition tends to be longer. 
 !! We want to keep it short, but we want the code to work Thus, we document.
@@ -224,13 +224,8 @@ Cx:Cy <=> Vow:  _ %^RC: :Vow+ Cns:* [Triggers: -  %^FCD:]* %^WG: %^CLEN: (%^VHIG
 !€ i0š0e0>
 
 
-"č:0 in čč:j,  part 1" 
-!! * __@RULENAME@__ \\   
-č:0 <=> Vow: _  č: WeakGrade \%^CLEN: ; !! 1) weak grade: luččâ:luučân lu%^RVččâ
-        Vow: _  č: Vow:+ Cns:* (%^EA: ) %^CSH: ([%^RLEN:|%^RVSH:]) (%^SVSH:)   %> ; !! 3) consonant shortening: luččâ:luučân paččeem%^CSH%^SVSH%>ân
-
 !luččâ:luujáin 
-!€ lu^RVččâ^WG^RLEN^SVLOW>in
+!€ lu^RVčč4â^WG^RLEN^SVLOW>in
 !€ luu0já000>in
 
 
@@ -245,7 +240,7 @@ i4:0 <=> Vow: _ j:  WeakGrade ; !
 "xx:x consonant gradation and shortening and x:x shortening"
 !! * __@RULENAME@__ \\   weak grade or consonant shortening for illativ
 Cx:0 <=> Vow: _  Cy: WeakGrade \%^CLEN: ;
-         Vow: _  Cy: ConsonantShorting \%^CLEN:  ; !
+         Vow: _  Cy: ConsonantShorting \%^CLEN:  ; ! 
 	where Cx in ( b c c  č  č d đ f g  j k l m n ŋ p r s š v z ž ) !t, h below
 	      Cy in ( b c c4 č4 č d đ f g  j k l m n ŋ p r s š v z ž ) 
 		  matched ;
