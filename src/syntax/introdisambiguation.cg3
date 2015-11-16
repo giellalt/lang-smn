@@ -179,7 +179,7 @@ LIST Foc/be = Foc/be ("be" Pcle) ;	   #!! Foc/be
 LIST Foc/hal = Foc/hal ("hal" Pcle) ;  #!! Foc/hal
 LIST Foc/han = Foc/han ("han" Pcle) ;  #!! Foc/han
 LIST Foc/bat = Foc/bat ("bat" Pcle) ;  #!! Foc/bat
-LIST Foc/son = Foc/son ("son" Pcle) ;  #!! Foc/son
+LIST Foc/son = Foc/son ("sun" Pcle) ;  #!! Foc/son
 
 
 #!! !Derivation tags
@@ -448,7 +448,7 @@ LIST @X = @X ;    #!! @X
 #!! !Sets for Single-word sets
 
 #!! OKTA and go, and the set INITIAL for initial letters 
-LIST OKTA = "akta" "okta"; #!! OKTA
+LIST OKTA = "ohtâ"; #!! OKTA
 LIST go = "go" ; #!! go
 LIST INITIAL = "a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m"
         "n" "o" "p" "q" "r" "s" "t" "u" "v" "w" "x" "y" "z"
@@ -586,13 +586,13 @@ LIST HABEO-PL3 = ("leđe" Pl3) (V Neg Pl3) ("šoddâđ" Pl3) ;
 
 LIST MUN = (Pron Pers Sg1 Nom);
 LIST DON = (Pron Pers Sg2 Nom);
-LIST SON = ("son" Pron Pers Sg3 Nom);
+LIST SON = ("sun" Pron Pers Sg3 Nom);
 LIST MOAI = (Pron Pers Du1 Nom);
 LIST DOAI = (Pron Pers Du2 Nom);
 LIST SOAI = (Pron Pers Du3 Nom);
 LIST MII-PERS = (Pron Pers Pl1 Nom);
 LIST DII = (Pron Pers Pl2 Nom);
-LIST SII = ("son" Pron Pers Pl3 Nom);
+LIST SII = ("sun" Pron Pers Pl3 Nom);
 
 SET PPRON-NOM-NOT-DAT = MUN OR DON OR SON OR MOAI OR DOAI OR SOAI OR MII-PERS OR DII OR SII ;
 
@@ -623,7 +623,7 @@ LIST DU-NR = Du1 Du2 Du3 ;
 
 SET NOT-SG-PRON = DU-PRON OR PL-PRON ;
 
-LIST DAT-PRON = ("dat") ("dát") ("diet") ("duot") ("dot") ;
+LIST DAT-PRON = ("dat") ("taat") ("tiet") ("tuot") ("tot") ;
 
 LIST QUANT-PRON = "ollu" "olu" "unnán" "váháš" "veaháš" "veháš" ;
 # This set is for choosing between Adv and Pron Indef.
@@ -1287,7 +1287,7 @@ LIST ESS-PROB-ADVL-N = ("bassi" N) "boaris" ("nuorra" N) ;
 #!! * Time sets
 # - - - - -
 
-LIST MANNU = "ođđajagemánnu" "guovvamánnu" "njukčamánnu" "njuvččamánnu" "mársmánnu" "cuoŋománnu" "cuoŋosmánnu" "cuoŋumánnu" "gáranasmánnu" "miessemánnu" "máimánnu" "geassemánnu" "suoidnemánnu" "borgemánnu" "šnjilčamánnu" "šnjilžamánnu" "čakčamánnu" "golggotmánnu" "skábmamánnu" "novembermánnu" "ritnemánnu" "juovlamánnu" ;
+LIST MANNU = (".*.máánu"r) ;
 
 # Duomma:ii
 
@@ -1619,7 +1619,7 @@ LIST SINGLE-SOUND = "fonema" "jietna" "jietnadat" "loahppa#jietnadat" "vokála" 
     # Can be part of a word
 LIST SOUND-SYSTEM = "básonšuokŋa" "čottajuoigan" "gohččun" "lávlunvuohki" "luohti" "musihkka" "riedja" "rohkos" Sem/Prod-audio ;
 
-LIST LANGUAGE =  "jiddisch" (".*giella"r) (".*suopman"r) Sem/Lang ;
+LIST LANGUAGE =  "jiddisch" (".*kielâ"r) (".*suopman"r) Sem/Lang ;
 
 SET SOUND = SINGLE-SOUND OR SOUND-SYSTEM OR LANGUAGE ;
 
