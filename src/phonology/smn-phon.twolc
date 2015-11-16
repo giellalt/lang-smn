@@ -316,15 +316,15 @@ h:v <=> Vow:  _ h:  WeakGrade  %^CLEN: ; !RULE RC  !! 1) WG hh:vh
 
 "k:0 gradation for xkk4"
 !! * __@RULENAME@__ \\  for lkk4, rkk4, vkk4
-k:0 <=> Vow: [l | r | v | i4: | đ ]  _ k4:h  WeakGrade (%^CLEN: ) (%^VBACK:) (%^SVLOW:) ; !! 1) WeakGrade 
-        Vow: [l | r | v | i4: | đ ]  _ k4:k Vow: (%^EA:) %^CSH: (%^RLEN:)   %> ; !! 2) consonant shortening for illativ
+k:0 <=> Vow: [l | r | v | i4: | đ ]  _ k4:h  WeakGrade (%^CLEN: ) (%^VBACK:) (%^SVLOW:) ; !RULE RC !! 1) WG 
+        Vow: [l | r | v | i4: | đ ]  _ k4:k Vow: (%^EA:) %^CSH: (%^RLEN:)   %> ; !RULE RC !! 2) CSH 
 
 
 
 
 "x4:z gradation for xx4" 
 !! * __@RULENAME@__ 
-Cy:Cz <=> Cx:  _  WeakGrade ; !! 2) čuottâlm:čuođâlm njuottâs 
+Cy:Cz <=> Cx:  _  WeakGrade ; !RULE RC !! čuottâlm:čuođâlm njuottâs 
        where Cx in ( t  c  č  p ) 
              Cy in ( t4 c4 č4 p4) 
              Cz in ( đ  s  j   v) 
@@ -344,8 +344,8 @@ Cy:Cz <=> Cx:  _  WeakGrade ; !! 2) čuottâlm:čuođâlm njuottâs
 
 "xy:zy gradation"
 !! * __@RULENAME@__ \\  ht:vt, we use h 
-Cx:v <=>  _  Cz (%^RC:) Vow:+ (%^SV: ) (Cns:) ([%^ÁI:|%^ÁE:])  (%^FCD:) %^WG: ;
-         _  Cz t Vow (%^FCD:) %^WG: ; !pi%^RVhtâs 
+Cx:v <=>  _  Cz (%^RC:) Vow:+ (%^SV: ) (Cns:) ([%^ÁI:|%^ÁE:])  (%^FCD:) %^WG: ; !RULE RC !! 1) pi%^RVhtâs
+          _  Cz t Vow (%^FCD:) %^WG: ;  !RULE RC !! 2) tekstâ
        where Cx in ( h k4 h h ) 
              Cz in ( t s  č c  ) 
        matched ;
@@ -359,12 +359,13 @@ Cx:v <=>  _  Cz (%^RC:) Vow:+ (%^SV: ) (Cns:) ([%^ÁI:|%^ÁE:])  (%^FCD:) %^WG: 
 
 "xyy:xy gradation A"
 !! * __@RULENAME@__ \\   há%^RVi4ttás%^ÁI
-Cy:0 <=> :Vow (Vow:) Cx: _ Cz: (%^RC:) WeakGrade \%^CLEN:   ;  
-          Cx:  _ Cz:  Vow (Cns) (%^EA:) %^CSH:    ;   !he%^RVi4ttug 
+Cy:0 <=> :Vow (Vow:) Cx: _ Cz: (%^RC:) WeakGrade \%^CLEN:   ;   !RULE RC !! 1) WG
+          Cx:  _ Cz:  ConsonantShorting    ; !RULE RC   !! 2) CSH  !he%^RVi4ttug
       where Cx in ( j i4 i4 j j i4 i4 i4 i4 l l l l l l l m m m n n n ŋ r r r r r r r r v v v v v ) 
             Cy in ( p c  s  s t k  l  p  t  c k p s t č š p č s c s t k c č p k s t č š c d k p t ) 
             Cz in ( p c  s  s t k  l  p  t  c k p s t č š p č s c s t k c č p k s t č š c d k p t ) 
       matched ;
+
 
 !€ á^RVrppu^WG^RLEN>
 !€ áár0pu00>
@@ -388,7 +389,7 @@ Cy:0 <=> :Vow (Vow:) Cx: _ Cz: (%^RC:) WeakGrade \%^CLEN:   ;
 
 "Word final consonant deletion"                 
 !!  * __@RULENAME@__ \\ for vaskâm:vaaskâ
-Cx:0 <=> _ ([%^ÁI:|%^ÁE:]) %^FCD: ;      
+Cx:0 <=> _ ([%^ÁI:|%^ÁE:]) %^FCD: ;  !RULE SC
           where Cx in (n m t v j s š) ;
 
 !rejected, look at this:
@@ -396,16 +397,16 @@ Cx:0 <=> _ ([%^ÁI:|%^ÁE:]) %^FCD: ;
 !€ vaaskâ000
 	
 "Final m in stems, mn to n"  
-!!  * __@RULENAME@__ \\ for puhelim :  puhelin   
-m:0 <=>  _ n  [%>|.#.] ;   
-        s _ %^CLEN: (%^RLEN:) %^SLEN: %> m ; !puttáás_min      stoorgâs_mân  sto%^RVrgâsm
+!!  * __@RULENAME@__ \\ 
+m:0 <=>  _ n  [%>|.#.] ;   !RULE SC !! 1)   puhelim:puhelin 
+        s _ %^CLEN: (%^RLEN:) %^SLEN: %> m ; !RULE SC !! 1) puttáás_min stoorgâs_mân  sto%^RVrgâsm
 
 
 "nnj to nj shortening weak grade and consonant shortening"
 !! * __@RULENAME@__ \\  special rule, e.g. konnjâl -> konjâlân puánnjá
-n:0 <=> n  _ j ConsonantShorting \%^CLEN: ; !! 1) 
-        n  _ j WeakGrade \%^CLEN: ; !! 2)lonnjâ:loonjáin
-        n  _ j Vow:+ Cns ([%^ÁI:|%^ÁE:]) %^CSH: ; !vinnjooh:vinjohân
+n:0 <=> n  _ j ConsonantShorting \%^CLEN: ;!RULE RC !! 1) 
+        n  _ j WeakGrade \%^CLEN: ; !RULE RC !! 2)lonnjâ:loonjáin
+        n  _ j Vow:+ Cns ([%^ÁI:|%^ÁE:]) %^CSH: ; !vinnjooh:vinjohân delete?
 
 !€ konnjâl^CSH>ân
 !€ kon0jâl0>ân
