@@ -185,7 +185,7 @@ LIST Foc/son = Foc/son ("son" Pcle) ;  #!! Foc/son
 #!! !Derivation tags
 
 LIST Der/PassL = Der/PassL ;
-LIST Der/Pass = Der/PassL Der/PassS ; #!! Der/PassL Der/PassS
+LIST Der/Pass = Der/Pass ; #!! Der/PassL Der/PassS
 LIST Der/NomAg = Der/NomAg ;   #!! Der/NomAg
 LIST Actor = NomAg Der/NomAg ; #!! NomAg
 LIST Der/adda = Der/adda ;		 #!! Der/adda
@@ -208,7 +208,7 @@ LIST Der/huvva = Der/huvva ;		 #!! Der/huvva
 LIST Der/halla = Der/halla ;		 #!! Der/halla
 LIST Der/j = Der/j ;				 #!! Der/j
 LIST Der/l = Der/l ;				 #!! Der/l
-LIST Der/laš = Der/laš ;			 #!! Der/laš
+LIST Der/laš = Der/lâš ;			 #!! Der/laš
 LIST Der/las = Der/las ;			 #!! Der/las
 LIST Der/hat = Der/hat ;			 #!! Der/hat
 LIST Der/mállet = Der/mállet ;	 #!! Der/mállet
@@ -219,9 +219,9 @@ LIST Der/st = Der/st ;				 #!! Der/st
 LIST Der/stuvva = Der/stuvva ;		 #!! Der/stuvva
 LIST Der/upmi = Der/upmi ;			 #!! Der/upmi
 LIST Der/supmi = Der/supmi ;		 #!! Der/supmi
-LIST Der/vuohta = Der/vuohta ;		 #!! Der/vuohta
-LIST Der/goahti = Der/goahti ;		 #!! Der/goahti
-LIST Der/lágan = Der/lágan ;		 #!! Der/lágan
+LIST Der/vuohta = Der/vuotâ ;		 #!! Der/vuotâ
+LIST Der/goahti = Der/kyetti ;		 #!! Der/kyetti
+LIST Der/lágan = Der/lagan ;		 #!! Der/lagan
 LIST Der/lágán = Der/lágán ;		 #!! Der/lágán
 LIST Der/lágaš = Der/lágaš ;		 #!! Der/lágaš
 LIST Der/jagáš = Der/jagáš ;		 #!! Der/jagáš
@@ -565,21 +565,21 @@ SET DU-PL-V = DU1-V OR DU2-V OR DU3-V OR PL1-V OR PL2-V OR PL3-V ;
 
 SET 1-2-V = SG1-V OR SG2-V OR DU1-V OR DU2-V OR PL1-V OR PL2-V ;
 
-#!! !Sets consisting of forms of "leat" (these ones need to be rewritten)
+#!! !Sets consisting of forms of "leđe" (these ones need to be rewritten)
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-SET LEAN = ("leat" Prs Sg1) + Ind OR ("leat" V Prt ConNeg);
-SET LEAT = ("leat" Prs Pl1) + Ind OR ("leat" V Prs Pl3) + Ind OR 
- ("leat" V Prs Sg2) + Ind OR ("leat" V Inf) OR ("leat" V Prs ConNeg) + Ind ;
+SET LEAN = ("leđe" Prs Sg1) + Ind OR ("leđe" V Prt ConNeg);
+SET LEAT = ("leđe" Prs Pl1) + Ind OR ("leđe" V Prs Pl3) + Ind OR 
+ ("leđe" V Prs Sg2) + Ind OR ("leđe" V Inf) OR ("leđe" V Prs ConNeg) + Ind ;
 
-SET LEAT-FIN-NOT-IMPRT = ("leat" V) - Imprt;
+SET LEAT-FIN-NOT-IMPRT = ("leđe" V) - Imprt;
  
 LIST PRFPRC-V = (V PrfPrc) ;
-LIST LEATPRFPRC = ("leat" PrfPrc) ;
+LIST LEATPRFPRC = ("leđe" PrfPrc) ;
 SET PRC-NOT-LEAT = PRFPRC-V - LEATPRFPRC ;
     # In order to distinguish between real leat-constructions and participles of other verbs
-LIST HABEO-SG3 = ("leat" Sg3) (V Neg Sg3) ("šaddat" Sg3) ;
+LIST HABEO-SG3 = ("leđe" Sg3) (V Neg Sg3) ("šoddâđ" Sg3) ;
 
-LIST HABEO-PL3 = ("leat" Pl3) (V Neg Pl3) ("šaddat" Pl3) ;
+LIST HABEO-PL3 = ("leđe" Pl3) (V Neg Pl3) ("šoddâđ" Pl3) ;
 
 #!! !Pronoun sets
 # ------------
@@ -761,24 +761,24 @@ SET LEX-V = V - DER-V ;
        # VERB but not DER-V
  
  # The set REAL is smaller than COPULAS, made for verbs with PrfPrc complements: Seammás REAL-COPULAS son dovdan iežas...
-LIST REAL-COPULAS = "dáidit" "leat" "soaitit" "veadjit" ;
+LIST REAL-COPULAS = "täiđiđ" "leđe" "soaitit" "vaijeeđ" ;
 
 #!! * The set COPULAS is for predicative constructions
-LIST COPULAS = "dáidit" "gártat" "leat" "soaitit" "šaddat" "orrut" "veadjit" ;
+LIST COPULAS = "täiđiđ" "karttâđ" "leđe" "soaitit" "šoddâđ" "orroođ" "vaijeeđ" ;
  #  "bissut" ? 
  # 'Dáidit' can appear without 'leat'.
 
 SET NOT-COP-V = V - COPULAS ;
 
-LIST MOD-ASP = "áigut" "bállet" "berret" "dáidit" "fertet" "galgat" "gillet" "lávet" "sáhttit" "seahtit" "soaitit" "viggat" ;
+LIST MOD-ASP = "áiguđ" "bállet" "berret" "täiđiđ" "ferttiđ" "kolgâđ" "gillet" "lávet" "sättiđ" "seahtit" "soaitit" "viggat" ;
 
- # Verbs that never have arguments of their own - so we leave out "áigut", for ex.
+ # Verbs that never have arguments of their own - so we leave out "áiguđ", for ex.
 
-LIST AUX-OR-MAIN = "áigut" "álgit" "beassat" "galgat" "háliidit" "máhttit" "nagadit" "nagodit" "ollit" "orrut" "sihtat" "veadjit";
+LIST AUX-OR-MAIN = "áiguđ" "älgiđ" "peessâđ" "kolgâđ" "halijdiđ" "mättiđ" "nagadit" "nagodit" "ollit" "orroođ" "sihtat" "vaijeeđ";
 
  # These verbs can take arguments, so they do not belong in the AUX group, 
  # but they are nevertheless mapped to (@+FAUXV). 
- # Added "álgit" to the group (Lene) - Made rules for "boahtit" which  sometimes can be AUX
+ # Added "älgiđ" to the group (Lene) - Made rules for "pyehtiđ" which  sometimes can be AUX
  # Magga (1982: 120): áigut, dáidit, deaivat, fertet, galgat, lávet, máhttit, oažžut, sáhttit, soaitit, veadjit - in some of the meanings 
  # Halvhjelpeverb: álgit, berret, dohkket, gártat, heivet, liigut, šaddat - in some of the meanings 
  
@@ -790,7 +790,7 @@ SET NOT-AUX-V = V - AUX ; # This is former V-NOT-AUX
 			  # Does not include AUX-OR-MAIN.
 SET VFIN-NOT-AUX = VFIN - AUX ;
 
-SET MAIN-V = V - COPULAS - Neg - MOD-ASP OR ("orrut") ;
+SET MAIN-V = V - COPULAS - Neg - MOD-ASP OR ("orroođ") ;
  
 # All active verbs with a TV tag, including AUX-OR-MAIN.
 
@@ -821,17 +821,17 @@ SET STRICT-TV-V = STVLIST + V - Der/Pass ;
 
 SET STRICT-TRANS-V = STRICT-TV-V + REAL-V ;
 
-LIST LOC-V = "ávkkástallat" "ballat" "beassat" "beroštit" "biehttalit" "bihtit" "ceavzit" "dinet" "dolkat" "eastadallat" "eastadit" "fitnat" "fuolahit" "fuollat" "garvit" "gažadit" "heaitit" "hehttet" "ilbmat" "jearrat" "jearralit" "luohpat" "máinnašit" "nohkkot" "oassádallat" "oassálastit" "spiehkastit" "váibat" "váruhit" "vástidit" ;
+LIST LOC-V = "ávkkástallat" "ballat" "peessâđ" "beroštit" "biehttalit" "bihtit" "ceavzit" "dinet" "dolkat" "eastadallat" "eastadit" "fitnat" "fuolahit" "fuollat" "garvit" "gažadit" "heaitit" "hehttet" "ilbmat" "jearrat" "jearralit" "luohpat" "máinnašit" "nohkkot" "oassádallat" "oassálastit" "spiehkastit" "váibat" "váruhit" "vástidit" ;
 
 		#Note that "fuolahit" obviously has two homonymous variants: 
 		#fuolahit1+Acc, fuolahit2+Loc
 
-LIST COM-V = "álggahit" "álgit" "árvalit" "árvvohuššat" "ávkašuvvat" "bálddastahttit" "bálddalastit" "bártašuvvat" "birgehallat" "birget" "bivvat" "buohtastahttit" "čoahkkinastit" "deaivvadit" "deavdit" "digaštallat" "doarrut" "duhkoraddat" "ealihit" "flirtet" "gávnnadit" "gárvodit" "giksašuvvat" "gilvalit" "gulahallat" "gulaskuddat" "hilbošit" "joatkit" "juogadit" "juohkit" "láhttet" "leaikkastallat" "lohpádaddat" "lohpádallat" "lonuhit" "meannudit" "malssidit" "molssodit" "náitalit" "oktiibidjat" "oahpásmuvvat" "ovttasbargat" "ovttastahttit" "rahčat" "reivvestaddat" "riidalit" "riiddáskit" "rohcošit" "ságastit" "seaguhit" "servvoštallat" "servvoštaddat" "soabadit" "soahpat" "soahtat" "soardit" "stálostallat" "stoahkat" "šiehtadallat" "šiehtadit" "šiehttat" "veahkehit" "veardidit" "viiddidit" "vrd" ;
+LIST COM-V = "álggahit" "älgiđ" "árvalit" "árvvohuššat" "ávkašuvvat" "bálddastahttit" "bálddalastit" "bártašuvvat" "birgehallat" "birget" "bivvat" "buohtastahttit" "čoahkkinastit" "deaivvadit" "deavdit" "digaštallat" "doarrut" "duhkoraddat" "ealihit" "flirtet" "gávnnadit" "gárvodit" "giksašuvvat" "gilvalit" "gulahallat" "gulaskuddat" "hilbošit" "joatkit" "juogadit" "juohkit" "láhttet" "leaikkastallat" "lohpádaddat" "lohpádallat" "lonuhit" "meannudit" "malssidit" "molssodit" "náitalit" "oktiibidjat" "oahpásmuvvat" "ovttasbargat" "ovttastahttit" "rahčat" "reivvestaddat" "riidalit" "riiddáskit" "rohcošit" "ságastit" "seaguhit" "servvoštallat" "servvoštaddat" "soabadit" "soahpat" "soahtat" "soardit" "stálostallat" "stoahkat" "šiehtadallat" "šiehtadit" "šiehttat" "veahkehit" "veardidit" "viiddidit" "vrd" ;
  
 		#Note that "leaikkastallat" has two homonymous variants:
 		#leaikkastallat1 (IV), leaikkastallat2+Com
 
-LIST ILL-V = "áibbašit" "álgit" "ásaiduvvat" "báitit" "bahkket" "beassat" "čohkkedit" "čujuhit" "čuohcit" "deaivat" "doaškut" "dorvvastit" "došket" "duhtat" "gullat" "guoskat" "gustot" "hárjánit" "heivet" "irgidit" "irggástallat" "jáhkkit" "liikot" "luohttit" "mannat" "máhccat" "mieđihit" "miehtat" "njiedjat" "oahpásmuvvat" "oahpásnuvvat" "ollet" "oskut" "riepmat" "ráhkkanit" "soahpat" "searvat" "suhttat" "váikkuhit" "vástidit" "vuolgit" ; 
+LIST ILL-V = "áibbašit" "älgiđ" "ásaiduvvat" "báitit" "bahkket" "peessâđ" "čohkkedit" "čujuhit" "čuohcit" "deaivat" "doaškut" "dorvvastit" "došket" "duhtat" "gullat" "guoskat" "gustot" "hárjánit" "heivet" "irgidit" "irggástallat" "jáhkkit" "liikot" "luohttit" "mannat" "máhccat" "mieđihit" "miehtat" "njiedjat" "oahpásmuvvat" "oahpásnuvvat" "ollet" "oskut" "riepmat" "ráhkkanit" "soahpat" "searvat" "suhttat" "váikkuhit" "vástidit" "vuolgit" ; 
 ###"geahččat" Lene: fjerna denne
  		
 
@@ -847,7 +847,7 @@ LIST ACC-LOC-V = "biehttalit" "čuovvut" "earuhit" "gieldit" "jearrat" ;
 LIST ACC-ILL-V = "addit" "bidjat" "mearkkašit";
     # Two-place predicates that take a direct object and an illative adverbial.
 
-LIST MIELDE-V = "addit" "bidjat" "dáidit" "leat" "oastit" "oažžut" "váldit" ;
+LIST MIELDE-V = "addit" "bidjat" "täiđiđ" "leđe" "oastit" "oažžut" "váldit" ;
     # Verbs that take mielde as their complement.
 
 # Son attii girjji mielde.
@@ -860,22 +860,22 @@ LIST TIMEOBJECT-V = "addit" "atnit" "árvalit" "bálvalit" "čuovvut" "deavdit" 
 
     # might take time as an object - verbs which are not members of PLACE-V: 
     
-LIST DURATION-V = "ádjánit" "bargat" "bistit" "čuoigat" "eallit" "gollat" "guohtut" "leat" "vázzit";
+LIST DURATION-V = "ádjánit" "bargat" "bistit" "čuoigat" "eallit" "gollat" "guohtut" "leđe" "vázzit";
 
 LIST POINT-IN-TIME-V = "árrit" "bissehit" "caggat" "cakkadit" "cakkastallat" "doalahit" "doallat" "duostut" "dustet" "eastadit" "gieldit" "goahcat" "heađuštit" "hehttet" ;
 
-LIST ROUTE-ADVL-V = "boahtit" "čuoigat" ;
+LIST ROUTE-ADVL-V = "pyehtiđ" "čuoigat" ;
  
     # bevegelse langsmed noe, innafor et bestemt område   
 LIST ROUTEOBJECT-V = "ásahit" "bidjat" "botnjat" "basuhit" "buoridit" "čielggadit" "čuovvulit" "čilget" "čuorvut" "čurvet" "dieđihit" "duođaštit" "duorggastit" "geavahit" "geahpedit" "geahpidit" "gudnejahttit" "guorahallat" "gieđahallat" "guođđit" "gilljut" "heahtit" "huikit" "huikkádit" "juoigat" "lávlut" "lohkat" "loahpahit" "mearridit" "máidnut" "nannet" "njulget" "oahpahit" "ráhkadit" "sivdnidit" "suokkardit" "unnidit" "válmmaštit" "vurket" ;
 
-LIST HAB-V = "boahtit" "leat" "goallut" "heaŋgát" "jápmit" "šaddat" ;
+LIST HAB-V = "pyehtiđ" "leđe" "goallut" "heaŋgát" "jápmit" "šoddâđ" ;
 	# To be used in habitative-sentences.
 
 #!! !Valency sets
 # - - - - - - -
 
-LIST INF-V = "astat" "ádjánit" "áigut" "álgit" "ásahit" "bágget" "bávččagit" "beassat" "berret" "bivdit" "bivvat" "bistit" "boahtit" "bovdet" "čohkkát" "čohkkedit" "čohkánit" "čuoččahit" "čuoččastit" "čuorvut" "čurggodit" ("dadjat" Der/PassL) ("dadjat" Der/PassS) "dagahit" "dáhttut" "dáidit" "dárbbašit" "defineret" "diktit" "doaivut" "doapmat" "duostat" "fertet" "fuobmát" "fuolahit" "galgat" "gáibidit" "gárrut" "gártat" "geahččalit" "geargat" "geatnegahttit" "gierdat" "gillet" "gohččut" "háhppehit" "háliidit" "hárjánit" "heivet" "lávet" "liikot" "lihkkat" "mannat" "máhttit" "máššat" "movttiidahttit" "muitit" "nagodit" "navdit" "oahpahit" "oahpástuvvat" "oahppat" "oažžut" "ollet" "ribahit" "riepmat" "sáhttit" "seahtit" "sihtat" "soaitit" "suovvat" "šaddat" "stađđat" "veadjit" "viggat" "viššat" "vuogáiduvvat" "vuolgit" "vuollánit" "vuordit";
+LIST INF-V = "astat" "ádjánit" "áiguđ" "älgiđ" "ásahit" "bágget" "bávččagit" "peessâđ" "berret" "bivdit" "bivvat" "bistit" "pyehtiđ" "bovdet" "čohkkát" "čohkkedit" "čohkánit" "čuoččahit" "čuoččastit" "čuorvut" "čurggodit" ("dadjat" Der/PassL) ("dadjat" Der/PassS) "dagahit" "dáhttut" "täiđiđ" "dárbbašit" "defineret" "diktit" "doaivut" "doapmat" "duostat" "ferttiđ" "fuobmát" "fuolahit" "kolgâđ" "gáibidit" "gárrut" "karttâđ" "geahččalit" "geargat" "geatnegahttit" "gierdat" "gillet" "gohččut" "háhppehit" "halijdiđ" "hárjánit" "heivet" "lávet" "liikot" "lihkkat" "mannat" "mättiđ" "máššat" "movttiidahttit" "muitit" "nagodit" "navdit" "oahpahit" "oahpástuvvat" "oahppat" "oažžut" "ollet" "ribahit" "riepmat" "sättiđ" "seahtit" "sihtat" "soaitit" "suovvat" "šoddâđ" "stađđat" "vaijeeđ" "viggat" "viššat" "vuogáiduvvat" "vuolgit" "vuollánit" "vuordit";
  
 
 LIST ACC-INF-V = "bivdit" "čuorvut" "dagahit" "diktit" "gohččut" "movttiidahttit" "sihtat" "suovvat" ;
@@ -885,7 +885,7 @@ LIST ACC-INF-V = "bivdit" "čuorvut" "dagahit" "diktit" "gohččut" "movttiidaht
  # a subset of INF-V.
  	#$ Ii suova nieiddas náitalit.
 
-LIST OPRED-V = "alidit" "atnit" "álggahit" "ásahit" "bargat" "bidjat" "ceavzit" "dadjat" "dahkaluddat" "dahkat" "doalahit" "dovdat" "dulkot" "gártat" "geavahit" "geahččat" "gohčodit" "gohččut" "kvalifiseret" "málet" "meroštallat" "meroštallojuvvot" "navdit" "oaidnit" "oaivvildit" "sihkkarastit" "váldit" "válljet" "rábmot" "vihahit" ;
+LIST OPRED-V = "alidit" "atnit" "álggahit" "ásahit" "bargat" "bidjat" "ceavzit" "dadjat" "dahkaluddat" "dahkat" "doalahit" "dovdat" "dulkot" "karttâđ" "geavahit" "geahččat" "gohčodit" "gohččut" "kvalifiseret" "málet" "meroštallat" "meroštallojuvvot" "navdit" "oaidnit" "oaivvildit" "sihkkarastit" "váldit" "válljet" "rábmot" "vihahit" ;
 
  # Verbs that occur with objects that have secondary predicates.
  
@@ -894,15 +894,15 @@ LIST OKTII-V = ("boallu" Der/huvva) "goallostit" "beaškkehit" "bidjat" "čatnat
  # Danger: This list could be too long, in certain respects. 
  # TODO: Think of counter examples, i.e. sentences where we have these verbs, but where oktii is not an adverbial.
  
-LIST VGEN-V-TRIGGER = "beassat" "bidjat" "bijadit" "bivdit" "boahtit" "buktit" "čohkket" "čuovvut" "doalvut" "duolmmadit" "fidnet" "fitnat" "galgat" "girdit" "gálašit" "gávdnat" "goastit" "guođuhit" "gurgalit" "gárgidit" "jávkkihit" "joatkit" "johtit" "jorgut" "loahpahit" "mannat" "mátkkoštit" "njahkalit"  "njoammut" "oasálastit" "rasttildit" "ruohttat" "sihkkelastit" "váccašit" "vájuldit" "vánddardit" "viehkat" "viehkalit" "viežžat" "vuodjit" "vuolgit" ;
+LIST VGEN-V-TRIGGER = "peessâđ" "bidjat" "bijadit" "bivdit" "pyehtiđ" "buktit" "čohkket" "čuovvut" "doalvut" "duolmmadit" "fidnet" "fitnat" "kolgâđ" "girdit" "gálašit" "gávdnat" "goastit" "guođuhit" "gurgalit" "gárgidit" "jávkkihit" "joatkit" "johtit" "jorgut" "loahpahit" "mannat" "mátkkoštit" "njahkalit"  "njoammut" "oasálastit" "rasttildit" "ruohttat" "sihkkelastit" "váccašit" "vájuldit" "vánddardit" "viehkat" "viehkalit" "viežžat" "vuodjit" "vuolgit" ;
 
-LIST VGEN-V = "bassit" "bárdnat" "bealkit" "biškut" "boahtit" "borrat" "civkit" "čárvut" "čállit" "čeargut" "čierrut" "čuoigat" "čuorvut" "doarggistit" "duorrat" "fáiput" "garrudit" "gállit" "ohcat" "geargat" "geavzut" "gievvut" "gilljut" "girdit" "gullat" "guoddit" "heahpanaddat" "hoigat" "holvut" "huikit" "hupmat" "jápmit" "johtit" "jorgut" "juoigat" "láddjet" "lávlut" "luoibmat" "murdit" "njáhkat" "njoammut" "njurgut" "oađđit" "oahkut" "oaidnit" "orrut" "reaškit" "riidet" "rohkut" "ruohttat" "ruossut" "sáđđat" "sihkkelastit" "skeaikit" "skierbmut" "soabbut" "speažžut" "suhkat" "suoibut" "šlivgut" "šloahtat" "šnjirgut" "vázzit" "viehkat" "vuodjat" "vuodjit" "vuohčut" "vuoitit" "vuoššat" ;
+LIST VGEN-V = "bassit" "bárdnat" "bealkit" "biškut" "pyehtiđ" "borrat" "civkit" "čárvut" "čállit" "čeargut" "čierrut" "čuoigat" "čuorvut" "doarggistit" "duorrat" "fáiput" "garrudit" "gállit" "ohcat" "geargat" "geavzut" "gievvut" "gilljut" "girdit" "gullat" "guoddit" "heahpanaddat" "hoigat" "holvut" "huikit" "hupmat" "jápmit" "johtit" "jorgut" "juoigat" "láddjet" "lávlut" "luoibmat" "murdit" "njáhkat" "njoammut" "njurgut" "oađđit" "oahkut" "oaidnit" "orroođ" "reaškit" "riidet" "rohkut" "ruohttat" "ruossut" "sáđđat" "sihkkelastit" "skeaikit" "skierbmut" "soabbut" "speažžut" "suhkat" "suoibut" "šlivgut" "šloahtat" "šnjirgut" "vázzit" "viehkat" "vuodjat" "vuodjit" "vuohčut" "vuoitit" "vuoššat" ;
 
  
 LIST SOURCE-V = "gáibidit" ;
 
      
-LIST MOVEMENT-V = "ádjit" "beassat" "boahtit" "čuoigat" "čuoiggadit" "fárret" "finadit" "finihit" "fitnat" "gálašit" "gállit" "girdit" "johttát" "johtit" "jorahallat" "mannat" "mátkkoštit" "njoammut" "njuiket" "ollit" "riidet" "ruohttat" "sáhtostit" "sihkkelastit" "soabbulit" "soabbut" "šloahtat" "váccašit" "vádjolit" "vájaldit" "vájuldit" "vánddardit" "vázzit" "viehkalit" "viehkat" "viežžat" "vuodjalit" "vuodjat" "vuodjit" "vuojadit" "vuojašit" "vuolgit" ;
+LIST MOVEMENT-V = "ádjit" "peessâđ" "pyehtiđ" "čuoigat" "čuoiggadit" "fárret" "finadit" "finihit" "fitnat" "gálašit" "gállit" "girdit" "johttát" "johtit" "jorahallat" "mannat" "mátkkoštit" "njoammut" "njuiket" "ollit" "riidet" "ruohttat" "sáhtostit" "sihkkelastit" "soabbulit" "soabbut" "šloahtat" "váccašit" "vádjolit" "vájaldit" "vájuldit" "vánddardit" "vázzit" "viehkalit" "viehkat" "viežžat" "vuodjalit" "vuodjat" "vuodjit" "vuojadit" "vuojašit" "vuolgit" ;
  # These verbs typically combine with place adverbials in the genitive case @ADVL
  # (i.e. not accusative) I am not sure if the verbs in the second line do that too. They denote movement anyway.
  # These verbs take GEOGRAPHICAL-PLACE in Acc @OBJ.
@@ -965,7 +965,7 @@ LIST VEHICLE-PLACE-V = "addit" "bearrat" "gaikkihit" "gáibidit" "geiget" "oasti
     # According to the rules choosing Loc or Com, these verbs do not select TOOL, ABSTR-TOOL and CONCEPT in (Pl Loc), but HUMAN or ACTOR in (Pl Loc).
     # HUMAN is source and locative, VEHICLE is locative
 
-LIST VEHICLE-TOOL-V = "beassat" "boahtit" "buktit" "doalvut" "fievrridit" "vuolggahit" ;
+LIST VEHICLE-TOOL-V = "peessâđ" "pyehtiđ" "buktit" "doalvut" "fievrridit" "vuolggahit" ;
 
     # HUMAN is source and locative, VEHICLE is comitative
 
@@ -987,7 +987,7 @@ LIST HUMAN-LOC-V = "atnit" "báhcit" "geavahit" "gohčodit" "namuhit" ;
     # Abstract
 
 #!! * __PLACE-V__ Those get only not locative if the target is a member TOOL, ABSTR-TOOL or ANIMATE or CONCEPT. Selects more locatives than ONLY-PLACE-LOC-V 
-LIST PLACE-V = "ássat" "buolvvastallat" "buolvvastit" "čippostallat" "čohkkát" "čohkahit" "čuožžut" "čuččodit" "morihit" "gullát" "morránit" "orrut" "orodit" "stuorrut" "veallát" "veallahit" ;
+LIST PLACE-V = "ássat" "buolvvastallat" "buolvvastit" "čippostallat" "čohkkát" "čohkahit" "čuožžut" "čuččodit" "morihit" "gullát" "morránit" "orroođ" "orodit" "stuorrut" "veallát" "veallahit" ;
   
 LIST ABSTR-PLACE-V = "váilut" "heivet" "hiehpat" "sisttisdoallat" "soahpat" "šiehtat";
     # Verbs without agent
@@ -1061,7 +1061,7 @@ LIST NUMAG-A = "čeahppi" "viššal" "láiki" ;
 # This set for vuovdi etc., not for nisson etc.
 # Here thus not ?stuorra vuovdi, etc,
 
-# in periphrastic constructions (together with "leat") 
+# in periphrastic constructions (together with "leđe") 
 # these subcategorize for comitative, locative etc. depending on 
 # the noun's semantic properties
     
