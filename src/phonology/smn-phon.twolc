@@ -445,8 +445,8 @@ n:0 <=> n  _ j ConsonantShorting \%^CLEN: ;!RULE RC !! 1)  vinnjooh:vinjohân
 "Lengthening of half-long root consonant x:xx"
 !! * __@RULENAME@__ \\  riččá piiru piirrun niisu niissun
 %^RC:Cy <=> Vow:  Cx _ :Vow+ Sgm:* Triggers:* %^CLEN: ; !RULE RC  !! Cx, not Cx:  čeec%^RCi%^CLEN%>n
- 	where Cx in ( b c d g k l r s h m n đ v ŋ p š z ž t )  
- 	      Cy in ( b c d g k l r s h m n đ v ŋ p š z ž t ) 
+ 	where Cx in ( b c č d g k l r s h m n đ v ŋ p š z ž t )  
+ 	      Cy in ( b c č d g k l r s h m n đ v ŋ p š z ž t ) 
  		  matched ;
 
 
@@ -527,9 +527,9 @@ j:i <=> Vow: _ %^RC: :Vow  (%^SV:)     %^CLEN:  (%^RVSH:) ( %^SLEN:)      %> ; !
 
 
 
-"Consonant lengthening č:čč"
-!! * __@RULENAME@__ \\   č:čč 
-%^RC:č <=>  Vow:  č _ :Vow+ Cns:*  %^CLEN: ; ! eeč%^RCi%^CLEN%>n
+!"Consonant lengthening č:čč"
+!!! * __@RULENAME@__ \\   č:čč 
+!%^RC:č <=>  Vow:  č _ :Vow+ Cns:*  %^CLEN: ; ! eeč%^RCi%^CLEN%>n
 
 
 !! !Other consonant rules
@@ -537,7 +537,7 @@ j:i <=> Vow: _ %^RC: :Vow  (%^SV:)     %^CLEN:  (%^RVSH:) ( %^SLEN:)      %> ; !
 
 "Assimilation of consonants t d š"
 !! * __@RULENAME@__  delet t in front of -ttáá, avoid -tttáá
-Cx:0  <=>  Sgm: (Cy:) _ (%^CSH:) (%^RLEN:) %> Cy Cy ; 
+Cx:0  <=>  Sgm: (Cy:) _ (%^CSH:) (%^RLEN:) %> Cy Cy ;  !RULE SC
            Vow: Cx _ %> m ;
 	where Cx in ( d t š) 
 	      Cy in ( d t š)
@@ -549,16 +549,16 @@ Cx:0  <=>  Sgm: (Cy:) _ (%^CSH:) (%^RLEN:) %> Cy Cy ;
 
 "Wordfinal consonants part 1"
 !! * __@RULENAME@__  e%^RVlâčč
-Cx:0  <=>  Vow: _ Cy: (%^CLEN:) (%^RLEN:) (%^SLEN:|%^SVSH:) %> \Sgm: ;
-          Vow: _  [Cy | č:š] Triggers:* %> m ; ! jurdâččmân:jurdâšmân ju%^RVrdâčč%^RLEN%>mân
+Cx:0  <=>  Vow: _ Cy: (%^CLEN:) (%^RLEN:) (%^SLEN:|%^SVSH:) %> \Sgm: ; !RULE SC
+          Vow: _  [Cy | č:š] Triggers:* %> m ; !RULE SC jurdâččmân:jurdâšmân ju%^RVrdâčč%^RLEN%>mân
 	where Cx in ( d č š l h) 
 	      Cy in ( d č š l č)
 		  matched ;
 
 "Wordfinal consonants part 2"
 !! * __@RULENAME@__  e%^RVlâčč cummâlâhč:cummâlâhš
-č:š  <=>  Vow: [č:|h:]  _ Triggers:* %> \Sgm: ;
-          Vow: č:0 _ Triggers:* %> m ; ! jurdâččmân:jurdâšmân
+č:š  <=>  Vow: [č:|h:]  _ Triggers:* %> \Sgm: ; !RULE SC
+          Vow: č:0 _ Triggers:* %> m ; !RULE SC jurdâččmân:jurdâšmân
 
 
 
@@ -619,16 +619,6 @@ Vy:0 <=> Vx: _ [Cns: - č:] Cns:* (%^RC:) Vow: (%^EA:)  %^WG: %^RVSH: (%^SVLOW:)
              Vy in ( a e i o u y á ä ) 
        matched ;
 
-
-!"Vowel shortening eej to eij" - this makes conflict, should make another solution for this: e:i
-! * __@RULENAME@__ \\  leeji : leijijn  
-!e:0  <=> e _  j: %^RC: Vow:  %^CLEN:  %^RVSH:  %>  ; !!  
-
-
-!"Stem vowel shortening in front of ^EE"
-! * __@RULENAME@__ \\ 
-!Vx:0 <=> Vx _ %^EE: ;
-!       where Vx in ( e o u á i a)  ;
 
 !€ mááh^RCu^WG^CLEN^SVLOW>in
 !€ má0vvo000>in
@@ -916,10 +906,7 @@ i:0 <=> \Vow: _ ä: Cns:+ i2:i %>    [i|i3:i|Cns] Sgm:* %> ; !! **  i:0 for iđ 
 !! * __@RULENAME@__ 
 á:a <=> [Cns|.#.|#]    _       Cns:+ u2:  %> [:u|i|i3:i|Cns - j] Sgm:* %> ;
         [Cns|.#.]    _       Cns:+ i2:i %>    [i|i3:i|Cns] Sgm:* %> ;
-!        [Cns|.#.]    _ á:    Cns:+ %^VLOW: [â|a] %> ; !VLOW not in use
-!        [Cns|.#.] á: _       Cns:+ %^VLOW: [â|a] %> ; !VLOW not in use
         [Cns|.#.]    _ %^RV: Cns:+ u: %^VBACK: %>   ; ! 2st verb pákkuđ: pakkum/h/u
-!       [Cns|.#.]    _ %^RV: Cns:+ [u2:|u] %>    [m|h|u] ; ! 2st verb pákkuđ: pakkum/h/u
 
 !€ pá^RVkk4u2>m
 
@@ -959,7 +946,6 @@ u:o <=>  [.#.|#] _     Cns:+ u:o %^SV: %^WG: %^SLEN:  %^SVLOW: [%>|.#.]  ; !%^SV
 !! * __@RULENAME@__ \\  
 á:o <=> u5:  _ Cns:+ u2:u        %> [i|:u|Cns - j] Sgm:* %> ; !uá to uo
         u5:  _ Cns:+ u  %^VBACK: %>  ; !uá to uo
-!       u    _ Cns:+ u2:u %> [i|:u|Cns - j] Sgm:* %> ; ! needed?
         u:   _ Cns:+ i                           %^WG:   %> i: ;  ! 
         u:   _ Cns:+ [i|â|a|á]                      (%^WG:)  %^VBACK: (%^RLEN:) [%>|.#.]  ;  ! oođđim  
         u:o  _ Cns:+ i                          %^WG: %^RLEN:  %> i: ;
@@ -1129,9 +1115,6 @@ Vx:e <=> Cns _ (%^VLOW:) %> [j [Vow - â]|e] ; !not hit karri>jân !%^VLOW: not 
 !! * __@RULENAME@__ \\ sollâ to sooláid 
 â:á <=> _ (%^SV:) (%^WG:) (%^RLEN:|%^CLEN:|%^SLEN:) %^SVLOW: %> [:i|:j] ; 
 
-!"Stem vowel â > i change before VHIGH and i"
-!!! * __@RULENAME@__ \\ f
-!â:i <=> _ %^WG: %^VHIGH: %^RLEN: %> [:i|:j] ; ! VHIGH
 
 !€ so^RVllâ^WG^RLEN^SVLOW>in 
 !€ soo0lá000>in
