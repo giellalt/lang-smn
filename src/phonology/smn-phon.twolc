@@ -440,35 +440,21 @@ n:0 <=> n  _ j ConsonantShorting \%^CLEN: ;!RULE RC !! 1)  vinnjooh:vinjohân
 !! !Consonant lengthening
  
          
-"Lengthening root consonant j:ij 1"
-!! * __@RULENAME@__ \\  for saje:saijeen 
-j:i <=> Vow: _ %^RC: :Vow  (%^SV:)     %^CLEN:  (%^RVSH:) ( %^SLEN:)      %> ; !RULE RC !!Par Ess
-
-!€ sa^RVj^RCe^SV^CLEN^SLEN>n
-!€ sa0ijee00>n
-
-!€ pááj^RCá^CLEN>n
-!€ pááijá0>n
-
-
 
 
 "Lengthening of half-long root consonant x:xx"
 !! * __@RULENAME@__ \\  riččá piiru piirrun niisu niissun
-%^RC:Cy <=> Vow:  Cx _ :Vow+ Sgm:* Triggers:* %^CLEN: ; !RULE RC  !! Cx, not Cx:
- 	where Cx in ( b d g k l r s h m n đ v ŋ p š z ž t )  
- 	      Cy in ( b d g k l r s h m n đ v ŋ p š z ž t ) 
+%^RC:Cy <=> Vow:  Cx _ :Vow+ Sgm:* Triggers:* %^CLEN: ; !RULE RC  !! Cx, not Cx:  čeec%^RCi%^CLEN%>n
+ 	where Cx in ( b c d g k l r s h m n đ v ŋ p š z ž t )  
+ 	      Cy in ( b c d g k l r s h m n đ v ŋ p š z ž t ) 
  		  matched ;
 
 
-"Lengthening of consonant, e.g. for Ess/Par"
-!! * __@RULENAME@__ \\    vahe vahheen suop%^RCâinj%^CLEN%^RLEN%^SVSH
-%^RC:Cy <=> Vow:       Cx:Cy _  Vow (%^SV:) Cns:* [%^CLEN: (%^SLEN:)|%^SVSH:] %> \[Vow: | s ] ;  !RULE RC
-            Vow:       Cx:Cy _  Vow         Cns    %^CLEN:  %> \[ i:|s]  ;  !RULE RC
-            Vow: (i4:) Cx:Cy _  Vow: (i:)   Cns:+  %^CLEN: (%^RLEN:) ([%^SLEN:|%^SVSH:]) %>   ;  !RULE RC !! 3) kepidem:keeppidmân
-            Vow:       Cx:Cy _ :Vow+ Sgm:*  [Triggers: - %^WG: ]* %^CLEN: ;  !RULE RC ! XXX sjekk
-	where Cx in ( v h5 c p)  
-	      Cy in ( v h  c p)   
+"Lengthening of consonant h5"
+!! * __@RULENAME@__ \\    this one does not fit into the general rule because of h5:h
+%^RC:Cy <=> Vow:  Cx:Cy _ Vow:+ Cns:* Triggers:* %^CLEN: ; !RULE RC 
+	where Cx in ( h5 )  
+	      Cy in ( h  )   
 		  matched ;
 
 !€ put^RCe^SVst^CLEN^SLEN>
@@ -497,10 +483,22 @@ j:i <=> Vow: _ %^RC: :Vow  (%^SV:)     %^CLEN:  (%^RVSH:) ( %^SLEN:)      %> ; !
 !! * __@RULENAME@__ \\  
 č:i <=> Vow: _ %^RC:  WeakGrade %^CLEN: ; !RULE RC  !!  eeč%^RCi:eijijn eeč%^RCi%^WG%^CLEN%^SVLOW%>in
 
+"Lengthening root consonant j:ij 1"
+!! * __@RULENAME@__ \\  for saje:saijeen 
+j:i <=> Vow: _ %^RC: :Vow  (%^SV:)     %^CLEN:  (%^RVSH:) ( %^SLEN:)      %> ; !RULE RC !!Par Ess
+
+
 "č:ij and j:ij part 2"
 !! * __@RULENAME@__ \\  
 %^RC:j <=> Vow: č:i _ WeakGrade %^CLEN: ; !RULE RC !! 1)  eeč%^RCi:eijijn
            Vow: j:i _ Vow:+  %^CLEN: ; !RULE RC !! 2) syej%^RCi3%^CLEN%^RVSH%>in suoijijn
+
+!€ sa^RVj^RCe^SV^CLEN^SLEN>n
+!€ sa0ijee00>n
+
+!€ pááj^RCá^CLEN>n
+!€ pááijá0>n
+
 
 
 
