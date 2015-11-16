@@ -27,9 +27,10 @@
 	        # Mapping rules
             # Disambiguation rules
 
+INCLUDE introdisambiguation.cg3 ;
 
 
-INCLUDE ../../../sme/src/syntax/disambiguation.cg3 ;
+INCLUDE ../../../sme/src/syntax/coredisambiguation.cg3 ;
 
 
 ## ========== #
@@ -328,21 +329,36 @@ INCLUDE ../../../sme/src/syntax/disambiguation.cg3 ;
 # =============== #
 # Syntactic rules #
 # =============== #
-
-SECTION
-
-# NP internal agreement
-
-REMOVE Dem + Loc + Attr IF (0 Dem + Gen)(1C N + Gen) ;
-REMOVE Dem + Ill + Attr IF (0 Dem + Gen)(1C N + Gen) ;
-
-REMOVE Dem + Loc + Attr IF (0 Dem + Ill)(1C N + Ill) ;
-REMOVE Dem + Gen IF (0 Dem + Ill)(1C N + Ill) ;
-
-REMOVE Dem IF (0 Adv)(1 VFIN) ;
-## Toos lii pieijâm nuotâ Tuomo Nikkola.
-
-
-
-REMOVE (@X);
+#
+#SECTION
+#
+## NP internal agreement
+#
+#REMOVE Dem + Loc + Attr IF (0 Dem + Gen)(1C N + Gen) ;
+#REMOVE Dem + Ill + Attr IF (0 Dem + Gen)(1C N + Gen) ;
+#
+#REMOVE Dem + Loc + Attr IF (0 Dem + Ill)(1C N + Ill) ;
+#REMOVE Dem + Gen IF (0 Dem + Ill)(1C N + Ill) ;
+#
+#REMOVE Dem IF (0 Adv)(1 VFIN) ;
+### Toos lii pieijâm nuotâ Tuomo Nikkola.
+#
+#
+#
+#REMOVE (@X);
+SUBSTITUTE (A) (A <smn>) WORD ; #RemoveFromApertium
+SUBSTITUTE (N) (N <smn>) WORD ; #RemoveFromApertium
+SUBSTITUTE (Adv) (Adv <smn>) WORD ; #RemoveFromApertium
+SUBSTITUTE (V) (V <smn>) WORD ; #RemoveFromApertium
+SUBSTITUTE (Num) (Num <smn>) WORD ; #RemoveFromApertium
+SUBSTITUTE (Interj) (Interj <smn>) WORD ; #RemoveFromApertium
+SUBSTITUTE (Po) (Po <smn>) WORD ; #RemoveFromApertium
+SUBSTITUTE (Pr) (Pr <smn>) WORD ; #RemoveFromApertium
+SUBSTITUTE (Pron) (Pron <smn>) WORD ; #RemoveFromApertium
+SUBSTITUTE (CC) (CC <smn>) WORD ; #RemoveFromApertium
+SUBSTITUTE (CS) (CS <smn>) WORD ; #RemoveFromApertium
+SUBSTITUTE (Pcle) (Pcle <smn>) WORD ; #RemoveFromApertium
+	#=====#
+      END #
+	#=====#
 
