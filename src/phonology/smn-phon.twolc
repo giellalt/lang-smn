@@ -404,9 +404,8 @@ m:0 <=>  _ n  [%>|.#.] ;   !RULE SC !! 1)   puhelim:puhelin
 
 "nnj to nj shortening weak grade and consonant shortening"
 !! * __@RULENAME@__ \\  special rule, e.g. konnjâl -> konjâlân puánnjá
-n:0 <=> n  _ j ConsonantShorting \%^CLEN: ;!RULE RC !! 1) 
-        n  _ j WeakGrade \%^CLEN: ; !RULE RC !! 2)lonnjâ:loonjáin
-        n  _ j Vow:+ Cns ([%^ÁI:|%^ÁE:]) %^CSH: ; !vinnjooh:vinjohân delete?
+n:0 <=> n  _ j ConsonantShorting \%^CLEN: ;!RULE RC !! 1)  vinnjooh:vinjohân
+        n  _ j WeakGrade \%^CLEN: ; !RULE RC !! 2)lonnjâ:loonjáin 
 
 !€ konnjâl^CSH>ân
 !€ kon0jâl0>ân
@@ -428,7 +427,7 @@ n:0 <=> n  _ j ConsonantShorting \%^CLEN: ;!RULE RC !! 1)
 
 "Final consonant x:xx"
 !! * __@RULENAME@__ \\  pottáák potákkân  
-%^SC:Cx <=> Cx _ Triggers:* [%>|.#.] ; 
+%^SC:Cx <=> Cx _ Triggers:* [%>|.#.] ; !RULE SC
         where Cx in ( k l n p t ) ;
 
 !rejected:
@@ -443,8 +442,7 @@ n:0 <=> n  _ j ConsonantShorting \%^CLEN: ;!RULE RC !! 1)
          
 "Lengthening root consonant j:ij 1"
 !! * __@RULENAME@__ \\  for saje:saijeen
-j:i <=> Vow: _ %^RC: :Vow       %^CLEN:  (%^RVSH:)       %> ; !Par Ess
-        Vow: _ %^RC: :Vow %^SV: %^CLEN: %^SLEN: %> ; !Par Ess
+j:i <=> Vow: _ %^RC: :Vow  (%^SV:)     %^CLEN:  (%^RVSH:) ( %^SLEN:)      %> ; !RULE RC !!Par Ess
 
 !€ sa^RVj^RCe^SV^CLEN^SLEN>n
 !€ sa0ijee00>n
@@ -457,7 +455,7 @@ j:i <=> Vow: _ %^RC: :Vow       %^CLEN:  (%^RVSH:)       %> ; !Par Ess
 
 "Lengthening of half-long root consonant x:xx"
 !! * __@RULENAME@__ \\  riččá
-%^RC:Cy <=> Vow:  Cx: _ :Vow+ Sgm:* Triggers:* %^CLEN: ;
+%^RC:Cy <=> Vow:  Cx: _ :Vow+ Sgm:* Triggers:* %^CLEN: ; !RULE RC
  	where Cx in ( b d g k l r s h m n đ j v ŋ p š z ž t )  !not functioning for t:tt 
  	      Cy in ( b d g k l r s h m n đ j v ŋ p š z ž t ) 
  		  matched ;
