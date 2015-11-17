@@ -366,6 +366,13 @@ t:0 <=> Vow: _ [t:|t4:] WeakGrade \%^CLEN: ; !RULE SC !! 1) WG, not CLEN
 !€ las^RCe^SVtt^CLEN^SLEN>
 !€ lassee0t00>
 
+"nnj to nj shortening weak grade and consonant shortening"
+!! * __@RULENAME@__ \\  special rule, e.g. konnjâl -> konjâlân puánnjá
+n:0 <=> n  _ j ConsonantShorting \%^CLEN: ;!RULE RC !! 1)  vinnjooh:vinjohân
+        n  _ j WeakGrade \%^CLEN: ; !RULE RC !! 2)lonnjâ:loonjáin 
+
+
+
 "Word final consonant deletion"                 
 !!  * __@RULENAME@__ \\ for vaskâm:vaaskâ
 Cx:0 <=> _ ([%^ÁI:|%^ÁE:]) %^FCD: ;  !RULE SC
@@ -380,10 +387,15 @@ Cx:0 <=> _ ([%^ÁI:|%^ÁE:]) %^FCD: ;  !RULE SC
 m:0 <=>  s _  m [Triggers: - %^FCD:]* %>  ; !RULE SC !! 1) puttáás_min 
          s _  [Triggers: - %^FCD:]* %>  m   ; !RULE SC !! 2) stoorgâs_mân  sto%^RVrgâsm
 
-"nnj to nj shortening weak grade and consonant shortening"
-!! * __@RULENAME@__ \\  special rule, e.g. konnjâl -> konjâlân puánnjá
-n:0 <=> n  _ j ConsonantShorting \%^CLEN: ;!RULE RC !! 1)  vinnjooh:vinjohân
-        n  _ j WeakGrade \%^CLEN: ; !RULE RC !! 2)lonnjâ:loonjáin 
+
+"Wordfinal consonants part 1"
+!! * __@RULENAME@__  e%^RVlâčč
+Cx:0  <=>  Vow: _ Cy: (%^CLEN:) (%^RLEN:) (%^SLEN:|%^SVSH:) %> \Sgm: ; !RULE SC !! 1)
+          Vow: _  [Cy | č:š] [Triggers: - %^FCD:]* %> m ; !RULE SC !! 2)jurdâččmân:jurdâšmân ju%^RVrdâčč%^RLEN%>mân
+	where Cx in ( d č š l h) 
+	      Cy in ( d č š l č)
+		  matched ;
+
 
 !€ konnjâl^CSH>ân
 !€ kon0jâl0>ân
@@ -528,13 +540,6 @@ Cx:0  <=>  Sgm: (Cy:) _ (%^CSH:) (%^RLEN:) %> Cy Cy ;  !RULE SC
 !€ haami0>ttáá
 
 
-"Wordfinal consonants part 1"
-!! * __@RULENAME@__  e%^RVlâčč
-Cx:0  <=>  Vow: _ Cy: (%^CLEN:) (%^RLEN:) (%^SLEN:|%^SVSH:) %> \Sgm: ; !RULE SC
-          Vow: _  [Cy | č:š] Triggers:* %> m ; !RULE SC jurdâččmân:jurdâšmân ju%^RVrdâčč%^RLEN%>mân
-	where Cx in ( d č š l h) 
-	      Cy in ( d č š l č)
-		  matched ;
 
 "Wordfinal consonants part 2"
 !! * __@RULENAME@__  e%^RVlâčč cummâlâhč:cummâlâhš
@@ -675,7 +680,14 @@ Vy:0 <=> Vx: _ č: (%^RC:) Vow:  %^WG: %^RVSH: (%^SVLOW:) [%>|.#.] ; !RULE RV !!
 
 "Root vowel o5:oo "
 !! * __@RULENAME@__ \\ 
-%^RV:o <=> o5: _ [Cns:+ - [h: h ]]  Vow: Triggers:*   %^RLEN: ;  !RULE RV
+%^RV:o <=> o5:o _ [Cns:+ - [h: h ]]  Vow: Triggers:*   %^RLEN: ;  !RULE RV !! poovtám
+
+"Root vowel o5:u "
+!! * __@RULENAME@__ \\ 
+o5:u <=> \Vow: _ %^RV: Cns:+   i (%^WG:) (%^CLEN:)   (%^RLEN:) %> ;  !RULE RV !! 1) puhtii
+          \Vow: _ %^RV: Cns:+   e %^WG: %> \Sgm: ; !RULE RV  !! 2) puvte 
+
+
 
 
 "Root vowel ä:ää lenghtening and diphthongisation e:iä"
@@ -707,6 +719,7 @@ Vy:0 <=> Vx: _ č: (%^RC:) Vow:  %^WG: %^RVSH: (%^SVLOW:) [%>|.#.] ; !RULE RV !!
 %^RV:u <=>  :u  _  Cns:+  e:     %^WG:  %^RLEN:  %> i: ; !RULE RV !! 1)
             :u  _  Cns:+  [â|a|i|á|u] (%^WG:|%^CSH:) (%^CLEN:)  %^VHIGH: %^RLEN: ; !RULE RV  !! 2)
           [U|u] _ [Cns:+ - [h: h]]  Vow: (Vow:) (Cns:+) (Triggers: - %^VHIGH:)* %^RLEN: ;  !RULE RV  !! 3)
+     \Vow:  o5:u _ Cns:+   i (%^WG:) (%^CLEN:)  %^RLEN: %> ;  !RULE RV !! 4) puuvtijd
 
 !€ lo^RVh^RCâ^RLEN>đ
 !€ luuh0â0>đ
@@ -742,7 +755,7 @@ o:u <=> [Cns|.#.] _         Cns:+  u2:  %> [:u|i|i3:i|Cns - j] Sgm:* %> ;
                   _  %^RV:  Cns:  (Cns:) e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> [i:|m|v|p] ; !!  alge : olgijn, not ohce removed đ because of inf.
             \Vow: _ (%^RV:) Cns:+  [â|a|i|á|u] (%^WG:|%^CSH:) (%^CLEN:) %^VHIGH: ; ! XXX ny
 
-             \Vow: _ %^RV:á Cns:+ u [i4: | j | š | ž]  %^WG: (%^RVSH:) %> ;  ! 1) poccuu puásui
+             \Vow: _ %^RV:á Cns:+ u [i4: | j | š | ž]  %^WG: (%^RVSH:) %> ;  ! 1) poccuu puásui  
 
 
 !€ tohhi2>đ
@@ -910,15 +923,14 @@ i:0 <=> \Vow: _ ä: Cns:+ i2:i %>    [i|i3:i|Cns] Sgm:* %> ; !! **  i:0 for iđ 
 
 
 "Monophthongisation rule u:o and root vowel change u:o, special rule for olmooš and contract verbs"
-!! * __@RULENAME@__ \\  ulmu : olmooš. Waiting for more lemmas. u%^RVlmu%^SV%^WG%^SLEN%^SVLOW%>š
-u:o <=>  [.#.|#] _     Cns:+ u:o %^SV: %^WG: %^SLEN:  %^SVLOW: [%>|.#.]  ; !%^SV%^WG%^SLEN%^SVLOW%>š
-         [.#.|#] _     Cns:+ u:o       %^WG:          %^SVLOW: [%>|.#.]  ; 
+!! * __@RULENAME@__ \\ 
+u:o <=>  [.#.|#] _     Cns:+ u:o (%^SV:) [š|ž]  %^WG: (%^SLEN:)  %^SVLOW: [%>|.#.]  ; !! ulmu : olmooš, olmožin, carefully with only initial vowel
                  _ á:  Cns:+ u2:             (%^CLEN:)            %> [:u|i|i3:i|Cns - j] Sgm:* %> ;
                  _ á:  Cns:+ i2:i                              %>    [i|i3:i|Cns]     Sgm:* %> ; 
      [Cns|.#.|#] _ á:  Cns:+ [i|â|a|á]        (%^WG:)         %^VBACK: (%^RLEN:) %>  ;   ! oođđim            
                  _ á:0 Cns:+ [i|u|â] ([%^WG:|%^CSH:]) %^VBACK: %^RVSH: %>   ; !sopâvetteđ
                  _ á:0 Cns:* i %^WG:          %^CLEN: %^SVLOW: %> i:  ;
-    		     _  á:o Cns:+ Vow: %^ÁI: %^WG: ; !puáhháá : poovij ! XXX
+    		     _  á:o Cns:+ Vow: j %^ÁI: %^WG: ; !puáhháá : poovij ! XXX
                  _ á:0 Cns:+ i %^WG:                   %^RVSH: %> i: ;
                  _ á:  Cns:* i %^WG:                 (%^RLEN:) %> i: ; 
                  _ á:  Cns:* u2:                  %^RLEN: %>   ; 
@@ -936,7 +948,7 @@ u:o <=>  [.#.|#] _     Cns:+ u:o %^SV: %^WG: %^SLEN:  %^SVLOW: [%>|.#.]  ; !%^SV
         u:   _ Cns:+ [i|â|a|á]                      (%^WG:)  %^VBACK: (%^RLEN:) [%>|.#.]  ;  ! oođđim  
         u:o  _ Cns:+ i                          %^WG: %^RLEN:  %> i: ;
         u:o  _ Cns:+ :i    Cns:          %^ÁI: %^WG: %^RLEN: [%>|.#.] ; !viäskár:veeskir  viäskár%^ÁI%^WG%^RLEN
-        u:   _ Cns:+ Vow:           %^ÁI:           %^WG: [%>|.#.] ; !puáhháá poovij 
+        u:   _ Cns:+ Vow:      j     %^ÁI:           %^WG: [%>|.#.] ; !puáhháá poovij 
         u    _ Cns:+ Vow:+ (Cns:) ([%^ÁI:|%^ÁE:]) %^FCD: â [%>|.#.|#]  ; !stuárrá:stuorrâ
         u:o  _ Cns:* u2:                           %^RLEN: %>   ; 
         u5:  _ Cns:* u2:                                   %> [m|h|u]   ; ! should not hit pu5áhtu2%>o but ču5árvu2
@@ -955,12 +967,12 @@ e:i <=>  \Vow _  Vow: Cns:+ [i2:|e:|i:|i3:] %^EA: (%^CSH:) (%^RLEN:)   %> ; !! 1
 
 "Root vowel aa:áá in C-stems with stemvowel u, part 1"
 !! * __@RULENAME@__ \\  ahhu:áhu
-a:á <=> [Cns|.#.|#] _ %^RV: Cns: Cns: u %^CSH: (%^RLEN:) %> [š|ž] ;
+a:á <=> [Cns|.#.|#] _ %^RV: Cns: Cns: u [š|ž] %^CSH: (%^RLEN:) %>  ;
 
 
 "Root vowel aa:áá in C-stems with stemvowel u, part 2"
 !! * __@RULENAME@__ \\  ahhu:ááhu
-%^RV:á <=> [Cns|.#.|#] a:á _ Cns: Cns: u %^CSH: %^RLEN: %>  [š|ž] ;
+%^RV:á <=> [Cns|.#.|#] a:á _ Cns: Cns: u [š|ž] %^CSH: %^RLEN: %>   ;
                 \Vow: o: _ Cns:+ u [i4: | j | š | ž]  %^WG: (%^RVSH:) %> ;  ! 1) poccu puásui
 
 
@@ -1121,13 +1133,13 @@ i3:e <=> _  (%^SV:) [Triggers: - %^EA:]+ %> \[i: |n|d|j] ; !hyeneest
 
 "Stem vowel u:o change before suffix"
 !! * __@RULENAME@__ \\  
-u:o <=> Cns: _ (%^SV:) (%^WG:) (%^CLEN:) (%^RLEN:|%^RVSH:) (%^SLEN:) %^SVLOW:  ; 
- 		Cns  _  %> [ j Vow | o ] ;
+u:o <=> Cns: _  (%^SV:) ([š|ž]) (%^WG:) (%^CLEN:) (%^RLEN:|%^RVSH:) (%^SLEN:) %^SVLOW:  ; !! 1) olmooš, olmožin
+ 		Cns  _  %> [ j Vow | o ] ; !! 2) 
 
 
 "Stem vowel u2:o change before suffix"
 !! * __@RULENAME@__ \\  
-u2:o <=> Cns  _ (%^RVSH:) %> [ j Vow | o ] ;
+u2:o <=> Cns  _ (%^RVSH:) %> [ j Vow | o ] ; ! SVLOW together with u?
  		
 !€ uáinu>o
 !€ uáino>o
@@ -1152,22 +1164,22 @@ Vx:0 <=> _ Vx: (Cns:+) (%^FCD:) (%^CSH:|%^WG:) (%^RLEN:) %^SVSH:  ; !eemeed : em
 
 "Stem vowel:0 in front of â"
 !! * __@RULENAME@__ \\ aiguu:aaigâ
-Vx:0 <=> Cns: _  ([%^ÁE:|%^ÁI:]) â Triggers:*  [%>|#]   ; 
-         \%> _ (%^SV:) Cns: ([%^ÁE:|%^ÁI:]) %^FCD: â Triggers:*  [%>|#]   ; 
+Vx:0 <=> Cns: _  ([%^ÁE:|%^ÁI:]) â Cns:* Triggers:*  [%>|#]   ; 
+         \%> _ (%^SV:) Cns: ([%^ÁE:|%^ÁI:]) %^FCD: â Cns:* Triggers:*  [%>|#]   ; 
     where Vx in ( â e o a á u i y ä) ;
 
 ! this rule should be generalised, we talk about a ban on o>u strings
 
 "Stem â deleting"
 !! * __@RULENAME@__ \\ kandâ:kandii
-â:0 <=> _ (%^WG:) (%^RVSH:) %> i [i|j] ;
+â:0 <=> \%> _ i:+ (%^WG:) (%^RVSH:) %>  ;
 
 
 !! !Suffix vowel rules
 
 "Suffix vowel lengthening"
 !! * __@RULENAME@__ \\ long á in kissáást, nuorâ : nuorááin, hyeni:hyeneest
-%^SV:Vx <=> :Vx  _  NotSuffixBorder:* %^SLEN:   ; ! hyeneest
+%^SV:Vx <=> :Vx  _ (Cns)  NotSuffixBorder:* %^SLEN:   ; ! hyeneest
        where Vx in ( á o u e a i   y ä  ) ; !nuorâ : nuorááin
 
 
