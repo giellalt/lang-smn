@@ -663,7 +663,7 @@ Vy:0 <=> Vx: _ č: (%^RC:) Vow:  %^WG: %^RVSH: (%^SVLOW:) [%>|.#.] ; !RULE RV !!
 
 "Root vowel lenghtening in many stems"
 !! * __@RULENAME@__ \\  lekkâ : leehá-  meecij ko%^RVppâin
-%^RV:Vy <=> Vx _ [Cns:+ - [h: h ]]  Vow: (Vow:)  (Cns:+) Triggers:* (â)   %^RLEN: ; !RULE RV !! 2st and 3st
+%^RV:Vy <=> Vx _ Cns:+   Vow: (Vow:)  (Cns:+) Triggers:* (â)   %^RLEN: ; !RULE RV !! 2syll and 3syll
        where Vx in (a e i o y á A E I O Á ) ! Ánná:Ááná u, U in separate rule Root vowel u length
              Vy in (a e i o y á a e i o á ) 
        matched ;
@@ -753,7 +753,6 @@ o:u <=> [Cns|.#.] _         Cns:+  u2:  %> [:u|i|i3:i|Cns - j] Sgm:* %> ;
         [Cns|.#.] _         Cns:+  i2:i %>    [i|i3:i|Cns] Sgm:* %> ;
                   _  %^RV:  Cns:  (Cns:) e: (%^WG:) ([%^RLEN: |%^CLEN:] )  %> [i:|m|v|p] ; !!  alge : olgijn, not ohce removed đ because of inf.
             \Vow: _ (%^RV:) Cns:+  [â|a|i|á|u] (%^WG:|%^CSH:) (%^CLEN:) %^VHIGH: ; ! XXX ny
-
              \Vow: _ %^RV:á Cns:+ u [i4: | j | š | ž]  %^WG: (%^RVSH:) %> ;  ! 1) poccuu puásui  
 
 
@@ -770,15 +769,15 @@ o:u <=> [Cns|.#.] _         Cns:+  u2:  %> [:u|i|i3:i|Cns - j] Sgm:* %> ;
 
 "Monophthongisation rule iä:ee 1"
 !! * __@RULENAME@__ \\  
-i:e <=> _ ä: Cns:* i %^WG: %> i: ;  
-        _ ä: Cns:* Vow: Cns [%^ÁI:|%^ÁE:] %^WG: ([%^RLEN:|%^RVSH:]) [%>|.#.]  ; !! 1)viäskár veeskir iäbbár eebir 
+i:e <=> _ ä: Cns:* i %^WG: %> i: ;   !! 1)
+        _ ä: Cns:* Vow: Cns [%^ÁI:|%^ÁE:] %^WG: ([%^RLEN:|%^RVSH:]) [%>|.#.]  ; !! 2)viäskár veeskir iäbbár eebir 
 
 "iä:e rule 1 and second syllable Fleeting vowel before suffix"        
 !! * __@RULENAME@__ \\  Note: many rules in one
-i:0 <=> \Vow: _ ä: Cns:+ i2:i %>    [i|i3:i|Cns] Sgm:* %> ; !! **  i:0 for iđ C verbs 
-        \Vow: _ ä: Cns:+ u2:  %> [:u|i|i3:i|Cns - j] Sgm:* %> ; !! **  i:0 for uđ C verbs
-          Vow _ n j (%^CLEN:) (%^RLEN:) %^SVSH: [%>|.#.] ; !! **  -i- in piehâin to piehânân piehâin piäi4ppáin
-          Cns: _ i t: t: %^CLEN: (%^RLEN:) %^SLEN: %> m   ; !! ** cokkiitt%^CLEN%^RLEN%^SLEN%>mân
+i:0 <=> \Vow: _ ä: Cns:+ i2:i %>    [i|i3:i|Cns] Sgm:* %> ; !! 1)  i:0 for iđ C verbs 
+        \Vow: _ ä: Cns:+ u2:  %> [:u|i|i3:i|Cns - j] Sgm:* %> ; !! 2)  i:0 for uđ C verbs
+          Vow _ n j (%^CLEN:) (%^RLEN:) %^SVSH: [%>|.#.] ; !! 3)  -i- in piehâin to piehânân piehâin piäi4ppáin
+          Cns: _ i t: t: %^CLEN: (%^RLEN:) %^SLEN: %> m   ; !! 4) cokkiitt%^CLEN%^RLEN%^SLEN%>mân
 
 
 
@@ -971,8 +970,8 @@ a:á <=> [Cns|.#.|#] _ %^RV: Cns: Cns: u [š|ž] %^CSH: (%^RLEN:) %>  ;
 
 "Root vowel aa:áá in C-stems with stemvowel u, part 2"
 !! * __@RULENAME@__ \\  ahhu:ááhu
-%^RV:á <=> [Cns|.#.|#] a:á _ Cns: Cns: u [š|ž] %^CSH: %^RLEN: %>   ;
-                \Vow: o: _ Cns:+ u [i4: | j | š | ž]  %^WG: (%^RVSH:) %> ;  ! 1) poccu puásui
+%^RV:á <=> [Cns|.#.|#] a:á _ Cns: Cns: u [š|ž] %^CSH: %^RLEN: %>   ; !! 1)
+                \Vow: o: _ Cns:+ u [i4: | j | š | ž]  %^WG: (%^RVSH:) %> ;  !! 2) poccu puásui
 
 
 
