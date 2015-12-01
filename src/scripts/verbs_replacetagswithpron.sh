@@ -1,5 +1,5 @@
 #sh devtools/verb_minip.sh '(iä|uá).(|.|..)uđ:' > genudverbs.txt
-# cat genudverbs.txt |sh src/scripts/replacetagswithpron.sh | cut -d ' ' -f2- | grep -v '^$' | tr '¢' '\n' > output.txt 
+# cat genudverbs.txt |sh src/scripts/verbs_replacetagswithpron.sh | cut -d ' ' -f2- | grep -v '^$' | tr '¢' '\n' > output.txt 
 
 
 
