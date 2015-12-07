@@ -19,7 +19,9 @@ APERTIUM_TARGET_LANG_NAME=apertium-und apertium-sme-smn
 ##################################################################
 APERTIUM_CG_SRC=
 
-APERTIUM_CG_INCLUDE_SRC=
+APERTIUM_CG_INCLUDE_SRC=\
+                introdisambiguation.cg3 \
+                coredisambiguation.cg3
 
 ##################################################################
 #### BEGIN: Add local processing instructions BELOW this line ####
