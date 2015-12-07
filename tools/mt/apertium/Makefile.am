@@ -17,7 +17,7 @@ APERTIUM_TARGET_LANG_NAME=apertium-und apertium-sme-smn
 ##################################################################
 #### Specify CG3 source files, main and included ones:        ####
 ##################################################################
-APERTIUM_CG_SRC=
+APERTIUM_CG_SRC=disambiguation-mt-gt.cg3
 
 APERTIUM_CG_INCLUDE_SRC=\
                 introdisambiguation.cg3 \
