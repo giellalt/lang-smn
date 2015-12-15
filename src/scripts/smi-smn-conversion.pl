@@ -25,13 +25,6 @@ while(<>) {
 	s/fkagK/K/g ;
 	s/Maarit LONDON/Maarit MAARIT/g ;
 
-# loanwords with compound border over identical vowels
-
-	s/Hjarteelva/Hjarte-elva/g ;
-	s/Indreeide/Indre-eide/g ;
-	s/Lilleeng/Lille-eng/g ;
-	s/Simleelva/Simle-elva/g ;
-
 
 # sme special symbols
 	s/\^//g ;
