@@ -27,9 +27,12 @@
 LEXICON adjstems  !!= __@CODE@__ temporary, for stems waiting for a lexicon
 +A+Attr: K ;
 +A+Sg+Nom: K ;
++A+Cmp/SgNom:  R ;
+
 
 LEXICON ATTR !!= __@CODE@__ for stems with only attribute form
 +A+Attr:  K ;
++A+Cmp/Attr:  R ;
 
 
 !! !!Even-syllable stems
@@ -57,7 +60,7 @@ ALKKEE_COMMON ;
 LEXICON ALKKEE_COMMON !!= __@CODE@__ common for ALKKEE and PYECCEE
 +A: X_TAHHEE ;
 +A+Cmp/SgNom:  R ;
-
++A+Pl+Nom+Err/Orth:%^SVSH%>h K ;
 
 
 LEXICON UCES !!= __@CODE@__ , not in use
@@ -70,49 +73,50 @@ LEXICON UCES !!= __@CODE@__ , not in use
 +A+Cmp/SgNom: R ;
 
 
-LEXICON POCCA !!= __@CODE@__ not yet done, attr puigâ
-+A+Attr:%^WG%>is K ; ! the final a > 0, počis
-SKELMA_COMMON ;
-+A:%> COMP ;
-+A:%> MUS ;
-+A+Cmp/SgNom: R ;
-+A:%> A_VUOTA ;
+LEXICON POCCA !!= __@CODE@__ directing to X_ALGA, attr počis
++A+Attr:i%^WG%>s K ; ! the final a > 0, počis
++A+Attr:â%^WG%>s K ; ! corp: počâs
++A: X_ALGA ;
++A:â%> COMP ;
++A:â%> MUS ;
++A+Cmp/SgNom:â R ; !poččâmielâst
++A:â%> A_VUOTA ; !poččâvuođâ
 
 
-LEXICON SKELMA 
+LEXICON SKELMA !!= __@CODE@__ directing to X_ALGA, attr skelmâ
 +A+Attr: K ;
-SKELMA_COMMON ;
++A: X_ALGA ;
 +A+Cmp/SgNom: R ;
 +A:%> A_VUOTA ;
-
-LEXICON VANTTA 
-+A+Attr:%^CSH%>s K ;
-SKELMA_COMMON ;
-+A+Cmp/SgNom: R ;
-+A:%> A_VUOTA ;
-
-
-LEXICON SKELMA_COMMON 
-+A+Sg+Nom: K ;
-+A+Sg+Gen:%^WG%^RLEN K ;
-+A+Sg+Acc:%^WG%^RLEN K ;
-+A+Sg+Ill:%^CSH%^RLEN%>n K ;
-+A+Sg+Loc:%^WG%^RLEN%>st K ;
-+A+Sg+Com:%^WG%^CLEN%^SVLOW%>in K ;
-+A+Sg+Abe:%^WG%>ttáá K ;
-+A+Ess:%>n K ;
-+A+Par:%>d K ;
-+A+Pl+Nom:%^WG%^RLEN%>h K ;
-+A+Pl+Gen:%^WG%^RLEN%>i K ;
-+A+Pl+Acc:%^WG%^RLEN%>id K ;
-+A+Pl+Ill:%^WG%^SVLOW%>id K ;
-+A+Pl+Loc:%^WG%^RLEN%>in K ;
-+A+Pl+Com:%^WG%>iguin K ;
-+A+Pl+Abe:%^WG%>ittáá K ;
 +A:%^CSH%> COMP ;
 +A:%^CSH%> MUS ;
+
+LEXICON VANTTA !!= __@CODE@__ directing to X_ALGA, attr vantâs
++A+Attr:%^CSH%>s K ; !vantâs
++A: X_ALGA ;
 +A+Cmp/SgNom: R ;
 +A:%> A_VUOTA ;
++A:%^CSH%> COMP ;
++A:%^CSH%> MUS ;
+
+
+!LEXICON SKELMA_COMMON 
+!+A+Sg+Nom: K ;
+!+A+Sg+Gen:%^WG%^RLEN K ;
+!+A+Sg+Acc:%^WG%^RLEN K ;
+!+A+Sg+Ill:%^CSH%^RLEN%>n K ;
+!+A+Sg+Loc:%^WG%^RLEN%>st K ;
+!+A+Sg+Com:%^WG%^CLEN%^SVLOW%>in K ;
+!+A+Sg+Abe:%^WG%>ttáá K ;
+!+A+Ess:%>n K ;
+!+A+Par:%>d K ;
+!+A+Pl+Nom:%^WG%^RLEN%>h K ;
+!+A+Pl+Gen:%^WG%^RLEN%>i K ;
+!+A+Pl+Acc:%^WG%^RLEN%>id K ;
+!+A+Pl+Ill:%^WG%^SVLOW%>id K ;
+!+A+Pl+Loc:%^WG%^RLEN%>in K ;
+!+A+Pl+Com:%^WG%>iguin K ;
+!+A+Pl+Abe:%^WG%>ittáá K ;
 
 
 
@@ -746,6 +750,7 @@ LEXICON COMPe !!= * __@CODE@__ NUORA uses this lexicon
 LEXICON VVCOMPe !!= * __@CODE@__ NUORA uses this lexicon
 +Comp: VVCOMP-SUF ;
 +Comp+Attr:b%^SVSH%^RLEN K ;
++Comp+Attr:p%^SVSH%^RLEN K ; !Err/Orth?
 +Comp+Der/Dimin:b%^SVSH%>âš K ; !needs lexicon
 
 
