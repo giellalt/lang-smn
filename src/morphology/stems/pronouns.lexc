@@ -340,16 +340,16 @@ LEXICON miiInterRel !!= * __@CODE@__
  :ma	MK-low ;
  :ma	MK-front ;
  +Sg+Acc:maid    K ; ! The exceptions
- +Pl+Acc:moid    K ; ! 
+ +Pl+Acc+Use/NG:moid    K ; ! 
  +Sg+Acc+Known:mon     K ;
 ! +Sg+Com:moin   K ; !already in MK
- +Pl+Acc:mooi    K ;
+ +Pl+Acc+Use/NG:mooi    K ;
 ! +Pl+Com:moiguim	 K ; ! already in MK-long ! MLO divvun: lei: mooiguin
 ! +Pl+Abe:moittáá	 K ; !already in MK
 
 LEXICON kiiInterRel !!= * __@CODE@__
 +Sg+Acc:kiäm    K ;
-+Sg+Loc:kest    K ; 
++Sg+Loc+Use/NG:kest    K ; 
 +Sg+Loc:kiäst    K ; 
 +Pl+Loc:kein    K ; 
 +Pl+Loc:kiäin    K ; 
@@ -403,7 +403,7 @@ eres+Pron+Indef:iärrás%^ÁE ERES ; !Iärráseh
 juáháš+Pron+Indef:juáhhá X_KAAHUS "jokainen" ;
 juáháš+Pron+Indef+Sg+Nom+Err/Orth:juáhâš K "jokainen" ; !¢ juáhháást, juáhážân, juáhháá
 jyehi+Pron+Indef+Attr:jyehi K "jokainen" ; 
-maŋgâ+Pron+Indef:ma%^RVŋgâ MANGA "moni" ;
+maŋgâ+Pron+Indef:ma%^RVŋgâ KULMAindef "moni" ;
 mottoom+Pron+Indef:mottoom MOTTOOM "eräs" ;
 muide:mui4de iind "muuta" ;
 nubbe+Pron+Indef:nu%^RVbbe indefnubbe "toinen" ;
@@ -425,9 +425,9 @@ kuábáškin+Pron+Indef:kuábbáágin iind "kumpikaan" ; !Notice -kin:-gin
 kuábâškin+Pron+Indef+Err/Orth:kuábbáágin iind "kumpikaan" ; !Notice -kin:-gin
 kuábášnii+Pron+Indef:kuábbáánii iind "jompikumpi" ;
 kuábâšnii+Pron+Indef+Err/Orth:kuábbáánii iind "jompikumpi" ;
-ohtâ iind "yksi" ;
-ohtâgin iind "yksikään" ;
-ohtâ-uv iind "yksikin" ;
+ohtâ+Pron+Indef:o%^RVht%^RCâ OHTAindef "yksi" ;
+!ohtâgin iind "yksikään" ;
+!ohtâ-uv iind "yksikin" ;
 kuohtuuh+Pron+Indef: KUOHTUUH "molemmat" ;
 tágárâš iind ;
 tagarâš iind ;
@@ -552,13 +552,13 @@ LEXICON MIHHEEN !MM 2007 s. 82
 +Pl+Abe:moiginttáá	K ;
 
 LEXICON KIHHEEN !
-+Attr:kihheen	K ;
-+Sg+Nom:kihheen	K ;
-+Sg+Gen:kiännán	K ;
-+Sg+Gen+Err/Orth:kiännân	K ;
-+Sg+Acc:kukaan	K ; 
-+Sg+Ill:kiässán	K ;
-+Sg+Loc:kiästán	K ;  
++Attr:kihheen	# ;
++Sg+Nom:kihheen	# ;
++Sg+Gen:kiännán	# ;
++Sg+Gen+Err/Orth:kiännân	# ;
++Sg+Acc:kukaan	# ; 
++Sg+Ill:kiässán	# ;
++Sg+Loc:kiästán	# ;  
  
 
 
@@ -641,10 +641,24 @@ LEXICON KUABAS-UV
 +Sg+Loc:%^SV%^SLEN%>st%>#-uv # ;			! spálváást
 +Sg+Com:%>in%>#-uv # ; 			! spálváin
 
-LEXICON MANGA 
-+Sg+Nom: K ; !vittâ
+
+
+LEXICON OHTAindef
++Sg+Acc:%^WG%^RLEN K ; !kuulmâ
++Sg+Com:%^WG%^CLEN%^SVLOW%>in K ; !  ovttáin  
++Pl+Ill:%^WG%^CLEN%^SVLOW%>id K ; !ovttáid  
+KULMA_VITTAindef ;
+
+LEXICON KULMAindef 
 +Sg+Acc: K ; !kuulmâ
 +Sg+Com:%^WG%^SVLOW%>in K ; !  ovttáin  
++Pl+Ill:%^WG%^SVLOW%>id K ; !ovttáid  
+KULMA_VITTAindef ;
+
+
+LEXICON KULMA_VITTAindef 
++Sg+Nom: K ; !vittâ
++Attr: K ; !vittâ
 +Sg+Gen:%^WG%^RLEN K ; !kuulmâ  
 +Sg+Ill+Attr:%^WG%^RLEN K ; !kuulmâ   oovtâ kistui
 +Sg+Loc+Attr:%^WG%^RLEN K ; !kuulmâ  oovtâ kistust
@@ -657,9 +671,9 @@ LEXICON MANGA
 +Pl+Acc:%^WG%^RLEN%>id K ; ! viiđâid  
 +Pl+Gen:%^WG%^RLEN%>i K ; !viiđâi  
 +Pl+Gen:%^WG%>i K ; !viđâi  
-+Pl+Ill:%^WG%^SVLOW%>id K ; !ovttáid  
 +Pl+Loc:%^WG%^RLEN%>in K ; !viiđâin  
 +Pl+Com:%^WG%>iguin K ; !viđâiguin  
 +Pl+Abe:%^WG%>ittáá K ; !viđâittáá  
+
 
 
