@@ -299,8 +299,8 @@ LEXICON VAANIS !!= __@CODE@__ directing to  X_PAAVIR, attr. väni
 +A:%^CSH%>u COMPo ; 
 +A:%^CSH%>u MOS ;
 +A+Cmp/Attr:%^FCD%^CSH%^RVSH%> R ;
-+A:%^CSH%^RVSH%> A_VUOTA ;
-+A:%^CSH%^RVSH A_ADV ;
+!+A:%^FCD%^CSH%^RVSH%> A_VUOTA ; ! vänivuotâ; is also lexicalized
+!+A:%^FCD%^WG A_ADV_VAANIS ; ! vääniht; also lexicalized; why to create these here? A_ADV is wrong, so tried to change it, without success; I will comment this out for a while
 
 
 LEXICON NJAALGIS !!= __@CODE@__ directing to  X_KAARBIS, Attr. njälgis or njaalgâ
@@ -1044,6 +1044,10 @@ LEXICON A_VUOTA  !!= * __@CODE@__ for derivation
 LEXICON A_ADV  !!= * __@CODE@__ for derivation
 +Der/avt+Adv:ávt K ; !pyeremusávt
 +Der/avt+Adv+Use/NG:âht K ; !pyeremusâht
+
+!LEXICON A_ADV_VAANIS  !!= * __@CODE@__ for derivation
+!+Der/avt+Adv:ht K ; !vääniht
+
 
 LEXICON A_LAGAN  !!= * __@CODE@__ for derivation
 +Der/lagan:# LAGAN ;
