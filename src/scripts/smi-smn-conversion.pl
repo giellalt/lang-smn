@@ -23,12 +23,25 @@ while(<>) {
 #	s/DUBAI/BERN/g ;
 	s/BETFAGE/BERN/g ;
 	s/fkagK/K/g ;
-	s/Maarit LONDON/Maarit MAARIT/g ;
 # loanwords with compound border over identical vowels
 	s/Hjarteelva/Hjarte-elva/g ;
 	s/Indreeide/Indre-eide/g ;
 	s/Lilleeng/Lille-eng/g ;
 	s/Simleelva/Simle-elva/g ;
+
+# names with Inari Saami inflection
+	s/^Antti+/!Antti+/g ;
+	s/^Maarit+/!Maarit+/g ;
+	s/^Elli+/!Elli+/g ;
+	s/^Anssi+/!Anssi+/g ;
+	s/^Jussi+/!Jussi+/g ;
+	s/^Lappi+/!Lappi+/g ;
+	s/^Matti+/!Matti+/g ;
+	s/^Aanaar+/!Aanaar+/g ;
+	s/^Avveel+/!Avveel+/g ;
+	s/^Turku+/!Turku+/g ;
+	s/^Markku+/!Markku+/g ;
+	
 
 
 # sme special symbols
