@@ -30,6 +30,7 @@ analyser_file=./../../../src/analyser-gt-norm # XXX as adj
 lemmas=./filtered-${POS}
 comp_lemmas=./filtered-comp-${POS}
 hycomp_lemmas=./filtered-hycomp-${POS}
+coll_lemmas=./filtered-coll-${POS}
 all_lemmas=./all-${POS} # XXX as adj
 generated_lemmas=./generated-${POS} # XXX
 result_file=missing_${POS}_lemmas
@@ -64,7 +65,7 @@ EXTEDITOR=@SEE@
 ##### --exclude "(pattern1|pattern2|...)"                          #####
 # Extract regular nouns:
 @GTCORE@/scripts/extract-lemmas.sh \
-    --exclude "(ShCmp|RCmpnd| Rreal | R | Rnoun |RHyph)" \
+    --exclude "(ShCmp|RCmpnd| Rreal | R | Rnoun |RHyph | COLL)" \
     $source_file > $lemmas
 
 # Extract compounding lemmas:
@@ -77,7 +78,13 @@ EXTEDITOR=@SEE@
     --include "(RHyph)" \
     $source_file > $hycomp_lemmas
 
-cat $lemmas $comp_lemmas $hycomp_lemmas | sort -u > $all_lemmas
+# Extract collective numbers:
+@GTCORE@/scripts/extract-lemmas.sh \
+    --include "(3COLL)" \
+    $source_file > $coll_lemmas
+
+
+cat $lemmas $comp_lemmas $hycomp_lemmas $coll_lemmas | sort -u > $all_lemmas
 
 ###### Start testing: #######
 transducer_found=0
@@ -124,6 +131,9 @@ for f in $fsttype; do
             | fgrep "+?" | cut -d "+" -f1 | sed 's/$/+N+Pl+Nom/' \
             | $lookup_tool $generator_file.$suffix | cut -f2 \
             | grep -v "^$" >> $generated_lemmas.$f.txt 
+        # Generate coll nouns:
+        sed 's/$/+N+Coll+Sg+Nom/' $coll_lemmas | $lookup_tool $generator_file.$suffix \
+            | cut -f2 | grep -v "^$" >> $generated_lemmas.$f.txt 
 
 ###### Test comopunds: #######
         sed 's/$/+N+Cmp#litter+N+Sg+Nom/' $comp_lemmas \
