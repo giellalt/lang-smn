@@ -14,7 +14,7 @@ while(<>) {
 	s/HEIM/BERN/g ;
 	s/NIKOSIIJA/ACCRA/g ;
 	s/SIJTE/ACCRA/g ;
-	s/BALAK/ANAR/g ;
+	s/BALAK/LONDON/g ;
 	s/HAWAII/ACCRA/g ;
 	s/SKANIK/SULLOT/g ;
 #	s/RONDANE-LOAN/BERN/g ;
