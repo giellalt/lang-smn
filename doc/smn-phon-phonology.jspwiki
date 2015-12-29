@@ -55,28 +55,27 @@ Literal quotes and angles must be escaped (cf morpheme boundaries further down):
 
 !Triggers
 
- * %^CLEN:0	 = cons lengthening, with ^RC
- * %^CSH:0      = cons shortening, laaŋkku - laaŋkun
- * %^RVSH:0     = Diphtong shortening
+ * %^CLEN:0	 = Cons lengthening, with ^RC
+ * %^CSH:0      = Cons shortening, laaŋkku - laaŋkun
+ * %^RVSH:0     = Root vowel shortening
  * %^FCD:0      = Final consonant deletion 
  * %^EA:0       = e to a/á in ill
- * %^RLEN:0     = root lengthening, with ^RD
- * %^SLEN:0     = stem vowel lengthening
- * %^SVLOW:0    = stem vowel lowering â>á and u>o - árppu árppoin
- * %^SVSH:0     = stem vowel shortening kappeer kaperân
- * %^VLOW:0     = Vowel lowering in 3rd sg of contract verbs tuhhid:tohhe, not in use
- * %^WG:0       = weak grade trigger
+ * %^RLEN:0     = Root vowel lengthening
+ * %^SLEN:0     = Stem vowel lengthening
+ * %^SVLOW:0    = Stem vowel lowering â>á and u>o - árppu árppoin
+ * %^SVSH:0     = Stem vowel shortening kappeer kaperân
+ * %^WG:0       = Weak grade trigger
  * %^ÁE:0       = á to e (more) in 3-syll
  * %^ÁI:0       = á to i (more) in 3-syll
- * %^VHIGH:0    = hightening of vowels for verbs o to uu, a to oo
- * %^VBACK:0    = back vowels for verbs, ä to a (when needed, normally 2syll a|â is enough
+ * %^VHIGH:0    = High rootvow for verbs: e>iä, a>o, o>u, ää>áá, ee>iä, note also: ie>iä, ye>uá
+ * %^VBACK:0    = Back rootvow for verbs: ä(ä)>a(a), á>aa, uá>o, ye>uo
  * %^BLOCK:0    = This symbol just to block otherwise triggering contexts
 
 
 Trigger ordering in twolc and lexc, from left to right:
 
 {{{
-SV|ÁE|ÁI|EE  AO|EA|SC  FCD  EWG|WG|CSH  CLEN  VHIGH|VBACK  RVSH|RLEN  SLEN|SVSH  SVLOW
+SV|ÁE|ÁI  EA|SC  FCD  WG|CSH  CLEN  VHIGH|VBACK  RVSH|RLEN  SLEN|SVSH  SVLOW
 }}}
 
 
@@ -360,11 +359,9 @@ Cx, not Cx:  čeec%^RCi%^CLEN%>n
 
 
 * __Long vowel shortening (no consonant shortening)__ \\ (example?), no ^CSH, since that gives Vy:0
-1) 2st stems
-1) 2st stems
-1) 2st stems
-2) 3syll kaavpug:kavpugân 
-3) táálhudem koomerdem
+2st stems
+3syll kaavpug:kavpugân 
+táálhudem koomerdem
 
 
 
