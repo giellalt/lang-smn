@@ -82,7 +82,7 @@ i6:0 !!= * @CODE@ a fake vowel, to get WG rules to function, e.g. kyehtlov (kyeh
 %^WG:0      !!= * @CODE@ = Weak grade trigger
 %^ÁE:0      !!= * @CODE@ = á to e in 3-syll, triggered by ^WG
 %^ÁI:0      !!= * @CODE@ = á to i in 3-syll, triggered by ^WG
-%^VHIGH:0   !!= * @CODE@ = High rootvow for verbs: e>iä, a>o, o>u, ää>áá, ee>iä, note also: ie>iä, ye>uá
+%^VHIGH:0   !!= * @CODE@ = High rootvow for verbs: e>iä, a>o, o>u, ää>áá, ee>iä, note also: ie>iä, ye>uá, uo>uá
 %^VBACK:0   !!= * @CODE@ = Back rootvow for verbs: ä(ä)>a(a), á>aa, uá>o, ye>uo
 %^BLOCK:0   !!= * @CODE@ = This symbol just to block otherwise triggering contexts
 
@@ -996,12 +996,12 @@ e:ä <=> [i | e: ] _  Cns:+ Vow:  %^EA: [Triggers: - %^RVSH:]* [%>|.#.] ; !
 
 
 
-"Diphthongisation uo:uá for ^WG"
+"Diphthongisation uo:uá"
 !! * __@RULENAME@__ \\   
 o:á <=> u _ Cns:+ u: [i4: | j | š | ž] %^WG: ([%^RVSH:|%^RLEN:]) [%>|.#.] ; ! 1) cuobbuu cuábui, kuođhu po^RVrru^EWG>i
  		u _ Cns:+ á %^CSH: ;
         u _ Cns:+ â %^EA: %^CSH: ;
-        u _ Cns:+ [o|u|á|i] %^VHIGH: [%>|.#.] ; !! 4) vuoll- > vuállus ruáttá
+        u _ Cns:+ [o|u|á|i|u2:] %^VHIGH: [%>|.#.] ; !! 4) vuoll- > vuállus ruáttá
 
 
 "ye to uá og uo, part 1" 
@@ -1143,7 +1143,7 @@ u:o <=> Cns: _  (%^SV:) ([š|ž]) (%^WG:) (%^CLEN:) (%^RLEN:|%^RVSH:) (%^SLEN:) 
 
 "Stem vowel u2:o change before suffix"
 !! * __@RULENAME@__ \\  
-u2:o <=> Cns  _ (%^RVSH:) %> [ j Vow | o ] ; ! SVLOW together with u?
+u2:o <=> Cns  _ (%^VHIGH:) (%^RVSH:) %> [ j Vow | o ] ; ! SVLOW together with u?
  		
 !€ uáinu>o
 !€ uáino>o
