@@ -148,10 +148,6 @@
 !! ** Ind+Prs+Sg1: páásám
 !! ** Ind+Prs+Sg3: páácá
 !! ** Ind+Prs+Pl3: pääcih NB! pääccih?
-!! * 2SYLL_VYELGID
-!! * 2SYLL_VYEIJID
-!! * 2SYLL_TIETTID
-!! * 2SYLL_UAINID
 !! * 2SYLL_UADDID
 !! ** Ind+Prs+Sg1: čálám
 !! ** Ind+Prs+Sg3: čáálá
@@ -198,7 +194,6 @@
 !! * 3_KUIKETTID	 
 !! * 3_MERIDID	 
 !! * 3_ADELID
-!! * 3_UTTID
 
 !! !4-syllabic
 !! * 4v
@@ -350,6 +345,7 @@ LEXICON LEDE !!= * __@CODE@__
 +Ind+Pot+ConNeg+Use/NG:leš K ;
 
 +PrsPrc:leijee		    K ;
++PrfPrc+Use/NG:lam K ;
 +PrfPrc:lamaš K ;
 +PrfPrc+Use/NG:lámáš		    K ;
 +PrfPrc+Err/Orth:lamâš		    K ;
@@ -1807,7 +1803,7 @@ LEXICON VINFINITES_ED
 +Der/kyetti:e%^WG%>škyett4 4SYLL_KYETTID ; !sirdeškyettiđ
 
 LEXICON EVEN_IND_ED !!= * @CODE@ kalveđ
-!+Prs+Sg1:á%^WG%^RLEN%>m K ;      
++Prs+Sg1:á%^WG%^RLEN%>m K ;      
 +Prs+Sg1:á%^WG%>m K ;      
 +Prs+Sg2:á%^WG%^RLEN%>h K ;      
 +Prs+Sg2:á%^WG%>h K ;      
@@ -2665,7 +2661,7 @@ LEXICON EVEN_POT_PAACCID !!= * __@CODE@__
 
 LEXICON 2SYLL_VYELGID  !!= * __@CODE@__ like VYEIJID, but -i for reduced forms
 +V+Ind+Prs+ConNeg:i%^WG%^RLEN K ;
-+V+Imprt+Sg2:i%^WG%^VHIGH%^RLEN K ;  ! 
++V+Imprt+Sg2:i%^WG%^RLEN K ;  ! 
 +V+Ind: EVEN_IND_VYELGID ;
 2SYLL_VYEIJID_COMMON ;
 +V+Der/kyetti:i%^CSH%>škyett4 4SYLL_KYETTID ; !myetiš kyettip
@@ -2694,7 +2690,7 @@ LEXICON EVEN_IND_VYELGID
 
 LEXICON 2SYLL_VYEIJID  !!= * __@CODE@__ 
 +V+Ind+Prs+ConNeg:e%^WG%^RVSH K ;
-+V+Imprt+Sg2:e%^WG%^VHIGH%^RVSH K ;  ! 
++V+Imprt+Sg2:e%^WG%^RVSH K ;  ! 
 +V+Ind: EVEN_IND_VYEIJID ;
 2SYLL_VYEIJID_COMMON ;
 +V+Der/kyetti:e%^CSH%>škyett4 4SYLL_KYETTID ;
@@ -4294,7 +4290,7 @@ LEXICON C_RAMMUD_REST  !!= ** __@CODE@__ common for the two previous
 LEXICON CONTR_POT !!= * __@CODE@__
 +Sg1:%>žeem K ;
 +Sg2:%>žeeh K ;
-+Sg3:%>š K ;
++Sg3:%^SVSH%>š K ;
 +Du1:%>žeen K ;
 +Du2:%>švettee K ;
 +Du3:%>žává K ;
@@ -4530,12 +4526,12 @@ LEXICON 4SYLL_KYETTID  !!= * __@CODE@__
 +V+Ind: EVEN_IND_KYETTID ;
 +V+Pot: EVEN_POT_ID ;
 +V+Cond+Prs:á%^WG%^VHIGH%>čč EVEN_COND ; ! 
-+V+Imprt: EVEN_IMPRT_ID ;
++V+Imprt: EVEN_IMPRT_VYEIJID ;
 
 LEXICON EVEN_IND_KYETTID
 +Prs+Sg1:á%^WG%^VHIGH%>m K ;   ! -kuáđám
 +Prs+Sg2:á%^WG%^VHIGH%>h K ;   ! -kuáđáh
-+Prs+Sg3:i6%^VHIGH K ; ! -kuát             ! 
++Prs+Sg3:i6%^VHIGH K ; ! -kuát  OBS           ! 
 +Prs+Du1:e%>en K ;   
 +Prs+Du2:%>vettee K ; 
 +Prs+Du3:e%>v K ;          
