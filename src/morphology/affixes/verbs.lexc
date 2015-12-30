@@ -4107,6 +4107,8 @@ LEXICON C_COKKAD  !!= * __@CODE@__
 +V+Pot:á CONTR_POT ;
 +V+Imprt: CONTR_IMPRT ;
 +V+Der/Pass:u2 C_RAMMUD ; 
++V+PrsPrc+Use/NG:%>jijjee K ;
++V+PrsPrc:%>jeijee K ;
 
 +V+Ind+Prs+Sg1:%>ám K ;
 +V+Ind+Prs+Sg2:%>áh K ;
@@ -4136,6 +4138,8 @@ LEXICON C_PALLAD !!= * __@CODE@__
 +V+Pot:a CONTR_POT ;
 +V+Imprt: CONTR_IMPRT ;
 +V+Der/Pass:u2 C_RAMMUD ; 
++V+PrsPrc+Use/NG:%>jijjee K ;
++V+PrsPrc:%>jeijee K ;
 
 +V+Ind+Prs+Sg1:%>am K ;
 +V+Ind+Prs+Sg2:%>ah K ;
@@ -4166,6 +4170,8 @@ LEXICON C_HOLHOD !!= * __@CODE@__
 +V+Pot:o CONTR_POT ;
 +V+Imprt: CONTR_IMPRT ;
 +V+Der/Pass:u2 C_RAMMUD ; ! this form needs to be clarified
++V+PrsPrc+Use/NG:%>jijjee K ;
++V+PrsPrc:%>jeijee K ;
 
 +V+Ind+Prs+Sg1:%>om K ;
 +V+Ind+Prs+Sg2:%>oh K ;
@@ -4195,6 +4201,8 @@ LEXICON C_TUHHID !!= * __@CODE@__
 +V:i2%>i3 VINF_LONG_VOW ;
 +V+Cond+Prs:i2%>ičč EVEN_COND ;
 +V+Der/Pass:u2 C_RAMMUD ; 
++V+PrsPrc+Use/NG:e%>jijjee K ;
++V+PrsPrc:e%>jeijee K ;
 
 +V+Ind+Prs+Sg1:i2%>i3m K ;
 +V+Ind+Prs+Sg2:i2%>ih K ;
@@ -4257,9 +4265,11 @@ LEXICON C_RAMMUD_VARYING_ROOTVOWEL
 LEXICON C_RAMMUD_REST  !!= ** __@CODE@__ common for the two previous
 +V+IV: VINF_SHORT_VOW ;
 +V+IV:%>u VINF_LONG_VOW ;
++V+PrsPrc+Use/NG:%^VHIGH%>jijjee K ;
++V+PrsPrc:%^VHIGH%>jeijee K ;
 
 +V+IV+Cond+Prs:%>učč EVEN_COND ;
-+V+IV+Imprt: CONTR_IMPRT ;
++V+IV+Imprt: C_RAMMUD_IMPRT ;
 
 +V+IV+Ind+Prs+Sg2:%>uh K ;
 +V+IV+Ind+Prs+Du1:%^VHIGH%>jeen K ;
@@ -4298,7 +4308,7 @@ LEXICON CONTR_POT !!= * __@CODE@__
 +Pl2:%>švetteđ K ;
 +Pl3:%>žeh K ;
 
-LEXICON CONTR_IMPRT
+LEXICON C_RAMMUD_IMPRT
 +Sg1:%>jum K ;
 +Sg2:%>%^V K ;
 +Sg3:%^VHIGH%>jus K ;
@@ -4309,14 +4319,25 @@ LEXICON CONTR_IMPRT
 +Pl2:%>đ K ;
 +Pl3:%^VHIGH%>jus K ;
 
+LEXICON CONTR_IMPRT
++Sg1:%>jum K ;
++Sg2:%>%^V K ;
++Sg3:%>jus K ;
++Du1:%>joon K ;
++Du2:%>jee K ;
++Du3:%>jus K ;
++Pl1:%>jop K ;
++Pl2:%>đ K ;
++Pl3:%>jus K ;
+
+
+
 LEXICON VINF_SHORT_VOW 
 
 +Inf:%>đ K ;
 
 +Ind+Prt+ConNeg:%>m K ;
 
-+PrsPrc+Use/NG:%^VHIGH%>jijjee K ;
-+PrsPrc:%^VHIGH%>jeijee K ;
 +Der/NomAg:%>jeijee FLAG_CTAHHEE ;
 +PrfPrc:%>m K ;
 
