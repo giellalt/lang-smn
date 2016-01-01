@@ -30,17 +30,18 @@ while(<>) {
 	s/Simleelva/Simle-elva/g ;
 
 # names with Inari Saami inflection
-	s/^Antti\+/!Antti+/g ;
-	s/^Maarit\+/!Maarit+/g ;
-	s/^Elli\+/!Elli+/g ;
-	s/^Anssi\+/!Anssi+/g ;
-	s/^Jussi\+/!Jussi+/g ;
-	s/^Lappi\+/!Lappi+/g ;
-	s/^Matti\+/!Matti+/g ;
 	s/^Aanaar\+/!Aanaar+/g ;
 	s/^Avveel\+/!Avveel+/g ;
-	s/^Turku\+/!Turku+/g ;
+	s/^Anssi\+/!Anssi+/g ;
+	s/^Antti\+/!Antti+/g ;
+	s/^Elli\+/!Elli+/g ;
+	s/^Ella\+/!Ella+/g ;
+	s/^Jussi\+/!Jussi+/g ;
+	s/^Lappi\+/!Lappi+/g ;
+	s/^Maarit\+/!Maarit+/g ;
 	s/^Markku\+/!Markku+/g ;
+	s/^Matti\+/!Matti+/g ;
+	s/^Turku\+/!Turku+/g ;
 	
 
 
