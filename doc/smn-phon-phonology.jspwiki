@@ -59,15 +59,15 @@ Literal quotes and angles must be escaped (cf morpheme boundaries further down):
  * %^CSH:0      = Cons shortening, laaŋkku - laaŋkun
  * %^RVSH:0     = Root vowel shortening
  * %^FCD:0      = Final consonant deletion 
- * %^EA:0       = e to a/á in ill
+ * %^EA:0       = Stem vowel: e and i to a/á in ill, and root vowel ä>á, e(e)>iä, ie>iä, ye>uá
  * %^RLEN:0     = Root vowel lengthening
  * %^SLEN:0     = Stem vowel lengthening
- * %^SVLOW:0    = Stem vowel lowering â>á and u>o - árppu árppoin
+ * %^SVLOW:0    = Stem vowel lowering â>á and u>o - árppu árppoin, Root vowel shortening when more than one cns in consonant centre and suffix starts with i
  * %^SVSH:0     = Stem vowel shortening kappeer kaperân
  * %^WG:0       = Weak grade trigger
- * %^ÁE:0       = á to e (more) in 3-syll
- * %^ÁI:0       = á to i (more) in 3-syll
- * %^VHIGH:0    = High rootvow for verbs: e>iä, a>o, o>u, ää>áá, ee>iä, note also: ie>iä, ye>uá
+ * %^ÁE:0       = á to e in 3-syll, triggered by ^WG
+ * %^ÁI:0       = á to i in 3-syll, triggered by ^WG
+ * %^VHIGH:0    = High rootvow for verbs: e>iä, a>o, o>u, ää>áá, ee>iä, note also: ie>iä, ye>uá, uo>uá
  * %^VBACK:0    = Back rootvow for verbs: ä(ä)>a(a), á>aa, uá>o, ye>uo
  * %^BLOCK:0    = This symbol just to block otherwise triggering contexts
 
@@ -109,7 +109,7 @@ Sets
         p q r s š t ŧ v w x z ž				    
         B C Č D Đ F G H J K L M N Ŋ			    
         P Q R S Š T Ŧ V W X Z Ž 				    
-        ht g2 k2 m2 n2 							    
+         g2 k2 m2 n2 							    
         b3 d3 g3 m3 h3 						    
         p4 k4 r4 l4  i4  t4 c4 č4                
          h5 j5 ŋ5 t5 c5 l5 t5 d5 r5 j6                   
@@ -548,7 +548,7 @@ ulmu : olmooš, olmožin, carefully with only initial vowel
 
 
 
-* __Diphthongisation uo:uá for ^WG__ \\   
+* __Diphthongisation uo:uá__ \\   
 4) vuoll- > vuállus ruáttá
 
 
