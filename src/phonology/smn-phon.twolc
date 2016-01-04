@@ -910,12 +910,14 @@ i:0 <=> \Vow: _ ä: Cns:+ i2:i %>    [i|i3:i|Cns]  ; !! 1)  i:0 for iđ C verbs
 
 
 
-"Root vowel á:a for verbs"
+"Root and stem vowel á:a for verbs"
 !! * __@RULENAME@__ 
 á:a <=> [Cns|.#.|#] _       Cns:+ u2:  %> [:u|i|i3:i|Cns - j]  ; ! conflict when \Vow:
         [Cns|.#.]   _       Cns:+ i2:i %>    [i|i3:i|Cns]  ;
-        [Cns|.#.]   _ [%^RV: | á: ] Cns:+ [u:|u2:] (%^CLEN:) %^VBACK: (%^RLEN:|%^RVSH:)  [%>|.#.]   ; ! 2st verb pákkuđ: pakkum/h/u
-        [Cns|.#.]   á: _  Cns:+ [u:|u2:] (%^CLEN:) %^VBACK: (%^RLEN:) [%>|.#.]   ; ! nááđđu%^VBACK%^RLEN%>m naađđu>m
+        \Vow:   _ [%^RV: | á: ] Cns:+ [u:|u2:] (%^CLEN:) %^VBACK: (%^RLEN:|%^RVSH:)  [%>|.#.]   ; ! 2st verb pákkuđ: pakkum/h/u
+        \Vow:   á: _  Cns:+ [u:|u2:] (%^CLEN:) %^VBACK: (%^RLEN:) [%>|.#.]   ; ! nááđđu%^VBACK%^RLEN%>m naađđu>m
+        \Vow: a (%^RV:) Cns:+ _  ([%^CSH:|%^WG:])  (%^CLEN:) (%^RLEN:) [%>|.#.] ;  !trying this as a phonological rule for -eđ verbs
+        \Vow: a (%^RV:) Cns:+ :a  ([%^CSH:|%^WG:]) (%^CLEN:) (%^RLEN:) %> _ \Vow: ;  !to prevent conflict
 
 !á%^RVrgu2
 !€ pá^RVkk4u2>m
@@ -1102,11 +1104,6 @@ Vx:á <=> [:e|:i|:ä|:á] (%^RV:)  Cns:+ _   ([%^CSH:| %^CLEN:]) ([%^RLEN: |%^RV
 Vx:e <=> Cns _ %> [j [Vow - â]|e] ; !not hit karri>jân ! 
 	where Vx in (i i2) ;
 
-
-"Stem vowel á to a for a root vowel"
-!! * __@RULENAME@__ \\  trying this as a phonological rule for -eđ verbs
-á:a <=> \Vow: a (%^RV:) Cns:+ _  ([%^CSH:|%^WG:])  (%^CLEN:) (%^RLEN:) [%>|.#.] ; 
-        \Vow: a (%^RV:) Cns:+ :a  ([%^CSH:|%^WG:]) (%^CLEN:) (%^RLEN:) %> _ \Vow: ;  !to prevent conflict
 
 ! kalgá -> kalga
 
