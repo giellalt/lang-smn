@@ -133,10 +133,6 @@ SV|ÁE|ÁI  EA|SC  FCD  WG|CSH  CLEN  VHIGH|VBACK  RVSH|RLEN  SLEN|SVSH  SVLOW
 ** Ind+Prs+Sg1: páásám
 ** Ind+Prs+Sg3: páácá
 ** Ind+Prs+Pl3: pääcih NB! pääccih?
-* 2SYLL_VYELGID
-* 2SYLL_VYEIJID
-* 2SYLL_TIETTID
-* 2SYLL_UAINID
 * 2SYLL_UADDID
 ** Ind+Prs+Sg1: čálám
 ** Ind+Prs+Sg3: čáálá
@@ -165,7 +161,7 @@ SV|ÁE|ÁI  EA|SC  FCD  WG|CSH  CLEN  VHIGH|VBACK  RVSH|RLEN  SLEN|SVSH  SVLOW
 ** Ind+Prs+Pl3: kuáruh
 ** ConNeg: kuáru, kuáro
 ** Ind+Prt+Sg1: koorrum
-* 2SYLL_OAZZUD
+* 2SYLL_UAZZUD
 ** Inf: uážžuđ
 ** Ind+Prs+Sg3: uážžu
 ** Ind+Prs+Pl3: uážžuh
@@ -173,17 +169,23 @@ SV|ÁE|ÁI  EA|SC  FCD  WG|CSH  CLEN  VHIGH|VBACK  RVSH|RLEN  SLEN|SVSH  SVLOW
 ** Ind+Prt+Sg1: ožžum
 
 !Threesyllabic
-* 3_LEKKASID (no stem change)
+* 3_LEKKASID (no stem change, but going to ODDLEX)
+** Sg1: %>âm, Sg3: %^CLEN%^RLEN (note: ODDLEX :-(
 * 3_CIELATTID (stem-final tt shortening) cielâttiđ: cielât Length change in stem: Consonant change only
+** Sg1: %>âm, Sg3: %^CLEN%^RLEN
 * 3_VYEJETTID (2syll vow short in Inf, long in Sg3, 1st syll V lengthening) vyejettiđ vyejeet
+** Sg1: %>âm, Sg3: %^RLEN%^SLEN
 * 3_PUTESTID (cns and vow lengthening) putestiđ: putteest Length change in stem: Short V in Inf (before V)
+** Sg1: %>âm, Sg3: %^CLEN%^SLEN
 * 3_COKKIITTID (stem-final tt shortening + 2syll vow shortening cokkiittiđ cokkit. 
+** Sg1: %>âm, Sg3: %^SVSH
 ** difference in negation + Action Ess, Loc.. compared to 3_COKKIITTID)  
 ** Length change in stem: Long V in Inf (before C#).
-* 3_KUIKETTID	 
+* 3_KUIKETTID = 3_LEKKASID
 * 3_MERIDID	 
+** Sg1: %>âm, Sg3: %^CLEN%^RLEN
 * 3_ADELID
-* 3_UTTID
+** Sg1: %>âm, Sg3: %^CLEN
 
 !4-syllabic
 * 4v
@@ -745,7 +747,7 @@ Distinct from SODDAD with short vowel in past tense
  * __LEXICON EVEN_POT_UD __
 
 
- * __LEXICON 2SYLL_OAZZUD  __
+ * __LEXICON 2SYLL_UAZZUD  __
 
  * __LEXICON VINFINITES_OAZZUD __
 
@@ -771,7 +773,6 @@ Distinct from SODDAD with short vowel in past tense
 
 
  * __LEXICON 3_CIELATTID  __ SM57, consonant and vowel change
-
 
  * __LEXICON 3_VYEJETTID  __ SM53. short V in Inf
 
@@ -915,12 +916,15 @@ Distinct from SODDAD with short vowel in past tense
 
 
 
- * __LEXICON C_CAALLUD  __ shortens long vow in certain forms
-
  * __LEXICON C_RAMMUD __ does not shorten vowel
 
 
  ** __LEXICON C_RAMMUD_REST  __ common for the two previous
+
+
+
+
+ ** __LEXICON C_RAMMUD_POT  __
 
 
 
@@ -939,9 +943,21 @@ Distinct from SODDAD with short vowel in past tense
 
 
 
+
+
+
+
+ * __LEXICON C_CAALLUD  __ shortens long vow in certain forms
+
+
+
+
 ! v stems
 
  * __LEXICON C_TABAHTUD  __ Sg3 -vá
+
+ * __LEXICON TABAHTUD  __ Sg3 -vá
+
 
 
 
@@ -952,6 +968,7 @@ Distinct from SODDAD with short vowel in past tense
 
 
  * __LEXICON C_MERIDUD  __ Sg3 -vvoo
+
 
 
 
