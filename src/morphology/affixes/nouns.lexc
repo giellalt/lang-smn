@@ -162,6 +162,8 @@ LEXICON 2KIEHA !!= __@CODE@__
 +N+Pl+Gen:%^WG%>id CPXsuff ;  !
 +N+Pl+Acc:%^WG%>id CPXsuff ;  !
 +N+Pl+Com:%^WG%>id CPXsuffCOM ;  !
++N:%^WG%> Gen_DER ;
++N:%^RVSH%> Nom_DER ; !máhulâš
 
 LEXICON 2KIEHA_PL !!= __@CODE@__
 +N:  X_KIEHA_PL ;
@@ -200,7 +202,7 @@ LEXICON 2KUOLAH
 +N+Pl+Ill:%^WG%^SVLOW%>id K ; ! kieláid
 +N+Pl+Ill:%^WG%^SVLOW%>id K ; ! kieláid
 +N:%^WG%> Gen_DER ;
-+N:%> Nom_DER ;
++N:%^RVSH%> Nom_DER ;
 +N:  X_KIEHA_KIELA_PL ;
 +N+Ess:%^CLEN%>n K ;				! kiellân # puolipitkä > pitkä
 +N+Cmp/SgNom:%^RVSH%> R ;
@@ -1120,8 +1122,9 @@ LEXICON 2UAPUH
 +N+Pl+Gen:%^WG%>id CPXsuff ;  !
 +N+Pl+Acc:%^WG%>id CPXsuff ;  ! 
 +N+Pl+Com:%^WG%>id CPXsuffCOM ;  ! 
-+N:%^WG%> Nom_DER ;
++N: Nom_DER ;
 +N:%^WG%^RLEN%> Gen_DER ;    
++N:%^WG%> Gen_DER ;    
 
 
 
@@ -2031,6 +2034,7 @@ LEXICON 3HUKSIM  !!= __@CODE@__ NGA + Abe blank, SLEN for the rest
 +N+Ess:%^SLEN%>in K ;        ! huksiimin    
 +N+Par:%^SLEN%>id K ;        ! huksiimid    
 3VALJIIMEH ;
++N:%> Nom_DER ;
 
 LEXICON 3VALJIIMEH  !!= __@CODE@__ plurals for 3HUKSIM
 +N+Pl+Nom:%^SLEN%>eh K ;     ! huksiimeh
@@ -2271,7 +2275,8 @@ LEXICON S_AAIGA !!= __@CODE@__
 +N+Sg+Gen:%^SV%^SLEN K ; 		! aiguu 
 +N+Sg+Acc:%^SV%^SLEN K ;			! aiguu
 +N+Sg+Ill:%>i K ; 		! aigui 
-+N+Sg+Loc:%>st K ; 		! aigust
++N+Sg+Loc:%>st K ; 		! aigust 
++N+Sg+Loc+Err/Orth:%^SV%^SLEN%>st K ; 		!  perruust
 +N+Sg+Com:%>in K ;		! aiguin
 +N+Sg+Abe:%^SV%^SLEN%>ttáá K ;	! aiguuttáá
 +N+Ess:â%^WG%^RLEN%>n K ;			! aaigân%^WG?
@@ -2595,6 +2600,7 @@ LEXICON 4COHASAS  !!= __@CODE@__
 LEXICON 4JOTOLAH  !!= __@CODE@__ 
 +N+Sg+Nom:âh K ;
 +N+Cmp/SgNom:âh R ;
++N:âh Nom_DER ;
 JOHTOLAH_OBL ;
 
 LEXICON JOHTOLAH_OBL    !!= __@CODE@__ common for N and A
@@ -2738,6 +2744,7 @@ LEXICON C_TAHHEE !!= __@CODE@__ ee-final contract, -ei instead of -ij not-nomen-
 +N+Pl+Gen:%^SVSH%>i3d CPXsuff ;  !
 +N+Pl+Acc:%^SVSH%>i3d CPXsuff ;  !
 +N+Pl+Com:%^SVSH%>i3d CPXsuffCOM ;  !
++N:%> Nom_DER ;
 
 LEXICON X_TAHHEE !!= __@CODE@__ ee-final contract, -ei instead of -ij
 +Sg+Nom: K ;				! tahhee
