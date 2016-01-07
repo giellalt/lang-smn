@@ -100,6 +100,7 @@ LEXICON ACCRA  !!= * __@CODE@__ SM1
 +Sg+Loc:%>st K ;	
 +Sg+Com:%>in K ;  
 +Cmp/SgNom: RProp ; 
++Cmp/SgGen: RProp ; 
 +Cmp/SgGen: PERSNAME-CMP ;
  
  
@@ -112,6 +113,7 @@ LEXICON ERVASTI  !!= * __@CODE@__
 +Sg+Loc:i%>st K ;	
 +Sg+Com:i%>in K ; 
 +Cmp/SgNom:i RProp ; 
++Cmp/SgGen:i RProp ; 
 +Cmp/SgGen:i PERSNAME-CMP ;
 
  
@@ -135,6 +137,7 @@ LEXICON EUROOP !!= * __@CODE@__
  +Sg+Loc+Err/Orth:%>ist K ;	
  +Sg+Com:%>áin K ; 
 +Cmp/SgNom: RProp ; 
++Cmp/SgGen: RProp ; 
 +Cmp/SgGen: PERSNAME-CMP ;
  
  
@@ -149,6 +152,7 @@ LEXICON LONDON !!= * __@CODE@__
  +Sg+Loc+Err/Orth+Use/NG:%>ast K ;	
  +Sg+Com:%>áin K ; 
 +Cmp/SgNom: RProp ; 
++Cmp/SgGen: RProp ; 
 +Cmp/SgGen: PERSNAME-CMP ;
 
 LEXICON C-FI-NEN !!= * __@CODE@__
@@ -169,6 +173,7 @@ LEXICON C-FI-NEN !!= * __@CODE@__
  +Pl+Abe:%>sijttáá K ; 		! Itkosijttáá
 +Cmp/SgNom:nen RProp ; 
 +Cmp/SgNom:s RProp ; 
++Cmp/SgGen:s RProp ; 
 +Cmp/SgGen:s PERSNAME-CMP ;
 
 LEXICON BERN !!= * __@CODE@__
@@ -181,6 +186,7 @@ LEXICON BERN !!= * __@CODE@__
  +Sg+Loc:%>ist K ;	
  +Sg+Com:%>áin K ;   
 +Cmp/SgNom: RProp ; 
++Cmp/SgGen: RProp ; 
 +Cmp/SgGen:a PERSNAME-CMP ;
  
  
@@ -343,12 +349,13 @@ LEXICON C-FI-NEN-sur !!= * __@CODE@__
 LEXICON DUBAI !!= * __@CODE@__
  +Sg+Nom:i K ;   	    
  +Attr:i K ;   	    
- +Sg+Gen:%>i K ;   	
- +Sg+Acc:%>i K ;		
- +Sg+Ill:%>in K ;	
- +Sg+Loc:%>ist K ;	
- +Sg+Com:%>in K ;   
-+Cmp/SgNom: RProp ; 
+ +Sg+Gen:i K ;   	
+ +Sg+Acc:i K ;		
+ +Sg+Ill:i%n K ;	
+ +Sg+Loc:i%>st K ;	
+ +Sg+Com:i%>n K ;   
++Cmp/SgNom:i RProp ; 
++Cmp/SgGen:i RProp ; 
 +Cmp/SgGen:i PERSNAME-CMP ;
 
 LEXICON DUBAI-mal !!= * __@CODE@__
@@ -461,14 +468,15 @@ LEXICON NYSTØ-sur !!= * __@CODE@__
 LEXICON NYSTØ !!= * __@CODE@__
  +Sg+Nom: K ;   	    
  +Attr: K ;   	    
- +Sg+Gen:n K ;   	
+ +Sg+Gen: K ;   	
  +Sg+Acc: K ;		
  +Sg+Ill:%>n K ;	
  +Sg+Loc:%>st K ;	
  +Sg+Com:%>i5n K ;  
  +Ess:%>n K ;
 +Cmp/SgNom: RProp ; 
-+Cmp/SgGen:n PERSNAME-CMP ;
++Cmp/SgGen: RProp ; 
++Cmp/SgGen: PERSNAME-CMP ;
 
 LEXICON PIPPI-LOAN-plc !!= * __@CODE@__
 +N+Prop+Sem/Plc:i ACCRA ;
@@ -545,6 +553,7 @@ LEXICON AANAAR 	!!= * __@CODE@__ Goes to EEMEED
  +Sg+Loc:%^CSH%^SVSH%>ist K ;	! Anarist
  +Sg+Com:%^CSH%^SVSH%>áin K ;   ! Anaráin
 +Cmp/SgNom: RProp ; 
++Cmp/SgGen: RProp ; 
 +Cmp/SgGen: PERSNAME-CMP ;
 
 
@@ -576,6 +585,7 @@ LEXICON JAVRI !!= * __@CODE@__ similar to AIGI, but only Sg. Some case forms sho
 +Ess:%^CLEN%>n K ;                         !  jävrin
 +Par:%^CLEN%>d K ;                         !  jävrid
 +Cmp/SgNom: RProp ; 
++Cmp/SgGen:%^WG%^RLEN%> RProp ; 
 +Cmp/SgGen:%^WG%^RLEN%> PERSNAME-CMP ;
 
 
@@ -629,6 +639,7 @@ LEXICON VAARI   !!= * __@CODE@__ to SAAMI
 +Ess:%^CLEN%>n  K ;          ! säämmin
 +Par:%^CLEN%>d K ;           ! säämmid
 +Cmp/SgNom: RProp ; 
++Cmp/SgGen:%^WG%> RProp ; 
 +Cmp/SgGen:%^WG%> PERSNAME-CMP ;
 
 
@@ -665,6 +676,7 @@ LEXICON CIELGI !!= * __@CODE@__ to CAACI
 +Ess:%^CLEN%>n K ;               ! čääccin
 +Par:%^CLEN%>d K ;               ! čääccid 
 +Cmp/SgNom: RProp ; 
++Cmp/SgGen:%^WG%> RProp ; 
 +Cmp/SgGen:%^WG%> PERSNAME-CMP ;
 
 
@@ -692,7 +704,8 @@ LEXICON LUOBAL !!= __@CODE@__ Similar to VEESKIR
 +Sg+Abe:%>ttáá K ; ! viäskárttáá
 +Ess:%^WG%^RVSH%>in K ;   ! veskirin 
 +Ess:%>in K ;   ! viäskárin 
-+Cmp/SgNom:%^WG%^RLEN RProp ; 
++Cmp/SgNom:%^WG%^RLEN%> RProp ; 
++Cmp/SgGen: RProp ; 
 +Cmp/SgGen: PERSNAME-CMP ;
 
 
@@ -728,6 +741,7 @@ LEXICON JUUHA !!= * __@CODE@__ similar to KIEHA
 +Ess:%>n K ;						! kiehân 
 +Par:%>d K ;						! kiehâd 
 +Cmp/SgNom: RProp ; 
++Cmp/SgGen:%^WG%> RProp ; 
 +Cmp/SgGen:%^WG%> PERSNAME-CMP ;
 
 
@@ -747,6 +761,8 @@ LEXICON JOOVSEP  !!= * __@CODE@__
 +Sg+Loc:%^CSH%^SVSH%>ist K ; 		! Joovsepist 
 +Sg+Com:%^SC%^CSH%^SVSH%>áin K ;		! Joovseppáin
 +Ess:%^SC%^CSH%^SVSH%>in K ; 			! potákkin 
++Cmp/SgNom: RProp ; 
++Cmp/SgGen: RProp ; 
 +Cmp/SgGen: PERSNAME-CMP ;
 
 LEXICON MAARIT-fem  !!= * __@CODE@__ 
@@ -761,6 +777,8 @@ LEXICON MAARIT  !!= * __@CODE@__
 +Sg+Ill:%^SC%^RVSH%>ân K ;		! Marittân
 +Sg+Loc:%^SC%^RVSH%>ist K ; 		! Marittân 
 +Sg+Com:%^SC%^RVSH%>áin K ;		! Marittáin
++Cmp/SgNom: RProp ; 
++Cmp/SgGen:%^RVSH%> RProp ; 
 +Cmp/SgGen: PERSNAME-CMP ;
 
 
@@ -777,6 +795,8 @@ LEXICON UCJUV  !!= * __@CODE@__
 +Sg+Loc:%^SVv%^SLEN%>âst K ; 		! Ucjuuvâst 
 +Sg+Com:%^SCv%^SVSH%>áin K ;		!  
 +Cmp/SgNom:v RProp ; 
++Cmp/SgGen:v RProp ; 
++Cmp/SgGen:v PERSNAME-CMP ;
 
 
 LEXICON VUONA-mal !!= * __@CODE@__ similar to ALGA
@@ -812,6 +832,7 @@ LEXICON VUONA !!= * __@CODE@__ similar to ALGA
 +Ess:%>n K ;						! algân
 +Par:%>d K ;						! algâd
 +Cmp/SgNom: RProp ; 
++Cmp/SgGen:%^WG%^RLEN%> RProp ;
 +Cmp/SgGen:%^WG%^RLEN%> PERSNAME-CMP ;
 
 
@@ -836,6 +857,8 @@ LEXICON ANDARAS !!= * __@CODE@__  this is for loanwords without stem change, 3-s
 +Sg+Abe:%^FCD%>ttáá K ; 		! kunâgâsttáá
 +Ess:%>ân K ; 			! kunâgâssân
 +Par:%>âd K ;				! kunâgâssâd
++Cmp/SgNom: RProp ; 
++Cmp/SgGen:%^FCD%> RProp ;
 +Cmp/SgGen:%^FCD%> PERSNAME-CMP ;
 
 
@@ -855,6 +878,7 @@ LEXICON LUOHTA !!= * __@CODE@__ similar to VADDU
 +Ess:%>n K ;               ! váddun
 +Par:%>d K ;               ! váddud 
 +Cmp/SgNom: RProp ; 
++Cmp/SgGen:%^WG%^RLEN%> RProp ; 
 +Cmp/SgGen:%^WG%^RLEN%> PERSNAME-CMP ;
 
 
@@ -899,6 +923,7 @@ LEXICON MOKKE !!= * __@CODE@__ similar to ALGE
 +Ess:%>n K ; 			! algen
 +Par:%>d K ; 			! alged
 +Cmp/SgNom: RProp ; 
++Cmp/SgGen:%^WG%> RProp ; 
 +Cmp/SgGen:%^WG%> PERSNAME-CMP ;
 
 
@@ -931,6 +956,7 @@ LEXICON UAIVAS !!= * __@CODE@__   similar to KUAVDAS
 +Par:%^WG%^RLEN%>žid K ; 			! kuávdáážid
 +Par+Use/NG:%^WG%^RVSH%>žid K ;		! kuávdážid
 +Cmp/SgNom:â%^WG%^RLEN%>š RProp ; 
++Cmp/SgGen:%^SV%^SLEN%> RProp ; 
 +Cmp/SgGen:%^SV%^SLEN%> PERSNAME-CMP ;
 
 
@@ -986,6 +1012,7 @@ LEXICON ROTO  !!= * __@CODE@__ similar to LAJO and X_LAJO
 +Ess:%^SV%^CLEN%^SLEN%>n    K ;  !laijoon
 +Par:%^SV%^CLEN%^SLEN%>d    K ; !laijood
 +Cmp/SgNom: RProp ; 
++Cmp/SgGen:%^WG%> RProp ; 
 +Cmp/SgGen:%^WG%> PERSNAME-CMP ;
 
 
@@ -1005,6 +1032,7 @@ LEXICON KURRA  !!= * __@CODE@__ similar to SOLLA
 +Ess:%^CLEN%>n K ;				! sollân
 +Par:%^CLEN%>d K ;				! sollâd
 +Cmp/SgNom: RProp ; 
++Cmp/SgNom:%^WG%^RLEN%> RProp ; 
 +Cmp/SgGen:%^WG%^RLEN%> PERSNAME-CMP ;
 
 
@@ -1024,6 +1052,7 @@ LEXICON LASSA  !!= * __@CODE@__  Similar to FADDA
 +Ess:%>n K ;               ! kissán
 +Par:%>d K ;               ! kissád
 +Cmp/SgNom: RProp ; 
++Cmp/SgNom:%^WG%^RLEN%> RProp ; 
 
 
 LEXICON SUANJU-mal !!= * __@CODE@__ similar to LAAVU
@@ -1050,6 +1079,7 @@ LEXICON SUANJU !!= * __@CODE@__ similar to LAAVU
 +Ess:%^CLEN%>n K ;               ! láávvun
 +Par:%^CLEN%>d K ;               ! láávvud 
 +Cmp/SgNom: RProp ; 
++Cmp/SgGen:%^WG%> RProp ; 
 +Cmp/SgGen:%^WG%> PERSNAME-CMP ;
 
 
@@ -1100,6 +1130,7 @@ LEXICON POHE !!= * __@CODE@__ similar to VAHE
 +Ess:%^SV%^CLEN%^SLEN%>n K ; 			! vahheen
 +Par:%^SV%^CLEN%^SLEN%>d K ; 		! vahheed
 +Cmp/SgNom: RProp ; 
++Cmp/SgGen:%^WG%> RProp ; 
 +Cmp/SgGen:%^WG%> PERSNAME-CMP ;
 
 
@@ -1398,8 +1429,8 @@ LEXICON MAADIJ !!= * __@CODE@__  Similar to AARRAN
 +Sg+Abe:%>ttáá K ;			! aarrânttáá
 +Cmp/SgNom:  RProp ; 
 
-LEXICON 2VUAGGU-plc
-+N+Prop+Sem/Plc: X_VUAGGU_SG ;
+!LEXICON 2VUAGGU-plc
+!+N+Prop+Sem/Plc: X_VUAGGU_SG ;
  
 
 
