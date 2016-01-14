@@ -2,11 +2,10 @@
 
 # script to generate paradigms for generating word forms
 # command:
-# sh generate_contlex_para.sh PATTERN
+# sh cmp_minip.sh PATTERN
 # example, when you are in smn:
-# sh devtools/noun_minip.sh LAAVU | less
-# Only get the lemma you ask for:
 # sh devtools/cmp_minip.sh '^nieidâ:' 
+# sh devtools/noun_minip.sh LAAVU | less
 
 
 LOOKUP=$(echo $LOOKUP)
