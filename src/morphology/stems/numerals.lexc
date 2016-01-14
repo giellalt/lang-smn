@@ -736,147 +736,137 @@ X_ALGE ;
 
 ! Arabic numerals
 ! ---------------
+LEXICON NUM-PREFIXES   !!= * __@CODE@__
+    §+Use/Circ:§      ARABIC ; ! §24
+   §§+Use/Circ:§§     ARABIC ; ! §§24
+  §% +Use/Circ:§%     ARABIC ; ! § 24
+ §§% +Use/Circ:§§%    ARABIC ; ! §§ 24
+   %-+Use/Circ:%-     ARABIC ; ! -24
+   %‒+Use/Circ:%‒     ARABIC ; ! -24 U+2012
+   %–+Use/Circ:%–     ARABIC ; ! -24 U+2013
+   %—+Use/Circ:%—     ARABIC ; ! -24 U+2014
+   %―+Use/Circ:%―     ARABIC ; ! -24 U+2015
+   %++Use/Circ:%+     ARABIC ; ! <plus>24
+ %-% +Use/Circ:%-%    ARABIC ; ! - 24
+ %‒% +Use/Circ:%‒%    ARABIC ; ! - 24 U+2012
+ %–% +Use/Circ:%–%    ARABIC ; ! - 24 U+2013
+ %—% +Use/Circ:%—%    ARABIC ; ! - 24 U+2014
+ %―% +Use/Circ:%―%    ARABIC ; ! - 24 U+2015
+ %+% +Use/Circ:%+%    ARABIC ; ! <plus> 24
+   %*+Use/Circ:%*     ARABIC ; ! *24
+   %$+Use/Circ:%$     ARABIC ; ! $24
+   %€+Use/Circ:%€     ARABIC ; ! €24
+   %<+Use/Circ:%[%<%] ARABIC ; ! <24
+   %>+Use/Circ:%[%>%] ARABIC ; ! >24
+  s%.+Use/Circ:s%.    ARABIC ; ! s.24
+
+LEXICON ARABIC   !!= * __@CODE@__ arabic numerals
+< [1|2|3|4|5|6|7|8|9|%0] > ARABICLOOP      ;
+< [1|2|3|4|5|6|7|8|9|%0] > ARABICLOOPORD   ;
+< [1|2|3|4|5|6|7|8|9|%0] > ARABICLOOPCOLL  ;
+< [1|2|3|4|5|6|7|8|9|%0] > ARABICLOOPphone ;
+
+LEXICON ARABICLOOPphone   !!= * __@CODE@__ +358(0)16671254
+< [1|2|3|4|5|6|7|8|9|%0] > ARABICLOOPphone ;
+!  +Use/Circ:              ARABICLOOPphone ; ! Infinite loop on the surface side
+  (+Use/Circ:(             ARABICLOOPphone ;
+  )+Use/Circ:)             ARABICLOOPphone ;
+ %—+Use/Circ:%—            ARABICLOOPphone ; 
+                           ARABICCASEphone ;
+
+LEXICON ARABICCASEphone   !!= * __@CODE@__  
+ +Num+Sg+Nom: # ;
+ +Num+Sg+Acc: # ;
+
+LEXICON ARABICLOOP   !!= * __@CODE@__
+         +Use/Circ:         ARABIC ;
+       %-+Use/Circ:%-       ARABIC ; ! 1-2 multipart numbers
+       %–+Use/Circ:%–       ARABIC ; ! 1–2 multipart numbers
+       %—+Use/Circ:%—       ARABIC ; ! 1—2 multipart numbers
+     %.%-+Use/Circ:%.%-     ARABIC ; ! 1.-2 multipart numbers ! !
+     %.%–+Use/Circ:%.%–     ARABIC ; ! 1.–2 multipart numbers ! !
+     %.%—+Use/Circ:%.%—     ARABIC ; ! 1.—2 multipart numbers ! !
+     %-% +Use/Circ:%-%      ARABIC ; ! 1- 2 multipart numbers
+     %–% +Use/Circ:%–%      ARABIC ; ! 1– 2 multipart numbers
+     %—% +Use/Circ:%—%      ARABIC ; ! 1— 2 multipart numbers
+     % %-+Use/Circ:% %-     ARABIC ; ! 1 -2 multipart numbers
+     % %–+Use/Circ:% %–     ARABIC ; ! 1 –2 multipart numbers
+     % %—+Use/Circ:% %—     ARABIC ; ! 1 —2 multipart numbers
+   % %-% +Use/Circ:% %-%    ARABIC ; ! 1 - 2 multipart numbers
+   % %–% +Use/Circ:% %–%    ARABIC ; ! 1 – 2 multipart numbers
+   % %—% +Use/Circ:% %—%    ARABIC ; ! 1 — 2 multipart numbers
+ % %-%-% +Use/Circ:% %-%-%  ARABIC ; ! 1 -- 2 multipart numbers
+ % %–%–% +Use/Circ:% %–%–%  ARABIC ; ! 1 –– 2 multipart numbers
+ % %—%—% +Use/Circ:% %—%—%  ARABIC ; ! 1 —— 2 multipart numbers
+       %.+Use/Circ:%.       ARABIC ;
+       %:+Use/Circ:%:       ARABIC ;
+       %,+Use/Circ:%,       ARABIC ;
+       % +Use/Circ:%        ARABIC ; ! Allowing for "23 500".
+         +Use/Circ:         ARABIC ; ! Allowing for "23 500" w/nbsp (init char = alt-space)
+       %/+Use/Circ:%/       ARABIC ; ! 24/12
+     %/% +Use/Circ:%/%      ARABIC ; ! 24/ 12
+     % %/+Use/Circ:% %/     ARABIC ; ! 24 /12
+        '+Use/Circ:'7       ARABIC ; ! Since ' denotes cons.grad. This is not optimal either.
+
+     +Num+Use/Circ:         RNum   ; ! Num Cmp Noun, with hyphen
+
+         ,%-+Num+Use/Circ:,%-    ARABICCASES     ; ! 10,-
+,%-+Num+Err/Orth+Use/Circ:.%-    ARABICCASES     ; ! 10.- It is wrong, but written.
+   % %-+Err/Orth+Use/Circ:% %-   ARABICDELIMITER ; ! 1 - multipart numbers - "1 -:s"?
+ % %-%-+Err/Orth+Use/Circ:% %-%- ARABICDELIMITER ; ! 1 -- multipart numbers
+              %%+Use/Circ:%%     ARABICDELIMITER ; ! 50%. It is wrong, but 75 % of us write "75%".
+            % %%+Use/Circ:% %%   ARABICDELIMITER ; ! the correct ones as well... 50 % etc.
+                                 ARABICDELIMITER ; ! list of number-case delimiters
+
+LEXICON ARABICLOOPORD   !!= * __@CODE@__ ordinals
+ +A+Ord+Attr:%. # ;
+ +A+Ord+Use/Circ: ARABICDELIMITERORD ;
+ < [a|b|c|d|e|f|f %  f] > ACASETAG ;
+
+LEXICON ACASETAG   !!= * __@CODE@__  is for 1e+Num+Sg+Num:1e
++Num: ARABICCASES ;
+
+LEXICON ARABICLOOPCOLL   !!= * __@CODE@__ collectives
+ +N+Coll+Use/Circ: ARABICDELIMITERCOLL ;
 
 
-LEXICON NUM-PREFIXES 
- §:§       ARABIC ; ! §24
- §§:§§     ARABIC ; ! §§24
- §% :§%    ARABIC ; ! § 24
- §§% :§§%  ARABIC ; ! §§ 24
- %-:%- ARABIC ; ! -24
- %‒:%‒ ARABIC ; ! -24 U+2012
- %–:%– ARABIC ; ! -24 U+2013
- %—:%— ARABIC ; ! -24 U+2014
- %―:%― ARABIC ; ! -24 U+2015
- %+:%+ ARABIC ; ! <plus>24
- %-% :%-%  ARABIC ; ! - 24
- %‒% :%‒%  ARABIC ; ! - 24 U+2012
- %–% :%–%  ARABIC ; ! - 24 U+2013
- %—% :%—%  ARABIC ; ! - 24 U+2014
- %―% :%―%  ARABIC ; ! - 24 U+2015
- %+% :%+%  ARABIC ; ! <plus> 24
- %*:%* ARABIC ; ! *24
- %$:%$ ARABIC ; ! $24
- %€:%€ ARABIC ; ! €24
- %<:%[%<%] ARABIC ; ! <24
- %>:%[%>%] ARABIC ; ! >24
- s%.:s%. ARABIC ; ! s.24
-	
+LEXICON ARABICDELIMITER   !!= * __@CODE@__  blank + 3 delim, what does the lg counc prefer?
+ +Num:            ARABICCASE0      ; ! This is the 1984 case, ie NGA
+ +Num:%:          ARABICCASE       ; ! This is the 1984:s case.
+ +Num+Err/Orth:   ARABICCASE       ; ! This is the 1984s case.
+ +Num+Err/Orth:'7 ARABICCASE       ; ! This is the 1984's case.
+ +Num+Err/Orth:’  ARABICCASE       ; ! optio-B07 = ’
+ +Num+Err/Orth:%- ARABICCASE       ; ! This is the 1984-s case.
+ +Num+Err/Orth:´  ARABICCASE       ; ! This is the 1984´s case.
+! +Num:            ARABICCOMPOUNDS ; ! 6-jáhkasaš, NUM_DER
 
 
-LEXICON ARABIC
- 1 ARABICLOOP ;
- 2 ARABICLOOP ;
- 3 ARABICLOOP ;
- 4 ARABICLOOP ;
- 5 ARABICLOOP ;
- 6 ARABICLOOP ;
- 7 ARABICLOOP ;
- 8 ARABICLOOP ;
- 9 ARABICLOOP ;
-%0 ARABICLOOP ;
- 1 ARABICLOOPORD ;
- 2 ARABICLOOPORD ;
- 3 ARABICLOOPORD ;
- 4 ARABICLOOPORD ;
- 5 ARABICLOOPORD ;
- 6 ARABICLOOPORD ;
- 7 ARABICLOOPORD ;
- 8 ARABICLOOPORD ;
- 9 ARABICLOOPORD ;
-%0 ARABICLOOPORD ;
- 1 ARABICLOOPCOLL ;
- 2 ARABICLOOPCOLL ;
- 3 ARABICLOOPCOLL ;
- 4 ARABICLOOPCOLL ;
- 5 ARABICLOOPCOLL ;
- 6 ARABICLOOPCOLL ;
- 7 ARABICLOOPCOLL ;
- 8 ARABICLOOPCOLL ;
- 9 ARABICLOOPCOLL ;
-%0 ARABICLOOPCOLL ;
-
-LEXICON ARABICLOOP
- : ARABIC ;					!
- %-:%- ARABIC;	      ! 1-2    multipart numbers	!
- %–:%– ARABIC;	      ! 1–2    multipart numbers	!
- %—:%— ARABIC;	      ! 1—2    multipart numbers	!
- %.%-:%.%- ARABIC;	      ! 1.-2   multipart numbers	!
- %.%–:%.%– ARABIC;	      ! 1.–2   multipart numbers	!
- %.%—:%.%— ARABIC;	      ! 1.—2   multipart numbers	!
- %-% :%-%  ARABIC;	      ! 1- 2   multipart numbers	!
- %–% :%–%  ARABIC;	      ! 1– 2   multipart numbers	!
- %—% :%—%  ARABIC;	      ! 1— 2   multipart numbers	!
- % %-:% %- ARABIC;	      ! 1 -2   multipart numbers	!
- % %–:% %– ARABIC;	      ! 1 –2   multipart numbers	!
- % %—:% %— ARABIC;	      ! 1 —2   multipart numbers	!
- % %-% :% %-%  ARABIC;	      ! 1 - 2  multipart numbers	!
- % %–% :% %–%  ARABIC;	      ! 1 – 2  multipart numbers	!
- % %—% :% %—%  ARABIC;	      ! 1 — 2  multipart numbers	!
- % %-%-% :% %-%-%  ARABIC;	      ! 1 -- 2 multipart numbers	!
- % %–%–% :% %–%–%  ARABIC;	      ! 1 –– 2 multipart numbers	!
- % %—%—% :% %—%—%  ARABIC;	      ! 1 —— 2 multipart numbers	!
- % %-:% %- ARABICDELIMITER;   ! 1 -   multipart numbers		!
- % %–:% %– ARABICDELIMITER;   ! 1 –   multipart numbers		!
- % %—:% %— ARABICDELIMITER;   ! 1 —   multipart numbers		!
- % %-%-:% %-%- ARABICDELIMITER;   ! 1 --  multipart numbers		!
- % %–%–:% %–%– ARABICDELIMITER;   ! 1 ––  multipart numbers		!
- % %—%—:% %—%— ARABICDELIMITER;   ! 1 ——  multipart numbers		!
- %.:%. ARABIC;							!
- %,:%, ARABIC;							!
- %: ARABIC ;							!
- % :%  ARABIC;	   ! Allowing for "23 500". !			
- : ARABIC ;	   ! Allowing for "23 500" w/nbsp (initial char is alt-space)	!
- %/:%/ ARABIC;	   ! 24/12			!		
-!%' ARABIC ;	   ! Since ' denotes cons.grad. This is not optimal either. 
-!+A+Ord:%. # ;
- ,%-+Num:,%-       # ; ! 10,-
- ,%–+Num:,%–       # ; ! 10,–
- ,%—+Num:,%—       # ; ! 10,—
- %%+Num+Nom:%%     # ; ! 50%. It is wrong, but 75 % of us write "75%".
- % %%+Num+Nom:% %% # ;! We must analyse the correct ones as well... 50 % etc.
- +Num: ARABICDELIMITER ; ! list of number-case delimiters
-! +Num: RHyph  ;          ! Hyphen and  added appropriately in RHyph
-! +Num:%-# NUMERALCOMPOUNDS  ;
-
-LEXICON ARABICLOOPORD
- +A+Ord:%. # ;
- +A+Ord: ARABICDELIMITERORD ;
-
-LEXICON ARABICLOOPCOLL
- +N+Coll: ARABICDELIMITERCOLL ;
-
-
-LEXICON ARABICDELIMITER
-             ARABICCASE0 ; ! This is the 1984 case.
- :%:         ARABICCASE  ; ! This is the 1984:s case.
- +Err/Orth:   ARABICCASE  ; ! This is the 1984s case.
- +Err/Orth:%' ARABICCASE  ; ! This is the 1984's case.
- +Err/Orth:%- ARABICCASE  ; ! This is the 1984-s case.
- :- NUM_DER ;
- : ARAB_DER ;
- : Rhyph ;
- +Cmp-#loho:-lo%^RVh%^RCo 2NJAMMA ; 
-
-LEXICON ARABICDELIMITERORD
-! :          ARABICCASE0   ; ! This is the 1984:s case.
- :%:         ARABICCASEORD ; ! This is the 1984:s case.
+LEXICON ARABICDELIMITERORD   !!= * __@CODE@__ ordinals
+!             ARABICCASE0   ; ! This is the 1984 case, ie NGA
+          :%: ARABICCASEORD ; ! This is the 1984:s case.
  +Err/Orth:   ARABICCASEORD ; ! This is the 1984s case.
- +Err/Orth:%' ARABICCASEORD ; ! This is the 1984's case.
+ +Err/Orth:'7 ARABICCASEORD ; ! This is the 1984's case.
  +Err/Orth:%- ARABICCASEORD ; ! This is the 1984-s case.
 
-LEXICON ARABICDELIMITERCOLL
-!            ARABICCASE0    ; ! This is the 1984 case.
- :%:         ARABICCASECOLL ; ! This is the 1984:s case.
+LEXICON ARABICDELIMITERCOLL   !!= * __@CODE@__ collectives
+!             ARABICCASE0    ; ! This is the 1984 case, ie NGA
+          :%: ARABICCASECOLL ; ! This is the 1984:s case.
  +Err/Orth:   ARABICCASECOLL ; ! This is the 1984s case.
- +Err/Orth:%' ARABICCASECOLL ; ! This is the 1984's case.
+ +Err/Orth:'7 ARABICCASECOLL ; ! This is the 1984's case.
  +Err/Orth:%- ARABICCASECOLL ; ! This is the 1984-s case.
 
-                     		
-LEXICON ARABICCASE0
- +Sg+Nom:%> # ;
- +Sg+Acc:%> # ;
- +Sg+Gen:%> # ;
+LEXICON ARABICCASES   !!= * __@CODE@__  to distinguish between 0 and oblique
+ARABICCASE0 ;
+ARABICCASE ;
+
+LEXICON ARABICCASE0   !!= * __@CODE@__
+ +Sg+Nom:      #      ;
+ +Sg+Gen:      #      ;
+ +Sg+Acc:      #      ;
+ +Sg+Ill+Attr: #      ;
+ +Sg+Loc+Attr: #      ;
+ +Cmp/SplitR:%-    ENDLEX ;
+ +Cmp/SplitR:%–    ENDLEX ;
 
 
 LEXICON ARABICCASE
