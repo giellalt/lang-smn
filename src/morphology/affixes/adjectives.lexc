@@ -409,11 +409,8 @@ LEXICON KOOIDAS !!= __@CODE@__ directing to  X_VEESKIR, attr. koidâ
 LEXICON SUOTAS  !!= __@CODE@__ directing to  X_VEESKIR, attr. suotâs
 +A+Attr:%^WG%^RVSH  K ; ! suotâs, vädis 
 +A: X_VEESKIR ;
-+A:%>u COMPo ; 
-+A:%>u COMPo ; ! suottâsub
-+A+Err/Orth:%>u COMPo ; 
++A:%^WG%^RVSH%>u COMPo ; ! suottâsub
 +A:%>u MOS ; !suottâsumos
-+A+Err/Orth:%>u MOS ; 
 +A:%^WG%^RVSH%> A_VUOTA ;
 +A: A_ADV ; !suottâsávt
 +A+Cmp/Attr:%^WG%^RVSH%>  R ; ! suotâs, vädis 
@@ -963,6 +960,7 @@ LEXICON COMP !!= * __@CODE@__
 LEXICON COMPo !!= * __@CODE@__ NJUORAS, NJAALGIS uses this lexicon
 +Comp: oCOMP-SUF ;
 +Comp+Attr:b K ;
++Comp:bb  COMPA_ADV ; !vijđásubbooht
 
 LEXICON eCOMP-SUF  !!= * __@CODE@__ 
 +Sg+Nom+Use/NG:eb K ;
@@ -1143,6 +1141,7 @@ LEXICON MUSj-SUF !!= * __@CODE@__
 +Pl+Com+Err/Orth:mušâijgijn K ;
 +Pl+Com:muiguin K ;
 +Pl+Abe:muittáá K ;
++Cmp/SgNom:muš R ;
 
 LEXICON CMUS-SUF !!= * __@CODE@__
 +Sg+Nom:mus K ;
@@ -1181,6 +1180,10 @@ LEXICON A_VUOTA  !!= * __@CODE@__ for derivation
 LEXICON A_ADV  !!= * __@CODE@__ for derivation
 +Der/avt+Adv:ávt K ; !pyeremusávt
 +Der/avt+Adv+Use/NG:âht K ; !pyeremusâht
+
+LEXICON COMPA_ADV  !!= * __@CODE@__ for derivation
++Der/avt+Adv:oht K ; !vijđásubboht
+
 
 !LEXICON A_ADV_VAANIS  _ for derivation
 !+Der/avt+Adv:ht K ; !vääniht
