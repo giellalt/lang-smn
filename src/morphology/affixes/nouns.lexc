@@ -78,7 +78,7 @@ LEXICON 2ALGA_PL  !!= __@CODE@__
 +N+Cmp/SgGen:%^WG%^RLEN%> R ; !
 +N+Cmp/PlGen:%^WG%^RLEN%>i R ; !
 +N:%> Nom_DER ;
-+N: X_PUUVSAH ;
+2PUUVSAH ;
 
 LEXICON X_ALGA  !!= __@CODE@__ 2VADDU has CLEN for Sg+Com and Pl+Ill , rlen svlow, ess:- 
 +Sg+Com:%^WG%^CLEN%^SVLOW%>in  K ;			! algáin
@@ -103,6 +103,7 @@ LEXICON 2PUUVSAH
 +N+Pl+Gen:%^WG%^RLEN%>id CPXsuff ;  !
 +N+Pl+Acc:%^WG%^RLEN%>id CPXsuff ;  !
 +N+Pl+Com:%^WG%^RLEN%>id CPXsuffCOM ;  !
++N+Pl+Loc:%^WG%^RLEN%>in CPXsuff ; 		! viljâinis
 
 
 LEXICON X_PUUVSAH
@@ -219,6 +220,7 @@ LEXICON 2KIELA !!= __@CODE@__ WG, blank Ill, DLEN, RVSH, SVLOW
 +N+Sg+Gen:%^WG VPXsuff12 ;  ! 
 +N+Sg+Acc:%^WG VPXsuff12 ;  !kieđâd, rähisvuođâd
 +N+Sg+Nom: VPXsuff3 ;  ! 
++N+Sg+Ess:%>n CPXsuff ;  ! eenikielânis
 +N+Sg+Gen:%^WG VPXsuff3 ;  ! 
 +N+Sg+Acc:%^WG VPXsuff3 ;  ! 
 +N+Sg+Ill:%>s CPXsuff ;  ! sajasis ill kirkesvuotâsis
@@ -1160,19 +1162,6 @@ LEXICON X_VUAGGU !!= __@CODE@__
 +Pl+Com:%^WG%^RVSH%>iguin K ;    ! vuáguiguin 
 +Pl+Com+Err/Orth:%^WG%^RVSH%>igijn K ;    ! vuáguiguin 
 +Pl+Abe:%^WG%^RVSH%>ittáá K ;    ! vuáguittáá  
-+N+Sg+Nom: VPXsuff12 ;  !
-+N+Sg+Gen:%^WG VPXsuff12 ;  !
-+N+Sg+Acc:%^WG VPXsuff12 ;  !
-+N+Sg+Nom: VPXsuff3 ;  !
-+N+Sg+Gen:%^WG VPXsuff3 ;  !
-+N+Sg+Acc:%^WG VPXsuff3 ;  !
-+N+Sg+Ill:%^CSH%>s CPXsuff ; !
-+N+Sg+Loc:%^WG%>st CPXsuff ;  !
-+N+Sg+Com:%^WG%^CLEN%^SVLOW%>in CPXsuff ;  !
-+N+Pl+Loc:%^WG%^CLEN%^SVLOW%>in CPXsuff ;  !
-+N+Pl+Gen:%^WG%>id CPXsuff ;  !
-+N+Pl+Acc:%^WG%>id CPXsuff ;  ! 
-+N+Pl+Com:%^WG%>id CPXsuffCOM ;  ! 
 
 
 LEXICON 2VADDU !!= __@CODE@__ 2AIGI has EA for Sg+Ill, 2SOLLA has RLEN for Sg+Com and Pl+Ill
@@ -1352,10 +1341,6 @@ LEXICON APINA_PL
 +N+Pl+Gen:%>id CPXsuff ;  ! viinijdis
 +N+Pl+Acc:%>id CPXsuff ;  ! 
 +N+Pl+Com:%>id CPXsuffCOM ;  ! 
-+N+Pl+Loc:%>in CPXsuff ;  !
-+N+Pl+Gen:%>id CPXsuff ;  ! viinijdis
-+N+Pl+Acc:%>id CPXsuff ;  ! 
-+N+Pl+Com:%>id CPXsuffCOM ;  ! 
 
 LEXICON X_APINA !!= __@CODE@__  this is for loanwords without stem change
 +Sg+Nom: K ;			! apina
@@ -1390,12 +1375,22 @@ LEXICON X_APINA_PL !!= __@CODE@__  this is for loanwords without stem change
 
 LEXICON 4KUNAGAS !!= __@CODE@__ >
 +N: X_KUNAGAS ;
++N+Sg+Acc: VPXsuff12 ;        
++N+Sg+Acc: VPXsuff3 ;        
++N+Sg+Gen: VPXsuff12 ;        
++N+Sg+Gen: VPXsuff3 ;        
++N+Sg+Loc:%^FCD%>âst CPXsuff ;   !ciälkkámušâstis     
+
 4KUNAGAS_PL ;
 
 LEXICON 4KUNAGAS_PL !!= __@CODE@__ >
 +N+Cmp/SgNom:%^FCD%> R ;
 +N+Cmp/SgGen:%^FCD%> R ;
 +N+Cmp/PlGen:%^FCD%>âi R ;
++N+Pl+Loc:%^FCD%>âin CPXsuff ;  !
++N+Pl+Gen:%^FCD%>âi CPXsuff ;  ! 
++N+Pl+Acc:%^FCD%>âid CPXsuff ;  ! 
++N+Pl+Com:%^FCD%>âi CPXsuffCOM ;  ! 
 +N:%^FCD%> Nom_DER ;
 +N:%^FCD%> Gen_DER ; !njuolgâduslâš
 +N: X_KUNAGAS_PL ;
@@ -1575,6 +1570,8 @@ LEXICON 3POTTAAK  !!= __@CODE@__
 +N+Pl+Abe:%^SC%^CSH%^SVSH%>ijttáá K ;   ! potákkijttáá
 +N+Sg+Acc: CPXsuff ;        
 +N+Sg+Gen: CPXsuff ;        
++N+Sg+Loc:%^SC%^CSH%^SVSH%>ist CPXsuff ; 		! potákkist 
++N+Sg+Com:%^SC%^CSH%^SVSH%>áin CPXsuff ;  !  
 +N:%> Nom_DER ;
 +N:%> Gen_DER ; 
 
@@ -1582,6 +1579,10 @@ LEXICON 3POTTAAK  !!= __@CODE@__
 LEXICON 3EEMEED  !!= __@CODE@__
 +N: X_EEMEED ;
 3EEMEED_PL ;
++N+Sg+Acc: CPXsuff ;        
++N+Sg+Gen: CPXsuff ;        
++N+Sg+Loc:%^CSH%^SVSH%>ist CPXsuff ; 		! raportistis 
++N+Sg+Com:%^CSH%^SVSH%>áin CPXsuff ;  !  
 
 LEXICON 3EEMEED_PL  !!= __@CODE@__
 +N+Pl+Gen:%^CSH%^SVSH%>ijd CPXsuff ;  ! 
@@ -1650,6 +1651,10 @@ LEXICON 3LITTER_PL !!= __@CODE@__ plurals for 3LITTER
 +N+Pl+Com:%>ijguin K ;
 +N+Pl+Com+Err/Orth:%>ijgijn K ;
 +N+Pl+Abe:%>ijttáá K ;
++N+Pl+Loc:%>ijn CPXsuff ;  !
++N+Pl+Gen:%>ij CPXsuff ;  ! 
++N+Pl+Acc:%>ijd CPXsuff ;  ! 
++N+Pl+Com:%>ij CPXsuffCOM ;  ! vaanhimijdiskuin
 +N:%> Gen_DER ;
 +N:%> Nom_DER ;
 
