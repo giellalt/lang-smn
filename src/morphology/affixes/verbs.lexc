@@ -3449,7 +3449,7 @@ LEXICON VINFINITES_UAZZUD !!= * __@CODE@__
 +Der/Pass+V+IV+PrfPrc:u%>m K ;
 +PrfPrc:u%>m K ;
 +PrsPrc:o%>o K ;
-+Der/NomAg:o%>o C_LOHHEE ;
++Der/NomAg:o%>o FLAG_CTAHHEE ;
 
 +VAbess+Err/Orth:u%^WG%>hennáá K ;
 +VAbess+Err/Orth:u%^WG%>hinnáá K ;
@@ -4043,7 +4043,8 @@ LEXICON 3_COKKIITTID_LEX
 +Imprt+Pl3:%>us # ;
 
 +PrsPrc:%>ijjee K ;
-+PrsPrc+Use/NG:%>eijee K ;
++PrsPrc+Use/NG:%>e4ijee K ;
++Der/NomAg:ei4jee FLAG_CTAHHEE ;
 
 +PrfPrc:%>âm K ;
 !+Der/Pass+V+IV+PrfPrc:%>em K ;
@@ -4060,7 +4061,6 @@ LEXICON 3_COKKIITTID_LEX
 +Actio:%>em K ;
 +Actio+Err/Orth:%>im K ;
 +Der/NomAct: FLAG_3KEPIDEM ;
-+Der/NomAg:ei4jee FLAG_CTAHHEE ;
 
 !! !Inflecting odd-syllabic verbs
 ! ----------------
@@ -4422,7 +4422,7 @@ LEXICON VINF_SHORT_VOW
 +PrfPrc:%>m K ;
 
 +Actio:%>m K ;
-+Der/NomAct:u%^SVm FLAG_3HUKSIM ;
++Der/NomAct:m FLAG_3HUKSIM ;
 
 LEXICON VINF_LONG_VOW 
 
@@ -4702,7 +4702,6 @@ LEXICON 4SYLL_KYETTID  !!= * __@CODE@__
 +V+Pot+Prs+ConNeg:á%^WG%^VHIGH%>á K ;  !kuáđáá
 +V+Imprt+ConNeg:i K ;
 +V+Ind+Prs+ConNeg:e%^WG K ;
-+V+V+Sg2:i%^WG%^VHIGH%^RLEN%> K ;  ! This is wrong, check this
 +V+VAbess+Err/Orth:i%^WG%>hennáá K ;
 +V+VAbess+Err/Orth:i%^WG%>hinnáá K ;
 +V+VAbess:i%^WG%^RVSH%>hánnáá K ;
@@ -4758,6 +4757,11 @@ LEXICON 4_ADELISTID
 +V+Inf:%>iđ K ;
 +V+PrfPrc:á%>m K ;
 +V+Der/Pass:u2 C_CAALLUD ; !we need a spec 4 contlex
++V+Ind+Prt+ConNeg:á%^VHIGH%>m K ;  ! 
++V+Cond+Prs+ConNeg:á%^WG%^VHIGH%>ččii K ;  ! 
++V+Pot+Prs+ConNeg:á%^WG%^VHIGH%>á K ;  !
++V+Imprt+ConNeg:i K ;
++V+Ind+Prs+ConNeg:e%^WG K ;
 
 +V+Ind+Prs+Sg1:á%^WG%>m K ;
 +V+Ind+Prs+Sg2:á%^WG%>h K ;
@@ -4810,7 +4814,7 @@ LEXICON 4_ADELISTID
 +V+Imprt+Pl3:%>os K ;
 
 +V+Der/NomAct:e%>m FLAG_3LITTER ;
-+V+Der/NomAg:eije%>e FLAG_3LITTER ;
++V+Der/NomAg:eijee FLAG_CTAHHEE ;
 
 
 LEXICON 4_ITTED ! temporarilly, we need a yaml for this
