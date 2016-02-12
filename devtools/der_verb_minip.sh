@@ -3,7 +3,7 @@
 # script to generate paradigms for generating word forms
 # command, when you are in smn:
 # sh devtools/der_verb_minip.sh 2SYLL_OD | less
-# sh devtools/der_verb_minip.sh '^puurrâđ:' 
+# sh devtools/der_verb_minip.sh kihlođ 
 
 
 LOOKUP=$(echo $LOOKUP)
@@ -14,7 +14,7 @@ PATTERN=$1
 L_FILE="in.txt"
 cut -d '!' -f1 src/morphology/stems/verbs.lexc | egrep $PATTERN | cut -d ':' -f1>$L_FILE
 
-P_FILE="test/data/der_verb_test.txt"
+P_FILE="test/data/testderverbpar.txt"
 
 for lemma in $(cat $L_FILE);
 do
