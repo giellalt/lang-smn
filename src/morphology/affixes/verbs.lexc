@@ -374,7 +374,7 @@ LEXICON 2SYLL_AASSAD ! aassâđ
 +V+Pot+Prs: EVEN_POT_AASSAD ;
 +V+Cond+Prs:â%^WG%^RVSH%>čč EVEN_COND ;
 +V+Imprt: EVEN_IMPRT_AASSAD ;
-+V+Der/kyetti:â%^WG%>škyett4 4SYLL_KYETTID ;
++V+Der/kyetti:â%^WG%>škyett4 4SYLL_KYETTID ; !
 +V+Der/d:â%^WG%>d 3_KUIKETTID ; ! D
 +V+Der/st:â%^WG%>st 3_CIELATTID ; !
 +V+Der/t:â%^WG%>tt 3_CIELATTID ; ! 
@@ -3641,8 +3641,20 @@ LEXICON 3_VYEJETTID  !!= * __@CODE@__ SM53. short V in Inf
 +V+Der/Pass: C_MERIDUD ;
 +V+Der/st:ist 4_ADELISTID ; !
 
+LEXICON ADELID  !!= * __@CODE@__ only for adeliđ, to get adde as default ConNeg
++V+Imprt+Sg2:adde K ;
++V+Ind+Prs+ConNeg:adde K ;
++V+Ind+Prs+ConNeg+Use/NG:addel K ; ! addel
++V+Imprt+Sg2+Use/NG:addel # ; ! addel
+:ad%^RCel ADELID_COMMON ;
+
 
 LEXICON 3_ADELID  !!= * __@CODE@__ SM53. short V in Inf
++Ind+Prs+ConNeg:%^CLEN K ; !  
++Imprt+Sg2:%^CLEN%> # ; !  
+ADELID_COMMON ;
+
+LEXICON ADELID_COMMON
 +V+Ind+Prt+Du1+Err/Orth:%>ááim K ; ! these separate, perhaps skip
 +V+Ind+Prt+Du2+Err/Orth:%>ááid K ; ! only á ?
 +V+Ind+Prt+Du3+Err/Orth:%>ááin  K ;
@@ -3656,7 +3668,6 @@ LEXICON 3_ADELID  !!= * __@CODE@__ SM53. short V in Inf
 
 LEXICON 3_ADELID_LEX
 +Inf:%>iđ K ;
-
 +Ind+Prs+Sg1:%>âm K ;
 +Ind+Prs+Sg2:%>ah K ;
 +Ind+Prs+Sg2+Err/Orth:%>âh K ;
@@ -3706,7 +3717,6 @@ LEXICON 3_ADELID_LEX
 +Pot+Prs+Pl3:%>ižeh K ;
 
 +Imprt+Sg1:%>um # ;
-+Imprt+Sg2:%^CLEN%> # ; ! addel
 +Imprt+Sg3:%>us # ;
 +Imprt+Du1:%>oon # ;
 +Imprt+Du2:%>ee # ;
@@ -3721,7 +3731,6 @@ LEXICON 3_ADELID_LEX
 +PrfPrc:%>âm K ;
 !+Der/Pass+V+IV+PrfPrc:%>em K ;
 
-+Ind+Prs+ConNeg:%^CLEN K ; ! addel
 +Ind+Prt+ConNeg:%>âm K ;
 +Cond+Prs+ConNeg:%>iččii K ;
 +Pot+Prs+ConNeg:%>ižžii K ;
