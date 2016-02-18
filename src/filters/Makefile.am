@@ -23,8 +23,10 @@ GIELLA_FILTER_LOCAL_REGEX_SRCS=\
 					downcase_UCletters.regex \
 					remove-halflong-dotbelow.regex \
 					remove-letter-acute-accent.regex \
-					make-optional-lang_hom-tags.regex
-					
+					make-optional-lang_hom-tags.regex \
+				    remove-derivation-position-tags.regex \
+					rename-POS_before_Der-tags.regex
+
 # List any local filter xfscript files here:
 GIELLA_FILTER_LOCAL_XFSCRIPT_SRCS=
 
