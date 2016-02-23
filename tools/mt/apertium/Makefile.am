@@ -27,7 +27,40 @@ APERTIUM_CG_INCLUDE_SRC=\
 #### BEGIN: Add local processing instructions BELOW this line ####
 ##################################################################
 
+# We want to rename the POS tags in front of derivations:
+analyser-mt-gt-desc.hfst: analyser-mt-gt-desc.tmp.hfst \
+			$(top_builddir)/src/filters/remove-derivation-position-tags.hfst \
+			$(top_builddir)/src/filters/rename-POS_before_Der-tags.hfst
+	$(AM_V_RGX2FST)$(PRINTF) "\
+		@\"$(top_builddir)/src/filters/remove-derivation-position-tags.hfst\" \
+	.o. @\"$(top_builddir)/src/filters/rename-POS_before_Der-tags.hfst\" \
+   	.o. @\"$<\" \
+    	;" \
+		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --xerox-composition=ON \
+		| $(HFST_INVERT) \
+		> $@
 
+# We want to make semantic tags optional for the apertium-targeted analyser:
+analyser-mt-gt-desc.%.hfst: analyser-mt-gt-desc.%.tmp.hfst \
+			$(top_builddir)/src/filters/make-optional-semantic-tags.hfst
+	$(AM_V_RGX2FST)$(PRINTF) "\
+		@\"$(top_builddir)/src/filters/make-optional-semantic-tags.hfst\" \
+   	.o. @\"$<\" \
+    	;" \
+		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --xerox-composition=ON \
+		| $(HFST_INVERT) $(HFSTFLAGS) \
+		| $(HFST_FST2FST) $(HFSTFLAGS) -t \
+		-o $@
+
+# And also for the generator:
+generator-mt-gt-norm.hfst: generator-mt-gt-norm.tmp.hfst \
+			$(top_builddir)/src/filters/remove-derivation-position-tags.hfst
+	$(AM_V_RGX2FST)$(PRINTF) "\
+		@\"$(top_builddir)/src/filters/remove-derivation-position-tags.hfst\" \
+   	.o. @\"$<\" \
+    	;" \
+		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --xerox-composition=ON \
+		> $@
 
 ##################################################################
 #### END: Add local processing instructions ABOVE this line ######
