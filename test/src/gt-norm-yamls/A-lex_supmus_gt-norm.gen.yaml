@@ -1,0 +1,28 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-dict-gt-norm.hfst
+    Morph: ../../../src/analyser-dict-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-dict-gt-norm.xfst
+    Morph: ../../../src/analyser-dict-gt-norm.xfst
+    App: lookup
+
+Tests:
+
+  Adjective - ucemus: # ok MLO
+    ucemus+A+Superl+Sg+Nom: ucemus
+    ucemus+A+Superl+Sg+Gen: ucemuu
+    ucemus+A+Superl+Sg+Acc: ucemuu
+    ucemus+A+Superl+Sg+Ill: ucemusân
+    ucemus+A+Superl+Sg+Loc: ucemuust
+    ucemus+A+Superl+Sg+Com: ucemuin
+    ucemus+A+Superl+Sg+Abe: ucemuuttáá
+    ucemus+A+Superl+Ess: ucemussân
+    ucemus+A+Superl+Par: ucemussâd
+    ucemus+A+Superl+Pl+Nom: ucemuuh
+    ucemus+A+Superl+Pl+Gen: ucemui
+    ucemus+A+Superl+Pl+Acc: ucemuid
+    ucemus+A+Superl+Pl+Ill: ucemuid
+    ucemus+A+Superl+Pl+Loc: ucemuin
+    ucemus+A+Superl+Pl+Com: ucemuiguin
+    ucemus+A+Superl+Pl+Abe: ucemuittáá 
