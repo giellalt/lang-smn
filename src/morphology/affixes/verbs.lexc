@@ -380,7 +380,7 @@ LEXICON 2SYLL_AASSAD ! aassâđ
 +V+Der/d:â%^WG%^RVSH%>d 3_KUIKETTID ; ! D
 +V+Der/st:â%^WG%^RVSH%>st 3_CIELATTID ; !
 +V+Der/tt:â%^WG%^RVSH%>tt 3_CIELATTID ; ! 
-+V+Der/alla:â%^RVSH%>i6ll 4_KAVNATTATTAD ; !i6 is a fake vowel
++V+Der/alla:â%^RVSH%>i6l 4_KAVNATTATTAD ; !i6 is a fake vowel
 +Der/NomAg:e%^CLEN%^RVSH%>e FLAG_CTAHHEE ;
 
 
@@ -466,6 +466,7 @@ LEXICON 2SYLL_VIEZZAD  !!= * __@CODE@__
 +V+Der/d:â%^WG%>d 3_CIELATTID ; !viežâdiđ viežâd vs viežžâd luoihâdiđ 3_KUIKETTID?
 +V+Der/st:â%^WG%>st 3_CIELATTID ; !
 +V+Der/tt:â%^WG%>tt 3_CIELATTID ; ! 
++V+Der/Pass: C_PASS_SH ; !viežžuuččii viežžui
 
 LEXICON VINFINITES_VIEZZAD
 +Inf:â%>đ K ;
@@ -475,8 +476,7 @@ LEXICON VINFINITES_VIEZZAD
 +Pot+Prs+ConNeg:i%>i3 K ;
 +Imprt+ConNeg:â%^WG K ;
 
-+Der/Pass+V+IV+PrfPrc:u%>m K ;
-+Der/Pass:u2 C_CAALLUD ; !viežžuuččii viežžui
+!+Der/Pass+V+IV+PrfPrc:u%>m K ;
 +PrfPrc:â%>m K ;
 +PrsPrc:e%>e K ; 
 +Der/NomAg:e%^CLEN%>e FLAG_CTAHHEE ;
@@ -552,7 +552,8 @@ LEXICON 2SYLL_SPELLAD  !!= * __@CODE@__ Similar to 2SYLL_ETTAD, but less CSH, do
 +V+Der/d:â%^WG%>d 3_KUIKETTID ; ! 
 +V+Der/st:â%^WG%>st 3_CIELATTID ; !
 +V+Der/tt:â%^WG%>tt 3_CIELATTID ; ! 
-+V+Der/alla:â%^RVSH%>i6ll 4_KAVNATTATTAD ; !i6 is a fake vowel
++V+Der/alla:â%^RVSH%>i6l 4_KAVNATTATTAD ; !i6 is a fake vowel
++V+Der/Pass: C_PASS_SH ; !ettum ettui lekkum terppum
 
 
 LEXICON EVEN_IND_SPELLAD
@@ -591,6 +592,7 @@ LEXICON 2SYLL_ETTAD  !!= * __@CODE@__
 +V+Der/d:â%^WG%>d 3_KUIKETTID ; ! 
 +V+Der/st:â%^WG%>st 3_CIELATTID ; !
 +V+Der/tt:â%^WG%>tt 3_CIELATTID ; ! 
++V+Der/Pass: C_PASS_SH ; !ettum ettui lekkum terppum
 
 LEXICON VINFINITES_ETTAD
 +Inf:â%^VHIGH%>đ K ;
@@ -601,7 +603,6 @@ LEXICON VINFINITES_ETTAD
 +Pot+Prs+ConNeg:i%^WG%^VHIGH%^RLEN%>i3 K ;
 +Imprt+ConNeg:â%^WG%^VHIGH%^RLEN K ;
 
-+Der/Pass:u2 C_CAALLUD ; !ettum ettui lekkum terppum
 !+Der/Pass+V+IV+PrfPrc:u%^VHIGH%>m K ; 
 +PrfPrc:â%^VHIGH%>m K ;
 +Der/Pass+V+IV+PrfPrc+Use/NG:â%>m K ;
@@ -678,13 +679,13 @@ LEXICON 2SYLL_KAVNAD  !!= * __@CODE@__ as ETTAD but with VBACK, only RV ä in st
 +V+Pot+Prs: EVEN_POT_KAVNAD ;
 +V+Cond+Prs:â%^WG%^VBACK%>čč EVEN_COND ;
 +V+Imprt: EVEN_IMPRT_KAVNAD ;
-+V+Der/InchL:â%^WG%^VBACK%>kyett4 4SYLL_KYETTID ;
-+V+Der/Pass:u2 C_CAALLUD ; !
++V+Der/InchL:â%^WG%^VBACK%>škyett4 4SYLL_KYETTID ;
++V+Der/Pass:  C_PASS_SH ; !
 +V+Der/d:â%^WG%>d 3_KUIKETTID ; ! 
 +V+Der/st:â%^WG%>st 3_CIELATTID ; !
 +V+Der/tt:â%^WG%>tt 3_CIELATTID ; ! 
 +V+Der/l:âl 3_LEKKASID ; ! kaččâliđ
-+V+Der/alla:â%^RVSH%>i6ll 4_KAVNATTATTAD ; !i6 is a fake vowel
++V+Der/alla:â%^RVSH%>i6l 4_KAVNATTATTAD ; !i6 is a fake vowel
 
 LEXICON VINFINITES_KAVNAD
 +Inf:â%^VBACK%>đ K ;
@@ -1579,7 +1580,7 @@ LEXICON EVEN_IMPRT_KIESSAD
 +Pl2:â%>đ K ;
 +Pl3:u%^VHIGH%>s K ;
 
-LEXICON 2SYLL_VUOLLAD  !!= * __@CODE@__ ye to ua
+LEXICON 2SYLL_VUOLLAD  !!= * __@CODE@__ ye to ua vyešš
 +V:  VINFINITES_2SYLL_VUOLLAD ;
 +V+Ind: EVEN_IND_2SYLL_VUOLLAD ;
 +V+Pot+Prs: EVEN_POT_2SYLL_VUOLLAD ;
@@ -1589,6 +1590,7 @@ LEXICON 2SYLL_VUOLLAD  !!= * __@CODE@__ ye to ua
 +V+Der/d:â%^WG%>d 3_KUIKETTID ; ! 
 +V+Der/st:â%^WG%>st 3_CIELATTID ; !
 +V+Der/tt:â%^WG%>tt 3_CIELATTID ; ! 
++V+Der/Pass: C_PASS_RLEN_SH ; !
 
 LEXICON VINFINITES_2SYLL_VUOLLAD
 +Inf:â%^VBACK%^RLEN%>đ K ;
@@ -1599,8 +1601,7 @@ LEXICON VINFINITES_2SYLL_VUOLLAD
 +Pot+Prs+ConNeg:i%^WG%>i3 K ;
 +Imprt+ConNeg:â%^WG K ;
 
-+Der/Pass+V+IV+PrfPrc:u%>m K ;
-+Der/Pass:u2 C_CAALLUD ; !
+!+Der/Pass+V+IV+PrfPrc:u%>m K ;
 +PrfPrc:â%^VBACK%^RLEN%>m K ;
 +PrsPrc:e%>e K ; 
 +Der/NomAg:e%>e FLAG_CTAHHEE ;
@@ -3541,7 +3542,7 @@ LEXICON 3_LEKKASID  !!= * __@CODE@__ SM51, no length change in stem
 +V+Der/Pass: C_MERIDUD ;
 +V+Der/InchL:i6%^WG%>škyett4 4SYLL_KYETTID ; !muštâlškuođij
 +V+Der/st:ist 4_ADELISTID ;
-+V+Der/alla:âll 4_KAVNATTATTAD ; !ravviistâllâđ varriistâllâđ purâstâllâđ
++V+Der/alla:â%>i6l 4_KAVNATTATTAD ; !ravviistâllâđ varriistâllâđ purâstâllâđ
 
 +V:   ODDVLEX ;
 
@@ -3550,7 +3551,7 @@ LEXICON 3_CIELATTID  !!= * __@CODE@__ SM57, consonant and vowel change
 +V+Der/Pass: C_MERIDUD ;
 +V+Der/InchL:i6%^WG%>škyett4 4SYLL_KYETTID ; ! huolâtškuođij
 +V+Der/st:ist 4_ADELISTID ;
-+V+Der/alla:âll 4_KAVNATTATTAD ; !
++V+Der/alla:â%>i6l 4_KAVNATTATTAD ; !
 
 LEXICON 3_VYEJETTID  !!= * __@CODE@__ SM53. short V in Inf
 +V+Ind+Prt+Du1+Err/Orth:%>ááim K ; ! these separate, perhaps skip
@@ -3668,7 +3669,7 @@ LEXICON ADELID_COMMON
 +V+Der/Pass: C_MERIDUD ;
 +V+Der/st:ist 4_ADELISTID ; !adelistiđ lahtâdistiđ luškâdistiđ
 +V+Der/InchL:i6%^WG%>škyett4 4SYLL_KYETTID ; ! huolâtškuođij
-+V+Der/alla:âll 4_KAVNATTATTAD ; !
++V+Der/alla:â%>i6l 4_KAVNATTATTAD ; !
 
 
 LEXICON 3_ADELID_LEX
@@ -3769,7 +3770,7 @@ LEXICON 3_MERIDID  !!= * __@CODE@__ SM53. short V in Inf
 +V+Der/Pass: C_MERIDUD ;
 +V+Der/InchL:i6%^WG%>škyett4 4SYLL_KYETTID ; ! huolâtškuođij
 +V+Der/st:ist 4_ADELISTID ;
-+V+Der/alla:âll 4_KAVNATTATTAD ; !ráđádâllâđ (rä%^RVđ%^RCid)
++V+Der/alla:â%>i6l 4_KAVNATTATTAD ; !ráđádâllâđ (rä%^RVđ%^RCid)
 
 LEXICON 3_MERIDID_LEX
 +Inf:%>iđ K ;
@@ -3871,7 +3872,7 @@ LEXICON 3_PUTESTID  !!= * __@CODE@__ SM53. short V in Inf
 +V+Der/Pass: C_MERIDUD ;
 +V+Der/InchL:i6%^WG%>škyett4 4SYLL_KYETTID ; ! huolâtškuođij
 +V+Der/st:ist 4_ADELISTID ;
-+V+Der/alla:âll 4_KAVNATTATTAD ; !
++V+Der/alla:â%>i6l 4_KAVNATTATTAD ; !
 
 LEXICON 3_PUTESTID_LEX
 +Inf:%>iđ K ;
@@ -3990,7 +3991,7 @@ LEXICON 3_COKKIITTID  !!= * __@CODE@__ SM52, long V in Inf
 +V+Der/Pass: C_MERIDUD ;
 +V+Der/InchL:i6%^WG%>škyett4 4SYLL_KYETTID ; ! huolâtškuođij
 +V+Der/st:ist 4_ADELISTID ;
-+V+Der/alla:âll 4_KAVNATTATTAD ; !
++V+Der/alla:â%>i6l 4_KAVNATTATTAD ; !
 
 LEXICON 3_COKKIITTID_LEX
 +Inf:%>iđ K ;
@@ -4341,8 +4342,6 @@ LEXICON C_PASS_SH !!= * __@CODE@__ does not shorten vowel
 +V+PrsPrc+Use/NG:%>jijjee K ;
 +V+PrsPrc:%>jeijee K ;
 +V+Der/InchL:%>uškyett4 4SYLL_KYETTID ; !kulluuškuođij
-+V+Der/tt:%>utt 3_COKKIITTID ; !rahhiittiđ ruvviittiđ
-+V+Der/st:%>ust 3_COKKIITTID ; !ruvviistiđ
 +V+Ind+Prs+ConNeg:u%^CLEN%^VBACK%^RVSH%>u K ; !čahhuu
 
 
@@ -4368,6 +4367,40 @@ LEXICON C_PASS_SH !!= * __@CODE@__ does not shorten vowel
 +V+Ind+Prt+Pl1:u%^CLEN%^VBACK%^RVSH%>im  K ;
 +V+Ind+Prt+Pl2:u%^CLEN%^VBACK%^RVSH%>id  K ;
 
+LEXICON C_PASS_RLEN_SH !!= * __@CODE@__ does not shorten vowel
++V+Inf:u%^CLEN%^VBACK%^RLEN%>đ K ;
++V+PrsPrc+Use/NG:%>jijjee K ;
++V+PrsPrc:%>jeijee K ;
++V+Der/InchL:%>uškyett4 4SYLL_KYETTID ; !kulluuškuođij
++V+Ind+Prs+ConNeg:u%^CLEN%^VBACK%^RVSH%>u K ; !čahhuu
++V+Cond+Prs:u%^CLEN%^VBACK%^RLEN%>učč EVEN_COND ;
+
+
++V+Ind+Prs+Sg1:u%^CLEN%^VBACK%^RLEN%>um K ; ! vuoššuum
++V+Ind+Prs+Sg3:o%^CLEN%^VHIGH%>o K ; ! vuáššoo
++V+Ind+Prs+Du1:o%^CLEN%^VHIGH%>jeen K ; !vuáššojeen
++V+Ind+Prs+Pl3:o%^CLEN%^VHIGH%>jeh K ; !vuáššojeh
++V+Ind+Prt+Pl3:o%^CLEN%^VHIGH%>jii  K ; !vuáššojii
+
+
++V+Ind+Prs+Sg2:u%^CLEN%^VBACK%^RLEN%>uh K ;  !vuoššuuh
++V+Ind+Prs+Du2:u%^CLEN%^VBACK%^RLEN%>uvettee K ; !vuoššuuvettee 
++V+Ind+Prs+Du3:u%^CLEN%^VBACK%^RLEN%>v K ; !vuoššuv
++V+Ind+Prs+Pl1:u%^CLEN%^VBACK%^RLEN%>p K ; !vuoššup
++V+Ind+Prs+Pl2:u%^CLEN%^VBACK%^RLEN%>uvetteđ K ; !vuoššuuvetteđ
+
++V+Ind+Prt+Sg1:o%^CLEN%^VHIGH%>jim K ; ! vuáššojim
++V+Ind+Prt+Sg2:o%^CLEN%^VHIGH%>jih  K ; !vuáššojih
++V+Ind+Prt+Sg3:u%^CLEN%^VBACK%^RLEN%>i  K ; !vuoššui
++V+Ind+Prt+Du1:u%^CLEN%^VBACK%^RLEN%>im  K ; ! vuoššuim
++V+Ind+Prt+Du2:u%^CLEN%^VBACK%^RLEN%>id K ; !vuoššuid
++V+Ind+Prt+Du3:u%^CLEN%^VBACK%^RLEN%>in  K ;
++V+Ind+Prt+Pl1:u%^CLEN%^VBACK%^RLEN%>im  K ;
++V+Ind+Prt+Pl2:u%^CLEN%^VBACK%^RLEN%>id  K ;
+
++V:u%^CLEN%^VBACK%^RLEN   C_RAMMUD_POT ;
+
++V+IV+Imprt:u   C_RAMMUD_IMPRT ;
 
 LEXICON C_RAMMUD !!= * __@CODE@__ does not shorten vowel
 +V:  C_RAMMUD_VARYING_ROOTVOWEL ; ! no vowel shortening
