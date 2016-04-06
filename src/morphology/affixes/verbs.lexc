@@ -374,8 +374,8 @@ LEXICON 2SYLL_AASSAD ! aassâđ
 +V+Pot+Prs: EVEN_POT_AASSAD ;
 +V+Cond+Prs:â%^WG%^RVSH%>čč EVEN_COND ;
 +V+Imprt: EVEN_IMPRT_AASSAD ;
-+V+Der/Pass+V+IV+PrfPrc:u%^VHIGH%>m K ;
-+V+Der/Pass:u2 C_RAMMUD ; ! 
+!+V+Der/Pass+V+IV+PrfPrc:u%^VHIGH%>m K ;
++V+Der/Pass:u C_PASS_SH ; !  čääh%^RC -> á (VHINH RVSH) , a (VBACK RVSH)
 +V+Der/InchL:â%^WG%>škyett4 4SYLL_KYETTID ; !
 +V+Der/d:â%^WG%>d 3_KUIKETTID ; ! D
 +V+Der/st:â%^WG%>st 3_CIELATTID ; !
@@ -670,7 +670,7 @@ LEXICON EVEN_POT_ETTAD !!= * __@CODE@__
 
 
 
-LEXICON 2SYLL_KAVNAD  !!= * __@CODE@__ as ETTAD but with VBACK
+LEXICON 2SYLL_KAVNAD  !!= * __@CODE@__ as ETTAD but with VBACK, only RV ä in stem tothis lexicon
 
 +V:  VINFINITES_KAVNAD ;
 +V+Ind: EVEN_IND_KAVNAD ;
@@ -738,13 +738,13 @@ LEXICON EVEN_IND_KAVNAD
 
 LEXICON EVEN_IMPRT_KAVNAD
 +Sg2:â%^WG%^RLEN%> K ;
-+Sg3:u%^WG%^VBACK%>s K ;
++Sg3:u%^WG%>s K ;
 +Du1:o%^CLEN%^VBACK%>on K ;
 +Du2:e%^CLEN%>e K ;
-+Du3:u%^CLEN%^VBACK%>s K ;
-+Pl1:u%^CLEN%^VBACK%>p K ;
++Du3:u%^CLEN%>s K ;
++Pl1:u%^CLEN%>p K ;
 +Pl2:â%^VBACK%>đ K ;
-+Pl3:u%^CLEN%^VBACK%>s K ;
++Pl3:u%^CLEN%>s K ;
 
 LEXICON EVEN_POT_KAVNAD !!= * __@CODE@__
 +Sg1:e%^WG%>em K ;
@@ -4333,6 +4333,38 @@ LEXICON C_TUHHID !!= * __@CODE@__
 +V+Imprt+Pl2:i2%>đ K ;
 +V+Imprt+Pl3:i2%>jus K ;
 +V+Der/Pass:u2 C_CAALLUD ; !tolluđ, tollui tuállojii seiluu puhhum
+
+
+LEXICON C_PASS_SH !!= * __@CODE@__ does not shorten vowel
++V+PrsPrc+Use/NG:%>jijjee K ;
++V+PrsPrc:%>jeijee K ;
++V+Der/InchL:%>uškyett4 4SYLL_KYETTID ; !kulluuškuođij
++V+Der/tt:%>utt 3_COKKIITTID ; !rahhiittiđ ruvviittiđ
++V+Der/st:%>ust 3_COKKIITTID ; !ruvviistiđ
++V+Ind+Prs+ConNeg:u%^CLEN%^VBACK%^RVSH%>u K ; !čahhuu
+
+
++V+Ind+Prs+Sg1:u%^CLEN%^VBACK%^RVSH%>um K ; ! čahhuum
++V+Ind+Prs+Sg3:o%^CLEN%^VHIGH%^RVSH%>o K ; ! čáhhoo
++V+Ind+Prs+Du1:o%^CLEN%^VHIGH%^RVSH%>jeen K ; !čáhhojeen
++V+Ind+Prs+Pl3:o%^CLEN%^VHIGH%^RVSH%>jeh K ; !čáhhojeh
++V+Ind+Prt+Pl3:o%^CLEN%^VHIGH%^RVSH%>jii  K ; !čáhhojii
+
+
++V+Ind+Prs+Sg2:u%^CLEN%^VBACK%^RVSH%>uh K ;  !čahhuuh
++V+Ind+Prs+Du2:u%^CLEN%^VBACK%^RVSH%>uvettee K ; !čahhuuvettee 
++V+Ind+Prs+Du3:u%^CLEN%^VBACK%^RVSH%>v K ; !čahhuv
++V+Ind+Prs+Pl1:u%^CLEN%^VBACK%^RVSH%>p K ; !čahhup
++V+Ind+Prs+Pl2:u%^CLEN%^VBACK%^RVSH%>uvetteđ K ;
+
++V+Ind+Prt+Sg1:o%^CLEN%^VHIGH%^RVSH%>jim K ;
++V+Ind+Prt+Sg2:o%^CLEN%^VHIGH%^RVSH%>jih  K ;
++V+Ind+Prt+Sg3:u%^CLEN%^VBACK%^RVSH%>i  K ;
++V+Ind+Prt+Du1:u%^CLEN%^VBACK%^RVSH%>im  K ;
++V+Ind+Prt+Du2:u%^CLEN%^VBACK%^RVSH%>id K ;
++V+Ind+Prt+Du3:u%^CLEN%^VBACK%^RVSH%>in  K ;
++V+Ind+Prt+Pl1:u%^CLEN%^VBACK%^RVSH%>im  K ;
++V+Ind+Prt+Pl2:u%^CLEN%^VBACK%^RVSH%>id  K ;
 
 
 LEXICON C_RAMMUD !!= * __@CODE@__ does not shorten vowel
