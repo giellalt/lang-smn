@@ -4440,48 +4440,42 @@ LEXICON C_PASS_RLEN_SH !!= * __@CODE@__ does not shorten vowel
 
 
 LEXICON C_RAMMUD !!= * __@CODE@__ does not shorten vowel
-+V:  C_RAMMUD_VARYING_ROOTVOWEL ; ! no vowel shortening
-+V:  C_RAMMUD_REST ; ! common behaviour
-+V:  C_RAMMUD_POT ;
+
++V: C_RAMMUD_POT ;
++V: VINF_SHORT_VOW ;
++V:%>u VINF_LONG_VOW ;
++V+Imprt: C_RAMMUD_IMPRT ;
++V+Cond+Prs:%>učč EVEN_COND ;
+
 +V+PrsPrc+Use/NG:%>jijjee K ;
 +V+PrsPrc:%>jeijee K ;
-! cf: staaruđ:stááru2 C_RAMMUD ; !¢ staaruum stáároo
 +V+Der/InchL:%>uškyett4 4SYLL_KYETTID ; !kulluuškuođij
 +V+Der/tt:%>utt 3_COKKIITTID ; !rahhiittiđ ruvviittiđ
 +V+Der/st:%>ust 3_COKKIITTID ; !ruvviistiđ
 
++V+Ind+Prs+Sg1:%>um K ; !%^VBACK?
++V+Ind+Prs+Sg3:%>o K ; ! jf. C_TUHHID
++V+Ind+Prs+Du1:%>jeen K ;
++V+Ind+Prs+Pl3:%>jeh K ;
++V+Ind+Prt+Pl3:%>jii  K ; !a-
 
-LEXICON C_RAMMUD_VARYING_ROOTVOWEL
-+Ind+Prs+Sg1:%>um K ; !%^VBACK?
-+Ind+Prs+Sg3:%>o K ; ! jf. C_TUHHID
-+Ind+Prs+Du1:%>jeen K ;
-+Ind+Prs+Pl3:%>jeh K ;
-+Ind+Prt+Pl3:%>jii  K ; !a-
++V+Ind+Prs+Sg2:%>uh K ;
++V+Ind+Prs+Du2:%>uvettee K ;
++V+Ind+Prs+Du3:%>v K ;
++V+Ind+Prs+Pl1:%>p K ;
++V+Ind+Prs+Pl2:%>uvetteđ K ;
 
-LEXICON C_RAMMUD_REST  !!= ** __@CODE@__ common for the two previous
- VINF_SHORT_VOW ;
- :%>u VINF_LONG_VOW ;
++V+Ind+Prt+Sg1:%>jim K ;
++V+Ind+Prt+Sg2:%>jih  K ;
++V+Ind+Prt+Sg3:%>i  K ;
++V+Ind+Prt+Du1:%>im  K ;
++V+Ind+Prt+Du2:%>id K ;
++V+Ind+Prt+Du3:%>in  K ;
++V+Ind+Prt+Pl1:%>im  K ;
++V+Ind+Prt+Pl2:%>id  K ;
 
-+Cond+Prs:%>učč EVEN_COND ;
-+Imprt: C_RAMMUD_IMPRT ;
-
-+Ind+Prs+Sg2:%>uh K ;
-+Ind+Prs+Du2:%>uvettee K ;
-+Ind+Prs+Du3:%>v K ;
-+Ind+Prs+Pl1:%>p K ;
-+Ind+Prs+Pl2:%>uvetteđ K ;
-
-+Ind+Prt+Sg1:%>jim K ;
-+Ind+Prt+Sg2:%>jih  K ;
-+Ind+Prt+Sg3:%>i  K ;
-+Ind+Prt+Du1:%>im  K ;
-+Ind+Prt+Du2:%>id K ;
-+Ind+Prt+Du3:%>in  K ;
-+Ind+Prt+Pl1:%>im  K ;
-+Ind+Prt+Pl2:%>id  K ;
 
 LEXICON C_RAMMUD_POT  !!= ** __@CODE@__
-
 +Pot+Prs+Sg1:%>užeem K ;
 +Pot+Prs+Sg2:%>užeeh K ;
 +Pot+Prs+Sg3:%>š K ;
