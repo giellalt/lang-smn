@@ -377,7 +377,7 @@ LEXICON 2SYLL_AASSAD ! aassâđ
 +V+Der/Pass:u2 C_PASS_SH ; !  čääh%^RC -> á (VHINH RVSH) , a (VBACK RVSH)
 +V+Der/InchL:â%^WG%^RVSH%>škyett4 4SYLL_KYETTID ; !
 +V+Der/d:âd%^WG%^VBACK 3_KUIKETTID ; ! 
-+V+Der/st:âst%^WG%^VBACK 3_CIELATTID ; !
++V+Der/st:âst%^WG%^VBACK 3_KUIKETTID ; ! 3_CIELATTID ; !
 +V+Der/tt:âtt%^WG%^VBACK 3_CIELATTID ; ! 
 +V+Der/l:âl 3_VYEJETTID ; 
 +Der/NomAg:e%^CLEN%^RVSH%>e FLAG_CTAHHEE ;
@@ -4340,6 +4340,9 @@ LEXICON C_PASS_SH !!= * __@CODE@__ does not shorten vowel
 
 +V+Der/InchL:%>škyett4 4SYLL_KYETTID ; !kulluuškuođij
 +V+Ind+Prs+ConNeg:%^CLEN%^VBACK%^RVSH%>u K ; !čahhuu
++V+Ind+Prt+ConNeg:%^CLEN%^VBACK%^RVSH%>m K ; !čahhum
++V+PrfPrc:%^CLEN%^VBACK%^RVSH%>m K ; !čahhum
++V+Pot+Prs+ConNeg:%^CLEN%^VBACK%^RVSH%>užii K ; 
 +VAbess:%>hánnáá K ; ! 
 
 
@@ -4365,7 +4368,33 @@ LEXICON C_PASS_SH !!= * __@CODE@__ does not shorten vowel
 +V+Ind+Prt+Pl1:%^CLEN%^VBACK%^RVSH%>im  K ;
 +V+Ind+Prt+Pl2:%^CLEN%^VBACK%^RVSH%>id  K ;
 
++V+Pot+Prs+Sg1:%^CLEN%^VBACK%^RLEN%>užeem K ;
++V+Pot+Prs+Sg2:%^CLEN%^VBACK%^RLEN%>užeeh K ;
++V+Pot+Prs+Sg3:%^WG%^VBACK%^RLEN%>š K ;
++V+Pot+Prs+Du1:%^CLEN%^VBACK%^RLEN%>užeen K ;
++V+Pot+Prs+Du2:%^WG%^VBACK%^RLEN%>švettee K ;
++V+Pot+Prs+Du3:%^CLEN%^VBACK%^RLEN%>užává K ;
++V+Pot+Prs+Pl1:%^CLEN%^VBACK%^RLEN%>užep K ;
++V+Pot+Prs+Pl2:%^WG%^VBACK%^RLEN%>švetteđ K ;
++V+Pot+Prs+Pl3:%^CLEN%^VBACK%^RLEN%>užeh K ;
+
 +V+Cond+Prs:%>čč EVEN_COND ;
+
++VAbess:%^RLEN%>uhánnáá K ;
++V+VAbess+Err/Orth:%^RLEN%>uhinnáá K ;
++V+VAbess+Err/Orth:%^RLEN%>uhennáá K ;
+
++V+Actio+Nom:%>m K ;
++V+Actio+Ill:%^RLEN%>umân K ;
++V+Actio+Ess:%^RLEN%>umin K ;
++V+Actio+Loc:%^RLEN%>umist K ;
++V+Actio+Com:%^RLEN%>dijn K ;
++V+Actio+Com+PxSg1:%^RLEN%>dijnân K ; ! XXX
++V+Actio+Com+PxSg2:%^RLEN%>dijnâd K ;
++V+Actio+Com+PxSg3:%^RLEN%>dijnis K ;
++V+Der/NomAg:ei4jee   FLAG_CTAHHEE ;
++V+Der/NomAct: FLAG_3KEPIDEM ;
++V+Ger:%^RLEN%>tijn K ; !aasâttijn asât%>dijn
 
 
 LEXICON C_PASS_RLEN_SH !!= * __@CODE@__ does not shorten vowel
@@ -4373,7 +4402,6 @@ LEXICON C_PASS_RLEN_SH !!= * __@CODE@__ does not shorten vowel
 +V+Der/InchL:%>škyett4 4SYLL_KYETTID ; !kulluuškuođij
 +V+Ind+Prs+ConNeg:%^CLEN%^VBACK%^RLEN%>u K ; !
 +V+Ind+Prt+ConNeg:%^CLEN%^VBACK%^RLEN%>m K ; !
-+V+Cond+Prs:%^CLEN%^VBACK%^RLEN%>učč EVEN_COND ;
 +V+PrfPrc:%^CLEN%^VBACK%^RLEN%>m K ; !puohtum
 
 +V+Ind+Prs+Sg1:%^CLEN%^VBACK%^RLEN%>um K ; ! vuoššuum
