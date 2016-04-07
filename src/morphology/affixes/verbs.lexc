@@ -374,13 +374,12 @@ LEXICON 2SYLL_AASSAD ! aassâđ
 +V+Pot+Prs: EVEN_POT_AASSAD ;
 +V+Cond+Prs:â%^WG%^RVSH%>čč EVEN_COND ;
 +V+Imprt: EVEN_IMPRT_AASSAD ;
-!+V+Der/Pass+V+IV+PrfPrc:u%^VHIGH%>m K ;
 +V+Der/Pass:u2 C_PASS_SH ; !  čääh%^RC -> á (VHINH RVSH) , a (VBACK RVSH)
 +V+Der/InchL:â%^WG%^RVSH%>škyett4 4SYLL_KYETTID ; !
-+V+Der/d:â%^WG%^RVSH%>d 3_KUIKETTID ; ! D
-+V+Der/st:â%^WG%^RVSH%>st 3_CIELATTID ; !
-+V+Der/tt:â%^WG%^RVSH%>tt 3_CIELATTID ; ! 
-+V+Der/alla:â%^RVSH%>i6l 4_KAVNATTATTAD ; !i6 is a fake vowel
++V+Der/d:âd%^WG%^VBACK 3_KUIKETTID ; ! 
++V+Der/st:âst%^WG%^VBACK 3_CIELATTID ; !
++V+Der/tt:âtt%^WG%^VBACK 3_CIELATTID ; ! 
++V+Der/l:âl 3_VYEJETTID ; 
 +Der/NomAg:e%^CLEN%^RVSH%>e FLAG_CTAHHEE ;
 
 
@@ -549,10 +548,10 @@ LEXICON 2SYLL_SPELLAD  !!= * __@CODE@__ Similar to 2SYLL_ETTAD, but less CSH, do
 +V+Cond+Prs:â%^WG%^VHIGH%>čč EVEN_COND ;
 +V+Imprt: EVEN_IMPRT_ETTAD ;
 +V+Der/InchL:â%^WG%^VHIGH%>škyett4 4SYLL_KYETTID ;
-+V+Der/d:â%^WG%>d 3_KUIKETTID ; ! 
-+V+Der/st:â%^WG%>st 3_CIELATTID ; !
-+V+Der/tt:â%^WG%>tt 3_CIELATTID ; ! 
-+V+Der/alla:â%^RVSH%>i6l 4_KAVNATTATTAD ; !i6 is a fake vowel
++V+Der/d:âd%^WG 3_KUIKETTID ; ! 
++V+Der/st:âst%^WG 3_CIELATTID ; !
++V+Der/tt:âtt%^WG 3_CIELATTID ; ! 
++V+Der/l:âl 3_LEKKASID ; !i6 is a fake vowel, perhaps not needed
 +V+Der/Pass:u2 C_PASS_SH ; !ettum ettui lekkum terppum
 
 
@@ -685,7 +684,6 @@ LEXICON 2SYLL_KAVNAD  !!= * __@CODE@__ as ETTAD but with VBACK, only RV ä in st
 +V+Der/st:â%^WG%>st 3_CIELATTID ; !
 +V+Der/tt:â%^WG%>tt 3_CIELATTID ; ! 
 +V+Der/l:âl 3_LEKKASID ; ! kaččâliđ
-+V+Der/alla:â%^RVSH%>i6l 4_KAVNATTATTAD ; !i6 is a fake vowel
 
 LEXICON VINFINITES_KAVNAD
 +Inf:â%^VBACK%>đ K ;
@@ -3561,27 +3559,25 @@ LEXICON 3_VYEJETTID  !!= * __@CODE@__ SM53. short V in Inf
 
 +V+Inf:%>iđ K ;
 
-+V+Ind+Prs+Sg1:%>âm K ;
++V+Ind+Prs+Sg1:%^CSH%>âm K ; ! csh for vatâlâm
 +V+Ind+Prs+Sg2:%>ah K ;
 +V+Ind+Prs+Sg3:%^RLEN%^SLEN    K ;
-+V+Ind+Prs+Du1:%>een K ;
++V+Ind+Prs+Du1:%^CSH%>een K ;
 +V+Ind+Prs+Du2:%^RLEN%^SLEN%>vettee K ;
-+V+Ind+Prs+Du3:%>ává   K ;
-+V+Ind+Prs+Pl1:%>ep K ;
++V+Ind+Prs+Du3:%^CSH%>ává   K ;
++V+Ind+Prs+Pl1:%^CSH%>ep K ;
 +V+Ind+Prs+Pl2:%^RLEN%^SLEN%>vetteđ K ;
-+V+Ind+Prs+Pl3:%>eh K ;
++V+Ind+Prs+Pl3:%^CSH%>eh K ;
 
-+V+Ind+Prt+Sg1:%>im K ;
-+V+Ind+Prt+Sg2:%>ih K ;
-+V+Ind+Prt+Sg3:%>ij    K ;
-
-+V+Ind+Prt+Du1:%>áim K ;
-+V+Ind+Prt+Du2:%>áid K ;
-+V+Ind+Prt+Du3:%>áin  K ;
-
-+V+Ind+Prt+Pl1:%>ijm K ;
-+V+Ind+Prt+Pl2:%>ijd K ;
-+V+Ind+Prt+Pl3:%>ii K ;
++V+Ind+Prt+Sg1:%^CSH%>im K ;
++V+Ind+Prt+Sg2:%^CSH%>ih K ;
++V+Ind+Prt+Sg3:%^CSH%>ij    K ;
++V+Ind+Prt+Du1:%^CSH%>áim K ;
++V+Ind+Prt+Du2:%^CSH%>áid K ;
++V+Ind+Prt+Du3:%^CSH%>áin  K ;
++V+Ind+Prt+Pl1:%^CSH%>ijm K ;
++V+Ind+Prt+Pl2:%^CSH%>ijd K ;
++V+Ind+Prt+Pl3:%^CSH%>ii K ;
 
 +V+Cond+Prs+Sg1:%>iččim K ;
 +V+Cond+Prs+Sg2:%>iččih K ;
