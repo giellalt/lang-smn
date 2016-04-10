@@ -394,9 +394,8 @@ LEXICON VINFINITES_AASSAD
 +PrfPrc:â%>m K ;
 +PrsPrc:e%^CLEN%^RVSH%>e K ; ! trigger for u > o
 
-+VAbess+Err/Orth:â%^WG%^RVSH%>hennáá K ;
-+VAbess+Err/Orth:â%^WG%^RVSH%>hinnáá K ;
-+VAbess:â%^WG%^RVSH%>hánnáá K ;
+
++VAbess:â%^WG%^RVSH VABESS ;
 
 +Actio+Com+PxSg1:â%^WG%^RVSH%>dijnân K ;
 +Actio+Com+PxSg2:â%^WG%^RVSH%>dijnâd K ;
@@ -408,6 +407,11 @@ LEXICON VINFINITES_AASSAD
 +Actio+Loc:â%^CSH%^RVSH%>mist K ;
 +Actio+Nom:â%>m K ;
 +Der/NomAct:â%>m FLAG_3LITTER ;
+
+LEXICON VABESS
+         :%>hánnáá K ;
++Err/Orth:%>hennáá K ;
++Err/Orth:%>hinnáá K ;
 
 LEXICON EVEN_IND_AASSAD
 +Prs+Sg1:â%^WG%>m K ; 
@@ -457,7 +461,8 @@ LEXICON EVEN_IMPRT_AASSAD
 LEXICON 2SYLL_VIEZZAD  !!= * __@CODE@__
 
 +V:  VINFINITES_VIEZZAD ;
-+V+Ind: EVEN_IND_VIEZZAD ;
++V+Ind+Prs: EVEN_IND_PRS_VIEZZAD ;
++V+Ind+Prt: EVEN_IND_PRT_AD ;
 +V+Pot+Prs: EVEN_POT_VIEZZAD ;
 +V+Cond+Prs:â%^WG%> EVEN_COND ;
 +V+Imprt: EVEN_IMPRT_VIEZZAD ;
@@ -481,8 +486,6 @@ LEXICON VINFINITES_VIEZZAD
 +Der/NomAg:e%^CLEN%>e FLAG_CTAHHEE ;
 !+Der/NomAg:e%^CLEN%^VHIGH%>e FLAG_CTAHHEE ; !kemppâsâddee
 
-+VAbess+Err/Orth:â%^WG%>hennáá K ;
-+VAbess+Err/Orth:â%^WG%>hinnáá K ;
 +VAbess:â%^WG%>hánnáá K ;
 
 +Actio+Com+PxSg1:â%^WG%>dijnân K ;
@@ -497,26 +500,27 @@ LEXICON VINFINITES_VIEZZAD
 !+Der/NomAct:â%^VHIGH%^RLEN%>m FLAG_3LITTER ;
 +Der/NomAct:â%^VHIGH%>m FLAG_3LITTER ;
 
-LEXICON EVEN_IND_VIEZZAD
-+Prs+Sg1:â%^WG%>m K ;     ! viežâm
-+Prs+Sg2:a%^WG%>h K ;     ! viežah
-+Prs+Sg3:á%^VHIGH K ;       ! viäžžá
-+Prs+Du1:e%>en K ;  ! viežžeen
-+Prs+Du2:â%>vettee K ; ! viežžâvettee
-+Prs+Du3:â%>v K ;         ! viežžâv
-+Prs+Pl1:â%>p K ;	! viežžâp
-+Prs+Pl2:â%>vetteđ K ;  ! viežžâvetteđ
-+Prs+Pl3:i%>h K ;	! viežžih
+LEXICON EVEN_IND_PRS_VIEZZAD
++Sg1:â%^WG%>m K ;     ! viežâm
++Sg2:a%^WG%>h K ;     ! viežah
++Sg3:á%^VHIGH K ;       ! viäžžá
++Du1:e%>en K ;  ! viežžeen
++Du2:â%>vettee K ; ! viežžâvettee
++Du3:â%>v K ;         ! viežžâv
++Pl1:â%>p K ;	! viežžâp
++Pl2:â%>vetteđ K ;  ! viežžâvetteđ
++Pl3:i%>h K ;	! viežžih
 
-+Prt+Sg1:i%>m K ; ! viežžim
-+Prt+Sg2:i%>h K ; ! viežžih
-+Prt+Sg3:â%^WG%>i K ; ! viežâi
-+Prt+Du1:á%^WG%>im K ; ! viežáim
-+Prt+Du2:á%^WG%>id K ; ! viežáid
-+Prt+Du3:á%^WG%>in K ; ! viežáin
-+Prt+Pl1:â%^WG%>im K ;	! viežâim
-+Prt+Pl2:â%^WG%>id K ; ! viežâid
-+Prt+Pl3:i%>i3 K ;	! viežžii
+LEXICON EVEN_IND_PRT_AD
++Sg1:i%>m K ; ! viežžim
++Sg2:i%>h K ; ! viežžih
++Sg3:â%^WG%>i K ; ! viežâi
++Du1:á%^WG%>im K ; ! viežáim
++Du2:á%^WG%>id K ; ! viežáid
++Du3:á%^WG%>in K ; ! viežáin
++Pl1:â%^WG%>im K ;	! viežâim
++Pl2:â%^WG%>id K ; ! viežâid
++Pl3:i%>i3 K ;	! viežžii
 
 LEXICON EVEN_IMPRT_VIEZZAD
 +Sg2:â%^WG%> K ; ! viežâ
@@ -543,7 +547,8 @@ LEXICON EVEN_POT_VIEZZAD !!= * __@CODE@__
 
 LEXICON 2SYLL_SPELLAD  !!= * __@CODE@__ Similar to 2SYLL_ETTAD, but less CSH, don't know yet how much.
 +V:  VINFINITES_ETTAD ;
-+V+Ind: EVEN_IND_SPELLAD ;
++V+Ind+Prs: EVEN_IND_PRS_SPELLAD ;
++V+Ind+Prt: EVEN_IND_PRT_SPELLAD ;
 +V+Pot+Prs: EVEN_POT_ETTAD ;
 +V+Cond+Prs:â%^WG%^VHIGH%> EVEN_COND ;
 +V+Imprt: EVEN_IMPRT_ETTAD ;
@@ -555,27 +560,28 @@ LEXICON 2SYLL_SPELLAD  !!= * __@CODE@__ Similar to 2SYLL_ETTAD, but less CSH, do
 +V+Der/Pass:u2 C_PASS_SH ; !ettum ettui lekkum terppum
 
 
-LEXICON EVEN_IND_SPELLAD
-+Prs+Sg1:â%^WG%^VHIGH%^RLEN%>m K ;     
-+Prs+Sg2:a%^WG%^VHIGH%^RLEN%>h K ;     
-+Prs+Sg3:á%^VHIGH K ;       ! iätá (CSH tt-t), šadda, viggá
-!+Prs+Sg3:á%^CSH K ;       ! iätá (CSH tt-t), šadda, viggá
-+Prs+Du1:e%^CLEN%>en K ;  
-+Prs+Du2:â%>vettee K ; ! etâvettee (CSH) šoddâvettee, viggâvettee
-+Prs+Du3:â%^VHIGH%>v K ;         
-+Prs+Pl1:â%>p K ;             
-+Prs+Pl2:â%^VHIGH%>vetteđ K ;  
-+Prs+Pl3:i%>h K ;  ! spellih
+LEXICON EVEN_IND_PRS_SPELLAD
++Sg1:â%^WG%^VHIGH%^RLEN%>m K ;     
++Sg2:a%^WG%^VHIGH%^RLEN%>h K ;     
++Sg3:á%^VHIGH K ;       ! iätá (CSH tt-t), šadda, viggá
+s+Sg3:á%^CSH K ;       ! iätá (CSH tt-t), šadda, viggá
++Du1:e%^CLEN%>en K ;  
++Du2:â%>vettee K ; ! etâvettee (CSH) šoddâvettee, viggâvettee
++Du3:â%^VHIGH%>v K ;         
++Pl1:â%>p K ;             
++Pl2:â%^VHIGH%>vetteđ K ;  
++Pl3:i%>h K ;  ! spellih
 
-+Prt+Sg1:i%>m K ;
-+Prt+Sg2:i%>h K ;
-+Prt+Sg3:â%^WG%^RLEN%>i3 K ;
-+Prt+Du1:á%^WG%^RLEN%>im K ; ! ETTAD RLEN
-+Prt+Du2:á%^WG%^RLEN%>id K ; ! ETTAD RLEN
-+Prt+Du3:á%^WG%^RLEN%>in K ; ! ETTAD RLEN
-+Prt+Pl1:â%^WG%^RLEN%>im K ;
-+Prt+Pl2:â%^WG%^RLEN%>id K ;
-+Prt+Pl3:i%^CLEN%>i3 K ;
+LEXICON EVEN_IND_PRT_SPELLAD
++Sg1:i%>m K ;
++Sg2:i%>h K ;
++Sg3:â%^WG%^RLEN%>i3 K ;
++Du1:á%^WG%^RLEN%>im K ; ! ETTAD RLEN
++Du2:á%^WG%^RLEN%>id K ; ! ETTAD RLEN
++Du3:á%^WG%^RLEN%>in K ; ! ETTAD RLEN
++Pl1:â%^WG%^RLEN%>im K ;
++Pl2:â%^WG%^RLEN%>id K ;
++Pl3:i%^CLEN%>i3 K ;
 
 
 LEXICON 2SYLL_ETTAD  !!= * __@CODE@__
@@ -583,7 +589,8 @@ LEXICON 2SYLL_ETTAD  !!= * __@CODE@__
 ! ettâđ	 | eeđâm   | iä-á | eteh    | ettim  | e%^RVtt4 
 
 +V:  VINFINITES_ETTAD ;
-+V+Ind: EVEN_IND_ETTAD ;
++V+Ind+Prs: EVEN_IND_PRS_ETTAD ;
++V+Ind+Prt: EVEN_IND_PRT_SPELLAD ;
 +V+Pot+Prs: EVEN_POT_ETTAD ;
 +V+Cond+Prs:â%^WG%^VHIGH%> EVEN_COND ;
 +V+Imprt: EVEN_IMPRT_ETTAD ;
@@ -609,9 +616,7 @@ LEXICON VINFINITES_ETTAD
 +PrsPrc:e%^CLEN%>e K ; ! trigger for u > o
 +Der/NomAg:e%^CLEN%>e FLAG_CTAHHEE ; !tobdee NB! pargee ok
 
-+VAbess+Err/Orth:â%^WG%^VHIGH%>hennáá K ;
-+VAbess+Err/Orth:â%^WG%^VHIGH%>hinnáá K ;
-+VAbess:â%^WG%^VHIGH%>hánnáá K ;
++VAbess:â%^WG%^VHIGH VABESS ;
 
 +Actio+Com+PxSg1:â%^WG%^VHIGH%>dijnân K ;
 +Actio+Com+PxSg2:â%^WG%^VHIGH%>dijnâd K ;
@@ -624,26 +629,17 @@ LEXICON VINFINITES_ETTAD
 +Actio+Nom:â%^VHIGH%>m K ;
 +Der/NomAct:â%^VHIGH%>m FLAG_3LITTER ;
 
-LEXICON EVEN_IND_ETTAD
-+Prs+Sg1:â%^WG%^VHIGH%^RLEN%>m K ;     
-+Prs+Sg2:a%^WG%^VHIGH%^RLEN%>h K ;     
-+Prs+Sg3:á%^CSH%^VHIGH K ;       ! iätá (CSH tt-t), šadda, viggá
-+Prs+Du1:e%^CLEN%>en K ;  
-+Prs+Du2:â%^CSH%>vettee K ; ! etâvettee (CSH) šoddâvettee, viggâvettee
-+Prs+Du3:â%^VHIGH%>v K ;         
-+Prs+Pl1:â%>p K ;             
-+Prs+Pl2:â%^CSH%^VHIGH%>vetteđ K ;  
-+Prs+Pl3:e%^CSH%>h K ;  ! loheh
+LEXICON EVEN_IND_PRS_ETTAD
++Sg1:â%^WG%^VHIGH%^RLEN%>m K ;     
++Sg2:a%^WG%^VHIGH%^RLEN%>h K ;     
++Sg3:á%^CSH%^VHIGH K ;       ! iätá (CSH tt-t), šadda, viggá
++Du1:e%^CLEN%>en K ;  
++Du2:â%^CSH%>vettee K ; ! etâvettee (CSH) šoddâvettee, viggâvettee
++Du3:â%^VHIGH%>v K ;         
++Pl1:â%>p K ;             
++Pl2:â%^CSH%^VHIGH%>vetteđ K ;  
++Pl3:e%^CSH%>h K ;  ! loheh
 
-+Prt+Sg1:i%>m K ;
-+Prt+Sg2:i%>h K ;
-+Prt+Sg3:â%^WG%^RLEN%>i3 K ;
-+Prt+Du1:á%^WG%^RLEN%>im K ; ! ETTAD RLEN eeđáim
-+Prt+Du2:á%^WG%^RLEN%>id K ; ! ETTAD RLEN eeđáid
-+Prt+Du3:á%^WG%^RLEN%>in K ; ! ETTAD RLEN eeđáin
-+Prt+Pl1:â%^WG%^RLEN%>im K ;
-+Prt+Pl2:â%^WG%^RLEN%>id K ;
-+Prt+Pl3:i%^CLEN%>i3 K ;
 
 LEXICON EVEN_IMPRT_ETTAD
 +Sg2:â%^WG%^RLEN%> K ;
@@ -701,9 +697,7 @@ LEXICON VINFINITES_KAVNAD
 +PrsPrc:e%^CLEN%>e K ; ! trigger for u > o
 +Der/NomAg:e%^CLEN%>e FLAG_CTAHHEE ; !tobdee NB! pargee ok
 
-+VAbess+Err/Orth:â%^WG%^VBACK%>hennáá K ;
-+VAbess+Err/Orth:â%^WG%^VBACK%>hinnáá K ;
-+VAbess:â%^WG%^VBACK%>hánnáá K ;
++VAbess:â%^WG%^VBACK VABESS ;
 
 +Actio+Com+PxSg1:â%^WG%^VBACK%>dijnân K ;
 +Actio+Com+PxSg2:â%^WG%^VBACK%>dijnâd K ;
@@ -791,9 +785,7 @@ LEXICON VINFINITES_KALGAD
 +PrsPrc:e%^CLEN%>e K ; ! trigger for u > o
 +Der/NomAg:e%^CLEN%>e FLAG_CTAHHEE ;
 
-+VAbess+Err/Orth:â%^WG%^VBACK%>hennáá K ;
-+VAbess+Err/Orth:â%^WG%^VBACK%>hinnáá K ;
-+VAbess:â%^WG%^VBACK%>hánnáá K ;
++VAbess:â%^WG%^VBACK VABESS ;
 
 +Actio+Com+PxSg1:â%^WG%^VBACK%>dijnân K ;
 +Actio+Com+PxSg2:â%^WG%^VBACK%>dijnâd K ;
@@ -877,9 +869,7 @@ LEXICON VINFINITES_KOLGAD
 +PrsPrc:e%^CLEN%>e K ; ! trigger for u > o
 +Der/NomAg:e%^CLEN%>e FLAG_CTAHHEE ;
 
-+VAbess+Err/Orth:â%^WG%^VHIGH%>hennáá K ;
-+VAbess+Err/Orth:â%^WG%^VHIGH%>hinnáá K ;
-+VAbess:â%^WG%^VHIGH%>hánnáá K ;
++VAbess:â%^WG%^VHIGH VABESS ;
 
 +Actio+Com+PxSg1:â%^WG%^VHIGH%>dijnân K ;
 +Actio+Com+PxSg2:â%^WG%^VHIGH%>dijnâd K ;
@@ -1007,9 +997,7 @@ LEXICON VINFINITES_SODDAD
 +PrsPrc:e%^CLEN%>e K ; ! trigger for u > o
 +Der/NomAg:e%^CLEN%>e FLAG_CTAHHEE ;
 
-+VAbess+Err/Orth:â%^WG%^VHIGH%>hennáá K ;
-+VAbess+Err/Orth:â%^WG%^VHIGH%>hinnáá K ;
-+VAbess:â%^WG%^VHIGH%>hánnáá K ;
++VAbess:â%^WG%^VHIGH VABESS ;
 
 +Actio+Com+PxSg1:â%^WG%^VHIGH%>dijnân K ;
 +Actio+Com+PxSg2:â%^WG%^VHIGH%>dijnâd K ;
@@ -1096,9 +1084,7 @@ LEXICON VINFINITES_TOOLLAD
 +PrsPrc:e%^CLEN%>e K ; ! trigger for u > o
 +Der/NomAg:e%^CLEN%>e FLAG_CTAHHEE ;
 
-+VAbess+Err/Orth:â%^WG%^VBACK%>hennáá K ;
-+VAbess+Err/Orth:â%^WG%^VBACK%>hinnáá K ;
-+VAbess:â%^WG%^VBACK%>hánnáá K ;
++VAbess:â%^WG%^VBACK VABESS ;
 
 +Actio+Com+PxSg1:â%^WG%^VBACK%>dijnân K ;
 +Actio+Com+PxSg2:â%^WG%^VBACK%>dijnâd K ;
@@ -1184,9 +1170,7 @@ LEXICON VINFINITES_OPPAD
 +PrsPrc:e%^CLEN%>e K ; ! trigger for u > o
 +Der/NomAg:e%^CLEN%>e FLAG_CTAHHEE ;
 
-+VAbess+Err/Orth:â%^WG%^VBACK%>hennáá K ;
-+VAbess+Err/Orth:â%^WG%^VBACK%>hinnáá K ;
-+VAbess:â%^WG%^VBACK%^RVSH%>hánnáá K ;
++VAbess:â%^WG%^VBACK%^RVSH VABESS ;
 
 +Actio+Com+PxSg1:â%^WG%^VBACK%>dijnân K ;
 +Actio+Com+PxSg2:â%^WG%^VBACK%>dijnâd K ;
@@ -1322,9 +1306,7 @@ LEXICON VINFINITES_MOONNAD
 +PrsPrc:e%^CLEN%>e K ; ! trigger for u > o
 +Der/NomAg:e%^CLEN%>e FLAG_CTAHHEE ;
 
-+VAbess+Err/Orth:â%^WG%^VHIGH%>hennáá K ;
-+VAbess+Err/Orth:â%^WG%^VHIGH%>hinnáá K ;
-+VAbess:â%^WG%^VHIGH%>hánnáá K ;
++VAbess:â%^WG%^VHIGH VABESS ;
 
 +Actio+Com+PxSg1:â%^WG%^VHIGH%>dijnân K ;
 +Actio+Com+PxSg2:â%^WG%^VHIGH%>dijnâd K ;
@@ -1405,9 +1387,7 @@ LEXICON VINFINITES_VIISSAD
 +PrsPrc:e%^CLEN%>e K ; ! trigger for u > o
 +Der/NomAg:e%^CLEN%>e FLAG_CTAHHEE ;
 
-+VAbess+Err/Orth:â%^WG%^RVSH%>hennáá K ;
-+VAbess+Err/Orth:â%^WG%^RVSH%>hinnáá K ;
-+VAbess:â%^WG%^RVSH%>hánnáá K ;
++VAbess:â%^WG%^RVSH VABESS ;
 
 +Actio+Com+PxSg1:â%^WG%>dijnân K ;
 +Actio+Com+PxSg2:â%^WG%>dijnâd K ;
@@ -1466,42 +1446,35 @@ LEXICON EVEN_IMPRT_VIISSAD
 
 LEXICON 2SYLL_CIEPPAD  !!= * __@CODE@__ like 2SYLL_KIESSAD but less CSH
 +V:  VINFINITES_SODDAD ;
-+V+Ind: EVEN_IND_CIEPPAD ;
-+V+Pot+Prs: EVEN_POT_KIESSAD ;
++V+Ind+Prs: EVEN_IND_PRS_CIEPPAD ;
++V+Ind+Prt: EVEN_IND_PRT_AD ;
++V+Pot+Prs: EVEN_POT_VIEZZAD ;
 +V+Cond+Prs:â%^WG%> EVEN_COND ;
-+V+Imprt: EVEN_IMPRT_KIESSAD ;
++V+Imprt: EVEN_IMPRT_VIEZZAD ;
 +V+Der/InchL:â%^WG%>škyett4 4SYLL_KYETTID ;
 +V+Der/d:â%^WG%>d 3_KUIKETTID ; ! 
 +V+Der/st:â%^WG%>st 3_DERIVED_ST ; !
 +V+Der/tt:â%^WG%>tt 3_DERIVED_TT ; ! 
 
-LEXICON EVEN_IND_CIEPPAD
-+Prs+Sg1:â%^WG%>m K ;        
-+Prs+Sg2:â%^WG%>h K ;        
-+Prs+Sg3:á%^VHIGH K ;       		   
-+Prs+Du1:e%>en K ;  			   
-+Prs+Du2:â%>vettee K ;  
-+Prs+Du3:â%>v K ;            
-+Prs+Pl1:â%>p K ;            
-+Prs+Pl2:â%>vetteđ K ;  
-+Prs+Pl3:i%>h K ;       
+LEXICON EVEN_IND_PRS_CIEPPAD
++Sg1:â%^WG%>m K ;        
++Sg2:â%^WG%>h K ;        
++Sg3:á%^VHIGH K ;       		   
++Du1:e%>en K ;  			   
++Du2:â%>vettee K ;  
++Du3:â%>v K ;            
++Pl1:â%>p K ;            
++Pl2:â%>vetteđ K ;  
++Pl3:i%>h K ;       
 
-+Prt+Sg1:i%>m K ; 
-+Prt+Sg2:i%>h K ; 
-+Prt+Sg3:â%^WG%>i K ; 
-+Prt+Du1:á%^WG%>im K ; 
-+Prt+Du2:á%^WG%>id K ; 
-+Prt+Du3:á%^WG%>in K ; 
-+Prt+Pl1:â%^WG%>im K ; 
-+Prt+Pl2:â%^WG%>id K ; 
-+Prt+Pl3:i%>i3 K ; 	
 
 LEXICON 2SYLL_KIESSAD  !!= * __@CODE@__
 +V: VINFINITES_KIESSAD ;
-+V+Ind: EVEN_IND_KIESSAD ;
-+V+Pot+Prs: EVEN_POT_KIESSAD ;
++V+Ind+Prs: EVEN_IND_PRS_KIESSAD ;
++V+Ind+Prt: EVEN_IND_PRT_AD ;
++V+Pot+Prs: EVEN_POT_VIEZZAD ;
 +V+Cond+Prs:â%^WG%> EVEN_COND ;
-+V+Imprt: EVEN_IMPRT_KIESSAD ;
++V+Imprt: EVEN_IMPRT_VIEZZAD ;
 +V+Der/InchL:â%^WG%>škyett4 4SYLL_KYETTID ;
 +V+Der/d:â%^WG%>d 3_KUIKETTID ; ! 
 +V+Der/st:â%^WG%>st 3_DERIVED_ST ; !
@@ -1521,9 +1494,7 @@ LEXICON VINFINITES_KIESSAD
 +PrsPrc:e%^CLEN%>e K ; ! trigger for u > o
 +Der/NomAg:e%^CLEN%>e FLAG_CTAHHEE ;
 
-+VAbess+Err/Orth:â%^WG%>hennáá K ;
-+VAbess+Err/Orth:â%^WG%>hinnáá K ;
-+VAbess:â%^WG%>hánnáá K ;
++VAbess:â%^WG VABESS ;
 
 +Actio+Com+PxSg1:â%^WG%>dijnân K ;
 +Actio+Com+PxSg2:â%^WG%>dijnâd K ;
@@ -1536,47 +1507,19 @@ LEXICON VINFINITES_KIESSAD
 +Actio+Nom:â%>m K ;
 +Der/NomAct:â%>m FLAG_3LITTER ;
 
-LEXICON EVEN_IND_KIESSAD
-+Prs+Sg1:â%^WG%>m K ;        
-+Prs+Sg2:â%^WG%>h K ;        
-+Prs+Sg3:á%^CSH%^VHIGH K ;       		   
-+Prs+Du1:e%>en K ;  			   
-+Prs+Du2:â%^CSH%>vettee K ;  
-+Prs+Du3:â%>v K ;            
-+Prs+Pl1:â%>p K ;            
-+Prs+Pl2:â%^CSH%>vetteđ K ;  
-+Prs+Pl3:i%^CSH%>h K ;       
+LEXICON EVEN_IND_PRS_KIESSAD
++Sg1:â%^WG%>m K ;        
++Sg2:â%^WG%>h K ;        
++Sg3:á%^CSH%^VHIGH K ;       		   
++Du1:e%>en K ;  			   
++Du2:â%^CSH%>vettee K ;  
++Du3:â%>v K ;            
++Pl1:â%>p K ;            
++Pl2:â%^CSH%>vetteđ K ;  
++Pl3:i%^CSH%>h K ;       
 
-+Prt+Sg1:i%>m K ; 
-+Prt+Sg2:i%>h K ; 
-+Prt+Sg3:â%^WG%>i K ; 
-+Prt+Du1:á%^WG%>im K ; 
-+Prt+Du2:á%^WG%>id K ; 
-+Prt+Du3:á%^WG%>in K ; 
-+Prt+Pl1:â%^WG%>im K ; 
-+Prt+Pl2:â%^WG%>id K ; 
-+Prt+Pl3:i%>i3 K ; 	
 
-LEXICON EVEN_POT_KIESSAD !!= * __@CODE@__
-+Sg1:e%>em K ;
-+Sg2:e%>eh K ;
-+Sg3:â%^WG%>š K ;
-+Du1:â%^WG%>žeen K ;
-+Du2:â%^WG%>švettee K ;
-+Du3:â%^WG%>žává K ;
-+Pl1:â%^WG%>žep K ;
-+Pl2:â%^WG%>švetteđ K ;
-+Pl3:â%^WG%>žeh K ;
 
-LEXICON EVEN_IMPRT_KIESSAD
-+Sg2:â%^WG%> K ;
-+Sg3:u%^WG%^VHIGH%>s K ;
-+Du1:o%^VHIGH%>on K ;
-+Du2:e%>e K ;
-+Du3:u%^VHIGH%>s K ;
-+Pl1:u%^VHIGH%>p K ;
-+Pl2:â%>đ K ;
-+Pl3:u%^VHIGH%>s K ;
 
 LEXICON 2SYLL_VUOLLAD  !!= * __@CODE@__ ye to ua vyešš
 +V:  VINFINITES_2SYLL_VUOLLAD ;
@@ -1604,9 +1547,7 @@ LEXICON VINFINITES_2SYLL_VUOLLAD
 +PrsPrc:e%>e K ; 
 +Der/NomAg:e%>e FLAG_CTAHHEE ;
 
-+VAbess+Err/Orth:â%^WG%^VBACK%^RLEN%>hennáá K ;
-+VAbess+Err/Orth:â%^WG%^VBACK%^RLEN%>hinnáá K ;
-+VAbess:â%^WG%^VBACK%^RLEN%>hánnáá K ;
++VAbess:â%^WG%^VBACK%^RLEN VABESS ;
 
 +Actio+Com+PxSg1:â%^WG%^VBACK%^RLEN%>dijnân K ;
 +Actio+Com+PxSg2:â%^WG%^VBACK%^RLEN%>dijnâd K ;
@@ -1687,9 +1628,7 @@ LEXICON VINFINITES_2SYLL_RUOTTAD
 +PrsPrc:e%>e K ; 
 +Der/NomAg:e%>e FLAG_CTAHHEE ;
 
-+VAbess+Err/Orth:â%^WG%^VBACK%^RLEN%>hennáá K ;
-+VAbess+Err/Orth:â%^WG%^VBACK%^RLEN%>hinnáá K ;
-+VAbess:â%^WG%^VBACK%^RLEN%>hánnáá K ;
++VAbess:â%^WG%^VBACK%^RLEN VABESS ;
 
 +Actio+Com+PxSg1:â%^WG%^VBACK%^RLEN%>dijnân K ;
 +Actio+Com+PxSg2:â%^WG%^VBACK%^RLEN%>dijnâd K ;
@@ -1785,9 +1724,7 @@ LEXICON VINFINITES_ED
 +PrsPrc:e%>e K ;
 +Der/NomAg:e%>e FLAG_CTAHHEE ; !paldee muttee kirdee hurgee ok
 
-+VAbess+Err/Orth:e%^WG%>hennáá K ;
-+VAbess+Err/Orth:e%^WG%>hinnáá K ;
-+VAbess:e%^WG%>hánnáá K ;
++VAbess:e%^WG VABESS ;
 
 +Actio+Com+PxSg1:e%^WG%>dijnân K ;
 +Actio+Com+PxSg2:e%^WG%>dijnâd K ;
@@ -1880,9 +1817,7 @@ LEXICON VINFINITES_PIHTED
 +PrsPrc:e%>e K ;
 +Der/NomAg:ee FLAG_CTAHHEE ;
 
-+VAbess+Err/Orth:e%^WG%>hennáá K ;
-+VAbess+Err/Orth:e%^WG%>hinnáá K ;
-+VAbess:e%^WG%>hánnáá K ;
++VAbess:e%^WG VABESS ;
 
 +Actio+Com+PxSg1:e%^WG%>dijnân K ;
 +Actio+Com+PxSg2:e%^WG%>dijnâd K ;
@@ -1961,9 +1896,7 @@ LEXICON VINFINITES_EED
 +PrsPrc:e%^CLEN%>e K ;
 +Der/NomAg:e%^CLEN%>e FLAG_CTAHHEE ; !accee ok
 
-+VAbess+Err/Orth:e%^WG%>hennáá K ;
-+VAbess+Err/Orth:e%^WG%>hinnáá K ;
-+VAbess:e%^WG%>hánnáá K ;
++VAbess:e%^WG VABESS ;
 
 +Actio+Com+PxSg1:e%^WG%>dijnân K ;
 +Actio+Com+PxSg2:e%^WG%>dijnâd K ;
@@ -2042,9 +1975,7 @@ LEXICON VINFINITES_PAHHEED
 +PrsPrc:e%>e K ;
 +Der/NomAg:e%>e FLAG_CTAHHEE ; !accee ok
 
-+VAbess+Err/Orth:e%^WG%>hennáá K ;
-+VAbess+Err/Orth:e%^WG%>hinnáá K ;
-+VAbess:e%^WG%>hánnáá K ;
++VAbess:e%^WG VABESS ;
 
 +Actio+Com+PxSg1:e%^WG%>dijnân K ;
 +Actio+Com+PxSg2:e%^WG%>dijnâd K ;
@@ -2120,12 +2051,8 @@ LEXICON VINFINITES_UADDID
 +PrsPrc:e%>e K ;
 +Der/NomAg:ee FLAG_CTAHHEE ;
 
-+VAbess+Err/Orth:i%^WG%>hennáá K ;
-+VAbess+Err/Orth:e%^WG%>hennáá K ;
-+VAbess+Err/Orth:i%^WG%>hinnáá K ;
-+VAbess+Err/Orth:e%^WG%>hinnáá K ;
-+VAbess:i%^WG%>hánnáá K ;
-+VAbess:e%^WG%>hánnáá K ;
++VAbess:i%^WG VABESS ;
++VAbess:e%^WG VABESS ;
 
 +Actio+Com+PxSg1:i%^WG%>dijnân K ;
 +Actio+Com+PxSg1+Err/Orth:e%^WG%>dijnân K ;
@@ -2213,10 +2140,7 @@ LEXICON VINFINITES_UAINID
 +PrsPrc:e%>e K ;
 +Der/NomAg:ee FLAG_CTAHHEE ;
 
-+VAbess+Err/Orth:i%^WG%>hennáá K ;
-+VAbess+Err/Orth:i%^WG%>hinnáá K ;
-+VAbess:i%^WG%>hánnáá K ;
-+VAbess+Err/Orth:e%^WG%>hánnáá K ;
++VAbess:i%^WG VABESS ;
 
 +Actio+Com+PxSg1:i%^WG%>dijnân K ;
 +Actio+Com+PxSg2:i%^WG%>dijnâd K ;
@@ -2302,9 +2226,7 @@ LEXICON VINFINITES_CAALLID
 +PrsPrc:e%^RVSH%>e K ;
 +Der/NomAg:e%^RVSH%>e FLAG_CTAHHEE ;
 
-+VAbess+Err/Orth:i%^WG%^RVSH%>hennáá K ;
-+VAbess+Err/Orth:i%^WG%^RVSH%>hinnáá K ;
-+VAbess:i%^WG%^RVSH%>hánnáá K ;
++VAbess:i%^WG%^RVSH VABESS ;
 
 +Actio+Com+PxSg1:i%^WG%^RVSH%>dijnân K ;
 +Actio+Com+PxSg2:i%^WG%^RVSH%>dijnâd K ;
@@ -2401,9 +2323,7 @@ LEXICON VINFINITES_ID
 +Imprt+ConNeg:i K ;
 +Ind+Prs+ConNeg:i%^WG%^RLEN K ;
 !+V+Sg2:i%^WG%^VHIGH%^RLEN%> K ;  ! This is wrong, check this
-+VAbess+Err/Orth:i%^WG%>hennáá K ;
-+VAbess+Err/Orth:i%^WG%>hinnáá K ;
-+VAbess:i%^WG%^RVSH%>hánnáá K ;
++VAbess:i%^WG%^RVSH VABESS ;
 
 !+Der/Pass+V+IV+PrfPrc:u%>m K ;  !  ! MISSING
 +PrfPrc:á%^VHIGH%>m K ;  ! 
@@ -2469,9 +2389,7 @@ LEXICON VINFINITES_EELLID !
 +PrsPrc:e%^CLEN%^RVSH%>e K ;
 +Der/NomAg:e%^CLEN%^RVSH%>e FLAG_CTAHHEE ; !vuástáväldee, oovdânpyehtee ok
 +Ind+Prs+ConNeg+Err/Orth:i%^WG K ;
-+VAbess+Err/Orth:e%^WG%^RVSH%>hennáá K ;
-+VAbess+Err/Orth:e%^WG%^RVSH%>hinnáá K ;
-+VAbess:e%^WG%^RVSH%>hánnáá K ;
++VAbess:e%^WG%^RVSH VABESS ;
 
 +Actio+Com:e%^WG%^RVSH%>dijn K ;
 +Actio+Ess:i%^CSH%^RVSH%>min K ;
@@ -2538,9 +2456,7 @@ LEXICON VINFINITES_KEESSID !
 +PrsPrc:e%^CLEN%^RVSH%>e K ;
 +Der/NomAg:e%^CLEN%^RVSH%>e FLAG_CTAHHEE ; !vuástáväldee, oovdânpyehtee ok
 +Ind+Prs+ConNeg:i%^WG K ;
-+VAbess+Err/Orth:i%^WG%^RVSH%>hennáá K ;
-+VAbess+Err/Orth:i%^WG%^RVSH%>hinnáá K ;
-+VAbess:i%^WG%^RVSH%>hánnáá K ;
++VAbess:i%^WG%^RVSH VABESS ;
 
 +Actio+Com:i%^WG%^RVSH%>dijn K ;
 +Actio+Ess:i%^CSH%^RVSH%>min K ;
@@ -2586,7 +2502,7 @@ LEXICON 2SYLL_PAACCID  !!= * __@CODE@__
 !+V+Sg2:i%^WG%^VHIGH%> K ;  ! 
 +V+VAbess+Err/Orth:i%^WG%>hennáá K ;
 +V+VAbess+Err/Orth:i%^WG%>hinnáá K ;
-+V+VAbess:i%^WG%^RVSH%>hánnáá K ;
++V+VAbess:i%^WG%^RVSH VABESS ;
 +V+Der/InchL:e%^WG%^RVSH%>škyett4 4SYLL_KYETTID ;
 +V+Der/st:i%^WG%>st 3_DERIVED_ST ; 
 +V+Der/tt:i%^WG%>tt 3_DERIVED_TT ; 
@@ -2743,7 +2659,7 @@ LEXICON 2SYLL_VYEIJID_COMMON  !!= * __@CODE@__
 !+V+Sg2:e%^WG%^VHIGH%^RLEN%> K ;  ! 
 +V+VAbess+Err/Orth:e%^WG%^RVSH%>hennáá K ;
 +V+VAbess+Err/Orth:e%^WG%^RVSH%>hinnáá K ;
-+V+VAbess:e%^WG%^RVSH%>hánnáá K ;
++V+VAbess:e%^WG%^RVSH VABESS ;
 
 +V+Actio+Com+PxSg1:e%^WG%^RVSH%>dijnân K ;
 +V+Actio+Com+PxSg2:e%^WG%^RVSH%>dijnâd K ;
@@ -2823,9 +2739,7 @@ LEXICON VINFINITES_KASTID !kä%^RVst
 +PrsPrc:e%>e K ;
 +Der/NomAg:ee FLAG_CTAHHEE ;
 
-+VAbess+Err/Orth:i%^WG%>hennáá K ;
-+VAbess+Err/Orth:i%^WG%>hinnáá K ;
-+VAbess:i%^WG%>hánnáá K ;
++VAbess:i%^WG VABESS ;
 
 +Actio+Com:i%>dijn K ;
 +Actio+Ess:i%>min K ;
@@ -2903,9 +2817,7 @@ LEXICON VINFINITES_TIETTID
 +Der/NomAg:e%^RVSH%>e FLAG_CTAHHEE ;
 
 +Ind+Prs+ConNeg+Err/Orth:e%^RVSH K ;
-+VAbess+Err/Orth:e%^WG%^RVSH%>hennáá K ;
-+VAbess+Err/Orth:e%^WG%^RVSH%>hinnáá K ;
-+VAbess:e%^WG%^RVSH%>hánnáá K ;
++VAbess:e%^WG%^RVSH VABESS ;
 
 +Actio+Com+PxSg1:e%^WG%>dijnân K ;
 +Actio+Com+PxSg2:e%^WG%>dijnâd K ;
@@ -3006,9 +2918,7 @@ LEXICON VINFINITES_OD
 +PrfPrc:om K ;
 +PrsPrc:o%>o K ;
 
-+VAbess+Err/Orth:o%^WG%>hennáá K ;
-+VAbess+Err/Orth:o%^WG%>hinnáá K ;
-+VAbess:o%^WG%>hánnáá K ;
++VAbess:o%^WG VABESS ;
 
 +Actio+Com+PxSg1:o%^WG%>dijnân K ;
 +Actio+Com+PxSg2:o%^WG%>dijnâd K ;
@@ -3100,9 +3010,7 @@ LEXICON VINFINITES_OOD
 +Der/NomAct:o%^CLEN%>om FLAG_3EEMEED ;
 
 
-+VAbess+Err/Orth:o%^WG%>hennáá K ;
-+VAbess+Err/Orth:o%^WG%>hinnáá K ;
-+VAbess:o%^WG%>hánnáá K ;
++VAbess:o%^WG VABESS ;
 
 LEXICON EVEN_IND_OOD
 +Prs+Sg1:o%^WG%>m K ;    ! vah^RCo^WG>m
@@ -3181,9 +3089,7 @@ LEXICON VINFINITES_ORROOD
 +Der/NomAct:o%^CLEN%>om FLAG_3EEMEED ;
 
 
-+VAbess+Err/Orth:o%^WG%>hennáá K ;
-+VAbess+Err/Orth:o%^WG%>hinnáá K ;
-+VAbess:o%^WG%>hánnáá K ;
++VAbess:o%^WG VABESS ;
 
 LEXICON EVEN_IND_ORROOD
 +Prs+Sg1:o%^WG%>m K ; ! vah^RCo^WG>m
@@ -3259,12 +3165,8 @@ LEXICON VINFINITES_KUARRUD !!= * __@CODE@__
 !+V+Actio+Com:o%^WG%>dijn K ;
 !2SYLL_UD ; ! the rest as the normal verbform
 
-+VAbess+Err/Orth:u%^WG%^RVSH%>hennáá K ;
-+VAbess+Err/Orth:u%^WG%^RVSH%>hinnáá K ;
-+VAbess+Err/Orth:o%^WG%^RVSH%>hennáá K ;
-+VAbess+Err/Orth:o%^WG%^RVSH%>hinnáá K ;
-+VAbess:u%^WG%^RVSH%>hánnáá K ;
-+VAbess+Use/NG:o%^WG%^RVSH%>hánnáá K ;
++VAbess:u%^WG%^RVSH VABESS ;
++VAbess+Use/NG:o%^WG%^RVSH VABESS ;
 
 +Actio+Com+PxSg1:u%^WG%>dijnân K ;
 +Actio+Com+PxSg2:u%^WG%>dijnâd K ;
@@ -3361,9 +3263,7 @@ LEXICON VINFINITES_UD !!= * __@CODE@__
 +PrfPrc:u%>m K ;
 +PrsPrc:o%>o K ;
 
-+VAbess+Err/Orth:u%^WG%>hennáá K ;
-+VAbess+Err/Orth:u%^WG%>hinnáá K ;
-+VAbess:u%^WG%>hánnáá K ;
++VAbess:u%^WG VABESS ;
 
 +Actio+Com+PxSg1:u%^WG%>dijnân K ;
 +Actio+Com+PxSg2:u%^WG%>dijnâd K ;
@@ -3446,9 +3346,7 @@ LEXICON VINFINITES_UAZZUD !!= * __@CODE@__
 +PrsPrc:o%>o K ;
 +Der/NomAg:o%>o FLAG_CTAHHEE ;
 
-+VAbess+Err/Orth:u%^WG%>hennáá K ;
-+VAbess+Err/Orth:u%^WG%>hinnáá K ;
-+VAbess:u%^WG%>hánnáá K ;
++VAbess:u%^WG VABESS ;
 
 +Actio+Com+PxSg1:u%^WG%>dijnân K ;
 +Actio+Com+PxSg2:u%^WG%>dijnâd K ;
@@ -3616,7 +3514,7 @@ LEXICON 3_VYEJETTID  !!= * __@CODE@__ SM53. short V in Inf
 +V+Pot+Prs+ConNeg:%>ižžii K ;
 +V+Imprt+ConNeg: K ;
 
-+V+VAbess:%^RLEN%^SLEN%>hánnáá K ;
++V+VAbess:%^RLEN%^SLEN VABESS ;
 +V+VAbess+Err/Orth:%^RLEN%^SLEN%>hinnáá K ;
 +V+VAbess+Err/Orth:%^RLEN%^SLEN%>hennáá K ;
 
@@ -3729,9 +3627,7 @@ LEXICON 3_ADELID_LEX
 +Pot+Prs+ConNeg:%>ižžii K ;
 +Imprt+ConNeg: K ;
 
-+VAbess:%^CLEN%>hánnáá K ;
-+VAbess+Err/Orth:%^CLEN%>hinnáá K ;
-+VAbess+Err/Orth:%^CLEN%>hennáá K ;
++VAbess:%^CLEN VABESS ;
 
 +Actio+Nom:%>em K ;
 +Actio+Err/Orth:%>im K ;
@@ -3831,9 +3727,7 @@ LEXICON 3_MERIDID_LEX
 +Pot+Prs+ConNeg:%>ižžii K ;
 +Imprt+ConNeg: K ;
 
-+VAbess:%^CLEN%^RLEN%>hánnáá K ;
-+VAbess+Err/Orth:%^CLEN%^RLEN%>hinnáá K ;
-+VAbess+Err/Orth:%^CLEN%^RLEN%>hennáá K ;
++VAbess:%^CLEN%^RLEN VABESS ;
 
 +Actio+Nom:%>em K ;
 +Actio+Err/Orth:%>im K ;
@@ -3933,9 +3827,7 @@ LEXICON 3_PUTESTID_LEX
 +Pot+Prs+ConNeg:%>ižžii K ;
 +Imprt+ConNeg: K ;
 
-+VAbess:%^CLEN%^SLEN%>hánnáá K ; ! putteesthánnáá
-+VAbess+Err/Orth:%^CLEN%^SLEN%>hinnáá K ;
-+VAbess+Err/Orth:%^CLEN%^SLEN%>hennáá K ;
++VAbess:%^CLEN%^SLEN VABESS ; ! putteesthánnáá
 
 +Actio+Nom:%>em K ;
 +Actio+Err/Orth:%>im K ;
@@ -4056,9 +3948,7 @@ LEXICON 3_COKKIITTID_LEX
 +Pot+Prs+ConNeg:%>ižžii K ;
 +Imprt+ConNeg: K ;
 
-+VAbess:%^SVSH%>hánnáá K ;
-+VAbess+Err/Orth:%^SVSH%>hinnáá K ;
-+VAbess+Err/Orth:%^SVSH%>hennáá K ;
++VAbess:%^SVSH VABESS ;
 
 +Actio+Nom:%>em K ;
 +Actio+Err/Orth:%>im K ;
@@ -4141,9 +4031,7 @@ LEXICON ODDVLEX  !!= * __@CODE@__
 +Pot+Prs+ConNeg:%>ižžii K ;
 +Imprt+ConNeg: K ;
 
-+VAbess:%^RLEN%>hánnáá K ;
-+VAbess+Err/Orth:%^RLEN%>hinnáá K ;
-+VAbess+Err/Orth:%^RLEN%>hennáá K ;
++VAbess:%^RLEN VABESS ;
 
 +Actio+Nom:%>em K ;
 +Actio+Ill:%^RLEN%>mân K ;
@@ -4237,7 +4125,7 @@ LEXICON 3_DERIVED_D  !!= * __@CODE@__ lexicon
 +V+Pot+Prs+ConNeg:%>ižžii K ;
 +V+Imprt+ConNeg: K ;
 
-+V+VAbess:%^RLEN%^SLEN%>hánnáá K ;
++V+VAbess:%^RLEN%^SLEN VABESS ;
 +V+VAbess+Err/Orth:%^RLEN%^SLEN%>hinnáá K ;
 +V+VAbess+Err/Orth:%^RLEN%^SLEN%>hennáá K ;
 
@@ -4331,7 +4219,7 @@ LEXICON 3_DERIVED_L
 +V+Pot+Prs+ConNeg:%^VBACK%>ižžii K ;
 +V+Imprt+ConNeg: K ;
 
-+V+VAbess:%^VBACK%^RLEN%^SLEN%>hánnáá K ;
++V+VAbess:%^VBACK%^RLEN%^SLEN VABESS ;
 +V+VAbess+Err/Orth:%^VBACK%^RLEN%^SLEN%>hinnáá K ;
 +V+VAbess+Err/Orth:%^VBACK%^RLEN%^SLEN%>hennáá K ;
 
@@ -4738,9 +4626,7 @@ LEXICON VINF_LONG_VOW
 +Cond+Prs+ConNeg:%>ččii K ;
 +Pot+Prs+ConNeg:%>žii K ;
 
-+VAbess:%>hánnáá K ;
-+VAbess+Err/Orth:%>hinnáá K ;
-+VAbess+Err/Orth:%>hennáá K ;
++VAbess: VABESS ;
 
 +Actio+Com:%>dijn K ;
 +Actio+Com+PxSg1:%>dijnân K ;
@@ -4758,7 +4644,7 @@ LEXICON C_CAALLUD  !!= * __@CODE@__ shortens long vow in certain forms
 +V+IV+Cond+Prs:%>u EVEN_COND ;
 +V+IV+Prs: C_RAMMUD ;
 +V+IV+Der/InchL:u%>škyett4 4SYLL_KYETTID ; !
-+VAbess:u%>hánnáá K ;
++VAbess:u VABESS ;
 
 +V+IV+Ind+Prs+Sg1:%>um K ; !%^VBACK?
 +V+IV+Ind+Prs+Sg2:%>uh K ;
@@ -4801,7 +4687,7 @@ LEXICON C_CAALLUD  !!= * __@CODE@__ shortens long vow in certain forms
 +V+IV+Imprt+ConNeg:%>u K ;
 +V+IV+Cond+Prs+ConNeg:u%>ččii K ;
 +V+IV+Pot+Prs+ConNeg:u%>žii K ;
-+V+IV+VAbess:u%>hánnáá K ;
++V+IV+VAbess:u VABESS ;
 +V+IV+VAbess+Err/Orth:u%>hinnáá K ;
 +V+IV+VAbess+Err/Orth:u%>hennáá K ;
 +V+IV+Actio+Nom:%>m K ;
@@ -4979,7 +4865,7 @@ LEXICON MERIDUD
 !+V+Pot+Prs+ConNeg:%>ižžii K ;
 !+V+Imprt+ConNeg: K ;
 !
-!+V+VAbess:%^RLEN%>hánnáá K ;
+!+V+VAbess:%^RLEN VABESS ;
 !+V+VAbess+Err/Orth:%^RLEN%>hinnáá K ;
 !+V+VAbess+Err/Orth:%^RLEN%>hennáá K ;
 !
@@ -5013,7 +4899,7 @@ LEXICON 4SYLL_KYETTID  !!= * __@CODE@__
 +V+Ind+Prs+ConNeg:e%^WG K ;
 +V+VAbess+Err/Orth:i%^WG%>hennáá K ;
 +V+VAbess+Err/Orth:i%^WG%>hinnáá K ;
-+V+VAbess:i%^WG%^RVSH%>hánnáá K ;
++V+VAbess:i%^WG%^RVSH VABESS ;
 +V+PrfPrc:á%^VHIGH%>m K ;  ! 
 +V+PrfPrc+Err/Orth:â2%^VHIGH%>m K ;  ! 
 +V+PrsPrc:e%^CLEN%^RVSH%>e K ;
