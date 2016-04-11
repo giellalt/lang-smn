@@ -955,7 +955,7 @@ LEXICON 2SYLL_KULGAD   !!= * __@CODE@__
 +V+Der/d:âd%^WG 3_DERIVED_D ; ! 
 +V+Der/st:âst%^WG 3_DERIVED_ST ; !
 +V+Der/tt:âtt%^WG 3_DERIVED_TT ; ! 
-+V+Der/l:âl 3_DERIVED_L ; 
+! +V+Der/l:âl 3_DERIVED_L ; ML: No Der/l for the SODDAD verbs
 +V+Der/Pass:u2 C_PASS_SH_RVSH ; ! or perhaps: C_PASS_SH ; !porgui ostui
 
 LEXICON EVEN_PRT_KULGAD
@@ -1614,7 +1614,16 @@ LEXICON EVEN_IMPRT_2SYLL_VUOLLAD !!= * __@CODE@__
 +Pl2:â%^VBACK%^RLEN%>đ K ;     ! 
 +Pl3:u%^VHIGH%>s K ;     ! uá
 
-LEXICON 2SYLL_RUOTTAD  !!= * __@CODE@__ ye to ua
+
+LEXICON 2SYLL_LUOIKKAD  !!= * __@CODE@__ passive, no Der/l, otherw like ruottad
++V+Der/Pass:u2 C_PASS_SH_RLEN ; !
+2SYLL_RUOTTAD_LUOIKKAD ;
+
+LEXICON 2SYLL_RUOTTAD  !!= * __@CODE@__ no passive, but Der/l
++V+Der/l:âl 3_DERIVED_L ; 
+2SYLL_RUOTTAD_LUOIKKAD ;
+
+LEXICON 2SYLL_RUOTTAD_LUOIKKAD  !!= * __@CODE@__ no passive
 +V:  VINFINITES_2SYLL_RUOTTAD ;
 +V+Ind: EVEN_IND_2SYLL_RUOTTAD ;
 +V+Pot+Prs: EVEN_POT_2SYLL_RUOTTAD ;
@@ -1624,8 +1633,6 @@ LEXICON 2SYLL_RUOTTAD  !!= * __@CODE@__ ye to ua
 +V+Der/d:â%^WG%^VBACK%^RLEN%>d 3_KUIKETTID ; !ruotâdiđ ryett
 +V+Der/st:âst%^WG 3_DERIVED_ST ; !
 +V+Der/tt:âtt%^WG 3_DERIVED_TT ; ! 
-+V+Der/l:âl 3_DERIVED_L ; 
-+V+Der/Pass:u2 C_PASS_SH_RLEN ; !
 
 LEXICON VINFINITES_2SYLL_RUOTTAD
 +Inf:â%^VBACK%^RLEN%>đ K ;
@@ -2932,14 +2939,17 @@ LEXICON EVEN_POT_ID !!= * __@CODE@__
 
 !! !OD verbs
 
-LEXICON 2SYLL_OD  !!= * __@CODE@__
+LEXICON 2SYLL_HILGOD  !!= * __@CODE@__ this as the only OD verb(s) with passive
++V+Der/Pass:u2 C_PASS_SH ; !TEST hilgojii, passive for this one
+2SYLL_OD ; ! now pointing to the rest of the _OD paradigm
+
+LEXICON 2SYLL_OD  !!= * __@CODE@__ OD paradigm, no passive here
 +V:  VINFINITES_OD ;
 +V+Ind: EVEN_IND_OD ;
 +V+Pot+Prs: EVEN_POT_OD ;
 +V+Cond+Prs:o%^WG%> EVEN_COND ;
 +V+Imprt: EVEN_IMPRT_OD ;
 +V+Der/InchL:o%^WG%>škyett4 4SYLL_KYETTID ; !huškoškyettiđ jaloškyettiđ
-+V+Der/Pass:u2 C_PASS_SH ; !TEST hilgojii
 +V+Der/st:ost%^WG 3_DERIVED_ST ; 
 +V+Der/tt:ott%^WG 3_DERIVED_TT ; 
 +V+Der/d:o%^WG%>d 3_DERIVED_D ; !
