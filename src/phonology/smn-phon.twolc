@@ -947,7 +947,7 @@ i:0 <=> \Vow: _ ä: Cns:+ i2:i %>    [i|i3:i|Cns]  ;  !RULE RV !! 1)  i:0 for i�
         u: _ Cns:+ [i|u|â|u2:] ([%^WG:|%^CSH:|%^CLEN:]) %^VBACK: %^RVSH: [%>|.#.]   ;  !RULE RV  !sopâvetteđ 
         u: _ Cns:+ u %^VBACK: %^RVSH: [%>|.#.]  ; !RULE RV  ! uáinu
         u: _ Cns:+ i2:i %> [i|i3:i|Cns]  ;  !RULE RV 
-        u: _ Cns:+ u2: (%^CLEN:)  %> [:u|i|i3:i|Cns - j]  ; !RULE RV  !*
+        u: _ Cns:+ u2:u (%^CLEN:) (%^VBACK:)  %>   ; !RULE RV  !*
 
 
 "Monophthongisation rule u:o and root vowel change u:o, special rule for olmooš and contract verbs"
@@ -961,7 +961,7 @@ u:o <=>  [.#.|#] _     Cns:+ u:o (%^SV:) [š|ž]  %^WG: (%^SLEN:)  %^SVLOW: [%>|
     		     _  á:o Cns:+ Vow: j %^ÁI: %^WG: ; !RULE RV  !puáhháá : poovij ! XXX
                  _ á:0 Cns:+ i %^WG:                   %^RVSH: %> i: ; !RULE RV 
                  _ á:  Cns:* i %^WG:                 (%^RLEN:) %> i: ;  !RULE RV 
-                 _ á:  Cns:* u2:     %^VBACK:          %^RLEN: [%>|.#.]   ;  !RULE RV 
+                 _ á:  Cns:* u2:u     %^VBACK:         ( %^RLEN:) [%>|.#.]   ;  !RULE RV 
              Cns _     Cns:+ e: %^VBACK: [%>|.#.] ;  !RULE RV !
 
 !!€ uáinu2>đ
@@ -972,14 +972,14 @@ u:o <=>  [.#.|#] _     Cns:+ u:o (%^SV:) [š|ž]  %^WG: (%^SLEN:)  %^SVLOW: [%>|
 !! * __@RULENAME@__ \\  
 á:o <=> u5:  _ Cns:+ u2:u        %> [i|:u|Cns - j]  ;  !RULE RV !uá to uo
         u5:  _ Cns:+ u  %^VBACK:  (%^RLEN:) [%>|.#.]  ;  !RULE RV !uá to uo
+        u5:  _ Cns:* [u2:|u]  (%^CLEN:) %^VBACK: (%^RVSH:)    %> [m|h|u]   ;  !RULE RV ! should not hit pu5áhtu2%>o but ču5árvu2 OBS
         u:   _ Cns:+ i                           %^WG:   %> i: ;  !RULE RV  ! 
-        u:   _ Cns:+ [i|â|a|á|u|u2:]          (%^WG:)  %^VBACK: (%^RLEN:) [%>|.#.]  ;  !RULE RV  ! oođđim  
-        u:o  _ Cns:+ i                          %^WG: %^RLEN:  %> i: ; !RULE RV 
-        u:o  _ Cns:+ :i    Cns:          %^ÁI: %^WG: %^RLEN: [%>|.#.] ;  !RULE RV !viäskár:veeskir  viäskár%^ÁI%^WG%^RLEN
+        u:   _ Cns:+ [i|â|a|á|u]          (%^WG:)  %^VBACK: (%^RLEN:) [%>|.#.]  ;  !RULE RV  ! oođđim  
         u:   _ Cns:+ Vow:      j     %^ÁI:           %^WG: [%>|.#.] ;  !RULE RV !puáhháá poovij 
         u    _ Cns:+ Vow:+ (Cns:) ([%^ÁI:|%^ÁE:]) %^FCD: â [%>|.#.]  ;  !RULE RV !stuárrá:stuorrâ
+        u:o  _ Cns:+ i                          %^WG: %^RLEN:  %> i: ; !RULE RV 
+        u:o  _ Cns:+ :i    Cns:          %^ÁI: %^WG: %^RLEN: [%>|.#.] ;  !RULE RV !viäskár:veeskir  viäskár%^ÁI%^WG%^RLEN
         u:o  _ Cns:* u2:                           %^RLEN: [%>|.#.]   ;  !RULE RV 
-        u5:  _ Cns:* [u2:|u]  (%^CLEN:) %^VBACK: (%^RVSH:)    %> [m|h|u]   ;  !RULE RV ! should not hit pu5áhtu2%>o but ču5árvu2 OBS
 
 
 
