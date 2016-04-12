@@ -811,7 +811,7 @@ i:0 <=> \Vow: _ ä: Cns:+ i2:i %>    [i|i3:i|Cns]  ;  !RULE RV !! 1)  i:0 for i�
 
 "Different rules for ä:a, first vowel (or only vowel)"
 !! * __@RULENAME@__ \\  čääci:čassijn, läbži:labžijn
-ä:a <=>      _ [ä:|%^RV:] Cns:+ [i|â|a|á|u2:]   (%^WG:) (%^CLEN:) %^VBACK: ([%^RVSH:|%^RLEN:]) [%>|.#.] ; !RULE RV 
+ä:a <=>      _ [ä:|%^RV:] Cns:+ [i|â|a|á|u2:] (Cns)   (%^WG:) (%^CLEN:) %^VBACK: ([%^RVSH:|%^RLEN:]) [%>|.#.] ; !RULE RV 
              _ [ä:|%^RV:] Cns:+ i            %^WG:  ([%^RVSH:|%^RLEN:])             %> [i:|i3:] ;  !RULE RV 
              _ [ä:|%^RV:] Cns:+ i            %^WG:   [%^CLEN:|%^RLEN: ]  (%^SVLOW:) %> i: ;  !RULE RV !čääci:čassijn
              _     %^RV:  Cns:+ i            %^WG:            %^RLEN:               %> i: ; !RULE RV  !ä%^RVi4gi%^WG%^RLEN%>id
@@ -823,7 +823,6 @@ i:0 <=> \Vow: _ ä: Cns:+ i2:i %>    [i|i3:i|Cns]  ;  !RULE RV !! 1)  i:0 for i�
              _ [ä:|%^RV:] Cns:+ [a|â]  (%^WG:|%^CSH:)          (%^RVSH:)              [%>|.#.] ;  !RULE RV 
              _ ä:         Cns:+ i      (%^WG:|%^CSH:) %^VBACK: (%^RVSH:)  [%>|.#.]       ;  !RULE RV  ! OBS ^EA -> VHIGH?
        \Vow: _ ä:         Cns:+ Vow:   (%^WG:)         (%^CLEN:) %^VBACK: [%>|.#.] ; !RULE RV 
-         ä:a _            Cns:+ [i|i2:]    %^CLEN: %^VBACK:   [%>|.#.]       ; !RULE RV  !paaccim
 
 !!€ njääh^RCi^WG^VBACK>i3
 !!€ njaav0i00>i
@@ -841,7 +840,8 @@ i:0 <=> \Vow: _ ä: Cns:+ i2:i %>    [i|i3:i|Cns]  ;  !RULE RV !! 1)  i:0 for i�
           ä:  _ Cns:+ [i|u] (%^WG:|%^CSH:) %^VBACK:        (%^RLEN:)  [%>|.#.]    ;  !RULE RV 
           ä:a _ Cns:+  [Vow: - u2:]     %^WG:          %^CLEN: %^VBACK: [%>|.#.] ; !RULE RV 
 !         ä:a _ Cns:+   â       l   (%^CSH:)  %^RLEN:  (%^SLEN:)         %>   ;  !RULE RV  !cntrV trond
-          ä: _ Cns:+ â    [l|d|[s|t:][t4:|t:]]   (%^WG:) (%^CSH:) %^VBACK: (%^RLEN:) (%^SLEN:) %> ;
+          ä: _ Cns:+ â     [l|d|[s|t:][t4:|t:]]   ([%^WG:|%^CSH:|%^CLEN:]) %^VBACK: (%^RLEN:) (%^SLEN:) %> ;
+          ä:a _            Cns:+ [i|i2:]    %^CLEN: %^VBACK:   [%>|.#.]       ; !RULE RV  !paaccim
 
 
 
@@ -941,10 +941,10 @@ i:0 <=> \Vow: _ ä: Cns:+ i2:i %>    [i|i3:i|Cns]  ;  !RULE RV !! 1)  i:0 for i�
 !! !á and uá rules
 
 "Monophthongisation rule uá:o0 part 2: Vowel shortening for uá" 
-!! * __@RULENAME@__ \\  for uábbi -> obbijn  čuál%^RCi%^WG%>in
+!! * __@RULENAME@__ \\  for uábbi -> obbijn  čuál%^RCi%^WG%>in tuái4jâl%^CSH%^VBACK%^RVSH%>âm
 á:0 <=> u: _ Cns:+ i %^WG: %^CLEN: %^SVLOW: %> i:  ;  !RULE RV 
         u: _ Cns:+ i %^WG: %^RVSH: %> i:  ;  !RULE RV 
-        u: _ Cns:+ [i|u|â|u2:] ([%^WG:|%^CSH:|%^CLEN:]) %^VBACK: %^RVSH: [%>|.#.]   ;  !RULE RV  !sopâvetteđ 
+        u: _ Cns:+ [i|u|â|u2:] (Cns) ([%^WG:|%^CSH:|%^CLEN:]) %^VBACK: %^RVSH: [%>|.#.]   ;  !RULE RV  !sopâvetteđ tojâdâm
         u: _ Cns:+ u %^VBACK: %^RVSH: [%>|.#.]  ; !RULE RV  ! uáinu
         u: _ Cns:+ i2:i %> [i|i3:i|Cns]  ;  !RULE RV 
         u: _ Cns:+ u2:u (%^CLEN:) (%^VBACK:)  %>   ; !RULE RV  !*
@@ -956,7 +956,7 @@ u:o <=>  [.#.|#] _     Cns:+ u:o (%^SV:) [š|ž]  %^WG: (%^SLEN:)  %^SVLOW: [%>|
                  _ á:  Cns:+ u2:             (%^CLEN:)            %> [:u|i|i3:i|Cns - j]  ; !RULE RV 
                  _ á:  Cns:+ i2:i                              %>    [i|i3:i|Cns]      ;  !RULE RV 
      [Cns|.#.|#] _ á:  Cns:+ [i|â|a|á|u]        (%^WG:)         %^VBACK: (%^RLEN:) [%>|.#.]  ;  !RULE RV   ! oođđim            
-                 _ á:0 Cns:+ [i|u|â] ([%^WG:|%^CSH:|%^CLEN:]) %^VBACK: %^RVSH: [%>|.#.]   ; !RULE RV  !sopâvetteđ
+                 _ á:0 Cns:+ [i|u|â] (Cns) ([%^WG:|%^CSH:|%^CLEN:]) %^VBACK: %^RVSH: [%>|.#.]   ; !RULE RV  !sopâvetteđ tojâdâm
                  _ á:0 Cns:* i %^WG:          %^CLEN: %^SVLOW: %> i:  ; !RULE RV 
     		     _ á:o Cns:+ Vow: j %^ÁI: %^WG: ; !RULE RV  !puáhháá : poovij ! XXX
                  _ á:0 Cns:+ i %^WG:                   %^RVSH: %> i: ; !RULE RV 
