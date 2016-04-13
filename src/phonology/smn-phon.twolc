@@ -669,7 +669,7 @@ Vy:0 <=> Vx: _ [Cns: - č:] Cns:* (%^RC:) Vow:   %^WG:  %^RVSH: %^SVLOW: [%>|.#.
 
 "Root vowel lenghtening in many stems"
 !! * __@RULENAME@__ \\  no rootvowel length if stem vowel lengthens and the consonantcentre consists of two or more consonants 
-%^RV:Vy <=> Vx _ Cns:+  (Vow:0) Vow:   (Cns:+)  Triggers:*  (â)   %^RLEN: ; ! ([%^EA:|%^SLEN:|%^SVLOW:]) [%>|.#.] ; !RULE RV !! 2syll and 3syll 
+%^RV:Vy <=> Vx _ Cns:+  (Vow:0) Vow:   (Cns:+)  Triggers:*  (â)   %^RLEN: ;  !RULE RV !! 2syll and 3syll 
             Vx _ Cns:  (Cns:0)  Vow: (:Vow) (Cns:+)  Triggers:*  (â)   %^RLEN: %^SLEN:  [%>|.#.] ; !RULE RV  
        where Vx in (a e i o y á ö A E I O Á Ö ) ! Ánná:Ááná u, U in separate rule Root vowel u length
              Vy in (a e i o y á ö a e i o á ö ) 
@@ -714,6 +714,7 @@ o5:u <=> \Vow: _ %^RV: Cns:+   i (%^WG:) (%^CLEN:)   (%^RLEN:) [%>|.#.] ;  !RULE
 %^RV:o <=> [Cns|.#.|#] a:o  _  Cns:+  e:     %^WG:   %^RLEN:  %> i: ; !RULE RV !! 1)
            [Cns|.#.|#] a:o  _  Cns:+  u      %^CSH:  %^RLEN:  %> [m|đ|u]   ; !RULE RV !!  2)
            [Cns|.#.|#] a:o  _  Cns:+ Vow:    (%^WG:|%^CSH:) (%^CLEN:) %^VHIGH: %^RLEN: ; !RULE RV !! 3)
+                \Vow:  a:o  _  Cns:+ â Cns:+ ([%^CLEN:|%^WG:]) %^VBACK:  %^RLEN: (%^SLEN:) [%>|.#.] ;  !RULE RV !! 5) toovâd
 
 !!€ a^RVlge^WG^RLEN>id
 !!€ oolgi00>jd
@@ -756,7 +757,8 @@ a:o <=> [Cns|.#.|#] _  %^RV:  Cns:+ e:   (%^WG:) ([%^RLEN: |%^CLEN:] )  %> i: ; 
         [Cns|.#.]   _  %^RV:  Cns:+ u    %^CSH: %^RLEN: %> [m|đ|u] ; !RULE RV  ! contr 
              \Vow   _ (%^RV:) Cns:+ u2:u        %> [:u|i|i3:|Cns - j]  ; !RULE RV ! contr 
         [Cns|.#.]   _         Cns:+ i2:i       %> [i|i3:|Cns]         ; !RULE RV ! contr 
-             \Vow   _  %^RV:  Cns:+ u2:u ([%^CLEN:|%^WG:|%^CSH:]) %^VBACK: %^RVSH: %>  ; !RULE RV ! 
+             \Vow   _  %^RV:  Cns:+ u2:u (%^CLEN:) %^VBACK: %^RVSH: %>  ; !RULE RV ! 
+             \Vow: _ (%^RV:)  Cns:+  â Cns:+ ([%^CLEN:|%^CSH:|%^WG:]) %^VBACK:  ([%^RLEN:|%^RVSH:]) (%^SLEN:) [%>|.#.] ;  !RULE RV !! 5) jutâlâm juuttâl
 
 "Root vowel o:u for contract verbs and Root vowel change o:u before suffix i"
 !! * __@RULENAME@__ 
