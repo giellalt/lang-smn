@@ -635,10 +635,10 @@ Vy:0 <=> Vx: _ [Cns: - č:] Cns:* (%^RC:) Vow:   %^WG:  %^RVSH: %^SVLOW: [%>|.#.
 !     matched ;
 ! Temporarily commented out due to conflict, have a look at this.
 
-"Underlying long vowel shortening iä:e"
+"Underlying long vowel shortening iä:e and ää:ä or a"
 !! * __@RULENAME@__ \\ čääh%^RCu2%^CLEN%^VBACK%>um
 ä:0 <=> i: _  Cns:+ Vow:  Cns: [%^ÁI:|%^ÁE:] %^WG: %^RVSH:  [%>|.#.] ;  !RULE RV 
-        ä: _  Cns:+ u2:o  %^CLEN: %^VHIGH: %^RVSH:  [%>|.#.] ; !RULE RV 
+        ä: _  Cns:+ u2:o  %^CLEN: [%^VHIGH:|%^VBACK:] %^RVSH:  [%>|.#.] ; !RULE RV !%^VBACK also?
 
 !!  3st stems viäskár veskirin, časkes časkes ča%^RVskas%^ÁE viäskár%^ÁI%^WG%^RVSH
 
@@ -814,14 +814,14 @@ i:0 <=> \Vow: _ ä: Cns:+ i2:i %>    [i|i3:i|Cns]  ;  !RULE RV !! 1)  i:0 for i�
 
 "Different rules for ä:a, first vowel (or only vowel)"
 !! * __@RULENAME@__ \\  čääci:čassijn, läbži:labžijn
-ä:a <=>      _ [ä:|%^RV:] Cns:+ [i|â|a|á|u2:] (Cns)   (%^WG:) (%^CLEN:) %^VBACK: ([%^RVSH:|%^RLEN:]) [%>|.#.] ; !RULE RV 
+ä:a <=>      _ [ä:|%^RV:] Cns:+ [i|â|a|á|u2:] (Cns:+)   ([%^WG:|%^CSH:]) (%^CLEN:) %^VBACK: ([%^RVSH:|%^RLEN:])  (%^SLEN:) [%>|.#.] ; !RULE RV 
              _ [ä:|%^RV:] Cns:+ i            %^WG:  ([%^RVSH:|%^RLEN:])             %> [i:|i3:] ;  !RULE RV 
              _ [ä:|%^RV:] Cns:+ i            %^WG:   [%^CLEN:|%^RLEN: ]  (%^SVLOW:) %> i: ;  !RULE RV !čääci:čassijn
              _     %^RV:  Cns:+ i            %^WG:            %^RLEN:               %> i: ; !RULE RV  !ä%^RVi4gi%^WG%^RLEN%>id
              _ ä:0        Cns:+ Vow:         %^WG:   %^CLEN:  %^RVSH:  %> i:  ;  !RULE RV !! čääci : čassijn
              _ ä:a        Cns:+ i2:i                                                %> [i|i3:i|Cns]  ;  !RULE RV  !cntrV
 !             _ ä:         Cns:+ â       l    (%^CSH:)  (%^RLEN:)  (%^SLEN:)                     %>   ;  !RULE RV  !cntrV trond
-             _ [ä:|%^RV:] Cns:+ â     [l|d|[s|t:][t4:|t:]]   (%^WG:) (%^CSH:) %^VBACK:  (%^RLEN:|%^RVSH:)  (%^SLEN:)  %>   ;  !RULE RV  !cntrV trond
+!             _ [ä:|%^RV:] Cns:+ â     [l|d|[s|t:][t4:|t:]]   (%^WG:) (%^CSH:) %^VBACK:  (%^RLEN:|%^RVSH:)  (%^SLEN:)  %>   ;  !RULE RV  !cntrV trond
        \Vow: _            Cns:+ i2:i                                                %> [i|i3:i|Cns]  ; !RULE RV   !cntrV
              _ [ä:|%^RV:] Cns:+ [a|â]  (%^WG:|%^CSH:)          (%^RVSH:)              [%>|.#.] ;  !RULE RV 
              _ ä:         Cns:+ i      (%^WG:|%^CSH:) %^VBACK: (%^RVSH:)  [%>|.#.]       ;  !RULE RV  ! OBS ^EA -> VHIGH?
@@ -958,7 +958,7 @@ i:0 <=> \Vow: _ ä: Cns:+ i2:i %>    [i|i3:i|Cns]  ;  !RULE RV !! 1)  i:0 for i�
 u:o <=>  [.#.|#] _     Cns:+ u:o (%^SV:) [š|ž]  %^WG: (%^SLEN:)  %^SVLOW: [%>|.#.]  ;  !RULE RV !! ulmu : olmooš, olmožin, carefully with only initial vowel
                  _ á:  Cns:+ u2:             (%^CLEN:)            %> [:u|i|i3:i|Cns - j]  ; !RULE RV 
                  _ á:  Cns:+ i2:i                              %>    [i|i3:i|Cns]      ;  !RULE RV 
-     [Cns|.#.|#] _ á:  Cns:+ [i|â|a|á|u]        (%^WG:)         %^VBACK: (%^RLEN:) [%>|.#.]  ;  !RULE RV   ! oođđim            
+     [Cns|.#.|#] _ á:  Cns:+ [i|â|a|á|u]   (Cns)     (%^WG:)         %^VBACK: (%^RLEN:) (%^SLEN:) [%>|.#.]  ;  !RULE RV   ! oođđim            
                  _ á:0 Cns:+ [i|u|â] (Cns) ([%^WG:|%^CSH:|%^CLEN:]) %^VBACK: %^RVSH: [%>|.#.]   ; !RULE RV  !sopâvetteđ tojâdâm
                  _ á:0 Cns:* i %^WG:          %^CLEN: %^SVLOW: %> i:  ; !RULE RV 
     		     _ á:o Cns:+ Vow: j %^ÁI: %^WG: ; !RULE RV  !puáhháá : poovij ! XXX
