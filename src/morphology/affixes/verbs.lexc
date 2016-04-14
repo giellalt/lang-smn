@@ -1631,8 +1631,8 @@ LEXICON 2SYLL_RUOTTAD_LUOIKKAD  !!= * __@CODE@__ no passive
 +V+Imprt: EVEN_IMPRT_2SYLL_RUOTTAD ;
 +V+Der/InchL:â%^WG%^VBACK%^RLEN%>škyett4 4SYLL_KYETTID ;
 +V+Der/d:â%^WG%^VBACK%^RLEN%>d 3_KUIKETTID ; !ruotâdiđ this one functions!
-+V+Der/st:âst%^WG 3_DERIVED_ST ; !
-+V+Der/tt:âtt%^WG 3_DERIVED_TT ; ! 
++V+Der/st:â%^WG%^VBACK%^RLEN%>st 3_KUIKETTID ; !
++V+Der/tt:â%^WG%^VBACK%^RLEN%>tt 3_KUIKETTID ; ! TEST
 
 LEXICON VINFINITES_2SYLL_RUOTTAD
 +Inf:â%^VBACK%^RLEN%>đ K ;
@@ -4111,6 +4111,7 @@ LEXICON ODDVLEX  !!= * __@CODE@__
 +Der/NomAg:ei4jee   FLAG_CTAHHEE ;
 +Der/NomAct: FLAG_3KEPIDEM ;
 +Ger:%^RLEN%>dijn K ; !aasâttijn asât%>dijn
++Ger:%^RLEN%>tijn K ; !čierâsttijn
 
 
 
@@ -4762,6 +4763,7 @@ LEXICON C_PASS_SH_RVSH !!= * __@CODE@__ shortens vowel
 +V+IV+Inf:%^CLEN%^VBACK%^RVSH%>đ K ; !kavnuđ
 
 +V+IV+Der/InchL:%^CLEN%>škyett4 4SYLL_KYETTID ; !kulluuškuođij
++V+IV+Der/st:%^CLEN%^VBACK%^RVSH%>ust 3_DERIVED_ST ; ! sirduustiđ
 +V+IV+Der/NomAg:%^CLEN%^VHIGH%^RVSH%>jeijee   FLAG_CTAHHEE ;
 +V+IV+Der/NomAct:%^CLEN%^VBACK%^RVSH%>m FLAG_3KEPIDEM ;
 
@@ -4799,7 +4801,7 @@ LEXICON C_PASS_SH_RVSH !!= * __@CODE@__ shortens vowel
 !+V+IV+Pot+Prs+ConNeg:á%^CLEN%^CLEN%^VHIGH%>á K ;  ! 
 
 +V+IV+PrfPrc:%^CLEN%^VBACK%^RVSH%>m K ; !čahhum
-+V+IV+PrfPrc+Err/Orth:%^CLEN%^VBACK%^RLEN%>m K ; !čaallum Temp. Err/Orth
++V+IV+PrfPrc:%^CLEN%^VBACK%^RLEN%>m K ; !čaallum Temp. Err/Orth
 +V+IV+PrsPrc:%^CLEN%^VHIGH%^RVSH%>jeijee K ;
 +V+IV+PrsPrc+Use/NG:%^CLEN%^VHIGH%^RVSH%>jijjee K ;
 
@@ -4822,6 +4824,7 @@ LEXICON C_PASS_SH_RLEN !!= * __@CODE@__ does not shorten vowel
 +V+IV+Inf:%^CLEN%^VBACK%^RLEN%>đ K ;
 
 +V+IV+Der/InchL:%^CLEN%>škyett4 4SYLL_KYETTID ; !kulluuškuođij
++V+IV+Der/st:%^CLEN%^VBACK%^RLEN%>ust 3_DERIVED_ST ; ! 
 +V+IV+Der/NomAg:%^CLEN%^VHIGH%>jeijee   FLAG_CTAHHEE ;
 +V+IV+Der/NomAct:%^CLEN%^VBACK%^RLEN%>m FLAG_3KEPIDEM ;
 
@@ -5034,6 +5037,7 @@ LEXICON C_PASS_SH  !!= * __@CODE@__ shortens long vow in certain forms
 LEXICON C_PASS_SH_COMMON  !!= * __@CODE@__ shortens long vow in certain forms
 +V+IV+Inf:%^VBACK%>đ K ;
 +V+IV+Der/InchL:%>uškyett4 4SYLL_KYETTID ; !
++V+IV+Der/st:%>ust 3_DERIVED_ST ; ! sirduustiđ
 +V+IV+PrsPrc:%^RVSH%>jeijee K ;
 +V+IV+PrsPrc+Use/NG:%^RVSH%>jijjee K ;
 +V+IV+Der/NomAg:%^RVSH%>jeijee FLAG_CTAHHEE ;
@@ -5064,8 +5068,9 @@ LEXICON C_PASS_SH_COMMON  !!= * __@CODE@__ shortens long vow in certain forms
 
 +V+IV+Der/NomAg:%>jeijee FLAG_CTAHHEE ;
 +V+IV+PrfPrc:%>m K ; ! now changing all the others
-+V+IV+Ger:%^VBACK%^RVSH%>udijn K ; ! pehhuudijn
++V+IV+PrfPrc:%^RLEN%>m K ; ! Temp. Err/Orth
 +V+IV+Ger:%>udijn K ; ! pehhuudijn
+!+V+IV+Ger:%>udijn K ; ! pehhuudijn
 
 
 +V+IV+Der/NomAct:u%^SVm FLAG_3HUKSIM ;
