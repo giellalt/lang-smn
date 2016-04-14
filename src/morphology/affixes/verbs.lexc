@@ -1248,8 +1248,8 @@ LEXICON 2SYLL_TOOHAD  !!= * __@CODE@__
 +V+Imprt: EVEN_IMPRT_MOONNAD ;
 +V+Der/Pass:u2 C_PASS_SH_RVSH ; ! prfprc: toohum ta%^RVh%^RC â%^VHIGH%^RLEN%>đ
 +V+Der/d:âd%^WG%^VBACK 3_DERIVED_D ; ! pu%^RVrâd vs po%^RVrr, luvâdiđ
-+V+Der/st:âst%^WG 3_DERIVED_ST ; ! purâstiđ
-+V+Der/tt:âtt%^WG 3_DERIVED_TT ; ! purâttiđ
++V+Der/st:âst%^WG%^VBACK 3_DERIVED_ST ; ! purâstiđ
++V+Der/tt:âtt%^WG%^VBACK 3_DERIVED_TT ; ! purâttiđ
 +V+Der/l:âl 3_DERIVED_L ; 
 +V+Der/InchL:â%^WG%^VHIGH%>škyett4 4SYLL_KYETTID ; ! luvâškyettiđ polâškyettiđ rosâškyettiđ
 
@@ -1297,8 +1297,8 @@ LEXICON 2SYLL_MOONNAD  !!= * __@CODE@__
 +V+Der/Pass:u2 C_PASS_SH_RVSH ; !soppum toppuu monnuuččij
 +V+Der/InchL:â%^WG%^VHIGH%>škyett4 4SYLL_KYETTID ; ! luvâškyettiđ polâškyettiđ rosâškyettiđ
 +V+Der/d:âd%^WG%^VBACK 3_DERIVED_D ; ! 
-+V+Der/st:âst%^WG 3_DERIVED_ST ; !njomâstiđ
-+V+Der/tt:âtt%^WG 3_DERIVED_TT ; ! 
++V+Der/st:âst%^WG%^VBACK 3_DERIVED_ST ; !njomâstiđ
++V+Der/tt:âtt%^WG%^VBACK 3_DERIVED_TT ; ! 
 +V+Der/l:âl 3_DERIVED_L ; 
 
 LEXICON VINFINITES_MOONNAD
@@ -1732,7 +1732,7 @@ LEXICON 2SYLL_POHTED  !!= * __@CODE@__ with RLEN Prs+Sg1
 +V+Der/st:est%^WG 3_DERIVED_ST ; ! arvestiđ a%^RVrv
 +V+Der/tt:ett%^WG 3_DERIVED_TT ; ! 
 +V+Der/d:ed%^WG 3_DERIVED_D ; ! 
-+V+Der/l:el%^WG 3_DERIVED_L ; ! 
++V+Der/l:el 3_DERIVED_L ; ! 
 +V+Der/Pass:u2 C_PASS_SH_POHTED ; !
 
 LEXICON VINFINITES_ED
@@ -4185,13 +4185,13 @@ LEXICON 3_DERIVED_D  !!= * __@CODE@__ lexicon
 +V+PrsPrc:%>ijjee K ;
 +V+PrsPrc+Use/NG:%>eijee K ;
 
-+V+PrfPrc:%>âm K ;
++V+PrfPrc:%^RVSH%>âm K ;
 !+V+Der/Pass+V+IV+PrfPrc:%>em K ;
 
-+V+Ind+Prs+ConNeg:%^RLEN%^SLEN K ;
-+V+Ind+Prt+ConNeg:%>âm K ;
++V+Ind+Prs+ConNeg:%^RLEN%^SLEN K ; 
++V+Ind+Prt+ConNeg:%^RVSH%>âm K ; !tojâdâm ^RVSH
 +V+Cond+Prs+ConNeg:%>iččii K ;
-+V+Pot+Prs+ConNeg:%>ižžii K ;
++V+Pot+Prs+ConNeg:%^RVSH%>ižžii K ; !tojâdižžii %^RVSH
 +V+Imprt+ConNeg: K ;
 
 +V+VAbess:%^RLEN%^SLEN VABESS ;
@@ -5008,10 +5008,10 @@ LEXICON C_PASS_SH_POHTED  !!= * __@CODE@__ shortens long vow in certain forms
 +V+IV+Pot+Prs+Sg2:%^WG%>žeeh K ;
 +V+IV+Pot+Prs+Sg3:%^WG%>š K ;
 +V+IV+Pot+Prs+Du1:%^WG%>žeen K ;
-+V+IV+Pot+Prs+Du2:%^WG%>švettee K ;
++V+IV+Pot+Prs+Du2:%^WG%^RLEN%>švettee K ;
 +V+IV+Pot+Prs+Du3:%^WG%>žává K ;
 +V+IV+Pot+Prs+Pl1:%^WG%>žep K ;
-+V+IV+Pot+Prs+Pl2:%^WG%>švetteđ K ;
++V+IV+Pot+Prs+Pl2:%^WG%^RLEN%>švetteđ K ;
 +V+IV+Pot+Prs+Pl3:%^WG%>žeh K ;
 
 C_PASS_SH_COMMON ;
@@ -5064,6 +5064,7 @@ LEXICON C_PASS_SH_COMMON  !!= * __@CODE@__ shortens long vow in certain forms
 +V+IV+Der/NomAg:%>jeijee FLAG_CTAHHEE ;
 +V+IV+PrfPrc:%>m K ; ! now changing all the others
 +V+Ger:%^CLEN%^VBACK%^RVSH%>udijn K ; ! pehhuudijn
++V+Ger:%^CLEN%>udijn K ; ! pehhuudijn
 
 
 +V+IV+Der/NomAct:u%^SVm FLAG_3HUKSIM ;
@@ -5071,7 +5072,7 @@ LEXICON C_PASS_SH_COMMON  !!= * __@CODE@__ shortens long vow in certain forms
 +V+IV+Imprt+ConNeg:%>u K ;
 +V+IV+Cond+Prs+ConNeg:%>uččii K ;
 +V+IV+Pot+Prs+ConNeg:%>užii K ;
-+V+IV+VAbess:u VABESS ;
++V+IV+VAbess:%>u VABESS ;
 +V+IV+VAbess+Err/Orth:%>uhinnáá K ;
 +V+IV+VAbess+Err/Orth:%>uhennáá K ;
 +V+IV+Actio+Nom:%>m K ;
