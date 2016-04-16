@@ -27,6 +27,7 @@ generator_file=./../../../src/generator-gt-norm
 ### out ###
 lemmas=./filtered-adjectives
 suplemmas=./superlative-adjectives
+complemmas=./comperative-adjectives
 attrlemmas=./attribute-adjectives
 alllemmas=./all_lemma-adjectives
 generated_lemmas=./generated-adjectives
@@ -68,7 +69,7 @@ EXTEDITOR=@SEE@
 #  tr -d "%" | tr "€" " " | tr "¢" ":" | sort -u > $lemmas
 
 @GTCORE@/scripts/extract-lemmas.sh \
-  --exclude '(CmpN/Only|ShCmp|RCmpnd| Rreal | R | SUP| Rnoun |\+V\+)' \
+  --exclude '(CmpN/Only|ShCmp|RCmpnd| Rreal | R | SUP|COMP | Rnoun |\+V\+)' \
     $source_file > $lemmas
 
 #grep ";" $source_file | \
@@ -82,6 +83,12 @@ EXTEDITOR=@SEE@
   --include ' SUP' \
   --exclude '(CmpN/Only|ShCmp|RCmpnd| Rreal | R | Rnoun |\+V\+)' \
     $source_file > $suplemmas
+
+@GTCORE@/scripts/extract-lemmas.sh \
+  --include 'COMP ' \
+  --exclude '(CmpN/Only|ShCmp|RCmpnd| Rreal | R | Rnoun |\+V\+)' \
+    $source_file > $complemmas
+
 
 #grep ";" $source_file | \
 #  egrep -v "^(\!|\@|<)" | \
@@ -144,6 +151,11 @@ for f in $fsttype; do
         sed 's/$/+A+Superl+Sg+Nom/' $suplemmas | $lookup_tool $generator_file.$suffix | \
           cut -f2 | grep -v "A+" | grep -v "^$" | sort -u >> $generated_lemmas.$f.txt		
 
+# Generer lemmaer i adjectives med +A+Comp+Sg+Nom, lagre i generated-adjectives
+        sed 's/$/+A+Comp+Sg+Nom/' $complemmas | $lookup_tool $generator_file.$suffix | \
+          cut -f2 | grep -v "A+" | grep -v "^$" | sort -u >> $generated_lemmas.$f.txt		
+
+
 # Generer lemmaer i adjectives med +A+Attr, lagre i generated-adjectives
         sed 's/$/+A+Attr/' $attrlemmas | $lookup_tool $generator_file.$suffix | \
           cut -f2 | grep -v "A+" | grep -v "^$" | sort -u >> $generated_lemmas.$f.txt		
@@ -155,7 +167,7 @@ for f in $fsttype; do
 		# stored and opened in SEE:
 
 # Sorter, unifiser
-        cat $lemmas $attrlemmas $suplemmas  > $alllemmas
+        cat $lemmas $attrlemmas $suplemmas $complemmas  > $alllemmas
 		sort -u -o $alllemmas $alllemmas 
 		sort -u -o $generated_lemmas.$f.txt $generated_lemmas.$f.txt 
 
@@ -180,7 +192,7 @@ for f in $fsttype; do
 done
 
 # When done, remove the generated data file:
-rm -f $lemmas $attrlemmas $suplemmas $alllemmas
+rm -f $lemmas $attrlemmas $suplemmas $complemmas $alllemmas
 
 # At least one of the Xerox or HFST tests failed:
 if [ "$Fail" = "1" ]; then
