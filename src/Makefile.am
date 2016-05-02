@@ -63,82 +63,77 @@ endif # CAN_FOMA
 #################################################
 #### Add language-specific build rules here: ####
 
-analyser-%.hfst: analyser-%.tmp.hfst                        \
-					filters/remove-halflong-dotbelow.hfst   \
-					filters/remove-letter-acute-accent.hfst            
-	$(AM_V_RGX2FST)$(PRINTF) "                               \
-				@\"$<\"                                      \
-			.o. @\"filters/remove-letter-acute-accent.hfst\" \
-			.o. @\"filters/remove-halflong-dotbelow.hfst\"   \
-			;" \
-		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --xerox-composition=ON \
-		| $(HFST_INVERT) \
-		> $@
-
 # We need to specify -gt- to avoid applying the filters to the raw fst:
-generator-gt-%.hfst: generator-gt-%.tmp.hfst                \
-					filters/remove-halflong-dotbelow.hfst   \
-					filters/remove-letter-acute-accent.hfst \
-					filters/make-optional-lang_hom-tags.hfst
-	$(AM_V_RGX2FST)$(PRINTF) "                               \
-				@\"filters/make-optional-lang_hom-tags.hfst\" \
-			.o. @\"$<\"                                      \
-			.o. @\"filters/remove-letter-acute-accent.hfst\" \
-			.o. @\"filters/remove-halflong-dotbelow.hfst\"   \
-			;" \
-		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --xerox-composition=ON \
-		> $@
-
-# We need to specify -gt- to avoid applying the filters to the raw fst:
-analyser-gt-%.xfst: analyser-gt-%.tmp.xfst                  \
-					filters/remove-halflong-dotbelow.xfst   \
-					filters/remove-letter-acute-accent.xfst            
-	$(AM_V_XFST)$(PRINTF) "read regex                        \
-				@\"$<\"                                      \
-			.o. @\"filters/remove-letter-acute-accent.xfst\" \
-			.o. @\"filters/remove-halflong-dotbelow.xfst\"   \
+define giella_analysers
+analyser-gt-%.$(1): analyser-%.tmp.$(1)                     \
+					filters/remove-halflong-dotbelow.$(1)   \
+					filters/remove-letter-acute-accent.$(1)            
+	$$(AM_V_XFST_TOOL)$$(PRINTF) "read regex \
+				@\"$$<\"                                     \
+			.o. @\"filters/remove-letter-acute-accent.$(1)\" \
+			.o. @\"filters/remove-halflong-dotbelow.$(1)\"   \
 			;\n\
-		 save stack $@\n\
-		 quit\n" | $(XFST) $(VERBOSITY)
+		 $$(INVERT_HFST)\
+		 save stack $$@\n\
+		 quit\n" | $$(XFST_TOOL)
+endef
+$(foreach fst,hfst xfst foma,$(eval $(call giella_generators,$(fst))))
 
 # Special case for the disamb analyser, since it follows the same filename
 # pattern as the raw fst:
-analyser-disamb-gt-%.xfst: analyser-disamb-gt-%.tmp.xfst    \
-					filters/remove-halflong-dotbelow.xfst   \
-					filters/remove-letter-acute-accent.xfst            
-	$(AM_V_XFST)$(PRINTF) "read regex                        \
-				@\"$<\"                                      \
-			.o. @\"filters/remove-letter-acute-accent.xfst\" \
-			.o. @\"filters/remove-halflong-dotbelow.xfst\"   \
+analyser-disamb-gt-desc.%: analyser-disamb-gt-desc.tmp.% \
+					filters/remove-halflong-dotbelow.%   \
+					filters/remove-letter-acute-accent.%            
+	$(AM_V_XFST)$(PRINTF) "read regex                      \
+				@\"$<\"                                    \
+			.o. @\"filters/remove-letter-acute-accent.$*\" \
+			.o. @\"filters/remove-halflong-dotbelow.$*\"   \
 			;\n\
+		 $(INVERT_HFST)\
 		 save stack $@\n\
-		 quit\n" | $(XFST) $(VERBOSITY)
+		 quit\n" | $(XFST_TOOL)
 
-generator-%.xfst: generator-%.tmp.xfst                      \
-					filters/remove-halflong-dotbelow.xfst   \
-					filters/remove-letter-acute-accent.xfst \
-					filters/make-optional-lang_hom-tags.xfst
-	$(AM_V_XFST)$(PRINTF) "read regex                        \
-				@\"filters/make-optional-lang_hom-tags.xfst\" \
-			.o. @\"$<\"                                      \
-			.o. @\"filters/remove-letter-acute-accent.xfst\" \
-			.o. @\"filters/remove-halflong-dotbelow.xfst\"   \
+# Special case for the dict analyser, since it follows the same filename
+# pattern as the raw fst:
+analyser-dict-gt-desc.%: analyser-dict-gt-desc.tmp.% \
+					filters/remove-halflong-dotbelow.%   \
+					filters/remove-letter-acute-accent.%            
+	$(AM_V_XFST)$(PRINTF) "read regex                      \
+				@\"$<\"                                    \
+			.o. @\"filters/remove-letter-acute-accent.$*\" \
+			.o. @\"filters/remove-halflong-dotbelow.$*\"   \
 			;\n\
-		 invert net\n\
+		 $(INVERT_HFST)\
 		 save stack $@\n\
-		 quit\n" | $(XFST) $(VERBOSITY)
+		 quit\n" | $(XFST_TOOL)
+
+# We need to add processing of language-specific tags in the generator:
+# We need to specify -gt- to avoid applying the filters to the raw fst:
+define giella_generators
+generator-gt-%.$(1): generator-gt-%.tmp.$(1)                \
+					filters/remove-halflong-dotbelow.$(1)   \
+					filters/remove-letter-acute-accent.$(1) \
+					filters/make-optional-lang_hom-tags.$(1)
+	$$(AM_V_XFST_TOOL)$$(PRINTF) "read regex                  \
+				@\"filters/make-optional-lang_hom-tags.$(1)\" \
+			.o. @\"$$<\"                                      \
+			.o. @\"filters/remove-letter-acute-accent.$(1)\"  \
+			.o. @\"filters/remove-halflong-dotbelow.$(1)\"    \
+			;\n\
+		 $$(INVERT_XFST)$$(INVERT_FOMA)\
+		 save stack $$@\n\
+		 quit\n" | $$(XFST_TOOL)
+endef
+$(foreach fst,hfst xfst foma,$(eval $(call giella_generators,$(fst))))
 
 # Do NOT apply the accent removal filters to the normative
 # dictionary generator (both hfst and xfst):
-generator-dict-gt-norm.hfst: generator-dict-gt-norm.tmp.hfst
-	$(AM_V_CP)cp -f $< $@
-
-generator-dict-gt-norm.xfst: generator-dict-gt-norm.tmp.xfst
-	$(AM_V_XFST)$(PRINTF) "\
+generator-dict-gt-norm.%: generator-dict-gt-norm.tmp.%
+	$(AM_V_XFST_TOOL)$(PRINTF) "\
 		 load stack $<\n\
-		 invert net\n\
+		 $(INVERT_XFST)$(INVERT_FOMA)\
 		 save stack $@\n\
-		 quit\n" | $(XFST) $(VERBOSITY)
+		 quit\n" | $(XFST_TOOL)
 
 ##################################################################
 #### END: Add local processing instructions ABOVE this line ######
