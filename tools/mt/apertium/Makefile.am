@@ -27,6 +27,21 @@ APERTIUM_CG_INCLUDE_SRC=\
 #### BEGIN: Add local processing instructions BELOW this line ####
 ##################################################################
 
+# We want to make semantic tags optional for the apertium-targeted analyser:
+analyser-mt-gt-desc.%.hfst: analyser-mt-gt-desc.%.tmp.hfst \
+			$(top_builddir)/src/filters/make-optional-semantic-tags.hfst
+	$(AM_V_FST2FST)$(HFST_FST2FST) $(HFSTFLAGS) $(HFST_FORMAT) $< -o $<.tmp
+	$(AM_V_RGX2FST)$(PRINTF) "\
+		@\"$(top_builddir)/src/filters/make-optional-semantic-tags.hfst\" \
+   	.o. @\"$<.tmp\" \
+    	;" \
+		| $(HFST_REGEXP2FST) $(HFST_FLAGS) $(HFST_FORMAT) \
+			-S --xerox-composition=ON \
+		| $(HFST_INVERT) $(HFSTFLAGS) \
+		| $(HFST_FST2FST) $(HFSTFLAGS) -t \
+		-o $@
+	$(AM_V_at)rm -f $<.tmp
+
 # We want to rename the POS tags in front of derivations:
 analyser-mt-gt-desc.hfst: analyser-mt-gt-desc.tmp.hfst \
 			$(top_builddir)/src/filters/remove-derivation-position-tags.hfst \
@@ -36,21 +51,10 @@ analyser-mt-gt-desc.hfst: analyser-mt-gt-desc.tmp.hfst \
 	.o. @\"$(top_builddir)/src/filters/rename-POS_before_Der-tags.hfst\" \
    	.o. @\"$<\" \
     	;" \
-		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --xerox-composition=ON \
-		| $(HFST_INVERT) \
-		> $@
-
-# We want to make semantic tags optional for the apertium-targeted analyser:
-analyser-mt-gt-desc.%.hfst: analyser-mt-gt-desc.%.tmp.hfst \
-			$(top_builddir)/src/filters/make-optional-semantic-tags.hfst
-	$(AM_V_RGX2FST)$(PRINTF) "\
-		@\"$(top_builddir)/src/filters/make-optional-semantic-tags.hfst\" \
-   	.o. @\"$<\" \
-    	;" \
-		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --xerox-composition=ON \
+		| $(HFST_REGEXP2FST) $(HFST_FLAGS) $(HFST_FORMAT) \
+			-S --xerox-composition=ON \
 		| $(HFST_INVERT) $(HFSTFLAGS) \
-		| $(HFST_FST2FST) $(HFSTFLAGS) -t \
-		-o $@
+		> $@
 
 # And also for the generator:
 generator-mt-gt-norm.hfst: generator-mt-gt-norm.tmp.hfst \
@@ -59,7 +63,8 @@ generator-mt-gt-norm.hfst: generator-mt-gt-norm.tmp.hfst \
 		@\"$(top_builddir)/src/filters/remove-derivation-position-tags.hfst\" \
    	.o. @\"$<\" \
     	;" \
-		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --xerox-composition=ON \
+		| $(HFST_REGEXP2FST) $(HFST_FLAGS) $(HFST_FORMAT) \
+			-S --xerox-composition=ON \
 		> $@
 
 ##################################################################
