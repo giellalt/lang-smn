@@ -15,9 +15,19 @@
 !! !!!Possessive suffixes for Inari Saami
 !     ========
 
+! We generate PxSg1, PxDu1, PxPl1, etc, despite there being no difference
+! between these in smn, due to MT purposes. An alternative would be to
+! just do Px1, Px2, Px3, and change tags from sme to smn in apertium.
+
+LEXICON CPXsuffnom ! in use?
++PxSg1:âm K ; ! Nom only
+CPXsuffrest ;
+
 LEXICON CPXsuff
-+PxSg1:âm K ;
-+PxSg1+Use/NG:ân K ;
++PxSg1:ân K ; ! All other cases
+CPXsuffrest ;
+
+LEXICON CPXsuffrest
 +PxSg2:âd K ;
 +PxSg3:is K ;
 +PxDu1:ân K ;
@@ -27,9 +37,15 @@ LEXICON CPXsuff
 +PxPl2:âd K ;
 +PxPl3:is K ;
 
-LEXICON VPXsuff12
+LEXICON VPXsuff12nom
 +PxSg1:%>m K ; !
-+PxSg1+Use/NG:%>n K ; !
+VPXsuff12rest ;
+
+LEXICON VPXsuff12
++PxSg1:%>n K ; !
+VPXsuff12rest ;
+
+LEXICON VPXsuff12rest
 +PxSg2:%>d K ;
 +PxDu1:%>n K ; !
 +PxDu2:%>d K ;
@@ -43,6 +59,26 @@ LEXICON VPXsuff3
 +PxPl3:%>s K ;
 
 LEXICON CPXsuffCOM
++PxSg1:ânkuin K ;
++PxSg1+Use/NG:ânguin K ;
++PxSg1+Use/NG:ânkijn K ;
++PxDu1:ânkuin K ;
++PxDu1+Use/NG:ânguin K ;
++PxDu1+Use/NG:ânkijn K ;
++PxPl1:ânkuin K ;
++PxPl1+Use/NG:ânguin K ;
++PxPl1+Use/NG:ânkijn K ;
+
++PxSg2:âdkuin K ;
++PxSg2+Use/NG:âdguin K ;
++PxSg2+Use/NG:âdkijn K ;
++PxDu2:âdkuin K ;
++PxDu2+Use/NG:âdguin K ;
++PxDu2+Use/NG:âdkijn K ;
++PxPl2:âdkuin K ;
++PxPl2+Use/NG:âdguin K ;
++PxPl2+Use/NG:âdkijn K ;
+
 +PxSg3:iskuin K ;
 +PxSg3+Use/NG:isguin K ;
 +PxSg3+Use/NG:iskijn K ;
