@@ -374,14 +374,6 @@ n:0 <=> n _ j ConsonantShorting \%^CLEN: ;!RULE RC !! 1)  vinnjooh:vinjohân
         n _ j WeakGrade \%^CLEN: ; !RULE RC !! 2)lonnjâ:loonjáin 
 
 
-"Stem final geminate shortening in front of consonant-initial suffix"
-Cx:0 <=> Vow _ Cx %> Cns ;
-     where Cx in (d l š);
-
-!!€ hárávušš>vetteđ
-!!€ hárávu0š>vetteđ
-
-
 "Word final consonant deletion"                 
 !!  * __@RULENAME@__ \\ for vaskâm:vaaskâ
 Cx:0 <=> _ ([%^ÁI:|%^ÁE:]) %^FCD: ;  !RULE SC
@@ -397,14 +389,24 @@ m:0 <=>  s _ m [Triggers: - %^FCD:]* [.#.|%>]   ; !RULE SC !! 1) puttáás_min
          s _   [Triggers: - %^FCD:]*      %>  m ; !RULE SC !! 2) stoorgâs_mân  sto%^RVrgâsm
 
 
+
+!"Stem final geminate shortening in front of consonant-initial suffix"
+!Cx:0 <=> Vow _ Cx %> Cns ;
+!     where Cx in (d l š);
+
+
 "Wordfinal consonants part 1"
 !! * __@RULENAME@__  e%^RVlâčč
-Cx:0 <=> Vow: _ Cy: (%^CLEN:) (%^RLEN:) (%^SLEN:|%^SVSH:) [.#.| %>] \Sgm: ; !RULE SC !! 1)
-         Vow: _  [Cy | č:š] [Triggers: - %^FCD:]* %> m ; !RULE SC !! 2)jurdâččmân:jurdâšmân ju%^RVrdâčč%^RLEN%>mân
+Cx:0 <=> Vow: _ Cy: (%^CLEN:) (%^RLEN:) (%^SLEN:|%^SVSH:) [.#.| %>] \Sgm: ; !! 1)
+         Vow: _  [Cy | č:š] [Triggers: - %^FCD:]* %> m ; !! 2)jurdâččmân:jurdâšmân ju%^RVrdâčč%^RLEN%>mân
+	 Vow: _ Cy %> Cns ; !! 3)  šš>š in hárávušš>vetteđ 
 	where Cx in ( d č š l h ) 
 	      Cy in ( d č š l č )
 		  matched ;
 
+
+!!€ hárávušš>vetteđ
+!!€ hárávu0š>vetteđ
 
 !!€ konnjâl^CSH>ân
 !!€ kon0jâl0>ân
@@ -539,9 +541,8 @@ j:i <=> Vow: _ %^RC: :Vow (Cns:+)  (%^SV:)     %^CLEN:  ([%^RVSH:|%^RLEN:]) ( %^
 
 "Assimilation of consonants t d š"
 !! * __@RULENAME@__  delet t in front of -ttáá, avoid -tttáá
-Cy:0  <=>  Sgm: (Cx:) _ (%^CSH:) (%^RLEN:) %> Cy Cy ;  !RULE SC
-	where Cx in ( d t š) 
-	      Cy in ( d t š)
+Cy:0  <=>  Sgm:  _ (%^CSH:) (%^RLEN:) %> Cy Cy ;  !RULE SC
+	where Cy in ( d t š)
 		  matched ;
 
 !!€ haamit>ttáá
