@@ -75,7 +75,7 @@ LEXICON SKELMA !!= __@CODE@__ directing to X_ALGA, attr skelmâ
 LEXICON VANTTA !!= __@CODE@__ directing to X_ALGA, attr vantâs
 +A+Attr:%^CSH%>s K ; !vantâs
 +A: X_ALGA ;
-+A+Cmp/Attr: R ;
++A+Cmp/Attr:%^CSH%>s R ;
 +A:%> A_VUOTA ;
 +A:%^WG%> COMP ;
 +A:%^WG%> MUS ;
@@ -404,7 +404,7 @@ LEXICON KOOIDAS !!= __@CODE@__ directing to  X_VEESKIR, attr. koidâ
 +A:%>u MOS ;
 +A:%^WG%> A_VUOTA ;
 +A: A_ADV ; !čuhâlávt
-+A+Cmp/Attr:%^FCDâ%^RVSH%> R ;    
++A+Cmp/Attr:%^FCD%^RVSH%> R ;    
 +A:%^FCD%^RVSH%> A_LASJ ; !  
 
 
@@ -506,7 +506,7 @@ LEXICON PASTIL !!= __@CODE@__ directing to X_LITTER, attr. pastelis; adj is PAST
 +A:%^FCD%> A_LASJ ; !  
 
 LEXICON FISKAD !!= __@CODE@__ directing to X_LITTER, attr. fiskis (fikâdis)
-+A+Attr:is%^CSH%> K ; ! fiskis sahis
++A+Attr:is%^CSH K ; ! fiskis sahis
 +A+Attr+Err/Orth:âd%>is K ;
 +A:âd X_LITTER ;
 +A:âd%>u COMPo ; 
@@ -543,7 +543,7 @@ ATTR ;
 LEXICON CAVOS_nocomp !!= __@CODE@__ directing to X_SAJOS, attr. almos
 +A+Attr:%^FCD%^CSH%^SVSH  K ; ! čapo
 +A: X_SAJOS	  ;
-+A+Cmp/Attr:  R ;
++A+Cmp/Attr:  R ; !CHECK
 +A:%> A_VUOTA ;
 +A:%^CSH%^SVSH%> A_LASJ ; !  
 
@@ -758,7 +758,7 @@ LEXICON MUOTTII !!= __@CODE@__ almost like KARRII, direct to it?
 !+A+Pl+Abe:%>ttáá K ;  ! muottiittáá
 
 LEXICON A_VUALAAS !!= __@CODE@__ 
-+A+Attr:%^SV%^SLEN K ;
++A+Attr:%^SV%^SLEN K ; !CHECK
 +A+Sg+Nom:%^SV%^SLEN%>š K ; 							! kamevuálááš
 +A+Sg+Gen:%^SV%^SLEN%> K ; 							! kamevuáláá
 +A+Sg+Acc:%^SV%^SLEN%> K ;					! kamevuáláá
@@ -776,7 +776,7 @@ LEXICON A_VUALAAS !!= __@CODE@__
 +A+Pl+Com:%>iguin K ; 						! cissáiguin
 +A+Pl+Com+Err/Orth:%>igijn K ; 						! cissáiguin
 +A+Pl+Abe:%>ittáá K ; 						! cissáittáá
-+A+Cmp/Attr:%^SV%^SLEN%>š R ;
++A+Cmp/Attr:%^SV%^SLEN%>š R ; !CHECK
 
 
 LEXICON SIAMMAS !!= __@CODE@__ 
@@ -853,7 +853,7 @@ LEXICON TAASSAS
 LEXICON A_KUNAGAS !!= __@CODE@__ directing to  X_KUNAGAS; syeligâs, is like kunâgâs but FCD is not enough to create the comparation
 +A+Attr:âs  K ;
 !+A:s X_KUNAGAS	  ; 
-+A+Cmp/Attr: R ;
++A+Cmp/Attr:âs R ;
 !+A:%>u oCOMP-SUF ; !MLO: syeligub, syeliguboh; oCOMP-SUF should work but I did now succeed
 +A:%>u MOS ; ! syeligumos, syeligumoseh
 +A: A_ADV ; !
