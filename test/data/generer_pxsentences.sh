@@ -163,6 +163,7 @@ echo '' >> generated_sentences.txt
 cat pxkin.txt pxobjects.txt | sed 's/$/+N+Pl+Loc+PxSg3/' | $LOOKUP $GTHOME/langs/smn/src/generator-gt-norm.xfst |cut -f2  |grep -v '^$' > genpx 
 sed 's/^/Sun lijkkoo /' genpx   | uniq >> generated_sentences.txt
 
+rm genpx
 
 see generated_sentences.txt
 
