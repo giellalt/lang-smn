@@ -1700,6 +1700,11 @@ LEXICON APINA !!= __@CODE@__  this is for loanwords without stem change
 APINA_SG ;
 APINA_PL ;
 
+!LEXICON X_APINA  __@CODE@__  this is for loanwords without stem change
+!X_APINA_SG ;
+!X_APINA_PL ;
+
+
 LEXICON APINA_SG  !!= __@CODE@__
 +N: X_APINA_SG ;
 +N+Cmp/SgNom: R ;
@@ -1724,10 +1729,6 @@ LEXICON APINA_PL !!= __@CODE@__
 +N+Pl+Acc:%>id CPXsuff ;  ! 
 +N+Pl+Ill:%>id CPXsuff ;  ! 
 +N+Pl+Com:%>id CPXsuffCOM ;  ! 
-
-LEXICON X_APINA !!= __@CODE@__  this is for loanwords without stem change
-X_APINA_SG ;
-X_APINA_PL ;
 
 
 LEXICON X_APINA_SG !!= __@CODE@__  this is for loanwords without stem change
@@ -3679,12 +3680,6 @@ LEXICON Gen_DER   !!= __@CODE@__
 LEXICON Nom_DER   !!= __@CODE@__ 
 +Der/Nom+Der/lasj:l ANOLASJ ; 
 
-
-LEXICON SAS !!= * __@CODE@__ gives :»»» and goes to SASCont
-+Cmp#:»»»# SASCont ;
-
-LEXICON SASCont !!= * __@CODE@__ FROM NUMERALS, gives -kilosaš etc.
-ihe:ihás DER-SAS ;
 
 LEXICON DER-AG
 +N+Der/ag:  PASTIL ; !+N because of redirection from numeral-file
