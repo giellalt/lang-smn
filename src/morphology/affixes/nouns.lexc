@@ -52,7 +52,7 @@ LEXICON nounstems !!= @CODE@: these words should be classified >
 
 LEXICON 2ALGA  !!= __@CODE@__ 2VADDU has CLEN for Sg+Com and Pl+Ill , rlen svlow, ess:- 
  2ALGA_SG ;
- 2ALGA_PL ;
+ 2PUUVSAH_PL  ;
 
 LEXICON X_ALGA  !!= __@CODE@__ 
 X_ALGA_SG ;
@@ -78,7 +78,7 @@ LEXICON 2ALGA_SG !!= __@CODE@__
 +N:%^WG%> Gen_DER ;
 +N+Der/Dimin: S_KAANDAS ; !kaandâš nieidâš
 
-LEXICON 2ALGA_PL  !!= __@CODE@__
+LEXICON 2PUUVSAH_PL   !!= __@CODE@__
 +N: X_ALGA_PL ;
 +N+Cmp/SgNom: R ; !
 +N+Cmp/SgGen:%^WG%^RLEN%> R ; !
@@ -593,15 +593,8 @@ LEXICON X_NJUNE_SG !!= __@CODE@__
 +Par:%^SV%^CLEN%^SLEN%>d K ;			! njunneed
 
 LEXICON X_NJUNE_PL !!= __@CODE@__
-+Pl+Nom:%^WG%>h K ;					! njuneh
-+Pl+Gen:%^WG%^RLEN%>i K ;			! njuunij  #stem e > i suff i > j
-+Pl+Gen+Use/NG:%^WG%>i K ;			! njunij 	# stem e > i in > jn
-+Pl+Acc:%^WG%^RLEN%>id K ;		! njuunijd  # stem e > i in > jn
 +Pl+Ill:%^WG%^RLEN%>id K ;		! njuunijd  # stem e > i in > jn
-+Pl+Loc:%^WG%^RLEN%>in K ;		! njuunijn  # stem e > i in > jn
-+Pl+Com:%^WG%>iguin	K ;		! njunijguin # stem e > i in > jn
-+Pl+Com+Err/Orth:%^WG%>igijn	K ;		! njunijguin # stem e > i in > jn
-+Pl+Abe:%^WG%>ittáá K ;		! njunijttáá # stem e > i in > jn
+ X_ALGA_PL_COMMON ;
 
 LEXICON 2ALME !!= __@CODE@__
 +N+Pl+Ill:%^WG%^RLEN%>id K ; 		! oolmijd
@@ -1685,15 +1678,7 @@ LEXICON X_TAVLU_PL !!= __@CODE@__
 
 
 LEXICON 2SKERREEH !!= __@CODE@__  Plural tantum, as 2PUUVSAH, but w/o WG
-+N+Pl+Nom:%>h K ;			
-+N+Pl+Gen:%^SVSH%>i3 K ; 			
-+N+Pl+Acc:%^SVSH%>i3d K ; 			
-+N+Pl+Ill:%^SVSH%>i3d K ;	
-+N+Pl+Loc:%^SVSH%>i3n K ; 			
-+N+Pl+Com:%^SVSH%>i3guin K ;		
-+N+Pl+Com+Err/Orth:%^SVSH%>i3gijn K ;		
-+N+Pl+Abe:%^SVSH%>i3ttáá K ; 	
-+N+Cmp/PlGen:%^SVSH%>i3 R ;
++N: X_TAHHEE_PL ;
 
 
 LEXICON APINA !!= __@CODE@__  this is for loanwords without stem change
