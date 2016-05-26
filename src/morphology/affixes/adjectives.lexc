@@ -414,7 +414,7 @@ LEXICON SUOTAS  !!= __@CODE@__ directing to  X_VEESKIR, attr. suotâs
 +A: X_VEESKIR ;
 +A:u COMPo ; ! suottâsub
 +A:%>u MOS ; !suottâsumos
-+A+Attr:%^WG%^RVSH%> A_VUOTA ;
++A:%^WG%> A_VUOTA ;
 +A: A_ADV ; !suottâsávt
 +A+Cmp/Attr:%^WG%^RVSH%>  R ; ! suotâs, vädis 
 +A:%^WG%> A_LASJ ; ! rähislâš oleslâš
@@ -443,7 +443,7 @@ LEXICON LIAGUS  !!= __@CODE@__ like SUOTAS except for CSH
 +A+Err/Orth:%>u COMPo ; 
 +A:%>u MOS ; !liäggusumos
 +A+Err/Orth:%>u MOS ; 
-+A+Attr:%^WG%^RVSH%> A_VUOTA ;
++A:%^WG%^RVSH%> A_VUOTA ;
 +A: A_ADV ; !liäggusávt
 +A+Cmp/Attr:%^WG%^RVSH%>  R ; ! liägus 
 +A:%^RVSH%> A_LASJ ; !  
@@ -468,7 +468,7 @@ LEXICON SENES !!= __@CODE@__ not fitting in X_PELES because of CSH attr. seŋes
 +A+Err/Orth:%>u COMPo ; 
 +A:%^WG%>u MOS ;
 +A+Err/Orth:%>u MOS ;
-+A+Attr:%^WG%^RVSH%> A_VUOTA ;
++A:%^WG%^RVSH%> A_VUOTA ;
 +A: A_ADV ; !ollásávt
 +A:%^WG%> A_LASJ ; !  
 
@@ -493,7 +493,6 @@ LEXICON PASTIL !!= __@CODE@__ directing to X_LITTER, attr. pastelis; adj is PAST
 +A:%>u COMPo ; 
 +A:%>u MOS ;
 +A:%> A_VUOTA ;
-+A+Attr:%>is  A_VUOTA ; !
 +A: A_ADV ; !njyebžilávt
 +A+Cmp/Attr:%>is R ;
 +A+Cmp/SgNom: R ;
@@ -507,7 +506,7 @@ LEXICON FISKAD !!= __@CODE@__ directing to X_LITTER, attr. fiskis (fikâdis)
 +A:âd%>u MOS ;
 +A+Cmp/Attr:i%^CSH%>s R ;
 +A+Cmp/Attr:âd%>is R ;
-+A+Attr:is%^CSH%> A_VUOTA ; ! 
+!+A+Attr:is%^CSH%> A_VUOTA ; ! 
 +A:âd%> A_VUOTA ;
 +A:âd A_ADV ; !muččâdávt joskâdávt
 +A+Attr:i%^WG%>s A_LAGAN ; !čapisláván
@@ -559,8 +558,7 @@ LEXICON ALMOS !!= __@CODE@__ directing to X_SAJOS, attr. almos
 +A:%^WG%^SVSH%>u COMPo ; 
 +A:%^SVSH%>u MOS ;
 +A+Cmp/Attr:%^WG%^SVSH%>  R ;
-+A+Attr:%^WG%^SVSH%> A_VUOTA ;
-+A:%> A_VUOTA ;
++A:%^WG%^SVSH%> A_VUOTA ;
 +A:%^WG%^SVSH%> A_ADV ; !almoslávt
 +A:%^WG%^SVSH%> A_LASJ ; !  
 
@@ -576,7 +574,7 @@ LEXICON SOOHAD_nocomp !!= __@CODE@__ directing to X_EEMEED, attr. sohâdis
 +A+Attr+Use/NG:%^CSH%^SVSH%>âs  K ; !
 +A: X_EEMEED ;
 +A:%> A_VUOTA ;
-+A+Attr:%^CSH%^SVSH%>is A_VUOTA ;
+!+A+Attr:%^CSH%^SVSH%>is A_VUOTA ;
 +A:%^CSH%^SVSH A_ADV ; !jotelávt
 +A+Cmp/Attr:%^CSH%^SVSH%>is R ;
 +A+Cmp/Attr:%^CSH%^SVSH%>âs R ;
@@ -589,7 +587,6 @@ LEXICON SOOHAD !!= __@CODE@__ directing to X_EEMEED, attr. sohâdis
 +A: X_EEMEED ;
 +A:%^CSH%>u COMPo ; 
 +A:%>u MOS ;
-+A:%^CSH%^SVSH%>is A_VUOTA ;
 +A:%> A_VUOTA ;
 +A:%^CSH%^SVSH A_ADV ; !jotelávt
 +A+Cmp/Attr:%^CSH%^SVSH%>is R ;
@@ -622,7 +619,7 @@ LEXICON JUARBUDEVES
 +A+Sg+Loc:iäkká%>st K ;	! juárbudiäkkást
 +A+Sg+Com:iäkk%>áin K ;	! juárbudiäkkáin
 +A+Ess:eves%>in K; 		! juárbudevesin
-+A:iäkká X_APINA_PL ;
++A:iäkká X_h_PL ;
 
 !+A+Pl+Nom:iäkká%>h K ;	! juárbudiäkkáh
 !+A+Pl+Gen:iäkká%>i K ;	! juárbudiäkkái
@@ -677,7 +674,6 @@ LEXICON ALKKEE  !!= __@CODE@__ directing to X_TAHHEE, attr. älkkees
 +A+Attr:s K ; ! älkkees
 ALKKEE_COMMON ;
 +A:%> A_VUOTA ;
-+A+Attr:s%> A_VUOTA ; !existing?
 +A: VVCOMPe ; ! assab
 +A:%> MUS ; ! váiváámus hoppuumus
 +A+Cmp/Attr:s R ; 
@@ -713,15 +709,15 @@ LEXICON STYERES !!= __@CODE@__ directing to X_KAARBIS, attr. stuorrâ
 +A+Err/Orth:%^FCD%^SLEN%> MUS ; 
 +A: X_KAARBIS ; !
 +A+Cmp/Attr:%^FCDâ%> R ;
-+A:%^WG%^RLEN%> A_VUOTA ;
++A:%^WG%> A_VUOTA ;
 
 LEXICON RIGES !!= __@CODE@__ directing to X_KAARBIS, attr. riges, 3st comparision
 +A+Attr:%^WG%^RLEN  K ; ! riges
 +A:%>u COMPo ; 
 +A:%>u MOS ; 
 +A: X_KAARBIS ; !
-+A+Cmp/Attr:%^WG%^RLEN%> R ;
-+A+Attr:%^WG%^RLEN%> A_VUOTA ;
++A+Cmp/Attr:%^WG%> R ;
++A+Attr:%^WG%> A_VUOTA ;
 
 
 !LEXICON A_CISSAAS   __@CODE@__ directing to  X_CISSAAS, not in use yet
@@ -898,7 +894,7 @@ LEXICON UANIHASJ !!= __@CODE@__ directing to LAS_SUF, attr, -âš
 +A:%>u COMPo ;
 +A:%>u MOS ;
 +A: A_ADV ;
-+A+Attr:is%> A_VUOTA ;
++A:âš%> A_VUOTA ;
 +A+Cmp/Attr:is R ;
 
 
@@ -920,7 +916,7 @@ LEXICON ANOLASJ !!= __@CODE@__ directing to LAS_COMMON, attr, -âš
 +A+Cmp/Attr:âš R ;
 +A+Cmp/SgNom:âš R ;
 +A: A_ADV ; !máhđulávt
-+A+Attr:âš%> A_VUOTA ;
++A:âš%> A_VUOTA ;
 
 LEXICON LAGAN !!= __@CODE@__ directing to A_LITTER, attr. -lágán
 +A+Attr:lágán K ;
@@ -985,7 +981,7 @@ LEXICON METTUMforms
 +A+Sg+Nom: K ;
 +A+Sg+Acc: K ; !MT
 +A+Cmp/Attr: R ;
-+A+Attr:%> A_VUOTA ;
++A:%> A_VUOTA ;
 +A: A_ADV ;
 
 !LEXICON AS_SUF    __@CODE@__ 
@@ -1060,7 +1056,7 @@ LEXICON oCOMP-SUF  !!= * __@CODE@__
 +Sg+Abe:b%>ttáá K ;
 +Ess:bb%>on K ; 
 +Ess+Err/Orth:b%>on K ; 
-+Par:bb%>od K ;  !X_APINA_PL
++Par:bb%>od K ;  !X_h_PL
 +Pl+Nom:b%>oh K ;
 +Pl+Gen:b%>oi K ;
 +Pl+Acc:b%>oid K ;
