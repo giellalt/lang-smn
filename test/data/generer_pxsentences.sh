@@ -97,10 +97,10 @@ echo '' >> generated_sentences.txt
 
 
 cat pxkin.txt pxanimals.txt | sed 's/$/+N+Sg+Ill+PxSg1/' | $LOOKUP $GTHOME/langs/smn/src/generator-gt-norm.xfst | cut -f2  |grep -v '^$' > genpx 
-sed 's/^/Mun koolgâm adeliđ /' genpx | uniq >> generated_sentences.txt
+sed 's/^/Mun koolgâm adeliđ tom  /' genpx | uniq >> generated_sentences.txt
 echo '' >> generated_sentences.txt
 cat pxkin.txt pxanimals.txt | sed 's/$/+N+Pl+Ill+PxSg1/' | $LOOKUP $GTHOME/langs/smn/src/generator-gt-norm.xfst | cut -f2  |grep -v '^$' > genpx 
-sed 's/^/Mun koolgâm adeliđ /' genpx  | uniq >> generated_sentences.txt
+sed 's/^/Mun koolgâm adeliđ tom  /' genpx  | uniq >> generated_sentences.txt
 echo '' >> generated_sentences.txt
 echo '' >> generated_sentences.txt
 cat pxkin.txt pxanimals.txt | sed 's/$/+N+Sg+Ill+PxSg2/' | $LOOKUP $GTHOME/langs/smn/src/generator-gt-norm.xfst |cut -f2  |grep -v '^$' > genpx 
@@ -128,10 +128,10 @@ sed 's/^/Mun ožžum tom  /' genpx  | uniq >> generated_sentences.txt
 echo '' >> generated_sentences.txt
 echo '' >> generated_sentences.txt
 cat pxkin.txt | sed 's/$/+N+Sg+Loc+PxSg2/' | $LOOKUP $GTHOME/langs/smn/src/generator-gt-norm.xfst |cut -f2  |grep -v '^$' > genpx 
-sed 's/^/Tun uážžuh tom /' genpx  | uniq >> generated_sentences.txt
+sed 's/^/Tun ožžuh tom /' genpx  | uniq >> generated_sentences.txt
 echo '' >> generated_sentences.txt
 cat pxkin.txt | sed 's/$/+N+Pl+Loc+PxSg2/' | $LOOKUP $GTHOME/langs/smn/src/generator-gt-norm.xfst |cut -f2  |grep -v '^$' > genpx 
-sed 's/^/Tun uážžuh tom /' genpx    | uniq >> generated_sentences.txt
+sed 's/^/Tun ožžuh tom /' genpx    | uniq >> generated_sentences.txt
 echo '' >> generated_sentences.txt
 echo '' >> generated_sentences.txt
 cat pxkin.txt | sed 's/$/+N+Sg+Loc+PxSg3/' | $LOOKUP $GTHOME/langs/smn/src/generator-gt-norm.xfst |cut -f2  |grep -v '^$' > genpx 
@@ -139,29 +139,56 @@ sed 's/^/Sun uážui tom /' genpx  | uniq >> generated_sentences.txt
 echo '' >> generated_sentences.txt
 cat pxkin.txt | sed 's/$/+N+Pl+Loc+PxSg3/' | $LOOKUP $GTHOME/langs/smn/src/generator-gt-norm.xfst |cut -f2  |grep -v '^$' > genpx 
 sed 's/^/Sun uážui tom /' genpx   | uniq >> generated_sentences.txt
+echo '' >> generated_sentences.txt
+echo '' >> generated_sentences.txt
 
 
 # all kinds, except Kins, in Locative
 
 cat pxanimals.txt pxobjects.txt | sed 's/$/+N+Sg+Loc+PxSg1/' | $LOOKUP $GTHOME/langs/smn/src/generator-gt-norm.xfst | cut -f2  |grep -v '^$' > genpx 
-sed 's/^/Mun lijkkuum /' genpx | uniq >> generated_sentences.txt
+sed 's/^/Mun poolâm /' genpx | uniq >> generated_sentences.txt
 echo '' >> generated_sentences.txt
 cat pxkin.txt pxobjects.txt | sed 's/$/+N+Pl+Loc+PxSg1/' | $LOOKUP $GTHOME/langs/smn/src/generator-gt-norm.xfst | cut -f2  |grep -v '^$' > genpx 
-sed 's/^/Mun lijkkuum  /' genpx  | uniq >> generated_sentences.txt
+sed 's/^/Mun poolâm  /' genpx  | uniq >> generated_sentences.txt
 echo '' >> generated_sentences.txt
 echo '' >> generated_sentences.txt
 cat pxkin.txt pxobjects.txt | sed 's/$/+N+Sg+Loc+PxSg2/' | $LOOKUP $GTHOME/langs/smn/src/generator-gt-norm.xfst |cut -f2  |grep -v '^$' > genpx 
-sed 's/^/Tun lijkkuuh /' genpx  | uniq >> generated_sentences.txt
+sed 's/^/Tun poolah /' genpx  | uniq >> generated_sentences.txt
 echo '' >> generated_sentences.txt
 cat pxkin.txt pxobjects.txt | sed 's/$/+N+Pl+Loc+PxSg2/' | $LOOKUP $GTHOME/langs/smn/src/generator-gt-norm.xfst |cut -f2  |grep -v '^$' > genpx 
-sed 's/^/Tun lijkkuuh /' genpx    | uniq >> generated_sentences.txt
+sed 's/^/Tun poolah /' genpx    | uniq >> generated_sentences.txt
 echo '' >> generated_sentences.txt
 echo '' >> generated_sentences.txt
 cat pxkin.txt pxobjects.txt | sed 's/$/+N+Sg+Loc+PxSg3/' | $LOOKUP $GTHOME/langs/smn/src/generator-gt-norm.xfst |cut -f2  |grep -v '^$' > genpx 
-sed 's/^/Sun lijkkoo /' genpx  | uniq >> generated_sentences.txt
+sed 's/^/Sun pala /' genpx  | uniq >> generated_sentences.txt
 echo '' >> generated_sentences.txt
 cat pxkin.txt pxobjects.txt | sed 's/$/+N+Pl+Loc+PxSg3/' | $LOOKUP $GTHOME/langs/smn/src/generator-gt-norm.xfst |cut -f2  |grep -v '^$' > genpx 
+sed 's/^/Sun pala /' genpx   | uniq >> generated_sentences.txt
+echo '' >> generated_sentences.txt
+echo '' >> generated_sentences.txt
+
+# all kinds, except Kins, in Illative
+
+cat pxanimals.txt pxobjects.txt | sed 's/$/+N+Sg+Ill+PxSg1/' | $LOOKUP $GTHOME/langs/smn/src/generator-gt-norm.xfst | cut -f2  |grep -v '^$' > genpx 
+sed 's/^/Mun lijkkuum /' genpx | uniq >> generated_sentences.txt
+echo '' >> generated_sentences.txt
+cat pxkin.txt pxobjects.txt | sed 's/$/+N+Pl+Ill+PxSg1/' | $LOOKUP $GTHOME/langs/smn/src/generator-gt-norm.xfst | cut -f2  |grep -v '^$' > genpx 
+sed 's/^/Mun lijkkuum  /' genpx  | uniq >> generated_sentences.txt
+echo '' >> generated_sentences.txt
+echo '' >> generated_sentences.txt
+cat pxkin.txt pxobjects.txt | sed 's/$/+N+Sg+Ill+PxSg2/' | $LOOKUP $GTHOME/langs/smn/src/generator-gt-norm.xfst |cut -f2  |grep -v '^$' > genpx 
+sed 's/^/Tun lijkkuuh /' genpx  | uniq >> generated_sentences.txt
+echo '' >> generated_sentences.txt
+cat pxkin.txt pxobjects.txt | sed 's/$/+N+Pl+Ill+PxSg2/' | $LOOKUP $GTHOME/langs/smn/src/generator-gt-norm.xfst |cut -f2  |grep -v '^$' > genpx 
+sed 's/^/Tun lijkkuuh /' genpx    | uniq >> generated_sentences.txt
+echo '' >> generated_sentences.txt
+echo '' >> generated_sentences.txt
+cat pxkin.txt pxobjects.txt | sed 's/$/+N+Sg+Ill+PxSg3/' | $LOOKUP $GTHOME/langs/smn/src/generator-gt-norm.xfst |cut -f2  |grep -v '^$' > genpx 
+sed 's/^/Sun lijkkoo /' genpx  | uniq >> generated_sentences.txt
+echo '' >> generated_sentences.txt
+cat pxkin.txt pxobjects.txt | sed 's/$/+N+Pl+Ill+PxSg3/' | $LOOKUP $GTHOME/langs/smn/src/generator-gt-norm.xfst |cut -f2  |grep -v '^$' > genpx 
 sed 's/^/Sun lijkkoo /' genpx   | uniq >> generated_sentences.txt
+
 
 rm genpx
 
