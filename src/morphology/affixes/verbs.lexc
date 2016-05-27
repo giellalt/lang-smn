@@ -3506,9 +3506,14 @@ LEXICON 3_ADELID  !!= * __@CODE@__ SM53. short V in Inf
 +V+Imprt+Sg2:%^CLEN%> # ; !  
 ADELID_COMMON ;
 
-LEXICON ADELID_COMMON
-+V: 3_ADELID_LEX ; 
+LEXICON ADELID_COMMON !!= ** __@CODE@__ 
++V: ODD_VINFINITES_ADELID ;
++V+Ind+Prs: ODD_PRS_ADELID ;
++V+Ind+Prt: ODD_PRT ;
 +V+Ind+Prt: ODD_DU_ERRORTH ;
++V+Cond+Prs: ODD_COND ;
++V+Pot+Prs: ODD_POT ;
++V+Imprt: ODD_IMPRT ;
 
 +V+Der/NomAg:ei4jee FLAG_CTAHHEE ;
 +V+Der/st:ist 4_ADELISTID ; !adelistiđ lahtâdistiđ luškâdistiđ
@@ -3517,27 +3522,8 @@ LEXICON ADELID_COMMON
 +V+Der/alla:â%>i6l 4_KAVNATTATTAD ; !
 +V+Der/Pass: C_MERIDUD ;
 
-
-LEXICON 3_ADELID_LEX
+LEXICON ODD_VINFINITES_ADELID !!= ** __@CODE@__ 
 +Inf:%>iđ K ;
-
-+Ind+Prs+Sg1:%>âm K ;
-+Ind+Prs+Sg2:%>ah K ;
-+Ind+Prs+Sg2+Err/Orth:%>âh K ;
-+Ind+Prs+Sg3:%^CLEN%> K ; ! addel
-+Ind+Prs+Du1:%>een K ;
-+Ind+Prs+Du2:%^CLEN%>vettee K ; ! addelvettee
-+Ind+Prs+Du3:%>ává   K ;
-+Ind+Prs+Pl1:%>ep K ;
-+Ind+Prs+Pl2:%^CLEN%>vetteđ K ; ! addelvetteđ
-+Ind+Prs+Pl3:%>eh K ;
-
-+V+Ind+Prt: ODD_PRT ;
-+V+Cond+Prs: ODD_COND ;
-+V+Pot+Prs: ODD_POT ;
-+V+Imprt: ODD_IMPRT ;
-
-
 +PrsPrc:%>eijee K ;
 +PrsPrc+Use/NG:%>ijjee K ;
 +PrfPrc:%>âm K ;
@@ -3559,6 +3545,17 @@ LEXICON 3_ADELID_LEX
 +Actio+Com+PxSg3:%^CLEN%>dijnis K ;
 +Der/NomAct: FLAG_3KEPIDEM ;
 
+LEXICON ODD_PRS_ADELID !!= ** __@CODE@__ 
++Sg1:%>âm K ;
++Sg2:%>ah K ;
++Sg2+Err/Orth:%>âh K ;
++Sg3:%^CLEN%> K ; ! addel
++Du1:%>een K ;
++Du2:%^CLEN%>vettee K ; ! addelvettee
++Du3:%>ává   K ;
++Pl1:%>ep K ;
++Pl2:%^CLEN%>vetteđ K ; ! addelvetteđ
++Pl3:%>eh K ;
 
 
 LEXICON 3_MERIDID  !!= * __@CODE@__ SM53. short V in Inf
@@ -3579,7 +3576,7 @@ LEXICON 3_MERIDID  !!= * __@CODE@__ SM53. short V in Inf
 +V+Der/Pass: C_MERIDUD ;
 
 
-LEXICON ODD_INFINITES_MERIDID
+LEXICON ODD_INFINITES_MERIDID !!= ** __@CODE@__ 
 +Inf:%>iđ K ;
 +PrsPrc+Use/NG:%>ijjee K ;
 +PrsPrc:%>eijee K ;
@@ -3604,7 +3601,7 @@ LEXICON ODD_INFINITES_MERIDID
 +Der/NomAct: FLAG_3KEPIDEM ;
 +Der/NomAg:ei4jee FLAG_CTAHHEE ;
 
-LEXICON ODD_IMPRT_MERIDID
+LEXICON ODD_IMPRT_MERIDID !!= ** __@CODE@__ 
 +Sg1:%>um # ;
 +Sg2:%^CLEN%^RLEN%> # ; ! meerrid
 +Sg3:%>us # ;
@@ -3620,6 +3617,7 @@ LEXICON ODD_IMPRT_MERIDID
 
 LEXICON 3_PUTESTID  !!= * __@CODE@__ SM53. short V in Inf
 +V+Ind+Prt: ODD_DU_ERRORTH ;
++V+Ind+Prt: ODD_PRT ;
 +V: 3_PUTESTID_LEX ; ! Diacriticn to shorten V 
 +V+Der/InchL:i6%^WG%>škyett4 4SYLL_KYETTID ; ! huolâtškuođij
 +V+Der/st:ist 4_ADELISTID ;
@@ -3640,15 +3638,6 @@ LEXICON 3_PUTESTID_LEX
 +Ind+Prs+Pl2:%^RLEN%^SLEN%>vetteđ K ; ! puuteestvetteđ
 +Ind+Prs+Pl3:%>eh K ;
 
-+Ind+Prt+Sg1:%>im K ;
-+Ind+Prt+Sg2:%>ih K ;
-+Ind+Prt+Sg3:%>ij    K ;
-+Ind+Prt+Du1:%>áim K ;
-+Ind+Prt+Du2:%>áid K ;
-+Ind+Prt+Du3:%>áin  K ;
-+Ind+Prt+Pl1:%>ijm K ;
-+Ind+Prt+Pl2:%>ijd K ;
-+Ind+Prt+Pl3:%>ii K ;
 
 +Cond+Prs+Sg1:%>iččim K ;
 +Cond+Prs+Sg2:%>iččih K ;
@@ -3855,7 +3844,7 @@ LEXICON ODD_PRS
 +Pl2:%^CLEN%^RLEN%>vetteđ K ;
 +Pl3:%>eh K ;
 
-LEXICON ODD_PRT 
+LEXICON ODD_PRT
 +Sg1:%>im K ;
 +Sg2:%>ih K ;
 +Sg3:%>ij    K ;
