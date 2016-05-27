@@ -3401,13 +3401,6 @@ LEXICON 3_KUIKETTID !!= * __@CODE@__ this has lengthening of ^RV for Cns-initial
 3_LEKKASID ; 
 
 LEXICON 3_LEKKASID  !!= * __@CODE@__ SM51, no length change in stem
-
-+V+Der/InchL:i6%^WG%>škyett4 4SYLL_KYETTID ; !muštâlškuođij
-+V+Der/st:ist 4_ADELISTID ;
-+V+Der/Caus:itt 4_ADELISTID ;
-+V+Der/alla:â%>i6l 4_KAVNATTATTAD ; !ravviistâllâđ varriistâllâđ purâstâllâđ
-+V+Der/Pass: C_MERIDUD ; !ok teddiluđ paradigm
-
 +V: ODD_INFINITES ;
 +V+Ind+Prs: ODD_PRS ;
 +V+Ind+Prt: ODD_PRT ;
@@ -3415,6 +3408,13 @@ LEXICON 3_LEKKASID  !!= * __@CODE@__ SM51, no length change in stem
 +V+Cond+Prs: ODD_COND ;
 +V+Pot+Prs: ODD_POT ;
 +V+Imprt: ODD_IMPRT ;
+
+! 3-derpakke-a
++V+Der/InchL:i6%^WG%>škyett4 4SYLL_KYETTID ; !muštâlškuođij
++V+Der/st:ist 4_ADELISTID ;
++V+Der/Caus:itt 4_ADELISTID ;
++V+Der/alla:â%>i6l 4_KAVNATTATTAD ; !ravviistâllâđ varriistâllâđ purâstâllâđ
++V+Der/Pass: C_MERIDUD ; !ok teddiluđ paradigm
 
 
 LEXICON 3_CIELATTID  !!= * __@CODE@__ SM57, consonant and vowel change
@@ -3425,49 +3425,53 @@ LEXICON 3_CIELATTID  !!= * __@CODE@__ SM57, consonant and vowel change
 +V+Pot+Prs: ODD_POT ;
 +V+Imprt: ODD_IMPRT ;
 
-+V+Der/Pass: C_MERIDUD ;
+! 3-derpakke-a
 +V+Der/InchL:i6%^WG%>škyett4 4SYLL_KYETTID ; ! huolâtškuođij
 +V+Der/st:ist 4_ADELISTID ;
++V+Der/Caus:itt 4_ADELISTID ;
 +V+Der/alla:â%>i6l 4_KAVNATTATTAD ; !
++V+Der/Pass: C_MERIDUD ;
 
 
 LEXICON 3_VYEJETTID  !!= * __@CODE@__ SM53. short V in Inf
-+V+Ind+Prt: ODD_DU_ERRORTH ;
-
-+V+Der/InchL:i6%^WG%>škyett4 4SYLL_KYETTID ; !joođeetškuođij hmm
-+V+Der/Pass: C_MERIDUD ;
-+V+Der/st:ist 4_ADELISTID ; !
-
-+V+Inf:%>iđ K ;
-+V+PrsPrc:%>ijjee K ;
-+V+PrsPrc+Use/NG:%>eijee K ;
-+V+PrfPrc:%>âm K ;
-+V+Ind+Prs+ConNeg:%^RLEN%^SLEN K ;
-+V+Ind+Prt+ConNeg:%>âm K ;
-+V+Cond+Prs+ConNeg:%>iččii K ;
-+V+Pot+Prs+ConNeg:%>ižžii K ;
-+V+Imprt+ConNeg: K ;
-
-+V+VAbess:%^RLEN%^SLEN VABESS ;
-+V+VAbess+Err/Orth:%^RLEN%^SLEN%>hinnáá K ;
-+V+VAbess+Err/Orth:%^RLEN%^SLEN%>hennáá K ;
-
-+V+Actio+Nom:%>em K ;
-+V+Actio+Ill:%^RLEN%^SLEN%>mân K ;
-+V+Actio+Loc:%^RLEN%^SLEN%>mist K ;
-+V+Actio+Com:%^RLEN%^SLEN%>dijn K ;
-+V+Actio+Com+PxSg1:%^RLEN%^SLEN%>dijnân K ;
-+V+Actio+Com+PxSg2:%^RLEN%^SLEN%>dijnâd K ;
-+V+Actio+Com+PxSg3:%^RLEN%^SLEN%>dijnis K ;
-+V+Actio+Ess:%^RLEN%^SLEN%>min K ;
-+V+Der/NomAct: FLAG_3KEPIDEM ;
-+V+Der/NomAg:ei4jee FLAG_CTAHHEE ;
-
++V: ODD_VINFINITES_VYEJETTID ;
 +V+Ind+Prs: ODD_PRS_VYEJETTID ;
 +V+Ind+Prt:%^CSH ODD_PRT ;
++V+Ind+Prt: ODD_DU_ERRORTH ;
 +V+Cond+Prs: ODD_COND ;
 +V+Pot+Prs: ODD_POT ;
 +V+Imprt: ODD_IMPRT_VYEJETTID ;
+
+! 3-derpakka-a
++V+Der/InchL:i6%^WG%>škyett4 4SYLL_KYETTID ; !joođeetškuođij hmm
++V+Der/st:ist 4_ADELISTID ; 
++V+Der/Caus:itt 4_ADELISTID ;
++V+Der/alla:â%>i6l 4_KAVNATTATTAD ; ! XXX check
++V+Der/Pass: C_MERIDUD ;
+
+
+LEXICON ODD_VINFINITES_VYEJETTID
++Inf:%>iđ K ;
++PrsPrc:%>ijjee K ;
++PrsPrc+Use/NG:%>eijee K ;
++PrfPrc:%>âm K ;
++Ind+Prs+ConNeg:%^RLEN%^SLEN K ;
++Ind+Prt+ConNeg:%>âm K ;
++Cond+Prs+ConNeg:%>iččii K ;
++Pot+Prs+ConNeg:%>ižžii K ;
++Imprt+ConNeg: K ;
++VAbess:%^RLEN%^SLEN VABESS ;
++Actio+Nom:%>em K ;
++Actio+Ill:%^RLEN%^SLEN%>mân K ;
++Actio+Loc:%^RLEN%^SLEN%>mist K ;
++Actio+Com:%^RLEN%^SLEN%>dijn K ;
++Actio+Com+PxSg1:%^RLEN%^SLEN%>dijnân K ;
++Actio+Com+PxSg2:%^RLEN%^SLEN%>dijnâd K ;
++Actio+Com+PxSg3:%^RLEN%^SLEN%>dijnis K ;
++Actio+Ess:%^RLEN%^SLEN%>min K ;
++Der/NomAct: FLAG_3KEPIDEM ;
++Der/NomAg:ei4jee FLAG_CTAHHEE ;
+
 
 LEXICON ODD_PRS_VYEJETTID  !!= ** __@CODE@__ 
 +Sg1:%^CSH%>âm K ; ! csh for vatâlâm
@@ -3481,7 +3485,6 @@ LEXICON ODD_PRS_VYEJETTID  !!= ** __@CODE@__
 +Pl3:%^CSH%>eh K ;
 
 LEXICON ODD_IMPRT_VYEJETTID  !!= ** __@CODE@__ 
-+Sg1:%>um K ;
 +Sg2:%^RLEN%^SLEN%> K ;
 +Sg3:%>us K ;
 +Du1:%>oon K ;
@@ -3498,12 +3501,14 @@ LEXICON ADELID  !!= * __@CODE@__ only for adeliđ, to get adde as default ConNeg
 +V+Ind+Prs+ConNeg+Use/NG:addel K ; ! addel
 +V+Imprt+Sg2:adde K ;
 +V+Imprt+Sg2+Use/NG:addel # ; ! addel
++V+Imprt:adel ODD_IMPRT_REST ;
 :ad%^RCel ADELID_COMMON ;
 
 
 LEXICON 3_ADELID  !!= * __@CODE@__ SM53. short V in Inf
 +V+Ind+Prs+ConNeg:%^CLEN K ; !  
 +V+Imprt+Sg2:%^CLEN%> # ; !  
++V+Imprt: ODD_IMPRT ;
 ADELID_COMMON ;
 
 LEXICON ADELID_COMMON !!= ** __@CODE@__ 
@@ -3513,7 +3518,6 @@ LEXICON ADELID_COMMON !!= ** __@CODE@__
 +V+Ind+Prt: ODD_DU_ERRORTH ;
 +V+Cond+Prs: ODD_COND ;
 +V+Pot+Prs: ODD_POT ;
-+V+Imprt: ODD_IMPRT ;
 
 +V+Der/NomAg:ei4jee FLAG_CTAHHEE ;
 +V+Der/st:ist 4_ADELISTID ; !adelistiđ lahtâdistiđ luškâdistiđ
@@ -3560,17 +3564,16 @@ LEXICON ODD_PRS_ADELID !!= ** __@CODE@__
 
 LEXICON 3_MERIDID  !!= * __@CODE@__ SM53. short V in Inf
 +V: ODD_INFINITES_MERIDID ;
-
 +V+Ind+Prs: ODD_PRS ; 
 +V+Ind+Prt: ODD_PRT ; 
 +V+Ind+Prt: ODD_DU_ERRORTH ;
 +V+Cond+Prs: ODD_COND ; 
 +V+Pot+Prs: ODD_POT ;              
-+V+Imprt: ODD_IMPRT_MERIDID ;
-!+V: 3_MERIDID_LEX ; ! Diacriticn to shorten V 
++V+Imprt+Sg2:%^CLEN%^RLEN%> # ; ! meerrid
++V+Imprt: ODD_IMPRT_REST ;
 
-+V+Der/st:ist 4_ADELISTID ; !sačalistiđ
 +V+Der/InchL:i6%^WG%>škyett4 4SYLL_KYETTID ; ! huolâtškuođij
++V+Der/st:ist 4_ADELISTID ; !sačalistiđ
 +V+Der/Caus:itt 4_ADELISTID ;
 +V+Der/alla:â%>i6l 4_KAVNATTATTAD ; !ráđádâllâđ (rä%^RVđ%^RCid)
 +V+Der/Pass: C_MERIDUD ;
@@ -3601,89 +3604,40 @@ LEXICON ODD_INFINITES_MERIDID !!= ** __@CODE@__
 +Der/NomAct: FLAG_3KEPIDEM ;
 +Der/NomAg:ei4jee FLAG_CTAHHEE ;
 
-LEXICON ODD_IMPRT_MERIDID !!= ** __@CODE@__ 
-+Sg1:%>um # ;
-+Sg2:%^CLEN%^RLEN%> # ; ! meerrid
-+Sg3:%>us # ;
-+Du1:%>oon # ;
-+Du2:%>ee # ;
-+Du3:%>us # ;
-+Pl1:%>op # ;
-+Pl2:%>iđ # ;
-+Pl3:%>us # ;
+
+
 
 
 
 
 LEXICON 3_PUTESTID  !!= * __@CODE@__ SM53. short V in Inf
+
++V: ODD_VINFINITES_PUTESTID ; ! Diacriticn to shorten V 
++V+Ind+Prs: ODD_PRS_PUTESTID ;
 +V+Ind+Prt: ODD_DU_ERRORTH ;
 +V+Ind+Prt: ODD_PRT ;
-+V: 3_PUTESTID_LEX ; ! Diacriticn to shorten V 
++V+Cond+Prs: ODD_COND ;
++V+Imprt+Sg2:%^CLEN%^SLEN%> # ;
++V+Imprt: ODD_IMPRT_REST ;
++V+Pot+Prs: ODD_POT ;
+
 +V+Der/InchL:i6%^WG%>škyett4 4SYLL_KYETTID ; ! huolâtškuođij
 +V+Der/st:ist 4_ADELISTID ;
 +V+Der/Caus:itt 4_ADELISTID ;
 +V+Der/alla:â%>i6l 4_KAVNATTATTAD ; !
 +V+Der/Pass: C_MERIDUD ;
 
-LEXICON 3_PUTESTID_LEX
+LEXICON ODD_VINFINITES_PUTESTID
 +Inf:%>iđ K ;
-
-+Ind+Prs+Sg1:%>âm K ;
-+Ind+Prs+Sg2:%>ah K ;
-+Ind+Prs+Sg3:%^CLEN%^SLEN%> K ; ! putteest
-+Ind+Prs+Du1:%>een K ;
-+Ind+Prs+Du2:%^RLEN%^SLEN%>vettee K ; ! puuteestvettee
-+Ind+Prs+Du3:%>ává   K ;
-+Ind+Prs+Pl1:%>ep K ;
-+Ind+Prs+Pl2:%^RLEN%^SLEN%>vetteđ K ; ! puuteestvetteđ
-+Ind+Prs+Pl3:%>eh K ;
-
-
-+Cond+Prs+Sg1:%>iččim K ;
-+Cond+Prs+Sg2:%>iččih K ;
-+Cond+Prs+Sg3:%>ičij K ;
-+Cond+Prs+Du1:%>iččijm K ;
-+Cond+Prs+Du1+Err/Orth:%>iččiijm K ;
-+Cond+Prs+Du2:%>iččijd K ;
-+Cond+Prs+Du2+Err/Orth:%>iččiijd K ;
-+Cond+Prs+Du3:%>iččijn K ;
-+Cond+Prs+Du3+Err/Orth:%>iččiijn K ;
-+Cond+Prs+Pl1:%>iččijm K ;
-+Cond+Prs+Pl2:%>iččijd K ;
-+Cond+Prs+Pl3:%>iččii K ;
-
-+Pot+Prs+Sg1:%>ižžeem K ;
-+Pot+Prs+Sg2:%>ižžeeh K ;
-+Pot+Prs+Sg3:%>iš K ;
-+Pot+Prs+Du1:%>ižžeen K ;
-+Pot+Prs+Du2:%>išvettee K ;
-+Pot+Prs+Du3:%>ižává K ;
-+Pot+Prs+Pl1:%>ižžep K ;
-+Pot+Prs+Pl2:%>išvetteđ  K ;
-+Pot+Prs+Pl3:%>ižeh K ;
-
-+Imprt+Sg1:%>um # ;
-+Imprt+Sg2:%^CLEN%^SLEN%> # ;
-+Imprt+Sg3:%>us # ;
-+Imprt+Du1:%>oon # ;
-+Imprt+Du2:%>ee # ;
-+Imprt+Du3:%>us # ;
-+Imprt+Pl1:%>op # ;
-+Imprt+Pl2:%>iđ # ;
-+Imprt+Pl3:%>us # ;
-
 +PrsPrc:%>eijee K ;
 +PrsPrc+Use/NG:%>ijjee K ;
 +PrfPrc:%>âm K ;
-
 +Ind+Prs+ConNeg:%^CLEN%^SLEN K ; ! jiem putteest
 +Ind+Prt+ConNeg:%>âm K ;
 +Cond+Prs+ConNeg:%>iččii K ;
 +Pot+Prs+ConNeg:%>ižžii K ;
 +Imprt+ConNeg: K ;
-
 +VAbess:%^CLEN%^SLEN VABESS ; ! putteesthánnáá
-
 +Actio+Nom:%>em K ;
 +Actio+Err/Orth:%>im K ;
 +Actio+Ill:%^CLEN%^SLEN%>mân K ; ! Sofia: putteestmân
@@ -3698,27 +3652,28 @@ LEXICON 3_PUTESTID_LEX
 +Der/NomAct: FLAG_3KEPIDEM ;
 +Der/NomAg:ei4jee FLAG_CTAHHEE ;
 
+LEXICON ODD_PRS_PUTESTID  !!= ** __@CODE@__ 
++Sg1:%>âm K ;
++Sg2:%>ah K ;
++Sg3:%^CLEN%^SLEN%> K ; ! putteest
++Du1:%>een K ;
++Du2:%^RLEN%^SLEN%>vettee K ; ! puuteestvettee
++Du3:%>ává   K ;
++Pl1:%>ep K ;
++Pl2:%^RLEN%^SLEN%>vetteđ K ; ! puuteestvetteđ
++Pl3:%>eh K ;
 
 
 LEXICON 3_COKKIITTID  !!= * __@CODE@__ SM52, long V in Inf
-!+V: 3_COKKIITTID_LEX ; ! Diacriticn to shorten V 
-
-+V+Inf:%>iđ K ;
-
++V: ODD_VINFINITES_COKKIITTID ;
 +V+Ind+Prs: ODD_PRS_COKKIITTID ;
 +V+Ind+Prt: ODD_PRT ;
++V+Ind+Prt: ODD_DU_ERRORTH ;
 +V+Cond+Prs: ODD_COND ;
 +V+Pot+Prs: ODD_POT ;
-+V+Imprt: ODD_IMPRT ;
++V+Imprt+Sg2:%> K ;
++V+Imprt: ODD_IMPRT_REST ;
 
-!V+Actio+Nom ?
-+V+Actio+Ill:%^SVSH%>mân K ;
-+V+Actio+Loc:%^SVSH%>mist K ;
-+V+Actio+Com:%^SVSH%>dijn K ;
-+V+Actio+Com+PxSg1:%^SVSH%>dijnân K ;
-+V+Actio+Com+PxSg2:%^SVSH%>dijnâd K ;
-+V+Actio+Com+PxSg3:%^SVSH%>dijnis K ;
-+V+Actio+Ess:%^SVSH%>min K ;
 +V+Ind+Prs+ConNeg:%^SVSH K ;
 +V+Der/InchL:i6%^WG%>škyett4 4SYLL_KYETTID ; ! huolâtškuođij
 +V+Der/st:ist 4_ADELISTID ;
@@ -3726,8 +3681,29 @@ LEXICON 3_COKKIITTID  !!= * __@CODE@__ SM52, long V in Inf
 +V+Der/alla:â%>i6l 4_KAVNATTATTAD ; !
 +V+Der/Pass: C_MERIDUD ;
 
+LEXICON ODD_VINFINITES_COKKIITTID  !!= ** __@CODE@__
++Inf:%>iđ K ;
++PrsPrc:%>ijjee K ;
++PrsPrc+Use/NG:%>ei4jee K ;
++PrfPrc:%>âm K ;
++Ind+Prt+ConNeg:%>âm K ;
++Cond+Prs+ConNeg:%>iččii K ;
++Pot+Prs+ConNeg:%>ižžii K ;
++Imprt+ConNeg: K ;
++Der/NomAg:ei4jee FLAG_CTAHHEE ;
++VAbess:%^SVSH VABESS ;
++Actio+Nom:%>em K ;
++Actio+Nom+Err/Orth:%>im K ;
++Actio+Ill:%^SVSH%>mân K ;
++Actio+Loc:%^SVSH%>mist K ;
++Actio+Com:%^SVSH%>dijn K ;
++Actio+Com+PxSg1:%^SVSH%>dijnân K ;
++Actio+Com+PxSg2:%^SVSH%>dijnâd K ;
++Actio+Com+PxSg3:%^SVSH%>dijnis K ;
++Actio+Ess:%^SVSH%>min K ;
++Der/NomAct: FLAG_3KEPIDEM ;
 
-LEXICON ODD_PRS_COKKIITTID
+LEXICON ODD_PRS_COKKIITTID  !!= ** __@CODE@__
 +Sg1:%>âm K ;
 +Sg2:%>ah K ;
 +Sg3:%^SVSH    K ;
@@ -3738,76 +3714,14 @@ LEXICON ODD_PRS_COKKIITTID
 +Pl2:%^SVSH%>vetteđ K ;
 +Pl3:%>eh K ;
 
-+Ind+Prt+Sg1:%>im K ;
-+Ind+Prt+Sg2:%>ih K ;
-+Ind+Prt+Sg3:%>ij    K ;
-+Ind+Prt+Du1:%>áim K ;
-+Ind+Prt+Du2:%>áid K ;
-+Ind+Prt+Du3:%>áin  K ;
-+Ind+Prt+Du1+Err/Orth:%>ááim K ; ! these separate, perhaps skip
-+Ind+Prt+Du2+Err/Orth:%>ááid K ; ! only á ?
-+Ind+Prt+Du3+Err/Orth:%>ááin  K ;
-+Ind+Prt+Pl1:%>ijm K ;
-+Ind+Prt+Pl2:%>ijd K ;
-+Ind+Prt+Pl3:%>ii K ;
-
-+Cond+Prs+Sg1:%>iččim K ;
-+Cond+Prs+Sg2:%>iččih K ;
-+Cond+Prs+Sg3:%>ičij K ;
-+Cond+Prs+Du1:%>iččijm K ;
-+Cond+Prs+Du1+Err/Orth:%>iččiijm K ;
-+Cond+Prs+Du2:%>iččijd K ;
-+Cond+Prs+Du2+Err/Orth:%>iččiijd K ;
-+Cond+Prs+Du3:%>iččijn K ;
-+Cond+Prs+Du3+Err/Orth:%>iččiijn K ;
-+Cond+Prs+Pl1:%>iččijm K ;
-+Cond+Prs+Pl2:%>iččijd K ;
-+Cond+Prs+Pl3:%>iččii K ;
-
-+Pot+Prs+Sg1:%>ižžeem K ;
-+Pot+Prs+Sg2:%>ižžeeh K ;
-+Pot+Prs+Sg3:%>iš K ;
-+Pot+Prs+Du1:%>ižžeen K ;
-+Pot+Prs+Du2:%>išvettee K ;
-+Pot+Prs+Du3:%>ižává K ;
-+Pot+Prs+Pl1:%>ižžep K ;
-+Pot+Prs+Pl2:%>išvetteđ K ;
-+Pot+Prs+Pl3:%>ižeh K ;
-
-+Imprt+Sg1:%>um # ;
-+Imprt+Sg2:%^SVSH%> # ;
-+Imprt+Sg3:%>us # ;
-+Imprt+Du1:%>oon # ;
-+Imprt+Du2:%>ee # ;
-+Imprt+Du3:%>us # ;
-+Imprt+Pl1:%>op # ;
-+Imprt+Pl2:%>iđ # ;
-+Imprt+Pl3:%>us # ;
-
-+PrsPrc:%>ijjee K ;
-+PrsPrc+Use/NG:%>ei4jee K ;
-+PrfPrc:%>âm K ;
-!+Der/Pass+V+IV+PrfPrc:%>em K ;
-
-+Ind+Prt+ConNeg:%>âm K ;
-+Cond+Prs+ConNeg:%>iččii K ;
-+Pot+Prs+ConNeg:%>ižžii K ;
-+Imprt+ConNeg: K ;
-+Der/NomAg:ei4jee FLAG_CTAHHEE ;
-
-+VAbess:%^SVSH VABESS ;
-
-+Actio+Nom:%>em K ;
-+Actio+Err/Orth:%>im K ;
-+Der/NomAct: FLAG_3KEPIDEM ;
 
 
-!! !Inflecting odd-syllabic verbs
-! ----------------
+!! !Common lexicons inflecting odd-syllabic verbs
+! -----------------------------------------------
 
 
 
-LEXICON ODD_INFINITES 
+LEXICON ODD_INFINITES   !!= * __@CODE@__
 +Inf:%>iđ K ;
 +PrsPrc:%>ijjee K ;
 +PrsPrc+Use/NG:%>eijee K ;
@@ -3833,7 +3747,7 @@ LEXICON ODD_INFINITES
 +Der/NomAct: FLAG_3KEPIDEM ;
 +Ger:%^RLEN%>dijn K ; !aasât+dijn
 
-LEXICON ODD_PRS 
+LEXICON ODD_PRS   !!= * __@CODE@__
 +Sg1:%>âm K ;
 +Sg2:%>ah K ;
 +Sg3:%^CLEN%^RLEN    K ;
@@ -3844,7 +3758,7 @@ LEXICON ODD_PRS
 +Pl2:%^CLEN%^RLEN%>vetteđ K ;
 +Pl3:%>eh K ;
 
-LEXICON ODD_PRT
+LEXICON ODD_PRT  !!= * __@CODE@__
 +Sg1:%>im K ;
 +Sg2:%>ih K ;
 +Sg3:%>ij    K ;
@@ -3855,7 +3769,7 @@ LEXICON ODD_PRT
 +Pl2:%>ijd K ;
 +Pl3:%>ii K ;
 
-LEXICON ODD_COND 
+LEXICON ODD_COND   !!= * __@CODE@__
 +Sg1:%>iččim K ;
 +Sg2:%>iččih K ;
 +Sg3:%>ičij K ;
@@ -3869,7 +3783,7 @@ LEXICON ODD_COND
 +Pl2:%>iččijd K ;
 +Pl3:%>iččii K ;
 
-LEXICON ODD_POT 
+LEXICON ODD_POT   !!= * __@CODE@__
 +Sg1:%>ižžeem K ;
 +Sg2:%>ižžeeh K ;
 +Sg3:%>iš K ;
@@ -3880,9 +3794,11 @@ LEXICON ODD_POT
 +Pl2:%>išvetteđ K ;
 +Pl3:%>ižeh K ;
 
-LEXICON ODD_IMPRT 
-+Sg1:%>um K ;
+LEXICON ODD_IMPRT   !!= * __@CODE@__ 
 +Sg2:%^RLEN%> K ;
+ODD_IMPRT_REST ;
+
+LEXICON ODD_IMPRT_REST   !!= * __@CODE@__
 +Sg3:%>us K ;
 +Du1:%>oon K ;
 +Du2:%>ee K ;
@@ -3892,7 +3808,8 @@ LEXICON ODD_IMPRT
 +Pl3:%>us K ;
 
 
-LEXICON ODD_DU_ERRORTH
+
+LEXICON ODD_DU_ERRORTH  !!= * __@CODE@__
 +Du1+Err/Orth:%>ááim K ; ! these separate, perhaps skip
 +Du2+Err/Orth:%>ááid K ; ! only á ?
 +Du3+Err/Orth:%>ááin  K ;
