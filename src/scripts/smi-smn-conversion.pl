@@ -43,7 +43,8 @@ while(<>) {
 	s/^Matti\+/!Matti+/g ;
 	s/^Turku\+/!Turku+/g ;
 	
-
+# changing to WG inflection
+	s/^Valle ACCRA/Valle MOKKE/g ;
 
 # sme special symbols
 	s/\^//g ;
