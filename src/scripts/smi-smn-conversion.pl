@@ -1,8 +1,8 @@
 #!/usr/bin/perl -w
 #
-# smi-sma-conversion.pl
+# smi-smn-conversion.pl
 # Convert names in the SMI propernoun lexicon to smn.
-# $Id: smi-sma-conversion.pl 91035 2014-03-24 22:56:01Z sjur $
+# $Id: smi-smn-conversion.pl 91035 2014-03-24 22:56:01Z sjur $
 
 use strict;
 use utf8;
