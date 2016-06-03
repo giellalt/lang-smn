@@ -319,8 +319,8 @@ LEXICON 2TELTTA   !!= __@CODE@__
 
 LEXICON 2TELTTA_SG !!= __@CODE@__
 +N: X_TELTTA_SG ;
-+Cmp/SgNom: R ;
-+Cmp/SgGen:%^WG%> R ;
++N+Cmp/SgNom: R ;
++N+Cmp/SgGen:%^WG%> R ;
 +N+Ess:%>n CPXsuff ;					! telttan		
 +N+Sg+Nom: VPXsuff12nom ;  ! 
 +N+Sg+Gen:%^WG VPXsuff12 ;  ! 
@@ -960,7 +960,7 @@ LEXICON 2AIGI_PL!!= __@CODE@__
 +N+Pl+Gen:%^WG%>id CPXsuff ;  !párnáidis
 +N+Pl+Acc:%^WG%>id CPXsuff ;  !párnáidis
 +N+Pl+Ill:%^WG%>in CPXsuff ;  !párnáidis
-+N+Pl+Com:%^WG%>id CPXsuffCOM ;  !párnáidiskuin
++N+Pl+Com:%^WG%^RVSH%>id CPXsuffCOM ;  !párnáidiskuin koskijdânguin
 +N+Pl+Loc:%^WG%^CLEN%^SVLOW%>in CPXsuff ;  !juolgijnân 
 
 
@@ -1430,7 +1430,7 @@ LEXICON 2VADDU_SG !!= __@CODE@__
 +N+Sg+Acc:%^WG%^RLEN VPXsuff3 ;  !
 +N+Sg+Ill:%^CSH%>s CPXsuff ; !
 +N+Sg+Loc:%^WG%>st CPXsuff ;  !
-+N+Sg+Com:%^WG%^CLEN%^SVLOW%>in CPXsuff ;  !
++N+Sg+Com:%^WG%>in CPXsuff ;  ! kusâinis  áhhoinân
  Nom_DER ;
 :%^WG%^RLEN%> Gen_DER ;    
 :%^WG%> Gen_DER ;    
@@ -1443,7 +1443,7 @@ LEXICON 2VADDU_PL !!= __@CODE@__
 +N+Pl+Acc:%^WG%>id CPXsuff ;  ! 
 +N+Pl+Ill:%^WG%>id CPXsuff ;  ! 
 +N+Pl+Com:%^WG%>id CPXsuffCOM ;  ! 
-+N+Pl+Loc:%^WG%^CLEN%^SVLOW%>in CPXsuff ;  !
++N+Pl+Loc:%^WG%>in CPXsuff ;  !
 +N+Pl+Gen:%^WG%>id CPXsuff ;  !
 +N+Pl+Acc:%^WG%>id CPXsuff ;  ! 
 +N+Pl+Ill:%^WG%>id CPXsuff ;  ! 
@@ -1735,16 +1735,16 @@ LEXICON 4MANUTTEP_SG   !!= __@CODE@__
 +N: X_MANUTTEP_SG ;
 +N+Cmp/SgNom:e R ;
 +N+Ess:eppe%>n		CPXsuff ;			! mánutteppen
++N+Cmp/SgNom:ep%> R ;
++N+Cmp/SgGen:eve%> R ;
 
 
 LEXICON 4MANUTTEP_PL   !!= __@CODE@__ 
 +N: X_MANUTTEP_PL ;
++N+Cmp/PlGen:evi%>j R ;
 
 LEXICON X_MANUTTEP_SG   !!= __@CODE@__ 
 +Sg+Nom:ep K ;				! mánuttep
-+Cmp/SgNom:ep%> R ;
-+Cmp/SgGen:eve%> R ;
-+Cmp/PlGen:evi%>j R ;
 +Sg+Gen:eve	K ;				! mánutteve
 +Sg+Acc:eve	K ;				! mánutteve
 +Sg+Ill:iäp%>án	K ;			! mánuttiäpán	
@@ -1879,7 +1879,7 @@ LEXICON 3EEMEED_SG !!= __@CODE@__
 +N+Sg+Acc: CPXsuff ;        
 +N+Sg+Gen: CPXsuff ;        
 +N+Sg+Loc:%^CSH%^SVSH%>ist CPXsuff ; 		! raportistis 
-+N+Sg+Com:%^CSH%^SVSH%>áin CPXsuff ;  !  
++N+Sg+Com:%^CSH%^SVSH%>ijn CPXsuff ;  !  
 +N:%> Gen_DER ; !
 +N:%> Nom_DER ; !eennâmlâš
 
@@ -1927,7 +1927,7 @@ LEXICON 3LITTER_SG !!= __@CODE@__
 +N+Sg+Acc: CPXsuff ;        
 +N+Sg+Gen: CPXsuff ;        
 +N+Sg+Loc:%>ist CPXsuff ;        
-+N+Sg+Com:%>áin K ;	! 
++N+Sg+Com:%>ijn CPXsuff ;	! ustevijnân
 +N:%> Gen_DER ;
 +N:%> Nom_DER ;
 
@@ -1938,7 +1938,7 @@ LEXICON 3LITTER_PL !!= __@CODE@__
 +N+Pl+Gen:%>ij CPXsuff ;  ! 
 +N+Pl+Acc:%>ijd CPXsuff ;  ! 
 +N+Pl+Ill:%>ijd CPXsuff ;  ! 
-+N+Pl+Com:%>ij CPXsuffCOM ;  ! vaanhimijdiskuin
++N+Pl+Com:%>ijd CPXsuffCOM ;  ! vaanhimijdiskuin ustevijdângui
 
 
 
@@ -2639,7 +2639,8 @@ LEXICON C_KAARBIS_SG !!= __@CODE@__
 +N+Cmp/SgGen:%^FCD%> R ;
 +N:%^WG%^RLEN%> Nom_DER ;
 +N:%^FCD%> Gen_DER ; 
-+N+Cmp/SgNom:%^ÁI%^WG%^RLEN%>  R ;
++N+Cmp/SgNom:%^ÁI%^WG%^RLEN%>  R ; 
++N+Sg+Com:%^FCD%>in CPXsuff ; ! kárbáinis
 
 LEXICON C_KAARBIS_PL
 +N:%^FCD  X_h_PL ;
@@ -2825,15 +2826,15 @@ X_TUULAS_PL ;
 
 LEXICON S_TUULAS_SG !!= __@CODE@__
 +N: X_TUULAS_SG ;
++N+Cmp/SgNom:âš%^WG%^RLEN%> R ;
++N+Cmp/SgGen:%^SV%^WG%^RLEN%^SLEN%> R ;
 
 LEXICON S_TUULAS_PL !!= __@CODE@__
 +N: X_TUULAS_PL ;
++N+Cmp/PlGen:%^WG%^RLEN%>i R ;
 
 LEXICON X_TUULAS_SG !!= __@CODE@__
 +Sg+Nom:âš%^WG%^RLEN K ; ! tuulâš
-+Cmp/SgNom:âš%^WG%^RLEN%> R ;
-+Cmp/SgGen:%^SV%^WG%^RLEN%^SLEN%> R ;
-+Cmp/PlGen:%^WG%^RLEN%>i R ;
 +Sg+Gen:%^SV%^WG%^RLEN%^SLEN K ; 	! tuulii
 +Sg+Acc:%^SV%^WG%^RLEN%^SLEN K ;	! tuulii
 +Sg+Ill:âž%^WG%^RVSH%>ân K ;	! tulâžân
@@ -2974,12 +2975,16 @@ S_KUAVDAS_PL ;
 
 LEXICON S_KUAVDAS_SG
 +N:  X_KUAVDAS_SG ;
-+Cmp/SgNom:š%^WG%^RLEN%>  R ;
-+Cmp/SgGen:%^SV%^SLEN%>  R ; !piäivááčuovâ
++N+Cmp/SgNom:š%^WG%^RLEN%>  R ;
++N+Cmp/SgGen:%^SV%^SLEN%>  R ; !piäivááčuovâ
++N+Sg+Gen:%> CPXsuff ;  !
++N+Sg+Acc:%> CPXsuff ;  !
++N+Sg+Com:%>in CPXsuff ;  !párnáinân
+
 
 LEXICON S_KUAVDAS_PL
 +N:  X_SVSLENh_PL ;
-+Cmp/PlGen:%>i  R ; !piäivááčuovâ
++N+Cmp/PlGen:%>i  R ; !piäivááčuovâ
 +N+Pl+Gen:%>id CPXsuff ;  !
 +N+Pl+Acc:%>id CPXsuff ;  !
 +N+Pl+Com:%>id CPXsuffCOM ;  !
