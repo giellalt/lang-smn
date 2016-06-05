@@ -42,6 +42,7 @@ while(<>) {
 	s/^Markku\+/!Markku+/g ;
 	s/^Matti\+/!Matti+/g ;
 	s/^Turku\+/!Turku+/g ;
+	s/^Turkki\+/!Turkki+/g ;
 	
 # changing to WG inflection
 	s/^Valle ACCRA/Valle MOKKE/g ;
