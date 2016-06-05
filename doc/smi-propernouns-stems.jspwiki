@@ -1,13 +1,13 @@
 
 
 
-This file is copied from the common __gtcore__ directory
+The file smi-propernouns.lexc is copied from the common __gtcore__ directory
 and ''shall not'' be edited in the __langs__ directory.
 
 
 !!!General notes
 
-The entries are tagged for language, to satisfy the needs of the 
+The entries are tagged in gtcore for language, to satisfy the needs of the 
 synthetic speech project.
 
 !!!Language-specific notes
@@ -46,6 +46,8 @@ samiske språka. BETFAGE skal brukast ved e-finale ACCRA-ord.
 
 !!Modifications for smn
 
+See the perl script
+
 ----
 
 The beginning of this file (''smi-propernouns.lexc'') looks as follows 
@@ -59,10 +61,18 @@ The beginning of this file (''smi-propernouns.lexc'') looks as follows
 
 
 
+!!!How to work
 
+Setting: A non-Inari Sámi name is missing in the FST.
 
-
-
+# Check whether the name (''Hiroshima'') is found in the src/morphology/generated-files/ catalogue.
+## if it is not, and is a non-smn name, it probably should be in the general file. \\
+   Add it to gtcore/giella-shared/smi/src/morphology/stems/smi-propernouns.lexc
+## if it is in the generated cataloge, check wheter it has the contlex you want it to have \\
+   if it does, it should work, so debug. \\
+   if it does not, add a line for the name in question to the file \\
+   src/scripts/smi-smn-conversion.pl (use existing lines as documentation).
+   
 
 
 
