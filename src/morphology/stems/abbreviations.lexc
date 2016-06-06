@@ -58,23 +58,26 @@ LEXICON ab-num   !!= * __@CODE@__
 
 LEXICON ab-nodot-noun   !!= * __@CODE@__  The bulk
        +N+ABBR+Attr:      # ; ! no period, that is.
-        +N+ABBR+Nom:      # ; ! no period, that is.
-        +N+ABBR+Acc:      # ; ! no period, that is.
-        +N+ABBR+Gen:      # ; ! no period, that is.
-        +N+ABBR+Ill:%>%:n   # ; ! no period, that is.
-        +N+ABBR+Loc:%>%:st   # ; ! no period, that is.
-        +N+ABBR+Com:%>%:áin  # ; ! no period, that is.
+        +N+ABBR+Sg+Nom:      # ; ! no period, that is.
+        +N+ABBR+Sg+Acc:      # ; ! no period, that is.
+        +N+ABBR+Sg+Gen:      # ; ! no period, that is.
+        +N+ABBR+Sg+Ill:%>%:n   # ; ! no period, that is.
+        +N+ABBR+Sg+Loc:%>%:st   # ; ! no period, that is.
+        +N+ABBR+Sg+Com:%>%:áin  # ; ! no period, that is.
         +N+ABBR+Ess:%>%:n   # ; ! no period, that is.
-+N+ABBR+Com+Err/Orth:%>%:ain # ;! no period, that is. !
+        +N+ABBR+Par:%>%:   # ; ! 5 m, not 5 md
+        +N+ABBR+Par+Use/NG:%>%:d   # ; ! 5 m, not 5 md
++N+ABBR+Sg+Com+Err/Orth:%>%:ain # ;! no period, that is. !
 +N+ABBR+Ess+Err/Orth:%>%:an  # ; ! no period, that is. !
 !+N+ABBR: RHyph ;
 
 LEXICON ab-nodot-adj   !!= * __@CODE@__
 !+ABBR:%> # ; ! no period, that is.
 +A+ABBR+Attr:%> # ; ! no period, that is.
-+A+ABBR+Nom:%> # ; ! no period, that is.
-+A+ABBR+Acc:%> # ; ! no period, that is.
-+A+ABBR+Gen:%> # ; ! no period, that is.
++A+ABBR+Sg+Nom:%> # ; ! no period, that is.
++A+ABBR+Sg+Acc:%> # ; ! no period, that is.
++A+ABBR+Sg+Gen:%> # ; ! no period, that is.
++A+ABBR+Par:%> # ; ! no period, that is.
 !+A+ABBR: RHyph ;
 
 LEXICON ab-nodot-adv   !!= * __@CODE@__
@@ -83,6 +86,7 @@ LEXICON ab-nodot-adv   !!= * __@CODE@__
  +Adv+ABBR+Nom:%> # ; ! no period, that is.
  +Adv+ABBR+Acc:%> # ; ! no period, that is.
  +Adv+ABBR+Gen:%> # ; ! no period, that is.
+ +Adv+ABBR+Par:%> # ; ! no period, that is.
 ! +Adv+ABBR: RHyph ;
 
 LEXICON ab-nodot-num   !!= * __@CODE@__
@@ -95,9 +99,10 @@ LEXICON ab-nodot-num   !!= * __@CODE@__
 
 LEXICON ab-dot-noun   !!= * __@CODE@__  This is the lexicon for abbrs that must have a period.
        +N+ABBR+Attr:%.%>      # ;
-        +N+ABBR+Nom:%.%>      # ;
-        +N+ABBR+Acc:%.%>      # ;
-        +N+ABBR+Gen:%.%>      # ;
+        +N+ABBR+Sg+Nom:%.%>      # ;
+        +N+ABBR+Sg+Acc:%.%>      # ;
+        +N+ABBR+Sg+Gen:%.%>      # ;
+        +N+ABBR+Par:%.%>      # ;
 !        +N+ABBR+Ill:%.%>%:i   # ;
 !        +N+ABBR+Loc:%.%>%:s   # ;
 !        +N+ABBR+Com:%.%>%:in  # ;
@@ -115,6 +120,7 @@ LEXICON ab-dot-adj   !!= * __@CODE@__  This is the lexicon for abbrs that must h
 +A+ABBR+Nom:%.%> # ;
 +A+ABBR+Acc:%.%> # ;
 +A+ABBR+Gen:%.%> # ;
++A+ABBR+Par:%.%> # ;
 
 LEXICON ab-dot-adv   !!= * __@CODE@__  This is the lexicon for abbrs that must have a period.
 +Adv+ABBR:%.%> # ; ! Adv without case.
@@ -124,6 +130,7 @@ LEXICON ab-dot-num   !!= * __@CODE@__  This is the lexicon for abbrs that must h
 +Num+ABBR+Nom:%.%> # ;
 +Num+ABBR+Acc:%.%> # ;
 +Num+ABBR+Gen:%.%> # ;
++Num+ABBR+Par:%.%> # ;
 
 LEXICON ab-dot-cc   !!= * __@CODE@__
 +CC+ABBR:%.%> # ;
@@ -162,15 +169,11 @@ LEXICON SYMBOLsuff   !!= * __@CODE@__
 !                       K ; ! § 14 (no case on the bare §). Oh, yes. Case.
          +Sg+Gen:       K ;	! §    (case suffix on the rest, in case of explicit
          +Sg+Acc:       K ;	!       suffix)
- +Sg+Gen+Err/Orth:a      K ;	! §:a  (case suffix on the rest, in case of explicit
- +Sg+Acc+Err/Orth:a      K ;	!       suffix)
- +Sg+Ill+Err/Orth:ij     K ;
-         +Sg+Ill:i      K ;
-         +Sg+Loc:s      K ;  ! §:s
- +Sg+Loc+Err/Orth:as     K ;  ! §:as
+         +Sg+Ill:n      K ;
+         +Sg+Loc:st      K ;  ! §:s
          +Sg+Com:in     K ;
             +Ess:n      K ;
-    +Ess+Err/Orth:an     K ;
+            +Par:d      K ;
          +Pl+Nom:t      K ;
          +Pl+Gen:id     K ;
          +Pl+Acc:id     K ;
@@ -421,7 +424,6 @@ luo ab-dot-noun ; ! luohkká
 lád ab-dot-noun ; !lassiárvodivat
 lávv+Err/Lex:lávv ab-dot-noun; !Lávvardat !
 lávvord+Err/Lex:lávvord9 ab-dot-noun ; !
-m:m ab-noun; !
 m.fl ab-dot-noun ;
 mp ab-dot-noun ; ! mánuppaje
 db ab-dot-noun ;
@@ -657,7 +659,7 @@ LEXICON TRNUMAB   !!= * __@CODE@__ contains abbreviations who are transitive in 
 ! TODO: Bug the fact that these abbrs do not distinguish between
 ! cap and small letters, whereast he ITRAB ones do.
 
-
+äššinr:äššinr ab-dot-noun ;
 Apd ab-dot-noun ; !
 Árv.% nr ab-noun ;
 !Bnr ab-dot-noun ; !LOWER-CASE-DOUBLET
@@ -666,8 +668,6 @@ Dnr ab-noun ;
 !Enr ab-noun ;LOWER-CASE-DOUBLET
 Gieldanr ab-dot-noun ;
 !Gnr ab-noun ; !LOWER-CASE-DOUBLET
-Kildegt ab-dot-noun ; !Kildegata
-Kommunenr ab-dot-noun ;
 Kor ab-noun ;
 O.nr ab-noun ; !
 O.nr+Err/Orth:O.% nr ab-noun ; !
