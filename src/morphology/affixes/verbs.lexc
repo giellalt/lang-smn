@@ -475,7 +475,7 @@ LEXICON 2SYLL_VIEZZAD  !!= * __@CODE@__ 6 verbs
 +V+Der/d:âd%^WG 3_DERIVED_D ; !viežâdiđ viežâd vs viežžâd luoihâdiđ 3_KUIKETTID?
 +V+Der/st:âst%^WG 3_DERIVED_ST ; !
 +V+Der/tt:âtt%^WG 3_DERIVED_TT ; ! 
-+V+Der/l:âl 3_DERIVED_L ; 
++V+Der/l:âl 3_DERIVED_L_CLEN ; 
 +V+Der/Pass:u2 C_PASS_SH_RVSH ; !viežžuuččii viežžui
 
 LEXICON VINFINITES_VIEZZAD !!= ** __@CODE@__
@@ -560,7 +560,7 @@ LEXICON 2SYLL_SPELLAD  !!= * __@CODE@__ Similar to 2SYLL_ETTAD, but less CSH, do
 +V+Der/d:âd%^WG 3_DERIVED_D ; ! 
 +V+Der/st:âst%^WG 3_DERIVED_ST ; !
 +V+Der/tt:âtt%^WG 3_DERIVED_TT ; ! 
-+V+Der/l:âl 3_DERIVED_L ; 
++V+Der/l:âl 3_DERIVED_L_CLEN ; 
 +V+Der/Pass:u2 C_PASS_SH_RVSH ; !ettum ettui lekkum terppum
 
 
@@ -677,7 +677,7 @@ LEXICON 2SYLL_KAVNAD  !!= * __@CODE@__ as ETTAD but with VBACK, only RV ä in st
 +V+Der/d:âd%^WG%^VBACK 3_DERIVED_D ; ! 
 +V+Der/st:âst%^WG%^VBACK 3_DERIVED_ST ; !
 +V+Der/tt:âtt%^WG%^VBACK 3_DERIVED_TT ; ! 
-+V+Der/l:âl 3_DERIVED_L ; ! kaččâliđ
++V+Der/l:âl 3_DERIVED_L_CLEN ; ! kaččâliđ
 +V+Der/Pass:u2  C_PASS_SH_RVSH ; !
 
 LEXICON VINFINITES_KAVNAD   !!= ** __@CODE@__ 
@@ -763,7 +763,7 @@ LEXICON 2SYLL_KALGAD  !!= * __@CODE@__ Only one verb: kalgâđ Ind+Prs+Pl3 kälg
 +V+Der/d:âd%^WG 3_DERIVED_D ; ! 
 +V+Der/st:âst%^WG 3_DERIVED_ST ; !
 +V+Der/tt:âtt%^WG 3_DERIVED_TT ; ! 
-+V+Der/l:âl 3_DERIVED_L ; 
++V+Der/l:âl 3_DERIVED_L_CLEN ; 
 +V+Der/Pass:u2%^CLEN C_PASS_SH ; !
 
 LEXICON VINFINITES_KALGAD  !!= ** __@CODE@__ 
@@ -1518,7 +1518,7 @@ LEXICON 2SYLL_VUOLLAD  !!= * __@CODE@__ ye to ua vyešš 71 verbs
 +V+Der/d:â%^WG%>d 3_KUIKETTID ; ! 
 +V+Der/st:âst%^WG 3_DERIVED_ST ; !
 +V+Der/tt:âtt%^WG 3_DERIVED_TT ; ! 
-+V+Der/l:âl 3_DERIVED_L ; 
++V+Der/l:âl%^VBACK 3_DERIVED_L ;
 +V+Der/Pass:u2 C_PASS_SH_RLEN ; !
 
 LEXICON VINFINITES_2SYLL_VUOLLAD  !!= ** __@CODE@__ 
@@ -2030,7 +2030,7 @@ LEXICON 2SYLL_UADDID  !!= * __@CODE@__ 3 verbs
 +V+Der/st:ist%^WG 3_DERIVED_ST ; 
 +V+Der/tt:itt%^WG 3_DERIVED_TT ; 
 !+V+Der/d:âd%^WG%^VBACK 3_DERIVED_D ; ! no Der/d for ID
-+V+Der/l:âl 3_DERIVED_L ; 
++V+Der/l:il 3_DERIVED_L_VERSION2 ; !uáđiliđ uáđđil
 ! no Der/Pass for these 3 verbs
 
 LEXICON VINFINITES_UADDID   !!= ** __@CODE@__ 
@@ -2938,15 +2938,15 @@ LEXICON EVEN_IND_OD
 +Prt+Pl3:u%^VHIGH%>u K ;
 
 LEXICON EVEN_POT_OD !!= ** __@CODE@__
-+Sg1:o%>om K ;
-+Sg2:o%>oh K ;
-+Sg3:o%>oš K ;
-+Du1:o%^WG%>žeen K ;
-+Du2:o%>ošvettee K ;
-+Du3:o%^WG%>žává K ;
-+Pl1:o%^WG%>žep K ;
-+Pl2:o%>ošvetteđ K ;
-+Pl3:o%^WG%>žeh K ;
++Sg1:%^WG%^CLENo%>om K ;	! lihhoom
++Sg2:%^WG%^CLENo%>oh K ;	! lihhooh
++Sg3:%^WGo%>š K ;	! lihoš
++Du1:o%^WGo%>žeen K ; ! lihožeen
++Du2:o%^WG%^CLENo%>ošvettee K ;	! lihhoošvettee
++Du3:o%^WGo%>žává K ; ! lihožává
++Pl1:o%^WGo%>žep K ;	! lihožeh
++Pl2:o%^WG%^CLENo%>ošvetteđ K ; ! lihhoošvetteđ
++Pl3:o%^WG%^WGo%>žeh K ; ! lihožeh
 
 LEXICON EVEN_IMPRT_OD !!= ** __@CODE@__
 +Sg1:o%^CLEN%>om K ;
@@ -4009,11 +4009,11 @@ LEXICON 3_DERIVED_L
 +V+Ind+Prt+Du2+Err/Orth:%^VBACK%>ááid K ; ! only á ?
 +V+Ind+Prt+Du3+Err/Orth:%^VBACK%>ááin  K ;
 
-+V+Inf:%^CSH%^VBACK%^RVSH%>iđ K ; ! monâliđ, vatâliđ
++V+Inf:%^CSH%^VBACK%^RVSH%>iđ K ; ! monâliđ, vatâliđ, asâliđ, 
 
 +V+Ind+Prs+Sg1:%^CSH%^VBACK%^RVSH%>âm K ; ! csh for vatâlâm
 +V+Ind+Prs+Sg2:%^CSH%^VBACK%^RVSH%>ah K ;
-+V+Ind+Prs+Sg3:%^VBACK%^RLEN K ;  ! vaattâl
++V+Ind+Prs+Sg3:%^CLEN%^VBACK%^RLEN K ;  ! vaattâl
 +V+Ind+Prs+Du1:%^CSH%^VBACK%^RVSH%>een K ;
 +V+Ind+Prs+Du2:%^CLEN%^VBACK%^RLEN%^SLEN%>vettee K ;
 +V+Ind+Prs+Du3:%^CSH%^VBACK%^RVSH%>ává   K ;
@@ -4031,18 +4031,18 @@ LEXICON 3_DERIVED_L
 +V+Ind+Prt+Pl2:%^CSH%^VBACK%^RVSH%>ijd K ;
 +V+Ind+Prt+Pl3:%^CSH%^VBACK%^RVSH%>ii K ;
 
-+V+Cond+Prs+Sg1:%^VBACK%>iččim K ;
-+V+Cond+Prs+Sg2:%^VBACK%>iččih K ;
-+V+Cond+Prs+Sg3:%^VBACK%>ičij K ;
-+V+Cond+Prs+Du1:%^VBACK%>iččijm K ;
-+V+Cond+Prs+Du1+Err/Orth:%^VBACK%>iččiijm K ;
-+V+Cond+Prs+Du2:%^VBACK%>iččijd K ;
-+V+Cond+Prs+Du2+Err/Orth:%^VBACK%>iččiijd K ;
-+V+Cond+Prs+Du3:%^VBACK%>iččijn K ;
-+V+Cond+Prs+Du3+Err/Orth:%^VBACK%>iččiijn K ;
-+V+Cond+Prs+Pl1:%^VBACK%>iččijm K ;
-+V+Cond+Prs+Pl2:%^VBACK%>iččijd K ;
-+V+Cond+Prs+Pl3:%^VBACK%>iččii K ;
++V+Cond+Prs+Sg1:%^CSH%^VBACK%^RVSH%>iččim K ;
++V+Cond+Prs+Sg2:%^CSH%^VBACK%^RVSH%>iččih K ;
++V+Cond+Prs+Sg3:%^CSH%^VBACK%^RVSH%>ičij K ;
++V+Cond+Prs+Du1:%^CSH%^VBACK%^RVSH%>iččijm K ;
++V+Cond+Prs+Du1+Err/Orth:%^CSH%^VBACK%^RVSH%>iččiijm K ;
++V+Cond+Prs+Du2:%^CSH%^VBACK%^RVSH%>iččijd K ;
++V+Cond+Prs+Du2+Err/Orth:%^CSH%^VBACK%^RVSH%>iččiijd K ;
++V+Cond+Prs+Du3:%^CSH%^VBACK%^RVSH%>iččijn K ;
++V+Cond+Prs+Du3+Err/Orth:%^CSH%^VBACK%^RVSH%>iččiijn K ;
++V+Cond+Prs+Pl1:%^CSH%^VBACK%^RVSH%>iččijm K ;
++V+Cond+Prs+Pl2:%^CSH%^VBACK%^RVSH%>iččijd K ;
++V+Cond+Prs+Pl3:%^CSH%^VBACK%^RVSH%>iččii K ;
 
 +V+Pot+Prs+Sg1:%^VBACK%>ižžeem K ;
 +V+Pot+Prs+Sg2:%^VBACK%>ižžeeh K ;
@@ -4095,40 +4095,40 @@ LEXICON 3_DERIVED_L
 
 
 LEXICON 3_DERIVED_L_VERSION2
-+V+Inf:%^VBACK%^RVSH%>iđ K ; ! monâliđ, vatâliđ
++V+Inf:%^CSH%^RVSH%>iđ K ; ! 
 
-+V+Ind+Prs+Sg1:%^VBACK%^RVSH%>âm K ; ! csh for vatâlâm
-+V+Ind+Prs+Sg2:%^VBACK%^RVSH%>ah K ;
-+V+Ind+Prs+Sg3:%^VBACK K ;  ! vaattâl
-+V+Ind+Prs+Du1:%^VBACK%^RVSH%>een K ;
-+V+Ind+Prs+Du2:%^CLEN%^VBACK%^SLEN%>vettee K ;
-+V+Ind+Prs+Du3:%^VBACK%^RVSH%>ává   K ;
-+V+Ind+Prs+Pl1:%^VBACK%^RVSH%>ep K ;
-+V+Ind+Prs+Pl2:%^CLEN%^VBACK%^SLEN%>vetteđ K ;
-+V+Ind+Prs+Pl3:%^VBACK%^RVSH%>eh K ;
++V+Ind+Prs+Sg1:%^CSH%^RVSH%>âm K ; ! csh for vatâlâm
++V+Ind+Prs+Sg2:%^CSH%^RVSH%>ah K ;
++V+Ind+Prs+Sg3:%^CLEN%^RVSH K ;  ! spellâl	viššâl
++V+Ind+Prs+Du1:%^CSH%^RVSH%>een K ;
++V+Ind+Prs+Du2:%^CLEN%^RVSH%>vettee K ;
++V+Ind+Prs+Du3:%^CSH%^RVSH%>ává   K ;
++V+Ind+Prs+Pl1:%^CSH%^RVSH%>ep K ;
++V+Ind+Prs+Pl2:%^CLEN%^SLEN%>vetteđ K ;
++V+Ind+Prs+Pl3:%^CSH%^RVSH%>eh K ;
 
-+V+Ind+Prt+Sg1:%^VBACK%^RVSH%>im K ;
-+V+Ind+Prt+Sg2:%^VBACK%^RVSH%>ih K ;
-+V+Ind+Prt+Sg3:%^VBACK%^RVSH%>ij    K ;
-+V+Ind+Prt+Du1:%^VBACK%^RVSH%>áim K ;
-+V+Ind+Prt+Du2:%^VBACK%^RVSH%>áid K ;
-+V+Ind+Prt+Du3:%^VBACK%^RVSH%>áin  K ;
-+V+Ind+Prt+Pl1:%^VBACK%^RVSH%>ijm K ;
-+V+Ind+Prt+Pl2:%^VBACK%^RVSH%>ijd K ;
-+V+Ind+Prt+Pl3:%^VBACK%^RVSH%>ii K ;
++V+Ind+Prt+Sg1:%^CSH%^RVSH%>im K ;
++V+Ind+Prt+Sg2:%^CSH%^RVSH%>ih K ;
++V+Ind+Prt+Sg3:%^CSH%^RVSH%>ij    K ;
++V+Ind+Prt+Du1:%^CSH%^RVSH%>áim K ;
++V+Ind+Prt+Du2:%^CSH%^RVSH%>áid K ;
++V+Ind+Prt+Du3:%^CSH%^RVSH%>áin  K ;
++V+Ind+Prt+Pl1:%^CSH%^RVSH%>ijm K ;
++V+Ind+Prt+Pl2:%^CSH%^RVSH%>ijd K ;
++V+Ind+Prt+Pl3:%^CSH%^RVSH%>ii K ;
 
-+V+Cond+Prs+Sg1:%^VBACK%>iččim K ;
-+V+Cond+Prs+Sg2:%^VBACK%>iččih K ;
-+V+Cond+Prs+Sg3:%^VBACK%>ičij K ;
-+V+Cond+Prs+Du1:%^VBACK%>iččijm K ;
-+V+Cond+Prs+Du1+Err/Orth:%^VBACK%>iččiijm K ;
-+V+Cond+Prs+Du2:%^VBACK%>iččijd K ;
-+V+Cond+Prs+Du2+Err/Orth:%^VBACK%>iččiijd K ;
-+V+Cond+Prs+Du3:%^VBACK%>iččijn K ;
-+V+Cond+Prs+Du3+Err/Orth:%^VBACK%>iččiijn K ;
-+V+Cond+Prs+Pl1:%^VBACK%>iččijm K ;
-+V+Cond+Prs+Pl2:%^VBACK%>iččijd K ;
-+V+Cond+Prs+Pl3:%^VBACK%>iččii K ;
++V+Cond+Prs+Sg1:%^CSH%^RVSH%>iččim K ;
++V+Cond+Prs+Sg2:%^CSH%^RVSH%>iččih K ;
++V+Cond+Prs+Sg3:%^CSH%^RVSH%>ičij K ;
++V+Cond+Prs+Du1:%^CSH%^RVSH%>iččijm K ;
++V+Cond+Prs+Du1+Err/Orth:%^CSH%^RVSH%>iččiijm K ;
++V+Cond+Prs+Du2:%^CSH%^RVSH%>iččijd K ;
++V+Cond+Prs+Du2+Err/Orth:%^CSH%^RVSH%>iččiijd K ;
++V+Cond+Prs+Du3:%^CSH%^RVSH%>iččijn K ;
++V+Cond+Prs+Du3+Err/Orth:%^CSH%^RVSH%>iččiijn K ;
++V+Cond+Prs+Pl1:%^CSH%^RVSH%>iččijm K ;
++V+Cond+Prs+Pl2:%^CSH%^RVSH%>iččijd K ;
++V+Cond+Prs+Pl3:%^CSH%^RVSH%>iččii K ;
 
 +V+Pot+Prs+Sg1:%^VBACK%>ižžeem K ;
 +V+Pot+Prs+Sg2:%^VBACK%>ižžeeh K ;
