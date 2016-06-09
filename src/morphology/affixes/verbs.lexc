@@ -2849,9 +2849,11 @@ LEXICON EVEN_IMPRT_TIETTID !!= ** __@CODE@__
 +Pl2:i%>đ K ;
 +Pl3:u%^CLEN%^VHIGH%>s K ;
 
+
+! Fixing Pot bug
 LEXICON EVEN_POT_ID !!= ** __@CODE@__
-+Sg1:e%^WG%^VBACK%^RLEN%>em K ; ! keeseem peeveem
-+Sg2:e%^WG%^VBACK%^RLEN%>eh K ; ! keeseem peeveem
++Sg1:e%^WG%^VBACK%>em K ; ! keeseem peeveem
++Sg2:e%^WG%^VBACK%>eh K ; ! keeseem peeveem
 +Sg3:i%^WG%^VBACK%^RLEN%>š K ;
 +Du1:i%^WG%^VBACK%^RVSH%>žeen K ;
 +Du2:i%^WG%^VBACK%^RLEN%>švettee K ;
@@ -2859,6 +2861,17 @@ LEXICON EVEN_POT_ID !!= ** __@CODE@__
 +Pl1:i%^WG%^VBACK%^RVSH%>žep K ;
 +Pl2:i%^WG%^VBACK%^RLEN%>švetteđ K ;
 +Pl3:i%^WG%^VBACK%^RVSH%>žeh K ;
+
+! LEXICON EVEN_POT_ID !!= ** __@CODE@__
+! +Sg1:e%^WG%^VBACK%^RLEN%>em K ; ! keeseem peeveem
+! +Sg2:e%^WG%^VBACK%^RLEN%>eh K ; ! keeseem peeveem
+! +Sg3:i%^WG%^VBACK%^RLEN%>š K ;
+! +Du1:i%^WG%^VBACK%^RVSH%>žeen K ;
+! +Du2:i%^WG%^VBACK%^RLEN%>švettee K ;
+! +Du3:i%^WG%^VBACK%^RVSH%>žává K ;
+! +Pl1:i%^WG%^VBACK%^RVSH%>žep K ;
+! +Pl2:i%^WG%^VBACK%^RLEN%>švetteđ K ;
+! +Pl3:i%^WG%^VBACK%^RVSH%>žeh K ;
 
 
 LEXICON EVEN_IMPRT_ID !!= ** __@CODE@__
@@ -4130,6 +4143,38 @@ LEXICON 3_DERIVED_L_VERSION2
 +V+Cond+Prs+Pl2:%^RVSH%>iččijd K ;
 +V+Cond+Prs+Pl3:%^RVSH%>iččii K ;
 
+! addition starts here
+
++V+PrsPrc:%^VBACK%>ijjee K ;
++V+PrsPrc+Use/NG:%^VBACK%>eijee K ;
++V+PrfPrc:%^VBACK%>âm K ;
+
++V+Ind+Prs+ConNeg:%^VBACK%^RLEN K ; ! %^SLEN
++V+Ind+Prt+ConNeg:%^VBACK%>âm K ;
++V+Cond+Prs+ConNeg:%^VBACK%>iččii K ;
++V+Pot+Prs+ConNeg:%^VBACK%>ižžii K ;
++V+Imprt+ConNeg: K ;
+
++V+VAbess:%^VBACK%^RLEN%^SLEN VABESS ;
++V+VAbess+Err/Orth:%^VBACK%^RLEN%^SLEN%>hinnáá K ;
++V+VAbess+Err/Orth:%^VBACK%^RLEN%^SLEN%>hennáá K ;
+
++V+Actio+Nom:%^VBACK%>em K ;
++V+Actio+Ill:%^VBACK%^RLEN%^SLEN%>mân K ;
++V+Actio+Ess:%^VBACK%^RLEN%^SLEN%>min K ;
++V+Actio+Loc:%^VBACK%^RLEN%^SLEN%>mist K ;
++V+Actio+Com:%^VBACK%^RLEN%^SLEN%>dijn K ;
++V+Actio+Com+PxSg1:%^VBACK%^RLEN%^SLEN%>dijnân K ;
++V+Actio+Com+PxSg2:%^VBACK%^RLEN%^SLEN%>dijnâd K ;
++V+Actio+Com+PxSg3:%^VBACK%^RLEN%^SLEN%>dijnis K ;
++V+Der/NomAct:%^VBACK FLAG_3KEPIDEM ;
++V+Der/NomAg:%^VBACKei4jee FLAG_CTAHHEE ;
++V+Der/InchL:i6%^WG%^VBACK%>škyett4 4SYLL_KYETTID ; !joođeetškuođij hmm
++V+Der/st:%^VBACKist 4_ADELISTID ; !
++V+Der/Caus:%^VBACKitt 4_ADELISTID ; !
++V+Der/Pass:%^VBACK C_MERIDUD ;
+
+! addition stops here
 
 LEXICON 3_DERIVED_L_VERSION3
 +V+Inf:%^CSH%^RVSH%>iđ K ; ! 
