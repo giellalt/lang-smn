@@ -774,13 +774,48 @@ LEXICON NUM-PREFIXES   !!= * __@CODE@__
 
 LEXICON ARABIC   !!= * __@CODE@__ arabic numerals
 < [1|2|3|4|5|6|7|8|9|%0] > ARABICS      ;
+                           ARABICYEAR ;
 
 LEXICON ARABICS
  ARABICLOOP      ;
  ARABICLOOPORD   ;
  ARABICLOOPCOLL  ;
  ARABICLOOPphone ;
- 
+
+LEXICON ARABICYEAR
+< [1|2] [1|2|3|4|5|6|7|8|9|%0] [1|2|3|4|5|6|7|8|9|%0] [1|2|3|4|5|6|7|8|9|%0] > numyear ;
+
+LEXICON numyear
+ yeartag ;
+ %/:%/ moreyear ;
+ %-:%- moreyear ;
+
+LEXICON moreyear 
+< [1|2|3|4|5|6|7|8|9|%0] [1|2|3|4|5|6|7|8|9|%0] > yeartagpl ;
+
+LEXICON yeartag
++Num+Sem/Year:  yearcase ;
+
+LEXICON yeartagpl
+ +Num+Sem/Year+Pl+Nom:       #      ;
+ +Num+Sem/Year+Pl+Gen:       #      ;
+ +Num+Sem/Year+Pl+Acc:       #      ;
+ +Num+Sem/Year+Pl+Loc+Err/Orth:%:s       #      ;
+
+
+LEXICON yearcase
+ +Sg+Nom:       #      ;
+ +Sg+Gen:       #      ;
+ +Sg+Acc:       #      ;
+ +Sg+Loc:%:st       #      ;
+ +Sg+Ill:%:n       #      ;
+ +Sg+Ill+Attr:  #      ;
+ +Sg+Loc+Attr:  #      ;
+ +Ess: # ;
+ +Par: # ;
+ +Cmp/SplitR:%-    ENDLEX ;
+ +Cmp/SplitR:%–    ENDLEX ;
+
 LEXICON ARABICLOOPphone   !!= * __@CODE@__ +358(0)16671254
 < [1|2|3|4|5|6|7|8|9|%0] > ARABICLOOPphone ;
 !  :              ARABICLOOPphone ; ! Infinite loop on the surface side
