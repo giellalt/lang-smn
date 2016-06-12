@@ -562,7 +562,7 @@ LEXICON 2SYLL_SPELLAD  !!= * __@CODE@__ Similar to 2SYLL_ETTAD, but less CSH, do
 +V+Der/tt:âtt%^WG 3_DERIVED_TT ; ! 
 !+V+Der/l:âl 3_DERIVED_L_CLEN ; 
 !+V+Der/l:âl 3_DERIVED_L ;
-+V+Der/l:âl 3_DERIVED_RUOTTALID ;
++V+Der/l:âl 3_DERIVED_VBACK ;
 +V+Der/Pass:u2 C_PASS_SH_RVSH ; !ettum ettui lekkum terppum
 
 
@@ -1361,7 +1361,8 @@ LEXICON 2SYLL_VIISSAD  !!= * __@CODE@__ 20 verbs
 +V+Der/d:âd%^WG 3_DERIVED_D ; ! 
 +V+Der/st:âst%^WG 3_DERIVED_ST ; !
 +V+Der/tt:âtt%^WG 3_DERIVED_TT ; ! 
-+V+Der/l:âl 3_DERIVED_L_VERSION2 ;
+!+V+Der/l:âl 3_DERIVED_L_VERSION2 ;
++V+Der/l:âl 3_DERIVED_VBACK ;
 +V+Der/Pass:u2 C_PASS_SH_RVSH ; !vuoššui
 
 LEXICON VINFINITES_VIISSAD  !!= ** __@CODE@__
@@ -1595,7 +1596,7 @@ LEXICON 2SYLL_LUOIKKAD  !!= * __@CODE@__ passive, no Der/l, otherw like ruottad,
 2SYLL_RUOTTAD_LUOIKKAD ;
 
 LEXICON 2SYLL_RUOTTAD  !!= * __@CODE@__ no passive, but Der/l. 4 verbs
-+V+Der/l:â%^VBACK%^RLEN%>l 3_DERIVED_RUOTTALID ; ! Look at this, Trond. ! 3_DERIVED_RUOTTALID
++V+Der/l:â%^VBACK%^RLEN%>l 3_DERIVED_VBACK ; ! Look at this, Trond. ! 3_DERIVED_VBACK
 2SYLL_RUOTTAD_LUOIKKAD ;
 
 LEXICON 2SYLL_RUOTTAD_LUOIKKAD  !!= * __@CODE@__ no passive
@@ -1691,7 +1692,7 @@ LEXICON 2SYLL_KALVED  !!= * __@CODE@__ kalveđ without RLEN Prs+Sg1. 8 verbs
 +V+Der/st:est%^WG 3_DERIVED_ST ; ! arvestiđ a%^RVrv
 +V+Der/tt:ett%^WG 3_DERIVED_TT ; ! 
 !+V+Der/l:el 3_DERIVED_L ; !  +Ind+Prs+Sg3 and Prs+ConNeg not RLEN!
-+V+Der/l:el 3_DERIVED_RUOTTALID ;
++V+Der/l:el 3_DERIVED_VBACK ;
 +V+Der/Pass:u2 C_PASS_SH_RVSH ; ! aRV  o  a 
 
 
@@ -4024,16 +4025,12 @@ LEXICON 3_DERIVED_D_CLEN  !!= * __@CODE@__ lexicon
 
 !! ! Der/l lexicons
 
-!! * 3_DERIVED_L
-!! ** Inf asâliđ, Sg3 vaattâl
-!! 3_DERIVED_L_VERSION2
-!! ** Inf RVSH, Sg3 CLEN RVSH
-!! 3_DERIVED_L_VERSION3
-!! ** 
-!! 3_DERIVED_L_CLEN
-!! ** 
-!! 3_DERIVED_RUOTTALID
-!! ** 
+!! Table for 3_DERIVED contlexes 
+
+!! || Form || _L            || _L_VERSION2 || _L_VERSION3 || _L_CLEN       || _VBACK || _RLEN
+!! | Inf    | CSH VBACK RVSH | RVSH        | CSH RVSH     | CSH  VBACK      | VBACK  |  RLEN                                                                                      
+!! | Sg3    | VBACK RLEN     | CLEN RVSH   | CLEN RVSH    | CLEN VBACK      | VBACK  |                                                                   
+!! | ConNeg | VBACK          | -           | VBACK        | CLEN VBACK RLEN | VBACK  |  RLEN                                                                                                
 
 LEXICON 3_DERIVED_L
 +V+Ind+Prt+Du1+Err/Orth:%^VBACK%>ááim K ; ! these separate, perhaps skip
@@ -4373,7 +4370,7 @@ LEXICON 3_DERIVED_L_CLEN
 +V+Der/Caus:%^CLEN%^VBACKitt 4_ADELISTID ; !
 
 
-LEXICON 3_DERIVED_RUOTTALID
+LEXICON 3_DERIVED_VBACK
 
 +V+Inf:%^VBACK%>iđ K ;
 
