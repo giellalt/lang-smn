@@ -4106,14 +4106,15 @@ LEXICON 3_DERIVED_D_CLEN  !!= * __@CODE@__ lexicon
 
 !! ! Der/l lexicons
 
-!! Table for 3_DERIVED contlexes 
+!! Table for 3_DERIVED contlexes.
+!! The columns give contlexes, the rows give key forms, and the cells show the triggers.
 
-!! || Form || _L            || _L_VERSION2 || _L_VERSION3 || _L_CLEN       || _VBACK || _RLEN
-!! | Inf    | CSH VBACK RVSH | RVSH        | CSH RVSH     | CSH  VBACK      | VBACK  |  RLEN                                                                                      
-!! | Sg3    | VBACK RLEN     | CLEN RVSH   | CLEN RVSH    | CLEN VBACK      | VBACK  |                                                                   
-!! | ConNeg | VBACK          | -           | VBACK        | CLEN VBACK RLEN | VBACK  |  RLEN                                                                                                
+!! || Form || L             || L_VERSION2 || L_VERSION3 || L_CLEN         || VBACK || RLEN
+!! | Inf    | CSH VBACK RVSH | RVSH        | CSH RVSH    | CSH  VBACK      | VBACK  |  RLEN                                                                                      
+!! | Sg3    | VBACK RLEN     | CLEN RVSH   | CLEN RVSH   | CLEN VBACK      | VBACK  |  -                                                                
+!! | ConNeg | VBACK          | -           | VBACK       | CLEN VBACK RLEN | VBACK  |  RLEN                                                                                                
 
-LEXICON 3_DERIVED_L
+LEXICON 3_DERIVED_L  !!= * __@CODE@__
 +V+Ind+Prt+Du1+Err/Orth:%^VBACK%>ááim K ; ! these separate, perhaps skip
 +V+Ind+Prt+Du2+Err/Orth:%^VBACK%>ááid K ; ! only á ?
 +V+Ind+Prt+Du3+Err/Orth:%^VBACK%>ááin  K ;
@@ -4204,7 +4205,7 @@ LEXICON 3_DERIVED_L
 +V+Der/Pass:%^VBACK C_MERIDUD ;
 
 
-LEXICON 3_DERIVED_L_VERSION2
+LEXICON 3_DERIVED_L_VERSION2  !!= * __@CODE@__
 +V+Inf:%^RVSH%>iđ K ; ! 
 
 +V+Ind+Prs+Sg1:%^RVSH%>âm K ; !  toideđ > toideliđ
@@ -4274,7 +4275,7 @@ LEXICON 3_DERIVED_L_VERSION2
 
 ! addition stops here
 
-LEXICON 3_DERIVED_L_VERSION3
+LEXICON 3_DERIVED_L_VERSION3   !!= * __@CODE@__
 +V+Inf:%^CSH%^RVSH%>iđ K ; ! 
 
 +V+Ind+Prs+Sg1:%^CSH%^RVSH%>âm K ; ! csh for vatâlâm
@@ -4360,7 +4361,7 @@ LEXICON 3_DERIVED_L_VERSION3
 +V+Der/Pass:%^VBACK C_MERIDUD ;
 
 
-LEXICON 3_DERIVED_L_CLEN
+LEXICON 3_DERIVED_L_CLEN   !!= * __@CODE@__
 +V+Ind+Prt+Du1+Err/Orth:%^VBACK%>ááim K ; ! these separate, perhaps skip
 +V+Ind+Prt+Du2+Err/Orth:%^VBACK%>ááid K ; ! only á ?
 +V+Ind+Prt+Du3+Err/Orth:%^VBACK%>ááin  K ;
@@ -4451,7 +4452,7 @@ LEXICON 3_DERIVED_L_CLEN
 +V+Der/Caus:%^CLEN%^VBACKitt 4_ADELISTID ; !
 
 
-LEXICON 3_DERIVED_VBACK
+LEXICON 3_DERIVED_VBACK   !!= * __@CODE@__
 
 +V+Inf:%^VBACK%>iđ K ;
 
@@ -4540,7 +4541,7 @@ LEXICON 3_DERIVED_VBACK
 +V+Der/Pass:%^VBACK C_MERIDUD ;
 
 
-LEXICON 3_DERIVED_L_RLEN_CLEN
+LEXICON 3_DERIVED_L_RLEN_CLEN   !!= * __@CODE@__
 
 +V+Inf:%^CSH%>iđ K ;	! viirrâđ > virâliđ
 
@@ -4672,7 +4673,7 @@ LEXICON C_COKKAD  !!= * __@CODE@__
 +V+Ind+Prt+Pl2:%>id  K ;
 +V+Ind+Prt+Pl3:%>jii  K ;
 
-LEXICON C_PASS_LONG
+LEXICON C_PASS_LONG  !!= ** __@CODE@__
 +V+Inf:juvvo%>t K ;
 +V+Ind+Prs+Sg3:juvvo%>o K ;
 +V+Ind+Prs+Pl3:juvvo%>jeh K ;
@@ -4807,7 +4808,7 @@ LEXICON C_TUHHID !!= * __@CODE@__
 +V+Imprt+Pl3:i2%>jus K ;
 
 
-LEXICON C_PASS_SH_RVSH !!= * __@CODE@__ shortens vowel
+LEXICON C_PASS_SH_RVSH !!= ** __@CODE@__ shortens vowel
 +V+IV+Inf:%^CLEN%^VBACK%^RVSH%>đ K ; !kavnuđ
 
 +V+IV+Der/InchL:%^CLEN%>škyett4 4SYLL_KYETTID ; !kulluuškuođij
@@ -4866,7 +4867,7 @@ LEXICON C_PASS_SH_RVSH !!= * __@CODE@__ shortens vowel
 +V+IV+Ger:%^CLEN%^VBACK%^RVSH%>udijn K ; ! tohhuudijn
 
 
-LEXICON C_PASS_SH_RLEN !!= * __@CODE@__ does not shorten vowel
+LEXICON C_PASS_SH_RLEN !!= ** __@CODE@__ does not shorten vowel
 +V+IV+Inf:%^CLEN%^VBACK%^RLEN%>đ K ;
 
 +V+IV+Der/InchL:%^CLEN%>škyett4 4SYLL_KYETTID ; !kulluuškuođij
