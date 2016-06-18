@@ -19,7 +19,7 @@
 DEFAULT_WEIGHT=10
 
 # Edit distanse for the Levenshtein error model:
-EDIT_DISTANCE=2
+EDIT_DISTANCE=3
 
 # Define whether we allow changes to the initial letter(s) in the error model,
 # possible values are:
