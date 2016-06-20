@@ -227,6 +227,7 @@ LEXICON 2KIEHA_PL !!= __@CODE@__
 +N+Cmp/PlGen:^WG%>i R ;
 +N+Pl+Gen:^WG%>id CPXsuff ;  !
 +N+Pl+Acc:^WG%>id CPXsuff ;  !
++N+Pl+Loc:^WG%>in CPXsuff ;  !
 +N+Pl+Com:^WG%>id CPXsuffCOM ;  !
 
 
@@ -388,7 +389,7 @@ LEXICON 2FADDA_SG !!= __@CODE@__
 +N+Sg+Nom: VPXsuff3 ;  ! 
 +N+Sg+Gen:^WG^RLEN VPXsuff3 ;  ! 
 +N+Sg+Acc:^WG^RLEN VPXsuff3 ;  ! 
-+N+Sg+Ill:^CSH^RLEN%>s CPXsuff ; !
++N+Sg+Ill:%>s CPXsuff ; !
 +N+Sg+Loc:^WG%>st CPXsuff ; !
 +N+Sg+Com:^WG^SVLOW%>in CPXsuff ;  ! 
 +N+Ess:%>n CPXsuff ;               ! kissán
@@ -440,7 +441,7 @@ LEXICON 2KISSA_SG !!= __@CODE@__
 +N+Sg+Nom: VPXsuff3 ;  ! 
 +N+Sg+Gen:^WG VPXsuff3 ;  ! 
 +N+Sg+Acc:^WG VPXsuff3 ;  ! 
-+N+Sg+Ill:^CSH^RLEN%>s CPXsuff ; !
++N+Sg+Ill:%>s CPXsuff ; !
 +N+Sg+Loc:^WG%>st CPXsuff ; !
 +N+Sg+Com:^WG^SVLOW%>in CPXsuff ;  ! 
 +N+Ess:^CLEN%>n CPXsuff ;         ! kissán
@@ -454,6 +455,7 @@ LEXICON 2KISSA_PL !!= __@CODE@__
 +N+Pl+Acc:^WG%>id CPXsuff ;  !
 +N+Pl+Ill:^WG%>id CPXsuff ;  !
 +N+Pl+Com:^WG%>id CPXsuffCOM ;  !
++N+Pl+Loc:^WG%>in CPXsuff ;  !
 
 LEXICON X_KISSA_SG !!= __@CODE@__
 +Sg+Nom: K ;               ! kissá
@@ -485,6 +487,20 @@ LEXICON 2TAHO !!= __@CODE@__ only for taho, similar to 2LAJO except from Pl+Ill,
 +N+Cmp/SgGen:^WG%> R ;
 +N:^WG%> Gen_DER ;
 +N:%> Nom_DER ;
++N+Sg+Nom: VPXsuff12nom ;  ! 
++N+Sg+Gen:^WG VPXsuff12 ;  ! 
++N+Sg+Acc:^WG VPXsuff12 ;  ! 
++N+Sg+Nom: VPXsuff3 ;  ! 
++N+Sg+Gen:^WG VPXsuff3 ;  ! 
++N+Sg+Acc:^WG VPXsuff3 ;  ! 
++N+Sg+Ill:^CSH^RLEN%>s CPXsuff ; !
++N+Sg+Loc:^WG%>st CPXsuff ; !
++N+Sg+Com:^WG%>in CPXsuff ;  ! 
++N+Pl+Gen:^WG%>id CPXsuff ;  !
++N+Pl+Acc:^WG%>id CPXsuff ;  !
++N+Pl+Ill:^WG%>id CPXsuff ;  !
++N+Pl+Loc:^WG%>in CPXsuff ;  !
++N+Pl+Com:^WG%>id CPXsuffCOM ;  !
 
 
 LEXICON 2LAJO  !!= __@CODE@__
@@ -1595,6 +1611,7 @@ LEXICON 4KUNAGAS_SG !!= __@CODE@__
 +N+Sg+Gen: VPXsuff12 ;        
 +N+Sg+Gen: VPXsuff3 ;        
 +N+Sg+Loc:^FCD%>âst CPXsuff ;   !ciälkkámušâstis     
++N+Sg+Ill:^FCD%>âs CPXsuff ;   !     
 +Sg+Com:^FCD%>âin CPXsuff ;  !  
 +Sg+Ill:âs CPXsuff ;  !  
 +N:^FCD%> Nom_DER ;
@@ -1641,10 +1658,26 @@ LEXICON 4CAHALIG_SG  !!= __@CODE@__
 +N+Cmp/SgGen: R ;
 +N:%> Nom_DER ;
 +N:%> Gen_DER ; 
++N+Sg+Nom: VPXsuff12nom ;  ! 
++N+Sg+Gen: VPXsuff12 ;  ! 
++N+Sg+Acc: VPXsuff12 ;  ! 
++N+Sg+Nom: VPXsuff3 ;  ! 
++N+Sg+Gen: VPXsuff3 ;  ! 
++N+Sg+Acc: VPXsuff3 ;  ! 
++N+Sg+Ill:g%>ás CPXsuff ; !
++N+Sg+Loc:%>est CPXsuff ; !
++N+Sg+Com:%>in CPXsuff ;  ! 
+
+
 
 LEXICON 4CAHALIG_PL  !!= __@CODE@__
 +N: X_eh_PL ;
 +N+Cmp/PlGen:%>ij R ;
++N+Pl+Gen:%>ijd CPXsuff ;  !
++N+Pl+Acc:%>ijd CPXsuff ;  !
++N+Pl+Ill:%>ijd CPXsuff ;  !
++N+Pl+Loc:%>ijn CPXsuff ;  !
++N+Pl+Com:%>ijd CPXsuffCOM ;  !
 
 
 LEXICON X_CAHALIG_SG  !!= __@CODE@__
@@ -1722,6 +1755,20 @@ LEXICON 4PUHELIN		!!= __@CODE@__  Only a few words in this category
 +N+Ess:%>in		CPXsuff ;			! puhelimin
 +N+Par:%>id		K ;				! puhelimid
 +N: X_eh_PL ;
++N+Sg+Nom: VPXsuff12nom ;  ! 
++N+Sg+Gen: VPXsuff12 ;  ! 
++N+Sg+Acc: VPXsuff12 ;  ! 
++N+Sg+Nom: VPXsuff3 ;  ! 
++N+Sg+Gen: VPXsuff3 ;  ! 
++N+Sg+Acc: VPXsuff3 ;  ! 
++N+Sg+Ill:%>s CPXsuff ; !
++N+Sg+Loc:%>st CPXsuff ; !
++N+Sg+Com:%>in CPXsuff ;  ! 
++N+Pl+Gen:%>ijd CPXsuff ;  !
++N+Pl+Acc:%>ijd CPXsuff ;  !
++N+Pl+Ill:%>ijd CPXsuff ;  !
++N+Pl+Loc:%>ijn CPXsuff ;  !
++N+Pl+Com:%>ijd CPXsuffCOM ;  !
 
 LEXICON 2KOLLIISTALLAM  !!= __@CODE@__
 +N+Sg+Nom:lâm K ;               ! kolliistâllâm
@@ -1800,6 +1847,13 @@ LEXICON 3POTTAAK  !!= __@CODE@__
 +N+Sg+Gen: CPXsuff ;        
 +N+Sg+Loc:^SC^CSH^SVSH%>ist CPXsuff ; 		! potákkist 
 +N+Sg+Com:^SC^CSH^SVSH%>áin CPXsuff ;  !  
++N+Sg+Ill:^SC^CSH^SVSH%>as CPXsuff ;  !  
++N+Sg+Com:^SC^CSH^SVSH%>in CPXsuff ;  !  
++N+Pl+Loc:^SC^CSH^SVSH%>áin CPXsuff ; 		!   
++N+Pl+Acc:^SC^CSH^SVSH%>ijd CPXsuff ; 		!   
++N+Pl+Gen:^SC^CSH^SVSH%>ijd CPXsuff ; 		!   
++N+Pl+Ill:^SC^CSH^SVSH%>ijd CPXsuff ; 		!   
++N+Pl+Com:^SC^CSH^SVSH%>ijd CPXsuffCOM ; 		!   
 +N:%> Nom_DER ;
 +N:%> Gen_DER ; 
 
@@ -1821,6 +1875,7 @@ LEXICON 3EEMEED_SG !!= __@CODE@__
 +N+Sg+Nom: VPXsuff3 ;  !
 +N+Sg+Acc: CPXsuff ;        
 +N+Sg+Gen: CPXsuff ;        
++N+Sg+Ill:^CSH^SVSH%>as CPXsuff ; 		!   
 +N+Sg+Loc:^CSH^SVSH%>ist CPXsuff ; 		! raportistis 
 +N+Sg+Com:^CSH^SVSH%>ijn CPXsuff ;  !  
 +N:%> Gen_DER ; !
@@ -1833,6 +1888,7 @@ LEXICON 3EEMEED_PL  !!= __@CODE@__
 +N+Pl+Acc:^CSH^SVSH%>ijd CPXsuff ;  ! skipárijdis
 +N+Pl+Ill:^CSH^SVSH%>ijd CPXsuff ;  ! skipárijdis
 +N+Pl+Gen:^CSH^SVSH%> CPXsuff ;  ! elimis ! XXX check this
++N+Pl+Loc:^CSH^SVSH%>ijn CPXsuff ;  ! 
 
 
 LEXICON X_EEMEED_SG  !!= __@CODE@__
@@ -1870,6 +1926,7 @@ LEXICON 3LITTER_SG !!= __@CODE@__
 +N+Sg+Acc: CPXsuff ;        
 +N+Sg+Gen: CPXsuff ;        
 +N+Sg+Loc:%>ist CPXsuff ;        
++N+Sg+Ill:%>is CPXsuff ;        
 +N+Sg+Com:%>ijn CPXsuff ;	! ustevijnân
 +N:%> Gen_DER ;
 +N:%> Nom_DER ;
@@ -2203,6 +2260,7 @@ LEXICON 3VEESKIR_SG
 +N+Sg+Gen: CPXsuff ;  ! 
 +N+Sg+Acc: CPXsuff ;  ! pirrâsis
 +N+Sg+Ill:âs CPXsuff ;  ! pirrâsâsân
++N+Sg+Loc:âst CPXsuff ;  !  
 +N+Sg+Com:%>ijn CPXsuff ;  !  
 +N:^WG^RLEN%> Nom_DER ;
 +N:%> Gen_DER ; 
@@ -2473,11 +2531,21 @@ LEXICON 3POOVSA_SG !!= __@CODE@__  soovsa
 +N+Sg+Abe:%>ttáá K ; 		! poksâmttáá
 +N+Ess:^FCD^WG^RLEN%>n K ;			! poovsân
 +N+Par:^FCD^WG^RLEN%>d K ;			! poovsâd
++N+Sg+Gen:%> CPXsuff ;  !
++N+Sg+Acc:%> CPXsuff ;  !
++N+Sg+Com:%>in CPXsuff ;  !
++N+Sg+Loc:%>st CPXsuff ;  !
++N+Sg+Ill:%>s CPXsuff ; !
 
 
 LEXICON 3POOVSA_PL !!= __@CODE@__  plurals for 3POOVSA
 +N+Cmp/PlGen:%>ij  R ;
 +N:  X_eh_PL ;
++N+Pl+Gen:%>id CPXsuff ;  !
++N+Pl+Acc:%>id CPXsuff ;  !
++N+Pl+Ill:%>id CPXsuff ;  !
++N+Pl+Com:%>id CPXsuffCOM ;  !
++N+Pl+Loc:%>in CPXsuff ;  !
 
 
 !! !!Contracted stems
@@ -2490,10 +2558,15 @@ LEXICON C_KAAMUV  !!= __@CODE@__
 +N+Cmp/SgGen:^SV^SLEN%>  R ;
 +N+Cmp/PlGen:%>i  R ;
 +N+Sg+Com:%>in CPXsuff ; ! pennuinân
-+N+Sg+Gen: VPXsuff3 ;         ! 
-+N+Sg+Acc: VPXsuff3 ;         ! 
-+N+Sg+Ill:%>s CPXsuff ; !
-+N+Sg+Loc:%>st CPXsuff ;  !
++N+Sg+Gen:^SVv^SLEN%> CPXsuff ;         ! 
++N+Sg+Acc:^SVv^SLEN%> CPXsuff ;         ! 
++N+Sg+Ill:^SVv^SLEN%>s CPXsuff ; !
++N+Sg+Loc:^SVv^SLEN%>st CPXsuff ;  !
++N+Pl+Gen:^SVv^SLEN%>id CPXsuff ;  !
++N+Pl+Acc:^SVv^SLEN%>id CPXsuff ;  !
++N+Pl+Ill:^SVv^SLEN%>id CPXsuff ;  !
++N+Pl+Com:^SVv^SLEN%>id CPXsuffCOM ;  !
++N+Pl+Loc:^SVv^SLEN%>in CPXsuff ;  !
 
 LEXICON X_KAAMUV  !!= __@CODE@__
 +Sg+Nom:v^WG^RLEN K ;   	! kaamuv
@@ -2592,10 +2665,22 @@ LEXICON C_KAARBIS_SG !!= __@CODE@__
 +N:^FCD%> Gen_DER ; 
 +N+Cmp/SgNom:^ÁI^WG^RLEN%>  R ; 
 +N+Sg+Com:^FCD%>in CPXsuff ; ! kárbáinis
++N+Sg+Gen:^FCD%> CPXsuff ;  ! vi5älppás
++N+Sg+Acc:^FCD%> CPXsuff ;  !
++N+Sg+Com:^FCD%>in CPXsuff ;  !
++N+Sg+Loc:^FCD%>st CPXsuff ;  !
++N+Sg+Ill:^FCD%>s CPXsuff ; !
+
+
 
 LEXICON C_KAARBIS_PL
 +N:^FCD  X_h_PL ;
 +N+Cmp/PlGen:^FCD%>i R ;
++N+Pl+Gen:^FCD%>id CPXsuff ;  !
++N+Pl+Acc:^FCD%>id CPXsuff ;  !
++N+Pl+Ill:^FCD%>id CPXsuff ;  !
++N+Pl+Com:^FCD%>id CPXsuffCOM ;  !
++N+Pl+Loc:^FCD%>in CPXsuff ;  !
 
 LEXICON X_KAARBIS_SG  !!= __@CODE@__
 +Sg+Nom:^WG^RLEN K ;  ! käärbis
@@ -2693,6 +2778,7 @@ LEXICON CUANJA_COMMON
 +N+Ess:%>n CPXsuff ;
 +N+Pl+Gen:%>id CPXsuff ;  !
 +N+Pl+Acc:%>id CPXsuff ;  !
++N+Pl+Ill:%>id CPXsuff ;  !
 +N+Pl+Com:%>id CPXsuffCOM ;  !
 +N+Pl+Loc:%>in CPXsuff ;  !j
 
@@ -3213,12 +3299,14 @@ LEXICON C_LOHHEE_SG !!= __@CODE@__ redirects to  C_TAHHEE, but adds NomAg
 LEXICON C_LOHHEE_PL !!= __@CODE@__ redirects to  C_TAHHEE, but adds NomAg
 +N+NomAg: X_TAHHEE_PL ;
 +N+NomAg+Cmp/PlGen:^SVSH%>i3 R ;
-+N+NomAg+Pl+Gen:^WG%>id CPXsuff ;  !
-+N+NomAg+Pl+Acc:^WG%>id CPXsuff ;  !
-+N+NomAg+Pl+Com:^WG%>id CPXsuffCOM ;  !
+!+N+NomAg+Pl+Gen:^WG%>id CPXsuff ;  !
+!+N+NomAg+Pl+Acc:^WG%>id CPXsuff ;  !
+!+N+NomAg+Pl+Com:^WG%>id CPXsuffCOM ;  !
 +N+NomAg+Pl+Gen:^SVSH%>i3d CPXsuff ;  !
 +N+NomAg+Pl+Acc:^SVSH%>i3d CPXsuff ;  !
++N+NomAg+Pl+Ill:^SVSH%>i3d CPXsuff ;  !
 +N+NomAg+Pl+Com:^SVSH%>i3d CPXsuffCOM ;  !
++N+NomAg+Pl+Loc:^SVSH%>i3n CPXsuff ;  !
 
 
 LEXICON C_TAHHEE !!= __@CODE@__
@@ -3246,9 +3334,11 @@ LEXICON C_TAHHEE_PL !!= __@CODE@__
 +N+Pl+Acc:^WG%>id CPXsuff ;  !
 !+N+Pl+Com:^WG%>id CPXsuffCOM ;  !
 +N:%> Nom_DER ;
-+N+Pl+Gen:^SVSH%>i3d CPXsuff ;  !
-+N+Pl+Acc:^SVSH%>i3d CPXsuff ;  !
-+N+Pl+Com:^SVSH%>i3d CPXsuffCOM ;  !
++N+Pl+Gen:%^SVSH%>i3d CPXsuff ;  !
++N+Pl+Acc:%^SVSH%>i3d CPXsuff ;  !
++N+Pl+Ill:%^SVSH%>i3d CPXsuff ;  !
++N+Pl+Com:%^SVSH%>i3d CPXsuffCOM ;  
++N+Pl+Loc:%^SVSH%>i3n CPXsuff ;  ! myerssee+N+Pl+Loc dsdfsdfdsaffs
 
 LEXICON X_TAHHEE !!= __@CODE@__ ee-final contract, -ei instead of -ij not-nomen-agentis
 X_TAHHEE_SG ;
