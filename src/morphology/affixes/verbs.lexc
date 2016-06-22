@@ -680,8 +680,8 @@ LEXICON 2SYLL_KAVNAD  !!= * __@CODE@__ as ETTAD but with VBACK, only RV ä in st
 +V+Imprt: EVEN_IMPRT_KAVNAD ;
 
 +V+Der/InchL:â^WG^VBACK%>škyett4 4SYLL_KYETTID ;
-+V+Der/d:âd^WG^VBACK 3_DERIVED_D ; ! 
-+V+Der/st:âst^WG^VBACK 3_DERIVED_ST ; !
++V+Der/d:âd^WG^VBACK^RLEN 3_DERIVED_D ; ! 
++V+Der/st:âst^WG^VBACK^RLEN 3_DERIVED_ST ; !
 +V+Der/tt:âtt^WG^VBACK 3_DERIVED_TT ; ! 
 +V+Der/l:âl 3_DERIVED_L_CLEN ; ! kaččâliđ
 +V:â^VBACK DER_MAS ;
@@ -939,12 +939,12 @@ LEXICON EVEN_IMPRT_KOLGAD !!= ** __@CODE@__
 
 LEXICON 2SYLL_KULGAD   !!= * __@CODE@__ 55 verbs
 
-!! Distinct from SODDAD with short vowel in past tense
+!! Distinct from SODDAD with short vowel in past tense (du)
 !! Turns out it was not distinct after all. Preper for fusing KULGAD and SODDAD
 
 +V:  VINFINITES_SODDAD ;
 +V+Ind+Prs: EVEN_PRS_SODDAD ;
-+V+Ind+Prt: EVEN_PRT_SODDAD ; ! NB here we revert to = SODDAD. EVEN_PRT_KULGAD ;
++V+Ind+Prt: EVEN_PRT_KULGAD ;
 +V+Cond+Prs:â^WG^VHIGH%> EVEN_COND ;
 +V+Pot+Prs: EVEN_POT_SODDAD ;
 +V+Imprt: EVEN_IMPRT_SODDAD ;
@@ -960,9 +960,9 @@ LEXICON EVEN_PRT_KULGAD !!= ** __@CODE@__
 +Sg1:i^VHIGH%>m K ;
 +Sg2:i^VHIGH%>h K ;
 +Sg3:â^WG^VHIGH^RLEN%>i3 K ;
-+Du1:á^WG^VHIGH%>im K ; ! SODDAD RLEN
-+Du2:á^WG^VHIGH%>id K ; ! SODDAD RLEN
-+Du3:á^WG^VHIGH%>in K ; ! SODDAD RLEN
++Du1:á^WG^CLEN^VHIGH%>im K ; ! SODDAD RLEN
++Du2:á^WG^CLEN^VHIGH%>id K ; ! SODDAD RLEN
++Du3:á^WG^CLEN^VHIGH%>in K ; ! SODDAD RLEN
 +Pl1:â^WG^VHIGH^RLEN%>im K ;
 +Pl2:â^WG^VHIGH^RLEN%>id K ;
 +Pl3:i^CLEN^VHIGH%>i3 K ;
@@ -1037,6 +1037,7 @@ LEXICON EVEN_PRT_SODDAD !!= ** __@CODE@__
 +Pl1:â^WG^VHIGH^RLEN%>im K ;
 +Pl2:â^WG^VHIGH^RLEN%>id K ;
 +Pl3:i^CLEN^VHIGH%>i3 K ;
+
 
 LEXICON EVEN_POT_SODDAD !!= ** __@CODE@__
 +Sg1:e%>em K ;
@@ -4476,7 +4477,7 @@ LEXICON 3_DERIVED_L_CLEN   !!= * __@CODE@__
 +V+PrsPrc+Use/NG:^CLEN^VBACK%>eijee K ;
 +V+PrfPrc:^CLEN^VBACK%>âm K ;
 
-+V+Ind+Prs+ConNeg:^CLEN^VBACK^RLEN K ; ! ^SLEN
++V+Ind+Prs+ConNeg:^CLEN^VBACK K ; ! ^SLEN
 +V+Ind+Prt+ConNeg:^CLEN^VBACK%>âm K ;
 +V+Cond+Prs+ConNeg:^CLEN^VBACK%>iččii K ;
 +V+Pot+Prs+ConNeg:^CLEN^VBACK%>ižžii K ;
