@@ -690,7 +690,7 @@ LEXICON 2SYLL_KAVNAD  !!= * __@CODE@__ as ETTAD but with VBACK, only RV ä in st
 LEXICON VINFINITES_KAVNAD   !!= ** __@CODE@__ 
 +Inf:â^VBACK%>đ K ;
 
-+Ind+Prs+ConNeg:â^WG^VBACK K ;
++Ind+Prs+ConNeg:â^WG^VBACK^RLEN K ;
 +Ind+Prt+ConNeg:â^VBACK%>m K ;
 +Cond+Prs+ConNeg:â^WG^VBACK%>ččii K ;
 +Pot+Prs+ConNeg:i^WG^VBACK%>i3 K ;
@@ -940,10 +940,11 @@ LEXICON EVEN_IMPRT_KOLGAD !!= ** __@CODE@__
 LEXICON 2SYLL_KULGAD   !!= * __@CODE@__ 55 verbs
 
 !! Distinct from SODDAD with short vowel in past tense
+!! Turns out it was not distinct after all. Preper for fusing KULGAD and SODDAD
 
 +V:  VINFINITES_SODDAD ;
 +V+Ind+Prs: EVEN_PRS_SODDAD ;
-+V+Ind+Prt: EVEN_PRT_KULGAD ;
++V+Ind+Prt: EVEN_PRT_SODDAD ; ! NB here we revert to = SODDAD. EVEN_PRT_KULGAD ;
 +V+Cond+Prs:â^WG^VHIGH%> EVEN_COND ;
 +V+Pot+Prs: EVEN_POT_SODDAD ;
 +V+Imprt: EVEN_IMPRT_SODDAD ;
