@@ -19,7 +19,7 @@
 DEFAULT_WEIGHT=10
 
 # Edit distanse for the Levenshtein error model:
-EDIT_DISTANCE=3
+EDIT_DISTANCE=2
 
 # Define whether we allow changes to the initial letter(s) in the error model,
 # possible values are:
@@ -43,7 +43,7 @@ STRING_EDITS=txt
 # Variable to specify the edit distance for the regex
 # version of the strings file. The total edit distance for those operations is
 # this value multiplied with the value of the EDIT_DISTANCE variable.
-STRING_REGEX_EDIT_DISTANCE=3
+STRING_REGEX_EDIT_DISTANCE=2
 
 # Variable to define whether to enable edits of word-final strings (as opposed
 # to single letters). Possible values are:
