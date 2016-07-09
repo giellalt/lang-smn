@@ -566,7 +566,7 @@ LEXICON 2SYLL_SPELLAD  !!= * __@CODE@__ Similar to 2SYLL_ETTAD, but less CSH, do
 +V+Der/tt:âtt^WG 3_DERIVED ; ! 
 !+V+Der/l:âl 3_DERIVED_L_CLEN ; 
 !+V+Der/l:âl 3_DERIVED_L ;
-+V+Der/l:âl 3_DERIVED_VBACK ;
++V+Der/l:âl 3_DERIVED_L_CLEN ; !Former: 3_DERIVED_VBACK does noet work
 +V:â DER_MAS ;
 +V+Der/Pass:u2 C_PASS_SH_RVSH ; !ettum ettui lekkum terppum
 
@@ -770,11 +770,11 @@ LEXICON 2SYLL_KALGAD  !!= * __@CODE@__ Only one verb: kalgâđ Ind+Prs+Pl3 kälg
 +V+Imprt: EVEN_IMPRT_KALGAD ;
 +V+Der/InchL:â^WG^VBACK%>škyett4 4SYLL_KYETTID ;
 +V+Der/d:âd^WG 3_DERIVED ; ! 
-+V+Der/st:âst^WG 3_DERIVED ; !
++V+Der/st:âst^WG 3_DERIVED_VBACK ; ! Former: 3_DERIVED, does noet work
 +V+Der/tt:âtt^WG 3_DERIVED ; ! 
 +V+Der/l:âl 3_DERIVED_L_CLEN ; 
 +V:â^VBACK DER_MAS ;
-+V+Der/Pass:u2^CLEN C_PASS_SH ; !
++V+Der/Pass:u2^CLEN^VBACK C_PASS_SH ; ! ! Added ^VBACK
 
 LEXICON VINFINITES_KALGAD  !!= ** __@CODE@__ 
 +Inf:â^VBACK%>đ K ;
@@ -4514,7 +4514,7 @@ LEXICON 3_DERIVED_VBACK   !!= * __@CODE@__
 
 +V+Ind+Prs+Sg1:^VBACK%>âm K ; ! 
 +V+Ind+Prs+Sg2:^VBACK%>ah K ;
-+V+Ind+Prs+Sg3:^VBACK K ; ! ^RLEN^SLEN    K ;
++V+Ind+Prs+Sg3:^VBACK^RLEN K ; ! ^RLEN^SLEN    K ;
 +V+Ind+Prs+Du1:^VBACK%>een K ;
 +V+Ind+Prs+Du2:^VBACK%>vettee K ;
 +V+Ind+Prs+Du3:^VBACK%>ává   K ;
@@ -4571,7 +4571,7 @@ LEXICON 3_DERIVED_VBACK   !!= * __@CODE@__
 +V+PrsPrc+Use/NG:^VBACK%>eijee K ;
 +V+PrfPrc:^VBACK%>âm K ;
 
-+V+Ind+Prs+ConNeg:^VBACK K ; ! ^SLEN
++V+Ind+Prs+ConNeg:^VBACK^RLEN K ; ! kaalgâst RLEN; MLO: what is this for :^SLEN
 +V+Ind+Prt+ConNeg:^VBACK%>âm K ;
 +V+Cond+Prs+ConNeg:^VBACK%>iččii K ;
 +V+Pot+Prs+ConNeg:^VBACK%>ižžii K ;
