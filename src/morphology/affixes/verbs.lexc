@@ -759,9 +759,6 @@ LEXICON EVEN_IMPRT_KAVNAD  !!= ** __@CODE@__
 
 
 
-
-
-
 LEXICON 2SYLL_KALGAD  !!= * __@CODE@__ Only one verb: kalgâđ Ind+Prs+Pl3 kälgih, vs. kävneh 2SYLL_KAVNAD
 +V:  VINFINITES_KALGAD ;
 +V+Ind: EVEN_IND_KALGAD ;
@@ -774,7 +771,7 @@ LEXICON 2SYLL_KALGAD  !!= * __@CODE@__ Only one verb: kalgâđ Ind+Prs+Pl3 kälg
 +V+Der/tt:âtt^WG 3_DERIVED_VBACK ; ! 
 +V+Der/l:âl 3_DERIVED_L_CLEN ; 
 +V:â^VBACK DER_MAS ;
-+V+Der/Pass:u2^CLEN^VBACK C_PASS_SH ; ! ! Added ^VBACK
++V+Der/Pass:u2^CLEN C_PASS_SH_COMMON ; ! ! Added ^VBACK
 
 LEXICON VINFINITES_KALGAD  !!= ** __@CODE@__ 
 +Inf:â^VBACK%>đ K ;
@@ -5122,7 +5119,7 @@ LEXICON C_PASS_SH  !!= ** __@CODE@__ shortens long vow in certain forms
 !pp!+V+IV+Pot+Prs+Pl3:%>užeh K ;
 
 LEXICON C_PASS_SH_COMMON  !!= ** __@CODE@__ shortens long vow in certain forms
-+V+IV+Inf:^VBACK%>đ K ;
++V+IV+Inf:^VBACK%>đ K ; ! especially kalgâđ in this contlex; VBACK and VHIGH according to this verb
 +V+IV+Der/InchL:%>uškyett4 4SYLL_KYETTID ; !
 +V+IV+Der/st:%>ust 3_DERIVED ; ! sirduustiđ
 +V+IV+PrsPrc:^RVSH%>jeijee K ;
@@ -5130,47 +5127,47 @@ LEXICON C_PASS_SH_COMMON  !!= ** __@CODE@__ shortens long vow in certain forms
 +V+IV+Der/NomAg:^RVSH%>jeijee FLAG_CTAHHEE ;
 +V+IV+Der/NomAct:^VBACK%>m FLAG_3KEPIDEM ;
 
-+V+IV+Ind+Prs+Sg1:%>um K ; 
-+V+IV+Ind+Prs+Sg2:%>uh K ;
++V+IV+Ind+Prs+Sg1:^VBACK%>um K ; 
++V+IV+Ind+Prs+Sg2:^VBACK%>uh K ;
 +V+IV+Ind+Prs+Sg3:^VHIGH^RVSH%>o K ; ! jf. C_TUHHID čálloo 
 +V+IV+Ind+Prs+Du1:^VHIGH%>jeen K ;
-+V+IV+Ind+Prs+Du2:%>uvettee K ; !čalluuvettee
-+V+IV+Ind+Prs+Du3:%>v K ;
-+V+IV+Ind+Prs+Pl1:%>p K ;
-+V+IV+Ind+Prs+Pl2:%>uvetteđ K ; !čalluuvetteeđ
++V+IV+Ind+Prs+Du2:^VBACK%>uvettee K ; !čalluuvettee
++V+IV+Ind+Prs+Du3:^VBACK%>v K ;
++V+IV+Ind+Prs+Pl1:^VBACK%>p K ;
++V+IV+Ind+Prs+Pl2:^VBACK%>uvetteđ K ; !čalluuvetteeđ
 +V+IV+Ind+Prs+Pl3:^VHIGH^RVSH%>jeh K ; !čállojeh
 
 +V+IV+Ind+Prt+Sg1:^VHIGH^RVSH%>jim K ;
 +V+IV+Ind+Prt+Sg2:^VHIGH^RVSH%>jih  K ;
-+V+IV+Ind+Prt+Sg3:%>i  K ;
-+V+IV+Ind+Prt+Du1:%>im  K ;
-+V+IV+Ind+Prt+Du2:%>id K ;
-+V+IV+Ind+Prt+Du3:%>in  K ;
-+V+IV+Ind+Prt+Pl1:%>im  K ;
-+V+IV+Ind+Prt+Pl2:%>id  K ;
++V+IV+Ind+Prt+Sg3:^VBACK%>i  K ;
++V+IV+Ind+Prt+Du1:^VBACK%>im  K ;
++V+IV+Ind+Prt+Du2:^VBACK%>id K ;
++V+IV+Ind+Prt+Du3:^VBACK%>in  K ;
++V+IV+Ind+Prt+Pl1:^VBACK%>im  K ;
++V+IV+Ind+Prt+Pl2:^VBACK%>id  K ;
 +V+IV+Ind+Prt+Pl3:^VHIGH^RVSH%>jii  K ; !čállojii
 
-+V+IV+Ind+Prs+ConNeg:%>u K ;
-+V+IV+Ind+Prt+ConNeg:%>m K ;
-+V+IV+Cond+Prs+ConNeg:%>uččii K ;
-+V+IV+Pot+Prs+ConNeg:%>užii K ;
-+V+IV+Imprt+ConNeg:%>u K ;
++V+IV+Ind+Prs+ConNeg:^VBACK%>u K ;
++V+IV+Ind+Prt+ConNeg:^VBACK%>m K ;
++V+IV+Cond+Prs+ConNeg:^VBACK%>uččii K ;
++V+IV+Pot+Prs+ConNeg:^VBACK%>užii K ;
++V+IV+Imprt+ConNeg:^VBACK%>u K ;
 
-+V+IV+PrfPrc:%>m K ; ! now changing all the others
++V+IV+PrfPrc:^VBACK%>m K ; ! now changing all the others
 +V+IV+PrfPrc:^RLEN%>m K ; ! Temp. Err/Orth
 +V+IV+VAbess:%>u VABESS ;
-+V+IV+Actio+Nom:%>m K ;
-+V+IV+Actio+Ill:%>umân K ;
-+V+IV+Actio+Loc:%>umist K ;
-+V+IV+Actio+Com:%>udijn K ;
-+V+IV+Actio+Com+PxSg1:%>udijnân K ;
-+V+IV+Actio+Com+PxSg2:%>udijnâd K ;
-+V+IV+Actio+Com+PxSg3+Err/Orth:%>udijnes K ;
-+V+IV+Actio+Com+PxSg3:%>udijnis K ;
-+V+IV+Actio+Ess:%>umin K ;
++V+IV+Actio+Nom:^VBACK%>m K ;
++V+IV+Actio+Ill:^VBACK%>umân K ;
++V+IV+Actio+Loc:^VBACK%>umist K ;
++V+IV+Actio+Com:^VBACK%>udijn K ;
++V+IV+Actio+Com+PxSg1:^VBACK%>udijnân K ;
++V+IV+Actio+Com+PxSg2:^VBACK%>udijnâd K ;
++V+IV+Actio+Com+PxSg3+Err/Orth:^VBACK%>udijnes K ;
++V+IV+Actio+Com+PxSg3:^VBACK%>udijnis K ;
++V+IV+Actio+Ess:^VBACK%>umin K ;
 +V+IV+Der/NomAg:%>jeijee FLAG_CTAHHEE ;
 +V+IV+Der/NomAct:u^SVm FLAG_3HUKSIM ;
-+V+IV+Ger:%>udijn K ; ! pehhuudijn
++V+IV+Ger:^VBACK%>udijn K ; ! pehhuudijn
 
 
 
