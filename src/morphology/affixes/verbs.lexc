@@ -554,7 +554,7 @@ LEXICON EVEN_IMPRT_VIEZZAD !!= ** __@CODE@__
 
 
 LEXICON 2SYLL_SPELLAD  !!= * __@CODE@__ Similar to 2SYLL_ETTAD, but less CSH, don't know yet how much. 20 verbs
-+V:  VINFINITES_ETTAD ;
++V:  VINFINITES_SPELLAD ;
 +V+Ind+Prs: EVEN_IND_PRS_SPELLAD ;
 +V+Ind+Prt: EVEN_IND_PRT_SPELLAD ;
 +V+Pot+Prs: EVEN_POT_ETTAD ;
@@ -566,9 +566,50 @@ LEXICON 2SYLL_SPELLAD  !!= * __@CODE@__ Similar to 2SYLL_ETTAD, but less CSH, do
 +V+Der/tt:âtt^WG 3_DERIVED ; ! 
 !+V+Der/l:âl 3_DERIVED_L_CLEN ; 
 !+V+Der/l:âl 3_DERIVED_L ;
-+V+Der/l:âl 3_DERIVED_L_CLEN ; !Former: 3_DERIVED_VBACK does noet work
++V+Der/l:âl 3_DERIVED_L_VERSION2 ; !Former: 3_DERIVED_VBACK does noet work
 +V:â DER_MAS ;
 +V+Der/Pass:u2 C_PASS_SH_RVSH ; !ettum ettui lekkum terppum
+
+
+!+V:  VINFINITES_SPELLAD ;
+!+V+Ind+Prs: EVEN_IND_PRS_SPELLAD ;
+!+V+Ind+Prt: EVEN_IND_PRT_SPELLAD ;
+!+V+Cond+Prs:â^WG^VHIGH%> EVEN_COND ;
+!+V+Pot+Prs: EVEN_POT_ETTAD ;
+!+V+Imprt: EVEN_IMPRT_ETTAD ;
+!+V+Der/InchL:â^WG^VHIGH%>škyett4 4SYLL_KYETTID ;
+!+V+Der/d:âd^WG 3_DERIVED ; ! 
+!+V+Der/st:âst^WG 3_DERIVED ; !
+!+V+Der/tt:âtt^WG 3_DERIVED ; ! 
+!!+V+Der/l:âl 3_DERIVED_L ; 
+!+V:â DER_MAS ;
+!+V+Der/Pass:u2 C_PASS_SH_RVSH ; !ettum ettui lekkum terppum
+
+LEXICON VINFINITES_SPELLAD !!= ** __@CODE@__
++Inf:â^VHIGH%>đ K ;
++Ind+Prs+ConNeg:â^WG^VHIGH^RLEN K ;
++Ind+Prt+ConNeg:â^VHIGH%>m K ;
++Cond+Prs+ConNeg:â^WG^VHIGH%>ččii K ;
++Pot+Prs+ConNeg:i^WG^VHIGH^RLEN%>i3 K ;
++Imprt+ConNeg:â^WG^VHIGH^RLEN K ;
++PrsPrc:e^CLEN%>e K ; ! trigger for u > o
++PrfPrc:â^VHIGH%>m K ;
++PrfPrc+Use/NG:â%>m K ;
++Der/NomAg:e^CLEN%>e FLAG_CTAHHEE ; !tobdee NB! pargee ok
+
++VAbess:â^WG^VHIGH VABESS ;
+
++Actio+Com+PxSg1:â^WG^VHIGH%>dijnân K ;
++Actio+Com+PxSg2:â^WG^VHIGH%>dijnâd K ;
++Actio+Com+PxSg3+Err/Orth:â^WG^VHIGH%>dijnes K ;
++Actio+Com+PxSg3:â^WG^VHIGH%>dijnis K ;
++Actio+Com:â^WG^VHIGH%>dijn K ;
++Actio+Ess:â^VHIGH%>min K ;
++Actio+Ill:â^VHIGH%>mân K ;
++Actio+Loc:â^VHIGH%>mist K ;
++Actio+Nom:â^VHIGH%>m K ;
++Der/NomAct:â^VHIGH%>m FLAG_3LITTER ;
+
 
 
 LEXICON EVEN_IND_PRS_SPELLAD  !!= ** __@CODE@__
@@ -592,6 +633,7 @@ LEXICON EVEN_IND_PRT_SPELLAD !!= ** __@CODE@__
 +Pl1:â^WG^RLEN%>im K ;
 +Pl2:â^WG^RLEN%>id K ;
 +Pl3:i^CLEN%>i3 K ;
+
 
 LEXICON 2SYLL_VIHKAD
 2SYLL_KAVNAD ;
