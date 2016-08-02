@@ -179,7 +179,7 @@ Cx:Cy <=> Vow: _ (%^RC: )  WeakGrade  ([%^VHIGH:|%^VBACK:]) ([%^RVSH:|%^RLEN:]) 
 		  matched ;
 
 !!€ va^RVh%^RCo^WG^CLEN>im
-!!€ va0v0o00>im
+!!€ va0vvo00>im
 
 
 "Quality change of root consonant x:yy"
@@ -239,12 +239,12 @@ Cy:Cz <=> Cx: _  WeakGrade ; !RULE RC !! čuottâlm:čuođâlm njuottâs
              Cz in ( đ  s  j   v  ) 
        matched ;
 
-!!€ ru^RVttâ^WG^RLEN>
+!!€ ru^RVtt4â^WG^RLEN>
 !!€ ruu0đâ00>
  
 !rejected:       
-!!€ haavvâr^CSH^RVSH>ist
-!!€ h0av0âr00>ist
+!!€ haavvâr^CSH^SVSH>ist
+!!€ ha00vâr00>ist
 
 !rejected:       
 !!€ pottáák^SC^CSH^SVSH>ist
@@ -278,11 +278,11 @@ Cx:v <=>  _  Cz (%^RC:) Vow:+ (%^SV: ) (Cns:+) ([%^ÁI:|%^ÁE:])  (%^FCD:) %^WG:
 !!€ riän0tus0>
 
 !kurrâ kuurân
-!!€ ku^RVrrâ^RLEN^CSH>n
+!!€ ku^RVrrâ^CSH^RLEN>n
 !!€ kuu0râ00>n
 
 !sollâ sooân
-!!€ so^RVllâ^RLEN^CSH>n
+!!€ so^RVllâ^CSH^RLEN>n
 !!€ soo0lâ00>n
 
 
@@ -336,28 +336,30 @@ Cx:0 <=> Vow: _ Cy: WeakGrade \%^CLEN: ; !RULE RC !! 1) when WG
 	      Cy in ( b c c4 č4 č d đ f g h j k k4 l m n ŋ p p4 r s š v z ž ) 
 		  matched ;
 
-!!€ vi^RVššâ^RVSH^CSH>vettee
+
+!!€ vi^RVššâ^CSH^RVSH>vettee
 !!€ vi00šâ00>vettee
 
-!!€ las%^RCe%^SVtt^CLEN^SLEN>vettee
-!!€ lasseet000>vettee
+
+!!€ la^RVs^RCe^SVtt^RLEN^SLEN>vettee
+!!€ laas0ee0t00>vettee
 
 !cuozzâ:cuozâ
 !!€ cuozzâ^WG^RLEN>
 !!€ cuo0zâ00>
 
 !váddu:váádun
-!!€ vá^RVddu^RLEN^CSH>n
+!!€ vá^RVddu^CSH^RLEN>n
 !!€ váá0du00>n
 
 
 "tt:t  - final consonant and consonant gradation"
 !! * __@RULENAME@__ \\ consonant gradation, and 3syll verbs in -tt lose t in front of cns-initial suff
-t:0 <=> Vow:            _ [t:|t4:] WeakGrade \%^CLEN: ; !RULE SC !! 1) WG, not CLEN
-        Vow:             _ [t:|t4:] ConsonantShorting \%^CLEN:  ; !RULE SC !! 2) CSH
+t:0 <=> Vow:                _ [t:|t4:] WeakGrade \%^CLEN: ; !RULE SC !! 1) WG, not CLEN
+        Vow:                _ [t:|t4:] ConsonantShorting \%^CLEN:  ; !RULE SC !! 2) CSH
         [RealVow:|%^SV:|%>] _ [t:|t4:] (i6:) Triggers:* [.#.| %>] \Vow  ; !RULE SC !! 3) uáivátt : uáivát
-        [RealVow:|%^SV:] _ [t:|t4:] m Triggers:* [.#.| %>]  ; !RULE SC !! 4) olášuttem:olášutmân
-        Vow: Vow:        _  t:       %> â n  ; !RULE SC !! 5) uáiváátt>ân uáiváátân
+        [RealVow:|%^SV:]    _ [t:|t4:] m Triggers:* [.#.| %>]  ; !RULE SC !! 4) olášuttem:olášutmân
+        Vow: Vow:           _  t:       %> â n  ; !RULE SC !! 5) uáiváátt>ân uáiváátân
 
 !!€ kulluutt^SVSH>
 !!€ kullu00t0>
@@ -412,7 +414,7 @@ Cx:0 <=> Vow: _ Cy: (%^CLEN:) (%^RLEN:) (%^SLEN:|%^SVSH:) [.#.| %>] \Sgm: ; !! 1
 !!€ suánnju0>n
 
 !rejected, look at this:
-!!€ haamit^SC^CSH^RVSH>ist
+!!€ haamit^SC^CSH^SVSH>ist
 !!€ h0amitt00>ist
 
 !!€ su^RVkk4á^SV^WG^CLEN^SLEN>st
@@ -420,7 +422,7 @@ Cx:0 <=> Vow: _ Cy: (%^CLEN:) (%^RLEN:) (%^SLEN:|%^SVSH:) [.#.| %>] \Sgm: ; !! 1
 
 !rejected:
 !!€ kopp^RCâ^WG^CLEN^SVN>in
-!!€ ko0pp0á000>in
+!!€ ko0p0á000>in
 
 
 
@@ -468,8 +470,8 @@ Cx:0 <=> Vow: _ Cy: (%^CLEN:) (%^RLEN:) (%^SLEN:|%^SVSH:) [.#.| %>] \Sgm: ; !! 1
 
 !kiär%^RCun%^CLEN%>ttáá
 
-!!€ ke%^RVp%^RCidem%^RLEN%^CLEN%>ân
-!!€ keeppid0m00>ân  
+!!€ ke^RVp^RCidm^CLEN^RLEN^SLEN>ân
+!!€ keeppidm000>ân  
 
 !kiehâ  kievváin
 !!€ kieh^RCâ^WG^CLEN^SVLOW>in
@@ -576,28 +578,28 @@ Cy:0  <=>  Sgm:  _ (%^CSH:) (%^RLEN:) %> Cy Cy ;  !RULE SC
 
 
 !!€ koonnjâl^CSH>ân
-!!€ k0on0jâl0>ân
+!!€ ko0n0jâl0>ân
 
 !!€ kappeer^CSH^SVSH>ist
 !!€ ka0p0er00>ist
 
 !!€ čäällim^CSH>ist
-!!€ č0ä0lim0>ist
+!!€ čä00lim0>ist
 
 !This is not correct, Check it:
 !!€ muusik^SC^CSH^RVSH>ist
-!!€ m0usikk00>ist
+!!€ mu0sikk00>ist
 
 ! kahhaan^SC^CSH^RVSH>ist
 ! ka0ha0n0j00>ist
 
 !aarrân:arânân
 !!€ aarrân^CSH>ân
-!!€ 0a0rân0>ân
+!!€ a00rân0>ân
 
 !rejected:
 !!€ kiirrâs^RVSH>ân
-!!€ k0irrâs0>ân
+!!€ ki0rrâs0>ân
  
  
  
@@ -658,7 +660,7 @@ e:0 <=>   e: _  Cns:+ u2:u   ([%^WG: | %^CSH:]) (%^CLEN:) %^VBACK: %^RVSH:  [%>|
 !!  3st stems viäskár veskirin, časkes časkes ča%^RVskas%^ÁE viäskár%^ÁI%^WG%^RVSH
 
 !kaavpug:kavpugân
-!!€ kaavpug^RVSH^CSH^SVSH>ân
+!!€ kaavpug^CSH^RVSH^SVSH>ân
 !!€ ka0vpug000>ân
 
 
@@ -949,7 +951,9 @@ i:0 <=> \Vow: _ ä: Cns:+ i2:i %>    [i|i3:i|Cns]  ;  !RULE RV !! 1)  i:0 for i�
         \Vow: a (%^RV:) Cns:+ :a  ([%^CSH:|%^WG:]) (%^CLEN:) (%^RLEN:) %> _ \Vow: ;  !RULE SUFF  !to prevent conflict
 
 !á%^RVrgu2
+
 !!€ pá^RVkk4u2>m
+!!€ pa0kku>m
 
 
 !! !á and uá rules
@@ -1042,7 +1046,7 @@ o:á <=> u _ Cns:+ u: [i4: | j | š | ž] %^WG: ([%^RVSH:|%^RLEN:]) [%>|.#.] ;  
         u _ Cns:+ [o|u|á|i|u2:] %^VHIGH: (%^RVSH:) [%>|.#.] ; !RULE RV  !! 4) vuoll- > vuállus ruáttá
 
 
-"ye to uá og uo, part 1" 
+"ye to uá and uo, part 1" 
 !! * __@RULENAME@__ \\  Part 1 of ye to uá for kyeli : kuálán  
 y:u <=> _ e:  Cns:+ Vow:  %^EA: ([%^CSH:| %^CLEN:]) (%^RLEN:)   [%>|.#.] ;   !RULE RV 
         _ :o  Cns:+ :i (%^WG:) (%^CLEN:) (%^VBACK:|%^VHIGH:) ([%^RVSH: |%^RLEN:] ) %> [i:|j |i3: | š | ž ] ; !RULE RV  !syej%^RCi%^RVSH%^CLEN%>in
@@ -1056,10 +1060,13 @@ y:u <=> _ e:  Cns:+ Vow:  %^EA: ([%^CSH:| %^CLEN:]) (%^RLEN:)   [%>|.#.] ;   !RU
 
 "ye to uá, part 2"
 !! * __@RULENAME@__ \\  Part 2 of ye to uá for kyeli : kuálán
-e:á <=> y: _  Cns:+ [Vow: - u2:]  %^EA: (%^CSH:|%^WG:) (%^RLEN:)  [%>|.#.] \[i:|j |i3:| š | ž ]  ; !RULE RV 
+e:á <=> y: _  Cns:+ [Vow: - u2:]  %^EA: (%^CSH:|%^CLEN:|%^WG:) (%^RLEN:)  [%>|.#.] \[i:|j |i3:| š | ž ]  ; !RULE RV 
         y: _  Cns:+ [u:|á|o|â2:] (%^CSH:|%^WG:) (%^CLEN:) (%^VHIGH:) (%^RLEN:) [%>|.#.] \[l|i] ;  !RULE RV  ! not ryetáim:
         y: _  Cns:+ i6: %^VHIGH: [%>|.#.] \[l|i] ;  !RULE RV  ! not ryetáim:
         y: _  Cns:+ u2:o Triggers:* [%>|.#.]  ;  !RULE RV  ! not ryetáim:
+
+!!€ kyel^RCi3^EA^CLEN>m
+!!€ kuállá00>m
 
 "ye to uo, part 2 "
 !! * __@RULENAME@__ \\  Part 2 of ye to uá for kyeli : kuolijn
