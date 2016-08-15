@@ -809,8 +809,6 @@ X_SAAMI_PL ;
 
 LEXICON 2SAAMI_SG!!= __@CODE@__
 +N: X_SAAMI ;
-+N+Cmp/SgNom+Use/NG:^RVSH%> R ; ! XXXCheck
-+N+Cmp/SgGen:%> R ;
 !+N+Cmp/PlGen:^CSH%>i R ; ! MLO: seems to me that this is unnecessary
 +N+Sg+Nom:^EA^CLEN VPXsuff12nom ;  !sáámmám uábbám uábbád
 +N+Sg+Gen:^EA^CLEN VPXsuff12 ;  ! sáámmán
@@ -827,9 +825,6 @@ LEXICON 2SAAMI_SG!!= __@CODE@__
 
 LEXICON 2SAAMI_PL   !!= __@CODE@__ plurals for 2SAAMI
 +N: X_SAAMI_PL ;
-+N+Cmp/SgNom:^RVSH%> R ;
-+N+Cmp/SgGen:^WG^RVSH%> R ;
-+N+Cmp/PlGen:^WG%>i R ;
 +N+Pl+Loc:^WG^RVSH%>in CPXsuff ;  ! samijnân
 +N+Pl+Gen:^WG^RVSH%>id CPXsuff ;  ! samijdân
 +N+Pl+Acc:^WG^RVSH%>id CPXsuff ;  !
@@ -850,6 +845,10 @@ LEXICON X_SAAMI_SG   !!= __@CODE@__ to 2LAAVU after fix in twolc?  saämijn > sa
 
 LEXICON X_SAAMI_PL   !!= __@CODE@__ plurals for 2SAAMI
 +Pl+Ill:^WG%>id K ;         ! saamijd
++N+Cmp/SgNom:^RVSH%> R ;! Compounds here, to include adjectives and plurale tanti
+!+N+Cmp/SgGen:%> R ;  ! not säämi-
++N+Cmp/SgGen:^WG^RVSH%> R ; ! but sämi-
++N+Cmp/PlGen:^WG%>i R ;
  X_WG_RVSH_PL ;
 
 
