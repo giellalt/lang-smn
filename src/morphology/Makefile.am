@@ -79,7 +79,7 @@ GT_DISTRO_SRCS=
 ### BEGIN: Local processing: ###
 
 generated_files/smi-propernouns.lexc: \
-			$(GTCORE)/giella-shared/smi/src/morphology/stems/smi-propernouns.lexc
+			$(GIELLA_SHARED)/smi/src/morphology/stems/smi-propernouns.lexc
 	$(AM_V_at)$(MKDIR_P) generated_files
 	$(AM_V_GEN)cp -f $< $@
 
