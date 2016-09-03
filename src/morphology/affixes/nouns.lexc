@@ -109,8 +109,7 @@ LEXICON X_ALGA_PL !!= __@CODE@__  plurals for 2KUMPPI
 +Pl+Acc:^WG^RLEN%>id K ;           ! kuumpijd
 +Pl+Ill:^WG^CLEN^SVLOW%>id K ;    ! kumppijd
 +Pl+Loc:^WG^RLEN%>in K ;           ! kuumpijn
-+Pl+Com:^WG^RVSH%>iguin K ;        ! kumpijguin
-+Pl+Com+Err/Orth:^WG^RVSH%>igijn K ;        ! kumpijguin
++Pl+Com:^WG^RVSH%>i GUIN ;        ! Kumpijguin
 +Pl+Abe:^WG^RVSH%>ittáá K ;        ! kumpijttáá
 
 
@@ -127,8 +126,7 @@ LEXICON X_WG_RLEN_PL
 +Pl+Gen:^WG^RLEN%>i K ;			! puuvsâi 
 +Pl+Gen+Use/NG:^WG%>i K ;  		! puvsâi
 +Pl+Acc:^WG^RLEN%>id K ; 		! puuvsâid
-+Pl+Com:^WG%>iguin K ;		! puvsâiguin
-+Pl+Com+Err/Orth:^WG%>igijn K ;		! 
++Pl+Com:^WG%>i GUIN ;		! puvsâiguin
 +Pl+Abe:^WG%>ittáá K ;		! puvsâittáá
 
 
@@ -309,8 +307,7 @@ LEXICON X_WG_RVSH_PL !!= __@CODE@__
 +Pl+Gen:^WG%>i K ;				! kievâi 
 +Pl+Gen+Use/NG:^WG^RVSH%>i K ;  		! kievâi
 +Pl+Loc:^WG%>in K ; 				! kievâin
-+Pl+Com:^WG^RVSH%>iguin K ;		! kievâiguin
-+Pl+Com+Err/Orth:^WG^RVSH%>igijn K ;		! kievâiguin
++Pl+Com:^WG^RVSH%>i GUIN ;		! kievâiguin
 +Pl+Abe:^WG^RVSH%>ittáá K ;		! kievâittáá
 
 
@@ -470,8 +467,7 @@ LEXICON X_KISSA_PL !!= __@CODE@__
 +Pl+Acc:^WG^CLEN%>id K ; ! kissáid
 +Pl+Ill:^WG^CLEN%>id K ; ! kissáid
 +Pl+Loc:^WG%>in K ; ! kiṣáin
-+Pl+Com:^WG%>iguin K ;    ! kiṣáiguin 
-+Pl+Com+Err/Orth:^WG%>igijn K ;    ! kiṣáiguin 
++Pl+Com:^WG%>i GUIN ;    ! kiṣáiguin 
 +Pl+Abe:^WG%>ittáá K ;    ! kiṣáittáá  
 
 LEXICON 2TAHO !!= __@CODE@__ only for taho, similar to 2LAJO except from Pl+Ill, almost similar to 2SPAHA
@@ -544,7 +540,7 @@ X_LAJO_TAHO_SG ;
 
 LEXICON X_LAJO_PL !!= __@CODE@__
 +Pl+Ill:^WG%>id K ;  !lajoid
-+Pl+Com:^WG%>iguin K ;  !lajoiguin
++Pl+Com:^WG%>i GUIN ;  !lajoiguin
 :^WG  X_h_PL_notILL ;
 
 LEXICON X_LAJO_TAHO_SG !!= __@CODE@__
@@ -671,8 +667,7 @@ LEXICON X_ALGE_NIIBE_PL !!= __@CODE@__
 +Pl+Acc:^WG^RLEN%>id K ; 		! oolgijd 
 +Pl+Ill:^WG^CLEN%>id K ; 		! olgijd
 +Pl+Loc:^WG^RLEN%>in K ; 		! oolgijn
-+Pl+Com:^WG%>iguin K ; 		! olgijguin
-+Pl+Com+Err/Orth:^WG%>igijn K ; 		! olgijguin
++Pl+Com:^WG%>i GUIN ; 		! olgijguin
 +Pl+Abe:^WG%>ittáá K ;		! olgijttáá
 
 LEXICON 2NIJBE !!= __@CODE@__ 
@@ -983,12 +978,12 @@ LEXICON 2KYELI_SG !!= __@CODE@__
 +N+Sg+Nom:^EA^CLEN VPXsuff12nom ;  !kuállám
 +N+Sg+Gen:^EA^CLEN VPXsuff12 ;  ! kuállád
 +N+Sg+Acc:^EA^CLEN VPXsuff12 ;  ! kuállád ! deleted ^SV
-+N+Sg+Nom:^CLEN VPXsuff3 ;  ! kyellis
++N+Sg+Nom:^CLEN^SVLOW VPXsuff3 ;  ! kyellis
 +N+Sg+Gen:^WG VPXsuff3 ;  ! kyeles
 +N+Sg+Acc:^WG VPXsuff3 ;  ! kyeles
 +N+Sg+Ill:^EA%>s CPXsuff ; ! kuálásân
 +N+Sg+Loc:^WG^RVSH%>st CPXsuff ;  ! kyelestis
-+N+Sg+Com:^WG^RVSH%>in CPXsuff ;  ! kuolijnân
++N+Sg+Com:^WG^SVLOW%>in CPXsuff ;  ! kuolijnân
 +N+Ess:^CSH%>n CPXsuff ;     ! kyelinis
 +N:^WG^RVSH%> Gen_DER ;
 +N:%> Nom_DER ;
@@ -1004,7 +999,7 @@ LEXICON 2KYELI_PL!!= __@CODE@__
 
 
 LEXICON X_KYELI_SG  !!= __@CODE@__ i-e-á, similar to 2ALGE, except from -i some places. 
-+Sg+Com:^WG%>in K ;         ! kuolijn
+!+Sg+Com:^WG^SVLOW%>in K ;         ! kuolijn
 KYELI_SYEJI_SG ;
 
 LEXICON X_KYELI_PL  !!= __@CODE@__ i-e-á, similar to 2ALGE, except from -i some places. 
@@ -1028,12 +1023,11 @@ LEXICON 2SYEJI_SG  !!= __@CODE@__ i-e-á,
 +N+Sg+Acc:^WG VPXsuff3 ;  !syejes 
 +N+Sg+Ill:^EA%>s CPXsuff ; !suájásis ill páikkásis
 +N+Sg+Loc:^WG^RVSH%>st CPXsuff ;  !syejestis 
-+N+Sg+Com:^SVLOW%>in CPXsuff ;  !suojijnis
-+N+Sg+Com:^CLEN^RVSH%>in K ;         ! suoijijn
++N+Sg+Com:^WG^SVLOW%>in CPXsuff ;  !suojijnis
 +N+Ess:^CSH%>n CPXsuff ;     ! kyelinis
 +N:%> Nom_DER ;
 +N:^WG^RVSH%> Gen_DER ;
-
+!+N+Sg+Com:^CLEN^RVSH%>in K ;         ! suoijijn
 
 LEXICON 2SYEJI_PL !!= __@CODE@__
 +N: KYELI_SYEJI_PL ;
@@ -1051,6 +1045,7 @@ LEXICON KYELI_SYEJI_SG  !!= __@CODE@__ i-e-á,
 +Sg+Acc:^WG^RVSH K ;         ! kyele
 +Sg+Ill:^EA^CSH^RLEN%>n K ;     ! kuálán
 +Sg+Loc:^WG%>est K ;   ! kyeleest
++Sg+Com:^WG^SVLOW%>in K ;         ! kuolijn !!!
 +Sg+Abe:^WG^RVSH%>ttáá K ;  ! kyelettáá
 +Ess:^CLEN%>n K ;     ! kyellin
 +Par:^CLEN%>d K ; 					! kyellid
@@ -1061,8 +1056,7 @@ LEXICON KYELI_SYEJI_PL  !!= __@CODE@__ i-e-á,
 +Pl+Gen:^WG%>i K ; 					! kuolij
 +Pl+Acc:^WG%>id K ; 					! kuolijd
 +Pl+Loc:^WG%>in K ; 					! kuolijn
-+Pl+Com:^WG^RVSH%>iguin K ;	 		! kuolijguin
-+Pl+Com+Err/Orth:^WG^RVSH%>igijn K ;	 		! kuolijguin
++Pl+Com:^WG^RVSH%>i GUIN ;	 		! kuolijguin
 +Pl+Abe:^WG^RVSH%>ittáá K ;			! kuolijttáá
 
 
@@ -1619,8 +1613,7 @@ LEXICON X_h_PL_notILL
 +Pl+Gen:%>i K ; 		! apinai
 +Pl+Acc:%>id K ; 		! apinaid
 +Pl+Loc:%>in K ;		! apinain
-+Pl+Com:%>iguin K ; 	! apinaiguin
-+Pl+Com+Err/Orth:%>igijn K ; 	! apinaiguin
++Pl+Com:%>i GUIN ; 	! apinaiguin
 +Pl+Abe:%>ittáá K ; 	! apinaittáá
 
 
@@ -1682,8 +1675,7 @@ LEXICON X_KUNAGAS_PL !!= __@CODE@__
 +Pl+Acc:^FCD%>âid K ; 		! kunâgâsâid
 +Pl+Ill:%>áid K ; 		! kunâgâssáid
 +Pl+Loc:^FCD%>âin K ;			! kunâgâsâin
-+Pl+Com:^FCD%>âiguin K ; 		! kunâgâsâiguin
-+Pl+Com+Err/Orth:^FCD%>âigijn K ; 		! kunâgâsâiguin
++Pl+Com:^FCD%>âi GUIN ; 		! kunâgâsâiguin
 +Pl+Abe:^FCD%>âittáá K ; 		! kunâgâsâittáá
 
 
@@ -1724,9 +1716,9 @@ LEXICON X_CAHALIG_SG  !!= __@CODE@__
 +Sg+Acc: K ;              ! čáhálig
 +Sg+Ill:%>án K ;     		! čáháligán
 +Sg+Loc:%>geest K ;   		! čáháliggeest 
-+Sg+Com:%>ggáin K ; 			! čáháliggáin
++Sg+Com:%>gáin K ; 			! čáháliggáin
 +Sg+Abe:%>ttáá K ;   		! čáháligttáá
-+Ess:%>ggen K ;        		! čáháliggen   
++Ess:%>gen K ;        		! čáháliggen   
 +Ess:%>gen CPXsuff ;        		! čáháliggen   
 +Par:%>ged K ;       		! čáháligged    
 
@@ -1736,8 +1728,7 @@ LEXICON X_eh_PL  !!= __@CODE@__
 +Pl+Acc:%>ijd K ;   		! čáháligijd    
 +Pl+Ill:%>áid K ; 		! čáháligáid
 +Pl+Loc:%>ijn K ; 		! čáháligijn
-+Pl+Com:%>ijguin K ;    	! čáháligijguin
-+Pl+Com+Err/Orth:%>ijgijn K ;    	! čáháligijguin
++Pl+Com:%>ij GUIN ;    	! čáháligijguin
 +Pl+Abe:%>ijttáá K ;    	! čáháligijttáá
 
 
@@ -1789,8 +1780,7 @@ LEXICON X_MANUTTEP_PL   !!= __@CODE@__
 +Pl+Acc:evi%>jd	K ;			! mánuttevijd
 +Pl+Ill:eevi%>jd	K ;			! mánutteevijd
 +Pl+Loc:evi%>jn	K ;			! mánuttevijn
-+Pl+Com:evi%>jguin	K ;			! mánuttevijguin
-+Pl+Com+Err/Orth:evi%>jgijn	K ;			! mánuttevijguin
++Pl+Com:evi%>j GUIN ;			! mánuttevijguin
 +Pl+Abe:evi%>jttáá	K ;			! mánuttevijttáá
 
 
@@ -2073,8 +2063,7 @@ LEXICON 4ELEMENT !!= __@CODE@__ MO Ib 2nd syll vowel does not alternate
 +N+Pl+Acc:^SLEN%>ijd K ;
 +N+Pl+Ill:%>táid K ;
 +N+Pl+Loc:^SLEN%>ijn K ;
-+N+Pl+Com:%>ijguin K ;
-+N+Pl+Com+Err/Orth:%>ijgijn K ;
++N+Pl+Com:%>ij GUIN ;
 +N+Pl+Abe:%>ijttáá K ;
 
 +N+Sg+Nom:%>tâ VPXsuff12nom ;  ! elementtân
@@ -2160,7 +2149,7 @@ LEXICON X_KIELES_SG  !!= __@CODE@__  (to be unified?)
 LEXICON 3PELES  !!= __@CODE@__ only peles
 +v1:piällás^ÁE C_MORCES ;
 +v1+N+Sg+Abe+Err/Orth:piälláttáá K ; !perhaps not +Err/Orth 
-+v1+N+Pl+Com+Err/Orth:piälláiguin K ; ! perhaps not +Err/Orth
++v1+N+Pl+Com+Err/Orth:piällái GUIN ; ! perhaps not +Err/Orth
 +v1+N+Pl+Abe+Err/Orth:piälláittáá K ; ! perhaps not +Err/Orth
 !+N:^WG^RLEN%> Nom_DER ;
 !+N:%> Gen_DER ; 
@@ -2585,7 +2574,7 @@ LEXICON X_RUONAS !!= __@CODE@__ WG NEP,  blank for the rest
 !+N+Pl+Acc:%>ijd K ; ! kuállusijd
 !+N+Pl+Ill:%>áid K ; ! kuállusáid
 !+N+Pl+Loc:%>ijn K ; ! kuállusijn
-!+N+Pl+Com:%>ijguin K ;  ! kuállusijguin
+!+N+Pl+Com:%>ij GUIN ;  ! kuállusijguin
 !+N+Pl+Com+Err/Orth:%>ijgijn K ;  ! kuállusijguin
 !+N+Pl+Abe:%>ijttáá K ;  ! kuállusijttáá
 !+N:^WG^RLEN%> Nom_DER ;
@@ -2619,10 +2608,8 @@ LEXICON 3VUONJAS  !!= __@CODE@__
 +N+Pl+Ill:^CSH%>čáid K ; 	! vuonjâčáid
 +N+Pl+Loc:^CSH%>ččijn K ; 	! vuonjâččijn
 +N+Pl+Loc:^CSH%>čijn K ; 	! vuonjâčijn
-+N+Pl+Com:^CSH%>ččijguin K ; ! vuonjâččijguin
-+N+Pl+Com+Err/Orth:^CSH%>ččijgijn K ; ! vuonjâččijguin
-+N+Pl+Com:^CSH%>čijguin K ; ! vuonjâčijguin
-+N+Pl+Com+Err/Orth:^CSH%>čijgijn K ; ! vuonjâčijguin
++N+Pl+Com:^CSH%>ččij GUIN ; ! vuonjâččijguin
++N+Pl+Com:^CSH%>čij GUIN ; ! vuonjâčijguin
 +N+Pl+Abe:^CSH%>ččijttáá K ; ! vuonjâččijttáá
 +N+Pl+Abe:^CSH%>čijttáá K ; ! vuonjâčijttáá
 
@@ -2771,8 +2758,7 @@ LEXICON X_KAAMUV_COMMON  !!= __@CODE@__
 +Pl+Acc:%>id K ;        ! kammuid
 +Pl+Ill:%>id K ;        ! kammuid 
 +Pl+Loc:%>in K ;        ! kammuin
-+Pl+Com:%>iguin K ;     ! kammuiguin
-+Pl+Com+Err/Orth:%>igijn K ;     ! kammuiguin
++Pl+Com:%>i GUIN ;     ! kammuiguin
 +Pl+Abe:%>ittáá K ;     ! kammuittáá
 
 
@@ -2825,8 +2811,7 @@ LEXICON C_OLMOOS_PL  !!= __@CODE@__
 +N+Pl+Acc:%>id K ;        	! ulmuid
 +N+Pl+Ill:%>id K ;        	! ulmuid 
 +N+Pl+Loc:%>in K ;        	! ulmuin
-+N+Pl+Com:%>iguin K ;     	! ulmuiguin
-+N+Pl+Com+Err/Orth:%>igijn K ;     	! ulmuiguin
++N+Pl+Com:%>i GUIN ;     	! ulmuiguin
 +N+Pl+Abe:%>ittáá K ;    	! ulmuittáá
 +N:^SVš^WG^SLEN^SVLOW%> Nom_DER ;
 +N:^SV^SLEN%> Gen_DER ; 
@@ -2896,8 +2881,7 @@ LEXICON C_MORCES  !!= __@CODE@__
 +N+Pl+Acc:^FCD%>id K ;   	     	! morččáid
 +N+Pl+Ill:^FCD%>id K ;      	  	! morččáid 
 +N+Pl+Loc:^FCD%>in K ;    	    	! morččáin
-+N+Pl+Com:^FCD^WG%>iguin K ;    ! morčáiguin     
-+N+Pl+Com+Err/Orth:^FCD^WG%>igijn K ;    ! morčáiguin
++N+Pl+Com:^FCD^WG%>i GUIN ;    ! morčáiguin     
 +N+Pl+Abe:^FCD^WG%>ittáá K ;  	! morčáittáá
 !+N+Sg+Nom:^FCD VPXsuff12 ;         ! 
 !+N+Sg+Gen:^FCD VPXsuff12 ;         ! 
@@ -2974,8 +2958,7 @@ LEXICON X_SVSLENh_PL
 +Pl+Acc:%>id K ;        		! čuánnjáid
 +Pl+Ill:%>id K ;        		! čuánnjáid 
 +Pl+Loc:%>in K ;        		! čuánnjáin
-+Pl+Com:%>iguin K ;     		! čuánnjáiguin
-+Pl+Com+Err/Orth:%>igijn K ;  ! kuoksuiguin
++Pl+Com:%>i GUIN ;     		! čuánnjáiguin
 +Pl+Abe:%>ittáá K ;    		! čuánnjáittáá
 
 
@@ -3089,8 +3072,7 @@ LEXICON X_TUULAS_PL !!= __@CODE@__
 +Pl+Acc:^WG^RLEN%>id K ; 			! tuulijd
 +Pl+Ill:^WG^RLEN%>id K ; 			! tuulijd
 +Pl+Loc:^WG^RLEN%>in K ; 			! tuulijn
-+Pl+Com:^WG^RVSH%>iguin K ; 		! tulijguin
-+Pl+Com+Err/Orth:^WG^RVSH%>igijn K ; 		! tulijgijn
++Pl+Com:^WG^RVSH%>i GUIN ; 		! tulijguin
 +Pl+Abe:^WG^RVSH%>ittáá K ; 		! tulijttáá
 
 
@@ -3129,8 +3111,7 @@ LEXICON X_KAANDAS_PL !!= __@CODE@__
 +Pl+Acc:i^WG^CLEN%>id K ;
 +Pl+Ill:i^WG^CLEN%>id K ;
 +Pl+Loc:i^WG^CLEN%>in K ;
-+Pl+Com:i^WG^CLEN%>iguin K ;
-+Pl+Com+Err/Orth:^WG^CLEN%>igijn K ; ! kandijguin
++Pl+Com:i^WG^CLEN%>i GUIN ;
 +Pl+Abe:i^WG^CLEN%>ittáá K ;
 
 
@@ -3153,7 +3134,7 @@ LEXICON X_KAANDAS_PL !!= __@CODE@__
 !+N+Pl+Acc:%>id K ; ! kandijd
 !+N+Pl+Ill:%>id K ; ! kandijd
 !+N+Pl+Loc:%>in K ; ! kandijn
-!+N+Pl+Com:^RVSH%>iguin K ; ! kandijguin
+!+N+Pl+Com:^RVSH%>i GUIN ; ! kandijguin
 !+N+Pl+Com+Err/Orth:^RVSH%>igijn K ; ! kandijguin
 !+N+Pl+Abe:^RVSH%>ittáá K ; ! kandijttáá
 
@@ -3197,8 +3178,7 @@ LEXICON X_VUALAAS !!= __@CODE@__
 +Pl+Acc:%>id K ; 							! vuáláid
 +Pl+Ill:%>id K ; 							! vuáláid
 +Pl+Loc:%>in K ; 							! vuáláin
-+Pl+Com:%>iguin K ; 						! vuáláiguin
-+Pl+Com+Err/Orth:%>igijn K ; 						! vuáláiguin
++Pl+Com:%>i GUIN ; 						! vuáláiguin
 +Pl+Abe:%>ittáá K ; 						! vuáláittáá
 
 
@@ -3329,8 +3309,7 @@ LEXICON 3OPPUS  !!= __@CODE@__
 +N+Pl+Acc:^SVž^SLEN%>ijd K ; 	! oppuužijd
 +N+Pl+Ill:^SVž^SLEN%>áid K ; 	! oppuužáid
 +N+Pl+Loc:^SVž^SLEN%>ijn K ; 	! oppuužijn
-+N+Pl+Com:^SVž^SLEN%>ijguin K ; ! oppuužijguin
-+N+Pl+Com+Err/Orth:^SVž^SLEN%>ijgijn K ; ! oppuužijguin
++N+Pl+Com:^SVž^SLEN%>ij GUIN ; ! oppuužijguin
 +N+Pl+Abe:^SVž^SLEN%>ijttáá K ; ! oppuužijttáá
 
 
@@ -3353,7 +3332,7 @@ LEXICON JOHTOLAH_OBL    !!= __@CODE@__ common for N and A
 +N+Sg+Acc:uv K ;
 +N+Sg+Ill:âh%>ân K ;
 +N+Sg+Loc:uvv%>âst K ;
-+N+Sg+Loc+Use/NG:uv%>âst K ; ! typos, especially for Trond
++N+Sg+Loc+Use/NG:uv%>âst K ; ! typos
 +N+Sg+Com:uvv%>áin K ;
 +N+Sg+Abe:uv%>ttáá K ;
 +N+Ess:âhhâ%>n K ;
@@ -3370,8 +3349,7 @@ LEXICON 4JOTOLAH_PL  !!= __@CODE@__
 +N+Pl+Acc:uvâ%>id K ;
 +N+Pl+Ill:uvvá%>id K ;
 +N+Pl+Loc:uvâ%>in K ;
-+N+Pl+Com:uvâ%>iguin K ;
-+N+Pl+Com+Err/Orth:uvâ%>igijn K ;
++N+Pl+Com:uvâ%>i GUIN ;
 +N+Pl+Abe:uvâ%>ittáá K ;
 
 
@@ -3423,8 +3401,7 @@ LEXICON LAS_COMMON !!= __@CODE@__
 +Pl+Acc:ijd K ;
 +Pl+Ill:áid K ;
 +Pl+Loc:ijn K ;
-+Pl+Com:ijguin K ;
-+Pl+Com+Err/Orth:ijgijn K ;
++Pl+Com:ij GUIN ;
 +Pl+Abe:ijttáá K ;
 
 LEXICON LAS_SUF  !!= __@CODE@__ 
@@ -3440,8 +3417,7 @@ LEXICON LAS_SUF  !!= __@CODE@__
 +Pl+Acc:%>id K ;
 +Pl+Ill:%>id K ;
 +Pl+Loc:%>in K ;
-+Pl+Com:%>iguin K ;
-+Pl+Com+Err/Orth:%>igijn K ;
++Pl+Com:%>i GUIN ;
 +Pl+Abe:%>ittáá K ;
 
 
@@ -3461,8 +3437,7 @@ LEXICON MUS_NOUN  !!= type uáiváámus, aldemus
 +N+Pl+Acc:%>id K ;
 +N+Pl+Ill:%>id K ;
 +N+Pl+Loc:%>in K ;
-+N+Pl+Com:%>iguin K ;
-+N+Pl+Com+Err/Orth:%>igijn K ;
++N+Pl+Com:%>i GUIN ;
 +N+Pl+Abe:%>ittáá K ;
 
 
@@ -3554,11 +3529,15 @@ LEXICON X_TAHHEE_PL !!= __@CODE@__ ee-final contract, plural forms
 +Pl+Acc:^SVSH%>i3d K ; 		! tahheid
 +Pl+Ill:^SVSH%>i3d K ; 		! tahheid
 +Pl+Loc:^SVSH%>i3n K ;		! tahhein
-+Pl+Com:^SVSH%>i3guin K ;	! tahheiguin
-+Pl+Com+Err/Orth:^SVSH%>igijn K ;	! tahheiguin
++Pl+Com:^SVSH%>i3 GUIN ;	! tahheiguin
 +Pl+Abe:^SVSH%>i3ttáá K ; 	! tahheittáá
 
 
+!! !!Comitative plural variation
+
+LEXICON GUIN
+       :guin K ;
++Use/NG:gijn K ;
 
 !! !!Derivations
 ! =================================
