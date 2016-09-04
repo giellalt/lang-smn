@@ -94,6 +94,7 @@ for file in ${srcdir}/$yaml_file_subdir/*_$transducer.$suffix; do
     leadtext=$(echo "YAML test $i: ")
     source ./$relpath/run-morph-tester.sh \
         $transducer $file $relpath $halftest $leadtext
+#    echo "$leadtext $file ">> example2.txt
 done
 
 totalpasses=$( echo $( cat $testtotalsfile | tr ' ' '\n' | cut -d'/' -f1 \
@@ -103,6 +104,7 @@ totalfails=$(  echo $( cat $testtotalsfile | tr ' ' '\n' | cut -d'/' -f2 \
 totaltotals=$( echo $( cat $testtotalsfile | tr ' ' '\n' | cut -d'/' -f3 \
 			 | tr '\n' ' ' | sed 's/ / + /g' | sed 's/ + $//' ) | bc )
 rm -f $testtotalsfile
+previoustotalfails=`cat ../example.txt`
 
 red="\033[1;31m"
 green="\033[0;32m"
@@ -116,10 +118,13 @@ offbold=$(tput sgr0)
 #bold=$(tput bold)
 #normal=$(tput sgr0)
 
+printf "                                      "
+printf "PREVIOUS FAILS: ${red}${previoustotalfails}${reset} \n"
 printf "${bold}SUMMARY${offbold} for the "
 printf "${orange}$summaryhalftext$transducer${reset} fst(s): "
 printf "${green}PASSES: ${totalpasses}${reset} / "
 printf "${red}FAILS: ${totalfails}${reset} / "
 printf "${blue}TOTAL: ${totaltotals}${reset}\n"
 
+echo "$totalfails" > ../example.txt
 source $srcdir/$relpath/error-handling-stubs.sh
