@@ -491,11 +491,11 @@ SET NOT-COMMA = WORD - COMMA ;  #!! NOT-COMMA
 
 #!! !Derivational affixes
 
-LIST DER-V = Der/adda Der/alla Der/d Der/g Der/h Der/halla Der/hudda Der/huhtti Der/huvva Der/j Der/l Der/st Der/stuvva Der/InchL Der/Caus ; #!! DER-V
+LIST DER-V =  Der/alla Der/d Der/l Der/st Der/tt Der/ttaa Der/Caus Der/InchL ; #!! DER-V
 
-LIST DER-N = Der/Dimin Der/eamoš  Der/Car Der/NomAct Der/š Der/muš Der/upmi Der/us Der/vuota Der/NomAg Der/NomAct ; #!! DER-N
+LIST DER-N = Der/Dimin Der/Car Der/NomAct Der/NomAg  Der/mas Der/upmi  Der/vuota  ; #!! DER-N
 
-LIST DER-A1 = Der/diibmosaš Der/vuovttat Der/čalmmat Der/dássásaš Der/eaddji Der/geahtes Der/keahtes Der/Car Der/jahkásaš Der/lágan Der/lágaš Der/lasj Der/meahttun Der/lágán Der/gielat Der/mállet Der/kultuvrrat (VV A) Der/A  ; #!! DER-A1
+LIST DER-A1 =   Der/Car Der/ahasas Der/lagan  Der/lasj Der/vualasas Der/ag Der/mas Der/sasj (VV A) Der/A  ; #!! DER-A1
 
 SET DER-A = DER-A1 - Adv ; #!! DER-A
 
@@ -702,7 +702,7 @@ LIST PLACE-ADV =  "bajábealde" "davábealde" "lagabus" "máttabealde" "nuorttab
 LIST DOPPE = "badjin" "bajil" "tast" "taa" "tääbbin" "tääbbin" "tast" "dieppe" "do" "dokko" "tobbeen" ("tovben" Adv) "duokko" "duoppe" "olgon" ;
 # Adverbs with a locativic form, but don´t get Loc as a tag. 
 
-LIST DOHKO = "pajas" "báldii" "teehi" "diehke" "diehko" "tuáhunteehin" "duohko" "gaskii" "gurrii" "lulás" "olggos" "pááikán" "sisa" "vuovdimassii" ;
+LIST DOHKO = "pajas" "báldii" "teehi" "tiehu" "tuáhunteehin" "tovhon" "kyevtkooskân" "gurrii" "lulás" "olgos" "pááikán" "siisá" "vuovdimassii" ;
 # Adverbs with a illativic form, but they don´t get Ill as a tag.
 
 
@@ -8962,6 +8962,13 @@ REMOVE:TESTr2027 Gen IF (*-1 TRANS-V)(0 ("tot" Acc))(1 CC OR CS);
  	
 #!! ! Reflexive pronouns: acc or gen
 
+SELECT:jies_sg3 PxSg3 IF (*-1 V + Sg3 BARRIER VFIN)(0 Pron + Refl) ;
+SELECT:jies_du3 PxDu3 IF (*-1 V + Du3 BARRIER VFIN)(0 Pron + Refl) ;
+SELECT:jies_pl3 PxPl3 IF (*-1 V + Pl3 BARRIER VFIN)(0 Pron + Refl) ;
+
+SELECT:jies_inf PxSg3 IF (*-1 V + Inf BARRIER VFIN LINK *-1 BOS BARRIER VFIN)(0 Pron + Refl) ;
+	
+	
 REMOVE:genFinally Gen (0 Acc LINK NOT 0 Nom LINK NOT -1 Pr OR Num)(NEGATE *-1 REAL-V)(*1 EOC OR CS BARRIER WORD) ;
 	#$ Naba daid stuora dorskiid, gosa daid bidjet?
 	#$ Muhtun sámi biktasiid, nugo gápmagiid ja vuoddagiid, sii geavahedje guhkit, gitta 1960-logu rádjai.
