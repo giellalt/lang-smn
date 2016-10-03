@@ -67,6 +67,7 @@ endif # CAN_FOMA
 define giella_analysers
 analyser-gt-%.$(1): analyser-%.tmp.$(1)                     \
 					filters/remove-halflong-dotbelow.$(1)   \
+					filters/remove-derivation-position-tags.%   \
 					filters/remove-letter-acute-accent.$(1)            
 	$$(AM_V_XFST_TOOL)$$(PRINTF) "read regex \
 				@\"$$<\"                                     \
@@ -82,6 +83,7 @@ $(foreach fst,hfst xfst foma,$(eval $(call giella_generators,$(fst))))
 # Special case for the disamb analyser, since it follows the same filename
 # pattern as the raw fst:
 analyser-disamb-gt-desc.%: analyser-disamb-gt-desc.tmp.% \
+					filters/remove-derivation-position-tags.%   \
 					filters/remove-halflong-dotbelow.%   \
 					filters/remove-letter-acute-accent.%            
 	$(AM_V_XFST)$(PRINTF) "read regex                      \
@@ -97,6 +99,7 @@ analyser-disamb-gt-desc.%: analyser-disamb-gt-desc.tmp.% \
 # pattern as the raw fst:
 analyser-dict-gt-desc.%: analyser-dict-gt-desc.tmp.% \
 					filters/remove-halflong-dotbelow.%   \
+					filters/remove-derivation-position-tags.%   \
 					filters/remove-letter-acute-accent.%            
 	$(AM_V_XFST)$(PRINTF) "read regex                      \
 				@\"$<\"                                    \
