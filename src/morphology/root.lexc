@@ -75,33 +75,61 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
  +PrsPrc +PrfPrc 				  !!= * @CODE@
  +VGen +VAbess					  !!= * @CODE@
  +Actio					  !!= * @CODE@
+
+
+! Der#begin
+!! {{{
+! Derivation position in a derivation row:  Affix and
+! 1              2            3            4             POS type
++Der1          +Der2        +Der3		+Der4
+
+! Der#1
++Der/Dimin                                               ! NN (was: Der/aš & Der/š)
++Der/lasj                                                ! NA
++Der/d                                                   ! VV
++Der/tt                                                   ! VV - Causative čälittiđ
++Der/Caus                                                ! VV - 3-syll causatives
++Der/l                                                   ! VV
++Der/st                                                  ! VV čälistiđ
++Der/Car                                                 ! NA * +Der1+Der2 - can only combine with Der3 caritive: peljittem
++Der/lagan                                               ! AA * +Der1+Der2 - can only combine with Der3
++Der/Pass                                               ! VV - short passive
+! Der#2
+              +Der/NomAg
+              +Der/NomAct                                ! VN Der/NomAct har to realisasjonar, med ulike restriksjonar,
+			  +Der/sasj                                                 ! NA
+              +Der/alla                                  ! VV
+              +Der/AAdv                                    ! adverb pyeremusávt pyeremusâht
+! Der#3                    
+                           +Der/Pass                    ! VV - long passive
+                           +Der/vuota                   ! AN
+! Der#4                                                            
+                                        +Der/InchL      ! VV
+!                                       +Der/NomAct      ! VN Der/NomAct har to realisasjonar, med ulike restriksjonar,
+                                                         !    this is previous Der/n. This realisation is Der4.
+                                                         !    Outcommented to not define the tag twice, but kept
+                                                         !    here for documentation purposes.
+                                        +Der/upmi        ! VN
+                                        +Der/mas         ! VN
+!! }}}
+! Der#end
+
+
+!! All non-positional derivations should be preceded by this tag, to make it possible
+!! to target regular expressions at all derivations in a language-independent way:
+!! just specify +Der|+Der1 .. +Der5 and you are set.
+
++Der  !!≈ * @CODE@
+
  
 !! !Derivations
- +Actor			                  !!= * @CODE@
- +Der/AAdv                    !!= * @CODE@ adverb pyeremusávt pyeremusâht
- +Der/Car                    !!= * @CODE@ caritive: peljittem
- +Der/Caus                   !!= * @CODE@ 3-syll causatives
- +Der/Dimin !!= * @CODE@
- +Der/InchL !!= * @CODE@
- +Der/NomAct                    !!= * @CODE@ adverb pyeremustáá
- +Der/NomAg                    !!= * @CODE@ adverb pyeremustáá
- +Der/Pass !!= * @CODE@
+!! !Other/unclassified derivations, can appear in all positions:
+
+
  +Der/ag !!= * @CODE@ neeljičievâg neeljijienâg kuulmâloonjâg neeljičievâg neeljijienâg
  +Der/ahasas                    !!= * @CODE@ 85-ahasâš škovlâahasâš
- +Der/alla !!= * @CODE@
- +Der/d  !!= * @CODE@  
  +Der/ivvaas                  !!= * @CODE@
- +Der/l  !!= * @CODE@  
- +Der/lagan  !!= * @CODE@
- +Der/lasj   !!= * @CODE@
- +Der/mas   !!= * @CODE@
- +Der/sasj   !!= * @CODE@
- +Der/st  !!= * @CODE@ čälistiđ
- +Der/tt  !!= * @CODE@ čälittiđ
- +Der/ttaa                    !!= * @CODE@ adverb pyeremustáá
- +Der/upmi !!= * @CODE@
  +Der/vualasas                    !!= * @CODE@ tutkâmvuálásâš
- +Der/vuota                    !!= * @CODE@ -vuotâ
 
 !! !Clitics
  +Qst 
