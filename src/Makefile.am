@@ -67,12 +67,12 @@ endif # CAN_FOMA
 define giella_analysers
 analyser-gt-%.$(1): analyser-%.tmp.$(1)                     \
 					filters/remove-halflong-dotbelow.$(1)   \
-					filters/remove-derivation-position-tags.%   \
+					filters/remove-derivation-position-tagst.$(1)   \
 					filters/remove-letter-acute-accent.$(1)            
 	$$(AM_V_XFST_TOOL)$$(PRINTF) "read regex \
 				@\"$$<\"                                     \
 			.o. @\"filters/remove-letter-acute-accent.$(1)\" \
-			.o. @\"filters/remove-derivation-position-tags.%   \
+			.o. @\"filters/remove-derivation-position-tagst.$(1)   \
 			.o. @\"filters/remove-halflong-dotbelow.$(1)\"   \
 			;\n\
 		 $$(INVERT_HFST)\
