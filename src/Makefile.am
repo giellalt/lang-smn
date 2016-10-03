@@ -72,6 +72,7 @@ analyser-gt-%.$(1): analyser-%.tmp.$(1)                     \
 	$$(AM_V_XFST_TOOL)$$(PRINTF) "read regex \
 				@\"$$<\"                                     \
 			.o. @\"filters/remove-letter-acute-accent.$(1)\" \
+			.o. @\"filters/remove-derivation-position-tags.%   \
 			.o. @\"filters/remove-halflong-dotbelow.$(1)\"   \
 			;\n\
 		 $$(INVERT_HFST)\
