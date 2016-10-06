@@ -1,4 +1,17 @@
-$Rev: 139846 $
+$Rev: 141056 $
+More robustness added to the test scripts: checking several variables, testing
+whether the found variables are pointing to existing directories, and giving an
+error message if no directory is found.
+
+r140928:
+Changed variable name and definition to allow overriding the path to the called
+script, to make it easy to use a locally modified script instead.
+
+r140921:
+Changed variable name in devtool scripts, to reflect similar changes elsewhere.
+Part of fixing bug #2219.
+
+r139846:
 Corrected a number of bugs and deficiencies when building spellers when the
 giella proofing tools libraries must be fetched over the net. Not the spellers
 build correctly under all intended circumstances given that there is a network
