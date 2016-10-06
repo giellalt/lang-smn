@@ -65,12 +65,12 @@ endif # CAN_FOMA
 
 # We need to specify -gt- to avoid applying the filters to the raw fst:
 define giella_analysers
-analyser-gt-%.$(1): analyser-%.tmp.$(1)                     \
+analyser-gt-%.$(1): analyser-gt-%.tmp.$(1)                     \
 					filters/remove-halflong-dotbelow.$(1)   \
-					filters/remove-derivation-position-tagst.$(1)   \
-					filters/remove-letter-acute-accent.$(1)            
+					filters/remove-derivation-position-tags.$(1) \
+					filters/remove-letter-acute-accent.$(1)
 	$$(AM_V_XFST_TOOL)$$(PRINTF) "read regex \
-				@\"filters/remove-derivation-position-tagst.$(1) \
+				@\"filters/remove-derivation-position-tags.$(1)\" \
 			.o. @\"$$<\"                                     \
 			.o. @\"filters/remove-letter-acute-accent.$(1)\" \
 			.o. @\"filters/remove-halflong-dotbelow.$(1)\"   \
@@ -79,7 +79,7 @@ analyser-gt-%.$(1): analyser-%.tmp.$(1)                     \
 		 save stack $$@\n\
 		 quit\n" | $$(XFST_TOOL)
 endef
-$(foreach fst,hfst xfst foma,$(eval $(call giella_generators,$(fst))))
+$(foreach fst,hfst xfst foma,$(eval $(call giella_analysers,$(fst))))
 
 # Special case for the disamb analyser, since it follows the same filename
 # pattern as the raw fst:
