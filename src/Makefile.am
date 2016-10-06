@@ -70,9 +70,9 @@ analyser-gt-%.$(1): analyser-%.tmp.$(1)                     \
 					filters/remove-derivation-position-tagst.$(1)   \
 					filters/remove-letter-acute-accent.$(1)            
 	$$(AM_V_XFST_TOOL)$$(PRINTF) "read regex \
-				@\"$$<\"                                     \
+				@\"filters/remove-derivation-position-tagst.$(1) \
+			.o. @\"$$<\"                                     \
 			.o. @\"filters/remove-letter-acute-accent.$(1)\" \
-			.o. @\"filters/remove-derivation-position-tagst.$(1)   \
 			.o. @\"filters/remove-halflong-dotbelow.$(1)\"   \
 			;\n\
 		 $$(INVERT_HFST)\
@@ -88,9 +88,9 @@ analyser-disamb-gt-desc.%: analyser-disamb-gt-desc.tmp.% \
 					filters/remove-halflong-dotbelow.%   \
 					filters/remove-letter-acute-accent.%            
 	$(AM_V_XFST)$(PRINTF) "read regex                      \
-				@\"$<\"                                    \
+				@\"filters/remove-derivation-position-tags.$*\" \
+			.o. @\"$<\"                                    \
 			.o. @\"filters/remove-letter-acute-accent.$*\" \
-			.o. @\"filters/remove-derivation-position-tags.$*\" \
 			.o. @\"filters/remove-halflong-dotbelow.$*\"   \
 			;\n\
 		 $(INVERT_HFST)\
@@ -100,11 +100,13 @@ analyser-disamb-gt-desc.%: analyser-disamb-gt-desc.tmp.% \
 # Special case for the dict analyser, since it follows the same filename
 # pattern as the raw fst:
 analyser-dict-gt-desc.%: analyser-dict-gt-desc.tmp.% \
+					filters/remove-derivation-position-tags.%   \
 					filters/remove-halflong-dotbelow.%   \
 					filters/remove-derivation-position-tags.%   \
 					filters/remove-letter-acute-accent.%            
 	$(AM_V_XFST)$(PRINTF) "read regex                      \
-				@\"$<\"                                    \
+				@\"filters/remove-derivation-position-tags.$*\" \
+			.o. @\"$<\"                                    \
 			.o. @\"filters/remove-letter-acute-accent.$*\" \
 			.o. @\"filters/remove-letter-acute-accent.$*\" \
 			.o. @\"filters/remove-halflong-dotbelow.$*\"   \
@@ -117,14 +119,14 @@ analyser-dict-gt-desc.%: analyser-dict-gt-desc.tmp.% \
 # We need to specify -gt- to avoid applying the filters to the raw fst:
 define giella_generators
 generator-gt-%.$(1): generator-gt-%.tmp.$(1)                \
-					 filters/remove-derivation-position-tags.$(1) \
+					filters/remove-derivation-position-tags.$(1) \
 					filters/remove-halflong-dotbelow.$(1)   \
 					filters/remove-letter-acute-accent.$(1) \
 					filters/make-optional-lang_hom-tags.$(1)
 	$$(AM_V_XFST_TOOL)$$(PRINTF) "read regex                  \
 				@\"filters/make-optional-lang_hom-tags.$(1)\" \
-			.o. @\"$$<\"                                      \
 			.o. @\"filters/remove-derivation-position-tags.$(1)\" \
+			.o. @\"$$<\"                                      \
 			.o. @\"filters/remove-letter-acute-accent.$(1)\"  \
 			.o. @\"filters/remove-halflong-dotbelow.$(1)\"    \
 			;\n\
