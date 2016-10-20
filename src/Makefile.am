@@ -86,9 +86,11 @@ $(foreach fst,hfst xfst foma,$(eval $(call giella_analysers,$(fst))))
 analyser-disamb-gt-desc.%: analyser-disamb-gt-desc.tmp.% \
 					filters/remove-derivation-position-tags.%   \
 					filters/remove-halflong-dotbelow.%   \
+					filters/rename-POS_before_Der-tags.% \
 					filters/remove-letter-acute-accent.%            
 	$(AM_V_XFST)$(PRINTF) "read regex                      \
 				@\"filters/remove-derivation-position-tags.$*\" \
+			.o. @\"filters/rename-POS_before_Der-tags.$*\" \
 			.o. @\"$<\"                                    \
 			.o. @\"filters/remove-letter-acute-accent.$*\" \
 			.o. @\"filters/remove-halflong-dotbelow.$*\"   \
