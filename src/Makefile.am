@@ -65,21 +65,70 @@ endif # CAN_FOMA
 
 # We need to specify -gt- to avoid applying the filters to the raw fst:
 define giella_analysers
-analyser-gt-%.$(1): analyser-gt-%.tmp.$(1)                     \
-					filters/remove-halflong-dotbelow.$(1)   \
+analyser-gt-%.$(1): analyser-gt-%.tmp.$(1)                       \
+					filters/remove-norm-comp-tags.$(1)           \
 					filters/remove-derivation-position-tags.$(1) \
+					filters/remove-halflong-dotbelow.$(1)        \
 					filters/remove-letter-acute-accent.$(1)
 	$$(AM_V_XFST_TOOL)$$(PRINTF) "read regex \
 				@\"filters/remove-derivation-position-tags.$(1)\" \
-			.o. @\"$$<\"                                     \
-			.o. @\"filters/remove-letter-acute-accent.$(1)\" \
-			.o. @\"filters/remove-halflong-dotbelow.$(1)\"   \
+				@\"filters/remove-norm-comp-tags.$(1)\"           \
+			.o. @\"$$<\"                                          \
+			.o. @\"filters/remove-letter-acute-accent.$(1)\"      \
+			.o. @\"filters/remove-halflong-dotbelow.$(1)\"        \
 			;\n\
 		 $$(INVERT_HFST)\
 		 save stack $$@\n\
 		 quit\n" | $$(XFST_TOOL)
 endef
 $(foreach fst,hfst xfst foma,$(eval $(call giella_analysers,$(fst))))
+
+# And also for the normative analyser (foma and hfst):
+analyser-gt-norm.%: analyser-gt-norm.tmp.% \
+					filters/remove-illegal-derivation-strings-flagbased.% \
+					filters/insert-default-compounding-tags.% \
+					filters/insert-default_left_compounding-tags.% \
+					filters/block-illegal_compound-strings.%  \
+					filters/split-CmpN-tags.% \
+					filters/convert_to_flags-CmpNP-tags.% \
+					filters/split-CmpNP-tags.% \
+					filters/remove-modifier-letter-vertical-line.% \
+					filters/remove-letter-dot-below.%
+	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
+				@\"filters/block-illegal_compound-strings.$*\"          \
+			.o. @\"filters/split-CmpN-tags.$*\"                         \
+			.o. @\"filters/insert-default_left_compounding-tags.$*\"    \
+			.o. @\"filters/insert-default-compounding-tags.$*\"         \
+			.o. @\"filters/remove-illegal-derivation-strings-flagbased.$*\" \
+			.o. @\"filters/convert_to_flags-CmpNP-tags.$*\"            \
+			.o. @\"filters/split-CmpNP-tags.$*\"                       \
+			.o. @\"$<\"                                                \
+			.o. @\"filters/remove-letter-acute-accent.$*\" \
+			.o. @\"filters/remove-halflong-dotbelow.$*\"   \
+			;\n\
+		 twosided flag-diacritics\n\
+		 $(INVERT_HFST)\
+		 save stack $@\n\
+		 quit\n" | $(XFST_TOOL)
+
+# The operation 'twosided flag-diacritics" crashes Xerox badly, so we do with
+# a simpler, less restrictive normative fst when building with Xerox:
+analyser-gt-norm.xfst: analyser-gt-norm.tmp.xfst \
+					filters/remove-norm-comp-tags.xfst             \
+					filters/remove-derivation-position-tags.xfst   \
+					filters/remove-illegal-derivation-strings.xfst \
+					filters/remove-modifier-letter-vertical-line.xfst \
+					filters/remove-letter-dot-below.xfst
+	$(AM_V_XFST)$(PRINTF) "read regex \
+				@\"filters/remove-norm-comp-tags.xfst\"                \
+			.o. @\"filters/remove-derivation-position-tags.xfst\"      \
+			.o. @\"filters/remove-illegal-derivation-strings.xfst\"    \
+			.o. @\"$<\"                                                \
+			.o. @\"filters/remove-letter-acute-accent.xfst\"           \
+			.o. @\"filters/remove-halflong-dotbelow.xfst\"             \
+			;\n\
+		 save stack $@\n\
+		 quit\n" | $(XFST) $(VERBOSITY)
 
 # Special case for the disamb analyser, since it follows the same filename
 # pattern as the raw fst:
