@@ -92,8 +92,8 @@ analyser-gt-norm.%: analyser-gt-norm.tmp.% \
 					filters/split-CmpN-tags.% \
 					filters/convert_to_flags-CmpNP-tags.% \
 					filters/split-CmpNP-tags.% \
-					filters/remove-modifier-letter-vertical-line.% \
-					filters/remove-letter-dot-below.%
+					filters/remove-letter-acute-accent.% \
+					filters/remove-halflong-dotbelow.%
 	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
 				@\"filters/block-illegal_compound-strings.$*\"          \
 			.o. @\"filters/split-CmpN-tags.$*\"                         \
@@ -117,8 +117,8 @@ analyser-gt-norm.xfst: analyser-gt-norm.tmp.xfst \
 					filters/remove-norm-comp-tags.xfst             \
 					filters/remove-derivation-position-tags.xfst   \
 					filters/remove-illegal-derivation-strings.xfst \
-					filters/remove-modifier-letter-vertical-line.xfst \
-					filters/remove-letter-dot-below.xfst
+					filters/remove-letter-acute-accent.xfst \
+					filters/remove-halflong-dotbelow.xfst
 	$(AM_V_XFST)$(PRINTF) "read regex \
 				@\"filters/remove-norm-comp-tags.xfst\"                \
 			.o. @\"filters/remove-derivation-position-tags.xfst\"      \
