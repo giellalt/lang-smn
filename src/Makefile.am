@@ -64,24 +64,21 @@ endif # CAN_FOMA
 #### Add language-specific build rules here: ####
 
 # We need to specify -gt- to avoid applying the filters to the raw fst:
-define giella_analysers
-analyser-gt-%.$(1): analyser-gt-%.tmp.$(1)                       \
-					filters/remove-norm-comp-tags.$(1)           \
-					filters/remove-derivation-position-tags.$(1) \
-					filters/remove-halflong-dotbelow.$(1)        \
-					filters/remove-letter-acute-accent.$(1)
-	$$(AM_V_XFST_TOOL)$$(PRINTF) "read regex \
-				@\"filters/remove-derivation-position-tags.$(1)\" \
-				@\"filters/remove-norm-comp-tags.$(1)\"           \
-			.o. @\"$$<\"                                          \
-			.o. @\"filters/remove-letter-acute-accent.$(1)\"      \
-			.o. @\"filters/remove-halflong-dotbelow.$(1)\"        \
+analyser-gt-desc.%: analyser-gt-desc.tmp.%                    \
+					filters/remove-norm-comp-tags.%           \
+					filters/remove-derivation-position-tags.% \
+					filters/remove-halflong-dotbelow.%        \
+					filters/remove-letter-acute-accent.%
+	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
+				@\"filters/remove-derivation-position-tags.$*\" \
+				@\"filters/remove-norm-comp-tags.$*\"           \
+			.o. @\"$<\"                                         \
+			.o. @\"filters/remove-letter-acute-accent.$*\"      \
+			.o. @\"filters/remove-halflong-dotbelow.$*\"        \
 			;\n\
-		 $$(INVERT_HFST)\
-		 save stack $$@\n\
-		 quit\n" | $$(XFST_TOOL)
-endef
-$(foreach fst,hfst xfst foma,$(eval $(call giella_analysers,$(fst))))
+		 $(INVERT_HFST)\
+		 save stack $@\n\
+		 quit\n" | $(XFST_TOOL)
 
 # And also for the normative analyser (foma and hfst):
 analyser-gt-norm.%: analyser-gt-norm.tmp.% \
