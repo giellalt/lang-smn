@@ -15,8 +15,8 @@ SUBDIRS = filters . desktop mobile
 # 2. Split multiple tags into separate paths
 # 3. Convert tags to flags
 # 4. Make flags two-sided
-generator-fstspeller-gt-norm-comp_restricted.hfst: \
-		generator-fstspeller-gt-norm-comp_restricted.tmp.hfst \
+generator-fstspeller-gt-norm.hfst: \
+		generator-fstspeller-gt-norm.tmp.hfst \
 		filters/insert-default-compounding-tags.hfst \
 		filters/insert-default_left_compounding-tags.hfst \
 		filters/block-illegal_compound-strings.hfst  \
