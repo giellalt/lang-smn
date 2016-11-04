@@ -1,37 +1,51 @@
 
 LEXICON  Rnoun
- R ;            ! pessijâšmoonijd 
-+Attr+Err/Orth:  K ;  ! pessijâš
+                 R ; ! pessijâšmoonijd
+ +Attr+Err/Orth: K ; ! pessijâš
 
-LEXICON R
-!+Cmp#:# # ; ! For turning off compounding during testing
- +Cmp#:# nounflag ;
- +Cmp/Hyph+Cmp#:#- nounflag ;
- +Cmp/SplitR:- # ;
- +Cmp-#:#- ProperNoun-smn ;
- +Cmp-#:#- ProperNoun ;
+LEXICON R !!≈ @CODE@ - This initial recursive/compounding lexicon adds flags to
+          !! control compounding, before going to the real compounding lexicon
+ @P.CmpFrst.FALSE@@P.CmpPref.FALSE@@D.CmpLast.TRUE@@D.CmpNone.TRUE@@U.CmpNone.FALSE@@P.CmpOnly.TRUE@ R_after_cmp_flags ;
+
+LEXICON R_after_cmp_flags
+          +Cmp#:#  #              ; ! For turning off compounding during testing
+          +Cmp#:#  nounflag       ;
+ +Cmp/Hyph+Cmp#:#- nounflag       ;
+         +Cmp-#:#- ProperNoun-smn ;
+         +Cmp-#:#- ProperNoun     ;
+    +Cmp/SplitR:-  #              ;
 
 LEXICON nounflag
- NounRoot ;
- @P.NeedNoun.ON@ VerbRoot ; !means that the only allowed when @C.NeedNoun@, because of ENDLEX @D.NeedNoun.ON@ 
- @P.NeedNoun.ON@ AdjectiveRoot ; 
+                 NounRoot      ;
+ @P.NeedNoun.ON@ VerbRoot      ; !means that the only allowed when @C.NeedNoun@, because of ENDLEX @D.NeedNoun.ON@
+ @P.NeedNoun.ON@ AdjectiveRoot ;
 
-LEXICON Rhyph
- +Cmp-#:-# NounRoot ;
- +Cmp-#:-#        Numeral    ; ! NRK-2
- +Cmp/SplitR:- # ;
+LEXICON Rhyph !!≈ @CODE@ - This initial recursive/compounding lexicon adds flags to
+          !! control compounding, before going to the real compounding lexicon
+ @P.CmpFrst.FALSE@@P.CmpPref.FALSE@@D.CmpLast.TRUE@@D.CmpNone.TRUE@@U.CmpNone.FALSE@@P.CmpOnly.TRUE@ Rhyph_after_cmp_flags ;
 
+LEXICON Rhyph_after_cmp_flags
+      +Cmp-#:-# NounRoot ;
+      +Cmp-#:-# Numeral  ; ! NRK-2
+ +Cmp/SplitR:-  #        ;
 
+LEXICON RProp !!≈ @CODE@ - This initial recursive/compounding lexicon adds flags to
+          !! control compounding, before going to the real compounding lexicon
+ @P.CmpFrst.FALSE@@P.CmpPref.FALSE@@D.CmpLast.TRUE@@D.CmpNone.TRUE@@U.CmpNone.FALSE@@P.CmpOnly.TRUE@ RProp_after_cmp_flags ;
 
-LEXICON RProp                         !!≈ !!!@CODE@
- +Cmp-#nommâ:»»»-nommâs DER-SAS ; ! Jovnâ-nommâsâš
- +Cmp-#merkkâ:»»»-merkkâs DER-SAS ; ! Saab-merkkâsâš
- +Cmp-#:-# ProperNoun ;
- +Cmp-#:-# ProperNoun-smn ;
- +Cmp-#:-# NounRoot ;
- +Cmp/SplitR:- # ;
- +Cmp#:# NounRoot ;
+LEXICON RProp_after_cmp_flags                  !!≈ !!!@CODE@
+      +Cmp-#nommâ:»»»-nommâs  DER-SAS        ; ! Jovnâ-nommâsâš
+     +Cmp-#merkkâ:»»»-merkkâs DER-SAS        ; ! Saab-merkkâsâš
+           +Cmp-#:-#          ProperNoun     ;
+           +Cmp-#:-#          ProperNoun-smn ;
+           +Cmp-#:-#          NounRoot       ;
+ +Use/-Spell+Cmp#:#           NounRoot       ; ! We don't want Proper-Noun compounds without hyphen in the speller.
+      +Cmp/SplitR:-           #              ;
 
-LEXICON RNum
-      +Cmp-#:-# Noun ; ! For Num Cmp Noun, vi vil ikke ha Num Cmp Num 
+LEXICON RNum !!≈ @CODE@ - This initial recursive/compounding lexicon adds flags to
+          !! control compounding, before going to the real compounding lexicon
+ @P.CmpFrst.FALSE@@P.CmpPref.FALSE@@D.CmpLast.TRUE@@D.CmpNone.TRUE@@U.CmpNone.FALSE@@P.CmpOnly.TRUE@ RNum_after_cmp_flags ;
+
+LEXICON RNum_after_cmp_flags
+ +Cmp-#:-# Noun ; ! For Num Cmp Noun, vi vil ikke ha Num Cmp Num
 
