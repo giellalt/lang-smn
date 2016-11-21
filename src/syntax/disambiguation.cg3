@@ -264,6 +264,9 @@ LIST Der/vuolde = Der/vuolde ;		 #!! Der/vuolde
 LIST Der/AAdv = Der/AAdv ;
 LIST <vdic> = <vdic> ;				 #!! <vdic>
 
+LIST Err/Orth = Err/Orth Err/Orth-a/á Err/Orth-nom/gen Err/Orth-nom/acc Err/DerSub Err/CmpSub Err/UnspaceCmp Err/HyphSub Err/SpaceCmp Err/Spellrelax err_orth_mt ;
+LIST Err/Orth-spes = Err/Orth-a/á Err/Orth-nom/gen Err/Orth-nom/acc Err/DerSub Err/CmpSub Err/UnspaceCmp Err/HyphSub Err/SpaceCmp Err/Spellrelax err_orth_a_á_mt err_orth_nom_acc_mt err_orth_nom_gen_mt  ;
+
 
 #!! !Semantic tags
 
@@ -2078,6 +2081,8 @@ SELECT:ArabNom (Arab Nom) (-1 BOS)(NEGATE 1 Po) ;
 SELECT:Arab1 (Arab Nom)(0 ("1")) ;
 	#$ a) Álgogursa 1 sámegielas
 SELECT:ArabNomPlc (Arab Nom) (-1 Sem/Plc)(NEGATE 1 Po) ;
+
+SELECT:Arab Arab  ; # In Apertium we get analysis both with and without the tag.
 
 #!! * Rule for adding <vdic> to verbs denoting verbal actions like: ... dadjá Aili Kestkitalo.
 
@@ -12084,7 +12089,17 @@ LIST Err/Orth = Err/Orth ;
 
 LIST WORDLEMMA = (".*"r) ;
 
-REMOVE:errsub $$WORDLEMMA + Err/Orth (0 $$WORDLEMMA - Err/Orth ) ;
+REMOVE:errsub $$WORDLEMMA + Err/Orth (0 $$WORDLEMMA - Err/Orth ) ;   #this one does not function in Apertium because there are no err_orth tags. Alternative rules:
+REMOVE:errsub2 $$WORDLEMMA + Err/Orth-spes (0 $$WORDLEMMA - Err/Orth-spes ) ; #this one does not function in Apertium because there are no err_orth tags. Alternative rules:
+
+REMOVE:alt_errsub1 $$WORDLEMMA + (allegro) (0 $$WORDLEMMA - (allegro) ) ;
+SELECT:alt_errsub2 $$WORDLEMMA + (nom) (0 $$WORDLEMMA - (nom)) ((1 COPULAS) OR (-1 COPULAS)) ; #for apertium
+REMOVE:alt_errsub2 $$WORDLEMMA + Gen + Ord (0 $$WORDLEMMA + Nom ) ;
+SELECT:alt_errsub2 $$WORDLEMMA + (nom) + (np) (0 $$WORDLEMMA - (nom) LINK 1 CC ) ; #for apertium
+SELECT:alt_errsub2 Prop + Attr (1 Prop OR (np) ) ; 
+
+
+
 
 REMOVE Dem IF (0 Adv)(1 VFIN) ;
         #$ Toos lii pieijâm nuotâ Tuomo Nikkola.
