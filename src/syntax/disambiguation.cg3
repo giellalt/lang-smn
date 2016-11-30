@@ -49,7 +49,7 @@
 #!! !!!DELIMITERS 
 # =============== #
 
-DELIMITERS = "<.>" "<!>" "<?>" "<...>" "<¶>"; 
+DELIMITERS = "<.>" "<!>" "<?>" "<...>" "<¶>" sent ; 
 #!! Sentence delimiters are the following: <.> <!> <?> <...> <¶>
 
 #PARENTHESES = "<$(>" "<$)>" "<$[>" "<$]>" "<${>" "<$}>" "<$«>" "<$»>" ;
@@ -172,15 +172,15 @@ LIST Pot = Pot ;			   #!! Pot
 LIST Cond = Cond ;			   #!! Cond
 LIST Imprt = Imprt ;		   #!! Imprt
 LIST ImprtII = ImprtII ;	   #!! ImprtII
-LIST Sg1 = Sg1 ;			   #!! Sg1
-LIST Sg2 = Sg2 ;			   #!! Sg2
-LIST Sg3 = Sg3 ;			   #!! Sg3
-LIST Du1 = Du1 ;			   #!! Du1
-LIST Du2 = Du2 ;			   #!! Du2
-LIST Du3 = Du3 ;			   #!! Du3
-LIST Pl1 = Pl1 ;			   #!! Pl1
-LIST Pl2 = Pl2 ;			   #!! Pl2
-LIST Pl3 = Pl3 ;			   #!! Pl3
+LIST Sg1 = Sg1 (p1 sg) ;			   #!! Sg1
+LIST Sg2 = Sg2 (p2 sg) ;			   #!! Sg2
+LIST Sg3 = Sg3 (p3 sg) ;			   #!! Sg3
+LIST Du1 = Du1 (p1 du) ;			   #!! Du1
+LIST Du2 = Du2 (p2 du) ;			   #!! Du2
+LIST Du3 = Du3 (p3 du) ;			   #!! Du3
+LIST Pl1 = Pl1 (p1 pl) ;			   #!! Pl1
+LIST Pl2 = Pl2 (p2 pl);			   #!! Pl2
+LIST Pl3 = Pl3 (p3 pl);			   #!! Pl3
 LIST Inf = Inf ;			   #!! Inf
 LIST ConNeg = ConNeg ;		   #!! ConNeg
 LIST Neg = Neg ;			   #!! Neg
@@ -559,23 +559,23 @@ SET NOT-PRFPRC = WORD - PrfPrc ; #!! NOT-PRFPRC
 #!! !Sets for person
 # - - - - 
 
-LIST SG1-V = (V Sg1)  ;
+LIST SG1-V = (V Sg1)  (vblex p1 sg)  ;
  
-LIST SG2-V = (V Sg2) ;
+LIST SG2-V = (V Sg2)  (vblex p2 sg) ;
  
-LIST SG3-V = (V Sg3) ;
+LIST SG3-V = (V Sg3)  (vblex p3 sg) ;
  
-LIST DU1-V = (V Du1) ;
+LIST DU1-V = (V Du1)  (vblex p1 du) ;
  
-LIST DU2-V = (V Du2) ;
+LIST DU2-V = (V Du2)  (vblex p2 du) ;
  
-LIST DU3-V = (V Du3) ;
+LIST DU3-V = (V Du3)  (vblex p3 du) ;
  
-LIST PL1-V = (V Pl1) ;
+LIST PL1-V = (V Pl1) (vblex p1 pl) ;
  
-LIST PL2-V = (V Pl2) ;
+LIST PL2-V = (V Pl2) (vblex p2 pl) ;
  
-LIST PL3-V = (V Pl3) ;
+LIST PL3-V = (V Pl3)  (vblex p3 pl) ;
 
 SET POSITIVE-V = SG1-V OR SG2-V OR SG3-V OR DU1-V OR DU2-V OR DU3-V OR PL1-V OR PL2-V OR PL3-V ;  
 
@@ -610,15 +610,15 @@ LIST HABEO-PL3 = ("leđe" Pl3) (V Neg Pl3) ("šoddâđ" Pl3) ;
 #!! !Pronoun sets
 # ------------
 
-LIST MUN = (Pron Pers Sg1 Nom);
-LIST DON = (Pron Pers Sg2 Nom);
-LIST SON = ("sun" Pron Pers Sg3 Nom);
-LIST MOAI = (Pron Pers Du1 Nom);
-LIST DOAI = (Pron Pers Du2 Nom);
-LIST SOAI = (Pron Pers Du3 Nom);
-LIST MII-PERS = (Pron Pers Pl1 Nom);
-LIST DII = (Pron Pers Pl2 Nom);
-LIST SII = ("sun" Pron Pers Pl3 Nom);
+LIST MUN = (Pron Pers Sg1 Nom) (pers p1 sg nom) ;
+LIST DON = (Pron Pers Sg2 Nom) (pers p2 sg nom) ;
+LIST SON = (Pron Pers Sg3 Nom) (pers p3 sg nom) ;
+LIST MOAI = (Pron Pers Du1 Nom) (pers p1 du nom) ;
+LIST DOAI = (Pron Pers Du2 Nom) (pers p2 du nom) ;
+LIST SOAI = (Pron Pers Du3 Nom) (pers p3 du nom) ;
+LIST MII-PERS = (Pron Pers Pl1 Nom) (pers p1 pl nom) ;
+LIST DII = (Pron Pers Pl2 Nom) (pers p2 pl nom) ;
+LIST SII = (Pron Pers Pl3 Nom) (pers p3 pl nom) ;
 
 SET PPRON-NOM-NOT-DAT = MUN OR DON OR SON OR MOAI OR DOAI OR SOAI OR MII-PERS OR DII OR SII ;
 
@@ -630,7 +630,8 @@ SET PRON-DU = MOAI OR DOAI OR SOAI ;
 SET PPRON-NOT-SII = MUN OR DON OR SON OR MOAI OR DOAI OR SOAI OR MII-PERS OR DII ;
 
 LIST PPRON-GEN = (Sg1 Gen) (Sg2 Gen) (Sg3 Gen) (Du1 Gen) (Du2 Gen) (Du3 Gen) 
-	(Pl1 Gen) (Pl2 Gen) (Pl3 Gen);
+	(Pl1 Gen) (Pl2 Gen) (Pl3 Gen) (p1 sg gen) (p2 sg gen) (p3 sg gen) (p1 du gen) (p2 du gen) (p3 du gen) 
+	(p1 pl gen) (p2 pl gen) (p3 pl gen) ;
 
 SET PPRON-NOT-GEN = (Pron Pers) - PPRON-GEN ;
 
@@ -638,12 +639,21 @@ LIST SG-DEM = (Pron Dem Sg Nom);
 LIST PL-DEM = (Pron Dem Pl Nom);
 SET NOT-DEM = WORD - Dem ;
 
-LIST SG-PRON = (Pron Sg1) (Pron Sg2) (Pron Sg3) (Pron Sg) (Pron PxSg1) (Pron PxSg2) (Pron PxSg3);
-LIST DU-PRON = (Pron Du1) (Pron Du2) (Pron Du3)  (Pron PxDu1) (Pron PxDu2) (Pron PxDu3);
-LIST PL-PRON = (Pron Pl1) (Pron Pl2) (Pron Pl3) (Pron Pl) (Pron PxPl1) (Pron PxPl2) (Pron PxPl3);
-LIST DU-PRON-NOTPX = (Pron Du1) (Pron Du2) (Pron Du3) ;
-LIST FIRST-PX = PxSg1 PxDu1 PxPl1 ;
+LIST SG-PRON = (Pron Sg1) (Pron Sg2) (Pron Sg3) (Pron Sg) (Pron PxSg1) (Pron PxSg2) (Pron PxSg3) (pron p1 sg) (pron p2 sg) (pron p3 sg);
+LIST DU-PRON = (Pron Du1) (Pron Du2) (Pron Du3)  (Pron PxDu1) (Pron PxDu2) (Pron PxDu3) (pron p1 du) (pron p2 du) (pron p3 du);
+LIST PL-PRON = (Pron Pl1) (Pron Pl2) (Pron Pl3) (Pron Pl) (Pron PxPl1) (Pron PxPl2) (Pron PxPl3) (pron p1 pl) (pron p2 pl) (pron p3 pl);
+LIST DU-PRON-NOTPX = (Pron Du1) (Pron Du2) (Pron Du3) (pron p1 du) (pron p2 du) (pron p3 du) ;
 
+
+LIST FIRST-PX = PxSg1 PxDu1 PxPl1 ;
+LIST SECOND-PX = PxSg2 PxDu2 PxPl2 ;
+LIST THIRD-PX = PxSg3 PxDu3 PxPl3 ;
+
+LIST SG-PX = PxSg1 PxSg2 PxSg3 ;
+LIST DU-PX = PxDu1 PxDu2 PxDu3 ;
+LIST PL-PX = PxPl1 PxPl2 PxPl3 ;
+	
+LIST PX = PxSg1 PxDu1 PxPl1 PxSg2 PxDu2 PxPl2 PxSg3 PxDu3 PxPl3 ;
 
 LIST DU-NR = Du1 Du2 Du3 ; 
 
@@ -4083,6 +4093,18 @@ SELECT:eanasPron Pron IF (0 ("iänááš") OR ("eanas"))(1 (Dem Loc) OR (Pers Lo
 
 #!! !!Px constraints 
 
+	#!! !PX Number
+# First select Du or Pl
+
+# (rules to be written)
+	
+	# Then, if that is not possible: Remove them.
+	
+REMOVE:PxSgNotDu DU-PX IF (0 SG-PX);
+REMOVE:PxSgNotPl PL-PX IF (0 SG-PX);
+
+#!! !From sme	
+
 SET NOTPXACC-V = LOC-V OR MUITALIT OR HUPMAT OR VERBAL-ACTIVITY-V OR ("porgâđ") ;
 
 #!! First select Px, then remove all remaining Px
@@ -6485,7 +6507,7 @@ SELECT:AAttrgoAAttr (A Attr) IF (-1 COMPAR)(1 go)(2 (A Attr) LINK NOT 0 Nom)(*3 
 	#$ Sámedikki ásaheapmi lea eanet ideologalaš go čielga mearrádus. # ideologalaš
 
 #!! * __AttrTIME__    
-SELECT:AttrTIME (A Attr) IF (NEGATE 0 Num OR PrfPrc)(NEGATE 0 Adv LINK *-1 REAL-V BARRIER NOT-ADV-PCLE)(NEGATE 0 Pl LINK *-1 Pl3 BARRIER VFIN)(*1 TIME BARRIER WORD - Num);  
+SELECT:AttrTIME (A Attr) IF (NEGATE 0 Num OR PrfPrc)(NEGATE 0 Adv LINK *-1 REAL-V BARRIER NOT-ADV-PCLE)(NEGATE 0 Pl LINK *-1 Pl3 BARRIER VFIN)(*1 TIME BARRIER WORD - Num LINK NOT 0 PX);  
 	#$ Guovdageaidnu čájehii fámuid vuosttaš minuvtta rájes.
 	#$ Ollu jagiid mielde lei dáhpin šaddan ahte stuorra gánddat bohte min geahčái lávvardaga ja sotnabeaivve go radios ledje sáddagat skeittástan- ja čuoigangilvvuin.	
 	#% Dálut eai lean nu ráhpadat ođđasishuksenáigge
@@ -6515,20 +6537,10 @@ SELECT:ACoordPrfPrc (A Attr) IF (NEGATE -1 ("leđe"))(1 ("já") OR ("dahje") OR 
 SELECT:AAttrContra (A Attr) IF (*-1 Neg BARRIER S-BOUNDARY OR VFIN)(*1 CONTRA BARRIER WORD LINK 1C Attr);
 	#$ ILO-konvenšuvdna nr 169 ii vuođđuduva formála, muhto funktionála oamastanvuoigatvuođa doahpagii.
 
-IFF:sapmelas ("sämmilâš" A) IF (0 Attr LINK *1 N) ;	
+IFF:sapmelas ("sämmilâš" A) IF (0 Attr LINK *1 N LINK NOT 0 PX) ;	
 	#$ Dušše inuihtat ja sápmelaččat sáhttet adnojuvvot Davviriikkaid eamiálbmogin. 
-
-#!! !Special rules for 'buorre' (the only adjective showing case agreement)
-
-REMOVE Attr IF (0 ("pyeri") OR Dem OR ("nubbe")) (1 Num LINK *1 (Sg Com) BARRIER NOT-NPMOD LINK 0 N) ;
-
-SELECT:SeCaseAgrBuorre $$CASE-AGREEMENT + A IF (0 ("pyeri") OR OKTA OR Dem LINK NOT 0 Superl OR Comp) (*1 $$CASE-AGREEMENT BARRIER NOT-NPMOD LINK 0 N)(NEGATE -1 Nom LINK NOT 0 Gen) ;
-SELECT:SeComAgrBuorre Com IF (0 ("pyeri") OR OKTA OR Dem OR ("nubbe")) (0 Sg LINK *1 (Sg Com) BARRIER NOT-NPMOD LINK 0 N)(NEGATE -1 Gen LINK -1 OKTA) ;
-SELECT:SeLocAgrBuorre (Pl Loc) IF (0 ("pyeri") OR OKTA OR Dem) (*1 (Pl Loc) BARRIER NOT-NPMOD LINK 0 N) ;
-	## Son dadjá dan nuppiin sániin.
-	#$ Báhppa fertii dávjá konfirmeret sin dáiguin unnán dieđuiguin mat sis ledje.
-
-SELECT:SeCaseHalfagrBuorre (A Gen) IF (0 ("pyeri") OR OKTA OR Dem) (*1 CASE-HALFAGREEMENT + N BARRIER NOT-NPMOD);
+	#$  ko sämmilâš äiginis orostâlâi täin riddokuávluin , iä merâriddoost lamaš talle eres ässeeh
+	
 
 SECTION
 
