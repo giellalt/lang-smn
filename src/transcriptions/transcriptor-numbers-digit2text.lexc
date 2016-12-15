@@ -52,6 +52,7 @@ Multichar_Symbols
 
 
   +Use/NG    ! Do not generate, for isme-ped.fst and apertium
+  +String    ! Tag to denote non-numeric strings
 
 ! Note! the diacritic marks in this file are only part of the lower
 ! representation. This means they can only be used from number to letter
@@ -61,89 +62,91 @@ Multichar_Symbols
 
 
 LEXICON Root
+< %+String [a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|q|y|z|æ|ø|å|ä|ö|á|č|đ|ŋ|A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|Æ|Ø|Å|Ä|Ö|Á|Č|Đ|Ŋ|Š|Ŧ|Ž]* > COMMA ; ! This first line is to allow all letter strings.
+
 HUNDREDSM ;		! 200M
-čyeti:1 HUNDREDM ;	! 100M
+1:čyeti HUNDREDM ;	! 100M
 TENSM ;			! 20-99M
 TEENSM ;		! 10-19M
 ONESM ;			! 1-9M
 HUNDREDST ;		! 200000-999999
 HUNDREDST ;		! 200000-999999
-čyeti:1 HUNDREDT ;	! 100000-100999
+1:čyeti HUNDREDT ;	! 100000-100999
 TENST ;			! 20000-99999,10000-10999
 TEENST ;		! 11000-19999
 ONEST ;			! 2000-9999
-tuhháát:1 THOUSAND ;	! 1000-1999
+1:tuhháát THOUSAND ;	! 1000-1999
 UNDERTHOUSAND ;		! 100-999
 TENS ;			! 20-99
 TEENS ;			! 10-19
 ONES ;			! 1-9
 
 LEXICON HUNDREDSM
-kyehti:2  CUODIM ;
-kulmâ:3 CUODIM ;
-nelji:4 CUODIM ;
-vittâ:5 CUODIM ;
-kuttâ:6 CUODIM ;
-čiččâm:7 CUODIM ;
-käävci:8 CUODIM ;
-oovce:9 CUODIM ;
+2:kyehti  CUODIM ;
+3:kulmâ  CUODIM ;
+4:nelji  CUODIM ;
+5:vittâ  CUODIM ;
+6:kuttâ  CUODIM ;
+7:čiččâm CUODIM ;
+8:käävci CUODIM ;
+9:oovce CUODIM ;
 
 LEXICON CUODIM
-čyeti: HUNDREDM ;
+:čyeti HUNDREDM ;
 
 LEXICON HUNDREDM
 TENSM ;
 TEENSM ;
-:%0 ONESM ;
-:%0%0 MILJON ;
+%0: ONESM ;
+%0%0: MILJON ;
 
 LEXICON TEENSM
-:1 TEENM ;
+1: TEENM ;
 
 LEXICON TEENM
-ohtâ:1 LOHKAIM ;
-kyehti:2 LOHKAIM ;
-kulmâ:3 LOHKAIM ;
-nelji:4 LOHKAIM ;
-vittâ+Use/NG:5 LOHKAIM ;
-kuttâ+Use/NG:6 LOHKAIM ;
-vitt:5 LOHKAIM ;
-kutt:6 LOHKAIM ;
-čiččâm:7 LOHKAIM ;
-käävci:8 LOHKAIM ;
-oovce:9 LOHKAIM ;
+1:ohtâ  LOHKAIM ;
+2:kyehti LOHKAIM ;
+3:kulmâ LOHKAIM ;
+4:nelji LOHKAIM ;
+5:vittâ+Use/NG LOHKAIM ;
+6:kuttâ+Use/NG LOHKAIM ;
+5:vitt LOHKAIM ;
+6:kutt LOHKAIM ;
+7:čiččâm LOHKAIM ;
+8:käävci LOHKAIM ;
+9:oovce LOHKAIM ;
 
 LEXICON LOHKAIM
-nubáloh: MILJON ;
+:nubáloh MILJON ;
 
 LEXICON TENSM
-love:1%0 MILJON ;
-kyehti:2 LOGIM ;
-kulmâ:3 LOGIM ;
-nelji:4 LOGIM ;
-vittâ:5 LOGIM ;
-kuttâ:6 LOGIM ;
-čiččâm:7 LOGIM ;
-käävci:8 LOGIM ;
-oovce:9 LOGIM ;
+1%0:love MILJON ;
+2:kyehti LOGIM ;
+3:kulmâ LOGIM ;
+4:nelji LOGIM ;
+5:vittâ LOGIM ;
+6:kuttâ LOGIM ;
+7:čiččâm LOGIM ;
+8:käävci LOGIM ;
+9:oovce LOGIM ;
 
 LEXICON LOGIM
-love:%0 MILJON ;
-love: ONESM ;
+%0:love  MILJON ;
+:love  ONESM ;
 
 LEXICON ONESM
-miljon% :1 OVERTHOUSANDS ;
-kyehti:2 MILJON ;
-kulmâ:3 MILJON ;
-nelji:4 MILJON ;
-vittâ:5 MILJON ;
-kuttâ:6 MILJON ;
-čiččâm:7 MILJON ;
-käävci:8 MILJON ;
-oovce:9 MILJON ; 
+1:miljon%  OVERTHOUSANDS ;
+2:kyehti MILJON ;
+3:kulmâ MILJON ;
+4:nelji MILJON ;
+5:vittâ MILJON ;
+6:kuttâ MILJON ;
+7:čiččâm MILJON ;
+8:käävci MILJON ;
+9:oovce  MILJON ; 
 
 LEXICON MILJON
-% miljona% : OVERTHOUSANDS ;
+:% miljona%  OVERTHOUSANDS ;
 
 ! =================
 ! Under the million
@@ -151,76 +154,76 @@ LEXICON MILJON
 
 LEXICON OVERTHOUSANDS
 HUNDREDST ;		! x00.000.000
-čyeđe:1 HUNDREDT ;	! 100.000.000
-:%0 TENST ;		!  20.000.000
-:%0 TEENST ;		!  10.000.000
-:%0%0 TWOST ;		!   2.000.000
-:%0%0 SEVENST ;		!   7.000.000
-tuhháát:%0%01 THOUSAND ;	!   1.000.000
-:%0%0%0 UNDERTHOUSAND ;	
-:%0%0%0%0 TENS ;
-:%0%0%0%0 TEENS ;
-:%0%0%0%0%0 ONES ;
-:%0%0%0%0%0%0 # ;	!  x000000
+1:čyeđe HUNDREDT ;	! 100.000.000
+%0: TENST ;		!  20.000.000
+%0: TEENST ;		!  10.000.000
+%0%0: TWOST ;		!   2.000.000
+%0%0: SEVENST ;		!   7.000.000
+%0%01:tuhháát THOUSAND ;	!   1.000.000
+%0%0%0: UNDERTHOUSAND ;	
+%0%0%0%0: TENS ;
+%0%0%0%0: TEENS ;
+%0%0%0%0%0: ONES ;
+%0%0%0%0%0%0: # ;	!  x000000
 
 
 LEXICON HUNDREDST
-kyehti:2  TWOCUODIT ;	! 200000-299999
-kulmâ:3 TWOCUODIT ;	! 300000-399999
-nelji:4 TWOCUODIT ;	! 400000-499999
-vittâ:5 TWOCUODIT ;	! 500000-599999
-kuttâ:6 TWOCUODIT ;	! 600000-699999
-čiččâm:7 SEVENCUODIT ;	! 700000-799999
-käävci:8 SEVENCUODIT ;	! 800000-899999
-oovce:9 SEVENCUODIT ;	! 900000-999999
+2:kyehti  TWOCUODIT ;	! 200000-299999
+3:kulmâ TWOCUODIT ;	! 300000-399999
+4:nelji TWOCUODIT ;	! 400000-499999
+5:vittâ TWOCUODIT ;	! 500000-599999
+6:kuttâ TWOCUODIT ;	! 600000-699999
+7:čiččâm SEVENCUODIT ;	! 700000-799999
+8:käävci SEVENCUODIT ;	! 800000-899999
+9:oovce SEVENCUODIT ;	! 900000-999999
 
 LEXICON TWOCUODIT
-čyeđe: HUNDREDT ;	! 100000-199999
+:čyeđe HUNDREDT ;	! 100000-199999
 
 LEXICON SEVENCUODIT
-čyeđe: HUNDREDT ;
+:čyeđe HUNDREDT ;
 
 LEXICON HUNDREDT	! X = 1-9, Y = 0-9
 TENST ;			! X2XYYY, X10YYY
 TEENST ;		! X1XYYY
-ohtâ:%01 TWOTHOUSANDS ; ! Same tuhháát as 2000
-:%0 ONEST ;		! XX0YYY
-:%0%0 THOUSANDS ;	! X00YYY
+%01:ohtâ TWOTHOUSANDS ; ! Same tuhháát as 2000
+%0: ONEST ;		! XX0YYY
+%0%0: THOUSANDS ;	! X00YYY
 
 LEXICON TEENST
-:1 TEENT ;
+1: TEENT ;
 
 LEXICON TEENT
-love:%0 THOUSANDS ;
-ohtâ:1 LOHKAIT ;
-kyehti:2 LOHKAIT ;
-kulmâ:3 LOHKAIT ;
-nelji:4 LOHKAIT ;
-vitt:5 LOHKAIT ;
-vittâ+Use/NG:5 LOHKAIT ;
-kutt:6 LOHKAIT ;
-kuttâ+Use/NG:6 LOHKAIT ;
-čiččâm:7 LOHKAIT ;
-käävci:8 LOHKAIT ;
-oovce:9 LOHKAIT ;
+%0:love THOUSANDS ;
+1:ohtâ LOHKAIT ;
+2:kyehti LOHKAIT ;
+3:kulmâ LOHKAIT ;
+4:nelji LOHKAIT ;
+5:vitt LOHKAIT ;
+5:vittâ+Use/NG LOHKAIT ;
+6:kutt LOHKAIT ;
+6:kuttâ+Use/NG LOHKAIT ;
+7:čiččâm LOHKAIT ;
+8:käävci LOHKAIT ;
+9:oovce LOHKAIT ;
 
 LEXICON LOHKAIT
-nubáloh: THOUSANDS ;
+:nubáloh THOUSANDS ;
 
 LEXICON TENST
-kyehtlov:2 LOGIT ;
-kulmâlov:3 LOGIT ;
-kulmlov+Use/NG:3 LOGIT ;
-neljilov:4 LOGIT ;
-vittlov:5 LOGIT ;
-kuttlov:6 LOGIT ;
-čiččâmlov:7 LOGIT ;
-kähcilov:8 LOGIT ;
-ohcelov:9 LOGIT ;
+2:kyehtlov LOGIT ;
+3:kulmâlov LOGIT ;
+3:kulmlov+Use/NG LOGIT ;
+4:neljilov LOGIT ;
+5:vittlov LOGIT ;
+6:kuttlov LOGIT ;
+7:čiččâmlov LOGIT ;
+8:kähcilov LOGIT ;
+9:ohcelov LOGIT ;
 
 LEXICON LOGIT
-:%0 THOUSANDS ;
-ohtâ:1 THOUSANDS ;
+%0: THOUSANDS ;
+1:ohtâ THOUSANDS ;
 ONEST ;
 
 LEXICON ONEST
@@ -228,33 +231,33 @@ TWOST ;			! 2000-6999
 SEVENST ;               ! 7000-9999
 
 LEXICON THOUSANDS
-tuhháát:1 THOUSAND ;    ! 1000-1999
+1:tuhháát THOUSAND ;    ! 1000-1999
 
 LEXICON TWOST
-kyeht:2 TWOTHOUSANDS ;
-kulmâ:3 TWOTHOUSANDS ;
-nelji:4 TWOTHOUSANDS ;
-vittâ:5 TWOTHOUSANDS ;
-kuttâ:6 TWOTHOUSANDS ;
+2:kyeht TWOTHOUSANDS ;
+3:kulmâ TWOTHOUSANDS ;
+4:nelji TWOTHOUSANDS ;
+5:vittâ TWOTHOUSANDS ;
+6:kuttâ TWOTHOUSANDS ;
 
 LEXICON SEVENST
-čiččâm:7 SEVENTHOUSANDS ;
-käävci:8 SEVENTHOUSANDS ;
-oovce:9 SEVENTHOUSANDS ;
+7:čiččâm SEVENTHOUSANDS ;
+8:käävci SEVENTHOUSANDS ;
+9:oovce SEVENTHOUSANDS ;
 
 LEXICON TWOTHOUSANDS      ! 2000 - 6999
-tuhháát: THOUSAND ;
+:tuhháát THOUSAND ;
 
 LEXICON SEVENTHOUSANDS ! 7000 - 9999
-tuhháát: THOUSAND ;
+:tuhháát THOUSAND ;
 
 
 LEXICON THOUSAND
 UNDERTHOUSAND ;	   ! 1100-1999
-:%0 TENS ;	   ! 1020-1099
-:%0 TEENS ;	   ! 1010-1019
-:%0%0 ONES ;	   ! 1001-1009
-:%0%0%0 # ;	   ! 1000
+%0: TENS ;	   ! 1020-1099
+%0: TEENS ;	   ! 1010-1019
+%0%0: ONES ;	   ! 1001-1009
+%0%0%0: # ;	   ! 1000
 
 !===========================
 !Here starts the 999 numbers
@@ -263,110 +266,110 @@ UNDERTHOUSAND ;	   ! 1100-1999
 LEXICON UNDERTHOUSAND
 SEVENHUNDREDS ;
 TWOHUNDREDS ;
-čyeti:1 HUNDRED ;
+1:čyeti HUNDRED ;
 
 
 LEXICON SEVENHUNDREDS ! 700-900 with +Par
-čiččâm:7 SEVENCUODI ;
-käävci:8 SEVENCUODI ;
-ohce:9 SEVENCUODI ;
+7:čiččâm SEVENCUODI ;
+8:käävci SEVENCUODI ;
+9:ohce SEVENCUODI ;
 
 LEXICON TWOHUNDREDS ! 200-699 with +Acc
-kyehti:2 CUODI ;
-kyeht+Use/NG:2 CUODI ;
-kulmâ:3 CUODI ;
-kulm+Use/NG:3 CUODI ;
-nelji:4 CUODI ;
-vittâ:5 CUODI ;
-vitt+Use/NG:5 CUODI ;
-vit+Use/NG:5 CUODI ;
-kuttâ:6 CUODI ;
-kutt+Use/NG:6 CUODI ;
-kut+Use/NG:6 CUODI ;
+2:kyehti CUODI ;
+2:kyeht+Use/NG CUODI ;
+3:kulmâ CUODI ;
+3:kulm+Use/NG CUODI ;
+4:nelji CUODI ;
+5:vittâ CUODI ;
+5:vitt+Use/NG CUODI ;
+5:vit+Use/NG CUODI ;
+6:kuttâ CUODI ;
+6:kutt+Use/NG CUODI ;
+6:kut+Use/NG CUODI ;
 
 LEXICON SEVENCUODI ! 700-900 with +Par
-čyeđe: HUNDRED ;
-čyet: HUNDRED ;
+:čyeđe HUNDRED ;
+:čyet HUNDRED ;
 
 LEXICON CUODI ! 200-699 with +Acc
-čyeđe: HUNDRED ;
-čyet: HUNDRED ;
+:čyeđe HUNDRED ;
+:čyet HUNDRED ;
 
 LEXICON HUNDRED
 TENS ;
 TEENS ;
-:%0 ONES ;
-:%0%0 # ;
+%0: ONES ;
+%0%0: # ;
 
 LEXICON TEENS
-:1 TEEN ;
+1: TEEN ;
 
 LEXICON TEEN
-oht:1 LOHKAI ;
-kyeht:2 LOHKAI ;
-kulmâ:3 LOHKAI ;
-kulm+Use/NG: 3 LOHKAI ;
-nelji:4 LOHKAI ;
-vitt:5 LOHKAI ;
-vit+Use/NG: 5 LOHKAI ;
-kutt:6 LOHKAI ;
-kut+Use/NG: 6 LOHKAI ;
-čiččâm:7 LOHKAI ;
-käävci:8 LOHKAI ;
-oovce:9 LOHKAI ;
+1:oht LOHKAI ;
+2:kyeht LOHKAI ;
+3:kulmâ LOHKAI ;
+3:kulm+Use/NG LOHKAI ;
+4:nelji LOHKAI ;
+5:vitt LOHKAI ;
+5:vit+Use/NG LOHKAI ;
+6:kutt LOHKAI ;
+6:kut+Use/NG LOHKAI ;
+7:čiččâm LOHKAI ;
+8:käävci LOHKAI ;
+9:oovce LOHKAI ;
 
 LEXICON LOHKAI
-nubáloh: # ;
-:%. LOGAAT ;
+:nubáloh # ;
+%.: LOGAAT ;
 
 LEXICON LOGAAT
-nubálovváád: # ; 
+:nubálovváád # ; 
 
 LEXICON TENS
-love:1%0 # ;
-lovváád:1%0%. # ; 
-kyeht:2 LOGI ;
-kulm+Use/NG:3 LOGI ;
-kulmâ:3 LOGI ;
-nelji:4 LOGI ;
-vit+Use/NG:5 LOGI ;
-vitt:5 LOGI ;
-kut+Use/NG:6 LOGI ;
-kutt:6 LOGI ;
-čiččâm:7 LOGI ;
-kähci:8 LOGI ;
-ohce:9 LOGI ;
+1%0:love # ;
+1%0%.:lovváád # ; 
+2:kyeht LOGI ;
+3:kulm+Use/NG LOGI ;
+3:kulmâ LOGI ;
+4:nelji LOGI ;
+5:vit+Use/NG LOGI ;
+5:vitt LOGI ;
+6:kut+Use/NG LOGI ;
+6:kutt LOGI ;
+7:čiččâm LOGI ;
+8:kähci LOGI ;
+9:ohce LOGI ;
 
 LEXICON LOGI
-lov:%0 # ;
-lov: ONES ;
+%0:lov # ;
+:lov ONES ;
 
 LEXICON ONES
 CARDINAL ;
 ORDINAL ;
 
 LEXICON CARDINAL
-ohtâ:1 # ;
-kyehti:2 # ;
-kulmâ:3 # ;
-nelji:4 # ;
-vittâ:5 # ;
-kuttâ:6 # ;
-čiččâm:7 # ;
-käävci:8 # ;
-oovce:9 # ;
+1:ohtâ # ;
+2:kyehti # ;
+3:kulmâ # ;
+4:nelji # ;
+5:vittâ # ;
+6:kuttâ # ;
+7:čiččâm # ;
+8:käävci # ;
+9:oovce # ;
 
 
 LEXICON ORDINAL		   
-vuossâmuš:1%.     # ;   
-nubbe:2%.   # ;		   
-kuálmád:3%.   # ;	   
-niäljád:4%. # ;	   
-viiđâd:5%.   # ;		   
-kuuđâd:6%.   # ;		   
-čiččâd:7%.    # ;	   
-káávcád:8%.   # ;	   
-oovcád:9%.    # ;	   
+1%.:vuossâmuš     # ;   
+2%.:nubbe   # ;		   
+3%.:kuálmád   # ;	   
+4%.:niäljád # ;	   
+5%.:viiđâd   # ;		   
+6%.:kuuđâd   # ;		   
+7%.:čiččâd    # ;	   
+8%.:káávcád   # ;	   
+9%.:oovcád    # ;	   
 
 
 
