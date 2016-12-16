@@ -64,6 +64,13 @@ Multichar_Symbols
 LEXICON Root
 < %+String [a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|q|y|z|æ|ø|å|ä|ö|á|č|đ|ŋ|A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|Æ|Ø|Å|Ä|Ö|Á|Č|Đ|Ŋ|Š|Ŧ|Ž]* > COMMA ; ! This first line is to allow all letter strings.
 
+
+NUMBERSECTION ; ! Numerals
+COMMASECTION ;  ! Separator section 
+DATESECTION ;   ! Date expressions (for TTS)
+
+LEXICON NUMBERSECTION
+
 HUNDREDSM ;		! 200M
 1:čyeti HUNDREDM ;	! 100M
 TENSM ;			! 20-99M
@@ -372,4 +379,225 @@ LEXICON ORDINAL
 9%.:oovcád    # ;	   
 
 
+
+
+
+
+
+! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! !!!!!!!!!!                    !!!!!!!!!!!!!!!!!!!
+! !!!!!!!!!!   Comma section    !!!!!!!!!!!!!!!!!!!
+! !!!!!!!!!!                    !!!!!!!!!!!!!!!!!!!
+! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+LEXICON COMMA
+ ENDLEX ;
+ COMMASECTION ;
+
+LEXICON COMMASECTION 
+                  ENDLEX ; 
+  % komma% :,      NUMBERSECTION ;
+  % čuokkis% :%.   NUMBERSECTION ; ! these will overlap with dates
+  % kolon% :%:     NUMBERSECTION ;
+  % sárggis% :%-   NUMBERSECTION ; 
+ % lea% :%=        NUMBERSECTION ; 
+ % gráda% :%°      NUMBERSECTION ; 
+ % paragráfa% :§   NUMBERSECTION ; 
+  % násti% :%*     NUMBERSECTION ; 
+ % ja% :&          NUMBERSECTION ; 
+
+
+
+
+! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! !!!!!!!!!!                   !!!!!!!!!!!!!!!!!!!
+! !!!!!!!!!!   Date section    !!!!!!!!!!!!!!!!!!!
+! !!!!!!!!!!                   !!!!!!!!!!!!!!!!!!!
+! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+! [(0)[1-9]|[12][0-9]|3[01]]\.[3[01]]\.[([12][0-9])[0-9][0-9]]]
+! 1.1.1934  = ođđajagimánu vuosttaš beaivi ovccinuppelotčuođigolbmaloginjeallje
+! 3.11.2009 = skábmamánu goalmmát beaivi guokteduhátovcci
+! 5.6.09    = geassemánu viđát beaivi nulla ovcci
+! are there other formats in use?
+! E.g. ská. 3. - ie combinations of abbr text and numbers?
+! what about other orders? In Sweden, the year typically comes first:
+! 2009.11.3
+! Is this order found in Sámi texts, eg. from Sweden?
+! and irrespective of written order, should the spoken order always be the same?
+
+! Strategy:
+! Use flag diacritics: Do the dates in one batch and the months in another
+! Under this regime, we do this:
+!            skábmamánu   { goalmmát | njealjjat }
+! 3.@U.d.3@            11.  @U.d.3@    @U.d.4@    
+! Then, the flag diacritic will remove non-harmonic strings @R.3@...@D.4@
+! And only the correct 3-3 string will be left intact.
+
+
+LEXICON DATESECTION
+
+
+:%0 SMALLDATEDAYMARK ; ! Eventual leading zero for one-digit day
+    SMALLDATEDAYMARK ; ! No leading zero for one-digit day
+    LARGEDATEDAYMARK ; ! No leading zero for two-digit day
+
+LEXICON SMALLDATEDAYMARK
+:@U.DATE.1@1 DATEMONTHSEPARATOR ;
+:@U.DATE.2@2 DATEMONTHSEPARATOR ;
+:@U.DATE.3@3 DATEMONTHSEPARATOR ;
+:@U.DATE.4@4 DATEMONTHSEPARATOR ;
+:@U.DATE.5@5 DATEMONTHSEPARATOR ;
+:@U.DATE.6@6 DATEMONTHSEPARATOR ;
+:@U.DATE.7@7 DATEMONTHSEPARATOR ;
+:@U.DATE.8@8 DATEMONTHSEPARATOR ;
+:@U.DATE.9@9 DATEMONTHSEPARATOR ;
+
+LEXICON LARGEDATEDAYMARK
+:@U.DATE.10@1%0 DATEMONTHSEPARATOR ;
+:@U.DATE.11@11 DATEMONTHSEPARATOR ;
+:@U.DATE.12@12 DATEMONTHSEPARATOR ;
+:@U.DATE.13@13 DATEMONTHSEPARATOR ;
+:@U.DATE.14@14 DATEMONTHSEPARATOR ;
+:@U.DATE.15@15 DATEMONTHSEPARATOR ;
+:@U.DATE.16@16 DATEMONTHSEPARATOR ;
+:@U.DATE.17@17 DATEMONTHSEPARATOR ;
+:@U.DATE.18@18 DATEMONTHSEPARATOR ;
+:@U.DATE.19@19 DATEMONTHSEPARATOR ;
+:@U.DATE.20@2%0 DATEMONTHSEPARATOR ;
+:@U.DATE.21@21 DATEMONTHSEPARATOR ;
+:@U.DATE.22@22 DATEMONTHSEPARATOR ;
+:@U.DATE.23@23 DATEMONTHSEPARATOR ;
+:@U.DATE.24@24 DATEMONTHSEPARATOR ;
+:@U.DATE.25@25 DATEMONTHSEPARATOR ;
+:@U.DATE.26@26 DATEMONTHSEPARATOR ;
+:@U.DATE.27@27 DATEMONTHSEPARATOR ;
+:@U.DATE.28@28 DATEMONTHSEPARATOR ;
+:@U.DATE.29@29 DATEMONTHSEPARATOR ;
+:@U.DATE.30@3%0 DATEMONTHSEPARATOR ;
+:@U.DATE.31@31 DATEMONTHSEPARATOR ;
+
+
+LEXICON DATEMONTHSEPARATOR
+% :%. MONTHZERO ;
+
+LEXICON MONTHZERO
+:%0 SMALLMONTH ; ! Eventual leading zero
+    SMALLMONTH ; ! no leading zero
+    LARGEMONTH ;
+
+
+LEXICON SMALLMONTH
+ođđajágimánu:1 DATEDAYSEPARATOR ;
+guovvamánu:2 DATEDAYSEPARATOR ;
+njukčamánu:3 DATEDAYSEPARATOR ;
+cuoŋománu:4 DATEDAYSEPARATOR ;
+miessemánu:5 DATEDAYSEPARATOR ;
+geassemánu:6 DATEDAYSEPARATOR ;
+suoidnemánu:7 DATEDAYSEPARATOR ;
+borgemánu:8 DATEDAYSEPARATOR ;
+čakčamánu:9 DATEDAYSEPARATOR ;
+
+LEXICON LARGEMONTH
+golggotmánu:1%0 DATEDAYSEPARATOR ;
+skábmamánu:11 DATEDAYSEPARATOR ;
+juovlamánu:12 DATEDAYSEPARATOR ;
+
+LEXICON DATEDAYSEPARATOR
+% :%. DATENAME ;
+
+
+LEXICON DATENAME
+vuosttaš:@U.DATE.1@ DAYTEXT ;
+nubbi:@U.DATE.2@ DAYTEXT ;
+goalmmát:@U.DATE.3@ DAYTEXT ;
+njealját:@U.DATE.4@ DAYTEXT ;
+viđát:@U.DATE.5@ DAYTEXT ;
+guđát:@U.DATE.6@ DAYTEXT ;
+čihččet:@U.DATE.7@ DAYTEXT ;
+gávccát:@U.DATE.8@ DAYTEXT ;
+ovccát:@U.DATE.9@ DAYTEXT ;
+logát:@U.DATE.10@ DAYTEXT ;
+oktanuppelogát:@U.DATE.11@ DAYTEXT ;
+aktanuppelogát+Use/NG:@U.DATE.11@ DAYTEXT ;
+guoktenuppelogát:@U.DATE.12@ DAYTEXT ;
+golbmanuppelogát:@U.DATE.13@ DAYTEXT ;
+njealljenuppelogát:@U.DATE.14@ DAYTEXT ;
+vihttanuppelogát:@U.DATE.15@ DAYTEXT ;
+guhttanuppelogát:@U.DATE.16@ DAYTEXT ;
+čiežanuppelogát:@U.DATE.17@ DAYTEXT ;
+gávccinuppelogát:@U.DATE.18@ DAYTEXT ;
+ovccinuppelogát:@U.DATE.19@ DAYTEXT ;
+guoktelogát:@U.DATE.20@ DAYTEXT ;
+guoktelogivuosttaš:@U.DATE.21@ DAYTEXT ;
+guokteloginubbi:@U.DATE.22@ DAYTEXT ;
+guoktelogigoalmmát:@U.DATE.23@ DAYTEXT ;
+guokteloginjealját:@U.DATE.24@ DAYTEXT ;
+guoktelogiviđát:@U.DATE.25@ DAYTEXT ;
+guoktelogiguđát:@U.DATE.26@ DAYTEXT ;
+guoktelogičihččet:@U.DATE.27@ DAYTEXT ;
+guoktelogigávccát:@U.DATE.28@ DAYTEXT ;
+guoktelogiovccát:@U.DATE.29@ DAYTEXT ;
+golbmalogát:@U.DATE.30@ DAYTEXT ;
+golbmalogivuosttaš:@U.DATE.31@ DAYTEXT ;
+
+
+LEXICON DAYTEXT
+% beaivi% : DATEYEAR ;
+
+LEXICON DATEYEAR 
+guokte:2   THOUSANDS ;    ! 2000 ->
+golbma:3   THOUSANDS ;    ! etc.->
+njeallje:4 THOUSANDS ;
+vihtta:5   THOUSANDS ;
+guhtta:6   THOUSANDS ;
+čieža:7    THOUSANDS ;
+gávcci:8   THOUSANDS ;
+ovcci:9    THOUSANDS ;
+           YEARTEENS ;     ! 1000 - 1999
+           YEARHUNDREDS ;  ! 100-999
+           TWODIGITYEAR ;  ! 10 - 99
+nolla% :%0  ONES ;		   ! 01-09
+           ENDLEX ;        ! no year
+
+LEXICON YEARTEENS
+:1 YEARTEEN ;
+
+LEXICON YEARTEEN
+okta:1     YEARLOGAI ;
+akta+Use/NG:1     YEARLOGAI ;
+guokte:2   YEARLOGAI ;
+golbma:3   YEARLOGAI ;
+njeallje:4 YEARLOGAI ;
+vihtta:5   YEARLOGAI ;
+guhtta:6   YEARLOGAI ;
+čieža:7    YEARLOGAI ;
+gávcci:8   YEARLOGAI ;
+ovcci:9    YEARLOGAI ;
+
+LEXICON YEARLOGAI
+nuppelohkái: TWODIGITYEAR ;
+
+LEXICON YEARHUNDREDS
+okta:1     YEARHUNDRED ;
+akta+Use/NG:1     YEARHUNDRED ;
+guokte:2   YEARHUNDRED ;
+golbma:3   YEARHUNDRED ;
+njeallje:4 YEARHUNDRED ;
+vihtta:5   YEARHUNDRED ;
+guhtta:6   YEARHUNDRED ;
+čieža:7    YEARHUNDRED ;
+gávcci:8   YEARHUNDRED ;
+ovcci:9    YEARHUNDRED ;
+
+LEXICON YEARHUNDRED
+čuođi: TWODIGITYEAR ;
+
+LEXICON TWODIGITYEAR
+TENS ;			    ! 20-99
+TEENS ;			    ! 10-19
+
+LEXICON ENDLEX
+ # ;
 
