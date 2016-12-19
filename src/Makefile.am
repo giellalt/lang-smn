@@ -71,7 +71,7 @@ analyser-gt-desc.%: analyser-gt-desc.tmp.%                    \
 					filters/remove-letter-acute-accent.%
 	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
 				@\"filters/remove-derivation-position-tags.$*\" \
-				@\"filters/remove-norm-comp-tags.$*\"           \
+			.o. @\"filters/remove-norm-comp-tags.$*\"           \
 			.o. @\"$<\"                                         \
 			.o. @\"filters/remove-letter-acute-accent.$*\"      \
 			.o. @\"filters/remove-halflong-dotbelow.$*\"        \
