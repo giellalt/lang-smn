@@ -5323,8 +5323,8 @@ LEXICON C_PASS_SH_RVSH !!= ** __@CODE@__ shortens vowel
 +V+IV+Cond+Prs+ConNeg:^CLEN^VBACK^RVSH%>uččii K ;  ! juttuuččii
 +V+IV+Pot+Prs+ConNeg:^CLEN^VBACK^RVSH%>užii K ;
 
-+V+IV+PrfPrc:^CLEN^VBACK^RVSH%>m K ; !čahhum
-+V+IV+PrfPrc+Err/Orth:^CLEN^VBACK^RLEN%>m K ; !čaallum  toohum XXXX Trond testing, commented in again; MLO: Norm 7.6.2016: all lang vowels should be shortened => Err/Orth.
++V+IV+PrfPrc:^CLEN^VBACK^RVSH%>m FLAG_K ; !čahhum
++V+IV+PrfPrc+Err/Orth:^CLEN^VBACK^RLEN%>m FLAG_K ; !čaallum  toohum XXXX Trond testing, commented in again; MLO: Norm 7.6.2016: all lang vowels should be shortened => Err/Orth.
 
 +V+IV+PrsPrc+Use/NG:^CLEN^VHIGH^RVSH%>jeijee K ;
 +V+IV+PrsPrc:^CLEN^VHIGH^RVSH%>jijjee K ;
@@ -5389,7 +5389,7 @@ LEXICON C_PASS_SH_RLEN !!= ** __@CODE@__ does not shorten vowel
 +V+IV+Ind+Prt+ConNeg:^CLEN^VBACK^RLEN%>m K ; !
 +V+IV+Cond+Prs+ConNeg:^CLEN^VBACK^RLEN%>uččii K ;  !
 +V+IV+Pot+Prs+ConNeg:^CLEN^VBACK^RLEN%>užii K ;
-+V+IV+PrfPrc:^CLEN^VBACK^RLEN%>m K ; !puohtum
++V+IV+PrfPrc:^CLEN^VBACK^RLEN%>m FLAG_K ; !puohtum
 +V+IV+PrsPrc:^CLEN^VHIGH%>jeijee K ;
 +V+IV+PrsPrc+Use/NG:^CLEN^VHIGH%>jijjee K ;
 
@@ -5578,8 +5578,8 @@ LEXICON C_PASS_SH_COMMON  !!= ** __@CODE@__ shortens long vow in certain forms
 +V+IV+Pot+Prs+ConNeg:^VBACK%>užii K ;
 +V+IV+Imprt+ConNeg:^VBACK%>u K ;
 
-+V+IV+PrfPrc:^VBACK%>m K ; ! now changing all the others
-+V+IV+PrfPrc:^RLEN%>m K ; ! Temp. Err/Orth
++V+IV+PrfPrc:^VBACK%>m FLAG_K ; ! now changing all the others
++V+IV+PrfPrc:^RLEN%>m FLAG_K ; ! Temp. Err/Orth
 +V+IV+VAbess:%>u VABESS ;
 +V+IV+Actio+Nom:^VBACK%>m K ;
 +V+IV+Actio+Ill:^VBACK%>umân K ;
@@ -5667,7 +5667,7 @@ LEXICON C_TABAHTUD_V  !!= * __@CODE@__ Sg3 -vá
 +Pot+Prs+ConNeg:užžii	     K ;
 
 +PrsPrc:uvvee		     K ;
-+PrfPrc:um			     K ;
++PrfPrc:um			     FLAG_K ;
 +VAbess:uuhánnáá	     K ;
 +Actio+Nom:um			     K ;
 +Actio+Loc:uumist	     K ;
@@ -5743,7 +5743,7 @@ LEXICON MERIDUD
 +Pot+Prs+ConNeg:užžii		 K ;
 
 +PrsPrc:uvvee			 K ;
-+PrfPrc:um			 K ;
++PrfPrc:um			FLAG_K ;
 +Actio+Nom:um				 K ;
 +Actio+Ess:uumin		 K ;
 +Actio+Loc:uumist		 K ;
@@ -6117,6 +6117,8 @@ LEXICON FLAG_3EEMEED != __@CODE@__ should not be disallowed by ENDLEX @D.NeedNou
 LEXICON FLAG_2NJUNE != __@CODE@__ should not be disallowed by ENDLEX @D.NeedNoun.ON@
 @C.NeedNoun@ 2NJUNE ;
 
+LEXICON FLAG_K !!= __@CODE@__ should not be disallowed by ENDLEX @D.NeedNoun.ON@
+@C.NeedNoun@ K ;
 
 
 
