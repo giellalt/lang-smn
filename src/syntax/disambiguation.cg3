@@ -3790,14 +3790,6 @@ SELECT:Interjlemma_b $$INTERJ-LEMMA IF (-1 $$INTERJ-LEMMA) ;
 	#$ Guohttehehket dál dearvan mu bohccuid, nana nana voja voja.
 
 
-#!! !!Southern Locative vs. Essive
-
-#!! * __SouthLoc__ removes Southern Locative vs. Essive
-REMOVE:SouthLoc (South) ;
-#REMOVE:SouthLoc (N Sg Loc South) OR (A Sg Loc) IF (0 Ess)(NEGATE -1 CC LINK -1 Loc LINK NOT 0 Ess);
-#REMOVE:SouthLoc (N Sg Loc South) OR (A Sg Loc) IF (0 Ess)(NEGATE 0 Actio LINK NOT 0 ESS-ADVL-N)(NEGATE -1 CC LINK -1 Loc LINK NOT 0 Ess);
- 	#$ girkun # This is a rule that prevents southern dialectal forms to destroy the rest of the # parser. It should be commented out whenever analysing texts with Locative -n only. # All words with Cg will avoid this rule, since e.g. várin is southern Loc only.
-	#$ Luossa-bivdin joddu-buođuin deanus.  
 
 #!! !!Px-rules for special nouns
 
@@ -3817,18 +3809,11 @@ SELECT:vfingo VFIN IF (-1 BOC)(NEGATE 0 OLLU OR Adv)(1 go + Qst LINK NOT 1 VFIN)
 	#$ Dáhtut go min gaikut dan eret?
 	#$ Lea go dus ruhta?
 
-#!! * __buoritV__ removes buorit as V
-REMOVE:buoritV V IF (0 ("pyeri" Pl Nom) LINK 1 (N Pl)) ;
-	#$ Das leat buorit lanjat.
-
 	
 #!! * Some brave rules for removing Imprt
 REMOVE:TESTImprt Imprt - ConNeg - Neg IF (NEGATE -1 CC OR BOS OR COMMA OR (":") OR (";") OR ("joo") OR PUNCT OR ("""))(NEGATE 0 (Imprt Sg3) LINK -1 (Pron Sg3) OR (N Sg) OR ("naa"))(NEGATE 0 (Imprt Sg3) LINK 1 (Pron Sg3) OR (N Sg));
 	#% Geas ležžet bealjit, son gullos!
 	#% Nu báitos din čuovggas ge olbmuide.
-
-SELECT:RelVFIN VFIN (0 Pl3 OR Du3 LINK -1 (Rel Pl Nom)) ;
-	#$ Oahpaheaddjit geat leat leamaš dán suorggis leat sihke sámit ja dážat, muhto dat geat bohte olggobealde ledje ovdal bargan dearvvašvuođabálvalusas sámi guovlluin
 
 
 #" syntax colouring.
@@ -3948,9 +3933,6 @@ SELECT:sonSG3V (Pron Pers Sg3 Nom) IF (0 ("sun"))(NEGATE -1 Qst OR go) ((*-1 SG3
 SELECT:sonRel Pers IF (0 ("sun" Pron Pers Sg3 Nom))(1 (Pron Rel Sg));
 	#$ Son gii addá veahki galgá mearridit.
 
-SELECT:goson Pcle IF (NEGATE -2 CLB)(-1 Qst OR go)(0 ("sun"))(1 Nom LINK NEGATE 0 Refl OR Inf OR Cmp/SplitR);
-	#$ Lea go son Máret boahtán?
-
 SELECT:nuPlce Pcle IF (-1 ("mii" Indef) OR ("kii") OR ("kost"))(0 ("naa")) ;  #because of Apertium
 REMOVE:nuPlce Pcle IF (0 ("naa")) ; 
 	
@@ -3979,16 +3961,6 @@ REMOVE:daiddaVerb Nom IF (0 ("taaiđâ"))((*-1 TRANS-V OR ILL-V BARRIER SV-BOUND
 	#% Guovlulaš ja báikkálaš eiseválddiin lea maiddái ovddasvástádus váikkuhit dan ahte sámi dáidda, kultureallin ja sámi ásahusat ovddiduvvojit ovttas.
 
 
-#!! * __dasaVGen, dasaLassin dasa,datSg3, datSg3PrfPrc__ ( = forms of the verb "dassat"): 
-REMOVE:dasaVGen VGen IF (0 Pron);
-	#$ Na muhto don it leat dasa nama čállán! 
-
-#!! * __dasaILLV__ choses dasa to the left of verbs like duhtat, suhttat, luohttit
-SELECT:dasaILLV (Pron Ill) (0 REAL-V) (1 ILL-V - TV)  ;
-	#$ Muhto ii Emil dasa duđa.
-
-SELECT:dasaLassin Ill IF (0 DAT-PRON)(1 ("lase" Ess));
-	#$ Dasa lassin buvttán dás lasseargumenttaid. 
 
 # selects if there is no Pl3-verb, and in front of Rel Sg, and if the next word is not N 
 SELECT:datSg3 Sg3 IF (NEGATE *0 PL-V BARRIER S-BOUNDARY)(0 ("tot" Sg3 Nom) LINK NOT 1C (Pron Pl))(NEGATE 0 Pcle LINK -1 (N Nom) OR (Pron Nom))(NEGATE *1 (N Nom) BARRIER VFIN OR S-BOUNDARY LINK NOT 0 VFIN)(*0 SG3-V BARRIER PL-V) ;
@@ -4365,10 +4337,6 @@ REMOVE:KillPx  Px (NEGATE 0 Adv) ;
 SECTION
 
 
-#!! * __FinGoInf__ for  vai áigu go njulget.. Lene:  we don't need this
-#REMOVE N OR PrsPrc IF (1 ("ko" Qst))(2 Inf);
-	## vai áigu go njulget boares boasttuvuođaid
-
 #!! verb or adv	
 SELECT Adv IF (0 VFIN LINK 1 CC LINK 1C Adv) ;	
 	#$ Dás galget nuorat, čohkut dahje veallut duorggaid alde buolli árrandola ovddas vuostáiváldit oahpahusa sis.
@@ -4577,25 +4545,8 @@ REMOVE:r970  V + Sg3  IF (*-1 (Coll Nom) BARRIER SV-BOUNDARY )(0  V + Du3 );
 
 	#!! !Pl1 - early cycle, safe rules
 
-#!! The competitor here is obviously Inf, but also Pl3 and Prt Sg2.
+!! To be written for smn
 
-#!! * __goasbeareInf__ goas beare Inf
-SELECT:goasbeareInf Inf (-1 ("meendu") LINK -1 ("kuás")) ;
-	#$ Su rašes eallinláigi sáhtii goas beare boatkanit.
-
-#!! * __VPl1IfMiiLeft__ selects Pl1 if "mii" Pron to the left (r971) - 3163
-SELECT:VPl1IfMiiLeft  V + Pl1  IF (*-1/* MII-PERS BARRIER VFIN OR PUNCT LINK NEGATE *-1 PL1-V BARRIER NOT-ADV-PCLE)(NEGATE *-1 AUX + Pl1 BARRIER REAL-V OR COMMA); # underlesning pga Apertium: Miihan čoahkkanit dohko ávvudit su barggu
- 	#$ Mii sápmelaččat gal leat vásihan dán...
- 	#$ Miihan čoahkkanit dohko ávvudit su barggu.
-
-#!! * __VPl1IfMiiRight__ selects Pl1 if "mii" Pron to the right (r972) - 272
-SELECT:VPl1IfMiiRight  V + Pl1  IF (*1C MII-PERS BARRIER NOT-ADV-PCLE OR ("oovtnáál") OR S-BOUNDARY LINK NEGATE *1 SG3-V BARRIER NOT-A-ADV OR CLB);
-#SELECT:VPl1IfMiiRight  V + Pl1  ((1 ("ko" Qst) LINK 1 MII-PERS) OR (-1 MO OR ("tondiet") LINK 2 MII-PERS) OR (0 TRANS-V LINK -1 Acc LINK 2 MII-PERS)) ;
- 	#$ Galgat go mii vuordit muhtun eará? 
-
-#!! * __VPl1NotImprIfMiiLeft__ removes Imprt if if "mii" Pron to the left and 0 = "mii" (r973) - 557
-REMOVE:r973 Imprt IF (-1 MII-PERS OR (N Pl Nom))(0 (V Prs Pl1));
- 	#$ Mii áigut maiddái leat aktiivvalaččat mielde juohke dásis.
 
 	#!! !Pl2 - early cycle, safe rules
 
@@ -6889,26 +6840,7 @@ SELECT:berret ("lijkkuđ") (0 ("bearrat") LINK *1 Inf BARRIER REAL-V OR S-BOUNDA
 
 #!! !!Infinitive
 
-
-#!! * __r2974__ was moved up to select PL3-V after N Pl, might be relaxed to REMOVE Inf
-SELECT:r2974 PL3-V IF (*-1C (N Pl Nom) OR (A Pl Nom) OR (Indef Pl Nom) BARRIER Pl3 OR Du3 LINK *-1 BOC BARRIER Pl3 or Du3) ;
-	## Divššohasaid birra geat leat uminddegin dahkkon.
-	## Eatnagat bohtet nuortan ja oarjin.
-	## Geafit gal leat álo din luhtte.
-
-#!! * __r2976__ was moved up to select PL3-V after N Pl, might be relaxed to REMOVE Inf
-SELECT:r2976 PL3-V IF ((*1C NP-HEAD-PL-NOM BARRIER PPRON-NOT-SII OR S-BOUNDARY LINK 0 HAB-ACTOR) OR (*1C NUM LINK *1 (N Sg Gen) + HAB-ACTOR BARRIER NOT-A))(NEGATE *-1 POSITIVE-V BARRIER CS)(NEGATE 0 Inf LINK 1 COMMA LINK 1 Inf) ;
-	#$ Ohppiidráđis lea stuora fápmu skuvllas dan dihte go leat nu máŋggas geat hupmet ovttas áššiid birra.
-	#$ Dása gullet Sámi sierrabibliotehka, oahpahushálddašeami doaimmat ja sierra sámi mánáidgárdedoarjagat.	
-	#$ Dál leat sus 137 gáicca.
-	#% Diet vuoigatvuođat leat ráddjejuvvon guoskat dan vuoigatvuhtii ahte oamastit, atnit, ovddidit ja mearridit daid eatnamiid ja riggodagaid mat sis leat odne árbevirolaš čanastumi dihte.
-
-#!! * __r1809__ Not Pl1 (but Inf) if VFIN to the left, This is the basic Inf rule.
-REMOVE:r1809 Pl1 IF (*-1 VFIN BARRIER NOT-ADV-PCLE-ILL-LOC-COM OR S-BOUNDARY LINK NOT 0 N)(0 Inf);
-#REMOVE:r1809 Pl1 IF (-1 VFIN LINK NOT 0 N)(0 Inf); # old, careful version
- 	#$ Bargu lei kánske árvvoštallat dan.
-
-
+!! To be written for smn
 
 
 #!! !!Verbgenitive
