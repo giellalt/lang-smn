@@ -2246,115 +2246,27 @@ REMOVE:derPassActio Der/Pass + Der/NomAct IF (0 PrfPrc) ;
 #!! !Particular verbs
 
 
-LIST NOT-REAL-V-LEMMAS = "álbmotregistreret" ;
-
-#!! * __notRealV__ removes verb readings from verbs like álbmotregistreret
-REMOVE:notRealV REAL-V (0 NOT-REAL-V-LEMMAS) ;
-
-#!! * __notN__ removes N for adjectives which have got noun analysis because of Px for Divvun 
-LIST A-NOT-N = ("pyeri" Superl) "čeppi" "ipmilbalolaš" "" "oovdiš" "riges" "vártnuheapme" ;
-REMOVE:notN A-NOT-N + N (0 A) ;
-
-#!! * __leapmaDimin__ removes it
-REMOVE:leapmaDimin ("leapma" Der/Dimin) ;
-
-#!! * __Der/PassS__ removes some Pass-readings in favour of V not Pass
-REMOVE:Der/PassS (Der/PassS) (0 ("kuovlâliđ") OR ("tiettiđ") OR (".*ut"r) + Der/Pass)(NOT 0 ("beahttut")) ;	
-REMOVE:beahttut  ("beahttut") (-1 ("čuuvtij")) ;
-
-LIST NOT-PASS = ("oaktut" Der/PassS Sg3) ("kuovlâliđ" Der/PassS Sg3) (IV* Der/PassS)  ;
-
-#!! * __notPass__ removes som Pass readings which are not likely at all
-REMOVE:notPass NOT-PASS ;
-	#$ Dat gal lea maid okta fáktor muhtin guvlui, muhto gávdnojit maid eará.
-
-LIST LEX-PASS = "galbmot" "gávdnot" "gessot" "goddot" "kulluđ" "láhppot" "oinuđ" "váldot" "čirrot" "sorrot" "čadnot" "doddjot" "gessot" "dovdot" "rahppot" "savvot" "čoggot" ;
-
-#!! * __LEX-PASS__ removes passive forms of some lemmas in favour for the lexixalised one
-REMOVE:LEX-PASS (Der/PassS) IF (0 LEX-PASS LINK NEGATE 0 ("keessiv")) ; # geassit vs gessot
-
-
-#!! * __LexSelbeassat__
-REMOVE:LexSelbeassat ("peessiđ") IF (0 ("peessâđ"))(*1 (V Actio Loc) OR Inf OR Ill BARRIER SV-BOUNDARY OR CC) ;
-	#$ Mun bessen vuolgimis.
-	#$ Nuppi iđida ollii mánáidsuodjalus festii ja easka de besse nuorat guođđit dán ilgadis feastta.
-
-#!! * __LexSelgieldit__
-SELECT:LexSelgiedit ("kieldiđ") IF (0 ("gieldu" Ill))(*1 Inf OR (Actio Loc) BARRIER REAL-V) ;
-	#$ Go su áhčči jámii de gildui sámegiela hállat telefuvnnas.
-
-#!! * __LexSelollet__
-SELECT:LexSelollet ("enittiđ") IF (0 ("olámuddo"))(*1 Ill BARRIER SV-BOUNDARY OR CC) ;
-	#$ Nuppi iđida ollii mánáidsuodjalus festii ja easka de besse nuorat guođđit dán ilgadis feastta.
-
-#!! * __Lexdiehttelasaid__ diehttelasaid Adv
-SELECT:Lexdiehttelasaid ("diehttelasaid" Adv) ;
-
-#!! * __Lexgeassit__ geassit Adv vs geassit V
-SELECT:Lexgeassit ("keessiv" Adv)(*0 GEASSET)  ;
-	#$ Rásit liđđot juogo geassit, čakčat dahje dálvit.
-
-	
-#!! * __Ger and GER-NOTV__ remove Ger-forms which are not likely at all
-REMOVE:Ger Ger IF (0 ("geavat" N) OR ("tahallani") OR ("hálihit"));
-
-LIST GER-NOTV = "barggadit" "bijadit" "čokánistiđ" "dagadit" "deaivvadit" "dutkkadit" "geahčadit" "jugadit" "morániđ" "logadit" "manadit" "njuovadit" "ozadit" "šlivggodit" ;
-	# "porgâđ" Ger is more likely than "barggadit" Ger, and so on. 
-
-REMOVE:GER-NOTV GER-NOTV + Ger IF (0 Ger - GER-NOTV); 
-
-REMOVE (PrsPrc Qst) IF (0 VFIN + Qst) ;
-
 REMOVE Ord IF (0 ABBR) ;
 
 
 SELECT ("peividiđ" PrfPrc) IF (1 Sem/Date) ;
 
-SELECT ("keččâđ" Imprt Sg2) IF (0 VGen LINK NEGATE -1 Neg) ;
-
-REMOVE:eadjit (".*#eadjit"r) ;
-REMOVE:girjjis ("girjjis") IF (0 ("kirje")) ;
-REMOVE:giisi ("giisi") IF (0 ("árkku")) ;
-REMOVE:lávke ("lávke") IF (0 ("lavkkâ")) ;
-REMOVE:olle ("olle" N) IF (0 A ) ; 
 
 	# Lexicalised adjectives
 	# ----------------------
 
-REMOVE:r549 VGen IF (0 A);
-	## Na varas guolli dal lea buorre.
-
-REMOVE:Der/A (Der/A) IF (0 PrsPrc LINK 1 N);  #!OBS??
 REMOVE:r550 PrsPrc IF (0 A);
 	## Áššis biddjui mearrideaddji deaddu dasa ahte... 
 
-REMOVE:r551anotv (VV) - Der/NomAct IF (0 A-NOT-V - Px) ;  
-	#$ Dat lea seammá guhkki go govdat.
-	#% Prošeakta lea beroštahttán riikkalaččat ja guovdilis politihkárat leat jo fitnan galledeamen skuvlla oažžun dihtii eambbo dieđuid lážáldaga birra .
-	
-REMOVE:A A IF (0 ("suoma")) ;	
-
-
-REMOVE:Der/NomAg Der/NomAg IF (0 PrsPrc LINK 1 N OR Attr LINK NEGATE 0 Prop) ;
 
 #!! !!Propernouns
 
 #!! ! Removing or selecting proper nouns that are lookalikes
 
-#!! * __AvvilProp__ selects Prop for Avvil
-SELECT:AvvilProp Prop IF (0 ("Avvil")) ;
-	#$ Avvila dulvesuodjalan áššedovdibargojoavku.
-
 
 #!! * __SamediggiProp__ selects Prop after Ášši 01/12
 SELECT:SamediggiProp Prop IF (-2 ("äšši"))(-1 Num);
 	#$ Ášši 02/13 Sámedikki čoahkkinortnet.
-
-LIST NOT-PROP = "Vuoksá" "Áddjá" "Álgu" "Dronnet" "Heasta" "Stállu" "Fiske" "Guksi" "Gáldu" "Jávregáddi" "Návet" "Náhkki" "Njunni" "Áigi" "Ohcan" "Ose" "Ovdal" "Sieidi" "Profehta" "Muvra" "Gielda" "Vuotna" "Jávri" "Riidi" ;
-  	
-#!! * Rules for removing some Props which are identical to common nouns
-REMOVE:Prop=noun Prop IF (0 NOT-PROP) ;
-# Comment: Min Áigi is Prop but Áigi in the beginning of the sentence is not.
 
 
 #!! *Removes __PropPl__, but problems with names as Davviriikkaid Ráđi, there we want Prop Pl
@@ -2362,43 +2274,9 @@ REMOVE:PropPl (Prop Pl) IF (0 COMMON-N LINK NEGATE 1 ("niävvu"))(NEGATE 0 VGen)
   	#$ Sápmelaččaide lea hui mávssolaš ahte sin dárbbut váldojit vuhtii. 
   	#% Davviriikkaid Ráđi - It should not hit this 
 
-#!! * __PropVfin__ selects propernouns which can be Vfin in the beginning of a sentence
-SELECT:PropVfin_a Prop IF (0 VFIN - Qst LINK *-1 BOS BARRIER WORD)((1 VFIN + Sg3) OR (1 COMMA LINK 1 Imprt + Sg2)) ;
-SELECT:PropVfin_b Prop IF (0 VFIN - Qst LINK *-1 BOS BARRIER WORD)(1 Pcle)(2 VFIN + Sg3);
-SELECT:PropVfin_c Prop IF (0 VFIN - Qst LINK *-1 BOS BARRIER WORD)(1 CC OR COMMA)(2 Prop OR Pers);
-SELECT:PropVfin_d Prop IF (0 VFIN - Qst LINK *-1 BOS BARRIER WORD)(1 CC OR COMMA)(2 (Pers Gen));
-SELECT:PropVfin_e Prop IF (0 VFIN - Qst LINK *-1 BOS BARRIER WORD)(1 CC OR COMMA )(2 Indef)(3 N);
- 	#$ Lásse dat lei sihtan mu váldit dan.
- 	#$ Máhtte ii sáhttán boahtit ovdal.
- 	#$ Máhtte ja Ánne eaba sáhttán boahtit ovdal.
- 	#$ Sáhtán, gáidda eret!
-
-LIST CONF-PROP = "Lea" "Lassi" "Dan" "Hu" "Goa" "Mo" "Moa" "Man" "Naba" ;
-
-#!! * __confProp, Lea, Man, Hui, Mo, Prop__ removes Props which confuces the analyser, 
- 
-SELECT:confProp CONF-PROP + Attr - ("Lea") IF (-1 BOS OR PUNCT OR (":"))(*1 Sem/Sur OR Sem/Fem OR Sem/Mal BARRIER REAL-WORD-NOT-ABBR OR COMMA) ;
-	#$ Dan Robert Larsen 
-	#$ Lea O. Olsen
- 
-REMOVE:confProp CONF-PROP IF (-1 BOS OR PUNCT OR (":"))(0 Sem/Sur OR Sem/Fem OR Sem/Mal OR Attr)(NEGATE 1 SG3-V); 
-  	#$ Lassi dutkandoarjagat sáhttet leat mielde... 
- 	#$ Lea dušše okta Ipmil. Lea idja.  
-
-REMOVE:confProp Prop IF (0 CONF-PROP LINK 0 Adv OR Pron OR V) ;
-  	#$ De son celkkii sutnje: "Mana basadit Siloaláddos."
-
-#!!  * __Dert__ Rule for removing Der/t Prop when there are other analysis
-REMOVE:Dert (Der/t) IF (0 Prop) ;
 
 
-REMOVE (Der/t) IF (0 Prop) ;
 REMOVE Prop IF (0 Pron) ;
-REMOVE:PropUnni Prop IF (0 ("ucce" Attr))(1 Der/Dimin OR ("mánáš"));
-SELECT:PropNorga ("Norga") IF (0 ("norga")); # The form "norga" is not in the dictionary...
-
-#SELECT:Gen NP-HEAD-GEN IF (0 ("sieidi") LINK 1 ("palvâlus"));
-  	## Sieiddi bálvalemiin sturron eallu gohčoduvvui bálvvoseallun, mii sáhtii jávkat, go oamasteaddji jámii dahje go sieidi ii bálvaluvvon.
 
 LIST LOHKU = ("[0-9]*-#lohku"r) ;
 
@@ -2592,17 +2470,7 @@ SELECT:NomACR Nom IF (0 ACR OR ABBR)(-1 BOS)(1 PUNCT) ;
 
 #!! * __Aifeambbo__ selects A after eambbo
 SELECT:Aifeambbo A - Px IF (-1 ("eenâb") OR ("eenâb"))(NEGATE 0 Pl);
-	#$ Muhto eambbo eahpidahtti lea čielggadusa s. 17 cealkámuš.
-
-#SELECT:Aeambbo Attr IF (0 ("eenâb") OR ("eenâb") LINK 1 N)(NEGATE -1 ("et"));
-	#$ Diŋgojitgo eambbo biergu?
-
-#SELECT:r1306 Adv IF (0 ("eenâb"));
-	#$ Gittabivdosiin ii leat lohpi bivdit deanu eambbo go beallái.
-
-#!! * __muhtunlagan__ removes lága Ess if Indef ja lágan A
-SELECT:muhtunlagan A IF (-1 Indef)(0 ("laahâ" Ess));
- 	#$ muhtun lágan
+	#$ Muhto eenâb eahpidahtti lea ....
 
 #!! * __aiggePo__ removes áigge Po, which belongs to MT and thu
 REMOVE:aiggePo ("áigge" Po) ;
@@ -2653,161 +2521,34 @@ SELECT:AdvSTV2 Adv IF (-1 Acc LINK -1 (Pron Gen) LINK *-1 ("väldiđ") OR ("mát
 	#$ Váldot beatnaga mielde!
 	#$ Oahpa lávlaga bajil! 	
 	
-#!! * __cadaAdv__ if oažžut juoidá čađa
-SELECT:cadaAdv ("čoođâ" Adv)  IF (*-1 ("uážžuđ") BARRIER REAL-V OR S-BOUNDARY)(NEGATE -1 ("häävi") OR TIME);
-	#$ Mii oažžut daid áššiid čađa.
-
-#!! * __dussaiAdv__  
-SELECT:dussaiAdv ("duššái" Adv) IF (*0 ("golahit") OR ("vyelgiđ") BARRIER REAL-V OR S-BOUNDARY) ;
 
 
-#!! * __gaskanAdvVGen__  
-SELECT:gaskanAdvVGen ("pelivaalmâš" Adv)  IF (1 VGen);
- 	#$ Gaskan bora viehkalin olggos.
 
-#!! * __gotAdv__  
-SELECT:gotAdv ("maht" Adv)(-1 ("eidu")) ; #eksempler på CS?
 
-#!! * __ikteAdv__  
-SELECT:ikteAdv ("jieht" Adv) IF  (*0 VFIN BARRIER S-BOUNDARY) ;
-	#$ Mu mielas lei heajut dálki ikte.
-
-#!! * __miehtaV__  
-SELECT:miehtaV VFIN IF (NEGATE *-1 VFIN BARRIER S-BOUNDARY)(NEGATE -1 Gen LINK NOT 0 Nom)(0 ("kejimield"))(NEGATE 1 Gen LINK 0 TIME OR PLACE);
+#!! * __miätáV__  
+SELECT:miätáV VFIN IF (NEGATE *-1 VFIN BARRIER S-BOUNDARY)(NEGATE -1 Gen LINK NOT 0 Nom)(0 ("miätá"))(NEGATE 1 Gen LINK 0 TIME OR PLACE);
  	#$ Jus divššohas dasa miehtá, dahje dilálašvuohta lea nu,...
 	## Jus divššohas dasa miehtá,... 
 	
-#!! * __miehtaV__  
-SELECT:mannelAdv_a Adv IF (1 TIME-UNIT + Acc LINK 1 MANNEL);
-SELECT:mannelAdv_b Adv IF (1 Num LINK 1 TIME-UNIT + Acc LINK 1 MANNEL);	
-
-#!! * __aigiAdv__  guokte vahku áigi
-SELECT:aigiAdv Adv IF (NEGATE -2 (Num Gen))(-1 TIME-UNIT + Acc)(0 ("äigi"));	
-	#$ Ánde Máhtte Somby Sandvik beasai guokte vahku áigi diehtit ahte son beassá vuolgit.
-
-#!! *  __viimmatAdv__ 
-SELECT:viimmatAdv ("viijmâg" Adv) IF  (NEGATE 1 Inf);
-
-
-#!! * __dalleAdv__
-SELECT:dalleAdv ("šât" Adv);
-
-#!! *  __tusseAdv__ 
-
-# To be written: tuše Adv  vs. tuše gen of tušše
-
-
-LIST NEG-ADV-PRON = "gostege" "kuássin" (Adv Foc/Neg-ge) (Pron Foc/Neg-ge)  ;
-SELECT:negadvpron Indef + Foc/ge OR ("goste" Foc/Neg-ge) IF (-1 Neg - Sup) ;
-	#$ ii maninge
-
-
-#!! * __alggageAdv__  
-SELECT:alggageAdv ("álggage" Adv) IF  ((*-1 Nom BARRIER S-BOUNDARY) OR (*1 Nom BARRIER S-BOUNDARY));
-	#$ In mun leat álggage heajut go dát.
-	#$ Sis, geain eai lean álggage njuovvanbohccot, ...
-
-
-
-#!! * __easkkaAdv__  
-SELECT:easkkaAdv1 EASKKA + Adv IF (0 EASKKA)(1 ("šât") OR go OR ("joo"));   
-
-SELECT:easkkaAdv2 Adv IF (0 EASKKA)(*1 TIME BARRIER NOT-A-ADV);
-	#$ ...mii easkka maŋimuš áiggiid lea jávkágoahtán. 
-	#$ Dat lei boahtán ruoŧagielain easkka jagi 1863.
-	#$ Muhto easkka 1898:s dovdagohte Láhppiolbmot dan mii maŋŋelis bođii.
- # Ambiguous: 	## Dat čielgá dálá oasálaččaide easkka proseassas. 
-
-SELECT:easkkaAdv3 Adv IF (0 EASKKA)(1 Num OR MANNEL);
-	#$ ...easkka maŋŋel 1529 ásaiduvve olbmot duođas báikkiide.
-
-LIST CUT-V = "boatkanaddat" "botket" "boatkanit" "uážžuđ" "gáskkistit" "čuohpastit" "čuolastit" "dodjit" "doadjit" "čuoppâđ" "gáskit" "vyelgiđ" ;
-
-#!! * __gaskatAdv__  
-SELECT:gaskatAdv ("gaskat" Adv)  IF (*-1 CUT-V BARRIER S-BOUNDARY) ;
-
-#!! * __goassigeAdv__  
-SELECT:goassigeAdv ("kuássin") OR ("kuássin")  IF (*-1 Neg BARRIER VFIN) ;
-	#$ Ii leat stáhtas várra goassige leamaš ruđalaš ávki dán ámmahis. 
-
-#!! * __gosaAdv__  
-SELECT:gosaAdv ("kuus" Adv) IF  (*1 VFIN BARRIER S-BOUNDARY);
-	#$ Gosa don čihket dan?
-	#$ Son oinnii báikkiid gosa juo ledje ásaiduvvan. 
-
-#!! * __gustoAdv__
-REMOVE:gustoAdv ("kustoo" Adv) IF (NEGATE -1 VFIN - Neg)(NEGATE 1 VFIN - ("duššat")) ;
-	#$ Juos evttohusa meahcceeatnamiid nuppástuvvan geavaheami birra, mii juogo gusto dušše Kárášjoga, Guovdageainnu, Unjárgga, Porsáŋggu ja Deanu gildii dahje gusto dušše restii Finnmárkkus, dorjot golbma ja dušše golbma stivrralahtu, de sáhttet golbma stivrralahtu ovtta oli gáibidit ášši gieđahallat oktii vel.
-
-#!! * __gustoAdvláhka__
-REMOVE:gustoAdvláhka ("kustoo" Adv) IF (*0 LAHKA) ;
-	#$ Guđe fylkkasuohkana doaimmaide gusto láhka?
-
-#!! * __guhkasAdv__  
-SELECT:guhkasAdv Adv IF (*-1 REAL-V BARRIER NOT-ADV-N)(0 ("kukká") LINK 0 Loc OR Gen)(NEGATE 1 COPULAS OR Acc)(NEGATE 1 (V Neg) LINK 1 COPULAS) ;
-SELECT:guhkasAdv Adv IF (-2 REAL-V)(-1 (A Nom) OR (N Nom))(0 ("kukká") LINK 0 Loc OR Gen) ;
-SELECT:guhkasAdv Adv IF (-1 BOS OR CC OR CS)(0 ("kukká") LINK 0 Loc OR Gen)(*1 REAL-V LINK -1 NP-HEAD-NOM) ;
-	#$ Dilli joatkašuvvá dákkárin guhkás boahtteáigái.
-	#$ Son bálkestii spáppa guhkás.
-	#$ Guhkás son bálkestii spáppa.
-
-#!! * __VifVFIN__ removes V 
-#REMOVE:VifVFIN V ((0 Adv LINK 1C VFIN OR PrfPrc) OR (0 Adv LINK -1C VFIN OR PrfPrc));
-	#$ Don gal gusto beroštat čuovvut.
-
-#!! * __harveAdv__
-SELECT:harveAdv ("harvii" Adv)  IF (NEGATE *-1 PLANT OR ("piäldu") OR ("eennâm") OR ("kieddi") OR ("traktor") BARRIER S-BOUNDARY)(0 Adv)(NEGATE *1 PLANT OR ("piäldu") OR ("eennâm") OR ("kieddi") OR ("traktor") BARRIER S-BOUNDARY);
-	#$ Boazoealáhusas ovddasteaddjit hárve vuosttaldit viessohuksema.
-
-#!! * __juogoQst__
-IFF:juogoQst ("jogo" Qst) IF  (NEGATE *1 ("dahje") OR ("adai"));
-	#$ Jogo gikse dat guolit?
 
 
 
 
-#!! * __loahpasAdv__
-SELECT Adv IF (NEGATE -1 Gen)(0 ("majemustáá"));
-
-#!! * __liikkaAdv__
-SELECT:liikkaAdv ("liikka" Adv)(0 N LINK -1 VFIN)(1 A OR Adv) ;
-	#$ Dalle šattašii liikka buoret dálki go mannan sotnabeaivve.
-
-LIST SLIP-V = "luoitit" "peessâđ" "gaikkihit" "luovvanit" "uážžuđ" "nuollat" ;
-
-#!! * __luovosAdv__
-SELECT ("irraallaan" Adv)  IF (*0 SLIP-V BARRIER S-BOUNDARY) ;
 
 
-#REMOVE Interj ((-1 WORD - Interj) OR (1 WORD - Interj)) ;
 
-#!! * __maninAdv__
-SELECT:maninAdv ("mane" Adv) IF (NEGATE *-1 REAL-V BARRIER S-BOUNDARY)(NEGATE 0 Ess LINK *1 OPRED-V LINK -1 Acc) ;
-	#$ Manin don leat heittohit nohkkan?
-	#% Manin don geavahat dan?
 
-#!! * __manneAdv__
-SELECT:manneAdv1 ("mane" Adv)  IF (*-1 BOC OR PUNCT BARRIER NOT-ADV-PCLE)(*1 VFIN BARRIER S-BOUNDARY OR CC LINK NOT 0 N)(NEGATE 0 Qst)(NEGATE 1 Qst)(NEGATE -1 ("joo")); 
-	#$ Ja manne moraštehpet biktasiid dihtii? 
-	#$ Naba dii, manne dii ieža rihkkubehtet Ipmila báhkkomiid?
-	#$ Manne dis leat diekkár bahás jurdagat din váimmuin?
-	#$ Manne rievddadit luonddudilálašvuođat?
-	#% Sii manne isideaset lusa ja muitaledje buot. # BARRIER CC!
 
-SELECT:manneAdv2 ("mane" Adv)  IF (*-1 VFIN BARRIER S-BOUNDARY OR CC OR CLB LINK NOT 0 Neg) ;
-	#$ Jos oktage jearaš dudnos manne doai dahkabeahtti dan,...
-	
-#!! * __muhtuminAdv3__
-SELECT:muhtuminAdv ("motomin" Adv) ;
-	#$ Muhtumin lea deaŧalaš čállit journála dalán.
 
-#!! * __njuolgaAdv__
-SELECT:njuolgaAdv ("njuolgâdâs" Adv)  IF (*1 Ill BARRIER NOT-A-ADV) ;
-	#$ Nuppi vuoru goalmmát minuvttas Anette nivkalii čiehkačievččastaga čábbát njuolga mollii.
+
+
+
 
 #!! * __oddasitAdv__
-SELECT:oddasitAdv1 ("uđđâsist" Adv)  IF (-1 ("oppeet")) ;
+SELECT:oddasitAdv1 ("uđđâsist" Adv)  IF (-1 V) ;
 	#$ Elia gal boahtá dahkat buot fas ođđasit.
+
+# hit tt
 
 SELECT:oddasitAdv2 ("uđđâsist" Adv) IF (*-1 Nom BARRIER S-BOUNDARY)(*1 NOT-AUX-V BARRIER S-BOUNDARY);
 	#$ Eat mii sáhte ođđasit ásahit vuođu.
