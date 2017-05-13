@@ -534,29 +534,31 @@ ATTR ;
 
 
 LEXICON CAVOS_nocomp !!= __@CODE@__ directing to X_SAJOS, attr. almos
-+A+Attr:^FCD^CSH^SVSH  K ; ! čapo
+!+A+Attr:^FCD^CSH^SVSH  K ; ! čapo
 +A: X_SAJOS	  ;
 +A+Cmp/Attr:  ATTR_R ; !CHECK
 +A:%> A_VUOTA ;
 +A:^CSH^SVSH%> A_LASJ ; !  
 
 
-LEXICON NANOS !!= __@CODE@__ directing to X_SAJOS, attr. noonâ
-!+A+Attr:â^WG^VHIGH^RLEN K ; 	! noonâ , as entry in the lexicon file
-+A: X_SAJOS	  ; !nanos
-+A:os%>u COMPo ;  !   nanosub
-+A:os%>u MOS ; !  nanosumos
-+A+Attr:â^VHIGH^RLEN%> R ;
-+A:os%> A_VUOTA ; !nanosvuotâ
-+A:os A_ADV ; !  nanosavt
+!LEXICON NANOS !!= __@CODE@__ directing to X_SAJOS, attr. noonâ
+!!+A+Attr:â^WG^VHIGH^RLEN K ; 	! noonâ , as entry in the lexicon file
+!+A: X_SAJOS	  ; !nanos
+!+A:os%>u COMPo ;  !   nanosub
+!+A:os%>u MOS ; !  nanosumos
+!!+A+Attr:â^VHIGH^RLEN%> R ;
+!+A:%> A_VUOTA ; !nanosvuotâ
+!+A: A_ADV ; !  nanosávt
+!+A:^CSH^SVSH%> A_LASJ ; !  
+
 
 
 
 LEXICON ALMOS !!= __@CODE@__ directing to X_SAJOS, attr. almos
-+A+Attr:^WG^SVSH  K ; !
+!+A+Attr:^WG^SVSH  K ; !
 +A: X_SAJOS	  ;
 +A:^WG^SVSH%>u COMPo ; 
-+A:^SVSH%>u MOS ;
++A:^CSH^SVSH%>u MOS ;
 +A+Cmp/Attr:^WG^SVSH%> ATTR_R ;
 +A:^WG^SVSH%> A_VUOTA ;
 +A:^WG^SVSH%> A_ADV ; !almoslávt
