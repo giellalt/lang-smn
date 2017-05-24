@@ -5,7 +5,7 @@ LEXICON  Rnoun
                  
 LEXICON RAlmostReal    ! lexicalising the 3-part compounds, with the tag ShCmp
          RrealAfterCmpNFlags       ; ! Business as usual: Normal compounds right on to Rreal
- +Cmp#:# MiddleNouns ; ! These nouns should not return to themselves, to avoid -jotjotjot-
+ +Cmp#:😱# MiddleNouns ; ! These nouns should not return to themselves, to avoid -jotjotjot-
 
 LEXICON Rreal !!≈ @CODE@ - This initial recursive/compounding lexicon adds flags to 
           !! control compounding, before going to the real compounding lexicon This is the former R lexicon, renamed to avoid the MiddleNouns loop
@@ -16,10 +16,10 @@ LEXICON R
 
 LEXICON RrealAfterCmpNFlags
 !          +Cmp#:#  #              ; ! For turning off compounding during testing
-          +Cmp#:#  nounflag       ;
- +Cmp/Hyph+Cmp#:#- nounflag       ;
-         +Cmp-#:#- ProperNoun-smn ;
-         +Cmp-#:#- ProperNoun     ;
+          +Cmp#:😱#  nounflag       ;
+ +Cmp/Hyph+Cmp#:😱#- nounflag       ;
+         +Cmp-#:😱#- ProperNoun-smn ;
+         +Cmp-#:😱#- ProperNoun     ;
     +Cmp/SplitR:-  #              ;
 
 LEXICON nounflag
@@ -46,7 +46,7 @@ LEXICON RProp_after_cmp_flags                  !!≈ !!!@CODE@
            +Cmp-#:-#          ProperNoun     ;
            +Cmp-#:-#          ProperNoun-smn ;
            +Cmp-#:-#          NounRoot       ;
- +Use/-Spell+Cmp#:#           NounRoot       ; ! We don't want Proper-Noun compounds without hyphen in the speller.
+ +Use/-Spell+Cmp#:😱#         NounRoot       ; ! We don't want Proper-Noun compounds without hyphen in the speller.
       +Cmp/SplitR:-           #              ;
 
 LEXICON RNum !!≈ @CODE@ - This initial recursive/compounding lexicon adds flags to
