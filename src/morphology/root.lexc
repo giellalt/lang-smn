@@ -312,7 +312,11 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
  @U.CmpNone.TRUE@  !!≈ | @CODE@ | Combines with the two previous ones to block compounding
  @P.CmpOnly.TRUE@  !!≈ | @CODE@ | Sets a flag to indicate that the word has passed R
  @D.CmpOnly.FALSE@ !!≈ | @CODE@ | Disallow words coming directly from root.
- 
+ @D.CmpHyph.TRUE@  !!≈ | @CODE@ | Flag to control hyphenated compounds like proper nouns
+ @U.CmpHyph.FALSE@ !!≈ | @CODE@ | Flag to control hyphenated compounds like proper nouns
+ @U.CmpHyph.TRUE@  !!≈ | @CODE@ | Flag to control hyphenated compounds like proper nouns
+ @C.CmpHyph@       !!≈ | @CODE@ | Flag to control hyphenated compounds like proper nouns
+
 !! 
 !! Use the following flag diacritics to control downcasing of derived proper
 !! nouns (e.g. Finnish Pariisi -> pariisilainen). See e.g. North Sámi for how to use
@@ -320,6 +324,28 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 !! given the proper use of these flags.
  @U.Cap.Obl@        !!≈ | @CODE@ | Allowing downcasing of derived names: deatnulasj.
  @U.Cap.Opt@        !!≈ | @CODE@ | Allowing downcasing of derived names: deatnulasj.
+
+! @P.Need3Part.ON@ @D.Need3Part.ON@ @C.Need3Part@ !3Part
+
+@U.NeedsVowRed.OFF@ !!≈ * @CODE@ is used to force hyphenation/non-reduction: samediggi-
+@U.NeedsVowRed.ON@  !!≈ * @CODE@ is used to force reduction w/o hyphen: samedigge#xxx
+@C.NeedsVowRed@     !!≈ * @CODE@ Clearing this feature, so that it doesn't interfere with further compounding
+
+@P.Px.add@	    !!≈ * @CODE@
+@R.Px.add@	    !!≈ * @CODE@
+@P.Px.block@    !!≈ * @CODE@
+@D.Px.block@    !!≈ * @CODE@
+@P.Nom3Px.add@
+@R.Nom3Px.add@
+
+@R.SpellRlx.ON@ !!≈ * @CODE@ Flag used to tag spell-relax-analysed strings (and only those).
+@D.SpellRlx.ON@ !!≈ * @CODE@ Flag used to tag spell-relax-analysed strings (and only those).
+@C.SpellRlx@    !!≈ * @CODE@ Flag used to tag spell-relax-analysed strings (and only those).
+
+@R.SpaceCmp.ON@ !!≈ * @CODE@ Flag to tag compounds written with a space
+@D.SpaceCmp.ON@ !!≈ * @CODE@ Flag to tag compounds written with a space
+@C.SpaceCmp@    !!≈ * @CODE@ Flag to tag compounds written with a space
+
 
 ! =================================================
 !! !!!Basic lexica, pointing to the other lexicon files
