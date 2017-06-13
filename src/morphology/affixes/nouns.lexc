@@ -793,13 +793,32 @@ LEXICON 2KUMPPI_PL !!= __@CODE@__  plurals for 2KUMPPI
 
 
 LEXICON 2LAANI   !!= __@CODE@__ started to build: lääni, no vowelshortening
-+N: X_SAAMI ;
-+N+Pl+Ill:%>id K ;      
-+N+Cmp/SgNom:%> Rhash ;
-+N+Cmp/SgGen:%> Rhash ; ! 
-+N+Cmp/PlGen:%>i Rhash ;
-+N: X_h_PL_notILL ;
+APINA_SG ;
+APINA_PL ;
 
+
+LEXICON 2RAADI   !!= __@CODE@__ started to build: rääđi, no vowelshortening
+2RAADI_SG ;
+2RAADI_PL ;
+
+LEXICON 2RAADI_SG
++N:  X_SAAMI_SG ;
++N+Cmp/SgNom:%> Rhash ;! 
++N+Cmp/SgGen:^WG%> Rhash ; ! 
++N+Cmp/PlGen:^WG%>i Rhash ;
++N+Cmp/SgGen+Err/Orth:^WG^RVSH%> Rhash ; ! norm for mid: haldâttâsräđialmai
+
+LEXICON 2RAADI_PL
++N: X_SAAMI_PL ;
++N+Pl+Loc:^WG^RVSH%>in CPXsuff ;  ! samijnân
++N+Pl+Gen:^WG^RVSH%>id CPXsuff ;  ! samijdân
++N+Pl+Acc:^WG^RVSH%>id CPXsuff ;  !
++N+Pl+Ill:^WG^RVSH%>id CPXsuff ;  !
++N+Pl+Loc:^WG^RVSH%>in CPXsuff ;  !
++N+Pl+Com:^WG^RVSH%>id CPXsuffCOM ;  ! samijdânguin
++N+Cmp/SgNom:%> Rhash ;! 
++N+Cmp/SgGen:^WG%> Rhash ; ! 
++N+Cmp/PlGen:^WG%>i Rhash ;
 
 
 LEXICON 2SAAMI   !!= __@CODE@__ to 2LAAVU after fix in twolc?  saämijn > saamijn when ^WG^CLEN^SVLOW
@@ -812,7 +831,7 @@ X_SAAMI_PL ;
 
 
 LEXICON 2SAAMI_SG!!= __@CODE@__
-+N: X_SAAMI ;
++N: X_SAAMI_SG ;
 !+N+Cmp/PlGen:^CSH%>i Rhash ; ! MLO: seems to me that this is unnecessary
 +N+Sg+Nom:^EA^CLEN VPXsuff12nom ;  !sáámmám uábbám uábbád
 +N+Sg+Gen:^EA^CLEN VPXsuff12 ;  ! sáámmán
@@ -835,6 +854,9 @@ LEXICON 2SAAMI_PL   !!= __@CODE@__ plurals for 2SAAMI
 +N+Pl+Ill:^WG^RVSH%>id CPXsuff ;  !
 +N+Pl+Loc:^WG^RVSH%>in CPXsuff ;  !
 +N+Pl+Com:^WG^RVSH%>id CPXsuffCOM ;  ! samijdânguin
++N+Cmp/SgNom:^RVSH%> Rhash ;! 
++N+Cmp/SgGen+Err/Orth:^WG%> Rhash ; ! säämiašij
++N+Cmp/PlGen:^WG%>i Rhash ;
 
 LEXICON X_SAAMI_SG   !!= __@CODE@__ to 2LAAVU after fix in twolc?  saämijn > saamijn when ^WG^CLEN^SVLOW
 +Sg+Nom: K ;                 ! säämi,
@@ -849,11 +871,8 @@ LEXICON X_SAAMI_SG   !!= __@CODE@__ to 2LAAVU after fix in twolc?  saämijn > sa
 
 LEXICON X_SAAMI_PL   !!= __@CODE@__ plurals for 2SAAMI
 +Pl+Ill:^WG%>id K ;         ! saamijd
-+Cmp/SgNom:^RVSH%> Rhash ;! Compounds here, to include adjectives and plurale tanti
 !+N+Cmp/SgGen:%> Rhash ;  ! not säämi-
 +Cmp/SgGen:^WG^RVSH%> Rhash ; ! but sämi-
-+Cmp/SgGen+Err/Orth:^WG%> Rhash ; ! säämiašij
-+Cmp/PlGen:^WG%>i Rhash ;
  X_WG_RVSH_PL_notILL ;
 
 
@@ -1010,7 +1029,8 @@ LEXICON KYELI_SYEJI_SG  !!= __@CODE@__ i-e-á,
 LEXICON 2_KYELI_SYEJI_SG_PX !!= __@CODE@__  common kyeli-syeji px
 +N+Cmp/SgNom:^RVSH%> Rhash ;
 +N+Cmp/SgNom+Err/Orth:%> Rhash ; !kääniores
-+N+Cmp/SgGen:e^WG^RVSH%> Rhash ;
++N+Cmp/SgGen+Err/Orth:e^WG^RVSH%> Rhash ; ! pelemuddoost kyelesaallâs Err/Orth?
++N+Cmp/SgGen:e^WG^RVSH%> Rhash ; ! 
 +N+Sg+Nom:^EA^CLEN VPXsuff12nom ;  !kuállám                                                                                                                                                                        
 +N+Sg+Gen:^EA^CLEN VPXsuff12 ;  ! XXX check                                                                                                                                                                        
 +N+Sg+Acc:^EA^CLEN VPXsuff12 ;  ! XXX check                                                                                                                                                                        
@@ -1326,7 +1346,32 @@ LEXICON X_MAANU_SG !!= __@CODE@__
 +Par:^CLEN%>d K ;               ! máánnud 
 
 
-LEXICON 2RAAVHU !!= __@CODE@__ like 2LAAVU, but long vowel in cmp. More long vowels?
+LEXICON 2STAALU !!= __@CODE@__ like 2LAAVU, but long vowel in cmp gen. 
+2STAALU_SG ;
+2RAAVHU_PL ;
+
+
+
+LEXICON 2STAALU_SG !!= __@CODE@__
++N: X_LAAVU_SG ;
++N+Cmp/SgNom:%> Rhash ;
++N+Cmp/SgGen:^RVSH%> Rhash ; ! 
++N+Sg+Nom:^CLEN VPXsuff12nom ;  !
++N+Sg+Gen:^CLEN VPXsuff12 ;  !	 
++N+Sg+Acc:^CLEN VPXsuff12 ;  !	 
++N+Sg+Nom:^CLEN VPXsuff3 ;  !	
++N+Sg+Gen:^WG VPXsuff3 ;  !	 
++N+Sg+Acc:^WG VPXsuff3 ;  !	 
++N+Sg+Ill:^RVSH%>s CPXsuff ; !  
++N+Sg+Loc:^WG^RVSH%>st CPXsuff ;  !	 
++N+Sg+Com:^WG^RVSH%>in CPXsuff ;  !  
++N+Ess:^RVSH%>n CPXsuff ;               !  
++N:%> Nom_DER ;
++N:^WG^RVSH%> Gen_DER ; !
++N+Der1+Der/Dimin: S_KAANDAS ; !
+
+
+LEXICON 2RAAVHU !!= __@CODE@__ like 2LAAVU, but long vowel in cmp. 
 2RAAVHU_SG ;
 2RAAVHU_PL ;
 
@@ -1335,6 +1380,8 @@ LEXICON 2RAAVHU_SG !!= __@CODE@__
 +N: X_LAAVU_SG ;
 +N+Cmp/SgNom:%> Rhash ;
 +N+Cmp/SgGen:%> Rhash ; ! 
++N+Cmp/SgNom+Err/Orth:^RVSH%> Rhash ;
++N+Cmp/SgGen+Err/Orth:^RVSH%> Rhash ; ! 
 +N+Sg+Nom:^CLEN VPXsuff12nom ;  !
 +N+Sg+Gen:^CLEN VPXsuff12 ;  !	 
 +N+Sg+Acc:^CLEN VPXsuff12 ;  !	 
@@ -1491,7 +1538,8 @@ LEXICON 2VUARU !!= __@CODE@__ Blank Nom, Ill, CLEN Ess, otherwise WG RVSH, SVLOW
 LEXICON 2VUARU_SG !!= __@CODE@__
 +N:  X_VUARU_SG ;
 +N+Cmp/SgNom:^RVSH%> Rhash ;  
-+N+Cmp/SgGen:^WG^SVLOW%> Rhash ; ! tálualmai OBS
++N+Cmp/SgGen+Err/Orth:^WG^RVSH^SVLOW%> Rhash ; ! táloalmai 
++N+Cmp/SgGen:^WG^SVLOW%> Rhash ; ! tááloalmai OBS
 +N+Cmp/PlGen:^WG^SVLOW%>i Rhash ;
 +N+Sg+Nom:^CLEN VPXsuff12nom ;  !
 +N+Sg+Acc:^CLEN VPXsuff12 ;  !
