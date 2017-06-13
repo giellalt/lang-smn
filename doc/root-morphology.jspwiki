@@ -245,6 +245,12 @@ do no harm.
  | @U.CmpNone.TRUE@ | Combines with the two previous ones to block compounding
  | @P.CmpOnly.TRUE@ | Sets a flag to indicate that the word has passed R
  | @D.CmpOnly.FALSE@ | Disallow words coming directly from root.
+ | @D.CmpHyph.TRUE@ | Flag to control hyphenated compounds like proper nouns
+ | @U.CmpHyph.FALSE@ | Flag to control hyphenated compounds like proper nouns
+ | @U.CmpHyph.TRUE@ | Flag to control hyphenated compounds like proper nouns
+ | @C.CmpHyph@ | Flag to control hyphenated compounds like proper nouns
+ | @P.CmpHyph.TRUE@ | Flag to control hyphenated compounds like proper nouns
+ | @N.CmpHyph.TRUE@ | Flag to control hyphenated compounds like proper nouns
 
 
 Use the following flag diacritics to control downcasing of derived proper
@@ -253,6 +259,25 @@ these flags. There exists a ready-made regex that will do the actual down-casing
 given the proper use of these flags.
  | @U.Cap.Obl@ | Allowing downcasing of derived names: deatnulasj.
  | @U.Cap.Opt@ | Allowing downcasing of derived names: deatnulasj.
+
+
+ * @U.NeedsVowRed.OFF@ is used to force hyphenation/non-reduction: samediggi-
+ * @U.NeedsVowRed.ON@ is used to force reduction w/o hyphen: samedigge#xxx
+ * @C.NeedsVowRed@ Clearing this feature, so that it doesn't interfere with further compounding
+
+ * @P.Px.add@	
+ * @R.Px.add@	
+ * @P.Px.block@
+ * @D.Px.block@
+
+ * @R.SpellRlx.ON@ Flag used to tag spell-relax-analysed strings (and only those).
+ * @D.SpellRlx.ON@ Flag used to tag spell-relax-analysed strings (and only those).
+ * @C.SpellRlx@ Flag used to tag spell-relax-analysed strings (and only those).
+
+ * @R.SpaceCmp.ON@ Flag to tag compounds written with a space
+ * @D.SpaceCmp.ON@ Flag to tag compounds written with a space
+ * @C.SpaceCmp@ Flag to tag compounds written with a space
+
 
 !!!Basic lexica, pointing to the other lexicon files
 
