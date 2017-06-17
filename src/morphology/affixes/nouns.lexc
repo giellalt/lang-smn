@@ -79,9 +79,12 @@ LEXICON 2ALGA_SG !!= __@CODE@__
 
 
 LEXICON 2PUUVSAH_PL   !!= __@CODE@__
++N+Cmp/SgGen:^WG%> Rhash ; !
+2PUUVSAH_PL2 ; ! due to 2KUMPPI
+
+LEXICON 2PUUVSAH_PL2 
 +N: X_ALGA_PL ;
 +N+Cmp/SgNom: Rhash ; !
-+N+Cmp/SgGen:^WG%> Rhash ; !
 +N+Cmp/PlGen:^WG^RLEN%>i Rhash ; !
 +N+Pl+Gen:^WG%>id CPXsuff ;  !
 +N+Pl+Acc:^WG%>id CPXsuff ;  !
@@ -772,7 +775,8 @@ LEXICON X_VAHE_SG !!= __@CODE@__
 
 LEXICON 2KUMPPI  !!= __@CODE@__ i-i-i > 2SOLLA (?); MLO: no, difference in sg Com and pl Ill
 2FADDA_SG ;
-2PUUVSAH_PL ;
++N+Cmp/SgGen+Use/NG:^WG%> Rhash ; !
+2PUUVSAH_PL2 ; ! outsourcing Cmp/SgGenx
 
 !LEXICON X_KUMPPI    __@CODE@__ i-i-i > 2SOLLA (?); MLO: no, difference in sg Com and pl Ill
 !X_FADDA_SG ;
@@ -3006,18 +3010,23 @@ C_KUAVSUI ;
 
 
 LEXICON C_ALMAI  !!= __@CODE@__
-+N+Sg+Ill:j%>ân   K ;       		! almajân
-C_KUAVSUI ;
++N+Sg+Nom:i4^WG K ;   	! kuávsui  to get o:uá puásui OBS
++N+Cmp/SgNom:i4^WG%> Rhash ;   	! kuávsui
++N+Sg+Ill:j%>ân   K ;       	! almajân
++N+Sg+Ill+Use/NG:%>i   K ;      ! čuánnjái
+CUANJA_COMMON ;
 
 
 LEXICON C_KUAVSUI  !!= __@CODE@__
 +N+Sg+Nom:i4^WG K ;   	! kuávsui  to get o:uá puásui OBS
 +N+Cmp/SgNom:i4^WG%> Rhash ;   	! kuávsui
++N+Sg+Ill:%>i   K ;       			! čuánnjái
 CUANJA_COMMON ;
 
 LEXICON C_CUANJA  !!= __@CODE@__
 +N+Sg+Nom:^WG K ;   	! čuánjá
 +N+Cmp/SgNom:^WG%> Rhash ;  
++N+Sg+Ill:%>i   K ;       			! čuánnjái
 CUANJA_COMMON ;
 
 
@@ -3026,7 +3035,6 @@ LEXICON CUANJA_COMMON
 +N+Cmp/PlGen:%>i Rhash ;   	!  
 +N+Sg+Gen:^SV^SLEN K ;  		! čuánnjáá
 +N+Sg+Acc:^SV^SLEN K ;   		! čuánnjáá
-+N+Sg+Ill:%>i   K ;       			! čuánnjái
 +N+Sg+Loc:%>st K ;        			! čuánnjást
 +N+Sg+Com:%>in K; 				! čuánnjáin
 +N+Sg+Abe:^SV^SLEN%>ttáá K ;  ! čuánnjááttáá
