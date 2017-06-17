@@ -41,6 +41,7 @@ while(<>) {
 	s/^Maarit\+/!Maarit+/g ;
 	s/^Markku\+/!Markku+/g ;
 	s/^Matti\+/!Matti+/g ;
+	s/^Tanska\+/!Tanska+/g ;
 	s/^Turku\+/!Turku+/g ;
 	s/^Turkki\+/!Turkki+/g ;
 	
