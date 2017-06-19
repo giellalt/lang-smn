@@ -28,6 +28,8 @@ while(<>) {
 	s/Indreeide/Indre-eide/g ;
 	s/Lilleeng/Lille-eng/g ;
 	s/Simleelva/Simle-elva/g ;
+	s/\+CmpNP\/None//g ;
+	
 
 # names with Inari Saami inflection
 	s/^Aanaar\+/!Aanaar+/g ;
