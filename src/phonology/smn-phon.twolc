@@ -29,7 +29,7 @@ Alphabet
  Č Đ Ŋ Ŧ Š Ž  							   !!=  @CODE@
    %- 							   !!= * @CODE@
  ':0   !!= * @CODE@ this to zero
-  😱     !!= * @CODE@ the ghost sign used in compounding, does not work in hfst
+  ⎈     !!= * @CODE@ the ghost sign used in compounding, does not work in hfst
 
 !! !Accented letters, just in case
 
@@ -830,9 +830,9 @@ i:0 <=> \Vow: _ ä: Cns:+ i2:i %>    [i|i3:i|Cns]  ;  !RULE RV !! 1)  i:0 for i�
 
 
 "Different rules for ä:a, first vowel (or only vowel)"
-!! * __@RULENAME@__ \\  čääci:čassijn, läbži:labžijn
+!! * __@RULENAME@__ \\  čääci:čassijn, läbži:labžijn lään^RCi%>id
 ä:a <=>      _ [ä:|%^RV:] Cns:+ [i|â|a|á|u2:] (Cns:+)  ([%^WG: | %^CSH:]) (%^CLEN:) (%^CLEN:) %^VBACK: ([%^RVSH:|%^RLEN:])  (%^SLEN:) [%>|.#.]  ; !RULE RV 
-             _ [ä:|%^RV:] Cns:+ i            %^WG:  ([%^RVSH:|%^RLEN:])             %> [i:|i3:] ;  !RULE RV 
+             _ [ä:|%^RV:] Cns:+ i            (%^WG:)  ([%^RVSH:|%^RLEN:])             %> [i:|i3:] ;  !RULE RV 
              _ [ä:|%^RV:] Cns:+ i            %^WG:   [%^CLEN:|%^RLEN: ]  (%^SVLOW:) %> i: ;  !RULE RV !čääci:čassijn
              _     %^RV:  Cns:+ i            %^WG:            %^RLEN:               %> i: ; !RULE RV  !ä%^RVi4gi%^WG%^RLEN%>id
              _ ä:0        Cns:+ Vow:         %^WG:   %^CLEN:  %^RVSH:  %> i:  ;  !RULE RV !! čääci : čassijn
@@ -848,7 +848,7 @@ i:0 <=> \Vow: _ ä: Cns:+ i2:i %>    [i|i3:i|Cns]  ;  !RULE RV !! 1)  i:0 for i�
 
 
 "ää to aa, second vowel"
-!! * __@RULENAME@__ \\  á:o in pairs like kuátij -> koođij, säämi -> saamij čäällu%^VBACK%>m
+!! * __@RULENAME@__ \\  á:o in pairs like kuátij -> koođij, säämi -> saamij čäällu%^VBACK%>m lään^RCi%>id
 ä:a   <=> ä:  _ Cns:+ i               ( %^WG:)                  %> i: ; !RULE RV 
           ä:a _ Cns:+ i                %^WG: %^RLEN:          %> i: ; !RULE RV 
           ä:a _ Cns:+ :i   Cns: %^ÁI: %^WG: %^RLEN: [%>|.#.] ;  !RULE RV  !viäskár:veeskir  viäskár%^ÁI%^WG%^RLEN
@@ -1102,7 +1102,7 @@ o:e <=> u:y _ Cns:+ [e ([%^WG:|%^CLEN:]) %> e|i %^CSH: %> h] ; !RULE RV
 
 "Second syllable vowel change á to e or i in 3syll stems"
 !! * __@RULENAME@__ \\ puttás- > putes, triggers are ^ÁE and ^ÁI já%^RVhhá%^SVl%^ÁI%^WG%^RLEN%> pu5árrás%^ÁI%^WG%>umos
-Vx:Vy <=> Cns: _ (%^SV:) (Cns:)  Vz: (%^FCD:) %^WG: (%^CLEN:) ([%^RVSH:|%^RLEN:]) ([%^SVSH:|%^SLEN:])  [.#.| %> [# |😱  |i n | i d| n |d ]]   ;  !RULE SV  !no change when the word is added a new foot  \Syll 
+Vx:Vy <=> Cns: _ (%^SV:) (Cns:)  Vz: (%^FCD:) %^WG: (%^CLEN:) ([%^RVSH:|%^RLEN:]) ([%^SVSH:|%^SLEN:])  [.#.| %> [# |⎈  |i n | i d| n |d ]]   ;  !RULE SV  !no change when the word is added a new foot  \Syll 
           Cns: Vx: _ s  Vz: %^WG: ; !lohhes
        where Vx in ( á    á    a   )
              Vy in ( e    i    e   )
@@ -1256,7 +1256,7 @@ Vx:0 <=> Cns: _  ([%^ÁE:|%^ÁI:]) â Cns:* Triggers:*  [%>|.#.]   ;  !RULE SV
 
 "Suffix i5:j for lexicon APINA"
 !! * __@RULENAME@__ \\ salijn
-i5:j  <=> Cns i %> _ ; !RULE SV 
+i5:j  <=> Cns: i %> _ ; !RULE SV 
 
 
 "Suffix i5:0 and i5ä:e"
