@@ -1,4 +1,5 @@
 
+      I N A R I   S A A M I  D I S A M B I G U A T O R               
 
 
 
@@ -39,6 +40,7 @@ V
 Pron
 CS
 CC
+CC-CS
 Po
 Pr
 Pcle
@@ -50,8 +52,12 @@ CLB
 LEFT
 RIGHT
 WEB
-PUNCT 
+QMARK
+PPUNCT 
+PUNCT
 
+COMMA
+¶
 
 
 
@@ -88,7 +94,6 @@ Pl
 Cmp/SplitR
 Cmp/SgNom Cmp/SgGen
 Cmp/SgGen
-Cmp/Sh
 PxSg1
 PxSg2
 PxSg3
@@ -98,6 +103,7 @@ PxDu3
 PxPl1
 PxPl2
 PxPl3
+Px
 
 Comp
 Superl
@@ -131,11 +137,9 @@ PrsPrc
 Ger
 Sup
 Actio
-
+VAbess
 
 !Tags for clitic particles
-Foc/ge
-Foc/ge
 Foc/ge
 Foc/gen
 Foc/ges
@@ -165,22 +169,58 @@ Der/upmi
 Der/vuota
 Der/InchL
 Der/Dimin
+Der/Aadv
+Der/Date
+Der/Year
+Der/Hum
 <vdic>
 
 
+Err/Orth
+Err/Orth-spes
 
 
 
 !Semantic tags
 
+Sem/Act
+Sem/Ani
+Sem/Atr
+Sem/Body
+Sem/Clth
+Sem/Domain
+Sem/Feat-phys
+Sem/Fem
+Sem/Group
+Sem/Lang
+Sem/Mal
+Sem/Measr
+Sem/Money
+Sem/Obj
+Sem/Obj-el
+Sem/Org
+Sem/Perc-emo
+Sem/Plc
+Sem/Sign
+Sem/State-sick
+Sem/Sur
+Sem/Time
+Sem/Txt
+
+HUMAN
+
+HAB-ACTOR
+HAB-ACTOR-NOT-HUMAN
+
+
+PROP-ATTR
+PROP-SUR
 
 
 
-
-
-
-
-
+TIME-N-SET
+NOT-TIME
+TIME-N
 
 
 
@@ -233,6 +273,9 @@ Der/Dimin
 @SUBJ
 @<SUBJ
 @SUBJ>
+SUBJ
+SPRED
+OPRED
 @PPRED
 @APP
 @APP-N<
@@ -243,6 +286,12 @@ Der/Dimin
 @VOC
 @CVP
 @CNP
+OBJ
+<OBJ
+OBJ>
+<OBJ-OTHERS
+OBJ>-OTHERS
+SYN-V
 @X
 
 
@@ -327,15 +376,17 @@ NOT-PRFPRC
 
 !Sets for person
 
+SG1-V
+SG2-V
+SG3-V
+DU1-V
+DU2-V
+DU3-V
+PL1-V
+PL2-V
+PL3-V
 
-
-
-
-
-
-
-
-
+POSITIVE-V
 
 
 
@@ -922,8 +973,6 @@ The words in the set __N-PO__ can be both N and Po, the set takes that into acco
 
 
 
-
-
 * Sets denoting relations
 
 
@@ -931,9 +980,6 @@ The words in the set __N-PO__ can be both N and Po, the set takes that into acco
 
 
 !Miscellaneous sets
-
-
-
 
 
 
@@ -969,7 +1015,6 @@ The words in the set __N-PO__ can be both N and Po, the set takes that into acco
 !Syntactic sets
 
 ALLSYNTAG
-NON-APP
 
 ''These were the set types.''
 
@@ -977,24 +1022,33 @@ NON-APP
 
 
 
+* __Insertwww__ Inserts Sem/Adr to urls
+* __Attr__
 
+* __ArabNom__
+* __Arab1__
+* __ArabNomPlc__
 
-
-
+* __Arab__ rule for Apertium
 
 * Rule for adding <vdic> to verbs denoting verbal actions like: ... dadjá Aili Kestkitalo.
 
 
 
+* __muitalit__ adds <vdic> to language of telling and quoting
+
+
+* __PlcSur1__ The Linda Englad rule: name is Sur not Plc if having a surname
+
+* __PlcSur2__
 
 
 
+* __PlcSur3__
 
+* __PlcSur4__
 
-
-
-
-
+* __PlcSur5__	
 
 
 
@@ -1029,11 +1083,11 @@ NON-APP
 !Particular verbs
 
 
+* __NotOrdIfABBR__
 
 
 
-
-
+* __PrsPrcIfA__
 
 
 
@@ -1050,7 +1104,7 @@ NON-APP
 *Removes __PropPl__, but problems with names as Davviriikkaid Ráđi, there we want Prop Pl
 
 
-
+* __PronNotProp__
 
 
 
@@ -1061,10 +1115,9 @@ NON-APP
 
 * __PropAttr__ Removes (Prop Attr), but not if to the right is Prop or Ord OR ABBR 
 
-* __PropSur__ Selects (Prop Sem/Sur) if finite verb to the left. Immediately to the right is Sem/Fem OR Sem/Mal
 
 
-
+* __r__
 
 
 
@@ -3102,7 +3155,10 @@ The rules are no documented yet
 
 * __LocdynamicVR, LocdynamicVL__ select Pl Loc if there is a DYNAMIC-V and the noun itself is not a TOOL, ABSTR-TOOL, WRITING-TOOL, CONCEPT, HUMAN, VEHICLE, buorre, Der/NomAc
 
+* __LocdynamicVR__ selects Pl Loc
 
+
+* __LocdynamicVL__ selects Pl Loc
 
 
 
@@ -3118,8 +3174,13 @@ Most actio can be both tool and event.
 
 !Movement-verbs
 
+* __ComboahtitR__ selects Sg Com 
 
+* __ComboahtitV-__ selects Sg Com for animate eller pron
 
+* __ComMovemVL__  selects Sg Com over Pl Loc for a movement verb 
+
+* __ComMovemVR__ selects Sg Com over Pl Loc for a movement verb
 
 
 
@@ -3133,6 +3194,7 @@ Most actio can be both tool and event.
 
 
 
+* __LocCop__ selects Pl Loc if event
 
 
 * Coordination
@@ -3141,6 +3203,7 @@ Most actio can be both tool and event.
 
 
 
+* __miiPlAcc__ selects acc noun if mii or kii to the left
 
 * __AccTV1NoC__ was Eckhard's late version of AccTV1 without C. We will look at this.
 
@@ -3187,6 +3250,8 @@ Most actio can be both tool and event.
 !!Finite or not
 
 !Finite
+
+* __r2906__ Sg2 if Sg2
 
 
 
@@ -3246,8 +3311,6 @@ Most actio can be both tool and event.
 * __allPrtSg2__ removes PrtSg2 if PrsPl3
 
 
-!!Rules for a special infinitive construction
-!!More finite verbs
 !!Passive
 !!Infinitive
 !!Present Participle
@@ -3304,10 +3367,9 @@ Most actio can be both tool and event.
 
 
 
+
 * __cleanSemClass__ cleans up if a word has more semclasses. This is just a start.
 
-
-!!!VERBS
 
 
 
@@ -3315,13 +3377,23 @@ Most actio can be both tool and event.
 
 !!!Removing Err/Orth
 
+Denne regelen fjerner Err/Orth når det er samme lemma, sjøl om morfologien er forskjellig.
+
+
+
+* __errsub__ removes err/orth forms
+
+* __errsub2__ and one more err/orth
 
 
 
 
 
+!!!Substitute rules
 
-
+These 12 substitute rules add the <smn> language code to all words, to govern 
+their behaviour in the subsequent cg files. The rules are removed when this
+file is ported to Apertium.
 
 
 
