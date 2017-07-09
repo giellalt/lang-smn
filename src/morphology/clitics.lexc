@@ -17,13 +17,17 @@
 
 ! %># for clitics to differ them from # in compounds.
 
-LEXICON G  !!= * __@CODE@__ for ijgo, jiemge
+LEXICON G  !!= * __@CODE@__ for ijgo, jiemge, but not *kielâgo
 +Foc/ge:%>#ge  ENDLEX ;
 +Foc/go:%>#go   ENDLEX ;
-K ; 
+KG ; 
 
-LEXICON K !!= * __@CODE@__ all clitics except go, ge
-  :%> ENDLEX ; ! clitic-less forms ! %>  because .#. doesn't function as it should in twolc-rules
+LEXICON K !!= *  __@CODE@__ for kielâgin, but not *ijgo, *jiemge
++Foc/gin:%>#gin  ENDLEX ;
+KG ;
+
+LEXICON KG !!= * __@CODE@__ all clitics except go, ge ... and except gin
+:%> ENDLEX ; ! clitic-less forms ! %>  because .#. doesn't function as it should in twolc-rules
 +Qst+Use/NG:%>#uv   ENDLEX ;
 +Qst:%>#%-uv ENDLEX ;
 +Foc/uv:%>#%-uv ENDLEX ;
@@ -31,7 +35,6 @@ LEXICON K !!= * __@CODE@__ all clitics except go, ge
 +Foc/gas:%>#gâs  ENDLEX ;
 +Foc/ges:%>#ges  ENDLEX ;
 +Foc/gis:%>#gis  ENDLEX ;
-+Foc/gin:%>#gin  ENDLEX ;
 +Foc/han:%>#hân  ENDLEX ;
 +Foc/kin:%>#kin  ENDLEX ;
 +Foc/ba:%>#ba   ENDLEX ;
