@@ -170,15 +170,34 @@ ATTR ;
 +A:%> A_VUOTA ;
 
 
-LEXICON HUMO !!= __@CODE@__ directing to X_NJUNE, attr. humos
+!LEXICON HUMO !!= __@CODE@__ directing to X_NJUNE, attr. humos
+!+A+Attr:^WG%>s K ;
+!+A: X_NJUNE ;
+!+A:b COMPclen ;	! hummoob; humobeht
+!+A:p P-COMP-ERR-ORTH ;
+!+A:^WG%> MUS ;
+!+A+Cmp/Attr:^WG%>s ATTR_R ;
+!+A+Cmp/SgNom: R ;
+!+A:%> A_VUOTA ;
+
+
+LEXICON PASE !!= __@CODE@__ directing to X_NJUNE via HUMO_REST, attr. pase                  
++A+Attr: K ;
+HUMO_REST ;
+
+LEXICON HUMO !!= __@CODE@__ directing to X_NJUNE via HUMO_REST, attr. humos                  
 +A+Attr:^WG%>s K ;
+HUMO_REST ;
+
+LEXICON HUMO_REST
 +A: X_NJUNE ;
-+A:b COMPclen ;	! hummoob; humobeht
++A:b COMPclen ; ! hummoob; humobeht                                             
 +A:p P-COMP-ERR-ORTH ;
 +A:^WG%> MUS ;
 +A+Cmp/Attr:^WG%>s ATTR_R ;
 +A+Cmp/SgNom: R ;
 +A:%> A_VUOTA ;
+
 
 LEXICON JULME !!= __@CODE@__ directing to X_OKKO, attr. julmes
 +A+Attr:^WG%>s K ;
