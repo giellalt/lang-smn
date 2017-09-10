@@ -25,6 +25,9 @@
 # after lookup2cg: vislcg3 -g ~/main/langs/smn/src/syntax/valency.cg3 |
 
 
+# Puoh skiäru lavluh já saalmah láá munjin mottoomnáál persovnliih já vááimuvuálááh. # ($1lavluuh)
+
+
       # =========================================== #
       #      Short table of contents                #
       # =========================================== #
@@ -1898,6 +1901,7 @@ SET CCCOMMA = CC OR COMMA ;
 LIST &err-agr = &err-agr ;
 LIST &err-gen-po = &err-gen-po ;
 LIST &err-no-conneg = &err-no-conneg ;
+LIST &err-orrood-inf = &err-orrood-inf ;
 
 MAPPING-PREFIX = & ;
 
@@ -1911,6 +1915,8 @@ ADD:err-agr (&err-agr) TARGET V IF (-1C Pron + Sg2)(0 V)(NOT 0 Sg2);
 ADD:err-agr (&err-agr) TARGET V IF (-1C Pron + Pl1)(0 V)(NOT 0 Pl1);
 ADD:err-agr (&err-agr) TARGET V IF (-1C Pron + Pl2)(0 V)(NOT 0 Pl2);
 
-ADD:err-gen-po (&err-gen-po) TARGET Po IF (NOT -1 Gen)(0 Po);
+ADD:err-gen-po (&err-gen-po) TARGET Po IF (NOT -1 Gen OR ("?"))(0 Po);
 
-	
+ADD:err-orrood-inf (@err-orrood-inf) TARGET Inf IF (-1 ("orroođ") + Ind)(0 Inf);	
+	#$  Mun orom leđe ennuv velgus anarâškielân
+	#ok Mun orom lemin ennuv velgus anarâškielân
