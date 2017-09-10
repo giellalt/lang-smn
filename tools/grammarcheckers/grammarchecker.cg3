@@ -1907,7 +1907,7 @@ MAPPING-PREFIX = & ;
 
 SECTION
 
-ADD:err-no-conneg (&err-no-conneg) TARGET V IF (-1 Neg) (NOT *-2 ConNeg)(0 V + Ind)(NOT *1 ConNeg);
+ADD:err-no-conneg (&err-no-conneg) TARGET V IF (-1 Neg) (NOT *-2 ConNeg)(0 V + Ind OR Cond)(NOT *1 ConNeg BARRIER CLB);
 
 ADD:err-agr (&err-agr) TARGET V IF (-1C Sg + Nom)(0 V)(NOT 0 Sg3);
 ADD:err-agr (&err-agr) TARGET V IF (-1C Pron + Sg1)(0 V)(NOT 0 Sg1);
@@ -1915,7 +1915,7 @@ ADD:err-agr (&err-agr) TARGET V IF (-1C Pron + Sg2)(0 V)(NOT 0 Sg2);
 ADD:err-agr (&err-agr) TARGET V IF (-1C Pron + Pl1)(0 V)(NOT 0 Pl1);
 ADD:err-agr (&err-agr) TARGET V IF (-1C Pron + Pl2)(0 V)(NOT 0 Pl2);
 
-ADD:err-gen-po (&err-gen-po) TARGET Po IF (NOT -1 Gen OR ("?"))(0 Po);
+ADD:err-gen-po (&err-gen-po) TARGET Po IF (NOT -1 Gen OR ("?"))(0C Po);
 
 ADD:err-orrood-inf (@err-orrood-inf) TARGET Inf IF (-1 ("orroođ") + Ind)(0 Inf);	
 	#$  Mun orom leđe ennuv velgus anarâškielân
