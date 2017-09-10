@@ -14,12 +14,15 @@
 # giellatekno@hum.uit.no or divvun@hum.uit.no
 
 # ==================================================================== #
-#!! !!!       I N A R I   S A A M I  D I S A M B I G U A T O R               
+#!! !!!       I N A R I   S A A M I  G R A M M A R   C H E C K E R
 # ==================================================================== #
 # ==================================================================== 
 
 #  Sámi language technology 2003-2017, UiT The arctic University of Norway #
 
+# echo "Sun ij puátá." | preprocess --abbr=$GTHOME/langs/smn/tools/tokenisers/abbr.txt | lookup -flags mbTT -utf8 ~/main/langs/smn/src/analyser-disamb-gt-desc.xfst | lookup2cg | vislcg3 -g ~/main/langs/smn/src/syntax/disambiguation.cg3 -t | vislcg3 -g ~/main/langs/smn/tools/grammarcheckers/grammarchecker.cg3 -t 
+
+# after lookup2cg: vislcg3 -g ~/main/langs/smn/src/syntax/valency.cg3 |
 
 
       # =========================================== #
@@ -1894,8 +1897,13 @@ SET CCCOMMA = CC OR COMMA ;
 
 LIST &err-agr = &err-agr ;
 LIST &err-gen-po = &err-gen-po ;
+LIST &err-no-conneg = &err-no-conneg ;
+
+MAPPING-PREFIX = & ;
 
 SECTION
+
+ADD:err-no-conneg (&err-no-conneg) TARGET V IF (-1 Neg) (NOT *-2 ConNeg)(0 V + Ind)(NOT *1 ConNeg);
 
 ADD:err-agr (&err-agr) TARGET V IF (-1C Sg + Nom)(0 V)(NOT 0 Sg3);
 ADD:err-agr (&err-agr) TARGET V IF (-1C Pron + Sg1)(0 V)(NOT 0 Sg1);
