@@ -20,6 +20,34 @@
 
 #  Sámi language technology 2003-2017, UiT The arctic University of Norway #
 
+# ---------------------- #
+#   Development setup:   #
+# ---------------------- #
+#
+# cd $GTHOME/langs/smn
+# ./autogen.sh
+# ./configure --enable-apertium --with-hfst --enable-syntax --enable-grammarchecker --enable-tokenisers --enable-alignment --enable-reversed-intersect
+# make
+# cd tools/grammarcheckers
+# make dev
+#
+# ---------------------- #
+#   Then edit/test as:   #
+# ---------------------- #
+#
+# emacs grammarchecker.cg3  # and C-c C-i / C-c C-c if you have cg-mode installed
+# echo "Sun ij puátá." | sh modes/smngram.mode  # from the terminal
+#
+# ---------------------- #
+#   Other debug-pipes:   #
+# ---------------------- #
+#
+# ls modes/
+#
+# ---------------------- #
+
+
+# The pipeline (but use modes, above)
 # echo "Sun ij puátá." | preprocess --abbr=$GTHOME/langs/smn/tools/tokenisers/abbr.txt | lookup -flags mbTT -utf8 ~/main/langs/smn/src/analyser-disamb-gt-desc.xfst | lookup2cg | vislcg3 -g ~/main/langs/smn/src/syntax/disambiguation.cg3 -t | vislcg3 -g ~/main/langs/smn/tools/grammarcheckers/grammarchecker.cg3 -t 
 
 # after lookup2cg: vislcg3 -g ~/main/langs/smn/src/syntax/valency.cg3 |
