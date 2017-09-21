@@ -1932,6 +1932,7 @@ LIST &err-gen-po = &err-gen-po ;
 LIST &err-no-conneg = &err-no-conneg ;
 LIST &err-orrood-inf = &err-orrood-inf ;
 LIST &err-ext-agr = &err-ext-agr ;
+LIST &err-ext-vagr = &err-ext-vagr ;
 
 MAPPING-PREFIX = & ;
 
@@ -1945,10 +1946,12 @@ ADD:err-agr (&err-agr) TARGET V IF (-1C Pron + Sg2 + Nom)(0 V)(NOT 0 Sg2);
 ADD:err-agr (&err-agr) TARGET V IF (-1C Pron + Pl1 + Nom)(0 V)(NOT 0 Pl1);
 ADD:err-agr (&err-agr) TARGET V IF (-1C Pron + Pl2 + Nom)(0 V)(NOT 0 Pl2);
 
-ADD:err-gen-po (&err-gen-po) TARGET Po IF (NOT -1 Gen OR ("?"))(0C Po);
+ADD:err-gen-po (&err-gen-po) TARGET Po IF (-1 N OR Pron)(NOT -1 Gen)(0C Po);
 
 ADD:err-orrood-inf (@err-orrood-inf) TARGET Inf IF (-1 ("orroođ") + Ind)(0 Inf);	
 	#$  Mun orom leđe ennuv velgus anarâškielân
 	#ok Mun orom lemin ennuv velgus anarâškielân
 	
 ADD:err-ext-agr (&err-ext-agr) TARGET V IF (-1 Loc)(0 Sg3)(1 N + Pl + Nom);
+
+ADD:err-ext-vagr (&err-ext-vagr) TARGET N IF (-2 Loc)(-1 Sg3)(0 N + Pl + Acc);
