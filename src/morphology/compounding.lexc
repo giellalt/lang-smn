@@ -35,8 +35,8 @@ LEXICON Rreal !!≈ @CODE@ - This initial recursive/compounding lexicon adds fla
 LEXICON RrealAfterCmpNFlags !!≈ @CODE@ - coming from Rreal
           +Cmp#:#  nounflag       ; ! to flags and root lexica
  +Cmp/Hyph+Cmp#:#- nounflag       ; ! to flags and root lexica via hyphen
-         +Cmp-#:#- ProperNoun-smn ; ! to smn propernouns
-         +Cmp-#:#- ProperNoun     ; ! to other propernouns 
+         +Cmp/Hyph+Cmp#:#- ProperNoun-smn ; ! to smn propernouns
+         +Cmp/Hyph+Cmp#:#- ProperNoun     ; ! to other propernouns 
     +Cmp/SplitR:-  #              ; ! split forms
 !         +Cmp#:#  #              ; ! For turning off compounding during testing
 
@@ -52,8 +52,8 @@ LEXICON Rhyph !!≈ @CODE@ - This initial recursive/compounding lexicon adds fla
  @P.CmpFrst.FALSE@@P.CmpPref.FALSE@@D.CmpLast.TRUE@@D.CmpNone.TRUE@@U.CmpNone.FALSE@@P.CmpOnly.TRUE@ Rhyph_after_cmp_flags ;
 
 LEXICON Rhyph_after_cmp_flags !!≈ @CODE@ - from Rhyph
-      +Cmp-#:-# NounRoot ;
-      +Cmp-#:-# Numeral  ; ! NRK-2
+      +Cmp/Hyph+Cmp#:-# NounRoot ;
+      +Cmp/Hyph+Cmp#:-# Numeral  ; ! NRK-2
  +Cmp/SplitR:-  #        ;
 
 LEXICON RProp !!≈ @CODE@ - This initial recursive/compounding lexicon adds flags to
@@ -61,11 +61,11 @@ LEXICON RProp !!≈ @CODE@ - This initial recursive/compounding lexicon adds fla
  @P.CmpFrst.FALSE@@P.CmpPref.FALSE@@D.CmpLast.TRUE@@D.CmpNone.TRUE@@U.CmpNone.FALSE@@P.CmpOnly.TRUE@ RProp_after_cmp_flags ;
 
 LEXICON RProp_after_cmp_flags                  !!≈ - @CODE@ from RProp
-      +Cmp-#nommâ:»»»-nommâs  DER-SAS        ; ! Jovnâ-nommâsâš
-     +Cmp-#merkkâ:»»»-merkkâs DER-SAS        ; ! Saab-merkkâsâš
-           +Cmp-#:-#          ProperNoun     ;
-           +Cmp-#:-#          ProperNoun-smn ;
-           +Cmp-#:-#          NounRoot       ;
+      +Cmp/Hyph+Cmp#nommâ:»»»-nommâs  DER-SAS        ; ! Jovnâ-nommâsâš
+     +Cmp/Hyph+Cmp#merkkâ:»»»-merkkâs DER-SAS        ; ! Saab-merkkâsâš
+           +Cmp/Hyph+Cmp#:-#          ProperNoun     ;
+           +Cmp/Hyph+Cmp#:-#          ProperNoun-smn ;
+           +Cmp/Hyph+Cmp#:-#          NounRoot       ;
  @D.CmpHyph.TRUE@+Use/-Spell+Cmp#:@D.CmpHyph.TRUE@#  NounRoot  ; ! We don't want Proper-Noun compounds without hyphen in the speller.
       +Cmp/SplitR:-           #              ;
 
@@ -74,5 +74,5 @@ LEXICON RNum !!≈ @CODE@ - This initial recursive/compounding lexicon adds flag
  @P.CmpFrst.FALSE@@P.CmpPref.FALSE@@D.CmpLast.TRUE@@D.CmpNone.TRUE@@U.CmpNone.FALSE@@P.CmpOnly.TRUE@ RNum_after_cmp_flags ;
 
 LEXICON RNum_after_cmp_flags !!≈ @CODE@ - going to Noun, should it be to NounRoot?
- +Cmp-#:-# Noun ; ! For Num Cmp Noun, vi vil ikke ha Num Cmp Num
+ +Cmp/Hyph+Cmp#:-# Noun ; ! For Num Cmp Noun, vi vil ikke ha Num Cmp Num
 
