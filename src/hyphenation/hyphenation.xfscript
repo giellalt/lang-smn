@@ -12,9 +12,12 @@
 ! Other licensing options are available upon request, please contact
 ! giellatekno@hum.uit.no or feedback@divvun.no
 
-! ========================= !
-! Hyphenator for North Sámi !
-! ========================= !
+! ========================== !
+! Hyphenator for Inari Saami !
+! ========================== !
+
+! This file is based upon the North Saami one, and might be
+! cleaned up here and there.
 
 echo <<defining Cns and Vow...>>
 
@@ -23,7 +26,7 @@ define Vow       [ a | á | e | i | o | u | y | æ | ø | å | ä | ö |
 é | ó | ú | í | à | è | ò | ù | ì | ë | ü | ï | â | ê | ô | û | î | ã | ý
 É | Ó | Ú | Í | À | È | Ò | Ù | Ì | Ë | Ü | Ï | Â | Ê | Ô | Û | Î | Ã | Ý ] ;
 
-define 2ndVow [ e | a | u | o | i | á | y | ø | E | A | U | O | I | Á | Y | Ø ] ;
+define 2ndVow [ e | a | u | o | i | á | y | ø | ä | E | A | U | O | I | Á | Y | Ø | Ä ] ;
 
 !define 3dVow [ u | U ] ;
 
@@ -46,19 +49,20 @@ define Oslash   [ ø | Ø ] ; ! Renamed from Ø to avoid non-ASCII chars
 define UI  [ u | U | i | I ] ;
 
 
-define UAAdipht [ u á | U á | U Á ] ;
-define IEdipht [ i e | I e | I E ] ;
-define UOdipht [ u o | U o | U O ] ;
-define EAdipht [ e a | E a | E A ] ;
-define OAdipht [ o a | O a | O A ] ;
-define OUdipht [ o u | O u | O U ] ;      ! jour-na-lis-sta
-define AUdipht [ a u | A u | A U ] ;      ! fau-na, Lauv-sjø-vo-la, Kår-ve-jau-re ok.
-define EUdipht [ e u | E u | E U ] ;      ! leut-nán-ta
-define AEdipht [ a e | A e | A E ] ;      ! lae-sta-di-us,
+define UAAdipht     [ u á | U á | U Á ] ;
+define IEdipht      [ i e | I e | I E ] ;
+define UOdipht      [ u o | U o | U O ] ;
+define EAdipht      [ e a | E a | E A ] ;
+define OAdipht      [ o a | O a | O A ] ;
+define OUdipht      [ o u | O u | O U ] ; ! jour-na-lis-sta
+define AUdipht      [ a u | A u | A U ] ; ! fau-na, Lauv-sjø-vo-la, Kår-ve-jau-re ok.
+define EUdipht      [ e u | E u | E U ] ; ! leut-nán-ta
+define AEdipht      [ a e | A e | A E ] ; ! lae-sta-di-us,
 define OslashYdipht [ ø y | Ø y | Ø Y ] ; ! nøyt-rála  ! Renamed from ØYdipht to avoid non-ASCII chars
-define OEdipht [ o e | O e | O E ] ; ! goe-the
+define OEdipht      [ o e | O e | O E ] ; ! goe-the
 define IOslashdipht [ i ø | I ø | I Ø ] ; ! skiøld     ! Renamed from IØdipht to avoid non-ASCII chars
-define IOdipht [ i o | I o | I O ] ; ! skiold, nation
+define IOdipht      [ i o | I o | I O ] ; ! skiold, nation
+define IAEdipht     [ i ä | I ä | I Ä ] ; ! iä
 
 
 
@@ -68,7 +72,8 @@ define IOdipht [ i o | I o | I O ] ; ! skiold, nation
 
 
 define dipht [ IEdipht | UAAdipht | UOdipht | EAdipht | OAdipht | OUdipht | AUdipht |
-               EUdipht | AEdipht | OslashYdipht | OEdipht | IOslashdipht | IOdipht] ;
+               EUdipht | AEdipht | OslashYdipht | OEdipht | IOslashdipht | IOdipht |
+               IAEdipht ] ;
 
 !define tripht [ EAUtripht | IEUtripht ] ;
 
@@ -137,7 +142,7 @@ define palatal     [..] -> %^ || Vow (Cns) Cns _ d j ,
                                  Vow (Cns) Cns _ l j ,
                                  Vow (Cns) Cns _ n j ;
 !                                 Vow           _ n j ; !o^lju, bo^njan etc, removed: Vow _ d j , Vow  _ l j (causes o^ljju) , until we get decision from SGL, commented out, see comment on line 103 (TO)
-define s2cns       [..] -> %^ || Vow [ Cns | i ]            ( %> ) _ [s|š] Cnss  Vow ; ! mái-stit (if commented out: máis-tit)
+!define s2cns       [..] -> %^ || Vow [ Cns | i ]            ( %> ) _ [s|š] Cnss  Vow ; ! mái-stit (if commented out: máis-tit)
 define s2cnswg     [..] -> %^ || Vow [ Cns | i ] [s|š] Cnss ( %> ) _ Cnss ( %> ) Vow ; !máist^tán
 define 3cns        [..] -> %^ || Vow [ Cns | i ]       Cns  ( %> ) _ Cns  ( %> ) Vow ; !biil^la
 !define foreign    [..] -> %^ || Vow                        ( %> ) _ g r         Vow ; !para^gráfa
@@ -190,7 +195,7 @@ afterlong
 .o. unvoicedwg
 .o. dissnas
 .o. palatal
-.o. s2cns
+!.o. s2cns
 .o. s2cnswg
 .o. 3cns
 !.o. foreign
@@ -219,7 +224,7 @@ afterlong
 
 
 ! For quick compilation, comment the following line in:
-!save h.fst ;
+save h.fst ;
 ! Then, at the command line, give this command:
 ! xfst -utf8 < src/hyph-sme.txt
 ! As a result, a temporary h.fst file will be saved in sme/, it can be called
