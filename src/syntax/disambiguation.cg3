@@ -669,7 +669,7 @@ LIST ADV-NOT-PROP = "Ain" "Anne" "Diego" "Dieppe" "Enge" "Galle" "Haga"
 
 SET ADV-NOT-OTHER-POS = ADV-NOT-V OR ADV-NOT-N OR ADV-NOT-PROP ;
 
-LIST MANNEL = "maŋa" "maŋa"  ;
+LIST MANNEL = "maŋa"  ;
 
 
 #!! !Sets of elements with common syntactic behaviour
@@ -2096,12 +2096,6 @@ REMOVE:VerbIll VFIN (0 (N Ill) LINK -1 (Dem Ill)) ;
 	#$ Huksenteknihkalaš konstrukšuvnnat čatnasit njuolga elektrihkalaš rusttegiidda ja daidda doaimmaide.
 
 
-#!!  * __ABBR__ Removes ABBR in favour of Adv, Pcle or Pron, e.g. "tij" when there is no punctuation
-REMOVE:ABBR ABBR IF (0 Adv OR Pcle OR Pron) ;
-
-
-#!! * __FocbaDu3__ removes Foc/ba when Du3 verbs like máhttiba and Adv like juoba and Prop like Jáhkoba (Acc) 
-REMOVE:Focba Foc/ba IF (0 Du3 OR ("jo") OR Prop) ;
 
 #!! der
 
@@ -2134,7 +2128,7 @@ SELECT:Aifeambbo A - Px IF (-1 ("eenâb") OR ("eenâb"))(NEGATE 0 Pl);
 
 #!! !!Adverbs
 
-#!! * IFF __buotAdv__ : buot Adv in front of Superl
+#!! * IFF __buotAdv__ : buot Adv in front of Superl ok smn
 IFF:buotAdv ("puoh" Adv)  IF ((1 Superl) OR (-1 Acc LINK 2 Inf) OR (-1 TRANS-V LINK 2 ("tot" Acc) OR (Dem Acc)) OR (-1 COPULAS LINK 2 (N Ess)) OR (-1 REAL-V + IV LINK NOT 0 Pron LINK 2 COMMA OR EOS) OR (-1 (Nom Pl) LINK 2 VFIN + Pl3)) ;
  	#$ Buot buoremus lea ieš vuolgit.
  	#$ Son dáhtui buot dan ollašuvvat, vai eatnat olbmot bisošedje heakkas.	
@@ -2167,8 +2161,8 @@ SELECT:miätáV VFIN IF (NEGATE *-1 VFIN BARRIER S-BOUNDARY)(NEGATE -1 Gen LINK 
 
 
 #!! * __oddasitAdv__
-SELECT:oddasitAdv1 ("uđđâsist" Adv)  IF (-1 V) ;
-	#$ Elia gal boahtá dahkat buot fas ođđasit.
+SELECT:oddasitAdv1 ("uđđâsist" Adv)  IF (*-1 V BARRIER NOT-ADV-PCLE ) ;
+	#$ Elia gal dahká buot fas ođđasit.
 
 	
 
@@ -2177,11 +2171,10 @@ SELECT:oddasitAdv2 ("uđđâsist" Adv) IF (*-1 Nom BARRIER S-BOUNDARY)(*1 NOT-AU
 	#$ Eat mii sáhte ođđasit ásahit vuođu.
 
 #!! * __oktanAdv__
-SELECT:oktanAdv Adv IF (0 ("oovtâst") OR ("oovtâst"))(*1 Com BARRIER NP-BOUNDARY);
+SELECT:oktanAdv Adv IF (0 ("oovtâst"))(*1 Com BARRIER NP-BOUNDARY);
 	## Divššohasas lea vuoigatvuohta iežas journála geahččat oktan mildosiiguin. 
 
 #!! * __ovttasAdv__
-REMOVE:ovttasColl ("oovtâst" Coll) ;
 REMOVE:oktaLoc ("ohtâ" Num Loc) - Attr IF (NEGATE 1 COPULAS + Pl3 OR COPULAS + Sg3) ; 
 
 SELECT:ovttasAdv1 ("oovtâst" Adv) IF (-1 (Pl Nom))(1 PL3-V);
@@ -2232,15 +2225,7 @@ REMOVE:Killrecipr Recipr IF ;
 
 
 
-REMOVE:vfin VFIN ((0 (N Nom) LINK 1 (":") OR Rel LINK -2 BOS) OR (0 (N Gen) LINK 1 ("guovttos"))) ;
-	#$ Ohcci: Per M. Buljo , Guovdageaidnu
-	#$ Ohcci geas lea earenoamáš gelbbolašvuohta sáhttá árvvoštallojuvvot seniorráđđeaddin.
-	#$ Ohcci guovttos áigguiga ovdánahttit áibbas ođđa ja konkrehta buktagiid .
-	#$ Álbmot mii ballá ii leat friija álbmot.
-	#% Ohcci áhči!
-
-
-LIST N-NOT-V = "deasta" "viessu" "kielâ" "lávlla" "muddu" "nieidâ" "škovlâ" "kuávlu" ;
+LIST N-NOT-V = "viste" "kielâ" "lávlla" "muddu" "nieidâ" "škovlâ" "kuávlu" ;
 
 REMOVE Imprt (0 N LINK *1 ("leđe") - Imprt BARRIER REAL-V OR S-BOUNDARY)  ;
 	#$ Giela boahtteáigái lea erenoamáš dehálaš ahte nuorain stuorát proseantaoassi go gaskaleamos buolvvas máhttet hállat kymrigiela .
@@ -2306,7 +2291,7 @@ SELECT:puattid ("puáttiđ") IF (0 ("pađđeeđ"));
 
 	# guovddáš 
 	# - - - - -
-SELECT:r693 Attr IF (0 ("kuávdáš"))(1 N LINK NOT 0 TIME OR PLACE); 
+SELECT:r693 A IF (0 ("kuávdáš"))(1 N LINK NOT 0 TIME OR PLACE); 
 	## Guovddáš doaibmabidju lea vuođđudit sámegiela álgooahpahusa.
 
 
