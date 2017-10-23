@@ -48,7 +48,7 @@
 
 
 # The pipeline (but use modes, above)
-#  echo "Sun ij puátá." | hfst-tokenise —giella-cg tools/tokenisers/tokeniser-gramcheck-gt-desx.pmhfst | vislcg3 -g src/syntax/disambiguation.cg3 -t | vislcg3 -g tools/grammarcheckers/grammarchecker.cg3 -t
+#  echo "Sun ij puátá." | hfst-tokenise —giella-cg tools/tokenisers/tokeniser-gramcheck-gt-desc.pmhfst | vislcg3 -g src/syntax/disambiguation.cg3 -t | vislcg3 -g tools/grammarcheckers/grammarchecker.cg3 -t
 
 
 # after lookup2cg: vislcg3 -g ~/main/langs/smn/src/syntax/valency.cg3 |
@@ -1933,14 +1933,16 @@ LIST &err-no-conneg = &err-no-conneg ;
 LIST &err-orrood-inf = &err-orrood-inf ;
 LIST &err-ext-agr = &err-ext-agr ;
 LIST &err-ext-vagr = &err-ext-vagr ;
-
+LIST &err-pl-obj = &err-pl-obj ;
+LIST &err-extv-sg = &err-extv-sg ;
+LIST &err-halfcongruence = &err-halfcongruence ;	
 MAPPING-PREFIX = & ;
 
 SECTION
 
 ADD:err-no-conneg (&err-no-conneg) TARGET V IF (-1 Neg) (NOT *-2 ConNeg)(0 V + Ind OR Cond)(NOT 0 ConNeg)(NOT *1 ConNeg BARRIER CLB);
 
-ADD:err-agr (&err-agr) TARGET V IF (-1C Sg + Nom)(0 V)(NOT 0 Sg3);
+ADD:err-agr (&err-agr) TARGET V IF (-1C Sg + Nom)(0 VFIN)(NOT 0 Sg3)(NEGATE 0 ConNeg LINK *-1 Neg)(NOT *-2 CC LINK -1 Sg + Nom);
 ADD:err-agr (&err-agr) TARGET V IF (-1C Pron + Sg1 + Nom)(0 V)(NOT 0 Sg1);
 ADD:err-agr (&err-agr) TARGET V IF (-1C Pron + Sg2 + Nom)(0 V)(NOT 0 Sg2);
 ADD:err-agr (&err-agr) TARGET V IF (-1C Pron + Pl1 + Nom)(0 V)(NOT 0 Pl1);
@@ -1955,3 +1957,11 @@ ADD:err-orrood-inf (@err-orrood-inf) TARGET Inf IF (-1 ("orroođ") + Ind)(0 Inf)
 ADD:err-ext-agr (&err-ext-agr) TARGET V IF (-1 Loc)(0 Sg3)(1 N + Pl + Nom);
 
 ADD:err-ext-vagr (&err-ext-vagr) TARGET N IF (-2 Loc)(-1 Sg3)(0 N + Pl + Acc);
+
+ADD:err-pl-obj (&err-pl-obj) TARGET N IF (-1 TV)(0 N + Pl + Nom)(NOT -1 PrfPrc LINK *-1 N BARRIER VFIN);
+
+ADD:err-extv-sg (&err-extv-sg) TARGET V IF (0 ("leđe"))(1 N + Pl + Acc);
+ADD:err-extsubj-acc (&err-extsubj-acc) TARGET N IF (-1 ("leđe") + Sg3 OR Pl3)(0 N + Pl + Acc);
+
+ADD:err-halfcongruence (&err-halfcongruence) TARGET Dem IF (0 Sg + Loc)(1 N + Sg + Loc)(NOT 0 Loc + Attr); # Loc Attr > Gen?
+ADD:err-extv-sg (&err-extv-sg) TARGET V IF (0 ("leđe" + Sg3))(1 N + Pl + Nom);
