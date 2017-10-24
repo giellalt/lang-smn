@@ -65,8 +65,8 @@ endif # CAN_FOMA
 
 # We need to specify -gt- to avoid applying the filters to the raw fst:
 analyser-gt-desc.%: analyser-gt-desc.tmp.%                    \
-					filters/remove-norm-comp-tags.%           \
 					filters/remove-derivation-position-tags.% \
+					filters/remove-norm-comp-tags.%           \
 					filters/remove-halflong-dotbelow.%        \
 					filters/remove-letter-acute-accent.%
 	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
@@ -145,6 +145,7 @@ analyser-disamb-gt-desc.%: analyser-disamb-gt-desc.tmp.% \
 		 save stack $@\n\
 		 quit\n" | $(XFST_TOOL)
 
+# This filter should either be removed or rewritten: halflong below etc is out
 # Special case for the dict analyser, since it follows the same filename
 # pattern as the raw fst:
 analyser-dict-gt-desc.%: analyser-dict-gt-desc.tmp.% \
@@ -167,12 +168,14 @@ analyser-dict-gt-desc.%: analyser-dict-gt-desc.tmp.% \
 # We need to specify -gt- to avoid applying the filters to the raw fst:
 define giella_generators
 generator-gt-%.$(1): generator-gt-%.tmp.$(1)                \
+					filters/remove-norm-comp-tags.$(1)             \
 					filters/remove-derivation-position-tags.$(1) \
 					filters/remove-halflong-dotbelow.$(1)   \
 					filters/remove-letter-acute-accent.$(1) \
 					filters/make-optional-lang_hom-tags.$(1)
 	$$(AM_V_XFST_TOOL)$$(PRINTF) "read regex                  \
 				@\"filters/make-optional-lang_hom-tags.$(1)\" \
+			.o. @\"filters/remove-norm-comp-tags.$(1)\"           \
 			.o. @\"filters/remove-derivation-position-tags.$(1)\" \
 			.o. @\"$$<\"                                      \
 			.o. @\"filters/remove-letter-acute-accent.$(1)\"  \
