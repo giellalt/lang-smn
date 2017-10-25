@@ -2686,8 +2686,8 @@ LEXICON EVEN_IND_ID  !!= ** __@CODE@__
 +Prs+Pl2:i^RVSH%>vetteđ K ;
 +Prs+Pl3:i%>h K ;
 
-+Prt+Sg1:i^VBACK%>m K ;  !uo
-+Prt+Sg2:i^VBACK%>h K ;
++Prt+Sg1:i^CLEN^VBACK^RVSH%>m K ;  !uo juohim ! ^VBACK
++Prt+Sg2:i^CLEN^VBACK^RVSH%>h K ;	!uo	juohih
 +Prt+Sg3:i^WG^VBACK^RLEN%>i K ;
 +Prt+Du1:i^WG^CLEN^VBACK^RVSH%>im K ;
 +Prt+Du2:i^WG^CLEN^VBACK^RVSH%>id K ;
@@ -2949,7 +2949,6 @@ LEXICON 2SYLL_VYELGID_V  !!= * __@CODE@__ like VYEIJID, but -i for reduced forms
 
 ! different from vyeijid
 +Ind+Prs+ConNeg:i^WG^RLEN K ;
-
 +Imprt+Sg2:i^WG^RLEN K ;  !
 +Imprt+ConNeg:i K ;
 
@@ -3032,6 +3031,51 @@ LEXICON EVEN_IND_VYEIJID !!= ** __@CODE@__
 +Prt+Pl2:i^WG^VBACK^RLEN%>id K ;
 +Prt+Pl3:i^CLEN^VBACK^RVSH%>i3 K ;
 
+
+! start 3
+LEXICON 2SYLL_JYEHID_IV
++V+IV: 2SYLL_JYEHID_V ;
+LEXICON 2SYLL_JYEHID_TV
++V+TV: 2SYLL_JYEHID_V ;
+
+LEXICON 2SYLL_JYEHID_V  !!= * __@CODE@__  5 verbs
+! common with vyelgid
+2SYLL_VYEIJID_VYELGID_COMMON ;
+
+! Different from vyelgid and from vyeijid
++Ind+Prs+ConNeg:i^WG^RVSH K ;
++Imprt+Sg2:i^WG K ;  !
++Imprt+ConNeg:i^WG K ;
++Ind: EVEN_IND_JYEHID ;
++Der4+Der/InchL:i^WG%>škyett4 4SYLL_KYETTID_DER ;
+:á^CSH DER_MAS ;
++Ger:i^WG%>dijn K ;
++Ger+PxSg1:i^WG^RVSH%>dijnân K ;
++Ger+PxSg2:i^WG^RVSH%>dijnâd K ;
++Ger+PxSg3+Err/Orth:i^WG^RVSH%>dijnes K ;
++Ger+PxSg3:i^WG^RVSH%>dijnis K ;
++Ger+Err/Orth:i^WG^RVSH%>dijn K ;
+
+LEXICON EVEN_IND_JYEHID !!= ** __@CODE@__
++Prs+Sg1:á^WG^VHIGH%>m K ;   !
++Prs+Sg2:á^WG^VHIGH%>h K ;   !
++Prs+Sg3:á^CSH^VHIGH K ;              !
++Prs+Du1:e^CLEN^RVSH%>en K ;
++Prs+Du2:i^CSH^RVSH%>vettee K ;
++Prs+Du3:i%>v K ;
++Prs+Pl1:i%>p K ;
++Prs+Pl2:i^CSH^RVSH%>vetteđ K ;
++Prs+Pl3:i^CSH%>h K ;
+
++Prt+Sg1:i^VBACK^RLEN%>m K ;
++Prt+Sg2:i^VBACK^RLEN%>h K ;
++Prt+Sg3:i^WG^VBACK^RLEN%>i K ;
++Prt+Du1:i^WG^CLEN^VBACK^RLEN%>im K ; ! Should have -vv- juovvijm
++Prt+Du2:i^WG^CLEN^VBACK^RLEN%>id K ; ! Should have -vv- juovvijd
++Prt+Du3:i^WG^CLEN^VBACK^RLEN%>in K ; ! Should have -vv- juovvijn
++Prt+Pl1:i^WG^VBACK^RLEN%>im K ;
++Prt+Pl2:i^WG^VBACK^RLEN%>id K ;
++Prt+Pl3:i^CLEN^VBACK^RVSH%>i3 K ;
 
 
 LEXICON 2SYLL_VYEIJID_VYELGID_COMMON  !!= * __@CODE@__
