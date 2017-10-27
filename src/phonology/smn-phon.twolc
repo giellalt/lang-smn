@@ -1182,6 +1182,14 @@ Vx:e <=> Cns _ %> [j [Vow - â]|e] ; !RULE SV  !not hit karri>jân !
 "Stem vowel â > e change before e"
 â:e <=> _ (%^WG:) (%^RLEN:|%^CLEN:|%^SLEN:) %^SVLOW: %> e ;  !RULE SV 
 
+"Optional stem vowel â > e change before e"
+â:e  =>  Syll Syll _ [l l | d d | t :t ] [ e %> [e|h] | i %> [m|h|i3:]] ; 
+
+! posâlâddeh/posâleddeh
+! hámiin prs d1 (een), p3 (eh)
+!        prt s1 (im), s2 (ih), p3 (ii)
+! galgá leat sihke e ja â 3. stávvalis
+
 "Stem vowel change e:i before suffix"
 !! * __@RULENAME@__ \\ 
 e:i <=> Cns: _  [Triggers: - %^EA:]*  %> i: ;  !RULE SV 
