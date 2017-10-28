@@ -72,7 +72,7 @@ Literal quotes and angles must be escaped (cf morpheme boundaries further down):
  * %^VHIGH:0    = High rootvow for verbs: e>iä, a>o, o>u, ää>áá, ee>iä, note also: ie>iä, ye>uá, uo>uá
  * %^VBACK:0    = Back rootvow for verbs: ä(ä)>a(a), á>aa, uá>o, ye>uo
  * %^BLOCK:0    = This symbol just to block otherwise triggering contexts
-
+ * %^IUML:0    = â to e in front of high suffixes 
 
 Trigger ordering in twolc and lexc, from left to right:
 
@@ -120,7 +120,7 @@ Sets
  *  Geminate = b d g p h t k c f z l m n ŋ r s š v  ;    
  *  Sgm = Vow Cns ;							    
  *  NotSuffixBorder = Vow %^FCD Cns %^CSH %^WG %^CLEN %^SLEN %^RLEN %^SVLOW %^RVSH %^ÁE %^ÁI %^EA %^SVSH ;  
- *  Triggers =   %^FCD %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^ÁI %^SVSH %^VHIGH %^VBACK ;  
+ *  Triggers =   %^FCD %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^ÁI %^SVSH %^VHIGH %^VBACK %^IUML ;  
  *  StemCns = b b3 d d3 g g2 g3 h h2 h3 		    
             j l m m2 m3 m8 n n8 n2 ŋ r s  ;      
 
@@ -276,6 +276,10 @@ We want to keep it short, but we want the code to work Thus, we document.
 
 * __va^RVskâm^FCD^RLEN __
 * __vaaskâ000 __
+
+* __njuolgâd^FCD^RVSH __
+* __njuolgâ00 __
+
 
  * __Final m in stems, smm to sm  __ \\ 
 
@@ -720,6 +724,8 @@ a rules
 
 * __so^RVllâ^WG^RLEN^SVLOW>in __
 * __soo0lá000>in __
+
+
 
 
 * __Stem vowel change e:i before suffix__ \\ 
