@@ -87,7 +87,7 @@ i6:0 !!= * @CODE@ a fake vowel, to get WG rules to function, e.g. kyehtlov (kyeh
 %^VHIGH:0   !!= * @CODE@ = High rootvow for verbs: e>iä, a>o, o>u, ää>áá, ee>iä, note also: ie>iä, ye>uá, uo>uá
 %^VBACK:0   !!= * @CODE@ = Back rootvow for verbs: ä(ä)>a(a), á>aa, uá>o, ye>uo
 %^BLOCK:0   !!= * @CODE@ = This symbol just to block otherwise triggering contexts
-
+%^IUML:0   !!= * @CODE@ = â to e in front of high suffixes 
 
 !! Trigger ordering in twolc and lexc, from left to right:
 
@@ -141,7 +141,7 @@ Sets
  Geminate = b d g p h t k c f z l m n ŋ r s š v  ;  !!= * @CODE@  
  Sgm = Vow Cns ;							   !!= * @CODE@ 
  NotSuffixBorder = Vow %^FCD Cns %^CSH %^WG %^CLEN %^SLEN %^RLEN %^SVLOW %^RVSH %^ÁE %^ÁI %^EA %^SVSH ; !!= * @CODE@ 
- Triggers =   %^FCD %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^ÁI %^SVSH %^VHIGH %^VBACK ; !!= * @CODE@ 
+ Triggers =   %^FCD %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^ÁI %^SVSH %^VHIGH %^VBACK %^IUML ; !!= * @CODE@ 
  StemCns = b b3 d d3 g g2 g3 h h2 h3 		   !!= * @CODE@ 
            j l m m2 m3 m8 n n8 n2 ŋ r s  ;     !!= @CODE@ 
 
@@ -1179,12 +1179,14 @@ Vx:e <=> Cns _ %> [j [Vow - â]|e] ; !RULE SV  !not hit karri>jân !
 !!€ so^RVllâ^WG^RLEN^SVLOW>in 
 !!€ soo0lá000>in
 
-"Stem vowel â > e change before e"
+"Stem vowel â > e change before e"o
 â:e <=> _ (%^WG:) (%^RLEN:|%^CLEN:|%^SLEN:) %^SVLOW: %> e ;  !RULE SV 
 
 "Optional stem vowel â > e change before e"
-â:e  =>  Syll Syll _ [l l | d d | t :t ] [ e %> [e|h] | i %> [m|h|i3:]] ; 
+!â:e  =>  _ [l l | d d | t :t ] [ e %> [e|h] | i %> [m|h|i3:]] ; 
+â:e  <=>  _ [l l | d d | t :t ] [ e %^IUML: %> [e|h] | i %^IUML: %> [m|h|i3:]] ; 
 
+! posâlâdd>eh
 ! posâlâddeh/posâleddeh
 ! hámiin prs d1 (een), p3 (eh)
 !        prt s1 (im), s2 (ih), p3 (ii)
