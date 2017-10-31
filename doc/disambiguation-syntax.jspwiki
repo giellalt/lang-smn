@@ -73,7 +73,6 @@ Rel
 Coll
 NomAg
 Prop
-Allegro
 Arab
 Romertall
 
@@ -87,7 +86,7 @@ Ill
 Loc
 Com
 Ess
-Ess
+Par
 Sg
 Du
 Pl
@@ -158,14 +157,9 @@ Foc/son
 Der/PassL Der/PassS
 Der/NomAg
 NomAg
-Der/alla
 Der/d
-Der/Car
-Der/Car
 Der/lasj
 Der/NomAct
-Der/st
-Der/upmi
 Der/vuota
 Der/InchL
 Der/Dimin
@@ -177,22 +171,14 @@ Der/Hum
 
 
 Err/Orth
-Err/Orth-spes
 
 
 
 !Semantic tags
 
-Sem/Act
 Sem/Ani
-Sem/Atr
-Sem/Body
-Sem/Clth
-Sem/Domain
-Sem/Feat-phys
 Sem/Fem
 Sem/Group
-Sem/Lang
 Sem/Mal
 Sem/Measr
 Sem/Money
@@ -450,16 +436,6 @@ POSITIVE-V
 !Sets for adverbs that have lookalikes
 Here come some adverbs that have identical twins in other POS. 
 If these are found in Adv contexts, we treat them as adverbs.
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1023,7 +999,6 @@ ALLSYNTAG
 
 
 * __Insertwww__ Inserts Sem/Adr to urls
-* __Attr__
 
 * __ArabNom__
 * __Arab1__
@@ -1044,11 +1019,9 @@ ALLSYNTAG
 
 
 
-* __PlcSur3__
 
 * __PlcSur4__
 
-* __PlcSur5__	
 
 
 
@@ -1224,7 +1197,6 @@ der
 
 
 
-
 puáttiđ, not pađđeeđ (Prt: Sg3 poođij, Du1 poođijm, Du2 poođijd, Du3 poođijn, Pl1 poođijm, Pl2 poođijd)
 * puáttiđ = tulla, pađđeeđ =käyttäytyä_levottomasti_(vasovasta_vaatimesta)
 * We will make rules for pađđeeđ when we see examples of its use.
@@ -1276,16 +1248,11 @@ First select Px, then remove all remaining Px
 
 * Set with adjectives, which are documented to have Px in our corpus
 
-* __APxifN__ Remove A Px if N:
-
 * __PxAlone__ Remove Px if it is only word in the sentence, and not a typical px-term
 
 
 
-* __APx__ Remove A Px if Adv of A Ess og A Attr og PrfPrc or Loc
 
-
-* __PxLocIll__ Remove Px if viesus vissui or similar
 
 * __NPxPrfPrc__ Remove Px if PrfPrc with  leat to the left
 
@@ -1307,12 +1274,6 @@ First select Px, then remove all remaining Px
 
 * __PxSg1coordLast__ for the last word of a coordination
 
-* __ReflPxSg1__ lean oahppan alddán
-
-
-* Nouns: __PxSg2__ if SG2-V. The rule needs no disambiguation. The DON-constraint because of homonymi with (N Pl)
-
-* __PxSg2Acc__ if  TV to the right
 
 * __PxSg2AccImprt__ if  TV Imprt to the left
 
@@ -1320,16 +1281,6 @@ First select Px, then remove all remaining Px
 
 * __NotPxSg2__ if no Sg2 
 
-* __PxSg2GenPo__ if in front of Po, after til verb
-
-* __PxSg2Loc__ after habitivconstruction
-
-* __atnitPx__ removes Px for for atnit muittus, gudnis, árvvus, čalmmis
-
-* Nouns: __PxSg3Acc__ if Sg3 or Sg to the left
-
-
-* Nouns: __PxSg3Acc__ if Sg3 or Sg to the left
 
 * Nouns: __PxSg3AccPrfPrc__ if PrfPrc and Sg3 to the left
 
@@ -1338,7 +1289,6 @@ First select Px, then remove all remaining Px
 
 
 
-*  __PxSg3GenPo1__ in front of Po, to the left of the owner
 
 *  __PxSg3GenPo2__ in front of Po, to the left of the owner
 
@@ -1557,7 +1507,6 @@ Mostly we map both @CNP and @CVP, then we select @CNP, after that we remove them
 
 * __killAllahtenotCS__ All other occurrences of "et" are CSs.
 
-
 * __vaiCCCNP__ vai as CC or CS
 
 * __vaiCC__ remove vai as CC 
@@ -1601,6 +1550,7 @@ Mostly we map both @CNP and @CVP, then we select @CNP, after that we remove them
 
 
 
+* __CVPMiella__
 
 
 
@@ -1612,8 +1562,9 @@ Mostly we map both @CNP and @CVP, then we select @CNP, after that we remove them
 
 * __CVPAccAdv__ Acc @CNP Adv Acc	
 
+* __CVP__
 
-
+* __CS__
 
 
 * __killAllCNP__ removes all remaining @CNP
@@ -1624,7 +1575,6 @@ Mostly we map both @CNP and @CVP, then we select @CNP, after that we remove them
 
 
 * __Interr__ selects interrogative pronouns in questions
-
 
 * __InterrIfPot__ selects interrogative pronouns in potential sentences, and after that we remove the remaining Interr
 
@@ -1658,41 +1608,63 @@ Mostly we map both @CNP and @CVP, then we select @CNP, after that we remove them
 
 * __NumGenPo__ Selects Gen if you are Num and there is a Gen following the first Gen to the right ''gávcci máná njuni ovddas'' 
 
+* __jagiGen__
+
+* __Locattr__
+
+* __Illattr__
+
+* __LocIllattr__
+
+* __numPlAccn__
 
 
 
 * __WWNumOrdIllAttr__ selects Ill Attr and Loc Attr for numerals and ordinals
 
 
+* __WWNumOrdAttr__
+
+* __galleIndef___
+
+* __galleIndef__
+
+* __galleNum__
+
+
+* __nubbiGen__
+
+* __nubbiIndef__
+
+
+* __nubbiOrd__
+
+* __nubbiOrdManu__
+
+
+* __nubbiOrdSuperl__
+
+* __nnubbiIndefIll__
+
+* __nnubbiOrdLex__
+
+* __nnubbiIndefOkta__
+
+* __nnubbiOrdEss__
+
+* __nnubbiIndefAcc__
 
 
 
+* __nnubbiAttr__
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+* __nKillnubbiOrd__
 
 
 
 !!Indefinite pronouns
 The rules are not documented yet
 
-
-
-
-* __IndefAttr1__ Selects (Indef Attr) 	
 
 
 
@@ -1708,16 +1680,16 @@ The rules are not documented yet
 
 * __NoIndefGen__ Removes (Pron Gen Indef) or (Pron Acc Indef) if intransitive mainverb to the left and end of sentence to the right ''muhto gávdnojit maid eará''
 
-* __IndefAttr4__ Selects Indef if you are Interr, and to the left is ''jus''
 
 
 
+* __IndefNotAdv__
 
 
+* __IndefNotAdvL__
 
 
-
-
+* __MiiPl__
 
 
 
@@ -1727,7 +1699,7 @@ The rules are not documented yet
 
 
 
-* sierra
+* __sierraAAttr__
 
 
 
@@ -1737,6 +1709,7 @@ The rules are not documented yet
 
 !Attribute disambiguation
 
+* __AttrTitle__
 
 * __AttrVFIN__ removes Attr in front of VFIN
 
@@ -1770,21 +1743,22 @@ The rules are not documented yet
 
 
 
-
 * __AdvManimus__ 
 
 
 
 * __AttrAdv__ 
 
+* __Cmp/SplitRA__
 
-* __Cop__ 
+* __CopANom__ 
 
 
 * __ANom__  removes A Nom
 
 * __AAttr__  selects A Attr
 
+* __OrdAttr__
 
 
 * __AdvN__ removes Adv   
@@ -1835,18 +1809,35 @@ The rules are not documented yet
 
 * __Wr1776xc__ selects (A Sg Nom) 
 
+* __Wr1777c__
 
 
+* __Wr1778xc__
+
+* __Wr1779xc__
+
+* __Wr1780c__
+
+* __Wr1781c__
+
+* __Wr1782__
 
 
+* __Wr1784__
 
+* __Wr1785__
 
+* __Wr1786xc__
 
+* __Wr1787c__
 
+* __Wr1788xc__
 
+* __Wr1789xc__
 
+* __Wr1791xc__
 
-
+* __Wr1796xc__
 
 
 
@@ -1859,12 +1850,19 @@ The rules are not documented yet
 
 !!And now some rules for adverbs that modify adjectives
 
+* __AdvModA2__
 
+* __AdvModA3__
 
+* __AdvModA4__
 
+* __NomAg__
 
+* __Nom__
 
+* __Nom__
 
+* __vfin__
 
 
 
@@ -2071,13 +2069,13 @@ The rules are no documented yet
 
 * __<SUBJInf4__
 
-* __<SUBJInf5__
 
 * __<SUBJInf6__
 
 * __SUBJ>Inf__
 
 !(@<SPRED)  target Inf
+
 
 
 
@@ -2151,7 +2149,7 @@ The rules are no documented yet
 
 !(@+FMAINV) and (@+FAUXV) and (@-FAUXV)
 
-* __+FMAINVaux__ AUX-OR-MAIN verbs     
+
 
 
 * __+FMAINVcop__ COPULAS verbs     
@@ -2225,11 +2223,12 @@ The rules are no documented yet
 
 
 
+
 * __-FMAINVConNeg__  to ConNeg
 
 * __-FMAINVConNeg__  to ConNeg Aux after PrfPrc
 
-* __-FMAINVConNegCop__  to ConNeg COPULAS   
+
 
 
 
@@ -2301,7 +2300,6 @@ The rules are no documented yet
 
 
 
-
 !!!NOUNS
 
 !!!CASE DISAMBIGUATION
@@ -2345,7 +2343,6 @@ The rules are no documented yet
 
 
 
-* __SEMgenEss__ Removes Acc if there is Gen + Ess, like ''dálu eamidin''
 
 
 * __SEMXxr2071__ Removes Gen: Nobody can possess a Proper name? Except from (Pron Pers) and Sem/Fem OR Sem/Mal
@@ -2474,7 +2471,6 @@ The rules are no documented yet
 
 * __SEMnom__ (modifies Nom) removes Acc if sentence boundary or adv to the left. To the right is Nom followed by a transitive verb and Acc ''stálu beana njoallu háviid''
 
-* __deaivatGenlusa__ selects genitive when used like deaivat Gen lusa/lahkosii even if the verb deaivat belongs to the strict TV set.
 
 
 !Genitive in place adverbials ROUTE
@@ -2494,7 +2490,6 @@ The rules are no documented yet
 
 
 
-* __GenBeaivi2__ selects Gen if you are beaivi with the end of the sentence or comma to your right. Restrictions to the left ''riegádanbeaivvi,''
 
 
 * __GenJuohke__ selects Gen if juohke or seamma to the left ''juohke dálvvi''
@@ -2542,9 +2537,8 @@ The rules are no documented yet
 
 
 
+
 ! Reflexive pronouns: acc or gen
-
-
 
 
 
@@ -2674,7 +2668,6 @@ The rules are no documented yet
 
 * __ALU4__ Selects Acc if you are Num and to your right Num Acc followed by MEASURE OR ALU/A ''guokte golbma mehtara alu'' 
 
-* __ALU5__ Selects Gen if Num to the right, followed by Num, followed by ALU/A 
 
 
 * __NumTimeMannel__ Selects Acc for Num before TIME MANNEL
@@ -2715,7 +2708,7 @@ The rules are no documented yet
 
 * __NumAccIV__ Selects Acc 
 
-* __NumAge__ Selects Acc for Sg numerals if a time unit to the right is followed by boaris ''vihtta jagi boaris''
+
 
 
 * __NumAccPlRight__ Selects Acc when transitive verb to the left. You are Num Pl and to your right is Acc ''goarui viđaid gápmagiid''
@@ -2802,26 +2795,15 @@ The rules are no documented yet
 
 * __NomSentFin__ Selects Nom if you are Acc or Gen and EOS is to yoru right. Copulas is found to the left 
 
-* __jr_sr__ Selects (ABBR Nom) if you are ''jr'' or ''sr'' and first one to your left is (Sem/Sur Nom)
-
-!!Accusative before @COMP-CS<
-!!Accusative before some A
-!!Accusative sentence-finally
-
-
 
 
 !!Nominative and accusative
 
 
 
-
 * __NAr2266__ Selects Nom
 
-*__NomIFInitialThenSg3__ Selects Nom if -1 BOS and 1 oblique / Sg3 lookalike. Works in fragments.
 
-
-* __NAAccEllipsis1__ Selects Acc	
 
 * __NAAccEllipsis2__ Selects Acc
 
@@ -2948,9 +2930,7 @@ The rules are no documented yet
 
 * __NDr2364__ Selects (Sg Nom)
 
-* __NDr2366__ Selects Nom
 
-* __NDr2367__ Selects Nom
 
 * __NDr2368__ Selects (N Pl Nom)
 
@@ -3061,72 +3041,11 @@ The rules are no documented yet
 * __NDr2426__ Removes Nom, but not Actio 
 
 
-* __NDr2427__ Removes Nom
 
 * __ND__ Removes Nom	
 
 
 
-!!Comitative rules
-
-!NP internal disambiguation of Com
-
-* __PlSg-W__ removes Pl when SG-WORD
-
-
-* __LocPlur__ removes Sg when PLURALIZER or OASSI OR HEADOFPARTS
-
-
-* __NumCom__ selects Num Com: guvttiin nieiddain if not plural-noun like: guvttiin heajain
-
-* __ComDemNum1__ selects N Com if there is a Dem or Num or buorre + Com to the left: Exception for plural-nouns  
-
-* __Comburiin__ selects N Com if there is a safe N Com to the right: buriin vugiin  
-
-
-* __ComCOM-A__ selects Sg Com after COM-A
-
-* __ComComAdv1__ selects Com after COM-ADV or juohke
-
-
-
-!Disambiguation based upon verb valency
-
-
-* __LocLocVL1, LocLocVR__ select Pl Loc if there is a LOC-V
-
-
-* __LLocAccLocVL__ select Pl Loc if there is a ACC-LOC-V
-
-* __Loc-v__ select Sg Loc if LOC-V to the left in the clause. No mainverb to the right in the clause
-
-!Disambiguation of Com depending on Adv or certain verb or N
-
-* __ComComAdv1__ selects Com for ACTOR OR ACTOR-ROLE after og before COM-ADV 
-
-
-* __ComComplPl-N__ selects Sg Com for HUMAN, ORGANIZATION, INSTITUTION, STATE, EVENT-TOOL-ACTIVITY, láhka when there is a COM-COMPL-N to the left or right
-
-* __Comoktavuohta__ selects Sg Com when oktavuohta is to the left or right
-
-* __ComDU-NR__ selects Sg Com after Pers dualis: moai áhčiin, munno vieljain
-
-
-* __ComHumanOrg__ selects HUMAN Sg Com after HUMAN, ORGANIZATION, INSTITUTION
-
-!Animate nouns
-* __ComAnimate__ selecst Sg Com if there is an animate to the left, and the noun itself is not a ABSTR-TEXT,  TEXT,  PLACE,  INDUSTRY,  EDUCATION,  INSTITUTION,  ANIMATE
-
-* __ComProp__ selecst Prop Sg Com for person names. Exception for habitive constructions.
-
-
-
-!HAB-ACTOR in habitive-constructions
-
-* __LocHab1, LocHab2__ select Pl when HAB-ACTOR
-
-
-* __LocHab1, LocHab2__ select Pl when HAB-ACTOR
 
 !Disambiguation based upon verb valency 
 
@@ -3209,26 +3128,11 @@ Most actio can be both tool and event.
 
 * __genNom__ removes Acc
 
-* __makkárAcc__ selects Acc after makkár, if not time or route
-
 
 * __DemAcc__ selects Den Acc after the last acc-disambiguation of nouns
 
 * __KillAcc__ Removes Acc if you are Gen 
 
-
-
-
-
-
-!Locative and comitative - Disambiguation based upon coordination
-
-
-
-
-
-
-!And then we remove the remaining Sg Com analysis
 
 
 
@@ -3248,12 +3152,9 @@ Most actio can be both tool and event.
 * __r2906__ Sg2 if Sg2
 
 
-
-
-
 !Not Finite
 
-
+* __r2824__ 
 
 
 
@@ -3268,7 +3169,6 @@ Most actio can be both tool and event.
 !!Verbs according to person and number
 
 !Sg1 - First person singular
-
 
 
 
@@ -3297,10 +3197,6 @@ Most actio can be both tool and event.
 * __Sg2LeftDon__ selects Sg2 in Rel phrase if don to the left of it
 
 
-* __allSg2leat__ removes Sg2 if leat Prs Pl3
-
-
-* __allPrsPl3__ removes PrsPl3 if PrtSg2 initially
 
 * __allPrtSg2__ removes PrtSg2 if PrsPl3
 
@@ -3326,10 +3222,8 @@ Most actio can be both tool and event.
 
 
 
-
-
-
 !!!NOMEN
+
 
 !!Case rules
 
@@ -3340,6 +3234,7 @@ Most actio can be both tool and event.
 !!Adverbs and adjectives
 
 !!!NOUNS
+
 
 
 
@@ -3361,7 +3256,6 @@ Most actio can be both tool and event.
 
 
 
-
 * __cleanSemClass__ cleans up if a word has more semclasses. This is just a start.
 
 
@@ -3376,8 +3270,6 @@ Denne regelen fjerner Err/Orth når det er samme lemma, sjøl om morfologien er 
 
 
 * __errsub__ removes err/orth forms
-
-* __errsub2__ and one more err/orth
 
 
 
