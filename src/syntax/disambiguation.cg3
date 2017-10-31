@@ -3063,7 +3063,7 @@ SELECT:WWNumOrdIllAttr (Loc Attr) IF (0 NUM  - Sem/Date - Sem/Year OR Ord OR ("n
 REMOVE:WWNumOrdAttr (Num Attr) + ADVLCASE OR Indef + Attr + ADVLCASE   IF (NEGATE *1 ADVLCASE + N BARRIER NOT-NPMOD-ACC OR Ord) ;	
 	#$ Nuppi vuoru goalmmát minuvttas Anette nivkalii čiehkačievččastaga čábbát njuolga mollii.
 
-#!! * __galleIndef___
+#!! * __galleIndef__
 SELECT:galleIndef ("kalle" Indef)  IF (*-1 Neg BARRIER S-BOUNDARY) ;
 	#$ Eaige sámiid ássanguovllus leat galle gieldda, mat...
  
@@ -5049,7 +5049,7 @@ REMOVE:AccINF-V Acc (0 Gen LINK -1 INF-V)(1 N + ADVLCASE LINK 1 (IV Inf)) ;
 
  # CC in the preceding rule because of coordination after Pr. The following rule compensates for it.
 
-#!! * __theAccusative___ selects Acc if you are a N or Pron with CC to your right, followed by Acc and a CLB or VFIN ''gápmagiid ja vuoddagiid, sii geavahedje''
+#!! * __theAccusative__ selects Acc if you are a N or Pron with CC to your right, followed by Acc and a CLB or VFIN ''gápmagiid ja vuoddagiid, sii geavahedje''
 SELECT:theAccusative Acc IF (NEGATE *-1 Pr OR Num BARRIER NOT-NPMOD)(0 NOTIME OR Pron)(NEGATE 0 Nom OR Loc OR Adv OR NOT-REAL-V OR (Prop Plc)) (*1 ("já") OR ("dahje") BARRIER NOT-ADV - ABBR LINK *1 Acc BARRIER NOT-NPMOD LINK *1 CLB OR VFIN OR Attr - ("gaskaneas") OR @CVP BARRIER NOT-ADV-PCLE LINK NEGATE *1 Gen BARRIER NOT-NPMOD)
 (NEGATE -1 COMMA LINK -1 Gen)(NEGATE -1 Gen LINK -1 COMMA LINK -1 Gen);
 	#$ Muhtun sámi biktasiid, nugo gápmagiid ja vuoddagiid, sii geavahedje guhkit, gitta 1960-logu rádjai.
