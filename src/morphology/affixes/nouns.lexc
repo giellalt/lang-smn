@@ -1357,7 +1357,7 @@ LEXICON 2STAALU !!= __@CODE@__ like 2LAAVU, but long vowel in cmp gen.
 
 LEXICON 2STAALU_SG !!= __@CODE@__
 +N: X_LAAVU_SG ;
-+N+Cmp/SgNom:%> Rhash ;
++N+Cmp/SgNom:^RVSH%> Rhash ;
 +N+Cmp/SgGen:^RVSH%> Rhash ; ! 
 +N+Sg+Nom:^CLEN VPXsuff12nom ;  !
 +N+Sg+Gen:^CLEN VPXsuff12 ;  !	 
@@ -2213,9 +2213,9 @@ LEXICON 3KIELES  !!= __@CODE@__  (to be unified?)
 
 LEXICON 3KIELES_SG !!= __@CODE@__
 +N:  X_KIELES_SG ;
-+N+Cmp/SgNom:^WG%> Rhash ;
-+N+Cmp/SgGen:^WG%> Rhash ;
-+N+Cmp/SgNom:^WG^RLEN%> Rhyph ;
++N+Cmp/SgNom:^WG^RVSH%> Rhash ;
++N+Cmp/SgGen:^WG^RVSH%> Rhash ;
++N+Cmp/SgNom:^WG^RVSH%> Rhyph ;
 +N+Ess:^WG^RLEN%>in CPXsuff ;   !kielâsin 
 +N:^WG^RLEN%> Nom_DER ;
 +N:%> Gen_DER ; 
@@ -2274,7 +2274,7 @@ LEXICON 3JAAVVIL !!= __@CODE@__
 
 LEXICON 3JAAVVIL_SG !!= __@CODE@__ 
 +N: X_JAAVVIL_SG ;
-+N+Cmp/SgNom:^WG^CLEN^RLEN%> Rhash ;
++N+Cmp/SgNom:^WG^RVSH%> Rhash ;
 +N+Cmp/SgGen:^SLEN%> Rhash ;
 
 LEXICON 3JAAVVIL_PL !!= __@CODE@__ 
@@ -2505,7 +2505,7 @@ LEXICON 3VEESKIR_SG
 +N+Ess:%>in K ;   ! viäskárin 
 +N+Par:%>id K ;	! viäskárid
 +N+Cmp/SgNom:^WG^RVSH%> Rhash ;
-+N+Cmp/SgGen:%> Rhash ;
++N+Cmp/SgGen:^WG^RVSH%> Rhash ;
 +N+Sg+Gen: CPXsuff ;  ! 
 +N+Sg+Acc: CPXsuff ;  ! pirrâsis
 +N+Sg+Ill:s CPXsuff ;  ! pirrâsâsân
@@ -2543,8 +2543,8 @@ LEXICON 3PIIVTAS !!= __@CODE@__ WG for NEP,  no triggers for the other cases
 
 LEXICON 3PIIVTAS_SG
 +N: X_VEESKIR_SG ;
-+N+Cmp/SgNom:^WG%> Rhash ;
-+N+Cmp/SgGen:%> Rhash ;
++N+Cmp/SgNom:^WG^RVSH%> Rhash ;
++N+Cmp/SgGen:^WG^RVSH%> Rhash ;
 +N+Sg+Nom:%>â VPXsuff12nom ;  ! pihtâsâm
 +N+Sg+Nom:%>i VPXsuff3 ;  !	pihtâsis
 +N+Sg+Gen:%>â VPXsuff12 ;  ! pihtâsân
@@ -2622,8 +2622,8 @@ LEXICON X_AARRAN_SG !!= __@CODE@__
 
 LEXICON 3RUONAS !!= __@CODE@__ WG NEP,  blank for the rest
 +N: X_RUONAS ;
-+N+Cmp/SgNom:^WG^RLEN%> Rhash ;
-+N+Cmp/SgGen: Rhash ;
++N+Cmp/SgNom:^WG^RVSH%> Rhash ;
++N+Cmp/SgGen:^WG^RVSH%> Rhash ;
 +N+Cmp/PlGen:^CSH%>ij Rhash ;
 +N:^WG^RLEN%> Nom_DER ;
 +N:%> Gen_DER ; 
@@ -2670,8 +2670,8 @@ LEXICON X_RUONAS !!= __@CODE@__ WG NEP,  blank for the rest
 
 LEXICON 3VUONJAS  !!= __@CODE@__ 
 +N+Sg+Nom:š^WG K ; 	! vuonjâš
-+N+Cmp/SgNom:š^WG%> Rhash ;
-+N+Cmp/SgGen:š Rhash ;
++N+Cmp/SgNom:š^WG^RVSH%> Rhash ;
++N+Cmp/SgGen:š^WG^RVSH%> Rhash ;
 +N+Cmp/PlGen:^CSH%>čij Rhash ;
 +N+Sg+Gen:š K ; 		! vuonnjâš
 +N+Sg+Acc:š K ; 		! vuonnjâš
@@ -2720,7 +2720,7 @@ LEXICON 3CEVE !!= @CODE@ only for this lemma. It could go to 3LYEME but needs mo
 
 LEXICON 3LYEME !!= __@CODE@__
 +N+Sg+Nom:^FCD^WG^RLEN^SVSH K ; 		! lyeme savo
-+N+Cmp/SgNom:^FCD^WG^RLEN^SVSH%>  Rhash ;
++N+Cmp/SgNom:^FCD^WG^SVSH%>  Rhash ;
 +N+Cmp/SgGen:  Rhash ;
 +N+Cmp/PlGen:^CSH^SVSH%>ij  Rhash ;
 +N+Sg+Gen:K ;					! luámmán savvoon
@@ -2811,8 +2811,8 @@ LEXICON 3POOVSA_PL !!= __@CODE@__  plurals for 3POOVSA
 LEXICON C_KAAMUV  !!= __@CODE@__
 +N: X_KAAMUV ;
 +N+Sg+Ill:%>i   K ;       		! kammui
-+N+Cmp/SgNom:^WG^RLEN%>  Rhash ;
-+N+Cmp/SgGen:^SV^SLEN%>  Rhash ;
++N+Cmp/SgNom:^WG^RVSH%>  Rhash ;
++N+Cmp/SgGen:^WG^RVSH%>  Rhash ;
 +N+Cmp/PlGen:%>i  Rhash ;
 +N+Sg+Com:%>in CPXsuff ; ! pennuinân
 +N+Sg+Gen:%> VPXsuff ;         ! 
@@ -3124,7 +3124,7 @@ X_SVSLENh_PL ;
 LEXICON S_SPAALVAS !!= __@CODE@__ 
 +N+Sg+Nom:š^WG^RLEN K ; ! spáálváš
 +N+Sg+Nom+Err/Orth:âš^WG^RLEN K ; ! spáálvâš
-+N+Cmp/SgNom:âš^WG^RLEN%> Rhash ;
++N+Cmp/SgNom:âš^WG^RVSH%> Rhash ;
 +N+Cmp/SgGen:^SV^SLEN%> Rhash ;
 +N+Cmp/PlGen:%>i Rhash ;
 +N+Sg+Gen:^SV^SLEN K ; 			! spálváá
@@ -3152,7 +3152,7 @@ X_TUULAS_PL ;
 
 LEXICON S_TUULAS_SG !!= __@CODE@__
 +N: X_TUULAS_SG ;
-+N+Cmp/SgNom:âš^WG^RLEN%> Rhash ;
++N+Cmp/SgNom:âš^WG^RVSH%> Rhash ;
 +N+Cmp/SgGen:^SV^WG^RLEN^SLEN%> Rhash ;
 
 LEXICON S_TUULAS_PL !!= __@CODE@__
@@ -3300,7 +3300,7 @@ S_KUAVDAS_PL ;
 
 LEXICON S_KUAVDAS_SG
 +N:  X_KUAVDAS_SG ;
-+N+Cmp/SgNom:š^WG^RLEN%>  Rhash ;
++N+Cmp/SgNom:š^WG^RVSH%>  Rhash ;
 +N+Cmp/SgGen:^SV^SLEN%>  Rhash ; !piäivááčuovâ
 +N+Sg+Gen:%> CPXsuff ;  !
 +N+Sg+Acc:%> CPXsuff ;  !
@@ -3350,7 +3350,7 @@ LEXICON S_ALGAAS !!= __@CODE@__
 
 LEXICON S_KUADHUS !!= __@CODE@__ 
 +N+Sg+Nom:š^WG^RLEN K ; 					! ááhuš
-+N+Cmp/SgNom:š^WG^RLEN%> Rhash ;
++N+Cmp/SgNom:š^WG^RVSH%> Rhash ;
 +N+Cmp/SgGen:^SV^SLEN%> Rhash ;
 +N+Cmp/PlGen:%>i Rhash ;
 +N+Sg+Gen:^SV^SLEN K ; 						! ahhuu
