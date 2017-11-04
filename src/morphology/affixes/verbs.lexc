@@ -6074,38 +6074,91 @@ LEXICON 4_ADELISTID_V   !!= * __@CODE@__
 +Der2+Der/NomAg:ee FLAG_CTAHHEE ;
 
 
-LEXICON 4_ITTID
+LEXICON 4_ITTID  ! for verbs without transitivty marking
 +V: 4_ITTID_V ;
-LEXICON 4_ITTID_IV
-+V+IV: 4_ITTID_V ;
-!LEXICON 4_ITTID_TV
+!LEXICON 4_ITTID_IV ! for verbs with IV marking, when they come
+!+V+IV: 4_ITTID_V ;
+!LEXICON 4_ITTID_TV ! for verbs with TV marking, when they come
 !+V+TV: 4_ITTID_V ;
-
 
 LEXICON 4_ITTID_V   !!= * __@CODE@__ temporarilly, we need a yaml for this
 +Inf:%>iđ K ;
 +Inf+Err/Orth:%>eđ K ;
++Ind+Prs+ConNeg:  K ; ! 
++Ind+Prt+ConNeg:%>âm  K ; ! 
++Cond+Prs+ConNeg:â^WG%>ččii  K ; ! 
+
 +PrsPrc:e%>e K ;
 +PrfPrc:á%>m K ;
-+Prs+Sg1:á^WG%>m K ;	!almostitám
-+Prs+Sg2:á^WG%>h K ;	! almostitáh
-+Prs+Sg3:^CSH%> K ;		! almostit
-+Prs+Du1:e%>en K ;		! almostitteen
-+Prs+Du2:^CSH%>vettee K ;	! almostitvettee
-+Prs+Du3:e%>v K ;		! almostittev
-+Prs+Pl1:e%>p K ;		! almostittep
-+Prs+Pl2:^CSH%>vetteđ K ;	! almostitvetteđ
-+Prs+Pl3:e^CSH%>h K ;	! almostiteh
 
-+Prt+Sg1:i%>m K ;
-+Prt+Sg2:i%>h K ;
-+Prt+Sg3:i^WG%>j K ;
-+Prt+Du1:i^WG%>jm K ;
-+Prt+Du2:i^WG%>jd K ;
-+Prt+Du3:i^WG%>jn K ;
-+Prt+Pl1:i^WG%>jm K ;
-+Prt+Pl2:i^WG%>jd K ;
-+Prt+Pl3:i%>i3 K ;
++Actio+Ill:^CSH%>mân K ;
++Actio+Loc:^CSH%>mist K ;
++Actio+Com:^CSH%>máin K ;
++Actio+Ess:^CSH%>min K ;
++Der4+Der/NomAct:em FLAG_3LITTER ;
++Der2+Der/NomAg:ee FLAG_CTAHHEE ;
+
++Ind+Prs: 4_ITTID_V_PRS ;
++Ind+Prt: 4_ITTID_V_PRT ;
++Cond+Prs: 4_ITTID_V_COND ;
++Pot+Prs: 4_ITTID_V_POT ;
++Imprt: 4_ITTID_V_IMPRT ;
+
+LEXICON 4_ITTID_V_PRS
++Sg1:á^CSH%>m K ;	
++Sg2:á^CSH%>h K ;	! almostitáh
++Sg3:^CSH%> K ;		! almostit 
++Du1:e%>en K ;		! almostitteen
++Du2:^CSH%>vettee K ;	! almostitvettee  
++Du3:e%>v K ;		! almostittev
++Pl1:e%>p K ;		! almostittep
++Pl2:^CSH%>vetteđ K ;	! almostitvetteđ  
++Pl3:e^CSH%>h K ;	! almostiteh 
+
+LEXICON 4_ITTID_V_PRT 
++Sg1:i%>m K ;
++Sg2:i%>h K ;
++Sg3:i^CSH%>j K ; ! 
++Du1:i^CSH%>jm K ;
++Du2:i^CSH%>jd K ;
++Du3:i^CSH%>jn K ;
++Pl1:i^CSH%>jm K ;
++Pl2:i^CSH%>jd K ;
++Pl3:i%>i3 K ;
+
+LEXICON 4_ITTID_V_COND 
++Sg1:á^CSH%>ččim K ; 
++Sg2:á^CSH%>ččih K ;
++Sg3:^CSH%>áččij K ;
++Du1:^CSH%>áččáim K ;
++Du2:^CSH%>áččáid K ;
++Du3:^CSH%>áččáin K ;
++Pl1:^CSH%>áččijm K ;
++Pl2:^CSH%>áččijd K ;
++Pl3:á^CSH%>ččii K ;
+
+LEXICON 4_ITTID_V_POT 
++Sg1:%>eem K ;
++Sg2:%>eeh K ;
++Sg3:i^CSH%>š K ;
++Du1:i^CSH%>žeen K ;
++Du2:i^CSH%>švettee K ;
++Du3:i^CSH%>žává K ;
++Pl1:i^CSH%>žep K ;
++Pl2:i^CSH%>švetteđ K ;
++Pl3:i^CSH%>žeh K ;
+
+LEXICON 4_ITTID_V_IMPRT 
++Sg1:%>um K ;
++Sg2:^CSH K ;
++Sg3:^CSH%>us K ;
++Du1:%>oon K ;
++Du2:%>ee K ;
++Du3:%>us K ;
++Pl1:%>op K ;
++Pl2:%>iđ K ;
++Pl3:%>us K ;
+
 
 
 LEXICON 4_UHCAD
