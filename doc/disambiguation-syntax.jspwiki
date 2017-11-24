@@ -167,6 +167,13 @@ Der/Aadv
 Der/Date
 Der/Year
 Der/Hum
+Der/Lang
+Der/Domain
+Der/Feat-phys
+Der/Clth
+Der/Body
+Der/Act
+
 <vdic>
 
 
@@ -3047,6 +3054,72 @@ The rules are no documented yet
 
 
 
+
+!!Comitative rules
+
+Assuming there is Sg Com / Pl Gen homonymy in Inari Saami. There is, but far more marginal than
+for North Saami, the following rules should be revised to account for that.
+
+!NP internal disambiguation of Com
+
+* __PlSg-W__ removes Pl when SG-WORD
+
+
+* __LocPlur__ removes Sg when PLURALIZER or OASSI OR HEADOFPARTS
+
+
+* __NumCom__ selects Num Com: guvttiin nieiddain if not plural-noun like: guvttiin heajain
+
+* __ComDemNum1__ selects N Com if there is a Dem or Num or buorre + Com to the left: Exception for plural-nouns  
+
+* __Comburiin__ selects N Com if there is a safe N Com to the right: buriin vugiin  
+
+
+* __ComCOM-A__ selects Sg Com after COM-A
+
+* __ComComAdv1__ selects Com after COM-ADV or juohke
+
+
+
+!Disambiguation based upon verb valency
+
+
+* __LocLocVL1, LocLocVR__ select Pl Loc if there is a LOC-V
+
+
+* __LLocAccLocVL__ select Pl Loc if there is a ACC-LOC-V
+
+* __Loc-v__ select Sg Loc if LOC-V to the left in the clause. No mainverb to the right in the clause
+
+!Disambiguation of Com depending on Adv or certain verb or N
+
+* __ComComAdv1__ selects Com for ACTOR OR ACTOR-ROLE after og before COM-ADV 
+
+
+* __ComComplPl-N__ selects Sg Com for HUMAN, ORGANIZATION, INSTITUTION, STATE, EVENT-TOOL-ACTIVITY, láhka when there is a COM-COMPL-N to the left or right
+
+* __Comoktavuohta__ selects Sg Com when oktavuohta is to the left or right
+
+* __ComDU-NR__ selects Sg Com after Pers dualis: moai áhčiin, munno vieljain
+
+
+* __ComHumanOrg__ selects HUMAN Sg Com after HUMAN, ORGANIZATION, INSTITUTION
+
+!Animate nouns
+* __ComAnimate__ selecst Sg Com if there is an animate to the left, and the noun itself is not a ABSTR-TEXT,  TEXT,  PLACE,  INDUSTRY,  EDUCATION,  INSTITUTION,  ANIMATE
+
+* __ComProp__ selecst Prop Sg Com for person names. Exception for habitive constructions.
+
+
+
+!HAB-ACTOR in habitive-constructions
+
+* __LocHab1, LocHab2__ select Pl when HAB-ACTOR
+
+
+* __LocHab1, LocHab2__ select Pl when HAB-ACTOR
+
+
 !Disambiguation based upon verb valency 
 
 !COM-V 
@@ -3061,7 +3134,13 @@ The rules are no documented yet
 
 * __ComHumanVerbalV__ selects Com HUMAN when VERBAL-ACTIVITY-V or báhcit
 
-* Abstract-entity-com-verbs
+
+
+
+
+
+
+
 
 
 !Dynamic-verbs
@@ -3114,6 +3193,22 @@ Most actio can be both tool and event.
 
 
 
+!Locative and comitative - Disambiguation based upon coordination
+
+
+
+
+
+
+!And then we remove the remaining Sg Com analysis
+
+
+
+
+
+* __KillComSg__ This is the final Com/Loc rule, and it chooses Pl Loc. Remove this for grammar checker.
+
+
 
 
 * __miiPlAcc__ selects acc noun if mii or kii to the left
@@ -3155,6 +3250,10 @@ Most actio can be both tool and event.
 !Not Finite
 
 * __r2824__ 
+
+
+
+
 
 
 
