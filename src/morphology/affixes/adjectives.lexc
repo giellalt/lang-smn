@@ -205,7 +205,8 @@ LEXICON HUMO_REST
 LEXICON LAAMI !!= __@CODE@__ directing to X_SAAMI, attr. lämis
 +A+Attr:^WG^RVSH%>s  K ; !lämis
 +A: X_SAAMI	  ;
-+A:^WG^RVSH%> eCOMP ;	! läämib (WG); lämibeht
+!1+A:b^WG COMPe ;
++A:b^WG%> COMPe ;	! läämib (WG); lämibeht
 +A:^WG^RVSH%> MUS ;
 +A:^CSH%> A_VUOTA ; ! lämivuotâ
 +A+Cmp/Attr:s ATTR_R ;
@@ -220,12 +221,12 @@ LEXICON PYERI !!= __@CODE@__ directing to X_KYELI, attr. pyeri
 +A+Comp+Sg+Nom:e%>eb K ;
 +A+Comp+Sg+Gen:e%>eb K ;
 +A+Comp+Sg+Acc:e%>eb K ;
-+A+Comp+Sg+Ill:e%>b%>ân K ;
-+A+Comp+Sg+Loc:e%>b%>ist K ;
-+A+Comp+Sg+Com:e%>b%>áin K ;
++A+Comp+Sg+Ill:^WG^RVSHe%>b%>ân K ;
++A+Comp+Sg+Loc:^WG^RVSHe%>b%>ist K ;
++A+Comp+Sg+Com:^WG^RVSHe%>b%>áin K ;
 +A+Comp+Sg+Abe:e%>eb^RLEN^SLEN%>ttáá K ;
-+A+Comp+Ess:e%>b%>in K ;
-+A+Comp+Par:e%>b%>id K ;
++A+Comp+Ess:^WG^RVSHe%>b%>in K ;
++A+Comp+Par:^WG^RVSHe%>b%>id K ;
 +A+Comp:e%>b X_eh_PL ;
 
 
@@ -1059,12 +1060,10 @@ LEXICON COMPe !!= * __@CODE@__ NUORA uses this lexicon
 +Comp+Der4+Der/AAdv+Adv:beht K ; !čepibeht	čeppi čeepib čepibeht
 
 
-LEXICON VVCOMPe !!= * __@CODE@__ NUORA uses this lexicon
+LEXICON VVCOMPe !!= * __@CODE@__ ALKKEE uses this lexicon; giving älkkeb etc.
 +Comp: VVCOMP-SUF ;
 :p^SVSH^RLEN^SLEN P-COMP-ERR-ORTH ;
 +Comp+Der1+Der/Dimin+A+Sg+Nom:b^SVSH%>âš K ; !needs lexicon
-
-
 
 
 
@@ -1138,12 +1137,12 @@ LEXICON COMP-SUF  !!= * __@CODE@__
 COMP_SUF_ADVLCASE ;
 
 LEXICON COMP_SUF_ADVLCASE
-+Sg+Ill:%>ân K ;
-+Sg+Loc:%>ist K ;
-+Sg+Com:%>áin K ;
++Sg+Ill:^RVSH%>ân K ; ! RVSH added in this row because of LAAMI; lämibân, lämibist; does not harm the rest where COMPe is used with a short 1.syll. vowel
++Sg+Loc:^RVSH%>ist K ;
++Sg+Com:^RVSH%>áin K ;
 +Sg+Abe:^RLEN^SLEN%>ttáá K ;
-+Ess:%>in K ;
-+Par:%>id K ;
++Ess:^RVSH%>in K ;
++Par:^RVSH%>id K ;
  X_eh_PL ;
 
 
