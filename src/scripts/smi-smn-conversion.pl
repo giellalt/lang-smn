@@ -38,15 +38,22 @@ while(<>) {
 	s/^Antti\+/!Antti+/g ;
 	s/^Elli\+/!Elli+/g ;
 	s/^Ella\+/!Ella+/g ;
+	s/^Hannu\+/!Hannu+/g ;
+	s/^Hetta\+/!Hetta+/g ;
 	s/^Jussi\+/!Jussi+/g ;
 	s/^Lappi\+/!Lappi+/g ;
+	s/^Lotto\+/!Lotto+/g ;
 	s/^Maarit\+/!Maarit+/g ;
 	s/^Markku\+/!Markku+/g ;
 	s/^Matti\+/!Matti+/g ;
+	s/^Mikko\+/!Mikko+/g ;
+	s/^Pertti\+/!Pertti+/g ;
+	s/^Saksa\+/!Saksa+/g ;
 	s/^Tanska\+/!Tanska+/g ;
 	s/^Turku\+/!Turku+/g ;
 	s/^Turkki\+/!Turkki+/g ;
 	s/^Veikko\+/!Veikko+/g ;
+	s/^Vävli\+/!Vävli+/g ;
 	
 # changing to WG inflection
 	s/^Valle ACCRA/Valle MOKKE/g ;
