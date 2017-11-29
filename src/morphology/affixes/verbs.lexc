@@ -99,7 +99,7 @@
 !! ** Ind+Prs+Pl3: kävnih
 !! ** ConNeg: kaavnâ
 !! ** Ind+Prt+Sg1: kavnim
-!! * 2SYLL_KOLGAD kolgâđ ka^RVlg
+!! * 2SYLL_COGGAD kolgâđ ka^RVlg
 !! ** Inf:
 !! ** Ind+Prs+Sg3: kalga
 !! ** Ind+Prs+Pl3: kalgeh
@@ -925,19 +925,32 @@ LEXICON EVEN_IMPRT_KALGAD  !!= ** __@CODE@__
 +Pl2:â^VBACK%>đ K ;
 +Pl3:u^CLEN^VHIGH%>s K ;
 
-LEXICON 2SYLL_KOLGAD
-+V: 2SYLL_KOLGAD_V ;
-LEXICON 2SYLL_KOLGAD_IV
-+V+IV: 2SYLL_KOLGAD_V ;
-LEXICON 2SYLL_KOLGAD_TV
-+V+TV: 2SYLL_KOLGAD_V ;
+LEXICON 2SYLL_KOLGAD_IV ! auxiliary verb with restricted paradigm
++V+IV: VINFINITES_COGGAD ; ! Todo: restrict these
++V+IV+Ind: EVEN_IND_COGGAD ;
++V+IV+Cond+Prs:â EVEN_COND_COGGAD ;
++V+IV+Pot+Prs: EVEN_POT_COGGAD ;
+! +V+IV+Imprt: EVEN_IMPRT_COGGAD ;
+! +V+IV+Der4+Der/InchL:â^WG^VHIGH%>škyett4 4SYLL_KYETTID_DER ;
+! +V+IV+Der1+Der/d:âd^WG 3_DERIVED ; !
+! +V+IV+Der1+Der/st:âst^WG 3_DERIVED ; !
+! +V+IV+Der1+Der/tt:âtt^WG 3_DERIVED ; !
 
-LEXICON 2SYLL_KOLGAD_V  !!= * __@CODE@__ 18 verbs
-VINFINITES_KOLGAD ;
-+Ind: EVEN_IND_KOLGAD ;
-+Cond+Prs:â EVEN_COND_KOLGAD ;
-+Pot+Prs: EVEN_POT_KOLGAD ;
-+Imprt: EVEN_IMPRT_KOLGAD ;
+
+
+LEXICON 2SYLL_COGGAD
++V: 2SYLL_COGGAD_V ;
+LEXICON 2SYLL_COGGAD_IV
++V+IV: 2SYLL_COGGAD_V ;
+LEXICON 2SYLL_COGGAD_TV
++V+TV: 2SYLL_COGGAD_V ;
+
+LEXICON 2SYLL_COGGAD_V  !!= * __@CODE@__ 18 verbs
+VINFINITES_COGGAD ;
++Ind: EVEN_IND_COGGAD ;
++Cond+Prs:â EVEN_COND_COGGAD ;
++Pot+Prs: EVEN_POT_COGGAD ;
++Imprt: EVEN_IMPRT_COGGAD ;
 +Der4+Der/InchL:â^WG^VHIGH%>škyett4 4SYLL_KYETTID_DER ;
 +Der1+Der/d:âd^WG 3_DERIVED ; !
 +Der1+Der/st:âst^WG 3_DERIVED ; !
@@ -946,7 +959,7 @@ VINFINITES_KOLGAD ;
 :â^VHIGH DER_MAS ;
 +Der3+Der/Pass:u2 C_PASS_SH_RVSH ; !
 
-LEXICON VINFINITES_KOLGAD  !!= ** __@CODE@__
+LEXICON VINFINITES_COGGAD  !!= ** __@CODE@__
 +Inf:â^VHIGH%>đ K ;
 +Ind+Prs+ConNeg:â^WG^VHIGH^RLEN K ;
 +Ind+Prt+ConNeg:â^VHIGH%>m K ;
@@ -971,7 +984,7 @@ LEXICON VINFINITES_KOLGAD  !!= ** __@CODE@__
 +Ger:â^WG^VHIGH%>dijn K ;
 +Der4+Der/NomAct:â^VHIGH%>m FLAG_3LITTER ;
 
-LEXICON EVEN_IND_KOLGAD  !!= ** __@CODE@__
+LEXICON EVEN_IND_COGGAD  !!= ** __@CODE@__
 +Prs+Sg1:â^WG^VHIGH^RLEN%>m K ;
 +Prs+Sg2:a^WG^VHIGH^RLEN%>h K ;
 +Prs+Sg3:a K ;       !
@@ -992,7 +1005,7 @@ LEXICON EVEN_IND_KOLGAD  !!= ** __@CODE@__
 +Prt+Pl2:â^WG^VHIGH^RLEN%>id K ;
 +Prt+Pl3:i^CLEN^VHIGH%>i3 K ;
 
-LEXICON EVEN_COND_KOLGAD !!= ** __@CODE@__
+LEXICON EVEN_COND_COGGAD !!= ** __@CODE@__
 +Sg1:^VHIGH%>čč%>im K ;
 +Sg2:^VHIGH%>čč%>ih K ;
 +Sg3:^VHIGH%>čč%>ij K ;
@@ -1003,7 +1016,7 @@ LEXICON EVEN_COND_KOLGAD !!= ** __@CODE@__
 +Pl2:%>čč%>ijd K ;
 +Pl3:%>čč%>ii K ;
 
-LEXICON EVEN_POT_KOLGAD !!= ** __@CODE@__
+LEXICON EVEN_POT_COGGAD !!= ** __@CODE@__
 +Sg1:e^WG%>em K ;
 +Sg2:e^WG%>eh K ;
 +Sg3:â^WG^VHIGH^RLEN%>š K ;
@@ -1014,7 +1027,7 @@ LEXICON EVEN_POT_KOLGAD !!= ** __@CODE@__
 +Pl2:â^WG^VHIGH^RLEN%>švetteđ K ;
 +Pl3:â^WG^VHIGH%>žeh K ;
 
-LEXICON EVEN_IMPRT_KOLGAD !!= ** __@CODE@__
+LEXICON EVEN_IMPRT_COGGAD !!= ** __@CODE@__
 +Sg2:â^WG^VHIGH^RLEN K ;
 +Sg2:â^WG^RLEN K ;
 +Sg3:u^WG%>s K ;
