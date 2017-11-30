@@ -66,12 +66,12 @@ EXTEDITOR=@SEE@
 ##### --exclude "(pattern1|pattern2|...)"                          #####
 # Extract regular nouns:
 @GTCORE@/scripts/extract-lemmas.sh \
-    --exclude "(ShCmp|RCmpnd| Rreal | R | Rnoun |RHyph |COLL)" \
+    --exclude "(ShCmp|RCmpnd| Rreal | R | Rnoun |RHyph |COLL|\+CmpNP\/Suff)" \
     $source_file > $lemmas
 
 # Extract compounding lemmas:
 @GTCORE@/scripts/extract-lemmas.sh \
-    --include "( R | Rreal | Rnoun)" \
+    --include "( R | Rreal | Rnoun|\+CmpNP\/Suff)" \
     $source_file > $comp_lemmas
 
 # Extract compounding lemmas requiring a hyphen:
