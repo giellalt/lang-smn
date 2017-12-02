@@ -405,7 +405,7 @@ m:0 <=>  s _ m [Triggers: - %^FCD:]* [.#.|%>]   ; !RULE SC !! 1) puttáás_min
 "Wordfinal consonants part 1"
 !! * __@RULENAME@__  e%^RVlâčč
 Cx:0 <=> Vow: _ Cy: (%^CLEN:) (%^RLEN:) (%^SLEN:|%^SVSH:) [.#.| %>] \Sgm: ; !! 1)
-         Vow: _  [Cy | č:š] [Triggers: - %^FCD:]* %> [ m | v ] ; !! 2)jurdâččmân:jurdâšmân ju%^RVrdâčč%^RLEN%>mân
+         Vow: _  [Cy | č:š] [Triggers: - %^FCD:]* %> [d|m|v] ; !! 2)jurdâččmân:jurdâšmân ju%^RVrdâčč%^RLEN%>mân
 	 Vow: _ Cy %> Cns ; !! 3)  šš>š in hárávušš>vetteđ 
 	where Cx in ( d č š l h ) 
 	      Cy in ( d č š l č )
@@ -563,7 +563,7 @@ Cy:0  <=>  Sgm:  _ (%^CSH:) (%^RLEN:) %> Cy Cy ;  !RULE SC
 "Wordfinal consonants part 2"
 !! * __@RULENAME@__  e%^RVlâčč cummâlâhč:cummâlâhš
 č:š  <=>  Vow: [č:|h:] _ Triggers:* [.#.| %>] \Sgm: ; !RULE SC
-          Vow:  č:0    _ Triggers:* %> [ m | v ] ; !RULE SC jurdâččmân:jurdâšmân
+          Vow:  č:0    _ Triggers:* %> [d|m|v] ; !RULE SC jurdâččmân:jurdâšmân
 
 "Final consonant x:xx"
 !! * __@RULENAME@__ \\  pottáák potákkân  
@@ -1186,6 +1186,9 @@ Vx:e <=> Cns _ %> [j [Vow - â]|e] ; !RULE SV  !not hit karri>jân !
 !â:e  =>  _ [l l | d d | t :t ] [ e %> [e|h] | i %> [m|h|i3:]] ; 
 â:e  <=>  _ [l l | d d | t :t ] [ e %^IUML: %> [e|h] | i %^IUML: %> [m|h|i3:]] ; 
 
+!!€ e^CSH^IUML%>h
+!!€
+
 ! posâlâdd>eh
 ! posâlâddeh/posâleddeh
 ! hámiin prs d1 (een), p3 (eh)
@@ -1250,7 +1253,8 @@ Vx:0 <=> Cns: _  ([%^ÁE:|%^ÁI:]) â Cns:* Triggers:*  [%>|.#.]   ;  !RULE SV
 "Stem â deleting"
 !! * __@RULENAME@__ \\ kandâ:kandii
 â:0 <=> \%> _ i i (%^WG:) (%^RVSH:) [%>|.#.]  ; !RULE SV 
-         \%> _ i  Triggers:* %>  i: ; !RULE SV 
+         \%> _ i  Triggers:* %>  i: ; !RULE SV
+!         \%> _ Triggers:* i  Triggers:* %>  i: ; !RULE SV
 
 !! !Suffix vowel rules
 
