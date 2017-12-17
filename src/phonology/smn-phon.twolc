@@ -77,6 +77,7 @@ i6:0 !!= * @CODE@ a fake vowel, to get WG rules to function, e.g. kyehtlov (kyeh
 %^RVSH:0    !!= * @CODE@ = Root vowel shortening
 %^FCD:0     !!= * @CODE@ = Final consonant deletion 
 %^EA:0      !!= * @CODE@ = Stem vowel: e and i to a/á in ill, and root vowel ä>á, e(e)>iä, ie>iä, ye>uá
+%^EX:0      !!= * @CODE@ = Stem vowel: i to â where it should have been á, this is Err/Orth only
 %^RLEN:0    !!= * @CODE@ = Root vowel lengthening
 %^SLEN:0    !!= * @CODE@ = Stem vowel lengthening
 %^SVLOW:0   !!= * @CODE@ = Stem vowel lowering â>á and u>o - árppu árppoin, Root vowel shortening when more than one cns in consonant centre and suffix starts with i
@@ -1061,8 +1062,8 @@ o:á <=> u _ Cns:+ u: [i4: | j | š | ž] %^WG: ([%^RVSH:|%^RLEN:]) [%>|.#.] ;  
 "ye to uá and uo, part 1" 
 !! * __@RULENAME@__ \\  Part 1 of ye to uá for kyeli : kuálán  
 y:u <=> _ e:  Cns:+ Vow:  %^EA: ([%^CSH:| %^CLEN:]) (%^RLEN:)   [%>|.#.] ;   !RULE RV 
-        _ :o  Cns:+ :i (%^WG:) (%^CLEN:) (%^VBACK:|%^VHIGH:) ([%^RVSH: |%^RLEN:] ) %> [i:|j |i3: | š | ž ] ; !RULE RV  !syej%^RCi%^RVSH%^CLEN%>in
-        _ :o  Cns:+ :i  (%^WG:) (%^CLEN:) %^VBACK: %^RLEN: %> [m | h] ; !RULE RV  
+        _ :o  Cns:+ :i (%^WG:) (%^CLEN:) (%^VBACK:|%^VHIGH:) ([%^RVSH: |%^RLEN:] ) %> [i:|j|i3:|š|ž] ; !RULE RV  !syej%^RCi%^RVSH%^CLEN%>in
+        _ :o  Cns:+ :i  (%^WG:) (%^CLEN:) %^VBACK: (%^RLEN:|%^RVSH:) %> [m | h] ; !RULE RV  
         _ :o  Cns:+ [ â:|á |u2:] (Cns:+) ([%^WG: | %^CSH:])  (%^CLEN:) %^VBACK: %^RLEN: [%>|.#.] ;  !RULE RV ! [i | Cns] ; ! ryettâ^WG^VBACK^RLEN>m
         _ :o  Cns:+ :i %^WG: %^CLEN: %^SVLOW: %> i: ; !RULE RV 
         _ :o  Cns:  Cns: :i  %^WG: %^CLEN:  %^RVSH: %> [i:|i3:] ; !RULE RV 
@@ -1082,8 +1083,8 @@ e:á <=> y: _  Cns:+ [Vow: - u2:]  %^EA: (%^CSH:|%^CLEN:|%^WG:) (%^RLEN:)  [%>|.
 
 "ye to uo, part 2 "
 !! * __@RULENAME@__ \\  Part 2 of ye to uá for kyeli : kuolijn
-e:o <=> y: _  Cns:+ :i (%^WG:) (%^CLEN:) (%^VBACK:) ([%^RVSH: |%^RLEN:] )  %> [i:|j |i3:| š | ž ] ; !RULE RV 
-        y: _  Cns:+  :i  (%^WG:) (%^CLEN:) %^VBACK: %^RLEN:   %> [m | h] ;  !RULE RV 
+e:o <=> y: _  Cns:+ :i (%^WG:) (%^CLEN:) (%^VBACK:) ([%^RVSH:|%^RLEN:]) %> [i:|j |i3:| š | ž ] ; !RULE RV 
+        y: _  Cns:+ :i (%^WG:) (%^CLEN:)  %^VBACK:  ([%^RVSH:|%^RLEN:]) %> [m|h] ;  !RULE RV 
         y: _  Cns:+ [ â:|á ] (Cns:+)  ([%^WG: | %^CSH:]) (%^CLEN:) %^VBACK: %^RLEN:   [%>|.#.] ; ![i | Cns ] ; !RULE RV  !ryettâ^WG^VBACK^RLEN>m
         y: _  Cns:+ :i %^WG: %^CLEN: %^SVLOW: %> i: ; !RULE RV 
         y: _  Cns: Cns: :i  %^WG: %^CLEN: %^RVSH: %>  [i:|i3:]  ; !RULE RV 
@@ -1155,6 +1156,12 @@ e:á <=> [o|i|u] (%^RV:) Cns:+ _ (%^SV:) %^EA: ([%^CSH:| %^CLEN: |%^WG:]) ([%^RL
 Vx:á <=> [:e|:i|:ä|:á|ä:0] (%^RV:)  Cns:+ _   %^EA: ([%^CSH:| %^CLEN:]) ([%^RLEN: |%^RVSH:])  [%>|.#.] [i: | n | d | m | s |š ] ;  !RULE SV !uábbám iännásis
     where Vx in ( i i2 i3 ) ;
 
+"Stem vowel i to â for other root vowel, as a common error."
+!! * __@RULENAME@__ \\  e.g. säämi > Ill Err/Orth sáámân 
+Vx:á <=> [:e|:i|:ä|:á|ä:0] (%^RV:)  Cns:+ _   %^EX: ([%^CSH:| %^CLEN:]) ([%^RLEN: |%^RVSH:])  [%>|.#.] [i: | n | d | m | s |š ] ;  !RULE SV !uábbám iännásis
+    where Vx in ( i i2 i3 ) ;
+
+
 "Stem vowel i to e in front of j"
 !! * __@RULENAME@__ \\  
 Vx:e <=> Cns _ %> [j [Vow - â]|e] ; !RULE SV  !not hit karri>jân ! 
@@ -1184,7 +1191,7 @@ Vx:e <=> Cns _ %> [j [Vow - â]|e] ; !RULE SV  !not hit karri>jân !
 
 "Optional stem vowel â > e change before e"
 !â:e  =>  _ [l l | d d | t :t ] [ e %> [e|h] | i %> [m|h|i3:]] ; 
-â:e  <=>  _ [l l | d d | t :t ] [ e %^IUML: %> [e|h] | i %^IUML: %> [m|h|i3:]] ; 
+â:e  <=>  _ [l: l | d: d | t: :t ] [ e (%^CSH:) %^IUML: %> [e|h] | i %^IUML: %> [m|h|i3:]] ; 
 
 !!€ e^CSH^IUML%>h
 !!€
