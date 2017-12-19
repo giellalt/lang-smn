@@ -76,6 +76,7 @@ i6:0 !!= * @CODE@ a fake vowel, to get WG rules to function, e.g. kyehtlov (kyeh
 %^CSH:0     !!= * @CODE@ = Cons shortening, laaŋkku - laaŋkun
 %^RVSH:0    !!= * @CODE@ = Root vowel shortening
 %^FCD:0     !!= * @CODE@ = Final consonant deletion 
+%^FVD:0     !!= * @CODE@ = Final vowel deletion 
 %^EA:0      !!= * @CODE@ = Stem vowel: e and i to a/á in ill, and root vowel ä>á, e(e)>iä, ie>iä, ye>uá
 %^EX:0      !!= * @CODE@ = Stem vowel: i to â where it should have been á, this is Err/Orth only
 %^RLEN:0    !!= * @CODE@ = Root vowel lengthening
@@ -93,7 +94,7 @@ i6:0 !!= * @CODE@ a fake vowel, to get WG rules to function, e.g. kyehtlov (kyeh
 !! Trigger ordering in twolc and lexc, from left to right:
 
 !! {{{
-!! SV|ÁE|ÁI  EA|SC  FCD  WG|CSH  CLEN  VHIGH|VBACK  RVSH|RLEN  SLEN|SVSH  SVLOW
+!! SV|ÁE|ÁI  EA|SC  FCD|FVD  WG|CSH  CLEN  VHIGH|VBACK  RVSH|RLEN  SLEN|SVSH  SVLOW
 !! }}}
 
 
@@ -141,8 +142,8 @@ Sets
  UnvoicedCns = c č f h k p s š t  ;             !!=  @CODE@
  Geminate = b d g p h t k c f z l m n ŋ r s š v  ;  !!= * @CODE@  
  Sgm = Vow Cns ;							   !!= * @CODE@ 
- NotSuffixBorder = Vow %^FCD Cns %^CSH %^WG %^CLEN %^SLEN %^RLEN %^SVLOW %^RVSH %^ÁE %^ÁI %^EA %^SVSH ; !!= * @CODE@ 
- Triggers =   %^FCD %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^ÁI %^SVSH %^VHIGH %^VBACK %^IUML ; !!= * @CODE@ 
+ NotSuffixBorder = Vow %^FCD %FVD Cns %^CSH %^WG %^CLEN %^SLEN %^RLEN %^SVLOW %^RVSH %^ÁE %^ÁI %^EA %^SVSH ; !!= * @CODE@ 
+ Triggers =   %^FCD %^FVD %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^ÁI %^SVSH %^VHIGH %^VBACK %^IUML ; !!= * @CODE@ 
  StemCns = b b3 d d3 g g2 g3 h h2 h3 		   !!= * @CODE@ 
            j l m m2 m3 m8 n n8 n2 ŋ r s  ;     !!= @CODE@ 
 
@@ -156,8 +157,8 @@ Sets
 
 Definitions
 
-WeakGrade =  (RealVow:) [:RealVow - č: |i6:] (Vow:) (Cns:+) ([%^SV:|%^ÁI:|%^ÁE:]) (%^FCD:) %^WG:0      ;   
-ConsonantShorting =  (RealVow:) [:RealVow - č: |i6:] (Vow:) (Cns:+) ([%^SV:|%^ÁI:|%^ÁE:]) (%^EA:) (%^FCD:) %^CSH:0 ;  
+WeakGrade =  (RealVow:) [:RealVow - č: |i6:] (Vow:) (Cns:+) ([%^SV:|%^ÁI:|%^ÁE:]) ([%^FCD:|%^FVD:]) %^WG:0      ;   
+ConsonantShorting =  (RealVow:) [:RealVow - č: |i6:] (Vow:) (Cns:+) ([%^SV:|%^ÁI:|%^ÁE:]) (%^EA:) ([%^FCD:|%^FVD:]) %^CSH:0 ;  
 Syll = :* Cns:+ Vow: :* ; 
 
 !! As we look at more cases, the WeakGrade definition tends to be longer. 
@@ -257,8 +258,8 @@ Cy:Cz <=> Cx: _  WeakGrade ; !RULE RC !! čuottâlm:čuođâlm njuottâs
 
 "xy:zy gradation"
 !! * __@RULENAME@__ \\  ht:vt, we use h 
-Cx:v <=>  _  Cz (%^RC:) Vow:+ (%^SV: ) (Cns:+) ([%^ÁI:|%^ÁE:])  (%^FCD:) %^WG: ; !RULE RC !! 1) pi%^RVhtâs
-          _  Cz t Vow (%^FCD:) %^WG: ;  !RULE RC !! 2) tekstâ
+Cx:v <=>  _  Cz (%^RC:) Vow:+ (%^SV: ) (Cns:+) ([%^ÁI:|%^ÁE:])  ([%^FCD:|%^FVD:]) %^WG: ; !RULE RC !! 1) pi%^RVhtâs
+          _  Cz t Vow ([%^FCD:|%^FVD:]) %^WG: ;  !RULE RC !! 2) tekstâ
        where Cx in ( h k4 k4 h h ) 
              Cz in ( t s  š č c ) 
        matched ;
@@ -1318,6 +1319,11 @@ j:v <=> u u:  %> _ â n ; !RULE SUFF
 u:0 <=> u _  %> :v ; !RULE SV
 
 !! !!Other rules
+
+"Word final vowel deletion"                 
+!!  * __@RULENAME@__ \\ for vaskâm:vaaskâ
+Vx:0 <=> _  %^FVD: ;  !RULE SC
+          where Cx in (â i);
 
 
 
