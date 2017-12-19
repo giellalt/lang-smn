@@ -61,6 +61,7 @@ Literal quotes and angles must be escaped (cf morpheme boundaries further down):
  * %^CSH:0      = Cons shortening, laaŋkku - laaŋkun
  * %^RVSH:0     = Root vowel shortening
  * %^FCD:0      = Final consonant deletion 
+ * %^FVD:0      = Final vowel deletion 
  * %^EA:0       = Stem vowel: e and i to a/á in ill, and root vowel ä>á, e(e)>iä, ie>iä, ye>uá
  * %^EX:0       = Stem vowel: i to â where it should have been á, this is Err/Orth only
  * %^RLEN:0     = Root vowel lengthening
@@ -78,7 +79,7 @@ Literal quotes and angles must be escaped (cf morpheme boundaries further down):
 Trigger ordering in twolc and lexc, from left to right:
 
 {{{
-SV|ÁE|ÁI  EA|SC  FCD  WG|CSH  CLEN  VHIGH|VBACK  RVSH|RLEN  SLEN|SVSH  SVLOW
+SV|ÁE|ÁI  EA|EX|SC  FCD|FVD  WG|CSH  CLEN  VHIGH|VBACK  RVSH|RLEN  SLEN|SVSH  SVLOW
 }}}
 
 
@@ -120,8 +121,8 @@ Sets
    UnvoicedCns = c č f h k p s š t  ;             
  *  Geminate = b d g p h t k c f z l m n ŋ r s š v  ;    
  *  Sgm = Vow Cns ;							    
- *  NotSuffixBorder = Vow %^FCD Cns %^CSH %^WG %^CLEN %^SLEN %^RLEN %^SVLOW %^RVSH %^ÁE %^ÁI %^EA %^SVSH ;  
- *  Triggers =   %^FCD %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^ÁI %^SVSH %^VHIGH %^VBACK %^IUML ;  
+ *  NotSuffixBorder = Vow %^FCD %FVD Cns %^CSH %^WG %^CLEN %^SLEN %^RLEN %^SVLOW %^RVSH %^ÁE %^ÁI %^EA %^EX %^SVSH ;  
+ *  Triggers =   %^FCD %^FVD %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^EX %^ÁI %^SVSH %^VHIGH %^VBACK %^IUML ;  
  *  StemCns = b b3 d d3 g g2 g3 h h2 h3 		    
             j l m m2 m3 m8 n n8 n2 ŋ r s  ;      
 
@@ -805,6 +806,8 @@ Suffix consonant rules
 
 
 !!Other rules
+
+ * __Word final vowel deletion                 __ \\ for vaskâm:vaaskâ
 
 
 
