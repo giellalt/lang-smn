@@ -990,7 +990,7 @@ LEXICON X_AIGI_SG !!= __@CODE@__
 +Sg+Gen:^WG^RLEN K ;               ! ääigi
 +Sg+Acc:^WG^RLEN K ;               ! ääigi
 +Sg+Ill:^EA^CSH^RLEN%>n K ;       ! ááigán! DIFTONGISATION
-+Sg+Ill+Err/Orth:^EX^CSH^RLEN%>n K ;       ! ááigán! DIFTONGISATION
++Sg+Ill+Err/Orth:^EX^CSH^RLEN%>n K ;       ! ááigân! DIFTONGISATION
 +Sg+Loc:^WG^RLEN%>st K ;           ! ääigist
 +Sg+Com:^WG^CLEN^SVLOW%>in K ; ! aigijn      e ij i jn  č:i ^RC:j
 +Sg+Abe:^WG^RVSH%>ttáá K ;         ! äigittáá
@@ -2056,6 +2056,7 @@ LEXICON 3EEMEED_SG !!= __@CODE@__
 
 LEXICON 3EEMEED_PL  !!= __@CODE@__
 +N:^CSH^SVSH X_eh_PL ;
++N+Err/Orth:^SVSH X_eh_PL ; ! myevvireh pro correct myevireh
 +N+Cmp/PlGen:^CSH^SVSH%>ij Rhash ;
 +N+Pl+Gen:^CSH^SVSH%>ijd CPXsuff ;  ! 
 +N+Pl+Acc:^CSH^SVSH%>ijd CPXsuff ;  ! emedijdis
@@ -2074,6 +2075,12 @@ LEXICON X_EEMEED_SG  !!= __@CODE@__
 +Ess:^CSH^SVSH%>in K ;		! emedin
 +Ess:%>n CPXsuff ;		! eemeednân
 +Par:^CSH^SVSH%>id K ;		! emedid
+
++Sg+Ill+Err/Orth:^SVSH%>ân K ;	! myevvirân pro correct myevirân
++Sg+Loc+Err/Orth:^SVSH%>ist K ;	! 
++Sg+Com+Err/Orth:^SVSH%>áin K ;	! 
++Ess+Err/Orth:^SVSH%>in K ;	
++Par+Err/Orth:^SVSH%>id K ;	
 
 LEXICON 3LITTER !!= __@CODE@__ MO Ib 2nd syll vowel does not alternate
 3LITTER_SG ;
@@ -3812,10 +3819,12 @@ LEXICON GUIN
 LEXICON Gen_DER   !!= __@CODE@__ 
 +Der+Der/vualasas:vuálás ANOLASJ ; 
 +Der1+Der/lasj:l ANOLASJ ; 
++Der1+Der/lasj+Err/Orth:ll ANOLASJ ; ! historjállâš
 +Der1+Der/Car:tte MUSTOTTEM ; 
 
 LEXICON Nom_DER   !!= __@CODE@__ 
 +Der1+Der/lasj+Use/NG:l ANOLASJ ; ! XXX not at all? Trond
++Der1+Der/lasj+Err/Orth:ll ANOLASJ ; ! historjállâš
 
 LEXICON DER-AG
 +N+Der+Der/ag:  PASTIL ; !+N because of redirection from numeral-file
