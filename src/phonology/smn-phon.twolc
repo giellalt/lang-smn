@@ -1268,7 +1268,7 @@ Vx:0 <=> Cns: _  ([%^ÁE:|%^ÁI:]) â Cns:* Triggers:*  [%>|.#.]   ;  !RULE SV
 
 "Suffix vowel lengthening"
 !! * __@RULENAME@__ \\ long á in kissáást, nuorâ : nuorááin, hyeni:hyeneest
-%^SV:Vx <=> :Vx  _ (Cns)  NotSuffixBorder:* %^SLEN:   ;  !RULE SV ! hyeneest
+%^SV:Vx <=> :Vx (%^CLEN:) (%^VHIGH:|%^VBACK:) (%^RVSH:) (%>)  _ (Cns)  NotSuffixBorder:* %^SLEN:   ;  !RULE SV ! hyeneest
        where Vx in ( á o u e a i   y ä  ) ; !nuorâ : nuorááin
 
 
