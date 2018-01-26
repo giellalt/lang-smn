@@ -164,6 +164,7 @@ LEXICON 2SOLLA_SG !!= __@CODE@__
 
 LEXICON 2SOLLA_PL  !!= __@CODE@__ 
 +N: X_SOLLA_PL ;
++N+Cmp/SgNom: Rhash ; !
 +N+Cmp/PlGen:^WG^RLEN%>i Rhash ; !
 +N+Pl+Gen:^WG%>id CPXsuff ;  !
 +N+Pl+Acc:^WG%>id CPXsuff ;  !
@@ -651,6 +652,7 @@ LEXICON 2ALGE_SG !!= __@CODE@__
 
 LEXICON 2ALGE_PL !!= __@CODE@__
 +N: X_ALGE_PL ;
++N+Cmp/SgNom: Rhash ;
 +N+Cmp/PlGen:^WG^RLEN%>i Rhash ;
 +N+Pl+Gen:^WG%>id CPXsuff ;  !párnáidis čolmijdis tihijdis
 +N+Pl+Acc:^WG%>id CPXsuff ;  !párnáidis tihijdis
@@ -1071,6 +1073,7 @@ LEXICON 2KYELI_PL!!= __@CODE@__
 LEXICON 2SYEJI_PL !!= __@CODE@__                                                                                                                                                                                   
 +N: KYELI_SYEJI_PL ;
 +N+Pl+Ill:^CLEN^RVSH%>id K ;                            ! suoijijd                                                                                                                                                 
++N+Cmp/SgNom:^RVSH%> Rhash ;
 +N+Cmp/PlGen:^WG%>i Rhash ;
 +N+Pl+Loc:^WG^RVSH%>in CPXsuff ;  !párnáidis                                                                                                                                                                       
 +N+Pl+Com:^WG%>id CPXsuffCOM ;  !párnáidiskuin                                                                                                                                                                     
@@ -1193,6 +1196,7 @@ LEXICON X_SIJVO_SG  !!= __@CODE@__
 LEXICON 2SIJVO_PL  !!= __@CODE@__
 +N:  X_ALGA_PL ;
 +N+Pl+Nom+Use/NG:^WG^RVSH%>h K ;  !sijvoh
++N+Cmp/SgNom: Rhash ;
 +N+Cmp/PlGen:^WG^RLEN%>i Rhash ;
 +N+Pl+Gen:^WG^RLEN%>id CPXsuff ;  ! sijvoidis
 +N+Pl+Acc:^WG^RLEN%>id CPXsuff ;  ! sijvoidis
@@ -1650,6 +1654,7 @@ LEXICON X_TAVLU_PL !!= __@CODE@__
 
 LEXICON 2SKERREEH_PL !!= __@CODE@__  Plural tantum, as 2PUUVSAH, but w/o WG
 +N: X_TAHHEE_PL ;
++N+Cmp/SgNom:^SV^SLEN Rhash ;
 
 
 LEXICON APINA !!= __@CODE@__  this is for loanwords without stem change
@@ -1679,6 +1684,7 @@ LEXICON APINA_SG  !!= __@CODE@__
 
 LEXICON APINA_PL !!= __@CODE@__
 +N: X_h_PL ;
++N+Cmp/SgNom: Rhash ;
 +N+Cmp/PlGen:%>i Rhash ;
 +N+Pl+Loc:%>in CPXsuff ;  !
 +N+Pl+Gen:%>id CPXsuff ;  ! viinijdis
@@ -1745,6 +1751,7 @@ LEXICON 4KUNAGAS_SG !!= __@CODE@__
 
 LEXICON 4KUNAGAS_PL !!= __@CODE@__ >
 +N: X_KUNAGAS_PL ;
++N+Cmp/SgNom:^FCD%> Rhash ;
 +N+Cmp/PlGen:^FCD%>âi Rhash ;
 +N+Pl+Gen:^FCD%>âid CPXsuff ;  ! 
 +N+Pl+Acc:^FCD%>âid CPXsuff ;  ! 
@@ -2065,6 +2072,7 @@ LEXICON 3EEMEED_SG !!= __@CODE@__
 LEXICON 3EEMEED_PL  !!= __@CODE@__
 +N:^CSH^SVSH X_eh_PL ;
 +N+Err/Orth:^SVSH X_eh_PL ; ! myevvireh pro correct myevireh
++N+Cmp/SgNom: Rhash ;
 +N+Cmp/PlGen:^CSH^SVSH%>ij Rhash ;
 +N+Pl+Gen:^CSH^SVSH%>ijd CPXsuff ;  ! 
 +N+Pl+Acc:^CSH^SVSH%>ijd CPXsuff ;  ! emedijdis
@@ -2121,6 +2129,7 @@ LEXICON 3LITTER_SG !!= __@CODE@__
 
 LEXICON 3LITTER_PL !!= __@CODE@__
 +N: X_eh_PL ; 
++N+Cmp/SgNom: Rhash ;
 +N+Cmp/PlGen:%>ij Rhash ;
 +N+Pl+Loc:%>ijn CPXsuff ;  !
 +N+Pl+Gen:%>ijd CPXsuff ;  ! 
@@ -2297,6 +2306,7 @@ LEXICON 3JAAVVIL_SG !!= __@CODE@__
 
 LEXICON 3JAAVVIL_PL !!= __@CODE@__ 
 +N:^CSH X_eh_PL ;
++N+Cmp/SgNom:^WG^RVSH%> Rhash ;
 +N+Cmp/PlGen:^CSH%>ij Rhash ;
 
 
@@ -2394,6 +2404,7 @@ LEXICON 3PAAVIR_SG
 
 
 LEXICON 3PAAVIR_PL !!= __@CODE@__ plural forms
++N+Cmp/SgNom:^WG^RVSH%> Rhash ;
 +N+Cmp/PlGen:^CSH%>ij Rhash ;
 +N:^CSH X_eh_PL ;
 
@@ -2551,7 +2562,7 @@ LEXICON 3VEESKIR_SG
 +N+Par:%>id K ;	! viäskárid
 +N+Par+Err/Orth:^RVSH%>id K ;	! viäskárid
 +N+Cmp/SgNom:^WG^RVSH%> Rhash ;
-+N+Cmp/SgGen:^WG^RVSH%> Rhash ;
++N+Cmp/SgGen:^RVSH%> Rhash ;
 +N+Sg+Gen: CPXsuff ;  ! 
 +N+Sg+Acc: CPXsuff ;  ! pirrâsis
 +N+Sg+Ill:s CPXsuff ;  ! pirrâsâsân
@@ -2563,6 +2574,7 @@ LEXICON 3VEESKIR_SG
 
 LEXICON 3VEESKIR_PL !!= __@CODE@__ 
 +N: X_eh_PL ;
++N+Cmp/SgNom:^WG^RVSH%> Rhash ;
 +N+Cmp/PlGen:%>ij Rhash ;
 +N+Pl+Gen:%>ijd CPXsuff ;  !
 +N+Pl+Acc:%>ijd CPXsuff ;  !
@@ -2612,6 +2624,7 @@ LEXICON 3PIIVTAS_SG
 
 LEXICON 3PIIVTAS_PL
 +N: X_eh_PL ;
++N+Cmp/SgNom:^WG^RVSH%> Rhash ;
 +N+Cmp/PlGen:%>ij Rhash ;
 
 LEXICON 3DUSSEPIIVTAS ! piivtâš itself is not in the 3PIIVTAS lexicon
@@ -2813,6 +2826,7 @@ LEXICON 3HUKSIM_SG  !!= __@CODE@__ NGA + Abe blank, SLEN for the rest
 
 LEXICON 3HUKSIM_PL  !!= __@CODE@__ plurals for 3HUKSIM
 +N:^SLEN X_eh_PL ;
++N+Cmp/SgNom: Rhash ;
 
 
 LEXICON 3KIEDAVUSSAM !!= __@CODE@__ 
@@ -3000,6 +3014,7 @@ LEXICON C_KAARBIS_SG !!= __@CODE@__
 
 LEXICON C_KAARBIS_PL
 +N:^FCD  X_h_PL ;
++N+Cmp/SgNom:^WG^RVSH%> Rhash ; 
 +N+Cmp/PlGen:^FCD%>i Rhash ;
 +N+Pl+Gen:^FCD%>id CPXsuff ;  !
 +N+Pl+Acc:^FCD%>id CPXsuff ;  !
@@ -3152,6 +3167,8 @@ S_AAIGA_PL ;
 
 LEXICON S_AAIGA_PL !!= __@CODE@__
 +N: X_SVSLENh_PL ;
++N+Cmp/SgNom:â^WG^RLEN%> Rhash ; ! aaigâsopâmuš
++N+Cmp/PlGen:%>i Rhash ;
 +N+Pl+Gen:%>id CPXsuff ;  !
 +N+Pl+Acc:%>id CPXsuff ;  !
 +N+Pl+Ill:%>id CPXsuff ;  !
