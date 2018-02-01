@@ -53,7 +53,7 @@ Literal quotes and angles must be escaped (cf morpheme boundaries further down):
  * %^RV:0	 	 = root vowel, lengthened by ^RLEN - ta%^RVvlu taavlu 
  * %^SC:0       = stem cons, %^SC:j, pluss lengthen after earlier shortening by %^CSH, see lyeme
  * %^SV:0 		 = stem vowel, lengthened by ^SLEN u:uu - táálu%^SV tááloost
- * %^V			 = vowel copy
+ * %^V:0			 = vowel copy
 
 !Triggers
 
@@ -100,11 +100,15 @@ End of alphabet definitions
 
 Sets
 
- *        a5 á5 i5 u5 y5 o5 ä5 		    
+ *  Vow = a á â ä e i o u u2 y æ ø ö å             
+        i2 u2 â2                                 
+        i3                                       
+        a5 á5 i5 u5 y5 o5 ä5 		            
+        i6                                       
         é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý 	    
         A Á Â Ä E I O U Y Æ Ø Ö Å			    
         É Ó Ú Í À È Ò Ú Ì Ë Ü Ï Ê Ô Û Î Ã Ý 	    
-        %^RV %^SV ;						    
+        %^RV %^SV ;						        
  *  RealVow = a á â ä e i o u y æ ø ö å y5	i2 i5 i3 i6	â2    
         é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý 	    
         A Á Â Ä E I O U Y Æ Ø Ö Å 		    
@@ -117,8 +121,8 @@ Sets
         b3 d3 g3 m3 h3 						    
         p4 k4 r4 l4  i4  t4 c4 č4                
          h5 j5 ŋ5 t5 c5 l5 t5 d5 r5 j6                   
-         %^RC %^SC   ;                         
-   UnvoicedCns = c č f h k p s š t  ;             
+        %^RC %^SC   ;                         
+ *  UnvoicedCns = c č f h k p s š t  ;             
  *  Geminate = b d g p h t k c f z l m n ŋ r s š v  ;    
  *  Sgm = Vow Cns ;							    
  *  NotSuffixBorder = Vow %^FCD %FVD Cns %^CSH %^WG %^CLEN %^SLEN %^RLEN %^SVLOW %^RVSH %^ÁE %^ÁI %^EA %^EX %^SVSH ;  
