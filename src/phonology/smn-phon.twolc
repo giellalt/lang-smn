@@ -68,7 +68,7 @@ i6:0 !!= * @CODE@ a fake vowel, to get WG rules to function, e.g. kyehtlov (kyeh
 %^RV:0	 	!!= * @CODE@ = root vowel, lengthened by ^RLEN - ta%^RVvlu taavlu 
 %^SC:0      !!= * @CODE@ = stem cons, %^SC:j, pluss lengthen after earlier shortening by %^CSH, see lyeme
 %^SV:0 		!!= * @CODE@ = stem vowel, lengthened by ^SLEN u:uu - táálu%^SV tááloost
-%^V			!!= * @CODE@ = vowel copy
+%^V:0			!!= * @CODE@ = vowel copy
 
 !! !Triggers
 
@@ -116,16 +116,16 @@ i6:0 !!= * @CODE@ a fake vowel, to get WG rules to function, e.g. kyehtlov (kyeh
 
 !! !!! Sets
 
-Sets
- Vow = a á â ä e i o u u2 y æ ø ö å 
-       i2 u2 â2
-       i3
-       a5 á5 i5 u5 y5 o5 ä5 		   !!= * @CODE@ 
-       i6
+Sets 
+ Vow = a á â ä e i o u u2 y æ ø ö å            !!= * @CODE@ 
+       i2 u2 â2                                !!= @CODE@ 
+       i3                                      !!= @CODE@ 
+       a5 á5 i5 u5 y5 o5 ä5 		           !!= @CODE@ 
+       i6                                      !!= @CODE@ 
        é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý 	   !!= @CODE@ 
        A Á Â Ä E I O U Y Æ Ø Ö Å			   !!= @CODE@ 
        É Ó Ú Í À È Ò Ú Ì Ë Ü Ï Ê Ô Û Î Ã Ý 	   !!= @CODE@ 
-       %^RV %^SV ;						   !!= @CODE@ 
+       %^RV %^SV ;						       !!= @CODE@ 
  RealVow = a á â ä e i o u y æ ø ö å y5	i2 i5 i3 i6	â2   !!= * @CODE@ 
        é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý 	   !!= @CODE@ 
        A Á Â Ä E I O U Y Æ Ø Ö Å 		   !!= @CODE@ 
@@ -138,8 +138,8 @@ Sets
        b3 d3 g3 m3 h3 						   !!= @CODE@ 
        p4 k4 r4 l4  i4  t4 c4 č4                !!= @CODE@
        h5 j5 ŋ5 t5 c5 l5 t5 d5 r5 j6                   !!=  @CODE@
-       %^RC %^SC   ;                         !!=  @CODE@
- UnvoicedCns = c č f h k p s š t  ;             !!=  @CODE@
+       %^RC %^SC   ;                         !!= @CODE@
+ UnvoicedCns = c č f h k p s š t  ;             !!= * @CODE@
  Geminate = b d g p h t k c f z l m n ŋ r s š v  ;  !!= * @CODE@  
  Sgm = Vow Cns ;							   !!= * @CODE@ 
  NotSuffixBorder = Vow %^FCD %FVD Cns %^CSH %^WG %^CLEN %^SLEN %^RLEN %^SVLOW %^RVSH %^ÁE %^ÁI %^EA %^EX %^SVSH ; !!= * @CODE@ 
