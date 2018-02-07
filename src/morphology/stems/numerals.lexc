@@ -905,17 +905,17 @@ LEXICON ARABICDELIMITER   !!= * __@CODE@__  blank + 3 delim, what does the lg co
 
 LEXICON ARABICDELIMITERORD   !!= * __@CODE@__ ordinals
 !             ARABICCASE0   ; ! This is the 1984 case, ie NGA
-          :%: ARABICCASEORD ; ! This is the 1984:s case.
- +Err/Orth:   ARABICCASEORD ; ! This is the 1984s case.
- +Err/Orth:'7 ARABICCASEORD ; ! This is the 1984's case.
- +Err/Orth:%- ARABICCASEORD ; ! This is the 1984-s case.
+!          :%: ARABICCASEORD ; ! This is the 1984:s case.
+! +Err/Orth:   ARABICCASEORD ; ! This is the 1984s case.
+! +Err/Orth:'7 ARABICCASEORD ; ! This is the 1984's case.
+! +Err/Orth:%- ARABICCASEORD ; ! The 1984-s case.
 
 LEXICON ARABICDELIMITERCOLL   !!= * __@CODE@__ collectives
-!             ARABICCASE0    ; ! This is the 1984 case, ie NGA
-          :%: ARABICCASECOLL ; ! This is the 1984:s case.
- +Err/Orth:   ARABICCASECOLL ; ! This is the 1984s case.
- +Err/Orth:'7 ARABICCASECOLL ; ! This is the 1984's case.
- +Err/Orth:%- ARABICCASECOLL ; ! This is the 1984-s case.
+!             ARABICCASE0    ; ! The 1984 case, ie NGA
+          :%: ARABICCASECOLL ; ! The 1984:s case.
+ +Err/Orth:   ARABICCASECOLL ; ! The 1984s case.
+ +Err/Orth:'7 ARABICCASECOLL ; ! The 1984's case.
+ +Err/Orth:%- ARABICCASECOLL ; ! The 1984-s case.
 
 LEXICON ARABICCASES   !!= * __@CODE@__  to distinguish between 0 and oblique
 ARABICCASE0 ;
@@ -950,25 +950,26 @@ LEXICON ARABICCASE
  +Arab+Pl+Com:%>iguin   K ; !
 !ordinals
 
-LEXICON ARABICCASEORD
- +Arab+Sg+Gen:%>da    K ;
- +Arab+Sg+Acc:%>dav   K ;
- +Arab+Sg+Ill:%>dij   K ;
- +Arab+Sg+Com:%>dijn  K ;
- +Arab+Sg+Ess:%>din   K ;
- +Arab+Pl+Nom:%>da    K ;
- +Arab+Pl+Gen:%>dij   K ;
- +Arab+Pl+Acc:%>dijt  K ;
- +Arab+Pl+Ill:%>dijda K ;
- +Arab+Pl+Com:%>dij   K ;
+!LEXICON ARABICCASEORD
+! +Arab+Sg+Gen:%>da    K ;
+! +Arab+Sg+Acc:%>dav   K ;
+! +Arab+Sg+Ill:%>dij   K ;
+! +Arab+Sg+Com:%>dijn  K ;
+! +Arab+Sg+Ess:%>din   K ;
+! +Arab+Pl+Nom:%>da    K ;
+! +Arab+Pl+Gen:%>dij   K ;
+! +Arab+Pl+Acc:%>dijt  K ;
+! +Arab+Pl+Ill:%>dijda K ;
+! +Arab+Pl+Com:%>dij   K ;
 
 LEXICON ARABICCASECOLL
- +Arab+Sg+Gen:%>sa   K ;
- +Arab+Sg+Acc:%>sav  K ;
- +Arab+Sg+Ill:%>sij  K ;
- +Arab+Sg+Loc:%>sin  K ;
- +Arab+Sg+Loc:%>sis  K ;
- +Arab+Sg+Com:%>sijn K ;
+ +Arab+Sg+Nom:%>s   K ;
+! +Arab+Sg+Gen:%>sa   K ;
+! +Arab+Sg+Acc:%>sav  K ;
+! +Arab+Sg+Ill:%>sij  K ;
+! +Arab+Sg+Loc:%>sin  K ;
+! +Arab+Sg+Loc:%>sis  K ;
+! +Arab+Sg+Com:%>sijn K ;
 
 ! The Roman numerals !
 ! ------------------ !
