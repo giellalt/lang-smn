@@ -1,0 +1,2009 @@
+! Divvun & Giellatekno - open source grammars for Sámi and other languages
+! Copyright © 2000-2010 The University of Tromsø & the Norwegian Sámi Parliament
+! http://giellatekno.uit.no & http://divvun.no
+!
+! This program is free software; you can redistribute and/or modify
+! this file under the terms of the GNU General Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version. The GNU General Public License
+! is found at http://www.gnu.org/licenses/gpl.html. It is
+! also available in the file $GTHOME/LICENSE.txt.
+!
+! Other licensing options are available upon request, please contact
+! giellatekno@hum.uit.no or feedback@divvun.no
+
+! ======================================== !
+!! !!!Propernoun morphology for Inari Saami
+! ======================================== !
+
+!! TODO:
+!! These are not in use:
+!! ANAR DUBAI DUBAI-plc DUBAI-sur MAKI 
+
+LEXICON Proper_infix !!= * __@CODE@__ is the de Silva lexicon
++N+Prop+Attr: # ; 
+
+LEXICON FirstTag !!= * __@CODE@__
++N+Prop+Attr: # ; 
++Cmp/Hyph+Cmp:- ProperNoun ;
+! RProp ;
+!@U.Cap.Obl@+N+Prop+Attr:@U.Cap.Obl@ # ; ! for reference: sme entry.
+
+LEXICON TEMPORARY !!= * __@CODE@__
++N+Prop+Sem/Plc: LONDON ; !temporary solution to add +Sem/Plc
+
+LEXICON V_TEMPORARY !!= * __@CODE@__
++N+Prop+Sem/Plc: ACCRA ; !temporary solution to add +Sem/Plc
+
+LEXICON NIEMI !!= * __@CODE@__
++N+Prop+Sem/Plc:i ACCRA ;
++N+Prop+Sem/Sur:i ACCRA ;
+
+!LEXICON ACCRA-surplc   * __@CODE@__
+!+N+Prop+Sem/Plc: ACCRA ;
+!+N+Prop+Sem/Sur: ACCRA ;
+
+LEXICON ACCRA-Y-obj !!= * __@CODE@__
++N+Prop+Sem/Obj: ACCRA ;
+
+LEXICON ACCRA-Y-ani !!= * __@CODE@__
++N+Prop+Sem/Ani: ACCRA ;
+
+LEXICON ACCRA-Y-mal !!= * __@CODE@__
++N+Prop+Sem/Mal: ACCRA ;
++N+Prop+Sem/Mal+Cmp/N:%- MaleRelative ;
+
+!LEXICON ACCRA-plcmal   * __@CODE@__
+!+N+Prop+Sem/Plc: ACCRA ;
+!+N+Prop+Sem/Sur: ACCRA ;
+!+N+Prop+Sem/Mal: ACCRA ;
+
+
+LEXICON ACCRA-Y-sur !!= * __@CODE@__
++N+Prop+Sem/Sur: ACCRA ;
+
+
+LEXICON ACCRA-Y-org !!= * __@CODE@__
++N+Prop+Sem/Org: ACCRA ;
+
+LEXICON ACCRA-Y_MWE-plc !!= * __@CODE@__
+ACCRA-Y-plc ;
+
+LEXICON ACCRA-Y-plc !!= * __@CODE@__
++N+Prop+Sem/Plc: ACCRA ;
++N+Prop+Sem/Sur: ACCRA ;
+
+LEXICON ACCRA-Y-fem !!= * __@CODE@__
++N+Prop+Sem/Fem: ACCRA ;
+
+LEXICON ACCRA  !!= * __@CODE@__ SM1
++Attr:  K ;
++Sg+Nom:  K ;
++Sg+Gen: K ;   	
++Sg+Acc: K ;		
++Sg+Ill:%>n K ;	
++Sg+Loc:%>st K ;	
++Sg+Com:%>in K ;  
++Cmp/SgNom: RProp ; 
++Cmp/SgGen: RProp ; 
++Cmp/SgGen: PERSNAME-CMP ;
+
+
+LEXICON HANNOLA-plc !!= * __@CODE@__
++N+Prop+Sem/Plc:a ACCRA ;
++N+Prop+Sem/Sur:a ACCRA ;
+
+LEXICON HANNOLA-sur !!= * __@CODE@__
++N+Prop+Sem/Sur:a ACCRA ;
+
+LEXICON LONDON-orgplc !!= * __@CODE@__
++N+Prop+Sem/Org: LONDON ;
++N+Prop+Sem/Plc: LONDON ;
++N+Prop+Sem/Sur: LONDON ;
+
+LEXICON LONDONBERN-plc !!= * __@CODE@__
++N+Prop+Sem/Plc: LONDON ;
++N+Prop+Sem/Sur: LONDON ;
+
+LEXICON GIRUNA-plc !!= * __@CODE@__
++N+Prop+Sem/Plc:a ACCRA ;
++N+Prop+Sem/Sur:a ACCRA ;
+
+LEXICON ISSAAK-mal
++N+Prop+Sem/Mal+Sg+Nom:ák K ;
++N+Prop+Sem/Mal+Sg+Gen:ák K ;
++N+Prop+Sem/Mal+Sg+Acc:ák K ;
++N+Prop+Sem/Mal+Sg+Loc:ákist K ;
++N+Prop+Sem/Mal+Sg+Ill:ákân K ;
++N+Prop+Sem/Mal+Sg+Com:ákáin K ;
+
+
+LEXICON KIARUN-mal 
++N+Prop+Sem/Mal: KIARUN ;
++N+Prop+Sem/Mal+Cmp/N:%- MaleRelative ;
+
+LEXICON KIARUN-plc 
++N+Prop+Sem/Plc: KIARUN ;
+
+
+LEXICON KIARUN !!= @CODE@ = 3KIELES
++Attr:^WG^RLEN K ; !kielâs
++Sg+Nom:^WG^RLEN K ; !kielâs
++Ess:^WG^RLEN%>in K ;   !kielâsin 
+!+Par:^WG^RLEN%>id K ;    !kielâsid   
++Sg+Gen: K ;   !kiellâs    
++Sg+Acc: K ;      !kiellâs
++Sg+Ill:^CSH%>ân K ;  !kielâsân
++Sg+Loc:^CSH%>ist K ; !kielâsist
++Sg+Com:^CSH%>áin K ; !kielâsáin
++Sg+Abe:%>ttáá K ;  !kiellâsttáá
++Cmp/SgNom:^WG^RLEN RProp ; 
++Cmp/SgGen: RProp ; 
++Cmp/SgGen: PERSNAME-CMP ;
+
+LEXICON KREIKKA-ani
++N+Prop+Sem/Ani: KREIKKA ;
+
+LEXICON KREIKKA-plc
++N+Prop+Sem/Plc: KREIKKA ;
+
+LEXICON KREIKKA-fem !!= * __@CODE@__ Ella
++N+Prop+Sem/Fem: KREIKKA ;
+
+LEXICON KREIKKA-mal !!= * __@CODE@__ Mikko
++N+Prop+Sem/Mal: KREIKKA ;
++N+Prop+Sem/Mal+Cmp/N:%- MaleRelative ;
+
+
+LEXICON KREIKKA
++Attr: K ;
+ X_KISSA_SG ;
++Cmp/SgNom:^WG^RLEN RProp ; 
++Cmp/SgGen:^WG RProp ; 
++Cmp/SgGen:^WG PERSNAME-CMP ;
+
+
+LEXICON SVEICCI-plc
++N+Prop+Sem/Plc: SVEICCI ;
+
+LEXICON SVEICCI-sur
++N+Prop+Sem/Sur: SVEICCI ;
+
+LEXICON SVEICCI-org
++N+Prop+Sem/Plc: SVEICCI ;
+
+LEXICON SVEICCI-mal
++N+Prop+Sem/Mal: SVEICCI ;
+
+LEXICON SVEICCI-fem
++N+Prop+Sem/Fem: SVEICCI ;
+
+LEXICON SVEICCI-ani
++N+Prop+Sem/Ani: SVEICCI ;
+
+
+LEXICON SVEICCI
+X_FADDA_SG ;
++Cmp/SgNom: RProp ; 
++Cmp/SgGen:^WG^RLEN RProp ; 
++Cmp/SgGen:^WG^RLEN PERSNAME-CMP ;
+
+ 
+ 
+LEXICON ERVASTI  !!= * __@CODE@__ 
++Attr:i  K ;
++Sg+Nom:i  K ;
++Sg+Gen:i K ;   	
++Sg+Acc:i K ;		
++Sg+Ill:i%>n K ;	
++Sg+Loc:i%>st K ;	
++Sg+Com:i%>in K ; 
++Cmp/SgNom:i RProp ; 
++Cmp/SgGen:i RProp ; 
++Cmp/SgGen:i PERSNAME-CMP ;
+
+ 
+LEXICON EUROOP-plc !!= * __@CODE@__
++N+Prop+Sem/Plc: EUROOP ;
+
+LEXICON EUROOP-mal !!= * __@CODE@__
++N+Prop+Sem/Mal: EUROOP ;
+ +N+Prop+Sem/Mal+Cmp/N:%- MaleRelative ;
+
+ 
+LEXICON EUROOP !!= * __@CODE@__
+ +Attr: K ;   	    
+ +Sg+Nom: K ;   	    
+ +Sg+Nom+Use/NG:pa K ;   	    
+ +Sg+Gen: K ;   	
+ +Sg+Acc: K ;		
+ +Sg+Ill:%>ân K ;	
+ +Sg+Loc+Err/Orth:%>âst K ;	
+ +Sg+Loc:%>ast K ;	
+ +Sg+Loc+Err/Orth:%>ist K ;	
+ +Sg+Com:%>áin K ; 
++Cmp/SgNom: RProp ; 
++Cmp/SgGen: RProp ; 
++Cmp/SgGen: PERSNAME-CMP ;
+ 
+LEXICON OCOMAS-plc 
+ +N+Prop+Sem/Plc: OCOMAS ;
+
+
+LEXICON OCOMAS
+ +Attr: K ;   	    
+ +Sg+Nom: K ;   	    
+ +Sg+Nom+Err/Orth:a K ;   	    
+ +Sg+Gen: K ;   	
+ +Sg+Acc: K ;		
+ +Sg+Ill:%>ân K ;	
+ +Sg+Loc:%>âst K ;	
+ +Sg+Loc+Err/Orth:%>ast K ;	
+ +Sg+Loc+Err/Orth:%>ist K ;	
+ +Sg+Com:š%>áin K ; 
++Cmp/SgNom: RProp ; 
++Cmp/SgGen: RProp ; 
++Cmp/SgGen: PERSNAME-CMP ;
+ 
+ 
+LEXICON LONDON !!= * __@CODE@__
+ +Attr: K ;   	    
+ +Sg+Nom: K ;   	    
+ +Sg+Gen: K ;   	
+ +Sg+Acc: K ;		
+ +Sg+Ill:%>ân K ;	
+ +Sg+Loc:%>ist K ;	
+ +Sg+Loc+Err/Orth+Use/NG:%>âst K ;	
+ +Sg+Loc+Err/Orth+Use/NG:%>ast K ;	
+ +Sg+Com:%>áin K ; 
++Cmp/SgNom: RProp ; 
++Cmp/SgGen: RProp ; 
++Cmp/SgGen: PERSNAME-CMP ;
+
+LEXICON C-FI-NEN !!= * __@CODE@__
+ +Attr:nen K ;
+ +Sg+Nom:nen K ;   	   ! Itkonen 
+ +Sg+Gen+Cmp:%>s- R ; 		! Itkos  	
+ +Sg+Gen:%>sii K ; 		! Itkosii  	
+ +Sg+Acc:%>s K ;		! Itkos
+ +Sg+Ill:%>sâžân K ;		! Itkosâžân
+ +Sg+Ill:%>sân K ;		! Itkosân
+ +Sg+Loc:%>siist K ;		! Itkosist
+ +Sg+Com:%>sáin K ; 		! Itkosáin
+ +Sg+Abe:%>sttáá K ; 		! Itkosttáá
+ +Pl+Nom:%>siih K ; 		! Itkosiih
+ +Pl+Gen:%>sij K ; 		! Itkosij
+ +Pl+Acc:%>sijd K ; 		! Itkosijd
+ +Pl+Ill:%>sáid K ; 		! Itkosáid
+ +Pl+Loc:%>sijn K ; 		! Itkosijn
+ +Pl+Abe:%>sijttáá K ; 		! Itkosijttáá
++Cmp/SgNom:nen RProp ; 
++Cmp/SgNom:s RProp ; 
++Cmp/SgGen:s RProp ; 
++Cmp/SgGen:s PERSNAME-CMP ;
+
+LEXICON BERN !!= * __@CODE@__
+ +Sg+Nom: K ;   	    
+ +Attr: K ;   	    
+ +Sg+Gen: K ;   	
+ +Sg+Acc: K ;		
+ +Sg+Ill:%>ân K ;	
+ +Sg+Ill+Use/NG:%>in K ;	!Nasaretin Hollandin
+ +Sg+Loc:%>ist K ;	
+ +Sg+Com:%>áin K ;   
+ +Sg+Com+Err/Orth:%>ijn K ;   
++Cmp/SgNom: RProp ; 
++Cmp/SgGen: RProp ; 
++Cmp/SgGen:a PERSNAME-CMP ;
+ 
+ 
+
+LEXICON ACCRA-LOAN-obj !!= * __@CODE@__
++N+Prop+Sem/Obj: ACCRA ;
+LEXICON ACCRA-LOAN-org !!= * __@CODE@__
++N+Prop+Sem/Org: ACCRA ;
+LEXICON ACCRA-LOAN-plc !!= * __@CODE@__
++N+Prop+Sem/Plc: ACCRA ;
++N+Prop+Sem/Sur: ACCRA ;
+LEXICON ACCRA-ani !!= * __@CODE@__
++N+Prop+Sem/Ani: ACCRA ;
+LEXICON ACCRA-femplc !!= * __@CODE@__
++N+Prop+Sem/Fem: ACCRA ;
++N+Prop+Sem/Plc: ACCRA ;
++N+Prop+Sem/Sur: ACCRA ;
+LEXICON ACCRA-femsur !!= * __@CODE@__
++N+Prop+Sem/Fem: ACCRA ;
++N+Prop+Sem/Sur: ACCRA ;
+LEXICON ACCRA-fem !!= * __@CODE@__
++N+Prop+Sem/Fem: ACCRA ;
+LEXICON ACCRA-malfem !!= * __@CODE@__
++N+Prop+Sem/Mal: ACCRA ;
++N+Prop+Sem/Fem: ACCRA ;
+LEXICON ACCRA-malsur !!= * __@CODE@__
++N+Prop+Sem/Mal: ACCRA ;
++N+Prop+Sem/Sur: ACCRA ;
+LEXICON ACCRA-mal !!= * __@CODE@__
++N+Prop+Sem/Mal: ACCRA ;
+LEXICON ACCRA-objplc !!= * __@CODE@__
++N+Prop+Sem/Obj: ACCRA ;
++N+Prop+Sem/Plc: ACCRA ;
++N+Prop+Sem/Sur: ACCRA ;
+LEXICON ACCRA-obj !!= * __@CODE@__
++N+Prop+Sem/Obj: ACCRA ;
+LEXICON ACCRA-org !!= * __@CODE@__
++N+Prop+Sem/Org: ACCRA ;
+
+LEXICON ACCRA-A_MWE-plc !!= * __@CODE@__
+ACCRA-A-plc ;
+
+LEXICON ACCRA-A-org !!= * __@CODE@__
+:a ACCRA-org ;
+
+LEXICON ACCRA-A-plc !!= * __@CODE@__
+:a ACCRA-plc ;
+
+LEXICON ACCRA-A-fem !!= * __@CODE@__
+:a ACCRA-fem ;
+
+LEXICON ACCRA_MWE-plc !!= * __@CODE@__
+ACCRA-plc ;
+
+LEXICON ACCRA-plc !!= * __@CODE@__
++N+Prop+Sem/Plc: ACCRA ;
++N+Prop+Sem/Sur: ACCRA ;
+LEXICON ACCRA-sur !!= * __@CODE@__
++N+Prop+Sem/Sur: ACCRA ;
+
+
+LEXICON MOLDAVIA-plc
+:a ACCRA-plc ;
+
+LEXICON MOLDAVIA-LOAN-plc
+:a ACCRA-LOAN-plc ;
+
+LEXICON MALAWI-plc
+:i ACCRA-plc ;
+
+LEXICON MACKENZIE-plc
+:e ACCRA-plc ;
+
+
+LEXICON BISSAU-plc !!= * __@CODE@__
++N+Prop+Sem/Plc: ACCRA ;
++N+Prop+Sem/Sur: ACCRA ;
+
+LEXICON PERU-plc !!= * __@CODE@__
++N+Prop+Sem/Plc: ACCRA ;
++N+Prop+Sem/Sur: ACCRA ;
+
+!LEXICON ERVASTI-ani   * __@CODE@__
+!+N+Prop+Sem/Ani: ERVASTI ;
+
+LEXICON ERVASTI-plcmal !!= * __@CODE@__
++N+Prop+Sem/Plc: ERVASTI ;
++N+Prop+Sem/Sur: ERVASTI ;
++N+Prop+Sem/Mal: ERVASTI ;
+
+!LEXICON ERVASTI-femplc   * __@CODE@__
+!+N+Prop+Sem/Fem: ERVASTI ;
+!+N+Prop+Sem/Plc: ERVASTI ;
+!+N+Prop+Sem/Sur: ERVASTI ;
+
+!LEXICON ERVASTI-femsur   * __@CODE@__
+!+N+Prop+Sem/Fem: ERVASTI ;
+!+N+Prop+Sem/Sur: ERVASTI ;
+
+LEXICON ERVASTI-fem !!= * __@CODE@__
++N+Prop+Sem/Fem: ERVASTI ;
+
+!LEXICON ERVASTI-malfem   * __@CODE@__
+!+N+Prop+Sem/Mal: ERVASTI ;
+!+N+Prop+Sem/Fem: ERVASTI ;
+!
+!LEXICON ERVASTI-malsur   * __@CODE@__
+!+N+Prop+Sem/Mal: ERVASTI ;
+!+N+Prop+Sem/Sur: ERVASTI ;
+
+LEXICON ERVASTI-mal !!= * __@CODE@__
++N+Prop+Sem/Mal: ERVASTI ;
++N+Prop+Sem/Mal+Cmp/N:%- MaleRelative ;
+
+!LEXICON ERVASTI-objplc  * __@CODE@__
+!+N+Prop+Sem/Obj: ERVASTI ;
+!+N+Prop+Sem/Plc: ERVASTI ;
+!+N+Prop+Sem/Sur: ERVASTI ;
+
+LEXICON ERVASTI-obj !!= * __@CODE@__
++N+Prop+Sem/Obj: ERVASTI ;
+
+LEXICON ERVASTI-org !!= * __@CODE@__
++N+Prop+Sem/Org: ERVASTI ;
+
+LEXICON ERVASTI-plc !!= * __@CODE@__
++N+Prop+Sem/Plc: ERVASTI ;
++N+Prop+Sem/Sur: ERVASTI ;
+
+LEXICON ERVASTI-sur !!= * __@CODE@__
++N+Prop+Sem/Sur: ERVASTI ;
+
+
+LEXICON BERN-LOAN-obj !!= * __@CODE@__
++N+Prop+Sem/Obj: BERN ;
+LEXICON BERN-LOAN-org !!= * __@CODE@__
++N+Prop+Sem/Org: BERN ;
+LEXICON BERN-LOAN-plc !!= * __@CODE@__
++N+Prop+Sem/Plc: BERN ;
++N+Prop+Sem/Sur: BERN ;
+
+LEXICON BERN-ani !!= * __@CODE@__
++N+Prop+Sem/Ani: BERN ;
+
+!LEXICON BERN-femplc   * __@CODE@__
+!+N+Prop+Sem/Fem: BERN ;
+!+N+Prop+Sem/Plc: BERN ;
+!+N+Prop+Sem/Sur: BERN ;
+
+LEXICON BERN-fem !!= * __@CODE@__
++N+Prop+Sem/Fem: BERN ;
+LEXICON BERN-mal !!= * __@CODE@__
++N+Prop+Sem/Mal: BERN ;
++N+Prop+Sem/Mal+Cmp/N:%- MaleRelative ;
+LEXICON BERN-objsur !!= * __@CODE@__
++N+Prop+Sem/Obj: BERN ;
++N+Prop+Sem/Sur: BERN ;
+LEXICON BERN-obj !!= * __@CODE@__
++N+Prop+Sem/Obj: BERN ;
+LEXICON BERN-orgsur !!= * __@CODE@__
++N+Prop+Sem/Org: BERN ;
++N+Prop+Sem/Sur: BERN ;
+LEXICON BERN-org !!= * __@CODE@__
++N+Prop+Sem/Org: BERN ;
+
+
+LEXICON BERN_MWE-plc !!= * __@CODE@__
+BERN-plc ;
+
+LEXICON BERN-plc !!= * __@CODE@__
++N+Prop+Sem/Plc: BERN ;
++N+Prop+Sem/Sur: BERN ;
+
+LEXICON BERN-surmal !!= * __@CODE@__
++N+Prop+Sem/Mal: BERN ;
++N+Prop+Sem/Sur: BERN ;
+LEXICON BERN-sur !!= * __@CODE@__
++N+Prop+Sem/Sur: BERN ;
+
+LEXICON OY-plc  !!= * __@CODE@__ ad hoc 
+BERN-plc ;
+
+LEXICON OY-sur  !!= * __@CODE@__ ad hoc 
+BERN-sur ;
+
+LEXICON OY-fem  !!= * __@CODE@__ ad hoc 
+BERN-fem ;
+
+LEXICON C-FI-NEN-plc !!= * __@CODE@__
++N+Prop+Sem/Plc: C-FI-NEN ;
+
+LEXICON C-FI-NEN-sur !!= * __@CODE@__
++N+Prop+Sem/Sur: C-FI-NEN ;
+
+LEXICON C-FI-NEN-org !!= * __@CODE@__
++N+Prop+Sem/Org: C-FI-NEN ;
+
+LEXICON DUBAI !!= * __@CODE@__
+ +Sg+Nom:i K ;   	    
+ +Attr:i K ;   	    
+ +Sg+Gen:i K ;   	
+ +Sg+Acc:i K ;		
+ +Sg+Ill:i%n K ;	
+ +Sg+Loc:i%>st K ;	
+ +Sg+Com:i%>n K ;   
++Cmp/SgNom:i RProp ; 
++Cmp/SgGen:i RProp ; 
++Cmp/SgGen:i PERSNAME-CMP ;
+
+LEXICON DUBAI-mal !!= * __@CODE@__
++N+Prop+Sem/Mal: DUBAI ;
++N+Prop+Sem/Mal+Cmp/N:%- MaleRelative ;
+
+LEXICON DUBAI-fem !!= * __@CODE@__
++N+Prop+Sem/Fem: DUBAI ;
+LEXICON DUBAI-sur !!= * __@CODE@__
++N+Prop+Sem/Sur: DUBAI ;
+
+LEXICON DUBAI-obj !!= * __@CODE@__
++N+Prop+Sem/Obj: DUBAI ;
+
+LEXICON DUBAI_MWE-plc !!= * __@CODE@__
+DUBAI-plc ;
+
+LEXICON DUBAI-plc !!= * __@CODE@__
++N+Prop+Sem/Plc: DUBAI ;
++N+Prop+Sem/Sur: DUBAI ;
+
+LEXICON DUBAI-org !!= * __@CODE@__
++N+Prop+Sem/Org: DUBAI ;
+
+LEXICON GATA-plc !!= * __@CODE@__
++N+Prop+Sem/Plc:gata ACCRA ;
++N+Prop+Sem/Plc:gaten LONDON ;
+
+LEXICON JOKULL-plc !!= * __@CODE@__
++N+Prop+Sem/Plc: LONDON ;
+
+LEXICON LONDON-LOAN-obj !!= * __@CODE@__
++N+Prop+Sem/Obj: LONDON ;
+LEXICON LONDON-LOAN-org !!= * __@CODE@__
++N+Prop+Sem/Org: LONDON ;
+LEXICON LONDON-LOAN-plc !!= * __@CODE@__
++N+Prop+Sem/Plc: LONDON ;
++N+Prop+Sem/Sur: LONDON ;
+
+LEXICON LONDON-ani !!= * __@CODE@__
++N+Prop+Sem/Ani: LONDON ;
+LEXICON LONDON-atr !!= * __@CODE@__
++N+Prop+Sem/Atr: LONDON ;
+LEXICON LONDON-fem !!= * __@CODE@__
++N+Prop+Sem/Fem: LONDON ;
+LEXICON LONDON-malfem !!= * __@CODE@__
++N+Prop+Sem/Mal: LONDON ;
++N+Prop+Sem/Mal+Cmp/N:%- MaleRelative ;
++N+Prop+Sem/Fem: LONDON ;
+LEXICON LONDON-malplc !!= * __@CODE@__
++N+Prop+Sem/Plc: LONDON ;
++N+Prop+Sem/Mal: LONDON ;
++N+Prop+Sem/Mal+Cmp/N:%- MaleRelative ;
+
+LEXICON LONDON-malsur !!= * __@CODE@__
++N+Prop+Sem/Mal: LONDON ;
++N+Prop+Sem/Sur: LONDON ;
++N+Prop+Sem/Mal+Cmp/N:%- MaleRelative ;
+
+LEXICON LONDON-mal !!= * __@CODE@__
++N+Prop+Sem/Mal: LONDON ;
++N+Prop+Sem/Mal+Cmp/N:%- MaleRelative ;
+
+LEXICON LONDON-obj !!= * __@CODE@__
++N+Prop+Sem/Obj: LONDON ;
+
+LEXICON LONDON-orgsur !!= * __@CODE@__
++N+Prop+Sem/Sur: LONDON ;
++N+Prop+Sem/Org: LONDON ;
+
+LEXICON LONDON-org !!= * __@CODE@__
++N+Prop+Sem/Org: LONDON ;
+
+LEXICON LONDON_MWE-plc !!= * __@CODE@__
+LONDON-plc ;
+
+LEXICON LONDON-plc !!= * __@CODE@__
++N+Prop+Sem/Plc: LONDON ;
++N+Prop+Sem/Sur: LONDON ;
+
+LEXICON LONDON-sur !!= * __@CODE@__
++N+Prop+Sem/Sur: LONDON ;
+
+!LEXICON MAKI-LOAN-plc   * __@CODE@__
+!+N+Prop+Sem/Plc:i ACCRA ;
+!+N+Prop+Sem/Sur:i ACCRA ;
+
+LEXICON MAKI-plc !!= * __@CODE@__
++N+Prop+Sem/Plc:i ACCRA ;
++N+Prop+Sem/Sur:i ACCRA ;
+
+LEXICON MAKI-sur !!= * __@CODE@__
++N+Prop+Sem/Sur:i ACCRA ;
+
+
+LEXICON NYSTØ-LOAN-org !!= * __@CODE@__
++N+Prop+Sem/Org: NYSTØ ;
+LEXICON NYSTØ-LOAN-plc !!= * __@CODE@__
++N+Prop+Sem/Plc: NYSTØ ;
++N+Prop+Sem/Sur: NYSTØ ;
+!LEXICON NYSTØ-femsur   * __@CODE@__
+!+N+Prop+Sem/Fem: NYSTØ ;
+!+N+Prop+Sem/Sur: NYSTØ ;
+LEXICON NYSTØ-fem !!= * __@CODE@__
++N+Prop+Sem/Fem: NYSTØ ;
+LEXICON NYSTØ-mal !!= * __@CODE@__
++N+Prop+Sem/Mal: NYSTØ ;
++N+Prop+Sem/Mal+Cmp/N:%- MaleRelative ;
+LEXICON NYSTØ-obj !!= * __@CODE@__
++N+Prop+Sem/Obj: NYSTØ ;
+LEXICON NYSTØ-org !!= * __@CODE@__
++N+Prop+Sem/Org: NYSTØ ;
+
+LEXICON NYSTØ_MWE-plc !!= * __@CODE@__
+NYSTØ-plc ;
+
+LEXICON NYSTØ-plc !!= * __@CODE@__
++N+Prop+Sem/Plc: NYSTØ ;
++N+Prop+Sem/Sur: NYSTØ ;
+
+LEXICON NYSTØ-sur !!= * __@CODE@__
++N+Prop+Sem/Sur: NYSTØ ;
+
+LEXICON NYSTØ !!= * __@CODE@__
+ +Sg+Nom: K ;   	    
+ +Attr: K ;   	    
+ +Sg+Gen: K ;   	
+ +Sg+Acc: K ;		
+ +Sg+Ill:%>n K ;	
+ +Sg+Loc:%>st K ;	
+ +Sg+Com:%>i5n K ;  
+ +Ess:%>n K ;
++Cmp/SgNom: RProp ; 
++Cmp/SgGen: RProp ; 
++Cmp/SgGen: PERSNAME-CMP ;
+
+LEXICON PIPPI-LOAN-plc !!= * __@CODE@__
++N+Prop+Sem/Plc:i ACCRA ;
++N+Prop+Sem/Sur:i ACCRA ;
+
+LEXICON PIPPI-ani !!= * __@CODE@__
++N+Prop+Sem/Ani:i ACCRA ;
+LEXICON PIPPI-femsur !!= * __@CODE@__
++N+Prop+Sem/Fem:i ACCRA ;
++N+Prop+Sem/Sur:i ACCRA ;
+LEXICON PIPPI-fem !!= * __@CODE@__
++N+Prop+Sem/Fem:i ACCRA ;
+LEXICON PIPPI-malfem !!= * __@CODE@__
++N+Prop+Sem/Mal:i ACCRA ;
++N+Prop+Sem/Fem:i ACCRA ;
++N+Prop+Sem/Mal+Cmp/N:%- MaleRelative ;
+
+LEXICON PIPPI-mal !!= * __@CODE@__
++N+Prop+Sem/Mal:i ACCRA ;
++N+Prop+Sem/Mal+Cmp/N:%- MaleRelative ;
+LEXICON PIPPI-obj !!= * __@CODE@__
++N+Prop+Sem/Obj:i ACCRA ;
+LEXICON PIPPI-org !!= * __@CODE@__
++N+Prop+Sem/Org:i ACCRA ;
+LEXICON PIPPI_MWE-plc !!= * __@CODE@__
+PIPPI-plc ;
+
+LEXICON PIPPI-plc !!= * __@CODE@__
++N+Prop+Sem/Plc:i ACCRA ;
++N+Prop+Sem/Sur:i ACCRA ;
+
+LEXICON PIPPI-sur !!= * __@CODE@__
++N+Prop+Sem/Sur:i ACCRA ;
+
+LEXICON RONDANE-LOAN !!= * __@CODE@__
++N+Prop+Sem/Plc: RONDANE ;
++N+Prop+Sem/Sur: RONDANE ;
+
+
+LEXICON RONDANE-SG-LOAN !!= * __@CODE@__
++N+Prop+Sem/Plc: RONDANE ;
++N+Prop+Sem/Sur: RONDANE ;
+
+LEXICON RONDANE-SG-plc !!= * __@CODE@__
++N+Prop+Sem/Plc: RONDANE ;
++N+Prop+Sem/Sur: RONDANE ;
+
+LEXICON RONDANE-fem !!= * __@CODE@__
++N+Prop+Sem/Fem: RONDANE ;
+LEXICON RONDANE-mal !!= * __@CODE@__
++N+Prop+Sem/Mal: RONDANE ;
++N+Prop+Sem/Mal+Cmp/N:%- MaleRelative ;
+LEXICON RONDANE-obj !!= * __@CODE@__
++N+Prop+Sem/Obj: RONDANE ;
+LEXICON RONDANE-org !!= * __@CODE@__
++N+Prop+Sem/Org: RONDANE ;
+LEXICON RONDANE-plc !!= * __@CODE@__
++N+Prop+Sem/Plc: RONDANE ;
++N+Prop+Sem/Sur: RONDANE ;
+
+LEXICON RONDANE-sur !!= * __@CODE@__
++N+Prop+Sem/Sur: RONDANE ;
+
+LEXICON RONDANE !!= * __@CODE@__
+:e ACCRA ;
+
+LEXICON AANAAR-plc 	!!= * __@CODE@__
+ +N+Prop+Sem/Plc: AANAAR ;
+
+LEXICON AANAAR-mal 	!!= * __@CODE@__
+ +N+Prop+Sem/Mal: AANAAR ;
++N+Prop+Sem/Mal+Cmp/N:%- MaleRelative ;
+
+LEXICON AANAAR-fem 	!!= * __@CODE@__
+ +N+Prop+Sem/Fem: AANAAR ;
+
+ 
+LEXICON AANAAR 	!!= * __@CODE@__ Goes to EEMEED
+ +Sg+Nom: K ;   	    ! Aanaar
+ +Attr: K ;   	    ! Aanaar
+ +Sg+Gen: K ;   		! Aanaar
+ +Sg+Acc: K ;		! Aanaar
+ +Sg+Ill:^CSH^SVSH%>ân K ;	! Anarân
+ +Sg+Loc:^CSH^SVSH%>ist K ;	! Anarist
+ +Sg+Com:^CSH^SVSH%>áin K ;   ! Anaráin
+ +Ess:^CSH^SVSH%>in K ;	! Anarin
++Cmp/SgNom: RProp ; 
++Cmp/SgGen: RProp ; 
++Cmp/SgGen: PERSNAME-CMP ;
+
+
+LEXICON JAVRI-plc !!= * __@CODE@__ jävri, jeggi
++N+Prop+Sem/Plc: JAVRI ;
+
+
+LEXICON JAVRI-mal !!= * __@CODE@__ 
++N+Prop+Sem/Mal: JAVRI ;
++N+Prop+Sem/Mal+Cmp/N:%- MaleRelative ;
++N+Prop+Sem/Mal+Attr:^FVD^CSH K ; !Kaab Ant
+
+LEXICON JAVRI-fem !!= * __@CODE@__ 
++N+Prop+Sem/Fem: JAVRI ;
+
+
+LEXICON JAVRI-ani !!= * __@CODE@__ 
++N+Prop+Sem/Ani: JAVRI ;
+
+LEXICON JAVRI !!= * __@CODE@__ similar to AIGI, but only Sg. Some case forms should be deleted for names? Only difference to VUONA is Ess/Par. Are they in use for names?
++Sg+Nom: K ;                         !  jävri
++Attr: K ;                         !  jävri
++Sg+Gen:^WG^RLEN K ;               ! jäävri
++Sg+Acc:^WG^RLEN K ;               !  jäävri
++Sg+Ill:^EA^CSH^RLEN%>n K ;       ! jáávrán
+!+Sg+Ill+Err/Orth:â^EA^CSH^RLEN%>n K ;       ! jáávrân : á:â is a freqv Err/Orth, áâ:â in twolc, or should we use a trigger?
++Sg+Loc:^WG^RLEN%>st K ;           ! jäävrist
++Sg+Com:^WG^CLEN^SVLOW%>in K ; ! javrijn
++Sg+Abe:^WG%>ttáá K ;         ! jävrittáá
++Ess:^CLEN%>n K ;                         !  jävrin
+!+Par:^CLEN%>d K ;                         !  jävrid
++Cmp/SgNom: RProp ; 
++Cmp/SgGen:^WG^RLEN%> RProp ; 
++Cmp/SgGen:^WG^RLEN%> PERSNAME-CMP ;
+
+
+
+LEXICON JAAVRIH-plc !!= * __@CODE@__  JAVRI-plurals, e.g. Kähteejäävrih
++N+Prop+Sem/Plc: JAAVRIH ;
+
+
+LEXICON JAAVRIH !!= * __@CODE@__  plurals for JAVRI
++Pl+Nom:^WG^RLEN%>h K ;            ! jäävrih
++Pl+Gen:^WG^RLEN%>i K ;            ! jaavrij
++Pl+Gen:^WG^RVSH%>i K ;            ! javrij
++Pl+Acc:^WG^RLEN%>id K ;           ! jaavrijd
++Pl+Ill:^WG^CLEN^SVLOW%>id K ;    ! javrijd
++Pl+Loc:^WG^RLEN%>in K ;           ! jaavrijn
++Pl+Com:^WG^RVSH%>iguin K ;        ! javrijguin
++Pl+Com+Err/Orth:^WG^RVSH%>igijn K ;        ! javrijgijn
++Cmp/PlNom:^WG^RLEN%>h RProp ;
+
+
+
+LEXICON VAARI-plc !!= * __@CODE@__ 
++N+Prop+Sem/Plc: VAARI ;
+
+!LEXICON VAARI-obj   * __@CODE@__ 
+!+N+Prop+Sem/Obj: VAARI ;
+!
+!LEXICON VAARI-org   * __@CODE@__ 
+!+N+Prop+Sem/Org: VAARI ;
+!
+!LEXICON VAARI-mal   * __@CODE@__ 
+!+N+Prop+Sem/Mal: VAARI ;
+!
+!LEXICON VAARI-fem   * __@CODE@__ 
+!+N+Prop+Sem/Fem: VAARI ;
+!
+!LEXICON VAARI-ani   * __@CODE@__ 
+!+N+Prop+Sem/Ani: VAARI ;
+
+
+LEXICON VAARI   !!= * __@CODE@__ to SAAMI
++Sg+Nom: K ;                 ! sääm7i,
++Attr: K ;                 ! sääm7i,
++Sg+Gen:^WG K ;          ! säämi,
++Sg+Acc:^WG K ;      ! säämi,
++Sg+Ill:^EA%>n K ;          ! sáám7án ä>á !, 
++Sg+Loc:^WG%>st K ;         ! säämist
++Sg+Com:^WG^RLEN%>in   K ;       ! saamijn  # please add ä > a _ ij (twolc)
++Sg+Abe:^WG^RVSH%>ttáá  K ; ! sämittáá
++Ess:^CLEN%>n  K ;          ! säämmin
+!+Par:^CLEN%>d K ;           ! säämmid
++Cmp/SgNom: RProp ; 
++Cmp/SgGen:^WG%> RProp ; 
++Cmp/SgGen:^WG%> PERSNAME-CMP ;
+
+
+LEXICON VAARIH-plc !!= * __@CODE@__  VAARI-plurals
++N+Prop+Sem/Plc: VAARIH ;
+
+
+LEXICON VAARIH   !!= * __@CODE@__ VAARI-plurals
++Pl+Nom:^WG%>h K ;          ! säämih
++Pl+Gen:^WG%>i K ;          ! saamij
++Pl+Gen:^WG^RVSH%>i K ;    ! samij
++Pl+Acc:^WG%>id K ;         ! saamijd
++Pl+Ill:^WG%>id K ;         ! saamijd
++Pl+Loc:^WG%>in K ;         ! saamijn
++Pl+Com:^WG^RVSH%>iguin K ; ! samijguin
++Pl+Com+Err/Orth:^WG^RVSH%>igijn K ; ! samijguin
++Pl+Abe:^WG^RVSH%>ittáá K ; ! samijttáá
++Cmp/PlNom:^WG%>h RProp ; 
+
+
+LEXICON CIELGI-plc !!= * __@CODE@__ to CAACI
++N+Prop+Sem/Plc: CIELGI ;
+
+
+LEXICON CIELGI !!= * __@CODE@__ to CAACI
++Attr: K ;
++Sg+Nom: K ;               ! čääci
++Sg+Gen:^WG K ;     ! čääsi
++Sg+Acc:^WG K ;     ! čääsi
++Sg+Ill:^EA%>n K ;      ! čáácán
++Sg+Loc:^WG%>st K ; ! čääsist
++Sg+Com:^WG^CLEN^RVSH%>in K ; ! čassijn
++Sg+Abe:^WG^RVSH%>ttáá K ;     ! čäsittáá 
++Ess:^CLEN%>n K ;               ! čääccin
+!+Par:^CLEN%>d K ;               ! čääccid 
++Cmp/SgNom: RProp ; 
++Cmp/SgGen:^WG%> RProp ; 
++Cmp/SgGen:^WG%> PERSNAME-CMP ;
+
+
+LEXICON SAAMI-plc
++N+Prop+Sem/Plc: X_SAAMI ;
+
+LEXICON SAAMI-obj-pl
++N+Prop+Sem/Obj: X_SAAMI_PL ;
+
+
+!LEXICON LUOBAL-mal !!= * __@CODE@__ Similar to VEESKIR
+!+N+Prop+Sem/Mal: LUOBAL ;
+!+N+Prop+Sem/Mal+Attr:^WG^RLEN K ;	! veeskir
+
+
+LEXICON LUOBAL-plc !!= * __@CODE@__ Similar to VEESKIR
++N+Prop+Sem/Plc: LUOBAL ;
+
+
+LEXICON LUOBAL !!= __@CODE@__ Similar to VEESKIR
++Attr:^WG^RLEN K ;	! veeskir
++Sg+Nom:^WG^RLEN K ;	! veeskir
++Sg+Gen: K ;     			! viäskár máállás^ÁI
++Sg+Acc: K ;    			 ! viäskár
++Sg+Ill:%>ân K ; 			! viäskárân
++Sg+Loc:%>ist K ; ! viäskárist
++Sg+Com:%>áin K ; ! viäskáráin
++Sg+Abe:%>ttáá K ; ! viäskárttáá
++Ess:^WG^RVSH%>in K ;   ! veskirin 
++Ess:%>in K ;   ! viäskárin 
++Cmp/SgNom:^WG^RLEN%> RProp ; 
++Cmp/SgGen: RProp ; 
++Cmp/SgGen: PERSNAME-CMP ;
+
+
+LEXICON LUOBBALEH-plc !!= * __@CODE@__ Plural to LUOBAL-plc
++N+Prop+Sem/Plc: LUOBBALEH ;
+
+LEXICON LUOBBALEH-org !!= * __@CODE@__ Plural to LUOBAL-plc
++N+Prop+Sem/Org: LUOBBALEH ;
+
+LEXICON LUOBBALEH-ani !!= * __@CODE@__ Plural to LUOBAL-plc
++N+Prop+Sem/Ani: LUOBBALEH ;
+
+
+LEXICON LUOBBALEH !!= * __@CODE@__ plural forms 
++Pl+Nom:%>eh K ;  ! viäskáreh
++Pl+Gen:%>ij K ;  ! viäskárij
++Pl+Acc:%>ijd K ; ! viäskárijd
++Pl+Ill:%>áid K ; ! viäskáráid
++Pl+Loc:%>ijn K ; ! viäskárijn
++Pl+Com:%>ijguin K ;  ! viäskárijguin
++Pl+Com+Err/Orth:%>ijgijn K ;  ! viäskárijguin
++Pl+Abe:%>ijttáá K ;  ! viäskárijttáá
++Cmp/PlNom:%>eh RProp ; 
+
+
+LEXICON JUUHA-plc !!= * __@CODE@__ similar to KIEHA
++N+Prop+Sem/Plc: JUUHA ;
+
+
+LEXICON JUUHA !!= * __@CODE@__ similar to KIEHA, stem ju
++Attr:v K ; ! Čivtjuv, stem ju + v
++Attr+Use/NG:uh^RCâ K ; ! Čivtjuhâ  ! kiehâ
++Sg+Nom:uh^RCâ K ;				 		! kiehâ
++Sg+Gen:uh^RCâ^WG K ;     				! kievâ
++Sg+Acc:uh^RCâ^WG K ;     				! kievâ
++Sg+Ill:uh^RCâ%>n K ;					! kiehân
++Sg+Loc:uh^RCâ^WG%>st K ; 				! kievâst
++Sg+Abe:uh^RCâ^WG^RVSH%>ttáá K ;		! kievâttáá
++Sg+Com:uh^RCâ^WG^CLEN^SVLOW%>in K ; ! kievváin
++Ess:uh^RCâ%>n K ;						! kiehân 
+!+Par:uh^RCâ%>d K ;						! kiehâd 
++Cmp/SgNom:uh^RCâ^RVSH%> RProp ; 
++Cmp/SgGen:uh^RCâ^WG%> RProp ; 
++Cmp/SgGen:uh^RCâ^WG%> PERSNAME-CMP ;
+
+
+LEXICON JOOVSEP-mal !!= * __@CODE@__.  
++N+Prop+Sem/Mal: JOOVSEP ;
++N+Prop+Sem/Mal+Cmp/N:%- MaleRelative ;
+
+LEXICON JOOVSEP-fem !!= * __@CODE@__.  
++N+Prop+Sem/Fem: JOOVSEP ;
+
+
+LEXICON JOOVSEP  !!= * __@CODE@__ 
++Sg+Nom: K ;        		   		! Joovsep
++Attr: K ;        		   		! Joovsep
++Sg+Gen: K ;    		 			! Joovsep
++Sg+Acc: K ;     		 			! Joovsep 
++Sg+Ill:^CSH^SVSH%>ân K ;		! Joovsepân
++Sg+Loc:^CSH^SVSH%>ist K ; 		! Joovsepist 
++Sg+Com:^SC^CSH^SVSH%>áin K ;		! Joovseppáin
++Ess:^SC^CSH^SVSH%>in K ; 			! potákkin 
++Cmp/SgNom: RProp ; 
++Cmp/SgGen: RProp ; 
++Cmp/SgGen: PERSNAME-CMP ;
+
+LEXICON MAARIT-fem  !!= * __@CODE@ similar to 3POTTAAK__ 
++N+Prop+Sem/Fem: MAARIT ;
+
+
+LEXICON MAARIT  !!= * __@CODE@__ 
++Sg+Nom: K ;        		   		! Maarit
++Attr: K ;        		   			! Maarit
++Sg+Gen: K ;    		 			! Maarit
++Sg+Acc: K ;     		 			! Maarit 
++Sg+Ill:^SC^CSH^SVSH%>ân K ;		! Marittân
++Sg+Loc:^SC^CSH^SVSH%>ist K ; 		! Marittist 
++Sg+Com:^SC^CSH^SVSH%>áin K ;		! Marittáin
++Cmp/SgNom: RProp ; 
++Cmp/SgGen:^RVSH%> RProp ; 
++Cmp/SgGen: PERSNAME-CMP ;
+
+
+!LEXICON UCJUV-plc !!= * __@CODE@__ similar to 
+!+N+Prop+Sem/Plc: UCJUV ;
+!
+!
+!LEXICON UCJUV  !!= * __@CODE@__ 
+!+Attr: K ;
+!+Sg+Nom:v K ;        		   		! Ucjuv
+!+Sg+Nom+Use/NG:hâ K ;        		   		! Ucjuuhâ
+!+Sg+Gen:v K ;    		 			! Ucjuv
+!+Sg+Acc:v K ;     		 			! Ucjuv 
+!+Sg+Ill:^SV^SLEN%>hân K ;		! Ucjuuhân
+!+Sg+Loc:^SVv^SLEN%>âst K ; 		! Ucjuuvâst 
+!+Sg+Com:^SCv^SVSH%>áin K ;		!  
+!+Cmp/SgNom:v RProp ; 
+!+Cmp/SgGen:v RProp ; 
+!+Cmp/SgGen:v PERSNAME-CMP ;
+
+
+LEXICON VUONA-mal !!= * __@CODE@__ similar to ALGA
++N+Prop+Sem/Mal: VUONA ;
++N+Prop+Sem/Mal+Cmp/N:%- MaleRelative ;
++N+Prop+Sem/Mal+Sg+Gen+Allegro:^FVD # ;
++N+Prop+Sem/Mal+Attr:^FVD^CSH K ; !Jovn
+
+LEXICON VUONA-fem !!= * __@CODE@__ similar to ALGA
++N+Prop+Sem/Fem: VUONA ;
++N+Prop+Sem/Fem+Sg+Gen+Allegro:^FVD # ;
+
+LEXICON VUONA-obj !!= * __@CODE@__ similar to ALGA
++N+Prop+Sem/Obj: VUONA ;
+
+LEXICON VUONA-org !!= * __@CODE@__ similar to ALGA
++N+Prop+Sem/Org: VUONA ;
+
+LEXICON VUONA-ani !!= * __@CODE@__ similar to ALGA
++N+Prop+Sem/Ani: VUONA ;
+
+
+LEXICON VUONA-plc !!= * __@CODE@__ similar to ALGA
++N+Prop+Sem/Plc: VUONA ;
+
+
+LEXICON VUONA !!= * __@CODE@__ similar to ALGA
++Sg+Nom: K;				 		!  
++Attr: K;				 		!  
++Sg+Gen:^WG^RLEN K ;     		! soolâ
++Sg+Acc:^WG^RLEN K ;     		! soolâ
++Sg+Ill:^CSH^RLEN%>n K ;		! soolân
++Sg+Loc:^WG^RLEN%>st K ; 		! soolâst
++Sg+Com:^WG^CLEN^SVLOW%>in  K ;	! algáin  Added ^CLEN for Anssijn
++Sg+Abe:^WG%>ttáá K ;		! solâttáá
++Ess:%>n K ;						! algân
+!+Par:%>d K ;						! algâd
++Cmp/SgNom: RProp ; 
++Cmp/SgGen:^WG^RLEN%> RProp ;
++Cmp/SgGen:^WG^RLEN%> PERSNAME-CMP ;
+
+
+LEXICON VUONA_PL-plc
++N+Prop+Sem/Plc: VUONA_PL ;
+
+LEXICON VUONA_PL !!= * __@CODE@__ similar to ALGA_PL X_PUUVSAH
++Pl+Nom:^WG^RLEN%>h K ;  		! puuvsah
++Pl+Gen:^WG^RLEN%>i K ;			! puuvsâi 
++Pl+Gen+Use/NG:^WG%>i K ;  		! puvsâi
++Pl+Acc:^WG^RLEN%>id K ; 		! puuvsâid
++Pl+Ill:^WG^CLEN^SVLOW%>id K ; ! puvssáid
++Pl+Loc:^WG^RLEN%>in K ; 		! puuvsâin
++Pl+Com:^WG%>iguin K ;		! puvsâiguin
++Pl+Com+Err/Orth:^WG%>igijn K ;		! 
++Pl+Abe:^WG%>ittáá K ;		! puvsâittáá
++Cmp/SgNom: RProp ; 
+
+LEXICON PAALGIS-plc
++N+Prop+Sem/Plc: PAALGIS ;
+
+
+LEXICON PAALGIS  !!= __@CODE@__ similar to KAARBIS
++Attr:^WG^RLEN K ;  ! käärbis
++Sg+Nom:^WG^RLEN K ;  ! käärbis
++Sg+Gen:^FCD K ;  			 	! kárbá
++Sg+Acc:^FCD K ;   				! kárbá
++Sg+Ill:^FCD%>s   K ;       		! kárbás
++Sg+Loc:^FCD%>st K ;       	 	! kárbást
++Sg+Com:^FCD%>in K ; 				! kárbáin
++Sg+Abe:^FCD^RVSH%>ttáá K ;   ! kárbáttáá
++Sg+Abe:^FCD^WG%>ttáá K ;   ! riäggáttáá
++Ess:^WG^RVSH%>in K ;  ! kärbisin
+!+Par:^WG^RVSH%>id K ;  ! kärbisid
+
+LEXICON Prop_h_PL-plc !!= __@CODE@__  gives %>h etc. to vowel stems
++N+Prop+Sem/Plc: Prop_h_PL ;
+
+LEXICON Prop_h_PL !!= __@CODE@__  gives %>h etc. to vowel stems
++Pl+Nom:%>h K ; 		! 
++Pl+Gen:%>i K ; 		! 
++Pl+Acc:%>id K ; 		! 
++Pl+Ill:%>id K ; 		! 
++Pl+Loc:%>in K ;		! 
+
+
+LEXICON SAVO-plc !!= * __@CODE@__ similar to ALGA
++N+Prop+Sem/Plc: SAVO ;
+
+LEXICON SAVO !!= * __@CODE@__ similar to ALGA
++Sg+Nom:^FCD^WG K; ! savo DAHJE
++Sg+Nom:^SLEN K;	! savvoon
++Attr:^FCD^WG K;				 		!  
++Sg+Gen:^SLEN K ;     		! savvoon
++Sg+Acc:^SLEN K ;     		! savvoon
++Sg+Ill:^WG%>ân K ;		! savonân
++Sg+Loc:^WG%>ist K ; 		! savonist
++Sg+Com:^WG%>áin  K ;	! savonáin
++Sg+Abe:^SLEN%>ttáá K ;		! savvoonttáá
++Ess:^WG%>n K ;						! savonin
+!+Par:^WG%>d K ;						! savonid
++Cmp/SgNom:^FCD^WG RProp ; 
++Cmp/SgGen:^SLEN%> RProp ;
++Cmp/SgGen:^SLEN%> PERSNAME-CMP ;
+
+
+LEXICON ANDARAS-mal !!= * __@CODE@__ similar to KUNAGAS
++N+Prop+Sem/Mal: ANDARAS ;
++N+Prop+Sem/Mal+Cmp/N:%- MaleRelative ;
+
+LEXICON ANDARAS-org !!= * __@CODE@__ similar to KUNAGAS
++N+Prop+Sem/Org: ANDARAS ;
+
+!LEXICON ANDARAS-ani !!= * __@CODE@__ similar to KUNAGAS
+!+N+Prop+Sem/Ani: ANDARAS ;
+
+!LEXICON ANDARAS-fem   * __@CODE@__ similar to KUNAGAS
+!+N+Prop+Sem/Fem: ANDARAS ;
+
+LEXICON ANDARAS-plc !!= * __@CODE@__ similar to KUNAGAS
++N+Prop+Sem/Plc: ANDARAS ;
+
+
+LEXICON ANDARAS !!= * __@CODE@__  this is for loanwords without stem change, 3-syll. cons end
++Sg+Nom:^FCD K ;				! kunâgâs
++Attr:^FCD K ;				! kunâgâs
++Sg+Gen:^FCD K ; 				! kunâgâs
++Sg+Acc:^FCD K ; 				! kunâgâs
++Sg+Ill:^FCD%>ân K ; 			! kunâgâsân 
++Sg+Loc:^FCD%>âst K ; 		! kunâgâsâst
++Sg+Com:%>áin K ;	 		! kunâgâssáin
++Sg+Abe:^FCD%>ttáá K ; 		! kunâgâsttáá
++Ess:%>ân K ; 			! kunâgâssân
+!+Par:%>âd K ;				! kunâgâssâd
++Cmp/SgNom: RProp ; 
++Cmp/SgGen:^FCD%> RProp ;
++Cmp/SgGen:^FCD%> PERSNAME-CMP ;
+
+
+LEXICON LUOHTA-plc !!= * __@CODE@__   
++N+Prop+Sem/Plc: LUOHTA ;
+
+LEXICON LUOHTA-mal !!= * __@CODE@__
++N+Prop+Sem/Mal: LUOHTA ;
++N+Prop+Sem/Sur: LUOHTA ;
++N+Prop+Sem/Mal+Cmp/N:%- MaleRelative ;
+
+LEXICON LUOHTA-fem !!= * __@CODE@__
++N+Prop+Sem/Fem: LUOHTA ;
++N+Prop+Sem/Sur: LUOHTA ;
+
+
+LEXICON LUOHTA !!= * __@CODE@__ similar to VADDU
++Sg+Nom: K ;               ! váddu 
++Sg+Gen:^WG^RLEN K ;     ! váádu
++Sg+Acc:^WG^RLEN K ;     ! váádu
++Sg+Ill:^CSH^RLEN%>n K ;      ! váádun
++Sg+Loc:^WG^RLEN%>st K ; ! váádust
++Sg+Com:^WG^CLEN^SVLOW%>in K ; ! váddoin 
++Sg+Abe:^WG^RVSH%>ttáá K ;     ! váduttáá 
++Ess:%>n K ;               ! váddun
+!+Par:%>d K ;               ! váddud 
++Cmp/SgNom: RProp ; 
++Cmp/SgGen:^WG^RLEN%> RProp ; 
++Cmp/SgGen:^WG^RLEN%> PERSNAME-CMP ;
+
+
+LEXICON LAADUH-plc !!= * __@CODE@__ Plural to LUOHTA-plc
++N+Prop+Sem/Plc: LAADUH ;
+
+
+LEXICON LAADUH !!= * __@CODE@__ 
++Pl+Nom:^WG^RLEN%>h K ;  ! vááduh
++Pl+Gen:^WG^RLEN%>i K ;  ! váádui
++Pl+Gen+Use/NG:^WG^RVSH%>i K ;  ! vádui
++Pl+Acc:^WG^RLEN%>id K ; ! vááduid
++Pl+Ill:^WG^CLEN^SVLOW%>id K ; ! váddoid  
++Pl+Loc:^WG^RLEN%>in K ; ! vááduin
++Pl+Com:^WG^RVSH%>iguin K ;    ! váduiguin 
++Pl+Com+Err/Orth:^WG^RVSH%>igijn K ;    ! váduiguin 
++Pl+Abe:^WG^RVSH%>ittáá K ;    ! váduittáá  
++Cmp/PlNom:^WG^RLEN%>h RProp ; 
+
+
+LEXICON MOKKE-plc !!= * __@CODE@__ similar to ALGE 
++N+Prop+Sem/Plc: MOKKE ;
+
+LEXICON MOKKE-sur !!= * __@CODE@__ similar to ALGE 
++N+Prop+Sem/Sur: MOKKE ;
+
+LEXICON MOKKE-org !!= * __@CODE@__ similar to ALGE 
++N+Prop+Sem/Plc: MOKKE ;
+
+
+LEXICON MOKKE-mal !!= * __@CODE@__ similar to ALGE 
++N+Prop+Sem/Mal: MOKKE ;
++N+Prop+Sem/Mal+Cmp/N:%- MaleRelative ;
+
+LEXICON MOKKE-ani !!= * __@CODE@__ similar to ALGE 
++N+Prop+Sem/Ani: MOKKE ;
+
+
+LEXICON MOKKE !!= * __@CODE@__ similar to ALGE
++Sg+Nom: K ;						! alge
++Attr: K ;						! alge
++Sg+Gen:^WG K ; 					! alge
++Sg+Acc:^WG K ; 					! alge
++Sg+Ill:^CSH^RLEN^EA%>n K ; 	! aalgan
++Sg+Loc:^SV^WG^CLEN^SLEN%>st K ; 	! algeest
++Sg+Com:^WG^CLEN%>in K ; 		! olgijn 
++Sg+Abe:^WG%>ttáá K ; 		! algettáá
++Ess:%>n K ; 			! algen
+!+Par:%>d K ; 			! alged
++Cmp/SgNom: RProp ; 
++Cmp/SgGen:^WG%> RProp ; 
++Cmp/SgGen:^WG%> PERSNAME-CMP ;
+
+
+!LEXICON UAIVAS-mal   * __@CODE@__ similar to KUAVDAS.
+!+N+Prop+Sem/Mal: UAIVAS ;
+!
+!
+!LEXICON UAIVAS-fem   * __@CODE@__ similar to KUAVDAS.
+!+N+Prop+Sem/Fem: UAIVAS ;
+
+
+LEXICON UAIVAS-plc !!= * __@CODE@__ similar to KUAVDAS. 
++N+Prop+Sem/Plc: UAIVAS ;
+
+
+LEXICON UAIVAS !!= * __@CODE@__   similar to KUAVDAS
++Sg+Nom+Err/Orth:â^WG^RLEN%>š K ; 		! kuávdâš piäivâš
++Attr+Err/Orth:â^WG^RLEN%>š K ; 		! kuávdâš piäivâš
++Sg+Nom:^WG^RLEN%>š K ; 		! kuávdáš piäiváš
++Attr:^WG^RLEN%>š K ; 		! kuávdáš piäiváš
++Sg+Gen:^SV^SLEN K ; 			! kuávdáá piäiváá
++Sg+Acc:^SV^SLEN K ;			! kuávdáá piäiváá
++Sg+Ill:^WG^RVSH%>žân K ;	! kuávdážân piäiváážân
++Sg+Ill+Use/NG:^WG^RLEN%>žân K ;		!  kuávdážân piäivážân
++Sg+Loc:^SV^SLEN%>st K ;			! kuávdáást
++Sg+Com:%>in K ; 			! kuávdáin
++Sg+Abe:^SV^SLEN%>ttáá K ; 		! kuávdááttáá
++Ess:^WG^RVSH%>žin K ;		! kuávdážin
++Ess+Use/NG:^WG^RLEN%>žin K ;			! kuávdáážin
+!+Par:^WG^RLEN%>žid K ; 			! kuávdáážid
+!+Par+Use/NG:^WG^RVSH%>žid K ;		! kuávdážid
++Cmp/SgNom:â^WG^RLEN%>š RProp ; 
++Cmp/SgGen:^SV^SLEN%> RProp ; 
++Cmp/SgGen:^SV^SLEN%> PERSNAME-CMP ;
+
+
+LEXICON SUALUI-plc !!= * __@CODE@__ similar to PUASUI and KUAVSUI. 
++N+Prop+Sem/Plc: SUALUI ;
+
+
+LEXICON SUALUI  !!= * __@CODE@__ similar to PUASUI and KUAVSUI
++Ess:%>n K ;     ! poccun
+!+Par:%>d K ;     ! poccud
++Sg+Nom:i4^WG K ;   	! kuávsui
++Attr:i4^WG K ;   	! kuávsui
++Sg+Gen:^SV^SLEN K ;  			 		! kuoksuu
++Sg+Acc:^SV^SLEN K ;   					! kuoksuu
++Sg+Ill:%>i   K ;       		! kuoksui
++Sg+Loc:%>st K ;        		! kuoksust
++Sg+Com:%>in K; 				! kuoksuin
++Sg+Abe:^SV^SLEN%>ttáá K ;  		   		! kuoksuuttáá
++Ess:j^WG^RVSH%>in K ;     ! kuávsujin
+!+Par:j^WG^RVSH%>id K ;     ! kuávsujid
++Cmp/SgNom: RProp ; 
+
+
+LEXICON SUOLLUUH-plc !!= * __@CODE@__ SUALUI-plc plurals 
++N+Prop+Sem/Plc: SUOLLUUH ;
+
+
+LEXICON SUOLLUUH  !!= * __@CODE@__ SUALUI-plc plurals 
++Pl+Nom:^SV^SLEN%>h K ;       	  		! kuoksuuh
++Pl+Gen:%>i K ;        		! kuoksui
++Pl+Acc:%>id K ;        		! kuoksuid
++Pl+Ill:%>id K ;        		! kuoksuid 
++Pl+Loc:%>in K ;        		! kuoksuin
++Pl+Com:%>iguin K ;     		! kuoksuiguin
++Pl+Com+Err/Orth:%>igijn K ;     		! kuoksuiguin
++Pl+Abe:%>ittáá K ;    		! kuoksuittáá
++Cmp/PlNom:^SV^SLEN%>h RProp ; 
+
+
+LEXICON ROTO-plc !!= * __@CODE@__ similar to LAJO and X_LAJO 
++N+Prop+Sem/Plc: ROTO ;
+
+
+LEXICON ROTO  !!= * __@CODE@__ similar to LAJO and X_LAJO
++Attr: K ;
++Sg+Nom: K ;  !laj̣o
++Sg+Gen:^WG K ;  !lajo
++Sg+Acc:^WG K ;  !lajo
++Sg+Ill:%>n    K ;   !laj̣on
++Sg+Loc:^SV^WG^RLEN^SLEN%>st K ;  !laajoost
++Sg+Com:^WG%>in K ;  !lajoin
++Sg+Abe:^WG%>ttáá K ;  !lajottáá
++Ess:^SV^CLEN^SLEN%>n    K ;  !laijoon
+!+Par:^SV^CLEN^SLEN%>d    K ; !laijood
++Cmp/SgNom: RProp ; 
++Cmp/SgGen:^WG%> RProp ; 
++Cmp/SgGen:^WG%> PERSNAME-CMP ;
+
+
+LEXICON KURRA-plc !!= * __@CODE@__ similar to SOLLA
++N+Prop+Sem/Plc: KURRA ;
+
+
+LEXICON KURRA  !!= * __@CODE@__ similar to SOLLA
++Attr: K ;
++Sg+Nom: K;				 		! sollâ
++Sg+Gen:^WG^RLEN K ;     		! soolâ
++Sg+Acc:^WG^RLEN K ;     		! soolâ
++Sg+Ill:^CSH^RLEN%>n K ;		! soolân
++Sg+Loc:^WG^RLEN%>st K ; 		! soolâst
++Sg+Com:^WG^RLEN^SVLOW%>in K ; ! sooláin
++Sg+Abe:^WG%>ttáá K ;		! solâttáá
++Ess:^CLEN%>n K ;				! sollân
+!+Par:^CLEN%>d K ;				! sollâd
++Cmp/SgNom: RProp ; 
++Cmp/SgNom:^WG^RLEN%> RProp ; 
++Cmp/SgGen:^WG^RLEN%> PERSNAME-CMP ;
+
+
+LEXICON LASSA-plc !!= * __@CODE@__ similar to FADDA
++N+Prop+Sem/Plc: LASSA ;
+
+
+LEXICON LASSA  !!= * __@CODE@__  Similar to FADDA
++Attr: K ;
++Sg+Nom: K ;               ! kissá
++Sg+Gen:^WG^RLEN K ;     ! fáádá, ráávsá
++Sg+Acc:^WG^RLEN K ;     ! fáádá, ráávsá
++Sg+Ill:^CSH^RLEN%>n K ;      ! kiisán CSH?
++Sg+Loc:^WG^RLEN%>st K ; ! fáádást, ráávsást
++Sg+Com:^WG^CLEN%>in K ; ! kissáin, rávssáin, fáddáin DIFFERS FROM KUTKA
++Sg+Abe:^WG%>ttáá K ;     ! kisáttáá 
++Ess:%>n K ;               ! kissán
+!+Par:%>d K ;               ! kissád
++Cmp/SgNom: RProp ; 
++Cmp/SgNom:^WG^RLEN%> RProp ; 
+
+
+!LEXICON SUANJU-mal   * __@CODE@__ similar to LAAVU
+!+N+Prop+Sem/Mal: SUANJU ;
+
+LEXICON SUANJU-ani !!= * __@CODE@__ similar to LAAVU
++N+Prop+Sem/Ani: SUANJU ;
+
+
+LEXICON SUANJU-plc !!= * __@CODE@__ similar to LAAVU
++N+Prop+Sem/Plc: SUANJU ;
+
+
+LEXICON SUANJU !!= * __@CODE@__ similar to LAAVU
++Sg+Nom: K ;               ! láávu
++Attr: K ;               ! láávu
++Sg+Gen:^WG K ;     ! láávu
++Sg+Acc:^WG K ;     ! láávu
++Sg+Ill:%>n K ;      ! láávun
++Sg+Loc:^WG%>st K ; ! láávust
++Sg+Com:^WG^SVLOW%>in K ; ! láávoin
++Sg+Abe:^WG^RVSH%>ttáá K ;     ! lávuttáá 
++Ess:^CLEN%>n K ;               ! láávvun
+!+Par:^CLEN%>d K ;               ! láávvud 
++Cmp/SgNom: RProp ; 
++Cmp/SgGen:^WG%> RProp ; 
++Cmp/SgGen:^WG%> PERSNAME-CMP ;
+
+
+LEXICON NYERI-plc !!= * __@CODE@__ similar to KYELI
++N+Prop+Sem/Plc: NYERI ;
+
+
+LEXICON NYERI  !!= * __@CODE@__ similar to KYELI
++Attr: K ;
++Sg+Nom: K ;                 ! kyeli
++Sg+Gen:e^WG^RVSH K ;         ! kyele
++Sg+Acc:e^WG^RVSH K ;         ! kyele
++Sg+Ill:^EA^CSH^RLEN%>n K ;     ! kuálán
++Sg+Loc:e^WG%>est K ;   ! kyeleest
+!+Sg+Com:^WG%>in K ;         ! kuolijn
+!+Sg+Abe:^WG^RVSH%>ttáá K ;  ! kyelettáá
+!+Ess:^CLEN%>n K ;     ! kyellin
+!+Par:^CLEN%>d K ; 					! kyellid
++Cmp/SgNom: RProp ; 
++Cmp/SgGen:^WG^RVSH%> PERSNAME-CMP ;
+
+
+LEXICON POHE-fem !!= * __@CODE@__ similar to VAHE
++N+Prop+Sem/Fem: POHE ;
+
+LEXICON POHE-ani !!= * __@CODE@__ similar to VAHE
++N+Prop+Sem/Ani: POHE ;
+
+
+LEXICON POHE-mal !!= * __@CODE@__ similar to VAHE
++N+Prop+Sem/Mal: POHE ;
++N+Prop+Sem/Mal+Cmp/N:%- MaleRelative ;
+
+
+LEXICON POHE-plc !!= * __@CODE@__ similar to VAHE
++N+Prop+Sem/Plc: POHE ;
+
+
+LEXICON POHE !!= * __@CODE@__ nearly similar to VAHE
++Sg+Nom: K ; 						! vahe
++Attr: K ; 						! vahe
++Sg+Gen:^WG K ;					! vave
++Sg+Acc:^WG K ;					! vave
++Sg+Ill:^EA%>n K ; 				! vahan
++Sg+Loc:^SV^WG^RLEN^SLEN%>st K ; 	! pooveest
++Sg+Com:^WG^CLEN%>in K ; 		! vovvijn
++Sg+Abe:^WG%>ttáá K ; 			! vavettáá
++Ess:^SV^CLEN^SLEN%>n K ; 			! vahheen
+!+Par:^SV^CLEN^SLEN%>d K ; 		! vahheed
++Cmp/SgNom: RProp ; 
++Cmp/SgGen:^WG%> RProp ; 
++Cmp/SgGen:^WG%> PERSNAME-CMP ;
+
+
+LEXICON ORDO-plc
++N+Prop+Sem/Plc: ORDO ;
+
+LEXICON ORDO  !!= __@CODE@__ similar to  KIRKKO 
++Attr: K ;
++Sg+Nom: K ;   !kirkko
++Sg+Gen:^WG K ;   !kirho
++Sg+Acc:^WG K ;   !ki´rho
++Sg+Ill:^CSH^RLEN%>n K ;   !kiirkon
++Sg+Loc:^SV^WG^SLEN%>st K ;
++Sg+Com:^WG^CLEN%>in K ;   !kirhoin
++Sg+Abe:^WG%>ttáá K ;   !kirhottáá
++Cmp/SgNom: RProp ; 
+
+LEXICON EENA-plc !!= * __@CODE@__ similar to EENNAM, except for sg nom, eenâ (a rare form)
++N+Prop+Sem/Plc: EENNAM ;
+
+
+
+LEXICON EENNAM-plc !!= * __@CODE@__ similar to EEMEED
++N+Prop+Sem/Plc: EENNAM ;
+
+LEXICON EENNAM-mal !!= * __@CODE@__ similar to EEMEED
++N+Prop+Sem/Mal: EENNAM ;
++N+Prop+Sem/Mal+Cmp/N:%- MaleRelative ;
+
+
+LEXICON EENNAM  !!= * __@CODE@__ similar to EEMEED
++Attr: K ;
++Sg+Nom: K ;					! eemeed
++Sg+Gen: K ;					! eemeed
++Sg+Acc: K ;					! eemeed
++Sg+Ill:^CSH^SVSH%>ân K ;	! emedân
++Sg+Loc:^CSH^SVSH%>ist K ;	! emedist
++Sg+Com:^CSH^SVSH%>áin K ;	! emedáin
++Sg+Abe:%>ttáá K ;		! eemeedttáá
++Ess:^CSH^SVSH%>in K ;		! emedin
+!+Par:^CSH^SVSH%>id K ;		! emedid
++Cmp/SgNom: RProp ; 
+
+
+LEXICON ENAMEH-plc !!= * __@CODE@__ similar to EEMEED
++N+Prop+Sem/Plc: ENAMEH ;
+
+
+LEXICON ENAMEH  !!= * __@CODE@__  plurals for EEMEED
++Pl+Nom:^CSH^SVSH%>eh K ;		! emedeh
++Pl+Gen:^CSH^SVSH%>ij K ;		! emedij
++Pl+Acc:^CSH^SVSH%>ijd K ;	! emedijd
++Pl+Ill:^CSH^SVSH%>áid K ;	! emedáid
++Pl+Loc:^CSH^SVSH%>ijn K ;	! emedijn
++Pl+Com:^CSH^SVSH%>ijguin K ;	! emedijguin
++Pl+Com+Err/Orth:^CSH^SVSH%>ijgijn K ;	! emedijguin
++Pl+Abe:^CSH^SVSH%>ijttáá K ;	! emedijttáá
++Cmp/PlNom:^CSH^SVSH%>eh RProp ; 
+
+
+LEXICON CUAJA-fem !!= * __@CODE@__ XXX check this
++N+Prop+Sem/Plc: CUAJA ;
+
+LEXICON CUAJA-plc !!= * __@CODE@__ similar to TAALU2
++N+Prop+Sem/Plc: CUAJA ;
+
+
+LEXICON CUAJA !!= * __@CODE@__ similar to TAALU2
++Attr: K ;
++Sg+Nom: K ;               ! vuáṛu
++Sg+Gen:^WG^RVSH^SVLOW K ;    ! vuáro
++Sg+Acc:^WG^RVSH^SVLOW K ;           ! vuáro
++Sg+Ill:%>n K ;      ! vuáṛun
++Sg+Loc:^SV^WG^RVSH^SLEN^SVLOW%>st K ; ! vuároost
++Sg+Com:^WG^RVSH^SVLOW%>in K ; ! vuároin
++Sg+Abe:^WG^RVSH^SVLOW%>ttáá K ;     ! vuárottáá
++Ess:^CLEN%>n K ;               ! vuárrun
+!+Par:^CLEN%>d K ;               ! vuárrud
++Cmp/SgNom: RProp ; 
++Cmp/SgGen:^WG^RVSH^SVLOW%> PERSNAME-CMP ;
+
+
+!LEXICON HIATTA-plc
+!+N+Prop+Sem/Plc: HIATTA ;
+
+!LEXICON HIATTA !!= * __@CODE@__ similar to 2KISSA
+!+Sg+Nom: K ;               ! kissá
+!+Sg+Gen:^WG K ;           ! kiṣá
+!+Sg+Acc:^WG K ;           ! kiṣá
+!+Sg+Ill:^CSH^RLEN%>n K ;      ! kiiṣán
+!+Sg+Loc:^SV^WG^CLEN^SLEN%>st K ; ! kissáást
+!+Sg+Com:^WG^CLEN%>in K ; ! kissáin
+!+Sg+Abe:^WG%>ttáá K ;     ! kiṣáttáá 
+!+Ess:^CLEN%>n K ;         ! kissán
+!+Par:^CLEN%>d K ;         ! kissád
+!+Cmp/SgNom: R ;
+!+Cmp/SgGen:^WG%> R ;
+
+
+LEXICON KUOLBA-plc !!= * __@CODE@__ similar to POOVSA
++N+Prop+Sem/Plc: KUOLBA ;
+
+
+LEXICON KUOLBA !!= * __@CODE@__  similar to POOVSA
++Attr:^FCD^WG^RLEN K ;			! poovsâ
++Sg+Nom:^FCD^WG^RLEN K ;			! poovsâ
++Sg+Gen: K ;				! poksâm
++Sg+Acc: K ;				! poksâm
++Sg+Ill:%>ân K ;			! poksâmân
++Sg+Loc:%>ist K ;			! poksâmist
++Sg+Com:%>áin K ; 		! poksâmáin
++Sg+Abe:%>ttáá K ; 		! poksâmttáá
++Ess:^FCD^WG^RLEN%>n K ;			! poovsân
+!+Par:^FCD^WG^RLEN%>d K ;			! poovsâd
++Cmp/SgNom:^FCD^WG^RLEN RProp ; 
++Cmp/SgGen: PERSNAME-CMP ;
+
+
+LEXICON KAAVA-plc !!= * __@CODE@__ similar to KIELA
++N+Prop+Sem/Plc: KAAVA ;
+
+
+LEXICON KAAVA !!= * __@CODE@__ similar to KIELA 
++Sg+Com:^WG^SVLOW%>in K ; 		! kieláin
++Ess:^CLEN%>n K ;				! kiellân # puolipitkä > pitkä
+!+Par:^CLEN%>d K ;				! kiellâd # puolipitkä > pitkä
++Attr: K ;
++Sg+Nom: K;				 		! kiehâ
++Sg+Gen:^WG K ;     				! kievâ
++Sg+Acc:^WG K ;     				! kievâ
++Sg+Ill:%>n K ;					! kiehân
++Sg+Loc:^WG%>st K ; 				! kievâst
++Sg+Abe:^WG^RVSH%>ttáá K ;		! kievâttáá
++Cmp/SgNom: RProp ; 
++Cmp/SgGen:^WG%> PERSNAME-CMP ;
+
+LEXICON NJOBZA-ani !!= * __@CODE@__ similar to 2ALGA
++N+Prop+Sem/Ani: NJOBZA ;
+
+LEXICON NJOBZA-plc !!= * __@CODE@__ similar to 2ALGA
++N+Prop+Sem/Plc: NJOBZA ;
+
+
+LEXICON NJOBZA !!= * __@CODE@__ similar to 2ALGA
++Attr: K ;
++Sg+Nom: K;				 		! sollâ
++Cmp/SgNom: R ;
++Sg+Gen:^WG^RLEN K ;     		! soolâ
++Sg+Acc:^WG^RLEN K ;     		! soolâ
++Sg+Ill:^CSH^RLEN%>n K ;		! soolân
++Sg+Loc:^WG^RLEN%>st K ; 		! soolâst
++Sg+Com:^WG^CLEN^SVLOW%>in  K ;			! algáin
++Sg+Com+Use/NG:^WG^RLEN^SVLOW%>in K ; ! sooláin
++Sg+Abe:^WG%>ttáá K ;		! solâttáá
+
+
+LEXICON JAAVRAS-plc !!= * __@CODE@__  
++N+Prop+Sem/Plc: JAAVRAS ;
+
+LEXICON JAAVRAS-mal !!= * __@CODE@__  
++N+Prop+Sem/Mal: JAAVRAS ;
+
+
+LEXICON JAAVRAS !!= * __@CODE@__  
++Attr:^WG^RLEN%>š K ;
++Sg+Nom:^WG^RLEN%>š K ; 			! jáávráš
++Sg+Gen:^SV^SLEN%>  K ; 	! jávráá
++Sg+Acc:^SV^SLEN%>  K ; 	!  jávráá
++Sg+Ill:^WG%>žân K ;	!  jávrážân  ! 1 'suolluužân' found in corpus, ask ML
++Sg+Loc:^SV^SLEN%>st K ; !   jávráást
++Sg+Com:%>in K ; 	! jávráin 
++Sg+Abe:^SV^SLEN%>ttáá K ; ! jávrááttáá 
++Cmp/SgNom:^WG^RLEN%>š RProp ; 
+
+LEXICON SUOLLUS-plc !!= __@CODE@__ 
++N+Prop+Sem/Plc: SUOLLUS ;
+
+
+LEXICON SUOLLUS !!= __@CODE@__ 
++Sg+Nom:š^RLEN K ; 				
++Sg+Nom:š K ; 				
++Sg+Gen:^SV^SLEN K ; 		
++Sg+Acc:^SV^SLEN K ;		
++Sg+Ill:^SVž^SLEN%>ân K ; ! suolluužân	
++Sg+Loc:^SV^SLEN%>st K ;	
++Sg+Com:%>in K ; 			
++Sg+Abe:^SV^SLEN%>ttáá K ; 	
+
+
+
+LEXICON JUUVAS-plc !!= * __@CODE@__ 
++N+Prop+Sem/Plc: JUUVAS ;
+
+
+LEXICON JUUVAS !!= * __@CODE@__  juuhâ:juuvâ: juuvâš:juvvii WG:WG+CLEN
++Attr:â^WG%>š K ; 			! juuvâš	 
++Sg+Nom:â^WG%>š K ; 			! juuvâš
++Sg+Nom+Err/Orth:â%>š K ; 			! juuvvâš
++Sg+Nom+Err/Orth:a^WG%>š K ; 			! juuvaš
++Sg+Nom+Err/Orth:á^WG%>š K ; 			! juuváš
++Sg+Gen:i^WG^CLEN^RVSH%>i5  K ; 	! juvvii
++Sg+Acc:i^WG^CLEN^RVSH%>i5  K ; 	! juvvii
++Sg+Ill:â^WG^RVSH%>žân K ;	!  juvâžân
++Sg+Loc:i^WG^CLEN^RVSH%>ist K ; !   juvviist
++Sg+Com:i^WG^CLEN^RVSH%>jn K ; 	! juvvijn 
++Sg+Abe:i^WG^CLEN^RVSH%>ittáá K ; ! juvviittáá 
++Cmp/SgNom:â^WG^RVSH%>š RProp ; ! juvâš
+
+
+LEXICON VUONAS-plc !!= * __@CODE@__ 
++N+Prop+Sem/Plc: VUONAS ;
+
+LEXICON VUONAS-ani !!= * __@CODE@__
++N+Prop+Sem/Ani: VUONAS ;
+
+LEXICON VUONAS-mal !!= * __@CODE@__
++N+Prop+Sem/Mal: VUONAS ;
+
+
+LEXICON VUONAS !!= * __@CODE@__  
++Attr:â^WG^RLEN%>š K ; 			! vuonâš
++Sg+Nom:â^WG%>š K ; 			! vuonâš
++Sg+Gen:i^WG%>i5  K ; 	! vuonii
++Sg+Acc:i^WG%>i5  K ; 	!  vuonii
++Sg+Ill:â^WG%>žân K ;	!  vuonâžân
++Sg+Loc:i^WG%>ist K ; !   vuoniist
++Sg+Com:i^WG%>jn K ; 	! vuonijn 
++Sg+Abe:i^WG%>jttáá K ; ! vuoniittáá 
++Cmp/SgNom:â^WG^RLEN%>š RProp ; 
+
+
+LEXICON VUONIIH-plc !!= * __@CODE@__ Plural to VUONAS-plc
++N+Prop+Sem/Plc: VUONIIH ;
+
+LEXICON VUONIIH !!= * __@CODE@__ plural forms 
++Pl+Nom:i5%>ih K ;  ! vuoniih
++Pl+Gen:i5%>j K ;  ! vuonij
++Pl+Acc:i5%>jd K ; ! vuonijd
++Pl+Ill:i5%>jd K ; ! vvuonijd
++Pl+Loc:i5%>jn K ; ! vuonijn
++Pl+Com:i5%>jguin K ;  ! vuonijguin
++Pl+Com+Err/Orth:i5%>jgijn K ;  ! vuonijgijn
++Pl+Abe:i5%>jttáá K ;  ! vuonijttáá
++Cmp/PlNom:i5%>ih RProp ; 
+
+
+LEXICON VAARAAS-plc !!= * __@CODE@__  
++N+Prop+Sem/Plc: VAARAAS ;
+
+
+LEXICON VAARAAS !!= * __@CODE@__  vá^RVrá
++Sg+Nom:^WG^RLEN%>áš K ; 			! váárááš
++Sg+Gen:^WG^RLEN%>á  K ; 			! vááráá
++Sg+Acc:^WG^RLEN%>á  K ; 			!  vááráá
++Sg+Ill:^WG%>žân K ;				!  várážân
++Sg+Loc:^WG^RLEN%>ást K ; 			!   vááráást
++Sg+Com:^WG%>in K ; 				! váráin 
++Sg+Abe:^WG^RLEN%>áttáá K ; 		! váárááttáá 
++Pl+Nom:^WG^RLEN%>áh K ; 			! váárááh 
++Pl+Gen:^WG%>i K ; 					! várái
++Pl+Acc:^WG%>id K ; 				! váráid 
++Pl+Ill:^WG%>id K ; 				! váráid 
++Pl+Loc:^WG%>in K ; 				! váráid 
++Cmp/SgNom:á^WG^RLEN%>š RProp ; 
+
+
+
+LEXICON LAADUS-plc !!= * __@CODE@__ 
++N+Prop+Sem/Plc: LAADUS ;
+
+LEXICON LAADUS !!= * __@CODE@__  
++Attr:u^WG^RLEN%>š K ; 			! lááduš
++Sg+Nom:u^WG^RLEN%>š K ; 			! lááduš
++Sg+Gen:u^VBACK%>u  K ; 	! ladduu
++Sg+Acc:u^VBACK%>u  K ; 	!  ladduu
++Sg+Ill:u^VBACK%>užân K ;	!  ladduužân
++Sg+Loc:u^VBACK%>ust K ; !   ladduust
++Sg+Com:u^VBACK%>in K ; 	! ladduin 
++Sg+Abe:u^VBACK%>uttáá K ; ! vuoniittáá 
++Cmp/SgNom:u^WG%>š RProp ; 
+
+
+LEXICON KALDEE-plc !!= * __@CODE@__  Similar to TAHHEE
++N+Prop+Sem/Plc: KALDEE ;
+
+LEXICON KALDEE-org !!= * __@CODE@__  Similar to TAHHEE
++N+Prop+Sem/Org: KALDEE ;
+
+
+LEXICON KALDEE !!= * __@CODE@__ Similar to TAHHEE
++Attr: K ;
++Sg+Nom: K ;				! tahhee
++Sg+Gen: K ;				! tahhee
++Sg+Acc: K ;				! tahhee
++Sg+Ill:^SVSH%>i3 K ;		! tahhei ! stem e > 0
++Sg+Loc:^SVSH%>st K ; 		! tahhest ! stem e > 0
++Sg+Com:^SVSH%>i3n K ;		! tahhein
++Sg+Abe:%>ttáá K ;		! tahheettáá
++Ess:^SVSH%>n	K ;			! tahhen
+!+Par:^SVSH%>d	K ;			! tahhed
++Cmp/SgNom: RProp ; 
+
+LEXICON KALDEE_PL-plc !!= * __@CODE@__  Similar to TAHHEE_PL
++N+Prop+Sem/Plc: KALDEE_PL ;
+
+LEXICON KALDEE-mal !!= * __@CODE@__
++N+Prop+Sem/Mal: KALDEE ;
++N+Prop+Sem/Mal+Cmp/N:%- MaleRelative ;
+
+LEXICON KALDEE-fem !!= * __@CODE@__
++N+Prop+Sem/Fem: KALDEE ;
+
+LEXICON KALDEE_PL !!= * __@CODE@__ Similar to TAHHEE
++Pl+Nom:%>h K ;			! tahheeh
++Pl+Gen:^SVSH%>i3 K ; 		! tahhei
++Pl+Acc:^SVSH%>i3d K ; 		! tahheid
++Pl+Ill:^SVSH%>i3d K ; 		! tahheid
++Pl+Loc:^SVSH%>i3n K ;		! tahhein
++Pl+Com:^SVSH%>i3guin K ;	! tahheiguin
++Pl+Com+Err/Orth:^SVSH%>igijn K ;	! tahheiguin
++Pl+Abe:^SVSH%>i3ttáá K ; 	! tahheittáá
++Cmp/SgNom: RProp ; 
+
+
+
+LEXICON TUPE-plc !!= * __@CODE@__  Similar to NJUNE
++N+Prop+Sem/Plc: TUPE ;
+
+
+LEXICON TUPE-ani !!= * __@CODE@__  Similar to NJUNE
++N+Prop+Sem/Ani: TUPE ;
+
+
+LEXICON TUPE !!= * __@CODE@__  Similar to NJUNE
++Attr: K ;
++Sg+Nom: K ;						! njuṇe
++Sg+Gen:^WG K ;					! njune
++Sg+Acc:^WG K ;					! njune
++Sg+Ill:^EA%>n K ;				! njuṇán # stem e>á
++Sg+Loc:^SV^WG^RLEN^SLEN%>st K ;	! njuuneest # earlier also^RVL
+!+Sg+Com:^WG^CLEN%>in K ;		! njunnijn # MM + MLO hardcording
++Sg+Com:^WG^RLEN%>in K ;		! njuunijn # KORP, MLO+MM
++Sg+Abe:^WG%>ttáá K ;		! njunettáá
++Ess:^SV^CLEN^SLEN%>n K ;			! njunneen
+!+Par:^SV^CLEN^SLEN%>d K ;			! njunneed
++Cmp/SgNom: RProp ; 
++Cmp/SgGen:^WG%> PERSNAME-CMP ;
+
+
+LEXICON VASE-plc !!= * __@CODE@__  Similar to VAHE
++N+Prop+Sem/Plc: VASE ;
+
+
+LEXICON VASE !!= * __@CODE@__
++Attr: K ;
++Sg+Nom: K ; 						! vahe
++Sg+Gen:^WG K ;					! vave
++Sg+Acc:^WG K ;					! vave
++Sg+Ill:^EA%>n K ; 				! vahan
++Sg+Loc:^SV^WG^CLEN^SLEN%>st K ; 	! vavveest
++Sg+Com:^WG^CLEN%>in K ; 		! vovvijn
++Sg+Abe:^WG%>ttáá K ; 			! vavettáá
++Ess:^SV^CLEN^SLEN%>n K ; 			! vahheen
+!+Par:^SV^CLEN^SLEN%>d K ; 		! vahheed
++Cmp/SgNom: RProp ; 
++Cmp/SgGen:^WG%> PERSNAME-CMP ;
+
+
+LEXICON NIJTTO-plc !!= * __@CODE@__  Similar to SIJVO
++N+Prop+Sem/Plc: NIJTTO ;
+
+
+LEXICON NIJTTO  !!= * __@CODE@__
++Attr: K ;
++Sg+Nom: K ;  ! sijvo
++Sg+Gen:^WG^RLEN K ;  ! siijvo
++Sg+Gen+Use/NG:^WG^RVSH K ;  ! sijvo
++Sg+Acc:^WG^RLEN K ;  ! siijvo
++Sg+Acc+Use/NG:^WG^RVSH K ;  ! sijvo
++Sg+Ill:^CSH^RLEN%>n    K ;   ! siijvon
++Sg+Loc:^WG^RLEN%>st K ;  !siijvost
++Sg+Com:^WG^CLEN%>in K ;  !sijvoin
++Sg+Abe:^WG^RVSH%>ttáá K ;  !sijvottáá
++Ess:%>n    K ;  !sijvon
+!+Par:%>d    K ; ! sijvod
++Cmp/SgNom: RProp ; 
+
+
+LEXICON AALAAS-plc !!= * __@CODE@__  Similar to ALGAAS
++N+Prop+Sem/Plc: AALAAS ;
+
+
+LEXICON AALAAS !!= * __@CODE@__ 
++Attr:^SV^SLEN%>š K ; 							! cissááš
++Sg+Nom:^SV^SLEN%>š K ; 							! Čilzeppelaalaaš
++Sg+Gen:^SV^SLEN K ; 							! Čilzeppelaalaa
++Sg+Acc:^SV^SLEN K ;					! Čilzeppelaalaa
++Sg+Ill:^CSH%>žân K ;	! Čilzeppelaalažân 
++Sg+Ill+Err/Orth:^SV^SLEN^SVLOW%>žân K ;		! Čilzeppelaalaažân
++Sg+Loc:^SV^SLEN%>st K ;				! cissáást
++Sg+Com:%>in K ; 							! Čilzeppelaalaain
++Sg+Abe:^SV^SLEN%>ttáá K ; 				! Čilzeppelaalaattáá
++Ess:^SV^SLEN^SVLOW%>žin K ;			! cissáážin
+!+Par:^SV^SLEN^SVLOW%>žid K ; 		! cissáážid
++Ess:%>žin K ;		! algažin
+!+Par:%>žid K ;		! algažid
++Cmp/SgNom:^SV^SLEN%>š RProp ; 
+
+
+!LEXICON NJUARGAM-plc
+!+N+Prop+Sem/Plc: NJUARGAM ;
+!
+!LEXICON NJUARGAM   * __@CODE@__  Similar to 3HUKSIM
+!+Sg+Nom: K ;               ! huksim
+!+Sg+Gen: K ;            	! huksim   
+!+Sg+Acc: K ;               ! huksim
+!+Sg+Ill:^SLEN%>ân K ;     ! huksiimân
+!+Sg+Loc:^SLEN%>ist K ;   ! huksiimist 
+!+Sg+Com:^SLEN%>áin K ; 	! huksiimáin
+!+Sg+Abe:%>ttáá K ;     !  huksimttáá
+!+Ess:^SLEN%>in K ;        ! huksiimin    
+!+Par:^SLEN%>id K ;        ! huksiimid    
+!+Cmp/SgNom: RProp ;
+
+LEXICON KIETARUOTAS-plc !!= @CODE@  3RUOTAS
++N+Prop+Sem/Plc: KIETARUOTAS ;
+
+LEXICON KIETARUOTAS !!= @CODE@ 
++Sg+Nom:^WG^RLEN K ;	!  
++Attr:^WG^RLEN K ;	!  
++Sg+Gen: K ;     			! viäskár máállás^ÁI
++Sg+Acc: K ;    			 ! viäskár
++Sg+Ill:%>ân K ; 			! viäskárân
++Sg+Loc:%>ist K ; ! viäskárist
++Sg+Com:%>áin K ; ! viäskáráin
++Sg+Abe:%>ttáá K ; ! viäskárttáá
++Ess:^WG%>in K ;   ! veskirin 
+!+Par:^WG%>id K ;	! veskirid
++Cmp/SgNom:^WG^RLEN%> RProp ; 
+
+LEXICON SIALGAS-plc !!= * __@CODE@__  Similar to KUAVDAS
++N+Prop+Sem/Plc: SIALGAS ;
+
+LEXICON SIALGAS-mal !!= * __@CODE@__  Similar to KUAVDAS
++N+Prop+Sem/Mal: SIALGAS ;
++N+Prop+Sem/Mal+Cmp/N:%- MaleRelative ;
+
+!LEXICON SIALGAS-fem !!= * __@CODE@__  Similar to KUAVDAS
+!+N+Prop+Sem/Fem: SIALGAS ;
+
+LEXICON SIALGAS !!= * __@CODE@__  
++Sg+Nom:^WG^RLEN%>š K ; 		! kuávdáš piäiváš
++Attr:^WG^RLEN%>š K ; 		! kuávdáš piäiváš
++Sg+Nom+Err/Orth:â^WG^RLEN%>š K ; 		! kuávdâš piäivâš
++Attr+Err/Orth:â^WG^RLEN%>š K ; 		! kuávdâš piäivâš
++Sg+Gen:^SV^SLEN K ; 			! kuávdáá piäiváá
++Sg+Acc:^SV^SLEN K ;			! kuávdáá piäiváá
++Sg+Ill:^WG^RVSH%>žân K ;	! kuávdážân piäiváážân
++Sg+Ill+Use/NG:^WG^RLEN%>žân K ;		!  kuávdážân piäivážân
++Sg+Loc:^SV^SLEN%>st K ;			! kuávdáást
++Sg+Com:%>in K ; 			! kuávdáin
++Sg+Abe:^SV^SLEN%>ttáá K ; 		! kuávdááttáá
++Ess:^WG^RVSH%>žin K ;		! kuávdážin
++Ess:^WG^RLEN%>žin K ;			! kuávdáážin
+!+Par:^WG^RLEN%>žid K ; 			! kuávdáážid
+!+Par:^WG^RVSH%>žid K ;		! kuávdážid
++Cmp/SgNom:^WG^RLEN%>š RProp ; 
+
+LEXICON PELES-plc !peles noun has also +v2 inflection, as 3-st noun
++N+Prop+Sem/Plc:  Prop_MORCES ;
+
+
+LEXICON Prop_MORCES
++Sg+Nom:^WG^RVSH K ;  	! morčes
++Sg+Gen:^FCD K ;  			 	! morččá
++Sg+Acc:^FCD K ;   				! morččá
++Sg+Ill:^FCD%>s   K ;       		! morččás
++Sg+Loc:^FCD%>st K ;       	 	! morččást
++Sg+Com:^FCD%>in K; 				! morččáin
++Sg+Abe:^FCD^WG%>ttáá K ; ! morčáttáá
++Ess:^WG^RVSH%>in K ;  ! morčesin
+!+Par:^WG^RVSH%>id K ;  ! morčesid
+
+
+
+LEXICON LADDUUH-plc !!= * __@CODE@__  Similar to SPALVAAS plural
++N+Prop+Sem/Plc: LADDUUH ;
+
+LEXICON LADDUUH !!= * __@CODE@__  
++Pl+Nom:^SV^SLEN%>h K ; 			! spálvááh
++Pl+Gen:%>i K ; 			! spálvái
++Pl+Acc:%>id K ; 			! spálváid
++Pl+Ill:%>id K ; 			! spálváid
++Pl+Loc:%>in K ; 			! spálváin
++Pl+Com:%>iguin K ; 		! spálváiguin
++Pl+Com+Err/Orth:%>igijn K ; 		! spálváiguin
++Pl+Abe:%>ittáá K ; 		! spálváittáá
++Cmp/PlNom:^SV^SLEN%>h RProp ; 
+
+LEXICON MAADIJ-plc !!= * __@CODE@__  Similar to AARRAN
++N+Prop+Sem/Plc: MAADIJ ;
+
+
+LEXICON MAADIJ !!= * __@CODE@__  Similar to AARRAN
++Sg+Nom: K ;					! aarrân
++Sg+Gen: K ;					! aarrân
++Sg+Acc: K ;					! aarrân
++Sg+Ill:^CSH%>ân K ;	! aṛânân
++Sg+Loc:^CSH%>ist K ;	! aṛânist
++Sg+Com:^CSH%>áin K ;			! aṛânáin
++Sg+Abe:%>ttáá K ;			! aarrânttáá
++Cmp/SgNom:  RProp ; 
+
+LEXICON KUAVLU-plc
++N+Prop+Sem/Plc: KUAVLU ;
+
+LEXICON KUAVLU
++Attr: K ;
++Sg+Nom: K ;               ! vuággu
++Sg+Gen:^WG K ;     ! vuágu
++Sg+Acc:^WG K ;     ! vuágu
++Sg+Ill:^CSH%>n K ;      ! vuágun
++Sg+Loc:^WG%>st K ; ! vuágust
++Sg+Com:^WG^CLEN^SVLOW%>in K ; ! vuággoin
++Sg+Abe:^WG^RVSH%>ttáá K ;     ! vuáguttáá
++Cmp/SgNom:  RProp ; 
+
+
+LEXICON IANUDAH-plc !!= * __@CODE@__  Similar to 4JOTOLAH
++N+Prop+Sem/Plc: IANUDAH ;
+
+LEXICON IANUDAH
++Cmp/SgNom:âh  RProp ; 
++Cmp/SgGen:uv  RProp ; 
++Sg+Nom:âh K ;
++Sg+Gen:uv K ;
++Sg+Acc:uv K ;
++Sg+Ill:âh%>ân K ;
++Sg+Loc:uvv%>âst K ;
++Sg+Loc+Err/Orth:uv%>âst K ; !Iänuduvâst in corpus, more than Iänuduvvâst
++Sg+Com:uvv%>áin K ;
++Sg+Abe:uv%>ttáá K ;
+
+LEXICON 4LAS_PROP-ani
++N+Prop+Sem/Ani:  4LAS_PROP ;
+
+LEXICON 4LAS_PROP-plc
++N+Prop+Sem/Plc:  4LAS_PROP ;
+
+LEXICON 4LAS_PROP
++Sg+Nom:âš K ;
++Sg+Gen:áá K ;
++Sg+Acc:áá K ;
++Sg+Ill:á%>in K ;
++Sg+Loc:áá%>st K ;
++Sg+Com:á%>in K ;
++Ess:âžž%>ân K ;
+!+Par:âžž%>âd K ;
+
+
+LEXICON 4KUNAGAS-org !!= * __@CODE@__ 
++N+Prop+Sem/Org: X_KUNAGAS_SG ;
+
+LEXICON SME_NAMES-org !!= * __@CODE@__ 
++N+Prop+Sem/Org: SME_NAMES_PERS ;
+
+
+LEXICON SME_NAMES-mal !!= * __@CODE@__ 
++N+Prop+Sem/Mal: SME_NAMES_PERS ;
++N+Prop+Sem/Mal+Cmp/N:%- MaleRelative ;
+
+LEXICON SME_NAMES-fem !!= * __@CODE@__
++N+Prop+Sem/Fem: SME_NAMES_PERS ;
+
+LEXICON SME_NAMES-sur !!= * __@CODE@__
++N+Prop+Sem/Sur: SME_NAMES_PERS ;
+
+LEXICON SME_NAMES-plc !!= * __@CODE@__
++N+Prop+Sem/Plc: SME_NAMES ;
+
+
+LEXICON SME_NAMES_PERS !!= * __@CODE@__ Attr to North Saami person names
++Attr: # ;	
+SME_NAMES ;
+
+LEXICON SME_NAMES !!= * __@CODE@__ temp. only Sg+Nom and Cmp to North Saami names
++Sg+Nom: # ;	
++Sg+Gen: # ;	
++Sg+Loc:%>st # ; ! XXX look at this
++Sg+Ill:%>n # ; ! XXX look at this
++Cmp/SgGen: PERSNAME-CMP ;
++Cmp/SgNom:  RProp ; 
++Cmp/SgGen:  RProp ; 
+
+
+LEXICON PERSNAME-CMP !!= * __@CODE@__ e.g. Anttikandâ, Aanti-kyevtis
+ +Cmp#kandâ:#ka^RVndâ 2ALGA ;
+ +Cmp#nieidâ:#niei4dâ 2ALGA ;
+ +Cmp/Hyph+Cmp#kyevtis:0#-kuáhtás^ÁI 3COLL ;
+
+
+LEXICON flagK !!= * __@CODE@__ 
+@U.Cap.Obl@ K ;
+ 
+ 
+
+ 
+ 
