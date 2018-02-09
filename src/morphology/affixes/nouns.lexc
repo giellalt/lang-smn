@@ -860,6 +860,8 @@ LEXICON 2SAAMI_SG!!= __@CODE@__
 +N+Ess:^CSH^RVSH%>n  CPXsuff ;          ! säminis
 +N:^WG%> Gen_DER ; !hámálâš
 +N:%> Nom_DER ;
++N+Cmp/SgNom:^RVSH%> Rhash ;! 
++N+Cmp/SgGen+Err/Orth:^WG%> Rhash ; ! säämiašij
 
 LEXICON 2SAAMI_PL   !!= __@CODE@__ plurals for 2SAAMI
 +N: X_SAAMI_PL ;
@@ -870,6 +872,7 @@ LEXICON 2SAAMI_PL   !!= __@CODE@__ plurals for 2SAAMI
 +N+Pl+Loc:^WG^RVSH%>in CPXsuff ;  !
 +N+Pl+Com:^WG^RVSH%>id CPXsuffCOM ;  ! samijdânguin
 +N+Cmp/SgNom:^RVSH%> Rhash ;! 
++N+Cmp/SgGen:^WG^RVSH%> Rhash ; ! but sämi-
 +N+Cmp/SgGen+Err/Orth:^WG%> Rhash ; ! säämiašij
 +N+Cmp/PlGen:^WG%>i Rhash ;
 
@@ -887,7 +890,6 @@ LEXICON X_SAAMI_SG   !!= __@CODE@__ to 2LAAVU after fix in twolc?  saämijn > sa
 LEXICON X_SAAMI_PL   !!= __@CODE@__ plurals for 2SAAMI
 +Pl+Ill:^WG%>id K ;         ! saamijd
 !+N+Cmp/SgGen:%> Rhash ;  ! not säämi-
-+Cmp/SgGen:^WG^RVSH%> Rhash ; ! but sämi-
  X_WG_RVSH_PL_notILL ;
 
 
@@ -929,6 +931,7 @@ LEXICON CAACI_VYEHI_SG !!= __@CODE@__ WG, Ill EA, Com CLEN SVLOW, Ess CLEN
 +N+Cmp/SgGen:^WG%>i Rhash ; !
 +N+Sg+Nom:^EA^CLEN VPXsuff12nom ;         ! iäččád iäččám 
 +N+Sg+Nom+Err/Orth:^EX^CLEN VPXsuff12nom ;         ! iäččâd iäččâm 
++N+Sg+Nom+Err/Orth:^CLEN^RVSH VPXsuff3 ;         ! eeččis eeččis corp: eččis
 +N+Sg+Nom:^CLEN VPXsuff3 ;         ! eeččis eeččis corp: eččis
 +N+Sg+Gen:^EA^CLEN VPXsuff12 ;         ! iäččán iäččád
 +N+Sg+Gen:^WG VPXsuff3 ;         ! eejis
@@ -1043,6 +1046,10 @@ LEXICON KYELI_SYEJI_SG  !!= __@CODE@__ i-e-á,
 +Sg+Abe:e^WG^RVSH%>ttáá K ;  ! kyelettáá                                                                                                                                                                            
 +Ess:^CLEN%>n K ;     ! kyellin                                                                                                                                                                                    
 +Par:^CLEN%>d K ;                                       ! kyellid                                                                                                                                                  
++Cmp/SgNom:^RVSH%> Rhash ;
++Cmp/SgNom+Err/Orth:%> Rhash ; !kääniores
++Cmp/SgGen+Err/Orth:e^WG^RVSH%> Rhash ; ! pelemuddoost kyelesaallâs Err/Orth?
++Cmp/SgGen:e^WG^RVSH%> Rhash ; ! 
 
 LEXICON 2_KYELI_SYEJI_SG_PX !!= __@CODE@__  common kyeli-syeji px
 +N+Cmp/SgNom:^RVSH%> Rhash ;
@@ -3159,8 +3166,7 @@ LEXICON S_AAIGA !!= __@CODE@__ Almost identical with S_AAJA, except for Compound
 +N+Cmp/SgNom:â^WG^RLEN%> Rhash ; ! aaigâsopâmuš
 +N+Cmp/SgGen:^SV^SLEN%> Rhash ;
 +N+Cmp/PlGen:%>i Rhash ;
-
-AAIGA_COMMON ;
+S_AAIGA_PL ;
 
 LEXICON AAIGA_COMMON
 +N+Sg+Nom:â^WG^RLEN K ;			! aaigâ
@@ -3178,11 +3184,14 @@ LEXICON AAIGA_COMMON
 +N+Sg+Loc:^SV^SLEN%>st CPXsuff ;  !  čalluustis čallustis
 +N+Sg+Loc+Err/Orth:%>st CPXsuff ;  !  čalluustis čallustis
 +N+Sg+Com:%>in CPXsuff ;  ! perruinis
-S_AAIGA_PL ;
+AAIGA_COMMON_PL ;
 
 LEXICON S_AAIGA_PL !!= __@CODE@__
-+N: X_SVSLENh_PL ;
 +N+Cmp/SgNom:â^WG^RLEN%> Rhash ; ! aaigâsopâmuš
+AAIGA_COMMON_PL ;
+
+LEXICON AAIGA_COMMON_PL !!= __@CODE@__
++N: X_SVSLENh_PL ;
 +N+Cmp/PlGen:%>i Rhash ;
 +N+Pl+Gen:%>id CPXsuff ;  !
 +N+Pl+Acc:%>id CPXsuff ;  !
