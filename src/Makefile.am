@@ -82,26 +82,28 @@ analyser-gt-desc.%: analyser-gt-desc.tmp.%                    \
 
 # And also for the normative analyser (foma and hfst):
 analyser-gt-norm.%: analyser-gt-norm.tmp.% \
-					filters/remove-illegal-derivation-strings-flagbased.% \
-					filters/insert-default-compounding-tags.% \
-					filters/insert-default_left_compounding-tags.% \
-					filters/block-illegal_compound-strings.%  \
-					filters/split-CmpN-tags.% \
-					filters/convert_to_flags-CmpNP-tags.% \
-					filters/split-CmpNP-tags.% \
-					filters/remove-letter-acute-accent.% \
+					filters/remove-illegal-derivation-strings-flagbased.%  \
+					filters/remove-MinusSpell-strings.%                    \
+					filters/insert-default-compounding-tags.%              \
+					filters/insert-default_left_compounding-tags.%         \
+					filters/block-illegal_compound-strings.%               \
+					filters/split-CmpN-tags.%                              \
+					filters/convert_to_flags-CmpNP-tags.%                  \
+					filters/split-CmpNP-tags.%                             \
+					filters/remove-letter-acute-accent.%                   \
 					filters/remove-halflong-dotbelow.%
 	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
-				@\"filters/block-illegal_compound-strings.$*\"          \
-			.o. @\"filters/split-CmpN-tags.$*\"                         \
-			.o. @\"filters/insert-default_left_compounding-tags.$*\"    \
-			.o. @\"filters/insert-default-compounding-tags.$*\"         \
+				@\"filters/block-illegal_compound-strings.$*\"              \
+			.o. @\"filters/split-CmpN-tags.$*\"                             \
+			.o. @\"filters/insert-default_left_compounding-tags.$*\"        \
+			.o. @\"filters/insert-default-compounding-tags.$*\"             \
 			.o. @\"filters/remove-illegal-derivation-strings-flagbased.$*\" \
-			.o. @\"filters/convert_to_flags-CmpNP-tags.$*\"            \
-			.o. @\"filters/split-CmpNP-tags.$*\"                       \
-			.o. @\"$<\"                                                \
-			.o. @\"filters/remove-letter-acute-accent.$*\" \
-			.o. @\"filters/remove-halflong-dotbelow.$*\"   \
+			.o. @\"filters/convert_to_flags-CmpNP-tags.$*\"                 \
+			.o. @\"filters/split-CmpNP-tags.$*\"                            \
+			.o. @\"filters/remove-MinusSpell-strings.$*\"                   \
+			.o. @\"$<\"                                                     \
+			.o. @\"filters/remove-letter-acute-accent.$*\"                  \
+			.o. @\"filters/remove-halflong-dotbelow.$*\"                    \
 			;\n\
 		 twosided flag-diacritics\n\
 		 $(INVERT_HFST)\
