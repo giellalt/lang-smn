@@ -160,7 +160,6 @@ analyser-dict-gt-desc.%: analyser-dict-gt-desc.tmp.% \
 			.o. @\"filters/remove-norm-comp-tags.$*\"           \
 			.o. @\"filters/remove-halflong-dotbelow.$*\"   \
 			.o. @\"filters/remove-letter-acute-accent.$*\"               \
-			.o. @\"$<\"                                         \
 			;\n\
 		 $(INVERT_HFST)\
 		 save stack $@\n\
