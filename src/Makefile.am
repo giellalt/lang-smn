@@ -155,7 +155,7 @@ analyser-dict-gt-desc.%: analyser-dict-gt-desc.tmp.% \
 					filters/remove-norm-comp-tags.%           \
 					filters/remove-halflong-dotbelow.%   \
 					filters/remove-letter-acute-accent.%            
-	$(AM_V_XFST)$(PRINTF) "read regex \                      \
+	$(AM_V_XFST)$(PRINTF) "read regex                      \
 			    @\"filters/remove-derivation-position-tags.$*\" \
 			.o. @\"filters/remove-norm-comp-tags.$*\"           \
 			.o. @\"filters/remove-halflong-dotbelow.$*\"   \
