@@ -152,15 +152,15 @@ analyser-disamb-gt-desc.%: analyser-disamb-gt-desc.tmp.% \
 # pattern as the raw fst:
 analyser-dict-gt-desc.%: analyser-dict-gt-desc.tmp.% \
 					filters/remove-derivation-position-tags.%   \
+					filters/remove-norm-comp-tags.%           \
 					filters/remove-halflong-dotbelow.%   \
-					filters/remove-derivation-position-tags.%   \
 					filters/remove-letter-acute-accent.%            
-	$(AM_V_XFST)$(PRINTF) "read regex                      \
-				@\"filters/remove-derivation-position-tags.$*\" \
-			.o. @\"$<\"                                    \
-			.o. @\"filters/remove-letter-acute-accent.$*\" \
-			.o. @\"filters/remove-letter-acute-accent.$*\" \
+	$(AM_V_XFST)$(PRINTF) "read regex \                      \
+			    @\"filters/remove-derivation-position-tags.$*\" \
+			.o. @\"filters/remove-norm-comp-tags.$*\"           \
 			.o. @\"filters/remove-halflong-dotbelow.$*\"   \
+			.o. @\"filters/remove-letter-acute-accent.$*\"               \
+			.o. @\"$<\"                                         \
 			;\n\
 		 $(INVERT_HFST)\
 		 save stack $@\n\
@@ -191,7 +191,7 @@ $(foreach fst,hfst xfst foma,$(eval $(call giella_generators,$(fst))))
 
 # Do NOT apply the accent removal filters to the normative
 # dictionary generator (both hfst and xfst):
-generator-dict-gt-norm.%: generator-dict-gt-norm.tmp.%
+generator-dict-gt-norm.%: generator-dict-gt-norm.%
 	$(AM_V_XFST_TOOL)$(PRINTF) "\
 		 load stack $<\n\
 		 $(INVERT_XFST)$(INVERT_FOMA)\
