@@ -25,13 +25,9 @@ while(<>) {
 	s/fkagK/K/g ;
 # loanwords with compound border over identical vowels
 	s/Hjarteelva/Hjarte-elva/g ;
-	s/Hjarte\^elva/Hjarte-elva/g ;
 	s/Indreeide/Indre-eide/g ;
-	s/Indre\^eide/Indre-eide/g ;
 	s/Lilleeng/Lille-eng/g ;
-	s/Lille\^eng/Lille-eng/g ;
 	s/Simleelva/Simle-elva/g ;
-	s/Simle\^elva/Simle-elva/g ;
 	s/\+CmpNP\/None//g ;
 	
 
