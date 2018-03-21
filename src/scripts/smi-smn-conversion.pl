@@ -59,7 +59,7 @@ while(<>) {
 	s/^Valle ACCRA/Valle MOKKE/g ;
 
 # sme special symbols
-	s/\^//g ;
+#	s/\^//g ;
 	s/á /á5 /g ; # final á would otherwise be a in smn
 	s/b9/b/g ;
 	s/e9/e/g ;
