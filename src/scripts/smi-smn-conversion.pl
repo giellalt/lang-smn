@@ -43,6 +43,7 @@ while(<>) {
 	s/^Jussi\+/!Jussi+/g ;
 	s/^Lappi\+/!Lappi+/g ;
 	s/^Lotto\+/!Lotto+/g ;
+	s/^Lyeme\+/!Lyeme+/g ;
 	s/^Maarit\+/!Maarit+/g ;
 	s/^Markku\+/!Markku+/g ;
 	s/^Matti\+/!Matti+/g ;
