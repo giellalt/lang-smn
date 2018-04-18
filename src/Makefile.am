@@ -131,17 +131,19 @@ analyser-gt-norm.xfst: analyser-gt-norm.tmp.xfst \
 
 # Special case for the disamb analyser, since it follows the same filename
 # pattern as the raw fst:
-analyser-disamb-gt-desc.%: analyser-disamb-gt-desc.tmp.% \
-					filters/remove-derivation-position-tags.%   \
-					filters/remove-halflong-dotbelow.%   \
-					filters/rename-POS_before_Der-tags.% \
+analyser-disamb-gt-desc.%: analyser-disamb-gt-desc.tmp.%      \
+					filters/remove-orig_lang-tags.%           \
+					filters/remove-derivation-position-tags.% \
+					filters/remove-halflong-dotbelow.%        \
+					filters/rename-POS_before_Der-tags.%      \
 					filters/remove-letter-acute-accent.%            
-	$(AM_V_XFST)$(PRINTF) "read regex                      \
+	$(AM_V_XFST)$(PRINTF) "read regex                           \
 				@\"filters/remove-derivation-position-tags.$*\" \
-			.o. @\"filters/rename-POS_before_Der-tags.$*\" \
-			.o. @\"$<\"                                    \
-			.o. @\"filters/remove-letter-acute-accent.$*\" \
-			.o. @\"filters/remove-halflong-dotbelow.$*\"   \
+			.o. @\"filters/remove-orig_lang-tags.$*\"           \
+			.o. @\"filters/rename-POS_before_Der-tags.$*\"      \
+			.o. @\"$<\"                                         \
+			.o. @\"filters/remove-letter-acute-accent.$*\"      \
+			.o. @\"filters/remove-halflong-dotbelow.$*\"        \
 			;\n\
 		 $(INVERT_HFST)\
 		 save stack $@\n\
