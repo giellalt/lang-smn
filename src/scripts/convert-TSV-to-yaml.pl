@@ -1,6 +1,13 @@
 #!/usr/bin/env perl -w
 
 use utf8;
+use feature 'unicode_strings';
+BEGIN {
+       $| = 1;
+       binmode(STDIN, ':encoding(UTF-8)');
+       binmode(STDOUT, ':encoding(UTF-8)');
+}
+use open qw( :encoding(UTF-8) :std );
 
 # TSV fields to convert:
 # SgNom	SgGen	SgIll	SgLoc	SgCom	SgAbe	Ess	PlNom	PlGen	PlAcc	PlIll	PlLoc	PlCom	PlAbe					
