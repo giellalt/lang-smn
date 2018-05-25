@@ -2070,7 +2070,11 @@ SELECT:NomACR Nom IF (0 ACR OR ABBR)(-1 BOS)(1 PUNCT) ;
 	#$ Ovttas.no - Sámi oahpponeavvut neahtas
 
 
-#!! !!Adjectives or nouns, not adverbs
+#!! !!Adjectives or nouns
+
+REMOVE:QN A IF (-1 Num)(0 N)(1 S-BOUNDARY OR V OR EOS);
+
+#!! !!Adjectives, nouns, not adverbs
 
 #!! * __Aifeambbo__ selects A after eambbo
 SELECT:Aifeambbo A - Px IF (-1 ("eenâb") OR ("eenâb"))(NEGATE 0 Pl);
@@ -2155,6 +2159,10 @@ SELECT:ollasitAdv1 ("tievâslâš" Adv) IF ((-1 REAL-V - INF-V) OR (*1 Loc OR Il
 
 
 #!! !!Pronouns 
+
+#!!
+SELECT:suoi Pron IF (0 Du3 + Nom)(*1 V + Du3 BARRIER NOT-ADV);
+SELECT:suoi Pron IF (0 Du3 + Nom)(1 ("kuohtuuh"))(*2 V + Du3 BARRIER NOT-ADV);
 
 #!! * __recipr, reciprPl__ select Recipr
 
@@ -6836,6 +6844,11 @@ SELECT:NumGen (Num Gen) (-1 (Dem Gen)) ;
 #!! !!Adverbs and adjectives
 SELECT:genAdv Adv (0 A LINK 1 SYN-V)(-1 Acc) ;	
 	#$ Dihkkádeaddji rávve skohtervuddjiid várrugasat mátkkoštit, go dán jagi lea erenoamán heajos jiekŋa jogain.
+
+
+#!! !!Adverbs not nouns
+
+SELECT:UALI Adv IF (-1 Prs OR Prt OR Inf)(0 ("uáli"))(1 A OR Pron OR Num OR N);
 
 #!! !!!NOUNS
 REMOVE:propBOC Prop (-1 BOC)(NEGATE 1 CC LINK 1 Prop) (NEGATE 1 ORGANIZATION OR INSTITUTION OR Prop)(NOT 0 Sem/Plc) ; 
