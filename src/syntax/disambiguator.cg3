@@ -105,6 +105,7 @@ LIST RIGHT = RIGHT ;    #!! RIGHT
 LIST WEB = WEB ;	    #!! WEB
 LIST QMARK = """ ; # "  #!! QMARK
 LIST PPUNCT = PUNCT ;   #!! PPUNCT 
+	
 SET PUNCT = PPUNCT - QMARK ;  #!! PUNCT
 
 LIST COMMA = "," ;  #!! COMMA
@@ -169,7 +170,7 @@ LIST Ind = Ind ;			   #!! Ind
 LIST Pot = Pot ;			   #!! Pot
 LIST Cond = Cond ;			   #!! Cond
 LIST Imprt = Imprt ;		   #!! Imprt
-LIST ImprtII = ImprtII ;	   #!! ImprtII
+
 LIST Sg1 = Sg1 (p1 sg) ;			   #!! Sg1
 LIST Sg2 = Sg2 (p2 sg) ;			   #!! Sg2
 LIST Sg3 = Sg3 (p3 sg) ;			   #!! Sg3
@@ -179,6 +180,7 @@ LIST Du3 = Du3 (p3 du) ;			   #!! Du3
 LIST Pl1 = Pl1 (p1 pl) ;			   #!! Pl1
 LIST Pl2 = Pl2 (p2 pl);			   #!! Pl2
 LIST Pl3 = Pl3 (p3 pl);			   #!! Pl3
+
 LIST Inf = Inf ;			   #!! Inf
 LIST ConNeg = ConNeg ;		   #!! ConNeg
 LIST Neg = Neg ;			   #!! Neg
@@ -192,17 +194,25 @@ LIST VAbess = VAbess ;		   #!! VAbess
 # The ("ge" Pcle) etc. are used in Apertium
 
 #!! !Tags for clitic particles
-LIST Foc/ge = Foc/Pos-ge Foc/Neg-ge   ;	   #!! Foc/ge
-LIST Foc/gen = Foc/gen   ;  #!! Foc/gen
-LIST Foc/ges = Foc/ges  ;  #!! Foc/ges
-LIST Foc/gis = Foc/gis  ;  #!! Foc/gis
-LIST Foc/naj = Foc/naj   ;  #!! Foc/naj
+
 LIST Foc/ba = Foc/ba   ;	   #!! Foc/ba
+LIST Foc/baa = Foc/baa   ;	   #!! Foc/be
+LIST Foc/ban = Foc/ban   ;	   #!! Foc/ba
+LIST Foc/baan = Foc/baan   ;	   #!! Foc/be
 LIST Foc/be = Foc/be   ;	   #!! Foc/be
-LIST Foc/hal = Foc/hal   ;  #!! Foc/hal
+LIST Foc/ge = Foc/ge ;
+LIST Foc/ges = Foc/ges ;
+LIST Foc/gas = Foc/gas  ;  #!! Foc/ges
+LIST Foc/gen = Foc/gen  ;  #!! Foc/ges
+LIST Foc/ges = Foc/ges  ;  #!! Foc/ges
+LIST Foc/gin = Foc/gin  ;  #!! Foc/gis
+LIST Foc/kin = Foc/kin  ;  #!! Foc/gis
+LIST Foc/gis = Foc/gis  ;  #!! Foc/gis
+LIST Foc/go = Foc/go  ;  #!! Foc/han
 LIST Foc/han = Foc/han   ;  #!! Foc/han
-LIST Foc/bat = Foc/bat   ;  #!! Foc/bat
-LIST Foc/son = Foc/son   ;  #!! Foc/son
+LIST Foc/nii = Foc/nii ;   #!! Foc/uv
+LIST Foc/sun = Foc/sun   ;  #!! Foc/son
+LIST Foc/uv = Foc/uv ;   #!! Foc/uv
 
 
 #!! !Derivation tags
@@ -435,7 +445,7 @@ SET NOT-V = WORD - V ; #!! NOT-V
 
 SET REAL-NEG = Neg - Sup ; #!! REAL-NEG
 
-SET MOOD-V = Ind OR Pot OR Imprt OR ImprtII OR Cond OR (Neg Sup) ; #!! MOOD-V
+SET MOOD-V = Ind OR Pot OR Imprt OR Cond OR (Neg Sup) ; #!! MOOD-V
 
 LIST GC = ("gč") ; #!! GC
 
@@ -608,7 +618,8 @@ LIST DOHKO = "pajas" "báldii" "teehi" "tiehu" "tuáhunteehin" "tovhon" "kyevtko
 
 #!! !Sets for coordinators
 # ------------
-SET Foc = Foc/ge  OR Foc/gen  OR Foc/ges  OR Foc/gis  OR Foc/naj OR Foc/ba  OR Foc/be  OR Foc/hal  OR Foc/han  OR Foc/bat OR Foc/son ;
+
+SET Foc = Foc/ba OR Foc/baa OR Foc/baan OR Foc/ban OR Foc/gas OR Foc/ge OR Foc/ges OR Foc/gin OR Foc/gis OR Foc/go OR Foc/han OR Foc/kin OR Foc/nii OR Foc/sun OR Foc/uv ;
 
 LIST NEGFOC = (Neg Foc/Neg-ge) ;
 
@@ -1903,7 +1914,14 @@ SELECT:PlcSur2 (Sem/Sur) IF (0 (Prop Sem/Plc Com)) (NEGATE 0 SAPMI OR SUOPMA)   
 SELECT:PlcSur4 (Sem/Sur) IF (0 (Prop Sem/Plc Ill) LINK NOT 0 Pron)(*0 VERBAL-ACTIVITY-V OR ACC-ILL-V BARRIER REAL-V OR S-BOUNDARY OR CC) ;
 	#$ Atte reivve Trosterudii.
 	
-	
+
+#!! !!Focus clitics
+
+REMOVE:Qst Foc/uv IF (0 Qst)(*1 ("?"));
+REMOVE:Foc_uv Qst IF (0 Foc/uv)(NOT *1 ("?"));
+
+REMOVE:NoWackern Foc IF (-2 WORD)(-1 V);
+
 	
 SECTION
 
@@ -1917,6 +1935,8 @@ SECTION
 SELECT:NumRom (Num Rom) (0 ACR OR ABBR LINK -1 BOS)(NOT 0 Sem/Obj-el) ;
 	#$ I Áššebáhpirat
 	#% CD máksá 160 ruvnnu.
+
+REMOVE:sasjnum (Abe Attr) IF (0 Num + Gen)(1 ("<.*sâš>"r));
 
 
 #!! !!Lexicalised derivations
@@ -2082,6 +2102,10 @@ SELECT:Aifeambbo A - Px IF (-1 ("eenâb") OR ("eenâb"))(NEGATE 0 Pl);
 
 
 #!! !!Adverbs
+
+#!! !Adverbs or postpositions
+REMOVE:AdvNotPo Po IF (NOT -1 Gen)(0 Adv);
+
 
 #!! * IFF __buotAdv__ : buot Adv in front of Superl ok smn
 IFF:buotAdv ("puoh" Adv)  IF ((1 Superl) OR (-1 Acc LINK 2 Inf) OR (-1 TRANS-V LINK 2 ("tot" Acc) OR (Dem Acc)) OR (-1 COPULAS LINK 2 (N Ess)) OR (-1 REAL-V + IV LINK NOT 0 Pron LINK 2 COMMA OR EOS) OR (-1 (Nom Pl) LINK 2 VFIN + Pl3)) ;
@@ -3654,6 +3678,10 @@ REMOVE:NotConNegNotNeg ConNeg IF (NEGATE *-1 Neg BARRIER SV-BOUNDARY OR go)(NEGA
 
 #!! See also ''Imprt or Ind'' some sections down.
 
+REMOVE:ImprtInit Prs + Sg3 IF (-1 PUNCT OR BOS)(0 Imprt + Sg2)(1 Pers + Ill);
+## Muštâl munjin.
+
+REMOVE:NotImprtCC Imprt IF (NOT -2 Imprt)(-1 CC);
 
 #!! * __ImprtDál__ 
 SELECT:ImprtDál Imprt IF (-1 BOS OR PUNCT OR REAL-CLB)(1 ("tääl"));
@@ -4557,6 +4585,19 @@ SELECT:NumNomCop (Num Nom) IF ((*-1 COPULAS + FMAINV BARRIER NOT-ADV-PCLE LINK *
 SELECT:NumNomYear (Num Nom) IF ((0 Sem/Year LINK -1 Sem/Sur LINK 2 (":") OR (";") OR (PUNCT RIGHT)) OR (1 MANNU)) ;
 
 
+
+
+
+#!! !!ACCUSATIVE-ILLATIVE DISAMBIGUATION
+
+REMOVE:IllNotAcc Acc IF (0 Ill)(NOT *-1 TV)(1 EOS);
+
+REMOVE:IllNotAcc Acc IF (0 A + Ill)(1C N + Ill);
+
+REMOVE:AccNotIll Ill IF (0 A + Acc)(1C N + Acc);
+
+
+
 #!! !!ACCUSATIVE-GENITIVE DISAMBIGUATION
 
 
@@ -5053,16 +5094,9 @@ REMOVE:AccINF-V Acc (0 Gen LINK -1 INF-V)(1 N + ADVLCASE LINK 1 (IV Inf)) ;
 	# Accusative sentence-finally
 	# ---------------------------
 
-	# Removed this one because it made trouble. The example function although. 
-	#REMOVE Gen IF (NEGATE *-1 Pr OR Num OR CC BARRIER NPNH)(0 N OR Pron)(NEGATE 0 TIME)
- #	(*1 EOC2 BARRIER NOT-ADV-PCLE) ;
-	## Ferte čájehit várrugasvuođa go lea sáhka sihkkumis dakkár dieđuid.
-
-#SELECT:TESTr2021 Acc IF (*-1 NP-HEAD-ACC BARRIER VFIN LINK *-1 TRANS-V BARRIER NOT-NPMOD)(*-1 NP-HEAD-NOM BARRIER NOT-ADV-PCLE)(0 Gen LINK NOT 0 Loc)(1 EOS);	
-	## Unna mánážat dulbmet eatni askki, stuora mánát fas váimmu.
 
 
- # CC in the preceding rule because of coordination after Pr. The following rule compensates for it.
+#!! !Accusative or Genitive
 
 #!! * __theAccusative__ selects Acc if you are a N or Pron with CC to your right, followed by Acc and a CLB or VFIN ''gápmagiid ja vuoddagiid, sii geavahedje''
 SELECT:theAccusative Acc IF (NEGATE *-1 Pr OR Num BARRIER NOT-NPMOD)(0 NOTIME OR Pron)(NEGATE 0 Nom OR Loc OR Adv OR NOT-REAL-V OR (Prop Plc)) (*1 ("já") OR ("dahje") BARRIER NOT-ADV - ABBR LINK *1 Acc BARRIER NOT-NPMOD LINK *1 CLB OR VFIN OR Attr - ("gaskaneas") OR @CVP BARRIER NOT-ADV-PCLE LINK NEGATE *1 Gen BARRIER NOT-NPMOD)
@@ -5150,6 +5184,8 @@ REMOVE:AccIESPo (Pron Refl Acc) IF (NEGATE *-1 TRANS-V + FMAINV BARRIER Acc OR S
 
 #!! !Accusative object 
 
+#!!
+SELECT Sg IF (-2 Neg)(-1 ConNeg)(0 ("mihheen"));
 
 #!! * __AccActioEss__ Selects accusative: when a Strict transitive verb actio ess to the left, but not if there is an other Acc to the right followed by EOS
 SELECT:AccActioEss Acc IF (*-1 STRICT-TRANS-V + (Actio Ess) BARRIER SV-BOUNDARY OR Acc)(NEGATE 1 Acc OR Gen LINK 1 EOS) ;
