@@ -1133,8 +1133,6 @@ LIST PUNCT-RIGHT = (PUNCT RIGHT) ;
                             # stand in front of appositions but also
                             # postmodifiers.
 
-
-
 #!! The set __NOT-NPMOD__ is used to find barriers between NPs.
 #!! Typical usage: ... (*1 N BARRIER NPT-NPMOD) ...
 #!! meaning: Scan to the first noun, ignoring anything that can be
@@ -1152,7 +1150,7 @@ SET NOT-NPMODADV    = WORD - PRE-NP-HEAD - Adv OR MO;
 # NOT-NPMODADV = "NOT-PRE-NP-HEAD-OR-ADV"
 SET NOT-NPMODADV-INDEF   = WORD - PRE-NP-HEAD - Adv - Indef ;              
 ## NOT-NPMODADVI = "     ...-OR-INDEF"
-# SET NOT-NPMODADVII  = WORD - PRE-NP-HEAD - Adv - Indef - Ill ;        
+ SET NOT-NPMODADVII  = WORD - PRE-NP-HEAD - Adv - Indef - Ill ;        
 # Illative indir.obj.
 SET NOT-NPMODADVIIP = WORD - PRE-NP-HEAD - Adv - Indef - Ill - Pcle ; 
 # <== is this our NOT-NPMOD set?
@@ -1935,7 +1933,9 @@ LIST &err-ext-agr = &err-ext-agr ;
 LIST &err-ext-vagr = &err-ext-vagr ;
 LIST &err-pl-obj = &err-pl-obj ;
 LIST &err-extv-sg = &err-extv-sg ;
+LIST &err-extsubj-acc = &err-extsubj-acc;
 LIST &err-halfcongruence = &err-halfcongruence ;	
+LIST &err-nom-obj = &err-nom-obj ;
 MAPPING-PREFIX = & ;
 
 SECTION
@@ -1946,10 +1946,10 @@ ADD (&typo &SUGGESTWF) (<spelled>);
 ADD:err-no-conneg (&err-no-conneg) TARGET V IF (-1 Neg) (NOT *-2 ConNeg)(0 V + Ind OR Cond)(NOT 0 ConNeg)(NOT *1 ConNeg BARRIER CLB);
 
 ADD:err-agr (&err-agr) TARGET V IF (-1C Sg + Nom)(0 VFIN)(NOT 0 Sg3)(NEGATE 0 ConNeg LINK *-1 Neg)(NOT *-2 CC LINK -1 Sg + Nom);
-ADD:err-agr (&err-agr) TARGET V IF (-1C Pron + Sg1 + Nom)(0 V)(NOT 0 Sg1);
-ADD:err-agr (&err-agr) TARGET V IF (-1C Pron + Sg2 + Nom)(0 V)(NOT 0 Sg2);
-ADD:err-agr (&err-agr) TARGET V IF (-1C Pron + Pl1 + Nom)(0 V)(NOT 0 Pl1);
-ADD:err-agr (&err-agr) TARGET V IF (-1C Pron + Pl2 + Nom)(0 V)(NOT 0 Pl2);
+ADD:err-agrsg1 (&err-agr) TARGET V IF (-1C Pron + Sg1 + Nom)(0 V)(NOT 0 Sg1);
+ADD:err-agrsg2 (&err-agr) TARGET V IF (-1C Pron + Sg2 + Nom)(0 V)(NOT 0 Sg2);
+ADD:err-agrpl1 (&err-agr) TARGET V IF (-1C Pron + Pl1 + Nom)(0 V)(NOT 0 Pl1);
+ADD:err-agrpl2 (&err-agr) TARGET V IF (-1C Pron + Pl2 + Nom)(0 V)(NOT 0 Pl2);
 
 ADD:err-gen-po (&err-gen-po) TARGET Po IF (-1 N OR Pron)(NOT -1 Gen)(0C Po);
 
@@ -1961,10 +1961,33 @@ ADD:err-ext-agr (&err-ext-agr) TARGET V IF (-1 Loc)(0 Sg3)(1 N + Pl + Nom);
 
 ADD:err-ext-vagr (&err-ext-vagr) TARGET N IF (-2 Loc)(-1 Sg3)(0 N + Pl + Acc);
 
-ADD:err-pl-obj (&err-pl-obj) TARGET N IF (-1 TV)(0 N + Pl + Nom)(NOT -1 PrfPrc LINK *-1 N BARRIER VFIN);
+ADD:err-pl-obj (&err-pl-obj) TARGET N IF (-1 TV LINK NOT 0 Der/Pass)(0 N + Pl + Nom)(NOT -1 PrfPrc LINK *-1 N BARRIER VFIN);
 
-ADD:err-extv-sg (&err-extv-sg) TARGET V IF (0 ("leđe"))(1 N + Pl + Acc);
-ADD:err-extsubj-acc (&err-extsubj-acc) TARGET N IF (-1 ("leđe") + Sg3 OR Pl3)(0 N + Pl + Acc);
+ADD:err-extv-sg (&err-extv-sg) TARGET V IF (0 ("leđe"))(1 N + Pl + Acc)(NOT 1 N + Pl + Ill);
+ADD:err-extv-sg (&err-extv-sg) TARGET V IF (0 ("leđe"))(*1 N + Pl + Acc  BARRIER NOT-NPMODADVIIP LINK NOT 1 N OR A);
+	
+ADD:err-extsubj-acc (&err-extsubj-acc) TARGET N IF (-1 ("leđe") + Sg3 OR ("leđe") + Pl3)(0 N + Pl + Acc)(NOT 0 N + Pl + Ill);
 
 ADD:err-halfcongruence (&err-halfcongruence) TARGET Dem IF (0 Sg + Loc)(1 N + Sg + Loc)(NOT 0 Loc + Attr); # Loc Attr > Gen?
 ADD:err-extv-sg (&err-extv-sg) TARGET V IF (0 ("leđe") + Sg3)(1 N + Pl + Nom);
+
+ADD:err-nom-obj (&err-nom-obj) TARGET N IF (-1 VFIN + Sg1)(0 N + Pl + Nom);
+ADD:err-nom-obj (&err-nom-obj) TARGET N IF (-2 VFIN + Sg1)(-1 PrfPrc)(0 N + Pl + Nom);
+ADD:err-nom-obj (&err-nom-obj) TARGET N IF (-2 VFIN + Sg1)(-1 Pl + Nom)(0 N + Pl + Nom);
+
+ADD:err-nom-obj (&err-nom-obj) TARGET N IF (-2 VFIN + Sg1)(-1 Pl + Nom OR Attr)(0 N + Pl + Nom);
+ADD:err-nom-obj (&err-nom-obj) TARGET N IF (-3 VFIN + Sg1)(-1 Pl + Nom OR Attr)(-2 PrfPrc)(0 N + Pl + Nom);
+ADD:err-nom-obj (&err-nom-obj) TARGET N IF (-3 VFIN + Sg1)(-1 Pl + Nom OR Attr)(-2 Pl + Nom)(0 N + Pl + Nom);
+#$ Lam valjim taah säänih
+#ok Lam valjim táid saanijd
+# olen valinnut nämä sanat
+
+ADD:err-acc-obj-top (&err-acc-obj-top) TARGET N IF (0 Pl + Acc LINK *-1 BOS BARRIER Nom)(1 V + Sg3)(2 Adv);
+#$ Anarâškielâlijd noomâid kiävttoo uccáá
+#ok Anarâškielâliih noomah kiävttojeh uccáá
+# Inarinsaamenkielisiä nimiä käytetään vähän
+
+ADD:err-acc-obj-top (&err-acc-obj-top) TARGET N IF (0 Pl + Acc LINK *-1 BOS BARRIER Nom)(1 V + Sg3)(2 ConNeg);
+#$ tiäđuid ij kavnuu.
+#ok tiäđuh iä kavnuu.
+# tietoja ei löydy
