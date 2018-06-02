@@ -2128,7 +2128,9 @@ SELECT:AdvSTV2 Adv IF (-1 Acc LINK -1 (Pron Gen) LINK *-1 ("väldiđ") OR ("mát
 	#$ Oahpa lávlaga bajil! 	
 	
 
-
+	#!! * __pyereest__
+SELECT:pyereest Adv IF (0 ("pyereest"));
+	# could be pyeri loc, but wait or examples.
 
 
 #!! * __miätáV__  
@@ -3177,7 +3179,8 @@ SELECT:KillnubbiOrd Indef IF (0 ("nubbe" Ord));
 #!! !!Indefinite pronouns
 #!! The rules are not documented yet
 
-
+#!! * __mihheen__ attr if neg + mihheen + NP
+SELECT:mihheen Attr IF (-1 Neg)(0 ("mihheen"))(*1 N BARRIER NOT-NPMOD);
 
 
 #!! * __IndefAttr2__ Selects (Indef Attr) 
