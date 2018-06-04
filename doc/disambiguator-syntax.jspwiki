@@ -331,12 +331,16 @@ DER-V
 DER-N
 
 DER-A1
-
 DER-A
 
 A-V
 
 A-NOT-V
+
+
+
+
+
 
 !Case sets
 
@@ -1054,6 +1058,34 @@ ALLSYNTAG
 
 
 
+!!Impertatives
+
+!!Imperative
+
+See also ''Imprt or Ind'' some sections down.
+
+
+
+
+* __ImprtDál__ 
+
+
+* __ImprtComma__ 
+
+* __ImprtNotVGen__
+
+* __NotImprtInd__ 
+
+* __NotImprtConNeg__ 
+
+* __NotImprtA__ 
+
+* __NotImprtN__ 
+
+
+* __NotImprtVFIN__ 
+
+
 !!Lexicalised derivations
 
 
@@ -1066,7 +1098,9 @@ ALLSYNTAG
 
 * __derA__ removes DER-A if lexicalised A
 
+* __derAdv__ removes DER-Adv if lexicalised Adv
 
+* __derPass__ removes DER-PASS if lexicalised V
 
 * __derV__ removes DER-V if lexicalised V,
 
@@ -1145,15 +1179,22 @@ der
 !!Adjectives or nouns
 
 
+
 !!Adjectives, nouns, not adverbs
 
 * __Aifeambbo__ selects A after eambbo
 
 
+
+!!Subjunctions
+
+Conjunctions
+
+
+
 !!Adverbs
 
 !Adverbs or postpositions
-
 
 * IFF __buotAdv__ : buot Adv in front of Superl ok smn
 
@@ -1163,7 +1204,7 @@ der
 * __AdvSTV__ váldit mielde, oahppat bajil. eará? STRICT-TRANS-V is too strong
 
 
-
+* __pyereest__
 
 
 * __miätáV__  
@@ -1191,6 +1232,11 @@ der
 
 
 * __ollasitAdv__ selects
+
+
+Adverbs and not Pronouns
+
+* __siste__ is adv
 
 
 
@@ -1548,7 +1594,6 @@ Mostly we map both @CNP and @CVP, then we select @CNP, after that we remove them
 * __killAllvainotCSCVP__ Select all vai CS @CVP	
 
 
-
 * __CVPNPron__ No finite verb or verbalactivity in front N/Pron @CNP N/Pron	
 
 
@@ -1693,7 +1738,7 @@ Mostly we map both @CNP and @CVP, then we select @CNP, after that we remove them
 !!Indefinite pronouns
 The rules are not documented yet
 
-
+* __mihheen__ attr if neg + mihheen + NP
 
 
 * __IndefAttr2__ Selects (Indef Attr) 
@@ -1918,29 +1963,6 @@ Number following the rule headers below refer to numbers of hit in a 13 053 859 
 
 
 
-!!Imperative
-
-See also ''Imprt or Ind'' some sections down.
-
-
-
-* __ImprtDál__ 
-
-
-* __ImprtComma__ 
-
-* __ImprtNotVGen__
-
-* __NotImprtInd__ 
-
-* __NotImprtConNeg__ 
-
-* __NotImprtA__ 
-
-* __NotImprtN__ 
-
-
-* __NotImprtVFIN__ 
 
 
 
@@ -2040,6 +2062,9 @@ The rules are no documented yet
 
 
 !!!VERB MAPPINGS
+
+Lexical disambiguation of verbs
+
 
 
 !!Verbs as predicatives (@SPRED>) and (@<OPRED) 
@@ -2198,8 +2223,6 @@ The rules are no documented yet
 * __+FAUXVCop__  copulas coming before the mainverb, relative clause inbetween
 
 
-* __+FMAINVcopMannan__  leat before mannan TIME     
-
 * __+FMAINVHabconstr__  in habitive constructions    
 
 * __+FMAINVCoopCoord__ coordination  
@@ -2215,6 +2238,9 @@ The rules are no documented yet
 
 * __+FMAINVCop__  copulas 	
 
+
+
+!The big general @+FMAINV rule
 
 * __+FMAINV__  to the remaining finite verbs which are not AUX    
 
@@ -2308,20 +2334,8 @@ The rules are no documented yet
 
 * __-FMAINVLoc__ Actio Loc
 
-!And then we remove the verbs which didn't get any syntactic tag, in favour of verbs with syntactic tags.
-
-* __realverbX__
-
-* __IfonlyVerb__ selects the FMAINV reading in the cohort
-
-* __IfonlyConNeg__ ConNeg if it is @-FMAINV or @-FAUXV
 
 
-!__killifVinCohort__ This rule removes all other readings, if there is a mapped V reading in the same cohort. Every case which this goes wrong, should be fixed in mapping rules or previous disrules.
-
-* __TEST__ selects some infinte verb readings in the cohort
-
-* __X__
 
 
 
@@ -2404,7 +2418,7 @@ The rules are no documented yet
 
 
 
-* __SEMyouareNom__ Removes Gen and Acc when 0 FAMILY or PROFESSION because you are Nom. Not if -1 Num and VFIN is LEAT or IV ''Oahpai go Sire sámegiela''
+* __SEMyouareNom__ Removes Gen and Acc when 0 FAMILY or PROFESSION because you are Nom. Not if -1 Num and VFIN is LEDE or IV ''Oahpai go Sire sámegiela''
 
 * __SEMyouareGen__ Removes Nom if movement verb to the left and illative to the right, because you are the modifier of Ill ''mannat Madame Tussaud kabinehttii''
 
@@ -2573,6 +2587,8 @@ The rules are no documented yet
 
 
 * __NotGenitive__ selects Acc if you are a N or Pron with punctuation marks to your right, followed by a noun-phrase boundary
+
+
 
 
 
@@ -3393,6 +3409,28 @@ Most actio can be both tool and event.
 
 * __cleanSemClass__ cleans up if a word has more semclasses. This is just a start.
 
+
+
+
+
+
+
+!And then we remove the verbs which didn't get any syntactic tag, in favour of verbs with syntactic tags.
+
+* __realverbX__
+
+
+
+* __IfonlyVerb__ selects the FMAINV reading in the cohort
+
+* __IfonlyConNeg__ ConNeg if it is @-FMAINV or @-FAUXV
+
+
+!__killifVinCohort__ This rule removes all other readings, if there is a mapped V reading in the same cohort. Every case which this goes wrong, should be fixed in mapping rules or previous disrules.
+
+* __TEST__ selects some infinte verb readings in the cohort
+
+* __X__
 
 
 
