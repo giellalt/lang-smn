@@ -21,12 +21,15 @@
 
 echo <<defining Cns and Vow...>>
 
-define Vow       [ a | á | e | i | o | u | y | æ | ø | å | ä | ö |
-                   A | Á | E | I | O | U | Y | Æ | Ø | Å | Ä | Ö |
-é | ó | ú | í | à | è | ò | ù | ì | ë | ü | ï | â | ê | ô | û | î | ã | ý
-É | Ó | Ú | Í | À | È | Ò | Ù | Ì | Ë | Ü | Ï | Â | Ê | Ô | Û | Î | Ã | Ý ] ;
+define Vow [ a | á | e | i | o | u | y | æ | ø | å | ä | ö |
+             A | Á | E | I | O | U | Y | Æ | Ø | Å | Ä | Ö |
+             é | ó | ú | í | à | è | ò | ù | ì | 
+             É | Ó | Ú | Í | À | È | Ò | Ù | Ì | 
+             ë | ü | ï | â | ê | ô | û | î | ã | ý
+             Ë | Ü | Ï | Â | Ê | Ô | Û | Î | Ã | Ý ] ;
 
-define 2ndVow [ e | a | u | o | i | á | y | ø | ä | E | A | U | O | I | Á | Y | Ø | Ä ] ;
+define 2ndVow [ e | a | u | o | i | á | y | ø | ä | 
+                E | A | U | O | I | Á | Y | Ø | Ä ] ;
 
 !define 3dVow [ u | U ] ;
 
@@ -63,6 +66,7 @@ define OEdipht      [ o e | O e | O E ] ; ! goe-the
 define IOslashdipht [ i ø | I ø | I Ø ] ; ! skiøld     ! Renamed from IØdipht to avoid non-ASCII chars
 define IOdipht      [ i o | I o | I O ] ; ! skiold, nation
 define IAEdipht     [ i ä | I ä | I Ä ] ; ! iä
+define YEdipht      [ y e | Y e | Y E ] ; ! kye-li
 
 
 
@@ -73,7 +77,7 @@ define IAEdipht     [ i ä | I ä | I Ä ] ; ! iä
 
 define dipht [ IEdipht | UAAdipht | UOdipht | EAdipht | OAdipht | OUdipht | AUdipht |
                EUdipht | AEdipht | OslashYdipht | OEdipht | IOslashdipht | IOdipht |
-               IAEdipht ] ;
+               IAEdipht | YEdipht ] ;
 
 !define tripht [ EAUtripht | IEUtripht ] ;
 
@@ -130,6 +134,13 @@ define 4cns        [..] -> %^ || Vow r           _ d n j ,
 ! ran. Maiddái dáid sániid berre juohkit váldonjuolggadusa miel
 ! de: dah-je, čáih-ni, beal-je-skuh-ran.
 
+define longdiphthong [..] -> %^ || dipht _ [ [ [đ|l|r] f ] 
+                                           | [ [đ|g|]  g ] 
+                                           | [ [l|r]   g ] 
+                                                         ] i [ s t | j (d|n) | h ] .#. ;
+                                                         
+!define longdiphthong [..] -> %_ || dipht _  Cns Cns (Cns) Vow [ j d | s t | j (n) | h ] .#. ;
+
 define unvoicedwg  [..] -> %^ || Vow (Cns) h [ n | m | l | j | r ] _   [ n | m | l | j | r ] Vow ; !guvhl^li
 define dissnas     [..] -> %^ || Vow         [ đ | i | l | r | v ] _ [ b m | d n (j) | g ŋ ] ; !ráv^dnji
 ! define palatal     [..] -> %^ || Vow (Cns) Cns _ d j ,
@@ -142,7 +153,7 @@ define palatal     [..] -> %^ || Vow (Cns) Cns _ d j ,
                                  Vow (Cns) Cns _ l j ,
                                  Vow (Cns) Cns _ n j ;
 !                                 Vow           _ n j ; !o^lju, bo^njan etc, removed: Vow _ d j , Vow  _ l j (causes o^ljju) , until we get decision from SGL, commented out, see comment on line 103 (TO)
-!define s2cns       [..] -> %^ || Vow [ Cns | i ]            ( %> ) _ [s|š] Cnss  Vow ; ! mái-stit (if commented out: máis-tit)
+!define s2cns      [..] -> %^ || Vow [ Cns | i ]            ( %> ) _ [s|š] Cnss  Vow ; ! mái-stit (if commented out: máis-tit)
 define s2cnswg     [..] -> %^ || Vow [ Cns | i ] [s|š] Cnss ( %> ) _ Cnss ( %> ) Vow ; !máist^tán
 define 3cns        [..] -> %^ || Vow [ Cns | i ]       Cns  ( %> ) _ Cns  ( %> ) Vow ; !biil^la
 !define foreign    [..] -> %^ || Vow                        ( %> ) _ g r         Vow ; !para^gráfa
@@ -192,6 +203,7 @@ afterlong
 .o. NotIOslhdi
 .o. 4cns
 !.o. unvoiced
+.o. longdiphthong ! testing 
 .o. unvoicedwg
 .o. dissnas
 .o. palatal
