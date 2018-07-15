@@ -2148,6 +2148,12 @@ SELECT:NomACR Nom IF (0 ACR OR ABBR)(-1 BOS)(1 PUNCT) ;
 	#$ Ovttas.no - Sámi oahpponeavvut neahtas
 
 
+
+#!! !!Verbs
+
+REMOVE:vazzid ("vazzâđ") IF (0 ("väzziđ"))(*1  Ill OR ("čoođâ"));
+
+
 #!! !!Adjectives or nouns
 
 REMOVE:QN A IF (-1 Num)(0 N)(1 S-BOUNDARY OR V OR EOS);
@@ -6918,7 +6924,9 @@ REMOVE (Sg Nom) (1 VFIN + Pl3) ;
 SELECT A (0 Attr LINK 0 N LINK 1 N) ;
 	#$ Lea suohtas kurssas. <= her er ikke Attr analysen riktig
 
+#!! !!Adverb or Participle
 
+REMOVE Pcle IF (-1 BOS)(0 Adv);
 
 
 AFTER-SECTIONS
