@@ -49,6 +49,8 @@
 
 # The pipeline (but use modes, above)
 #  echo "Sun ij puátá." | hfst-tokenise --giella-cg  ../tokenisers/tokeniser-gramcheck-gt-desc.pmhfst | vislcg3 -g disambiguator.cg3 | vislcg3 -g grammarchecker.cg3 -t
+# For text (the sed part is quickfix for URL bug
+#  cat text.txt | hfst-tokenise --giella-cg  ../tokenisers/tokeniser-gramcheck-gt-desc.pmhfst | sed 's/+URL/ URL/g;'| vislcg3 -g disambiguator.cg3 | vislcg3 -g grammarchecker.cg3 -t
 
 
 # after lookup2cg: vislcg3 -g ~/main/langs/smn/src/syntax/valency.cg3 |
