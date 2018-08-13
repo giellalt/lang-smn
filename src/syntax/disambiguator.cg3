@@ -146,6 +146,7 @@ LIST Pl = Pl ;   #!! Pl
 LIST Cmp/SplitR = Cmp/SplitR ;	   #!! Cmp/SplitR
 LIST Cmp/SgNom = Cmp/SgNom ; #!! Cmp/SgNom Cmp/SgGen
 LIST Cmp/SgGen = Cmp/SgGen ; #!! Cmp/SgGen
+LIST Cmp/Attr = Cmp/Attr ; #!! Cmp/Attr
 LIST PxSg1 = PxSg1 ;	   #!! PxSg1
 LIST PxSg2 = PxSg2 ;	   #!! PxSg2
 LIST PxSg3 = PxSg3 ;	   #!! PxSg3
@@ -7029,6 +7030,14 @@ SELECT:TEST OBJ + V OR SUBJ + V OR V + @>N ;
 REMOVE:X (@X) ;
 
 
+REMOVE Cmp/SgGen (0 Cmp/SgNom) ;	
+
+
+REMOVE:Cit SUB:1 (Cmp/Cit) ; 
+
+REMOVE SUB:1 Cmp/SgGen (0/* Cmp/SgNom) ;	#This for HFST
+REMOVE SUB:1 A - Cmp/Attr (0/* Cmp/Attr) ;	#This for HFST
+#SELECT SUB:1 Prop - Attr (0/* Prop + Nom) ;	#This for HFST
 
 
 
