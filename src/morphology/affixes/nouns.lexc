@@ -34,6 +34,11 @@
 
 !! !!!The lexica themselves
 
+!! Lexicons starting with 2 are bisyllabic words, 
+!! with 3 are trisyllabic, with 4 are quadrosyllabic.
+!! The contract ones start with __C__ or __S__.
+!! Lexicons starting with __X__ are pointed to from stem files
+!! ''nouns.lexc, adjective.lexc, propernouns.lexc''.
 
 !! !!0. Unclassified lexica
 
@@ -54,12 +59,12 @@ LEXICON 2ALGA  !!= __@CODE@__ 2VADDU has CLEN for Sg+Com and Pl+Ill , rlen svlow
  2ALGA_SG ;
  2PUUVSAH_PL2  ;
 
-LEXICON X_ALGA  !!= __@CODE@__ 
+LEXICON X_ALGA  !!= ''@CODE@'' common to all POS
 X_ALGA_SG ;
 X_ALGA_PL ; !
 
 
-LEXICON 2ALGA_SG !!= __@CODE@__
+LEXICON 2ALGA_SG !!= ''@CODE@'' Px paradigms
 +N: X_ALGA_SG  ; 
 +N+Cmp/SgNom: Rhash ; !áimupoccee
 +N+Cmp/SgGen:^WG^RLEN%> Rhash ; !
@@ -78,7 +83,7 @@ LEXICON 2ALGA_SG !!= __@CODE@__
 +N+Der1+Der/Dimin: S_KAANDAS ; !kaandâš nieidâš kuuđhâš
 
 
-LEXICON X_ALGA_SG !!= __@CODE@__
+LEXICON X_ALGA_SG !!= ''@CODE@'' case paradigms sg
 +Sg+Nom: K;				 		! sollâ
 +Sg+Gen:^WG^RLEN K ;     		! aalgâ
 +Sg+Acc:^WG^RLEN K ;     		! aalgâ
@@ -90,7 +95,7 @@ LEXICON X_ALGA_SG !!= __@CODE@__
 +Par:%>d K ;						! algâd
 
 
-LEXICON X_ALGA_PL !!= __@CODE@__  plurals for 2KUMPPI
+LEXICON X_ALGA_PL !!= ''@CODE@'' case para pl (plurals for 2KUMPPI)
 +Pl+Nom:^WG^RLEN%>h K ;            ! kuumpih
 +Pl+Gen:^WG^RLEN%>i K ;            ! kuumpij
 +Pl+Gen+Use/NG:^WG^RVSH%>i K ;     ! kumpij
@@ -104,7 +109,7 @@ LEXICON X_ALGA_PL !!= __@CODE@__  plurals for 2KUMPPI
 
 
 
-LEXICON X_ALGA_PL_COMMON !!= __@CODE@__
+LEXICON X_ALGA_PL_COMMON !!= ''@CODE@''
 +Pl+Nom:^WG^RLEN%>h K ;  		! puuvsah
 X_WG_RLEN_PL_Loc ;
 
@@ -114,7 +119,7 @@ LEXICON 2PUUVSAH_PL   !!= __@CODE@__
 +N+Cmp/SgGen:^WG%> Rhash ; !
 2PUUVSAH_PL2 ; ! due to 2KUMPPI
 
-LEXICON 2PUUVSAH_PL2 
+LEXICON 2PUUVSAH_PL2  !!= ''@CODE@''
 +N: X_ALGA_PL ;
 +N+Cmp/SgNom: Rhash ; !
 +N+Cmp/PlGen:^WG^RLEN%>i Rhash ; !
