@@ -1467,7 +1467,8 @@ VINFINITES_MOONNAD ; !po^RVrr
 +Pot+Prs: EVEN_POT_TOOHAD ;
 +Cond+Prs:â^WG^VHIGH%> EVEN_COND ;
 +Imprt: EVEN_IMPRT_MOONNAD ;
-+Der3+Der/Pass:u2 C_PASS_SH_RVSH ; ! prfprc: toohum ta^RVh^RC â^VHIGH^RLEN%>đ
++Der3+Der/Pass:u2 C_PASS_SH_RVSH ;   ! prfprc tohhum, tahhoo always CLEN, RVSH
++Der3+Der/Pass+Use/NG:u2 C_PASS_SH_ALTERNATE ; ! prfprc: toohum, tahhoo ta^RVh^RC â^VHIGH^RLEN%>đ
 +Der1+Der/d:âd^WG^VBACK 3_DERIVED_LOW ; ! pu^RVrâd vs po^RVrr, luvâdiđ
 +Der1+Der/st:âst^WG^VBACK 3_DERIVED ; ! purâstiđ
 +Der1+Der/tt:âtt^WG^VBACK 3_DERIVED ; ! purâttiđ
@@ -4771,357 +4772,6 @@ LEXICON 3_DERIVED_CLEN  !!= * __@CODE@__ lexicon
 +V+Der1+Der/Caus:itt 4_ADELISTID ; !
 
 
-!! ! Der/l lexicons
-
-!! Table for 3_DERIVED contlexes.
-!! The columns give contlexes, the rows give key forms, and the cells show the triggers.
-
-!! || Form || L             || L_VERSION2 || L_VERSION3 || L_CLEN         || VBACK || RLEN
-!! | Inf    | CSH VBACK RVSH | RVSH        | CSH RVSH    | CSH  VBACK      | VBACK  |  RLEN
-!! | Sg3    | VBACK RLEN     | CLEN RVSH   | CLEN RVSH   | CLEN VBACK      | VBACK  |  -
-!! | ConNeg | VBACK          | -           | VBACK       | CLEN VBACK RLEN | VBACK  |  RLEN
-
-!DERL LEXICON 3_DERIVED_L  !!= * __@CODE@__
-!DERL +V+Ind+Prt+Du1+Err/Orth:^VBACK%>ááim K ; ! these separate, perhaps skip
-!DERL +V+Ind+Prt+Du2+Err/Orth:^VBACK%>ááid K ; ! only á ?
-!DERL +V+Ind+Prt+Du3+Err/Orth:^VBACK%>ááin  K ;
-!DERL 
-!DERL +V+Inf:^CSH^VBACK^RVSH%>iđ K ; ! moonnâđ > monâliđ, vaattâđ > vatâliđ, aassâđ > asâliđ
-!DERL 
-!DERL +V+Ind+Prs+Sg1:^CSH^VBACK^RVSH%>âm K ; ! csh for vatâlâm
-!DERL +V+Ind+Prs+Sg2:^CSH^VBACK^RVSH%>ah K ;
-!DERL !+V+Ind+Prs+Sg3:^CLEN^VBACK^RLEN K ;  ! vaattâl
-!DERL +V+Ind+Prs+Sg3:^VBACK^RLEN K ;  ! vaattâl
-!DERL +V+Ind+Prs+Du1:^CSH^VBACK^RVSH%>een K ;
-!DERL +V+Ind+Prs+Du2:^CLEN^VBACK^RLEN^SLEN%>vettee K ;
-!DERL +V+Ind+Prs+Du3:^CSH^VBACK^RVSH%>ává   K ;
-!DERL +V+Ind+Prs+Pl1:^CSH^VBACK^RVSH%>ep K ;
-!DERL +V+Ind+Prs+Pl2:^CLEN^VBACK^RLEN^SLEN%>vetteđ K ;
-!DERL +V+Ind+Prs+Pl3:^CSH^VBACK^RVSH%>eh K ;
-!DERL 
-!DERL +V+Ind+Prt+Sg1:^CSH^VBACK^RVSH%>im K ;
-!DERL +V+Ind+Prt+Sg2:^CSH^VBACK^RVSH%>ih K ;
-!DERL +V+Ind+Prt+Sg3:^CSH^VBACK^RVSH%>ij    K ;
-!DERL +V+Ind+Prt+Du1:^CSH^VBACK^RVSH%>áim K ;
-!DERL +V+Ind+Prt+Du2:^CSH^VBACK^RVSH%>áid K ;
-!DERL +V+Ind+Prt+Du3:^CSH^VBACK^RVSH%>áin  K ;
-!DERL +V+Ind+Prt+Pl1:^CSH^VBACK^RVSH%>ijm K ;
-!DERL +V+Ind+Prt+Pl2:^CSH^VBACK^RVSH%>ijd K ;
-!DERL +V+Ind+Prt+Pl3:^CSH^VBACK^RVSH%>ii K ;
-!DERL 
-!DERL +V+Cond+Prs+Sg1:^CSH^VBACK^RVSH%>iččim K ;
-!DERL +V+Cond+Prs+Sg2:^CSH^VBACK^RVSH%>iččih K ;
-!DERL +V+Cond+Prs+Sg3:^CSH^VBACK^RVSH%>ičij K ;
-!DERL +V+Cond+Prs+Du1:^CSH^VBACK^RVSH%>iččijm K ;
-!DERL +V+Cond+Prs+Du1+Err/Orth:^CSH^VBACK^RVSH%>iččiijm K ;
-!DERL +V+Cond+Prs+Du2:^CSH^VBACK^RVSH%>iččijd K ;
-!DERL +V+Cond+Prs+Du2+Err/Orth:^CSH^VBACK^RVSH%>iččiijd K ;
-!DERL +V+Cond+Prs+Du3:^CSH^VBACK^RVSH%>iččijn K ;
-!DERL +V+Cond+Prs+Du3+Err/Orth:^CSH^VBACK^RVSH%>iččiijn K ;
-!DERL +V+Cond+Prs+Pl1:^CSH^VBACK^RVSH%>iččijm K ;
-!DERL +V+Cond+Prs+Pl2:^CSH^VBACK^RVSH%>iččijd K ;
-!DERL +V+Cond+Prs+Pl3:^CSH^VBACK^RVSH%>iččii K ;
-!DERL 
-!DERL +V+Pot+Prs+Sg1:^VBACK%>ižžeem K ;
-!DERL +V+Pot+Prs+Sg2:^VBACK%>ižžeeh K ;
-!DERL +V+Pot+Prs+Sg3:^VBACK%>iš K ;
-!DERL +V+Pot+Prs+Du1:^VBACK%>ižžeen K ;
-!DERL +V+Pot+Prs+Du2:^VBACK%>išvettee K ;
-!DERL +V+Pot+Prs+Du3:^VBACK%>ižává K ;
-!DERL +V+Pot+Prs+Pl1:^VBACK%>ižžep K ;
-!DERL +V+Pot+Prs+Pl2:^VBACK%>išvetteđ K ;
-!DERL +V+Pot+Prs+Pl3:^VBACK%>ižeh K ;
-!DERL 
-!DERL +V+Imprt+Sg1:^VBACK%>um K ;
-!DERL +V+Imprt+Sg2:^VBACK^RLEN^SLEN K ;
-!DERL +V+Imprt+Sg3:^VBACK%>us K ;
-!DERL +V+Imprt+Du1:^VBACK%>oon K ;
-!DERL +V+Imprt+Du2:^VBACK%>ee K ;
-!DERL +V+Imprt+Du3:^VBACK%>us K ;
-!DERL +V+Imprt+Pl1:^VBACK%>op K ;
-!DERL +V+Imprt+Pl2:^VBACK%>iđ K ;
-!DERL +V+Imprt+Pl3:^VBACK%>us K ;
-!DERL 
-!DERL +V+PrsPrc:^VBACK%>ijjee K ;
-!DERL +V+PrsPrc+Use/NG:^VBACK%>eijee K ;
-!DERL +V+PrfPrc:^VBACK%>âm K ;
-!DERL 
-!DERL +V+Ind+Prs+ConNeg:^VBACK^RLEN K ; ! ^SLEN
-!DERL +V+Ind+Prt+ConNeg:^VBACK%>âm K ;
-!DERL +V+Cond+Prs+ConNeg:^VBACK%>iččii K ;
-!DERL +V+Pot+Prs+ConNeg:^VBACK%>ižžii K ;
-!DERL +V+Imprt+ConNeg: K ;
-!DERL 
-!DERL +V+VAbess:^VBACK^RLEN^SLEN VABESS ;
-!DERL +V+VAbess+Err/Orth:^VBACK^RLEN^SLEN%>hinnáá K ;
-!DERL +V+VAbess+Err/Orth:^VBACK^RLEN^SLEN%>hennáá K ;
-!DERL 
-!DERL +V+Actio+Nom:^VBACK%>em K ;
-!DERL +V+Actio+Ill:^VBACK^RLEN^SLEN%>mân K ;
-!DERL +V+Actio+Ess:^VBACK^RLEN^SLEN%>min K ;
-!DERL +V+Actio+Loc:^VBACK^RLEN^SLEN%>mist K ;
-!DERL +V+Actio+Com:^VBACK^RLEN^SLEN%>máin K ;
-!DERL +V+Ger:^VBACK^RLEN^SLEN%>dijn K ;
-!DERL +V+Ger+PxSg1:^VBACK^RLEN^SLEN%>dijnân K ;
-!DERL +V+Ger+PxSg2:^VBACK^RLEN^SLEN%>dijnâd K ;
-!DERL +V+Ger+PxSg3:^VBACK^RLEN^SLEN%>dijnis K ;
-!DERL +V+Der4+Der/NomAct:^VBACK FLAG_3KEPIDEM ;
-!DERL +V+Der2+Der/NomAg:^VBACKei4je C_TAHHEE ;
-!DERL +V+Der4+Der/InchL:i6^WG^VBACK%>škyett4 4SYLL_KYETTID_DER ; !joođeetškuođij hmm
-!DERL +V+Der1+Der/st:^VBACKist 4_ADELISTID ; !
-!DERL +V+Der1+Der/Caus:^VBACKitt 4_ADELISTID ; !
-!DERL +V+Der3+Der/Pass:^VBACK C_MERIDUD ;
-!DERL 
-!DERL 
-!DERL LEXICON 3_DERIVED_L_VERSION2  !!= * __@CODE@__
-!DERL +V+Inf:^RVSH%>iđ K ; !
-!DERL 
-!DERL +V+Ind+Prs+Sg1:^RVSH%>âm K ; !  toideđ > toideliđ
-!DERL +V+Ind+Prs+Sg2:^RVSH%>ah K ;
-!DERL +V+Ind+Prs+Sg3:^CLEN^RVSH K ;  ! spellâl
-!DERL +V+Ind+Prs+Du1:^RVSH%>een K ;
-!DERL +V+Ind+Prs+Du2:^CLEN^RVSH%>vettee K ;
-!DERL +V+Ind+Prs+Du3:^RVSH%>ává   K ;
-!DERL +V+Ind+Prs+Pl1:^RVSH%>ep K ;
-!DERL +V+Ind+Prs+Pl2:^CLEN^SLEN%>vetteđ K ;
-!DERL +V+Ind+Prs+Pl3:^RVSH%>eh K ;
-!DERL 
-!DERL +V+Ind+Prt+Sg1:^RVSH%>im K ;
-!DERL +V+Ind+Prt+Sg2:^RVSH%>ih K ;
-!DERL +V+Ind+Prt+Sg3:^RVSH%>ij    K ;
-!DERL +V+Ind+Prt+Du1:^RVSH%>áim K ;
-!DERL +V+Ind+Prt+Du2:^RVSH%>áid K ;
-!DERL +V+Ind+Prt+Du3:^RVSH%>áin  K ;
-!DERL +V+Ind+Prt+Pl1:^RVSH%>ijm K ;
-!DERL +V+Ind+Prt+Pl2:^RVSH%>ijd K ;
-!DERL +V+Ind+Prt+Pl3:^RVSH%>ii K ;
-!DERL 
-!DERL +V+Cond+Prs+Sg1:^RVSH%>iččim K ;
-!DERL +V+Cond+Prs+Sg2:^RVSH%>iččih K ;
-!DERL +V+Cond+Prs+Sg3:^RVSH%>ičij K ;
-!DERL +V+Cond+Prs+Du1:^RVSH%>iččijm K ;
-!DERL +V+Cond+Prs+Du1+Err/Orth:^RVSH%>iččiijm K ;
-!DERL +V+Cond+Prs+Du2:^RVSH%>iččijd K ;
-!DERL +V+Cond+Prs+Du2+Err/Orth:^RVSH%>iččiijd K ;
-!DERL +V+Cond+Prs+Du3:^RVSH%>iččijn K ;
-!DERL +V+Cond+Prs+Du3+Err/Orth:^RVSH%>iččiijn K ;
-!DERL +V+Cond+Prs+Pl1:^RVSH%>iččijm K ;
-!DERL +V+Cond+Prs+Pl2:^RVSH%>iččijd K ;
-!DERL +V+Cond+Prs+Pl3:^RVSH%>iččii K ;
-!DERL 
-!DERL ! addition starts here
-!DERL 
-!DERL +V+PrsPrc:^VBACK%>ijjee K ;
-!DERL +V+PrsPrc+Use/NG:^VBACK%>eijee K ;
-!DERL +V+PrfPrc:^VBACK%>âm K ;
-!DERL 
-!DERL !+V+Ind+Prs+ConNeg:^VBACK^RLEN K ; ! ^SLEN
-!DERL +V+Ind+Prs+ConNeg:^CLEN^RVSH K ; ! if Imprt ConNeg works
-!DERL +V+Ind+Prt+ConNeg:^VBACK%>âm K ;
-!DERL +V+Cond+Prs+ConNeg:^VBACK%>iččii K ;
-!DERL +V+Pot+Prs+ConNeg:^VBACK%>ižžii K ;
-!DERL +V+Imprt+ConNeg:^CLEN^RVSH K ;
-!DERL 
-!DERL +V+VAbess:^VBACK^RLEN^SLEN VABESS ;
-!DERL +V+VAbess+Err/Orth:^VBACK^RLEN^SLEN%>hinnáá K ;
-!DERL +V+VAbess+Err/Orth:^VBACK^RLEN^SLEN%>hennáá K ;
-!DERL 
-!DERL +V+Actio+Nom:^VBACK%>em K ;
-!DERL +V+Actio+Ill:^VBACK^RLEN^SLEN%>mân K ;
-!DERL +V+Actio+Ess:^VBACK^RLEN^SLEN%>min K ;
-!DERL +V+Actio+Loc:^VBACK^RLEN^SLEN%>mist K ;
-!DERL +V+Actio+Com:^VBACK^RLEN^SLEN%>máin K ;
-!DERL +V+Ger:^VBACK^RLEN^SLEN%>dijn K ;
-!DERL +V+Ger+PxSg1:^VBACK^RLEN^SLEN%>dijnân K ;
-!DERL +V+Ger+PxSg2:^VBACK^RLEN^SLEN%>dijnâd K ;
-!DERL +V+Ger+PxSg3:^VBACK^RLEN^SLEN%>dijnis K ;
-!DERL +V+Der4+Der/NomAct:^VBACK FLAG_3KEPIDEM ;
-!DERL +V+Der2+Der/NomAg:^VBACKei4je C_TAHHEE ;
-!DERL +V+Der4+Der/InchL:i6^WG^VBACK%>škyett4 4SYLL_KYETTID_DER ; !joođeetškuođij hmm
-!DERL +V+Der1+Der/st:^VBACKist 4_ADELISTID ; !
-!DERL +V+Der1+Der/Caus:^VBACKitt 4_ADELISTID ; !
-!DERL +V+Der3+Der/Pass:^VBACK C_MERIDUD ;
-
-! addition stops here
-
-!LEXICON 3_DERIVED_L_VERSION3   !!= * __@CODE@__ not used, check
-!+V+Inf:^CSH^RVSH%>iđ K ; !
-!
-!+V+Ind+Prs+Sg1:^CSH^RVSH%>âm K ; ! csh for vatâlâm
-!+V+Ind+Prs+Sg2:^CSH^RVSH%>ah K ;
-!+V+Ind+Prs+Sg3:^CLEN^RVSH K ;  ! spellâl	viššâl
-!+V+Ind+Prs+Du1:^CSH^RVSH%>een K ;
-!+V+Ind+Prs+Du2:^CLEN^RVSH%>vettee K ;
-!+V+Ind+Prs+Du3:^CSH^RVSH%>ává   K ;
-!+V+Ind+Prs+Pl1:^CSH^RVSH%>ep K ;
-!+V+Ind+Prs+Pl2:^CLEN^SLEN%>vetteđ K ;
-!+V+Ind+Prs+Pl3:^CSH^RVSH%>eh K ;
-!
-!+V+Ind+Prt+Sg1:^CSH^RVSH%>im K ;
-!+V+Ind+Prt+Sg2:^CSH^RVSH%>ih K ;
-!+V+Ind+Prt+Sg3:^CSH^RVSH%>ij    K ;
-!+V+Ind+Prt+Du1:^CSH^RVSH%>áim K ;
-!+V+Ind+Prt+Du2:^CSH^RVSH%>áid K ;
-!+V+Ind+Prt+Du3:^CSH^RVSH%>áin  K ;
-!+V+Ind+Prt+Pl1:^CSH^RVSH%>ijm K ;
-!+V+Ind+Prt+Pl2:^CSH^RVSH%>ijd K ;
-!+V+Ind+Prt+Pl3:^CSH^RVSH%>ii K ;
-!
-!+V+Cond+Prs+Sg1:^CSH^RVSH%>iččim K ;
-!+V+Cond+Prs+Sg2:^CSH^RVSH%>iččih K ;
-!+V+Cond+Prs+Sg3:^CSH^RVSH%>ičij K ;
-!+V+Cond+Prs+Du1:^CSH^RVSH%>iččijm K ;
-!+V+Cond+Prs+Du1+Err/Orth:^CSH^RVSH%>iččiijm K ;
-!+V+Cond+Prs+Du2:^CSH^RVSH%>iččijd K ;
-!+V+Cond+Prs+Du2+Err/Orth:^CSH^RVSH%>iččiijd K ;
-!+V+Cond+Prs+Du3:^CSH^RVSH%>iččijn K ;
-!+V+Cond+Prs+Du3+Err/Orth:^CSH^RVSH%>iččiijn K ;
-!+V+Cond+Prs+Pl1:^CSH^RVSH%>iččijm K ;
-!+V+Cond+Prs+Pl2:^CSH^RVSH%>iččijd K ;
-!+V+Cond+Prs+Pl3:^CSH^RVSH%>iččii K ;
-!
-!+V+Pot+Prs+Sg1:^VBACK%>ižžeem K ;
-!+V+Pot+Prs+Sg2:^VBACK%>ižžeeh K ;
-!+V+Pot+Prs+Sg3:^VBACK%>iš K ;
-!+V+Pot+Prs+Du1:^VBACK%>ižžeen K ;
-!+V+Pot+Prs+Du2:^VBACK%>išvettee K ;
-!+V+Pot+Prs+Du3:^VBACK%>ižává K ;
-!+V+Pot+Prs+Pl1:^VBACK%>ižžep K ;
-!+V+Pot+Prs+Pl2:^VBACK%>išvetteđ K ;
-!+V+Pot+Prs+Pl3:^VBACK%>ižeh K ;
-!
-!+V+Imprt+Sg1:^VBACK%>um K ;
-!+V+Imprt+Sg2:^VBACK^RLEN^SLEN K ;
-!+V+Imprt+Sg3:^VBACK%>us K ;
-!+V+Imprt+Du1:^VBACK%>oon K ;
-!+V+Imprt+Du2:^VBACK%>ee K ;
-!+V+Imprt+Du3:^VBACK%>us K ;
-!+V+Imprt+Pl1:^VBACK%>op K ;
-!+V+Imprt+Pl2:^VBACK%>iđ K ;
-!+V+Imprt+Pl3:^VBACK%>us K ;
-!
-!+V+PrsPrc:^VBACK%>ijjee K ;
-!+V+PrsPrc+Use/NG:^VBACK%>eijee K ;
-!+V+PrfPrc:^VBACK%>âm K ;
-!
-!+V+Ind+Prs+ConNeg:^VBACK K ;
-!+V+Ind+Prt+ConNeg:^VBACK%>âm K ;
-!+V+Cond+Prs+ConNeg:^VBACK%>iččii K ;
-!+V+Pot+Prs+ConNeg:^VBACK%>ižžii K ;
-!+V+Imprt+ConNeg: K ;
-!
-!+V+VAbess:^VBACK^RLEN^SLEN VABESS ;
-!+V+VAbess+Err/Orth:^VBACK^RLEN^SLEN%>hinnáá K ;
-!+V+VAbess+Err/Orth:^VBACK^RLEN^SLEN%>hennáá K ;
-!
-!+V+Actio+Nom:^VBACK%>em K ;
-!+V+Actio+Ill:^VBACK^RLEN^SLEN%>mân K ;
-!+V+Actio+Ess:^VBACK^RLEN^SLEN%>min K ;
-!+V+Actio+Loc:^VBACK^RLEN^SLEN%>mist K ;
-!+V+Actio+Com:^VBACK^RLEN^SLEN%>máin K ;
-!+V+Ger:^VBACK^RLEN^SLEN%>dijn K ;
-!+V+Ger+PxSg1:^VBACK^RLEN^SLEN%>dijnân K ;
-!+V+Ger+PxSg2:^VBACK^RLEN^SLEN%>dijnâd K ;
-!+V+Ger+PxSg3:^VBACK^RLEN^SLEN%>dijnis K ;
-!+V+Der4+Der/NomAct:^VBACK FLAG_3KEPIDEM ;
-!+V+Der2+Der/NomAg:^VBACKei4je C_TAHHEE ;
-!+V+Der4+Der/InchL:i6^WG^VBACK%>škyett4 4SYLL_KYETTID_DER ; !joođeetškuođij hmm
-!+V+Der1+Der/st:^VBACKist 4_ADELISTID ; !
-!+V+Der1+Der/Caus:^VBACKitt 4_ADELISTID ; !
-!+V+Der3+Der/Pass:^VBACK C_MERIDUD ;
-
-
-!DERLLEXICON 3_DERIVED_L_CLEN   !!= * __@CODE@__
-!DERL+V+Ind+Prt+Du1+Err/Orth:^VBACK%>ááim K ; ! these separate, perhaps skip
-!DERL+V+Ind+Prt+Du2+Err/Orth:^VBACK%>ááid K ; ! only á ?
-!DERL+V+Ind+Prt+Du3+Err/Orth:^VBACK%>ááin  K ;
-!DERL
-!DERL+V+Inf:^CSH^VBACK%>iđ K ; ! jutâliđ
-!DERL
-!DERL+V+Ind+Prs+Sg1:^VBACK^RVSH%>âm K ; !
-!DERL+V+Ind+Prs+Sg2:^VBACK^RVSH%>ah K ;
-!DERL!+V+Ind+Prs+Sg3:^CLEN^VBACK^RLEN K ; !
-!DERL+V+Ind+Prs+Sg3:^CLEN^VBACK K ; ! spellâl
-!DERL+V+Ind+Prs+Du1:^VBACK^RVSH%>een K ;
-!DERL+V+Ind+Prs+Du2:^CLEN^VBACK^SLEN%>vettee K ;
-!DERL+V+Ind+Prs+Du3:^VBACK^RVSH%>ává   K ;
-!DERL+V+Ind+Prs+Pl1:^VBACK^RVSH%>ep K ;
-!DERL+V+Ind+Prs+Pl2:^CLEN^VBACK^SLEN%>vetteđ K ;
-!DERL+V+Ind+Prs+Pl3:^VBACK^RVSH%>eh K ;
-!DERL
-!DERL+V+Ind+Prt+Sg1:^VBACK^RVSH%>im K ;
-!DERL+V+Ind+Prt+Sg2:^VBACK^RVSH%>ih K ;
-!DERL+V+Ind+Prt+Sg3:^VBACK^RVSH%>ij    K ;
-!DERL+V+Ind+Prt+Du1:^VBACK^RVSH%>áim K ;
-!DERL+V+Ind+Prt+Du2:^VBACK^RVSH%>áid K ;
-!DERL+V+Ind+Prt+Du3:^VBACK^RVSH%>áin  K ;
-!DERL+V+Ind+Prt+Pl1:^VBACK^RVSH%>ijm K ;
-!DERL+V+Ind+Prt+Pl2:^VBACK^RVSH%>ijd K ;
-!DERL+V+Ind+Prt+Pl3:^VBACK^RVSH%>ii K ;
-!DERL
-!DERL+V+Cond+Prs+Sg1:^CLEN^VBACK%>iččim K ;
-!DERL+V+Cond+Prs+Sg2:^CLEN^VBACK%>iččih K ;
-!DERL+V+Cond+Prs+Sg3:^CLEN^VBACK%>ičij K ;
-!DERL+V+Cond+Prs+Du1:^CLEN^VBACK%>iččijm K ;
-!DERL+V+Cond+Prs+Du1+Err/Orth:^CLEN^VBACK%>iččiijm K ;
-!DERL+V+Cond+Prs+Du2:^CLEN^VBACK%>iččijd K ;
-!DERL+V+Cond+Prs+Du2+Err/Orth:^CLEN^VBACK%>iččiijd K ;
-!DERL+V+Cond+Prs+Du3:^CLEN^VBACK%>iččijn K ;
-!DERL+V+Cond+Prs+Du3+Err/Orth:^CLEN^VBACK%>iččiijn K ;
-!DERL+V+Cond+Prs+Pl1:^CLEN^VBACK%>iččijm K ;
-!DERL+V+Cond+Prs+Pl2:^CLEN^VBACK%>iččijd K ;
-!DERL+V+Cond+Prs+Pl3:^CLEN^VBACK%>iččii K ;
-!DERL
-!DERL+V+Pot+Prs+Sg1:^CLEN^VBACK%>ižžeem K ;
-!DERL+V+Pot+Prs+Sg2:^CLEN^VBACK%>ižžeeh K ;
-!DERL+V+Pot+Prs+Sg3:^CLEN^VBACK%>iš K ;
-!DERL+V+Pot+Prs+Du1:^CLEN^VBACK%>ižžeen K ;
-!DERL+V+Pot+Prs+Du2:^CLEN^VBACK%>išvettee K ;
-!DERL+V+Pot+Prs+Du3:^CLEN^VBACK%>ižává K ;
-!DERL+V+Pot+Prs+Pl1:^CLEN^VBACK%>ižžep K ;
-!DERL+V+Pot+Prs+Pl2:^CLEN^VBACK%>išvetteđ K ;
-!DERL+V+Pot+Prs+Pl3:^CLEN^VBACK%>ižeh K ;
-!DERL
-!DERL+V+Imprt+Sg1:^CLEN^VBACK%>um K ;
-!DERL+V+Imprt+Sg2:^CLEN^VBACK^RLEN^SLEN K ;
-!DERL+V+Imprt+Sg3:^CLEN^VBACK%>us K ;
-!DERL+V+Imprt+Du1:^CLEN^VBACK%>oon K ;
-!DERL+V+Imprt+Du2:^CLEN^VBACK%>ee K ;
-!DERL+V+Imprt+Du3:^CLEN^VBACK%>us K ;
-!DERL+V+Imprt+Pl1:^CLEN^VBACK%>op K ;
-!DERL+V+Imprt+Pl2:^CLEN^VBACK%>iđ K ;
-!DERL+V+Imprt+Pl3:^CLEN^VBACK%>us K ;
-!DERL
-!DERL+V+PrsPrc:^CLEN^VBACK%>ijjee K ;
-!DERL+V+PrsPrc+Use/NG:^CLEN^VBACK%>eijee K ;
-!DERL+V+PrfPrc:^CLEN^VBACK%>âm K ;
-!DERL
-!DERL+V+Ind+Prs+ConNeg:^CLEN^VBACK K ; ! ^SLEN
-!DERL+V+Ind+Prt+ConNeg:^CLEN^VBACK%>âm K ;
-!DERL+V+Cond+Prs+ConNeg:^CLEN^VBACK%>iččii K ;
-!DERL+V+Pot+Prs+ConNeg:^CLEN^VBACK%>ižžii K ;
-!DERL+V+Imprt+ConNeg: K ;
-!DERL
-!DERL+V+VAbess:^CLEN^VBACK^RLEN^SLEN VABESS ;
-!DERL+V+VAbess+Err/Orth:^CLEN^VBACK^RLEN^SLEN%>hinnáá K ;
-!DERL+V+VAbess+Err/Orth:^CLEN^VBACK^RLEN^SLEN%>hennáá K ;
-!DERL
-!DERL+V+Actio+Nom:^CLEN^VBACK%>em K ;
-!DERL+V+Actio+Ill:^CLEN^VBACK^RLEN^SLEN%>mân K ;
-!DERL+V+Actio+Loc:^CLEN^VBACK^RLEN^SLEN%>mist K ;
-!DERL+V+Actio+Com:^CLEN^VBACK^RLEN^SLEN%>máin K ;
-!DERL+V+Actio+Ess:^CLEN^VBACK^RLEN^SLEN%>min K ;
-!DERL+V+Ger:^CLEN^VBACK^RLEN^SLEN%>dijn K ;
-!DERL+V+Ger+PxSg1:^CLEN^VBACK^RLEN^SLEN%>dijnân K ;
-!DERL+V+Ger+PxSg2:^CLEN^VBACK^RLEN^SLEN%>dijnâd K ;
-!DERL+V+Ger+PxSg3:^CLEN^VBACK^RLEN^SLEN%>dijnis K ;
-!DERL+V+Der4+Der/NomAct:^CLEN^VBACK FLAG_3KEPIDEM ;
-!DERL+V+Der2+Der/NomAg:^CLEN^VBACKei4je C_TAHHEE ;
-!DERL+V+Der4+Der/InchL:i6^CLEN^WG^VBACK%>škyett4 4SYLL_KYETTID_DER ; !joođeetškuođij hmm
-!DERL+V+Der3+Der/Pass:^CLEN^VBACK C_MERIDUD ;
-!DERL+V+Der1+Der/st:^CLEN^VBACKist 4_ADELISTID ; !
-!DERL+V+Der1+Der/Caus:^CLEN^VBACKitt 4_ADELISTID ; !
-
 
 LEXICON 3_DERIVED_VBACK   !!= * __@CODE@__
 
@@ -5720,6 +5370,32 @@ LEXICON C_PASS_SH_RLEN !!= ** __@CODE@__ does not shorten vowel
 +V+IV+Ger+PxSg2:^VBACK^RLEN%>dijnâd K ;
 +V+IV+Ger+PxSg3:^VBACK^RLEN%>dijnis K ;
 +V+IV+Ger:^VBACK^RLEN%>udijn K ; !aasâttijn asât%>dijn 
+
+
+LEXICON C_PASS_SH_ALTERNATE !!= ** __@CODE@__ toohum: does not shorten vowel, does not lengthen consonant, this is a Use/NG lexicon
++V+IV+Inf:^VBACK^RLEN%>đ K ; !toohuđ
+
++V+IV+Ind+Prs+Du3:^VBACK^RLEN%>v K ; !toohuv
++V+IV+Ind+Prs+Pl1:^VBACK^RLEN%>p K ; !toohup
+
++V+IV+Ind+Prt+Sg3:^VBACK^RLEN%>i  K ;  ! toohui
++V+IV+Ind+Prt+Du1:^VBACK^RLEN%>im  K ;
++V+IV+Ind+Prt+Du2:^VBACK^RLEN%>id K ;
++V+IV+Ind+Prt+Du3:^VBACK^RLEN%>in  K ;
++V+IV+Ind+Prt+Pl1:^VBACK^RLEN%>im  K ;
++V+IV+Ind+Prt+Pl2:^VBACK^RLEN%>id  K ;
+
++V+IV+Pot+Prs+Sg3:^VBACK^RLEN%>š K ;
++V+IV+Pot+Prs+Du2:^VBACK^RLEN%>švettee K ;
++V+IV+Pot+Prs+Pl2:^VBACK^RLEN%>švetteđ K ;
+
++V+IV+Ind+Prt+ConNeg:^VBACK^RLEN%>m K ; !toohum
++V+IV+PrfPrc:^VBACK^RLEN%>m FLAG_K ; !toohum
++V+IV+Actio+Nom:^VBACK^RLEN%>m NOMACT ; ! toohum
+
+
+
+
 
 
 LEXICON C_RAMMUD
@@ -6602,3 +6278,359 @@ LEXICON FLAG_K !!= __@CODE@__ should not be disallowed by ENDLEX @D.NeedNoun.ON@
 !+V+Imprt+Pl1:%>jop K ;
 !+V+Imprt+Pl2:%>đ K ;
 !+V+Imprt+Pl3:%>jus K ;
+
+
+
+
+
+!! ! Der/l lexicons
+
+!! Table for 3_DERIVED contlexes.
+!! The columns give contlexes, the rows give key forms, and the cells show the triggers.
+
+!! || Form || L             || L_VERSION2 || L_VERSION3 || L_CLEN         || VBACK || RLEN
+!! | Inf    | CSH VBACK RVSH | RVSH        | CSH RVSH    | CSH  VBACK      | VBACK  |  RLEN
+!! | Sg3    | VBACK RLEN     | CLEN RVSH   | CLEN RVSH   | CLEN VBACK      | VBACK  |  -
+!! | ConNeg | VBACK          | -           | VBACK       | CLEN VBACK RLEN | VBACK  |  RLEN
+
+!DERL LEXICON 3_DERIVED_L  !!= * __@CODE@__
+!DERL +V+Ind+Prt+Du1+Err/Orth:^VBACK%>ááim K ; ! these separate, perhaps skip
+!DERL +V+Ind+Prt+Du2+Err/Orth:^VBACK%>ááid K ; ! only á ?
+!DERL +V+Ind+Prt+Du3+Err/Orth:^VBACK%>ááin  K ;
+!DERL 
+!DERL +V+Inf:^CSH^VBACK^RVSH%>iđ K ; ! moonnâđ > monâliđ, vaattâđ > vatâliđ, aassâđ > asâliđ
+!DERL 
+!DERL +V+Ind+Prs+Sg1:^CSH^VBACK^RVSH%>âm K ; ! csh for vatâlâm
+!DERL +V+Ind+Prs+Sg2:^CSH^VBACK^RVSH%>ah K ;
+!DERL !+V+Ind+Prs+Sg3:^CLEN^VBACK^RLEN K ;  ! vaattâl
+!DERL +V+Ind+Prs+Sg3:^VBACK^RLEN K ;  ! vaattâl
+!DERL +V+Ind+Prs+Du1:^CSH^VBACK^RVSH%>een K ;
+!DERL +V+Ind+Prs+Du2:^CLEN^VBACK^RLEN^SLEN%>vettee K ;
+!DERL +V+Ind+Prs+Du3:^CSH^VBACK^RVSH%>ává   K ;
+!DERL +V+Ind+Prs+Pl1:^CSH^VBACK^RVSH%>ep K ;
+!DERL +V+Ind+Prs+Pl2:^CLEN^VBACK^RLEN^SLEN%>vetteđ K ;
+!DERL +V+Ind+Prs+Pl3:^CSH^VBACK^RVSH%>eh K ;
+!DERL 
+!DERL +V+Ind+Prt+Sg1:^CSH^VBACK^RVSH%>im K ;
+!DERL +V+Ind+Prt+Sg2:^CSH^VBACK^RVSH%>ih K ;
+!DERL +V+Ind+Prt+Sg3:^CSH^VBACK^RVSH%>ij    K ;
+!DERL +V+Ind+Prt+Du1:^CSH^VBACK^RVSH%>áim K ;
+!DERL +V+Ind+Prt+Du2:^CSH^VBACK^RVSH%>áid K ;
+!DERL +V+Ind+Prt+Du3:^CSH^VBACK^RVSH%>áin  K ;
+!DERL +V+Ind+Prt+Pl1:^CSH^VBACK^RVSH%>ijm K ;
+!DERL +V+Ind+Prt+Pl2:^CSH^VBACK^RVSH%>ijd K ;
+!DERL +V+Ind+Prt+Pl3:^CSH^VBACK^RVSH%>ii K ;
+!DERL 
+!DERL +V+Cond+Prs+Sg1:^CSH^VBACK^RVSH%>iččim K ;
+!DERL +V+Cond+Prs+Sg2:^CSH^VBACK^RVSH%>iččih K ;
+!DERL +V+Cond+Prs+Sg3:^CSH^VBACK^RVSH%>ičij K ;
+!DERL +V+Cond+Prs+Du1:^CSH^VBACK^RVSH%>iččijm K ;
+!DERL +V+Cond+Prs+Du1+Err/Orth:^CSH^VBACK^RVSH%>iččiijm K ;
+!DERL +V+Cond+Prs+Du2:^CSH^VBACK^RVSH%>iččijd K ;
+!DERL +V+Cond+Prs+Du2+Err/Orth:^CSH^VBACK^RVSH%>iččiijd K ;
+!DERL +V+Cond+Prs+Du3:^CSH^VBACK^RVSH%>iččijn K ;
+!DERL +V+Cond+Prs+Du3+Err/Orth:^CSH^VBACK^RVSH%>iččiijn K ;
+!DERL +V+Cond+Prs+Pl1:^CSH^VBACK^RVSH%>iččijm K ;
+!DERL +V+Cond+Prs+Pl2:^CSH^VBACK^RVSH%>iččijd K ;
+!DERL +V+Cond+Prs+Pl3:^CSH^VBACK^RVSH%>iččii K ;
+!DERL 
+!DERL +V+Pot+Prs+Sg1:^VBACK%>ižžeem K ;
+!DERL +V+Pot+Prs+Sg2:^VBACK%>ižžeeh K ;
+!DERL +V+Pot+Prs+Sg3:^VBACK%>iš K ;
+!DERL +V+Pot+Prs+Du1:^VBACK%>ižžeen K ;
+!DERL +V+Pot+Prs+Du2:^VBACK%>išvettee K ;
+!DERL +V+Pot+Prs+Du3:^VBACK%>ižává K ;
+!DERL +V+Pot+Prs+Pl1:^VBACK%>ižžep K ;
+!DERL +V+Pot+Prs+Pl2:^VBACK%>išvetteđ K ;
+!DERL +V+Pot+Prs+Pl3:^VBACK%>ižeh K ;
+!DERL 
+!DERL +V+Imprt+Sg1:^VBACK%>um K ;
+!DERL +V+Imprt+Sg2:^VBACK^RLEN^SLEN K ;
+!DERL +V+Imprt+Sg3:^VBACK%>us K ;
+!DERL +V+Imprt+Du1:^VBACK%>oon K ;
+!DERL +V+Imprt+Du2:^VBACK%>ee K ;
+!DERL +V+Imprt+Du3:^VBACK%>us K ;
+!DERL +V+Imprt+Pl1:^VBACK%>op K ;
+!DERL +V+Imprt+Pl2:^VBACK%>iđ K ;
+!DERL +V+Imprt+Pl3:^VBACK%>us K ;
+!DERL 
+!DERL +V+PrsPrc:^VBACK%>ijjee K ;
+!DERL +V+PrsPrc+Use/NG:^VBACK%>eijee K ;
+!DERL +V+PrfPrc:^VBACK%>âm K ;
+!DERL 
+!DERL +V+Ind+Prs+ConNeg:^VBACK^RLEN K ; ! ^SLEN
+!DERL +V+Ind+Prt+ConNeg:^VBACK%>âm K ;
+!DERL +V+Cond+Prs+ConNeg:^VBACK%>iččii K ;
+!DERL +V+Pot+Prs+ConNeg:^VBACK%>ižžii K ;
+!DERL +V+Imprt+ConNeg: K ;
+!DERL 
+!DERL +V+VAbess:^VBACK^RLEN^SLEN VABESS ;
+!DERL +V+VAbess+Err/Orth:^VBACK^RLEN^SLEN%>hinnáá K ;
+!DERL +V+VAbess+Err/Orth:^VBACK^RLEN^SLEN%>hennáá K ;
+!DERL 
+!DERL +V+Actio+Nom:^VBACK%>em K ;
+!DERL +V+Actio+Ill:^VBACK^RLEN^SLEN%>mân K ;
+!DERL +V+Actio+Ess:^VBACK^RLEN^SLEN%>min K ;
+!DERL +V+Actio+Loc:^VBACK^RLEN^SLEN%>mist K ;
+!DERL +V+Actio+Com:^VBACK^RLEN^SLEN%>máin K ;
+!DERL +V+Ger:^VBACK^RLEN^SLEN%>dijn K ;
+!DERL +V+Ger+PxSg1:^VBACK^RLEN^SLEN%>dijnân K ;
+!DERL +V+Ger+PxSg2:^VBACK^RLEN^SLEN%>dijnâd K ;
+!DERL +V+Ger+PxSg3:^VBACK^RLEN^SLEN%>dijnis K ;
+!DERL +V+Der4+Der/NomAct:^VBACK FLAG_3KEPIDEM ;
+!DERL +V+Der2+Der/NomAg:^VBACKei4je C_TAHHEE ;
+!DERL +V+Der4+Der/InchL:i6^WG^VBACK%>škyett4 4SYLL_KYETTID_DER ; !joođeetškuođij hmm
+!DERL +V+Der1+Der/st:^VBACKist 4_ADELISTID ; !
+!DERL +V+Der1+Der/Caus:^VBACKitt 4_ADELISTID ; !
+!DERL +V+Der3+Der/Pass:^VBACK C_MERIDUD ;
+!DERL 
+!DERL 
+!DERL LEXICON 3_DERIVED_L_VERSION2  !!= * __@CODE@__
+!DERL +V+Inf:^RVSH%>iđ K ; !
+!DERL 
+!DERL +V+Ind+Prs+Sg1:^RVSH%>âm K ; !  toideđ > toideliđ
+!DERL +V+Ind+Prs+Sg2:^RVSH%>ah K ;
+!DERL +V+Ind+Prs+Sg3:^CLEN^RVSH K ;  ! spellâl
+!DERL +V+Ind+Prs+Du1:^RVSH%>een K ;
+!DERL +V+Ind+Prs+Du2:^CLEN^RVSH%>vettee K ;
+!DERL +V+Ind+Prs+Du3:^RVSH%>ává   K ;
+!DERL +V+Ind+Prs+Pl1:^RVSH%>ep K ;
+!DERL +V+Ind+Prs+Pl2:^CLEN^SLEN%>vetteđ K ;
+!DERL +V+Ind+Prs+Pl3:^RVSH%>eh K ;
+!DERL 
+!DERL +V+Ind+Prt+Sg1:^RVSH%>im K ;
+!DERL +V+Ind+Prt+Sg2:^RVSH%>ih K ;
+!DERL +V+Ind+Prt+Sg3:^RVSH%>ij    K ;
+!DERL +V+Ind+Prt+Du1:^RVSH%>áim K ;
+!DERL +V+Ind+Prt+Du2:^RVSH%>áid K ;
+!DERL +V+Ind+Prt+Du3:^RVSH%>áin  K ;
+!DERL +V+Ind+Prt+Pl1:^RVSH%>ijm K ;
+!DERL +V+Ind+Prt+Pl2:^RVSH%>ijd K ;
+!DERL +V+Ind+Prt+Pl3:^RVSH%>ii K ;
+!DERL 
+!DERL +V+Cond+Prs+Sg1:^RVSH%>iččim K ;
+!DERL +V+Cond+Prs+Sg2:^RVSH%>iččih K ;
+!DERL +V+Cond+Prs+Sg3:^RVSH%>ičij K ;
+!DERL +V+Cond+Prs+Du1:^RVSH%>iččijm K ;
+!DERL +V+Cond+Prs+Du1+Err/Orth:^RVSH%>iččiijm K ;
+!DERL +V+Cond+Prs+Du2:^RVSH%>iččijd K ;
+!DERL +V+Cond+Prs+Du2+Err/Orth:^RVSH%>iččiijd K ;
+!DERL +V+Cond+Prs+Du3:^RVSH%>iččijn K ;
+!DERL +V+Cond+Prs+Du3+Err/Orth:^RVSH%>iččiijn K ;
+!DERL +V+Cond+Prs+Pl1:^RVSH%>iččijm K ;
+!DERL +V+Cond+Prs+Pl2:^RVSH%>iččijd K ;
+!DERL +V+Cond+Prs+Pl3:^RVSH%>iččii K ;
+!DERL 
+!DERL ! addition starts here
+!DERL 
+!DERL +V+PrsPrc:^VBACK%>ijjee K ;
+!DERL +V+PrsPrc+Use/NG:^VBACK%>eijee K ;
+!DERL +V+PrfPrc:^VBACK%>âm K ;
+!DERL 
+!DERL !+V+Ind+Prs+ConNeg:^VBACK^RLEN K ; ! ^SLEN
+!DERL +V+Ind+Prs+ConNeg:^CLEN^RVSH K ; ! if Imprt ConNeg works
+!DERL +V+Ind+Prt+ConNeg:^VBACK%>âm K ;
+!DERL +V+Cond+Prs+ConNeg:^VBACK%>iččii K ;
+!DERL +V+Pot+Prs+ConNeg:^VBACK%>ižžii K ;
+!DERL +V+Imprt+ConNeg:^CLEN^RVSH K ;
+!DERL 
+!DERL +V+VAbess:^VBACK^RLEN^SLEN VABESS ;
+!DERL +V+VAbess+Err/Orth:^VBACK^RLEN^SLEN%>hinnáá K ;
+!DERL +V+VAbess+Err/Orth:^VBACK^RLEN^SLEN%>hennáá K ;
+!DERL 
+!DERL +V+Actio+Nom:^VBACK%>em K ;
+!DERL +V+Actio+Ill:^VBACK^RLEN^SLEN%>mân K ;
+!DERL +V+Actio+Ess:^VBACK^RLEN^SLEN%>min K ;
+!DERL +V+Actio+Loc:^VBACK^RLEN^SLEN%>mist K ;
+!DERL +V+Actio+Com:^VBACK^RLEN^SLEN%>máin K ;
+!DERL +V+Ger:^VBACK^RLEN^SLEN%>dijn K ;
+!DERL +V+Ger+PxSg1:^VBACK^RLEN^SLEN%>dijnân K ;
+!DERL +V+Ger+PxSg2:^VBACK^RLEN^SLEN%>dijnâd K ;
+!DERL +V+Ger+PxSg3:^VBACK^RLEN^SLEN%>dijnis K ;
+!DERL +V+Der4+Der/NomAct:^VBACK FLAG_3KEPIDEM ;
+!DERL +V+Der2+Der/NomAg:^VBACKei4je C_TAHHEE ;
+!DERL +V+Der4+Der/InchL:i6^WG^VBACK%>škyett4 4SYLL_KYETTID_DER ; !joođeetškuođij hmm
+!DERL +V+Der1+Der/st:^VBACKist 4_ADELISTID ; !
+!DERL +V+Der1+Der/Caus:^VBACKitt 4_ADELISTID ; !
+!DERL +V+Der3+Der/Pass:^VBACK C_MERIDUD ;
+
+! addition stops here
+
+!LEXICON 3_DERIVED_L_VERSION3   !!= * __@CODE@__ not used, check
+!+V+Inf:^CSH^RVSH%>iđ K ; !
+!
+!+V+Ind+Prs+Sg1:^CSH^RVSH%>âm K ; ! csh for vatâlâm
+!+V+Ind+Prs+Sg2:^CSH^RVSH%>ah K ;
+!+V+Ind+Prs+Sg3:^CLEN^RVSH K ;  ! spellâl	viššâl
+!+V+Ind+Prs+Du1:^CSH^RVSH%>een K ;
+!+V+Ind+Prs+Du2:^CLEN^RVSH%>vettee K ;
+!+V+Ind+Prs+Du3:^CSH^RVSH%>ává   K ;
+!+V+Ind+Prs+Pl1:^CSH^RVSH%>ep K ;
+!+V+Ind+Prs+Pl2:^CLEN^SLEN%>vetteđ K ;
+!+V+Ind+Prs+Pl3:^CSH^RVSH%>eh K ;
+!
+!+V+Ind+Prt+Sg1:^CSH^RVSH%>im K ;
+!+V+Ind+Prt+Sg2:^CSH^RVSH%>ih K ;
+!+V+Ind+Prt+Sg3:^CSH^RVSH%>ij    K ;
+!+V+Ind+Prt+Du1:^CSH^RVSH%>áim K ;
+!+V+Ind+Prt+Du2:^CSH^RVSH%>áid K ;
+!+V+Ind+Prt+Du3:^CSH^RVSH%>áin  K ;
+!+V+Ind+Prt+Pl1:^CSH^RVSH%>ijm K ;
+!+V+Ind+Prt+Pl2:^CSH^RVSH%>ijd K ;
+!+V+Ind+Prt+Pl3:^CSH^RVSH%>ii K ;
+!
+!+V+Cond+Prs+Sg1:^CSH^RVSH%>iččim K ;
+!+V+Cond+Prs+Sg2:^CSH^RVSH%>iččih K ;
+!+V+Cond+Prs+Sg3:^CSH^RVSH%>ičij K ;
+!+V+Cond+Prs+Du1:^CSH^RVSH%>iččijm K ;
+!+V+Cond+Prs+Du1+Err/Orth:^CSH^RVSH%>iččiijm K ;
+!+V+Cond+Prs+Du2:^CSH^RVSH%>iččijd K ;
+!+V+Cond+Prs+Du2+Err/Orth:^CSH^RVSH%>iččiijd K ;
+!+V+Cond+Prs+Du3:^CSH^RVSH%>iččijn K ;
+!+V+Cond+Prs+Du3+Err/Orth:^CSH^RVSH%>iččiijn K ;
+!+V+Cond+Prs+Pl1:^CSH^RVSH%>iččijm K ;
+!+V+Cond+Prs+Pl2:^CSH^RVSH%>iččijd K ;
+!+V+Cond+Prs+Pl3:^CSH^RVSH%>iččii K ;
+!
+!+V+Pot+Prs+Sg1:^VBACK%>ižžeem K ;
+!+V+Pot+Prs+Sg2:^VBACK%>ižžeeh K ;
+!+V+Pot+Prs+Sg3:^VBACK%>iš K ;
+!+V+Pot+Prs+Du1:^VBACK%>ižžeen K ;
+!+V+Pot+Prs+Du2:^VBACK%>išvettee K ;
+!+V+Pot+Prs+Du3:^VBACK%>ižává K ;
+!+V+Pot+Prs+Pl1:^VBACK%>ižžep K ;
+!+V+Pot+Prs+Pl2:^VBACK%>išvetteđ K ;
+!+V+Pot+Prs+Pl3:^VBACK%>ižeh K ;
+!
+!+V+Imprt+Sg1:^VBACK%>um K ;
+!+V+Imprt+Sg2:^VBACK^RLEN^SLEN K ;
+!+V+Imprt+Sg3:^VBACK%>us K ;
+!+V+Imprt+Du1:^VBACK%>oon K ;
+!+V+Imprt+Du2:^VBACK%>ee K ;
+!+V+Imprt+Du3:^VBACK%>us K ;
+!+V+Imprt+Pl1:^VBACK%>op K ;
+!+V+Imprt+Pl2:^VBACK%>iđ K ;
+!+V+Imprt+Pl3:^VBACK%>us K ;
+!
+!+V+PrsPrc:^VBACK%>ijjee K ;
+!+V+PrsPrc+Use/NG:^VBACK%>eijee K ;
+!+V+PrfPrc:^VBACK%>âm K ;
+!
+!+V+Ind+Prs+ConNeg:^VBACK K ;
+!+V+Ind+Prt+ConNeg:^VBACK%>âm K ;
+!+V+Cond+Prs+ConNeg:^VBACK%>iččii K ;
+!+V+Pot+Prs+ConNeg:^VBACK%>ižžii K ;
+!+V+Imprt+ConNeg: K ;
+!
+!+V+VAbess:^VBACK^RLEN^SLEN VABESS ;
+!+V+VAbess+Err/Orth:^VBACK^RLEN^SLEN%>hinnáá K ;
+!+V+VAbess+Err/Orth:^VBACK^RLEN^SLEN%>hennáá K ;
+!
+!+V+Actio+Nom:^VBACK%>em K ;
+!+V+Actio+Ill:^VBACK^RLEN^SLEN%>mân K ;
+!+V+Actio+Ess:^VBACK^RLEN^SLEN%>min K ;
+!+V+Actio+Loc:^VBACK^RLEN^SLEN%>mist K ;
+!+V+Actio+Com:^VBACK^RLEN^SLEN%>máin K ;
+!+V+Ger:^VBACK^RLEN^SLEN%>dijn K ;
+!+V+Ger+PxSg1:^VBACK^RLEN^SLEN%>dijnân K ;
+!+V+Ger+PxSg2:^VBACK^RLEN^SLEN%>dijnâd K ;
+!+V+Ger+PxSg3:^VBACK^RLEN^SLEN%>dijnis K ;
+!+V+Der4+Der/NomAct:^VBACK FLAG_3KEPIDEM ;
+!+V+Der2+Der/NomAg:^VBACKei4je C_TAHHEE ;
+!+V+Der4+Der/InchL:i6^WG^VBACK%>škyett4 4SYLL_KYETTID_DER ; !joođeetškuođij hmm
+!+V+Der1+Der/st:^VBACKist 4_ADELISTID ; !
+!+V+Der1+Der/Caus:^VBACKitt 4_ADELISTID ; !
+!+V+Der3+Der/Pass:^VBACK C_MERIDUD ;
+
+
+!DERLLEXICON 3_DERIVED_L_CLEN   !!= * __@CODE@__
+!DERL+V+Ind+Prt+Du1+Err/Orth:^VBACK%>ááim K ; ! these separate, perhaps skip
+!DERL+V+Ind+Prt+Du2+Err/Orth:^VBACK%>ááid K ; ! only á ?
+!DERL+V+Ind+Prt+Du3+Err/Orth:^VBACK%>ááin  K ;
+!DERL
+!DERL+V+Inf:^CSH^VBACK%>iđ K ; ! jutâliđ
+!DERL
+!DERL+V+Ind+Prs+Sg1:^VBACK^RVSH%>âm K ; !
+!DERL+V+Ind+Prs+Sg2:^VBACK^RVSH%>ah K ;
+!DERL!+V+Ind+Prs+Sg3:^CLEN^VBACK^RLEN K ; !
+!DERL+V+Ind+Prs+Sg3:^CLEN^VBACK K ; ! spellâl
+!DERL+V+Ind+Prs+Du1:^VBACK^RVSH%>een K ;
+!DERL+V+Ind+Prs+Du2:^CLEN^VBACK^SLEN%>vettee K ;
+!DERL+V+Ind+Prs+Du3:^VBACK^RVSH%>ává   K ;
+!DERL+V+Ind+Prs+Pl1:^VBACK^RVSH%>ep K ;
+!DERL+V+Ind+Prs+Pl2:^CLEN^VBACK^SLEN%>vetteđ K ;
+!DERL+V+Ind+Prs+Pl3:^VBACK^RVSH%>eh K ;
+!DERL
+!DERL+V+Ind+Prt+Sg1:^VBACK^RVSH%>im K ;
+!DERL+V+Ind+Prt+Sg2:^VBACK^RVSH%>ih K ;
+!DERL+V+Ind+Prt+Sg3:^VBACK^RVSH%>ij    K ;
+!DERL+V+Ind+Prt+Du1:^VBACK^RVSH%>áim K ;
+!DERL+V+Ind+Prt+Du2:^VBACK^RVSH%>áid K ;
+!DERL+V+Ind+Prt+Du3:^VBACK^RVSH%>áin  K ;
+!DERL+V+Ind+Prt+Pl1:^VBACK^RVSH%>ijm K ;
+!DERL+V+Ind+Prt+Pl2:^VBACK^RVSH%>ijd K ;
+!DERL+V+Ind+Prt+Pl3:^VBACK^RVSH%>ii K ;
+!DERL
+!DERL+V+Cond+Prs+Sg1:^CLEN^VBACK%>iččim K ;
+!DERL+V+Cond+Prs+Sg2:^CLEN^VBACK%>iččih K ;
+!DERL+V+Cond+Prs+Sg3:^CLEN^VBACK%>ičij K ;
+!DERL+V+Cond+Prs+Du1:^CLEN^VBACK%>iččijm K ;
+!DERL+V+Cond+Prs+Du1+Err/Orth:^CLEN^VBACK%>iččiijm K ;
+!DERL+V+Cond+Prs+Du2:^CLEN^VBACK%>iččijd K ;
+!DERL+V+Cond+Prs+Du2+Err/Orth:^CLEN^VBACK%>iččiijd K ;
+!DERL+V+Cond+Prs+Du3:^CLEN^VBACK%>iččijn K ;
+!DERL+V+Cond+Prs+Du3+Err/Orth:^CLEN^VBACK%>iččiijn K ;
+!DERL+V+Cond+Prs+Pl1:^CLEN^VBACK%>iččijm K ;
+!DERL+V+Cond+Prs+Pl2:^CLEN^VBACK%>iččijd K ;
+!DERL+V+Cond+Prs+Pl3:^CLEN^VBACK%>iččii K ;
+!DERL
+!DERL+V+Pot+Prs+Sg1:^CLEN^VBACK%>ižžeem K ;
+!DERL+V+Pot+Prs+Sg2:^CLEN^VBACK%>ižžeeh K ;
+!DERL+V+Pot+Prs+Sg3:^CLEN^VBACK%>iš K ;
+!DERL+V+Pot+Prs+Du1:^CLEN^VBACK%>ižžeen K ;
+!DERL+V+Pot+Prs+Du2:^CLEN^VBACK%>išvettee K ;
+!DERL+V+Pot+Prs+Du3:^CLEN^VBACK%>ižává K ;
+!DERL+V+Pot+Prs+Pl1:^CLEN^VBACK%>ižžep K ;
+!DERL+V+Pot+Prs+Pl2:^CLEN^VBACK%>išvetteđ K ;
+!DERL+V+Pot+Prs+Pl3:^CLEN^VBACK%>ižeh K ;
+!DERL
+!DERL+V+Imprt+Sg1:^CLEN^VBACK%>um K ;
+!DERL+V+Imprt+Sg2:^CLEN^VBACK^RLEN^SLEN K ;
+!DERL+V+Imprt+Sg3:^CLEN^VBACK%>us K ;
+!DERL+V+Imprt+Du1:^CLEN^VBACK%>oon K ;
+!DERL+V+Imprt+Du2:^CLEN^VBACK%>ee K ;
+!DERL+V+Imprt+Du3:^CLEN^VBACK%>us K ;
+!DERL+V+Imprt+Pl1:^CLEN^VBACK%>op K ;
+!DERL+V+Imprt+Pl2:^CLEN^VBACK%>iđ K ;
+!DERL+V+Imprt+Pl3:^CLEN^VBACK%>us K ;
+!DERL
+!DERL+V+PrsPrc:^CLEN^VBACK%>ijjee K ;
+!DERL+V+PrsPrc+Use/NG:^CLEN^VBACK%>eijee K ;
+!DERL+V+PrfPrc:^CLEN^VBACK%>âm K ;
+!DERL
+!DERL+V+Ind+Prs+ConNeg:^CLEN^VBACK K ; ! ^SLEN
+!DERL+V+Ind+Prt+ConNeg:^CLEN^VBACK%>âm K ;
+!DERL+V+Cond+Prs+ConNeg:^CLEN^VBACK%>iččii K ;
+!DERL+V+Pot+Prs+ConNeg:^CLEN^VBACK%>ižžii K ;
+!DERL+V+Imprt+ConNeg: K ;
+!DERL
+!DERL+V+VAbess:^CLEN^VBACK^RLEN^SLEN VABESS ;
+!DERL+V+VAbess+Err/Orth:^CLEN^VBACK^RLEN^SLEN%>hinnáá K ;
+!DERL+V+VAbess+Err/Orth:^CLEN^VBACK^RLEN^SLEN%>hennáá K ;
+!DERL
+!DERL+V+Actio+Nom:^CLEN^VBACK%>em K ;
+!DERL+V+Actio+Ill:^CLEN^VBACK^RLEN^SLEN%>mân K ;
+!DERL+V+Actio+Loc:^CLEN^VBACK^RLEN^SLEN%>mist K ;
+!DERL+V+Actio+Com:^CLEN^VBACK^RLEN^SLEN%>máin K ;
+!DERL+V+Actio+Ess:^CLEN^VBACK^RLEN^SLEN%>min K ;
+!DERL+V+Ger:^CLEN^VBACK^RLEN^SLEN%>dijn K ;
+!DERL+V+Ger+PxSg1:^CLEN^VBACK^RLEN^SLEN%>dijnân K ;
+!DERL+V+Ger+PxSg2:^CLEN^VBACK^RLEN^SLEN%>dijnâd K ;
+!DERL+V+Ger+PxSg3:^CLEN^VBACK^RLEN^SLEN%>dijnis K ;
+!DERL+V+Der4+Der/NomAct:^CLEN^VBACK FLAG_3KEPIDEM ;
+!DERL+V+Der2+Der/NomAg:^CLEN^VBACKei4je C_TAHHEE ;
+!DERL+V+Der4+Der/InchL:i6^CLEN^WG^VBACK%>škyett4 4SYLL_KYETTID_DER ; !joođeetškuođij hmm
+!DERL+V+Der3+Der/Pass:^CLEN^VBACK C_MERIDUD ;
+!DERL+V+Der1+Der/st:^CLEN^VBACKist 4_ADELISTID ; !
+!DERL+V+Der1+Der/Caus:^CLEN^VBACKitt 4_ADELISTID ; !
+
