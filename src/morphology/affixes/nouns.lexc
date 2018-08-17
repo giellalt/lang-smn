@@ -86,7 +86,7 @@ LEXICON 2ALGA_SG !!= * ''@CODE@'' (Px paradigms)
 +N+Sg+Com:^WG%>in CPXsuff ;  !
 +N+Ess:%>n CPXsuff ; ! algân
 +N:%> Nom_DER ;
-+N:^WG%> Gen_DER ;
++N:^WG%> Gen_DER ; ! algâlâš
 +N+Der1+Der/Dimin: S_KAANDAS ; !kaandâš nieidâš kuuđhâš
 !! \\ 
 LEXICON X_ALGA_SG !!= * ''@CODE@'' case paradigms sg
@@ -132,6 +132,7 @@ LEXICON 2PUUVSAH_PL2  !!= * ''@CODE@'' (pointed to by 2KUMPPI)
 +N+Pl+Ill:^WG%>id CPXsuff ; ! puvsâidân
 +N+Pl+Loc:^WG%>in CPXsuff ; 		! viljâinis
 +N+Pl+Com:^WG%>id CPXsuffCOM ;  !
++N:^WG Gen_DER ;
 !! \\ 
 LEXICON X_WG_RLEN_PL_Loc !!= * ''@CODE@'' plural forms with ^WG and ^^WG^RLEN
 +Pl+Loc:^WG^RLEN%>in K ; 		! puuvsâin
@@ -146,6 +147,7 @@ LEXICON X_WG_RLEN_PL !!= * ''@CODE@''
 
 !! !2SOLLA lexicon family
 !! SM1, RLEN, earlier LLEN !rlen svlow, sgcom/plill:rlen  ess:clen
+!! Last vowel is â.
 LEXICON 2SOLLA  !!= * ''@CODE@'' (basic lexicon)
  2SOLLA_SG ;
  2SOLLA_PL ;
@@ -565,7 +567,7 @@ LEXICON 2NJUNE_SG !!= * ''@CODE@''
 +N+Sg+Ill:^EA^CSH%>s CPXsuff ;  !  njunásis
 +N+Sg+Com:^WG%>in CPXsuff ;  ! njunijnis
 +N+Ess:%>n CPXsuff ;			! njunenis
-+N:^WG%> Gen_DER ;
++N:^EA^WG%> Gen_DER ;
 +N:%> Nom_DER ;
 !! \\ 
 LEXICON 2NJUNE_PL !!= * ''@CODE@''
@@ -624,7 +626,7 @@ LEXICON 2ALGE_SG !!= * ''@CODE@''
 !+N+Sg+Com:^WG VPXsuff12 ;  !kudijnân
 !+N+Sg+Com:^WG VPXsuff3 ;  ! kudijnis
 +N+Ess:%>n CPXsuff ; 			! tikkenân alganân
-+N:^WG%> Gen_DER ; !
++N:^EA^WG%> Gen_DER ; !
 +N:%> Nom_DER ;
 +N+Der1+Der/Dimin:^EA%> S_ALGAAS ; !a^RVlge alga (e:a) S_ALGAAS algaaš ko^RVlle  S_CISSAAS kollááš
 !! \\ 
@@ -682,7 +684,7 @@ LEXICON 2NIJBE_SG !!= * ''@CODE@''
 +N+Sg+Loc:^WG%>st CPXsuff ; ! nijbásis
 +N+Sg+Com:^WG%>in CPXsuff ;  ! nijbijnis
 +N+Ess:%>n CPXsuff ; 			! nijbenân
-+N:^WG%> Gen_DER ;
++N:^EA^WG%> Gen_DER ;
 +N:%> Nom_DER ;
 !! \\ 
 LEXICON 2NIJBE_PL !!= * ''@CODE@''
@@ -730,7 +732,7 @@ LEXICON 2VAHE_SG !!= * ''@CODE@''
 +N+Sg+Loc:^WG%>st CPXsuff ; ! ! vavestân
 +N+Sg+Com:^WG%>in CPXsuff ;  ! vovijnân
 +N+Ess:%>n CPXsuff ; 			! vahenân
-+N:^WG%> Gen_DER ;
++N:^EA^WG%> Gen_DER ;
 +N:%> Nom_DER ;
 !! \\ 
 LEXICON 2VAHE_PL !!= * ''@CODE@''
@@ -824,7 +826,7 @@ LEXICON 2SAAMI_SG!!= * ''@CODE@''
 +N+Sg+Loc:^WG^RVSH%>st CPXsuff ;  !sämistis
 +N+Sg+Com:^WG^RVSH%>in CPXsuff ;  ! samijnân
 +N+Ess:^CSH^RVSH%>n  CPXsuff ;          ! säminis
-+N:^WG%> Gen_DER ; !hámálâš
++N:^EA^WG%> Gen_DER ; !hámálâš
 +N:%> Nom_DER ;
 +N+Cmp/SgNom:^RVSH%> Rhash ;! 
 +N+Cmp/SgGen+Err/Orth:^WG%> Rhash ; ! säämiašij
@@ -859,16 +861,16 @@ LEXICON X_SAAMI_PL   !!= * ''@CODE@'' plurals for 2SAAMI
  X_WG_RVSH_PL_notILL ;
 
 
-!! !2CAACI - 2VYEHI lexicon family
+!! !2CAACI - 2VYEHI lexicon family TODO -- 
 !! WG, Ill EA, Com CLEN SVLOW, Ess __with__ CLEN
 LEXICON 2CAACI !!= * ''@CODE@'' (basic lexicon
-+N+Ess:^CLEN%>n K ;               ! čääccin
-!+N+Ess:^CLEN%>n CPXsuff ;        ! čääccin
-+N+Par:^CLEN%>d K ;               ! čääccid 
-+N+Ess+Err/Orth:%>n K ;           ! eečin +Err/Orth?
-+N+Par+Err/Orth:%>d K ;           ! +Err/Orth?
-CAACI_VYEHI_SG ;
-2CAACI_VYEHI_PL ;
+2VYEHI ; ! We now test conflating 2CAACI and 2VYEHI (since Ess and Par are the same after all). If this is ok, we unify.
+!+N+Ess:^CLEN%>n K ;               ! čääccin
+!+N+Par:^CLEN%>d K ;               ! čääccid 
+!+N+Ess+Err/Orth:%>n K ;           ! čääcin, eečin +Err/Orth
+!+N+Par+Err/Orth:%>d K ;           ! +Err/Orth
+!CAACI_VYEHI_SG ;
+!2CAACI_VYEHI_PL ;
 
 LEXICON 2VYEHI !!= * ''@CODE@'' WG, Ill EA, Com CLEN SVLOW, Ess __without__ CLEN
 2VYEHI_SG ;
@@ -876,12 +878,13 @@ LEXICON 2VYEHI !!= * ''@CODE@'' WG, Ill EA, Com CLEN SVLOW, Ess __without__ CLEN
 !! \\
 LEXICON 2VYEHI_SG !!= * ''@CODE@'' sg forms
 +N: X_VYEHI_SG ;
-!+N+Ess:%>n CPXsuff ;               ! vyehin
 CAACI_VYEHI_SG ;
 !! \\
 LEXICON X_VYEHI_SG!!= * ''@CODE@'' (different Ess, Par), otherwise
-+Ess:%>n K ;               ! vyehin
-+Par:%>d K ;               ! vyehid 
++N+Ess:^CLEN%>n K ;               ! čääccin, vyehhin
++N+Par:^CLEN%>d K ;               ! čääccid, vyehhid 
++Ess+Err/Orth:%>n K ;               ! vyehin
++Par+Err/Orth:%>d K ;               ! vyehid 
   X_CAACI_VYEHI_SG ;   !!= @CODE@)
 
 LEXICON CAACI_VYEHI_SG !!= * ''@CODE@'' common for the two
@@ -902,7 +905,7 @@ LEXICON CAACI_VYEHI_SG !!= * ''@CODE@'' common for the two
 +N+Sg+Acc:^WG VPXsuff3 ;         ! eejis 
 +N+Sg+Ill:^EA^CLEN^RVSH%>s CPXsuff ; !iäččásis iäččásâd iäččásân čáccásân
 +N+Sg+Loc:^WG^RVSH%>st CPXsuff ;  !sajestis ejistân ejistâd ejistis
-+N+Sg+Com:^WG^RVSH%>in CPXsuff ;  ! former: CLEN
++N+Sg+Com:^WG^RVSH%>in CPXsuff ;  ! former: CLENxx
 +N+Ess:^CSH^RVSH%>n CPXsuff ; ! ečinân ečinâd ečinis
 +N:^WG^RVSH%> Gen_DER ; !iäčálâš OBS
 +N:%> Nom_DER ;
@@ -3864,14 +3867,15 @@ LEXICON GUIN  !!= * ''@CODE@'' is here to give -guin and the Use/NG -gijn.
 ! =================================
 
 LEXICON Gen_DER   !!= * ''@CODE@'' 
-+Der+Der/vualasas:vuálás ANOLASJ ; 
 +Der1+Der/lasj:l ANOLASJ ; 
 +Der1+Der/lasj+Err/Orth:ll ANOLASJ ; ! historjállâš
-+Der1+Der/Car:tt MUSTOTTEM ; 
+
+!+Der+Der/vualasas:#-vuálás ANOLASJ ; 
+!+Der1+Der/Car:tt MUSTOTTEM ; 
 
 LEXICON Nom_DER   !!= * ''@CODE@'' 
 +Der1+Der/lasj+Use/NG:l ANOLASJ ; ! XXX not at all? Trond
-+Der1+Der/lasj+Err/Orth:ll ANOLASJ ; ! historjállâš
+
 
 LEXICON DER-AG  !!= * ''@CODE@'' 
 +N+Der+Der/ag:  PASTIL ; !+N because of redirection from numeral-file
