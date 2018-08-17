@@ -13,7 +13,7 @@
 ! giellatekno@uit.no or feedback@divvun.no
 
 ! ======================
-!! !!!Sublexica for VerbRoot for Inari Saami
+!! !!!Inflection lexica for Inari Saami verbs
 ! ======================
 
 !! Order of triggers:
@@ -24,19 +24,17 @@
 
 !! !!Overview
 
+!! # Auxiliaries
+!! ## NEG
+!! ## LEDE
+!! # 2-syllabic: 2SYLL_ etc. (classified according to infinitive suffix)
+!! # 3-syllabic
+!! # 4-syllabic
+!! # Unclassified: verbstems, 3v, 4v
 
-!! !!Overview
-!! * Auxiliaries
-!! ** NEG
-!! ** LEDE
-!! * 2-syllabic: 2SYLL_ etc. (classified according to infinitive suffix)
-!! * 3-syllabic
-!! * 4-syllabic
-!! * Unclassified: verbstems, 3v, 4v
+!! !The lexica
 
-!! !!The lexica
-
-!! !Twosyllabic
+!! ''Twosyllabic lexica''
 
 !! * 2SYLL_AASSAD - aassâđ ääss
 !! ** Inf:â%>đ K ;
@@ -224,25 +222,8 @@
 
 
 
+!! !!!THE LEXICA THEMSELVES
 
-!! !!ad-hoc lexicon
-
-!LEXICON verbstem
-!
-!+V+Ind+Prs+Sg1:â^WG^VBACK%>m K ;
-!+V+Ind+Prs+Sg2:a^WG%>h K ;
-!+V+Ind+Prs+Sg3:á^CSH^VHIGH K ;      ! x    äässe^CLEN^RVSH>
-!!+V+Ind+Prs+Du1:e^CLEN^RVSH%>en K ; ! njääh^RCe^CLEN^RVSH>
-!!+V+Ind+Prs+Du2:â^CSH^VBACK^RVSH%>vettee K ;  ! a
-!!+V+Ind+Prs+Du3:â^VBACK%>v K ;
-!+V+Ind+Prs+Pl1:â^VBACK%>p K ;
-!+V+Ind+Prs+Pl2:â^CSH^VBACK^RVSH%>vetteđ K ;
-!+V+Ind+Prs+Pl3:i^CSH%>h K ;
-!+V+Ind+Prs+Pl3+Err/Orth:i%>h K ;
-!+V:  VINFINITES_AASSAD ;
-!+V+Der3+Der/Pass:u2 C_PASS_SH_RVSH ;
-
-!3_LEKKASID ;
 
 !! !!Auxiliaries
 
@@ -256,7 +237,6 @@ LEXICON NEG !!= * __@CODE@__ = the negation verb
 +Ind+Pl1:ep G ; 
 +Ind+Pl2:eppeđ G ;
 +Ind+Pl3:iä G ;
-
 +Ind+Sg3+Foc/ge+Use/NG:ij%>#ge # ;
 +Ind+Sg3+Foc/han:ij%>#hân # ;
 +Ind+Sg3+Foc/ge:i%>#ge # ;
@@ -267,9 +247,6 @@ LEXICON NEG !!= * __@CODE@__ = the negation verb
 +Ind+Pl1+Foc/ge+Use/NG:e%>#ge # ;
 +Ind+Pl2+Foc/ge+Use/NG:e%>#ge # ;
 +Ind+Pl3+Foc/ge+Use/NG:e%>#ge # ;
-!+Ind+Sg+Qst:%>%-uv ENDLEX ; ! This gave -uv as ij+V+Neg.
-
-
 +Imprt+Sg1:iällum  G ;
 +Imprt+Sg2:ele G ;
 +Imprt+Sg3:iällus G ;
@@ -279,16 +256,13 @@ LEXICON NEG !!= * __@CODE@__ = the negation verb
 +Imprt+Pl1:iällup G ;
 +Imprt+Pl2:elleđ G ;
 +Imprt+Pl3:iällus G ;
-
 +Opt+Sg2:iälu G ;
 +Opt+Du2:iällu G ;
 +Opt+Pl2:iälluđ G ;
-
 +Sup:amas G ;
 +Sup+Use/NG:emis G ;
-
+!! \\
 LEXICON LEDE !!= * __@CODE@__ = The copula
-
 +Inf:leđe K ;
 
 ! Present
@@ -368,7 +342,6 @@ LEXICON LEDE !!= * __@CODE@__ = The copula
 +Imprt+Pl3+Err/Orth:lekkus  K ;
 
 ! Infinite forms
-
 +Ind+Prs+ConNeg:lah	    K ;
 +Ind+Prs+ConNeg+Foc/kin:lekken    K ;
 +Ind+Prs+ConNeg+Foc/kin+Err/Orth:lekkin    K ;
@@ -378,20 +351,20 @@ LEXICON LEDE !!= * __@CODE@__ = The copula
 +Pot+Prs+ConNeg:ližžii	    K ;
 +Ind+Pot+Prs+ConNeg:lâš K ;
 +Ind+Pot+Prs+ConNeg+Use/NG:leš K ;
-
 +PrsPrc:leijee		    K ;
 +PrfPrc+Use/NG:lam K ;
 +PrfPrc:lamaš K ;
-+PrfPrc+Use/NG:lámáš		    K ;
-+PrfPrc+Err/Orth:lamâš		    K ;
++PrfPrc+Use/NG:lámáš	    K ;
++PrfPrc+Err/Orth:lamâš	    K ;
 +Actio+Ess:lemin	    K ;
 +Actio+Loc:lemist	    K ;
 +Ger:leđedijn		    K ;
 
 
 
-
-!! !!Order of lexica
+!! !!The regular verbs
+!! !Order of lexica
+!! Within each lexicon, the suffixes are ordered as follows:
 !! # Infinites
 !! # Indicative
 !! # Conditional
@@ -399,12 +372,10 @@ LEXICON LEDE !!= * __@CODE@__ = The copula
 !! # Derivations
 
 
-
 !! !!Even-syllable stems
 !    -------------------
 
 !! !AD verbs
-
 !! !Partial paradigms
 
 LEXICON 2SYLL_HAAHAD_IV  !!= * __@CODE@__
@@ -6166,41 +6137,38 @@ LEXICON 4_KAVNATTATTAD_V
 +Der2+Der/NomAg:%>e C_TAHHEE ;
 
 
-
-
-
+!! !!!Other lexicq
 !! !!Case lexica
 
-LEXICON VABESS !!= * @CODE@ to handle Abessive variation
+LEXICON VABESS !!= * __@CODE@__ to handle Abessive variation, hánnáá, hennáá, hinnáá.
          :%>hánnáá K ;
 +Err/Orth:%>hennáá K ;
 +Err/Orth:%>hinnáá K ;
-
-LEXICON VGEN !!= * @CODE@ flag for VGen
+!! \\
+LEXICON VGEN !!= * __@CODE@__ flag for VGen
 @R.Vgen.add@ K ;
 
 !! !!Derivation lexica
 
-LEXICON DER_MAS
+LEXICON DER_MAS !!= * __@CODE@__ 
 +Der4+Der/mas:%>mâšš 4KUNAGAS ;
 +Der4+Der/mas+Use/NG:%>mušš 4KUNAGAS ;
-
-LEXICON IJJE
+!! \\
+LEXICON IJJE !!= * __@CODE@__ 
 +Use/NG:ei4je C_TAHHEE ;
 :ijje C_TAHHEE ;
-
-LEXICON IJJE_PRSPRC
+!! \\
+LEXICON IJJE_PRSPRC !!= * __@CODE@__ 
 +Use/NG:ei4jee K ;
 :ijjee K ;
-
-
-!! !!Flag section
-!    ------------
-
-LEXICON NOMACT
+!! \\
+LEXICON NOMACT !!= * __@CODE@__ for -náál suffixation.
 +Cmp#náál:# NAAL ; 
  K ;
 
+
+!! !!!Flag section
+!    ------------
 
 LEXICON FLAG_3HUKSIM  !!= __@CODE@__ should not be disallowed by ENDLEX @D.NeedNoun.ON@
 @C.NeedNoun@ 3HUKSIM ;
@@ -6283,15 +6251,15 @@ LEXICON FLAG_K !!= __@CODE@__ should not be disallowed by ENDLEX @D.NeedNoun.ON@
 
 
 
-!! ! Der/l lexicons
+!!DERL! Der/l lexicons
 
-!! Table for 3_DERIVED contlexes.
-!! The columns give contlexes, the rows give key forms, and the cells show the triggers.
+!!DERLTable for 3_DERIVED contlexes.
+!!DERLThe columns give contlexes, the rows give key forms, and the cells show the triggers.
 
-!! || Form || L             || L_VERSION2 || L_VERSION3 || L_CLEN         || VBACK || RLEN
-!! | Inf    | CSH VBACK RVSH | RVSH        | CSH RVSH    | CSH  VBACK      | VBACK  |  RLEN
-!! | Sg3    | VBACK RLEN     | CLEN RVSH   | CLEN RVSH   | CLEN VBACK      | VBACK  |  -
-!! | ConNeg | VBACK          | -           | VBACK       | CLEN VBACK RLEN | VBACK  |  RLEN
+!!DERL|| Form || L             || L_VERSION2 || L_VERSION3 || L_CLEN         || VBACK || RLEN
+!!DERL| Inf    | CSH VBACK RVSH | RVSH        | CSH RVSH    | CSH  VBACK      | VBACK  |  RLEN
+!!DERL| Sg3    | VBACK RLEN     | CLEN RVSH   | CLEN RVSH   | CLEN VBACK      | VBACK  |  -
+!!DERL| ConNeg | VBACK          | -           | VBACK       | CLEN VBACK RLEN | VBACK  |  RLEN
 
 !DERL LEXICON 3_DERIVED_L  !!= * __@CODE@__
 !DERL +V+Ind+Prt+Du1+Err/Orth:^VBACK%>ááim K ; ! these separate, perhaps skip
