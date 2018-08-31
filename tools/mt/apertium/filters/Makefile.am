@@ -20,7 +20,7 @@
 ##################################################################
 
 # List any local additions here:
-GT_MT_FILTER_SRCS=make-optional-Attr_before_dervuota-tags.regex
+GT_MT_FILTER_SRCS=
 
 # Only build these things if apertium fst's are enabled:
 if WANT_APERTIUM
