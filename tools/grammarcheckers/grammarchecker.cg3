@@ -1992,6 +1992,7 @@ ADD:err-orrood-inf (&err-orrood-inf) TARGET Inf IF (-1 ("orroođ") + Ind)(0 Inf)
 ADD:err-ext-agr (&err-ext-agr) TARGET V IF (-1 Loc)(0 (LEDE Sg3))(1 N + Pl + Nom);
 
 
+ADD:err-pl-obj (&err-pl-obj) TARGET N IF (-1 TV LINK NOT 0 Der/Pass)(0 N + Pl + Nom)(NOT -1 PrfPrc LINK *-1 N BARRIER VFIN);
 
 # Iäruh omâstemráhtusist: mieđetteijee já kieldee häämi
 ADD:err-extv-sg (&err-extv-sg) TARGET V IF (0 LEDE + Sg3)(1 N + Pl + Nom);
@@ -2068,6 +2069,7 @@ ADD:err-nom-obj (&err-nom-obj) TARGET N IF (-3 VFIN + Sg1)(-1 Pl + Nom OR Attr)(
 ADD:err-acc-obj-top (&err-acc-obj-top) TARGET N IF (0 Pl + Acc LINK *-1 BOS BARRIER Nom)(1 V + Sg3)(2 Adv)(NOT *3 TV);
 #err	Anarâškielâlijd noomâid kiävttoo uccáá.
 #ok Anarâškielâliih noomah kiävttojeh uccáá.
+
 # Inarinsaamenkielisiä nimiä käytetään vähän
 
 ADD:err-acc-obj-top (&err-acc-obj-top) TARGET N IF (0 Pl + Acc LINK *-1 BOS BARRIER Nom)(1 V + Sg3)(2 ConNeg);
