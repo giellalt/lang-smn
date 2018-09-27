@@ -134,12 +134,14 @@ analyser-gt-norm.xfst: analyser-gt-norm.tmp.xfst \
 analyser-disamb-gt-desc.%: analyser-disamb-gt-desc.tmp.%      \
 					filters/remove-orig_lang-tags.%           \
 					filters/remove-derivation-position-tags.% \
+					filters/remove-norm-comp-tags.%           \
 					filters/remove-halflong-dotbelow.%        \
 					filters/rename-POS_before_Der-tags.%      \
 					filters/remove-letter-acute-accent.%            
 	$(AM_V_XFST)$(PRINTF) "read regex                           \
 				@\"filters/remove-derivation-position-tags.$*\" \
 			.o. @\"filters/remove-orig_lang-tags.$*\"           \
+			.o. @\"filters/remove-norm-comp-tags.$*\"           \
 			.o. @\"filters/rename-POS_before_Der-tags.$*\"      \
 			.o. @\"$<\"                                         \
 			.o. @\"filters/remove-letter-acute-accent.$*\"      \
