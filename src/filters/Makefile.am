@@ -22,6 +22,7 @@
 GIELLA_FILTER_LOCAL_REGEX_SRCS=\
 					downcase_UCletters.regex                   \
 					remove-norm-comp-tags.regex                \
+					remove-homonymy-tags.regex             \
 					remove-halflong-dotbelow.regex             \
 					remove-letter-acute-accent.regex           \
 					make-optional-lang_hom-tags.regex          \
