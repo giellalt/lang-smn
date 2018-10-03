@@ -24,6 +24,8 @@ endif # WANT_SYNTAX
 
 #################################################
 #### Add language-specific build rules here: ####
+%.cg3: $(GIELLA_SHARED)/smi/src/syntax/%.cg3
+	$(AM_V_CP)cp -f $< $@
 
 ##################################################################
 #### END: Add local processing instructions ABOVE this line ######
