@@ -66,15 +66,11 @@ endif # CAN_FOMA
 # We need to specify -gt- to avoid applying the filters to the raw fst:
 analyser-gt-desc.%: analyser-gt-desc.tmp.%                    \
 					filters/remove-derivation-position-tags.% \
-					filters/remove-norm-comp-tags.%           \
-					filters/remove-halflong-dotbelow.%        \
-					filters/remove-letter-acute-accent.%
+					filters/remove-norm-comp-tags.%
 	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
 				@\"filters/remove-derivation-position-tags.$*\" \
 			.o. @\"filters/remove-norm-comp-tags.$*\"           \
 			.o. @\"$<\"                                         \
-			.o. @\"filters/remove-letter-acute-accent.$*\"      \
-			.o. @\"filters/remove-halflong-dotbelow.$*\"        \
 			;\n\
 		 $(INVERT_HFST)\
 		 save stack $@\n\
@@ -89,9 +85,7 @@ analyser-gt-norm.%: analyser-gt-norm.tmp.% \
 					filters/block-illegal_compound-strings.%               \
 					filters/split-CmpN-tags.%                              \
 					filters/convert_to_flags-CmpNP-tags.%                  \
-					filters/split-CmpNP-tags.%                             \
-					filters/remove-letter-acute-accent.%                   \
-					filters/remove-halflong-dotbelow.%
+					filters/split-CmpNP-tags.%
 	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
 				@\"filters/block-illegal_compound-strings.$*\"              \
 			.o. @\"filters/split-CmpN-tags.$*\"                             \
@@ -102,8 +96,6 @@ analyser-gt-norm.%: analyser-gt-norm.tmp.% \
 			.o. @\"filters/split-CmpNP-tags.$*\"                            \
 			.o. @\"filters/remove-MinusSpell-strings.$*\"                   \
 			.o. @\"$<\"                                                     \
-			.o. @\"filters/remove-letter-acute-accent.$*\"                  \
-			.o. @\"filters/remove-halflong-dotbelow.$*\"                    \
 			;\n\
 		 twosided flag-diacritics\n\
 		 $(INVERT_HFST)\
@@ -115,16 +107,12 @@ analyser-gt-norm.%: analyser-gt-norm.tmp.% \
 analyser-gt-norm.xfst: analyser-gt-norm.tmp.xfst \
 					filters/remove-norm-comp-tags.xfst             \
 					filters/remove-derivation-position-tags.xfst   \
-					filters/remove-illegal-derivation-strings.xfst \
-					filters/remove-letter-acute-accent.xfst \
-					filters/remove-halflong-dotbelow.xfst
+					filters/remove-illegal-derivation-strings.xfst
 	$(AM_V_XFST)$(PRINTF) "read regex \
 				@\"filters/remove-norm-comp-tags.xfst\"                \
 			.o. @\"filters/remove-derivation-position-tags.xfst\"      \
 			.o. @\"filters/remove-illegal-derivation-strings.xfst\"    \
 			.o. @\"$<\"                                                \
-			.o. @\"filters/remove-letter-acute-accent.xfst\"           \
-			.o. @\"filters/remove-halflong-dotbelow.xfst\"             \
 			;\n\
 		 save stack $@\n\
 		 quit\n" | $(XFST) $(VERBOSITY)
@@ -136,9 +124,7 @@ analyser-disamb-gt-desc.%: analyser-disamb-gt-desc.tmp.%      \
 					filters/remove-derivation-position-tags.% \
 					filters/remove-homonymy-tags.%           \
 					filters/remove-norm-comp-tags.%           \
-					filters/remove-halflong-dotbelow.%        \
-					filters/rename-POS_before_Der-tags.%      \
-					filters/remove-letter-acute-accent.%            
+					filters/rename-POS_before_Der-tags.%            
 	$(AM_V_XFST)$(PRINTF) "read regex                           \
 				@\"filters/remove-derivation-position-tags.$*\" \
 			.o. @\"filters/remove-orig_lang-tags.$*\"           \
@@ -146,8 +132,6 @@ analyser-disamb-gt-desc.%: analyser-disamb-gt-desc.tmp.%      \
 			.o. @\"filters/remove-norm-comp-tags.$*\"           \
 			.o. @\"filters/rename-POS_before_Der-tags.$*\"      \
 			.o. @\"$<\"                                         \
-			.o. @\"filters/remove-letter-acute-accent.$*\"      \
-			.o. @\"filters/remove-halflong-dotbelow.$*\"        \
 			;\n\
 		 $(INVERT_HFST)\
 		 save stack $@\n\
@@ -157,16 +141,10 @@ analyser-disamb-gt-desc.%: analyser-disamb-gt-desc.tmp.%      \
 # Special case for the dict analyser, since it follows the same filename
 # pattern as the raw fst:
 analyser-dict-gt-desc.%: analyser-dict-gt-desc.tmp.% \
-					filters/remove-derivation-position-tags.%   \
-					filters/remove-halflong-dotbelow.%   \
-					filters/remove-derivation-position-tags.%   \
-					filters/remove-letter-acute-accent.%            
+					filters/remove-derivation-position-tags.%            
 	$(AM_V_XFST)$(PRINTF) "read regex                      \
 				@\"filters/remove-derivation-position-tags.$*\" \
 			.o. @\"$<\"                                    \
-			.o. @\"filters/remove-letter-acute-accent.$*\" \
-			.o. @\"filters/remove-letter-acute-accent.$*\" \
-			.o. @\"filters/remove-halflong-dotbelow.$*\"   \
 			;\n\
 		 $(INVERT_HFST)\
 		 save stack $@\n\
@@ -178,16 +156,12 @@ define giella_generators
 generator-gt-%.$(1): generator-gt-%.tmp.$(1)                \
 					filters/remove-norm-comp-tags.$(1)             \
 					filters/remove-derivation-position-tags.$(1) \
-					filters/remove-halflong-dotbelow.$(1)   \
-					filters/remove-letter-acute-accent.$(1) \
 					filters/make-optional-lang_hom-tags.$(1)
 	$$(AM_V_XFST_TOOL)$$(PRINTF) "read regex                  \
 				@\"filters/make-optional-lang_hom-tags.$(1)\" \
 			.o. @\"filters/remove-norm-comp-tags.$(1)\"           \
 			.o. @\"filters/remove-derivation-position-tags.$(1)\" \
 			.o. @\"$$<\"                                      \
-			.o. @\"filters/remove-letter-acute-accent.$(1)\"  \
-			.o. @\"filters/remove-halflong-dotbelow.$(1)\"    \
 			;\n\
 		 $$(INVERT_XFST)$$(INVERT_FOMA)\
 		 save stack $$@\n\
