@@ -22,9 +22,7 @@
 GIELLA_FILTER_LOCAL_REGEX_SRCS=\
 					downcase_UCletters.regex                   \
 					remove-norm-comp-tags.regex                \
-					remove-homonymy-tags.regex             \
-					remove-halflong-dotbelow.regex             \
-					remove-letter-acute-accent.regex           \
+					remove-homonymy-tags.regex                 \
 					make-optional-lang_hom-tags.regex          \
 				    remove-derivation-position-tags.regex      \
 					rename-POS_before_Der-tags.regex           \
@@ -35,9 +33,9 @@ GIELLA_FILTER_LOCAL_REGEX_SRCS=\
 					insert-default_left_compounding-tags.regex \
 					split-CmpN-tags.regex                      \
 					remove-illegal-derivation-strings.regex    \
-					remove-illegal-derivation-strings-flagbased.regex \
+					remove-dynamic_compound-char.regex         \
 					change-optionally-word_boundary_to_hyphen.regex \
-					remove-dynamic_compound-char.regex
+					remove-illegal-derivation-strings-flagbased.regex
 
 
 # List any local filter xfscript files here:
