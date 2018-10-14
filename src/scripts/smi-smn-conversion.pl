@@ -37,7 +37,9 @@ while(<>) {
 	s/Simleelva/Simle-elva/g ;
 	s/\+CmpNP\/None//g ;
 	
-
+# sme or other names we do not want
+	s/^Ruošša\+/!ruošša+/g ;
+	
 # names with Inari Saami inflection
 	s/^Aanaar\+/!Aanaar+/g ;
 	s/^Avveel\+/!Avveel+/g ;
