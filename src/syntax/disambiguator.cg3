@@ -955,7 +955,7 @@ SET N-TIMEOBJECT-V = MOVEMENT-V OR ACTIVITY-V OR VERBAL-ACTIVITY-V OR INTELLECTU
     # Those verb sets in addition to TIMEADVERBIAL-V do not take TIME expressions as objects
 
 
-LIST MUITALIT = "arvâlâddâđ" "anoa" "boagustit" "celkkiđ" "cuoigut" "čielgiđ" "čurvet" "čuárvuđ" "ettâđ" "dahkaluddat" "deattastit" "tiäduttiđ" "tuáivuđ" "epidiđ" "geardduhit" "geažuhit" "gielistit" "gilljut" "hállat" "hoallat" "čuárvuđ" "huikkádit" "imaštallat" "jtak" "jievžat" "juoigâđ" "jurdilit" "jurddašit" "kommenteret" "lávluđ" "lasettiđ" "loahpahit" "luuhâđ" "lopediđ" "máidnut" "máinnašit" "muštâliđ" "unohtamisen" "nágget" "njávggádit" "merhâšiđ" "ravviđ" "savkalit" "sárdnidit" "šuohkihit" "váidalit" "váruhit" "västidiđ" ;
+LIST MUSTALID = "arvâlâddâđ" "anoa" "boagustit" "celkkiđ" "cuoigut" "čielgiđ" "čurvet" "čuárvuđ" "ettâđ" "dahkaluddat" "deattastit" "tiäduttiđ" "tuáivuđ" "epidiđ" "geardduhit" "geažuhit" "gielistit" "gilljut" "hállat" "hoallat" "čuárvuđ" "huikkádit" "imaštallat" "jtak" "jievžat" "juoigâđ" "jurdilit" "jurddašit" "kommenteret" "lávluđ" "lasettiđ" "loahpahit" "luuhâđ" "lopediđ" "máidnut" "máinnašit" "muštâliđ" "unohtamisen" "nágget" "njávggádit" "merhâšiđ" "ravviđ" "savkalit" "sárdnidit" "šuohkihit" "váidalit" "váruhit" "västidiđ" ;
 	#$ Deaŧalaš lea sihkkarastit eamiálbmogiid ovddastusa dákkár čállingottis, dadjá Keskitalo.
 
 LIST LEXICALISED-PASS-V = "kevttuđ" ;
@@ -1894,31 +1894,34 @@ SET CCCOMMA = CC OR COMMA ;
 #!! ''These were the set types.''
 
 
-BEFORE-SECTIONS
+#!! !!!RULE SECTION
+#!! Here follow the rules.
+
+BEFORE-SECTIONS  # No before-section rules so far
 
 
 SECTION
+#!! This is the first section. Here we put safe rules with no or minimal context.
 
-#!! * __Insertwww__ Inserts Sem/Adr to urls
+#!! * __Insertwww__ Inserts the Sem/Adr tag to all url expressions
 SUBSTITUTE:Insertwww (?) (Adv Sem/Adr) TARGET ("<www[.].*>"r ?) OR ("http.*"r ?) OR ("<[A-Za-z].*[@][a-z].*"r ?) OR ("<[A-Za-z].*[(][a][t][)][a-z].*"r ?) ;
 
-#!! * __ArabNom__
+#!! * __ArabNom__ says that sentence-initial Arabic numeral is Nom unless followed by Po
 SELECT:ArabNom (Arab Nom) (-1 BOS)(NEGATE 1 Po) ;
-#!! * __Arab1__
+
+#!! * __Arab1__ says that "1" is Nom, look at this
 SELECT:Arab1 (Arab Nom)(0 ("1")) ;
 	#$ a) Álgogursa 1 sámegielas
-#!! * __ArabNomPlc__
+
+#!! * __ArabNomPlc__ gives Nom tu numerls following placenames
 SELECT:ArabNomPlc (Arab Nom) (-1 Sem/Plc)(NEGATE 1 Po) ;
 
 #!! * __Arab__ rule for Apertium
 SELECT:Arab Arab  ; # In Apertium we get analysis both with and without the tag.
 
-#!! * Rule for adding <vdic> to verbs denoting verbal actions like: ... dadjá Aili Kestkitalo.
 
-
-
-#!! * __muitalit__ adds <vdic> to language of telling and quoting
-SUBSTITUTE:muitalit (V) (<vdic> V) TARGET MUITALIT (0 REAL-V LINK -1 COMMA LINK *2 HUMAN-INDIVIDUAL + Nom OR (Prop Sem/Plc Nom) BARRIER NOT-A LINK *1 EOC BARRIER WORD - Prop) ;
+#!! * __mustalid__ adds <vdic> to language of telling and quoting, like: ... dadjá Aili Kestkitalo.
+SUBSTITUTE:mustalid (V) (<vdic> V) TARGET MUSTALID (0 REAL-V LINK -1 COMMA LINK *2 HUMAN-INDIVIDUAL + Nom OR (Prop Sem/Plc Nom) BARRIER NOT-A LINK *1 EOC BARRIER WORD - Prop) ;
 	#$ Sápmelaččat eai leat goassege luohpan meara riggodagain, ja danne ii sáhte eahpidit sápmelaččaid vuoigatvuođaid mearrariggodagaide, deattuha Keskitalo.
 	#$ – Ii leat duohta , lohká direktora Smuk.
 	#$ Mii fertet maiddái geahčadit makkár lassi guoimmuhemiid galgat fállat vai bohtet vel eanet olbmot boahtte jagi, loahpaha duhtavaš beaivválaš jođiheaddji Eriksen.
@@ -1936,27 +1939,29 @@ SELECT:PlcSur2 (Sem/Sur) IF (0 (Prop Sem/Plc Com)) (NEGATE 0 SAPMI OR SUOPMA)   
   	#$ Mun bohten Trosterudain.
 
 
-
-
 #!! * __PlcSur4__
 SELECT:PlcSur4 (Sem/Sur) IF (0 (Prop Sem/Plc Ill) LINK NOT 0 Pron)(*0 VERBAL-ACTIVITY-V OR ACC-ILL-V BARRIER REAL-V OR S-BOUNDARY OR CC) ;
 	#$ Atte reivve Trosterudii.
 	
 
 #!! !!Focus clitics
-
+#!! * __Qst__ removes Foc/uv if Qst and "?" at the ende of the sentence
 REMOVE:Qst Foc/uv IF (0 Qst)(*1 ("?"));
-REMOVE:Foc_uv Qst IF (0 Foc/uv)(NOT *1 ("?"));
+#!! * __FocUv__ is the revert rule, it removes  Qst for Foc/uv if there is no "?"
+REMOVE:FocUv Qst IF (0 Foc/uv)(NOT *1 ("?"));
 
+#!! * __NoWackern__ says that if the word is not number 2 in the sentence it is not Foc (todo: phrase level, not word)
 REMOVE:NoWackern Foc IF (-2 WORD)(-1 V);
 
-	
-SECTION
 
+
+#!! !!SECTION 2, more context
+SECTION
+#######
 
 
 #!! !!Numerals
-#     -----------------------
+#     --------
 
 
 #!! * __NumRom__ in beginning of sentence
@@ -1964,17 +1969,23 @@ SELECT:NumRom (Num Rom) (0 ACR OR ABBR LINK -1 BOS)(NOT 0 Sem/Obj-el) ;
 	#$ I Áššebáhpirat
 	#% CD máksá 160 ruvnnu.
 
+#!! * __sasjnum__ chooses num gen to the left of sâš
 REMOVE:sasjnum (Abe Attr) IF (0 Num + Gen)(1 ("<.*sâš>"r));
 
 
-#!! !!Impertatives
+#!! * __NotOrdIfABBR__
+REMOVE:NotOrdIfABBR Ord IF (0 ABBR) ;
 
-#!! !!Imperative
+
+
+#!! !!Imperatives
 
 #!! See also ''Imprt or Ind'' some sections down.
 
+#!! * __NotImprtAfterLede__ removes Imprt if leđe one to the left
 REMOVE:NotImprtAfterLede Imprt IF (-1 ("leđe"));
 
+#!! * __#!! * __ImprtInit__ selects sentence-initial imperative when followed by Ill
 REMOVE:ImprtInit Prs IF (-1 PUNCT OR BOS)(0 Imprt + Sg2)(1 Pers + Ill);
 ## Muštâl munjin.
 
@@ -2058,8 +2069,6 @@ REMOVE:derV DER-V IF (0 LEX-V) ;
 #!! !Particular verbs
 
 
-#!! * __NotOrdIfABBR__
-REMOVE:NotOrdIfABBR Ord IF (0 ABBR) ;
 
 
 
@@ -2173,7 +2182,7 @@ SELECT:NomACR Nom IF (0 ACR OR ABBR)(-1 BOS)(1 PUNCT) ;
 
 #!! !!Verbs
 
-# vazzâđ venytellä vs. väzziđ kävellä
+#!! * __vazzid__ chooses väzziđ when Ill or čoođâ to the right --  vazzâđ venytellä vs. väzziđ kävellä
 REMOVE:vazzid ("vazzâđ") IF (0 ("väzziđ"))(*1  Ill OR ("čoođâ"));
 
 
@@ -2441,7 +2450,7 @@ REMOVE:PxSgNotPl PL-PX IF (0 SG-PX);
 
 #!! !From sme	
 
-SET NOTPXACC-V = LOC-V OR MUITALIT OR HUPMAT OR VERBAL-ACTIVITY-V OR ("porgâđ") ;
+SET NOTPXACC-V = LOC-V OR MUSTALID OR HUPMAT OR VERBAL-ACTIVITY-V OR ("porgâđ") ;
 
 #!! First select Px, then remove all remaining Px
 
@@ -4010,7 +4019,7 @@ MAP:>NPrfPrcGen (@>N) TARGET PrfPrc - NOT-@>N (-1 Gen LINK *-1 REAL-V - COPULAS 
 
 
 #!! * __NPrfPrc6__ the verb can be to the right
-MAP:>NPrfPrc6 (@>N) TARGET PrfPrc - NOT-@>N (*0 VFIN BARRIER S-BOUNDARY OR (Refl Acc))(NEGATE 0 AUX)(*1 N - TIME - Prop BARRIER NOT-A LINK NEGATE 1 TIME - Sem/Date)(NEGATE *-1 COPULAS OR Neg BARRIER Nom OR S-BOUNDARY OR REAL-V)(NEGATE 0 TRANS-V LINK *1 Acc BARRIER NOT-NPMODADV LINK *-1 PrfPrc LINK *-1 COPULAS OR Neg BARRIER S-BOUNDARY OR REAL-V)(NEGATE 0 TRANS-V LINK 1 Ess LINK *1 Acc BARRIER NOT-NPMODADV LINK *-1 PrfPrc LINK *-1 COPULAS OR Neg BARRIER S-BOUNDARY OR REAL-V)(NOT 1 PUNCT)(NEGATE 0 TRANS-V LINK *1 Acc BARRIER NOT-A)(NEGATE 0 PrfPrc LINK NOT 0 Der/Pass LINK 1 Attr)(NEGATE -1 CC LINK *-1 PrfPrc BARRIER SV-BOUNDARY LINK -1 COPULAS)(NEGATE -1 CC LINK *-1 PrfPrc LINK -1 Adv LINK -1 (Refl Acc) LINK *-1 MUITALIT) ;
+MAP:>NPrfPrc6 (@>N) TARGET PrfPrc - NOT-@>N (*0 VFIN BARRIER S-BOUNDARY OR (Refl Acc))(NEGATE 0 AUX)(*1 N - TIME - Prop BARRIER NOT-A LINK NEGATE 1 TIME - Sem/Date)(NEGATE *-1 COPULAS OR Neg BARRIER Nom OR S-BOUNDARY OR REAL-V)(NEGATE 0 TRANS-V LINK *1 Acc BARRIER NOT-NPMODADV LINK *-1 PrfPrc LINK *-1 COPULAS OR Neg BARRIER S-BOUNDARY OR REAL-V)(NEGATE 0 TRANS-V LINK 1 Ess LINK *1 Acc BARRIER NOT-NPMODADV LINK *-1 PrfPrc LINK *-1 COPULAS OR Neg BARRIER S-BOUNDARY OR REAL-V)(NOT 1 PUNCT)(NEGATE 0 TRANS-V LINK *1 Acc BARRIER NOT-A)(NEGATE 0 PrfPrc LINK NOT 0 Der/Pass LINK 1 Attr)(NEGATE -1 CC LINK *-1 PrfPrc BARRIER SV-BOUNDARY LINK -1 COPULAS)(NEGATE -1 CC LINK *-1 PrfPrc LINK -1 Adv LINK -1 (Refl Acc) LINK *-1 MUSTALID) ;
 	#$ Ovdamearkan oaivvilduvvon fálaldahkii lea sámi kulturdieđu lohkanbaji.
 	#$ Sus lea ovddasvástádus gárrenávnnasfuolaheami spesialiserejuvvon osiin.
 	#$ Son deaivvai náitalan nissona.
@@ -4023,7 +4032,7 @@ MAP:>NPrfPrc6 (@>N) TARGET PrfPrc - NOT-@>N (*0 VFIN BARRIER S-BOUNDARY OR (Refl
 
 
 #!! * __NPrfPrcCoor__ coordination
-MAP:>NPrfPrcCoor (@>N) TARGET PrfPrc - NOT-@>N (1 ("já") OR ("dahje") LINK 1 PrfPrc - NOT-@>N LINK *1 N BARRIER NOT-NPMOD)(NEGATE -1 Adv LINK -1 (Refl Acc) LINK *-1 MUITALIT) ;
+MAP:>NPrfPrcCoor (@>N) TARGET PrfPrc - NOT-@>N (1 ("já") OR ("dahje") LINK 1 PrfPrc - NOT-@>N LINK *1 N BARRIER NOT-NPMOD)(NEGATE -1 Adv LINK -1 (Refl Acc) LINK *-1 MUSTALID) ;
 	#$ Ja de lei álgit fas álggus, bráhkáin ja eará gaskaboddosaš lanjain dahje báhcán ja mieskan ja bombejuvvon skuvlavisttiin.
 
 #!! !(@+FAUXV) and (@+FMAINV) target Neg, orrut
@@ -5221,14 +5230,14 @@ REMOVE:AccIES (Pron Refl Acc) IF (NEGATE *-1 TRANS-V BARRIER Acc OR S-BOUNDARY)(
 	
 
 #!! * __GenIESinf__ removes (Pron Refl Gen) if a transitive verb to the left and an Inf to the right 
-REMOVE:GenIESinf (Pron Refl Gen) IF ((*-1 MUITALIT BARRIER Acc OR S-BOUNDARY) OR (-1 Adv LINK *-1 MUITALIT BARRIER Acc OR S-BOUNDARY) OR (-1 Nom LINK *-1 MUITALIT BARRIER Acc OR S-BOUNDARY))((*1 Inf OR Ess OR PrfPrc OR Nom BARRIER NOT-NPMOD) OR (1 Adv OR A LINK 1 Inf OR Ess OR PrfPrc)) ;
+REMOVE:GenIESinf (Pron Refl Gen) IF ((*-1 MUSTALID BARRIER Acc OR S-BOUNDARY) OR (-1 Adv LINK *-1 MUSTALID BARRIER Acc OR S-BOUNDARY) OR (-1 Nom LINK *-1 MUSTALID BARRIER Acc OR S-BOUNDARY))((*1 Inf OR Ess OR PrfPrc OR Nom BARRIER NOT-NPMOD) OR (1 Adv OR A LINK 1 Inf OR Ess OR PrfPrc)) ;
 	#$ Sii lohket iežaset leat oalle duhtavaččat dán jagáš básárdoaluin.
 	#$ IL Nordlysa beaivválaš jođiheaddji, Nils Peder Eriksen, lohká iežaset leat oalle duhtavaččat dán jagáš básárdoaluin.
 	#$ Máze hárjeheaddji, Aslak Anders Tornensis, logai iežas duhtavažžan go juohkit šadde čuoggáid Hámmárfeastta 2:in.
 	#$ Olli lohká diehttelasaid iežas duhtavažžan go olles bellodat lea su duogábealde, nu ahte son dovdá stuorra doarjaga čavget sámediggeválgii.
 	#$ Vaikko leage šaddan addit gieđa ja čalmmi sámi vuoigatvuođaid doarrumis, de liikká ii loga Somby iežas olu vaháguvvan.
 
-REMOVE:GenIESEss (Pron Refl Gen) IF (*-1 OPRED-V OR MUITALIT BARRIER REAL-V OR Acc)(*1 Ess OR Ill OR (A Nom) OR ("ilo" Loc) BARRIER NOT-ADV) ;
+REMOVE:GenIESEss (Pron Refl Gen) IF (*-1 OPRED-V OR MUSTALID BARRIER REAL-V OR Acc)(*1 Ess OR Ill OR (A Nom) OR ("ilo" Loc) BARRIER NOT-ADV) ;
 
 REMOVE:AccIESPo (Pron Refl Acc) IF (NEGATE *-1 TRANS-V + FMAINV BARRIER Acc OR S-BOUNDARY)(*1 (N Gen) BARRIER NOT-Attr LINK 1 Po)(NEGATE 0 TIME-N) ;
 	#$ Dieđálin eanet Oslo go iežan gili birra.
