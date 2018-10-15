@@ -397,6 +397,7 @@ NOT-PRFPRC
 
 !Sets for person
 
+
 SG1-V
 SG2-V
 SG3-V
@@ -1035,22 +1036,25 @@ ALLSYNTAG
 ''These were the set types.''
 
 
+!!!RULE SECTION
+Here follow the rules.
 
 
 
-* __Insertwww__ Inserts Sem/Adr to urls
+This is the first section. Here we put safe rules with no or minimal context.
 
-* __ArabNom__
-* __Arab1__
-* __ArabNomPlc__
+* __Insertwww__ Inserts the Sem/Adr tag to all url expressions
+
+* __ArabNom__ says that sentence-initial Arabic numeral is Nom unless followed by Po
+
+* __Arab1__ says that "1" is Nom, look at this
+
+* __ArabNomPlc__ gives Nom tu numerls following placenames
 
 * __Arab__ rule for Apertium
 
-* Rule for adding <vdic> to verbs denoting verbal actions like: ... dadjá Aili Kestkitalo.
 
-
-
-* __muitalit__ adds <vdic> to language of telling and quoting
+* __mustalid__ adds <vdic> to language of telling and quoting, like: ... dadjá Aili Kestkitalo.
 
 
 * __PlcSur1__ The Linda Englad rule: name is Sur not Plc if having a surname
@@ -1058,17 +1062,18 @@ ALLSYNTAG
 * __PlcSur2__
 
 
-
-
 * __PlcSur4__
 
 
 !!Focus clitics
+* __Qst__ removes Foc/uv if Qst and "?" at the ende of the sentence
+* __FocUv__ is the revert rule, it removes  Qst for Foc/uv if there is no "?"
+
+* __NoWackern__ says that if the word is not number 2 in the sentence it is not Foc (todo: phrase level, not word)
 
 
 
-
-
+!!SECTION 2, more context
 
 
 !!Numerals
@@ -1076,15 +1081,20 @@ ALLSYNTAG
 
 * __NumRom__ in beginning of sentence
 
+* __sasjnum__ chooses num gen to the left of sâš
 
 
-!!Impertatives
+* __NotOrdIfABBR__
 
-!!Imperative
+
+
+!!Imperatives
 
 See also ''Imprt or Ind'' some sections down.
 
+* __NotImprtAfterLede__ removes Imprt if leđe one to the left
 
+* __ImprtInit__ selects sentence-initial imperative when followed by Ill
 
 
 * __ImprtDál__ 
@@ -1131,7 +1141,6 @@ See also ''Imprt or Ind'' some sections down.
 !Particular verbs
 
 
-* __NotOrdIfABBR__
 
 
 
@@ -1199,6 +1208,7 @@ der
 
 !!Verbs
 
+* __vazzid__ chooses väzziđ when Ill or čoođâ to the right --  vazzâđ venytellä vs. väzziđ kävellä
 
 
 !!Adjectives or nouns
