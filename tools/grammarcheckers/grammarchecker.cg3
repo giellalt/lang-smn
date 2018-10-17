@@ -495,16 +495,15 @@ SET NOT-PRFPRC = WORD - PrfPrc ; #!! NOT-PRFPRC
 
 #!! !Sets for person
 # - - - - 
-
-LIST SG1-V = (V Sg1)  (vblex p1 sg)  ; #!! SG1-V
-LIST SG2-V = (V Sgerr-extv-pl3  (vblex p2 sg) ;  #!! SG2-V
-LIST SG3-V = (V Sg3)  (vblex p3 sg) ;  #!! SG3-V
-LIST DU1-V = (V Du1)  (vblex p1 du) ;  #!! DU1-V
-LIST DU2-V = (V Duerr-extv-pl3  (vblex p2 du) ;  #!! DU2-V
-LIST DU3-V = (V Du3)  (vblex p3 du) ;  #!! DU3-V
-LIST PL1-V = (V Pl1) (vblex p1 pl) ;   #!! PL1-V
-LIST PL2-V = (V Plerr-extv-pl3 (vblex p2 pl) ;   #!! PL2-V
-LIST PL3-V = (V Pl3)  (vblex p3 pl) ;  #!! PL3-V
+LIST SG1-V = (V Sg1) ; # (vblex p1 sg)  ; #!! SG1-V
+LIST SG2-V = (V Sg2) ; # (vblex p2 sg) ;  #!! SG2-V
+LIST SG3-V = (V Sg3) ; # (vblex p3 sg) ;  #!! SG3-V
+LIST DU1-V = (V Du1) ; # (vblex p1 du) ;  #!! DU1-V
+LIST DU2-V = (V Du2) ; # (vblex p2 du) ;  #!! DU2-V
+LIST DU3-V = (V Du3) ; # (vblex p3 du) ;  #!! DU3-V
+LIST PL1-V = (V Pl1) ; # (vblex p1 pl) ;   #!! PL1-V
+LIST PL2-V = (V Pl3) ; # (vblex p2 pl) ;   #!! PL2-V
+LIST PL3-V = (V Pl3) ; # (vblex p3 pl) ;  #!! PL3-V
 
 # SET POSITIVE-V = SG1-V OR SG2-V OR SG3-V OR DU1-V OR DU2-V OR DU3-V OR PL1-V OR PL2-V OR PL3-V ;  #!! POSITIVE-V
 
@@ -522,7 +521,6 @@ SET 1-2-V = SG1-V OR SG2-V OR DU1-V OR DU2-V OR PL1-V OR PL2-V ;
 
 # Imperative sets
 
-LIST IMPRT2 = (Imprt Sgerr-extv-pl3 (Imprt Duerr-extv-pl3 (Imprt Plerr-extv-pl3 ;
 
 
 
@@ -531,7 +529,7 @@ LIST IMPRT2 = (Imprt Sgerr-extv-pl3 (Imprt Duerr-extv-pl3 (Imprt Plerr-extv-pl3 
 LIST LEDE = "leđe" ;
 SET LEAN = ("leđe" Prs Sg1) + Ind OR ("leđe" V Prt ConNeg);
 SET LEAT = ("leđe" Prs Pl1) + Ind OR ("leđe" V Prs Pl3) + Ind OR 
- ("leđe" V Prs Sgerr-extv-pl3 + Ind OR ("leđe" V Inf) OR ("leđe" V Prs ConNeg) + Ind ;
+ ("leđe" V Prs Sg2) + Ind OR ("leđe" V Inf) OR ("leđe" V Prs ConNeg) + Ind ;
 
 SET LEAT-FIN-NOT-IMPRT = ("leđe" V) - Imprt;
  
@@ -576,10 +574,10 @@ LIST SG-DEM = (Pron Dem Sg Nom);
 LIST PL-DEM = (Pron Dem Pl Nom);
 SET NOT-DEM = WORD - Dem ;
 
-LIST SG-PRON = (Pron Sg1) (Pron Sgerr-extv-pl3 (Pron Sg3) (Pron Sg) (Pron PxSg1) (Pron PxSgerr-extv-pl3 (Pron PxSg3) (pron p1 sg) (pron p2 sg) (pron p3 sg);
-LIST DU-PRON = (Pron Du1) (Pron Duerr-extv-pl3 (Pron Du3)  (Pron PxDu1) (Pron PxDuerr-extv-pl3 (Pron PxDu3) (pron p1 du) (pron p2 du) (pron p3 du);
-LIST PL-PRON = (Pron Pl1) (Pron Plerr-extv-pl3 (Pron Pl3) (Pron Pl) (Pron PxPl1) (Pron PxPlerr-extv-pl3 (Pron PxPl3) (pron p1 pl) (pron p2 pl) (pron p3 pl);
-LIST DU-PRON-NOTPX = (Pron Du1) (Pron Duerr-extv-pl3 (Pron Du3) (pron p1 du) (pron p2 du) (pron p3 du) ;
+LIST SG-PRON = (Pron Sg1) (Pron Sg2) (Pron Sg3) (Pron Sg) (Pron PxSg1) (Pron PxSg2) (Pron PxSg3) (pron p1 sg) (pron p2 sg) (pron p3 sg);
+LIST DU-PRON = (Pron Du1) (Pron Du2) (Pron Du3)  (Pron PxDu1) (Pron PxDu2) (Pron PxDu3) (pron p1 du) (pron p2 du) (pron p3 du);
+LIST PL-PRON = (Pron Pl1) (Pron Pl2) (Pron Pl3) (Pron Pl) (Pron PxPl1) (Pron PxPl2) (Pron PxPl3) (pron p1 pl) (pron p2 pl) (pron p3 pl);
+LIST DU-PRON-NOTPX = (Pron Du1) (Pron Du2) (Pron Du3) (pron p1 du) (pron p2 du) (pron p3 du) ;
 
 
 LIST FIRST-PX = PxSg1 PxDu1 PxPl1 ;
@@ -783,7 +781,7 @@ SET TRANS-V = V-TRANS - Der/Pass + REAL-V ;
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 # bargat "čoallut" "purrâđ" lohkat "gazzat" vuoššat
 #!! * __STVLIST__ is the list of strictly transitive verbs. In the rules, refer not to STVLIST, but to the set STV defined below.
-LIST STVLIST = (Der/h V) (Der/Caus V) "adeliđ" "amašit" "kevttiđ" "algâttiđ" "ánsášiđ" "arvâlâddâđ" "ärvidiđ" "myös" "asâttiđ" "avžuđ" "luptiđ" "poossâđ" "peerrâđ" "piemmâđ" "pieijâđ" "turmella" "turmella" "orostittiđ" "siäiludiđ" ("pääcciđ" der_h) "puáldiđ" "cuvnâđ" "purâttiđ" ("purrâđ" der_h) "pyerettiđ" "pyehtiđ" "pyerediđ" "estiđ" "coggalit" ("tuvkkâliđ" Der/l) "celkkiđ" "cegget" "olášuttiđ" "kiinni" "čielgâsmittiđ" ("čielgâđ" der_d) "čielgiđ" "čuággiđ" "čuávdiđ" "čuággiđ" "naggiđ" ("čuážžuđ" der_h) "čuoppâđ" "lyödä" "čuávuliđ" ("čuávvuđ" der_l) "ettâđ" "tovâttiđ" ("toohâđ" der_h) "toohâđ" "tähidiđ" "táttuđ" "tarbâšiđ" "tarbâšiđ" "tarkkuđ" "västidiđ" "teivâđ" "tiäduttiđ" "tevdiđ" "tiettiđ" "hoivata" "suovvâđ" "doahttalit" "toimâttiđ" ("toimâđ" der_h) "lijkkuđ" ("doallat" der_h) "doallat" "pyehtiđ" "konkr." "tuhhiittiđ" ("tuhhiđ" der_h) "tubdâđ" "dovddahit" ("tubdâđ" der_h) "lujittaa" "epidiđ" "omâstiđ" "eaktudit" "iällááttiđ" "elettiđ" ("eelliđ" der_h) "iävtuttiđ" "iävtuttiđ" "faallâđ" "uážžuđ" "fievridiđ" "huámášiđ" "huolâttiđ" ("fuollat" der_h) "huámášiđ" "karveđ" "gaskkustit" "gazzat" "kááijuđ" "kaattâđ" "vaattâđ" "raijiđ" "kavnâđ" ("gávnnadit" Sg1) ("gávnnadit" Sgerr-extv-pl3 ("gávnnadit" Sg3) ("kavnâđ" der_d sg) "geahčadit" ("keččâđ" der_d) "keččâđ" "keessiv" "geatnegahttit" "kevttiđ" "kieđâvuššâđ" "luukku" "koddeđ" "koččođ" "käskeä" ("koččođ" der_d) "kuškâdiđ" "luávdiđ" "goldit" "vahtiđ" ("olla" der_h) "kuoddâliđ" "kyeddiđ" "kyeđđiđ" "kuáđuttiđ" "tutkâđ" "guorrat" "jhk" ("guoskat" der_h) "hábmet" "skappuđ" "omistaa" "lakata" ("lakkađ" der_h) "heivehit" ("käydä" der_h) "hilgođ" "addiđ" "keččâliđ" "iskâđ" ("keččâliđ" der_d) "jeahkit" "olla" ("reissiđ" der_h) "juksat" "jyehiđ" "juolludit" "karttiđ" "lágidit" "láhčit" "laiguuttiđ" "loahpahit" ("nuuhâđ" der_h) "lopediđ" "luptiđ" "hupenevasta" "hupenevasta" ("hupenevasta" der_h) "luoitit" "monâttiđ" "merhâšiđ" "mielddisbuktit" "movttiidahttit" ("movttiidit" der_ahtti) "muddet" "muštâliđ" "mušteđ" "unohtamisen" "kutsua" "kutsua" "kutsua" "lujittaa" "lujittaa" "njiellâđ" "paikasta" "uáiniđ" "uástiđ" "merhâšiđ" "oamastit" "uážžuđ" "peividiđ" "ođastit" "ollašuhttit" "organiseret" "asia" "ovdediđ" "ovdâstiđ" "ovdediđ" "prioriteret" "raijiđ" "ravviđ" "ráfáidahttit" "rávhuiduttiđ" "toohâđ" "cuvnâđ" "ravviđ" "paikasta" "särkeä" "sakŋadit" "vuolgâttiđ" "sáhtostit" "tuáivuđ" "seaguhit" "siäiludiđ" ("siäiluđ" der_h) "visásmittiđ" "anoa" "siskeldiđ" "siskeldiđ" "suojâliđ" "suovvat" "kepidiđ" "vađastit" "vahaduttiđ" "aibâšiđ" "väldiđ" "valjiđ" "várret" "ansoja" "váttásmahttit" "vijđediđ" "vuhtiiváldit" "vuáđudiđ" "vuođđudallat" "vuohttit" "vyeittiđ" "vuojuhit" ("vuodjut" der_h) "vuoruhit" "vuostáiváldit" "vuosttaldit" "vyebdiđ" ;
+LIST STVLIST = (Der/h V) (Der/Caus V) "adeliđ" "amašit" "kevttiđ" "algâttiđ" "ánsášiđ" "arvâlâddâđ" "ärvidiđ" "myös" "asâttiđ" "avžuđ" "luptiđ" "poossâđ" "peerrâđ" "piemmâđ" "pieijâđ" "turmella" "turmella" "orostittiđ" "siäiludiđ" ("pääcciđ" der_h) "puáldiđ" "cuvnâđ" "purâttiđ" ("purrâđ" der_h) "pyerettiđ" "pyehtiđ" "pyerediđ" "estiđ" "coggalit" ("tuvkkâliđ" Der/l) "celkkiđ" "cegget" "olášuttiđ" "kiinni" "čielgâsmittiđ" ("čielgâđ" der_d) "čielgiđ" "čuággiđ" "čuávdiđ" "čuággiđ" "naggiđ" ("čuážžuđ" der_h) "čuoppâđ" "lyödä" "čuávuliđ" ("čuávvuđ" der_l) "ettâđ" "tovâttiđ" ("toohâđ" der_h) "toohâđ" "tähidiđ" "táttuđ" "tarbâšiđ" "tarbâšiđ" "tarkkuđ" "västidiđ" "teivâđ" "tiäduttiđ" "tevdiđ" "tiettiđ" "hoivata" "suovvâđ" "doahttalit" "toimâttiđ" ("toimâđ" der_h) "lijkkuđ" ("doallat" der_h) "doallat" "pyehtiđ" "konkr." "tuhhiittiđ" ("tuhhiđ" der_h) "tubdâđ" "dovddahit" ("tubdâđ" der_h) "lujittaa" "epidiđ" "omâstiđ" "eaktudit" "iällááttiđ" "elettiđ" ("eelliđ" der_h) "iävtuttiđ" "iävtuttiđ" "faallâđ" "uážžuđ" "fievridiđ" "huámášiđ" "huolâttiđ" ("fuollat" der_h) "huámášiđ" "karveđ" "gaskkustit" "gazzat" "kááijuđ" "kaattâđ" "vaattâđ" "raijiđ" "kavnâđ" ("gávnnadit" Sg1) ("gávnnadit" Sg2) ("gávnnadit" Sg3) ("kavnâđ" der_d sg) "geahčadit" ("keččâđ" der_d) "keččâđ" "keessiv" "geatnegahttit" "kevttiđ" "kieđâvuššâđ" "luukku" "koddeđ" "koččođ" "käskeä" ("koččođ" der_d) "kuškâdiđ" "luávdiđ" "goldit" "vahtiđ" ("olla" der_h) "kuoddâliđ" "kyeddiđ" "kyeđđiđ" "kuáđuttiđ" "tutkâđ" "guorrat" "jhk" ("guoskat" der_h) "hábmet" "skappuđ" "omistaa" "lakata" ("lakkađ" der_h) "heivehit" ("käydä" der_h) "hilgođ" "addiđ" "keččâliđ" "iskâđ" ("keččâliđ" der_d) "jeahkit" "olla" ("reissiđ" der_h) "juksat" "jyehiđ" "juolludit" "karttiđ" "lágidit" "láhčit" "laiguuttiđ" "loahpahit" ("nuuhâđ" der_h) "lopediđ" "luptiđ" "hupenevasta" "hupenevasta" ("hupenevasta" der_h) "luoitit" "monâttiđ" "merhâšiđ" "mielddisbuktit" "movttiidahttit" ("movttiidit" der_ahtti) "muddet" "muštâliđ" "mušteđ" "unohtamisen" "kutsua" "kutsua" "kutsua" "lujittaa" "lujittaa" "njiellâđ" "paikasta" "uáiniđ" "uástiđ" "merhâšiđ" "oamastit" "uážžuđ" "peividiđ" "ođastit" "ollašuhttit" "organiseret" "asia" "ovdediđ" "ovdâstiđ" "ovdediđ" "prioriteret" "raijiđ" "ravviđ" "ráfáidahttit" "rávhuiduttiđ" "toohâđ" "cuvnâđ" "ravviđ" "paikasta" "särkeä" "sakŋadit" "vuolgâttiđ" "sáhtostit" "tuáivuđ" "seaguhit" "siäiludiđ" ("siäiluđ" der_h) "visásmittiđ" "anoa" "siskeldiđ" "siskeldiđ" "suojâliđ" "suovvat" "kepidiđ" "vađastit" "vahaduttiđ" "aibâšiđ" "väldiđ" "valjiđ" "várret" "ansoja" "váttásmahttit" "vijđediđ" "vuhtiiváldit" "vuáđudiđ" "vuođđudallat" "vuohttit" "vyeittiđ" "vuojuhit" ("vuodjut" der_h) "vuoruhit" "vuostáiváldit" "vuosttaldit" "vyebdiđ" ;
 
 	# Strictly transitiv-verbs - a start. This set is ment as a help choosing Acc or Gen. Example: "Mun borren eatni kafeás." - there is Gen, no Acc, even if the verb is transitive. That´s why "purrâđ" is not in this set.
 	# These verbs: "addit", "uážžuđ" and "uážžuđ" can, when it´s about sex, be without object: "Son oaččui gonagasa bártnis." 
@@ -1126,7 +1124,7 @@ SET PRE-NP-HEAD = (Prop Attr) OR (Prop @>N) OR (A Attr) OR (ABBR Attr) OR ("pyer
          (PrfPrc @>N) OR PrsPrc OR (A Ord) ;
          # The strict version of items that can only be premodifiers, not parts of the predicate
          
-# SET PRE-NP-V = PrfPrc OR PrsPrc OR Der/NomAg OR Actio OR Der/NomAct OR (V A) OR (Prs Sg3) + Ind OR (Prs Sg1) + Ind OR (Imprt Duerr-extv-pl3 ;
+# SET PRE-NP-V = PrfPrc OR PrsPrc OR Der/NomAg OR Actio OR Der/NomAct OR (V A) OR (Prs Sg3) + Ind OR (Prs Sg1) + Ind OR (Imprt Du2) ;
     # to be used together with PRE-NP-HEAD before @>N is disambiguated
          
 # SET NP-MEMBER   = PRE-NP-HEAD OR N ;
@@ -1978,9 +1976,9 @@ ADD:err-agr (&err-agr) TARGET V IF (-1C Sg + Nom)(0 VFIN)(NOT 0 Sg3)(NEGATE 0 Co
 #ADD:err-agr-sg1 (&err-agr-sg1) TARGET V IF (-1C Pron + Sg1 + Nom LINK NOT -1 CC LINK -1 Nom)(0 V)(NOT 0 Sg1);
 ADD:err-agr-sg1 (&err-agr-sg1) TARGET V IF (-1C Pron + Sg1 + Nom)(0 V)(NOT 0 Sg1);
 ADD:err-agr-sg1 (&err-agr-sg1) TARGET V IF (NOT -2 Sup)(-1C Pron + Sg1 + Nom)(-1 BOS OR PUNCT)(0 V)(NOT 0 Sg1);
-ADD:err-agr-sg2 (&err-agr-sgerr-extv-pl3 TARGET V IF (NOT -2 Sup)(-1C Pron + Sg2 + Nom)(0 V)(NOT 0 Sgerr-extv-pl3;
+ADD:err-agr-sg2 (&err-agr-sg2) TARGET V IF (NOT -2 Sup)(-1C Pron + Sg2 + Nom)(0 V)(NOT 0 Sg2);
 ADD:err-agr-pl1 (&err-agr-pl1) TARGET V IF (NOT -2 Sup)(-1C Pron + Pl1 + Nom)(0 V)(NOT 0 Pl1);
-ADD:err-agr-pl2 (&err-agr-plerr-extv-pl3 TARGET V IF (NOT -2 Sup)(-1C Pron + Pl2 + Nom)(0 V)(NOT 0 Plerr-extv-pl3;
+ADD:err-agr-pl2 (&err-agr-pl2) TARGET V IF (NOT -2 Sup)(-1C Pron + Pl2 + Nom)(0 V)(NOT 0 Pl2);
 
 # Suomâkielâ sárnumkielâ epikongruens maaŋgâlovo 3. persovnist 
 ADD:err-agr-sg3 (&err-agr-sg3) TARGET V IF (NOT -2 Sup)(-1C Pron + Pl3 + Nom OR Dem + Pl + Nom OR N + Pl + Nom)(0 V + Ind + Sg3);
@@ -2087,8 +2085,8 @@ ADD:err-acc-obj-top (&err-acc-obj-top) TARGET N IF (0 Pl + Acc LINK *-1 BOS BARR
 
 # Suomâkielâ imperatiiv mieđetteijee häämist, mast objekt sajehäämmin lii maaŋgâlovo nominatiiv mut sämikielâst akkusatiiv:
 
-ADD:err-imp-nomobj (&err-imp-nomobj) TARGET N IF (-2C IMPRTerr-extv-pl3(-1 PRE-NP-HEAD)(NOT 0 Acc OR Gen)(0 Nom);
-ADD:err-imp-nomobj (&err-imp-nomobj) TARGET N IF (-1C IMPRTerr-extv-pl3(NOT 0 Acc OR Gen)(0 Nom);
+ADD:err-imp-nomobj (&err-imp-nomobj) TARGET N IF (-2C Imprt)(-1 PRE-NP-HEAD)(NOT 0 Acc OR Gen)(0 Nom);
+ADD:err-imp-nomobj (&err-imp-nomobj) TARGET N IF (-1C Imprt)(NOT 0 Acc OR Gen)(0 Nom);
 
 
 #fi	Myy nämä kalat - 
@@ -2098,7 +2096,7 @@ ADD:err-imp-nomobj (&err-imp-nomobj) TARGET N IF (-1C IMPRTerr-extv-pl3(NOT 0 Ac
 
 #!! !!Infinitive errors
 
-ADD:err-vchain-prfprc (&err-vchain-prfprc) TARGET V IF (-1 LEDE + Ind + Sg1 OR LEDE + Ind + Sgerr-extv-pl3(0 Inf); #1,2
+ADD:err-vchain-prfprc (&err-vchain-prfprc) TARGET V IF (-1 LEDE + Ind + Sg1 OR LEDE + Ind + Sg2)(0 Inf); #1,2
 ## Sii kielâtááiđu ovdedem tiet mun lam luuhâđ anarâškielâ.
 #$ Sii kielâtááiđu ovdedem tiet mun lam luuhâm anarâškielâ.
 
