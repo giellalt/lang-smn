@@ -13,7 +13,6 @@ analyser-mt-gt-desc.hfst: analyser-mt-gt-desc.tmp.hfst \
 			$(top_builddir)/src/filters/remove-norm-comp-tags.hfst           \
 			$(top_builddir)/src/filters/remove-derivation-position-tags.hfst \
 			$(top_builddir)/src/filters/rename-POS_before_Der-tags.hfst      \
-			$(top_builddir)/src/filters/remove-Err_SpaceCmp-strings.hfst     \
 			$(top_builddir)/src/filters/remove-Use_minus_PMatch-tags.hfst    \
 			$(top_builddir)/src/filters/remove-Use_PMatch-strings.hfst       \
 			$(top_builddir)/src/filters/remove-Use_GC-strings.hfst
@@ -22,7 +21,6 @@ analyser-mt-gt-desc.hfst: analyser-mt-gt-desc.tmp.hfst \
 	.o. @\"$(top_builddir)/src/filters/remove-norm-comp-tags.hfst\"           \
 	.o. @\"$(top_builddir)/src/filters/rename-POS_before_Der-tags.hfst\"      \
 	.o. @\"$(top_builddir)/src/filters/remove-Use_minus_PMatch-tags.hfst\"    \
-	.o. @\"$(top_builddir)/src/filters/remove-Err_SpaceCmp-strings.hfst\"     \
 	.o. @\"$(top_builddir)/src/filters/remove-Use_PMatch-strings.hfst\"       \
 	.o. @\"$(top_builddir)/src/filters/remove-Use_GC-strings.hfst\"           \
    	.o. @\"$<\" \
@@ -37,7 +35,6 @@ generator-mt-gt-norm.hfst: generator-mt-gt-norm.tmp.hfst \
 			$(top_builddir)/src/filters/remove-norm-comp-tags.hfst           \
 			$(top_builddir)/src/filters/remove-derivation-position-tags.hfst \
 			filters/make-optional-Attr_before_dervuota-tags.hfst             \
-			$(top_builddir)/src/filters/remove-Err_SpaceCmp-strings.hfst     \
 			$(top_builddir)/src/filters/remove-Use_minus_PMatch-tags.hfst    \
 			$(top_builddir)/src/filters/remove-Use_PMatch-strings.hfst       \
 			$(top_builddir)/src/filters/remove-Use_GC-strings.hfst
@@ -46,7 +43,6 @@ generator-mt-gt-norm.hfst: generator-mt-gt-norm.tmp.hfst \
 	.o. @\"$(top_builddir)/src/filters/remove-derivation-position-tags.hfst\" \
    	.o. @\"$(top_builddir)/src/filters/remove-norm-comp-tags.hfst\"           \
 	.o. @\"$(top_builddir)/src/filters/remove-Use_minus_PMatch-tags.hfst\"    \
-	.o. @\"$(top_builddir)/src/filters/remove-Err_SpaceCmp-strings.hfst\"     \
 	.o. @\"$(top_builddir)/src/filters/remove-Use_PMatch-strings.hfst\"       \
 	.o. @\"$(top_builddir)/src/filters/remove-Use_GC-strings.hfst\"           \
    	.o. @\"$<\" \
