@@ -117,6 +117,33 @@ analyser-gt-norm.xfst: analyser-gt-norm.tmp.xfst \
 		 save stack $@\n\
 		 quit\n" | $(XFST) $(VERBOSITY)
 
+
+
+
+
+# Special case for the disamb analyser, since it follows the same filename
+# pattern as the raw fst:
+analyser-pmatchdisamb-gt-desc.hfst: analyser-PMATCHdisamb-gt-desc.tmp.hfst      \
+					filters/remove-orig_lang-tags.hfst           \
+					filters/remove-derivation-position-tags.hfst \
+					filters/remove-homonymy-tags.hfst           \
+					filters/remove-norm-comp-tags.hfst           \
+					filters/rename-POS_before_Der-tags.hfst           
+	$(AM_V_XFST)$(PRINTF) "read regex                           \
+				@\"filters/remove-derivation-position-tags.hfst\" \
+			.o. @\"filters/remove-orig_lang-tags.hfst\"           \
+			.o. @\"filters/remove-homonymy-tags.hfst\"           \
+			.o. @\"filters/remove-norm-comp-tags.hfst\"           \
+			.o. @\"filters/rename-POS_before_Der-tags.hfst\"      \
+			.o. @\"$<\"                                         \
+			;\n\
+		 $(INVERT_HFST)§\
+		 save stack $@\n\
+		 quit\n" | $(HFST_XFST) -p $(MORE_VERBOSITY)
+
+
+
+
 # Special case for the disamb analyser, since it follows the same filename
 # pattern as the raw fst:
 analyser-disamb-gt-desc.%: analyser-disamb-gt-desc.tmp.%      \
