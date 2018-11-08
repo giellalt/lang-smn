@@ -123,7 +123,7 @@ analyser-gt-norm.xfst: analyser-gt-norm.tmp.xfst \
 
 # Special case for the disamb analyser, since it follows the same filename
 # pattern as the raw fst:
-analyser-pmatchdisamb-gt-desc.hfst: analyser-PMATCHdisamb-gt-desc.tmp.hfst      \
+analyser-pmatchdisamb-gt-desc.hfst: analyser-pmatchdisamb-gt-desc.tmp.hfst      \
 					filters/remove-orig_lang-tags.hfst           \
 					filters/remove-derivation-position-tags.hfst \
 					filters/remove-homonymy-tags.hfst           \
