@@ -126,16 +126,16 @@ analyser-gt-norm.xfst: analyser-gt-norm.tmp.xfst \
 analyser-pmatchdisamb-gt-desc.hfst: analyser-pmatchdisamb-gt-desc.tmp.hfst      \
 					filters/remove-orig_lang-tags.hfst           \
 					filters/remove-derivation-position-tags.hfst \
-					filters/remove-homonymy-tags.hfst           \
+					filters/remove-homonymy-tags.hfst            \
 					filters/remove-norm-comp-tags.hfst           \
-					filters/rename-POS_before_Der-tags.hfst           
-	$(AM_V_XFST)$(PRINTF) "read regex                           \
+					filters/rename-POS_before_Der-tags.hfst
+	$(AM_V_XFST)$(PRINTF) "read regex                             \
 				@\"filters/remove-derivation-position-tags.hfst\" \
 			.o. @\"filters/remove-orig_lang-tags.hfst\"           \
-			.o. @\"filters/remove-homonymy-tags.hfst\"           \
+			.o. @\"filters/remove-homonymy-tags.hfst\"            \
 			.o. @\"filters/remove-norm-comp-tags.hfst\"           \
 			.o. @\"filters/rename-POS_before_Der-tags.hfst\"      \
-			.o. @\"$<\"                                         \
+			.o. @\"$<\"                                           \
 			;\n\
 		 $(INVERT_HFST)§\
 		 save stack $@\n\
@@ -149,13 +149,13 @@ analyser-pmatchdisamb-gt-desc.hfst: analyser-pmatchdisamb-gt-desc.tmp.hfst      
 analyser-disamb-gt-desc.%: analyser-disamb-gt-desc.tmp.%      \
 					filters/remove-orig_lang-tags.%           \
 					filters/remove-derivation-position-tags.% \
-					filters/remove-homonymy-tags.%           \
+					filters/remove-homonymy-tags.%            \
 					filters/remove-norm-comp-tags.%           \
-					filters/rename-POS_before_Der-tags.%            
+					filters/rename-POS_before_Der-tags.%
 	$(AM_V_XFST)$(PRINTF) "read regex                           \
 				@\"filters/remove-derivation-position-tags.$*\" \
 			.o. @\"filters/remove-orig_lang-tags.$*\"           \
-			.o. @\"filters/remove-homonymy-tags.$*\"           \
+			.o. @\"filters/remove-homonymy-tags.$*\"            \
 			.o. @\"filters/remove-norm-comp-tags.$*\"           \
 			.o. @\"filters/rename-POS_before_Der-tags.$*\"      \
 			.o. @\"$<\"                                         \
@@ -168,10 +168,10 @@ analyser-disamb-gt-desc.%: analyser-disamb-gt-desc.tmp.%      \
 # Special case for the dict analyser, since it follows the same filename
 # pattern as the raw fst:
 analyser-dict-gt-desc.%: analyser-dict-gt-desc.tmp.% \
-					filters/remove-derivation-position-tags.%            
-	$(AM_V_XFST)$(PRINTF) "read regex                      \
+					filters/remove-derivation-position-tags.%
+	$(AM_V_XFST)$(PRINTF) "read regex                           \
 				@\"filters/remove-derivation-position-tags.$*\" \
-			.o. @\"$<\"                                    \
+			.o. @\"$<\"                                         \
 			;\n\
 		 $(INVERT_HFST)\
 		 save stack $@\n\
@@ -180,15 +180,15 @@ analyser-dict-gt-desc.%: analyser-dict-gt-desc.tmp.% \
 # We need to add processing of language-specific tags in the generator:
 # We need to specify -gt- to avoid applying the filters to the raw fst:
 define giella_generators
-generator-gt-%.$(1): generator-gt-%.tmp.$(1)                \
-					filters/remove-norm-comp-tags.$(1)             \
+generator-gt-%.$(1): generator-gt-%.tmp.$(1)                     \
+					filters/remove-norm-comp-tags.$(1)           \
 					filters/remove-derivation-position-tags.$(1) \
 					filters/make-optional-lang_hom-tags.$(1)
-	$$(AM_V_XFST_TOOL)$$(PRINTF) "read regex                  \
-				@\"filters/make-optional-lang_hom-tags.$(1)\" \
+	$$(AM_V_XFST_TOOL)$$(PRINTF) "read regex                      \
+				@\"filters/make-optional-lang_hom-tags.$(1)\"     \
 			.o. @\"filters/remove-norm-comp-tags.$(1)\"           \
 			.o. @\"filters/remove-derivation-position-tags.$(1)\" \
-			.o. @\"$$<\"                                      \
+			.o. @\"$$<\"                                          \
 			;\n\
 		 $$(INVERT_XFST)$$(INVERT_FOMA)\
 		 save stack $$@\n\
