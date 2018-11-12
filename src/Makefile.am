@@ -137,7 +137,7 @@ analyser-pmatchdisamb-gt-desc.hfst: analyser-pmatchdisamb-gt-desc.tmp.hfst      
 			.o. @\"filters/rename-POS_before_Der-tags.hfst\"      \
 			.o. @\"$<\"                                           \
 			;\n\
-		 $(INVERT_HFST)§\
+		 $(INVERT_HFST)\
 		 save stack $@\n\
 		 quit\n" | $(HFST_XFST) -p $(MORE_VERBOSITY)
 
