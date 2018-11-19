@@ -1907,9 +1907,9 @@ SECTION
 
 #!! !!Removing unwanted names
 
-LIST SUSPICIOUSNAME = "Lie" "Sun" "Ta" "Van" ;
+LIST SUSPICIOUSNAME = "Ai" "Ain" "Lie" "Sun" "Ta" "Van" "Viste" "Ive" ;
 
-REMOVE SUSPICIOUSNAME IF (0 Adv);
+REMOVE SUSPICIOUSNAME IF (0 Adv OR A OR N) ;
 
 #!! !!Numbers
 
@@ -2245,6 +2245,11 @@ SELECT:mannelTimeAdv MANNEL + Adv IF (-1 VAHKKU-DUR) ;
 	## Dat dáhpáhuvai golbma jagi maŋŋil.
 	#$ Logi minuvtta maŋŋel nagodii Sørøy Glimt čiekči Stig Martinsen dulbet bohtosa ovttain moalain.
 	#$ Go jagi maŋŋil álggahuvvui Kárášjoga gymnása, de fárrejin ruoktot ja vázzen guokte maŋimus jagi dáppe.
+
+
+#!! * __oovtast__
+SELECT:oovtast Adv IF (-1 Adv)(0 ("oovtâst"));
+SELECT:oovtast Adv IF (1 N)(0 ("oovtâst"));
 
 #!! * __AdvSTV__ váldit mielde, oahppat bajil. eará? STRICT-TRANS-V is too strong
 SELECT:AdvSTV1 Adv IF ((-1 Acc LINK *-1 ("väldiđ") OR ("máttáđ") OR ("čurvet")  OR ("táttuđ") BARRIER SV-BOUNDARY OR Acc LINK NOT -1 Acc) OR (-1 Gen LINK -1 Num LINK *-1 ("väldiđ") OR ("máttáđ") OR ("čurvet")  OR ("táttuđ") BARRIER SV-BOUNDARY OR Acc LINK NOT -1 Acc)) (0 Po LINK NEGATE *1 Acc BARRIER NOT-A-ADV); 	
