@@ -1905,6 +1905,14 @@ BEFORE-SECTIONS  # No before-section rules so far
 SECTION
 #!! This is the first section. Here we put safe rules with no or minimal context.
 
+#!! !!Removing unwanted names
+
+LIST SUSPICIOUSNAME = "Lie" "Sun" "Ta" "Van" ;
+
+REMOVE SUSPICIOUSNAME IF (0 Adv);
+
+#!! !!Numbers
+
 #!! * __Insertwww__ Inserts the Sem/Adr tag to all url expressions
 SUBSTITUTE:Insertwww (?) (Adv Sem/Adr) TARGET ("<www[.].*>"r ?) OR ("http.*"r ?) OR ("<[A-Za-z].*[@][a-z].*"r ?) OR ("<[A-Za-z].*[(][a][t][)][a-z].*"r ?) ;
 
@@ -2215,6 +2223,11 @@ REMOVE Adv IF (-1 BOS)(0 ("te"))(*1 N BARRIER NOT-NPMOD LINK 1 VFIN);
 
 #!! !Adverbs or postpositions
 REMOVE:AdvNotPo Po IF (NOT -1 Gen)(0 Adv); #remove_in_grc
+
+#!! !Adverbs or nouns
+
+REMOVE:VAdvA N IF (-1 VFIN)(1C A);
+	     #$ Onne lii uáli liegâs
 
 #!! !Specific adverbs
 
