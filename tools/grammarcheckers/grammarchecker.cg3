@@ -766,7 +766,7 @@ SET MAIN-V = V - COPULAS - Neg - MOD-ASP OR ("orroođ") ;
  
 # All active verbs with a TV tag, including AUX-OR-MAIN.
 
-LIST V-TRANS = (V TV) (Der/h V)  (Der/Caus V) ;
+LIST V-TRANS = (V TV) (Der/tt V)  (Der/Caus V) ;
 
  
 SET TRANS-ACT-NOT-AUX-V =  V-TRANS - Der/Pass - AUX ;
@@ -1996,9 +1996,10 @@ ADD:err-orrood-inf (&err-orrood-inf) TARGET Inf IF (-1 ("orroođ") + Ind)(0 Inf)
 ADD:err-ext-agr (&err-ext-agr) TARGET V IF (-1 Loc)(0 (LEDE Sg3))(1 N + Pl + Nom);
 
 
-ADD:err-pl-obj (&err-pl-obj) TARGET (N Pl Nom) IF (-1 TV LINK NOT 0 Der/Pass)(NEGATE -1 PrfPrc LINK *-1 N BARRIER VFIN);
+ADD:err-pl-obj (&err-pl-obj) TARGET (N Pl Nom) IF (*-1 TRANS-V  BARRIER NOT-NPMOD OR CLB ) (NEGATE -1 PrfPrc LINK *-1 N BARRIER VFIN);
 	# Trans: Others know mushrooms by.their.color.
 	## Nubeh tobdeh kuobbâreh ivneest.
+	# toiset uivat , sienet ovat hyviä.
 
 # Iäruh omâstemráhtusist: mieđetteijee já kieldee häämi
 ADD:err-extv-pl3 (&err-extv-pl3) TARGET V IF (-1 Loc)(0 LEDE + Sg3)(*1 N + Pl + Nom BARRIER NOT-ADV-PCLE);
