@@ -1899,8 +1899,10 @@ SET CCCOMMA = CC OR COMMA ;
 #!! !!!RULE SECTION
 #!! Here follow the rules.
 
-BEFORE-SECTIONS  # No before-section rules so far
+BEFORE-SECTIONS
 
+# Do not touch the speller suggestions:
+PROTECT (<spelled>) ;
 
 SECTION
 #!! This is the first section. Here we put safe rules with no or minimal context.
