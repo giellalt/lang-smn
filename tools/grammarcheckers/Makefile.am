@@ -22,9 +22,16 @@ GIELLA_GC_VALENCY=
 
 # If there are additional, language specific files used in the GC archive,
 # specify here:
-LOCAL_GC_ZIP_FILES=
+LOCAL_GC_ZIP_FILES=grc-disambiguator.bin
 
 #### BEGIN: Local build targets: ####
+
+# Copy the standard disambiguator file as the grc version, but without
+# protecting the speller suggestions. This one is applied after the regular
+# disambiguation, and will disambiguate the suggestions _after_ the rest of
+# the sentence is disambiguated.
+grc-disambiguator.cg3: $(top_srcdir)/src/syntax/disambiguator.cg3
+	$(AM_V_GEN)grep -v 'PROTECT' $< > $@
 
 #### END: Local build targets:   ####
 
