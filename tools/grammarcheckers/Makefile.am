@@ -30,7 +30,7 @@ LOCAL_GC_ZIP_FILES=grc-disambiguator.bin
 # protecting the speller suggestions. This one is applied after the regular
 # disambiguation, and will disambiguate the suggestions _after_ the rest of
 # the sentence is disambiguated.
-grc-disambiguator.cg3: $(top_srcdir)/src/syntax/disambiguator.cg3
+grc-disambiguator.cg3: disambiguator.cg3
 	$(AM_V_GEN)grep -v 'PROTECT' $< > $@
 
 #### END: Local build targets:   ####
