@@ -3,10 +3,7 @@
 MAPPING-PREFIX = & ;
 DELIMITERS = "<.>" "<!>" "<?>" "<...>" "<¶>" "<\n\n>" ;
 
-ADD:spelled (&typo &SUGGESTWF) (<spelled>) ;
 
-ADD:Err/Orth (&typo) (Err/Orth) (NOT 0 (*) - (Err/Orth)) ;
-COPY:Err/Orth (&SUGGEST) EXCEPT (Ex/N Ex/V Ex/A Ex/IV Ex/TV Err/Orth) TARGET (Err/Orth &typo) ;
 
 
 # ================== #
@@ -234,6 +231,17 @@ SET TIME-N-SET = N + Sem/Time ;  #!! TIME-N-SET
 LIST NOT-TIME = "čäciollee" "lope" "vuáru" ; #!! NOT-TIME
 SET TIME-N = TIME-N-SET - NOT-TIME ;  #!! TIME-N
 
+
+
+#!! !secondary tags
+# --------------
+
+LIST <vdic> = <vdic> ;
+LIST <mv> = <mv> ;
+LIST <aux> = <aux> ;
+LIST <copula> = <copula> ;
+LIST <firstWordOfParagraph> = <firstWordOfParagraph> ;
+LIST <spelled> = <spelled> ;
 
 
 #!! ! Syntactic tags
@@ -1054,6 +1062,8 @@ SET NOT-PRE-A-N = WORD - PRE-A-N ;
 LIST PUNCT-LEFT = (PUNCT LEFT) ;
 LIST PUNCT-RIGHT = (PUNCT RIGHT) ;
 
+SET PUNCT-LEFT-RIGHT = PUNCT-LEFT OR PUNCT-RIGHT ;
+
 # SET PRE-APP   = COMMA OR PUNCT-LEFT OR PRE-NP-HEAD ;
  # This set ist not only for what can
                             # stand in front of appositions but also
@@ -1864,6 +1874,14 @@ SET GRAMCHK-S-BOUNDARY = (Pron Interr) OR (Pron Rel) OR ("muhto") OR ("de" Adv) 
 
 
 # RULES
+
+
+
+ADD:spelled (&typo &SUGGESTWF) (<spelled>) ;
+
+ADD:Err/Orth (&typo) (Err/Orth) (NOT 0 (*) - (Err/Orth)) ;
+COPY:Err/Orth (&SUGGEST) EXCEPT (Ex/N Ex/V Ex/A Ex/IV Ex/TV Err/Orth) TARGET (Err/Orth &typo) ;
+
 
 	
 
