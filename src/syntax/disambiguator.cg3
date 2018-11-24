@@ -5920,6 +5920,11 @@ REMOVE:NomIfProp2 (Nom Sem/Plc) OR (Acc Sem/Plc) (*-1 SG3-V BARRIER SV-BOUNDARY)
 SELECT:NomSentFin1 Nom (*-1 FMAINV + COPULAS BARRIER NOT-NPMOD)(0 Acc OR Gen LINK 1 EOC) ;
 
 
+# Accusative or Illative
+SELECT:AccNotIll Acc IF (0 (Pl Ill))( -1 ("mihheen") OR ("kihheen"));
+
+SELECT:IllNotAcc Ill IF (0 (Pl Acc)) (NOT *0 TV) ;
+
 
 #!! !!Nominative and accusative
 
