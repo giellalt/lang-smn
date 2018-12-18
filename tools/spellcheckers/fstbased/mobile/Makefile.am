@@ -11,7 +11,7 @@ CORPUSNAME=spellercorpus
 # Specify whether to use corpus weights for frequency ranking of suggestions.
 # Make sure you test the suggestion quality both before and after changing this
 # setting.
-ENABLE_CORPUS_WEIGHTS=no
+ENABLE_CORPUS_WEIGHTS=yes
 
 # Use this as the source lexical fst for unit weighting, it contains correct
 # surface forms except for the word boundary #, which is still present, and
