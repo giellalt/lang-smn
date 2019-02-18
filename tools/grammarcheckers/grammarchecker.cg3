@@ -506,6 +506,8 @@ LIST PL1-V = (V Pl1) ;  #!! PL1-V
 LIST PL2-V = (V Pl3) ;  #!! PL2-V
 LIST PL3-V = (V Pl3) ;  #!! PL3-V
 
+
+
 # SET POSITIVE-V = SG1-V OR SG2-V OR SG3-V OR DU1-V OR DU2-V OR DU3-V OR PL1-V OR PL2-V OR PL3-V ;  #!! POSITIVE-V
 
  # Note that imperative verbs are not included in these sets!
@@ -519,6 +521,16 @@ SET PL-V = PL1-V OR PL2-V OR PL3-V ;
 SET DU-PL-V = DU1-V OR DU2-V OR DU3-V OR PL1-V OR PL2-V OR PL3-V ;
 
 SET 1-2-V = SG1-V OR SG2-V OR DU1-V OR DU2-V OR PL1-V OR PL2-V ;
+
+LIST VNOTSG1 = Sg2 Sg3 Du1 Du2 Du3 Pl1 Pl2 Pl3 ;
+LIST VNOTSG2 = Sg1 Sg3 Du1 Du2 Du3 Pl1 Pl2 Pl3 ;
+LIST VNOTSG3 = Sg1 Sg2 Du1 Du2 Du3 Pl1 Pl2 Pl3 ;
+LIST VNOTDU1 = Sg1 Sg2 Sg3 Du2 Du3 Pl1 Pl2 Pl3 ;
+LIST VNOTSU2 = Sg1 Sg2 Sg3 Du1 Du3 Pl1 Pl2 Pl3 ;
+LIST VNOTDU3 = Sg1 Sg2 Sg3 Du1 Du2 Pl1 Pl2 Pl3 ;
+LIST VNOTPL1 = Sg1 Sg2 Sg3 Du1 Du2 Du3 Pl2 Pl3 ;
+LIST VNOTPL2 = Sg1 Sg2 Sg3 Du1 Du2 Du3 Pl1 Pl3 ;
+LIST VNOTPL3 = Sg1 Sg2 Sg3 Du1 Du2 Du3 Pl1 Pl2 ;
 
 # Imperative sets
 
@@ -1952,6 +1964,7 @@ LIST &err-orrood-inf = &err-orrood-inf ;
 LIST &err-ext-agr = &err-ext-agr ;
 LIST &err-ext-vagr = &err-ext-vagr ;
 LIST &err-extv-pl3 = &err-ext-pl3 ;
+LIST &err-extv-pl3-numeral = &err-ext-pl3-numeral ;
 LIST &err-extneg-pl3 = &err-extneg-pl3 ;
 LIST &err-pl-obj = &err-pl-obj ;
 LIST &err-esubj-plnom = &err-esubj-plnom ;
@@ -1974,25 +1987,59 @@ ADD (&typo &SUGGESTWF) (<spelled>);
 
 
 ADD:err-agr (&err-agr) TARGET V IF (-1C Sg + Nom)(0 VFIN)(NOT 0 Sg3)(NEGATE 0 ConNeg LINK *-1 Neg)(NOT *-2 CC LINK -1 Sg + Nom);
-#ADD:err-agr-sg1 (&err-agr-sg1) TARGET V IF (-1C Pron + Sg1 + Nom LINK NOT -1 CC LINK -1 Nom)(0 V)(NOT 0 Sg1);
+COPY:err-agr (Sg3 &SUGGEST) EXCEPT VNOTSG3 TARGET (V Ind Prs &err-agr);
+
 ADD:err-agr-sg1 (&err-agr-sg1) TARGET V IF (-1C Pron + Sg1 + Nom)(0 V)(NOT 0 Sg1);
+COPY:err-agr-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prs &err-agr-sg1);
+
+#$ Mun puátá.
+## Mun puáđám.
+
 ADD:err-agr-sg1 (&err-agr-sg1) TARGET V IF (NOT -2 Sup)(-1C Pron + Sg1 + Nom)(-1 BOS OR PUNCT)(0 V)(NOT 0 Sg1);
+COPY:err-agr-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prs &err-agr-sg1);
+
+
 ADD:err-agr-sg2 (&err-agr-sg2) TARGET V IF (NOT -2 Sup)(-1C Pron + Sg2 + Nom)(0 V)(NOT 0 Sg2);
+COPY:err-agr-sg2 (Sg2 &SUGGEST) EXCEPT VNOTSG2 TARGET (V Ind Prs &err-agr-sg2);
+
+#$ Tun puátá.
+## Tun puáđáh.
+
+
 ADD:err-agr-pl1 (&err-agr-pl1) TARGET V IF (NOT -2 Sup)(-1C Pron + Pl1 + Nom)(0 V)(NOT 0 Pl1);
+COPY:err-agr-pl1 (Pl1 &SUGGEST) EXCEPT VNOTPL1 TARGET (V Ind Prs &err-agr-pl1);
+
+#$ Mij puátá.
+## Mij puáttip.
+
+
+
 ADD:err-agr-pl2 (&err-agr-pl2) TARGET V IF (NOT -2 Sup)(-1C Pron + Pl2 + Nom)(0 V)(NOT 0 Pl2);
+COPY:err-agr-pl1 (Pl1 &SUGGEST) EXCEPT VNOTPL1 TARGET (V Ind Prs &err-agr-pl1);
+
+#$ Tij puátá.
+## Tij puátivetteđ.
+
+
 
 # Suomâkielâ sárnumkielâ epikongruens maaŋgâlovo 3. persovnist 
 ADD:err-agr-sg3 (&err-agr-sg3) TARGET V IF (NOT -2 Sup)(-1C Pron + Pl3 + Nom OR Dem + Pl + Nom OR N + Pl + Nom)(0 V + Ind + Sg3);
+COPY:err-agr-sg3 (Sg3 &SUGGEST) EXCEPT VNOTSG3 TARGET (V Ind Prs &err-agr-sg3);
 #fi Ne tulee.
-#$ 	Toh puátih.
-##	Toh puátá.
+#$ Toh puátih.
+## Toh puátá.
 
-ADD:err-gen-po (&err-gen-po) TARGET Po IF (-1 N OR Pron)(NOT -1 Gen)(0C Po);
 
-ADD:err-orrood-inf (&err-orrood-inf) TARGET Inf IF (-1 ("orroođ") + Ind)(0 Inf);	
-##	 Mun orom leđe ennuv velgus anarâškielân.
+#!! Inf should be Actio Essive
+ADD:err-orrood-inf (&err-orrood-inf) TARGET (V Inf) IF (-1 ("orroođ") + Ind);
+COPY:err-orrood-inf (Actio Ess &SUGGEST) EXCEPT (Inf) TARGET (V Inf &err-orrood-inf);
+## Mun orom leđe ennuv velgus anarâškielân.
 #$ Mun orom lemin ennuv velgus anarâškielân.
-	
+
+ADD:err-gen-po (&err-gen-po) TARGET (N Sg Nom) IF (1C Po);
+COPY:err-gen-po (Nom &SUGGEST) EXCEPT (Gen &err-gen-po) TARGET (N Sg Nom &err-gen-po);
+
+
 ADD:err-ext-agr (&err-ext-agr) TARGET V IF (-1 Loc)(0 (LEDE Sg3))(1 N + Pl + Nom);
 
 
@@ -2003,37 +2050,39 @@ ADD:err-pl-obj (&err-pl-obj) TARGET (N Pl Nom) IF (*-1 TRANS-V  BARRIER NOT-NPMO
 
 # Iäruh omâstemráhtusist: mieđetteijee já kieldee häämi
 ADD:err-extv-pl3 (&err-extv-pl3) TARGET V IF (-1 Loc)(0 LEDE + Sg3)(*1 N + Pl + Nom BARRIER NOT-ADV-PCLE);
+COPY:err-extv-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Ind Prs Sg3 &err-extv-pl3) ;
 #fi Minulla on kaloja. - 
 #$ Must láá kyeleh.
-##	Must lii kuolijd.
-##	Must láá kuolijd.
-##	Must lii kyeleh.
+## Must lii kuolijd.
+## Must láá kuolijd.
+## Must lii kyeleh.
 
-
-ADD:err-extv-pl3 (&err-extv-pl3) TARGET N IF (-1 Loc)(-0  LEDE + Sg3)(1 Num LINK NOT 0 OHTA);
+#!! Verb in plural 
+ADD:err-extv-pl3-numeral (&err-extv-pl3-numeral) TARGET V IF (-1 Loc)(0 LEDE + Sg3)(1 Num LINK NOT 0 OHTA);
+COPY:err-extv-pl3-numeral (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Ind Prs Sg3) ;
 #fi Minulla on kaksi kalaa. - 
-##	Must {lii} kyehti kyele.
+## Must {lii} kyehti kyele.
 #$ Must láá kyehti kyele.
-ADD:err-ext-vagr (&err-ext-vagr) TARGET N IF (-2 Loc)(-1 LEDE + Pl3)(0 Num);
+#ADD:err-ext-vagr (&err-ext-vagr) TARGET N IF (-2 Loc)(-1 LEDE + Pl3)(0 Num);
 
 
 
 # e-subject in Pl Acc based on Finnish partitive
 ADD:err-esubj-plnom (&err-esubj-plnom) TARGET N IF (*-1 LEDE + Pl3 BARRIER NOT-NPMOD LINK -1 Loc)(0 (N Pl Acc) OR (N Pl Ill));
 #fi Pihalla on poroja. - 
-#$ 	Šiljoost láá poccuuh. 
-##	Šiljoost láá poccuid.
-##	Šiljoost láá čapis poccuid.
+#$ Šiljoost láá poccuuh. 
+## Šiljoost láá poccuid.
+## Šiljoost láá čapis poccuid.
 
 
 
 
 ADD:err-extneg-pl3 (&err-extneg-pl3) TARGET V IF (0 ("ij") + Sg3)(*1 N + Pl + Nom BARRIER Sg + Nom) ;
 #fi Pihalla ei ole enää poroja. - 
-#$ 	Šiljoost iä lah innig poccuuh.
-##	Šiljoost ij lah innig poccuuh.
-##	Šiljoost iä lah innig poccuid.
-##	Šiljoost ij lah innig poccuid.
+#$ Šiljoost iä lah innig poccuuh.
+## Šiljoost ij lah innig poccuuh.
+## Šiljoost iä lah innig poccuid.
+## Šiljoost ij lah innig poccuid.
 
 
 #!! !Predicative
@@ -2048,7 +2097,7 @@ ADD:err-pl-obj (&err-pl-obj) TARGET N IF (*-2 Nom)(-1 TV + Ind LINK NOT 0 Der/Pa
 #!! !ConNeg Better: Target whatever is there and should have been a conneg. !!!
 ADD:err-no-conneg (&err-no-conneg) TARGET V IF (-1 Neg) (NOT *-2 ConNeg)(0 V + Ind OR Cond)(NOT 0 ConNeg)(NOT *1 ConNeg BARRIER CLB);
 #$ Sun ij lah.
-##	Sun ij {lii}.
+## Sun ij {lii}.
 
 
 #!! !Existential sentences and habitives
@@ -2056,8 +2105,8 @@ ADD:err-no-conneg (&err-no-conneg) TARGET V IF (-1 Neg) (NOT *-2 ConNeg)(0 V + I
 ADD:err-extv-pl3 (&err-extv-pl3) TARGET V IF (-1 Loc)(0 LEDE + Sg3)(1 Num)(NOT 1 OHTA);
 
 ADD:err-extsubj-nom (&err-extsubj-nom) TARGET N IF (*-1 LEDE + Sg3 OR LEDE + Pl3 BARRIER NOT-ADV-PCLE)(0 N + Pl + Acc)(NEGATE *1 TV + Ger OR TV + PrfPrc OR TV + Inf BARRIER S-BOUNDARY OR VFIN) ;
-#$	Šiljoost láá poccuuh.
-##	Šiljoost láá ain {poccuid}.
+#$ Šiljoost láá poccuuh.
+## Šiljoost láá ain {poccuid}.
 
 ADD:err-extsubj-nom (&err-extsubj-nom) TARGET N IF (-1 LEDE + Sg3 OR LEDE + Pl3)(0 N + Pl + Ill);
 
@@ -2068,15 +2117,16 @@ ADD:err-nom-obj (&err-nom-obj) TARGET N IF (-2 VFIN + Sg1)(-1 PrfPrc)(0 N + Pl +
 ADD:err-nom-obj (&err-nom-obj) TARGET N IF (-2 VFIN + Sg1)(-1 Pl + Nom)(0 N + Pl + Nom);
 
 ADD:err-nom-obj (&err-nom-obj) TARGET N IF (-2 VFIN + Sg1)(-1 Pl + Nom OR Attr)(0 N + Pl + Nom);
+
 ADD:err-nom-obj (&err-nom-obj) TARGET N IF (-3 VFIN + Sg1)(-1 Pl + Nom OR Attr)(-2 PrfPrc)(0 N + Pl + Nom);
 ADD:err-nom-obj (&err-nom-obj) TARGET N IF (-3 VFIN + Sg1)(-1 Pl + Nom OR Attr)(-2 Pl + Nom)(0 N + Pl + Nom);
-##	Lam valjim taah säänih.
-#$ Lam valjim táid saanijd.
+#$ Lam valjim taah säänih.
+## Lam valjim táid saanijd.
 # olen valinnut nämä sanat
 
 ADD:err-acc-obj-top (&err-acc-obj-top) TARGET N IF (0 Pl + Acc LINK *-1 BOS BARRIER Nom)(1 V + Sg3)(2 Adv)(NOT *3 TV);
-##	Anarâškielâlijd noomâid kiävttoo uccáá.
-#$ Anarâškielâliih noomah kiävttojeh uccáá.
+#$ Anarâškielâlijd noomâid kiävttoo uccáá.
+## Anarâškielâliih noomah kiävttojeh uccáá.
 
 # Inarinsaamenkielisiä nimiä käytetään vähän
 
@@ -2094,25 +2144,25 @@ ADD:err-imp-nomobj (&err-imp-nomobj) TARGET N IF (-1C Imprt)(NOT 0 Acc OR Gen)(0
 
 
 #fi	Myy nämä kalat - 
-#$ 	Vyebdi taid kuolijd! 
-##	Vyebdi taah kyeleh!
+#$ Vyebdi taid kuolijd! 
+## Vyebdi taah kyeleh!
 
 
 #!! !!Infinitive errors
 
 ADD:err-vchain-prfprc (&err-vchain-prfprc) TARGET V IF (-1 LEDE + Ind + Sg1 OR LEDE + Ind + Sg2)(0 Inf); #1,2
-## Sii kielâtááiđu ovdedem tiet mun lam luuhâđ anarâškielâ.
-#$ Sii kielâtááiđu ovdedem tiet mun lam luuhâm anarâškielâ.
+#$ Sii kielâtááiđu ovdedem tiet mun lam luuhâđ anarâškielâ.
+## Sii kielâtááiđu ovdedem tiet mun lam luuhâm anarâškielâ.
 
 #!! Numeral phrases
 #!! The rule is: 2-6 + gensg, 7- + par
 ADD:err-num-gensg (&err-num-gensg) TARGET N IF (-1 TWO-TO-SIX)(0 N + Par);
-##	Must láá kyehti {kyellid}.
-#$ Must láá kyekhi kyele.
+#$ Must láá kyehti {kyellid}.
+## Must láá kyekhi kyele.
 
 ADD:err-num-gensg (&err-num-par) TARGET N IF (-1 Num LINK 0 SEVEN-AND-MORE)(0 N + Sg + Gen)(NOT 0 ABBR)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR Sem/Measr_Time) ;
-##	Must láá čiččâm {kyele}.
-#$ Must láá čiččâm kyellid.
+#$ Must láá čiččâm {kyele}.
+## Must láá čiččâm kyellid.
 
 
 #!!Accusative subjects in passive 
@@ -2120,10 +2170,10 @@ ADD:err-num-gensg (&err-num-par) TARGET N IF (-1 Num LINK 0 SEVEN-AND-MORE)(0 N 
 
 # b) Suomâkielâ partitiiv passiivráhtusijn; sämikielâst passiiv ohtâvuođâst lii nominatiiv já verbâ maaŋgâlovvoost.
 MAP:err-pass-accsubj (&err-pass-accsubj) TARGET N IF (0C Acc + Pl)(1 Der/Pass OR LEXICALISED-PASS-V + Pl3);
-	
+COPY:err-pass-accsubj (Nom &SUGGEST) EXCEPT (Acc) TARGET (N Pl Nom &err-pass-accsubj);
 #fi	Saamenkielisiä nimityksiä käytetään vähän. - 
-#$ 	Sämikielâliih nomâttâsah kiävttojeh uccáá. 
-##	Sämikielâlijd nomâttâsâid kiävttojeh uccáá. 
+#$	Sämikielâlijd nomâttâsâid kiävttojeh uccáá. 
+## 	Sämikielâliih nomâttâsah kiävttojeh uccáá. 
 
 
 #!! Attributive forms
