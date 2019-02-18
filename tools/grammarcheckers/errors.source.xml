@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE errors>
+
+<!-- Make formatting look nice:
+     $ xmllint ==encode utf=8 ==format errors.xml -->
+
+<!-- Check if valid:
+     $ xmllint ==noout ==dtdvalid errors.dtd errors.xml -->
+
+<!-- change equals to hyphens in the above commands -->
+
+<errors>
+
+  <defaults>
+    <!--
+        The defaults provide error messages for where you haven't explicitly
+        provided one, as long as there's a match in "ids" for the error tag
+    -->
+    <default>
+      <ids>
+        <re v="lex-.*"/>       <!-- regex that matches all real-word-errors -->
+<!--        <e id="unreal-girjji"/>  you can list things explicitly if regexes are hard to use -->
+      </ids>
+      <header>
+        <title xml:lang="en">The word "$1" exists in the dictionary, but means something different in this context.</title>
+        <title xml:lang="smn">Ordet "$1" eksisterer, men akkurat her passar det kanskje ikkje så godt.</title>
+        <!-- TODO: fix title lang=fo -->
+      </header>
+      <body>
+        <description xml:lang="en">Real-word error</description>
+        <description xml:lang="smn">Skrivefeil</description>
+      </body>
+    </default>
+<!--
+    <default>
+      <ids>
+        <re v="msyn-wrong-case.*"/>
+        <re v="msyn-wrong_case.*"/>
+      </ids>
+      <header>
+        <title xml:lang="en">The word "$1" seems to be in the wrong case.</title>
+        <title xml:lang="smn"> "$1" ser ut til å vere brukt i feil kasus.</title>
+      </header>
+      <body>
+        <description xml:lang="en">Wrong case</description>
+        <description xml:lang="smn">Feil kasus</description>
+      </body>
+    </default>
+    -->
+  </defaults>
+
+  
+  <error id="err-agr-sg1">
+    <header>
+      <title xml:lang="en">The verb-form "$1" follows 'mun', and should probably be first person singular.</title>
+      <title xml:lang="smn">Verbimuoto "$1" tulee 'mun'-sanan jälkeen, ja pitäisi luultavasti olla ensimmäisessä persoonassa.</title>
+    </header>
+    <body>
+      <description xml:lang="en">First person singular after 'mun'.</description>
+      <description xml:lang="smn">Verbi ensimmäisessä persoonassa.</description>
+    </body>
+  </error>
+
+  
+  <error id="err-agr-sg2">
+    <header>
+      <title xml:lang="en">The verb-form "$1" follows 'tun', and should probably be second person singular.</title>
+      <title xml:lang="smn">Verbimuoto "$1" tulee 'tun'-sanan jälkeen, ja pitäisi luultavasti olla toisessa persoonassa.</title>
+    </header>
+    <body>
+      <description xml:lang="en">Second person singular after 'tun'.</description>
+      <description xml:lang="smn">Verbi toisessa persoonassa.</description>
+    </body>
+  </error>
+
+
+  <error id="err-agr-pl1">
+    <header>
+      <title xml:lang="en">The verb-form "$1" follows 'mij', and should probably be first person plural.</title>
+      <title xml:lang="smn">Verbimuoto "$1" tulee 'mij'-sanan jälkeen, ja pitäisi luultavasti olla monikon ensimmäisessä persoonassa.</title>
+    </header>
+    <body>
+      <description xml:lang="en">First person singular after 'mij'.</description>
+      <description xml:lang="smn">Verbi monikon ensimmäisessä persoonassa.</description>
+    </body>
+  </error>
+
+
+  <error id="err-agr-pl2">
+    <header>
+      <title xml:lang="en">The verb-form "$1" follows 'tij', and should probably be second person plural.</title>
+      <title xml:lang="smn">Verbimuoto "$1" tulee 'tij'-sanan jälkeen, ja pitäisi luultavasti olla monikon toisessa persoonassa.</title>
+    </header>
+    <body>
+      <description xml:lang="en">Second person singular after 'tij'.</description>
+      <description xml:lang="smn">Verbi monikon toisessa persoonassa.</description>
+    </body>
+  </error>
+
+  <error id="err-orrood-inf">
+    <header>
+      <title xml:lang="en">The verb-form "$1" follows 'orroođ', and should probably be in Actio Essive.</title>
+      <title xml:lang="smn">Verbimuoto "$1" tulee 'orroođ'-sanan jälkeen, ja pitäisi luultavasti olla aktio essiivissä.</title>
+    </header>
+    <body>
+      <description xml:lang="en">Actio essive after 'orroođ'.</description>
+      <description xml:lang="smn">Aktio essiivi 'orroođ'-verbin jälkeen.</description>
+    </body>
+  </error>
+
+
+  <error id="err-extv-pl3">
+    <header>
+      <title xml:lang="en">The verb-form "$1" has a plural subject, and should be plural.</title>
+      <title xml:lang="smn">Verbimuodolla "$1" on monikkosubjekti, ja pitäisi luultavasti olla monikossa.</title>
+    </header>
+    <body>
+      <description xml:lang="en">Plural for plural subject.</description>
+      <description xml:lang="smn">Monikko jos subjekti on monikossa.</description>
+    </body>
+  </error>
+
+
+  <error id="err-extv-pl3-numeral">
+    <header>
+      <title xml:lang="en">The verb-form "$1" has a numeral phrase as subject, and should be plural.</title>
+      <title xml:lang="smn">Verbimuodon "$1" subjekti on lukusana, ja verbi pitäisi luultavasti olla monikossa.</title>
+    </header>
+    <body>
+      <description xml:lang="en">Plural for numeral subject.</description>
+      <description xml:lang="smn">Monikko jos subjekti on lukusana.</description>
+    </body>
+  </error>
+
+
+  <error id="err-extv-vagr">
+    <header>
+      <title xml:lang="en">The verb-form "$1" has a plural subject, and should be plural.</title>
+      <title xml:lang="smn">Verbimuodolla "$1" on monikkosubjekti, ja pitäisi luultavasti olla monikossa.</title>
+    </header>
+    <body>
+      <description xml:lang="en">Plural for plural subject.</description>
+      <description xml:lang="smn">Monikko jos subjekti on monikossa.</description>
+    </body>
+  </error>
+
+
+  <error id="err-nom-obj">
+    <header>
+      <title xml:lang="en">The noun "$1" is in the nominative, but is probably an object and should be in accusative.</title>
+      <title xml:lang="smn">Substantiivi "$1" on nominatiivissa, mutta se on luultavasti objekti, ja pitäisi siis olla akkusatiivissa.</title>
+    </header>
+    <body>
+      <description xml:lang="en">Accusative plural object.</description>
+      <description xml:lang="smn">Akkusatiiviobjekti myös monikossa.</description>
+    </body>
+  </error>
+
+ 
+  <error id="err-pass-accsubj">
+    <header>
+      <title xml:lang="en">The noun "$1" is in the nominative, but is probably an object and should be in accusative.</title>
+      <title xml:lang="smn">Substantiivi "$1" on nominatiivissa, mutta se on luultavasti objekti, ja pitäisi siis olla akkusatiivissa.</title>
+    </header>
+    <body>
+      <description xml:lang="en">Accusative plural object.</description>
+      <description xml:lang="smn">Akkusatiiviobjekti myös monikossa.</description>
+    </body>
+  </error>
+
+ 
+  <error id="err-num-gensg">
+    <header>
+      <title xml:lang="en">The noun "$1" is in the nominative, but is probably an object and should be in accusative.</title>
+      <title xml:lang="smn">Jos lukusana on alle 7, niin "$1" pitää olla genetiivissäko?.</title>
+    </header>
+    <body>
+      <description xml:lang="en">Accusative plural object.</description>
+      <description xml:lang="smn">Akkusatiiviobjekti myös monikossa.</description>
+    </body>
+  </error>
+
+ 
+</errors>
