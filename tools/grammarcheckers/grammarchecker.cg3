@@ -1344,7 +1344,9 @@ LIST OHTA = "ohtâ" "1"; #!! OKTA
 SET NUM = Num - OHTA ;
 
 LIST TWO-TO-SIX = "kyehti" "kulmâ" "nelji" "vittâ" "kuttâ" "2" "3" "4" "5" "6" "err-extv-pl3" "3)" "4)" "5)" "6)" ; # ) er feil
-SET SEVEN-AND-MORE = Num - TWO-TO-SIX - OHTA ;
+SET SEVEN-AND-MORE-WORD = Num - TWO-TO-SIX - OHTA ;
+LIST SEVEN-AND-MORE-ARABIC = "7" "8" "9" ("[1-9][0-9]"r)  ("[1-9][0-9][0-9]"r);
+SET SEVEN-AND-MORE = SEVEN-AND-MORE-WORD OR SEVEN-AND-MORE-ARABIC ;
 
 # LIST PEOPLE-NUM = "guovttis" "golmmas" "njealjis" "viđas" "guđas" "čiežas" "gávccis" "ovccis" "logis" ;
 
@@ -1999,7 +2001,7 @@ ADD:err-agr-sg1 (&err-agr-sg1) TARGET V IF (NOT -2 Sup)(-1C Pron + Sg1 + Nom)(-1
 COPY:err-agr-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prs &err-agr-sg1);
 
 
-ADD:err-agr-sg2 (&err-agr-sg2) TARGET V IF (NOT -2 Sup)(-1C Pron + Sg2 + Nom)(0 V)(NOT 0 Sg2);
+ADD:err-agr-sg2 (&err-agr-sg2) TARGET V IF (NOT -2 Sup)(-1C Pron + Sg2 + Nom)(0 (V Ind Prs))(NOT 0 Sg2);
 COPY:err-agr-sg2 (Sg2 &SUGGEST) EXCEPT VNOTSG2 TARGET (V Ind Prs &err-agr-sg2);
 
 #$ Tun puátá.
@@ -2059,7 +2061,7 @@ COPY:err-extv-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Ind Prs Sg3 &err-extv-pl3)
 
 #!! Verb in plural 
 ADD:err-extv-pl3-numeral (&err-extv-pl3-numeral) TARGET V IF (-1 Loc)(0 LEDE + Sg3)(1 Num LINK NOT 0 OHTA);
-COPY:err-extv-pl3-numeral (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Ind Prs Sg3) ;
+COPY:err-extv-pl3-numeral (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Ind Prs Sg3 &err-extv-pl3-numeral) ;
 #fi Minulla on kaksi kalaa. - 
 ## Must {lii} kyehti kyele.
 #$ Must láá kyehti kyele.
@@ -2120,11 +2122,14 @@ ADD:err-nom-obj (&err-nom-obj) TARGET N IF (-2 VFIN + Sg1)(-1 Pl + Nom OR Attr)(
 
 ADD:err-nom-obj (&err-nom-obj) TARGET N IF (-3 VFIN + Sg1)(-1 Pl + Nom OR Attr)(-2 PrfPrc)(0 N + Pl + Nom);
 ADD:err-nom-obj (&err-nom-obj) TARGET N IF (-3 VFIN + Sg1)(-1 Pl + Nom OR Attr)(-2 Pl + Nom)(0 N + Pl + Nom);
+COPY:err-nom-obj (Acc &SUGGEST) EXCEPT (Nom) TARGET (N Pl Nom &err-nom-obj);
 #$ Lam valjim taah säänih.
 ## Lam valjim táid saanijd.
 # olen valinnut nämä sanat
 
+#!! Acc shall be Nom
 ADD:err-acc-obj-top (&err-acc-obj-top) TARGET N IF (0 Pl + Acc LINK *-1 BOS BARRIER Nom)(1 V + Sg3)(2 Adv)(NOT *3 TV);
+COPY:err-acc-obj-top (Nom &SUGGEST) EXCEPT (Acc) TARGET (N Pl &err-acc-obj-top);
 #$ Anarâškielâlijd noomâid kiävttoo uccáá.
 ## Anarâškielâliih noomah kiävttojeh uccáá.
 
@@ -2141,7 +2146,7 @@ ADD:err-acc-obj-top (&err-acc-obj-top) TARGET N IF (0 Pl + Acc LINK *-1 BOS BARR
 
 ADD:err-imp-nomobj (&err-imp-nomobj) TARGET N IF (-2C Imprt)(-1 PRE-NP-HEAD)(NOT 0 Acc OR Gen)(0 Nom);
 ADD:err-imp-nomobj (&err-imp-nomobj) TARGET N IF (-1C Imprt)(NOT 0 Acc OR Gen)(0 Nom);
-
+COPY:err-imp-nomobj (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &err-imp-nomobj);
 
 #fi	Myy nämä kalat - 
 #$ Vyebdi taid kuolijd! 
@@ -2157,10 +2162,17 @@ ADD:err-vchain-prfprc (&err-vchain-prfprc) TARGET V IF (-1 LEDE + Ind + Sg1 OR L
 #!! Numeral phrases
 #!! The rule is: 2-6 + gensg, 7- + par
 ADD:err-num-gensg (&err-num-gensg) TARGET N IF (-1 TWO-TO-SIX)(0 N + Par);
+COPY:err-num-gensg (Sg Gen &SUGGEST) EXCEPT Par TARGET (N &err-num-gensg);
 #$ Must láá kyehti {kyellid}.
 ## Must láá kyekhi kyele.
 
-ADD:err-num-gensg (&err-num-par) TARGET N IF (-1 Num LINK 0 SEVEN-AND-MORE)(0 N + Sg + Gen)(NOT 0 ABBR)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR Sem/Measr_Time) ;
+LIST SGGENACC = (Sg Gen) (Sg Acc) ;
+
+ADD:err-num-par (&err-num-par) TARGET N IF (-1 Num LINK 0 SEVEN-AND-MORE)(0 N + Sg + Gen)(NOT 0 ABBR)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR Sem/Measr_Time)(NOT 1 Po OR TIME-N) ;
+COPY:err-num-par (Par &SUGGEST) EXCEPT SGGENACC TARGET (N &err-num-par) ;
+
+ADD:err-num-par (&err-num-par) TARGET N IF (-1 Num LINK 0 SEVEN-AND-MORE)(0 N + Sg + Acc)(NOT 0 ABBR)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR Sem/Measr_Time) ;
+COPY:err-num-par (Par &SUGGEST) EXCEPT SGGENACC TARGET (N  &err-num-par) ;
 #$ Must láá čiččâm {kyele}.
 ## Must láá čiččâm kyellid.
 
@@ -2170,7 +2182,7 @@ ADD:err-num-gensg (&err-num-par) TARGET N IF (-1 Num LINK 0 SEVEN-AND-MORE)(0 N 
 
 # b) Suomâkielâ partitiiv passiivráhtusijn; sämikielâst passiiv ohtâvuođâst lii nominatiiv já verbâ maaŋgâlovvoost.
 MAP:err-pass-accsubj (&err-pass-accsubj) TARGET N IF (0C Acc + Pl)(1 Der/Pass OR LEXICALISED-PASS-V + Pl3);
-COPY:err-pass-accsubj (Nom &SUGGEST) EXCEPT (Acc) TARGET (N Pl Nom &err-pass-accsubj);
+COPY:err-pass-accsubj (Nom &SUGGEST) EXCEPT (Acc) TARGET (N Pl &err-pass-accsubj);
 #fi	Saamenkielisiä nimityksiä käytetään vähän. - 
 #$	Sämikielâlijd nomâttâsâid kiävttojeh uccáá. 
 ## 	Sämikielâliih nomâttâsah kiävttojeh uccáá. 
@@ -2180,6 +2192,7 @@ COPY:err-pass-accsubj (Nom &SUGGEST) EXCEPT (Acc) TARGET (N Pl Nom &err-pass-acc
 
 
 ADD:syn-pred-not-attr (&syn-pred-not-attr) TARGET (A Attr) IF (*-1 COPULAS BARRIER V OR S-BOUNDARY LINK *-1 Nom) (NEGATE 1 N)(NEGATE 1 CC OR COMMA LINK 1 A LINK 1 N)(NEGATE 1 (A Attr) OR ? LINK *1 N BARRIER NOT-NPMOD)(NEGATE 1 (A Sg Nom) OR (Pron Pers))(NEGATE 0 ("puoh") LINK 1 Pron LINK *1 N)(NOT 0 (A Sg Nom))(NEGATE 1 COMMA OR ("-") LINK 1 ("mut") LINK *1 (A Attr) BARRIER NOT-NPMODADV)(NEGATE 0 Superl LINK 1 CC LINK 1 ("eenâb" Superl) OR ("iänááš") LINK 1 A LINK 1 N)(NEGATE 1 (Num Attr) LINK 1 N)(NEGATE 0 ("eenâb") LINK 1 PrfPrc);
+
 
 #ADD:syn-pred-not-attr (&syn-pred-not-attr) TARGET (A Attr) IF (*-1 COPULAS BARRIER V OR GRAMCHK-S-BOUNDARY LINK *-1 Nom) (NEGATE 1 N)(NEGATE 1 CC OR COMMA LINK 1 A LINK 1 N)(NEGATE 1 (A Attr) OR ? LINK *1 N BARRIER NPNH)(NEGATE 1 (A Sg Nom) OR (Pron Pers))(NEGATE 0 ("visot") OR ("buot") LINK 1 Pron LINK *1 N)(NEGATE 0 PRED-ATTR-ADJ)(NEGATE 1 COMMA OR CC LINK 1 (A Attr) OR PRED-ATTR-ADJ)(NOT 0 (A Sg Nom))(NEGATE 1 COMMA OR ("-") LINK 1 ("muhto") LINK *1 (A Attr) BARRIER NPNHA)(NEGATE 0 Superl LINK 1 CC LINK 1 ("eanet" Superl) OR ("eanemus") LINK 1 A LINK 1 N)(NEGATE 1 (Num Attr) LINK 1 N)(NEGATE 0 ("eanet") LINK 1 PrfPrc);
 
