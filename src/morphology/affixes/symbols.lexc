@@ -27,21 +27,32 @@ LEXICON SYMBOL_connector
  +Err/Orth:%-e SYMBOL_suff    ; ! §-esne
  +Err/Orth:%'e SYMBOL_suff    ; ! §'esne
 
+
+! NB! Re-consider the use of the K lexicon! Is it really true?
 LEXICON SYMBOL_NO_suff
- +Sg+Nom: # ;
+    +Attr: K ; ! §
+  +Sg+Nom: K ; ! §
+! +Sg+Gen: K ; ! §
+! +Sg+Acc: K ; ! §
 
 LEXICON SYMBOL_suff
- +Sg+Gen:n       # ;
- +Sg+Acc:m       # ;
- +Sg+Ill:se      # ;
- +Sg+Ine:sne     # ;
- +Sg+Ela:ste     # ;
- +Sg+Com:ine     # ;
-    +Ess:ine     # ;
- +Pl+Nom:h       # ;
- +Pl+Gen:ij      # ;
- +Pl+Acc:ide     # ;
- +Pl+Ill:ide     # ;
- +Pl+Ine:ine     # ;
- +Pl+Ela:jste    # ;
- +Pl+Com:jgujmie # ;
+!                         K ; ! § 14 (no case on the bare §). Oh, yes. Case.
+           +Sg+Gen:       K ; ! § (case suffix on the rest, in case of explicit
+           +Sg+Acc:       K ; !       suffix)
+           +Sg+Ill:n      K ;
+           +Sg+Loc:st     K ; ! §:s
+           +Sg+Com:in     K ;
+              +Ess:n      K ;
+              +Par:d      K ;
+           +Pl+Nom:t      K ;
+           +Pl+Gen:id     K ;
+           +Pl+Acc:id     K ;
+           +Pl+Ill:ide    K ;
+           +Pl+Loc:in     K ;
+           +Pl+Com:igujn  K ;
+  +Pl+Nom+Err/Orth:at     K ;
+  +Pl+Gen+Err/Orth:ajd    K ;
+  +Pl+Acc+Err/Orth:ajd    K ;
+  +Pl+Ill+Err/Orth:ajde   K ;
+  +Pl+Loc+Err/Orth:ajn    K ;
+  +Pl+Com+Err/Orth:ajgujn K ;

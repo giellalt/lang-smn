@@ -28,7 +28,6 @@ TRNUMAB ;  !!= # The @CODE@ lexicon (abbrs trans wrt. numberals)
 TRAB ;	   !!= # The @CODE@ lexicon (transitive abbrs) tri. 
 NOAB ;	   !!= # The @CODE@ lexicon (not really abbrs)
 NUMNOAB ;  !!= # The @CODE@ lexicon (not behaving as abbr before num)
-SYMBOLS ;  !!= # The @CODE@ lexicon (misc. symbols)
 
 !! !!The sublexica
 
@@ -155,54 +154,8 @@ LEXICON ab-nodot-verb   !!= * __@CODE@__
 LEXICON ab-dot-IVprfprc   !!= * __@CODE@__
 +V+ABBR+IV+PrfPrc:%.%> # ; ! Period.
 
-LEXICON SYMBOLconnector   !!= * __@CODE@__
-  +Attr:   K ; ! §
-  +Sg+Nom:   K ; ! §
-!          +Sg+Gen:   K ; ! §
-!          +Sg+Acc:   K ; ! §
- +Err/Orth:   SYMBOLsuff ; ! §as
-         :%: SYMBOLsuff ; ! §:s
- +Err/Orth:%- SYMBOLsuff ; ! §-as ! Perhaps.
- +Err/Orth:' SYMBOLsuff ; ! §'as ! Perhaps.
-
-LEXICON SYMBOLsuff   !!= * __@CODE@__
-!                       K ; ! § 14 (no case on the bare §). Oh, yes. Case.
-         +Sg+Gen:       K ;	! §    (case suffix on the rest, in case of explicit
-         +Sg+Acc:       K ;	!       suffix)
-         +Sg+Ill:n      K ;
-         +Sg+Loc:st      K ;  ! §:s
-         +Sg+Com:in     K ;
-            +Ess:n      K ;
-            +Par:d      K ;
-         +Pl+Nom:t      K ;
-         +Pl+Gen:id     K ;
-         +Pl+Acc:id     K ;
-         +Pl+Ill:ide    K ;
-         +Pl+Loc:in     K ;
-         +Pl+Com:igujn  K ;
- +Pl+Nom+Err/Orth:at     K ;
- +Pl+Gen+Err/Orth:ajd    K ;
- +Pl+Acc+Err/Orth:ajd    K ;
- +Pl+Ill+Err/Orth:ajde   K ;
- +Pl+Loc+Err/Orth:ajn    K ;
- +Pl+Com+Err/Orth:ajgujn K ;
-
-
-
 !! !!The abbreviation lexicon itself
 ! -------------------------------
-
-! Miscellaneous symbols, abbreviation symbols
-! -------------------------------------------
-
-LEXICON SYMBOLS   !!= * __@CODE@__ is for iscellaneous abbr symbols
- §+N+ABBR:§  SYMBOLconnector ; ! §:s
-§§+N+ABBR:§§ SYMBOLconnector ; !§§:ain
- $+N+ABBR:$  SYMBOLconnector ; ! $:s
- €+N+ABBR:€  SYMBOLconnector ; ! €:s
- £+N+ABBR:£  SYMBOLconnector ; ! £:s
- ®+N+ABBR:® # ;
- ©+N+ABBR:© # ;
 
 
 ! =============================================== !
