@@ -235,10 +235,11 @@ afterlong
 
 
 
-! For quick compilation, comment the following line in:
-! save h.fst ;
-! Then, at the command line, give this command:
-! xfst -utf8 < src/hyph-sme.txt
-! As a result, a temporary h.fst file will be saved in sme/, it can be called
+! If you want to compile this outside the make system, run the following:
+! xfst -e "source < hyphenation.xfscript"
+! invert net 
+! save h.fst 
+! quit 
+! As a result, a temporary h.fst file will be saved, it can be called
 ! with e.g. "lookup -flags mbTT -utf8 h.fst", or in a pipe.
 
