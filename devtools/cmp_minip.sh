@@ -2,12 +2,10 @@
 
 # script to generate paradigms for generating word forms
 # command:
-# sh generate_contlex_para.sh PATTERN
+# sh cmp_minip.sh PATTERN
 # example, when you are in smn:
-# sh devtools/der_noun_minip.sh LAAVU | less
-# sh devtools/der_noun_minip.sh smiergâs 
-# Only get the lemma you ask for:
-# sh devtools/der_noun_minip.sh '^smiergâs[:+]' 
+# sh devtools/cmp_minip.sh '^nieidâ:' 
+# sh devtools/noun_minip.sh LAAVU | less
 
 
 LOOKUP=$(echo $LOOKUP)
@@ -16,9 +14,9 @@ GTHOME=$(echo $GTHOME)
 
 PATTERN=$1
 L_FILE="in.txt"
-cut -d '!' -f1 src/morphology/stems/nouns.lexc | egrep $PATTERN | tr '+' ':' | cut -d ':' -f1 > $L_FILE
+cut -d '!' -f1 src/morphology/stems/nouns.lexc | egrep $PATTERN | tr '+' ':' | cut -d ':' -f1>$L_FILE
 
-P_FILE="test/data/der_nouns.txt"
+P_FILE="test/data/cmp_paradigm.txt"
 
 for lemma in $(cat $L_FILE);
 do
