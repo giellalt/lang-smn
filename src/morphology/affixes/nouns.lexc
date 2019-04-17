@@ -166,7 +166,7 @@ LEXICON 2SOLLA_SG !!= * ''@CODE@'' (Sg forms‚ pointing to Px)
 +N+Sg+Loc:^WG%>st CPXsuff ; !
 +N+Sg+Com:^WG%>in CPXsuff ;  ! 
 +N+Ess:n CPXsuff ;				! sollân
-+N+Der1+Der/Dimin: S_KAANDAS ; !kaandâš nieidâš tuulâš
++N+Der1+Der/Dimin: SOLLA_DIM ; !kaandâš nieidâš tuulâš
 +N:^WG%> Gen_DER ;
 +N:%> Nom_DER ;
 !! \\ 
@@ -195,6 +195,24 @@ LEXICON X_SOLLA_PL  !!= * ''@CODE@'' (Pl Ill, the rest pointing to
  X_ALGA_PL_COMMON ; !!= @CODE@)
 +Pl+Ill:^WG^RLEN^SVLOW%>id K ; ! sooláid
 
+
+LEXICON SOLLA_DIM
++Sg+Nom^WG^RLEN:%>š K ;
++Sg+Gen:^FVD%>ii K ;
++Sg+Acc:^FVD%>ii K ;
++Sg+Ill:^FVD%>iižán K ;
++Sg+Loc:^FVD%>iist K ;
++Sg+Com:^FVD%>ijn K ;
++Sg+Abe:^FVD%>iittáá K ;
++Ess:%>žin K ;
++Par:%>žid K ;
++Pl+Nom:^FVD%>ih K ;
++Pl+Gen:^FVD%>ii K ;
++Pl+Acc:^FVD%>iid K ;
++Pl+Ill:^FVD%>iid K ;
++Pl+Loc:^FVD%>iin K ;
++Pl+Com:^FVD%>i GUIN ;
++Pl+Abe:^FVD%>iittáá K ;
 
 !! !2KIEHA lexicon family
 
@@ -275,7 +293,7 @@ LEXICON 2KIELA_SG !!= * ''@CODE@'' (Sg forms, pointing to Px)
 +N+Ess:^CLEN%>n K ;				! kiellân # puolipitkä > pitkä
 +N:^WG%> Gen_DER ;
 +N:^RVSH%> Nom_DER ;
-+N+Der1+Der/Dimin: S_KAANDAS ; !kieđâš
++N+Der1+Der/Dimin: KIELA_DIM ; !kieđâš
 !! \\ 
 LEXICON 2KIELA_PL !!= * ''@CODE@'' (Pl forms, pointing to Px)
 +N: X_KIELA_PL ;
@@ -298,6 +316,26 @@ LEXICON X_KIELA_SG !!= * ''@CODE@''
 +Par:^CLEN%>d K ;				! kiellâd # puolipitkä > pitkä
 +Ess:^CLEN%>n K ;				! kiellân # puolipitkä > pitkä
 KIEHA_KIELA_SG ;
+
+
+
+LEXICON KIELA_DIM
++Sg+Nom^WG^RLEN:%>š K ;
++Sg+Gen:^FVD^WG%>ii K ;
++Sg+Acc:^FVD^WG%>ii K ;
++Sg+Ill:^FVD^WG%>iižán K ;
++Sg+Loc:^FVD^WG%>iist K ;
++Sg+Com:^FVD^WG%>ijn K ;
++Sg+Abe:^FVD^WG%>iittáá K ;
++Ess:%>žin K ;
++Par:%>žid K ;
++Pl+Nom:^FVD^WG%>ih K ;
++Pl+Gen:^FVD^WG%>ii K ;
++Pl+Acc:^FVD^WG%>iid K ;
++Pl+Ill:^FVD^WG%>iid K ;
++Pl+Loc:^FVD^WG%>iin K ;
++Pl+Com:^FVD^WG%>i GUIN ;
++Pl+Abe:^FVD^WG%>iittáá K ;
 
 !! !KIEHA-KIELA common forms
 LEXICON KIEHA_KIELA_SG !!= * ''@CODE@''
@@ -1367,7 +1405,7 @@ LEXICON 2STAALU !!= * ''@CODE@'' like 2LAAVU, but long vowel in cmp gen.
 
 
 
-LEXICON 2STAALU_SG !!= * ''@CODE@''
+LEXICON 2STAALU_SG !!= * ''@CODE@'' stáálu
 +N: X_LAAVU_SG ;
 +N+Cmp/SgNom:^RVSH%> Rhash ;
 +N+Cmp/SgGen:^WG^RVSH%> Rhash ; ! 
@@ -1384,8 +1422,25 @@ LEXICON 2STAALU_SG !!= * ''@CODE@''
 +N+Ess:^RVSH%>n CPXsuff ;               !  
 +N:%> Nom_DER ;
 +N:^WG^RVSH%> Gen_DER ; !
-+N+Der1+Der/Dimin: S_KAANDAS ; !
++N+Der1+Der/Dimin: STAALU_DIM ; !
 
+LEXICON STAALU_DIM
++Sg+Nom:^WG%>š K ;
++Sg+Gen:^WG^VBACK%>u K ;
++Sg+Acc:^WG^VBACK%>u K ;
++Sg+Ill:^WG^VBACK%>užán K ;
++Sg+Loc:^WG^VBACK%>ust K ;
++Sg+Com:^WG^VBACK%>in K ;
++Sg+Abe:^WG^VBACK%>uttáá K ;
++Ess:^WG^VBACK%>žin K ;
++Par:^WG^VBACK%>žid K ;
++Pl+Nom:^WG^VBACK%>uh K ;
++Pl+Gen:^WG^VBACK%>ui K ;
++Pl+Acc:^WG^VBACK%>uid K ;
++Pl+Ill:^WG^VBACK%>uid K ;
++Pl+Loc:^WG^VBACK%>uin K ;
++Pl+Com:^WG^VBACK%>ui GUIN ;
++Pl+Abe:^WG^VBACK%>uittáá K ;
 
 LEXICON 2RAAVHU !!= * ''@CODE@'' like 2LAAVU, but long vowel in cmp. 
 2RAAVHU_SG ;
@@ -1410,7 +1465,9 @@ LEXICON 2RAAVHU_SG !!= * ''@CODE@''
 +N+Ess:^RVSH%>n CPXsuff ;               !  
 +N:%> Nom_DER ;
 +N:^WG^RVSH%> Gen_DER ; !
-+N+Der1+Der/Dimin: S_KAANDAS ; !
++N+Der1+Der/Dimin: STAALU_DIM ; !
+
+
 
 LEXICON 2RAAVHU_PL !!= * ''@CODE@'' 
 +N: X_KIELA_PL ;
@@ -1447,7 +1504,7 @@ LEXICON 2LAAVU_SG !!= * ''@CODE@''
 +N+Ess:^RVSH%>n CPXsuff ;               ! mátunân
 +N:%> Nom_DER ;
 +N:^WG^RVSH%> Gen_DER ; !viärulâš
-+N+Der1+Der/Dimin: S_KAANDAS ; !stááluš
++N+Der1+Der/Dimin: STAALU_DIM ; !stááluš
 
 LEXICON 2LAAVU_PL !!= * ''@CODE@'' 
 +N: X_KIELA_PL ;
