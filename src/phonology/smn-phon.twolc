@@ -962,10 +962,10 @@ i:0 <=> \Vow: _ ä: Cns:+ i2:i %>    [i|i3:i|Cns]  ;  !RULE RV !! 1)  i:0 for i�
 
 "Root and stem vowel á:a for verbs"
 !! * __@RULENAME@__ 
-á:a <=> [Cns|.#.|#] _       Cns:+ u2:u  %>   ;  !RULE RV ! conflict when \Vow:
-        [Cns|.#.]   _       Cns:+ i2:i %>    [i|i3:i|Cns]  ; !RULE RV 
-        \Vow:   _ [%^RV: | á: ] Cns:+ [u:|u2:] ([%^WG: | %^CSH:]) (%^CLEN:) %^VBACK: (%^RLEN:|%^RVSH:)  [%>|.#.]   ; !RULE RV  ! 2st verb pákkuđ: pakkum/h/u
-        \Vow:   á: _  Cns:+ [u:|u2:] ([%^WG: | %^CSH:]) (%^CLEN:) %^VBACK: (%^RLEN:) [%>|.#.]   ;  !RULE RV ! nááđđu%^VBACK%^RLEN%>m naađđu>m
+á:a <=> [Cns|.#.|#] _        Cns:+ u2:u  %>   ;  !RULE RV ! conflict when \Vow:
+        [Cns|.#.]   _        Cns:+ i2:i %>    [i|i3:i|Cns]  ; !RULE RV 
+        \Vow:   _ [%^RV:|á:] Cns:+ [u:|u2:] ([%^WG: | %^CSH:]) (%^CLEN:) %^VBACK: (%^RLEN:|%^RVSH:)  [%>|.#.]   ; ! 2st verb pákkuđ: pakkum/h/u
+        \Vow:   á: _         Cns:+ [u:|u2:] ([%^WG: | %^CSH:]) (%^CLEN:) %^VBACK: (%^RLEN:) [%>|.#.]   ; ! nááđđu%^VBACK%^RLEN%>m naađđu>m
         \Vow: a (%^RV:) Cns:+ _  ([%^CSH:|%^WG:])  (%^CLEN:) (%^RLEN:) [%>|.#.] ;  !RULE SV  !trying this as a phonological rule for -eđ verbs
         \Vow: a (%^RV:) Cns:+ :a  ([%^CSH:|%^WG:]) (%^CLEN:) (%^RLEN:) %> _ \Vow: ;  !RULE SUFF  !to prevent conflict
 
@@ -1121,7 +1121,7 @@ o:e <=> u:y _ Cns:+ [e ([%^WG:|%^CLEN:]) %> e|i %^CSH: %> h] ; !RULE RV
 
 "Second syllable vowel change á to e or i in 3syll stems"
 !! * __@RULENAME@__ \\ puttás- > putes, triggers are ^ÁE and ^ÁI já%^RVhhá%^SVl%^ÁI%^WG%^RLEN%> pu5árrás%^ÁI%^WG%>umos
-Vx:Vy <=> Cns: _ (%^SV:) (Cns:)  Vz: (%^FCD:) %^WG: (%^CLEN:) ([%^RVSH:|%^RLEN:]) ([%^SVSH:|%^SLEN:])  [.#.| %> [# |⎈  |i n | i d| n |d ]]   ;  !RULE SV  !no change when the word is added a new foot  \Syll 
+Vx:Vy <=> Cns: _ (%^SV:) (Cns:)  Vz: (%^FCD:) %^WG: (%^CLEN:) ([%^RVSH:|%^RLEN:]) ([%^SVSH:|%^SLEN:])  [.#.|%> [#|⎈|i n|i d|n|d]] ;  !RULE SV  !no change when the word is added a new foot  \Syll 
           Cns: Vx: _ s  Vz: %^WG: ; !lohhes
        where Vx in ( á    á    a   )
              Vy in ( e    i    e   )
@@ -1131,6 +1131,7 @@ Vx:Vy <=> Cns: _ (%^SV:) (Cns:)  Vz: (%^FCD:) %^WG: (%^CLEN:) ([%^RVSH:|%^RLEN:]
 !!€ puttás^ÁE^WG>
 !!€ pu0tes00>
 
+!!€ sollâ
 "Stemvowel shortening  áá and aa to e or i in 3syll"
 !! * __@RULENAME@__ \\ puttás- > putes, triggers are ^ÁE and ^ÁI
 Vx:0 <=> Cns: _ Vx: (Cns:) Vz: %^WG: ;  !RULE SV  !!!!!%^CSH:
@@ -1323,10 +1324,11 @@ u:0 <=> u _  %> :v ; !RULE SV
 
 "Word final vowel deletion"                 
 !!  * __@RULENAME@__ \\ for vaskâm:vaaskâ
-Vx:0 <=> _  %^FVD: (%^CSH:) [.#.|%>] ;  !RULE SC
+Vx:0 <=> _  %^FVD: (%^WG:|%^CSH:) [.#.|%>] ;  !RULE SC
           where Vx in (â i);
 
-
+!!€ sollâ^FVD>ii
+!!€ soll00>ii
 
 "Potential vowel shortening for contract verbs"
 !! * __@RULENAME@__ \\  -áážep becomes -áš etc.
