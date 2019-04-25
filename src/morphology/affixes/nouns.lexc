@@ -261,41 +261,47 @@ LEXICON X_JUUHA_PL  !!= * ''@CODE@'' (common POS Pl)
   X_WG_RVSH_PL_notILL ;
 
 
-!LEXICON JUUVAS_COMMON !!= * ''@CODE@'' (A lexicon for lexicalised deminutive words, thus words NOT having a double deminutive)
-!
-! JUUVAS_COMMON_SG ;
-! JUUVAS_COMMON_PL ;
-! !! \\ 
-!LEXICON X_JUUVAS_COMMON
-!X_JUUVAS_COMMON_SG ;
-!X_JUUVAS_COMMON_PL ;
+LEXICON JUUVAS_COMMON !!= * ''@CODE@'' (A lexicon for lexicalised deminutive words, thus words NOT having a double deminutive)
+
+ JUUVAS_COMMON_SG ;
+ JUUVAS_COMMON_PL ;
+ !! \\ 
+LEXICON X_JUUVAS_COMMON
+X_JUUVAS_COMMON_SG ;
+X_JUUVAS_COMMON_PL ;
+!! \\ 
+LEXICON JUUVAS_COMMON_SG
++N: X_JUUVAS_COMMON_SG ;
+!! \\ 
+LEXICON JUUVAS_COMMON_PL
++N: X_JUUVAS_COMMON_PL ;
+!! \\ 
+LEXICON X_JUUVAS_COMMON_SG
++Attr:â^WG%>š K ; 			! juuvâš	 
++Sg+Nom:â^WG%>š K ; 			! juuvâš
++Sg+Nom+Err/Orth:â%>š K ; 			! juuvvâš
++Sg+Nom+Err/Orth:a^WG%>š K ; 			! juuvaš
++Sg+Nom+Err/Orth:á^WG%>š K ; 			! juuváš
++Sg+Gen:i^WG^CLEN^RVSH%>i5 K ; 	! juvvii
++Sg+Acc:i^WG^CLEN^RVSH%>i5 K ; 	! juvvii
++Sg+Ill:â^WG^RVSH%>žân K ;	!  juvâžân
++Sg+Loc:i^WG^CLEN^RVSH%>i5st K ; !   juvviist
++Sg+Com:i^WG^CLEN^RVSH%>jn K ; 	! juvvijn 
++Sg+Abe:i^WG^CLEN^RVSH%>ittáá K ; ! juvviittáá 
++N+Cmp/SgNom:â^WG^RVSH%>š Rhash ;
++N+Cmp/SgGen:^RVSH%>i5i Rhash ;
++Ess:^WG^RVSH%>žin K ;
++Par:^WG^RVSH%>žid K ;
 !!! \\ 
-!LEXICON JUUVAS_COMMON_SG
-!+N: X_JUUVAS_COMMON_SG ;
-!!! \\ 
-!LEXICON JUUVAS_COMMON_PL
-!+N: X_JUUVAS_COMMON_PL ;
-!!! \\ 
-!LEXICON X_JUUVAS_COMMON_SG
-!+Sg+Nom:^WG^RLEN%>š K ;	 ! 
-!+Sg+Gen:^FVD^WG^CLEN%>ii K ;
-!+Sg+Acc:^FVD^WG^CLEN%>ii K ;
-!+Sg+Ill:^WG%>žân K ;
-!+Sg+Loc:^FVD^WG^CLEN%>iist K ;
-!+Sg+Com:^FVD^WG^CLEN%>ijn K ;
-!+Sg+Abe:^FVD^WG^CLEN%>iittáá K ;
-!+Ess:^WG%>žin K ;
-!+Par:^WG%>žid K ;
-!!! \\ 
-!LEXICON X_JUUVAS_COMMON_PL
-!+Pl+Nom:^FVD^WG^CLEN%>iih K ;
-!+Pl+Gen:^FVD^WG^CLEN%>ij K ;
-!+Pl+Acc:^FVD^WG^CLEN%>ijd K ;
-!+Pl+Ill:^FVD^WG^CLEN%>ijd K ;
-!+Pl+Loc:^FVD^WG^CLEN%>ijn K ;
-!+Pl+Com:^FVD^WG^CLEN%>ij GUIN ;
-!+Pl+Abe:^FVD^WG^CLEN%>ijttáá K ;
-!
+LEXICON X_JUUVAS_COMMON_PL
++Pl+Nom:^RVSH%>iih K ;
++Pl+Gen:^RVSH%>ij K ;
++Pl+Acc:^RVSH%>ijd K ;
++Pl+Ill:^RVSH%>ijd K ;
++Pl+Loc:^RVSH%>ijn K ;
++Pl+Com:^RVSH%>ij GUIN ;
++Pl+Abe:^RVSH%>ijttáá K ;
+
 
 
 LEXICON JUUHA_DIM !!= * ''@CODE@'' (a lexicon to create deminutives; Not for lexicalised words already being in deminutive)
