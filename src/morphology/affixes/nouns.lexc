@@ -261,33 +261,33 @@ LEXICON X_JUUHA_PL  !!= * ''@CODE@'' (common POS Pl)
   X_WG_RVSH_PL_notILL ;
 
 
-LEXICON JUUVAS_COMMON !!= * ''@CODE@'' (A lexicon for lexicalised deminutive words, thus words NOT having a double deminutive)
+LEXICON JUUVAS !!= * ''@CODE@'' (A lexicon for lexicalised deminutive words, thus words NOT having a double deminutive)
 
- JUUVAS_COMMON_SG ;
- JUUVAS_COMMON_PL ;
++N: X_JUUVAS_SG ;
++N: X_JUUVAS_PL ;
 !!! \\ 
-LEXICON JUUVAS_COMMON_SG ! ju^RVh^RC
-+N+Attr:â^WG%>š K ; 			! juuvâš	 ju^RVh^RC
-+N+Sg+Nom:â^WG^RLEN%>š K ; 			! juuvâš
-+N+Sg+Gen:i5^WG^CLEN%>i K ; 	! juvvii
-+N+Sg+Acc:i5^WG^CLEN%>i K ; 	! juvvii
-+N+Sg+Ill:â^WG%>žân K ;	!  juvâžân
-+N+Sg+Loc:i5^WG^CLEN%>ist K ; !   juvviist
-+N+Sg+Com:i^WG^CLEN%>in K ; 	! juvvijn 
-+N+Sg+Abe:i5^WG^CLEN%>ittáá K ; ! juvviittáá 
-+N+Cmp/SgNom:â^WG%>š Rhash ;
-+N+Cmp/SgGen:âi5^RVSH%>i Rhash ;
-+N+Ess:â^WG%>žin K ;
-+N+Par:â^WG%>žid K ;
+LEXICON X_JUUVAS_SG ! ju^RVh^RC
++Attr:â^WG%>š K ; 			! juuvâš	 ju^RVh^RC
++Sg+Nom:â^WG^RLEN%>š K ; 			! juuvâš
++Sg+Gen:i5^WG^CLEN%>i K ; 	! juvvii
++Sg+Acc:i5^WG^CLEN%>i K ; 	! juvvii
++Sg+Ill:â^WG%>žân K ;	!  juvâžân
++Sg+Loc:i5^WG^CLEN%>ist K ; !   juvviist
++Sg+Com:i^WG^CLEN%>in K ; 	! juvvijn 
++Sg+Abe:i5^WG^CLEN%>ittáá K ; ! juvviittáá 
++Cmp/SgNom:â^WG%>š Rhash ;
++Cmp/SgGen:âi5^RVSH%>i Rhash ;
++Ess:â^WG%>žin K ;
++Par:â^WG%>žid K ;
 !!! \\ 
-LEXICON JUUVAS_COMMON_PL
-+N+Pl+Nom:i5^WG^CLEN%>ih K ;
-+N+Pl+Gen:i^WG^CLEN%>i K ;
-+N+Pl+Acc:i^WG^CLEN%>id K ;
-+N+Pl+Ill:i^WG^CLEN%>id K ;
-+N+Pl+Loc:i^WG^CLEN%>in K ;
-+N+Pl+Com:i^WG^CLEN%>i GUIN ;
-+N+Pl+Abe:i^WG^CLEN%>ittáá K ;
+LEXICON X_JUUVAS_PL
++Pl+Nom:i5^WG^CLEN%>ih K ;
++Pl+Gen:i^WG^CLEN%>i K ;
++Pl+Acc:i^WG^CLEN%>id K ;
++Pl+Ill:i^WG^CLEN%>id K ;
++Pl+Loc:i^WG^CLEN%>in K ;
++Pl+Com:i^WG^CLEN%>i GUIN ;
++Pl+Abe:i^WG^CLEN%>ittáá K ;
 
 
 LEXICON JUUHA_DIM !!= * ''@CODE@'' (a lexicon to create deminutives; Not for lexicalised words already being in deminutive)
@@ -1477,7 +1477,7 @@ LEXICON 2LAAVU !!= * ''@CODE@'' WG, Ill EA, Com SVLOW, Ess CLEN
 !X_KIELA_PL ;
 
 LEXICON 2LAAVU_SG !!= * ''@CODE@''
-
++N: X_LAAVU_SG ;
 +N+Cmp/SgNom:^RVSH Rhash ;
 +N+Cmp/SgGen:^WG Rhash ; !
 +N+Cmp/SgGen:^SV^WG^RVSH^SVLOW Rhash ; ! táloalmai 
@@ -1498,18 +1498,19 @@ LEXICON 2LAAVU_SG !!= * ''@CODE@''
 +N:^WG^RVSH%> Gen_DER ; !viärulâš
 +N+Der1+Der/Dimin: LAAVU_DIM ; !stááluš
 
-+N+Sg+Nom: K ;               ! láávu
-+N+Sg+Gen:^WG K ;     ! láávu
-+N+Sg+Gen:^WG^RVSH^SVLOW K ;     ! lávo
-+N+Sg+Acc:^WG K ;     ! láávu
-+N+Sg+Acc:^WG^RVSH^SVLOW K ;     ! lávo
-+N+Sg+Ill:%>n K ;      ! láávun
-+N+Sg+Loc:^WG%>st K ; ! láávust
-+N+Sg+Loc:^SV^WG^SVLOW^SLEN%>st K ; ! láávoost ! 
-+N+Sg+Com:^WG^SVLOW%>in K ; ! láávoin
-+N+Sg+Com:^SV^WG^SVLOW^SLEN%>in K ; ! láávooin
-+N+Sg+Abe:^WG^RVSH%>ttáá K ;     ! lávuttáá 
-+N+Sg+Abe:^WG^RVSH^SVLOW%>ttáá K ;     ! vuárottáá
+LEXICON X_LAAVU_SG
++Sg+Nom: K ;               ! láávu
++Sg+Gen:^WG K ;     ! láávu
++Sg+Gen:^WG^RVSH^SVLOW K ;     ! lávo
++Sg+Acc:^WG K ;     ! láávu
++Sg+Acc:^WG^RVSH^SVLOW K ;     ! lávo
++Sg+Ill:%>n K ;      ! láávun
++Sg+Loc:^WG%>st K ; ! láávust
++Sg+Loc:^SV^WG^SVLOW^SLEN%>st K ; ! láávoost ! 
++Sg+Com:^WG^SVLOW%>in K ; ! láávoin
++Sg+Com:^SV^WG^SVLOW^SLEN%>in K ; ! láávooin
++Sg+Abe:^WG^RVSH%>ttáá K ;     ! lávuttáá 
++Sg+Abe:^WG^RVSH^SVLOW%>ttáá K ;     ! vuárottáá
 +Par:^CLEN%>d K ;               ! láávvud 
 +Ess:^CLEN%>n K ;               ! láávvun
 
