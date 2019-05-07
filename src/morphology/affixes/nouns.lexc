@@ -1477,16 +1477,19 @@ LEXICON 2LAAVU !!= * ''@CODE@'' WG, Ill EA, Com SVLOW, Ess CLEN
 !X_KIELA_PL ;
 
 LEXICON 2LAAVU_SG !!= * ''@CODE@''
-+N: X_LAAVU_SG ;
-+N+Cmp/SgNom:^RVSH%> Rhash ;
-+N+Cmp/SgGen:^WG^RVSH%> Rhash ; !tálualmai
-+N+Cmp/SgGen+Err/Orth:^WG%> Rhash ; !táálualmai
+
++N+Cmp/SgNom:^RVSH Rhash ;
++N+Cmp/SgGen:^WG Rhash ; !
++N+Cmp/SgGen:^SV^WG^RVSH^SVLOW Rhash ; ! táloalmai 
++N+Cmp/PlGen:^WG%>i Rhash ; !
++N+Cmp/PlGen:^SV^WG^RVSH^SVLOW%>i Rhash ;
 +N+Sg+Nom:^CLEN VPXsuff12nom ;  !
 +N+Sg+Gen:^CLEN VPXsuff12 ;  !	mááttun
 +N+Sg+Acc:^CLEN VPXsuff12 ;  !	mááttun
-+N+Sg+Nom:^CLEN VPXsuff3 ;  !	
-+N+Sg+Gen:^WG VPXsuff3 ;  !	mááđus
++N+Sg+Gen:^WG VPXsuff3 ;  !	mááđus láávus
 +N+Sg+Acc:^WG VPXsuff3 ;  !	mááđus
++N+Sg+Gen:^WG^SVLOW VPXsuff3 ;  ! vuáros lávos
++N+Sg+Gen:^SV^WG^SVLOW^SLEN VPXsuff3 ;  ! vuáros láávoos
 +N+Sg+Ill:^RVSH%>s CPXsuff ; !	mátusis
 +N+Sg+Loc:^WG^RVSH%>st CPXsuff ;  !	máđustis
 +N+Sg+Com:^WG^RVSH%>in CPXsuff ;  ! máđuinis
@@ -1495,26 +1498,89 @@ LEXICON 2LAAVU_SG !!= * ''@CODE@''
 +N:^WG^RVSH%> Gen_DER ; !viärulâš
 +N+Der1+Der/Dimin: LAAVU_DIM ; !stááluš
 
++N+Sg+Nom: K ;               ! láávu
++N+Sg+Gen:^WG K ;     ! láávu
++N+Sg+Gen:^WG^RVSH^SVLOW K ;     ! lávo
++N+Sg+Acc:^WG K ;     ! láávu
++N+Sg+Acc:^WG^RVSH^SVLOW K ;     ! lávo
++N+Sg+Ill:%>n K ;      ! láávun
++N+Sg+Loc:^WG%>st K ; ! láávust
++N+Sg+Loc:^SV^WG^SVLOW^SLEN%>st K ; ! láávoost ! 
++N+Sg+Com:^WG^SVLOW%>in K ; ! láávoin
++N+Sg+Com:^SV^WG^SVLOW^SLEN%>in K ; ! láávooin
++N+Sg+Abe:^WG^RVSH%>ttáá K ;     ! lávuttáá 
++N+Sg+Abe:^WG^RVSH^SVLOW%>ttáá K ;     ! vuárottáá
++Par:^CLEN%>d K ;               ! láávvud 
++Ess:^CLEN%>n K ;               ! láávvun
+
+
 LEXICON 2LAAVU_PL !!= * ''@CODE@'' 
 +N: X_KIELA_PL ;
-+N+Cmp/PlGen:^WG%>i Rhash ;
-+N+Cmp/SgNom:^RVSH%> Rhash ;
 +N+Pl+Gen:^WG^RVSH%>id CPXsuff ;  !	máđuidis
 +N+Pl+Acc:^WG^RVSH%>id CPXsuff ;  ! 	máđuidis
 +N+Pl+Ill:^WG^RVSH%>id CPXsuff ;  ! máđuidis
 +N+Pl+Loc:^WG^RVSH%>in CPXsuff ;  !	máđuinis
 +N+Pl+Com:^WG^RVSH%>id CPXsuffCOM ;  ! máđuidiskuin
 
-LEXICON X_LAAVU_SG !!= * ''@CODE@''
-+Sg+Nom: K ;               ! láávu
-+Sg+Gen:^WG K ;     ! láávu
-+Sg+Acc:^WG K ;     ! láávu
-+Sg+Ill:^CSH%>n K ;      ! láávun
-+Sg+Loc:^WG%>st K ; ! láávust
-+Sg+Com:^WG^SVLOW%>in K ; ! láávoin
-+Sg+Abe:^WG^RVSH%>ttáá K ;     ! lávuttáá 
-+Par:^CLEN%>d K ;               ! láávvud 
-+Ess:^CLEN%>n K ;               ! láávvun
++N+Pl+Nom:^WG^RVSH^SVLOW K ; ! lávoh
++N+Pl+Gen:^WG^RVSH^SVLOW%>i K ; ! lávoi
++N+Pl+Acc:^WG^SVLOW%>id K ; ! láávoid
++N+Pl+Ill:^WG^SVLOW%>id K ; ! láávoid
++N+Pl+Loc:^WG^SVLOW%>in K ; ! láávoin
++N+Pl+Loc:^SV^WG^SVLOW^SLEN%>in K ; ! láávooin
++N+Pl+Com:^WG^SVLOW%>i GUIN ; 
++N+Pl+Abe:^WG^SVLOW%>ittáá K ; 
+
+
+
+!LEXICON 2VUARU !!= * ''@CODE@'' Blank Nom, Ill, CLEN Ess, otherwise WG RVSH, SVLOW
+!2VUARU_SG ;
+!2VUARU_PL ;
+!
+!!LEXICON X_VUARU  * ''@CODE@'' Blank Nom, Ill, CLEN Ess, otherwise WG RVSH, SVLOW
+!!X_VUARU_SG ;
+!!X_VUARU_SG ;
+!
+!LEXICON 2VUARU_SG !!= * ''@CODE@''
+!+N:  X_VUARU_SG ;
+
+!+N+Sg+Gen:^WG VPXsuff3 ;  ! vuárus
+!+N+Sg+Acc+Err/Orth:^WG^SVLOW VPXsuff3 ;  ! vuáros
+!+N+Sg+Acc:^WG VPXsuff3 ;  ! vuárus
+!+N+Sg+Ill:^RVSH%>s CPXsuff ; ! vuárusis
+!+N+Sg+Loc+Err/Orth:^WG^RVSH^SVLOW%>st CPXsuff ;  ! vuárostis
+!+N+Sg+Loc:^WG^RVSH%>st CPXsuff ;  ! vuárustis
+!+N+Sg+Com+Err/Orth:^WG^RVSH^SVLOW%>in CPXsuff ;  ! vuároidiskuin
+!+N+Sg+Com:^WG^RVSH%>in CPXsuff ;  ! vuáruidiskuin
+!+N+Ess:%>n CPXsuff ;               ! vuárunân
+!+N:^WG^RVSH%> Gen_DER ;
+!+N:%> Nom_DER ;
+!
+!LEXICON 2VUARU_PL !!= * ''@CODE@''
+!+N:^WG^RVSH^SVLOW  X_h_PL ;
+!+N+Pl+Gen:^WG^RVSH^SVLOW%>id CPXsuff ;  !suájáidis
+!+N+Pl+Gen:^WG^RVSH%>id CPXsuff ;  !suájáidis
+!+N+Pl+Acc:^WG^RVSH^SVLOW%>id CPXsuff ;  ! 
+!+N+Pl+Acc:^WG^RVSH%>id CPXsuff ;  ! 
+!+N+Pl+Ill+Err/Orth:^WG^RVSH^SVLOW%>id CPXsuff ;  ! vuároidâd
+!+N+Pl+Ill:^WG%>id CPXsuff ;  ! vuáruidâd
+!+N+Pl+Loc+Err/Orth:^WG^RVSH^SVLOW%>in CPXsuff ;  ! 
+!+N+Pl+Loc:^WG%>in CPXsuff ;  ! 
+!+N+Pl+Com+Err/Orth:^WG^RVSH^SVLOW%>id CPXsuffCOM ;  ! 
+!+N+Pl+Com:^WG%>id CPXsuffCOM ;  ! vuáruidiskuin
+!
+!
+!LEXICON X_VUARU_SG !!= * ''@CODE@''
+!+Sg+Nom: K ;               ! vuáṛu
+!+Sg+Gen:^WG^RVSH^SVLOW K ;    ! vuáro
+!+Sg+Acc:^WG^RVSH^SVLOW K ;           ! vuáro
+!+Sg+Ill:^CSH%>n K ;      ! vuáṛun
+!+Sg+Loc:^SV^WG^RVSH^SLEN^SVLOW%>st K ; ! vuároost
+!+Sg+Com:^WG^RVSH^SVLOW%>in K ; ! vuároin
+!+Ess:^CLEN%>n K ;               ! vuárrun
+!+Par:^CLEN%>d K ;               ! vuárrud
+
+
 
 LEXICON 2VUAGGU !!= * ''@CODE@'' 
 2VUAGGU_SG ;
@@ -1589,61 +1655,7 @@ LEXICON 2VADDU_PL !!= * ''@CODE@''
 !+N+Pl+Gen+Use/NG:^WG^SVLOW%>i K ;        ! tááloi 
 !2VUARU ;
 
-LEXICON 2VUARU !!= * ''@CODE@'' Blank Nom, Ill, CLEN Ess, otherwise WG RVSH, SVLOW
-2VUARU_SG ;
-2VUARU_PL ;
 
-!LEXICON X_VUARU  * ''@CODE@'' Blank Nom, Ill, CLEN Ess, otherwise WG RVSH, SVLOW
-!X_VUARU_SG ;
-!X_VUARU_SG ;
-
-LEXICON 2VUARU_SG !!= * ''@CODE@''
-+N:  X_VUARU_SG ;
-+N+Cmp/SgNom:^RVSH%> Rhash ;  
-+N+Cmp/SgGen+Err/Orth:^WG^RVSH^SVLOW%> Rhash ; ! táloalmai 
-+N+Cmp/SgGen:^WG^SVLOW%> Rhash ; ! tááloalmai OBS
-+N+Cmp/PlGen:^WG^SVLOW%>i Rhash ;
-+N+Sg+Nom:^CLEN VPXsuff12nom ;  !
-+N+Sg+Acc:^CLEN VPXsuff12 ;  !
-+N+Sg+Gen:^CLEN VPXsuff12 ;  !
-+N+Sg+Nom:^CLEN VPXsuff3 ;  !
-+N+Sg+Gen+Err/Orth:^WG^SVLOW VPXsuff3 ;  ! vuáros
-+N+Sg+Gen:^WG VPXsuff3 ;  ! vuárus
-+N+Sg+Acc+Err/Orth:^WG^SVLOW VPXsuff3 ;  ! vuáros
-+N+Sg+Acc:^WG VPXsuff3 ;  ! vuárus
-+N+Sg+Ill:^RVSH%>s CPXsuff ; ! vuárusis
-+N+Sg+Loc+Err/Orth:^WG^RVSH^SVLOW%>st CPXsuff ;  ! vuárostis
-+N+Sg+Loc:^WG^RVSH%>st CPXsuff ;  ! vuárustis
-+N+Sg+Com+Err/Orth:^WG^RVSH^SVLOW%>in CPXsuff ;  ! vuároidiskuin
-+N+Sg+Com:^WG^RVSH%>in CPXsuff ;  ! vuáruidiskuin
-+N+Ess:%>n CPXsuff ;               ! vuárunân
-+N:^WG^RVSH%> Gen_DER ;
-+N:%> Nom_DER ;
-
-LEXICON 2VUARU_PL !!= * ''@CODE@''
-+N:^WG^RVSH^SVLOW  X_h_PL ;
-+N+Pl+Gen:^WG^RVSH^SVLOW%>id CPXsuff ;  !suájáidis
-+N+Pl+Gen:^WG^RVSH%>id CPXsuff ;  !suájáidis
-+N+Pl+Acc:^WG^RVSH^SVLOW%>id CPXsuff ;  ! 
-+N+Pl+Acc:^WG^RVSH%>id CPXsuff ;  ! 
-+N+Pl+Ill+Err/Orth:^WG^RVSH^SVLOW%>id CPXsuff ;  ! vuároidâd
-+N+Pl+Ill:^WG%>id CPXsuff ;  ! vuáruidâd
-+N+Pl+Loc+Err/Orth:^WG^RVSH^SVLOW%>in CPXsuff ;  ! 
-+N+Pl+Loc:^WG%>in CPXsuff ;  ! 
-+N+Pl+Com+Err/Orth:^WG^RVSH^SVLOW%>id CPXsuffCOM ;  ! 
-+N+Pl+Com:^WG%>id CPXsuffCOM ;  ! vuáruidiskuin
-
-
-LEXICON X_VUARU_SG !!= * ''@CODE@''
-+Sg+Nom: K ;               ! vuáṛu
-+Sg+Gen:^WG^RVSH^SVLOW K ;    ! vuáro
-+Sg+Acc:^WG^RVSH^SVLOW K ;           ! vuáro
-+Sg+Ill:^CSH%>n K ;      ! vuáṛun
-+Sg+Loc:^SV^WG^RVSH^SLEN^SVLOW%>st K ; ! vuároost
-+Sg+Com:^WG^RVSH^SVLOW%>in K ; ! vuároin
-+Sg+Abe:^WG^RVSH^SVLOW%>ttáá K ;     ! vuárottáá
-+Ess:^CLEN%>n K ;               ! vuárrun
-+Par:^CLEN%>d K ;               ! vuárrud
 
 LEXICON 2TAVLU !!= * ''@CODE@'' 
 2TAVLU_SG ;
