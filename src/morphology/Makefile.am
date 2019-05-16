@@ -27,14 +27,15 @@ GT_LEXC_SRCS_L1_L2=\
 			clitics.lexc   \
 			root.lexc  \
 			compounding.lexc   \
+			affixes/acronyms.lexc              \
 			affixes/adjectives.lexc   \
 			affixes/nouns.lexc   \
 			affixes/propernouns.lexc   \
 			affixes/possessive-suffixes.lexc   \
-			stems/acronyms.lexc              \
-			stems/abbreviations.lexc              \
 			affixes/symbols.lexc     \
 			affixes/verbs.lexc   \
+			stems/abbreviations.lexc              \
+			stems/acronyms.lexc              \
 			stems/adpositions.lexc   \
 			stems/adverbs.lexc   \
 			stems/adjectives.lexc   \
