@@ -153,15 +153,15 @@ pohe+N+Cmp/Sh+Sem/Dummytag:poh Rnoun ;
 
 
 
-LEXICON CMP_NAMAG !!= * __@CODE@__ gives »»» and directs to NAMAG, both from adj and numerals
-+Cmp+Sem/Dummytag#:»»# NAMAG ;
+LEXICON NAMAG !!= * __@CODE@__ gives »»» and directs to NAMAG, both from adj and numerals
++Cmp+Sem/Dummytag#:»»# NAMAGCont ;
 !#:»»# NAMATLAGANLAGASCont ;
 
-LEXICON CMP_IHASAS !!= * __@CODE@__ , both from adj and numerals
-+Cmp+Sem/Dummytag#:»»# IHASAS ;
+LEXICON SAS !!= * __@CODE@__ , both from adj and numerals
++Cmp+Sem/Dummytag#:»»# SASCont ;
 
  
-LEXICON NAMAG
+LEXICON NAMAGCont
 tääsi+CmpN/SgN+CmpN/SgG+Sem/Plc:tááság DER-AG ; ! tags_via_apertium
 čiehâ+Sem/Plc:čievâg DER-AG ; ! tags_via_apertium
 jienâ+Sem/Body-abstr_Prod-audio_Semcon:jienâg DER-AG ; ! tags_via_apertium
@@ -172,13 +172,40 @@ njälmi+Sem/Body:njáálmág DER-AG ; ! tags_via_apertium
 kerdi+Sem/Plc_Time:kiärdág DER-AG ; ! tags_via_apertium
 +Der+Der/ivvaas+Sem/Dummytag:ivvá A_VUALAAS ;
 
-LEXICON IHASAS
+LEXICON SASCont
 ihe+Sem/Time:ihás DER-SAS ; ! tags_via_apertium
 ihe+Err/Orth+Sem/Time:ihas DER-SAS ; ! tags_via_apertium
 peivi+CmpN/SgN+CmpN/SgG+Sem/Time:piäivás DER-SAS ; ! tags_via_apertium
 kerdi+Sem/Plc_Time:kiärdás DER-SAS ; ! tags_via_apertium
 jienâ+Sem/Body-abstr_Prod-audio_Semcon:jienâs DER-SAS ; ! tags_via_apertium
 tääsi+CmpN/SgN+CmpN/SgG+Sem/Plc:tásás DER-SAS ;  ! ollâtásásâš tags_via_apertium
+nummeer:»»»-nummeers DER-SAS ;
+sijđo:»»»-sijđos DER-SAS ;
+suormâráigá:»»»-suormâráigás DER-SAS ;
+stuáru:»»»-stuárus DER-SAS ;
+sijđo:»»»-sijđos DER-SAS ;
+kiärdá:»»»-kiärdás DER-SAS ;
+kilu:»»»-kilus DER-SAS ;
+ihá:»»»-ihás DER-SAS ;
+sentti:»»»-senttis DER-SAS ;
+
+
+LEXICON Gen_DER   !!= * ''@CODE@'' 
++Der1+Der/lasj:l ANOLASJ ; 
++Der1+Der/lasj+Err/Orth:ll ANOLASJ ; ! historjállâš
+!+Der+Der/vualasas:#-vuálás ANOLASJ ; ! Compounding better way: gen+vuálásâš
++Der1+Der/Car:tt MUSTOTTEM ; 
+
+LEXICON Nom_DER   !!= * ''@CODE@'' 
++Der1+Der/lasj+Use/NG:l ANOLASJ ; ! XXX not at all? Trond
+
+
+LEXICON DER-AG  !!= * ''@CODE@'' 
++N+Der+Der/ag:  PASTEL ; !+N because of redirection from numeral-file
+
+LEXICON DER-SAS  !!= * ''@CODE@'' 
++N+Der2+Der/sasj:  ANOLASJ ; !+N because of redirection from numeral-file
+
 
 
 LEXICON Noun
