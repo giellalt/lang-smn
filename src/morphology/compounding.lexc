@@ -19,6 +19,7 @@ LEXICON  Rnoun !!≈ @CODE@ -
  +Attr+Err/Orth:    K ; ! pessijâš
 
 
+
 LEXICON RAlmostReal    !!≈ @CODE@ -  lexicalising the 3-part compounds, with the tag ShCmp
          RrealAfterCmpNFlags ; ! Normal compounds right on to RrealAfterCmpNFlags, without going via Rreal flags (!)
  +Cmp#:# MiddleNouns ;         ! These nouns should not return to themselves, to avoid -jotjotjot-
@@ -48,11 +49,11 @@ LEXICON nounflag !!≈ @CODE@ -  coming from previous, going to the Root lexica
  @P.NeedNoun.ON@ AdjectiveRoot ; ! id.
 
 
-LEXICON Rhyph !!≈ @CODE@ - This initial recursive/compounding lexicon adds flags to
+LEXICON RHyph !!≈ @CODE@ - This initial recursive/compounding lexicon adds flags to
               !! control compounding, before going to the real compounding lexicon
- @P.CmpFrst.FALSE@@P.CmpPref.FALSE@@D.CmpLast.TRUE@@D.CmpNone.TRUE@@U.CmpNone.FALSE@@P.CmpOnly.TRUE@ Rhyph_after_cmp_flags ;
+ @P.CmpFrst.FALSE@@P.CmpPref.FALSE@@D.CmpLast.TRUE@@D.CmpNone.TRUE@@U.CmpNone.FALSE@@P.CmpOnly.TRUE@ RHyph_after_cmp_flags ;
 
-LEXICON Rhyph_after_cmp_flags !!≈ @CODE@ - from Rhyph
+LEXICON RHyph_after_cmp_flags !!≈ @CODE@ - from RHyph
       +Cmp/Hyph+Cmp#:-# NounRoot ;
       +Cmp/Hyph+Cmp#:-# Numeral  ; ! NRK-2
  +Cmp/SplitR+Cmp:-  #        ;
