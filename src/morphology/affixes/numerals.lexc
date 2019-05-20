@@ -46,7 +46,7 @@ LEXICON KYEHTI
 +Num+Pl+Loc:^WG^RLEN%>in K ; !oovtâin K ;
 +Num+Pl+Com:^WG^RVSH%>iguin K ; !ovtâiguin K ;
 +Num+Pl+Abe:^WG^RVSH%>ittáá K ; !ovtâittáá K ;
-+Num+Cmp/SgGen:^WG^RLEN%> NUM_DER ;
++Num+Cmp/SgGen:^WG^RLEN%> NUMERALCOMPOUNDS ;
 
 
 LEXICON OHTA
@@ -84,7 +84,7 @@ LEXICON KULMA_VITTA
 +Num+Pl+Loc:^WG^RLEN%>in K ; !viiđâin  
 +Num+Pl+Com:^WG%>iguin K ; !viđâiguin  
 +Num+Pl+Abe:^WG%>ittáá K ; !viđâittáá  
-+Num+Cmp/SgGen:^WG^RLEN%> NUM_DER ;
++Num+Cmp/SgGen:^WG^RLEN%> NUMERALCOMPOUNDS ;
 
 
 
@@ -107,14 +107,14 @@ LEXICON CICCAM !to be checked
 +Num+Pl+Loc:á%>in K ; !oovtâin K ;
 +Num+Pl+Com:i%>iguin K ; !ovtâiguin K ;
 +Num+Pl+Abe:i%>ittáá K ; !ovtâittáá K ;
-+Num+Cmp/SgGen:%> NUM_DER ;
++Num+Cmp/SgGen:%> NUMERALCOMPOUNDS ;
 
 
 LEXICON iLOV 
 +Num+Sg+Nom:lov K ; !love kyehtlov
 +Num+Sg+Acc:lov K ; !love kyehtlov
 +Num+Sg+Gen:i6^WG%>lov K ; !love K ; kyehtlov
-+Num+Cmp/SgGen:i6^WG%>lov%> NUM_DER ;
++Num+Cmp/SgGen:i6^WG%>lov%> NUMERALCOMPOUNDS ;
 
 LOV_OBLi ;
 
@@ -144,7 +144,7 @@ LEXICON LOV
 +Num+Sg+Nom:^RVSH%>lov K ; !love kyehtlov
 +Num+Sg+Acc:^WG%>lov K ; !love kyehtlov neljilov
 +Num+Sg+Gen:^WG^RLEN%>lov K ; !love K ; kuulmâlov
-+Num+Cmp/SgGen:^WG^RLEN%>lov%> NUM_DER ;
++Num+Cmp/SgGen:^WG^RLEN%>lov%> NUMERALCOMPOUNDS ;
 LOV_OBL ;
 
 LEXICON plussLOVE 
@@ -175,7 +175,7 @@ LEXICON hcLOV
 +Num+Sg+Nom:lov K ; ! kähcilov
 +Num+Sg+Acc:lov K ; ! kähcilov
 +Num+Sg+Gen:^WG^RLEN%>lov K ; ! käävcilov
-+Num+Cmp/SgGen:^WG^RLEN%>lov%> NUM_DER ;
++Num+Cmp/SgGen:^WG^RLEN%>lov%> NUMERALCOMPOUNDS ;
 
 hcLOV_OBL ;
 
@@ -183,7 +183,7 @@ LEXICON hcLOVE
 +Num+Sg+Nom:love K ; !love 
 +Num+Sg+Acc:love K ; !love
 +Num+Sg+Gen:^WG%>love K ; !love K ;
-+Num+Cmp/SgGen:^WG%>love%> NUM_DER ;
++Num+Cmp/SgGen:^WG%>love%> NUMERALCOMPOUNDS ;
 
 hcLOV_OBL ;
 
@@ -320,7 +320,7 @@ LEXICON CYETI
 +Num+Pl+Com:^WG^RVSH%>iguin K ;	 		! kuolijguin
 +Num+Pl+Com+Err/Orth:^WG^RVSH%>igijn K ;	 		! kuolijguin
 +Num+Pl+Abe:^WG^RVSH%>ittáá K ;			! kuolijttáá
-+Num+Cmp/SgGen:e^WG^RVSH%> NUM_DER ;
++Num+Cmp/SgGen:e^WG^RVSH%> NUMERALCOMPOUNDS ;
 
 
 LEXICON ORDINALInfl
@@ -379,6 +379,44 @@ LEXICON num-imprecise-case
 !čuáđáád:čuáđáád num "sadas" ;
 !nubáloh num "toistakymmentä" ;
 
+LEXICON yeartagpl
+          +Num+Sem/Year+Pl+Nom:    # ;
+          +Num+Sem/Year+Pl+Gen:    # ;
+          +Num+Sem/Year+Pl+Acc:    # ;
+ +Num+Sem/Year+Err/Orth+Pl+Loc:%:s # ;
+
+LEXICON dateyearcase
+ dateyearcase_nullsuff ;
+ dateyearcase_fullsuff ;
+
+LEXICON dateyearcase_nullsuff
+          +Sg+Nom: # ;
+          +Sg+Gen: # ;
+          +Sg+Acc: # ;
+     +Sg+Ill+Attr: # ;
+     +Sg+Loc+Attr: # ;
+
+LEXICON dateyearcase_nullsuff_w_dot
+          +Sg+Nom: MARKDOT ;
+          +Sg+Gen: MARKDOT ;
+          +Sg+Acc: MARKDOT ;
+     +Sg+Ill+Attr: MARKDOT ;
+     +Sg+Loc+Attr: MARKDOT ;
+
+LEXICON dateyearcase_fullsuff
+ +Err/Orth+Sg+Acc:%:a  #      ;
+ +Err/Orth+Sg+Gen:%:a  #      ;
+          +Sg+Loc:%:s  #      ;
+ +Err/Orth+Sg+Loc:s    #      ;
+ +Err/Orth+Sg+Loc:%:is #      ;
+ +Err/Orth+Sg+Loc:is   #      ;
+ +Err/Orth+Sg+Loc:%:as #      ;
+          +Sg+Ill:%:i  #      ;
+ +Err/Orth+Sg+Ill:i    #      ;
+ +Err/Orth+Sg+Ill:%:ii #      ;
+      +Cmp/SplitR:%-   ENDLEX ;
+      +Cmp/SplitR:%–   ENDLEX ;
+
 
 LEXICON ARABICCASES   !!= * __@CODE@__  to distinguish between 0 and oblique
 ARABICCASE0 ;
@@ -413,8 +451,8 @@ LEXICON ARABICCASE
  +Arab+Pl+Com:%>iguin   K ; !
 !ordinals
 
-!LEXICON ARABICCASEORD
-! +Arab+Sg+Gen:%>da    K ;
+LEXICON ARABICCASEORD
+ +Arab+Sg+Gen:%>da    K ;
 ! +Arab+Sg+Acc:%>dav   K ;
 ! +Arab+Sg+Ill:%>dij   K ;
 ! +Arab+Sg+Com:%>dijn  K ;
@@ -435,17 +473,6 @@ LEXICON ARABICCASECOLL
 ! +Arab+Sg+Com:%>sijn K ;
 
  
-LEXICON ROMNUMTAG
- +Num+Rom+Sg+Nom: # ;
- +Num+Rom+Sg+Gen: # ;
-!+Num+Acc: # ;
- +A+Rom+Ord+Sg:%. # ; !III. as ordinal.
- +A+Rom+Ord+Sg:   # ; !Looking for trouble...
- +Num:%: ROMNUMTAGOBL  ;
- +Num:%' ROMNUMTAGOBL ;
- +Num:%- ROMNUMTAGOBL  ;
- +Num:%´ ROMNUMTAGOBL  ;
-! +Num:   ROMNUMTAGOBL ;
 
 LEXICON ROMNUMTAGOBL
  +Rom+Sg+Ill:%>hán        # ;
@@ -455,26 +482,6 @@ LEXICON ROMNUMTAGOBL
  +Rom+Ess:%>n        # ;
  +Rom+Sg+Par:%>d        # ;
 
-LEXICON ARAB_DER ! only for arabics
- +Cmp-#nummeer:»»»-nummeers DER-SAS ;
- +Cmp-#sijđo:»»»-sijđos DER-SAS ;
- +Cmp-#suormâráigá:»»»-suormâráigás DER-SAS ;
- +Cmp-#stuáru:»»»-stuárus DER-SAS ;
- +Cmp-#sijđo:»»»-sijđos DER-SAS ;
- +Cmp-#kiärdá:»»»-kiärdás DER-SAS ;
- +Cmp-#kilu:»»»-kilus DER-SAS ;
- +Cmp-#ihá:»»»-ihás DER-SAS ;
- +Cmp-#sentti:»»»-senttis DER-SAS ;
- +Der+Der/ahasas:-ahas ANOLASJ  ;
- +Cmp-#:»»»- CMP_NAMAG ;
- +Cmp-#:»»»- CMP_IHASAS ;
-
-
-LEXICON NUM_DER ! 
-! +Der+Der/ihasas:ihás ANOLASJ  ;
-+Cmp#:»»»# CMP_NAMAG ;
-+Cmp#:»»»# CMP_IHASAS ;
- 
 
 ! A final section with some isolated numeral expresssions !
 ! ------------------------------------------------------- !
