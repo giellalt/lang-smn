@@ -30,11 +30,11 @@ while(<>) {
 #	s/DUBAI/BERN/g ;
 	s/BETFAGE/BERN/g ;
 	s/fkagK/K/g ;
-# loanwords with compound border over identical vowels
-	s/Hjarteelva/Hjarte-elva/g ;
-	s/Indreeide/Indre-eide/g ;
-	s/Lilleeng/Lille-eng/g ;
-	s/Simleelva/Simle-elva/g ;
+# loanwords with compound border over identical vowels,
+#	s/Hjarteelva/Hjarte-elva/g ;
+#	s/Indreeide/Indre-eide/g ;
+#	s/Lilleeng/Lille-eng/g ;
+#	s/Simleelva/Simle-elva/g ;
 	s/\+CmpNP\/None//g ;
 	
 # sme or other names we do not want
