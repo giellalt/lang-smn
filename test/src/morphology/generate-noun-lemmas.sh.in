@@ -66,7 +66,8 @@ EXTEDITOR=@SEE@
 ##### --exclude "(pattern1|pattern2|...)"                          #####
 # Extract regular nouns:
 @GTCORE@/scripts/extract-lemmas.sh \
-    --exclude "(ShCmp|RCmpnd| Rreal | R | Rnoun |RHyph |COLL|\+CmpNP\/Suff)" \
+    --exclude \
+    "(ShCmp|RCmpnd| Rreal | R | Rnoun |RHyph |COLL|\+CmpNP\/Suff| DER-SAS )" \
     $source_file > $lemmas
 
 # Extract compounding lemmas:
