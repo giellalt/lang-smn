@@ -22,7 +22,16 @@ morf_codes="+N+Sg+Nom \
             +N+Sg+Ill \
             +N+Sg+Loc \
             +N+Sg+Com \
-            +N+Pl+Nom"
+            +N+Sg+Abe \
+            +N+Par \
+            +N+Ess \
+            +N+Pl+Nom\
+            +N+Pl+Gen \
+            +N+Pl+Acc \
+            +N+Pl+Ill \
+            +N+Pl+Loc \
+            +N+Pl+Com \
+            +N+Pl+Abe"
 
 # Lexicon source file for lexicons and lemmas:
 source_file=src/morphology/stems/nouns.lexc
