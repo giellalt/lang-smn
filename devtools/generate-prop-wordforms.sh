@@ -38,7 +38,7 @@ generator_file=src/generator-gt-norm
 lemmacount=10
 
 # Specify path to the dir containing the script used for generation:
-script_dir=devtools
+script_dir=$giella_core/scripts
 
 ################## DO NOT CHANGE BELOW HERE!!! ##################
 source $script_dir/generate-wordforms-for-cont_lexes.sh \
