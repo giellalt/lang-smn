@@ -2635,7 +2635,7 @@ LEXICON X_SAJOS !!= * ''@CODE@''
 +Sg+Nom:^WG^SVSH K ;        ! almos
 +Sg+Gen: K ;                             ! almoos  a^RVlmoos
 +Sg+Acc: K ;                             ! almoos
-+Sg+Ill:^CSH^SVSH%>ân K ;                         ! almosân
++Sg+Ill:^CSH^SVSH%>ân K ;                ! almosân
 +Sg+Loc:^CSH^SVSH%>ist K ; ! almosist
 +Sg+Com:^CSH^SVSH%>áin K ; ! almosáin
 +Sg+Abe:%>ttáá K ; ! almoosttáá
@@ -2985,9 +2985,13 @@ LEXICON 3HUKSIM_SG  !!= * ''@CODE@'' NGA + Abe blank, SLEN for the rest
 LEXICON 3HUKSIM_PL  !!= * ''@CODE@'' plurals for 3HUKSIM
 +N:^SLEN X_eh_PL ;
 +N+Cmp/SgNom: Rhash ;
++N+Pl+Gen:^SLEN%>ijd CPXsuff ;    ! huksiimijdân
++N+Pl+Acc:^SLEN%>ijd CPXsuff ;    ! huksiimijdân
++N+Pl+Ill:^SLEN%>ijd CPXsuff ;    ! huksiimijdân
++N+Pl+Loc:^SLEN%>ijn CPXsuff ;    ! huksiimijnân
++N+Pl+Com:^SLEN%>ijd CPXsuffCOM ; ! huksiimijdânguin
 
-
-LEXICON 3KIEDAVUSSAM !!= * ''@CODE@'' 
+LEXICON 3KIEDAVUSSAM !!= * ''@CODE@'' stem: :kieđâvušš
 +N+Sg+Nom:%>âm K ;        ! kieđâvuššâm
 +N+Cmp/SgNom:%>âm Rhash ;
 +N+Sg+Gen:%>âm K ;        ! kieđâvuššâm   
@@ -2999,6 +3003,20 @@ LEXICON 3KIEDAVUSSAM !!= * ''@CODE@''
 +N+Ess:%>min K ;          ! kieđâvušmin    
 +N+Par:%>mid K ;          ! kieđâvušmid    
 +N+Pl+Nom:%>meh K ;       ! kieđâvušmeh
+
++N+Sg+Nom:^FCD%>m CPXsuff ;  ! kieđâvušmâm
++N+Sg+Gen:^FCD%>m CPXsuff ;  ! kieđâvušmân
++N+Sg+Acc:^FCD%>m CPXsuff ;  ! kieđâvušmân
++N+Sg+Ill:^FCD%>m CPXsuff ;  ! kieđâvušmân
++N+Sg+Loc:^FCD%>mist CPXsuff ; ! kieđâvušmistân
++N+Sg+Com:^FCD%>mijn CPXsuff ;  ! kieđâvušmijnân
+
++N+Pl+Gen:^FCD%>m%>ijd CPXsuff ;    ! kieđâvušmijdân
++N+Pl+Acc:^FCD%>m%>ijd CPXsuff ;    ! kieđâvušmijdân
++N+Pl+Ill:^FCD%>m%>ijd CPXsuff ;    ! kieđâvušmijdân
++N+Pl+Loc:^FCD%>m%>ijn CPXsuff ;    ! kieđâvušmijnân
++N+Pl+Com:^FCD%>m%>ijd CPXsuffCOM ; ! kieđâvušmijdânguin
+
 +N:%>m X_eh_PL ;
 
 LEXICON 3POOVSA !!= * ''@CODE@''  soovsa
@@ -3353,24 +3371,41 @@ AAIGA_COMMON_PL ;
 
 LEXICON S_KARRII !!= * ''@CODE@''
 +N: X_KARRII ;
++N+Sg+Nom:^SV^SLEN VPXsuff12nom ;  ! nijbám
++N+Sg+Gen:^SV^SLEN VPXsuff12 ;  ! nijbán
++N+Sg+Acc:^SV^SLEN VPXsuff12 ;  ! nijbán
++N+Sg+Nom:^SV^SLEN VPXsuff3 ;  ! nijbes
++N+Sg+Gen:^SV^SLEN VPXsuff3 ;  ! niijbes
++N+Sg+Acc:^SV^SLEN VPXsuff3 ;  ! niijbes
++N+Sg+Ill:%>s CPXsuff ; ! nijbásân
++N+Sg+Loc:%>st CPXsuff ; ! nijbásis
++N+Sg+Com:%>in CPXsuff ;  ! nijbijnis
++N+Ess:%>n CPXsuff ;                         ! nijbenân
++N+Pl+Gen:%>id CPXsuff ;  !
++N+Pl+Acc:%>id CPXsuff ;  !
++N+Pl+Ill:%>id CPXsuff ;  !
++N+Pl+Loc:%>in CPXsuff ;  !
++N+Pl+Com:%>id CPXsuffCOM ;  !
+
 +N+Cmp/SgNom:^SV^SLEN%>  Rhash ;
 +N+Cmp/SgGen:^SV^SLEN%>  Rhash ;
 +N+Cmp/PlGen:%>i  Rhash ;
 
 LEXICON X_KARRII !!= * ''@CODE@''
-+Sg+Nom:^SV^SLEN K ;                                ! karrii
-+Sg+Gen:^SV^SLEN K ;                                 ! karrii
-+Sg+Acc:^SV^SLEN K ;                                ! karrii
-+Sg+Ill+Use/NG:%>jân K ;                         ! karrijân
-+Sg+Ill:%>i K ;                                         ! karrij
-+Sg+Loc:%>st K ;                                         ! karrist
-+Sg+Com:%>in K ;                                        ! karrijn
-+Sg+Abe:^SV^SLEN%>ttáá K ;                ! karriittáá
-+Ess:%>n K ;                                                ! karrin
-+Par:%>d K ;                                                ! karrid
++Sg+Nom:^SV^SLEN K ;       ! karrii
++Sg+Gen:^SV^SLEN K ;       ! karrii
++Sg+Acc:^SV^SLEN K ;       ! karrii
++Sg+Ill+Use/NG:%>jân K ;   ! karrijân
++Sg+Ill:%>i K ;            ! karrij
++Sg+Loc:%>st K ;           ! karrist
++Sg+Com:%>in K ;           ! karrijn
++Sg+Abe:^SV^SLEN%>ttáá K ; ! karriittáá
++Ess:%>n K ;               ! karrin
++Par:%>d K ;               ! karrid
+
 X_SVSLENh_PL ;
 
-
+! px 14.6.2019 dán rádjái lasihuvvon. XXX
 
 LEXICON S_SPAALVAS !!= * ''@CODE@'' 
 +N+Sg+Nom:š^WG^RLEN K ; ! spáálváš
@@ -3378,17 +3413,17 @@ LEXICON S_SPAALVAS !!= * ''@CODE@''
 +N+Cmp/SgNom:âš^WG^RVSH%> Rhash ;
 +N+Cmp/SgGen:^SV^SLEN%> Rhash ;
 +N+Cmp/PlGen:%>i Rhash ;
-+N+Sg+Gen:^SV^SLEN K ;                         ! spálváá
-+N+Sg+Acc:^SV^SLEN K ;                        ! spálváá
-+N+Sg+Ill:ž^RVSH%>ân K ;                        ! spálvážân
-+N+Sg+Ill+Use/NG:ž^RLEN%>ân K ;        ! spáálvážân
-+N+Sg+Loc:^SV^SLEN%>st K ;                ! spálváást
-+N+Sg+Com:%>in K ;                                         ! spálváin
-+N+Sg+Abe:^SV^SLEN%>ttáá K ;                 ! spálvááttáá
-+N+Ess:ž^WG%>in K ;                                ! spálvážin
-+N+Ess+Use/NG:ž^WG^RLEN%>in K ;        ! spálvážin
-+N+Par:ž^WG%>id K ;                                 ! spálvážid
-+N+Par+Use/NG:^WG^RLEN%>žid K ;         ! spálvážid
++N+Sg+Gen:^SV^SLEN K ;            ! spálváá
++N+Sg+Acc:^SV^SLEN K ;            ! spálváá
++N+Sg+Ill:ž^RVSH%>ân K ;          ! spálvážân
++N+Sg+Ill+Use/NG:ž^RLEN%>ân K ;   ! spáálvážân
++N+Sg+Loc:^SV^SLEN%>st K ;        ! spálváást
++N+Sg+Com:%>in K ;                ! spálváin
++N+Sg+Abe:^SV^SLEN%>ttáá K ;      ! spálvááttáá
++N+Ess:ž^WG%>in K ;               ! spálvážin
++N+Ess+Use/NG:ž^WG^RLEN%>in K ;   ! spálvážin
++N+Par:ž^WG%>id K ;               ! spálvážid
++N+Par+Use/NG:^WG^RLEN%>žid K ;   ! spálvážid
 +N: X_SVSLENh_PL ;
 
 
@@ -3412,15 +3447,15 @@ LEXICON S_TUULAS_PL !!= * ''@CODE@''
 
 LEXICON X_TUULAS_SG !!= * ''@CODE@''
 +Sg+Nom:âš^WG^RLEN K ; ! tuulâš
-+Sg+Gen:^SV^WG^RLEN^SLEN K ;         ! tuulii
++Sg+Gen:^SV^WG^RLEN^SLEN K ;        ! tuulii
 +Sg+Acc:^SV^WG^RLEN^SLEN K ;        ! tuulii
-+Sg+Ill:âž^WG^RVSH%>ân K ;        ! tulâžân
-+Sg+Ill+Err/Orth:âž^WG^RLEN%>ân K ;        ! tuulâžân
-+Sg+Loc:^SV^WG^RLEN^SLEN%>st K ;                        ! tuuliist
-+Sg+Com:^WG^RLEN%>in K ;                         ! tuulijn
-+Sg+Abe:^SV^WG^RLEN^SLEN%>ttáá K ;                 ! tuuliittáá
-+Ess:âž^WG^RVSH%>in K ;        ! tulâžin
-+Par:âž^WG^RVSH%>id K ; ! tulâžid
++Sg+Ill:âž^WG^RVSH%>ân K ;          ! tulâžân
++Sg+Ill+Err/Orth:âž^WG^RLEN%>ân K ; ! tuulâžân
++Sg+Loc:^SV^WG^RLEN^SLEN%>st K ;    ! tuuliist
++Sg+Com:^WG^RLEN%>in K ;            ! tuulijn
++Sg+Abe:^SV^WG^RLEN^SLEN%>ttáá K ;  ! tuuliittáá
++Ess:âž^WG^RVSH%>in K ;             ! tulâžin
++Par:âž^WG^RVSH%>id K ;             ! tulâžid
 
 
 LEXICON X_TUULAS_PL !!= * ''@CODE@''
