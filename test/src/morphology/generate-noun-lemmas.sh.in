@@ -24,18 +24,20 @@ POS=nouns
 ### in ###
 source_file=${srcdir}/../../../src/morphology/stems/${POS}.lexc
 generator_file=./../../../src/generator-gt-norm
-analyser_file=./../../../src/analyser-gt-norm # XXX as adj
+analyser_file=./../../../src/analyser-gt-norm
 
 ### out ###
-lemmas=./filtered-${POS}
-comp_lemmas=./filtered-comp-${POS}
-hycomp_lemmas=./filtered-hycomp-${POS}
-coll_lemmas=./filtered-coll-${POS}
-all_lemmas=./all-${POS} # XXX as adj
-generated_lemmas=./generated-${POS} # XXX
+# Temporary files:
+lemmas=./filtered-${POS}.txt
+comp_lemmas=./filtered-comp-${POS}.txt
+hycomp_lemmas=./filtered-hycomp-${POS}.txt
+coll_lemmas=./filtered-coll-${POS}.txt
+all_lemmas=./all-${POS}.txt
+# Final files, will get filename suffix programmatically further down:
+generated_lemmas=./generated-${POS}
 result_file=missing_${POS}_lemmas
 gen_result_file=generated_missing_${POS}_lemmas
-ana_result_file=analysed_missing_${POS}_lemmas # XXX as adj
+ana_result_file=analysed_missing_${POS}_lemmas
 
 # SKIP if source file does not exist (works with both single and
 # multiple files):
