@@ -24,6 +24,7 @@ POS=adjectives
 ### in ###
 source_file=${srcdir}/../../../src/morphology/stems/${POS}.lexc
 generator_file=./../../../src/generator-gt-norm
+analyser_file=./../../../src/analyser-gt-norm
 
 ### out ###
 # Temporary files:
@@ -34,7 +35,9 @@ attrlemmas=./attribute-${POS}.txt
 alllemmas=./all_lemma-${POS}.txt
 # Final files, will get filename suffix programmatically further down:
 generated_lemmas=./generated-${POS}
-result_file=./missing_${POS}_lemmas
+result_file=missing_${POS}_lemmas
+gen_result_file=generated_missing_${POS}_lemmas
+ana_result_file=analysed_missing_${POS}_lemmas
 
 # SKIP if source file does not exist (works with both single and
 # multiple files):
@@ -197,7 +200,7 @@ done
 
 # At least one of the Xerox or HFST tests failed:
 if [ "$Fail" = "1" ]; then
-	exit 1
+    exit 1
 fi
 
 if [ $transducer_found -eq 0 ]; then
