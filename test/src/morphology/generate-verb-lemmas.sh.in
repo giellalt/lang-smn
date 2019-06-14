@@ -21,14 +21,17 @@
 
 
 ###### Variables: #######
+POS=verbs
 ### in ###
-source_file=${srcdir}/../../../src/morphology/stems/verbs.lexc
+source_file=${srcdir}/../../../src/morphology/stems/${POS}.lexc
 generator_file=./../../../src/generator-gt-norm
 
 ### out ###
-lemmas=./filtered-verbs
-generated_lemmas=./generated-verbs
-result_file=${srcdir}/missing_verb_lemmas.txt
+# Temporary files:
+lemmas=./filtered-${POS}.txt
+# Final files, will get filename suffix programmatically further down:
+generated_lemmas=./generated-${POS}
+result_file=${srcdir}/missing_${POS}_lemmas
 
 # SKIP if source file does not exist (works with both single and
 # multiple files):
