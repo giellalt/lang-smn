@@ -501,8 +501,8 @@ LEXICON X_FADDA_SG !!= * ''@CODE@''
 +Sg+Loc:^WG^RLEN%>st K ; ! fáádást, ráávsást
 +Sg+Com:^WG^CLEN%>in K ; ! kissáin, rávssáin, fáddáin DIFFERS FROM KUTKA
 +Sg+Abe:^WG%>ttáá K ;     ! kisáttáá 
-+Ess:%>n K ;               ! kissán
-+Par:%>d K ;               ! kissád
++Ess:^CLEN%>n K ;               ! kissán suáiján
++Par:^CLEN%>d K ;               ! kissád
 !! \\ 
 LEXICON X_FADDA_PL !!= * ''@CODE@''
 +Pl+Ill:^WG^CLEN%>id K ; ! kissáid, rávssáid, fáddáid
@@ -2358,52 +2358,81 @@ LEXICON X_LITTER_SG_not_Par !!= * ''@CODE@''  for numerals
 
 
 LEXICON 3PIEHAIN  !!= * ''@CODE@'' to v1 3PIEHAINonly and v2 3PIEHANJ
-+v1: 3PIEHAINonly ;
-+v2: 3PIEHANJ ;
 
-LEXICON 3PIEHAINonly  !!= * ''@CODE@'' the v1 version
-+N+Sg+Nom:^CLEN^RLEN K ;                ! piehâin
-+N+Cmp/SgNom:^CLEN^RLEN%> Rhash ;
-+N+Cmp/SgGen:^CLEN^RLEN%> Rhash ;
-+N+Cmp/PlGen:j^SVSH%>ij Rhash ;
-+N+Sg+Gen:^CLEN^RLEN K ;                ! piehâin
-+N+Sg+Acc:^CLEN^RLEN K ;                ! piehâin 
-+N+Sg+Nom:^CLEN^RLEN CPXsuff ;  ! piehâinân
-+N+Sg+Gen:^CLEN^RLEN CPXsuff ;  ! piehâinân
-+N+Sg+Acc:^CLEN^RLEN CPXsuff ;  ! piehâinân
++N+Cmp/SgNom:in^CLEN^RLEN%> Rhash ;
++N+Cmp/SgGen:in^CLEN^RLEN%> Rhash ;
++N+Cmp/PlGen:n^SVSH%>ij Rhash ;
 
-PIEHAIN/NJ ;
++N+Sg+Nom:n CPXsuff ;  ! piehânjâm
++N+Sg+Gen:in CPXsuff ;  ! piehânjân
++N+Sg+Acc:in CPXsuff ;  ! piehâinân
++N+Sg+Nom:nj CPXsuff ;  ! piehânjâm
++N+Sg+Gen:nj CPXsuff ;  ! piehânjân
++N+Sg+Acc:nj CPXsuff ;  ! piehâinân
++N+Sg+Ill:nj%>ân CPXsuff ;        ! piehânjnân, tubdânjânân
++N+Sg+Loc:nj%>ist CPXsuff ;       ! piehânjistân, tubdânjistân
++N+Sg+Com:nj%>áin CPXsuff ;       ! piehânjáinân, tubdânjáinân
++N+Ess:nj%>in CPXsuff ;           ! piehânjnân, tubdânjnân
++N+Pl+Nom:n%>ijd CPXsuff ;    ! piehânjijdân
++N+Pl+Nom:nj%>ijd CPXsuff ;    ! piehânjijdân
++N+Pl+Gen:nj%>ijd CPXsuff ;    ! piehânjijdân
++N+Pl+Acc:nj%>ijd CPXsuff ;    ! piehânjijdân
++N+Pl+Ill:nj%>ijd CPXsuff ;    ! piehânjijdân
++N+Pl+Loc:nj%>ijn CPXsuff ;    ! piehânjijnân
++N+Pl+Com:nj%>ijd CPXsuffCOM ; ! piehânjijdânguin
++N+Cmp/SgNom:nj^CLEN^RLEN^SVSH%> Rhash ; !in use?
++N+Sg+Nom:nj CPXsuff ;    ! piehânjâm
++N+Sg+Gen:nj CPXsuff ;    ! piehânjân
++N+Sg+Acc:nj CPXsuff ;    ! piehânjân
 
-LEXICON 3PIEHANJ  !!= * ''@CODE@''  the v2 version
-+N+Cmp/SgNom:j^CLEN^RLEN^SVSH%> Rhash ; !in use?
-+N+Sg+Nom:j^CLEN^RLEN^SVSH K ;          ! piehânj NB! Remove SVSH??
-+N+Sg+Gen:j^CLEN^RLEN^SVSH K ;          ! piehânj
-+N+Sg+Acc:j^CLEN^RLEN^SVSH K ;          ! piehânj 
-+N+Sg+Nom:j^CLEN^RLEN^SVSH CPXsuff ;    ! piehânjân
-+N+Sg+Gen:j^CLEN^RLEN^SVSH CPXsuff ;    ! piehânjân
-+N+Sg+Acc:j^CLEN^RLEN^SVSH CPXsuff ;    ! piehânjân
-PIEHAIN/NJ ;
++N+Sg+Nom:^CLEN^RLEN%>in K ;                ! piehâin
++N+Sg+Nom:^CLEN^RLEN%>nj K ;          ! piehânj NB! Remove SVSH??
++N+Sg+Gen:^CLEN^RLEN%>in K ;                ! piehâin
++N+Sg+Gen:^CLEN^RLEN%>nj K ;          ! piehânj
++N+Sg+Acc:^CLEN^RLEN%>in K ;                ! piehâin 
++N+Sg+Acc:^CLEN^RLEN%>nj K ;          ! piehânj 
++N+Sg+Ill:n%>ân K ;              ! piehânân, tubdânân
++N+Sg+Ill:nj%>ân K ;              ! piehânjân, tubdânjân
++N+Sg+Loc:n%>ist K ;             ! piehânist, tubdânist 
++N+Sg+Loc:nj%>ist K ;             ! piehânjist, tubdânjist 
++N+Sg+Com:n%>áin K ;             ! piehânjáin, tubdânjáin
++N+Sg+Com:nj%>áin K ;             ! piehânjáin, tubdânjáin
++N+Sg+Abe:^CLEN^RLEN%>inttáá K ;        ! piehâinttáá, tubdânjttáá
++N+Sg+Abe:^CLEN^RLEN%>njttáá K ;        ! piehâinttáá, tubdânjttáá
++N+Ess:n%>in K ;                 ! piehânjin, tubdânjin 
++N+Par:n%>id K ;                 ! piehânjid
++N+Ess:nj%>in K ;                 ! piehânjin, tubdânjin 
++N+Par:nj%>id K ;                 ! piehânjid
 
-LEXICON PIEHAIN/NJ !!= * ''@CODE@'' this is the common part of v1, v2
-+N+Sg+Ill:j^RVSH%>ân K ;              ! piehânjân, tubdânjân
-+N+Sg+Loc:j^RVSH%>ist K ;             ! piehânjist, tubdânjist 
-+N+Sg+Com:j^RVSH%>áin K ;             ! piehânjáin, tubdânjáin
-+N+Sg+Abe:^CLEN^RLEN%>ttáá K ;        ! piehâinttáá, tubdânjttáá
-+N+Ess:j^RVSH%>in K ;                 ! piehânjin, tubdânjin 
-+N+Par:j^RVSH%>id K ;                 ! piehânjid
-+N+Sg+Ill:j^RVSH%>ân CPXsuff ;        ! piehânjnân, tubdânjânân
-+N+Sg+Loc:j^RVSH%>ist CPXsuff ;       ! piehânjistân, tubdânjistân
-+N+Sg+Com:j^RVSH%>áin CPXsuff ;       ! piehânjáinân, tubdânjáinân
-+N+Ess:j^SVSH%>in CPXsuff ;           ! piehânjnân, tubdânjnân
++N+Pl+Nom:n%>eh K ;              ! piehâneh
++N+Pl+Nom:nj%>eh K ;              ! piehâneh
++N+Pl+Gen:n%>ij K ;              ! piehânij
++N+Pl+Gen:nj%>ij K ;              ! piehânij
++N+Pl+Acc:n%>ijd K ;              ! piehânijd
++N+Pl+Acc:nj%>ijd K ;              ! piehânijd
++N+Pl+Ill:n%>áid K ;	! piehânáid
++N+Pl+Ill:nj%>áid K ;	! piehânáid
++N+Pl+Loc:n%>ijn K ;	! piehânáid
++N+Pl+Loc:nj%>ijn K ;	! piehânáid
++N+Pl+Com:n%>ij GUIN ;	! piehânnijguin
++N+Pl+Com:nj%>ij GUIN ;	! piehânjijguin
++N+Pl+Abe:n%>ijttáá K ;	! piehânijttáá
++N+Pl+Abe:nj%>ijttáá K ;	! piehânijttáá
 
-+N+Pl+Nom:j^RVSH%>ijd CPXsuff ;    ! piehânjijdân
-+N+Pl+Gen:j^RVSH%>ijd CPXsuff ;    ! piehânjijdân
-+N+Pl+Acc:j^RVSH%>ijd CPXsuff ;    ! piehânjijdân
-+N+Pl+Ill:j^RVSH%>ijd CPXsuff ;    ! piehânjijdân
-+N+Pl+Loc:j^RVSH%>ijn CPXsuff ;    ! piehânjijnân
-+N+Pl+Com:j^RVSH%>ijd CPXsuffCOM ; ! piehânjijdânguin
+!+v1: 3PIEHAINonly ;
+!+v2: 3PIEHANJ ;
+!
+!LEXICON 3PIEHAINonly  !!= * ''@CODE@'' the v1 version
 
-+N:j^SVSH  X_eh_PL ;
+!PIEHAIN/NJ ;
+
+!PIEHAIN/NJ ;
+
+!LEXICON 3PIEHANJ  !!= * ''@CODE@''  the v2 version
+
+!LEXICON PIEHAIN/NJ !!= * ''@CODE@'' this is the common part of v1, v2
+
+!+N:nj^SVSH  X_eh_PL ;
 
 
 
