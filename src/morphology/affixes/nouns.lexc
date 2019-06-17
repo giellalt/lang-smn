@@ -632,60 +632,47 @@ LEXICON X_CAANA_PL !!= * ''@CODE@''
 !! !2TAHO lexicon family
 
 LEXICON 2TAHO !!= * ''@CODE@'' only for taho, similar to 2LAJO except from Pl+Ill, almost similar to 2SPAHA
-+N: X_LAJO_TAHO_SG ;
-+N: X_OKKO_PL ;
-+N+Sg+Com:^WG^CLEN%>in K ;  !tavoin
-+N+Sg+Loc:^SV^WG^CLEN^SLEN%>st K ;  !tavvoost+N+Pl+Ill:^WG^CLEN%>id K ;  !tavvoid
-+N+Cmp/SgNom: Rhash ;
-+N+Cmp/SgGen:^WG%> Rhash ;
-+N:^WG%> Gen_DER ;
-+N:%> Nom_DER ;
++N: 2TAHO_SG ;
++N: 2TAHO_PL ;
 
+LEXICON 2TAHO_SG 
++Sg+Com:^WG^CLEN%>in K ;  !tavoin
++Sg+Loc:^SV^WG^CLEN^SLEN%>st K ;  !tavvoost+N+Pl+Ill:^WG^CLEN%>id K ;  !tavvoid
+ X_LAJO_TAHO_SG ;
+ LAJO_TAHO_PX_SG ;
+
+LEXICON 2TAHO_PL 
+ X_OKKO_PL ;
+ LAJO_TAHO_PX_SG ;
 
 !! !2LAJO lexicon family
-
 LEXICON 2LAJO  !!= * ''@CODE@''
-2LAJO_SG ;
-2LAJO_PL ;
++N: 2LAJO_SG ;
++N: 2LAJO_PL ;
 !! \\ 
 LEXICON 2LAJO_SG !!= * ''@CODE@''
-+N:  X_LAJO_SG ;
-+N+Cmp/SgNom: Rhash ;
-+N+Cmp/SgGen:^WG%> Rhash ;
-! XXX katso näitä
-+N+Sg+Nom:^SV^CLEN^SLEN VPXsuff12nom ;  ! laijood
-+N+Sg+Gen:^SV^CLEN^SLEN VPXsuff12 ;  ! laijood
-+N+Sg+Acc:^SV^CLEN^SLEN VPXsuff12 ;  ! laijood
-+N+Sg+Nom:^SV^CLEN^SLEN VPXsuff3 ;  ! laijoos
-+N+Sg+Gen:^SV^WG^RLEN^SLEN VPXsuff3 ;  ! laajoos
-+N+Sg+Acc:^SV^WG^RLEN^SLEN VPXsuff3 ;  ! laajoos
-+N+Sg+Ill:%>s CPXsuff ; ! lajosis
-+N+Sg+Loc:^WG%>st CPXsuff ; ! lajostis
-+N+Sg+Com:^WG%>in CPXsuff ;  ! lajoinis
-+N+Ess:%>n CPXsuff ;         ! lajonân
-+N:^WG%> Gen_DER ;
-+N:%> Nom_DER ;
-!! \\ 
-LEXICON 2LAJO_PL !!= * ''@CODE@''
-+N: X_LAJO_PL ;
-+N+Cmp/PlGen:^WG%>i Rhash ;
-! XXX katso näitä
-+N+Pl+Gen:^WG%>id CPXsuff ;  !
-+N+Pl+Acc:^WG%>id CPXsuff ;  !
-+N+Pl+Ill:^WG%>id CPXsuff ;  !
-+N+Pl+Loc:^WG%>in CPXsuff ;  !
-+N+Pl+Com:^WG%>id CPXsuffCOM ;  !
-!! \\ 
-LEXICON X_LAJO_SG !!= * ''@CODE@''
 +Sg+Com:^WG%>in K ;  !lajoin
 +Sg+Loc:^SV^WG^RLEN^SLEN%>st K ;  !laajoost
-+Sg+Com:^WG%>in K ;  !lajoin
-X_LAJO_TAHO_SG ;
+ X_LAJO_TAHO_SG ;
+ LAJO_TAHO_PX_SG ;
+
+LEXICON LAJO_TAHO_PX_SG
++Cmp/SgNom: Rhash ;
++Cmp/SgGen:^WG%> Rhash ;
+ ! XXX katso näitä
++Sg+Nom:^SV^CLEN^SLEN VPXsuff12nom ;  ! laijood
++Sg+Gen:^SV^CLEN^SLEN VPXsuff12 ;     ! laijood
++Sg+Acc:^SV^CLEN^SLEN VPXsuff12 ;     ! laijood
++Sg+Nom:^SV^CLEN^SLEN VPXsuff3 ;      ! laijoos
++Sg+Gen:^SV^WG^RLEN^SLEN VPXsuff3 ;   ! laajoos
++Sg+Acc:^SV^WG^RLEN^SLEN VPXsuff3 ;   ! laajoos
++Sg+Ill:%>s CPXsuff ; ! lajosis
++Sg+Loc:^WG%>st CPXsuff ; ! lajostis
++Sg+Com:^WG%>in CPXsuff ;  ! lajoinis
++Ess:%>n CPXsuff ;         ! lajonân
+:^WG%> Gen_DER ;
+:%> Nom_DER ;
 !! \\ 
-LEXICON X_LAJO_PL !!= * ''@CODE@''
-+Pl+Ill:^WG%>id K ;  !lajoid
-+Pl+Com:^WG%>i GUIN ;  !lajoiguin
-:^WG  X_h_PL_notILL ;
 !! \\ 
 LEXICON X_LAJO_TAHO_SG !!= * ''@CODE@''
 +Sg+Nom: K ;  !laj̣o
@@ -702,6 +689,21 @@ LEXICON X_LAJO_TAHO_SG !!= * ''@CODE@''
 +Sg+Ill:^WG%>s CPXsuff ;  !
 +Sg+Loc:^WG%>st CPXsuff ;  !
 +Sg+Com:^WG%>in CPXsuffCOM ;  !
+!! \\ 
+LEXICON 2LAJO_PL !!= * ''@CODE@''
++N: X_LAJO_PL ;
++N+Cmp/PlGen:^WG%>i Rhash ;
+! XXX katso näitä
++N+Pl+Gen:^WG%>id CPXsuff ;  !
++N+Pl+Acc:^WG%>id CPXsuff ;  !
++N+Pl+Ill:^WG%>id CPXsuff ;  !
++N+Pl+Loc:^WG%>in CPXsuff ;  !
++N+Pl+Com:^WG%>id CPXsuffCOM ;  !
+!! \\ 
+LEXICON X_LAJO_PL !!= * ''@CODE@''
++Pl+Ill:^WG%>id K ;  !lajoid
++Pl+Com:^WG%>i GUIN ;  !lajoiguin
+:^WG  X_h_PL_notILL ;
 
 
 !! !2NJUNE lexicon family
