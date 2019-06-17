@@ -90,15 +90,15 @@ LEXICON 2ALGA_SG !!= * ''@CODE@'' (Px paradigms)
 +N+Der1+Der/Dimin: S_KAANDAS_DIM ; !kaandâš nieidâš kuuđhâš
 !! \\ 
 LEXICON X_ALGA_SG !!= * ''@CODE@'' case paradigms sg
-+Sg+Nom: K;                                                 ! sollâ
++Sg+Nom: K;           ! sollâ
 +Sg+Gen:^WG^RLEN K ;                     ! aalgâ
 +Sg+Acc:^WG^RLEN K ;                     ! aalgâ
 +Sg+Ill:^CSH^RLEN%>n K ;                ! aalgân puuksân k4s removed CSH
 +Sg+Loc:^WG^RLEN%>st K ;                 ! aalgâst
 +Sg+Com:^WG^CLEN^SVLOW%>in  K ; ! algáin
 +Sg+Abe:^WG^RVSH%>ttáá K ;                ! algâttáá
-+Ess:%>n K ;                                        ! algân
-+Par:%>d K ;                                        ! algâd
++Ess:%>n K ;  ! algân
++Par:%>d K ;  ! algâd
 !! \\ 
 LEXICON X_ALGA_PL !!= * ''@CODE@'' case para pl (plurals for 2KUMPPI)
 +Pl+Nom:^WG^RLEN%>h K ;            ! kuumpih
@@ -181,7 +181,7 @@ LEXICON 2SOLLA_PL  !!= * ''@CODE@'' (Pl forms, pointing to Px)
 +N+Pl+Com:^WG%>id CPXsuffCOM ;  !
 !! \\ 
 LEXICON X_SOLLA_SG !!= * ''@CODE@'' (Sg absolute forms)
-+Sg+Nom: K;                                                 ! sollâ
++Sg+Nom: K;           ! sollâ
 +Sg+Gen:^WG^RLEN K ;                     ! soolâ
 +Sg+Acc:^WG^RLEN K ;                     ! soolâ
 +Sg+Ill:^CSH^RLEN%>n K ;                ! soolân
@@ -235,7 +235,7 @@ LEXICON 2JUUHA_SG !!= * ''@CODE@''
 +N+Sg+Ill:s CPXsuff ; !
 +N+Sg+Loc:^WG%>st CPXsuff ; !
 +N+Sg+Com:^WG%>in CPXsuff ;  ! 
-+N+Ess:%>n CPXsuff ;                                                ! kiehân 
++N+Ess:%>n CPXsuff ;          ! kiehân 
 +N:^WG%> Gen_DER ;
 +N:^RVSH%> Nom_DER ; !máhulâš
 +N+Der1+Der/Dimin:^WG^CLEN^SVLOW%> JUUHA_DIM ; ! 
@@ -252,8 +252,8 @@ LEXICON 2JUUHA_PL !!= * ''@CODE@''
 !! \\ 
 LEXICON X_JUUHA_SG  !!= * ''@CODE@'' (common POS Sg)
 +Sg+Com:^WG^CLEN^SVLOW%>in K ; ! kievváin
-+Ess:^CLEN^RLEN%>n K ;                                                ! 
-+Par:^CLEN^RLEN%>d K ;                                                ! 
++Ess:^CLEN^RLEN%>n K ;          ! 
++Par:^CLEN^RLEN%>d K ;          ! 
  JUUHA_KIELA_SG ;
 !! \\ 
 LEXICON X_JUUHA_PL  !!= * ''@CODE@'' (common POS Pl)
@@ -394,10 +394,10 @@ LEXICON KIELA_DIM
 
 !! !JUUHA-KIELA common forms
 LEXICON JUUHA_KIELA_SG !!= * ''@CODE@''
-+Sg+Nom:^RLEN K;                                                 ! kiehâ
++Sg+Nom:^RLEN K;           ! kiehâ
 +Sg+Gen:^WG^RLEN K ;                                     ! kievâ
 +Sg+Acc:^WG^RLEN K ;                                     ! kievâ
-+Sg+Ill:^RLEN%>n K ;                                        ! kiehân
++Sg+Ill:^RLEN%>n K ;  ! kiehân
 +Sg+Loc:^WG^RLEN%>st K ;                                 ! kievâst
 +Sg+Abe:^WG^RVSH%>ttáá K ;                ! kievâttáá
 !! \\ 
@@ -430,7 +430,7 @@ LEXICON 2TELTTA_SG !!= * ''@CODE@''
 +N+Sg+Ill:s CPXsuff ; !
 +N+Sg+Loc:^WG%>st CPXsuff ; !
 +N+Sg+Com:^WG%>in CPXsuff ;  ! 
-+N+Ess:%>n CPXsuff ;                                        ! telttan                
++N+Ess:%>n CPXsuff ;  ! telttan                
 +N:^WG%> Gen_DER ;
 +N:%> Nom_DER ;
 !! \\ 
@@ -451,8 +451,8 @@ LEXICON X_TELTTA_SG !!= * ''@CODE@''
 +Sg+Loc:^SV^WG^CLEN^SLEN%>st K ;         ! telttaast ! should be ^WG^CLEN^SV^SLEN
 +Sg+Com:^WG^CLEN%>in K;                                 ! telttain
 +Sg+Abe:^WG%>ttáá K ;                ! teltattáá
-+Ess:%>n K ;                                        ! telttan                
-+Par:%>d K ;                                        ! telttad        
++Ess:%>n K ;  ! telttan                
++Par:%>d K ;  ! telttad        
 !! \\ 
 LEXICON X_TELTTA_PL !!= * ''@CODE@''
 +Pl+Nom:^WG%>h K ;                         ! teltah                
@@ -652,27 +652,29 @@ LEXICON 2LAJO_SG !!= * ''@CODE@''
 +N:  X_LAJO_SG ;
 +N+Cmp/SgNom: Rhash ;
 +N+Cmp/SgGen:^WG%> Rhash ;
-!+N+Sg+Nom:^SV^CLEN^SLEN VPXsuff12nom ;  ! laijood
-!+N+Sg+Gen:^SV^CLEN^SLEN VPXsuff12 ;  ! laijood
-!+N+Sg+Acc:^SV^CLEN^SLEN VPXsuff12 ;  ! laijood
-!+N+Sg+Nom:^SV^CLEN^SLEN VPXsuff3 ;  ! laijoos
-!+N+Sg+Gen:^SV^WG^RLEN^SLEN VPXsuff3 ;  ! laajoos
-!+N+Sg+Acc:^SV^WG^RLEN^SLEN VPXsuff3 ;  ! laajoos
-!+N+Sg+Ill:%>s CPXsuff ; ! lajosis
-!+N+Sg+Loc:^WG%>st CPXsuff ; ! lajostis
-!+N+Sg+Com:^WG%>in CPXsuff ;  ! lajoinis
-!+N+Ess:%>n CPXsuff ;         ! lajonân
+! XXX katso näitä
++N+Sg+Nom:^SV^CLEN^SLEN VPXsuff12nom ;  ! laijood
++N+Sg+Gen:^SV^CLEN^SLEN VPXsuff12 ;  ! laijood
++N+Sg+Acc:^SV^CLEN^SLEN VPXsuff12 ;  ! laijood
++N+Sg+Nom:^SV^CLEN^SLEN VPXsuff3 ;  ! laijoos
++N+Sg+Gen:^SV^WG^RLEN^SLEN VPXsuff3 ;  ! laajoos
++N+Sg+Acc:^SV^WG^RLEN^SLEN VPXsuff3 ;  ! laajoos
++N+Sg+Ill:%>s CPXsuff ; ! lajosis
++N+Sg+Loc:^WG%>st CPXsuff ; ! lajostis
++N+Sg+Com:^WG%>in CPXsuff ;  ! lajoinis
++N+Ess:%>n CPXsuff ;         ! lajonân
 +N:^WG%> Gen_DER ;
 +N:%> Nom_DER ;
 !! \\ 
 LEXICON 2LAJO_PL !!= * ''@CODE@''
 +N: X_LAJO_PL ;
 +N+Cmp/PlGen:^WG%>i Rhash ;
-!+N+Pl+Gen:^WG%>id CPXsuff ;  !
-!+N+Pl+Acc:^WG%>id CPXsuff ;  !
-!+N+Pl+Ill:^WG%>id CPXsuff ;  !
-!+N+Pl+Loc:^WG%>in CPXsuff ;  !
-!+N+Pl+Com:^WG%>id CPXsuffCOM ;  !
+! XXX katso näitä
++N+Pl+Gen:^WG%>id CPXsuff ;  !
++N+Pl+Acc:^WG%>id CPXsuff ;  !
++N+Pl+Ill:^WG%>id CPXsuff ;  !
++N+Pl+Loc:^WG%>in CPXsuff ;  !
++N+Pl+Com:^WG%>id CPXsuffCOM ;  !
 !! \\ 
 LEXICON X_LAJO_SG !!= * ''@CODE@''
 +Sg+Com:^WG%>in K ;  !lajoin
@@ -740,9 +742,9 @@ LEXICON 2NJUNE_PL !!= * ''@CODE@''
 +N+Pl+Com:^WG%>id CPXsuffCOM ;  !njunijdiskuin
 !! \\ 
 LEXICON X_NJUNE_SG !!= * ''@CODE@''
-+Sg+Nom: K ;                                                ! njuṇe
-+Sg+Gen:^WG K ;                                        ! njune
-+Sg+Acc:^WG K ;                                        ! njune
++Sg+Nom: K ;          ! njuṇe
++Sg+Gen:^WG K ;  ! njune
++Sg+Acc:^WG K ;  ! njune
 +Sg+Ill:^EA^CSH%>n K ;                                ! njuṇán # stem e>á
 +Sg+Loc:^SV^WG^RLEN^SLEN%>st K ;        ! njuuneest # earlier also^RVL
 !+Sg+Com:^WG^CLEN%>in K ;                ! njunnijn # MM + MLO hardcording
@@ -802,9 +804,9 @@ LEXICON 2ALGE_PL !!= * ''@CODE@''
 +N+Pl+Com:^WG%>id CPXsuffCOM ;  !párnáidiskuin tihijdânguin
 !! \\ 
 LEXICON X_ALGE_SG !!= * ''@CODE@''
-+Sg+Nom: K ;                                                ! alge
-+Sg+Gen:^WG K ;                                         ! alge
-+Sg+Acc:^WG K ;                                         ! alge
++Sg+Nom: K ;          ! alge
++Sg+Gen:^WG K ;   ! alge
++Sg+Acc:^WG K ;   ! alge
 +Sg+Ill:^EA^CSH^RLEN%>n K ;         ! aalgan
 +Sg+Loc:^SV^WG^CLEN^SLEN%>st K ;         ! algeest
 +Sg+Com:^WG^CLEN%>in K ;                 ! olgijn 
@@ -858,7 +860,7 @@ LEXICON 2NIJBE_PL !!= * ''@CODE@''
 +N+Pl+Com:^WG%>id CPXsuffCOM ;  !
 !! \\ 
 LEXICON X_NIJBE_SG !!= * ''@CODE@''
-+Sg+Nom: K ;                                                ! nijbe 
++Sg+Nom: K ;          ! nijbe 
 +Sg+Gen:^WG^RLEN K ;                         ! niijbe
 +Sg+Acc:^WG^RLEN K ;                         ! niijbe
 +Sg+Ill:^EA^CSH^RLEN%>n K ;         ! niijbán
@@ -907,9 +909,9 @@ LEXICON 2VAHE_PL !!= * ''@CODE@''
 +N+Pl+Com:^WG%>id CPXsuffCOM ;  !
 !! \\ 
 LEXICON X_VAHE_SG !!= * ''@CODE@''
-+Sg+Nom: K ;                                                 ! vahe
-+Sg+Gen:^WG K ;                                        ! vave
-+Sg+Acc:^WG K ;                                        ! vave
++Sg+Nom: K ;           ! vahe
++Sg+Gen:^WG K ;  ! vave
++Sg+Acc:^WG K ;  ! vave
 +Sg+Ill:^EA^CSH%>n K ;                                 ! vahan
 +Sg+Loc:^SV^WG^CLEN^SLEN%>st K ;         ! vavveest
 +Sg+Com:^WG^CLEN%>in K ;                 ! vovvijn
@@ -1148,38 +1150,35 @@ LEXICON X_AIGI_SG !!= * ''@CODE@''
 
 
 !! !2KYELI - 2SYEJI lexicon family
+! ne pitää yhdistää, yksi ero:
+! X-leksikossa Sg Ill erilainen
 
-LEXICON 2KYELI  !!= * ''@CODE@'' i-e-á, similar to 2ALGE, except from -i some places.                                                                                                                                
+LEXICON 2KYELI  !!= * ''@CODE@'' i-e-á, similar to 2ALGE, except from -i some places.     
 2KYELI_SG ;
 2KYELI_PL ;
 
-LEXICON 2SYEJI  !!= * ''@CODE@'' i-e-á,                                                                                                                                                                              
+LEXICON 2SYEJI  !!= * ''@CODE@'' i-e-á,             
 2SYEJI_SG ;
 2SYEJI_PL ;
 
 LEXICON 2KYELI_SG !!= * ''@CODE@''  kyeli nouns
 +N: KYELI_SYEJI_SG ; ! common kyeli-syeji-sg
- 2_KYELI_SYEJI_SG_PX ; ! common px
-+N+Sg+Loc:e^WG%>st CPXsuff ;  ! kyelestis                                                                                                                                                                         
-+N+Sg+Com:^WG^RVSH%>in CPXsuff ;  ! kuolijnân                                                                                                                                                                      
+    2_KYELI_SYEJI_SG_PX ; ! common px
 
 LEXICON 2SYEJI_SG  !!= * ''@CODE@'' i-e-á,   
-+N: KYELI_SYEJI_SG ;   ! common kyeli-syeji-sg                                                                                                                                                                       
- 2_KYELI_SYEJI_SG_PX ; ! common px 
-+N+Sg+Loc:e^WG^RVSH%>st CPXsuff ;  !syejestis                                                                                                                                                                       
-+N+Sg+Com:^WG%>in CPXsuff ;  !suojijnis                                                                                                                                                                            
++N: KYELI_SYEJI_SG ;   ! common kyeli-syeji-sg      
+    2_KYELI_SYEJI_SG_PX ; ! common px 
 
-
-LEXICON KYELI_SYEJI_SG  !!= * ''@CODE@'' i-e-á,                                                                                                                                                                      
-+Sg+Nom: K ;                 ! kyeli                                                                                                                                                                               
-+Sg+Gen:e^WG^RVSH K ;         ! kyele                                                                                                                                                                               
-+Sg+Acc:e^WG^RVSH K ;         ! kyele                                                                                                                                                                               
-+Sg+Ill:^EA^CSH^RLEN%>n K ;     ! kuálán                                                                                                                                                                           
-+Sg+Loc:e^WG%>est K ;   ! kyeleest                                                                                                                                                                                  
-+Sg+Com:^WG%>in K ;         ! kuolijn, peelijn   <PP px deiki       ???                                                                                                                                                                                                                                                                                                                            
-+Sg+Abe:e^WG^RVSH%>ttáá K ;  ! kyelettáá                                                                                                                                                                            
-+Ess:^CLEN%>n K ;     ! kyellin                                                                                                                                                                                    
-+Par:^CLEN%>d K ;                                       ! kyellid                                                                                                                                                  
+LEXICON KYELI_SYEJI_SG  !!= * ''@CODE@'' i-e-á,     
++Sg+Nom: K ;                 ! kyeli 
++Sg+Gen:e^WG^RVSH K ;         ! kyele 
++Sg+Acc:e^WG^RVSH K ;         ! kyele 
++Sg+Ill:^EA^CSH^RLEN%>n K ;     ! kuálán 
++Sg+Loc:e^WG%>est K ;   ! kyeleest 
++Sg+Com:^WG%>in K ;         ! kuolijn, peelijn   <PP px deiki       ???
++Sg+Abe:e^WG^RVSH%>ttáá K ;  ! kyelettáá 
++Ess:^CLEN%>n K ;     ! kyellin 
++Par:^CLEN%>d K ; ! kyellid 
 +Cmp/SgNom:^RVSH%> Rhash ;
 +Cmp/SgNom+Err/Orth:%> Rhash ; !kääniores
 +Cmp/SgGen+Err/Orth:e^WG^RVSH%> Rhash ; ! pelemuddoost kyelesaallâs Err/Orth?
@@ -1190,53 +1189,60 @@ LEXICON 2_KYELI_SYEJI_SG_PX !!= * ''@CODE@''  common kyeli-syeji px
 +N+Cmp/SgNom+Err/Orth:%> Rhash ; !kääniores
 +N+Cmp/SgGen+Err/Orth:e^WG^RVSH%> Rhash ; ! pelemuddoost kyelesaallâs Err/Orth?
 +N+Cmp/SgGen:e^WG^RVSH%> Rhash ; ! 
-+N+Sg+Nom:^EA^CLEN VPXsuff12nom ;  !kuállám                                                                                                                                                                        
-+N+Sg+Gen:^EA^CLEN VPXsuff12 ;  ! XXX check                                                                                                                                                                        
-+N+Sg+Acc:^EA^CLEN VPXsuff12 ;  ! XXX check                                                                                                                                                                        
-!+N+Sg+Nom:^CLEN VPXsuff3 ;  ! syeijis, fix *syeijes or not in use                                                                                                                                                 
-+N+Sg+Gen:e^WG VPXsuff3 ;  !syejes                                                                                                                                                                                  
-+N+Sg+Acc:e^WG VPXsuff3 ;  !syejes                                                                                                                                                                                  
-+N+Sg+Ill:^EA%>s CPXsuff ; !suájásis ill páikkásis                                                                                                                                                                 
++N+Sg+Nom:^EA^CLEN VPXsuff12nom ;  !kuállám       
++N+Sg+Gen:^EA^CLEN VPXsuff12 ;  ! XXX check       
++N+Sg+Acc:^EA^CLEN VPXsuff12 ;  ! XXX check       
++N+Sg+Gen:e^WG VPXsuff3 ;  !syejes 
++N+Sg+Acc:e^WG VPXsuff3 ;  !syejes 
++N+Sg+Ill:^EA%>s CPXsuff ; !suájásis ill páikkásis
++N+Sg+Loc:e^WG^RVSH%>st CPXsuff ;  ! kyelestis 
++N+Sg+Com:^WG^RVSH%>in CPXsuff ;  ! kuolijnân     
 +N:%> Nom_DER ;
 +N+Der1+Der/lasj:^EA^WG%>l ANOLASJ ; 
 +N+Der1+Der/Car:e^WG^RVSH%>tt MUSTOTTEM ;
-+N+Ess:^CSH%>n CPXsuff ;     ! kyelinis                                                                                                                                                                            
++N+Ess:^CSH%>n CPXsuff ;     ! kyelinis           
 
-LEXICON X_KYELI  !!= * ''@CODE@'' lexicon coming in from the adjectives                                                                                                                                                                              
+LEXICON X_KYELI  !!= * ''@CODE@'' lexicon coming in from the adjectives             
 KYELI_SYEJI_SG ;
 X_KYELI_PL ;
 
-LEXICON X_KYELI_PL  !!= * ''@CODE@'' i-e-á, similar to 2ALGE, except from -i some places.                                                                                                                            
-+Pl+Ill:^WG%>id K ;                             ! kuolijd                                                                                                                                                          
+LEXICON X_KYELI_PL  !!= * ''@CODE@'' i-e-á, similar to 2ALGE, except from -i some places. 
++Pl+Ill:^WG%>id K ;  ! kuolijd
 KYELI_SYEJI_PL ;
 
-LEXICON 2KYELI_PL!!= * ''@CODE@''                                                                                                                                                                                    
+LEXICON 2KYELI_PL!!= * ''@CODE@'' 
 +N: X_KYELI_PL ;
 +N+Cmp/PlGen:^WG^RVSH%>i Rhash ;
-+N+Pl+Loc:^WG%>in CPXsuff ;                             ! kuolijnis                                                                                                                                                
-+N+Pl+Com:^WG^RVSH%>id CPXsuffCOM ;  ! kuolijdiskuin                                                                                                                                                               
++N+Pl+Loc:^WG%>in CPXsuff ;                             ! kuolijnis                     
++N+Pl+Com:^WG^RVSH%>id CPXsuffCOM ;  ! kuolijdiskuin 
+2_KYELI_SYEJI_PL_PX ;
 
-LEXICON 2SYEJI_PL !!= * ''@CODE@''                                                                                                                                                                                   
+LEXICON 2SYEJI_PL !!= * ''@CODE@'' 
 +N: KYELI_SYEJI_PL ;
-+N+Pl+Ill:^CLEN^RVSH%>id K ;                            ! suoijijd                                                                                                                                                 
++N+Pl+Ill:^CLEN^RVSH%>id K ;                            ! suoijijd                      
 +N+Cmp/SgNom:^RVSH%> Rhash ;
 +N+Cmp/PlGen:^WG%>i Rhash ;
-+N+Pl+Loc:^WG^RVSH%>in CPXsuff ;  !párnáidis                                                                                                                                                                       
-+N+Pl+Com:^WG%>id CPXsuffCOM ;  !párnáidiskuin                                                                                                                                                                     
++N+Pl+Loc:^WG^RVSH%>in CPXsuff ;  !párnáidis      
++N+Pl+Com:^WG%>id CPXsuffCOM ;  !párnáidiskuin    
+2_KYELI_SYEJI_PL_PX ;
 
-!LEXICON 2_KYELI_SYEJI_PL_PX
-!+N+Pl+Gen:^WG^RVSH%>id CPXsuff ;  ! kuolijdis                                                                                                                                                                      
-!+N+Pl+Ill:^WG^RVSH%>id CPXsuff ;  !párnáidis                                                                                                                                                                       
-!+N+Pl+Acc:^WG^RVSH%>id CPXsuff ;  ! kuolijdis                                                                                                                                                                      
 
-LEXICON KYELI_SYEJI_PL  !!= * ''@CODE@'' i-e-á,                                                                                                                                                                      
-+Pl+Nom:e^WG^RVSH%>h K ;                                 ! kyeleh                                                                                                                                                   
-+Pl+Gen+Use/NG:^WG^RVSH%>i K ;                          ! kuolij                                                                                                                                                   
-+Pl+Gen:^WG%>i K ;                                      ! kuolij                                                                                                                                                   
-+Pl+Acc:^WG%>id K ;                                     ! kuolijd                                                                                                                                                  
-+Pl+Loc:^WG%>in K ;                                     ! kuolijn                                                                                                                                                  
-+Pl+Com:^WG^RVSH%>i GUIN ;                      ! kuolijguin                                                                                                                                                       
-+Pl+Abe:^WG^RVSH%>ittáá K ;                     ! kuolijttáá                                                                                                                                                       
+LEXICON 2_KYELI_SYEJI_PL_PX
++N+Pl+Gen:^WG^RVSH%>id CPXsuff ;  ! kuolijdis     
++N+Pl+Acc:^WG^RVSH%>id CPXsuff ;  ! kuolijdis     
++N+Pl+Ill:^WG^RVSH%>id CPXsuff ;  !      
++N+Pl+Loc:^WG^RVSH%>in CPXsuff ;  !
++N+Pl+Com:^WG^RVSH%>id CPXsuffCOM ;  !
+
+
+LEXICON KYELI_SYEJI_PL  !!= * ''@CODE@'' i-e-á,     
++Pl+Nom:e^WG^RVSH%>h K ;        ! kyeleh        
++Pl+Gen+Use/NG:^WG^RVSH%>i K ;  ! kuolij        
++Pl+Gen:^WG%>i K ;! kuolij        
++Pl+Acc:^WG%>id K ;             ! kuolijd       
++Pl+Loc:^WG%>in K ;             ! kuolijn       
++Pl+Com:^WG^RVSH%>i GUIN ;      ! kuolijguin    
++Pl+Abe:^WG^RVSH%>ittáá K ;     ! kuolijttáá    
 
 
 
@@ -1834,7 +1840,7 @@ LEXICON X_VAALJA_PL !!= * ''@CODE@''
 
 
 LEXICON 2SKERREEH_PL !!= * ''@CODE@''  Plural tantum, as 2PUUVSAH, but w/o WG
-+N: X_TAHHEE_PL ;
+C_TAHHEE_PL ;
 +N+Cmp/SgNom:^SV^SLEN Rhash ;
 
 
@@ -2077,8 +2083,8 @@ LEXICON 4PUHELIN                !!= * ''@CODE@''  Only a few words in this categ
 +N+Sg+Nom:^FCDn K ;                                ! puhelin
 +N+Cmp/SgNom:^FCDn%> Rhash ;
 +N+Cmp/SgGen:^FCDn%> Rhash ;
-+N+Sg+Gen:^FCDn        K ;                                        ! puhelin
-+N+Sg+Acc:^FCDn        K ;                                        ! puhelin
++N+Sg+Gen:^FCDn        K ;  ! puhelin
++N+Sg+Acc:^FCDn        K ;  ! puhelin
 +N+Sg+Ill:%>ân        K ;                                ! puhelimân                        
 +N+Sg+Loc:%>ist        K ;                                ! puhelimist
 +N+Sg+Loc+Err/Orth:%>est        K ;                                ! puhelimist
@@ -2210,12 +2216,12 @@ LEXICON 3POTTAAK  !!= * ''@CODE@''
 +N: X_POTTAAK ;
 
 LEXICON X_POTTAAK
-+Sg+Nom: K ;                                           ! pottáák
++Sg+Nom: K ;     ! pottáák
 +Cmp/SgNom: Rhash ;
 +Cmp/SgGen: Rhash ;
 +Cmp/PlGen:^SC^CSH^SVSH%>ij Rhash ;
-+Sg+Gen: K ;                                             ! pottáák
-+Sg+Acc: K ;                                              ! pottáák 
++Sg+Gen: K ;       ! pottáák
++Sg+Acc: K ;        ! pottáák 
 +Sg+Ill:^SC^CSH^SVSH%>ân K ;                ! potákkân
 +Sg+Loc:^SC^CSH^SVSH%>ist K ;                 ! potákkist 
 +Sg+Com:^SC^CSH^SVSH%>áin K ;                ! potákkáin
@@ -2280,9 +2286,9 @@ LEXICON 3EEMEED_PL  !!= * ''@CODE@''
 +N+Pl+Com:^CSH^SVSH%>ijd CPXsuff ;  ! emedijdiskijn
 
 LEXICON X_EEMEED_SG  !!= * ''@CODE@''
-+Sg+Nom: K ;                                        ! eemeed
-+Sg+Gen: K ;                                        ! eemeed
-+Sg+Acc: K ;                                        ! eemeed
++Sg+Nom: K ;  ! eemeed
++Sg+Gen: K ;  ! eemeed
++Sg+Acc: K ;  ! eemeed
 +Sg+Ill:^CSH^SVSH%>ân K ;        ! emedân
 +Sg+Loc:^CSH^SVSH%>ist K ;        ! emedist
 +Sg+Com:^CSH^SVSH%>áin K ;        ! emedáin
@@ -2878,7 +2884,6 @@ LEXICON 3RUONAS !!= * ''@CODE@'' nuurras WG NEP,  blank for the rest
 +N+Sg+Com:^CSH%>ijn CPXsuff ; ! ruonâsijnân nuRâsijnân
 +N+Ess:^WG^RLEN%>in CPXsuff ;     ! ruo'nâsnân nurâsnân
 
-+N+Pl+Nom:^CSH%>ijd CPXsuff ;    ! pihtâsijdân
 +N+Pl+Gen:^CSH%>ijd CPXsuff ;    ! pihtâsijdân
 +N+Pl+Acc:^CSH%>ijd CPXsuff ;    ! pihtâsijdân
 +N+Pl+Ill:^CSH%>ijd CPXsuff ;    ! pihtâsijdân
@@ -3572,13 +3577,13 @@ LEXICON S_CISSAAS !!= * ''@CODE@''
 +N+Par:^SVž^SLEN^SVLOW%>id K ;                 ! cissáážid
 
 LEXICON X_CISSAAS !!= * ''@CODE@'' 
-+Sg+Nom:^SVš^SLEN K ;                                                         ! cissááš
-+Sg+Gen:^SV^SLEN K ;                                                         ! cissáá
-+Sg+Acc:^SV^SLEN K ;                                        ! cissáá
++Sg+Nom:^SVš^SLEN K ;                   ! cissááš
++Sg+Gen:^SV^SLEN K ;                   ! cissáá
++Sg+Acc:^SV^SLEN K ;  ! cissáá
 !+Sg+Ill:ž^CSH%>ân K ;        ! algažân
 !+Sg+Ill+Err/Orth:^SVž^SLEN^SVLOW%>ân K ;                ! cissáážân NEW
 +Sg+Loc:^SV^SLEN%>st K ;                                ! cissáást  NEW
-+Sg+Com:%>in K ;                                                         ! cissáin
++Sg+Com:%>in K ;                   ! cissáin
 +Sg+Abe:^SV^SLEN%>ttáá K ;                                 ! cissááttáá
  X_SVSLENh_PL ;
 
@@ -3589,22 +3594,22 @@ LEXICON S_VUALAAS !!= * ''@CODE@''
 +N+Cmp/PlGen:%>i  Rhash ;
 
 LEXICON X_VUALAAS !!= * ''@CODE@'' 
-+Sg+Nom:^SVš^RLEN^SLEN K ;                                                         ! vuálááš
-+Sg+Gen:^SV^RLEN^SLEN K ;                                                                 ! vuáláá
-+Sg+Acc:^SV^RLEN^SLEN K ;                                                                ! vuáláá
-+Sg+Ill:ž%>ân K ;                                                        ! vuálážân
-+Sg+Loc:^SV^RLEN^SLEN%>st K ;                                                        ! vuáláást
-+Sg+Com:%>in K ;                                                         ! vuáláin
-+Sg+Abe:^SV^RLEN^SLEN%>ttáá K ;                                                 ! vuálááttáá
-+Ess:ž%>in K ;                                                        ! vuálážin
-+Par:ž%>id K ;                                                         ! vuálážid
-+Pl+Nom:^SV^RLEN^SLEN%>h K ;                                                         ! vuálááh
-+Pl+Gen:%>i K ;                                                         ! vuálái
-+Pl+Acc:%>id K ;                                                         ! vuáláid
-+Pl+Ill:%>id K ;                                                         ! vuáláid
-+Pl+Loc:%>in K ;                                                         ! vuáláin
-+Pl+Com:%>i GUIN ;                                                 ! vuáláiguin
-+Pl+Abe:%>ittáá K ;                                                 ! vuáláittáá
++Sg+Nom:^SVš^RLEN^SLEN K ;                   ! vuálááš
++Sg+Gen:^SV^RLEN^SLEN K ;                           ! vuáláá
++Sg+Acc:^SV^RLEN^SLEN K ;                          ! vuáláá
++Sg+Ill:ž%>ân K ;                  ! vuálážân
++Sg+Loc:^SV^RLEN^SLEN%>st K ;                  ! vuáláást
++Sg+Com:%>in K ;                   ! vuáláin
++Sg+Abe:^SV^RLEN^SLEN%>ttáá K ;           ! vuálááttáá
++Ess:ž%>in K ;                  ! vuálážin
++Par:ž%>id K ;                   ! vuálážid
++Pl+Nom:^SV^RLEN^SLEN%>h K ;                   ! vuálááh
++Pl+Gen:%>i K ;                   ! vuálái
++Pl+Acc:%>id K ;                   ! vuáláid
++Pl+Ill:%>id K ;                   ! vuáláid
++Pl+Loc:%>in K ;                   ! vuáláin
++Pl+Com:%>i GUIN ;           ! vuáláiguin
++Pl+Abe:%>ittáá K ;           ! vuáláittáá
 
 
 LEXICON S_KUAVDAS !!= * ''@CODE@''  WG or not? vuáŋŋáš not WG, kiärpáš WG
@@ -3666,20 +3671,20 @@ LEXICON S_ALGAAS !!= * ''@CODE@''
 
 
 LEXICON S_KUADHUS !!= * ''@CODE@'' 
-+N+Sg+Nom:š^WG^RLEN K ;                                         ! ááhuš
++N+Sg+Nom:š^WG^RLEN K ;   ! ááhuš
 +N+Cmp/SgNom:š^WG^RVSH%> Rhash ;
 +N+Cmp/SgGen:^SV^SLEN%> Rhash ;
 +N+Cmp/PlGen:%>i Rhash ;
-+N+Sg+Gen:^SV^SLEN K ;                                                 ! ahhuu
-+N+Sg+Acc:^SV^SLEN K ;                                                ! ahhuu
++N+Sg+Gen:^SV^SLEN K ;           ! ahhuu
++N+Sg+Acc:^SV^SLEN K ;          ! ahhuu
 !+N+Sg+Ill:ž^WG%>ân K ;                                ! áhužân
 +N+Sg+Ill+Err/Orth:ž^WG%>ân K ;                                ! áhužân NEW
 +N+Sg+Ill:^SVž^WG^SLEN%>ân K ;                                ! áhuužân NEW
-+N+Sg+Loc:^SV^SLEN%>st K ;                                                ! ahhuust
-+N+Sg+Com:%>in K ;                                                 ! ahhuin
-+N+Sg+Abe:^SV^SLEN%>ttáá K ;                                         ! ahhuuttáá
-+N+Ess:^SVž^WG^SLEN%>in K ;                                        ! áhužin
-+N+Par:^SVž^WG^SLEN%>id K ;                                                 ! áhužid
++N+Sg+Loc:^SV^SLEN%>st K ;          ! ahhuust
++N+Sg+Com:%>in K ;           ! ahhuin
++N+Sg+Abe:^SV^SLEN%>ttáá K ;   ! ahhuuttáá
++N+Ess:^SVž^WG^SLEN%>in K ;  ! áhužin
++N+Par:^SVž^WG^SLEN%>id K ;           ! áhužid
 +N: X_SVSLENh_PL ;
 
 LEXICON S_KAAHUS !!= * ''@CODE@'' 
@@ -3690,16 +3695,16 @@ LEXICON S_KAAHUS !!= * ''@CODE@''
 +N+Sg+Ill:^SVž^SLEN%>ân K ;                                ! kahhuužân
 
 LEXICON X_KAAHUS_notILL !!= * ''@CODE@'' 
-+Sg+Nom:š^CSH^RLEN K ;                                         ! kááhuš ka^RVhhu^CSH^RLEN%>š
-+Sg+Gen:^SV^SLEN K ;                                                 ! kahhuu
-+Sg+Acc:^SV^SLEN K ;                                                ! kahhuu
-+Sg+Loc:^SV^SLEN%>st K ;                                                ! kahhuust
-+Sg+Com:%>in K ;                                                 ! kahhuin
-+Sg+Abe:^SV^SLEN%>ttáá K ;                                         ! kahhuuttáá
-+Ess:^SVž^SLEN%>in K ;                                        ! kahhuužin
-+Ess+Err/Orth:ž^CSH%>in K ;                                        ! káhužin
-+Par:^SVž^SLEN%>id K ;                                                 ! kahhuužid
-+Par+Err/Orth:ž^CSH%>id K ;                                                 ! káhužid
++Sg+Nom:š^CSH^RLEN K ;   ! kááhuš ka^RVhhu^CSH^RLEN%>š
++Sg+Gen:^SV^SLEN K ;           ! kahhuu
++Sg+Acc:^SV^SLEN K ;          ! kahhuu
++Sg+Loc:^SV^SLEN%>st K ;          ! kahhuust
++Sg+Com:%>in K ;           ! kahhuin
++Sg+Abe:^SV^SLEN%>ttáá K ;   ! kahhuuttáá
++Ess:^SVž^SLEN%>in K ;  ! kahhuužin
++Ess+Err/Orth:ž^CSH%>in K ;  ! káhužin
++Par:^SVž^SLEN%>id K ;           ! kahhuužid
++Par+Err/Orth:ž^CSH%>id K ;           ! káhužid
  X_SVSLENh_PL ;
 
 LEXICON S_SUOLLUS !!= * ''@CODE@'' 
@@ -3717,9 +3722,9 @@ LEXICON X_SUOLLUS !!= * ''@CODE@''
 +Sg+Com:%>in K ;                         
 +Sg+Abe:^SV^SLEN%>ttáá K ;         
 +Ess+Err/Orth:^SVž^SLEN%>in K ;        
-+Ess:ž%>in K ;                                        
++Ess:ž%>in K ;  
 +Par+Err/Orth:^SVž^SLEN%>id K ; 
-+Par:ž%>id K ;                                         
++Par:ž%>id K ;   
  X_SVSLENh_PL ;
 
 
@@ -4051,25 +4056,25 @@ X_TAHHEE_SG ;
 X_TAHHEE_PL ;
 
 LEXICON X_TAHHEE_SG !!= * ''@CODE@'' ee-final contract, -ei instead of -ij
-+Sg+Nom:^SV^SLEN FLAG_CTAHHEE ;                                ! tahhee
-+Sg+Gen:^SV^SLEN FLAG_CTAHHEE ;                                ! tahhee
-+Sg+Acc:^SV^SLEN FLAG_CTAHHEE ;                                ! tahhee
-+Sg+Ill:%>i3 FLAG_CTAHHEE ;                                ! tahhei
++Sg+Nom:^SV^SLEN FLAG_CTAHHEE ;             ! tahhee
++Sg+Gen:^SV^SLEN FLAG_CTAHHEE ;             ! tahhee
++Sg+Acc:^SV^SLEN FLAG_CTAHHEE ;             ! tahhee
++Sg+Ill:%>i3 FLAG_CTAHHEE ;                 ! tahhei
 +Sg+Loc:%>st FLAG_CTAHHEE ;                 ! tahhest ! stem e > 0
 +Sg+Com:%>i3n FLAG_CTAHHEE ;                ! tahhein
-+Sg+Abe:^SV^SLEN%>ttáá FLAG_CTAHHEE ;                ! tahheettáá
-+Ess:%>n        FLAG_CTAHHEE ;                        ! tahhen
-+Par:%>d        FLAG_CTAHHEE ;                        ! tahhed
++Sg+Abe:^SV^SLEN%>ttáá FLAG_CTAHHEE ;       ! tahheettáá
++Ess:%>n        FLAG_CTAHHEE ;              ! tahhen
++Par:%>d        FLAG_CTAHHEE ;              ! tahhed
 
 LEXICON X_TAHHEE_PL !!= * ''@CODE@'' ee-final contract, plural forms
-+Pl+Nom:^SV^SLEN%>h FLAG_CTAHHEE ;                        ! tahheeh
++Pl+Nom:^SV^SLEN%>h FLAG_CTAHHEE ;          ! tahheeh
 +Pl+Gen:%>i3 FLAG_CTAHHEE ;                 ! tahhei
-+Pl+Acc:%>i3d FLAG_CTAHHEE ;                 ! tahheid
-+Pl+Ill:%>i3d FLAG_CTAHHEE ;                 ! tahheid
++Pl+Acc:%>i3d FLAG_CTAHHEE ;                ! tahheid
++Pl+Ill:%>i3d FLAG_CTAHHEE ;                ! tahheid
 +Pl+Loc:%>i3n FLAG_CTAHHEE ;                ! tahhein
-+Pl+Com:%>i3guin FLAG_CTAHHEE ;        ! tahheiguin
-+Pl+Com+Use/NG:%>i3gijn FLAG_CTAHHEE ;        ! tahheiguin
-+Pl+Abe:%>i3ttáá FLAG_CTAHHEE ;         ! tahheittáá
++Pl+Com:%>i3guin FLAG_CTAHHEE ;             ! tahheiguin
++Pl+Com+Use/NG:%>i3gijn FLAG_CTAHHEE ;      ! tahheiguin
++Pl+Abe:%>i3ttáá FLAG_CTAHHEE ;             ! tahheittáá
 
 
 !! !!Comitative plural variation
@@ -4077,6 +4082,15 @@ LEXICON X_TAHHEE_PL !!= * ''@CODE@'' ee-final contract, plural forms
 LEXICON GUIN  !!= * ''@CODE@'' is here to give -guin and the Use/NG -gijn.
        :guin K ;
 +Use/NG:gijn K ;
+
+
+
+
+
+
+
+
+
 
 !! !!Derivations
 ! =================================
