@@ -2153,13 +2153,6 @@ LEXICON 3KEPIDEM  !!= * ''@CODE@''
 +N+Sg+Abe:em%>ttáá K ;                    ! kepidemttáá
 +N+Ess:m^CLEN^RLEN^SLEN%>in K ;           ! keeppidmin   
 +N+Par:m^CLEN^RLEN^SLEN%>id K ;           ! keeppidmid   
-3KEPIDEM_PL ; 
-
-LEXICON 3KEPIDEM_PL  !!= * ''@CODE@'' 
-+N+Cmp/SgNom:em Rhash ;
-+N:m^CLEN^RLEN^SLEN X_eh_PL ; 
-+N:em%> Nom_DER ;
-+N:em%> Gen_DER ; 
 +N+Sg+Nom:^RLEN^CLEN%>mâ VPXsuff12nom ;  ! 
 +N+Sg+Gen:^RLEN^CLEN%>mâ VPXsuff12 ;  ! 
 +N+Sg+Acc:^RLEN^CLEN%>mâ VPXsuff12 ;  ! 
@@ -2170,6 +2163,14 @@ LEXICON 3KEPIDEM_PL  !!= * ''@CODE@''
 +N+Sg+Loc:%>emst CPXsuff ; !
 +N+Sg+Loc+Err/Orth:%>emest CPXsuff ; !
 +N+Sg+Com:%>emijn CPXsuff ;  ! 
++N+Ess:m^CLEN^RLEN^SLEN%>in CPXsuff ;  ! keeppidmin   
+3KEPIDEM_PL ; 
+
+LEXICON 3KEPIDEM_PL  !!= * ''@CODE@'' 
++N+Cmp/SgNom:em Rhash ;
++N:m^CLEN^RLEN^SLEN X_eh_PL ; 
++N:em%> Nom_DER ;
++N:em%> Gen_DER ; 
 +N+Pl+Gen:^RLEN^CLEN%>mijd CPXsuff ;  !
 +N+Pl+Acc:^RLEN^CLEN%>mijd CPXsuff ;  !
 +N+Pl+Ill:^RLEN^CLEN%>mijd CPXsuff ;  !
@@ -2428,7 +2429,7 @@ LEXICON 3KIELES_SG !!= * ''@CODE@''
 
 LEXICON 3KIELES_PL !!= * ''@CODE@''
 +N:  X_KIELES_PELES_PL ;
-+N+Cmp/PlGen:^CSH%>ij Rhash ;
+KIELES_PELES_PX_PL ;
 
 
 LEXICON X_KIELES_SG  !!= * ''@CODE@''  (to be unified?) 
@@ -2454,6 +2455,17 @@ LEXICON 3PELES  !!= * ''@CODE@'' only peles
 +N+Sg+Loc:^FCD%>ist CPXsuff ; ! pelesistân
 +N+Sg+Com:^FCD%>ijn CPXsuff ; ! pelesijnân
 +N+Ess:peles%>in CPXsuff ;    ! pelesin 
++N+Sg+Acc:^FCD%>ijd CPXsuff ; ! pelesijnân
+KIELES_PELES_PX_PL ;
+ 
+LEXICON KIELES_PELES_PX_PL
++N+Cmp/PlGen:^CSH%>ij Rhash ;
++N+Pl+Loc:^FCD%>ijn CPXsuff ;        ! pápárijnân
++N+Pl+Gen:^FCD%>ijd CPXsuff ;        ! pápárijdân
++N+Pl+Acc:^FCD%>ijd CPXsuff ;        ! pápárijdân
++N+Pl+Ill:^FCD%>ijd CPXsuff ;        ! pápárijdân
++N+Pl+Com:^FCD%>ijd CPXsuffCOM ;     ! pápárijdânguin
+
 
 
 LEXICON X_PELES  !!= * ''@CODE@'' only peles (to be unified?) 
@@ -2782,10 +2794,11 @@ LEXICON X_VEESKIR_SG !!= @CODE@
 +Par:^WG^RVSH%>id K ;  ! veskirid
 
 LEXICON 3KAAVPUG  !!= * ''@CODE@'' 
-+N+Cmp/SgNom: Rhash ;
-+N+Cmp/SgGen: Rhash ;
-+N+Cmp/PlGen:%>ij Rhash ;
-+N+v1: X_LITTER ; !kaavpug kaavpugân
+3LITTER ; ! check
+!+N+Cmp/SgNom: Rhash ;
+!+N+Cmp/SgGen: Rhash ;
+!+N+Cmp/PlGen:%>ij Rhash ;
+!+N+v1: X_LITTER ; !kaavpug kaavpugân
 !+v2: 3CIERMIH ; !kaavpug kavpugân
 
 
@@ -2955,6 +2968,10 @@ LEXICON 3LYEME !!= * ''@CODE@''
 +N:^CSH^SVSH  X_eh_PL ;
 +N:^FCD^WG^SVSH%> Nom_DER ;
 +N:%> Gen_DER ; 
+
+
+
+
 
 LEXICON 3HUKSIM  !!= * ''@CODE@'' NGA + Abe blank, SLEN for the rest
 3HUKSIM_SG ;
