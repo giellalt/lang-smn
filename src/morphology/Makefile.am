@@ -35,7 +35,6 @@ GT_LEXC_SRCS_L1_L2=\
 			affixes/possessive-suffixes.lexc   \
 			affixes/symbols.lexc     \
 			affixes/verbs.lexc   \
-			stems/smn-acronyms.lexc              \
 			stems/abbreviations.lexc              \
 			stems/adpositions.lexc   \
 			stems/adverbs.lexc   \
@@ -46,6 +45,7 @@ GT_LEXC_SRCS_L1_L2=\
 			stems/numerals.lexc   \
 			stems/particles.lexc   \
 			stems/pronouns.lexc   \
+			stems/smn-acronyms.lexc              \
 			stems/subjunctions.lexc   \
 			stems/verbs.lexc
 
