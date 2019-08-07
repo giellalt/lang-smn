@@ -418,37 +418,47 @@ LEXICON dateyearcase_fullsuff
       +Cmp/SplitR:%–   ENDLEX ;
 
 
-LEXICON ARABICCASES   !!= * __@CODE@__  to distinguish between 0 and oblique
-ARABICCASE0 ;
-ARABICCASE ;
+LEXICON ARABICCASES   !!≈ * __@CODE@__  adds +Arab
+ +Arab:  DIGITCASES ;
 
-LEXICON ARABICCASE0   !!= * __@CODE@__
- +Arab+Sg+Nom:      #      ;
- +Arab+Sg+Gen:      #      ;
- +Arab+Sg+Acc:      #      ;
- +Arab+Sg+Ill+Attr: #      ;
- +Arab+Sg+Loc+Attr: #      ;
- +Arab+Cmp/SplitR+Cmp:%-    ENDLEX ;
- +Arab+Cmp/SplitR+Cmp:%–    ENDLEX ;
+LEXICON ARABICCASE   !!≈ * __@CODE@__  adds +Arab
+ +Arab:  DIGITCASE ;
+
+LEXICON ARABICCASE0   !!≈ * __@CODE@__  adds +Arab
+ +Arab:  DIGITCASE0 ;
 
 
-LEXICON ARABICCASE
+LEXICON DIGITCASES   !!≈ * __@CODE@__  to distinguish between 0 and oblique
+DIGITCASE0 ;
+DIGITCASE ;
+
+LEXICON DIGITCASE0   !!≈ * __@CODE@__
+ +Sg+Nom:      #      ;
+ +Sg+Gen:      #      ;
+ +Sg+Acc:      #      ;
+ +Sg+Ill+Attr: #      ;
+ +Sg+Loc+Attr: #      ;
+ +Cmp/SplitR+Cmp:%-    ENDLEX ;
+ +Cmp/SplitR+Cmp:%–    ENDLEX ;
+
+
+LEXICON DIGITCASE
 !  f+Sg+Nom+Err/Orth:f  # ; ! s. 123f.
 ! ff+Sg+Nom+Err/Orth:ff # ; ! s. 123ff.
 !  b+Sg+Nom+Err/Orth:b  # ; ! § 123b
 !  c+Sg+Nom+Err/Orth:c  # ; ! § 123c
 !  d+Sg+Nom+Err/Orth:d  # ; ! § 123d
 !  e+Sg+Nom+Err/Orth:e  # ; ! § 123e
- +Arab+Sg+Ill:%>ân        # ;
- +Arab+Sg+Loc:%>st        # ;
- +Arab+Sg+Com:%>áin       # ;
- +Arab+Ess:%>n        # ;
- +Arab+Par:%>d        # ;
- +Arab+Pl+Gen:%>i   K ; !
- +Arab+Pl+Acc:%>id  K ; !
- +Arab+Pl+Ill:%>id K ; ! 100:iide čuđiide
- +Arab+Pl+Loc:%>in  K ; !
- +Arab+Pl+Com:%>iguin   K ; !
+ +Sg+Ill:%>ân        # ;
+ +Sg+Loc:%>st        # ;
+ +Sg+Com:%>áin       # ;
+ +Ess:%>n        # ;
+ +Par:%>d        # ;
+ +Pl+Gen:%>i   K ; !
+ +Pl+Acc:%>id  K ; !
+ +Pl+Ill:%>id K ; ! 100:iide čuđiide
+ +Pl+Loc:%>in  K ; !
+ +Pl+Com:%>iguin   K ; !
 !ordinals
 
 LEXICON ARABICCASEORD
