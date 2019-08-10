@@ -629,7 +629,7 @@ LEXICON 2TAHO_PL  !!= * ''@CODE@''
 LEXICON 2LAJO  !!= * ''@CODE@''
 +N: 2LAJO_SG ;
 +N: 2LAJO_PL ;
-!! \\ 
+
 LEXICON 2LAJO_SG !!= * ''@CODE@''
 +Sg+Com:^WG%>in K ;  !lajoin
 +Sg+Loc:^SV^WG^RLEN^SLEN%>st K ;  !laajoost
@@ -675,6 +675,11 @@ LEXICON 2LAJO_PL !!= * ''@CODE@''
 +Cmp/PlGen:^WG%>i Rhash ;
  LAJO_TAHO_PX_PL ;
 
+LEXICON X_LAJO_TAHO_SG_NoLow !!= * ''@CODE@''
++Sg+Nom:                    K          ; ! laj̣o
++Sg+Ill:^CSH%>n             K          ; ! laj̣on
+ +N+Ess:^SV^CLEN^SLEN%>n    K          ; ! laijoon
+ +N+Par:^SV^CLEN^SLEN%>d    K          ; ! laijood
 
 LEXICON  LAJO_TAHO_PX_PL  !!= * ''@CODE@''
 +Pl+Gen:^WG%>id CPXsuff ;  !
@@ -1425,8 +1430,8 @@ LEXICON X_OKKO_SG !!= * ''@CODE@'' Pl+Acc WG, Pl+Ill WG CLEN
 +Par:%>d    K ;  !okkod
 
 LEXICON X_OKKO_PL !!= * ''@CODE@'' Pl+Acc WG, Pl+Ill WG CLEN
-+Pl+Ill:^WG^CLEN%>id K ;  !ohhoid
-:^WG  X_h_PL_notILL ;
++Pl+Ill:^WG^CLEN%>id K             ;  !ohhoid
+       :^WG          X_h_PL_notILL ;
 
 
 
@@ -1489,11 +1494,15 @@ LEXICON 2VIASU !!= * ''@CODE@'' just as LAAVU, but without the short gen/acc
 2LAAVU_SG ;
 2LAAVU_PL ;
 
+LEXICON 2LAAVU_2LAJO !!= * ''@CODE@'' - a combination of both of these lexicons
++N+Sg+Gen+Use/NG:^WG^SVLOW K         ; ! lávo
++N+Sg+Acc+Use/NG:^WG^SVLOW K         ; ! lávo
+ 2LAAVU ;
+ 2LAJO  ;
+
 LEXICON 2LAAVU !!= * ''@CODE@'' WG, Ill EA, Com SVLOW, Ess CLEN
-+N+Sg+Gen+Use/NG:^WG^SVLOW K ;     ! lávo
-+N+Sg+Acc+Use/NG:^WG^SVLOW K ;     ! lávo
-2LAAVU_SG ;
-2LAAVU_PL ;
+                           2LAAVU_SG ;
+                           2LAAVU_PL ;
 
 LEXICON 2LAAVU_SG !!= * ''@CODE@''
 +N: X_LAAVU_SG ;
@@ -2892,32 +2901,32 @@ LEXICON 3VUONJAS  !!= * ''@CODE@''
 +N+Sg+Nom:š^WG K ;         ! vuonjâš
 +N+Cmp/SgNom:š^WG^RVSH%> Rhash ;
 +N+Cmp/SgGen:š^WG^RVSH%> Rhash ;
-+N+Cmp/PlGen:^CSH%>čij Rhash ;
++N+Cmp/PlGen+Err/Orth:^CSH%>čij Rhash ;
 +N+Sg+Gen:š K ;                 ! vuonnjâš
 +N+Sg+Acc:š K ;                 ! vuonnjâš
 +N+Sg+Ill:čč^CSH%>ân K ;        ! vuonjâččân
-+N+Sg+Ill+Use/NG:č^CSH%>ân K ;  ! vuonjâčân
++N+Sg+Ill+Err/Orth:č^CSH%>ân K ;  ! vuonjâčân
 +N+Sg+Loc:čč^CSH%>ist K ;       ! vuonjâččist
-+N+Sg+Loc+Use/NG:č^CSH%>ist K ; ! vuonjâčist
++N+Sg+Loc+Err/Orth:č^CSH%>ist K ; ! vuonjâčist
 +N+Sg+Com:čč^CSH%>áin K ;       ! vuonjâččáin
-+N+Sg+Com+Use/NG:č^CSH%>áin K ; ! vuonjâčáin
++N+Sg+Com+Err/Orth:č^CSH%>áin K ; ! vuonjâčáin
 +N+Sg+Abe:%>šttáá K ;           ! vuonnjâšttáá
 +N+Ess:čč^CSH%>in K ;           ! vuonjâččin
 +N+Par:čč^CSH%>id K ;           ! vuonjâččid
 +N+Pl+Nom:čč^CSH%>eh K ;        ! vuonjâččeh
-+N+Pl+Nom+Use/NG:^CSH%>čeh K ;  ! vuonjâčeh
++N+Pl+Nom+Err/Orth:^CSH%>čeh K ;  ! vuonjâčeh
 +N+Pl+Gen:čč^CSH%>ij K ;        ! vuonjâččij
-+N+Pl+Gen+Use/NG:^CSH%>čij K ;  ! vuonjâčij
++N+Pl+Gen+Err/Orth:^CSH%>čij K ;  ! vuonjâčij
 +N+Pl+Acc:^CSH%>ččijd K ;       ! vuonjâččijd
-+N+Pl+Acc+Use/NG:^CSH%>čijd K ; ! vuonjâčijd
++N+Pl+Acc+Err/Orth:^CSH%>čijd K ; ! vuonjâčijd
 +N+Pl+Ill:^CSH%>ččáid K ;       ! vuonjâččáid
-+N+Pl+Ill+Use/NG:^CSH%>čáid K ; ! vuonjâčáid
++N+Pl+Ill+Err/Orth:^CSH%>čáid K ; ! vuonjâčáid
 +N+Pl+Loc:^CSH%>ččijn K ;       ! vuonjâččijn
-+N+Pl+Loc+Use/NG:^CSH%>čijn K ; ! vuonjâčijn
++N+Pl+Loc+Err/Orth:^CSH%>čijn K ; ! vuonjâčijn
 +N+Pl+Com:^CSH%>ččij GUIN ;     ! vuonjâččijguin
-+N+Pl+Com+Use/NG:^CSH%>čij GUIN ;  ! vuonjâčijguin
++N+Pl+Com+Err/Orth:^CSH%>čij GUIN ;  ! vuonjâčijguin
 +N+Pl+Abe:^CSH%>ččijttáá K ;       ! vuonjâččijttáá
-+N+Pl+Abe+Use/NG:^CSH%>čijttáá K ; ! vuonjâčijttáá
++N+Pl+Abe+Err/Orth:^CSH%>čijttáá K ; ! vuonjâčijttáá
 
 
 
