@@ -3082,8 +3082,9 @@ LEXICON C_KAAMUV  !!= * ''@CODE@''
 +N+Cmp/SgGen:^WG^RVSH%>  Rhash ;
 +N+Cmp/PlGen:%>i  Rhash ;
 +N+Sg+Com:%>in CPXsuff ; ! pennuinân
-+N+Sg+Gen:%> CPXsuff ;         ! 
-+N+Sg+Acc:%> CPXsuff ;         ! 
++N+Sg+Nom:%> VPXsuff ;         ! 
++N+Sg+Gen:%> VPXsuff ;         ! 
++N+Sg+Acc:%> VPXsuff ;         ! 
 +N+Sg+Ill:^SV^SLEN%>s CPXsuff ;   ! kammuusân
 +N+Sg+Loc:^SV^SLEN%>st CPXsuff ;  ! Kammuustân
 +N+Pl+Gen:^FCD%>id CPXsuff ;  !
@@ -3142,6 +3143,7 @@ LEXICON 3POOVIJ  !!= * ''@CODE@''
 +N+v2+Par:nj^CSH%>id K ;                ! puáhánjid
 
 +N+Cmp/PlGen:%>i  Rhash ;
+
 +N+Sg+Com:nj^CSH%>ijn CPXsuff ; ! 
 +N+Sg+Gen:nj^CSH%> CPXsuff ;         ! 
 +N+Sg+Acc:nj^CSH%> CPXsuff ;         ! 
@@ -3200,6 +3202,7 @@ LEXICON C_KAARBIS_SG !!= * ''@CODE@''
 +N:^WG^RLEN%> Nom_DER ;
 +N:^FCD%> Gen_DER ; 
 +N+Sg+Com:^FCD%>in CPXsuff ; ! kárbáinis
++N+Sg+Nom:^FCD%> VPXsuff ;   ! kárbás
 +N+Sg+Gen:^FCD%> VPXsuff ;   ! kárbás
 +N+Sg+Acc:^FCD%> VPXsuff ;   ! kárbás
 +N+Sg+Com:^FCD%>in CPXsuff ; ! kárbáinis
@@ -3231,6 +3234,20 @@ LEXICON X_KAARBIS_SG  !!= * ''@CODE@''
 
 LEXICON C_MORCES  !!= * ''@CODE@''
 +N:  X_MORCES  ; 
++N+Sg+Nom:^FCD VPXsuff12 ; ! XXX check!
++N+Sg+Gen:^FCD VPXsuff12 ; ! 
++N+Sg+Acc:^FCD VPXsuff12 ; ! 
++N+Sg+Nom:^FCD VPXsuff3 ;  ! 
++N+Sg+Gen:^FCD VPXsuff3 ;  ! 
++N+Sg+Acc:^FCD VPXsuff3 ;  ! 
++N+Sg+Com:%>in CPXsuff ;   !
++N+Sg+Ill:^FCD%>s CPXsuff ; 
++N+Sg+Loc:^FCD%>st CPXsuff ;
++N+Ess:^FCD%>n CPXsuff ;
++N+Pl+Gen:%>id CPXsuff ;     !
++N+Pl+Acc:%>id CPXsuff ;     !
++N+Pl+Com:%>id CPXsuffCOM ;  !
++N+Pl+Loc:%>in CPXsuff ;     ! j
 
 LEXICON X_MORCES  !!= * ''@CODE@''
 +Sg+Nom:^WG^RVSH K ;        ! morčes
@@ -3252,20 +3269,6 @@ LEXICON X_MORCES  !!= * ''@CODE@''
 +Pl+Loc:^FCD%>in K ;        ! morččáin
 +Pl+Com:^FCD^WG%>i GUIN ;   ! morčáiguin     
 +Pl+Abe:^FCD^WG%>ittáá K ;  ! morčáittáá
-!+N+Sg+Nom:^FCD VPXsuff12 ; ! 
-!+N+Sg+Gen:^FCD VPXsuff12 ; ! 
-!+N+Sg+Acc:^FCD VPXsuff12 ; ! 
-!+N+Sg+Nom:^FCD VPXsuff3 ;  ! 
-!+N+Sg+Gen:^FCD VPXsuff3 ;  ! 
-!+N+Sg+Acc:^FCD VPXsuff3 ;  ! 
-!+N+Sg+Com:%>in CPXsuff ;   !
-!+N+Sg+Ill:^FCD%>s CPXsuff ; 
-!+N+Sg+Loc:^FCD%>st CPXsuff ;
-!+N+Ess:^FCD%>n CPXsuff ;
-!+N+Pl+Gen:%>id CPXsuff ;     !
-!+N+Pl+Acc:%>id CPXsuff ;     !
-!+N+Pl+Com:%>id CPXsuffCOM ;  !
-!+N+Pl+Loc:%>in CPXsuff ;     ! j
 
 LEXICON C_CUNOI  !!= * ''@CODE@''
 +N+Sg+Nom:oi4^WG K ;          ! čunoi
@@ -3450,6 +3453,7 @@ LEXICON S_SPAALVAS !!= * ''@CODE@''
 LEXICON S_TUULAS !!= * ''@CODE@'' ! stem: ku^RVđi
 S_TUULAS_SG ;
 S_TUULAS_PL ;
+:i S_ALGAAS_PX ;
 
 LEXICON X_TUULAS !!= * ''@CODE@''
 X_TUULAS_SG ;
@@ -3518,6 +3522,7 @@ LEXICON S_KAANDAS_PL_DIM  !!= * ''@CODE@''
 LEXICON S_KAANDAS !!= * ''@CODE@''
 S_KAANDAS_SG ;
 S_KAANDAS_PL ;
+:ažâ S_ALGAAS_PX ;
 
 LEXICON X_KAANDAS !!= * ''@CODE@''
 X_KAANDAS_SG ;
@@ -3555,7 +3560,7 @@ LEXICON X_KAANDAS_PL !!= * ''@CODE@''
 
 
 
-LEXICON S_KUULMIS !!= * ''@CODE@''
+LEXICON S_KUULMIS !!= * ''@CODE@'' stem kuovtt
 +N+Sg+Nom:iš^WG^RLEN K ; ! kuulmiš 
 +N+Sg+Gen:ii K ; ! kulmii
 +N+Sg+Acc:ii K ; ! kulmii
@@ -3572,6 +3577,7 @@ LEXICON S_KUULMIS !!= * ''@CODE@''
 +N+Pl+Loc:i%>in K ;
 +N+Pl+Com:i%>i GUIN ;
 +N+Pl+Abe:i%>ittáá K ;
+:i S_ALGAAS_PX ;
 
 
 LEXICON S_CISSAAS !!= * ''@CODE@'' 
@@ -3599,6 +3605,7 @@ LEXICON S_VUALAAS !!= * ''@CODE@''
 +N+Cmp/SgNom:^SVš^RLEN^SLEN%>  Rhash ;
 +N+Cmp/SgGen:^SV^RLEN^SLEN%>  Rhash ;
 +N+Cmp/PlGen:%>i  Rhash ;
+S_ALGAAS_PX ;
 
 LEXICON X_VUALAAS !!= * ''@CODE@'' 
 +Sg+Nom:^SVš^RLEN^SLEN K ;                   ! vuálááš
@@ -3619,7 +3626,7 @@ LEXICON X_VUALAAS !!= * ''@CODE@''
 +Pl+Abe:%>ittáá K ;           ! vuáláittáá
 
 
-LEXICON S_KUAVDAS !!= * ''@CODE@''  WG or not? vuáŋŋáš not WG, kiärpáš WG
+LEXICON S_KUAVDAS !!= * ''@CODE@''  WG or not? vuáŋŋáš not WG, kiärpáš WG. stem: suábbá
 S_KUAVDAS_SG ;
 S_KUAVDAS_PL ;
 
@@ -3631,8 +3638,8 @@ LEXICON S_KUAVDAS_SG !!= * ''@CODE@''
 +N:  X_KUAVDAS_SG ;
 +N+Cmp/SgNom:š^WG^RVSH%>  Rhash ;
 +N+Cmp/SgGen:^SV^SLEN%>  Rhash ; !piäivááčuovâ
-+N+Sg+Gen:%> CPXsuff ;  !
-+N+Sg+Acc:%> CPXsuff ;  !
++N+Sg+Gen:%> VPXsuff ;  !
++N+Sg+Acc:%> VPXsuff ;  !
 +N+Sg+Ill:ž^WG^RVSH%> CPXsuff ;  !
 +N+Sg+Loc:ást^WG^RVSH%> CPXsuff ;  !
 +N+Sg+Com:%>in CPXsuff ;  !párnáinân
@@ -3666,7 +3673,7 @@ LEXICON X_KUAVDAS_SG !!= * ''@CODE@''
 +Par:ž^WG^RVSH%>id K ;                ! kuávdážid
 +Par+Err/Orth:ž^WG^RLEN%>id K ;       ! páárnážid
 
-LEXICON S_ALGAAS  !!= * ''@CODE@'' 
+LEXICON S_ALGAAS  !!= * ''@CODE@'' stem alga
 +N+Sg+Ill:ž^CSH%>ân K ;             ! algažân
 +N+Ess:ž^CSH%>in K ;                ! algažin
 +N+Par:ž^CSH%>id K ;                ! algažid
@@ -3674,6 +3681,26 @@ LEXICON S_ALGAAS  !!= * ''@CODE@''
 +N+Cmp/SgNom:^SVš^SLEN%>  Rhash ;
 +N+Cmp/SgGen:^SV^SLEN%>  Rhash ;
 +N+Cmp/PlGen:%>i  Rhash ;
+S_ALGAAS_PX ;
+
+LEXICON S_ALGAAS_PX 
++N+Sg+Nom:^EA%> VPXsuff12nom ;  ! XXX algam
++N+Sg+Gen:^EA%> VPXsuff12 ;     ! XXX algaan
++N+Sg+Acc:^EA%> VPXsuff12 ;     ! XXX algaan
++N+Sg+Nom:%> VPXsuff3 ;      ! XXX 
++N+Sg+Gen:%> VPXsuff3 ;      ! XXX algees
++N+Sg+Acc:%> VPXsuff3 ;      ! XXX algees
++N+Sg+Ill:^EA%>s CPXsuff ;      ! XXX algasân
++N+Sg+Loc:%>st CPXsuff ;     ! XXX algestân
++N+Sg+Com:%>in CPXsuff ;     ! XXX olgijnân
++N+Ess:%>en CPXsuff ;       ! algenân
+
++N+Cmp/PlGen:%>id Rhash ;
++N+Pl+Gen:%>id CPXsuff ;  !
++N+Pl+Acc:%>id CPXsuff ;  !
++N+Pl+Ill:%>id CPXsuff ;  !
++N+Pl+Loc:%>in CPXsuff ;  !
++N+Pl+Com:%>id CPXsuffCOM ;  !
 
 
 
@@ -3682,36 +3709,38 @@ LEXICON S_KUADHUS !!= * ''@CODE@''
 +N+Cmp/SgNom:š^WG^RVSH%> Rhash ;
 +N+Cmp/SgGen:^SV^SLEN%> Rhash ;
 +N+Cmp/PlGen:%>i Rhash ;
-+N+Sg+Gen:^SV^SLEN K ;           ! ahhuu
++N+Sg+Gen:^SV^SLEN K ;          ! ahhuu
 +N+Sg+Acc:^SV^SLEN K ;          ! ahhuu
-!+N+Sg+Ill:ž^WG%>ân K ;                                ! áhužân
-+N+Sg+Ill+Err/Orth:ž^WG%>ân K ;                                ! áhužân NEW
-+N+Sg+Ill:^SVž^WG^SLEN%>ân K ;                                ! áhuužân NEW
-+N+Sg+Loc:^SV^SLEN%>st K ;          ! ahhuust
-+N+Sg+Com:%>in K ;           ! ahhuin
-+N+Sg+Abe:^SV^SLEN%>ttáá K ;   ! ahhuuttáá
-+N+Ess:^SVž^WG^SLEN%>in K ;  ! áhužin
-+N+Par:^SVž^WG^SLEN%>id K ;           ! áhužid
+!+N+Sg+Ill:ž^WG%>ân K ;         ! áhužân
++N+Sg+Ill+Err/Orth:ž^WG%>ân K ; ! áhužân NEW
++N+Sg+Ill:^SVž^WG^SLEN%>ân K ;  ! áhuužân NEW
++N+Sg+Loc:^SV^SLEN%>st K ;      ! ahhuust
++N+Sg+Com:%>in K ;              ! ahhuin
++N+Sg+Abe:^SV^SLEN%>ttáá K ;    ! ahhuuttáá
++N+Ess:^SVž^WG^SLEN%>in K ;     ! áhužin
++N+Par:^SVž^WG^SLEN%>id K ;     ! áhužid
 +N: X_SVSLENh_PL ;
+S_ALGAAS_PX ;
 
 LEXICON S_KAAHUS !!= * ''@CODE@'' 
 +N:  X_KAAHUS_notILL ;
 +N+Cmp/SgNom:š^CSH^RLEN%> Rhash ;
 +N+Cmp/SgGen:^SV^SLEN%> Rhash ;
 +N+Cmp/PlGen:%>i Rhash ;
-+N+Sg+Ill:^SVž^SLEN%>ân K ;                                ! kahhuužân
++N+Sg+Ill:^SVž^SLEN%>ân K ;     ! kahhuužân
+S_ALGAAS_PX ;
 
 LEXICON X_KAAHUS_notILL !!= * ''@CODE@'' 
-+Sg+Nom:š^CSH^RLEN K ;   ! kááhuš ka^RVhhu^CSH^RLEN%>š
-+Sg+Gen:^SV^SLEN K ;           ! kahhuu
-+Sg+Acc:^SV^SLEN K ;          ! kahhuu
-+Sg+Loc:^SV^SLEN%>st K ;          ! kahhuust
-+Sg+Com:%>in K ;           ! kahhuin
-+Sg+Abe:^SV^SLEN%>ttáá K ;   ! kahhuuttáá
-+Ess:^SVž^SLEN%>in K ;  ! kahhuužin
-+Ess+Err/Orth:ž^CSH%>in K ;  ! káhužin
-+Par:^SVž^SLEN%>id K ;           ! kahhuužid
-+Par+Err/Orth:ž^CSH%>id K ;           ! káhužid
++Sg+Nom:š^CSH^RLEN K ;      ! kááhuš ka^RVhhu^CSH^RLEN%>š
++Sg+Gen:^SV^SLEN K ;        ! kahhuu
++Sg+Acc:^SV^SLEN K ;        ! kahhuu
++Sg+Loc:^SV^SLEN%>st K ;    ! kahhuust
++Sg+Com:%>in K ;            ! kahhuin
++Sg+Abe:^SV^SLEN%>ttáá K ;  ! kahhuuttáá
++Ess:^SVž^SLEN%>in K ;      ! kahhuužin
++Ess+Err/Orth:ž^CSH%>in K ; ! káhužin
++Par:^SVž^SLEN%>id K ;      ! kahhuužid
++Par+Err/Orth:ž^CSH%>id K ; ! káhužid
  X_SVSLENh_PL ;
 
 LEXICON S_SUOLLUS !!= * ''@CODE@'' 
@@ -3719,6 +3748,7 @@ LEXICON S_SUOLLUS !!= * ''@CODE@''
 +N+Cmp/SgNom:š%> Rhash ;
 +N+Cmp/SgGen:^SV^SLEN%> Rhash ;
 +N+Cmp/PlGen:%>i Rhash ;
+S_ALGAAS_PX ;
 
 LEXICON X_SUOLLUS !!= * ''@CODE@'' 
 +Sg+Nom:š^RLEN K ;                                 
@@ -3736,52 +3766,76 @@ LEXICON X_SUOLLUS !!= * ''@CODE@''
 
 
 
-LEXICON 4C_RASTAGAS    !!= * ''@CODE@'' 
-+N: X_RASTAGAS ;
-+N+Cmp/SgNom:âš%>  Rhash ;
+LEXICON 4C_RASTAGAS    !!= * ''@CODE@'' splitting in sg and pl
+ 4C_RASTAGAS_SG ;
+ 4C_RASTAGAS_PL ;
+
+
+LEXICON 4C_RASTAGAS_SG    !!= ** ''@CODE@''  the sg ones
++N: X_RASTAGAS ; ! case paradigm
++N+Cmp/SgNom:âš%>  Rhash ; ! compounds
 +N+Cmp/SgGen:^SV^SLEN%>  Rhash ;
 +N+Cmp/PlGen:%>i  Rhash ;
++N+Sg+Nom:%>á VPXsuff12nom ;  ! px forms rástágáám
++N+Sg+Gen:%>á VPXsuff12 ;     ! rástágáád
++N+Sg+Acc:%>á VPXsuff12 ;     ! rástágáád
++N+Sg+Nom:%>á VPXsuff3 ;      ! rástágáás
++N+Sg+Gen:%>á VPXsuff3 ;      ! rástágáás
++N+Sg+Acc:%>á VPXsuff3 ;      ! rástágáás
++N+Sg+Ill:%>ás CPXsuff ;      ! rástágáásân
++N+Sg+Loc:%>ást CPXsuff ;     ! rástágáástân
++N+Sg+Com:%>áin CPXsuff ;     !  rástágáinân
++N+Ess:%>ná VPXsuff12 ;
 
-LEXICON X_RASTAGAS  !!= * ''@CODE@'' 
-+Sg+Nom:âš K ;                 ! rástágâš
-+Sg+Gen:^SV^SLEN K ;                 ! rástágáá
-+Sg+Acc:^SV^SLEN K ;                 ! rástágáá
-+Sg+Ill:âž%>ân K ;        ! rástágâžân
-+Sg+Loc:^SV^SLEN%>st K ;         ! rástágáást
-+Sg+Com:%>in K ;         ! rástágáin
-+Sg+Abe:^SV^SLEN%>ttáá K ;         ! rástágááttáá
-+Ess:âžž%>ân K ;                 ! rástágâžžân
-+Par:âžž%>âd K ;                 ! rástágâžžâd
- X_SVSLENh_PL ;
+LEXICON 4C_RASTAGAS_PL   !!= ** ''@CODE@''  the pl ones
++N: X_SVSLENh_PL ;
++N+Cmp/PlGen:%>id Rhash ;
++N+Pl+Gen:%>id CPXsuff ;  !
++N+Pl+Acc:%>id CPXsuff ;  !
++N+Pl+Ill:%>id CPXsuff ;  !
++N+Pl+Loc:%>in CPXsuff ;  !
++N+Pl+Com:%>id CPXsuffCOM ;  !
+ 
+
+LEXICON X_RASTAGAS  !!= ** ''@CODE@'' sg cases
++Sg+Nom:âš K ;              ! rástágâš
++Sg+Gen:^SV^SLEN K ;        ! rástágáá
++Sg+Acc:^SV^SLEN K ;        ! rástágáá
++Sg+Ill:âž%>ân K ;          ! rástágâžân
++Sg+Loc:^SV^SLEN%>st K ;    ! rástágáást
++Sg+Com:%>in K ;            ! rástágáin
++Sg+Abe:^SV^SLEN%>ttáá K ;  ! rástágááttáá
++Ess:âžž%>ân K ;            ! rástágâžžân
++Par:âžž%>âd K ;            ! rástágâžžâd
 
 
 LEXICON 3OPPUS  !!= * ''@CODE@'' 
-+N+Sg+Ill:^SVž^SLEN%>ân K ;        ! oppuužân
-+N+Ess:^SVž^SLEN%>in K ;                 ! oppuužin
-+N+Par:^SVž^SLEN%>id K ;                 ! oppuužid
++N+Sg+Ill:^SVž^SLEN%>ân K ;   ! oppuužân
++N+Ess:^SVž^SLEN%>in K ;      ! oppuužin
++N+Par:^SVž^SLEN%>id K ;      ! oppuužid
 ALMAS_COMMON ;
 
 LEXICON 3ALMAS  !!= * ''@CODE@'' 
 +N+Sg+Ill:ž%>ân K ;        ! almažân 
-+N+Ess:ž%>in K ;                 ! almažin
-+N+Par:ž%>id K ;                 ! almažid
++N+Ess:ž%>in K ;           ! almažin
++N+Par:ž%>id K ;           ! almažid
 ALMAS_COMMON ;
 
 LEXICON ALMAS_COMMON  !!= * ''@CODE@'' 
 +N+Sg+Nom:š K ;                         ! oppuš
 +N+Cmp/SgNom:š%>  Rhash ;
 +N+Cmp/PlGen:^SVž^SLEN%>ij  Rhash ;
-+N+Sg+Gen:^SVž^SLEN%>ii K ;         ! oppuužii
-+N+Sg+Acc:^SVž^SLEN%>ii K ;         ! oppuužii
-+N+Sg+Loc:^SVž^SLEN%>iist K ; ! oppuužiist
-+N+Sg+Com:^SVž^SLEN%>áin K ;         ! oppuužáin
++N+Sg+Gen:^SVž^SLEN%>ii K ;     ! oppuužii
++N+Sg+Acc:^SVž^SLEN%>ii K ;     ! oppuužii
++N+Sg+Loc:^SVž^SLEN%>iist K ;   ! oppuužiist
++N+Sg+Com:^SVž^SLEN%>áin K ;    ! oppuužáin
 +N+Sg+Abe:^SVž^SLEN%>iittáá K ; ! oppuužiittáá
-+N+Pl+Nom:^SVž^SLEN%>iih K ;         ! oppuužiih
-+N+Pl+Gen:^SVž^SLEN%>ij K ;         ! oppuužij
-+N+Pl+Acc:^SVž^SLEN%>ijd K ;         ! oppuužijd
-+N+Pl+Ill:^SVž^SLEN%>áid K ;         ! oppuužáid
-+N+Pl+Loc:^SVž^SLEN%>ijn K ;         ! oppuužijn
-+N+Pl+Com:^SVž^SLEN%>ij GUIN ; ! oppuužijguin
++N+Pl+Nom:^SVž^SLEN%>iih K ;    ! oppuužiih
++N+Pl+Gen:^SVž^SLEN%>ij K ;     ! oppuužij
++N+Pl+Acc:^SVž^SLEN%>ijd K ;    ! oppuužijd
++N+Pl+Ill:^SVž^SLEN%>áid K ;    ! oppuužáid
++N+Pl+Loc:^SVž^SLEN%>ijn K ;    ! oppuužijn
++N+Pl+Com:^SVž^SLEN%>ij GUIN ;  ! oppuužijguin
 +N+Pl+Abe:^SVž^SLEN%>ijttáá K ; ! oppuužijttáá
 
 
@@ -3840,15 +3894,22 @@ LEXICON NELJA  !!= * ''@CODE@''  ad hoc ,
 +N+Sg+Nom: K ; ! 
 
 
-LEXICON 4COHASAS  !!= * ''@CODE@'' 
-+N: LAS_COMMON ;
-+N: LAS_SUF ;
+!LEXICON 4COHASAS  !!= * ''@CODE@'' 
+!+N: LAS_COMMON ;
+!+N: LAS_SUF ;
 
-LEXICON 4JOTOLAH  !!= * ''@CODE@'' 
+LEXICON 4JOTOLAH  !!= * ''@CODE@''  splitting in sg pl
+ 4JOTOLAH_SG ;
+ 4JOTOLAH_PL ;
+
+LEXICON 4JOTOLAH_SG 
 +N+Sg+Nom:âh K ;
 JOHTOLAH_OBL ;
-+N+Sg+Acc:uvâ VPXsuff3 ;
-+N+Sg+Gen:uvâ VPXsuff3 ;
++N+Cmp/SgNom:âh Rhash ;
++N+Cmp/SgGen:uv Rhash ; ! XXX
++N+Cmp/PlGen:uvâ%>i Rhash ; ! XXX
++N:âh Nom_DER ;
+
 
 LEXICON JOHTOLAH_OBL    !!= * ''@CODE@'' common for N and A
 +N+Sg+Gen:uv K ;
@@ -3861,13 +3922,18 @@ LEXICON JOHTOLAH_OBL    !!= * ''@CODE@'' common for N and A
 +N+Sg+Abe:uv%>ttáá K ;
 +N+Ess:âhhâ%>n K ;
 +N+Par:âhhâ%>d K ;
-4JOTOLAH_PL ;
++N+Sg+Nom:%>uvá VPXsuff12nom ;  ! px forms rástágáám
++N+Sg+Gen:%>uvá VPXsuff12 ;     ! rástágáád
++N+Sg+Acc:%>uvá VPXsuff12 ;     ! rástágáád
++N+Sg+Nom:%>uvá VPXsuff3 ;      ! rástágáás
++N+Sg+Acc:uvâ VPXsuff3 ;
++N+Sg+Gen:uvâ VPXsuff3 ;
++N+Sg+Ill:%>uvás CPXsuff ;      ! rástágáásân
++N+Sg+Loc:%>uvást CPXsuff ;     ! rástágáástân
++N+Sg+Com:%>uváin CPXsuff ;     !  rástágáinân
++N+Ess:%>uvná VPXsuff12 ;
 
 LEXICON 4JOTOLAH_PL  !!= * ''@CODE@'' 
-+N+Cmp/SgNom:âh Rhash ;
-+N+Cmp/SgGen:uv Rhash ; ! XXX
-+N+Cmp/PlGen:uvâ%>i Rhash ; ! XXX
-+N:âh Nom_DER ;
 +N+Pl+Nom:uva%>h K ;
 +N+Pl+Gen:uvâ%>i K ;
 +N+Pl+Acc:uvâ%>id K ;
@@ -3875,23 +3941,29 @@ LEXICON 4JOTOLAH_PL  !!= * ''@CODE@''
 +N+Pl+Loc:uvâ%>in K ;
 +N+Pl+Com:uvâ%>i GUIN ;
 +N+Pl+Abe:uvâ%>ittáá K ;
++N+Pl+Gen:%>uvid CPXsuff ;  ! XXX check
++N+Pl+Acc:%>uvid CPXsuff ;  !
++N+Pl+Ill:%>uvid CPXsuff ;  !
++N+Pl+Loc:%>uvin CPXsuff ;  !
++N+Pl+Com:%>uvid CPXsuffCOM ;  !
 
 
 LEXICON 4KAPULUH  !!= * ''@CODE@'' 
 +N+Sg+Nom:uh K ;
-+N+Sg+Nom:oh K ;
-+N+Sg+Nom:âh K ;
++N+Sg+Nom+Use/NG:oh K ;
++N+Sg+Nom+Use/NG:âh K ;
 +N+Sg+Loc:uvvâst K ;
 +N+Sg+Com:uváin K ;
 +N+Ess:uhhân K ;
-+N+Ess:ohhân K ;
++N+Ess+Use/NG:ohhân K ;
 +N+Par:uhhâd K ;
-+N+Par:ohhâd K ;
-JOHTOLAH_OBL ;
++N+Par+Use/NG:ohhâd K ;
 +N+Cmp/SgNom:uh Rhash ;
 +N+Cmp/SgGen:uv Rhash ; ! XXX
 +N+Cmp/PlGen:uvâ%>i Rhash ; ! XXX
 +N:âh Nom_DER ;
+JOHTOLAH_OBL ;
+ 4JOTOLAH_PL ;
 
 
 LEXICON 4KUBALOH  !!= * ''@CODE@'' 
@@ -3901,6 +3973,7 @@ LEXICON 4KUBALOH  !!= * ''@CODE@''
 +N+Cmp/PlGen:uvâ%>i Rhash ; ! XXX
 +N:âh Nom_DER ;
 JOHTOLAH_OBL ;
+ 4JOTOLAH_PL ;
 
 
 LEXICON 4LAS_NOUN !!= * ''@CODE@'' 
@@ -3983,6 +4056,22 @@ LEXICON MUS_NOUN   !!= * ''@CODE@'' type uáiváámus, aldemus
 +N+Cmp/SgNom:s Rhash ;
 +N+Cmp/SgGen:u Rhash ;
 +N+Cmp/PlGen:%>i Rhash ;
+
++N+Sg+Nom:%>á VPXsuff12nom ;  ! XXX check!
++N+Sg+Gen:%>á VPXsuff12 ;     ! 
++N+Sg+Acc:%>á VPXsuff12 ;     ! 
++N+Sg+Nom:%>á VPXsuff3 ;      ! 
++N+Sg+Gen:%>á VPXsuff3 ;      ! 
++N+Sg+Acc:%>á VPXsuff3 ;      ! 
++N+Sg+Ill:%>ás CPXsuff ;      ! 
++N+Sg+Loc:%>ást CPXsuff ;     ! 
++N+Sg+Com:%>áin CPXsuff ;     ! 
++N+Ess:%>ná VPXsuff12 ;
++N+Pl+Gen:%>id CPXsuff ;  !
++N+Pl+Acc:%>id CPXsuff ;  !
++N+Pl+Ill:%>id CPXsuff ;  !
++N+Pl+Loc:%>in CPXsuff ;  !
++N+Pl+Com:%>id CPXsuffCOM ;  !
 
 
 !! !!Contracted stems
