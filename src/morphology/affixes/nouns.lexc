@@ -43,6 +43,8 @@
 !! The lexica referred to as ''basic lexica'' are the ones found in the 
 !! stems/nouns.lexc file.
 
+
+
 !! !!1. Unclassified lexica
 
 !! These two lexica are temporary lexica for words waiting to be classified.
@@ -3439,6 +3441,7 @@ X_SVSLENh_PL ;
 ! px 14.6.2019 dán rádjái lasihuvvon. XXX
 
 LEXICON S_SPAALVAS !!= * ''@CODE@'' 
+S_ALGAAS_PX ;                      ! XXX check, add -i?
 +N+Sg+Nom:š^WG^RLEN K ; ! spáálváš
 +N+Sg+Nom+Err/Orth:âš^WG^RLEN K ; ! spáálvâš
 +N+Cmp/SgNom:âš^WG^RVSH%> Rhash ;
@@ -3528,7 +3531,7 @@ LEXICON S_KAANDAS_PL_DIM  !!= * ''@CODE@''
 +Pl+Com:ij GUIN ;
 +Pl+Abe:ijttáá K ;
 
-LEXICON S_KAANDAS !!= * ''@CODE@''
+LEXICON S_KAANDAS !!= * ''@CODE@'' stem: ka^RVnd
 S_KAANDAS_SG ;
 S_KAANDAS_PL ;
 :ažâ S_ALGAAS_PX ;
@@ -3589,7 +3592,7 @@ LEXICON S_KUULMIS !!= * ''@CODE@'' stem kuovtt
 :i S_ALGAAS_PX ;
 
 
-LEXICON S_CISSAAS !!= * ''@CODE@'' 
+LEXICON S_CISSAAS !!= * ''@CODE@'' ! stem: cissá
 +N:  X_CISSAAS ;
 +N+Cmp/SgNom:^SVš^SLEN%>  Rhash ;
 +N+Cmp/SgGen:^SV^SLEN%>  Rhash ;
@@ -3602,8 +3605,6 @@ LEXICON X_CISSAAS !!= * ''@CODE@''
 +Sg+Nom:^SVš^SLEN K ;                   ! cissááš
 +Sg+Gen:^SV^SLEN K ;                   ! cissáá
 +Sg+Acc:^SV^SLEN K ;  ! cissáá
-!+Sg+Ill:ž^CSH%>ân K ;        ! algažân
-!+Sg+Ill+Err/Orth:^SVž^SLEN^SVLOW%>ân K ;                ! cissáážân NEW
 +Sg+Loc:^SV^SLEN%>st K ;                                ! cissáást  NEW
 +Sg+Com:%>in K ;                   ! cissáin
 +Sg+Abe:^SV^SLEN%>ttáá K ;                                 ! cissááttáá
@@ -3617,22 +3618,22 @@ LEXICON S_VUALAAS !!= * ''@CODE@''
 S_ALGAAS_PX ;
 
 LEXICON X_VUALAAS !!= * ''@CODE@'' 
-+Sg+Nom:^SVš^RLEN^SLEN K ;                   ! vuálááš
-+Sg+Gen:^SV^RLEN^SLEN K ;                           ! vuáláá
-+Sg+Acc:^SV^RLEN^SLEN K ;                          ! vuáláá
-+Sg+Ill:ž%>ân K ;                  ! vuálážân
-+Sg+Loc:^SV^RLEN^SLEN%>st K ;                  ! vuáláást
-+Sg+Com:%>in K ;                   ! vuáláin
-+Sg+Abe:^SV^RLEN^SLEN%>ttáá K ;           ! vuálááttáá
-+Ess:ž%>in K ;                  ! vuálážin
++Sg+Nom:^SVš^RLEN^SLEN K ;       ! vuálááš
++Sg+Gen:^SV^RLEN^SLEN K ;        ! vuáláá
++Sg+Acc:^SV^RLEN^SLEN K ;        ! vuáláá
++Sg+Ill:ž%>ân K ;                ! vuálážân
++Sg+Loc:^SV^RLEN^SLEN%>st K ;    ! vuáláást
++Sg+Com:%>in K ;                 ! vuáláin
++Sg+Abe:^SV^RLEN^SLEN%>ttáá K ;  ! vuálááttáá
++Ess:ž%>in K ;                   ! vuálážin
 +Par:ž%>id K ;                   ! vuálážid
-+Pl+Nom:^SV^RLEN^SLEN%>h K ;                   ! vuálááh
-+Pl+Gen:%>i K ;                   ! vuálái
-+Pl+Acc:%>id K ;                   ! vuáláid
-+Pl+Ill:%>id K ;                   ! vuáláid
-+Pl+Loc:%>in K ;                   ! vuáláin
-+Pl+Com:%>i GUIN ;           ! vuáláiguin
-+Pl+Abe:%>ittáá K ;           ! vuáláittáá
++Pl+Nom:^SV^RLEN^SLEN%>h K ;     ! vuálááh
++Pl+Gen:%>i K ;                  ! vuálái
++Pl+Acc:%>id K ;                 ! vuáláid
++Pl+Ill:%>id K ;                 ! vuáláid
++Pl+Loc:%>in K ;                 ! vuáláin
++Pl+Com:%>i GUIN ;               ! vuáláiguin
++Pl+Abe:%>ittáá K ;              ! vuáláittáá
 
 
 LEXICON S_KUAVDAS !!= * ''@CODE@''  WG or not? vuáŋŋáš not WG, kiärpáš WG. stem: suábbá
@@ -3653,8 +3654,8 @@ LEXICON S_KUAVDAS_SG !!= * ''@CODE@''
 +N+Sg+Loc:ást^WG^RVSH%> CPXsuff ;  !
 +N+Sg+Com:%>in CPXsuff ;  !párnáinân
 +N+Sg+Loc:%>st CPXsuff ;  !párnáinân
-+N+Sg+Ill:%>s CPXsuff ;  !párnáinân
-+N+Ess:%>ân CPXsuff ;  !párnáinân
++N+Sg+Ill:%>s CPXsuff ;   !párnáinân
++N+Ess:%>ân CPXsuff ;     !párnáinân
 
 
 
@@ -3693,16 +3694,16 @@ LEXICON S_ALGAAS  !!= * ''@CODE@'' stem alga
 S_ALGAAS_PX ;
 
 LEXICON S_ALGAAS_PX 
-+N+Sg+Nom:^EA%> VPXsuff12nom ;  ! XXX algam
-+N+Sg+Gen:^EA%> VPXsuff12 ;     ! XXX algaan
-+N+Sg+Acc:^EA%> VPXsuff12 ;     ! XXX algaan
-+N+Sg+Nom:%> VPXsuff3 ;      ! XXX 
-+N+Sg+Gen:%> VPXsuff3 ;      ! XXX algees
-+N+Sg+Acc:%> VPXsuff3 ;      ! XXX algees
-+N+Sg+Ill:^EA%>s CPXsuff ;      ! XXX algasân
-+N+Sg+Loc:%>st CPXsuff ;     ! XXX algestân
-+N+Sg+Com:%>in CPXsuff ;     ! XXX olgijnân
-+N+Ess:%>en CPXsuff ;       ! algenân
++N+Sg+Nom:^EA%> VPXsuff12nom ; ! XXX algam
++N+Sg+Gen:^EA%> VPXsuff12 ;    ! XXX algaan
++N+Sg+Acc:^EA%> VPXsuff12 ;    ! XXX algaan
++N+Sg+Nom:%> VPXsuff3 ;        ! XXX 
++N+Sg+Gen:%> VPXsuff3 ;        ! XXX algees
++N+Sg+Acc:%> VPXsuff3 ;        ! XXX algees
++N+Sg+Ill:^EA%>s CPXsuff ;     ! XXX algasân
++N+Sg+Loc:%>st CPXsuff ;       ! XXX algestân
++N+Sg+Com:%>in CPXsuff ;       ! XXX olgijnân
++N+Ess:%>en CPXsuff ;          ! algenân
 
 +N+Cmp/PlGen:%>id Rhash ;
 +N+Pl+Gen:%>id CPXsuff ;  !
@@ -3736,7 +3737,7 @@ LEXICON S_KAAHUS !!= * ''@CODE@''
 +N+Cmp/SgNom:š^CSH^RLEN%> Rhash ;
 +N+Cmp/SgGen:^SV^SLEN%> Rhash ;
 +N+Cmp/PlGen:%>i Rhash ;
-+N+Sg+Ill:^SVž^SLEN%>ân K ;     ! kahhuužân
++N+Sg+Ill:^SVž^SLEN%>ân K ;  ! kahhuužân
 S_ALGAAS_PX ;
 
 LEXICON X_KAAHUS_notILL !!= * ''@CODE@'' 
