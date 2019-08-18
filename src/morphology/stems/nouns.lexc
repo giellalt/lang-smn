@@ -205,7 +205,27 @@ LEXICON DER-SAS  !!= * ''@CODE@''
 
 
 
-LEXICON Noun
+LEXICON Noun !!= * __@CODE@__ split to  NounNoPx, NounPx, NounPxKin
+                          NounNoPx ;  ! without a flag
+@P.Px.add@@P.Nom3Px.add@  NounPxKin ; ! with a P.Nom3Px.add flag
+@P.Px.add@                NounPx ;    ! with a P.Px.add flag
+
+LEXICON NounNoPx   !!= * __@CODE@__ here goes nouns not taking Px.
+
+akselkoskâ+Sem/Dummytag:aksel#ko^RVskâ 2ALGA "akseliväli" ;
+huksimlävdikodde+Sem/Dummytag:huksim#lävdi#ko^RVdde 2ALGE "rakennuslautakunta" ;
+kielâlävdikodde+Sem/Org:kielâ#lävdi#ko^RVdde 2ALGE "kielilautakunta" ; ! tags_via_apertium
+
+
+LEXICON NounPxKin
+eeči+CmpN/SgN+CmpN/SgG+Sem/Hum:eeč^RCi 2CAACI ;	!YAML ¢eijijn, eejist, iäčán, eeji tags_via_apertium
+enni+Sem/Hum:e^RVnni 2AIGI "emo" ;	! tags_via_apertium
+viljâ+Sem/Hum:vi^RVljâ 2ALGA "veli" ; !¢viljáin, viiljâst, viiljân, viiljâ tags_via_apertium
+
+
+LEXICON NounPx
+
+
 
 ! Checked by Miina:
 ! Compound words -- shall not have miniparadigms
@@ -678,7 +698,6 @@ tunnel+Sem/Dummytag:tunnel 3LITTER ;
 aksel+Sem/Dummytag:aksel 3LITTER ;
 piksel+Sem/Dummytag:piksel 3LITTER ;
 kappel+Sem/Plc:kappel 3LITTER ;  ! tags_via_apertium
-akselkoskâ+Sem/Dummytag:aksel#ko^RVskâ 2ALGA "akseliväli" ;
 akseltiäddu+Sem/Dummytag:aksel#tiäddu 2VUAGGU "akselipaino" ;
 aktijvâlâšvuotâ+CmpN/SgN+CmpN/SgG+Sem/Dummytag:aktijvâlâš#vuot^RCâ 2KIELA ;
 aktiv+Use/NG+Sem/Dummytag:aktiiv 3LITTER ;
@@ -1398,7 +1417,6 @@ eetik+v2+Sem/Food:eetik 3POTTAAK ; ! ab VV X V	!¢etikkáin, etikkist, etikkân,
 eeveerst+Sem/Dummytag:eeveerst 3EEMEED ;
 eevnijoddee+Sem/Dummytag:eevni#jodde C_TAHHEE "" ;
 eevniviermi+CmpN/SgN+CmpN/SgG+Sem/Dummytag:eevni#viermi 2AIGI "seitti" ;
-eeči+CmpN/SgN+CmpN/SgG+Sem/Hum:eeč^RCi 2CAACI ;	!YAML ¢eijijn, eejist, iäčán, eeji tags_via_apertium
 eečimii+Sem/Dummytag:eeči#mii APINA "isämeitä" ;
 ečivuotâ+Err/Orth+Sem/Dummytag:eeči#vuot^RCâ 2KIELA "isällisyys" ;
 ehidispeivi+CmpN/SgN+CmpN/SgG+Sem/Time:ehidis#pe^RVi4vi 2AIGI "iltapäivä" ;
@@ -1473,7 +1491,6 @@ energiašeštimlamppu+Sem/Dummytag:energia#šeštim#la^RVmppu 2TAVLU "energians�
 enijpeivi+CmpN/SgN+CmpN/SgG+Sem/Time:enij#pe^RVi4vi 2AIGI "äitienpäivä" ;
 kuádáttâh+Sem/Dummytag:kuádátt 4JOTOLAH "vyöllispyörä" ;
 enijravviittâh+Sem/Dummytag:enij#ravviitt 4JOTOLAH "äitiysneuvola" ;
-enni+Sem/Hum:e^RVnni 2AIGI "emo" ;	! tags_via_apertium
 ennieccee+Sem/Dummytag:enni#ecce C_TAHHEE "emää" ;
 liämu+Sem/Dummytag:liäm^RCu 2VIASU "ohut vaate" ;
 enniluámu+Sem/Dummytag:enni#luám^RCu 2VIASU "äitiysloma" ;
@@ -2121,7 +2138,6 @@ huksimasâttâs+Sem/Dummytag:huksim#asâttâss 4KUNAGAS "rakennusasetus" ;
 sorva+Sem/Dummytag:sorva APINA "sorva" ;
 huksimkaava+Sem/Dummytag:huksim#kaava APINA "rakennuskaava" ;
 huksimlope+Sem/Rule:huksim#lo^RVp^RCe 2NJUNE "rakennuslupa" ; ! tags_via_apertium
-huksimlävdikodde+Sem/Dummytag:huksim#lävdi#ko^RVdde 2ALGE "rakennuslautakunta" ;
 huksimmiäštár+CmpN/SgN+CmpN/SgG+Sem/Dummytag:huksim#miäštár 3LITTER "rakennusmestari" ;
 huksimsyergi+Sem/Dummytag:huksim#syergi 2AIGI "rakennusala" ;
 huksimtárkkojeijee+Sem/Dummytag:huksim#tárkkoj C_EIJE "rakennustarkastaja" ;
@@ -3478,7 +3494,6 @@ kielâiäláskittemohjelm+Sem/Dummytag:kielâ#iäláskittem#ohjelm 3LITTER ;
 kielâkuávdáš+Sem/Plc:kielâ#kuávdá S_KUAVDAS "kielikeskus" ;	! tags_via_apertium
 kielâlaahâ+Sem/Rule:kielâ#la^RVh^RCâ 2JUUHA ;  ! tags_via_apertium
 kielâlávgum+CmpN/SgN+CmpN/SgG+Sem/Dummytag:kielâ#lávgum 3LITTER "kielikylpy" ;
-kielâlävdikodde+Sem/Org:kielâ#lävdi#ko^RVdde 2ALGE "kielilautakunta" ; ! tags_via_apertium
 kielâmolsom+Sem/Dummytag:kielâ#molsom 3LITTER "kielenvaihto" ;
 kielâmáttu+Sem/Dummytag:kielâ#má^RVttu 2VADDU "kielitaito" ;
 kielâoppâ+Sem/Dummytag:kielâ#o^RVppâ 2KUSSA "kielioppi" ;
@@ -13254,7 +13269,6 @@ vijđodâh+Sem/Dummytag:vijđod 4JOTOLAH "ala" ;
 vildâellee+CmpN/SgN+CmpN/SgG+Sem/Dummytag:vildâ#elle C_LOHHEE "villieläin" ;
 vildâvuotâ+CmpN/SgN+CmpN/SgG+Sem/Dummytag:vildâ#vuot^RCâ 2KIELA ;
 vildâšahe+Sem/Dummytag:vildâ#ša^RVh^RCe 2VAHE "villisika" ;
-viljâ+Sem/Hum:vi^RVljâ 2ALGA "veli" ; !¢viljáin, viiljâst, viiljân, viiljâ tags_via_apertium
 viljâleijee+Sem/Dummytag:viljâl C_EIJE "viljelijä" ;
 viljâlem+Sem/Dummytag:viljâl 3KEPIDEM ;
 viljâlemherskukuobâr+Sem/Plant-fungus:viljâlem#hersku#kuobbâr 3VEESKIR "viljelyherkkusieni" ;
