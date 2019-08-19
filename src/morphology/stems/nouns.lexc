@@ -44,11 +44,6 @@ LEXICON NounRoot !
 ! Käännökset ovat tietysti hauskoja, ne voidaan säilyttää
 ! Muuten voi laittaa jatkoleksikon mielen mukaan, tärkeä on poistaa dubletit.
 
-!! !!The list of noun stems
-
-!! The nouns are reverse-sorted according to contlex,
-!! and thereafter according to stem.
-
 
 ! Work with miniparadigms
 ! The 
@@ -160,7 +155,7 @@ LEXICON SAS !!= * __@CODE@__ , both from adj and numerals
 +Cmp+Sem/Dummytag#:»»# SASCont ;
 
  
-LEXICON NAMAGCont
+LEXICON NAMAGCont!!= * __@CODE@__
 tääsi+CmpN/SgN+CmpN/SgG+Sem/Plc:tááság DER-AG ; ! tags_via_apertium
 čiehâ+Sem/Plc:čievâg DER-AG ; ! tags_via_apertium
 jienâ+Sem/Body-abstr_Prod-audio_Semcon:jienâg DER-AG ; ! tags_via_apertium
@@ -171,7 +166,7 @@ njälmi+Sem/Body:njáálmág DER-AG ; ! tags_via_apertium
 kerdi+Sem/Plc_Time:kiärdág DER-AG ; ! tags_via_apertium
 +Der+Der/ivvaas+Sem/Dummytag:ivvá A_VUALAAS ;
 
-LEXICON SASCont
+LEXICON SASCont!!= * __@CODE@__ ,
 ihe+Sem/Time:ihás DER-SAS ; ! tags_via_apertium
 ihe+Sem/Time+Err/Orth:ihas DER-SAS ; ! tags_via_apertium
 ihe+Sem/Time:»»»-ihás DER-SAS ;
@@ -204,28 +199,37 @@ LEXICON DER-SAS  !!= * ''@CODE@''
 +N+Der2+Der/sasj:  ANOLASJ ; !+N because of redirection from numeral-file
 
 
+!! !!The split into different noun types according to Px
 
-LEXICON Noun !!= * __@CODE@__ split to  NounNoPx, NounPx, NounPxKin
-                          NounNoPx ;  ! without a flag
-@P.Px.add@@P.Nom3Px.add@  NounPxKin ; ! with a P.Nom3Px.add flag
-@P.Px.add@                NounPx ;    ! with a P.Px.add flag
+LEXICON Noun !!= * __@CODE@__ is split into NounNoPx, NounPxKin, NounPx.
+            NounNoPx ;  !!= ** __@CODE@__ No flag, no Px
+@P.Px.add@  NounPxKin ; !!= ** __@CODE@__ TODO: add a flag @P.Nom3Px.add@ when we know how it works
+@P.Px.add@  NounPx ;    !!= ** __@CODE@__ with a @P.Px.add@ flag, and with Px (= most nouns)
 
-LEXICON NounNoPx   !!= * __@CODE@__ here goes nouns not taking Px.
-
+LEXICON NounNoPx   !!= * __@CODE@__ move here the nouns not taking Px.
 akselkoskâ+Sem/Dummytag:aksel#ko^RVskâ 2ALGA "akseliväli" ;
 huksimlävdikodde+Sem/Dummytag:huksim#lävdi#ko^RVdde 2ALGE "rakennuslautakunta" ;
 kielâlävdikodde+Sem/Org:kielâ#lävdi#ko^RVdde 2ALGE "kielilautakunta" ; ! tags_via_apertium
+lavnje+Sem/Dummytag:la^RVvnje 2ALGE "kangasturve" ;
+njavkke+Sem/Dummytag:nja^RVvkk4e 2ALGE "hanka päällä" ;
+herskutatti+Sem/Plant-fungus:hersku#ta^RVtti 2KUMPPI "herkkutatti" ;
+! px-less nouns should be moved from NounPx to NounNoPx (i.e., here)
 
-
-LEXICON NounPxKin
+LEXICON NounPxKin !!= * __@CODE@__For the moment, kinship words go like NounPx and need not be moved here.
 eeči+CmpN/SgN+CmpN/SgG+Sem/Hum:eeč^RCi 2CAACI ;	!YAML ¢eijijn, eejist, iäčán, eeji tags_via_apertium
 enni+Sem/Hum:e^RVnni 2AIGI "emo" ;	! tags_via_apertium
 viljâ+Sem/Hum:vi^RVljâ 2ALGA "veli" ; !¢viljáin, viiljâst, viiljân, viiljâ tags_via_apertium
+! Do not move kinship terms here yet.
 
 
-LEXICON NounPx
+!! !!The standard list of noun stems
+
+!! The nouns are reverse-sorted according to contlex,
+!! and thereafter according to stem.
 
 
+
+LEXICON NounPx !!= * __@CODE@__ here we put all normal nouns, as before
 
 ! Checked by Miina:
 ! Compound words -- shall not have miniparadigms
@@ -389,8 +393,6 @@ Máárjápeivi+CmpN/SgN+CmpN/SgG+Sem/Time:Máárjá#pe^RVi4vi 2AIGI "" ;	 ! tags
 fariseus+Sem/Dummytag:fariseus 3LITTER "fariseus" ;
 saddukeus+Sem/Dummytag:saddukeus 3LITTER "saddukeus" ;
 aabis+Sem/Txt:aabis 3LITTER "aapinen" ; !$= * @CODE@ VV X V	!¢aabisáin, aabisist, aabisân, aabis tags_via_apertium
-lavnje+Sem/Dummytag:la^RVvnje 2ALGE "kangasturve" ;
-njavkke+Sem/Dummytag:nja^RVvkk4e 2ALGE "hanka päällä" ;
 kieškânjavkke+Sem/Dummytag:kieškâ#nja^RVvkk4e 2ALGE "hanka päällä jyrkkä leikko korvamerkissä" ;
 noppânjavkke+Sem/Dummytag:noppâ#nja^RVvkk4e 2ALGE "hanka" ;
 lavkke+Sem/Dummytag:la^RVvkk4e 2ALGE "iljanne" ;
@@ -2002,7 +2004,6 @@ puársku+Sem/Dummytag:puársku 2VUAGGU "" ;
 herskukuobâr+Sem/Plant-fungus:hersku#kuobbâr 3VEESKIR "herkkusieni" ;
 herskuliäiboo+Sem/Dummytag:hersku#liäi4bo C_LOHHEE "kondiittori" ;
 herskusmiäruh+Sem/Plant-fungus:hersku#smiärruh 3RUONAS "" ;
-herskutatti+Sem/Plant-fungus:hersku#ta^RVtti 2KUMPPI "herkkutatti" ;
 herttua+Sem/Dummytag:herttua APINA "herttua" ;
 herttâ+Sem/Fruit:he^RVrttâ 2KUSSA "hertta" ;	!¢herttáin, heertâst, heertân, heertâ tags_via_apertium
 herttâkiärttu+Sem/Ani-bird:herttâ#kiärttu 2VUAGGU "hernekerttu" ;
