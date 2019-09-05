@@ -16,25 +16,24 @@
 ## along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #### Define variables: ####
-if HAVE_ALT_ORTHS
+if HAVE_AREAS
 if CAN_HFST
 if WANT_SPELLERS
-if WANT_ALT_ORTH_SPELLERS
 
-GT_ALT_ORTH_ERRMODELS=$(shell for ld in $(ALT_ORTHS); do\
+GT_AREA_ERRMODELS=$(shell for ld in $(AREAS); do\
     echo "errmodel.$$ld.hfst" ; \
 done)
 
-GT_ALT_ORTH_SPELLER_ACCEPTORS=$(shell for ld in $(ALT_ORTHS); do\
+GT_AREA_SPELLER_ACCEPTORS=$(shell for ld in $(AREAS); do\
     echo "acceptor.$$ld.hfst" ; \
 done)
 
-ALT_ORTH_ZHFST_FILES=$(shell for ld in $(ALT_ORTHS); do\
-    echo "$(GTLANG2)-x-$$ld.zhfst" ; \
+AREA_ZHFST_FILES=$(shell for ld in $(AREAS); do\
+    echo "$(GTLANG2)_$$ld.zhfst" ; \
 done)
-ALT_ORTH_ZHFST_BASENAMES=$(basename $(ALT_ORTH_ZHFST_FILES))
-ALT_ORTH_NOCOMP_ZHFST_FILES=$(addsuffix -nocomp.zhfst, \
-							$(ALT_ORTH_ZHFST_BASENAMES))
+AREA_ZHFST_BASENAMES=$(basename $(AREA_ZHFST_FILES))
+AREA_NOCOMP_ZHFST_FILES=$(addsuffix -nocomp.zhfst, \
+							$(AREA_ZHFST_BASENAMES))
 
 # Only build final speller packages if is enabled (default=yes):
 if WANT_HFST_DESKTOP_SPELLER
@@ -44,65 +43,50 @@ if CAN_LOCALSYNC
 # Generate target file names dynamically based on VOIKKO_VERS_PLATFORMS.
 # The resulting file names follow this pattern:
 #
-#$(GTLANG2)-Cans_LO-voikko-3.4.1-win.oxt
-ALT_ORTH_OXT_FILES_TMP=$(foreach \
+#$(GTLANG2)-NO_LO-voikko-3.4.1-win.oxt
+AREA_OXT_FILES_TMP=$(foreach \
 						version,$(VOIKKO_VERS_PLATFORMS), \
 							$(addsuffix $(version), \
 								$(addsuffix _LO-voikko-, \
-			                      $(ALT_ORTH_ZHFST_BASENAMES))))
-ALT_ORTH_OXT_FILES=$(addsuffix .oxt, $(ALT_ORTH_OXT_FILES_TMP))
+			                      $(AREA_ZHFST_BASENAMES))))
+AREA_OXT_FILES=$(addsuffix .oxt, $(AREA_OXT_FILES_TMP))
 # LO 5.x oxt's:
-ALT_ORTH_OXT_FILES+=$(addsuffix _LO-voikko-$(LOVOIKKO_VERSION).oxt, \
-			$(ALT_ORTH_ZHFST_BASENAMES))
+AREA_OXT_FILES+=$(addsuffix _LO-voikko-$(LOVOIKKO_VERSION).oxt, \
+			$(AREA_ZHFST_BASENAMES))
 
 # Generate target filename as follows:
 #
-# MacVoikko-Plains_Cree-crk-Cans.service
-ALT_ORTH_MACVOIKKO_STEM=$(shell for ld in $(ALT_ORTHS); do\
-    echo "$(MACVOIKKO_STEM)-$(GTLANG2)-x-$$ld.service" ; \
+# MacVoikko-Lule_Sami-smj-NO.service
+AREA_MACVOIKKO_STEM=$(shell for ld in $(AREAS); do\
+    echo "$(MACVOIKKO_STEM)-$(GTLANG2)_$$ld.service" ; \
 done)
-MACVOIKKOFILE+=$(ALT_ORTH_MACVOIKKO_STEM)
+MACVOIKKOFILE+=$(AREA_MACVOIKKO_STEM)
 
 endif # CAN_LOCALSYNC
 
 endif # WANT_HFST_DESKTOP_SPELLER
-
-endif # WANT_ALT_ORTH_SPELLERS
 endif # WANT_SPELLERS
 endif # CAN_HFST
-endif # HAVE_ALT_ORTHS
+endif # HAVE_AREAS
 
 #### Build rules: ####
 
-# Alternative based on the raw fst instead of the standard orthography:
+# Build rule for acceptors for specific areas/countries:
 acceptor.%.hfst: \
 		$(GT_SPELLER_HFST) easteregg.%.hfst \
-		$(top_builddir)/src/orthography/raw-to-%.compose.hfst
+		$(top_builddir)/src/filters/remove-all_areas_but_%-strings.hfst
 	$(AM_V_GEN)cat $< \
 		| $(HFST_COMPOSE) $(HFST_FLAGS) -F \
-		  -2 $(top_builddir)/src/orthography/raw-to-$*.compose.hfst \
+		  -1 $(top_builddir)/src/filters/remove-all_areas_but_$*-strings.hfst \
 		| $(HFST_PROJECT) $(HFST_FLAGS) --project=lower \
 		| $(HFST_MINIMIZE_SPELLER) $(HFST_FLAGS)        \
 		| $(HFST_DISJUNCT) - easteregg.$*.hfst             \
 		| $(HFST_FST2FST) $(HFST_FLAGS) -f olw          \
 		-o $@
 
-# Build rule for acceptors for alternate writing systems:
-acceptor.%.hfst: \
-		$(GT_SPELLER_HFST) easteregg.%.hfst \
-		$(top_builddir)/src/orthography/$(DEFAULT_ORTH)-to-%.compose.hfst
-	$(AM_V_GEN)cat $< \
-		| $(HFST_COMPOSE) $(HFST_FLAGS) -F \
-		  -2 $(top_builddir)/src/orthography/$(DEFAULT_ORTH)-to-$*.compose.hfst \
-		| $(HFST_PROJECT) $(HFST_FLAGS) --project=lower \
-		| $(HFST_MINIMIZE_SPELLER) $(HFST_FLAGS)        \
-		| $(HFST_DISJUNCT) - easteregg.$*.hfst             \
-		| $(HFST_FST2FST) $(HFST_FLAGS) -f olw          \
-		-o $@
-
-# Build rule for zhfst files for alternate writing systems:
-$(ALT_ORTH_ZHFST_FILES): \
-	$(GTLANG2)-x-%.zhfst: \
+# Build rule for zhfst files for specific areas/countries:
+$(AREA_ZHFST_FILES): \
+	$(GTLANG2)_%.zhfst: \
 		$(srcdir)/index.%.xml \
 		acceptor.%.hfst \
 		errmodel.%.hfst
@@ -118,32 +102,32 @@ $(ALT_ORTH_ZHFST_FILES): \
 	$(AM_V_at)$(MKDIR_P) 3
 	$(AM_V_at)cp -f $@ 3/
 
-# Build rule for 5.0 oxt files for alternate writing systems:
+# Build rule for 5.0 oxt files for specific areas/countries:
 # The more specific pattern match first.
-$(GTLANG2)-x-%_LO-voikko-5.0.oxt: $(ALT_ORTH_ZHFST_FILES)
+$(GTLANG2)_%_LO-voikko-5.0.oxt: $(AREA_ZHFST_FILES)
 	$(AM_V_GEN)rm -f $@; \
 		if [ -d "$(OXT_ROOT_DIR)/$(LOVOIKKO_VERSION)" ]; then \
 			$(MKDIR_P) build/$(LOVOIKKO_VERSION)/ && \
 			cd build/$(LOVOIKKO_VERSION) && \
 			$(GET_LIBS_COMMAND) \
 					 $(OXT_ROOT_DIR)/$(LOVOIKKO_VERSION)/ $(TARGET_DIR)/ && \
-			cp ../../$(GTLANG2)-x-$*.zhfst voikko/3/ && \
+			cp ../../$(GTLANG2)_$*.zhfst voikko/3/ && \
 			$(ZIP) -r $(VERBOSITY) $(ZIPFLAGS) ../../$@ * ; \
 		else \
 			echo "  SKIP     $@: Not yet supported." ; \
 		fi
 
-# Build rule for 4.x oxt files for alternate writing systems:
-$(GTLANG2)-x-%.oxt: $(ALT_ORTH_ZHFST_FILES)
+# Build rule for 4.x oxt files for specific areas/countries:
+$(GTLANG2)_%.oxt: $(AREA_ZHFST_FILES)
 	$(AM_V_GEN)rm -f $@; \
-		orth="$$(echo $* | cut -d'_' -f1)"; \
+		area="$$(echo $* | cut -d'_' -f1)"; \
 		version="$$(echo $* | cut -d'_' -f2 | sed 's/LO-voikko-//')"; \
 		if [ -d "$(OXT_ROOT_DIR)/$$version" ]; then \
 			$(MKDIR_P) build/$$version/ && \
 			cd build/$$version && \
 			$(GET_LIBS_COMMAND) \
 					 $(OXT_ROOT_DIR)/$$version/ $(TARGET_DIR)/ && \
-			cp ../../$(GTLANG2)-x-$$orth.zhfst 3/ && \
+			cp ../../$(GTLANG2)_$$area.zhfst 3/ && \
 			$(ZIP) -r $(VERBOSITY) $(ZIPFLAGS) ../../$@ * ; \
 		else \
 			echo "  SKIP     $@: Not yet supported." ; \

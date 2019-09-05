@@ -16,25 +16,24 @@
 ## along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #### Define variables: ####
-if HAVE_ALT_ORTHS
+if HAVE_ALT_WSS
 if CAN_HFST
 if WANT_SPELLERS
-if WANT_ALT_ORTH_SPELLERS
 
-GT_ALT_ORTH_ERRMODELS=$(shell for ld in $(ALT_ORTHS); do\
+GT_ALT_WS_ERRMODELS=$(shell for ld in $(ALT_WSS); do\
     echo "errmodel.$$ld.hfst" ; \
 done)
 
-GT_ALT_ORTH_SPELLER_ACCEPTORS=$(shell for ld in $(ALT_ORTHS); do\
+GT_ALT_WS_SPELLER_ACCEPTORS=$(shell for ld in $(ALT_WSS); do\
     echo "acceptor.$$ld.hfst" ; \
 done)
 
-ALT_ORTH_ZHFST_FILES=$(shell for ld in $(ALT_ORTHS); do\
-    echo "$(GTLANG2)-x-$$ld.zhfst" ; \
+ALT_WS_ZHFST_FILES=$(shell for ld in $(ALT_WSS); do\
+    echo "$(GTLANG2)-$$ld.zhfst" ; \
 done)
-ALT_ORTH_ZHFST_BASENAMES=$(basename $(ALT_ORTH_ZHFST_FILES))
-ALT_ORTH_NOCOMP_ZHFST_FILES=$(addsuffix -nocomp.zhfst, \
-							$(ALT_ORTH_ZHFST_BASENAMES))
+ALT_WS_ZHFST_BASENAMES=$(basename $(ALT_WS_ZHFST_FILES))
+ALT_WS_NOCOMP_ZHFST_FILES=$(addsuffix -nocomp.zhfst, \
+							$(ALT_WS_ZHFST_BASENAMES))
 
 # Only build final speller packages if is enabled (default=yes):
 if WANT_HFST_DESKTOP_SPELLER
@@ -45,55 +44,41 @@ if CAN_LOCALSYNC
 # The resulting file names follow this pattern:
 #
 #$(GTLANG2)-Cans_LO-voikko-3.4.1-win.oxt
-ALT_ORTH_OXT_FILES_TMP=$(foreach \
+ALT_WS_OXT_FILES_TMP=$(foreach \
 						version,$(VOIKKO_VERS_PLATFORMS), \
 							$(addsuffix $(version), \
 								$(addsuffix _LO-voikko-, \
-			                      $(ALT_ORTH_ZHFST_BASENAMES))))
-ALT_ORTH_OXT_FILES=$(addsuffix .oxt, $(ALT_ORTH_OXT_FILES_TMP))
+			                      $(ALT_WS_ZHFST_BASENAMES))))
+ALT_WS_OXT_FILES=$(addsuffix .oxt, $(ALT_WS_OXT_FILES_TMP))
 # LO 5.x oxt's:
-ALT_ORTH_OXT_FILES+=$(addsuffix _LO-voikko-$(LOVOIKKO_VERSION).oxt, \
-			$(ALT_ORTH_ZHFST_BASENAMES))
+ALT_WS_OXT_FILES+=$(addsuffix _LO-voikko-$(LOVOIKKO_VERSION).oxt, \
+			$(ALT_WS_ZHFST_BASENAMES))
 
 # Generate target filename as follows:
 #
 # MacVoikko-Plains_Cree-crk-Cans.service
-ALT_ORTH_MACVOIKKO_STEM=$(shell for ld in $(ALT_ORTHS); do\
-    echo "$(MACVOIKKO_STEM)-$(GTLANG2)-x-$$ld.service" ; \
+ALT_WS_MACVOIKKO_STEM=$(shell for ld in $(ALT_WSS); do\
+    echo "$(MACVOIKKO_STEM)-$(GTLANG2)-$$ld.service" ; \
 done)
-MACVOIKKOFILE+=$(ALT_ORTH_MACVOIKKO_STEM)
+MACVOIKKOFILE+=$(ALT_WS_MACVOIKKO_STEM)
 
 endif # CAN_LOCALSYNC
 
 endif # WANT_HFST_DESKTOP_SPELLER
-
-endif # WANT_ALT_ORTH_SPELLERS
 endif # WANT_SPELLERS
 endif # CAN_HFST
-endif # HAVE_ALT_ORTHS
+endif # HAVE_ALT_WSS
 
 #### Build rules: ####
 
-# Alternative based on the raw fst instead of the standard orthography:
-acceptor.%.hfst: \
-		$(GT_SPELLER_HFST) easteregg.%.hfst \
-		$(top_builddir)/src/orthography/raw-to-%.compose.hfst
-	$(AM_V_GEN)cat $< \
-		| $(HFST_COMPOSE) $(HFST_FLAGS) -F \
-		  -2 $(top_builddir)/src/orthography/raw-to-$*.compose.hfst \
-		| $(HFST_PROJECT) $(HFST_FLAGS) --project=lower \
-		| $(HFST_MINIMIZE_SPELLER) $(HFST_FLAGS)        \
-		| $(HFST_DISJUNCT) - easteregg.$*.hfst             \
-		| $(HFST_FST2FST) $(HFST_FLAGS) -f olw          \
-		-o $@
-
 # Build rule for acceptors for alternate writing systems:
-acceptor.%.hfst: \
+$(GT_ALT_WS_SPELLER_ACCEPTORS): \
+	acceptor.%.hfst: \
 		$(GT_SPELLER_HFST) easteregg.%.hfst \
-		$(top_builddir)/src/orthography/$(DEFAULT_ORTH)-to-%.compose.hfst
+		$(top_builddir)/src/orthography/$(DEFAULT_WS)-to-%.compose.hfst
 	$(AM_V_GEN)cat $< \
 		| $(HFST_COMPOSE) $(HFST_FLAGS) -F \
-		  -2 $(top_builddir)/src/orthography/$(DEFAULT_ORTH)-to-$*.compose.hfst \
+		  -2 $(top_builddir)/src/orthography/$(DEFAULT_WS)-to-$*.compose.hfst \
 		| $(HFST_PROJECT) $(HFST_FLAGS) --project=lower \
 		| $(HFST_MINIMIZE_SPELLER) $(HFST_FLAGS)        \
 		| $(HFST_DISJUNCT) - easteregg.$*.hfst             \
@@ -101,8 +86,8 @@ acceptor.%.hfst: \
 		-o $@
 
 # Build rule for zhfst files for alternate writing systems:
-$(ALT_ORTH_ZHFST_FILES): \
-	$(GTLANG2)-x-%.zhfst: \
+$(ALT_WS_ZHFST_FILES): \
+	$(GTLANG2)-%.zhfst: \
 		$(srcdir)/index.%.xml \
 		acceptor.%.hfst \
 		errmodel.%.hfst
@@ -120,30 +105,30 @@ $(ALT_ORTH_ZHFST_FILES): \
 
 # Build rule for 5.0 oxt files for alternate writing systems:
 # The more specific pattern match first.
-$(GTLANG2)-x-%_LO-voikko-5.0.oxt: $(ALT_ORTH_ZHFST_FILES)
+$(GTLANG2)-%_LO-voikko-5.0.oxt: $(ALT_WS_ZHFST_FILES)
 	$(AM_V_GEN)rm -f $@; \
 		if [ -d "$(OXT_ROOT_DIR)/$(LOVOIKKO_VERSION)" ]; then \
 			$(MKDIR_P) build/$(LOVOIKKO_VERSION)/ && \
 			cd build/$(LOVOIKKO_VERSION) && \
 			$(GET_LIBS_COMMAND) \
 					 $(OXT_ROOT_DIR)/$(LOVOIKKO_VERSION)/ $(TARGET_DIR)/ && \
-			cp ../../$(GTLANG2)-x-$*.zhfst voikko/3/ && \
+			cp ../../$(GTLANG2)-$*.zhfst voikko/3/ && \
 			$(ZIP) -r $(VERBOSITY) $(ZIPFLAGS) ../../$@ * ; \
 		else \
 			echo "  SKIP     $@: Not yet supported." ; \
 		fi
 
 # Build rule for 4.x oxt files for alternate writing systems:
-$(GTLANG2)-x-%.oxt: $(ALT_ORTH_ZHFST_FILES)
+$(GTLANG2)-%.oxt: $(ALT_WS_ZHFST_FILES)
 	$(AM_V_GEN)rm -f $@; \
-		orth="$$(echo $* | cut -d'_' -f1)"; \
+		ws="$$(echo $* | cut -d'_' -f1)"; \
 		version="$$(echo $* | cut -d'_' -f2 | sed 's/LO-voikko-//')"; \
 		if [ -d "$(OXT_ROOT_DIR)/$$version" ]; then \
 			$(MKDIR_P) build/$$version/ && \
 			cd build/$$version && \
 			$(GET_LIBS_COMMAND) \
 					 $(OXT_ROOT_DIR)/$$version/ $(TARGET_DIR)/ && \
-			cp ../../$(GTLANG2)-x-$$orth.zhfst 3/ && \
+			cp ../../$(GTLANG2)-$$ws.zhfst 3/ && \
 			$(ZIP) -r $(VERBOSITY) $(ZIPFLAGS) ../../$@ * ; \
 		else \
 			echo "  SKIP     $@: Not yet supported." ; \
