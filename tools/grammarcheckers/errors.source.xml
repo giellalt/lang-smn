@@ -18,35 +18,66 @@
     -->
     <default>
       <ids>
-        <re v="lex-.*"/>       <!-- regex that matches all real-word-errors -->
-<!--        <e id="unreal-girjji"/>  you can list things explicitly if regexes are hard to use -->
+        <re v="real-.*"/>       <!-- regex that matches all real-word-errors -->
       </ids>
       <header>
-        <title xml:lang="en">Real-word error</title>
-        <title xml:lang="smn">Skrivefeil</title>
+        <title xml:lang="en">Spelling errors</title>
+        <title xml:lang="smn">Čállinmeattáhusat</title>
       </header>
       <body>
-        <description xml:lang="en">The word "$1" exists in the dictionary, but means something different in this context.</description>
-        <description xml:lang="smn">Ordet "$1" eksisterer, men akkurat her passar det kanskje ikkje så godt.</description>
-        <!-- TODO: fix description lang=fo -->
+        <description xml:lang="en">The word means something different here</description>
+        <description xml:lang="smn">Sátni šaddá eará go oaivvilduvvo</description>
+        <!-- TODO: fix description lang=se -->
       </body>
     </default>
-<!--
     <default>
       <ids>
         <re v="msyn-wrong-case.*"/>
         <re v="msyn-wrong_case.*"/>
       </ids>
       <header>
-        <title xml:lang="en">Wrong case</title>
-        <title xml:lang="smn">Feil kasus</title>
+        <title xml:lang="en">Wrong form</title>
+        <title xml:lang="smn">Boasttuhápmi</title>
       </header>
       <body>
-        <description xml:lang="en">The word "$1" seems to be in the wrong case.</description>
-        <description xml:lang="smn"> "$1" ser ut til å vere brukt i feil kasus.</description>
+        <description xml:lang="en">"$1" seems to be in the wrong case</description>
+        <description xml:lang="smn"> "$1" orru leamen boasttukásusis</description>
       </body>
     </default>
-    -->
+    <default>
+      <ids>
+        <re v="punct-aistton.*"/>
+      </ids>
+      <header>
+        <title xml:lang="en">Quotation marks</title>
+        <title xml:lang="smn">Aisttonmearkkat</title>
+        <references><ref n=""/></references>
+      </header>
+      <body>
+        <description xml:lang="en">Wrong quotation mark</description>
+        <description xml:lang="smn">Boasttuaisttonmearkkat</description>
+        <examples>
+          <ex xml:lang="smn">Doarjja addo vuosttažettiin {«}Sámi dutkama prográmmii{»} (2001–05)</ex> 
+        </examples>
+      </body>
+    </default>
+    <default>
+      <ids>
+        <re v="no-space-after-paren.*"/>
+        <re v="no-space-before-paren.*"/>
+      </ids>
+      <header>
+        <title xml:lang="en">Parenthesis missing space</title>
+        <title xml:lang="smn">Gaska váilu</title>
+      </header>
+      <body>
+        <description xml:lang="en">There is no space before or after the parenthesis "$1"</description>
+        <description xml:lang="smn">Ii leat gaska ovdal dehe maŋŋil ruođu "$1"</description>
+        <examples>
+          <ex xml:lang="smn">Vuoigatvuođa Lávdegotti{(}SVL{)}čilgehus</ex> 
+        </examples>
+      </body>
+    </default>
   </defaults>
 
   
@@ -257,5 +288,70 @@
     </body>
   </error>
 
+  <error id="typo">
+    <header>
+      <title xml:lang="en">Spelling errors</title>
+      <title xml:lang="smn">Čállinmeattáhusat</title>
+    </header>
+    <body>
+      <description xml:lang="en">Not in the dictionary</description>
+      <description xml:lang="smn">Ii leat sátnelisttus</description>
+    </body>
+  </error>
+
+  <error id="double-space-before">
+    <header>
+      <title xml:lang="en">Space errors</title>
+      <title xml:lang="smn">Sátnegaskameattáhusat</title>
+    </header>
+    <body>
+      <description xml:lang="en">There are two spaces in front of "$1"</description>
+      <description xml:lang="smn">Leat guokte gaskka ovdal "$1"</description>
+    </body>
+  </error>
+
+  <error id="space-after-paren-beg">
+    <header>
+      <title xml:lang="en">Space errors</title>
+      <title xml:lang="smn">Sátnegaskameattáhusat</title>
+    </header>
+    <body>
+      <description xml:lang="en">There is a space after the opening parenthesis "$1"</description>
+      <description xml:lang="smn">Lea gaska vuosttaš paragráfa "$1" ovddas</description>
+    </body>
+  </error>
+
+  <error id="space-before-paren-end">
+    <header>
+      <title xml:lang="en">Space errors</title>
+      <title xml:lang="smn">Sátnegaskameattáhusat</title>
+    </header>
+    <body>
+      <description xml:lang="en">There is a space before the closing parenthesis "$1"</description>
+      <description xml:lang="smn">Lea gaska nuppi paragráfa "$1" ovddas</description>
+    </body>
+  </error>
+
+  <error id="space-before-punct-mark">
+    <header>
+      <title xml:lang="en">Space errors</title>
+      <title xml:lang="smn">Sátnegaskameattáhusat</title>
+    </header>
+    <body>
+      <description xml:lang="en">There is a space in front of the punctuation mark "$1"</description>
+      <description xml:lang="smn">Lea gaska "$1" ovddas</description>
+    </body>
+  </error>
+
+  <error id="no-space-after-punct-mark">
+    <header>
+      <title xml:lang="en">Space errors</title>
+      <title xml:lang="smn">Sátnegaskameattáhusat</title>
+    </header>
+    <body>
+      <description xml:lang="en">There is no space after the punctuation mark "$1"</description>
+      <description xml:lang="smn">Ii leat gaska "$1" maŋis</description>
+    </body>
+  </error>
  
 </errors>
