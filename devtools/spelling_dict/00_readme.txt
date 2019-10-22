@@ -26,5 +26,43 @@ diff 06s_KIRKKO/here_ut_dir/output_2KIRKKO_fb.csv 06s_KIRKKO/there_ut_dir/output
 
 NB: for the compilation of a spelling dict, please correct the here-file.
 
+=============================
+
+ TODO: added comments from MLs email as todo issue
+
+
+I see now that the pärni-words are in 2AIGI. These are kind of exceptions, though. 
+
+The biblical máttááttâspärni should be inflected:
+sg gen. + acc máttááttâspárnáá  (!)
+ill. máttááttâspáárnán
+loc máttááttâspäärnist
+com máttááttâspárnáin (!)
+
+pl nom máttááttâspárnááh (!)
+pl gen máttááttâspárnái
+pl acc máttááttâspárnáid
+pl ill máttááttâspárnáid
+pl loc máttááttâspárnáin
+pl com máttááttâspárnáiguin
+
+
+Normally:
+pärni should be inflected:
+sg gen. + acc päärni (or párnáá)  (!)
+ill. páárnán
+loc päärnist
+com párnáin (!)
+
+pl nom párnááh (!)
+pl gen párnái
+pl acc párnáid
+pl ill párnáid
+pl loc párnáin
+pl com párnáiguin
+
+
+
+Pls don't ask me why but this seems to be a mixed paradigm. This should be fixed. 
 
 
