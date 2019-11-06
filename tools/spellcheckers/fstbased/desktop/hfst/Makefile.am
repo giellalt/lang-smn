@@ -27,7 +27,7 @@ DEFAULT_WEIGHT=10
 # Possible values are 'yes' or 'no'
 USE_SWAPS=no
 
-# Default edit distanse for the generated, alphabet-based error model:
+# Edit distanse for the Levenshtein error model:
 EDIT_DISTANCE=2
 
 # Define whether we allow changes to the initial letter(s) in the error model,
@@ -67,11 +67,6 @@ FINAL_STRING_EDITS=txt
 # - no
 WORD_REPLACEMENTS=yes
 
-# Specify where to find the project.yaml file and the corresponding layout defs:
-KEYBOARD_LAYOUT_DIR=$(GIELLA_CORE)/../keyboards/smi
-# Specify the ID of the layout as found at the top of each layout file
-KEYBOARD_LAYOUT_ID=inari_sami_keyboard
-
-include $(top_srcdir)/am-shared/tools-spellcheckers-fstbased-mobile-hfst-dir-include.am
+include $(top_srcdir)/am-shared/tools-spellcheckers-fstbased-desktop-hfst-dir-include.am
 
 # vim: set ft=automake:
