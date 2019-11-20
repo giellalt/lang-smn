@@ -51,7 +51,7 @@ LEXICON nounflag !!≈ @CODE@ -  coming from previous, going to the Root lexica
 
 LEXICON RHyph !!≈ @CODE@ - This initial recursive/compounding lexicon adds flags to
               !! control compounding, before going to the real compounding lexicon
- @P.CmpFrst.FALSE@@P.CmpPref.FALSE@@D.CmpLast.TRUE@@D.CmpNone.TRUE@@U.CmpNone.FALSE@@P.CmpOnly.TRUE@ RHyph_after_cmp_flags ;
+ @U.Cap.Obl@@P.CmpFrst.FALSE@@P.CmpPref.FALSE@@D.CmpLast.TRUE@@D.CmpNone.TRUE@@U.CmpNone.FALSE@@P.CmpOnly.TRUE@ RHyph_after_cmp_flags ;
 
 LEXICON RHyph_after_cmp_flags !!≈ @CODE@ - from RHyph
       +Cmp/Hyph+Cmp#:-# NounRoot ;
@@ -60,10 +60,10 @@ LEXICON RHyph_after_cmp_flags !!≈ @CODE@ - from RHyph
 
 LEXICON RProp !!≈ @CODE@ - This initial recursive/compounding lexicon adds flags to
               !! control compounding, before going to the real compounding lexicon
- @P.CmpFrst.FALSE@@P.CmpPref.FALSE@@D.CmpLast.TRUE@@D.CmpNone.TRUE@@U.CmpNone.FALSE@@P.CmpOnly.TRUE@ RProp_after_cmp_flags ;
+ @U.Cap.Obl@@P.CmpFrst.FALSE@@P.CmpPref.FALSE@@D.CmpLast.TRUE@@D.CmpNone.TRUE@@U.CmpNone.FALSE@@P.CmpOnly.TRUE@ RProp_after_cmp_flags ;
 
 LEXICON RProp_after_cmp_flags                  !!≈ - @CODE@ from RProp
-      +Cmp/Hyph+Cmp#nommâ:»»»-nommâs  DER-SAS        ; ! Jovnâ-nommâsâš
+!      +Cmp/Hyph+Cmp#nommâ:»»»-nommâs  DER-SAS        ; ! Jovnâ-nommâsâš
      +Cmp/Hyph+Cmp#merkkâ:»»»-merkkâs DER-SAS        ; ! Saab-merkkâsâš
            +Cmp/Hyph+Cmp#:-#          ProperNoun     ;
            +Cmp/Hyph+Cmp#:-#          ProperNoun-smn ;
