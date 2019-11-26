@@ -172,30 +172,6 @@ LEXICON KIARUN !!= @CODE@ = 3KIELES
 +Cmp/SgGen: RProp ; 
 PERSNAME-CMPflag ;
 
-LEXICON KREIKKA-ani
-+N+Prop+Sem/Ani: KREIKKA ;
-
-LEXICON KREIKKA-plc
-+N+Prop+Sem/Plc: KREIKKA ;
-+N+Prop+Sem/Plc: A_LASJ ;
-
-LEXICON KREIKKA-fem !!= * __@CODE@__ Ella
-+N+Prop+Sem/Fem: KREIKKA ;
-+N+Prop+Sem/Fem+Cmp/SgGen:^WG%> BEL ;
-
-LEXICON KREIKKA-mal !!= * __@CODE@__ Mikko
-+N+Prop+Sem/Mal: KREIKKA ;
-!+N+Prop+Sem/Mal+Cmp/N:%- MaleRelative ;
-+N+Prop+Sem/Mal+Cmp/SgGen:^WG%> BEL ;
-
-
-LEXICON KREIKKA
-+Attr: flagK ;
- @U.Cap.Obl@ X_KISSA_SG ;
-+Cmp/SgNom: RProp ; 
-+Cmp/SgGen:^WG RProp ; 
- :^WG PERSNAME-GENCMPflag ;
-  PERSNAME-NOMCMPflag ;
 
 LEXICON LYEME-plc 
 +N+Prop+Sem/Plc: LYEME ;
@@ -1336,10 +1312,11 @@ LEXICON MOKKE-sur !!= * __@CODE@__ similar to ALGE
 LEXICON MOKKE-org !!= * __@CODE@__ similar to ALGE 
 +N+Prop+Sem/Plc: MOKKE ;
 
+LEXICON MOKKE-fem !!= * __@CODE@__ similar to ALGE 
++N+Prop+Sem/Fem: MOKKE ;
 
 LEXICON MOKKE-mal !!= * __@CODE@__ similar to ALGE 
 +N+Prop+Sem/Mal: MOKKE ;
-!+N+Prop+Sem/Mal+Cmp/N:%- MaleRelative ;
 +N+Prop+Sem/Mal+Cmp/SgGen:^WG%> BEL ;
 
 LEXICON MOKKE-ani !!= * __@CODE@__ similar to ALGE 
@@ -1361,6 +1338,50 @@ LEXICON MOKKE !!= * __@CODE@__ similar to ALGE
 +Cmp/SgGen:^WG%> RProp ; 
 +Cmp/SgGen:^WG%> PERSNAME-CMPflag ;
 
+
+
+!LEXICON ORDO-plc
+!+N+Prop+Sem/Plc: ORDO ;
+!+N+Prop+Sem/Plc: A_LASJ ;
+!
+!LEXICON ORDO  !!= __@CODE@__ similar to  KIRKKO 
+!+Attr: flagK ;
+!+Sg+Nom: flagK ;   !kirkko
+!+Sg+Gen:^WG flagK ;   !kirho
+!+Sg+Acc:^WG flagK ;   !ki´rho
+!+Sg+Ill:^CSH^RLEN^EA%>n flagK ;   !kiirkon
+!+Sg+Loc:^SV^WG^SLEN%>st flagK ;
+!+Sg+Com:^WG^CLEN%>in flagK ;   !kirhoin
+!+Sg+Abe:^WG%>ttáá flagK ;   !kirhottáá
+!+Cmp/SgNom: RProp ; 
+!
+
+
+!LEXICON KREIKKA-ani
+!+N+Prop+Sem/Ani: KREIKKA ;
+!
+!LEXICON KREIKKA-plc
+!+N+Prop+Sem/Plc: KREIKKA ;
+!+N+Prop+Sem/Plc: A_LASJ ;
+!
+!LEXICON KREIKKA-fem !!= * __@CODE@__ Ella
+!+N+Prop+Sem/Fem: KREIKKA ;
+!+N+Prop+Sem/Fem+Cmp/SgGen:^WG%> BEL ;
+!
+!LEXICON KREIKKA-mal !!= * __@CODE@__ Mikko
+!+N+Prop+Sem/Mal: KREIKKA ;
+!!+N+Prop+Sem/Mal+Cmp/N:%- MaleRelative ;
+!+N+Prop+Sem/Mal+Cmp/SgGen:^WG%> BEL ;
+!
+!
+!LEXICON KREIKKA
+!+Attr: flagK ;
+! @U.Cap.Obl@ X_KISSA_SG ;
+!+Cmp/SgNom: RProp ; 
+!+Cmp/SgGen:^WG RProp ; 
+! :^WG PERSNAME-GENCMPflag ;
+!  PERSNAME-NOMCMPflag ;
+!
 
 !LEXICON UAIVAS-mal   * __@CODE@__ similar to KUAVDAS.
 !+N+Prop+Sem/Mal: UAIVAS ;
@@ -1576,21 +1597,6 @@ LEXICON POHE !!= * __@CODE@__ nearly similar to VAHE
 +Cmp/SgGen:^WG%> RProp ; 
 +Cmp/SgGen:^WG%> PERSNAME-CMPflag ;
 
-
-LEXICON ORDO-plc
-+N+Prop+Sem/Plc: ORDO ;
-+N+Prop+Sem/Plc: A_LASJ ;
-
-LEXICON ORDO  !!= __@CODE@__ similar to  KIRKKO 
-+Attr: flagK ;
-+Sg+Nom: flagK ;   !kirkko
-+Sg+Gen:^WG flagK ;   !kirho
-+Sg+Acc:^WG flagK ;   !ki´rho
-+Sg+Ill:^CSH^RLEN%>n flagK ;   !kiirkon
-+Sg+Loc:^SV^WG^SLEN%>st flagK ;
-+Sg+Com:^WG^CLEN%>in flagK ;   !kirhoin
-+Sg+Abe:^WG%>ttáá flagK ;   !kirhottáá
-+Cmp/SgNom: RProp ; 
 
 LEXICON EENA-plc !!= * __@CODE@__ similar to EENNAM, except for sg nom, eenâ (a rare form)
 +N+Prop+Sem/Plc: EENNAM ;
