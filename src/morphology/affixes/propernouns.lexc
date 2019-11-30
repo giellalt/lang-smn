@@ -1555,8 +1555,10 @@ LEXICON POHE !!= * __@CODE@__ nearly similar to VAHE
 +Cmp/SgGen:^WG%> PERSNAME-CMPflag ;
 
 
-LEXICON EENA-plc !!= * __@CODE@__ similar to EENNAM, except for sg nom, eenâ (a rare form)
-+N+Prop+Sem/Plc: EENNAM ;
+LEXICON EENA-plc !!= * __@CODE@__ no stem in stems/smn-propernouns.le≈c
++N+Prop+Sem/Plc+Attr:eenâ flagK ;  ! adding eenâ and do Attr, Nom
++N+Prop+Sem/Plc+Sg+Nom:eenâ flagK ;
++N+Prop+Sem/Plc:eennâm EENNAM_OBL ; ! adding eennâm and do OBL cases
 +N+Prop+Sem/Plc: A_LASJ ;
 
 
@@ -1570,12 +1572,14 @@ LEXICON EENNAM-mal !!= * __@CODE@__ similar to EEMEED
 !+N+Prop+Sem/Mal+Cmp/N:%- MaleRelative ;
 +N+Prop+Sem/Mal+Cmp/SgGen: BEL ;
 
-
 LEXICON EENNAM  !!= * __@CODE@__ similar to EEMEED
-+Attr: flagK ;
-+Sg+Nom: flagK ;					! eemeed
-+Sg+Gen: flagK ;					! eemeed
-+Sg+Acc: flagK ;					! eemeed
++Attr: flagK ;  ! split bec of EENA, do Att, Nom
++Sg+Nom: flagK ;
+EENNAM_OBL ;   ! split bec of EENA, go to OBL forms (common for EENA, EENNAM)
+
+LEXICON EENNAM_OBL
++Sg+Gen: flagK ;		! eemeed
++Sg+Acc: flagK ;		! eemeed
 +Sg+Ill:^CSH^SVSH%>ân flagK ;	! emedân
 +Sg+Loc:^CSH^SVSH%>ist flagK ;	! emedist
 +Sg+Com:^CSH^SVSH%>áin flagK ;	! emedáin
