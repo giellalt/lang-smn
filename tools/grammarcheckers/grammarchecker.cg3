@@ -2045,7 +2045,7 @@ COPY:err-gen-po (Nom &SUGGEST) EXCEPT (Gen &err-gen-po) TARGET (N Sg Nom &err-ge
 ADD:err-ext-agr (&err-ext-agr) TARGET V IF (-1 Loc)(0 (LEDE Sg3))(1 N + Pl + Nom);
 
 
-ADD:err-pl-obj (&err-pl-obj) TARGET (N Pl Nom) IF (*-1 TRANS-V  BARRIER NOT-NPMOD OR CLB ) (NEGATE -1 PrfPrc LINK *-1 N BARRIER VFIN);
+ADD:err-pl-obj (&err-pl-obj) TARGET (N Pl Nom) IF (*-1 TRANS-V  BARRIER NOT-NPMOD OR CLB OR PUNCT LINK NOT 0 Pl3 ) (NEGATE -1 PrfPrc LINK *-1 N BARRIER VFIN);
 	# Trans: Others know mushrooms by.their.color.
 	## Nubeh tobdeh kuobbâreh ivneest.
 	# toiset uivat , sienet ovat hyviä.
@@ -2071,6 +2071,7 @@ COPY:err-extv-pl3-numeral (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Ind Prs Sg3 &err-e
 
 # e-subject in Pl Acc based on Finnish partitive
 ADD:err-esubj-plnom (&err-esubj-plnom) TARGET N IF (*-1 LEDE + Pl3 BARRIER NOT-NPMOD LINK -1 Loc)(0 (N Pl Acc) OR (N Pl Ill));
+COPY:err-esubj-plnom (Nom &SUGGEST) EXCEPT Ill TARGET (N Pl &err-esubj-plnom) ;
 #fi Pihalla on poroja. - 
 ## Šiljoost láá poccuuh. 
 #$ Šiljoost láá poccuid.
@@ -2168,11 +2169,11 @@ COPY:err-num-gensg (Sg Gen &SUGGEST) EXCEPT Par TARGET (N &err-num-gensg);
 
 LIST SGGENACC = (Sg Gen) (Sg Acc) ;
 
-ADD:err-num-par (&err-num-par) TARGET N IF (-1 Num LINK 0 SEVEN-AND-MORE)(0 N + Sg + Gen)(NOT 0 ABBR)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR Sem/Measr_Time)(NOT 1 Po OR TIME-N) ;
-COPY:err-num-par (Par &SUGGEST) EXCEPT SGGENACC TARGET (N &err-num-par) ;
+ADD:err-num-par (&err-num-par) TARGET N IF (-1 Num + Nom LINK 0 SEVEN-AND-MORE)(0 N + Sg + Gen)(NOT 0 ABBR)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR Sem/Measr_Time)(NOT 1 Po OR TIME-N OR Sem/Date OR ("pelnub") OR ("muáddi")) ;
+COPY:err-num-par (Par &SUGGEST) EXCEPT (Sg Gen) TARGET (N &err-num-par) ;
 
-ADD:err-num-par (&err-num-par) TARGET N IF (-1 Num LINK 0 SEVEN-AND-MORE)(0 N + Sg + Acc)(NOT 0 ABBR)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR Sem/Measr_Time) ;
-COPY:err-num-par (Par &SUGGEST) EXCEPT SGGENACC TARGET (N  &err-num-par) ;
+ADD:err-num-par (&err-num-par) TARGET N IF (-1 Num + Nom LINK 0 SEVEN-AND-MORE)(0 N + Sg + Acc)(NOT 0 ABBR)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR Sem/Measr_Time OR Sem/Date OR ("pelnub") OR ("muáddi")) ;
+COPY:err-num-par (Par &SUGGEST) EXCEPT (Sg Acc) TARGET (N &err-num-par) ;
 #$ Must láá čiččâm {kyele}.
 ## Must láá čiččâm kyellid.
 
