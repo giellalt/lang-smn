@@ -447,6 +447,7 @@ SET A-NOT-V = A - A-V ; #!! A-NOT-V
 #!! !Case sets
 # ---------
 
+LIST ACCILL = Acc Ill ;
 LIST ADVLCASE = Ill Loc Com Ess ; #!! ADLVCASE
 
 # Sg Nom - Sg Nom | Pl Nom - Pl Nom
@@ -456,6 +457,7 @@ LIST ADVLCASE = Ill Loc Com Ess ; #!! ADLVCASE
 # Sg Gen - Sg Loc | Pl Loc - Pl Loc
 # Sg Com - Sg Com | Pl Gen/Com - Pl Com
 # Ess - Ess
+
 
 LIST CASE-HALFAGREEMENT = Ill (Sg Loc) (Pl Com) Ess ; #!! CASE-HALFAGREEMENT
 LIST CASE-AGREEMENT = Nom Acc Gen (Pl Ill) Loc Com Ess ; #!! CASE-AGREEMENT
@@ -506,6 +508,7 @@ LIST PL1-V = (V Pl1) ;  #!! PL1-V
 LIST PL2-V = (V Pl3) ;  #!! PL2-V
 LIST PL3-V = (V Pl3) ;  #!! PL3-V
 
+LIST PERNUM = Sg1 Sg2 Sg3 Du1 Du2 Du3 Pl1 Pl2 Pl3 ;
 
 
 # SET POSITIVE-V = SG1-V OR SG2-V OR SG3-V OR DU1-V OR DU2-V OR DU3-V OR PL1-V OR PL2-V OR PL3-V ;  #!! POSITIVE-V
@@ -531,6 +534,7 @@ LIST VNOTDU3 = Sg1 Sg2 Sg3 Du1 Du2 Pl1 Pl2 Pl3 ;
 LIST VNOTPL1 = Sg1 Sg2 Sg3 Du1 Du2 Du3 Pl2 Pl3 ;
 LIST VNOTPL2 = Sg1 Sg2 Sg3 Du1 Du2 Du3 Pl1 Pl3 ;
 LIST VNOTPL3 = Sg1 Sg2 Sg3 Du1 Du2 Du3 Pl1 Pl2 ;
+
 
 # Imperative sets
 
@@ -2017,7 +2021,7 @@ COPY:err-agr-pl1 (Pl1 &SUGGEST) EXCEPT VNOTPL1 TARGET (V Ind Prs &err-agr-pl1);
 
 
 ADD:err-agr-pl2 (&err-agr-pl2) TARGET V IF (NOT -2 Sup)(-1C Pron + Pl2 + Nom)(0 V)(NOT 0 Pl2);
-COPY:err-agr-pl1 (Pl1 &SUGGEST) EXCEPT VNOTPL1 TARGET (V Ind Prs &err-agr-pl1);
+COPY:err-agr-pl1 (Pl2 &SUGGEST) EXCEPT VNOTPL2 TARGET (V Ind Prs &err-agr-pl2);
 
 #$ Tij puátá.
 ## Tij puátivetteđ.
@@ -2069,14 +2073,6 @@ COPY:err-extv-pl3-numeral (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Ind Prs Sg3 &err-e
 
 
 
-# e-subject in Pl Acc based on Finnish partitive
-ADD:err-esubj-plnom (&err-esubj-plnom) TARGET N IF (*-1 LEDE + Pl3 BARRIER NOT-NPMOD LINK -1 Loc)(0 (N Pl Acc) OR (N Pl Ill));
-COPY:err-esubj-plnom (Nom &SUGGEST) EXCEPT Ill TARGET (N Pl &err-esubj-plnom) ;
-#fi Pihalla on poroja. - 
-## Šiljoost láá poccuuh. 
-#$ Šiljoost láá poccuid.
-#$ Šiljoost láá čapis poccuid.
-
 
 
 
@@ -2098,18 +2094,46 @@ ADD:err-pl-obj (&err-pl-obj) TARGET N IF (*-2 Nom)(-1 TV + Ind LINK NOT 0 Der/Pa
 
 
 #!! !ConNeg Better: Target whatever is there and should have been a conneg. !!!
-ADD:err-no-conneg (&err-no-conneg) TARGET V IF (-1 Neg) (NOT *-2 ConNeg)(0 V + Ind OR Cond)(NOT 0 ConNeg)(NOT *1 ConNeg BARRIER CLB);
+#ADD:err-no-conneg (&err-no-conneg) TARGET V IF (-1 Neg) (NOT *-2 ConNeg)(0 V + Ind OR Cond)(NOT 0 ConNeg)(NOT *1 ConNeg BARRIER CLB);
 ## Sun ij lah.
 #$ Sun ij {lii}.
 
+ADD:err-no-conneg (&err-no-conneg) TARGET V IF (-1 Neg) (NOT *-2 ConNeg)(0 V + Ind + Prs + Sg3)(NOT 0 ConNeg)(NOT *1 ConNeg BARRIER CLB);
+COPY:err-no-conneg (ConNeg &SUGGEST) EXCEPT Sg3 TARGET (V Ind Prs Sg3 &err-no-conneg);
+## Sun ij lah.
+#$ Sun ij {lii}.
+
+ADD:err-no-conneg (&err-no-conneg) TARGET V IF (-1 Neg) (NOT *-2 ConNeg)(0 V + Ind + Prs + Du3)(NOT 0 ConNeg)(NOT *1 ConNeg BARRIER CLB);
+COPY:err-no-conneg (ConNeg &SUGGEST) EXCEPT Du3 TARGET (V Ind Prs Du3 &err-no-conneg);
+#$ Noomah iä vuáđuduv.
+## Noomah iä vuáđuduu.
+
+ADD:err-no-conneg (&err-no-conneg) TARGET V IF (-1 Neg) (NOT *-2 ConNeg)(0 V + Cond + Prs + Sg3)(NOT 0 ConNeg)(NOT *1 ConNeg BARRIER CLB);
+COPY:err-no-conneg (ConNeg &SUGGEST) EXCEPT Sg3 TARGET (V Cond Prs Sg3 &err-no-conneg);
+#$ Sun ij puávtáččij vyelgiđ.
+## Sun ij puávtáččii vyelgiđ.
+	
 
 #!! !Existential sentences and habitives
 
-ADD:err-extv-pl3 (&err-extv-pl3) TARGET V IF (-1 Loc)(0 LEDE + Sg3)(1 Num)(NOT 1 OHTA);
+# e-subject in Pl Acc based on Finnish partitive
+#ADD:err-esubj-plnom (&err-esubj-plnom) TARGET N IF (*-1 LEDE + Pl3 BARRIER NOT-NPMOD LINK -1 Loc)(0 (N Pl Acc) OR (N Pl Ill));
+#COPY:err-esubj-plnom (Nom &SUGGEST) EXCEPT Ill TARGET (N Pl &err-esubj-plnom) ;
+#fi Pihalla on poroja. - 
+## Šiljoost láá poccuuh. 
+#$ Šiljoost láá poccuid.
+#$ Šiljoost láá čapis poccuid.
 
-ADD:err-extsubj-nom (&err-extsubj-nom) TARGET N IF (*-1 LEDE + Sg3 OR LEDE + Pl3 BARRIER NOT-ADV-PCLE)(0 N + Pl + Acc)(NEGATE *1 TV + Ger OR TV + PrfPrc OR TV + Inf BARRIER S-BOUNDARY OR VFIN) ;
+ADD:err-extsubj-nom (&err-extsubj-nom) TARGET N IF (*-1 LEDE + Sg3 OR LEDE + Pl3 BARRIER NOT-ADV-PCLE LINK -1 Loc)(0 (N Pl Ill))(NEGATE *1 TV + Ger OR TV + PrfPrc OR TV + Inf BARRIER S-BOUNDARY OR VFIN) ;
+COPY:err-extsubj-nom (Nom &SUGGEST) EXCEPT (Ill) TARGET (N Pl Ill &err-extsubj-nom) ;
 ## Šiljoost láá poccuuh.
 #$ Šiljoost láá ain {poccuid}.
+ADD:err-extsubj-nom (&err-extsubj-nom) TARGET N IF (*-1 LEDE + Sg3 OR LEDE + Pl3 BARRIER NOT-ADV-PCLE LINK -1 Loc)(0 (N Pl Acc))(NEGATE *1 TV + Ger OR TV + PrfPrc OR TV + Inf BARRIER S-BOUNDARY OR VFIN) ;
+COPY:err-extsubj-nom (Nom &SUGGEST) EXCEPT (Acc) TARGET (N Pl Acc &err-extsubj-nom) ;
+
+
+ADD:err-extv-pl3 (&err-extv-pl3) TARGET V IF (-1 Loc)(0 LEDE + Sg3)(1 Num)(NOT 1 OHTA);
+
 
 ADD:err-extsubj-nom (&err-extsubj-nom) TARGET N IF (-1 LEDE + Sg3 OR LEDE + Pl3)(0 N + Pl + Ill);
 
