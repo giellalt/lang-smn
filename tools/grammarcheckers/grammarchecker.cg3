@@ -262,13 +262,7 @@ LIST Der/vuota = Der/vuota ;		 #!! Der/vuota
 LIST Der/InchL = Der/InchL ;		 #!! Der/InchL
 LIST Der/Dimin = Der/Dimin ;		 #!! Der/Dimin
 LIST Der/AAdv = Der/AAdv ;           #!! Der/Aadv
-LIST Sem/Date = Sem/Date ;           #!! Der/Date
-LIST Sem/Year = Sem/Year ;           #!! Der/Year
-LIST Sem/Hum = Sem/Hum ;             #!! Der/Hum
-LIST <vdic> = <vdic> ;				 #!! <vdic>
 
-SET  BEAIVI-REF = Sem/Date ;
-#SET BEAIVI-REF = SP-BEAIVI OR GEN-BEAIVI OR Sem/Date ;
 
 LIST Err/Orth = Err/Orth Err/Orth-a/á Err/Orth-nom/gen Err/Orth-nom/acc Err/DerSub Err/CmpSub Err/UnspaceCmp Err/HyphSub Err/SpaceCmp Err/Spellrelax err_orth_mt ; #!! Err/Orth
 LIST Err/Orth-spes = Err/Orth-a/á Err/Orth-nom/gen Err/Orth-nom/acc Err/DerSub Err/CmpSub Err/UnspaceCmp Err/HyphSub Err/SpaceCmp Err/Spellrelax err_orth_a_á_mt err_orth_nom_acc_mt err_orth_nom_gen_mt  ; #!! Err/Orth-spes
@@ -279,15 +273,19 @@ SET NOT-DER-A-ADV = Adv - DER-A-ADV ;
 
 #!! !Semantic tags
 
+LIST <vdic> = <vdic> ;				 #!! <vdic>
+LIST HUMAN = Sem/Fem Sem/Mal Sem/Sur ;	    #!! HUMAN
 LIST Sem/Act = Sem/Act ;				    #!! Sem/Act
 LIST Sem/Ani = Sem/Ani ;				    #!! Sem/Ani
 LIST Sem/Atr = Sem/Atr ;				    #!! Sem/Atr
 LIST Sem/Body = Sem/Body ;				    #!! Sem/Body
 LIST Sem/Clth = Sem/Clth ;				    #!! Sem/Clth
+LIST Sem/Date = Sem/Date ;           #!! Der/Date
 LIST Sem/Domain = Sem/Domain ;			    #!! Sem/Domain
 LIST Sem/Feat-phys = Sem/Feat-phys ;	    #!! Sem/Feat-phys
 LIST Sem/Fem = Sem/Fem ;				    #!! Sem/Fem
 LIST Sem/Group = Sem/Group ;			    #!! Sem/Group
+LIST Sem/Hum = Sem/Hum ;             #!! Der/Hum
 LIST Sem/Lang = Sem/Lang ;				    #!! Sem/Lang
 LIST Sem/Mal = Sem/Mal ;				    #!! Sem/Mal
 LIST Sem/Measr = Sem/Measr ;			    #!! Sem/Measr
@@ -302,9 +300,9 @@ LIST Sem/Sign = Sem/Sign ;				    #!! Sem/Sign
 LIST Sem/State-sick = Sem/State-lang-sick ; #!! Sem/State-sick
 LIST Sem/Sur = Sem/Sur ;				    #!! Sem/Sur
 LIST Sem/Time = Sem/Time ;				    #!! Sem/Time
+LIST Sem/Time-clock = Sem/Time-clock ;				    #!! Sem/Time
 LIST Sem/Txt = Sem/Txt ;				    #!! Sem/Txt
-
-LIST HUMAN = Sem/Fem Sem/Mal Sem/Sur ;	    #!! HUMAN
+LIST Sem/Year = Sem/Year ;           #!! Der/Year
 
 SET HAB-ACTOR = HUMAN ; # Goal: make this like the sme one. #!! HAB-ACTOR
 SET HAB-ACTOR-NOT-HUMAN = Sem/Org ; # make this like the sme one #!! HAB-ACTOR-NOT-HUMAN
@@ -2204,10 +2202,10 @@ COPY:err-num-gensg (Sg Gen &SUGGEST) EXCEPT Par TARGET (N &err-num-gensg);
 
 LIST SGGENACC = (Sg Gen) (Sg Acc) ;
 
-ADD:err-num-par (&err-num-par) TARGET N IF (-1 Num + Nom LINK 0 SEVEN-AND-MORE)(0 N + Sg + Gen)(NOT 0 ABBR)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR Sem/Measr_Time)(NOT 1 Po OR TIME-N OR Sem/Date OR ("pelnub") OR ("muáddi")) ;
+ADD:err-num-par (&err-num-par) TARGET N IF (-1 Num + Nom LINK 0 SEVEN-AND-MORE)(0 N + Sg + Gen)(NOT 0 ABBR)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Sem/Date OR Rom OR Sem/Time-clock)(NOT 1 Po OR TIME-N OR Sem/Date OR ("pelnub") OR ("muáddi")) ;
 COPY:err-num-par (Par &SUGGEST) EXCEPT (Sg Gen) TARGET (N &err-num-par) ;
 
-ADD:err-num-par (&err-num-par) TARGET N IF (-1 Num + Nom LINK 0 SEVEN-AND-MORE)(0 N + Sg + Acc)(NOT 0 ABBR)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR Sem/Measr_Time OR Sem/Date OR ("pelnub") OR ("muáddi")) ;
+ADD:err-num-par (&err-num-par) TARGET N IF (-1 Num + Nom LINK 0 SEVEN-AND-MORE)(0 N + Sg + Acc)(NOT 0 ABBR)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Sem/Date OR Rom OR Sem/Time-clock  OR ("pelnub") OR ("muáddi")) ;
 COPY:err-num-par (Par &SUGGEST) EXCEPT (Sg Acc) TARGET (N &err-num-par) ;
 #$ Must láá čiččâm {kyele}.
 ## Must láá čiččâm kyellid.
