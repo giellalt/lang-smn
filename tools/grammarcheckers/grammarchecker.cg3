@@ -2,7 +2,7 @@
 # Divvun & Giellatekno - open source grammars for Sámi and other languages
 # Copyright © 2000-2016 UiT The arctic University of Norway 
 # http://giellatekno.uit.no & http://divvun.no
-#
+# 
 # This program is free software; you can redistribute and/or modify
 # this file under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
@@ -1972,7 +1972,8 @@ LIST &err-extv-pl3-numeral = &err-ext-pl3-numeral ;
 LIST &err-extneg-pl3 = &err-extneg-pl3 ;
 LIST &err-pl-obj = &err-pl-obj ;
 LIST &err-esubj-plnom = &err-esubj-plnom ;
-LIST &err-extsubj-nom = &err-extsubj-nom ; # vi vil ha nom
+LIST &err-extsubj-ill-nom = &err-extsubj-ill-nom ; # vi vil ha nom
+LIST &err-extsubj-acc-nom = &err-extsubj-acc-nom ; # vi vil ha nom
 LIST &err-halfcongruence = &err-halfcongruence ;	
 LIST &err-nom-obj = &err-nom-obj ;
 LIST &err-imp-nomobj = &err-imp-nomobj ;
@@ -2037,7 +2038,7 @@ COPY:err-agr-sg3 (Sg3 &SUGGEST) EXCEPT VNOTSG3 TARGET (V Ind Prs &err-agr-sg3);
 
 #!! Inf should be Actio Essive
 ADD:err-orrood-inf (&err-orrood-inf) TARGET (V Inf) IF (-1 ("orroođ") + Ind);
-COPY:err-orrood-inf (Actio Ess &SUGGEST) EXCEPT (Inf) TARGET (V Inf &err-orrood-inf);
+COPY:err-orrood-inf (Actio Ess &SUGGEST) EXCEPT Inf TARGET (V Inf &err-orrood-inf);
 #$ Mun orom leđe ennuv velgus anarâškielân.
 ## Mun orom lemin ennuv velgus anarâškielân.
 
@@ -2046,7 +2047,7 @@ COPY:err-gen-po (Nom &SUGGEST) EXCEPT (Gen &err-gen-po) TARGET (N Sg Nom &err-ge
 
 
 ADD:err-ext-agr (&err-ext-agr) TARGET V IF (*-1 Loc BARRIER NOT-ADV-PCLE)(0 ("leđe" V Ind Prs Sg3))(*1 N + Pl + Nom BARRIER NOT-NPMODADV);
-COPY:err-ext-agr (Pl3 &SUGGEST) EXCEPT (Sg3) TARGET ("leđe" V Ind Prs &err-ext-agr) ;
+COPY:err-ext-agr (Pl3 &SUGGEST) EXCEPT Sg3 TARGET ("leđe" V Ind Prs &err-ext-agr) ;
 #$ Must lii uđđâ autoh.
 ## Must láá uđđâ autoh.
 
@@ -2059,16 +2060,14 @@ ADD:err-pl-obj (&err-pl-obj) TARGET (N Pl Nom) IF (*-1 TRANS-V  BARRIER NOT-NPMO
 
 # Iäruh omâstemráhtusist: mieđetteijee já kieldee häämi
 ADD:err-extv-pl3 (&err-extv-pl3) TARGET V IF (-1 Loc)(0 LEDE + Sg3)(*1 N + Pl + Nom BARRIER NOT-ADV-PCLE);
-COPY:err-extv-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Ind Prs Sg3 &err-extv-pl3) ;
-#fi Minulla on kaloja. - 
+COPY:err-extv-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Ind Prs &err-extv-pl3) ;
+#fi Minulla on kaloja.
 ## Must láá kyeleh.
-#$ Must lii kuolijd.
-#$ Must láá kuolijd.
-#$ Must lii kyeleh.
+#$ Must lii kyeleh onne.
 
 #!! Verb in plural 
 ADD:err-extv-pl3-numeral (&err-extv-pl3-numeral) TARGET V IF (-1 Loc)(0 LEDE + Sg3)(1 Num LINK NOT 0 OHTA);
-COPY:err-extv-pl3-numeral (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Ind Prs Sg3 &err-extv-pl3-numeral) ;
+COPY:err-extv-pl3-numeral (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Ind Prs &err-extv-pl3-numeral) ;
 #fi Minulla on kaksi kalaa. - 
 #$ Must {lii} kyehti kyele.
 ## Must láá kyehti kyele.
@@ -2095,7 +2094,7 @@ COPY:err-extneg-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET ("ij" V Neg Ind &err-extneg
 #!! !Plural objects
 
 ADD:err-pl-obj (&err-pl-obj) TARGET N IF (*-2 Nom)(-1 TV + Ind LINK NOT 0 Der/Pass)(0 N + Pl + Nom)(NOT -1 PrfPrc LINK *-1 N BARRIER VFIN);
-
+COPY:err-pl-obj (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &err-pl-obj);
 
 #!! !ConNeg Better: Target whatever is there and should have been a conneg. !!!
 #ADD:err-no-conneg (&err-no-conneg) TARGET V IF (-1 Neg) (NOT *-2 ConNeg)(0 V + Ind OR Cond)(NOT 0 ConNeg)(NOT *1 ConNeg BARRIER CLB);
@@ -2103,17 +2102,17 @@ ADD:err-pl-obj (&err-pl-obj) TARGET N IF (*-2 Nom)(-1 TV + Ind LINK NOT 0 Der/Pa
 #$ Sun ij {lii}.
 
 ADD:err-no-conneg (&err-no-conneg) TARGET V IF (-1 Neg) (NOT *-2 ConNeg)(0 V + Ind + Prs + Sg3)(NOT 0 ConNeg)(NOT *1 ConNeg BARRIER CLB);
-COPY:err-no-conneg (ConNeg &SUGGEST) EXCEPT Sg3 TARGET (V Ind Prs Sg3 &err-no-conneg);
+COPY:err-no-conneg (ConNeg &SUGGEST) EXCEPT Sg3 TARGET (V Ind Prs &err-no-conneg);
 ## Sun ij lah.
 #$ Sun ij {lii}.
 
 ADD:err-no-conneg (&err-no-conneg) TARGET V IF (-1 Neg) (NOT *-2 ConNeg)(0 V + Ind + Prs + Du3)(NOT 0 ConNeg)(NOT *1 ConNeg BARRIER CLB);
-COPY:err-no-conneg (ConNeg &SUGGEST) EXCEPT Du3 TARGET (V Ind Prs Du3 &err-no-conneg);
+COPY:err-no-conneg (ConNeg &SUGGEST) EXCEPT Du3 TARGET (V Ind Prs &err-no-conneg);
 #$ Noomah iä vuáđuduv.
 ## Noomah iä vuáđuduu.
 
 ADD:err-no-conneg (&err-no-conneg) TARGET V IF (-1 Neg) (NOT *-2 ConNeg)(0 V + Cond + Prs + Sg3)(NOT 0 ConNeg)(NOT *1 ConNeg BARRIER CLB);
-COPY:err-no-conneg (ConNeg &SUGGEST) EXCEPT Sg3 TARGET (V Cond Prs Sg3 &err-no-conneg);
+COPY:err-no-conneg (ConNeg &SUGGEST) EXCEPT Sg3 TARGET (V Cond Prs &err-no-conneg);
 #$ Sun ij puávtáččij vyelgiđ.
 ## Sun ij puávtáččii vyelgiđ.
 	
@@ -2127,44 +2126,49 @@ COPY:err-no-conneg (ConNeg &SUGGEST) EXCEPT Sg3 TARGET (V Cond Prs Sg3 &err-no-c
 ## Šiljoost láá poccuuh. 
 #$ Šiljoost láá poccuid.
 #$ Šiljoost láá čapis poccuid.
+## Must láá kyeleh onne.
+#$ Must láá kuolijd onne.
+#$ Must lii kuolijd onne.
 
-ADD:err-extsubj-nom (&err-extsubj-nom) TARGET N IF (*-1 LEDE + Sg3 OR LEDE + Pl3 BARRIER NOT-ADV-PCLE LINK -1 Loc)(0 (N Pl Ill))(NEGATE *1 TV + Ger OR TV + PrfPrc OR TV + Inf BARRIER S-BOUNDARY OR VFIN) ;
-COPY:err-extsubj-nom (Nom &SUGGEST) EXCEPT (Ill) TARGET (N Pl Ill &err-extsubj-nom) ;
+ADD:err-extsubj-ill-nom (&err-extsubj-ill-nom) TARGET N IF (*-1 LEDE + Sg3 OR LEDE + Pl3 BARRIER NOT-ADV-PCLE LINK -1 Loc)(0 (N Pl Ill))(NEGATE *1 TV + Ger OR TV + PrfPrc OR TV + Inf BARRIER S-BOUNDARY OR VFIN) ;
+COPY:err-extsubj-ill-nom (Nom &SUGGEST) EXCEPT Ill TARGET (N Pl &err-extsubj-ill-nom) ;
 ## Šiljoost láá poccuuh.
 #$ Šiljoost láá ain {poccuid}.
-ADD:err-extsubj-nom (&err-extsubj-nom) TARGET N IF (*-1 LEDE + Sg3 OR LEDE + Pl3 BARRIER NOT-ADV-PCLE LINK -1 Loc)(0 (N Pl Acc))(NEGATE *1 TV + Ger OR TV + PrfPrc OR TV + Inf BARRIER S-BOUNDARY OR VFIN) ;
-COPY:err-extsubj-nom (Nom &SUGGEST) EXCEPT (Acc) TARGET (N Pl Acc &err-extsubj-nom) ;
+ADD:err-extsubj-acc-nom (&err-extsubj-acc-nom) TARGET N IF (*-1 LEDE + Sg3 OR LEDE + Pl3 BARRIER NOT-ADV-PCLE LINK -1 Loc)(0 (N Pl Acc))(NEGATE *1 TV + Ger OR TV + PrfPrc OR TV + Inf BARRIER S-BOUNDARY OR VFIN) ;
+COPY:err-extsubj-acc-nom (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &err-extsubj-acc-nom) ;
 
 
 ADD:err-extv-pl3 (&err-extv-pl3) TARGET V IF (-1 Loc)(0 LEDE + Sg3)(1 Num)(NOT 1 OHTA);
+COPY:err-extv-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (LEDE &err-extv-pl3);
 
-
-ADD:err-extsubj-nom (&err-extsubj-nom) TARGET N IF (-1 LEDE + Sg3 OR LEDE + Pl3)(0 N + Pl + Ill);
+ADD:err-extsubj-ill-nom (&err-extsubj-ill-nom) TARGET N IF (-1 LEDE + Sg3 OR LEDE + Pl3)(0 N + Pl + Ill);
+COPY:err-extsubj-ill-nom (Nom &SUGGEST) EXCEPT Ill TARGET (N Pl &err-extsubj-ill-nom);
 
 ADD:err-halfcongruence (&err-halfcongruence) TARGET Dem IF (0 Sg + Loc)(1 N + Sg + Loc)(NOT 0 Loc + Attr); # Loc Attr > Gen?
-
+COPY:err-halfcongruence (Gen &SUGGEST) EXCEPT (Loc Attr) TARGET (Dem &err-halfcongruence);
+	
 ADD:err-nom-obj (&err-nom-obj) TARGET N IF (-1 VFIN + Sg1)(0 N + Pl + Nom);
 ADD:err-nom-obj (&err-nom-obj) TARGET N IF (-2 VFIN + Sg1)(-1 PrfPrc)(0 N + Pl + Nom);
 ADD:err-nom-obj (&err-nom-obj) TARGET N IF (-2 VFIN + Sg1)(-1 Pl + Nom)(0 N + Pl + Nom);
-
 ADD:err-nom-obj (&err-nom-obj) TARGET N IF (-2 VFIN + Sg1)(-1 Pl + Nom OR Attr)(0 N + Pl + Nom);
-
 ADD:err-nom-obj (&err-nom-obj) TARGET N IF (-3 VFIN + Sg1)(-1 Pl + Nom OR Attr)(-2 PrfPrc)(0 N + Pl + Nom);
 ADD:err-nom-obj (&err-nom-obj) TARGET N IF (-3 VFIN + Sg1)(-1 Pl + Nom OR Attr)(-2 Pl + Nom)(0 N + Pl + Nom);
-COPY:err-nom-obj (Acc &SUGGEST) EXCEPT (Nom) TARGET (N Pl Nom &err-nom-obj);
+COPY:err-nom-obj (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &err-nom-obj);
 ## Lam valjim taah säänih.
 #$ Lam valjim táid saanijd.
 # olen valinnut nämä sanat
 
 #!! Acc shall be Nom
 ADD:err-acc-obj-top (&err-acc-obj-top) TARGET N IF (0 Pl + Acc LINK *-1 BOS BARRIER Nom)(1 V + Sg3)(2 Adv)(NOT *3 TV);
-COPY:err-acc-obj-top (Nom &SUGGEST) EXCEPT (Acc) TARGET (N Pl &err-acc-obj-top);
+COPY:err-acc-obj-top (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &err-acc-obj-top);
 ## Anarâškielâlijd noomâid kiävttoo uccáá.
 #$ Anarâškielâliih noomah kiävttojeh uccáá.
 
 # Inarinsaamenkielisiä nimiä käytetään vähän
 
 ADD:err-acc-obj-top (&err-acc-obj-top) TARGET N IF (0 Pl + Acc LINK *-1 BOS BARRIER Nom)(1 V + Sg3)(2 ConNeg);
+COPY:err-acc-obj-top (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &err-acc-obj-top);
+
 #$ {tiäđuid} ij kavnuu.
 ## tiäđuh iä kavnuu.
 # tietoja ei löydy
@@ -2214,10 +2218,9 @@ COPY:err-num-par (Par &SUGGEST) EXCEPT (Sg Acc) TARGET (N &err-num-par) ;
 
 #!!Accusative subjects in passive 
 
-
 # b) Suomâkielâ partitiiv passiivráhtusijn; sämikielâst passiiv ohtâvuođâst lii nominatiiv já verbâ maaŋgâlovvoost.
 MAP:err-pass-accsubj (&err-pass-accsubj) TARGET N IF (0C Acc + Pl)(1 Der/Pass OR LEXICALISED-PASS-V + Pl3);
-COPY:err-pass-accsubj (Nom &SUGGEST) EXCEPT (Acc) TARGET (N Pl &err-pass-accsubj);
+COPY:err-pass-accsubj (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &err-pass-accsubj);
 #fi	Saamenkielisiä nimityksiä käytetään vähän. - 
 #$	Sämikielâlijd nomâttâsâid kiävttojeh uccáá. 
 ## 	Sämikielâliih nomâttâsah kiävttojeh uccáá. 
@@ -2225,9 +2228,7 @@ COPY:err-pass-accsubj (Nom &SUGGEST) EXCEPT (Acc) TARGET (N Pl &err-pass-accsubj
 
 #!! Attributive forms
 
-
 ADD:syn-pred-not-attr (&syn-pred-not-attr) TARGET (A Attr) IF (*-1 COPULAS BARRIER V OR S-BOUNDARY LINK *-1 Nom) (NEGATE 1 N)(NEGATE 1 CC OR COMMA LINK 1 A LINK 1 N)(NEGATE 1 (A Attr) OR ? LINK *1 N BARRIER NOT-NPMOD)(NEGATE 1 (A Sg Nom) OR (Pron Pers))(NEGATE 0 ("puoh") LINK 1 Pron LINK *1 N)(NOT 0 (A Sg Nom))(NEGATE 1 COMMA OR ("-") LINK 1 ("mut") LINK *1 (A Attr) BARRIER NOT-NPMODADV)(NEGATE 0 Superl LINK 1 CC LINK 1 ("eenâb" Superl) OR ("iänááš") LINK 1 A LINK 1 N)(NEGATE 1 (Num Attr) LINK 1 N)(NEGATE 0 ("eenâb") LINK 1 PrfPrc);
-
 
 #ADD:syn-pred-not-attr (&syn-pred-not-attr) TARGET (A Attr) IF (*-1 COPULAS BARRIER V OR GRAMCHK-S-BOUNDARY LINK *-1 Nom) (NEGATE 1 N)(NEGATE 1 CC OR COMMA LINK 1 A LINK 1 N)(NEGATE 1 (A Attr) OR ? LINK *1 N BARRIER NPNH)(NEGATE 1 (A Sg Nom) OR (Pron Pers))(NEGATE 0 ("visot") OR ("buot") LINK 1 Pron LINK *1 N)(NEGATE 0 PRED-ATTR-ADJ)(NEGATE 1 COMMA OR CC LINK 1 (A Attr) OR PRED-ATTR-ADJ)(NOT 0 (A Sg Nom))(NEGATE 1 COMMA OR ("-") LINK 1 ("muhto") LINK *1 (A Attr) BARRIER NPNHA)(NEGATE 0 Superl LINK 1 CC LINK 1 ("eanet" Superl) OR ("eanemus") LINK 1 A LINK 1 N)(NEGATE 1 (Num Attr) LINK 1 N)(NEGATE 0 ("eanet") LINK 1 PrfPrc);
 
