@@ -2233,13 +2233,13 @@ ADD:syn-pred-not-attr (&syn-pred-not-attr) TARGET (A Attr) IF (*-1 COPULAS BARRI
 
 
 #!! mii + nominative should be mii + acc
-ADD:err-mii-acc (&err-mii-acc) TARGET N IF (-2 BOS)(-1 ("mii"))(0 (N Sg Nom))(*1 LEDE);
+ADD:err-mii-acc (&err-mii-acc) TARGET N IF (-2 BOS)(-1 ("mii"))(0 (N Sg Nom))(1 (N Nom) OR (Pron Nom))(*2 LEDE);
 COPY:err-mii-acc (Pl Acc &SUGGEST) EXCEPT (Sg Nom) TARGET ( N &err-mii-acc);
 
 #$  Mii historjá taat lii?
 ## Mii historjáid taat lii?
 
-ADD:err-mii-acc (&err-mii-acc) TARGET N IF (-2 BOS)(-1 ("kii"))(0 (N Sg Nom))(1 Nom)(*2 LEDE);
+ADD:err-mii-acc (&err-mii-acc) TARGET N IF (-2 BOS)(-1 ("kii"))(0 (N Sg Nom))(1 (N Nom) OR (Pron Nom))(*2 LEDE);
 COPY:err-mii-acc (Pl Acc &SUGGEST) EXCEPT (Sg Nom) TARGET ( N &err-mii-acc);
 
 
