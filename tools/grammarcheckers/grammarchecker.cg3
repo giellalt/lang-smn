@@ -286,6 +286,7 @@ LIST Sem/Feat-phys = Sem/Feat-phys ;	    #!! Sem/Feat-phys
 LIST Sem/Fem = Sem/Fem ;				    #!! Sem/Fem
 LIST Sem/Group = Sem/Group ;			    #!! Sem/Group
 LIST Sem/Hum = Sem/Hum ;             #!! Der/Hum
+LIST Sem/ID = Sem/ID ;             #!! Der/ID
 LIST Sem/Lang = Sem/Lang ;				    #!! Sem/Lang
 LIST Sem/Mal = Sem/Mal ;				    #!! Sem/Mal
 LIST Sem/Measr = Sem/Measr ;			    #!! Sem/Measr
@@ -1343,10 +1344,16 @@ LIST KLASS = "äšši" "bálkáceahkki" "čuágástuh" "s" "sijđo" "§" "§§" 
 
 LIST OHTA = "ohtâ" "1"; #!! OKTA
 
+LIST MANGA = "maŋgâ" ;
+LIST MUADDI = "muáddi" ;
+LIST KALLE = "kalle" ;
+
 SET NUM = Num - OHTA ;
 
-LIST TWO-TO-SIX = "kyehti" "kulmâ" "nelji" "vittâ" "kuttâ" "2" "3" "4" "5" "6" "err-extv-pl3" "3)" "4)" "5)" "6)" ; # ) er feil
-SET SEVEN-AND-MORE-WORD = Num - TWO-TO-SIX - OHTA ;
+LIST TWO-TO-SIX = "kyehti" "kulmâ" "nelji" "vittâ" "kuttâ" "2" "3" "4" "5" "6" ; 
+# "err-extv-pl3" "3)" "4)" "5)" "6)" ; # ) er feil
+
+SET SEVEN-AND-MORE-WORD = Num - TWO-TO-SIX - OHTA - MANGA - MUADDI - KALLE - Sem/ID ;
 LIST SEVEN-AND-MORE-ARABIC = "7" "8" "9" ("[1-9][0-9]"r)  ("[1-9][0-9][0-9]"r);
 SET SEVEN-AND-MORE = SEVEN-AND-MORE-WORD OR SEVEN-AND-MORE-ARABIC ;
 
@@ -2051,7 +2058,7 @@ COPY:err-ext-agr (Pl3 &SUGGEST) EXCEPT Sg3 TARGET ("leđe" V Ind Prs &err-ext-ag
 #$ Must lii uđđâ autoh.
 ## Must láá uđđâ autoh.
 
-ADD:err-pl-obj (&err-pl-obj) TARGET (N Pl Nom) IF (*-1 TRANS-V  BARRIER NOT-NPMOD OR CLB OR PUNCT LINK NOT 0 Pl3 ) (NEGATE -1 PrfPrc LINK *-1 N BARRIER VFIN);
+ADD:err-pl-obj (&err-pl-obj) TARGET (N Pl Nom) IF (*-1 TRANS-V  BARRIER NOT-NPMOD OR CLB OR PUNCT LINK NOT 0 Pl3)(NOT 0 ABBR OR Num)(NEGATE -1 PrfPrc LINK *-1 N BARRIER VFIN);
 
 # Trans: Others know mushrooms by.their.color.
 #$ Nubeh tobdeh kuobbâreh ivneest.
@@ -2204,10 +2211,12 @@ ADD:err-num-gensg (&err-num-gensg) TARGET N IF (-1 TWO-TO-SIX)(0 N + Par);
 COPY:err-num-gensg (Sg Gen &SUGGEST) EXCEPT Par TARGET (N &err-num-gensg);
 #$ Must láá kyehti {kyellid}.
 ## Must láá kyehti kyele.
+#$ 12 ive.
+#3 12 ived.
 
 LIST SGGENACC = (Sg Gen) (Sg Acc) ;
 
-ADD:err-num-par (&err-num-par) TARGET N IF (-1 Num + Nom LINK 0 SEVEN-AND-MORE)(0 N + Sg + Gen)(NOT 0 ABBR)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Sem/Date OR Rom OR Sem/Time-clock)(NOT 1 Po OR TIME-N OR Sem/Date OR ("pelnub") OR ("muáddi")) ;
+ADD:err-num-par (&err-num-par) TARGET N IF (-1 Num + Nom LINK 0 SEVEN-AND-MORE)(0 N + Sg + Gen)(NOT 0 ABBR)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Sem/Date OR Rom OR Sem/Time-clock)(NOT 1 Po) ;
 COPY:err-num-par (Par &SUGGEST) EXCEPT (Sg Gen) TARGET (N &err-num-par) ;
 
 ADD:err-num-par (&err-num-par) TARGET N IF (-1 Num + Nom LINK 0 SEVEN-AND-MORE)(0 N + Sg + Acc)(NOT 0 ABBR)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Sem/Date OR Rom OR Sem/Time-clock  OR ("pelnub") OR ("muáddi")) ;
