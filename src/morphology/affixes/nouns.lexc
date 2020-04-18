@@ -65,6 +65,11 @@ LEXICON nounstems !!= @CODE@ contains words that should be classified, for now d
 !! This is the basic even-syllable lexicon.
 !! (Note: 2VADDU differs from 2ALGA in having CLEN for Sg+Com and Pl+Ill , rlen svlow, ess:-)
 !! \\ 
+LEXICON 2AIRU  !!= * ''@CODE@'' (subtype of the 2ALGA basic lexicon)
++N+Der1+Der/Dimin: 2AIRU_DIM ; ! own dim with Gen -uu
+2ALGA_SG_WITHOUT_DIMINUTIIVE ; ! same case paradigm as algâ
+ 2PUUVSAH_PL2  ;
+
 LEXICON 2ALGA  !!= * ''@CODE@'' (basic lexicon)
  2ALGA_SG ;
  2PUUVSAH_PL2  ;
@@ -74,6 +79,10 @@ X_ALGA_SG ;
 X_ALGA_PL ; !
 !! \\ 
 LEXICON 2ALGA_SG !!= * ''@CODE@'' (Px paradigms)
++N+Der1+Der/Dimin: 2ALGA_DIM ; !kaandâš nieidâš kuuđhâš
+2ALGA_SG_WITHOUT_DIMINUTIIVE ; ! since 2AIRU is different
+
+LEXICON 2ALGA_SG_WITHOUT_DIMINUTIIVE
 +N: X_ALGA_SG  ; 
 +N+Cmp/SgNom: Rhash ; !áimupoccee
 +N+Cmp/SgGen:^WG%> Rhash ; ! kusâkuobâr
@@ -89,7 +98,6 @@ LEXICON 2ALGA_SG !!= * ''@CODE@'' (Px paradigms)
 +N+Ess:%>n CPXsuff ; ! algân
 +N:%> Nom_DER ;
 +N:^WG%> Gen_DER ; ! algâlâš
-+N+Der1+Der/Dimin: S_KAANDAS_DIM ; !kaandâš nieidâš kuuđhâš
 !! \\ 
 LEXICON X_ALGA_SG !!= * ''@CODE@'' case paradigms sg
 +Sg+Nom: K;           ! sollâ
@@ -119,6 +127,65 @@ X_WG_RLEN_PL_Loc ;  !!= @CODE@
 +Pl+Nom:^WG^RLEN%>h K ;                  ! puuvsah
 
 
+LEXICON 2AIRU_DIM
++N: 2AIRU_SG_DIM ;
++N: 2AIRU_PL_DIM ;
+
+LEXICON 2AIRU_SG_DIM  !!= * ''@CODE@'' a^RVlgâ
++Sg+Nom:^WG^RLEN%>š K ; ! aalgâš  ^FVD^WG^RLEN%>š K ;
++Cmp/SgNom:^WG%>š  Rhash ; 
+
++Cmp/SgGen:%>^SV^SLEN  Rhash ; ! gen : aalgâ gen dim. algii â>i    â FVD %> ii
++Cmp/PlGen:ij  Rhash ;
++Sg+Gen:%>^SV^SLEN K ;
++Sg+Acc:%>^SV^SLEN K ;
++Sg+Ill:ž^WG%>ân K ; ! algâ
++Sg+Loc:%>^SV^SLEN%>st K ;
++Sg+Com:%>in K ; 
++Sg+Abe:%>^SV^SLENttáá K ;
++Ess:^WGž%>in K ;
++Par:^WGž%>id K ;
+
+LEXICON 2AIRU_PL_DIM  !!= * ''@CODE@'' 
++Pl+Nom:ii%>h K ;
++Pl+Gen:ij K ;
++Pl+Acc:i%>id K ;
++Pl+Ill:i%>id K ;
++Pl+Loc:i%>in K ;
++Pl+Com:ii GUIN ;
++Pl+Abe:ij%>ttáá K ;
+
+
+LEXICON 2ALGA_DIM !!= * ''@CODE@''
++N: 2ALGA_SG_DIM ;
++N: 2ALGA_PL_DIM ;
+
+LEXICON 2ALGA_SG_DIM  !!= * ''@CODE@'' a^RVlgâ
++Sg+Nom:^WG^RLEN%>š K ; ! aalgâš  ^FVD^WG^RLEN%>š K ;
++Cmp/SgNom:^WG%>š  Rhash ; 
++Cmp/SgGen:%>^SV^SLEN  Rhash ; ! gen : aalgâ gen dim. algii â>i    â FVD %> ii
++Cmp/PlGen:ij  Rhash ;
++Sg+Gen:ii K ;
++Sg+Acc:ii K ;
++Sg+Ill:ž^WG%>ân K ; ! algâ
++Sg+Loc:ii%>st K ;
++Sg+Com:i%>in K ; 
++Sg+Abe:ii%>ttáá K ;
++Ess:^WGž%>in K ;
++Par:^WGž%>id K ;
+
+LEXICON 2ALGA_PL_DIM  !!= * ''@CODE@'' 
++Pl+Nom:ii%>h K ;
++Pl+Gen:ij K ;
++Pl+Acc:i%>id K ;
++Pl+Ill:i%>id K ;
++Pl+Loc:i%>in K ;
++Pl+Com:ii GUIN ;
++Pl+Abe:ij%>ttáá K ;
+
+
+
+
 !! !2PUUVSAH lexicon family, stem is pu^RVk4s^RCâ
 !! This for plural only nouns. Note: Sg forms in compounds
 LEXICON 2PUUVSAH_PL   !!= * ''@CODE@'' (basic lexicon)
@@ -135,7 +202,7 @@ LEXICON 2PUUVSAH_PL2  !!= * ''@CODE@'' (pointed to by 2KUMPPI)
 +N+Pl+Loc:^WG%>in CPXsuff ;                 ! viljâinis
 +N+Pl+Com:^WG%>id CPXsuffCOM ;  !
 +N:^WG Gen_DER ;
-+N+Der1+Der/Dimin:^CLEN S_KAANDAS_PL_DIM ; !kaandâš nieidâš kuuđhâš puvssiih
++N+Der1+Der/Dimin:^CLEN 2ALGA_PL_DIM ; !kaandâš nieidâš kuuđhâš puvssiih
 !! \\ 
 LEXICON X_WG_RLEN_PL_Loc !!= * ''@CODE@'' plural forms with ^WG and ^^WG^RLEN
 +Pl+Loc:^WG^RLEN%>in K ;                 ! puuvsâin
@@ -3493,33 +3560,6 @@ LEXICON X_TUULAS_PL !!= * ''@CODE@''
 +Pl+Abe:^WG^RVSH%>ittáá K ;       ! tulijttáá
 
 
-
-LEXICON S_KAANDAS_DIM !!= * ''@CODE@''
-+N: S_KAANDAS_SG_DIM ;
-+N: S_KAANDAS_PL_DIM ;
-
-LEXICON S_KAANDAS_SG_DIM  !!= * ''@CODE@'' a^RVlgâ
-+Sg+Nom:^WG^RLEN%>š K ; ! aalgâš  ^FVD^WG^RLEN%>š K ;
-+Cmp/SgNom:^WG%>š  Rhash ; 
-+Cmp/SgGen:ii  Rhash ; ! gen : aalgâ gen dim. algii â>i    â FVD %> ii
-+Cmp/PlGen:ij  Rhash ;
-+Sg+Gen:ii K ;
-+Sg+Acc:ii K ;
-+Sg+Ill:ž^WG%>ân K ; ! algâ
-+Sg+Loc:ii%>st K ;
-+Sg+Com:i%>in K ; 
-+Sg+Abe:ii%>ttáá K ;
-+Ess:^WGž%>in K ;
-+Par:^WGž%>id K ;
-
-LEXICON S_KAANDAS_PL_DIM  !!= * ''@CODE@'' 
-+Pl+Nom:ii%>h K ;
-+Pl+Gen:ij K ;
-+Pl+Acc:i%>id K ;
-+Pl+Ill:i%>id K ;
-+Pl+Loc:i%>in K ;
-+Pl+Com:ii GUIN ;
-+Pl+Abe:ij%>ttáá K ;
 
 LEXICON S_KAANDAS !!= * ''@CODE@'' stem: ka^RVnd
 S_KAANDAS_SG ;
