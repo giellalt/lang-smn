@@ -25,7 +25,7 @@ JSP_PAGES=root-morphology.jspwiki        \
 		smn-propernouns-stems.jspwiki       \
 		verbs-affixes.jspwiki \
 		verbs-stems.jspwiki              \
-		smn-phon-phonology.jspwiki      \
+		phonology-morphology.jspwiki      \
 		disambiguator-syntax.jspwiki 
 # clitics-morphology.jspwiki       \
 # compounding-morphology.jspwiki   \
