@@ -101,7 +101,7 @@ GT_DISTRO_SRCS=stems/$(GTLANG)-propernouns.lexc \
 GIELLA_LOCAL_TARGETS=
 
 generated_files/smi-propernouns.lexc: \
-			$(GIELLA_SHARED)/smi/src/morphology/stems/smi-propernouns.lexc
+			$(GIELLA_SHARED)/smi/src/fst/stems/smi-propernouns.lexc
 	$(AM_V_at)$(MKDIR_P) generated_files
 	$(AM_V_GEN)cp -f $< $@
 
@@ -116,7 +116,7 @@ generated_files/smi-$(GTLANG)-propernouns.lexc: \
 	$(top_srcdir)/src/scripts/smi-$(GTLANG)-conversion.pl $< >> $@
 
 generated_files/smi-abbreviations.lexc: \
-			$(GIELLA_SHARED)/smi/src/morphology/stems/smi-abbreviations.lexc
+			$(GIELLA_SHARED)/smi/src/fst/stems/smi-abbreviations.lexc
 	$(AM_V_at)$(MKDIR_P) generated_files
 	$(AM_V_GEN)cp -f $< $@
 generated_files/smi-$(GTLANG)-abbreviations.lexc: \
@@ -132,7 +132,7 @@ generated_files/smi-$(GTLANG)-abbreviations.lexc: \
 
 
 generated_files/%.lexc: \
-			$(GIELLA_SHARED)/smi/src/morphology/stems/%.lexc
+			$(GIELLA_SHARED)/smi/src/fst/stems/%.lexc
 	$(AM_V_at)$(MKDIR_P) generated_files
 	$(AM_V_GEN)cp -f $< $@
 
