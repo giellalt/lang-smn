@@ -1,11 +1,9 @@
 #!/bin/bash
 
 # script to generate paradigms for generating word forms
-# command:
-# sh cmp_minip.sh PATTERN
-# example, when you are in smn:
-# sh devtools/cmp_minip.sh '^nieidâ:' 
-# sh devtools/noun_minip.sh LAAVU | less
+# command, when you are in smn:
+# sh devtools/verb_minip.sh 2SYLL_OD | less
+# sh devtools/verb_minip.sh kihlođ 
 
 
 LOOKUP=$(echo $LOOKUP)
@@ -14,9 +12,9 @@ GTHOME=$(echo $GTHOME)
 
 PATTERN=$1
 L_FILE="in.txt"
-cut -d '!' -f1 src/fst/stems/nouns.lexc | egrep $PATTERN | tr '+' ':' | cut -d ':' -f1>$L_FILE
+cut -d '!' -f1 src/fst/stems/verbs.lexc | egrep $PATTERN | cut -d ':' -f1>$L_FILE
 
-P_FILE="test/data/cmp_paradigm.txt"
+P_FILE="test/data/testverbparadigm.txt"
 
 for lemma in $(cat $L_FILE);
 do

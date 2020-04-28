@@ -34,7 +34,7 @@ morf_codes="+V+Inf \
             +V+Ind+Prt+Pl3"
 
 # Lexicon source file for lexicons and lemmas:
-source_file=src/morphology/stems/verbs.lexc
+source_file=src/fst/stems/verbs.lexc
 
 # Lexicons that should NOT be used to extract lemmas (egrep expression):
 exception_lexicons="(4|3)"
