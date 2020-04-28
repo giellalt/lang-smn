@@ -30,7 +30,7 @@ morf_codes="+N+Sg+Nom+PxSg2 \
             +N+Pl+Com+PxSg2"
 
 # Lexicon source file for lexicons and lemmas:
-source_file=src/morphology/stems/nouns.lexc
+source_file=src/fst/stems/nouns.lexc
 
 # Continuation lexicons that should NOT be used to extract lemmas (egrep expression):
 exception_lexicons="(nounstems|Rnoun)"
