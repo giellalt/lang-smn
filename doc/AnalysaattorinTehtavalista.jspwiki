@@ -23,7 +23,7 @@ vartaloille.
 * tee make check
 * ota leksikko, joka toimii, esim. EEMEED
 * ota kaikki EEMEED-tapaukset stems-tiedostosta
-**  {{grep EEMEED src/morphology/stems/nouns.lexc|see}}
+**  {{grep EEMEED src/fst/stems/nouns.lexc|see}}
 * tarkista, että niiden vartalo on samanlainen kuin esimerkkisanojen vartalot
 * jos ei, katso toimiiko
 * katso stems/nouns.lexc
@@ -40,17 +40,17 @@ Seuraavat kaksi esimerkkikomento antaa kaikki lokatiivit, jotka eivät toimi,
 ja POTTAAK-leksikon kaikki monikon abessiivit.
 
 {{{
-cat src/morphology/stems/nouns.lexc | grep ";"| cut -d ';' -f1 | grep -v PUUVSAH|cut -d":" -f1|sed 's/$/+N+Sg+Loc/'|dsmnDict|grep '?'
-cat src/morphology/stems/nouns.lexc |  grep ";"| cut -d ';' -f1 | grep "POTTAAK"|cut -d":" -f1|sed 's/$/+N+Pl+Abe/'|dsmnDict
+cat src/fst/stems/nouns.lexc | grep ";"| cut -d ';' -f1 | grep -v PUUVSAH|cut -d":" -f1|sed 's/$/+N+Sg+Loc/'|dsmnDict|grep '?'
+cat src/fst/stems/nouns.lexc |  grep ";"| cut -d ';' -f1 | grep "POTTAAK"|cut -d":" -f1|sed 's/$/+N+Pl+Abe/'|dsmnDict
 }}}
 
 !!Korjata puuttuvat nominatiivit
 
 Komento {{make check}} antaa listan substantiiveista, joille emme 
 pysty generoimaan nominatiivia
-({{test/src/morphology/missing_nouns_lemmas.xfst.txt }}) ja
+({{test/src/fst/missing_nouns_lemmas.xfst.txt }}) ja
 muodot, jotka saadaan yrittäessä.
-({{test/src/morphology/generated-nouns.xfst.txt}})
+({{test/src/fst/generated-nouns.xfst.txt}})
 Tavoite: Tänään puutuu 98 nominatiivia, luku pitää olla 0.
 
 !!Suljetut luokat, joilla morfologia

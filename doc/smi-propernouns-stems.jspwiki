@@ -31,9 +31,9 @@ Documenting (parts of) the lexicon structure for sme:
 
 For sma, smj and smn, there is a script, {{src/scripts/smi-sma-conversion.pl}}
 changing the lexicon names from sme-style to sma/smj/smn-style. The resulting
-file is {{src/morphology/stems/smi-sma-propernouns.lexc}}, with the content
+file is {{src/fst/stems/smi-sma-propernouns.lexc}}, with the content
 of this file following the text ''Dump from SMI''. This is governed in 
-''src/morphology/Makefile.am''
+''src/fst/Makefile.am''
 
 
 !!Modifications for sma
@@ -65,9 +65,9 @@ The beginning of this file (''smi-propernouns.lexc'') looks as follows
 
 Setting: A non-Inari Sámi name is missing in the FST.
 
-# Check whether the name (''Hiroshima'') is found in the src/morphology/generated-files/ catalogue.
+# Check whether the name (''Hiroshima'') is found in the src/fst/generated-files/ catalogue.
 ## if it is not, and is a non-smn name, it probably should be in the general file. \\
-   Add it to gtcore/giella-shared/smi/src/morphology/stems/smi-propernouns.lexc
+   Add it to gtcore/giella-shared/smi/src/fst/stems/smi-propernouns.lexc
 ## if it is in the generated cataloge, check wheter it has the contlex you want it to have \\
    if it does, it should work, so debug. \\
    if it does not, add a line for the name in question to the file \\
