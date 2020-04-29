@@ -19,7 +19,7 @@ With {{make}} you check that there are no technical issues. Read the report.
 * {{ERROR: Sublexicon is mentioned but not defined. (muvgâ PUIGA)}}
 ** there is an unbreakable whitespace between muvgâ and PUIGA
 * {{ERROR: Compilation aborted because of 1 parse error. line 11634: syntax error at "suoraan" }}
-** look at line 11634 in src/morphology/lexicon.lexc, but you must correct the error in the sourcefile!
+** look at line 11634 in src/fst/lexicon.lexc, but you must correct the error in the sourcefile!
 * {{Segmentation fault: 11, Error 139}}
 ** can be e.g. that there is in lexc the symbol > instead of %>  . Look at what you have done yourself, or at the last svn-log-mail, if it is not your own work.
 
@@ -94,12 +94,12 @@ sh devtools/adj_minip.sh KOOIDAS | less
 Look at all forms:
 
 {{{
-grep '¢' src/morphology/stems/nouns.lexc | cut -d '¢' -f2 | cut -d '!' -f1 |preprocess |grep '[a-z]' |usmnNorm |less 
+grep '¢' src/fst/stems/nouns.lexc | cut -d '¢' -f2 | cut -d '!' -f1 |preprocess |grep '[a-z]' |usmnNorm |less 
 }}}
 
 Get the forms which are not recognized by the analyser:
 
 {{{
-grep '¢' src/morphology/stems/nouns.lexc | cut -d '¢' -f2 | cut -d '!' -f1 |preprocess |grep '[a-z]' |usmnNorm |grep '\?' | less 
+grep '¢' src/fst/stems/nouns.lexc | cut -d '¢' -f2 | cut -d '!' -f1 |preprocess |grep '[a-z]' |usmnNorm |grep '\?' | less 
 }}}
 

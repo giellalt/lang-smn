@@ -32,7 +32,7 @@ leksikosta toiseen, eli on tärkeä pitää yaml-tiedostot ajan tasalla. Se tehd
 
 {{{
 cat N-lex_kissa_dict-gt-norm.gen.yaml|grep Ess|cut -d"+" -f1|tr -d ' '|sed 's/^/^/'|sed 's/$/:/' > lista
-grep -f lista ../../../src/morphology/stems/nouns.lexc|grep -v KISSA
+grep -f lista ../../../src/fst/stems/nouns.lexc|grep -v KISSA
 }}}
 
 Ensimmäinen komento poimii kaikki perusmuodot, laittaa symboolit ^ ja : eteen ja taakse, ja
@@ -79,8 +79,8 @@ viimeinen osa on ''äigi'', menevät myös läpi, mikäli niiden vartalon muoto 
 
 {{{
 grep Ess test/src/dict-gt-yamls/N-lex_aigi_dict-gt-norm.gen.yaml |cut -d"+" -f1|tr -d ' '|sed 's/$/:/'|sed 's/^/^/' > basewords
-grep -f basewords src/morphology/stems/nouns.lexc |grep -v AIGI
-grep -f basewords src/morphology/stems/nouns.lexc |cut -d " " -f1|sort|see
+grep -f basewords src/fst/stems/nouns.lexc |grep -v AIGI
+grep -f basewords src/fst/stems/nouns.lexc |cut -d " " -f1|sort|see
 }}}
   
 Ensimmäinen komento kerää kaikki sanat. Toinen tarkistaa, että kaikki kuuluvat samaan leksikkoon, ja kolmas antaa jokaisen sanan vartalon.
@@ -89,8 +89,8 @@ Ensimmäinen komento kerää kaikki sanat. Toinen tarkistaa, että kaikki kuuluv
 
 {{{
 grep Ess test/src/dict-gt-yamls/N-lex_aigi_dict-gt-norm.gen.yaml |cut -d"+" -f1|tr -d ' '|sed 's/$/:/' > allwords
-grep -f allwords src/morphology/stems/nouns.lexc |grep -v AIGI
-grep -f allwords src/morphology/stems/nouns.lexc |cut -d " " -f1|rev|sort|rev|see
+grep -f allwords src/fst/stems/nouns.lexc |grep -v AIGI
+grep -f allwords src/fst/stems/nouns.lexc |cut -d " " -f1|rev|sort|rev|see
 }}}
 
 Ensimmäinen komento kerää kaikki yaml-tiedoston sanat, mutta tällä kertaa ilman ^-merkkiä. 
