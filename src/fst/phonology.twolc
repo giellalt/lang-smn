@@ -154,7 +154,7 @@ Sets
 !! !!!Definition section
 
 !! Introducing a WG right context 
-!! {{{WeakGrade =  (RealVow:) [:RealVow |i6:]  (Cns:) ([%^SV:|%^ÁI:|%^ÁE:]) (%^FCD:) %^WG:0   ; }}}  
+!! {{{WeakGrade =  (RealVow:) [:RealVow - č: |i6:] (Vow:) (Cns:+) ([%^SV:|%^ÁI:|%^ÁE:]) (%^EA:)([%^FCD:|%^FVD:]) %^WG:0      ;   }}}  
 
 Definitions
 
@@ -179,7 +179,7 @@ Rules
 
 "x:y consonant gradation"
 !! * __@RULENAME@__ \\  WG gives x:x and x:y, when there is no consonant lengthening  
-Cx:Cy <=> Vow: _ (%^RC: )  WeakGrade  ([%^VHIGH:|%^VBACK:]) ([%^RVSH:|%^RLEN:]) (%^SLEN:) (%^SVLOW:)  [.#.| %>] ; !RULE RC only \CLEN makes conflict
+Cx:Cy <=> Vow: _ (%^RC: )  WeakGrade (%^CLEN:) ([%^VHIGH:|%^VBACK:]) ([%^RVSH:|%^RLEN:]) (%^SLEN:) (%^SVLOW:)  [.#.| %>] ; !RULE RC only \CLEN makes conflict
 	where Cx in ( h p c č )    
           Cy in ( v v s j )    
 		  matched ;
@@ -445,7 +445,7 @@ Cx:0 <=> Vow: _ Cy: (%^CLEN:) (%^RLEN:) (%^SLEN:|%^SVSH:) [.#.| %>] \Sgm: ; !! 1
          
 "Lengthening of root consonant x:yy"
 !! * __@RULENAME@__ \\  consonant lengthening after WG - h:vv, p:vv, c:ss
-%^RC:Cy <=> Vow: Cx:Cy _ :Vow+ Cns:* [Triggers: - %^FCD:]* %^WG: %^CLEN: (%^VHIGH:|%^VBACK:) (%^RVSH:) ([%^SVLOW: |%^SLEN:]) %> [ i:|s|u|o|ž |e h | e m | á] ; !RULE RC
+%^RC:Cy <=> Vow: Cx:Cy _ [:Vow+|Vow: :Vow] Cns:* [Triggers: - %^FCD:]* %^WG: %^CLEN: (%^VHIGH:|%^VBACK:) (%^RVSH:) ([%^SVLOW: |%^SLEN:]) %> [i:|s|u|o|ž|e h|e m|á] ; !RULE RC
 	where Cx in ( h p c )
 	      Cy in ( v v s ) 
 		  matched ;
@@ -1272,9 +1272,13 @@ Vx:0 <=> Cns: _  ([%^ÁE:|%^ÁI:]) â Cns:* Triggers:*  [%>|.#.]   ;  !RULE SV
 
 "Stem â deleting"
 !! * __@RULENAME@__ \\ kandâ:kandii
-â:0 <=> \%> _ i [j|i] (%^WG:) (%^RVSH:) [%>|.#.]  ; !RULE SV 
-        \%> _ i  Triggers:* %>  i: ; !RULE SV
+â:0 <=> :\%> _ i [j|i] (%^WG:) (%^RVSH:) [%>|.#.]  ; !RULE SV 
+        :\%> _ i  Triggers:* %>  i: ; !RULE SV
 !         \%> _ Triggers:* i  Triggers:* %>  i: ; !RULE SV
+
+!!€ ju^RVh^RCâi^WG^CLEN>ist
+!!€ ju0vv0i00>ist
+
 
 !! !Suffix vowel rules
 
