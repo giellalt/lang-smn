@@ -1,0 +1,119 @@
+#!/usr/bin/perl
+use warnings;
+use utf8;
+
+#########################################################################
+#### Author: Eckhard Bick 2003,2008; contact: eckhard.bick@mail.dk ######
+#########################################################################
+#
+# use: clean_cg < grammar_old > grammar_new
+#
+# removes unused set definitions.
+#
+#########################################################################
+
+sub addlist2($$) { # @elements grows oddly if addlist is used recursively?? (on dancg.attach)
+  my $list2 =$_[0];
+  $list2 =~ s/ OR / /g;
+#  print "---needing set: $list --\n";
+  my $elements2; # in spite of my-definitions: all variables need to be different from first sub addlist, otherwise the variables in the first sub addlist get nilled!!
+  @elements2 = split / /, $list2;
+  foreach (@elements2) {
+#    print "---------pushing $_\n";
+    push @sets, $_;
+    if ($setdef{$_}) {
+#      my $x =addlist3($setdef{$_});
+    }
+  }
+}
+
+sub addlist($$) {
+  my $list = $_[0];
+  $list =~ s/ OR / /g;
+#  print "--needing set: $list --\n";
+  my $elements;
+  @elements = split / +/, $list;
+  foreach (@elements) {
+#    print "-------pushing $_\n";
+    push @sets, $_;
+    if ($setdef{$_}) {
+#      my $x =addlist2($setdef{$_});
+    }
+  }
+}
+
+
+$| =1;
+
+my @sets;
+
+while (<>) {
+  if (/^(LIST|SET|REMOVE|SELECT|MAP|ADD|REPLACE|SUBSTITUTE|REM)[A-Z]* [^;]+$/) {
+    $line =$_;
+    $open =1;
+  }
+  elsif (! $open) {
+    push @lines, $_;
+  }
+  else {
+    $line .= $_;
+    if (/;/) {
+      push @lines, $line;
+      $line ="";
+      $open =0;
+    }
+  }
+}
+
+foreach (@lines) {
+  if (/^SET +(.*?) *= *(.*?) *;/) {$setdef{$1} =$2;}
+  if (/^[^\#]*?(REMOVE|SELECT|MAP|ADD[A-Z]*|REPLACE|SUBSTITUTE|SET[A-Z]+|REM[A-Z]+) +(.*?) *\;/) {
+    $contexts =$2;
+    $contexts =~ s/NOT *//g;
+    $contexts =~ s/\([pcsW] /(* /g;
+    $contexts =~ s/\( *[^\*0-9\-].*?\) *//g; # tag strings, e.g. (N S)
+
+    @labels = split / +/, $contexts;
+    foreach (@labels) {
+      if (/^[^\(]/ || /[^\)]$/) { # if missing bracket on either side
+	s/[\(\)]//g;
+	s/^\$\$//;
+	s/^&&//;
+#	print "·······$_\n";
+#      if (/V-HUM/) {print "-----$_\n";}
+	push @sets, $_;
+      }
+    }
+  }
+}
+foreach (@sets) {
+  $s{$_} =1;
+}
+
+foreach (@lines) {
+  if (/^SET +(.*?) *= *(.*?) *;/ && $s{$1}) { # only sets that are actually used
+#    my $x = addlist($2);
+  }
+}
+
+foreach (@sets) {$s{$_} =1;}
+
+foreach (@lines) {
+  if (/^(LIST|SET) +(.*?) *=/) {
+    if ($s{$2}) {
+      print; $empty =0;
+    }
+    else {
+#      print "--removed: $_";
+    }
+#    if (/V-HUM/) {print "-----listing $_\n";}
+  }
+  elsif (/^ *$/ && ! $empty) {
+    print;
+    $empty =1;
+  }
+  elsif (! /^ *$/) {
+    print;
+    $empty =0;
+  }
+}

@@ -1,0 +1,46 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-dict-gt-norm.hfst
+    Morph: ../../../src/analyser-dict-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-dict-gt-norm.xfst
+    Morph: ../../../src/analyser-dict-gt-norm.xfst
+    App: lookup
+
+Tests:
+
+  Noun - čiermih: # ok 1B d-kk,  rm-rm
+    čiermih+N+Sg+Nom: čiermih
+    čiermih+N+Sg+Gen: čiermih
+    čiermih+N+Sg+Acc: čiermih
+    čiermih+N+Sg+Ill: čiermihân
+    čiermih+N+Sg+Loc: čiermihist
+    čiermih+N+Sg+Com: čiermiháin
+    čiermih+N+Sg+Abe: čiermihttáá
+    čiermih+N+Ess: čiermihin
+    čiermih+N+Par: čiermihid
+    čiermih+N+Pl+Nom: čiermiheh
+    čiermih+N+Pl+Gen: čiermihij
+    čiermih+N+Pl+Acc: čiermihijd
+    čiermih+N+Pl+Ill: čiermiháid
+    čiermih+N+Pl+Loc: čiermihijn
+    čiermih+N+Pl+Com: [čiermihijguin, čiermihijgijn]
+    čiermih+N+Pl+Abe: čiermihijttáá
+
+  #Noun - saalâs: # generated from FST, to be proofread; MLO checked, but does not belong here, I think
+  #  saalâs+N+Sg+Nom: saalâs
+  #  saalâs+N+Sg+Gen: saallâs
+  #  saalâs+N+Sg+Ill: salâsân
+  #  saalâs+N+Sg+Loc: salâsist
+  #  saalâs+N+Sg+Com: salâsáin
+  #  saalâs+N+Sg+Abe: saallâsttáá
+  #  saalâs+N+Ess: salâsin
+  #  saalâs+N+Par: salâsid
+  #  saalâs+N+Pl+Nom: salâseh
+  #  saalâs+N+Pl+Gen: salâsij
+  #  saalâs+N+Pl+Acc: salâsijd
+  #  saalâs+N+Pl+Ill: salâsáid
+  #  saalâs+N+Pl+Loc: salâsijn
+  #  saalâs+N+Pl+Com: [salâsijguin, salâsijgijn]
+  #  saalâs+N+Pl+Abe: salâsijttáá
+

@@ -1,0 +1,29 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-dict-gt-norm.hfst
+    Morph: ../../../src/analyser-dict-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-dict-gt-norm.xfst
+    Morph: ../../../src/analyser-dict-gt-norm.xfst
+    App: lookup
+
+Tests:
+
+  Noun - alme: # ok ALGE
+    alme+N+Sg+Nom:  alme
+    alme+N+Sg+Gen:  aˊlme
+    alme+N+Sg+Acc:  aˊlme
+    alme+N+Sg+Ill:  aalman
+    alme+N+Sg+Loc:  almeest
+    alme+N+Sg+Com:  olmijn
+    alme+N+Sg+Abe:  aˊlmettáá
+    alme+N+Ess:  almen
+    alme+N+Par:  almed
+    alme+N+Pl+Nom:  aˊlmeh
+    alme+N+Pl+Gen:  [oolmij, oˊlmij]
+    alme+N+Pl+Acc:  oolmijd 
+    alme+N+Pl+Ill:  [oolmijd, olmijd] # oolmijd hardcoded
+    alme+N+Pl+Loc:  oolmijn
+    alme+N+Pl+Com:  oˊlmijguin
+    alme+N+Pl+Abe:  oˊlmijttáá
+

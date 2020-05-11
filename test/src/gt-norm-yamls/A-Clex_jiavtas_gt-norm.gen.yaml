@@ -1,0 +1,28 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-dict-gt-norm.hfst
+    Morph: ../../../src/analyser-dict-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-dict-gt-norm.xfst
+    Morph: ../../../src/analyser-dict-gt-norm.xfst
+    App: lookup
+
+Tests:
+
+  Adjective - jiävtáš: # MLO, ok
+    jiävtáš+A+Sg+Nom: jiävtáš             
+    jiävtáš+A+Sg+Gen: jiävttáá
+    jiävtáš+A+Sg+Acc: jiävttáá
+    jiävtáš+A+Sg+Ill: jiävtážân
+    jiävtáš+A+Sg+Loc: jiävttáást
+    jiävtáš+A+Sg+Com: jiävttáin
+    jiävtáš+A+Sg+Abe: jiävttááttáá
+    jiävtáš+A+Ess: jiävtážin                
+    jiävtáš+A+Par: jiävtážid                
+    jiävtáš+A+Pl+Nom: jiävttááh
+    jiävtáš+A+Pl+Gen: jiävttái
+    jiävtáš+A+Pl+Acc: jiävttáid
+    jiävtáš+A+Pl+Ill: jiävttáid
+    jiävtáš+A+Pl+Loc: jiävttáin
+    jiävtáš+A+Pl+Com: [jiävttáiguin, jiävttáigijn]
+    jiävtáš+A+Pl+Abe: jiävttáittáá

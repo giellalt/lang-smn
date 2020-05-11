@@ -1,0 +1,80 @@
+
+!! !!! Inari Saami compounding
+!      =======================
+
+
+
+LEXICON Rhash !!≈ @CODE@ - adding lower # and pointing at R
+ :#  R ;
+
+
+
+LEXICON R !!≈ @CODE@ -  Flags to control compounding
+ @P.CmpFrst.FALSE@@P.CmpPref.FALSE@@D.CmpLast.TRUE@@D.CmpNone.TRUE@@U.CmpNone.FALSE@@P.CmpOnly.TRUE@ RAlmostReal ; 
+
+
+
+LEXICON  Rnoun !!≈ @CODE@ - 
+               :#  Rreal ; ! pessijâšmoonijd
+ +Attr+Err/Orth:    K ; ! pessijâš
+
+
+
+LEXICON RAlmostReal    !!≈ @CODE@ -  lexicalising the 3-part compounds, with the tag ShCmp
+         RrealAfterCmpNFlags ; ! Normal compounds right on to RrealAfterCmpNFlags, without going via Rreal flags (!)
+ +Cmp#:# MiddleNouns ;         ! These nouns should not return to themselves, to avoid -jotjotjot-
+
+
+
+LEXICON Rreal !!≈ @CODE@ - This initial recursive/compounding lexicon adds flags to 
+              !! control compounding, before going to the real compounding lexicon.
+	      !! This is the former R lexicon, renamed to avoid the MiddleNouns loop
+ @P.CmpFrst.FALSE@@P.CmpPref.FALSE@@D.CmpLast.TRUE@@D.CmpNone.TRUE@@U.CmpNone.FALSE@@P.CmpOnly.TRUE@ RrealAfterCmpNFlags ; 
+
+
+
+LEXICON RrealAfterCmpNFlags !!≈ @CODE@ - coming from Rreal
+          +Cmp#:#  nounflag       ; ! to flags and root lexica
+ +Cmp/Hyph+Cmp#:#- nounflag       ; ! to flags and root lexica via hyphen
+         +Cmp/Hyph+Cmp#:#- ProperNoun-smn ; ! to smn propernouns
+         +Cmp/Hyph+Cmp#:#- ProperNoun     ; ! to other propernouns 
+    +Cmp/SplitR+Cmp:-  #              ; ! split forms
+!         +Cmp#:#  #              ; ! For turning off compounding during testing
+
+
+LEXICON nounflag !!≈ @CODE@ -  coming from previous, going to the Root lexica
+                 NounRoot      ; ! N+N always ok
+		 LastNouns     ; ! XXX Now this has one noun only, a better way is +CmpNP/Last
+ @P.NeedNoun.ON@ VerbRoot      ; ! means that the only allowed when @C.NeedNoun@, because of ENDLEX @D.NeedNoun.ON@
+ @P.NeedNoun.ON@ AdjectiveRoot ; ! id.
+
+
+LEXICON RHyph !!≈ @CODE@ - This initial recursive/compounding lexicon adds flags to
+              !! control compounding, before going to the real compounding lexicon
+ @U.Cap.Obl@@P.CmpFrst.FALSE@@P.CmpPref.FALSE@@D.CmpLast.TRUE@@D.CmpNone.TRUE@@U.CmpNone.FALSE@@P.CmpOnly.TRUE@ RHyph_after_cmp_flags ;
+
+LEXICON RHyph_after_cmp_flags !!≈ @CODE@ - from RHyph
+      +Cmp/Hyph+Cmp#:-# NounRoot ;
+      +Cmp/Hyph+Cmp#:-# Numeral  ; ! NRK-2
+ +Cmp/SplitR+Cmp:-  #        ;
+
+LEXICON RProp !!≈ @CODE@ - This initial recursive/compounding lexicon adds flags to
+              !! control compounding, before going to the real compounding lexicon
+ @U.Cap.Obl@@P.CmpFrst.FALSE@@P.CmpPref.FALSE@@D.CmpLast.TRUE@@D.CmpNone.TRUE@@U.CmpNone.FALSE@@P.CmpOnly.TRUE@ RProp_after_cmp_flags ;
+
+LEXICON RProp_after_cmp_flags                  !!≈ - @CODE@ from RProp
+!      +Cmp/Hyph+Cmp#nommâ:»»»-nommâs  DER-SAS        ; ! Jovnâ-nommâsâš
+     +Cmp/Hyph+Cmp#merkkâ:»»»-merkkâs DER-SAS        ; ! Saab-merkkâsâš
+           +Cmp/Hyph+Cmp#:-#          ProperNoun     ;
+           +Cmp/Hyph+Cmp#:-#          ProperNoun-smn ;
+           +Cmp/Hyph+Cmp#:-#          NounRoot       ;
+ @D.CmpHyph.TRUE@+Use/-Spell+Cmp#:@D.CmpHyph.TRUE@#  NounRoot  ; ! We don't want Proper-Noun compounds without hyphen in the speller.
+      +Cmp/SplitR+Cmp:-           #              ;
+
+LEXICON RNum !!≈ @CODE@ - This initial recursive/compounding lexicon adds flags to
+             !! control compounding, before going to the real compounding lexicon
+ @P.CmpFrst.FALSE@@P.CmpPref.FALSE@@D.CmpLast.TRUE@@D.CmpNone.TRUE@@U.CmpNone.FALSE@@P.CmpOnly.TRUE@ RNum_after_cmp_flags ;
+
+LEXICON RNum_after_cmp_flags !!≈ @CODE@ - going to Noun, should it be to NounRoot?
+ +Cmp/Hyph+Cmp#:-# Noun ; ! For Num Cmp Noun, vi vil ikke ha Num Cmp Num
+

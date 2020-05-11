@@ -1,0 +1,101 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-dict-gt-norm.hfst
+    Morph: ../../../src/analyser-dict-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-dict-gt-norm.xfst
+    Morph: ../../../src/analyser-dict-gt-norm.xfst
+    App: lookup
+
+Tests:
+
+  Verb - kuárruđ: # ML checked
+
+    kuárruđ+V+Inf: kuárruđ
+    kuárruđ+V+Der/Pass+V+Inf: korruđ
+
+    kuárruđ+V+Der/Pass+V+Ind+Prs+Sg1: korruum
+    kuárruđ+V+Der/Pass+V+Ind+Prs+Sg2: korruuh
+    kuárruđ+V+Der/Pass+V+Ind+Prs+Sg3: kuárroo
+    kuárruđ+V+Der/Pass+V+Ind+Prs+Du1: kuárrojeen
+    kuárruđ+V+Der/Pass+V+Ind+Prs+Du2: korruuvettee
+    kuárruđ+V+Der/Pass+V+Ind+Prs+Du3: korruv
+    kuárruđ+V+Der/Pass+V+Ind+Prs+Pl1: korrup
+    kuárruđ+V+Der/Pass+V+Ind+Prs+Pl2: korruuvetteđ
+    kuárruđ+V+Der/Pass+V+Ind+Prs+Pl3: kuárrojeh
+
+    kuárruđ+V+Der/Pass+V+Ind+Prt+Sg1: kuárrojim
+    kuárruđ+V+Der/Pass+V+Ind+Prt+Sg2: kuárrojih
+    kuárruđ+V+Der/Pass+V+Ind+Prt+Sg3: korrui
+    kuárruđ+V+Der/Pass+V+Ind+Prt+Du1: korruim
+    kuárruđ+V+Der/Pass+V+Ind+Prt+Du2: korruid
+    kuárruđ+V+Der/Pass+V+Ind+Prt+Du3: korruin
+    kuárruđ+V+Der/Pass+V+Ind+Prt+Pl1: korruim
+    kuárruđ+V+Der/Pass+V+Ind+Prt+Pl2: korruid
+    kuárruđ+V+Der/Pass+V+Ind+Prt+Pl3: kuárrojii
+
+    kuárruđ+V+Der/Pass+V+Cond+Prs+Sg1: korruuččim
+    kuárruđ+V+Der/Pass+V+Cond+Prs+Sg2: korruuččih
+    kuárruđ+V+Der/Pass+V+Cond+Prs+Sg3: korruuččij
+    kuárruđ+V+Der/Pass+V+Cond+Prs+Du1: korruuččáim
+    kuárruđ+V+Der/Pass+V+Cond+Prs+Du2: korruuččáid
+    kuárruđ+V+Der/Pass+V+Cond+Prs+Du3: korruuččáin
+    kuárruđ+V+Der/Pass+V+Cond+Prs+Pl1: korruuččijm
+    kuárruđ+V+Der/Pass+V+Cond+Prs+Pl2: korruuččijd
+    kuárruđ+V+Der/Pass+V+Cond+Prs+Pl3: korruuččii
+
+#    kuárruđ+V+Der/Pass+V+Pot+Prs+Sg1: korruužeem
+#    kuárruđ+V+Der/Pass+V+Pot+Prs+Sg2: korruužeeh
+##    kuárruđ+V+Der/Pass+V+Pot+Prs+Sg3: kuáruš
+#    kuárruđ+V+Der/Pass+V+Pot+Prs+Du1: korruužeen
+#    kuárruđ+V+Der/Pass+V+Pot+Prs+Du2: kuárušvettee
+#    kuárruđ+V+Der/Pass+V+Pot+Prs+Du3: korruužává
+#    kuárruđ+V+Der/Pass+V+Pot+Prs+Pl1: korruužep
+#    kuárruđ+V+Der/Pass+V+Pot+Prs+Pl2: kuárušvetteđ
+#    kuárruđ+V+Der/Pass+V+Pot+Prs+Pl3: korruužeh
+
+    kuárruđ+V+Der/Pass+V+Ind+Prs+ConNeg: korruu
+    kuárruđ+V+Der/Pass+V+Ind+Prt+ConNeg: korrum
+    kuárruđ+V+Der/Pass+V+Cond+Prs+ConNeg: korruuččii
+#    kuárruđ+V+Der/Pass+V+Pot+Prs+ConNeg: korruužii
+    kuárruđ+V+Der/Pass+V+PrsPrc: [kuárrojeijee, kuárrojijjee]
+    kuárruđ+V+Der/Pass+V+PrfPrc: [korrum, koorrum] #Lene added koorrum
+    kuárruđ+V+Der/Pass+V+Actio+Nom: korrum
+    kuárruđ+V+Der/Pass+V+Actio+Ess: korruumin
+    kuárruđ+V+Der/Pass+V+Actio+Loc: korruumist
+    kuárruđ+V+Der/Pass+V+Actio+Ill: korruumân
+    kuárruđ+V+Der/Pass+V+Ger: korruudijn
+    kuárruđ+V+Der/Pass+V+VAbess: korruuhánnáá
+
+    kuárruđ+V+Der/d+V+Ind+Prs+Sg1: kuárudâm
+    kuárruđ+V+Der/d+V+Ind+Prs+Sg2: kuárudah
+    kuárruđ+V+Der/d+V+Ind+Prs+Sg3: kuárud
+    kuárruđ+V+Der/d+V+Ind+Prs+Du1: kuárudeen
+    kuárruđ+V+Der/d+V+Ind+Prs+Du2: kuárudvettee
+    kuárruđ+V+Der/d+V+Ind+Prs+Du3: kuárudává
+    kuárruđ+V+Der/d+V+Ind+Prs+Pl3: kuárudeh
+
+    kuárruđ+V+Der/d+V+Ind+Prt+Sg1: kuárudim
+    kuárruđ+V+Der/d+V+Ind+Prt+Sg3: kuárudij
+    kuárruđ+V+Der/d+V+Ind+Prt+Pl3: kuárudii
+    kuárruđ+V+Der/d+V+Cond+Prs+Sg1: kuárudiččim
+    kuárruđ+V+Der/d+V+Cond+Prs+Sg3: kuárudičij
+    kuárruđ+V+Der/d+V+Pot+Prs+Sg1: kuárudižžeem
+    kuárruđ+V+Der/d+V+Pot+Prs+Sg3: kuárudiš
+    kuárruđ+V+Der/d+V+Ind+Prs+ConNeg: kuárud
+    kuárruđ+V+Der/d+V+Ind+Prt+ConNeg: kuárudâm
+    kuárruđ+V+Der/d+V+Pot+Prs+ConNeg: kuárudižžii
+    kuárruđ+V+Der/d+V+PrfPrc: kuárudâm
+    kuárruđ+V+Der/d+V+VAbess: kuárudhánnáá
+    kuárruđ+V+Der/d+V+Actio+Nom: kuárudem
+    kuárruđ+V+Der/d+V+Actio+Ill: kuárudmân
+    kuárruđ+V+Der/d+V+Actio+Ess: kuárudmin
+    kuárruđ+V+Der/d+V+Actio+Loc: kuárudmist
+    kuárruđ+V+Der/d+V+Ger: kuáruddijn
+    kuárruđ+V+Der/d+V+Ger+PxSg1: kuáruddijnân
+    kuárruđ+V+Der/d+V+Ger+PxSg2: kuáruddijnâd
+    kuárruđ+V+Der/d+V+Ger+PxSg3: kuáruddijnis
+    kuárruđ+V+Der/d+V+Ger: kuáruddijn
+    kuárruđ+V+Der/st+V+Ind+Prs+Sg1: kuárustâm
+    kuárruđ+V+Der/tt+V+Ind+Prs+Sg1: kuáruttâm
+    kuárruđ+V+Der/InchL+V+Ind+Prs+Sg1: kuáruškuáđám

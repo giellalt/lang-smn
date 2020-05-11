@@ -1,0 +1,52 @@
+! Divvun & Giellatekno - open source grammars for Sámi and other languages
+! Copyright © 2000-2010 The University of Tromsø & the Norwegian Sámi Parliament
+! http://giellatekno.uit.no & http://divvun.no
+!
+! This program is free software; you can redistribute and/or modify
+! this file under the terms of the GNU General Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version. The GNU General Public License
+! is found at http://www.gnu.org/licenses/gpl.html. It is
+! also available in the file $GTHOME/LICENSE.txt.
+!
+! Other licensing options are available upon request, please contact
+! giellatekno@hum.uit.no or feedback@divvun.no
+
+
+! Clitics
+
+! %># for clitics to differ them from # in compounds.
+
+LEXICON G  !!= * __@CODE@__ for ijgo, jiemge, but not *kielâgo
++Foc/ge:%>#g6e  ENDLEX ;
++Foc/go:%>#g6o   ENDLEX ;
+KG ; 
+
+LEXICON K !!= *  __@CODE@__ for kielâgin, but not *ijgo, *jiemge
++Foc/gin:%>#g6in  ENDLEX ;
+KG ;
+
+LEXICON KG !!= * __@CODE@__ all clitics except go, ge ... and except gin
+:%> ENDLEX ; ! clitic-less forms ! %>  because .#. doesn't function as it should in twolc-rules
++Qst+Use/NG:%>#uv KG2 ;
++Qst:%>#%-uv KG2 ;
++Foc/uv:%>#%-uv KG2 ;
++Foc/uv+Foc/gis:%>#%-uvks KG2 ;
++Foc/ba:%>#b6a   ENDLEX ;
++Foc/ba+Err/Orth:%>#b6â   ENDLEX ;
++Foc/baa:%>#b6á  ENDLEX ;
++Foc/baan:%>#b6án  ENDLEX ;
++Foc/ban:%>#b6an  ENDLEX ;
++Foc/gas:%>#g6âs  ENDLEX ;
++Foc/ges:%>#g6es  ENDLEX ;
++Foc/gis:%>#g6is  ENDLEX ;
++Foc/han:%>#hân  ENDLEX ;
++Foc/nii:%>#nii  ENDLEX ;
++Foc/sun:%>#sun  ENDLEX ;
+
+LEXICON KG2
+ENDLEX ;
++Foc/sun:%>#sun  ENDLEX ; ! for lii-uvsun (and others?)
+
+
+

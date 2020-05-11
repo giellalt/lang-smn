@@ -1,0 +1,1367 @@
+! Divvun & Giellatekno - open source grammars for Sámi and other languages
+! Copyright © 2000-2010 The University of Tromsø & the Norwegian Sámi Parliament
+! http://giellatekno.uit.no & http://divvun.no
+!
+! This program is free software; you can redistribute and/or modify
+! this file under the terms of the GNU General Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version. The GNU General Public License
+! is found at http://www.gnu.org/licenses/gpl.html. It is
+! also available in the file $GTHOME/LICENSE.txt.
+!
+! Other licensing options are available upon request, please contact
+! giellatekno@uit.no or feedback@divvun.no
+
+
+
+! ===========================
+!! !!!Adjective affixes
+! ===========================
+
+
+!! Order of triggers:
+!! {{{
+!! SV|ÁE|ÁI  SC  FCD WG|CSH CLEN  VHIGH|VBACK  RVSH|RLEN EA SLEN|SVSH  SVLOW
+!! }}}
+
+!LEXICON adjstems    __@CODE@__ temporary, for stems waiting for a lexicon
+!+A+Attr: K ;	    
+!+A+Sg+Nom: K ;	    
+!+A+Cmp/Attr:  ATTR ;
+
+
+LEXICON ATTR !!= __@CODE@__ for stems with only attribute form
++A+Attr:  K ;
++A+Cmp/Attr:  ATTR_R ;
++A: A_LASJ ; ! rähislâš
++A+Attr: A_VUOTA ; !vuoigâvuotâ
+
+
+LEXICON SIAHA !!= __@CODE@__ for siähá
++A+Attr:  K ;
++A+Sg+Nom:  K ;
++A+Pl+Nom:  K ;
+
+
+!! !!Even-syllable stems
+! -------------------
+
+
+!LEXICON UCES   __@CODE@__ , not in use
+!+A+Attr:â K ;     !attr. uccâ
+!+A+Sg+Nom:e^WG%>s K ;
+!+A:es%> COMP ;
+!+A:e^WG%> MUS ;
+!+A:e%> A_VUOTA ;
+!+A+Attr:â%> A_VUOTA ; !existing?
+!+A+Cmp/Attr:â ATTR_R ; !uccârávdu
+
+
+!LEXICON POCCA !!= __@CODE@__ directing to X_ALGA, attr počis
+!+A+Attr:i^WG%>s K ; ! the final a > 0, počis
+!+A+Attr+Err/Orth:â^WG%>s K ; ! corp: počâs
+!+A:â X_ALGA ;
+!+A:â^WGb COMPe ;
+!+A:^WGâ%> MUS ;
+!+A+Cmp/Attr:â ATTR_R ; !poččâmielâst
+!+A+Cmp/Attr:â^WG%>s ATTR_R ; !
+!+A+Cmp/Attr:i^WG%>s ATTR_R ; !
+!+A:â%> A_VUOTA ; !poččâvuođâ
+
+
+LEXICON SKELMA !!= __@CODE@__ directing to X_ALGA, attr skelmâ
++A+Attr: K ;
++A: X_ALGA ;
++A:b^WG COMPe ;
++A+Cmp/Attr: ATTR_R ;
++A:%> A_VUOTA ;
++A:^WG%> MUS ;
++A+Der4+Der/AAdv+Adv:^WG^RLEN%>ht K ;
+
+
+
+!LEXICON VANTTA !!= __@CODE@__ directing to X_ALGA, attr vantâs
+!+A+Attr:^CSH%>s K ; !vantâs !poččâ počis počâs
+!+A: X_ALGA ;
+!+A+Cmp/Attr:^CSH%>s ATTR_R ;
+!+A:%> A_VUOTA ;
+!+A:b^WG COMPe ;
+!+A:^WG%> MUS ;
+
+
+!LEXICON A_2VADDU  !!= __@CODE@__ check this
+!+A+Attr: K ;
+!+A: X_VADDU ;
+!+A+Cmp/Attr: ATTR_R ;
+!+A:%> A_VUOTA ;
+!+A:^WG%> COMPe ;
+!+A:^WG^RLEN%> MUS ;
+
+!LEXICON A_2KIELA  !!= __@CODE@__ check this
+!+A+Attr: K ;
+!+A: X_KIELA ;
+!+A+Cmp/Attr: ATTR_R ;
+!+A:%> A_VUOTA ;
+!+A:^WG%> COMP ;
+!+A:^WG%> MUS ;
+!
+
+!LEXICON SKELMA_COMMON 
+!+A+Sg+Nom: K ;
+!+A+Sg+Gen:^WG^RLEN K ;
+!+A+Sg+Acc:^WG^RLEN K ;
+!+A+Sg+Ill:^CSH^RLEN%>n K ;
+!+A+Sg+Loc:^WG^RLEN%>st K ;
+!+A+Sg+Com:^WG^CLEN^SVLOW%>in K ;
+!+A+Sg+Abe:^WG%>ttáá K ;
+!+A+Ess:%>n K ;
+!+A+Par:%>d K ;
+!+A+Pl+Nom:^WG^RLEN%>h K ;
+!+A+Pl+Gen:^WG^RLEN%>i K ;
+!+A+Pl+Acc:^WG^RLEN%>id K ;
+!+A+Pl+Ill:^WG^SVLOW%>id K ;
+!+A+Pl+Loc:^WG^RLEN%>in K ;
+!+A+Pl+Com:^WG%>i GUIN ;
+!+A+Pl+Abe:^WG%>ittáá K ;
+
+
+
+!LEXICON HIAJU !!= __@CODE@__ directing to X_VUAGGU, attr. hiäjus
+!+A+Attr:^WG^RVSH%>s K ; ! hiäjus
+!+A: X_VUAGGU ;
+!+A:b^WG%> COMPe ;
+!+A:^WG^RVSH%> MUS ;
+!+A+Cmp/Attr:^WG%>s ATTR_R ; 
+!+A:%> A_VUOTA ;
+
+ 
+LEXICON CEPPI !!= __@CODE@__ directing to X_AIGI, attr. čepis
++A+Attr:^WG%>s K ;
++A: X_AIGI ;
++A:b^WG COMPe ;
++A:p^WG P-COMP-ERR-ORTH ;
++A:^WG%> MUS ;
++A+Cmp/Attr:^WG%>s ATTR_R ; !
++A+Cmp/SgNom: R ; !luággijuolgijd herkkičuávjásiih
++A:%> A_VUOTA ;
++A:^WG%>s A_LAGAN ; !ärgislágán
+!+A:l A_ADV ; !how? tärkkilávt blo
++A+Der4+Der/AAdv+Adv:^WG^RLEN%>ht K ;
+
+LEXICON UCCE
++A+Attr+Use/NG:e^WG%>s K ;
++A+Attr+Use/NG:e^WG%>s ATTR_R ;
++A+Attr:â K ;
++A:e X_ALGE ;
++A:e^SVb^WG COMPclen ;
+!+A+Err/Orth:eb^WG COMPe ;
++A:e^WG%> MUS ;
++A+Cmp/Attr:â ATTR_R ;
++A:e%> A_VUOTA ;
++A+Der4+Der/AAdv+Adv:^WG^CLEN%>eeht K ;
+
+LEXICON SUVRE
++A+Attr: K ;	! suvre
++A: X_ALGE ;
++A:^SVb^WG COMPclen ;
++A+Err/Orth:b^WG COMPe ;
++A:p^WG P-COMP-ERR-ORTH ;
++A:^SVp^WG P-COMP-ERR-ORTH ;
++A:^WG%> MUS ;
++A+Cmp/Attr:^WG%>s ATTR_R ;
++A:%> A_VUOTA ;
++A+Der4+Der/AAdv+Adv:^RLEN%>ht K ;
+
+
+LEXICON KUKKE !!= __@CODE@__ directing to X_ALGE, attr. kuhes
++A+Attr:^WG%>s K ;
++A: X_ALGE ;
++A:^SVb^WG COMPclen ;
++A+Err/Orth:b^WG COMPe ;
++A:p^WG P-COMP-ERR-ORTH ;
++A:^SVp^WG P-COMP-ERR-ORTH ;
++A:^WG%> MUS ;
++A+Cmp/Attr:^WG%>s ATTR_R ;
++A:%> A_VUOTA ;
++A+Der4+Der/AAdv+Adv:^WG^CLEN%>eht K ;
+
+
+!LEXICON HUMO !!= __@CODE@__ directing to X_NJUNE, attr. humos
+!+A+Attr:^WG%>s K ;
+!+A: X_NJUNE ;
+!+A:b COMPclen ;	! hummoob; humobeht
+!+A:p P-COMP-ERR-ORTH ;
+!+A:^WG%> MUS ;
+!+A+Cmp/Attr:^WG%>s ATTR_R ;
+!+A+Cmp/SgNom: R ;
+!+A:%> A_VUOTA ;
+
+
+LEXICON PASE !!= __@CODE@__ directing to X_NJUNE via HUMO_REST, attr. pase                  
++A+Attr: K ;
+HUMO_REST ;
+
+LEXICON HUMO !!= __@CODE@__ directing to X_NJUNE via HUMO_REST, attr. humos                  
++A+Attr:^WG%>s K ;
+HUMO_REST ;
+
+LEXICON HUMO_REST
++A: X_NJUNE ;
++A:^SVb^WG COMPe ; ! huumoob; humobeht                                           
++A:p P-COMP-ERR-ORTH ;
++A:^WG%> MUS ;
++A+Cmp/Attr:^WG%>s ATTR_R ;
++A+Cmp/SgNom: R ;
++A+Der4+Der/AAdv+Adv:^SV^WG^RLEN^SLEN%>ht K ; !huumooht, loojeeht
++A:%> A_VUOTA ;
+
+
+LEXICON UAMI !!= __@CODE@__ directing to X_SAAMI, attr. uá'mi
++A+Attr:  K ; !uámi
++A+Cmp/Attr: ATTR_R ;
+LAAMI_REST ;
+
+LEXICON LAAMI !!= __@CODE@__ directing to X_SAAMI, attr. lämis
++A+Attr:^WG^RVSH%>s  K ; !lämis
++A+Cmp/Attr:s ATTR_R ;
+LAAMI_REST ;
+
+LEXICON LAAMI_REST
++A: X_SAAMI	  ;
++A:b^WG COMPe ;	! läämib (WG); lämibeht
++A:^WG^RVSH%> MUS ;
++A:^CSH%> A_VUOTA ; ! lämivuotâ
++A+Der4+Der/AAdv+Adv:^WG%>ht K ; ! lämibeht komparatiiva
+
+
+LEXICON PYERI !!= __@CODE@__ directing to X_KYELI, attr. pyeri
++A+Attr:i3  K ; 
++A:i3 X_KYELI	  ;
++A:e^SV^WG eCOMP ; ! pyereeb; pyerebeht
+
+!+A:e^WG%> eCOMP ; ! pyereeb; pyerebeht
++A:e^WG MUS ;
++A:i3%> A_VUOTA ; !pyerivuotâ pyereebvuotân
++A+Cmp/Attr: ATTR_R ;
++A+Der4+Der/AAdv+Adv:e^SV^WG%>est K ;
+
+
+LEXICON HYENI !!= __@CODE@__ directing to X_KYELI, attr. hyenes
++A+Attr:e^WG^RVSH%>s  K ; 
++A:i3 X_KYELI	  ;
++A:e^SV^WG eCOMP ; ! hyeneeb; hyenebeht
++A:e^WG MUS ;
++A:i3%> A_VUOTA ;
++A+Cmp/Attr:e^WG%>s ATTR_R ; 
++A+Der4+Der/AAdv+Adv:e^SV^WG%>eht K ;
++A+Der4+Der/AAdv+Adv:e^SV^WG%>est K ;
+
+
+LEXICON NUORA !!= __@CODE@__ directing to X_KIELA, attr. nuora
++A+Attr:  K ; 
++A: X_KIELA	  ;
++A:b^WG COMPe ;
++A:p P-COMP-ERR-ORTH ;
++A:^WG%> MUS ;
++A:%> A_VUOTA ;
++A+Cmp/Attr: ATTR_R ; 
++A+Cmp/SgNom:^RVSH%> R ;
++A+Cmp/SgNom:  RHyph ;
++A+Cmp/SgGen:^WG%> R ;
++A+Cmp/PlGen:^WG%>i R ;
+
+
+!LEXICON KIEVRA !!= __@CODE@__ directing to X_KIELA, attr. kievrâs
+!+A+Attr:s  K ; 
+!+A: X_KIELA	  ;
+!+A:b^WG COMPe ;
+!+A:p P-COMP-ERR-ORTH ;
+!+A:^WG%> MUS ;
+!!+A+Err/Orth:s^WG%>u MOS ;
+!+A:%> A_VUOTA ;
+!+A+Cmp/Attr:s ATTR_R ; 
+
+
+
+!! !!Odd-syllable stems
+! ------------------
+
+LEXICON NJUORAS !!= __@CODE@__ directing to X_RUONAS, attr. njuorâs
++A+Attr:^WG^RVSH K ; !njuorâs
++A: X_RUONAS ;
++A:^CSH%>u COMPo ; 
++A:^CSH%>u MOS ;
++A:%> A_VUOTA ;
++A:^CSH A_ADV ; !ruávásávt kiärásávt
++A+Cmp/Attr:^WG^RVSH%> ATTR_R ;
++A+Der4+Der/AAdv+Adv:^CSH^RVSH A_ADV ;
+!+A:^CSH^RVSH A_ADV ; !timásávt 
+!+A:^WG%> A_LASJ ; !  
+
+
+LEXICON UAMIS !!= __@CODE@__ directing to X_RUONAS, as an own group because of FCD, attr. uámi, čuámi, often used in compounds
++A+Attr:^FCD^CSH K ; ! uámi, čuámi
++A: X_RUONAS ;
++A:^CSH%>u COMPo ; 
++A:^CSH%>u MOS ;
++A:^FCD^CSH%> A_VUOTA ;
++A+Cmp/Attr:^FCD^CSH%> ATTR_R ;
+
+
+
+LEXICON HAANIS !!= __@CODE@__ directing to X_PAAVIR, attr. hänis
++A+Attr:^WG^RVSH K ; ! hänis
++A: X_PAAVIR	  ;
++A+Err/Orth:%>u COMPo ;  ! puárrásub
++A:^CSH%>u COMPo ;  ! hánásuboh corpus: uáppásub
++A:^CSH%>u MOS ; ! hánásumoseh; corpus: uáppásumos uáppásumoseh uáppásumosáid
++A:^WG^RVSH%> A_VUOTA ; 
++A:^CSH^RVSH A_ADV ; !hánásávt 
++A+Cmp/Attr:^WG^RVSH%> ATTR_R ;
++A+Cmp/SgNom:^WG^RVSH%> R ; !
++A+Cmp/SgGen:^SLEN%> R ; !
++A+Cmp/PlGen:^CSH%>ij R ; !puárásijpargo
+
+
+LEXICON TIMES !!= __@CODE@__ directing to X_PAAVIR, attr. timmâ
++A+Attr:^FCDâ K ; 	! timmâ
++A: X_PAAVIR	  ;
++A:^CSH%>u COMPo ;  ! timásuboh 
++A:^CSH%>u MOS ; ! timásumoseh
++A+Attr:^FCDâ%> R ;
++A:^CSH^RVSH%> A_VUOTA ; 
++A:^CSH^RVSH A_ADV ; !timásávt 
+
+
+LEXICON KIARGUS_nocomp !!= __@CODE@__  like HAANIS, directing to X_PAAVIR, 
++A+Attr:^WG^RVSH K ; ! 
++A: X_PAAVIR	  ;
++A+Cmp/Attr:^WG^RVSH%> ATTR_R ;
++A:^WG^RVSH%> A_VUOTA ;
+
+
+LEXICON HAAITIS !!= __@CODE@__ directing to X_VEESKIR, attr. rähis, not in use
++A+Attr:^WG^RVSH  K ; !rähis
++A: X_VEESKIR	  ;
++A:%>u COMPo ; 
++A:%>u MOS ;
++A+Cmp/Attr:^WG^RVSH%> ATTR_R ;
++A:^WG^RVSH A_VUOTA ;
+
+LEXICON HEEITUG !!= __@CODE@__ directing to X_PAAVIR, attr. heitugis, heitugâs
++A+Attr:^WG^RVSH%>is  K ; !heitugis
++A+Attr+Err/Orth:^WG^RVSH%>âs  K ; !heitugâs
++A: X_PAAVIR	  ;
++A:%>u COMPo ; 
++A:%>u MOS ;
++A+Cmp/Attr:^WG^RVSH%>is ATTR_R ;
++A+Cmp/Attr+Err/Orth:^WG^RVSH%>âs ATTR_R ;
++A: A_ADV ;
+
++A:^WG A_VUOTA ;
+
+
+LEXICON VAANIS !!= __@CODE@__ directing to  X_PAAVIR, attr. väni
++A+Attr:väni K ; ! 
++A+Attr+Err/Orth:vanâ K ; ! 
++A:váánnás^ÁI X_PAAVIR	  ;
++A:váánnás^ÁI^CSH%>u COMPo ; 
++A:váánnás^ÁI^CSH%>u MOS ;
++A+Cmp/Attr:väni%> ATTR_R ;
++A:vánás A_ADV ;	! vánásávt
++A+Der3+Der/vuota:väni#vuot^RCâ FLAG_2KIELA ;
+!+A:^FCD^CSH^RVSH%> A_VUOTA ; ! vänivuotâ; is also lexicalized
+
+LEXICON NJAALGIS !!= __@CODE@__ directing to NJAALGIS_COMMON, Attr. njaalgâ and njälgis
++A+Attr:njaalgâ K ;
++A+Attr:njaalgâ ATTR_R ;
++A+Attr+Use/NG:njälgis K ; ! njälgis
+:njá^RVlgás^ÁI NJAALGIS_COMMON ;
++A+Der4+Der/AAdv+Adv:njálgá%>ht K ;
++A+Cmp/Attr:njälgis ATTR_R ;
+
+LEXICON RAAPIS !!= __@CODE@__ directing to NJAALGIS_COMMON, Attr. räpis 
++A+Attr:^WG^RVSH K ; ! räpis
+NJAALGIS_COMMON ;
++A+Cmp/Attr:^WG^RVSH%> ATTR_R ;
+
+LEXICON NJAALGIS_COMMON !!= __@CODE@__ directing to  X_KAARBIS
++A: X_KAARBIS ;
++A:%>u COMPo ; !njálgásub njá^RVlgás^ÁI
++A:%>u MOS ; ! njálgásumos; with Err/Orth njálgâsumos, even njálgsumos
++A:^WG^RVSH%> A_VUOTA ; !njälgisvuođâ
+
+LEXICON KOSKES !!= __@CODE@__ directing to  X_VEESKIR, attr. koške
++A+Attr:^FCD^WG K ;     !attr. koške
++A: X_VEESKIR ;
++A:%>u COMPo ; 
++A:%>u MOS ;
++A:^WG%> A_VUOTA ;
++A+Der4+Der/AAdv+Adv:%>ávt K ;	! koškásávt
++A+Cmp/Attr:^FCD^WG%> ATTR_R ;
+
+
+LEXICON NJOLGES !!= __@CODE@__ directing to  X_VEESKIR, attr. njolges
++A+Attr:^WG K ;     !attr. njolges
++A: X_VEESKIR ;
++A:^WG%>u COMPo ; 
++A:%>u MOS ;
++A:^WG%> A_VUOTA ;
++A+Cmp/Attr:^WG%> ATTR_R ;
++A:^WG%> A_LASJ ; !  
+
+
+
+LEXICON FIIJNES !!= __@CODE@__  no noun cont.lex with this pattern
++A+Attr:fiijnâ K ;     !attr. fiijnâ
++A+Attr+Use/NG:fijnâ K ;     !attr. fijnâ
++A+Cmp/Attr:fiijnâ ATTR_R ;
++A+Sg+Nom:fiijnes K ;	! fiijnes
++A+Sg+Gen:fijnás K ;     			! fijnás
++A+Sg+Acc:fijnás K ;    			 ! fijnás
++A+Sg+Ill:fijnesân K ; 	! fijnesân
++A+Sg+Loc:fijnesist K ; ! fijnesist
++A+Sg+Com:fijnásáin K ; ! fijnásáin 
++A+Sg+Abe:fijnásttáá K ; !  
++A+Ess:fijnesin K ;   ! fijnesin 
++A+Par:fijnesid K ;	!  
++A+Pl+Nom:fijnáseh K ;  !  
++A+Pl+Gen:fijnásij K ;  !  
++A+Pl+Acc:fijnásijd K ; !  
++A+Pl+Ill:fijnásáid K ; !  
++A+Pl+Loc:fijnásijn K ; !  
++A+Pl+Com:fijnásij GUIN ;  !  
++A+Pl+Abe:fijnásijttáá K ;  !  
++A:fijnásu COMPo ; !fijnásub fijnásubboid
++A:fijnásu MOS ; !fijnásumos
++A:fijnes%> A_VUOTA ; !fijnesvuođáid
++A:fijnás A_ADV ; !fijnásávt, fijnâsávt
+
+
+
+LEXICON KOOIDAS !!= __@CODE@__ directing to  X_VEESKIR, attr. koidâ
++A+Attr:^FCD^RVSH K ;     !attr. koidâ
++A: X_VEESKIR ;
++A:%>u COMPo ; 
++A:%>u MOS ;
++A:^WG%> A_VUOTA ;
++A: A_ADV ; !čuhâlávt
++A+Cmp/Attr:^FCD^RVSH%> ATTR_R ;    
++A:^FCD^RVSH%> A_LASJ ; !  
+
+
+LEXICON SUOTAS  !!= __@CODE@__ directing to  X_VEESKIR, attr. suotâs
++A+Attr:^WG^RVSH  K ; ! suotâs, vädis 
++A: X_VEESKIR ;
++A:u COMPo ; ! suottâsub
++A:%>u MOS ; !suottâsumos
++A:^WG%> A_VUOTA ;
++A: A_ADV ; !suottâsávt
++A+Cmp/Attr:^WG^RVSH%>  ATTR_R ; ! suotâs, vädis 
++A:^WG%> A_LASJ ; ! rähislâš oleslâš
++A+Attr+Err/Orth:^WG^RVSH%>  A_VUOTA ; ! corp: vijđesvuođâ 
+
+
+LEXICON LIAGUS  !!= __@CODE@__ like SUOTAS except for CSH
++A+Attr:^WG^RVSH  K ; ! suotâs, vädis
++A+Sg+Nom:^WG^RVSH K ; !peles
++A+Sg+Gen: K ;   !
++A+Sg+Acc: K ;      
++A+Sg+Ill:^CSH%>ân K ; 
++A+Sg+Loc:^CSH%>ist K ;
++A+Sg+Com:^CSH%>áin K ;
++A+Sg+Abe:%>ttáá K ;  
++A+Ess:^WG^RVSH%>in K ; 
++A+Par:^WG^RVSH%>id K ; 
++A+Pl+Nom:^CSH%>eh K ;  
++A+Pl+Gen:^CSH%>ij K ;  
++A+Pl+Acc:^CSH%>ijd K ; 
++A+Pl+Loc:^CSH%>ijn K ; 
++A+Pl+Com:^CSH%>ij GUIN ; 
++A+Pl+Abe:^CSH%>ijttáá K ; 
++A+Pl+Ill:^CSH%>áid K ; 
++A:%>u COMPo ; 
++A:%>u COMPo ; ! liäggusub
++A+Err/Orth:%>u COMPo ; 
++A:%>u MOS ; !liäggusumos
++A+Err/Orth:%>u MOS ; 
++A:^WG^RVSH%> A_VUOTA ;
++A: A_ADV ; !liäggusávt
++A+Cmp/Attr:^WG^RVSH%>  ATTR_R ; ! liägus 
++A:^RVSH%> A_LASJ ; !  
+
+
+
+LEXICON SENES !!= __@CODE@__ not fitting in X_PELES because of CSH attr. seŋes
++A+Attr:^WG^RVSH  K ; ! seŋes 
++A+Cmp/Attr:^WG^RVSH%> ATTR_R ;
++A+Sg+Nom:^WG^RVSH K ; !peles
++A+Sg+Gen: K ;   !
++A+Sg+Acc: K ;      
++A+Sg+Ill:%>ân K ; 
++A+Sg+Loc:%>ist K ;
++A+Sg+Com:%>áin K ;
++A+Sg+Abe:%>ttáá K ;  
++A+Ess:^WG^RVSH%>in K ; 
++A+Par:^WG^RVSH%>id K ; 
++A: X_eh_PL ;
++A:%>u COMPo ; 
++A:^WG%>u COMPo ; 
++A+Err/Orth:%>u COMPo ; 
++A:^WG%>u MOS ;
++A+Err/Orth:%>u MOS ;
++A:^WG^RVSH%> A_VUOTA ;
++A: A_ADV ; !ollásávt
++A:^WG%> A_LASJ ; !  
+
+
+
+
+LEXICON KEPPIS !!= __@CODE@__ directing to X_LITTER, attr. keppâ
++A+Attr:â K ;    ! keppâ
++A+Attr+Use/NG:is%>is K ;    ! keppisis
++A:is X_LITTER ;
++A:is%>u COMPo ; 
++A:is%>u MOS ;
++A+Cmp/Attr:â%>  ATTR_R ;
++A:is%> A_VUOTA ;
++A:is A_ADV ;
++A: A_LASJ ; !  
+
+LEXICON PASTEL !!= __@CODE@__ directing to X_LITTER, attr. pastelis; adj is PASTEL
++A+Attr:%>is  K ; !
++A: X_LITTER ;
++A:%>u COMPo ; 
++A:%>u MOS ;
++A:%> A_VUOTA ;
++A+Attr+Err/Orth:%>is%>  A_VUOTA ; ! corp: pehtilisvuođâ
++A: A_ADV ; !njyebžilávt
++A+Cmp/Attr:%>is ATTR_R ;
++A+Cmp/SgNom: R ;
++A:^FCD%> A_LASJ ; !  
+
+LEXICON FISKAD !!= __@CODE@__ directing to X_LITTER, attr. fiskis (fikâdis)
++A+Attr:is^CSH K ; ! fiskis sahis
++A+Attr+Err/Orth:âd%>is K ;
++A:âd X_LITTER ;
++A:âd%>u COMPo ; 
++A:âd%>u MOS ;
++A+Cmp/Attr:i^CSH%>s ATTR_R ;
++A+Cmp/Attr:âd%>is ATTR_R ;
++A+Attr+Err/Orth:is^CSH%> A_VUOTA ; ! corp: mučisvuođâ lusisvuođâ joskisvuođâ
++A:âd%> A_VUOTA ;
++A:âd A_ADV ; !muččâdávt joskâdávt
++A+Attr:i^WG%>s A_LAGAN ; !čapisláván
++A:is^CSH%> A_LASJ ; !  
+
+
+LEXICON JUOLLAD !!= __@CODE@__ directing to X_EEMEED, attr, juolis, juolâdis, juolâdâs
++A+Attr+Use/NG:is^CSH K ; ! juolis
++A+Attr:âd^CSH%>is  K ; !
++A+Attr+Use/NG:âd^CSH%>âs  K ; !
++A:âd X_EEMEED ;
++A:âd^CSH%>u COMPo ; 
++A:âd^CSH%>â MOS ;
++A+Cmp/Attr:is^CSH%> ATTR_R ;
++A+Cmp/Attr:âd^CSH%>is  ATTR_R ; !
++A+Cmp/Attr:âd^CSH%>âs  ATTR_R ; !
++A:%> A_VUOTA ; 
++A:âd^CSH A_ADV ; !
++A:is^WG%> A_LASJ ; !  
+
+LEXICON A_LITTER !!= __@CODE@__ directing to X_LITTER
+ATTR ;
++A: X_LITTER ;
+!fiskâdub fiskâduboh fijnásuboi vaigâdub tergâdub pehtilub
++A: A_LASJ ; !  
+
+
+!LEXICON CAVOS_nocomp !!= __@CODE@__ directing to X_SAJOS, attr. almos
+!!+A+Attr:^FCD^CSH^SVSH  K ; ! čapo
+!+A: X_SAJOS	  ;
+!+A+Cmp/Attr:  ATTR_R ; !CHECK
+!+A:%> A_VUOTA ;
+!+A:^CSH^SVSH%> A_LASJ ; !  
+!
+
+!LEXICON NANOS !!= __@CODE@__ directing to X_SAJOS, attr. noonâ
+!!+A+Attr:â^WG^VHIGH^RLEN K ; 	! noonâ , as entry in the lexicon file
+!+A: X_SAJOS	  ; !nanos
+!+A:os%>u COMPo ;  !   nanosub
+!+A:os%>u MOS ; !  nanosumos
+!!+A+Attr:â^VHIGH^RLEN%> R ;
+!+A:%> A_VUOTA ; !nanosvuotâ
+!+A: A_ADV ; !  nanosávt
+!+A:^CSH^SVSH%> A_LASJ ; !  
+
+
+
+
+LEXICON ALMOS !!= __@CODE@__ directing to X_SAJOS, attr. almos
+!+A+Attr:^WG^SVSH  K ; !
++A: X_SAJOS	  ;
++A:^WG^SVSH%>u COMPo ; 
++A:^CSH^SVSH%>u MOS ;
++A+Cmp/Attr:^WG^SVSH%> ATTR_R ;
++A:^WG^SVSH%> A_VUOTA ;
++A:^WG^SVSH%> A_ADV ; !almoslávt
++A:^WG^SVSH%> A_LASJ ; !  
+
+
+!LEXICON A_APINA  __@CODE@__ directing to X_APINA, attr. apina
+!+A+Attr:  K ; !placeholder
+!+A: X_APINA	  ;
+!+A+Cmp/Attr: ATTR_R ;
+!+A: A_LASJ ; !  
+
+LEXICON SOOHAD_nocomp !!= __@CODE@__ directing to X_EEMEED, attr. sohâdis
++A+Attr:^CSH^SVSH%>is  K ; !sapedis, sapedâs
++A+Attr+Use/NG:^CSH^SVSH%>âs  K ; !
++A: X_EEMEED ;
++A:%> A_VUOTA ;
++A+Attr+Err/Orth:^CSH^SVSH%>is A_VUOTA ; !corp: movtigisvuođâs
++A:^CSH^SVSH A_ADV ; !jotelávt
++A+Cmp/Attr:^CSH^SVSH%>is ATTR_R ;
++A+Cmp/Attr:^CSH^SVSH%>âs ATTR_R ;
++A:^CSH^SVSH%> A_LASJ ; !  
+
+
+LEXICON SOOHAD !!= __@CODE@__ directing to X_EEMEED, attr. sohâdis
++A+Attr:^CSH^SVSH%>is  K ; !sapedis, sapedâs
++A+Attr+Use/NG:^CSH^SVSH%>âs  K ; !
++A:^RVSH A_ADV ; !šohâdávt 
++A+Cmp/Attr:^CSH^SVSH%>is ATTR_R ;
++A+Cmp/Attr+Use/NG:^CSH^SVSH%>âs ATTR_R ;
+SOOHAD_NOATTR ;
+
+LEXICON SOOHAD_NULLATTR
++A+Attr:  K ; ! = Nom
++A+Cmp/Attr: ATTR_R ;
+SOOHAD_NOATTR ;
+
+LEXICON SOOHAD_NOATTR
++A: X_EEMEED ;
++A:^CSH^SVSH%>u COMPo ; 
++A:^CSH^SVSH%>u MOS ;
++A:%> A_VUOTA ;
++A:^CSH^SVSH%> A_LASJ ; !  
+
+LEXICON MAAJEEB-COMP !!= __@CODE@__ comparative lexicon
++A+Comp+Attr:b  K ; !
++A:p P-COMP-ERR-ORTH ;
++A+Comp:b X_EEMEED ;
++A:^RVSH^SVSH%> MUSj ; !maajee
+
+
+LEXICON PEEGGALM !!= __@CODE@__ directing to X_EEMEED, attr. sohâdis
++A+Attr:^CSH^SVSH%>âs  K ; !pegâlmâs
++A: X_EEMEED ;
++A:^CSH^SVSH%>u COMPo ;
++A:%>u MOS ;
++A:%> A_VUOTA ;
++A+Cmp/Attr:^CSH^SVSH%>âs ATTR_R ; 
++A:^WG^SVSH%> A_LASJ ; !  
+
+
+LEXICON JUARBUDEKES
++A+Attr:ekes K ;
++A+Sg+Nom:ekes K ;	! juárbudekes
+JUARBUDEKES_INFL ;
+
+LEXICON JUARBUDEVES
++A+Attr:eves K ;
++A+Sg+Nom:eves K ;	! juárbudeves
+JUARBUDEKES_INFL ;
+
+LEXICON JUARBUDEKES_INFL
++A+Sg+Gen:iäkká K ;	! juárbudiäkká
++A+Sg+Acc:iäkká K ;	! juárbudiäkká
++A+Sg+Ill:iäkká%>s K ;	! juárbudiäkkás
++A+Sg+Loc:iäkká%>st K ;	! juárbudiäkkást
++A+Sg+Com:iäkk%>áin K ;	! juárbudiäkkáin
++A+Ess:eves%>in K; 		! juárbudevesin
++A:iäkká X_h_PL ;
+
+!+A+Pl+Nom:iäkká%>h K ;	! juárbudiäkkáh
+!+A+Pl+Gen:iäkká%>i K ;	! juárbudiäkkái
+!+A+Pl+Acc:iäkká%>id K ;	! juárbudiäkkáid
+!+A+Pl+Ill:iäkká%>id K ;	! juárbudiäkkáid
+!+A+Pl+Loc:iäkká%>in K ;	! juárbudiäkkáin
+!+A+Pl+Com:iäkká%>i GUIN ;! juárbudiäkkáiguin
+!+A+Pl+Abe:iäkká%>ittáá K ;	! juárbudiäkkáittáá
+
+
+
+LEXICON A_KOLME !!= @CODE@ ad hoc three syllable stem > LITTER
+ A_LITTER ;
+
+
+LEXICON KUBDUV !!= __@CODE@__ . It doesn't fit with KAAMUV because of kubduvân, kubduvist
++A+Sg+Nom:uv K ;   	! kaamuv
++A+Ess+Err/Orth:âg%>in K ;
++A+Par+Err/Orth:âg%>id K ;
++A+Sg+Ill:uv%>ân K ;
++A+Sg+Loc:uv%>ist K ;        		! kammust
++A:u X_KAAMUV_COMMON ;	
++A+Attr:â K ;     !attr. kubdâ, ollâ 
++A+Cmp/Attr:â ATTR_R ;
++A:u%> A_VUOTA ;
++A:âg A_ADV  ;     !kubdâgávt 
+
+LEXICON KUBDUV_COMP
++A:^WG%> CMUS ;
++A+Comp+Sg+Nom:^WG^RLEN%>eb K ;
++A+Comp+Sg+Gen:^WG^RLEN%>eb K ;
++A+Comp+Sg+Acc:^WG^RLEN%>eb K ;
++A+Comp+Sg+Ill:^WG%>bân K ;
++A+Comp+Sg+Loc:^WG%>bist K ;
++A+Comp+Sg+Com:^WG%>báin K ;
++A+Comp+Sg+Abe:^WG^RLEN%>ebttáá K ;
++A+Comp+Ess:^WG%>bin K ;
++A+Comp+Par:^WG%>bid K ;
++A+Comp+Pl+Nom:^WG%>beh K ;
++A+Comp+Pl+Gen:^WG%>bij K ;
++A+Comp+Pl+Acc:^WG%>bijd K ;
++A+Comp+Pl+Ill:^WG%>báid K ;
++A+Comp+Pl+Loc:^WG%>bijn K ;
++A+Comp+Pl+Com:^WG%>bij GUIN ;
++A+Comp+Pl+Abe:^WG%>bijttáá K ;
+
+
+!! !!Contracted stems
+! ----------------
+
+LEXICON ALKKEE  !!= __@CODE@__ directing to X_TAHHEE, attr. älkkees
++A+Attr:^SV^SLENs K ; ! älkkees
+!+A+Ess:jin K ; ! älkkeejin is wrong, shall be älkken
+ALKKEE_COMMON ;
++A:^SV^SLEN%> A_VUOTA ;
++A: VVCOMPe ; ! assab
++A:^SV^SLEN%> MUS ; ! váiváámus hoppuumus
++A+Cmp/Attr:^SV^SLENs ATTR_R ; 
++A+Cmp/SgNom:^SV^SLEN R ; !ruánáátiälkku
+
+!LEXICON MAKKUU   directing to X_TAHHEE, attr. älkkees
+!+A+Attr:s K ; ! älkkees
+!+A+Sg+Ill:^SVSH%>vân K ;		! Adjective illative uvân
+!ALKKEE_COMMON ;
+!+A:%> A_VUOTA ;
+
+LEXICON A_IJJE  !!= __@CODE@__ 
++v1:ijje PYECCEE ;
++v2:ei4je PYECCEE ;
+
+LEXICON TTETTEE
+    +A+Attr:ttette^SV^SLEN K ; 
+           :ttette ALKKEE_COMMON ;
++A+Cmp/Attr:ttette^SV^SLEN ATTR_R ; !pyecceeviäsu ruánáátiälkku
+    +A+Attr+Err/Orth:ttitte^SV^SLEN K ; 
+           +Err/Orth:ttitte ALKKEE_COMMON ;
++A+Cmp/Attr+Err/Orth:ttitte^SV^SLEN ATTR_R ; !pyecceeviäsu ruánáátiälkku
+
+LEXICON PYECCEE  !!= __@CODE@__ directing to X_TAHHEE, attr. pyeccee
++A+Attr:^SV^SLEN K ; 
+!+A+Sg+Ill:%>jân K ;		! Adjective illative jân
+ALKKEE_COMMON ;
++A+Cmp/Attr:^SV^SLEN ATTR_R ; !pyecceeviäsu ruánáátiälkku
+
+
+LEXICON ALKKEE_COMMON !!= __@CODE@__ common for ALKKEE and PYECCEE
++A: X_TAHHEE ;
++A+Pl+Nom+Err/Orth:%>h K ;
+
+
+LEXICON A_KAANDAS !!= __@CODE@__ directing to X_KAANDAS, no attr, half congruence
++A+Attr:âš^WG^RLEN K ; ! kaandâš
++A: X_KAANDAS ;
+
+LEXICON A_TUULAS !!= __@CODE@__ directing to X_KAANDAS, no attr, half congruence
++A+Attr:âš^WG^RLEN K ; ! tuulâš
++A: X_TUULAS ;
+
+
+LEXICON STYERES !!= __@CODE@__ directing to X_KAARBIS, attr. stuorrâ
++A+Attr:^FCDâ  K ; ! stuorrâ
++A:^FCD CCOMPe ;
++A:^FCD^SLEN%> CMUS ;
++A+Err/Orth:^FCD%> CMUS ;
++A+Err/Orth:^FCD^SLEN%> MUS ; 
++A: X_KAARBIS ; !
++A+Cmp/Attr:^FCDâ%> ATTR_R ;
++A:^WG%> A_VUOTA ;
+
+LEXICON RIGES !!= __@CODE@__ directing to X_KAARBIS, attr. riges, 3st comparision
++A+Attr:^WG^RLEN  K ; ! riges
++A:%>u COMPo ; 
++A:%>u MOS ; 
++A: X_KAARBIS ; !
++A+Cmp/Attr:^WG%> ATTR_R ;
++A+Attr:^WG%> A_VUOTA ;
+
+
+!LEXICON A_CISSAAS   __@CODE@__ directing to  X_CISSAAS, not in use yet
+!!+A+Attr:  K ; !placeholder
+!+A: X_CISSAAS ;
+!+A+Cmp/Attr:  ATTR_R ;
+
+
+LEXICON MUOTTII !!= __@CODE@__ almost like KARRII, direct to it?
++A+Attr:is K ; ! muottiis
++A: X_KARRII ;
++A:^SV CCOMPe ;
++A:i%> CMUS ;
++A+Cmp/Attr:is ATTR_R ; 
+
+!+A+Sg+Nom: K ;  ! muottii
+!+A+Sg+Gen: K ;  ! muottii
+!+A+Sg+Acc: K ;  ! muottii
+!+A+Sg+Ill:%>jân K ;  ! muottiijân
+!+A+Sg+Loc:%>st K ;  ! muottiist
+!+A+Sg+Com:^SVSH%>jn K ;  ! muottijn
+!+A+Sg+Abe:%>ttáá K ;  ! muottiittáá
+!+A+Ess:%>jin K ;  ! muottiijin
+!+Al+Pl+Nom:%>h K ;  ! muottiih
+!+A+Pl+Gen:^SVSH%>j K ;  ! muottij
+!+A+Pl+Acc:^SVSH%>jd K ;  ! muottijd
+!+A+Pl+Ill:^SVSH%>jd K ;  ! muottijd
+!+A+Pl+Loc:^SVSH%>jn K ;  ! muottijn
+!+A+Pl+Com:%> GUIN ;  ! muottiiguin
+!+A+Pl+Abe:%>ttáá K ;  ! muottiittáá
+
+LEXICON A_VUALAAS !!= __@CODE@__ 
++A+Attr:^SV^RLEN^SLEN%>š K ;
++A+Sg+Nom:^SV^RLEN^SLEN%>š K ; 							! kamevuálááš
++A+Sg+Gen:^SV^RLEN^SLEN K ; 							! kamevuáláá
++A+Sg+Acc:^SV^RLEN^SLEN K ;					! kamevuáláá
++A+Sg+Ill:%>žân K ;		! kamevuálážân
++A+Sg+Loc:^SV^RLEN^SLEN%>st K ;				! kamevuáláást
++A+Sg+Com:%>in K ; 							! kamevuáláin
++A+Sg+Abe:^SV^RLEN^SLEN%>ttáá K ; 				! vuálááttáá
++A+Ess:%>žin K ;			! 
++A+Par:%>žid K ; 		! 
++A+Pl+Nom:^SV^RLEN^SLEN%>h K ; 				! 
++A+Pl+Gen:^SV^RLEN^SLEN%>id K ; 							! 
++A+Pl+Ill:^SV^RLEN^SLEN%>id K ; 							! cissáid
++A+Pl+Loc:%>in K ; 							! cissáin
++A+Pl+Com:%>i GUIN ; 						! cissáiguin
++A+Pl+Abe:%>ittáá K ; 						! cissáittáá
++A+Cmp/Attr:^SV^RLEN^SLEN%>š ATTR_R ; !
+
+
+LEXICON SIAMMAS !!= __@CODE@__ 
++A+Sg+Nom:š K ; 					! siämmáš
++A+Sg+Gen:^SV^SLEN K ; 					! siämmáá
++A+Sg+Acc:^SV^SLEN K ;					! siämmáá
++A+Sg+Ill:%>žân K ;				! siämmážân
++A+Sg+Loc:%>st K ;					! siämmást
++A+Sg+Com:%>in K ; 				! siämmáin
++A+Sg+Abe:^SV^SLEN%>ttáá K ; 				! siämmááttáá
++A+Ess:%>žin K ;					! siämmážin
++A+Par:%>žid K ; 					! siämmážid
++A+Pl+Nom:^SV^SLEN%>h K ; 				! siämmááh
++A+Pl+Gen:%>i K ; 					! siämmái
++A+Pl+Acc:%>id K ; 				! siämmáid
++A+Pl+Ill:%>id K ; 				! siämmáid
++A+Pl+Loc:%>in K ; 				! siämmáin
++A+Pl+Com:%>i GUIN ; 				! siämmáiguin
++A+Pl+Abe:%>ittáá K ; 				! siämmáittáá
+
+
+LEXICON JIAVTAS !!= __@CODE@__ 
+!+A+Attr:áš^WG  K ; !jiävtâš; attr in a partial conguence; attr should not be given?
++A+Sg+Nom:áš^WG^RLEN K ; 							! jiävtáš
++A+Sg+Gen:áá K ; 							! jiävttáá
++A+Sg+Acc:áá K ;					! jiävttáá
++A+Sg+Ill:á^WG^RLEN%>žân K ;		! jiävtážân
++A+Sg+Loc:áá%>st K ;				! jiävttáást
++A+Sg+Com:á%>in K ; 							! jiävttáin
++A+Sg+Abe:áá%>ttáá K ; 				! jiävttááttáá
++A+Ess:á^WG%>žin K ;			! jiävtážin
++A+Par:á^WG%>žid K ; 		! jiävtážid
++A+Pl+Nom:áá%>h K ; 				! jiävttááh
++A+Pl+Gen:á%>i K ; 							! jiävttái
++A+Pl+Acc:á%>id K ; 						! jiävttáid
++A+Pl+Ill:á%>id K ; 						! jiävttáid
++A+Pl+Loc:á%>in K ; 						! jiävttáin
++A+Pl+Com:á%>i GUIN ; 						! jiävttáiguin
++A+Pl+Abe:á%>ittáá K ; 						! jiävttáittáá
+
+!+A+Cmp/Attr:áš^WG%> ATTR_R ;
+
+
+LEXICON TAASSAS
+!+A+Attr:âš  K ; 				!táássáš; attr in a partial congruens
++A+Sg+Nom+Err/Orth:âš  K ; 				!táássâš ! from corpus Err/Orth?
++A+Sg+Nom:áš  K ; 				!táássáš
++A+Sg+Gen:áá^RVSH K ; 			! tássáá
++A+Sg+Acc:áá^RVSH K ;			! tássáá
++A+Sg+Ill:á^CSH%>žân K ;		! táásážân
++A+Sg+Loc:áá^RVSH%>st K ;		! tássáást
++A+Sg+Com:á^RVSH%>in K ; 		! tássáin
++A+Sg+Abe:áá^RVSH%>ttáá K ; 	! tássááttáá
++A+Ess:á^CSH%>žin K ;			! táásážin
++A+Par:á^CSH%>žid K ; 			! táásážid
++A+Pl+Nom:áá^RVSH%>h K ; 		! tássááh
++A+Pl+Gen:á^RVSH%>i K ; 		! tássái
++A+Pl+Acc:á^RVSH%>id K ; 		! tássáid
++A+Pl+Ill:á^RVSH%>id K ; 		! tássáid
++A+Pl+Loc:á^RVSH%>in K ; 		! tássáin
++A+Pl+Com:á^RVSH%>i GUIN ; 	! tássáiguin
++A+Pl+Abe:á^RVSH%>ittáá K ; 			! tássáittáá
+!+A:%>á AS_SUF ;
++A+Cmp/Attr:áš ATTR_R ; !kuávdášmuseo
+
+
+!! !!4 syll stems
+! ----------------
+
+LEXICON A_KUNAGAS !!= __@CODE@__ directing to  X_KUNAGAS; syeligâs, is like kunâgâs but FCD is not enough to create the comparation
++A+Attr:âs  K ;
++A:âss X_KUNAGAS	  ; 
++A+Cmp/Attr:âs ATTR_R ;
++A+Comp:%>u oCOMP-SUF ; !MLO: syeligub, syeliguboh; oCOMP-SUF should work but I did now succeed
++A:%>u MOS ; ! syeligumos, syeligumoseh
++A: A_ADV ; !
++A:âš%> A_VUOTA ;
+
+!+A+Sg+Nom:âs  K ; 				!syeligâs
+!+A+Sg+Gen:âs K ; 				! syeligâs
+!+A+Sg+Acc:âs K ;				! syeligâs
+!+A+Sg+Ill:âsân K ;				! syeligâsân
+!+A+Sg+Loc:âsâst K ;				! syeligâsâst
+!+A+Sg+Com:âssáin K ; 			! syeligâssáin
+!+A+Sg+Abe:âsttáá K ; 			! syeligâsttáá
+!+A+Ess:âssân K ;				! syeligâssân
+!+A+Par:âssâd K ; 				! syeligâssâd
+!+A+Pl+Nom:âsah K ; 				! syeligâsah
+!+A+Pl+Gen:âsâi K ; 				! syeligâsâi
+!+A+Pl+Acc:âsâid K ; 			! syeligâsâid
+!+A+Pl+Ill:âssáid K ; 			! syeligâssáid
+!+A+Pl+Loc:âsâin K ; 			! syeligâsâin
+!+A+Pl+Com:âsâi GUIN ; 			! syeligâsâiguin
+!+A+Pl+Abe:âsâittáá K ; 			! syeligâsâittáá
+
+!+A+Comp+Sg+Nom:%>ub K ; ! oCOMP-SUF for these?
+!+A+Comp+Sg+Gen:%>ub K ;
+!+A+Comp+Sg+Acc:%>ub K ;
+!+A+Comp+Sg+Ill:%>ubon K ;
+!+A+Comp+Sg+Loc:%>bboost K ;
+!+A+Comp+Sg+Com:%>bboin K ;
+!+A+Comp+Sg+Abe:%>ubttáá K ;
+!+A+Comp+Ess:%>bbon K ;
+!+A+Comp+Par:%>bbod K ;
+!+A+Comp+Pl+Nom:%>uboh K ;
+!+A+Comp+Pl+Gen:%>uboi K ;
+!+A+Comp+Pl+Acc:%>ubboid K ;
+!+A+Comp+Pl+Ill:%>ubboid K ;
+!+A+Comp+Pl+Loc:%>uboin K ;
+!+A+Comp+Pl+Com:%>uboi GUIN ;
+!+A+Comp+Pl+Com+Err/Orth:%>uboi GUIN ;
+!+A+Comp+Pl+Abe:%>iboittáá K ;
+
+
+
+LEXICON UANIHASJ !!= __@CODE@__ directing to LAS_SUF, attr, -âš
++A+Attr:is K ;
++A+Cmp/Attr:is ATTR_R ;
+UANIHASJ_INFL ;
+
+LEXICON KIERDAVAS
++A+Attr:âš K ;
+UANIHASJ_INFL ;
+
+
+LEXICON UANIHASJ_INFL
++A+Sg+Nom:âš K ;
++A: LAS_SUF ;
++A:%>u COMPo ;
++A:%>u MOS ;
++A: A_ADV ;
++A:âš%> A_VUOTA ;
+
+
+LEXICON UNOHAS !!= __@CODE@__ directing to LAS_SUF, attr, -is
++A+Sg+Nom:âs K ;
++A+Attr:âs K ;
++A+Attr+Err/Orth:is K ;
++A:âss X_KUNAGAS ;
++A:u COMPo ;
++A:u MOS ;
++A+Cmp/Attr:âs ATTR_R ;
+
+
+LEXICON ANOLASJ !!= __@CODE@__ directing to LAS_COMMON, attr, -âš
+!! Adj - pooliitlâš: # attr. pooliitlâš; puolikongruenssi mahdollinen (#-paikat), puolikongr. asemesta SgNom.
++A+Attr:âš K ;
++A: X_LAS_COMMON_SG ; 
++A: X_LAS_COMMON_PL ; 
++A:u COMPo ;
++A:u MOS ; ! tehálumos
++A+Cmp/Attr:âš ATTR_R ;
++A+Cmp/SgNom:âš R ;
++A: A_ADV ; !máhđulávt
++A:âš%> A_VUOTA ;
+
+LEXICON LAGAN !!= __@CODE@__ directing to A_LITTER, attr. -lágán
++A+Attr:lágán K ;
++A+Attr+Use/NG:láván K ;
++A:lágán X_LITTER ;
++A+Use/NG:láván X_LITTER ;
+!+A:%>u MOS ; ! jiešlágánumosáid
++A+Cmp/Attr:lágán ATTR_R ;
++A:lágán%> A_VUOTA ;
+
+
+
+!LEXICON RAPPADAS
+!UANIHASJ ; ! if it works: substitute  RAPPADAS with UANIHASJ in lexicon
+!+A+Attr:is K ;
+!+A:á X_RASTAGAS ;
+!+A+Cmp/Attr:is ATTR_R ;
+
+!+A+Sg+Nom:â%>š K ; ! rappâdâš
+!+A+Sg+Gen:%>áá K ; 			! rappâdáá
+!+A+Sg+Acc:%>áá K ; 			! rappâdáá
+!+A+Sg+Ill:â%>žân K ;	! rappâdâžân
+!+A+Sg+Loc:áá%>st K ;			! rappâdáást
+!+A+Sg+Com:á%>in K ; 			! rappâdáin
+!+A+Sg+Abe:áá%>ttáá K ; 		! rappâdááttáá
+!+A+Ess:â%>žžân K ;	! rappâdâžžân
+!+A+Par:â%>žžâd K ; ! rappâdâžžâd
+!+A+Pl+Nom:áá%>h K ; 			! rappâdááh
+!+A+Pl+Gen:á%>i K ; 			! rappâdái
+!+A+Pl+Acc:á%>id K ; 			! rappâdáid
+!+A+Pl+Ill:á%>id K ; 			! rappâdáid
+!+A+Pl+Loc:á%>in K ; 			! rappâdáin
+!+A+Pl+Com:á%>i GUIN ; 		! rappâdáiguin
+!+A+Pl+Abe:á%>ittáá K ; 		! rappâdáittáá
+
+
+
+LEXICON MUSTOTTEM !!= __@CODE@__ pls note e > iä in sg ill; no comparation
++A+Attr:es K;
++A:emeb COMPe ;
++A+Attr+Use/NG:emes K ;
++A+Attr+Err/Orth:is K ;
++A+Cmp/Attr:es ATTR_R ;
++A+Cmp/Attr+Err/Orth:is ATTR_R ;
++A+Sg+Nom:em K ;
++A+Sg+Gen:eme K ;
++A+Sg+Acc:eme K ;
++A+Sg+Ill:iämán K ;
++A+Sg+Loc:eemeest K ;
++A+Sg+Com:emáin K ;
++A+Sg+Abe:emttáá K ;
++A+Ess+Err/Orth:eemmin K ;
++A+Ess:emmin K ;
++A:em X_eh_PL ;
++A+Der4+Der/AAdv+Adv:eht K ;
+
+LEXICON A_INDECL !!= __@CODE@__ not all forms., attr = Sg. Nom.
++A+Attr: K ;    ! kulhijdum
++A+Sg+Nom: K ;  ! kulhijdum
++A+Cmp/Attr:  ATTR_R ;
++A: A_LASJ ; !
+
+
+LEXICON OLMOOSMETTUM !!= __@CODE@__, not all forms. attr. = Sg. Nom.
++Use/NG:máttum METTUMforms ;
+:mettum METTUMforms ;
+
+LEXICON METTUMforms
++A+Attr: K ;
++A: X_LITTER_SG ;
++A: X_eh_PL ;
++A+Cmp/Attr: ATTR_R ;
++A:%> A_VUOTA ;
++A: A_ADV ;
+
+!LEXICON AS_SUF    __@CODE@__ 
+!+Sg+Gen:á^RVSH K ;
+!+Sg+Acc:á^RVSH K ;
+!+Sg+Ill:ž%>ân K ;
+!+Sg+Loc:á%>st K ;
+!+Sg+Com:%>jn K ;
+!+Ess:%>âžžân K ;
+!+Par:%>âžžâd K ;
+!+Pl+Nom:%>áh K ;
+!+Pl+Gen:%>j K ;
+!+Pl+Acc:%>id K ;
+!+Pl+Ill:%>id K ;
+!+Pl+Loc:%>in K ;
+!+Pl+Com:%>j GUIN ;
+!+Pl+Abe:%>jttáá K ;
+
+
+
+!! !!Comparision
+! -----------
+ 
+ 
+LEXICON COMPe !!= * __@CODE@__ NUORA uses this lexicon
++Comp: COMP-SUF ;
++Comp+Der1+Der/Dimin+A+Sg+Nom:âš K ; !needs lexicon
++Comp+Der4+Der/AAdv+Adv:beht K ; !čepibeht	čeppi čeepib čepibeht
+
+
+LEXICON VVCOMPe !!= * __@CODE@__ ALKKEE uses this lexicon; giving älkkeb etc.
++Comp: VVCOMP-SUF ;
+:p^RLEN P-COMP-ERR-ORTH ;
++Comp+Der1+Der/Dimin+A+Sg+Nom:b%>âš K ; !needs lexicon
+
+
+
+LEXICON COMPclen !!= * __@CODE@__ NUORA uses this lexicon
++Comp: COMP-SUFclen ;
++Comp+Der1+Der/Dimin+A+Sg+Nom:âš K ; !needs lexicon
++Comp+Der4+Der/AAdv+Adv:eht K ; !ucebeht	ucce ucceeb ucebeht
+
+
+LEXICON CCOMPe !!= * __@CODE@__ STYERES and MUOTTII use this lexicon
++Comp+Err/Orth:âb CCOMP-SUF ;
++Comp:b CCOMP-SUF ;
++Comp+Der1+Der/Dimin+A+Sg+Nom:bâš K ; !needs lexicon
+
+
+LEXICON eCOMP !!= * __@CODE@__
++Comp: eCOMP-SUF ;
++Comp+Der4+Der/AAdv+Adv:beht K ; !lämibeht xxx perhaps ^RLEN^SLEN
+
+!LEXICON COMP  __@CODE@__
+!+Comp:b COMP-SUF ;
+!+Comp+Der4+Der/AAdv+Adv:beht K ; !čepibeht	čeppi čeepib čepibeht
+ 
+LEXICON COMPo !!= * __@CODE@__ NJUORAS, NJAALGIS uses this lexicon
++Comp: oCOMP-SUF ;
++Comp+Der4+Der/AAdv+Adv:bbooht K ; !vijđásubbooht
+
+
+LEXICON eCOMP-SUF  !!= * __@CODE@__ 
+!+Sg+Nom+Use/NG:eb K ;
+ :b COMP-SUF ;
+
+LEXICON oCOMP-SUF  !!= * __@CODE@__ 
++Sg+Nom:b K ;
++Sg+Gen:b K ;
++Sg+Acc:b K ;
++Sg+Ill:ub%>on K ; !
++Sg+Loc:bb%>oost K ;
++Sg+Com:bb%>oin K ; ! XXX
++Sg+Abe:b%>ttáá K ;
++Ess:bb%>on K ; 
++Ess+Err/Orth:b%>on K ; 
++Par:bb%>od K ;  !X_h_PL
++Pl+Nom:b%>oh K ;
++Pl+Gen:b%>oi K ;
++Pl+Acc:b%>oid K ;
++Pl+Ill:bb%>oid K ;
++Pl+Loc:b%>oin K ;
++Pl+Com:b%>oi GUIN ;
++Pl+Abe:b%>oittáá K ;
+
+
+LEXICON CCOMP-SUF  !!= * __@CODE@__  STYERES uses this lexicon
++Sg+Nom: K ;
++Sg+Gen: K ;
++Sg+Acc: K ;
++Sg+Ill:^SLEN%>ân K ;
++Sg+Loc:^SLEN%>ist K ;
++Sg+Com:^SLEN%>áin K ;
++Sg+Abe:%>ttáá K ;
++Ess:^SLEN%>in K ;
++Par:^SLEN%>id K ;
+ :^SLEN X_eh_PL ;
++Err/Orth: X_eh_PL ;
+
+
+LEXICON COMP-SUF  !!= * __@CODE@__ 
++Sg+Nom:^RLEN^SLEN K ;
++Sg+Gen:^RLEN^SLEN K ;
++Sg+Acc:^RLEN^SLEN K ;
+COMP_SUF_ADVLCASE ;
+
+LEXICON COMP_SUF_ADVLCASE
++Sg+Ill:^RVSH^SVSH%>ân K ; ! RVSH added in this row because of LAAMI; lämibân, lämibist; does not harm the rest where COMPe is used with a short 1.syll. vowel
++Sg+Loc:^RVSH^SVSH%>ist K ;
++Sg+Com:^RVSH^SVSH%>áin K ;
++Sg+Abe:^RLEN%>ttáá K ;
++Ess:^RVSH^SVSH%>in K ;
++Par:^RVSH^SVSH%>id K ;
+ X_eh_PL ;
+
+
+LEXICON VVCOMP-SUF  !!= * __@CODE@__ 
++Sg+Nom:b^RLEN K ;
++Sg+Gen:b^RLEN K ;
++Sg+Acc:b^RLEN K ;
++Sg+Ill:^SV^SLENb%>ân K ;
++Sg+Loc:^SV^SLENb%>ist K ;
++Sg+Com:^SV^SLENb%>áin K ;
++Sg+Abe:b^RLEN%>ttáá K ;
++Ess:^SV^SLENb%>in K ;
++Par:^SV^SLENb%>id K ;
+ :^SV^SLENb X_eh_PL ;
+
+
+LEXICON COMP-SUFclen  !!= * __@CODE@__ 
++Sg+Nom:^CLEN^SLEN K ;
++Sg+Gen:^CLEN^SLEN K ;
++Sg+Acc:^CLEN^SLEN K ;
++Sg+Ill:%>ân K ;
++Sg+Loc:%>ist K ;
++Sg+Com:%>áin K ;
++Sg+Abe:^CLEN^SLEN%>ttáá K ;
++Ess:%>in K ;
++Par:%>id K ;
+ X_eh_PL ;
+
+ 
+LEXICON SUP_MUS  !!= * __@CODE@__
++A: MUS ;
+
+LEXICON SUP_MUSJ  !!= * __@CODE@__ majemuš
++A: MUSj ;
+
+
+LEXICON MUS !!= * __@CODE@__  asdf
++Superl: MUS-SUF ;
++Superl+Attr:mus K ;
++Superl+Der4+Der/AAdv+Adv:mus%>ávt K ;
++Superl+Der4+Der/AAdv+Adv:mus%>âht K ;
++Superl+Der4+Der/taa+Adv:mus%>táá K ; !pyeremustáá
+
+LEXICON MUSj !!= * __@CODE@__ SUP_MUSJ uses this lexicon, eg. majemuš
++Superl: MUSj-SUF ;
++Superl+Attr:muš K ;
++Superl+Der4+Der/AAdv+Adv:muš%>ávt K ;
+
+
+LEXICON CMUS !!= * __@CODE@__  STYERES uses this lexicon
++Superl: CMUS-SUF ;
++Superl+Attr:mus K ;
++Superl+Der4+Der/AAdv+Adv:mus%>ávt K ;
+
+
+LEXICON MOS !!= * __@CODE@__
++Superl:mos X_LITTER ;
++Superl+Attr:mos K ;
++Superl+Der4+Der/AAdv+Adv:mos%>ávt K ;
+
+LEXICON MUS-SUF !!= * __@CODE@__
++Sg+Nom:mus K ;
++Sg+Gen:muu K ;
++Sg+Acc:muu K ;
++Sg+Ill:musân K ;
++Sg+Loc:muust K ;
++Sg+Com:muin K ;
++Sg+Abe:muuttáá K ;
++Ess:mussân K ;
++Par:mussâd K ;
++Pl+Nom:muuh K ;
++Pl+Gen:mui K ;
++Pl+Acc:muid K ; !7 stuárráámussáid 6 stuárráámusâid
++Pl+Ill:muid K ;
+!+Pl+Ill:%>ááid K ;
++Pl+Loc:muin K ;
++Pl+Com:mui GUIN ;
++Pl+Abe:muittáá K ;
++Pl+Nom+Err/Orth:musah K ; !in corp
++Pl+Gen+Err/Orth:musâi K ;
++Pl+Gen+Err/Orth:musâid K ;
++Pl+Ill+Err/Orth:musâid K ;
++Pl+Loc+Err/Orth:musâin K ;
++Pl+Com+Err/Orth:muigijn K ;
+
+LEXICON MUSj-SUF !!= * __@CODE@__
++Sg+Nom:muš K ;
++Sg+Gen:muu K ;
++Sg+Acc:muu K ;
++Sg+Ill:mužân K ;
++Sg+Loc:muust K ;
++Sg+Com:muin K ;
++Sg+Abe:muuttáá K ;
++Ess:mužžân K ;
++Par:mužžâd K ;
++Pl+Nom:muuh K ;
++Pl+Gen:mui K ;
++Pl+Acc:muid K ;
++Pl+Ill:muid K ;
+!+Pl+Ill:%>ááid K ;
++Pl+Loc:muin K ;
++Pl+Com:mui GUIN ;
++Pl+Abe:muittáá K ;
++Cmp/SgNom:muš R ;
++Pl+Nom+Err/Orth:mušah K ;
++Pl+Gen+Err/Orth:mušâi K ;
++Pl+Acc+Err/Orth:mušâid K ;
++Pl+Ill+Err/Orth:mušâid K ;
++Pl+Com+Err/Orth:mušâijgijn K ;
+
+LEXICON CMUS-SUF !!= * __@CODE@__
++Sg+Nom:mus K ;
++Sg+Gen:muu K ;
++Sg+Acc:muu K ;
++Sg+Ill:musân K ;
++Sg+Ill+Err/Orth:mui K ;
++Sg+Loc:muust K ;
++Sg+Com:muin K ;
++Sg+Abe:muuttáá K ;
++Ess:mussân K ;
++Ess+Err/Orth:mužžân K ;
++Par+Err/Orth:mužžâd K ;
++Par:mussâd K ;
++Pl+Nom:muuh K ;
++Pl+Gen:mui K ;
++Pl+Acc:muid K ; !7 stuárráámussáid 6 stuárráámusâid
++Pl+Ill:muid K ;
+!+Pl+Ill:%>ááid K ;
++Pl+Loc:muin K ;
++Pl+Com:mui GUIN ;
++Pl+Abe:muittáá K ;
++Pl+Nom+Err/Orth:musah K ;
++Pl+Gen+Err/Orth:musâi K ;
++Pl+Acc+Err/Orth:musâid K ; !7 stuárráámussáid 6 stuárráámusâid
++Pl+Ill+Err/Orth:mussáid K ;
++Pl+Loc+Err/Orth:musâin K ;
++Pl+Com+Err/Orth:muigijn K ;
++Pl+Com+Err/Orth:musâi GUIN ;
++Pl+Abe+Err/Orth:musâittáá K ;
+
+LEXICON P-COMP-ERR-ORTH
++Comp+Sg+Nom+Err/Orth: K ;
++Comp+Sg+Acc+Err/Orth: K ;
++Comp+Sg+Gen+Err/Orth: K ;
+
+
+LEXICON A_VUOTA  !!= * __@CODE@__ for derivation
++Der3+Der/vuota:#vuot^RCâ FLAG_2KIELA ;
++Der3+Der/vuota+Err/Orth:#vuodâ FLAG_2KIELA ;
++Der3+Der/vuota+Err/Orth:#vuodâ FLAG_2KIELA ;
+
+LEXICON FLAG_2KIELA  !!= * __@CODE@__ @C.NeedNoun@
+@C.NeedNoun@ 2KIELA ;
+
+LEXICON A_ADV  !!= * __@CODE@__ for derivation
++Der4+Der/AAdv+Adv:ávt K ; !pyeremusávt
++Der4+Der/AAdv+Adv+Err/Orth:avt K ; !
+
+!LEXICON COMPA_ADV  !!= * __@CODE@__ for derivation
+!+Der4+Der/AAdv+Adv:oht K ; !vijđásubbooht
+
+
+!LEXICON A_ADV_VAANIS  _ for derivation
+!+Der4+Der/AAdv+Adv:ht K ; !vääniht
+
+
+LEXICON A_LAGAN  !!= * __@CODE@__ for derivation
++Der1+Der/laakan:# LAGAN ;
+
+LEXICON A_LASJ   !!= __@CODE@__ 
+@U.Cap.Opt@+Der1+Der/lasj:@U.Cap.Opt@l ANOLASJ ; 
+
+LEXICON ATTR_R  !!= __@CODE@__
+ R ;
+ NAMAG ;
+ SAS ;
+ CMP_ADJ ;
+

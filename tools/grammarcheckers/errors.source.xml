@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE errors>
+
+<!-- Make formatting look nice:
+     $ xmllint ==encode utf=8 ==format errors.xml -->
+
+<!-- Check if valid:
+     $ xmllint ==noout ==dtdvalid errors.dtd errors.xml -->
+
+<!-- change equals to hyphens in the above commands -->
+
+<errors>
+
+  <defaults>
+    <!--
+        The defaults provide error messages for where you haven't explicitly
+        provided one, as long as there's a match in "ids" for the error tag
+    -->
+    <default>
+      <ids>
+        <re v="real-.*"/>       <!-- regex that matches all real-word-errors -->
+      </ids>
+      <header>
+        <title xml:lang="en">Spelling errors</title>
+        <title xml:lang="smn">Čállinmeattáhusat</title>
+      </header>
+      <body>
+        <description xml:lang="en">The word means something different here</description>
+        <description xml:lang="smn">Sátni šaddá eará go oaivvilduvvo</description>
+        <!-- TODO: fix description lang=se -->
+      </body>
+    </default>
+    <default>
+      <ids>
+        <re v="msyn-wrong-case.*"/>
+        <re v="msyn-wrong_case.*"/>
+      </ids>
+      <header>
+        <title xml:lang="en">Wrong form</title>
+        <title xml:lang="smn">Boasttuhápmi</title>
+      </header>
+      <body>
+        <description xml:lang="en">"$1" seems to be in the wrong case</description>
+        <description xml:lang="smn"> "$1" orru leamen boasttukásusis</description>
+      </body>
+    </default>
+    <default>
+      <ids>
+        <re v="punct-aistton.*"/>
+      </ids>
+      <header>
+        <title xml:lang="en">Quotation marks</title>
+        <title xml:lang="smn">Aisttonmearkkat</title>
+        <references><ref n=""/></references>
+      </header>
+      <body>
+        <description xml:lang="en">Wrong quotation mark</description>
+        <description xml:lang="smn">Boasttuaisttonmearkkat</description>
+        <examples>
+          <ex xml:lang="smn">Doarjja addo vuosttažettiin {«}Sámi dutkama prográmmii{»} (2001–05)</ex> 
+        </examples>
+      </body>
+    </default>
+    <default>
+      <ids>
+        <re v="no-space-after-paren.*"/>
+        <re v="no-space-before-paren.*"/>
+      </ids>
+      <header>
+        <title xml:lang="en">Parenthesis missing space</title>
+        <title xml:lang="smn">Gaska váilu</title>
+      </header>
+      <body>
+        <description xml:lang="en">There is no space before or after the parenthesis "$1"</description>
+        <description xml:lang="smn">Ii leat gaska ovdal dehe maŋŋil ruođu "$1"</description>
+        <examples>
+          <ex xml:lang="smn">Vuoigatvuođa Lávdegotti{(}SVL{)}čilgehus</ex> 
+        </examples>
+      </body>
+    </default>
+  </defaults>
+
+  
+  <error id="err-agr-sg1">
+    <header>
+      <title xml:lang="en">First person singular after 'mun'.</title>
+      <title xml:lang="smn">Verbi ensimmäisessä persoonassa.</title>
+    </header>
+    <body>
+      <description xml:lang="en">The verb-form "$1" follows 'mun', and should probably be first person singular.</description>
+      <description xml:lang="smn">Verbimuoto "$1" tulee 'mun'-sanan jälkeen, ja pitäisi luultavasti olla ensimmäisessä persoonassa.</description>
+    </body>
+  </error>
+
+  
+  <error id="err-agr-sg2">
+    <header>
+      <title xml:lang="en">Second person singular after 'tun'.</title>
+      <title xml:lang="smn">Verbi toisessa persoonassa.</title>
+    </header>
+    <body>
+      <description xml:lang="en">The verb-form "$1" follows 'tun', and should probably be second person singular.</description>
+      <description xml:lang="smn">Verbimuoto "$1" tulee 'tun'-sanan jälkeen, ja pitäisi luultavasti olla toisessa persoonassa.</description>
+    </body>
+  </error>
+
+
+  <error id="err-agr-pl1">
+    <header>
+      <title xml:lang="en">First person singular after 'mij'.</title>
+      <title xml:lang="smn">Verbi monikon ensimmäisessä persoonassa.</title>
+    </header>
+    <body>
+      <description xml:lang="en">The verb-form "$1" follows 'mij', and should probably be first person plural.</description>
+      <description xml:lang="smn">Verbimuoto "$1" tulee 'mij'-sanan jälkeen, ja pitäisi luultavasti olla monikon ensimmäisessä persoonassa.</description>
+    </body>
+  </error>
+
+
+  <error id="err-agr-pl2">
+    <header>
+      <title xml:lang="en">Second person singular after 'tij'.</title>
+      <title xml:lang="smn">Verbi monikon toisessa persoonassa.</title>
+    </header>
+    <body>
+      <description xml:lang="en">The verb-form "$1" follows 'tij', and should probably be second person plural.</description>
+      <description xml:lang="smn">Verbimuoto "$1" tulee 'tij'-sanan jälkeen, ja pitäisi luultavasti olla monikon toisessa persoonassa.</description>
+    </body>
+  </error>
+
+  <error id="err-orrood-inf">
+    <header>
+      <title xml:lang="en">Actio essive after 'orroođ'.</title>
+      <title xml:lang="smn">Aktio essiivi 'orroođ'-verbin jälkeen.</title>
+    </header>
+    <body>
+      <description xml:lang="en">The verb-form "$1" follows 'orroođ', and should probably be in Actio Essive.</description>
+      <description xml:lang="smn">Verbimuoto "$1" tulee 'orroođ'-sanan jälkeen, ja pitäisi luultavasti olla aktio essiivissä.</description>
+    </body>
+  </error>
+
+
+  <error id="err-extsubj-ill-nom">
+    <header>
+      <title xml:lang="en">Nominative in existential sentences.</title>
+      <title xml:lang="smn">Nominatiivi eksistentiaalilauseissa.</title>
+    </header>
+    <body>
+      <description xml:lang="en">The work "$1" seems to be the subject of an existential clause, it should be in nominative.</description>
+      <description xml:lang="smn">Sana "$1" näyttää olevan eksistentiaalilauseen subjekti, sen pitää olla nominatiivissa.</description>
+    </body>
+  </error>
+
+  <error id="err-extsubj-acc-nom">
+    <header>
+      <title xml:lang="en">Nominative in existential sentences.</title>
+      <title xml:lang="smn">Nominatiivi eksistentiaalilauseissa.</title>
+    </header>
+    <body>
+      <description xml:lang="en">The work "$1" seems to be the subject of an existential clause, it should be in nominative.</description>
+      <description xml:lang="smn">Sana "$1" näyttää olevan eksistentiaalilauseen subjekti, sen pitää olla nominatiivissa.</description>
+    </body>
+  </error>
+
+  <error id="err-extv-pl3">
+    <header>
+      <title xml:lang="en">Plural for plural subject.</title>
+      <title xml:lang="smn">Monikko jos subjekti on monikossa.</title>
+    </header>
+    <body>
+      <description xml:lang="en">The verb-form "$1" has a plural subject, and should be plural.</description>
+      <description xml:lang="smn">Verbimuodolla "$1" on monikkosubjekti, ja pitäisi luultavasti olla monikossa.</description>
+    </body>
+  </error>
+
+
+  <error id="err-extv-pl3-numeral">
+    <header>
+      <title xml:lang="en">Plural for numeral subject.</title>
+      <title xml:lang="smn">Monikko jos subjekti on lukusana.</title>
+    </header>
+    <body>
+      <description xml:lang="en">The verb-form "$1" has a numeral phrase as subject, and should be plural.</description>
+      <description xml:lang="smn">Verbimuodon "$1" subjekti on lukusana, ja verbi pitäisi luultavasti olla monikossa.</description>
+    </body>
+  </error>
+
+  <error id="err-extneg-pl3">
+    <header>
+      <title xml:lang="en">Nominative in negative existential sentences.</title>
+      <title xml:lang="smn">Nominatiivi kielteisissä eksistentiaalilauseissa.</title>
+    </header>
+    <body>
+      <description xml:lang="en">The word "$1" seems to be the subject of an existential clause, it should be in nominative, also when the clause is negated.</description>
+      <description xml:lang="smn">Sana "$1" näyttää olevan eksistentiaalilauseen subjekti, sen pitää olla nominatiivissa, myös kielteisessä lauseessa.</description>
+    </body>
+  </error>
+
+
+  <error id="err-extv-vagr">
+    <header>
+      <title xml:lang="en">Plural for plural subject.</title>
+      <title xml:lang="smn">Monikko jos subjekti on monikossa.</title>
+    </header>
+    <body>
+      <description xml:lang="en">The verb-form "$1" has a plural subject, and should be plural.</description>
+      <description xml:lang="smn">Verbimuodolla "$1" on monikkosubjekti, ja pitäisi luultavasti olla monikossa.</description>
+    </body>
+  </error>
+
+
+  <error id="err-imp-nomobj">
+    <header>
+      <title xml:lang="en">Imperative object in accusative.</title>
+      <title xml:lang="smn">Imparatiiviobjekti akkusatiivissa.</title>
+    </header>
+    <body>
+      <description xml:lang="en">The noun "$1" is in the nominative, but is the object of an imperative and should be in accusative.</description>
+      <description xml:lang="smn">Substantiivi "$1" on nominatiivissa, mutta se on imperatiivin objekti, ja pitäisi siis olla akkusatiivissa.</description>
+    </body>
+  </error>
+
+  <error id="err-no-conneg">
+    <header>
+      <title xml:lang="en">Negative verbform after negative verb.</title>
+      <title xml:lang="smn">Kieltomuoto kieltoverbin jälkeen.</title>
+    </header>
+    <body>
+      <description xml:lang="en">The verb "$1" follows a negative verb, and should thus have the negative form.</description>
+      <description xml:lang="smn">Verbi "$1" tulee kieltoverbin jälkeen, ja pitäisi sen takia olla kieltomuodossa.</description>
+    </body>
+  </error>
+
+  <error id="err-esubj-plnom">
+    <header>
+      <title xml:lang="en">Existential subject in nominative.</title>
+      <title xml:lang="smn">Eksistentiaalilauseen subjekti nominatiivissa.</title>
+    </header>
+    <body>
+      <description xml:lang="en">The noun "$1" seems to be the subject of an existential clause, in which case it should be in the nominative.</description>
+      <description xml:lang="smn">Substantiivi "$1" näyttää olevan eksistentilauseen subjekti, ja pitää sen takia olla nominatiivissa.</description>
+    </body>
+  </error>
+
+  <error id="err-nom-obj">
+    <header>
+      <title xml:lang="en">Accusative plural object.</title>
+      <title xml:lang="smn">Akkusatiiviobjekti myös monikossa.</title>
+    </header>
+    <body>
+      <description xml:lang="en">The noun "$1" is in the nominative, but is probably an object and should be in accusative.</description>
+      <description xml:lang="smn">Substantiivi "$1" on nominatiivissa, mutta se on luultavasti objekti, ja pitäisi siis olla akkusatiivissa.</description>
+    </body>
+  </error>
+
+  <error id="err-acc-obj-top">
+    <header>
+      <title xml:lang="en">Subject not in accusative plural.</title>
+      <title xml:lang="smn">Monikossa oleva subjekti ei akkusatiivissa.</title>
+    </header>
+    <body>
+      <description xml:lang="en">The noun "$1" is in the accusative, but is probably a subject and should be in accusative.</description>
+      <description xml:lang="smn">Substantiivi "$1" on nominatiivissa, mutta se on luultavasti objekti, ja pitäisi siis olla akkusatiivissa.</description>
+    </body>
+  </error>
+
+ 
+  <error id="err-pass-accsubj">
+    <header>
+      <title xml:lang="en">Accusative plural object.</title>
+      <title xml:lang="smn">Akkusatiiviobjekti myös monikossa.</title>
+    </header>
+    <body>
+      <description xml:lang="en">The noun "$1" is in the nominative, but is probably an object and should be in accusative.</description>
+      <description xml:lang="smn">Substantiivi "$1" on nominatiivissa, mutta se on luultavasti objekti, ja pitäisi siis olla akkusatiivissa.</description>
+    </body>
+  </error>
+
+ 
+  <error id="err-num-gensg">
+    <header>
+      <title xml:lang="en">Accusative plural object.</title>
+      <title xml:lang="smn">Akkusatiiviobjekti myös monikossa.</title>
+    </header>
+    <body>
+      <description xml:lang="en">The noun "$1" is in the nominative, but is probably an object and should be in accusative.</description>
+      <description xml:lang="smn">Jos lukusana on alle 7, niin "$1" pitää olla genetiivissäko?.</description>
+    </body>
+  </error>
+  
+  <error id="err-num-par">
+    <header>
+      <title xml:lang="en">Partitive after high numeral.</title>
+      <title xml:lang="smn">Partitiivi suurten lukujen jälkeen.</title>
+    </header>
+    <body>
+      <description xml:lang="en">The noun "$1" is in the , but is following a numeral and should be in the partitive.</description>
+      <description xml:lang="smn">Jos lukusana on 7 tai enemmän, niin "$1" pitää olla partitiivissa.</description>
+    </body>
+  </error>
+  
+  <error id="err-mii-acc">
+    <header>
+      <title xml:lang="en">Accusative after mii and kii</title>
+      <title xml:lang="smn">Akkusatiivi mii- ja kii-sanojen jälkeen.</title>
+    </header>
+    <body>
+      <description xml:lang="en">The noun "$1" is in the nominative, but is following an interrogative pronoun and should be in the accusative plural.</description>
+      <description xml:lang="smn">Sana "$1" on nominatiivissa, mutta se tulee kysymyssanan jälkeen ja pitäisi ehkä olla monikon akkusatiivissa.</description>
+    </body>
+  </error>
+
+
+  <!-- Typos etc. -->
+  
+  <error id="typo">
+    <header>
+      <title xml:lang="en">Spelling errors</title>
+      <title xml:lang="smn">Čállinmeattáhusat</title>
+    </header>
+    <body>
+      <description xml:lang="en">Not in the dictionary</description>
+      <description xml:lang="smn">Ii leat sátnelisttus</description>
+    </body>
+  </error>
+
+  <error id="double-space-before">
+    <header>
+      <title xml:lang="en">Space errors</title>
+      <title xml:lang="smn">Sátnegaskameattáhusat</title>
+    </header>
+    <body>
+      <description xml:lang="en">There are two spaces in front of "$1"</description>
+      <description xml:lang="smn">Leat guokte gaskka ovdal "$1"</description>
+    </body>
+  </error>
+
+  <error id="space-after-paren-beg">
+    <header>
+      <title xml:lang="en">Space errors</title>
+      <title xml:lang="smn">Sátnegaskameattáhusat</title>
+    </header>
+    <body>
+      <description xml:lang="en">There is a space after the opening parenthesis "$1"</description>
+      <description xml:lang="smn">Lea gaska vuosttaš paragráfa "$1" ovddas</description>
+    </body>
+  </error>
+
+  <error id="space-before-paren-end">
+    <header>
+      <title xml:lang="en">Space errors</title>
+      <title xml:lang="smn">Sátnegaskameattáhusat</title>
+    </header>
+    <body>
+      <description xml:lang="en">There is a space before the closing parenthesis "$1"</description>
+      <description xml:lang="smn">Lea gaska nuppi paragráfa "$1" ovddas</description>
+    </body>
+  </error>
+
+  <error id="space-before-punct-mark">
+    <header>
+      <title xml:lang="en">Space errors</title>
+      <title xml:lang="smn">Sátnegaskameattáhusat</title>
+    </header>
+    <body>
+      <description xml:lang="en">There is a space in front of the punctuation mark "$1"</description>
+      <description xml:lang="smn">Lea gaska "$1" ovddas</description>
+    </body>
+  </error>
+
+  <error id="no-space-after-punct-mark">
+    <header>
+      <title xml:lang="en">Space errors</title>
+      <title xml:lang="smn">Sátnegaskameattáhusat</title>
+    </header>
+    <body>
+      <description xml:lang="en">There is no space after the punctuation mark "$1"</description>
+      <description xml:lang="smn">Ii leat gaska "$1" maŋis</description>
+    </body>
+  </error>
+ 
+</errors>
