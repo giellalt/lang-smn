@@ -1,0 +1,29 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-dict-gt-norm.hfst
+    Morph: ../../../src/analyser-dict-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-dict-gt-norm.xfst
+    Morph: ../../../src/analyser-dict-gt-norm.xfst
+    App: lookup
+
+Tests:
+
+  Noun - kuálus: # ok, MLO 
+    kuálus+N+Sg+Nom: kuálus
+    kuálus+N+Sg+Gen: kuállus
+    kuálus+N+Sg+Acc: kuállus
+    kuálus+N+Sg+Ill: kuálusân
+    kuálus+N+Sg+Loc: kuálusist
+    kuálus+N+Sg+Com: kuálusáin
+    kuálus+N+Sg+Abe: kuállusttáá
+    kuálus+N+Ess:    kuálusin
+    kuálus+N+Par:    kuálusid
+    kuálus+N+Pl+Nom: kuáluseh
+    kuálus+N+Pl+Gen: kuálusij
+    kuálus+N+Pl+Acc: kuálusijd
+    kuálus+N+Pl+Ill: kuálusáid
+    kuálus+N+Pl+Loc: kuálusijn
+    kuálus+N+Pl+Com: [kuálusijguin, kuálusijgijn]
+    kuálus+N+Pl+Abe: kuálusijttáá
+

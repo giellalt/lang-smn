@@ -1,0 +1,62 @@
+# Inari Saami ordinary spellrelax file.
+
+á (->) á,
+Á (->) Á,
+đ (->) ð,
+æ (->) ä, # ditto, etc.
+æ (->) ä,
+Æ (->) Ä,
+Æ (->) Ä,
+ø (->) ö,
+ø (->) ö,
+Ø (->) Ö,
+Ø (->) Ö,
+
+ḥ (->) h,
+ṃ (->) m,
+ṇ (->) n,
+ŋ̣ (->) ŋ,
+ḷ (->) l,
+ṿ (->) v,
+ṣ (->) s,
+ṣ̌ (->) š,
+ṛ (->) r,
+đ̣ (->) đ,	
+j̣ (->) j,	
+
+â (->) â , # combining acute
+Â (->) Â , # combining acute
+å (->) å , # combining ring
+Å (->) Å , # combining ring
+õ (->) õ , # combining tilde
+Õ (->) Õ , # combining tilde
+č (->) č , # combining caron for the precomposed letter
+Č (->) Č , # etc.
+ˊ (->) ′ , # U+02CA MODIFIER LETTER ACUTE ACCENT  written as U+2032 PRIME        
+ˊ (->) ´ , # U+02CA MODIFIER LETTER ACUTE ACCENT  written as U+00B4 ACUTE ACCENT 
+ˊ (->) ʹ , # U+02CA MODIFIER LETTER ACUTE ACCENT  written as U+02B9 MODIFIER LETTERPRIME 
+ˊ (->) ' , # U+02CA MODIFIER LETTER ACUTE ACCENT  written as U+0027 APOSTROPHE   
+ˊ (->) 0 , # U+02CA MODIFIER LETTER ACUTE ACCENT  written as ZERO (not written)   
+Ï (->) I
+;
+
+# Explanation:
+# lexical side (->) input 
+
+# Future thought:
+# A posible change is to split this file into lg-specific files.
+# As the number of language grow, this might be more relevant.
+# Especially conflicting rules a -> b, b -> a in different lgs
+# might force a split of this file.
+
+# Note:
+# Some of the lines above seem to contain identical letters, 
+# and in some cases the same right-hand letter seems to occure twice.
+# In each case, the __second__ of these is a non-precomposed letter.
+# In order to check which one is which one, open this file in emacs
+# and read through the line with the arrow key. The letters who span over
+# two characters (press arrow twice) are the precomposed ones.
+
+# Note that the ï/Ï letters are there for sma.
+# They are probably substandard, and should be relegated to sma.fst
+# but removed from a sma.norm.fst.

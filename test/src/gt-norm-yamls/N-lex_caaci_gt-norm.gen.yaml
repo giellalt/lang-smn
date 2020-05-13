@@ -1,0 +1,82 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-dict-gt-norm.hfst
+    Morph: ../../../src/analyser-dict-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-dict-gt-norm.xfst
+    Morph: ../../../src/analyser-dict-gt-norm.xfst
+    App: lookup
+
+Tests:
+
+  Noun - čääci: # ok
+    čääci+N+Sg+Nom:   čääci
+    čääci+N+Sg+Gen:   čääsi
+    čääci+N+Sg+Acc:   čääsi
+    čääci+N+Sg+Ill:   čáácán
+    čääci+N+Sg+Loc:   čääsist
+    čääci+N+Sg+Com:   čassijn
+    čääci+N+Sg+Abe:   čäsittáá
+    čääci+N+Ess:      čääccin
+    čääci+N+Par:      čääccid
+    čääci+N+Pl+Nom:   čääsih
+    čääci+N+Pl+Gen:  [čaasij, časij]
+    čääci+N+Pl+Acc:   čaasijd
+    čääci+N+Pl+Ill:   čassijd
+    čääci+N+Pl+Loc:   čaasijn
+    čääci+N+Pl+Com:   [časijguin, časijgijn]
+    čääci+N+Pl+Abe:   časijttáá
+
+  Noun - čeeci: # ok
+    čeeci+N+Sg+Nom:   čeeci
+    čeeci+N+Sg+Gen:   čeesi
+    čeeci+N+Sg+Acc:   čeesi
+    čeeci+N+Sg+Ill:   čiäcán
+    čeeci+N+Sg+Loc:  čeesist
+    čeeci+N+Sg+Com:   čessijn
+    čeeci+N+Sg+Abe:   česittáá
+    čeeci+N+Ess:      čeeccin
+    čeeci+N+Par:      čeeccid
+    čeeci+N+Pl+Nom:   čeesih
+    čeeci+N+Pl+Gen:  [čeesij, česij]
+    čeeci+N+Pl+Acc:   čeesijd
+    čeeci+N+Pl+Ill:   čessijd
+    čeeci+N+Pl+Loc:   čeesijn
+    čeeci+N+Pl+Com:   [česijguin, česijgijn]
+    čeeci+N+Pl+Abe:   česijttáá
+           
+  Noun - čielgi: # ok 
+    čielgi+N+Sg+Nom:   čielgi
+    čielgi+N+Sg+Gen:   čielgi
+    čielgi+N+Sg+Acc:   čielgi
+    čielgi+N+Sg+Ill:   čiälgán
+    čielgi+N+Sg+Loc:   čielgist
+    čielgi+N+Sg+Com:   čielgijn
+    čielgi+N+Sg+Abe:   čielgittáá
+    čielgi+N+Ess:      čielgin
+    čielgi+N+Par:      čielgid
+    čielgi+N+Pl+Nom:   čielgih
+    čielgi+N+Pl+Gen:  čielgij
+    čielgi+N+Pl+Acc:   čielgijd
+    čielgi+N+Pl+Ill:   čielgijd # checked with Ilmari Mattus, short diphtong, must be written with 
+    čielgi+N+Pl+Loc:   čielgijn
+    čielgi+N+Pl+Com:   [čielgijguin, čielgijgijn]
+    čielgi+N+Pl+Abe:   čielgijttáá
+
+  Noun - eeči: # ok
+    eeči+N+Sg+Nom:   eeči
+    eeči+N+Sg+Gen:   eeji
+    eeči+N+Sg+Acc:   eeji
+    eeči+N+Sg+Ill:   iäčán
+    eeči+N+Sg+Loc:   eejist
+    eeči+N+Sg+Com:   eijijn
+    eeči+N+Sg+Abe:   ejittáá
+    eeči+N+Ess:      eeččin
+    eeči+N+Par:      eeččid
+    eeči+N+Pl+Nom:   eejih
+    eeči+N+Pl+Gen:  [eejij, ejij]
+    eeči+N+Pl+Acc:   eejijd
+    eeči+N+Pl+Ill:   eijijd
+    eeči+N+Pl+Loc:   eejijn
+    eeči+N+Pl+Com:   [ejijguin, ejijgijn]
+    eeči+N+Pl+Abe:   ejijttáá

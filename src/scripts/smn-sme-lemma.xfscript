@@ -1,0 +1,124 @@
+
+! File to make smn into quasi-sme
+
+! to compile
+! xfst -f smn-sme-lemma.xfscript
+
+! to use:
+! cat list | lookup smnsme.fst
+
+
+
+define Vow  [ a | e | o | u | ä | á | â | y | i ] ;
+define VowNotI  [ a | e | o | u | ä | á | â | y ] ;
+define Cns  [ b | c | d | f | g | h | j | k | l 
+             | m | n | p | r | s | t | v | č | đ 
+             | ŋ | š | ž ] ;
+
+define Sgm  [ Vow | Cns ] ;
+
+define initp  p -> b  || [.#.|h|â] _  ;
+define initt  t -> d  || [.#.|m|â] _  ;
+define initk  k -> g  || [.#.|m|t|h|â] _  ;
+
+define Rulednnn n n -> d n    || Vow _ Vow ;
+define Rulevn   v n -> v d n  || Vow _ Vow ;
+define Rulelm   l m -> l b m  || Vow _ Vow ;
+define Ruleim   i m -> i b m  || Vow _ Vow ;
+define Rulerm   r m -> r b m  || Vow _ Vow ;
+define Rulerv   r v -> r v v  || Vow _ Vow Cns ;
+define Rulemm   m m -> p m    || Vow _ Vow ;
+define Rulehch  h č -> k č    || Vow _ Vow ;
+define Rulehk   h k -> r k    || Vow _ Vow ;
+define Rulest   š t -> i t    || .#. Cns* [Vow - â] _ Vow (Cns) .#. ;
+define Rulesk   š k -> i k    || Vow _ Vow ;
+define Rulept   p t -> k t    || Vow _ Vow ;
+define Ruleps   p s -> k s    || Vow _ Vow ;
+
+define hppttkk   p p -> h p p ,
+                 t t -> h t t ,
+                 k k -> h k k ,
+                 c c -> h c c ,
+                 č č -> h č č 
+                 || Vow _ Vow  ;
+
+define RKK r k k -> r k , r t t -> r t , r p p -> r p ,
+           l k k -> l k , l t t -> l t , l p p -> l p 
+           || Vow _ Vow ;
+
+define aVow [ ä -> á , â -> a ] ;
+
+define uaVow  u á -> o a ;
+define iaVow  i ä -> e a ;
+define yeVow  y e -> u o ;
+
+define finalt [ b | đ | g | p | d | h ] -> t || _ .#. ;
+
+define finalum   u m -> o n || _ .#. ;
+define finalm    m -> n  || _ .#. ;
+define finale    e -> i || _ .#. ;
+
+define aaVow       [ a a | á á ] -> á ;
+define aeaeVow       ä ä -> á ;
+define eeVow     e e -> e a  || .#. Cns*  _ ;
+define ooVow       o o -> o ;
+define uuVow       u u -> u ;
+
+define reducedA â -> a ;
+
+define sufvuota v u o t a -> v u o h t a  || Vow Cns Sgm* _ .#. ;
+define sufiiv   i i v -> i i v a 		  || Vow Cns Sgm* _ .#. ;
+define sufiik   i i k -> i h k k a 		  || Vow Cns Sgm* _ .#. ;
+define sufent   e n t -> e a n t a 		  || Vow Cns Sgm* _ .#. ;
+define sufttit   h t t i t	 -> h i t	  || Vow Cns Sgm* _ .#. ;
+
+define clusters d t -> t t ;                
+
+               
+
+read regex [ 
+initp
+.o. initt
+.o. initk    
+.o. Rulednnn  ! n n -> d n    || Vow _ Vow ;
+.o. Rulevn    ! v n -> v d n  || Vow _ Vow ;
+.o. Rulelm    ! l m -> l b m  || Vow _ Vow ;
+.o. Ruleim     ! i m -> i b m  || Vow _ Vow ;
+.o. Rulerm    ! r m -> r b m  || Vow _ Vow ;
+.o. Rulerv
+.o. Rulemm    ! m m -> p m    || Vow _ Vow ;
+.o. Rulehch   ! h č -> k č    || Vow _ Vow ;
+.o. Rulehk    ! h k -> r k    || Vow _ Vow ;
+.o. Rulest    ! š t -> i t    || Vow _ Vow ;
+.o. Rulesk    ! š k -> i k    || Vow _ Vow ;
+.o. Rulept    ! p t -> k t    || Vow _ Vow ;
+.o. Ruleps    ! p s -> k s    || Vow _ Vow ;
+.o. hppttkk
+.o. RKK
+.o. uaVow
+.o. iaVow
+.o. yeVow
+.o. aVow
+.o. finalt
+.o. finalum
+.o. finalm
+.o. finale
+.o. aaVow
+.o. aeaeVow
+.o. eeVow
+.o. ooVow
+.o. uuVow
+.o. reducedA
+.o. sufvuota   ! v u o t a -> v u o h t a  || Vow Cns Sgm* _ .#. ;
+.o. sufiiv     ! i i v -> i i v a 		  || Vow Cns Sgm* _ .#. ;
+.o. sufiik     ! i i k -> i h k k a 		  || Vow Cns Sgm* _ .#. ;
+.o. sufent     ! e n t -> e a n t a 		  || Vow Cns Sgm* _ .#. ;
+.o. sufttit    !  h t t i t	 -> h i t	  || Vow Cns Sgm* _ .#. ;
+.o. clusters
+] ;
+
+invert net ;
+
+
+save stack smnsme.fst
+

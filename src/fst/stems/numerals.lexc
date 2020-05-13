@@ -1,0 +1,433 @@
+! Divvun & Giellatekno - open source grammars for Sámi and other languages
+! Copyright © 2000-2010 The University of Tromsø & the Norwegian Sámi Parliament
+! http://giellatekno.uit.no & http://divvun.no
+!
+! This program is free software; you can redistribute and/or modify
+! this file under the terms of the GNU General Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version. The GNU General Public License
+! is found at http://www.gnu.org/licenses/gpl.html. It is
+! also available in the file $GTHOME/LICENSE.txt.
+!
+! Other licensing options are available upon request, please contact
+! giellatekno@hum.uit.no or feedback@divvun.no
+
+
+!! !!!Inari Saami numerals
+
+
+
+LEXICON Numeral
+HUNDREDSM ;		! 200M
+čyeti HUNDREDM ;	! 100M
+TENSM ;			! 20-99M
+TEENSM ;		! 10-19M
+ONESM ;			! 1-9M
+HUNDREDST ;		! 200000-999999
+HUNDREDST ;		! 200000-999999
+čyeti  HUNDREDT ;	! 100000-100999
+TENST ;			! 20000-99999,10000-10999
+TEENST ;		! 11000-19999
+ONEST ;			! 2000-9999
+tuhháát  THOUSAND ;	! 1000-1999
+UNDERTHOUSAND ;		! 100-999
+TENS ;			! 20-99
+TEENS ;			! 10-19
+ONES ;			! 1-9
+num-imprecise ;         ! kalle, ...
+MISCNUM ;			! pelnub
+ARABICS          ; ! for the arabic numerals !
+ROMAN           ; ! for the roman numerals  !
+NUM-PREFIXES    ; ! for §34 etc.            !
+ISOLATED-NUMEXP ; ! for ½ etc.                      !
+LOHKAI ;
+
+
+LEXICON HUNDREDSM
+kyehti   CUODIM ;
+kulmâ  CUODIM ;
+nelji  CUODIM ;
+vittâ  CUODIM ;
+kuttâ  CUODIM ;
+čiččâm  CUODIM ;
+käävci  CUODIM ;
+oovce  CUODIM ;
+
+LEXICON CUODIM
+čyeti HUNDREDM ;
+
+LEXICON HUNDREDM
+TENSM ;
+TEENSM ;
+  ONESM ;
+ MILJON ;
+
+LEXICON TEENSM
+  TEENM ;
+
+LEXICON TEENM
+ohtâ:oht^RVâ  LOHKAIM ;
+kyehti  LOHKAIM ;
+kulmâ  LOHKAIM ;
+nelji  LOHKAIM ;
+vittâ+Use/NG:vittâ  LOHKAIM ;
+kuttâ+Use/NG:kuttâ  LOHKAIM ;
+vitt  LOHKAIM ;
+kutt  LOHKAIM ;
+čiččâm  LOHKAIM ;
+käävci  LOHKAIM ;
+oovce  LOHKAIM ;
+
+LEXICON LOHKAIM
+nubáloh MILJON ;
+
+LEXICON TENSM
+love  MILJON ;
+kyehti  LOGIM ;
+kulmâ  LOGIM ;
+nelji  LOGIM ;
+vittâ  LOGIM ;
+kuttâ  LOGIM ;
+čiččâm  LOGIM ;
+käävci  LOGIM ;
+oovce  LOGIM ;
+
+LEXICON LOGIM
+love  MILJON ;
+love ONESM ;
+
+LEXICON ONESM
+miljon%   OVERTHOUSANDS ;
+kyehti  MILJON ;
+kulmâ  MILJON ;
+nelji  MILJON ;
+vittâ  MILJON ;
+kuttâ  MILJON ;
+čiččâm  MILJON ;
+käävci  MILJON ;
+oovce  MILJON ; 
+
+LEXICON MILJON
+% miljona%  OVERTHOUSANDS ;
+
+! =================
+! Under the million
+! =================
+
+LEXICON OVERTHOUSANDS
+HUNDREDST ;		! x00.000.000
+čyeđe  HUNDREDT ;	! 100.000.000
+  TENST ;		!  20.000.000
+  TEENST ;		!  10.000.000
+  TWOST ;		!   2.000.000
+  SEVENST ;		!   7.000.000
+tuhháát THOUSAND ;	!   1.000.000
+ UNDERTHOUSAND ;	
+  TENS ;
+  TEENS ;
+  ONES ;
+  num ;	!  x000000
+
+
+LEXICON HUNDREDST
+kyehti   TWOCUODIT ;	! 200000-299999
+kulmâ  TWOCUODIT ;	! 300000-399999
+nelji  TWOCUODIT ;	! 400000-499999
+vittâ  TWOCUODIT ;	! 500000-599999
+kuttâ  TWOCUODIT ;	! 600000-699999
+čiččâm  SEVENCUODIT ;	! 700000-799999
+käävci  SEVENCUODIT ;	! 800000-899999
+oovce  SEVENCUODIT ;	! 900000-999999
+
+LEXICON TWOCUODIT
+čyeđe  HUNDREDT ;	! 100000-199999
+
+LEXICON SEVENCUODIT
+čyeđe HUNDREDT ;
+
+LEXICON HUNDREDT	! X = 1-9, Y = 0-9
+TENST ;			! X2XYYY, X10YYY
+TEENST ;		! X1XYYY
+ohtâ:oht^RVâ TWOTHOUSANDS ; ! Same tuhháát as 2000
+  ONEST ;		! XX0YYY
+ THOUSANDS ;	! X00YYY
+
+LEXICON TEENST
+  TEENT ;
+
+LEXICON TEENT
+love  THOUSANDS ;
+ohtâ:oht^RVâ  LOHKAIT ;
+kyehti  LOHKAIT ;
+kulmâ  LOHKAIT ;
+nelji  LOHKAIT ;
+vitt  LOHKAIT ;
+vittâ+Use/NG:vittâ  LOHKAIT ;
+kutt  LOHKAIT ;
+kuttâ+Use/NG:kuttâ  LOHKAIT ;
+čiččâm  LOHKAIT ;
+käävci  LOHKAIT ;
+oovce  LOHKAIT ;
+
+LEXICON LOHKAIT
+nubáloh THOUSANDS ;
+
+LEXICON TENST
+muádlov:muád#lov  LOGIT ;
+maŋgâlov:maŋgâ#lov LOGIT ;
+muáddilov+Use/NG:muáddi#lov  LOGIT ;
+kyehtlov:kyeht#lov  LOGIT ;
+kulmâlov:kulmâ#lov  LOGIT ;
+kulmlov+Use/NG:kulm#lov  LOGIT ;
+neljilov:nelji#lov  LOGIT ;
+vittlov:vitt#lov  LOGIT ;
+vittlov+Use/NG:vittâ#lov  LOGIT ;
+kuttlov:kutt#lov  LOGIT ;
+čiččâmlov:čiččâm#lov  LOGIT ;
+kähcilov:kähci#lov  LOGIT ;
+ohcelov:ohce#lov  LOGIT ;
+
+LEXICON LOGIT
+  THOUSANDS ;
+ohtâ:oht^RVâ  THOUSANDS ;
+ONEST ;
+
+LEXICON ONEST
+TWOST ;			! 2000-6999
+SEVENST ;               ! 7000-9999
+
+LEXICON THOUSANDS
+tuhháát  THOUSAND ;    ! 1000-1999
+
+LEXICON TWOST
+kyeht  TWOTHOUSANDS ;
+kulmâ  TWOTHOUSANDS ;
+nelji  TWOTHOUSANDS ;
+vittâ  TWOTHOUSANDS ;
+kuttâ  TWOTHOUSANDS ;
+
+LEXICON SEVENST
+čiččâm  SEVENTHOUSANDS ;
+käävci  SEVENTHOUSANDS ;
+oovce  SEVENTHOUSANDS ;
+
+LEXICON TWOTHOUSANDS      ! 2000 - 6999
+tuhháát THOUSAND ;
+
+LEXICON SEVENTHOUSANDS ! 7000 - 9999
+tuhháát THOUSAND ;
+
+
+LEXICON THOUSAND
+UNDERTHOUSAND ;	   ! 1100-1999
+  TENS ;	   ! 1020-1099
+  TEENS ;	   ! 1010-1019
+  ONES ;	   ! 1001-1009
++Num:  X_POTTAAK ;	   ! 1000
+
+!===========================
+!Here starts the 999 numbers
+!===========================
+
+LEXICON UNDERTHOUSAND
+SEVENHUNDREDS ;
+TWOHUNDREDS ;
+čyeti:čyet^RCi3  HUNDRED ;
+čyeti+Use/NG+Num+Sg+Gen:čyet  K ;
+
+
+LEXICON SEVENHUNDREDS ! 700-900 with +Par
+čiččâm  SEVENCUODI ;
+käävci  SEVENCUODI ;
+ohce  SEVENCUODI ;
+
+LEXICON TWOHUNDREDS ! 200-699 with +Acc
+kyehti  CUODI ;
+kyeht+Use/NG:kyeht  CUODI ;
+kulmâ  CUODI ;
+kulm+Use/NG:kulm  CUODI ;
+nelji  CUODI ;
+vittâ  CUODI ;
+vitt+Use/NG:vitt  CUODI ;
+vit+Use/NG:vit  CUODI ;
+kuttâ  CUODI ;
+kutt+Use/NG:kutt  CUODI ;
+kut+Use/NG:kut  CUODI ;
+
+LEXICON SEVENCUODI ! 700-900 with +Par
+čyeđe HUNDRED ;
+čyet HUNDRED ;
+
+LEXICON CUODI ! 200-699 with +Acc
+čyeđe HUNDRED ;
+čyet HUNDRED ;
+
+LEXICON HUNDRED
+TENS ;
+TEENS ;
+  ONES ;
+ CYETI ;
+
+LEXICON TEENS
+  TEEN ;
+
+LEXICON TEEN
+oht LOHKAI ;
+ohtâ LOHKAI ;
+kyeht LOHKAI ;
+kyehti LOHKAI ;
+kulmâ LOHKAI ;
+kulm:kulm LOHKAI ;
+nelji LOHKAI ;
+vitt LOHKAI ;
+vitt+Use/NG:vittâ LOHKAI ;
+vit:vit LOHKAI ;
+kutt LOHKAI ;
+kuttâ LOHKAI ;
+kut:kut LOHKAI ;
+čiččâm LOHKAI ;
+käävci LOHKAI ;
+oovce LOHKAI ;
+
+
+LEXICON LOHKAI
+nubáloh:nubá# NUBALOH ;
+nubáloh+Err/Orth:nuba# NUBALOH ;
+ LOGAAT ;
+
+LEXICON LOGAAT
+nubálovváád+A+Ord:nubá#lovváád  X_EEMEED ; 
+
+LEXICON TENS
+lovváád+A+Ord:lovváád X_EEMEED ; 
+kyeht:kyeht^RC LOGIi ;
+!kyehti LOGI ;
+!kulm+Use/NG:kulm LOGI ;
+kulmâ:ku^RVlmâ LOGI ;
+nelji:ne^RVlji LOGI ;
+vitt:vi LOGItt ;
+kutt:ku LOGItt ;
+čiččâm:čičč5âm LOGIm ;
+kähci:kä^RVhc^RCi LOGIhc ;
+ohce:o^RVhc^RCe LOGIhc ;
+ohce:ohc^RCe oohceLOGIhc ;
+muádi:muádi LOGI ;
+muádi:muádd LOGI ;
+muádlov:muád#  iLOV ;
+
+LEXICON LOGIi
+love: iLOVE ;
+lov: iLOV ;
+lov ONES ;
+
+LEXICON LOGIhc
+love: hcLOVE ;
+lov: hcLOV ;
+lov ONES ;
+
+LEXICON oohceLOGIhc
+lov+Num+Sg+Ill:^WG^RLEN%>lohá%>n K ; ! ovcelohán
+lov+Num+Sg+Loc:^WG^RLEN%>lovve%>est K ; ! ovcelovveest
+
+
+
+LEXICON LOGItt
+love: ttLOVE ;
+lov: ttLOV ;
+lov ONES ;
+
+
+LEXICON LOGI
+love: plussLOVE ;
+lov: LOV ;
+lov ONES ;
+
+LEXICON LOGIm
+love: mLOVE ;
+lov: mLOV ;
+lov ONES ;
+
+
+LEXICON ONES
+CARDINAL ;
+ORDINAL ;
+
+LEXICON CARDINAL
+ohtâ:o^RVht^RCâ OHTA ;
+kyehti:kyeht^RCi KYEHTI ;
+kulmâ:ku^RVlmâ KULMA ;
+nelji:ne^RVlji KYEHTI ;
+vittâ:vi^RVtt4â VITTA ;
+kuttâ:ku^RVtt4â VITTA ;
+čiččâm:čiččâm CICCAM ;
+käävci:käävc^RCi KYEHTI ;
+oovce:oovc^RCe KYEHTI ;
+love: LOVE ;
+
+
+
+
+LEXICON MISCNUM 			
+pelnub:pel#nub num ;
+lakknub:lakk#nub num ;
+pelnubčyet:pel#nub#čyet num ;
+pelnubčyeđe:pel#nub#čyeđe num ;
+maŋgâ:ma^RVŋgâ KULMA ;
+maŋgâčyet:ma^RVŋgâ#čyet CYETI ;
+muáddičyet:muáddi#čyet CYETI ;
+maŋgâlov:ma^RVŋgâ# LOV ;
+muáddilov:muáddi# LOV ;
+muáddi:muáddi KYEHTI ;
+miljovn+Num:miljovn X_LITTER ;
+muáddituhháát+Num:muáddi#tuhháát X_POTTAAK ;
+
+
+
+LEXICON ARABICCOMPOUNDS   !!≈ * __@CODE@__   arabic as first part, 
+ +Cmp/Hyph+Cmp#:»»»- SASCont ;
+ +Cmp/Hyph+Der+Der/ahasas:-ahas ANOLASJ  ;
+ +Cmp/Hyph+Cmp#:»»»- NAMAG ;
+! +Cmp/Hyph+Cmp#:»»»- SAS ;
+
+! :-  NAMAT ;            ! 10-jienat, etc. NAMAT derivs are
+!                    ! treated as compounds and excluded from the nonrec
+!                    ! variants, otherwise the PLX lexicon size explodes
+!+Cmp/Hyph+Cmp#:-»»# SASCont ; !6-jahkásaš
++Use/NG: RHyph ; ! 3-
+  
+
+LEXICON NUMERALCOMPOUNDS !!≈ * __@CODE@__: numeral as first part: duhatjienat,
+!                         !!  logigielat, etc.
+!         NAMAT ; ! duhatjienat, logigielat, etc. NAMAT derivs are
+!                 ! treated as compounds and excluded from the nonrec
+!                 ! variants, otherwise the PLX lexicon size explodes
+! SAS ; !viđajahkásaš
+
+! +Der+Der/ihasas:ihás ANOLASJ  ;
++Cmp#:»»»# NAMAG ;
++Cmp#:»»»#  SAS  ;
+
++Use/NG: RHyph ; ! golmma-
+
+
+LEXICON ORDINAL		   
+vuossâmuš+A+Superl:vuossâ MUSj-SUF ; !sme has not Ord for this
+vuosmuš+A+Ord:vuos MUSj-SUF "ensimmäinen" ;	!¢vuosmuin, vuosmust, vuosmui, vuosmuš   !MUSj-SUF gives vuosmuust
+vuosmuš+A+Ord+Err/Orth:vuoss MUSj-SUF "ensimmäinen" ;	!
+nubbe+A+Ord:nu^RVbbe  nubbecase ;		   
+kuálmád+A+Ord:kuálmád ORDINALInfl ;	   
+niäljád+A+Ord:niäljád ORDINALInfl ;	   
+viiđâd+A+Ord:viiđâd ORDINALInfl ;		   
+kuuđâd+A+Ord:kuuđâd ORDINALInfl ;		   
+čiččâd+A+Ord:čičč5âd CICCADInfl ;	   
+káávcád+A+Ord:káávcád ORDINALInfl ;	   
+oovcád+A+Ord:oovcád ORDINALInfl ;	
+kallaad+A+Ord:kallaad X_EEMEED ;
+   
+
+
+
+
+
+
+

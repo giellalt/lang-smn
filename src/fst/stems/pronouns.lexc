@@ -1,0 +1,840 @@
+! Divvun & Giellatekno - open source grammars for Sámi and other languages
+! Copyright © 2000-2010 The University of Tromsø & the Norwegian Sámi Parliament
+! http://giellatekno.uit.no & http://divvun.no
+!
+! This program is free software; you can redistribute and/or modify
+! this file under the terms of the GNU General Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version. The GNU General Public License
+! is found at http://www.gnu.org/licenses/gpl.html. It is
+! also available in the file $GTHOME/LICENSE.txt.
+!
+! Other licensing options are available upon request, please contact
+! giellatekno@hum.uit.no or feedback@divvun.no
+
+!! !!!Pronouns for Inari Saami
+!     ========
+
+! Pointing to all the pronominal subgroups
+
+LEXICON Pronoun !!= * __@CODE@__
+Personal ;
+Demonstrative ;
+Reflexive ;
+Reciprocal ;
+Interrogative ;
+! Relative ;
+Indefinite ;
+
+
+!! !!Personal pronouns
+! -----------------
+
+LEXICON Personal !!= * __@CODE@__
+mun+Pron+Pers+Sg1:mu perspronsg ;
+tun+Pron+Pers+Sg2:tu perspronsg ;
+sun+Pron+Pers+Sg3:su perspronsg ;
+mun+Pron+Pers+Du1:mu persprondu ;
+tun+Pron+Pers+Du2:tu persprondu ;
+sun+Pron+Pers+Du3:su persprondu ;
+mun+Pron+Pers+Pl1:mi perspronpl ;
+tun+Pron+Pers+Pl2:ti perspronpl ;
+sun+Pron+Pers+Pl3:si perspronpl ;
+
+
+LEXICON perspronsg !!= * __@CODE@__ with contlex K and not G (munge)
++Nom:n	K ;
++Gen:u	      K ;
++Acc:u	      K ;
++Ill:njin	      K ;
++Loc:st	          K ;
++Loc+Use/NG:ste	      K ;
++Com:in	          K ;
++Com+Use/NG:uin	      K ;
++Abe:uttáá	      K ;
++Ess:nen	      K ;
++Par:đe	      K ;
+
+LEXICON persprondu !!= * __@CODE@__
++Nom:oi	K ;
++Nom+Use/NG:ái	K ;
++Gen:nnuu	      K ;
++Acc:nnuu	      K ;
++Ill:nnui	      K ;
++Ill+Err/Orth:nnuid	      K ;
++Loc:nnust	      K ;
++Com:nnuin	      K ;
++Com+Use/NG:nnuuin	      K ; !^NG^
++Abe:nnuuttáá      K ;
++Ess:nnun	      K ;
++Par:nnud	      K ;
+
+LEXICON perspronpl !!= * __@CODE@__
++Nom:j	K ;
++Gen:i	      K ;
++Acc:i	      K ;
++Ill:jjân	      K ;
++Loc:st	      K ;
++Loc+Use/NG:ste	      K ;
++Com:iguin	      K ;
++Com+Use/NG:igijn	      K ;
++Abe:ittáá	      K ;
++Ess:nen	      K ;
++Par:đe	      K ;
+
+
+
+!! !! Demonstrative pronouns
+! ----------------------
+
+LEXICON Demonstrative !!= * __@CODE@__
+tot+Pron+Dem:	TOT ;
+tiedot+Pron+Dem:	TOT ;
+tuot+Pron+Dem:	TUOT ;
+tiet+Pron+Dem:	TIET ;
+taat+Pron+Dem: TAAT ;
+táát+Pron+Dem: TAEAET ;
+tieggáár+Pron+Dem:tieggáár MOTTOOM ;
+tyeggáár+Pron+Dem:tyeggáár MOTTOOM ;
+tuoggáár+Pron+Dem:tuoggáár MOTTOOM ;
+tuággáár+Pron+Dem:tuággáár MOTTOOM ;
+taggaar+Pron+Dem:taggaar MOTTOOM "semmoinen" ;
+tággáár+Pron+Dem:tággáár MOTTOOM ;
+
+
+LEXICON TIET !!= * __@CODE@__
+:tie TI-TUO ;  
+:tie TA ;
++Sg+Ill:ties	K ;
++Sg+Com:tiein	K ;
+
+LEXICON TOT !!= * __@CODE@__
+:to	TI-TUO ;
+:ta	TA ;
++Sg+Com+Use/NG:tooin	K ;
++Pl+Ill+Use/NG:tooid	K ;
++Sg+Ill+Use/NG:tos K ; ! XXX check
++Sg+Ill:toos	K ;
+!+Pl+Ill:tooid K ;
+
+LEXICON TUOT !!= * __@CODE@__
+:tuo	TI-TUO ;
+:tye	TYE ;
++Sg+Ill:tuos	K ;
++Sg+Com+Use/NG:tuooin	K ;
++Pl+Ill+Use/NG:tuooid	K ;
+
+
+LEXICON TI-TUO !!= * __@CODE@__
++Sg+Nom:t	K ;
++Sg+Gen:n	K ;
++Sg+Ill+Attr:n	K ;
++Sg+Loc+Attr:n	K ;
++Sg+Acc:m	K ;
++Sg+Com:in K ;
++Sg+Abe:nttáá	K ;
++Pl+Nom:h	K ;
++Pl+Gen:i5	K ;
++Pl+Com+Attr:i5	K ;
++Pl+Ill:id	K ; ! tot > toid, tiet > tieid
++Pl+Com:iguin	K ;
++Pl+Com+Use/NG:igijn	K ;
++Pl+Abe:ittáá	K ;
+
+LEXICON TA !!= * __@CODE@__
++Sg+Loc:st	K ;
++Ess:nen	K ;
++Par:đe	K ;
++Pl+Acc:id	K ; ! tot > taid, tiet > tieid
++Pl+Loc:in	K ;
+
+LEXICON TYE !!= * __@CODE@__
++Sg+Loc:st	K ;
++Sg+Ess:nen	K ;
++Sg+Par:đe	K ;
++Pl+Acc+Use/NG:id	K ;
++Pl+Loc:in	K ;
+
+
+LEXICON TAAT
++Sg+Nom:taat	K ;
++Sg+Gen:taan	K ;
++Sg+Ill+Attr:taan	K ;
++Sg+Loc+Attr:taan	K ;
++Sg+Acc:taam	K ;
+!+Sg+Acc:taan	K ;
++Sg+Ill:taas K ;
++Sg+Loc:täst K ;
++Sg+Com:tain	K ;
++Sg+Abe:taanttáá	K ;
++Ess:tänen K ;
++Par:täđe K ;
++Pl+Nom:taah	K ;
++Pl+Nom+Err/Orth:tah	K ;
++Pl+Gen:tai	K ;
++Pl+Com+Attr:tai	K ;
++Pl+Acc:täid K ;
++Pl+Ill:taid	K ;
++Pl+Loc:täin K ;
++Pl+Loc+Err/Orth:táin K ;
++Pl+Com:taiguin	K ;
++Pl+Com+Use/NG:taigijn	K ;
++Pl+Com+Attr:tai	K ;
++Pl+Abe:taittáá	K ;
+
+
+
+LEXICON TAEAET
++Sg+Nom:táát	K ;
++Sg+Gen:táán	K ;
++Sg+Ill+Attr:táán	K ;
++Sg+Loc+Attr:táán	K ;
++Sg+Acc:táám	K ;
+!+Sg+Acc:táán	K ;
++Sg+Ill:táás K ;
++Sg+Loc:täst K ;
++Sg+Com:táin	K ;
++Sg+Abe:táánttáá	K ;
++Ess:tänen K ;
++Par:täđe K ;
++Pl+Nom:tááh	K ;
++Pl+Gen:táái	K ;
++Pl+Com+Attr:tái	K ;
++Pl+Acc:täid K ;
++Pl+Ill:tááid	K ;
++Pl+Ill+Use/NG:táid	K ;
++Pl+Loc:täin K ;
++Pl+Loc+Err/Orth:táin K ;
++Pl+Com:táiguin	K ;
++Pl+Com+Use/NG:táigijn	K ;
++Pl+Com+Attr:tái	K ;
++Pl+Abe:táittáá	K ;
+
+
+
+!! !!Reflexive pronouns
+! ------------------
+
+LEXICON Reflexive !!= * __@CODE@__
+jieš+Pron+Refl+Sg+Nom:jieš K ; 
+jieš+Pron+Refl+Du+Nom:jiejah K ; 
+jieš+Pron+Refl+Pl+Nom:jiejah K ; 
+jieš+Pron+Refl+Du+Nom+Use/NG:jieijah K ; 
+jieš+Pron+Refl+Pl+Nom+Use/NG:jieijah K ; 
+
+jieš+Pron+Refl+Gen+PxSg1:jieččân K ; 
+jieš+Pron+Refl+Acc+PxSg1:jieččân K ; 
+jieš+Pron+Refl+Ill+PxSg1:olssân K ; 
+jieš+Pron+Refl+Loc+PxSg1:alnaan K ; 
+jieš+Pron+Refl+Loc+PxSg1+Use/NG:alnestân K ; 
+jieš+Pron+Refl+Com+PxSg1:jieijâinân K ; 
+jieš+Pron+Refl+Ess+PxSg1:jiečânân K ; 
+ 
+jieš+Pron+Refl+Gen+PxDu1:jieččân K ; 
+jieš+Pron+Refl+Acc+PxDu1:jieččân K ; 
+jieš+Pron+Refl+Ill+PxDu1:olssân K ; 
+jieš+Pron+Refl+Loc+PxDu1:alnaan K ; 
+jieš+Pron+Refl+Loc+PxDu1+Use/NG:alnestân K ; 
+jieš+Pron+Refl+Com+PxDu1:jieijâinân K ; 
+jieš+Pron+Refl+Ess+PxDu1:jiečânân K ; 
+
+jieš+Pron+Refl+Gen+PxPl1:jieččân K ; 
+jieš+Pron+Refl+Acc+PxPl1:jieččân K ; 
+jieš+Pron+Refl+Ill+PxPl1:olssân K ; 
+jieš+Pron+Refl+Loc+PxPl1:alnaan K ; 
+jieš+Pron+Refl+Loc+PxPl1+Use/NG:alnestân K ; 
+jieš+Pron+Refl+Com+PxPl1:jieijâinân K ; 
+jieš+Pron+Refl+Ess+PxPl1:jiečânân K ; 
+ 
+ 
+jieš+Pron+Refl+Gen+PxSg2:jieijâd K ; 
+jieš+Pron+Refl+Acc+PxSg2:jieijâd K ; 
+jieš+Pron+Refl+Acc+PxSg2+Use/NG:jieččâd K ; 
+jieš+Pron+Refl+Ill+PxSg2:olssâd K ; 
+jieš+Pron+Refl+Loc+PxSg2:alnaad K ;
+jieš+Pron+Refl+Loc+PxSg2+Use/NG:alnestâd K ;
+jieš+Pron+Refl+Com+PxSg2:jieijâinâd K ;
+jieš+Pron+Refl+Ess+PxSg2:jiečânâd K ; 
+
+jieš+Pron+Refl+Gen+PxDu2:jieijâd K ; 
+jieš+Pron+Refl+Acc+PxDu2:jieijâd K ; 
+jieš+Pron+Refl+Acc+PxDu2+Use/NG:jieččâd K ; 
+jieš+Pron+Refl+Ill+PxDu2:olssâd K ; 
+jieš+Pron+Refl+Loc+PxDu2:alnaad K ;
+jieš+Pron+Refl+Loc+PxDu2+Use/NG:alnestâd K ;
+jieš+Pron+Refl+Com+PxDu2:jieijâinâd K ;
+jieš+Pron+Refl+Ess+PxDu2:jiečânâd K ; 
+
+jieš+Pron+Refl+Gen+PxPl2:jieijâd K ; 
+jieš+Pron+Refl+Acc+PxPl2:jieijâd K ; 
+jieš+Pron+Refl+Acc+PxPl2+Use/NG:jieččâd K ; 
+jieš+Pron+Refl+Ill+PxPl2:olssâd K ; 
+jieš+Pron+Refl+Loc+PxPl2:alnaad K ;
+jieš+Pron+Refl+Loc+PxPl2+Use/NG:alnestâd K ;
+jieš+Pron+Refl+Com+PxPl2:jieijâinâd K ;
+jieš+Pron+Refl+Ess+PxPl2:jiečânâd K ; 
+
+
+jieš+Pron+Refl+Gen+PxSg3:jieijâs K ; 
+jieš+Pron+Refl+Acc+PxSg3:jieijâs K ; 
+jieš+Pron+Refl+Gen+PxSg3+Err/Orth:jiejâs K ; 
+jieš+Pron+Refl+Acc+PxSg3+Err/Orth:jiejâs K ; 
+jieš+Pron+Refl+Ill+PxSg3:olssis K ; 
+jieš+Pron+Refl+Loc+PxSg3+Use/NG:alnees K ; 
+jieš+Pron+Refl+Loc+PxSg3:alnestis K ;
+jieš+Pron+Refl+Com+PxSg3:jieijâinis K ; 
+jieš+Pron+Refl+Ess+PxSg3:jiečânis K ; 
+
+jieš+Pron+Refl+Gen+PxDu3:jieijâs K ; 
+jieš+Pron+Refl+Acc+PxDu3:jieijâs K ; 
+jieš+Pron+Refl+Gen+PxDu3+Err/Orth:jiejâs K ; 
+jieš+Pron+Refl+Acc+PxDu3+Err/Orth:jiejâs K ; 
+jieš+Pron+Refl+Ill+PxDu3:olssis K ; 
+jieš+Pron+Refl+Loc+PxDu3+Use/NG:alnees K ; 
+jieš+Pron+Refl+Loc+PxDu3:alnestis K ;
+jieš+Pron+Refl+Com+PxDu3:jieijâinis K ; 
+jieš+Pron+Refl+Ess+PxDu3:jiečânis K ; 
+
+jieš+Pron+Refl+Gen+PxPl3:jieijâs K ; 
+jieš+Pron+Refl+Acc+PxPl3:jieijâs K ; 
+jieš+Pron+Refl+Gen+PxPl3+Err/Orth:jiejâs K ; 
+jieš+Pron+Refl+Acc+PxPl3+Err/Orth:jiejâs K ; 
+jieš+Pron+Refl+Ill+PxPl3:olssis K ; 
+jieš+Pron+Refl+Loc+PxPl3+Use/NG:alnees K ; 
+jieš+Pron+Refl+Loc+PxPl3:alnestis K ;
+jieš+Pron+Refl+Com+PxPl3:jieijâinis K ; 
+jieš+Pron+Refl+Ess+PxPl3:jiečânis K ; 
+
+
+!! !!Reciprocal pronouns
+! ------------------
+
+LEXICON Reciprocal !!= * __@CODE@__
+
+!kyeimi+Pron+Recipr+Attr:kyeimi # ;
+kuábáš-uv% kyeimi+Pron+Recipr+Sg+Gen+PxDu1:kuábáš-uv% kuáimán # ; !
+kyeimi% kyeimi+Pron+Recipr+Sg+Gen+PxPl1:kyeimi% kuáimán # ; !kyeimi kuáimán
+kuábáš-uv% kyeimi+Pron+Recipr+Sg+Acc+PxDu1:kuábáš-uv% kuáimán # ; !kuábáš-uv kyeimis
+kyeimi% kyeimi+Pron+Recipr+Sg+Acc+PxPl1:kyeimi% kuáimán # ;
+kuábáš-uv% kyeimi+Pron+Recipr+Sg+Ill+PxDu1:kuábáš-uv% kuáimásân # ; !kyeimi kuáimásân
+kyeimi% kyeimi+Pron+Recipr+Sg+Ill+PxPl1:kyeimi% kuáimásân # ;
+kuábáš-uv% kyeimi+Pron+Recipr+Sg+Loc+PxDu1:kuábáš-uv% kyeimistân # ; !kuábáš-uv kyeimistân
+kyeimi% kyeimi+Pron+Recipr+Sg+Loc+PxPl1:kyeimi% kyeimistân # ;
+kuábáš-uv% kyeimi+Pron+Recipr+Sg+Com+PxDu1:kuábáš-uv% kuoimijnân # ;
+kyeimi% kyeimi+Pron+Recipr+Sg+Com+PxPl1:kyeimi% kuoimijnân # ;
+
+kuábáš-uv% kyeimi+Pron+Recipr+Pl+Acc+PxDu1:kuábáš-uv% kuoimijdân # ; ! 
+kyeimi% kyeimi+Pron+Recipr+Pl+Acc+PxPl1:kyeimi% kuoimijdân # ; !
+kuábáš-uv% kyeimi+Pron+Recipr+Pl+Gen+PxDu1:kuábáš-uv% kuoimijdân # ; ! 
+kyeimi% kyeimi+Pron+Recipr+Pl+Gen+PxPl1:kyeimi% kuoimijdân # ; !
+kuábáš-uv% kyeimi+Pron+Recipr+Pl+Ill+PxDu1:kuábáš-uv% kuoimijdasân # ; !
+kyeimi% kyeimi+Pron+Recipr+Pl+Ill+PxPl1:kyeimi% kuoimijdasân # ; !
+v% kyeimi+Pron+Recipr+Pl+Loc+PxDu1:kuábáš-uv% kuoimijnân # ; !
+kyeimi% kyeimi+Pron+Recipr+Pl+Loc+PxPl1:kyeimi% kuoimijnân # ; !
+kuábáš-uv% kyeimi+Pron+Recipr+Pl+Com+PxDu1:kuábáš-uv% kuoimijdânguin # ; !
+kyeimi% kyeimi+Pron+Recipr+Pl+Com+PxPl1:kyeimi% kuoimijdânguin # ; !
+kuábáš-uv% kyeimi+Pron+Recipr+Pl+Com+PxDu1+Use/NG:kuábáš-uv% kuoimijdângijn # ; !
+kyeimi% kyeimi+Pron+Recipr+Pl+Com+PxPl1+Use/NG:kyeimi% kuoimijdângijn # ; !
+
+kuábáš-uv% kyeimi+Pron+Recipr+Sg+Acc+PxDu2:kuábáš-uv% kuáimád # ;
+kyeimi% kyeimi+Pron+Recipr+Sg+Acc+PxPl2:kyeimi% kuáimád # ;
+kuábáš-uv% kyeimi+Pron+Recipr+Sg+Gen+PxDu2:kuábáš-uv% kuáimád # ;
+kyeimi% kyeimi+Pron+Recipr+Sg+Gen+PxPl2:kyeimi% kuáimád # ;
+kuábáš-uv% kyeimi+Pron+Recipr+Sg+Ill+PxDu2:kuábáš-uv% kuáimásâd # ;
+kyeimi% kyeimi+Pron+Recipr+Sg+Ill+PxPl2:kyeimi% kuáimásâd # ;
+kuábáš-uv% kyeimi+Pron+Recipr+Sg+Loc+PxDu2:kuábáš-uv% kyeimistâd # ;
+kyeimi% kyeimi+Pron+Recipr+Sg+Loc+PxPl2:kyeimi% kyeimistâd # ;
+kuábáš-uv% kyeimi+Pron+Recipr+Sg+Com+PxDu2:kuábáš-uv% kuoimijnâd # ;
+kyeimi% kyeimi+Pron+Recipr+Sg+Com+PxPl2:kyeimi% kuoimijnâd # ;
+
+kuábáš-uv% kyeimi+Pron+Recipr+Pl+Acc+PxDu2:kuábáš-uv% kuoimijdâd # ; ! 
+kyeimi% kyeimi+Pron+Recipr+Pl+Acc+PxPl2:kyeimi% kuoimijdâd # ; !
+kuábáš-uv% kyeimi+Pron+Recipr+Pl+Gen+PxDu2:kuábáš-uv% kuoimijdâd # ; ! 
+kyeimi% kyeimi+Pron+Recipr+Pl+Gen+PxPl2:kyeimi% kuoimijdâd # ; !
+kuábáš-uv% kyeimi+Pron+Recipr+Pl+Ill+PxDu2:kuábáš-uv% kuoimijdasâd # ; !
+kyeimi% kyeimi+Pron+Recipr+Pl+Ill+PxPl2:kyeimi% kuoimijdasâd # ; !
+kuábáš-uv% kyeimi+Pron+Recipr+Pl+Loc+PxDu2:kuábáš-uv% kuoimijnâd # ; !
+kyeimi% kyeimi+Pron+Recipr+Pl+Loc+PxPl2:kyeimi% kuoimijnâd # ; !
+kuábáš-uv% kyeimi+Pron+Recipr+Pl+Com+PxDu2:kuábáš-uv% kuoimijdâdguin # ; !
+kyeimi% kyeimi+Pron+Recipr+Pl+Com+PxPl2:kyeimi% kuoimijdâdguin # ; !
+kuábáš-uv% kyeimi+Pron+Recipr+Pl+Com+PxDu2+Use/NG:kuábáš-uv% kuoimijdâdgijn # ; !
+kyeimi% kyeimi+Pron+Recipr+Pl+Com+PxPl2+Use/NG:kyeimi% kuoimijdâdgijn # ; !
+
+kuábáš-uv% kyeimi+Pron+Recipr+Sg+Acc+PxDu3:kuábáš-uv% kyeimis # ;
+kyeimi% kyeimi+Pron+Recipr+Sg+Acc+PxPl3:kyeimi% kyeimis # ;
+kuábáš-uv% kyeimi+Pron+Recipr+Sg+Gen+PxDu3:kuábáš-uv% kyeimis # ;
+kyeimi% kyeimi+Pron+Recipr+Sg+Gen+PxPl3:kyeimi% kyeimis # ;
+kuábáš-uv% kyeimi+Pron+Recipr+Sg+Ill+PxDu3:kuábáš-uv% kuáimásis # ; !kyeimi kuáimásis
+kyeimi% kyeimi+Pron+Recipr+Sg+Ill+PxPl3:kyeimi% kuáimásis # ;
+kuábáš-uv% kyeimi+Pron+Recipr+Sg+Loc+PxDu3:kuábáš-uv% kyeimistis # ;
+kyeimi% kyeimi+Pron+Recipr+Sg+Loc+PxPl3:kyeimi% kyeimistis # ;
+kuábáš-uv% kyeimi+Pron+Recipr+Sg+Com+PxDu3:kuábáš-uv% kuoimijnis # ;
+kyeimi% kyeimi+Pron+Recipr+Sg+Com+PxPl3:kyeimi% kuoimijnis # ; !kyeimi kuoimijnis
+
+kuábáš-uv% kyeimi+Pron+Recipr+Pl+Acc+PxDu3:kuábáš-uv% kuoimijdis # ; 
+kyeimi% kyeimi+Pron+Recipr+Pl+Acc+PxPl3:kyeimi% kuoimijdis # ; 
+kuábáš-uv% kyeimi+Pron+Recipr+Pl+Gen+PxDu3:kuábáš-uv% kuoimijdis # ; 
+kyeimi% kyeimi+Pron+Recipr+Pl+Gen+PxPl3:kyeimi% kuoimijdis # ; 
+kuábáš-uv% kyeimi+Pron+Recipr+Pl+Ill+PxDu3:kuábáš-uv% kuoimijdsâs # ; !
+kyeimi% kyeimi+Pron+Recipr+Pl+Ill+PxPl3:kyeimi% kuoimijdsâs # ; !
+kuábáš-uv% kyeimi+Pron+Recipr+Pl+Loc+PxDu3:kuábáš-uv% kuoimijnis # ; !
+kyeimi% kyeimi+Pron+Recipr+Pl+Loc+PxPl3:kyeimi% kuoimijnis # ; !
+kuábáš-uv% kyeimi+Pron+Recipr+Pl+Com+PxDu3:kuábáš-uv% kuoimijdiskuin # ;
+kyeimi% kyeimi+Pron+Recipr+Pl+Com+PxPl3:kyeimi% kuoimijdiskuin # ;
+
+LEXICON Interrogative != * __@CODE@__
+
+mii+Pron+Interr: miiInterRel ;
+kii+Pron+Interr: kiiInterRel ;
+mii+Pron+Rel: miiInterRel ;
+kii+Pron+Rel: kiiInterRel ;
+
+kote+Pron+Interr+Sg+Nom:kote K ;
+kote+Pron+Interr+Sg+Acc:kođe K ;
+kote+Pron+Interr+Sg+Loc:koođeest K ;
+kote+Pron+Interr+Sg+Com:kuuđijn K ;
+
+kote+Pron+Rel+Sg+Nom:kote K ;
+kote+Pron+Rel+Sg+Acc:kođe K ;
+kote+Pron+Rel+Sg+Loc:koođeest K ;
+kote+Pron+Rel+Sg+Com:kuuđijn K ;
+
+kotemuš+Pron+Interr:kote KOTEMUS "kumpi" ; !kotemui
+kotemuš+Pron+Rel:kote KOTEMUS "kumpi" ; !kotemui
+
+
+maggaar+Pron+Interr:maggaar MOTTOOM "millainen" ; !maggaargin maggaarnii
+maggaar+Pron+Indef:maggaar MOTTOOM "millainen" ; !maggaargin maggaarnii
+
+
+LEXICON miiInterRel !!= * __@CODE@__
++Sg+Acc:maid    K ; ! The exceptions
++Sg+Acc+Known:mon     K ;
++Ess:manen	K ;
++Par:mađe	K ;
++Pl+Acc+Use/NG:moid    K ; ! 
++Pl+Acc+Use/NG:mooi    K ;
+ :m	MK ;
+ :moo	MK-long ;
+ :mo	MK-short ;
+ :ma	MK-low ;
+
+
+LEXICON kiiInterRel !!= * __@CODE@__
++Sg+Acc:kiäm    K ;
++Sg+Loc+Use/NG:kest    K ; 
++Ess:kenen	K ;
++Par:keđe	K ;
++Pl+Acc+Use/NG:keid	K ;
++Pl+Loc+Use/NG:kein    K ; 
+:k	MK ; ! sg nom
+:kiä	MK-long ; ! ill, plcom, plabe
+:kiä	MK-short ; ! sggen, sggen, sgabe, plnom...
+:kiä	MK-low ;
+
+
+
+LEXICON MK !!= * __@CODE@__ common for mii and kii
++Sg+Nom:ii	K ;
+
+LEXICON MK-long !!= * __@CODE@__
++Sg+Ill:s	K ;
++Pl+Ill:id K ;
++Pl+Com+Use/NG:iguin	K ;
++Pl+Abe+Use/NG:ittáá K ;
+
+LEXICON MK-short !!= * __@CODE@__
++Sg+Gen:n	K ;
++Sg+Com:in	K ;
++Sg+Abe:nttáá	K ;
++Pl+Nom:h	K ;
++Pl+Gen:i	K ;
++Pl+Com:iguin	K ;
++Pl+Com+Use/NG:igijn	K ;
++Pl+Abe:ittáá	K ;
+
+LEXICON MK-low !!= * __@CODE@__
++Sg+Loc:st	K ;
++Pl+Acc:id	K ;
++Pl+Loc:in	K ;
+
+
+
+
+!! !!Indefinite pronouns
+! ----------------------
+
+LEXICON Indefinite
+kii+Pron+Indef: kiiInterRel ; !veikkâ kiäs
+mii+Pron+Indef: miiInterRel ;
+áinoo+Pron+Indef:áinoo AINOO ;
+eres+Pron+Indef:iärrás^ÁE ERES ; !Iärráseh
+juáháš+Pron+Indef:juáhhá X_KAAHUS_notILL "jokainen" ;
+juáháš+Pron+Indef+Sg+Ill:juáhážân K ; !?
+juáháš+Pron+Indef+Sg+Nom+Err/Orth:juáhâš K "jokainen" ; !¢ juáhháást, juáhážân, juáhháá
+jyehi+Pron+Indef+Attr:jyehi K "jokainen" ; 
+maŋgâ+Pron+Indef:ma^RVŋgâ KULMAindef "moni" ;
+oovtmottoom+Pron+Indef:oovt#mottoom MOTTOOM "yksi jos toinen" ;
+mottoom+Pron+Indef:mottoom MOTTOOM "eräs" ;
+muide:mui4de iind "muuta" ;
+nubbe+Pron+Indef:nu^RVbbe indefnubbe "toinen" ;
+nubbe+Pron+Recipr:nu^RVbbe reciprnubbe "toinen" ;
+puoh+Pron+Indef: PUOH "kaikki" ;
+puohah+Pron+Indef: PUOHAH "kaikki" ;
+siämmáš+Pron+Indef:siämmá SIAMMAS_PRON "sama" ;
+siämmáš+Pron+Indef+Err/Orth:siämmâ SIAMMAS_PRON "sama" ;
+miiniigen iind "jokin" ;
+kihheen+Pron+Indef: KIHHEEN "kukaan" ;
+mihheen+Pron+Indef: MIHHEEN "mikään" ;
+juábáš+Pron+Indef:juábbá KUABAS ;
+juábáškuábáš+Pron+Indef:juábbáá#kuábbá KUABAS "jompikumpi" ;
+juábâškuábâš+Pron+Indef+Err/Orth:juábbáá#kuábbá KUABAS "jompikumpi" ;
+kesten:kesten iind ;
+kiästen:kiästen iind ;
+kuábáš+Pron+Indef:kuábbá KUABAS "kumpi" ;
+kuábáš+Pron+Interr:kuábbá KUABAS "kumpi" ;
+kuábáš+Pron+Rel:kuábbá KUABAS "kumpi" ;
+kuábáš-uv+Pron+Indef:kuábbá KUABAS-UV "kumpi" ;
+kuábáš+Pron+Indef+Sg+Nom+Err/Orth:kuábâš K "kumpi" ;
+tovvááš+Pron+Indef:tovvá TOVVAAS ;
+taantovvááš+Pron+Indef:taan#tovvá TOVVAAS ;
+tontovvááš+Pron+Indef:ton#tovvá TOVVAAS ;
+taantovvááš+Pron+Indef:taan% tovvá TOVVAAS ;
+tontovvááš+Pron+Indef:ton% tovvá TOVVAAS ;
+ohtâ+Pron+Indef:o^RVht^RCâ OHTAindef "yksi" ;
+ohtâ+Pron+Indef+Attr+Err/Orth:ohtkin ENDLEX ;
+ohtâ+Pron+Indef+Sg+Nom+Foc/gin+Err/Orth:ohtkin ENDLEX ;
+kuohtuuh+Pron+Indef: KUOHTUUH "molemmat" ;
+tágárâš iind_attr ;
+tagarâš iind ;
+kallaad iind "monesko" ; ! adj?
+kalle KALLE "montako" ; ! num also
+iänááš+Pron+Indef:iäná TOVVAAS "useimmat" ; !
+kales+Pron+Dem:kallaas^ÁE X_PAAVIR ; ! V X V	!&kalasáin, kalasist, kalasân, kallaas
+kiinii+Pron+Indef: KIINII ;
+miinii+Pron+Indef: MIINII ;
+!maidgin+Pron+Indef:maidgin # ; !temp.
+jieškote+Pron+Indef: JIESKOTE ;
+
+LEXICON JIESKOTE
+!+Attr+Foc/uv:jieškote-uv # ; ! Attr only for deviant Ill, Loc
++Sg+Nom+Foc/uv:jieškote-uv # ;
++Sg+Gen+Foc/uv:jieškođe-uv # ;
++Sg+Acc+Foc/uv:jieškođe-uv # ;
++Sg+Ill+Foc/uv:jieškootán-uv # ;
++Sg+Loc+Foc/uv:jieškoođeest-uv # ;
++Sg+Com+Foc/uv:jieškuuđijn-uv # ;
+
++Sg+Ill+Attr+Foc/uv:jieškođe-uv # ;
++Sg+Loc+Attr+Foc/uv:jieškođe-uv # ;
+
++Pl+Nom+Foc/uv:jieškođeh-uv # ;
++Pl+Gen+Foc/uv:jieškuuđij-uv # ;
++Pl+Acc+Foc/uv:jieškuuđijd-uv # ;
++Pl+Ill+Foc/uv:jieškuuđijd-uv # ;
++Pl+Loc+Foc/uv:jieškuuđijn-uv # ;
++Pl+Com+Foc/uv:jieškuuđijguin-uv # ;
+
++Sg+Nom+Err/Lex:jieškoteuv # ;
+
+LEXICON KIINII
++Sg+Nom:kiinii	K ;
++Sg+Gen:kiännii	K ;
++Sg+Acc:kiännii	K ;
++Sg+Ill:kiäsnii K ;
++Sg+Loc:kiästnii K ;
++Sg+Com:kiäinnii	K ;
++Sg+Abe:kiänttáá	K ;
++Pl+Nom:kiähnii	K ;
++Pl+Gen:kiäinnii	K ;
++Pl+Acc:kiäidnii K ;
++Pl+Ill:kiäidnii	K ;
++Pl+Loc:kiäinnii K ;
++Pl+Com:kiäiguin	K ;
++Pl+Com+Use/NG:kiäigijn	K ;
++Pl+Abe:kiäinttáá	K ;
+
+! Kiinii almaid čuážui uuvsâ tyehin.
+
+LEXICON MIINII
++Sg+Nom:miinii	K ;
++Sg+Gen:monnii	K ;
++Sg+Acc+Use/NG:naidnii	K ;
++Sg+Acc:maidnii	K ;
++Sg+Ill:moosnii K ;
++Sg+Loc:mastnii  K ;
+
+LEXICON MOTTOOM
++Attr: 	K ;
++Sg+Nom: 	K ;
++Sg+Gen: 	K ;
++Sg+Acc:	K ;! mottoom
++Sg+Ill:^CSH^SVSH%>ân K ; !motomân
++Sg+Loc:^CSH^SVSH%>ist K ;
++Sg+Com:^CSH^SVSH%>áin	K ;
++Sg+Abe:%>ttáá	K ;
++Ess:^CSH^SVSH%>in	K ; !magarin
++Pl+Nom:^CSH^SVSH%>eh	K ;
++Pl+Gen:^CSH^SVSH%>ij	K ;
++Pl+Acc:^CSH^SVSH%>ijd K ;
++Pl+Ill:^CSH^SVSH%>áid	K ;
++Pl+Loc:^CSH^SVSH%>ijn K ;
++Pl+Com:^CSH^SVSH%>ijguin	K ;
++Pl+Com:^CSH^SVSH%>ijgijn	K ;
++Pl+Abe:^CSH^SVSH%>ijttáá	K ;
+
+! Mottoom almai čuážui uuvsâ tyehin. 
+! Mottoom almast lijjii kyehti kaandâ. 
+! Mun adelim ruuđâ mottoom almai. 
+! Mottoom almast ij lam ruttâ.
+! Mun moonnim toho motomáin almain. 
+! Mottoom almaattáá tot kale luhostuvá. 
+! Tobbeen lijjii motomeh almaah.
+! Motomij almai tile ij lam nuuvtkin pyeri.
+! Oinim tobbeen motomijd almaid.
+! Motomáid almaid ij lam tuárvi pargo.
+! Motomijn almain ij lam puurrâmmielâ. 
+! Moonnim toho motomij almaiguin.
+! Motomij almaittáá tot pargo kale luhostuvá.
+! !¢motomáin, motomist, motomân, mottoom
+
+
+LEXICON PUOH
++Attr:puoh	K ;
++Nom:puoh	K ;
++Gen:puoh	K ;
++Acc:puoh	K ;
+
+LEXICON PUOHAH
++Pl+Nom:puohah	K ;
++Pl+Gen:puohâi	K ;
++Pl+Acc:puohâid K ;
++Pl+Ill:puohháid	K ;
++Pl+Loc:puohâin K ;
++Pl+Com:puohâiguin	K ;
++Pl+Com:puohâigijn	K ;
++Pl+Abe:puohâittáá	K ;
+
+! Attr. puoh
+
+
+LEXICON KUOHTUUH
++Pl+Nom:kuohtuuh	K ;
++Pl+Gen:kuohtui	K ;
++Pl+Ill+Attr:kuohtui	K ;
++Pl+Loc+Attr:kuohtui	K ;
++Pl+Com+Attr:kuohtui	K ;
++Pl+Acc:kuohtuid K ;
++Pl+Ill:kuohtuid	K ;
++Pl+Loc:kuohtuin K ;
+
+! Attr. full inflection
+
+LEXICON MIHHEEN !MM 2007 s. 82
++Attr:mihheen	K ;
++Sg+Nom:mihheen	K ;
++Sg+Gen+Use/NG:monnân	K ;
++Sg+Gen:moonnân	K ;
++Sg+Acc:maiden	K ;
++Sg+Ill:moossân K ;
++Sg+Loc:masten K ;
++Sg+Com:moinnân	K ;
++Sg+Abe:monnânttáá	K ;
++Ess:manengin K ;
++Par:mađegin K ;
++Pl+Nom:makken	K ;
++Pl+Gen:moigin	K ;
++Pl+Acc:maiden K ;
++Pl+Ill:moidgin	K ;
++Pl+Loc:mainnen K ;
++Pl+Com:moiginguin	K ;
++Pl+Com:moigingijn	K ;
++Pl+Abe:moiginttáá	K ;
+
+LEXICON KIHHEEN !
++Attr:kihheen	# ;
++Sg+Nom:kihheen	# ;
++Sg+Gen:kiännán	# ;
++Sg+Gen+Err/Orth:kiännân	# ;
++Sg+Acc:kiämmán	# ; 
++Sg+Acc+Err/Orth:kiämmân	# ; 
++Sg+Ill:kiässán	# ;
++Sg+Ill+Err/Orth:kiässân	# ;
++Sg+Loc:kiästán	# ; 
++Sg+Loc+Err/Orth:kiästân	# ; 
+ 
+
+
+LEXICON AINOO
++Sg: K ;
++Pl:%>h K ;
+
+
+LEXICON iind
+ +Pron+Indef+Sg+Nom:%>0 K ;
+ 
+LEXICON KALLE ! probably exists already
+ +Pron+Indef+Sg+Nom:%>0 K ;
+ +Pron+Indef+Sg+Gen:^WG%>0 K ; ! kale
+ +Pron+Indef+Sg+Acc:^WG%>0 K ; ! kale
+ +Pron+Indef+Sg+Ill:^CSH^EA%>sân K ; ! kalasân
+ +Pron+Indef+Sg+Loc:^CSH^EA%>sist K ; ! kalasist
+ 
+LEXICON iind_attr
+ +Pron+Dem+Attr: K ;
+ 
+LEXICON ERES ! A placeholderlexicon, to be corrected.
++Sg+Nom:^WG^RVSH K ; !eres
++Attr:^WG^RVSH K ; !eres
++Cmp/SgNom:^WG R ;
++Sg+Gen: K ;   !iärrás corp 
++Sg+Acc: K ;      !iärrás corp
++Sg+Ill:^CSH%>ân K ;  !iärásân corp
++Sg+Loc:^CSH%>ist K ; !iärásist corp
++Sg+Com:^CSH%>áin K ; ! 
++Sg+Abe:%>ttáá K ;  ! 
++Ess:^WG^RVSH%>in K ;   !  
++Par:^WG^RVSH%>id K ;    !    
++Pl+Nom:^CSH%>eh K ;  ! iäráseh corp
++Pl+Nom+Use/NG:%>eh K ;  !iärráseh corp
++Pl+Gen:^CSH%>ij K ;  !iärásij corp 
++Pl+Gen+Use/NG:%>ij K ;  !iärrásij corp 
++Pl+Acc:^CSH%>ijd K ; !iärásijd corp
++Pl+Loc:^CSH%>ijn K ; !iärásijn corp
++Pl+Com:^CSH%>ijguin K ; ! iärásijguin corp
++Pl+Com+Use/NG:^CSH%>ijgijn K ; ! Err/Orth?? All others are Use/NG
++Pl+Abe:^CSH%>ijttáá K ; ! 
++Pl+Ill:^CSH%>áid K ; !iärásáid corp
++Pl+Ill+Use/NG:%>áid K ; !iärrásáid corp
+
+LEXICON indefnubbe
+nubbecase ;
++Attr: K ;
++Sg+Com:^WG%>in CPXsuff ;  !nubijnis
++Pl+Gen:^WG%>id CPXsuff ;  !nubijdis
++Pl+Acc:^WG%>id CPXsuff ;  !nubijdis
++Pl+Com:^WG%>id CPXsuffCOM ;  !nubijdiskuin
+
+LEXICON reciprnubbe
++Attr: K ;
++Sg+Com:^WG%>in CPXsuff ;  !nubijnis
++Pl+Gen:^WG%>id CPXsuff ;  !nubijdis
++Pl+Acc:^WG%>id CPXsuff ;  !nubijdis
++Pl+Com:^WG%>id CPXsuffCOM ;  !nubijdiskuin
+nubbecase ;
+
+LEXICON TOVVAAS
++Sg+Nom:áš^WG^RLEN K ; ! kuábáš
++Sg+Gen:^SV^SLEN K ; 		! kuábáá
++Sg+Ill+Attr:^SV^SLEN # ; 	! kuábbáá
++Sg+Loc+Attr:^SV^SLEN # ; 	! kuábbáá
++Sg+Acc:^SV^SLEN # ;		! kuábbáá
++Sg+Ill:ž^WG^RVSH%>ân # ;	! kuábážân
++Sg+Loc:^SV^SLEN%>st # ;			! spálváást
++Sg+Com:%>in # ; 			! spálváin
++Sg+Abe:^SV^SLEN%>ttáá # ; 		! spálvááttáá
++Ess:ž^WG%>in # ;	! spálvážin
++Par:ž^WG%>id # ; ! spálvážid
++Pl+Nom:^SV^SLEN%>h # ; 			! spálvááh
++Pl+Gen:%>i # ; 			! spálvái
++Pl+Acc:%>id # ; 			! spálváid
++Pl+Ill:%>id # ; 			! spálváid
++Pl+Loc:%>in # ; 			! spálváin
++Pl+Com:%>iguin # ; 		! spálváiguin
++Pl+Com+Use/NG:%>igijn # ; 		! spálváiguin
++Pl+Abe:%>ittáá # ; 		! spálváittáá
+
+LEXICON SIAMMAS_PRON !!= @CODE@ without WG
++Sg+Nom:š^RLEN K ; ! kuábáš
++Sg+Nom+Err/Orth:âš^RLEN K ; ! 
++Sg+Gen:^SV^SLEN K ; 			! kuábbáá
++Sg+Ill+Attr:^SV^SLEN # ; 			! kuábbáá
++Sg+Loc+Attr:^SV^SLEN # ; 			! kuábbáá
++Sg+Acc:^SV^SLEN K ;			! kuábbáá
++Sg+Ill:ž^RVSH%>ân K ;	! 
++Sg+Loc:^SV%>st K ;			! spálváást
++Sg+Com:%>in K ; 			! spálváin
++Sg+Abe:^SV^SLEN%>ttáá K ; 		! spálvááttáá
++Ess:ž%>in K ;	! spálvážin
++Par:ž%>id K ; ! spálvážid
++Pl+Nom:^SV^SLEN%>h K ; 			! spálvááh
++Pl+Gen:%>i K ; 			! spálvái
++Pl+Acc:%>id K ; 			! spálváid
++Pl+Ill:%>id K ; 			! spálváid
++Pl+Loc:%>in K ; 			! spálváin
++Pl+Com:%>iguin K ; 		! spálváiguin
++Pl+Com+Use/NG:%>igijn K ; 		! spálváiguin
++Pl+Abe:%>ittáá K ; 		! spálváittáá
+
+LEXICON KUABAS
++Sg+Nom:š^WG^RLEN K ; ! kuábáš
++Sg+Nom+Err/Orth:âš^WG^RLEN K ; ! 
++Sg+Gen:^SV^SLEN K ; 			! kuábbáá
++Sg+Ill+Attr:^SV^SLEN # ; 			! kuábbáá
++Sg+Loc+Attr:^SV^SLEN # ; 			! kuábbáá
++Sg+Acc:^SV^SLEN K ;			! kuábbáá
++Sg+Ill:ž^WG^RVSH%>ân K ;	! 
++Sg+Loc:^SV^SLEN%>st K ;			! spálváást
++Sg+Com:%>in K ; 			! spálváin
++Sg+Abe:^SV^SLEN%>ttáá K ; 		! spálvááttáá
++Ess:ž^WG%>in K ;	! spálvážin
++Par:ž^WG%>id K ; ! spálvážid
++Pl+Nom:^SV^SLEN%>h K ; 			! spálvááh
++Pl+Gen:%>i K ; 			! spálvái
++Pl+Acc:%>id K ; 			! spálváid
++Pl+Ill:%>id K ; 			! spálváid
++Pl+Loc:%>in K ; 			! spálváin
++Pl+Com:%>iguin K ; 		! spálváiguin
++Pl+Com+Use/NG:%>igijn K ; 		! spálváiguin
++Pl+Abe:%>ittáá K ; 		! spálváittáá
+
+LEXICON KUABAS-UV
++Sg+Nom:š^WG^RLEN%>#-uv # ; ! kuábáš
++Sg+Nom+Err/Orth:âš^WG^RLEN%>#-uv # ; ! 
++Sg+Gen:^SV^SLEN%>#-uv # ; 			! kuábáá
++Sg+Acc:^SV^SLEN%>#-uv # ;			! kuábáá
++Sg+Ill:ž^RVSH%>ân%>#-uv # ;	! spálvážân
++Sg+Ill:ž^RLEN%>ân%>#-uv # ;	! spáálvážân
++Sg+Loc:^SV^SLEN%>st%>#-uv # ;			! spálváást
++Sg+Com:%>in%>#-uv # ; 			! spálváin
+
+
+
+LEXICON OHTAindef
++Sg+Acc:^WG^RLEN K ; !kuulmâ
++Sg+Com:^WG^CLEN^SVLOW%>in K ; !  ovttáin  
++Pl+Ill:^WG^CLEN^SVLOW%>id K ; !ovttáid  
+KULMA_VITTAindef ;
+
+LEXICON KULMAindef 
++Sg+Acc: K ; !kuulmâ
++Sg+Com:^WG^SVLOW%>in K ; !  ovttáin  
++Pl+Ill:^WG^SVLOW%>id K ; !ovttáid  
+KULMA_VITTAindef ;
+
+
+LEXICON KULMA_VITTAindef 
++Sg+Nom: K ; !vittâ
++Attr: K ; !vittâ
++Sg+Gen:^WG^RLEN K ; !kuulmâ  
++Sg+Ill+Attr:^WG^RLEN K ; !kuulmâ   oovtâ kistui
++Sg+Loc+Attr:^WG^RLEN K ; !kuulmâ  oovtâ kistust
++Sg+Abe+Attr:^WG^RLEN K ; !kuulmâ  oovtâ kistuuttáá
++Sg+Ill:^CSH^RLEN%>n K ; ! kuulmân  
++Sg+Loc:^WG^RLEN%>st K ; ! kuulmâst 
++Sg+Abe:^WG%>ttáá K ; ! viđâttáá  
++Ess:%>n  K ; ! vittân	 
++Pl+Nom:^WG^RLEN%>h K ; !viiđah 
++Pl+Acc:^WG^RLEN%>id K ; ! viiđâid  
++Pl+Gen:^WG^RLEN%>i K ; !viiđâi  
++Pl+Gen+Use/NG:^WG%>i K ; !viđâi  
++Pl+Loc:^WG^RLEN%>in K ; !viiđâin  
++Pl+Com:^WG%>iguin K ; !viđâiguin  
++Pl+Com+Use/NG:^WG%>igijn K ; !viđâiguin  
++Pl+Abe:^WG%>ittáá K ; !viđâittáá  
+
+LEXICON KOTEMUS
+MUSj-SUF ;
++Sg+Loc+Attr:muu # ;
++Sg+Ill+Attr:muu # ;
+
