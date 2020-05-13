@@ -36,4 +36,4 @@ grc-disambiguator.cg3: disambiguator.cg3
 #### END: Local build targets:   ####
 
 #### Do NOT edit below here: ####
-include $(top_srcdir)/am-shared/tools-grammarcheckers-dir-include.am
+include $(top_srcdir)/../giella-core/am-shared/tools-grammarcheckers-dir-include.am
