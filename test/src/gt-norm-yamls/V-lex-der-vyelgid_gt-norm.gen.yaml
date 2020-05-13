@@ -1,0 +1,36 @@
+
+Config:
+  hfst:
+    Gen: ../../../src/generator-dict-gt-norm.hfst
+    Morph: ../../../src/analyser-dict-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-dict-gt-norm.xfst
+    Morph: ../../../src/analyser-dict-gt-norm.xfst
+    App: lookup
+
+Tests:
+
+  Verb - vyelgiđ: # MLO, checked
+    vyelgiđ+V+Inf: vyelgiđ
+    vyelgiđ+V+Der/Pass+V+Inf: vuolguđ
+    vyelgiđ+V+Der/Pass+V+Ind+Prs+Sg1: vuolguum
+    vyelgiđ+V+Der/Pass+V+Ind+Prs+Sg3: vuálgoo
+    vyelgiđ+V+Der/Pass+V+Ind+Prs+Pl3: vuálgojeh
+    vyelgiđ+V+Der/Pass+V+Ind+Prt+Sg1: vuálgojim
+    vyelgiđ+V+Der/Pass+V+Ind+Prt+Sg3: vuolgui
+    vyelgiđ+V+Der/Pass+V+Ind+Prt+Pl3: vuálgojii
+    vyelgiđ+V+Der/Pass+V+Ind+Prs+ConNeg: vuolguu
+
+  Verb - pyehtiđ: #generated from FST; MLO checked
+    pyehtiđ+V+Inf: pyehtiđ
+    pyehtiđ+V+Der/Pass+V+Ind+Prs+Sg1: puohtuum
+    pyehtiđ+V+Der/Pass+V+Ind+Prs+Sg3: puáhtoo
+    pyehtiđ+V+Der/Pass+V+Ind+Prs+Du1: puáhtojeen
+    pyehtiđ+V+Der/Pass+V+Ind+Prs+Du3: puohtuv
+    pyehtiđ+V+Der/Pass+V+Ind+Prs+Pl1: puohtup
+    pyehtiđ+V+Der/Pass+V+Ind+Prs+Pl3: puáhtojeh
+    pyehtiđ+V+Der/Pass+V+Ind+Prt+Sg1: puáhtojim
+    pyehtiđ+V+Der/Pass+V+Ind+Prt+Sg3: puohtui
+    pyehtiđ+V+Der/Pass+V+Ind+Prs+ConNeg: puohtuu
+    pyehtiđ+V+Der/Pass+V+PrfPrc: puohtum
+

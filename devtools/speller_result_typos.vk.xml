@@ -1,0 +1,2572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Dynatable/0.3.1/jquery.dynatable.min.js" integrity="sha256-/kLSC4kLFkslkJlaTgB7TjurN5TIcmWfMfaXyB6dVh0=" crossorigin="anonymous"> </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dynatable/0.3.1/jquery.dynatable.min.css" integrity="sha256-lxcbK1S14B8LMgrEir2lv2akbdyYwD1FwMhFgh2ihls=" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://gtsvn.uit.no/langtech/trunk/giella-core/scripts/style/speller_xml.css"/>
+  </head>
+  <body>
+    <div id="header">
+      <div id="engine" abbreviation="vk">
+        <div id="toolversion">n/a</div>
+        <div id="processing" memoryusage="n/a" systime="0.251" realtime="18.144" usertime="17.686" words_per_sec="27.50"/>
+      </div>
+      <div id="lexicon" version="smn version 0.1, 03.09.2016, rev139606"/>
+      <div id="document">typos.txt</div>
+      <div id="timestamp">20170213-1603</div>
+      <div id="truefalsesummary" wordcount="2">
+        <div id="originals" correct="0" error="499"/>
+        <div id="spellers" correct="0" error="2"/>
+        <div id="positives" true="2" false="0"/>
+        <div id="negatives" true="0" false="0"/>
+        <div id="precisions">1.00</div>
+        <div id="recall">1.00</div>
+        <div id="accuracy">1.00</div>
+      </div>
+      <div id="suggestionsummary">
+        <div id="sugg1" editdist1="0" editdist2="0" editdist3plus="0"/>
+        <div id="sugg2" editdist1="0" editdist2="0" editdist3plus="0"/>
+        <div id="sugg3" editdist1="0" editdist2="0" editdist3plus="0"/>
+        <div id="sugg4" editdist1="0" editdist2="0" editdist3plus="0"/>
+        <div id="sugg5" editdist1="0" editdist2="0" editdist3plus="0"/>
+        <div id="suggbelow5" editdist1="0" editdist2="0" editdist3plus="0"/>
+        <div id="nosugg" editdist1="379" editdist2="90" editdist3plus="26"/>
+        <div id="badsuggs" editdist1="0" editdist2="0" editdist3plus="0"/>
+        <div id="averageposition">-0.50</div>
+        <div id="averagesuggs_with_correct">5.00</div>
+        <div id="top1pos_percent">0.00</div>
+        <div id="top5pos_percent">100.00</div>
+        <div id="allpos_percent">100.00</div>
+        <div id="nosugg_percent">24850.00</div>
+        <div id="badsugg_percent">0.00</div>
+      </div>
+    </div>
+    <table id="results">
+      <thead>
+        <tr>
+          <th>original</th>
+          <th>speller</th>
+          <th>expected</th>
+          <th>edit dist</th>
+          <th>time</th>
+          <th>position</th>
+          <th>suggestions</th>
+          <th>tokens</th>
+          <th>bugid</th>
+          <th>comment</th>
+        </tr>
+      </thead>
+      <tr class="word" corrsugg="6">
+        <td class="original" status="error">Anar</td>
+        <td class="speller" status="error"/>
+        <td class="expected">Aanaar</td>
+        <td class="edit_dist">2</td>
+        <td class="position">0</td>
+        <td class="suggestions" count="5">
+          <ul>
+            <li class="suggestion">Annar</li>
+            <li class="suggestion">Agnar</li>
+            <li class="suggestion">Aner</li>
+            <li class="suggestion">Ana</li>
+            <li class="suggestion">Ana-</li>
+          </ul>
+        </td>
+      </tr>
+      <tr class="word" corrsugg="6">
+        <td class="original" status="error">Iäččâm</td>
+        <td class="speller" status="error"/>
+        <td class="expected">Iäččám</td>
+        <td class="edit_dist">1</td>
+        <td class="position">-1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">Leejoon</td>
+        <td class="expected">Leijoon</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">Liibâ</td>
+        <td class="expected">Liiba</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">Lönnroth</td>
+        <td class="expected">Lönnrot</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">Mondietbâ</td>
+        <td class="expected">Mondietba</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">Njeellim</td>
+        <td class="expected">Njellim</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">Nuuvtpâ</td>
+        <td class="expected">Nuuvtpa</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">Pariisi</td>
+        <td class="expected">Paris</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">Piälppáájäävri</td>
+        <td class="expected">Piälbáájävri</td>
+        <td class="edit_dist">3</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">Ruávinjaargan</td>
+        <td class="expected">Ruávinjaargân</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">Sammallalhti</td>
+        <td class="expected">Sammallahti</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">Siilâk</td>
+        <td class="expected">Siilak</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">Smitige</td>
+        <td class="expected">Sämitige</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">Smitigge</td>
+        <td class="expected">Sämitigge</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">Sáámân</td>
+        <td class="expected">Sáámán</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">Taaâ</td>
+        <td class="expected">Taažâ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">Taaâst</td>
+        <td class="expected">Taažâst</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">ainas-uv</td>
+        <td class="expected">aainâs-uv</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">ainoo</td>
+        <td class="expected">áinoo</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">algattum</td>
+        <td class="expected">algâttum</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">alggii</td>
+        <td class="expected">algii</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">algâpeln</td>
+        <td class="expected">aalgâbeln</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">almolâs</td>
+        <td class="expected">almolâš</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">amerikkalâš</td>
+        <td class="expected">ameriklâš</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">anarâkielâlijn</td>
+        <td class="expected">anarâškielâlijn</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">anarâškielâlâlii</td>
+        <td class="expected">anarâškielâlii</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">anneđ</td>
+        <td class="expected">anneeđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">anârâškielâ</td>
+        <td class="expected">anarâškielâ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">artikkel</td>
+        <td class="expected">artikkâl</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">artikkelist</td>
+        <td class="expected">artikkâlist</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">ađâi</td>
+        <td class="expected">ađai</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">aččin</td>
+        <td class="expected">aččinj</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">coorooh</td>
+        <td class="expected">čoorooh</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">cállee</td>
+        <td class="expected">čällee</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">cááná</td>
+        <td class="expected">čááná</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">ellimpiirâš</td>
+        <td class="expected">ellimpiirâs</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">ennâb</td>
+        <td class="expected">eenâb</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">ennâm</td>
+        <td class="expected">eennâm</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">ennâmtiätu</td>
+        <td class="expected">eennâmtiätu</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">enâmispuáju</td>
+        <td class="expected">enâmistpuájui</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">enâmispuájui</td>
+        <td class="expected">enâmistpuájui</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">eromásávt</td>
+        <td class="expected">eromâšávt</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">eromâs</td>
+        <td class="expected">eromâš</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">eromâsávt</td>
+        <td class="expected">eromâšávt</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">etimus</td>
+        <td class="expected">etimâs</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">evtottas</td>
+        <td class="expected">iävtuttâs</td>
+        <td class="edit_dist">4</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">evtottâm</td>
+        <td class="expected">iävtuttâm</td>
+        <td class="edit_dist">3</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">finnejij</td>
+        <td class="expected">finnejii</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">fiäráánijd</td>
+        <td class="expected">fiäránijd</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">forgâbalij</td>
+        <td class="expected">forgâpalij</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">fäällih</td>
+        <td class="expected">fäälih</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">halidâh</td>
+        <td class="expected">halijdah</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">halidâh-uv</td>
+        <td class="expected">halijdah-uv</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">halijdiččij</td>
+        <td class="expected">halijdičij</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">halijdâh</td>
+        <td class="expected">halijdah</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">histoorjá</td>
+        <td class="expected">historjá</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">hittruu</td>
+        <td class="expected">hitruu</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">hiämuid</td>
+        <td class="expected">hiäimuid</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">horgâ</td>
+        <td class="expected">forgâ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">hurrikaani</td>
+        <td class="expected">hurrigaan</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">huámmâš</td>
+        <td class="expected">huámmáš</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">hárjánám</td>
+        <td class="expected">hárjánâm</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">ii</td>
+        <td class="expected">ij</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">iivne</td>
+        <td class="expected">ivne</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">iivneh</td>
+        <td class="expected">ivneh</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">innâg</td>
+        <td class="expected">innig</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">irattasân</td>
+        <td class="expected">irâttâsân</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">it</td>
+        <td class="expected">et</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">iveest</td>
+        <td class="expected">ivveest</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">iäláskám</td>
+        <td class="expected">iäláskâm</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">iäruttâh</td>
+        <td class="expected">iäruttah</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">iäruttâllâmân</td>
+        <td class="expected">iäruttâlmân</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">iätä</td>
+        <td class="expected">iätá</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">išeed</td>
+        <td class="expected">iššeed</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">išen</td>
+        <td class="expected">iššeen</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">japanlij</td>
+        <td class="expected">jaapaanlij</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">jeggiroobdâsij</td>
+        <td class="expected">jeggirobdâi</td>
+        <td class="edit_dist">3</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">jiejâs</td>
+        <td class="expected">jieijâs</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">jienâdâhvaastah</td>
+        <td class="expected">jienâdâhvastuuh</td>
+        <td class="edit_dist">3</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">jienâdâhvaastâid</td>
+        <td class="expected">jienâdâhvastuid</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">jiešvuođâiđ</td>
+        <td class="expected">jiešvuođâid</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">jiešvuádáliih</td>
+        <td class="expected">jiešvuođâliih</td>
+        <td class="edit_dist">3</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">jiešvuádâlijd</td>
+        <td class="expected">jiešvuođâlijd</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">jiešvuádâlâš</td>
+        <td class="expected">jiešvuođâlâš</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">jiešvuáđáliih</td>
+        <td class="expected">jiešvuođâliih</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">jobâ</td>
+        <td class="expected">joba</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">juhâmužžân</td>
+        <td class="expected">juhâmuššân</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">juurdán</td>
+        <td class="expected">juurdân</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">juurdâid</td>
+        <td class="expected">jurduid</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">juvlesämikielâ</td>
+        <td class="expected">juulevsämikielâ</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">juáhhást</td>
+        <td class="expected">juáhháást</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">jáámmâm</td>
+        <td class="expected">jáámmám</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">jâ</td>
+        <td class="expected">já</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">jäämmih</td>
+        <td class="expected">jäämih</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">kalgâ</td>
+        <td class="expected">kalga</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">kalgâ-uv</td>
+        <td class="expected">kalga-uv</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">kannâd</td>
+        <td class="expected">kannat</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">kannâd-uv</td>
+        <td class="expected">kannat-uv</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">kannât</td>
+        <td class="expected">kannat</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">kannâttâm</td>
+        <td class="expected">kannattâm</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">kavnoo</td>
+        <td class="expected">kávnoo</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">keeild</td>
+        <td class="expected">keežild</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">kevttid</td>
+        <td class="expected">kevttiđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">kevttimmáhđulâšvuođâh</td>
+        <td class="expected">kevttimmáhđulâšvuođah</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">kidduv</td>
+        <td class="expected">kiđđuv</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">kielâpirrâsin</td>
+        <td class="expected">kielâpirâsin</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">kietâluvvâi</td>
+        <td class="expected">kietâluvâi</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">kiilud</td>
+        <td class="expected">kiillud</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">kiämmân</td>
+        <td class="expected">kiämmán</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">kiässân</td>
+        <td class="expected">kiässán</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">kolgâi</td>
+        <td class="expected">koolgâi</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">kolgâčij</td>
+        <td class="expected">kolgâččij</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">konfereensâst</td>
+        <td class="expected">konfereensist</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">koolgâh</td>
+        <td class="expected">koolgah</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">kooskas</td>
+        <td class="expected">kooskâs</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">koččodum</td>
+        <td class="expected">kočodum</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">koččodum</td>
+        <td class="expected">kočoduum</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">koččâmušâh</td>
+        <td class="expected">koččâmušah</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">kuittág</td>
+        <td class="expected">kuittâg</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">kuobbâreeh</td>
+        <td class="expected">kuobbâreh</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">kuolbâsälttisyeni</td>
+        <td class="expected">kuolbâsälttisyeini</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">kuossa</td>
+        <td class="expected">kuosâ</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">kurmápoaroi</td>
+        <td class="expected">kurmápuárui</td>
+        <td class="edit_dist">3</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">kuusâh</td>
+        <td class="expected">kuusah</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">kuávlálâm</td>
+        <td class="expected">kuovlâlâm</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">kuškattum</td>
+        <td class="expected">kuškâdum</td>
+        <td class="edit_dist">3</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">kuškâttiđ</td>
+        <td class="expected">kuškâdiđ</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">kuškâttum</td>
+        <td class="expected">kuškâdum</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">káibidiččim</td>
+        <td class="expected">käibidiččim</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">käldeeamnastâh</td>
+        <td class="expected">käldeeamnâstâh</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">laavejij</td>
+        <td class="expected">läävejii</td>
+        <td class="edit_dist">3</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">lagh</td>
+        <td class="expected">lah</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">lain</td>
+        <td class="expected">láin</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">lamâš</td>
+        <td class="expected">lamaš</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">leešmi</td>
+        <td class="expected">leesmi</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">liisto</td>
+        <td class="expected">listo</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">lijji</td>
+        <td class="expected">lijjii</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">lijjiim</td>
+        <td class="expected">lijjim</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">lijkâs</td>
+        <td class="expected">liijkás</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">liäbumán</td>
+        <td class="expected">liäibumân</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">liäbumân</td>
+        <td class="expected">liäibumân</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">lišij</td>
+        <td class="expected">ličij</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">lokatijvâ</td>
+        <td class="expected">lokatiiv</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">loostâh</td>
+        <td class="expected">loostah</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">lopâ-loopâst</td>
+        <td class="expected">loopâ loopâst</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">lovnejum</td>
+        <td class="expected">luávnejum</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">luándutijpâid</td>
+        <td class="expected">luándutiijpâid</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">lái</td>
+        <td class="expected">lâi</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">lâm</td>
+        <td class="expected">lam</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">maccâttiđ</td>
+        <td class="expected">macâttiđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">maccâttum</td>
+        <td class="expected">macâttum</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">maccâttuvvojeh</td>
+        <td class="expected">macâttuvvojeh</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">maccâttâm</td>
+        <td class="expected">macâttâm</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">madduh</td>
+        <td class="expected">madduuh</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">maduuh</td>
+        <td class="expected">madduuh</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">masâ</td>
+        <td class="expected">masa</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">maŋgâlágáneh</td>
+        <td class="expected">maaŋgâlágáneh</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">maŋgâlágánid</td>
+        <td class="expected">maaŋgâlágánijd</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">maŋgâlágánij</td>
+        <td class="expected">maaŋgâlágánij</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">maŋgâlágánijn</td>
+        <td class="expected">maaŋgâlágánijn</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">maŋgânáál</td>
+        <td class="expected">maaŋgânáál</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">maŋâ</td>
+        <td class="expected">maŋa</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">meiddái</td>
+        <td class="expected">meiddei</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">meld</td>
+        <td class="expected">mield</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">merridun</td>
+        <td class="expected">meridum</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">metodi</td>
+        <td class="expected">meetood</td>
+        <td class="edit_dist">3</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">miellâsâš</td>
+        <td class="expected">mielâsâš</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">minuttâd</td>
+        <td class="expected">minuttid</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">mirhalâžžân</td>
+        <td class="expected">mirhâlâžžân</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">moiguim</td>
+        <td class="expected">moiguin</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">muorjiguim</td>
+        <td class="expected">muorijguin</td>
+        <td class="edit_dist">3</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">mustâl</td>
+        <td class="expected">muštâl</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">muáskâs</td>
+        <td class="expected">muáskáš</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">mučisluupiin</td>
+        <td class="expected">mučisluupin</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">máhdulávt</td>
+        <td class="expected">máhđulávt</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">máhđulâšvuođâh</td>
+        <td class="expected">máhđulâšvuođah</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">mälistmist</td>
+        <td class="expected">määlistmist</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">määlin</td>
+        <td class="expected">määllin</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">nanosmiteh</td>
+        <td class="expected">nanosmitteh</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">neljilostâsuormârässi</td>
+        <td class="expected">neljilostâsuormârääsi</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">niijttoin</td>
+        <td class="expected">niijtoin</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">njaddos</td>
+        <td class="expected">njaddoos</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">nk</td>
+        <td class="expected">nk.</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">nommah</td>
+        <td class="expected">noomah</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">nommá</td>
+        <td class="expected">nommâ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">nomâiguim</td>
+        <td class="expected">nomâiguin</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">nomâttâseh</td>
+        <td class="expected">nomâttâsah</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">noommâ</td>
+        <td class="expected">nommâ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">noomâh</td>
+        <td class="expected">noomah</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">nubásdusâi</td>
+        <td class="expected">nubástusâi</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">nubástuseh</td>
+        <td class="expected">nubástusah</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">nuorâsub</td>
+        <td class="expected">nuorâb</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">nuurrâd</td>
+        <td class="expected">nuurrâđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">nuuv</td>
+        <td class="expected">nuuvt</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">nuuvtpâ</td>
+        <td class="expected">nuuvtpa</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">nuvt</td>
+        <td class="expected">nuuvt</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">nävt</td>
+        <td class="expected">návt</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">näähkijd</td>
+        <td class="expected">naahkijd</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">ohoost</td>
+        <td class="expected">ohhoost</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">ohost</td>
+        <td class="expected">ohhoost</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">ohtâvuodâst</td>
+        <td class="expected">ohtâvuođâst</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">ollâopâttuvvâst</td>
+        <td class="expected">ollâopâttuvâst</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">olsis</td>
+        <td class="expected">olssis</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">olášuteh</td>
+        <td class="expected">olásutteh</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">omas</td>
+        <td class="expected">omâs</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">omt</td>
+        <td class="expected">om.</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">oovtâmerkkân</td>
+        <td class="expected">ovdâmerkkân</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">oppârahtusij</td>
+        <td class="expected">oppâráhtusij</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">oppârahtusijn</td>
+        <td class="expected">oppâráhtusijn</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">orjâlâskielân</td>
+        <td class="expected">orjâlâškielân</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">oročij</td>
+        <td class="expected">oroččij</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">ostomuorra</td>
+        <td class="expected">ostomuorâ</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">ovdilmainâšum</td>
+        <td class="expected">ovdil mainâšum</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">ovdân</td>
+        <td class="expected">oovdân</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">ovtâmerkkâ</td>
+        <td class="expected">ovdâmerkkâ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">ovtâmerkkân</td>
+        <td class="expected">ovdâmerkkân</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">ovtâskulij</td>
+        <td class="expected">ovdâskulij</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">paijanâm</td>
+        <td class="expected">pajanâm</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">paldaluvvâi</td>
+        <td class="expected">paldâluvâi</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">paldalâsnoomah</td>
+        <td class="expected">paldâlâsnoomah</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">pargost</td>
+        <td class="expected">pargoost</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">peiviji</td>
+        <td class="expected">peivij</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">perslovlii</td>
+        <td class="expected">persovnlii</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">piejui</td>
+        <td class="expected">pieijui</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">piergu</td>
+        <td class="expected">piärgu</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">piergu-</td>
+        <td class="expected">piärgu-</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">pierguliemáin</td>
+        <td class="expected">piärguliemáin</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">piru</td>
+        <td class="expected">piiru</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">pittârrääsi</td>
+        <td class="expected">piättárrääsi</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">pivdij</td>
+        <td class="expected">piivdij</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">poajui</td>
+        <td class="expected">puájui</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">poccuh</td>
+        <td class="expected">poccuuh</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">puahtá</td>
+        <td class="expected">puáhtá</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">puarrásub</td>
+        <td class="expected">puárásub</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">puohâh</td>
+        <td class="expected">puohah</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">purrâm</td>
+        <td class="expected">puurrâm</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">purrâmâssân</td>
+        <td class="expected">purrâmâššân</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">puurrámpeevdist</td>
+        <td class="expected">puurrâmpeevdist</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">puárásumosiih</td>
+        <td class="expected">puárásumoseh</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">puárásuomosij</td>
+        <td class="expected">puárásumosij</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">puáttam</td>
+        <td class="expected">puáttám</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">puátusin</td>
+        <td class="expected">puáđusin</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">puávtáčij</td>
+        <td class="expected">puávtáččij</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">pyereebeht</td>
+        <td class="expected">pyerebeht</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">pyereteh</td>
+        <td class="expected">pyeredeh</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">pyeretiđ</td>
+        <td class="expected">pyerediđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">pyeretmân</td>
+        <td class="expected">pyereedmân</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">pykálusah</td>
+        <td class="expected">pygályseh</td>
+        <td class="edit_dist">3</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">pykälus</td>
+        <td class="expected">pygálys</td>
+        <td class="edit_dist">3</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">pykäluspääihist</td>
+        <td class="expected">pygályspääihist</td>
+        <td class="edit_dist">3</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">pykälysah</td>
+        <td class="expected">pygályseh</td>
+        <td class="edit_dist">3</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">párnáipááihist</td>
+        <td class="expected">párnáipääihist</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">pääccih</td>
+        <td class="expected">pääcih</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">ravvâdamnâseh</td>
+        <td class="expected">raavvâdamnâseh</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">riidoin</td>
+        <td class="expected">riddoin</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">ruummâš</td>
+        <td class="expected">rummâš</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">ráámmât</td>
+        <td class="expected">ráámmát</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">ráđkká</td>
+        <td class="expected">rátká</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">sajân</td>
+        <td class="expected">sajan</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">salaatist</td>
+        <td class="expected">salatist</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">siilâk</td>
+        <td class="expected">siilak</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">siirap</td>
+        <td class="expected">siiráp</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">siälujeh</td>
+        <td class="expected">siäiluh</td>
+        <td class="edit_dist">3</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">siämmáánáá</td>
+        <td class="expected">siämmáánáál</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">smaavâ</td>
+        <td class="expected">smavvâ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">smâkkâ</td>
+        <td class="expected">smakkâ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">soahi</td>
+        <td class="expected">suáhi</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">sonjosuahi</td>
+        <td class="expected">sonjosuáhi</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">soorjijn</td>
+        <td class="expected">soorijn</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">soovâh</td>
+        <td class="expected">soovah</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">stuorrááb</td>
+        <td class="expected">stuárráb</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">stuárrusiih</td>
+        <td class="expected">stuárusiih</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">stuárrámus</td>
+        <td class="expected">stuárráámus</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">stuárrâb</td>
+        <td class="expected">stuárráb</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">stuárásumos</td>
+        <td class="expected">stuárráámus</td>
+        <td class="edit_dist">4</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">sulâstiteh</td>
+        <td class="expected">sulâstitteh</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">suohâtán</td>
+        <td class="expected">suohâdân</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">suohâtân</td>
+        <td class="expected">suohâdân</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">suoivuust</td>
+        <td class="expected">suoivust</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">suomâ-ugrilâš</td>
+        <td class="expected">suomâ-ugrâlâš</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">suomâ-urgiliih</td>
+        <td class="expected">suomâ-ugrâliih</td>
+        <td class="edit_dist">3</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">suomâ-urgilâš</td>
+        <td class="expected">suomâ-ugrâlâš</td>
+        <td class="edit_dist">3</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">suomâ-urgrilii</td>
+        <td class="expected">suomâ-ugrâlii</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">suomâkielâlâlii</td>
+        <td class="expected">suomâkielâlii</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">suullâ</td>
+        <td class="expected">suullân</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">suuvrâseh</td>
+        <td class="expected">suvrâseh</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">suuvrâsváddu</td>
+        <td class="expected">suvreváddu</td>
+        <td class="edit_dist">3</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">suuváid</td>
+        <td class="expected">suvváid</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">suvrotem</td>
+        <td class="expected">suvrodem</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">suvrotiđ</td>
+        <td class="expected">suvrodiđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">suvrâsvuotâ</td>
+        <td class="expected">suvráávuotâ</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">suáhin</td>
+        <td class="expected">suáhhin</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">suáhipáárhoin</td>
+        <td class="expected">suáhipárhoin</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">suápa</td>
+        <td class="expected">suápá</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">suárgásijguim</td>
+        <td class="expected">suárgásijguin</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">suárrááb-uv</td>
+        <td class="expected">stuárráb-uv</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">suávijd</td>
+        <td class="expected">soovijd</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">syerist</td>
+        <td class="expected">syereest</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">sátáčij</td>
+        <td class="expected">sátáččij</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">sälttisyeni</td>
+        <td class="expected">sälttisyeini</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">sämmilliih</td>
+        <td class="expected">sämmiliih</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">sänikiirje</td>
+        <td class="expected">sänikirje</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">sänivaastah</td>
+        <td class="expected">sänivastuuh</td>
+        <td class="edit_dist">3</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">taalhâskevttim</td>
+        <td class="expected">talhâskevttim</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">taalhâsšaddo</td>
+        <td class="expected">talhâsšaddo</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">taarbbâš</td>
+        <td class="expected">taarbâš</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">tarbbâšâm</td>
+        <td class="expected">tarbâšâm</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">tarbu</td>
+        <td class="expected">tárbu</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">tarvečuovjisjerjâ</td>
+        <td class="expected">tavečuovjisjerjâ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">tasko</td>
+        <td class="expected">tastko</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">tavesuovjisjerjâ</td>
+        <td class="expected">tavečuovjisjerjâ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">tađemield</td>
+        <td class="expected">tađe mield</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">teikká</td>
+        <td class="expected">teikkâ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">tiedâlâš</td>
+        <td class="expected">tieđâlâš</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">tiervâšvuođâ</td>
+        <td class="expected">tiervâsvuođâ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">tilen</td>
+        <td class="expected">tilleen</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">timjám</td>
+        <td class="expected">timjam</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">tiänutimjám</td>
+        <td class="expected">tiänutimjam</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">tontiet</td>
+        <td class="expected">tondiet</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">toohum</td>
+        <td class="expected">tohhum</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">toollâd</td>
+        <td class="expected">toollâđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">tutkâmus</td>
+        <td class="expected">tutkâmuš</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">tuubdâđ</td>
+        <td class="expected">tubdâđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">tuuššijd</td>
+        <td class="expected">tuušijd</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">tuáhtâr</td>
+        <td class="expected">tuáhtár</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">tuáivuámmát</td>
+        <td class="expected">tuáivuáámmát</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">tuššâđum</td>
+        <td class="expected">tuššâdum</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">tábáhtuva</td>
+        <td class="expected">tábáhtuvá</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">tápáhtui</td>
+        <td class="expected">tábáhtui</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">tápáhtuđ</td>
+        <td class="expected">tábáhtuđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">tárkkáá</td>
+        <td class="expected">tárkká</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">tárkuttâs</td>
+        <td class="expected">tárguttâs</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">távalávt</td>
+        <td class="expected">táválávt</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">táálvân</td>
+        <td class="expected">táálván</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">táárboid</td>
+        <td class="expected">tárboid</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">tärhib</td>
+        <td class="expected">täärhib</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">tärkkiláud</td>
+        <td class="expected">tärkkilávt</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">tääläš</td>
+        <td class="expected">tááláš</td>
+        <td class="edit_dist">3</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">täärhis</td>
+        <td class="expected">tärhis</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">uccâjeggijuunah</td>
+        <td class="expected">uccâjeggijuuŋah</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">ucemuštáá</td>
+        <td class="expected">ucemustáá</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">urmápoaroi</td>
+        <td class="expected">urmápuárui</td>
+        <td class="edit_dist">3</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">uáivildâh</td>
+        <td class="expected">uáivildah</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">uáiviroolâst</td>
+        <td class="expected">uáiviroolist</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">uáivân</td>
+        <td class="expected">uáiván</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">uávsijn</td>
+        <td class="expected">oovsijn</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">uáđđih</td>
+        <td class="expected">uáđih</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">vaastah</td>
+        <td class="expected">vastuuh</td>
+        <td class="edit_dist">3</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">vai</td>
+        <td class="expected">vâi</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">vajaldittum</td>
+        <td class="expected">vájáldittum</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">valmâstiđ</td>
+        <td class="expected">valmâštiđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">valmâstmân</td>
+        <td class="expected">vaalmâštmân</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">viijđáht</td>
+        <td class="expected">vijđáht</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">vijdes</td>
+        <td class="expected">viijđes</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">vijdáht</td>
+        <td class="expected">vijđáht</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">vijđáseh</td>
+        <td class="expected">viijđáseh</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">vissâsávt</td>
+        <td class="expected">vissásávt</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">vuoraččâsmuorjijd</td>
+        <td class="expected">vuorâččâsmuorjijd</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">vuossmuš</td>
+        <td class="expected">vuosmuš</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">vuossmužžân</td>
+        <td class="expected">vuosmužžân</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">vuostân</td>
+        <td class="expected">vaastân</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">vuošmus</td>
+        <td class="expected">vuosmuš</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">vuáddun</td>
+        <td class="expected">vuáđđun</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">vyelligis</td>
+        <td class="expected">vyeligis</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">váljejeh</td>
+        <td class="expected">väljejeh</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">váljim</td>
+        <td class="expected">valjim</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">västitiđ</td>
+        <td class="expected">västidiđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">västiđ</td>
+        <td class="expected">västid</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">västiđeh</td>
+        <td class="expected">västideh</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">väänni</td>
+        <td class="expected">vääni</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">älgäm</td>
+        <td class="expected">álgám</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">älkee</td>
+        <td class="expected">älkkee</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">älkkeeht</td>
+        <td class="expected">älkkeht</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">älkkep</td>
+        <td class="expected">älkkeb</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">äägi</td>
+        <td class="expected">ääigi</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">äässih</td>
+        <td class="expected">ääsih</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">šaddoiguim</td>
+        <td class="expected">šadoiguin</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">šaddá</td>
+        <td class="expected">šadda</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">šaddâ</td>
+        <td class="expected">šadda</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">šadoiguim</td>
+        <td class="expected">šadoiguin</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">šadost</td>
+        <td class="expected">šaddoost</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">šieu</td>
+        <td class="expected">šiev</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">šieđgah</td>
+        <td class="expected">sieđgah</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">čissááš</td>
+        <td class="expected">cissááš</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">čiuv</td>
+        <td class="expected">šiev</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">Čiuvjuuvvâst</td>
+        <td class="expected">Čivtjuuvâst</td>
+        <td class="edit_dist">3</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">Čiuvjuuvâst</td>
+        <td class="expected">Čivtjuuvâst</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">šlaajai</td>
+        <td class="expected">šlaajâi</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">šlaantâ</td>
+        <td class="expected">šlaanti</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">šoođâ</td>
+        <td class="expected">čoođâ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">čouvčâ</td>
+        <td class="expected">čoovčâ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">čovčâ</td>
+        <td class="expected">čoovčâ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">čuojotteh</td>
+        <td class="expected">čujotteh</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">šáddonomâttâsah</td>
+        <td class="expected">šaddonomâttâsah</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">čájttuzeh</td>
+        <td class="expected">čáittuseh</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">čállá</td>
+        <td class="expected">čáálá</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">čáállâm</td>
+        <td class="expected">čáállám</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">čäällimkuursáin</td>
+        <td class="expected">čäällimkurssáin</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">uáddid</td>
+        <td class="expected">uáđđiđ</td>
+        <td class="edit_dist">3</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">mušted</td>
+        <td class="expected">mušteđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">cäällid</td>
+        <td class="expected">čäälliđ</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">adelid</td>
+        <td class="expected">adeliđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">juurrâd</td>
+        <td class="expected">juurrâđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">juátkid</td>
+        <td class="expected">juátkiđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">finnid</td>
+        <td class="expected">finniđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">moonnâd</td>
+        <td class="expected">moonnâđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">piejâđ</td>
+        <td class="expected">pieijâđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">savâstâllâd</td>
+        <td class="expected">savâstâllâđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">vittádid</td>
+        <td class="expected">vittádiđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">vyebdid</td>
+        <td class="expected">vyebdiđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">rähtid</td>
+        <td class="expected">rähtiđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">peessâd</td>
+        <td class="expected">peessâđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">pyehtid</td>
+        <td class="expected">pyehtiđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">varrid</td>
+        <td class="expected">varriđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">kollid</td>
+        <td class="expected">kolliđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">viällád</td>
+        <td class="expected">viälláđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">äidi</td>
+        <td class="expected">äiđi</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">väžžiđ</td>
+        <td class="expected">väzziđ</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">väzzid</td>
+        <td class="expected">väzziđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">váilud</td>
+        <td class="expected">váiluđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">uástid</td>
+        <td class="expected">uástiđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">tutkâd</td>
+        <td class="expected">tutkâđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">teivâd</td>
+        <td class="expected">teivâđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">sierâdid</td>
+        <td class="expected">sierâdiđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">lijkkud</td>
+        <td class="expected">lijkkuđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">kivsedid</td>
+        <td class="expected">kivsediđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">kavnâd</td>
+        <td class="expected">kavnâđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">uvâstâllâđ</td>
+        <td class="expected">uvástâllâđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">tivvođ</td>
+        <td class="expected">tivvoođ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">liikkuđ</td>
+        <td class="expected">lijkkuđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">jiecânâs</td>
+        <td class="expected">jiečânâs</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">eeci</td>
+        <td class="expected">eeči</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">cäälliđ</td>
+        <td class="expected">čäälliđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">vaijeed</td>
+        <td class="expected">vaijjeeđ</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">uârnee</td>
+        <td class="expected">uárnee</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">paaldast</td>
+        <td class="expected">paaldâst</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">čokkâđ</td>
+        <td class="expected">čokkáđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">áin</td>
+        <td class="expected">ain</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">aassâd</td>
+        <td class="expected">aassâđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">äähnis</td>
+        <td class="expected">äänhis</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">älgid</td>
+        <td class="expected">älgiđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">äiguđ</td>
+        <td class="expected">áiguđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">vyelgid</td>
+        <td class="expected">vyelgiđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">vuolgâttid</td>
+        <td class="expected">vuolgâttiđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">uáinuđ</td>
+        <td class="expected">oinuđ</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">uáddád</td>
+        <td class="expected">uáđđáđ</td>
+        <td class="edit_dist">3</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">täidiđ</td>
+        <td class="expected">täiđiđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">tuálvud</td>
+        <td class="expected">tuálvuđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">spellâd</td>
+        <td class="expected">spellâđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">speellâđ</td>
+        <td class="expected">spellâđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">šoddâd</td>
+        <td class="expected">šoddâđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">savastâllâđ</td>
+        <td class="expected">savâstâllâđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">rähistid</td>
+        <td class="expected">rähistiđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">ráhtiđ</td>
+        <td class="expected">rähtiđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">puáttid</td>
+        <td class="expected">puáttiđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">ovtil</td>
+        <td class="expected">ovdil</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">muštâlid</td>
+        <td class="expected">muštâliđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">máttááttâš</td>
+        <td class="expected">máttááttâs</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">luuhâd</td>
+        <td class="expected">luuhâđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">lohtâšuđ</td>
+        <td class="expected">lohtâsuđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">lamas</td>
+        <td class="expected">lamaš</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">kuldaliđ</td>
+        <td class="expected">kuldâliđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">kolgaččij</td>
+        <td class="expected">kolgâččij</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">kiela</td>
+        <td class="expected">kielâ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">keccâd</td>
+        <td class="expected">keččâđ</td>
+        <td class="edit_dist">3</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">kávnuđ</td>
+        <td class="expected">kavnuđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">jäämmid</td>
+        <td class="expected">jäämmiđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">juuhâd</td>
+        <td class="expected">juuhâđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">jiereskittee</td>
+        <td class="expected">jiäráskittee</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">irâttid</td>
+        <td class="expected">irâttiđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">eellid</td>
+        <td class="expected">eelliđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">avveel</td>
+        <td class="expected">Avveel</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">adâi</td>
+        <td class="expected">adai</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">aalgan</td>
+        <td class="expected">aalgân</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">miäccán</td>
+        <td class="expected">miäcán</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">juovla</td>
+        <td class="expected">juovlâ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">kiansun</td>
+        <td class="expected">kiänsun</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">taigin</td>
+        <td class="expected">taigijn</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">huáppus</td>
+        <td class="expected">huápust</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">ennuu</td>
+        <td class="expected">ennuv</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">iiđeet</td>
+        <td class="expected">iiđeed</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">iđeet</td>
+        <td class="expected">iiđeed</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">halidij</td>
+        <td class="expected">halijdij</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">suoiniid</td>
+        <td class="expected">suoinijd</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">njuškii</td>
+        <td class="expected">njuškij</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">iännán</td>
+        <td class="expected">iänán</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">orroi</td>
+        <td class="expected">orroođ</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">iäččán</td>
+        <td class="expected">iäčán</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">almaalâš</td>
+        <td class="expected">almalâš</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">čuáibuččii</td>
+        <td class="expected">suáibuččii</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">koortáin</td>
+        <td class="expected">korttáin</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">čielgimân</td>
+        <td class="expected">čielgiimân</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">riiđoi</td>
+        <td class="expected">rijđoi</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">nuottâlâš</td>
+        <td class="expected">nuorttâlâš</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">neettist</td>
+        <td class="expected">neetist</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">oiniđ</td>
+        <td class="expected">uáiniđ</td>
+        <td class="edit_dist">2</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">halidiččih</td>
+        <td class="expected">halijdiččih</td>
+        <td class="edit_dist">1</td>
+      </tr>
+      <tr class="word" corrsugg="0">
+        <td class="original" status="error">sutâtiđ</td>
+        <td class="expected">sutâdiđ</td>
+        <td class="edit_dist">1</td>
+      </tr>
+    </table>
+    <script>$(document).ready( function() {$("#results").dynatable({features: {paginate: false}});});</script>
+  </body>
+</html>

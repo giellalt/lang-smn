@@ -1,0 +1,13 @@
+
+# Pick lemmas
+egrep -v '^\!' ../../../src/morphology/stems/nouns.lexc | grep ¢ |cut -d ' ' -f1,2 |  tr '+:' ' ' | cut -d ' ' -f1 | sed 's/$/+N+Sg+Com/' | $LOOKUP $GTHOME/langs/smn/src/generator-dict-gt-norm.xfst |cut -f2 | sort -u > generatedSgComforms
+
+# Pick SgCom forms
+egrep -v '^\!' ../../../src/morphology/stems/nouns.lexc |grep ¢ |cut -d '¢' -f2 | tr ',' ' '| cut -d ' ' -f1 | sort -u  > listedSgComforms
+
+# Compare the list of lemmas with the list of generated lemmas
+comm -23 listedSgComforms generatedSgComforms > missingSgComforms.txt
+rm generatedSgComforms listedSgComforms
+
+open missingSgComforms.txt
+

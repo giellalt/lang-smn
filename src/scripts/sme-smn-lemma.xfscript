@@ -1,0 +1,81 @@
+
+! File to make sme into quasi-smn
+
+! to compile:
+
+! xfst -f sme-smn-lemma.xfscript
+
+! to use:
+! cat list | lookup smesmn.fst
+
+
+define Vow  [ a|e|i|o|u|á ] ;
+
+define initp b -> p  || [.#.|%-] _ ;
+define initt d -> t  || [.#.|%-] _ ;
+define initk g -> k  || [.#.|%-] _ ;
+
+
+define CdnCn [ v d n -> v n 
+             ] ;
+
+define dnnn [  d n -> n n ,
+             i d n -> i n ,
+             l b m -> l m ,
+             r b m -> r m ,
+               d j -> i j ,
+               p m -> m m ,
+               k č -> h č ,
+               k t -> p t ,
+               k s -> p s 
+              ] ;
+
+define VowIK   i t -> š t , i k -> š k  || Vow _ ;
+
+define hppttkk [ h p p -> p p ,
+                 h t t -> t t ,
+                 h k k -> k k ,
+                 h c c -> c c ,
+                 h č č -> č č 
+                 ] ;
+
+define hptk    [ h p -> p p ,
+                 h t -> t t ,
+                 h k -> k k ,
+                 h c -> c c ,
+                 h č -> č č 
+                 ] ;
+
+define aVow [ á -> ä  ] ;
+
+define uaVow  o a -> u á ;
+define iaVow  e a -> i ä ;
+define yeVow  u o -> y e ;
+
+               
+
+
+define eeVow     e a -> e e ;
+
+
+read regex [ 
+initp
+.o. initt
+.o. initk    
+.o. CdnCnn
+.o. dnnn
+.o. VowIK
+.o. hppttkk
+.o. hptk
+.o. uaVow
+.o. iaVow
+.o. yeVow
+.o. aVow
+.o. eeVow
+] ;
+
+invert net ;
+
+
+save stack smesmn.fst
+

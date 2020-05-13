@@ -1,0 +1,28 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-dict-gt-norm.hfst
+    Morph: ../../../src/analyser-dict-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-dict-gt-norm.xfst
+    Morph: ../../../src/analyser-dict-gt-norm.xfst
+    App: lookup
+
+Tests:
+
+  Adjective - siämmáš: # MLO, ok
+    siämmáš+A+Sg+Nom: siämmáš             
+    siämmáš+A+Sg+Gen: siämmáá
+    siämmáš+A+Sg+Acc: siämmáá
+    siämmáš+A+Sg+Ill: siämmážân
+    siämmáš+A+Sg+Loc: siämmást
+    siämmáš+A+Sg+Com: siämmáin
+    siämmáš+A+Sg+Abe: siämmááttáá
+    siämmáš+A+Ess: siämmážin                
+    siämmáš+A+Par: siämmážid                
+    siämmáš+A+Pl+Nom: siämmááh
+    siämmáš+A+Pl+Gen: siämmái
+    siämmáš+A+Pl+Acc: siämmáid
+    siämmáš+A+Pl+Ill: siämmáid
+    siämmáš+A+Pl+Loc: siämmáin
+    siämmáš+A+Pl+Com: [siämmáiguin, siämmáigijn]
+    siämmáš+A+Pl+Abe: siämmáittáá

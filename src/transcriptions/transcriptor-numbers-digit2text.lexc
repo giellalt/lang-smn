@@ -1,0 +1,603 @@
+! Divvun & Giellatekno - open source grammars for Sámi and other languages
+! Copyright © 2000-2010 The University of Tromsø & the Norwegian Sámi Parliament
+! http://giellatekno.uit.no & http://divvun.no
+!
+! This program is free software; you can redistribute and/or modify
+! this file under the terms of the GNU General Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version. The GNU General Public License
+! is found at http://www.gnu.org/licenses/gpl.html. It is
+! also available in the file $GTHOME/LICENSE.txt.
+!
+! Other licensing options are available upon request, please contact
+! giellatekno@hum.uit.no or feedback@divvun.no
+
+
+!! !!!Inari Saami number <-> text
+
+
+Multichar_Symbols
+
+@U.DATE.1@
+@U.DATE.2@
+@U.DATE.3@
+@U.DATE.4@
+@U.DATE.5@
+@U.DATE.6@
+@U.DATE.7@
+@U.DATE.8@
+@U.DATE.9@
+@U.DATE.10@
+@U.DATE.11@
+@U.DATE.12@
+@U.DATE.13@
+@U.DATE.14@
+@U.DATE.15@
+@U.DATE.16@
+@U.DATE.17@
+@U.DATE.18@
+@U.DATE.19@
+@U.DATE.20@
+@U.DATE.21@
+@U.DATE.22@
+@U.DATE.23@
+@U.DATE.24@
+@U.DATE.25@
+@U.DATE.26@
+@U.DATE.27@
+@U.DATE.28@
+@U.DATE.29@
+@U.DATE.30@
+@U.DATE.31@
+
+
+  +Use/NG    ! Do not generate, for isme-ped.fst and apertium
+  +String    ! Tag to denote non-numeric strings
+
+! Note! the diacritic marks in this file are only part of the lower
+! representation. This means they can only be used from number to letter
+! conversion of date and month representation, not the other way around.
+! In order to get a two-way conversion, they must be added to the 
+! upper level as well.
+
+
+LEXICON Root
+< %+String [a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|q|y|z|æ|ø|å|ä|ö|á|č|đ|ŋ|A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|Æ|Ø|Å|Ä|Ö|Á|Č|Đ|Ŋ|Š|Ŧ|Ž]* > COMMA ; ! This first line is to allow all letter strings.
+
+
+NUMBERSECTION ; ! Numerals
+COMMASECTION ;  ! Separator section 
+DATESECTION ;   ! Date expressions (for TTS)
+
+LEXICON NUMBERSECTION
+
+HUNDREDSM ;		! 200M
+1:čyeti HUNDREDM ;	! 100M
+TENSM ;			! 20-99M
+TEENSM ;		! 10-19M
+ONESM ;			! 1-9M
+HUNDREDST ;		! 200000-999999
+HUNDREDST ;		! 200000-999999
+1:čyeti HUNDREDT ;	! 100000-100999
+TENST ;			! 20000-99999,10000-10999
+TEENST ;		! 11000-19999
+ONEST ;			! 2000-9999
+1:tuhháát THOUSAND ;	! 1000-1999
+UNDERTHOUSAND ;		! 100-999
+TENS ;			! 20-99
+TEENS ;			! 10-19
+ONES ;			! 1-9
+
+LEXICON HUNDREDSM
+2:kyehti  CUODIM ;
+3:kulmâ  CUODIM ;
+4:nelji  CUODIM ;
+5:vittâ  CUODIM ;
+6:kuttâ  CUODIM ;
+7:čiččâm CUODIM ;
+8:käävci CUODIM ;
+9:oovce CUODIM ;
+
+LEXICON CUODIM
+:čyeti HUNDREDM ;
+
+LEXICON HUNDREDM
+TENSM ;
+TEENSM ;
+%0: ONESM ;
+%0%0: MILJON ;
+
+LEXICON TEENSM
+1: TEENM ;
+
+LEXICON TEENM
+1:ohtâ  LOHKAIM ;
+2:kyehti LOHKAIM ;
+3:kulmâ LOHKAIM ;
+4:nelji LOHKAIM ;
+5:vittâ+Use/NG LOHKAIM ;
+6:kuttâ+Use/NG LOHKAIM ;
+5:vitt LOHKAIM ;
+6:kutt LOHKAIM ;
+7:čiččâm LOHKAIM ;
+8:käävci LOHKAIM ;
+9:oovce LOHKAIM ;
+
+LEXICON LOHKAIM
+:nubáloh MILJON ;
+
+LEXICON TENSM
+1%0:love MILJON ;
+2:kyehti LOGIM ;
+3:kulmâ LOGIM ;
+4:nelji LOGIM ;
+5:vittâ LOGIM ;
+6:kuttâ LOGIM ;
+7:čiččâm LOGIM ;
+8:käävci LOGIM ;
+9:oovce LOGIM ;
+
+LEXICON LOGIM
+%0:love  MILJON ;
+:love  ONESM ;
+
+LEXICON ONESM
+1:miljon%  OVERTHOUSANDS ;
+2:kyehti MILJON ;
+3:kulmâ MILJON ;
+4:nelji MILJON ;
+5:vittâ MILJON ;
+6:kuttâ MILJON ;
+7:čiččâm MILJON ;
+8:käävci MILJON ;
+9:oovce  MILJON ; 
+
+LEXICON MILJON
+:% miljona%  OVERTHOUSANDS ;
+
+! =================
+! Under the million
+! =================
+
+LEXICON OVERTHOUSANDS
+HUNDREDST ;		! x00.000.000
+1:čyeđe HUNDREDT ;	! 100.000.000
+%0: TENST ;		!  20.000.000
+%0: TEENST ;		!  10.000.000
+%0%0: TWOST ;		!   2.000.000
+%0%0: SEVENST ;		!   7.000.000
+%0%01:tuhháát THOUSAND ;	!   1.000.000
+%0%0%0: UNDERTHOUSAND ;	
+%0%0%0%0: TENS ;
+%0%0%0%0: TEENS ;
+%0%0%0%0%0: ONES ;
+%0%0%0%0%0%0: # ;	!  x000000
+
+
+LEXICON HUNDREDST
+2:kyehti  TWOCUODIT ;	! 200000-299999
+3:kulmâ TWOCUODIT ;	! 300000-399999
+4:nelji TWOCUODIT ;	! 400000-499999
+5:vittâ TWOCUODIT ;	! 500000-599999
+6:kuttâ TWOCUODIT ;	! 600000-699999
+7:čiččâm SEVENCUODIT ;	! 700000-799999
+8:käävci SEVENCUODIT ;	! 800000-899999
+9:oovce SEVENCUODIT ;	! 900000-999999
+
+LEXICON TWOCUODIT
+:čyeđe HUNDREDT ;	! 100000-199999
+
+LEXICON SEVENCUODIT
+:čyeđe HUNDREDT ;
+
+LEXICON HUNDREDT	! X = 1-9, Y = 0-9
+TENST ;			! X2XYYY, X10YYY
+TEENST ;		! X1XYYY
+%01:ohtâ TWOTHOUSANDS ; ! Same tuhháát as 2000
+%0: ONEST ;		! XX0YYY
+%0%0: THOUSANDS ;	! X00YYY
+
+LEXICON TEENST
+1: TEENT ;
+
+LEXICON TEENT
+%0:love THOUSANDS ;
+1:ohtâ LOHKAIT ;
+2:kyehti LOHKAIT ;
+3:kulmâ LOHKAIT ;
+4:nelji LOHKAIT ;
+5:vitt LOHKAIT ;
+5:vittâ+Use/NG LOHKAIT ;
+6:kutt LOHKAIT ;
+6:kuttâ+Use/NG LOHKAIT ;
+7:čiččâm LOHKAIT ;
+8:käävci LOHKAIT ;
+9:oovce LOHKAIT ;
+
+LEXICON LOHKAIT
+:nubáloh THOUSANDS ;
+
+LEXICON TENST
+2:kyehtlov LOGIT ;
+3:kulmâlov LOGIT ;
+3:kulmlov+Use/NG LOGIT ;
+4:neljilov LOGIT ;
+5:vittlov LOGIT ;
+6:kuttlov LOGIT ;
+7:čiččâmlov LOGIT ;
+8:kähcilov LOGIT ;
+9:ohcelov LOGIT ;
+
+LEXICON LOGIT
+%0: THOUSANDS ;
+1:ohtâ THOUSANDS ;
+ONEST ;
+
+LEXICON ONEST
+TWOST ;			! 2000-6999
+SEVENST ;               ! 7000-9999
+
+LEXICON THOUSANDS
+1:tuhháát THOUSAND ;    ! 1000-1999
+
+LEXICON TWOST
+2:kyeht TWOTHOUSANDS ;
+3:kulmâ TWOTHOUSANDS ;
+4:nelji TWOTHOUSANDS ;
+5:vittâ TWOTHOUSANDS ;
+6:kuttâ TWOTHOUSANDS ;
+
+LEXICON SEVENST
+7:čiččâm SEVENTHOUSANDS ;
+8:käävci SEVENTHOUSANDS ;
+9:oovce SEVENTHOUSANDS ;
+
+LEXICON TWOTHOUSANDS      ! 2000 - 6999
+:tuhháát THOUSAND ;
+
+LEXICON SEVENTHOUSANDS ! 7000 - 9999
+:tuhháát THOUSAND ;
+
+
+LEXICON THOUSAND
+UNDERTHOUSAND ;	   ! 1100-1999
+%0: TENS ;	   ! 1020-1099
+%0: TEENS ;	   ! 1010-1019
+%0%0: ONES ;	   ! 1001-1009
+%0%0%0: # ;	   ! 1000
+
+!===========================
+!Here starts the 999 numbers
+!===========================
+
+LEXICON UNDERTHOUSAND
+SEVENHUNDREDS ;
+TWOHUNDREDS ;
+1:čyeti HUNDRED ;
+
+
+LEXICON SEVENHUNDREDS ! 700-900 with +Par
+7:čiččâm SEVENCUODI ;
+8:käävci SEVENCUODI ;
+9:ohce SEVENCUODI ;
+
+LEXICON TWOHUNDREDS ! 200-699 with +Acc
+2:kyehti CUODI ;
+2:kyeht+Use/NG CUODI ;
+3:kulmâ CUODI ;
+3:kulm+Use/NG CUODI ;
+4:nelji CUODI ;
+5:vittâ CUODI ;
+5:vitt+Use/NG CUODI ;
+5:vit+Use/NG CUODI ;
+6:kuttâ CUODI ;
+6:kutt+Use/NG CUODI ;
+6:kut+Use/NG CUODI ;
+
+LEXICON SEVENCUODI ! 700-900 with +Par
+:čyeđe HUNDRED ;
+:čyet HUNDRED ;
+
+LEXICON CUODI ! 200-699 with +Acc
+:čyeđe HUNDRED ;
+:čyet HUNDRED ;
+
+LEXICON HUNDRED
+TENS ;
+TEENS ;
+%0: ONES ;
+%0%0: # ;
+
+LEXICON TEENS
+1: TEEN ;
+
+LEXICON TEEN
+1:oht LOHKAI ;
+2:kyeht LOHKAI ;
+3:kulmâ LOHKAI ;
+3:kulm+Use/NG LOHKAI ;
+4:nelji LOHKAI ;
+5:vitt LOHKAI ;
+5:vit+Use/NG LOHKAI ;
+6:kutt LOHKAI ;
+6:kut+Use/NG LOHKAI ;
+7:čiččâm LOHKAI ;
+8:käävci LOHKAI ;
+9:oovce LOHKAI ;
+
+LEXICON LOHKAI
+:nubáloh # ;
+%.: LOGAAT ;
+
+LEXICON LOGAAT
+:nubálovváád # ; 
+
+LEXICON TENS
+1%0:love # ;
+1%0%.:lovváád # ; 
+2:kyeht LOGI ;
+3:kulm+Use/NG LOGI ;
+3:kulmâ LOGI ;
+4:nelji LOGI ;
+5:vit+Use/NG LOGI ;
+5:vitt LOGI ;
+6:kut+Use/NG LOGI ;
+6:kutt LOGI ;
+7:čiččâm LOGI ;
+8:kähci LOGI ;
+9:ohce LOGI ;
+
+LEXICON LOGI
+%0:lov # ;
+:lov ONES ;
+
+LEXICON ONES
+CARDINAL ;
+ORDINAL ;
+
+LEXICON CARDINAL
+1:ohtâ # ;
+2:kyehti # ;
+3:kulmâ # ;
+4:nelji # ;
+5:vittâ # ;
+6:kuttâ # ;
+7:čiččâm # ;
+8:käävci # ;
+9:oovce # ;
+
+
+LEXICON ORDINAL		   
+1%.:vuossâmuš     # ;   
+2%.:nubbe   # ;		   
+3%.:kuálmád   # ;	   
+4%.:niäljád # ;	   
+5%.:viiđâd   # ;		   
+6%.:kuuđâd   # ;		   
+7%.:čiččâd    # ;	   
+8%.:káávcád   # ;	   
+9%.:oovcád    # ;	   
+
+
+
+
+
+
+
+! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! !!!!!!!!!!                    !!!!!!!!!!!!!!!!!!!
+! !!!!!!!!!!   Comma section    !!!!!!!!!!!!!!!!!!!
+! !!!!!!!!!!                    !!!!!!!!!!!!!!!!!!!
+! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+LEXICON COMMA
+ ENDLEX ;
+ COMMASECTION ;
+
+LEXICON COMMASECTION 
+                  ENDLEX ; 
+  % komma% :,      NUMBERSECTION ;
+  % čuokkis% :%.   NUMBERSECTION ; ! these will overlap with dates
+  % kolon% :%:     NUMBERSECTION ;
+  % sárggis% :%-   NUMBERSECTION ; 
+ % lea% :%=        NUMBERSECTION ; 
+ % gráda% :%°      NUMBERSECTION ; 
+ % paragráfa% :§   NUMBERSECTION ; 
+  % násti% :%*     NUMBERSECTION ; 
+ % ja% :&          NUMBERSECTION ; 
+
+
+
+
+! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! !!!!!!!!!!                   !!!!!!!!!!!!!!!!!!!
+! !!!!!!!!!!   Date section    !!!!!!!!!!!!!!!!!!!
+! !!!!!!!!!!                   !!!!!!!!!!!!!!!!!!!
+! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+! [(0)[1-9]|[12][0-9]|3[01]]\.[3[01]]\.[([12][0-9])[0-9][0-9]]]
+! 1.1.1934  = ođđajagimánu vuosttaš beaivi ovccinuppelotčuođigolbmaloginjeallje
+! 3.11.2009 = skábmamánu goalmmát beaivi guokteduhátovcci
+! 5.6.09    = geassemánu viđát beaivi nulla ovcci
+! are there other formats in use?
+! E.g. ská. 3. - ie combinations of abbr text and numbers?
+! what about other orders? In Sweden, the year typically comes first:
+! 2009.11.3
+! Is this order found in Sámi texts, eg. from Sweden?
+! and irrespective of written order, should the spoken order always be the same?
+
+! Strategy:
+! Use flag diacritics: Do the dates in one batch and the months in another
+! Under this regime, we do this:
+!            skábmamánu   { goalmmát | njealjjat }
+! 3.@U.d.3@            11.  @U.d.3@    @U.d.4@    
+! Then, the flag diacritic will remove non-harmonic strings @R.3@...@D.4@
+! And only the correct 3-3 string will be left intact.
+
+
+LEXICON DATESECTION
+
+
+:%0 SMALLDATEDAYMARK ; ! Eventual leading zero for one-digit day
+    SMALLDATEDAYMARK ; ! No leading zero for one-digit day
+    LARGEDATEDAYMARK ; ! No leading zero for two-digit day
+
+LEXICON SMALLDATEDAYMARK
+:@U.DATE.1@1 DATEMONTHSEPARATOR ;
+:@U.DATE.2@2 DATEMONTHSEPARATOR ;
+:@U.DATE.3@3 DATEMONTHSEPARATOR ;
+:@U.DATE.4@4 DATEMONTHSEPARATOR ;
+:@U.DATE.5@5 DATEMONTHSEPARATOR ;
+:@U.DATE.6@6 DATEMONTHSEPARATOR ;
+:@U.DATE.7@7 DATEMONTHSEPARATOR ;
+:@U.DATE.8@8 DATEMONTHSEPARATOR ;
+:@U.DATE.9@9 DATEMONTHSEPARATOR ;
+
+LEXICON LARGEDATEDAYMARK
+:@U.DATE.10@1%0 DATEMONTHSEPARATOR ;
+:@U.DATE.11@11 DATEMONTHSEPARATOR ;
+:@U.DATE.12@12 DATEMONTHSEPARATOR ;
+:@U.DATE.13@13 DATEMONTHSEPARATOR ;
+:@U.DATE.14@14 DATEMONTHSEPARATOR ;
+:@U.DATE.15@15 DATEMONTHSEPARATOR ;
+:@U.DATE.16@16 DATEMONTHSEPARATOR ;
+:@U.DATE.17@17 DATEMONTHSEPARATOR ;
+:@U.DATE.18@18 DATEMONTHSEPARATOR ;
+:@U.DATE.19@19 DATEMONTHSEPARATOR ;
+:@U.DATE.20@2%0 DATEMONTHSEPARATOR ;
+:@U.DATE.21@21 DATEMONTHSEPARATOR ;
+:@U.DATE.22@22 DATEMONTHSEPARATOR ;
+:@U.DATE.23@23 DATEMONTHSEPARATOR ;
+:@U.DATE.24@24 DATEMONTHSEPARATOR ;
+:@U.DATE.25@25 DATEMONTHSEPARATOR ;
+:@U.DATE.26@26 DATEMONTHSEPARATOR ;
+:@U.DATE.27@27 DATEMONTHSEPARATOR ;
+:@U.DATE.28@28 DATEMONTHSEPARATOR ;
+:@U.DATE.29@29 DATEMONTHSEPARATOR ;
+:@U.DATE.30@3%0 DATEMONTHSEPARATOR ;
+:@U.DATE.31@31 DATEMONTHSEPARATOR ;
+
+
+LEXICON DATEMONTHSEPARATOR
+% :%. MONTHZERO ;
+
+LEXICON MONTHZERO
+:%0 SMALLMONTH ; ! Eventual leading zero
+    SMALLMONTH ; ! no leading zero
+    LARGEMONTH ;
+
+
+LEXICON SMALLMONTH
+ođđajágimánu:1 DATEDAYSEPARATOR ;
+guovvamánu:2 DATEDAYSEPARATOR ;
+njukčamánu:3 DATEDAYSEPARATOR ;
+cuoŋománu:4 DATEDAYSEPARATOR ;
+miessemánu:5 DATEDAYSEPARATOR ;
+geassemánu:6 DATEDAYSEPARATOR ;
+suoidnemánu:7 DATEDAYSEPARATOR ;
+borgemánu:8 DATEDAYSEPARATOR ;
+čakčamánu:9 DATEDAYSEPARATOR ;
+
+LEXICON LARGEMONTH
+golggotmánu:1%0 DATEDAYSEPARATOR ;
+skábmamánu:11 DATEDAYSEPARATOR ;
+juovlamánu:12 DATEDAYSEPARATOR ;
+
+LEXICON DATEDAYSEPARATOR
+% :%. DATENAME ;
+
+
+LEXICON DATENAME
+vuosttaš:@U.DATE.1@ DAYTEXT ;
+nubbi:@U.DATE.2@ DAYTEXT ;
+goalmmát:@U.DATE.3@ DAYTEXT ;
+njealját:@U.DATE.4@ DAYTEXT ;
+viđát:@U.DATE.5@ DAYTEXT ;
+guđát:@U.DATE.6@ DAYTEXT ;
+čihččet:@U.DATE.7@ DAYTEXT ;
+gávccát:@U.DATE.8@ DAYTEXT ;
+ovccát:@U.DATE.9@ DAYTEXT ;
+logát:@U.DATE.10@ DAYTEXT ;
+oktanuppelogát:@U.DATE.11@ DAYTEXT ;
+aktanuppelogát+Use/NG:@U.DATE.11@ DAYTEXT ;
+guoktenuppelogát:@U.DATE.12@ DAYTEXT ;
+golbmanuppelogát:@U.DATE.13@ DAYTEXT ;
+njealljenuppelogát:@U.DATE.14@ DAYTEXT ;
+vihttanuppelogát:@U.DATE.15@ DAYTEXT ;
+guhttanuppelogát:@U.DATE.16@ DAYTEXT ;
+čiežanuppelogát:@U.DATE.17@ DAYTEXT ;
+gávccinuppelogát:@U.DATE.18@ DAYTEXT ;
+ovccinuppelogát:@U.DATE.19@ DAYTEXT ;
+guoktelogát:@U.DATE.20@ DAYTEXT ;
+guoktelogivuosttaš:@U.DATE.21@ DAYTEXT ;
+guokteloginubbi:@U.DATE.22@ DAYTEXT ;
+guoktelogigoalmmát:@U.DATE.23@ DAYTEXT ;
+guokteloginjealját:@U.DATE.24@ DAYTEXT ;
+guoktelogiviđát:@U.DATE.25@ DAYTEXT ;
+guoktelogiguđát:@U.DATE.26@ DAYTEXT ;
+guoktelogičihččet:@U.DATE.27@ DAYTEXT ;
+guoktelogigávccát:@U.DATE.28@ DAYTEXT ;
+guoktelogiovccát:@U.DATE.29@ DAYTEXT ;
+golbmalogát:@U.DATE.30@ DAYTEXT ;
+golbmalogivuosttaš:@U.DATE.31@ DAYTEXT ;
+
+
+LEXICON DAYTEXT
+% beaivi% : DATEYEAR ;
+
+LEXICON DATEYEAR 
+guokte:2   THOUSANDS ;    ! 2000 ->
+golbma:3   THOUSANDS ;    ! etc.->
+njeallje:4 THOUSANDS ;
+vihtta:5   THOUSANDS ;
+guhtta:6   THOUSANDS ;
+čieža:7    THOUSANDS ;
+gávcci:8   THOUSANDS ;
+ovcci:9    THOUSANDS ;
+           YEARTEENS ;     ! 1000 - 1999
+           YEARHUNDREDS ;  ! 100-999
+           TWODIGITYEAR ;  ! 10 - 99
+nolla% :%0  ONES ;		   ! 01-09
+           ENDLEX ;        ! no year
+
+LEXICON YEARTEENS
+:1 YEARTEEN ;
+
+LEXICON YEARTEEN
+okta:1     YEARLOGAI ;
+akta+Use/NG:1     YEARLOGAI ;
+guokte:2   YEARLOGAI ;
+golbma:3   YEARLOGAI ;
+njeallje:4 YEARLOGAI ;
+vihtta:5   YEARLOGAI ;
+guhtta:6   YEARLOGAI ;
+čieža:7    YEARLOGAI ;
+gávcci:8   YEARLOGAI ;
+ovcci:9    YEARLOGAI ;
+
+LEXICON YEARLOGAI
+nuppelohkái: TWODIGITYEAR ;
+
+LEXICON YEARHUNDREDS
+okta:1     YEARHUNDRED ;
+akta+Use/NG:1     YEARHUNDRED ;
+guokte:2   YEARHUNDRED ;
+golbma:3   YEARHUNDRED ;
+njeallje:4 YEARHUNDRED ;
+vihtta:5   YEARHUNDRED ;
+guhtta:6   YEARHUNDRED ;
+čieža:7    YEARHUNDRED ;
+gávcci:8   YEARHUNDRED ;
+ovcci:9    YEARHUNDRED ;
+
+LEXICON YEARHUNDRED
+čuođi: TWODIGITYEAR ;
+
+LEXICON TWODIGITYEAR
+TENS ;			    ! 20-99
+TEENS ;			    ! 10-19
+
+LEXICON ENDLEX
+ # ;
+
