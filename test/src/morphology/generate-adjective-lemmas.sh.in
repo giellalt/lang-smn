@@ -155,11 +155,11 @@ for f in $fsttype; do
           cut -f2 | grep -v "A+" | grep -v "^$" | sort -u > $generated_lemmas.$f.txt		
 
 # Generer lemmaer i adjectives med +A+Superl+Sg+Nom, lagre i generated-adjectives
-        sed 's/$/+A+Superl+Sg+Nom/' $suplemmas | $lookup_tool $generator_file.$suffix | \
+        sed 's/$/+A+Der\/Superl+A+Sg+Nom/' $suplemmas | $lookup_tool $generator_file.$suffix | \
           cut -f2 | grep -v "A+" | grep -v "^$" | sort -u >> $generated_lemmas.$f.txt		
 
 # Generer lemmaer i adjectives med +A+Comp+Sg+Nom, lagre i generated-adjectives
-        sed 's/$/+A+Comp+Sg+Nom/' $complemmas | $lookup_tool $generator_file.$suffix | \
+        sed 's/$/+A+Dere\/Comp+A+Sg+Nom/' $complemmas | $lookup_tool $generator_file.$suffix | \
           cut -f2 | grep -v "A+" | grep -v "^$" | sort -u >> $generated_lemmas.$f.txt		
 
 
