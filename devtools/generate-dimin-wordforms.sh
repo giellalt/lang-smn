@@ -4,16 +4,7 @@
 # lexicons except the ones listed in the exception list.
 
 # Path to $GIELLA_CORE - we don't use Autotools for these scripts:
-if test "x$GIELLA_CORE" != "x" -a -d "$GIELLA_CORE" ; then
-    giella_core=$GIELLA_CORE
-elif test "x$GTCORE" != "x" -a -d "$GTCORE" ; then
-    giella_core=$GTCORE
-elif test "x$GTHOME" != "x" -a -d "$GTHOME/giella-core" ; then
-    giella_core=$GTHOME/giella-core
-else
-    echo "ERROR: Neither of $$GIELLA_CORE, $$GTCORE or $$GTHOME defined."
-    exit 1
-fi
+giella_core=$GTLANGS/giella-core
 
 ######### USER Variables - change these to your liking: #########
 # Codes for the word forms to be generated - list as many or few as needed:
