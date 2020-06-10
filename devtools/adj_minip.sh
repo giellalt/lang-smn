@@ -14,7 +14,7 @@ GTHOME=$(echo $GTHOME)
 
 PATTERN=$1
 L_FILE="in.txt"
-cut -d '!' -f1 src/fst/stems/adjectives.lexc | egrep $PATTERN | cut -d ':' -f1>$L_FILE
+cut -d '!' -f1 src/fst/stems/adjectives.lexc | egrep $PATTERN | tr '+' ':' | cut -d ':' -f1>$L_FILE
 
 #P_FILE="test/data/testadjparadigm.txt"
 P_FILE="test/data/adj_paradigm.txt"
@@ -23,7 +23,8 @@ for lemma in $(cat $L_FILE);
 do
  for form in $(cat $P_FILE);
  do
-   echo "${lemma}${form}" | $LOOKUP $GTHOME/langs/smn/src/generator-gt-norm.xfst
+   echo "${lemma}${form}" | $LOOKUP $GTLANGS/lang-smn/src/generator-gt-norm.xfst # xfst
+#      echo "${lemma}${form}" | $HLOOKUP $GTLANGS/lang-smn/src/generator-gt-norm.hfstol # hfst
  done
 done
 
