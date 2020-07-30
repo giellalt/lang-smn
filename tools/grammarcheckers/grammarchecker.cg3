@@ -1996,6 +1996,7 @@ LIST &syn-pred-not-attr = &syn-pred-not-attr ;
 LIST &err-mii-acc = &err-mii-acc ;
 LIST &err-ness-acc-nom = &err-ness-acc-nom ; # Muu ličij > Mun ...
 LIST &err-ness-ill-nom = &err-ness-ill-nom ; # Munnui ličij > Mun ...
+LIST &err-pred-acc-nom =  &err-pred-acc-nom ; # Taah láá aašijd.
 
 MAPPING-PREFIX = & ;
 
@@ -2006,6 +2007,14 @@ SECTION
 # Speller suggestions rule - make sure the suggestions survive the cg mangling:
 ADD (&typo &SUGGESTWF) (<spelled>);
 
+#!! Verb agreement rules
+
+#!! Sg3/Pl3 errors
+
+ADD:err-agr-pl3 (&err-agr-pl3) TARGET V IF (*1 Pl + Nom BARRIER NOT-NPMODADV)(0 ("leđe") + Sg3);
+COPY:err-agr-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V &err-agr-pl3);
+## Tast lii uápis ääših
+#$ Tast láá uápis ääših
 
 ADD:err-agr (&err-agr) TARGET V IF (-1C Sg + Nom)(0 VFIN)(NOT 0 Sg3)(NEGATE 0 ConNeg LINK *-1 Neg)(NOT *-2 CC LINK -1 Sg + Nom);
 COPY:err-agr (Sg3 &SUGGEST) EXCEPT VNOTSG3 TARGET (V Ind Prs &err-agr);
@@ -2170,11 +2179,18 @@ COPY:err-extneg-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET ("ij" V Neg Ind &err-extneg
 
 #!! !Predicative
 
-#ADD:err-pred-acc (&err-pred-acc) TARGET Acc IF (
+
+ADD:err-pred-acc-nom (&err-pred-acc-nom) TARGET Acc IF (*-1 ("leđe") + Ind BARRIER NOT-NPMOD OR ("mihheen")))(NOT 0 Arab)(NOT *0 TV);
+COPY:err-pred-acc-nom (Nom &SUGGEST) EXCEPT Acc TARGET (N &err-pred-acc-nom);
+## Taah láá čielgâ aašijd
+#$ Taah láá čielgâ ááših
+
 
 #!! !Plural objects
 
-ADD:err-pl-obj (&err-pl-obj) TARGET N IF (*-2 Nom)(-1 TV + Ind LINK NOT 0 Der/Pass)(0 N + Pl + Nom)(NOT -1 PrfPrc LINK *-1 N BARRIER VFIN);
+ADD:err-pl-obj (&err-pl-obj) TARGET N IF (*-2 Pl + Nom)(-1 TV + Ind + Pl3 LINK NOT 0 Der/Pass)(0 N + Pl + Nom)(NOT -1 PrfPrc LINK *-1 N BARRIER VFIN);
+
+ADD:err-pl-obj (&err-pl-obj) TARGET N IF (*-2 Sg + Nom)(-1 TV + Ind + Sg3 LINK NOT 0 Der/Pass)(0 N + Pl + Nom)(NOT -1 PrfPrc LINK *-1 N BARRIER VFIN);
 COPY:err-pl-obj (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &err-pl-obj);
 
 #!! !ConNeg Better: Target whatever is there and should have been a conneg. !!!
@@ -2302,7 +2318,7 @@ COPY:err-num-par (Par &SUGGEST) EXCEPT (Sg Acc) TARGET (N &err-num-par) ;
 #!!Accusative subjects in passive 
 
 # b) Suomâkielâ partitiiv passiivráhtusijn; sämikielâst passiiv ohtâvuođâst lii nominatiiv já verbâ maaŋgâlovvoost.
-MAP:err-pass-accsubj (&err-pass-accsubj) TARGET N IF (0C Acc + Pl)(1 Der/Pass OR LEXICALISED-PASS-V + Pl3);
+MAP:err-pass-accsubj (&err-pass-accsubj) TARGET N IF (0C Acc + Pl)(1 Der/Pass OR LEXICALISED-PASS-V + Pl3)(NOT 1 PrfPrc);
 COPY:err-pass-accsubj (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &err-pass-accsubj);
 #fi	Saamenkielisiä nimityksiä käytetään vähän. - 
 ##	Sämikielâlijd nomâttâsâid kiävttojeh uccáá. 
