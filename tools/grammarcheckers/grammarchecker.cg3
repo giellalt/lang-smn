@@ -1997,6 +1997,7 @@ LIST &err-mii-acc = &err-mii-acc ;
 LIST &err-ness-acc-nom = &err-ness-acc-nom ; # Muu ličij > Mun ...
 LIST &err-ness-ill-nom = &err-ness-ill-nom ; # Munnui ličij > Mun ...
 LIST &err-pred-acc-nom =  &err-pred-acc-nom ; # Taah láá aašijd.
+LIST &err-sg1-prfprc = &err-sg1-prfprc ;
 
 MAPPING-PREFIX = & ;
 
@@ -2006,6 +2007,7 @@ SECTION
 
 # Speller suggestions rule - make sure the suggestions survive the cg mangling:
 ADD (&typo &SUGGESTWF) (<spelled>);
+
 
 #!! Verb agreement rules
 
@@ -2343,3 +2345,15 @@ ADD:err-mii-acc (&err-mii-acc) TARGET N IF (-2 BOS)(-1 ("kii"))(0 (N Sg Nom))(1 
 COPY:err-mii-acc (Pl Acc &SUGGEST) EXCEPT (Sg Nom) TARGET ( N &err-mii-acc);
 
 
+
+#!! Confusion rules # dáppe mun lean
+
+#!! Sg1 for PrfPrc
+ADD:err-sg1-prfprc (&err-sg1-prfprc) TARGET V IF (*-1 Ind BARRIER NOT-ADV)(0 (Prs Sg1));
+COPY:err-sg1-prfprc (PrfPrc &SUGGEST) EXCEPT (Ind Prs Sg1) TARGET (V &err-sg1-prfprc);
+## Sun lii huunjâm
+#$ Sun lii huunnjâm
+
+# čilgen:
+#ADD-njuolggadus: lasihan &err-sg1-prfprc  jos gurotbealde lea indikatiiva ja ieš lea prs sg1
+#COPY-njuolggadus: bidjan dohko PrfPrc ja sáni &SUGGEST (maksá "evttot dan") 
