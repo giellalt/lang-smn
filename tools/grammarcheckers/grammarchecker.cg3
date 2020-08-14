@@ -2140,7 +2140,7 @@ COPY:err-ext-agr (Pl3 &SUGGEST) EXCEPT Sg3 TARGET ("leđe" V Ind Prs &err-ext-ag
 ## Must lii uđđâ autoh.
 #$ Must láá uđđâ autoh.
 
-ADD:err-pl-obj (&err-pl-obj) TARGET (N Pl Nom) IF (*-1 TRANS-V  BARRIER NOT-NPMOD OR CLB OR PUNCT LINK NOT 0 Pl3)(NOT 0 ABBR OR Num)(NEGATE -1 PrfPrc LINK *-1 N BARRIER VFIN);
+ADD:err-pl-obj (&err-pl-obj) TARGET (N Pl Nom) IF (*-1 TRANS-V  BARRIER NOT-NPMOD OR CLB OR PUNCT LINK NOT 0 Pl3 LINK *-1 (N Pl Nom))(NOT 0 ABBR OR Num)(NEGATE -1 PrfPrc LINK *-1 N BARRIER VFIN);
 COPY:err-pl-obj (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &err-pl-obj);
 # Trans: Others know mushrooms by.their.color.
 ## Nubeh tobdeh kuobbâreh ivneest.
