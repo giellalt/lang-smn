@@ -2013,7 +2013,7 @@ ADD (&typo &SUGGESTWF) (<spelled>);
 
 #!! Sg3/Pl3 errors
 
-ADD:err-agr-pl3 (&err-agr-pl3) TARGET V IF (*1 Pl + Nom BARRIER NOT-NPMODADV)(0 ("leđe") + Sg3);
+ADD:err-agr-pl3 (&err-agr-pl3) TARGET V IF (*1 Pl + Nom BARRIER NOT-NPMODADV LINK NOT *1 V + Pl3)(0 ("leđe") + Sg3);
 COPY:err-agr-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V &err-agr-pl3);
 ## Tast lii uápis ääših
 #$ Tast láá uápis ääših
@@ -2182,7 +2182,7 @@ COPY:err-extneg-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET ("ij" V Neg Ind &err-extneg
 #!! !Predicative
 
 
-ADD:err-pred-acc-nom (&err-pred-acc-nom) TARGET Acc IF (*-1 ("leđe") + Ind BARRIER NOT-NPMOD OR ("mihheen"))(NOT 0 Arab)(NOT *0 TV);
+ADD:err-pred-acc-nom (&err-pred-acc-nom) TARGET Acc IF (*-1 ("leđe") + Ind BARRIER NOT-NPMOD OR ("mihheen"))(NOT 0 Arab OR Nom)(NOT *0 TV);
 COPY:err-pred-acc-nom (Nom &SUGGEST) EXCEPT Acc TARGET (N &err-pred-acc-nom);
 ## Taah láá čielgâ aašijd
 #$ Taah láá čielgâ ááših
@@ -2276,13 +2276,14 @@ COPY:err-acc-obj-top (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &err-acc-obj-top);
 
 # Suomâkielâ imperatiiv mieđetteijee häämist, mast objekt sajehäämmin lii maaŋgâlovo nominatiiv mut sämikielâst akkusatiiv:
 
-ADD:err-imp-nomobj (&err-imp-nomobj) TARGET N IF (-2C Imprt)(-1 PRE-NP-HEAD)(NOT 0 Acc OR Gen)(0 Nom);
-ADD:err-imp-nomobj (&err-imp-nomobj) TARGET N IF (-1C Imprt)(NOT 0 Acc OR Gen)(0 Nom);
-COPY:err-imp-nomobj (Nom &SUGGEST) EXCEPT Acc OR Gen TARGET (N Pl &err-imp-nomobj);
-
+ADD:err-imp-nomobj (&err-imp-nomobj) TARGET N IF (-2C Imprt)(-1 PRE-NP-HEAD)(0 Nom)(NOT 0 Acc OR Gen);
+ADD:err-imp-nomobj (&err-imp-nomobj) TARGET N IF (-1C Imprt)(0 Nom)(NOT 0 Acc OR Gen);
+COPY:err-imp-nomobj (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &err-imp-nomobj);
 #fi	Myy nämä kalat - 
-#$ Vyebdi taid kuolijd! 
 ## Vyebdi taah kyeleh!
+#$ Vyebdi taid kuolijd! 
+
+
 
 
 #!! !!Infinitive errors
