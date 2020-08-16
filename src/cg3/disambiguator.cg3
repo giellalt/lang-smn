@@ -2157,6 +2157,16 @@ REMOVE:NotImprtVFIN Imprt IF (*1C VFIN BARRIER NOT-ADV-PCLE LINK NEGATE 1 go);
  	#$ Lágas ii duššaduvvo oktage bustávaš dahje čuoggáš, ovdal go...
  	#% Iskka massá go viessu ollu lieggasa.
 
+REMOVE:GenNotImprt Imprt IF (0 Gen)(*1 N BARRIER NOT-NPMOD LINK 1 VFIN);
+#$ Kielâ lingvistlâš ovdedem läävee juohhuđ kuulmâ suárgán.
+
+REMOVE:ImprtNotInf Inf IF (-1 BOS)(0 Imprt + Pl2)(NOT *1 VFIN);
+REMOVE:ImprtNotIndSg3 Ind + Sg3 IF (-1 BOS)(0 Imprt + Sg2)(*1 ("!"));
+
+REMOVE:IndSg3NotImprtSg2 Imprt IF (-1 COMMA)(0 Ind + Sg3);
+
+REMOVE:NotImprtBeforeEt Imprt IF (1 COMMA)(2 ("et"));
+
 
 #!! !!Lexicalised derivations
 #     -----------------------
@@ -2347,7 +2357,7 @@ REMOVE:AdvNotPo Po IF (NOT -1 Gen)(0 Adv); #remove_in_grc
 
 #!! !Adverbs or nouns
 
-REMOVE:VAdvA N IF (-1 VFIN)(1C A);
+REMOVE:VAdvA N IF (-1 VFIN)(0 Adv)(1C A);
 	     #$ Onne lii uáli liegâs
 
 #!! !Specific adverbs
@@ -2433,6 +2443,12 @@ SELECT:oktiiAdv5 Adv IF (0 ("ohtii") OR ("golbmii") OR ("vihttii") OR ("guhttii"
 SELECT:ollasitAdv1 ("tievâslâš" Adv) IF ((-1 REAL-V - INF-V) OR (*1 Loc OR Ill BARRIER NOT-A-ADV) OR (*1 NP-HEAD-GEN BARRIER NOT-A-ADV LINK 1 Po) ) ;
 	#$ ...ahte historjjálaš ovdáneapmi čielggaduvvo ollásit. 
 
+
+#!! * __Adverbs and not Nouns__
+
+#!! ** uáli
+SELECT:uali Adv if (0 ("uáli"))(1 N OR A);
+#$ Jieht lâi uáli koolmâs
 
 #!! Adverbs and not Pronouns
 
@@ -2529,11 +2545,14 @@ SELECT:puattid ("puáttiđ") IF (0 ("pađđeeđ"));
 SELECT:r693 A IF (0 ("kuávdáš"))(1 N LINK NOT 0 TIME OR PLACE); 
 	## Guovddáš doaibmabidju lea vuođđudit sámegiela álgooahpahusa.
 
+#!! !Remove Imperative
 
 #!! * Some brave rules for removing Imprt
 REMOVE:TESTImprt Imprt - ConNeg - Neg IF (NEGATE -1 CC OR BOS OR COMMA OR (":") OR (";") OR ("joo") OR PUNCT OR ("""))(NEGATE 0 (Imprt Sg3) LINK -1 (Pron Sg3) OR (N Sg) OR ("naa"))(NEGATE 0 (Imprt Sg3) LINK 1 (Pron Sg3) OR (N Sg));
 	#% Geas ležžet bealjit, son gullos!
 	#% Nu báitos din čuovggas ge olbmuide.
+
+#REMOVE:NotImprtIfInd Imprt IF (*1C Ind BARRIER S-BOUNDARY);
 
 
 #" syntax colouring.
@@ -4907,7 +4926,7 @@ SELECT:SEMr2074 Gen IF (0 Sem/Plc OR Sem/Org OR ACR)(1 HUMAN-GROUP) ;	# or (".*j
 	#$
 
 #!!  * __SEMactor__ Select Gen in front of ABSTRACT and RIEKTEDILLI ''unnitlogu oaidninčiegas''
-SELECT:SEMactor Gen IF (0 HAB-ACTOR + Acc OR (Pron Acc) LINK NOT 0 Loc)(*1 ABSTRACT - ("ovdâmerkkâ") OR RIEKTEDILLI BARRIER NOT-NPMOD)(NEGATE *-1 TRANS-V + FMAINV OR Inf BARRIER SV-BOUNDARY OR Acc)(NEGATE 1 ("já"))(NEGATE 0 (Pron Dem) LINK 1 Acc);
+REMOVE:SEMactor Acc IF (0 HAB-ACTOR + Gen OR (Pron Gen) LINK NOT 0 Loc)(*1 ABSTRACT - ("ovdâmerkkâ") OR RIEKTEDILLI BARRIER NOT-NPMOD)(NEGATE *-1 TRANS-V + FMAINV OR Inf BARRIER SV-BOUNDARY OR Acc)(NEGATE 1 ("já"))(NEGATE 0 (Pron Dem) LINK 1 Acc);
 	#$ Romeriid vealahanáššis lea dárbu geahččat sihke ovttaskas olbmo, struktuvrralaš ja unnitlogu oaidninčiegas.
 
 #!! * __SEMXr2076__ Selects Gen if you are HUMAN or Pron with an ABSTRACT to your right ''iežaset vuoigatvuođa''
@@ -4951,9 +4970,6 @@ REMOVE:SEMnotNom Nom IF (*-1 TRANS-V + FMAINV BARRIER SV-BOUNDARY LINK *-1 Nom B
 	#% Muhtumat válljejedje vázzit beanagullama skuvlii nuppi guvlui.
 	
 #SELECT:SEMbody Gen (*-1 TRANS-V + FMAINV BARRIER SV-BOUNDARY)(0 Prop OR Pron)(*1 BODY + Acc BARRIER NOT-Attr)(NEGATE 0 (Pron Dem) OR (Pron Refl))(NEGATE 1 Gen LINK 1 Po) ;
-	
-#!! * __GenModifiesN__ is a tentative rule to be modified
-REMOVE:GenModifiesN Nom IF (0 Gen)(1 N);
 	
 # Accusative in front of a NATION or "sämmilâš":
 
@@ -6043,15 +6059,15 @@ REMOVE:NomIfProp2 (Nom Sem/Plc) OR (Acc Sem/Plc) (*-1 SG3-V BARRIER SV-BOUNDARY)
 SELECT:NomSentFin1 Nom (*-1 FMAINV + COPULAS BARRIER NOT-NPMOD)(0 Acc OR Gen LINK 1 EOC) ;
 
 
-# Accusative or Illative
+#!! Accusative or Illative
 SELECT:AccNotIll Acc IF (0 (Pl Ill))( -1 ("mihheen") OR ("kihheen"));
 
 SELECT:IllNotAcc Ill IF (0 (Pl Acc)) (NOT *0 TV) ;
 
 
-#!! !!Nominative and accusative
+#!! !!Nominative or accusative or genitive
 
-
+REMOVE:NomNotGen Gen IF (*-1 BOS BARRIER NOT-NPMOD)(0 Sg + Nom)(1 V + Sg3);
 
 #!! * __NAr2266__ Selects Nom
 SELECT:NAr2266 Nom IF (-1 BOC)(0 N)(1 Rel)(2 VFIN LINK *1 COMMA BARRIER S-BOUNDARY LINK 1 VFIN LINK *1 NP-HEAD-ACC BARRIER NOT-NPMOD);
@@ -7019,7 +7035,13 @@ SELECT:Du1IfDu1_r2947  V + Du1  IF (*-1 CC BARRIER VFIN LINK *-1C  V + Du1  BARR
 REMOVE:NoDu1_r2949  V + Du1  IF (NEGATE *-1 MOAI OR Du1)(NEGATE 0 Imprt LINK *-1 BOC BARRIER NOT-ADV)(NEGATE *1 MOAI);
 	#$  De bohte ruđat.
 	#$  Nieiddat jerre.
-	
+
+#!! !Pl3
+
+#!! * Pl3 not Pl Gen
+REMOVE:Pl3NotPlGen Gen IF (-2 COMMA)(-1 ("mii"));
+
+
 #!! * __Pl3IfPlSubj__ Pl3 if Pl noun to the left
 SELECT:Pl3IfPlSubj PL3-V IF (*-1  NP-HEAD-PL-NOM BARRIER NOT-ADV-PCLE  LINK NOT 0 VFIN) ; # r2974
 	#$  Muhto dorskit gal leat varrasat.
@@ -7039,7 +7061,6 @@ SELECT:Sg2LeftDon SG2-V IF (*-1 Rel - Nom BARRIER (Pers Nom) LINK *-1 DON BARRIE
 	#$ Don galggat doallat dan maid leat vurdnon Hearrái.
 
 # After everything has been done, we go for the third person.
-
 
 #!! * __allPrtSg2__ removes PrtSg2 if PrsPl3
 REMOVE:allPrtSg2 (Prt Sg2) IF (0 (Prs Pl3) OR (Prs Pl1) OR (Imprt Pl2));
@@ -7117,6 +7138,11 @@ SELECT A (0 Attr LINK 0 N LINK 1 N) ;
 REMOVE Pcle IF (-1 BOS)(0 Adv);
 
 
+#!! Genitive not Nominative
+
+#!! * __GenModifiesN__ is a tentative rule to be modified
+REMOVE:GenModifiesN Nom IF (0 Gen)(1 N);
+
 AFTER-SECTIONS
 
 
@@ -7190,7 +7216,7 @@ SELECT:IfonlyConNeg ConNeg IF (0 (ConNeg @-FMAINV) OR (ConNeg @-FAUXV))(NEGATE 1
 
 
 #!! !__killifVinCohort__ This rule removes all other readings, if there is a mapped V reading in the same cohort. Every case which this goes wrong, should be fixed in mapping rules or previous disrules.
-SELECT:killifVinCohort SYN-V  ;
+SELECT:killifVinCohort SYN-V (NOT *0 VFIN)  ;
 
 #!! * __TEST__ selects some infinte verb readings in the cohort
 SELECT:TEST OBJ + V OR SUBJ + V OR V + @>N ;
