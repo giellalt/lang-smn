@@ -2013,7 +2013,7 @@ ADD (&typo &SUGGESTWF) (<spelled>);
 
 #!! Sg3/Pl3 errors
 
-ADD:err-agr-pl3 (&err-agr-pl3) TARGET V IF (*1 Pl + Nom BARRIER NOT-NPMODADV)(0 ("leđe") + Sg3);
+ADD:err-agr-pl3 (&err-agr-pl3) TARGET V IF (*1 Pl + Nom BARRIER NOT-NPMODADV LINK NOT *1 V + Pl3)(0 ("leđe") + Sg3);
 COPY:err-agr-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V &err-agr-pl3);
 ## Tast lii uápis ääših
 #$ Tast láá uápis ääših
@@ -2142,7 +2142,7 @@ COPY:err-ext-agr (Pl3 &SUGGEST) EXCEPT Sg3 TARGET ("leđe" V Ind Prs &err-ext-ag
 ## Must lii uđđâ autoh.
 #$ Must láá uđđâ autoh.
 
-ADD:err-pl-obj (&err-pl-obj) TARGET (N Pl Nom) IF (*-1 TRANS-V  BARRIER NOT-NPMOD OR CLB OR PUNCT LINK NOT 0 Pl3)(NOT 0 ABBR OR Num)(NEGATE -1 PrfPrc LINK *-1 N BARRIER VFIN);
+ADD:err-pl-obj (&err-pl-obj) TARGET (N Pl Nom) IF (*-1 TRANS-V  BARRIER NOT-NPMOD OR CLB OR PUNCT LINK NOT 0 Pl3 LINK *-1 (N Pl Nom))(NOT 0 ABBR OR Num)(NEGATE -1 PrfPrc LINK *-1 N BARRIER VFIN);
 COPY:err-pl-obj (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &err-pl-obj);
 # Trans: Others know mushrooms by.their.color.
 ## Nubeh tobdeh kuobbâreh ivneest.
@@ -2157,7 +2157,7 @@ COPY:err-extv-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Ind Prs &err-extv-pl3) ;
 #fi Minulla on kaloja.
 
 #!! Verb in plural 
-ADD:err-extv-pl3-numeral (&err-extv-pl3-numeral) TARGET V IF (-1 Loc)(0 LEDE + Sg3)(1 Num LINK NOT 0 OHTA);
+ADD:err-extv-pl3-numeral (&err-extv-pl3-numeral) TARGET V IF (-1 Loc)(0 LEDE + Sg3)(1 Num + Nom LINK NOT 0 OHTA);
 COPY:err-extv-pl3-numeral (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Ind Prs &err-extv-pl3-numeral) ;
 COPY:err-extv-pl3-numeral (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Ind Prt &err-extv-pl3-numeral) ;
 ## Must {lii} kyehti kyele.
@@ -2182,7 +2182,7 @@ COPY:err-extneg-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET ("ij" V Neg Ind &err-extneg
 #!! !Predicative
 
 
-ADD:err-pred-acc-nom (&err-pred-acc-nom) TARGET Acc IF (*-1 ("leđe") + Ind BARRIER NOT-NPMOD OR ("mihheen"))(NOT 0 Arab)(NOT *0 TV);
+ADD:err-pred-acc-nom (&err-pred-acc-nom) TARGET Acc IF (*-1 ("leđe") + Ind BARRIER NOT-NPMOD OR ("mihheen"))(NOT 0 Arab OR Nom)(NOT *0 TV);
 COPY:err-pred-acc-nom (Nom &SUGGEST) EXCEPT Acc TARGET (N &err-pred-acc-nom);
 ## Taah láá čielgâ aašijd
 #$ Taah láá čielgâ ááših
@@ -2237,7 +2237,7 @@ ADD:err-extsubj-acc-nom (&err-extsubj-acc-nom) TARGET N IF (*-1 LEDE + Sg3 OR LE
 COPY:err-extsubj-acc-nom (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &err-extsubj-acc-nom) ;
 
 
-ADD:err-extv-pl3 (&err-extv-pl3) TARGET V IF (-1 Loc)(0 LEDE + Sg3)(1 Num)(NOT 1 OHTA);
+ADD:err-extv-pl3 (&err-extv-pl3) TARGET V IF (-1 Loc)(0 LEDE + Sg3)(1 Num + Nom)(NOT 1 OHTA);
 COPY:err-extv-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (LEDE &err-extv-pl3);
 
 ADD:err-extsubj-ill-nom (&err-extsubj-ill-nom) TARGET N IF (-1 LEDE + Sg3 OR LEDE + Pl3)(-2 Loc)(0 N + Pl + Ill);
@@ -2276,13 +2276,14 @@ COPY:err-acc-obj-top (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &err-acc-obj-top);
 
 # Suomâkielâ imperatiiv mieđetteijee häämist, mast objekt sajehäämmin lii maaŋgâlovo nominatiiv mut sämikielâst akkusatiiv:
 
-ADD:err-imp-nomobj (&err-imp-nomobj) TARGET N IF (-2C Imprt)(-1 PRE-NP-HEAD)(NOT 0 Acc OR Gen)(0 Nom);
-ADD:err-imp-nomobj (&err-imp-nomobj) TARGET N IF (-1C Imprt)(NOT 0 Acc OR Gen)(0 Nom);
-COPY:err-imp-nomobj (Nom &SUGGEST) EXCEPT Acc OR Gen TARGET (N Pl &err-imp-nomobj);
-
+ADD:err-imp-nomobj (&err-imp-nomobj) TARGET N IF (-2C Imprt)(-1 PRE-NP-HEAD)(0 Nom)(NOT 0 Acc OR Gen);
+ADD:err-imp-nomobj (&err-imp-nomobj) TARGET N IF (-1C Imprt)(0 Nom)(NOT 0 Acc OR Gen);
+COPY:err-imp-nomobj (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &err-imp-nomobj);
 #fi	Myy nämä kalat - 
-#$ Vyebdi taid kuolijd! 
 ## Vyebdi taah kyeleh!
+#$ Vyebdi taid kuolijd! 
+
+
 
 
 #!! !!Infinitive errors
@@ -2299,7 +2300,7 @@ COPY:err-imp-nomobj (Nom &SUGGEST) EXCEPT Acc OR Gen TARGET (N Pl &err-imp-nomob
 
 #!! Numeral phrases
 #!! The rule is: 2-6 + gensg, 7- + par
-ADD:err-num-gensg (&err-num-gensg) TARGET N IF (-1 TWO-TO-SIX)(0 N + Par);
+ADD:err-num-gensg (&err-num-gensg) TARGET N IF (-1 TWO-TO-SIX)(0 N + Par)(NOT 0 Gen);
 COPY:err-num-gensg (Sg Gen &SUGGEST) EXCEPT Par TARGET (N &err-num-gensg);
 ## Must láá kyehti {kyellid}.
 #$ Must láá kyehti kyele.
@@ -2308,10 +2309,10 @@ COPY:err-num-gensg (Sg Gen &SUGGEST) EXCEPT Par TARGET (N &err-num-gensg);
 
 LIST SGGENACC = (Sg Gen) (Sg Acc) ;
 
-ADD:err-num-par (&err-num-par) TARGET N IF (-1 Num + Nom LINK 0 SEVEN-AND-MORE)(0 N + Sg + Gen)(NOT 0 ABBR)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Sem/Date OR Rom OR Sem/Time-clock)(NOT 1 Po) ;
+ADD:err-num-par (&err-num-par) TARGET N IF (-1 Num + Nom LINK 0 SEVEN-AND-MORE)(0 N + Sg + Gen)(NOT 0 ABBR OR Par)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Sem/Date OR Rom OR Sem/Time-clock)(NOT 1 Po) ;
 COPY:err-num-par (Par &SUGGEST) EXCEPT (Sg Gen) TARGET (N &err-num-par) ;
 
-ADD:err-num-par (&err-num-par) TARGET N IF (-1 Num + Nom LINK 0 SEVEN-AND-MORE)(0 N + Sg + Acc)(NOT 0 ABBR)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Sem/Date OR Rom OR Sem/Time-clock  OR ("pelnub") OR ("muáddi")) ;
+ADD:err-num-par (&err-num-par) TARGET N IF (-1 Num + Nom LINK 0 SEVEN-AND-MORE)(0 N + Sg + Acc)(NOT 0 ABBR OR Par)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Sem/Date OR Rom OR Sem/Time-clock  OR ("pelnub") OR ("muáddi")) ;
 COPY:err-num-par (Par &SUGGEST) EXCEPT (Sg Acc) TARGET (N &err-num-par) ;
 ## Must láá čiččâm {kyele}.
 #$ Must láá čiččâm kyellid.
