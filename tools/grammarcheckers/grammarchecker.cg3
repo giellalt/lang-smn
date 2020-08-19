@@ -2306,10 +2306,10 @@ COPY:err-num-gensg (Sg Gen &SUGGEST) EXCEPT Par TARGET (N &err-num-gensg);
 
 LIST SGGENACC = (Sg Gen) (Sg Acc) ;
 
-ADD:err-num-par (&err-num-par) TARGET N IF (-1 Num + Nom LINK 0 SEVEN-AND-MORE)(0 N + Sg + Gen)(NOT 0 ABBR)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Sem/Date OR Rom OR Sem/Time-clock)(NOT 1 Po) ;
+ADD:err-num-par (&err-num-par) TARGET N IF (-1 Num + Nom LINK 0 SEVEN-AND-MORE)(0 N + Sg + Gen)(NOT 0 ABBR OR Sem/ID)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Sem/Date OR Rom OR Sem/Time-clock)(NOT 1 Po) ;
 COPY:err-num-par (Par &SUGGEST) EXCEPT (Sg Gen) TARGET (N &err-num-par) ;
 
-ADD:err-num-par (&err-num-par) TARGET N IF (-1 Num + Nom LINK 0 SEVEN-AND-MORE)(0 N + Sg + Acc)(NOT 0 ABBR)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Sem/Date OR Rom OR Sem/Time-clock  OR ("pelnub") OR ("muáddi")) ;
+ADD:err-num-par (&err-num-par) TARGET N IF (-1 Num + Nom LINK 0 SEVEN-AND-MORE)(0 N + Sg + Acc)(NOT 0 ABBR OR Sem/ID)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Sem/Date OR Rom OR Sem/Time-clock  OR ("pelnub") OR ("muáddi")) ;
 COPY:err-num-par (Par &SUGGEST) EXCEPT (Sg Acc) TARGET (N &err-num-par) ;
 ## Must láá čiččâm {kyele}.
 #$ Must láá čiččâm kyellid.
