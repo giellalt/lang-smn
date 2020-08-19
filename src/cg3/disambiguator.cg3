@@ -2032,7 +2032,8 @@ REMOVE:dyn  Arab (0 Prop) ; # foreløpig løsning, til vi har ny løsning for nu
 
 ###################3
 
-
+#!! * __SemID__ Strange number is ID.
+SELECT:SemID Sem/ID ;
 
 #!! * __Insertwww__ Inserts the Sem/Adr tag to all url expressions
 SUBSTITUTE:Insertwww (?) (Adv Sem/Adr) TARGET ("<www[.].*>"r ?) OR ("http.*"r ?) OR ("<[A-Za-z].*[@][a-z].*"r ?) OR ("<[A-Za-z].*[(][a][t][)][a-z].*"r ?) ;
