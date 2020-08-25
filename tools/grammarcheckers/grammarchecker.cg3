@@ -1998,6 +1998,7 @@ LIST &err-ness-acc-nom = &err-ness-acc-nom ; # Muu ličij > Mun ...
 LIST &err-ness-ill-nom = &err-ness-ill-nom ; # Munnui ličij > Mun ...
 LIST &err-pred-acc-nom =  &err-pred-acc-nom ; # Taah láá aašijd.
 LIST &err-sg1-prfprc = &err-sg1-prfprc ;
+LIST &err-lex-pisso-pissood = &err-lex-pisso-pissood ;
 
 MAPPING-PREFIX = & ;
 
@@ -2358,3 +2359,13 @@ COPY:err-sg1-prfprc (PrfPrc &SUGGEST) EXCEPT (Ind Prs Sg1) TARGET (V &err-sg1-pr
 # čilgen:
 #ADD-njuolggadus: lasihan &err-sg1-prfprc  jos gurotbealde lea indikatiiva ja ieš lea prs sg1
 #COPY-njuolggadus: bidjan dohko PrfPrc ja sáni &SUGGEST (maksá "evttot dan") 
+
+
+#!! Lexical rules
+
+ADD:err-lex-pisso-pissood (&err-lex-pisso-pissood) TARGET ("pisso") IF  (-1 ("leđe") + Ind)(0 N + Sg + Nom + PxSg1)(1 Ess OR Ill) ;
+COPY:err-lex-pisso-pissood ("pissoođ" V PrfPrc &SUGGEST) EXCEPT ("pisso" N Sg Nom PxSg1 &err-lex-pisso-pissood) TARGET (&err-lex-pisso-pissood) ;
+## Tile lâi pissom siämmáálágánin.
+#$ Tile lâi pissoom siämmáálágánin.
+
+
