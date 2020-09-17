@@ -42,6 +42,7 @@ while(<>) {
 	
 # names with Inari Saami inflection
 	s/^Aanaar\+/!Aanaar+/g ;
+	s/^Aanaar:/!Aanaar:/g ;
 	s/^Avveel\+/!Avveel+/g ;
 	s/^Anssi\+/!Anssi+/g ;
 	s/^Antti\+/!Antti+/g ;
@@ -66,7 +67,8 @@ while(<>) {
 	s/^Vävli\+/!Vävli+/g ;
 	
 # changing to WG inflection
-	s/^Valle ACCRA/Valle MOKKE/g ;
+	s/Valle ACCRA/Va^RVlle MOKKE/g ;
+	s/Ville ACCRA/Vi4^RVlle MOKKE/g ;
 
 # sme special symbols
 #	s/\^//g ;
@@ -95,14 +97,6 @@ while(<>) {
 	s/ll /ll5 /g ;
 	s/9 / /g ;
 
-	# SMJ escape char insertion:
-#	s/ss /ss9 /g ;
-#	s/st /st9 /g ;
-
-	# Substitutions due to orthographic differences between SMJ and SME:
-#	s/čč/ttj/g ;
-	# Andreevič -> Andreevitj:
-#	s/č/tj/g ;
 
 	my $line = $_;
 
