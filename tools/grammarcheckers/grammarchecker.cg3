@@ -1367,8 +1367,15 @@ SET SEVEN-AND-MORE = SEVEN-AND-MORE-WORD OR SEVEN-AND-MORE-ARABIC ;
 #!! * Number-related sets
 
 
+ # Plurale tantum
+
 LIST PL-N = "áiru" "beaivváščalbmeláset" "pessijááh" "biddu" "čalmelaasah" "čázet" "fáhcca" "káálluh" "gálssot" "kaamâ" "gistta" "sovskaamuv" "gummestevvel" "heejah" "helduvah" "juovlah" (".*mállásat"r) "naver" "njealjejuvllat" "njuorjjot" "nuhtat" "nuvttat" "njuuppâh" "saaveeh" "steevvil" "sisttet" "skerreeh" "skerreeh" "kaamâ" "steevvil" "sukká" "suorbmafáhcca" "suormâhât" "ullofáhcca" "ullosuohkku" "kengän" "viljjit" ("[0-9]*-#jahki"r) ("[0-9]*-[0-9]*-#jahki"r) ("[0-9]*-#jahki"r) ;
- 
+
+ # Plural nouns with singular verbs
+
+LIST NPL_WITH_VSG3 = "Nettidigisäänih" "Ovtâstum aalmugeh" "kiddânjâs" "kiddodâh" "palvâlus" "kiddodâh" ;
+
+
  # Nominals that appear with plural numerals.
  
 LIST SG-WORD = ("adeliđ" Der/upmi) "almolašvuotâ" "anistupmi" "arvi" "áigemearri" "algâ" "áŋgirvuohta" "ávvu" "ballu"   "pargottesvuotâ" "pággu" ("poovčâs" Der/vuota) "puásuituálu" "borakeahttáivuohta" "buorredáhtolašvuohta" (".*deaddu"r) "diehtemeahttunvuohta" "osko" "avustus" "tárukielâ" "duhtavašvuohta" "Finnmárkoláhka" "fuolalašvuohta" "gaskkamuddu" "gávvilvuohta" "geargatvuohta" "geardun" "kevttim" "tohálâšvuotâ" "giellageavaheapmi" "gihtta" "giitevašvuohta" "gudnejahttin" "fáámu" "guossoheapmi" "kyevtkielâlâšvuotâ" "hearvásvuohta" "jieštobdo" "ilo" "imaštallan" "ipmilbalolašvuohta" "ibárdâs" "isitvuohta" "juonalašvuohta" "kulturduogáš" "kulturgelbbolašvuohta" "láhkavuođđu" "luándu" "luondduvuođđu" "loppâ" "máŋggabealatvuohta" "mielkki" "mielâ" "šlundi#miella" "miellasuvvan" "muurâš" "muotâ" "muusik" "uámitobdo" "olahahttivuohta" "ovdâsvástádâs" "ovtâspargo" "ovttajienalašvuohta" "ovttadássásašvuohta"  (".*politihkka"r) "ráffi" "ráávhu" "ávusvuotâ" "rähisvuotâ" "rávisvuohta" "riska" "roahkkatvuohta" "säämi" "sámegielmáhttu" "sámekultuvra" "ustevvuotâ" "vanhurskkisvuohta" "vásáhusduogáš" "veahkaválddálašvuohta" "tääpi" ("vuárnuđ" Der/NomAct) "vuástálistem" ;
@@ -2078,7 +2085,7 @@ COPY:err-agr-pl1 (Pl2 &SUGGEST) EXCEPT VNOTPL2 TARGET (V Ind Prs &err-agr-pl2);
 
 
 # Suomâkielâ sárnumkielâ epikongruens maaŋgâlovo 3. persovnist 
-ADD:err-agr-sg3 (&err-agr-sg3) TARGET V IF (NOT -2 Sup)(-1C Pron + Pl3 + Nom OR Dem + Pl + Nom OR N + Pl + Nom)(0 V + Ind + Sg3);
+ADD:err-agr-sg3 (&err-agr-sg3) TARGET V IF (NOT -2 Sup)(-1C Pron + Pl3 + Nom OR Dem + Pl + Nom OR N + Pl + Nom)(NOT -1 NPL_WITH_VSG3)(0 V + Ind + Sg3)(NOT 0 Foc/ge);
 COPY:err-agr-sg3 (Pl3 &SUGGEST) EXCEPT VNOTPL3 TARGET (V Ind Prs &err-agr-sg3);
 COPY:err-agr-sg3 (Pl3 &SUGGEST) EXCEPT VNOTPL3 TARGET (V Ind Prt &err-agr-sg3);
 #fi Ne tulee.
@@ -2310,10 +2317,10 @@ COPY:err-num-gensg (Sg Gen &SUGGEST) EXCEPT Par TARGET (N &err-num-gensg);
 
 LIST SGGENACC = (Sg Gen) (Sg Acc) ;
 
-ADD:err-num-par (&err-num-par) TARGET N IF (-1 Num + Nom LINK 0 SEVEN-AND-MORE)(0 N + Sg + Gen)(NOT 0 ABBR OR Par)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Sem/Date OR Rom OR Sem/Time-clock)(NOT 1 Po) ;
+ADD:err-num-par (&err-num-par) TARGET N IF (-1 Num + Nom LINK 0 SEVEN-AND-MORE)(0 N + Sg + Gen)(NOT 0 ABBR OR Par)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Sem/Date OR Rom OR Sem/Time-clock)(NOT 1 Po OR N) ;
 COPY:err-num-par (Par &SUGGEST) EXCEPT (Sg Gen) TARGET (N &err-num-par) ;
 
-ADD:err-num-par (&err-num-par) TARGET N IF (-1 Num + Nom LINK 0 SEVEN-AND-MORE)(0 N + Sg + Acc)(NOT 0 ABBR OR Par)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Sem/Date OR Rom OR Sem/Time-clock  OR ("pelnub") OR ("muáddi")) ;
+ADD:err-num-par (&err-num-par) TARGET N IF (-1 Num + Nom LINK 0 SEVEN-AND-MORE)(0 N + Sg + Acc)(NOT 0 ABBR OR Par)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Sem/Date OR Rom OR Sem/Time-clock  OR ("pelnub") OR ("muáddi"))(NOT 1 Po OR N) ;
 COPY:err-num-par (Par &SUGGEST) EXCEPT (Sg Acc) TARGET (N &err-num-par) ;
 ## Must láá čiččâm {kyele}.
 #$ Must láá čiččâm kyellid.
@@ -2322,7 +2329,7 @@ COPY:err-num-par (Par &SUGGEST) EXCEPT (Sg Acc) TARGET (N &err-num-par) ;
 #!!Accusative subjects in passive 
 
 # b) Suomâkielâ partitiiv passiivráhtusijn; sämikielâst passiiv ohtâvuođâst lii nominatiiv já verbâ maaŋgâlovvoost.
-MAP:err-pass-accsubj (&err-pass-accsubj) TARGET N IF (0C Acc + Pl)(1 Der/Pass OR LEXICALISED-PASS-V + Pl3)(NOT 1 PrfPrc);
+MAP:err-pass-accsubj (&err-pass-accsubj) TARGET N IF (0C Acc + Pl)(1 Der/Pass +PL3 OR LEXICALISED-PASS-V + Pl3)(NOT 1 PrfPrc OR TV);
 COPY:err-pass-accsubj (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &err-pass-accsubj);
 #fi	Saamenkielisiä nimityksiä käytetään vähän. - 
 ##	Sämikielâlijd nomâttâsâid kiävttojeh uccáá. 
