@@ -96,6 +96,7 @@ while(<>) {
 	s/d /d5 /g ;
 	s/ll /ll5 /g ;
 	s/9 / /g ;
+	s/9\^/^/g ; # chech: could be the 9 should go in giella-shared.
 
 
 	my $line = $_;
