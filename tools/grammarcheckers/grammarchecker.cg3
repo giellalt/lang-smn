@@ -2178,7 +2178,7 @@ COPY:err-extv-pl3-numeral (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Ind Prt &err-extv-
 
 
 
-ADD:err-extneg-pl3 (&err-extneg-pl3) TARGET V IF (0 ("ij") + Sg3)(*1 N + Pl + Nom BARRIER Sg + Nom) ;
+ADD:err-extneg-pl3 (&err-extneg-pl3) TARGET V IF (NOT -1 Sg + Nom)(0 ("ij") + Sg3)(*1 N + Pl + Nom BARRIER Sg + Nom OR CS) ;
 COPY:err-extneg-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET ("ij" V Neg Ind &err-extneg-pl3) ;
 ## Šiljoost ij lah innig poccuuh.
 ## Šiljoost iä lah innig poccuid.
