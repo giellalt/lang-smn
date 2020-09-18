@@ -16,19 +16,24 @@ use open qw( :encoding(UTF-8) :std );
 
 while(<>) {
 	# Continuation lexicon substitutions:
-#	s/ C-FI-NEN/nen LONDON/g ;
 	s/SUND/BERN/g ;
 	s/HEIM/BERN/g ;
+	s/BALAK/LONDON/g ;
+	
+	s/ACCRA-Y/ACCRA/g ;
+	s/NYSTØ/ACCRA/g ;
+	s/ACCRA-LOAN/ACCRA/g ;
 	s/NIKOSIIJA/ACCRA/g ;
 	s/SIJTE/ACCRA/g ;
-	s/BALAK/LONDON/g ;
 	s/HAWAII/ACCRA/g ;
+	s/PERU/ACCRA/g ;
+
 	s/SKANIK/SULLOT/g ;
 #	s/RONDANE-LOAN/BERN/g ;
 	s/BETFAGE/BERN/g ;
 	s/DUORTNUS/BERN/g ;
 #	s/DUBAI/BERN/g ;
-	s/BETFAGE/BERN/g ;
+	s/GIRUNA/HANNOLA/g ;
 	s/fkagK/K/g ;
 # loanwords with compound border over identical vowels,
 #	s/Hjarteelva/Hjarte-elva/g ;
@@ -60,6 +65,7 @@ while(<>) {
 	s/^Mikko\+/!Mikko+/g ;
 	s/^Pertti\+/!Pertti+/g ;
 	s/^Saksa\+/!Saksa+/g ;
+	s/^Salla\+/!Salla+/g ;
 	s/^Tanska\+/!Tanska+/g ;
 	s/^Turku\+/!Turku+/g ;
 	s/^Turkki\+/!Turkki+/g ;
