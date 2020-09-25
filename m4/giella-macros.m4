@@ -99,7 +99,7 @@ AC_MSG_RESULT([$GIELLA_CORE])
 
 ### This is the version of the Giella Core that we require. Update as needed.
 ### It is possible to specify also subversion revision: 0.1.2-12345
-_giella_core_min_version=0.4.5
+_giella_core_min_version=0.6.1
 
 # GIELLA_CORE/GTCORE env. variable, required by the infrastructure to find scripts:
 AC_ARG_VAR([GIELLA_CORE], [directory for the Giella infra core scripts and other required resources])
@@ -278,7 +278,7 @@ AC_ARG_VAR([GIELLA_LIBS], [directory containing precompiled libraries for proofi
 ################
 
 ################ Weighted fst's ################
-AC_PATH_PROG([BC], [bc], [no], [$PATH$PATH_SEPARATOR$with_bc])
+AC_PATH_PROG([BC], [bc], [false], [$PATH$PATH_SEPARATOR$with_bc])
 
 ################ YAML-based testing ################
 AC_ARG_ENABLE([yamltests],
@@ -623,7 +623,7 @@ AM_CONDITIONAL([CAN_XZ], [test "x$ac_cv_prog_XZ" != xfalse])
 # Enable hyperminimisation of the lexical transducer - default is 'no'
 AC_ARG_ENABLE([hyperminimisation],
               [AS_HELP_STRING([--enable-hyperminimisation],
-                              [enable hyperminimisation of lexical fst @<:@default=no@:>@])],
+                              [enable hyperminimisation of lexical fst @<:@default=$DEFAULT_HYPERMIN@:>@])],
               [enable_hyperminimisation=$enableval],
               [enable_hyperminimisation=$DEFAULT_HYPERMIN])
 AM_CONDITIONAL([WANT_HYPERMINIMISATION], [test "x$enable_hyperminimisation" != xno])
@@ -647,7 +647,7 @@ AM_CONDITIONAL([WANT_TWOSTEP_INTERSECT], [test "x$enable_twostep_intersect" != x
 #enable_reversed_intersect
 AC_ARG_ENABLE([reversed-intersect],
               [AS_HELP_STRING([--enable-reversed-intersect],
-                              [enable reversed compose-intersect (faster and takes less RAM in some cases) @<:@default=no@:>@])],
+                              [enable reversed compose-intersect (faster and takes less RAM in some cases) @<:@default=$DEFAULT_REVERCI@:>@])],
               [enable_reversed_intersect=$enableval],
               [enable_reversed_intersect=$DEFAULT_REVERCI])
 AM_CONDITIONAL([WANT_REVERSED_INTERSECT], [test "x$enable_reversed_intersect" != xno])
@@ -725,6 +725,8 @@ AC_ARG_ENABLE([spellers],
               [enable_spellers=$enableval],
               [enable_spellers=$enable_all_tools])
 AS_IF([test "x$enable_grammarchecker" != xno],[enable_spellers=yes])
+AS_IF([test "x$enable_spellers" != xno -a "x$BC" = xfalse],
+      [AC_MSG_ERROR([counting statistics for spell-checkers requires bc, install or disable spellers])])
 AM_CONDITIONAL([WANT_SPELLERS], [test "x$enable_spellers" != xno])
 
 # Enable hfst desktop spellers - default is 'yes' (but dependent on
