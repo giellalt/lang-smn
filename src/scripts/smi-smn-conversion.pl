@@ -16,19 +16,24 @@ use open qw( :encoding(UTF-8) :std );
 
 while(<>) {
 	# Continuation lexicon substitutions:
-#	s/ C-FI-NEN/nen LONDON/g ;
 	s/SUND/BERN/g ;
 	s/HEIM/BERN/g ;
+	s/BALAK/LONDON/g ;
+	
+	s/ACCRA-Y/ACCRA/g ;
+	s/NYSTØ/ACCRA/g ;
+	s/ACCRA-LOAN/ACCRA/g ;
 	s/NIKOSIIJA/ACCRA/g ;
 	s/SIJTE/ACCRA/g ;
-	s/BALAK/LONDON/g ;
 	s/HAWAII/ACCRA/g ;
+	s/PERU/ACCRA/g ;
+
 	s/SKANIK/SULLOT/g ;
 #	s/RONDANE-LOAN/BERN/g ;
 	s/BETFAGE/BERN/g ;
 	s/DUORTNUS/BERN/g ;
 #	s/DUBAI/BERN/g ;
-	s/BETFAGE/BERN/g ;
+	s/GIRUNA/HANNOLA/g ;
 	s/fkagK/K/g ;
 # loanwords with compound border over identical vowels,
 #	s/Hjarteelva/Hjarte-elva/g ;
@@ -42,6 +47,7 @@ while(<>) {
 	
 # names with Inari Saami inflection
 	s/^Aanaar\+/!Aanaar+/g ;
+	s/^Aanaar:/!Aanaar:/g ;
 	s/^Avveel\+/!Avveel+/g ;
 	s/^Anssi\+/!Anssi+/g ;
 	s/^Antti\+/!Antti+/g ;
@@ -59,6 +65,7 @@ while(<>) {
 	s/^Mikko\+/!Mikko+/g ;
 	s/^Pertti\+/!Pertti+/g ;
 	s/^Saksa\+/!Saksa+/g ;
+	s/^Salla\+/!Salla+/g ;
 	s/^Tanska\+/!Tanska+/g ;
 	s/^Turku\+/!Turku+/g ;
 	s/^Turkki\+/!Turkki+/g ;
@@ -66,7 +73,8 @@ while(<>) {
 	s/^Vävli\+/!Vävli+/g ;
 	
 # changing to WG inflection
-	s/^Valle ACCRA/Valle MOKKE/g ;
+	s/Valle ACCRA/Va^RVlle MOKKE/g ;
+	s/Ville ACCRA/Vi4^RVlle MOKKE/g ;
 
 # sme special symbols
 #	s/\^//g ;
@@ -94,15 +102,8 @@ while(<>) {
 	s/d /d5 /g ;
 	s/ll /ll5 /g ;
 	s/9 / /g ;
+	s/9\^/^/g ; # chech: could be the 9 should go in giella-shared.
 
-	# SMJ escape char insertion:
-#	s/ss /ss9 /g ;
-#	s/st /st9 /g ;
-
-	# Substitutions due to orthographic differences between SMJ and SME:
-#	s/čč/ttj/g ;
-	# Andreevič -> Andreevitj:
-#	s/č/tj/g ;
 
 	my $line = $_;
 
