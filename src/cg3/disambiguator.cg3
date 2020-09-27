@@ -218,8 +218,7 @@ LIST Foc/uv = Foc/uv ;   #!! Foc/uv
 
 #!! !Derivation tags
 
-LIST Der/PassL = Der/PassL ;
-LIST Der/Pass = Der/PassL Der/PassS ; #!! Der/PassL Der/PassS
+LIST Der/Pass = Der/Pass ; #!! Der/PassL Der/PassS smn Der/Pass
 LIST Der/NomAg = Der/NomAg ;   #!! Der/NomAg
 LIST Actor = NomAg Der/NomAg ; #!! NomAg
 LIST Der/AAdv = Der/AAdv ;           #!! Der/AAdv
@@ -828,12 +827,12 @@ SET TRANS-V = V-TRANS - Der/Pass + REAL-V ;
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 # bargat "čoallut" "purrâđ" lohkat "gazzat" vuoššat
 #!! * __STVLIST__ is the list of strictly transitive verbs. In the rules, refer not to STVLIST, but to the set STV defined below.
-LIST STVLIST = (Der/tt V) (Der/Caus V) "addit" "amašit" "kevttiđ" "algâttiđ" "ánsášiđ" "arvâlâddâđ" "ärvidiđ" "myös" "ásahit" "ávžžuhit" "luptiđ" "poossâđ" "bearrat" "biebmat" "bidjat" "turmella" "turmella" "orostittiđ" "siäiludiđ" ("pääcciđ" der_h) "puáldiđ" "cuvnâđ" "purâttiđ" ("purrâđ" der_h) "pyerettiđ" "pyehtiđ" "pyerediđ" "estiđ" "coggalit" ("tuvkkâliđ" Der/l) "celkkiđ" "cegget" "olášuttiđ" "kiinni" "čielgâsmittiđ" ("čielgat" der_d) "čielgiđ" "čuággiđ" "čoavdit" "čuággiđ" "naggiđ" ("čuážžuđ" der_h) "čuoppâđ" "čuovvulit" ("čuávvuđ" der_l) "ettâđ" "tovâttiđ" ("toohâđ" der_h) "toohâđ" "tähidiđ" "táttuđ" "tarbâšiđ" "tarbâšiđ" "tarkkuđ" "västidiđ" "teivâđ" "tiäduttiđ" "tevdiđ" "tiettiđ" "suovvâđ" "doahttalit" "toimâttiđ" ("toimâđ" der_h) "lijkkuđ" "pyehtiđ" "tuhhiittiđ" ("tuhhiđ" der_h) "tubdâđ" ("tubdâđ" der_h) "epidiđ" "omâstiđ" "iällááttiđ" "elettiđ" ("eelliđ" der_h) "iävtuttiđ" "iävtuttiđ" "faallâđ" "uážžuđ" "fievridiđ" "huámášiđ" "huolâttiđ" "huámášiđ" "karveđ" "kááijuđ" "kaattâđ" "vaattâđ" "raijiđ" "kavnâđ" ("kavnâđ" der_d sg) ("keččâđ" der_d) "keččâđ" "kevttiđ" "kieđâvuššâđ" "luukku" "koddeđ" "koččođ" "käskeä" ("koččođ" der_d) "kuškâdiđ" "luávdiđ" "goldit" "vahtiđ" ("olla" der_h) "kuoddâliđ" "kyeddiđ" "kyeđđiđ" "kuáđuttiđ" "tutkâđ" "guorrat" "jhk" ("guoskat" der_h) "hábmet" "skappuđ" ("lakkađ" der_h) "heivehit" ("käydä" der_h) "hilgođ" "addiđ" "keččâliđ" "iskâđ" ("keččâliđ" der_d) "jeahkit" ("reissiđ" der_h) "juksat" "jyehiđ" "juolludit" "karttiđ" "lágidit" "láhčit" "laiguuttiđ" "loahpahit" ("nuuhâđ" der_h) "lopediđ" "luptiđ" "hupenevasta" "hupenevasta" ("hupenevasta" der_h) "luoitit" "monâttiđ" "merhâšiđ" "mielddisbuktit" "movttiidahttit" ("movttiidit" der_ahtti) "muddet" "muštâliđ" "mušteđ" "unohtamisen" "kutsua" "kutsua" "kutsua" "lujittaa" "lujittaa" "njiellâđ" "paikasta" "uáiniđ" "uástiđ" "merhâšiđ" "oamastit" "uážžuđ" "peividiđ" "ođastit" "ollašuhttit" "organiseret" "asia" "ovdediđ" "ovdâstiđ" "ovdediđ" "prioriteret" "raijiđ" "ravviđ" "ráfáidahttit" "rávhuiduttiđ" "toohâđ" "cuvnâđ" "ravviđ" "paikasta" "särkeä" "sakŋadit" "vuolgâttiđ" "sáhtostit" "tuáivuđ" "seaguhit" "siäiludiđ" ("siäiluđ" der_h) "visásmittiđ" "anoa" "siskeldiđ" "siskeldiđ" "suojâliđ" "suovvat" "kepidiđ" "vađastit" "vahaduttiđ" "aibâšiđ" "väldiđ" "valjiđ" "várret" "ansoja" "váttásmahttit" "vijđediđ" "vuhtiiváldit" "vuáđudiđ" "vuođđudallat" "vuohttit" "vyeittiđ" "vuojuhit" ("vuodjut" der_h) "vuoruhit" "vuostáiváldit" "vuosttaldit" "vyebdiđ" ;
+LIST STVLIST = (Der/tt V) (Der/Caus V) "addit" "amašit" "kevttiđ" "algâttiđ" "ánsášiđ" "arvâlâddâđ" "ärvidiđ" "myös" "ásahit" "ávžžuhit" "luptiđ" "poossâđ" "bearrat" "biebmat" "bidjat" "turmella" "turmella" "orostittiđ" "siäiludiđ" ("pääcciđ" der_h) "puáldiđ" "cuvnâđ" "purâttiđ" ("purrâđ" der_h) "pyerettiđ" "pyehtiđ" "pyerediđ" "estiđ" "coggalit" ("tuvkkâliđ" Der/l) "celkkiđ" "cegget" "olášuttiđ" "kiinni" "čielgâsmittiđ" ("čielgat" der_d) "čielgiđ" "čuággiđ" "čoavdit" "čuággiđ" "naggiđ" ("čuážžuđ" der_h) "čuoppâđ" "čuovvulit" ("čuávvuđ" der_l) "ettâđ" "tovâttiđ" ("toohâđ" der_h) "toohâđ" "tähidiđ" "táttuđ" "tarbâšiđ" "tarbâšiđ" "tarkkuđ" "västidiđ" "teivâđ" "tiäduttiđ" "tevdiđ" "tiettiđ" "suovvâđ" "doahttalit" "toimâttiđ" ("toimâđ" der_h) "lijkkuđ" "pyehtiđ" "tuhhiittiđ" ("tuhhiđ" der_h) "tubdâđ" ("tubdâđ" der_h) "epidiđ" "omâstiđ" "iällááttiđ" "elettiđ" ("eelliđ" der_h) "iävtuttiđ" "iävtuttiđ" "faallâđ" "uážžuđ" "fievridiđ" "huámášiđ" "huolâttiđ" "huámášiđ" "karveđ" "kááijuđ" "kaattâđ" "vaattâđ" "raijiđ" "kavnâđ" ("kavnâđ" der_d sg) ("keččâđ" der_d) "keččâđ" "kevttiđ" "kieđâvuššâđ" "luukku" "koddeđ" "koččođ" "käskeä" ("koččođ" der_d) "kuškâdiđ" "luávdiđ" "goldit" "vahtiđ" ("olla" der_h) "kuoddâliđ" "kyeddiđ" "kyeđđiđ" "kuáđuttiđ" "guorrat" "jhk" ("guoskat" der_h) "hábmet" "skappuđ" ("lakkađ" der_h) "heivehit" ("käydä" der_h) "hilgođ" "addiđ" "keččâliđ" "iskâđ" ("keččâliđ" der_d) "jeahkit" ("reissiđ" der_h) "juksat" "jyehiđ" "juolludit" "karttiđ" "lágidit" "láhčit" "laiguuttiđ" "loahpahit" ("nuuhâđ" der_h) "lopediđ" "luptiđ" "hupenevasta" "hupenevasta" ("hupenevasta" der_h) "luoitit" "monâttiđ" "merhâšiđ" "mielddisbuktit" "movttiidahttit" ("movttiidit" der_ahtti) "muddet" "muštâliđ" "mušteđ" "unohtamisen" "kutsua" "kutsua" "kutsua" "lujittaa" "lujittaa" "njiellâđ" "paikasta" "uáiniđ" "uástiđ" "merhâšiđ" "oamastit" "uážžuđ" "peividiđ" "ođastit" "ollašuhttit" "organiseret" "asia" "ovdediđ" "ovdâstiđ" "ovdediđ" "prioriteret" "raijiđ" "ravviđ" "ráfáidahttit" "rávhuiduttiđ" "toohâđ" "cuvnâđ" "ravviđ" "paikasta" "särkeä" "sakŋadit" "vuolgâttiđ" "sáhtostit" "tuáivuđ" "seaguhit" "siäiludiđ" ("siäiluđ" der_h) "visásmittiđ" "anoa" "siskeldiđ" "siskeldiđ" "suojâliđ" "suovvat" "kepidiđ" "vađastit" "vahaduttiđ" "aibâšiđ" "väldiđ" "valjiđ" "várret" "ansoja" "váttásmahttit" "vijđediđ" "vuhtiiváldit" "vuáđudiđ" "vuođđudallat" "vuohttit" "vyeittiđ" "vuojuhit" ("vuodjut" der_h) "vuoruhit" "vuostáiváldit" "vuosttaldit" "vyebdiđ" ;
 
 	# Strictly transitiv-verbs - a start. This set is ment as a help choosing Acc or Gen. Example: "Mun borren eatni kafeás." - there is Gen, no Acc, even if the verb is transitive. That´s why "purrâđ" is not in this set.
 	# These verbs: "addit", "uážžuđ" and "uážžuđ" can, when it´s about sex, be without object: "Son oaččui gonagasa bártnis." 
 
-SET STRICT-TV-V = STVLIST + V - Der/Pass OR ("čielgat") + Der/d - Der/Pass  ; # because of apertium is čielgat here. I don't understand why it doesn't function inside the set.
+SET STRICT-TV-V = STVLIST + V - Der/Pass ; #OR ("čielgat") + Der/d - Der/Pass  ; # because of apertium is čielgat here. I don't understand why it doesn't function inside the set.
 
 #!! STRICT-TRANS-V is the set for verbs which don't let a GenAcc be a modifier of anything else than an object, e.g. Mun organiseren eatni gievkkanis. - eatni wants to be the object
 
@@ -893,7 +892,7 @@ LIST HAB-V = "puáttiđ" "leđe" "goallut" "sorjođ" "jápmit" "šoddâđ" ;
 #!! !Valency sets
 # - - - - - - -
 
-LIST INF-V = "enittiđ" "áhásiđ" "áiguđ" "älgiđ" "ásahit" "paggiđ" "povčâstiđ" "peessâđ" "lijkkuđ" "anoa" "bivvat" "ajasta" "puáttiđ" "käskeä" "čokkáđ" "čokánistiđ" "čokániđ" "pisániđ" "čuoččastit" "čuárvuđ" "čurggodit" ("ettâđ" Der/PassL) ("ettâđ" Der/PassS) "tovâttiđ" "táttuđ" "täiđiđ" "tarbâšiđ" "miäruštâllâđ" "suovvâđ" "tuáivuđ" "hoputtaa" "oskeldâttâđ" "ferttiđ" "huámášiđ" "huolâttiđ" "kolgâđ" "vaattâđ" "gárrut" "karttâđ" "iskâđ" "geargat" "geatnegahttit" "ajasta" "vaijeeđ" "koččođ" "háhppehit" "halijdiđ" "hárjániđ" "käydä" "lávet" "lijkkuđ" "morániđ" "vyelgiđ" "mättiđ" "máššat" "movttiidahttit" "mušteđ" "nagodit" "navdit" "máttááttiđ" "oahpástuvvat" "máttáđ" "uážžuđ" "enittiđ" "laskea" "riepmat" "sättiđ" "seahtit" "anoa" "sättiđ" "suovvat" "šoddâđ" "maaššâđ" "vaijeeđ" "tekemään" "koirasta" "vuogáiduvvat" "vyelgiđ" "vuollánit" "vyerdiđ";
+LIST INF-V = "enittiđ" "áhásiđ" "áiguđ" "älgiđ" "ásahit" "paggiđ" "povčâstiđ" "peessâđ" "lijkkuđ" "anoa" "bivvat" "ajasta" "puáttiđ" "käskeä" "čokkáđ" "čokánistiđ" "čokániđ" "pisániđ" "čuoččastit" "čuárvuđ" "čurggodit" ("ettâđ" Der/Pass) "tovâttiđ" "táttuđ" "täiđiđ" "tarbâšiđ" "miäruštâllâđ" "suovvâđ" "tuáivuđ" "hoputtaa" "oskeldâttâđ" "ferttiđ" "huámášiđ" "huolâttiđ" "kolgâđ" "vaattâđ" "gárrut" "karttâđ" "iskâđ" "geargat" "geatnegahttit" "ajasta" "vaijeeđ" "koččođ" "háhppehit" "halijdiđ" "hárjániđ" "käydä" "lávet" "lijkkuđ" "morániđ" "vyelgiđ" "mättiđ" "máššat" "movttiidahttit" "mušteđ" "nagodit" "navdit" "máttááttiđ" "oahpástuvvat" "máttáđ" "uážžuđ" "enittiđ" "laskea" "riepmat" "sättiđ" "seahtit" "anoa" "sättiđ" "suovvat" "šoddâđ" "maaššâđ" "vaijeeđ" "tekemään" "koirasta" "vuogáiduvvat" "vyelgiđ" "vuollánit" "vyerdiđ";
  
 
 LIST ACC-INF-V = "anoa" "čuárvuđ" "tovâttiđ" "suovvâđ" "koččođ" "movttiidahttit" "anoa" "suovvat" ;
@@ -2945,10 +2944,10 @@ SELECT:NbeforeRel N IF (NEGATE 0 Adv OR Po OR VFIN OR Inf)(NEGATE 0 PrfPrc LINK 
 #!! !!Adjectives and adverbs
 
 #!! !Adv or not?
-#!! maid has many readings and as Rel it is a member of S-BOUNDARY. Therefore we need to disambiguate is early in this file. Most important is to select Adv. Because of that A ang N still can have Vfin readings, it is difficult to make very general rules.
+#!! maid has many readings and as Rel it is a member of S-BOUNDARY. Therefore we need to disambiguate it early in this file. Most important is to select Adv. Because of that A and N still can have Vfin readings, it is difficult to make very general rules.
 
-#!! * __vaikkomii__
-IFF:vaikkomiiIndef ("mii") + Indef - Foc/ge OR ("kii") + Indef - Foc/ge OR ("kuábbáš") + Indef - Foc/ge OR ("maggaar") + Indef - Foc/ge IF ((-1 ("vâik") OR ("vâik") OR ("feara")) OR (1 ("naa")))(NEGATE 0 (Sg Nom) LINK *1 VFIN + Pl1 BARRIER SV-BOUNDARY)(NEGATE 0 ("maht") LINK 1 A) ;
+#!! * __vaikkomii__ was an IFF rule, but we weaken it to SELECT
+SELECT:vaikkomiiIndef ("mii") + Indef - Foc/ge OR ("kii") + Indef - Foc/ge OR ("kuábbáš") + Indef - Foc/ge OR ("maggaar") + Indef - Foc/ge IF ((-1 ("veikâ")) OR (1 ("naa")))(NEGATE 0 (Sg Nom) LINK *1 VFIN + Pl1 BARRIER SV-BOUNDARY) ;
 
 
 
@@ -2973,7 +2972,7 @@ REMOVE:NgradeAdv N IF (-1 GRADE-ADV - Foc)(0 Adv OR A OR PrfPrc);
  	#$ Mun lean nu suhttan. 
  	#$ Lea hui easkka čuožžilan gažaldat.
 
-SELECT:CopAdvPrfPrc Adv IF (-1 COPULAS)(1 PrfPrc - ("leđe"));
+REMOVE:CopAdvPrfPrc A IF (-1 COPULAS)(0 Adv)(1 PrfPrc - ("leđe"));
 SELECT:ovttasAdv Adv IF (-1 REAL-V OR Com)(0 COM-ADV)(NEGATE 0 Foc/ge OR Num); 
  	#$ Divššohas lea duođalaččat roasmmohuvvan.
  	#$ Bátnedoavttir galgá ovttas eará bargiiguin mearridit.
@@ -4915,7 +4914,7 @@ REMOVE:SEMXr2066 Gen IF (0 Der/NomAct)(*1 HUMAN-INDIVIDUAL OR PROFESSION OR OFFI
 
 
 #!! * __SEMXxr2071__ Removes Gen: Nobody can possess a Proper name? Except from (Pron Pers) and Sem/Fem OR Sem/Mal
-REMOVE:SEMXxr2071 Gen IF (NEGATE -1 Num OR Pr)(0 (N Acc) LINK NOT 0 NATION OR TIME OR TITLE OR Sem/Fem OR Sem/Mal OR ORGANIZATION OR ACR)(1 Prop LINK NOT 0 NATION OR ("Vuoigŋa"))(NEGATE 1 (Prop Sem/Org))(NEGATE 1 (Prop Attr) LINK 1 (Prop Sem/Org))(NEGATE 0 N-PX LINK 1 Sem/Fem OR Sem/Mal OR Sem/Sur LINK *1 Po BARRIER NOT-NPMOD)(NEGATE -1 CC LINK -1 (Prop Sem/Plc) LINK 3 Gen LINK 1C Nom);
+REMOVE:SEMXxr2071 Gen IF (NEGATE -1 Num OR Pr OR Sem/Mal OR Sem/Fem)(0 (N Acc) LINK NOT 0 NATION OR TIME OR TITLE OR Sem/Fem OR Sem/Mal OR ORGANIZATION OR ACR)(1 Prop LINK NOT 0 NATION OR ("Vuoigŋa"))(NEGATE 1 (Prop Sem/Org))(NEGATE 1 (Prop Attr) LINK 1 (Prop Sem/Org))(NEGATE 0 N-PX LINK 1 Sem/Fem OR Sem/Mal OR Sem/Sur LINK *1 Po BARRIER NOT-NPMOD)(NEGATE -1 CC LINK -1 (Prop Sem/Plc) LINK 3 Gen LINK 1C Nom);
 	#$ Moai boraime njálgga gáhkuid Hánssa ođđa láibbohagas.#Comment: except it doesn't hit this at all..
 	#$ ...go čielggadii oamastanvuoigatvuođa Finnmárkku eatnamiid hárrái.
 	#% Dalle ledje njeallje bistevaš skuvlla Finnmárkkus. 
@@ -4923,8 +4922,8 @@ REMOVE:SEMXxr2071 Gen IF (NEGATE -1 Num OR Pr)(0 (N Acc) LINK NOT 0 NATION OR TI
 	#% Romsa ja davágeaži Norrbotten, Davit Nordlánda ja gaska ja lulimus Norrbotten, Helgelánda ja Västerbotten, Davvi-Trøndelága ja davágeaži Jämtlánda. #Comment: davágeaži can "possess" (or mofify if you will) Jämtlánda.
 	#% Loahpas jearai listtu Anders Somby jr. sudnos njuolga háliida go čearru gulahallat, juo dahje ii.
 
-#!! * __SEMXxPropOrg__ Removes Gen: Who can possess Prop Sem/Org?    
-REMOVE:SEMXxrPropOrg Gen IF (NEGATE -1 Num)(0 (N Acc) LINK NOT 0 NATION OR TIME)(1 (Prop Sem/Org) LINK NOT 1 (Prop Sem/Org));
+#!! * __SEMXxPropOrg__ Removes Gen: Who can possess Prop Sem/Org?    Names or their possessed ones can !!
+REMOVE:SEMXxrPropOrg Gen IF (NEGATE -1 Num)(NOT -1 Prop)(NOT 0 Prop)(0 (N Acc) LINK NOT 0 NATION OR TIME)(1 (Prop Sem/Org) LINK NOT 1 (Prop Sem/Org));
 	#$ Álggos coggalii Anti vuosttaš spáppa Sørøy Glimt mollii 22 minuvtta maŋŋel go čiekčamat ledje álgán Niitoguolban stadionas.
     
 #!! * __SEMdep__ Select Gen if main-organization in front of department   
@@ -5967,9 +5966,10 @@ SELECT:AccTV4 Acc IF (*-1 TRANS-V + FMAINV - ("porgâđ") BARRIER NOT-NPMODADV L
 # Pron Rel
 
 #!! * __AccPronRel__ Selects (Pron Rel Acc) when a secure Acc or Nom to the left ''gáibidedje internáhttaskuvlla man''
-SELECT:AccPronRel (Pron Rel Acc)  IF ((-1C Acc OR Nom) OR (-1 COMMA LINK -1C Acc OR Nom))(0 ("mii"))(NEGATE *2 ("leđe") + FMAINV BARRIER SV-BOUNDARY)(NEGATE 1 Nom LINK *2 Der/Pass BARRIER SV-BOUNDARY) ;
+SELECT:AccPronRel (Pron Rel Acc)  IF ((-1C Acc OR Nom) OR (-1 COMMA LINK -1C Acc OR Nom))(0 ("mii"))(NEGATE *2 ("leđe") + FMAINV BARRIER SV-BOUNDARY)(NEGATE 1 Nom LINK *2 Der/Pass BARRIER SV-BOUNDARY)(*1 VFIN) ;
 	#$ Lullisámit gáibidedje internáhttaskuvlla man stáhta jođihii.
 	#$ Oahppit lohke jitnosit čálabáikkiid maid ledje bajil oahppan.
+	#% Lii-uvsun tot mon jiärmáás juurdâ.
 	#% Son lea čállán mánáidgirjji man namma lea Mellet.
 	#% Stáhta nammadan láhttu ja sadjásašláhttu galgaba deavdit gáibádusaid, maid Lahtut ja sadjásašláhtut nammaduvvojit gitta njealji jagi rádjai. #Odd sentence btw..
 	
@@ -5998,7 +5998,7 @@ SELECT:AccAhte (N Acc) IF (0 Acc)(1 ("et"))(NEGATE *-1 BOC BARRIER NOT-Attr)(NEG
 	#% Seammás go skuvlla, sámi oahpahusráđi ja Sámi boazodoallohálddáhusa ovddasteaddjit háliidedje ahte sámegielat oahppit ožžot oahpahusa sámegillii, de dajai Eanandoallooahpahusráđi jođiheaddji Ola Nystø ahte LOR bealis leat álo geahččan boazodoalloskuvlla fágaskuvlan boazodoalus.
 
 #!! * __AccAux__ Selects Acc if beginning of sentence to the right and aux, not leat,  is to the left. No Acc allowed to the left ''láđđi fertejetne oastit''
-SELECT:AccAux Acc IF (*-1 BOS BARRIER NOT-NPMOD)(0 (N Gen) OR (N Acc))(1 FAUXV - ("leđe") - Neg)(NEGATE 0 ACTOR OR PLACE OR Rel OR (N ACR))(NEGATE *2 (Der/PassL) OR (Der/PassS) BARRIER SV-BOUNDARY)(NEGATE *1 (N Acc) BARRIER S-BOUNDARY); #(NEGATE *1 ("et") BARRIER S-BOUNDARY);
+SELECT:AccAux Acc IF (*-1 BOS BARRIER NOT-NPMOD)(0 (N Gen) OR (N Acc))(1 FAUXV - ("leđe") - Neg)(NEGATE 0 ACTOR OR PLACE OR Rel OR (N ACR))(NEGATE *2 (Der/Pass) BARRIER SV-BOUNDARY)(NEGATE *1 (N Acc) BARRIER S-BOUNDARY); #(NEGATE *1 ("et") BARRIER S-BOUNDARY);
 	#$ Dan ášši ferte čilget nállevealaheami ektui sierra.
 	#% Divššohasbearráigeahčči galgá dahkat ortnega dovddusin.
 
