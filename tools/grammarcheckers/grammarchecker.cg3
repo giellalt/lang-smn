@@ -2021,7 +2021,7 @@ ADD (&typo &SUGGESTWF) (<spelled>);
 
 #!! Sg3/Pl3 errors
 
-ADD:err-agr-pl3 (&err-agr-pl3) TARGET V IF (*1 Pl + Nom BARRIER NOT-NPMODADV LINK NOT *1 V + Pl3)(0 ("leđe") + Sg3);
+ADD:err-agr-pl3 (&err-agr-pl3) TARGET V IF (NOT -1 Sg + Nom OR Sg3 + Nom)(*1 Pl + Nom BARRIER NOT-NPMODADV LINK NOT *1 V + Pl3)(0 ("leđe") + Sg3);
 COPY:err-agr-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V &err-agr-pl3);
 ## Tast lii uápis ääših
 #$ Tast láá uápis ääših
@@ -2034,12 +2034,13 @@ COPY:err-prfprc-sg1 (Ind Prs Sg1 &SUGGEST) EXCEPT PrfPrc TARGET (V &err-prfprc-s
 ## Mun váldám.
 #$ Mun vááldám.
 
-ADD:err-agr-sg1 (&err-agr-sg1) TARGET V IF (-1C Pron + Sg1 + Nom)(0 V)(NOT 0 Sg1);
+ADD:err-agr-sg1 (&err-agr-sg1) TARGET V IF (NOT -2 Sg1)(-1C Pron + Sg1 + Nom)(0 V + Ind)(NOT 0 Sg1);
 COPY:err-agr-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prt &err-agr-sg1);
 COPY:err-agr-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prs &err-agr-sg1);
 COPY:err-agr-sg1 (Ind Prt Sg1 &SUGGEST) EXCEPT (Actio Num) TARGET (V  &err-agr-sg1);
 ## Mun puátá.
 #$ Mun puáđám.
+#$ Uážum-uv mun-uv elâččiđ váhá kiirdâšmin?
 
 ADD:err-agr-sg1 (&err-agr-sg1) TARGET V IF (NOT -2 Sup)(-1C Pron + Sg1 + Nom)(-1 BOS OR PUNCT)(0 V)(NOT 0 Sg1);
 COPY:err-agr-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prs &err-agr-sg1);
@@ -2111,11 +2112,11 @@ ADD:err-ness-acc-nom (&err-ness-acc-nom) TARGET (Pron Pers Acc) IF (-1 (Neg Ind 
 #f Eikö sinun pitää lähteä ...
 
 ADD:err-ness-acc-nom (&err-ness-acc-nom) TARGET (Pron Pers Acc) IF (1 MOD-ASP + Sg3)(*2 Inf + IV BARRIER NOT-ADV-DE);
-ADD:err-ness-acc-nom (&err-ness-acc-nom) TARGET (Pron Pers Acc) IF (1 MOD-ASP + Sg3)(*2 Inf + TV BARRIER NOT-ADV-DE LINK *1 EOS BARRIER Acc);
+ADD:err-ness-acc-nom (&err-ness-acc-nom) TARGET (Pron Pers Acc) IF (1 MOD-ASP + Sg3)(*2 Inf + TV BARRIER NOT-ADV-DE LINK *1 Acc BARRIER SV-BOUNDARY);
 COPY:err-ness-acc-nom (Nom &SUGGEST) EXCEPT Acc TARGET (Pron Pers &err-ness-acc-nom);
-## Suu koolgâi forgâ porgâđ miärádâs
-#$ Sun koolgâi forgâ porgâđ miärádâs
-
+## Suu koolgâi forgâ porgâđ miärádâs.
+#$ Sun koolgâi forgâ porgâđ miärádâs.
+## Tuáhtár lâi ton mielâst, et sunnuu koolgâi vistig váhá nuollâđ.
 
 ADD:err-ness-ill-nom (&err-ness-ill-nom) TARGET (Pron Pers Ill) IF (1 MOD-ASP + Sg3)(*2 Inf BARRIER NOT-ADV-DE);
 # COPY: see next rule set
@@ -2190,9 +2191,10 @@ COPY:err-extneg-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET ("ij" V Neg Ind &err-extneg
 #!! !Predicative
 
 
-ADD:err-pred-acc-nom (&err-pred-acc-nom) TARGET Acc IF (*-1 ("leđe") + Ind BARRIER NOT-NPMOD OR ("mihheen"))(NOT 0 Arab OR Nom)(NOT *0 TV);
+ADD:err-pred-acc-nom (&err-pred-acc-nom) TARGET Acc IF (*-1 ("leđe") + Ind BARRIER NOT-NPMOD OR ("mihheen"))(NOT 0 Arab OR Nom)(NOT *0 TV)(NOT *-1 BOS LINK 1 ("mii") OR ("kii"));
 COPY:err-pred-acc-nom (Nom &SUGGEST) EXCEPT Acc TARGET (N &err-pred-acc-nom);
 ## Taah láá čielgâ aašijd
+#$ Mii tiet lii aašijd.
 #$ Taah láá čielgâ ááših
 
 
@@ -2251,7 +2253,7 @@ COPY:err-extv-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (LEDE &err-extv-pl3);
 ADD:err-extsubj-ill-nom (&err-extsubj-ill-nom) TARGET N IF (-1 LEDE + Sg3 OR LEDE + Pl3)(-2 Loc)(0 N + Pl + Ill);
 COPY:err-extsubj-ill-nom (Nom &SUGGEST) EXCEPT Ill TARGET (N Pl &err-extsubj-ill-nom);
 
-ADD:err-halfcongruence (&err-halfcongruence) TARGET Dem IF (0 Sg + Loc)(1 N + Sg + Loc)(NOT 0 Loc + Attr); # Loc Attr > Gen?
+ADD:err-halfcongruence (&err-halfcongruence) TARGET Dem IF (0 Sg + Loc)(NOT 0 Loc + Attr)(1 N + Sg + Loc)(NOT 1 Prop); # Loc Attr > Gen?
 COPY:err-halfcongruence (Gen &SUGGEST) EXCEPT (Loc Attr) TARGET (Dem &err-halfcongruence);
 	
 ADD:err-nom-obj (&err-nom-obj) TARGET N IF (-1 VFIN + Sg1)(0 N + Pl + Nom);
@@ -2317,10 +2319,10 @@ COPY:err-num-gensg (Sg Gen &SUGGEST) EXCEPT Par TARGET (N &err-num-gensg);
 
 LIST SGGENACC = (Sg Gen) (Sg Acc) ;
 
-ADD:err-num-par (&err-num-par) TARGET N IF (-1 Num + Nom LINK 0 SEVEN-AND-MORE)(0 N + Sg + Gen)(NOT 0 ABBR OR Par)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Sem/Date OR Rom OR Sem/Time-clock)(NOT 1 Po OR N) ;
+ADD:err-num-par (&err-num-par) TARGET N IF (-1 Num + Nom LINK 0 SEVEN-AND-MORE)(0 N + Sg + Gen)(NOT 0 ABBR OR Par)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Sem/Date OR Rom OR Sem/Time-clock)(NOT 1 Po OR N OR A) ;
 COPY:err-num-par (Par &SUGGEST) EXCEPT (Sg Gen) TARGET (N &err-num-par) ;
 
-ADD:err-num-par (&err-num-par) TARGET N IF (-1 Num + Nom LINK 0 SEVEN-AND-MORE)(0 N + Sg + Acc)(NOT 0 ABBR OR Par)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Sem/Date OR Rom OR Sem/Time-clock  OR ("pelnub") OR ("muáddi"))(NOT 1 Po OR N) ;
+ADD:err-num-par (&err-num-par) TARGET N IF (-1 Num + Nom LINK 0 SEVEN-AND-MORE)(0 N + Sg + Acc)(NOT 0 ABBR OR Par)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Sem/Date OR Rom OR Sem/Time-clock OR ("pelnub") OR ("muáddi"))(NOT 1 Po OR N OR A) ;
 COPY:err-num-par (Par &SUGGEST) EXCEPT (Sg Acc) TARGET (N &err-num-par) ;
 ## Must láá čiččâm {kyele}.
 #$ Must láá čiččâm kyellid.
