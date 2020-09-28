@@ -24,7 +24,7 @@
 #   Development setup:   #
 # ---------------------- #
 #
-# cd $GTHOME/langs/smn
+# cd $GTLANGS/lang-smn
 # ./autogen.sh
 # ./configure --with-hfst --enable-syntax --enable-grammarchecker --enable-tokenisers --enable-alignment --enable-reversed-intersect
 # make
@@ -35,8 +35,9 @@
 #   Then edit/test as:   #
 # ---------------------- #
 #
-# emacs grammarchecker.cg3  # and C-c C-i / C-c C-c if you have cg-mode installed
 # echo "Sun ij puátá." | sh modes/smngram.mode  # from the terminal
+# Hint: There are very many modes in the modes folder, look at them.
+# emacs grammarchecker.cg3  # and C-c C-i / C-c C-c if you use emacs and have cg-mode installed
 #
 # ---------------------- #
 #   Other debug-pipes:   #
@@ -2029,7 +2030,7 @@ COPY:err-agr-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V &err-agr-pl3);
 ADD:err-agr (&err-agr) TARGET V IF (-1C Sg + Nom)(0 VFIN)(NOT 0 Sg3)(NEGATE 0 ConNeg LINK *-1 Neg)(NOT *-2 CC LINK -1 Sg + Nom);
 COPY:err-agr (Sg3 &SUGGEST) EXCEPT VNOTSG3 TARGET (V Ind Prs &err-agr);
 
-ADD:err-prfprc-sg1 (&err-prfprc-sg1) TARGET V IF (-1C Pron + Sg1 + Nom)(0 V + PrfPrc);
+ADD:err-prfprc-sg1 (&err-prfprc-sg1) TARGET V IF (-1 Pron + Sg1 + Nom)(0 V + PrfPrc);
 COPY:err-prfprc-sg1 (Ind Prs Sg1 &SUGGEST) EXCEPT PrfPrc TARGET (V &err-prfprc-sg1);
 ## Mun váldám.
 #$ Mun vááldám.
