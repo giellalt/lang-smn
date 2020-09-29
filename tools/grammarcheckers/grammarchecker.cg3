@@ -2030,10 +2030,11 @@ COPY:err-agr-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V &err-agr-pl3);
 ADD:err-agr (&err-agr) TARGET V IF (-1C Sg + Nom)(0 VFIN)(NOT 0 Sg3)(NEGATE 0 ConNeg LINK *-1 Neg)(NOT *-2 CC LINK -1 Sg + Nom);
 COPY:err-agr (Sg3 &SUGGEST) EXCEPT VNOTSG3 TARGET (V Ind Prs &err-agr);
 
-ADD:err-prfprc-sg1 (&err-prfprc-sg1) TARGET V IF (-1 Pron + Sg1 + Nom)(0 V + PrfPrc);
+ADD:err-prfprc-sg1 (&err-prfprc-sg1) TARGET V IF (NOT -2 V + Sg1) (-1 Pron + Sg1 + Nom)(0 V + PrfPrc);
 COPY:err-prfprc-sg1 (Ind Prs Sg1 &SUGGEST) EXCEPT PrfPrc TARGET (V &err-prfprc-sg1);
 ## Mun váldám.
 #$ Mun vááldám.
+#$ Lamhân mun váldám tom.
 
 ADD:err-agr-sg1 (&err-agr-sg1) TARGET V IF (NOT -2 Sg1)(-1C Pron + Sg1 + Nom)(0 V + Ind)(NOT 0 Sg1);
 COPY:err-agr-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prt &err-agr-sg1);
@@ -2078,11 +2079,13 @@ COPY:err-agr-pl1 (Pl1 &SUGGEST) EXCEPT VNOTPL1 TARGET (V Ind Prs &err-agr-pl1);
 
 
 
-ADD:err-agr-pl2 (&err-agr-pl2) TARGET V IF (NOT -2 Sup)(-1C Pron + Pl2 + Nom)(0 V)(NOT 0 Pl2);
+ADD:err-agr-pl2 (&err-agr-pl2) TARGET V IF (NOT -2 Sup OR Pl2)(-1C Pron + Pl2 + Nom)(0 V)(NOT 0 Pl2);
 COPY:err-agr-pl1 (Pl2 &SUGGEST) EXCEPT VNOTPL2 TARGET (V Ind Prs &err-agr-pl2);
 
 ## Tij puátá.
 #$ Tij puátivetteđ.
+
+#$ Kolgâvetteđhân tij puáttiđ.
 
 
 
@@ -2119,14 +2122,15 @@ COPY:err-ness-acc-nom (Nom &SUGGEST) EXCEPT Acc TARGET (Pron Pers &err-ness-acc-
 #$ Sun koolgâi forgâ porgâđ miärádâs.
 ## Tuáhtár lâi ton mielâst, et sunnuu koolgâi vistig váhá nuollâđ.
 
-ADD:err-ness-ill-nom (&err-ness-ill-nom) TARGET (Pron Pers Ill) IF (1 MOD-ASP + Sg3)(*2 Inf BARRIER NOT-ADV-DE);
+#ADD:err-ness-ill-nom (&err-ness-ill-nom) TARGET (Pron Pers Ill) IF (1 MOD-ASP + Sg3)(*2 Inf BARRIER NOT-ADV-DE);
 # COPY: see next rule set
-## Sunnui koolgâi forgâ porgâđ miärádâs
-#$ Sun koolgâi forgâ porgâđ miärádâs
+## Sunnui koolgâi forgâ porgâđ miärádâs (Sunnui koolgâi forgâ rähtiđ miärádâs.)
+#$ Sun koolgâi forgâ porgâđ miärádâs (Sun koolgâi forgâ meridiđ.)
+#$ Tom sijjân koolgâi onne máttááttiđ.
 
 
-ADD:err-ness-ill-nom (&err-ness-ill-nom) TARGET (Pron Pers Ill) IF (-1 (Neg Ind Sg3))(1 ConNeg)(*2 Inf BARRIER NOT-ADV-DE);
-COPY:err-ness-ill-nom (Nom &SUGGEST) EXCEPT Ill TARGET (Pron Pers &err-ness-ill-nom);
+#ADD:err-ness-ill-nom (&err-ness-ill-nom) TARGET (Pron Pers Ill) IF (-1 (Neg Ind Sg3))(1 ConNeg)(*2 Inf BARRIER NOT-ADV-DE);
+#COPY:err-ness-ill-nom (Nom &SUGGEST) EXCEPT Ill TARGET (Pron Pers &err-ness-ill-nom);
 ## 
 #$ 
 #f
@@ -2269,19 +2273,22 @@ COPY:err-nom-obj (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &err-nom-obj);
 # olen valinnut nämä sanat
 
 #!! Acc shall be Nom
-ADD:err-acc-obj-top (&err-acc-obj-top) TARGET N IF (0 Pl + Acc LINK *-1 BOS BARRIER Nom)(1 V + Sg3)(2 Adv)(NOT *3 TV);
-COPY:err-acc-obj-top (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &err-acc-obj-top);
+ADD:err-acc-obj-top (&err-acc-obj-top) TARGET N IF (0 Pl + Acc - Sem/Time LINK *-1 BOS BARRIER Nom)(1 Der/Pass + Sg3)(2 Adv)(NOT *3 TV);
 #$ Anarâškielâlijd noomâid kiävttoo uccáá.
 ## Anarâškielâliih noomah kiävttojeh uccáá.
 
 # Inarinsaamenkielisiä nimiä käytetään vähän
 
-ADD:err-acc-obj-top (&err-acc-obj-top) TARGET N IF (0 Pl + Acc LINK *-1 BOS BARRIER Nom)(1 V + Sg3)(2 ConNeg);
+ADD:err-acc-obj-top (&err-acc-obj-top) TARGET N IF (0 Pl + Acc - Sem/Time LINK *-1 BOS BARRIER Nom)(1 Neg + Sg3)(2 ConNeg LINK NOT 0 TV);
 COPY:err-acc-obj-top (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &err-acc-obj-top);
 
 ## {tiäđuid} ij kavnuu.
 #$ tiäđuh iä kavnuu.
 # tietoja ei löydy
+#$ Mut taid pihtâsijd ij lamaškin nuuvt älkkee nuollâđ.
+#$ Mut tuorâstuvâi ij kavnuu.
+#$ Kähirijd lâi talle kolgâm uážudiđ pävirpitáigijn kiddâ.
+#$ Siämmáámuđusijd teermâid ij uážžum kuohtii kevttiđ.
 
 #!! !Imperative errors
 
@@ -2333,10 +2340,29 @@ COPY:err-num-par (Par &SUGGEST) EXCEPT (Sg Acc) TARGET (N &err-num-par) ;
 
 # b) Suomâkielâ partitiiv passiivráhtusijn; sämikielâst passiiv ohtâvuođâst lii nominatiiv já verbâ maaŋgâlovvoost.
 MAP:err-pass-accsubj (&err-pass-accsubj) TARGET N IF (0C Acc + Pl)(1 Der/Pass + Pl3 OR LEXICALISED-PASS-V + Pl3)(NOT 1 PrfPrc OR TV);
+
+MAP:err-pass-accsubj (&err-pass-accsubj) TARGET N IF (0C Acc + Pl)(1 COMMA LINK 1 Rel LINK *1 COMMA LINK 1 Der/Pass + Pl3 OR LEXICALISED-PASS-V + Pl3 LINK NOT 0 PrfPrc OR TV);
 COPY:err-pass-accsubj (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &err-pass-accsubj);
+
+
 #fi	Saamenkielisiä nimityksiä käytetään vähän. - 
 ##	Sämikielâlijd nomâttâsâid kiävttojeh uccáá. 
 #$ 	Sämikielâliih nomâttâsah kiävttojeh uccáá. 
+#$ Sämikielâliih nomâttâsah, moh láá ovdil kevttum, kiävttojeh tääl uccáá.
+## Sämikielâlijd nomâttâsâid, moh láá ovdil kevttum, kiävttojeh tääl uccáá.
+
+
+MAP:err-pass-accsubj (&err-pass-accsubj) TARGET N IF (0C Acc + Pl)(1 ("leđe") + Pl3 OR Sg3) (2 PrfPrc + Der/Pass OR LEXICALISED-PASS-V);
+COPY:err-pass-accsubj (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &err-pass-accsubj);
+
+## Tävirijd láppojii ääitist.
+#$ Tävireh láppojii ääitist.
+
+## Tävirijd láá lappum ääitist.
+#$ Tävireh láá lappum ääitist. 
+
+## Tävirijd lii lappum ääitist.
+#$ Tävireh láá lappum ääitist.
 
 
 #!! Attributive forms
