@@ -17,7 +17,7 @@
 # echo "Son liiko munnje bures." | preprocess | lookup -flags mbTT -utf8 ~/main/gt/sme/bin/sme-norm.fst | lookup2cg | vislcg3 -g ~/main/gt/sme/src/sme-val.rle -t | vislcg3 -g ~/main/gt/sme/src/sme-dis.rle -t
 
 # ==================================================================== #
-#    N O R T H E R N  S Á M I   V A L E N C Y   A N N O T A T O R  
+#    I N A R I   S Á M I   V A L E N C Y   A N N O T A T O R  
 # ==================================================================== #
 # ==================================================================== #
 
@@ -2382,7 +2382,7 @@ SUBSTITUTE (V) (V <TH-Ill-Any>) TARGET TH-ILL-V - VAbess ;
     ## ii njuolgga seahkanivčče doaimmahusbargui ja beaivválaš ruhtageavaheapmái ??
     ## Oalgguhit regulerenpolitihkkii mii lea heivehuvvon ressursamolsumiidda ja regiovnnalaš dárbbuide . 
 
-LIST TH-ILL-*PLC-V = "čuojahit" ;
+LIST TH-ILL-*PLC-V = "suáittiđ" ; # "čuojahit" 
 
 SUBSTITUTE (V) (V <TH-Ill-*Plc>) TARGET TH-ILL-*PLC-V ;
 	##
@@ -2394,11 +2394,11 @@ SUBSTITUTE (V) (V <TH-Ill-Obj>) TARGET TH-ILL-OBJ-V ;
     # concrete things (not place), jávrái (not Plc Prop)
     ## Badjeolmmái ii máššan, ja rabestii seahka ovdal go lei vázzán viđá - guđá vári badjel.
 
-LIST TH-ACC-BODY-V = "vuoiŋŋastahtit" "nivkkuhit" "speažžut" ;    
+LIST TH-ACC-BODY-V = "vuoiŋŋastahtit" "nivkkuhit" "speažžut" ; # "vuoiŋŋastahtit" "nivkkuhit" "speažžut" 
 SUBSTITUTE (V) (V <TH-Acc-Body>) TARGET TH-ACC-BODY-V ;
 	## Riebaniin leat biejut, ja almmi lottiin leat beasit, muhto Olbmobártnis ii leat sadji gos vuoiŋŋastahtášii oaivvis.
 	
-LIST TH-LO-BIRRA-V = "dollet" ;
+LIST TH-LO-BIRRA-V = "tolliđ" ; # "dollet" 
 
 SUBSTITUTE (V) (V <TH-Acc-Any><LO-birra-Any>) TARGET TH-LO-BIRRA-V - Der/PassL - Der/PassS;
 	## 37 Buohkat čirrojedje ja dollejedje Bávlosa čeabáha birra ja cummistedje su.
@@ -2411,26 +2411,67 @@ SUBSTITUTE (V) (V <TH-Acc-*Plc>) TARGET TH-ACC-NOT-PLC-V ;
     ## Gugán lei geahččan niehkogirjjis, ja čilgen niegu dainna lágiin ahte lei muhtun nieida gii su áibbašii ja dat nieida várra ii lean guhkin eret.
     ##
     
-LIST TH-ACC-DANCE-V = "dánsut" ;
+LIST TH-ACC-DANCE-V = "tánssáđ" ; #"dánsut" ;
     
 SUBSTITUTE (V) (V <TH-Acc-Dance>) TARGET TH-ACC-DANCE-V - Der/Pass ;
 	## Ollugat dánso swinga lávddi ovddabeale.
 	## Dánsun buktá ollu buriid, lášmmodan ja liigekilot jávket, lohká Gaup gii niegada gávttiin dánsut wienerválssa, muhto ii ihttin go dalle lea cha cha cha.
 
 
-LIST TH-ACC-V = "addit" "áidut" "álbmut" "albmanahttit" "almmuhit" "almmustahttit" "amastit" "amastallat" "ákkastallat" "áddet" "áđđestallat" "áimmahuššat" "álggahit" "álkidit" "áŋgiruššat" "ánssášit" "ánssáhit" "ánuhit" "árbet" "árvidit" "árvvoštallat" "átnut" "ávvudit" "ávkkástallat" "ávžut" "ávžžuhit"
-"badjelgeahččat" "bággolonistit" "bajidit" "bahkket" "bájuhit" "bargat" "basuhit" "báddet" "bálkestit" "beaivádit" "bealkit" "bealuštit" "bearrat" "bearráigeahččat" "beastit" "bidjat" "biehttalit" "bilistit" "bisuhit" "bivdet" "boagustit" "bohciidahttit" "bosádit" "bovdet" "buhtadit" "buktit" "buo" "buohtastahttit"  
-"cealkit" "coggat" "cuoigut" "čađahit" "čalmmustahttit" "čatnat" "čaibmat" "čájehit" "čájáhaddat" "čállit" "čiegastit" "čiehkat" "čiekŋudit" "čielggadit" "čoaggit" "čoavdit" "čohkket" "čoahkkáigeassit" "čorget" "čujuhit" "čuorvut" "čuovgat" "čuovvut" "čuovvulit" "čurvet" "čuoččuhit" "čuovvolit" "čuvget"
-"dagahit" "dadjat" "dahkat" "dáguhit" "dáhkut" "dáhttut" "dárbbašit" "dárkkistit" "darvehit" "dávistit" "deaivat" "deattuhit" "deavdit" "defineret" "delegeret" "demonstreret" "dieđihit" "diehtit" "digaštallat" "digaštit" "diđoštit" "diládit" "dinet" "diŋgot" "divvut" "doahttalit" "doaivut" "doalahit" "doallat" "dollet" "doalvut" "doamahit" "dorjet" "doarjut" "dohkkehit" "dorvvastit" "dovddastit" "dovdat" "dovddahit" "dorvvastit" "dubmet" "duođaštit" "dulkot" "duohpat" "duolbmalit" "duostat" "dustet" "dutkat" "dárbbahit" 
-"eahpidit" "eaiggádit" "eaktudit" "ealvit" "eastadit" "eavttuhit" "einnostit" "eretbidjat" "evalueret" "evttohit" "fállat" "filbmet" "fidnet" "fuobmát" "fuolahit" "fuollat" "fuomášit" "fuomášuhttit" "fuopmášit" "galledit" "garvit" "gaskit" "gaskkustit" "gáhtat" "gáđaštit"
-"gáhttet" "gáibidit" "gáddit" "gádjut" "gálgat" "gávdnat" "gárgedit" "gávnnahit" "gávppašit" "gč" "geahččat" "geahčadit" "geahččaladdat" "geahččalit" "geardduhit" "geassit" "geiget" "giddet" "gieđahallat" "gieldit" "gierdat" "gillát" "gilvalit" "goahcat" "goallostit" "goivet" "goastat" "gohčodit" "gohččut" "golahit" "goldit" "gopmárdallat" "govvet" "govvidit" "gulaskuddat" "guldalit" "gullat" "guoddit" "guođđit" "guorahallat" "guorrat" "guorastit" "guoskkahallat" "guovlat"
-"háhkat" "hálddašit" "háliidit" "hárjehallat" "hávkut" "heaittihit" "hehttet" "hilgut" "hoahpuhit" "hoidet" "hoidát" "hoitát" "hoaitit" "hoaidit" "hommet" "huobmát" "hutkat" "háhpohaddat" "imaštallat" "imaštit" "ipmirdit" "iskkadit" "jáhkkit" "jávkadit" "jeahkit" "jietnadit" "jođihit" "joksat" "jorahit" "juksat" "juoigat" "jurddahit" "jurddašit" "jurdilit" 
-"kártet" "kommenteret" "koordineret" "kritiseret" "lasihit" "láhčit" "láigohit" "láitit" "lihttoláigohit" "lávlut" "loahpahit" "loaktit" "logahallat" "loggut" "lohkat" "lohpidit" "loktet" "lonuhit" ("lonuhit" Der/adda) "luoikat" "luoitit" "manahit" "maŋidit" "massit" "máhcahit" "máhttit" "máinnašit" "máksit" "márkanastit" "mearkkašit" "mearridit" "mearredit" "merket" "meroštallat" "mieđihit" "mielddisbuktit" "miellagovahallat" "mihtidit" "moaitit" "mollat" "mollut" "movttiidahttit" "movttidahttit" "muitalit" "muitit" "muittašit" "muittuhit" "nagadit" 
-"nagodit" "nahkehit" "namahit" "namuhit" "nannet" "návddašit" "neaktit" "neavttadit" "neavttašit" "niegadit" "nimmorit" "nisttihit" "njoalostit" "njoammudit" "njurgut" "nuohttut" "nuollat" "oaguhit" "oahppat" "oaidnit" "oamastit" "oastit" "oažžut" "oččodit" "ohcat" "ollašuhttit" "oaivvildit" "ohcalit" "olahit" "ollásit" "ordnet" "ovddastit" "ovddidit" "ovttastahttit" 
-"plánet" "prioriteret" "rabistit" "rahpat" "raporteret" "ravget" "rádjat" "ráfáiduhttit" "rámidit" "ráŋggáštit" "ráđđet" "reaškit" "registreret" "reguleret" "rehkenastit" "rekruteret" "revideret" "ribahit" "rihkkut" "roggat" "rohkadallat" "ruhtadit" 
-"sáddet" "sárdnut" "seailluhit" "seastit" "sihkkut" "sihkkarastit" "sihkarastit" "sihtat" "sirret" "sisdoallat" "siskkildit" "sisttisdoallat" "sivahit" "sivdnidit" "smiehttat" "soabadit" "soahpat" "soardit" "sojahit" "steampalastit" "stivret" "stoahkat" "studeret" "suddjet" "suoládit" "šállošit"
-"tinet" 
-"váddudit" "váidit" "vajáldahttit" "vajálduhttit" "váillahit" "váivvidit" "válddahallat" "válddestit" "váldit" "válljet" "várjalit" "várret" "vásihit" "vástidit" "veadjit" "vealahit" "veardidit" "viegahit" "viežžalit" "viežžat" "vihkket" "vuhtiiváldit" "vuohttit" "vuohttut" "vuolláičállit" "vuoitit" "vuolggahit" "vuolidit" "vuordát" "vuorddašit" "vuordit" "vuoruhit" "vuosehit" "vuostáiváldit" "vuostálastit" "vuosttaldit" "vuosttildit" "vuovdit" "vurket" "vrd" ; #"váikkuhit" 
+#LIST TH-ACC-V = "addit" "áidut" "álbmut" "albmanahttit" "almmuhit" "almmustahttit" "amastit" "amastallat" "ákkastallat" "áddet" "áđđestallat" "áimmahuššat" "álggahit" "álkidit" "áŋgiruššat" "ánssášit" "ánssáhit" "ánuhit" "árbet" "árvidit" "árvvoštallat" "átnut" # "ávvudit" "ávkkástallat" "ávžut" "ávžžuhit"
+#"badjelgeahččat" "bággolonistit" "bajidit" "bahkket" "bájuhit" "bargat" "basuhit" "báddet" "bálkestit" "beaivádit" "bealkit" "bealuštit" "bearrat" "bearráigeahččat" "beastit" "bidjat" "biehttalit" "bilistit" "bisuhit" "bivdet" "boagustit" "bohciidahttit" "bosádit# " "bovdet" "buhtadit" "buktit" "buo" "buohtastahttit"  
+#"cealkit" "coggat" "cuoigut" "čađahit" "čalmmustahttit" "čatnat" "čaibmat" "čájehit" "čájáhaddat" "čállit" "čiegastit" "čiehkat" "čiekŋudit" "čielggadit" "čoaggit" "čoavdit" "čohkket" "čoahkkáigeassit" "čorget" "čujuhit" "čuorvut" "čuovgat" "čuovvut" "čuovvulit" # "čurvet" "čuoččuhit" "čuovvolit" "čuvget"
+#"dagahit" "dadjat" "dahkat" "dáguhit" "dáhkut" "dáhttut" "dárbbašit" "dárkkistit" "darvehit" "dávistit" "deaivat" "deattuhit" "deavdit" "defineret" "delegeret" "demonstreret" "dieđihit" "diehtit" "digaštallat" "digaštit" "diđoštit" "diládit" "dinet" "diŋgot" "div# vut" "doahttalit" "doaivut" "doalahit" "doallat" "dollet" "doalvut" "doamahit" "dorjet" "doarjut" "dohkkehit" "dorvvastit" "dovddastit" "dovdat" "dovddahit" "dorvvastit" "dubmet" "duođaštit" "dulkot" "duohpat" "duolbmalit" "duostat" "dustet" "dutkat" "dárbbahit" 
+#"eahpidit" "eaiggádit" "eaktudit" "ealvit" "eastadit" "eavttuhit" "einnostit" "eretbidjat" "evalueret" "evttohit" "fállat" "filbmet" "fidnet" "fuobmát" "fuolahit" "fuollat" "fuomášit" "fuomášuhttit" "fuopmášit" "galledit" "garvit" "gaskit" "gaskkustit" "gáhtat" "# gáđaštit"
+#"gáhttet" "gáibidit" "gáddit" "gádjut" "gálgat" "gávdnat" "gárgedit" "gávnnahit" "gávppašit" "gč" "geahččat" "geahčadit" "geahččaladdat" "geahččalit" "geardduhit" "geassit" "geiget" "giddet" "gieđahallat" "gieldit" "gierdat" "gillát" "gilvalit" "goahcat" "goallos# tit" "goivet" "goastat" "gohčodit" "gohččut" "golahit" "goldit" "gopmárdallat" "govvet" "govvidit" "gulaskuddat" "guldalit" "gullat" "guoddit" "guođđit" "guorahallat" "guorrat" "guorastit" "guoskkahallat" "guovlat"
+#"háhkat" "hálddašit" "háliidit" "hárjehallat" "hávkut" "heaittihit" "hehttet" "hilgut" "hoahpuhit" "hoidet" "hoidát" "hoitát" "hoaitit" "hoaidit" "hommet" "huobmát" "hutkat" "háhpohaddat" "imaštallat" "imaštit" "ipmirdit" "iskkadit" "jáhkkit" "jávkadit" "jeahkit"#  "jietnadit" "jođihit" "joksat" "jorahit" "juksat" "juoigat" "jurddahit" "jurddašit" "jurdilit" 
+#"kártet" "kommenteret" "koordineret" "kritiseret" "lasihit" "láhčit" "láigohit" "láitit" "lihttoláigohit" "lávlut" "loahpahit" "loaktit" "logahallat" "loggut" "lohkat" "lohpidit" "loktet" "lonuhit" ("lonuhit" Der/adda) "luoikat" "luoitit" "manahit" "maŋidit" "mas# sit" "máhcahit" "máhttit" "máinnašit" "máksit" "márkanastit" "mearkkašit" "mearridit" "mearredit" "merket" "meroštallat" "mieđihit" "mielddisbuktit" "miellagovahallat" "mihtidit" "moaitit" "mollat" "mollut" "movttiidahttit" "movttidahttit" "muitalit" "muitit" "muittašit" "muittuhit" "nagadit" 
+#"nagodit" "nahkehit" "namahit" "namuhit" "nannet" "návddašit" "neaktit" "neavttadit" "neavttašit" "niegadit" "nimmorit" "nisttihit" "njoalostit" "njoammudit" "njurgut" "nuohttut" "nuollat" "oaguhit" "oahppat" "oaidnit" "oamastit" "oastit" "oažžut" "oččodit" "ohca# t" "ollašuhttit" "oaivvildit" "ohcalit" "olahit" "ollásit" "ordnet" "ovddastit" "ovddidit" "ovttastahttit" 
+"plánet" "prioriteret" "rabistit" "rahpat" "raporteret" "ravget" "rádjat" "ráfáiduhttit" "rámidit" "ráŋggáštit" "ráđđet" "reaškit" "registreret" "reguleret" "rehkenastit" "rekruteret" "revideret" "ribahit" "rihkkut" "roggat" "rohkadallat" "ruhtadit" 			   # 
+#"sáddet" "sárdnut" "seailluhit" "seastit" "sihkkut" "sihkkarastit" "sihkarastit" "sihtat" "sirret" "sisdoallat" "siskkildit" "sisttisdoallat" "sivahit" "sivdnidit" "smiehttat" "soabadit" "soahpat" "soardit" "sojahit" "steampalastit" "stivret" "stoahkat" "studeret# " "suddjet" "suoládit" "šállošit"
+#"tinet"  
+#"váddudit" "váidit" "vajáldahttit" "vajálduhttit" "váillahit" "váivvidit" "válddahallat" "válddestit" "váldit" "válljet" "várjalit" "várret" "vásihit" "vástidit" "veadjit" "vealahit" "veardidit" "viegahit" "viežžalit" "viežžat" "vihkket" "vuhtiiváldit" "vuohttit"#  "vuohttut" "vuolláičállit" "vuoitit" "vuolggahit" "vuolidit" "vuordát" "vuorddašit" "vuordit" "vuoruhit" "vuosehit" "vuostáiváldit" "vuostálastit" "vuosttaldit" "vuosttildit" "vuovdit" "vurket" "vrd" ; #"váikkuhit" 
+
+LIST TH-ACC-V = "adeliđ" "áiđuđ" "álbmut" "albmanahttit" "almottiđ" "almostittiđ" "amastit" "amastallat" "ákkastallat" 
+"addiđ" "áđđestallat" "paijeentoollâđ" "älgiđ" "álkidit" "äŋgiruššâđ" "ánsášiđ" "ánssáhit" "ánuhit" "arbiđ" "ärvidiđ" 
+"árvuštâllâđ" "áánnuđ" "ávudiđ" "ávhástâllâđ" "avžuđ" "avžuđ" 
+"pajaluvkeččâđ" "bággolonistit" "pajediđ" "pokkiđ" "bájuhit" "porgâđ" "pasottiđ" "paddâđ" "leggistiđ" "peividiđ" "pelkkiđ" 
+"piäluštiđ" "peerrâđ" "piäránkeččâđ" "piäluštiđ" "pieijâđ" "kieldiđ" "bilistit" "siäiluttiđ" "pivdeđ" "povvustiđ" 
+"bohciidahttit" "posoliđ" "povdiđ" "pyerettiđ" "pyehtiđ" "buo" "verdidiđ" "celkkiđ" "cäähiđ" "kárvudâttâđ" "nutkâđ" "cuáiguđ" 
+"olášuttiđ" "čalmmustahttit" "čoonnâđ" "povvustiđ" "čäittiđ" "čájáhaddat" "čäälliđ" "čiegastit" "čiehâđ" "jieŋâlmittiđ" 
+"selvâttiđ" "čuággiđ" "čuávdiđ" "čokkiđ" "čoahkkáigeassit" "čurgiđ" "čujottiđ" "čuárvuđ" "čuovvâđ" "čuovvâd" "čuávvuđ" 
+"čuávuliđ" "čurvet" "naggiđ" "čuovvolit" "almottiđ" "tovâttiđ" "ettâđ" "porgâđ" "dáguhit" "dáhkut" "táttuđ" "tarbâšiđ" "tärhistiđ" "darvehit" 
+"västidiđ" "teivâđ" "tiäduttiđ" "tevdiđ" "miäruštâllâđ" "delegeret" "demonstreret" "tieđettiđ" "tiettiđ" "tigáštâllâđ" 
+"digaštit" "tiäđuštâllâđ" "diládit" "tiänáđ" "tiiláđ" "tivvoođ" "doahttalit" "nabdeđ" "toollâđ" "toollâđ" "tolliđ" "tuálvuđ" 
+"doamahit" "dorjet" "tuárjuđ" "tuhhiittiđ" "turvâstiđ" "tubdâstiđ" "tubdâđ" "dovddahit" "turvâstiđ" "tuommiđ" "tuođâštiđ" "tulkkuđ" "duohpat" 
+"duolbmalit" "tuostâđ" "dustet" "tutkâđ" "tarbâšiđ" "epidiđ" "eaiggádit" "vaattâđ" "ealvit" "estiđ" "iävtuttiđ" "ennustiđ" "eretbidjat" 
+"árvuštâllâđ" "iävtuttiđ" "faallâđ" "filbmet" "finniđ" "huámášiđ" "huolâttiđ" "huollâđ" "huámášiđ" "huámášittiđ" "huámášiđ" "kolliđ" 
+"karveđ" "gaskit" "gaskkustit" "kaattâđ" "kađâštiđ" "kattiđ" "vaattâđ" "jurdeđ" "kááijuđ" "kalgâđ" "kavnâđ" "ovdediđ" 
+"selvâttiđ" "gávppašit" "kj" "keččâđ" "geahčadit" "keččâlâddâđ" "keččâliđ" "irâttiđ" "kiärduttiđ" "keessiđ" "keessiv" 
+"keigiđ" "kiddiđ" "kieđâvuššâđ" "kieldiđ" "kierdâđ" "killáđ" "kištottâllâđ" "kooccâđ" "goallostit" "goivet" "kostâđ" 
+"kočodiđ" "koččođ" "golahit" "goldit" "gopmárdallat" "kuvviđ" "kuvviđ" "tiäđustâllâđ" "kuldâliđ" "kuullâđ¹" "kyeddiđ" 
+"kyeđđiđ" "kieđâvuššâđ" "kuorrâđ" 
+"guorastit" "guoskkahallat" "kuovlâđ" "haahâđ" "haldâšiđ" "halijdiđ" "hárjuttâllâđ" "hávkut" "joskâđ" "hettiđ" "hilgođ"
+ "huáputtiđ" "hoidet" "hoidát" "hoittáđ" "hoaitit" "hoaidit" "hommet" "huobmát" "utkâđ" "háhpohaddat" "imâštâllâđ" 
+ "imâštâllâđ" "iberdiđ" "iskâdiđ" "oskođ" "läppiđ" "jeahkit" "jienâdiđ" "jođettiđ" "juksâđ" "jorahit" "juksâđ" "juoigâđ" "jurdâččiđ" "jurdâččiđ" 
+"jurdilit" "karttiđ" "kommenteret" "koordinistiđ" "árvuštâllâđ" "lasettiđ" "lääččiđ" "laiguuttiđ" "läittiđ" "lihttoláigohit" 
+"lávluđ" "lopâttiđ" "makkuđ" "kulâttiđ" "luvâldâllâđ" "loggut" "luuhâđ" "ettâđ" "lopediđ" "luptiđ" "lonuhit" "luoikkâđ" 
+"lyeštiđ" "monâttiđ" "maŋediđ" "monâttiđ" "macâttiđ" "mättiđ" "mainâšiđ" "mäksiđ" "markkânistiđ" "merhâšiđ" "meridiđ" "mearredit" "merkkiđ" 
+"miäruštâllâđ" "mieđettiđ" "mielddisbuktit" "miellagovahallat" "mittediđ" "muáittiđ" "mollat" "mollut" "movtijdittiđ" 
+"movttidahttit" "muštâliđ" "mušteđ" "muštâččiđ" "muštottiđ" "nahciđ" "vaijeeđ" "nahettiđ" "nomâttiđ" "nomâttiđ" "nonniđ" 
+"navdâšiđ" "neaktit" "neavttadit" "neavttašit" "nievdâđ" "nimmorit" "nisttihit" "njuálustiđ" "njuámudiđ" "njurgođ" "nuáttuđ" "nuollâđ" "uávuttiđ" 
+"oppâđ" "uáiniđ" "omâstiđ" "uástiđ" "uážžuđ" "viggâđ" "uuccâđ" "olášuttiđ" "uáivildiđ" "ucâliđ" "enittiđ" "puohrâkkân" 
+"orniđ" "ovdâstiđ" "ovdediđ" "ovtâstittiđ" "vuáváđ" "prioristiđ" "rabistit" "lehâstiđ" "raportistiđ" "ravget" "raaijâđ" 
+"rávhuiduttiđ" "rämidiđ" "ráŋgášiđ" "haldâšiđ" "povvustiđ" "registeeriđ" "heiviittâllâđ" "rekinistiđ" "rekruteret" "revideret" "nistettiđ" "rikkođ" 
+"ruggâđ" "ruhâdâllâđ" "ruttâdiđ" "vuolgâttiđ" "sárnuđ" "siäiluttiđ" "šeštiđ" "sikkođ" "visásmittiđ" "sihkarastit" "halijdiđ" 
+"sierriđ" "siskeldiđ" "siskeldiđ" "siskeldiđ" "sujâttiđ" "sivnediđ" "smiettâđ" "sovâdâttâđ" "sooppâđ" "soardit" "sujâttiđ" 
+"stemppâlistiđ" "stivriđ" "sierâdiđ" "luuhâđ" "suojâliđ" "suáládiđ" "šallišiđ" "tinet" "váddudit" "vaidâliđ" "vájáldittiđ" "vájáldittiđ" 
+"käibidiđ" "väividiđ" "válddahallat" "válddestit" "väldiđ" "valjiđ" "varjâliđ" "väridiđ" "feeriđ" "västidiđ" "vaijeeđ" 
+"vealahit" "verdidiđ" "kačâttiđ" "viežžalit" "viežžâđ" "viekkiđ" "hiäjusmiđ" "vyettiđ" "vuáttuđ" "vuolláičállit" "vyeittiđ" 
+"starttađ" "vyelediđ" "vuordát" "vuordâččiđ" 
+"vyerdiđ" "vuosâsajadiđ" "čäittiđ" "vuástáväldiđ" "vyestilistiđ" "vyestilistiđ" "vuástálistiđ" "vyebdiđ" "vuorkkiđ" "vrd" 
+
+
 
 LIST CAUS-TH-ACC-V = ("guolehuvvat" VV IVV Der/h V TV) "goastadit" ("njiedjat" VV IV Der/h V TV) "njiejahit" "vuodjudit" ;
 
@@ -2487,10 +2528,10 @@ LIST TH-ACC-*ANI-V = "bivdit" "čilget" "dieđihit" "hállat" "jáhkkit" "jienas
 SUBSTITUTE (V) (V <TH-Acc-*Ani>) TARGET TH-ACC-*ANI-V - Der/PassL - Der/PassS;
     ## Joatkit lávzzi/roavggu/čuolu/áiggi/mátkki/árbevieruid/lohkamiid
     
-LIST TH-AHTE-V = "ákkastallat" "atnit" "áddet" "átnut" "almmuhit" "árvalit" "árvidit" "atnit" "ávvudit" "ávžžuhit" "ballat" "bealuštit" "bearráigeahččat" "biehttalit" "beroštit" "bivdit" "cealkit" "cuiget" "cuiggodit" "cuoigut" "čájehit" "čájáhaddat" "čállit" "čalmmustahttit" "čeargut" "čiegastit" "čiehkat" "čilget" "čujuhit" "čuoččuhit" "čuorvut" "čurvet" "čuvget" "dagahit" "dadjalit" "dadjat" "dahkat" "dáguhit" "dáhkidit" "dárkkistit" "deattuhit" "demonstreret" "dieđihit" "diehtit" "doahttalit" "doaivut" "doarjut" "dohkkehit" "dovdat" "dovddadit" "dovddahit" "dovddastit" "duođaštit" 
-"eahpidit" "eaktudit" "einnostit" "evalueret" "evttohit" "fuolahit" "fuomášit" "fuomášuhttit" "fuobmát" "gáddit" "gáibidit" "gárvodit" "gávnnahit" "geardduhit" "gielistit" "gierdat" "gilljut" "gopmárdallat" "govvet" "govvidit" "gullat" "háliidit" "huikkádit" "huikit" "huobmát" "huomihit" "imaštit" "imaštallat" "ipmirdit" "jáhkkit" "jearrat" "jienastit" "joatkit" "jurddahit" "jurddašallat" "jurddašit" "jurdilit" "juoigat" "kommenteret" "lasihit" "lávlut" "liikot" "lohkat" "lohpidit" "máksit" "mearridit" "mearredit" "meroštallat" "mieđihit" "mielddisbuktit" "moaitit" "muitit" "muitalit" "muittašit" "muittuhit" "nagadit" "nagodit" "namuhit" "nannet" "navdit" "návddašit" "neavvut" "oahppat" "oaidnit" "oaivvildit" "oskut" "prioriteret"
-"raporteret" "rehkenastit" "rohkadallat" "savkalit" "sárdnidit" "sávvat" "sihkkarastit" "sihkarastit" "siskkildit" "sisttisdoallat" "smiehttat" "soabadit" "soahpat" "stoahkat" "šállošit" 
-"vašuhit" "váfistit" "váidalit" "váruhit" "vásihit" "vástidit" "veahtit" "vikkahit" "vuhtiiváldit" "vuohttit" "vuordát" "vuordit" "vuorddašit" ;
+# LIST TH-AHTE-V = "ákkastallat" "atnit" "áddet" "átnut" "almmuhit" "árvalit" "árvidit" "atnit" "ávvudit" "ávžžuhit" "ballat" "bealuštit" "bearráigeahččat" "biehttalit" "beroštit" "bivdit" "cealkit" "cuiget" "cuiggodit" "cuoigut" "čájehit" "čájáhaddat" "čállit" "čalmmustahttit" "čeargut" "čiegastit" "čiehkat" "čilget" "čujuhit" "čuoččuhit" "čuorvut" "čurvet" "čuvget" "dagahit" "dadjalit" "dadjat" "dahkat" "dáguhit" "dáhkidit" "dárkkistit" "deattuhit" "demonstreret" "dieđihit" "diehtit" "doahttalit" "doaivut" "doarjut" "dohkkehit" "dovdat" "dovddadit" "dovddahit" "dovddastit" "duođaštit" "eahpidit" "eaktudit" "einnostit" "evalueret" "evttohit" "fuolahit" "fuomášit" "fuomášuhttit" "fuobmát" "gáddit" "gáibidit" "gárvodit" "gávnnahit" "geardduhit" "gielistit" "gierdat" "gilljut" "gopmárdallat" "govvet" "govvidit" "gullat" "háliidit" "huikkádit" "huikit" "huobmát" "huomihit" "imaštit" "imaštallat" "ipmirdit" "jáhkkit" "jearrat" "jienastit" "joatkit" "jurddahit" "jurddašallat" "jurddašit" "jurdilit" "juoigat" "kommenteret" "lasihit" "lávlut" "liikot" "lohkat" "lohpidit" "máksit" "mearridit" "mearredit" "meroštallat" "mieđihit" "mielddisbuktit" "moaitit" "muitit" "muitalit" "muittašit" "muittuhit" "nagadit" "nagodit" "namuhit" "nannet" "navdit" "návddašit" "neavvut" "oahppat" "oaidnit" "oaivvildit" "oskut" "prioriteret" "raporteret" "rehkenastit" "rohkadallat" "savkalit" "sárdnidit" "sávvat" "sihkkarastit" "sihkarastit" "siskkildit" "sisttisdoallat" "smiehttat" "soabadit" "soahpat" "stoahkat" "šállošit" "vašuhit" "váfistit" "váidalit" "váruhit" "vásihit" "vástidit" "veahtit" "vikkahit" "vuhtiiváldit" "vuohttit" "vuordát" "vuordit" "vuorddašit" ;
+
+LIST TH-AHTE-V = "ákkastallat" "anneeđ" "addiđ" "áánnuđ" "almottiđ" "arvâliđ" "ärvidiđ" "anneeđ" "ávudiđ" "avžuđ" "poollâđ" "piäluštiđ" "piäránkeččâđ" "kieldiđ" "perustiđ" "pivdeđ" "celkkiđ" "cuiget" "cuáigudiđ" "cuáiguđ" "čäittiđ" "čájáhaddat" "čäälliđ" "čalmmustahttit" "čiärguđ" "čiegastit" "čiehâđ" "čielgiđ" "čujottiđ" "naggiđ" "čuárvuđ" "čurvet" "almottiđ" "tovâttiđ" "dadjalit" "ettâđ" "porgâđ" "dáguhit" "tähidiđ" "tärhistiđ" "tiäduttiđ" "demonstreret" "tieđettiđ" "tiettiđ" "doahttalit" "nabdeđ" "tuárjuđ" "tuhhiittiđ" "tubdâđ" "dovddadit" "dovddahit" "tubdâstiđ" "tuođâštiđ" "epidiđ" "vaattâđ" "ennustiđ" "árvuštâllâđ" "iävtuttiđ" "huolâttiđ" "huámášiđ" "huámášittiđ" "huámášiđ" "jurdeđ" "vaattâđ" "kárvudâttâđ" "selvâttiđ" "kiärduttiđ" "kielestiđ" "kierdâđ" "gilljut" "gopmárdallat" "kuvviđ" "kuvviđ" "kuullâđ¹" "halijdiđ" "huihádiđ" "huikkeđ" "huobmát" "huomihit" "imâštâllâđ" "imâštâllâđ" "iberdiđ" "oskođ" "koijâdiđ" "jienâstiđ" "juátkiđ" "jurdâččiđ" "jurddašallat" "jurdâččiđ" "jurdilit" "juoigâđ" "kommenteret" "lasettiđ" "lávluđ" "lijkkuđ" "luuhâđ" "ettâđ" "lopediđ" "mäksiđ" "meridiđ" "mearredit" "miäruštâllâđ" "mieđettiđ" "mielddisbuktit" "muáittiđ" "mušteđ" "muštâliđ" "muštâččiđ" "muštottiđ" "nahciđ" "vaijeeđ" "nomâttiđ" "nonniđ" "nabdeđ" "navdâšiđ" "ravviđ" "oppâđ" "uáiniđ" "uáivildiđ" "oskut" "prioristiđ" "raportistiđ" "rekinistiđ" "ruhâdâllâđ" "sovkkâliđ" "särnidiđ" "tuáivuttiđ" "tuáivuđ" "visásmittiđ" "sihkarastit" "siskeldiđ" "siskeldiđ" "smiettâđ" "sovâdâttâđ" "sooppâđ" "sierâdiđ" "šallišiđ" "vajediđ" "nanosmittiđ" "väidiđ" "váruttiđ" "feeriđ" "västidiđ" "veahtit" "vikkahit" "hiäjusmiđ" "vyettiđ" "vuordát" "vyerdiđ" "vuordâččiđ" ;
+ 
     
 SUBSTITUTE (V) (V <TH-ahte>) TARGET TH-AHTE-V - (Actio Nom) - (Actio Loc);
 	## Lei okta dánskalaš , ruoŧŧalaš ja norgalaš geat ledje 	veahtán 	, ahte ii oktage sis sáhte vázzit rastá ovtta šaldi mas leat nálut , nu ahte eai daja au , au . 
@@ -2499,7 +2540,9 @@ SUBSTITUTE (V) (V <TH-ahte>) TARGET TH-AHTE-V - (Actio Nom) - (Actio Loc);
 	## Sámediggi lea gáibidan ahte ásahuvvo šiehtadallanmálle Ráđđehusa ja Sámedikki gaskka barggadettiin sámi áššiiguin ruhtadandárbbuid, ovddasvástádusjuogadeami ja bušeahttarámmaid oktavuođas.
 	#$ Dát fas čájeha ahte geavahedje riggodagaid hui máŋgga ládje, seammás go máhku ja {liikon} rievddadii guovlluid mielde ja mearridii makkár buktagiid olbmot geavahedje.
 	
-LIST TH-FS-V = "almmustahttit" "bealkit" "dadjat" "dáguhit" "jurddašit" "lohkat" "muitalit" ;
+#LIST TH-FS-V = "almmustahttit" "bealkit" "dadjat" "dáguhit" "jurddašit" "lohkat" "muitalit" ;
+LIST TH-FS-V = "almostittiđ" "pelkkiđ" "ettâđ" "dáguhit" "jurdâččiđ" "luuhâđ" "ettâđ" "muštâliđ"
+
 	#$ ballat
 
 
