@@ -2090,7 +2090,7 @@ COPY:err-agr-pl1 (Pl2 &SUGGEST) EXCEPT VNOTPL2 TARGET (V Ind Prs &err-agr-pl2);
 
 
 # Suomâkielâ sárnumkielâ epikongruens maaŋgâlovo 3. persovnist 
-ADD:err-agr-sg3 (&err-agr-sg3) TARGET V IF (NOT -2 Sup)(-1C Pron + Pl3 + Nom OR Dem + Pl + Nom OR N + Pl + Nom)(NOT -1 NPL_WITH_VSG3)(0 V + Ind + Sg3)(NOT 0 Foc/ge);
+ADD:err-agr-sg3 (&err-agr-sg3) TARGET V IF (NOT -2 Sup)(-1C Pron + Pl3 + Nom OR Dem + Pl + Nom OR N + Pl + Nom)(NOT -1 NPL_WITH_VSG3)(0C V + Ind + Sg3)(NOT 0 Foc/ge);
 COPY:err-agr-sg3 (Pl3 &SUGGEST) EXCEPT VNOTPL3 TARGET (V Ind Prs &err-agr-sg3);
 COPY:err-agr-sg3 (Pl3 &SUGGEST) EXCEPT VNOTPL3 TARGET (V Ind Prt &err-agr-sg3);
 #fi Ne tulee.
@@ -2113,7 +2113,7 @@ ADD:err-ness-acc-nom (&err-ness-acc-nom) TARGET (Pron Pers Acc) IF (-1 (Neg Ind 
 # COPY: see next rule set
 ## Ij-uv tuu kolgâm vyelgiđ suáluikuávlun Jennyin?
 #$ Jieh-uv tun kolgâm vyelgiđ suáluikuávlun Jennyin?
-#f Eikö sinun pitää lähteä ...
+#f Eikö sinun pitänyt lähteä ...
 
 ADD:err-ness-acc-nom (&err-ness-acc-nom) TARGET (Pron Pers Acc) IF (1 MOD-ASP + Sg3)(*2 Inf + IV BARRIER NOT-ADV-DE);
 ADD:err-ness-acc-nom (&err-ness-acc-nom) TARGET (Pron Pers Acc) IF (1 MOD-ASP + Sg3)(*2 Inf + TV BARRIER NOT-ADV-DE LINK *1 Acc BARRIER SV-BOUNDARY);
