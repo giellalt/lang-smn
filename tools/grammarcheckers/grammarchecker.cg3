@@ -1970,49 +1970,50 @@ SET CCCOMMA = CC OR COMMA ;
 
 #!! !Grammarchecker sets
 
-LIST &err-agr = &err-agr ;
-LIST &err-agr-sg1 = &err-agr-sg1 ;
-LIST &err-agr-sg2 = &err-agr-sg2 ;
-LIST &err-agr-sg3 = &err-agr-sg3 ;
-LIST &err-agr-du1 = &err-agr-du1 ;
-LIST &err-agr-du2 = &err-agr-du2 ;
-LIST &err-agr-du3 = &err-agr-du3 ;
-LIST &err-agr-pl1 = &err-agr-pl1 ;
-LIST &err-agr-pl2 = &err-agr-pl2 ;
-LIST &err-agr-pl3 = &err-agr-pl3 ;
-LIST &err-prfprc-sg1 = &err-prfprc-sg1 ;
-LIST &err-gen-po = &err-gen-po ;
-LIST &err-no-conneg = &err-no-conneg ;
-LIST &err-orrood-inf = &err-orrood-inf ;
-LIST &err-ext-agr = &err-ext-agr ;
-LIST &err-ext-vagr = &err-ext-vagr ;
-LIST &err-extv-pl3 = &err-ext-pl3 ;
-LIST &err-extv-pl3-numeral = &err-ext-pl3-numeral ;
-LIST &err-extneg-pl3 = &err-extneg-pl3 ;
-LIST &err-pl-obj = &err-pl-obj ;
-LIST &err-esubj-plnom = &err-esubj-plnom ;
-LIST &err-extsubj-ill-nom = &err-extsubj-ill-nom ; # vi vil ha nom
-LIST &err-extsubj-acc-nom = &err-extsubj-acc-nom ; # vi vil ha nom
-LIST &err-halfcongruence = &err-halfcongruence ;	
-LIST &err-nom-obj = &err-nom-obj ;
-LIST &err-imp-nomobj = &err-imp-nomobj ;
-LIST &err-pass-accsubj = &err-pass-accsubj ;
-LIST &err-num-gensg = &err-num-gensg ;
-LIST &err-num-par = &err-num-par ;
-#LIST &err-vchain-prfprc = &err-vchain-prfprc ;
+LIST &msyn-agr = &msyn-agr ;
+LIST &msyn-agr-sg1 = &msyn-agr-sg1 ;
+LIST &msyn-agr-sg2 = &msyn-agr-sg2 ;
+LIST &msyn-agr-sg3 = &msyn-agr-sg3 ;
+LIST &msyn-agr-du1 = &msyn-agr-du1 ;
+LIST &msyn-agr-du2 = &msyn-agr-du2 ;
+LIST &msyn-agr-du3 = &msyn-agr-du3 ;
+LIST &msyn-agr-pl1 = &msyn-agr-pl1 ;
+LIST &msyn-agr-pl2 = &msyn-agr-pl2 ;
+LIST &msyn-agr-pl3 = &msyn-agr-pl3 ;
+LIST &msyn-prfprc-sg1 = &msyn-prfprc-sg1 ;
+LIST &msyn-gen-po = &msyn-gen-po ;
+LIST &msyn-no-conneg = &msyn-no-conneg ;
+LIST &msyn-orrood-inf = &msyn-orrood-inf ;
+LIST &msyn-ext-agr = &msyn-ext-agr ;
+LIST &msyn-ext-vagr = &msyn-ext-vagr ;
+LIST &msyn-extv-pl3 = &msyn-ext-pl3 ;
+LIST &msyn-extv-pl3-numeral = &msyn-ext-pl3-numeral ;
+LIST &msyn-extneg-pl3 = &msyn-extneg-pl3 ;
+LIST &msyn-pl-obj = &msyn-pl-obj ;
+LIST &msyn-esubj-plnom = &msyn-esubj-plnom ;
+LIST &msyn-extsubj-ill-nom = &msyn-extsubj-ill-nom ; # vi vil ha nom
+LIST &msyn-extsubj-acc-nom = &msyn-extsubj-acc-nom ; # vi vil ha nom
+LIST &msyn-halfcongruence = &msyn-halfcongruence ;	
+LIST &msyn-nom-obj = &msyn-nom-obj ;
+LIST &msyn-imp-nom-acc = &msyn-imp-nom-acc ;
+LIST &msyn-pass-accsubj = &msyn-pass-accsubj ;
+LIST &msyn-num-gensg = &msyn-num-gensg ;
+LIST &msyn-num-par = &msyn-num-par ;
+#LIST &msyn-vchain-prfprc = &msyn-vchain-prfprc ;
 LIST &syn-pred-not-attr = &syn-pred-not-attr ;
-LIST &err-mii-acc = &err-mii-acc ;
-LIST &err-ness-acc-nom = &err-ness-acc-nom ; # Muu ličij > Mun ...
-LIST &err-ness-ill-nom = &err-ness-ill-nom ; # Munnui ličij > Mun ...
-LIST &err-pred-acc-nom =  &err-pred-acc-nom ; # Taah láá aašijd.
-LIST &err-sg1-prfprc = &err-sg1-prfprc ;
-LIST &err-lex-pisso-pissood = &err-lex-pisso-pissood ;
+LIST &msyn-mii-acc = &msyn-mii-acc ;
+LIST &msyn-ness-acc-nom = &msyn-ness-acc-nom ; # Muu ličij > Mun ...
+LIST &msyn-ness-ill-nom = &msyn-ness-ill-nom ; # Munnui ličij > Mun ...
+LIST &msyn-pred-acc-nom =  &msyn-pred-acc-nom ; # Taah láá aašijd.
+LIST &msyn-sg1-prfprc = &msyn-sg1-prfprc ;
+LIST &real-pisso-pissood = &real-pisso-pissood ;
 
 MAPPING-PREFIX = & ;
 
 SECTION
-# Wrong = ##
 # Correct = #$
+# Wrong = #%
+# Finnish = #f
 
 # Speller suggestions rule - make sure the suggestions survive the cg mangling:
 ADD (&typo &SUGGESTWF) (<spelled>);
@@ -2022,67 +2023,67 @@ ADD (&typo &SUGGESTWF) (<spelled>);
 
 #!! Sg3/Pl3 errors
 
-ADD:err-agr-pl3 (&err-agr-pl3) TARGET V IF (NOT -1 Sg + Nom OR Sg3 + Nom)(*1 Pl + Nom BARRIER NOT-NPMODADV LINK NOT *1 V + Pl3)(0 ("leđe") + Sg3);
-COPY:err-agr-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V &err-agr-pl3);
-## Tast lii uápis ääših
+ADD:msyn-agr-pl3 (&msyn-agr-pl3) TARGET V IF (NOT -1 Sg + Nom OR Sg3 + Nom)(*1 Pl + Nom BARRIER NOT-NPMODADV LINK NOT *1 V + Pl3)(0 ("leđe") + Sg3);
+COPY:msyn-agr-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V &msyn-agr-pl3);
+#% Tast lii uápis ääših
 #$ Tast láá uápis ääših
 
-ADD:err-agr (&err-agr) TARGET V IF (-1C Sg + Nom)(0 VFIN)(NOT 0 Sg3)(NEGATE 0 ConNeg LINK *-1 Neg)(NOT *-2 CC LINK -1 Sg + Nom);
-COPY:err-agr (Sg3 &SUGGEST) EXCEPT VNOTSG3 TARGET (V Ind Prs &err-agr);
+ADD:msyn-agr (&msyn-agr) TARGET V IF (-1C Sg + Nom)(0 VFIN)(NOT 0 Sg3)(NEGATE 0 ConNeg LINK *-1 Neg)(NOT *-2 CC LINK -1 Sg + Nom);
+COPY:msyn-agr (Sg3 &SUGGEST) EXCEPT VNOTSG3 TARGET (V Ind Prs &msyn-agr);
 
-ADD:err-prfprc-sg1 (&err-prfprc-sg1) TARGET V IF (NOT -2 V + Sg1) (-1 Pron + Sg1 + Nom)(0 V + PrfPrc);
-COPY:err-prfprc-sg1 (Ind Prs Sg1 &SUGGEST) EXCEPT PrfPrc TARGET (V &err-prfprc-sg1);
-## Mun váldám.
+ADD:msyn-prfprc-sg1 (&msyn-prfprc-sg1) TARGET V IF (NOT -2 V + Sg1) (-1 Pron + Sg1 + Nom)(0 V + PrfPrc);
+COPY:msyn-prfprc-sg1 (Ind Prs Sg1 &SUGGEST) EXCEPT PrfPrc TARGET (V &msyn-prfprc-sg1);
+#% Mun váldám.
 #$ Mun vááldám.
 #$ Lamhân mun váldám tom.
 
-ADD:err-agr-sg1 (&err-agr-sg1) TARGET V IF (NOT -2 Sg1)(-1C Pron + Sg1 + Nom)(0 V + Ind)(NOT 0 Sg1);
-COPY:err-agr-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prt &err-agr-sg1);
-COPY:err-agr-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prs &err-agr-sg1);
-COPY:err-agr-sg1 (Ind Prt Sg1 &SUGGEST) EXCEPT (Actio Num) TARGET (V  &err-agr-sg1);
-## Mun puátá.
+ADD:msyn-agr-sg1 (&msyn-agr-sg1) TARGET V IF (NOT -2 Sg1)(-1C Pron + Sg1 + Nom)(0 V + Ind)(NOT 0 Sg1);
+COPY:msyn-agr-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prt &msyn-agr-sg1);
+COPY:msyn-agr-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prs &msyn-agr-sg1);
+COPY:msyn-agr-sg1 (Ind Prt Sg1 &SUGGEST) EXCEPT (Actio Num) TARGET (V  &msyn-agr-sg1);
+#% Mun puátá.
 #$ Mun puáđám.
 #$ Uážum-uv mun-uv elâččiđ váhá kiirdâšmin?
 
-ADD:err-agr-sg1 (&err-agr-sg1) TARGET V IF (NOT -2 Sup)(-1C Pron + Sg1 + Nom)(-1 BOS OR PUNCT)(0 V)(NOT 0 Sg1);
-COPY:err-agr-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prs &err-agr-sg1);
+ADD:msyn-agr-sg1 (&msyn-agr-sg1) TARGET V IF (NOT -2 Sup)(-1C Pron + Sg1 + Nom)(-1 BOS OR PUNCT)(0 V)(NOT 0 Sg1);
+COPY:msyn-agr-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prs &msyn-agr-sg1);
 
 
-ADD:err-agr-sg2 (&err-agr-sg2) TARGET V IF (NOT -2 Sup)(-1C Pron + Sg2 + Nom)(0 (V Ind Prs))(NOT 0 Sg2);
-COPY:err-agr-sg2 (Sg2 &SUGGEST) EXCEPT VNOTSG2 TARGET (V Ind Prs &err-agr-sg2);
+ADD:msyn-agr-sg2 (&msyn-agr-sg2) TARGET V IF (NOT -2 Sup)(-1C Pron + Sg2 + Nom)(0 (V Ind Prs))(NOT 0 Sg2);
+COPY:msyn-agr-sg2 (Sg2 &SUGGEST) EXCEPT VNOTSG2 TARGET (V Ind Prs &msyn-agr-sg2);
 
-## Tun puátá.
+#% Tun puátá.
 #$ Tun puáđáh.
 
 
 # Duaali
 
-ADD:err-agr-du1 (&err-agr-du1) TARGET V IF (NOT -2 Sup)(-1C Pron + Du1 + Nom)(-1 BOS OR PUNCT)(0 V)(NOT 0 Du1);
-COPY:err-agr-du1 (Du1 &SUGGEST) EXCEPT VNOTDU1 TARGET (V Ind Prs &err-agr-du1);
+ADD:msyn-agr-du1 (&msyn-agr-du1) TARGET V IF (NOT -2 Sup)(-1C Pron + Du1 + Nom)(-1 BOS OR PUNCT)(0 V)(NOT 0 Du1);
+COPY:msyn-agr-du1 (Du1 &SUGGEST) EXCEPT VNOTDU1 TARGET (V Ind Prs &msyn-agr-du1);
 
 
-ADD:err-agr-du2 (&err-agr-du2) TARGET V IF (NOT -2 Sup)(-1C Pron + Du2 + Nom)(0 (V Ind))(NOT 0 Du2);
-COPY:err-agr-du2 (Du2 &SUGGEST) EXCEPT VNOTDU2 TARGET (V  &err-agr-du2);
+ADD:msyn-agr-du2 (&msyn-agr-du2) TARGET V IF (NOT -2 Sup)(-1C Pron + Du2 + Nom)(0 (V Ind))(NOT 0 Du2);
+COPY:msyn-agr-du2 (Du2 &SUGGEST) EXCEPT VNOTDU2 TARGET (V  &msyn-agr-du2);
 
-## Tuoi koolgâi tääl algâttiđ monnii sämmilâškampanja
+#% Tuoi koolgâi tääl algâttiđ monnii sämmilâškampanja
 #$ Tuoi kolgáid tääl algâttiđ monnii sämmilâškampanja
 
 
 
 # Pluraali
 
-ADD:err-agr-pl1 (&err-agr-pl1) TARGET V IF (NOT -2 Sup)(-1C Pron + Pl1 + Nom)(0 V)(NOT 0 Pl1);
-COPY:err-agr-pl1 (Pl1 &SUGGEST) EXCEPT VNOTPL1 TARGET (V Ind Prs &err-agr-pl1);
+ADD:msyn-agr-pl1 (&msyn-agr-pl1) TARGET V IF (NOT -2 Sup)(-1C Pron + Pl1 + Nom)(0 V)(NOT 0 Pl1);
+COPY:msyn-agr-pl1 (Pl1 &SUGGEST) EXCEPT VNOTPL1 TARGET (V Ind Prs &msyn-agr-pl1);
 
-## Mij puátá.
+#% Mij puátá.
 #$ Mij puáttip.
 
 
 
-ADD:err-agr-pl2 (&err-agr-pl2) TARGET V IF (NOT -2 Sup OR Pl2)(-1C Pron + Pl2 + Nom)(0 V)(NOT 0 Pl2);
-COPY:err-agr-pl1 (Pl2 &SUGGEST) EXCEPT VNOTPL2 TARGET (V Ind Prs &err-agr-pl2);
+ADD:msyn-agr-pl2 (&msyn-agr-pl2) TARGET V IF (NOT -2 Sup OR Pl2)(-1C Pron + Pl2 + Nom)(0 V)(NOT 0 Pl2);
+COPY:msyn-agr-pl1 (Pl2 &SUGGEST) EXCEPT VNOTPL2 TARGET (V Ind Prs &msyn-agr-pl2);
 
-## Tij puátá.
+#% Tij puátá.
 #$ Tij puátivetteđ.
 
 #$ Kolgâvetteđhân tij puáttiđ.
@@ -2090,48 +2091,48 @@ COPY:err-agr-pl1 (Pl2 &SUGGEST) EXCEPT VNOTPL2 TARGET (V Ind Prs &err-agr-pl2);
 
 
 # Suomâkielâ sárnumkielâ epikongruens maaŋgâlovo 3. persovnist 
-ADD:err-agr-sg3 (&err-agr-sg3) TARGET V IF (NOT -2 Sup)(-1C Pron + Pl3 + Nom OR Dem + Pl + Nom OR N + Pl + Nom)(NOT -1 NPL_WITH_VSG3)(0C V + Ind + Sg3)(NOT 0 Foc/ge);
-COPY:err-agr-sg3 (Pl3 &SUGGEST) EXCEPT VNOTPL3 TARGET (V Ind Prs &err-agr-sg3);
-COPY:err-agr-sg3 (Pl3 &SUGGEST) EXCEPT VNOTPL3 TARGET (V Ind Prt &err-agr-sg3);
+ADD:msyn-agr-sg3 (&msyn-agr-sg3) TARGET V IF (NOT -2 Sup)(-1C Pron + Pl3 + Nom OR Dem + Pl + Nom OR N + Pl + Nom)(NOT -1 NPL_WITH_VSG3)(0C V + Ind + Sg3)(NOT 0 Foc/ge);
+COPY:msyn-agr-sg3 (Pl3 &SUGGEST) EXCEPT VNOTPL3 TARGET (V Ind Prs &msyn-agr-sg3);
+COPY:msyn-agr-sg3 (Pl3 &SUGGEST) EXCEPT VNOTPL3 TARGET (V Ind Prt &msyn-agr-sg3);
 #fi Ne tulee.
-## Toh puátá.
+#% Toh puátá.
 #$ Toh puátih.
 
 
 #!! Suomen nessesiivirakenne
 
-ADD:err-ness-acc-nom (&err-ness-acc-nom) TARGET (Pron Pers Acc) IF (1 ("leđe") + Cond)(2 PrfPrc)(*3 Inf + IV BARRIER NOT-ADV-DE);
-ADD:err-ness-acc-nom (&err-ness-acc-nom) TARGET (Pron Pers Acc) IF (1 ("leđe") + Cond)(2 PrfPrc)(*3 Inf + TV BARRIER NOT-ADV-DE LINK *1 EOS BARRIER Acc);
+ADD:msyn-ness-acc-nom (&msyn-ness-acc-nom) TARGET (Pron Pers Acc) IF (1 ("leđe") + Cond)(2 PrfPrc)(*3 Inf + IV BARRIER NOT-ADV-DE);
+ADD:msyn-ness-acc-nom (&msyn-ness-acc-nom) TARGET (Pron Pers Acc) IF (1 ("leđe") + Cond)(2 PrfPrc)(*3 Inf + TV BARRIER NOT-ADV-DE LINK *1 EOS BARRIER Acc);
 # COPY: see next rule set
-## Muu ličij kolgâm porgâđ taam tállán
+#% Muu ličij kolgâm porgâđ taam tállán
 #$ Mun liččim kolgâm porgâđ taam tállán
 #$ Mun lijjim kolgâđ porgâđ taam tállán
 #f Minun olisi pitänyt tehdä tämä heti
 
-ADD:err-ness-acc-nom (&err-ness-acc-nom) TARGET (Pron Pers Acc) IF (-1 (Neg Ind Sg3))(1 ConNeg)(*2 Inf + IV BARRIER NOT-ADV-DE);
-ADD:err-ness-acc-nom (&err-ness-acc-nom) TARGET (Pron Pers Acc) IF (-1 (Neg Ind Sg3))(1 ConNeg)(*2 Inf + TV BARRIER NOT-ADV-DE LINK *1 EOS BARRIER Acc);
+ADD:msyn-ness-acc-nom (&msyn-ness-acc-nom) TARGET (Pron Pers Acc) IF (-1 (Neg Ind Sg3))(1 ConNeg)(*2 Inf + IV BARRIER NOT-ADV-DE);
+ADD:msyn-ness-acc-nom (&msyn-ness-acc-nom) TARGET (Pron Pers Acc) IF (-1 (Neg Ind Sg3))(1 ConNeg)(*2 Inf + TV BARRIER NOT-ADV-DE LINK *1 EOS BARRIER Acc);
 # COPY: see next rule set
-## Ij-uv tuu kolgâm vyelgiđ suáluikuávlun Jennyin?
+#% Ij-uv tuu kolgâm vyelgiđ suáluikuávlun Jennyin?
 #$ Jieh-uv tun kolgâm vyelgiđ suáluikuávlun Jennyin?
 #f Eikö sinun pitänyt lähteä ...
 
-ADD:err-ness-acc-nom (&err-ness-acc-nom) TARGET (Pron Pers Acc) IF (1 MOD-ASP + Sg3)(*2 Inf + IV BARRIER NOT-ADV-DE);
-ADD:err-ness-acc-nom (&err-ness-acc-nom) TARGET (Pron Pers Acc) IF (1 MOD-ASP + Sg3)(*2 Inf + TV BARRIER NOT-ADV-DE LINK *1 Acc BARRIER SV-BOUNDARY);
-COPY:err-ness-acc-nom (Nom &SUGGEST) EXCEPT Acc TARGET (Pron Pers &err-ness-acc-nom);
-## Suu koolgâi forgâ porgâđ miärádâs.
+ADD:msyn-ness-acc-nom (&msyn-ness-acc-nom) TARGET (Pron Pers Acc) IF (1 MOD-ASP + Sg3)(*2 Inf + IV BARRIER NOT-ADV-DE);
+ADD:msyn-ness-acc-nom (&msyn-ness-acc-nom) TARGET (Pron Pers Acc) IF (1 MOD-ASP + Sg3)(*2 Inf + TV BARRIER NOT-ADV-DE LINK *1 Acc BARRIER SV-BOUNDARY);
+COPY:msyn-ness-acc-nom (Nom &SUGGEST) EXCEPT Acc TARGET (Pron Pers &msyn-ness-acc-nom);
+#% Suu koolgâi forgâ porgâđ miärádâs.
 #$ Sun koolgâi forgâ porgâđ miärádâs.
-## Tuáhtár lâi ton mielâst, et sunnuu koolgâi vistig váhá nuollâđ.
+#% Tuáhtár lâi ton mielâst, et sunnuu koolgâi vistig váhá nuollâđ.
 
-#ADD:err-ness-ill-nom (&err-ness-ill-nom) TARGET (Pron Pers Ill) IF (1 MOD-ASP + Sg3)(*2 Inf BARRIER NOT-ADV-DE);
+#ADD:msyn-ness-ill-nom (&msyn-ness-ill-nom) TARGET (Pron Pers Ill) IF (1 MOD-ASP + Sg3)(*2 Inf BARRIER NOT-ADV-DE);
 # COPY: see next rule set
-## Sunnui koolgâi forgâ porgâđ miärádâs (Sunnui koolgâi forgâ rähtiđ miärádâs.)
+#% Sunnui koolgâi forgâ porgâđ miärádâs (Sunnui koolgâi forgâ rähtiđ miärádâs.)
 #$ Sun koolgâi forgâ porgâđ miärádâs (Sun koolgâi forgâ meridiđ.)
 #$ Tom sijjân koolgâi onne máttááttiđ.
 
 
-#ADD:err-ness-ill-nom (&err-ness-ill-nom) TARGET (Pron Pers Ill) IF (-1 (Neg Ind Sg3))(1 ConNeg)(*2 Inf BARRIER NOT-ADV-DE);
-#COPY:err-ness-ill-nom (Nom &SUGGEST) EXCEPT Ill TARGET (Pron Pers &err-ness-ill-nom);
-## 
+#ADD:msyn-ness-ill-nom (&msyn-ness-ill-nom) TARGET (Pron Pers Ill) IF (-1 (Neg Ind Sg3))(1 ConNeg)(*2 Inf BARRIER NOT-ADV-DE);
+#COPY:msyn-ness-ill-nom (Nom &SUGGEST) EXCEPT Ill TARGET (Pron Pers &msyn-ness-ill-nom);
+#% 
 #$ 
 #f
 
@@ -2139,60 +2140,60 @@ COPY:err-ness-acc-nom (Nom &SUGGEST) EXCEPT Acc TARGET (Pron Pers &err-ness-acc-
 
 
 #!! Inf should be Actio Essive
-ADD:err-orrood-inf (&err-orrood-inf) TARGET (V Inf) IF (-1 ("orroođ") + Ind);
-COPY:err-orrood-inf (Actio Ess &SUGGEST) EXCEPT Inf TARGET (V Inf &err-orrood-inf);
-## Mun orom leđe ennuv velgus anarâškielân.
+ADD:msyn-orrood-inf (&msyn-orrood-inf) TARGET (V Inf) IF (-1 ("orroođ") + Ind);
+COPY:msyn-orrood-inf (Actio Ess &SUGGEST) EXCEPT Inf TARGET (V Inf &msyn-orrood-inf);
+#% Mun orom leđe ennuv velgus anarâškielân.
 #$ Mun orom lemin ennuv velgus anarâškielân.
 
-ADD:err-gen-po (&err-gen-po) TARGET (N Sg Nom) IF (NOT 0 Gen) (1C Po);
-COPY:err-gen-po (Gen &SUGGEST) EXCEPT (Nom &err-gen-po) TARGET (N Sg &err-gen-po);
+ADD:msyn-gen-po (&msyn-gen-po) TARGET (N Sg Nom) IF (NOT 0 Gen) (1C Po);
+COPY:msyn-gen-po (Gen &SUGGEST) EXCEPT (Nom &msyn-gen-po) TARGET (N Sg &msyn-gen-po);
 
-ADD:err-gen-po (&err-gen-po) TARGET (N Pl Nom) IF (NOT 0 Gen) (1C Po);
-COPY:err-gen-po (Gen &SUGGEST) EXCEPT (Nom &err-gen-po) TARGET (N Pl &err-gen-po);
+ADD:msyn-gen-po (&msyn-gen-po) TARGET (N Pl Nom) IF (NOT 0 Gen) (1C Po);
+COPY:msyn-gen-po (Gen &SUGGEST) EXCEPT (Nom &msyn-gen-po) TARGET (N Pl &msyn-gen-po);
 
 
-ADD:err-ext-agr (&err-ext-agr) TARGET V IF (*-1 Loc BARRIER NOT-ADV-PCLE)(0 ("leđe" V Ind Prs Sg3))(*1 N + Pl + Nom BARRIER NOT-NPMODADV OR @CVP OR S-BOUNDARY);
-COPY:err-ext-agr (Pl3 &SUGGEST) EXCEPT Sg3 TARGET ("leđe" V Ind Prs &err-ext-agr) ;
-## Must lii uđđâ autoh.
+ADD:msyn-ext-agr (&msyn-ext-agr) TARGET V IF (*-1 Loc BARRIER NOT-ADV-PCLE)(0 ("leđe" V Ind Prs Sg3))(*1 N + Pl + Nom BARRIER NOT-NPMODADV OR @CVP OR S-BOUNDARY);
+COPY:msyn-ext-agr (Pl3 &SUGGEST) EXCEPT Sg3 TARGET ("leđe" V Ind Prs &msyn-ext-agr) ;
+#% Must lii uđđâ autoh.
 #$ Must láá uđđâ autoh.
 
-ADD:err-pl-obj (&err-pl-obj) TARGET (N Pl Nom) IF (*-1 TRANS-V  BARRIER NOT-NPMOD OR CLB OR PUNCT LINK NOT 0 Pl3 LINK *-1 (N Pl Nom))(NOT 0 ABBR OR Num)(NEGATE -1 PrfPrc LINK *-1 N BARRIER VFIN);
-COPY:err-pl-obj (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &err-pl-obj);
+ADD:msyn-pl-obj (&msyn-pl-obj) TARGET (N Pl Nom) IF (*-1 TRANS-V  BARRIER NOT-NPMOD OR CLB OR PUNCT LINK NOT 0 Pl3 LINK *-1 (N Pl Nom))(NOT 0 ABBR OR Num)(NEGATE -1 PrfPrc LINK *-1 N BARRIER VFIN);
+COPY:msyn-pl-obj (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &msyn-pl-obj);
 # Trans: Others know mushrooms by.their.color.
-## Nubeh tobdeh kuobbâreh ivneest.
+#% Nubeh tobdeh kuobbâreh ivneest.
 #$ Nubeh tobdeh kuobbârijd ivneest.
 #fin toiset tuntevat sienet väristä.
 
 # Iäruh omâstemráhtusist: mieđetteijee já kieldee häämi
-ADD:err-extv-pl3 (&err-extv-pl3) TARGET V IF (-1 Loc)(0 LEDE + Sg3)(*1 N + Pl + Nom BARRIER NOT-ADV-PCLE);
-COPY:err-extv-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Ind Prs &err-extv-pl3) ;
-## Must lii kyeleh onne.
+ADD:msyn-extv-pl3 (&msyn-extv-pl3) TARGET V IF (-1 Loc)(0 LEDE + Sg3)(*1 N + Pl + Nom BARRIER NOT-ADV-PCLE);
+COPY:msyn-extv-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Ind Prs &msyn-extv-pl3) ;
+#% Must lii kyeleh onne.
 #$ Must láá kyeleh.
 #fi Minulla on kaloja.
 
 #!! Verb in plural 
-ADD:err-extv-pl3-numeral (&err-extv-pl3-numeral) TARGET V IF (-1 Loc)(0 LEDE + Sg3)(1 Num + Nom LINK NOT 0 OHTA);
-COPY:err-extv-pl3-numeral (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Ind Prs &err-extv-pl3-numeral) ;
-COPY:err-extv-pl3-numeral (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Ind Prt &err-extv-pl3-numeral) ;
-## Must {lii} kyehti kyele.
+ADD:msyn-extv-pl3-numeral (&msyn-extv-pl3-numeral) TARGET V IF (-1 Loc)(0 LEDE + Sg3)(1 Num + Nom LINK NOT 0 OHTA);
+COPY:msyn-extv-pl3-numeral (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Ind Prs &msyn-extv-pl3-numeral) ;
+COPY:msyn-extv-pl3-numeral (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Ind Prt &msyn-extv-pl3-numeral) ;
+#% Must {lii} kyehti kyele.
 #$ Must láá kyehti kyele.
 #fi Minulla on kaksi kalaa. - 
-#ADD:err-ext-vagr (&err-ext-vagr) TARGET N IF (-2 Loc)(-1 LEDE + Pl3)(0 Num);
+#ADD:msyn-ext-vagr (&msyn-ext-vagr) TARGET N IF (-2 Loc)(-1 LEDE + Pl3)(0 Num);
 
 
 
 
-ADD:err-extneg-pl3 (&err-extneg-pl3) TARGET V IF (NOT -1 Sg + Nom)(0 ("ij") + Sg3 + Foc/ge)(*1C N + Pl + Nom BARRIER Sg + Nom OR CS OR Neg + Pl3) ;
-COPY:err-extneg-pl3 (Pl3 Foc/ge &SUGGEST) EXCEPT (Sg3 Foc/ge) TARGET ("ij" V Neg Ind &err-extneg-pl3 ) ;
+ADD:msyn-extneg-pl3 (&msyn-extneg-pl3) TARGET V IF (NOT -1 Sg + Nom)(0 ("ij") + Sg3 + Foc/ge)(*1C N + Pl + Nom BARRIER Sg + Nom OR CS OR Neg + Pl3) ;
+COPY:msyn-extneg-pl3 (Pl3 Foc/ge &SUGGEST) EXCEPT (Sg3 Foc/ge) TARGET ("ij" V Neg Ind &msyn-extneg-pl3 ) ;
 # Problem: suggest does not work, gets Foc/ge Pl3 for intended Pl3 Foc/ge.
 #$ Jis parlamentsalist tuállejuvvoo čuákkim puáđáččij čuávvuđ paijjeel 40 persovnid, ijge salist ličij tuárvi čokkámsajeh, puáhtá čuákkim čuávvuđ táárbu mield meddei auditoriost
 
 
-ADD:err-extneg-pl3 (&err-extneg-pl3) TARGET V IF (NOT -1 Sg + Nom)(0 ("ij") + Sg3)(*1C N + Pl + Nom BARRIER Sg + Nom OR CS OR Neg + Pl3) ;
-COPY:err-extneg-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET ("ij" V Neg Ind &err-extneg-pl3) ;
-## Šiljoost ij lah innig poccuuh.
-## Šiljoost iä lah innig poccuid.
-## Šiljoost ij lah innig poccuid.
+ADD:msyn-extneg-pl3 (&msyn-extneg-pl3) TARGET V IF (NOT -1 Sg + Nom)(0 ("ij") + Sg3)(*1C N + Pl + Nom BARRIER Sg + Nom OR CS OR Neg + Pl3) ;
+COPY:msyn-extneg-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET ("ij" V Neg Ind &msyn-extneg-pl3) ;
+#% Šiljoost ij lah innig poccuuh.
+#% Šiljoost iä lah innig poccuid.
+#% Šiljoost ij lah innig poccuid.
 #$ Šiljoost iä lah innig poccuuh.
 #fi Pihalla ei ole enää poroja. - 
 #$ Ij ton peeleest, iä toh valmâštâlmeh lam tohhum taangin “älkkees” vuáváámân...
@@ -2201,93 +2202,95 @@ COPY:err-extneg-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET ("ij" V Neg Ind &err-extneg
 #!! !Predicative
 
 
-ADD:err-pred-acc-nom (&err-pred-acc-nom) TARGET Acc IF (*-1 ("leđe") + Ind BARRIER NOT-NPMOD OR ("mihheen"))(NOT 0 Arab OR Nom)(NOT *0 TV)(NOT *-1 BOS LINK 1 ("mii") OR ("kii"));
-COPY:err-pred-acc-nom (Nom &SUGGEST) EXCEPT Acc TARGET (N &err-pred-acc-nom);
-## Taah láá čielgâ aašijd
+ADD:msyn-pred-acc-nom (&msyn-pred-acc-nom) TARGET Acc IF (*-1 ("leđe") + Ind BARRIER NOT-NPMOD OR ("mihheen"))(NOT 0 Arab OR Nom)(NOT *0 TV)(NOT *-1 BOS LINK 1 ("mii") OR ("kii"));
+COPY:msyn-pred-acc-nom (Nom &SUGGEST) EXCEPT Acc TARGET (N &msyn-pred-acc-nom);
+#% Taah láá čielgâ aašijd
 #$ Mii tiet lii aašijd.
 #$ Taah láá čielgâ ááših
 
 
 #!! !Plural objects
 
-ADD:err-pl-obj (&err-pl-obj) TARGET N IF (*-2 Pl + Nom)(-1 TV + Ind + Pl3 LINK NOT 0 Der/Pass)(0 N + Pl + Nom)(NOT -1 PrfPrc LINK *-1 N BARRIER VFIN);
+ADD:msyn-pl-obj (&msyn-pl-obj) TARGET N IF (*-2 Pl + Nom)(-1 TV + Ind + Pl3 LINK NOT 0 Der/Pass)(0 N + Pl + Nom)(NOT -1 PrfPrc LINK *-1 N BARRIER VFIN);
 
-ADD:err-pl-obj (&err-pl-obj) TARGET N IF (*-2 Sg + Nom)(-1 TV + Ind + Sg3 LINK NOT 0 Der/Pass)(0 N + Pl + Nom)(NOT -1 PrfPrc LINK *-1 N BARRIER VFIN);
-COPY:err-pl-obj (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &err-pl-obj);
+ADD:msyn-pl-obj (&msyn-pl-obj) TARGET N IF (*-2 Sg + Nom)(-1 TV + Ind + Sg3 LINK NOT 0 Der/Pass)(0 N + Pl + Nom)(NOT -1 PrfPrc LINK *-1 N BARRIER VFIN);
+COPY:msyn-pl-obj (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &msyn-pl-obj);
 
 #!! !ConNeg Better: Target whatever is there and should have been a conneg. !!!
-#ADD:err-no-conneg (&err-no-conneg) TARGET V IF (-1 Neg) (NOT *-2 ConNeg)(0 V + Ind OR Cond)(NOT 0 ConNeg)(NOT *1 ConNeg BARRIER CLB);
+#ADD:msyn-no-conneg (&msyn-no-conneg) TARGET V IF (-1 Neg) (NOT *-2 ConNeg)(0 V + Ind OR Cond)(NOT 0 ConNeg)(NOT *1 ConNeg BARRIER CLB);
 #$ Sun ij lah.
-## Sun ij {lii}.
+#% Sun ij {lii}.
 
-ADD:err-no-conneg (&err-no-conneg) TARGET V IF (-1 Neg) (NOT *-2 ConNeg)(0 V + Ind + Prs + Sg3)(NOT 0 ConNeg)(NOT *1 ConNeg BARRIER CLB);
-COPY:err-no-conneg (ConNeg &SUGGEST) EXCEPT Sg3 TARGET (V Ind Prs &err-no-conneg);
+ADD:msyn-no-conneg (&msyn-no-conneg) TARGET V IF (-1 Neg) (NOT *-2 ConNeg)(0 V + Ind + Prs + Sg3)(NOT 0 ConNeg)(NOT *1 ConNeg BARRIER CLB);
+COPY:msyn-no-conneg (ConNeg &SUGGEST) EXCEPT Sg3 TARGET (V Ind Prs &msyn-no-conneg);
 #$ Sun ij lah.
-## Sun ij {lii}.
+#% Sun ij {lii}.
 
-ADD:err-no-conneg (&err-no-conneg) TARGET V IF (-1 Neg) (NOT *-2 ConNeg)(0 V + Ind + Prs + Du3)(NOT 0 ConNeg)(NOT *1 ConNeg BARRIER CLB);
-COPY:err-no-conneg (ConNeg &SUGGEST) EXCEPT Du3 TARGET (V Ind Prs &err-no-conneg);
-## Noomah iä vuáđuduv.
+ADD:msyn-no-conneg (&msyn-no-conneg) TARGET V IF (-1 Neg) (NOT *-2 ConNeg)(0 V + Ind + Prs + Du3)(NOT 0 ConNeg)(NOT *1 ConNeg BARRIER CLB);
+COPY:msyn-no-conneg (ConNeg &SUGGEST) EXCEPT Du3 TARGET (V Ind Prs &msyn-no-conneg);
+#% Noomah iä vuáđuduv.
 #$ Noomah iä vuáđuduu.
 
-ADD:err-no-conneg (&err-no-conneg) TARGET V IF (-1 Neg) (NOT *-2 ConNeg)(0 V + Cond + Prs + Sg3)(NOT 0 ConNeg)(NOT *1 ConNeg BARRIER CLB);
-COPY:err-no-conneg (ConNeg &SUGGEST) EXCEPT Sg3 TARGET (V Cond Prs &err-no-conneg);
-## Sun ij puávtáččij vyelgiđ.
+ADD:msyn-no-conneg (&msyn-no-conneg) TARGET V IF (-1 Neg) (NOT *-2 ConNeg)(0 V + Cond + Prs + Sg3)(NOT 0 ConNeg)(NOT *1 ConNeg BARRIER CLB);
+COPY:msyn-no-conneg (ConNeg &SUGGEST) EXCEPT Sg3 TARGET (V Cond Prs &msyn-no-conneg);
+#% Sun ij puávtáččij vyelgiđ.
 #$ Sun ij puávtáččii vyelgiđ.
 	
 
 #!! !Existential sentences and habitives
 
 # e-subject in Pl Acc based on Finnish partitive
-#ADD:err-esubj-plnom (&err-esubj-plnom) TARGET N IF (*-1 LEDE + Pl3 BARRIER NOT-NPMOD LINK -1 Loc)(0 (N Pl Acc) OR (N Pl Ill));
-#COPY:err-esubj-plnom (Nom &SUGGEST) EXCEPT Ill TARGET (N Pl &err-esubj-plnom) ;
+#ADD:msyn-esubj-plnom (&msyn-esubj-plnom) TARGET N IF (*-1 LEDE + Pl3 BARRIER NOT-NPMOD LINK -1 Loc)(0 (N Pl Acc) OR (N Pl Ill));
+#COPY:msyn-esubj-plnom (Nom &SUGGEST) EXCEPT Ill TARGET (N Pl &msyn-esubj-plnom) ;
 #fi Pihalla on poroja. - 
 #$ Šiljoost láá poccuuh. 
-## Šiljoost láá poccuid.
-## Šiljoost láá čapis poccuid.
+#% Šiljoost láá poccuid.
+#% Šiljoost láá čapis poccuid.
 #$ Must láá kyeleh onne.
-## Must láá kuolijd onne.
-## Must lii kuolijd onne.
+#% Must láá kuolijd onne.
+#% Must lii kuolijd onne.
 
-ADD:err-extsubj-ill-nom (&err-extsubj-ill-nom) TARGET N IF (*-1 LEDE + Sg3 OR LEDE + Pl3 BARRIER NOT-ADV-PCLE LINK -1 Loc)(0 (N Pl Ill))(NEGATE *1 TV + Ger OR TV + PrfPrc OR TV + Inf BARRIER S-BOUNDARY OR VFIN) ;
-COPY:err-extsubj-ill-nom (Nom &SUGGEST) EXCEPT Ill TARGET (N Pl &err-extsubj-ill-nom) ;
+ADD:msyn-extsubj-ill-nom-sg (&msyn-extsubj-ill-nom) TARGET N IF (*-1 LEDE + Sg3 BARRIER NOT-ADV-PCLE LINK -1 Loc)(0 (N Pl Ill))(NEGATE *1 TV + Ger OR TV + PrfPrc OR TV + Inf BARRIER S-BOUNDARY OR VFIN) ;
+ADD:msyn-extsubj-ill-nom-pl (&msyn-extsubj-ill-nom) TARGET N IF (*-1 LEDE + Pl3 BARRIER NOT-ADV-PCLE LINK -1 Loc)(0 (N Pl Ill))(NEGATE *1 TV + Ger OR TV + PrfPrc OR TV + Inf BARRIER S-BOUNDARY OR VFIN) ;
+COPY:msyn-extsubj-ill-nom (Nom &SUGGEST) EXCEPT Ill TARGET (N Pl &msyn-extsubj-ill-nom) ;
 #$ Šiljoost láá poccuuh.
-## Šiljoost láá ain {poccuid}.
-ADD:err-extsubj-acc-nom (&err-extsubj-acc-nom) TARGET N IF (*-1 LEDE + Sg3 OR LEDE + Pl3 BARRIER NOT-ADV-PCLE LINK -1 Loc)(0 (N Pl Acc))(NEGATE *1 TV + Ger OR TV + PrfPrc OR TV + Inf BARRIER S-BOUNDARY OR VFIN) ;
-COPY:err-extsubj-acc-nom (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &err-extsubj-acc-nom) ;
+#% Šiljoost láá ain {poccuid}.
+ADD:msyn-extsubj-acc-nom (&msyn-extsubj-acc-nom) TARGET N IF (*-1 LEDE + Sg3 OR LEDE + Pl3 BARRIER NOT-ADV-PCLE LINK -1 Loc)(0 (N Pl Acc))(NEGATE *1 TV + Ger OR TV + PrfPrc OR TV + Inf BARRIER S-BOUNDARY OR VFIN) ;
+COPY:msyn-extsubj-acc-nom (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &msyn-extsubj-acc-nom) ;
+#$ Párnáást lii uáivilijdis olgospyehtimân vuoigâdvuotâ uuccâđ, vuástáväldiđ já levâttiđ tiäđu já jurduid rijjâ, jis tot ij luávkkáá iärásij vuoigâdvuođâid.
+# Problem: e-subj is vuoigâdvuotâ, not iáivilijdis.
 
+ADD:msyn-extv-pl3 (&msyn-extv-pl3) TARGET V IF (-1 Loc)(0 LEDE + Sg3)(1 Num + Nom)(NOT 1 OHTA);
+COPY:msyn-extv-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (LEDE &msyn-extv-pl3);
 
-ADD:err-extv-pl3 (&err-extv-pl3) TARGET V IF (-1 Loc)(0 LEDE + Sg3)(1 Num + Nom)(NOT 1 OHTA);
-COPY:err-extv-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (LEDE &err-extv-pl3);
+ADD:msyn-extsubj-ill-nom (&msyn-extsubj-ill-nom) TARGET N IF (-1 LEDE + Sg3 OR LEDE + Pl3)(-2 Loc)(0 N + Pl + Ill);
+COPY:msyn-extsubj-ill-nom (Nom &SUGGEST) EXCEPT Ill TARGET (N Pl &msyn-extsubj-ill-nom);
 
-ADD:err-extsubj-ill-nom (&err-extsubj-ill-nom) TARGET N IF (-1 LEDE + Sg3 OR LEDE + Pl3)(-2 Loc)(0 N + Pl + Ill);
-COPY:err-extsubj-ill-nom (Nom &SUGGEST) EXCEPT Ill TARGET (N Pl &err-extsubj-ill-nom);
-
-ADD:err-halfcongruence (&err-halfcongruence) TARGET Dem IF (0 Sg + Loc)(NOT 0 Loc + Attr)(1 N + Sg + Loc)(NOT 1 Prop); # Loc Attr > Gen?
-COPY:err-halfcongruence (Gen &SUGGEST) EXCEPT (Loc Attr) TARGET (Dem &err-halfcongruence);
+ADD:msyn-halfcongruence (&msyn-halfcongruence) TARGET Dem IF (0 Sg + Loc)(NOT 0 Loc + Attr)(1 N + Sg + Loc)(NOT 1 Prop); # Loc Attr > Gen?
+COPY:msyn-halfcongruence (Gen &SUGGEST) EXCEPT (Loc Attr) TARGET (Dem &msyn-halfcongruence);
 	
-ADD:err-nom-obj (&err-nom-obj) TARGET N IF (-1 VFIN + Sg1)(0 N + Pl + Nom);
-ADD:err-nom-obj (&err-nom-obj) TARGET N IF (-2 VFIN + Sg1)(-1 PrfPrc)(0 N + Pl + Nom);
-ADD:err-nom-obj (&err-nom-obj) TARGET N IF (-2 VFIN + Sg1)(-1 Pl + Nom)(0 N + Pl + Nom);
-ADD:err-nom-obj (&err-nom-obj) TARGET N IF (-2 VFIN + Sg1)(-1 Pl + Nom OR Attr)(0 N + Pl + Nom);
-ADD:err-nom-obj (&err-nom-obj) TARGET N IF (-3 VFIN + Sg1)(-1 Pl + Nom OR Attr)(-2 PrfPrc)(0 N + Pl + Nom);
-ADD:err-nom-obj (&err-nom-obj) TARGET N IF (-3 VFIN + Sg1)(-1 Pl + Nom OR Attr)(-2 Pl + Nom)(0 N + Pl + Nom);
-COPY:err-nom-obj (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &err-nom-obj);
+ADD:msyn-nom-obj (&msyn-nom-obj) TARGET N IF (-1 VFIN + Sg1)(0 N + Pl + Nom);
+ADD:msyn-nom-obj (&msyn-nom-obj) TARGET N IF (-2 VFIN + Sg1)(-1 PrfPrc)(0 N + Pl + Nom);
+ADD:msyn-nom-obj (&msyn-nom-obj) TARGET N IF (-2 VFIN + Sg1)(-1 Pl + Nom)(0 N + Pl + Nom);
+ADD:msyn-nom-obj (&msyn-nom-obj) TARGET N IF (-2 VFIN + Sg1)(-1 Pl + Nom OR Attr)(0 N + Pl + Nom);
+ADD:msyn-nom-obj (&msyn-nom-obj) TARGET N IF (-3 VFIN + Sg1)(-1 Pl + Nom OR Attr)(-2 PrfPrc)(0 N + Pl + Nom);
+ADD:msyn-nom-obj (&msyn-nom-obj) TARGET N IF (-3 VFIN + Sg1)(-1 Pl + Nom OR Attr)(-2 Pl + Nom)(0 N + Pl + Nom);
+COPY:msyn-nom-obj (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &msyn-nom-obj);
 #$ Lam valjim taah säänih.
-## Lam valjim táid saanijd.
+#% Lam valjim táid saanijd.
 # olen valinnut nämä sanat
 
 #!! Acc shall be Nom
-ADD:err-acc-obj-top (&err-acc-obj-top) TARGET N IF (0 Pl + Acc - Sem/Time LINK *-1 BOS BARRIER Nom)(1 Der/Pass + Sg3)(2 Adv)(NOT *3 TV);
+ADD:msyn-acc-obj-top (&msyn-acc-obj-top) TARGET N IF (0 Pl + Acc - Sem/Time LINK *-1 BOS BARRIER Nom)(1 Der/Pass + Sg3)(2 Adv)(NOT *3 TV);
 #$ Anarâškielâlijd noomâid kiävttoo uccáá.
-## Anarâškielâliih noomah kiävttojeh uccáá.
+#% Anarâškielâliih noomah kiävttojeh uccáá.
 
 # Inarinsaamenkielisiä nimiä käytetään vähän
 
-ADD:err-acc-obj-top (&err-acc-obj-top) TARGET N IF (0 Pl + Acc - Sem/Time LINK *-1 BOS BARRIER Nom)(1 Neg + Sg3)(2 ConNeg LINK NOT 0 TV);
-COPY:err-acc-obj-top (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &err-acc-obj-top);
+ADD:msyn-acc-obj-top (&msyn-acc-obj-top) TARGET N IF (0 Pl + Acc - Sem/Time LINK *-1 BOS BARRIER Nom)(1 Neg + Sg3)(2 ConNeg LINK NOT 0 TV);
+COPY:msyn-acc-obj-top (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &msyn-acc-obj-top);
 
-## {tiäđuid} ij kavnuu.
+#% {tiäđuid} ij kavnuu.
 #$ tiäđuh iä kavnuu.
 # tietoja ei löydy
 #$ Mut taid pihtâsijd ij lamaškin nuuvt älkkee nuollâđ.
@@ -2299,11 +2302,11 @@ COPY:err-acc-obj-top (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &err-acc-obj-top);
 
 # Suomâkielâ imperatiiv mieđetteijee häämist, mast objekt sajehäämmin lii maaŋgâlovo nominatiiv mut sämikielâst akkusatiiv:
 
-ADD:err-imp-nomobj (&err-imp-nomobj) TARGET N IF (-2C Imprt)(-1 PRE-NP-HEAD)(0 Pl + Nom)(NOT 0 Acc OR Gen);
-ADD:err-imp-nomobj (&err-imp-nomobj) TARGET N IF (-1C Imprt)(0 Nom)(NOT 0 Acc OR Gen);
-COPY:err-imp-nomobj (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &err-imp-nomobj);
+ADD:msyn-imp-nom-acc (&msyn-imp-nom-acc) TARGET N IF (-2C Imprt)(-1 PRE-NP-HEAD)(0 Pl + Nom)(NOT 0 Acc OR Gen);
+ADD:msyn-imp-nom-acc (&msyn-imp-nom-acc) TARGET N IF (-1C Imprt)(0 Nom)(NOT 0 Acc OR Gen);
+COPY:msyn-imp-nom-acc (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &msyn-imp-nom-acc);
 #fi	Myy nämä kalat - 
-## Vyebdi taah kyeleh!
+#% Vyebdi taah kyeleh!
 #$ Vyebdi taid kuolijd! 
 
 
@@ -2312,61 +2315,61 @@ COPY:err-imp-nomobj (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &err-imp-nomobj);
 #!! !!Infinitive errors
 
 # look at this
-#ADD:err-vchain-prfprc (&err-vchain-prfprc) TARGET V IF (-1 LEDE + Ind + Prs + Sg1)(0 Inf); #1,2
-#COPY:err-vchain-prfprc (PrfPrc &SUGGEST) EXCEPT (Ind Prs Sg1) TARGET (LEDE &err-vchain-prfprc);
+#ADD:msyn-vchain-prfprc (&msyn-vchain-prfprc) TARGET V IF (-1 LEDE + Ind + Prs + Sg1)(0 Inf); #1,2
+#COPY:msyn-vchain-prfprc (PrfPrc &SUGGEST) EXCEPT (Ind Prs Sg1) TARGET (LEDE &msyn-vchain-prfprc);
 
-#ADD:err-vchain-prfprc (&err-vchain-prfprc) TARGET V IF (-1 LEDE + Ind + Sg2)(0 Inf); #1,2
-#COPY:err-vchain-prfprc (PrfPrc &SUGGEST) EXCEPT (Ind Prs Sg2) TARGET (LEDE &err-vchain-prfprc);
-## Sii kielâtááiđu ovdedem tiet mun lam luuhâm anarâškielâ.
+#ADD:msyn-vchain-prfprc (&msyn-vchain-prfprc) TARGET V IF (-1 LEDE + Ind + Sg2)(0 Inf); #1,2
+#COPY:msyn-vchain-prfprc (PrfPrc &SUGGEST) EXCEPT (Ind Prs Sg2) TARGET (LEDE &msyn-vchain-prfprc);
+#% Sii kielâtááiđu ovdedem tiet mun lam luuhâm anarâškielâ.
 #$ Sii kielâtááiđu ovdedem tiet mun lam luuhâđ anarâškielâ.
 
 
 #!! Numeral phrases
 #!! The rule is: 2-6 + gensg, 7- + par
-ADD:err-num-gensg (&err-num-gensg) TARGET N IF (-1 TWO-TO-SIX)(0 N + Par)(NOT 0 Gen);
-COPY:err-num-gensg (Sg Gen &SUGGEST) EXCEPT Par TARGET (N &err-num-gensg);
-## Must láá kyehti {kyellid}.
+ADD:msyn-num-gensg (&msyn-num-gensg) TARGET N IF (-1 TWO-TO-SIX)(0 N + Par)(NOT 0 Gen);
+COPY:msyn-num-gensg (Sg Gen &SUGGEST) EXCEPT Par TARGET (N &msyn-num-gensg);
+#% Must láá kyehti {kyellid}.
 #$ Must láá kyehti kyele.
-## 12 ive.
+#% 12 ive.
 #3 12 ived.
 
 LIST SGGENACC = (Sg Gen) (Sg Acc) ;
 
-ADD:err-num-par (&err-num-par) TARGET N IF (-1 Num + Nom LINK 0 SEVEN-AND-MORE)(0 N + Sg + Gen)(NOT 0 ABBR OR Par)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Sem/Date OR Rom OR Sem/Time-clock)(NOT 1 Po OR N OR A) ;
-COPY:err-num-par (Par &SUGGEST) EXCEPT (Sg Gen) TARGET (N &err-num-par) ;
+ADD:msyn-num-par (&msyn-num-par) TARGET N IF (-1 Num + Nom LINK 0 SEVEN-AND-MORE)(0 N + Sg + Gen)(NOT 0 ABBR OR Par)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Sem/Date OR Rom OR Sem/Time-clock)(NOT 1 Po OR N OR A) ;
+COPY:msyn-num-par (Par &SUGGEST) EXCEPT (Sg Gen) TARGET (N &msyn-num-par) ;
 
-ADD:err-num-par (&err-num-par) TARGET N IF (-1 Num + Nom LINK 0 SEVEN-AND-MORE)(0 N + Sg + Acc)(NOT 0 ABBR OR Par)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Sem/Date OR Rom OR Sem/Time-clock OR ("pelnub") OR ("muáddi"))(NOT 1 Po OR N OR A) ;
-COPY:err-num-par (Par &SUGGEST) EXCEPT (Sg Acc) TARGET (N &err-num-par) ;
-## Must láá čiččâm {kyele}.
+ADD:msyn-num-par (&msyn-num-par) TARGET N IF (-1 Num + Nom LINK 0 SEVEN-AND-MORE)(0 N + Sg + Acc)(NOT 0 ABBR OR Par)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Sem/Date OR Rom OR Sem/Time-clock OR ("pelnub") OR ("muáddi"))(NOT 1 Po OR N OR A) ;
+COPY:msyn-num-par (Par &SUGGEST) EXCEPT (Sg Acc) TARGET (N &msyn-num-par) ;
+#% Must láá čiččâm {kyele}.
 #$ Must láá čiččâm kyellid.
 
 
 #!!Accusative subjects in passive 
 
 # b) Suomâkielâ partitiiv passiivráhtusijn; sämikielâst passiiv ohtâvuođâst lii nominatiiv já verbâ maaŋgâlovvoost.
-MAP:err-pass-accsubj (&err-pass-accsubj) TARGET N IF (0C Acc + Pl)(1 Der/Pass + Pl3 OR LEXICALISED-PASS-V + Pl3)(NOT 1 PrfPrc OR TV);
+MAP:msyn-pass-accsubj (&msyn-pass-accsubj) TARGET N IF (0C Acc + Pl)(1 Der/Pass + Pl3 OR LEXICALISED-PASS-V + Pl3)(NOT 1 PrfPrc OR TV);
 
-MAP:err-pass-accsubj (&err-pass-accsubj) TARGET N IF (0C Acc + Pl)(1 COMMA LINK 1 Rel LINK *1 COMMA LINK 1 Der/Pass + Pl3 OR LEXICALISED-PASS-V + Pl3 LINK NOT 0 PrfPrc OR TV);
-COPY:err-pass-accsubj (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &err-pass-accsubj);
+MAP:msyn-pass-accsubj (&msyn-pass-accsubj) TARGET N IF (0C Acc + Pl)(1 COMMA LINK 1 Rel LINK *1 COMMA LINK 1 Der/Pass + Pl3 OR LEXICALISED-PASS-V + Pl3 LINK NOT 0 PrfPrc OR TV);
+COPY:msyn-pass-accsubj (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &msyn-pass-accsubj);
 
 
 #fi	Saamenkielisiä nimityksiä käytetään vähän. - 
 ##	Sämikielâlijd nomâttâsâid kiävttojeh uccáá. 
 #$ 	Sämikielâliih nomâttâsah kiävttojeh uccáá. 
 #$ Sämikielâliih nomâttâsah, moh láá ovdil kevttum, kiävttojeh tääl uccáá.
-## Sämikielâlijd nomâttâsâid, moh láá ovdil kevttum, kiävttojeh tääl uccáá.
+#% Sämikielâlijd nomâttâsâid, moh láá ovdil kevttum, kiävttojeh tääl uccáá.
 
 
-MAP:err-pass-accsubj (&err-pass-accsubj) TARGET N IF (0C Acc + Pl)(1 ("leđe") + Pl3 OR Sg3) (2 PrfPrc + Der/Pass OR LEXICALISED-PASS-VV);
-COPY:err-pass-accsubj (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &err-pass-accsubj);
+MAP:msyn-pass-accsubj (&msyn-pass-accsubj) TARGET N IF (0C Acc + Pl)(1 ("leđe") + Pl3 OR Sg3) (2 PrfPrc + Der/Pass OR LEXICALISED-PASS-V);
+COPY:msyn-pass-accsubj (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &msyn-pass-accsubj);
 
-## Tävirijd láppojii ääitist.
+#% Tävirijd láppojii ääitist.
 #$ Tävireh láppojii ääitist.
 
-## Tävirijd láá lappum ääitist.
+#% Tävirijd láá lappum ääitist.
 #$ Tävireh láá lappum ääitist. 
 
-## Tävirijd lii lappum ääitist.
+#% Tävirijd lii lappum ääitist.
 #$ Tävireh láá lappum ääitist.
 
 
@@ -2378,35 +2381,35 @@ ADD:syn-pred-not-attr (&syn-pred-not-attr) TARGET (A Attr) IF (*-1 COPULAS BARRI
 
 
 #!! mii + nominative should be mii + acc
-ADD:err-mii-acc (&err-mii-acc) TARGET N IF (-2 BOS)(-1 ("mii"))(0 (N Sg Nom))(1 (N Nom) OR (Pron Nom))(*2 LEDE);
-COPY:err-mii-acc (Pl Acc &SUGGEST) EXCEPT (Sg Nom) TARGET ( N &err-mii-acc);
+ADD:msyn-mii-acc (&msyn-mii-acc) TARGET N IF (-2 BOS)(-1 ("mii"))(0 (N Sg Nom))(1 (N Nom) OR (Pron Nom))(*2 LEDE);
+COPY:msyn-mii-acc (Pl Acc &SUGGEST) EXCEPT (Sg Nom) TARGET ( N &msyn-mii-acc);
 
-##  Mii historjá taat lii?
+#%  Mii historjá taat lii?
 #$ Mii historjáid taat lii?
 
-ADD:err-mii-acc (&err-mii-acc) TARGET N IF (-2 BOS)(-1 ("kii"))(0 (N Sg Nom))(1 (N Nom) OR (Pron Nom))(*2 LEDE);
-COPY:err-mii-acc (Pl Acc &SUGGEST) EXCEPT (Sg Nom) TARGET ( N &err-mii-acc);
+ADD:msyn-mii-acc (&msyn-mii-acc) TARGET N IF (-2 BOS)(-1 ("kii"))(0 (N Sg Nom))(1 (N Nom) OR (Pron Nom))(*2 LEDE);
+COPY:msyn-mii-acc (Pl Acc &SUGGEST) EXCEPT (Sg Nom) TARGET ( N &msyn-mii-acc);
 
 
 
 #!! Confusion rules # dáppe mun lean
 
 #!! Sg1 for PrfPrc
-ADD:err-sg1-prfprc (&err-sg1-prfprc) TARGET V IF (*-1 Ind BARRIER NOT-ADV)(0 (Prs Sg1));
-COPY:err-sg1-prfprc (PrfPrc &SUGGEST) EXCEPT (Ind Prs Sg1) TARGET (V &err-sg1-prfprc);
-## Sun lii huunjâm
+ADD:msyn-sg1-prfprc (&msyn-sg1-prfprc) TARGET V IF (*-1 Ind BARRIER NOT-ADV)(0 (Prs Sg1));
+COPY:msyn-sg1-prfprc (PrfPrc &SUGGEST) EXCEPT (Ind Prs Sg1) TARGET (V &msyn-sg1-prfprc);
+#% Sun lii huunjâm
 #$ Sun lii huunnjâm
 
 # čilgen:
-#ADD-njuolggadus: lasihan &err-sg1-prfprc  jos gurotbealde lea indikatiiva ja ieš lea prs sg1
+#ADD-njuolggadus: lasihan &msyn-sg1-prfprc  jos gurotbealde lea indikatiiva ja ieš lea prs sg1
 #COPY-njuolggadus: bidjan dohko PrfPrc ja sáni &SUGGEST (maksá "evttot dan") 
 
 
 #!! Lexical rules
 
-ADD:err-lex-pisso-pissood (&err-lex-pisso-pissood) TARGET ("pisso") IF  (-1 ("leđe") + Ind)(0 N + Sg + Nom + PxSg1)(1 Ess OR Ill) ;
-COPY:err-lex-pisso-pissood ("pissoođ" V PrfPrc &SUGGEST) EXCEPT ("pisso" N Sg Nom PxSg1 &err-lex-pisso-pissood) TARGET (&err-lex-pisso-pissood) ;
-## Tile lâi pissom siämmáálágánin.
+ADD:real-pisso-pissood (&real-pisso-pissood) TARGET ("pisso") IF  (-1 ("leđe") + Ind)(0 N + Sg + Nom + PxSg1)(1 Ess OR Ill) ;
+COPY:real-pisso-pissood ("pissoođ" V PrfPrc &SUGGEST) EXCEPT ("pisso" N Sg Nom PxSg1 &real-pisso-pissood) TARGET (&real-pisso-pissood) ;
+#% Tile lâi pissom siämmáálágánin.
 #$ Tile lâi pissoom siämmáálágánin.
 
 
