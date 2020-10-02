@@ -2151,7 +2151,7 @@ ADD:err-gen-po (&err-gen-po) TARGET (N Pl Nom) IF (NOT 0 Gen) (1C Po);
 COPY:err-gen-po (Gen &SUGGEST) EXCEPT (Nom &err-gen-po) TARGET (N Pl &err-gen-po);
 
 
-ADD:err-ext-agr (&err-ext-agr) TARGET V IF (*-1 Loc BARRIER NOT-ADV-PCLE)(0 ("leđe" V Ind Prs Sg3))(*1 N + Pl + Nom BARRIER NOT-NPMODADV);
+ADD:err-ext-agr (&err-ext-agr) TARGET V IF (*-1 Loc BARRIER NOT-ADV-PCLE)(0 ("leđe" V Ind Prs Sg3))(*1 N + Pl + Nom BARRIER NOT-NPMODADV OR @CVP OR S-BOUNDARY);
 COPY:err-ext-agr (Pl3 &SUGGEST) EXCEPT Sg3 TARGET ("leđe" V Ind Prs &err-ext-agr) ;
 ## Must lii uđđâ autoh.
 #$ Must láá uđđâ autoh.
@@ -2182,9 +2182,13 @@ COPY:err-extv-pl3-numeral (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Ind Prt &err-extv-
 
 
 
+ADD:err-extneg-pl3 (&err-extneg-pl3) TARGET V IF (NOT -1 Sg + Nom)(0 ("ij") + Sg3 + Foc/ge)(*1C N + Pl + Nom BARRIER Sg + Nom OR CS OR Neg + Pl3) ;
+COPY:err-extneg-pl3 (Pl3 Foc/ge &SUGGEST) EXCEPT (Sg3 Foc/ge) TARGET ("ij" V Neg Ind &err-extneg-pl3 ) ;
+# Problem: suggest does not work, gets Foc/ge Pl3 for intended Pl3 Foc/ge.
+#$ Jis parlamentsalist tuállejuvvoo čuákkim puáđáččij čuávvuđ paijjeel 40 persovnid, ijge salist ličij tuárvi čokkámsajeh, puáhtá čuákkim čuávvuđ táárbu mield meddei auditoriost
 
 
-ADD:err-extneg-pl3 (&err-extneg-pl3) TARGET V IF (NOT -1 Sg + Nom)(0 ("ij") + Sg3)(*1 N + Pl + Nom BARRIER Sg + Nom OR CS OR Neg + Pl3) ;
+ADD:err-extneg-pl3 (&err-extneg-pl3) TARGET V IF (NOT -1 Sg + Nom)(0 ("ij") + Sg3)(*1C N + Pl + Nom BARRIER Sg + Nom OR CS OR Neg + Pl3) ;
 COPY:err-extneg-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET ("ij" V Neg Ind &err-extneg-pl3) ;
 ## Šiljoost ij lah innig poccuuh.
 ## Šiljoost iä lah innig poccuid.
@@ -2295,7 +2299,7 @@ COPY:err-acc-obj-top (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &err-acc-obj-top);
 
 # Suomâkielâ imperatiiv mieđetteijee häämist, mast objekt sajehäämmin lii maaŋgâlovo nominatiiv mut sämikielâst akkusatiiv:
 
-ADD:err-imp-nomobj (&err-imp-nomobj) TARGET N IF (-2C Imprt)(-1 PRE-NP-HEAD)(0 Nom)(NOT 0 Acc OR Gen);
+ADD:err-imp-nomobj (&err-imp-nomobj) TARGET N IF (-2C Imprt)(-1 PRE-NP-HEAD)(0 Pl + Nom)(NOT 0 Acc OR Gen);
 ADD:err-imp-nomobj (&err-imp-nomobj) TARGET N IF (-1C Imprt)(0 Nom)(NOT 0 Acc OR Gen);
 COPY:err-imp-nomobj (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &err-imp-nomobj);
 #fi	Myy nämä kalat - 
