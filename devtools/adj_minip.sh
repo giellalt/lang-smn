@@ -10,7 +10,7 @@
 # sh devtools/adj_minip.sh '^hyeni[:+]' 
 
 LOOKUP=$(echo $LOOKUP)
-GTHOME=$(echo $GTHOME)
+GTLANGS=$(echo $GTLANGS)
 
 PATTERN=$1
 L_FILE="in.txt"
