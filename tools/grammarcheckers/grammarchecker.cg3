@@ -1345,13 +1345,13 @@ LIST KLASS = "äšši" "bálkáceahkki" "čuágástuh" "s" "sijđo" "§" "§§" 
 
 LIST OHTA = "ohtâ" "1"; #!! OKTA
 
-LIST MANGA = "maŋgâ" ;
+LIST MANGA = "maŋgâ" "maŋgâlov" ;
 LIST MUADDI = "muáddi" ;
 LIST KALLE = "kalle" ;
 
 SET NUM = Num - OHTA ;
 
-LIST TWO-TO-SIX = "kyehti" "kulmâ" "nelji" "vittâ" "kuttâ" "2" "3" "4" "5" "6" ; 
+LIST TWO-TO-SIX = "kyehti" "kulmâ" "nelji" "vittâ" "kuttâ" "2" "3" "4" "5" "6" ("<[2-6],[0-9]+>"r) ;
 # "err-extv-pl3" "3)" "4)" "5)" "6)" ; # ) er feil
 
 SET SEVEN-AND-MORE-WORD = Num - TWO-TO-SIX - OHTA - MANGA - MUADDI - KALLE ; # - Sem/ID should fix Sem/ID, now 8 is Sem/ID
@@ -2326,6 +2326,10 @@ COPY:msyn-imp-nom-acc (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &msyn-imp-nom-acc);
 
 
 #!! Numeral phrases
+# Comment in to test the sets:
+#ADD:test-6 &msyn-num-par-gen TARGET Num IF (0 TWO-TO-SIX);
+#ADD:test-7 &msyn-num-gen-par TARGET Num IF (0 SEVEN-AND-MORE);
+
 #!! The rule is: 2-6 + gensg, 7- + par
 ADD:msyn-num-par-gen (&msyn-num-par-gen) TARGET N IF (-1 TWO-TO-SIX)(0 N + Par)(NOT 0 Gen);
 COPY:msyn-num-par-gen (Sg Gen &SUGGEST) EXCEPT Par TARGET (N &msyn-num-par-gen);
