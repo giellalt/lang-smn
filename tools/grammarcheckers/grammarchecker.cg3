@@ -809,7 +809,7 @@ SET STRICT-TV-V = STVLIST + V - Der/Pass OR ("čielgat") + Der/d - Der/Pass  ; #
 
 SET STRICT-TRANS-V = STRICT-TV-V + REAL-V ;
 
-LIST LOC-V = "ávkkástallat" "ballat" "peessâđ" "beroštit" "kieldiđ" "bihtit" "ceavzit" "dinet" "tulkkâđ" "eastadallat" "eastadit" "heiviđ" "huolâttiđ" "fuollat" "karveđ" "gažadit" "lakkađ" "estiđ" "ilbmat" "jtak" "jearralit" "luohpat" "máinnašit" "nohkkot" "oassádallat" "oassálastit" "spiehkastit" "vaibâđ" "váruhit" "västidiđ" "veaddit" ;
+LIST LOC-V = "ávkkástallat" "ballat" "peessâđ" "beroštit" "kieldiđ" "bihtit" "ceavzit" "dinet" "tulkkâđ" "eastadallat" "eastadit" "heiviđ" "huolâttiđ" "fuollat" "karveđ" "gažadit" "lakkađ" "estiđ" "ilbmat" "jtak" "jearralit" "luohpat" "máinnašit" "mainâstiđ" "nohkkot" "oassádallat" "oassálastit" "spiehkastit" "vaibâđ" "váruhit" "västidiđ" "veaddit" ;
 
 		#Note that "huolâttiđ" obviously has two homonymous variants: 
 		#fuolahit1+Acc, fuolahit2+Loc
@@ -2047,11 +2047,11 @@ COPY:msyn-agr-sg1 (Ind Prt Sg1 &SUGGEST) EXCEPT (Actio Num) TARGET (V  &msyn-agr
 #$ Mun puáđám.
 #$ Uážum-uv mun-uv elâččiđ váhá kiirdâšmin?
 
-ADD:msyn-agr-sg1 (&msyn-agr-sg1) TARGET V IF (NOT -2 Sup)(-1C Pron + Sg1 + Nom)(-1 BOS OR PUNCT)(0 V)(NOT 0 Sg1);
+ADD:msyn-agr-sg1 (&msyn-agr-sg1) TARGET V IF (NOT -2 Sup OR Sg1)(-1C Pron + Sg1 + Nom)(-1 BOS OR PUNCT)(0 V)(NOT 0 Sg1);
 COPY:msyn-agr-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prs &msyn-agr-sg1);
 
 
-ADD:msyn-agr-sg2 (&msyn-agr-sg2) TARGET V IF (NOT -2 Sup)(-1C Pron + Sg2 + Nom)(0 (V Ind Prs))(NOT 0 Sg2);
+ADD:msyn-agr-sg2 (&msyn-agr-sg2) TARGET V IF (NOT -2 Sup OR Sg2)(NOT *-2 Sg2 BARRIER SV-BOUNDARY)(-1C Pron + Sg2 + Nom)(0 (V Ind Prs))(NOT 0 Sg2);
 COPY:msyn-agr-sg2 (Sg2 &SUGGEST) EXCEPT VNOTSG2 TARGET (V Ind Prs &msyn-agr-sg2);
 
 #% Tun puátá.
@@ -2060,11 +2060,11 @@ COPY:msyn-agr-sg2 (Sg2 &SUGGEST) EXCEPT VNOTSG2 TARGET (V Ind Prs &msyn-agr-sg2)
 
 # Duaali
 
-ADD:msyn-agr-du1 (&msyn-agr-du1) TARGET V IF (NOT -2 Sup)(-1C Pron + Du1 + Nom)(-1 BOS OR PUNCT)(0 V)(NOT 0 Du1);
+ADD:msyn-agr-du1 (&msyn-agr-du1) TARGET V IF (NOT -2 Sup OR Du1)(-1C Pron + Du1 + Nom)(-1 BOS OR PUNCT)(0 V)(NOT 0 Du1);
 COPY:msyn-agr-du1 (Du1 &SUGGEST) EXCEPT VNOTDU1 TARGET (V Ind Prs &msyn-agr-du1);
 
 
-ADD:msyn-agr-du2 (&msyn-agr-du2) TARGET V IF (NOT -2 Sup)(-1C Pron + Du2 + Nom)(0 (V Ind))(NOT 0 Du2);
+ADD:msyn-agr-du2 (&msyn-agr-du2) TARGET V IF (NOT -2 Sup OR Du2)(-1C Pron + Du2 + Nom)(0 (V Ind))(NOT 0 Du2);
 COPY:msyn-agr-du2 (Du2 &SUGGEST) EXCEPT VNOTDU2 TARGET (V  &msyn-agr-du2);
 
 #% Tuoi koolgâi tääl algâttiđ monnii sämmilâškampanja
@@ -2074,7 +2074,7 @@ COPY:msyn-agr-du2 (Du2 &SUGGEST) EXCEPT VNOTDU2 TARGET (V  &msyn-agr-du2);
 
 # Pluraali
 
-ADD:msyn-agr-pl1 (&msyn-agr-pl1) TARGET V IF (NOT -2 Sup)(-1C Pron + Pl1 + Nom)(0 V)(NOT 0 Pl1);
+ADD:msyn-agr-pl1 (&msyn-agr-pl1) TARGET V IF (NOT -2 Sup OR Pl1)(-1C Pron + Pl1 + Nom)(0 V)(NOT 0 Pl1);
 COPY:msyn-agr-pl1 (Pl1 &SUGGEST) EXCEPT VNOTPL1 TARGET (V Ind Prs &msyn-agr-pl1);
 
 #% Mij puátá.
@@ -2093,7 +2093,7 @@ COPY:msyn-agr-pl1 (Pl2 &SUGGEST) EXCEPT VNOTPL2 TARGET (V Ind Prs &msyn-agr-pl2)
 
 
 # Suomâkielâ sárnumkielâ epikongruens maaŋgâlovo 3. persovnist 
-ADD:msyn-agr-sg3 (&msyn-agr-sg3) TARGET V IF (NOT -2 Sup)(-1C Pron + Pl3 + Nom OR Dem + Pl + Nom OR N + Pl + Nom)(NOT -1 NPL_WITH_VSG3)(0C V + Ind + Sg3)(NOT 0 Foc/ge);
+ADD:msyn-agr-sg3 (&msyn-agr-sg3) TARGET V IF (NOT -2 Sup OR Sg3)(-1C Pron + Pl3 + Nom OR Dem + Pl + Nom OR N + Pl + Nom)(NOT -1 NPL_WITH_VSG3)(0C V + Ind + Sg3)(NOT 0 Foc/ge);
 COPY:msyn-agr-sg3 (Pl3 &SUGGEST) EXCEPT VNOTPL3 TARGET (V Ind Prs &msyn-agr-sg3);
 COPY:msyn-agr-sg3 (Pl3 &SUGGEST) EXCEPT VNOTPL3 TARGET (V Ind Prt &msyn-agr-sg3);
 #fi Ne tulee.
@@ -2268,7 +2268,10 @@ COPY:msyn-extv-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (LEDE &msyn-extv-pl3);
 ADD:msyn-extsubj-ill-nom (&msyn-extsubj-ill-nom) TARGET N IF (-1 LEDE + Sg3 OR LEDE + Pl3)(-2 Loc)(0 N + Pl + Ill);
 COPY:msyn-extsubj-ill-nom (Nom &SUGGEST) EXCEPT Ill TARGET (N Pl &msyn-extsubj-ill-nom);
 
-ADD:msyn-halfcongruence (&msyn-halfcongruence) TARGET Dem IF (0 Sg + Loc)(NOT 0 Loc + Attr)(1 N + Sg + Loc)(NOT 1 Prop); # Loc Attr > Gen?
+
+
+
+ADD:msyn-halfcongruence (&msyn-halfcongruence) TARGET Dem IF (NOT *0 LOC-V BARRIER SV-BOUNDARY)(0 Sg + Loc)(NOT 0 Loc + Attr)(1 N + Sg + Loc)(NOT 1 Prop OR Sem/Plc); # Loc Attr > Gen?
 COPY:msyn-halfcongruence (Gen &SUGGEST) EXCEPT (Loc Attr) TARGET (Dem &msyn-halfcongruence);
 	
 ADD:msyn-nom-obj (&msyn-nom-obj) TARGET N IF (-1 VFIN + Sg1)(0 N + Pl + Nom);
