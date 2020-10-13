@@ -2342,9 +2342,9 @@ COPY:msyn-num-par-gen (Sg Gen &SUGGEST) EXCEPT Par TARGET (N &msyn-num-par-gen);
 
 LIST SGGENACC = (Sg Gen) (Sg Acc) ;
 
-ADD:msyn-num-gen-par (&msyn-num-gen-par) TARGET N IF (-1 Num LINK 0 SEVEN-AND-MORE)(0 N + Sg + Gen)(NOT 0 ABBR OR Par)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Sem/Date OR Rom OR Sem/Time-clock)(NOT 1 Po OR N OR A) ;
+ADD:msyn-num-gen-par (&msyn-num-gen-par) TARGET N IF (-1 Num LINK 0 SEVEN-AND-MORE)(0 N + Sg + Gen)(NOT 0 ABBR OR Par)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Rom)(NOT 0 Sem/Time OR Sem/Date OR Sem/Time-clock)(NOT 1 Po OR N OR A) ;
 COPY:msyn-num-gen-par (Par &SUGGEST) EXCEPT (Sg Gen) TARGET (N &msyn-num-gen-par) ;
-ADD:msyn-num-gen-par (&msyn-num-gen-par) TARGET N IF (-1 Num LINK 0 SEVEN-AND-MORE)(0 N + Sg + Acc)(NOT 0 ABBR OR Par)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Sem/Date OR Rom OR Sem/Time-clock)(NOT 1 Po OR N OR A) ;
+ADD:msyn-num-gen-par (&msyn-num-gen-par) TARGET N IF (-1 Num LINK 0 SEVEN-AND-MORE)(0 N + Sg + Acc)(NOT 0 ABBR OR Par)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Rom)(NOT 0 Sem/Time OR Sem/Time-clock)(NOT 1 Po OR N OR A) ;
 COPY:msyn-num-gen-par (Par &SUGGEST) EXCEPT (Sg Acc) TARGET (N &msyn-num-gen-par) ;
 #% Toh láá 8 kaandâ.
 #$ Toh láá 8 kandâd.
