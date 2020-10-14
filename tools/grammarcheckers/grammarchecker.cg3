@@ -1351,11 +1351,13 @@ LIST KALLE = "kalle" ;
 
 SET NUM = Num - OHTA ;
 
-LIST TWO-TO-SIX = "kyehti" "kulmâ" "nelji" "vittâ" "kuttâ" "2" "3" "4" "5" "6" ("<[2-6],[0-9]+>"r) ;
-# "err-extv-pl3" "3)" "4)" "5)" "6)" ; # ) er feil
 
-SET SEVEN-AND-MORE-WORD = Num - TWO-TO-SIX - OHTA - MANGA - MUADDI - KALLE ; # - Sem/ID should fix Sem/ID, now 8 is Sem/ID
-LIST SEVEN-AND-MORE-ARABIC = "7" "8" "9" ("^<[1-9][0-9]>$"r)  ("<[1-9][0-9][0-9]>"r);
+LIST TWO-TO-SIX = "kyehti" "kulmâ" "nelji" "vittâ" "kuttâ" "2" "3" "4" "5" "6" ("<[2-6],[0-9]+>"r) ("^<[1-5]\-[2-6]>$"r) "2-3" "2-4" "3-4" "3-5" "4-5" "4-6" "5-6" ;
+
+SET NUM-WORD = ("^<[a-z][a-z].*>$"r Num) ;
+
+SET SEVEN-AND-MORE-WORD = NUM-WORD - TWO-TO-SIX - OHTA - MANGA - MUADDI - KALLE ; # - Sem/ID should fix Sem/ID, now 8 is Sem/ID
+LIST SEVEN-AND-MORE-ARABIC = "7" "8" "9" ("^<[1-9][0-9]>$"r) ("<[1-9][0-9][0-9]>"r) "5-7" "6-7" "7-8" "7-9" "8-9" "8-10" ;
 # 7+ should include 8,74 but not 3,74.
 
 SET SEVEN-AND-MORE = SEVEN-AND-MORE-WORD OR SEVEN-AND-MORE-ARABIC ;
@@ -2002,7 +2004,7 @@ LIST &msyn-pass-accsubj = &msyn-pass-accsubj ;
 LIST &msyn-num-par-gen = &msyn-num-par-gen ;
 LIST &msyn-num-gen-par = &msyn-num-gen-par ;
 #LIST &msyn-vchain-prfprc = &msyn-vchain-prfprc ;
-LIST &syn-pred-not-attr = &syn-pred-not-attr ;
+LIST &msyn-adj-attr-pred = &msyn-adj-attr-pred ;
 LIST &msyn-mii-acc = &msyn-mii-acc ;
 LIST &msyn-ness-acc-nom = &msyn-ness-acc-nom ; # Muu ličij > Mun ...
 LIST &msyn-ness-ill-nom = &msyn-ness-ill-nom ; # Munnui ličij > Mun ...
@@ -2330,7 +2332,7 @@ COPY:msyn-imp-nom-acc (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &msyn-imp-nom-acc);
 
 
 #!! Numeral phrases
-# Comment in to test the sets:
+# Comment in to test the 2-6 and 7+ sets:
 #ADD:test-6 &msyn-num-par-gen TARGET Num IF (0 TWO-TO-SIX);
 #ADD:test-7 &msyn-num-gen-par TARGET Num IF (0 SEVEN-AND-MORE);
 
@@ -2387,9 +2389,10 @@ COPY:msyn-pass-accsubj (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &msyn-pass-accsubj
 
 #!! Attributive forms
 
-ADD:syn-pred-not-attr (&syn-pred-not-attr) TARGET (A Attr) IF (*-1 COPULAS BARRIER V OR S-BOUNDARY LINK *-1 Nom) (NEGATE 1 N)(NEGATE 1 CC OR COMMA LINK 1 A LINK 1 N)(NEGATE 1 (A Attr) OR ? LINK *1 N BARRIER NOT-NPMOD)(NEGATE 1 (A Sg Nom) OR (Pron Pers))(NEGATE 0 ("puoh") LINK 1 Pron LINK *1 N)(NOT 0 (A Sg Nom))(NEGATE 1 COMMA OR ("-") LINK 1 ("mut") LINK *1 (A Attr) BARRIER NOT-NPMODADV)(NEGATE 0 Superl LINK 1 CC LINK 1 ("eenâb" Superl) OR ("iänááš") LINK 1 A LINK 1 N)(NEGATE 1 (Num Attr) LINK 1 N)(NEGATE 0 ("eenâb") LINK 1 PrfPrc);
+ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (*-1 COPULAS BARRIER V OR S-BOUNDARY LINK *-1 Nom) (NEGATE 1 N)(NEGATE 1 CC OR COMMA LINK 1 A LINK 1 N)(NEGATE 1 CC OR COMMA LINK 1 PUNCT LINK 1 A LINK 1 N)(NEGATE 1 (A Attr) OR ? LINK *1 N BARRIER NOT-NPMOD)(NEGATE 1 (A Sg Nom) OR (Pron Pers))(NEGATE 0 ("puoh") LINK 1 Pron LINK *1 N)(NOT 0 (A Sg Nom) OR Adv OR Pcle)(NEGATE 1 COMMA OR ("-") LINK 1 ("mut") LINK *1 (A Attr) BARRIER NOT-NPMODADV)(NEGATE 0 Superl LINK 1 CC LINK 1 ("eenâb" Superl) OR ("iänááš") LINK 1 A LINK 1 N)(NEGATE 1 (Num Attr) LINK 1 N)(NEGATE 0 ("eenâb") LINK 1 PrfPrc);
+COPY:msyn-adj-attr-pred (Sg Nom &SUGGEST) EXCEPT Attr TARGET (A &msyn-adj-attr-pred) ;
 
-#ADD:syn-pred-not-attr (&syn-pred-not-attr) TARGET (A Attr) IF (*-1 COPULAS BARRIER V OR GRAMCHK-S-BOUNDARY LINK *-1 Nom) (NEGATE 1 N)(NEGATE 1 CC OR COMMA LINK 1 A LINK 1 N)(NEGATE 1 (A Attr) OR ? LINK *1 N BARRIER NPNH)(NEGATE 1 (A Sg Nom) OR (Pron Pers))(NEGATE 0 ("visot") OR ("buot") LINK 1 Pron LINK *1 N)(NEGATE 0 PRED-ATTR-ADJ)(NEGATE 1 COMMA OR CC LINK 1 (A Attr) OR PRED-ATTR-ADJ)(NOT 0 (A Sg Nom))(NEGATE 1 COMMA OR ("-") LINK 1 ("muhto") LINK *1 (A Attr) BARRIER NPNHA)(NEGATE 0 Superl LINK 1 CC LINK 1 ("eanet" Superl) OR ("eanemus") LINK 1 A LINK 1 N)(NEGATE 1 (Num Attr) LINK 1 N)(NEGATE 0 ("eanet") LINK 1 PrfPrc);
+#ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (*-1 COPULAS BARRIER V OR GRAMCHK-S-BOUNDARY LINK *-1 Nom) (NEGATE 1 N)(NEGATE 1 CC OR COMMA LINK 1 A LINK 1 N)(NEGATE 1 (A Attr) OR ? LINK *1 N BARRIER NPNH)(NEGATE 1 (A Sg Nom) OR (Pron Pers))(NEGATE 0 ("visot") OR ("buot") LINK 1 Pron LINK *1 N)(NEGATE 0 PRED-ATTR-ADJ)(NEGATE 1 COMMA OR CC LINK 1 (A Attr) OR PRED-ATTR-ADJ)(NOT 0 (A Sg Nom))(NEGATE 1 COMMA OR ("-") LINK 1 ("muhto") LINK *1 (A Attr) BARRIER NPNHA)(NEGATE 0 Superl LINK 1 CC LINK 1 ("eanet" Superl) OR ("eanemus") LINK 1 A LINK 1 N)(NEGATE 1 (Num Attr) LINK 1 N)(NEGATE 0 ("eanet") LINK 1 PrfPrc);
 
 
 #!! mii + nominative should be mii + acc
