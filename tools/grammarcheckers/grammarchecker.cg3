@@ -2039,13 +2039,14 @@ COPY:msyn-prfprc-sg1 (Ind Prs Sg1 &SUGGEST) EXCEPT PrfPrc TARGET (V &msyn-prfprc
 #$ Mun vááldám.
 #$ Lamhân mun váldám tom.
 
-ADD:msyn-agr-sg1 (&msyn-agr-sg1) TARGET V IF (NOT -2 Sg1)(-1C Pron + Sg1 + Nom)(0 V + Ind)(NOT 0 Sg1);
+ADD:msyn-agr-sg1 (&msyn-agr-sg1) TARGET V IF (NOT -2 Sg1)(NOT -2 CC LINK -1 Sg + Nom)(-1C Pron + Sg1 + Nom)(0 V + Ind)(NOT 0 Sg1)(NOT 1 ("-") LINK 1 ("uv") LINK 1 V + Sg1)(NOT 1 Adv LINK 1 V + Sg1);
 COPY:msyn-agr-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prt &msyn-agr-sg1);
 COPY:msyn-agr-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prs &msyn-agr-sg1);
 COPY:msyn-agr-sg1 (Ind Prt Sg1 &SUGGEST) EXCEPT (Actio Num) TARGET (V  &msyn-agr-sg1);
 #% Mun puátá.
 #$ Mun puáđám.
 #$ Uážum-uv mun-uv elâččiđ váhá kiirdâšmin?
+#$ Tomhân mun tiäđust-uv paaččim.
 
 ADD:msyn-agr-sg1 (&msyn-agr-sg1) TARGET V IF (NOT -2 Sup OR Sg1)(-1C Pron + Sg1 + Nom)(-1 BOS OR PUNCT)(0 V)(NOT 0 Sg1);
 COPY:msyn-agr-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prs &msyn-agr-sg1);
