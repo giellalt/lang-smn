@@ -22,14 +22,17 @@
       </ids>
       <header>
         <title xml:lang="en">Spelling error</title>
-        <title xml:lang="smn">Čäällimfeilâ</title>
+        <title xml:lang="smn">Časkemfeilâ</title>
+        <title xml:lang="fi">Lyöntivirhe</title>
       </header>
       <body>
         <description xml:lang="en">The word means something different here</description>
-        <description xml:lang="smn">Sátni šaddá eará go oaivvilduvvo</description>
+        <description xml:lang="smn">Puástusääni taan ohtâvuođâst</description>
+        <description xml:lang="fi">Väärä sana tässä yhteydessä</description>
         <!-- TODO: fix description lang=se -->
       </body>
     </default>
+
     <default>
       <ids>
         <re v="msyn-wrong-case.*"/>
@@ -37,11 +40,13 @@
       </ids>
       <header>
         <title xml:lang="en">Wrong form</title>
-        <title xml:lang="smn">Puástuhäämi</title>
+        <title xml:lang="smn">Puástu sänihäämi</title>
+        <title xml:lang="fi">Väärä sanamuoto</title>
       </header>
       <body>
         <description xml:lang="en">"$1" seems to be in the wrong case</description>
-        <description xml:lang="smn"> "$1" orru leamen boasttukásusis</description>
+        <description xml:lang="smn"> "$1" Puástu sajehäämi</description>
+        <description xml:lang="fi"> "$1" Väärä sijamuoto</description>
       </body>
     </default>
     <default>
@@ -51,13 +56,15 @@
       <header>
         <title xml:lang="en">Quotation marks</title>
         <title xml:lang="smn">Lovnimmeerhah</title>
+        <title xml:lang="fi">Lainausmerkit</title>
         <references><ref n=""/></references>
       </header>
       <body>
         <description xml:lang="en">Wrong quotation mark</description>
         <description xml:lang="smn">Puástu lovnimmeerhah</description>
+        <description xml:lang="fi">Väärä lainausmerkkien käyttö</description>
         <examples>
-          <ex xml:lang="smn">Doarjja addo vuosttažettiin {«}Sámi dutkama prográmmii{»} (2001–05)</ex> 
+          <ex xml:lang="fi">Doarjja addo vuosttažettiin {«}Sámi dutkama prográmmii{»} (2001–05)</ex> 
         </examples>
       </body>
     </default>
@@ -68,395 +75,446 @@
       </ids>
       <header>
         <title xml:lang="en">Parenthesis missing space</title>
-        <title xml:lang="smn">Koskâ váilu</title>
+        <title xml:lang="smn">Koskâčaskem váilu</title>
+        <title xml:lang="fi">Puuttuva välilyönti</title>
       </header>
       <body>
         <description xml:lang="en">There is no space before or after the parenthesis "$1"</description>
-        <description xml:lang="smn">Ii leat gaska ovdal dehe maŋŋil ruođu "$1"</description>
+        <description xml:lang="smn">Koskâčaskem ruáđui ooovdâst teikâ moonjiibeln váilu "$1"</description>
+        <description xml:lang="fi">Välilyönti puuttuu ennen sulkeita tai niiden jälkeen  "$1"</description>
         <examples>
-          <ex xml:lang="smn">Vuoigatvuođa Lávdegotti{(}SVL{)}čilgehus</ex> 
+          <ex xml:lang="fi">Vuoigatvuođa Lávdegotti{(}SVL{)}čilgehus</ex> 
         </examples>
       </body>
     </default>
   </defaults>
-
   
   <error id="msyn-prfprc-sg1">
     <header>
       <title xml:lang="en">Error in first person singular.</title>
       <title xml:lang="smn">Feilâ vuossâmuu persovnist.</title>
+      <title xml:lang="fi">Virhe ensimmäisessä persoonassa.</title>
     </header>
     <body>
       <description xml:lang="en">The word "$1" looks like a participle, but in this context first person singular works better.</description>
-      <description xml:lang="smn">Sana "$1" näyttää partisiipilta, mutta tässä yhteydessä ensimmäinen persoona sopii paremmin.</description>
+      <description xml:lang="smn">Sääni "$1" oro lemin partisip. Ličij-uv vuossâmuš persovn pyereeb?</description>
+      <description xml:lang="fi">Sana "$1" näyttää partisiipilta. Olisiko ensimmäinen persoona parempi?</description>
     </body>
   </error>
 
-  
   <error id="msyn-agr-sg1">
     <header>
       <title xml:lang="en">First person singular after 'mun'.</title>
       <title xml:lang="smn">Verbâ vuossâmuu persovnist.</title>
+      <title xml:lang="fi">Verbi ensimmäisessä persoonassa.</title>
     </header>
     <body>
       <description xml:lang="en">The verb-form "$1" follows 'mun', and should probably be first person singular.</description>
-      <description xml:lang="smn">Verbimuoto "$1" tulee 'mun'-sanan jälkeen, ja sen pitäisi luultavasti olla ensimmäisessä persoonassa.</description>
+      <description xml:lang="smn">Verbâhäämi "$1" kiävttoo 'mun'-sääni maŋa. Ličij-uv vuossâmuš persovn pyereeb?</description>
+      <description xml:lang="fi">Verbimuotoa "$1" käytetään 'mun'-sanan jälkeen. Olisiko ensimmäinen persoona parempi?</description>
     </body>
   </error>
-
   
   <error id="msyn-agr-sg2">
     <header>
       <title xml:lang="en">Second person singular after 'tun'.</title>
-      <title xml:lang="smn">Verbi toisessa persoonassa.</title>
+      <title xml:lang="smn">Feilâ nube persovnist.</title>
+      <title xml:lang="fi">Virhe toisessa persoonassa.</title>
     </header>
     <body>
       <description xml:lang="en">The verb-form "$1" follows 'tun', and should probably be second person singular.</description>
-      <description xml:lang="smn">Verbimuoto "$1" tulee 'tun'-sanan jälkeen, ja pitäisi luultavasti olla toisessa persoonassa.</description>
+      <description xml:lang="smn">Verbâhäämi "$1" kiävttoo 'tun'-sääni maŋa. Ličij-uv nubbe persovn pyereeb?</description>
+      <description xml:lang="fi">Verbimuoto "$1" esiintyy 'tun'-sanan jälkeen. Olisiko toinen persoona parempi?</description>
     </body>
   </error>
-
 
   <error id="msyn-agr-sg3">
     <header>
       <title xml:lang="en">Third person singular after 'sun'.</title>
-      <title xml:lang="smn">Verbi yksikön kolmannessa persoonassa.</title>
+      <title xml:lang="smn">Verbâ oovtâlovo kuálmád persovnist.</title>
+      <title xml:lang="fi">Verbi yksikön kolmannessa persoonassa.</title>
     </header>
     <body>
       <description xml:lang="en">The verb-form "$1" follows 'sun', and should probably be third person singular.</description>
-      <description xml:lang="smn">Verbimuoto "$1" tulee 'sun'-sanan jälkeen, ja pitäisi luultavasti olla yksikön kolmannessa persoonassa.</description>
+      <description xml:lang="smn">Verbâhäämi "$1" kiävttoo 'sun'-sääni maŋa. Ličij-uv kuálmád persovn pyereeb?</description>
+      <description xml:lang="fi">Verbimuoto "$1" esiintyy 'sun'-sanan jälkeen. Olisiko kolmas persoona parempi?</description>
     </body>
   </error>
 
   <error id="msyn-agr">
     <header>
       <title xml:lang="en">Third person singular after singular noun.</title>
-      <title xml:lang="smn">Verbi yksikön kolmannessa persoonassa substantiivin jälkeen.</title>
+      <title xml:lang="smn">Verbâ vuossâmuu persovnist substantiv maŋa.</title>
+      <title xml:lang="fi">Verbi yksikön kolmannessa persoonassa substantiivin jälkeen.</title>
     </header>
     <body>
       <description xml:lang="en">The verb-form "$1" follows a singular noun, and should probably be third person singular.</description>
-      <description xml:lang="smn">Verbimuoto "$1" tulee yksikössä olevan substantiivin jälkeen, ja pitäisi luultavasti olla yksikön kolmannessa persoonassa.</description>
+      <description xml:lang="smn">Verbâhäämi "$1" kiävttoo oovtâlovvoost leijee substantiv maŋa. Ličij-uv oovtâlovo kuálmád persovn pyereeb?</description>
+      <description xml:lang="fi">Verbimuoto "$1" esiintyy yksikössä olevan substantiivin jälkeen. Olisiko yksikön kolmas persoona parempi?</description>
     </body>
   </error>
-
 
   <error id="msyn-agr-du1">
     <header>
       <title xml:lang="en">First person dual after 'muai'.</title>
-      <title xml:lang="smn">Verbi kaksikon ensimmäisessä persoonassa.</title>
+      <title xml:lang="smn">Verbâ kyevtilovo vuossâmuu persovnist.</title>
+      <title xml:lang="fi">Verbi kaksikon ensimmäisessä persoonassa.</title>
     </header>
     <body>
       <description xml:lang="en">The verb-form "$1" follows 'muai', and should probably be first person dual.</description>
-      <description xml:lang="smn">Verbimuoto "$1" tulee 'muai'-sanan jälkeen, ja pitäisi luultavasti olla kaksikon ensimmäisessä persoonassa.</description>
+      <description xml:lang="smn">Verbâhäämi "$1" kiävttoo 'muoi'-sääni maŋa. Ličij-uv kyevtilovo vuossâmuš persovn pyereeb?</description>
+      <description xml:lang="fi">Verbimuoto "$1" esiintyy 'muoi'-sanan jälkeen. Olisiko kaksikon ensimmäinen persoona parempi?</description>
     </body>
   </error>
-
   
   <error id="msyn-agr-du2">
     <header>
       <title xml:lang="en">Second person dual after 'tuai'.</title>
-      <title xml:lang="smn">Verbi kaksikon toisessa persoonassa.</title>
+      <title xml:lang="smn">Verbi kaksikon nube persovnist.</title>
+      <title xml:lang="fi">Verbi kaksikon toisessa persoonassa.</title>
     </header>
     <body>
       <description xml:lang="en">The verb-form "$1" follows 'tuoi', and should probably be second person dual.</description>
-      <description xml:lang="smn">Verbimuoto "$1" tulee 'tuoi'-sanan jälkeen, ja pitäisi luultavasti olla kaksikon toisessa persoonassa.</description>
+      <description xml:lang="smn">Verbâhäämi "$1" kiävttoo 'tuoi'-sääni maŋa. Ličij-uv kyevtilovo nubbe persovn pyereeb?</description>
+      <description xml:lang="fi">Verbimuoto "$1" esiintyy 'tuoi'-sanan jälkeen. Olisiko kaksikon toinen persoona parempi?</description>
     </body>
   </error>
 
   <error id="msyn-agr-du3">
     <header>
       <title xml:lang="en">Third person dual after 'suai'.</title>
-      <title xml:lang="smn">Verbi kaksikon kolmannessa persoonassa.</title>
+      <title xml:lang="smn">Verbâ kyevtilovo kuálmád persovnist.</title>
+      <title xml:lang="fi">Verbi kaksikon kolmannessa persoonassa.</title>
     </header>
     <body>
       <description xml:lang="en">The verb-form "$1" follows 'suai', and should probably be second person dual.</description>
-      <description xml:lang="smn">Verbimuoto "$1" tulee 'suai'-sanan jälkeen, ja pitäisi luultavasti olla kaksikon toisessa persoonassa.</description>
+      <description xml:lang="smn">Verbâhäämi "$1" kiävttoo 'suoi'-sääni maŋa. Ličij-uv kyevtilovo nubbe persovn pyereeb?</description>
+      <description xml:lang="fi">Verbimuoto "$1" esiintyy 'suoi'-sanan jälkeen. Olisiko kaksikon toinen persoona parempi?</description>
     </body>
   </error>
-
 
   <error id="msyn-agr-pl1">
     <header>
       <title xml:lang="en">First person singular after 'mij'.</title>
-      <title xml:lang="smn">Verbi monikon ensimmäisessä persoonassa.</title>
+      <title xml:lang="smn">Verbi monikon ensimmäisessä persovnist.</title>
+      <title xml:lang="fi">Verbi monikon ensimmäisessä persoonassa.</title>
     </header>
     <body>
       <description xml:lang="en">The verb-form "$1" follows 'mij', and should probably be first person plural.</description>
-      <description xml:lang="smn">Verbimuoto "$1" tulee 'mij'-sanan jälkeen, ja pitäisi luultavasti olla monikon ensimmäisessä persoonassa.</description>
+      <description xml:lang="smn">Verbâhäämi "$1" kiävttoo 'mij'-sääni maŋa. Ličij-uv maaŋgâlovo vuossâmuš persovn pyereeb?</description>
+      <description xml:lang="fi">Verbimuoto "$1" esiintyy 'mij'-sanan jälkeen. Olisiko monikon ensimmäinen persoona parempi?</description>
     </body>
   </error>
-
 
   <error id="msyn-agr-pl2">
     <header>
       <title xml:lang="en">Second person singular after 'tij'.</title>
-      <title xml:lang="smn">Verbi monikon toisessa persoonassa.</title>
+      <title xml:lang="smn">Verbâ maaŋgâlovo nube persovnist.</title>
+      <title xml:lang="fi">Verbi monikon toisessa persoonassa.</title>
     </header>
     <body>
       <description xml:lang="en">The verb-form "$1" follows 'tij', and should probably be second person plural.</description>
-      <description xml:lang="smn">Verbimuoto "$1" tulee 'tij'-sanan jälkeen, ja pitäisi luultavasti olla monikon toisessa persoonassa.</description>
+      <description xml:lang="smn">Verbâhäämi "$1" kiävttoo 'tij'-sääni maŋa. Ličij-uv maaŋgâlovo nubbe persovn pyereeb?</description>
+      <description xml:lang="fi">Verbimuoto "$1" esiintyy 'tij'-sanan jälkeen. Olisiko monikon toinen persoona parempi?</description>
     </body>
   </error>
-
 
   <error id="msyn-agr-pl3">
     <header>
       <title xml:lang="en">Third person plural after 'sij'.</title>
-      <title xml:lang="smn">Verbi monikon kolmannessa persoonassa.</title>
+      <title xml:lang="smn">Verbâ maaŋgâlovo kuálmád persovnist.</title>
+      <title xml:lang="fi">Verbi monikon kolmannessa persoonassa.</title>
     </header>
     <body>
       <description xml:lang="en">The verb-form "$1" follows 'sij', and should probably be second person plural.</description>
-      <description xml:lang="smn">Verbimuoto "$1" tulee 'sij'-sanan jälkeen, ja pitäisi luultavasti olla monikon toisessa persoonassa.</description>
+      <description xml:lang="smn">Verbâhäämi "$1" kiävttoo 'sij'-sääni maŋa. Ličij-uv maaŋgâlovo nubbe persovn pyereeb?</description>
+      <description xml:lang="fi">Verbimuoto "$1" esiintyy 'sij'-sanan jäljessä. Olisiko monikon toinen persoona parempi?</description>
     </body>
   </error>
-
   
   <error id="msyn-orrood-inf">
     <header>
       <title xml:lang="en">Actio essive after 'orroođ'.</title>
-      <title xml:lang="smn">Aktio essiivi 'orroođ'-verbin jälkeen.</title>
+      <title xml:lang="smn">Aktio essiiv 'orroođ'-veerbâ maŋa.</title>
+      <title xml:lang="fi">Aktion essiivi 'orroođ'-verbin jälkeen.</title>
     </header>
     <body>
       <description xml:lang="en">The verb-form "$1" follows 'orroođ', and should probably be in Actio Essive.</description>
-      <description xml:lang="smn">Verbimuoto "$1" tulee 'orroođ'-sanan jälkeen, ja pitäisi luultavasti olla aktio essiivissä.</description>
+      <description xml:lang="smn">Verbimuoto "$1" kiävttoo 'orroođ'-sääni maŋa. Ličij-uv aktio essiiv (oro lemin-rakenne) pyereeb?</description>
+      <description xml:lang="fi">Verbimuoto "$1" esiintyy 'orroođ'-sanan jälkeen. Olisiko aktion essiivi (oro lemin -rakenne) parempi?</description>
     </body>
   </error>
-
 
   <error id="msyn-ext-agr">
     <header>
       <title xml:lang="en">Agreement in existential sentences.</title>
-      <title xml:lang="smn">Eksistentiaalilauseen kongruenssi.</title>
+      <title xml:lang="smn">Eksistentiaalcelkkuu kongruens.</title>
+      <title xml:lang="fi">Eksistentiaalilauseen kongruenssi.</title>
     </header>
     <body>
       <description xml:lang="en">The work "$1" seems to be the verb of an existential clause with a plural subject, the verb should be plural.</description>
-      <description xml:lang="smn">Sana "$1" näyttää olevan eksistentiaalilauseen verbi, sen pitää olla monikossa kun subjektikin on monikossa.</description>
+      <description xml:lang="smn">Sana "$1" oro lemin eksistentiaalcelkkuu verbâ. Kolgâččij-uv tot leđe maaŋgâlovvoost tondiet ko celkkuu subjekt-uv lii maaŋgâlovvoost?</description>
+      <description xml:lang="fi">Sana "$1" näyttäisi olevan eksistentiaalilauseen verbi. Tulisiko sen olla monikossa, koska lauseen subjektikin on monikossa?</description>
     </body>
   </error>
 
   <error id="msyn-extsubj-ill-nom">
     <header>
       <title xml:lang="en">Nominative in existential sentences.</title>
-      <title xml:lang="smn">Nominatiivi eksistentiaalilauseissa.</title>
+      <title xml:lang="smn">Nominatiiv eksistentiaalicelkkuin.</title>
+      <title xml:lang="fi">Nominatiivi eksistentiaalilauseissa.</title>
     </header>
     <body>
       <description xml:lang="en">The work "$1" seems to be the subject of an existential clause, it should be in nominative.</description>
-      <description xml:lang="smn">Sana "$1" näyttää olevan eksistentiaalilauseen subjekti, sen pitää olla nominatiivissa.</description>
+      <description xml:lang="smn">Sääni"$1" oro lemin eksistentiaalcelkkuu subjekt. Tot kolgâččij leđe nominatiivist.</description>
+      <description xml:lang="fi">Sana "$1" näyttäisi olevan eksistentiaalilauseen subjekti. Sen tulisi olla nominatiivissa.</description>
     </body>
   </error>
 
   <error id="msyn-extsubj-acc-nom">
     <header>
       <title xml:lang="en">Nominative in existential sentences.</title>
-      <title xml:lang="smn">Nominatiivi eksistentiaalilauseissa.</title>
+      <title xml:lang="smn">Nominatiiv eksistentiaalcelkkuin.</title>
+      <title xml:lang="fi">Nominatiivi eksistentiaalilauseissa.</title>
     </header>
     <body>
       <description xml:lang="en">The work "$1" seems to be the subject of an existential clause, it should be in nominative.</description>
-      <description xml:lang="smn">Sana "$1" näyttää olevan eksistentiaalilauseen subjekti, sen pitää olla nominatiivissa.</description>
+      <description xml:lang="smn">Sääni "$1" oro lemin eksistentiaalcelkkuu subjekt. Tot kolgâččij leđe nominatiivist.</description>
+      <description xml:lang="fi">Sana "$1" näyttää olevan eksistentiaalilauseen subjekti. Sen tulisi olla nominatiivissa.</description>
     </body>
   </error>
 
   <error id="msyn-extv-pl3">
     <header>
       <title xml:lang="en">Plural for plural subject.</title>
-      <title xml:lang="smn">Monikko jos subjekti on monikossa.</title>
+      <title xml:lang="smn">Maaŋgäloho, jis subjekt lii maaŋgâlovvoost.</title>
+      <title xml:lang="fi">Monikko, jos subjekti on monikossa.</title>
     </header>
     <body>
       <description xml:lang="en">The verb-form "$1" has a plural subject, and should be plural.</description>
-      <description xml:lang="smn">Verbimuodolla "$1" on monikkosubjekti, ja pitäisi luultavasti olla monikossa.</description>
+      <description xml:lang="smn">Verbâhäämi "$1" subjekt lii maaŋgâlovvoost. Kolgâččij-uv verbâ-uv leđe maaŋgâlovvoost?</description>
+      <description xml:lang="fi">Verbimuodon "$1" subjekti on monikossa. Tulisiko verbinkin olla monikossa?</description>
     </body>
   </error>
-
 
   <error id="msyn-extv-pl3-numeral">
     <header>
       <title xml:lang="en">Plural for numeral subject.</title>
-      <title xml:lang="smn">Monikko jos subjekti on lukusana.</title>
+      <title xml:lang="smn">Maaŋgâloho, jis subjekt lii lohosääni.</title>
+      <title xml:lang="fi">Monikko, jos subjekti on lukusana.</title>
     </header>
     <body>
       <description xml:lang="en">The verb-form "$1" has a numeral phrase as subject, and should be plural.</description>
-      <description xml:lang="smn">Verbimuodon "$1" subjekti on lukusana, ja verbi pitäisi luultavasti olla monikossa.</description>
+      <description xml:lang="smn">Verbâhäämi "$1" subjekt lii lohosääni. Kolgâččij-uv verbâ-uv leđe maaŋgâlovvoost?</description>
+      <description xml:lang="fi">Verbimuodon "$1" subjekti on lukusana. Tulisiko verbinkin olla monikossa?</description>
     </body>
   </error>
 
   <error id="msyn-extneg-pl3">
     <header>
       <title xml:lang="en">Nominative in negative existential sentences.</title>
-      <title xml:lang="smn">Nominatiivi kielteisissä eksistentiaalilauseissa.</title>
+      <title xml:lang="smn">Nominatiiv kieldee eksistentiaalcelkkuin.</title>
+      <title xml:lang="fi">Nominatiivi kielteisissä eksistentiaalilauseissa.</title>
     </header>
     <body>
       <description xml:lang="en">The word "$1" seems to be the subject of an existential clause, it should be in nominative, also when the clause is negated.</description>
-      <description xml:lang="smn">Sana "$1" näyttää olevan eksistentiaalilauseen subjekti, sen pitää olla nominatiivissa, myös kielteisessä lauseessa.</description>
+      <description xml:lang="smn">Sääni "$1" oro lemin eksistentiaalcelkkuu subjekt. Talle tot kolgâččij leđe nominativist, meid kieldee celkkuin.</description>
+      <description xml:lang="fi">Sana "$1" näyttäisi olevan eksistentiaalilauseen subjekti. Siinä tapauksessa sen tulisi olla nominatiivissa, myös kielteisessä lauseessa.</description>
     </body>
   </error>
-
 
   <error id="msyn-extv-vagr">
     <header>
       <title xml:lang="en">Plural for plural subject.</title>
-      <title xml:lang="smn">Monikko jos subjekti on monikossa.</title>
+      <title xml:lang="smn">Maaŋgâloho, jis subjekt lii maaŋgâlovvoost.</title>
+      <title xml:lang="fi">Monikko, jos subjekti on monikossa.</title>
     </header>
     <body>
       <description xml:lang="en">The verb-form "$1" has a plural subject, and should be plural.</description>
-      <description xml:lang="smn">Verbimuodolla "$1" on monikkosubjekti, ja pitäisi luultavasti olla monikossa.</description>
+      <description xml:lang="smn">Verbâhäämist "$1" subjekti lii maaŋgâlovvoost. Talle verbâ-uv kolgâččij leđe maaŋgâlovvoost.</description>
+      <description xml:lang="fi">Verbimuodolla "$1" on monikollinen subjekti. Siinä tapauksessa verbinkin tulisi olla monikossa.</description>
     </body>
   </error>
-
 
   <error id="msyn-imp-nom-acc">
     <header>
       <title xml:lang="en">Imperative object in accusative.</title>
-      <title xml:lang="smn">Imparatiiviobjekti akkusatiivissa.</title>
+      <title xml:lang="smn">Imparatiiviobjekt akkusativist.</title>
+      <title xml:lang="fi">Imparatiiviobjekti akkusatiivissa.</title>
     </header>
     <body>
       <description xml:lang="en">The noun "$1" is in the nominative, but is the object of an imperative and should be in accusative.</description>
-      <description xml:lang="smn">Substantiivi "$1" on nominatiivissa, mutta se on imperatiivin objekti, ja pitäisi siis olla akkusatiivissa.</description>
+      <description xml:lang="smn">Substantiv "$1" lii nominativist, mut tot lii imperatiiv objekt. Kolgâččij-uv tot leđe akkusativist?</description>
+      <description xml:lang="fi">Substantiivi "$1" on nominatiivissa, mutta se on imperatiivin objekti. Tulisiko sen olla akkusatiivissa?</description>
     </body>
   </error>
 
   <error id="msyn-no-conneg">
     <header>
       <title xml:lang="en">Negative verbform after negative verb.</title>
-      <title xml:lang="smn">Kieltomuoto kieltoverbin jälkeen.</title>
+      <title xml:lang="smn">Kieldimhäämi kieldimveerbâ maŋa.</title>
+      <title xml:lang="fi">Kieltomuoto kieltoverbin jälkeen.</title>
     </header>
     <body>
       <description xml:lang="en">The verb "$1" follows a negative verb, and should thus have the negative form.</description>
-      <description xml:lang="smn">Verbi "$1" tulee kieltoverbin jälkeen, ja pitäisi sen takia olla kieltomuodossa.</description>
+      <description xml:lang="smn">Verbi "$1" tulee kieltoverbin maŋa, ja pitäisi sen takia olla kieltomuodossa.</description>
+      <description xml:lang="fi">Verbi "$1" tulee kieltoverbin jälkeen, ja pitäisi sen takia olla kieltomuodossa.</description>
     </body>
   </error>
 
   <error id="msyn-esubj-plnom">
     <header>
       <title xml:lang="en">Existential subject in nominative.</title>
-      <title xml:lang="smn">Eksistentiaalilauseen subjekti nominatiivissa.</title>
+      <title xml:lang="smn">Eksistentiaalcelkkuu subjekt nominativist.</title>
+      <title xml:lang="fi">Eksistentiaalilauseen subjekti nominatiivissa.</title>
     </header>
     <body>
       <description xml:lang="en">The noun "$1" seems to be the subject of an existential clause, in which case it should be in the nominative.</description>
-      <description xml:lang="smn">Substantiivi "$1" näyttää olevan eksistentilauseen subjekti, ja pitää sen takia olla nominatiivissa.</description>
+      <description xml:lang="smn">Substantiv "$1" oro lemin eksistentiaalcelkkuu subjekti. Tot kolgâččij tondiet leđe nominativist.</description>
+      <description xml:lang="fi">Substantiivi "$1" näyttäisi olevan eksistentilauseen subjekti. Sen tulisi olla sen vuoksi nominatiivissa.</description>
     </body>
   </error>
 
   <error id="msyn-nom-obj">
     <header>
       <title xml:lang="en">Accusative plural object.</title>
-      <title xml:lang="smn">Akkusatiiviobjekti myös monikossa.</title>
+      <title xml:lang="smn">Akkusativobjekt maaŋgâlovvoost.</title>
+      <title xml:lang="fi">Akkusatiiviobjekti monikossa.</title>
     </header>
     <body>
       <description xml:lang="en">The noun "$1" is in the nominative, but is probably an object and should be in accusative.</description>
-      <description xml:lang="smn">Substantiivi "$1" on nominatiivissa, mutta se on luultavasti objekti, ja pitäisi siis olla akkusatiivissa.</description>
+      <description xml:lang="smn">Substantiv "$1" lii nominativist, mut tot lii â se lii ilmeisesti objekt, jâ pitäisi siis leđe akkusativist.</description>
+      <description xml:lang="fi">Substantiivi "$1" on nominatiivissa, mutta se on ilmeisesti objekti, ja pitäisi siis olla akkusatiivissa.</description>
     </body>
   </error>
 
   <error id="msyn-acc-obj-top">
     <header>
       <title xml:lang="en">Subject not in accusative plural.</title>
-      <title xml:lang="smn">Monikossa oleva subjekti ei akkusatiivissa.</title>
+      <title xml:lang="smn">Maaŋgâlovvoost leijee subjekt ij lah akkusativist.</title>
+      <title xml:lang="fi">Monikollinen subjekti ei ole akkusatiivissa.</title>
     </header>
     <body>
       <description xml:lang="en">The noun "$1" is in the accusative, but is probably a subject and should be in accusative.</description>
-      <description xml:lang="smn">Substantiivi "$1" on nominatiivissa, mutta se on luultavasti objekti, ja pitäisi siis olla akkusatiivissa.</description>
+      <description xml:lang="smn">Substantiv "$1" lii nominativist. Tot oroččij lemin celkkuu objekt. Tondiet tot kolgâččij leđe akkusativist.</description>
+      <description xml:lang="fi">Substantiivi "$1" on nominatiivissa. Se näyttäisi olevan lauseen objekti. Siinä tapauksessa sen tulisi olla akkusatiivissa.</description>
     </body>
   </error>
-
  
   <error id="msyn-pass-accsubj">
     <header>
       <title xml:lang="en">Accusative plural object.</title>
-      <title xml:lang="smn">Akkusatiiviobjekti myös monikossa.</title>
+      <title xml:lang="smn">Akkusativobjekt maaŋgâlovvoost.</title>
+      <title xml:lang="fi">Akkusatiiviobjekti monikossa.</title>
     </header>
     <body>
       <description xml:lang="en">The noun "$1" is in the nominative, but is probably an object and should be in accusative.</description>
-      <description xml:lang="smn">Substantiivi "$1" on nominatiivissa, mutta se on luultavasti objekti, ja pitäisi siis olla akkusatiivissa.</description>
+      <description xml:lang="smn">Substantiv "$1" lii nominativist. Tot oroččij lemin celkkuu objekt. Tondiet tot kolgâččij leđe akkusativist.</description>
+      <description xml:lang="fi">Substantiivi "$1" on nominatiivissa. Se näyttäisi olevan lauseen objekti. Siinä tapauksessa sen tulisi olla akkusatiivissa.</description>
     </body>
   </error>
 
- 
   <error id="msyn-num-gensg">
     <header>
       <title xml:lang="en">Accusative plural object.</title>
-      <title xml:lang="smn">Akkusatiiviobjekti myös monikossa.</title>
+      <title xml:lang="smn">Akkusatiiviobjekt maaŋgâlovvoost.</title>
+      <title xml:lang="fi">Akkusatiiviobjekti monikossa.</title>
     </header>
     <body>
       <description xml:lang="en">The noun "$1" is in the nominative, but is probably an object and should be in accusative.</description>
-      <description xml:lang="smn">Jos lukusana on alle 7, niin "$1" pitää olla genetiivissäko?.</description>
+      <description xml:lang="smn">Jis lohosääni lii vuálá 7, te "$1" kolgâččij leđe genetivist.</description>
+      <description xml:lang="fi">Jos lukusana on alle 7, niin "$1":n tulisi olla genetiivissä.</description>
     </body>
   </error>
   
   <error id="msyn-num-par">
     <header>
       <title xml:lang="en">Partitive after high numeral.</title>
-      <title xml:lang="smn">Partitiivi suurten lukujen jälkeen.</title>
+      <title xml:lang="smn">Partitiv stuárráábin lovoi maŋa.</title>
+      <title xml:lang="fi">Partitiivi suurempien lukujen jälkeen.</title>
     </header>
     <body>
-      <description xml:lang="en">The noun "$1" is in the , but is following a numeral and should be in the partitive.</description>
-      <description xml:lang="smn">Jos lukusana on 7 tai enemmän, niin "$1" pitää olla partitiivissa.</description>
+      <description xml:lang="en">The noun "$1" follows a numeral and should be in the partitive.</description>
+      <description xml:lang="smn">Jis lohosääni lii 7 teikâ eenâb, te "$1" kolgâččij leđe partitivist.</description>
+      <description xml:lang="fi">Jos lukusana on 7 tai sitä suurempi, siinä tapauksessa "$1" tulisi olla partitiivissa.</description>
     </body>
   </error>
   
   <error id="msyn-mii-acc">
     <header>
       <title xml:lang="en">Accusative after mii and kii</title>
-      <title xml:lang="smn">Akkusatiivi mii- ja kii-sanojen jälkeen.</title>
+      <title xml:lang="smn">Akkusativ 'mii-' jâ 'kii'-saanij maŋa.</title>
+      <title xml:lang="fi">Akkusatiivi 'mii'- ja 'kii'-sanojen jälkeen.</title>
     </header>
     <body>
       <description xml:lang="en">The noun "$1" is in the nominative, but is following an interrogative pronoun and should be in the accusative plural.</description>
-      <description xml:lang="smn">Sana "$1" on nominatiivissa, mutta se tulee kysymyssanan jälkeen ja pitäisi ehkä olla monikon akkusatiivissa.</description>
+      <description xml:lang="smn">Sääni "$1" lii nominativist, mutâ tot kiävttoo koččâmušsääni maŋa. Talle tot kolgâččij leđe maaŋgâlovo akkusativist. </description>
+      <description xml:lang="fi">Sana "$1" on nominatiivissa, mutta se esiintyy kysymyssanan jälkeen. Siinä tapauksessa sen tulisi olla monikon akkusatiivissa.</description>
     </body>
   </error>
-
 
   <error id="msyn-gen-po">
     <header>
       <title xml:lang="en">Genitive before postposition</title>
-      <title xml:lang="smn">Genetiivi ennen postpositiota.</title>
+      <title xml:lang="smn">Genetiv kiävttoo postpositio ovddiibeln.</title>
+      <title xml:lang="fi">Genetiivi postposition edellä.</title>
     </header>
     <body>
       <description xml:lang="en">The noun "$1" is in the nominative, but is following by a postpositiond and should be in the genitive.</description>
-      <description xml:lang="smn">Sana "$1" on nominatiivissa, mutta se tulee ennen postpositiota ja pitäisi ehkä olla genetiivissä.</description>
+      <description xml:lang="smn">Sääni "$1" lii nominativist, mut tot kiävttoo postpositio ovddiibeln. Tondiet tot kolgâččij leđe genetivist.</description>
+      <description xml:lang="fi">Sana "$1" on nominatiivissa, mutta se esiintyy postposition edellä. Sen vuoksi sen tulisi todennäköisesti olla genetiivissä.</description>
     </body>
   </error>
 
   <error id="msyn-halfcongruence">
     <header>
       <title xml:lang="en">Half-congruence with genitive before locative noun</title>
-      <title xml:lang="smn">Puolikongruenssi genetiivissä ennen lokatiivia.</title>
+      <title xml:lang="smn">Pelikongruens genetivist lokativ ovddiibeln.</title>
+      <title xml:lang="fi">Puolikongruenssi genetiivissä lokatiivin edellä.</title>
     </header>
     <body>
       <description xml:lang="en">The word "$1" is in the locative, but is preceeding a locative noun and should be in the genitive.</description>
-      <description xml:lang="smn">Sana "$1" on lokavissa, mutta tulee ennen lokatiivissa olevaa substantiivia ja pitäisi ehkä olla genetiivissä.</description>
+      <description xml:lang="smn">Sääni "$1" lii lokativist, mut tot kiävttoo lokativist leijee substantiv ovddiibeln. Tondiet tot kolgâččij leđe genetivist.</description>
+      <description xml:lang="fi">Sana "$1" on lokatiivissa, mutta se esiintyy ennen lokatiivissa olevaa substantiivia. Sen vuoksi sen tulisi ehkä olla genetiivissä.</description>
     </body>
   </error>
 
   <error id="msyn-ness-acc-nom">
     <header>
       <title xml:lang="en">Nominative subject in neccessity constructions</title>
-      <title xml:lang="smn">Nominatiivisubjekti nessesitivirakenteessa</title>
+      <title xml:lang="smn">Nominativsubjekt nessessiviráhtusist</title>
+      <title xml:lang="fi">Nominatiivisubjekti nessessiivirakenteessa</title>
     </header>
     <body>
-      <description xml:lang="en">Sana "$1" is in the accusative. Even though it expresses necessity, it should be in the nominative</description>
-      <description xml:lang="smn">Sana "$1" on akkusatiivissa. Vaikka lause ilmaisee pakollisuutta, sen täytyy olla nominatiivissa.</description>
+      <description xml:lang="en">The word "$1" is in the accusative. Even though it expresses necessity, it should be in the nominative</description>
+      <description xml:lang="smn">Säni "$1" lii akkusativist. Veikkâ ceelhâ ilmaisee pakollisuutta, sen täytyy leđe nominativist.</description>
+      <description xml:lang="fi">Sana "$1" on akkusatiivissa. Vaikka lause ilmaisee pakollisuutta, sen täytyy olla nominatiivissa.</description>
     </body>
   </error>
 
-  <error id="msyn-ness-acc-ill">
+  <error id="msyn-ness-ill-nom">
     <header>
       <title xml:lang="en">Nominative subject in neccessity constructions</title>
-      <title xml:lang="smn">Nominatiivisubjekti nessesitivirakenteessa</title>
+      <title xml:lang="smn">Nominativsubjekt nessessiviráhtusist</title>
+      <title xml:lang="fi">Nominatiivisubjekti nessesiivirakenteessa</title>
     </header>
     <body>
-      <description xml:lang="en">Sana "$1" is in the illative. Even though it expresses necessity, it should be in the nominative</description>
-      <description xml:lang="smn">Sana "$1" on illatiivissa. Vaikka lause ilmaisee pakollisuutta, sen täytyy olla nominatiivissa.</description>
+      <description xml:lang="en">The word "$1" is in the illative. Even though it expresses necessity, it should be in the nominative</description>
+      <description xml:lang="smn">Sääni "$1" lii illativist. Veikkâ ceelhâ almoot-uv págulâšvuođâ, sääni kalga leđe nominativist.</description>
+      <description xml:lang="fi">Sana "$1" on illatiivissa. Vaikka lause ilmaisee pakollisuutta, sanan tulee olla nominatiivissa.</description>
     </body>
   </error>
 
   <error id="msyn-pl-obj">
     <header>
       <title xml:lang="en">Plural objects in the accusative</title>
-      <title xml:lang="smn">Monikon objekti akkusatiivissa</title>
+      <title xml:lang="smn">Maaŋgâlovo objekt akkusativist</title>
+      <title xml:lang="fi">Monikon objekti akkusatiivissa</title>
     </header>
     <body>
-      <description xml:lang="en">Sana "$1" is in the nominative. Since it probably is an object, it should be in accusative.</description>
-      <description xml:lang="smn">Sana "$1" on nominatiivissa. Inarinsaamessa monikon objektin sija on akkusatiivi.</description>
+      <description xml:lang="en">The word "$1" is in the nominative. Since it probably is an object, it should be in accusative.</description>
+      <description xml:lang="smn">Sääni "$1" lii nominativist. Sämikielâst objekt saje lii akkusativ.</description>
+      <description xml:lang="fi">Sana "$1" on nominatiivissa. Inarinsaamessa objektin sija on akkusatiivi.</description>
     </body>
   </error>
 
@@ -464,33 +522,39 @@
   <error id="syn-pred-not-attr">
     <header>
       <title xml:lang="en">Attributive form should be predicative</title>
-      <title xml:lang="smn">Attribuuttimuodon pitää olla predikatiivi</title>
+      <title xml:lang="smn">Attribuuthäämi kiävttoo predikativin</title>
+      <title xml:lang="fi">Attribuuttimuoto esiintyy predikatiivina</title>
     </header>
     <body>
-      <description xml:lang="en">Sana "$1" is in the attributive form, but in this context predicative seems to be a better choice.</description>
-      <description xml:lang="smn">Sana "$1" on attribuuttimuodossa, mutta tässä yhteydessä predikatiivi näyttää sopivan paremmin.</description>
+      <description xml:lang="en">The word "$1" is in the attributive form, but in this context predicative seems to be a better choice.</description>
+      <description xml:lang="smn">Sääni "$1" lii attribuutthäämist, mutâ taan ohtâvuođâst predikativ oroččij heiviimin pyerebeht.</description>
+      <description xml:lang="fi">Sana "$1" on attribuuttimuodossa, mutta tässä yhteydessä predikatiivi näyttäisi sopivan paremmin.</description>
     </body>
   </error>
 
   <error id="msyn-sg1-prfprc">
     <header>
       <title xml:lang="en">First person should be participle</title>
-      <title xml:lang="smn">Yksikön ensimmäinen persoonan pitää olla partisiippi</title>
+      <title xml:lang="smn">Oovtâlovo vuossâmuš persovn kolgâččij leđe partisip.</title>
+      <title xml:lang="fi">Yksikön ensimmäisen persoonan tulisi olla partisiippi.</title>
     </header>
     <body>
-      <description xml:lang="en">Sana "$1" is a present first person form, but in this context participle seems to be a better choice.</description>
-      <description xml:lang="smn">Sana "$1" on yksikön ensimmäisessä persoonassa, mutta tässä yhteydessä partisiippi näyttää sopivan paremmin.</description>
+      <description xml:lang="en">The word "$1" is a present first person form, but in this context participle seems to be a better choice.</description>
+      <description xml:lang="smn">Sääni "$1" lii oovtâlovo vuossâmuu persovnist, mutâ taan ohtâvuođâst partisip oroččij heiviimin pyerebeht.</description>
+      <description xml:lang="fi">Sana "$1" on yksikön ensimmäisessä persoonassa, mutta tässä yhteydessä partisiippi näyttäisi sopivan paremmin.</description>
     </body>
   </error>
 
   <error id="real-pisso-pissood">
     <header>
       <title xml:lang="en">"pissom" should be "pissoom"</title>
-      <title xml:lang="smn">"pissom" pitäisi olla "pissoom"</title>
+      <title xml:lang="smn">"pissom" kolgâččij leđe "pissoom"</title>
+      <title xml:lang="fi">"pissom" pitäisi olla "pissoom"</title>
     </header>
     <body>
       <description xml:lang="en">The word "$1" is used as "muu $1", in this context participle seems to be a better choice.</description>
-      <description xml:lang="smn">Sana "$1" on käytössä kontekstissa "muu $1", mutta tässä yhteydessä partisiippi näyttää sopivan paremmin.</description>
+      <description xml:lang="smn">Sääni "$1" lii kevttum kontekstist "muu $1", mut taan ohtâvuođâst partisip oroččij heiviimin pyerebeht.</description>
+      <description xml:lang="fi">Sana "$1" on käytössä kontekstissa "muu $1", mutta tässä yhteydessä partisiippi näyttäisi sopivan paremmin.</description>
     </body>
   </error>
 
@@ -499,67 +563,79 @@
   
   <error id="typo">
     <header>
-      <title xml:lang="en">Spelling errors</title>
-      <title xml:lang="smn">Čállinmeattáhusat</title>
+      <title xml:lang="en">Spelling error</title>
+      <title xml:lang="smn">Časkemfeilâ</title>
+      <title xml:lang="fi">Lyöntivirhe</title>
     </header>
     <body>
-      <description xml:lang="en">Not in the dictionary</description>
-      <description xml:lang="smn">Ii leat sátnelisttus</description>
+      <description xml:lang="en">Not in the spell checker.</description>
+      <description xml:lang="smn">Sääni váilu tivvoomohjelm sänilistoost.</description>
+      <description xml:lang="fi">Sana puuttuu korjausohjelman sanalistasta.</description>
     </body>
   </error>
 
   <error id="double-space-before">
     <header>
-      <title xml:lang="en">Space errors</title>
-      <title xml:lang="smn">Sátnegaskameattáhusat</title>
+      <title xml:lang="en">Space error</title>
+      <title xml:lang="smn">Sänikoskâfeilâ</title>
+      <title xml:lang="fi">Sanavälivirhe</title>
     </header>
     <body>
       <description xml:lang="en">There are two spaces in front of "$1"</description>
-      <description xml:lang="smn">Leat guokte gaskka ovdal "$1"</description>
+      <description xml:lang="smn">Kyehti koskâčaskem "$1" ovddiibeln</description>
+      <description xml:lang="fi">Ennen "$1" on kaksi välilyöntimerkkiä</description>
     </body>
   </error>
 
   <error id="space-after-paren-beg">
     <header>
       <title xml:lang="en">Space errors</title>
-      <title xml:lang="smn">Sátnegaskameattáhusat</title>
+      <title xml:lang="smn">Sänikoskâfeilâ</title>
+      <title xml:lang="fi">Sanavälivirhe</title>
     </header>
     <body>
-      <description xml:lang="en">There is a space after the opening parenthesis "$1"</description>
-      <description xml:lang="smn">Lea gaska vuosttaš paragráfa "$1" ovddas</description>
+      <description xml:lang="en">There is a superfluous space after the opening parenthesis "$1"</description>
+      <description xml:lang="smn">Paijeelmiärálâš koskâ vuossâmuu ruákkiruáđu "$1" maŋa</description>
+      <description xml:lang="fi">Ylimääräinen välilyönti ensimmäisen hakasulun "$1" jälkeen</description>
     </body>
   </error>
 
   <error id="space-before-paren-end">
     <header>
-      <title xml:lang="en">Space errors</title>
-      <title xml:lang="smn">Sátnegaskameattáhusat</title>
+      <title xml:lang="en">Space error</title>
+      <title xml:lang="smn">Sänikoskâfeilâ</title>
+      <title xml:lang="fi">Välilyöntivirhe</title>
     </header>
     <body>
       <description xml:lang="en">There is a space before the closing parenthesis "$1"</description>
-      <description xml:lang="smn">Lea gaska nuppi paragráfa "$1" ovddas</description>
+      <description xml:lang="smn">Paijeelmiärálâš koskâ nube ruákkiruáđu "$1" oovdâst</description>
+      <description xml:lang="fi">Ylimääräinen välilyönti ennen oikea sulkua "$1"</description>
     </body>
   </error>
 
   <error id="space-before-punct-mark">
     <header>
-      <title xml:lang="en">Space errors</title>
-      <title xml:lang="smn">Sátnegaskameattáhusat</title>
+      <title xml:lang="en">Space error</title>
+      <title xml:lang="smn">Sänikoskâfeilâ</title>
+      <title xml:lang="fi">Välilyöntivirhe</title>
     </header>
     <body>
       <description xml:lang="en">There is a space in front of the punctuation mark "$1"</description>
-      <description xml:lang="smn">Lea gaska "$1" ovddas</description>
+      <description xml:lang="smn">Lii koskâ "$1" oovdâst</description>
+      <description xml:lang="fi">"$1" vasemmalla puolella on väli.</description>
     </body>
   </error>
 
   <error id="no-space-after-punct-mark">
     <header>
       <title xml:lang="en">Space errors</title>
-      <title xml:lang="smn">Sátnegaskameattáhusat</title>
+      <title xml:lang="smn">Sátnekoskâfeilâ</title>
+      <title xml:lang="fi">Välilyöntivirhe</title>
     </header>
     <body>
       <description xml:lang="en">There is no space after the punctuation mark "$1"</description>
-      <description xml:lang="smn">Ii leat gaska "$1" maŋis</description>
+      <description xml:lang="smn">Koskâmeerhâ "$1" maŋa váilu koskâmerkkâ </description>
+      <description xml:lang="fi">Välimerkin "$1" jälkeen puuttuu välilyönti</description>
     </body>
   </error>
  
