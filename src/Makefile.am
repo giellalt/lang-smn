@@ -229,6 +229,38 @@ generator-dict-gt-norm.%: generator-dict-gt-norm.tmp.%
 		 save stack $@\n\
 		 quit\n" | $(XFST_TOOL)
 
+# Also the HFST Grammar Checker generator needs special treatment:
+generator-gramcheck-gt-norm.hfst: generator-gramcheck-gt-norm.tmp.hfst \
+				filters/remove-norm-comp-tags.hfst           \
+				filters/remove-derivation-position-tags.hfst \
+				filters/make-optional-grammatical-tags.hfst  \
+				filters/rename-POS_before_Der-tags.hfst      \
+				filters/insert-default-compounding-tags.hfst \
+				filters/insert-default_left_compounding-tags.hfst \
+				filters/block-illegal_compound-strings.hfst  \
+				filters/split-CmpN-tags.hfst                 \
+				filters/convert_to_flags-CmpNP-tags.hfst     \
+				filters/split-CmpNP-tags.hfst
+	$(AM_V_HXFST)$(PRINTF) "\
+	set encode-weights ON\n\
+	read regex \
+			@\"filters/remove-norm-comp-tags.hfst\"           \
+		.o. @\"filters/remove-derivation-position-tags.hfst\" \
+		.o. @\"filters/make-optional-grammatical-tags.hfst\"  \
+		.o. @\"filters/rename-POS_before_Der-tags.hfst\"      \
+		.o. @\"filters/block-illegal_compound-strings.hfst\"         \
+		.o. @\"filters/split-CmpN-tags.hfst\"                        \
+		.o. @\"filters/insert-default_left_compounding-tags.hfst\"   \
+		.o. @\"filters/insert-default-compounding-tags.hfst\"        \
+		.o. @\"filters/remove-illegal-derivation-strings-flagbased.hfst\" \
+		.o. @\"filters/convert_to_flags-CmpNP-tags.hfst\"            \
+		.o. @\"filters/split-CmpNP-tags.hfst\"                       \
+		.o. @\"$<\"                                           \
+		;\n\
+	twosided flag-diacritics\n\
+	save stack $@\n\
+	quit\n" | $(HFST_XFST) -p $(MORE_VERBOSITY)
+
 ##################################################################
 #### END: Add local processing instructions ABOVE this line ######
 ##################################################################
