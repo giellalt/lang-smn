@@ -79,30 +79,45 @@ while(<>) {
 # sme special symbols
 #	s/\^//g ;
 	s/á /á5 /g ; # final á would otherwise be a in smn
-	s/b9/b/g ;
-	s/e9/e/g ;
-	s/d9/d/g ;
-	s/g9/g/g ;
-	s/h9/h/g ;
-	s/j9/j/g ;
-	s/k9/k/g ;
 	s/m9/m5/g ;
-	s/n9/n/g ;
-	s/o9/o/g ;
-	s/p9/p/g ;
-	s/r9/r/g ;
-	s/s9/s/g ;
-	s/t9/t/g ;
-	s/z9/z/g ;
-	s/æ9/æ/g ;
-	s/7 / /g ;
-	s/8 / /g ;
+	s/æ7/æ/g ;
 	s/tt /tt5 /g ;
 	s/mn /m5n /g ;
 	s/d /d5 /g ;
 	s/ll /ll5 /g ;
-	s/9 / /g ;
-	s/9\^/^/g ; # chech: could be the 9 should go in giella-shared.
+        s/b9 /b /g ;
+        s/d9 /d /g ;
+        s/e9 /e /g ;
+        s/g9 /g /g ;
+        s/h9 /h /g ;
+        s/j9/j/g ;
+        s/k9 /k /g ;
+        s/m9 /m /g ;
+        s/n9 /n /g ;
+        s/o9 /o /g ;
+        s/p9 /p /g ;
+        s/r9 /r /g ;
+        s/s9 /s /g ;
+        s/t9 /t /g ;
+        s/t9d/td/g ;
+        s/z9 /z /g ;
+
+        s/b9-/b-/g ;
+        s/d9-/d-/g ;
+        s/e9-/e-/g ;
+        s/g9-/g-/g ;
+        s/h9-/h-/g ;
+        s/j9-/j-/g ;
+        s/k9-/k-/g ;
+        s/m9-/m-/g ;
+        s/n9-/n-/g ;
+        s/o9-/o-/g ;
+        s/p9-/p-/g ;
+        s/r9-/r-/g ;
+        s/s9-/s-/g ;
+        s/t9-/t-/g ;
+        s/z9-/z-/g ;
+
 
 
 	my $line = $_;
