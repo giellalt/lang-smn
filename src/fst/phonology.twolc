@@ -212,27 +212,6 @@ t:đ <=> Vow: _   k4: (%^RC:) WeakGrade ; !RULE RC !! 1) tk4:đk WG
 !!€ puáttee#vuođ0000>ii
 
 
-"k4:h gradation for kk4, tk4, rkk4, lkk4"
-!! * __@RULENAME@__ \\  
-k4:h <=> Vow: [t:|k:]                    _  WeakGrade  ; !RULE RC  !! 1) WG atka:ađha, kk4:h
-         Vow: [l | r | v | i4: | đ | j ]  k: _ WeakGrade ; !RULE RC !! 2) e.g. rkk:rh
-
-"xx:yy gradation for xx4"
-!! * __@RULENAME@__ \\   puáhhoin, sukk4á:suhháást
-Cx:Cy <=> Vow: (i4:) _  Cz:Cy WeakGrade %^CLEN: ; !RULE RC 
-	where Cx in ( k  c  p ) 
-	      Cy in ( h  s  v ) 
-	      Cz in ( k4 c4 p4  ) 
-		  matched ;
-         
-!!€ mä^RVtk4i^WG^RLEN>.#.
-!!€ määđhi00>.#.
-
-!!€ su^RVkk4á^SV^WG^CLEN^SLEN>st
-!!€ su0hháá000>st
-
-!!€ a^RVi4kk4âi^WG^CLEN>ih
-!!€ a0ihh0i00>ih
 
 "h:v gradation for hh"
 !! * __@RULENAME@__ \\  já%^RVhhá%^SVl%^ÁI : jäävvil
@@ -295,13 +274,39 @@ Cx:v <=>  _  Cz (%^RC:) Vow:+ (%^SV: ) (Cns:+) ([%^ÁI:|%^ÁE:]) (%^EA:)  ([%^FC
 !!€ soo0lâ00>n
 
 
+"k4:h gradation for kk4, tk4, rkk4, lkk4"
+!! * __@RULENAME@__ \\  
+k4:h <=> Vow: [t:|k:]                    _  WeakGrade  ; !RULE RC  !! 1) WG atka:ađha, kk4:h
+         Vow: [l | r | v | i4: | đ | j ]  k: _ WeakGrade ; !RULE RC !! 2) e.g. rkk:rh
+
+"xx:yy gradation for xx4"
+!! * __@RULENAME@__ \\   puáhhoin, sukk4á:suhháást
+Cx:Cy <=> Vow: (i4:) _  Cz:Cy WeakGrade %^CLEN: ; !RULE RC 
+	where Cx in ( k  c  p ) 
+	      Cy in ( h  s  v ) 
+	      Cz in ( k4 c4 p4  ) 
+		  matched ;
+         
+!!€ mä^RVtk4i^WG^RLEN>.#.
+!!€ määđhi00>.#.
+
+!!€ su^RVkk4á^SV^WG^CLEN^SLEN>st
+!!€ su0hháá000>st
+
+!!€ a^RVi4kk4âi^WG^CLEN>ih
+!!€ a0ihh0i00>ih
+
+
 !! !Consonant shortening
 
 "k:0 gradation for xkk4"
 !! * __@RULENAME@__ \\  for lkk4, rkk4, vkk4
-k:0 <=> Vow: [l | j | r | v | i4: | đ ] _ k4:h  WeakGrade (%^CLEN: ) (%^VBACK:) (%^SVLOW:) ; !RULE RC !! 1) WG
+k:0 <=>  Vow: [l | j | r | v | i4: | đ ] _ k4:h  WeakGrade (%^CLEN: ) (%^VBACK:) (%^SVLOW:) ; !RULE RC !! 1) WG
 !k:0 <=> Vow: [l | j | r | v | i4: | đ ] _ k4:h  WeakGrade (%^VBACK:) (%^SVLOW:) ; !RULE RC !! 1) WG 
-        Vow: [l | j | r | v | i4: | đ ] _ k4:k Vow: ([%^EA:|%^EX:]) %^CSH: (%^VBACK:) (%^RLEN:)  [.#.| %>] ; !RULE RC !! 2) CSH 
+         Vow: [l | j | r | v | i4: | đ ] _ k4:k Vow: ([%^EA:|%^EX:]) %^CSH: (%^VBACK:) (%^RLEN:)  [.#.| %>] ; !RULE RC !! 2) CSH 
+
+! TODO: WG: kk:k, kk4:h, Lengthening: kk:kk, kk4:hh (jf. hfst-twolc test)
+
 
 
 "xyy:xy gradation A"
@@ -570,9 +575,9 @@ Cy:0  <=>  Sgm:  _ (%^CSH:) (%^RLEN:) %> Cy Cy ;  !RULE SC
 %^SC:Cx <=> Cx _ Triggers:* [%>|.#.] ; !RULE SC
         where Cx in ( k l n p t ) ;
 
-!rejected:
-!!€ kahhaan^SC^CSH^RVSH>ist
-!!€ ka0ha0nj00>ist
+!rejected, reintroduce later (Trond)
+! kahhaan^SC^CSH^RVSH>ist
+! ka0ha0nj00>ist
 
 "Clitic devoicing"
 Cx:Cy <=> :UnvoicedCns (UnvoicedCns:) Triggers:* %> #: _ ;
