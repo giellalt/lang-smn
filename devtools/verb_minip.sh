@@ -23,5 +23,6 @@ do
 #   echo "${lemma}${form}" | $LOOKUP $GTLANGS/lang-smn/src/generator-gt-norm.xfst # xfst
       echo "${lemma}${form}" | $HLOOKUP $GTLANGS/lang-smn/src/generator-gt-norm.hfstol # hfst
  done
+ rm -f $L_FILE
 done
 
