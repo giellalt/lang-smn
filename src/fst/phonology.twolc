@@ -176,7 +176,7 @@ Rules
 
 !! !Consonant gradation and shortening
 
-"x:y consonant gradation"
+"x:y consonant gradation" ! (xxx kánske RC eret?)
 !! * __@RULENAME@__ \\  WG gives x:x and x:y, when there is no consonant lengthening  
 Cx:Cy <=> Vow: _ (%^RC:) WeakGrade ([%^VHIGH:|%^VBACK:]) ([%^RVSH:|%^RLEN:]) (%^SLEN:) (%^SVLOW:)  [.#.| %>] ; !RULE RC only \CLEN makes conflict
 	where Cx in ( h p c č )    
@@ -185,6 +185,15 @@ Cx:Cy <=> Vow: _ (%^RC:) WeakGrade ([%^VHIGH:|%^VBACK:]) ([%^RVSH:|%^RLEN:]) (%^
 
 !!€ tu^RVp^RCe^WG
 !!€ tu0v0e0
+
+!käähir to käävir
+!!€ käähir^WG>
+!!€ käävir0>
+
+!juáhu to juávuttáá
+!!€ juáh^RCu^WG^RVSH>ttáá
+!!€ juáv0u00>ttáá
+
 
 
 "Quality change of root consonant x:yy"
@@ -198,13 +207,25 @@ Cx:Cy <=> Vow: _ %^RC: :Vow+ Cns:* [Triggers: -  %^FCD:]* %^WG: %^CLEN: (%^VHIGH
 !!€ va0vvo00>im
 
 
+
+"hh:vv"
+!! * __@RULENAME@__ \\  já%^RVhhá%^SVl%^ÁI : jäävvil
+h:v <=> Vow:     _ h: WeakGrade  %^CLEN: ; !RULE RC  !! 1) WG h:v h:
+        Vow:  h: _    WeakGrade          ; !RULE RC  !! 2) WG h:  h:v
+
+!!€ já%^RVhhá%^SVl^ÁI^WG^CLEN^RLEN
+!!€ jäävvi0l0000
+
+!!€ nahha^SVr^ÁE^WG^RLEN
+!!€ na0ve0r000
+
+
 "t:đ, also tk4:đh gradation, part 1" 
 !! * __@RULENAME@__ \\   
 t:đ <=> Vow: _ k4: (%^RC:) WeakGrade ;       !! * 1) tk4:đk WG 
         Vow: _     (%^RC:) WeakGrade ;       !! * 2) čyet%^RCi3:čyeđi 
         Vow: _ j           WeakGrade ;       !! * 3) vitjá:viđjá
         Vow: _     (%^RC:) â: %^FVD: %^WG: ; !! * 2) vädis#vuot^RCâ^FVD^WG>i5i5
-!       Vow: _     t4: WeakGrade %^CLEN: ;   !! * 2) tt4:đđ 
 
 !!€ jo^RVtk4â^WG^RLEN>
 !!€ joođhâ00>
@@ -215,15 +236,6 @@ t:đ <=> Vow: _ k4: (%^RC:) WeakGrade ;       !! * 1) tk4:đk WG
 !!€ puáttee#vuot^RCâ^FVD^WG>i5i5
 !!€ puáttee#vuođ0000>ii
 
-
-
-"hh:vv"
-!! * __@RULENAME@__ \\  já%^RVhhá%^SVl%^ÁI : jäävvil
-h:v <=> Vow:     _ h: WeakGrade  %^CLEN: ; !RULE RC  !! 1) WG h:v h:
-        Vow:  h: _    WeakGrade          ; !RULE RC  !! 2) WG h:  h:v
-
-!!€ já%^RVhhá%^SVl^ÁI^WG^CLEN^RLEN
-!!€ jäävvi0l0000
 
 
 "t4:đ etc. gradation for tt:đ etc." 
@@ -612,30 +624,6 @@ Cx:Cy <=> :UnvoicedCns (UnvoicedCns:) Triggers:* %> #: _ ;
 
 !! !First syllable vowel shortening
 
-
-!!€ koonnjâl^CSH>ân
-!!€ ko0n0jâl0>ân
-
-!!€ kappeer^CSH^SVSH>ist
-!!€ ka0p0er00>ist
-
-!!€ čäällim^CSH>ist
-!!€ čä00lim0>ist
-
-!This is not correct, Check it:
-!!€ muusik^SC^CSH^RVSH>ist
-!!€ mu0sikk00>ist
-
-! kahhaan^SC^CSH^RVSH>ist
-! ka0ha0n0j00>ist
-
-!aarrân:arânân
-!!€ aarrân^CSH>ân
-!!€ a00rân0>ân
-
-!rejected:
-!!€ kiirrâs^RVSH>ân
-!!€ ki0rrâs0>ân
  
  
  
@@ -653,20 +641,24 @@ Vy:0 <=> Vx: _  Cns:+ [ Cns: - %^RC:0 ] [Vow: - u2:]  %^WG: (%^CLEN:) %^SVLOW: %
              Vy in ( a e i o u á ä y a e i o u á ä ) 
        matched ;
 
+!!€ koonnjâl^CSH>ân
+!!€ ko0n0jâl0>ân
 
-! čäällu2^VBACK^RVSH>čč>im
-"Long vowel shortening"
-!! * __@RULENAME@__ \\ (example?), no ^CSH, since that gives Vy:0
-Vy:0 <=> Vx: _ [Cns: - č:] Cns:* (%^RC:) [Vow: - u2:]  %^WG:  %^RVSH: %^SVLOW: [%>|.#.] \e ; !! * RV 2st stems
-         Vx: _  Cns:+                     Vow:  Cns: %^CSH: %^RVSH: %^SVSH:    [%>|.#.] ;    !! * RV 3syll kaavpug:kavpugân 
-         Vx: _  Cns:+                     Vow: (%^SV:) Cns:+ Vow: Cns: %^RVSH: [%>|.#.] ;    !! * RV táálhudem koomerdem
-       where Vx in ( a e i o u y á ä ) 
-             Vy in ( a e i o u y á ä ) 
-       matched ;
+!!€ kappeer^CSH^SVSH>ist
+!!€ ka0p0er00>ist
 
-"e:0 in passive"
-!! * __@RULENAME@__ \\
-e:0 <=>   e: _  Cns:+ u2:u   ([%^WG: | %^CSH:]) (%^CLEN:) %^VBACK: %^RVSH:  [%>|.#.] ; ! RV 
+!!€ čäällim^CSH>ist
+!!€ čä00lim0>ist
+
+!aarrân:arânân
+!!€ aarrân^CSH>ân
+!!€ a00rân0>ân
+
+!!€ kiirrâs^RVSH>ân
+!!€ ki0rrâs0>ân
+
+!!€ muusik^SC^CSH^RVSH>ist
+!!€ mu0sikk00>ist
 
 !!€ mááh^RCu^WG^CLEN^SVLOW>in
 !!€ má0vvo000>in
@@ -675,13 +667,32 @@ e:0 <=>   e: _  Cns:+ u2:u   ([%^WG: | %^CSH:]) (%^CLEN:) %^VBACK: %^RVSH:  [%>|
 !!€ mo0l0â00>ttáá
 
 
+
+! čäällu2^VBACK^RVSH>čč>im
+"Long vowel shortening"
+!! * __@RULENAME@__ \\ (example?), no ^CSH, since that gives Vy:0
+Vy:0 <=> Vx: _ [Cns: - č:] Cns:* (%^RC:) [Vow: - u2:]  %^WG:  %^RVSH: %^SVLOW: [%>|.#.] \e ; !! * RV 2st stems
+         Vx: _  Cns:+                     Vow:  Cns:   %^CSH: %^RVSH: %^SVSH:  [%>|.#.] ;    !! * RV 3syll kaavpug:kavpugân 
+         Vx: _  Cns:+                     Vow: (%^SV:) Cns:+ Vow: Cns: %^RVSH: [%>|.#.] ;    !! * RV táálhudem koomerdem
+       where Vx in ( a e i o u y á ä ) 
+             Vy in ( a e i o u y á ä ) 
+       matched ;
+
+
+"e:0 in passive"
+!! * __@RULENAME@__ \\
+e:0 <=>   e: _  Cns:+ u2:u   ([%^WG: | %^CSH:]) (%^CLEN:) %^VBACK: %^RVSH:  [%>|.#.] ; ! RV 
+!e:0 <=>   e: _  Cns:+ u2:u   Triggers:*  %^RVSH: ; ! This could be tested as well
+
+!!€ keessu2^CLEN^VBACK^RVSH>đ
+!!€ ke0ssu000>đ
+
 "Underlying long vowel shortening iä:e and ää:ä or a"
 !! * __@RULENAME@__ \\ čääh%^RCu2%^CLEN%^VBACK%>um
-ä:0 <=> i: _  Cns:+ Vow:  Cns: [%^ÁI:|%^ÁE:] %^WG: %^RVSH:  [%>|.#.] ;  ! RV 
-        ä: _  Cns:+ u2:o  Triggers:* %^RVSH:  [%>|.#.] ; ! RV !%^VBACK also?
-        ä: _  Cns:+ u2:u   ([%^WG: | %^CSH:]) (%^CLEN:) %^VBACK: %^RVSH:  [%>|.#.] ;
-  \Vow ä:á _  Cns:+ Vow:  [%^EA:|%^EX:] ([%^CSH:| %^CLEN:]) %^RVSH:  [%>|.#.] ; ! RV  !sámásis
-
+ä:0 <=> i: _ Cns:+ Vow:  Cns: [%^ÁI:|%^ÁE:] %^WG:           %^RVSH: [%>|.#.] ;  ! RV 
+        ä: _ Cns:+ u2:o                Triggers:*           %^RVSH: [%>|.#.] ; ! RV !%^VBACK also?
+        ä: _ Cns:+ u2:u ([%^WG:|%^CSH:]) (%^CLEN:) %^VBACK: %^RVSH: [%>|.#.] ;
+  \Vow ä:á _ Cns:+ Vow:    [%^EA:|%^EX:] ([%^CSH:|%^CLEN:]) %^RVSH: [%>|.#.] ; ! RV  !sámásis
 
 
 !!  3st stems viäskár veskirin, časkes časkes ča%^RVskas%^ÁE viäskár%^ÁI%^WG%^RVSH
@@ -690,17 +701,11 @@ e:0 <=>   e: _  Cns:+ u2:u   ([%^WG: | %^CSH:]) (%^CLEN:) %^VBACK: %^RVSH:  [%>|
 !!€ kaavpug^CSH^RVSH^SVSH>ân
 !!€ ka0vpug000>ân
 
-! moolâ to moolâ:		  
-!!€ mool^RCâ^WG>
-!!€ mool0â0>
 
-!käähir to käävir
-!!€ käähir^WG>
-!!€ käävir0>
-
-!juáhu to juávuttáá
-!!€ juáh^RCu^WG^RVSH>ttáá
-!!€ juáv0u00>ttáá
+! Notes to fix in lexc
+! The -j- form cannot be generated from this underlying form, must be fixed in lexc.
+! kahhaan^SC^CSH^RVSH>ist
+! ka0ha0n0j00>ist
 
 
 
@@ -709,8 +714,8 @@ e:0 <=>   e: _  Cns:+ u2:u   ([%^WG: | %^CSH:]) (%^CLEN:) %^VBACK: %^RVSH:  [%>|
 
 "Root vowel lenghtening in many stems"
 !! * __@RULENAME@__ \\  no rootvowel length if stem vowel lengthens and the consonantcentre consists of two or more consonants 
-%^RV:Vy <=> Vx _ Cns:+ (Vow:0) Vow: (Vow:0)  (Cns:+) Triggers:*  (â) %^RLEN: ;  !! * RV  2syll and 3syll 
-            Vx _ Cns:  (Cns:0)  Vow: (:Vow) (Cns:+)  Triggers:*  (â) %^RLEN: %^SLEN:  [%>|.#.] ; ! RV  
+%^RV:Vy <=> Vx _ Cns:+ (Vow:0) Vow: (Vow:0) (Cns:+) Triggers:* (â) %^RLEN: ;  !! * RV  2syll and 3syll 
+            Vx _ Cns:  (Cns:0) Vow: (:Vow)  (Cns:+) Triggers:* (â) %^RLEN: %^SLEN: [%>|.#.] ; ! RV  
        where Vx in (a e i o y á ö A E I O Á Ö ) ! Ánná:Ááná u, U in separate rule Root vowel u length
              Vy in (a e i o y á ö a e i o á ö ) 
        matched ;
@@ -734,18 +739,18 @@ e:0 <=>   e: _  Cns:+ u2:u   ([%^WG: | %^CSH:]) (%^CLEN:) %^VBACK: %^RVSH:  [%>|
 
 "Root vowel o5:u "
 !! * __@RULENAME@__ \\ 
-o5:u <=> \Vow: _ %^RV: Cns:+   i (%^WG:) (%^CLEN:)   (%^RLEN:) [%>|.#.] ;  !! * RV  puhtii
+o5:u <=> \Vow: _ %^RV: Cns:+ i (%^WG:) (%^CLEN:) (%^RLEN:) [%>|.#.] ;  !! * RV puhtii
 
 
 
 
 "Root vowel ä:ää lenghtening and diphthongisation e:iä"
 !! * __@RULENAME@__ \\ special rule, for avoiding conflict spä%^RVi4lih%^WG%^RLEN, 
-%^RV:ä <=> ä _ Cns:+  Vow:+        Cns:+            %^CLEN: %^RLEN: ; !! * RV  1) vä%^RVr%^RCid
-           ä _ Cns:+  Vow: (Vow:) (Cns:+)   (%^WG: |%^CSH:)   %^RLEN:  (%^SLEN:) (%^SVSH:) [%>|.#.] ; !! * RV  2)
+%^RV:ä <=> ä _ Cns:+  Vow:+        Cns:+           %^CLEN:   %^RLEN: ; !! * RV  1) vä%^RVr%^RCid
+           ä _ Cns:+  Vow: (Vow:) (Cns:+)   (%^WG:|%^CSH:)   %^RLEN:  (%^SLEN:) (%^SVSH:) [%>|.#.] ; !! * RV  2)
           :ä _ Cns:*  :i (%^SV:)   Cns %^ÁI: %^WG: (%^CLEN:) %^RLEN: [%>|.#.] ; !! * RV  3)já%^RVhhá%^SVl%^ÁI%^WG%^RLEN>
-           ä _ Cns:+  i:                                    %^WG: %^RLEN: [%>|.#.] \i: ;  !! * RV  4)
-         e:i _ Cns:+  i:                     [%^EA:|%^EX:] (%^CSH:) (%^CLEN:) (%^RLEN:) [%>|.#.] ; ! RV 5) e:iä, ergi -> iärgán
+           ä _ Cns:+  i:                               %^WG: %^RLEN: [%>|.#.] \i: ;  !! * RV  4)
+         e:i _ Cns:+  i:   [%^EA:|%^EX:] (%^CSH:) (%^CLEN:) (%^RLEN:) [%>|.#.] ; ! RV 5) e:iä, ergi -> iärgán
          e:i _ Cns:+ Vow: ([%^WG:|%^CSH:]) (%^CLEN:) %^VHIGH: ;  ! RV 6) too much here?
          e:i _ Cns:+ u i4: %^WG:  [%>|.#.] ;  ! RV 7) čevžuin čiävžui če%^RVvžui4%^WG>
 
