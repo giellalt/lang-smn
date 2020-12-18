@@ -78,6 +78,8 @@ while(<>) {
 
 # sme special symbols
 #	s/\^//g ;
+	s/tt9 /tt5 /g;
+	s/dd9 /dd5 /g;
 	s/á /á5 /g ; # final á would otherwise be a in smn
 	s/m9/m5/g ;
 	s/æ7/æ/g ;
