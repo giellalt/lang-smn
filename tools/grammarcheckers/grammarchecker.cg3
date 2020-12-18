@@ -2364,7 +2364,7 @@ COPY:msyn-num-gen-par (Par &SUGGEST) EXCEPT (Sg Acc) TARGET (N &msyn-num-gen-par
 MAP:msyn-pass-accsubj (&msyn-pass-accsubj) TARGET N IF (0C Acc + Pl)(1 Der/Pass + Pl3 OR LEXICALISED-PASS-V + Pl3)(NOT 1 PrfPrc OR TV);
 
 MAP:msyn-pass-accsubj (&msyn-pass-accsubj) TARGET N IF (0C Acc + Pl)(1 COMMA LINK 1 Rel LINK *1 COMMA LINK 1 Der/Pass + Pl3 OR LEXICALISED-PASS-V + Pl3 LINK NOT 0 PrfPrc OR TV);
-COPY:msyn-pass-accsubj (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &msyn-pass-accsubj);
+COPY:msyn-pass-accsubj (Nom &SUGGEST) EXCEPT (Acc &msyn-pass-accsubj) TARGET (N Pl &msyn-pass-accsubj);
 
 
 #fi	Saamenkielisiä nimityksiä käytetään vähän. - 
@@ -2375,7 +2375,7 @@ COPY:msyn-pass-accsubj (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &msyn-pass-accsubj
 
 
 MAP:msyn-pass-accsubj (&msyn-pass-accsubj) TARGET N IF (0C Acc + Pl)(1 ("leđe") + Pl3 OR Sg3) (2 PrfPrc + Der/Pass OR LEXICALISED-PASS-V);
-COPY:msyn-pass-accsubj (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &msyn-pass-accsubj);
+COPY:msyn-pass-accsubj (Nom &SUGGEST) EXCEPT (Acc &msyn-pass-accsubj) TARGET (N Pl &msyn-pass-accsubj);
 
 #% Tävirijd láppojii ääitist.
 #$ Tävireh láppojii ääitist.
@@ -2385,6 +2385,11 @@ COPY:msyn-pass-accsubj (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &msyn-pass-accsubj
 
 #% Tävirijd lii lappum ääitist.
 #$ Tävireh láá lappum ääitist.
+
+#% Mon ennuv kiirjijd láá tiilájum?
+#$ Mon ennuv kirjeh láá tiilájum? 
+
+
 
 
 #!! Attributive forms
@@ -2404,6 +2409,11 @@ COPY:msyn-mii-acc (Pl Acc &SUGGEST) EXCEPT (Sg Nom) TARGET ( N &msyn-mii-acc);
 
 ADD:msyn-mii-acc (&msyn-mii-acc) TARGET N IF (-2 BOS)(-1 ("kii"))(0 (N Sg Nom))(1 (N Nom) OR (Pron Nom))(*2 LEDE);
 COPY:msyn-mii-acc (Pl Acc &SUGGEST) EXCEPT (Sg Nom) TARGET ( N &msyn-mii-acc);
+
+
+ADD:msyn-attr-pred (&msyn-attr-pred)  TARGET (A Attr) IF (1 EOS) ;
+    #% Tot lii hirmâd.
+    #$ Tot lii hirmâd styeres.
 
 
 
