@@ -2,37 +2,37 @@
 ## Copyright: Sámediggi/Divvun/UiT
 ## Licence: GPL v3+
 
-# List all jspwiki files that should be created from source files in the
-# JSP_PAGES variable. The filename pattern is as follows:
+# List all md files that should be created from source files in the
+# MD_PAGES variable. The filename pattern is as follows:
 #
-# dir/filename.lexc => filename-dir.jspwiki
+# dir/filename.lexc => filename-dir.md
 
-JSP_PAGES=root-morphology.jspwiki        \
-		adjectives-stems.jspwiki         \
-        adjectives-affixes.jspwiki         \
-		adpositions-stems.jspwiki        \
-		adverbs-stems.jspwiki            \
-		conjunctions-stems.jspwiki       \
-		nouns-affixes.jspwiki            \
-		nouns-stems.jspwiki              \
-		numerals-stems.jspwiki           \
-		particles-stems.jspwiki          \
-		pronouns-stems.jspwiki           \
-		propernouns-affixes.jspwiki      \
-		punctuation-stems.jspwiki        \
-		subjunctions-stems.jspwiki       \
-		smi-propernouns-stems.jspwiki       \
-		smn-propernouns-stems.jspwiki       \
-		verbs-affixes.jspwiki \
-		verbs-stems.jspwiki              \
-		phonology-morphology.jspwiki      \
-		disambiguator-syntax.jspwiki 
-# clitics-morphology.jspwiki       \
-# compounding-morphology.jspwiki   \
-# abbreviations-stems.jspwiki      \
-# acronyms-stems.jspwiki           \
-# adjectives-oahpa-stems.jspwiki   \
-# interjections-stems.jspwiki      \
-# propernouns-stems.jspwiki        \
-# smi-propernouns-stems.jspwiki    \
-include $(top_srcdir)/../giella-core/am-shared/doc-dir-include.am
+MD_PAGES=root-morphology.md        \
+		adjectives-stems.md         \
+        adjectives-affixes.md         \
+		adpositions-stems.md        \
+		adverbs-stems.md            \
+		conjunctions-stems.md       \
+		nouns-affixes.md            \
+		nouns-stems.md              \
+		numerals-stems.md           \
+		particles-stems.md          \
+		pronouns-stems.md           \
+		propernouns-affixes.md      \
+		punctuation-stems.md        \
+		subjunctions-stems.md       \
+		smi-propernouns-stems.md       \
+		smn-propernouns-stems.md       \
+		verbs-affixes.md \
+		verbs-stems.md              \
+		phonology-morphology.md      \
+		disambiguator-syntax.md 
+# clitics-morphology.md       \
+# compounding-morphology.md   \
+# abbreviations-stems.md      \
+# acronyms-stems.md           \
+# adjectives-oahpa-stems.md   \
+# interjections-stems.md      \
+# propernouns-stems.md        \
+# smi-propernouns-stems.md    \
+include $(top_srcdir)/../giella-core/am-shared/docs-dir-include.am
