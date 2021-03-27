@@ -143,10 +143,14 @@ LIST Par = Par ; #!! Par
 LIST Sg = Sg ;   #!! Sg
 LIST Du = Du ;   #!! Du
 LIST Pl = Pl ;   #!! Pl
+
+LIST Cmp = Cmp ;
 LIST Cmp/SplitR = Cmp/SplitR ;	   #!! Cmp/SplitR
 LIST Cmp/SgNom = Cmp/SgNom ; #!! Cmp/SgNom Cmp/SgGen
 LIST Cmp/SgGen = Cmp/SgGen ; #!! Cmp/SgGen
 LIST Cmp/Attr = Cmp/Attr ; #!! Cmp/Attr
+LIST Cmp/Hyph = Cmp/Hyph ;
+
 LIST PxSg1 = PxSg1 ;	   #!! PxSg1
 LIST PxSg2 = PxSg2 ;	   #!! PxSg2
 LIST PxSg3 = PxSg3 ;	   #!! PxSg3
@@ -516,6 +520,9 @@ SET V-NOT-DER-PASS = V - DER-PASS ;
 LIST DER-A-ADV = (Der/AAdv Adv) ;
 SET ADV-NOT-DER-A = Adv - DER-A-ADV ;
 
+SET LEX-A = A - DER-A ;
+SET LEX-N = N - DER-N ;
+SET LEX-V = V - DER-V ;
 
 
 
@@ -5374,6 +5381,8 @@ REMOVE:TESTr2026 Gen - Dem IF (*-2 TRANS-V BARRIER S-BOUNDARY OR Pr OR Acc)(NEGA
 
 
 
+REMOVE:NotAcc Acc IF (0 Gen OR Nom)(NOT *0 TV);
+
 
  	
 #!! ! Reflexive pronouns: acc or gen
@@ -7272,13 +7281,31 @@ LIST WORDLEMMA = (".*"r) ;
 #!! * __errsub__ removes err/orth forms
 REMOVE:errsub $$WORDLEMMA + Err/Orth (0 $$WORDLEMMA - Err/Orth ) ;   #this one does not function in Apertium because there are no err_orth tags. Alternative rules:
 
+LIST Cmp/SgNom = Cmp/SgNom ;
+LIST Cmp/SgGen = Cmp/SgGen ;
+REMOVE:AllErrOrth SUB:1 Err/Orth IF (0/1 Err/Orth) ;
+REMOVE:NoNomCompounds SUB:1 Cmp/SgNom IF (0/1 Cmp/SgNom) ;
+REMOVE:NoGenCompounds SUB:1 Cmp/SgGen IF (0/1 Cmp/SgGen) ;
+
+REMOVE:NoNumCompounds SUB:1 Cmp/Hyph IF (0/1 Cmp) ;
+
 REMOVE:alt_errsub2 $$WORDLEMMA + Gen + Ord (0 $$WORDLEMMA + Nom ) ;
 SELECT:alt_errsub2 Prop + Attr (1 Prop OR (np) ) ; 
 
 
 
+REMOVE:NoAder DER-A IF (0 LEX-A);
+REMOVE:NoNder DER-N IF (0 LEX-N);
+REMOVE:NoVder DER-V IF (0 LEX-V);
+
+
+
 REMOVE Dem IF (0 Adv)(1 VFIN) ;
         #$ Toos lii pieijâm nuotâ Tuomo Nikkola.
+
+
+
+
 
 #!! !!!Substitute rules
 
