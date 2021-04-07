@@ -1,14 +1,21 @@
 
 
 
-!!!Alphabet 
 
 
-!!The Inari Saami letters
+
+# Alphabet 
+
+
+
+
+## The Inari Saami letters
+
 
  *  a á â ä b c d e f g h i j k l m n o õ p q 
    r s t u v w x y z æ ä ø ö å			   
    č đ ŋ ŧ š ž				 			   
+
 
  *  A Á Â Å B C D E F G H I J K L M N O Õ P Q 
    R S T U V W X Y Z Æ Ä Ø Ö Å 			   
@@ -17,11 +24,16 @@
  *  '    the hyphen as hyphen
  *   ⎈      the ghost sign used in compounding, does not work in hfst
 
-!Accented letters, just in case
+
+### Accented letters, just in case
+
 
  *  É Ó Ú Í À È Ò Ù Ì Ë Ü Ï Ê Ô Û Î Ã Ý þ Ð   
    é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý þ ð   
    ß ª ß ç								   
+
+
+
 
 
 
@@ -33,7 +45,12 @@ Literal quotes and angles must be escaped (cf morpheme boundaries further down):
 
 
 
-!Different archiphonemes
+
+
+
+### Different archiphonemes
+
+
 
 
  * p4:p  k4:k  l4:l t4:t č4:č c4:c     these are consonants that change in cg
@@ -47,7 +64,9 @@ Literal quotes and angles must be escaped (cf morpheme boundaries further down):
  * i6:0  a fake vowel, to get WG rules to function, e.g. kyehtlov (kyehti6lov)
  *  ':'  is the real apostroph
 
-!More abstract archiphonemes
+
+### More abstract archiphonemes
+
 
  * %^RC:0		 = root cons., lengthened by ^CLEN - máán%RCu máánnun
  * %^RV:0	 	 = root vowel, lengthened by ^RLEN - ta%^RVvlu taavlu 
@@ -55,7 +74,9 @@ Literal quotes and angles must be escaped (cf morpheme boundaries further down):
  * %^SV:0 		 = stem vowel, lengthened by ^SLEN u:uu - táálu%^SV tááloost
  * %^VO:0			 = vowel copy
 
-!Triggers
+
+### Triggers
+
 
  * %^CLEN:0	 = Cons lengthening, with ^RC
  * %^CSH:0      = Cons shortening, laaŋkku - laaŋkun
@@ -76,29 +97,39 @@ Literal quotes and angles must be escaped (cf morpheme boundaries further down):
  * %^BLOCK:0    = This symbol just to block otherwise triggering contexts
  * %^IUML:0    = â to e in front of high suffixes 
 
+
 Trigger ordering in twolc and lexc, from left to right:
 
-{{{
+
+```
 SV|ÁE|ÁI  EA|EX|SC  FCD|FVD  WG|CSH  CLEN  VHIGH|VBACK  RVSH|RLEN  SLEN|SVSH  SVLOW
-}}}
+```
 
 
-!!Morpheme boundaries:
+
+
+## Morpheme boundaries:
+
 
 Here we define the suffix border >
 The other borders are not used yet, but still defined:
 
- ;«: Derivational prefix
- ;»: Derivational suffix
- ;%<: Inflectional prefx
- ;%>: Inflectional suffix
- ;%^: (exceptional) soft hyphenation point
+
+* **«**:  Derivational prefix
+* **»**:  Derivational suffix
+* **%<**:  Inflectional prefx
+* **%>**:  Inflectional suffix
+* **%^**:  (exceptional) soft hyphenation point
 and the symbol #, which is Word boundary for both lexicalised and dynamic compounds
+
 
 End of alphabet definitions
 
 
+
+
 Sets
+
 
  *  Vow = a á â ä e i o u u2 y æ ø ö å             
         i2 u2 â2                                 
@@ -134,10 +165,18 @@ Sets
 
 
 
-!!!Definition section
+
+
+
+
+# Definition section
+
 
 Introducing a WG right context 
-{{{WeakGrade =  (RealVow:) [:RealVow |i6:]  (Cns:) ([%^SV:|%^ÁI:|%^ÁE:]) (%^FCD:) %^WG:0   ; }}}  
+```WeakGrade =  (RealVow:) [:RealVow |i6:]  (Cns:) ([%^SV:|%^ÁI:](%^ÁE:)) (%^FCD:) %^WG:0   ; ```  
+
+
+
 
 
 
@@ -146,660 +185,1014 @@ We want to keep it short, but we want the code to work Thus, we document.
 * The second :RealVow is there for long consonant stems
 * The (Cns:) is there for consonant stems
 
-!!!Rule section
 
+# Rule section
 
-!!Consonant rules
 
-!Consonant gradation
 
 
+## Consonant rules
 
-* __x:y consonant gradation__ \\  WG gives x:x and x:y, when there is no consonant lengthening  
 
-* __va^RVh%^RCo^WG^CLEN>im __
-* __va0vvo00>im __
+### Consonant gradation
 
 
-* __Quality change of root consonant x:yy__ \\  consonant lengthening after WG, changing h:v, p:v, c:s
 
 
 
-* __t:đ, also tk4:đh gradation, part 1 __ \\   
 
-* __jo^RVtk4â^WG^RLEN> __
-* __joođhâ00> __
+* **x:y consonant gradation** \\  WG gives x:x and x:y, when there is no consonant lengthening  
 
 
-* __k4:h gradation for kk4, tk4, rkk4, lkk4__ \\  
+* **va^RVh%^RCo^WG^CLEN>im**
+* **va0vvo00>im**
 
-* __xx:yy gradation for xx4__ \\   puáhhoin, sukk4á:suhháást
 
-* __mä^RVtk4i^WG^RLEN>.#. __
-* __määđhi00>.#. __
 
-* __su^RVkk4á^SV^WG^CLEN^SLEN>st __
-* __su0hháá000>st __
 
+* **Quality change of root consonant x:yy** \\  consonant lengthening after WG, changing h:v, p:v, c:s
 
-* __h:v gradation for hh__ \\  já%^RVhhá%^SVl%^ÁI : jäävvil
-* __kahhaan^CSH^SVSH>ân __
-* __ka0h0an00>ân __
 
 
 
-* __x4:z gradation for xx4 __ 
 
-* __ru^RVtt4â^WG^RLEN> __
-* __ruu0đâ00> __
 
-* __haavvâr^CSH^SVSH>ist __
-* __ha00vâr00>ist __
+* **t:đ, also tk4:đh gradation, part 1** \\   
 
-* __pottáák^SC^CSH^SVSH>ist __
-* __po0t0ákk00>ist __
 
+* **jo^RVtk4â^WG^RLEN>**
+* **joođhâ00>**
 
-* __xy:zy gradation__ \\  ht:vt, we use h 
 
 
-* __pihtâs^WG __
-* __pivtâs0 __
 
-* __totk4os^WG __
-* __tođhos0 __
+* **k4:h gradation for kk4, tk4, rkk4, lkk4** \\  
 
 
+* **xx:yy gradation for xx4** \\   puáhhoin, sukk4á:suhháást
 
-* __á^RVrppu^WG^RLEN> __
-* __áár0pu00> __
 
-* __á^RVrppu^WG^RVSH>ttáá __
-* __á0r0pu00>ttáá __
+* **mä^RVtk4i^WG^RLEN>.#.**
+* **määđhi00>.#.**
 
-* __riänttus^WG> __
-* __riän0tus0> __
 
-* __ku^RVrrâ^CSH^RLEN>n __
-* __kuu0râ00>n __
+* **su^RVkk4á^SV^WG^CLEN^SLEN>st**
+* **su0hháá000>st**
 
-* __so^RVllâ^CSH^RLEN>n __
-* __soo0lâ00>n __
 
 
-!Consonant shortening
 
-* __k:0 gradation for xkk4__ \\  for lkk4, rkk4, vkk4
+* **h:v gradation for hh** \\  já%^RVhhá%^SVl%^ÁI : jäävvil
+* **kahhaan^CSH^SVSH>ân**
+* **ka0h0an00>ân**
 
 
 
-* __xyy:xy gradation A__ \\   há%^RVi4ttás%^ÁI
 
 
-* __č:0 in čč4 consonant gradation when CLEN__ \\ when čč4
 
-* __i^RVš^RCe^WG> __
-* __i0š0e0> __
+* **x4:z gradation for xx4** 
 
 
-* __lu^RVčč4â^WG^RLEN^SVLOW>in __
-* __luu0já000>in __
+* **ru^RVtt4â^WG^RLEN>**
+* **ruu0đâ00>**
 
 
-* __From i4j to j when WG and CSH__ \\ e.g. sai4joos:sajoos
+* **haavvâr^CSH^SVSH>ist**
+* **ha00vâr00>ist**
 
 
+* **pottáák^SC^CSH^SVSH>ist**
+* **po0t0ákk00>ist**
 
 
-* __xx:x consonant gradation and shortening and x:x shortening__ \\   weak grade or consonant shortening 
 
 
-* __vi^RVššâ^CSH^RVSH>vettee __
-* __vi00šâ00>vettee __
+* **xy:zy gradation** \\  ht:vt, we use h 
 
 
-* __la^RVs^RCe^SVtt^RLEN^SLEN>vettee __
-* __laas0ee0t00>vettee __
 
-* __cuozzâ^WG^RLEN> __
-* __cuo0zâ00> __
 
-* __vá^RVddu^CSH^RLEN>n __
-* __váá0du00>n __
+* **pihtâs^WG**
+* **pivtâs0**
 
 
-* __tt:t  - final consonant and consonant gradation__ \\ consonant gradation, and 3syll verbs in -tt lose t in front of cns-initial suff
+* **totk4os^WG**
+* **tođhos0**
 
-* __kulluutt^SVSH> __
-* __kullu00t0> __
 
-* __las^RCe^SVtt^CLEN^SLEN> __
-* __lassee0t00> __
 
-* __nnj to nj shortening weak grade and consonant shortening__ \\  special rule, e.g. konnjâl -> konjâlân puánnjá
 
 
- * __Word final consonant deletion                 __ \\ for vaskâm:vaaskâ
 
-* __va^RVskâm^FCD^RLEN __
-* __vaaskâ000 __
+* **á^RVrppu^WG^RLEN>**
+* **áár0pu00>**
 
-* __njuolgâd^FCD^RVSH __
-* __njuolgâ000 __
 
+* **á^RVrppu^WG^RVSH>ttáá**
+* **á0r0pu00>ttáá**
 
- * __Final m in stems, smm to sm  __ \\ 
 
+* **riänttus^WG>**
+* **riän0tus0>**
 
 
+* **ku^RVrrâ^CSH^RLEN>n**
+* **kuu0râ00>n**
 
 
-* __Wordfinal consonants part 1__  e%^RVlâčč
+* **so^RVllâ^CSH^RLEN>n**
+* **soo0lâ00>n**
+
+
+
+
+### Consonant shortening
+
+
+* **k:0 gradation for xkk4** \\  for lkk4, rkk4, vkk4
+
+
+
+
+
+
+* **xyy:xy gradation A** \\   há%^RVi4ttás%^ÁI
+
+
+
+
+* **č:0 in čč4 consonant gradation when CLEN** \\ when čč4
+
+
+* **i^RVš^RCe^WG>**
+* **i0š0e0>**
+
+
+
+
+* **lu^RVčč4â^WG^RLEN^SVLOW>in**
+* **luu0já000>in**
+
+
+
+
+* **From i4j to j when WG and CSH** \\ e.g. sai4joos:sajoos
+
+
+
+
+
+
+
+
+* **xx:x consonant gradation and shortening and x:x shortening** \\   weak grade or consonant shortening 
+
+
+
+
+* **vi^RVššâ^CSH^RVSH>vettee**
+* **vi00šâ00>vettee**
+
+
+
+
+* **la^RVs^RCe^SVtt^RLEN^SLEN>vettee**
+* **laas0ee0t00>vettee**
+
+
+* **cuozzâ^WG^RLEN>**
+* **cuo0zâ00>**
+
+
+* **vá^RVddu^CSH^RLEN>n**
+* **váá0du00>n**
+
+
+
+
+* **tt:t  - final consonant and consonant gradation** \\ consonant gradation, and 3syll verbs in -tt lose t in front of cns-initial suff
+
+
+* **kulluutt^SVSH>**
+* **kullu00t0>**
+
+
+* **las^RCe^SVtt^CLEN^SLEN>**
+* **lassee0t00>**
+
+
+* **nnj to nj shortening weak grade and consonant shortening** \\  special rule, e.g. konnjâl -> konjâlân puánnjá
+
+
+
+
+ * **Word final consonant deletion** \\ for vaskâm:vaaskâ
+
+
+* **va^RVskâm^FCD^RLEN**
+* **vaaskâ000**
+
+
+* **njuolgâd^FCD^RVSH**
+* **njuolgâ000**
+
+
+
+
+ * **Final m in stems, smm to sm** \\ 
+
+
+
+
+
+
+
+
+
+
+* **Wordfinal consonants part 1**  e%^RVlâčč
 1)
 2)jurdâččmân:jurdâšmân ju%^RVrdâčč%^RLEN%>mân
 3)  šš>š in hárávušš>vetteđ 
 
 
-* __hárávušš>vetteđ __
-* __hárávu0š>vetteđ __
 
-* __konnjâl^CSH>ân __
-* __kon0jâl0>ân __
 
-* __suán^RCju^CLEN>n __
-* __suánnju0>n __
+* **hárávušš>vetteđ**
+* **hárávu0š>vetteđ**
 
-* __haamit^SC^CSH^SVSH>ist __
-* __ha0mitt00>ist __
 
-* __su^RVkk4á^SV^WG^CLEN^SLEN>st __
-* __su0hháá000>st __
+* **konnjâl^CSH>ân**
+* **kon0jâl0>ân**
 
 
+* **suán^RCju^CLEN>n**
+* **suánnju0>n**
 
 
+* **haamit^SC^CSH^SVSH>ist**
+* **ha0mitt00>ist**
 
-!Consonant lengthening
 
+* **su^RVkk4á^SV^WG^CLEN^SLEN>st**
+* **su0hháá000>st**
 
-* __Lengthening of root consonant x:yy__ \\  consonant lengthening after WG - h:vv, p:vv, c:ss
 
-* __ka^RVss^RCa^SV^WG^CLEN^SLEN>st __
-* __ka0ss0aa000>st __
 
-* __va^RVh^RCe^SV^WG^CLEN^SLEN>st __
-* __va0vvee000>st __
 
-* __va^RVh^RCe^SV^CLEN^SLEN>n __
-* __va0hhee00>n __
 
 
-* __Lengthening of half-long root consonant x:xx__ \\  riččá piiru piirrun niisu niissun
 
 
-* __Lengthening of consonant h5__ \\    this one does not fit into the general rule because of h5:h
 
-* __put^RCe^SVst^CLEN^SLEN> __
-* __putteest00> __
 
+### Consonant lengthening
 
-* __ke^RVp^RCidm^CLEN^RLEN^SLEN>ân __
-* __keeppidm000>ân __
 
-* __kieh^RCâ^WG^CLEN^SVLOW>in __
-* __kievvá000>in __
 
-* __i^RVšš^RCe^SV^WG^CLEN^SLEN>st __
-* __i0šš0ee000>st __
 
-* __kol^RCe^CLEN> __
-* __kolle0> __
+* **Lengthening of root consonant x:yy** \\  consonant lengthening after WG - h:vv, p:vv, c:ss
 
-* __kiel^RCâ^CLEN>n __
-* __kiellâ0>n __
 
-* __č:ij part 1__ \\  
+* **ka^RVss^RCa^SV^WG^CLEN^SLEN>st**
+* **ka0ss0aa000>st**
 
-* __Lengthening root consonant j:ij 1__ \\  for saje:saijeen 
 
+* **va^RVh^RCe^SV^WG^CLEN^SLEN>st**
+* **va0vvee000>st**
 
-* __č:ij and j:ij part 2__ \\  
 
-* __sa^RVj^RCe^SV^CLEN^SLEN>n __
-* __sa0ijee00>n __
+* **va^RVh^RCe^SV^CLEN^SLEN>n**
+* **va0hhee00>n**
 
-* __pááj^RCá^CLEN>n __
-* __pááijá0>n __
 
-* __vaj^RCe^SVd^CLEN^SLEN> __
-* __vaijeed00> __
 
 
+* **Lengthening of half-long root consonant x:xx** \\  riččá piiru piirrun niisu niissun
 
 
-* __nj to nnj consonant lengthening__ \\  special rule, suánju : suánnjun for Par and Ess
 
 
+* **Lengthening of consonant h5** \\    this one does not fit into the general rule because of h5:h
 
-* __Consonant lengthening after xx:x and xy:zy weak grade with x4 on upper side__ \\   k4, č, p4  kukse:kuvssijn  
 
+* **put^RCe^SVst^CLEN^SLEN>**
+* **putteest00>**
 
-* __Consonant lengthening xy:xyy__ \\ 
 
 
 
-!Stem consonant and suffix consonant 
+* **ke^RVp^RCidm^CLEN^RLEN^SLEN>ân**
+* **keeppidm000>ân**
 
 
-* __Assimilation of consonants t d š__  delet t in front of -ttáá, avoid -tttáá
+* **kieh^RCâ^WG^CLEN^SVLOW>in**
+* **kievvá000>in**
 
-* __haamit>ttáá __
-* __haami0>ttáá __
 
+* **i^RVšš^RCe^SV^WG^CLEN^SLEN>st**
+* **i0šš0ee000>st**
 
 
-* __Wordfinal consonants part 2__  e%^RVlâčč cummâlâhč:cummâlâhš
+* **kol^RCe^CLEN>**
+* **kolle0>**
 
-* __Final consonant x:xx__ \\  pottáák potákkân  
 
-* __kahhaan^SC^CSH^RVSH>ist __
-* __ka0ha0nj00>ist __
+* **kiel^RCâ^CLEN>n**
+* **kiellâ0>n**
 
 
+* **č:ij part 1** \\  
 
 
-!!Vowel rules
+* **Lengthening root consonant j:ij 1** \\  for saje:saijeen 
 
-!First syllable vowel shortening
 
 
-* __koonnjâl^CSH>ân __
-* __ko0n0jâl0>ân __
 
-* __kappeer^CSH^SVSH>ist __
-* __ka0p0er00>ist __
+* **č:ij and j:ij part 2** \\  
 
-* __čäällim^CSH>ist __
-* __čä00lim0>ist __
 
-* __muusik^SC^CSH^RVSH>ist __
-* __mu0sikk00>ist __
+* **sa^RVj^RCe^SV^CLEN^SLEN>n**
+* **sa0ijee00>n**
 
 
-* __aarrân^CSH>ân __
-* __a00rân0>ân __
+* **pááj^RCá^CLEN>n**
+* **pááijá0>n**
 
-* __kiirrâs^RVSH>ân __
-* __ki0rrâs0>ân __
 
+* **vaj^RCe^SVd^CLEN^SLEN>**
+* **vaijeed00>**
 
 
-* __Vowel shortening VV:V__ \\ ráávhu- : rávhoid, käähir%^CSH%>id kuuđiâ%^RVSH%>žân
 
-* __Long vowel shortening__ \\ (example?), no ^CSH, since that gives Vy:0
 
-* __e:0 in passive__ \\
 
 
 
-* __mááh^RCu^WG^CLEN^SVLOW>in __
-* __má0vvo000>in __
 
-* __mool^RCâ^WG^RVSH>ttáá __
-* __mo0l0â00>ttáá __
+* **nj to nnj consonant lengthening** \\  special rule, suánju : suánnjun for Par and Ess
 
 
 
-* __e:0 in passive__ \\ special rule for getting ej̣ittáá instead of ej̣ittáá.
 
-* __Underlying long vowel shortening iä:e and ää:ä or a__ \\ čääh%^RCu2%^CLEN%^VBACK%>um
+
+
+* **Consonant lengthening after xx:x and xy:zy weak grade with x4 on upper side** \\   k4, č, p4  kukse:kuvssijn  
+
+
+
+
+* **Consonant lengthening xy:xyy** \\ 
+
+
+
+
+
+
+### Stem consonant and suffix consonant 
+
+
+
+
+* **Assimilation of consonants t d š**  delet t in front of -ttáá, avoid -tttáá
+
+
+* **haamit>ttáá**
+* **haami0>ttáá**
+
+
+
+
+
+
+* **Wordfinal consonants part 2**  e%^RVlâčč cummâlâhč:cummâlâhš
+
+
+* **Final consonant x:xx** \\  pottáák potákkân  
+
+
+* **kahhaan^SC^CSH^RVSH>ist**
+* **ka0ha0nj00>ist**
+
+
+
+
+
+
+
+
+## Vowel rules
+
+
+### First syllable vowel shortening
+
+
+
+
+* **koonnjâl^CSH>ân**
+* **ko0n0jâl0>ân**
+
+
+* **kappeer^CSH^SVSH>ist**
+* **ka0p0er00>ist**
+
+
+* **čäällim^CSH>ist**
+* **čä00lim0>ist**
+
+
+* **muusik^SC^CSH^RVSH>ist**
+* **mu0sikk00>ist**
+
+
+
+
+* **aarrân^CSH>ân**
+* **a00rân0>ân**
+
+
+* **kiirrâs^RVSH>ân**
+* **ki0rrâs0>ân**
+
+
+
+
+
+
+* **Vowel shortening VV:V** \\ ráávhu- : rávhoid, käähir%^CSH%>id kuuđiâ%^RVSH%>žân
+
+
+* **Long vowel shortening** \\ (example?), no ^CSH, since that gives Vy:0
+
+
+* **e:0 in passive** \\
+
+
+
+
+
+
+* **mááh^RCu^WG^CLEN^SVLOW>in**
+* **má0vvo000>in**
+
+
+* **mool^RCâ^WG^RVSH>ttáá**
+* **mo0l0â00>ttáá**
+
+
+
+
+
+
+* **e:0 in passive** \\ special rule for getting ej̣ittáá instead of ej̣ittáá.
+
+
+* **Underlying long vowel shortening iä:e and ää:ä or a** \\ čääh%^RCu2%^CLEN%^VBACK%>um
+
+
 
 
  3st stems viäskár veskirin, časkes časkes ča%^RVskas%^ÁE viäskár%^ÁI%^WG%^RVSH
 
-* __kaavpug^CSH^RVSH^SVSH>ân __
-* __ka0vpug000>ân __
 
-
-
-* __mool^RCâ^WG> __
-* __mool0â0> __
-
-
-* __käähir^WG> __
-* __käävir0> __
-
-* __juáh^RCu^WG^RVSH>ttáá __
-* __juáv0u00>ttáá __
+* **kaavpug^CSH^RVSH^SVSH>ân**
+* **ka0vpug000>ân**
 
 
 
 
 
-!First syllable vowel lengthening
 
-* __Root vowel lenghtening in many stems__ \\  no rootvowel length if stem vowel lengthens and the consonantcentre consists of two or more consonants 
-
-* __kä^RVvnâst^WG^VBACK^RLEN> __
-* __kaavnâst000> __
-
-* __le^RVkk4â^WG^RLEN> __
-* __lee0hâ00> __
-
-
-* __nju^RVne^SV^WG^RLEN^SLEN>st __
-* __njuunee000>st __
-
-
-
-* __Root vowel o5:u __ \\ 
+* **mool^RCâ^WG>**
+* **mool0â0>**
 
 
 
 
-* __Root vowel ä:ää lenghtening and diphthongisation e:iä__ \\ special rule, for avoiding conflict spä%^RVi4lih%^WG%^RLEN, 
+* **käähir^WG>**
+* **käävir0>**
 
 
-* __Root vowel o lengthening__ \\  alge : oolgijn 
-
-* __a^RVlge^WG^RLEN>id __
-* __oolgi00>jd __
-
-* __va^RVh^RCu^CSH^RLEN> __
-* __vooh0u00> __
-
-
-* __Root vowel u lengthening with vowel change before suffix i__ \\  alge : oolgijn 
-
-* __lo^RVh^RCâ^RLEN>đ __
-* __luuh0â0>đ __
-
-* __mu^RVšti^WG^VHIGH^RLEN>j __
-* __muušti000>j __
-
-* __lo^RVh^RCá^WG^VHIGH^RLEN>im __
-* __luuv0á000>im __
-
-* __ku^RVlgâ^WG^VHIGH^RLEN>i3 __
-* __kuulgâ000>i __
+* **juáh^RCu^WG^RVSH>ttáá**
+* **juáv0u00>ttáá**
 
 
 
-!First syllable vowel change
+
+
+
+
+
+
+
+### First syllable vowel lengthening
+
+
+* **Root vowel lenghtening in many stems** \\  no rootvowel length if stem vowel lengthens and the consonantcentre consists of two or more consonants 
+
+
+* **kä^RVvnâst^WG^VBACK^RLEN>**
+* **kaavnâst000>**
+
+
+* **le^RVkk4â^WG^RLEN>**
+* **lee0hâ00>**
+
+
+
+
+* **nju^RVne^SV^WG^RLEN^SLEN>st**
+* **njuunee000>st**
+
+
+
+
+
+
+* **Root vowel o5:u** \\ 
+
+
+
+
+
+
+
+
+* **Root vowel ä:ää lenghtening and diphthongisation e:iä** \\ special rule, for avoiding conflict spä%^RVi4lih%^WG%^RLEN, 
+
+
+
+
+* **Root vowel o lengthening** \\  alge : oolgijn 
+
+
+* **a^RVlge^WG^RLEN>id**
+* **oolgi00>jd**
+
+
+* **va^RVh^RCu^CSH^RLEN>**
+* **vooh0u00>**
+
+
+
+
+* **Root vowel u lengthening with vowel change before suffix i** \\  alge : oolgijn 
+
+
+* **lo^RVh^RCâ^RLEN>đ**
+* **luuh0â0>đ**
+
+
+* **mu^RVšti^WG^VHIGH^RLEN>j**
+* **muušti000>j**
+
+
+* **lo^RVh^RCá^WG^VHIGH^RLEN>im**
+* **luuv0á000>im**
+
+
+* **ku^RVlgâ^WG^VHIGH^RLEN>i3**
+* **kuulgâ000>i**
+
+
+
+
+
+
+### First syllable vowel change
+
 
 a rules
 
-* __Root vowel change a:o before suffix i and for contract verbs__ \\  alge : olgijn 
 
-* __Root vowel o:u for contract verbs and Root vowel change o:u before suffix i__ 
+* **Root vowel change a:o before suffix i and for contract verbs** \\  alge : olgijn 
 
 
-* __tohhi2>đ __
-* __tuhhi>đ __
-
-* __lo^RVh^RCá^WG^VHIGH^RLEN>im __
-* __luuv0á000>im __
+* **Root vowel o:u for contract verbs and Root vowel change o:u before suffix i** 
 
 
 
 
-!ä rules
+* **tohhi2>đ**
+* **tuhhi>đ**
 
-* __Monophthongisation rule iä:ee 1__ \\  
+
+* **lo^RVh^RCá^WG^VHIGH^RLEN>im**
+* **luuv0á000>im**
+
+
+
+
+
+
+
+
+### ä rules
+
+
+* **Monophthongisation rule iä:ee 1** \\  
 1)
 
-* __iä:e rule 1 and second syllable Fleeting vowel before suffix        __ \\  Note: many rules in one
 
-
-
-* __iä:e and iä:ee rule 2 and Diphthongisation i5ä to ie__ \\  
-
-* __siämmu2>đ> __
-* __s0emmu>đ> __
+* **iä:e rule 1 and second syllable Fleeting vowel before suffix** \\  Note: many rules in one
 
 
 
 
-* __Different rules for ä:a, first vowel (or only vowel)__ \\  čääci:čassijn, läbži:labžijn lään^RCi%>id
-
-* __njääh^RCi^WG^VBACK>i3 __
-* __njaav0i00>i __
 
 
-
-* __ää to aa, second vowel__ \\  á:o in pairs like kuátij -> koođij, säämi -> saamij čäällu%^VBACK%>m lään^RCi%>id
-
+* **iä:e and iä:ee rule 2 and Diphthongisation i5ä to ie** \\  
 
 
-* __ää to áá and á0 in Illative and Sg3__ \\  ... for säämi > sáámán
+* **siämmu2>đ>**
+* **s0emmu>đ>**
 
 
 
-* __sääm^RCi^EA>n __
-* __sáám0á0>n __
-
-* __njääh^RCo^CLEN^VBACK^RVSH>on __
-* __njá0hho000>on __
-
-* __äRV to áá in Illative and Sg3__ \\  ... for täsni -> táásnán
 
 
-* __tä^RVsni^EA^CSH^RLEN>n __
-* __táásná000>n __
-
-* __Vowel lengthening äRV to aa __ \\  äigi aaigijd
-
-* __sälkki2>đ> __
-* __salkki>đ> __
-
-* __sääm^RCi^WG>in __
-* __saam0i0>jn __
-
-* __sääm^RCi^WG>id __
-* __saam0i0>jd __
 
 
-* __stäävi2>đ> __
-* __staavi>đ> __
 
-* __stäävi2>j> __
-* __staavi>j> __
+* **Different rules for ä:a, first vowel (or only vowel)** \\  čääci:čassijn, läbži:labžijn lään^RCi%>id
 
-* __stäävi2>i2> __
-* __staavi>i> __
 
-* __stäävi2>jeh> __
-* __stääve>jeh> __
+* **njääh^RCi^WG^VBACK>i3**
+* **njaav0i00>i**
 
-* __kä%^RVvnâ^WG>st^RLEN> __
-* __kaavnâ0>st0> __
+
+
+
+
+
+* **ää to aa, second vowel** \\  á:o in pairs like kuátij -> koođij, säämi -> saamij čäällu%^VBACK%>m lään^RCi%>id
+
+
+
+
+
+
+* **ää to áá and á0 in Illative and Sg3** \\  ... for säämi > sáámán
+
+
+
+
+
+
+* **sääm^RCi^EA>n**
+* **sáám0á0>n**
+
+
+* **njääh^RCo^CLEN^VBACK^RVSH>on**
+* **njá0hho000>on**
+
+
+* **äRV to áá in Illative and Sg3** \\  ... for täsni -> táásnán
+
+
+
+
+* **tä^RVsni^EA^CSH^RLEN>n**
+* **táásná000>n**
+
+
+* **Vowel lengthening äRV to aa** \\  äigi aaigijd
+
+
+* **sälkki2>đ>**
+* **salkki>đ>**
+
+
+* **sääm^RCi^WG>in**
+* **saam0i0>jn**
+
+
+* **sääm^RCi^WG>id**
+* **saam0i0>jd**
+
+
+
+
+* **stäävi2>đ>**
+* **staavi>đ>**
+
+
+* **stäävi2>j>**
+* **staavi>j>**
+
+
+* **stäävi2>i2>**
+* **staavi>i>**
+
+
+* **stäävi2>jeh>**
+* **stääve>jeh>**
+
+
+* **kä%^RVvnâ^WG>st^RLEN>**
+* **kaavnâ0>st0>**
+
+
+
 
 
 
 á
 
-* __Root vowel change for á to ä with i in second syllable__ \\  päävir , já%^RVhhá%^SVl%^ÁI%^WG%^RLEN>
 
+* **Root vowel change for á to ä with i in second syllable** \\  päävir , já%^RVhhá%^SVl%^ÁI%^WG%^RLEN>
 
-* __páápp4ár^ÁI^WG> __
-* __pää0vir00> __
 
 
 
-* __Root and stem vowel á:a for verbs__ 
+* **páápp4ár^ÁI^WG>**
+* **pää0vir00>**
 
 
-* __pá^RVkk4u2>m __
-* __pa0kku>m __
 
 
-!á and uá rules
 
-* __Monophthongisation rule uá:o0 part 2: Vowel shortening for uá __ \\  for uábbi -> obbijn  čuál%^RCi%^WG%>in tuái4jâl%^CSH%^VBACK%^RVSH%>âm
 
+* **Root and stem vowel á:a for verbs** 
 
-* __Monophthongisation rule u:o and root vowel change u:o, special rule for olmooš and contract verbs__ \\ 
 
-* __uáinu2>đ __
-* __o0inu>đ __
 
 
-* __Diphthong rule uá:uo and uá:oo, part 2__ \\  
+* **pá^RVkk4u2>m**
+* **pa0kku>m**
 
 
 
-* __Diphthongisation e to iä, part 1 __ \\   
 
+### á and uá rules
 
-* __Root vowel aa:áá in C-stems with stemvowel u, part 1__ \\  ahhu:áhu
 
+* **Monophthongisation rule uá:o0 part 2: Vowel shortening for uá** \\  for uábbi -> obbijn  čuál%^RCi%^WG%>in tuái4jâl%^CSH%^VBACK%^RVSH%>âm
 
-* __Root vowel aa:áá in C-stems with stemvowel u, part 2__ \\  ahhu:ááhu
 
 
 
+* **Monophthongisation rule u:o and root vowel change u:o, special rule for olmooš and contract verbs** \\ 
 
 
-* __ie to iä in Illative and Sg3 __ \\  kiem´ni -> kiämnán, veerdi : viärdán peerru2%^CLEN%^VHIGH%^RVSH%>o
+* **uáinu2>đ**
+* **o0inu>đ**
 
 
 
 
-* __Diphthongisation uo:uá__ \\   
+* **Diphthong rule uá:uo and uá:oo, part 2** \\  
 
 
-* __ye to uá and uo, part 1 __ \\  Part 1 of ye to uá for kyeli : kuálán  
 
 
-* __ye to uá, part 2__ \\  Part 2 of ye to uá for kyeli : kuálán
 
-* __kyel^RCi3^EA^CLEN>m __
-* __kuállá00>m __
 
-* __ye to uo, part 2 __ \\  Part 2 of ye to uá for kyeli : kuolijn
+* **Diphthongisation e to iä, part 1** \\   
 
-* __uá to ye and uo to ye, part 1 __ \\  Part 1 luámmán : lyeme čuággás%^ÁI%^WG%^RLEN%>
 
-* __vuolle^CLEN>en __
-* __vyelle0>en __
 
-* __uá to ye, part 2__ \\  Part 2 luámmán : lyeme
 
+* **Root vowel aa:áá in C-stems with stemvowel u, part 1** \\  ahhu:áhu
 
 
 
-!Second syllable rules
 
-* __Second syllable vowel change á to e or i in 3syll stems__ \\ puttás- > putes, triggers are ^ÁE and ^ÁI já%^RVhhá%^SVl%^ÁI%^WG%^RLEN%> pu5árrás%^ÁI%^WG%>umos
+* **Root vowel aa:áá in C-stems with stemvowel u, part 2** \\  ahhu:ááhu
 
-* __puttás^ÁE^WG> __
-* __pu0tes00> __
 
-* __Stemvowel shortening  áá and aa to e or i in 3syll__ \\ puttás- > putes, triggers are ^ÁE and ^ÁI
 
-* __nahhaar^ÁE^WG> __
-* __na0v0er00> __
 
 
 
 
-* __Stem vowel e to a for a root vowel.__ \\  alge to aalgan
 
-* __a^RVlge^EA^CSH^RLEN>n __
-* __aalga000>n __
 
-* __va^RVh^RCe^SV^EA^CLEN^SLEN>m __
-* __va0hhaa000>m __
 
-* __Stem vowel e to á for other root vowel__ \\  if e stem
+* **ie to iä in Illative and Sg3** \\  kiem´ni -> kiämnán, veerdi : viärdán peerru2%^CLEN%^VHIGH%^RVSH%>o
 
-* __Stem vowel i to á for other root vowel.__ \\  e.g. säämi > Ill sáámán 
 
-* __Stem vowel i to â for other root vowel, as a common error.__ \\  e.g. säämi > Ill Err/Orth sáámân 
 
 
-* __Stem vowel i to e in front of j__ \\  
 
 
 
-* __Stem vowel â to a in Pl Nom -h__ \\  silbâ to siilbah  %^WG%^RLEN%>hlove%>h
 
+* **Diphthongisation uo:uá** \\   
 
-* __so^RVllâ^WG^RLEN>h __
-* __soo0la00>h __
 
-* __Stem vowel â > á change before i__ \\ sollâ to sooláid 
 
 
-* __so^RVllâ^WG^RLEN^SVLOW>in __
-* __soo0lá000>in __
+* **ye to uá and uo, part 1** \\  Part 1 of ye to uá for kyeli : kuálán  
 
 
 
 
+* **ye to uá, part 2** \\  Part 2 of ye to uá for kyeli : kuálán
 
 
+* **kyel^RCi3^EA^CLEN>m**
+* **kuállá00>m**
 
-* __Stem vowel i3:0__ \\ 
 
+* **ye to uo, part 2** \\  Part 2 of ye to uá for kyeli : kuolijn
 
 
-* __Stem vowel u:o change before suffix__ \\  
+* **uá to ye and uo to ye, part 1** \\  Part 1 luámmán : lyeme čuággás%^ÁI%^WG%^RLEN%>
+
+
+* **vuolle^CLEN>en**
+* **vyelle0>en**
+
+
+* **uá to ye, part 2** \\  Part 2 luámmán : lyeme
+
+
+
+
+
+
+
+
+### Second syllable rules
+
+
+* **Second syllable vowel change á to e or i in 3syll stems** \\ puttás- > putes, triggers are ^ÁE and ^ÁI já%^RVhhá%^SVl%^ÁI%^WG%^RLEN%> pu5árrás%^ÁI%^WG%>umos
+
+
+* **puttás^ÁE^WG>**
+* **pu0tes00>**
+
+
+* **Stemvowel shortening  áá and aa to e or i in 3syll** \\ puttás- > putes, triggers are ^ÁE and ^ÁI
+
+
+* **nahhaar^ÁE^WG>**
+* **na0v0er00>**
+
+
+
+
+
+
+
+
+* **Stem vowel e to a for a root vowel.** \\  alge to aalgan
+
+
+* **a^RVlge^EA^CSH^RLEN>n**
+* **aalga000>n**
+
+
+* **va^RVh^RCe^SV^EA^CLEN^SLEN>m**
+* **va0hhaa000>m**
+
+
+* **Stem vowel e to á for other root vowel** \\  if e stem
+
+
+* **Stem vowel i to á for other root vowel.** \\  e.g. säämi > Ill sáámán 
+
+
+* **Stem vowel i to â for other root vowel, as a common error.** \\  e.g. säämi > Ill Err/Orth sáámân 
+
+
+
+
+* **Stem vowel i to e in front of j** \\  
+
+
+
+
+
+
+* **Stem vowel â to a in Pl Nom -h** \\  silbâ to siilbah  %^WG%^RLEN%>hlove%>h
+
+
+
+
+* **so^RVllâ^WG^RLEN>h**
+* **soo0la00>h**
+
+
+* **Stem vowel â > á change before i** \\ sollâ to sooláid 
+
+
+
+
+* **so^RVllâ^WG^RLEN^SVLOW>in**
+* **soo0lá000>in**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* **Stem vowel i3:0** \\ 
+
+
+
+
+
+
+* **Stem vowel u:o change before suffix** \\  
 2) 
 
 
-* __Stem vowel u2:o change before suffix__ \\  
-
-* __uáinu>o __
-* __uáino>o __
 
 
+* **Stem vowel u2:o change before suffix** \\  
 
 
-* __Second vowel shortening__ \\ eemeed : emedân, savvoon : savo 
-
-
-* __eemeed^CSH^SVSH>ân __
-* __0em0ed00>ân __
-
-
-* __kappeer^CSH^SVSH>ân __
-* __ka0p0er00>ân __
-
-* __Stem vowel:0 in front of â__ \\ aiguu:aaigâ
-
-
-* __Stem â deleting__ \\ kandâ:kandii
-
-!Suffix vowel rules
-
-* __Suffix vowel lengthening__ \\ long á in kissáást, nuorâ : nuorááin, hyeni:hyeneest
+* **uáinu>o**
+* **uáino>o**
 
 
 
-* __ki^RVssá^SV^WG^CLEN^SLEN>st __
-* __ki0ssáá000>st __
-
-* __mi^RVllo^SV^WG^CLEN^SLEN>st __
-* __mi0lloo000>st __
-
-* __huksi^SVm^SLEN>ist __
-* __huksiim0>ist __
 
 
-* __táál^RCu^SV^WG^RVSH^SLEN^SVLOW>st __
-* __táál0oo0000>st __
-
-* __Suffix i5:j for lexicon APINA__ \\ salijn
 
 
-* __Suffix i5:0 and i5ä:e__ \\ timotein oboen, not Chariliein
+
+* **Second vowel shortening** \\ eemeed : emedân, savvoon : savo 
 
 
-* __Suffix i:j for i and e-stems__ \\  
 
 
-* __Vowel copy in suffix__ \\  for imperative Sg3, at least
+* **eemeed^CSH^SVSH>ân**
+* **0em0ed00>ân**
+
+
+
+
+* **kappeer^CSH^SVSH>ân**
+* **ka0p0er00>ân**
+
+
+* **Stem vowel:0 in front of â** \\ aiguu:aaigâ
+
+
+
+
+* **Stem â deleting** \\ kandâ:kandii
+
+
+### Suffix vowel rules
+
+
+* **Suffix vowel lengthening** \\ long á in kissáást, nuorâ : nuorááin, hyeni:hyeneest
+
+
+
+
+
+
+* **ki^RVssá^SV^WG^CLEN^SLEN>st**
+* **ki0ssáá000>st**
+
+
+* **mi^RVllo^SV^WG^CLEN^SLEN>st**
+* **mi0lloo000>st**
+
+
+* **huksi^SVm^SLEN>ist**
+* **huksiim0>ist**
+
+
+
+
+* **táál^RCu^SV^WG^RVSH^SLEN^SVLOW>st**
+* **táál0oo0000>st**
+
+
+* **Suffix i5:j for lexicon APINA** \\ salijn
+
+
+
+
+* **Suffix i5:0 and i5ä:e** \\ timotein oboen, not Chariliein
+
+
+
+
+* **Suffix i:j for i and e-stems** \\  
+
+
+
+
+* **Vowel copy in suffix** \\  for imperative Sg3, at least
+
+
 
 
 Suffix consonant rules
@@ -807,31 +1200,48 @@ Suffix consonant rules
 
 
 
-!!Other rules
-
- * __Word final vowel deletion                 __ \\ for vaskâm:vaaskâ
-
-* __sollâ^FVD>ii __
-* __soll00>ii __
-
-* __Potential vowel shortening for contract verbs__ \\  -áážep becomes -áš etc.
 
 
 
 
+## Other rules
 
 
-* __skäi4nâ^VBACK>đ __
-* __skainâ0>đ __
+ * **Word final vowel deletion** \\ for vaskâm:vaaskâ
 
-* __skä^RVi4nâ^VBACK>đ __
-* __ska0inâ0>đ __
 
-* __hu^RVm^RCo^SVb^WG^RLEN^SLEN^RLEN^SLEN __
-* __huum0oob00000 __
+* **sollâ^FVD>ii**
+* **soll00>ii**
 
-* __hu^RVm^RCo^SVb^RLEN^SLEN^RVSH>ân __
-* __hu0m0o0b000>ân __
 
-* __hu^RVm^RCo^SVb^RVSH>ist __
-* __hu0m0o0b0>ist __
+* **Potential vowel shortening for contract verbs** \\  -áážep becomes -áš etc.
+
+
+
+
+
+
+
+
+
+
+
+
+* **skäi4nâ^VBACK>đ**
+* **skainâ0>đ**
+
+
+* **skä^RVi4nâ^VBACK>đ**
+* **ska0inâ0>đ**
+
+
+* **hu^RVm^RCo^SVb^WG^RLEN^SLEN^RLEN^SLEN**
+* **huum0oob00000**
+
+
+* **hu^RVm^RCo^SVb^RLEN^SLEN^RVSH>ân**
+* **hu0m0o0b000>ân**
+
+
+* **hu^RVm^RCo^SVb^RVSH>ist**
+* **hu0m0o0b0>ist**
