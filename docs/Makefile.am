@@ -7,25 +7,25 @@
 #
 # dir/filename.lexc => filename-dir.md
 
-MD_PAGES=root-morphology.md        \
-		adjectives-stems.md         \
-        adjectives-affixes.md         \
-		adpositions-stems.md        \
-		adverbs-stems.md            \
-		conjunctions-stems.md       \
-		nouns-affixes.md            \
-		nouns-stems.md              \
-		numerals-stems.md           \
-		particles-stems.md          \
-		pronouns-stems.md           \
-		propernouns-affixes.md      \
-		punctuation-stems.md        \
-		subjunctions-stems.md       \
-		smi-propernouns-stems.md       \
-		smn-propernouns-stems.md       \
-		verbs-affixes.md \
-		verbs-stems.md              \
-		phonology-morphology.md      \
+MD_PAGES=root-morphology.md      \
+		adjectives-stems.md      \
+		adjectives-affixes.md    \
+		adpositions-stems.md     \
+		adverbs-stems.md         \
+		conjunctions-stems.md    \
+		nouns-affixes.md         \
+		nouns-stems.md           \
+		numerals-stems.md        \
+		particles-stems.md       \
+		pronouns-stems.md        \
+		propernouns-affixes.md   \
+		punctuation-stems.md     \
+		subjunctions-stems.md    \
+		smi-propernouns-stems.md \
+		smn-propernouns-stems.md \
+		verbs-affixes.md         \
+		verbs-stems.md           \
+		phonology-morphology.md  \
 		disambiguator-syntax.md 
 # clitics-morphology.md       \
 # compounding-morphology.md   \
