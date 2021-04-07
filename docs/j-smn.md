@@ -1,22 +1,15 @@
-[What is this?](WhatIsThis.html)
+Source files
+------------
 
-Dynamic documentation
----------------------
+- [stems](https://gtsvn.uit.no/langtech/trunk/langs/smn/src/morphology/stems/)
+- [affixes](https://gtsvn.uit.no/langtech/trunk/langs/smn/src/morphology/affixes/)
+- [syntax](https://gtsvn.uit.no/langtech/trunk/langs/smn/src/syntax/)
+- [twolc](https://gtsvn.uit.no/langtech/trunk/langs/smn/src/phonology/smn-phon.twolc)
+- [yaml](https://gtsvn.uit.no/langtech/trunk/langs/smn/test/src/gt-norm-yamls/)
 
--   [Source file documentation](Links.html)
--   Source files:
-    [stems](https://gtsvn.uit.no/langtech/trunk/langs/smn/src/morphology/stems/)
-    /
-    [affixes](https://gtsvn.uit.no/langtech/trunk/langs/smn/src/morphology/affixes/)
-    /
-    [syntax](https://gtsvn.uit.no/langtech/trunk/langs/smn/src/syntax/)
-    /
-    [twolc](https://gtsvn.uit.no/langtech/trunk/langs/smn/src/phonology/smn-phon.twolc)
-    /
-    [yaml](https://gtsvn.uit.no/langtech/trunk/langs/smn/test/src/gt-norm-yamls/)
--   Generation of:
-    [paradigms](http://giellatekno.uit.no/cgi/p-smn.eng.html) /
-    [text](http://giellatekno.uit.no/cgi/d-smn.eng.html) /
+Generation of:
+- [paradigms](http://giellatekno.uit.no/cgi/p-smn.eng.html) /
+- [text](http://giellatekno.uit.no/cgi/d-smn.eng.html) /
 
 Static documentation
 --------------------
