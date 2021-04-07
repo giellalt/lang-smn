@@ -1,23 +1,20 @@
-Here's a list of links to the page for each file of source code. All pages are concatenated and can be found as [smn.html].
-
-
-*[root-morphology.html]
-*[adjectives-stems.html]
-*[adjectives-affixes.html]
-*[adpositions-stems.html]
-*[adverbs-stems.html]
-*[conjunctions-stems.html]
-*[nouns-affixes.html]
-*[nouns-stems.html]
-*[numerals-stems.html]
-*[particles-stems.html]
-*[pronouns-stems.html]
-*[propernouns-affixes.html]
-*[punctuation-stems.html]
-*[subjunctions-stems.html]
-*[smi-propernouns-stems.html]
-*[smn-propernouns-stems.html]
-*[verbs-affixes.html]
-*[verbs-stems.html]
-*[smn-phon-phonology.html]
-*[disambiguator-syntax.html]
+* [root-morphology.md](root-morphology.md)
+* [adjectives-affixes.md](adjectives-affixes.md)
+* [adjectives-stems.md](adjectives-stems.md)
+* [adpositions-stems.md](adpositions-stems.md)
+* [adverbs-stems.md](adverbs-stems.md)
+* [conjunctions-stems.md](conjunctions-stems.md)
+* [nouns-affixes.md](nouns-affixes.md)
+* [nouns-stems.md](nouns-stems.md)
+* [numerals-stems.md](numerals-stems.md)
+* [particles-stems.md](particles-stems.md)
+* [pronouns-stems.md](pronouns-stems.md)
+* [propernouns-affixes.md](propernouns-affixes.md)
+* [punctuation-stems.md](punctuation-stems.md)
+* [smi-propernouns-stems.md](smi-propernouns-stems.md)
+* [smn-propernouns-stems.md](smn-propernouns-stems.md)
+* [subjunctions-stems.md](subjunctions-stems.md)
+* [verbs-affixes.md](verbs-affixes.md)
+* [verbs-stems.md](verbs-stems.md)
+* [phonology-morphology.md](phonology-morphology.md)
+* [disambiguator-syntax.md](disambiguator-syntax.md)
