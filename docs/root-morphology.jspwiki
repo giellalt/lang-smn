@@ -1,10 +1,14 @@
 
-              !!!Inari Sámi morphological analyser
+
+# Inari Sámi morphological analyser
 
 
- !!!Multichar_Symbols definitions
 
-!!Parts of speech
+
+# Multichar_Symbols definitions
+
+
+## Parts of speech
  *  +N +A +Adv +V					  
  *  +Pron +CS +CC					  
  *  +Adp +Po +Pr 					  
@@ -13,61 +17,78 @@
  * +Symbol = independent symbols in the text stream, like £, €, ©
 
 
-!Tags for sub-POS
- * __ +Prop      __ - Propernoun
- * __ +Pers      __ - Personal Pronoun
- * __ +Dem       __ - Demonstrative Pronoun
- * __ +Interr    __ - Interrogative Pronoun
- * __ +Refl      __ - Reflexive Pronoun
- * __ +Recipr    __ - Reciprocal Pronoun
- * __ +Rel       __ - Relative Pronoun
- * __ +Indef     __ - Indefinitive Pronoun
- * __ +Coll      __ - Collective numerals, subtag for +N
- * __ +Arab      __ - Arabic numeral, subtag for +Num
- * __ +Rom       __ - Roman numeral, subtag for +Num
- * __+ACR__ - Acronym
- * __+Dyn__ - Dynamic Acronym
 
-!!Grammatical properties
+
+### Tags for sub-POS
+ * **+Prop** - Propernoun
+ * **+Pers** - Personal Pronoun
+ * **+Dem** - Demonstrative Pronoun
+ * **+Interr** - Interrogative Pronoun
+ * **+Refl** - Reflexive Pronoun
+ * **+Recipr** - Reciprocal Pronoun
+ * **+Rel** - Relative Pronoun
+ * **+Indef** - Indefinitive Pronoun
+ * **+Coll** - Collective numerals, subtag for +N
+ * **+Arab** - Arabic numeral, subtag for +Num
+ * **+Rom** - Roman numeral, subtag for +Num
+ * **+ACR** - Acronym
+ * **+Dyn** - Dynamic Acronym
+
+
+## Grammatical properties
+
 
  *  +IV +TV			  
 
 
-!Person - number
+
+
+### Person - number
  *  +Sg +Pl +Du						  
+
 
  *  +Sg1 +Sg2 +Sg3 				  
  *  +Du1 +Du2 +Du3 				  
  *  +Pl1 +Pl2 +Pl3					  
 
+
  *  +PxSg1 +PxSg2 +PxSg3 			  
  *  +PxDu1 +PxDu2 +PxDu3 			  
  *  +PxPl1 +PxPl2 +PxPl3 			  
 
-!Case
+
+### Case
  *  +Nom +Gen +Acc 				  
  *  +Ill +Ine +Ela 				  
  *  +Com +Ess +Par +Abe 			  
  *  +Loc                			  
 
 
+
+
  *  +Known  mon , till we found a better tag
 
-!Adjectival forms
+
+### Adjectival forms
  *  +Comp +Superl 			  
  *  +Attr				  
 
-!Adverb types 
+
+### Adverb types 
+
 
  *  +Spat	   	Spatial adverbs
  *  +Temp	    Temporal adverbs
 
 
-!Tense - mood
+
+
+### Tense - mood
  *  +Ind +Pot +Cond +Imprt +ImprtII  
  *  +Prs +Prt						  
 
-!Indefinite verb forms
+
+### Indefinite verb forms
  *  +Pass +Sup						  
  *  +Inf +Ger +GerII 				  
  *  +ConNeg +Neg 					  
@@ -75,20 +96,29 @@
  *  +VGen +VAbess					  
  *  +Actio					  
 
-{{{
 
-}}}
+```
+
+
+```
+
+
 
 
 All non-positional derivations should be preceded by this tag, to make it possible
 to target regular expressions at all derivations in a language-independent way:
 just specify +Der|+Der1 .. +Der5 and you are set.
 
+
  * +Der
 
 
-!Derivations
-!Other/unclassified derivations, can appear in all positions:
+
+
+### Derivations
+### Other/unclassified derivations, can appear in all positions:
+
+
 
 
  *  +Der/ag  neeljičievâg neeljijienâg kuulmâloonjâg neeljičievâg neeljijienâg
@@ -96,7 +126,8 @@ just specify +Der|+Der1 .. +Der5 and you are set.
  *  +Der/ivvaas                  
  *  +Der/vualasas                     tutkâmvuálásâš
 
-!Clitics
+
+### Clitics
  *  +Foc       				  
  *  +Foc/ba         
  *  +Foc/baa        
@@ -118,18 +149,21 @@ just specify +Der|+Der1 .. +Der5 and you are set.
  *  +Foc/sun        
  *  +Foc/uv        
 
-!Usage tags
 
- * __ +Err/Orth        __ substandard, not in normative fst
- * __ +Err/Lex         __ substandard, not in normative fst, no normative lemma
- * __ +Err/Hyph        __ substandard, not in normative fst
- * __ +Err/SpaceCmp        __ substandard, not in normative fst
- * __ +MWE             __ - MultiWord Expression, used for abbreviation extraction for preprocess.sh
- * __ +Use/-PLX        __ - do not include in Polderland spellers (most likely irrelevant for smn)
- * __ +Use/-Spell      __ - do not include in speller (even though the entry is formally correct)
- * __ +Use/SpellNoSugg __ - Recognized, but not suggested in speller 
+### Usage tags
 
-!!Semantic tags
+
+ * **+Err/Orth** substandard, not in normative fst
+ * **+Err/Lex** substandard, not in normative fst, no normative lemma
+ * **+Err/Hyph** substandard, not in normative fst
+ * **+Err/SpaceCmp** substandard, not in normative fst
+ * **+MWE** - MultiWord Expression, used for abbreviation extraction for preprocess.sh
+ * **+Use/-PLX** - do not include in Polderland spellers (most likely irrelevant for smn)
+ * **+Use/-Spell** - do not include in speller (even though the entry is formally correct)
+ * **+Use/SpellNoSugg** - Recognized, but not suggested in speller 
+
+
+## Semantic tags
  * +Sem/Domain_Hum                
  * +Sem/Edu_Hum              
  * +Sem/Atr	               
@@ -322,15 +356,22 @@ just specify +Der|+Der1 .. +Der5 and you are set.
  * +Sem/Wthr						            weather
 
 
-!!Punctuation
+
+
+## Punctuation
+
 
  *  +CLB +PUNCT +HYPH         
  *  +PAR +LEFT +RIGHT         
- * __+CLBfinal__  Sentence final abbreviated expression ending in full stop, so that the full stop is ambiguous
+ * **+CLBfinal**  Sentence final abbreviated expression ending in full stop, so that the full stop is ambiguous
+
 
  *  +URL          
 
-!!Morphophonemes
+
+## Morphophonemes
+
+
 
 
  *  k4 l4 t4 p4 c4 t4 č4    = these are consonants that change in cg
@@ -344,7 +385,9 @@ just specify +Der|+Der1 .. +Der5 and you are set.
  *  i2  u2 i3 â2       stemvowel changing to e, e.g. kyeli:kyeˊle 
  *  ∑    used for dynamic compounds, Capital Greek Sigma, Alt-Shift-S
 
-!Archiphonemes
+
+### Archiphonemes
+
 
  * ^RC     Root consonant dummy
  * ^RV     Root vowel dummy
@@ -352,7 +395,9 @@ just specify +Der|+Der1 .. +Der5 and you are set.
  * ^SV     Suffix vowel dummy
  * ^VO     = vowel copy
 
-!Triggers
+
+### Triggers
+
 
  * ^CLEN   Consonant lengthening in qual WG
  * ^CSH    Consonant shortening (not WG)
@@ -374,7 +419,9 @@ just specify +Der|+Der1 .. +Der5 and you are set.
  * ^IUML       =  â to e in front of high suffixes 
  * ^BLOCK    = This symbol just to block otherwise triggering contexts
 
-!!Symbols that need to be escaped on the lower side (towards twolc):
+
+## Symbols that need to be escaped on the lower side (towards twolc):
+
 
  *  +Use/NG       not-generate, for ped generation isme-ped.fst
  *  +Use/MT        generate only for MT 
@@ -382,11 +429,15 @@ just specify +Der|+Der1 .. +Der5 and you are set.
  *  +Use/-PMatch   
 
 
+
+
  * +Use/PMatch   
  * @P.Pmatch.Backtrack@     
 
 
-!!Variants
+
+
+## Variants
  * +v1   
  * +v2   
  * +v3   
@@ -396,19 +447,27 @@ just specify +Der|+Der1 .. +Der5 and you are set.
  * +Allegro		   
 
 
-!!Semantic tags
+
+
+## Semantic tags
+
 
  * +Sem/Body  denotes bodyparts
  * +Sem/Plc  denotes places
 
-!!Compound tags
 
-!These tags describe the parts of the compound.
+## Compound tags
 
-The prefix (before "/") is __Cmp__.
+
+### These tags describe the parts of the compound.
+
+
+The prefix (before "/") is **Cmp**.
+
 
  * +Cmp  compounds
  * +Cmp/Hyph  compounds
+
 
  * +Cmp/SgNom  compounds
  * +Cmp/PlNom  compounds
@@ -418,39 +477,51 @@ The prefix (before "/") is __Cmp__.
  * +Cmp/SplitR  compounds
  * +Cmp/Sh  compounds
 
-!These tags govern the parts of the compound
 
-The prefix (before "/") is __CmpNP__:
+### These tags govern the parts of the compound
+
+
+The prefix (before "/") is **CmpNP**:
 (meaning: this is the normative position of thus tag)
 
- * __+CmpNP/All__ - ... in all positions, __default__, this tag does not have to be written
- * __+CmpNP/First__ - ... only be first part in a compound or alone
- * __+CmpNP/Pref__ - ... only __first__ part in a compound, NEVER alone
- * __+CmpNP/Last__ - ... only be last part in a compound or alone
- * __+CmpNP/Suff__ - ... only __last__ part in a compound, NEVER alone
- * __+CmpNP/None__ - ... does not take part in compounds
- * __+CmpNP/Only__ - ... only be part of a compound, i.e. can never
+
+ * **+CmpNP/All** - ... in all positions, **default**, this tag does not have to be written
+ * **+CmpNP/First** - ... only be first part in a compound or alone
+ * **+CmpNP/Pref** - ... only **first** part in a compound, NEVER alone
+ * **+CmpNP/Last** - ... only be last part in a compound or alone
+ * **+CmpNP/Suff** - ... only **last** part in a compound, NEVER alone
+ * **+CmpNP/None** - ... does not take part in compounds
+ * **+CmpNP/Only** - ... only be part of a compound, i.e. can never
                     be used alone, but can appear in any position
 
-The prefix (before "/") is __CmpN__:
+
+The prefix (before "/") is **CmpN**:
 (meaning: this is the normative position of thus tag)
 The tagged part of the compound should make a compound using:
 
- * __+CmpN/SgN__ Singular Nominative
- * __+CmpN/SgG__ Singular Genitive
- * __+CmpN/PlG__ Plural Genitive
 
-Unmarked = Default, ie {{+CmpN/SgN}} for SMN.
+ * **+CmpN/SgN** Singular Nominative
+ * **+CmpN/SgG** Singular Genitive
+ * **+CmpN/PlG** Plural Genitive
+
+
+Unmarked = Default, ie `+CmpN/SgN` for SMN.
+
 
 The second part of the compound may require that the previous (left part) is:
 
- * __+CmpN/SgNomLeft__ Singular Nominative
- * __+CmpN/SgGenLeft__ Singular Genitive
- * __+CmpN/PlGenLeft__ Plural Genitive
+
+ * **+CmpN/SgNomLeft** Singular Nominative
+ * **+CmpN/SgGenLeft** Singular Genitive
+ * **+CmpN/PlGenLeft** Plural Genitive
 
 
 
-!!Language tagged names
+
+
+
+## Language tagged names
+
 
  * +OLang/ENG  		  
  * +OLang/FIN  		  
@@ -463,52 +534,62 @@ The second part of the compound may require that the previous (left part) is:
  * +OLang/RUS  		  
 
 
-!!Flag diacritics
+
+
+## Flag diacritics
 We have manually optimised the structure of our lexicon using following
 flag diacritics to restrict morhpological combinatorics - only allow compounds
 with verbs if the verb is further derived into a noun again:
- | @P.NeedNoun.ON@ | (Dis)allow compounds with verbs unless nominalised
- | @D.NeedNoun.ON@ | (Dis)allow compounds with verbs unless nominalised
- | @C.NeedNoun@ | (Dis)allow compounds with verbs unless nominalised
- | @R.NeedNoun.ON@ | (Dis)allow compounds with verbs unless nominalised
+|  @P.NeedNoun.ON@ | (Dis)allow compounds with verbs unless nominalised
+|  @D.NeedNoun.ON@ | (Dis)allow compounds with verbs unless nominalised
+|  @C.NeedNoun@ | (Dis)allow compounds with verbs unless nominalised
+|  @R.NeedNoun.ON@ | (Dis)allow compounds with verbs unless nominalised
 
- | @D.ErrOrth.ON@ 
- | @C.ErrOrth@	 
- | @P.ErrOrth.ON@ 
+
+|  @D.ErrOrth.ON@ 
+|  @C.ErrOrth@	 
+|  @P.ErrOrth.ON@ 
+
+
 
 
 For languages that allow compounding, the following flag diacritics are needed
 to control position-based compounding restrictions for nominals. Their use is
 handled automatically if combined with +CmpN/xxx tags. If not used, they will
 do no harm.
- | @P.CmpFrst.FALSE@ | Require that words tagged as such only appear first
- | @D.CmpPref.TRUE@ | Block such words from entering ENDLEX
- | @P.CmpPref.FALSE@ | Block these words from making further compounds
- | @D.CmpLast.TRUE@ | Block such words from entering R
- | @D.CmpNone.TRUE@ | Combines with the next tag to prohibit compounding
- | @U.CmpNone.FALSE@ | Combines with the prev tag to prohibit compounding
- | @U.CmpNone.TRUE@ | Combines with the two previous ones to block compounding
- | @P.CmpOnly.TRUE@ | Sets a flag to indicate that the word has passed R
- | @D.CmpOnly.FALSE@ | Disallow words coming directly from root.
- | @D.CmpHyph.TRUE@ | Flag to control hyphenated compounds like proper nouns
- | @U.CmpHyph.FALSE@ | Flag to control hyphenated compounds like proper nouns
- | @U.CmpHyph.TRUE@ | Flag to control hyphenated compounds like proper nouns
- | @C.CmpHyph@ | Flag to control hyphenated compounds like proper nouns
- | @P.CmpHyph.TRUE@ | Flag to control hyphenated compounds like proper nouns
- | @N.CmpHyph.TRUE@ | Flag to control hyphenated compounds like proper nouns
+|  @P.CmpFrst.FALSE@ | Require that words tagged as such only appear first
+|  @D.CmpPref.TRUE@ | Block such words from entering ENDLEX
+|  @P.CmpPref.FALSE@ | Block these words from making further compounds
+|  @D.CmpLast.TRUE@ | Block such words from entering R
+|  @D.CmpNone.TRUE@ | Combines with the next tag to prohibit compounding
+|  @U.CmpNone.FALSE@ | Combines with the prev tag to prohibit compounding
+|  @U.CmpNone.TRUE@ | Combines with the two previous ones to block compounding
+|  @P.CmpOnly.TRUE@ | Sets a flag to indicate that the word has passed R
+|  @D.CmpOnly.FALSE@ | Disallow words coming directly from root.
+|  @D.CmpHyph.TRUE@ | Flag to control hyphenated compounds like proper nouns
+|  @U.CmpHyph.FALSE@ | Flag to control hyphenated compounds like proper nouns
+|  @U.CmpHyph.TRUE@ | Flag to control hyphenated compounds like proper nouns
+|  @C.CmpHyph@ | Flag to control hyphenated compounds like proper nouns
+|  @P.CmpHyph.TRUE@ | Flag to control hyphenated compounds like proper nouns
+|  @N.CmpHyph.TRUE@ | Flag to control hyphenated compounds like proper nouns
+
+
 
 
 Use the following flag diacritics to control downcasing of derived proper
 nouns (e.g. Finnish Pariisi -> pariisilainen). See e.g. North Sámi for how to use
 these flags. There exists a ready-made regex that will do the actual down-casing
 given the proper use of these flags.
- | @U.Cap.Obl@ | Allowing downcasing of derived names: deatnulasj.
- | @U.Cap.Opt@ | Allowing downcasing of derived names: deatnulasj.
+|  @U.Cap.Obl@ | Allowing downcasing of derived names: deatnulasj.
+|  @U.Cap.Opt@ | Allowing downcasing of derived names: deatnulasj.
+
+
 
 
  * @U.NeedsVowRed.OFF@ is used to force hyphenation/non-reduction: samediggi-
  * @U.NeedsVowRed.ON@ is used to force reduction w/o hyphen: samedigge#xxx
  * @C.NeedsVowRed@ Clearing this feature, so that it doesn't interfere with further compounding
+
 
  * @C.Px@
  * @C.Nom3Px@
@@ -521,37 +602,52 @@ given the proper use of these flags.
  * @P.Nom3Px.add@
  * @R.Nom3Px.add@
 
+
  * @P.Vgen.add@
  * @R.Vgen.add@
+
+
 
 
  * @R.SpellRlx.ON@ Flag used to tag spell-relax-analysed strings (and only those).
  * @D.SpellRlx.ON@ Flag used to tag spell-relax-analysed strings (and only those).
  * @C.SpellRlx@ Flag used to tag spell-relax-analysed strings (and only those).
 
+
  * @R.SpaceCmp.ON@ Flag to tag compounds written with a space
  * @D.SpaceCmp.ON@ Flag to tag compounds written with a space
  * @C.SpaceCmp@ Flag to tag compounds written with a space
 
 
-!!!Basic lexica, pointing to the other lexicon files
+
+
+# Basic lexica, pointing to the other lexicon files
+
 
  LEXICON Root    where everyting starts
 
 
- * __LEXICON Acronym   __ splitting in common and smn
+
+
+ * **LEXICON Acronym** splitting in common and smn
 
 
 
- * __LEXICON ProperNoun   __ 
 
 
 
-!!!Lexicon ENDLEX
+ * **LEXICON ProperNoun** 
+
+
+
+
+
+
+# Lexicon ENDLEX
 And this is the ENDLEX of everything:
-{{{
+```
  @D.CmpOnly.FALSE@@D.CmpPref.TRUE@@D.NeedNoun.ON@ # ;
-}}}
-The {{@D.CmpOnly.FALSE@}} flag diacritic is ued to disallow words tagged
+```
+The `@D.CmpOnly.FALSE@` flag diacritic is ued to disallow words tagged
 with +CmpNP/Only to end here.
-The {{@D.NeedNoun.ON@}} flag diacritic is used to block illegal compounds.
+The `@D.NeedNoun.ON@` flag diacritic is used to block illegal compounds.
