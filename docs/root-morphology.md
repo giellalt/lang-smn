@@ -1,22 +1,16 @@
 
-
 # Inari Sámi morphological analyser
 
-
-
-
 # Multichar_Symbols definitions
-
 
 ## Parts of speech
  *  +N +A +Adv +V					  
  *  +Pron +CS +CC					  
  *  +Adp +Po +Pr 					  
  *  +Interj +Pcle					  
- *  +Num +ABBR         
+ *  +ABBR         
+
  * +Symbol = independent symbols in the text stream, like £, €, ©
-
-
 
 
 ### Tags for sub-POS
@@ -34,28 +28,37 @@
  * **+ACR** - Acronym
  * **+Dyn** - Dynamic Acronym
 
+* **+Gram/TAbbr**:  Transitive abbreviation (it needs an argument)
+* **+Gram/NoAbbr**:  Intransitive abbreviations that are homonymous
+   with more frequent words. They should only be considered
+   abbreviations in the middle of a sentence.
+* **+Gram/TNumAbbr**:  Transitive abbreviation if the following
+            constituent is numeric
+* **+Gram/NumNoAbbr**:  Transitive abbreviations for which numerals
+are complements and normal words. The abbreviation usage
+is less common and thus only the occurences in the middle of
+the sentence can be considered as true cases.
+* **+Gram/TIAbbr**:  Both transitive and intransitive abbreviation
+* **+Gram/IAbbr**:  Intransitive abbreviation (it takes no argument)
+* **+Gram/3syll**: trisyllabic verbs
+
+
 
 ## Grammatical properties
 
-
  *  +IV +TV			  
-
-
 
 
 ### Person - number
  *  +Sg +Pl +Du						  
 
-
  *  +Sg1 +Sg2 +Sg3 				  
  *  +Du1 +Du2 +Du3 				  
  *  +Pl1 +Pl2 +Pl3					  
 
-
  *  +PxSg1 +PxSg2 +PxSg3 			  
  *  +PxDu1 +PxDu2 +PxDu3 			  
  *  +PxPl1 +PxPl2 +PxPl3 			  
-
 
 ### Case
  *  +Nom +Gen +Acc 				  
@@ -64,29 +67,21 @@
  *  +Loc                			  
 
 
-
-
  *  +Known  mon , till we found a better tag
-
 
 ### Adjectival forms
  *  +Comp +Superl 			  
  *  +Attr				  
 
-
 ### Adverb types 
-
 
  *  +Spat	   	Spatial adverbs
  *  +Temp	    Temporal adverbs
 
 
-
-
 ### Tense - mood
  *  +Ind +Pot +Cond +Imprt +ImprtII  
  *  +Prs +Prt						  
-
 
 ### Indefinite verb forms
  *  +Pass +Sup						  
@@ -96,35 +91,31 @@
  *  +VGen +VAbess					  
  *  +Actio					  
 
-
 ```
 
-
 ```
-
-
 
 
 All non-positional derivations should be preceded by this tag, to make it possible
 to target regular expressions at all derivations in a language-independent way:
 just specify +Der|+Der1 .. +Der5 and you are set.
 
-
  * +Der
-
-
 
 
 ### Derivations
 ### Other/unclassified derivations, can appear in all positions:
 
 
-
-
  *  +Der/ag  neeljičievâg neeljijienâg kuulmâloonjâg neeljičievâg neeljijienâg
  *  +Der/ahasas                     85-ahasâš škovlâahasâš
  *  +Der/ivvaas                  
  *  +Der/vualasas                     tutkâmvuálásâš
+
+
+ * **+Ex/N	** - This tag is not added in lexc. The POS tag before derivation is converted into this tag when compiling FST for disambiguation.
+ * **+Ex/A	** - This tag is not added in lexc. The POS tag before derivation is converted into this tag when compiling FST for disambiguation.
+ * **+Ex/V	** - This tag is not added in lexc. The POS tag before derivation is converted into this tag when compiling FST for disambiguation.
 
 
 ### Clitics
@@ -149,35 +140,23 @@ just specify +Der|+Der1 .. +Der5 and you are set.
  *  +Foc/sun        
  *  +Foc/uv        
 
-
 ### Usage tags
-
 
  * **+Err/Orth** substandard, not in normative fst
  * **+Err/Lex** substandard, not in normative fst, no normative lemma
  * **+Err/Hyph** substandard, not in normative fst
  * **+Err/SpaceCmp** substandard, not in normative fst
+|  **+Err/MissingSpace** | in use in smi lexc
+
  * **+MWE** - MultiWord Expression, used for abbreviation extraction for preprocess.sh
  * **+Use/-PLX** - do not include in Polderland spellers (most likely irrelevant for smn)
  * **+Use/-Spell** - do not include in speller (even though the entry is formally correct)
  * **+Use/SpellNoSugg** - Recognized, but not suggested in speller 
-
+ * **+Use/GC** only retained in the HFST Grammar Checker disambiguation analyser
+ * **+Use/-GC** never retained in the HFST Grammar Checker disambiguation analyser
 
 ## Semantic tags
- * +Sem/Domain_Hum                
- * +Sem/Edu_Hum              
- * +Sem/Atr	               
- * +Sem/Mal               
- * +Sem/Fem               
- * +Sem/Sur                
- * +Sem/Plc               
- * +Sem/Org               
- * +Sem/Obj               
- * +Sem/Obj-el                
- * +Sem/Measr               
- * +Sem/Money               
- * +Sem/Veh               
- * +Sem/Year  
+
  * +Sem/Act              
  * +Sem/Act_Fruit              
  * +Sem/Act_Plc              
@@ -201,6 +180,8 @@ just specify +Der|+Der1 .. +Der5 and you are set.
  * +Sem/Aniprod_Obj-clo			           
  * +Sem/Aniprod_Perc-phys			           
  * +Sem/Aniprod_Plc_Route			           
+ * +Sem/Atr	               
+ * +Sem/Body  denotes bodyparts
  * +Sem/Body-abstr					           
  * +Sem/Body-abstr_Feat-psych		           
  * +Sem/Body-abstr_Prod-audio_Semcon          
@@ -212,11 +193,11 @@ just specify +Der|+Der1 .. +Der5 and you are set.
  * +Sem/Body_Plc-elevate			           
  * +Sem/Build						           
  * +Sem/Build-room  				           
+ * +Sem/Build_Edu_Org				           
+ * +Sem/Build_Org					           
  * +Sem/Buildpart					           
  * +Sem/Buildpart_Cat_Ctain_Mat	           
  * +Sem/Buildpart_Ctain_Obj		           
- * +Sem/Build_Edu_Org				           
- * +Sem/Build_Org					           
  * +Sem/Cat						           
  * +Sem/Clth						            clothes
  * +Sem/Clth-jewl					           
@@ -233,6 +214,7 @@ just specify +Der|+Der1 .. +Der5 and you are set.
  * +Sem/Date						           
  * +Sem/Dir						           
  * +Sem/Domain						           
+ * +Sem/Domain_Hum                
  * +Sem/Domain_Prod-audio			           
  * +Sem/Drink						           
  * +Sem/Drink_Plant				           
@@ -240,6 +222,7 @@ just specify +Der|+Der1 .. +Der5 and you are set.
  * +Sem/Edu						           
  * +Sem/Edu_Event					           
  * +Sem/Edu_Geom					           
+ * +Sem/Edu_Hum              
  * +Sem/Edu_Mat					           
  * +Sem/Edu_Org					           
  * +Sem/Event						           
@@ -256,12 +239,12 @@ just specify +Der|+Der1 .. +Der5 and you are set.
  * +Sem/Feat-psych					           
  * +Sem/Feat-psych_Plc				           
  * +Sem/Feat_Plant					           
+ * +Sem/Fem               
  * +Sem/Food						           
  * +Sem/Food-med					           
  * +Sem/Food_Plant					           
  * +Sem/Fruit						           
  * +Sem/Fruit_Hum					           
- * +Sem/Plant-fungus	              Fungi names
  * +Sem/Furn						           
  * +Sem/Game_Obj-play				           
  * +Sem/Geom						           
@@ -282,14 +265,19 @@ just specify +Der|+Der1 .. +Der5 and you are set.
  * +Sem/Ideol						           
  * +Sem/Lang 			             Languages
  * +Sem/Lang_Tool					           
+ * +Sem/Mal               
  * +Sem/Mat						           
  * +Sem/Mat_Plant					           
  * +Sem/Mat_Txt					           
+ * +Sem/Measr               
  * +Sem/Measr_Sign					           
  * +Sem/Measr_Time					           
+ * +Sem/Money               
  * +Sem/Money_Obj					           
  * +Sem/Money_Txt					           
+ * +Sem/Obj               
  * +Sem/Obj-clo					           
+ * +Sem/Obj-el                
  * +Sem/Obj-ling					           
  * +Sem/Obj-play					           
  * +Sem/Obj-rope					           
@@ -297,193 +285,166 @@ just specify +Der|+Der1 .. +Der5 and you are set.
  * +Sem/Obj_Semcon					           
  * +Sem/Obj_State					           
  * +Sem/Obj_Veh					           
+ * +Sem/Org               
+ * +Sem/Org_Prod-audio				           
  * +Sem/Org_Prod-cogn				           
+ * +Sem/Org_Prod-vis				           
  * +Sem/Org_Rule					           
  * +Sem/Org_Txt					           
- * +Sem/Org_Prod-audio				           
- * +Sem/Org_Prod-vis				           
  * +Sem/Part						           
  * +Sem/Perc-cogn					           
  * +Sem/Perc-emo					           
  * +Sem/Perc-phys					           
  * +Sem/Plant ! Plant names		           
+ * +Sem/Plant-fungus	              Fungi names
+ * +Sem/Plant_Plantpart                		           
  * +Sem/Plantpart					           
- * +Sem/Plant_Plantpart			           
+ * +Sem/Plc                                                    denotes places
  * +Sem/Plc-abstr					           
- * +Sem/Plc-abstr_Rel_State		           
- * +Sem/Plc-abstr_Route			           
+ * +Sem/Plc-abstr_Rel_State		                   
+ * +Sem/Plc-abstr_Route			                   
  * +Sem/Plc-elevate				           
  * +Sem/Plc-line					           
  * +Sem/Plc-water					           
  * +Sem/Plc_Route					           
  * +Sem/Plc_Substnc				           
- * +Sem/Plc_Substnc_Wthr			           
+ * +Sem/Plc_Substnc_Wthr			                   
  * +Sem/Plc_Time					           
  * +Sem/Plc_Tool-catch				           
  * +Sem/Plc_Txt					           
  * +Sem/Plc_Wthr					           
- * +Sem/Pos						           
+ * +Sem/Pos						   
  * +Sem/Process					           
- * +Sem/Prod						           
+ * +Sem/Prod						   
  * +Sem/Prod-audio					           
  * +Sem/Prod-audio_Txt				           
  * +Sem/Prod-cogn					           
  * +Sem/Prod-cogn_Txt				           
  * +Sem/Prod-ling					           
  * +Sem/Prod-vis					           
- * +Sem/Rel						           
- * +Sem/Route						           
- * +Sem/Rule						           
- * +Sem/Semcon						           
+ * +Sem/Rel					           
+ * +Sem/Route					           
+ * +Sem/Rule					           
+ * +Sem/Semcon					           
  * +Sem/Semcon_Txt					           
- * +Sem/Sign						           
- * +Sem/State						           
+ * +Sem/Sign					           
+ * +Sem/State					           
  * +Sem/State-sick					           
  * +Sem/Substnc					           
  * +Sem/Substnc_Wthr				           
- * +Sem/Time						           
+ * +Sem/Sur                                                   
+ * +Sem/Time					           
  * +Sem/Time-clock					           
  * +Sem/Time_Wthr					           
- * +Sem/Tool						           
+ * +Sem/Tool					           
  * +Sem/Tool-catch					           
  * +Sem/Tool-clean					           
  * +Sem/Tool-it					           
  * +Sem/Tool-measr					           
  * +Sem/Tool-music					           
  * +Sem/Tool-write					           
- * +Sem/Txt						           
- * +Sem/Wpn						           
- * +Sem/Wthr						            weather
-
-
+ * +Sem/Txt					           
+ * +Sem/Veh                                                   
+ * +Sem/Wpn					           
+ * +Sem/Wthr					            weather
+ * +Sem/Year                                                  
 
 
 ## Punctuation
 
-
- *  +CLB +PUNCT +HYPH         
- *  +PAR +LEFT +RIGHT         
- * **+CLBfinal**  Sentence final abbreviated expression ending in full stop, so that the full stop is ambiguous
-
-
- *  +URL          
+ *  +CLB +PUNCT +HYPH    
+ *  +PAR +LEFT +RIGHT    
+ *  +URL                 
+ * **+CLBfinal**  Sentence final abbreviated expression ending in full stop, the full stop is ambiguous
 
 
 ## Morphophonemes
 
-
-
-
- *  k4 l4 t4 p4 c4 t4 č4    = these are consonants that change in cg
- *  b6 d6 g6     = these are consonants that change in clitics: jiemge, epke
- *  i4   i6              = this is the postvocalic i consonant, realised as i
- *  i6  j6             = these are fake vowel and consonant, to get rules to function for exeptions
- *  i5				 = comitative suffix-begin in loanwords
- *  a5 ä5 á5 e5 u5 o5    these vowels do not change
- *  h5 j5 m5 ŋ5 t5 c5 d5 l5 t5 r5 č5 k5 z5    these consonants do not change in WG
- *  y5                    these vowels do not change, e.g. pyerá
- *  i2  u2 i3 â2       stemvowel changing to e, e.g. kyeli:kyeˊle 
+ *  k4 l4 t4 p4 c4 t4 č4         = these are consonants that change in cg
+ *  b6 d6 g6                     = these are consonants that change in clitics: jiemge, epke
+ *  i2 i3 u2 â2                  = stemvowel changing to e, e.g. kyeli:kyeˊle 
+ *  i3                           =  stemvowel changing to e, e.g. kyeli:kyeˊle (why i3)
+ *  i4                           = this is the postvocalic i consonant, realised as i
+ *  i5                           = comitative suffix-begin in loanwords
+ *  i6  j6                       = these are fake vowel and consonant, to get rules to function for exeptions
+ *  a5 ä5 á5 e5 u5 o5 y5         = these vowels do not change, e.g. pyerá
+ *  h5 j5 m5 ŋ5 t5 c5 d5         = these consonants do not change in WG
+ *  l5 t5 r5 č5 k5 z5            = these consonants do not change in WG
  *  ∑    used for dynamic compounds, Capital Greek Sigma, Alt-Shift-S
-
 
 ### Archiphonemes
 
-
- * ^RC     Root consonant dummy
- * ^RV     Root vowel dummy
- * ^SC     Suffix consonant dummy
- * ^SV     Suffix vowel dummy
- * ^VO     = vowel copy
-
+ * ^RC    = Root consonant dummy
+ * ^RV    = Root vowel dummy
+ * ^SC    = Suffix consonant dummy
+ * ^SV    = Suffix vowel dummy
+ * ^VO    = vowel copy
 
 ### Triggers
 
-
- * ^CLEN   Consonant lengthening in qual WG
- * ^CSH    Consonant shortening (not WG)
- * ^FCD    Final consonant deletion
- * ^FVD    Final vowel deletion
- * ^EA     is á and root vowel change in Ill Sg of i-stems
- * ^EX     = Stem vowel: i to â where it should have been á, this is Err/Orth only      
- * ^RLEN   Root vowel lengthening (impl. WG)
- * ^RVSH   Root vow shortening
- * ^SLEN   Suffix vowel lengthening 
- * ^SVLOW   Suffix vowel lowering â > á and u > o
- * ^SVSH   Second syllable vowel shortening
+ * ^CLEN     Consonant lengthening in qual WG
+ * ^CSH      Consonant shortening (not WG)
+ * ^FCD      Final consonant deletion
+ * ^FVD      Final vowel deletion
+ * ^EA      is á and root vowel change in Ill Sg of i-stems
+ * ^EX      = Stem vowel: i to â where it should have been á, this is Err/Orth only      
+ * ^RLEN     Root vowel lengthening (impl. WG)
+ * ^RVSH     Root vow shortening
+ * ^SLEN     Suffix vowel lengthening 
+ * ^SVLOW    Suffix vowel lowering â > á and u > o
+ * ^SVSH     Second syllable vowel shortening
  * ^VLOW    is Vowel lowering in 3rd sg of contract verbs tuhhid:tohhe
- * ^WG     Weak grade trigger
+ * ^WG       Weak grade trigger
  * ^ÁE      á->e
  * ^ÁI      á->i
- * ^VHIGH  = hightening of vowels for verbs o to uu, a to oo
- * ^VBACK    = back vowels for verbs, ä to a (when needed, normally 2syll a|â is enough
- * ^IUML       =  â to e in front of high suffixes 
- * ^BLOCK    = This symbol just to block otherwise triggering contexts
-
+ * ^VHIGH   = hightening of vowels for verbs o to uu, a to oo
+ * ^VBACK   = back vowels for verbs, ä to a (when needed, normally 2syll a|â is enough
+ * ^IUML    =  â to e in front of high suffixes 
+ * ^BLOCK   = This symbol just to block otherwise triggering contexts
 
 ## Symbols that need to be escaped on the lower side (towards twolc):
 
-
  *  +Use/NG       not-generate, for ped generation isme-ped.fst
  *  +Use/MT        generate only for MT 
- *  +Use/Circ   
- *  +Use/-PMatch   
+ *  +Use/Circ     
+
+ * +Use/-PMatch           = for preprocessing
+ * +Use/PMatch            = for preprocessing
+ * @P.Pmatch.Backtrack@   = for preprocessing
 
 
-
-
- * +Use/PMatch   
- * @P.Pmatch.Backtrack@     
-
-
-
-
-## Variants
- * +v1   
- * +v2   
- * +v3   
- * +v4   
+## Variants within the same paradigm
+ * +v1     
+ * +v2     
+ * +v3     
+ * +v4     
  * +Hom1   
  * +Hom2   
- * +Allegro		   
+ * +Allegro   
 
-
-
-
-## Semantic tags
-
-
- * +Sem/Body  denotes bodyparts
- * +Sem/Plc  denotes places
 
 
 ## Compound tags
 
-
 ### These tags describe the parts of the compound.
-
 
 The prefix (before "/") is **Cmp**.
 
+ * +Cmp         compounds
+ * +Cmp/Hyph    compounds
 
- * +Cmp  compounds
- * +Cmp/Hyph  compounds
-
-
- * +Cmp/SgNom  compounds
- * +Cmp/PlNom  compounds
- * +Cmp/Attr  compounds
- * +Cmp/SgGen  compounds
- * +Cmp/PlGen  compounds
+ * +Cmp/SgNom   compounds
+ * +Cmp/PlNom   compounds
+ * +Cmp/Attr    compounds
+ * +Cmp/SgGen   compounds
+ * +Cmp/PlGen   compounds
  * +Cmp/SplitR  compounds
- * +Cmp/Sh  compounds
-
+ * +Cmp/Sh      compounds
 
 ### These tags govern the parts of the compound
 
-
 The prefix (before "/") is **CmpNP**:
 (meaning: this is the normative position of thus tag)
-
 
  * **+CmpNP/All** - ... in all positions, **default**, this tag does not have to be written
  * **+CmpNP/First** - ... only be first part in a compound or alone
@@ -494,22 +455,17 @@ The prefix (before "/") is **CmpNP**:
  * **+CmpNP/Only** - ... only be part of a compound, i.e. can never
                     be used alone, but can appear in any position
 
-
 The prefix (before "/") is **CmpN**:
 (meaning: this is the normative position of thus tag)
 The tagged part of the compound should make a compound using:
-
 
  * **+CmpN/SgN** Singular Nominative
  * **+CmpN/SgG** Singular Genitive
  * **+CmpN/PlG** Plural Genitive
 
-
 Unmarked = Default, ie `+CmpN/SgN` for SMN.
 
-
 The second part of the compound may require that the previous (left part) is:
-
 
  * **+CmpN/SgNomLeft** Singular Nominative
  * **+CmpN/SgGenLeft** Singular Genitive
@@ -517,11 +473,7 @@ The second part of the compound may require that the previous (left part) is:
 
 
 
-
-
-
 ## Language tagged names
-
 
  * +OLang/ENG  		  
  * +OLang/FIN  		  
@@ -534,8 +486,6 @@ The second part of the compound may require that the previous (left part) is:
  * +OLang/RUS  		  
 
 
-
-
 ## Flag diacritics
 We have manually optimised the structure of our lexicon using following
 flag diacritics to restrict morhpological combinatorics - only allow compounds
@@ -545,12 +495,10 @@ with verbs if the verb is further derived into a noun again:
 |  @C.NeedNoun@ | (Dis)allow compounds with verbs unless nominalised
 |  @R.NeedNoun.ON@ | (Dis)allow compounds with verbs unless nominalised
 
-
 |  @D.ErrOrth.ON@ 
-|  @C.ErrOrth@	 
+|  @C.ErrOrth@ 
 |  @P.ErrOrth.ON@ 
-
-
+|  @R.ErrOrth.ON@
 
 
 For languages that allow compounding, the following flag diacritics are needed
@@ -574,8 +522,6 @@ do no harm.
 |  @N.CmpHyph.TRUE@ | Flag to control hyphenated compounds like proper nouns
 
 
-
-
 Use the following flag diacritics to control downcasing of derived proper
 nouns (e.g. Finnish Pariisi -> pariisilainen). See e.g. North Sámi for how to use
 these flags. There exists a ready-made regex that will do the actual down-casing
@@ -584,12 +530,9 @@ given the proper use of these flags.
 |  @U.Cap.Opt@ | Allowing downcasing of derived names: deatnulasj.
 
 
-
-
  * @U.NeedsVowRed.OFF@ is used to force hyphenation/non-reduction: samediggi-
  * @U.NeedsVowRed.ON@ is used to force reduction w/o hyphen: samedigge#xxx
  * @C.NeedsVowRed@ Clearing this feature, so that it doesn't interfere with further compounding
-
 
  * @C.Px@
  * @C.Nom3Px@
@@ -602,30 +545,22 @@ given the proper use of these flags.
  * @P.Nom3Px.add@
  * @R.Nom3Px.add@
 
-
  * @P.Vgen.add@
  * @R.Vgen.add@
-
-
 
 
  * @R.SpellRlx.ON@ Flag used to tag spell-relax-analysed strings (and only those).
  * @D.SpellRlx.ON@ Flag used to tag spell-relax-analysed strings (and only those).
  * @C.SpellRlx@ Flag used to tag spell-relax-analysed strings (and only those).
 
-
  * @R.SpaceCmp.ON@ Flag to tag compounds written with a space
  * @D.SpaceCmp.ON@ Flag to tag compounds written with a space
  * @C.SpaceCmp@ Flag to tag compounds written with a space
 
 
-
-
 # Basic lexica, pointing to the other lexicon files
 
-
  LEXICON Root    where everyting starts
-
 
 
 
@@ -633,13 +568,7 @@ given the proper use of these flags.
 
 
 
-
-
-
  * **LEXICON ProperNoun** 
-
-
-
 
 
 
