@@ -233,73 +233,73 @@ TIME-N
 
 ###  Syntactic tags
 
-@+FAUXV
-@+FMAINV
-@-FAUXV
-@-FMAINV
-@-FSUBJ>
-@-F<OBJ
-@-FOBJ>
-@-FSPRED<OBJ
-@-F<ADVL
-@-FADVL>
-@-F<SPRED
-@-F<OPRED
-@-FSPRED>
-@-FOPRED>
-@>ADVL
-@ADVL<
-@<ADVL
-@ADVL>
-@ADVL
-@HAB>
-@<HAB
-@>N
-@Interj
-@N<
-@>A
-@P<
-@>P
-@HNOUN
-@INTERJ
-@>Num
-@Pron<
-@>Pron
-@Num<
-@OBJ
-@<OBJ
-@OBJ>
-@OPRED
-@<OPRED
-@OPRED>
-@PCLE
-@COMP-CS<
-@SPRED
-@<SPRED
-@SPRED>
-@SUBJ
-@<SUBJ
-@SUBJ>
-SUBJ
-SPRED
-OPRED
-@PPRED
-@APP
-@APP-N<
-@APP-Pron<
-@APP>Pron
-@APP-Num<
-@APP-ADVL<
-@VOC
-@CVP
-@CNP
-OBJ
-<OBJ
-OBJ>
-<OBJ-OTHERS
-OBJ>-OTHERS
-SYN-V
-@X
+- `@+FAUXV	 `
+- `@+FMAINV	 `
+- `@-FAUXV	 `
+- `@-FMAINV	 `
+- `@-FSUBJ>	 `
+- `@-F<OBJ	 `
+- `@-FOBJ>	 `
+- `@-FSPRED<OBJ`
+- `@-F<ADVL	 `
+- `@-FADVL>	 `
+- `@-F<SPRED	 `
+- `@-F<OPRED	 `
+- `@-FSPRED>	 `
+- `@-FOPRED>	 `
+- `@>ADVL`
+- `@ADVL<`
+- `@<ADVL`
+- `@ADVL>`
+- `@ADVL `
+- `@HAB> `
+- `@<HAB `
+- `@>N		 `
+- `@Interj	 `
+- `@N<		 `
+- `@>A		 `
+- `@P<		 `
+- `@>P		 `
+- `@HNOUN	 `
+- `@INTERJ	 `
+- `@>Num	 `
+- `@Pron<	 `
+- `@>Pron	 `
+- `@Num<	 `
+- `@OBJ		 `
+- `@<OBJ	 `
+- `@OBJ>	 `
+- `@OPRED	 `
+- `@<OPRED	 `
+- `@OPRED>	 `
+- `@PCLE	 `
+- `@COMP-CS< `
+- `@SPRED	 `
+- `@<SPRED	 `
+- `@SPRED>	 `
+- `@SUBJ	 `
+- `@<SUBJ	 `
+- `@SUBJ>	 `
+- `SUBJ		 `
+- `SPRED	 `
+- `OPRED	 `
+- `@PPRED	 `
+- `@APP		 `
+- `@APP-N<	 `
+- `@APP-Pron<`
+- `@APP>Pron `
+- `@APP-Num< `
+- `@APP-ADVL<`
+- `@VOC		 `
+- `@CVP		 `
+- `@CNP		 `
+- `OBJ		 `
+- `<OBJ		 `
+- `OBJ>		 `
+- `<OBJ-OTHERS`
+- `OBJ>-OTHERS`
+- `SYN-V`
+* `@X`
 
 
 
