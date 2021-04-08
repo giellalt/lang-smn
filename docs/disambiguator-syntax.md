@@ -203,7 +203,7 @@ Imprt
 * Der/vualasas
 * Der/vuota
 
-<vdic>
+`<vdic>`
 
 
 Err/Orth
