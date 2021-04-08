@@ -1,7 +1,7 @@
 
 
 Tässä on lista analysaattorin työtehtävistä ja niiden sisäisistä
-riippuvuuksista. Jokainen numeroitu listä on riippumaton muista
+riippuvuuksista. Jokainen numeroitu lista on riippumaton muista
 listoista.  Jokaisen listan kohdat ovat riippuvaisia toisistaan, niin
 että tehtävät ovat järjestyksessä
 
@@ -11,30 +11,24 @@ että tehtävät ovat järjestyksessä
 # Testaustiedostot
 
 
-* [Tarkistaa substantiivien yaml-tiedostot](TarkistaaYaml-tiedostot.html)
-* Kirjoitta yaml-tiedostoja verbeihin
-
+* Muista 0-yaml! Ylläpidä sitä!!
 
 
 
 # Lemmat
 
 
-## Korjata substantiivien lemmalistat
+## Avointen sanaluokkien - Substantiivien, verbien ja adjektiivien - lemmalistojen korjaus
 
 
-Nyt suurin osaa yamltiedostoista menee läpi. Se tarkoittaa,
-että yaml-paradigmat jotka menevät läpi, voivat toimia 
-mallivartaloina myös lemmalistan stems/nouns.lexc muille 
-vartaloille.
+Yaml-paradigmat voivat toimia mallivartaloina myös lemmalistan stems/nouns.lexc muille vartaloille.
 
 
-* tee make check
-* ota leksikko, joka toimii, esim. EEMEED
-* ota kaikki EEMEED-tapaukset stems-tiedostosta
+* Valitse toimiva leksikko, esim. EEMEED
+* Valitse kaikki EEMEED-tapaukset stems-tiedostosta
     -  `grep EEMEED src/fst/stems/nouns.lexc|see`
-* tarkista, että niiden vartalo on samanlainen kuin esimerkkisanojen vartalot
-* jos ei, katso toimiiko
+* Tarkista, että niiden vartalo on samanlainen kuin esimerkkisanojen vartalot
+* jos ei, tarkista, toimiiko sana
 * katso stems/nouns.lexc
 * jokainen yamlissa toimiva sana voi toimia mallina muille
   sanoille, esim yhdyssanoille. 
@@ -43,14 +37,13 @@ vartaloille.
 ### nounstems-sanojen klassifiointi
 
 
-Tänään on 1983 nounstems. Jokaiselle pitää antaa oikea contlex.
+Jokaiselle sanalle täytyy antaa oikea contlex.
 
 
 ### Muotojen tarkistaminen
 
 
-Seuraavat kaksi esimerkkikomento antaa kaikki lokatiivit, jotka eivät toimi, 
-ja POTTAAK-leksikon kaikki monikon abessiivit.
+Seuraavilla kahdella esimerkkikomennolla saadaan kaikki toimimattomat lokatiivimuodot, ja POTTAAK-leksikon kaikki monikon abessiivimuodot.
 
 
 ```
@@ -59,37 +52,14 @@ cat src/fst/stems/nouns.lexc |  grep ";"| cut -d ';' -f1 | grep "POTTAAK"|cut -d
 ```
 
 
-## Korjata puuttuvat nominatiivit
+## Puuttuvien nominatiivien muodot
 
 
-Komento `make check` antaa listan substantiiveista, joille emme 
-pysty generoimaan nominatiivia
+Komento `make check` antaa listan substantiiveista, joille ei 
+voi generoida nominatiivia
 (`test/src/fst/missing_nouns_lemmas.xfst.txt `) ja
-muodot, jotka saadaan yrittäessä.
+muodot, jotka saadaan nominatiivia generoitaessa.
 (`test/src/fst/generated-nouns.xfst.txt`)
-Tavoite: Tänään puutuu 98 nominatiivia, luku pitää olla 0.
-
-
-## Suljetut luokat, joilla morfologia
-
- 
-1. Lisätä puuttuvat pronominit + sijapäätteet
-
-
-## Suljetut luokat, joilla ei ole morfologiaa
-
- 
-1. Lisätä puuttuvat sanat sanakirjasta analysaattoriin.
-    1. adverbit, subjunktiot, postpositiot, jne.
-
-
-## Lyhyet sanat missing-listasta
-
-
-Tiedostosta `smn/misc/missing_shortwords.freq`
-löytyy lyhyet sanat, järjestetty taajuuden mukaan. Ne 
-voi olla suljettujen luokien edustajia, ne pitää
-
 
 
 
@@ -111,20 +81,16 @@ Nämä voidaan nyt lisätä. Ks.
 ## Verbit
 
 
-Parittomat ensin, sitten parilliset.
-
 
 ## Adjektiivit
 
-
-Odottavat substantiiveja.
 
 
 # Johdosmorfologian tekeminen
 
 
-1. Ymmärtää
-1. Laatia
+1. Ymmärtää xxxx
+1. Laatia xxx
 
 
 # Jatkuva työ
