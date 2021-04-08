@@ -1,6 +1,3 @@
-
-# Inari Sámi morphological analyser
-
 Inari Saami documentation
 ===================
 
@@ -19,7 +16,7 @@ Documents on the language model
 -   [Twolc kaksitavuiset
     substantiivit](TwolcKaksitavuisetSubstantiivit.html)
 -   [Handling variation in lexc: Err/Orth, Err/Lex, +v1 and
-    others.](../common/Variation_in_lexc.html)
+    others.](/lang/common/Variation_in_lexc.html)
 -   [Verbal inflection (active)](VerbalInflection.html)
 -   [Verbal inflection (passive)](PassiveVerbs.html)
 -   [Table showing vowel change in passive](PassiveVowelChange.html)
@@ -37,7 +34,7 @@ Useful commands
 -   [Explanation about frequent commands (in North
     Saami)](/tools/unix_korpus_kursa.html)
 -   [Tips for practical development work, made for
-    Cree](/lang/crk/developingwork.html)
+    Cree](/lang-crk/developingwork.html)
 -   [Generation of Inari Saami
 	  paradigms](http://giellatekno.uit.no/cgi/p-smn.eng.html) 
 - [Automatic analysis of Inari Saami text](http://giellatekno.uit.no/cgi/d-smn.eng.html)
@@ -58,11 +55,9 @@ The Inari Saami MT project (2014-2016)
 -   [Plan for our team work](TeamWorkPlan.html)
 
 
-# Dynamic documentation
+# In-source documentation
 
-Here's a list of links to the page for each file of source code. All pages are concatenated and can be read as one long text [here](smn.md).
-
-
+Here's a list of documentation pages built from structured comments in the source code. All pages are concatenated and can be read as one long text [here](smn.md).
 
 * [root-morphology.md](root-morphology.md)
 * [adjectives-affixes.md](adjectives-affixes.md)
