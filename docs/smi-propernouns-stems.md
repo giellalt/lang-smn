@@ -1,6 +1,6 @@
 
 
-
+# How to work with non-language-specific propernouns
 
 
 
@@ -10,15 +10,15 @@ and *shall not* be edited in the **langs** directory.
 
 
 
-# General notes
+## General notes
 
 
 The entries are tagged in gtcore for language, to satisfy the needs of the 
 synthetic speech project.
 
 
-# Language-specific notes
-## This file (smi-propernouns.lexc) when applied to sme
+## Language-specific notes
+### This file (smi-propernouns.lexc) when applied to sme
 
 
 
@@ -43,7 +43,7 @@ Documenting (parts of) the lexicon structure for sme:
 
 
 
-## This file (smi-propernouns.lexc) when applied to sma, smj and smn.
+### This file (smi-propernouns.lexc) when applied to sma, smj and smn.
 
 
 For sma, smj and smn, there is a script, `src/scripts/smi-sma-conversion.pl`
@@ -55,17 +55,17 @@ of this file following the text *Dump from SMI*. This is governed in
 
 
 
-## Modifications for sma
+### Modifications for sma
 **MAKI** er for finske i-finale navn hvor sørsamisk og lulesamisk følger ulike
 mønster. PIPPi i smj, ACCRA i sme og sma.
 
 
-## Modifications for sma
+### Modifications for sma
 **BETFAGE** er spesifikk for lulesamisk, og er identisk med ACCRA for dei andre
 samiske språka. BETFAGE skal brukast ved e-finale ACCRA-ord.
 
 
-## Modifications for smn
+### Modifications for smn
 
 
 See the perl script
@@ -90,7 +90,7 @@ The beginning of this file (*smi-propernouns.lexc*) looks as follows
 
 
 
-# How to work
+## How to work
 
 
 Setting: A non-Inari Sámi name is missing in the FST.
