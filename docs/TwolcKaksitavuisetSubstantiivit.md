@@ -1,8 +1,6 @@
-
-
 Kaksitavuisten nominien vartaloryhmät
-
-
+===============
+Dokumentin tarkoituksena on esittää inarinsaamen kieliopillista rakennetta analysaattorityötä varten.
 
 
 * **â:** kandâ; sollâ, moolâ
