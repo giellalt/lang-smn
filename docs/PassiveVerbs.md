@@ -3,7 +3,7 @@
 
 
 # Passive verbs — an overview
-This presentation was built to plan the setup of the analyser.
+This presentation was built to plan the setup of the analyser. See also the document on [vowel alternations in passiver verbs](PassiveVowelChange.html).
 
 
 ## Bisyllabic verbs

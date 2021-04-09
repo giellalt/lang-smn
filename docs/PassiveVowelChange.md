@@ -1,11 +1,11 @@
 
 
+# Vowel alternations in passive verbs
+
+The document shows vowel changes for the passive morphology, RV = root vowel, u, y context:
 
 
-Vowel changes for passive morphology, RV = root vowel, u, y context:
-
-
-# Bisyllabic
+## Bisyllabic
 
 
 |   Root  | u2->u  | u2->o  | contlex         | comm
@@ -32,7 +32,7 @@ Vowel changes for passive morphology, RV = root vowel, u, y context:
 
 
 
-## âđ stems
+### âđ stems
 
 
 |   Root | u  | j   | Examples | lex-der-yaml | passlex
@@ -59,7 +59,7 @@ Vowel changes for passive morphology, RV = root vowel, u, y context:
 
 
 
-## iđ stems
+### iđ stems
 
 
 |   Root | u  | j   | Examples  | lex-der-yaml  | passlex
@@ -75,7 +75,7 @@ Vowel changes for passive morphology, RV = root vowel, u, y context:
 
 
 
-## eđ stems
+### eđ stems
 
 
 |   Root | u  | j   | Examples | lex-der-yaml  | passlex
@@ -88,7 +88,7 @@ Vowel changes for passive morphology, RV = root vowel, u, y context:
 
 
 
-## uđ stems
+### uđ stems
 
 
 
@@ -103,7 +103,7 @@ Vowel changes for passive morphology, RV = root vowel, u, y context:
 
 
 
-## ođ stems
+### ođ stems
 
 
 |   Root | u  | j   | Examples | lex-der-yaml   | passlex
@@ -118,7 +118,7 @@ Vowel changes for passive morphology, RV = root vowel, u, y context:
 
 
 
-## oođ stems
+### oođ stems
 
 
 No passive here.
@@ -128,7 +128,7 @@ No passive here.
 
 
 
-## eeđ stems
+### eeđ stems
 
 
 |   Root | u  | j   | Examples | lex-der-yaml | passlex
@@ -142,10 +142,11 @@ No passive here.
 
 
 
-# Threesyllabic stems
+## Threesyllabic stems
 
 
-... is a different story
+... is a different story. Those were not documented here (see the source code).
+
 
 
 
