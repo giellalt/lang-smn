@@ -2,7 +2,7 @@ Inari Saami documentation
 ===================
 
 
-This page documents the **Inari Saami grammatical analyser**. 
+This page documents the work on the **Inari Saami grammatical analyser**. 
 
 <img src="https://img.shields.io/badge/M-Production-brightgreen.svg" height="15"/> 
 <img src="https://img.shields.io/badge/Lic-GPLv3-blue.svg" height="15"/>
