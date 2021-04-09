@@ -2,10 +2,11 @@
 
 
 
-Passive verb overview
+# Passive verbs — an overview
+This presentation was built to plan the setup of the analyser.
 
 
-# Bisyllabic verbs
+## Bisyllabic verbs
 
 
 |   Active | contlex | Passive | Prs Sg3 |  Prs Pl3 | Neg / Imprt
@@ -44,7 +45,7 @@ Passive verb overview
 
 
 
-# Trisyllabic verbs
+## Trisyllabic verbs
 
 
 * -skiđ / -liđ: no passive
@@ -59,7 +60,7 @@ Passive verb overview
 
 
 
-# Foursyllabic verbs
+## Foursyllabic verbs
 
 
 |   Active | Passive | Prs Sg3 | Prs Pl3 | Neg / Imprt
@@ -70,7 +71,7 @@ Passive verb overview
 
 
 
-# Contracted verbs
+## Contracted verbs
 
 
 |   Active | Passive | Prs Sg3 | Prs Pl3 | Neg / Imprt
