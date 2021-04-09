@@ -1155,16 +1155,10 @@ Adj - pooliitlâš: # attr. pooliitlâš; puolikongruenssi mahdollinen (#-paikat
 
 
 
-
 # Inari Saami adjectives
 
 
-
-
  * __LEXICON LAST_CMP_ADJ __ cmp last part
-
-
-
 
 
 
@@ -1172,33 +1166,17 @@ Adj - pooliitlâš: # attr. pooliitlâš; puolikongruenssi mahdollinen (#-paikat
 
 
 
-
-
-
  * **aalmuglâš:aalmugl ANOLASJ "kansallinen" ;** 
  * **boreaallâš:boreaall ANOLASJ "boreaalinen" ;** etc.
-
-
 
 
 Lyhentynyt attr.
 
 
-
-
 Attr. venytetty + -s
 
 
-
-
 Attr. -is
-
-
-
-
-
-
-
 
 
 
@@ -1211,54 +1189,16 @@ Attr. -es (KARITIIVADJ.) Attr. muštottes / muštottemes
 
 
 
-
-
-
-
 -METTUM / -MÁTTUM
-
-
 
 
 -sâš
 
 
 
-
-
-
 Lyhentynyt attr. + -IS
 
-
 From corpus
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
