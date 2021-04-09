@@ -2,11 +2,12 @@ Inari Saami documentation
 ===================
 
 
-The analyser contains
-almost 50000 Inari Saami stems, plus 32000 general names, and covers all inflection and most of the derivation.
-There are still some unresolved issues both in the morphophonology
-and the morphology, but the analyser is in use both for
-text analysis, spellchecking, e-dictionaries and machine translation.
+This page documents the **Inari Saami grammatical analyser**. 
+
+<img src="https://img.shields.io/badge/M-Production-brightgreen.svg" height="15"/> 
+<img src="https://img.shields.io/badge/Lic-GPLv3-blue.svg" height="15"/>
+<img src="https://img.shields.io/github/issues/giellalt/lang-smn" height="15"/>
+<img src="https://github.com/giellalt/lang-smn/workflows/Speller%20CI+CD/badge.svg" height="15"/>
 
 
 
