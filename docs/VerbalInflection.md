@@ -1,22 +1,19 @@
+Verbal inflection in Inari Saami
+===========
+
+This document sketches the system of the Inari Saami verb. For each stem type, it gives root vowels, stem vowels and alternations.
+
+In addition, it gives and overview of the twolc triggers used (**^WG, ^VBACK**, etc.) in order to govern the morphophonological processes.
 
 
 
-
-
-
-This document sketches the system of the Inari Saami verb.
-For each stem type, it gives root vowels, stem vowels and alternations.
-
-
-
-
-# Two-syllabic verbs
+## Two-syllabic verbs
 
 
 We have -âđ, -iđ, -eđ, -uđ, -ođ, as well as -eeđ, -oođ, -uuđ.
 
 
-## âđ stems 
+### âđ stems 
 
 
 
@@ -24,7 +21,7 @@ We have -âđ, -iđ, -eđ, -uđ, -ođ, as well as -eeđ, -oođ, -uuđ.
 Root vowels may be short vowels, long vowels or diphthongs.
 
 
-###  âđ stems with short vowels
+####  âđ stems with short vowels
 
 
 ```
@@ -71,7 +68,7 @@ Errors:
 
 
 
-###  âđ stems with long vowels
+####  âđ stems with long vowels
 
 
 ```
@@ -133,7 +130,7 @@ Diphthongs are uo and ie, they change to uá and iá, i.e. the second vowel chan
 
 
 
-## iđ stems
+### iđ stems
 
 
 Verbs in -iđ with two syllables are either bisyllabic or contract. 
@@ -147,7 +144,7 @@ Verbs with syllable *e, ie* may be either bisyllabic or contract.
 ```
 
 
-### Short root vowel:
+#### Short root vowel:
 
 
 
@@ -162,7 +159,7 @@ Verbs with syllable *e, ie* may be either bisyllabic or contract.
 
 
 
-### Table
+#### Table
 
 
 |   inf    | Sg1     | Sg3   | PrtSg3
@@ -173,7 +170,7 @@ Verbs with syllable *e, ie* may be either bisyllabic or contract.
 
 
 
-### Long root vowel:
+#### Long root vowel:
 
 
 ```
@@ -210,7 +207,7 @@ Verbs with syllable *e, ie* may be either bisyllabic or contract.
 
 
 
-### Table
+#### Table
 
 
 |   inf    | Sg1     | Sg3   | Prt Sg3 | Prt Du2
@@ -227,7 +224,7 @@ Verbs with syllable *e, ie* may be either bisyllabic or contract.
 
 
 
-## uđ stems
+### uđ stems
 
 
 Stems in -uđ are contract, if 1. syll is a, i, o, u, uo or ie.
@@ -255,7 +252,7 @@ Otherwise they are bisyllabic.
 
 
 
-## ođ stems
+### ođ stems
 
 
 ```
@@ -273,7 +270,7 @@ Otherwise they are bisyllabic.
 
 
 
-### Stem vowels 
+#### Stem vowels 
 
 
 |   Inf    | Example
@@ -290,7 +287,7 @@ Otherwise they are bisyllabic.
 
 
 
-## ood stems
+### ood stems
 
 
 ```
@@ -319,7 +316,7 @@ Otherwise they are bisyllabic.
 
 
 
-## eđ stems
+### eđ stems
 
 
 ```
@@ -359,7 +356,7 @@ Comments:
 * Stem vowel lengthening 
 
 
-## eeđ stems
+### eeđ stems
 
 
 ```
@@ -389,7 +386,7 @@ Comments:
 
 
 
-### short root vowel
+#### short root vowel
 
 
 |   Inf | PrsSg1 | PrsDu1 | PrsDu2 | Prt Sg1 | PrtPl2
@@ -402,7 +399,7 @@ Comments:
 
 
 
-## Notes
+### Notes
 
 
 Long ee vs long oo
@@ -414,7 +411,7 @@ and long -ee elsewhere.
 
 
 
-# Three-syllabic verbs
+## Three-syllabic verbs
 
 
 ```
@@ -451,7 +448,7 @@ Quoting the documentation:
 
 
 
-# Contracted verbs
+## Contracted verbs
 
 
 ```
@@ -467,7 +464,7 @@ Quoting the documentation:
 ```
 
 
-## ád contracted verbs (C_COKKAD)
+### ád contracted verbs (C_COKKAD)
 
 
 |   inf   | Sg1      | Sg3 
@@ -482,13 +479,13 @@ Quoting the documentation:
 
 
 
-## ađ contracted verbs (C_PALLAD)
+### ađ contracted verbs (C_PALLAD)
 
 
 **Passes**
 
 
-## iđ contracted verbs (C_TUHHID)
+### iđ contracted verbs (C_TUHHID)
 
 
 The -iđ verb is contract if 1.syll has a, i, o, u, or uo. 
@@ -533,7 +530,7 @@ either contract or bisyllabic.
 1. luoddiđ: stem ye, change to uo if 2nd syll vowel is i
 
 
-## uđ contracted verbs (C_RAMMUD)
+### uđ contracted verbs (C_RAMMUD)
 
 
 Stems in -uđ are contract, if 1. syll is a, i, o, u, uo or ie.
@@ -592,7 +589,7 @@ Otherwise they are bisyllabic.
 
 
 
-# Four-syllabic verbs
+## Four-syllabic verbs
 
 
 
@@ -608,7 +605,7 @@ Otherwise they are bisyllabic.
 
 
 
-# Auxiliaries
+## Auxiliaries
 
 
 These ones we just list.
