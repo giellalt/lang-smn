@@ -2,10 +2,10 @@
 
 This page documents the work on the **Inari Saami grammatical analyser**. 
 
-<img src="https://img.shields.io/badge/M-Production-brightgreen.svg" height="15"/> 
-<img src="https://img.shields.io/badge/Lic-GPLv3-blue.svg" height="15"/>
-<img src="https://img.shields.io/github/issues/giellalt/lang-smn" height="15"/>
-<img src="https://github.com/giellalt/lang-smn/workflows/Speller%20CI+CD/badge.svg" height="15"/>
+[![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)](https://giellalt.github.io/MaturityClassification.html)
+[![License: GPLv3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Issues](https://img.shields.io/github/issues/giellalt/lang-smn)](https://github.com/giellalt/lang-smn/issues)
+[![Build status](https://github.com/giellalt/lang-smn/workflows/Speller%20CI+CD/badge.svg)](https://github.com/giellalt/lang-smn/actions)
 
 
 
