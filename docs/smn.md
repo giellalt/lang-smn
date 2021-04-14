@@ -1302,18 +1302,13 @@ From corpus
 
 
 
-
-
 # Sublexica for nominal morphology
-
 
 Note: Triggers **must** be put in this order ("|" meaning "or") in 
 order for the morphophonology to work:
 ```
 SV|ÁE|ÁI  EA|SC  FCD  WG|CSH  CLEN  VHIGH|VBACK  RVSH|RLEN  SLEN|SVSH  SVLOW
 ```
-
-
 
 
 ## Table of content for this file
@@ -1325,10 +1320,7 @@ SV|ÁE|ÁI  EA|SC  FCD  WG|CSH  CLEN  VHIGH|VBACK  RVSH|RLEN  SLEN|SVSH  SVLOW
 1. Contract stems
 
 
-
-
 # The continuation lexica 
-
 
 Lexicons starting with 2 are bisyllabic words, 
 with 3 are trisyllabic, with 4 are quadrosyllabic.
@@ -1340,20 +1332,12 @@ stems/nouns.lexc file.
 
 
 
-
-
-
 ## 1. Unclassified lexica
-
 
 These two lexica are temporary lexica for words waiting to be classified.
 
-
  LEXICON KOLME  contains a handful of ad hoc three syllable stem, for now directed to 
  3LITTER ; 
-
-
-
 
 
 
@@ -1362,23 +1346,22 @@ These two lexica are temporary lexica for words waiting to be classified.
 
 
 
-
-
-
 ## 1. Even-syllable stem lexica
-
 
 ### 2ALGA lexicon family
 This is the basic even-syllable lexicon.
 (Note: 2VADDU differs from 2ALGA in having CLEN for Sg+Com and Pl+Ill , rlen svlow, ess:-)
 \\ 
+ * *LEXICON 2AIRU* (subtype of the 2ALGA basic lexicon)
+
  * *LEXICON 2ALGA* (basic lexicon)
 \\ 
  * *LEXICON X_ALGA* (common to all POS)
 \\ 
  * *LEXICON 2ALGA_SG* (Px paradigms)
+
 \\ 
- * *LEXICON X_ALGA_SG* case paradigms sg
+ * *LEXICON X_ALGA_SG* case paradigms sg a^RVlgâ, ku^RVssâ
 \\ 
  * *LEXICON X_ALGA_PL* case para pl (plurals for 2KUMPPI)
 \\ 
@@ -1386,6 +1369,18 @@ This is the basic even-syllable lexicon.
  X_WG_RLEN_PL_Loc ;  
 
 
+
+ * *LEXICON 2AIRU_SG_DIM* a^RVlgâ
+
+
+ * *LEXICON 2AIRU_PL_DIM* 
+
+
+ * *LEXICON 2ALGA_DIM*
+
+ * *LEXICON 2ALGA_SG_DIM* a^RVlgâ
+
+ * *LEXICON 2ALGA_PL_DIM* 
 
 
 ### 2PUUVSAH lexicon family, stem is pu^RVk4s^RCâ
@@ -1399,7 +1394,6 @@ has WG compound form, then pointing to
  * *LEXICON X_WG_RLEN_PL_Loc* plural forms with ^WG and ^^WG^RLEN
 \\ 
  * *LEXICON X_WG_RLEN_PL*
-
 
 ### 2SOLLA lexicon family
 SM1, RLEN, earlier LLEN !rlen svlow, sgcom/plill:rlen  ess:clen
@@ -1417,11 +1411,7 @@ Last vowel is â.
 
 
 
-
-
-
 ### 2JUUHA lexicon family
-
 
  * *LEXICON 2JUUHA* (basic lexicon)
 \\ 
@@ -1434,8 +1424,6 @@ Last vowel is â.
  * *LEXICON X_JUUHA_PL* (common POS Pl)
 
 
-
-
  * *LEXICON JUUVAS* (A lexicon for lexicalised deminutive words, thus words NOT having a double deminutive)
 So far it has only one member, juuvâš, and no Px
 \\ 
@@ -1443,12 +1431,7 @@ So far it has only one member, juuvâš, and no Px
  * *LEXICON X_JUUVAS_PL* 
 
 
-
-
  * *LEXICON JUUHA_DIM* (a lexicon to create deminutives; Not for lexicalised words already being in deminutive)
-
-
-
 
 
 
@@ -1473,13 +1456,7 @@ So far it has only one member, juuvâš, and no Px
 
 
 
-
-
-
  * *LEXICON KIELA_DIM*
-
-
-
 
 
 
@@ -1489,10 +1466,7 @@ So far it has only one member, juuvâš, and no Px
  * *LEXICON X_WG_RVSH_PL_notILL*
 
 
-
-
 ### 2TELTTA lexicon family
-
 
  * *LEXICON 2TELTTA* Check: is this identical to KISSA?
 \\ 
@@ -1505,10 +1479,7 @@ So far it has only one member, juuvâš, and no Px
  * *LEXICON X_TELTTA_PL*
 
 
-
-
 ### 2FADDA lexicon family
-
 
  * *LEXICON 2FADDA*:  This might be the standard even syllabi lexicon
 \\ 
@@ -1521,14 +1492,25 @@ So far it has only one member, juuvâš, and no Px
  * *LEXICON X_FADDA_PL*
 
 
+ * *LEXICON FADDA_SG_DIM* fá^RVddá
+
+ * *LEXICON FADDA_PL_DIM* 
+
 
 
 ### 2KISSA lexicon family
 
-
  * *LEXICON 2KISSA*  No root vowel lengthening
 \\ 
  * *LEXICON 2KISSA_SG*
+
+
+ * *LEXICON KISSA_DIM*
+
+
+
+
+
 \\ 
  * *LEXICON 2KISSA_PL*
 \\ 
@@ -1538,11 +1520,7 @@ So far it has only one member, juuvâš, and no Px
 
 
 
-
-
-
 ### 2CAANA lexicon family
-
 
  * *LEXICON 2CAANA*:  !čá^RVn^RCá
 \\ 
@@ -1556,27 +1534,18 @@ So far it has only one member, juuvâš, and no Px
 
 
 
-
-
-
 ### 2TAHO lexicon family
-
 
  * *LEXICON 2TAHO* only for taho, similar to 2LAJO except from Pl+Ill, almost similar to 2SPAHA
 
-
  * *LEXICON 2TAHO_SG*
 
-
  * *LEXICON 2TAHO_PL*
-
 
 ### 2LAJO lexicon family
  * *LEXICON 2LAJO*
 
-
  * *LEXICON 2LAJO_SG*
-
 
  * *LEXICON LAJO_TAHO_PX_SG*
 \\ 
@@ -1586,27 +1555,21 @@ So far it has only one member, juuvâš, and no Px
  * *LEXICON 2LAJO_PL*
 
 
-
-
  * *LEXICON  LAJO_TAHO_PX_PL*
 \\ 
-
-
 
 
  * *LEXICON X_LAJO_PL*
 
 
-
-
 ### 2NJUNE lexicon family
-
 
  * *LEXICON 2NJUNE* almost similar to 2LAJO
 \\ 
  * *LEXICON X_NJUNE* almost similar to 2LAJO
 \\ 
  * *LEXICON 2NJUNE_SG*
+
 \\ 
  * *LEXICON 2NJUNE_PL*
 \\ 
@@ -1614,9 +1577,7 @@ So far it has only one member, juuvâš, and no Px
 \\
  * *LEXICON X_NJUNE_PL*
 
-
 ### 2ALME - 2ALGE - 2NIJBE lexicon family
-
 
  * *LEXICON 2ALGE*
 \\ 
@@ -1642,11 +1603,17 @@ So far it has only one member, juuvâš, and no Px
 \\ 
  * *LEXICON X_NIJBE_PL*
 
+ * *LEXICON 2ALGE_DIM*
+
+ * *LEXICON 2ALGE_SG_DIM* a^RVlgâ
+
+
+ * *LEXICON 2ALGE_PL_DIM* 
+
 
 
 
 ### 2VAHE lexicon family
-
 
  * *LEXICON 2VAHE*
 \\ 
@@ -1658,9 +1625,6 @@ So far it has only one member, juuvâš, and no Px
 
 
 
-
-
-
 ### 2KUMPPI lexicon family
 i-i-i > 2SOLLA (?); MLO: no, difference in sg Com and pl Ill
  * *LEXICON 2KUMPPI* (basic lexicon, pointing to
@@ -1668,9 +1632,6 @@ i-i-i > 2SOLLA (?); MLO: no, difference in sg Com and pl Ill
 \\ 
  * *LEXICON 2KUMPPI_PL*  (plurals for 2KUMPPI, pointing to
  +N: X_ALGA_PL ; )
-
-
-
 
 
 
@@ -1689,12 +1650,9 @@ i-i-i > 2SOLLA (?); MLO: no, difference in sg Com and pl Ill
  * *LEXICON X_SAAMI_PL* plurals for 2SAAMI
 
 
-
-
 ### 2CAACI - 2VYEHI lexicon family TODO -- 
 WG, Ill EA, Com CLEN SVLOW, Ess **with** CLEN
  * *LEXICON 2CAACI* (basic lexicon
-
 
  * *LEXICON 2VYEHI* WG, Ill EA, Com CLEN SVLOW, Ess **without** CLEN
 \\
@@ -1703,36 +1661,23 @@ WG, Ill EA, Com CLEN SVLOW, Ess **with** CLEN
  * *LEXICON X_VYEHI_SG* (different Ess, Par), otherwise
    X_CAACI_VYEHI_SG ;   )
 
-
  * *LEXICON CAACI_VYEHI_SG* common for the two
-
 
  * *LEXICON 2CAACI_VYEHI_PL* common Pl forms for Px
 
-
  * *LEXICON X_CAACI_VYEHI_SG* common Sg case forms
-
 
  * *LEXICON X_CAACI_VYEHI_PL*
 
-
 ### 2AIGI lexicon family
-
 
  * *LEXICON 2AIGI* similar to 2VADDU except from EA for Sg+Ill
 
-
  * *LEXICON X_AIGI* similar to 2VADDU except from EA for Sg+Ill
-
 
  * *LEXICON 2AIGI_SG*
 
-
  * *LEXICON 2AIGI_PL*
-
-
-
-
 
 
 
@@ -1740,75 +1685,46 @@ WG, Ill EA, Com CLEN SVLOW, Ess **with** CLEN
  * *LEXICON X_AIGI_SG*
 
 
-
-
 ### 2KYELI - 2SYEJI lexicon family
 
-
  * *LEXICON 2KYELI* i-e-á, similar to 2ALGE, except from -i some places.     
-
 
  * *LEXICON 2KYELI_SG*  kyeli nouns
 
 
-
-
  * *LEXICON KYELI_SYEJI_SG* i-e-á,     
-
 
  * *LEXICON 2_KYELI_SYEJI_SG_PX*  common kyeli-syeji px
 
-
  * *LEXICON X_KYELI* lexicon coming in from the adjectives             
-
 
  * *LEXICON X_KYELI_PL* i-e-á, similar to 2ALGE, except from -i some places. 
 
-
  * *LEXICON 2KYELI_PL* 
-
-
-
 
 
 
  * *LEXICON 2_KYELI_SYEJI_PL_PX* 
 
 
-
-
  * *LEXICON KYELI_SYEJI_PL* i-e-á,     
-
-
-
 
 
 
 ### 2KIRKKO - 2NJAMMA lexicon family
 
-
  * *LEXICON 2KIRKKO*  > KIRKKO_NJAMMA, but WG for Sg+Loc: 
-
-
-
 
 
 
  * *LEXICON 2KIRKKO_SG*
 
-
  * *LEXICON 2NJAMMA* > KIRKKO_NJAMMA, but WG CLEN for Sg+Loc: loho:lovvoost
-
 
  * *LEXICON KIRKKO_NJAMMA_SG*   
 
 
-
-
  * *LEXICON KIRKKO_NJAMMA_PL*   
-
-
-
 
 
 
@@ -1816,33 +1732,19 @@ WG, Ill EA, Com CLEN SVLOW, Ess **with** CLEN
 
 
 
-
-
-
 ### 2VASO lexicon family
-
 
  * *LEXICON 2VASO* only for vašo, similar to 2LAJO except from Sg+Loc, almost similar to 2SPAHA and 2TAHO. Blank Nom, Ill, Ess SV CLEN SLEN, otherwise WG
 
 
-
-
  * *LEXICON 2VASO_SG*
-
 
  * *LEXICON 2VASO_PL*
 
 
-
-
  * *LEXICON X_VASO_SG*
 
-
  * *LEXICON X_VASO_PL*
-
-
-
-
 
 
 
@@ -1850,28 +1752,17 @@ WG, Ill EA, Com CLEN SVLOW, Ess **with** CLEN
 ### 2OKKO lexicon family
 
 
-
-
  * *LEXICON 2OKKO* Pl+Acc WG, Pl+Ill WG CLEN
-
-
 
 
  * *LEXICON 2OKKO_SG*
 
 
-
-
  * *LEXICON 2OKKO_PL*
-
 
  * *LEXICON X_OKKO_SG* Pl+Acc WG, Pl+Ill WG CLEN
 
-
  * *LEXICON X_OKKO_PL* Pl+Acc WG, Pl+Ill WG CLEN
-
-
-
 
 
 
@@ -1879,47 +1770,28 @@ WG, Ill EA, Com CLEN SVLOW, Ess **with** CLEN
  * *LEXICON 2RAAVHU* like 2LAAVU, but long vowel in cmp. 
 
 
-
-
  * *LEXICON 2RAAVHU_SG*
-
-
-
 
 
 
  * *LEXICON 2RAAVHU_PL* 
 
 
-
-
  * *LEXICON 2VIASU* just as LAAVU, but without the short gen/acc
-
-
 
 
  * *LEXICON 2LAAVU* WG, Ill EA, Com SVLOW, Ess CLEN
 
-
  * *LEXICON 2LAAVU_SG*
-
-
-
 
 
 
  * *LEXICON X_LAAVU_SG* 
 
 
-
-
  * *LEXICON 2LAAVU_PL* 
 
-
  * *LEXICON X_LAAVU_PL* 
-
-
-
 
 
 
@@ -1927,42 +1799,24 @@ WG, Ill EA, Com CLEN SVLOW, Ess **with** CLEN
 
 
 
-
-
-
  * *LEXICON 2VUAGGU_SG* 
 
-
  * *LEXICON 2VUAGGU_PL* 
-
-
 
 
  * *LEXICON X_VUAGGU_SG* 
 
 
-
-
  * *LEXICON 2KUSSA*
 
-
  * *LEXICON 2KUSSA_PL*
-
 
  * *LEXICON 2VADDU* 2AIGI has EA for Sg+Ill, 2SOLLA has RLEN for Sg+Com and Pl+Ill
 
 
-
-
  * *LEXICON 2VADDU_SG*
 
-
  * *LEXICON 2VADDU_PL*
-
-
-
-
-
 
 
 
@@ -1971,105 +1825,64 @@ WG, Ill EA, Com CLEN SVLOW, Ess **with** CLEN
  * *LEXICON 2TAVLU* 
 
 
-
-
  * *LEXICON 2TAVLU_SG* 
-
-
 
 
  * *LEXICON 2TAVLU_PL* 
 
 
-
-
  * *LEXICON X_TAVLU_SG* 
-
 
  * *LEXICON X_TAVLU_PL* 
 
 
-
-
  * *LEXICON 2NIISU* 
 
-
  * *LEXICON 2NIISU_SG* 
-
-
 
 
  * *LEXICON 2NIISU_PL* 
 
 
-
-
  * *LEXICON X_NIISU_SG* 
-
-
 
 
  * *LEXICON X_NIISU_PL* 
 
 
-
-
  * *LEXICON 2VAALJA* 
 
-
  * *LEXICON 2VAALJA_SG* 
-
-
 
 
  * *LEXICON 2VAALJA_PL* 
 
 
-
-
  * *LEXICON X_VAALJA_SG* 
-
-
 
 
  * *LEXICON X_VAALJA_PL* 
 
 
-
-
  * *LEXICON 2SKERREEH_PL*  Plural tantum, as 2PUUVSAH, but w/o WG
-
-
 
 
 ### APINA lexicon family
 this is for loanwords without stem change
 
-
  * *LEXICON APINA* 
-
-
 
 
  * *LEXICON APINA_SG*
 
-
  * *LEXICON APINA_PL*
-
-
 
 
  * *LEXICON X_APINA_SG* (common for different POS)
 
-
  * *LEXICON X_h_PL*  gives %>h etc. to vowel stems, pointong to notILL
 
-
  * *LEXICON X_h_PL_notILL* 
-
-
-
-
 
 
 
@@ -2077,177 +1890,110 @@ this is for loanwords without stem change
 ## Four-syllable stems
 
 
-
-
 ### 4KUNAGAS lexicon family
-
 
  * *LEXICON 4KUNAGAS* 
 
 
-
-
  * *LEXICON X_KUNAGAS* 
-
 
  * *LEXICON 4KUNAGAS_SG*
 
-
  * *LEXICON 4KUNAGAS_PL* >
 
-
  * *LEXICON X_KUNAGAS_SG*  this is for loanwords without stem change, 3-syll. cons end
-
 
  * *LEXICON X_KUNAGAS_PL*
 
 
-
-
 ### 4CAHALIG lexicon family
-
 
  * *LEXICON 4CAHALIG*
 
-
  * *LEXICON 4CAHALIG_SG*
-
-
 
 
  * *LEXICON 4CAHALIG_PL*
 
 
-
-
  * *LEXICON X_CAHALIG_SG*
-
 
  * *LEXICON X_eh_PL*
 
-
 ### 4MANUTTEP lexicon family
-
 
  * *LEXICON 4MANUTTEP* 
 
-
  * *LEXICON 4MANUTTEP_SG* 
-
-
 
 
  * *LEXICON 4MANUTTEP_PL* 
 
 
-
-
  * *LEXICON X_MANUTTEP_SG* 
-
 
  * *LEXICON X_MANUTTEP_PL* 
 
 
-
-
 ### 4PUHELIN lexicon family
-
 
  * *LEXICON 4PUHELIN*  Only a few words in this category
 
 
-
-
 ### 2KOLLIISTALLAM lexicon family
-
 
  * *LEXICON 2KOLLIISTALLAM*
 
 
-
-
 ## Odd-syllable stems
 
-
  * *LEXICON 3KOMPAS* stem kompass An odd loan word with the final -s lengthening
-
-
 
 
  * *LEXICON X_KOMPAS* 
 
 
 
-
-
-
  * *LEXICON 3KEPIDEM* 
-
 
  * *LEXICON 3KEPIDEM_PL* 
 
 
-
-
  * *LEXICON 3POTTAAK* 
-
 
  * *LEXICON X_POTTAAK* 
 
 
-
-
  * *LEXICON 3EEMEED*
-
 
  * *LEXICON X_EEMEED*
 
 
-
-
  * *LEXICON 3EEMEED_SG*
 
-
  * *LEXICON 3EEMEED_PL*
-
 
  * *LEXICON X_EEMEED_SG*
 
 
-
-
  * *LEXICON 3LITTER* MO Ib 2nd syll vowel does not alternate
 
-
  * *LEXICON X_LITTER* MO Ib 2nd syll vowel does not alternate
-
 
  * *LEXICON X_LITTER_not_Par*  for numerals
 
 
 
-
-
-
  * *LEXICON 3LITTER_SG*
 
-
  * *LEXICON 3LITTER_PL*
-
-
-
 
 
 
  * *LEXICON X_LITTER_SG* 
 
 
-
-
  * *LEXICON X_LITTER_SG_not_Par*  for numerals
-
-
-
 
 
 
@@ -2278,57 +2024,14 @@ this is for loanwords without stem change
 
 
 
- * *LEXICON 3KIELES*  (to be unified with 3PELES?) 
-
-
- * *LEXICON 3KIELES_SG*
-
-
- * *LEXICON 3KIELES_PL*
-
-
-
-
- * *LEXICON X_KIELES_SG*  (to be unified?) 
-
-
- * *LEXICON 3PELES* only peles
-
-
- * *LEXICON KIELES_PELES_PX_PL* 
-
-
-
-
-
-
- * *LEXICON X_PELES* only peles (to be unified?) 
-
-
-
-
- * *LEXICON X_KIELES_PELES_SG*  (to be unified?) 
-
-
- * *LEXICON X_KIELES_PELES_PL*  (to be unified?) 
-
-
  * *LEXICON 3JAAVVIL* 
 
-
  * *LEXICON 3JAAVVIL_SG* 
-
 
  * *LEXICON 3JAAVVIL_PL* 
 
 
-
-
  * *LEXICON X_JAAVVIL_SG* 
-
-
-
-
 
 
 
@@ -2337,38 +2040,23 @@ this is for loanwords without stem change
 
 
 
-
-
-
  * *LEXICON 3PAAVIR* NGA+Abe blank, WG Ess, CSH for the rest
 
-
  * *LEXICON X_PAAVIR* NGA+Abe blank, WG Ess, CSH for the rest
-
 
  * *LEXICON 3PAAVIR_SG* 
 
 
 
-
-
-
  * *LEXICON 3PAAVIR_PL* plural forms
-
 
  * *LEXICON X_PAAVIR_SG* NGA+Abe blank, WG Ess, CSH for the rest
 
-
  * *LEXICON X_PAAVIR_not_Nom_Par* NGA+Abe blank, WG Ess, CSH for the rest
-
 
  * *LEXICON X_PAAVIR_not_Nom_Par_SG* 
 
-
- * *LEXICON 3SAJOS* 
-
-
-
+ * *LEXICON 3SAJOS* sai4joos
 
 
 
@@ -2377,100 +2065,59 @@ this is for loanwords without stem change
 
 
 
-
-
-
-
  LEXICON 3UAIVAT  > 3EEMEED. No Px, but only one word uáivát, witout Px para.
-
-
-
 
 
 
  * *LEXICON 3VEESKIR* 
 
-
  * *LEXICON X_VEESKIR* 
-
-
 
 
  * *LEXICON 3VEESKIR_SG* 
 
 
-
-
  * *LEXICON 3VEESKIR_PL* 
-
 
  * *LEXICON 3COLL_LITTER* collective numbers: čiččâmâs
 
-
  * *LEXICON C_COLL_KAARBIS* collective numbers: oovces
 
-
  * *LEXICON 3COLL_PAAVIR* collective numbers: loves
-
 
  * *LEXICON 3COLL* collective numbers: kyevtis, kuulmâs.., redirecting to  X_VEESKIR
 
 
-
-
  * *LEXICON 3PIIVTAS* WG for NEP,  no triggers for the other cases
-
 
  * *LEXICON 3PIIVTAS_SG* 
 
 
 
-
-
-
  * *LEXICON 3PIIVTAS_PL* 
-
 
  * *LEXICON 3DUSSEPIIVTAS*  piivtâš itself is not in the 3PIIVTAS lexicon
 
 
-
-
  LEXICON X_VEESKIR_SG  
 
-
  * *LEXICON 3KAAVPUG* 
-
-
 
 
  * *LEXICON 3AARRAN* 
 
 
 
-
-
-
  * *LEXICON 3AARRAN_SG*
-
-
 
 
  * *LEXICON 3AARRAN_PL* plurals for 3AARRAN
 
 
-
-
  * *LEXICON X_AARRAN_SG* 
 
 
-
-
  * *LEXICON 3RUONAS* nuurras WG NEP,  blank for the rest
-
-
-
-
 
 
 
@@ -2479,24 +2126,12 @@ this is for loanwords without stem change
 
 
 
-
-
-
  * *LEXICON 3VUONJAS*  kierâš, stem: kierrâ, px kierâččâm
 
 
 
 
-
-
-
-
  LEXICON 3CEVE  only for this lemma. It could go to 3LYEME but needs modifications of rules to get iä:e and -tt-, and the worst part is v:vv
-
-
-
-
-
 
 
 
@@ -2508,61 +2143,36 @@ this is for loanwords without stem change
 
 
 
-
-
-
-
-
  * *LEXICON 3HUKSIM* NGA + Abe blank, SLEN for the rest
-
 
  * *LEXICON 3HUKSIM_SG* NGA + Abe blank, SLEN for the rest
 
 
-
-
  * *LEXICON 3HUKSIM_PL* plurals for 3HUKSIM
-
 
  * *LEXICON 3KIEDAVUSSAM* stem: :kieđâvušš
 
 
 
 
-
-
-
-
  * *LEXICON 3POOVSA*  soovsa
 
-
  * *LEXICON 3POOVSA_SG*  soovsa
-
 
  * *LEXICON 3POOVSA_PL*  plurals for 3POOVSA
 
 
-
-
 ## Contracted stems
-
 
  * *LEXICON C_KAAMUV*
 
-
  * *LEXICON X_KAAMUV*
-
 
  * *LEXICON X_KAAMUV_COMMON*
 
 
 
-
-
-
  * *LEXICON C_POOVIJC* 
-
-
 
 
  * *LEXICON 3POOVIJ*
@@ -2571,110 +2181,66 @@ this is for loanwords without stem change
 
 
 
-
-
-
-
-
  * *LEXICON C_OLMOOS* lexicon for olmooš
-
 
  * *LEXICON C_OLMOOS_PL* 
 
 
-
-
  * *LEXICON C_KAARBIS*
 
-
  * *LEXICON X_KAARBIS*
-
-
 
 
  * *LEXICON C_KAARBIS_SG*
 
 
 
-
-
-
  * *LEXICON C_KAARBIS_PL* 
-
 
  * *LEXICON X_KAARBIS_SG*
 
-
  * *LEXICON C_MORCES*
-
 
  * *LEXICON X_MORCES*
 
-
  * *LEXICON C_CUNOI*
 
-
  * *LEXICON C_PUASUI*
-
-
-
 
 
 
  * *LEXICON C_ALMAI*
 
 
-
-
  * *LEXICON C_KUAVSUI*
-
 
  * *LEXICON C_KUAVSUI_COMMON*
 
-
  * *LEXICON C_CUANJA*
-
-
 
 
  * *LEXICON CUANJA_COMMON* 
 
 
 
-
-
-
  * *LEXICON X_SVSLENh_PL* 
-
-
 
 
  * *LEXICON S_AAIGA* Almost identical with S_AAJA, except for Compounds
 
-
  * *LEXICON AAIGA_COMMON_SG* 
 
-
  * *LEXICON S_AAIGA_PL*
-
 
  * *LEXICON AAIGA_COMMON_PL*
 
 
-
-
  * *LEXICON S_AAJA*
-
 
  * *LEXICON S_KARRII*
 
 
-
-
  * *LEXICON X_KARRII*
-
-
-
 
 
 
@@ -2682,62 +2248,32 @@ this is for loanwords without stem change
 
 
 
-
-
-
  * *LEXICON S_TUULAS* ! stem: ku^RVđi
-
 
  * *LEXICON X_TUULAS*
 
-
  * *LEXICON S_TUULAS_SG*
-
 
  * *LEXICON S_TUULAS_PL*
 
-
  * *LEXICON X_TUULAS_SG*
-
-
 
 
  * *LEXICON X_TUULAS_PL*
 
 
 
-
-
-
- * *LEXICON S_KAANDAS_DIM*
-
-
- * *LEXICON S_KAANDAS_SG_DIM* a^RVlgâ
-
-
- * *LEXICON S_KAANDAS_PL_DIM* 
-
-
  * *LEXICON S_KAANDAS* stem: ka^RVnd
-
 
  * *LEXICON X_KAANDAS*
 
-
  * *LEXICON S_KAANDAS_SG*
-
 
  * *LEXICON S_KAANDAS_PL*
 
-
  * *LEXICON X_KAANDAS_SG*
 
-
  * *LEXICON X_KAANDAS_PL*
-
-
-
-
 
 
 
@@ -2745,39 +2281,25 @@ this is for loanwords without stem change
  * *LEXICON S_KUULMIS* stem kuovtt
 
 
-
-
  * *LEXICON S_CISSAAS* ! stem: cissá
-
 
  * *LEXICON X_CISSAAS* 
 
-
  * *LEXICON S_VUALAAS* 
-
 
  * *LEXICON X_VUALAAS* 
 
 
-
-
  * *LEXICON S_KUAVDAS*  WG or not? vuáŋŋáš not WG, kiärpáš WG. stem: suábbá
-
-
 
 
  * *LEXICON S_KUAVDAS_SG* 
 
 
 
-
-
-
  * *LEXICON S_KUAVDAS_PL* 
 
-
  * *LEXICON X_KUAVDAS_SG* 
-
 
  * *LEXICON S_ALGAAS* stem alga
 
@@ -2786,52 +2308,32 @@ this is for loanwords without stem change
 
 
 
-
-
-
-
  * *LEXICON S_KUADHUS* 
-
 
  * *LEXICON S_KAAHUS* 
 
-
  * *LEXICON X_KAAHUS_notILL* 
-
 
  * *LEXICON S_SUOLLUS* 
 
-
  * *LEXICON X_SUOLLUS* 
-
-
-
 
 
 
  * *LEXICON 4C_RASTAGAS* splitting in sg and pl
 
 
-
-
  ** *LEXICON 4C_RASTAGAS_SG*  the sg ones
 
-
  ** *LEXICON 4C_RASTAGAS_PL*  the pl ones
-
-
 
 
  ** *LEXICON X_RASTAGAS* sg cases
 
 
-
-
  * *LEXICON 3OPPUS* 
 
-
  * *LEXICON 3ALMAS* 
-
 
  * *LEXICON ALMAS_COMMON* 
 
@@ -2839,37 +2341,19 @@ this is for loanwords without stem change
 
 
 
-
-
-
-
-
  * *LEXICON C_SARVES* sarves, jalŋes 
-
 
  * *LEXICON C_SARVES_SG* 
 
-
  * *LEXICON C_SARVES_PL* 
 
-
  * *LEXICON X_SARVES_SG* 
-
 
  * *LEXICON X_SARVES_PL* 
 
 
 
-
-
-
 ### 4-syllabic
-
-
- * *LEXICON NELJA*  ad hoc , 
-
-
-
 
 
 
@@ -2877,109 +2361,67 @@ this is for loanwords without stem change
 
 
 
-
-
-
  * *LEXICON JOHTOLAH_OBL* common for N and A
 
-
  * *LEXICON 4JOTOLAH_PL* 
-
-
 
 
  * *LEXICON 4KAPULUH* 
 
 
-
-
  * *LEXICON 4KUBALOH* 
-
-
 
 
  * *LEXICON 4LAS_NOUN* stem = aanaarl
 
 
 
-
-
-
  * *LEXICON LAS_COMMON* 
-
-
 
 
  * *LEXICON X_LAS_COMMON_SG* normâl lâš:-lii-nouns and adjs
 
 
-
-
  * *LEXICON X_LAS_COMMON_PL* NOrmal plural and plural tantum cases, olympialiih
-
-
 
 
  * *LEXICON OLYMPIALIIH_PL* 
 
 
 
-
-
-
  * *LEXICON LAS_SUF* 
-
-
 
 
  * *LEXICON MUS_NOUN* type uáiváámus, aldemus
 
 
 
-
-
-
 ## Contracted stems
-
-
 
 
  * *LEXICON C_EIJE* 
 
-
  * *LEXICON C_LOHHEE* 
 
-
  * *LEXICON C_LOHHEE_SG* redirects to  C_TAHHEE, but adds NomAg
-
 
  * *LEXICON C_LOHHEE_PL* redirects to  C_TAHHEE, but adds NomAg
 
 
-
-
  * *LEXICON C_TAHHEE*
-
 
  * *LEXICON C_TAHHEE_SG* 
 
-
  * *LEXICON C_TAHHEE_PL* 
-
 
  * *LEXICON X_TAHHEE* ee-final contract, -ei instead of -ij not-nomen-agentis
 
-
  * *LEXICON X_TAHHEE_SG* ee-final contract, -ei instead of -ij
-
 
  * *LEXICON X_TAHHEE_PL* ee-final contract, plural forms
 
 
-
-
 ## Comitative plural variation
-
 
  * *LEXICON GUIN* is here to give -guin and the Use/NG -gijn.
 
@@ -2992,18 +2434,7 @@ this is for loanwords without stem change
 
 
 
-
-
-
-
-
-
-
-
-
-
 ## Derivations
-
 
 TODO: Move derivation lexica here
 
@@ -3022,27 +2453,7 @@ TODO: Move derivation lexica here
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Inari Saami noun roots
-
-
-
-
-
-
 
 
 
@@ -3073,115 +2484,53 @@ TODO: Move derivation lexica here
 
 
 
-
-
-
-
-
-
-
-
-
  * **LEXICON MiddleNouns**
-
-
-
 
 
 
  * **LEXICON NAMAG** gives »»» and directs to NAMAG, both from adj and numerals
 
-
  * **LEXICON SAS** , both from adj and numerals
-
-
 
 
  * **LEXICON NAMAGCont**
 
-
  * **LEXICON SASCont** ,
-
-
 
 
  * *LEXICON Gen_DER* 
 
-
  * *LEXICON Nom_DER* 
-
-
 
 
  * *LEXICON DER-AG* 
 
-
  * *LEXICON DER-SAS* 
 
 
-
-
 ## The split into different noun types according to Px
-
 
  * **LEXICON Noun** is split into NounNoPx, NounPxKin, NounPx.
  ** **NounNoPx ;** No flag, no Px
  ** **@P.Px.add@  NounPxKin ;** TODO: add a flag @P.Nom3Px.add@ when we know how it works
  ** **@P.Px.add@  NounPx ;** with a @P.Px.add@ flag, and with Px (= most nouns)
 
-
  * **LEXICON NounNoPx** move here the nouns not taking Px.
-
 
  * **LEXICON NounPxKin**For the moment, kinship words go like NounPx and need not be moved here.
 
 
-
-
 ## The standard list of noun stems
-
 
 The nouns are reverse-sorted according to contlex,
 and thereafter according to stem.
 
 
 
-
-
-
  * **LEXICON NounPx** here we put all normal nouns, as before
-
 
 From corpus
 From missinglist
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3284,93 +2633,11 @@ From missinglist
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  * **LEXICON ARABICCOMPOUNDS**   arabic as first part, 
 
 
 
-
-
-
  * **LEXICON NUMERALCOMPOUNDS**: numeral as first part: duhatjienat,
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -5040,46 +4307,31 @@ Setting: A non-Inari Sámi name is missing in the FST.
 
 
 
-
 # Propernoun lexicon, Inari Sámi specific names 
-
-
 
 
  **LEXICON Prefix-Proper**
 
 
-
-
 First part of complex names
-
 
  * Alemus FirstTag ;     
  * Cuávis FirstTag ;     
-
-
 
 
  **LEXICON ProperNoun-smn**
 Ordinary names
 
 
-
-
 Family names
-
-
-
 
 
 
 Pet names
 
 
+
 Fictional names - - probably no point of adding the fem/mal/ani tags
-
-
-
 
 
 
@@ -5090,29 +4342,7 @@ Object names or organizations
 
 
 
-
-
-
-
-
-
 Geographical names
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -5138,9 +4368,7 @@ Geographical names
 
 
 
-
 # Inflection lexica for Inari Saami verbs
-
 
 Order of triggers:
 ```
@@ -5148,10 +4376,7 @@ SV|ÁE|ÁI  EA|SC  FCD  WG|CSH  CLEN  VHIGH|VBACK  RVSH|RLEN  SLEN|SVSH  SVLOW
 ```
 
 
-
-
 ## Overview
-
 
 1. Auxiliaries
     1. NEG
@@ -5161,12 +4386,9 @@ SV|ÁE|ÁI  EA|SC  FCD  WG|CSH  CLEN  VHIGH|VBACK  RVSH|RLEN  SLEN|SVSH  SVLOW
 1. 4-syllabic
 1. Unclassified: verbstems, 3v, 4v
 
-
 ### The lexica
 
-
 *Twosyllabic lexica*
-
 
 * 2SYLL_AASSAD - aassâđ ääss
     - Inf:â%>đ K ;
@@ -5288,13 +4510,11 @@ SV|ÁE|ÁI  EA|SC  FCD  WG|CSH  CLEN  VHIGH|VBACK  RVSH|RLEN  SLEN|SVSH  SVLOW
 * 2SYLL_VYELGID like VYEIJID, but -i for reduced forms
 * JUAVVID
 
-
 * 2SYLL_OD
 * 2SYLL_OOD
     - Prt+Du1 njivvoim WG CLEN
 * 2SYLL_ORROOD  like 2SYLL_OOD, but different triggers here and there
     - Prt+Du1 oroim WG
-
 
 * 2SYLL_UD
     - Inf: ruábbuđ
@@ -5315,7 +4535,6 @@ SV|ÁE|ÁI  EA|SC  FCD  WG|CSH  CLEN  VHIGH|VBACK  RVSH|RLEN  SLEN|SVSH  SVLOW
     - ConNeg: uážu
     - Ind+Prt+Sg1: ožžum
 
-
 ### Threesyllabic
 * 3_LEKKASID (no stem change, but going to ODDLEX)
     - Sg1: %>âm, Sg3: ^CLEN^RLEN (note: ODDLEX :-(
@@ -5335,13 +4554,11 @@ SV|ÁE|ÁI  EA|SC  FCD  WG|CSH  CLEN  VHIGH|VBACK  RVSH|RLEN  SLEN|SVSH  SVLOW
 * 3_ADELID
     - Sg1: %>âm, Sg3: ^CLEN
 
-
 ### 4-syllabic
 * 4v
 * 4_ADELISTID
 * 4_KAVNATTATTAD
 * 4_TUHHID
-
 
 ### Contracted
 * Contracted j-stems
@@ -5354,35 +4571,25 @@ SV|ÁE|ÁI  EA|SC  FCD  WG|CSH  CLEN  VHIGH|VBACK  RVSH|RLEN  SLEN|SVSH  SVLOW
     - C_TABAHTUD (Sg3 -uvá)
     - C_MERIDUD (Sg3 uvvoo)
 
-
 Unclassified verbs
 * verbstem (no info)
 
-
-
+A note on morphophonology
+The consonant gradation setup for verbs is to a certain extent different
+from the one for nouns, namely:
+...
 
 
 
 # THE LEXICA THEMSELVES
 
 
-
-
 ## Auxiliaries
 
-
  * **LEXICON NEG** = the negation verb
+
 \\
  * **LEXICON LEDE** = The copula
-
-
-
-
-
-
-
-
-
 
 
 
@@ -5402,40 +4609,27 @@ Within each lexicon, the suffixes are ordered as follows:
 1. Derivations
 
 
-
-
 ## Even-syllable stems
-
 
 ### AD verbs
 ### Partial paradigms
 
-
  * __LEXICON 2SYLL_HAAHAD_IV  __
  * __LEXICON 2SYLL_HAAHAD_TV  __
 
-
  * __LEXICON 2SYLL_HAAHAD_V  __
-
 
  * __LEXICON EVEN_IND_HAAHAD __
 
 
-
-
  * __LEXICON EVEN_IMPRT_HAAHAD __
-
-
 
 
  * __LEXICON 2SYLL_AASSAD __  48 verbs
  * __LEXICON 2SYLL_AASSAD_IV  __
  * __LEXICON 2SYLL_AASSAD_TV  __
 
-
  * __LEXICON 2SYLL_AASSAD_V  __
-
-
 
 
  * __LEXICON VINFINITES_AASSAD __
@@ -5443,34 +4637,21 @@ Within each lexicon, the suffixes are ordered as follows:
 
 
 
-
-
-
-
  * __LEXICON EVEN_IND_AASSAD __
-
-
 
 
  * __LEXICON EVEN_POT_AASSAD __
 
-
  * __LEXICON EVEN_IMPRT_AASSAD __
 
 
-
-
 ### Full paradigms
-
 
  * __LEXICON 2SYLL_VIEZZAD __
  * __LEXICON 2SYLL_VIEZZAD_IV __
  * __LEXICON 2SYLL_VIEZZAD_TV __
 
-
  * __LEXICON 2SYLL_VIEZZAD_V  __ 6 verbs
-
-
 
 
  ** __LEXICON VINFINITES_VIEZZAD __
@@ -5478,32 +4659,18 @@ Within each lexicon, the suffixes are ordered as follows:
 
 
 
-
-
-
-
  ** __LEXICON EVEN_IND_PRS_VIEZZAD __
-
 
  ** __LEXICON EVEN_IND_PRT_VIEZZAD __
 
-
  * __LEXICON EVEN_POT_VIEZZAD __
-
 
  ** __LEXICON EVEN_IMPRT_VIEZZAD __
 
 
 
 
-
-
-
-
  * __LEXICON 2SYLL_SPELLAD_V  __ Similar to 2SYLL_ETTAD, but less CSH, don't know yet how much. 20 verbs
-
-
-
 
 
 
@@ -5513,22 +4680,9 @@ Within each lexicon, the suffixes are ordered as follows:
 
 
 
-
-
-
-
-
  ** __LEXICON EVEN_IND_PRS_SPELLAD  __
 
-
  ** __LEXICON EVEN_IND_PRT_SPELLAD __
-
-
-
-
-
-
-
 
 
 
@@ -5539,34 +4693,20 @@ Within each lexicon, the suffixes are ordered as follows:
  * __LEXICON 2SYLL_ETTAD_V  __ 19 verbs
 
 
-
-
  ** __LEXICON VINFINITES_ETTAD __
-
-
-
 
 
 
  ** __LEXICON EVEN_IND_PRS_ETTAD __
 
 
-
-
  ** __LEXICON EVEN_IMPRT_ETTAD __
-
 
  ** __LEXICON EVEN_POT_ETTAD __
 
 
 
-
-
-
  * __LEXICON 2SYLL_KAVNAD_V  __ as ETTAD but with VBACK, only RV ä in stem tothis lexicon 57 verbs
-
-
-
 
 
 
@@ -5576,43 +4716,25 @@ Within each lexicon, the suffixes are ordered as follows:
 
 
 
-
-
-
-
-
  ** __LEXICON EVEN_IND_KAVNAD  __
 
 
-
-
  ** __LEXICON EVEN_POT_KAVNAD __
-
 
  ** __LEXICON EVEN_IMPRT_KAVNAD  __
 
 
 
-
-
-
  * __LEXICON 2SYLL_KALGAD_TV  __ Only one verb: kalgâđ Ind+Prs+Pl3 kälgih, vs. kävneh 2SYLL_KAVNAD
 
-
  ** __LEXICON VINFINITES_KALGAD  __
-
-
-
 
 
 
  ** __LEXICON EVEN_IND_KALGAD  __
 
 
-
-
  ** __LEXICON EVEN_POT_KALGAD __
-
 
  ** __LEXICON EVEN_IMPRT_KALGAD  __
 
@@ -5620,50 +4742,27 @@ Within each lexicon, the suffixes are ordered as follows:
 
 
 
-
-
-
-
-
  * __LEXICON 2SYLL_COGGAD_V  __ 18 verbs
 
-
  ** __LEXICON VINFINITES_COGGAD  __
-
-
-
 
 
 
  ** __LEXICON EVEN_IND_COGGAD  __
 
 
-
-
  ** __LEXICON EVEN_COND_COGGAD __
 
-
  ** __LEXICON EVEN_POT_COGGAD __
-
 
  ** __LEXICON EVEN_IMPRT_COGGAD __
 
 
 
-
-
-
  * __LEXICON 2SYLL_KULGAD_V   __ 55 verbs
-
 
 Distinct from SODDAD with short vowel in past tense (du)
 Turns out it was not distinct after all. Preper for fusing KULGAD and SODDAD
-
-
-
-
-
-
 
 
 
@@ -5674,31 +4773,18 @@ Turns out it was not distinct after all. Preper for fusing KULGAD and SODDAD
 
 
 
-
-
-
  ** __LEXICON VINFINITES_SODDAD  __
-
-
-
 
 
 
  ** __LEXICON EVEN_PRS_SODDAD __
 
-
  ** __LEXICON EVEN_PRT_SODDAD __
-
-
 
 
  ** __LEXICON EVEN_POT_SODDAD __
 
-
  ** __LEXICON EVEN_IMPRT_SODDAD __
-
-
-
 
 
 
@@ -5706,61 +4792,35 @@ Turns out it was not distinct after all. Preper for fusing KULGAD and SODDAD
 
 
 
-
-
-
  ** __LEXICON VINFINITES_TOOLLAD  __
-
-
-
 
 
 
  ** __LEXICON EVEN_IND_TOOLLAD  __
 
 
-
-
  ** __LEXICON EVEN_POT_TOOLLAD __
-
 
  ** __LEXICON EVEN_IMPRT_TOOLLAD  __
 
 
 
-
-
-
  * __LEXICON 2SYLL_OPPAD_V  __ 12 verbs
-
 
 suggested stem = tuáll
 Impossible to see the differences in diphtong length
-
-
 
 
  ** __LEXICON VINFINITES_OPPAD   __
 
 
 
-
-
-
  ** __LEXICON EVEN_IND_OPPAD   __
-
-
 
 
  ** __LEXICON EVEN_POT_OPPAD __
 
-
  ** __LEXICON EVEN_IMPRT_OPPAD   __
-
-
-
-
-
 
 
 
@@ -5769,65 +4829,40 @@ Impossible to see the differences in diphtong length
  * __LEXICON 2SYLL_TOOHAD_V  __ 38 verbs
 
 
-
-
  ** __LEXICON EVEN_IND_TOOHAD  __
-
-
-
 
 
 
  ** __LEXICON EVEN_POT_TOOHAD __
 
 
-
-
  * __LEXICON 2SYLL_MOONNAD_V  __ 24 verbs
-
-
 
 
  ** __LEXICON VINFINITES_MOONNAD  __
 
-
 nuuvâ, iige noovâ
-
-
-
 
 
 
  ** __LEXICON EVEN_IND_MOONNAD  __
 
 
-
-
  ** __LEXICON EVEN_IMPRT_MOONNAD  __
-
 
  ** __LEXICON EVEN_POT_MOONNAD __
 
 
-
-
  * __LEXICON 2SYLL_VIIRRAD_V  __ 20 verbs
 
-
  ** __LEXICON VINFINITES_VIIRRAD  __ OK
-
-
-
 
 
 
  ** __LEXICON EVEN_IND_VIIRRAD   __
 
 
-
-
  ** __LEXICON EVEN_POT_VIIRRAD __
-
 
  ** __LEXICON EVEN_IMPRT_VIIRRAD   __
 
@@ -5835,43 +4870,24 @@ nuuvâ, iige noovâ
 
 
 
-
-
-
-
-
  * __LEXICON 2SYLL_VIISSAD_V  __ 20 verbs
 
-
  ** __LEXICON VINFINITES_VIISSAD  __
-
-
-
 
 
 
  ** __LEXICON EVEN_IND_VIISSAD   __
 
 
-
-
  ** __LEXICON EVEN_POT_VIISSAD __
-
 
  ** __LEXICON EVEN_IMPRT_VIISSAD   __
 
 
 
-
-
-
  * __LEXICON 2SYLL_CIEPPAD_V  __ like 2SYLL_KIESSAD but less CSH 4 verbs. 34 verbs
 
-
  ** __LEXICON EVEN_IND_PRS_CIEPPAD    __
-
-
-
 
 
 
@@ -5884,166 +4900,97 @@ nuuvâ, iige noovâ
 
 
 
-
-
-
-
-
-
-
-
  * __LEXICON 2SYLL_VUOLLAD_V  __ ye to ua vyešš 71 verbs
 
-
  ** __LEXICON VINFINITES_2SYLL_VUOLLAD  __
-
-
-
 
 
 
  ** __LEXICON EVEN_IND_2SYLL_VUOLLAD __
 
 
-
-
  ** __LEXICON EVEN_POT_2SYLL_VUOLLAD __
 
-
  ** __LEXICON EVEN_IMPRT_2SYLL_VUOLLAD __
-
-
 
 
  * __LEXICON 2SYLL_LUOIKKAD_TV  __ passive, no Der/l, otherw like ruottad, 3 verbs
 
 
-
-
  * __LEXICON 2SYLL_RUOTTAD_V  __ no passive, but Der/l. 4 verbs
-
 
  * __LEXICON 2SYLL_RUOTTAD_LUOIKKAD  __ no passive
 
-
  ** __LEXICON VINFINITES_2SYLL_RUOTTAD  __
-
-
-
 
 
 
  ** __LEXICON EVEN_IND_2SYLL_RUOTTAD  __
 
 
-
-
  ** __LEXICON EVEN_POT_2SYLL_RUOTTAD __
 
-
  ** __LEXICON EVEN_IMPRT_2SYLL_RUOTTAD __
-
-
 
 
 ### ED verbs
 
 
-
-
  * __LEXICON 2SYLL_KALVED_V  __ kalveđ without RLEN Prs+Sg1. 8 verbs
-
-
 
 
  * __LEXICON 2SYLL_POHTED_V  __ with RLEN Prs+Sg1. 31 verbs
 
-
  ** __LEXICON VINFINITES_ED   __
-
-
-
 
 
 
  ** __LEXICON EVEN_IND_ED __ kalveđ
 
 
-
-
  ** __LEXICON EVEN_POT_POHTED __
 
-
  ** __LEXICON EVEN_POT_ED __ ... this one to be relocated to _ED
-
-
 
 
  ** __LEXICON EVEN_IMPRT_ED  __
 
 
 
-
-
-
  * __LEXICON 2SYLL_PIHTED_V  __  82 verbs
 
-
  ** __LEXICON VINFINITES_PIHTED   __
-
-
-
 
 
 
  ** __LEXICON EVEN_IND_PIHTED   __
 
 
-
-
  ** __LEXICON EVEN_POT_PIHTED __
 
-
  ** __LEXICON EVEN_IMPRT_PIHTED   __
-
 
 ### EED verbs
 
 
-
-
  ** __LEXICON 2SYLL_JOTTEED_V  __ . 27 verbs
 
-
  ** __LEXICON VINFINITES_EED   __
-
-
-
 
 
 
  ** __LEXICON EVEN_IND_EED   __
 
 
-
-
  ** __LEXICON EVEN_POT_EED __
 
-
  ** __LEXICON EVEN_IMPRT_EED  __
-
-
 
 
  ** __LEXICON 2SYLL_PAHHEED_V  __ yaml anneed. 2 verbs
 
 
-
-
  ** __LEXICON VINFINITES_PAHHEED  __
-
-
-
 
 
 
@@ -6051,74 +4998,44 @@ nuuvâ, iige noovâ
 
 
 
-
-
-
  ** __LEXICON EVEN_IMPRT_PAHHEED   __
-
-
 
 
 ### ID verbs
 
 
-
-
  * __LEXICON 2SYLL_UADDID_V  __ 3 verbs
 
-
  ** __LEXICON VINFINITES_UADDID   __
-
-
-
 
 
 
  ** __LEXICON EVEN_IND_UADDID   __
 
 
-
-
  ** __LEXICON EVEN_POT_UADDID __
-
 
  ** __LEXICON EVEN_IMPRT_UADDID   __
 
-
  * __LEXICON 2SYLL_UAINID_TV  __  5 verbs
 
-
  ** __LEXICON VINFINITES_UAINID  __
-
-
-
 
 
 
  ** __LEXICON EVEN_IND_UAINID   __
 
 
-
-
  ** __LEXICON EVEN_POT_UAINID __
-
 
  ** __LEXICON EVEN_IMPRT_UAINID   __
 
 
-
-
  * __LEXICON 2SYLL_CAALLID __  7 verbs
-
 
  * __LEXICON 2SYLL_CAALLID_V  __ 7 verbs
 
-
  ** __LEXICON VINFINITES_CAALLID   __
-
-
-
-
 
 
 
@@ -6126,28 +5043,16 @@ nuuvâ, iige noovâ
  ** __LEXICON EVEN_IND_CAALLID   __
 
 
-
-
  ** __LEXICON EVEN_POT_CAALLID __
 
-
  ** __LEXICON EVEN_IMPRT_CAALLID __
-
 
 as 2SYLL_ID, but only 3 person
 
 
 
 
-
-
-
-
  ** __LEXICON VINFINITES_ID  __
-
-
-
-
 
 
 
@@ -6158,24 +5063,13 @@ as 2SYLL_ID, but only 3 person
 
 
 
-
-
-
-
-
  * __LEXICON 2SYLL_EELLID_V  __ iälám iälá eelih ij ele. 4 verbs
-
 
  ** __LEXICON VINFINITES_EELLID !  __
 
 
 
-
-
-
  ** __LEXICON EVEN_IND_EELLID __
-
-
 
 
  ** __LEXICON EVEN_IMPRT_EELLID __
@@ -6183,18 +5077,9 @@ as 2SYLL_ID, but only 3 person
 
 
 
-
-
-
-
  * __LEXICON 2SYLL_KEESSID_V  __ like EELLID except from Prs+ConNeg. 4 verbs
 
-
  ** __LEXICON VINFINITES_KEESSID __
-
-
-
-
 
 
 
@@ -6202,23 +5087,13 @@ as 2SYLL_ID, but only 3 person
  ** __LEXICON EVEN_IND_KEESSID  __
 
 
-
-
  ** __LEXICON EVEN_IMPRT_KEESSID __
-
-
-
 
 
 
  * __LEXICON 2SYLL_PAACCID_V  __ 5 verbs
 
-
  ** __LEXICON VINFINITES_PAACCID __
-
-
-
-
 
 
 
@@ -6226,22 +5101,13 @@ as 2SYLL_ID, but only 3 person
  ** __LEXICON EVEN_IND_PAACCID __
 
 
-
-
  ** __LEXICON EVEN_IMPRT_PAACCID __
-
 
  ** __LEXICON EVEN_POT_PAACCID __
 
 
 
-
-
-
  * __LEXICON 2SYLL_VYELGID_V  __ like VYEIJID, but -i for reduced forms. 7 verbs
-
-
-
 
 
 
@@ -6250,14 +5116,7 @@ as 2SYLL_ID, but only 3 person
 
 
 
-
-
-
-
  * __LEXICON 2SYLL_VYEIJID_V  __  5 verbs
-
-
-
 
 
 
@@ -6267,54 +5126,29 @@ as 2SYLL_ID, but only 3 person
 
 
 
-
-
-
-
-
  * __LEXICON 2SYLL_JYEHID_V  __  5 verbs
-
-
 
 
  ** __LEXICON EVEN_IND_JYEHID __
 
 
 
-
-
-
  * __LEXICON 2SYLL_VYEIJID_VYELGID_COMMON  __
-
-
 
 
  ** __LEXICON VINFINITES_VYEIJID_VYELGID  __
 
 
 
-
-
-
  ** __LEXICON EVEN_POT_VYEIJID __
-
 
  ** __LEXICON EVEN_IMPRT_VYEIJID __
 
 
 
-
-
-
  * __LEXICON 2SYLL_KASTID_V  __ 9 verbs
 
-
  ** __LEXICON VINFINITES_KASTID  __ kä^RVst
-
-
-
-
-
 
 
 
@@ -6323,26 +5157,15 @@ as 2SYLL_ID, but only 3 person
  ** __LEXICON EVEN_IND_KASTID __
 
 
-
-
  ** __LEXICON EVEN_POT_KASTID __
-
 
  ** __LEXICON EVEN_IMPRT_KASTID  __
 
 
 
-
-
-
  * __LEXICON 2SYLL_TIETTID_V  __ only 1 verb: tiettiđ. Ind+Prs+ConNeg: tieđe vs. Ind+Prs+ConNeg: kieldi 2SYLL_ID
 
-
  ** __LEXICON VINFINITES_TIETTID __
-
-
-
-
 
 
 
@@ -6350,20 +5173,12 @@ as 2SYLL_ID, but only 3 person
  ** __LEXICON EVEN_IND_TIETTID __
 
 
-
-
  ** __LEXICON EVEN_POT_TIETTID __
-
 
  ** __LEXICON EVEN_IMPRT_TIETTID __
 
 
-
-
  ** __LEXICON EVEN_POT_ID __
-
-
-
 
 
 
@@ -6371,22 +5186,13 @@ as 2SYLL_ID, but only 3 person
 
 
 
-
-
-
 ### OD verbs
-
-
 
 
  * __LEXICON 2SYLL_HILGOD_V  __ this as the only OD verb(s) with passive 7 verbs
 
 
-
-
  * __LEXICON 2SYLL_OD_V  __ OD paradigm, no passive here. 130 verbs
-
-
 
 
  ** __LEXICON VINFINITES_OD __
@@ -6396,47 +5202,26 @@ as 2SYLL_ID, but only 3 person
 
 
 
-
-
-
-
-
-
  ** __LEXICON EVEN_POT_OD __
-
 
  ** __LEXICON EVEN_IMPRT_OD __
 
 
 
-
-
-
 ### OOD verbs
-
 
  * __LEXICON 2SYLL_OOD_V  __ 31 verbs
 
-
  ** __LEXICON VINFINITES_OOD __
-
-
-
 
 
 
  ** __LEXICON EVEN_IND_OOD  __
 
 
-
-
  ** __LEXICON EVEN_POT_OOD __
 
-
  ** __LEXICON EVEN_IMPRT_OOD __
-
-
-
 
 
 
@@ -6446,38 +5231,20 @@ as 2SYLL_ID, but only 3 person
 
 
 
-
-
-
-
-
  ** __LEXICON EVEN_IND_ORROOD   __
-
-
 
 
  ** __LEXICON EVEN_POT_ORROOD __
 
-
  ** __LEXICON EVEN_IMPRT_ORROOD  __
-
-
 
 
 ### UD verbs
 
 
-
-
  * __LEXICON 2SYLL_KUARRUD_V  __ long dipht => -o . 56 verbs
 
-
  ** __LEXICON VINFINITES_KUARRUD __
-
-
-
-
-
 
 
 
@@ -6486,16 +5253,9 @@ as 2SYLL_ID, but only 3 person
  * __LEXICON EVEN_IND_KUARRUD __
 
 
-
-
  * __LEXICON EVEN_POT_KUARRUD __
 
-
  ** __LEXICON EVEN_IMPRT_KUARRUD  __
-
-
-
-
 
 
 
@@ -6503,57 +5263,33 @@ as 2SYLL_ID, but only 3 person
  * __LEXICON 2SYLL_UD_V  __ 175 verbs
 
 
-
-
  ** __LEXICON VINFINITES_UD __
-
-
-
 
 
 
  ** __LEXICON EVEN_IND_UD __
 
 
-
-
  ** __LEXICON EVEN_POT_UD __
-
 
  ** __LEXICON EVEN_IMPRT_UD __
 
 
-
-
  * __LEXICON 2SYLL_UAZZUD_V  __ 59 verbs
 
-
  ** __LEXICON VINFINITES_UAZZUD __
-
-
 
 
  ** __LEXICON EVEN_IND_UAZZUD __
 
 
-
-
  ** __LEXICON EVEN_POT_UAZZUD __
-
 
  ** __LEXICON EVEN_IMPRT_UAZZUD __
 
-
 ###  Common even lexica
 
-
  * __LEXICON EVEN_COND __
-
-
-
-
-
-
 
 
 
@@ -6563,26 +5299,14 @@ as 2SYLL_ID, but only 3 person
 ## Odd-syllable stems
 
 
-
-
  * __LEXICON 3_KUIKETTID_V __ this has lengthening of ^RV for Cns-initial suff
-
-
 
 
  * __LEXICON 3_LEKKASID_V  __ SM51, no length change in stem
 
 
 
-
-
-
  * __LEXICON 3_CIELATTID_V  __ SM57, consonant and vowel change
-
-
-
-
-
 
 
 
@@ -6594,18 +5318,9 @@ as 2SYLL_ID, but only 3 person
 
 
 
-
-
-
-
-
  ** __LEXICON ODD_PRS_VYEJETTID  __
 
-
  ** __LEXICON ODD_IMPRT_VYEJETTID  __
-
-
-
 
 
 
@@ -6613,24 +5328,14 @@ as 2SYLL_ID, but only 3 person
 
 
 
-
-
-
  * __LEXICON 3_ADELID_V  __ SM53. short V in Inf
-
 
  ** __LEXICON ADELID_COMMON __
 
 
-
-
  ** __LEXICON ODD_VINFINITES_ADELID __
 
-
  ** __LEXICON ODD_PRS_ADELID __
-
-
-
 
 
 
@@ -6638,13 +5343,7 @@ as 2SYLL_ID, but only 3 person
 
 
 
-
-
-
  ** __LEXICON ODD_INFINITES_MERIDID __
-
-
-
 
 
 
@@ -6653,36 +5352,20 @@ as 2SYLL_ID, but only 3 person
 
 
 
-
-
-
-
  ** __LEXICON ODD_PRS_PUTESTID  __
-
-
-
 
 
 
  * __LEXICON 3_COKKIITTID_V  __ SM52, long V in Inf
 
 
-
-
  ** __LEXICON ODD_VINFINITES_COKKIITTID  __
-
 
  ** __LEXICON ODD_PRS_COKKIITTID  __
 
 
 
-
-
-
 ### Common lexicons inflecting odd-syllabic verbs
-
-
-
 
 
 
@@ -6691,43 +5374,25 @@ as 2SYLL_ID, but only 3 person
 
 
 
-
-
-
-
  * __LEXICON ODD_PRS_CONNEG    __
-
 
  * __LEXICON ODD_PRS_CONNEG_rlen    __
 
 
 
 
-
-
-
-
  * __LEXICON ODD_PRS   __
-
 
  * __LEXICON ODD_PRT  __
 
-
  * __LEXICON ODD_COND   __
-
 
  * __LEXICON ODD_POT   __
 
 
-
-
  * __LEXICON ODD_IMPRT   __
 
-
  * __LEXICON ODD_IMPRT_REST   __
-
-
-
 
 
 
@@ -6735,21 +5400,13 @@ as 2SYLL_ID, but only 3 person
 
 
 
-
-
-
 ## Derivational extentions to 3-syllabic verbs
-
 
  * __LEXICON 3_DERIVED_LOW  __ lexicon to be determined
 
-
  * __LEXICON 3_DERIVED  __ lexicon
 
-
  * __LEXICON 3_DERIVED_SLEN  __ lexicon
-
-
 
 
  * __LEXICON 3_DERIVED_REST  __ lexicon
@@ -6765,36 +5422,7 @@ as 2SYLL_ID, but only 3 person
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
  * __LEXICON 3_DERIVED_CLEN  __ lexicon
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -6828,38 +5456,13 @@ as 2SYLL_ID, but only 3 person
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Contracted stems
-
 
 ###  j stems
 
 
 
-
-
-
  * __LEXICON C_COKKAD_V  __
-
-
-
-
-
-
 
 
 
@@ -6876,15 +5479,6 @@ as 2SYLL_ID, but only 3 person
 
 
 
-
-
-
-
-
-
-
-
-
  * __LEXICON C_PALLAD_V __
 
 
@@ -6892,20 +5486,7 @@ as 2SYLL_ID, but only 3 person
 
 
 
-
-
-
-
-
-
  * __LEXICON C_HOLHOD __
-
-
-
-
-
-
-
 
 
 
@@ -6922,26 +5503,7 @@ as 2SYLL_ID, but only 3 person
 
 
 
-
-
-
-
-
-
-
-
  * __LEXICON C_SLOOVID __
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -6965,28 +5527,7 @@ as 2SYLL_ID, but only 3 person
 
 
 
-
-
-
-
-
-
-
-
-
-
-
  ** __LEXICON C_PASS_SH_RLEN __ does not shorten vowel
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -7009,17 +5550,6 @@ as 2SYLL_ID, but only 3 person
 
 
 
-
-
-
-
-
-
-
-
-
-
-
  * __LEXICON C_RAMMUD_V __ does not shorten vowel
 
 
@@ -7028,16 +5558,7 @@ as 2SYLL_ID, but only 3 person
 
 
 
-
-
-
-
-
-
-
  ** __LEXICON C_RAMMUD_POT  __ umify this and next
-
-
 
 
  * __LEXICON CONTR_POT __ unify this and previous
@@ -7051,21 +5572,9 @@ as 2SYLL_ID, but only 3 person
 
 
 
-
-
-
-
-
-
-
-
-
-
  ** __LEXICON C_PASS_SH_POHTED  __ shortens long vow in certain forms
 
-
  ** __LEXICON C_PASS_SH  __ shortens long vow in certain forms
-
 
  ** __LEXICON C_PASS_SH_COMMON  __ shortens long vow in certain forms
 
@@ -7075,17 +5584,7 @@ as 2SYLL_ID, but only 3 person
 
 
 
-
-
-
-
-
-
-
 ###  v stems
-
-
-
 
 
 
@@ -7112,31 +5611,7 @@ as 2SYLL_ID, but only 3 person
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## 4-syllabic
-
-
 
 
  * __LEXICON 4SYLL_KYETTID_V  __
@@ -7145,34 +5620,14 @@ as 2SYLL_ID, but only 3 person
 
 
 
-
-
-
-
-
  ** __LEXICON EVEN_IND_KYETTID   __
-
-
 
 
  ** __LEXICON KYETTID_POT_ID  __
 
 
 
-
-
-
  * __LEXICON 4_ADELISTID_V   __
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -7225,58 +5680,14 @@ as 2SYLL_ID, but only 3 person
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Other lexicq
 ## Case lexica
-
 
  * **LEXICON VABESS** to handle Abessive variation, hánnáá, hennáá, hinnáá.
 \\
  * **LEXICON VGEN** flag for VGen
 
-
 ## Derivation lexica
-
 
  * __LEXICON DER_MAS __ 
 \\
@@ -7287,25 +5698,13 @@ as 2SYLL_ID, but only 3 person
  * **LEXICON NOMACT** for -náál suffixation.
 
 
-
-
 # Flag section
-
 
  __LEXICON FLAG_3HUKSIM  __ should not be disallowed by ENDLEX @D.NeedNoun.ON@
 
-
  __LEXICON FLAG_3KIEDAVUSSAM __ should not be disallowed by ENDLEX @D.NeedNoun.ON@
 
-
  __LEXICON FLAG_CTAHHEE __ should not be disallowed by ENDLEX @D.NeedNoun.ON@
-
-
-
-
-
-
-
 
 
 
@@ -7332,27 +5731,7 @@ as 2SYLL_ID, but only 3 person
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Verb stems
-
-
 
 
 ## Overview
@@ -7365,12 +5744,9 @@ as 2SYLL_ID, but only 3 person
 * 4-syllabic
 * Unclassified: verbstems, 3v, 4v
 
-
 ## The lexica
 
-
 ### Twosyllabic
-
 
 * 2SYLL_AASSAD - aassâđ ääss
     - Inf:â%>đ K 
@@ -7490,13 +5866,11 @@ as 2SYLL_ID, but only 3 person
 * 2SYLL_VYELGID like VYEIJID, but -i for reduced forms
 * JUAVVID
 
-
 * 2SYLL_OD
 * 2SYLL_OOD
     - Prt+Du1 njivvoim WG CLEN
 * 2SYLL_ORROOD like 2SYLL_OOD, but different triggers here and there
     - Prt+Du1 oroim WG
-
 
 * 2SYLL_UD
     - Inf: ruábbuđ
@@ -7517,7 +5891,6 @@ as 2SYLL_ID, but only 3 person
     - ConNeg: uážu
     - Ind+Prt+Sg1: ožžum
 
-
 ### Threesyllabic
 * 3v (unclassified)
 * 3_LEKKASID (no stem change)
@@ -7533,13 +5906,11 @@ as 2SYLL_ID, but only 3 person
 * 3_UTTID
 * Sg3 suojâlA
 
-
 ### 4-syllabic
 * 4v
 * 4_ADELISTID
 * 4_KAVNATTATTAD
 * 4_TUHHID
-
 
 ### Contracted
 * Contracted j-stems
@@ -7551,7 +5922,6 @@ as 2SYLL_ID, but only 3 person
 * Contracted v-stems
     - C_TABAHTUD (Sg3 -uvá)
     - C_MERIDUD (Sg3 uvvoo)
-
 
 ### Unclassified verbs
 * verbstem (no info)
@@ -7565,28 +5935,13 @@ as 2SYLL_ID, but only 3 person
 
 
 
-
-
-
-
-
-
-
-
-
-
 ## Auxiliaries
-
 
  * ij+V+IV+Neg: NEG ; 
  * leđe+V+IV: LEDE ; 
 
 
-
-
 Main verbs
-
-
 
 
 Intransitive verbs
@@ -7598,41 +5953,27 @@ Transitive verbs
 
 
 
-
-
-
-
-
 # Alphabet 
-
-
 
 
 ## The Inari Saami letters
 
-
  *  a á â ä b c d e f g h i j k l m n o õ p q 
-   r s t u v w x y z æ ä ø ö å			   
-   č đ ŋ ŧ š ž				 			   
-
+   r s t u v w x y z æ ä ø ö å               
+   č đ ŋ ŧ š ž                               
 
  *  A Á Â Å B C D E F G H I J K L M N O Õ P Q 
-   R S T U V W X Y Z Æ Ä Ø Ö Å 			   
-   Č Đ Ŋ Ŧ Š Ž  							   
- *    %- 							   
- *  '    the hyphen as hyphen
- *   ⎈      the ghost sign used in compounding, does not work in hfst
-
+   R S T U V W X Y Z Æ Ä Ø Ö Å               
+   Č Đ Ŋ Ŧ Š Ž                               
+ *  %-                                         hyphen
+ *  '        the hyphen as hyphen
+ *   ⎈       the ghost sign used in compounding, does not work in hfst
 
 ### Accented letters, just in case
 
-
  *  É Ó Ú Í À È Ò Ù Ì Ë Ü Ï Ê Ô Û Î Ã Ý þ Ð   
    é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý þ ð   
-   ß ª ß ç								   
-
-
-
+   ß ª ß ç                                   
 
 
 
@@ -7644,40 +5985,32 @@ Literal quotes and angles must be escaped (cf morpheme boundaries further down):
 
 
 
-
-
-
 ### Different archiphonemes
 
 
+ * a5:a á5:á e5:e i5:i u5:u y5:y o5:o ä5:ä    these do not change 
+ * i2:i u2:u â2:â    this is final i, u in contract verbs etc changing to e, o
+ * i3:i              this is invariant i
+ * i4:i              this is the underlying i consonant
+ * i6:0             a fake vowel, to get WG rules to function, e.g. kyehtlov (kyehti6lov)
 
-
- * p4:p  k4:k  l4:l t4:t č4:č c4:c     these are consonants that change in cg
- * i4:i                    	          this is the underlying i consonant
- * i2:i u2:u â2:â        	          this is final i, u in contract verbs etc changing to e, o
- * i3:i           	          this is invariant i
- * a5:a á5:á e5:e i5:i u5:u y5:y o5:o  ä5:ä                 these do not change 
  * c5:c č5:č d5:d h5:h j5:j l5:l m5:m ŋ5:ŋ r5:r t5:t z5:z    these do not change
  * b6:b d6:d g6:g  clitic consonants, jiemge, epke
- * j6:0  a fake consonant, to get WG rules to function, e.g. puávui
- * i6:0  a fake vowel, to get WG rules to function, e.g. kyehtlov (kyehti6lov)
- *  ':'  is the real apostroph
+ * j6:0            a fake consonant, to get WG rules to function, e.g. puávui
+ * p4:p  k4:k  l4:l t4:t č4:č c4:c   these are consonants that change in cg
+ *  ':'            is the real apostroph
 
+### More abstract archiphonemes (dependent upon the **Triggers** in the next section)
 
-### More abstract archiphonemes
-
-
- * %^RC:0		 = root cons., lengthened by ^CLEN - máán%RCu máánnun
- * %^RV:0	 	 = root vowel, lengthened by ^RLEN - ta%^RVvlu taavlu 
+ * %^RC:0       = root cons., lengthened by ^CLEN - máán%RCu máánnun
+ * %^RV:0       = root vowel, lengthened by ^RLEN - ta%^RVvlu taavlu 
  * %^SC:0       = stem cons, %^SC:j, pluss lengthen after earlier shortening by %^CSH, see lyeme
- * %^SV:0 		 = stem vowel, lengthened by ^SLEN u:uu - táálu%^SV tááloost
- * %^VO:0			 = vowel copy
-
+ * %^SV:0       = stem vowel, lengthened by ^SLEN u:uu - táálu%^SV tááloost
+ * %^VO:0       = vowel copy
 
 ### Triggers
 
-
- * %^CLEN:0	 = Cons lengthening, with ^RC
+ * %^CLEN:0     = Cons lengthening, with ^RC
  * %^CSH:0      = Cons shortening, laaŋkku - laaŋkun
  * %^RVSH:0     = Root vowel shortening
  * %^FCD:0      = Final consonant deletion 
@@ -7694,25 +6027,19 @@ Literal quotes and angles must be escaped (cf morpheme boundaries further down):
  * %^VHIGH:0    = High rootvow for verbs: e>iä, a>o, o>u, ää>áá, ee>iä, note also: ie>iä, ye>uá, uo>uá
  * %^VBACK:0    = Back rootvow for verbs: ä(ä)>a(a), á>aa, uá>o, ye>uo
  * %^BLOCK:0    = This symbol just to block otherwise triggering contexts
- * %^IUML:0    = â to e in front of high suffixes 
-
+ * %^IUML:0     = â to e in front of high suffixes 
 
 Trigger ordering in twolc and lexc, from left to right:
-
 
 ```
 SV|ÁE|ÁI  EA|EX|SC  FCD|FVD  WG|CSH  CLEN  VHIGH|VBACK  RVSH|RLEN  SLEN|SVSH  SVLOW
 ```
 
 
-
-
 ## Morpheme boundaries:
-
 
 Here we define the suffix border >
 The other borders are not used yet, but still defined:
-
 
 * **«**:  Derivational prefix
 * **»**:  Derivational suffix
@@ -7721,61 +6048,50 @@ The other borders are not used yet, but still defined:
 * **%^**:  (exceptional) soft hyphenation point
 and the symbol #, which is Word boundary for both lexicalised and dynamic compounds
 
-
 End of alphabet definitions
-
-
 
 
 Sets
 
-
- *  Vow = a á â ä e i o u u2 y æ ø ö å             
+ *  Vow = a á â ä e i o u y æ ø ö å              
         i2 u2 â2                                 
         i3                                       
-        a5 á5 i5 u5 y5 o5 ä5 		            
+        a5 á5 i5 u5 y5 o5 ä5                     
         i6                                       
-        é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý 	    
-        A Á Â Ä E I O U Y Æ Ø Ö Å			    
-        É Ó Ú Í À È Ò Ú Ì Ë Ü Ï Ê Ô Û Î Ã Ý 	    
-        %^RV %^SV ;						        
- *  RealVow = a á â ä e i o u y æ ø ö å y5	i2 i5 i3 i6	â2    
-        é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý 	    
-        A Á Â Ä E I O U Y Æ Ø Ö Å 		    
+        é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý      
+        A Á Â Ä E I O U Y Æ Ø Ö Å                
+        É Ó Ú Í À È Ò Ú Ì Ë Ü Ï Ê Ô Û Î Ã Ý      
+        %^RV %^SV ;                              
+ *  RealVow = a á â ä e i o u y æ ø ö å          
+        y5 i2 i3 i5 i6 â2                       
+        é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý      
+        A Á Â Ä E I O U Y Æ Ø Ö Å                
         É Ó Ú Í À È Ò Ú Ì Ë Ü Ï Ê Ô Û Î Ã Ý ;    
- *  Cns = b c č d đ f g h j k l m n ŋ 			    
-        p q r s š t ŧ v w x z ž				    
-        B C Č D Đ F G H J K L M N Ŋ			    
-        P Q R S Š T Ŧ V W X Z Ž 				    
-         g2 k2 m2 n2 							    
-        b3 d3 g3 m3 h3 						    
-        p4 k4 r4 l4  i4  t4 c4 č4                
-         h5 j5 ŋ5 t5 c5 l5 t5 d5 r5 z5 j6                   
-        %^RC %^SC   ;                         
- *  UnvoicedCns = c č f h k p s š t  ;             
- *  Geminate = b d g p h t k c f z l m n ŋ r s š v  ;    
- *  Sgm = Vow Cns ;							    
- *  NotSuffixBorder = Vow %^FCD %FVD Cns %^CSH %^WG %^CLEN %^SLEN %^RLEN %^SVLOW %^RVSH %^ÁE %^ÁI %^EA %^EX %^SVSH ;  
- *  Triggers =   %^FCD %^FVD %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^EX %^ÁI %^SVSH %^VHIGH %^VBACK %^IUML ;  
- *  TriggersnotFCVD = %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^EX %^ÁI %^SVSH %^VHIGH %^VBACK %^IUML ; 
- *  StemCns = b b3 d d3 g g2 g3 h h2 h3 		    
+ *  Cns = b c č d đ f g h j k l m n ŋ            
+        p q r s š t ŧ v w x z ž                  
+        B C Č D Đ F G H J K L M N Ŋ              
+        P Q R S Š T Ŧ V W X Z Ž                  
+        g2 k2 m2 n2                              
+        b3 d3 g3 m3 h3                           
+        p4 k4 r4 l4  i4  t4 c4 č4               
+        h5 j5 ŋ5 t5 c5 l5 t5 d5 r5 z5 j6        
+        %^RC %^SC   ;                           
+ *  UnvoicedCns = c č f h k p s š t  ;          
+ *  Geminate = b d g p h t k c f z l m n ŋ r s š v ;   
+ *  Sgm = Vow Cns ;                                   
+ *  NotSuffixBorder = %^FCD %^FVD %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^EX %^ÁI %^SVSH Vow Cns ;  
+ *  Triggers =        %^FCD %^FVD %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^EX %^ÁI %^SVSH %^VHIGH %^VBACK %^IUML ;  
+ *  TriggersnotFCVD =             %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^EX %^ÁI %^SVSH %^VHIGH %^VBACK %^IUML ; 
+ *  StemCns = b b3 d d3 g g2 g3 h h2 h3          
             j l m m2 m3 m8 n n8 n2 ŋ r s  ;      
-
-
-
-
 
 
 
 
 # Definition section
 
-
 Introducing a WG right context 
 ```WeakGrade =  (RealVow:) [:RealVow |i6:]  (Cns:) ([%^SV:|%^ÁI:](%^ÁE:)) (%^FCD:) %^WG:0   ; ```  
-
-
-
 
 
 
@@ -7783,157 +6099,111 @@ As we look at more cases, the WeakGrade definition tends to be longer.
 We want to keep it short, but we want the code to work Thus, we document.
 * The second :RealVow is there for long consonant stems
 * The (Cns:) is there for consonant stems
+* -č: is there for the č:i pair of eeč^RCi:eijijn
+* The i6: is there for kyehtlov (kyehti6lov)
+
 
 
 # Rule section
 
 
-
-
 ## Consonant rules
 
-
-### Consonant gradation
-
-
-
+### Consonant gradation and shortening
 
 
 
 * **x:y consonant gradation** \\  WG gives x:x and x:y, when there is no consonant lengthening  
 
+* *tu^RVp^RCe^WG*
+* *tu0v0e0*
 
-* **va^RVh%^RCo^WG^CLEN>im**
-* **va0vvo00>im**
+* *käähir^WG>*
+* *käävir0>*
 
+* *juáh^RCu^WG^RVSH>ttáá*
+* *juáv0u00>ttáá*
+
+
+
+* **hh:vv** \\  já%^RVhhá%^SVl%^ÁI : jäävvil
 
 
 
 * **Quality change of root consonant x:yy** \\  consonant lengthening after WG, changing h:v, p:v, c:s
 
-
-
-
+* *va^RVh%^RCo^WG^CLEN>im*
+* *va0vvo00>im*
 
 
 * **t:đ, also tk4:đh gradation, part 1** \\   
 
+* *puáttee#vuot^RCâ^FVD^WG>i5i5*
+* *puáttee#vuođ0000>ii*
 
-* **jo^RVtk4â^WG^RLEN>**
-* **joođhâ00>**
+* *jo^RVtk4â^WG^RLEN>*
+* *joođhâ00>*
 
-
-
+* *vädis#vuot^RCâ^FVD^WG>i5i5*
+* *vädis#vuođ0000>ii*
 
 * **k4:h gradation for kk4, tk4, rkk4, lkk4** \\  
+
+* *totk4os^WG*
+* *tođhos0*
 
 
 * **xx:yy gradation for xx4** \\   puáhhoin, sukk4á:suhháást
 
+* *mä^RVtk4i^WG^RLEN>.#.*
+* *määđhi00>.#.*
 
-* **mä^RVtk4i^WG^RLEN>.#.**
-* **määđhi00>.#.**
-
-
-* **su^RVkk4á^SV^WG^CLEN^SLEN>st**
-* **su0hháá000>st**
+* *su^RVkk4á^SV^WG^CLEN^SLEN>st*
+* *su0hháá000>st*
 
 
 
+* **t4:đ and c4, č4, p4 gradation for tt:đ etc.** 
 
-* **h:v gradation for hh** \\  já%^RVhhá%^SVl%^ÁI : jäävvil
-* **kahhaan^CSH^SVSH>ân**
-* **ka0h0an00>ân**
-
-
+* *ru^RVtt4â^WG^RLEN>*
+* *ruu0đâ00>*
 
 
 
-
-* **x4:z gradation for xx4** 
-
-
-* **ru^RVtt4â^WG^RLEN>**
-* **ruu0đâ00>**
+* **ht:vt, ks:vs etc. gradation** \\  ht:vt, we use h 
 
 
-* **haavvâr^CSH^SVSH>ist**
-* **ha00vâr00>ist**
-
-
-* **pottáák^SC^CSH^SVSH>ist**
-* **po0t0ákk00>ist**
-
-
-
-
-* **xy:zy gradation** \\  ht:vt, we use h 
-
-
-
-
-* **pihtâs^WG**
-* **pivtâs0**
-
-
-* **totk4os^WG**
-* **tođhos0**
-
-
-
-
-
-
-* **á^RVrppu^WG^RLEN>**
-* **áár0pu00>**
-
-
-* **á^RVrppu^WG^RVSH>ttáá**
-* **á0r0pu00>ttáá**
-
-
-* **riänttus^WG>**
-* **riän0tus0>**
-
-
-* **ku^RVrrâ^CSH^RLEN>n**
-* **kuu0râ00>n**
-
-
-* **so^RVllâ^CSH^RLEN>n**
-* **soo0lâ00>n**
-
+* *pihtâs^WG*
+* *pivtâs0*
 
 
 
 ### Consonant shortening
 
-
-* **k:0 gradation for xkk4** \\  for lkk4, rkk4, vkk4
-
+* **k:0 gradation and shortening for xkk4** \\  for lkk4, rkk4, vkk4
 
 
-
+* *la^RVvkk4â^WG^RLEN*
+* *laav0hâ00*
 
 
 * **xyy:xy gradation A** \\   há%^RVi4ttás%^ÁI
 
+* *á^RVrppu^WG^RLEN>*
+* *áár0pu00>*
+
+* *á^RVrppu^WG^RVSH>ttáá*
+* *á0r0pu00>ttáá*
+
+* *riänttus^WG>*
+* *riän0tus0>*
 
 
 
 * **č:0 in čč4 consonant gradation when CLEN** \\ when čč4
 
-
-* **i^RVš^RCe^WG>**
-* **i0š0e0>**
-
-
-
-
-* **lu^RVčč4â^WG^RLEN^SVLOW>in**
-* **luu0já000>in**
-
-
+* *lu^RVčč4â^WG^RLEN^SVLOW>in*
+* *luu0já000>in*
 
 
 * **From i4j to j when WG and CSH** \\ e.g. sai4joos:sajoos
@@ -7941,73 +6211,55 @@ We want to keep it short, but we want the code to work Thus, we document.
 
 
 
-
-
-
-
 * **xx:x consonant gradation and shortening and x:x shortening** \\   weak grade or consonant shortening 
 
+* *ku^RVrrâ^CSH^RLEN>n*
+* *kuu0râ00>n*
+
+* *so^RVllâ^CSH^RLEN>n*
+* *soo0lâ00>n*
+
+* *vi^RVššâ^CSH^RVSH>vettee*
+* *vi00šâ00>vettee*
 
 
+* *la^RVs^RCe^SVtt^RLEN^SLEN>vettee*
+* *laas0ee0t00>vettee*
 
-* **vi^RVššâ^CSH^RVSH>vettee**
-* **vi00šâ00>vettee**
+* *cuozzâ^WG^RLEN>*
+* *cuo0zâ00>*
 
+* *vá^RVddu^CSH^RLEN>n*
+* *váá0du00>n*
 
+* *haavvâr^CSH^SVSH>ist*
+* *ha00vâr00>ist*
 
+* *pottáák^SC^CSH^SVSH>ist*
+* *po0t0ákk00>ist*
 
-* **la^RVs^RCe^SVtt^RLEN^SLEN>vettee**
-* **laas0ee0t00>vettee**
-
-
-* **cuozzâ^WG^RLEN>**
-* **cuo0zâ00>**
-
-
-* **vá^RVddu^CSH^RLEN>n**
-* **váá0du00>n**
-
-
+* *kahhaan^CSH^SVSH>ân*
+* *ka0h0an00>ân*
 
 
 * **tt:t  - final consonant and consonant gradation** \\ consonant gradation, and 3syll verbs in -tt lose t in front of cns-initial suff
 
-
-* **kulluutt^SVSH>**
-* **kullu00t0>**
-
-
-* **las^RCe^SVtt^CLEN^SLEN>**
-* **lassee0t00>**
-
+* *las^RCe^SVtt^CLEN^SLEN>*
+* *lassee0t00>*
 
 * **nnj to nj shortening weak grade and consonant shortening** \\  special rule, e.g. konnjâl -> konjâlân puánnjá
 
 
-
-
  * **Word final consonant deletion** \\ for vaskâm:vaaskâ
 
+* *va^RVskâm^FCD^RLEN*
+* *vaaskâ000*
 
-* **va^RVskâm^FCD^RLEN**
-* **vaaskâ000**
-
-
-* **njuolgâd^FCD^RVSH**
-* **njuolgâ000**
-
-
+* *njuolgâd^FCD^RVSH*
+* *njuolgâ000*
 
 
  * **Final m in stems, smm to sm** \\ 
-
-
-
-
-
-
-
-
 
 
 * **Wordfinal consonants part 1**  e%^RVlâčč
@@ -8016,31 +6268,20 @@ We want to keep it short, but we want the code to work Thus, we document.
 3)  šš>š in hárávušš>vetteđ 
 
 
+* *hárávušš>vetteđ*
+* *hárávu0š>vetteđ*
 
+* *konnjâl^CSH>ân*
+* *kon0jâl0>ân*
 
-* **hárávušš>vetteđ**
-* **hárávu0š>vetteđ**
+* *suán^RCju^CLEN>n*
+* *suánnju0>n*
 
+* *haamit^SC^CSH^SVSH>ist*
+* *ha0mitt00>ist*
 
-* **konnjâl^CSH>ân**
-* **kon0jâl0>ân**
-
-
-* **suán^RCju^CLEN>n**
-* **suánnju0>n**
-
-
-* **haamit^SC^CSH^SVSH>ist**
-* **ha0mitt00>ist**
-
-
-* **su^RVkk4á^SV^WG^CLEN^SLEN>st**
-* **su0hháá000>st**
-
-
-
-
-
+* *su^RVkk4á^SV^WG^CLEN^SLEN>st*
+* *su0hháá000>st*
 
 
 
@@ -8050,83 +6291,56 @@ We want to keep it short, but we want the code to work Thus, we document.
 
 
 
+* **Lengthening of half-long root consonant x:xx** \\  riččá piiru piirrun niisu niissun
 
 * **Lengthening of root consonant x:yy** \\  consonant lengthening after WG - h:vv, p:vv, c:ss
 
+* *ka^RVss^RCa^SV^WG^CLEN^SLEN>st*
+* *ka0ss0aa000>st*
 
-* **ka^RVss^RCa^SV^WG^CLEN^SLEN>st**
-* **ka0ss0aa000>st**
+* *va^RVh^RCe^SV^WG^CLEN^SLEN>st*
+* *va0vvee000>st*
 
-
-* **va^RVh^RCe^SV^WG^CLEN^SLEN>st**
-* **va0vvee000>st**
-
-
-* **va^RVh^RCe^SV^CLEN^SLEN>n**
-* **va0hhee00>n**
-
-
-
-
-* **Lengthening of half-long root consonant x:xx** \\  riččá piiru piirrun niisu niissun
-
-
-
+* *va^RVh^RCe^SV^CLEN^SLEN>n*
+* *va0hhee00>n*
 
 * **Lengthening of consonant h5** \\    this one does not fit into the general rule because of h5:h
 
-
-* **put^RCe^SVst^CLEN^SLEN>**
-* **putteest00>**
-
+* *put^RCe^SVst^CLEN^SLEN>*
+* *putteest00>*
 
 
+* *ke^RVp^RCidm^CLEN^RLEN^SLEN>ân*
+* *keeppidm000>ân*
 
-* **ke^RVp^RCidm^CLEN^RLEN^SLEN>ân**
-* **keeppidm000>ân**
+* *kieh^RCâ^WG^CLEN^SVLOW>in*
+* *kievvá000>in*
 
+* *i^RVšš^RCe^SV^WG^CLEN^SLEN>st*
+* *i0šš0ee000>st*
 
-* **kieh^RCâ^WG^CLEN^SVLOW>in**
-* **kievvá000>in**
+* *kol^RCe^CLEN>*
+* *kolle0>*
 
-
-* **i^RVšš^RCe^SV^WG^CLEN^SLEN>st**
-* **i0šš0ee000>st**
-
-
-* **kol^RCe^CLEN>**
-* **kolle0>**
-
-
-* **kiel^RCâ^CLEN>n**
-* **kiellâ0>n**
+* *kiel^RCâ^CLEN>n*
+* *kiellâ0>n*
 
 
 * **č:ij part 1** \\  
 
-
 * **Lengthening root consonant j:ij 1** \\  for saje:saijeen 
-
-
 
 
 * **č:ij and j:ij part 2** \\  
 
+* *sa^RVj^RCe^SV^CLEN^SLEN>n*
+* *sa0ijee00>n*
 
-* **sa^RVj^RCe^SV^CLEN^SLEN>n**
-* **sa0ijee00>n**
+* *pááj^RCá^CLEN>n*
+* *pááijá0>n*
 
-
-* **pááj^RCá^CLEN>n**
-* **pááijá0>n**
-
-
-* **vaj^RCe^SVd^CLEN^SLEN>**
-* **vaijeed00>**
-
-
-
-
+* *vaj^RCe^SVd^CLEN^SLEN>*
+* *vaijeed00>*
 
 
 
@@ -8135,152 +6349,100 @@ We want to keep it short, but we want the code to work Thus, we document.
 
 
 
-
-
-
 * **Consonant lengthening after xx:x and xy:zy weak grade with x4 on upper side** \\   k4, č, p4  kukse:kuvssijn  
-
-
 
 
 * **Consonant lengthening xy:xyy** \\ 
 
 
 
-
-
-
 ### Stem consonant and suffix consonant 
-
-
 
 
 * **Assimilation of consonants t d š**  delet t in front of -ttáá, avoid -tttáá
 
-
-* **haamit>ttáá**
-* **haami0>ttáá**
-
-
-
+* *haamit>ttáá*
+* *haami0>ttáá*
 
 
 
 * **Wordfinal consonants part 2**  e%^RVlâčč cummâlâhč:cummâlâhš
 
-
 * **Final consonant x:xx** \\  pottáák potákkân  
 
 
-* **kahhaan^SC^CSH^RVSH>ist**
-* **ka0ha0nj00>ist**
-
-
-
-
-
-
+* **Clitic devoicing** \\  for focus particle bá to pá after unvoiced stem cns.
 
 
 ## Vowel rules
 
-
 ### First syllable vowel shortening
 
 
+* *koonnjâl^CSH>ân*
+* *ko0n0jâl0>ân*
+
+* *kappeer^CSH^SVSH>ist*
+* *ka0p0er00>ist*
+
+* *čäällim^CSH>ist*
+* *čä00lim0>ist*
+
+* *muusik^SC^CSH^RVSH>ist*
+* *mu0sikk00>ist*
 
 
-* **koonnjâl^CSH>ân**
-* **ko0n0jâl0>ân**
+* *aarrân^CSH>ân*
+* *a00rân0>ân*
 
-
-* **kappeer^CSH^SVSH>ist**
-* **ka0p0er00>ist**
-
-
-* **čäällim^CSH>ist**
-* **čä00lim0>ist**
-
-
-* **muusik^SC^CSH^RVSH>ist**
-* **mu0sikk00>ist**
-
-
-
-
-* **aarrân^CSH>ân**
-* **a00rân0>ân**
-
-
-* **kiirrâs^RVSH>ân**
-* **ki0rrâs0>ân**
-
-
-
+* *kiirrâs^RVSH>ân*
+* *ki0rrâs0>ân*
 
 
 
 * **Vowel shortening VV:V** \\ ráávhu- : rávhoid, käähir%^CSH%>id kuuđiâ%^RVSH%>žân
+1. svnlow
+1. čääci : čassijn
+1. kaamuv kammust
+1. pááppár : pápárân páápp4ár%^ÁI%^WG%^RVSH%>id
+1. pááppár : pápárân viijđás%^ÁE%^WG%^RVSH> 
+1. njääh^RCe^CLEN^RVSH> = njähhe>
+1. njääh^RCe^CLEN^RVSH> = njähhe>
 
 
 * **Long vowel shortening** \\ (example?), no ^CSH, since that gives Vy:0
-
 
 * **e:0 in passive** \\
 
 
 
+* *mááh^RCu^WG^CLEN^SVLOW>in*
+* *má0vvo000>in*
 
-
-
-* **mááh^RCu^WG^CLEN^SVLOW>in**
-* **má0vvo000>in**
-
-
-* **mool^RCâ^WG^RVSH>ttáá**
-* **mo0l0â00>ttáá**
-
-
-
-
-
+* *mool^RCâ^WG^RVSH>ttáá*
+* *mo0l0â00>ttáá*
 
 * **e:0 in passive** \\ special rule for getting ej̣ittáá instead of ej̣ittáá.
-
 
 * **Underlying long vowel shortening iä:e and ää:ä or a** \\ čääh%^RCu2%^CLEN%^VBACK%>um
 
 
-
-
  3st stems viäskár veskirin, časkes časkes ča%^RVskas%^ÁE viäskár%^ÁI%^WG%^RVSH
 
-
-* **kaavpug^CSH^RVSH^SVSH>ân**
-* **ka0vpug000>ân**
-
+* *kaavpug^CSH^RVSH^SVSH>ân*
+* *ka0vpug000>ân*
 
 
 
+* *mool^RCâ^WG>*
+* *mool0â0>*
 
 
-* **mool^RCâ^WG>**
-* **mool0â0>**
+* *käähir^WG>*
+* *käävir0>*
 
-
-
-
-* **käähir^WG>**
-* **käävir0>**
-
-
-* **juáh^RCu^WG^RVSH>ttáá**
-* **juáv0u00>ttáá**
-
-
-
-
-
+* *juáh^RCu^WG^RVSH>ttáá*
+* *juáv0u00>ttáá*
 
 
 
@@ -8288,25 +6450,20 @@ We want to keep it short, but we want the code to work Thus, we document.
 
 ### First syllable vowel lengthening
 
-
 * **Root vowel lenghtening in many stems** \\  no rootvowel length if stem vowel lengthens and the consonantcentre consists of two or more consonants 
 
+* *kä^RVvnâst^WG^VBACK^RLEN>*
+* *kaavnâst000>*
 
-* **kä^RVvnâst^WG^VBACK^RLEN>**
-* **kaavnâst000>**
+* *le^RVkk4â^WG^RLEN>*
+* *lee0hâ00>*
 
-
-* **le^RVkk4â^WG^RLEN>**
-* **lee0hâ00>**
-
-
-
-
-* **nju^RVne^SV^WG^RLEN^SLEN>st**
-* **njuunee000>st**
+* *he^RVrkkib^WG^RLENttáá*
+* *heer0kib00ttáá*
 
 
-
+* *nju^RVne^SV^WG^RLEN^SLEN>st*
+* *njuunee000>st*
 
 
 
@@ -8315,114 +6472,73 @@ We want to keep it short, but we want the code to work Thus, we document.
 
 
 
-
-
-
-
 * **Root vowel ä:ää lenghtening and diphthongisation e:iä** \\ special rule, for avoiding conflict spä%^RVi4lih%^WG%^RLEN, 
-
-
 
 
 * **Root vowel o lengthening** \\  alge : oolgijn 
 
-
-* **a^RVlge^WG^RLEN>id**
-* **oolgi00>jd**
-
-
-* **va^RVh^RCu^CSH^RLEN>**
-* **vooh0u00>**
-
+* *a^RVlge^WG^RLEN>id*
+* *oolgi00>jd*
 
 
 
 * **Root vowel u lengthening with vowel change before suffix i** \\  alge : oolgijn 
 
+* *mu^RVšti^WG^VHIGH^RLEN>j*
+* *muušti000>j*
 
-* **lo^RVh^RCâ^RLEN>đ**
-* **luuh0â0>đ**
+* *lo^RVh^RCá^WG^VHIGH^RLEN>im*
+* *luuv0á000>im*
 
+* *ku^RVlgâ^WG^VHIGH^RLEN>i3*
+* *kuulgâ000>i*
 
-* **mu^RVšti^WG^VHIGH^RLEN>j**
-* **muušti000>j**
+* *hu^RVm^RCo^SVb^RVSH>ist*
+* *hu0m0o0b0>ist*
 
-
-* **lo^RVh^RCá^WG^VHIGH^RLEN>im**
-* **luuv0á000>im**
-
-
-* **ku^RVlgâ^WG^VHIGH^RLEN>i3**
-* **kuulgâ000>i**
-
-
-
-
+* *hu^RVm^RCo^SVb^WG^RVSH^SVSH>ân*
+* *hu0m0o0b000>ân*
 
 
 ### First syllable vowel change
 
-
 a rules
 
-
 * **Root vowel change a:o before suffix i and for contract verbs** \\  alge : olgijn 
-
 
 * **Root vowel o:u for contract verbs and Root vowel change o:u before suffix i** 
 
 
+* *tohhi2>đ*
+* *tuhhi>đ*
 
-
-* **tohhi2>đ**
-* **tuhhi>đ**
-
-
-* **lo^RVh^RCá^WG^VHIGH^RLEN>im**
-* **luuv0á000>im**
-
-
-
-
+* *lo^RVh^RCá^WG^VHIGH^RLEN>im*
+* *luuv0á000>im*
 
 
 
 
 ### ä rules
 
-
 * **Monophthongisation rule iä:ee 1** \\  
 1)
-
 
 * **iä:e rule 1 and second syllable Fleeting vowel before suffix** \\  Note: many rules in one
 
 
 
-
-
-
 * **iä:e and iä:ee rule 2 and Diphthongisation i5ä to ie** \\  
 
-
-* **siämmu2>đ>**
-* **s0emmu>đ>**
-
-
-
-
+* *siämmu2>đ>*
+* *s0emmu>đ>*
 
 
 
 
 * **Different rules for ä:a, first vowel (or only vowel)** \\  čääci:čassijn, läbži:labžijn lään^RCi%>id
 
-
-* **njääh^RCi^WG^VBACK>i3**
-* **njaav0i00>i**
-
-
-
+* *njääh^RCi^WG^VBACK>i3*
+* *njaav0i00>i*
 
 
 
@@ -8430,141 +6546,89 @@ a rules
 
 
 
-
-
-
 * **ää to áá and á0 in Illative and Sg3** \\  ... for säämi > sáámán
 
 
 
-
-
-
-* **sääm^RCi^EA>n**
-* **sáám0á0>n**
-
-
-* **njääh^RCo^CLEN^VBACK^RVSH>on**
-* **njá0hho000>on**
+* *sääm^RCi^EA>n*
+* *sáám0á0>n*
 
 
 * **äRV to áá in Illative and Sg3** \\  ... for täsni -> táásnán
 
 
-
-
-* **tä^RVsni^EA^CSH^RLEN>n**
-* **táásná000>n**
-
+* *tä^RVsni^EA^CSH^RLEN>n*
+* *táásná000>n*
 
 * **Vowel lengthening äRV to aa** \\  äigi aaigijd
 
+* *sälkki2>đ>*
+* *salkki>đ>*
 
-* **sälkki2>đ>**
-* **salkki>đ>**
+* *sääm^RCi^WG>in*
+* *saam0i0>jn*
 
-
-* **sääm^RCi^WG>in**
-* **saam0i0>jn**
-
-
-* **sääm^RCi^WG>id**
-* **saam0i0>jd**
+* *sääm^RCi^WG>id*
+* *saam0i0>jd*
 
 
+* *stäävi2>đ>*
+* *staavi>đ>*
 
+* *stäävi2>j>*
+* *staavi>j>*
 
-* **stäävi2>đ>**
-* **staavi>đ>**
+* *stäävi2>i3>*
+* *staavi>i>*
 
+* *stäävi2>jeh>*
+* *stääve>jeh>*
 
-* **stäävi2>j>**
-* **staavi>j>**
-
-
-* **stäävi2>i2>**
-* **staavi>i>**
-
-
-* **stäävi2>jeh>**
-* **stääve>jeh>**
-
-
-* **kä%^RVvnâ^WG>st^RLEN>**
-* **kaavnâ0>st0>**
-
-
-
-
+* *kä^RVvnâst^WG^VBACK^RLEN^SLEN>*
+* *kaavnâst0000>*
 
 
 á
 
-
 * **Root vowel change for á to ä with i in second syllable** \\  päävir , já%^RVhhá%^SVl%^ÁI%^WG%^RLEN>
 
 
-
-
-* **páápp4ár^ÁI^WG>**
-* **pää0vir00>**
-
-
-
-
+* *páápp4ár^ÁI^WG^RLEN*
+* *pää0vir000*
 
 
 * **Root and stem vowel á:a for verbs** 
 
 
+* *pá^RVkk4u^VBACK>m>*
+* *pa0kku0>m>*
 
-
-* **pá^RVkk4u2>m**
-* **pa0kku>m**
-
-
+* *pá^RVkk4u^WG^RLEN>im>*
+* *páá0hu00>im>*
 
 
 ### á and uá rules
 
-
 * **Monophthongisation rule uá:o0 part 2: Vowel shortening for uá** \\  for uábbi -> obbijn  čuál%^RCi%^WG%>in tuái4jâl%^CSH%^VBACK%^RVSH%>âm
-
-
 
 
 * **Monophthongisation rule u:o and root vowel change u:o, special rule for olmooš and contract verbs** \\ 
 
-
-* **uáinu2>đ**
-* **o0inu>đ**
-
-
+* *uái4nu2>đ*
+* *o0inu>đ*
 
 
 * **Diphthong rule uá:uo and uá:oo, part 2** \\  
 
 
 
-
-
-
 * **Diphthongisation e to iä, part 1** \\   
-
-
 
 
 * **Root vowel aa:áá in C-stems with stemvowel u, part 1** \\  ahhu:áhu
 
 
-
-
 * **Root vowel aa:áá in C-stems with stemvowel u, part 2** \\  ahhu:ááhu
-
-
-
-
-
 
 
 
@@ -8575,121 +6639,83 @@ a rules
 
 
 
-
-
-
-
 * **Diphthongisation uo:uá** \\   
-
-
 
 
 * **ye to uá and uo, part 1** \\  Part 1 of ye to uá for kyeli : kuálán  
 
 
-
-
 * **ye to uá, part 2** \\  Part 2 of ye to uá for kyeli : kuálán
 
-
-* **kyel^RCi3^EA^CLEN>m**
-* **kuállá00>m**
-
+* *kyel^RCi3^EA^CLEN>m*
+* *kuállá00>m*
 
 * **ye to uo, part 2** \\  Part 2 of ye to uá for kyeli : kuolijn
 
-
 * **uá to ye and uo to ye, part 1** \\  Part 1 luámmán : lyeme čuággás%^ÁI%^WG%^RLEN%>
 
-
-* **vuolle^CLEN>en**
-* **vyelle0>en**
-
+* *vuolle^CLEN>en*
+* *vyelle0>en*
 
 * **uá to ye, part 2** \\  Part 2 luámmán : lyeme
 
 
 
 
-
-
-
-
 ### Second syllable rules
-
 
 * **Second syllable vowel change á to e or i in 3syll stems** \\ puttás- > putes, triggers are ^ÁE and ^ÁI já%^RVhhá%^SVl%^ÁI%^WG%^RLEN%> pu5árrás%^ÁI%^WG%>umos
 
-
-* **puttás^ÁE^WG>**
-* **pu0tes00>**
-
+* *puttás^ÁE^WG>*
+* *pu0tes00>*
 
 * **Stemvowel shortening  áá and aa to e or i in 3syll** \\ puttás- > putes, triggers are ^ÁE and ^ÁI
 
+* *nahha^SVr^ÁE^WG^RLEN>*
+* *na0ve0r000>*
 
-* **nahhaar^ÁE^WG>**
-* **na0v0er00>**
-
-
-
-
-
+* *nahha^SVr^ÁE^WG^RLEN*
+* *na0ve0r000*
 
 
 
 * **Stem vowel e to a for a root vowel.** \\  alge to aalgan
 
+* *a^RVlge^SV^EA^SLEN>š*
+* *a0lgaa00>š*
 
-* **a^RVlge^EA^CSH^RLEN>n**
-* **aalga000>n**
 
+* *a^RVlge^SV^EA^SLEN*
+* *a0lgaa00*
 
-* **va^RVh^RCe^SV^EA^CLEN^SLEN>m**
-* **va0hhaa000>m**
+* *a^RVlge^EA^CSH^RLEN>n*
+* *aalga000>n*
 
+* *va^RVh^RCe^SV^EA^CLEN^SLEN>m*
+* *va0hhaa000>m*
 
 * **Stem vowel e to á for other root vowel** \\  if e stem
 
-
 * **Stem vowel i to á for other root vowel.** \\  e.g. säämi > Ill sáámán 
 
-
 * **Stem vowel i to â for other root vowel, as a common error.** \\  e.g. säämi > Ill Err/Orth sáámân 
-
-
 
 
 * **Stem vowel i to e in front of j** \\  
 
 
 
-
-
-
 * **Stem vowel â to a in Pl Nom -h** \\  silbâ to siilbah  %^WG%^RLEN%>hlove%>h
 
 
-
-
-* **so^RVllâ^WG^RLEN>h**
-* **soo0la00>h**
-
+* *so^RVllâ^WG^RLEN>h*
+* *soo0la00>h*
 
 * **Stem vowel â > á change before i** \\ sollâ to sooláid 
 
 
-
-
-* **so^RVllâ^WG^RLEN^SVLOW>in**
-* **soo0lá000>in**
-
-
-
-
-
-
-
+* *so^RVllâ^WG^RLEN^SVLOW>in*
+* *soo0lá000>in*
 
 
 
@@ -8701,97 +6727,70 @@ a rules
 
 
 
-
-
-
 * **Stem vowel u:o change before suffix** \\  
 2) 
 
 
-
-
 * **Stem vowel u2:o change before suffix** \\  
 
-
-* **uáinu>o**
-* **uáino>o**
-
-
-
-
+* *uáinu>o*
+* *uáino>o*
 
 
 
 
 * **Second vowel shortening** \\ eemeed : emedân, savvoon : savo 
 
+* *kulluutt^SVSH>*
+* *kull0u0t0>*
+
+* *eemeed^CSH^SVSH>ân*
+* *e0m0ed00>ân*
 
 
-
-* **eemeed^CSH^SVSH>ân**
-* **0em0ed00>ân**
-
-
-
-
-* **kappeer^CSH^SVSH>ân**
-* **ka0p0er00>ân**
-
+* *kappeer^CSH^SVSH>ân*
+* *ka0p0er00>ân*
 
 * **Stem vowel:0 in front of â** \\ aiguu:aaigâ
-
-
 
 
 * **Stem â deleting** \\ kandâ:kandii
 
 
-### Suffix vowel rules
 
+* *a^RVlgâi^FVD^WG^CLEN>i5*
+* *a0lg0i000>i*
+
+### Suffix vowel rules
 
 * **Suffix vowel lengthening** \\ long á in kissáást, nuorâ : nuorááin, hyeni:hyeneest
 
 
 
 
+* *ki^RVssá^SV^WG^CLEN^SLEN>st*
+* *ki0ssáá000>st*
+
+* *mi^RVllo^SV^WG^CLEN^SLEN>st*
+* *mi0lloo000>st*
+
+* *huksi^SVm^SLEN>ist*
+* *huksiim0>ist*
 
 
-* **ki^RVssá^SV^WG^CLEN^SLEN>st**
-* **ki0ssáá000>st**
-
-
-* **mi^RVllo^SV^WG^CLEN^SLEN>st**
-* **mi0lloo000>st**
-
-
-* **huksi^SVm^SLEN>ist**
-* **huksiim0>ist**
-
-
-
-
-* **táál^RCu^SV^WG^RVSH^SLEN^SVLOW>st**
-* **táál0oo0000>st**
-
+* *táál^RCu^SV^WG^RVSH^SLEN^SVLOW>st*
+* *táál0oo0000>st*
 
 * **Suffix i5:j for lexicon APINA** \\ salijn
-
-
 
 
 * **Suffix i5:0 and i5ä:e** \\ timotein oboen, not Chariliein
 
 
-
-
 * **Suffix i:j for i and e-stems** \\  
 
 
-
-
 * **Vowel copy in suffix** \\  for imperative Sg3, at least
-
-
 
 
 Suffix consonant rules
@@ -8799,19 +6798,12 @@ Suffix consonant rules
 
 
 
-
-
-
-
 ## Other rules
-
 
  * **Word final vowel deletion** \\ for vaskâm:vaaskâ
 
-
-* **sollâ^FVD>ii**
-* **soll00>ii**
-
+* *sollâ^FVD>ii*
+* *soll00>ii*
 
 * **Potential vowel shortening for contract verbs** \\  -áážep becomes -áš etc.
 
@@ -8820,30 +6812,11 @@ Suffix consonant rules
 
 
 
+* *skä^RVi4nâ^VBACK>đ*
+* *ska0inâ0>đ*
 
-
-
-
-
-
-* **skäi4nâ^VBACK>đ**
-* **skainâ0>đ**
-
-
-* **skä^RVi4nâ^VBACK>đ**
-* **ska0inâ0>đ**
-
-
-* **hu^RVm^RCo^SVb^WG^RLEN^SLEN^RLEN^SLEN**
-* **huum0oob00000**
-
-
-* **hu^RVm^RCo^SVb^RLEN^SLEN^RVSH>ân**
-* **hu0m0o0b000>ân**
-
-
-* **hu^RVm^RCo^SVb^RVSH>ist**
-* **hu0m0o0b0>ist**
+* *hu^RVm^RCo^SVb^WG^RLEN^SLEN^RLEN^SLEN*
+* *huum0oob00000*
 
 I N A R I   S A A M I   D I S A M B I G U A T O R               
 ==================================================================

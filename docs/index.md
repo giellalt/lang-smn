@@ -1,6 +1,4 @@
-Inari Saami documentation
-===================
-
+# Inari Saami documentation
 
 This page documents the work on the **Inari Saami grammatical analyser**. 
 

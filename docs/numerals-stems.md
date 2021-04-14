@@ -1,75 +1,6 @@
 
 
-
-
 # Inari Saami numerals
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -141,22 +72,7 @@
 
 
 
-
-
-
  * **LEXICON NUMERALCOMPOUNDS**: numeral as first part: duhatjienat,
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
