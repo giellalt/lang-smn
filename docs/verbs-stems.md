@@ -1,10 +1,6 @@
 
 
-
-
 # Verb stems
-
-
 
 
 ## Overview
@@ -17,12 +13,9 @@
 * 4-syllabic
 * Unclassified: verbstems, 3v, 4v
 
-
 ## The lexica
 
-
 ### Twosyllabic
-
 
 * 2SYLL_AASSAD - aassâđ ääss
     - Inf:â%>đ K 
@@ -142,13 +135,11 @@
 * 2SYLL_VYELGID like VYEIJID, but -i for reduced forms
 * JUAVVID
 
-
 * 2SYLL_OD
 * 2SYLL_OOD
     - Prt+Du1 njivvoim WG CLEN
 * 2SYLL_ORROOD like 2SYLL_OOD, but different triggers here and there
     - Prt+Du1 oroim WG
-
 
 * 2SYLL_UD
     - Inf: ruábbuđ
@@ -169,7 +160,6 @@
     - ConNeg: uážu
     - Ind+Prt+Sg1: ožžum
 
-
 ### Threesyllabic
 * 3v (unclassified)
 * 3_LEKKASID (no stem change)
@@ -185,13 +175,11 @@
 * 3_UTTID
 * Sg3 suojâlA
 
-
 ### 4-syllabic
 * 4v
 * 4_ADELISTID
 * 4_KAVNATTATTAD
 * 4_TUHHID
-
 
 ### Contracted
 * Contracted j-stems
@@ -203,7 +191,6 @@
 * Contracted v-stems
     - C_TABAHTUD (Sg3 -uvá)
     - C_MERIDUD (Sg3 uvvoo)
-
 
 ### Unclassified verbs
 * verbstem (no info)
@@ -217,34 +204,17 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 ## Auxiliaries
-
 
  * ij+V+IV+Neg: NEG ; 
  * leđe+V+IV: LEDE ; 
 
 
-
-
 Main verbs
-
-
 
 
 Intransitive verbs
 Transitive verbs
-
-
 
 
 

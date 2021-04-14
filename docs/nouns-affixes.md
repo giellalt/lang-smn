@@ -1,17 +1,12 @@
 
 
-
-
 # Sublexica for nominal morphology
-
 
 Note: Triggers **must** be put in this order ("|" meaning "or") in 
 order for the morphophonology to work:
 ```
 SV|ÁE|ÁI  EA|SC  FCD  WG|CSH  CLEN  VHIGH|VBACK  RVSH|RLEN  SLEN|SVSH  SVLOW
 ```
-
-
 
 
 ## Table of content for this file
@@ -23,10 +18,7 @@ SV|ÁE|ÁI  EA|SC  FCD  WG|CSH  CLEN  VHIGH|VBACK  RVSH|RLEN  SLEN|SVSH  SVLOW
 1. Contract stems
 
 
-
-
 # The continuation lexica 
-
 
 Lexicons starting with 2 are bisyllabic words, 
 with 3 are trisyllabic, with 4 are quadrosyllabic.
@@ -38,20 +30,12 @@ stems/nouns.lexc file.
 
 
 
-
-
-
 ## 1. Unclassified lexica
-
 
 These two lexica are temporary lexica for words waiting to be classified.
 
-
  LEXICON KOLME  contains a handful of ad hoc three syllable stem, for now directed to 
  3LITTER ; 
-
-
-
 
 
 
@@ -60,23 +44,22 @@ These two lexica are temporary lexica for words waiting to be classified.
 
 
 
-
-
-
 ## 1. Even-syllable stem lexica
-
 
 ### 2ALGA lexicon family
 This is the basic even-syllable lexicon.
 (Note: 2VADDU differs from 2ALGA in having CLEN for Sg+Com and Pl+Ill , rlen svlow, ess:-)
 \\ 
+ * *LEXICON 2AIRU* (subtype of the 2ALGA basic lexicon)
+
  * *LEXICON 2ALGA* (basic lexicon)
 \\ 
  * *LEXICON X_ALGA* (common to all POS)
 \\ 
  * *LEXICON 2ALGA_SG* (Px paradigms)
+
 \\ 
- * *LEXICON X_ALGA_SG* case paradigms sg
+ * *LEXICON X_ALGA_SG* case paradigms sg a^RVlgâ, ku^RVssâ
 \\ 
  * *LEXICON X_ALGA_PL* case para pl (plurals for 2KUMPPI)
 \\ 
@@ -84,6 +67,18 @@ This is the basic even-syllable lexicon.
  X_WG_RLEN_PL_Loc ;  
 
 
+
+ * *LEXICON 2AIRU_SG_DIM* a^RVlgâ
+
+
+ * *LEXICON 2AIRU_PL_DIM* 
+
+
+ * *LEXICON 2ALGA_DIM*
+
+ * *LEXICON 2ALGA_SG_DIM* a^RVlgâ
+
+ * *LEXICON 2ALGA_PL_DIM* 
 
 
 ### 2PUUVSAH lexicon family, stem is pu^RVk4s^RCâ
@@ -97,7 +92,6 @@ has WG compound form, then pointing to
  * *LEXICON X_WG_RLEN_PL_Loc* plural forms with ^WG and ^^WG^RLEN
 \\ 
  * *LEXICON X_WG_RLEN_PL*
-
 
 ### 2SOLLA lexicon family
 SM1, RLEN, earlier LLEN !rlen svlow, sgcom/plill:rlen  ess:clen
@@ -115,11 +109,7 @@ Last vowel is â.
 
 
 
-
-
-
 ### 2JUUHA lexicon family
-
 
  * *LEXICON 2JUUHA* (basic lexicon)
 \\ 
@@ -132,8 +122,6 @@ Last vowel is â.
  * *LEXICON X_JUUHA_PL* (common POS Pl)
 
 
-
-
  * *LEXICON JUUVAS* (A lexicon for lexicalised deminutive words, thus words NOT having a double deminutive)
 So far it has only one member, juuvâš, and no Px
 \\ 
@@ -141,12 +129,7 @@ So far it has only one member, juuvâš, and no Px
  * *LEXICON X_JUUVAS_PL* 
 
 
-
-
  * *LEXICON JUUHA_DIM* (a lexicon to create deminutives; Not for lexicalised words already being in deminutive)
-
-
-
 
 
 
@@ -171,13 +154,7 @@ So far it has only one member, juuvâš, and no Px
 
 
 
-
-
-
  * *LEXICON KIELA_DIM*
-
-
-
 
 
 
@@ -187,10 +164,7 @@ So far it has only one member, juuvâš, and no Px
  * *LEXICON X_WG_RVSH_PL_notILL*
 
 
-
-
 ### 2TELTTA lexicon family
-
 
  * *LEXICON 2TELTTA* Check: is this identical to KISSA?
 \\ 
@@ -203,10 +177,7 @@ So far it has only one member, juuvâš, and no Px
  * *LEXICON X_TELTTA_PL*
 
 
-
-
 ### 2FADDA lexicon family
-
 
  * *LEXICON 2FADDA*:  This might be the standard even syllabi lexicon
 \\ 
@@ -219,14 +190,25 @@ So far it has only one member, juuvâš, and no Px
  * *LEXICON X_FADDA_PL*
 
 
+ * *LEXICON FADDA_SG_DIM* fá^RVddá
+
+ * *LEXICON FADDA_PL_DIM* 
+
 
 
 ### 2KISSA lexicon family
 
-
  * *LEXICON 2KISSA*  No root vowel lengthening
 \\ 
  * *LEXICON 2KISSA_SG*
+
+
+ * *LEXICON KISSA_DIM*
+
+
+
+
+
 \\ 
  * *LEXICON 2KISSA_PL*
 \\ 
@@ -236,11 +218,7 @@ So far it has only one member, juuvâš, and no Px
 
 
 
-
-
-
 ### 2CAANA lexicon family
-
 
  * *LEXICON 2CAANA*:  !čá^RVn^RCá
 \\ 
@@ -254,27 +232,18 @@ So far it has only one member, juuvâš, and no Px
 
 
 
-
-
-
 ### 2TAHO lexicon family
-
 
  * *LEXICON 2TAHO* only for taho, similar to 2LAJO except from Pl+Ill, almost similar to 2SPAHA
 
-
  * *LEXICON 2TAHO_SG*
 
-
  * *LEXICON 2TAHO_PL*
-
 
 ### 2LAJO lexicon family
  * *LEXICON 2LAJO*
 
-
  * *LEXICON 2LAJO_SG*
-
 
  * *LEXICON LAJO_TAHO_PX_SG*
 \\ 
@@ -284,27 +253,21 @@ So far it has only one member, juuvâš, and no Px
  * *LEXICON 2LAJO_PL*
 
 
-
-
  * *LEXICON  LAJO_TAHO_PX_PL*
 \\ 
-
-
 
 
  * *LEXICON X_LAJO_PL*
 
 
-
-
 ### 2NJUNE lexicon family
-
 
  * *LEXICON 2NJUNE* almost similar to 2LAJO
 \\ 
  * *LEXICON X_NJUNE* almost similar to 2LAJO
 \\ 
  * *LEXICON 2NJUNE_SG*
+
 \\ 
  * *LEXICON 2NJUNE_PL*
 \\ 
@@ -312,9 +275,7 @@ So far it has only one member, juuvâš, and no Px
 \\
  * *LEXICON X_NJUNE_PL*
 
-
 ### 2ALME - 2ALGE - 2NIJBE lexicon family
-
 
  * *LEXICON 2ALGE*
 \\ 
@@ -340,11 +301,17 @@ So far it has only one member, juuvâš, and no Px
 \\ 
  * *LEXICON X_NIJBE_PL*
 
+ * *LEXICON 2ALGE_DIM*
+
+ * *LEXICON 2ALGE_SG_DIM* a^RVlgâ
+
+
+ * *LEXICON 2ALGE_PL_DIM* 
+
 
 
 
 ### 2VAHE lexicon family
-
 
  * *LEXICON 2VAHE*
 \\ 
@@ -356,9 +323,6 @@ So far it has only one member, juuvâš, and no Px
 
 
 
-
-
-
 ### 2KUMPPI lexicon family
 i-i-i > 2SOLLA (?); MLO: no, difference in sg Com and pl Ill
  * *LEXICON 2KUMPPI* (basic lexicon, pointing to
@@ -366,9 +330,6 @@ i-i-i > 2SOLLA (?); MLO: no, difference in sg Com and pl Ill
 \\ 
  * *LEXICON 2KUMPPI_PL*  (plurals for 2KUMPPI, pointing to
  +N: X_ALGA_PL ; )
-
-
-
 
 
 
@@ -387,12 +348,9 @@ i-i-i > 2SOLLA (?); MLO: no, difference in sg Com and pl Ill
  * *LEXICON X_SAAMI_PL* plurals for 2SAAMI
 
 
-
-
 ### 2CAACI - 2VYEHI lexicon family TODO -- 
 WG, Ill EA, Com CLEN SVLOW, Ess **with** CLEN
  * *LEXICON 2CAACI* (basic lexicon
-
 
  * *LEXICON 2VYEHI* WG, Ill EA, Com CLEN SVLOW, Ess **without** CLEN
 \\
@@ -401,36 +359,23 @@ WG, Ill EA, Com CLEN SVLOW, Ess **with** CLEN
  * *LEXICON X_VYEHI_SG* (different Ess, Par), otherwise
    X_CAACI_VYEHI_SG ;   )
 
-
  * *LEXICON CAACI_VYEHI_SG* common for the two
-
 
  * *LEXICON 2CAACI_VYEHI_PL* common Pl forms for Px
 
-
  * *LEXICON X_CAACI_VYEHI_SG* common Sg case forms
-
 
  * *LEXICON X_CAACI_VYEHI_PL*
 
-
 ### 2AIGI lexicon family
-
 
  * *LEXICON 2AIGI* similar to 2VADDU except from EA for Sg+Ill
 
-
  * *LEXICON X_AIGI* similar to 2VADDU except from EA for Sg+Ill
-
 
  * *LEXICON 2AIGI_SG*
 
-
  * *LEXICON 2AIGI_PL*
-
-
-
-
 
 
 
@@ -438,75 +383,46 @@ WG, Ill EA, Com CLEN SVLOW, Ess **with** CLEN
  * *LEXICON X_AIGI_SG*
 
 
-
-
 ### 2KYELI - 2SYEJI lexicon family
 
-
  * *LEXICON 2KYELI* i-e-á, similar to 2ALGE, except from -i some places.     
-
 
  * *LEXICON 2KYELI_SG*  kyeli nouns
 
 
-
-
  * *LEXICON KYELI_SYEJI_SG* i-e-á,     
-
 
  * *LEXICON 2_KYELI_SYEJI_SG_PX*  common kyeli-syeji px
 
-
  * *LEXICON X_KYELI* lexicon coming in from the adjectives             
-
 
  * *LEXICON X_KYELI_PL* i-e-á, similar to 2ALGE, except from -i some places. 
 
-
  * *LEXICON 2KYELI_PL* 
-
-
-
 
 
 
  * *LEXICON 2_KYELI_SYEJI_PL_PX* 
 
 
-
-
  * *LEXICON KYELI_SYEJI_PL* i-e-á,     
-
-
-
 
 
 
 ### 2KIRKKO - 2NJAMMA lexicon family
 
-
  * *LEXICON 2KIRKKO*  > KIRKKO_NJAMMA, but WG for Sg+Loc: 
-
-
-
 
 
 
  * *LEXICON 2KIRKKO_SG*
 
-
  * *LEXICON 2NJAMMA* > KIRKKO_NJAMMA, but WG CLEN for Sg+Loc: loho:lovvoost
-
 
  * *LEXICON KIRKKO_NJAMMA_SG*   
 
 
-
-
  * *LEXICON KIRKKO_NJAMMA_PL*   
-
-
-
 
 
 
@@ -514,33 +430,19 @@ WG, Ill EA, Com CLEN SVLOW, Ess **with** CLEN
 
 
 
-
-
-
 ### 2VASO lexicon family
-
 
  * *LEXICON 2VASO* only for vašo, similar to 2LAJO except from Sg+Loc, almost similar to 2SPAHA and 2TAHO. Blank Nom, Ill, Ess SV CLEN SLEN, otherwise WG
 
 
-
-
  * *LEXICON 2VASO_SG*
-
 
  * *LEXICON 2VASO_PL*
 
 
-
-
  * *LEXICON X_VASO_SG*
 
-
  * *LEXICON X_VASO_PL*
-
-
-
-
 
 
 
@@ -548,28 +450,17 @@ WG, Ill EA, Com CLEN SVLOW, Ess **with** CLEN
 ### 2OKKO lexicon family
 
 
-
-
  * *LEXICON 2OKKO* Pl+Acc WG, Pl+Ill WG CLEN
-
-
 
 
  * *LEXICON 2OKKO_SG*
 
 
-
-
  * *LEXICON 2OKKO_PL*
-
 
  * *LEXICON X_OKKO_SG* Pl+Acc WG, Pl+Ill WG CLEN
 
-
  * *LEXICON X_OKKO_PL* Pl+Acc WG, Pl+Ill WG CLEN
-
-
-
 
 
 
@@ -577,47 +468,28 @@ WG, Ill EA, Com CLEN SVLOW, Ess **with** CLEN
  * *LEXICON 2RAAVHU* like 2LAAVU, but long vowel in cmp. 
 
 
-
-
  * *LEXICON 2RAAVHU_SG*
-
-
-
 
 
 
  * *LEXICON 2RAAVHU_PL* 
 
 
-
-
  * *LEXICON 2VIASU* just as LAAVU, but without the short gen/acc
-
-
 
 
  * *LEXICON 2LAAVU* WG, Ill EA, Com SVLOW, Ess CLEN
 
-
  * *LEXICON 2LAAVU_SG*
-
-
-
 
 
 
  * *LEXICON X_LAAVU_SG* 
 
 
-
-
  * *LEXICON 2LAAVU_PL* 
 
-
  * *LEXICON X_LAAVU_PL* 
-
-
-
 
 
 
@@ -625,42 +497,24 @@ WG, Ill EA, Com CLEN SVLOW, Ess **with** CLEN
 
 
 
-
-
-
  * *LEXICON 2VUAGGU_SG* 
 
-
  * *LEXICON 2VUAGGU_PL* 
-
-
 
 
  * *LEXICON X_VUAGGU_SG* 
 
 
-
-
  * *LEXICON 2KUSSA*
 
-
  * *LEXICON 2KUSSA_PL*
-
 
  * *LEXICON 2VADDU* 2AIGI has EA for Sg+Ill, 2SOLLA has RLEN for Sg+Com and Pl+Ill
 
 
-
-
  * *LEXICON 2VADDU_SG*
 
-
  * *LEXICON 2VADDU_PL*
-
-
-
-
-
 
 
 
@@ -669,105 +523,64 @@ WG, Ill EA, Com CLEN SVLOW, Ess **with** CLEN
  * *LEXICON 2TAVLU* 
 
 
-
-
  * *LEXICON 2TAVLU_SG* 
-
-
 
 
  * *LEXICON 2TAVLU_PL* 
 
 
-
-
  * *LEXICON X_TAVLU_SG* 
-
 
  * *LEXICON X_TAVLU_PL* 
 
 
-
-
  * *LEXICON 2NIISU* 
 
-
  * *LEXICON 2NIISU_SG* 
-
-
 
 
  * *LEXICON 2NIISU_PL* 
 
 
-
-
  * *LEXICON X_NIISU_SG* 
-
-
 
 
  * *LEXICON X_NIISU_PL* 
 
 
-
-
  * *LEXICON 2VAALJA* 
 
-
  * *LEXICON 2VAALJA_SG* 
-
-
 
 
  * *LEXICON 2VAALJA_PL* 
 
 
-
-
  * *LEXICON X_VAALJA_SG* 
-
-
 
 
  * *LEXICON X_VAALJA_PL* 
 
 
-
-
  * *LEXICON 2SKERREEH_PL*  Plural tantum, as 2PUUVSAH, but w/o WG
-
-
 
 
 ### APINA lexicon family
 this is for loanwords without stem change
 
-
  * *LEXICON APINA* 
-
-
 
 
  * *LEXICON APINA_SG*
 
-
  * *LEXICON APINA_PL*
-
-
 
 
  * *LEXICON X_APINA_SG* (common for different POS)
 
-
  * *LEXICON X_h_PL*  gives %>h etc. to vowel stems, pointong to notILL
 
-
  * *LEXICON X_h_PL_notILL* 
-
-
-
-
 
 
 
@@ -775,177 +588,110 @@ this is for loanwords without stem change
 ## Four-syllable stems
 
 
-
-
 ### 4KUNAGAS lexicon family
-
 
  * *LEXICON 4KUNAGAS* 
 
 
-
-
  * *LEXICON X_KUNAGAS* 
-
 
  * *LEXICON 4KUNAGAS_SG*
 
-
  * *LEXICON 4KUNAGAS_PL* >
 
-
  * *LEXICON X_KUNAGAS_SG*  this is for loanwords without stem change, 3-syll. cons end
-
 
  * *LEXICON X_KUNAGAS_PL*
 
 
-
-
 ### 4CAHALIG lexicon family
-
 
  * *LEXICON 4CAHALIG*
 
-
  * *LEXICON 4CAHALIG_SG*
-
-
 
 
  * *LEXICON 4CAHALIG_PL*
 
 
-
-
  * *LEXICON X_CAHALIG_SG*
-
 
  * *LEXICON X_eh_PL*
 
-
 ### 4MANUTTEP lexicon family
-
 
  * *LEXICON 4MANUTTEP* 
 
-
  * *LEXICON 4MANUTTEP_SG* 
-
-
 
 
  * *LEXICON 4MANUTTEP_PL* 
 
 
-
-
  * *LEXICON X_MANUTTEP_SG* 
-
 
  * *LEXICON X_MANUTTEP_PL* 
 
 
-
-
 ### 4PUHELIN lexicon family
-
 
  * *LEXICON 4PUHELIN*  Only a few words in this category
 
 
-
-
 ### 2KOLLIISTALLAM lexicon family
-
 
  * *LEXICON 2KOLLIISTALLAM*
 
 
-
-
 ## Odd-syllable stems
 
-
  * *LEXICON 3KOMPAS* stem kompass An odd loan word with the final -s lengthening
-
-
 
 
  * *LEXICON X_KOMPAS* 
 
 
 
-
-
-
  * *LEXICON 3KEPIDEM* 
-
 
  * *LEXICON 3KEPIDEM_PL* 
 
 
-
-
  * *LEXICON 3POTTAAK* 
-
 
  * *LEXICON X_POTTAAK* 
 
 
-
-
  * *LEXICON 3EEMEED*
-
 
  * *LEXICON X_EEMEED*
 
 
-
-
  * *LEXICON 3EEMEED_SG*
 
-
  * *LEXICON 3EEMEED_PL*
-
 
  * *LEXICON X_EEMEED_SG*
 
 
-
-
  * *LEXICON 3LITTER* MO Ib 2nd syll vowel does not alternate
 
-
  * *LEXICON X_LITTER* MO Ib 2nd syll vowel does not alternate
-
 
  * *LEXICON X_LITTER_not_Par*  for numerals
 
 
 
-
-
-
  * *LEXICON 3LITTER_SG*
 
-
  * *LEXICON 3LITTER_PL*
-
-
-
 
 
 
  * *LEXICON X_LITTER_SG* 
 
 
-
-
  * *LEXICON X_LITTER_SG_not_Par*  for numerals
-
-
-
 
 
 
@@ -976,57 +722,14 @@ this is for loanwords without stem change
 
 
 
- * *LEXICON 3KIELES*  (to be unified with 3PELES?) 
-
-
- * *LEXICON 3KIELES_SG*
-
-
- * *LEXICON 3KIELES_PL*
-
-
-
-
- * *LEXICON X_KIELES_SG*  (to be unified?) 
-
-
- * *LEXICON 3PELES* only peles
-
-
- * *LEXICON KIELES_PELES_PX_PL* 
-
-
-
-
-
-
- * *LEXICON X_PELES* only peles (to be unified?) 
-
-
-
-
- * *LEXICON X_KIELES_PELES_SG*  (to be unified?) 
-
-
- * *LEXICON X_KIELES_PELES_PL*  (to be unified?) 
-
-
  * *LEXICON 3JAAVVIL* 
 
-
  * *LEXICON 3JAAVVIL_SG* 
-
 
  * *LEXICON 3JAAVVIL_PL* 
 
 
-
-
  * *LEXICON X_JAAVVIL_SG* 
-
-
-
-
 
 
 
@@ -1035,38 +738,23 @@ this is for loanwords without stem change
 
 
 
-
-
-
  * *LEXICON 3PAAVIR* NGA+Abe blank, WG Ess, CSH for the rest
 
-
  * *LEXICON X_PAAVIR* NGA+Abe blank, WG Ess, CSH for the rest
-
 
  * *LEXICON 3PAAVIR_SG* 
 
 
 
-
-
-
  * *LEXICON 3PAAVIR_PL* plural forms
-
 
  * *LEXICON X_PAAVIR_SG* NGA+Abe blank, WG Ess, CSH for the rest
 
-
  * *LEXICON X_PAAVIR_not_Nom_Par* NGA+Abe blank, WG Ess, CSH for the rest
-
 
  * *LEXICON X_PAAVIR_not_Nom_Par_SG* 
 
-
- * *LEXICON 3SAJOS* 
-
-
-
+ * *LEXICON 3SAJOS* sai4joos
 
 
 
@@ -1075,100 +763,59 @@ this is for loanwords without stem change
 
 
 
-
-
-
-
  LEXICON 3UAIVAT  > 3EEMEED. No Px, but only one word uáivát, witout Px para.
-
-
-
 
 
 
  * *LEXICON 3VEESKIR* 
 
-
  * *LEXICON X_VEESKIR* 
-
-
 
 
  * *LEXICON 3VEESKIR_SG* 
 
 
-
-
  * *LEXICON 3VEESKIR_PL* 
-
 
  * *LEXICON 3COLL_LITTER* collective numbers: čiččâmâs
 
-
  * *LEXICON C_COLL_KAARBIS* collective numbers: oovces
 
-
  * *LEXICON 3COLL_PAAVIR* collective numbers: loves
-
 
  * *LEXICON 3COLL* collective numbers: kyevtis, kuulmâs.., redirecting to  X_VEESKIR
 
 
-
-
  * *LEXICON 3PIIVTAS* WG for NEP,  no triggers for the other cases
-
 
  * *LEXICON 3PIIVTAS_SG* 
 
 
 
-
-
-
  * *LEXICON 3PIIVTAS_PL* 
-
 
  * *LEXICON 3DUSSEPIIVTAS*  piivtâš itself is not in the 3PIIVTAS lexicon
 
 
-
-
  LEXICON X_VEESKIR_SG  
 
-
  * *LEXICON 3KAAVPUG* 
-
-
 
 
  * *LEXICON 3AARRAN* 
 
 
 
-
-
-
  * *LEXICON 3AARRAN_SG*
-
-
 
 
  * *LEXICON 3AARRAN_PL* plurals for 3AARRAN
 
 
-
-
  * *LEXICON X_AARRAN_SG* 
 
 
-
-
  * *LEXICON 3RUONAS* nuurras WG NEP,  blank for the rest
-
-
-
-
 
 
 
@@ -1177,24 +824,12 @@ this is for loanwords without stem change
 
 
 
-
-
-
  * *LEXICON 3VUONJAS*  kierâš, stem: kierrâ, px kierâččâm
 
 
 
 
-
-
-
-
  LEXICON 3CEVE  only for this lemma. It could go to 3LYEME but needs modifications of rules to get iä:e and -tt-, and the worst part is v:vv
-
-
-
-
-
 
 
 
@@ -1206,61 +841,36 @@ this is for loanwords without stem change
 
 
 
-
-
-
-
-
  * *LEXICON 3HUKSIM* NGA + Abe blank, SLEN for the rest
-
 
  * *LEXICON 3HUKSIM_SG* NGA + Abe blank, SLEN for the rest
 
 
-
-
  * *LEXICON 3HUKSIM_PL* plurals for 3HUKSIM
-
 
  * *LEXICON 3KIEDAVUSSAM* stem: :kieđâvušš
 
 
 
 
-
-
-
-
  * *LEXICON 3POOVSA*  soovsa
 
-
  * *LEXICON 3POOVSA_SG*  soovsa
-
 
  * *LEXICON 3POOVSA_PL*  plurals for 3POOVSA
 
 
-
-
 ## Contracted stems
-
 
  * *LEXICON C_KAAMUV*
 
-
  * *LEXICON X_KAAMUV*
-
 
  * *LEXICON X_KAAMUV_COMMON*
 
 
 
-
-
-
  * *LEXICON C_POOVIJC* 
-
-
 
 
  * *LEXICON 3POOVIJ*
@@ -1269,110 +879,66 @@ this is for loanwords without stem change
 
 
 
-
-
-
-
-
  * *LEXICON C_OLMOOS* lexicon for olmooš
-
 
  * *LEXICON C_OLMOOS_PL* 
 
 
-
-
  * *LEXICON C_KAARBIS*
 
-
  * *LEXICON X_KAARBIS*
-
-
 
 
  * *LEXICON C_KAARBIS_SG*
 
 
 
-
-
-
  * *LEXICON C_KAARBIS_PL* 
-
 
  * *LEXICON X_KAARBIS_SG*
 
-
  * *LEXICON C_MORCES*
-
 
  * *LEXICON X_MORCES*
 
-
  * *LEXICON C_CUNOI*
 
-
  * *LEXICON C_PUASUI*
-
-
-
 
 
 
  * *LEXICON C_ALMAI*
 
 
-
-
  * *LEXICON C_KUAVSUI*
-
 
  * *LEXICON C_KUAVSUI_COMMON*
 
-
  * *LEXICON C_CUANJA*
-
-
 
 
  * *LEXICON CUANJA_COMMON* 
 
 
 
-
-
-
  * *LEXICON X_SVSLENh_PL* 
-
-
 
 
  * *LEXICON S_AAIGA* Almost identical with S_AAJA, except for Compounds
 
-
  * *LEXICON AAIGA_COMMON_SG* 
 
-
  * *LEXICON S_AAIGA_PL*
-
 
  * *LEXICON AAIGA_COMMON_PL*
 
 
-
-
  * *LEXICON S_AAJA*
-
 
  * *LEXICON S_KARRII*
 
 
-
-
  * *LEXICON X_KARRII*
-
-
-
 
 
 
@@ -1380,62 +946,32 @@ this is for loanwords without stem change
 
 
 
-
-
-
  * *LEXICON S_TUULAS* ! stem: ku^RVđi
-
 
  * *LEXICON X_TUULAS*
 
-
  * *LEXICON S_TUULAS_SG*
-
 
  * *LEXICON S_TUULAS_PL*
 
-
  * *LEXICON X_TUULAS_SG*
-
-
 
 
  * *LEXICON X_TUULAS_PL*
 
 
 
-
-
-
- * *LEXICON S_KAANDAS_DIM*
-
-
- * *LEXICON S_KAANDAS_SG_DIM* a^RVlgâ
-
-
- * *LEXICON S_KAANDAS_PL_DIM* 
-
-
  * *LEXICON S_KAANDAS* stem: ka^RVnd
-
 
  * *LEXICON X_KAANDAS*
 
-
  * *LEXICON S_KAANDAS_SG*
-
 
  * *LEXICON S_KAANDAS_PL*
 
-
  * *LEXICON X_KAANDAS_SG*
 
-
  * *LEXICON X_KAANDAS_PL*
-
-
-
-
 
 
 
@@ -1443,39 +979,25 @@ this is for loanwords without stem change
  * *LEXICON S_KUULMIS* stem kuovtt
 
 
-
-
  * *LEXICON S_CISSAAS* ! stem: cissá
-
 
  * *LEXICON X_CISSAAS* 
 
-
  * *LEXICON S_VUALAAS* 
-
 
  * *LEXICON X_VUALAAS* 
 
 
-
-
  * *LEXICON S_KUAVDAS*  WG or not? vuáŋŋáš not WG, kiärpáš WG. stem: suábbá
-
-
 
 
  * *LEXICON S_KUAVDAS_SG* 
 
 
 
-
-
-
  * *LEXICON S_KUAVDAS_PL* 
 
-
  * *LEXICON X_KUAVDAS_SG* 
-
 
  * *LEXICON S_ALGAAS* stem alga
 
@@ -1484,52 +1006,32 @@ this is for loanwords without stem change
 
 
 
-
-
-
-
  * *LEXICON S_KUADHUS* 
-
 
  * *LEXICON S_KAAHUS* 
 
-
  * *LEXICON X_KAAHUS_notILL* 
-
 
  * *LEXICON S_SUOLLUS* 
 
-
  * *LEXICON X_SUOLLUS* 
-
-
-
 
 
 
  * *LEXICON 4C_RASTAGAS* splitting in sg and pl
 
 
-
-
  ** *LEXICON 4C_RASTAGAS_SG*  the sg ones
 
-
  ** *LEXICON 4C_RASTAGAS_PL*  the pl ones
-
-
 
 
  ** *LEXICON X_RASTAGAS* sg cases
 
 
-
-
  * *LEXICON 3OPPUS* 
 
-
  * *LEXICON 3ALMAS* 
-
 
  * *LEXICON ALMAS_COMMON* 
 
@@ -1537,37 +1039,19 @@ this is for loanwords without stem change
 
 
 
-
-
-
-
-
  * *LEXICON C_SARVES* sarves, jalŋes 
-
 
  * *LEXICON C_SARVES_SG* 
 
-
  * *LEXICON C_SARVES_PL* 
 
-
  * *LEXICON X_SARVES_SG* 
-
 
  * *LEXICON X_SARVES_PL* 
 
 
 
-
-
-
 ### 4-syllabic
-
-
- * *LEXICON NELJA*  ad hoc , 
-
-
-
 
 
 
@@ -1575,109 +1059,67 @@ this is for loanwords without stem change
 
 
 
-
-
-
  * *LEXICON JOHTOLAH_OBL* common for N and A
 
-
  * *LEXICON 4JOTOLAH_PL* 
-
-
 
 
  * *LEXICON 4KAPULUH* 
 
 
-
-
  * *LEXICON 4KUBALOH* 
-
-
 
 
  * *LEXICON 4LAS_NOUN* stem = aanaarl
 
 
 
-
-
-
  * *LEXICON LAS_COMMON* 
-
-
 
 
  * *LEXICON X_LAS_COMMON_SG* normâl lâš:-lii-nouns and adjs
 
 
-
-
  * *LEXICON X_LAS_COMMON_PL* NOrmal plural and plural tantum cases, olympialiih
-
-
 
 
  * *LEXICON OLYMPIALIIH_PL* 
 
 
 
-
-
-
  * *LEXICON LAS_SUF* 
-
-
 
 
  * *LEXICON MUS_NOUN* type uáiváámus, aldemus
 
 
 
-
-
-
 ## Contracted stems
-
-
 
 
  * *LEXICON C_EIJE* 
 
-
  * *LEXICON C_LOHHEE* 
 
-
  * *LEXICON C_LOHHEE_SG* redirects to  C_TAHHEE, but adds NomAg
-
 
  * *LEXICON C_LOHHEE_PL* redirects to  C_TAHHEE, but adds NomAg
 
 
-
-
  * *LEXICON C_TAHHEE*
-
 
  * *LEXICON C_TAHHEE_SG* 
 
-
  * *LEXICON C_TAHHEE_PL* 
-
 
  * *LEXICON X_TAHHEE* ee-final contract, -ei instead of -ij not-nomen-agentis
 
-
  * *LEXICON X_TAHHEE_SG* ee-final contract, -ei instead of -ij
-
 
  * *LEXICON X_TAHHEE_PL* ee-final contract, plural forms
 
 
-
-
 ## Comitative plural variation
-
 
  * *LEXICON GUIN* is here to give -guin and the Use/NG -gijn.
 
@@ -1690,33 +1132,9 @@ this is for loanwords without stem change
 
 
 
-
-
-
-
-
-
-
-
-
-
 ## Derivations
 
-
 TODO: Move derivation lexica here
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
