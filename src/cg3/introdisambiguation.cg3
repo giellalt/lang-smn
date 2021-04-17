@@ -24,7 +24,7 @@
 
 
 # =============== #
-#!! !!!DELIMITERS 
+#!! # DELIMITERS 
 # =============== #
 
 DELIMITERS = "<.>" "<!>" "<?>" "<...>" "<¶>"; 
@@ -33,17 +33,17 @@ DELIMITERS = "<.>" "<!>" "<?>" "<...>" "<¶>";
 #PARENTHESES = "<$(>" "<$)>" "<$[>" "<$]>" "<${>" "<$}>" "<$«>" "<$»>" ;
 
 # ================== #
-#!! !!!TAGS AND SETS
+#!! # TAGS AND SETS
 # ================== #
 
 SETS
 
 
-#!! !!Tags
+#!! ## Tags
 
 
 #!! This section lists all the tags inherited from the fst, and used as tags
-#!! in the syntactic analysis. The next section, __Sets__, contains sets defined
+#!! in the syntactic analysis. The next section, **Sets**, contains sets defined
 #!! on the basis of the tags listed here, those set names are not visible in the output.
 
 
@@ -51,7 +51,7 @@ SETS
 # Tags declared as single-membered LISTs 
 # ======================================
 
-#!! !Beginning and end of sentence
+#!! ### Beginning and end of sentence
 LIST BOS = (>>>) (<s>) ;  #!! BOS 
 LIST EOS = (<<<) (</s>) ; #!! EOS
 
@@ -60,7 +60,7 @@ LIST EOS = (<<<) (</s>) ; #!! EOS
 # CG3 doesn´t function without >>> and <<< !
 
 
-#!! !Parts of speech tags
+#!! ### Parts of speech tags
 
 LIST N = N ;		    #!! N
 LIST A = A ;		    #!! A
@@ -91,7 +91,7 @@ LIST ¶ = ¶;
 #LIST V* = V* ;
 
 
-#!! !Tags for POS sub-categories
+#!! ### Tags for POS sub-categories
 
 LIST Pers = Pers ;	    #!! Pers
 LIST Dem = Dem ;	    #!! Dem
@@ -107,7 +107,7 @@ LIST Prop = Prop ;	    #!! Prop
 
 
 
-#!! !Tags for morphosyntactic properties
+#!! ### Tags for morphosyntactic properties
 
 LIST Nom = Nom ; #!! Nom
 LIST Acc = Acc ; #!! Acc
@@ -168,7 +168,7 @@ LIST Actio = Actio ;		   #!! Actio
 LIST VAbess = VAbess ;		   #!! 
 # The ("ge" Pcle) etc. are used in Apertium
 
-#!! !Tags for clitic particles
+#!! ### Tags for clitic particles
 LIST Foc/ge = Foc/ge ("ge" Pcle) ;	   #!! Foc/ge
 LIST Foc/gen = Foc/gen ("gen" Pcle) ;  #!! Foc/gen
 LIST Foc/ges = Foc/ges ("ges" Pcle) ;  #!! Foc/ges
@@ -182,7 +182,7 @@ LIST Foc/bat = Foc/bat ("bat" Pcle) ;  #!! Foc/bat
 LIST Foc/son = Foc/son ("sun" Pcle) ;  #!! Foc/son
 
 
-#!! !Derivation tags
+#!! ### Derivation tags
 
 LIST Der/PassL = Der/PassL ;
 LIST Der/Pass = Der/Pass ; #!! Der/PassL Der/PassS
@@ -241,7 +241,7 @@ LIST Der/vuolde = Der/vuolde ;		 #!! Der/vuolde
 LIST <vdic> = <vdic> ;				 #!! <vdic>
 
 
-#!! !Semantic tags
+#!! ### Semantic tags
 
 LIST Sem/Act = Sem/Act Sem/Act_Group Sem/Act_Plc Sem/Act_Route; #Activity #Ollet guhká dainna X-Com (Veaigin bisánasttii Ristenge geahččat, man guhkás Lemet-gázzi juo ledje ollen dainna divvunbargguin.) # bargu
 LIST Sem/Amount = Sem/Amount Sem/Amount_Build Sem/Amount_Semcon;
@@ -354,7 +354,7 @@ SET TIME-N = TIME-N-SET - NOT-TIME ;
 
 
 
-#!! ! Syntactic tags
+#!! ###  Syntactic tags
 
 LIST @+FAUXV = @+FAUXV ;	         #!! @+FAUXV
 LIST @+FMAINV = @+FMAINV ;	         #!! @+FMAINV
@@ -437,7 +437,7 @@ LIST @X = @X ;    #!! @X
 # ========
 
 
-#!! !!Sets containing sets of lists and tags
+#!! ## Sets containing sets of lists and tags
 
 #!! This part of the file lists a large number of sets based partly upon the tags defined above, and 
 #!! partly upon lexemes drawn from the lexicon.
@@ -445,7 +445,7 @@ LIST @X = @X ;    #!! @X
 
 
 
-#!! !Sets for Single-word sets
+#!! ### Sets for Single-word sets
 
 #!! OKTA and go, and the set INITIAL for initial letters 
 LIST OKTA = "ohtâ"; #!! OKTA
@@ -455,7 +455,7 @@ LIST INITIAL = "a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m"
         "á" "æ" "ø" "å" "ö" "ä" ; #!! INITIAL
 
 
-#!! !Sets for word or not
+#!! ### Sets for word or not
 
 LIST WORD = N A Adv V Pron CS CC Po Pr Interj Pcle Num ABBR ACR  \? ; #!! WORD
  # any word
@@ -466,7 +466,7 @@ SET NOT-COMMA = WORD - COMMA ;  #!! NOT-COMMA
  # Note! We also have CLB_NOT-COMMA
 
 
-#!! !Derivational affixes
+#!! ### Derivational affixes
 
 LIST DER-V = Der/adda Der/alla Der/asti Der/d Der/g Der/h Der/halla Der/hudda Der/huhtti Der/huvva Der/j Der/l Der/ahtti Der/st Der/stuvva Der/goahti ; #!! DER-V
 
@@ -480,7 +480,7 @@ LIST A-V = (V* A) ; #!! A-V
 
 SET A-NOT-V = A - A-V ; #!! A-NOT-V
 
-#!! !Case sets
+#!! ### Case sets
 # ---------
 
 LIST ADVLCASE = Ill Loc Com Ess ; #!! ADLVCASE
@@ -501,7 +501,7 @@ SET NOT-NOM = CASE - Nom ; #!! NOT-NOM
 SET NOT-GEN = CASE - Gen ; #!! NOT-GEN
 SET NOT-ACC = CASE - Acc ; #!! NOT-ACC
 
-#!! !Verb sets
+#!! ### Verb sets
 # ---------
 
 # Verbs and their complements
@@ -509,7 +509,7 @@ SET NOT-ACC = CASE - Acc ; #!! NOT-ACC
 
 SET NOT-V = WORD - V ; #!! NOT-V
 
-#!! !Sets for finiteness and mood
+#!! ### Sets for finiteness and mood
 # - - - - - - - - - -
 
 SET REAL-NEG = Neg - Sup ; #!! REAL-NEG
@@ -530,7 +530,7 @@ SET VFIN-NOT-NEG = VFIN - Neg ; #!! VFIN-NOT-NEG
 SET NOT-PRFPRC = WORD - PrfPrc ; #!! NOT-PRFPRC
 
 
-#!! !Sets for person
+#!! ### Sets for person
 # - - - - 
 
 LIST SG1-V = (V Sg1)  ;
@@ -565,7 +565,7 @@ SET DU-PL-V = DU1-V OR DU2-V OR DU3-V OR PL1-V OR PL2-V OR PL3-V ;
 
 SET 1-2-V = SG1-V OR SG2-V OR DU1-V OR DU2-V OR PL1-V OR PL2-V ;
 
-#!! !Sets consisting of forms of "leđe" (these ones need to be rewritten)
+#!! ### Sets consisting of forms of "leđe" (these ones need to be rewritten)
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 SET LEAN = ("leđe" Prs Sg1) + Ind OR ("leđe" V Prt ConNeg);
 SET LEAT = ("leđe" Prs Pl1) + Ind OR ("leđe" V Prs Pl3) + Ind OR 
@@ -581,7 +581,7 @@ LIST HABEO-SG3 = ("leđe" Sg3) (V Neg Sg3) ("šoddâđ" Sg3) ;
 
 LIST HABEO-PL3 = ("leđe" Pl3) (V Neg Pl3) ("šoddâđ" Pl3) ;
 
-#!! !Pronoun sets
+#!! ### Pronoun sets
 # ------------
 
 LIST MUN = (Pron Pers Sg1 Nom);
@@ -629,7 +629,7 @@ LIST QUANT-PRON = "ollu" "olu" "unnán" "váháš" "veaháš" "veháš" ;
 # This set is for choosing between Adv and Pron Indef.
 
 
-#!! !Adjectival sets and their complements
+#!! ### Adjectival sets and their complements
 # -------------------------------------
 SET LEX-A = A - DER-A ;
 
@@ -653,7 +653,7 @@ LIST OLLU = "ollu" "olu" ;
  
  # and many others
  
-#!! !Adverbial sets and their complements
+#!! ### Adverbial sets and their complements
 # ------------------------------------
 SET LEX-ADV = Adv - (A*) ;
 
@@ -683,7 +683,7 @@ LIST DOHKO = "bajás" "deike" "diehke" "diehko" "dohko" "duohko" "lulás" "olggo
 # Adverbs with a illativic form, but they don´t get Ill as a tag.
 
 
-#!! !Sets for coordinators
+#!! ### Sets for coordinators
 # ------------
 SET Foc = Foc/ge  OR Foc/gen  OR Foc/ges  OR Foc/gis  OR Foc/naj OR Foc/ba  OR Foc/be  OR Foc/hal  OR Foc/han  OR Foc/bat OR Foc/son ;
 
@@ -710,7 +710,7 @@ SET GCRD = @CVP OR ("sadfasdf") ;
 SET CRD2 = (@CNP) OR COMMA OR NEGFOC OR XGO OR ("/") OR ("-") OR DADE ;
     # AFTER LCRD vs. GCRD disambiguation
     
-#!! !Sets for adverbs that have lookalikes
+#!! ### Sets for adverbs that have lookalikes
 # -------------------------------------
  #!! Here come some adverbs that have identical twins in other POS. 
  #!! If these are found in Adv contexts, we treat them as adverbs.
@@ -742,12 +742,12 @@ SET ADV-NOT-OTHER-POS = ADV-NOT-V OR ADV-NOT-N OR ADV-NOT-PROP ;
 LIST MANNEL = "maŋŋel" "maŋŋil" "maŋŋá"  ;
 
 
-#!! !Sets of elements with common syntactic behaviour
+#!! ### Sets of elements with common syntactic behaviour
 # ================================================
 
 SETS
 
-#!! !Sets for verbs
+#!! ### Sets for verbs
 # -----
 
 LIST NOT-REAL-V = (Actio Nom) (Actio Gen) (Actio Loc) (Actio Com) PrsPrc ;
@@ -809,7 +809,7 @@ SET TRANS-V = V-TRANS - Der/Pass + REAL-V ;
 #!! * Sets for verbs choosing oblique objects or adverbials
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 # bargat "čoallut" "borrat" lohkat "gazzat" vuoššat
-#!! * __STVLIST__ is the list of strictly transitive verbs. In the rules, refer not to STVLIST, but to the set STV defined below.
+#!! * **STVLIST** is the list of strictly transitive verbs. In the rules, refer not to STVLIST, but to the set STV defined below.
 LIST STVLIST = (IV Der/ahtti) (IV Der/h) "addit" "amašit" "ásahit" "atnit" "ánssášit" "árvalit" "árvidit" "árvvoštallat" "ásahit" "ávžžuhit" "bajidit" "bassat" "bearrat" "biebmat" "bidjat" "bilidit" "billistit" "bissehit" "bisuhit" "boaldit" "boktit" "borahit" "buhtadit" "buktit" "buoridit" "caggat" "coggalit" "cealkit" "cegget" "čađahit" "čatnat" "čielggadit" "čilget" "čoaggit" "čoavdit" "čohkket" "čuoččuhit" "čuohppat" "čuollat" "čuovvulit" "dadjat" "dagahit" "dahkat" "dáhkidit" "dáhttut" "dárbbahit" "dárbbašit" "dárkkistit" "dávistit" "deaivat" "deattuhit" "deavdit" "diehtit" "dikšut" "diktit" "doahttalit" "doaimmahit" "doalahit" "doallat" "doalvut" "doarjut" "dohkkehit" "dovdat" "dovddahit" "duođaštit" "eahpidit" "eaiggáduššat" "eaktudit" "ealáskahttit" "ealihit" "eavttuhit" "evttohit" "fállat" "fidnet" "fievrridit" "fuobmát" "fuolahit" "fuomášit" "garvit" "gaskkustit" "gádjut" "gáhttet" "gáibidit" "gáržžidit" "gávdnat" ("gávnnadit" Sg1) ("gávnnadit" Sg2) ("gávnnadit" Sg3) "geahčadit" "geahččat" "geassit" "geatnegahttit" "geavahit" "gieđahallat" "giddet" "goddit" "gohččut" "gohčodit" "goikadit" "gokčat" "goldit" "gozihit" "guoddalit" "guoddit" "guođđit" "guođohit" "guorahallat" "guorrat" "guoskkahit" "hábmet" "háhkat" "hálddašit" "heaittihit" "heivehit" "hilgut" "ipmirdit" "iskat" "iskkadit" "jeahkit" "jođihit" "juksat" "juohkit" "juolludit" "kártet" "lágidit" "láhčit" "láigohit" "loahpahit" "lohpidit" "loktet" "luoikat" "luoikkahit" "luoitit" "massit" "mearkkašit" "mielddisbuktit" "movttiidahttit" "muddet" "muitalit" "muitit" "muittuhit" "namahit" "nammadit" "namuhit" "nannet" "nanosmahttit" "njiellat" "nuppástuhttit" "oaidnit" "oastit" "oaivvildit" "oamastit" "oažžut" "ođasmahttit" "ođastit" "ollašuhttit" "organiseret" "ovdanbuktit" "ovdánahttit" "ovddastit" "ovddidit" "prioriteret" "ráddjet" "ráđđet" "ráfáidahttit" "ráfáiduhttit" "ráhkadit" "rávkat" "rávvet" "rievdadit" "rihkkut" "sakŋadit" "sáddet" "sáhtostit" "sávvat" "seaguhit" "seailluhit" "sihkkarastit" "sihtat" "siskkildit" "sisttisdoallat" "suodjalit" "suovvat" "unnidit" "vađastit" "vahágahttit" "váillahit" "váldit" "válljet" "várret" "vásihit" "váttásmahttit" "viiddidit" "vuhtiiváldit" "vuođđudit" "vuođđudallat" "vuohttit" "vuoitit" "vuojuhit" "vuoruhit" "vuostáiváldit" "vuosttaldit" "vuovdit" ;
 
 	# Strictly transitiv-verbs - a start. This set is ment as a help choosing Acc or Gen. Example: "Mun borren eatni kafeás." - there is Gen, no Acc, even if the verb is transitive. That´s why "borrat" is not in this set.
@@ -872,7 +872,7 @@ LIST ROUTEOBJECT-V = "ásahit" "bidjat" "botnjat" "basuhit" "buoridit" "čielgga
 LIST HAB-V = "pyehtiđ" "leđe" "goallut" "heaŋgát" "jápmit" "šoddâđ" ;
 	# To be used in habitative-sentences.
 
-#!! !Valency sets
+#!! ### Valency sets
 # - - - - - - -
 
 LIST INF-V = "astat" "ádjánit" "áiguđ" "älgiđ" "ásahit" "bágget" "bávččagit" "peessâđ" "berret" "bivdit" "bivvat" "bistit" "pyehtiđ" "bovdet" "čohkkát" "čohkkedit" "čohkánit" "čuoččahit" "čuoččastit" "čuorvut" "čurggodit" ("dadjat" Der/PassL) ("dadjat" Der/PassS) "dagahit" "dáhttut" "täiđiđ" "dárbbašit" "defineret" "diktit" "doaivut" "doapmat" "duostat" "ferttiđ" "fuobmát" "fuolahit" "kolgâđ" "gáibidit" "gárrut" "karttâđ" "geahččalit" "geargat" "geatnegahttit" "gierdat" "gillet" "gohččut" "háhppehit" "halijdiđ" "hárjánit" "heivet" "lávet" "liikot" "lihkkat" "mannat" "mättiđ" "máššat" "movttiidahttit" "muitit" "nagodit" "navdit" "oahpahit" "oahpástuvvat" "oahppat" "oažžut" "ollet" "ribahit" "riepmat" "sättiđ" "seahtit" "sihtat" "soaitit" "suovvat" "šoddâđ" "stađđat" "vaijeeđ" "viggat" "viššat" "vuogáiduvvat" "vuolgit" "vuollánit" "vuordit";
@@ -986,7 +986,7 @@ LIST HUMAN-LOC-V = "atnit" "báhcit" "geavahit" "gohčodit" "namuhit" ;
     # According to the rules choosing Loc or Com, these verbs choose only (Sg Com) if CONCEPT or HUMAN or "sátni".
     # Abstract
 
-#!! * __PLACE-V__ Those get only not locative if the target is a member TOOL, ABSTR-TOOL or ANIMATE or CONCEPT. Selects more locatives than ONLY-PLACE-LOC-V 
+#!! * **PLACE-V** Those get only not locative if the target is a member TOOL, ABSTR-TOOL or ANIMATE or CONCEPT. Selects more locatives than ONLY-PLACE-LOC-V 
 LIST PLACE-V = "ássat" "buolvvastallat" "buolvvastit" "čippostallat" "čohkkát" "čohkahit" "čuožžut" "čuččodit" "morihit" "gullát" "morránit" "orroođ" "orodit" "stuorrut" "veallát" "veallahit" ;
   
 LIST ABSTR-PLACE-V = "váilut" "heivet" "hiehpat" "sisttisdoallat" "soahpat" "šiehtat";
@@ -1027,7 +1027,7 @@ LIST MUITALIT = "árvalit" "bivdit" "boagustit" "cealkit" "cuoigut" "čilget" "�
 	#$ Deaŧalaš lea sihkkarastit eamiálbmogiid ovddastusa dákkár čállingottis, dadjá Keskitalo.
 
 
-#!! !Adverb sets
+#!! ### Adverb sets
 # -------
 
 # Adverbs as predicates
@@ -1050,7 +1050,7 @@ LIST PLURALIZER = "buot" "buotlágan" "buotlágaš" "earálágan" "iežálágan"
   
 LIST BUOT = "buot" "gait" "gaitin" "gaitdivnnat" ;
 
-#!! !Adjective sets
+#!! ### Adjective sets
 # ----------
 
 # Lexical valency sets
@@ -1111,7 +1111,7 @@ LIST POINT-IN-TIME-SPEC = "dološ" "eará" "iežá" "nubbi" ;
 
     
 
-#!! !NP sets defined according to their morphosyntactic features
+#!! ### NP sets defined according to their morphosyntactic features
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 SET NORM-LOC = Loc - (South Loc) ;
@@ -1140,11 +1140,11 @@ SET NP-HEAD-NOM    = NP-HEAD-SG-NOM OR NP-HEAD-PL-NOM ;
 SET NP-HEAD-ACC    = (Pron Acc) OR (N Acc) OR (A Acc) - RCmpnd - (Dem Attr) - ("buorre");
 SET NP-HEAD-GEN    = (Pron Gen) OR (N Gen) OR (A Gen) - Der/NomAct - RCmpnd - (Dem Attr) - ("buorre")   ;
 
-#!! !The PRE-NP-HEAD family of sets
+#!! ### The PRE-NP-HEAD family of sets
 
 #!! These sets model noun phrases (NPs). The idea is to first define whatever can
 #!! occur in front of the head of the NP, and thereafter negate that with the
-#!! expression __WORD - premodifiers__.
+#!! expression **WORD - premodifiers**.
 
 
 SET PRE-NP-HEAD = (Prop Attr) OR (Prop @>N) OR (A Attr) OR (ABBR Attr) OR ("buorre") 
@@ -1172,7 +1172,7 @@ SET PRE-APP   = COMMA OR PUNCT-LEFT OR PRE-NP-HEAD ;
 
 
 
-#!! The set __NOT-NPMOD__ is used to find barriers between NPs.
+#!! The set **NOT-NPMOD** is used to find barriers between NPs.
 #!! Typical usage: ... (*1 N BARRIER NPT-NPMOD) ...
 #!! meaning: Scan to the first noun, ignoring anything that can be
 #!! part of the noun phrase of that noun (i.e., "scan to the next NP head")
@@ -1203,7 +1203,7 @@ SET NAPP     = WORD - PRE-APP ;
 # ... IF *-1 X BARRIER NOT-NPMOD OR 
 # LocComIll are ok, but only with a PrfPcc to the right
 
-#!! !Other negatively defined morphosyntactic noun sets
+#!! ### Other negatively defined morphosyntactic noun sets
 
 
 SET NOT-N = WORD - N ;
@@ -1225,18 +1225,18 @@ SET W-NOT-ACC-GEN = WORD - Acc - Gen ;
 
 
 
-#!! !Noun sets
+#!! ### Noun sets
 
 #!! Nominal sets defined according to their morphophonological properties
 #!! Sets for lexeme homonymy (most of them are moved to where the actual rules are.)
 
 
-#!! The words in the set __N-PO__ can be both N and Po, the set takes that into account.
+#!! The words in the set **N-PO** can be both N and Po, the set takes that into account.
 #LIST N-PO = "áigi" "gaskan" "gaskka" "gaskkas" "guovddáš" "ovddas" "ráji" "vuostá" "guvlui" ;
 LIST N-PO = "áigi" "guovddáš" "vuostá" ; 
 
 
-#!! !The LAHKA set family
+#!! ### The LAHKA set family
 
 LIST LAGA = (".*bargo#lága"r) "spábbačiekčan#lága" ;
 
@@ -1269,7 +1269,7 @@ LIST LAHKA-ASAHUS = "alimusriekti" "Odeldiggi" "Stuoradiggi" "Stuorradiggi" "stu
 
 LIST LAHKA-POST = "bokte" "olis" "mielde" "vuođul" ;
   
-#!! !Nominal sets defined according to their semantical properties
+#!! ### Nominal sets defined according to their semantical properties
 # -------------------------------------------------------------
 
 # Here we will write what sets we have and how we divide them.
@@ -1943,7 +1943,7 @@ LIST HEADOFPARTS = "eanetlohku" "unnitlohku" "mearri" "nissonoassi" "oassi" "vá
 
   # This may be a better partitive set.	
 
-#!! !Miscellaneous sets
+#!! ### Miscellaneous sets
 # ------------------
 LIST Px = PxSg1 PxSg2 PxSg3 PxDu1 PxDu2 PxDu3 PxPl1 PxPl2 PxPl3 ;
 
@@ -1986,7 +1986,7 @@ SET REAL-CLB = CLB - COMMA ;
 
 SET NOT-INITIAL-CC = WORD - INITIAL - CC ;
 
-#!! !Border sets and their complements
+#!! ### Border sets and their complements
 # ---------------------------------
 
 SET CP = (Pron Interr) OR (Pron Rel) OR MO ;
@@ -2029,7 +2029,7 @@ SET CCCOMMA = CC OR COMMA ;
 
 
 	
-#!! !Multilingual sets
+#!! ### Multilingual sets
 
 
 #!! Conjunction sets
@@ -2038,12 +2038,12 @@ SET AHTE = ("ahte" CC <sme>) OR ("ahte" CS <sme>) OR
 	   ("et" CC <smn>) OR ("et" CS <smn>) ;
 	
 
-#!! !Syntactic sets
+#!! ### Syntactic sets
 # --------------
 
 LIST ALLSYNTAG = (@+FAUXV) (@+FMAINV) (@-FAUXV) (@-FMAINV) (@-FSUBJ>)(@-FOBJ)(@-F<ADVL)(@-FADVL>)(@>A) (@>ADVL) (@ADVL<) (@<ADVL) (@ADVL>) (@ADVL) (@HAB>) (@<HAB) (@>N) (@APP) (@APP-N<) (@APP-Pron<) (@APP>Pron) (@APP-Num<) (@APP-ADVL<) (@VOC) (@CNP) (@CVP) (@P<) (@>P) (@HNOUN) (@INTERJ) (@Pron<) (@OBJ) (@OBJ>) (@<OBJ) (@OPRED) (@<OPRED) (@OPRED>) (@SPRED<OBJ) (@PCLE) (@COMP-CS<) (@N<) (@SPRED) (@<SPRED) (@SPRED>) (@PPRED) (@Num<) (@SUBJ) (@<SUBJ) (@SUBJ>) (@X); #!! ALLSYNTAG
 SET NON-APP = ALLSYNTAG - (@APP); #!! NON-APP
 
-#!! ''These were the set types.''
+#!! *These were the set types.*
 
 
