@@ -1,18 +1,5 @@
 
-
 # Inari Saami adpositions
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
