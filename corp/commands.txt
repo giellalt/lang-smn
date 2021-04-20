@@ -1,0 +1,32 @@
+# this command analyses the whole corpus and makes a missinglist with frequency numbers:
+
+cat allcorp.list |hfst-tokenise $GTLANGS/lang-smn/tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst |preprocess --corr=$GTLANGS/lang-smn/test/data/typos.txt |grep -v -f errorwords.txt|hfst-lookup  $GTLANGS/lang-smn/src/analyser-gt-desc.hfstol|grep '+\?'|cut -f1|sort|uniq -c |sort -nr > allmissing_xxxxxx.freq
+
+# How to compare old and new missing lists:
+
+Unknown words in old file and not unknown in new file (showing the improvements)
+diff  oldmissingfile.freq  newmissingfile.freq|grep '<'|less
+
+Unknown words in new file and not unknown in old file (going to the worse)
+diff  oldmissingfile.freq  newmissingfile.freq|grep '>'|less
+
+
+----- 
+
+cat allcorp.list |hfst-tokenise $GTLANGS/lang-smn/tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst |preprocess --corr=$GTLANGS/lang-smn/test/data/typos.txt |hfst-lookup  $GTLANGS/lang-smn/src/analyser-gt-desc.hfstol |grep '+?'|cut -f1| hfst-lookup $GTLANGS/lang-fin/src/analyser-gt-desc.hfstol|grep '+?'|cut -f1| hfst-lookup $GTLANGS/lang-sme/src/analyser-gt-desc.hfstol|grep '+?'|cut -f1|hfst-lookup  $GTLANGS/lang-sms/src/analyser-gt-desc.hfstol|grep '+?'|cut -f1|sort|uniq -c|sort -nr > allmissing.yymmdd.freq
+
+#  Regne ut dekning (dvs ikke dekning):
+
+cat boundcorp.txt |hfst-tokenise $GTLANGS/lang-smn/tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst |preprocess --corr=$GTLANGS/lang-smn/test/data/typos.txt | hfst-lookup $GTLANGS/lang-sme/src/analyser-gt-desc.hfstol | grep '\?' | grep -v CLB > fullmissing.txt 
+
+wc -l prep_boundcorp.txt fullmissing.txt 
+
+
+# this command picks all missingwords with initial big letter (possible proper nouns)
+
+grep ' [A-ZÁÄŠČÖ][^A-ZÁÄŠČÖ]' NEWmissing.txt | grep -v '\-$' > propmissingNEW.txt
+
+
+# this command make all possible proper nouns, and sort them revers:
+
+cat propmissingNEW.txt | rev | sort | rev > rev_propmissingNEW.txt
