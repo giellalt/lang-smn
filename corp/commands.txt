@@ -1,6 +1,6 @@
 # this command analyses the whole corpus and makes a missinglist with frequency numbers:
 
-cat allcorp.list |hfst-tokenise $GTLANGS/lang-smn/tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst |preprocess --corr=$GTLANGS/lang-smn/test/data/typos.txt |grep -v -f errorwords.txt|hfst-lookup  $GTLANGS/lang-smn/src/analyser-gt-desc.hfstol|grep '+\?'|cut -f1|sort|uniq -c |sort -nr > allmissing_xxxxxx.freq
+cat $GTLANGS/lang-smn/misc/freebound.txt |hfst-tokenise $GTLANGS/lang-smn/tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst |preprocess --corr=$GTLANGS/lang-smn/test/data/typos.txt |grep -v -f $GTLANGS/lang-smn/corp/errorwords.txt|hfst-lookup  $GTLANGS/lang-smn/src/analyser-gt-desc.hfstol|grep '+\?'|cut -f1|egrep -v '^(.|..|...)$'|sort|uniq -c |sort -nr > misc/allmissing_xxxxxx.freq
 
 # How to compare old and new missing lists:
 
