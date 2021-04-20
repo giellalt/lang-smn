@@ -1,7 +1,7 @@
 
 # Inari Sámi morphological analyser
 
-# Multichar_Symbols definitions
+ # Multichar_Symbols definitions
 
 ## Parts of speech
  *  +N +A +Adv +V					  
@@ -14,33 +14,33 @@
 
 
 ### Tags for sub-POS
- * **+Prop** - Propernoun
- * **+Pers** - Personal Pronoun
- * **+Dem** - Demonstrative Pronoun
- * **+Interr** - Interrogative Pronoun
- * **+Refl** - Reflexive Pronoun
- * **+Recipr** - Reciprocal Pronoun
- * **+Rel** - Relative Pronoun
- * **+Indef** - Indefinitive Pronoun
- * **+Coll** - Collective numerals, subtag for +N
- * **+Arab** - Arabic numeral, subtag for +Num
- * **+Rom** - Roman numeral, subtag for +Num
+ * ** +Prop      ** - Propernoun
+ * ** +Pers      ** - Personal Pronoun
+ * ** +Dem       ** - Demonstrative Pronoun
+ * ** +Interr    ** - Interrogative Pronoun
+ * ** +Refl      ** - Reflexive Pronoun
+ * ** +Recipr    ** - Reciprocal Pronoun
+ * ** +Rel       ** - Relative Pronoun
+ * ** +Indef     ** - Indefinitive Pronoun
+ * ** +Coll      ** - Collective numerals, subtag for +N
+ * ** +Arab      ** - Arabic numeral, subtag for +Num
+ * ** +Rom       ** - Roman numeral, subtag for +Num
  * **+ACR** - Acronym
  * **+Dyn** - Dynamic Acronym
 
-* **+Gram/TAbbr**:  Transitive abbreviation (it needs an argument)
-* **+Gram/NoAbbr**:  Intransitive abbreviations that are homonymous
+ * **+Gram/TAbbr**:  Transitive abbreviation (it needs an argument)
+ * **+Gram/NoAbbr**:  Intransitive abbreviations that are homonymous
    with more frequent words. They should only be considered
    abbreviations in the middle of a sentence.
-* **+Gram/TNumAbbr**:  Transitive abbreviation if the following
+ * **+Gram/TNumAbbr**:  Transitive abbreviation if the following
             constituent is numeric
-* **+Gram/NumNoAbbr**:  Transitive abbreviations for which numerals
+ * **+Gram/NumNoAbbr**:  Transitive abbreviations for which numerals
 are complements and normal words. The abbreviation usage
 is less common and thus only the occurences in the middle of
 the sentence can be considered as true cases.
-* **+Gram/TIAbbr**:  Both transitive and intransitive abbreviation
-* **+Gram/IAbbr**:  Intransitive abbreviation (it takes no argument)
-* **+Gram/3syll**: trisyllabic verbs
+ * **+Gram/TIAbbr**:  Both transitive and intransitive abbreviation
+ * **+Gram/IAbbr**:  Intransitive abbreviation (it takes no argument)
+ * **+Gram/3syll**: trisyllabic verbs
 
 
 
@@ -142,16 +142,16 @@ just specify +Der|+Der1 .. +Der5 and you are set.
 
 ### Usage tags
 
- * **+Err/Orth** substandard, not in normative fst
- * **+Err/Lex** substandard, not in normative fst, no normative lemma
- * **+Err/Hyph** substandard, not in normative fst
- * **+Err/SpaceCmp** substandard, not in normative fst
-|  **+Err/MissingSpace** | in use in smi lexc
+ * ** +Err/Orth        ** substandard, not in normative fst
+ * ** +Err/Lex         ** substandard, not in normative fst, no normative lemma
+ * ** +Err/Hyph        ** substandard, not in normative fst
+ * ** +Err/SpaceCmp        ** substandard, not in normative fst
+ |  **+Err/MissingSpace** | in use in smi lexc
 
- * **+MWE** - MultiWord Expression, used for abbreviation extraction for preprocess.sh
- * **+Use/-PLX** - do not include in Polderland spellers (most likely irrelevant for smn)
- * **+Use/-Spell** - do not include in speller (even though the entry is formally correct)
- * **+Use/SpellNoSugg** - Recognized, but not suggested in speller 
+ * ** +MWE             ** - MultiWord Expression, used for abbreviation extraction for preprocess.sh
+ * ** +Use/-PLX        ** - do not include in Polderland spellers (most likely irrelevant for smn)
+ * ** +Use/-Spell      ** - do not include in speller (even though the entry is formally correct)
+ * ** +Use/SpellNoSugg ** - Recognized, but not suggested in speller 
  * **+Use/GC** only retained in the HFST Grammar Checker disambiguation analyser
  * **+Use/-GC** never retained in the HFST Grammar Checker disambiguation analyser
 
@@ -490,44 +490,44 @@ The second part of the compound may require that the previous (left part) is:
 We have manually optimised the structure of our lexicon using following
 flag diacritics to restrict morhpological combinatorics - only allow compounds
 with verbs if the verb is further derived into a noun again:
-|  @P.NeedNoun.ON@ | (Dis)allow compounds with verbs unless nominalised
-|  @D.NeedNoun.ON@ | (Dis)allow compounds with verbs unless nominalised
-|  @C.NeedNoun@ | (Dis)allow compounds with verbs unless nominalised
-|  @R.NeedNoun.ON@ | (Dis)allow compounds with verbs unless nominalised
+ |  @P.NeedNoun.ON@ | (Dis)allow compounds with verbs unless nominalised
+ |  @D.NeedNoun.ON@ | (Dis)allow compounds with verbs unless nominalised
+ |  @C.NeedNoun@ | (Dis)allow compounds with verbs unless nominalised
+ |  @R.NeedNoun.ON@ | (Dis)allow compounds with verbs unless nominalised
 
-|  @D.ErrOrth.ON@ 
-|  @C.ErrOrth@ 
-|  @P.ErrOrth.ON@ 
-|  @R.ErrOrth.ON@
+ |  @D.ErrOrth.ON@ 
+ |  @C.ErrOrth@ 
+ |  @P.ErrOrth.ON@ 
+ |  @R.ErrOrth.ON@
 
 
 For languages that allow compounding, the following flag diacritics are needed
 to control position-based compounding restrictions for nominals. Their use is
 handled automatically if combined with +CmpN/xxx tags. If not used, they will
 do no harm.
-|  @P.CmpFrst.FALSE@ | Require that words tagged as such only appear first
-|  @D.CmpPref.TRUE@ | Block such words from entering ENDLEX
-|  @P.CmpPref.FALSE@ | Block these words from making further compounds
-|  @D.CmpLast.TRUE@ | Block such words from entering R
-|  @D.CmpNone.TRUE@ | Combines with the next tag to prohibit compounding
-|  @U.CmpNone.FALSE@ | Combines with the prev tag to prohibit compounding
-|  @U.CmpNone.TRUE@ | Combines with the two previous ones to block compounding
-|  @P.CmpOnly.TRUE@ | Sets a flag to indicate that the word has passed R
-|  @D.CmpOnly.FALSE@ | Disallow words coming directly from root.
-|  @D.CmpHyph.TRUE@ | Flag to control hyphenated compounds like proper nouns
-|  @U.CmpHyph.FALSE@ | Flag to control hyphenated compounds like proper nouns
-|  @U.CmpHyph.TRUE@ | Flag to control hyphenated compounds like proper nouns
-|  @C.CmpHyph@ | Flag to control hyphenated compounds like proper nouns
-|  @P.CmpHyph.TRUE@ | Flag to control hyphenated compounds like proper nouns
-|  @N.CmpHyph.TRUE@ | Flag to control hyphenated compounds like proper nouns
+ |  @P.CmpFrst.FALSE@ | Require that words tagged as such only appear first
+ |  @D.CmpPref.TRUE@ | Block such words from entering ENDLEX
+ |  @P.CmpPref.FALSE@ | Block these words from making further compounds
+ |  @D.CmpLast.TRUE@ | Block such words from entering R
+ |  @D.CmpNone.TRUE@ | Combines with the next tag to prohibit compounding
+ |  @U.CmpNone.FALSE@ | Combines with the prev tag to prohibit compounding
+ |  @U.CmpNone.TRUE@ | Combines with the two previous ones to block compounding
+ |  @P.CmpOnly.TRUE@ | Sets a flag to indicate that the word has passed R
+ |  @D.CmpOnly.FALSE@ | Disallow words coming directly from root.
+ |  @D.CmpHyph.TRUE@ | Flag to control hyphenated compounds like proper nouns
+ |  @U.CmpHyph.FALSE@ | Flag to control hyphenated compounds like proper nouns
+ |  @U.CmpHyph.TRUE@ | Flag to control hyphenated compounds like proper nouns
+ |  @C.CmpHyph@ | Flag to control hyphenated compounds like proper nouns
+ |  @P.CmpHyph.TRUE@ | Flag to control hyphenated compounds like proper nouns
+ |  @N.CmpHyph.TRUE@ | Flag to control hyphenated compounds like proper nouns
 
 
 Use the following flag diacritics to control downcasing of derived proper
 nouns (e.g. Finnish Pariisi -> pariisilainen). See e.g. North Sámi for how to use
 these flags. There exists a ready-made regex that will do the actual down-casing
 given the proper use of these flags.
-|  @U.Cap.Obl@ | Allowing downcasing of derived names: deatnulasj.
-|  @U.Cap.Opt@ | Allowing downcasing of derived names: deatnulasj.
+ |  @U.Cap.Obl@ | Allowing downcasing of derived names: deatnulasj.
+ |  @U.Cap.Opt@ | Allowing downcasing of derived names: deatnulasj.
 
 
  * @U.NeedsVowRed.OFF@ is used to force hyphenation/non-reduction: samediggi-
@@ -564,11 +564,11 @@ given the proper use of these flags.
 
 
 
- * **LEXICON Acronym** splitting in common and smn
+ * **LEXICON Acronym   ** splitting in common and smn
 
 
 
- * **LEXICON ProperNoun** 
+ * **LEXICON ProperNoun   ** 
 
 
 

@@ -1,5 +1,4 @@
 
-
 # Particles
 
 
@@ -7,23 +6,10 @@
 
 
 
-
-
-
-
-
-
- * **LEXICON Particle**
-
+ * **LEXICON Particle  **
 
  ges pcle ; 
  kes pcle ; 
-
-
-
-
-
-
 
 
 

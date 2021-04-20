@@ -89,11 +89,11 @@ SV|ÁE|ÁI  EA|EX|SC  FCD|FVD  WG|CSH  CLEN  VHIGH|VBACK  RVSH|RLEN  SLEN|SVSH  
 Here we define the suffix border >
 The other borders are not used yet, but still defined:
 
-* **«**:  Derivational prefix
-* **»**:  Derivational suffix
-* **%<**:  Inflectional prefx
-* **%>**:  Inflectional suffix
-* **%^**:  (exceptional) soft hyphenation point
+ * **«**:  Derivational prefix
+ * **»**:  Derivational suffix
+ * **%<**:  Inflectional prefx
+ * **%>**:  Inflectional suffix
+ * **%^**:  (exceptional) soft hyphenation point
 and the symbol #, which is Word boundary for both lexicalised and dynamic compounds
 
 End of alphabet definitions
@@ -161,7 +161,7 @@ We want to keep it short, but we want the code to work Thus, we document.
 
 
 
-* **x:y consonant gradation** \\  WG gives x:x and x:y, when there is no consonant lengthening  
+* **x:y consonant gradation ** \\  WG gives x:x and x:y, when there is no consonant lengthening  
 
 * *tu^RVp^RCe^WG*
 * *tu0v0e0*
@@ -184,7 +184,7 @@ We want to keep it short, but we want the code to work Thus, we document.
 * *va0vvo00>im*
 
 
-* **t:đ, also tk4:đh gradation, part 1** \\   
+* **t:đ, also tk4:đh gradation, part 1 ** \\   
 
 * *puáttee#vuot^RCâ^FVD^WG>i5i5*
 * *puáttee#vuođ0000>ii*
@@ -211,7 +211,7 @@ We want to keep it short, but we want the code to work Thus, we document.
 
 
 
-* **t4:đ and c4, č4, p4 gradation for tt:đ etc.** 
+* **t4:đ and c4, č4, p4 gradation for tt:đ etc. ** 
 
 * *ru^RVtt4â^WG^RLEN>*
 * *ruu0đâ00>*
@@ -298,7 +298,7 @@ We want to keep it short, but we want the code to work Thus, we document.
 * **nnj to nj shortening weak grade and consonant shortening** \\  special rule, e.g. konnjâl -> konjâlân puánnjá
 
 
- * **Word final consonant deletion** \\ for vaskâm:vaaskâ
+ * **Word final consonant deletion                 ** \\ for vaskâm:vaaskâ
 
 * *va^RVskâm^FCD^RLEN*
 * *vaaskâ000*
@@ -307,7 +307,7 @@ We want to keep it short, but we want the code to work Thus, we document.
 * *njuolgâ000*
 
 
- * **Final m in stems, smm to sm** \\ 
+ * **Final m in stems, smm to sm  ** \\ 
 
 
 * **Wordfinal consonants part 1**  e%^RVlâčč
@@ -400,7 +400,7 @@ We want to keep it short, but we want the code to work Thus, we document.
 * **Consonant lengthening after xx:x and xy:zy weak grade with x4 on upper side** \\   k4, č, p4  kukse:kuvssijn  
 
 
-* **Consonant lengthening xy:xyy** \\ 
+* **Consonant lengthening xy:xyy ** \\ 
 
 
 
@@ -515,7 +515,7 @@ We want to keep it short, but we want the code to work Thus, we document.
 
 
 
-* **Root vowel o5:u** \\ 
+* **Root vowel o5:u ** \\ 
 
 
 
@@ -571,7 +571,7 @@ a rules
 * **Monophthongisation rule iä:ee 1** \\  
 1)
 
-* **iä:e rule 1 and second syllable Fleeting vowel before suffix** \\  Note: many rules in one
+* **iä:e rule 1 and second syllable Fleeting vowel before suffix        ** \\  Note: many rules in one
 
 
 
@@ -608,7 +608,7 @@ a rules
 * *tä^RVsni^EA^CSH^RLEN>n*
 * *táásná000>n*
 
-* **Vowel lengthening äRV to aa** \\  äigi aaigijd
+* **Vowel lengthening äRV to aa ** \\  äigi aaigijd
 
 * *sälkki2>đ>*
 * *salkki>đ>*
@@ -657,7 +657,7 @@ a rules
 
 ### á and uá rules
 
-* **Monophthongisation rule uá:o0 part 2: Vowel shortening for uá** \\  for uábbi -> obbijn  čuál%^RCi%^WG%>in tuái4jâl%^CSH%^VBACK%^RVSH%>âm
+* **Monophthongisation rule uá:o0 part 2: Vowel shortening for uá ** \\  for uábbi -> obbijn  čuál%^RCi%^WG%>in tuái4jâl%^CSH%^VBACK%^RVSH%>âm
 
 
 * **Monophthongisation rule u:o and root vowel change u:o, special rule for olmooš and contract verbs** \\ 
@@ -670,7 +670,7 @@ a rules
 
 
 
-* **Diphthongisation e to iä, part 1** \\   
+* **Diphthongisation e to iä, part 1 ** \\   
 
 
 * **Root vowel aa:áá in C-stems with stemvowel u, part 1** \\  ahhu:áhu
@@ -682,7 +682,7 @@ a rules
 
 
 
-* **ie to iä in Illative and Sg3** \\  kiem´ni -> kiämnán, veerdi : viärdán peerru2%^CLEN%^VHIGH%^RVSH%>o
+* **ie to iä in Illative and Sg3 ** \\  kiem´ni -> kiämnán, veerdi : viärdán peerru2%^CLEN%^VHIGH%^RVSH%>o
 
 
 
@@ -690,7 +690,7 @@ a rules
 * **Diphthongisation uo:uá** \\   
 
 
-* **ye to uá and uo, part 1** \\  Part 1 of ye to uá for kyeli : kuálán  
+* **ye to uá and uo, part 1 ** \\  Part 1 of ye to uá for kyeli : kuálán  
 
 
 * **ye to uá, part 2** \\  Part 2 of ye to uá for kyeli : kuálán
@@ -698,9 +698,9 @@ a rules
 * *kyel^RCi3^EA^CLEN>m*
 * *kuállá00>m*
 
-* **ye to uo, part 2** \\  Part 2 of ye to uá for kyeli : kuolijn
+* **ye to uo, part 2 ** \\  Part 2 of ye to uá for kyeli : kuolijn
 
-* **uá to ye and uo to ye, part 1** \\  Part 1 luámmán : lyeme čuággás%^ÁI%^WG%^RLEN%>
+* **uá to ye and uo to ye, part 1 ** \\  Part 1 luámmán : lyeme čuággás%^ÁI%^WG%^RLEN%>
 
 * *vuolle^CLEN>en*
 * *vyelle0>en*
@@ -848,7 +848,7 @@ Suffix consonant rules
 
 ## Other rules
 
- * **Word final vowel deletion** \\ for vaskâm:vaaskâ
+ * **Word final vowel deletion                 ** \\ for vaskâm:vaaskâ
 
 * *sollâ^FVD>ii*
 * *soll00>ii*

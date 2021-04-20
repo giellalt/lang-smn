@@ -1,15 +1,9 @@
 
-
 # Conjunctions 
 
 
 
-
-
-
- * **LEXICON Conjunction**
+ * **LEXICON Conjunction  **
  * ja Cc ;          
-
-
 
 
