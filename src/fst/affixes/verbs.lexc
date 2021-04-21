@@ -16,13 +16,18 @@
 !! # Inflection lexica for Inari Saami verbs
 ! ======================
 
-!! Order of triggers:
-!! ```
-!! SV|ÁE|ÁI  EA|SC  FCD  WG|CSH  CLEN  VHIGH|VBACK  RVSH|RLEN  SLEN|SVSH  SVLOW
-!! ```
+!! This file contains the morphology for the Inari Saami verbs. 
 
+!! The morphophonological processes are governed by triggers. When there are more
+!! triggers, tney must be ordered as follows (where {A,B} C means *A or B, thereafter C*):
+
+!! {SV,ÁE,ÁI}  {EA,SC}  FCD {WG,CSH} CLEN  {VHIGH,VBACK}  {RVSH,RLEN} EA {SLEN,SVSH}  SVLOW
+
+!! The file first gives an **Overview** (including a linguistic documentation) of the lexica. Thereafter comes a documentation of **The lexica themselves**.
 
 !! ## Overview
+
+!! The structure at a glance:
 
 !! 1. Auxiliaries
 !!     1. NEG
@@ -33,6 +38,8 @@
 !! 1. Unclassified: verbstems, 3v, 4v
 
 !! ### The lexica
+
+!! This list gives an overview of each continuation lexicon, as well as linguistic key forms.
 
 !! *Twosyllabic lexica*
 
@@ -232,7 +239,7 @@
 
 !! ## Auxiliaries
 
-LEXICON NEG !!≈ * **@CODE@** = the negation verb
+LEXICON NEG ! = lists all forms of the negation verb
 +Ind+Sg1:jiem G ; ! jiemge, *jiemgin, jiemba
 +Ind+Sg2:jieh G ; ! etc. 
 +Ind+Sg3:ij # ;  !
@@ -270,8 +277,8 @@ LEXICON NEG !!≈ * **@CODE@** = the negation verb
 +Opt+Pl2:iälluđ G ;
 +Sup:amas G ;
 +Sup+Use/NG:emis G ;
-!! \\
-LEXICON LEDE !!≈ * **@CODE@** = The copula
+
+LEXICON LEDE ! = lists all forms of the copula
 +Inf:leđe K ;
 
 ! Present
@@ -373,6 +380,11 @@ LEXICON LEDE !!≈ * **@CODE@** = The copula
 
 !! ## The regular verbs
 !! ### Order of lexica
+!! We present lexica for even, odd and contracted stems. Finally come lexica for flag diacritica.
+
+!! Transitivity: Lexica marked \_IV and \_TV get **+IV** and **+TV** tags before 
+!! being redirected to common inflection.
+
 !! Within each lexicon, the suffixes are ordered as follows:
 !! 1. Infinites
 !! 1. Indicative
@@ -384,15 +396,15 @@ LEXICON LEDE !!≈ * **@CODE@** = The copula
 !! ## Even-syllable stems
 !    -------------------
 
-!! ### AD verbs
-!! ### Partial paradigms
+!! ### AD verbs (verbs ending in *-âđ*)
 
-LEXICON 2SYLL_HAAHAD_IV  !!≈ * **@CODE@**
+!! #### LEXICON 2SYLL\_HAAHAD
+LEXICON 2SYLL_HAAHAD_IV  
 +V+IV: 2SYLL_HAAHAD_V ;
-LEXICON 2SYLL_HAAHAD_TV  !!≈ * **@CODE@**
+LEXICON 2SYLL_HAAHAD_TV  
 +V+TV: 2SYLL_HAAHAD_V ;
 
-LEXICON 2SYLL_HAAHAD_V  !!≈ * **@CODE@**
+LEXICON 2SYLL_HAAHAD_V  
 VINFINITES_AASSAD ;
 +Ind: EVEN_IND_HAAHAD ;
 +Cond+Prs:â^WG^VBACK^RVSH%> EVEN_COND ;
@@ -407,7 +419,7 @@ VINFINITES_AASSAD ;
 :â^CSH^VBACK^RVSH DER_MAS ; ! asâmâš
 +Der2+Der/NomAg:e^CLEN^RVSH%> C_TAHHEE ;
 
-LEXICON EVEN_IND_HAAHAD !!≈ * **@CODE@**
+LEXICON EVEN_IND_HAAHAD 
 +Prs+Sg1:â^WG^VBACK%>m K ;
 +Prs+Sg2:a^WG%>h K ;
 +Prs+Sg3:á^CSH^VHIGH K ;      ! x    äässe^CLEN^RVSH>
@@ -432,7 +444,7 @@ LEXICON EVEN_IND_HAAHAD !!≈ * **@CODE@**
 +Prt+Pl2:â^WG^VBACK%>id K ;
 +Prt+Pl3:i^CLEN^VBACK^RVSH%>i3 K ;
 
-LEXICON EVEN_IMPRT_HAAHAD !!≈ * **@CODE@**
+LEXICON EVEN_IMPRT_HAAHAD 
 +Sg2:â^WG^VBACK K ;
 +Sg3:o^WG^VBACK^RVSH%>s K ; !â^WG^VBACK^RVSH havos
 +Du1:o^CLEN^VBACK^RVSH%>on K ;
@@ -443,14 +455,15 @@ LEXICON EVEN_IMPRT_HAAHAD !!≈ * **@CODE@**
 +Pl3:o^CLEN^VBACK^RVSH%>os K ;
 
 
-LEXICON 2SYLL_AASSAD !!≈ * **@CODE@**  48 verbs
+!! #### LEXICON 2SYLL\_AASSAD ( 48 verbs)
+LEXICON 2SYLL_AASSAD 
 +V: 2SYLL_AASSAD_V ;
-LEXICON 2SYLL_AASSAD_IV  !!≈ * **@CODE@**
+LEXICON 2SYLL_AASSAD_IV 
 +V+IV: 2SYLL_AASSAD_V ;
-LEXICON 2SYLL_AASSAD_TV  !!≈ * **@CODE@**
+LEXICON 2SYLL_AASSAD_TV 
 +V+TV: 2SYLL_AASSAD_V ;
 
-LEXICON 2SYLL_AASSAD_V  !!≈ * **@CODE@**
+LEXICON 2SYLL_AASSAD_V  
 VINFINITES_AASSAD ;
 +Ind: EVEN_IND_AASSAD ;
 +Cond+Prs:â^WG^VBACK^RVSH%> EVEN_COND ;
@@ -466,7 +479,7 @@ VINFINITES_AASSAD ;
 +Der2+Der/NomAg:e^CLEN^RVSH%> C_TAHHEE ;
 
 
-LEXICON VINFINITES_AASSAD !!≈ * **@CODE@**
+LEXICON VINFINITES_AASSAD 
 +Inf:â^VBACK%>đ K ; !^VBACK
 +Ind+Prs+ConNeg:â^WG^VBACK K ;
 +Ind+Prt+ConNeg:â^VBACK%>m K ;
@@ -493,7 +506,7 @@ LEXICON VINFINITES_AASSAD !!≈ * **@CODE@**
 +Ger:â^WG^VBACK^RVSH%>dijn K ;
 +Der4+Der/NomAct:â^VBACK%>m FLAG_3LITTER ;
 
-LEXICON EVEN_IND_AASSAD !!≈ * **@CODE@**
+LEXICON EVEN_IND_AASSAD 
 +Prs+Sg1:â^WG^VBACK%>m K ;
 +Prs+Sg2:a^WG%>h K ;
 +Prs+Sg3:á^CSH^VHIGH K ;      ! x    äässe^CLEN^RVSH>
@@ -518,7 +531,7 @@ LEXICON EVEN_IND_AASSAD !!≈ * **@CODE@**
 +Prt+Pl2:â^WG^VBACK%>id K ;
 +Prt+Pl3:i^CLEN^VBACK^RVSH%>i3 K ;
 
-LEXICON EVEN_POT_AASSAD !!≈ * **@CODE@**
+LEXICON EVEN_POT_AASSAD 
 +Sg1:e^WG^CLEN^RVSH%>em K ; ! PM: with aassâđ, CLEN/RLEN should be the same as in Ind.prt.du, but other contlex direct to here as well?
 +Sg2:e^WG^CLEN^RVSH%>eh K ; ! PM: with aassâđ, CLEN/RLEN should be the same as in Ind.prt.du, but other contlex direct to here as well?
 +Sg3:â^WG^VBACK%>š K ;
@@ -529,7 +542,7 @@ LEXICON EVEN_POT_AASSAD !!≈ * **@CODE@**
 +Pl2:â^WG^VBACK%>švetteđ K ;
 +Pl3:â^WG^VBACK^RVSH%>žeh K ;
 
-LEXICON EVEN_IMPRT_AASSAD !!≈ * **@CODE@**
+LEXICON EVEN_IMPRT_AASSAD 
 +Sg2:â^WG^VBACK K ;
 +Sg3:u^WG^VHIGH%>s K ;
 +Du1:o^CLEN^VHIGH^RVSH%>on K ;
@@ -542,15 +555,15 @@ LEXICON EVEN_IMPRT_AASSAD !!≈ * **@CODE@**
 
 !! ### Full paradigms
 
-LEXICON 2SYLL_VIEZZAD !!≈ * **@CODE@**
+!! #### LEXICON 2SYLL\_VIEZZAD
+LEXICON 2SYLL_VIEZZAD 
 +V: 2SYLL_VIEZZAD_V ;
-LEXICON 2SYLL_VIEZZAD_IV !!≈ * **@CODE@**
+LEXICON 2SYLL_VIEZZAD_IV 
 +V+IV: 2SYLL_VIEZZAD_V ;
-LEXICON 2SYLL_VIEZZAD_TV !!≈ * **@CODE@**
+LEXICON 2SYLL_VIEZZAD_TV 
 +V+TV: 2SYLL_VIEZZAD_V ;
 
-LEXICON 2SYLL_VIEZZAD_V  !!≈ * **@CODE@** 6 verbs
-
+LEXICON 2SYLL_VIEZZAD_V  
 VINFINITES_VIEZZAD ;
 +Ind+Prs: EVEN_IND_PRS_VIEZZAD ;
 +Ind+Prt: EVEN_IND_PRT_VIEZZAD ;
@@ -565,7 +578,7 @@ VINFINITES_VIEZZAD ;
 :â DER_MAS ;
 +Der3+Der/Pass:u2 C_PASS_SH_RVSH ; !viežžuuččii viežžui
 
-LEXICON VINFINITES_VIEZZAD !!≈     - **@CODE@**
+LEXICON VINFINITES_VIEZZAD 
 +Inf:â%>đ K ;
 +Ind+Prs+ConNeg:â^WG K ;
 +Ind+Prt+ConNeg:â%>m K ;
@@ -593,7 +606,7 @@ LEXICON VINFINITES_VIEZZAD !!≈     - **@CODE@**
 +Ger:â^WG%>dijn K ;
 +Der4+Der/NomAct:â%>m FLAG_3LITTER ; ! LA: removed ^VHIGH ?
 
-LEXICON EVEN_IND_PRS_VIEZZAD !!≈     - **@CODE@**
+LEXICON EVEN_IND_PRS_VIEZZAD 
 +Sg1:â^WG%>m K ;     ! viežâm
 +Sg2:a^WG%>h K ;     ! viežah
 +Sg2+Err/Orth:â^WG%>h K ;     ! viežâh
@@ -605,7 +618,7 @@ Sg3:á^VHIGH K ;       ! viäžžá
 +Pl2:â%>vetteđ K ;  ! viežžâvetteđ
 +Pl3:i%>h K ;	! viežžih
 
-LEXICON EVEN_IND_PRT_VIEZZAD !!≈     - **@CODE@**
+LEXICON EVEN_IND_PRT_VIEZZAD 
 +Sg1:i%>m K ; ! viežžim
 +Sg2:i%>h K ; ! viežžih
 +Sg3:â^WG%>i K ; ! viežâi
@@ -616,7 +629,7 @@ LEXICON EVEN_IND_PRT_VIEZZAD !!≈     - **@CODE@**
 +Pl2:â^WG%>id K ; ! viežâid
 +Pl3:i%>i3 K ;	! viežžii
 
-LEXICON EVEN_POT_VIEZZAD !!≈ * **@CODE@**
+LEXICON EVEN_POT_VIEZZAD
 +Sg1:e^WG^CLEN%>em K ;
 +Sg2:e^WG^CLEN%>eh K ;
 +Sg3:â^WG%>š K ; ! viežâš
@@ -627,7 +640,7 @@ LEXICON EVEN_POT_VIEZZAD !!≈ * **@CODE@**
 +Pl2:â^WG%>švetteđ K ; ! viežâšvetteđ
 +Pl3:â^WG%>žeh K ; ! viežâseh
 
-LEXICON EVEN_IMPRT_VIEZZAD !!≈     - **@CODE@**
+LEXICON EVEN_IMPRT_VIEZZAD
 +Sg2:â^WG K ; ! viežâ
 +Sg3:u^WG^VHIGH%>s K ; ! viäžus
 +Du1:o^VHIGH%>on K ; ! viäžžoon
@@ -638,7 +651,8 @@ LEXICON EVEN_IMPRT_VIEZZAD !!≈     - **@CODE@**
 +Pl3:u^VHIGH%>s K ; ! viäžžus
 
 
-
+!! #### LEXICON 2SYLL\_SPELLAD 
+!! Similar to 2SYLL\_ETTAD, but less CSH, don't know yet how much. 20 verbs
 LEXICON 2SYLL_SPELLAD
 +V: 2SYLL_SPELLAD_V ;
 LEXICON 2SYLL_SPELLAD_IV
@@ -646,7 +660,7 @@ LEXICON 2SYLL_SPELLAD_IV
 LEXICON 2SYLL_SPELLAD_TV
 +V+TV: 2SYLL_SPELLAD_V ;
 
-LEXICON 2SYLL_SPELLAD_V  !!≈ * **@CODE@** Similar to 2SYLL_ETTAD, but less CSH, don't know yet how much. 20 verbs
+LEXICON 2SYLL_SPELLAD_V  
 VINFINITES_SPELLAD ;
 +Ind+Prs: EVEN_IND_PRS_SPELLAD ;
 +Ind+Prt: EVEN_IND_PRT_SPELLAD ;
@@ -661,9 +675,7 @@ VINFINITES_SPELLAD ;
 :â DER_MAS ;
 +Der3+Der/Pass:u2 C_PASS_SH_RVSH ; !ettum ettui lekkum terppum
 
-
-
-LEXICON VINFINITES_SPELLAD !!≈     - **@CODE@**
+LEXICON VINFINITES_SPELLAD 
 +Inf:â^VHIGH%>đ K ;
 +Ind+Prs+ConNeg:â^WG^VHIGH^RLEN K ;
 +Ind+Prt+ConNeg:â^VHIGH%>m K ;
@@ -692,7 +704,7 @@ LEXICON VINFINITES_SPELLAD !!≈     - **@CODE@**
 
 
 
-LEXICON EVEN_IND_PRS_SPELLAD  !!≈     - **@CODE@**
+LEXICON EVEN_IND_PRS_SPELLAD  
 +Sg1:â^WG^VHIGH^RLEN%>m K ;
 +Sg2:a^WG^VHIGH^RLEN%>h K ;
 +Sg2+Err/Orth:â^WG^VHIGH^RLEN%>h K ;
@@ -704,7 +716,7 @@ LEXICON EVEN_IND_PRS_SPELLAD  !!≈     - **@CODE@**
 +Pl2:â^VHIGH%>vetteđ K ;
 +Pl3:i%>h K ;  ! spellih
 
-LEXICON EVEN_IND_PRT_SPELLAD !!≈     - **@CODE@**
+LEXICON EVEN_IND_PRT_SPELLAD 
 +Sg1:i%>m K ;
 +Sg2:i%>h K ;
 +Sg3:â^WG^RLEN%>i3 K ;
@@ -715,7 +727,7 @@ LEXICON EVEN_IND_PRT_SPELLAD !!≈     - **@CODE@**
 +Pl2:â^WG^RLEN%>id K ;
 +Pl3:i^CLEN%>i3 K ;
 
-
+!! #### LEXICON 2SYLL\_VIHKAD 
 LEXICON 2SYLL_VIHKAD
 +V: 2SYLL_VIHKAD_V ;
 LEXICON 2SYLL_VIHKAD_IV
@@ -727,13 +739,12 @@ LEXICON 2SYLL_VIHKAD_V
 2SYLL_KAVNAD_V ;
 
 
+!! #### LEXICON 2SYLL\_ETTAD 
 LEXICON 2SYLL_ETTAD
 +V: 2SYLL_ETTAD_V ;
-
 LEXICON 2SYLL_ETTAD_TV
 +V+TV: 2SYLL_ETTAD_V ;
-
-LEXICON 2SYLL_ETTAD_V  !!≈ * **@CODE@** 19 verbs
+LEXICON 2SYLL_ETTAD_V  
 ! ettâđ	 | eeđâm   | iä-á | eteh    | ettim  | e^RVtt4
 
 :  VINFINITES_ETTAD ;
@@ -750,7 +761,7 @@ LEXICON 2SYLL_ETTAD_V  !!≈ * **@CODE@** 19 verbs
 :â^CSH DER_MAS ;
 +Der3+Der/Pass:u2 C_PASS_SH_RVSH ; !ettum ettui lekkum terppum
 
-LEXICON VINFINITES_ETTAD !!≈     - **@CODE@**
+LEXICON VINFINITES_ETTAD 
 +Inf:â^VHIGH%>đ K ;
 +Ind+Prs+ConNeg:â^WG^VHIGH^RLEN K ;
 +Ind+Prt+ConNeg:â^VHIGH%>m K ;
@@ -777,7 +788,7 @@ LEXICON VINFINITES_ETTAD !!≈     - **@CODE@**
 +Actio+Nom:â^VHIGH%>m NOMACT ;
 !+Der4+Der/NomAct:â^VHIGH%>m FLAG_3LITTER ;
 
-LEXICON EVEN_IND_PRS_ETTAD !!≈     - **@CODE@**
+LEXICON EVEN_IND_PRS_ETTAD 
 +Sg1:â^WG^VHIGH^RLEN%>m K ;
 +Sg2:a^WG^VHIGH^RLEN%>h K ;
 +Sg2+Err/Orth:â^WG^VHIGH^RLEN%>h K ;
@@ -790,7 +801,7 @@ LEXICON EVEN_IND_PRS_ETTAD !!≈     - **@CODE@**
 +Pl3:e^CSH%>h K ;  ! loheh
 
 
-LEXICON EVEN_IMPRT_ETTAD !!≈     - **@CODE@**
+LEXICON EVEN_IMPRT_ETTAD 
 +Sg2:â^WG^RLEN K ;
 +Sg3:u^WG^VHIGH%>s K ;
 +Du1:o^CLEN^VHIGH%>on K ;
@@ -800,7 +811,7 @@ LEXICON EVEN_IMPRT_ETTAD !!≈     - **@CODE@**
 +Pl2:â^VHIGH%>đ K ;
 +Pl3:u^CLEN^VHIGH%>s K ;
 
-LEXICON EVEN_POT_ETTAD !!≈     - **@CODE@**
+LEXICON EVEN_POT_ETTAD 
 +Sg1:e^WG^RLEN%>em K ;
 +Sg2:e^WG^RLEN%>eh K ;
 +Sg3:â^WG^VHIGH^RLEN%>š K ;
@@ -812,6 +823,8 @@ LEXICON EVEN_POT_ETTAD !!≈     - **@CODE@**
 +Pl3:â^WG^VHIGH%>žeh K ;
 
 
+!! #### LEXICON 2SYLL\_KAVNAD 
+!!  as ETTAD but with VBACK, only RV ä in stem tothis lexicon 57 verbs
 LEXICON 2SYLL_KAVNAD
 +V: 2SYLL_KAVNAD_V ;
 LEXICON 2SYLL_KAVNAD_IV
@@ -819,8 +832,7 @@ LEXICON 2SYLL_KAVNAD_IV
 LEXICON 2SYLL_KAVNAD_TV
 +V+TV: 2SYLL_KAVNAD_V ;
 
-LEXICON 2SYLL_KAVNAD_V  !!≈ * **@CODE@** as ETTAD but with VBACK, only RV ä in stem tothis lexicon 57 verbs
-
+LEXICON 2SYLL_KAVNAD_V  
   VINFINITES_KAVNAD ;
 +Ind: EVEN_IND_KAVNAD ;
 +Cond+Prs:â^WG^VBACK%> EVEN_COND ;
@@ -835,7 +847,7 @@ LEXICON 2SYLL_KAVNAD_V  !!≈ * **@CODE@** as ETTAD but with VBACK, only RV ä i
 :â^VBACK DER_MAS ;
 +Der3+Der/Pass:u2  C_PASS_SH_RVSH ; !
 
-LEXICON VINFINITES_KAVNAD   !!≈     - **@CODE@**
+LEXICON VINFINITES_KAVNAD  
 +Inf:â^VBACK%>đ K ;
 
 +Ind+Prs+ConNeg:â^WG^VBACK^RLEN K ;
@@ -863,7 +875,7 @@ LEXICON VINFINITES_KAVNAD   !!≈     - **@CODE@**
 +Ger:â^WG^VBACK%>dijn K ;
 +Der4+Der/NomAct:â^VBACK%>m FLAG_3LITTER ;
 
-LEXICON EVEN_IND_KAVNAD  !!≈     - **@CODE@**
+LEXICON EVEN_IND_KAVNAD  
 +Prs+Sg1:â^WG^VBACK^RLEN%>m K ;
 +Prs+Sg2:a^WG^VBACK^RLEN%>h K ;
 +Prs+Sg2+Err/Orth:â^WG^VBACK^RLEN%>h K ;
@@ -885,7 +897,7 @@ LEXICON EVEN_IND_KAVNAD  !!≈     - **@CODE@**
 +Prt+Pl2:â^WG^VBACK^RLEN%>id K ;
 +Prt+Pl3:i^CLEN^VBACK%>i3 K ;
 
-LEXICON EVEN_POT_KAVNAD !!≈     - **@CODE@**
+LEXICON EVEN_POT_KAVNAD 
 +Sg1:e^WG^CLEN%>em K ;
 +Sg2:e^WG^CLEN%>eh K ;
 +Sg3:â^WG^VBACK^RLEN%>š K ;
@@ -896,7 +908,7 @@ LEXICON EVEN_POT_KAVNAD !!≈     - **@CODE@**
 +Pl2:â^WG^VBACK^RLEN%>švetteđ K ;
 +Pl3:â^WG^VBACK%>žeh K ;
 
-LEXICON EVEN_IMPRT_KAVNAD  !!≈     - **@CODE@**
+LEXICON EVEN_IMPRT_KAVNAD  
 +Sg2:â^WG^VBACK^RLEN K ;
 +Sg3:u^WG^VHIGH^RLEN%>s K ;
 +Du1:o^CLEN^VHIGH%>on K ;
@@ -907,8 +919,8 @@ LEXICON EVEN_IMPRT_KAVNAD  !!≈     - **@CODE@**
 +Pl3:u^CLEN^VHIGH%>s K ;
 
 
-
-LEXICON 2SYLL_KALGAD_TV  !!≈ * **@CODE@** Only one verb: kalgâđ Ind+Prs+Pl3 kälgih, vs. kävneh 2SYLL_KAVNAD
+!! #### LEXICON 2SYLL\_KALGAD (onlŧ TV)
+LEXICON 2SYLL_KALGAD_TV  ! Only one verb: kalgâđ Ind+Prs+Pl3 kälgih, vs. kävneh 2SYLL_KAVNAD
 +V+TV:  VINFINITES_KALGAD ;
 +V+TV+Ind: EVEN_IND_KALGAD ;
 +V+TV+Cond+Prs:â^WG^VBACK%> EVEN_COND ;
@@ -922,7 +934,7 @@ LEXICON 2SYLL_KALGAD_TV  !!≈ * **@CODE@** Only one verb: kalgâđ Ind+Prs+Pl3 
 +V+TV:â^VBACK DER_MAS ;
 +V+TV+Der3+Der/Pass:u2^CLEN C_PASS_SH_COMMON ; ! ! Added ^VBACK
 
-LEXICON VINFINITES_KALGAD  !!≈     - **@CODE@**
+LEXICON VINFINITES_KALGAD 
 +Inf:â^VBACK%>đ K ;
 +Ind+Prs+ConNeg:â^WG^VBACK^RLEN K ;
 +Ind+Prt+ConNeg:â^VBACK%>m K ;
@@ -948,7 +960,7 @@ LEXICON VINFINITES_KALGAD  !!≈     - **@CODE@**
 +Ger:â^WG^VBACK%>dijn K ;
 +Der4+Der/NomAct:â^VBACK%>m FLAG_3LITTER ;
 
-LEXICON EVEN_IND_KALGAD  !!≈     - **@CODE@**
+LEXICON EVEN_IND_KALGAD 
 +Prs+Sg1:â^WG^VBACK^RLEN%>m K ;
 +Prs+Sg2:a^WG^VBACK^RLEN%>h K ;
 +Prs+Sg2+Err/Orth:â^WG^VBACK^RLEN%>h K ;
@@ -972,7 +984,7 @@ LEXICON EVEN_IND_KALGAD  !!≈     - **@CODE@**
 +Prt+Pl2:â^WG^VBACK^RLEN%>id K ;
 +Prt+Pl3:i^CLEN^VBACK%>i3 K ;
 
-LEXICON EVEN_POT_KALGAD !!≈     - **@CODE@**
+LEXICON EVEN_POT_KALGAD
 +Sg1:e^WG%>em K ;
 +Sg2:e^WG%>eh K ;
 +Sg3:â^WG^VBACK^RLEN%>š K ;
@@ -983,7 +995,7 @@ LEXICON EVEN_POT_KALGAD !!≈     - **@CODE@**
 +Pl2:â^WG^VBACK^RLEN%>švetteđ K ;
 +Pl3:â^WG^VBACK%>žeh K ;
 
-LEXICON EVEN_IMPRT_KALGAD  !!≈     - **@CODE@**
+LEXICON EVEN_IMPRT_KALGAD 
 +Sg2:â^WG^VBACK^RLEN K ;
 +Sg3:u^WG^VHIGH^RLEN%>s K ;
 +Du1:o^CLEN^VHIGH%>on K ;
@@ -993,6 +1005,7 @@ LEXICON EVEN_IMPRT_KALGAD  !!≈     - **@CODE@**
 +Pl2:â^VBACK%>đ K ;
 +Pl3:u^CLEN^VHIGH%>s K ;
 
+!! #### LEXICON 2SYLL\_KOLGAD 
 LEXICON 2SYLL_KOLGAD_IV ! auxiliary verb with restricted paradigm
 +V+IV: VINFINITES_COGGAD ; ! Todo: restrict these
 +V+IV+Ind: EVEN_IND_COGGAD ;
@@ -1005,7 +1018,7 @@ LEXICON 2SYLL_KOLGAD_IV ! auxiliary verb with restricted paradigm
 ! +V+IV+Der1+Der/tt:âtt^WG 3_DERIVED ; !
 
 
-
+!! #### LEXICON 2SYLL\_COGGAD 
 LEXICON 2SYLL_COGGAD
 +V: 2SYLL_COGGAD_V ;
 LEXICON 2SYLL_COGGAD_IV
@@ -1013,7 +1026,7 @@ LEXICON 2SYLL_COGGAD_IV
 LEXICON 2SYLL_COGGAD_TV
 +V+TV: 2SYLL_COGGAD_V ;
 
-LEXICON 2SYLL_COGGAD_V  !!≈ * **@CODE@** 18 verbs
+LEXICON 2SYLL_COGGAD_V  ! 18 verbs
 VINFINITES_COGGAD ;
 +Ind: EVEN_IND_COGGAD ;
 +Cond+Prs:â^WG EVEN_COND_COGGAD ;
@@ -1027,7 +1040,7 @@ VINFINITES_COGGAD ;
 :â^VHIGH DER_MAS ;
 +Der3+Der/Pass:u2 C_PASS_SH_RVSH ; !
 
-LEXICON VINFINITES_COGGAD  !!≈     - **@CODE@**
+LEXICON VINFINITES_COGGAD  !
 +Inf:â^VHIGH%>đ K ;
 +Ind+Prs+ConNeg:â^WG^VHIGH^RLEN K ;
 +Ind+Prt+ConNeg:â^VHIGH%>m K ;
@@ -1053,7 +1066,7 @@ LEXICON VINFINITES_COGGAD  !!≈     - **@CODE@**
 +Ger:â^WG^VHIGH%>dijn K ;
 +Der4+Der/NomAct:â^VHIGH%>m FLAG_3LITTER ;
 
-LEXICON EVEN_IND_COGGAD  !!≈     - **@CODE@**
+LEXICON EVEN_IND_COGGAD  !
 +Prs+Sg1:â^WG^VHIGH^RLEN%>m K ;
 +Prs+Sg2:a^WG^VHIGH^RLEN%>h K ;
 +Prs+Sg2+Err/Orth:â^WG^VHIGH^RLEN%>h K ;
@@ -1077,7 +1090,7 @@ LEXICON EVEN_IND_COGGAD  !!≈     - **@CODE@**
 +Prt+Pl2:â^WG^VHIGH^RLEN%>id K ;
 +Prt+Pl3:i^CLEN^VHIGH%>i3 K ;
 
-LEXICON EVEN_COND_COGGAD !!≈     - **@CODE@**
+LEXICON EVEN_COND_COGGAD !
 +Sg1:^VHIGH%>čč%>im K ;
 +Sg2:^VHIGH%>čč%>ih K ;
 +Sg3:^VHIGH%>čč%>ij K ;
@@ -1088,7 +1101,7 @@ LEXICON EVEN_COND_COGGAD !!≈     - **@CODE@**
 +Pl2:^VHIGH%>čč%>ijd K ;
 +Pl3:^VHIGH%>čč%>ii K ;
 
-LEXICON EVEN_POT_COGGAD !!≈     - **@CODE@**
+LEXICON EVEN_POT_COGGAD !
 +Sg1:e^WG^CLEN%>em K ;
 +Sg2:e^WG^CLEN%>eh K ;
 +Sg3:â^WG^VHIGH^RLEN%>š K ;
@@ -1099,7 +1112,7 @@ LEXICON EVEN_POT_COGGAD !!≈     - **@CODE@**
 +Pl2:â^WG^VHIGH^RLEN%>švetteđ K ;
 +Pl3:â^WG^VHIGH%>žeh K ;
 
-LEXICON EVEN_IMPRT_COGGAD !!≈     - **@CODE@**
+LEXICON EVEN_IMPRT_COGGAD !
 +Sg2:â^WG^VHIGH^RLEN K ;
 +Sg2:â^WG^RLEN K ;
 +Sg3:u^WG%>s K ;
@@ -1111,6 +1124,8 @@ LEXICON EVEN_IMPRT_COGGAD !!≈     - **@CODE@**
 +Pl3:o^CLEN%>os K ;
 
 
+
+!! #### LEXICON 2SYLL\_KULGAD 
 LEXICON 2SYLL_KULGAD
 +V: 2SYLL_KULGAD_V ;
 LEXICON 2SYLL_KULGAD_IV
@@ -1118,12 +1133,12 @@ LEXICON 2SYLL_KULGAD_IV
 LEXICON 2SYLL_KULGAD_TV
 +V+TV: 2SYLL_KULGAD_V ;
 
-LEXICON 2SYLL_KULGAD_V   !!≈ * **@CODE@** 55 verbs
+LEXICON 2SYLL_KULGAD_V   ! 55 verbs
 
 !! Distinct from SODDAD with short vowel in past tense (du)
 !! Turns out it was not distinct after all. Preper for fusing KULGAD and SODDAD
 
-:  VINFINITES_SODDAD ;
+VINFINITES_SODDAD ;
 +Ind+Prs: EVEN_PRS_SODDAD ;
 +Ind+Prt: EVEN_PRT_SODDAD ;
 +Cond+Prs:â^WG^VHIGH%> EVEN_COND ;
@@ -1148,16 +1163,14 @@ LEXICON 2SYLL_KULGAD_V   !!≈ * **@CODE@** 55 verbs
 !+Pl2:â^WG^VHIGH^RLEN%>id K ;
 !+Pl3:i^CLEN^VHIGH%>i3 K ;
 
-
+!! #### LEXICON 2SYLL\_SODDAD 
 LEXICON 2SYLL_SODDAD
 +V: 2SYLL_SODDAD_V ;
 LEXICON 2SYLL_SODDAD_IV
 +V+IV: 2SYLL_SODDAD_V ;
-
 !LEXICON 2SYLL_SODDAD_TV
 !+V+TV: 2SYLL_SODDAD_V ;
-
-LEXICON 2SYLL_SODDAD_V  !!≈ * **@CODE@** 6 verbs
+LEXICON 2SYLL_SODDAD_V  ! 6 verbs
 
 ! kalgâđ | kaalgâm | á-á  | kälgih  | kalgim | kä^RVlg
 ! šoddâđ | šoodâm  | a-a  | šaddeh  | šoddim | ša^RVdd
@@ -1178,7 +1191,7 @@ VINFINITES_SODDAD ;
 :â^VHIGH DER_MAS ;
 +Der3+Der/Pass:u2 C_PASS_SH_RVSH ; !
 
-LEXICON VINFINITES_SODDAD  !!≈     - **@CODE@**
+LEXICON VINFINITES_SODDAD  
 +Inf:â^VHIGH%>đ K ;
 +Ind+Prs+ConNeg:â^WG^VHIGH^RLEN K ;
 +Ind+Prt+ConNeg:â^VHIGH%>m K ;
@@ -1204,7 +1217,7 @@ LEXICON VINFINITES_SODDAD  !!≈     - **@CODE@**
 +Ger:â^WG^VHIGH%>dijn K ;
 +Der4+Der/NomAct:â^VHIGH%>m FLAG_3LITTER ;
 
-LEXICON EVEN_PRS_SODDAD !!≈     - **@CODE@**
+LEXICON EVEN_PRS_SODDAD 
 +Sg1:â^WG^VHIGH^RLEN%>m K ;
 +Sg2:a^WG^VHIGH^RLEN%>h K ;
 +Sg3:á K ;       ! iätá (CSH tt-t), šadda, viggá
@@ -1218,7 +1231,7 @@ LEXICON EVEN_PRS_SODDAD !!≈     - **@CODE@**
 +Pl2:â^VHIGH^RVSH%>vetteđ K ;
 +Pl3:e%>h K ;  ! loheh
 
-LEXICON EVEN_PRT_SODDAD !!≈     - **@CODE@**
+LEXICON EVEN_PRT_SODDAD 
 +Sg1:i^VHIGH%>m K ;
 +Sg2:i^VHIGH%>h K ;
 +Sg3:â^WG^VHIGH^RLEN%>i3 K ;
@@ -1230,7 +1243,7 @@ LEXICON EVEN_PRT_SODDAD !!≈     - **@CODE@**
 +Pl3:i^CLEN^VHIGH%>i3 K ;
 
 
-LEXICON EVEN_POT_SODDAD !!≈     - **@CODE@**
+LEXICON EVEN_POT_SODDAD 
 +Sg1:e^WG^CLEN%>em K ;
 +Sg2:e^WG^CLEN%>eh K ;
 +Sg3:â^WG^VHIGH^RLEN%>š K ;
@@ -1241,7 +1254,7 @@ LEXICON EVEN_POT_SODDAD !!≈     - **@CODE@**
 +Pl2:â^WG^VHIGH^RLEN%>švetteđ K ;
 +Pl3:â^WG^VHIGH%>žeh K ;
 
-LEXICON EVEN_IMPRT_SODDAD !!≈     - **@CODE@**
+LEXICON EVEN_IMPRT_SODDAD 
 +Sg2:â^WG^VHIGH^RLEN K ;
 +Sg3:o^WG%>s K ;
 +Du1:o^CLEN%>on K ;
@@ -1252,6 +1265,7 @@ LEXICON EVEN_IMPRT_SODDAD !!≈     - **@CODE@**
 +Pl3:o^CLEN%>os K ;
 
 
+!! #### LEXICON 2SYLL\_TOOLLAD (12 verbs)
 LEXICON 2SYLL_TOOLLAD
 +V: 2SYLL_TOOLLAD_V ;
 LEXICON 2SYLL_TOOLLAD_IV
@@ -1259,8 +1273,7 @@ LEXICON 2SYLL_TOOLLAD_IV
 LEXICON 2SYLL_TOOLLAD_TV
 +V+TV: 2SYLL_TOOLLAD_V ;
 
-LEXICON 2SYLL_TOOLLAD_V  !!≈ * **@CODE@** 12 verbs
-
+LEXICON 2SYLL_TOOLLAD_V  
 ! suggested stem = tuáll
 !Impossible to see the differences in diphtong length
 
@@ -1277,7 +1290,7 @@ VINFINITES_TOOLLAD ; ! same as in MOONNAD
 :â^CSH^VBACK^RVSH DER_MAS ;
 +Der3+Der/Pass:u2 C_PASS_SH ; ! ? !tolluđ, tollui
 
-LEXICON VINFINITES_TOOLLAD  !!≈     - **@CODE@**
+LEXICON VINFINITES_TOOLLAD 
 +Inf:â^VBACK%>đ K ;
 +Ind+Prs+ConNeg:â^WG^VBACK^RLEN K ;
 +Ind+Prt+ConNeg:â^VBACK^RLEN%>m K ;
@@ -1304,50 +1317,51 @@ LEXICON VINFINITES_TOOLLAD  !!≈     - **@CODE@**
 +Ger:â^WG^VBACK^RVSH%>dijn K ;
 +Der4+Der/NomAct:â^VBACK^RLEN%>m FLAG_3LITTER ;
 
-LEXICON EVEN_IND_TOOLLAD  !!≈     - **@CODE@**
-+Prs+Sg1:â^WG^VBACK%>m K ;    	! toolâm ! uá > o
-+Prs+Sg2:a^WG^VBACK%>h K ;     ! toolah
-+Prs+Sg3:á^CSH K ;       		! tuálá
-+Prs+Du1:e%>en K ;  			! tuálleen
-+Prs+Du2:â^CSH^VBACK^RVSH%>vettee K ; 	! tolâvettee
-+Prs+Du3:â^VBACK^RLEN%>v K ;         ! toollâv
+LEXICON EVEN_IND_TOOLLAD  
++Prs+Sg1:â^WG^VBACK%>m K ;            ! toolâm ! uá > o
++Prs+Sg2:a^WG^VBACK%>h K ;            ! toolah
++Prs+Sg3:á^CSH K ;       		      ! tuálá
++Prs+Du1:e%>en K ;  			      ! tuálleen
++Prs+Du2:â^CSH^VBACK^RVSH%>vettee K ; ! tolâvettee
++Prs+Du3:â^VBACK^RLEN%>v K ;          ! toollâv
 +Prs+Pl1:â^VBACK%>p K ;  ! toollâp
-+Prs+Pl2:â^CSH^VBACK^RVSH%>vetteđ K ; 	 ! tolâvetteđ
-+Prs+Pl3:i^CSH%>h K ;           ! tuálih
++Prs+Pl2:â^CSH^VBACK^RVSH%>vetteđ K ; ! tolâvetteđ
++Prs+Pl3:i^CSH%>h K ;                 ! tuálih
 +Prs+Pl3+Err/Orth:i%>h K ;
 
-+Prt+Sg1:i^VBACK^RLEN%>m K ;				! toollim
-+Prt+Sg2:i^VBACK^RLEN%>h K ;				! toollih
-+Prt+Sg3:â^WG^VBACK^RLEN%>i K ;			! toolâi
-+Prt+Du1:á^WG^VBACK^RLEN%>im K ; ! tooláim
-+Prt+Du2:á^WG^VBACK^RLEN%>id K ; ! tooláid
++Prt+Sg1:i^VBACK^RLEN%>m K ;		! toollim
++Prt+Sg2:i^VBACK^RLEN%>h K ;		! toollih
++Prt+Sg3:â^WG^VBACK^RLEN%>i K ;		! toolâi
++Prt+Du1:á^WG^VBACK^RLEN%>im K ;    ! tooláim
++Prt+Du2:á^WG^VBACK^RLEN%>id K ;    ! tooláid
 +Prt+Du3:á^WG^VBACK^RLEN%>in K ;	! tooláin
 +Prt+Pl1:â^WG^VBACK^RLEN%>im K ;	! toolâim
 +Prt+Pl2:â^WG^VBACK^RLEN%>id K ;	! toolâid
 +Prt+Pl3:i^VBACK^RVSH%>i5 K ;			! tollii
 
-LEXICON EVEN_POT_TOOLLAD !!≈     - **@CODE@**
-+Sg1:e^WG%>em K ; ! tuáleem
-+Sg2:e^WG%>eh K ; ! tuáleeh
-+Sg3:â^WG^VBACK%>š K ; ! toolâš
-+Du1:â^WG^VBACK^RVSH%>žeen K ; ! tolâžeen
+LEXICON EVEN_POT_TOOLLAD 
++Sg1:e^WG%>em K ;                 ! tuáleem
++Sg2:e^WG%>eh K ;                 ! tuáleeh
++Sg3:â^WG^VBACK%>š K ;            ! toolâš
++Du1:â^WG^VBACK^RVSH%>žeen K ;    ! tolâžeen
 +Du2:â^WG^VBACK^RLEN%>švettee K ; ! toolâšvettee
-+Du3:â^WG^VBACK^RVSH%>žává K ; ! tolâžává
-+Pl1:â^WG^VBACK^RVSH%>žep K ; ! tolâžep
++Du3:â^WG^VBACK^RVSH%>žává K ;    ! tolâžává
++Pl1:â^WG^VBACK^RVSH%>žep K ;     ! tolâžep
 +Pl2:â^WG^VBACK^RLEN%>švetteđ K ; ! toolâšvetteđ
-+Pl3:â^WG^VBACK^RVSH%>žeh K ; ! tolâžeh
++Pl3:â^WG^VBACK^RVSH%>žeh K ;     ! tolâžeh
 
-LEXICON EVEN_IMPRT_TOOLLAD  !!≈     - **@CODE@**
-+Sg2:â^WG^VBACK K ; ! toolâ
-+Sg3:u^WG%>s K ; ! tuálus
-+Du1:o^RVSH%>on K ; ! tuálloon
-+Du2:e^RVSH%>e K ; 		! tuállee
-+Du3:u%>s K ; 	! tuállus
-+Pl1:u%>p K ;	! tuállup
+LEXICON EVEN_IMPRT_TOOLLAD  
++Sg2:â^WG^VBACK K ;      ! toolâ
++Sg3:u^WG%>s K ;         ! tuálus
++Du1:o^RVSH%>on K ;      ! tuálloon
++Du2:e^RVSH%>e K ; 		 ! tuállee
++Du3:u%>s K ; 	         ! tuállus
++Pl1:u%>p K ;	         ! tuállup
 +Pl2:â^VBACK^RLEN%>đ K ; ! toollâđ
-+Pl3:u^RLEN%>s K ; ! tuállus
++Pl3:u^RLEN%>s K ;       ! tuállus
 
 
+!! #### LEXICON 2SYLL\_OPPAD 
 LEXICON 2SYLL_OPPAD
 +V: 2SYLL_OPPAD_V ;
 LEXICON 2SYLL_OPPAD_IV
@@ -1355,8 +1369,7 @@ LEXICON 2SYLL_OPPAD_IV
 LEXICON 2SYLL_OPPAD_TV
 +V+TV: 2SYLL_OPPAD_V ;
 
-LEXICON 2SYLL_OPPAD_V  !!≈ * **@CODE@** 12 verbs
-
+LEXICON 2SYLL_OPPAD_V  
 !! suggested stem = tuáll
 !! Impossible to see the differences in diphtong length
 
@@ -1373,7 +1386,7 @@ VINFINITES_OPPAD ; ! same as in MOONNAD
 :â^VBACK^RVSH DER_MAS ;
 +Der3+Der/Pass:u2 C_PASS_SH_RLEN ; ! ?
 
-LEXICON VINFINITES_OPPAD   !!≈     - **@CODE@**
+LEXICON VINFINITES_OPPAD   
 +Inf:â^VBACK^RVSH%>đ K ;
 !+Ind+Prs+ConNeg:â^WG^VBACK^RLEN K ;
 +Ind+Prs+ConNeg:â^WG^VBACK K ;
@@ -1400,7 +1413,7 @@ LEXICON VINFINITES_OPPAD   !!≈     - **@CODE@**
 +Ger:â^WG^VBACK^RVSH%>dijn K ;
 +Der4+Der/NomAct:â^VBACK^RVSH%>m FLAG_3LITTER ;
 
-LEXICON EVEN_IND_OPPAD   !!≈     - **@CODE@**
+LEXICON EVEN_IND_OPPAD   
 +Prs+Sg1:â^WG^VBACK^RLEN%>m K ;    	! toolâm ! uá > o
 +Prs+Sg2:a^WG^VBACK^RLEN%>h K ;     ! toolah
 +Prs+Sg3:á K ;       		! uáppá
@@ -1421,7 +1434,7 @@ LEXICON EVEN_IND_OPPAD   !!≈     - **@CODE@**
 +Prt+Pl2:â^WG^VBACK^RLEN%>id K ;	! oopáid
 +Prt+Pl3:i^VBACK^RVSH%>i5 K ;			! tollii
 
-LEXICON EVEN_POT_OPPAD !!≈     - **@CODE@**
+LEXICON EVEN_POT_OPPAD 
 +Sg1:e^WG^CLEN%>em K ; ! uáppeem, suáđheem
 +Sg2:e^WG^CLEN%>eh K ; ! uáppeeh, suáđheeh
 +Sg3:â^WG^VBACK%>š K ; ! toolâš
@@ -1432,7 +1445,7 @@ LEXICON EVEN_POT_OPPAD !!≈     - **@CODE@**
 +Pl2:â^WG^VBACK^RLEN%>švetteđ K ; ! toolâšvetteđ
 +Pl3:â^WG^VBACK^RVSH%>žeh K ; ! tolâžeh
 
-LEXICON EVEN_IMPRT_OPPAD   !!≈     - **@CODE@**
+LEXICON EVEN_IMPRT_OPPAD  
 +Sg2:â^WG^VBACK K ; ! toolâ
 +Sg3:u^WG%>s K ; ! tuálus
 +Du1:o^RVSH%>on K ; ! tuálloon
@@ -1444,7 +1457,7 @@ LEXICON EVEN_IMPRT_OPPAD   !!≈     - **@CODE@**
 
 
 
-
+!! #### LEXICON 2SYLL\_TOOHAD 38 verbs
 LEXICON 2SYLL_TOOHAD
 +V: 2SYLL_TOOHAD_V ;
 LEXICON 2SYLL_TOOHAD_IV
@@ -1452,7 +1465,7 @@ LEXICON 2SYLL_TOOHAD_IV
 LEXICON 2SYLL_TOOHAD_TV
 +V+TV: 2SYLL_TOOHAD_V ;
 
-LEXICON 2SYLL_TOOHAD_V  !!≈ * **@CODE@** 38 verbs
+LEXICON 2SYLL_TOOHAD_V  
 
 VINFINITES_MOONNAD ; !po^RVrr
 +Ind: EVEN_IND_TOOHAD ;
@@ -1468,7 +1481,7 @@ VINFINITES_MOONNAD ; !po^RVrr
 :â^VHIGH DER_MAS ;
 +Der4+Der/InchL:â^WG^VHIGH%>škyett4 4SYLL_KYETTID_DER ; ! luvâškyettiđ polâškyettiđ rosâškyettiđ
 
-LEXICON EVEN_IND_TOOHAD  !!≈     - **@CODE@**
+LEXICON EVEN_IND_TOOHAD 
 +Prs+Sg1:â^WG^VHIGH^RLEN%>m K ;
 +Prs+Sg2:a^WG^VHIGH^RLEN%>h K ;
 +Prs+Sg3:á^CSH K ;
@@ -1490,7 +1503,7 @@ LEXICON EVEN_IND_TOOHAD  !!≈     - **@CODE@**
 +Prt+Pl3:i^CLEN^VHIGH%>i3 K ;
 
 
-LEXICON EVEN_POT_TOOHAD !!≈     - **@CODE@**
+LEXICON EVEN_POT_TOOHAD 
 +Sg1:e^WG^CLEN%>em K ;
 +Sg2:e^WG^CLEN%>eh K ;
 +Sg3:â^WG^VHIGH^RLEN%>š K ;
@@ -1501,6 +1514,7 @@ LEXICON EVEN_POT_TOOHAD !!≈     - **@CODE@**
 +Pl2:â^WG^VHIGH^RLEN%>švetteđ K ;
 +Pl3:â^WG^VHIGH%>žeh K ;
 
+!! #### LEXICON 2SYLL\_MMOONNAD 24 verbs
 LEXICON 2SYLL_MOONNAD
 +V: 2SYLL_MOONNAD_V ;
 LEXICON 2SYLL_MOONNAD_IV
@@ -1508,7 +1522,7 @@ LEXICON 2SYLL_MOONNAD_IV
 LEXICON 2SYLL_MOONNAD_TV
 +V+TV: 2SYLL_MOONNAD_V ;
 
-LEXICON 2SYLL_MOONNAD_V  !!≈ * **@CODE@** 24 verbs
+LEXICON 2SYLL_MOONNAD_V  
 
 VINFINITES_MOONNAD ;
 +Ind: EVEN_IND_MOONNAD ;
@@ -1523,7 +1537,7 @@ VINFINITES_MOONNAD ;
 !DERL+Der1+Der/l:âl 3_DERIVED_L ;
 :â^CSH^VHIGH^RVSH DER_MAS ;
 
-LEXICON VINFINITES_MOONNAD  !!≈     - **@CODE@**
+LEXICON VINFINITES_MOONNAD 
 +Inf:â^VHIGH^RLEN%>đ K ;
 
 +Ind+Prs+ConNeg:â^WG^VHIGH^RLEN K ;
@@ -1552,7 +1566,7 @@ LEXICON VINFINITES_MOONNAD  !!≈     - **@CODE@**
 +Der4+Der/NomAct:â^VHIGH^RLEN%>m FLAG_3LITTER ;
 ! Ger missing
 
-LEXICON EVEN_IND_MOONNAD  !!≈     - **@CODE@**
+LEXICON EVEN_IND_MOONNAD 
 +Prs+Sg1:â^WG^VHIGH^RLEN%>m K ;
 +Prs+Sg2:a^WG^VHIGH^RLEN%>h K ;
 +Prs+Sg3:á^CSH K ;
@@ -1573,7 +1587,7 @@ LEXICON EVEN_IND_MOONNAD  !!≈     - **@CODE@**
 +Prt+Pl2:â^WG^VHIGH^RLEN%>id K ;
 +Prt+Pl3:i^VHIGH%>i3 K ;
 
-LEXICON EVEN_IMPRT_MOONNAD  !!≈     - **@CODE@**
+LEXICON EVEN_IMPRT_MOONNAD 
 +Sg2:â^WG^VHIGH^RLEN K ;
 +Sg3:o^WG%>s K ;
 +Du1:o^CLEN%>on K ;
@@ -1583,7 +1597,7 @@ LEXICON EVEN_IMPRT_MOONNAD  !!≈     - **@CODE@**
 +Pl2:â^VHIGH^RLEN%>đ K ;
 +Pl3:o^CLEN%>os K ;
 
-LEXICON EVEN_POT_MOONNAD !!≈     - **@CODE@**
+LEXICON EVEN_POT_MOONNAD 
 +Sg1:e^WG^RLEN%>em K ;
 +Sg2:e^WG^RLEN%>eh K ;
 +Sg3:â^WG^VHIGH^RLEN%>š K ;
@@ -1594,6 +1608,8 @@ LEXICON EVEN_POT_MOONNAD !!≈     - **@CODE@**
 +Pl2:â^WG^VHIGH^RLEN%>švetteđ K ;
 +Pl3:â^WG^VHIGH%>žeh K ;
 
+
+!! #### LEXICON 2SYLL\_VIIRRAD 
 LEXICON 2SYLL_VIIRRAD
 +V: 2SYLL_VIIRRAD_V ;
 LEXICON 2SYLL_VIIRRAD_IV
@@ -1601,7 +1617,7 @@ LEXICON 2SYLL_VIIRRAD_IV
 !LEXICON 2SYLL_VIIRRAD_TV
 !+V+TV: 2SYLL_VIIRRAD_V ;
 
-LEXICON 2SYLL_VIIRRAD_V  !!≈ * **@CODE@** 20 verbs
+LEXICON 2SYLL_VIIRRAD_V
 VINFINITES_VIIRRAD ;
 +Ind: EVEN_IND_VIIRRAD ;
 +Pot+Prs: EVEN_POT_VIIRRAD ;
@@ -1615,7 +1631,7 @@ VINFINITES_VIIRRAD ;
 :â^CSH^RVSH DER_MAS ;
 +Der3+Der/Pass:u2 C_PASS_SH_RVSH ; !virruđ
 
-LEXICON VINFINITES_VIIRRAD  !!≈     - **@CODE@** OK
+LEXICON VINFINITES_VIIRRAD  
 +Inf:â^RLEN%>đ K ; ! viirrâđ
 +Ind+Prs+ConNeg:â^WG^RLEN K ; ! viirâ
 +Ind+Prt+ConNeg:â^RLEN%>m K ; ! viirrâm
@@ -1641,28 +1657,28 @@ LEXICON VINFINITES_VIIRRAD  !!≈     - **@CODE@** OK
 +Actio+Nom:â^RLEN%>m NOMACT ;
 +Der4+Der/NomAct:â^RLEN%>m FLAG_3LITTER ;
 
-LEXICON EVEN_IND_VIIRRAD   !!≈     - **@CODE@**
+LEXICON EVEN_IND_VIIRRAD   
 +Prs+Sg1:â^WG^RLEN%>m K ;     	! viirâm
 +Prs+Sg2:â^WG^RLEN%>h K ;     	! viirah
-+Prs+Sg3:á^CSH K ;       			! virá
-+Prs+Du1:e^CLEN%>en K ;  				! virreen njihheen
-+Prs+Du2:â^CSH%>vettee K ; 	! virâvettee
-+Prs+Du3:â^RLEN%>v K ;          	! viirrâv
-+Prs+Pl1:â^RLEN%>p K ;            ! viirrâp
-+Prs+Pl2:â^CSH^RVSH%>vetteđ K ;  ! virâvetteđ
-+Prs+Pl3:e^CSH^RVSH%>h K ;       ! vireh
++Prs+Sg3:á^CSH K ;       		! virá
++Prs+Du1:e^CLEN%>en K ;  		! virreen njihheen
++Prs+Du2:â^CSH%>vettee K ; 		! virâvettee
++Prs+Du3:â^RLEN%>v K ;         	! viirrâv
++Prs+Pl1:â^RLEN%>p K ;          ! viirrâp
++Prs+Pl2:â^CSH^RVSH%>vetteđ K ; ! virâvetteđ
++Prs+Pl3:e^CSH^RVSH%>h K ;      ! vireh
 
-+Prt+Sg1:i^RLEN%>m K ; ! viirrim
-+Prt+Sg2:i^RLEN%>h K ; ! viirrih
-+Prt+Sg3:â^WG^RLEN%>i K ; ! viirâi
-+Prt+Du1:á^WG^RLEN%>im K ; ! viiráim
-+Prt+Du2:á^WG^RLEN%>id K ; ! viiráid
-+Prt+Du3:á^WG^RLEN%>in K ; ! viiráin
-+Prt+Pl1:â^WG^RLEN%>im K ; ! viirâim
-+Prt+Pl2:â^WG^RLEN%>id K ; ! viirâid
-+Prt+Pl3:i^CLEN^RVSH%>i5 K ; 	! virrii njihhii
++Prt+Sg1:i^RLEN%>m K ;       ! viirrim
++Prt+Sg2:i^RLEN%>h K ;       ! viirrih
++Prt+Sg3:â^WG^RLEN%>i K ;    ! viirâi
++Prt+Du1:á^WG^RLEN%>im K ;   ! viiráim
++Prt+Du2:á^WG^RLEN%>id K ;   ! viiráid
++Prt+Du3:á^WG^RLEN%>in K ;   ! viiráin
++Prt+Pl1:â^WG^RLEN%>im K ;   ! viirâim
++Prt+Pl2:â^WG^RLEN%>id K ;   ! viirâid
++Prt+Pl3:i^CLEN^RVSH%>i5 K ; ! virrii njihhii
 
-LEXICON EVEN_POT_VIIRRAD !!≈     - **@CODE@**
+LEXICON EVEN_POT_VIIRRAD 
 +Sg1:e^WG^RLEN%>em K ;
 +Sg2:e^WG^RLEN%>eh K ;
 +Sg3:â^WG^RLEN%>š K ;
@@ -1673,7 +1689,7 @@ LEXICON EVEN_POT_VIIRRAD !!≈     - **@CODE@**
 +Pl2:â^WG^RLEN%>švetteđ K ;
 +Pl3:â^WG%>žeh K ;
 
-LEXICON EVEN_IMPRT_VIIRRAD   !!≈     - **@CODE@**
+LEXICON EVEN_IMPRT_VIIRRAD
 +Sg2:â^WG^RLEN K ;
 +Sg3:o^WG^RVSH%>s K ;
 +Du1:o^CLEN^RVSH%>on K ;
@@ -1684,6 +1700,7 @@ LEXICON EVEN_IMPRT_VIIRRAD   !!≈     - **@CODE@**
 +Pl3:o^CLEN^RVSH%>os K ;
 
 
+!! #### LEXICON 2SYLL\_VIISSAD 
 LEXICON 2SYLL_VIISSAD
 +V: 2SYLL_VIISSAD_V ;
 
@@ -1693,7 +1710,7 @@ LEXICON 2SYLL_VIISSAD
 LEXICON 2SYLL_VIISSAD_TV
 +V+TV: 2SYLL_VIISSAD_V ;
 
-LEXICON 2SYLL_VIISSAD_V  !!≈ * **@CODE@** 20 verbs
+LEXICON 2SYLL_VIISSAD_V  
 VINFINITES_VIISSAD ;
 +Ind: EVEN_IND_VIISSAD ;
 +Pot+Prs: EVEN_POT_VIISSAD ;
@@ -1707,7 +1724,7 @@ VINFINITES_VIISSAD ;
 :â^CSH^RVSH DER_MAS ;
 +Der3+Der/Pass:u2 C_PASS_SH_RVSH ; !vuoššui
 
-LEXICON VINFINITES_VIISSAD  !!≈     - **@CODE@**
+LEXICON VINFINITES_VIISSAD 
 +Inf:â^RLEN%>đ K ;  ! No VHIGH for i stem
 +Ind+Prs+ConNeg:â^WG^RLEN K ;
 +Ind+Prt+ConNeg:â^RLEN%>m K ;
@@ -1734,20 +1751,20 @@ LEXICON VINFINITES_VIISSAD  !!≈     - **@CODE@**
 +Actio+Nom:â^RLEN%>m NOMACT ;
 +Der4+Der/NomAct:â%>m FLAG_3LITTER ;
 
-LEXICON EVEN_IND_VIISSAD   !!≈     - **@CODE@**
+LEXICON EVEN_IND_VIISSAD   
 +Prs+Sg1:â^WG^RLEN%>m K ;     	! viišâm
 +Prs+Sg2:â^WG^RLEN%>h K ;     	! viišah
-+Prs+Sg3:á^CSH K ;       			! višá
-+Prs+Du1:e^CLEN%>en K ;  				! viššeen njihheen
-+Prs+Du2:â^CSH^RVSH%>vettee K ; 	! višâvettee
-+Prs+Du3:â^RLEN%>v K ;          	! viiššâv
-+Prs+Pl1:â^RLEN%>p K ;            ! viiššâp
-+Prs+Pl2:â^CSH^RVSH%>vetteđ K ;  ! višâvetteđ
-+Prs+Pl3:e^CSH^RVSH%>h K ;       ! višeh
++Prs+Sg3:á^CSH K ;       		! višá
++Prs+Du1:e^CLEN%>en K ;  		! viššeen njihheen
++Prs+Du2:â^CSH^RVSH%>vettee K ; ! višâvettee
++Prs+Du3:â^RLEN%>v K ;          ! viiššâv
++Prs+Pl1:â^RLEN%>p K ;          ! viiššâp
++Prs+Pl2:â^CSH^RVSH%>vetteđ K ; ! višâvetteđ
++Prs+Pl3:e^CSH^RVSH%>h K ;      ! višeh
 
-+Prt+Sg1:i^RLEN%>m K ; ! viiššim
-+Prt+Sg2:i^RLEN%>h K ; ! viišših
-+Prt+Sg3:â^WG^RLEN%>i K ; ! viišâi
++Prt+Sg1:i^RLEN%>m K ; 		! viiššim
++Prt+Sg2:i^RLEN%>h K ; 		! viišših
++Prt+Sg3:â^WG^RLEN%>i K ; 	! viišâi
 +Prt+Du1:á^WG^RLEN%>im K ; ! viišáim
 +Prt+Du2:á^WG^RLEN%>id K ; ! viišáid
 +Prt+Du3:á^WG^RLEN%>in K ; ! viišáin
@@ -1755,7 +1772,7 @@ LEXICON EVEN_IND_VIISSAD   !!≈     - **@CODE@**
 +Prt+Pl2:â^WG^RLEN%>id K ; ! viišâid
 +Prt+Pl3:i^CLEN^RVSH%>i5 K ; 	! viššii njihhii
 
-LEXICON EVEN_POT_VIISSAD !!≈     - **@CODE@**
+LEXICON EVEN_POT_VIISSAD 
 +Sg1:e^WG^RLEN%>em K ;
 +Sg2:e^WG^RLEN%>eh K ;
 +Sg3:â^WG^RLEN%>š K ;
@@ -1766,7 +1783,7 @@ LEXICON EVEN_POT_VIISSAD !!≈     - **@CODE@**
 +Pl2:â^WG^RLEN%>švetteđ K ;
 +Pl3:â^WG^RVSH%>žeh K ;
 
-LEXICON EVEN_IMPRT_VIISSAD   !!≈     - **@CODE@**
+LEXICON EVEN_IMPRT_VIISSAD  
 +Sg2:â^WG^RLEN K ;
 +Sg3:o^WG^RVSH%>s K ;
 +Du1:o^CLEN^RVSH%>on K ;
@@ -1778,12 +1795,13 @@ LEXICON EVEN_IMPRT_VIISSAD   !!≈     - **@CODE@**
 +Pl3:o^CLEN^RVSH%>os K ;
 
 
+!! #### LEXICON 2SYLL\_CIEPPAD  like 2SYLL_KIESSAD but less CSH 4 verbs. 34 verbs
 LEXICON 2SYLL_CIEPPAD
 +V: 2SYLL_CIEPPAD_V ;
 LEXICON 2SYLL_CIEPPAD_TV
 +V+TV: 2SYLL_CIEPPAD_V ;
 
-LEXICON 2SYLL_CIEPPAD_V  !!≈ * **@CODE@** like 2SYLL_KIESSAD but less CSH 4 verbs. 34 verbs
+LEXICON 2SYLL_CIEPPAD_V 
 :  VINFINITES_VIEZZAD ;
 +Ind+Prs: EVEN_IND_PRS_CIEPPAD ;
 +Ind+Prt: EVEN_IND_PRT_VIEZZAD ;
@@ -1798,7 +1816,7 @@ LEXICON 2SYLL_CIEPPAD_V  !!≈ * **@CODE@** like 2SYLL_KIESSAD but less CSH 4 ve
 :â^CSH^RVSH DER_MAS ;
 +Der3+Der/Pass:u2 C_PASS_SH_RVSH ; !vuoššui
 
-LEXICON EVEN_IND_PRS_CIEPPAD    !!≈     - **@CODE@**
+LEXICON EVEN_IND_PRS_CIEPPAD   
 +Sg1:â^WG%>m K ;
 +Sg2:â^WG%>h K ;
 +Sg3:á^VHIGH K ;
@@ -1817,7 +1835,7 @@ LEXICON 2SYLL_KIESSAD_IV
 LEXICON 2SYLL_KIESSAD_TV
 +V+TV: 2SYLL_KIESSAD_V ;
 
-LEXICON 2SYLL_KIESSAD_V  !!≈ * **@CODE@**
+LEXICON 2SYLL_KIESSAD_V  
 VINFINITES_KIESSAD ;
 +Ind+Prs: EVEN_IND_PRS_KIESSAD ;
 +Ind+Prt: EVEN_IND_PRT_VIEZZAD ;
@@ -1870,7 +1888,7 @@ LEXICON EVEN_IND_PRS_KIESSAD
 +Pl3:i^CSH%>h K ;
 
 
-
+!! #### LEXICON 2SYLL\_VUOLLAD  ye to ua vyešš 71 verbs
 LEXICON 2SYLL_VUOLLAD
 +V: 2SYLL_VUOLLAD_V ;
 LEXICON 2SYLL_VUOLLAD_IV
@@ -1878,7 +1896,7 @@ LEXICON 2SYLL_VUOLLAD_IV
 LEXICON 2SYLL_VUOLLAD_TV
 +V+TV: 2SYLL_VUOLLAD_V ;
 
-LEXICON 2SYLL_VUOLLAD_V  !!≈ * **@CODE@** ye to ua vyešš 71 verbs
+LEXICON 2SYLL_VUOLLAD_V  
 VINFINITES_2SYLL_VUOLLAD ;
 +Ind: EVEN_IND_2SYLL_VUOLLAD ;
 +Cond+Prs:â^WG^VBACK^RLEN%> EVEN_COND ;
@@ -1892,7 +1910,7 @@ VINFINITES_2SYLL_VUOLLAD ;
 :â^CSH^VBACK DER_MAS ;
 +Der3+Der/Pass:u2 C_PASS_SH_RLEN ; !
 
-LEXICON VINFINITES_2SYLL_VUOLLAD  !!≈     - **@CODE@**
+LEXICON VINFINITES_2SYLL_VUOLLAD 
 +Inf:â^VBACK^RLEN%>đ K ; ! xxx remove RLEN
 +Ind+Prs+ConNeg:â^WG^VBACK^RLEN K ;
 +Ind+Prt+ConNeg:â^VBACK^RLEN%>m K ;
@@ -1918,7 +1936,7 @@ LEXICON VINFINITES_2SYLL_VUOLLAD  !!≈     - **@CODE@**
 +Ger:â^WG^VBACK^RLEN%>dijn K ;
 +Der4+Der/NomAct:â^VBACK^RLEN%>m FLAG_3LITTER ;
 
-LEXICON EVEN_IND_2SYLL_VUOLLAD !!≈     - **@CODE@**
+LEXICON EVEN_IND_2SYLL_VUOLLAD 
 +Prs+Sg1:â^WG^VBACK^RLEN%>m K ;
 +Prs+Sg2:â^WG^VBACK^RLEN%>h K ;
 +Prs+Sg3:á^CSH^VHIGH K ;      ! FORMER: ^CSH^VHIGH
@@ -1940,7 +1958,7 @@ LEXICON EVEN_IND_2SYLL_VUOLLAD !!≈     - **@CODE@**
 +Prt+Pl2:â^WG^VBACK^RLEN%>id K ;
 +Prt+Pl3:i^CLEN^VBACK^RLEN%>i3 K ;
 
-LEXICON EVEN_POT_2SYLL_VUOLLAD !!≈     - **@CODE@**
+LEXICON EVEN_POT_2SYLL_VUOLLAD 
 +Sg1:e^WG^VBACK^RLEN%>em K ;
 +Sg2:e^WG^VBACK^RLEN%>eh K ;
 +Sg3:â^WG^VBACK^RLEN%>š K ;
@@ -1951,21 +1969,23 @@ LEXICON EVEN_POT_2SYLL_VUOLLAD !!≈     - **@CODE@**
 +Pl2:â^WG^VBACK^RLEN%>švetteđ K ;
 +Pl3:â^WG^VBACK^RLEN%>žeh K ;
 
-LEXICON EVEN_IMPRT_2SYLL_VUOLLAD !!≈     - **@CODE@**
+LEXICON EVEN_IMPRT_2SYLL_VUOLLAD 
 +Sg2:â^WG^VBACK^RLEN K ;    !
 +Sg3:u^WG^VHIGH%>s K ; !
 +Du1:o^VHIGH%>on K ;    ! uá
-+Du2:e%>e K ;     ! ye
++Du2:e%>e K ;     		! ye
 +Du3:u^VHIGH%>s K ;     ! uá
 +Pl1:u^VHIGH%>p K ;     ! uá
 +Pl2:â^VBACK^RLEN%>đ K ;     !
 +Pl3:u^VHIGH%>s K ;     ! uá
 
 
-LEXICON 2SYLL_LUOIKKAD_TV  !!≈ * **@CODE@** passive, no Der/l, otherw like ruottad, 3 verbs
+!! #### LEXICON 2SYLL\_LUOIKKAD RUOTTAD\_LUOIKKAD, passive, no Der/l, otherw like ruottad, 3 verbs
+LEXICON 2SYLL_LUOIKKAD_TV
 +V+TV+Der3+Der/Pass:u2 C_PASS_SH_RLEN ; !
 +V+TV: 2SYLL_RUOTTAD_LUOIKKAD ;
 
+!! #### LEXICON 2SYLL\_RUOTTAD
 LEXICON 2SYLL_RUOTTAD
 +V: 2SYLL_RUOTTAD_V ;
 LEXICON 2SYLL_RUOTTAD_IV
@@ -1973,11 +1993,12 @@ LEXICON 2SYLL_RUOTTAD_IV
 LEXICON 2SYLL_RUOTTAD_TV
 +V+TV: 2SYLL_RUOTTAD_V ;
 
-LEXICON 2SYLL_RUOTTAD_V  !!≈ * **@CODE@** no passive, but Der/l. 4 verbs
+LEXICON 2SYLL_RUOTTAD_V  ! no passive, but Der/l. 4 verbs
 !DERL+Der1+Der/l:â^VBACK^RLEN%>l 3_DERIVED_VBACK ; ! Look at this, Trond. ! 3_DERIVED_VBACK
 2SYLL_RUOTTAD_LUOIKKAD ;
 
-LEXICON 2SYLL_RUOTTAD_LUOIKKAD  !!≈ * **@CODE@** no passive
+!! #### LEXICON 2SYLL\_LUOIKKAD, no passive
+LEXICON 2SYLL_RUOTTAD_LUOIKKAD  
 VINFINITES_2SYLL_RUOTTAD ;
 +Ind: EVEN_IND_2SYLL_RUOTTAD ;
 +Cond+Prs:â^WG^VBACK^RLEN%> EVEN_COND ;
@@ -1990,7 +2011,7 @@ VINFINITES_2SYLL_RUOTTAD ;
 ! Der/l declared above
 ! Der/Pass ??
 
-LEXICON VINFINITES_2SYLL_RUOTTAD  !!≈     - **@CODE@**
+LEXICON VINFINITES_2SYLL_RUOTTAD 
 +Inf:â^VBACK^RLEN%>đ K ;
 +Ind+Prs+ConNeg:â^WG^VBACK^RLEN K ;
 +Ind+Prt+ConNeg:â^VBACK^RLEN%>m K ;
@@ -2016,7 +2037,7 @@ LEXICON VINFINITES_2SYLL_RUOTTAD  !!≈     - **@CODE@**
 +Ger:â^WG^VBACK^RLEN%>dijn K ;
 +Der4+Der/NomAct:â^VBACK^RLEN%>m FLAG_3LITTER ; !luoikkâmist
 
-LEXICON EVEN_IND_2SYLL_RUOTTAD  !!≈     - **@CODE@**
+LEXICON EVEN_IND_2SYLL_RUOTTAD  
 +Prs+Sg1:â^WG^VBACK^RLEN%>m K ;
 +Prs+Sg2:â^WG^VBACK^RLEN%>h K ;
 +Prs+Sg3:á^VHIGH K ;    !
@@ -2037,7 +2058,7 @@ LEXICON EVEN_IND_2SYLL_RUOTTAD  !!≈     - **@CODE@**
 +Prt+Pl2:â^WG^VBACK^RLEN%>id K ;
 +Prt+Pl3:i^VBACK^RLEN%>i3 K ;
 
-LEXICON EVEN_POT_2SYLL_RUOTTAD !!≈     - **@CODE@**
+LEXICON EVEN_POT_2SYLL_RUOTTAD 
 +Sg1:e^WG^CLEN%>em K ;
 +Sg2:e^WG^CLEN%>eh K ;
 +Sg3:â^WG^VBACK^RLEN%>š K ;
@@ -2048,7 +2069,7 @@ LEXICON EVEN_POT_2SYLL_RUOTTAD !!≈     - **@CODE@**
 +Pl2:â^WG^VBACK^RLEN%>švetteđ K ;
 +Pl3:â^WG^VBACK^RLEN%>žeh K ;
 
-LEXICON EVEN_IMPRT_2SYLL_RUOTTAD !!≈     - **@CODE@**
+LEXICON EVEN_IMPRT_2SYLL_RUOTTAD 
 +Sg2:â^WG^VBACK^RLEN K ;    !
 +Sg3:u^VHIGH%>s K ; !
 +Du1:o^VHIGH%>on K ;    ! uá
@@ -2061,6 +2082,7 @@ LEXICON EVEN_IMPRT_2SYLL_RUOTTAD !!≈     - **@CODE@**
 
 !! ### ED verbs
 
+!! #### LEXICON 2SYLL\_KALVED kalveđ without RLEN Prs+Sg1. 8 verbs
 LEXICON 2SYLL_KALVED
 +V: 2SYLL_KALVED_V ;
 LEXICON 2SYLL_KALVED_IV
@@ -2068,7 +2090,7 @@ LEXICON 2SYLL_KALVED_IV
 LEXICON 2SYLL_KALVED_TV
 +V+TV: 2SYLL_KALVED_V ;
 
-LEXICON 2SYLL_KALVED_V  !!≈ * **@CODE@** kalveđ without RLEN Prs+Sg1. 8 verbs
+LEXICON 2SYLL_KALVED_V 
 : VINFINITES_PIHTED ;
 +Ind: EVEN_IND_PIHTED ;
 +Cond+Prs:á^WG%> EVEN_COND ; ! anneeđ a, jotteeđ á.
@@ -2082,6 +2104,8 @@ LEXICON 2SYLL_KALVED_V  !!≈ * **@CODE@** kalveđ without RLEN Prs+Sg1. 8 verbs
 :e^EA DER_MAS ; ! á for root oiu, e for root a
 +Der3+Der/Pass:u2 C_PASS_SH_RVSH ; ! aRV  o  a
 
+
+!! #### LEXICON 2SYLL\_KALVED  with RLEN Prs+Sg1. 31 verbs
 LEXICON 2SYLL_POHTED
 +V: 2SYLL_POHTED_V ;
 LEXICON 2SYLL_POHTED_IV
@@ -2089,7 +2113,7 @@ LEXICON 2SYLL_POHTED_IV
 LEXICON 2SYLL_POHTED_TV
 +V+TV: 2SYLL_POHTED_V ;
 
-LEXICON 2SYLL_POHTED_V  !!≈ * **@CODE@** with RLEN Prs+Sg1. 31 verbs
+LEXICON 2SYLL_POHTED_V  
 VINFINITES_ED ;
 +Ind: EVEN_IND_ED ;
 +Pot+Prs: EVEN_POT_POHTED ;
@@ -2103,7 +2127,7 @@ VINFINITES_ED ;
 :á DER_MAS ;
 +Der3+Der/Pass:u2 C_PASS_SH_POHTED ; !
 
-LEXICON VINFINITES_ED   !!≈     - **@CODE@**
+LEXICON VINFINITES_ED  
 +Inf:e%>đ K ;
 +Ind+Prs+ConNeg:e^WG K ;
 +Ind+Prt+ConNeg:á%>m K ;
@@ -2130,7 +2154,7 @@ LEXICON VINFINITES_ED   !!≈     - **@CODE@**
 +Ger:e^WG%>dijn K ;
 +Der4+Der/NomAct:e%>m FLAG_3LITTER ;
 
-LEXICON EVEN_IND_ED !!≈     - **@CODE@** kalveđ
+LEXICON EVEN_IND_ED 
 +Prs+Sg1+Err/Orth:á^WG^RLEN%>m K ;
 +Prs+Sg1:á^WG%>m K ;
 +Prs+Sg2+Err/Orth:á^WG^RLEN%>h K ;
@@ -2153,7 +2177,7 @@ LEXICON EVEN_IND_ED !!≈     - **@CODE@** kalveđ
 +Prt+Pl2:i^WG^RLEN%>id K ;
 +Prt+Pl3:i%>i3 K ;
 
-LEXICON EVEN_POT_POHTED !!≈     - **@CODE@**
+LEXICON EVEN_POT_POHTED 
 +Sg1:e%>em K ;
 +Sg2:e%>eh K ;
 +Sg3:i^WG^RLEN%>š K ;
@@ -2164,7 +2188,7 @@ LEXICON EVEN_POT_POHTED !!≈     - **@CODE@**
 +Pl2:i^WG^RLEN%>švetteđ K ;
 +Pl3:i^WG%>žeh K ;
 
-LEXICON EVEN_POT_ED !!≈     - **@CODE@** ... this one to be relocated to _ED
+LEXICON EVEN_POT_ED ! this one to be relocated to _ED
 +Sg1:e%>em K ;
 +Sg2:e%>eh K ;
 +Sg3:i^WG^VHIGH^RLEN%>š K ;
@@ -2176,7 +2200,7 @@ LEXICON EVEN_POT_ED !!≈     - **@CODE@** ... this one to be relocated to _ED
 +Pl3:i^WG^VHIGH%>žeh K ;
 
 
-LEXICON EVEN_IMPRT_ED  !!≈     - **@CODE@**
+LEXICON EVEN_IMPRT_ED 
 +Sg2:e^WG K ;
 +Sg3:o^WG%>s K ;
 +Du1:o^CLEN%>on K ;
@@ -2187,6 +2211,7 @@ LEXICON EVEN_IMPRT_ED  !!≈     - **@CODE@**
 +Pl3:o^CLEN%>os K ;
 
 
+!! #### LEXICON 2SYLL\_PIHTED 82 verbs
 LEXICON 2SYLL_PIHTED
 +V: 2SYLL_PIHTED_V ;
 LEXICON 2SYLL_PIHTED_IV
@@ -2194,7 +2219,7 @@ LEXICON 2SYLL_PIHTED_IV
 LEXICON 2SYLL_PIHTED_TV
 +V+TV: 2SYLL_PIHTED_V ;
 
-LEXICON 2SYLL_PIHTED_V  !!≈ * **@CODE@**  82 verbs
+LEXICON 2SYLL_PIHTED_V 
 VINFINITES_PIHTED ;
 +Ind: EVEN_IND_PIHTED ;
 +Cond+Prs:á^WG%> EVEN_COND ; ! anneeđ a, jotteeđ á.
@@ -2208,7 +2233,7 @@ VINFINITES_PIHTED ;
 :á DER_MAS ;
 +Der3+Der/Pass:u2^CLEN C_PASS_SH ; ! sirdum sirdojii sirdui sirdoo kalvojeh njuvdum čiptum nobduđ
 
-LEXICON VINFINITES_PIHTED   !!≈     - **@CODE@**
+LEXICON VINFINITES_PIHTED  
 +Inf:e%>đ K ;
 +Ind+Prs+ConNeg:e^WG K ;
 +Ind+Prt+ConNeg:á%>m K ;
@@ -2235,7 +2260,7 @@ LEXICON VINFINITES_PIHTED   !!≈     - **@CODE@**
 +Ger:e^WG%>dijn K ;
 +Der4+Der/NomAct:e%>m FLAG_3LITTER ;
 
-LEXICON EVEN_IND_PIHTED   !!≈     - **@CODE@**
+LEXICON EVEN_IND_PIHTED   
 +Prs+Sg1:á^WG%>m K ;
 +Prs+Sg2:á^WG%>h K ;
 +Prs+Sg3:á K ;
@@ -2256,7 +2281,7 @@ LEXICON EVEN_IND_PIHTED   !!≈     - **@CODE@**
 +Prt+Pl2:i^WG^VHIGH^RLEN%>jd K ;
 +Prt+Pl3:i^CLEN^VHIGH%>i3 K ;
 
-LEXICON EVEN_POT_PIHTED !!≈     - **@CODE@**
+LEXICON EVEN_POT_PIHTED !
 +Sg1:e%>em K ;
 +Sg2:e%>eh K ;
 +Sg3:i^WG^VHIGH^RLEN%>š K ;
@@ -2267,7 +2292,7 @@ LEXICON EVEN_POT_PIHTED !!≈     - **@CODE@**
 +Pl2:i^WG^VHIGH^RLEN%>švetteđ K ;
 +Pl3:i^WG^VHIGH^RVSH%>žeh K ;
 
-LEXICON EVEN_IMPRT_PIHTED   !!≈     - **@CODE@**
+LEXICON EVEN_IMPRT_PIHTED   !
 !+Sg2:e^WG^VHIGH K ;
 +Sg2:e^WG K ;
 +Sg3:o^WG%>s K ;
@@ -2281,6 +2306,7 @@ LEXICON EVEN_IMPRT_PIHTED   !!≈     - **@CODE@**
 
 !! ### EED verbs
 
+!
 LEXICON 2SYLL_JOTTEED
 +V: 2SYLL_JOTTEED_V ;
 LEXICON 2SYLL_JOTTEED_IV
@@ -2288,7 +2314,7 @@ LEXICON 2SYLL_JOTTEED_IV
 LEXICON 2SYLL_JOTTEED_TV
 +V+TV: 2SYLL_JOTTEED_V ;
 
-LEXICON 2SYLL_JOTTEED_V  !!≈     - **@CODE@** . 27 verbs
+LEXICON 2SYLL_JOTTEED_V  ! . 27 verbs
 VINFINITES_EED ;
 +Ind: EVEN_IND_EED ;
 +Cond+Prs:á^WG%> EVEN_COND ; ! anneeđ a, jotteeđ á.
@@ -2300,7 +2326,7 @@ VINFINITES_EED ;
 :á^CSH DER_MAS ;
 +Der3+Der/Pass:u2 C_PASS_SH_RVSH ; !paččojeh kođđojeh
 
-LEXICON VINFINITES_EED   !!≈     - **@CODE@**
+LEXICON VINFINITES_EED   !
 +Inf:e^CLEN%>eđ K ;
 +Ind+Prs+ConNeg:e^WG K ;
 +Ind+Prt+ConNeg:á^CLEN%>ám K ;
@@ -2327,7 +2353,7 @@ LEXICON VINFINITES_EED   !!≈     - **@CODE@**
 +Ger:e^WG%>dijn K ;
 +Der4+Der/NomAct:e^CLEN%>em FLAG_3EEMEED ;
 
-LEXICON EVEN_IND_EED   !!≈     - **@CODE@**
+LEXICON EVEN_IND_EED   !
 +Prs+Sg1:á^WG%>m K ;
 +Prs+Sg2:á^WG%>h K ;
 +Prs+Sg3:á^CSH K ;
@@ -2348,7 +2374,7 @@ LEXICON EVEN_IND_EED   !!≈     - **@CODE@**
 +Prt+Pl2:i^WG^VHIGH^RLEN%>jd K ;
 +Prt+Pl3:i^CLEN^VHIGH%>i3 K ;
 
-LEXICON EVEN_POT_EED !!≈     - **@CODE@**
+LEXICON EVEN_POT_EED !
 +Sg1:e^WG^RLEN%>em K ;
 +Sg2:e^WG^RLEN%>eh K ;
 +Sg3:i^WG^VHIGH^RLEN%>š K ;
@@ -2359,7 +2385,7 @@ LEXICON EVEN_POT_EED !!≈     - **@CODE@**
 +Pl2:i^WG^VHIGH^RLEN%>švetteđ K ;
 +Pl3:i^WG^VHIGH^RVSH%>žeh K ;
 
-LEXICON EVEN_IMPRT_EED  !!≈     - **@CODE@**
+LEXICON EVEN_IMPRT_EED  !
 +Sg2:e^WG K ;
 +Sg3:o^WG%>s K ;
 +Du1:o^CLEN%>on K ;
@@ -2376,7 +2402,7 @@ LEXICON 2SYLL_PAHHEED
 LEXICON 2SYLL_PAHHEED_TV
 +V+TV: 2SYLL_PAHHEED_V ;
 
-LEXICON 2SYLL_PAHHEED_V  !!≈     - **@CODE@** yaml anneed. 2 verbs
+LEXICON 2SYLL_PAHHEED_V  ! yaml anneed. 2 verbs
 VINFINITES_PAHHEED ;
 +Ind: EVEN_IND_PAHHEED ;
 +Cond+Prs:á^WG%> EVEN_COND ; ! anneeđ a, jotteeđ á.
@@ -2391,7 +2417,7 @@ VINFINITES_PAHHEED ;
 +Der3+Der/Pass:u2^CLEN C_PASS_SH ; !paččojeh kođđojeh
 
 
-LEXICON VINFINITES_PAHHEED  !!≈     - **@CODE@**
+LEXICON VINFINITES_PAHHEED  !
 +Inf:e%>eđ K ; ! CLEN away
 +Ind+Prs+ConNeg:e^WG K ;
 +Ind+Prt+ConNeg:á%>ám K ;
@@ -2418,7 +2444,7 @@ LEXICON VINFINITES_PAHHEED  !!≈     - **@CODE@**
 +Ger:e^WG%>dijn K ;
 +Der4+Der/NomAct:e%>em FLAG_3EEMEED ;
 
-LEXICON EVEN_IND_PAHHEED   !!≈     - **@CODE@**
+LEXICON EVEN_IND_PAHHEED   !
 +Prs+Sg1:á^WG%>m K ;
 +Prs+Sg2:á^WG%>h K ;
 +Prs+Sg3:á^CSH K ;
@@ -2440,7 +2466,7 @@ LEXICON EVEN_IND_PAHHEED   !!≈     - **@CODE@**
 +Prt+Pl3:i^CLEN^VHIGH%>i3 K ;
 
 
-LEXICON EVEN_IMPRT_PAHHEED   !!≈     - **@CODE@**
+LEXICON EVEN_IMPRT_PAHHEED   !
 +Sg2:e^WG K ;
 +Sg3:o^WG%>s K ;
 +Du1:o%>on K ;
@@ -2460,7 +2486,7 @@ LEXICON 2SYLL_UADDID_IV
 LEXICON 2SYLL_UADDID_TV
 +V+TV: 2SYLL_UADDID_V ;
 
-LEXICON 2SYLL_UADDID_V  !!≈ * **@CODE@** 3 verbs
+LEXICON 2SYLL_UADDID_V  ! 3 verbs
 VINFINITES_UADDID ;
 +Ind: EVEN_IND_UADDID ;
 +Cond+Prs:á^WG%> EVEN_COND ;
@@ -2473,7 +2499,7 @@ VINFINITES_UADDID ;
 :á^CSH DER_MAS ;
 ! no Der/Pass for these 3 verbs
 
-LEXICON VINFINITES_UADDID   !!≈     - **@CODE@**
+LEXICON VINFINITES_UADDID   !
 +Inf:i%>đ K ;
 +Ind+Prs+ConNeg:i^WG K ;
 +Ind+Prs+ConNeg+Use/NG:e^WG K ;
@@ -2506,7 +2532,7 @@ LEXICON VINFINITES_UADDID   !!≈     - **@CODE@**
 +Ger+Err/Orth:e^WG%>dijn K ;
 +Der4+Der/NomAct:i%>m FLAG_3HUKSIM ;
 
-LEXICON EVEN_IND_UADDID   !!≈     - **@CODE@**
+LEXICON EVEN_IND_UADDID   !
 +Prs+Sg1:á^WG^VHIGH^RLEN%>m K ;   ! kästiđ
 +Prs+Sg2:á^WG^VHIGH^RLEN%>h K ;   ! kästiđ
 +Prs+Sg3:á^CSH^VHIGH K ;
@@ -2528,7 +2554,7 @@ LEXICON EVEN_IND_UADDID   !!≈     - **@CODE@**
 +Prt+Pl2:i^WG^VBACK%>jd K ;
 +Prt+Pl3:i^VBACK^RVSH%>i3 K ;
 
-LEXICON EVEN_POT_UADDID !!≈     - **@CODE@**
+LEXICON EVEN_POT_UADDID !
 +Sg1:e^WG%>em K ;
 +Sg2:e^WG%>eh K ;
 +Sg3:i^WG^VBACK%>š K ;
@@ -2539,7 +2565,7 @@ LEXICON EVEN_POT_UADDID !!≈     - **@CODE@**
 +Pl2:i^WG^VBACK%>švetteđ K ;
 +Pl3:i^WG^VBACK^RVSH%>žeh K ;
 
-LEXICON EVEN_IMPRT_UADDID   !!≈     - **@CODE@**
+LEXICON EVEN_IMPRT_UADDID   !
 +Sg2:e^WG K ;
 +Sg2+Use/NG:i^WG K ;
 +Sg3:u^WG%>s K ;
@@ -2550,7 +2576,7 @@ LEXICON EVEN_IMPRT_UADDID   !!≈     - **@CODE@**
 +Pl2:i%>đ K ;
 +Pl3:u^CLEN%>s K ;
 
-LEXICON 2SYLL_UAINID_TV  !!≈ * **@CODE@**  5 verbs
+LEXICON 2SYLL_UAINID_TV  !  5 verbs
 +V+TV:  VINFINITES_UAINID ;
 +V+TV+Ind: EVEN_IND_UAINID ;
 +V+TV+Cond+Prs:á^WG%> EVEN_COND ;
@@ -2563,7 +2589,7 @@ LEXICON 2SYLL_UAINID_TV  !!≈ * **@CODE@**  5 verbs
 +V+TV:á DER_MAS ;
 +V+TV+Der3+Der/Pass:u2^CLEN C_PASS_SH ; ! poldum uástoo
 
-LEXICON VINFINITES_UAINID  !!≈     - **@CODE@**
+LEXICON VINFINITES_UAINID  !
 +Inf:i%>đ K ;
 +Ind+Prs+ConNeg:i^WG K ;
 +Ind+Prs+ConNeg+Err/Orth:e^WG K ;
@@ -2592,7 +2618,7 @@ LEXICON VINFINITES_UAINID  !!≈     - **@CODE@**
 +Ger:e^WG%>dijn K ;
 +Der4+Der/NomAct:i%>m FLAG_3HUKSIM ;
 
-LEXICON EVEN_IND_UAINID   !!≈     - **@CODE@**
+LEXICON EVEN_IND_UAINID   !
 +Prs+Sg1:á^WG^VHIGH^RLEN%>m K ;   ! uáinám
 +Prs+Sg2:á^WG^VHIGH^RLEN%>h K ;   !
 +Prs+Sg3:á^VHIGH K ;
@@ -2613,7 +2639,7 @@ LEXICON EVEN_IND_UAINID   !!≈     - **@CODE@**
 +Prt+Pl2:i^WG^VBACK%>jd K ;
 +Prt+Pl3:i^VBACK^RVSH%>i3 K ;
 
-LEXICON EVEN_POT_UAINID !!≈     - **@CODE@**
+LEXICON EVEN_POT_UAINID !
 +Sg1:e^WG%>em K ;
 +Sg2:e^WG%>eh K ;
 +Sg3:i^WG^VBACK%>š K ;
@@ -2624,7 +2650,7 @@ LEXICON EVEN_POT_UAINID !!≈     - **@CODE@**
 +Pl2:i^WG^VBACK%>švetteđ K ;
 +Pl3:i^WG^VBACK^RVSH%>žeh K ;
 
-LEXICON EVEN_IMPRT_UAINID   !!≈     - **@CODE@**
+LEXICON EVEN_IMPRT_UAINID   !
 +Sg2+Err/Orth:e^WG K ;
 +Sg2:i^WG K ;
 +Sg3:u^WG%>s K ;
@@ -2636,14 +2662,14 @@ LEXICON EVEN_IMPRT_UAINID   !!≈     - **@CODE@**
 +Pl3:u^CLEN%>s K ;
 
 
-LEXICON 2SYLL_CAALLID !!≈ * **@CODE@**  7 verbs
+LEXICON 2SYLL_CAALLID !  7 verbs
 +V: 2SYLL_CAALLID_V ;
 LEXICON 2SYLL_CAALLID_IV
 +V+IV: 2SYLL_CAALLID_V ;
 LEXICON 2SYLL_CAALLID_TV
 +V+TV: 2SYLL_CAALLID_V ;
 
-LEXICON 2SYLL_CAALLID_V  !!≈ * **@CODE@** 7 verbs
+LEXICON 2SYLL_CAALLID_V  ! 7 verbs
 :  VINFINITES_CAALLID ;
 +Ind: EVEN_IND_CAALLID ;
 +Cond+Prs:á^WG^VHIGH^RVSH%> EVEN_COND ;
@@ -2657,7 +2683,7 @@ LEXICON 2SYLL_CAALLID_V  !!≈ * **@CODE@** 7 verbs
 :á^CSH^RVSH DER_MAS ;
 +Der3+Der/Pass:u2 C_PASS_SH_RVSH ; !
 
-LEXICON VINFINITES_CAALLID   !!≈     - **@CODE@**
+LEXICON VINFINITES_CAALLID   !
 +Inf:i%>đ K ;
 +Ind+Prs+ConNeg:i^WG^RLEN K ;
 +Ind+Prs+ConNeg+Use/NG:e^WG^RVSH K ;
@@ -2686,7 +2712,7 @@ LEXICON VINFINITES_CAALLID   !!≈     - **@CODE@**
 +Der4+Der/NomAct:i%>m FLAG_3HUKSIM ;
 
 
-LEXICON EVEN_IND_CAALLID   !!≈     - **@CODE@**
+LEXICON EVEN_IND_CAALLID   !
 +Prs+Sg1:á^WG^VHIGH^RVSH%>m K ;
 +Prs+Sg2:á^WG^VHIGH^RVSH%>h K ;
 +Prs+Sg3:á^CSH^VHIGH K ;
@@ -2708,7 +2734,7 @@ LEXICON EVEN_IND_CAALLID   !!≈     - **@CODE@**
 +Prt+Pl2:i^WG^VBACK%>jd K ;
 +Prt+Pl3:i^VBACK^RVSH%>i3 K ;
 
-LEXICON EVEN_POT_CAALLID !!≈     - **@CODE@**
+LEXICON EVEN_POT_CAALLID !
 +Sg1:e^WG%>em K ;
 +Sg2:e^WG%>eh K ;
 +Sg3:i^WG^VBACK%>š K ;
@@ -2719,7 +2745,7 @@ LEXICON EVEN_POT_CAALLID !!≈     - **@CODE@**
 +Pl2:i^WG^VBACK%>švetteđ K ;
 +Pl3:i^WG^VBACK^RVSH%>žeh K ;
 
-LEXICON EVEN_IMPRT_CAALLID !!≈     - **@CODE@**
+LEXICON EVEN_IMPRT_CAALLID !
 +Sg2:i^WG K ;
 +Sg2+Use/NG:e^WG^RVSH K ;
 +Sg3:u^WG^VHIGH%>s K ;
@@ -2768,7 +2794,7 @@ LEXICON 2SYLL_ID_V
 :á^CSH DER_MAS ;
 +Der3+Der/Pass:u2 C_PASS_SH_RVSH ; !lovdum  jyeh^RC: juohhuđ ! juohhuđ
 
-LEXICON VINFINITES_ID  !!≈     - **@CODE@**
+LEXICON VINFINITES_ID  !
 +Inf:i%>đ K ;
 +Ind+Prs+ConNeg:i^WG^RLEN K ;
 +Ind+Prt+ConNeg:á^VHIGH%>m K ;  !
@@ -2797,7 +2823,7 @@ LEXICON VINFINITES_ID  !!≈     - **@CODE@**
 +Ger+PxSg3:i^WG%>dijnis K ; !väzidijnis
 
 
-LEXICON EVEN_IND_ID  !!≈     - **@CODE@**
+LEXICON EVEN_IND_ID  !
 +Prs+Sg1:á^WG^VHIGH^RLEN%>m K ;   !
 +Prs+Sg2:á^WG^VHIGH^RLEN%>h K ;   !
 +Prs+Sg3:á^VHIGH K ;              !
@@ -2825,7 +2851,7 @@ LEXICON 2SYLL_EELLID
 LEXICON 2SYLL_EELLID_IV
 +V+IV: 2SYLL_EELLID_V ;
 
-LEXICON 2SYLL_EELLID_V  !!≈ * **@CODE@** iälám iälá eelih ij ele. 4 verbs
+LEXICON 2SYLL_EELLID_V  ! iälám iälá eelih ij ele. 4 verbs
 : VINFINITES_EELLID ;
 +Ind: EVEN_IND_EELLID ;
 +Cond+Prs:á^WG^VHIGH%> EVEN_COND ; !
@@ -2862,7 +2888,7 @@ LEXICON VINFINITES_EELLID !  !!≈ ** __@CODE@__
 +Ger:e^WG^RVSH%>dijn K ;
 +Der4+Der/NomAct:i^RVSH%>m FLAG_3HUKSIM ;
 
-LEXICON EVEN_IND_EELLID !!≈     - **@CODE@**
+LEXICON EVEN_IND_EELLID !
 +Prs+Sg1:á^WG^VHIGH^RLEN%>m K ;   !
 +Prs+Sg2:á^WG^VHIGH^RLEN%>h K ;   !
 +Prs+Sg3:á^CSH^VHIGH K ;              !
@@ -2884,7 +2910,7 @@ LEXICON EVEN_IND_EELLID !!≈     - **@CODE@**
 +Prt+Pl2:i^WG^RLEN%>id K ;
 +Prt+Pl3:i^CLEN^RVSH%>i3 K ;
 
-LEXICON EVEN_IMPRT_EELLID !!≈     - **@CODE@**
+LEXICON EVEN_IMPRT_EELLID !
 +Sg2:e^WG^RVSH K ;  !
 +Sg3:u^WG^VHIGH^RLEN%>s K ;  !
 +Du1:o^CLEN^VHIGH%>on K ;
@@ -2903,7 +2929,7 @@ LEXICON 2SYLL_KEESSID
 LEXICON 2SYLL_KEESSID_TV
 +V+TV: 2SYLL_KEESSID_V ;
 
-LEXICON 2SYLL_KEESSID_V  !!≈ * **@CODE@** like EELLID except from Prs+ConNeg. 4 verbs
+LEXICON 2SYLL_KEESSID_V  ! like EELLID except from Prs+ConNeg. 4 verbs
 : VINFINITES_KEESSID ;
 +Ind: EVEN_IND_KEESSID ;
 +Cond+Prs:á^WG^VHIGH%> EVEN_COND ; !
@@ -2916,7 +2942,7 @@ LEXICON 2SYLL_KEESSID_V  !!≈ * **@CODE@** like EELLID except from Prs+ConNeg. 
 :á^CSH^VHIGH^RLEN DER_MAS ;
 +Der3+Der/Pass:u2 C_PASS_SH_RVSH ; ! keessum
 
-LEXICON VINFINITES_KEESSID !!≈     - **@CODE@**
+LEXICON VINFINITES_KEESSID !
 +Inf:i%>đ K ;
 +Ind+Prs+ConNeg:i^WG K ;  !
 +Ind+Prt+ConNeg:á^VHIGH%>m K ;  !
@@ -2941,7 +2967,7 @@ LEXICON VINFINITES_KEESSID !!≈     - **@CODE@**
 +Ger:i^WG^RVSH%>dijn K ;
 +Der4+Der/NomAct:i^RVSH%>m FLAG_3HUKSIM ;
 
-LEXICON EVEN_IND_KEESSID  !!≈     - **@CODE@**
+LEXICON EVEN_IND_KEESSID  !
 +Prs+Sg1:á^WG^VHIGH^RLEN%>m K ;   !
 +Prs+Sg2:á^WG^VHIGH^RLEN%>h K ;   !
 +Prs+Sg3:á^CSH^VHIGH K ;              !
@@ -2963,7 +2989,7 @@ LEXICON EVEN_IND_KEESSID  !!≈     - **@CODE@**
 +Prt+Pl2:i^WG^RLEN%>id K ;
 +Prt+Pl3:i^CLEN^RVSH%>i3 K ;
 
-LEXICON EVEN_IMPRT_KEESSID !!≈     - **@CODE@**
+LEXICON EVEN_IMPRT_KEESSID !
 +Sg2:i^WG K ;  !
 +Sg3:u^WG^VHIGH^RLEN%>s K ;  !
 +Du1:o^CLEN^VHIGH%>on K ;
@@ -2981,7 +3007,7 @@ LEXICON 2SYLL_PAACCID_IV
 LEXICON 2SYLL_PAACCID_TV
 +V+TV: 2SYLL_PAACCID_V ;
 
-LEXICON 2SYLL_PAACCID_V  !!≈ * **@CODE@** 5 verbs
+LEXICON 2SYLL_PAACCID_V  ! 5 verbs
 VINFINITES_PAACCID ;
 +Ind: EVEN_IND_PAACCID ;
 +Cond+Prs:á^WG^VHIGH^RVSH%> EVEN_COND ; !
@@ -2994,7 +3020,7 @@ VINFINITES_PAACCID ;
 :á^CSH^RVSH DER_MAS ;
 +Der3+Der/Pass:u2^CLEN C_PASS_SH_RVSH ; !
 
-LEXICON VINFINITES_PAACCID !!≈     - **@CODE@**
+LEXICON VINFINITES_PAACCID !
 +Inf:i%>đ K ;
 +Ind+Prs+ConNeg:i^WG K ;
 +Ind+Prt+ConNeg:á^VHIGH%>m K ;
@@ -3025,7 +3051,7 @@ LEXICON VINFINITES_PAACCID !!≈     - **@CODE@**
 +Der4+Der/NomAct:i%>m FLAG_3HUKSIM ;
 
 
-LEXICON EVEN_IND_PAACCID !!≈     - **@CODE@**
+LEXICON EVEN_IND_PAACCID !
 +Prs+Sg1:á^WG^VHIGH%>m K ;
 +Prs+Sg2:á^WG^VHIGH%>h K ;   !
 +Prs+Sg3:á^CSH^VHIGH K ;
@@ -3047,7 +3073,7 @@ LEXICON EVEN_IND_PAACCID !!≈     - **@CODE@**
 +Prt+Pl2:i^WG^VBACK%>id K ;
 +Prt+Pl3:i^VBACK^RVSH%>i3 K ;
 
-LEXICON EVEN_IMPRT_PAACCID !!≈     - **@CODE@**
+LEXICON EVEN_IMPRT_PAACCID !
 +Sg2:i^WG K ;  !
 +Sg3:u^WG^VHIGH^RLEN%>s K ;
 +Du1:o^CLEN^RVSH%>on K ;
@@ -3057,7 +3083,7 @@ LEXICON EVEN_IMPRT_PAACCID !!≈     - **@CODE@**
 +Pl2:i^CLEN%>đ K ;
 +Pl3:u^CLEN^VHIGH^RLEN%>s K ;
 
-LEXICON EVEN_POT_PAACCID !!≈     - **@CODE@**
+LEXICON EVEN_POT_PAACCID !
 +Sg1:e^WG^CLEN^RVSH%>em K ;
 +Sg2:e^WG^CLEN^RVSH%>eh K ;
 +Sg3:i^WG^VBACK%>š K ;
@@ -3074,7 +3100,7 @@ LEXICON 2SYLL_VYELGID_IV
 LEXICON 2SYLL_VYELGID_TV
 +V+TV: 2SYLL_VYELGID_V ;
 
-LEXICON 2SYLL_VYELGID_V  !!≈ * **@CODE@** like VYEIJID, but -i for reduced forms. 7 verbs
+LEXICON 2SYLL_VYELGID_V  ! like VYEIJID, but -i for reduced forms. 7 verbs
 ! common with vyejid
 2SYLL_VYEIJID_VYELGID_COMMON ;
 
@@ -3095,7 +3121,7 @@ LEXICON 2SYLL_VYELGID_V  !!≈ * **@CODE@** like VYEIJID, but -i for reduced for
 +Ger+Err/Orth:i^WG^RVSH%>dijn K ;
 +Ger:i^WG%>dijn K ;
 
-LEXICON EVEN_IND_VYELGID  !!≈     - **@CODE@**
+LEXICON EVEN_IND_VYELGID  !
 +Prs+Sg1:á^WG^VHIGH^RLEN%>m K ;   !
 +Prs+Sg2:á^WG^VHIGH^RLEN%>h K ;   !
 +Prs+Sg3:á^VHIGH K ;              !
@@ -3122,7 +3148,7 @@ LEXICON 2SYLL_VYEIJID_IV
 LEXICON 2SYLL_VYEIJID_TV
 +V+TV: 2SYLL_VYEIJID_V ;
 
-LEXICON 2SYLL_VYEIJID_V  !!≈ * **@CODE@**  5 verbs
+LEXICON 2SYLL_VYEIJID_V  !  5 verbs
 ! common with vyelgid
 2SYLL_VYEIJID_VYELGID_COMMON ;
 
@@ -3143,7 +3169,7 @@ LEXICON 2SYLL_VYEIJID_V  !!≈ * **@CODE@**  5 verbs
 +Ger+PxSg3:e^WG^RVSH%>dijnis K ;
 +Ger+Err/Orth:e^WG^RVSH%>dijn K ;
 
-LEXICON EVEN_IND_VYEIJID !!≈     - **@CODE@**
+LEXICON EVEN_IND_VYEIJID !
 +Prs+Sg1:á^WG^VHIGH%>m K ;   !
 +Prs+Sg2:á^WG^VHIGH%>h K ;   !
 +Prs+Sg3:á^CSH^VHIGH K ;              !
@@ -3173,7 +3199,7 @@ LEXICON 2SYLL_JYEHID_IV ! Still not in use, comment in when needed.
 LEXICON 2SYLL_JYEHID_TV
 +V+TV: 2SYLL_JYEHID_V ;
 
-LEXICON 2SYLL_JYEHID_V  !!≈ * **@CODE@**  5 verbs
+LEXICON 2SYLL_JYEHID_V  !  5 verbs
 ! common with vyelgid
 2SYLL_VYEIJID_VYELGID_COMMON ;
 
@@ -3192,7 +3218,7 @@ LEXICON 2SYLL_JYEHID_V  !!≈ * **@CODE@**  5 verbs
 +Ger+Err/Orth:i^WG^RVSH%>dijn K ;
 +VGen:i^WG^RVSH%>n VGEN ;
 
-LEXICON EVEN_IND_JYEHID !!≈     - **@CODE@**
+LEXICON EVEN_IND_JYEHID !
 +Prs+Sg1:á^WG^VHIGH%>m K ;   !
 +Prs+Sg2:á^WG^VHIGH%>h K ;   !
 +Prs+Sg3:á^CSH^VHIGH K ;              !
@@ -3215,7 +3241,7 @@ LEXICON EVEN_IND_JYEHID !!≈     - **@CODE@**
 +Prt+Pl3:i^CLEN^VBACK^RVSH%>i3 K ;
 
 
-LEXICON 2SYLL_VYEIJID_VYELGID_COMMON  !!≈ * **@CODE@**
+LEXICON 2SYLL_VYEIJID_VYELGID_COMMON  !
 VINFINITES_VYEIJID_VYELGID ;
 +Cond+Prs:á^WG^VHIGH%> EVEN_COND ; !
 +Pot+Prs: EVEN_POT_VYEIJID ;
@@ -3225,7 +3251,7 @@ VINFINITES_VYEIJID_VYELGID ;
 +Der3+Der/Pass:u2 C_PASS_SH_RLEN ; !
 
 
-LEXICON VINFINITES_VYEIJID_VYELGID  !!≈     - **@CODE@**
+LEXICON VINFINITES_VYEIJID_VYELGID  !
 +Inf:i%>đ K ;
 +Ind+Prt+ConNeg:á^VHIGH%>m K ;  !
 +Cond+Prs+ConNeg:á^WG^VHIGH%>ččii K ;  !
@@ -3246,7 +3272,7 @@ LEXICON VINFINITES_VYEIJID_VYELGID  !!≈     - **@CODE@**
 +Actio+Ess:i^CSH%>min K ;
 +Der4+Der/NomAct:i%>m FLAG_3HUKSIM ;
 
-LEXICON EVEN_POT_VYEIJID !!≈     - **@CODE@**
+LEXICON EVEN_POT_VYEIJID !
 +Sg1:e^WG^VBACK^RLEN%>em K ;
 +Sg2:e^WG^VBACK^RLEN%>eh K ;
 +Sg3:i^WG^VBACK^RLEN%>š K ;
@@ -3257,7 +3283,7 @@ LEXICON EVEN_POT_VYEIJID !!≈     - **@CODE@**
 +Pl2:i^WG^VBACK^RLEN%>švetteđ K ;
 +Pl3:i^WG^VBACK^RLEN%>žeh K ;
 
-LEXICON EVEN_IMPRT_VYEIJID !!≈     - **@CODE@**
+LEXICON EVEN_IMPRT_VYEIJID !
 +Sg3:u^WG^VHIGH^RLEN%>s K ;  !
 +Du1:o^CLEN^VHIGH%>on K ;
 +Du2:e^CLEN%>e K ;
@@ -3274,7 +3300,7 @@ LEXICON 2SYLL_KASTID_IV
 LEXICON 2SYLL_KASTID_TV
 +V+TV: 2SYLL_KASTID_V ;
 
-LEXICON 2SYLL_KASTID_V  !!≈ * **@CODE@** 9 verbs
+LEXICON 2SYLL_KASTID_V  ! 9 verbs
 :  VINFINITES_KASTID ;
 +Ind: EVEN_IND_KASTID ;
 +Cond+Prs:á^VHIGH%> EVEN_COND ;
@@ -3287,7 +3313,7 @@ LEXICON 2SYLL_KASTID_V  !!≈ * **@CODE@** 9 verbs
 :á^CSH DER_MAS ;
 +Der3+Der/Pass:u2 C_PASS_SH_RVSH ; !
 
-LEXICON VINFINITES_KASTID  !!≈     - **@CODE@** kä^RVst
+LEXICON VINFINITES_KASTID  ! kä^RVst
 +Inf:i%>đ K ;
 
 +Ind+Prs+ConNeg:i^WG^RLEN K ;
@@ -3311,7 +3337,7 @@ LEXICON VINFINITES_KASTID  !!≈     - **@CODE@** kä^RVst
 +Der4+Der/NomAct:i%>m FLAG_3HUKSIM ;
 
 
-LEXICON EVEN_IND_KASTID !!≈     - **@CODE@**
+LEXICON EVEN_IND_KASTID !
 +Prs+Sg1:á^VHIGH^RLEN%>m K ;
 +Prs+Sg2:á^VHIGH^RLEN%>h K ;
 +Prs+Sg3:á^VHIGH K ;
@@ -3332,7 +3358,7 @@ LEXICON EVEN_IND_KASTID !!≈     - **@CODE@**
 +Prt+Pl2:i^WG^RLEN%>id K ;
 +Prt+Pl3:i^CLEN^VBACK%>i3 K ;
 
-LEXICON EVEN_POT_KASTID !!≈     - **@CODE@**
+LEXICON EVEN_POT_KASTID !
 +Sg1:i^WG^VBACK%>žeem K ;
 +Sg2:i^WG^VBACK%>žeeh K ;
 +Sg3:i^WG^VBACK^RLEN%>š K ;
@@ -3343,7 +3369,7 @@ LEXICON EVEN_POT_KASTID !!≈     - **@CODE@**
 +Pl2:i^WG^VBACK^RLEN%>švetteđ K ;
 +Pl3:i^WG^VBACK%>žeh K ;
 
-LEXICON EVEN_IMPRT_KASTID  !!≈     - **@CODE@**
+LEXICON EVEN_IMPRT_KASTID  !
 +Sg2:i^WG^RLEN K ;
 +Sg3:u^WG^VHIGH^RLEN%>s K ;
 +Du1:o^VHIGH%>on K ;
@@ -3357,7 +3383,7 @@ LEXICON EVEN_IMPRT_KASTID  !!≈     - **@CODE@**
 LEXICON 2SYLL_TIETTID_TV
 +V+TV: 2SYLL_TIETTID_V ;
 
-LEXICON 2SYLL_TIETTID_V  !!≈ * **@CODE@** only 1 verb: tiettiđ. Ind+Prs+ConNeg: tieđe vs. Ind+Prs+ConNeg: kieldi 2SYLL_ID
+LEXICON 2SYLL_TIETTID_V  ! only 1 verb: tiettiđ. Ind+Prs+ConNeg: tieđe vs. Ind+Prs+ConNeg: kieldi 2SYLL_ID
 VINFINITES_TIETTID ;
 +Ind: EVEN_IND_TIETTID ;
 +Cond+Prs:á^WG^VHIGH%> EVEN_COND ;
@@ -3371,7 +3397,7 @@ VINFINITES_TIETTID ;
 +Der3+Der/Pass:u2^CLEN C_PASS_SH ; !
 ! No Der/l for tiettiđ
 
-LEXICON VINFINITES_TIETTID !!≈     - **@CODE@**
+LEXICON VINFINITES_TIETTID !
 +Inf:i%>đ K ;
 +Ind+Prs+ConNeg:e^WG^RVSH K ;
 +Ind+Prs+ConNeg+Err/Orth:e^RVSH K ;
@@ -3399,7 +3425,7 @@ LEXICON VINFINITES_TIETTID !!≈     - **@CODE@**
 +Der4+Der/NomAct:i%>m FLAG_3HUKSIM ;
 
 
-LEXICON EVEN_IND_TIETTID !!≈     - **@CODE@**
+LEXICON EVEN_IND_TIETTID !
 +Prs+Sg1:á^WG^VHIGH%>m K ;
 +Prs+Sg2:á^WG^VHIGH%>h K ;
 +Prs+Sg3:á^CSH^VHIGH K ;
@@ -3421,7 +3447,7 @@ LEXICON EVEN_IND_TIETTID !!≈     - **@CODE@**
 +Prt+Pl2:i^WG%>jd K ;
 +Prt+Pl3:i^RVSH%>i3 K ;
 
-LEXICON EVEN_POT_TIETTID !!≈     - **@CODE@**
+LEXICON EVEN_POT_TIETTID !
 +Sg1:e^WG^RLEN%>em K ;
 +Sg2:e^WG^RLEN%>eh K ;
 +Sg3:i^WG%>š K ;
@@ -3432,7 +3458,7 @@ LEXICON EVEN_POT_TIETTID !!≈     - **@CODE@**
 +Pl2:i^WG%>švetteđ K ;
 +Pl3:i^WG^RVSH%>žeh K ;
 
-LEXICON EVEN_IMPRT_TIETTID !!≈     - **@CODE@**
+LEXICON EVEN_IMPRT_TIETTID !
 +Sg2:e^WG K ;
 +Sg3:u^WG^VHIGH%>s K ;
 +Du1:o^CLEN^VHIGH%>on K ;
@@ -3444,7 +3470,7 @@ LEXICON EVEN_IMPRT_TIETTID !!≈     - **@CODE@**
 
 
 ! Fixing Pot bug
-LEXICON EVEN_POT_ID !!≈     - **@CODE@**
+LEXICON EVEN_POT_ID !
 +Sg1:e^WG^VBACK%>em K ; ! keeseem peeveem
 +Sg2:e^WG^VBACK%>eh K ; ! keeseem peeveem
 +Sg3:i^WG^VBACK^RLEN%>š K ;
@@ -3467,7 +3493,7 @@ LEXICON EVEN_POT_ID !!≈     - **@CODE@**
 ! +Pl3:i^WG^VBACK^RVSH%>žeh K ;
 
 
-LEXICON EVEN_IMPRT_ID !!≈     - **@CODE@**
+LEXICON EVEN_IMPRT_ID !
 !+Sg2:i^WG^VHIGH^RLEN K ;  !
 +Sg2:i^WG^RLEN K ;
 +Sg3:u^WG^VHIGH^RLEN%>s K ;  !
@@ -3490,7 +3516,7 @@ LEXICON 2SYLL_HILGOD_IV
 LEXICON 2SYLL_HILGOD_TV
 +V+TV: 2SYLL_HILGOD_V ;
 
-LEXICON 2SYLL_HILGOD_V  !!≈ * **@CODE@** this as the only OD verb(s) with passive 7 verbs
+LEXICON 2SYLL_HILGOD_V  ! this as the only OD verb(s) with passive 7 verbs
 +Der3+Der/Pass:u2^CLEN C_PASS_SH ; !TEST hilgojii, passive for this one
 2SYLL_OD_V ; ! now pointing to the rest of the _OD paradigm
 
@@ -3501,7 +3527,7 @@ LEXICON 2SYLL_OD_IV
 LEXICON 2SYLL_OD_TV
 +V+TV: 2SYLL_OD_V ;
 
-LEXICON 2SYLL_OD_V  !!≈ * **@CODE@** OD paradigm, no passive here. 130 verbs
+LEXICON 2SYLL_OD_V  ! OD paradigm, no passive here. 130 verbs
 VINFINITES_OD ;
 +Ind: EVEN_IND_OD ;
 +Cond+Prs:o^WG%> EVEN_COND ;
@@ -3515,7 +3541,7 @@ VINFINITES_OD ;
 :o DER_MAS ;
 
 
-LEXICON VINFINITES_OD !!≈     - **@CODE@**
+LEXICON VINFINITES_OD !
 +Inf:o%>đ K ;
 +Ind+Prs+ConNeg:o^WG K ;
 +Ind+Prt+ConNeg:om K ;
@@ -3562,7 +3588,7 @@ LEXICON EVEN_IND_OD
 +Prt+Pl2:o^WG%>id K ;
 +Prt+Pl3:u^VHIGH%>u K ;
 
-LEXICON EVEN_POT_OD !!≈     - **@CODE@**
+LEXICON EVEN_POT_OD !
 +Sg1:^WG^CLENo%>om K ;	! lihhoom
 +Sg2:^WG^CLENo%>oh K ;	! lihhooh
 +Sg3:^WGo%>oš K ;	! lihoš added o
@@ -3573,7 +3599,7 @@ LEXICON EVEN_POT_OD !!≈     - **@CODE@**
 +Pl2:o^WG^CLEN%>ošvetteđ K ; ! lihhoošvetteđ
 +Pl3:o^WG^WG%>žeh K ; ! lihožeh
 
-LEXICON EVEN_IMPRT_OD !!≈     - **@CODE@**
+LEXICON EVEN_IMPRT_OD !
 +Sg1:o^CLEN%>om K ;
 +Sg2:o^WG K ;
 +Sg3:o^WG%>s K ;
@@ -3594,7 +3620,7 @@ LEXICON 2SYLL_OOD_IV
 LEXICON 2SYLL_OOD_TV
 +V+TV: 2SYLL_OOD_V ;
 
-LEXICON 2SYLL_OOD_V  !!≈ * **@CODE@** 31 verbs
+LEXICON 2SYLL_OOD_V  ! 31 verbs
 VINFINITES_OOD ;
 +Ind: EVEN_IND_OOD ;
 +Cond+Prs:o^WG%> EVEN_COND ;
@@ -3608,7 +3634,7 @@ VINFINITES_OOD ;
 !DERL+V+Der1+Der/l:ol 3_DERIVED_L ;
 :o DER_MAS ;
 
-LEXICON VINFINITES_OOD !!≈     - **@CODE@**
+LEXICON VINFINITES_OOD !
 +Inf:o^CLEN%>ođ K ;
 +Ind+Prs+ConNeg:o^WG K ;
 +Ind+Prt+ConNeg:o^CLEN%>om K ;
@@ -3633,7 +3659,7 @@ LEXICON VINFINITES_OOD !!≈     - **@CODE@**
 +Ger:o^WG%>dijn K ;
 +Der4+Der/NomAct:o^CLEN%>om FLAG_3EEMEED ;
 
-LEXICON EVEN_IND_OOD  !!≈     - **@CODE@**
+LEXICON EVEN_IND_OOD  !
 +Prs+Sg1:o^WG%>m K ;    ! vah^RCo^WG>m
 +Prs+Sg2:o^WG%>h K ;
 +Prs+Sg3:o^CSH K ;
@@ -3654,7 +3680,7 @@ LEXICON EVEN_IND_OOD  !!≈     - **@CODE@**
 +Prt+Pl2:o^WG^CLEN%>id K ;
 +Prt+Pl3:u^CLEN^VHIGH%>u K ;
 
-LEXICON EVEN_POT_OOD !!≈     - **@CODE@**
+LEXICON EVEN_POT_OOD !
 +Sg1:^WG^CLEN%>om K ;
 +Sg2:^WG^CLEN%>oh K ;
 +Sg3:^WG^CLEN%>oš K ;
@@ -3665,7 +3691,7 @@ LEXICON EVEN_POT_OOD !!≈     - **@CODE@**
 +Pl2:^WG^CLEN%>ošvetteđ K ;
 +Pl3:^WG%>žeh K ;
 
-LEXICON EVEN_IMPRT_OOD !!≈     - **@CODE@**
+LEXICON EVEN_IMPRT_OOD !
 +Sg1:^CLEN%>om K ;
 +Sg2:^WG K ;
 +Sg3:^WG%>s K ;
@@ -3684,7 +3710,7 @@ LEXICON 2SYLL_ORROOD_IV
 LEXICON 2SYLL_ORROOD_TV
 +V+TV: 2SYLL_ORROOD_V ;
 
-LEXICON 2SYLL_ORROOD_V  !!≈ * **@CODE@** like njihhood, but different triggers here and there. 24 verbs
+LEXICON 2SYLL_ORROOD_V  ! like njihhood, but different triggers here and there. 24 verbs
 :  VINFINITES_ORROOD ;
 +Ind: EVEN_IND_ORROOD ;
 +Cond+Prs:o^WG%> EVEN_COND ;
@@ -3724,7 +3750,7 @@ LEXICON VINFINITES_ORROOD
 +Der4+Der/NomAct:o^CLEN%>om FLAG_3EEMEED ;
 
 
-LEXICON EVEN_IND_ORROOD   !!≈     - **@CODE@**
+LEXICON EVEN_IND_ORROOD   !
 +Prs+Sg1:o^WG%>m K ; ! vah^RCo^WG>m
 +Prs+Sg2:o^WG%>h K ;
 +Prs+Sg3:o^CSH K ;
@@ -3745,7 +3771,7 @@ LEXICON EVEN_IND_ORROOD   !!≈     - **@CODE@**
 +Prt+Pl2:o^WG%>id K ;
 +Prt+Pl3:u^VHIGH%>u K ; ! urruu
 
-LEXICON EVEN_POT_ORROOD !!≈     - **@CODE@**
+LEXICON EVEN_POT_ORROOD !
 +Sg1:^WG^RLEN%>om K ;
 +Sg2:^WG^RLEN%>oh K ;
 +Sg3:^WG^RLEN%>oš K ;
@@ -3756,7 +3782,7 @@ LEXICON EVEN_POT_ORROOD !!≈     - **@CODE@**
 +Pl2:^WG^RLEN%>ošvetteđ K ;
 +Pl3:^WG%>žeh K ;
 
-LEXICON EVEN_IMPRT_ORROOD  !!≈     - **@CODE@**
+LEXICON EVEN_IMPRT_ORROOD  !
 +Sg2:^WG K ;
 +Sg3:^WG%>s K ;
 +Du1:^CLEN%>on K ;
@@ -3776,7 +3802,7 @@ LEXICON 2SYLL_KUARRUD_IV
 LEXICON 2SYLL_KUARRUD_TV
 +V+TV: 2SYLL_KUARRUD_V ;
 
-LEXICON 2SYLL_KUARRUD_V  !!≈ * **@CODE@** long dipht => -o . 56 verbs
+LEXICON 2SYLL_KUARRUD_V  ! long dipht => -o . 56 verbs
 VINFINITES_KUARRUD ; ! pákkuđ has a PASS according to this contlex
 +Ind: EVEN_IND_KUARRUD ;
 +Pot+Prs: EVEN_POT_KUARRUD ;
@@ -3790,7 +3816,7 @@ VINFINITES_KUARRUD ; ! pákkuđ has a PASS according to this contlex
 +Der1+Der/d:ud^WG 3_DERIVED ; !
 :u^CSH DER_MAS ;
 
-LEXICON VINFINITES_KUARRUD !!≈     - **@CODE@**
+LEXICON VINFINITES_KUARRUD !
 +Inf:u%>đ K ;
 
 +Ind+Prs+ConNeg:u^WG^RLEN K ;
@@ -3825,7 +3851,7 @@ LEXICON VINFINITES_KUARRUD !!≈     - **@CODE@**
 +Der4+Der/NomAct:u^SV%>m FLAG_3HUKSIM ;
 
 
-LEXICON EVEN_IND_KUARRUD !!≈ * **@CODE@**
+LEXICON EVEN_IND_KUARRUD !
 +Prs+Sg1:u^WG^RLEN%>m K ;
 +Prs+Sg1+Err/Orth:o^WG^RLEN%>m K ;
 +Prs+Sg2:u^WG^RLEN%>h K ;
@@ -3855,7 +3881,7 @@ LEXICON EVEN_IND_KUARRUD !!≈ * **@CODE@**
 +Prt+Pl2+Use/NG:o^WG^RVSH%>id K ;
 +Prt+Pl3:u^CLEN^VBACK^RVSH%>u K ; !
 
-LEXICON EVEN_POT_KUARRUD !!≈ * **@CODE@**
+LEXICON EVEN_POT_KUARRUD !
 +Sg1:o^WG%>om K ;
 +Sg2:o^WG%>oh K ;
 +Sg3:u^WG^RLEN%>š K ;
@@ -3872,7 +3898,7 @@ LEXICON EVEN_POT_KUARRUD !!≈ * **@CODE@**
 +Pl3:u^WG^RVSH%>žeh K ;
 +Pl3+Use/NG:o^WG^RVSH%>žeh K ;
 
-LEXICON EVEN_IMPRT_KUARRUD  !!≈     - **@CODE@**
+LEXICON EVEN_IMPRT_KUARRUD  !
 +Sg2:u^WG^RLEN K ;
 +Sg2+Use/NG:o^WG^RVSH K ;
 +Sg3:u^WG^RLEN%>s K ;
@@ -3892,7 +3918,7 @@ LEXICON 2SYLL_UD_TV
 +V+TV: 2SYLL_UD_V ;
 
 
-LEXICON 2SYLL_UD_V  !!≈ * **@CODE@** 175 verbs
+LEXICON 2SYLL_UD_V  ! 175 verbs
 VINFINITES_UD ; ! pákkuđ has a PASS according to this contlex
 +Ind: EVEN_IND_UD ;
 +Pot+Prs: EVEN_POT_UD ;
@@ -3908,7 +3934,7 @@ VINFINITES_UD ; ! pákkuđ has a PASS according to this contlex
 :u DER_MAS ;
 +Der3+Der/Pass:u2^CLEN C_PASS_SH ; ! u2
 
-LEXICON VINFINITES_UD !!≈     - **@CODE@**
+LEXICON VINFINITES_UD !
 +Inf:u%>đ K ;
 +Ind+Prs+ConNeg:u^WG^RLEN K ;
 +Ind+Prt+ConNeg:u%>m K ; ! u2
@@ -3933,7 +3959,7 @@ LEXICON VINFINITES_UD !!≈     - **@CODE@**
 +Der4+Der/NomAct:u^SV%>m FLAG_3HUKSIM ;
 
 
-LEXICON EVEN_IND_UD !!≈     - **@CODE@**
+LEXICON EVEN_IND_UD !
 +Prs+Sg1:u^WG^RLEN%>m K ;
 +Prs+Sg2:u^WG^RLEN%>h K ;
 +Prs+Sg3:u K ;             ! CSH
@@ -3955,7 +3981,7 @@ LEXICON EVEN_IND_UD !!≈     - **@CODE@**
 +Prt+Pl2:u^WG^RLEN%>id K ;
 +Prt+Pl3:u^CLEN^VBACK^RVSH%>u K ; ! u2
 
-LEXICON EVEN_POT_UD !!≈     - **@CODE@**
+LEXICON EVEN_POT_UD !
 +Sg1:o^CLEN%>om K ;
 +Sg2:o^CLEN%>oh K ;
 +Sg3:u^WG^RLEN%>š K ;
@@ -3966,7 +3992,7 @@ LEXICON EVEN_POT_UD !!≈     - **@CODE@**
 +Pl2:u^WG^RLEN%>švetteđ K ;
 +Pl3:u^WG%>žeh K ;
 
-LEXICON EVEN_IMPRT_UD !!≈     - **@CODE@**
+LEXICON EVEN_IMPRT_UD !
 +Sg2:u^WG^VHIGH^RLEN K ;
 +Sg3:u^WG^RLEN%>s K ;
 +Du1:o^CLEN%>on K ;
@@ -3983,7 +4009,7 @@ LEXICON 2SYLL_UAZZUD_IV
 LEXICON 2SYLL_UAZZUD_TV
 +V+TV: 2SYLL_UAZZUD_V ;
 
-LEXICON 2SYLL_UAZZUD_V  !!≈ * **@CODE@** 59 verbs
+LEXICON 2SYLL_UAZZUD_V  ! 59 verbs
 VINFINITES_UAZZUD ; ! pákkuđ has a PASS according to this contlex
 +Ind: EVEN_IND_UAZZUD ;
 +Cond+Prs:u^WG%> EVEN_COND ;
@@ -3997,7 +4023,7 @@ VINFINITES_UAZZUD ; ! pákkuđ has a PASS according to this contlex
 :u DER_MAS ;
 +Der3+Der/Pass:u2^CLEN C_PASS_SH ; !
 
-LEXICON VINFINITES_UAZZUD !!≈     - **@CODE@**
+LEXICON VINFINITES_UAZZUD !
 +Inf:u%>đ K ;
 +Ind+Prs+ConNeg:u^WG^RLEN K ;
 +Ind+Prt+ConNeg:um K ;
@@ -4022,7 +4048,7 @@ LEXICON VINFINITES_UAZZUD !!≈     - **@CODE@**
 +Ger:u^WG%>dijn K ;
 +Der4+Der/NomAct:u^SV%>m FLAG_3HUKSIM ;
 
-LEXICON EVEN_IND_UAZZUD !!≈     - **@CODE@**
+LEXICON EVEN_IND_UAZZUD !
 +Prs+Sg1:u^WG%>m K ;
 +Prs+Sg2:u^WG%>h K ;
 +Prs+Sg3:u^CLEN K ;             ! CSH
@@ -4044,7 +4070,7 @@ LEXICON EVEN_IND_UAZZUD !!≈     - **@CODE@**
 +Prt+Pl2:u^WG%>id K ;
 +Prt+Pl3:u^VBACK^RVSH%>u K ;
 
-LEXICON EVEN_POT_UAZZUD !!≈     - **@CODE@**
+LEXICON EVEN_POT_UAZZUD !
 +Sg1:o^CLEN%>om K ;
 +Sg2:o^CLEN%>oh K ;
 +Sg3:u^WG^RLEN%>š K ;
@@ -4055,7 +4081,7 @@ LEXICON EVEN_POT_UAZZUD !!≈     - **@CODE@**
 +Pl2:u^WG^RLEN%>švetteđ K ;
 +Pl3:u^WG%>žeh K ;
 
-LEXICON EVEN_IMPRT_UAZZUD !!≈     - **@CODE@**
+LEXICON EVEN_IMPRT_UAZZUD !
 +Sg2:u^WG^VHIGH^RLEN K ;
 +Sg3:u^WG^RLEN%>s K ;
 +Du1:o^CLEN%>on K ;
@@ -4067,7 +4093,7 @@ LEXICON EVEN_IMPRT_UAZZUD !!≈     - **@CODE@**
 
 !! ###  Common even lexica
 
-LEXICON EVEN_COND !!≈ * **@CODE@**
+LEXICON EVEN_COND !
 +Sg1:čč%>im K ;
 +Sg2:čč%>ih K ;
 +Sg3:čč%>ij K ;
@@ -4094,7 +4120,7 @@ LEXICON 3_KUIKETTID_IV
 LEXICON 3_KUIKETTID_TV
 +V+TV: 3_KUIKETTID_V ;
 
-LEXICON 3_KUIKETTID_V !!≈ * **@CODE@** this has lengthening of ^RV for Cns-initial suff
+LEXICON 3_KUIKETTID_V ! this has lengthening of ^RV for Cns-initial suff
 3_LEKKASID_V ;
 
 LEXICON 3_LEKKASID
@@ -4104,7 +4130,7 @@ LEXICON 3_LEKKASID_IV
 LEXICON 3_LEKKASID_TV
 +V+TV: 3_LEKKASID_V ;
 
-LEXICON 3_LEKKASID_V  !!≈ * **@CODE@** SM51, no length change in stem
+LEXICON 3_LEKKASID_V  ! SM51, no length change in stem
 ODD_INFINITES ;
 ODD_PRS_CONNEG ;
 +Ind+Prs: ODD_PRS ;
@@ -4130,7 +4156,7 @@ LEXICON 3_CIELATTID_IV
 LEXICON 3_CIELATTID_TV
 +V+TV: 3_CIELATTID_V ;
 
-LEXICON 3_CIELATTID_V  !!≈ * **@CODE@** SM57, consonant and vowel change
+LEXICON 3_CIELATTID_V  ! SM57, consonant and vowel change
  ODD_INFINITES ;
  ODD_PRS_CONNEG_rlen ;
 
@@ -4159,7 +4185,7 @@ LEXICON 3_VYEJETTID_IV
 LEXICON 3_VYEJETTID_TV
 +V+TV: 3_VYEJETTID_V ;
 
-LEXICON 3_VYEJETTID_V  !!≈ * **@CODE@** SM53. short V in Inf
+LEXICON 3_VYEJETTID_V  ! SM53. short V in Inf
 : ODD_VINFINITES_VYEJETTID ;
 +Ind+Prs: ODD_PRS_VYEJETTID ;
 +Ind+Prt:^CSH ODD_PRT ;
@@ -4201,7 +4227,7 @@ LEXICON ODD_VINFINITES_VYEJETTID
 +Der2+Der/NomAg:%> IJJE ;
 
 
-LEXICON ODD_PRS_VYEJETTID  !!≈     - **@CODE@**
+LEXICON ODD_PRS_VYEJETTID  !
 +Sg1:^CSH%>âm K ; ! csh for vatâlâm
 +Sg2:^CSH%>ah K ;
 +Sg2+Err/Orth:^CSH%>âh K ;
@@ -4213,7 +4239,7 @@ LEXICON ODD_PRS_VYEJETTID  !!≈     - **@CODE@**
 +Pl2:^RLEN^SLEN%>vetteđ K ;
 +Pl3:^CSH%>eh K ;
 
-LEXICON ODD_IMPRT_VYEJETTID  !!≈     - **@CODE@**
+LEXICON ODD_IMPRT_VYEJETTID  !
 +Sg2:^RLEN^SLEN K ;
 +Sg3:%>us K ;
 +Du1:%>oon K ;
@@ -4225,7 +4251,7 @@ LEXICON ODD_IMPRT_VYEJETTID  !!≈     - **@CODE@**
 
 
 
-LEXICON ADELID_TV  !!≈ * **@CODE@** only for adeliđ, to get adde as default ConNeg, others are 3_ADELID
+LEXICON ADELID_TV  ! only for adeliđ, to get adde as default ConNeg, others are 3_ADELID
 +V+TV+Ind+Prs+ConNeg:adde K ;
 +V+TV+Ind+Prs+ConNeg+Use/NG:addel K ; ! addel
 +V+TV+Imprt+Sg2:adde K ;
@@ -4241,13 +4267,13 @@ LEXICON 3_ADELID_IV
 LEXICON 3_ADELID_TV
 +V+TV: 3_ADELID_V ;
 
-LEXICON 3_ADELID_V  !!≈ * **@CODE@** SM53. short V in Inf
+LEXICON 3_ADELID_V  ! SM53. short V in Inf
 !+Ind+Prs+ConNeg:^RLEN K ; !
 +Ind+Prs+ConNeg:^CLEN^RLEN K ; !
 +Imprt: ODD_IMPRT ;
 ADELID_COMMON ;
 
-LEXICON ADELID_COMMON !!≈     - **@CODE@**
+LEXICON ADELID_COMMON !
 ODD_VINFINITES_ADELID ;
 +Ind+Prs: ODD_PRS_ADELID ;
 +Ind+Prt: ODD_PRT ;
@@ -4264,7 +4290,7 @@ ODD_VINFINITES_ADELID ;
 +Der2+Der/adda:â%>i6dd 4_KAVNATTATTAD ; !ráigánâddâđ
 +Der3+Der/Pass: C_MERIDUD ;
 
-LEXICON ODD_VINFINITES_ADELID !!≈     - **@CODE@**
+LEXICON ODD_VINFINITES_ADELID !
 +Inf:%>iđ K ;
 +PrsPrc:%> IJJE_PRSPRC ;
 +PrfPrc:%>âm K ;
@@ -4285,7 +4311,7 @@ LEXICON ODD_VINFINITES_ADELID !!≈     - **@CODE@**
 +Ger+PxSg3:^CLEN%>dijnis K ;
 +Der4+Der/NomAct: FLAG_3KEPIDEM ;
 
-LEXICON ODD_PRS_ADELID !!≈     - **@CODE@**
+LEXICON ODD_PRS_ADELID !
 +Sg1:%>âm K ;
 +Sg2:%>ah K ;
 +Sg2+Err/Orth:%>âh K ;
@@ -4305,7 +4331,7 @@ LEXICON 3_MERIDID_IV
 LEXICON 3_MERIDID_TV
 +V+TV: 3_MERIDID_V ;
 
-LEXICON 3_MERIDID_V  !!≈ * **@CODE@** SM53. short V in Inf
+LEXICON 3_MERIDID_V  ! SM53. short V in Inf
 ODD_INFINITES_MERIDID ;
 +Ind+Prs: ODD_PRS ;
 +Ind+Prt: ODD_PRT ;
@@ -4324,7 +4350,7 @@ ODD_INFINITES_MERIDID ;
 +Der3+Der/Pass: C_MERIDUD ;
 
 
-LEXICON ODD_INFINITES_MERIDID !!≈     - **@CODE@**
+LEXICON ODD_INFINITES_MERIDID !
 +Inf:%>iđ K ;
 +PrsPrc:%> IJJE_PRSPRC ;
 +PrfPrc:%>âm K ;
@@ -4356,7 +4382,7 @@ LEXICON 3_PUTESTID_IV
 LEXICON 3_PUTESTID_TV
 +V+TV: 3_PUTESTID_V ;
 
-LEXICON 3_PUTESTID_V  !!≈ * **@CODE@** SM53. short V in Inf
+LEXICON 3_PUTESTID_V  ! SM53. short V in Inf
 
  ODD_VINFINITES_PUTESTID ; ! Diacriticn to shorten V
 +Ind+Prs: ODD_PRS_PUTESTID ;
@@ -4398,7 +4424,7 @@ LEXICON ODD_VINFINITES_PUTESTID
 +Der4+Der/NomAct: FLAG_3KEPIDEM ;
 +Der2+Der/NomAg:%> IJJE ;
 
-LEXICON ODD_PRS_PUTESTID  !!≈     - **@CODE@**
+LEXICON ODD_PRS_PUTESTID  !
 +Sg1:%>âm K ;
 +Sg2:%>ah K ;
 +Sg2+Err/Orth:%>âh K ;
@@ -4418,7 +4444,7 @@ LEXICON 3_COKKIITTID_IV
 LEXICON 3_COKKIITTID_TV
 +V+TV: 3_COKKIITTID_V ;
 
-LEXICON 3_COKKIITTID_V  !!≈ * **@CODE@** SM52, long V in Inf
+LEXICON 3_COKKIITTID_V  ! SM52, long V in Inf
 ODD_VINFINITES_COKKIITTID ;
 +Ind+Prs: ODD_PRS_COKKIITTID ;
 +Ind+Prt: ODD_PRT ;
@@ -4437,7 +4463,7 @@ ODD_VINFINITES_COKKIITTID ;
 +Der2+Der/adda:â%>i6dd 4_KAVNATTATTAD ; !ráigánâddâđ
 +Der3+Der/Pass: C_MERIDUD ;
 
-LEXICON ODD_VINFINITES_COKKIITTID  !!≈     - **@CODE@**
+LEXICON ODD_VINFINITES_COKKIITTID  !
 +Inf:%>iđ K ;
 +PrsPrc:%> IJJE_PRSPRC ;
 +PrfPrc:%>âm K ;
@@ -4459,7 +4485,7 @@ LEXICON ODD_VINFINITES_COKKIITTID  !!≈     - **@CODE@**
 +Ger+PxSg3:^SVSH%>dijnis K ;
 +Der4+Der/NomAct: FLAG_3KEPIDEM ;
 
-LEXICON ODD_PRS_COKKIITTID  !!≈     - **@CODE@**
+LEXICON ODD_PRS_COKKIITTID  !
 +Sg1:%>âm K ;
 +Sg2:%>ah K ;
 +Sg2+Err/Orth:%>âh K ;
@@ -4478,7 +4504,7 @@ LEXICON ODD_PRS_COKKIITTID  !!≈     - **@CODE@**
 
 
 
-LEXICON ODD_INFINITES   !!≈ * **@CODE@**
+LEXICON ODD_INFINITES   !
 +Inf:%>iđ K ;
 +PrsPrc:%> IJJE_PRSPRC ;
 +PrfPrc:%>âm K ;
@@ -4504,11 +4530,11 @@ LEXICON ODD_INFINITES   !!≈ * **@CODE@**
 +Der2+Der/NomAg:%> IJJE ;
 +Der4+Der/NomAct: FLAG_3KEPIDEM ;
 
-LEXICON ODD_PRS_CONNEG    !!≈ * **@CODE@**
+LEXICON ODD_PRS_CONNEG    !
 +Ind+Prs+ConNeg+Use/NG:^RLEN K ;
 +Ind+Prs+ConNeg:^CLEN^RLEN K ;
 
-LEXICON ODD_PRS_CONNEG_rlen    !!≈ * **@CODE@**
+LEXICON ODD_PRS_CONNEG_rlen    !
 +Ind+Prs+ConNeg:^RLEN K ;
 
 !LEXICON ODD_PRS_CONNEG_wg    !!≈ * __@CODE@__
@@ -4517,7 +4543,7 @@ LEXICON ODD_PRS_CONNEG_rlen    !!≈ * **@CODE@**
 
 
 
-LEXICON ODD_PRS   !!≈ * **@CODE@**
+LEXICON ODD_PRS   !
 +Sg1:%>âm K ;
 +Sg2:%>ah K ;
 +Sg2+Err/Orth:%>âh K ;
@@ -4529,7 +4555,7 @@ LEXICON ODD_PRS   !!≈ * **@CODE@**
 +Pl2:^CLEN^RLEN%>vetteđ K ;
 +Pl3:%>eh K ;
 
-LEXICON ODD_PRT  !!≈ * **@CODE@**
+LEXICON ODD_PRT  !
 +Sg1:%>im K ;
 +Sg2:%>ih K ;
 +Sg3:%>ij    K ;
@@ -4540,7 +4566,7 @@ LEXICON ODD_PRT  !!≈ * **@CODE@**
 +Pl2:%>ijd K ;
 +Pl3:%>ii K ;
 
-LEXICON ODD_COND   !!≈ * **@CODE@**
+LEXICON ODD_COND   !
 +Sg1:%>iččim K ;
 +Sg2:%>iččih K ;
 +Sg3:%>ičij K ;
@@ -4554,7 +4580,7 @@ LEXICON ODD_COND   !!≈ * **@CODE@**
 +Pl2:%>iččijd K ;
 +Pl3:%>iččii K ;
 
-LEXICON ODD_POT   !!≈ * **@CODE@**
+LEXICON ODD_POT   !
 +Sg1:%>ižžeem K ;
 +Sg2:%>ižžeeh K ;
 +Sg3:%>iš K ;
@@ -4566,12 +4592,12 @@ LEXICON ODD_POT   !!≈ * **@CODE@**
 +Pl3:%>ižeh K ;
 
 
-LEXICON ODD_IMPRT   !!≈ * **@CODE@**
+LEXICON ODD_IMPRT   !
 !+Sg2+Use/NG:^RLEN K ; !čuolâl wrong
 +Sg2:^CLEN^RLEN K ;    !čuollâl ok
 ODD_IMPRT_REST ;
 
-LEXICON ODD_IMPRT_REST   !!≈ * **@CODE@**
+LEXICON ODD_IMPRT_REST   !
 +Sg3:%>us K ;
 +Du1:%>oon K ;
 +Du2:%>ee K ;
@@ -4582,7 +4608,7 @@ LEXICON ODD_IMPRT_REST   !!≈ * **@CODE@**
 
 
 
-LEXICON ODD_DU_ERRORTH  !!≈ * **@CODE@**
+LEXICON ODD_DU_ERRORTH  !
 +Du1+Err/Orth:%>ááim K ; ! these separate, perhaps skip
 +Du2+Err/Orth:%>ááid K ; ! only á ?
 +Du3+Err/Orth:%>ááin  K ;
@@ -4591,20 +4617,20 @@ LEXICON ODD_DU_ERRORTH  !!≈ * **@CODE@**
 
 !! ## Derivational extentions to 3-syllabic verbs
 
-LEXICON 3_DERIVED_LOW  !!≈ * **@CODE@** lexicon to be determined
+LEXICON 3_DERIVED_LOW  ! lexicon to be determined
 +V+Ind+Prs+Sg3:^RLEN^SLEN    K ; ! no ^VHIGH
 3_DERIVED_REST ; ! the rest
 
-LEXICON 3_DERIVED  !!≈ * **@CODE@** lexicon
+LEXICON 3_DERIVED  ! lexicon
 +V+Ind+Prs+Sg3:^VHIGH^RLEN^SLEN    K ; ! ^VHIGH
 3_DERIVED_REST ; ! the rest
 
-LEXICON 3_DERIVED_SLEN  !!≈ * **@CODE@** lexicon
+LEXICON 3_DERIVED_SLEN  ! lexicon
 +V+Ind+Prs+Sg3:^SLEN    K ; ! ^VHIGH
 3_DERIVED_REST ; ! the rest
 
 
-LEXICON 3_DERIVED_REST  !!≈ * **@CODE@** lexicon
+LEXICON 3_DERIVED_REST  ! lexicon
 
 +V+Inf:^RVSH%>iđ K ;
 +V+Der4+Der/NomAct: FLAG_3KEPIDEM ;
@@ -4691,7 +4717,7 @@ LEXICON 3_DERIVED_REST  !!≈ * **@CODE@** lexicon
 +V+Ger+PxSg3:^RLEN^SLEN%>dijnis K ;
 
 
-LEXICON 3_DERIVED_CLEN  !!≈ * **@CODE@** lexicon
+LEXICON 3_DERIVED_CLEN  ! lexicon
 
 +V+Inf:%>iđ K ;
 
@@ -4784,7 +4810,7 @@ LEXICON 3_DERIVED_CLEN  !!≈ * **@CODE@** lexicon
 
 
 
-LEXICON 3_DERIVED_VBACK   !!≈ * **@CODE@**
+LEXICON 3_DERIVED_VBACK   
 
 +V+Inf:^VBACK%>iđ K ;
 
@@ -4964,6 +4990,8 @@ LEXICON 3_DERIVED_VBACK   !!≈ * **@CODE@**
 !DERL +V+Der3+Der/Pass:%> C_MERIDUD ;
 !DERL 
 
+
+
 !! ## Contracted stems
 ! ----------------
 
@@ -4977,7 +5005,7 @@ LEXICON C_COKKAD_IV
 LEXICON C_COKKAD_TV
 +V+TV: C_COKKAD_V ;
 
-LEXICON C_COKKAD_V  !!≈ * **@CODE@**
+LEXICON C_COKKAD_V  !
  VINF_SHORT_VOW ; ! Trond: Fix
 :á VINF_LONG_VOW ;
 +Der4+Der/InchL:áškyett4 4SYLL_KYETTID_DER ; !kulluuškuođij
@@ -5014,7 +5042,7 @@ LEXICON C_COKKAD_V  !!≈ * **@CODE@**
 +Ind+Prt+Pl2:%>id  K ;
 +Ind+Prt+Pl3:%>jii  K ;
 
-LEXICON C_PASS_LONG  !!≈     - **@CODE@**
+LEXICON C_PASS_LONG  !
 +V+IV+Inf:ju%>đ K ;
 
 !+V+IV+Der4+Der/NomAct:
@@ -5065,7 +5093,7 @@ LEXICON C_PALLAD_IV
 LEXICON C_PALLAD_TV
 +V+TV: C_PALLAD_V ;
 
-LEXICON C_PALLAD_V !!≈ * **@CODE@**
+LEXICON C_PALLAD_V !
 
  VINF_SHORT_VOW ;
 :a VINF_LONG_VOW ;
@@ -5102,7 +5130,7 @@ LEXICON C_PALLAD_V !!≈ * **@CODE@**
 +Ind+Prt+Pl3:%>jii  K ;
 
 
-LEXICON C_HOLHOD !!≈ * **@CODE@**
+LEXICON C_HOLHOD !
 
 +V: VINF_SHORT_VOW ;
 +V:o VINF_LONG_VOW ;
@@ -5145,7 +5173,7 @@ LEXICON C_TUHHID_IV
 LEXICON C_TUHHID_TV
 +V+TV: C_TUHHID_V ;
 
-LEXICON C_TUHHID_V !!≈ * **@CODE@**
+LEXICON C_TUHHID_V !
 
 :i2 VINF_SHORT_VOW ;
 :i2%>i3 VINF_LONG_VOW ;
@@ -5199,7 +5227,7 @@ LEXICON C_TUHHID_V !!≈ * **@CODE@**
 +Imprt+Pl3:i2%>jus K ;
 
 
-LEXICON C_SLOOVID !!≈ * **@CODE@**
+LEXICON C_SLOOVID !
 +V: C_SLOOVID_V ;
 
 
@@ -5263,7 +5291,7 @@ LEXICON C_SLOOVID_V
 +Imprt+Pl3:i2%>jus K ;
 
 
-LEXICON C_PASS_SH_RVSH !!≈     - **@CODE@** shortens vowel
+LEXICON C_PASS_SH_RVSH ! shortens vowel
 +V+IV+Inf:^CLEN^VBACK^RVSH%>đ K ; !kavnuđ
 
 +V+IV+Der4+Der/InchL:^CLEN%>škyett4 4SYLL_KYETTID_DER ; !kulluuškuođij
@@ -5320,7 +5348,7 @@ LEXICON C_PASS_SH_RVSH !!≈     - **@CODE@** shortens vowel
 +V+IV+Ger:^CLEN^VBACK^RVSH%>udijn K ; ! tohhuudijn
 
 
-LEXICON C_PASS_SH_RLEN !!≈     - **@CODE@** does not shorten vowel
+LEXICON C_PASS_SH_RLEN ! does not shorten vowel
 +V+IV+Inf:^CLEN^VBACK^RLEN%>đ K ;
 
 +V+IV+Der4+Der/InchL:^CLEN%>škyett4 4SYLL_KYETTID_DER ; !kulluuškuođij
@@ -5384,7 +5412,7 @@ LEXICON C_PASS_SH_RLEN !!≈     - **@CODE@** does not shorten vowel
 +V+IV+Ger:^VBACK^RLEN%>udijn K ; !aasâttijn asât%>dijn 
 
 
-LEXICON C_PASS_SH_ALTERNATE !!≈     - **@CODE@** toohum: does not shorten vowel, does not lengthen consonant, this is a Use/NG lexicon
+LEXICON C_PASS_SH_ALTERNATE ! toohum: does not shorten vowel, does not lengthen consonant, this is a Use/NG lexicon
 +V+IV+Inf:^VBACK^RLEN%>đ K ; !toohuđ
 
 +V+IV+Ind+Prs+Du3:^VBACK^RLEN%>v K ; !toohuv
@@ -5417,7 +5445,7 @@ LEXICON C_RAMMUD_IV
 LEXICON C_RAMMUD_TV
 +V+TV: C_RAMMUD_V ;
 
-LEXICON C_RAMMUD_V !!≈ * **@CODE@** does not shorten vowel
+LEXICON C_RAMMUD_V ! does not shorten vowel
 
 VINF_SHORT_VOW ;
 :%>u VINF_LONG_VOW ;
@@ -5454,7 +5482,7 @@ VINF_SHORT_VOW ;
 +Ind+Prt+Pl2:%>id  K ;
 
 
-LEXICON C_RAMMUD_POT  !!≈     - **@CODE@** umify this and next
+LEXICON C_RAMMUD_POT  ! umify this and next
 +Pot+Prs+Sg1:%>užeem K ;
 +Pot+Prs+Sg2:%>užeeh K ;
 +Pot+Prs+Sg3:%>š K ;
@@ -5466,7 +5494,7 @@ LEXICON C_RAMMUD_POT  !!≈     - **@CODE@** umify this and next
 +Pot+Prs+Pl3:%>užeh K ;
 
 
-LEXICON CONTR_POT !!≈ * **@CODE@** unify this and previous
+LEXICON CONTR_POT ! unify this and previous
 +Sg1:%>žeem K ;
 +Sg2:%>žeeh K ;
 +Sg3:^SVSH%>š K ;
@@ -5520,7 +5548,7 @@ LEXICON VINF_LONG_VOW
 +Ger+PxSg3:%>dijnis K ;
 
 
-LEXICON C_PASS_SH_POHTED  !!≈     - **@CODE@** shortens long vow in certain forms
+LEXICON C_PASS_SH_POHTED  ! shortens long vow in certain forms
 :^CLEN C_PASS_SH_COMMON ;
 +V+IV+Cond+Prs:^WG%> EVEN_COND ;
 +V+IV+Pot+Prs+Sg1:^WG%>žeem K ;
@@ -5533,7 +5561,7 @@ LEXICON C_PASS_SH_POHTED  !!≈     - **@CODE@** shortens long vow in certain fo
 +V+IV+Pot+Prs+Pl2:^WG^RLEN%>švetteđ K ;
 +V+IV+Pot+Prs+Pl3:^WG%>žeh K ;
 
-LEXICON C_PASS_SH  !!≈     - **@CODE@** shortens long vow in certain forms
+LEXICON C_PASS_SH  ! shortens long vow in certain forms
  C_PASS_SH_COMMON ;
 +V+IV+Cond+Prs:%>u EVEN_COND ;
 !pp!+V+IV+Pot+Prs+Sg1:%>užeem K ;
@@ -5546,7 +5574,7 @@ LEXICON C_PASS_SH  !!≈     - **@CODE@** shortens long vow in certain forms
 !pp!+V+IV+Pot+Prs+Pl2:^RLEN%>švetteđ K ;
 !pp!+V+IV+Pot+Prs+Pl3:%>užeh K ;
 
-LEXICON C_PASS_SH_COMMON  !!≈     - **@CODE@** shortens long vow in certain forms
+LEXICON C_PASS_SH_COMMON  ! shortens long vow in certain forms
 +V+IV+Inf:^VBACK%>đ K ; ! especially kalgâđ in this contlex; VBACK and VHIGH according to this verb
 +V+IV+Der4+Der/InchL:%>uškyett4 4SYLL_KYETTID_DER ; !
 +V+IV+Der1+Der/st:%>ust 3_DERIVED ; ! sirduustiđ
@@ -5611,7 +5639,7 @@ LEXICON C_TABAHTUD_TV ! XXX check
 !LEXICON C_TABAHTUD_V  !!≈ * __@CODE@__ Sg3 -uvá
 !+V+IV: TABAHTUD ;
 
-LEXICON C_TABAHTUD_V  !!≈ * **@CODE@** Sg3 -vá
+LEXICON C_TABAHTUD_V  ! Sg3 -vá
 +Inf:uđ			     K ;
 
 +Ind+Prs+Sg1:uum	     K ;
@@ -5773,7 +5801,7 @@ LEXICON 4SYLL_KYETTID_TV
 LEXICON 4SYLL_KYETTID_DER
 +V: 4SYLL_KYETTID_V ;
 
-LEXICON 4SYLL_KYETTID_V  !!≈ * **@CODE@**
+LEXICON 4SYLL_KYETTID_V  !
 +Ind: EVEN_IND_KYETTID ;
 +Pot+Prs: KYETTID_POT_ID ;
 +Cond+Prs:á^WG^VHIGH%> EVEN_COND ; !
@@ -5804,7 +5832,7 @@ LEXICON 4SYLL_KYETTID_V  !!≈ * **@CODE@**
 +Der2+Der/NomAg:e^CLEN^RVSH%> C_TAHHEE ; !vuástáväldee, oovdânpyehtee ok
 
 
-LEXICON EVEN_IND_KYETTID   !!≈     - **@CODE@**
+LEXICON EVEN_IND_KYETTID   !
 +Prs+Sg1:á^WG^VHIGH%>m K ;   ! -kuáđám
 +Prs+Sg2:á^WG^VHIGH%>h K ;   ! -kuáđáh
 +Prs+Sg3:i6^VHIGH K ; ! -kuát  OBS           !
@@ -5827,7 +5855,7 @@ LEXICON EVEN_IND_KYETTID   !!≈     - **@CODE@**
 +Prt+Pl2:i^WG%>id K ;
 +Prt+Pl3:i%>i3 K ;
 
-LEXICON KYETTID_POT_ID  !!≈     - **@CODE@**
+LEXICON KYETTID_POT_ID  !
 +Sg1:e^WG%>em K ; !-kyeđeem
 +Sg2:e^WG%>eh K ;
 +Sg3:i^WG%>š K ;
@@ -5846,7 +5874,7 @@ LEXICON 4_ADELISTID_IV
 LEXICON 4_ADELISTID_TV
 +V+TV: 4_ADELISTID_V ;
 
-LEXICON 4_ADELISTID_V   !!≈ * **@CODE@**
+LEXICON 4_ADELISTID_V   !
 
 +Inf:%>iđ K ;
 +PrsPrc:e%>e K ;
@@ -5927,7 +5955,7 @@ LEXICON 4_ITTID_IV ! for verbs with IV marking, when they come
 LEXICON 4_ITTID_TV ! for verbs with TV marking, when they come
 +V+TV: 4_ITTID_V ;
 
-LEXICON 4_ITTID_V   !!≈ * **@CODE@** temporarilly, we need a yaml for this
+LEXICON 4_ITTID_V   ! temporarilly, we need a yaml for this
 +Inf:%>iđ K ;
 +Inf+Err/Orth:%>eđ K ;
 +Ind+Prs+ConNeg:  K ; ! 
@@ -6216,29 +6244,25 @@ LEXICON 4_KAVNATTATTAD_V
 !! # Other lexicq
 !! ## Case lexica
 
-LEXICON VABESS !!≈ * **@CODE@** to handle Abessive variation, hánnáá, hennáá, hinnáá.
+LEXICON VABESS ! to handle Abessive variation, hánnáá, hennáá, hinnáá.
          :%>hánnáá K ;
 +Err/Orth:%>hennáá K ;
 +Err/Orth:%>hinnáá K ;
-!! \\
-LEXICON VGEN !!≈ * **@CODE@** flag for VGen
+LEXICON VGEN ! flag for VGen
 @R.Vgen.add@ K ;
 
 !! ## Derivation lexica
 
-LEXICON DER_MAS !!≈ * **@CODE@** 
+LEXICON DER_MAS ! 
 +Der4+Der/mas:%>mâšš 4KUNAGAS ;
 +Der4+Der/mas+Use/NG:%>mušš 4KUNAGAS ;
-!! \\
-LEXICON IJJE !!≈ * **@CODE@** 
+LEXICON IJJE ! 
 +Use/NG:ei4je C_TAHHEE ;
 :ijje C_TAHHEE ;
-!! \\
-LEXICON IJJE_PRSPRC !!≈ * **@CODE@** 
+LEXICON IJJE_PRSPRC ! 
 +Use/NG:ei4jee K ;
 :ijjee K ;
-!! \\
-LEXICON NOMACT !!≈ * **@CODE@** for -náál suffixation.
+LEXICON NOMACT ! for -náál suffixation.
 +Cmp#náál:# NAAL ; 
  K ;
 

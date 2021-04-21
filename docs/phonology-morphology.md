@@ -79,9 +79,8 @@ Literal quotes and angles must be escaped (cf morpheme boundaries further down):
 
 Trigger ordering in twolc and lexc, from left to right:
 
-```
-SV|ÁE|ÁI  EA|EX|SC  FCD|FVD  WG|CSH  CLEN  VHIGH|VBACK  RVSH|RLEN  SLEN|SVSH  SVLOW
-```
+{SV,ÁE,ÁI}  {EA,EX,SC}  {FCD|,VD} {WG,CSH} CLEN  {VHIGH,VBACK}  {RVSH,RLEN} {SLEN,SVSH}  SVLOW
+
 
 
 ## Morpheme boundaries:
