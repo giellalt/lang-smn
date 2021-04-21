@@ -16,20 +16,22 @@
 !! # Inari Sámi morphological analyser
 ! ========================================================================== !
 
-Multichar_Symbols  !!≈ # **@CODE@** definitions
+!! This file documents the Inari Sámi morphological analyser. The tags in bold are the ones in use in the analyser.
+
+Multichar_Symbols  !!≈  **@CODE@** definitions
 
 !! ## Parts of speech
  +N +A +Adv +V                      !!≈ * **@CODE@**
  +Pron +CS +CC                      !!≈ * **@CODE@**
  +Adp +Po +Pr                       !!≈ * **@CODE@**
  +Interj +Pcle                      !!≈ * **@CODE@**
- +Num
- +ABBR         !!≈ * **@CODE@**
- 
+ +Num   !!≈ * **@CODE@** 
+ +ABBR         !!≈ * **@CODE@** 
  +Symbol !!≈ * **@CODE@** = independent symbols in the text stream, like £, €, ©
 
  
 !! ### Tags for sub-POS
+
  +Prop      !!≈ * **@CODE@** - Propernoun
  +Pers      !!≈ * **@CODE@** - Personal Pronoun
  +Dem       !!≈ * **@CODE@** - Demonstrative Pronoun
@@ -46,16 +48,12 @@ Multichar_Symbols  !!≈ # **@CODE@** definitions
  +NomAg  !!≈ * **@CODE@** 
  +Ord  !!≈ * **@CODE@** 
 
+!! ### Tags for governing abbreviations in preprocessing
+
   +Gram/TAbbr    !!≈ * **@CODE@**:  Transitive abbreviation (it needs an argument)
-  +Gram/NoAbbr   !!≈ * **@CODE@**:  Intransitive abbreviations that are homonymous
-                 !!    with more frequent words. They should only be considered
-                 !!    abbreviations in the middle of a sentence.
-  +Gram/TNumAbbr !!≈ * **@CODE@**:  Transitive abbreviation if the following
-                 !!             constituent is numeric
- +Gram/NumNoAbbr !!≈ * **@CODE@**:  Transitive abbreviations for which numerals
-                 !! are complements and normal words. The abbreviation usage
-                 !! is less common and thus only the occurences in the middle of
-                 !! the sentence can be considered as true cases.
+  +Gram/NoAbbr   !!≈ * **@CODE@**:  Intransitive abbreviations that are homonymous   with more frequent words. They should only be considered  abbreviations in the middle of a sentence.
+  +Gram/TNumAbbr !!≈ * **@CODE@**:  Transitive abbreviation if the following     constituent is numeric
+ +Gram/NumNoAbbr !!≈ * **@CODE@**:  Transitive abbreviations for which numerals are complements and normal words. The abbreviation usage  the sentence can be considered as true cases.
   +Gram/TIAbbr   !!≈ * **@CODE@**:  Both transitive and intransitive abbreviation
   +Gram/IAbbr    !!≈ * **@CODE@**:  Intransitive abbreviation (it takes no argument)
   +Gram/3syll    !!≈ * **@CODE@**: trisyllabic verbs
@@ -85,7 +83,6 @@ Multichar_Symbols  !!≈ # **@CODE@** definitions
  +Ill +Ine +Ela                   !!≈ * **@CODE@** 
  +Com +Ess +Par +Abe               !!≈ * **@CODE@** 
  +Loc                              !!≈ * **@CODE@** 
-
  +Known !!≈ * **@CODE@** mon , till we found a better tag
 
 !! ### Adjectival forms
@@ -113,74 +110,78 @@ Multichar_Symbols  !!≈ # **@CODE@** definitions
 
 ! Der#begin
 
-!! ```
-! Derivation position in a derivation row:  Affix and
-! 1              2            3            4             POS type
-+Der1          +Der2        +Der3        +Der4
+!! ## Derivation tags
 
-! Der#1
-+Der/t                                                   ! NA (XXX check and remove)
-+Der/lasj                                                ! NA
-+Der/d                                                   ! VV
-+Der/tt                                                  ! VV - Causative čälittiđ
-+Der/Caus                                                ! VV - 3-syll causatives
-+Der/l                                                   ! VV
-+Der/st                                                  ! VV čälistiđ
-+Der/Car                                                 ! NA * +Der1+Der2 - only combine with Der3 caritive: peljittem
-+Der/laakan                                              ! AA * +Der1+Der2 - only combine with Der3
-+Der/Pass                                                ! VV -  passive
-! Der#2
-              +Der/Dimin                                 ! NN (was: Der/aš & Der/š)
-              +Der/NomAg
-              +Der/NomAct                                ! VN Der/NomAct har to realisasjonar, med ulike restriksjonar,
-              +Der/sasj                                                 ! NA
-              +Der/alla                                  ! VV
-              +Der/adda                                  ! VV
-              +Der/AAdv                                  ! adverb pyeremusávt pyeremusâht
-              +Der/taa                                   ! adverb pyeremustáá !This is not the best tag?
-! Der#3                    
-                           +Der/vuota                    ! AN
-! Der#4                                                            
-                                        +Der/InchL       ! VV
-!                                       +Der/NomAct      ! VN Der/NomAct har to realisasjonar, med ulike restriksjonar,
-                                                         !    this is previous Der/n. This realisation is Der4.
-                                                         !    Outcommented to not define the tag twice, but kept
-                                                         !    here for documentation purposes.
-                                        +Der/upmi        ! VN
-                                        +Der/mas         ! VN
-!! ```
+!! The derivation position tags.
 
-! Der#end
-
-
+!! ### The tag +Der
 !! All non-positional derivations should be preceded by this tag, to make it possible
 !! to target regular expressions at all derivations in a language-independent way:
 !! just specify +Der|+Der1 .. +Der5 and you are set.
 
-+Der  !!≈ * **@CODE@** 
++Der  !!≈ * **@CODE@** is the tag to put before the other der tags.
+
+!! ### Table for derivation tags
+
+!! | Pos1 | Pos2     | Pos3  | Pos4  | POS switches (from-to)| Explanation
+!! | ---  | ---      | ---   | ---   | ---                   | ---
++Der1                                       !!≈ | **@CODE@** |            |            |      |    | Position tag, required
+          +Der2                             !!≈ |            | **@CODE@** |            |      |    | Position tag, required
+                       +Der3                !!≈ |            |            | **@CODE@** |      |    | Position tag, required
+                                  +Der4     !!≈ |            |            |            | **@CODE@** |    | Position tag, required
++Der/lasj                                   !!≈ | **@CODE@** |            |            |      | NA | 
++Der/d                                      !!≈ | **@CODE@** |            |            |      | VV | 
++Der/tt                                     !!≈ | **@CODE@** |            |            |      | VV | - Causative čälittiđ
++Der/Caus                                   !!≈ | **@CODE@** |            |            |      | VV | - 3-syll causatives
++Der/l                                      !!≈ | **@CODE@** |            |            |      | VV | 
++Der/st                                     !!≈ | **@CODE@** |            |            |      | VV | čälistiđ
++Der/Car                                    !!≈ | **@CODE@** |            |            |      | NA | * +Der1+Der2 - only combine with Der3 caritive: peljittem
++Der/laakan                                 !!≈ | **@CODE@** |            |            |      | AA | * +Der1+Der2 - only combine with Der3
++Der/Pass                                   !!≈ | **@CODE@** |            |            |      | VV | -  passive
+           +Der/Dimin                       !!≈ |            | **@CODE@** |            |      | NN | (was: Der/aš & Der/š)
+           +Der/NomAg                       !!≈ |            | **@CODE@** |            |      |    | 
+           +Der/NomAct                      !!≈ |            | **@CODE@** |            |      | VN | Der/NomAct har to realisasjonar, med ulike restriksjonar,
+           +Der/sasj                        !!≈ |            | **@CODE@** |            |      | NA |           
+           +Der/alla                        !!≈ |            | **@CODE@** |            |      | VV | 
+           +Der/adda                        !!≈ |            | **@CODE@** |            |      | VV | 
+           +Der/AAdv                        !!≈ |            | **@CODE@** |            |      |    | adverb pyeremusávt pyeremusâht
+           +Der/taa                         !!≈ |            | **@CODE@** |            |      |    | adverb pyeremustáá !This is not the best tag?
+                      +Der/vuota            !!≈ |            |            | **@CODE@** |      | AN | 
+                                 +Der/InchL !!≈ |            |            | **@CODE@** |      | VV | 
+                                 +Der/upmi  !!≈ |            |            | **@CODE@** |      | VN | 
+                                 +Der/mas   !!≈ |            |            | **@CODE@** |      | VN | 
+
+
+!                               +Der/NomAct !!≈ |            |            |            |      | VN | Der/NomAct har to realisasjonar, med ulike restriksjonar,
+!                                            !≈ |            |            |            |      |    | this is previous Der/n. This realisation is Der4.
+!                                            !≈ |            |            |            |      |    | Outcommented to not define the tag twice, but kept
+!                                            !≈ |            |            |            |      |    | here for documentation purposes.
+! Der#end
+
+
+
 
  
-!! ### Derivations
-!! ### Other/unclassified derivations, can appear in all positions:
+!! ### Other derivations
+
+!! Other/unclassified derivations, can appear in all positions:
 
 
- +Der/ag !!≈ * **@CODE@** neeljičievâg neeljijienâg kuulmâloonjâg neeljičievâg neeljijienâg
- +Der/ahasas                    !!≈ * **@CODE@** 85-ahasâš škovlâahasâš
- +Der/ivvaas                  !!≈ * **@CODE@** 
- +Der/vualasas                    !!≈ * **@CODE@** tutkâmvuálásâš
-
-+Der/Superl
-+Der/Comp
-
-+Ex/N    !!≈ * **@CODE@** - This tag is not added in lexc. The POS tag before derivation is converted into this tag when compiling FST for disambiguation.
-+Ex/A    !!≈ * **@CODE@** - This tag is not added in lexc. The POS tag before derivation is converted into this tag when compiling FST for disambiguation.
-+Ex/V    !!≈ * **@CODE@** - This tag is not added in lexc. The POS tag before derivation is converted into this tag when compiling FST for disambiguation.
++Der/ag        !!≈ * **@CODE@** neeljičievâg neeljijienâg kuulmâloonjâg neeljičievâg neeljijienâg
++Der/ahasas    !!≈ * **@CODE@** 85-ahasâš škovlâahasâš
++Der/ivvaas    !!≈ * **@CODE@** 
++Der/vualasas  !!≈ * **@CODE@** tutkâmvuálásâš
++Der/Superl    !!≈ * **@CODE@** 
++Der/Comp      !!≈ * **@CODE@** 
++Ex/N          !!≈ * **@CODE@** - This tag is not added in lexc. The POS tag before derivation is converted into this tag when compiling FST for disambiguation.
++Ex/A          !!≈ * **@CODE@** - This tag is not added in lexc. The POS tag before derivation is converted into this tag when compiling FST for disambiguation.
++Ex/V          !!≈ * **@CODE@** - This tag is not added in lexc. The POS tag before derivation is converted into this tag when compiling FST for disambiguation.
 
 
 !! ### Clitics
 
- +Qst     !!≈ * **@CODE@** question particle
- +Foc                         !!≈ * **@CODE@** 
+ +Qst           !!≈ * **@CODE@** question particle
+ +Foc           !!≈ * **@CODE@** 
  +Foc/ba        !!≈  **@CODE@** 
  +Foc/baa       !!≈  **@CODE@** 
  +Foc/baan      !!≈  **@CODE@** 
@@ -199,216 +200,215 @@ Multichar_Symbols  !!≈ # **@CODE@** definitions
  +Foc/nii       !!≈  **@CODE@** 
  +Foc/pa        !!≈  **@CODE@** 
  +Foc/sun       !!≈  **@CODE@** 
- +Foc/uv       !!≈ **@CODE@** ... focus particles.
+ +Foc/uv        !!≈ **@CODE@** ... focus particles.
 
 !! ### Usage tags
 
- +Err/Orth        !!≈ * **@CODE@** substandard, not in normative fst
- +Err/Lex         !!≈ * **@CODE@** substandard, not in normative fst, no normative lemma
- +Err/Hyph        !!≈ * **@CODE@** substandard, not in normative fst
- +Err/SpaceCmp        !!≈ * **@CODE@** substandard, not in normative fst
- +Err/MissingSpace !!≈ |  **@CODE@** | in use in smi lexc
-
- +MWE             !!≈ * **@CODE@** - MultiWord Expression, used for abbreviation extraction for preprocess.sh
- +Use/-PLX        !!≈ * **@CODE@** - do not include in Polderland spellers (most likely irrelevant for smn)
- +Use/-Spell      !!≈ * **@CODE@** - do not include in speller (even though the entry is formally correct)
- +Use/SpellNoSugg !!≈ * **@CODE@** - Recognized, but not suggested in speller 
- +Use/GC          !!≈ * **@CODE@** only retained in the HFST Grammar Checker disambiguation analyser
- +Use/-GC         !!≈ * **@CODE@** never retained in the HFST Grammar Checker disambiguation analyser
+ +Err/Orth         !!≈ * **@CODE@** - substandard, not in normative fst
+ +Err/Lex          !!≈ * **@CODE@** - substandard, not in normative fst, no normative lemma
+ +Err/Hyph         !!≈ * **@CODE@** - substandard, not in normative fst
+ +Err/SpaceCmp     !!≈ * **@CODE@** - substandard, not in normative fst
+ +Err/MissingSpace !!≈ * **@CODE@** - in use in smi lexc
+ +MWE              !!≈ * **@CODE@** - MultiWord Expression, used for abbreviation extraction for preprocess.sh
+ +Use/-PLX         !!≈ * **@CODE@** - do not include in Polderland spellers (most likely irrelevant for smn)
+ +Use/-Spell       !!≈ * **@CODE@** - do not include in speller (even though the entry is formally correct)
+ +Use/SpellNoSugg  !!≈ * **@CODE@** - Recognized, but not suggested in speller 
+ +Use/GC           !!≈ * **@CODE@** - only retained in the HFST Grammar Checker disambiguation analyser
+ +Use/-GC          !!≈ * **@CODE@** - never retained in the HFST Grammar Checker disambiguation analyser
 
 !! ## Semantic tags
 
-+Sem/Act              !!≈ * **@CODE@** 
-+Sem/Act_Fruit              !!≈ * **@CODE@** 
-+Sem/Act_Plc              !!≈ * **@CODE@** 
-+Sem/Act_Route              !!≈ * **@CODE@** 
-+Sem/Act_Tool-it              !!≈ * **@CODE@** 
-+Sem/Amount              !!≈ * **@CODE@** 
-+Sem/Amount_Semcon              !!≈ * **@CODE@** 
-+Sem/Ani               !!≈ * **@CODE@** 
-+Sem/Ani-bird                  !!≈ * **@CODE@** Bird names
-+Sem/Ani-fish                  !!≈ * **@CODE@** Fish names
-+Sem/Ani-insect                  !!≈ * **@CODE@** Insect names
-+Sem/Ani_Body-abstr_Hum              !!≈ * **@CODE@** 
-+Sem/Ani_Buildpart              !!≈ * **@CODE@** 
-+Sem/Ani_Group              !!≈ * **@CODE@** 
-+Sem/Ani_Group_Hum              !!≈ * **@CODE@** 
-+Sem/Ani_Group_Prod-vis              !!≈ * **@CODE@** 
-+Sem/Ani_Hum              !!≈ * **@CODE@** 
-+Sem/Ani_Veh              !!≈ * **@CODE@** 
-+Sem/Aniprod              !!≈ * **@CODE@** 
-+Sem/Aniprod_Hum                           !!≈ * **@CODE@** 
-+Sem/Aniprod_Obj-clo                       !!≈ * **@CODE@** 
-+Sem/Aniprod_Perc-phys                       !!≈ * **@CODE@** 
-+Sem/Aniprod_Plc_Route                       !!≈ * **@CODE@** 
-+Sem/Atr                   !!≈ * **@CODE@** 
-+Sem/Body !!≈ * **@CODE@** denotes bodyparts
-+Sem/Body-abstr                               !!≈ * **@CODE@** 
-+Sem/Body-abstr_Feat-psych                   !!≈ * **@CODE@** 
-+Sem/Body-abstr_Prod-audio_Semcon          !!≈ * **@CODE@** 
-+Sem/Body_Food                               !!≈ * **@CODE@** 
-+Sem/Body_Hum                               !!≈ * **@CODE@** 
-+Sem/Body_Mat                               !!≈ * **@CODE@** 
-+Sem/Body_Measr                               !!≈ * **@CODE@** 
-+Sem/Body_Plc                               !!≈ * **@CODE@** 
-+Sem/Body_Plc-elevate                       !!≈ * **@CODE@** 
-+Sem/Build                                   !!≈ * **@CODE@** 
-+Sem/Build-room                             !!≈ * **@CODE@** 
-+Sem/Build_Edu_Org                           !!≈ * **@CODE@** 
-+Sem/Build_Org                               !!≈ * **@CODE@** 
-+Sem/Buildpart                               !!≈ * **@CODE@** 
-+Sem/Buildpart_Cat_Ctain_Mat               !!≈ * **@CODE@** 
-+Sem/Buildpart_Ctain_Obj                   !!≈ * **@CODE@** 
-+Sem/Cat                                   !!≈ * **@CODE@** 
-+Sem/Clth                                   !!≈ * **@CODE@** clothes
-+Sem/Clth-jewl                               !!≈ * **@CODE@** 
-+Sem/Clth-jewl_Curr                           !!≈ * **@CODE@** 
-+Sem/Clthpart                               !!≈ * **@CODE@** 
-+Sem/Ctain                                   !!≈ * **@CODE@** 
-+Sem/Ctain-abstr                           !!≈ * **@CODE@** 
-+Sem/Ctain-clth                               !!≈ * **@CODE@** 
-+Sem/Ctain-clth_Veh                           !!≈ * **@CODE@** 
-+Sem/Ctain_Furn                               !!≈ * **@CODE@** 
-+Sem/Ctain_Tool                               !!≈ * **@CODE@** 
-+Sem/Curr                                   !!≈ * **@CODE@** 
-+Sem/Dance                                   !!≈ * **@CODE@** 
-+Sem/Date                                   !!≈ * **@CODE@** 
-+Sem/Dir                                   !!≈ * **@CODE@** 
-+Sem/Domain                                   !!≈ * **@CODE@** 
-+Sem/Domain_Hum                !!≈ * **@CODE@** 
-+Sem/Domain_Prod-audio                       !!≈ * **@CODE@** 
-+Sem/Drink                                   !!≈ * **@CODE@** 
-+Sem/Drink_Plant                           !!≈ * **@CODE@** 
-+Sem/Dummytag                               !!≈ * **@CODE@** 
-+Sem/Edu                                   !!≈ * **@CODE@** 
-+Sem/Edu_Event                               !!≈ * **@CODE@** 
-+Sem/Edu_Geom                               !!≈ * **@CODE@** 
-+Sem/Edu_Hum              !!≈ * **@CODE@** 
-+Sem/Edu_Mat                               !!≈ * **@CODE@** 
-+Sem/Edu_Org                               !!≈ * **@CODE@** 
-+Sem/Event                                   !!≈ * **@CODE@** 
-+Sem/Event_Food                               !!≈ * **@CODE@** 
-+Sem/Event_Plc                               !!≈ * **@CODE@** 
-+Sem/Event_Time                               !!≈ * **@CODE@** 
-+Sem/Feat                                   !!≈ * **@CODE@** 
-+Sem/Feat-measr                               !!≈ * **@CODE@** 
-+Sem/Feat-measr_Plc                           !!≈ * **@CODE@** 
-+Sem/Feat-phys                               !!≈ * **@CODE@** 
-+Sem/Feat-phys_Tool-write                   !!≈ * **@CODE@** 
-+Sem/Feat-phys_Veh                           !!≈ * **@CODE@** 
-+Sem/Feat-phys_Wthr                           !!≈ * **@CODE@** 
-+Sem/Feat-psych                               !!≈ * **@CODE@** 
-+Sem/Feat-psych_Plc                           !!≈ * **@CODE@** 
-+Sem/Feat_Plant                               !!≈ * **@CODE@** 
-+Sem/Fem               !!≈ * **@CODE@** 
-+Sem/Food                                   !!≈ * **@CODE@** 
-+Sem/Food-med                               !!≈ * **@CODE@** 
-+Sem/Food_Plant                               !!≈ * **@CODE@** 
-+Sem/Fruit                                   !!≈ * **@CODE@** 
-+Sem/Fruit_Hum                               !!≈ * **@CODE@** 
-+Sem/Furn                                   !!≈ * **@CODE@** 
-+Sem/Game_Obj-play                           !!≈ * **@CODE@** 
-+Sem/Geom                                   !!≈ * **@CODE@** 
-+Sem/Geom_Obj                               !!≈ * **@CODE@** 
-+Sem/Group_Hum                               !!≈ * **@CODE@** 
-+Sem/Group_Hum_Org                           !!≈ * **@CODE@** 
-+Sem/Group_Hum_Plc                           !!≈ * **@CODE@** 
-+Sem/Group_Txt                               !!≈ * **@CODE@** 
-+Sem/Hum                                   !!≈ * **@CODE@** 
-+Sem/Hum_Lang                               !!≈ * **@CODE@** 
-+Sem/Hum_Lang_Plc                           !!≈ * **@CODE@** 
-+Sem/Hum_Mat_Tool                           !!≈ * **@CODE@** 
-+Sem/Hum_Obj                               !!≈ * **@CODE@** 
-+Sem/Hum_Org                               !!≈ * **@CODE@** 
-+Sem/Hum_Plc                               !!≈ * **@CODE@** 
-+Sem/Hum_Veh                               !!≈ * **@CODE@** 
-+Sem/ID                                    !!≈ * **@CODE@** 
-+Sem/Ideol                                   !!≈ * **@CODE@** 
-+Sem/Lang                        !!≈ * **@CODE@**  Languages
-+Sem/Lang_Tool                               !!≈ * **@CODE@** 
-+Sem/Mal               !!≈ * **@CODE@** 
-+Sem/Mat                                   !!≈ * **@CODE@** 
-+Sem/Mat_Plant                               !!≈ * **@CODE@** 
-+Sem/Mat_Txt                               !!≈ * **@CODE@** 
-+Sem/Measr               !!≈ * **@CODE@** 
-+Sem/Measr_Sign                               !!≈ * **@CODE@** 
-+Sem/Measr_Time                               !!≈ * **@CODE@** 
-+Sem/Money               !!≈ * **@CODE@** 
-+Sem/Money_Obj                               !!≈ * **@CODE@** 
-+Sem/Money_Txt                               !!≈ * **@CODE@** 
-+Sem/Obj               !!≈ * **@CODE@** 
-+Sem/Obj-clo                               !!≈ * **@CODE@** 
-+Sem/Obj-el     !!≈ * **@CODE@**           
-+Sem/Obj-ling                               !!≈ * **@CODE@** 
-+Sem/Obj-play                               !!≈ * **@CODE@** 
-+Sem/Obj-rope                               !!≈ * **@CODE@** 
-+Sem/Obj-surfc                               !!≈ * **@CODE@** 
-+Sem/Obj_Semcon                               !!≈ * **@CODE@** 
-+Sem/Obj_State                               !!≈ * **@CODE@** 
-+Sem/Obj_Veh                               !!≈ * **@CODE@** 
-+Sem/Org               !!≈ * **@CODE@** 
-+Sem/Org_Prod-audio                           !!≈ * **@CODE@** 
-+Sem/Org_Prod-cogn                           !!≈ * **@CODE@** 
-+Sem/Org_Prod-vis                           !!≈ * **@CODE@** 
-+Sem/Org_Rule                               !!≈ * **@CODE@** 
-+Sem/Org_Txt                               !!≈ * **@CODE@** 
-+Sem/Part                                   !!≈ * **@CODE@** 
-+Sem/Perc-cogn                               !!≈ * **@CODE@** 
-+Sem/Perc-emo                               !!≈ * **@CODE@** 
-+Sem/Perc-phys                               !!≈ * **@CODE@** 
-+Sem/Plant ! Plant names                   !!≈ * **@CODE@** 
-+Sem/Plant-fungus              !!≈ * **@CODE@**    Fungi names
-+Sem/Plant_Plantpart                                   !!≈ * **@CODE@** 
-+Sem/Plantpart                               !!≈ * **@CODE@** 
-+Sem/Plc                                                   !!≈ * **@CODE@** denotes places
-+Sem/Plc-abstr                               !!≈ * **@CODE@** 
-+Sem/Plc-abstr_Rel_State                           !!≈ * **@CODE@** 
-+Sem/Plc-abstr_Route                               !!≈ * **@CODE@** 
-+Sem/Plc-elevate                           !!≈ * **@CODE@** 
-+Sem/Plc-line                               !!≈ * **@CODE@** 
-+Sem/Plc-water                               !!≈ * **@CODE@** 
-+Sem/Plc_Route                               !!≈ * **@CODE@** 
-+Sem/Plc_Substnc                           !!≈ * **@CODE@** 
-+Sem/Plc_Substnc_Wthr                               !!≈ * **@CODE@** 
-+Sem/Plc_Time                               !!≈ * **@CODE@** 
-+Sem/Plc_Tool-catch                           !!≈ * **@CODE@** 
-+Sem/Plc_Txt                               !!≈ * **@CODE@** 
-+Sem/Plc_Wthr                               !!≈ * **@CODE@** 
++Sem/Act                           !!≈ * **@CODE@** 
++Sem/Act_Fruit                     !!≈ * **@CODE@** 
++Sem/Act_Plc                       !!≈ * **@CODE@** 
++Sem/Act_Route                     !!≈ * **@CODE@** 
++Sem/Act_Tool-it                   !!≈ * **@CODE@** 
++Sem/Amount                        !!≈ * **@CODE@** 
++Sem/Amount_Semcon                 !!≈ * **@CODE@** 
++Sem/Ani                           !!≈ * **@CODE@** 
++Sem/Ani-bird                      !!≈ * **@CODE@** Bird names
++Sem/Ani-fish                      !!≈ * **@CODE@** Fish names
++Sem/Ani-insect                    !!≈ * **@CODE@** Insect names
++Sem/Ani_Body-abstr_Hum            !!≈ * **@CODE@** 
++Sem/Ani_Buildpart                 !!≈ * **@CODE@** 
++Sem/Ani_Group                     !!≈ * **@CODE@** 
++Sem/Ani_Group_Hum                 !!≈ * **@CODE@** 
++Sem/Ani_Group_Prod-vis            !!≈ * **@CODE@** 
++Sem/Ani_Hum                       !!≈ * **@CODE@** 
++Sem/Ani_Veh                       !!≈ * **@CODE@** 
++Sem/Aniprod                       !!≈ * **@CODE@** 
++Sem/Aniprod_Hum                   !!≈ * **@CODE@** 
++Sem/Aniprod_Obj-clo               !!≈ * **@CODE@** 
++Sem/Aniprod_Perc-phys             !!≈ * **@CODE@** 
++Sem/Aniprod_Plc_Route             !!≈ * **@CODE@** 
++Sem/Atr                           !!≈ * **@CODE@** 
++Sem/Body                          !!≈ * **@CODE@** denotes bodyparts
++Sem/Body-abstr                    !!≈ * **@CODE@** 
++Sem/Body-abstr_Feat-psych         !!≈ * **@CODE@** 
++Sem/Body-abstr_Prod-audio_Semcon  !!≈ * **@CODE@** 
++Sem/Body_Food                     !!≈ * **@CODE@** 
++Sem/Body_Hum                      !!≈ * **@CODE@** 
++Sem/Body_Mat                      !!≈ * **@CODE@** 
++Sem/Body_Measr                    !!≈ * **@CODE@** 
++Sem/Body_Plc                      !!≈ * **@CODE@** 
++Sem/Body_Plc-elevate              !!≈ * **@CODE@** 
++Sem/Build                         !!≈ * **@CODE@** 
++Sem/Build-room                    !!≈ * **@CODE@** 
++Sem/Build_Edu_Org                 !!≈ * **@CODE@** 
++Sem/Build_Org                     !!≈ * **@CODE@** 
++Sem/Buildpart                     !!≈ * **@CODE@** 
++Sem/Buildpart_Cat_Ctain_Mat       !!≈ * **@CODE@** 
++Sem/Buildpart_Ctain_Obj           !!≈ * **@CODE@** 
++Sem/Cat                           !!≈ * **@CODE@** 
++Sem/Clth                          !!≈ * **@CODE@** clothes
++Sem/Clth-jewl                     !!≈ * **@CODE@** 
++Sem/Clth-jewl_Curr                !!≈ * **@CODE@** 
++Sem/Clthpart                      !!≈ * **@CODE@** 
++Sem/Ctain                         !!≈ * **@CODE@** 
++Sem/Ctain-abstr                   !!≈ * **@CODE@** 
++Sem/Ctain-clth                    !!≈ * **@CODE@** 
++Sem/Ctain-clth_Veh                !!≈ * **@CODE@** 
++Sem/Ctain_Furn                    !!≈ * **@CODE@** 
++Sem/Ctain_Tool                    !!≈ * **@CODE@** 
++Sem/Curr                          !!≈ * **@CODE@** 
++Sem/Dance                         !!≈ * **@CODE@** 
++Sem/Date                          !!≈ * **@CODE@** 
++Sem/Dir                           !!≈ * **@CODE@** 
++Sem/Domain                        !!≈ * **@CODE@** 
++Sem/Domain_Hum                    !!≈ * **@CODE@** 
++Sem/Domain_Prod-audio             !!≈ * **@CODE@** 
++Sem/Drink                         !!≈ * **@CODE@** 
++Sem/Drink_Plant                   !!≈ * **@CODE@** 
++Sem/Dummytag                      !!≈ * **@CODE@** 
++Sem/Edu                           !!≈ * **@CODE@** 
++Sem/Edu_Event                     !!≈ * **@CODE@** 
++Sem/Edu_Geom                      !!≈ * **@CODE@** 
++Sem/Edu_Hum                       !!≈ * **@CODE@** 
++Sem/Edu_Mat                       !!≈ * **@CODE@** 
++Sem/Edu_Org                       !!≈ * **@CODE@** 
++Sem/Event                         !!≈ * **@CODE@** 
++Sem/Event_Food                    !!≈ * **@CODE@** 
++Sem/Event_Plc                     !!≈ * **@CODE@** 
++Sem/Event_Time                    !!≈ * **@CODE@** 
++Sem/Feat                          !!≈ * **@CODE@** 
++Sem/Feat-measr                    !!≈ * **@CODE@** 
++Sem/Feat-measr_Plc                !!≈ * **@CODE@** 
++Sem/Feat-phys                     !!≈ * **@CODE@** 
++Sem/Feat-phys_Tool-write          !!≈ * **@CODE@** 
++Sem/Feat-phys_Veh                 !!≈ * **@CODE@** 
++Sem/Feat-phys_Wthr                !!≈ * **@CODE@** 
++Sem/Feat-psych                    !!≈ * **@CODE@** 
++Sem/Feat-psych_Plc                !!≈ * **@CODE@** 
++Sem/Feat_Plant                    !!≈ * **@CODE@** 
++Sem/Fem                           !!≈ * **@CODE@** 
++Sem/Food                          !!≈ * **@CODE@** 
++Sem/Food-med                      !!≈ * **@CODE@** 
++Sem/Food_Plant                    !!≈ * **@CODE@** 
++Sem/Fruit                         !!≈ * **@CODE@** 
++Sem/Fruit_Hum                     !!≈ * **@CODE@** 
++Sem/Furn                          !!≈ * **@CODE@** 
++Sem/Game_Obj-play                 !!≈ * **@CODE@** 
++Sem/Geom                          !!≈ * **@CODE@** 
++Sem/Geom_Obj                      !!≈ * **@CODE@** 
++Sem/Group_Hum                     !!≈ * **@CODE@** 
++Sem/Group_Hum_Org                 !!≈ * **@CODE@** 
++Sem/Group_Hum_Plc                 !!≈ * **@CODE@** 
++Sem/Group_Txt                     !!≈ * **@CODE@** 
++Sem/Hum                           !!≈ * **@CODE@** 
++Sem/Hum_Lang                      !!≈ * **@CODE@** 
++Sem/Hum_Lang_Plc                  !!≈ * **@CODE@** 
++Sem/Hum_Mat_Tool                  !!≈ * **@CODE@** 
++Sem/Hum_Obj                       !!≈ * **@CODE@** 
++Sem/Hum_Org                       !!≈ * **@CODE@** 
++Sem/Hum_Plc                       !!≈ * **@CODE@** 
++Sem/Hum_Veh                       !!≈ * **@CODE@** 
++Sem/ID                            !!≈ * **@CODE@** 
++Sem/Ideol                         !!≈ * **@CODE@** 
++Sem/Lang                          !!≈ * **@CODE@**  Languages
++Sem/Lang_Tool                     !!≈ * **@CODE@** 
++Sem/Mal                           !!≈ * **@CODE@** 
++Sem/Mat                           !!≈ * **@CODE@** 
++Sem/Mat_Plant                     !!≈ * **@CODE@** 
++Sem/Mat_Txt                       !!≈ * **@CODE@** 
++Sem/Measr                         !!≈ * **@CODE@** 
++Sem/Measr_Sign                    !!≈ * **@CODE@** 
++Sem/Measr_Time                    !!≈ * **@CODE@** 
++Sem/Money                         !!≈ * **@CODE@** 
++Sem/Money_Obj                     !!≈ * **@CODE@** 
++Sem/Money_Txt                     !!≈ * **@CODE@** 
++Sem/Obj                           !!≈ * **@CODE@** 
++Sem/Obj-clo                       !!≈ * **@CODE@** 
++Sem/Obj-el                        !!≈ * **@CODE@**           
++Sem/Obj-ling                      !!≈ * **@CODE@** 
++Sem/Obj-play                      !!≈ * **@CODE@** 
++Sem/Obj-rope                      !!≈ * **@CODE@** 
++Sem/Obj-surfc                     !!≈ * **@CODE@** 
++Sem/Obj_Semcon                    !!≈ * **@CODE@** 
++Sem/Obj_State                     !!≈ * **@CODE@** 
++Sem/Obj_Veh                       !!≈ * **@CODE@** 
++Sem/Org                           !!≈ * **@CODE@** 
++Sem/Org_Prod-audio                !!≈ * **@CODE@** 
++Sem/Org_Prod-cogn                 !!≈ * **@CODE@** 
++Sem/Org_Prod-vis                  !!≈ * **@CODE@** 
++Sem/Org_Rule                      !!≈ * **@CODE@** 
++Sem/Org_Txt                       !!≈ * **@CODE@** 
++Sem/Part                          !!≈ * **@CODE@** 
++Sem/Perc-cogn                     !!≈ * **@CODE@** 
++Sem/Perc-emo                      !!≈ * **@CODE@** 
++Sem/Perc-phys                     !!≈ * **@CODE@** 
++Sem/Plant                         !!≈ * **@CODE@**   Plant names
++Sem/Plant-fungus                  !!≈ * **@CODE@**    Fungi names
++Sem/Plant_Plantpart               !!≈ * **@CODE@** 
++Sem/Plantpart                     !!≈ * **@CODE@** 
++Sem/Plc                           !!≈ * **@CODE@** denotes places
++Sem/Plc-abstr                     !!≈ * **@CODE@** 
++Sem/Plc-abstr_Rel_State           !!≈ * **@CODE@** 
++Sem/Plc-abstr_Route               !!≈ * **@CODE@** 
++Sem/Plc-elevate                   !!≈ * **@CODE@** 
++Sem/Plc-line                      !!≈ * **@CODE@** 
++Sem/Plc-water                     !!≈ * **@CODE@** 
++Sem/Plc_Route                     !!≈ * **@CODE@** 
++Sem/Plc_Substnc                   !!≈ * **@CODE@** 
++Sem/Plc_Substnc_Wthr              !!≈ * **@CODE@** 
++Sem/Plc_Time                      !!≈ * **@CODE@** 
++Sem/Plc_Tool-catch                !!≈ * **@CODE@** 
++Sem/Plc_Txt                       !!≈ * **@CODE@** 
++Sem/Plc_Wthr                      !!≈ * **@CODE@** 
 +Sem/Pos                           !!≈ * **@CODE@** 
-+Sem/Process                               !!≈ * **@CODE@** 
-+Sem/Prod                           !!≈ * **@CODE@** 
-+Sem/Prod-audio                               !!≈ * **@CODE@** 
-+Sem/Prod-audio_Txt                           !!≈ * **@CODE@** 
-+Sem/Prod-cogn                               !!≈ * **@CODE@** 
-+Sem/Prod-cogn_Txt                           !!≈ * **@CODE@** 
-+Sem/Prod-ling                               !!≈ * **@CODE@** 
-+Sem/Prod-vis                               !!≈ * **@CODE@** 
-+Sem/Rel                               !!≈ * **@CODE@** 
-+Sem/Route                               !!≈ * **@CODE@** 
-+Sem/Rule                               !!≈ * **@CODE@** 
-+Sem/Semcon                               !!≈ * **@CODE@** 
-+Sem/Semcon_Txt                               !!≈ * **@CODE@** 
-+Sem/Sign                               !!≈ * **@CODE@** 
-+Sem/State                               !!≈ * **@CODE@** 
-+Sem/State-sick                               !!≈ * **@CODE@** 
-+Sem/Substnc                               !!≈ * **@CODE@** 
-+Sem/Substnc_Wthr                           !!≈ * **@CODE@** 
-+Sem/Sur                                                   !!≈ * **@CODE@** 
-+Sem/Time                               !!≈ * **@CODE@** 
-+Sem/Time-clock                               !!≈ * **@CODE@** 
-+Sem/Time_Wthr                               !!≈ * **@CODE@** 
-+Sem/Tool                               !!≈ * **@CODE@** 
-+Sem/Tool-catch                               !!≈ * **@CODE@** 
-+Sem/Tool-clean                               !!≈ * **@CODE@** 
-+Sem/Tool-it                               !!≈ * **@CODE@** 
-+Sem/Tool-measr                               !!≈ * **@CODE@** 
-+Sem/Tool-music                               !!≈ * **@CODE@** 
-+Sem/Tool-write                               !!≈ * **@CODE@** 
-+Sem/Txt                               !!≈ * **@CODE@** 
-+Sem/Veh                                                   !!≈ * **@CODE@** 
-+Sem/Wpn                               !!≈ * **@CODE@** 
-+Sem/Wthr                               !!≈ * **@CODE@** weather
-+Sem/Year                                                  !!≈ * **@CODE@** 
++Sem/Process                       !!≈ * **@CODE@** 
++Sem/Prod                          !!≈ * **@CODE@** 
++Sem/Prod-audio                    !!≈ * **@CODE@** 
++Sem/Prod-audio_Txt                !!≈ * **@CODE@** 
++Sem/Prod-cogn                     !!≈ * **@CODE@** 
++Sem/Prod-cogn_Txt                 !!≈ * **@CODE@** 
++Sem/Prod-ling                     !!≈ * **@CODE@** 
++Sem/Prod-vis                      !!≈ * **@CODE@** 
++Sem/Rel                           !!≈ * **@CODE@** 
++Sem/Route                         !!≈ * **@CODE@** 
++Sem/Rule                          !!≈ * **@CODE@** 
++Sem/Semcon                        !!≈ * **@CODE@** 
++Sem/Semcon_Txt                    !!≈ * **@CODE@** 
++Sem/Sign                          !!≈ * **@CODE@** 
++Sem/State                         !!≈ * **@CODE@** 
++Sem/State-sick                    !!≈ * **@CODE@** 
++Sem/Substnc                       !!≈ * **@CODE@** 
++Sem/Substnc_Wthr                  !!≈ * **@CODE@** 
++Sem/Sur                           !!≈ * **@CODE@** 
++Sem/Time                          !!≈ * **@CODE@** 
++Sem/Time-clock                    !!≈ * **@CODE@** 
++Sem/Time_Wthr                     !!≈ * **@CODE@** 
++Sem/Tool                          !!≈ * **@CODE@** 
++Sem/Tool-catch                    !!≈ * **@CODE@** 
++Sem/Tool-clean                    !!≈ * **@CODE@** 
++Sem/Tool-it                       !!≈ * **@CODE@** 
++Sem/Tool-measr                    !!≈ * **@CODE@** 
++Sem/Tool-music                    !!≈ * **@CODE@** 
++Sem/Tool-write                    !!≈ * **@CODE@** 
++Sem/Txt                           !!≈ * **@CODE@** 
++Sem/Veh                           !!≈ * **@CODE@** 
++Sem/Wpn                           !!≈ * **@CODE@** 
++Sem/Wthr                          !!≈ * **@CODE@** weather
++Sem/Year                          !!≈ * **@CODE@** 
 
  
 !! ## Punctuation
@@ -416,7 +416,7 @@ Multichar_Symbols  !!≈ # **@CODE@** definitions
  +CLB +PUNCT +HYPH    !!≈ * **@CODE@** 
  +PAR +LEFT +RIGHT    !!≈ * **@CODE@** 
  +URL                 !!≈ * **@CODE@** 
- +CLBfinal   !!≈ * **@CODE@**  Sentence final abbreviated expression ending in full stop, the full stop is ambiguous
+ +CLBfinal            !!≈ * **@CODE@**  Sentence final abbreviated expression ending in full stop, the full stop is ambiguous
 
  
 !! ## Morphophonemes
@@ -431,7 +431,7 @@ Multichar_Symbols  !!≈ # **@CODE@** definitions
  a5 ä5 á5 e5 u5 o5 y5        !!≈ * **@CODE@** = these vowels do not change, e.g. pyerá
  h5 j5 m5 ŋ5 t5 c5 d5        !!≈ * **@CODE@** = these consonants do not change in WG
  l5 t5 r5 č5 k5 z5           !!≈ * **@CODE@** = these consonants do not change in WG
- ∑   !!≈ * **@CODE@** used for dynamic compounds, Capital Greek Sigma, Alt-Shift-S
+ ∑                           !!≈ * **@CODE@** used for dynamic compounds, Capital Greek Sigma, Alt-Shift-S
 ! m7 n7 ŋ7 v7 s7 š7 r7 đ7 j7 l7 h7    these were the dotted ones, not in use.
  
 !! ### Archiphonemes
@@ -465,27 +465,26 @@ Multichar_Symbols  !!≈ # **@CODE@** definitions
 ^BLOCK  !!≈ * **@CODE@** = This symbol just to block otherwise triggering contexts
 
 !! ## Symbols that need to be escaped on the lower side (towards twolc):
- »7     ! »
- «7     ! «
- %[%>%] ! >
- %[%<%] ! <
 
+ »7     !! * **»** derivation boundary symbols (for hunspell etc. not in use (?))
+ «7     !! * **«** derivation
+ %[%>%] !! * **%>**  suffix
+ %[%<%] !! * **%<**  prefix
  +Use/NG      !!≈ * **@CODE@** not-generate, for ped generation isme-ped.fst
  +Use/MT      !!≈ * **@CODE@**  generate only for MT 
  +Use/Circ    !!≈ * **@CODE@** 
-
 +Use/-PMatch          !!≈ * **@CODE@** = for preprocessing
 +Use/PMatch           !!≈ * **@CODE@** = for preprocessing
 @P.Pmatch.Backtrack@  !!≈ * **@CODE@** = for preprocessing
 
 
 !! ## Variants within the same paradigm
-+v1    !!≈ * **@CODE@** 
-+v2    !!≈  **@CODE@** 
-+v3    !!≈  **@CODE@** 
-+v4    !!≈  **@CODE@**  for different paradigm variants of same lexeme
-+Hom1  !!≈ * **@CODE@** 
-+Hom2  !!≈  **@CODE@** for different homonymous lexemes
++v1       !!≈ * **@CODE@** 
++v2       !!≈  **@CODE@** 
++v3       !!≈  **@CODE@** 
++v4       !!≈  **@CODE@**  for different paradigm variants of same lexeme
++Hom1     !!≈ * **@CODE@** 
++Hom2     !!≈  **@CODE@** for different homonymous lexemes
 +Allegro  !!≈ * **@CODE@** 
 
 
@@ -504,7 +503,6 @@ Multichar_Symbols  !!≈ # **@CODE@** definitions
 +Cmp/PlGen  !!≈ * **@CODE@** compounds
 +Cmp/SplitR !!≈ * **@CODE@** compounds
 +Cmp/Sh     !!≈ * **@CODE@** compounds
-
 +Cmp        !!≈ * **@CODE@** This tag to mark there is a compound.
 
 !! ### These tags govern the parts of the compound
@@ -518,8 +516,7 @@ Multichar_Symbols  !!≈ # **@CODE@** definitions
 +CmpNP/Last      !!≈ * **@CODE@** - ... only be last part in a compound or alone
 +CmpNP/Suff      !!≈ * **@CODE@** - ... only **last** part in a compound, NEVER alone
 +CmpNP/None      !!≈ * **@CODE@** - ... does not take part in compounds
-+CmpNP/Only      !!≈ * **@CODE@** - ... only be part of a compound, i.e. can never
-                 !!                     be used alone, but can appear in any position
++CmpNP/Only      !!≈ * **@CODE@** - ... only be part of a compound, i.e. can never be used alone, but can appear in any position
 
 !! The prefix (before "/") is **CmpN**:
 !! (meaning: this is the normative position of thus tag)
@@ -557,22 +554,24 @@ Multichar_Symbols  !!≈ # **@CODE@** definitions
 !! flag diacritics to restrict morhpological combinatorics - only allow compounds
 !! with verbs if the verb is further derived into a noun again:
 
- @P.NeedNoun.ON@     !!≈ |  **@CODE@** | (Dis)allow compounds with verbs unless nominalised |
- @D.NeedNoun.ON@     !!≈ |  **@CODE@** | (Dis)allow compounds with verbs unless nominalised |
- @C.NeedNoun@        !!≈ |  **@CODE@** | (Dis)allow compounds with verbs unless nominalised |
- @R.NeedNoun.ON@     !!≈ |  **@CODE@** | (Dis)allow compounds with verbs unless nominalised |
+!! | Flag | Explanation
+!! | --- | --- 
+ @P.NeedNoun.ON@     !!≈ |  **@CODE@** | (Dis)allow compounds with verbs unless nominalised 
+ @D.NeedNoun.ON@     !!≈ |  **@CODE@** | (Dis)allow compounds with verbs unless nominalised 
+ @C.NeedNoun@        !!≈ |  **@CODE@** | (Dis)allow compounds with verbs unless nominalised 
+ @R.NeedNoun.ON@     !!≈ |  **@CODE@** | (Dis)allow compounds with verbs unless nominalised 
+ @D.ErrOrth.ON@      !!≈ |  **@CODE@**  | Disallow ErrOrth
+ @C.ErrOrth@         !!≈ |  **@CODE@**  | Clear ErrOrth flag
+ @P.ErrOrth.ON@      !!≈ |  **@CODE@**  | Set positive value for ErrOrth flag
+ @R.ErrOrth.ON@      !!≈ |  **@CODE@**  | Reset ErrOrth Flag
  
-
- @D.ErrOrth.ON@      !!≈ |  **@CODE@**  |
- @C.ErrOrth@         !!≈ |  **@CODE@**  |
- @P.ErrOrth.ON@      !!≈ |  **@CODE@**  |
- @R.ErrOrth.ON@      !!≈ |  **@CODE@**  |
- 
-!! 
 !! For languages that allow compounding, the following flag diacritics are needed
 !! to control position-based compounding restrictions for nominals. Their use is
 !! handled automatically if combined with +CmpN/xxx tags. If not used, they will
 !! do no harm.
+
+!! | Flag | Explanation
+!! | --- | --- 
  @P.CmpFrst.FALSE@ !!≈ |  **@CODE@** | Require that words tagged as such only appear first
  @D.CmpPref.TRUE@  !!≈ |  **@CODE@** | Block such words from entering ENDLEX
  @P.CmpPref.FALSE@ !!≈ |  **@CODE@** | Block these words from making further compounds
@@ -589,83 +588,83 @@ Multichar_Symbols  !!≈ # **@CODE@** definitions
  @P.CmpHyph.TRUE@  !!≈ |  **@CODE@** | Flag to control hyphenated compounds like proper nouns
  @N.CmpHyph.TRUE@  !!≈ |  **@CODE@** | Flag to control hyphenated compounds like proper nouns
 
-!! 
+
 !! Use the following flag diacritics to control downcasing of derived proper
 !! nouns (e.g. Finnish Pariisi -> pariisilainen). See e.g. North Sámi for how to use
 !! these flags. There exists a ready-made regex that will do the actual down-casing
 !! given the proper use of these flags.
+
+!! | Flag | Explanation
+!! | --- | --- 
  @U.Cap.Obl@        !!≈ |  **@CODE@** | Allowing downcasing of derived names: deatnulasj.
  @U.Cap.Opt@        !!≈ |  **@CODE@** | Allowing downcasing of derived names: deatnulasj.
-
+@U.NeedsVowRed.OFF@ !!≈ | **@CODE@**  | is used to force hyphenation/non-reduction: samediggi-
+@U.NeedsVowRed.ON@  !!≈ | **@CODE@**  | is used to force reduction w/o hyphen: samedigge#xxx
+@C.NeedsVowRed@     !!≈ | **@CODE@**  | Clearing this feature, so that it doesn't interfere with further compounding
+@C.Px@              !!≈ | **@CODE@**  | Clear px
+@C.Nom3Px@          !!≈ | **@CODE@**  | 
+@P.Px.add@          !!≈ | **@CODE@**  | 
+@R.Px.add@          !!≈ | **@CODE@**  | 
+@P.Px.block@        !!≈ | **@CODE@**  | 
+@D.Px.block@        !!≈ | **@CODE@**  | 
+@P.Nom12Px.add@     !!≈ | **@CODE@**  | 
+@R.Nom12Px.add@     !!≈ | **@CODE@**  | 
+@P.Nom3Px.add@      !!≈ | **@CODE@**  | 
+@R.Nom3Px.add@      !!≈ | **@CODE@**  | 
+@P.Vgen.add@        !!≈ | **@CODE@**  | 
+@R.Vgen.add@        !!≈ | **@CODE@**  | 
+@R.SpellRlx.ON@     !!≈ | **@CODE@**  | Flag used to tag spell-relax-analysed strings (and only those).
+@D.SpellRlx.ON@     !!≈ | **@CODE@**  | Flag used to tag spell-relax-analysed strings (and only those).
+@C.SpellRlx@        !!≈ | **@CODE@**  | Flag used to tag spell-relax-analysed strings (and only those).
+@R.SpaceCmp.ON@     !!≈ | **@CODE@**  | Flag to tag compounds written with a space
+@D.SpaceCmp.ON@     !!≈ | **@CODE@**  | Flag to tag compounds written with a space
+@C.SpaceCmp@        !!≈ | **@CODE@**  | Flag to tag compounds written with a space
 ! @P.Need3Part.ON@ @D.Need3Part.ON@ @C.Need3Part@ !3Part
 
-@U.NeedsVowRed.OFF@ !!≈ * **@CODE@** is used to force hyphenation/non-reduction: samediggi-
-@U.NeedsVowRed.ON@  !!≈ * **@CODE@** is used to force reduction w/o hyphen: samedigge#xxx
-@C.NeedsVowRed@     !!≈ * **@CODE@** Clearing this feature, so that it doesn't interfere with further compounding
-
-@C.Px@            !!≈ * **@CODE@** 
-@C.Nom3Px@        !!≈ * **@CODE@** 
-@P.Px.add@        !!≈ * **@CODE@** 
-@R.Px.add@        !!≈ * **@CODE@** 
-@P.Px.block@    !!≈ * **@CODE@** 
-@D.Px.block@    !!≈ * **@CODE@** 
-@P.Nom12Px.add@ !!≈ * **@CODE@** 
-@R.Nom12Px.add@ !!≈ * **@CODE@** 
-@P.Nom3Px.add@ !!≈ * **@CODE@** 
-@R.Nom3Px.add@ !!≈ * **@CODE@** 
-
-@P.Vgen.add@   !!≈ * **@CODE@** 
-@R.Vgen.add@   !!≈ * **@CODE@** 
-
-
-@R.SpellRlx.ON@ !!≈ * **@CODE@** Flag used to tag spell-relax-analysed strings (and only those).
-@D.SpellRlx.ON@ !!≈ * **@CODE@** Flag used to tag spell-relax-analysed strings (and only those).
-@C.SpellRlx@    !!≈ * **@CODE@** Flag used to tag spell-relax-analysed strings (and only those).
-
-@R.SpaceCmp.ON@ !!≈ * **@CODE@** Flag to tag compounds written with a space
-@D.SpaceCmp.ON@ !!≈ * **@CODE@** Flag to tag compounds written with a space
-@C.SpaceCmp@    !!≈ * **@CODE@** Flag to tag compounds written with a space
-
 
 ! =================================================
-!! # Basic lexica, pointing to the other lexicon files
+!! Basic lexica, pointing to the other lexicon files
 ! =================================================
 
-LEXICON Root   !!≈ **@CODE@** where everyting starts
+LEXICON Root   
+!! # Lexicon @LEXNAME@ where everyting starts
 @U.Cap.Obl@ ProperNoun ; !!≈ * **@CODE@**  propernouns, always uppercase
 @U.Cap.Opt@ ProperNoun ; !!≈ * **@CODE@**  propernouns, downcased for derivations: aanaarlâš
-Abbreviation ;   !!≈ * **@CODE@** 
-Acronym ;	     !!≈ * **@CODE@** 
-AdjectiveRoot ;  !!≈ * **@CODE@** 
-NounRoot ;	     !!≈ * **@CODE@** 
-VerbRoot ;	     !!≈ * **@CODE@** 
-Adverb ;	     !!≈ * **@CODE@** 
-Particle ;	     !!≈ * **@CODE@** 
-Subjunction ;    !!≈ * **@CODE@** 
-Conjunction ;    !!≈ * **@CODE@** 
-Adposition ;     !!≈ * **@CODE@** 
-Interjection ;   !!≈ * **@CODE@** 
-Numeral ;	     !!≈ * **@CODE@** 
-Pronoun ;	     !!≈ * **@CODE@** 
-Punctuation ;    !!≈ * **@CODE@** 
-Symbols ;	     !!≈ * **@CODE@** 
+Abbreviation ;           !!≈ * **@CODE@** 
+Acronym ;                !!≈ * **@CODE@** 
+AdjectiveRoot ;          !!≈ * **@CODE@** 
+NounRoot ;               !!≈ * **@CODE@** 
+VerbRoot ;               !!≈ * **@CODE@** 
+Adverb ;                 !!≈ * **@CODE@** 
+Particle ;               !!≈ * **@CODE@** 
+Subjunction ;            !!≈ * **@CODE@** 
+Conjunction ;            !!≈ * **@CODE@** 
+Adposition ;             !!≈ * **@CODE@** 
+Interjection ;           !!≈ * **@CODE@** 
+Numeral ;                !!≈ * **@CODE@** 
+Pronoun ;                !!≈ * **@CODE@** 
+Punctuation ;            !!≈ * **@CODE@** 
+Symbols ;                !!≈ * **@CODE@** 
+
+
+!! We split of the 3 lexica defined above already here:
 
 LEXICON Abbreviation  !!≈ * **@CODE@** directing to both smi (common) and smn abbrs.
-Abbreviation-smn ;
-Abbreviation-smi ;
+Abbreviation-smn ;    !!≈ 	* **@CODE@** 
+Abbreviation-smi ;    !!≈ 	* **@CODE@** 
 
 
 LEXICON Acronym   !!≈ * **@CODE@** splitting in common and smn
-Acronym-smi ;
-Acronym-smn ;
+Acronym-smi ; !!≈ 	* **@CODE@** 
+Acronym-smn ; !!≈ 	* **@CODE@** 
 
 
 
-LEXICON ProperNoun   !!≈ * **@CODE@** 
- Prefix-Proper ;
- ProperNoun-smn ; 
-@N.CmpHyph.TRUE@ ProperNoun-smi-nocomp ; ! Lexicon for short names - always require hyphen
- ProperNoun-smi ;
+LEXICON ProperNoun   !!≈ * **@CODE@** point
+ Prefix-Proper ;  !!≈ 	* **@CODE@** 
+ ProperNoun-smn ;   !!≈ 	* **@CODE@** 
+@N.CmpHyph.TRUE@ ProperNoun-smi-nocomp ;  !!≈ 	* **@CODE@**  Lexicon for short names - always require hyphen
+ ProperNoun-smi ;  !!≈ 	* **@CODE@** 
 ! ProperNoun-smi-nocomp ;
 
 
