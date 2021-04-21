@@ -18,33 +18,37 @@
 !! # Adjective affixes
 ! ===========================
 
+!! This file contains the morphology for the Inari Saami adjectives.
 
-!! Order of triggers:
-!! ```
-!! SV|ÁE|ÁI  SC  FCD WG|CSH CLEN  VHIGH|VBACK  RVSH|RLEN EA SLEN|SVSH  SVLOW
-!! ```
+!! The morphophonological processes are governed by triggers. When there are more
+!! triggers, tney must be ordered as follows (where {A,B} C means *A or B, thereafter C*):
+
+!! {SV,ÁE,ÁI}  SC  FCD {WG,CSH} CLEN  {VHIGH,VBACK}  {RVSH,RLEN} EA {SLEN,SVSH}  SVLOW
+
 
 !LEXICON adjstems    __@CODE@__ temporary, for stems waiting for a lexicon
 !+A+Attr: K ;	    
 !+A+Sg+Nom: K ;	    
 !+A+Cmp/Attr:  ATTR ;
 
+!! ## Adjectives with attr only
 
-LEXICON ATTR !!≈ **@CODE@** for stems with only attribute form
+LEXICON ATTR !!≈ **@CODE@** for stems with only attribute form, gives Attr, svt. sends to Cmp.
 +A+Attr:  K ;
 +A+Cmp/Attr:  ATTR_R ;
-+A: A_LASJ ; ! rähislâš
-+A+Attr: A_VUOTA ; !vuoigâvuotâ
-
-
-LEXICON SIAHA !!≈ **@CODE@** for siähá
-+A+Attr:  K ;
-+A+Sg+Nom:  K ;
-+A+Pl+Nom:  K ;
++A: A_LASJ ;         ! rähislâš
++A+Attr: A_VUOTA ;   ! vuoigâvuotâ
 
 
 !! ## Even-syllable stems
 ! -------------------
+
+
+LEXICON SIAHA !!≈ **@CODE@** for siähá. It gives only Attr and Sg/Pl Nom. Fix?
++A+Attr:  K ;
++A+Sg+Nom:  K ;
++A+Pl+Nom:  K ;
+
 
 
 !LEXICON UCES   __@CODE@__ , not in use
@@ -148,7 +152,7 @@ LEXICON CEPPI !!≈ **@CODE@** directing to X_AIGI, attr. čepis
 !+A:l A_ADV ; !how? tärkkilávt blo
 +A+Der4+Der/AAdv+Adv:^WG^RLEN%>ht K ;
 
-LEXICON UCCE
+LEXICON UCCE !!≈ **@CODE@** 
 +A+Attr+Use/NG:e^WG%>s K ;
 +A+Attr+Use/NG:e^WG%>s ATTR_R ;
 +A+Attr:â K ;
@@ -160,7 +164,7 @@ LEXICON UCCE
 +A:e%> A_VUOTA ;
 +A+Der4+Der/AAdv+Adv:^WG^CLEN%>eeht K ;
 
-LEXICON SUVRE
+LEXICON SUVRE !!≈ **@CODE@** 
 +A+Attr: K ;	! suvre
 +A: X_ALGE ;
 +A:^SVb^WG COMPclen ;
@@ -205,7 +209,7 @@ LEXICON HUMO !!≈ **@CODE@** directing to X_NJUNE via HUMO_REST, attr. humos
 +A+Attr:^WG%>s K ;
 HUMO_REST ;
 
-LEXICON HUMO_REST
+LEXICON HUMO_REST !!≈ **@CODE@** 
 +A: X_NJUNE ;
 +A:^SVb^WG COMPe ; ! huumoob; humobeht                                           
 +A:p P-COMP-ERR-ORTH ;
@@ -226,7 +230,7 @@ LEXICON LAAMI !!≈ **@CODE@** directing to X_SAAMI, attr. lämis
 +A+Cmp/Attr:s ATTR_R ;
 LAAMI_REST ;
 
-LEXICON LAAMI_REST
+LEXICON LAAMI_REST !!≈ **@CODE@** 
 +A: X_SAAMI	  ;
 +A:b^WG COMPe ;	! läämib (WG); lämibeht
 +A:^WG^RVSH%> MUS ;
@@ -357,7 +361,6 @@ LEXICON HEEITUG !!≈ **@CODE@** directing to X_PAAVIR, attr. heitugis, heitugâ
 +A+Cmp/Attr:^WG^RVSH%>is ATTR_R ;
 +A+Cmp/Attr+Err/Orth:^WG^RVSH%>âs ATTR_R ;
 +A: A_ADV ;
-
 +A:^WG A_VUOTA ;
 
 
@@ -634,12 +637,12 @@ LEXICON SOOHAD !!≈ **@CODE@** directing to X_EEMEED, attr. sohâdis
 +A+Cmp/Attr+Use/NG:^CSH^SVSH%>âs ATTR_R ;
 SOOHAD_NOATTR ;
 
-LEXICON SOOHAD_NULLATTR
+LEXICON SOOHAD_NULLATTR !!≈ **@CODE@** 
 +A+Attr:  K ; ! = Nom
 +A+Cmp/Attr: ATTR_R ;
 SOOHAD_NOATTR ;
 
-LEXICON SOOHAD_NOATTR
+LEXICON SOOHAD_NOATTR !!≈ **@CODE@** 
 +A: X_EEMEED ;
 +A:^CSH^SVSH%>u COMPo ; 
 +A:^CSH^SVSH%>u MOS ;
@@ -663,17 +666,17 @@ LEXICON PEEGGALM !!≈ **@CODE@** directing to X_EEMEED, attr. sohâdis
 +A:^WG^SVSH%> A_LASJ ; !  
 
 
-LEXICON JUARBUDEKES
+LEXICON JUARBUDEKES !!≈ **@CODE@** 
 +A+Attr:ekes K ;
 +A+Sg+Nom:ekes K ;	! juárbudekes
 JUARBUDEKES_INFL ;
 
-LEXICON JUARBUDEVES
+LEXICON JUARBUDEVES !!≈ **@CODE@** 
 +A+Attr:eves K ;
 +A+Sg+Nom:eves K ;	! juárbudeves
 JUARBUDEKES_INFL ;
 
-LEXICON JUARBUDEKES_INFL
+LEXICON JUARBUDEKES_INFL !!≈ **@CODE@** 
 +A+Sg+Gen:iäkká K ;	! juárbudiäkká
 +A+Sg+Acc:iäkká K ;	! juárbudiäkká
 +A+Sg+Ill:iäkká%>s K ;	! juárbudiäkkás
@@ -708,7 +711,7 @@ LEXICON KUBDUV !!≈ **@CODE@** . It doesn't fit with KAAMUV because of kubduvâ
 +A:u%> A_VUOTA ;
 +A:âg A_ADV  ;     !kubdâgávt 
 
-LEXICON KUBDUV_COMP
+LEXICON KUBDUV_COMP !!≈ **@CODE@** 
 +A:^WG%> CMUS ;
 +A+Der1+Der/Comp+A+Sg+Nom:^WG^RLEN%>eb K ;
 +A+Der1+Der/Comp+A+Sg+Gen:^WG^RLEN%>eb K ;
@@ -751,7 +754,7 @@ LEXICON A_IJJE  !!≈ **@CODE@**
 +v1:ijje PYECCEE ;
 +v2:ei4je PYECCEE ;
 
-LEXICON TTETTEE
+LEXICON TTETTEE !!≈ **@CODE@** 
     +A+Attr:ttette^SV^SLEN K ; 
            :ttette ALKKEE_COMMON ;
 +A+Cmp/Attr:ttette^SV^SLEN ATTR_R ; !pyecceeviäsu ruánáátiälkku
@@ -889,9 +892,9 @@ LEXICON JIAVTAS !!≈ **@CODE@**
 !+A+Cmp/Attr:áš^WG%> ATTR_R ;
 
 
-LEXICON TAASSAS
+LEXICON TAASSAS !!≈ **@CODE@** 
 !+A+Attr:âš  K ; 				!táássáš; attr in a partial congruens
-+A+Sg+Nom+Err/Orth:âš  K ; 				!táássâš ! from corpus Err/Orth?
++A+Sg+Nom+Err/Orth:âš  K ; 		!táássâš ! from corpus Err/Orth?
 +A+Sg+Nom:áš  K ; 				!táássáš
 +A+Sg+Gen:áá^RVSH K ; 			! tássáá
 +A+Sg+Acc:áá^RVSH K ;			! tássáá
@@ -966,12 +969,12 @@ LEXICON UANIHASJ !!≈ **@CODE@** directing to LAS_SUF, attr, -âš
 +A+Cmp/Attr:is ATTR_R ;
 UANIHASJ_INFL ;
 
-LEXICON KIERDAVAS
+LEXICON KIERDAVAS !!≈ **@CODE@** 
 +A+Attr:âš K ;
 UANIHASJ_INFL ;
 
 
-LEXICON UANIHASJ_INFL
+LEXICON UANIHASJ_INFL !!≈ **@CODE@** 
 +A+Sg+Nom:âš K ;
 +A: LAS_SUF ;
 +A:%>u COMPo ;
@@ -1068,7 +1071,7 @@ LEXICON OLMOOSMETTUM !!≈ **@CODE@**, not all forms. attr. = Sg. Nom.
 +Use/NG:máttum METTUMforms ;
 :mettum METTUMforms ;
 
-LEXICON METTUMforms
+LEXICON METTUMforms !!≈ **@CODE@** 
 +A+Attr: K ;
 +A: X_LITTER_SG ;
 +A: X_eh_PL ;
@@ -1327,7 +1330,7 @@ LEXICON CMUS-SUF !!≈ * **@CODE@**
 +Pl+Com+Err/Orth:musâi GUIN ;
 +Pl+Abe+Err/Orth:musâittáá K ;
 
-LEXICON P-COMP-ERR-ORTH
+LEXICON P-COMP-ERR-ORTH !!≈ **@CODE@** 
 +Der1+Der/Comp+A+Sg+Nom+Err/Orth: K ;
 +Der1+Der/Comp+A+Sg+Acc+Err/Orth: K ;
 +Der1+Der/Comp+A+Sg+Gen+Err/Orth: K ;
@@ -1359,7 +1362,7 @@ LEXICON A_LAGAN  !!≈ * **@CODE@** for derivation
 LEXICON A_LASJ   !!≈ **@CODE@** 
 @U.Cap.Opt@+Der1+Der/lasj:@U.Cap.Opt@l ANOLASJ ; 
 
-LEXICON ATTR_R  !!≈ **@CODE@**
+LEXICON ATTR_R  !!≈ **@CODE@** sends to R, NAMAG, SAS, CMP_ADJ.
  R ;
  NAMAG ;
  SAS ;
