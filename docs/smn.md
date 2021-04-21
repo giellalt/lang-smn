@@ -1,19 +1,22 @@
 
 # Inari Sámi morphological analyser
 
- # **Multichar_Symbols** definitions
+This file documents the Inari Sámi morphological analyser. The tags in bold are the ones in use in the analyser.
+
+  **Multichar_Symbols** definitions
 
 ## Parts of speech
  * **+N +A +Adv +V**
  * **+Pron +CS +CC**
  * **+Adp +Po +Pr**
  * **+Interj +Pcle**
- * **+ABBR**
-
+ * **+Num** 
+ * **+ABBR** 
  * **+Symbol** = independent symbols in the text stream, like £, €, ©
 
 
 ### Tags for sub-POS
+
  * **+Prop** - Propernoun
  * **+Pers** - Personal Pronoun
  * **+Dem** - Demonstrative Pronoun
@@ -30,16 +33,12 @@
  * **+NomAg** 
  * **+Ord** 
 
+### Tags for governing abbreviations in preprocessing
+
  * **+Gram/TAbbr**:  Transitive abbreviation (it needs an argument)
- * **+Gram/NoAbbr**:  Intransitive abbreviations that are homonymous
-   with more frequent words. They should only be considered
-   abbreviations in the middle of a sentence.
- * **+Gram/TNumAbbr**:  Transitive abbreviation if the following
-            constituent is numeric
- * **+Gram/NumNoAbbr**:  Transitive abbreviations for which numerals
-are complements and normal words. The abbreviation usage
-is less common and thus only the occurences in the middle of
-the sentence can be considered as true cases.
+ * **+Gram/NoAbbr**:  Intransitive abbreviations that are homonymous   with more frequent words. They should only be considered  abbreviations in the middle of a sentence.
+ * **+Gram/TNumAbbr**:  Transitive abbreviation if the following     constituent is numeric
+ * **+Gram/NumNoAbbr**:  Transitive abbreviations for which numerals are complements and normal words. The abbreviation usage  the sentence can be considered as true cases.
  * **+Gram/TIAbbr**:  Both transitive and intransitive abbreviation
  * **+Gram/IAbbr**:  Intransitive abbreviation (it takes no argument)
  * **+Gram/3syll**: trisyllabic verbs
@@ -69,7 +68,6 @@ the sentence can be considered as true cases.
  * **+Ill +Ine +Ela** 
  * **+Com +Ess +Par +Abe** 
  * **+Loc** 
-
  * **+Known** mon , till we found a better tag
 
 ### Adjectival forms
@@ -95,29 +93,64 @@ the sentence can be considered as true cases.
  * **+Actio** 
 
 
-```
+## Derivation tags
 
-```
+The derivation position tags.
 
-
-
+### The tag +Der
 All non-positional derivations should be preceded by this tag, to make it possible
 to target regular expressions at all derivations in a language-independent way:
 just specify +Der|+Der1 .. +Der5 and you are set.
 
- * **+Der** 
+ * **+Der** is the tag to put before the other der tags.
+
+### Table for derivation tags
+
+| Pos1 | Pos2     | Pos3  | Pos4  | POS switches (from-to)| Explanation
+| ---  | ---      | ---   | ---   | ---                   | ---
+ | **+Der1** |            |            |      |    | Position tag, required
+ |            | **+Der2** |            |      |    | Position tag, required
+ |            |            | **+Der3** |      |    | Position tag, required
+ |            |            |            | **+Der4** |    | Position tag, required
+ | **+Der/lasj** |            |            |      | NA | 
+ | **+Der/d** |            |            |      | VV | 
+ | **+Der/tt** |            |            |      | VV | - Causative čälittiđ
+ | **+Der/Caus** |            |            |      | VV | - 3-syll causatives
+ | **+Der/l** |            |            |      | VV | 
+ | **+Der/st** |            |            |      | VV | čälistiđ
+ | **+Der/Car** |            |            |      | NA | * +Der1+Der2 - only combine with Der3 caritive: peljittem
+ | **+Der/laakan** |            |            |      | AA | * +Der1+Der2 - only combine with Der3
+ | **+Der/Pass** |            |            |      | VV | -  passive
+ |            | **+Der/Dimin** |            |      | NN | (was: Der/aš & Der/š)
+ |            | **+Der/NomAg** |            |      |    | 
+ |            | **+Der/NomAct** |            |      | VN | Der/NomAct har to realisasjonar, med ulike restriksjonar,
+ |            | **+Der/sasj** |            |      | NA |           
+ |            | **+Der/alla** |            |      | VV | 
+ |            | **+Der/adda** |            |      | VV | 
+ |            | **+Der/AAdv** |            |      |    | adverb pyeremusávt pyeremusâht
+ |            | **+Der/taa** |            |      |    | adverb pyeremustáá !This is not the best tag?
+ |            |            | **+Der/vuota** |      | AN | 
+ |            |            | **+Der/InchL** |      | VV | 
+ |            |            | **+Der/upmi** |      | VN | 
+ |            |            | **+Der/mas** |      | VN | 
 
 
-### Derivations
-### Other/unclassified derivations, can appear in all positions:
+
+
+
+
+
+### Other derivations
+
+Other/unclassified derivations, can appear in all positions:
 
 
  * **+Der/ag** neeljičievâg neeljijienâg kuulmâloonjâg neeljičievâg neeljijienâg
  * **+Der/ahasas** 85-ahasâš škovlâahasâš
  * **+Der/ivvaas** 
  * **+Der/vualasas** tutkâmvuálásâš
-
-
+ * **+Der/Superl** 
+ * **+Der/Comp** 
  * **+Ex/N** - This tag is not added in lexc. The POS tag before derivation is converted into this tag when compiling FST for disambiguation.
  * **+Ex/A** - This tag is not added in lexc. The POS tag before derivation is converted into this tag when compiling FST for disambiguation.
  * **+Ex/V** - This tag is not added in lexc. The POS tag before derivation is converted into this tag when compiling FST for disambiguation.
@@ -149,18 +182,17 @@ just specify +Der|+Der1 .. +Der5 and you are set.
 
 ### Usage tags
 
- * **+Err/Orth** substandard, not in normative fst
- * **+Err/Lex** substandard, not in normative fst, no normative lemma
- * **+Err/Hyph** substandard, not in normative fst
- * **+Err/SpaceCmp** substandard, not in normative fst
- |  **+Err/MissingSpace** | in use in smi lexc
-
+ * **+Err/Orth** - substandard, not in normative fst
+ * **+Err/Lex** - substandard, not in normative fst, no normative lemma
+ * **+Err/Hyph** - substandard, not in normative fst
+ * **+Err/SpaceCmp** - substandard, not in normative fst
+ * **+Err/MissingSpace** - in use in smi lexc
  * **+MWE** - MultiWord Expression, used for abbreviation extraction for preprocess.sh
  * **+Use/-PLX** - do not include in Polderland spellers (most likely irrelevant for smn)
  * **+Use/-Spell** - do not include in speller (even though the entry is formally correct)
  * **+Use/SpellNoSugg** - Recognized, but not suggested in speller 
- * **+Use/GC** only retained in the HFST Grammar Checker disambiguation analyser
- * **+Use/-GC** never retained in the HFST Grammar Checker disambiguation analyser
+ * **+Use/GC** - only retained in the HFST Grammar Checker disambiguation analyser
+ * **+Use/-GC** - never retained in the HFST Grammar Checker disambiguation analyser
 
 ## Semantic tags
 
@@ -302,7 +334,7 @@ just specify +Der|+Der1 .. +Der5 and you are set.
  * **+Sem/Perc-cogn** 
  * **+Sem/Perc-emo** 
  * **+Sem/Perc-phys** 
- * **+Sem/Plant ! Plant names** 
+ * **+Sem/Plant**   Plant names
  * **+Sem/Plant-fungus**    Fungi names
  * **+Sem/Plant_Plantpart** 
  * **+Sem/Plantpart** 
@@ -411,10 +443,13 @@ just specify +Der|+Der1 .. +Der5 and you are set.
 
 ## Symbols that need to be escaped on the lower side (towards twolc):
 
+* **»** derivation boundary symbols (for hunspell etc. not in use (?))
+* **«** derivation
+* **%>**  suffix
+* **%<**  prefix
  * **+Use/NG** not-generate, for ped generation isme-ped.fst
  * **+Use/MT**  generate only for MT 
  * **+Use/Circ** 
-
  * **+Use/-PMatch** = for preprocessing
  * **+Use/PMatch** = for preprocessing
  * **@P.Pmatch.Backtrack@** = for preprocessing
@@ -445,7 +480,6 @@ The prefix (before "/") is **Cmp**.
  * **+Cmp/PlGen** compounds
  * **+Cmp/SplitR** compounds
  * **+Cmp/Sh** compounds
-
  * **+Cmp** This tag to mark there is a compound.
 
 ### These tags govern the parts of the compound
@@ -459,8 +493,7 @@ The prefix (before "/") is **CmpNP**:
  * **+CmpNP/Last** - ... only be last part in a compound or alone
  * **+CmpNP/Suff** - ... only **last** part in a compound, NEVER alone
  * **+CmpNP/None** - ... does not take part in compounds
- * **+CmpNP/Only** - ... only be part of a compound, i.e. can never
-                    be used alone, but can appear in any position
+ * **+CmpNP/Only** - ... only be part of a compound, i.e. can never be used alone, but can appear in any position
 
 The prefix (before "/") is **CmpN**:
 (meaning: this is the normative position of thus tag)
@@ -498,22 +531,24 @@ We have manually optimised the structure of our lexicon using following
 flag diacritics to restrict morhpological combinatorics - only allow compounds
 with verbs if the verb is further derived into a noun again:
 
- |  **@P.NeedNoun.ON@** | (Dis)allow compounds with verbs unless nominalised |
- |  **@D.NeedNoun.ON@** | (Dis)allow compounds with verbs unless nominalised |
- |  **@C.NeedNoun@** | (Dis)allow compounds with verbs unless nominalised |
- |  **@R.NeedNoun.ON@** | (Dis)allow compounds with verbs unless nominalised |
-
-
- |  **@D.ErrOrth.ON@**  |
- |  **@C.ErrOrth@**  |
- |  **@P.ErrOrth.ON@**  |
- |  **@R.ErrOrth.ON@**  |
-
+| Flag | Explanation
+| --- | --- 
+ |  **@P.NeedNoun.ON@** | (Dis)allow compounds with verbs unless nominalised 
+ |  **@D.NeedNoun.ON@** | (Dis)allow compounds with verbs unless nominalised 
+ |  **@C.NeedNoun@** | (Dis)allow compounds with verbs unless nominalised 
+ |  **@R.NeedNoun.ON@** | (Dis)allow compounds with verbs unless nominalised 
+ |  **@D.ErrOrth.ON@**  | Disallow ErrOrth
+ |  **@C.ErrOrth@**  | Clear ErrOrth flag
+ |  **@P.ErrOrth.ON@**  | Set positive value for ErrOrth flag
+ |  **@R.ErrOrth.ON@**  | Reset ErrOrth Flag
 
 For languages that allow compounding, the following flag diacritics are needed
 to control position-based compounding restrictions for nominals. Their use is
 handled automatically if combined with +CmpN/xxx tags. If not used, they will
 do no harm.
+
+| Flag | Explanation
+| --- | --- 
  |  **@P.CmpFrst.FALSE@** | Require that words tagged as such only appear first
  |  **@D.CmpPref.TRUE@** | Block such words from entering ENDLEX
  |  **@P.CmpPref.FALSE@** | Block these words from making further compounds
@@ -535,67 +570,74 @@ Use the following flag diacritics to control downcasing of derived proper
 nouns (e.g. Finnish Pariisi -> pariisilainen). See e.g. North Sámi for how to use
 these flags. There exists a ready-made regex that will do the actual down-casing
 given the proper use of these flags.
+
+| Flag | Explanation
+| --- | --- 
  |  **@U.Cap.Obl@** | Allowing downcasing of derived names: deatnulasj.
  |  **@U.Cap.Opt@** | Allowing downcasing of derived names: deatnulasj.
+ | **@U.NeedsVowRed.OFF@**  | is used to force hyphenation/non-reduction: samediggi-
+ | **@U.NeedsVowRed.ON@**  | is used to force reduction w/o hyphen: samedigge#xxx
+ | **@C.NeedsVowRed@**  | Clearing this feature, so that it doesn't interfere with further compounding
+ | **@C.Px@**  | Clear px
+ | **@C.Nom3Px@**  | 
+ | **@P.Px.add@**  | 
+ | **@R.Px.add@**  | 
+ | **@P.Px.block@**  | 
+ | **@D.Px.block@**  | 
+ | **@P.Nom12Px.add@**  | 
+ | **@R.Nom12Px.add@**  | 
+ | **@P.Nom3Px.add@**  | 
+ | **@R.Nom3Px.add@**  | 
+ | **@P.Vgen.add@**  | 
+ | **@R.Vgen.add@**  | 
+ | **@R.SpellRlx.ON@**  | Flag used to tag spell-relax-analysed strings (and only those).
+ | **@D.SpellRlx.ON@**  | Flag used to tag spell-relax-analysed strings (and only those).
+ | **@C.SpellRlx@**  | Flag used to tag spell-relax-analysed strings (and only those).
+ | **@R.SpaceCmp.ON@**  | Flag to tag compounds written with a space
+ | **@D.SpaceCmp.ON@**  | Flag to tag compounds written with a space
+ | **@C.SpaceCmp@**  | Flag to tag compounds written with a space
 
 
- * **@U.NeedsVowRed.OFF@** is used to force hyphenation/non-reduction: samediggi-
- * **@U.NeedsVowRed.ON@** is used to force reduction w/o hyphen: samedigge#xxx
- * **@C.NeedsVowRed@** Clearing this feature, so that it doesn't interfere with further compounding
+Basic lexica, pointing to the other lexicon files
 
- * **@C.Px@** 
- * **@C.Nom3Px@** 
- * **@P.Px.add@** 
- * **@R.Px.add@** 
- * **@P.Px.block@** 
- * **@D.Px.block@** 
- * **@P.Nom12Px.add@** 
- * **@R.Nom12Px.add@** 
- * **@P.Nom3Px.add@** 
- * **@R.Nom3Px.add@** 
-
- * **@P.Vgen.add@** 
- * **@R.Vgen.add@** 
-
-
- * **@R.SpellRlx.ON@** Flag used to tag spell-relax-analysed strings (and only those).
- * **@D.SpellRlx.ON@** Flag used to tag spell-relax-analysed strings (and only those).
- * **@C.SpellRlx@** Flag used to tag spell-relax-analysed strings (and only those).
-
- * **@R.SpaceCmp.ON@** Flag to tag compounds written with a space
- * **@D.SpaceCmp.ON@** Flag to tag compounds written with a space
- * **@C.SpaceCmp@** Flag to tag compounds written with a space
-
-
-# Basic lexica, pointing to the other lexicon files
-
- **LEXICON Root** where everyting starts
+# Lexicon Root where everyting starts
  * **@U.Cap.Obl@ ProperNoun ;**  propernouns, always uppercase
  * **@U.Cap.Opt@ ProperNoun ;**  propernouns, downcased for derivations: aanaarlâš
  * **Abbreviation ;** 
- * **Acronym ;	** 
+ * **Acronym ;** 
  * **AdjectiveRoot ;** 
- * **NounRoot ;	** 
- * **VerbRoot ;	** 
- * **Adverb ;	** 
- * **Particle ;	** 
+ * **NounRoot ;** 
+ * **VerbRoot ;** 
+ * **Adverb ;** 
+ * **Particle ;** 
  * **Subjunction ;** 
  * **Conjunction ;** 
  * **Adposition ;** 
  * **Interjection ;** 
- * **Numeral ;	** 
- * **Pronoun ;	** 
+ * **Numeral ;** 
+ * **Pronoun ;** 
  * **Punctuation ;** 
- * **Symbols ;	** 
+ * **Symbols ;** 
+
+
+We split of the 3 lexica defined above already here:
 
  * **LEXICON Abbreviation** directing to both smi (common) and smn abbrs.
+ 	* **Abbreviation-smn ;** 
+ 	* **Abbreviation-smi ;** 
 
 
  * **LEXICON Acronym** splitting in common and smn
+ 	* **Acronym-smi ;** 
+ 	* **Acronym-smn ;** 
 
 
 
- * **LEXICON ProperNoun** 
+ * **LEXICON ProperNoun** point
+ 	* **Prefix-Proper ;** 
+ 	* **ProperNoun-smn ;** 
+ 	* **@N.CmpHyph.TRUE@ ProperNoun-smi-nocomp ;**  Lexicon for short names - always require hyphen
+ 	* **ProperNoun-smi ;** 
 
 
 
