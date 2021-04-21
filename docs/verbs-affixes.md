@@ -217,10 +217,10 @@ from the one for nouns, namely:
 
 ## Auxiliaries
 
- * **LEXICON NEG ** = the negation verb
+ * **LEXICON NEG** = the negation verb
 
 \\
- * **LEXICON LEDE ** = The copula
+ * **LEXICON LEDE** = The copula
 
 
 
@@ -245,75 +245,75 @@ Within each lexicon, the suffixes are ordered as follows:
 ### AD verbs
 ### Partial paradigms
 
- * **LEXICON 2SYLL_HAAHAD_IV  **
- * **LEXICON 2SYLL_HAAHAD_TV  **
+ * **LEXICON 2SYLL_HAAHAD_IV**
+ * **LEXICON 2SYLL_HAAHAD_TV**
 
- * **LEXICON 2SYLL_HAAHAD_V  **
+ * **LEXICON 2SYLL_HAAHAD_V**
 
- * **LEXICON EVEN_IND_HAAHAD **
-
-
- * **LEXICON EVEN_IMPRT_HAAHAD **
+ * **LEXICON EVEN_IND_HAAHAD**
 
 
- * **LEXICON 2SYLL_AASSAD **  48 verbs
- * **LEXICON 2SYLL_AASSAD_IV  **
- * **LEXICON 2SYLL_AASSAD_TV  **
-
- * **LEXICON 2SYLL_AASSAD_V  **
+ * **LEXICON EVEN_IMPRT_HAAHAD**
 
 
- * **LEXICON VINFINITES_AASSAD **
+ * **LEXICON 2SYLL_AASSAD**  48 verbs
+ * **LEXICON 2SYLL_AASSAD_IV**
+ * **LEXICON 2SYLL_AASSAD_TV**
+
+ * **LEXICON 2SYLL_AASSAD_V**
+
+
+ * **LEXICON VINFINITES_AASSAD**
 
 
 
 
- * **LEXICON EVEN_IND_AASSAD **
+ * **LEXICON EVEN_IND_AASSAD**
 
 
- * **LEXICON EVEN_POT_AASSAD **
+ * **LEXICON EVEN_POT_AASSAD**
 
- * **LEXICON EVEN_IMPRT_AASSAD **
+ * **LEXICON EVEN_IMPRT_AASSAD**
 
 
 ### Full paradigms
 
- * **LEXICON 2SYLL_VIEZZAD **
- * **LEXICON 2SYLL_VIEZZAD_IV **
- * **LEXICON 2SYLL_VIEZZAD_TV **
+ * **LEXICON 2SYLL_VIEZZAD**
+ * **LEXICON 2SYLL_VIEZZAD_IV**
+ * **LEXICON 2SYLL_VIEZZAD_TV**
 
- * **LEXICON 2SYLL_VIEZZAD_V  ** 6 verbs
+ * **LEXICON 2SYLL_VIEZZAD_V** 6 verbs
 
 
-     - **LEXICON VINFINITES_VIEZZAD **
+     - **LEXICON VINFINITES_VIEZZAD**
 
 
 
 
-     - **LEXICON EVEN_IND_PRS_VIEZZAD **
+     - **LEXICON EVEN_IND_PRS_VIEZZAD**
 
-     - **LEXICON EVEN_IND_PRT_VIEZZAD **
+     - **LEXICON EVEN_IND_PRT_VIEZZAD**
 
- * **LEXICON EVEN_POT_VIEZZAD **
+ * **LEXICON EVEN_POT_VIEZZAD**
 
-     - **LEXICON EVEN_IMPRT_VIEZZAD **
+     - **LEXICON EVEN_IMPRT_VIEZZAD**
 
 
 
 
- * **LEXICON 2SYLL_SPELLAD_V  ** Similar to 2SYLL_ETTAD, but less CSH, don't know yet how much. 20 verbs
+ * **LEXICON 2SYLL_SPELLAD_V** Similar to 2SYLL_ETTAD, but less CSH, don't know yet how much. 20 verbs
 
 
 
-     - **LEXICON VINFINITES_SPELLAD **
+     - **LEXICON VINFINITES_SPELLAD**
 
 
 
 
 
-     - **LEXICON EVEN_IND_PRS_SPELLAD  **
+     - **LEXICON EVEN_IND_PRS_SPELLAD**
 
-     - **LEXICON EVEN_IND_PRT_SPELLAD **
+     - **LEXICON EVEN_IND_PRT_SPELLAD**
 
 
 
@@ -321,76 +321,76 @@ Within each lexicon, the suffixes are ordered as follows:
 
 
 
- * **LEXICON 2SYLL_ETTAD_V  ** 19 verbs
+ * **LEXICON 2SYLL_ETTAD_V** 19 verbs
 
 
-     - **LEXICON VINFINITES_ETTAD **
+     - **LEXICON VINFINITES_ETTAD**
 
 
 
-     - **LEXICON EVEN_IND_PRS_ETTAD **
+     - **LEXICON EVEN_IND_PRS_ETTAD**
 
 
-     - **LEXICON EVEN_IMPRT_ETTAD **
+     - **LEXICON EVEN_IMPRT_ETTAD**
 
-     - **LEXICON EVEN_POT_ETTAD **
+     - **LEXICON EVEN_POT_ETTAD**
 
 
 
- * **LEXICON 2SYLL_KAVNAD_V  ** as ETTAD but with VBACK, only RV ä in stem tothis lexicon 57 verbs
+ * **LEXICON 2SYLL_KAVNAD_V** as ETTAD but with VBACK, only RV ä in stem tothis lexicon 57 verbs
 
 
 
-     - **LEXICON VINFINITES_KAVNAD   **
+     - **LEXICON VINFINITES_KAVNAD**
 
 
 
 
 
-     - **LEXICON EVEN_IND_KAVNAD  **
+     - **LEXICON EVEN_IND_KAVNAD**
 
 
-     - **LEXICON EVEN_POT_KAVNAD **
+     - **LEXICON EVEN_POT_KAVNAD**
 
-     - **LEXICON EVEN_IMPRT_KAVNAD  **
+     - **LEXICON EVEN_IMPRT_KAVNAD**
 
 
 
- * **LEXICON 2SYLL_KALGAD_TV  ** Only one verb: kalgâđ Ind+Prs+Pl3 kälgih, vs. kävneh 2SYLL_KAVNAD
+ * **LEXICON 2SYLL_KALGAD_TV** Only one verb: kalgâđ Ind+Prs+Pl3 kälgih, vs. kävneh 2SYLL_KAVNAD
 
-     - **LEXICON VINFINITES_KALGAD  **
+     - **LEXICON VINFINITES_KALGAD**
 
 
 
-     - **LEXICON EVEN_IND_KALGAD  **
+     - **LEXICON EVEN_IND_KALGAD**
 
 
-     - **LEXICON EVEN_POT_KALGAD **
+     - **LEXICON EVEN_POT_KALGAD**
 
-     - **LEXICON EVEN_IMPRT_KALGAD  **
+     - **LEXICON EVEN_IMPRT_KALGAD**
 
 
 
 
 
- * **LEXICON 2SYLL_COGGAD_V  ** 18 verbs
+ * **LEXICON 2SYLL_COGGAD_V** 18 verbs
 
-     - **LEXICON VINFINITES_COGGAD  **
+     - **LEXICON VINFINITES_COGGAD**
 
 
 
-     - **LEXICON EVEN_IND_COGGAD  **
+     - **LEXICON EVEN_IND_COGGAD**
 
 
-     - **LEXICON EVEN_COND_COGGAD **
+     - **LEXICON EVEN_COND_COGGAD**
 
-     - **LEXICON EVEN_POT_COGGAD **
+     - **LEXICON EVEN_POT_COGGAD**
 
-     - **LEXICON EVEN_IMPRT_COGGAD **
+     - **LEXICON EVEN_IMPRT_COGGAD**
 
 
 
- * **LEXICON 2SYLL_KULGAD_V   ** 55 verbs
+ * **LEXICON 2SYLL_KULGAD_V** 55 verbs
 
 Distinct from SODDAD with short vowel in past tense (du)
 Turns out it was not distinct after all. Preper for fusing KULGAD and SODDAD
@@ -400,527 +400,527 @@ Turns out it was not distinct after all. Preper for fusing KULGAD and SODDAD
 
 
 
- * **LEXICON 2SYLL_SODDAD_V  ** 6 verbs
+ * **LEXICON 2SYLL_SODDAD_V** 6 verbs
 
 
 
-     - **LEXICON VINFINITES_SODDAD  **
+     - **LEXICON VINFINITES_SODDAD**
 
 
 
-     - **LEXICON EVEN_PRS_SODDAD **
+     - **LEXICON EVEN_PRS_SODDAD**
 
-     - **LEXICON EVEN_PRT_SODDAD **
-
-
-     - **LEXICON EVEN_POT_SODDAD **
-
-     - **LEXICON EVEN_IMPRT_SODDAD **
+     - **LEXICON EVEN_PRT_SODDAD**
 
 
+     - **LEXICON EVEN_POT_SODDAD**
 
- * **LEXICON 2SYLL_TOOLLAD_V  ** 12 verbs
+     - **LEXICON EVEN_IMPRT_SODDAD**
 
 
 
-     - **LEXICON VINFINITES_TOOLLAD  **
+ * **LEXICON 2SYLL_TOOLLAD_V** 12 verbs
 
 
 
-     - **LEXICON EVEN_IND_TOOLLAD  **
-
-
-     - **LEXICON EVEN_POT_TOOLLAD **
-
-     - **LEXICON EVEN_IMPRT_TOOLLAD  **
+     - **LEXICON VINFINITES_TOOLLAD**
 
 
 
- * **LEXICON 2SYLL_OPPAD_V  ** 12 verbs
+     - **LEXICON EVEN_IND_TOOLLAD**
+
+
+     - **LEXICON EVEN_POT_TOOLLAD**
+
+     - **LEXICON EVEN_IMPRT_TOOLLAD**
+
+
+
+ * **LEXICON 2SYLL_OPPAD_V** 12 verbs
 
 suggested stem = tuáll
 Impossible to see the differences in diphtong length
 
 
-     - **LEXICON VINFINITES_OPPAD   **
+     - **LEXICON VINFINITES_OPPAD**
 
 
 
-     - **LEXICON EVEN_IND_OPPAD   **
+     - **LEXICON EVEN_IND_OPPAD**
 
 
-     - **LEXICON EVEN_POT_OPPAD **
+     - **LEXICON EVEN_POT_OPPAD**
 
-     - **LEXICON EVEN_IMPRT_OPPAD   **
-
-
-
-
-
- * **LEXICON 2SYLL_TOOHAD_V  ** 38 verbs
-
-
-     - **LEXICON EVEN_IND_TOOHAD  **
+     - **LEXICON EVEN_IMPRT_OPPAD**
 
 
 
-     - **LEXICON EVEN_POT_TOOHAD **
 
 
- * **LEXICON 2SYLL_MOONNAD_V  ** 24 verbs
+ * **LEXICON 2SYLL_TOOHAD_V** 38 verbs
 
 
-     - **LEXICON VINFINITES_MOONNAD  **
+     - **LEXICON EVEN_IND_TOOHAD**
+
+
+
+     - **LEXICON EVEN_POT_TOOHAD**
+
+
+ * **LEXICON 2SYLL_MOONNAD_V** 24 verbs
+
+
+     - **LEXICON VINFINITES_MOONNAD**
 
 nuuvâ, iige noovâ
 
 
 
-     - **LEXICON EVEN_IND_MOONNAD  **
+     - **LEXICON EVEN_IND_MOONNAD**
 
 
-     - **LEXICON EVEN_IMPRT_MOONNAD  **
+     - **LEXICON EVEN_IMPRT_MOONNAD**
 
-     - **LEXICON EVEN_POT_MOONNAD **
-
-
- * **LEXICON 2SYLL_VIIRRAD_V  ** 20 verbs
-
-     - **LEXICON VINFINITES_VIIRRAD  ** OK
+     - **LEXICON EVEN_POT_MOONNAD**
 
 
+ * **LEXICON 2SYLL_VIIRRAD_V** 20 verbs
 
-     - **LEXICON EVEN_IND_VIIRRAD   **
-
-
-     - **LEXICON EVEN_POT_VIIRRAD **
-
-     - **LEXICON EVEN_IMPRT_VIIRRAD   **
+     - **LEXICON VINFINITES_VIIRRAD** OK
 
 
 
+     - **LEXICON EVEN_IND_VIIRRAD**
 
 
- * **LEXICON 2SYLL_VIISSAD_V  ** 20 verbs
+     - **LEXICON EVEN_POT_VIIRRAD**
 
-     - **LEXICON VINFINITES_VIISSAD  **
-
-
-
-     - **LEXICON EVEN_IND_VIISSAD   **
-
-
-     - **LEXICON EVEN_POT_VIISSAD **
-
-     - **LEXICON EVEN_IMPRT_VIISSAD   **
-
-
-
- * **LEXICON 2SYLL_CIEPPAD_V  ** like 2SYLL_KIESSAD but less CSH 4 verbs. 34 verbs
-
-     - **LEXICON EVEN_IND_PRS_CIEPPAD    **
-
-
-
- * **LEXICON 2SYLL_KIESSAD_V  **
+     - **LEXICON EVEN_IMPRT_VIIRRAD**
 
 
 
 
 
+ * **LEXICON 2SYLL_VIISSAD_V** 20 verbs
+
+     - **LEXICON VINFINITES_VIISSAD**
 
 
 
- * **LEXICON 2SYLL_VUOLLAD_V  ** ye to ua vyešš 71 verbs
-
-     - **LEXICON VINFINITES_2SYLL_VUOLLAD  **
+     - **LEXICON EVEN_IND_VIISSAD**
 
 
+     - **LEXICON EVEN_POT_VIISSAD**
 
-     - **LEXICON EVEN_IND_2SYLL_VUOLLAD **
-
-
-     - **LEXICON EVEN_POT_2SYLL_VUOLLAD **
-
-     - **LEXICON EVEN_IMPRT_2SYLL_VUOLLAD **
-
-
- * **LEXICON 2SYLL_LUOIKKAD_TV  ** passive, no Der/l, otherw like ruottad, 3 verbs
-
-
- * **LEXICON 2SYLL_RUOTTAD_V  ** no passive, but Der/l. 4 verbs
-
- * **LEXICON 2SYLL_RUOTTAD_LUOIKKAD  ** no passive
-
-     - **LEXICON VINFINITES_2SYLL_RUOTTAD  **
+     - **LEXICON EVEN_IMPRT_VIISSAD**
 
 
 
-     - **LEXICON EVEN_IND_2SYLL_RUOTTAD  **
+ * **LEXICON 2SYLL_CIEPPAD_V** like 2SYLL_KIESSAD but less CSH 4 verbs. 34 verbs
+
+     - **LEXICON EVEN_IND_PRS_CIEPPAD**
 
 
-     - **LEXICON EVEN_POT_2SYLL_RUOTTAD **
 
-     - **LEXICON EVEN_IMPRT_2SYLL_RUOTTAD **
+ * **LEXICON 2SYLL_KIESSAD_V**
+
+
+
+
+
+
+
+
+ * **LEXICON 2SYLL_VUOLLAD_V** ye to ua vyešš 71 verbs
+
+     - **LEXICON VINFINITES_2SYLL_VUOLLAD**
+
+
+
+     - **LEXICON EVEN_IND_2SYLL_VUOLLAD**
+
+
+     - **LEXICON EVEN_POT_2SYLL_VUOLLAD**
+
+     - **LEXICON EVEN_IMPRT_2SYLL_VUOLLAD**
+
+
+ * **LEXICON 2SYLL_LUOIKKAD_TV** passive, no Der/l, otherw like ruottad, 3 verbs
+
+
+ * **LEXICON 2SYLL_RUOTTAD_V** no passive, but Der/l. 4 verbs
+
+ * **LEXICON 2SYLL_RUOTTAD_LUOIKKAD** no passive
+
+     - **LEXICON VINFINITES_2SYLL_RUOTTAD**
+
+
+
+     - **LEXICON EVEN_IND_2SYLL_RUOTTAD**
+
+
+     - **LEXICON EVEN_POT_2SYLL_RUOTTAD**
+
+     - **LEXICON EVEN_IMPRT_2SYLL_RUOTTAD**
 
 
 ### ED verbs
 
 
- * **LEXICON 2SYLL_KALVED_V  ** kalveđ without RLEN Prs+Sg1. 8 verbs
+ * **LEXICON 2SYLL_KALVED_V** kalveđ without RLEN Prs+Sg1. 8 verbs
 
 
- * **LEXICON 2SYLL_POHTED_V  ** with RLEN Prs+Sg1. 31 verbs
+ * **LEXICON 2SYLL_POHTED_V** with RLEN Prs+Sg1. 31 verbs
 
-     - **LEXICON VINFINITES_ED   **
-
-
-
-     - **LEXICON EVEN_IND_ED ** kalveđ
-
-
-     - **LEXICON EVEN_POT_POHTED **
-
-     - **LEXICON EVEN_POT_ED ** ... this one to be relocated to _ED
-
-
-     - **LEXICON EVEN_IMPRT_ED  **
+     - **LEXICON VINFINITES_ED**
 
 
 
- * **LEXICON 2SYLL_PIHTED_V  **  82 verbs
-
-     - **LEXICON VINFINITES_PIHTED   **
+     - **LEXICON EVEN_IND_ED** kalveđ
 
 
+     - **LEXICON EVEN_POT_POHTED**
 
-     - **LEXICON EVEN_IND_PIHTED   **
+     - **LEXICON EVEN_POT_ED** ... this one to be relocated to _ED
 
 
-     - **LEXICON EVEN_POT_PIHTED **
+     - **LEXICON EVEN_IMPRT_ED**
 
-     - **LEXICON EVEN_IMPRT_PIHTED   **
+
+
+ * **LEXICON 2SYLL_PIHTED_V**  82 verbs
+
+     - **LEXICON VINFINITES_PIHTED**
+
+
+
+     - **LEXICON EVEN_IND_PIHTED**
+
+
+     - **LEXICON EVEN_POT_PIHTED**
+
+     - **LEXICON EVEN_IMPRT_PIHTED**
 
 ### EED verbs
 
 
-     - **LEXICON 2SYLL_JOTTEED_V  ** . 27 verbs
+     - **LEXICON 2SYLL_JOTTEED_V** . 27 verbs
 
-     - **LEXICON VINFINITES_EED   **
-
-
-
-     - **LEXICON EVEN_IND_EED   **
-
-
-     - **LEXICON EVEN_POT_EED **
-
-     - **LEXICON EVEN_IMPRT_EED  **
-
-
-     - **LEXICON 2SYLL_PAHHEED_V  ** yaml anneed. 2 verbs
-
-
-     - **LEXICON VINFINITES_PAHHEED  **
+     - **LEXICON VINFINITES_EED**
 
 
 
-     - **LEXICON EVEN_IND_PAHHEED   **
+     - **LEXICON EVEN_IND_EED**
+
+
+     - **LEXICON EVEN_POT_EED**
+
+     - **LEXICON EVEN_IMPRT_EED**
+
+
+     - **LEXICON 2SYLL_PAHHEED_V** yaml anneed. 2 verbs
+
+
+     - **LEXICON VINFINITES_PAHHEED**
 
 
 
-     - **LEXICON EVEN_IMPRT_PAHHEED   **
+     - **LEXICON EVEN_IND_PAHHEED**
+
+
+
+     - **LEXICON EVEN_IMPRT_PAHHEED**
 
 
 ### ID verbs
 
 
- * **LEXICON 2SYLL_UADDID_V  ** 3 verbs
+ * **LEXICON 2SYLL_UADDID_V** 3 verbs
 
-     - **LEXICON VINFINITES_UADDID   **
-
-
-
-     - **LEXICON EVEN_IND_UADDID   **
-
-
-     - **LEXICON EVEN_POT_UADDID **
-
-     - **LEXICON EVEN_IMPRT_UADDID   **
-
- * **LEXICON 2SYLL_UAINID_TV  **  5 verbs
-
-     - **LEXICON VINFINITES_UAINID  **
+     - **LEXICON VINFINITES_UADDID**
 
 
 
-     - **LEXICON EVEN_IND_UAINID   **
+     - **LEXICON EVEN_IND_UADDID**
 
 
-     - **LEXICON EVEN_POT_UAINID **
+     - **LEXICON EVEN_POT_UADDID**
 
-     - **LEXICON EVEN_IMPRT_UAINID   **
+     - **LEXICON EVEN_IMPRT_UADDID**
 
+ * **LEXICON 2SYLL_UAINID_TV**  5 verbs
 
- * **LEXICON 2SYLL_CAALLID **  7 verbs
-
- * **LEXICON 2SYLL_CAALLID_V  ** 7 verbs
-
-     - **LEXICON VINFINITES_CAALLID   **
+     - **LEXICON VINFINITES_UAINID**
 
 
 
+     - **LEXICON EVEN_IND_UAINID**
 
-     - **LEXICON EVEN_IND_CAALLID   **
+
+     - **LEXICON EVEN_POT_UAINID**
+
+     - **LEXICON EVEN_IMPRT_UAINID**
 
 
-     - **LEXICON EVEN_POT_CAALLID **
+ * **LEXICON 2SYLL_CAALLID**  7 verbs
 
-     - **LEXICON EVEN_IMPRT_CAALLID **
+ * **LEXICON 2SYLL_CAALLID_V** 7 verbs
+
+     - **LEXICON VINFINITES_CAALLID**
+
+
+
+
+     - **LEXICON EVEN_IND_CAALLID**
+
+
+     - **LEXICON EVEN_POT_CAALLID**
+
+     - **LEXICON EVEN_IMPRT_CAALLID**
 
 as 2SYLL_ID, but only 3 person
 
 
 
 
-     - **LEXICON VINFINITES_ID  **
+     - **LEXICON VINFINITES_ID**
 
 
 
 
-     - **LEXICON EVEN_IND_ID  **
+     - **LEXICON EVEN_IND_ID**
 
 
 
 
 
- * **LEXICON 2SYLL_EELLID_V  ** iälám iälá eelih ij ele. 4 verbs
+ * **LEXICON 2SYLL_EELLID_V** iälám iälá eelih ij ele. 4 verbs
 
- ** __LEXICON VINFINITES_EELLID !  __
+ ** __LEXICON VINFINITES_EELLID !__
 
 
 
-     - **LEXICON EVEN_IND_EELLID **
+     - **LEXICON EVEN_IND_EELLID**
 
 
-     - **LEXICON EVEN_IMPRT_EELLID **
+     - **LEXICON EVEN_IMPRT_EELLID**
 
 
 
 
- * **LEXICON 2SYLL_KEESSID_V  ** like EELLID except from Prs+ConNeg. 4 verbs
+ * **LEXICON 2SYLL_KEESSID_V** like EELLID except from Prs+ConNeg. 4 verbs
 
-     - **LEXICON VINFINITES_KEESSID **
+     - **LEXICON VINFINITES_KEESSID**
 
 
 
 
-     - **LEXICON EVEN_IND_KEESSID  **
+     - **LEXICON EVEN_IND_KEESSID**
 
 
-     - **LEXICON EVEN_IMPRT_KEESSID **
+     - **LEXICON EVEN_IMPRT_KEESSID**
 
 
 
- * **LEXICON 2SYLL_PAACCID_V  ** 5 verbs
+ * **LEXICON 2SYLL_PAACCID_V** 5 verbs
 
-     - **LEXICON VINFINITES_PAACCID **
+     - **LEXICON VINFINITES_PAACCID**
 
 
 
 
-     - **LEXICON EVEN_IND_PAACCID **
+     - **LEXICON EVEN_IND_PAACCID**
 
 
-     - **LEXICON EVEN_IMPRT_PAACCID **
+     - **LEXICON EVEN_IMPRT_PAACCID**
 
-     - **LEXICON EVEN_POT_PAACCID **
+     - **LEXICON EVEN_POT_PAACCID**
 
 
 
- * **LEXICON 2SYLL_VYELGID_V  ** like VYEIJID, but -i for reduced forms. 7 verbs
+ * **LEXICON 2SYLL_VYELGID_V** like VYEIJID, but -i for reduced forms. 7 verbs
 
 
 
-     - **LEXICON EVEN_IND_VYELGID  **
+     - **LEXICON EVEN_IND_VYELGID**
 
 
 
 
- * **LEXICON 2SYLL_VYEIJID_V  **  5 verbs
+ * **LEXICON 2SYLL_VYEIJID_V**  5 verbs
 
 
 
-     - **LEXICON EVEN_IND_VYEIJID **
+     - **LEXICON EVEN_IND_VYEIJID**
 
 
 
 
 
- * **LEXICON 2SYLL_JYEHID_V  **  5 verbs
+ * **LEXICON 2SYLL_JYEHID_V**  5 verbs
 
 
-     - **LEXICON EVEN_IND_JYEHID **
+     - **LEXICON EVEN_IND_JYEHID**
 
 
 
- * **LEXICON 2SYLL_VYEIJID_VYELGID_COMMON  **
+ * **LEXICON 2SYLL_VYEIJID_VYELGID_COMMON**
 
 
-     - **LEXICON VINFINITES_VYEIJID_VYELGID  **
+     - **LEXICON VINFINITES_VYEIJID_VYELGID**
 
 
 
-     - **LEXICON EVEN_POT_VYEIJID **
+     - **LEXICON EVEN_POT_VYEIJID**
 
-     - **LEXICON EVEN_IMPRT_VYEIJID **
+     - **LEXICON EVEN_IMPRT_VYEIJID**
 
 
 
- * **LEXICON 2SYLL_KASTID_V  ** 9 verbs
+ * **LEXICON 2SYLL_KASTID_V** 9 verbs
 
-     - **LEXICON VINFINITES_KASTID  ** kä^RVst
+     - **LEXICON VINFINITES_KASTID** kä^RVst
 
 
 
 
 
-     - **LEXICON EVEN_IND_KASTID **
+     - **LEXICON EVEN_IND_KASTID**
 
 
-     - **LEXICON EVEN_POT_KASTID **
+     - **LEXICON EVEN_POT_KASTID**
 
-     - **LEXICON EVEN_IMPRT_KASTID  **
+     - **LEXICON EVEN_IMPRT_KASTID**
 
 
 
- * **LEXICON 2SYLL_TIETTID_V  ** only 1 verb: tiettiđ. Ind+Prs+ConNeg: tieđe vs. Ind+Prs+ConNeg: kieldi 2SYLL_ID
+ * **LEXICON 2SYLL_TIETTID_V** only 1 verb: tiettiđ. Ind+Prs+ConNeg: tieđe vs. Ind+Prs+ConNeg: kieldi 2SYLL_ID
 
-     - **LEXICON VINFINITES_TIETTID **
+     - **LEXICON VINFINITES_TIETTID**
 
 
 
 
-     - **LEXICON EVEN_IND_TIETTID **
+     - **LEXICON EVEN_IND_TIETTID**
 
 
-     - **LEXICON EVEN_POT_TIETTID **
+     - **LEXICON EVEN_POT_TIETTID**
 
-     - **LEXICON EVEN_IMPRT_TIETTID **
+     - **LEXICON EVEN_IMPRT_TIETTID**
 
 
-     - **LEXICON EVEN_POT_ID **
+     - **LEXICON EVEN_POT_ID**
 
 
 
-     - **LEXICON EVEN_IMPRT_ID **
+     - **LEXICON EVEN_IMPRT_ID**
 
 
 
 ### OD verbs
 
 
- * **LEXICON 2SYLL_HILGOD_V  ** this as the only OD verb(s) with passive 7 verbs
+ * **LEXICON 2SYLL_HILGOD_V** this as the only OD verb(s) with passive 7 verbs
 
 
- * **LEXICON 2SYLL_OD_V  ** OD paradigm, no passive here. 130 verbs
+ * **LEXICON 2SYLL_OD_V** OD paradigm, no passive here. 130 verbs
 
 
-     - **LEXICON VINFINITES_OD **
-
-
-
+     - **LEXICON VINFINITES_OD**
 
 
 
-     - **LEXICON EVEN_POT_OD **
 
-     - **LEXICON EVEN_IMPRT_OD **
+
+
+     - **LEXICON EVEN_POT_OD**
+
+     - **LEXICON EVEN_IMPRT_OD**
 
 
 
 ### OOD verbs
 
- * **LEXICON 2SYLL_OOD_V  ** 31 verbs
+ * **LEXICON 2SYLL_OOD_V** 31 verbs
 
-     - **LEXICON VINFINITES_OOD **
-
-
-
-     - **LEXICON EVEN_IND_OOD  **
-
-
-     - **LEXICON EVEN_POT_OOD **
-
-     - **LEXICON EVEN_IMPRT_OOD **
+     - **LEXICON VINFINITES_OOD**
 
 
 
- * **LEXICON 2SYLL_ORROOD_V  ** like njihhood, but different triggers here and there. 24 verbs
+     - **LEXICON EVEN_IND_OOD**
+
+
+     - **LEXICON EVEN_POT_OOD**
+
+     - **LEXICON EVEN_IMPRT_OOD**
+
+
+
+ * **LEXICON 2SYLL_ORROOD_V** like njihhood, but different triggers here and there. 24 verbs
 
 
 
 
 
-     - **LEXICON EVEN_IND_ORROOD   **
+     - **LEXICON EVEN_IND_ORROOD**
 
 
-     - **LEXICON EVEN_POT_ORROOD **
+     - **LEXICON EVEN_POT_ORROOD**
 
-     - **LEXICON EVEN_IMPRT_ORROOD  **
+     - **LEXICON EVEN_IMPRT_ORROOD**
 
 
 ### UD verbs
 
 
- * **LEXICON 2SYLL_KUARRUD_V  ** long dipht => -o . 56 verbs
+ * **LEXICON 2SYLL_KUARRUD_V** long dipht => -o . 56 verbs
 
-     - **LEXICON VINFINITES_KUARRUD **
-
-
-
-
-
- * **LEXICON EVEN_IND_KUARRUD **
-
-
- * **LEXICON EVEN_POT_KUARRUD **
-
-     - **LEXICON EVEN_IMPRT_KUARRUD  **
+     - **LEXICON VINFINITES_KUARRUD**
 
 
 
 
- * **LEXICON 2SYLL_UD_V  ** 175 verbs
+
+ * **LEXICON EVEN_IND_KUARRUD**
 
 
-     - **LEXICON VINFINITES_UD **
+ * **LEXICON EVEN_POT_KUARRUD**
+
+     - **LEXICON EVEN_IMPRT_KUARRUD**
 
 
 
-     - **LEXICON EVEN_IND_UD **
+
+ * **LEXICON 2SYLL_UD_V** 175 verbs
 
 
-     - **LEXICON EVEN_POT_UD **
-
-     - **LEXICON EVEN_IMPRT_UD **
+     - **LEXICON VINFINITES_UD**
 
 
- * **LEXICON 2SYLL_UAZZUD_V  ** 59 verbs
 
-     - **LEXICON VINFINITES_UAZZUD **
-
-
-     - **LEXICON EVEN_IND_UAZZUD **
+     - **LEXICON EVEN_IND_UD**
 
 
-     - **LEXICON EVEN_POT_UAZZUD **
+     - **LEXICON EVEN_POT_UD**
 
-     - **LEXICON EVEN_IMPRT_UAZZUD **
+     - **LEXICON EVEN_IMPRT_UD**
+
+
+ * **LEXICON 2SYLL_UAZZUD_V** 59 verbs
+
+     - **LEXICON VINFINITES_UAZZUD**
+
+
+     - **LEXICON EVEN_IND_UAZZUD**
+
+
+     - **LEXICON EVEN_POT_UAZZUD**
+
+     - **LEXICON EVEN_IMPRT_UAZZUD**
 
 ###  Common even lexica
 
- * **LEXICON EVEN_COND **
+ * **LEXICON EVEN_COND**
 
 
 
@@ -930,69 +930,69 @@ as 2SYLL_ID, but only 3 person
 ## Odd-syllable stems
 
 
- * **LEXICON 3_KUIKETTID_V ** this has lengthening of ^RV for Cns-initial suff
+ * **LEXICON 3_KUIKETTID_V** this has lengthening of ^RV for Cns-initial suff
 
 
- * **LEXICON 3_LEKKASID_V  ** SM51, no length change in stem
-
-
-
- * **LEXICON 3_CIELATTID_V  ** SM57, consonant and vowel change
+ * **LEXICON 3_LEKKASID_V** SM51, no length change in stem
 
 
 
-
-
- * **LEXICON 3_VYEJETTID_V  ** SM53. short V in Inf
+ * **LEXICON 3_CIELATTID_V** SM57, consonant and vowel change
 
 
 
 
 
-     - **LEXICON ODD_PRS_VYEJETTID  **
-
-     - **LEXICON ODD_IMPRT_VYEJETTID  **
-
-
-
- * **LEXICON ADELID_TV  ** only for adeliđ, to get adde as default ConNeg, others are 3_ADELID
-
-
-
- * **LEXICON 3_ADELID_V  ** SM53. short V in Inf
-
-     - **LEXICON ADELID_COMMON **
-
-
-     - **LEXICON ODD_VINFINITES_ADELID **
-
-     - **LEXICON ODD_PRS_ADELID **
-
-
-
- * **LEXICON 3_MERIDID_V  ** SM53. short V in Inf
-
-
-
-     - **LEXICON ODD_INFINITES_MERIDID **
-
-
-
- * **LEXICON 3_PUTESTID_V  ** SM53. short V in Inf
+ * **LEXICON 3_VYEJETTID_V** SM53. short V in Inf
 
 
 
 
-     - **LEXICON ODD_PRS_PUTESTID  **
+
+     - **LEXICON ODD_PRS_VYEJETTID**
+
+     - **LEXICON ODD_IMPRT_VYEJETTID**
 
 
 
- * **LEXICON 3_COKKIITTID_V  ** SM52, long V in Inf
+ * **LEXICON ADELID_TV** only for adeliđ, to get adde as default ConNeg, others are 3_ADELID
 
 
-     - **LEXICON ODD_VINFINITES_COKKIITTID  **
 
-     - **LEXICON ODD_PRS_COKKIITTID  **
+ * **LEXICON 3_ADELID_V** SM53. short V in Inf
+
+     - **LEXICON ADELID_COMMON**
+
+
+     - **LEXICON ODD_VINFINITES_ADELID**
+
+     - **LEXICON ODD_PRS_ADELID**
+
+
+
+ * **LEXICON 3_MERIDID_V** SM53. short V in Inf
+
+
+
+     - **LEXICON ODD_INFINITES_MERIDID**
+
+
+
+ * **LEXICON 3_PUTESTID_V** SM53. short V in Inf
+
+
+
+
+     - **LEXICON ODD_PRS_PUTESTID**
+
+
+
+ * **LEXICON 3_COKKIITTID_V** SM52, long V in Inf
+
+
+     - **LEXICON ODD_VINFINITES_COKKIITTID**
+
+     - **LEXICON ODD_PRS_COKKIITTID**
 
 
 
@@ -1000,49 +1000,47 @@ as 2SYLL_ID, but only 3 person
 
 
 
- * **LEXICON ODD_INFINITES   **
+ * **LEXICON ODD_INFINITES**
 
 
 
 
- * **LEXICON ODD_PRS_CONNEG    **
+ * **LEXICON ODD_PRS_CONNEG**
 
- * **LEXICON ODD_PRS_CONNEG_rlen    **
-
-
-
-
- * **LEXICON ODD_PRS   **
-
- * **LEXICON ODD_PRT  **
-
- * **LEXICON ODD_COND   **
-
- * **LEXICON ODD_POT   **
-
-
- * **LEXICON ODD_IMPRT   **
-
- * **LEXICON ODD_IMPRT_REST   **
+ * **LEXICON ODD_PRS_CONNEG_rlen**
 
 
 
- * **LEXICON ODD_DU_ERRORTH  **
+
+ * **LEXICON ODD_PRS**
+
+ * **LEXICON ODD_PRT**
+
+ * **LEXICON ODD_COND**
+
+ * **LEXICON ODD_POT**
+
+
+ * **LEXICON ODD_IMPRT**
+
+ * **LEXICON ODD_IMPRT_REST**
+
+
+
+ * **LEXICON ODD_DU_ERRORTH**
 
 
 
 ## Derivational extentions to 3-syllabic verbs
 
- * **LEXICON 3_DERIVED_LOW  ** lexicon to be determined
+ * **LEXICON 3_DERIVED_LOW** lexicon to be determined
 
- * **LEXICON 3_DERIVED  ** lexicon
+ * **LEXICON 3_DERIVED** lexicon
 
- * **LEXICON 3_DERIVED_SLEN  ** lexicon
-
-
- * **LEXICON 3_DERIVED_REST  ** lexicon
+ * **LEXICON 3_DERIVED_SLEN** lexicon
 
 
+ * **LEXICON 3_DERIVED_REST** lexicon
 
 
 
@@ -1053,9 +1051,9 @@ as 2SYLL_ID, but only 3 person
 
 
 
- * **LEXICON 3_DERIVED_CLEN  ** lexicon
 
 
+ * **LEXICON 3_DERIVED_CLEN** lexicon
 
 
 
@@ -1071,7 +1069,9 @@ as 2SYLL_ID, but only 3 person
 
 
 
- * **LEXICON 3_DERIVED_VBACK   **
+
+
+ * **LEXICON 3_DERIVED_VBACK**
 
 
 
@@ -1093,14 +1093,14 @@ as 2SYLL_ID, but only 3 person
 
 
 
- * **LEXICON C_COKKAD_V  **
+ * **LEXICON C_COKKAD_V**
 
 
 
 
 
 
-     - **LEXICON C_PASS_LONG  **
+     - **LEXICON C_PASS_LONG**
 
 
 
@@ -1110,14 +1110,14 @@ as 2SYLL_ID, but only 3 person
 
 
 
- * **LEXICON C_PALLAD_V **
+ * **LEXICON C_PALLAD_V**
 
 
 
 
 
 
- * **LEXICON C_HOLHOD **
+ * **LEXICON C_HOLHOD**
 
 
 
@@ -1125,7 +1125,7 @@ as 2SYLL_ID, but only 3 person
 
 
 
- * **LEXICON C_TUHHID_V **
+ * **LEXICON C_TUHHID_V**
 
 
 
@@ -1134,7 +1134,7 @@ as 2SYLL_ID, but only 3 person
 
 
 
- * **LEXICON C_SLOOVID **
+ * **LEXICON C_SLOOVID**
 
 
 
@@ -1146,7 +1146,7 @@ as 2SYLL_ID, but only 3 person
 
 
 
-     - **LEXICON C_PASS_SH_RVSH ** shortens vowel
+     - **LEXICON C_PASS_SH_RVSH** shortens vowel
 
 
 
@@ -1158,7 +1158,7 @@ as 2SYLL_ID, but only 3 person
 
 
 
-     - **LEXICON C_PASS_SH_RLEN ** does not shorten vowel
+     - **LEXICON C_PASS_SH_RLEN** does not shorten vowel
 
 
 
@@ -1169,7 +1169,7 @@ as 2SYLL_ID, but only 3 person
 
 
 
-     - **LEXICON C_PASS_SH_ALTERNATE ** toohum: does not shorten vowel, does not lengthen consonant, this is a Use/NG lexicon
+     - **LEXICON C_PASS_SH_ALTERNATE** toohum: does not shorten vowel, does not lengthen consonant, this is a Use/NG lexicon
 
 
 
@@ -1181,7 +1181,7 @@ as 2SYLL_ID, but only 3 person
 
 
 
- * **LEXICON C_RAMMUD_V ** does not shorten vowel
+ * **LEXICON C_RAMMUD_V** does not shorten vowel
 
 
 
@@ -1189,10 +1189,10 @@ as 2SYLL_ID, but only 3 person
 
 
 
-     - **LEXICON C_RAMMUD_POT  ** umify this and next
+     - **LEXICON C_RAMMUD_POT** umify this and next
 
 
- * **LEXICON CONTR_POT ** unify this and previous
+ * **LEXICON CONTR_POT** unify this and previous
 
 
 
@@ -1203,11 +1203,11 @@ as 2SYLL_ID, but only 3 person
 
 
 
-     - **LEXICON C_PASS_SH_POHTED  ** shortens long vow in certain forms
+     - **LEXICON C_PASS_SH_POHTED** shortens long vow in certain forms
 
-     - **LEXICON C_PASS_SH  ** shortens long vow in certain forms
+     - **LEXICON C_PASS_SH** shortens long vow in certain forms
 
-     - **LEXICON C_PASS_SH_COMMON  ** shortens long vow in certain forms
+     - **LEXICON C_PASS_SH_COMMON** shortens long vow in certain forms
 
 
 
@@ -1219,7 +1219,7 @@ as 2SYLL_ID, but only 3 person
 
 
 
- * **LEXICON C_TABAHTUD_V  ** Sg3 -vá
+ * **LEXICON C_TABAHTUD_V** Sg3 -vá
 
 
 
@@ -1245,23 +1245,20 @@ as 2SYLL_ID, but only 3 person
 ## 4-syllabic
 
 
- * **LEXICON 4SYLL_KYETTID_V  **
+ * **LEXICON 4SYLL_KYETTID_V**
 
 
 
 
 
-     - **LEXICON EVEN_IND_KYETTID   **
+     - **LEXICON EVEN_IND_KYETTID**
 
 
-     - **LEXICON KYETTID_POT_ID  **
-
-
-
- * **LEXICON 4_ADELISTID_V   **
+     - **LEXICON KYETTID_POT_ID**
 
 
 
+ * **LEXICON 4_ADELISTID_V**
 
 
 
@@ -1269,7 +1266,10 @@ as 2SYLL_ID, but only 3 person
 
 
 
- * **LEXICON 4_ITTID_V   ** temporarilly, we need a yaml for this
+
+
+
+ * **LEXICON 4_ITTID_V** temporarilly, we need a yaml for this
 
 
 
@@ -1314,36 +1314,36 @@ as 2SYLL_ID, but only 3 person
 # Other lexicq
 ## Case lexica
 
- * **LEXICON VABESS ** to handle Abessive variation, hánnáá, hennáá, hinnáá.
+ * **LEXICON VABESS** to handle Abessive variation, hánnáá, hennáá, hinnáá.
 \\
- * **LEXICON VGEN ** flag for VGen
+ * **LEXICON VGEN** flag for VGen
 
 ## Derivation lexica
 
- * **LEXICON DER_MAS ** 
+ * **LEXICON DER_MAS** 
 \\
- * **LEXICON IJJE ** 
+ * **LEXICON IJJE** 
 \\
- * **LEXICON IJJE_PRSPRC ** 
+ * **LEXICON IJJE_PRSPRC** 
 \\
- * **LEXICON NOMACT ** for -náál suffixation.
+ * **LEXICON NOMACT** for -náál suffixation.
 
 
 # Flag section
 
- **LEXICON FLAG_3HUKSIM  ** should not be disallowed by ENDLEX @D.NeedNoun.ON@
+ **LEXICON FLAG_3HUKSIM** should not be disallowed by ENDLEX @D.NeedNoun.ON@
 
- **LEXICON FLAG_3KIEDAVUSSAM ** should not be disallowed by ENDLEX @D.NeedNoun.ON@
+ **LEXICON FLAG_3KIEDAVUSSAM** should not be disallowed by ENDLEX @D.NeedNoun.ON@
 
- **LEXICON FLAG_CTAHHEE ** should not be disallowed by ENDLEX @D.NeedNoun.ON@
-
-
+ **LEXICON FLAG_CTAHHEE** should not be disallowed by ENDLEX @D.NeedNoun.ON@
 
 
 
 
 
- **LEXICON FLAG_K ** should not be disallowed by ENDLEX @D.NeedNoun.ON@
+
+
+ **LEXICON FLAG_K** should not be disallowed by ENDLEX @D.NeedNoun.ON@
 
 
 
