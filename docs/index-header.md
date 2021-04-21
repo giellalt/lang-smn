@@ -1,7 +1,7 @@
 # Inari Saami documentation
 
 [![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)](https://giellalt.github.io/MaturityClassification.html)
-[![License](https://img.shields.io/github/license/giellalt/template-lang-smn)](https://raw.githubusercontent.com/giellalt/lang-smn/develop/LICENSE)
+[![License](https://img.shields.io/github/license/giellalt/lang-smn)](https://raw.githubusercontent.com/giellalt/lang-smn/develop/LICENSE)
 [![Issues](https://img.shields.io/github/issues/giellalt/lang-smn)](https://github.com/giellalt/lang-smn/issues)
 [![Build status](https://github.com/giellalt/lang-smn/workflows/Speller%20CI+CD/badge.svg)](https://github.com/giellalt/lang-smn/actions)
 
