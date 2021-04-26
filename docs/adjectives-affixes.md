@@ -3,21 +3,25 @@
 
 # Adjective affixes
 
+This file contains the morphology for the Inari Saami adjectives.
 
-Order of triggers:
-```
-SV|ÁE|ÁI  SC  FCD WG|CSH CLEN  VHIGH|VBACK  RVSH|RLEN EA SLEN|SVSH  SVLOW
-```
+The morphophonological processes are governed by triggers. When there are more
+triggers, tney must be ordered as follows (where {A,B} C means *A or B, thereafter C*):
 
-
-
- **LEXICON ATTR** for stems with only attribute form
+{SV,ÁE,ÁI}  SC  FCD {WG,CSH} CLEN  {VHIGH,VBACK}  {RVSH,RLEN} EA {SLEN,SVSH}  SVLOW
 
 
- **LEXICON SIAHA** for siähá
+
+## Adjectives with attr only
+
+ **LEXICON ATTR** for stems with only attribute form, gives Attr, svt. sends to Cmp.
 
 
 ## Even-syllable stems
+
+
+ **LEXICON SIAHA** for siähá. It gives only Attr and Sg/Pl Nom. Fix?
+
 
 
 
@@ -39,7 +43,9 @@ SV|ÁE|ÁI  SC  FCD WG|CSH CLEN  VHIGH|VBACK  RVSH|RLEN EA SLEN|SVSH  SVLOW
 
  **LEXICON CEPPI** directing to X_AIGI, attr. čepis
 
+ **LEXICON UCCE** 
 
+ **LEXICON SUVRE** 
 
 
  **LEXICON KUKKE** directing to X_ALGE, attr. kuhes
@@ -51,12 +57,14 @@ SV|ÁE|ÁI  SC  FCD WG|CSH CLEN  VHIGH|VBACK  RVSH|RLEN EA SLEN|SVSH  SVLOW
 
  **LEXICON HUMO** directing to X_NJUNE via HUMO_REST, attr. humos                  
 
+ **LEXICON HUMO_REST** 
 
 
  **LEXICON UAMI** directing to X_SAAMI, attr. uá'mi
 
  **LEXICON LAAMI** directing to X_SAAMI, attr. lämis
 
+ **LEXICON LAAMI_REST** 
 
 
  **LEXICON PYERI** directing to X_KYELI, attr. pyeri
@@ -93,7 +101,6 @@ SV|ÁE|ÁI  SC  FCD WG|CSH CLEN  VHIGH|VBACK  RVSH|RLEN EA SLEN|SVSH  SVLOW
  **LEXICON HAAITIS** directing to X_VEESKIR, attr. rähis, not in use
 
  **LEXICON HEEITUG** directing to X_PAAVIR, attr. heitugis, heitugâs
-
 
 
  **LEXICON VAANIS** directing to  X_PAAVIR, attr. väni
@@ -156,7 +163,9 @@ SV|ÁE|ÁI  SC  FCD WG|CSH CLEN  VHIGH|VBACK  RVSH|RLEN EA SLEN|SVSH  SVLOW
 
  **LEXICON SOOHAD** directing to X_EEMEED, attr. sohâdis
 
+ **LEXICON SOOHAD_NULLATTR** 
 
+ **LEXICON SOOHAD_NOATTR** 
 
  **LEXICON MAAJEEB-COMP** comparative lexicon
 
@@ -164,8 +173,11 @@ SV|ÁE|ÁI  SC  FCD WG|CSH CLEN  VHIGH|VBACK  RVSH|RLEN EA SLEN|SVSH  SVLOW
  **LEXICON PEEGGALM** directing to X_EEMEED, attr. sohâdis
 
 
+ **LEXICON JUARBUDEKES** 
 
+ **LEXICON JUARBUDEVES** 
 
+ **LEXICON JUARBUDEKES_INFL** 
 
 
 
@@ -175,6 +187,7 @@ SV|ÁE|ÁI  SC  FCD WG|CSH CLEN  VHIGH|VBACK  RVSH|RLEN EA SLEN|SVSH  SVLOW
 
  **LEXICON KUBDUV** . It doesn't fit with KAAMUV because of kubduvân, kubduvist
 
+ **LEXICON KUBDUV_COMP** 
 
 
 ## Contracted stems
@@ -184,6 +197,7 @@ SV|ÁE|ÁI  SC  FCD WG|CSH CLEN  VHIGH|VBACK  RVSH|RLEN EA SLEN|SVSH  SVLOW
 
  **LEXICON A_IJJE** 
 
+ **LEXICON TTETTEE** 
 
  **LEXICON PYECCEE** directing to X_TAHHEE, attr. pyeccee
 
@@ -216,6 +230,7 @@ SV|ÁE|ÁI  SC  FCD WG|CSH CLEN  VHIGH|VBACK  RVSH|RLEN EA SLEN|SVSH  SVLOW
 
 
 
+ **LEXICON TAASSAS** 
 
 
 ## 4 syll stems
@@ -228,8 +243,10 @@ SV|ÁE|ÁI  SC  FCD WG|CSH CLEN  VHIGH|VBACK  RVSH|RLEN EA SLEN|SVSH  SVLOW
 
  **LEXICON UANIHASJ** directing to LAS_SUF, attr, -âš
 
+ **LEXICON KIERDAVAS** 
 
 
+ **LEXICON UANIHASJ_INFL** 
 
 
  **LEXICON UNOHAS** directing to LAS_SUF, attr, -is
@@ -253,6 +270,7 @@ Adj - pooliitlâš: # attr. pooliitlâš; puolikongruenssi mahdollinen (#-paikat
 
  **LEXICON OLMOOSMETTUM**, not all forms. attr. = Sg. Nom.
 
+ **LEXICON METTUMforms** 
 
 
 
@@ -318,6 +336,7 @@ Adj - pooliitlâš: # attr. pooliitlâš; puolikongruenssi mahdollinen (#-paikat
 
  * **LEXICON CMUS-SUF**
 
+ **LEXICON P-COMP-ERR-ORTH** 
 
 
  * **LEXICON A_VUOTA** for derivation
@@ -334,5 +353,5 @@ Adj - pooliitlâš: # attr. pooliitlâš; puolikongruenssi mahdollinen (#-paikat
 
  **LEXICON A_LASJ** 
 
- **LEXICON ATTR_R**
+ **LEXICON ATTR_R** sends to R, NAMAG, SAS, CMP_ADJ.
 
