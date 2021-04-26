@@ -130,9 +130,9 @@ just specify +Der|+Der1 .. +Der5 and you are set.
  |            | **+Der/AAdv** |            |      |    | adverb pyeremusávt pyeremusâht
  |            | **+Der/taa** |            |      |    | adverb pyeremustáá !This is not the best tag?
  |            |            | **+Der/vuota** |      | AN | 
- |            |            | **+Der/InchL** |      | VV | 
- |            |            | **+Der/upmi** |      | VN | 
- |            |            | **+Der/mas** |      | VN | 
+ |            |            |            | **+Der/InchL** | VV | 
+ |            |            |            | **+Der/upmi** | VN | 
+ |            |            |            | **+Der/mas** | VN | 
 
 
 
@@ -2922,14 +2922,14 @@ ANAR DUBAI DUBAI-plc DUBAI-sur MAKI
 
 
 
- * **LEXICON AANAAR 	** Goes to EEMEED
+ * **LEXICON AANAAR** Goes to EEMEED
 
 
- * **LEXICON AANAAR-plc 	**
+ * **LEXICON AANAAR-plc**
 
- * **LEXICON AANAAR-mal 	**
+ * **LEXICON AANAAR-mal**
 
- * **LEXICON AANAAR-fem 	**
+ * **LEXICON AANAAR-fem**
 
 
 
