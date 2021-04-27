@@ -215,7 +215,7 @@ Unclassified verbs
 A note on morphophonology
 The consonant gradation setup for verbs is to a certain extent different
 from the one for nouns, namely:
-...
+
 
 
 
@@ -224,8 +224,10 @@ from the one for nouns, namely:
 
 ## Auxiliaries
 
+ **LEXICON NEG**  = lists all forms of the negation verb
 
 
+ **LEXICON LEDE**  = lists all forms of the copula
 
 
 
