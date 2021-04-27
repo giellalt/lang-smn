@@ -68,11 +68,11 @@
 
 
 
- * **LEXICON ARABICCOMPOUNDS**   arabic as first part, 
+ * **LEXICON ARABICCOMPOUNDS   **   arabic as first part, 
 
 
 
- * **LEXICON NUMERALCOMPOUNDS**: numeral as first part: duhatjienat,
+ * **LEXICON NUMERALCOMPOUNDS **: numeral as first part: duhatjienat,
 
 
 

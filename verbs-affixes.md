@@ -582,7 +582,7 @@ as 2SYLL_ID, but only 3 person
 
 
 
- ** __LEXICON VINFINITES_EELLID !__
+ ** __LEXICON VINFINITES_EELLID !  __
 
 
 
@@ -1091,19 +1091,19 @@ as 2SYLL_ID, but only 3 person
 
 # Flag section
 
- **LEXICON FLAG_3HUKSIM** should not be disallowed by ENDLEX @D.NeedNoun.ON@
+ **LEXICON FLAG_3HUKSIM  ** should not be disallowed by ENDLEX @D.NeedNoun.ON@
 
- **LEXICON FLAG_3KIEDAVUSSAM** should not be disallowed by ENDLEX @D.NeedNoun.ON@
+ **LEXICON FLAG_3KIEDAVUSSAM ** should not be disallowed by ENDLEX @D.NeedNoun.ON@
 
- **LEXICON FLAG_CTAHHEE** should not be disallowed by ENDLEX @D.NeedNoun.ON@
-
-
+ **LEXICON FLAG_CTAHHEE ** should not be disallowed by ENDLEX @D.NeedNoun.ON@
 
 
 
 
 
- **LEXICON FLAG_K** should not be disallowed by ENDLEX @D.NeedNoun.ON@
+
+
+ **LEXICON FLAG_K ** should not be disallowed by ENDLEX @D.NeedNoun.ON@
 
 
 

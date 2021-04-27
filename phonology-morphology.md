@@ -91,11 +91,11 @@ Trigger ordering in twolc and lexc, from left to right:
 Here we define the suffix border >
 The other borders are not used yet, but still defined:
 
- * **«**:  Derivational prefix
- * **»**:  Derivational suffix
- * **%<**:  Inflectional prefx
- * **%>**:  Inflectional suffix
- * **%^**:  (exceptional) soft hyphenation point
+ * ** «  **:  Derivational prefix
+ * ** »  **:  Derivational suffix
+ * ** %< **:  Inflectional prefx
+ * ** %> **:  Inflectional suffix
+ * ** %^ **:  (exceptional) soft hyphenation point
 and the symbol #, which is Word boundary for both lexicalised and dynamic compounds
 
 End of alphabet definitions
