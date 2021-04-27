@@ -3546,6 +3546,7 @@ Denne regelen fjerner Err/Orth når det er samme lemma, sjøl om morfologien er 
 
 
 
+Test: Go for minimal weight.
 
 
 
