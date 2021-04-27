@@ -3,94 +3,94 @@
 
 This file documents the Inari Sámi morphological analyser. The tags in bold are the ones in use in the analyser.
 
-  **Multichar_Symbol   ** definitions
+  **Multichar_Symbols** definitions
 
 ## Parts of speech
- * ** +N +A +Adv +V                      **
- * ** +Pron +CS +CC                      **
- * ** +Adp +Po +Pr                       **
- * ** +Interj +Pcle                      **
- * ** +Num   ** 
- * ** +ABBR         ** 
- * ** +Symbol ** = independent symbols in the text stream, like £, €, ©
+ * **+N +A +Adv +V**
+ * **+Pron +CS +CC**
+ * **+Adp +Po +Pr**
+ * **+Interj +Pcle**
+ * **+Num** 
+ * **+ABBR** 
+ * **+Symbol** = independent symbols in the text stream, like £, €, ©
 
 
 ### Tags for sub-POS
 
- * ** +Prop      ** - Propernoun
- * ** +Per       ** - Personal Pronoun
- * ** +Dem       ** - Demonstrative Pronoun
- * ** +Interr    ** - Interrogative Pronoun
- * ** +Refl      ** - Reflexive Pronoun
- * ** +Recipr    ** - Reciprocal Pronoun
- * ** +Rel       ** - Relative Pronoun
- * ** +Indef     ** - Indefinitive Pronoun
- * ** +Coll      ** - Collective numerals, subtag for +N
- * ** +Arab      ** - Arabic numeral, subtag for +Num
- * ** +Rom       ** - Roman numeral, subtag for +Num
- * ** +ACR       ** - Acronym
- * ** +Dyn       ** - Dynamic Acronym
- * ** +NomAg  ** 
- * ** +Ord  ** 
+ * **+Prop** - Propernoun
+ * **+Pers** - Personal Pronoun
+ * **+Dem** - Demonstrative Pronoun
+ * **+Interr** - Interrogative Pronoun
+ * **+Refl** - Reflexive Pronoun
+ * **+Recipr** - Reciprocal Pronoun
+ * **+Rel** - Relative Pronoun
+ * **+Indef** - Indefinitive Pronoun
+ * **+Coll** - Collective numerals, subtag for +N
+ * **+Arab** - Arabic numeral, subtag for +Num
+ * **+Rom** - Roman numeral, subtag for +Num
+ * **+ACR** - Acronym
+ * **+Dyn** - Dynamic Acronym
+ * **+NomAg** 
+ * **+Ord** 
 
 ### Tags for governing abbreviations in preprocessing
 
- * **  +Gram/TAbbr    **:  Transitive abbreviation (it needs an argument)
- * **  +Gram/NoAbbr   **:  Intransitive abbreviations that are homonymous   with more frequent words. They should only be considered  abbreviations in the middle of a sentence.
- * **  +Gram/TNumAbbr **:  Transitive abbreviation if the following     constituent is numeric
- * ** +Gram/NumNoAbbr **:  Transitive abbreviations for which numerals are complements and normal words. The abbreviation usage  the sentence can be considered as true cases.
- * **  +Gram/TIAbbr   **:  Both transitive and intransitive abbreviation
- * **  +Gram/IAbbr    **:  Intransitive abbreviation (it takes no argument)
- * **  +Gram/3 yll    **: trisyllabic verbs
+ * **+Gram/TAbbr**:  Transitive abbreviation (it needs an argument)
+ * **+Gram/NoAbbr**:  Intransitive abbreviations that are homonymous   with more frequent words. They should only be considered  abbreviations in the middle of a sentence.
+ * **+Gram/TNumAbbr**:  Transitive abbreviation if the following     constituent is numeric
+ * **+Gram/NumNoAbbr**:  Transitive abbreviations for which numerals are complements and normal words. The abbreviation usage  the sentence can be considered as true cases.
+ * **+Gram/TIAbbr**:  Both transitive and intransitive abbreviation
+ * **+Gram/IAbbr**:  Intransitive abbreviation (it takes no argument)
+ * **+Gram/3syll**: trisyllabic verbs
 
 
 
 ## Grammatical properties
 
- * ** +IV +TV              ** 
+ * **+IV +TV** 
 
 
 ### Number
- * ** +Sg +Pl +Du                          ** 
+ * **+Sg +Pl +Du** 
 
 #### Person - number
- * ** +Sg1 +Sg2 +Sg3                   ** 
- * ** +Du1 +Du2 +Du3                   ** 
- * ** +Pl1 +Pl2 +Pl3                      ** 
+ * **+Sg1 +Sg2 +Sg3** 
+ * **+Du1 +Du2 +Du3** 
+ * **+Pl1 +Pl2 +Pl3** 
 
 #### Px
- * ** +PxSg1 +PxSg2 +PxSg3               ** 
- * ** +PxDu1 +PxDu2 +PxDu3               ** 
- * ** +PxPl1 +PxPl2 +PxPl3               ** 
+ * **+PxSg1 +PxSg2 +PxSg3** 
+ * **+PxDu1 +PxDu2 +PxDu3** 
+ * **+PxPl1 +PxPl2 +PxPl3** 
 
 #### Cases
- * ** +Nom +Gen +Acc                   ** 
- * ** +Ill +Ine +Ela                   ** 
- * ** +Com +E  +Par +Abe               ** 
- * ** +Loc                              ** 
- * ** +Known ** mon , till we found a better tag
+ * **+Nom +Gen +Acc** 
+ * **+Ill +Ine +Ela** 
+ * **+Com +Ess +Par +Abe** 
+ * **+Loc** 
+ * **+Known** mon , till we found a better tag
 
 ### Adjectival forms
- * ** +Comp +Superl               ** 
- * ** +Attr                  ** 
+ * **+Comp +Superl** 
+ * **+Attr** 
 
 ### Adverb types 
 
- * ** +Spat       **    Spatial adverbs
- * ** +Temp       ** Temporal adverbs
+ * **+Spat**    Spatial adverbs
+ * **+Temp** Temporal adverbs
 
 
 ### Tense - mood
- * ** +Ind +Pot +Cond +Imprt +ImprtII  ** 
- * ** +Pr  +Prt                          ** 
+ * **+Ind +Pot +Cond +Imprt +ImprtII** 
+ * **+Prs +Prt** 
 
 ### Indefinite verb forms
- * ** +Pa  +Sup                          ** 
- * ** +Inf +Ger +GerII                   ** 
- * ** +ConNeg +Neg                       ** 
- * ** +Pr Prc +PrfPrc                   ** 
- * ** +VGen +VAbe                       ** 
- * ** +Actio                      ** 
+ * **+Pass +Sup** 
+ * **+Inf +Ger +GerII** 
+ * **+ConNeg +Neg** 
+ * **+PrsPrc +PrfPrc** 
+ * **+VGen +VAbess** 
+ * **+Actio** 
 
 
 ## Derivation tags
@@ -102,37 +102,37 @@ All non-positional derivations should be preceded by this tag, to make it possib
 to target regular expressions at all derivations in a language-independent way:
 just specify +Der|+Der1 .. +Der5 and you are set.
 
- * **+Der  ** is the tag to put before the other der tags.
+ * **+Der** is the tag to put before the other der tags.
 
 ### Table for derivation tags
 
 | Pos1 | Pos2     | Pos3  | Pos4  | POS switches (from-to)| Explanation
 | ---  | ---      | ---   | ---   | ---                   | ---
- | **+Der1                                       ** |            |            |      |    | Position tag, required
- |            | **          +Der2                             ** |            |      |    | Position tag, required
- |            |            | **                       +Der3                ** |      |    | Position tag, required
- |            |            |            | **                                  +Der4     ** |    | Position tag, required
- | **+Der/la j                                   ** |            |            |      | NA | 
- | **+Der/d                                      ** |            |            |      | VV | 
- | **+Der/tt                                     ** |            |            |      | VV | - Causative čälittiđ
- | **+Der/Cau                                    ** |            |            |      | VV | - 3-syll causatives
- | **+Der/l                                      ** |            |            |      | VV | 
- | **+Der/ t                                     ** |            |            |      | VV | čälistiđ
- | **+Der/Car                                    ** |            |            |      | NA | * +Der1+Der2 - only combine with Der3 caritive: peljittem
- | **+Der/laakan                                 ** |            |            |      | AA | * +Der1+Der2 - only combine with Der3
- | **+Der/Pa                                    ** |            |            |      | VV | -  passive
- |            | **           +Der/Dimin                       ** |            |      | NN | (was: Der/aš & Der/š)
- |            | **           +Der/NomAg                       ** |            |      |    | 
- |            | **           +Der/NomAct                      ** |            |      | VN | Der/NomAct har to realisasjonar, med ulike restriksjonar,
- |            | **           +Der/ a j                        ** |            |      | NA |           
- |            | **           +Der/alla                        ** |            |      | VV | 
- |            | **           +Der/adda                        ** |            |      | VV | 
- |            | **           +Der/AAdv                        ** |            |      |    | adverb pyeremusávt pyeremusâht
- |            | **           +Der/taa                         ** |            |      |    | adverb pyeremustáá !This is not the best tag?
- |            |            | **                      +Der/vuota            ** |      | AN | 
- |            |            |            | **                                 +Der/InchL ** | VV | 
- |            |            |            | **                                 +Der/upmi  ** | VN | 
- |            |            |            | **                                 +Der/ma    ** | VN | 
+ | **+Der1** |            |            |      |    | Position tag, required
+ |            | **+Der2** |            |      |    | Position tag, required
+ |            |            | **+Der3** |      |    | Position tag, required
+ |            |            |            | **+Der4** |    | Position tag, required
+ | **+Der/lasj** |            |            |      | NA | 
+ | **+Der/d** |            |            |      | VV | 
+ | **+Der/tt** |            |            |      | VV | - Causative čälittiđ
+ | **+Der/Caus** |            |            |      | VV | - 3-syll causatives
+ | **+Der/l** |            |            |      | VV | 
+ | **+Der/st** |            |            |      | VV | čälistiđ
+ | **+Der/Car** |            |            |      | NA | * +Der1+Der2 - only combine with Der3 caritive: peljittem
+ | **+Der/laakan** |            |            |      | AA | * +Der1+Der2 - only combine with Der3
+ | **+Der/Pass** |            |            |      | VV | -  passive
+ |            | **+Der/Dimin** |            |      | NN | (was: Der/aš & Der/š)
+ |            | **+Der/NomAg** |            |      |    | 
+ |            | **+Der/NomAct** |            |      | VN | Der/NomAct har to realisasjonar, med ulike restriksjonar,
+ |            | **+Der/sasj** |            |      | NA |           
+ |            | **+Der/alla** |            |      | VV | 
+ |            | **+Der/adda** |            |      | VV | 
+ |            | **+Der/AAdv** |            |      |    | adverb pyeremusávt pyeremusâht
+ |            | **+Der/taa** |            |      |    | adverb pyeremustáá !This is not the best tag?
+ |            |            | **+Der/vuota** |      | AN | 
+ |            |            |            | **+Der/InchL** | VV | 
+ |            |            |            | **+Der/upmi** | VN | 
+ |            |            |            | **+Der/mas** | VN | 
 
 
 
@@ -145,301 +145,301 @@ just specify +Der|+Der1 .. +Der5 and you are set.
 Other/unclassified derivations, can appear in all positions:
 
 
- * **+Der/ag        ** neeljičievâg neeljijienâg kuulmâloonjâg neeljičievâg neeljijienâg
- * **+Der/aha a     ** 85-ahasâš škovlâahasâš
- * **+Der/ivvaa     ** 
- * **+Der/vuala a   ** tutkâmvuálásâš
- * **+Der/Superl    ** 
- * **+Der/Comp      ** 
- * **+Ex/N          ** - This tag is not added in lexc. The POS tag before derivation is converted into this tag when compiling FST for disambiguation.
- * **+Ex/A          ** - This tag is not added in lexc. The POS tag before derivation is converted into this tag when compiling FST for disambiguation.
- * **+Ex/V          ** - This tag is not added in lexc. The POS tag before derivation is converted into this tag when compiling FST for disambiguation.
+ * **+Der/ag** neeljičievâg neeljijienâg kuulmâloonjâg neeljičievâg neeljijienâg
+ * **+Der/ahasas** 85-ahasâš škovlâahasâš
+ * **+Der/ivvaas** 
+ * **+Der/vualasas** tutkâmvuálásâš
+ * **+Der/Superl** 
+ * **+Der/Comp** 
+ * **+Ex/N** - This tag is not added in lexc. The POS tag before derivation is converted into this tag when compiling FST for disambiguation.
+ * **+Ex/A** - This tag is not added in lexc. The POS tag before derivation is converted into this tag when compiling FST for disambiguation.
+ * **+Ex/V** - This tag is not added in lexc. The POS tag before derivation is converted into this tag when compiling FST for disambiguation.
 
 
 ### Clitics
 
- * ** +Q t           ** question particle
- * ** +Foc           ** 
-  ** +Foc/ba        ** 
-  ** +Foc/baa       ** 
-  ** +Foc/baan      ** 
-  ** +Foc/ban       ** 
-  ** +Foc/gan       ** 
-  ** +Foc/ga        ** 
-  ** +Foc/ge        ** 
-  ** +Foc/ge        ** 
-  ** +Foc/gin       ** 
-  ** +Foc/gi        ** 
-  ** +Foc/go        ** 
-  ** +Foc/han       ** 
-  ** +Foc/ka        ** 
-  ** +Foc/kin       ** 
-  ** +Foc/ki        ** 
-  ** +Foc/nii       ** 
-  ** +Foc/pa        ** 
-  ** +Foc/ un       ** 
- ** +Foc/uv        ** ... focus particles.
+ * **+Qst** question particle
+ * **+Foc** 
+  **+Foc/ba** 
+  **+Foc/baa** 
+  **+Foc/baan** 
+  **+Foc/ban** 
+  **+Foc/gan** 
+  **+Foc/gas** 
+  **+Foc/ge** 
+  **+Foc/ges** 
+  **+Foc/gin** 
+  **+Foc/gis** 
+  **+Foc/go** 
+  **+Foc/han** 
+  **+Foc/kas** 
+  **+Foc/kin** 
+  **+Foc/kis** 
+  **+Foc/nii** 
+  **+Foc/pa** 
+  **+Foc/sun** 
+ **+Foc/uv** ... focus particles.
 
 ### Usage tags
 
- * ** +Err/Orth         ** - substandard, not in normative fst
- * ** +Err/Lex          ** - substandard, not in normative fst, no normative lemma
- * ** +Err/Hyph         ** - substandard, not in normative fst
- * ** +Err/SpaceCmp     ** - substandard, not in normative fst
- * ** +Err/Mi ingSpace ** - in use in smi lexc
- * ** +MWE              ** - MultiWord Expression, used for abbreviation extraction for preprocess.sh
- * ** +U e/-PLX         ** - do not include in Polderland spellers (most likely irrelevant for smn)
- * ** +U e/-Spell       ** - do not include in speller (even though the entry is formally correct)
- * ** +U e/SpellNoSugg  ** - Recognized, but not suggested in speller 
- * ** +U e/GC           ** - only retained in the HFST Grammar Checker disambiguation analyser
- * ** +U e/-GC          ** - never retained in the HFST Grammar Checker disambiguation analyser
+ * **+Err/Orth** - substandard, not in normative fst
+ * **+Err/Lex** - substandard, not in normative fst, no normative lemma
+ * **+Err/Hyph** - substandard, not in normative fst
+ * **+Err/SpaceCmp** - substandard, not in normative fst
+ * **+Err/MissingSpace** - in use in smi lexc
+ * **+MWE** - MultiWord Expression, used for abbreviation extraction for preprocess.sh
+ * **+Use/-PLX** - do not include in Polderland spellers (most likely irrelevant for smn)
+ * **+Use/-Spell** - do not include in speller (even though the entry is formally correct)
+ * **+Use/SpellNoSugg** - Recognized, but not suggested in speller 
+ * **+Use/GC** - only retained in the HFST Grammar Checker disambiguation analyser
+ * **+Use/-GC** - never retained in the HFST Grammar Checker disambiguation analyser
 
 ## Semantic tags
 
- * **+Sem/Act                           ** 
- * **+Sem/Act_Fruit                     ** 
- * **+Sem/Act_Plc                       ** 
- * **+Sem/Act_Route                     ** 
- * **+Sem/Act_Tool-it                   ** 
- * **+Sem/Amount                        ** 
- * **+Sem/Amount_Semcon                 ** 
- * **+Sem/Ani                           ** 
- * **+Sem/Ani-bird                      ** Bird names
- * **+Sem/Ani-fi h                      ** Fish names
- * **+Sem/Ani-in ect                    ** Insect names
- * **+Sem/Ani_Body-ab tr_Hum            ** 
- * **+Sem/Ani_Buildpart                 ** 
- * **+Sem/Ani_Group                     ** 
- * **+Sem/Ani_Group_Hum                 ** 
- * **+Sem/Ani_Group_Prod-vi             ** 
- * **+Sem/Ani_Hum                       ** 
- * **+Sem/Ani_Veh                       ** 
- * **+Sem/Aniprod                       ** 
- * **+Sem/Aniprod_Hum                   ** 
- * **+Sem/Aniprod_Obj-clo               ** 
- * **+Sem/Aniprod_Perc-phy              ** 
- * **+Sem/Aniprod_Plc_Route             ** 
- * **+Sem/Atr                           ** 
- * **+Sem/Body                          ** denotes bodyparts
- * **+Sem/Body-ab tr                    ** 
- * **+Sem/Body-ab tr_Feat-p ych         ** 
- * **+Sem/Body-ab tr_Prod-audio_Semcon  ** 
- * **+Sem/Body_Food                     ** 
- * **+Sem/Body_Hum                      ** 
- * **+Sem/Body_Mat                      ** 
- * **+Sem/Body_Mea r                    ** 
- * **+Sem/Body_Plc                      ** 
- * **+Sem/Body_Plc-elevate              ** 
- * **+Sem/Build                         ** 
- * **+Sem/Build-room                    ** 
- * **+Sem/Build_Edu_Org                 ** 
- * **+Sem/Build_Org                     ** 
- * **+Sem/Buildpart                     ** 
- * **+Sem/Buildpart_Cat_Ctain_Mat       ** 
- * **+Sem/Buildpart_Ctain_Obj           ** 
- * **+Sem/Cat                           ** 
- * **+Sem/Clth                          ** clothes
- * **+Sem/Clth-jewl                     ** 
- * **+Sem/Clth-jewl_Curr                ** 
- * **+Sem/Clthpart                      ** 
- * **+Sem/Ctain                         ** 
- * **+Sem/Ctain-ab tr                   ** 
- * **+Sem/Ctain-clth                    ** 
- * **+Sem/Ctain-clth_Veh                ** 
- * **+Sem/Ctain_Furn                    ** 
- * **+Sem/Ctain_Tool                    ** 
- * **+Sem/Curr                          ** 
- * **+Sem/Dance                         ** 
- * **+Sem/Date                          ** 
- * **+Sem/Dir                           ** 
- * **+Sem/Domain                        ** 
- * **+Sem/Domain_Hum                    ** 
- * **+Sem/Domain_Prod-audio             ** 
- * **+Sem/Drink                         ** 
- * **+Sem/Drink_Plant                   ** 
- * **+Sem/Dummytag                      ** 
- * **+Sem/Edu                           ** 
- * **+Sem/Edu_Event                     ** 
- * **+Sem/Edu_Geom                      ** 
- * **+Sem/Edu_Hum                       ** 
- * **+Sem/Edu_Mat                       ** 
- * **+Sem/Edu_Org                       ** 
- * **+Sem/Event                         ** 
- * **+Sem/Event_Food                    ** 
- * **+Sem/Event_Plc                     ** 
- * **+Sem/Event_Time                    ** 
- * **+Sem/Feat                          ** 
- * **+Sem/Feat-mea r                    ** 
- * **+Sem/Feat-mea r_Plc                ** 
- * **+Sem/Feat-phy                      ** 
- * **+Sem/Feat-phy _Tool-write          ** 
- * **+Sem/Feat-phy _Veh                 ** 
- * **+Sem/Feat-phy _Wthr                ** 
- * **+Sem/Feat-p ych                    ** 
- * **+Sem/Feat-p ych_Plc                ** 
- * **+Sem/Feat_Plant                    ** 
- * **+Sem/Fem                           ** 
- * **+Sem/Food                          ** 
- * **+Sem/Food-med                      ** 
- * **+Sem/Food_Plant                    ** 
- * **+Sem/Fruit                         ** 
- * **+Sem/Fruit_Hum                     ** 
- * **+Sem/Furn                          ** 
- * **+Sem/Game_Obj-play                 ** 
- * **+Sem/Geom                          ** 
- * **+Sem/Geom_Obj                      ** 
- * **+Sem/Group_Hum                     ** 
- * **+Sem/Group_Hum_Org                 ** 
- * **+Sem/Group_Hum_Plc                 ** 
- * **+Sem/Group_Txt                     ** 
- * **+Sem/Hum                           ** 
- * **+Sem/Hum_Lang                      ** 
- * **+Sem/Hum_Lang_Plc                  ** 
- * **+Sem/Hum_Mat_Tool                  ** 
- * **+Sem/Hum_Obj                       ** 
- * **+Sem/Hum_Org                       ** 
- * **+Sem/Hum_Plc                       ** 
- * **+Sem/Hum_Veh                       ** 
- * **+Sem/ID                            ** 
- * **+Sem/Ideol                         ** 
- * **+Sem/Lang                          **  Languages
- * **+Sem/Lang_Tool                     ** 
- * **+Sem/Mal                           ** 
- * **+Sem/Mat                           ** 
- * **+Sem/Mat_Plant                     ** 
- * **+Sem/Mat_Txt                       ** 
- * **+Sem/Mea r                         ** 
- * **+Sem/Mea r_Sign                    ** 
- * **+Sem/Mea r_Time                    ** 
- * **+Sem/Money                         ** 
- * **+Sem/Money_Obj                     ** 
- * **+Sem/Money_Txt                     ** 
- * **+Sem/Obj                           ** 
- * **+Sem/Obj-clo                       ** 
- * **+Sem/Obj-el                        **           
- * **+Sem/Obj-ling                      ** 
- * **+Sem/Obj-play                      ** 
- * **+Sem/Obj-rope                      ** 
- * **+Sem/Obj- urfc                     ** 
- * **+Sem/Obj_Semcon                    ** 
- * **+Sem/Obj_State                     ** 
- * **+Sem/Obj_Veh                       ** 
- * **+Sem/Org                           ** 
- * **+Sem/Org_Prod-audio                ** 
- * **+Sem/Org_Prod-cogn                 ** 
- * **+Sem/Org_Prod-vi                   ** 
- * **+Sem/Org_Rule                      ** 
- * **+Sem/Org_Txt                       ** 
- * **+Sem/Part                          ** 
- * **+Sem/Perc-cogn                     ** 
- * **+Sem/Perc-emo                      ** 
- * **+Sem/Perc-phy                      ** 
- * **+Sem/Plant                         **   Plant names
- * **+Sem/Plant-fungu                   **    Fungi names
- * **+Sem/Plant_Plantpart               ** 
- * **+Sem/Plantpart                     ** 
- * **+Sem/Plc                           ** denotes places
- * **+Sem/Plc-ab tr                     ** 
- * **+Sem/Plc-ab tr_Rel_State           ** 
- * **+Sem/Plc-ab tr_Route               ** 
- * **+Sem/Plc-elevate                   ** 
- * **+Sem/Plc-line                      ** 
- * **+Sem/Plc-water                     ** 
- * **+Sem/Plc_Route                     ** 
- * **+Sem/Plc_Sub tnc                   ** 
- * **+Sem/Plc_Sub tnc_Wthr              ** 
- * **+Sem/Plc_Time                      ** 
- * **+Sem/Plc_Tool-catch                ** 
- * **+Sem/Plc_Txt                       ** 
- * **+Sem/Plc_Wthr                      ** 
- * **+Sem/Po                            ** 
- * **+Sem/Proce                        ** 
- * **+Sem/Prod                          ** 
- * **+Sem/Prod-audio                    ** 
- * **+Sem/Prod-audio_Txt                ** 
- * **+Sem/Prod-cogn                     ** 
- * **+Sem/Prod-cogn_Txt                 ** 
- * **+Sem/Prod-ling                     ** 
- * **+Sem/Prod-vi                       ** 
- * **+Sem/Rel                           ** 
- * **+Sem/Route                         ** 
- * **+Sem/Rule                          ** 
- * **+Sem/Semcon                        ** 
- * **+Sem/Semcon_Txt                    ** 
- * **+Sem/Sign                          ** 
- * **+Sem/State                         ** 
- * **+Sem/State- ick                    ** 
- * **+Sem/Sub tnc                       ** 
- * **+Sem/Sub tnc_Wthr                  ** 
- * **+Sem/Sur                           ** 
- * **+Sem/Time                          ** 
- * **+Sem/Time-clock                    ** 
- * **+Sem/Time_Wthr                     ** 
- * **+Sem/Tool                          ** 
- * **+Sem/Tool-catch                    ** 
- * **+Sem/Tool-clean                    ** 
- * **+Sem/Tool-it                       ** 
- * **+Sem/Tool-mea r                    ** 
- * **+Sem/Tool-mu ic                    ** 
- * **+Sem/Tool-write                    ** 
- * **+Sem/Txt                           ** 
- * **+Sem/Veh                           ** 
- * **+Sem/Wpn                           ** 
- * **+Sem/Wthr                          ** weather
- * **+Sem/Year                          ** 
+ * **+Sem/Act** 
+ * **+Sem/Act_Fruit** 
+ * **+Sem/Act_Plc** 
+ * **+Sem/Act_Route** 
+ * **+Sem/Act_Tool-it** 
+ * **+Sem/Amount** 
+ * **+Sem/Amount_Semcon** 
+ * **+Sem/Ani** 
+ * **+Sem/Ani-bird** Bird names
+ * **+Sem/Ani-fish** Fish names
+ * **+Sem/Ani-insect** Insect names
+ * **+Sem/Ani_Body-abstr_Hum** 
+ * **+Sem/Ani_Buildpart** 
+ * **+Sem/Ani_Group** 
+ * **+Sem/Ani_Group_Hum** 
+ * **+Sem/Ani_Group_Prod-vis** 
+ * **+Sem/Ani_Hum** 
+ * **+Sem/Ani_Veh** 
+ * **+Sem/Aniprod** 
+ * **+Sem/Aniprod_Hum** 
+ * **+Sem/Aniprod_Obj-clo** 
+ * **+Sem/Aniprod_Perc-phys** 
+ * **+Sem/Aniprod_Plc_Route** 
+ * **+Sem/Atr** 
+ * **+Sem/Body** denotes bodyparts
+ * **+Sem/Body-abstr** 
+ * **+Sem/Body-abstr_Feat-psych** 
+ * **+Sem/Body-abstr_Prod-audio_Semcon** 
+ * **+Sem/Body_Food** 
+ * **+Sem/Body_Hum** 
+ * **+Sem/Body_Mat** 
+ * **+Sem/Body_Measr** 
+ * **+Sem/Body_Plc** 
+ * **+Sem/Body_Plc-elevate** 
+ * **+Sem/Build** 
+ * **+Sem/Build-room** 
+ * **+Sem/Build_Edu_Org** 
+ * **+Sem/Build_Org** 
+ * **+Sem/Buildpart** 
+ * **+Sem/Buildpart_Cat_Ctain_Mat** 
+ * **+Sem/Buildpart_Ctain_Obj** 
+ * **+Sem/Cat** 
+ * **+Sem/Clth** clothes
+ * **+Sem/Clth-jewl** 
+ * **+Sem/Clth-jewl_Curr** 
+ * **+Sem/Clthpart** 
+ * **+Sem/Ctain** 
+ * **+Sem/Ctain-abstr** 
+ * **+Sem/Ctain-clth** 
+ * **+Sem/Ctain-clth_Veh** 
+ * **+Sem/Ctain_Furn** 
+ * **+Sem/Ctain_Tool** 
+ * **+Sem/Curr** 
+ * **+Sem/Dance** 
+ * **+Sem/Date** 
+ * **+Sem/Dir** 
+ * **+Sem/Domain** 
+ * **+Sem/Domain_Hum** 
+ * **+Sem/Domain_Prod-audio** 
+ * **+Sem/Drink** 
+ * **+Sem/Drink_Plant** 
+ * **+Sem/Dummytag** 
+ * **+Sem/Edu** 
+ * **+Sem/Edu_Event** 
+ * **+Sem/Edu_Geom** 
+ * **+Sem/Edu_Hum** 
+ * **+Sem/Edu_Mat** 
+ * **+Sem/Edu_Org** 
+ * **+Sem/Event** 
+ * **+Sem/Event_Food** 
+ * **+Sem/Event_Plc** 
+ * **+Sem/Event_Time** 
+ * **+Sem/Feat** 
+ * **+Sem/Feat-measr** 
+ * **+Sem/Feat-measr_Plc** 
+ * **+Sem/Feat-phys** 
+ * **+Sem/Feat-phys_Tool-write** 
+ * **+Sem/Feat-phys_Veh** 
+ * **+Sem/Feat-phys_Wthr** 
+ * **+Sem/Feat-psych** 
+ * **+Sem/Feat-psych_Plc** 
+ * **+Sem/Feat_Plant** 
+ * **+Sem/Fem** 
+ * **+Sem/Food** 
+ * **+Sem/Food-med** 
+ * **+Sem/Food_Plant** 
+ * **+Sem/Fruit** 
+ * **+Sem/Fruit_Hum** 
+ * **+Sem/Furn** 
+ * **+Sem/Game_Obj-play** 
+ * **+Sem/Geom** 
+ * **+Sem/Geom_Obj** 
+ * **+Sem/Group_Hum** 
+ * **+Sem/Group_Hum_Org** 
+ * **+Sem/Group_Hum_Plc** 
+ * **+Sem/Group_Txt** 
+ * **+Sem/Hum** 
+ * **+Sem/Hum_Lang** 
+ * **+Sem/Hum_Lang_Plc** 
+ * **+Sem/Hum_Mat_Tool** 
+ * **+Sem/Hum_Obj** 
+ * **+Sem/Hum_Org** 
+ * **+Sem/Hum_Plc** 
+ * **+Sem/Hum_Veh** 
+ * **+Sem/ID** 
+ * **+Sem/Ideol** 
+ * **+Sem/Lang**  Languages
+ * **+Sem/Lang_Tool** 
+ * **+Sem/Mal** 
+ * **+Sem/Mat** 
+ * **+Sem/Mat_Plant** 
+ * **+Sem/Mat_Txt** 
+ * **+Sem/Measr** 
+ * **+Sem/Measr_Sign** 
+ * **+Sem/Measr_Time** 
+ * **+Sem/Money** 
+ * **+Sem/Money_Obj** 
+ * **+Sem/Money_Txt** 
+ * **+Sem/Obj** 
+ * **+Sem/Obj-clo** 
+ * **+Sem/Obj-el**           
+ * **+Sem/Obj-ling** 
+ * **+Sem/Obj-play** 
+ * **+Sem/Obj-rope** 
+ * **+Sem/Obj-surfc** 
+ * **+Sem/Obj_Semcon** 
+ * **+Sem/Obj_State** 
+ * **+Sem/Obj_Veh** 
+ * **+Sem/Org** 
+ * **+Sem/Org_Prod-audio** 
+ * **+Sem/Org_Prod-cogn** 
+ * **+Sem/Org_Prod-vis** 
+ * **+Sem/Org_Rule** 
+ * **+Sem/Org_Txt** 
+ * **+Sem/Part** 
+ * **+Sem/Perc-cogn** 
+ * **+Sem/Perc-emo** 
+ * **+Sem/Perc-phys** 
+ * **+Sem/Plant**   Plant names
+ * **+Sem/Plant-fungus**    Fungi names
+ * **+Sem/Plant_Plantpart** 
+ * **+Sem/Plantpart** 
+ * **+Sem/Plc** denotes places
+ * **+Sem/Plc-abstr** 
+ * **+Sem/Plc-abstr_Rel_State** 
+ * **+Sem/Plc-abstr_Route** 
+ * **+Sem/Plc-elevate** 
+ * **+Sem/Plc-line** 
+ * **+Sem/Plc-water** 
+ * **+Sem/Plc_Route** 
+ * **+Sem/Plc_Substnc** 
+ * **+Sem/Plc_Substnc_Wthr** 
+ * **+Sem/Plc_Time** 
+ * **+Sem/Plc_Tool-catch** 
+ * **+Sem/Plc_Txt** 
+ * **+Sem/Plc_Wthr** 
+ * **+Sem/Pos** 
+ * **+Sem/Process** 
+ * **+Sem/Prod** 
+ * **+Sem/Prod-audio** 
+ * **+Sem/Prod-audio_Txt** 
+ * **+Sem/Prod-cogn** 
+ * **+Sem/Prod-cogn_Txt** 
+ * **+Sem/Prod-ling** 
+ * **+Sem/Prod-vis** 
+ * **+Sem/Rel** 
+ * **+Sem/Route** 
+ * **+Sem/Rule** 
+ * **+Sem/Semcon** 
+ * **+Sem/Semcon_Txt** 
+ * **+Sem/Sign** 
+ * **+Sem/State** 
+ * **+Sem/State-sick** 
+ * **+Sem/Substnc** 
+ * **+Sem/Substnc_Wthr** 
+ * **+Sem/Sur** 
+ * **+Sem/Time** 
+ * **+Sem/Time-clock** 
+ * **+Sem/Time_Wthr** 
+ * **+Sem/Tool** 
+ * **+Sem/Tool-catch** 
+ * **+Sem/Tool-clean** 
+ * **+Sem/Tool-it** 
+ * **+Sem/Tool-measr** 
+ * **+Sem/Tool-music** 
+ * **+Sem/Tool-write** 
+ * **+Sem/Txt** 
+ * **+Sem/Veh** 
+ * **+Sem/Wpn** 
+ * **+Sem/Wthr** weather
+ * **+Sem/Year** 
 
 
 ## Punctuation
 
- * ** +CLB +PUNCT +HYPH    ** 
- * ** +PAR +LEFT +RIGHT    ** 
- * ** +URL                 ** 
- * ** +CLBfinal            **  Sentence final abbreviated expression ending in full stop, the full stop is ambiguous
+ * **+CLB +PUNCT +HYPH** 
+ * **+PAR +LEFT +RIGHT** 
+ * **+URL** 
+ * **+CLBfinal**  Sentence final abbreviated expression ending in full stop, the full stop is ambiguous
 
 
 ## Morphophonemes
 
- * ** k4 l4 t4 p4 c4 t4 č4        ** = these are consonants that change in cg
- * ** b6 d6 g6                    ** = these are consonants that change in clitics: jiemge, epke
- * ** i2 i3 u2 â2                 ** = stemvowel changing to e, e.g. kyeli:kyeˊle 
- * ** i3                          ** =  stemvowel changing to e, e.g. kyeli:kyeˊle (why i3)
- * ** i4                          ** = this is the postvocalic i consonant, realised as i
- * ** i5                          ** = comitative suffix-begin in loanwords
- * ** i6  j6                      ** = these are fake vowel and consonant, to get rules to function for exeptions
- * ** a5 ä5 á5 e5 u5 o5 y5        ** = these vowels do not change, e.g. pyerá
- * ** h5 j5 m5 ŋ5 t5 c5 d5        ** = these consonants do not change in WG
- * ** l5 t5 r5 č5 k5 z5           ** = these consonants do not change in WG
- * ** ∑                           ** used for dynamic compounds, Capital Greek Sigma, Alt-Shift-S
+ * **k4 l4 t4 p4 c4 t4 č4** = these are consonants that change in cg
+ * **b6 d6 g6** = these are consonants that change in clitics: jiemge, epke
+ * **i2 i3 u2 â2** = stemvowel changing to e, e.g. kyeli:kyeˊle 
+ * **i3** =  stemvowel changing to e, e.g. kyeli:kyeˊle (why i3)
+ * **i4** = this is the postvocalic i consonant, realised as i
+ * **i5** = comitative suffix-begin in loanwords
+ * **i6 j6** = these are fake vowel and consonant, to get rules to function for exeptions
+ * **a5 ä5 á5 e5 u5 o5 y5** = these vowels do not change, e.g. pyerá
+ * **h5 j5 m5 ŋ5 t5 c5 d5** = these consonants do not change in WG
+ * **l5 t5 r5 č5 k5 z5** = these consonants do not change in WG
+ * **∑** used for dynamic compounds, Capital Greek Sigma, Alt-Shift-S
 
 ### Archiphonemes
 
- * **^RC   ** = Root consonant dummy
- * **^RV   ** = Root vowel dummy
- * **^SC   ** = Suffix consonant dummy
- * **^SV   ** = Suffix vowel dummy
- * **^VO   ** = vowel copy
+ * **^RC** = Root consonant dummy
+ * **^RV** = Root vowel dummy
+ * **^SC** = Suffix consonant dummy
+ * **^SV** = Suffix vowel dummy
+ * **^VO** = vowel copy
 
 ### Triggers
 
- * **^CLEN   **  Consonant lengthening in qual WG
- * **^CSH    **  Consonant shortening (not WG)
- * **^FCD    **  Final consonant deletion
- * **^FVD    **  Final vowel deletion
- * **^EA     ** is á and root vowel change in Ill Sg of i-stems
- * **^EX     ** = Stem vowel: i to â where it should have been á, this is Err/Orth only      
- * **^RLEN   **  Root vowel lengthening (impl. WG)
- * **^RVSH   **  Root vow shortening
- * **^SLEN   **  Suffix vowel lengthening 
- * **^SVLOW  **  Suffix vowel lowering â > á and u > o
- * **^SVSH   **  Second syllable vowel shortening
- * **^VLOW   ** is Vowel lowering in 3rd sg of contract verbs tuhhid:tohhe
- * **^WG     **  Weak grade trigger
- * **^ÁE     ** á->e
- * **^ÁI     ** á->i
- * **^VHIGH  ** = hightening of vowels for verbs o to uu, a to oo
- * **^VBACK  ** = back vowels for verbs, ä to a (when needed, normally 2syll a|â is enough
- * **^IUML   ** =  â to e in front of high suffixes 
- * **^BLOCK  ** = This symbol just to block otherwise triggering contexts
+ * **^CLEN**  Consonant lengthening in qual WG
+ * **^CSH**  Consonant shortening (not WG)
+ * **^FCD**  Final consonant deletion
+ * **^FVD**  Final vowel deletion
+ * **^EA** is á and root vowel change in Ill Sg of i-stems
+ * **^EX** = Stem vowel: i to â where it should have been á, this is Err/Orth only      
+ * **^RLEN**  Root vowel lengthening (impl. WG)
+ * **^RVSH**  Root vow shortening
+ * **^SLEN**  Suffix vowel lengthening 
+ * **^SVLOW**  Suffix vowel lowering â > á and u > o
+ * **^SVSH**  Second syllable vowel shortening
+ * **^VLOW** is Vowel lowering in 3rd sg of contract verbs tuhhid:tohhe
+ * **^WG**  Weak grade trigger
+ * **^ÁE** á->e
+ * **^ÁI** á->i
+ * **^VHIGH** = hightening of vowels for verbs o to uu, a to oo
+ * **^VBACK** = back vowels for verbs, ä to a (when needed, normally 2syll a|â is enough
+ * **^IUML** =  â to e in front of high suffixes 
+ * **^BLOCK** = This symbol just to block otherwise triggering contexts
 
 ## Symbols that need to be escaped on the lower side (towards twolc):
 
@@ -447,22 +447,22 @@ Other/unclassified derivations, can appear in all positions:
 * **«** derivation
 * **%>**  suffix
 * **%<**  prefix
- * ** +U e/NG      ** not-generate, for ped generation isme-ped.fst
- * ** +U e/MT      **  generate only for MT 
- * ** +U e/Circ    ** 
- * **+U e/-PMatch          ** = for preprocessing
- * **+U e/PMatch           ** = for preprocessing
- * **@P.Pmatch.Backtrack@  ** = for preprocessing
+ * **+Use/NG** not-generate, for ped generation isme-ped.fst
+ * **+Use/MT**  generate only for MT 
+ * **+Use/Circ** 
+ * **+Use/-PMatch** = for preprocessing
+ * **+Use/PMatch** = for preprocessing
+ * **@P.Pmatch.Backtrack@** = for preprocessing
 
 
 ## Variants within the same paradigm
- * **+v1       ** 
-  **+v2       ** 
-  **+v3       ** 
-  **+v4       **  for different paradigm variants of same lexeme
- * **+Hom1     ** 
-  **+Hom2     ** for different homonymous lexemes
- * **+Allegro  ** 
+ * **+v1** 
+  **+v2** 
+  **+v3** 
+  **+v4**  for different paradigm variants of same lexeme
+ * **+Hom1** 
+  **+Hom2** for different homonymous lexemes
+ * **+Allegro** 
 
 
 
@@ -472,58 +472,58 @@ Other/unclassified derivations, can appear in all positions:
 
 The prefix (before "/") is **Cmp**.
 
- * **+Cmp/Hyph   ** compounds
- * **+Cmp/SgNom  ** compounds
- * **+Cmp/PlNom  ** compounds
- * **+Cmp/Attr   ** compounds
- * **+Cmp/SgGen  ** compounds
- * **+Cmp/PlGen  ** compounds
- * **+Cmp/SplitR ** compounds
- * **+Cmp/Sh     ** compounds
- * **+Cmp        ** This tag to mark there is a compound.
+ * **+Cmp/Hyph** compounds
+ * **+Cmp/SgNom** compounds
+ * **+Cmp/PlNom** compounds
+ * **+Cmp/Attr** compounds
+ * **+Cmp/SgGen** compounds
+ * **+Cmp/PlGen** compounds
+ * **+Cmp/SplitR** compounds
+ * **+Cmp/Sh** compounds
+ * **+Cmp** This tag to mark there is a compound.
 
 ### These tags govern the parts of the compound
 
 The prefix (before "/") is **CmpNP**:
 (meaning: this is the normative position of thus tag)
 
- * **+CmpNP/All       ** - ... in all positions, **default**, this tag does not have to be written
- * **+CmpNP/Fir t     ** - ... only be first part in a compound or alone
- * **+CmpNP/Pref      ** - ... only **first** part in a compound, NEVER alone
- * **+CmpNP/La t      ** - ... only be last part in a compound or alone
- * **+CmpNP/Suff      ** - ... only **last** part in a compound, NEVER alone
- * **+CmpNP/None      ** - ... does not take part in compounds
- * **+CmpNP/Only      ** - ... only be part of a compound, i.e. can never be used alone, but can appear in any position
+ * **+CmpNP/All** - ... in all positions, **default**, this tag does not have to be written
+ * **+CmpNP/First** - ... only be first part in a compound or alone
+ * **+CmpNP/Pref** - ... only **first** part in a compound, NEVER alone
+ * **+CmpNP/Last** - ... only be last part in a compound or alone
+ * **+CmpNP/Suff** - ... only **last** part in a compound, NEVER alone
+ * **+CmpNP/None** - ... does not take part in compounds
+ * **+CmpNP/Only** - ... only be part of a compound, i.e. can never be used alone, but can appear in any position
 
 The prefix (before "/") is **CmpN**:
 (meaning: this is the normative position of thus tag)
 The tagged part of the compound should make a compound using:
 
- * **+CmpN/SgN      ** Singular Nominative
- * **+CmpN/SgG      ** Singular Genitive
- * **+CmpN/PlG      ** Plural Genitive
+ * **+CmpN/SgN** Singular Nominative
+ * **+CmpN/SgG** Singular Genitive
+ * **+CmpN/PlG** Plural Genitive
 
 Unmarked = Default, ie `+CmpN/SgN` for SMN.
 
 The second part of the compound may require that the previous (left part) is:
 
- * **+CmpN/SgNomLeft  ** Singular Nominative
- * **+CmpN/SgGenLeft  ** Singular Genitive
- * **+CmpN/PlGenLeft  ** Plural Genitive
+ * **+CmpN/SgNomLeft** Singular Nominative
+ * **+CmpN/SgGenLeft** Singular Genitive
+ * **+CmpN/PlGenLeft** Plural Genitive
 
 
 
 ## Language tagged names
 
- * **+OLang/ENG            ** 
- * **+OLang/FIN            ** 
- * **+OLang/NNO            ** 
- * **+OLang/NOB            ** 
- * **+OLang/SME            ** 
- * **+OLang/SMA            ** 
- * **+OLang/SWE            ** 
- * **+OLang/UND            ** 
- * **+OLang/RUS            ** 
+ * **+OLang/ENG** 
+ * **+OLang/FIN** 
+ * **+OLang/NNO** 
+ * **+OLang/NOB** 
+ * **+OLang/SME** 
+ * **+OLang/SMA** 
+ * **+OLang/SWE** 
+ * **+OLang/UND** 
+ * **+OLang/RUS** 
 
 
 ## Flag diacritics
@@ -533,14 +533,14 @@ with verbs if the verb is further derived into a noun again:
 
 | Flag | Explanation
 | --- | --- 
- |  ** @P.NeedNoun.ON@     ** | (Dis)allow compounds with verbs unless nominalised 
- |  ** @D.NeedNoun.ON@     ** | (Dis)allow compounds with verbs unless nominalised 
- |  ** @C.NeedNoun@        ** | (Dis)allow compounds with verbs unless nominalised 
- |  ** @R.NeedNoun.ON@     ** | (Dis)allow compounds with verbs unless nominalised 
- |  ** @D.ErrOrth.ON@      **  | Disallow ErrOrth
- |  ** @C.ErrOrth@         **  | Clear ErrOrth flag
- |  ** @P.ErrOrth.ON@      **  | Set positive value for ErrOrth flag
- |  ** @R.ErrOrth.ON@      **  | Reset ErrOrth Flag
+ |  **@P.NeedNoun.ON@** | (Dis)allow compounds with verbs unless nominalised 
+ |  **@D.NeedNoun.ON@** | (Dis)allow compounds with verbs unless nominalised 
+ |  **@C.NeedNoun@** | (Dis)allow compounds with verbs unless nominalised 
+ |  **@R.NeedNoun.ON@** | (Dis)allow compounds with verbs unless nominalised 
+ |  **@D.ErrOrth.ON@**  | Disallow ErrOrth
+ |  **@C.ErrOrth@**  | Clear ErrOrth flag
+ |  **@P.ErrOrth.ON@**  | Set positive value for ErrOrth flag
+ |  **@R.ErrOrth.ON@**  | Reset ErrOrth Flag
 
 For languages that allow compounding, the following flag diacritics are needed
 to control position-based compounding restrictions for nominals. Their use is
@@ -549,21 +549,21 @@ do no harm.
 
 | Flag | Explanation
 | --- | --- 
- |  ** @P.CmpFr t.FALSE@ ** | Require that words tagged as such only appear first
- |  ** @D.CmpPref.TRUE@  ** | Block such words from entering ENDLEX
- |  ** @P.CmpPref.FALSE@ ** | Block these words from making further compounds
- |  ** @D.CmpLa t.TRUE@  ** | Block such words from entering R
- |  ** @D.CmpNone.TRUE@  ** | Combines with the next tag to prohibit compounding
- |  ** @U.CmpNone.FALSE@ ** | Combines with the prev tag to prohibit compounding
- |  ** @U.CmpNone.TRUE@  ** | Combines with the two previous ones to block compounding
- |  ** @P.CmpOnly.TRUE@  ** | Sets a flag to indicate that the word has passed R
- |  ** @D.CmpOnly.FALSE@ ** | Disallow words coming directly from root.
- |  ** @D.CmpHyph.TRUE@  ** | Flag to control hyphenated compounds like proper nouns
- |  ** @U.CmpHyph.FALSE@ ** | Flag to control hyphenated compounds like proper nouns
- |  ** @U.CmpHyph.TRUE@  ** | Flag to control hyphenated compounds like proper nouns
- |  ** @C.CmpHyph@       ** | Flag to control hyphenated compounds like proper nouns
- |  ** @P.CmpHyph.TRUE@  ** | Flag to control hyphenated compounds like proper nouns
- |  ** @N.CmpHyph.TRUE@  ** | Flag to control hyphenated compounds like proper nouns
+ |  **@P.CmpFrst.FALSE@** | Require that words tagged as such only appear first
+ |  **@D.CmpPref.TRUE@** | Block such words from entering ENDLEX
+ |  **@P.CmpPref.FALSE@** | Block these words from making further compounds
+ |  **@D.CmpLast.TRUE@** | Block such words from entering R
+ |  **@D.CmpNone.TRUE@** | Combines with the next tag to prohibit compounding
+ |  **@U.CmpNone.FALSE@** | Combines with the prev tag to prohibit compounding
+ |  **@U.CmpNone.TRUE@** | Combines with the two previous ones to block compounding
+ |  **@P.CmpOnly.TRUE@** | Sets a flag to indicate that the word has passed R
+ |  **@D.CmpOnly.FALSE@** | Disallow words coming directly from root.
+ |  **@D.CmpHyph.TRUE@** | Flag to control hyphenated compounds like proper nouns
+ |  **@U.CmpHyph.FALSE@** | Flag to control hyphenated compounds like proper nouns
+ |  **@U.CmpHyph.TRUE@** | Flag to control hyphenated compounds like proper nouns
+ |  **@C.CmpHyph@** | Flag to control hyphenated compounds like proper nouns
+ |  **@P.CmpHyph.TRUE@** | Flag to control hyphenated compounds like proper nouns
+ |  **@N.CmpHyph.TRUE@** | Flag to control hyphenated compounds like proper nouns
 
 
 Use the following flag diacritics to control downcasing of derived proper
@@ -573,78 +573,78 @@ given the proper use of these flags.
 
 | Flag | Explanation
 | --- | --- 
- |  ** @U.Cap.Obl@        ** | Allowing downcasing of derived names: deatnulasj.
- |  ** @U.Cap.Opt@        ** | Allowing downcasing of derived names: deatnulasj.
- | **@U.Need VowRed.OFF@ **  | is used to force hyphenation/non-reduction: samediggi-
- | **@U.Need VowRed.ON@  **  | is used to force reduction w/o hyphen: samedigge#xxx
- | **@C.Need VowRed@     **  | Clearing this feature, so that it doesn't interfere with further compounding
- | **@C.Px@              **  | Clear px
- | **@C.Nom3Px@          **  | 
- | **@P.Px.add@          **  | 
- | **@R.Px.add@          **  | 
- | **@P.Px.block@        **  | 
- | **@D.Px.block@        **  | 
- | **@P.Nom12Px.add@     **  | 
- | **@R.Nom12Px.add@     **  | 
- | **@P.Nom3Px.add@      **  | 
- | **@R.Nom3Px.add@      **  | 
- | **@P.Vgen.add@        **  | 
- | **@R.Vgen.add@        **  | 
- | **@R.SpellRlx.ON@     **  | Flag used to tag spell-relax-analysed strings (and only those).
- | **@D.SpellRlx.ON@     **  | Flag used to tag spell-relax-analysed strings (and only those).
- | **@C.SpellRlx@        **  | Flag used to tag spell-relax-analysed strings (and only those).
- | **@R.SpaceCmp.ON@     **  | Flag to tag compounds written with a space
- | **@D.SpaceCmp.ON@     **  | Flag to tag compounds written with a space
- | **@C.SpaceCmp@        **  | Flag to tag compounds written with a space
+ |  **@U.Cap.Obl@** | Allowing downcasing of derived names: deatnulasj.
+ |  **@U.Cap.Opt@** | Allowing downcasing of derived names: deatnulasj.
+ | **@U.NeedsVowRed.OFF@**  | is used to force hyphenation/non-reduction: samediggi-
+ | **@U.NeedsVowRed.ON@**  | is used to force reduction w/o hyphen: samedigge#xxx
+ | **@C.NeedsVowRed@**  | Clearing this feature, so that it doesn't interfere with further compounding
+ | **@C.Px@**  | Clear px
+ | **@C.Nom3Px@**  | 
+ | **@P.Px.add@**  | 
+ | **@R.Px.add@**  | 
+ | **@P.Px.block@**  | 
+ | **@D.Px.block@**  | 
+ | **@P.Nom12Px.add@**  | 
+ | **@R.Nom12Px.add@**  | 
+ | **@P.Nom3Px.add@**  | 
+ | **@R.Nom3Px.add@**  | 
+ | **@P.Vgen.add@**  | 
+ | **@R.Vgen.add@**  | 
+ | **@R.SpellRlx.ON@**  | Flag used to tag spell-relax-analysed strings (and only those).
+ | **@D.SpellRlx.ON@**  | Flag used to tag spell-relax-analysed strings (and only those).
+ | **@C.SpellRlx@**  | Flag used to tag spell-relax-analysed strings (and only those).
+ | **@R.SpaceCmp.ON@**  | Flag to tag compounds written with a space
+ | **@D.SpaceCmp.ON@**  | Flag to tag compounds written with a space
+ | **@C.SpaceCmp@**  | Flag to tag compounds written with a space
 
 
 Basic lexica, pointing to the other lexicon files
 
 # Lexicon Root where everyting starts
- * **@U.Cap.Obl@ ProperNoun ; **  propernouns, always uppercase
- * **@U.Cap.Opt@ ProperNoun ; **  propernouns, downcased for derivations: aanaarlâš
- * **Abbreviation ;           ** 
- * **Acronym ;                ** 
- * **AdjectiveRoot ;          ** 
- * **NounRoot ;               ** 
- * **VerbRoot ;               ** 
- * **Adverb ;                 ** 
- * **Particle ;               ** 
- * **Subjunction ;            ** 
- * **Conjunction ;            ** 
- * **Adpo ition ;             ** 
- * **Interjection ;           ** 
- * **Numeral ;                ** 
- * **Pronoun ;                ** 
- * **Punctuation ;            ** 
- * **Symbol  ;                ** 
+ * **@U.Cap.Obl@ ProperNoun ;**  propernouns, always uppercase
+ * **@U.Cap.Opt@ ProperNoun ;**  propernouns, downcased for derivations: aanaarlâš
+ * **Abbreviation ;** 
+ * **Acronym ;** 
+ * **AdjectiveRoot ;** 
+ * **NounRoot ;** 
+ * **VerbRoot ;** 
+ * **Adverb ;** 
+ * **Particle ;** 
+ * **Subjunction ;** 
+ * **Conjunction ;** 
+ * **Adposition ;** 
+ * **Interjection ;** 
+ * **Numeral ;** 
+ * **Pronoun ;** 
+ * **Punctuation ;** 
+ * **Symbols ;** 
 
 
 We split of the 3 lexica defined above already here:
 
- * **LEXICON Abbreviation  ** directing to both smi (common) and smn abbrs.
- 	* **Abbreviation- mn ;    ** 
- 	* **Abbreviation- mi ;    ** 
+ * **LEXICON Abbreviation** directing to both smi (common) and smn abbrs.
+ 	* **Abbreviation-smn ;** 
+ 	* **Abbreviation-smi ;** 
 
 
- * **LEXICON Acronym   ** splitting in common and smn
- 	* **Acronym- mi ; ** 
- 	* **Acronym- mn ; ** 
+ * **LEXICON Acronym** splitting in common and smn
+ 	* **Acronym-smi ;** 
+ 	* **Acronym-smn ;** 
 
 
 
- * **LEXICON ProperNoun   ** point
- 	* ** Prefix-Proper ;  ** 
- 	* ** ProperNoun- mn ;   ** 
- 	* **@N.CmpHyph.TRUE@ ProperNoun- mi-nocomp ;  **  Lexicon for short names - always require hyphen
- 	* ** ProperNoun- mi ;  ** 
+ * **LEXICON ProperNoun** point
+ 	* **Prefix-Proper ;** 
+ 	* **ProperNoun-smn ;** 
+ 	* **@N.CmpHyph.TRUE@ ProperNoun-smi-nocomp ;**  Lexicon for short names - always require hyphen
+ 	* **ProperNoun-smi ;** 
 
 
 
 # Lexicon ENDLEX 
 And this is the ENDLEX of everything:
 ```
- **   @D.CmpOnly.FALSE@@D.CmpPref.TRUE@@D.NeedNoun.ON@ # ; ** 
+ **@D.CmpOnly.FALSE@@D.CmpPref.TRUE@@D.NeedNoun.ON@ # ;** 
 ```
 The `@D.CmpOnly.FALSE@` flag diacritic is ued to disallow words tagged
 with +CmpNP/Only to end here.
@@ -665,13 +665,13 @@ triggers, tney must be ordered as follows (where {A,B} C means *A or B, thereaft
 
 ## Adjectives with attr only
 
- **LEXICON ATTR ** for stems with only attribute form, gives Attr, svt. sends to Cmp.
+ **LEXICON ATTR** for stems with only attribute form, gives Attr, svt. sends to Cmp.
 
 
 ## Even-syllable stems
 
 
- **LEXICON SIAHA ** for siähá. It gives only Attr and Sg/Pl Nom. Fix?
+ **LEXICON SIAHA** for siähá. It gives only Attr and Sg/Pl Nom. Fix?
 
 
 
@@ -679,7 +679,7 @@ triggers, tney must be ordered as follows (where {A,B} C means *A or B, thereaft
 
 
 
- **LEXICON SKELMA ** directing to X_ALGA, attr skelmâ
+ **LEXICON SKELMA** directing to X_ALGA, attr skelmâ
 
 
 
@@ -692,40 +692,40 @@ triggers, tney must be ordered as follows (where {A,B} C means *A or B, thereaft
 
 
 
- **LEXICON CEPPI ** directing to X_AIGI, attr. čepis
+ **LEXICON CEPPI** directing to X_AIGI, attr. čepis
 
- **LEXICON UCCE ** 
+ **LEXICON UCCE** 
 
- **LEXICON SUVRE ** 
-
-
- **LEXICON KUKKE ** directing to X_ALGE, attr. kuhes
+ **LEXICON SUVRE** 
 
 
-
-
- **LEXICON PASE ** directing to X_NJUNE via HUMO_REST, attr. pase                  
-
- **LEXICON HUMO ** directing to X_NJUNE via HUMO_REST, attr. humos                  
-
- **LEXICON HUMO_REST ** 
-
-
- **LEXICON UAMI ** directing to X_SAAMI, attr. uá'mi
-
- **LEXICON LAAMI ** directing to X_SAAMI, attr. lämis
-
- **LEXICON LAAMI_REST ** 
-
-
- **LEXICON PYERI ** directing to X_KYELI, attr. pyeri
+ **LEXICON KUKKE** directing to X_ALGE, attr. kuhes
 
 
 
- **LEXICON HYENI ** directing to X_KYELI, attr. hyenes
+
+ **LEXICON PASE** directing to X_NJUNE via HUMO_REST, attr. pase                  
+
+ **LEXICON HUMO** directing to X_NJUNE via HUMO_REST, attr. humos                  
+
+ **LEXICON HUMO_REST** 
 
 
- **LEXICON NUORA ** directing to X_KIELA, attr. nuora
+ **LEXICON UAMI** directing to X_SAAMI, attr. uá'mi
+
+ **LEXICON LAAMI** directing to X_SAAMI, attr. lämis
+
+ **LEXICON LAAMI_REST** 
+
+
+ **LEXICON PYERI** directing to X_KYELI, attr. pyeri
+
+
+
+ **LEXICON HYENI** directing to X_KYELI, attr. hyenes
+
+
+ **LEXICON NUORA** directing to X_KIELA, attr. nuora
 
 
 
@@ -733,71 +733,71 @@ triggers, tney must be ordered as follows (where {A,B} C means *A or B, thereaft
 
 ## Odd-syllable stems
 
- **LEXICON NJUORAS ** directing to X_RUONAS, attr. njuorâs
+ **LEXICON NJUORAS** directing to X_RUONAS, attr. njuorâs
 
 
- **LEXICON UAMIS ** directing to X_RUONAS, as an own group because of FCD, attr. uámi, čuámi, often used in compounds
+ **LEXICON UAMIS** directing to X_RUONAS, as an own group because of FCD, attr. uámi, čuámi, often used in compounds
 
 
 
- **LEXICON HAANIS ** directing to X_PAAVIR, attr. hänis
+ **LEXICON HAANIS** directing to X_PAAVIR, attr. hänis
 
 
- **LEXICON TIMES ** directing to X_PAAVIR, attr. timmâ
+ **LEXICON TIMES** directing to X_PAAVIR, attr. timmâ
 
 
- **LEXICON KIARGUS_nocomp **  like HAANIS, directing to X_PAAVIR, 
+ **LEXICON KIARGUS_nocomp**  like HAANIS, directing to X_PAAVIR, 
 
 
- **LEXICON HAAITIS ** directing to X_VEESKIR, attr. rähis, not in use
+ **LEXICON HAAITIS** directing to X_VEESKIR, attr. rähis, not in use
 
- **LEXICON HEEITUG ** directing to X_PAAVIR, attr. heitugis, heitugâs
+ **LEXICON HEEITUG** directing to X_PAAVIR, attr. heitugis, heitugâs
 
 
- **LEXICON VAANIS ** directing to  X_PAAVIR, attr. väni
+ **LEXICON VAANIS** directing to  X_PAAVIR, attr. väni
 
- **LEXICON NJAALGIS ** directing to NJAALGIS_COMMON, Attr. njaalgâ and njälgis
+ **LEXICON NJAALGIS** directing to NJAALGIS_COMMON, Attr. njaalgâ and njälgis
 
- **LEXICON RAAPIS ** directing to NJAALGIS_COMMON, Attr. räpis 
+ **LEXICON RAAPIS** directing to NJAALGIS_COMMON, Attr. räpis 
 
- **LEXICON NJAALGIS_COMMON ** directing to  X_KAARBIS
+ **LEXICON NJAALGIS_COMMON** directing to  X_KAARBIS
 
- **LEXICON KOSKES ** directing to  X_VEESKIR, attr. koške
+ **LEXICON KOSKES** directing to  X_VEESKIR, attr. koške
 
 
- **LEXICON NJOLGES ** directing to  X_VEESKIR, attr. njolges
+ **LEXICON NJOLGES** directing to  X_VEESKIR, attr. njolges
 
 
 
- **LEXICON FIIJNES **  no noun cont.lex with this pattern
+ **LEXICON FIIJNES**  no noun cont.lex with this pattern
 
 
 
- **LEXICON KOOIDAS ** directing to  X_VEESKIR, attr. koidâ
+ **LEXICON KOOIDAS** directing to  X_VEESKIR, attr. koidâ
 
 
- **LEXICON SUOTAS  ** directing to  X_VEESKIR, attr. suotâs
+ **LEXICON SUOTAS** directing to  X_VEESKIR, attr. suotâs
 
 
- **LEXICON LIAGUS  ** like SUOTAS except for CSH
+ **LEXICON LIAGUS** like SUOTAS except for CSH
 
 
 
- **LEXICON SENES ** not fitting in X_PELES because of CSH attr. seŋes
+ **LEXICON SENES** not fitting in X_PELES because of CSH attr. seŋes
 
 
 
 
- **LEXICON KEPPIS ** directing to X_LITTER, attr. keppâ
+ **LEXICON KEPPIS** directing to X_LITTER, attr. keppâ
 
- **LEXICON PASTEL ** directing to X_LITTER, attr. pastelis; adj is PASTEL
+ **LEXICON PASTEL** directing to X_LITTER, attr. pastelis; adj is PASTEL
 
- **LEXICON FISKAD ** directing to X_LITTER, attr. fiskis (fikâdis)
+ **LEXICON FISKAD** directing to X_LITTER, attr. fiskis (fikâdis)
 
 
- **LEXICON JUOLLAD ** directing to X_EEMEED, attr, juolis, juolâdis, juolâdâs
+ **LEXICON JUOLLAD** directing to X_EEMEED, attr, juolis, juolâdis, juolâdâs
 
- **LEXICON A_LITTER ** directing to X_LITTER
+ **LEXICON A_LITTER** directing to X_LITTER
 
 
 
@@ -805,108 +805,108 @@ triggers, tney must be ordered as follows (where {A,B} C means *A or B, thereaft
 
 
 
- **LEXICON ALMOS ** directing to X_SAJOS, attr. almos
+ **LEXICON ALMOS** directing to X_SAJOS, attr. almos
 
 
 
- **LEXICON SOOHAD_nocomp ** directing to X_EEMEED, attr. sohâdis
+ **LEXICON SOOHAD_nocomp** directing to X_EEMEED, attr. sohâdis
 
 
- **LEXICON SOOHAD ** directing to X_EEMEED, attr. sohâdis
+ **LEXICON SOOHAD** directing to X_EEMEED, attr. sohâdis
 
- **LEXICON SOOHAD_NULLATTR ** 
+ **LEXICON SOOHAD_NULLATTR** 
 
- **LEXICON SOOHAD_NOATTR ** 
+ **LEXICON SOOHAD_NOATTR** 
 
- **LEXICON MAAJEEB-COMP ** comparative lexicon
+ **LEXICON MAAJEEB-COMP** comparative lexicon
 
 
- **LEXICON PEEGGALM ** directing to X_EEMEED, attr. sohâdis
+ **LEXICON PEEGGALM** directing to X_EEMEED, attr. sohâdis
 
 
- **LEXICON JUARBUDEKES ** 
+ **LEXICON JUARBUDEKES** 
 
- **LEXICON JUARBUDEVES ** 
+ **LEXICON JUARBUDEVES** 
 
- **LEXICON JUARBUDEKES_INFL ** 
+ **LEXICON JUARBUDEKES_INFL** 
 
 
 
 
- LEXICON A_KOLME  ad hoc three syllable stem > LITTER
+ LEXICON A_KOLME ad hoc three syllable stem > LITTER
 
 
- **LEXICON KUBDUV ** . It doesn't fit with KAAMUV because of kubduvân, kubduvist
+ **LEXICON KUBDUV** . It doesn't fit with KAAMUV because of kubduvân, kubduvist
 
- **LEXICON KUBDUV_COMP ** 
+ **LEXICON KUBDUV_COMP** 
 
 
 ## Contracted stems
 
- **LEXICON ALKKEE  ** directing to X_TAHHEE, attr. älkkees
+ **LEXICON ALKKEE** directing to X_TAHHEE, attr. älkkees
 
 
- **LEXICON A_IJJE  ** 
+ **LEXICON A_IJJE** 
 
- **LEXICON TTETTEE ** 
+ **LEXICON TTETTEE** 
 
- **LEXICON PYECCEE  ** directing to X_TAHHEE, attr. pyeccee
-
-
- **LEXICON ALKKEE_COMMON ** common for ALKKEE and PYECCEE
+ **LEXICON PYECCEE** directing to X_TAHHEE, attr. pyeccee
 
 
- **LEXICON A_KAANDAS ** directing to X_KAANDAS, no attr, half congruence
-
- **LEXICON A_TUULAS ** directing to X_KAANDAS, no attr, half congruence
+ **LEXICON ALKKEE_COMMON** common for ALKKEE and PYECCEE
 
 
- **LEXICON STYERES ** directing to X_KAARBIS, attr. stuorrâ
+ **LEXICON A_KAANDAS** directing to X_KAANDAS, no attr, half congruence
 
- **LEXICON RIGES ** directing to X_KAARBIS, attr. riges, 3st comparision
-
-
+ **LEXICON A_TUULAS** directing to X_KAANDAS, no attr, half congruence
 
 
- **LEXICON MUOTTII ** almost like KARRII, direct to it?
+ **LEXICON STYERES** directing to X_KAARBIS, attr. stuorrâ
 
-
- **LEXICON A_VUALAAS ** 
-
-
- **LEXICON SIAMMAS ** 
-
-
- **LEXICON JIAVTAS ** 
+ **LEXICON RIGES** directing to X_KAARBIS, attr. riges, 3st comparision
 
 
 
- **LEXICON TAASSAS ** 
+
+ **LEXICON MUOTTII** almost like KARRII, direct to it?
+
+
+ **LEXICON A_VUALAAS** 
+
+
+ **LEXICON SIAMMAS** 
+
+
+ **LEXICON JIAVTAS** 
+
+
+
+ **LEXICON TAASSAS** 
 
 
 ## 4 syll stems
 
- **LEXICON A_KUNAGAS ** directing to  X_KUNAGAS; syeligâs, is like kunâgâs but FCD is not enough to create the comparation
+ **LEXICON A_KUNAGAS** directing to  X_KUNAGAS; syeligâs, is like kunâgâs but FCD is not enough to create the comparation
 
 
 
 
 
- **LEXICON UANIHASJ ** directing to LAS_SUF, attr, -âš
+ **LEXICON UANIHASJ** directing to LAS_SUF, attr, -âš
 
- **LEXICON KIERDAVAS ** 
-
-
- **LEXICON UANIHASJ_INFL ** 
+ **LEXICON KIERDAVAS** 
 
 
- **LEXICON UNOHAS ** directing to LAS_SUF, attr, -is
+ **LEXICON UANIHASJ_INFL** 
 
 
- **LEXICON ANOLASJ ** directing to LAS_COMMON, attr, -âš
+ **LEXICON UNOHAS** directing to LAS_SUF, attr, -is
+
+
+ **LEXICON ANOLASJ** directing to LAS_COMMON, attr, -âš
 Adj - pooliitlâš: # attr. pooliitlâš; puolikongruenssi mahdollinen (#-paikat), puolikongr. asemesta SgNom.
 
- **LEXICON LAGAN ** directing to A_LITTER, attr. -lágán
+ **LEXICON LAGAN** directing to A_LITTER, attr. -lágán
 
 
 
@@ -914,14 +914,14 @@ Adj - pooliitlâš: # attr. pooliitlâš; puolikongruenssi mahdollinen (#-paikat
 
 
 
- **LEXICON MUSTOTTEM ** pls note e > iä in sg ill; no comparation
+ **LEXICON MUSTOTTEM** pls note e > iä in sg ill; no comparation
 
- **LEXICON A_INDECL ** not all forms., attr = Sg. Nom.
+ **LEXICON A_INDECL** not all forms., attr = Sg. Nom.
 
 
- **LEXICON OLMOOSMETTUM **, not all forms. attr. = Sg. Nom.
+ **LEXICON OLMOOSMETTUM**, not all forms. attr. = Sg. Nom.
 
- **LEXICON METTUMform  ** 
+ **LEXICON METTUMforms** 
 
 
 
@@ -929,82 +929,82 @@ Adj - pooliitlâš: # attr. pooliitlâš; puolikongruenssi mahdollinen (#-paikat
 ## Der/Comp+Aarision
 
 
- * **LEXICON COMPe ** NUORA uses this lexicon
+ * **LEXICON COMPe** NUORA uses this lexicon
 
 
- * **LEXICON VVCOMPe ** ALKKEE uses this lexicon; giving älkkeb etc.
-
-
-
- * **LEXICON COMPclen ** NUORA uses this lexicon
-
-
- * **LEXICON CCOMPe ** STYERES and MUOTTII use this lexicon
-
-
- * **LEXICON eCOMP **
-
-
- * **LEXICON COMPo ** NJUORAS, NJAALGIS uses this lexicon
-
-
- * **LEXICON eCOMP-SUF  ** 
-
- * **LEXICON oCOMP-SUF  ** 
-
-
- * **LEXICON CCOMP-SUF  **  STYERES uses this lexicon
-
-
- * **LEXICON COMP-SUF  ** 
+ * **LEXICON VVCOMPe** ALKKEE uses this lexicon; giving älkkeb etc.
 
 
 
- * **LEXICON VVCOMP-SUF  ** 
+ * **LEXICON COMPclen** NUORA uses this lexicon
 
 
- * **LEXICON COMP-SUFclen  ** 
+ * **LEXICON CCOMPe** STYERES and MUOTTII use this lexicon
 
 
- * **LEXICON SUP_MUS  **
-
- * **LEXICON SUP_MUSJ  ** majemuš
+ * **LEXICON eCOMP**
 
 
- * **LEXICON MUS **  asdf
-
- * **LEXICON MUSj ** SUP_MUSJ uses this lexicon, eg. majemuš
+ * **LEXICON COMPo** NJUORAS, NJAALGIS uses this lexicon
 
 
- * **LEXICON CMUS **  STYERES uses this lexicon
+ * **LEXICON eCOMP-SUF** 
+
+ * **LEXICON oCOMP-SUF** 
 
 
- * **LEXICON MOS **
-
- * **LEXICON MUS-SUF **
-
- * **LEXICON MUSj-SUF **
-
- * **LEXICON CMUS-SUF **
-
- **LEXICON P-COMP-ERR-ORTH ** 
+ * **LEXICON CCOMP-SUF**  STYERES uses this lexicon
 
 
- * **LEXICON A_VUOTA  ** for derivation
-
- * **LEXICON FLAG_2KIELA  ** @C.NeedNoun@
-
- * **LEXICON A_ADV  ** for derivation
+ * **LEXICON COMP-SUF** 
 
 
 
+ * **LEXICON VVCOMP-SUF** 
 
 
- * **LEXICON A_LAGAN  ** for derivation
+ * **LEXICON COMP-SUFclen** 
 
- **LEXICON A_LASJ   ** 
 
- **LEXICON ATTR_R  ** sends to R, NAMAG, SAS, CMP_ADJ.
+ * **LEXICON SUP_MUS**
+
+ * **LEXICON SUP_MUSJ** majemuš
+
+
+ * **LEXICON MUS**  asdf
+
+ * **LEXICON MUSj** SUP_MUSJ uses this lexicon, eg. majemuš
+
+
+ * **LEXICON CMUS**  STYERES uses this lexicon
+
+
+ * **LEXICON MOS**
+
+ * **LEXICON MUS-SUF**
+
+ * **LEXICON MUSj-SUF**
+
+ * **LEXICON CMUS-SUF**
+
+ **LEXICON P-COMP-ERR-ORTH** 
+
+
+ * **LEXICON A_VUOTA** for derivation
+
+ * **LEXICON FLAG_2KIELA** @C.NeedNoun@
+
+ * **LEXICON A_ADV** for derivation
+
+
+
+
+
+ * **LEXICON A_LAGAN** for derivation
+
+ **LEXICON A_LASJ** 
+
+ **LEXICON ATTR_R** sends to R, NAMAG, SAS, CMP_ADJ.
 
 
 # Inari Saami adjectives
@@ -1132,7 +1132,7 @@ From corpus
 Note: Triggers **must** be put in this order ("|" meaning "or") in 
 order for the morphophonology to work: 
 
-{SV,ÁE,ÁI}  {EA,EX,SC}  {FCD|,VD} {WG,CSH} CLEN  {VHIGH,VBACK}  {RVSH,RLEN} {SLEN,SVSH}  SVLOW 
+{SV,ÁE,ÁI}  {EA,EX,SC}  {FCD,VD} {WG,CSH} CLEN  {VHIGH,VBACK}  {RVSH,RLEN} {SLEN,SVSH}  SVLOW 
 
 
 ## Table of content for this file 
@@ -1156,104 +1156,104 @@ stems/nouns.lexc file.
 
 
 
-## 1. Unclassified lexica 
+## Unclassified lexica 
 
 These two lexica are temporary lexica for words waiting to be classified. 
 
 **LEXICON KOLME** contains some ad hoc three syllable stem, for now directed to: 
- * **3LITTER ; ** 
+ * **3LITTER ;** 
 
- **LEXICON noun tem  ** contains words that should be classified, for now directed to: 
- * **3LITTER ;  ** 
+ **LEXICON nounstems** contains words that should be classified, for now directed to: 
+ * **3LITTER ;** 
 
 
 
-## 1. Even-syllable stem lexica 
+## Even-syllable stem lexica 
 
 ### The 2ALGA lexicon family 
 This is the basic even-syllable lexicon. 
 (Note: 2VADDU differs from 2ALGA in having CLEN for Sg+Com and Pl+Ill , rlen svlow, ess:-) 
 
- * **LEXICON 2AIRU  ** (subtype of the 2ALGA basic lexicon) 
+ * **LEXICON 2AIRU** (subtype of the 2ALGA basic lexicon) 
 
- * **LEXICON 2ALGA  ** (basic lexicon) 
+ * **LEXICON 2ALGA** (basic lexicon) 
 
- * **LEXICON X_ALGA  ** (common to all POS) 
+ * **LEXICON X_ALGA** (common to all POS) 
 
- * **LEXICON 2ALGA_SG ** (Px paradigms) 
-
-
- * **LEXICON X_ALGA_SG ** case paradigms sg a^RVlgâ, ku^RVssâ 
-
- * **LEXICON X_ALGA_PL ** case para pl (plurals for 2KUMPPI) 
-
- * **LEXICON X_ALGA_PL_COMMON ** Pl Nom and directing to 
- * **X_WG_RLEN_PL_Loc ;  ** 
+ * **LEXICON 2ALGA_SG** (Px paradigms) 
 
 
+ * **LEXICON X_ALGA_SG** case paradigms sg a^RVlgâ, ku^RVssâ 
 
- * **LEXICON 2AIRU_SG_DIM  ** a^RVlgâ 
+ * **LEXICON X_ALGA_PL** case para pl (plurals for 2KUMPPI) 
+
+ * **LEXICON X_ALGA_PL_COMMON** Pl Nom and directing to 
+ * **X_WG_RLEN_PL_Loc ;** 
 
 
- * **LEXICON 2AIRU_PL_DIM  ** 
+
+ * **LEXICON 2AIRU_SG_DIM** a^RVlgâ 
 
 
- * **LEXICON 2ALGA_DIM ** 
+ * **LEXICON 2AIRU_PL_DIM** 
 
- * **LEXICON 2ALGA_SG_DIM  ** a^RVlgâ 
 
- * **LEXICON 2ALGA_PL_DIM  ** 
+ * **LEXICON 2ALGA_DIM** 
+
+ * **LEXICON 2ALGA_SG_DIM** a^RVlgâ 
+
+ * **LEXICON 2ALGA_PL_DIM** 
 
 
 ### 2PUUVSAH lexicon family, stem is pu^RVk4s^RCâ 
 This for plural only nouns. Note: Sg forms in compounds 
- * **LEXICON 2PUUVSAH_PL   ** (basic lexicon) 
+ * **LEXICON 2PUUVSAH_PL** (basic lexicon) 
 has WG compound form, then pointing to 
- * **2PUUVSAH_PL2 ; ** 
+ * **2PUUVSAH_PL2 ;** 
 
- * **LEXICON 2PUUVSAH_PL2  ** (pointed to by 2KUMPPI) 
+ * **LEXICON 2PUUVSAH_PL2** (pointed to by 2KUMPPI) 
 
- * **LEXICON X_WG_RLEN_PL_Loc ** plural forms with ^WG and ^^WG^RLEN 
+ * **LEXICON X_WG_RLEN_PL_Loc** plural forms with ^WG and ^^WG^RLEN 
 
- * **LEXICON X_WG_RLEN_PL ** 
+ * **LEXICON X_WG_RLEN_PL** 
 
 ### 2SOLLA lexicon family 
 SM1, RLEN, earlier LLEN !rlen svlow, sgcom/plill:rlen  ess:clen 
 Last vowel is â. 
- * **LEXICON 2SOLLA  ** (basic lexicon) 
+ * **LEXICON 2SOLLA** (basic lexicon) 
 
- * **LEXICON 2SOLLA_SG ** (Sg forms‚ pointing to Px) 
+ * **LEXICON 2SOLLA_SG** (Sg forms‚ pointing to Px) 
 
- * **LEXICON 2SOLLA_PL  ** (Pl forms, pointing to Px) 
+ * **LEXICON 2SOLLA_PL** (Pl forms, pointing to Px) 
 
- * **LEXICON X_SOLLA_SG ** (Sg absolute forms) 
+ * **LEXICON X_SOLLA_SG** (Sg absolute forms) 
 
- * **LEXICON X_SOLLA_PL  ** (Pl Ill, the rest pointing to 
-  X_ALGA_PL_COMMON ; ) 
+ * **LEXICON X_SOLLA_PL** (Pl Ill, the rest pointing to 
+ X_ALGA_PL_COMMON ;) 
 
 
 
 ### 2JUUHA lexicon family 
 
- * **LEXICON 2JUUHA ** (basic lexicon) 
+ * **LEXICON 2JUUHA** (basic lexicon) 
 
- * **LEXICON 2JUUHA_SG ** 
+ * **LEXICON 2JUUHA_SG** 
 
- * **LEXICON 2JUUHA_PL ** 
+ * **LEXICON 2JUUHA_PL** 
 
- * **LEXICON X_JUUHA_SG  ** (common POS Sg) 
+ * **LEXICON X_JUUHA_SG** (common POS Sg) 
 
- * **LEXICON X_JUUHA_PL  ** (common POS Pl) 
+ * **LEXICON X_JUUHA_PL** (common POS Pl) 
 
 
- * **LEXICON JUUVAS ** (A lexicon for lexicalised deminutive words, thus words NOT having a double deminutive) 
+ * **LEXICON JUUVAS** (A lexicon for lexicalised deminutive words, thus words NOT having a double deminutive) 
 So far it has only one member, juuvâš, and no Px 
 
- * **LEXICON X_JUUVAS_SG  ** stem is ju^RVh^RC 
- * **LEXICON X_JUUVAS_PL ** 
+ * **LEXICON X_JUUVAS_SG** stem is ju^RVh^RC 
+ * **LEXICON X_JUUVAS_PL** 
 
 
- * **LEXICON JUUHA_DIM ** (a lexicon to create deminutives; Not for lexicalised words already being in deminutive) 
+ * **LEXICON JUUHA_DIM** (a lexicon to create deminutives; Not for lexicalised words already being in deminutive) 
 
 
 
@@ -1262,311 +1262,311 @@ So far it has only one member, juuvâš, and no Px
 ### 2KIELA lexicon family 
  WG, blank Ill, DLEN, RVSH, SVLOW 
 
- * **LEXICON KIELAonly ** 
+ * **LEXICON KIELAonly** 
 
- * **LEXICON 2KIELA ** (basic lexicon -> sg, pl) 
+ * **LEXICON 2KIELA** (basic lexicon -> sg, pl) 
 
- * **LEXICON X_KIELA ** (-> sg, pl) 
+ * **LEXICON X_KIELA** (-> sg, pl) 
 
- * **LEXICON 2KIELA_SG ** (Sg forms, pointing to Px) 
+ * **LEXICON 2KIELA_SG** (Sg forms, pointing to Px) 
 
- * **LEXICON 2KIELA_PL ** (Pl forms, pointing to Px) 
+ * **LEXICON 2KIELA_PL** (Pl forms, pointing to Px) 
 
- * **LEXICON X_KIELA_PL ** 
+ * **LEXICON X_KIELA_PL** 
 
- * **LEXICON X_KIELA_SG ** 
+ * **LEXICON X_KIELA_SG** 
 
 
 
- * **LEXICON KIELA_DIM ** 
+ * **LEXICON KIELA_DIM** 
 
 
 
 ### JUUHA-KIELA common forms 
- * **LEXICON JUUHA_KIELA_SG ** 
+ * **LEXICON JUUHA_KIELA_SG** 
 
- * **LEXICON X_WG_RVSH_PL_notILL ** 
+ * **LEXICON X_WG_RVSH_PL_notILL** 
 
 
 ### 2TELTTA lexicon family 
 
- * **LEXICON 2TELTTA   ** Check: is this identical to KISSA? 
+ * **LEXICON 2TELTTA** Check: is this identical to KISSA? 
 
- * **LEXICON 2TELTTA_SG ** 
+ * **LEXICON 2TELTTA_SG** 
 
- * **LEXICON 2TELTTA_PL ** 
+ * **LEXICON 2TELTTA_PL** 
 
- * **LEXICON X_TELTTA_SG ** 
+ * **LEXICON X_TELTTA_SG** 
 
- * **LEXICON X_TELTTA_PL ** 
+ * **LEXICON X_TELTTA_PL** 
 
 
 ### 2FADDA lexicon family 
 
- * *LEXICON 2FADDA  *:  This might be the standard even syllabi lexicon 
+ * *LEXICON 2FADDA*:  This might be the standard even syllabi lexicon 
 
- * **LEXICON 2FADDA_SG ** 
+ * **LEXICON 2FADDA_SG** 
 
- * **LEXICON 2FADDA_PL  ** 
+ * **LEXICON 2FADDA_PL** 
 
- * **LEXICON X_FADDA_SG ** 
+ * **LEXICON X_FADDA_SG** 
 
- * **LEXICON X_FADDA_PL ** 
+ * **LEXICON X_FADDA_PL** 
 
 
- * **LEXICON FADDA_SG_DIM  ** fá^RVddá 
+ * **LEXICON FADDA_SG_DIM** fá^RVddá 
 
- * **LEXICON FADDA_PL_DIM  ** 
+ * **LEXICON FADDA_PL_DIM** 
 
 
 
 ### 2KISSA lexicon family 
 
- * **LEXICON 2KISSA **  No root vowel lengthening 
+ * **LEXICON 2KISSA**  No root vowel lengthening 
 
- * **LEXICON 2KISSA_SG ** 
-
-
- * **LEXICON KISSA_DIM ** 
+ * **LEXICON 2KISSA_SG** 
 
 
+ * **LEXICON KISSA_DIM** 
 
 
 
 
- * **LEXICON 2KISSA_PL ** 
 
- * **LEXICON X_KISSA_SG ** 
 
- * **LEXICON X_KISSA_PL ** 
+ * **LEXICON 2KISSA_PL** 
+
+ * **LEXICON X_KISSA_SG** 
+
+ * **LEXICON X_KISSA_PL** 
 
 
 
 ### 2CAANA lexicon family 
 
- * *LEXICON 2CAANA  *:  !čá^RVn^RCá 
+ * *LEXICON 2CAANA*:  !čá^RVn^RCá 
 
- * **LEXICON 2CAANA_SG ** 
+ * **LEXICON 2CAANA_SG** 
 
- * **LEXICON 2CAANA_PL  ** 
+ * **LEXICON 2CAANA_PL** 
 
- * **LEXICON X_CAANA_SG ** 
+ * **LEXICON X_CAANA_SG** 
 
- * **LEXICON X_CAANA_PL ** 
+ * **LEXICON X_CAANA_PL** 
 
 
 
 ### 2TAHO lexicon family 
 
- * **LEXICON 2TAHO ** only for taho, similar to 2LAJO except from Pl+Ill, almost similar to 2SPAHA 
+ * **LEXICON 2TAHO** only for taho, similar to 2LAJO except from Pl+Ill, almost similar to 2SPAHA 
 
- * **LEXICON 2TAHO_SG  ** 
+ * **LEXICON 2TAHO_SG** 
 
- * **LEXICON 2TAHO_PL  ** 
+ * **LEXICON 2TAHO_PL** 
 
 ### 2LAJO lexicon family 
- * **LEXICON 2LAJO  ** 
+ * **LEXICON 2LAJO** 
 
- * **LEXICON 2LAJO_SG ** 
+ * **LEXICON 2LAJO_SG** 
 
- * **LEXICON LAJO_TAHO_PX_SG ** 
-
-
- * **LEXICON X_LAJO_TAHO_SG ** 
-
- * **LEXICON 2LAJO_PL ** 
+ * **LEXICON LAJO_TAHO_PX_SG** 
 
 
- * **LEXICON  LAJO_TAHO_PX_PL  ** 
+ * **LEXICON X_LAJO_TAHO_SG** 
+
+ * **LEXICON 2LAJO_PL** 
+
+
+ * **LEXICON LAJO_TAHO_PX_PL** 
 
 
 
- * **LEXICON X_LAJO_PL ** 
+ * **LEXICON X_LAJO_PL** 
 
 
 ### 2NJUNE lexicon family 
 
- * **LEXICON 2NJUNE ** almost similar to 2LAJO 
+ * **LEXICON 2NJUNE** almost similar to 2LAJO 
 
- * **LEXICON X_NJUNE ** almost similar to 2LAJO 
+ * **LEXICON X_NJUNE** almost similar to 2LAJO 
 
- * **LEXICON 2NJUNE_SG ** 
+ * **LEXICON 2NJUNE_SG** 
 
 
- * **LEXICON 2NJUNE_PL ** 
+ * **LEXICON 2NJUNE_PL** 
 
- * **LEXICON X_NJUNE_SG ** 
+ * **LEXICON X_NJUNE_SG** 
 
- * **LEXICON X_NJUNE_PL ** 
+ * **LEXICON X_NJUNE_PL** 
 
 ### 2ALME - 2ALGE - 2NIJBE lexicon family 
 
- * **LEXICON 2ALGE ** 
+ * **LEXICON 2ALGE** 
 
- * **LEXICON X_ALGE ** 
+ * **LEXICON X_ALGE** 
 
- * **LEXICON 2ALGE_SG ** 
+ * **LEXICON 2ALGE_SG** 
 
- * **LEXICON 2ALGE_PL ** 
+ * **LEXICON 2ALGE_PL** 
 
- * **LEXICON X_ALGE_SG ** 
+ * **LEXICON X_ALGE_SG** 
 
- * **LEXICON X_ALGE_PL ** 
+ * **LEXICON X_ALGE_PL** 
 
- * **LEXICON X_ALGE_NIIBE_PL ** 
+ * **LEXICON X_ALGE_NIIBE_PL** 
 
- * **LEXICON 2NIJBE ** 
+ * **LEXICON 2NIJBE** 
 
- * **LEXICON 2NIJBE_SG ** 
+ * **LEXICON 2NIJBE_SG** 
 
- * **LEXICON 2NIJBE_PL ** 
+ * **LEXICON 2NIJBE_PL** 
 
- * **LEXICON X_NIJBE_SG ** 
+ * **LEXICON X_NIJBE_SG** 
 
- * **LEXICON X_NIJBE_PL ** 
+ * **LEXICON X_NIJBE_PL** 
 
- * **LEXICON 2ALGE_DIM ** 
+ * **LEXICON 2ALGE_DIM** 
 
- * **LEXICON 2ALGE_SG_DIM  ** a^RVlgâ 
+ * **LEXICON 2ALGE_SG_DIM** a^RVlgâ 
 
 
- * **LEXICON 2ALGE_PL_DIM  ** 
+ * **LEXICON 2ALGE_PL_DIM** 
 
 
 
 
 ### 2VAHE lexicon family 
 
- * **LEXICON 2VAHE ** 
+ * **LEXICON 2VAHE** 
 
- * **LEXICON 2VAHE_SG ** 
+ * **LEXICON 2VAHE_SG** 
 
- * **LEXICON 2VAHE_PL ** 
+ * **LEXICON 2VAHE_PL** 
 
- * **LEXICON X_VAHE_SG ** 
+ * **LEXICON X_VAHE_SG** 
 
 
 
 ### 2KUMPPI lexicon family 
 i-i-i > 2SOLLA (?); MLO: no, difference in sg Com and pl Ill 
- * **LEXICON 2KUMPPI  ** (basic lexicon, pointing to 
- * **2FADDA_SG ; ** but having different compound form) 
+ * **LEXICON 2KUMPPI** (basic lexicon, pointing to 
+ * **2FADDA_SG ;** but having different compound form) 
 
- * **LEXICON 2KUMPPI_PL **  (plurals for 2KUMPPI, pointing to 
- +N: X_ALGA_PL ; ) 
+ * **LEXICON 2KUMPPI_PL**  (plurals for 2KUMPPI, pointing to 
+ +N: X_ALGA_PL ;) 
 
 
 
 ### 2SAAMI lexicon family 
 
- * **LEXICON 2SAAMI   ** to 2LAAVU after fix in twolc?  saämijn > saamijn when ^WG^CLEN^SVLOW 
+ * **LEXICON 2SAAMI** to 2LAAVU after fix in twolc?  saämijn > saamijn when ^WG^CLEN^SVLOW 
 
- * **LEXICON X_SAAMI   ** to 2LAAVU after fix in twolc?  saämijn > saamijn when ^WG^CLEN^SVLOW 
+ * **LEXICON X_SAAMI** to 2LAAVU after fix in twolc?  saämijn > saamijn when ^WG^CLEN^SVLOW 
 
  * **LEXICON 2SAAMI_SG** 
 
- * **LEXICON 2SAAMI_PL   ** plurals for 2SAAMI 
+ * **LEXICON 2SAAMI_PL** plurals for 2SAAMI 
 
- * **LEXICON X_SAAMI_SG   ** to 2LAAVU after fix in twolc?  saämijn > saamijn when ^WG^CLEN^SVLOW 
+ * **LEXICON X_SAAMI_SG** to 2LAAVU after fix in twolc?  saämijn > saamijn when ^WG^CLEN^SVLOW 
 
- * **LEXICON X_SAAMI_PL   ** plurals for 2SAAMI 
+ * **LEXICON X_SAAMI_PL** plurals for 2SAAMI 
 
 
 ### 2CAACI - 2VYEHI lexicon family TODO -- 
 WG, Ill EA, Com CLEN SVLOW, Ess **with** CLEN 
- * **LEXICON 2CAACI ** (basic lexicon 
+ * **LEXICON 2CAACI** (basic lexicon 
 
- * **LEXICON 2VYEHI ** WG, Ill EA, Com CLEN SVLOW, Ess **without** CLEN 
+ * **LEXICON 2VYEHI** WG, Ill EA, Com CLEN SVLOW, Ess **without** CLEN 
 
- * **LEXICON 2VYEHI_SG ** sg forms 
+ * **LEXICON 2VYEHI_SG** sg forms 
 
- * **LEXICON X_VYEHI_SG ** (different Ess, Par), otherwise 
-   X_CAACI_VYEHI_SG ;   ) 
+ * **LEXICON X_VYEHI_SG** (different Ess, Par), otherwise 
+ X_CAACI_VYEHI_SG ;) 
 
- * **LEXICON CAACI_VYEHI_SG ** common for the two 
+ * **LEXICON CAACI_VYEHI_SG** common for the two 
 
- * **LEXICON 2CAACI_VYEHI_PL ** common Pl forms for Px 
+ * **LEXICON 2CAACI_VYEHI_PL** common Pl forms for Px 
 
- * **LEXICON X_CAACI_VYEHI_SG ** common Sg case forms 
+ * **LEXICON X_CAACI_VYEHI_SG** common Sg case forms 
 
  * **LEXICON X_CAACI_VYEHI_PL** 
 
 ### 2AIGI lexicon family 
 
- * **LEXICON 2AIGI ** similar to 2VADDU except from EA for Sg+Ill 
+ * **LEXICON 2AIGI** similar to 2VADDU except from EA for Sg+Ill 
 
- * **LEXICON X_AIGI ** similar to 2VADDU except from EA for Sg+Ill 
+ * **LEXICON X_AIGI** similar to 2VADDU except from EA for Sg+Ill 
 
- * **LEXICON 2AIGI_SG ** 
+ * **LEXICON 2AIGI_SG** 
 
- * **LEXICON 2AIGI_PL ** 
-
-
+ * **LEXICON 2AIGI_PL** 
 
 
- * **LEXICON X_AIGI_SG ** 
+
+
+ * **LEXICON X_AIGI_SG** 
 
 
 ### 2KYELI - 2SYEJI lexicon family 
 
- * **LEXICON 2KYELI  ** i-e-á, similar to 2ALGE, except from -i some places.     
+ * **LEXICON 2KYELI** i-e-á, similar to 2ALGE, except from -i some places.     
 
- * **LEXICON 2KYELI_SG **  kyeli nouns 
+ * **LEXICON 2KYELI_SG**  kyeli nouns 
 
 
- * **LEXICON KYELI_SYEJI_SG  ** i-e-á,     
+ * **LEXICON KYELI_SYEJI_SG** i-e-á,     
 
- * **LEXICON 2_KYELI_SYEJI_SG_PX **  common kyeli-syeji px 
+ * **LEXICON 2_KYELI_SYEJI_SG_PX**  common kyeli-syeji px 
 
- * **LEXICON X_KYELI  ** lexicon coming in from the adjectives             
+ * **LEXICON X_KYELI** lexicon coming in from the adjectives             
 
- * **LEXICON X_KYELI_PL  ** i-e-á, similar to 2ALGE, except from -i some places. 
+ * **LEXICON X_KYELI_PL** i-e-á, similar to 2ALGE, except from -i some places. 
 
  * **LEXICON 2KYELI_PL** 
 
 
 
- * **LEXICON 2_KYELI_SYEJI_PL_PX  ** 
+ * **LEXICON 2_KYELI_SYEJI_PL_PX** 
 
 
- * **LEXICON KYELI_SYEJI_PL  ** i-e-á,     
+ * **LEXICON KYELI_SYEJI_PL** i-e-á,     
 
 
 
 ### 2KIRKKO - 2NJAMMA lexicon family 
 
- * **LEXICON 2KIRKKO  **  > KIRKKO_NJAMMA, but WG for Sg+Loc: 
+ * **LEXICON 2KIRKKO**  > KIRKKO_NJAMMA, but WG for Sg+Loc: 
 
 
 
  * **LEXICON 2KIRKKO_SG** 
 
- * **LEXICON 2NJAMMA   ** > KIRKKO_NJAMMA, but WG CLEN for Sg+Loc: loho:lovvoost 
+ * **LEXICON 2NJAMMA** > KIRKKO_NJAMMA, but WG CLEN for Sg+Loc: loho:lovvoost 
 
- * **LEXICON KIRKKO_NJAMMA_SG  **   
-
-
- * **LEXICON KIRKKO_NJAMMA_PL  **   
+ * **LEXICON KIRKKO_NJAMMA_SG**   
 
 
+ * **LEXICON KIRKKO_NJAMMA_PL**   
 
- * **LEXICON X_KIRKKO_NJAMMA_SG ** 
+
+
+ * **LEXICON X_KIRKKO_NJAMMA_SG** 
 
 
 
 ### 2VASO lexicon family 
 
- * **LEXICON 2VASO ** only for vašo, similar to 2LAJO except from Sg+Loc, almost similar to 2SPAHA and 2TAHO. Blank Nom, Ill, Ess SV CLEN SLEN, otherwise WG 
+ * **LEXICON 2VASO** only for vašo, similar to 2LAJO except from Sg+Loc, almost similar to 2SPAHA and 2TAHO. Blank Nom, Ill, Ess SV CLEN SLEN, otherwise WG 
 
 
- * **LEXICON 2VASO_SG ** 
+ * **LEXICON 2VASO_SG** 
 
- * **LEXICON 2VASO_PL ** 
+ * **LEXICON 2VASO_PL** 
 
 
- * **LEXICON X_VASO_SG ** 
+ * **LEXICON X_VASO_SG** 
 
- * **LEXICON X_VASO_PL ** 
+ * **LEXICON X_VASO_PL** 
 
 
 
@@ -1574,137 +1574,137 @@ WG, Ill EA, Com CLEN SVLOW, Ess **with** CLEN
 ### 2OKKO lexicon family 
 
 
- * **LEXICON 2OKKO ** Pl+Acc WG, Pl+Ill WG CLEN 
+ * **LEXICON 2OKKO** Pl+Acc WG, Pl+Ill WG CLEN 
 
 
- * **LEXICON 2OKKO_SG ** 
+ * **LEXICON 2OKKO_SG** 
 
 
- * **LEXICON 2OKKO_PL ** 
+ * **LEXICON 2OKKO_PL** 
 
- * **LEXICON X_OKKO_SG ** Pl+Acc WG, Pl+Ill WG CLEN 
+ * **LEXICON X_OKKO_SG** Pl+Acc WG, Pl+Ill WG CLEN 
 
- * **LEXICON X_OKKO_PL ** Pl+Acc WG, Pl+Ill WG CLEN 
+ * **LEXICON X_OKKO_PL** Pl+Acc WG, Pl+Ill WG CLEN 
 
 
 
- * **LEXICON LAAVU_DIM ** 
- * **LEXICON 2RAAVHU ** like 2LAAVU, but long vowel in cmp. 
+ * **LEXICON LAAVU_DIM** 
+ * **LEXICON 2RAAVHU** like 2LAAVU, but long vowel in cmp. 
 
 
- * **LEXICON 2RAAVHU_SG ** 
+ * **LEXICON 2RAAVHU_SG** 
 
 
 
- * **LEXICON 2RAAVHU_PL ** 
+ * **LEXICON 2RAAVHU_PL** 
 
 
- * **LEXICON 2VIASU ** just as LAAVU, but without the short gen/acc 
+ * **LEXICON 2VIASU** just as LAAVU, but without the short gen/acc 
 
 
- * **LEXICON 2LAAVU ** WG, Ill EA, Com SVLOW, Ess CLEN 
+ * **LEXICON 2LAAVU** WG, Ill EA, Com SVLOW, Ess CLEN 
 
- * **LEXICON 2LAAVU_SG ** 
+ * **LEXICON 2LAAVU_SG** 
 
 
 
- * **LEXICON X_LAAVU_SG  ** 
+ * **LEXICON X_LAAVU_SG** 
 
 
- * **LEXICON 2LAAVU_PL ** 
+ * **LEXICON 2LAAVU_PL** 
 
- * **LEXICON X_LAAVU_PL ** 
+ * **LEXICON X_LAAVU_PL** 
 
 
 
- * **LEXICON 2VUAGGU ** 
+ * **LEXICON 2VUAGGU** 
 
 
 
- * **LEXICON 2VUAGGU_SG ** 
+ * **LEXICON 2VUAGGU_SG** 
 
- * **LEXICON 2VUAGGU_PL ** 
+ * **LEXICON 2VUAGGU_PL** 
 
 
- * **LEXICON X_VUAGGU_SG ** 
+ * **LEXICON X_VUAGGU_SG** 
 
 
- * **LEXICON 2KUSSA ** 
+ * **LEXICON 2KUSSA** 
 
- * **LEXICON 2KUSSA_PL ** 
+ * **LEXICON 2KUSSA_PL** 
 
- * **LEXICON 2VADDU ** 2AIGI has EA for Sg+Ill, 2SOLLA has RLEN for Sg+Com and Pl+Ill 
+ * **LEXICON 2VADDU** 2AIGI has EA for Sg+Ill, 2SOLLA has RLEN for Sg+Com and Pl+Ill 
 
 
- * **LEXICON 2VADDU_SG ** 
+ * **LEXICON 2VADDU_SG** 
 
- * **LEXICON 2VADDU_PL ** 
+ * **LEXICON 2VADDU_PL** 
 
 
 
 
 
- * **LEXICON 2TAVLU ** 
+ * **LEXICON 2TAVLU** 
 
 
- * **LEXICON 2TAVLU_SG ** 
+ * **LEXICON 2TAVLU_SG** 
 
 
- * **LEXICON 2TAVLU_PL ** 
+ * **LEXICON 2TAVLU_PL** 
 
 
- * **LEXICON X_TAVLU_SG ** 
+ * **LEXICON X_TAVLU_SG** 
 
- * **LEXICON X_TAVLU_PL ** 
+ * **LEXICON X_TAVLU_PL** 
 
 
- * **LEXICON 2NIISU ** 
+ * **LEXICON 2NIISU** 
 
- * **LEXICON 2NIISU_SG ** 
+ * **LEXICON 2NIISU_SG** 
 
 
- * **LEXICON 2NIISU_PL ** 
+ * **LEXICON 2NIISU_PL** 
 
 
- * **LEXICON X_NIISU_SG ** 
+ * **LEXICON X_NIISU_SG** 
 
 
- * **LEXICON X_NIISU_PL ** 
+ * **LEXICON X_NIISU_PL** 
 
 
- * **LEXICON 2VAALJA ** 
+ * **LEXICON 2VAALJA** 
 
- * **LEXICON 2VAALJA_SG ** 
+ * **LEXICON 2VAALJA_SG** 
 
 
- * **LEXICON 2VAALJA_PL ** 
+ * **LEXICON 2VAALJA_PL** 
 
 
- * **LEXICON X_VAALJA_SG ** 
+ * **LEXICON X_VAALJA_SG** 
 
 
- * **LEXICON X_VAALJA_PL ** 
+ * **LEXICON X_VAALJA_PL** 
 
 
- * **LEXICON 2SKERREEH_PL **  Plural tantum, as 2PUUVSAH, but w/o WG 
+ * **LEXICON 2SKERREEH_PL**  Plural tantum, as 2PUUVSAH, but w/o WG 
 
 
 ### APINA lexicon family 
 this is for loanwords without stem change 
 
- * **LEXICON APINA ** 
+ * **LEXICON APINA** 
 
 
- * **LEXICON APINA_SG  ** 
+ * **LEXICON APINA_SG** 
 
- * **LEXICON APINA_PL ** 
+ * **LEXICON APINA_PL** 
 
 
- * **LEXICON X_APINA_SG ** (common for different POS) 
+ * **LEXICON X_APINA_SG** (common for different POS) 
 
- * **LEXICON X_h_PL **  gives %>h etc. to vowel stems, pointong to notILL 
+ * **LEXICON X_h_PL**  gives %>h etc. to vowel stems, pointong to notILL 
 
- * **LEXICON X_h_PL_notILL ** 
+ * **LEXICON X_h_PL_notILL** 
 
 
 
@@ -1714,112 +1714,112 @@ this is for loanwords without stem change
 
 ### 4KUNAGAS lexicon family 
 
- * **LEXICON 4KUNAGAS ** 
+ * **LEXICON 4KUNAGAS** 
 
 
- * **LEXICON X_KUNAGAS ** 
+ * **LEXICON X_KUNAGAS** 
 
- * **LEXICON 4KUNAGAS_SG ** 
+ * **LEXICON 4KUNAGAS_SG** 
 
- * **LEXICON 4KUNAGAS_PL ** > 
+ * **LEXICON 4KUNAGAS_PL** > 
 
- * **LEXICON X_KUNAGAS_SG **  this is for loanwords without stem change, 3-syll. cons end 
+ * **LEXICON X_KUNAGAS_SG**  this is for loanwords without stem change, 3-syll. cons end 
 
- * **LEXICON X_KUNAGAS_PL ** 
+ * **LEXICON X_KUNAGAS_PL** 
 
 
 ### 4CAHALIG lexicon family 
 
- * **LEXICON 4CAHALIG  ** 
+ * **LEXICON 4CAHALIG** 
 
- * **LEXICON 4CAHALIG_SG  ** 
-
-
- * **LEXICON 4CAHALIG_PL  ** 
+ * **LEXICON 4CAHALIG_SG** 
 
 
- * **LEXICON X_CAHALIG_SG  ** 
+ * **LEXICON 4CAHALIG_PL** 
 
- * **LEXICON X_eh_PL  ** 
+
+ * **LEXICON X_CAHALIG_SG** 
+
+ * **LEXICON X_eh_PL** 
 
 ### 4MANUTTEP lexicon family 
 
- * **LEXICON 4MANUTTEP   ** 
+ * **LEXICON 4MANUTTEP** 
 
- * **LEXICON 4MANUTTEP_SG   ** 
-
-
- * **LEXICON 4MANUTTEP_PL   ** 
+ * **LEXICON 4MANUTTEP_SG** 
 
 
- * **LEXICON X_MANUTTEP_SG   ** 
+ * **LEXICON 4MANUTTEP_PL** 
 
- * **LEXICON X_MANUTTEP_PL   ** 
+
+ * **LEXICON X_MANUTTEP_SG** 
+
+ * **LEXICON X_MANUTTEP_PL** 
 
 
 ### 4PUHELIN lexicon family 
 
- * **LEXICON 4PUHELIN                **  Only a few words in this category 
+ * **LEXICON 4PUHELIN**  Only a few words in this category 
 
 
 ### 2KOLLIISTALLAM lexicon family 
 
- * **LEXICON 2KOLLIISTALLAM  ** 
+ * **LEXICON 2KOLLIISTALLAM** 
 
 
 ## Odd-syllable stems 
 
- * **LEXICON 3KOMPAS ** stem kompass An odd loan word with the final -s lengthening 
+ * **LEXICON 3KOMPAS** stem kompass An odd loan word with the final -s lengthening 
 
 
- * **LEXICON X_KOMPAS ** 
+ * **LEXICON X_KOMPAS** 
 
 
 
- * **LEXICON 3KEPIDEM  ** 
+ * **LEXICON 3KEPIDEM** 
 
- * **LEXICON 3KEPIDEM_PL  ** 
+ * **LEXICON 3KEPIDEM_PL** 
 
 
- * **LEXICON 3POTTAAK  ** 
+ * **LEXICON 3POTTAAK** 
 
- * **LEXICON X_POTTAAK ** 
+ * **LEXICON X_POTTAAK** 
 
 
- * **LEXICON 3EEMEED  ** 
+ * **LEXICON 3EEMEED** 
 
- * **LEXICON X_EEMEED  ** 
+ * **LEXICON X_EEMEED** 
 
 
- * **LEXICON 3EEMEED_SG ** 
+ * **LEXICON 3EEMEED_SG** 
 
- * **LEXICON 3EEMEED_PL  ** 
+ * **LEXICON 3EEMEED_PL** 
 
- * **LEXICON X_EEMEED_SG  ** 
+ * **LEXICON X_EEMEED_SG** 
 
 
- * **LEXICON 3LITTER ** MO Ib 2nd syll vowel does not alternate 
+ * **LEXICON 3LITTER** MO Ib 2nd syll vowel does not alternate 
 
- * **LEXICON X_LITTER ** MO Ib 2nd syll vowel does not alternate 
+ * **LEXICON X_LITTER** MO Ib 2nd syll vowel does not alternate 
 
- * **LEXICON X_LITTER_not_Par **  for numerals 
+ * **LEXICON X_LITTER_not_Par**  for numerals 
 
 
 
- * **LEXICON 3LITTER_SG ** 
+ * **LEXICON 3LITTER_SG** 
 
- * **LEXICON 3LITTER_PL ** 
+ * **LEXICON 3LITTER_PL** 
 
 
 
- * **LEXICON X_LITTER_SG ** 
+ * **LEXICON X_LITTER_SG** 
 
 
- * **LEXICON X_LITTER_SG_not_Par **  for numerals 
+ * **LEXICON X_LITTER_SG_not_Par**  for numerals 
 
 
 
- * **LEXICON 3PIEHAIN  ** to v1 3PIEHAINonly and v2 3PIEHANJ 
+ * **LEXICON 3PIEHAIN** to v1 3PIEHAINonly and v2 3PIEHANJ 
 
 
 
@@ -1846,332 +1846,332 @@ this is for loanwords without stem change
 
 
 
- * **LEXICON 3JAAVVIL ** 
+ * **LEXICON 3JAAVVIL** 
 
- * **LEXICON 3JAAVVIL_SG ** 
+ * **LEXICON 3JAAVVIL_SG** 
 
- * **LEXICON 3JAAVVIL_PL ** 
+ * **LEXICON 3JAAVVIL_PL** 
 
 
- * **LEXICON X_JAAVVIL_SG ** 
+ * **LEXICON X_JAAVVIL_SG** 
 
 
 
 
- * **LEXICON 3TERES ** 
+ * **LEXICON 3TERES** 
 
 
 
- * **LEXICON 3PAAVIR ** NGA+Abe blank, WG Ess, CSH for the rest 
+ * **LEXICON 3PAAVIR** NGA+Abe blank, WG Ess, CSH for the rest 
 
- * **LEXICON X_PAAVIR ** NGA+Abe blank, WG Ess, CSH for the rest 
+ * **LEXICON X_PAAVIR** NGA+Abe blank, WG Ess, CSH for the rest 
 
- * **LEXICON 3PAAVIR_SG ** 
+ * **LEXICON 3PAAVIR_SG** 
 
 
 
- * **LEXICON 3PAAVIR_PL ** plural forms 
+ * **LEXICON 3PAAVIR_PL** plural forms 
 
- * **LEXICON X_PAAVIR_SG ** NGA+Abe blank, WG Ess, CSH for the rest 
+ * **LEXICON X_PAAVIR_SG** NGA+Abe blank, WG Ess, CSH for the rest 
 
- * **LEXICON X_PAAVIR_not_Nom_Par ** NGA+Abe blank, WG Ess, CSH for the rest 
+ * **LEXICON X_PAAVIR_not_Nom_Par** NGA+Abe blank, WG Ess, CSH for the rest 
 
- * **LEXICON X_PAAVIR_not_Nom_Par_SG ** 
+ * **LEXICON X_PAAVIR_not_Nom_Par_SG** 
 
- * **LEXICON 3SAJOS ** sai4joos 
+ * **LEXICON 3SAJOS** sai4joos 
 
 
 
- * **LEXICON X_SAJOS ** 
+ * **LEXICON X_SAJOS** 
 
 
 
 
- * **LEXICON 3UAIVAT ** > 3EEMEED. No Px, but only one word uáivát, witout Px para. 
+ * **LEXICON 3UAIVAT** > 3EEMEED. No Px, but only one word uáivát, witout Px para. 
 
 
 
- * **LEXICON 3VEESKIR ** 
+ * **LEXICON 3VEESKIR** 
 
- * **LEXICON X_VEESKIR ** 
+ * **LEXICON X_VEESKIR** 
 
 
- * **LEXICON 3VEESKIR_SG ** 
+ * **LEXICON 3VEESKIR_SG** 
 
 
- * **LEXICON 3VEESKIR_PL ** 
+ * **LEXICON 3VEESKIR_PL** 
 
- * **LEXICON 3COLL_LITTER ** collective numbers: čiččâmâs 
+ * **LEXICON 3COLL_LITTER** collective numbers: čiččâmâs 
 
- * **LEXICON C_COLL_KAARBIS ** collective numbers: oovces 
+ * **LEXICON C_COLL_KAARBIS** collective numbers: oovces 
 
- * **LEXICON 3COLL_PAAVIR ** collective numbers: loves 
+ * **LEXICON 3COLL_PAAVIR** collective numbers: loves 
 
- * **LEXICON 3COLL ** collective numbers: kyevtis, kuulmâs.., redirecting to  X_VEESKIR 
+ * **LEXICON 3COLL** collective numbers: kyevtis, kuulmâs.., redirecting to  X_VEESKIR 
 
 
- * **LEXICON 3PIIVTAS ** WG for NEP,  no triggers for the other cases 
+ * **LEXICON 3PIIVTAS** WG for NEP,  no triggers for the other cases 
 
- * **LEXICON 3PIIVTAS_SG ** 
+ * **LEXICON 3PIIVTAS_SG** 
 
 
 
- * **LEXICON 3PIIVTAS_PL ** 
+ * **LEXICON 3PIIVTAS_PL** 
 
- * **LEXICON 3DUSSEPIIVTAS  **  piivtâš itself is not in the 3PIIVTAS lexicon 
+ * **LEXICON 3DUSSEPIIVTAS**  piivtâš itself is not in the 3PIIVTAS lexicon 
 
 
- * **LEXICON X_VEESKIR_SG ** 
+ * **LEXICON X_VEESKIR_SG** 
 
- * **LEXICON 3KAAVPUG  ** 
+ * **LEXICON 3KAAVPUG** 
 
 
- * **LEXICON 3AARRAN ** 
+ * **LEXICON 3AARRAN** 
 
 
 
- * **LEXICON 3AARRAN_SG ** 
+ * **LEXICON 3AARRAN_SG** 
 
 
- * **LEXICON 3AARRAN_PL ** plurals for 3AARRAN 
+ * **LEXICON 3AARRAN_PL** plurals for 3AARRAN 
 
 
- * **LEXICON X_AARRAN_SG ** 
+ * **LEXICON X_AARRAN_SG** 
 
 
- * **LEXICON 3RUONAS ** nuurras WG NEP,  blank for the rest 
+ * **LEXICON 3RUONAS** nuurras WG NEP,  blank for the rest 
 
 
 
 
- * **LEXICON X_RUONAS ** WG NEP,  blank for the rest 
+ * **LEXICON X_RUONAS** WG NEP,  blank for the rest 
 
 
 
- * **LEXICON 3VUONJAS  **  kierâš, stem: kierrâ, px kierâččâm 
+ * **LEXICON 3VUONJAS**  kierâš, stem: kierrâ, px kierâččâm 
 
 
 
 
- * **LEXICON 3CEVE ** only for this lemma. It could go to 3LYEME but needs modifications of rules to get iä:e and -tt-, and the worst part is v:vv 
+ * **LEXICON 3CEVE** only for this lemma. It could go to 3LYEME but needs modifications of rules to get iä:e and -tt-, and the worst part is v:vv 
 
 
 
 
 
- * **LEXICON 3LYEME ** 
+ * **LEXICON 3LYEME** 
 
 
 
 
 
- * **LEXICON 3HUKSIM  ** NGA + Abe blank, SLEN for the rest 
+ * **LEXICON 3HUKSIM** NGA + Abe blank, SLEN for the rest 
 
- * **LEXICON 3HUKSIM_SG  ** NGA + Abe blank, SLEN for the rest 
+ * **LEXICON 3HUKSIM_SG** NGA + Abe blank, SLEN for the rest 
 
 
- * **LEXICON 3HUKSIM_PL  ** plurals for 3HUKSIM 
+ * **LEXICON 3HUKSIM_PL** plurals for 3HUKSIM 
 
- * **LEXICON 3KIEDAVUSSAM ** stem: :kieđâvušš 
+ * **LEXICON 3KIEDAVUSSAM** stem: :kieđâvušš 
 
 
 
 
- * **LEXICON 3POOVSA **  soovsa 
+ * **LEXICON 3POOVSA**  soovsa 
 
- * **LEXICON 3POOVSA_SG **  soovsa 
+ * **LEXICON 3POOVSA_SG**  soovsa 
 
- * **LEXICON 3POOVSA_PL **  plurals for 3POOVSA 
+ * **LEXICON 3POOVSA_PL**  plurals for 3POOVSA 
 
 
 ## Contracted stems 
 
- * **LEXICON C_KAAMUV  ** 
+ * **LEXICON C_KAAMUV** 
 
- * **LEXICON X_KAAMUV  ** 
+ * **LEXICON X_KAAMUV** 
 
- * **LEXICON X_KAAMUV_COMMON  ** 
+ * **LEXICON X_KAAMUV_COMMON** 
 
 
 
- * **LEXICON C_POOVIJC  ** 
+ * **LEXICON C_POOVIJC** 
 
 
- * **LEXICON 3POOVIJ  ** 
+ * **LEXICON 3POOVIJ** 
 
 
 
 
 
- * **LEXICON C_OLMOOS  ** lexicon for olmooš 
+ * **LEXICON C_OLMOOS** lexicon for olmooš 
 
- * **LEXICON C_OLMOOS_PL  ** 
+ * **LEXICON C_OLMOOS_PL** 
 
 
- * **LEXICON C_KAARBIS  ** 
+ * **LEXICON C_KAARBIS** 
 
- * **LEXICON X_KAARBIS  ** 
+ * **LEXICON X_KAARBIS** 
 
 
- * **LEXICON C_KAARBIS_SG ** 
+ * **LEXICON C_KAARBIS_SG** 
 
 
 
- * **LEXICON C_KAARBIS_PL ** 
+ * **LEXICON C_KAARBIS_PL** 
 
- * **LEXICON X_KAARBIS_SG  ** 
+ * **LEXICON X_KAARBIS_SG** 
 
- * **LEXICON C_MORCES  ** 
+ * **LEXICON C_MORCES** 
 
- * **LEXICON X_MORCES  ** 
+ * **LEXICON X_MORCES** 
 
- * **LEXICON C_CUNOI  ** 
+ * **LEXICON C_CUNOI** 
 
- * **LEXICON C_PUASUI  ** 
+ * **LEXICON C_PUASUI** 
 
 
 
- * **LEXICON C_ALMAI  ** 
+ * **LEXICON C_ALMAI** 
 
 
- * **LEXICON C_KUAVSUI  ** 
+ * **LEXICON C_KUAVSUI** 
 
- * **LEXICON C_KUAVSUI_COMMON  ** 
+ * **LEXICON C_KUAVSUI_COMMON** 
 
- * **LEXICON C_CUANJA  ** 
+ * **LEXICON C_CUANJA** 
 
 
- * **LEXICON CUANJA_COMMON ** 
+ * **LEXICON CUANJA_COMMON** 
 
 
 
- * **LEXICON X_SVSLENh_PL ** 
+ * **LEXICON X_SVSLENh_PL** 
 
 
- * **LEXICON S_AAIGA ** Almost identical with S_AAJA, except for Compounds 
+ * **LEXICON S_AAIGA** Almost identical with S_AAJA, except for Compounds 
 
- * **LEXICON AAIGA_COMMON_SG ** 
+ * **LEXICON AAIGA_COMMON_SG** 
 
- * **LEXICON S_AAIGA_PL ** 
+ * **LEXICON S_AAIGA_PL** 
 
- * **LEXICON AAIGA_COMMON_PL ** 
+ * **LEXICON AAIGA_COMMON_PL** 
 
 
- * **LEXICON S_AAJA  ** 
+ * **LEXICON S_AAJA** 
 
- * **LEXICON S_KARRII ** 
+ * **LEXICON S_KARRII** 
 
 
- * **LEXICON X_KARRII ** 
+ * **LEXICON X_KARRII** 
 
 
 
- * **LEXICON S_SPAALVAS ** 
+ * **LEXICON S_SPAALVAS** 
 
 
 
- * **LEXICON S_TUULAS ** ! stem: ku^RVđi 
+ * **LEXICON S_TUULAS** ! stem: ku^RVđi 
 
- * **LEXICON X_TUULAS ** 
+ * **LEXICON X_TUULAS** 
 
- * **LEXICON S_TUULAS_SG ** 
+ * **LEXICON S_TUULAS_SG** 
 
- * **LEXICON S_TUULAS_PL ** 
+ * **LEXICON S_TUULAS_PL** 
 
- * **LEXICON X_TUULAS_SG ** 
+ * **LEXICON X_TUULAS_SG** 
 
 
- * **LEXICON X_TUULAS_PL ** 
+ * **LEXICON X_TUULAS_PL** 
 
 
 
- * **LEXICON S_KAANDAS ** stem: ka^RVnd 
+ * **LEXICON S_KAANDAS** stem: ka^RVnd 
 
- * **LEXICON X_KAANDAS ** 
+ * **LEXICON X_KAANDAS** 
 
- * **LEXICON S_KAANDAS_SG ** 
+ * **LEXICON S_KAANDAS_SG** 
 
- * **LEXICON S_KAANDAS_PL ** 
+ * **LEXICON S_KAANDAS_PL** 
 
- * **LEXICON X_KAANDAS_SG ** 
+ * **LEXICON X_KAANDAS_SG** 
 
- * **LEXICON X_KAANDAS_PL ** 
+ * **LEXICON X_KAANDAS_PL** 
 
 
 
 
- * **LEXICON S_KUULMIS ** stem kuovtt 
+ * **LEXICON S_KUULMIS** stem kuovtt 
 
 
- * **LEXICON S_CISSAAS ** ! stem: cissá 
+ * **LEXICON S_CISSAAS** ! stem: cissá 
 
- * **LEXICON X_CISSAAS ** 
+ * **LEXICON X_CISSAAS** 
 
- * **LEXICON S_VUALAAS ** 
+ * **LEXICON S_VUALAAS** 
 
- * **LEXICON X_VUALAAS ** 
+ * **LEXICON X_VUALAAS** 
 
 
- * **LEXICON S_KUAVDAS **  WG or not? vuáŋŋáš not WG, kiärpáš WG. stem: suábbá 
+ * **LEXICON S_KUAVDAS**  WG or not? vuáŋŋáš not WG, kiärpáš WG. stem: suábbá 
 
 
- * **LEXICON S_KUAVDAS_SG ** 
+ * **LEXICON S_KUAVDAS_SG** 
 
 
 
- * **LEXICON S_KUAVDAS_PL ** 
+ * **LEXICON S_KUAVDAS_PL** 
 
- * **LEXICON X_KUAVDAS_SG ** 
+ * **LEXICON X_KUAVDAS_SG** 
 
- * **LEXICON S_ALGAAS  ** stem alga 
+ * **LEXICON S_ALGAAS** stem alga 
 
 
 
 
 
 
- * **LEXICON S_KUADHUS ** 
+ * **LEXICON S_KUADHUS** 
 
- * **LEXICON S_KAAHUS ** 
+ * **LEXICON S_KAAHUS** 
 
- * **LEXICON X_KAAHUS_notILL ** 
+ * **LEXICON X_KAAHUS_notILL** 
 
- * **LEXICON S_SUOLLUS ** 
+ * **LEXICON S_SUOLLUS** 
 
- * **LEXICON X_SUOLLUS ** 
+ * **LEXICON X_SUOLLUS** 
 
 
 
- * **LEXICON 4C_RASTAGAS    ** splitting in sg and pl 
+ * **LEXICON 4C_RASTAGAS** splitting in sg and pl 
 
 
-     - *LEXICON 4C_RASTAGAS_SG    *  the sg ones 
+     - *LEXICON 4C_RASTAGAS_SG*  the sg ones 
 
-     - *LEXICON 4C_RASTAGAS_PL   *  the pl ones 
+     - *LEXICON 4C_RASTAGAS_PL*  the pl ones 
 
 
-     - *LEXICON X_RASTAGAS  * sg cases 
+     - *LEXICON X_RASTAGAS* sg cases 
 
 
- * **LEXICON 3OPPUS  ** 
+ * **LEXICON 3OPPUS** 
 
- * **LEXICON 3ALMAS  ** 
+ * **LEXICON 3ALMAS** 
 
- * **LEXICON ALMAS_COMMON  ** 
+ * **LEXICON ALMAS_COMMON** 
 
 
 
 
 
- * **LEXICON C_SARVES ** sarves, jalŋes 
+ * **LEXICON C_SARVES** sarves, jalŋes 
 
- * **LEXICON C_SARVES_SG ** 
+ * **LEXICON C_SARVES_SG** 
 
- * **LEXICON C_SARVES_PL ** 
+ * **LEXICON C_SARVES_PL** 
 
- * **LEXICON X_SARVES_SG ** 
+ * **LEXICON X_SARVES_SG** 
 
- * **LEXICON X_SARVES_PL ** 
+ * **LEXICON X_SARVES_PL** 
 
 
 
@@ -2179,73 +2179,73 @@ this is for loanwords without stem change
 
 
 
- * **LEXICON 4JOTOLAH  **  splitting in sg pl 
+ * **LEXICON 4JOTOLAH**  splitting in sg pl 
 
 
 
- * **LEXICON JOHTOLAH_OBL    ** common for N and A 
+ * **LEXICON JOHTOLAH_OBL** common for N and A 
 
- * **LEXICON 4JOTOLAH_PL  ** 
-
-
- * **LEXICON 4KAPULUH  ** 
+ * **LEXICON 4JOTOLAH_PL** 
 
 
- * **LEXICON 4KUBALOH  ** 
+ * **LEXICON 4KAPULUH** 
 
 
- * **LEXICON 4LAS_NOUN ** stem = aanaarl 
+ * **LEXICON 4KUBALOH** 
 
 
-
- * **LEXICON LAS_COMMON ** 
-
-
- * **LEXICON X_LAS_COMMON_SG ** normâl lâš:-lii-nouns and adjs 
-
-
- * **LEXICON X_LAS_COMMON_PL ** NOrmal plural and plural tantum cases, olympialiih 
-
-
- * **LEXICON OLYMPIALIIH_PL ** 
+ * **LEXICON 4LAS_NOUN** stem = aanaarl 
 
 
 
- * **LEXICON LAS_SUF  ** 
+ * **LEXICON LAS_COMMON** 
 
 
- * **LEXICON MUS_NOUN   ** type uáiváámus, aldemus 
+ * **LEXICON X_LAS_COMMON_SG** normâl lâš:-lii-nouns and adjs 
+
+
+ * **LEXICON X_LAS_COMMON_PL** NOrmal plural and plural tantum cases, olympialiih 
+
+
+ * **LEXICON OLYMPIALIIH_PL** 
+
+
+
+ * **LEXICON LAS_SUF** 
+
+
+ * **LEXICON MUS_NOUN** type uáiváámus, aldemus 
 
 
 
 ## Contracted stems 
 
 
- * **LEXICON C_EIJE  ** 
+ * **LEXICON C_EIJE** 
 
- * **LEXICON C_LOHHEE ** 
+ * **LEXICON C_LOHHEE** 
 
- * **LEXICON C_LOHHEE_SG ** redirects to  C_TAHHEE, but adds NomAg 
+ * **LEXICON C_LOHHEE_SG** redirects to  C_TAHHEE, but adds NomAg 
 
- * **LEXICON C_LOHHEE_PL ** redirects to  C_TAHHEE, but adds NomAg 
+ * **LEXICON C_LOHHEE_PL** redirects to  C_TAHHEE, but adds NomAg 
 
 
- * **LEXICON C_TAHHEE ** 
+ * **LEXICON C_TAHHEE** 
 
- * **LEXICON C_TAHHEE_SG ** 
+ * **LEXICON C_TAHHEE_SG** 
 
- * **LEXICON C_TAHHEE_PL ** 
+ * **LEXICON C_TAHHEE_PL** 
 
- * **LEXICON X_TAHHEE ** ee-final contract, -ei instead of -ij not-nomen-agentis 
+ * **LEXICON X_TAHHEE** ee-final contract, -ei instead of -ij not-nomen-agentis 
 
- * **LEXICON X_TAHHEE_SG ** ee-final contract, -ei instead of -ij 
+ * **LEXICON X_TAHHEE_SG** ee-final contract, -ei instead of -ij 
 
- * **LEXICON X_TAHHEE_PL ** ee-final contract, plural forms 
+ * **LEXICON X_TAHHEE_PL** ee-final contract, plural forms 
 
 
 ## Comitative plural variation 
 
- * **LEXICON GUIN  ** is here to give -guin and the Use/NG -gijn. 
+ * **LEXICON GUIN** is here to give -guin and the Use/NG -gijn. 
 
 
 
@@ -2455,11 +2455,11 @@ From missinglist
 
 
 
- * **LEXICON ARABICCOMPOUNDS   **   arabic as first part, 
+ * **LEXICON ARABICCOMPOUNDS**   arabic as first part, 
 
 
 
- * **LEXICON NUMERALCOMPOUNDS **: numeral as first part: duhatjienat,
+ * **LEXICON NUMERALCOMPOUNDS**: numeral as first part: duhatjienat,
 
 
 
@@ -2639,85 +2639,85 @@ TODO:
 These are not in use:
 ANAR DUBAI DUBAI-plc DUBAI-sur MAKI 
 
- * **LEXICON Proper_infix ** is the de Silva lexicon
+ * **LEXICON Proper_infix** is the de Silva lexicon
 
- * **LEXICON Fir tTag **
+ * **LEXICON FirstTag**
 
- * **LEXICON TEMPORARY **
+ * **LEXICON TEMPORARY**
 
- * **LEXICON V_TEMPORARY **
+ * **LEXICON V_TEMPORARY**
 
 
- * **LEXICON NIEMI **
+ * **LEXICON NIEMI**
 
 
 
- * **LEXICON ACCRA  ** SM1
+ * **LEXICON ACCRA** SM1
 
- * **LEXICON ACCRA-ani **
+ * **LEXICON ACCRA-ani**
 
 
- * **LEXICON ACCRA-fem ur **
- * **LEXICON ACCRA-fem **
+ * **LEXICON ACCRA-femsur**
+ * **LEXICON ACCRA-fem**
 
- * **LEXICON ACCRA-malfem **
+ * **LEXICON ACCRA-malfem**
 
- * **LEXICON ACCRA-mal ur **
+ * **LEXICON ACCRA-malsur**
 
- * **LEXICON ACCRA-mal **
+ * **LEXICON ACCRA-mal**
 
- * **LEXICON ACCRA-objplc **
+ * **LEXICON ACCRA-objplc**
 
- * **LEXICON ACCRA-obj **
- * **LEXICON ACCRA-org **
+ * **LEXICON ACCRA-obj**
+ * **LEXICON ACCRA-org**
 
- * **LEXICON ACCRA-A_MWE-plc **
+ * **LEXICON ACCRA-A_MWE-plc**
 
- * **LEXICON ACCRA-A-org **
+ * **LEXICON ACCRA-A-org**
 
- * **LEXICON ACCRA-A-plc **
+ * **LEXICON ACCRA-A-plc**
 
- * **LEXICON ACCRA-A-fem **
+ * **LEXICON ACCRA-A-fem**
 
- * **LEXICON ACCRA_MWE-plc **
+ * **LEXICON ACCRA_MWE-plc**
 
 
- * **LEXICON ACCRA-plc **
+ * **LEXICON ACCRA-plc**
 
- * **LEXICON ACCRA- ur **
+ * **LEXICON ACCRA-sur**
 
 
- * **LEXICON JUUHA-plc ** similar to JUUHA
+ * **LEXICON JUUHA-plc** similar to JUUHA
 
 
- * **LEXICON JUUHA ** similar to JUUHA, stem ju
+ * **LEXICON JUUHA** similar to JUUHA, stem ju
 
 
- * **LEXICON LUOHTA ** similar to VADDU
+ * **LEXICON LUOHTA** similar to VADDU
 
 
- * **LEXICON LUOHTA-plc **   
+ * **LEXICON LUOHTA-plc**   
 
- * **LEXICON LUOHTA-mal **
+ * **LEXICON LUOHTA-mal**
 
- * **LEXICON LUOHTA-fem **
+ * **LEXICON LUOHTA-fem**
 
 
 
 
 
- * **LEXICON LUOHTA_PL ** similar to ALGA_PL X_PUUVSAH
+ * **LEXICON LUOHTA_PL** similar to ALGA_PL X_PUUVSAH
 
 
 
 
- * **LEXICON VUONA ** similar to ALGA
+ * **LEXICON VUONA** similar to ALGA
 
 
- * **LEXICON VUONA-plc ** similar to ALGA
+ * **LEXICON VUONA-plc** similar to ALGA
 
 
- * **LEXICON VUONA-fem ** similar to ALGA
+ * **LEXICON VUONA-fem** similar to ALGA
 
 
 
@@ -2728,52 +2728,52 @@ ANAR DUBAI DUBAI-plc DUBAI-sur MAKI
 
 
 
- * **LEXICON KURRA-plc ** similar to SOLLA
+ * **LEXICON KURRA-plc** similar to SOLLA
 
 
- * **LEXICON KURRA  ** similar to SOLLA
+ * **LEXICON KURRA** similar to SOLLA
 
 
- * **LEXICON KAAVA-plc ** similar to KIELA
+ * **LEXICON KAAVA-plc** similar to KIELA
 
 
- * **LEXICON KAAVA ** similar to KIELA 
+ * **LEXICON KAAVA** similar to KIELA 
 
 
- * **LEXICON NJOBZA ** similar to 2ALGA
+ * **LEXICON NJOBZA** similar to 2ALGA
 
- * **LEXICON NJOBZA-plc ** similar to 2ALGA
+ * **LEXICON NJOBZA-plc** similar to 2ALGA
 
- * **LEXICON NJOBZA-ani ** similar to 2ALGA
+ * **LEXICON NJOBZA-ani** similar to 2ALGA
 
 
 
- * **LEXICON LASSA-plc ** similar to FADDA
+ * **LEXICON LASSA-plc** similar to FADDA
 
 
- * **LEXICON LASSA  **  Similar to FADDA
+ * **LEXICON LASSA**  Similar to FADDA
 
 
 
 
- * **LEXICON JAVRI-plc ** jävri, jeggi
+ * **LEXICON JAVRI-plc** jävri, jeggi
 
 
- * **LEXICON JAVRI-mal ** 
+ * **LEXICON JAVRI-mal** 
 
- * **LEXICON JAVRI-fem ** 
+ * **LEXICON JAVRI-fem** 
 
 
- * **LEXICON JAVRI-ani ** 
+ * **LEXICON JAVRI-ani** 
 
- * **LEXICON JAVRI ** similar to AIGI, but only Sg. Some case forms should be deleted for names? Only difference to VUONA is Ess/Par. Are they in use for names?
+ * **LEXICON JAVRI** similar to AIGI, but only Sg. Some case forms should be deleted for names? Only difference to VUONA is Ess/Par. Are they in use for names?
 
 
 
- * **LEXICON JAAVRIH-plc **  JAVRI-plurals, e.g. Kähteejäävrih
+ * **LEXICON JAAVRIH-plc**  JAVRI-plurals, e.g. Kähteejäävrih
 
 
- * **LEXICON JAAVRIH **  plurals for JAVRI
+ * **LEXICON JAAVRIH**  plurals for JAVRI
 
 
 
@@ -2786,26 +2786,26 @@ ANAR DUBAI DUBAI-plc DUBAI-sur MAKI
 
 
 
- * **LEXICON VAARI   ** to SAAMI
+ * **LEXICON VAARI** to SAAMI
 
 
- * **LEXICON VAARI-plc ** 
+ * **LEXICON VAARI-plc** 
 
 
- * **LEXICON VAARIH-plc **  VAARI-plurals
+ * **LEXICON VAARIH-plc**  VAARI-plurals
 
 
- * **LEXICON VAARIH   ** VAARI-plurals
+ * **LEXICON VAARIH** VAARI-plurals
 
 
 
 
 
 
- * **LEXICON CIELGI ** to CAACI
+ * **LEXICON CIELGI** to CAACI
 
 
- * **LEXICON CIELGI-plc ** to CAACI
+ * **LEXICON CIELGI-plc** to CAACI
 
 
 
@@ -2813,170 +2813,170 @@ ANAR DUBAI DUBAI-plc DUBAI-sur MAKI
 
 
 
- * **LEXICON NYERI  ** similar to KYELI
+ * **LEXICON NYERI** similar to KYELI
 
 
- * **LEXICON NYERI-plc ** similar to KYELI
+ * **LEXICON NYERI-plc** similar to KYELI
 
 
 
- * **LEXICON TUPE **  Similar to NJUNE
+ * **LEXICON TUPE**  Similar to NJUNE
 
 
- * **LEXICON TUPE-plc **  Similar to NJUNE
+ * **LEXICON TUPE-plc**  Similar to NJUNE
 
 
- * **LEXICON TUPE-ani **  Similar to NJUNE
+ * **LEXICON TUPE-ani**  Similar to NJUNE
 
 
- * **LEXICON VASE-plc **  Similar to VAHE
+ * **LEXICON VASE-plc**  Similar to VAHE
 
 
- * **LEXICON VASE **
+ * **LEXICON VASE**
 
 
- * **LEXICON POHE ** nearly similar to VAHE
+ * **LEXICON POHE** nearly similar to VAHE
 
- * **LEXICON POHE-plc ** similar to VAHE
+ * **LEXICON POHE-plc** similar to VAHE
 
 
- * **LEXICON POHE-ani ** similar to VAHE
+ * **LEXICON POHE-ani** similar to VAHE
 
 
- * **LEXICON POHE-mal ** similar to VAHE
+ * **LEXICON POHE-mal** similar to VAHE
 
 
 
 
- * **LEXICON MOKKE ** similar to ALGE
+ * **LEXICON MOKKE** similar to ALGE
 
- * **LEXICON MOKKE-plc ** similar to ALGE 
+ * **LEXICON MOKKE-plc** similar to ALGE 
 
- * **LEXICON MOKKE- ur ** similar to ALGE 
+ * **LEXICON MOKKE-sur** similar to ALGE 
 
- * **LEXICON MOKKE-org ** similar to ALGE 
+ * **LEXICON MOKKE-org** similar to ALGE 
 
- * **LEXICON MOKKE-fem ** similar to ALGE 
+ * **LEXICON MOKKE-fem** similar to ALGE 
 
- * **LEXICON MOKKE-mal ** similar to ALGE 
+ * **LEXICON MOKKE-mal** similar to ALGE 
 
- * **LEXICON MOKKE-ani ** similar to ALGE 
+ * **LEXICON MOKKE-ani** similar to ALGE 
 
 
 
- * **LEXICON NIJTTO  **
+ * **LEXICON NIJTTO**
 
- * **LEXICON NIJTTO-plc **  Similar to SIJVO
+ * **LEXICON NIJTTO-plc**  Similar to SIJVO
 
 
- * **LEXICON ROTO  ** similar to LAJO and X_LAJO
+ * **LEXICON ROTO** similar to LAJO and X_LAJO
 
 
- * **LEXICON ROTO-plc ** similar to LAJO and X_LAJO 
+ * **LEXICON ROTO-plc** similar to LAJO and X_LAJO 
 
 
 
- * **LEXICON LAADUH ** 
+ * **LEXICON LAADUH** 
 
- * **LEXICON LAADUH-plc ** Plural to LUOHTA-plc
+ * **LEXICON LAADUH-plc** Plural to LUOHTA-plc
 
 
 
- * **LEXICON LONDON **
+ * **LEXICON LONDON**
 
 
- * **LEXICON LONDON-LOAN-obj **
- * **LEXICON LONDON-LOAN-org **
- * **LEXICON LONDON-LOAN-plc **
+ * **LEXICON LONDON-LOAN-obj**
+ * **LEXICON LONDON-LOAN-org**
+ * **LEXICON LONDON-LOAN-plc**
 
- * **LEXICON LONDON-ani **
- * **LEXICON LONDON-atr **
- * **LEXICON LONDON-fem **
+ * **LEXICON LONDON-ani**
+ * **LEXICON LONDON-atr**
+ * **LEXICON LONDON-fem**
 
- * **LEXICON LONDON-malfem **
+ * **LEXICON LONDON-malfem**
 
- * **LEXICON LONDON-malplc **
+ * **LEXICON LONDON-malplc**
 
- * **LEXICON LONDON-mal ur **
+ * **LEXICON LONDON-malsur**
 
- * **LEXICON LONDON-mal **
+ * **LEXICON LONDON-mal**
 
- * **LEXICON LONDON-obj **
+ * **LEXICON LONDON-obj**
 
- * **LEXICON LONDON-org ur **
+ * **LEXICON LONDON-orgsur**
 
- * **LEXICON LONDON-org **
+ * **LEXICON LONDON-org**
 
- * **LEXICON LONDON-orgplc **
+ * **LEXICON LONDON-orgplc**
 
 
- * **LEXICON LONDON_MWE-plc **
+ * **LEXICON LONDON_MWE-plc**
 
- * **LEXICON LONDON-plc **
+ * **LEXICON LONDON-plc**
 
- * **LEXICON LONDON- ur **
+ * **LEXICON LONDON-sur**
 
 
- * **LEXICON LONDONBERN-plc **
+ * **LEXICON LONDONBERN-plc**
 
 
 
 
- * **LEXICON AANAAR 	** Goes to EEMEED
+ * **LEXICON AANAAR** Goes to EEMEED
 
 
- * **LEXICON AANAAR-plc 	**
+ * **LEXICON AANAAR-plc**
 
- * **LEXICON AANAAR-mal 	**
+ * **LEXICON AANAAR-mal**
 
- * **LEXICON AANAAR-fem 	**
+ * **LEXICON AANAAR-fem**
 
 
 
 
 
- LEXICON KIARUN  = 3KIELES
+ LEXICON KIARUN = 3KIELES
 
 
- **LEXICON LUOBAL ** Similar to VEESKIR
+ **LEXICON LUOBAL** Similar to VEESKIR
 
- * **LEXICON LUOBAL-plc ** Similar to VEESKIR
+ * **LEXICON LUOBAL-plc** Similar to VEESKIR
 
 
 
- * **LEXICON LUOBBALEH ** plural forms 
+ * **LEXICON LUOBBALEH** plural forms 
 
 
- * **LEXICON LUOBBALEH-plc ** Plural to LUOBAL-plc
+ * **LEXICON LUOBBALEH-plc** Plural to LUOBAL-plc
 
- * **LEXICON LUOBBALEH-org ** Plural to LUOBAL-plc
+ * **LEXICON LUOBBALEH-org** Plural to LUOBAL-plc
 
- * **LEXICON LUOBBALEH-ani ** Plural to LUOBAL-plc
+ * **LEXICON LUOBBALEH-ani** Plural to LUOBAL-plc
 
 
 
- * **LEXICON MAARIT  ** 
+ * **LEXICON MAARIT** 
 
 
- * **LEXICON MAARIT-fem   similar to 3POTTAAK** 
+ * **LEXICON MAARIT-fem similar to 3POTTAAK** 
 
- * **LEXICON MAARIT-mal   similar to 3POTTAAK** 
+ * **LEXICON MAARIT-mal similar to 3POTTAAK** 
 
 
- * **LEXICON SAVO-plc ** similar to ALGA
+ * **LEXICON SAVO-plc** similar to ALGA
 
- * **LEXICON SAVO ** similar to ALGA
+ * **LEXICON SAVO** similar to ALGA
 
 
- * **LEXICON KUOLBA-plc ** similar to POOVSA
+ * **LEXICON KUOLBA-plc** similar to POOVSA
 
 
- * **LEXICON KUOLBA **  similar to POOVSA
+ * **LEXICON KUOLBA**  similar to POOVSA
 
 
 
 
- * **LEXICON LYEME ** 
+ * **LEXICON LYEME** 
 
 
 
@@ -2987,21 +2987,21 @@ ANAR DUBAI DUBAI-plc DUBAI-sur MAKI
 
 
 
- * **LEXICON ANDARAS **  this is for loanwords without stem change, 3-syll. cons end
+ * **LEXICON ANDARAS**  this is for loanwords without stem change, 3-syll. cons end
 
 
 
- * **LEXICON ANDARAS-mal ** similar to KUNAGAS
+ * **LEXICON ANDARAS-mal** similar to KUNAGAS
 
- * **LEXICON ANDARAS-org ** similar to KUNAGAS
+ * **LEXICON ANDARAS-org** similar to KUNAGAS
 
 
 
- * **LEXICON ANDARAS-plc ** similar to KUNAGAS
+ * **LEXICON ANDARAS-plc** similar to KUNAGAS
 
 
 
- * **LEXICON IANUDAH-plc **  Similar to 4JOTOLAH
+ * **LEXICON IANUDAH-plc**  Similar to 4JOTOLAH
 
 
 
@@ -3011,64 +3011,64 @@ ANAR DUBAI DUBAI-plc DUBAI-sur MAKI
 
 
 
- * **LEXICON KALDEE ** Similar to TAHHEE
+ * **LEXICON KALDEE** Similar to TAHHEE
 
- * **LEXICON KALDEE-plc **  Similar to TAHHEE
+ * **LEXICON KALDEE-plc**  Similar to TAHHEE
 
- * **LEXICON KALDEE-org **  Similar to TAHHEE
+ * **LEXICON KALDEE-org**  Similar to TAHHEE
 
 
- * **LEXICON KALDEE_PL-plc **  Similar to TAHHEE_PL
+ * **LEXICON KALDEE_PL-plc**  Similar to TAHHEE_PL
 
- * **LEXICON KALDEE-mal **
+ * **LEXICON KALDEE-mal**
 
- * **LEXICON KALDEE-fem **
+ * **LEXICON KALDEE-fem**
 
- * **LEXICON KALDEE_PL ** Similar to TAHHEE
+ * **LEXICON KALDEE_PL** Similar to TAHHEE
 
 
 
 
- * **LEXICON SUALUI  ** similar to PUASUI and KUAVSUI
+ * **LEXICON SUALUI** similar to PUASUI and KUAVSUI
 
 
 
- * **LEXICON SUALUI-plc ** similar to PUASUI and KUAVSUI. 
+ * **LEXICON SUALUI-plc** similar to PUASUI and KUAVSUI. 
 
 
 
- * **LEXICON SUOLLUUH-plc ** SUALUI-plc plurals 
+ * **LEXICON SUOLLUUH-plc** SUALUI-plc plurals 
 
 
- * **LEXICON SUOLLUUH  ** SUALUI-plc plurals 
+ * **LEXICON SUOLLUUH** SUALUI-plc plurals 
 
 
- * *LEXICON PIRUKAAMUV-plc  *
+ * *LEXICON PIRUKAAMUV-plc*
 
- * *LEXICON PIRUKAAMUV  *
+ * *LEXICON PIRUKAAMUV*
 
 
 
 
- **LEXICON PAALGIS  ** similar to KAARBIS
+ **LEXICON PAALGIS** similar to KAARBIS
 
- **LEXICON Prop_h_PL-plc **  gives %>h etc. to vowel stems
+ **LEXICON Prop_h_PL-plc**  gives %>h etc. to vowel stems
 
- **LEXICON Prop_h_PL **  gives %>h etc. to vowel stems
+ **LEXICON Prop_h_PL**  gives %>h etc. to vowel stems
 
 
 
 
 
- * **LEXICON HANNOLA-plc **
+ * **LEXICON HANNOLA-plc**
 
- * **LEXICON HANNOLA- ur **
+ * **LEXICON HANNOLA-sur**
 
 
 
 
 
- * **LEXICON ERVASTI  ** 
+ * **LEXICON ERVASTI** 
 
 
 
@@ -3080,139 +3080,139 @@ ANAR DUBAI DUBAI-plc DUBAI-sur MAKI
 
 
 
- * **LEXICON BISSAU-plc **
+ * **LEXICON BISSAU-plc**
 
 
- * **LEXICON ERVASTI-plcmal **
+ * **LEXICON ERVASTI-plcmal**
 
 
 
- * **LEXICON ERVASTI-fem **
+ * **LEXICON ERVASTI-fem**
 
 
- * **LEXICON ERVASTI-mal **
+ * **LEXICON ERVASTI-mal**
 
 
- * **LEXICON ERVASTI-obj **
+ * **LEXICON ERVASTI-obj**
 
- * **LEXICON ERVASTI-org **
+ * **LEXICON ERVASTI-org**
 
- * **LEXICON ERVASTI-plc **
+ * **LEXICON ERVASTI-plc**
 
- * **LEXICON ERVASTI- ur **
+ * **LEXICON ERVASTI-sur**
 
 
- * **LEXICON BERN **
+ * **LEXICON BERN**
 
 
- * **LEXICON BERN-LOAN-obj **
- * **LEXICON BERN-LOAN-org **
- * **LEXICON BERN-LOAN-plc **
+ * **LEXICON BERN-LOAN-obj**
+ * **LEXICON BERN-LOAN-org**
+ * **LEXICON BERN-LOAN-plc**
 
- * **LEXICON BERN-ani **
+ * **LEXICON BERN-ani**
 
 
- * **LEXICON BERN-fem **
+ * **LEXICON BERN-fem**
 
- * **LEXICON BERN-mal **
+ * **LEXICON BERN-mal**
 
- * **LEXICON BERN-obj ur **
- * **LEXICON BERN-obj **
- * **LEXICON BERN-org ur **
- * **LEXICON BERN-org **
+ * **LEXICON BERN-objsur**
+ * **LEXICON BERN-obj**
+ * **LEXICON BERN-orgsur**
+ * **LEXICON BERN-org**
 
 
- * **LEXICON BERN_MWE-plc **
+ * **LEXICON BERN_MWE-plc**
 
- * **LEXICON BERN-plc **
+ * **LEXICON BERN-plc**
 
- * **LEXICON BERN- urmal **
- * **LEXICON BERN- ur **
+ * **LEXICON BERN-surmal**
+ * **LEXICON BERN-sur**
 
 
- * **LEXICON OY-plc  ** ad hoc 
+ * **LEXICON OY-plc** ad hoc 
 
- * **LEXICON OY- ur  ** ad hoc 
+ * **LEXICON OY-sur** ad hoc 
 
- * **LEXICON OY-fem  ** ad hoc 
+ * **LEXICON OY-fem** ad hoc 
 
 
- * **LEXICON C-FI-NEN **
+ * **LEXICON C-FI-NEN**
 
 
- * **LEXICON C-FI-NEN-plc **
+ * **LEXICON C-FI-NEN-plc**
 
- * **LEXICON C-FI-NEN- ur **
+ * **LEXICON C-FI-NEN-sur**
 
- * **LEXICON C-FI-NEN-org **
+ * **LEXICON C-FI-NEN-org**
 
 
- * **LEXICON DUBAI **
+ * **LEXICON DUBAI**
 
- * **LEXICON DUBAI-mal **
+ * **LEXICON DUBAI-mal**
 
- * **LEXICON DUBAI-fem **
+ * **LEXICON DUBAI-fem**
 
- * **LEXICON DUBAI- ur **
+ * **LEXICON DUBAI-sur**
 
- * **LEXICON DUBAI-obj **
+ * **LEXICON DUBAI-obj**
 
- * **LEXICON DUBAI_MWE-plc **
+ * **LEXICON DUBAI_MWE-plc**
 
- * **LEXICON DUBAI-plc **
+ * **LEXICON DUBAI-plc**
 
- * **LEXICON DUBAI-org **
+ * **LEXICON DUBAI-org**
 
- * **LEXICON GATA-plc **
+ * **LEXICON GATA-plc**
 
- * **LEXICON JOKULL-plc **
+ * **LEXICON JOKULL-plc**
 
 
 
 
- * **LEXICON MAKI-plc **
+ * **LEXICON MAKI-plc**
 
- * **LEXICON MAKI- ur **
+ * **LEXICON MAKI-sur**
 
 
 
- * **LEXICON PIPPI-LOAN-plc **
+ * **LEXICON PIPPI-LOAN-plc**
 
- * **LEXICON PIPPI-ani **
- * **LEXICON PIPPI-fem ur **
+ * **LEXICON PIPPI-ani**
+ * **LEXICON PIPPI-femsur**
 
- * **LEXICON PIPPI-fem **
+ * **LEXICON PIPPI-fem**
 
- * **LEXICON PIPPI-malfem **
+ * **LEXICON PIPPI-malfem**
 
- * **LEXICON PIPPI-mal **
+ * **LEXICON PIPPI-mal**
 
- * **LEXICON PIPPI-obj **
- * **LEXICON PIPPI-org **
- * **LEXICON PIPPI_MWE-plc **
+ * **LEXICON PIPPI-obj**
+ * **LEXICON PIPPI-org**
+ * **LEXICON PIPPI_MWE-plc**
 
- * **LEXICON PIPPI-plc **
+ * **LEXICON PIPPI-plc**
 
- * **LEXICON PIPPI- ur **
+ * **LEXICON PIPPI-sur**
 
- * **LEXICON RONDANE-LOAN **
+ * **LEXICON RONDANE-LOAN**
 
 
- * **LEXICON RONDANE-SG-LOAN **
+ * **LEXICON RONDANE-SG-LOAN**
 
- * **LEXICON RONDANE-SG-plc **
+ * **LEXICON RONDANE-SG-plc**
 
- * **LEXICON RONDANE-fem **
+ * **LEXICON RONDANE-fem**
 
- * **LEXICON RONDANE-mal **
+ * **LEXICON RONDANE-mal**
 
- * **LEXICON RONDANE-obj **
- * **LEXICON RONDANE-org **
- * **LEXICON RONDANE-plc **
+ * **LEXICON RONDANE-obj**
+ * **LEXICON RONDANE-org**
+ * **LEXICON RONDANE-plc**
 
- * **LEXICON RONDANE- ur **
+ * **LEXICON RONDANE-sur**
 
- * **LEXICON RONDANE **
+ * **LEXICON RONDANE**
 
 
 
@@ -3234,23 +3234,23 @@ ANAR DUBAI DUBAI-plc DUBAI-sur MAKI
 
 
 
- * **LEXICON UAIVAS **   similar to KUAVDAS
+ * **LEXICON UAIVAS**   similar to KUAVDAS
 
 
- * **LEXICON UAIVAS-plc ** similar to KUAVDAS. 
+ * **LEXICON UAIVAS-plc** similar to KUAVDAS. 
 
 
 
 
 
- * **LEXICON SUANJU ** similar to LAAVU
+ * **LEXICON SUANJU** similar to LAAVU
 
- * **LEXICON SUANJU-plc ** similar to LAAVU
+ * **LEXICON SUANJU-plc** similar to LAAVU
 
 
- * **LEXICON SUANJU-ani ** similar to LAAVU
+ * **LEXICON SUANJU-ani** similar to LAAVU
 
- * **LEXICON SUANJU-fem ** similar to LAAVU
+ * **LEXICON SUANJU-fem** similar to LAAVU
 
 
 
@@ -3259,105 +3259,105 @@ ANAR DUBAI DUBAI-plc DUBAI-sur MAKI
 
 
 
- * **LEXICON EENA-plc ** no stem in stems/smn-propernouns.le≈c
+ * **LEXICON EENA-plc** no stem in stems/smn-propernouns.le≈c
 
 
 
- * **LEXICON EENNAM-plc ** similar to EEMEED
+ * **LEXICON EENNAM-plc** similar to EEMEED
 
- * **LEXICON EENNAM-mal ** similar to EEMEED
+ * **LEXICON EENNAM-mal** similar to EEMEED
 
- * **LEXICON EENNAM  ** similar to EEMEED
+ * **LEXICON EENNAM** similar to EEMEED
 
 
 
- * **LEXICON ENAMEH-plc ** similar to EEMEED
+ * **LEXICON ENAMEH-plc** similar to EEMEED
 
 
- * **LEXICON ENAMEH  **  plurals for EEMEED
+ * **LEXICON ENAMEH**  plurals for EEMEED
 
 
- * **LEXICON MAADIJ **  Similar to AARRAN
+ * **LEXICON MAADIJ**  Similar to AARRAN
 
- * **LEXICON MAADIJ-plc **  Similar to AARRAN
+ * **LEXICON MAADIJ-plc**  Similar to AARRAN
 
 
 
- * **LEXICON CUAJA ** similar to TAALU2
+ * **LEXICON CUAJA** similar to TAALU2
 
 
- * **LEXICON CUAJA-plc ** similar to TAALU2
+ * **LEXICON CUAJA-plc** similar to TAALU2
 
- * **LEXICON CUAJA-fem ** XXX check this
+ * **LEXICON CUAJA-fem** XXX check this
 
 
 
 
 
 
- * **LEXICON JAAVRAS-plc **  
+ * **LEXICON JAAVRAS-plc**  
 
- * **LEXICON JAAVRAS-mal **  
+ * **LEXICON JAAVRAS-mal**  
 
 
- * **LEXICON JAAVRAS **  
+ * **LEXICON JAAVRAS**  
 
- **LEXICON SUOLLUS-plc ** 
+ **LEXICON SUOLLUS-plc** 
 
 
- **LEXICON SUOLLUS ** 
+ **LEXICON SUOLLUS** 
 
 
 
- * **LEXICON JUUVAS-plc ** 
+ * **LEXICON JUUVAS-plc** 
 
 
 
 
- * **LEXICON VUONAS-plc ** 
+ * **LEXICON VUONAS-plc** 
 
- * **LEXICON VUONAS-ani **
+ * **LEXICON VUONAS-ani**
 
- * **LEXICON VUONAS-mal **
+ * **LEXICON VUONAS-mal**
 
 
- * **LEXICON VUONAS **  
+ * **LEXICON VUONAS**  
 
 
- * **LEXICON VUONIIH-plc ** Plural to VUONAS-plc
+ * **LEXICON VUONIIH-plc** Plural to VUONAS-plc
 
- * **LEXICON VUONIIH ** plural forms 
+ * **LEXICON VUONIIH** plural forms 
 
 
- * **LEXICON VAARAAS-plc **  
+ * **LEXICON VAARAAS-plc**  
 
 
- * **LEXICON VAARAAS **  vá^RVrá
+ * **LEXICON VAARAAS**  vá^RVrá
 
 
 
- * **LEXICON LAADUS **  
+ * **LEXICON LAADUS**  
 
- * **LEXICON LAADUS-plc ** 
+ * **LEXICON LAADUS-plc** 
 
 
 
- * **LEXICON LADDUUH **  
+ * **LEXICON LADDUUH**  
 
- * **LEXICON LADDUUH-plc **  Similar to SPALVAAS plural
+ * **LEXICON LADDUUH-plc**  Similar to SPALVAAS plural
 
 
- * **LEXICON AALAAS-plc **  Similar to ALGAAS
+ * **LEXICON AALAAS-plc**  Similar to ALGAAS
 
 
- * **LEXICON AALAAS ** 
+ * **LEXICON AALAAS** 
 
- * **LEXICON SIALGAS-plc **  Similar to KUAVDAS
+ * **LEXICON SIALGAS-plc**  Similar to KUAVDAS
 
- * **LEXICON SIALGAS-mal **  Similar to KUAVDAS
+ * **LEXICON SIALGAS-mal**  Similar to KUAVDAS
 
 
- * **LEXICON SIALGAS **  
+ * **LEXICON SIALGAS**  
 
 
 
@@ -3365,32 +3365,32 @@ ANAR DUBAI DUBAI-plc DUBAI-sur MAKI
 
 
 
- * **LEXICON SME_NAMES-org ** 
+ * **LEXICON SME_NAMES-org** 
 
 
- * **LEXICON SME_NAMES-mal ** 
+ * **LEXICON SME_NAMES-mal** 
 
- * **LEXICON SME_NAMES-fem **
+ * **LEXICON SME_NAMES-fem**
 
- * **LEXICON SME_NAMES- ur **
+ * **LEXICON SME_NAMES-sur**
 
- * **LEXICON SME_NAMES-plc **
+ * **LEXICON SME_NAMES-plc**
 
 
- * **LEXICON SME_NAMES_PERS ** Attr to North Saami person names
+ * **LEXICON SME_NAMES_PERS** Attr to North Saami person names
 
- * **LEXICON SME_NAMES ** temp. only Sg+Nom and Cmp to North Saami names
+ * **LEXICON SME_NAMES** temp. only Sg+Nom and Cmp to North Saami names
 
 
 
 
 
- * **LEXICON PERSNAME-NOMCMP ** e.g. Anttikandâ,  
+ * **LEXICON PERSNAME-NOMCMP** e.g. Anttikandâ,  
 
- * **LEXICON PERSNAME-GENCMP ** e.g. , Aanti-kyevtis
+ * **LEXICON PERSNAME-GENCMP** e.g. , Aanti-kyevtis
 
 
- * **LEXICON flagK ** 
+ * **LEXICON flagK** 
 
 
 
@@ -3822,7 +3822,7 @@ Unclassified verbs
 A note on morphophonology
 The consonant gradation setup for verbs is to a certain extent different
 from the one for nouns, namely:
-...
+
 
 
 
@@ -3831,8 +3831,10 @@ from the one for nouns, namely:
 
 ## Auxiliaries
 
+ **LEXICON NEG**  = lists all forms of the negation verb
 
 
+ **LEXICON LEDE**  = lists all forms of the copula
 
 
 
@@ -4189,7 +4191,7 @@ as 2SYLL_ID, but only 3 person
 
 
 
- ** __LEXICON VINFINITES_EELLID !  __
+ ** __LEXICON VINFINITES_EELLID !__
 
 
 
@@ -4698,19 +4700,19 @@ as 2SYLL_ID, but only 3 person
 
 # Flag section
 
- **LEXICON FLAG_3HUKSIM  ** should not be disallowed by ENDLEX @D.NeedNoun.ON@
+ **LEXICON FLAG_3HUKSIM** should not be disallowed by ENDLEX @D.NeedNoun.ON@
 
- **LEXICON FLAG_3KIEDAVUSSAM ** should not be disallowed by ENDLEX @D.NeedNoun.ON@
+ **LEXICON FLAG_3KIEDAVUSSAM** should not be disallowed by ENDLEX @D.NeedNoun.ON@
 
- **LEXICON FLAG_CTAHHEE ** should not be disallowed by ENDLEX @D.NeedNoun.ON@
-
-
+ **LEXICON FLAG_CTAHHEE** should not be disallowed by ENDLEX @D.NeedNoun.ON@
 
 
 
 
 
- **LEXICON FLAG_K ** should not be disallowed by ENDLEX @D.NeedNoun.ON@
+
+
+ **LEXICON FLAG_K** should not be disallowed by ENDLEX @D.NeedNoun.ON@
 
 
 
@@ -5042,11 +5044,11 @@ Trigger ordering in twolc and lexc, from left to right:
 Here we define the suffix border >
 The other borders are not used yet, but still defined:
 
- * ** «  **:  Derivational prefix
- * ** »  **:  Derivational suffix
- * ** %< **:  Inflectional prefx
- * ** %> **:  Inflectional suffix
- * ** %^ **:  (exceptional) soft hyphenation point
+ * **«**:  Derivational prefix
+ * **»**:  Derivational suffix
+ * **%<**:  Inflectional prefx
+ * **%>**:  Inflectional suffix
+ * **%^**:  (exceptional) soft hyphenation point
 and the symbol #, which is Word boundary for both lexicalised and dynamic compounds
 
 End of alphabet definitions

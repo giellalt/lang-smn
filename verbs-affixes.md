@@ -215,7 +215,7 @@ Unclassified verbs
 A note on morphophonology
 The consonant gradation setup for verbs is to a certain extent different
 from the one for nouns, namely:
-...
+
 
 
 
@@ -224,8 +224,10 @@ from the one for nouns, namely:
 
 ## Auxiliaries
 
+ **LEXICON NEG**  = lists all forms of the negation verb
 
 
+ **LEXICON LEDE**  = lists all forms of the copula
 
 
 
@@ -582,7 +584,7 @@ as 2SYLL_ID, but only 3 person
 
 
 
- ** __LEXICON VINFINITES_EELLID !  __
+ ** __LEXICON VINFINITES_EELLID !__
 
 
 
@@ -1091,19 +1093,19 @@ as 2SYLL_ID, but only 3 person
 
 # Flag section
 
- **LEXICON FLAG_3HUKSIM  ** should not be disallowed by ENDLEX @D.NeedNoun.ON@
+ **LEXICON FLAG_3HUKSIM** should not be disallowed by ENDLEX @D.NeedNoun.ON@
 
- **LEXICON FLAG_3KIEDAVUSSAM ** should not be disallowed by ENDLEX @D.NeedNoun.ON@
+ **LEXICON FLAG_3KIEDAVUSSAM** should not be disallowed by ENDLEX @D.NeedNoun.ON@
 
- **LEXICON FLAG_CTAHHEE ** should not be disallowed by ENDLEX @D.NeedNoun.ON@
-
-
+ **LEXICON FLAG_CTAHHEE** should not be disallowed by ENDLEX @D.NeedNoun.ON@
 
 
 
 
 
- **LEXICON FLAG_K ** should not be disallowed by ENDLEX @D.NeedNoun.ON@
+
+
+ **LEXICON FLAG_K** should not be disallowed by ENDLEX @D.NeedNoun.ON@
 
 
 
