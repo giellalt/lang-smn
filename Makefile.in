@@ -405,6 +405,7 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 MD_PAGES = root-morphology.md      \
+		compounding-morphology.md   \
 		adjectives-affixes.md    \
 		adjectives-stems.md      \
 		adpositions-stems.md     \
@@ -889,7 +890,7 @@ $(LINKS): $(VPATH_MD_PAGES)
 		then \
 			echo "* No in-source documentation" > $@ ;\
 		else \
-			echo $$(for file in "$^" ; do basename $$file; done) \
+			echo $$(for file in $^ ; do basename $$file; done) \
 				| tr ' ' '\n' \
 				| LC_COLLATE=C sed 's/[a-z0-9._-]*/* [&]\(&\)/g' \
 				> $@; \
