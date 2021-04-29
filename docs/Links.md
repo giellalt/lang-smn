@@ -1,4 +1,5 @@
 * [root-morphology.md](root-morphology.md)
+* [compounding-morphology.md](compounding-morphology.md)
 * [adjectives-affixes.md](adjectives-affixes.md)
 * [adjectives-stems.md](adjectives-stems.md)
 * [adpositions-stems.md](adpositions-stems.md)
