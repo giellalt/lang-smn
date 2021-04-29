@@ -1,23 +1,15 @@
-
-!! Inari Saami compounding
+!! #Inari Saami compounding
 !      =======================
-
-
 
 LEXICON Rhash !!≈ @CODE@ - adding lower # and pointing at R
  :#  R ;
 
-
-
 LEXICON R !!≈ @CODE@ -  Flags to control compounding
  @P.CmpFrst.FALSE@@P.CmpPref.FALSE@@D.CmpLast.TRUE@@D.CmpNone.TRUE@@U.CmpNone.FALSE@@P.CmpOnly.TRUE@ RAlmostReal ; 
-
-
 
 LEXICON  Rnoun !!≈ @CODE@ - 
                :#  Rreal ; ! pessijâšmoonijd
  +Attr+Err/Orth:    K ; ! pessijâš
-
 
 
 LEXICON RAlmostReal    !!≈ @CODE@ -  lexicalising the 3-part compounds, with the tag ShCmp
@@ -25,12 +17,10 @@ LEXICON RAlmostReal    !!≈ @CODE@ -  lexicalising the 3-part compounds, with t
  +Cmp#:# MiddleNouns ;         ! These nouns should not return to themselves, to avoid -jotjotjot-
 
 
-
 LEXICON Rreal !!≈ @CODE@ - This initial recursive/compounding lexicon adds flags to 
               !! control compounding, before going to the real compounding lexicon.
 	      !! This is the former R lexicon, renamed to avoid the MiddleNouns loop
  @P.CmpFrst.FALSE@@P.CmpPref.FALSE@@D.CmpLast.TRUE@@D.CmpNone.TRUE@@U.CmpNone.FALSE@@P.CmpOnly.TRUE@ RrealAfterCmpNFlags ; 
-
 
 
 LEXICON RrealAfterCmpNFlags !!≈ @CODE@ - coming from Rreal
@@ -40,7 +30,6 @@ LEXICON RrealAfterCmpNFlags !!≈ @CODE@ - coming from Rreal
          +Cmp/Hyph+Cmp#:#- ProperNoun     ; ! to other propernouns 
     +Cmp/SplitR+Cmp:-  #              ; ! split forms
 !         +Cmp#:#  #              ; ! For turning off compounding during testing
-
 
 LEXICON nounflag !!≈ @CODE@ -  coming from previous, going to the Root lexica
                  NounRoot      ; ! N+N always ok
