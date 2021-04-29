@@ -8,6 +8,7 @@
 # dir/filename.lexc => filename-dir.md
 
 MD_PAGES=root-morphology.md      \
+		compounding-morphology.md   \
 		adjectives-affixes.md    \
 		adjectives-stems.md      \
 		adpositions-stems.md     \

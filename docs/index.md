@@ -58,6 +58,7 @@ The Inari Saami MT project (2014-2016)
 Here's a list of documentation pages built from structured comments in the source code. All pages are concatenated and can be read as one long text [here](smn.md).
 
 * [root-morphology.md](root-morphology.md)
+* [compounding-morphology.md](compounding-morphology.md)
 * [adjectives-affixes.md](adjectives-affixes.md)
 * [adjectives-stems.md](adjectives-stems.md)
 * [adpositions-stems.md](adpositions-stems.md)
