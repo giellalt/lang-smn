@@ -1,0 +1,21 @@
+
+# Possessive suffixes for Inari Saami
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
