@@ -1624,7 +1624,7 @@ a rules
 * *ki^RVssá^SV^WG^CLEN^SLEN>st*
 * *ki0ssáá000>st*
 * *mi^RVllo^SV^WG^CLEN^SLEN>st*
-* *mi0lloo0000>st*
+* *mi0lloo000>st*
 * *huksi^SVm^SLEN>ist*
 * *huksiim0>ist*
 * *táál^RCu^SV^WG^RVSH^SLEN^SVLOW>st*
