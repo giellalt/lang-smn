@@ -5,7 +5,7 @@
 [![Issues](https://img.shields.io/github/issues/giellalt/lang-smn)](https://github.com/giellalt/lang-smn/issues)
 [![Build status](https://github.com/giellalt/lang-smn/workflows/Speller%20CI+CD/badge.svg)](https://github.com/giellalt/lang-smn/actions)
 
-This page documents the work on the **Inari Saami grammatical analyser**. 
+This page documents the work on the [Inari Saami grammatical analyser](http://github.com/giellalt/lang-smn). 
 
 ## Lingustic documentation
 
