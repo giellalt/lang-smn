@@ -57,6 +57,10 @@ The Inari Saami MT project (2014-2016)
 
 Here's a list of documentation pages built from structured comments in the source code. All pages are concatenated and can be read as one long text [here](smn.md).
 
+* [disambiguator-cg3-src.md](disambiguator-cg3-src.md)
+* [coredisambiguation-cg3-src.md](coredisambiguation-cg3-src.md)
+* [valency-cg3-src.md](valency-cg3-src.md)
+* [introdisambiguation-cg3-src.md](introdisambiguation-cg3-src.md)
 * [conjunctions-stems-fst-src.md](conjunctions-stems-fst-src.md)
 * [subjunctions-stems-fst-src.md](subjunctions-stems-fst-src.md)
 * [nouns-stems-fst-src.md](nouns-stems-fst-src.md)
@@ -86,3 +90,5 @@ Here's a list of documentation pages built from structured comments in the sourc
 * [transcriptor-abbrevs2text-transcriptions-src.md](transcriptor-abbrevs2text-transcriptions-src.md)
 * [transcriptor-numbers-digit2text-transcriptions-src.md](transcriptor-numbers-digit2text-transcriptions-src.md)
 * [transcriptor-date-digit2text-transcriptions-src.md](transcriptor-date-digit2text-transcriptions-src.md)
+* [spellchecker-grammarcheckers-tools.md](spellchecker-grammarcheckers-tools.md)
+* [grammarchecker-grammarcheckers-tools.md](grammarchecker-grammarcheckers-tools.md)

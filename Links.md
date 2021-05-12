@@ -1,3 +1,7 @@
+* [disambiguator-cg3-src.md](disambiguator-cg3-src.md)
+* [coredisambiguation-cg3-src.md](coredisambiguation-cg3-src.md)
+* [valency-cg3-src.md](valency-cg3-src.md)
+* [introdisambiguation-cg3-src.md](introdisambiguation-cg3-src.md)
 * [conjunctions-stems-fst-src.md](conjunctions-stems-fst-src.md)
 * [subjunctions-stems-fst-src.md](subjunctions-stems-fst-src.md)
 * [nouns-stems-fst-src.md](nouns-stems-fst-src.md)
@@ -27,3 +31,5 @@
 * [transcriptor-abbrevs2text-transcriptions-src.md](transcriptor-abbrevs2text-transcriptions-src.md)
 * [transcriptor-numbers-digit2text-transcriptions-src.md](transcriptor-numbers-digit2text-transcriptions-src.md)
 * [transcriptor-date-digit2text-transcriptions-src.md](transcriptor-date-digit2text-transcriptions-src.md)
+* [spellchecker-grammarcheckers-tools.md](spellchecker-grammarcheckers-tools.md)
+* [grammarchecker-grammarcheckers-tools.md](grammarchecker-grammarcheckers-tools.md)
