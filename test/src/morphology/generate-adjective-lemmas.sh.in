@@ -76,7 +76,7 @@ EXTEDITOR=@SEE@
 #  tr -d "%" | tr "€" " " | tr "¢" ":" | sort -u > $lemmas
 
 @GTCORE@/scripts/extract-lemmas.sh \
-  --exclude '(CmpN/Only|ShCmp|RCmpnd| Rreal | R | SUP|COMP | Rnoun |\+V\+)' \
+  --exclude '(CmpN/Only|ShCmp|RCmpnd| Rreal | R | SUP|COMP | Rnoun |\+V\+|\+Use\/MT)' \
     $source_file > $lemmas
 
 #grep ";" $source_file | \
