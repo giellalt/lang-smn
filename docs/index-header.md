@@ -41,6 +41,7 @@ This page documents the work on the [Inari Saami grammatical analyser](http://gi
     Cree](/lang-crk/developingwork.html)
 - [Automatic analysis of Inari Saami text](http://giellatekno.uit.no/cgi/d-smn.eng.html)
 
+[Test](Test.md)
 
 The Inari Saami MT project (2014-2016)
 --------------------------------------
