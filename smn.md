@@ -13945,6 +13945,9 @@ TODO: Move derivation lexica here
 
 # Inari Saami morphophonological rule file
 
+This file documents the [phonology.twolc file](http://github.com/giellalt/lang-smn/blob/main/src/fst/phonology.twolc) 
+
+
 Here we govern all morphophonological processes.
 
 # Alphabet 
