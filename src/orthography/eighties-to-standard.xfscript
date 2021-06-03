@@ -1,0 +1,44 @@
+! =====================================!
+! Orthographic converter for Inari Saami 
+! =====================================!
+
+! This program translates text written in the orthography
+! of the 80s into modern orthography.
+
+echo <<defining Cns and Vow...>>
+
+
+define Vow [ a | e | i | o | u | y | ä | á | â |  A | E | I | O | U | Y | Ä | Á | Â ] ; 
+
+
+define Cns [ b | c | č | d | đ | f | g | h | j | k | l | m | n | ŋ | p 
+           | r | s | š | t | v | w | x | z | ž 
+           | B | C | Č | D | Đ | F | G | H | J | K | L | M | N | Ŋ | P 
+           | R | S | Š | T | V | W | X | Z | Ž ] ;
+  
+
+echo << Rules>>
+
+define OA o a (->) u á ;
+
+define EA e ä (->) i ä ;
+
+define A a (->) â || (Cns) Vow+ Cns+ _ ;
+
+
+
+echo << Combining >>
+
+read regex [ OA
+.o. EA 
+.o. A ] ;
+
+# cd src/orthography/
+# xfst -e " source < oldorthography2norm.xfscript "
+# invert net
+# save o2n.fst
+# quit
+
+# poasui - puásui
+# kiela - kielâ
+
