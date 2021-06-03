@@ -21,7 +21,7 @@ GT_ORTHOGRAPHIC_XFSCRIPT_SRCS=\
 		spellrelax-with-tags.xfscript
 
 # Add extra targets here:
-GIELLA_ORTH_EXTRA_TARGETS=
+GIELLA_ORTH_EXTRA_TARGETS=standard-to-eighties.compose.hfst
 
 ###### BEGIN: local build rules below here: ######
 
