@@ -25,6 +25,9 @@ GIELLA_ORTH_EXTRA_TARGETS=standard-to-eighties.compose.hfst
 
 ###### BEGIN: local build rules below here: ######
 
+standard-to-eighties.compose.hfst: eighties-to-standard.compose.hfst
+		$(AM_V_HINVERT)$(HFST_INVERT) -i $< -o $@
+
 ######  END: local build rules above here.  ######
 
 # General build rules included from here:
