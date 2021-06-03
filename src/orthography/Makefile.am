@@ -15,6 +15,7 @@ GT_ORTHOGRAPHIC_REGEX_SRCS=\
 
 GT_ORTHOGRAPHIC_XFSCRIPT_SRCS=\
 		allcaps.xfscript      \
+		eighties-to-standard.xfscript \
 		downcase-derived_proper-strings.xfscript \
 		spellrelax-with-tags.xfscript
 
