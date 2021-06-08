@@ -24,12 +24,15 @@ jobs:
         with:
           spellers: false
           fst: hfst
+      - name: 💎 setup ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.6 # can change this to 2.7 or whatever version you prefer
       - name: 🔨 install dependencies & build site
         uses: limjh16/jekyll-action-ts@v2
         with:
           enable_cache: true
           jekyll_src: lang/docs/
-          gem_src: lang/docs/
       - name: 🚀 deploy gh pages
         uses: peaceiris/actions-gh-pages@v3
         with:
