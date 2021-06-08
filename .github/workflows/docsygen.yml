@@ -24,7 +24,11 @@ jobs:
         with:
           spellers: false
           fst: hfst
-      - name: deploy gh pages
+      - name: 🔨 install dependencies & build site
+        uses: limjh16/jekyll-action-ts@v2
+        with:
+          enable_cache: true
+      - name: 🚀 deploy gh pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
