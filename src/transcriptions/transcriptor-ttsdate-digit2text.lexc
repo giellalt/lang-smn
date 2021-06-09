@@ -1,0 +1,155 @@
+! Divvun & Giellatekno - open source grammars for Sámi and other languages
+! Copyright © 2000-2010 The University of Tromsø & the Norwegian Sámi Parliament
+! http://giellatekno.uit.no & http://divvun.no
+!
+! This program is free software; you can redistribute and/or modify
+! this file under the terms of the GNU General Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version. The GNU General Public License
+! is found at http://www.gnu.org/licenses/gpl.html. It is
+! also available in the file $GTHOME/LICENSE.txt.
+!
+! Other licensing options are available upon request, please contact
+! giellatekno@hum.uit.no or feedback@divvun.no
+
+! ==================== !
+!! # The Inari Sámi dates 
+! ==================== !
+
+
+!! This is a file generating Inari Sámi date expressions.
+
+
+! 12.8.
+! Porgemáánu kyehtnubálovváád peeivi
+! Borgemánu guoktenuppelot beaivi
+
+Multichar_Symbols
+
+@U.MONTH.1@ 
+@U.MONTH.2@ 
+@U.MONTH.3@ 
+@U.MONTH.4@ 
+@U.MONTH.5@ 
+@U.MONTH.6@ 
+@U.MONTH.7@ 
+@U.MONTH.8@ 
+@U.MONTH.9@ 
+@U.MONTH.10@ 
+@U.MONTH.11@ 
+@U.MONTH.12@ 
+
+
+LEXICON Root
+
+@U.MONTH.1@:uđđâivemáánu% @U.MONTH.1@ 31DAYS ;
+@U.MONTH.2@:kuovâmáánu% @U.MONTH.2@ 29DAYS ;
+@U.MONTH.3@:njuhčâmáánu% @U.MONTH.3@ 31DAYS ;
+@U.MONTH.4@:cuáŋuimáánu% @U.MONTH.4@ 30DAYS ;
+@U.MONTH.5@:vyesimáánu% @U.MONTH.5@ 31DAYS ;
+@U.MONTH.6@:kesimáánu% @U.MONTH.6@ 30DAYS ;
+@U.MONTH.7@:syeinimáánu% @U.MONTH.7@ 31DAYS ;
+@U.MONTH.8@:porgemáánu% @U.MONTH.8@ 31DAYS ;
+@U.MONTH.9@:čohčâmáánu% @U.MONTH.9@ 30DAYS ;
+@U.MONTH.10@:roovvâdmáánu% @U.MONTH.10@ 31DAYS ;
+@U.MONTH.11@:skammâmáánu% @U.MONTH.11@ 30DAYS ;
+@U.MONTH.12@:juovlâmáánu% @U.MONTH.12@ 31DAYS ;
+  
+  
+LEXICON 29DAYS
+1   B ;
+2   B ;
+3   B ;
+4   B ;
+5   B ;
+6   B ;
+7   B ;
+8   B ;
+9   B ;
+1%0 B ;
+11  B ;
+12  B ;
+13  B ;
+14  B ;
+15  B ;
+16  B ;
+17  B ;
+18  B ;
+19  B ;
+2%0 B ;
+21  B ;
+22  B ;
+23  B ;
+24  B ;
+25  B ;
+26  B ;
+27  B ;
+28  B ;
+29  B ;
+
+! Commenting out numeric-to-letter day, for Oahpa and giellatekno homepage.
+! Comment in again (or make separate) for use in TTS applications.
+
+!1:vuossâmuš B ;
+!2:nubbe B ;
+!3:kuálmád B ;
+!4:niäljád B ;
+!5:viiđât B ;
+!6:kuuđâd B ;
+!7:čiččâd B ;
+!8:káávcád B ;
+!9:oovcád B ;
+!1%0:lovváád B ;
+!11:oktnubálovvááđ B ;
+!12:kyehtnubálovvááđ B ;
+!13:kulmânubálovvááđ B ;
+!14:neljinubálovvááđ B ;
+!15:vittnubálovvááđ B ;
+!16:kuttnubálovvááđ B ;
+!17:čiččâmnubálovvááđ B ;
+!18:käävcinubálovvááđ B ;
+!19:oovcenubálovvááđ B ;
+!2%0:kyehtnubálovváád B ;
+!21:kyehtnubálovváádvuossâmuš B ;
+!22:kyehtnubálovváádnubbe B ;
+!23:kyehtnubálovváádkuálmád B ;
+!24:kyehtnubálovváádniäljád B ;
+!25:kyehtnubálovváádviiđâd B ;
+!26:kyehtnubálovváádkuuđâd B ;
+!27:kyehtnubálovváádčiččâd B ;
+!28:kyehtnubálovváádkáávcád B ;
+!29:kyehtnubálovváádoovcád B ;
+  
+LEXICON 30DAYS
+3%0 B ;
+!3%0:kulmâlovváád B ;
+29DAYS ;
+  
+LEXICON 31DAYS
+31 B ;
+!31:kulmâlovváádvuossâmuš  B ;
+30DAYS ;
+  
+  
+LEXICON B
+%.:%.% peivi MONTH ;        ! written form: 12. b.
+%.+Use/NG:%.peivi MONTH ;   ! sloppy form: 12.b.
+!%.:% peeivi  MONTH ;     ! TTS form: peeivi
+
+  
+LEXICON MONTH
+1@U.MONTH.1@:@U.MONTH.1@ X ;
+2@U.MONTH.2@:@U.MONTH.2@ X ;
+3@U.MONTH.3@:@U.MONTH.3@ X ;
+4@U.MONTH.4@:@U.MONTH.4@ X ;
+5@U.MONTH.5@:@U.MONTH.5@ X ;
+6@U.MONTH.6@:@U.MONTH.6@ X ;
+7@U.MONTH.7@:@U.MONTH.7@ X ;
+8@U.MONTH.8@:@U.MONTH.8@ X ;
+9@U.MONTH.9@:@U.MONTH.9@ X ;
+1%0@U.MONTH.10@:1%0@U.MONTH.10@ X ;
+11@U.MONTH.11@:11@U.MONTH.11@ X ;
+12@U.MONTH.12@:12@U.MONTH.12@ X ;
+  
+LEXICON X
+%.: # ;
