@@ -1,12 +1,7 @@
 
-# The Inari Sámi dates 
-
+# The Inari Sámi dates
 
 This is a file generating Inari Sámi date expressions.
-
-
-
-
 
 
 

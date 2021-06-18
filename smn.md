@@ -1,4 +1,1033 @@
 
+
+
+
+
+
+
+# DELIMITERS 
+
+Sentence delimiters are the following: <.> <!> <?> <...> <¶>
+
+
+# TAGS AND SETS
+
+
+
+## Tags
+
+
+This section lists all the tags inherited from the fst, and used as tags
+in the syntactic analysis. The next section, **Sets**, contains sets defined
+on the basis of the tags listed here, those set names are not visible in the output.
+
+
+
+
+### Beginning and end of sentence
+BOS 
+EOS
+
+
+
+### Parts of speech tags
+
+N
+A
+Adv
+V
+Pron
+CS
+CC
+Po
+Pr
+Pcle
+Num
+Interj
+ABBR
+ACR
+CLB
+LEFT
+RIGHT
+WEB
+PUNCT 
+
+
+
+
+### Tags for POS sub-categories
+
+Pers
+Dem
+Interr
+Indef
+Recipr
+Refl
+Rel
+Coll
+NomAg
+G3
+Prop
+
+
+
+### Tags for morphosyntactic properties
+
+Nom
+Acc
+Gen
+Ill
+Loc
+Com
+Ess
+Sg
+Du
+Pl
+RCmpnd
+Cmpnd
+SgNomCmp
+SgGenCmp
+ShCmp
+PxSg1
+PxSg2
+PxSg3
+PxDu1
+PxDu2
+PxDu3
+PxPl1
+PxPl2
+PxPl3
+Comp
+Superl
+Attr
+Ord
+Qst
+IV
+TV 
+Prt
+Prs
+Ind
+Pot
+Cond
+Imprt
+ImprtII
+Sg1
+Sg2
+Sg3
+Du1
+Du2
+Du3
+Pl1
+Pl2
+Pl3
+Inf
+ConNeg
+Neg
+PrfPrc
+VGen
+PrsPrc
+Ger
+Sup
+Actio
+
+
+### Tags for clitic particles
+Foc/ge
+Foc/gen
+Foc/ges
+Foc/gis
+Foc/naj
+Foc/ba
+Foc/be
+Foc/hal
+Foc/han
+Foc/bat
+Foc/son
+
+
+### Derivation tags
+
+Der/PassL Der/PassS
+Der/NomAg
+NomAg
+Der/adda
+Der/ahtti
+Der/alla
+Der/asti
+Der/easti
+Der/d
+Der/eaddji
+Der/eamoš
+Der/amoš
+Der/geahtes
+Der/gielat
+Der/NuA (what is NuA?) 
+Der/h
+Der/heapmi
+Der/hudda
+Der/huhtti
+Der/huvva
+Der/halla
+Der/j
+Der/l
+Der/laš
+Der/las
+Der/hat
+Der/mállet
+Der/meahttun
+Der/muš
+Der/NomAct
+Der/st
+Der/stuvva
+Der/upmi
+Der/supmi
+Der/vuotâ
+Der/kyetti
+Der/lagan
+Der/lágán
+Der/lágaš
+Der/jagáš
+Der/jahkásaš
+Der/diibmosaš
+Der/dássásaš
+Der/A
+Der/Dimin
+Der/viđá
+Der/viđi
+Der/veara
+Der/duohke
+Der/duohkai
+Der/vuolle
+Der/vuollai
+Der/vuolde
+<vdic>
+
+
+### Semantic tags
+
+
+
+
+
+
+
+###  Syntactic tags
+
+@+FAUXV
+@+FMAINV
+@-FAUXV
+@-FMAINV
+@-FSUBJ>
+@-F<OBJ
+@-FOBJ>
+@-FSPRED<OBJ
+@-F<ADVL
+@-FADVL>
+@-F<SPRED
+@-F<OPRED
+@-FSPRED>
+@-FOPRED>
+@>ADVL
+@ADVL<
+@<ADVL
+@ADVL>
+@ADVL
+@HAB>
+@<HAB
+@>N
+@>Interj
+@N<
+@>A
+@P<
+@>P
+@HNOUN
+@INTERJ
+@>Num
+@Pron<
+@>Pron
+@Num<
+@OBJ
+@<OBJ
+@OBJ>
+@OPRED
+@<OPRED
+@OPRED>
+@PCLE
+@COMP-CS<
+@SPRED
+@<SPRED
+@SPRED>
+@SUBJ
+@<SUBJ
+@SUBJ>
+@PPRED
+@APP
+@APP-N<
+@APP-Pron<
+@APP>Pron
+@APP-Num<
+@APP-ADVL<
+@VOC
+@CVP
+@CNP
+@X
+
+
+
+
+
+## Sets containing sets of lists and tags
+
+This part of the file lists a large number of sets based partly upon the tags defined above, and 
+partly upon lexemes drawn from the lexicon.
+See the sourcefile itself to inspect the sets, what follows here is an overview of the set types.
+
+
+
+### Sets for Single-word sets
+
+OKTA and go, and the set INITIAL for initial letters 
+OKTA
+go
+INITIAL
+
+
+### Sets for word or not
+
+WORD
+REAL-WORD
+REAL-WORD-NOT-ABBR
+WORD-NOT-de
+NOT-COMMA
+
+
+### Derivational affixes
+
+DER-V
+
+DER-N
+
+DER-A1
+
+DER-A
+
+A-V
+
+A-NOT-V
+
+### Case sets
+
+ADLVCASE
+
+
+CASE-HALFAGREEMENT
+CASE-AGREEMENT
+CASE
+
+NOT-NOM
+NOT-GEN
+NOT-ACC
+
+### Verb sets
+
+
+NOT-V
+
+### Sets for finiteness and mood
+
+REAL-NEG
+
+MOOD-V
+
+GC
+
+VFIN
+
+VFIN-POS
+
+VFIN-NOT-IMPRT
+
+VFIN-NOT-NEG
+
+NOT-PRFPRC
+
+
+### Sets for person
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Sets consisting of forms of "leđe" (these ones need to be rewritten)
+
+
+
+
+### Pronoun sets
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Adjectival sets and their complements
+
+
+
+
+
+
+
+
+
+### Adverbial sets and their complements
+
+
+
+
+
+
+
+
+
+
+### Sets for coordinators
+
+
+
+
+
+
+
+
+### Sets for adverbs that have lookalikes
+Here come some adverbs that have identical twins in other POS. 
+If these are found in Adv contexts, we treat them as adverbs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Sets of elements with common syntactic behaviour
+
+
+### Sets for verbs
+
+
+V is all readings with a V tag in them, REAL-V should
+be the ones without an N tag following the V.  
+The REAL-V set thus awaits a fix to the preprocess V ... N bug.
+
+
+
+* The set COPULAS is for predicative constructions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TRANS-V is the set for verbs really taking objects
+
+
+
+
+* Sets for verbs choosing oblique objects or adverbials
+* **STVLIST** is the list of strictly transitive verbs. In the rules, refer not to STVLIST, but to the set STV defined below.
+
+
+
+STRICT-TRANS-V is the set for verbs which don't let a GenAcc be a modifier of anything else than an object, e.g. Mun organiseren eatni gievkkanis. - eatni wants to be the object
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Valency sets
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* **PLACE-V** Those get only not locative if the target is a member TOOL, ABSTR-TOOL or ANIMATE or CONCEPT. Selects more locatives than ONLY-PLACE-LOC-V 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Adverb sets
+
+
+
+
+
+
+
+
+
+### Adjective sets
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### NP sets defined according to their morphosyntactic features
+
+
+
+
+
+
+
+
+
+
+### The PRE-NP-HEAD family of sets
+
+These sets model noun phrases (NPs). The idea is to first define whatever can
+occur in front of the head of the NP, and thereafter negate that with the
+expression **WORD - premodifiers**.
+
+
+
+
+
+
+
+
+
+
+
+The set **NOT-NPMOD** is used to find barriers between NPs.
+Typical usage: ... (*1 N BARRIER NPT-NPMOD) ...
+meaning: Scan to the first noun, ignoring anything that can be
+part of the noun phrase of that noun (i.e., "scan to the next NP head")
+
+
+
+
+
+
+### Other negatively defined morphosyntactic noun sets
+
+
+
+
+
+
+
+
+
+
+
+
+### Noun sets
+
+Nominal sets defined according to their morphophonological properties
+Sets for lexeme homonymy (most of them are moved to where the actual rules are.)
+
+
+The words in the set **N-PO** can be both N and Po, the set takes that into account.
+
+
+### The LAHKA set family
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Nominal sets defined according to their semantical properties
+
+
+* Spatial noun sets. These nouns behave like postpositions
+
+
+
+
+* Time sets
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* Amount sets
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* Sets for nouns with morpho-syntactic preferences
+
+* Number-related sets
+
+
+
+
+
+
+* Sets for case, possessive, etc.
+
+
+
+
+
+
+
+
+
+
+
+
+
+* Sets for nouns as pred
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* Sets for animals
+
+
+
+
+
+
+
+
+
+
+
+
+
+* Sets for things
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* Sets for qualities
+
+
+* Sets for things, not necessarily tools
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* Sets for things such that people can be inside them:
+
+* Sets for things such that people cannot be inside them:
+
+
+
+
+
+
+* Part-whole sets for human
+
+
+
+
+* Sets for places
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* Sets that can both be buildings/places and represent humans
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* Sets denoting relations
+
+
+
+
+
+### Miscellaneous sets
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Border sets and their complements
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Multilingual sets
+
+
+Conjunction sets
+
+
+
+### Syntactic sets
+
+ALLSYNTAG
+NON-APP
+
+*These were the set types.*
+
+
+
 I N A R I   S A A M I   D I S A M B I G U A T O R               
 ==================================================================
 
@@ -3556,1500 +4585,6 @@ Test: Go for minimal weight.
 These 12 substitute rules add the <smn> language code to all words, to govern 
 their behaviour in the subsequent cg files. The rules are removed when this
 file is ported to Apertium.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -9257,354 +8792,46 @@ The previous two rules look marginal.
 
 
 
-# DELIMITERS 
-
-Sentence delimiters are the following: <.> <!> <?> <...> <¶>
-
-
-# TAGS AND SETS
-
-
-
-## Tags
-
-
-This section lists all the tags inherited from the fst, and used as tags
-in the syntactic analysis. The next section, **Sets**, contains sets defined
-on the basis of the tags listed here, those set names are not visible in the output.
-
-
-
-
-### Beginning and end of sentence
-BOS 
-EOS
-
-
-
-### Parts of speech tags
-
-N
-A
-Adv
-V
-Pron
-CS
-CC
-Po
-Pr
-Pcle
-Num
-Interj
-ABBR
-ACR
-CLB
-LEFT
-RIGHT
-WEB
-PUNCT 
-
-
-
-
-### Tags for POS sub-categories
-
-Pers
-Dem
-Interr
-Indef
-Recipr
-Refl
-Rel
-Coll
-NomAg
-G3
-Prop
-
-
-
-### Tags for morphosyntactic properties
-
-Nom
-Acc
-Gen
-Ill
-Loc
-Com
-Ess
-Sg
-Du
-Pl
-RCmpnd
-Cmpnd
-SgNomCmp
-SgGenCmp
-ShCmp
-PxSg1
-PxSg2
-PxSg3
-PxDu1
-PxDu2
-PxDu3
-PxPl1
-PxPl2
-PxPl3
-Comp
-Superl
-Attr
-Ord
-Qst
-IV
-TV 
-Prt
-Prs
-Ind
-Pot
-Cond
-Imprt
-ImprtII
-Sg1
-Sg2
-Sg3
-Du1
-Du2
-Du3
-Pl1
-Pl2
-Pl3
-Inf
-ConNeg
-Neg
-PrfPrc
-VGen
-PrsPrc
-Ger
-Sup
-Actio
-
-
-### Tags for clitic particles
-Foc/ge
-Foc/gen
-Foc/ges
-Foc/gis
-Foc/naj
-Foc/ba
-Foc/be
-Foc/hal
-Foc/han
-Foc/bat
-Foc/son
-
-
-### Derivation tags
-
-Der/PassL Der/PassS
-Der/NomAg
-NomAg
-Der/adda
-Der/ahtti
-Der/alla
-Der/asti
-Der/easti
-Der/d
-Der/eaddji
-Der/eamoš
-Der/amoš
-Der/geahtes
-Der/gielat
-Der/NuA (what is NuA?) 
-Der/h
-Der/heapmi
-Der/hudda
-Der/huhtti
-Der/huvva
-Der/halla
-Der/j
-Der/l
-Der/laš
-Der/las
-Der/hat
-Der/mállet
-Der/meahttun
-Der/muš
-Der/NomAct
-Der/st
-Der/stuvva
-Der/upmi
-Der/supmi
-Der/vuotâ
-Der/kyetti
-Der/lagan
-Der/lágán
-Der/lágaš
-Der/jagáš
-Der/jahkásaš
-Der/diibmosaš
-Der/dássásaš
-Der/A
-Der/Dimin
-Der/viđá
-Der/viđi
-Der/veara
-Der/duohke
-Der/duohkai
-Der/vuolle
-Der/vuollai
-Der/vuolde
-<vdic>
-
-
-### Semantic tags
-
-
-
-
-
-
-
-###  Syntactic tags
-
-@+FAUXV
-@+FMAINV
-@-FAUXV
-@-FMAINV
-@-FSUBJ>
-@-F<OBJ
-@-FOBJ>
-@-FSPRED<OBJ
-@-F<ADVL
-@-FADVL>
-@-F<SPRED
-@-F<OPRED
-@-FSPRED>
-@-FOPRED>
-@>ADVL
-@ADVL<
-@<ADVL
-@ADVL>
-@ADVL
-@HAB>
-@<HAB
-@>N
-@>Interj
-@N<
-@>A
-@P<
-@>P
-@HNOUN
-@INTERJ
-@>Num
-@Pron<
-@>Pron
-@Num<
-@OBJ
-@<OBJ
-@OBJ>
-@OPRED
-@<OPRED
-@OPRED>
-@PCLE
-@COMP-CS<
-@SPRED
-@<SPRED
-@SPRED>
-@SUBJ
-@<SUBJ
-@SUBJ>
-@PPRED
-@APP
-@APP-N<
-@APP-Pron<
-@APP>Pron
-@APP-Num<
-@APP-ADVL<
-@VOC
-@CVP
-@CNP
-@X
 
 
 
 
 
-## Sets containing sets of lists and tags
 
-This part of the file lists a large number of sets based partly upon the tags defined above, and 
-partly upon lexemes drawn from the lexicon.
-See the sourcefile itself to inspect the sets, what follows here is an overview of the set types.
 
 
 
-### Sets for Single-word sets
 
-OKTA and go, and the set INITIAL for initial letters 
-OKTA
-go
-INITIAL
 
 
-### Sets for word or not
 
-WORD
-REAL-WORD
-REAL-WORD-NOT-ABBR
-WORD-NOT-de
-NOT-COMMA
 
 
-### Derivational affixes
 
-DER-V
 
-DER-N
 
-DER-A1
 
-DER-A
 
-A-V
 
-A-NOT-V
 
-### Case sets
 
-ADLVCASE
 
 
-CASE-HALFAGREEMENT
-CASE-AGREEMENT
-CASE
 
-NOT-NOM
-NOT-GEN
-NOT-ACC
 
-### Verb sets
 
 
-NOT-V
 
-### Sets for finiteness and mood
 
-REAL-NEG
 
-MOOD-V
 
-GC
 
-VFIN
 
-VFIN-POS
 
-VFIN-NOT-IMPRT
 
-VFIN-NOT-NEG
 
-NOT-PRFPRC
 
 
-### Sets for person
 
 
 
@@ -9620,12 +8847,10 @@ NOT-PRFPRC
 
 
 
-### Sets consisting of forms of "leđe" (these ones need to be rewritten)
 
 
 
 
-### Pronoun sets
 
 
 
@@ -9642,7 +8867,6 @@ NOT-PRFPRC
 
 
 
-### Adjectival sets and their complements
 
 
 
@@ -9652,7 +8876,6 @@ NOT-PRFPRC
 
 
 
-### Adverbial sets and their complements
 
 
 
@@ -9663,7 +8886,6 @@ NOT-PRFPRC
 
 
 
-### Sets for coordinators
 
 
 
@@ -9672,9 +8894,6 @@ NOT-PRFPRC
 
 
 
-### Sets for adverbs that have lookalikes
-Here come some adverbs that have identical twins in other POS. 
-If these are found in Adv contexts, we treat them as adverbs.
 
 
 
@@ -9690,19 +8909,13 @@ If these are found in Adv contexts, we treat them as adverbs.
 
 
 
-### Sets of elements with common syntactic behaviour
 
 
-### Sets for verbs
 
 
-V is all readings with a V tag in them, REAL-V should
-be the ones without an N tag following the V.  
-The REAL-V set thus awaits a fix to the preprocess V ... N bug.
 
 
 
-* The set COPULAS is for predicative constructions
 
 
 
@@ -9717,17 +8930,13 @@ The REAL-V set thus awaits a fix to the preprocess V ... N bug.
 
 
 
-TRANS-V is the set for verbs really taking objects
 
 
 
 
-* Sets for verbs choosing oblique objects or adverbials
-* **STVLIST** is the list of strictly transitive verbs. In the rules, refer not to STVLIST, but to the set STV defined below.
 
 
 
-STRICT-TRANS-V is the set for verbs which don't let a GenAcc be a modifier of anything else than an object, e.g. Mun organiseren eatni gievkkanis. - eatni wants to be the object
 
 
 
@@ -9752,7 +8961,6 @@ STRICT-TRANS-V is the set for verbs which don't let a GenAcc be a modifier of an
 
 
 
-### Valency sets
 
 
 
@@ -9805,7 +9013,6 @@ STRICT-TRANS-V is the set for verbs which don't let a GenAcc be a modifier of an
 
 
 
-* **PLACE-V** Those get only not locative if the target is a member TOOL, ABSTR-TOOL or ANIMATE or CONCEPT. Selects more locatives than ONLY-PLACE-LOC-V 
 
 
 
@@ -9826,7 +9033,6 @@ STRICT-TRANS-V is the set for verbs which don't let a GenAcc be a modifier of an
 
 
 
-### Adverb sets
 
 
 
@@ -9836,7 +9042,6 @@ STRICT-TRANS-V is the set for verbs which don't let a GenAcc be a modifier of an
 
 
 
-### Adjective sets
 
 
 
@@ -9859,7 +9064,6 @@ STRICT-TRANS-V is the set for verbs which don't let a GenAcc be a modifier of an
 
 
 
-### NP sets defined according to their morphosyntactic features
 
 
 
@@ -9870,11 +9074,7 @@ STRICT-TRANS-V is the set for verbs which don't let a GenAcc be a modifier of an
 
 
 
-### The PRE-NP-HEAD family of sets
 
-These sets model noun phrases (NPs). The idea is to first define whatever can
-occur in front of the head of the NP, and thereafter negate that with the
-expression **WORD - premodifiers**.
 
 
 
@@ -9886,17 +9086,12 @@ expression **WORD - premodifiers**.
 
 
 
-The set **NOT-NPMOD** is used to find barriers between NPs.
-Typical usage: ... (*1 N BARRIER NPT-NPMOD) ...
-meaning: Scan to the first noun, ignoring anything that can be
-part of the noun phrase of that noun (i.e., "scan to the next NP head")
 
 
 
 
 
 
-### Other negatively defined morphosyntactic noun sets
 
 
 
@@ -9909,16 +9104,11 @@ part of the noun phrase of that noun (i.e., "scan to the next NP head")
 
 
 
-### Noun sets
 
-Nominal sets defined according to their morphophonological properties
-Sets for lexeme homonymy (most of them are moved to where the actual rules are.)
 
 
-The words in the set **N-PO** can be both N and Po, the set takes that into account.
 
 
-### The LAHKA set family
 
 
 
@@ -9935,15 +9125,12 @@ The words in the set **N-PO** can be both N and Po, the set takes that into acco
 
 
 
-### Nominal sets defined according to their semantical properties
 
 
-* Spatial noun sets. These nouns behave like postpositions
 
 
 
 
-* Time sets
 
 
 
@@ -9975,7 +9162,6 @@ The words in the set **N-PO** can be both N and Po, the set takes that into acco
 
 
 
-* Amount sets
 
 
 
@@ -9994,16 +9180,13 @@ The words in the set **N-PO** can be both N and Po, the set takes that into acco
 
 
 
-* Sets for nouns with morpho-syntactic preferences
 
-* Number-related sets
 
 
 
 
 
 
-* Sets for case, possessive, etc.
 
 
 
@@ -10017,7 +9200,6 @@ The words in the set **N-PO** can be both N and Po, the set takes that into acco
 
 
 
-* Sets for nouns as pred
 
 
 
@@ -10058,7 +9240,6 @@ The words in the set **N-PO** can be both N and Po, the set takes that into acco
 
 
 
-* Sets for animals
 
 
 
@@ -10072,7 +9253,6 @@ The words in the set **N-PO** can be both N and Po, the set takes that into acco
 
 
 
-* Sets for things
 
 
 
@@ -10097,10 +9277,8 @@ The words in the set **N-PO** can be both N and Po, the set takes that into acco
 
 
 
-* Sets for qualities
 
 
-* Sets for things, not necessarily tools
 
 
 
@@ -10119,21 +9297,17 @@ The words in the set **N-PO** can be both N and Po, the set takes that into acco
 
 
 
-* Sets for things such that people can be inside them:
 
-* Sets for things such that people cannot be inside them:
 
 
 
 
 
 
-* Part-whole sets for human
 
 
 
 
-* Sets for places
 
 
 
@@ -10164,7 +9338,6 @@ The words in the set **N-PO** can be both N and Po, the set takes that into acco
 
 
 
-* Sets that can both be buildings/places and represent humans
 
 
 
@@ -10221,13 +9394,11 @@ The words in the set **N-PO** can be both N and Po, the set takes that into acco
 
 
 
-* Sets denoting relations
 
 
 
 
 
-### Miscellaneous sets
 
 
 
@@ -10248,7 +9419,6 @@ The words in the set **N-PO** can be both N and Po, the set takes that into acco
 
 
 
-### Border sets and their complements
 
 
 
@@ -10264,57 +9434,1074 @@ The words in the set **N-PO** can be both N and Po, the set takes that into acco
 
 
 
-### Multilingual sets
 
 
-Conjunction sets
 
 
 
-### Syntactic sets
 
-ALLSYNTAG
-NON-APP
 
-*These were the set types.*
 
 
-#Inari Saami compounding
 
- LEXICON Rhash - adding lower # and pointing at R
 
- LEXICON R -  Flags to control compounding
 
- LEXICON Rnoun - 
 
 
- LEXICON RAlmostReal -  lexicalising the 3-part compounds, with the tag ShCmp
 
 
- LEXICON Rreal - This initial recursive/compounding lexicon adds flags to 
-control compounding, before going to the real compounding lexicon.
-This is the former R lexicon, renamed to avoid the MiddleNouns loop
 
 
- LEXICON RrealAfterCmpNFlags - coming from Rreal
 
- LEXICON nounflag -  coming from previous, going to the Root lexica
 
 
- LEXICON RHyph - This initial recursive/compounding lexicon adds flags to
-control compounding, before going to the real compounding lexicon
 
- LEXICON RHyph_after_cmp_flags - from RHyph
 
- LEXICON RProp - This initial recursive/compounding lexicon adds flags to
-control compounding, before going to the real compounding lexicon
 
- - LEXICON RProp_after_cmp_flags from RProp
 
- LEXICON RNum - This initial recursive/compounding lexicon adds flags to
-control compounding, before going to the real compounding lexicon
 
- LEXICON RNum_after_cmp_flags - going to Noun, should it be to NounRoot?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Possessive suffixes for Inari Saami
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Symbol affixes
+
+
+
+
+
+
+
+# Continuation lexicons for abbreviations
+
+## Lexica for adding tags and periods
+
+## The sublexica
+
+### Continuation lexicons for abbrs both with and witout final period
+
+
+ * **LEXICON ab-noun**
+
+ * **LEXICON ab-adj**
+
+ * **LEXICON ab-adv**
+
+ * **LEXICON ab-num**
+
+### Lexicons without final period
+
+ * **LEXICON ab-nodot-noun**  The bulk
+
+ * **LEXICON ab-nodot-adj**
+
+ * **LEXICON ab-nodot-adv**
+
+ * **LEXICON ab-nodot-num**
+
+### Lexicons with final period
+
+ * **LEXICON ab-dot-noun**  This is the lexicon for abbrs that must have a period.
+
+ * **LEXICON ab-dot-adj**  This is the lexicon for abbrs that must have a period.
+
+ * **LEXICON ab-dot-adv**  This is the lexicon for abbrs that must have a period.
+
+ * **LEXICON ab-dot-num**  This is the lexicon for abbrs that must have a period.
+
+ * **LEXICON ab-dot-cc**
+
+
+
+ * **LEXICON ab-verb**  A lexicon for "gč." and perhaps also other abbreviated verbs.
+
+
+ * **LEXICON ab-dot-verb**
+
+ * **LEXICON ab-nodot-verb**
+
+
+ * **LEXICON ab-dot-IVprfprc**
+
+
+ * **LEXICON nodot-attrnomaccgen-infl**
+
+ * **LEXICON nodot-attr-infl**
+
+ * **LEXICON nodot-nomaccgen-infl**
+
+
+ * **LEXICON dot-attrnomaccgen-infl**
+
+ * **LEXICON dot-attr**
+
+ * **LEXICON dot-nomaccgen-infl**
+
+
+ * **LEXICON DOT** - Adds the dot to dotted abbreviations.
+
+
+
+
+# Inari Saami acronyms
+
+## The lexica giving tags and suffixes to the acronyms
+
+
+
+
+ * **LEXICON UNIT**  As acro, but without paradigm
+
+
+
+
+ * **LEXICON ACRO_ACCRA**
+
+
+
+
+
+
+
+
+
+
+
+
+ * **LEXICON ACRO** adds +N+ACR and redicrects to acroconnector
+
+
+
+ * **LEXICON acroconnector** Here comes a set of possible symbols to put between the abbreviation and its suffix
+
+ * **LEXICON acronull**  for suffixless forms, redirecting to K_only for clitic forms
+
+ * **LEXICON acrooblique**
+
+
+
+# Inari Saami number <-> text
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ * **LEXICON ARABICCASES**  adds +Arab
+
+ * **LEXICON ARABICCASE**  adds +Arab
+
+ * **LEXICON ARABICCASE0**  adds +Arab
+
+
+ * **LEXICON DIGITCASES**  to distinguish between 0 and oblique
+
+ * **LEXICON DIGITCASE0**
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # Inflection lexica for Inari Saami verbs
@@ -11440,1352 +11627,6 @@ become the second part of N + (V > N) compounds.
 
 
 
-
-
-# Continuation lexicons for abbreviations
-
-## Lexica for adding tags and periods
-
-## The sublexica
-
-### Continuation lexicons for abbrs both with and witout final period
-
-
- * **LEXICON ab-noun**
-
- * **LEXICON ab-adj**
-
- * **LEXICON ab-adv**
-
- * **LEXICON ab-num**
-
-### Lexicons without final period
-
- * **LEXICON ab-nodot-noun**  The bulk
-
- * **LEXICON ab-nodot-adj**
-
- * **LEXICON ab-nodot-adv**
-
- * **LEXICON ab-nodot-num**
-
-### Lexicons with final period
-
- * **LEXICON ab-dot-noun**  This is the lexicon for abbrs that must have a period.
-
- * **LEXICON ab-dot-adj**  This is the lexicon for abbrs that must have a period.
-
- * **LEXICON ab-dot-adv**  This is the lexicon for abbrs that must have a period.
-
- * **LEXICON ab-dot-num**  This is the lexicon for abbrs that must have a period.
-
- * **LEXICON ab-dot-cc**
-
-
-
- * **LEXICON ab-verb**  A lexicon for "gč." and perhaps also other abbreviated verbs.
-
-
- * **LEXICON ab-dot-verb**
-
- * **LEXICON ab-nodot-verb**
-
-
- * **LEXICON ab-dot-IVprfprc**
-
-
- * **LEXICON nodot-attrnomaccgen-infl**
-
- * **LEXICON nodot-attr-infl**
-
- * **LEXICON nodot-nomaccgen-infl**
-
-
- * **LEXICON dot-attrnomaccgen-infl**
-
- * **LEXICON dot-attr**
-
- * **LEXICON dot-nomaccgen-infl**
-
-
- * **LEXICON DOT** - Adds the dot to dotted abbreviations.
-
-
-
-# Propernoun morphology for Inari Saami
-
-TODO:
-These are not in use:
-ANAR DUBAI DUBAI-plc DUBAI-sur MAKI 
-
- * **LEXICON Proper_infix** is the de Silva lexicon
-
- * **LEXICON FirstTag**
-
- * **LEXICON TEMPORARY**
-
- * **LEXICON V_TEMPORARY**
-
-
- * **LEXICON NIEMI**
-
-
-
- * **LEXICON ACCRA** SM1
-
- * **LEXICON ACCRA-ani**
-
-
- * **LEXICON ACCRA-femsur**
- * **LEXICON ACCRA-fem**
-
- * **LEXICON ACCRA-malfem**
-
- * **LEXICON ACCRA-malsur**
-
- * **LEXICON ACCRA-mal**
-
- * **LEXICON ACCRA-objplc**
-
- * **LEXICON ACCRA-obj**
- * **LEXICON ACCRA-org**
-
- * **LEXICON ACCRA-A_MWE-plc**
-
- * **LEXICON ACCRA-A-org**
-
- * **LEXICON ACCRA-A-plc**
-
- * **LEXICON ACCRA-A-fem**
-
- * **LEXICON ACCRA_MWE-plc**
-
-
- * **LEXICON ACCRA-plc**
-
- * **LEXICON ACCRA-sur**
-
-
- * **LEXICON JUUHA-plc** similar to JUUHA
-
-
- * **LEXICON JUUHA** similar to JUUHA, stem ju
-
-
- * **LEXICON LUOHTA** similar to VADDU
-
-
- * **LEXICON LUOHTA-plc**   
-
- * **LEXICON LUOHTA-mal**
-
- * **LEXICON LUOHTA-fem**
-
-
-
-
-
- * **LEXICON LUOHTA_PL** similar to ALGA_PL X_PUUVSAH
-
-
-
-
- * **LEXICON VUONA** similar to ALGA
-
-
- * **LEXICON VUONA-plc** similar to ALGA
-
-
- * **LEXICON VUONA-fem** similar to ALGA
-
-
-
-
-
-
-
-
-
-
- * **LEXICON KURRA-plc** similar to SOLLA
-
-
- * **LEXICON KURRA** similar to SOLLA
-
-
- * **LEXICON KAAVA-plc** similar to KIELA
-
-
- * **LEXICON KAAVA** similar to KIELA 
-
-
- * **LEXICON NJOBZA** similar to 2ALGA
-
- * **LEXICON NJOBZA-plc** similar to 2ALGA
-
- * **LEXICON NJOBZA-ani** similar to 2ALGA
-
-
-
- * **LEXICON LASSA-plc** similar to FADDA
-
-
- * **LEXICON LASSA**  Similar to FADDA
-
-
-
-
- * **LEXICON JAVRI-plc** jävri, jeggi
-
-
- * **LEXICON JAVRI-mal** 
-
- * **LEXICON JAVRI-fem** 
-
-
- * **LEXICON JAVRI-ani** 
-
- * **LEXICON JAVRI** similar to AIGI, but only Sg. Some case forms should be deleted for names? Only difference to VUONA is Ess/Par. Are they in use for names?
-
-
-
- * **LEXICON JAAVRIH-plc**  JAVRI-plurals, e.g. Kähteejäävrih
-
-
- * **LEXICON JAAVRIH**  plurals for JAVRI
-
-
-
-
-
-
-
-
-
-
-
-
- * **LEXICON VAARI** to SAAMI
-
-
- * **LEXICON VAARI-plc** 
-
-
- * **LEXICON VAARIH-plc**  VAARI-plurals
-
-
- * **LEXICON VAARIH** VAARI-plurals
-
-
-
-
-
-
- * **LEXICON CIELGI** to CAACI
-
-
- * **LEXICON CIELGI-plc** to CAACI
-
-
-
-
-
-
-
- * **LEXICON NYERI** similar to KYELI
-
-
- * **LEXICON NYERI-plc** similar to KYELI
-
-
-
- * **LEXICON TUPE**  Similar to NJUNE
-
-
- * **LEXICON TUPE-plc**  Similar to NJUNE
-
-
- * **LEXICON TUPE-ani**  Similar to NJUNE
-
-
- * **LEXICON VASE-plc**  Similar to VAHE
-
-
- * **LEXICON VASE**
-
-
- * **LEXICON POHE** nearly similar to VAHE
-
- * **LEXICON POHE-plc** similar to VAHE
-
-
- * **LEXICON POHE-ani** similar to VAHE
-
-
- * **LEXICON POHE-mal** similar to VAHE
-
-
-
-
- * **LEXICON MOKKE** similar to ALGE
-
- * **LEXICON MOKKE-plc** similar to ALGE 
-
- * **LEXICON MOKKE-sur** similar to ALGE 
-
- * **LEXICON MOKKE-org** similar to ALGE 
-
- * **LEXICON MOKKE-fem** similar to ALGE 
-
- * **LEXICON MOKKE-mal** similar to ALGE 
-
- * **LEXICON MOKKE-ani** similar to ALGE 
-
-
-
- * **LEXICON NIJTTO**
-
- * **LEXICON NIJTTO-plc**  Similar to SIJVO
-
-
- * **LEXICON ROTO** similar to LAJO and X_LAJO
-
-
- * **LEXICON ROTO-plc** similar to LAJO and X_LAJO 
-
-
-
- * **LEXICON LAADUH** 
-
- * **LEXICON LAADUH-plc** Plural to LUOHTA-plc
-
-
-
- * **LEXICON LONDON**
-
-
- * **LEXICON LONDON-LOAN-obj**
- * **LEXICON LONDON-LOAN-org**
- * **LEXICON LONDON-LOAN-plc**
-
- * **LEXICON LONDON-ani**
- * **LEXICON LONDON-atr**
- * **LEXICON LONDON-fem**
-
- * **LEXICON LONDON-malfem**
-
- * **LEXICON LONDON-malplc**
-
- * **LEXICON LONDON-malsur**
-
- * **LEXICON LONDON-mal**
-
- * **LEXICON LONDON-obj**
-
- * **LEXICON LONDON-orgsur**
-
- * **LEXICON LONDON-org**
-
- * **LEXICON LONDON-orgplc**
-
-
- * **LEXICON LONDON_MWE-plc**
-
- * **LEXICON LONDON-plc**
-
- * **LEXICON LONDON-sur**
-
-
- * **LEXICON LONDONBERN-plc**
-
-
-
-
- * **LEXICON AANAAR** Goes to EEMEED
-
-
- * **LEXICON AANAAR-plc**
-
- * **LEXICON AANAAR-mal**
-
- * **LEXICON AANAAR-fem**
-
-
-
-
-
- LEXICON KIARUN = 3KIELES
-
-
- **LEXICON LUOBAL** Similar to VEESKIR
-
- * **LEXICON LUOBAL-plc** Similar to VEESKIR
-
-
-
- * **LEXICON LUOBBALEH** plural forms 
-
-
- * **LEXICON LUOBBALEH-plc** Plural to LUOBAL-plc
-
- * **LEXICON LUOBBALEH-org** Plural to LUOBAL-plc
-
- * **LEXICON LUOBBALEH-ani** Plural to LUOBAL-plc
-
-
-
- * **LEXICON MAARIT** 
-
-
- * **LEXICON MAARIT-fem similar to 3POTTAAK** 
-
- * **LEXICON MAARIT-mal similar to 3POTTAAK** 
-
-
- * **LEXICON SAVO-plc** similar to ALGA
-
- * **LEXICON SAVO** similar to ALGA
-
-
- * **LEXICON KUOLBA-plc** similar to POOVSA
-
-
- * **LEXICON KUOLBA**  similar to POOVSA
-
-
-
-
- * **LEXICON LYEME** 
-
-
-
-
-
-
-
-
-
-
- * **LEXICON ANDARAS**  this is for loanwords without stem change, 3-syll. cons end
-
-
-
- * **LEXICON ANDARAS-mal** similar to KUNAGAS
-
- * **LEXICON ANDARAS-org** similar to KUNAGAS
-
-
-
- * **LEXICON ANDARAS-plc** similar to KUNAGAS
-
-
-
- * **LEXICON IANUDAH-plc**  Similar to 4JOTOLAH
-
-
-
-
-
-
-
-
-
- * **LEXICON KALDEE** Similar to TAHHEE
-
- * **LEXICON KALDEE-plc**  Similar to TAHHEE
-
- * **LEXICON KALDEE-org**  Similar to TAHHEE
-
-
- * **LEXICON KALDEE_PL-plc**  Similar to TAHHEE_PL
-
- * **LEXICON KALDEE-mal**
-
- * **LEXICON KALDEE-fem**
-
- * **LEXICON KALDEE_PL** Similar to TAHHEE
-
-
-
-
- * **LEXICON SUALUI** similar to PUASUI and KUAVSUI
-
-
-
- * **LEXICON SUALUI-plc** similar to PUASUI and KUAVSUI. 
-
-
-
- * **LEXICON SUOLLUUH-plc** SUALUI-plc plurals 
-
-
- * **LEXICON SUOLLUUH** SUALUI-plc plurals 
-
-
- * *LEXICON PIRUKAAMUV-plc*
-
- * *LEXICON PIRUKAAMUV*
-
-
-
-
- **LEXICON PAALGIS** similar to KAARBIS
-
- **LEXICON Prop_h_PL-plc**  gives %>h etc. to vowel stems
-
- **LEXICON Prop_h_PL**  gives %>h etc. to vowel stems
-
-
-
-
-
- * **LEXICON HANNOLA-plc**
-
- * **LEXICON HANNOLA-sur**
-
-
-
-
-
- * **LEXICON ERVASTI** 
-
-
-
-
-
-
-
-
-
-
-
- * **LEXICON BISSAU-plc**
-
-
- * **LEXICON ERVASTI-plcmal**
-
-
-
- * **LEXICON ERVASTI-fem**
-
-
- * **LEXICON ERVASTI-mal**
-
-
- * **LEXICON ERVASTI-obj**
-
- * **LEXICON ERVASTI-org**
-
- * **LEXICON ERVASTI-plc**
-
- * **LEXICON ERVASTI-sur**
-
-
- * **LEXICON BERN**
-
-
- * **LEXICON BERN-LOAN-obj**
- * **LEXICON BERN-LOAN-org**
- * **LEXICON BERN-LOAN-plc**
-
- * **LEXICON BERN-ani**
-
-
- * **LEXICON BERN-fem**
-
- * **LEXICON BERN-mal**
-
- * **LEXICON BERN-objsur**
- * **LEXICON BERN-obj**
- * **LEXICON BERN-orgsur**
- * **LEXICON BERN-org**
-
-
- * **LEXICON BERN_MWE-plc**
-
- * **LEXICON BERN-plc**
-
- * **LEXICON BERN-surmal**
- * **LEXICON BERN-sur**
-
-
- * **LEXICON OY-plc** ad hoc 
-
- * **LEXICON OY-sur** ad hoc 
-
- * **LEXICON OY-fem** ad hoc 
-
-
- * **LEXICON C-FI-NEN**
-
-
- * **LEXICON C-FI-NEN-plc**
-
- * **LEXICON C-FI-NEN-sur**
-
- * **LEXICON C-FI-NEN-org**
-
-
- * **LEXICON DUBAI**
-
- * **LEXICON DUBAI-mal**
-
- * **LEXICON DUBAI-fem**
-
- * **LEXICON DUBAI-sur**
-
- * **LEXICON DUBAI-obj**
-
- * **LEXICON DUBAI_MWE-plc**
-
- * **LEXICON DUBAI-plc**
-
- * **LEXICON DUBAI-org**
-
- * **LEXICON GATA-plc**
-
- * **LEXICON JOKULL-plc**
-
-
-
-
- * **LEXICON MAKI-plc**
-
- * **LEXICON MAKI-sur**
-
-
-
- * **LEXICON PIPPI-LOAN-plc**
-
- * **LEXICON PIPPI-ani**
- * **LEXICON PIPPI-femsur**
-
- * **LEXICON PIPPI-fem**
-
- * **LEXICON PIPPI-malfem**
-
- * **LEXICON PIPPI-mal**
-
- * **LEXICON PIPPI-obj**
- * **LEXICON PIPPI-org**
- * **LEXICON PIPPI_MWE-plc**
-
- * **LEXICON PIPPI-plc**
-
- * **LEXICON PIPPI-sur**
-
- * **LEXICON RONDANE-LOAN**
-
-
- * **LEXICON RONDANE-SG-LOAN**
-
- * **LEXICON RONDANE-SG-plc**
-
- * **LEXICON RONDANE-fem**
-
- * **LEXICON RONDANE-mal**
-
- * **LEXICON RONDANE-obj**
- * **LEXICON RONDANE-org**
- * **LEXICON RONDANE-plc**
-
- * **LEXICON RONDANE-sur**
-
- * **LEXICON RONDANE**
-
-
-
-
-
-
-
-
-
-
-
-
-
-| --- | --- | --- 
-
-
-
-
-
-
-
- * **LEXICON UAIVAS**   similar to KUAVDAS
-
-
- * **LEXICON UAIVAS-plc** similar to KUAVDAS. 
-
-
-
-
-
- * **LEXICON SUANJU** similar to LAAVU
-
- * **LEXICON SUANJU-plc** similar to LAAVU
-
-
- * **LEXICON SUANJU-ani** similar to LAAVU
-
- * **LEXICON SUANJU-fem** similar to LAAVU
-
-
-
-
-
-
-
-
- * **LEXICON EENA-plc** no stem in stems/smn-propernouns.le≈c
-
-
-
- * **LEXICON EENNAM-plc** similar to EEMEED
-
- * **LEXICON EENNAM-mal** similar to EEMEED
-
- * **LEXICON EENNAM** similar to EEMEED
-
-
-
- * **LEXICON ENAMEH-plc** similar to EEMEED
-
-
- * **LEXICON ENAMEH**  plurals for EEMEED
-
-
- * **LEXICON MAADIJ**  Similar to AARRAN
-
- * **LEXICON MAADIJ-plc**  Similar to AARRAN
-
-
-
- * **LEXICON CUAJA** similar to TAALU2
-
-
- * **LEXICON CUAJA-plc** similar to TAALU2
-
- * **LEXICON CUAJA-fem** XXX check this
-
-
-
-
-
-
- * **LEXICON JAAVRAS-plc**  
-
- * **LEXICON JAAVRAS-mal**  
-
-
- * **LEXICON JAAVRAS**  
-
- **LEXICON SUOLLUS-plc** 
-
-
- **LEXICON SUOLLUS** 
-
-
-
- * **LEXICON JUUVAS-plc** 
-
-
-
-
- * **LEXICON VUONAS-plc** 
-
- * **LEXICON VUONAS-ani**
-
- * **LEXICON VUONAS-mal**
-
-
- * **LEXICON VUONAS**  
-
-
- * **LEXICON VUONIIH-plc** Plural to VUONAS-plc
-
- * **LEXICON VUONIIH** plural forms 
-
-
- * **LEXICON VAARAAS-plc**  
-
-
- * **LEXICON VAARAAS**  vá^RVrá
-
-
-
- * **LEXICON LAADUS**  
-
- * **LEXICON LAADUS-plc** 
-
-
-
- * **LEXICON LADDUUH**  
-
- * **LEXICON LADDUUH-plc**  Similar to SPALVAAS plural
-
-
- * **LEXICON AALAAS-plc**  Similar to ALGAAS
-
-
- * **LEXICON AALAAS** 
-
- * **LEXICON SIALGAS-plc**  Similar to KUAVDAS
-
- * **LEXICON SIALGAS-mal**  Similar to KUAVDAS
-
-
- * **LEXICON SIALGAS**  
-
-
-
-
-
-
-
- * **LEXICON SME_NAMES-org** 
-
-
- * **LEXICON SME_NAMES-mal** 
-
- * **LEXICON SME_NAMES-fem**
-
- * **LEXICON SME_NAMES-sur**
-
- * **LEXICON SME_NAMES-plc**
-
-
- * **LEXICON SME_NAMES_PERS** Attr to North Saami person names
-
- * **LEXICON SME_NAMES** temp. only Sg+Nom and Cmp to North Saami names
-
-
-
-
-
- * **LEXICON PERSNAME-NOMCMP** e.g. Anttikandâ,  
-
- * **LEXICON PERSNAME-GENCMP** e.g. , Aanti-kyevtis
-
-
- * **LEXICON flagK** 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Inari Saami number <-> text
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- * **LEXICON ARABICCASES**  adds +Arab
-
- * **LEXICON ARABICCASE**  adds +Arab
-
- * **LEXICON ARABICCASE0**  adds +Arab
-
-
- * **LEXICON DIGITCASES**  to distinguish between 0 and oblique
-
- * **LEXICON DIGITCASE0**
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Inari Saami acronyms
-
-## The lexica giving tags and suffixes to the acronyms
-
-
-
-
- * **LEXICON UNIT**  As acro, but without paradigm
-
-
-
-
- * **LEXICON ACRO_ACCRA**
-
-
-
-
-
-
-
-
-
-
-
-
- * **LEXICON ACRO** adds +N+ACR and redicrects to acroconnector
-
-
-
- * **LEXICON acroconnector** Here comes a set of possible symbols to put between the abbreviation and its suffix
-
- * **LEXICON acronull**  for suffixless forms, redirecting to K_only for clitic forms
-
- * **LEXICON acrooblique**
-
-
-# Possessive suffixes for Inari Saami
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Adjective affixes
-
-This file contains the morphology for the Inari Saami adjectives.
-
-The morphophonological processes are governed by triggers. When there are more
-triggers, tney must be ordered as follows (where {A,B} C means *A or B, thereafter C*):
-
-{SV,ÁE,ÁI}  SC  FCD {WG,CSH} CLEN  {VHIGH,VBACK}  {RVSH,RLEN} EA {SLEN,SVSH}  SVLOW
-
-
-
-## Adjectives with attr only
-
- **LEXICON ATTR** for stems with only attribute form, gives Attr, svt. sends to Cmp.
-
-
-## Even-syllable stems
-
-
- **LEXICON SIAHA** for siähá. It gives only Attr and Sg/Pl Nom. Fix?
-
-
-
-
-
-
-
- **LEXICON SKELMA** directing to X_ALGA, attr skelmâ
-
-
-
-
-
-
-
-
-
-
-
-
- **LEXICON CEPPI** directing to X_AIGI, attr. čepis
-
- **LEXICON UCCE** 
-
- **LEXICON SUVRE** 
-
-
- **LEXICON KUKKE** directing to X_ALGE, attr. kuhes
-
-
-
-
- **LEXICON PASE** directing to X_NJUNE via HUMO_REST, attr. pase                  
-
- **LEXICON HUMO** directing to X_NJUNE via HUMO_REST, attr. humos                  
-
- **LEXICON HUMO_REST** 
-
-
- **LEXICON UAMI** directing to X_SAAMI, attr. uá'mi
-
- **LEXICON LAAMI** directing to X_SAAMI, attr. lämis
-
- **LEXICON LAAMI_REST** 
-
-
- **LEXICON PYERI** directing to X_KYELI, attr. pyeri
-
-
-
- **LEXICON HYENI** directing to X_KYELI, attr. hyenes
-
-
- **LEXICON NUORA** directing to X_KIELA, attr. nuora
-
-
-
-
-
-## Odd-syllable stems
-
- **LEXICON NJUORAS** directing to X_RUONAS, attr. njuorâs
-
-
- **LEXICON UAMIS** directing to X_RUONAS, as an own group because of FCD, attr. uámi, čuámi, often used in compounds
-
-
-
- **LEXICON HAANIS** directing to X_PAAVIR, attr. hänis
-
-
- **LEXICON TIMES** directing to X_PAAVIR, attr. timmâ
-
-
- **LEXICON KIARGUS_nocomp**  like HAANIS, directing to X_PAAVIR, 
-
-
- **LEXICON HAAITIS** directing to X_VEESKIR, attr. rähis, not in use
-
- **LEXICON HEEITUG** directing to X_PAAVIR, attr. heitugis, heitugâs
-
-
- **LEXICON VAANIS** directing to  X_PAAVIR, attr. väni
-
- **LEXICON NJAALGIS** directing to NJAALGIS_COMMON, Attr. njaalgâ and njälgis
-
- **LEXICON RAAPIS** directing to NJAALGIS_COMMON, Attr. räpis 
-
- **LEXICON NJAALGIS_COMMON** directing to  X_KAARBIS
-
- **LEXICON KOSKES** directing to  X_VEESKIR, attr. koške
-
-
- **LEXICON NJOLGES** directing to  X_VEESKIR, attr. njolges
-
-
-
- **LEXICON FIIJNES**  no noun cont.lex with this pattern
-
-
-
- **LEXICON KOOIDAS** directing to  X_VEESKIR, attr. koidâ
-
-
- **LEXICON SUOTAS** directing to  X_VEESKIR, attr. suotâs
-
-
- **LEXICON LIAGUS** like SUOTAS except for CSH
-
-
-
- **LEXICON SENES** not fitting in X_PELES because of CSH attr. seŋes
-
-
-
-
- **LEXICON KEPPIS** directing to X_LITTER, attr. keppâ
-
- **LEXICON PASTEL** directing to X_LITTER, attr. pastelis; adj is PASTEL
-
- **LEXICON FISKAD** directing to X_LITTER, attr. fiskis (fikâdis)
-
-
- **LEXICON JUOLLAD** directing to X_EEMEED, attr, juolis, juolâdis, juolâdâs
-
- **LEXICON A_LITTER** directing to X_LITTER
-
-
-
-
-
-
-
- **LEXICON ALMOS** directing to X_SAJOS, attr. almos
-
-
-
- **LEXICON SOOHAD_nocomp** directing to X_EEMEED, attr. sohâdis
-
-
- **LEXICON SOOHAD** directing to X_EEMEED, attr. sohâdis
-
- **LEXICON SOOHAD_NULLATTR** 
-
- **LEXICON SOOHAD_NOATTR** 
-
- **LEXICON MAAJEEB-COMP** comparative lexicon
-
-
- **LEXICON PEEGGALM** directing to X_EEMEED, attr. sohâdis
-
-
- **LEXICON JUARBUDEKES** 
-
- **LEXICON JUARBUDEVES** 
-
- **LEXICON JUARBUDEKES_INFL** 
-
-
-
-
- LEXICON A_KOLME ad hoc three syllable stem > LITTER
-
-
- **LEXICON KUBDUV** . It doesn't fit with KAAMUV because of kubduvân, kubduvist
-
- **LEXICON KUBDUV_COMP** 
-
-
-## Contracted stems
-
- **LEXICON ALKKEE** directing to X_TAHHEE, attr. älkkees
-
-
- **LEXICON A_IJJE** 
-
- **LEXICON TTETTEE** 
-
- **LEXICON PYECCEE** directing to X_TAHHEE, attr. pyeccee
-
-
- **LEXICON ALKKEE_COMMON** common for ALKKEE and PYECCEE
-
-
- **LEXICON A_KAANDAS** directing to X_KAANDAS, no attr, half congruence
-
- **LEXICON A_TUULAS** directing to X_KAANDAS, no attr, half congruence
-
-
- **LEXICON STYERES** directing to X_KAARBIS, attr. stuorrâ
-
- **LEXICON RIGES** directing to X_KAARBIS, attr. riges, 3st comparision
-
-
-
-
- **LEXICON MUOTTII** almost like KARRII, direct to it?
-
-
- **LEXICON A_VUALAAS** 
-
-
- **LEXICON SIAMMAS** 
-
-
- **LEXICON JIAVTAS** 
-
-
-
- **LEXICON TAASSAS** 
-
-
-## 4 syll stems
-
- **LEXICON A_KUNAGAS** directing to  X_KUNAGAS; syeligâs, is like kunâgâs but FCD is not enough to create the comparation
-
-
-
-
-
- **LEXICON UANIHASJ** directing to LAS_SUF, attr, -âš
-
- **LEXICON KIERDAVAS** 
-
-
- **LEXICON UANIHASJ_INFL** 
-
-
- **LEXICON UNOHAS** directing to LAS_SUF, attr, -is
-
-
- **LEXICON ANOLASJ** directing to LAS_COMMON, attr, -âš
-Adj - pooliitlâš: # attr. pooliitlâš; puolikongruenssi mahdollinen (#-paikat), puolikongr. asemesta SgNom.
-
- **LEXICON LAGAN** directing to A_LITTER, attr. -lágán
-
-
-
-
-
-
-
- **LEXICON MUSTOTTEM** pls note e > iä in sg ill; no comparation
-
- **LEXICON A_INDECL** not all forms., attr = Sg. Nom.
-
-
- **LEXICON OLMOOSMETTUM**, not all forms. attr. = Sg. Nom.
-
- **LEXICON METTUMforms** 
-
-
-
-
-## Der/Comp+Aarision
-
-
- * **LEXICON COMPe** NUORA uses this lexicon
-
-
- * **LEXICON VVCOMPe** ALKKEE uses this lexicon; giving älkkeb etc.
-
-
-
- * **LEXICON COMPclen** NUORA uses this lexicon
-
-
- * **LEXICON CCOMPe** STYERES and MUOTTII use this lexicon
-
-
- * **LEXICON eCOMP**
-
-
- * **LEXICON COMPo** NJUORAS, NJAALGIS uses this lexicon
-
-
- * **LEXICON eCOMP-SUF** 
-
- * **LEXICON oCOMP-SUF** 
-
-
- * **LEXICON CCOMP-SUF**  STYERES uses this lexicon
-
-
- * **LEXICON COMP-SUF** 
-
-
-
- * **LEXICON VVCOMP-SUF** 
-
-
- * **LEXICON COMP-SUFclen** 
-
-
- * **LEXICON SUP_MUS**
-
- * **LEXICON SUP_MUSJ** majemuš
-
-
- * **LEXICON MUS**  asdf
-
- * **LEXICON MUSj** SUP_MUSJ uses this lexicon, eg. majemuš
-
-
- * **LEXICON CMUS**  STYERES uses this lexicon
-
-
- * **LEXICON MOS**
-
- * **LEXICON MUS-SUF**
-
- * **LEXICON MUSj-SUF**
-
- * **LEXICON CMUS-SUF**
-
- **LEXICON P-COMP-ERR-ORTH** 
-
-
- * **LEXICON A_VUOTA** for derivation
-
- * **LEXICON FLAG_2KIELA** @C.NeedNoun@
-
- * **LEXICON A_ADV** for derivation
-
-
-
-
-
- * **LEXICON A_LAGAN** for derivation
-
- **LEXICON A_LASJ** 
-
- **LEXICON ATTR_R** sends to R, NAMAG, SAS, CMP_ADJ.
 
 
 
@@ -13935,7 +12776,1129 @@ TODO: Move derivation lexica here
 
 
 
-# Symbol affixes
+
+
+# Adjective affixes
+
+This file contains the morphology for the Inari Saami adjectives.
+
+The morphophonological processes are governed by triggers. When there are more
+triggers, tney must be ordered as follows (where {A,B} C means *A or B, thereafter C*):
+
+{SV,ÁE,ÁI}  SC  FCD {WG,CSH} CLEN  {VHIGH,VBACK}  {RVSH,RLEN} EA {SLEN,SVSH}  SVLOW
+
+
+
+## Adjectives with attr only
+
+ **LEXICON ATTR** for stems with only attribute form, gives Attr, svt. sends to Cmp.
+
+
+## Even-syllable stems
+
+
+ **LEXICON SIAHA** for siähá. It gives only Attr and Sg/Pl Nom. Fix?
+
+
+
+
+
+
+
+ **LEXICON SKELMA** directing to X_ALGA, attr skelmâ
+
+
+
+
+
+
+
+
+
+
+
+
+ **LEXICON CEPPI** directing to X_AIGI, attr. čepis
+
+ **LEXICON UCCE** 
+
+ **LEXICON SUVRE** 
+
+
+ **LEXICON KUKKE** directing to X_ALGE, attr. kuhes
+
+
+
+
+ **LEXICON PASE** directing to X_NJUNE via HUMO_REST, attr. pase                  
+
+ **LEXICON HUMO** directing to X_NJUNE via HUMO_REST, attr. humos                  
+
+ **LEXICON HUMO_REST** 
+
+
+ **LEXICON UAMI** directing to X_SAAMI, attr. uá'mi
+
+ **LEXICON LAAMI** directing to X_SAAMI, attr. lämis
+
+ **LEXICON LAAMI_REST** 
+
+
+ **LEXICON PYERI** directing to X_KYELI, attr. pyeri
+
+
+
+ **LEXICON HYENI** directing to X_KYELI, attr. hyenes
+
+
+ **LEXICON NUORA** directing to X_KIELA, attr. nuora
+
+
+
+
+
+## Odd-syllable stems
+
+ **LEXICON NJUORAS** directing to X_RUONAS, attr. njuorâs
+
+
+ **LEXICON UAMIS** directing to X_RUONAS, as an own group because of FCD, attr. uámi, čuámi, often used in compounds
+
+
+
+ **LEXICON HAANIS** directing to X_PAAVIR, attr. hänis
+
+
+ **LEXICON TIMES** directing to X_PAAVIR, attr. timmâ
+
+
+ **LEXICON KIARGUS_nocomp**  like HAANIS, directing to X_PAAVIR, 
+
+
+ **LEXICON HAAITIS** directing to X_VEESKIR, attr. rähis, not in use
+
+ **LEXICON HEEITUG** directing to X_PAAVIR, attr. heitugis, heitugâs
+
+
+ **LEXICON VAANIS** directing to  X_PAAVIR, attr. väni
+
+ **LEXICON NJAALGIS** directing to NJAALGIS_COMMON, Attr. njaalgâ and njälgis
+
+ **LEXICON RAAPIS** directing to NJAALGIS_COMMON, Attr. räpis 
+
+ **LEXICON NJAALGIS_COMMON** directing to  X_KAARBIS
+
+ **LEXICON KOSKES** directing to  X_VEESKIR, attr. koške
+
+
+ **LEXICON NJOLGES** directing to  X_VEESKIR, attr. njolges
+
+
+
+ **LEXICON FIIJNES**  no noun cont.lex with this pattern
+
+
+
+ **LEXICON KOOIDAS** directing to  X_VEESKIR, attr. koidâ
+
+
+ **LEXICON SUOTAS** directing to  X_VEESKIR, attr. suotâs
+
+
+ **LEXICON LIAGUS** like SUOTAS except for CSH
+
+
+
+ **LEXICON SENES** not fitting in X_PELES because of CSH attr. seŋes
+
+
+
+
+ **LEXICON KEPPIS** directing to X_LITTER, attr. keppâ
+
+ **LEXICON PASTEL** directing to X_LITTER, attr. pastelis; adj is PASTEL
+
+ **LEXICON FISKAD** directing to X_LITTER, attr. fiskis (fikâdis)
+
+
+ **LEXICON JUOLLAD** directing to X_EEMEED, attr, juolis, juolâdis, juolâdâs
+
+ **LEXICON A_LITTER** directing to X_LITTER
+
+
+
+
+
+
+
+ **LEXICON ALMOS** directing to X_SAJOS, attr. almos
+
+
+
+ **LEXICON SOOHAD_nocomp** directing to X_EEMEED, attr. sohâdis
+
+
+ **LEXICON SOOHAD** directing to X_EEMEED, attr. sohâdis
+
+ **LEXICON SOOHAD_NULLATTR** 
+
+ **LEXICON SOOHAD_NOATTR** 
+
+ **LEXICON MAAJEEB-COMP** comparative lexicon
+
+
+ **LEXICON PEEGGALM** directing to X_EEMEED, attr. sohâdis
+
+
+ **LEXICON JUARBUDEKES** 
+
+ **LEXICON JUARBUDEVES** 
+
+ **LEXICON JUARBUDEKES_INFL** 
+
+
+
+
+ LEXICON A_KOLME ad hoc three syllable stem > LITTER
+
+
+ **LEXICON KUBDUV** . It doesn't fit with KAAMUV because of kubduvân, kubduvist
+
+ **LEXICON KUBDUV_COMP** 
+
+
+## Contracted stems
+
+ **LEXICON ALKKEE** directing to X_TAHHEE, attr. älkkees
+
+
+ **LEXICON A_IJJE** 
+
+ **LEXICON TTETTEE** 
+
+ **LEXICON PYECCEE** directing to X_TAHHEE, attr. pyeccee
+
+
+ **LEXICON ALKKEE_COMMON** common for ALKKEE and PYECCEE
+
+
+ **LEXICON A_KAANDAS** directing to X_KAANDAS, no attr, half congruence
+
+ **LEXICON A_TUULAS** directing to X_KAANDAS, no attr, half congruence
+
+
+ **LEXICON STYERES** directing to X_KAARBIS, attr. stuorrâ
+
+ **LEXICON RIGES** directing to X_KAARBIS, attr. riges, 3st comparision
+
+
+
+
+ **LEXICON MUOTTII** almost like KARRII, direct to it?
+
+
+ **LEXICON A_VUALAAS** 
+
+
+ **LEXICON SIAMMAS** 
+
+
+ **LEXICON JIAVTAS** 
+
+
+
+ **LEXICON TAASSAS** 
+
+
+## 4 syll stems
+
+ **LEXICON A_KUNAGAS** directing to  X_KUNAGAS; syeligâs, is like kunâgâs but FCD is not enough to create the comparation
+
+
+
+
+
+ **LEXICON UANIHASJ** directing to LAS_SUF, attr, -âš
+
+ **LEXICON KIERDAVAS** 
+
+
+ **LEXICON UANIHASJ_INFL** 
+
+
+ **LEXICON UNOHAS** directing to LAS_SUF, attr, -is
+
+
+ **LEXICON ANOLASJ** directing to LAS_COMMON, attr, -âš
+Adj - pooliitlâš: # attr. pooliitlâš; puolikongruenssi mahdollinen (#-paikat), puolikongr. asemesta SgNom.
+
+ **LEXICON LAGAN** directing to A_LITTER, attr. -lágán
+
+
+
+
+
+
+
+ **LEXICON MUSTOTTEM** pls note e > iä in sg ill; no comparation
+
+ **LEXICON A_INDECL** not all forms., attr = Sg. Nom.
+
+
+ **LEXICON OLMOOSMETTUM**, not all forms. attr. = Sg. Nom.
+
+ **LEXICON METTUMforms** 
+
+
+
+
+## Der/Comp+Aarision
+
+
+ * **LEXICON COMPe** NUORA uses this lexicon
+
+
+ * **LEXICON VVCOMPe** ALKKEE uses this lexicon; giving älkkeb etc.
+
+
+
+ * **LEXICON COMPclen** NUORA uses this lexicon
+
+
+ * **LEXICON CCOMPe** STYERES and MUOTTII use this lexicon
+
+
+ * **LEXICON eCOMP**
+
+
+ * **LEXICON COMPo** NJUORAS, NJAALGIS uses this lexicon
+
+
+ * **LEXICON eCOMP-SUF** 
+
+ * **LEXICON oCOMP-SUF** 
+
+
+ * **LEXICON CCOMP-SUF**  STYERES uses this lexicon
+
+
+ * **LEXICON COMP-SUF** 
+
+
+
+ * **LEXICON VVCOMP-SUF** 
+
+
+ * **LEXICON COMP-SUFclen** 
+
+
+ * **LEXICON SUP_MUS**
+
+ * **LEXICON SUP_MUSJ** majemuš
+
+
+ * **LEXICON MUS**  asdf
+
+ * **LEXICON MUSj** SUP_MUSJ uses this lexicon, eg. majemuš
+
+
+ * **LEXICON CMUS**  STYERES uses this lexicon
+
+
+ * **LEXICON MOS**
+
+ * **LEXICON MUS-SUF**
+
+ * **LEXICON MUSj-SUF**
+
+ * **LEXICON CMUS-SUF**
+
+ **LEXICON P-COMP-ERR-ORTH** 
+
+
+ * **LEXICON A_VUOTA** for derivation
+
+ * **LEXICON FLAG_2KIELA** @C.NeedNoun@
+
+ * **LEXICON A_ADV** for derivation
+
+
+
+
+
+ * **LEXICON A_LAGAN** for derivation
+
+ **LEXICON A_LASJ** 
+
+ **LEXICON ATTR_R** sends to R, NAMAG, SAS, CMP_ADJ.
+
+
+# Propernoun morphology for Inari Saami
+
+TODO:
+These are not in use:
+ANAR DUBAI DUBAI-plc DUBAI-sur MAKI 
+
+ * **LEXICON Proper_infix** is the de Silva lexicon
+
+ * **LEXICON FirstTag**
+
+ * **LEXICON TEMPORARY**
+
+ * **LEXICON V_TEMPORARY**
+
+
+ * **LEXICON NIEMI**
+
+
+
+ * **LEXICON ACCRA** SM1
+
+ * **LEXICON ACCRA-ani**
+
+
+ * **LEXICON ACCRA-femsur**
+ * **LEXICON ACCRA-fem**
+
+ * **LEXICON ACCRA-malfem**
+
+ * **LEXICON ACCRA-malsur**
+
+ * **LEXICON ACCRA-mal**
+
+ * **LEXICON ACCRA-objplc**
+
+ * **LEXICON ACCRA-obj**
+ * **LEXICON ACCRA-org**
+
+ * **LEXICON ACCRA-A_MWE-plc**
+
+ * **LEXICON ACCRA-A-org**
+
+ * **LEXICON ACCRA-A-plc**
+
+ * **LEXICON ACCRA-A-fem**
+
+ * **LEXICON ACCRA_MWE-plc**
+
+
+ * **LEXICON ACCRA-plc**
+
+ * **LEXICON ACCRA-sur**
+
+
+ * **LEXICON JUUHA-plc** similar to JUUHA
+
+
+ * **LEXICON JUUHA** similar to JUUHA, stem ju
+
+
+ * **LEXICON LUOHTA** similar to VADDU
+
+
+ * **LEXICON LUOHTA-plc**   
+
+ * **LEXICON LUOHTA-mal**
+
+ * **LEXICON LUOHTA-fem**
+
+
+
+
+
+ * **LEXICON LUOHTA_PL** similar to ALGA_PL X_PUUVSAH
+
+
+
+
+ * **LEXICON VUONA** similar to ALGA
+
+
+ * **LEXICON VUONA-plc** similar to ALGA
+
+
+ * **LEXICON VUONA-fem** similar to ALGA
+
+
+
+
+
+
+
+
+
+
+ * **LEXICON KURRA-plc** similar to SOLLA
+
+
+ * **LEXICON KURRA** similar to SOLLA
+
+
+ * **LEXICON KAAVA-plc** similar to KIELA
+
+
+ * **LEXICON KAAVA** similar to KIELA 
+
+
+ * **LEXICON NJOBZA** similar to 2ALGA
+
+ * **LEXICON NJOBZA-plc** similar to 2ALGA
+
+ * **LEXICON NJOBZA-ani** similar to 2ALGA
+
+
+
+ * **LEXICON LASSA-plc** similar to FADDA
+
+
+ * **LEXICON LASSA**  Similar to FADDA
+
+
+
+
+ * **LEXICON JAVRI-plc** jävri, jeggi
+
+
+ * **LEXICON JAVRI-mal** 
+
+ * **LEXICON JAVRI-fem** 
+
+
+ * **LEXICON JAVRI-ani** 
+
+ * **LEXICON JAVRI** similar to AIGI, but only Sg. Some case forms should be deleted for names? Only difference to VUONA is Ess/Par. Are they in use for names?
+
+
+
+ * **LEXICON JAAVRIH-plc**  JAVRI-plurals, e.g. Kähteejäävrih
+
+
+ * **LEXICON JAAVRIH**  plurals for JAVRI
+
+
+
+
+
+
+
+
+
+
+
+
+ * **LEXICON VAARI** to SAAMI
+
+
+ * **LEXICON VAARI-plc** 
+
+
+ * **LEXICON VAARIH-plc**  VAARI-plurals
+
+
+ * **LEXICON VAARIH** VAARI-plurals
+
+
+
+
+
+
+ * **LEXICON CIELGI** to CAACI
+
+
+ * **LEXICON CIELGI-plc** to CAACI
+
+
+
+
+
+
+
+ * **LEXICON NYERI** similar to KYELI
+
+
+ * **LEXICON NYERI-plc** similar to KYELI
+
+
+
+ * **LEXICON TUPE**  Similar to NJUNE
+
+
+ * **LEXICON TUPE-plc**  Similar to NJUNE
+
+
+ * **LEXICON TUPE-ani**  Similar to NJUNE
+
+
+ * **LEXICON VASE-plc**  Similar to VAHE
+
+
+ * **LEXICON VASE**
+
+
+ * **LEXICON POHE** nearly similar to VAHE
+
+ * **LEXICON POHE-plc** similar to VAHE
+
+
+ * **LEXICON POHE-ani** similar to VAHE
+
+
+ * **LEXICON POHE-mal** similar to VAHE
+
+
+
+
+ * **LEXICON MOKKE** similar to ALGE
+
+ * **LEXICON MOKKE-plc** similar to ALGE 
+
+ * **LEXICON MOKKE-sur** similar to ALGE 
+
+ * **LEXICON MOKKE-org** similar to ALGE 
+
+ * **LEXICON MOKKE-fem** similar to ALGE 
+
+ * **LEXICON MOKKE-mal** similar to ALGE 
+
+ * **LEXICON MOKKE-ani** similar to ALGE 
+
+
+
+ * **LEXICON NIJTTO**
+
+ * **LEXICON NIJTTO-plc**  Similar to SIJVO
+
+
+ * **LEXICON ROTO** similar to LAJO and X_LAJO
+
+
+ * **LEXICON ROTO-plc** similar to LAJO and X_LAJO 
+
+
+
+ * **LEXICON LAADUH** 
+
+ * **LEXICON LAADUH-plc** Plural to LUOHTA-plc
+
+
+
+ * **LEXICON LONDON**
+
+
+ * **LEXICON LONDON-LOAN-obj**
+ * **LEXICON LONDON-LOAN-org**
+ * **LEXICON LONDON-LOAN-plc**
+
+ * **LEXICON LONDON-ani**
+ * **LEXICON LONDON-atr**
+ * **LEXICON LONDON-fem**
+
+ * **LEXICON LONDON-malfem**
+
+ * **LEXICON LONDON-malplc**
+
+ * **LEXICON LONDON-malsur**
+
+ * **LEXICON LONDON-mal**
+
+ * **LEXICON LONDON-obj**
+
+ * **LEXICON LONDON-orgsur**
+
+ * **LEXICON LONDON-org**
+
+ * **LEXICON LONDON-orgplc**
+
+
+ * **LEXICON LONDON_MWE-plc**
+
+ * **LEXICON LONDON-plc**
+
+ * **LEXICON LONDON-sur**
+
+
+ * **LEXICON LONDONBERN-plc**
+
+
+
+
+ * **LEXICON AANAAR** Goes to EEMEED
+
+
+ * **LEXICON AANAAR-plc**
+
+ * **LEXICON AANAAR-mal**
+
+ * **LEXICON AANAAR-fem**
+
+
+
+
+
+ LEXICON KIARUN = 3KIELES
+
+
+ **LEXICON LUOBAL** Similar to VEESKIR
+
+ * **LEXICON LUOBAL-plc** Similar to VEESKIR
+
+
+
+ * **LEXICON LUOBBALEH** plural forms 
+
+
+ * **LEXICON LUOBBALEH-plc** Plural to LUOBAL-plc
+
+ * **LEXICON LUOBBALEH-org** Plural to LUOBAL-plc
+
+ * **LEXICON LUOBBALEH-ani** Plural to LUOBAL-plc
+
+
+
+ * **LEXICON MAARIT** 
+
+
+ * **LEXICON MAARIT-fem similar to 3POTTAAK** 
+
+ * **LEXICON MAARIT-mal similar to 3POTTAAK** 
+
+
+ * **LEXICON SAVO-plc** similar to ALGA
+
+ * **LEXICON SAVO** similar to ALGA
+
+
+ * **LEXICON KUOLBA-plc** similar to POOVSA
+
+
+ * **LEXICON KUOLBA**  similar to POOVSA
+
+
+
+
+ * **LEXICON LYEME** 
+
+
+
+
+
+
+
+
+
+
+ * **LEXICON ANDARAS**  this is for loanwords without stem change, 3-syll. cons end
+
+
+
+ * **LEXICON ANDARAS-mal** similar to KUNAGAS
+
+ * **LEXICON ANDARAS-org** similar to KUNAGAS
+
+
+
+ * **LEXICON ANDARAS-plc** similar to KUNAGAS
+
+
+
+ * **LEXICON IANUDAH-plc**  Similar to 4JOTOLAH
+
+
+
+
+
+
+
+
+
+ * **LEXICON KALDEE** Similar to TAHHEE
+
+ * **LEXICON KALDEE-plc**  Similar to TAHHEE
+
+ * **LEXICON KALDEE-org**  Similar to TAHHEE
+
+
+ * **LEXICON KALDEE_PL-plc**  Similar to TAHHEE_PL
+
+ * **LEXICON KALDEE-mal**
+
+ * **LEXICON KALDEE-fem**
+
+ * **LEXICON KALDEE_PL** Similar to TAHHEE
+
+
+
+
+ * **LEXICON SUALUI** similar to PUASUI and KUAVSUI
+
+
+
+ * **LEXICON SUALUI-plc** similar to PUASUI and KUAVSUI. 
+
+
+
+ * **LEXICON SUOLLUUH-plc** SUALUI-plc plurals 
+
+
+ * **LEXICON SUOLLUUH** SUALUI-plc plurals 
+
+
+ * *LEXICON PIRUKAAMUV-plc*
+
+ * *LEXICON PIRUKAAMUV*
+
+
+
+
+ **LEXICON PAALGIS** similar to KAARBIS
+
+ **LEXICON Prop_h_PL-plc**  gives %>h etc. to vowel stems
+
+ **LEXICON Prop_h_PL**  gives %>h etc. to vowel stems
+
+
+
+
+
+ * **LEXICON HANNOLA-plc**
+
+ * **LEXICON HANNOLA-sur**
+
+
+
+
+
+ * **LEXICON ERVASTI** 
+
+
+
+
+
+
+
+
+
+
+
+ * **LEXICON BISSAU-plc**
+
+
+ * **LEXICON ERVASTI-plcmal**
+
+
+
+ * **LEXICON ERVASTI-fem**
+
+
+ * **LEXICON ERVASTI-mal**
+
+
+ * **LEXICON ERVASTI-obj**
+
+ * **LEXICON ERVASTI-org**
+
+ * **LEXICON ERVASTI-plc**
+
+ * **LEXICON ERVASTI-sur**
+
+
+ * **LEXICON BERN**
+
+
+ * **LEXICON BERN-LOAN-obj**
+ * **LEXICON BERN-LOAN-org**
+ * **LEXICON BERN-LOAN-plc**
+
+ * **LEXICON BERN-ani**
+
+
+ * **LEXICON BERN-fem**
+
+ * **LEXICON BERN-mal**
+
+ * **LEXICON BERN-objsur**
+ * **LEXICON BERN-obj**
+ * **LEXICON BERN-orgsur**
+ * **LEXICON BERN-org**
+
+
+ * **LEXICON BERN_MWE-plc**
+
+ * **LEXICON BERN-plc**
+
+ * **LEXICON BERN-surmal**
+ * **LEXICON BERN-sur**
+
+
+ * **LEXICON OY-plc** ad hoc 
+
+ * **LEXICON OY-sur** ad hoc 
+
+ * **LEXICON OY-fem** ad hoc 
+
+
+ * **LEXICON C-FI-NEN**
+
+
+ * **LEXICON C-FI-NEN-plc**
+
+ * **LEXICON C-FI-NEN-sur**
+
+ * **LEXICON C-FI-NEN-org**
+
+
+ * **LEXICON DUBAI**
+
+ * **LEXICON DUBAI-mal**
+
+ * **LEXICON DUBAI-fem**
+
+ * **LEXICON DUBAI-sur**
+
+ * **LEXICON DUBAI-obj**
+
+ * **LEXICON DUBAI_MWE-plc**
+
+ * **LEXICON DUBAI-plc**
+
+ * **LEXICON DUBAI-org**
+
+ * **LEXICON GATA-plc**
+
+ * **LEXICON JOKULL-plc**
+
+
+
+
+ * **LEXICON MAKI-plc**
+
+ * **LEXICON MAKI-sur**
+
+
+
+ * **LEXICON PIPPI-LOAN-plc**
+
+ * **LEXICON PIPPI-ani**
+ * **LEXICON PIPPI-femsur**
+
+ * **LEXICON PIPPI-fem**
+
+ * **LEXICON PIPPI-malfem**
+
+ * **LEXICON PIPPI-mal**
+
+ * **LEXICON PIPPI-obj**
+ * **LEXICON PIPPI-org**
+ * **LEXICON PIPPI_MWE-plc**
+
+ * **LEXICON PIPPI-plc**
+
+ * **LEXICON PIPPI-sur**
+
+ * **LEXICON RONDANE-LOAN**
+
+
+ * **LEXICON RONDANE-SG-LOAN**
+
+ * **LEXICON RONDANE-SG-plc**
+
+ * **LEXICON RONDANE-fem**
+
+ * **LEXICON RONDANE-mal**
+
+ * **LEXICON RONDANE-obj**
+ * **LEXICON RONDANE-org**
+ * **LEXICON RONDANE-plc**
+
+ * **LEXICON RONDANE-sur**
+
+ * **LEXICON RONDANE**
+
+
+
+
+
+
+
+
+
+
+
+
+
+| --- | --- | --- 
+
+
+
+
+
+
+
+ * **LEXICON UAIVAS**   similar to KUAVDAS
+
+
+ * **LEXICON UAIVAS-plc** similar to KUAVDAS. 
+
+
+
+
+
+ * **LEXICON SUANJU** similar to LAAVU
+
+ * **LEXICON SUANJU-plc** similar to LAAVU
+
+
+ * **LEXICON SUANJU-ani** similar to LAAVU
+
+ * **LEXICON SUANJU-fem** similar to LAAVU
+
+
+
+
+
+
+
+
+ * **LEXICON EENA-plc** no stem in stems/smn-propernouns.le≈c
+
+
+
+ * **LEXICON EENNAM-plc** similar to EEMEED
+
+ * **LEXICON EENNAM-mal** similar to EEMEED
+
+ * **LEXICON EENNAM** similar to EEMEED
+
+
+
+ * **LEXICON ENAMEH-plc** similar to EEMEED
+
+
+ * **LEXICON ENAMEH**  plurals for EEMEED
+
+
+ * **LEXICON MAADIJ**  Similar to AARRAN
+
+ * **LEXICON MAADIJ-plc**  Similar to AARRAN
+
+
+
+ * **LEXICON CUAJA** similar to TAALU2
+
+
+ * **LEXICON CUAJA-plc** similar to TAALU2
+
+ * **LEXICON CUAJA-fem** XXX check this
+
+
+
+
+
+
+ * **LEXICON JAAVRAS-plc**  
+
+ * **LEXICON JAAVRAS-mal**  
+
+
+ * **LEXICON JAAVRAS**  
+
+ **LEXICON SUOLLUS-plc** 
+
+
+ **LEXICON SUOLLUS** 
+
+
+
+ * **LEXICON JUUVAS-plc** 
+
+
+
+
+ * **LEXICON VUONAS-plc** 
+
+ * **LEXICON VUONAS-ani**
+
+ * **LEXICON VUONAS-mal**
+
+
+ * **LEXICON VUONAS**  
+
+
+ * **LEXICON VUONIIH-plc** Plural to VUONAS-plc
+
+ * **LEXICON VUONIIH** plural forms 
+
+
+ * **LEXICON VAARAAS-plc**  
+
+
+ * **LEXICON VAARAAS**  vá^RVrá
+
+
+
+ * **LEXICON LAADUS**  
+
+ * **LEXICON LAADUS-plc** 
+
+
+
+ * **LEXICON LADDUUH**  
+
+ * **LEXICON LADDUUH-plc**  Similar to SPALVAAS plural
+
+
+ * **LEXICON AALAAS-plc**  Similar to ALGAAS
+
+
+ * **LEXICON AALAAS** 
+
+ * **LEXICON SIALGAS-plc**  Similar to KUAVDAS
+
+ * **LEXICON SIALGAS-mal**  Similar to KUAVDAS
+
+
+ * **LEXICON SIALGAS**  
+
+
+
+
+
+
+
+ * **LEXICON SME_NAMES-org** 
+
+
+ * **LEXICON SME_NAMES-mal** 
+
+ * **LEXICON SME_NAMES-fem**
+
+ * **LEXICON SME_NAMES-sur**
+
+ * **LEXICON SME_NAMES-plc**
+
+
+ * **LEXICON SME_NAMES_PERS** Attr to North Saami person names
+
+ * **LEXICON SME_NAMES** temp. only Sg+Nom and Cmp to North Saami names
+
+
+
+
+
+ * **LEXICON PERSNAME-NOMCMP** e.g. Anttikandâ,  
+
+ * **LEXICON PERSNAME-GENCMP** e.g. , Aanti-kyevtis
+
+
+ * **LEXICON flagK** 
+
+
+
+
+
+
+
+
 
 
 
@@ -14770,6 +14733,354 @@ a rules
 * *hu^RVm^RCo^SVb^WG^RLEN^SLEN^RLEN^SLEN*
 * *huum0oob00000*
 
+# Pronouns for Inari Saami
+
+
+ * **LEXICON Pronoun **
+
+
+## Personal pronouns
+
+ * **LEXICON Personal **
+
+
+ * **LEXICON perspronsg ** with contlex K and not G (munge)
+
+ * **LEXICON persprondu **
+
+ * **LEXICON perspronpl **
+
+
+
+Demonstrative pronouns
+
+ * **LEXICON Demonstrative **
+
+
+ * **LEXICON TIET **
+
+ * **LEXICON TOT **
+
+ * **LEXICON TUOT **
+
+
+ * **LEXICON TI-TUO **
+
+ * **LEXICON TA **
+
+ * **LEXICON TYE **
+
+
+
+
+
+
+
+
+## Reflexive pronouns
+
+ * **LEXICON Reflexive **
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Reciprocal pronouns
+
+ * **LEXICON Reciprocal **
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ * **LEXICON miiInterRel **
+
+
+ * **LEXICON kiiInterRel **
+
+
+
+ * **LEXICON MK ** common for mii and kii
+
+ * **LEXICON MK-long **
+
+ * **LEXICON MK-short **
+
+ * **LEXICON MK-low **
+
+
+
+
+## Indefinite pronouns
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ LEXICON SIAMMAS_PRON  without WG
+
+
+
+
+
+
+
+
+
+
+
+# Particles
+
+
+
+
+
+
+ * **LEXICON Particle  **
+
+ ges pcle ; 
+ kes pcle ; 
+
+
+
+
+
+
+
+# Interjections
+
+
+
+ * **LEXICON Interjection  **
+
+ * ai Interj "hoi" ;           
+ * het-het Interj ;           
+ * kulâ Interj ;           
+ * na Interj "no" ;           
+ * titityy Interj ;           
+
+# Inari Saami adverbs
+
+## The morphology
+ * **LEXICON ADV ** the Adv tag
+
+ * **LEXICON PxADV  ** the Adv tag and Ill Px
+
+
+ * **LEXICON NAAL ** 
+
+
+ * **LEXICON BEL-ADV ** 
+
+ * **LEXICON PEL-ADV ** 
+
+
+## The stems
+
+ * **LEXICON Adverb **
+
+
+
+
+# Propernoun lexicon, Inari Sámi specific names 
+
+
+ **LEXICON Prefix-Proper **
+
+
+First part of complex names
+
+ * Alemus FirstTag ;     
+ * Cuávis FirstTag ;     
+
+
+ **LEXICON ProperNoun-smn **
+Ordinary names
+
+
+Family names
+
+
+
+Pet names
+
+
+
+Fictional names - - probably no point of adding the fem/mal/ani tags
+
+
+
+Object names or organizations
+
+
+
+
+
+
+Geographical names
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Subjunctions
+
+
+ LEXICON Subjunction 
+
+
+
+# Inari Saami numerals
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ * **LEXICON ARABICCOMPOUNDS**   arabic as first part, 
+
+
+
+ * **LEXICON NUMERALCOMPOUNDS**: numeral as first part: duhatjienat,
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Conjunctions 
+
+
+
+ * **LEXICON Conjunction  **
+ * ja Cc ;          
+
+
+
 
 # Verb stems
 
@@ -14992,495 +15303,6 @@ Transitive verbs
 
 
 
-# Inari Saami acronyms
-
-This file contains a loop for random capital-letter acronyms, 
-as well as two lists of common acronyms: letter-number acronyms and 
-small-capital letter combinations.
-
-## The main part
-
- * **LEXICON Acronym-smn   ** divides the acros in the 3 types just mentioned.
-
-
-
-
-# Pronouns for Inari Saami
-
-
- * **LEXICON Pronoun **
-
-
-## Personal pronouns
-
- * **LEXICON Personal **
-
-
- * **LEXICON perspronsg ** with contlex K and not G (munge)
-
- * **LEXICON persprondu **
-
- * **LEXICON perspronpl **
-
-
-
-Demonstrative pronouns
-
- * **LEXICON Demonstrative **
-
-
- * **LEXICON TIET **
-
- * **LEXICON TOT **
-
- * **LEXICON TUOT **
-
-
- * **LEXICON TI-TUO **
-
- * **LEXICON TA **
-
- * **LEXICON TYE **
-
-
-
-
-
-
-
-
-## Reflexive pronouns
-
- * **LEXICON Reflexive **
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Reciprocal pronouns
-
- * **LEXICON Reciprocal **
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- * **LEXICON miiInterRel **
-
-
- * **LEXICON kiiInterRel **
-
-
-
- * **LEXICON MK ** common for mii and kii
-
- * **LEXICON MK-long **
-
- * **LEXICON MK-short **
-
- * **LEXICON MK-low **
-
-
-
-
-## Indefinite pronouns
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- LEXICON SIAMMAS_PRON  without WG
-
-
-
-
-
-
-
-
-
-
-
-# Interjections
-
-
-
- * **LEXICON Interjection  **
-
- * ai Interj "hoi" ;           
- * het-het Interj ;           
- * kulâ Interj ;           
- * na Interj "no" ;           
- * titityy Interj ;           
-
-
-# Inari Saami numerals
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- * **LEXICON ARABICCOMPOUNDS**   arabic as first part, 
-
-
-
- * **LEXICON NUMERALCOMPOUNDS**: numeral as first part: duhatjienat,
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Conjunctions 
-
-
-
- * **LEXICON Conjunction  **
- * ja Cc ;          
-
-
-
-# Inari Saami adjectives
-
-
- * **LEXICON LAST_CMP_ADJ ** cmp last part
-
-
-
- * **LEXICON AdjectiveRoot ** is the list of adjectives
-
-
-
- * **aalmuglâš:aalmugl ANOLASJ "kansallinen" ; ** 
- * **boreaallâš:boreaall ANOLASJ "boreaalinen" ; ** etc.
-
-
-Lyhentynyt attr.
-
-
-Attr. venytetty + -s
-
-
-Attr. -is
-
-
-
-
-
-
-
-Attr. -es (KARITIIVADJ.) Attr. muštottes / muštottemes
-
-
-
-
--METTUM / -MÁTTUM
-
-
--sâš
-
-
-
-Lyhentynyt attr. + -IS
-
-From corpus
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Inari Saami adpositions
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Propernoun lexicon, Inari Sámi specific names 
-
-
- **LEXICON Prefix-Proper **
-
-
-First part of complex names
-
- * Alemus FirstTag ;     
- * Cuávis FirstTag ;     
-
-
- **LEXICON ProperNoun-smn **
-Ordinary names
-
-
-Family names
-
-
-
-Pet names
-
-
-
-Fictional names - - probably no point of adding the fem/mal/ani tags
-
-
-
-Object names or organizations
-
-
-
-
-
-
-Geographical names
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Inari Saami adverbs
-
-## The morphology
- * **LEXICON ADV ** the Adv tag
-
- * **LEXICON PxADV  ** the Adv tag and Ill Px
-
-
- * **LEXICON NAAL ** 
-
-
- * **LEXICON BEL-ADV ** 
-
- * **LEXICON PEL-ADV ** 
-
-
-## The stems
-
- * **LEXICON Adverb **
-
-
-
-
-# File containing North Saami abbreviations 
-
-## Lexica for adding tags and periods
-
-Splitting in 4 + 1 groups, because of the preprocessor
-
- * **LEXICON Abbreviation-smn **
- 1. The ITRAB ;	   lexicon (intransitive abbrs)
- 1. The TRNUMAB ;  lexicon (abbrs trans wrt. numberals)
- 1. The TRAB ;	   lexicon (transitive abbrs)
- 1. The NOAB ;	   lexicon (not really abbrs)
- 1. The NUMNOAB ;  lexicon (not behaving as abbr before num)
-
-
-## The abbreviation lexicon itself
-
-
-
- * **LEXICON ITRAB ** are intransitive abbreviations, A.S. etc.
-
-
-
-
- * **LEXICON NOAB ** du, gen, jur
-
-This class contains homonyms, which are both intransitive
-abbreviations and normal words. The abbreviation usage
-is less common and thus only the occurences in the middle of
-the sentnece (when next word has small letters) can be 
-considered as true cases.
-
-
-
-
-
- * **LEXICON TRNUMAB ** contains abbreviations who are transitive in front of numerals 
-
-For abbrs for which numerals are complements, but other
-words not necessarily are. This group treats arabic numerals as
-if it were transitive but letters as if it were intransitive.
-
-
-
-
-
-
-
-
- * **LEXICON TRAB ** contains transitive abbreviations
-
-This lexicon is for abbrs that always have a constituent following it.
-
-
-
-
-
- * **LEXICON NUMNOAB ** su, dii
-
-This class contains homonyms, which are both abbrs for 
-which numerals are complements and normal words. The abbreviation usage
-is less common and thus only the occurences in the middle of
-the sentence can be considered as true cases.
-
-
-
 
 # Inari Saami noun roots
 
@@ -15593,26 +15415,167 @@ From missinglist
 
 
 
-# Subjunctions
+# Inari Saami adjectives
 
 
- LEXICON Subjunction 
-
-
-# Particles
+ * **LEXICON LAST_CMP_ADJ ** cmp last part
 
 
 
+ * **LEXICON AdjectiveRoot ** is the list of adjectives
 
 
 
- * **LEXICON Particle  **
-
- ges pcle ; 
- kes pcle ; 
+ * **aalmuglâš:aalmugl ANOLASJ "kansallinen" ; ** 
+ * **boreaallâš:boreaall ANOLASJ "boreaalinen" ; ** etc.
 
 
+Lyhentynyt attr.
 
+
+Attr. venytetty + -s
+
+
+Attr. -is
+
+
+
+
+
+
+
+Attr. -es (KARITIIVADJ.) Attr. muštottes / muštottemes
+
+
+
+
+-METTUM / -MÁTTUM
+
+
+-sâš
+
+
+
+Lyhentynyt attr. + -IS
+
+From corpus
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Inari Saami adpositions
+
+
+
+
+
+
+
+
+
+
+
+
+
+# File containing North Saami abbreviations 
+
+## Lexica for adding tags and periods
+
+Splitting in 4 + 1 groups, because of the preprocessor
+
+ * **LEXICON Abbreviation-smn **
+ 1. The ITRAB ;	   lexicon (intransitive abbrs)
+ 1. The TRNUMAB ;  lexicon (abbrs trans wrt. numberals)
+ 1. The TRAB ;	   lexicon (transitive abbrs)
+ 1. The NOAB ;	   lexicon (not really abbrs)
+ 1. The NUMNOAB ;  lexicon (not behaving as abbr before num)
+
+
+## The abbreviation lexicon itself
+
+
+
+ * **LEXICON ITRAB ** are intransitive abbreviations, A.S. etc.
+
+
+
+
+ * **LEXICON NOAB ** du, gen, jur
+
+This class contains homonyms, which are both intransitive
+abbreviations and normal words. The abbreviation usage
+is less common and thus only the occurences in the middle of
+the sentnece (when next word has small letters) can be 
+considered as true cases.
+
+
+
+
+
+ * **LEXICON TRNUMAB ** contains abbreviations who are transitive in front of numerals 
+
+For abbrs for which numerals are complements, but other
+words not necessarily are. This group treats arabic numerals as
+if it were transitive but letters as if it were intransitive.
+
+
+
+
+
+
+
+
+ * **LEXICON TRAB ** contains transitive abbreviations
+
+This lexicon is for abbrs that always have a constituent following it.
+
+
+
+
+
+ * **LEXICON NUMNOAB ** su, dii
+
+This class contains homonyms, which are both abbrs for 
+which numerals are complements and normal words. The abbreviation usage
+is less common and thus only the occurences in the middle of
+the sentence can be considered as true cases.
+
+
+
+# Inari Saami acronyms
+
+This file contains a loop for random capital-letter acronyms, 
+as well as two lists of common acronyms: letter-number acronyms and 
+small-capital letter combinations.
+
+## The main part
+
+ * **LEXICON Acronym-smn   ** divides the acros in the 3 types just mentioned.
 
 
 
@@ -16267,14 +16230,79 @@ And this is the ENDLEX of everything:
 The `@D.CmpOnly.FALSE@` flag diacritic is ued to disallow words tagged
 with +CmpNP/Only to end here.
 The `@D.NeedNoun.ON@` flag diacritic is used to block illegal compounds.
+#Inari Saami compounding
 
-# The Inari Sámi dates 
+ LEXICON Rhash - adding lower # and pointing at R
 
+ LEXICON R -  Flags to control compounding
+
+ LEXICON Rnoun - 
+
+
+ LEXICON RAlmostReal -  lexicalising the 3-part compounds, with the tag ShCmp
+
+
+ LEXICON Rreal - This initial recursive/compounding lexicon adds flags to 
+control compounding, before going to the real compounding lexicon.
+This is the former R lexicon, renamed to avoid the MiddleNouns loop
+
+
+ LEXICON RrealAfterCmpNFlags - coming from Rreal
+
+ LEXICON nounflag -  coming from previous, going to the Root lexica
+
+
+ LEXICON RHyph - This initial recursive/compounding lexicon adds flags to
+control compounding, before going to the real compounding lexicon
+
+ LEXICON RHyph_after_cmp_flags - from RHyph
+
+ LEXICON RProp - This initial recursive/compounding lexicon adds flags to
+control compounding, before going to the real compounding lexicon
+
+ - LEXICON RProp_after_cmp_flags from RProp
+
+ LEXICON RNum - This initial recursive/compounding lexicon adds flags to
+control compounding, before going to the real compounding lexicon
+
+ LEXICON RNum_after_cmp_flags - going to Noun, should it be to NounRoot?
+
+
+# The Inari Sámi dates
 
 This is a file generating Inari Sámi date expressions.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+We describe here how abbreviations are in Inari Sami are read out, e.g.
+for text-to-speech systems.
+
+For example:
+
+ * s.:syntynyt # ;  
+ * os.:omaa% sukua # ;  
+ * v.:vuosi # ;  
+ * v.:vuonna # ;  
+ * esim.:esimerkki # ; 
+ * esim.:esimerkiksi # ; 
+
+
+
+# The Inari Sámi dates 
+
+
+This is a file generating Inari Sámi date expressions.
 
 
 
@@ -16393,22 +16421,6 @@ This is a file generating Inari Sámi date expressions.
 
 
 
-
-
-
-
-
-We describe here how abbreviations are in Inari Sami are read out, e.g.
-for text-to-speech systems.
-
-For example:
-
- * s.:syntynyt # ;  
- * os.:omaa% sukua # ;  
- * v.:vuosi # ;  
- * v.:vuonna # ;  
- * esim.:esimerkki # ; 
- * esim.:esimerkiksi # ; 
 
 
 
