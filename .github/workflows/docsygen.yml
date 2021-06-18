@@ -4,6 +4,10 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: 💎 setup ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.6 # can change this to 2.7 or whatever version you prefer
       - uses: actions/checkout@v2
         with:
           repository: giellalt/giella-core
@@ -24,10 +28,6 @@ jobs:
         with:
           spellers: false
           fst: hfst
-#      - name: 💎 setup ruby
-#        uses: ruby/setup-ruby@v1
-#        with:
-#          ruby-version: 2.6 # can change this to 2.7 or whatever version you prefer
       - name: 🔨 install dependencies & build site
         uses: limjh16/jekyll-action-ts@v2
         with:
