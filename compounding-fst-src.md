@@ -35,3 +35,5 @@ control compounding, before going to the real compounding lexicon
 
  LEXICON RNum_after_cmp_flags - going to Noun, should it be to NounRoot?
 
+* * *
+<small>This (part of) documentation was generated from [../src/fst/compounding.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/compounding.lexc)</small>

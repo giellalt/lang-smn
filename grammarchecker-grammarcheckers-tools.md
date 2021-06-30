@@ -1,5 +1,5 @@
 
-      I N A R I   S A A M I  G R A M M A R   C H E C K E R
+I N A R I   S A A M I  G R A M M A R   C H E C K E R
 
 
 
@@ -1121,7 +1121,7 @@ Verb in plural
 
 
 
-### ConNeg Better: Target whatever is there and should have been a conneg. !!!
+
 
 
 
@@ -1197,3 +1197,5 @@ Lexical rules
 
 
 
+* * *
+<small>This (part of) documentation was generated from [../tools/grammarcheckers/grammarchecker.cg3](http://github.com/giellalt/lang-smn/blob/main/../tools/grammarcheckers/grammarchecker.cg3)</small>

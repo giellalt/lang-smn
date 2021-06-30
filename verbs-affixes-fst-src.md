@@ -11,8 +11,8 @@ triggers, tney must be ordered as follows (where {A,B} C means *A or B, thereaft
 ## Overview of the file
 
 1. Auxiliaries
-    1. NEG
-    1. LEDE
+1. NEG
+1. LEDE
 1. 2-syllabic: 2SYLL_ etc. (classified according to infinitive suffix)
 1. 3-syllabic
 1. 4-syllabic
@@ -69,11 +69,11 @@ Within each lexicon, the suffixes are ordered as follows:
 
 #### LEXICON 2SYLL\_AASSAD ( 48 verbs)
 * 2SYLL_AASSAD - aassâđ ääss
-    - Inf:â%>đ K ;
-    - Ind+Prs+Sg3:á^CSH^VHIGH áásá,
-    - Ind+Prs+Pl3:i^CSH%>h ääsih, rvow like Inf,
-    - ConNeg:â^WG rvow like Inf,
-    - Ind+Prt+Sg1:i^VBACK%>m aassim
+- Inf:â%>đ K ;
+- Ind+Prs+Sg3:á^CSH^VHIGH áásá,
+- Ind+Prs+Pl3:i^CSH%>h ääsih, rvow like Inf,
+- ConNeg:â^WG rvow like Inf,
+- Ind+Prt+Sg1:i^VBACK%>m aassim
 
 
 
@@ -117,11 +117,11 @@ Similar to 2SYLL\_ETTAD, but less CSH, don't know yet how much. 20 verbs
 
 #### LEXICON 2SYLL\_ETTAD 
 * 2SYLL_ETTAD ettâđ e^RVtt4
-    - Inf:â^VHIGH%>đ
-    - Ind+Prs+Sg3:á^CSH^VHIGH  iätá
-    - Ind+Prs+Pl3:e^CSH%>h
-    - ConNeg:â^WG^VHIGH^RLEN
-    - Ind+Prt+Sg1:i%>m
+- Inf:â^VHIGH%>đ
+- Ind+Prs+Sg3:á^CSH^VHIGH  iätá
+- Ind+Prs+Pl3:e^CSH%>h
+- ConNeg:â^WG^VHIGH^RLEN
+- Ind+Prt+Sg1:i%>m
 
 
 
@@ -134,11 +134,11 @@ Similar to 2SYLL\_ETTAD, but less CSH, don't know yet how much. 20 verbs
 
 #### LEXICON 2SYLL\_KAVNAD 
 * 2SYLL_KAVNAD  as ETTAD as ETTAD but with VBACK kavnâđ kä^RVvn, only RV ä in stem tothis lexicon 57 verbs
-    - Inf:
-    - Ind+Prs+Sg3: kávná
-    - Ind+Prs+Pl3: kävnih
-    - ConNeg: kaavnâ
-    - Ind+Prt+Sg1: kavnim
+- Inf:
+- Ind+Prs+Sg3: kávná
+- Ind+Prs+Pl3: kävnih
+- ConNeg: kaavnâ
+- Ind+Prt+Sg1: kavnim
 
 
 
@@ -154,11 +154,11 @@ Similar to 2SYLL\_ETTAD, but less CSH, don't know yet how much. 20 verbs
 
 #### LEXICON 2SYLL\_KALGAD (only TV)
 * 2SYLL_KALGAD kalgâđ
-    - Inf:
-    - Ind+Prs+Sg3:  kálgá
-    - Ind+Prs+Pl3: kälgih
-    - ConNeg: kaalgâ
-    - Ind+Prt+Sg1: kalgim
+- Inf:
+- Ind+Prs+Sg3:  kálgá
+- Ind+Prs+Pl3: kälgih
+- ConNeg: kaalgâ
+- Ind+Prt+Sg1: kalgim
 
 
 
@@ -172,11 +172,11 @@ Similar to 2SYLL\_ETTAD, but less CSH, don't know yet how much. 20 verbs
 
 #### LEXICON 2SYLL\_COGGAD 
 * 2SYLL_COGGAD kolgâđ ka^RVlg
-    - Inf:
-    - Ind+Prs+Sg3: kalga
-    - Ind+Prs+Pl3: kalgeh
-    - ConNeg: koolgâ
-    - Ind+Prt+Sg1: kolgim
+- Inf:
+- Ind+Prs+Sg3: kalga
+- Ind+Prs+Pl3: kalgeh
+- ConNeg: koolgâ
+- Ind+Prt+Sg1: kolgim
 
 
 
@@ -191,11 +191,11 @@ Similar to 2SYLL\_ETTAD, but less CSH, don't know yet how much. 20 verbs
 
 #### LEXICON 2SYLL\_KULGAD 
 * 2SYLL_KULGAD kulgâđ ko^RVlg
-    - Inf:
-    - Ind+Prs+Sg3: kolgá
-    - Ind+Prs+Pl3: kolgeh
-    - ConNeg: kuulgâ
-    - Ind+Prt+Sg1: kulgim
+- Inf:
+- Ind+Prs+Sg3: kolgá
+- Ind+Prs+Pl3: kolgeh
+- ConNeg: kuulgâ
+- Ind+Prt+Sg1: kulgim
 
 
 Distinct from SODDAD with short vowel in past tense (du)
@@ -205,11 +205,11 @@ Turns out it was not distinct after all. Preper for fusing KULGAD and SODDAD
 
 #### LEXICON 2SYLL\_SODDAD 
 * 2SYLL_SODDAD šoddâđ ša^RVdd
-    - Inf:
-    - Ind+Prs+Sg3: šadda
-    - Ind+Prs+Pl3: šaddeh
-    - ConNeg: šoodâ
-    - Ind+Prt+Sg1: šoddim
+- Inf:
+- Ind+Prs+Sg3: šadda
+- Ind+Prs+Pl3: šaddeh
+- ConNeg: šoodâ
+- Ind+Prt+Sg1: šoddim
 
 
 
@@ -224,11 +224,11 @@ Turns out it was not distinct after all. Preper for fusing KULGAD and SODDAD
 
 #### LEXICON 2SYLL\_TOOLLAD (12 verbs)
 * 2SYLL_TOOLLAD - toollâđ,  tuáll
-    - Inf:â^VBACK%>đ
-    - Ind+Prs+Sg3: tuálá, á^CSH
-    - Ind+Prs+Pl3:i^CSH%>h tuálih, rvow like Sg3
-    - ConNeg:â^WG^VHIGH^RLEN rvow like Sg3
-    - Prt+Sg1:i^VBACK^RLEN%>m toollim
+- Inf:â^VBACK%>đ
+- Ind+Prs+Sg3: tuálá, á^CSH
+- Ind+Prs+Pl3:i^CSH%>h tuálih, rvow like Sg3
+- ConNeg:â^WG^VHIGH^RLEN rvow like Sg3
+- Prt+Sg1:i^VBACK^RLEN%>m toollim
 
 
 
@@ -242,11 +242,11 @@ Turns out it was not distinct after all. Preper for fusing KULGAD and SODDAD
 
 #### LEXICON 2SYLL\_OPPAD 
 * 2SYLL_OPPAD oppâđ uápp
-    - Inf:
-    - Ind+Prs+Sg3: uáppá
-    - Ind+Prs+Pl3: uáppih
-    - ConNeg: oopâ
-    - Ind+Prt+Sg1: oppim
+- Inf:
+- Ind+Prs+Sg3: uáppá
+- Ind+Prs+Pl3: uáppih
+- ConNeg: oopâ
+- Ind+Prt+Sg1: oppim
 
 suggested stem = tuáll
 Impossible to see the differences in diphtong length
@@ -263,12 +263,12 @@ Impossible to see the differences in diphtong length
 
 #### LEXICON 2SYLL\_TOOHAD 38 verbs
 * 2SYLL_TOOHAD - toohâđ, ta^RVh^RC
-    - Inf: = 2SYLL_MOONNAD
-    - Ind+Prs+Sg3:á^CSH taha,
-    - Ind+Prs+Pl3:e^CSH%>h taheh, rvow like Sg3
-    - Ind+Prt+Sg3:â^WG^VHIGH^RLEN%>i  juuvâi
-    - ConNeg: rvow like Inf = 2SYLL_MOONNAD
-    - Ind+Prt+Sg1: toohim = 2SYLL_MOONNAD
+- Inf: = 2SYLL_MOONNAD
+- Ind+Prs+Sg3:á^CSH taha,
+- Ind+Prs+Pl3:e^CSH%>h taheh, rvow like Sg3
+- Ind+Prt+Sg3:â^WG^VHIGH^RLEN%>i  juuvâi
+- ConNeg: rvow like Inf = 2SYLL_MOONNAD
+- Ind+Prt+Sg1: toohim = 2SYLL_MOONNAD
 
 
 
@@ -278,11 +278,11 @@ Impossible to see the differences in diphtong length
 
 #### LEXICON 2SYLL\_MMOONNAD 24 verbs
 * 2SYLL_MOONNAD - moonnâđ ma^RVnn
-    - Inf:â^VHIGH^RLEN%>đ (functions also for ääss)
-    - Ind+Prs+Sg3:á^CSH mana,
-    - Ind+Prs+Pl3:e^CSH%>h maneh, rvow like Sg3
-    - ConNeg:â^WG^VHIGH^RLEN rvow like Inf
-    - Ind+Prt+Sg1:i^VHIGH^RLEN%>m moonnim
+- Inf:â^VHIGH^RLEN%>đ (functions also for ääss)
+- Ind+Prs+Sg3:á^CSH mana,
+- Ind+Prs+Pl3:e^CSH%>h maneh, rvow like Sg3
+- ConNeg:â^WG^VHIGH^RLEN rvow like Inf
+- Ind+Prt+Sg1:i^VHIGH^RLEN%>m moonnim
 
 
 
@@ -309,11 +309,11 @@ nuuvâ, iige noovâ
 
 #### LEXICON 2SYLL\_VIISSAD 
 * 2SYLL_VIISSAD - viiššâđ, vi^RVšš
-    - Inf:â^VHIGH^RLEN%>đ
-    - Ind+Prs+Sg3:á^CSH višá,
-    - Ind+Prs+Pl3:e^CSH^RVSH%>h, rvow like Sg3 višeh
-    - ConNeg:â^WG^RLEN viišâ, rvow like Inf
-    - Ind+Prt+Sg1:i^RLEN%>m viiššim
+- Inf:â^VHIGH^RLEN%>đ
+- Ind+Prs+Sg3:á^CSH višá,
+- Ind+Prs+Pl3:e^CSH^RVSH%>h, rvow like Sg3 višeh
+- ConNeg:â^WG^RLEN viišâ, rvow like Inf
+- Ind+Prt+Sg1:i^RLEN%>m viiššim
 
 
 
@@ -333,11 +333,11 @@ nuuvâ, iige noovâ
 
 #### LEXICON 2SYLL\_KIESSAD
 * 2SYLL_KIESSAD - kiessâđ, kiess
-    - Inf:â%>đ
-    - Ind+Prs+Sg3:á^CSH^VHIGH kiäsá,
-    - Ind+Prs+Pl3:i^CSH%>h kiesih
-    - ConNeg:â^WG rvow like Inf kiesâ
-    - Ind+Prt+Sg1:i%>m  kiessim
+- Inf:â%>đ
+- Ind+Prs+Sg3:á^CSH^VHIGH kiäsá,
+- Ind+Prs+Pl3:i^CSH%>h kiesih
+- ConNeg:â^WG rvow like Inf kiesâ
+- Ind+Prt+Sg1:i%>m  kiessim
 
 
 
@@ -347,11 +347,11 @@ nuuvâ, iige noovâ
 
 #### LEXICON 2SYLL\_VUOLLAD  ye to ua vyešš 71 verbs
 * 2SYLL_VUOLLAD - vuollâđ, vuoll OBS: not Prs+Pl3 vowel like the others
-    - Inf:â%>đ
-    - Ind+Prs+Sg3:á^CSH^VHIGH vuálá,
-    - Ind+Prs+Pl3:i^CSH%>h  vyelih
-    - ConNeg:â^WG rvow like Inf vuolâ
-    - Ind+Prt+Sg1:i%>m vuollim
+- Inf:â%>đ
+- Ind+Prs+Sg3:á^CSH^VHIGH vuálá,
+- Ind+Prs+Pl3:i^CSH%>h  vyelih
+- ConNeg:â^WG rvow like Inf vuolâ
+- Ind+Prt+Sg1:i%>m vuollim
 
 
 
@@ -381,19 +381,19 @@ nuuvâ, iige noovâ
 
 #### LEXICON 2SYLL\_KALVED kalveđ without RLEN Prs+Sg1. 8 verbs
 * 2SYLL_KALVED kalveđ ka^RVlv
-    - kalvam
-    - kalva
-    - kalveh
-    - kalve
+- kalvam
+- kalva
+- kalveh
+- kalve
 
 
 
 #### LEXICON 2SYLL\_POHTED  with RLEN Prs+Sg1. 31 verbs
 * 2SYLL_POHTED pohteđ:po5^RVht
-    - poovtám RLEN
-    - pohtá
-    - pohteh
-    - povte
+- poovtám RLEN
+- pohtá
+- pohteh
+- povte
 
 
 
@@ -408,10 +408,10 @@ nuuvâ, iige noovâ
 
 #### LEXICON 2SYLL\_PIHTED 82 verbs
 * 2SYLL_PIHTED pihteđ pi^RVht
-    - pivtám
-    - pihtá
-    - pihteh
-    - pivte
+- pivtám
+- pihtá
+- pihteh
+- pivte
 
 
 
@@ -447,9 +447,9 @@ nuuvâ, iige noovâ
 
 #### 2SYLL\_UADDID
 * 2SYLL_UADDID
-    - Ind+Prs+Sg1: čálám
-    - Ind+Prs+Sg3: čáálá
-    - Ind+Prs+Pl3: čäälih NB! čäällih?
+- Ind+Prs+Sg1: čálám
+- Ind+Prs+Sg3: čáálá
+- Ind+Prs+Pl3: čäälih NB! čäällih?
 
 
 
@@ -515,9 +515,9 @@ as 2SYLL_ID, but only 3 person
 
 
 * 2SYLL_PAACCID pääcciđ
-    - Ind+Prs+Sg1: páásám
-    - Ind+Prs+Sg3: páácá
-    - Ind+Prs+Pl3: pääcih NB! pääccih?
+- Ind+Prs+Sg1: páásám
+- Ind+Prs+Sg3: páácá
+- Ind+Prs+Pl3: pääcih NB! pääccih?
 
 
 
@@ -606,7 +606,7 @@ as 2SYLL_ID, but only 3 person
 
 ### OOD verbs
 * 2SYLL_OOD
-    - Prt+Du1 njivvoim WG CLEN
+- Prt+Du1 njivvoim WG CLEN
 
 
 
@@ -619,7 +619,7 @@ as 2SYLL_ID, but only 3 person
 
 #### 2SYLL\_ORROOD
 * 2SYLL_ORROOD  like 2SYLL_OOD, but different triggers here and there
-    - Prt+Du1 oroim WG
+- Prt+Du1 oroim WG
 
 
 
@@ -635,11 +635,11 @@ as 2SYLL_ID, but only 3 person
 
 #### 2SYLL\_KUARRUD
 * 2SYLL_KUARRUD  long dipht => -o
-    - Inf: kuárruđ
-    - Ind+Prs+Sg3: kuáru
-    - Ind+Prs+Pl3: kuáruh
-    - ConNeg: kuáru, kuáro
-    - Ind+Prt+Sg1: koorrum
+- Inf: kuárruđ
+- Ind+Prs+Sg3: kuáru
+- Ind+Prs+Pl3: kuáruh
+- ConNeg: kuáru, kuáro
+- Ind+Prt+Sg1: koorrum
 
 
 
@@ -654,11 +654,11 @@ as 2SYLL_ID, but only 3 person
 
 #### 2SYLL\_UD
 * 2SYLL_UD
-    - Inf: ruábbuđ
-    - Ind+Prs+Sg3: ruábbu
-    - Ind+Prs+Pl3: ruábbuh
-    - ConNeg: ruábu
-    - Ind+Prt+Sg1: ruábbum
+- Inf: ruábbuđ
+- Ind+Prs+Sg3: ruábbu
+- Ind+Prs+Pl3: ruábbuh
+- ConNeg: ruábu
+- Ind+Prt+Sg1: ruábbum
 
 
 
@@ -672,11 +672,11 @@ as 2SYLL_ID, but only 3 person
 
 #### 2SYLL\_UAZZUID
 * 2SYLL_UAZZUD
-    - Inf: uážžuđ
-    - Ind+Prs+Sg3: uážžu
-    - Ind+Prs+Pl3: uážžuh
-    - ConNeg: uážu
-    - Ind+Prt+Sg1: ožžum
+- Inf: uážžuđ
+- Ind+Prs+Sg3: uážžu
+- Ind+Prs+Pl3: uážžuh
+- ConNeg: uážu
+- Ind+Prt+Sg1: ožžum
 
 
 
@@ -701,12 +701,12 @@ as 2SYLL_ID, but only 3 person
 
 
 * 3_LEKKASID (no stem change, but going to ODDLEX)
-    - Sg1: %>âm, Sg3: ^CLEN^RLEN (note: ODDLEX :-(
+- Sg1: %>âm, Sg3: ^CLEN^RLEN (note: ODDLEX :-(
 
 
 
 * 3_CIELATTID (stem-final tt shortening) cielâttiđ: cielât Length change in stem: Consonant change only
-    - Sg1: %>âm, Sg3: ^CLEN^RLEN
+- Sg1: %>âm, Sg3: ^CLEN^RLEN
 
 
 
@@ -714,7 +714,7 @@ as 2SYLL_ID, but only 3 person
 
 
 * 3_VYEJETTID (2syll vow short in Inf, long in Sg3, 1st syll V lengthening) vyejettiđ vyejeet
-    - Sg1: %>âm, Sg3: ^RLEN^SLEN
+- Sg1: %>âm, Sg3: ^RLEN^SLEN
 
 
 
@@ -725,7 +725,7 @@ as 2SYLL_ID, but only 3 person
 
 
 * 3_ADELID
-    - Sg1: %>âm, Sg3: ^CLEN
+- Sg1: %>âm, Sg3: ^CLEN
 
 
 
@@ -737,7 +737,7 @@ as 2SYLL_ID, but only 3 person
 
 
 * 3_MERIDID
-    - Sg1: %>âm, Sg3: ^CLEN^RLEN
+- Sg1: %>âm, Sg3: ^CLEN^RLEN
 
 
 
@@ -745,7 +745,7 @@ as 2SYLL_ID, but only 3 person
 
 
 * 3_PUTESTID (cns and vow lengthening) putestiđ: putteest Length change in stem: Short V in Inf (before V)
-    - Sg1: %>âm, Sg3: ^CLEN^SLEN
+- Sg1: %>âm, Sg3: ^CLEN^SLEN
 
 
 
@@ -754,9 +754,9 @@ as 2SYLL_ID, but only 3 person
 
 
 * 3_COKKIITTID (stem-final tt shortening + 2syll vow shortening cokkiittiđ cokkit.
-    - Sg1: %>âm, Sg3: ^SVSH
-    - difference in negation + Action Ess, Loc.. compared to 3_COKKIITTID)
-    - Length change in stem: Long V in Inf (before C#).
+- Sg1: %>âm, Sg3: ^SVSH
+- difference in negation + Action Ess, Loc.. compared to 3_COKKIITTID)
+- Length change in stem: Long V in Inf (before C#).
 
 
 
@@ -852,11 +852,11 @@ as 2SYLL_ID, but only 3 person
 
 ###  j stems
 * Contracted j-stems
-    - C_COKKAD (áj-contracted)
-        - Ind Prs Pl3 čokkájeh
-    - C_PALLAD (aj-contracted)
-    - C_TUHHID (ej-contracted)
-    - C_RAMMUD (oj-contracted)
+- C_COKKAD (áj-contracted)
+- Ind Prs Pl3 čokkájeh
+- C_PALLAD (aj-contracted)
+- C_TUHHID (ej-contracted)
+- C_RAMMUD (oj-contracted)
 
 
 
@@ -970,8 +970,8 @@ as 2SYLL_ID, but only 3 person
 ###  v stems
 
 * Contracted v-stems
-    - C_TABAHTUD (Sg3 -uvá)
-    - C_MERIDUD (Sg3 uvvoo)
+- C_TABAHTUD (Sg3 -uvá)
+- C_MERIDUD (Sg3 uvvoo)
 
 
  * **LEXICON C_TABAHTUD** Sg3 -uvá
@@ -1123,3 +1123,5 @@ become the second part of N + (V > N) compounds.
 
 
 
+* * *
+<small>This (part of) documentation was generated from [../src/fst/affixes/verbs.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/affixes/verbs.lexc)</small>

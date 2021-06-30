@@ -11,8 +11,8 @@ order for the morphophonology to work:
 ## Table of content for this file 
 1. Unclassified lexica 
 1. Even-syllable stems 
-    1. Two-syllabic 
-    1. Four-syllabic even stems 
+1. Two-syllabic 
+1. Four-syllabic even stems 
 1. Odd-syllabic stems 
 1. Contract stems 
 
@@ -133,7 +133,7 @@ So far it has only one member, juuvâš, and no Px
 
 
 ### 2KIELA lexicon family 
- WG, blank Ill, DLEN, RVSH, SVLOW 
+WG, blank Ill, DLEN, RVSH, SVLOW 
 
  * **LEXICON KIELAonly** 
 
@@ -1145,3 +1145,5 @@ TODO: Move derivation lexica here
 
 
 
+* * *
+<small>This (part of) documentation was generated from [../src/fst/affixes/nouns.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/affixes/nouns.lexc)</small>

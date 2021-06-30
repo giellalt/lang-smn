@@ -149,7 +149,7 @@ Remove unwanted analyses
 
 
 
- * **Dert** Rule for removing Der/t Prop when there are other analysis
+* **Dert** Rule for removing Der/t Prop when there are other analysis
 
 
 
@@ -198,7 +198,7 @@ Remove unwanted analyses
 
 * sutnje is not verb
 
- * **ABBR** Removes ABBR in favour of Adv, Pcle or Pron, e.g. "dii" when there is no punctuation
+* **ABBR** Removes ABBR in favour of Adv, Pcle or Pron, e.g. "dii" when there is no punctuation
 
 * **ollit** removes ollit when ollu - move this one?
 
@@ -1284,28 +1284,28 @@ Commented out som adp-rules we don't need anymore:
 
 ### miehta
 * "miehtá" is also VFIN, and miehtá needs special treatment 
-    - **miehtaPo** after place or time Gen
+- **miehtaPo** after place or time Gen
 
-    - **miehtaPr** before place or time Gen
+- **miehtaPr** before place or time Gen
 
 * **oidnosisAdv**
 
 * "ovddas" has many readings and needs special treatment 
-    - **ovddasPo**  - commented out because we don't need it
+- **ovddasPo**  - commented out because we don't need it
 
 * special rules for rastá because it often is Adv, and it can be an object connected to the PP
-    - **rastaAdv**  čuohppat/časkit/sahet rastá
+- **rastaAdv**  čuohppat/časkit/sahet rastá
 
-    - **rastaPo, rastaPr**  fievrridit olbmo man nu rastá
+- **rastaPo, rastaPr**  fievrridit olbmo man nu rastá
 
-    - **rastaPr**  rastá ráji/rájá
+- **rastaPr**  rastá ráji/rájá
 
 * **birraPo, birraPr** special rules for birra because it often is Adv, and it can be an object connected to the PP
 
 
 * "vuostá" has many readings and needs special treatment 
-    - **vuostaAdv**  váldit vuostá/vuostái
-    - **vuostaPr**  váldit vuostá/vuostái	
+- **vuostaAdv**  váldit vuostá/vuostái
+- **vuostaPr**  váldit vuostá/vuostái	
 
 
 * vuollel ja badjel as Adv in front of Num
@@ -1488,7 +1488,7 @@ First map all COMP-CS<, then remove the other readings
 
 * **killAllnotComp** Removes analysis which are not @COMP-CS<
 
-    - *This was the kill all not Comp rule!!*
+*
 
 * **goCSbeforeComp** Selects CS analysis in front of @COMP-CS<
 
@@ -1566,7 +1566,7 @@ Mostly we map both @CNP and @CVP, then we select @CNP, after that we remove them
 * **CVPCopNomInf** COPULAS Nom @CNP Nom Inf	
 
 
- ***CVPoppramsing** Lásse, Iŋgá ja mun
+***CVPoppramsing** Lásse, Iŋgá ja mun
 
 
 ***CVPCmp/SplitR** Cmp/SplitR @CNP
@@ -2623,7 +2623,7 @@ The rules are no documented yet
 
 * **SEMr2074** Selects Gen in front of HUMAN-GROUP
 
- * **SEMactor** Select Gen in front of ABSTRACT and RIEKTEDILLI *unnitlogu oaidninčiegas*
+* **SEMactor** Select Gen in front of ABSTRACT and RIEKTEDILLI *unnitlogu oaidninčiegas*
 
 * **SEMXr2076** Selects Gen if you are HUMAN or Pron with an ABSTRACT to your right *iežaset vuoigatvuođa*
 
@@ -3105,7 +3105,7 @@ The rules are no documented yet
 
 * **GenBoaris** Selects Gen in golbma *jagi* boaris
 
-    - Ritva comment: Find a rule for "viđa" aswell, this hits "mehter" as it should
+- Ritva comment: Find a rule for "viđa" aswell, this hits "mehter" as it should
 
 
 * **XXr2002** Selects genitive if there is a numeral immediately to your left, and you are TIME: *golbma jagi*
@@ -4192,3 +4192,5 @@ The previous two rules look marginal.
 
 
 
+* * *
+<small>This (part of) documentation was generated from [../src/cg3/coredisambiguation.cg3](http://github.com/giellalt/lang-smn/blob/main/../src/cg3/coredisambiguation.cg3)</small>

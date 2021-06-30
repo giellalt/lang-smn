@@ -12,3 +12,5 @@ small-capital letter combinations.
 
 
 
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/smn-acronyms.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/stems/smn-acronyms.lexc)</small>

@@ -35,3 +35,5 @@
 
  * **LEXICON acrooblique**
 
+* * *
+<small>This (part of) documentation was generated from [../src/fst/affixes/acronyms.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/affixes/acronyms.lexc)</small>

@@ -1302,7 +1302,7 @@ Conjunctions
 
 * **Adverbs and not Nouns**
 
-    - uáli
+- uáli
 
 Adverbs and not Pronouns
 
@@ -1632,7 +1632,7 @@ maid has many readings and as Rel it is a member of S-BOUNDARY. Therefore we nee
 
 * **killAllnotComp** Removes analysis which are not @COMP-CS<
 
-    - *This was the kill all not Comp rule!!*
+*
 
 
 
@@ -2474,7 +2474,7 @@ The rules are no documented yet
 
 * **SEMXxr2071** Removes Gen: Nobody can possess a Proper name? Except from (Pron Pers) and Sem/Fem OR Sem/Mal
 
-* **SEMXxPropOrg** Removes Gen: Who can possess Prop Sem/Org?    Names or their possessed ones can !!
+
 
 * **SEMdep** Select Gen if main-organization in front of department   
 * **SEMorghum** select gen if organization or education in front of human   
@@ -2484,7 +2484,7 @@ The rules are no documented yet
 
 * **SEMr2074** Selects Gen in front of HUMAN-GROUP
 
- * **SEMactor** Select Gen in front of ABSTRACT and RIEKTEDILLI *unnitlogu oaidninčiegas*
+* **SEMactor** Select Gen in front of ABSTRACT and RIEKTEDILLI *unnitlogu oaidninčiegas*
 
 * **SEMXr2076** Selects Gen if you are HUMAN or Pron with an ABSTRACT to your right *iežaset vuoigatvuođa*
 
@@ -2806,7 +2806,7 @@ The rules are no documented yet
 
 * **GenBoaris** Selects Gen in golbma *jagi* boaris
 
-    - Ritva comment: Find a rule for "viđa" aswell, this hits "mehter" as it should
+- Ritva comment: Find a rule for "viđa" aswell, this hits "mehter" as it should
 
 
 * **XXr2002** Selects genitive if there is a numeral immediately to your left, and you are TIME: *golbma jagi*
@@ -3562,3 +3562,5 @@ file is ported to Apertium.
 
 
 
+* * *
+<small>This (part of) documentation was generated from [../src/cg3/disambiguator.cg3](http://github.com/giellalt/lang-smn/blob/main/../src/cg3/disambiguator.cg3)</small>

@@ -32,9 +32,9 @@ Here we govern all morphophonological processes.
 
 Literal quotes and angles must be escaped (cf morpheme boundaries further down):
 * »
- «
- >
- <
+«
+>
+<
 
 
 
@@ -53,7 +53,7 @@ Literal quotes and angles must be escaped (cf morpheme boundaries further down):
  * ** ':'           ** is the real apostroph
 
 Then some more abstract archiphonemes
- These are dependent upon the **Triggers** in the next section
+These are dependent upon the **Triggers** in the next section
  * **%^RC:0      ** = root cons., lengthened by ^CLEN - máán%RCu máánnun
  * **%^RV:0      ** = root vowel, lengthened by ^RLEN - ta%^RVvlu taavlu 
  * **%^SC:0      ** = stem cons, %^SC:j, pluss lengthen after earlier shortening by %^CSH, see lyeme
@@ -291,7 +291,7 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 **RULE: nnj to nj shortening weak grade and consonant shortening** =  special rule, e.g. konnjâl -> konjâlân puánnjá
 
 
- **RULE: Word final consonant deletion                 ** = for vaskâm:vaaskâ
+**RULE: Word final consonant deletion                 ** = for vaskâm:vaaskâ
 
 * *va^RVskâm^FCD^RLEN*
 * *vaaskâ000*
@@ -299,7 +299,7 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 * *njuolgâ000*
 
 
- **RULE: Final m in stems, smm to sm  ** = 
+**RULE: Final m in stems, smm to sm  ** = 
 
 
 **RULE: Wordfinal consonants part 1**  e%^RVlâčč
@@ -450,7 +450,7 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 **RULE: Underlying long vowel shortening iä:e and ää:ä or a** = čääh%^RCu2%^CLEN%^VBACK%>um
 
 
- 3st stems viäskár veskirin, časkes časkes ča%^RVskas%^ÁE viäskár%^ÁI%^WG%^RVSH
+3st stems viäskár veskirin, časkes časkes ča%^RVskas%^ÁE viäskár%^ÁI%^WG%^RVSH
 
 * *kaavpug^CSH^RVSH^SVSH>ân*
 * *ka0vpug000>ân*
@@ -807,7 +807,7 @@ a rules
 
 ## Other rules
 
- **RULE: Word final vowel deletion** = for vaskâm:vaaskâ
+**RULE: Word final vowel deletion** = for vaskâm:vaaskâ
 
 *Tests:*
 * *sollâ^FVD>ii*
@@ -817,7 +817,7 @@ a rules
 
 
 
- **RULE: Insertion of pleonastic hyphen** = for compounding of two vowels *stovli-ijâ*
+**RULE: Insertion of pleonastic hyphen** = for compounding of two vowels *stovli-ijâ*
 
 
 *Tests:*
@@ -825,3 +825,5 @@ a rules
 * *ska0inâ0>đ*
 * *hu^RVm^RCo^SVb^WG^RLEN^SLEN^RLEN^SLEN*
 * *huum0oob00000*
+* * *
+<small>This (part of) documentation was generated from [../src/fst/phonology.twolc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/phonology.twolc)</small>
