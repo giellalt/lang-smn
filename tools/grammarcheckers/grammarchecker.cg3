@@ -1033,12 +1033,12 @@ LIST COM-ADV = "fárrolaga" "oovtâst" "oktanaga" "ovttamielas" "oovtâst" "ovtt
 # Other adverb sets
 # - - - - - - - - - 
 
-LIST GRADE-ADV =  "aaibâs" "meendu" ("eštuu" Adv) ("eenâb" Adv) "erenoamán" "epitáválâš" "hirmâd" "eromâš" "ila" "hirmâd" ("maht" Adv) ("melgâd" Adv) ("mearkkašahtti" Adv) "masa" "kukken" "muhtun_muddui" "naa" "oalle" "melgâd" ("oles" Adv) "čuuvtij" ("oovtnáál" Adv) ("ucánjii" Adv) ("ucánjii" Adv) ("ucánjii" Adv) "vehá" "ucánjii" "ucánjii" "ucánjii" "melgâd" ;
+LIST GRADE-ADV =  "aaibâs" "meendu" ("eštuu" Adv) ("eenâb" Adv) "epitáválâš" "hirmâd" "eromâš" "ila" "hirmâd" ("maht" Adv) ("melgâd" Adv) "masa" "kukken" "muhtun_muddui" "naa" "oalle" "melgâd" ("oles" Adv) "čuuvtij" ("oovtnáál" Adv) ("ucánjii" Adv) ("ucánjii" Adv) ("ucánjii" Adv) "vehá" "ucánjii" "ucánjii" "ucánjii" "melgâd" ;
 
-LIST PLURALIZER = "puoh" "buotlágan" "buotlágaš" "ereslágán" "iežálágan" "gait" "gaitlágan" "goappaš" "kuohtuuh" "máŋggalágan" "moattelágan" ;
+LIST PLURALIZER = "puoh" "puohlágán" "ereslágán" "jiešlágán" "kuohtuuh" ;
     # Singular nouns can have a plural form combined with those
   
-LIST BUOT = "puoh" "gait" "gaitin" "gaitdivnnat" ;
+LIST BUOT = "puoh" ;
 
 #!! ### Adjective sets
 # ----------
@@ -2027,7 +2027,7 @@ ADD (&typo &SUGGESTWF) (<spelled>);
 
 #!! Sg3/Pl3 errors
 
-ADD:msyn-agr-pl3 (&msyn-agr-pl3) TARGET V IF (NOT -1 Sg + Nom OR Sg3 + Nom)(*1 Pl + Nom BARRIER NOT-NPMODADV LINK NOT *1 V + Pl3)(0 ("leđe") + Sg3);
+ADD:msyn-agr-pl3 (&msyn-agr-pl3) TARGET V IF (NOT -1 Sg + Nom OR Sg3 + Nom)(*1 Pl + Nom BARRIER NOT-NPMODADV OR PUNCT + RIGHT OR PUNCT + LEFT LINK NOT *1 V + Pl3)(0 ("leđe") + Sg3);
 COPY:msyn-agr-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V &msyn-agr-pl3);
 #% Tast lii uápis ääših
 #$ Tast láá uápis ääših
@@ -2296,7 +2296,7 @@ ADD:msyn-acc-obj-top (&msyn-acc-obj-top) TARGET N IF (0 Pl + Acc - Sem/Time LINK
 # Inarinsaamenkielisiä nimiä käytetään vähän
 
 #ADD:msyn-acc-obj-top (&msyn-acc-obj-top) TARGET N IF (0 Pl + Acc - Sem/Time LINK *-1 BOS BARRIER Nom)(1 Neg + Sg3)(2 ConNeg LINK NOT 0 TV);
-ADD:msyn-acc-obj-top (&msyn-acc-obj-top) TARGET N IF (0 Pl + Acc - Sem/Time LINK *-1 BOS BARRIER Nom)(1 Neg + Sg3 LINK NOT *1 TV);
+ADD:msyn-acc-obj-top (&msyn-acc-obj-top) TARGET N IF (NOT -1 ("mihheen"))(0 Pl + Acc - Sem/Time LINK *-1 BOS BARRIER Nom)(1 Neg + Sg3 LINK NOT *1 TV);
 COPY:msyn-acc-obj-top (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &msyn-acc-obj-top);
 
 #% {tiäđuid} ij kavnuu.
@@ -2411,7 +2411,7 @@ ADD:msyn-mii-acc (&msyn-mii-acc) TARGET N IF (-2 BOS)(-1 ("kii"))(0 (N Sg Nom))(
 COPY:msyn-mii-acc (Pl Acc &SUGGEST) EXCEPT (Sg Nom) TARGET ( N &msyn-mii-acc);
 
 
-ADD:msyn-attr-pred (&msyn-attr-pred)  TARGET (A Attr) IF (1 EOS) ;
+ADD:msyn-attr-pred (&msyn-attr-pred)  TARGET (A Attr) IF (NOT 0 (Arab Ord))(1 EOS) ;
     #% Tot lii hirmâd.
     #$ Tot lii hirmâd styeres.
 
