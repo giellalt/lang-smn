@@ -1047,6 +1047,8 @@ ALLSYNTAG
 
 ### Grammarchecker sets
 
+naming: &errortype-errorsubtype-is-shouldbe
+naming: &errortype-errorsubtype-comment
 
 
 
@@ -1128,12 +1130,19 @@ Verb in plural
 
 
 
+
 ### Existential sentences and habitives
 
 
 
 
 
+
+
+
+
+
+Plain object of TV in Nom shall be Acc
 
 
 
@@ -1157,6 +1166,7 @@ Acc shall be Nom
 Numeral phrases
 
 The rule is: 2-6 + gensg, 7- + par
+
 
 
 

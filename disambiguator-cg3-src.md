@@ -1312,6 +1312,10 @@ Adverbs and not Pronouns
 
 ## Pronouns 
 
+iänááš
+
+
+
 
 * **recipr, reciprPl** select Recipr
 
