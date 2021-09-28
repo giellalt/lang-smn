@@ -2491,6 +2491,11 @@ SELECT:siste Adv IF (-1 V)(0 ("siste"))(*1 N + Loc BARRIER NOT-NPMOD);
 
 #!! ## Pronouns 
 
+#!! iänááš
+SELECT Pron IF (0 ("iänááš") + Pron + Attr)(1 N);
+
+
+
 #!!
 SELECT:suoi Pron IF (0 Du3 + Nom)(*1 V + Du3 BARRIER NOT-ADV);
 SELECT:suoi Pron IF (0 Du3 + Nom)(1 ("kuohtuuh"))(*2 V + Du3 BARRIER NOT-ADV);
@@ -6617,7 +6622,7 @@ REMOVE:NDr2425 Nom IF (*-1 VFIN BARRIER NOT-ADV-PCLE LINK NOT 0 COPULAS OR FAUXV
 	#$ Dii galgabehtet vuđolaččat bargat.
 
 #!! * **NDr2426** Removes Nom, but not Actio 
-REMOVE:NDr2426 Nom - Actio IF (*-1 BOC BARRIER NOT-NP)(NEGATE 1 Prop)(*1C (N Nom) BARRIER CC OR CLB OR NOT-NPMOD OR PUNCT LINK *1 VFIN BARRIER NOT-NP)(NEGATE 1 (Interr Nom))(NEGATE -1 Gen LINK 1 ABBR);
+REMOVE:NDr2426 Nom - Actio IF (*-1 BOC BARRIER NOT-NP)(NEGATE 1 Prop)(*1C (N Nom) BARRIER CC OR CLB OR NOT-NPMOD OR PUNCT LINK *1 VFIN BARRIER NOT-NP)(NEGATE 1 (Interr Nom))(NOT 0 Indef)(NEGATE -1 Gen LINK 1 ABBR);
 	#$ Romssa universitehta vuosttaš čielgadeapmi sámi dutkama birra dahkkui...
 
 
