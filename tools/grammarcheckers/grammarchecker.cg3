@@ -2164,6 +2164,7 @@ COPY:msyn-ext-agr (Pl3 &SUGGEST) EXCEPT Sg3 TARGET ("leđe" V Ind Prs &msyn-ext-
 
 ADD:msyn-pl-obj (&msyn-pl-obj) TARGET (N Pl Nom) IF (*-1 TRANS-V  BARRIER NOT-NPMOD OR CLB OR PUNCT LINK NOT 0 Pl3 LINK *-1 (N Pl Nom))(NOT 0 ABBR OR Num)(NEGATE -1 PrfPrc LINK *-1 N BARRIER VFIN);
 COPY:msyn-pl-obj (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &msyn-pl-obj);
+
 # Trans: Others know mushrooms by.their.color.
 #% Nubeh tobdeh kuobbâreh ivneest.
 #$ Nubeh tobdeh kuobbârijd ivneest.
@@ -2394,8 +2395,11 @@ COPY:msyn-pass-accsubj (Nom &SUGGEST) EXCEPT (Acc &msyn-pass-accsubj) TARGET (N 
 
 #!! Attributive forms
 
-ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (*-1 COPULAS BARRIER V OR S-BOUNDARY LINK *-1 Nom) (NEGATE 1 N)(NEGATE 1 CC OR COMMA LINK 1 A LINK 1 N)(NEGATE 1 CC OR COMMA LINK 1 PUNCT LINK 1 A LINK 1 N)(NEGATE 1 (A Attr) OR ? LINK *1 N BARRIER NOT-NPMOD)(NEGATE 1 (A Sg Nom) OR (Pron Pers))(NEGATE 0 ("puoh") LINK 1 Pron LINK *1 N)(NOT 0 (A Sg Nom) OR Adv OR Pcle)(NEGATE 1 COMMA OR ("-") LINK 1 ("mut") LINK *1 (A Attr) BARRIER NOT-NPMODADV)(NEGATE 0 Superl LINK 1 CC LINK 1 ("eenâb" Superl) OR ("iänááš") LINK 1 A LINK 1 N)(NEGATE 1 (Num Attr) LINK 1 N)(NEGATE 0 ("eenâb") LINK 1 PrfPrc);
+ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (NOT 0 (A Sg Nom))(*-1 COPULAS BARRIER V OR S-BOUNDARY LINK *-1 Nom) (NEGATE 1 N)(NEGATE 1 CC OR COMMA LINK 1 A LINK 1 N)(NEGATE 1 CC OR COMMA LINK 1 PUNCT LINK 1 A LINK 1 N)(NEGATE 1 (A Attr) OR ? LINK *1 N BARRIER NOT-NPMOD)(NEGATE 1 (A Sg Nom) OR (Pron Pers))(NEGATE 0 ("puoh") LINK 1 Pron LINK *1 N)(NOT 0 (A Sg Nom) OR Adv OR Pcle)(NEGATE 1 COMMA OR ("-") LINK 1 ("mut") LINK *1 (A Attr) BARRIER NOT-NPMODADV)(NEGATE 0 Superl LINK 1 CC LINK 1 ("eenâb" Superl) OR ("iänááš") LINK 1 A LINK 1 N)(NEGATE 1 (Num Attr) LINK 1 N)(NEGATE 0 ("eenâb") LINK 1 PrfPrc);
 COPY:msyn-adj-attr-pred (Sg Nom &SUGGEST) EXCEPT Attr TARGET (A &msyn-adj-attr-pred) ;
+
+#% Mun lam fiskis.
+#$ Mun lam fiskâd.
 
 #ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (*-1 COPULAS BARRIER V OR GRAMCHK-S-BOUNDARY LINK *-1 Nom) (NEGATE 1 N)(NEGATE 1 CC OR COMMA LINK 1 A LINK 1 N)(NEGATE 1 (A Attr) OR ? LINK *1 N BARRIER NPNH)(NEGATE 1 (A Sg Nom) OR (Pron Pers))(NEGATE 0 ("visot") OR ("buot") LINK 1 Pron LINK *1 N)(NEGATE 0 PRED-ATTR-ADJ)(NEGATE 1 COMMA OR CC LINK 1 (A Attr) OR PRED-ATTR-ADJ)(NOT 0 (A Sg Nom))(NEGATE 1 COMMA OR ("-") LINK 1 ("muhto") LINK *1 (A Attr) BARRIER NPNHA)(NEGATE 0 Superl LINK 1 CC LINK 1 ("eanet" Superl) OR ("eanemus") LINK 1 A LINK 1 N)(NEGATE 1 (Num Attr) LINK 1 N)(NEGATE 0 ("eanet") LINK 1 PrfPrc);
 
@@ -2404,7 +2408,7 @@ COPY:msyn-adj-attr-pred (Sg Nom &SUGGEST) EXCEPT Attr TARGET (A &msyn-adj-attr-p
 ADD:msyn-mii-acc (&msyn-mii-acc) TARGET N IF (-2 BOS)(-1 ("mii"))(0 (N Sg Nom))(1 (N Nom) OR (Pron Nom))(*2 LEDE);
 COPY:msyn-mii-acc (Pl Acc &SUGGEST) EXCEPT (Sg Nom) TARGET ( N &msyn-mii-acc);
 
-#%  Mii historjá taat lii?
+#% Mii historjá taat lii?
 #$ Mii historjáid taat lii?
 
 ADD:msyn-mii-acc (&msyn-mii-acc) TARGET N IF (-2 BOS)(-1 ("kii"))(0 (N Sg Nom))(1 (N Nom) OR (Pron Nom))(*2 LEDE);
