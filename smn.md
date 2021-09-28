@@ -18619,6 +18619,7 @@ Inf should be Actio Essive
 
 
 
+
 Verb in plural 
 
 
@@ -18691,6 +18692,7 @@ The rule is: 2-6 + gensg, 7- + par
 
 
 Attributive forms
+
 
 
 
