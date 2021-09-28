@@ -1974,6 +1974,8 @@ SET CCCOMMA = CC OR COMMA ;
 
 #!! ### Grammarchecker sets
 
+#!! naming: &errortype-errorsubtype-is-shouldbe
+#!! naming: &errortype-errorsubtype-comment
 LIST &msyn-agr = &msyn-agr ;
 LIST &msyn-agr-sg1 = &msyn-agr-sg1 ;
 LIST &msyn-agr-sg2 = &msyn-agr-sg2 ;
@@ -1994,13 +1996,14 @@ LIST &msyn-extv-pl3 = &msyn-ext-pl3 ;
 LIST &msyn-extv-pl3-numeral = &msyn-ext-pl3-numeral ;
 LIST &msyn-extneg-pl3 = &msyn-extneg-pl3 ;
 LIST &msyn-pl-obj = &msyn-pl-obj ;
+LIST &msyn-obj-sgnom-sgacc = &msyn-obj-sgnom-sgacc ;
+LIST &msyn-obj-plnom-placc = &msyn-obj-plnom-placc ;
 LIST &msyn-esubj-plnom = &msyn-esubj-plnom ;
 LIST &msyn-extsubj-ill-nom = &msyn-extsubj-ill-nom ; # vi vil ha nom
 LIST &msyn-extsubj-acc-nom = &msyn-extsubj-acc-nom ; # vi vil ha nom
 LIST &msyn-halfcongruence = &msyn-halfcongruence ;	
-LIST &msyn-nom-obj = &msyn-nom-obj ;
 LIST &msyn-imp-nom-acc = &msyn-imp-nom-acc ;
-LIST &msyn-pass-accsubj = &msyn-pass-accsubj ;
+LIST &msyn-pass-accsubj-nomsubj = &msyn-pass-accsubj-nomsubj ;
 LIST &msyn-num-par-gen = &msyn-num-par-gen ;
 LIST &msyn-num-gen-par = &msyn-num-gen-par ;
 #LIST &msyn-vchain-prfprc = &msyn-vchain-prfprc ;
@@ -2222,6 +2225,8 @@ ADD:msyn-pl-obj (&msyn-pl-obj) TARGET N IF (*-2 Pl + Nom)(-1 TV + Ind + Pl3 LINK
 ADD:msyn-pl-obj (&msyn-pl-obj) TARGET N IF (*-2 Sg + Nom)(-1 TV + Ind + Sg3 LINK NOT 0 Der/Pass)(0 N + Pl + Nom)(NOT -1 PrfPrc LINK *-1 N BARRIER VFIN);
 COPY:msyn-pl-obj (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &msyn-pl-obj);
 
+#Lostâ ij uážu leđe nuuvt lussâd luuhâđ , et iänááš >>ulmuuh<< kovŋâsuveh já eidu härvi višá tom luuhâđ , mut ij meiddei nuuvt keppâ ašijguin tevdum , et sämmilâš jurduuh iä otânuš ollágin .
+
 #!! ### ConNeg Better: Target whatever is there and should have been a conneg. !!!
 #ADD:msyn-no-conneg (&msyn-no-conneg) TARGET V IF (-1 Neg) (NOT *-2 ConNeg)(0 V + Ind OR Cond)(NOT 0 ConNeg)(NOT *1 ConNeg BARRIER CLB);
 #$ Sun ij lah.
@@ -2278,16 +2283,34 @@ COPY:msyn-extsubj-ill-nom (Nom &SUGGEST) EXCEPT Ill TARGET (N Pl &msyn-extsubj-i
 ADD:msyn-halfcongruence (&msyn-halfcongruence) TARGET Dem IF (NOT *0 LOC-V BARRIER SV-BOUNDARY)(0 Sg + Loc)(NOT 0 Loc + Attr)(1 N + Sg + Loc)(NOT 1 Prop OR Sem/Plc); # Loc Attr > Gen?
 COPY:msyn-halfcongruence (Gen &SUGGEST) EXCEPT (Loc Attr) TARGET (Dem &msyn-halfcongruence);
 	
-ADD:msyn-nom-obj (&msyn-nom-obj) TARGET N IF (-1 VFIN + Sg1)(0 N + Pl + Nom);
-ADD:msyn-nom-obj (&msyn-nom-obj) TARGET N IF (-2 VFIN + Sg1)(-1 PrfPrc)(0 N + Pl + Nom);
-ADD:msyn-nom-obj (&msyn-nom-obj) TARGET N IF (-2 VFIN + Sg1)(-1 Pl + Nom)(0 N + Pl + Nom);
-ADD:msyn-nom-obj (&msyn-nom-obj) TARGET N IF (-2 VFIN + Sg1)(-1 Pl + Nom OR Attr)(0 N + Pl + Nom);
-ADD:msyn-nom-obj (&msyn-nom-obj) TARGET N IF (-3 VFIN + Sg1)(-1 Pl + Nom OR Attr)(-2 PrfPrc)(0 N + Pl + Nom);
-ADD:msyn-nom-obj (&msyn-nom-obj) TARGET N IF (-3 VFIN + Sg1)(-1 Pl + Nom OR Attr)(-2 Pl + Nom)(0 N + Pl + Nom);
-COPY:msyn-nom-obj (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &msyn-nom-obj);
+ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-1 VFIN + Sg1)(0 N + Pl + Nom);
+ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-2 VFIN + Sg1)(-1 PrfPrc)(0 N + Pl + Nom);
+ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-2 VFIN + Sg1)(-1 Pl + Nom)(0 N + Pl + Nom);
+ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-2 VFIN + Sg1)(-1 Pl + Nom OR Attr)(0 N + Pl + Nom);
+ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-3 VFIN + Sg1)(-1 Pl + Nom OR Attr)(-2 PrfPrc)(0 N + Pl + Nom);
+ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-3 VFIN + Sg1)(-1 Pl + Nom OR Attr)(-2 Pl + Nom)(0 N + Pl + Nom);
+COPY:msyn-obj-plnom-placc (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &msyn-obj-plnom-placc);
 #$ Lam valjim taah säänih.
 #% Lam valjim táid saanijd.
 # olen valinnut nämä sanat
+
+#!! Plain object of TV in Nom shall be Acc
+
+ADD:msyn-obj-sgnom-sgacc (&msyn-obj-sgnom-sgacc) TARGET N IF (*-1 VFIN + TV  BARRIER NOT-ADV LINK -1 Nom)(0 N + Sg + Nom);
+COPY:msyn-obj-sgnom-sgacc (Acc &SUGGEST) EXCEPT Nom TARGET (N Sg &msyn-obj-sgnom-sgacc);
+#% Mun juuvâm ain mielkki.
+#$ Mun juuvâm ain mielhi.
+
+ADD:msyn-obj-sgnom-sgacc (&msyn-obj-sgnom-sgacc) TARGET N IF (-1 PrfPrc + TV)(*-2 VFIN BARRIER NOT-ADV LINK -1 Nom)(0 N + Sg + Nom);
+COPY:msyn-obj-sgnom-sgacc (Acc &SUGGEST) EXCEPT Nom TARGET (N Sg &msyn-obj-sgnom-sgacc);
+#% Mun lam ain juunâm mielkki.
+#$ Mun lam ain juuhâm mielhi.
+
+ADD:msyn-obj-sgnom-sgacc (&msyn-obj-sgnom-sgacc) TARGET N IF (1 PrfPrc + TV)(*-1 VFIN BARRIER NOT-ADV LINK -1 Nom)(0 N + Sg + Nom);
+COPY:msyn-obj-sgnom-sgacc (Acc &SUGGEST) EXCEPT Nom TARGET (N Sg &msyn-obj-sgnom-sgacc);
+#% Mun lam ain mielkki juunâm.
+#$ Mun lam ain mielhi juuhâm.
+
 
 #!! Acc shall be Nom
 ADD:msyn-acc-obj-top (&msyn-acc-obj-top) TARGET N IF (0 Pl + Acc - Sem/Time LINK *-1 BOS BARRIER Nom)(1 Der/Pass + Sg3)(2 Adv)(NOT *3 TV);
@@ -2362,10 +2385,10 @@ COPY:msyn-num-gen-par (Par &SUGGEST) EXCEPT (Sg Acc) TARGET (N &msyn-num-gen-par
 #!!Accusative subjects in passive 
 
 # b) Suomâkielâ partitiiv passiivráhtusijn; sämikielâst passiiv ohtâvuođâst lii nominatiiv já verbâ maaŋgâlovvoost.
-MAP:msyn-pass-accsubj (&msyn-pass-accsubj) TARGET N IF (0C Acc + Pl)(1 Der/Pass + Pl3 OR LEXICALISED-PASS-V + Pl3)(NOT 1 PrfPrc OR TV);
+MAP:msyn-pass-accsubj-nomsubj (&msyn-pass-accsubj-nomsubj) TARGET N IF (0C Acc + Pl)(1 Der/Pass + Pl3 OR LEXICALISED-PASS-V + Pl3)(NOT 1 PrfPrc OR TV);
 
-MAP:msyn-pass-accsubj (&msyn-pass-accsubj) TARGET N IF (0C Acc + Pl)(1 COMMA LINK 1 Rel LINK *1 COMMA LINK 1 Der/Pass + Pl3 OR LEXICALISED-PASS-V + Pl3 LINK NOT 0 PrfPrc OR TV);
-COPY:msyn-pass-accsubj (Nom &SUGGEST) EXCEPT (Acc &msyn-pass-accsubj) TARGET (N Pl &msyn-pass-accsubj);
+MAP:msyn-pass-accsubj-nomsubj (&msyn-pass-accsubj-nomsubj) TARGET N IF (0C Acc + Pl)(1 COMMA LINK 1 Rel LINK *1 COMMA LINK 1 Der/Pass + Pl3 OR LEXICALISED-PASS-V + Pl3 LINK NOT 0 PrfPrc OR TV);
+COPY:msyn-pass-accsubj-nomsubj (Nom &SUGGEST) EXCEPT (Acc &msyn-pass-accsubj-nomsubj) TARGET (N Pl &msyn-pass-accsubj-nomsubj);
 
 
 #fi	Saamenkielisiä nimityksiä käytetään vähän. - 
@@ -2375,8 +2398,8 @@ COPY:msyn-pass-accsubj (Nom &SUGGEST) EXCEPT (Acc &msyn-pass-accsubj) TARGET (N 
 #% Sämikielâlijd nomâttâsâid, moh láá ovdil kevttum, kiävttojeh tääl uccáá.
 
 
-MAP:msyn-pass-accsubj (&msyn-pass-accsubj) TARGET N IF (0C Acc + Pl)(1 ("leđe") + Pl3 OR Sg3) (2 PrfPrc + Der/Pass OR LEXICALISED-PASS-V);
-COPY:msyn-pass-accsubj (Nom &SUGGEST) EXCEPT (Acc &msyn-pass-accsubj) TARGET (N Pl &msyn-pass-accsubj);
+MAP:msyn-pass-accsubj-nomsubj (&msyn-pass-accsubj-nomsubj) TARGET N IF (0C Acc + Pl)(1 ("leđe") + Pl3 OR Sg3) (2 PrfPrc + Der/Pass OR LEXICALISED-PASS-V);
+COPY:msyn-pass-accsubj-nomsubj (Nom &SUGGEST) EXCEPT (Acc &msyn-pass-accsubj-nomsubj) TARGET (N Pl &msyn-pass-accsubj-nomsubj);
 
 #% Tävirijd láppojii ääitist.
 #$ Tävireh láppojii ääitist.
@@ -2390,6 +2413,11 @@ COPY:msyn-pass-accsubj (Nom &SUGGEST) EXCEPT (Acc &msyn-pass-accsubj) TARGET (N 
 #% Mon ennuv kiirjijd láá tiilájum?
 #$ Mon ennuv kirjeh láá tiilájum? 
 
+MAP:msyn-pass-accsubj-nomsubj (&msyn-pass-accsubj-nomsubj) TARGET N IF (NOT -3 Nom)(-2 ("leđe") + Pl3 OR Sg3) (-1 PrfPrc + Der/Pass OR LEXICALISED-PASS-V)(0C Acc + Pl);
+COPY:msyn-pass-accsubj-nomsubj (Nom &SUGGEST) EXCEPT (Acc &msyn-pass-accsubj-nomsubj) TARGET (N Pl &msyn-pass-accsubj-nomsubj);
+
+#% Páárnán iä adeluu talkkâsijd tipšopeeivi ääigi.
+#$ Páárnán iä adeluu talkkâseh tipšopeeivi ääigi.
 
 
 

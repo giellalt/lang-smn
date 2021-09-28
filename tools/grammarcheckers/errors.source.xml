@@ -130,14 +130,14 @@
 
   <error id="msyn-agr-sg3">
     <header>
-      <title xml:lang="en">Third person singular after 'sun'.</title>
+      <title xml:lang="en">Third person singular after plural subject.</title>
       <title xml:lang="smn">Verbâ oovtâlovo kuálmád persovnist.</title>
       <title xml:lang="fi">Verbi yksikön kolmannessa persoonassa.</title>
     </header>
     <body>
-      <description xml:lang="en">The verb-form "$1" follows 'sun', and should probably be third person singular.</description>
-      <description xml:lang="smn">Verbâhäämi "$1" kiävttoo 'sun'-sääni maŋa. Ličij-uv kuálmád persovn pyereeb?</description>
-      <description xml:lang="fi">Verbimuoto "$1" esiintyy 'sun'-sanan jälkeen. Olisiko kolmas persoona parempi?</description>
+      <description xml:lang="en">The verb-form "$1" follows a plural subject, and should probably be third person singular.</description>
+      <description xml:lang="smn">Verbâhäämi "$1" kiävttoo maaŋgâlovo subjeekt maŋŋa. Ličij-uv maaŋgâlovo verbâ pyereeb?</description>
+      <description xml:lang="fi">Verbimuoto "$1" esiintyy monikollisen subjektin jälkeen. Olisiko verbin monikkomuoto parempi?</description>
     </body>
   </error>
 
@@ -226,9 +226,9 @@
       <title xml:lang="fi">Verbi monikon kolmannessa persoonassa.</title>
     </header>
     <body>
-      <description xml:lang="en">The verb-form "$1" follows a plural subject, and should probably be third person plural.</description>
-      <description xml:lang="smn">Verbâhäämi "$1" kiävttoo maaŋgâlovo subjekt maŋa. Ličij-uv maaŋgâlovo kuálmád persovn pyereeb?</description>
-      <description xml:lang="fi">Verbimuoto "$1" esiintyy monikon subjektin jäljessä. Olisiko monikon kolmas persoona parempi?</description>
+      <description xml:lang="en">The verb-form "$1" preceeds a plural subject, and should probably be third person plural.</description>
+      <description xml:lang="smn">Verbâhäämi "$1" kiävttoo ovdil maaŋgâlovo subjekt. Ličij-uv maaŋgâlovo kuálmád persovn pyereeb?</description>
+      <description xml:lang="fi">Verbimuoto "$1" esiintyy monikon subjektin edessä. Olisiko monikon kolmas persoona parempi?</description>
     </body>
   </error>
   
@@ -312,14 +312,14 @@
 
   <error id="msyn-extneg-pl3">
     <header>
-      <title xml:lang="en">Nominative in negative existential sentences.</title>
-      <title xml:lang="smn">Nominatiiv kieldee eksistentiaalcelkkuin.</title>
-      <title xml:lang="fi">Nominatiivi kielteisissä eksistentiaalilauseissa.</title>
+      <title xml:lang="en">Plural verb in negative existential sentences.</title>
+      <title xml:lang="smn">Verbâ maaŋgâlovvoost eksistentiaalcelkkuin.</title>
+      <title xml:lang="fi">Verbi monikossa kielteisessä eksistentiaalilauseissa.</title>
     </header>
     <body>
-      <description xml:lang="en">The word "$1" seems to be the subject of an existential clause, it should be in nominative, also when the clause is negated.</description>
-      <description xml:lang="smn">Sääni "$1" oro lemin eksistentiaalcelkkuu subjekt. Talle tot kolgâččij leđe nominativist, meid kieldee celkkuin.</description>
-      <description xml:lang="fi">Sana "$1" näyttäisi olevan eksistentiaalilauseen subjekti. Siinä tapauksessa sen tulisi olla nominatiivissa, myös kielteisessä lauseessa.</description>
+      <description xml:lang="en">The word "$1" seems to be the verb of an existential clause, it should be in plural when the subject is in the plural.</description>
+      <description xml:lang="smn">Sääni "$1" oro lemin eksistentiaalcelkkuu verbâ. Ko subjekt lii maaŋgâlovvoost, te verbâ kalga meid leđe maaŋgâlovvoost.</description>
+      <description xml:lang="fi">Sana "$1" näyttäisi olevan eksistentiaalilauseen verbi. Siinä tapauksessa senkin tulisi olla monikossa.</description>
     </body>
   </error>
 
@@ -375,7 +375,20 @@
     </body>
   </error>
 
-  <error id="msyn-nom-obj">
+  <error id="msyn-obj-sgnom-sgacc">
+    <header>
+      <title xml:lang="en">Accusative singular object.</title>
+      <title xml:lang="smn">Akkusativobjekt oovtâlovvoost.</title>
+      <title xml:lang="fi">Akkusatiiviobjekti yksikössä.</title>
+    </header>
+    <body>
+      <description xml:lang="en">The noun "$1" is in the nominative, but is probably an object and should be in accusative.</description>
+      <description xml:lang="smn">Substantiv "$1" lii nominativist, mut tot oro lemin  objekt, jâ kolgâččij tondiet leđe akkusativist.</description>
+      <description xml:lang="fi">Substantiivi "$1" on nominatiivissa, mutta se on ilmeisesti objekti, ja sen pitäisi siis olla akkusatiivissa.</description>
+    </body>
+  </error>
+
+  <error id="msyn-obj-plnom-placc">
     <header>
       <title xml:lang="en">Accusative plural object.</title>
       <title xml:lang="smn">Akkusativobjekt maaŋgâlovvoost.</title>
@@ -401,7 +414,7 @@
     </body>
   </error>
  
-  <error id="msyn-pass-accsubj">
+  <error id="msyn-pass-accsubj-nomsubj">
     <header>
       <title xml:lang="en">Accusative plural object.</title>
       <title xml:lang="smn">Akkusativobjekt maaŋgâlovvoost.</title>
