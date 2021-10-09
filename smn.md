@@ -17615,6 +17615,7 @@ Plain object of TV in Nom shall be Acc
 
 
 
+
 Acc shall be Nom
 
 
@@ -17659,6 +17660,7 @@ Attributive forms
 
 
 mii + nominative should be mii + acc
+
 
 
 
