@@ -1120,6 +1120,18 @@ Verb in plural
 
 
 
+Predicative
+
+
+
+
+
+Confusion rules # dáppe mun lean
+
+Sg1 for PrfPrc
+
+
+
 ### Plural objects
 
 
@@ -1164,9 +1176,6 @@ Acc shall be Nom
 
 
 
-Numeral phrases
-
-The rule is: 2-6 + gensg, 7- + par
 
 
 
@@ -1182,6 +1191,10 @@ The rule is: 2-6 + gensg, 7- + par
 
 
 
+## Noun phrase agreement
+
+
+Det + N agreement
 
 
 
@@ -1197,13 +1210,13 @@ mii + nominative should be mii + acc
 
 
 
+Numeral phrases
+
+The rule is: 2-6 + gensg, 7- + par
 
 
 
 
-Confusion rules # dáppe mun lean
-
-Sg1 for PrfPrc
 
 
 
