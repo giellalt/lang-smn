@@ -1977,7 +1977,7 @@ SET CCCOMMA = CC OR COMMA ;
 #!! naming: &errortype-errorsubtype-is-shouldbe
 #!! naming: &errortype-errorsubtype-comment
 LIST &msyn-agr = &msyn-agr ;
-LIST &msyn-agr-sg1 = &msyn-agr-sg1 ;
+LIST &msyn-agr-other-sg1 = &msyn-agr-other-sg1 ;
 LIST &msyn-agr-sg2 = &msyn-agr-sg2 ;
 LIST &msyn-agr-sg3 = &msyn-agr-sg3 ;
 LIST &msyn-agr-du1 = &msyn-agr-du1 ;
@@ -1985,7 +1985,7 @@ LIST &msyn-agr-du2 = &msyn-agr-du2 ;
 LIST &msyn-agr-du3 = &msyn-agr-du3 ;
 LIST &msyn-agr-pl1 = &msyn-agr-pl1 ;
 LIST &msyn-agr-pl2 = &msyn-agr-pl2 ;
-LIST &msyn-agr-pl3 = &msyn-agr-pl3 ;
+LIST &msyn-agr-sg3-pl3 = &msyn-agr-sg3-pl3 ;
 LIST &msyn-prfprc-sg1 = &msyn-prfprc-sg1 ;
 LIST &msyn-gen-po = &msyn-gen-po ;
 LIST &msyn-no-conneg = &msyn-no-conneg ;
@@ -1994,7 +1994,7 @@ LIST &msyn-ext-agr = &msyn-ext-agr ;
 LIST &msyn-ext-vagr = &msyn-ext-vagr ;
 LIST &msyn-extv-pl3 = &msyn-ext-pl3 ;
 LIST &msyn-extv-pl3-numeral = &msyn-ext-pl3-numeral ;
-LIST &msyn-extneg-pl3 = &msyn-extneg-pl3 ;
+LIST &msynv-extneg-pl3 = &msyn-extneg-pl3 ;
 LIST &msyn-pl-obj = &msyn-pl-obj ;
 LIST &msyn-obj-sgnom-sgacc = &msyn-obj-sgnom-sgacc ;
 LIST &msyn-obj-plnom-placc = &msyn-obj-plnom-placc ;
@@ -2003,6 +2003,7 @@ LIST &msyn-extsubj-ill-nom = &msyn-extsubj-ill-nom ; # vi vil ha nom
 LIST &msyn-extsubj-acc-nom = &msyn-extsubj-acc-nom ; # vi vil ha nom
 LIST &msyn-halfcongruence = &msyn-halfcongruence ;	
 LIST &msyn-imp-nom-acc = &msyn-imp-nom-acc ;
+LIST &msyn-det-nom-acc = &msyn-det-nom-acc ;
 LIST &msyn-pass-accsubj-nomsubj = &msyn-pass-accsubj-nomsubj ;
 LIST &msyn-num-par-gen = &msyn-num-par-gen ;
 LIST &msyn-num-gen-par = &msyn-num-gen-par ;
@@ -2030,8 +2031,8 @@ ADD (&typo &SUGGESTWF) (<spelled>);
 
 #!! Sg3/Pl3 errors
 
-ADD:msyn-agr-pl3 (&msyn-agr-pl3) TARGET V IF (NOT *-1 Sg + Nom OR Sg3 + Nom BARRIER NOT-ADV OR (","))(*1 Pl + Nom BARRIER NOT-NPMODADV OR PUNCT + RIGHT OR PUNCT + LEFT LINK NOT *1 V + Pl3)(0 ("leđe") + Sg3);
-COPY:msyn-agr-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V &msyn-agr-pl3);
+ADD:msyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET V IF (NOT *-1 Sg + Nom OR Sg3 + Nom BARRIER NOT-ADV OR (","))(*1 Pl + Nom BARRIER NOT-NPMODADV OR PUNCT + RIGHT OR PUNCT + LEFT LINK NOT *1 V + Pl3)(0 ("leđe") + Sg3);
+COPY:msyn-agr-sg3-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V &msyn-agr-sg3-pl3);
 #% Tast lii uápis ääših
 #$ Tast láá uápis ääših
 
@@ -2044,17 +2045,17 @@ COPY:msyn-prfprc-sg1 (Ind Prs Sg1 &SUGGEST) EXCEPT PrfPrc TARGET (V &msyn-prfprc
 #$ Mun vááldám.
 #$ Lamhân mun váldám tom.
 
-ADD:msyn-agr-sg1 (&msyn-agr-sg1) TARGET V IF (NOT -2 Sg1)(NOT -2 CC LINK -1 Sg + Nom)(-1C Pron + Sg1 + Nom)(0 V + Ind)(NOT 0 Sg1)(NOT 1 ("-") LINK 1 ("uv") LINK 1 V + Sg1)(NOT 1 Adv LINK 1 V + Sg1);
-COPY:msyn-agr-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prt &msyn-agr-sg1);
-COPY:msyn-agr-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prs &msyn-agr-sg1);
-COPY:msyn-agr-sg1 (Ind Prt Sg1 &SUGGEST) EXCEPT (Actio Num) TARGET (V  &msyn-agr-sg1);
+ADD:msyn-agr-other-sg1 (&msyn-agr-other-sg1) TARGET V IF (NOT -2 Sg1)(NOT -2 CC LINK -1 Sg + Nom)(-1C Pron + Sg1 + Nom)(0 V + Ind)(NOT 0 Sg1)(NOT 1 ("-") LINK 1 ("uv") LINK 1 V + Sg1)(NOT 1 Adv LINK 1 V + Sg1);
+COPY:msyn-agr-other-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prt &msyn-agr-other-sg1);
+COPY:msyn-agr-other-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prs &msyn-agr-other-sg1);
+COPY:msyn-agr-other-sg1 (Ind Prt Sg1 &SUGGEST) EXCEPT (Actio Num) TARGET (V  &msyn-agr-other-sg1);
 #% Mun puátá.
 #$ Mun puáđám.
 #$ Uážum-uv mun-uv elâččiđ váhá kiirdâšmin?
 #$ Tomhân mun tiäđust-uv paaččim.
 
-ADD:msyn-agr-sg1 (&msyn-agr-sg1) TARGET V IF (NOT -2 Sup OR Sg1)(-1C Pron + Sg1 + Nom)(-1 BOS OR PUNCT)(0 V)(NOT 0 Sg1);
-COPY:msyn-agr-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prs &msyn-agr-sg1);
+ADD:msyn-agr-other-sg1 (&msyn-agr-other-sg1) TARGET V IF (NOT -2 Sup OR Sg1)(-1C Pron + Sg1 + Nom)(-1 BOS OR PUNCT)(0 V)(NOT 0 Sg1);
+COPY:msyn-agr-other-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prs &msyn-agr-other-sg1);
 
 
 ADD:msyn-agr-sg2 (&msyn-agr-sg2) TARGET V IF (NOT -2 Sup OR Sg2)(NOT *-2 Sg2 BARRIER SV-BOUNDARY)(-1C Pron + Sg2 + Nom)(0 (V Ind Prs))(NOT 0 Sg2);
@@ -2217,6 +2218,29 @@ COPY:msyn-pred-acc-nom (Nom &SUGGEST) EXCEPT Acc TARGET (N &msyn-pred-acc-nom);
 #$ Taah láá čielgâ ááših
 
 
+#!! Predicative
+
+ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred)  TARGET (A Attr) IF (NOT 0 (Arab Ord) OR (A Sg Nom))(NOT 1 N)(1 EOS) ;
+COPY:msyn-adj-attr-pred (Sg Nom &SUGGEST) EXCEPT (Attr) TARGET ( A &msyn-adj-attr-pred);
+
+    #% Tot lii hirmâd.
+    #$ Tot lii hirmâd styeres.
+
+
+
+#!! Confusion rules # dáppe mun lean
+
+#!! Sg1 for PrfPrc
+ADD:msyn-sg1-prfprc (&msyn-sg1-prfprc) TARGET V IF (*-1 Ind BARRIER NOT-ADV)(0 (Prs Sg1));
+COPY:msyn-sg1-prfprc (PrfPrc &SUGGEST) EXCEPT (Ind Prs Sg1) TARGET (V &msyn-sg1-prfprc);
+#% Sun lii huunjâm
+#$ Sun lii huunnjâm
+
+# čilgen:
+#ADD-njuolggadus: lasihan &msyn-sg1-prfprc  jos gurotbealde lea indikatiiva ja ieš lea prs sg1
+#COPY-njuolggadus: bidjan dohko PrfPrc ja sáni &SUGGEST (maksá "evttot dan") 
+
+
 #!! ### Plural objects
 
 ADD:msyn-pl-obj (&msyn-pl-obj) TARGET N IF (*-2 Pl + Nom)(-1 TV + Ind + Pl3 LINK NOT 0 Der/Pass)(0 N + Pl + Nom)(NOT -1 PrfPrc LINK *-1 N BARRIER VFIN);
@@ -2357,32 +2381,6 @@ COPY:msyn-imp-nom-acc (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &msyn-imp-nom-acc);
 #$ Sii kielâtááiđu ovdedem tiet mun lam luuhâđ anarâškielâ.
 
 
-#!! Numeral phrases
-# Comment in to test the 2-6 and 7+ sets:
-#ADD:test-6 &msyn-num-par-gen TARGET Num IF (0 TWO-TO-SIX);
-#ADD:test-7 &msyn-num-gen-par TARGET Num IF (0 SEVEN-AND-MORE);
-
-#!! The rule is: 2-6 + gensg, 7- + par
-ADD:msyn-num-par-gen (&msyn-num-par-gen) TARGET N IF (-1 TWO-TO-SIX)(0 N + Par)(NOT 0 Gen);
-COPY:msyn-num-par-gen (Sg Gen &SUGGEST) EXCEPT Par TARGET (N &msyn-num-par-gen);
-#% Must láá kyehti {kyellid}.
-#$ Must láá kyehti kyele.
-#% 12 ive.
-#$ 12 ihheed.
-#% Toh láá 3 kandâd
-#$ Toh láá 3 kaandâ.
-
-LIST SGGENACC = (Sg Gen) (Sg Acc) ;
-
-ADD:msyn-num-gen-par (&msyn-num-gen-par) TARGET N IF (-1 Num LINK 0 SEVEN-AND-MORE)(0 N + Sg + Gen)(NOT 0 ABBR OR Par)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Rom)(NOT 0 Sem/Time OR Sem/Date OR Sem/Time-clock)(NOT 1 Po OR N OR A) ;
-COPY:msyn-num-gen-par (Par &SUGGEST) EXCEPT (Sg Gen) TARGET (N &msyn-num-gen-par) ;
-ADD:msyn-num-gen-par (&msyn-num-gen-par) TARGET N IF (-1 Num LINK 0 SEVEN-AND-MORE)(0 N + Sg + Acc)(NOT 0 ABBR OR Par)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Rom)(NOT 0 Sem/Time OR Sem/Time-clock)(NOT 1 Po OR N OR A) ;
-COPY:msyn-num-gen-par (Par &SUGGEST) EXCEPT (Sg Acc) TARGET (N &msyn-num-gen-par) ;
-#% Toh láá 8 kaandâ.
-#$ Toh láá 8 kandâd.
-#% Must láá čiččâm {kyele}.
-#$ Must láá čiččâm kyellid.
-
 
 #!!Accusative subjects in passive 
 
@@ -2422,10 +2420,21 @@ COPY:msyn-pass-accsubj-nomsubj (Nom &SUGGEST) EXCEPT (Acc &msyn-pass-accsubj-nom
 #$ Páárnán iä adeluu talkkâseh tipšopeeivi ääigi.
 
 
+#!! ## Noun phrase agreement
+
+
+#!! Det + N agreement
+
+ADD:msyn-det-nom-acc (&msyn-det-nom-acc) TARGET Pron + Dem + Pl + Nom IF (1 N + Pl + Acc);
+COPY:msyn-det-nom-acc (Acc &SUGGEST) EXCEPT Nom TARGET (Pron Dem Pl &msyn-det-nom-acc);
+
+#%  Puurâ tuoh rusinijd!
+#$  Puurâ tuoid rusinijd!
+
 
 #!! Attributive forms
 
-ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (NOT 0 (A Sg Nom))(*-1 COPULAS BARRIER V OR S-BOUNDARY LINK *-1 Nom) (NEGATE 1 N)(NEGATE 1 CC OR COMMA LINK 1 A LINK 1 N)(NEGATE 1 CC OR COMMA LINK 1 PUNCT LINK 1 A LINK 1 N)(NEGATE 1 (A Attr) OR ? LINK *1 N BARRIER NOT-NPMOD)(NEGATE 1 (A Sg Nom) OR (Pron Pers))(NEGATE 0 ("puoh") LINK 1 Pron LINK *1 N)(NOT 0 (A Sg Nom) OR Adv OR Pcle)(NEGATE 1 COMMA OR ("-") LINK 1 ("mut") LINK *1 (A Attr) BARRIER NOT-NPMODADV)(NEGATE 0 Superl LINK 1 CC LINK 1 ("eenâb" Superl) OR ("iänááš") LINK 1 A LINK 1 N)(NEGATE 1 (Num Attr) LINK 1 N)(NEGATE 0 ("eenâb") LINK 1 PrfPrc);
+ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (NOT 0 (A Sg Nom))(*-1 COPULAS BARRIER V OR S-BOUNDARY LINK *-1 Nom) (NEGATE 1 N)(NEGATE 1 CC OR COMMA LINK 1 A LINK 1 N)(NEGATE 1 CC OR COMMA LINK 1 PUNCT LINK 1 A LINK 1 N)(NEGATE 1 (A Attr) OR ? LINK *1 N BARRIER NOT-NPMOD)(NEGATE 1 A + Sg + Nom OR (Pron Pers))(NEGATE 0 ("puoh") LINK 1 Pron LINK *1 N)(NOT 0 (A Sg Nom) OR Adv OR Pcle)(NEGATE 1 COMMA OR ("-") LINK 1 ("mut") LINK *1 (A Attr) BARRIER NOT-NPMODADV)(NEGATE 0 Superl LINK 1 CC LINK 1 ("eenâb" Superl) OR ("iänááš") LINK 1 A LINK 1 N)(NEGATE 1 (Num Attr) LINK 1 N)(NEGATE 0 ("eenâb") LINK 1 PrfPrc);
 COPY:msyn-adj-attr-pred (Sg Nom &SUGGEST) EXCEPT Attr TARGET (A &msyn-adj-attr-pred) ;
 
 #% Mun lam fiskis.
@@ -2445,25 +2454,34 @@ ADD:msyn-mii-acc (&msyn-mii-acc) TARGET N IF (-2 BOS)(-1 ("kii"))(0 (N Sg Nom))(
 COPY:msyn-mii-acc (Pl Acc &SUGGEST) EXCEPT (Sg Nom) TARGET ( N &msyn-mii-acc);
 
 
-ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred)  TARGET (A Attr) IF (NOT 0 (Arab Ord) OR (A Sg Nom))(NOT 1 N)(1 EOS) ;
-COPY:msyn-adj-attr-pred (Sg Nom &SUGGEST) EXCEPT (Attr) TARGET ( A &msyn-adj-attr-pred);
+#!! Numeral phrases
+# Comment in to test the 2-6 and 7+ sets:
+#ADD:test-6 &msyn-num-par-gen TARGET Num IF (0 TWO-TO-SIX);
+#ADD:test-7 &msyn-num-gen-par TARGET Num IF (0 SEVEN-AND-MORE);
 
-    #% Tot lii hirmâd.
-    #$ Tot lii hirmâd styeres.
+#!! The rule is: 2-6 + gensg, 7- + par
+ADD:msyn-num-par-gen (&msyn-num-par-gen) TARGET N IF (-1 TWO-TO-SIX)(0 N + Par)(NOT 0 Gen);
+COPY:msyn-num-par-gen (Sg Gen &SUGGEST) EXCEPT Par TARGET (N &msyn-num-par-gen);
+#% Must láá kyehti {kyellid}.
+#$ Must láá kyehti kyele.
+#% 12 ive.
+#$ 12 ihheed.
+#% Toh láá 3 kandâd
+#$ Toh láá 3 kaandâ.
+
+LIST SGGENACC = (Sg Gen) (Sg Acc) ;
+
+ADD:msyn-num-gen-par (&msyn-num-gen-par) TARGET N IF (-1 Num LINK 0 SEVEN-AND-MORE)(0 N + Sg + Gen)(NOT 0 ABBR OR Par)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Rom)(NOT 0 Sem/Time OR Sem/Date OR Sem/Time-clock)(NOT 1 Po OR N OR A) ;
+COPY:msyn-num-gen-par (Par &SUGGEST) EXCEPT (Sg Gen) TARGET (N &msyn-num-gen-par) ;
+ADD:msyn-num-gen-par (&msyn-num-gen-par) TARGET N IF (-1 Num LINK 0 SEVEN-AND-MORE)(0 N + Sg + Acc)(NOT 0 ABBR OR Par)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Rom)(NOT 0 Sem/Time OR Sem/Time-clock)(NOT 1 Po OR N OR A) ;
+COPY:msyn-num-gen-par (Par &SUGGEST) EXCEPT (Sg Acc) TARGET (N &msyn-num-gen-par) ;
+#% Toh láá 8 kaandâ.
+#$ Toh láá 8 kandâd.
+#% Must láá čiččâm {kyele}.
+#$ Must láá čiččâm kyellid.
 
 
 
-#!! Confusion rules # dáppe mun lean
-
-#!! Sg1 for PrfPrc
-ADD:msyn-sg1-prfprc (&msyn-sg1-prfprc) TARGET V IF (*-1 Ind BARRIER NOT-ADV)(0 (Prs Sg1));
-COPY:msyn-sg1-prfprc (PrfPrc &SUGGEST) EXCEPT (Ind Prs Sg1) TARGET (V &msyn-sg1-prfprc);
-#% Sun lii huunjâm
-#$ Sun lii huunnjâm
-
-# čilgen:
-#ADD-njuolggadus: lasihan &msyn-sg1-prfprc  jos gurotbealde lea indikatiiva ja ieš lea prs sg1
-#COPY-njuolggadus: bidjan dohko PrfPrc ja sáni &SUGGEST (maksá "evttot dan") 
 
 
 #!! Lexical rules
