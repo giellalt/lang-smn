@@ -88,7 +88,7 @@ EXTEDITOR=@SEE@
     $source_file > $coll_lemmas
 
 
-cat $lemmas $comp_lemmas $hycomp_lemmas $coll_lemmas | sort -u > $all_lemmas
+cat $lemmas $comp_lemmas $hycomp_lemmas $coll_lemmas | LC_ALL=C sort -u > $all_lemmas
 
 ###### Start testing: #######
 transducer_found=0
@@ -121,7 +121,7 @@ for f in $fsttype; do
         # generate nouns in Singular, extract the resulting generated lemma,
         # store it:
         sed 's/$/+N+Sg+Nom/' $lemmas | $lookup_tool $generator_file.$suffix \
-            | fgrep -v "+?" | grep -v "^$" | cut -f2 | sort -u \
+            | fgrep -v "+?" | grep -v "^$" | cut -f2 | LC_ALL=C sort -u \
             > $generated_lemmas.$f.txt 
         # Generate nouns, extract those that do not generate in singular,
         # generate the rest with NomAg:
@@ -156,7 +156,8 @@ for f in $fsttype; do
 ###### Collect results, and generate debug info if FAIL: #######
         # Sort and compare original input with resulting output - the diff is
         # used to generate lemmas which are opened in SEE:
-        sort -u -o $generated_lemmas.$f.txt $generated_lemmas.$f.txt 
+        LC_ALL=C sort -u -o $generated_lemmas.$f.txt $generated_lemmas.$f.txt 
+		LC_ALL=C sort -u -o $lemmas $lemmas 
         comm -23 $lemmas $generated_lemmas.$f.txt > $result_file.$f.txt
 
         # Open the diff file in SubEthaEdit (if there is a diff):
