@@ -743,6 +743,7 @@ ANAR DUBAI DUBAI-plc DUBAI-sur MAKI
  * **LEXICON SME_NAMES-plc**
 
 
+
  * **LEXICON SME_NAMES_PERS** Attr to North Saami person names
 
  * **LEXICON SME_NAMES** temp. only Sg+Nom and Cmp to North Saami names
