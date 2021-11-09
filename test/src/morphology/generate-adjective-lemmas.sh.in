@@ -64,27 +64,21 @@ fi
 EXTEDITOR=@SEE@
 
 ##### Extract lemmas #####
-### don't use extract-lemmas.sh ### Why???
+# @GTCORE@/scripts/extract-lemmas.sh \
+#   --exclude '(pattern)' \
+#   --include '(pattern)' \
+# 	$sourcefile > $lemmas
+#
 # Hent ut lemmaer fra adjective.lexc, bortsett fra utkommmenterte (^\!), 
 # dem som krever sammensetning (CmpN/Only|ShCmp|RCmpnd| Rreal | R | Rnoun),
-# Err/Lex (som blir filtrert bort fra normgenerator). Lemmaene lagres som filtered-adjectives
+# Lemmaene lagres som filtered-adjectives
 
-#grep ";" $source_file | \
-#  egrep -v "^(\!|\@|<)" | \
-#  egrep -v '(CmpN/Only|ShCmp|RCmpnd| Rreal | R | SUP| Rnoun |\+V\+|\+Err\/Lex)' | \
-#  sed 's/% /€/g' | sed 's/%:/¢/g' |  tr ":+" " " | cut -d " " -f1 | \
-#  tr -d "%" | tr "€" " " | tr "¢" ":" | sort -u > $lemmas
+# Skriptet fjernar alltid desse, dvs at ein treng ikkje spesifisera dei:
+# (LEXICON| K |ENDLEX|\+Err\/Lex|DerSub)
 
 @GTCORE@/scripts/extract-lemmas.sh \
   --exclude '(CmpN/Only|ShCmp|RCmpnd| Rreal | R | SUP|COMP | Rnoun |\+V\+|\+Use\/MT)' \
     $source_file > $lemmas
-
-#grep ";" $source_file | \
-#  egrep -v "^(\!|\@|<)" | \
-#  egrep  " SUP" | \
-#  egrep -v '(CmpN/Only|ShCmp|RCmpnd| Rreal | R | Rnoun |\+V\+|\+Err\/Lex)' | \
-#  sed 's/% /€/g' | sed 's/%:/¢/g' |  tr ":+" " " | cut -d " " -f1 | \
-#  tr -d "%" | tr "€" " " | tr "¢" ":" | sort -u > $suplemmas
 
 @GTCORE@/scripts/extract-lemmas.sh \
   --include ' SUP' \
@@ -96,28 +90,10 @@ EXTEDITOR=@SEE@
   --exclude '(CmpN/Only|ShCmp|RCmpnd| Rreal | R | Rnoun |\+V\+)' \
     $source_file > $complemmas
 
-
-#grep ";" $source_file | \
-#  egrep -v "^(\!|\@|<)" | \
-#  egrep  " ATTR" | \
-#  egrep -v '(CmpN/Only|ShCmp|RCmpnd| Rreal | R | Rnoun |\+V\+|\+Err\/Lex)' | \
-#  sed 's/% /€/g' | sed 's/%:/¢/g' |  tr ":+" " " | cut -d " " -f1 | \
-#  tr -d "%" | tr "€" " " | tr "¢" ":" | sort -u > $attrlemmas
-
 @GTCORE@/scripts/extract-lemmas.sh \
   --include ' ATTR' \
   --exclude '(CmpN/Only|ShCmp|RCmpnd| Rreal | R | Rnoun |\+V\+)' \
     $source_file > $attrlemmas
-
-# evt. denne, sjekk skilnaden:
-# @GTCORE@/scripts/extract-lemmas.sh \
-#   --exclude '(pattern)' \
-#   --include '(pattern)' \
-# 	$sourcefile > $lemmas
-#
-# Skriptet fjernar alltid desse, dvs at ein treng ikkje spesifisera dei:
-#
-# (LEXICON| K |ENDLEX|\+Err\/Lex)
 
 
 ###### Start testing: #######
@@ -147,18 +123,18 @@ for f in $fsttype; do
     if [ -f "$generator_file.$suffix" ]; then
         let "transducer_found += 1"
 
-###### Test non-comopunds: #######
+###### Test non-compounds: #######
 		# generate nouns in Singular, extract the resulting generated lemma,
 		# store it:
 # Generer lemmaer i adjectives med +A+Sg+Nom, lagre i generated-adjectives
         sed 's/$/+A+Sg+Nom/' $lemmas | $lookup_tool $generator_file.$suffix | \
           cut -f2 | grep -v "A+" | grep -v "^$" | sort -u > $generated_lemmas.$f.txt		
 
-# Generer lemmaer i adjectives med +A+Superl+Sg+Nom, lagre i generated-adjectives
+# Generer lemmaer i adjectives med +A+Der/Superl+Sg+Nom, lagre i generated-adjectives
         sed 's/$/+A+Der\/Superl+A+Sg+Nom/' $suplemmas | $lookup_tool $generator_file.$suffix | \
           cut -f2 | grep -v "A+" | grep -v "^$" | sort -u >> $generated_lemmas.$f.txt		
 
-# Generer lemmaer i adjectives med +A+Comp+Sg+Nom, lagre i generated-adjectives
+# Generer lemmaer i adjectives med +A+Der/Comp+Sg+Nom, lagre i generated-adjectives
         sed 's/$/+A+Der\/Comp+A+Sg+Nom/' $complemmas | $lookup_tool $generator_file.$suffix | \
           cut -f2 | grep -v "A+" | grep -v "^$" | sort -u >> $generated_lemmas.$f.txt		
 
@@ -179,7 +155,7 @@ for f in $fsttype; do
 		LC_ALL=no_NO.UTF-8 sort -u -o $generated_lemmas.$f.txt $generated_lemmas.$f.txt 
 
 # Sammenlikne: Former som er i lemmalista med ikke i lista med genererte former,
-# lagre i missingadjectiveLemmas.txt. Formene generes med  +A+Sg+Nom for enklere debugging.
+# lagre i missing_adjective_lemmas.{FST}.txt. Formene generes med  +A+Sg+Nom for enklere debugging.
 		LC_ALL=no_NO.UTF-8 comm -23 $alllemmas $generated_lemmas.$f.txt |\
 		grep -v '^$' | sed 's/$/+A+Sg+Nom/' |\
 		$lookup_tool $generator_file.$suffix > $result_file.$f.txt
