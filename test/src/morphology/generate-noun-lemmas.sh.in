@@ -156,9 +156,9 @@ for f in $fsttype; do
 ###### Collect results, and generate debug info if FAIL: #######
         # Sort and compare original input with resulting output - the diff is
         # used to generate lemmas which are opened in SEE:
-        LC_ALL=C sort -u -o $generated_lemmas.$f.txt $generated_lemmas.$f.txt 
-		LC_ALL=C sort -u -o $lemmas $lemmas 
-        comm -23 $lemmas $generated_lemmas.$f.txt > $result_file.$f.txt
+        LC_ALL=no_NO.UTF-8 sort -u -o $generated_lemmas.$f.txt $generated_lemmas.$f.txt 
+		LC_ALL=no_NO.UTF-8 sort -u -o $lemmas $lemmas 
+        LC_ALL=no_NO.UTF-8 comm -23 $lemmas $generated_lemmas.$f.txt > $result_file.$f.txt
 
         # Open the diff file in SubEthaEdit (if there is a diff):
         if [ -s $result_file.$f.txt ]; then
@@ -178,7 +178,7 @@ for f in $fsttype; do
                 $EXTEDITOR $gen_result_file.$f.txt
 #                $EXTEDITOR $ana_result_file.$f.txt # XXX
             else
-                echo "There where problem lemmas. Details in:"
+                echo "There were problem lemmas. Details in:"
                 echo "* $result_file.$f.txt    "
                 echo "* $gen_result_file.$f.txt"
                 echo "* $ana_result_file.$f.txt"
