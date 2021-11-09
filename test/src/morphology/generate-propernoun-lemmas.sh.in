@@ -9,9 +9,9 @@
 
 # To run this test script only, do:
 #
-# make check TESTS=generate-noun-lemmas.sh
+# make check TESTS=generate-propernoun-lemmas.sh
 
-# This test script will test that all noun lemmas do generate as themselves.
+# This test script will test that all propernoun lemmas do generate as themselves.
 # Extend as needed, and copy to new files to adapt to other parts of speech.
 # The changes usually needed are:
 #
@@ -114,9 +114,9 @@ for f in $fsttype; do
 ###### Collect results, and generate debug info if FAIL: #######
         # Sort and compare original input with resulting output - the diff is
         # used to generate lemmas which are opened in SEE:
-		LC_ALL=C sort -u -o $lemmas $lemmas 
-        LC_ALL=C sort -u -o $generated_lemmas.$f.txt $generated_lemmas.$f.txt 
-        comm -23 $lemmas $generated_lemmas.$f.txt > $result_file.$f.txt
+		LC_ALL=no_NO.UTF-8 sort -u -o $lemmas $lemmas 
+        LC_ALL=no_NO.UTF-8 sort -u -o $generated_lemmas.$f.txt $generated_lemmas.$f.txt 
+        LC_ALL=no_NO.UTF-8 comm -23 $lemmas $generated_lemmas.$f.txt > $result_file.$f.txt
 
         # Open the diff file in SubEthaEdit (if there is a diff):
         if [ -s $result_file.$f.txt ]; then
@@ -136,7 +136,7 @@ for f in $fsttype; do
                 $EXTEDITOR $gen_result_file.$f.txt
 #                $EXTEDITOR $ana_result_file.$f.txt
             else
-                echo "There where problem lemmas. Details in:"
+                echo "There were problem lemmas. Details in:"
                 echo "* $result_file.$f.txt    "
                 echo "* $gen_result_file.$f.txt"
                 echo "* $ana_result_file.$f.txt"

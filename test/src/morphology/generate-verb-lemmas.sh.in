@@ -9,9 +9,9 @@
 
 # To run this test script only, do:
 #
-# make check TESTS=generate-adjective-lemmas.sh
+# make check TESTS=generate-verb-lemmas.sh
 
-# This test script will test that all noun lemmas do generate as themselves.
+# This test script will test that all verb lemmas do generate as themselves.
 # Extend as needed, and copy to new files to adapt to other parts of speech.
 # The changes usually needed are:
 #
@@ -108,12 +108,12 @@ for f in $fsttype; do
           cut -f2 | grep -v "V+" | grep -v "^$" | LC_ALL=C sort -u > $generated_lemmas.$f.txt		
 				
 # Sorter, unifiser
-		LC_ALL=C sort -u -o $lemmas $lemmas 
-		LC_ALL=C sort -u -o $generated_lemmas.$f.txt $generated_lemmas.$f.txt 
+		LC_ALL=no_NO.UTF-8 sort -u -o $lemmas $lemmas 
+		LC_ALL=no_NO.UTF-8 sort -u -o $generated_lemmas.$f.txt $generated_lemmas.$f.txt 
 
 # Sammenlikne: Former som er i lemmalista med ikke i lista med genererte former,
 # lagre i missingverbLemmas.txt. Formene generes med  +V+Inf for enklere debugging.
-		comm -23 $lemmas $generated_lemmas.$f.txt |\
+		LC_ALL=no_NO.UTF-8 comm -23 $lemmas $generated_lemmas.$f.txt |\
 		  grep -v '^$' | sed 's/$/+V+Inf/' |\
 		  $lookup_tool $generator_file.$suffix > $result_file.$f.txt
 
@@ -122,6 +122,9 @@ for f in $fsttype; do
 			# Only open the failed lemmas in see if @SEE@ is defined:
 			if [ "$EXTEDITOR" ]; then
 				$EXTEDITOR $result_file.$f.txt
+            else
+                echo "There were problem lemmas. Details in:"
+                echo "* $result_file.$f.txt    "
 			fi
 		    Fail=1
 		    echo "$f - FAIL"
