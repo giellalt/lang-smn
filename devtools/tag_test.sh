@@ -15,5 +15,8 @@ cat src/fst/stems/*lexc |cut -d '!' -f1 |grep ';.*;'
 echo 'Checking for missing Der-tags:'
 cat src/fst/stems/*lexc |cut -d '!' -f1 |grep '\+Der/.*;' |egrep -v 'Der([1234]|\+)'
 
+echo 'Checking for double Sem-tags:'
+cat src/fst/stems/*lexc |cut -d '!' -f1 |grep '+Sem.*+Sem' 
+
 echo 'checked'
 rm lexctags roottags
