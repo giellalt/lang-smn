@@ -230,10 +230,12 @@ analyser-gramcheck-gt-desc.hfst: analyser-gramcheck-gt-desc.tmp.hfst \
 # Special case for the dict analyser, since it follows the same filename
 # pattern as the raw fst:
 analyser-dict-gt-desc.%: analyser-dict-gt-desc.tmp.% \
+					filters/remove-norm-comp-tags.%           \
 					filters/remove-derivation-position-tags.% \
 					filters/remove-usage-tags.%
 	$(AM_V_XFST)$(PRINTF) "read regex                           \
 				@\"filters/remove-usage-tags.$*\"               \
+			.o. @\"filters/remove-norm-comp-tags.$*\"           \
 			.o. @\"filters/remove-derivation-position-tags.$*\" \
 			.o. @\"$<\"                                         \
 			;\n\
@@ -265,9 +267,15 @@ $(foreach fst,hfst xfst foma,$(eval $(call giella_generators,$(fst))))
 # Do NOT apply the accent removal filters to the normative
 # dictionary generator (both hfst and xfst):
 generator-dict-gt-norm.%: generator-dict-gt-norm.tmp.% \
+					filters/remove-norm-comp-tags.%           \
+					filters/remove-derivation-position-tags.% \
+					filters/make-optional-variant-tags.%      \
 					filters/remove-usage-tags.%
 	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
 			    @\"filters/remove-usage-tags.$*\"               \
+			.o. @\"filters/remove-derivation-position-tags.$*\" \
+			.o. @\"filters/remove-norm-comp-tags.$*\"           \
+			.o. @\"filters/make-optional-variant-tags.$*\"      \
 			.o. @\"$<\"                                         \
 			;\n\
 		 $(INVERT_XFST)$(INVERT_FOMA)\
