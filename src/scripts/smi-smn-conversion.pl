@@ -19,6 +19,8 @@ while(<>) {
 	s/SUND/BERN/g ;
 	s/HEIM/BERN/g ;
 	s/BALAK/LONDON/g ;
+	s/Run^way BERN/Run^way ACCRA/g ;
+	s/Friday LONDON/Friday ACCRA/g ;
 	
 	s/ACCRA-Y/ACCRA/g ;
 	s/NYSTØ/ACCRA/g ;
@@ -71,6 +73,9 @@ while(<>) {
 	s/^Turkki\+/!Turkki+/g ;
 	s/^Veikko\+/!Veikko+/g ;
 	s/^Vävli\+/!Vävli+/g ;
+	s/^England\+/!England+/g ;
+	s/^Egypt\+/!Egypt+/g ;
+	s/^World\+/!World+/g ;
 	
 # changing to WG inflection
 	s/Valle ACCRA/Va^RVlle MOKKE/g ;
