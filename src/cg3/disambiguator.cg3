@@ -1202,6 +1202,8 @@ LIST PUNCT-RIGHT = (PUNCT RIGHT) ;
                             # stand in front of appositions but also
                             # postmodifiers.
 
+SET NOT-ANPMOD = WORD - A-CC ; # Anything but fiskis já ruopsis.
+
 #!! The set **NOT-NPMOD** is used to find barriers between NPs.
 #!! Typical usage: ... (*1 N BARRIER NOT-NPMOD) ...
 #!! meaning: Scan to the first noun, ignoring anything that can be
@@ -1436,7 +1438,7 @@ LIST ALU = "alu" "gasu" "govddu" "guhku" "losu" "stuoru" "viiddu" "čieŋu" ;
 # These are ABBR:
 LIST REAL-TITLE =  "prof" "fil.tri" "hr" "kapt" "korp" "lekt" "lic" "ltn" "mag.art" "mag" "merc" "miss" "Mr" "mr" "Mrs" "mrs" "odont" "oecon" "ossod.dir" ;
  
-LIST TITLE-LIKE = "gásttašeaddji" "justitiárius" "majestehta" "miss" "naabur" ;
+LIST TITLE-LIKE = "kästee" "justitiárius" "majesteet" "miss" "naabur" ;
 # Ránnjá Ole Vuolab imašta manne ....
 
 #!! * Sets for nouns as pred
@@ -1507,10 +1509,10 @@ SET HUMAN-INDIVIDUAL = HUMAN-LIKE OR FAMILY OR NON-FAMILY OR ("kii") OR ("kii") 
 LIST HUMAN-GROUP =  "aalmug" (".*álbmot"r) (".*bearaš"r) (".*čearda"r) "airâskodde" "juávkku" (".*guovttis"r) (".*guovttos"r) (".*joavku"r) (".*kommišuvdna"r) (".*komiteá"r) "ráiđu" "niävvu" ("sämmilâš" N Pl) "ucceebloho" (".*veahka"r) ;
   ## group of humans that connot be a building at the same time
  
-LIST PROFESSION1 = (".*advokáhta"r) (".*advokáhtta"r) (".*duopmár"r) "arkeoloog" (".*artist"r) (".*assistent"r) (".*áittardeaddji"r) "ákšoalmmái" (".*bargi"r) "buorideaddji" "ámmátolmmái" "ámmátolmmoš" (".*mánni"r) (".*hoavda"r) (".*meannudeaddji"r)  (".*ámmát"r)
-(".*geahčči"r) (".*bagadalli"r) (".*bagadeaddji"r) (".*konsuleanta"r) "bargoveahka" "bassaleaddji" "adj." "báhkár" "pappâ" "palvâleijee" (".*čálli"r) "bearremánni" "bibliotekára" (".*biigá"r) ("biila#divvut" Der/NomAg) (".*vuovdi"r) "birasgáhttenráđđeaddi" (".*terapevta"r)  (".*terapeuta"r) "pispe" "bismá" "pispe" (".*bivdi"r) (".*hábmejeaddji"r) "eennâmviljâleijee" "puásuituálu" "boazosápmelaš" "boazosápmi" "bolesmeašttir" (".*vuoddji"r) "buvttadeaddji" 
-"čalbmeáhkku" "čalbmeeadni" "čálaoahppavaš" "čiekči" "čorgejeijee" (".*čuojaheaddji"r) 
-"dáidár" (".*dáiddár"r) "tálulâš" "eemeed" "dáluisit" "dárkkisteaddji" "orjâlâš" (".*dikšu"r) (".*direktevra"r) (".*dirigeanta"r) (".*divššár"r) (".*doaimmaheaddji"r) (".*doavttir"r) "tulkkâ" "tuáijár" (".*duopmar"r) (".*dutki"r) 
+LIST PROFESSION1 = (".*advokaat"r)  (".*tuámmár"r) "arkeoloog" (".*artist"r) (".*assistent"r) "ákšualmai" (".*pargee"r) "pyeredeijjee" "áámmátolmooš" (".*hovdâ"r)  (".*áámmát"r)
+(".*keččee"r) (".*stivrejeijee"r)(".*konsulent"r) "pargoviehâ" "liäiboo" "pappâ" "palvâleijee" (".*čällee"r) (".*pijgá"r)  (".*vyebdee"r) (".*terapeut"r)  (".*astronaut"r) "pispe" (".*pivdee"r)  "eennâmviljâleijee" "puásuituállee" "tuodârsämmilâš" "poolismiäštár" (".*vyeijee"r) "puovtâdeijee" 
+"čiehčee" "čorgejeijee" (".*čuojâtteijee"r) 
+"taaiđar" (".*taaidar"r) "tálulâš" "eemeed" "táluiššeed" "tärhisteijee" "orjâlâš" (".*tipšoo"r) (".*toimâtteijee"r) (".*tuáhtár"r) "tulkkâ" "tuáijár"  (".*totkee"r) 
 "ealáhusdoalli" "eallo#doalli" "eennâmviljâleijee" "eananhearrá" (".*sadjásaš"r) "eatnandoalli"
 "fáldi" "fitnodatdoaibmi" "fitnodatoamasteaddji" 
 "kävppijâs" "giellaráđđi" (".*veahkki"r) "kirdemmaašin" "girko#bálvaleaddji" "girkodulka" "gollerávdi" "kunâgâs" "govvadáidár" "kovvejeijee" "kuáđutteijee" "kyelipivdee"
@@ -2354,6 +2356,11 @@ SELECT:NomACR Nom IF (0 ACR OR ABBR)(-1 BOS)(1 PUNCT) ;
 
 #!! ## Verbs
 
+#!! * DADJAT wants illative
+SELECT Ill IF (-1 DADJAT)(1 (":"));
+       #$ Jeesus eeđai čyeđeuáivalmai: Hei.
+
+
 #!! * **vazzid** chooses väzziđ when Ill or čoođâ to the right --  vazzâđ venytellä vs. väzziđ kävellä
 REMOVE:vazzid ("vazzâđ") IF (0 ("väzziđ"))(*1  Ill OR ("čoođâ"));
 
@@ -2362,7 +2369,7 @@ REMOVE:vazzid ("vazzâđ") IF (0 ("väzziđ"))(*1  Ill OR ("čoođâ"));
 
 REMOVE:QN A IF (-1 Num)(0 N)(1 S-BOUNDARY OR V OR EOS);
 
-REMOVE:PRED N IF (*-1 LEDE + VFIN BARRIER NOT-NPMODADV)(0 A)(1 Adv OR EOS OR ("^excl")) ;
+REMOVE:PRED N IF (*-1 LEDE + VFIN BARRIER NOT-NPMODADV)(0 A + Sg + Nom)(1 Adv OR EOS OR ("^excl")) ;
 
 #!! ## Adjectives, nouns, not adverbs
 
@@ -2989,7 +2996,7 @@ SELECT:comparAdv Adv IF (0 COMPAR LINK 1 PRE-NP-HEAD OR go) ;
 
 
 
-REMOVE:NgradeAdv N IF (-1 GRADE-ADV - Foc)(0 Adv OR A OR PrfPrc);
+REMOVE:NgradeAdv N IF (-1C GRADE-ADV - Foc)(0 Adv OR A OR PrfPrc);
  	#$ Mun lean nu suhttan. 
  	#$ Lea hui easkka čuožžilan gažaldat.
 
@@ -3646,6 +3653,7 @@ SELECT:AAttrN (A Attr) IF (NEGATE *-1 COPULAS BARRIER NP-HEAD-NOM OR NOT-AUX-V)(
 	#$ Oktasaš vuoigatvuođat ledje šaddan dološ áiggi rájes...
 	#$ ...galget divššohasa lagamus oapmahaččat oažžut dieđu...
 	#% Sii lohket iežaset leat oalle duhtavaččat dán jagáš básárdoaluin.
+	#% Suoi láin Jáákuppân eromâš rákkáseh tääl, ko Raakel ij lamaš innig. # eromâš
 
 #!! * **AAttrCop**  copulas close to the left
 SELECT:AAttrCop (A Attr) IF (*-1 COPULAS BARRIER NOT-ADV)(NEGATE 0 Adv LINK 1 A) 
@@ -3692,7 +3700,18 @@ SELECT:CopANom (A Nom) (-1 COPULAS LINK -1 HUMAN + Nom OR Pers + Nom)(0 Attr)(NE
 
  
 #!! * **ANom**  removes A Nom
-REMOVE:ANom (A Nom) IF (NEGATE -1 COPULAS LINK 1 DEHALAS LINK *1 ADVLCASE BARRIER NOT-NPMOD)(0 (A Attr))(NEGATE 0 (Pl Nom) LINK *-1 PL-V OR DU-V BARRIER NOT-ADV-PCLE OR CS LINK NEGATE *-1 (Pl Nom) BARRIER S-BOUNDARY)(NEGATE 0 (Pl Nom) LINK *-1 COPULAS BARRIER NOT-ADV-PCLE LINK 0 Pl3)(NEGATE *1 NP-HEAD-NOM OR Ess BARRIER NOT-A-ADV)(NEGATE *-1 (Refl Acc) BARRIER NOT-ADV)(*1C N OR Cmp/SplitR BARRIER NOT-NPMOD OR (PUNCT RIGHT) OR CC LINK NOT 1 Po OR PREGEN)(NEGATE 1 Prop OR Ill)(NEGATE 1 COMMA LINK 1 N)(NEGATE 1 Gen LINK *1 Po OR PREGEN BARRIER NP-BOUNDARY)(NEGATE 0 Pl LINK *-1 Pl3 BARRIER VFIN) ;
+REMOVE:ANom (A Nom) IF
+(NEGATE -1 COPULAS LINK 1 DEHALAS LINK *1 ADVLCASE BARRIER NOT-NPMOD)
+(0 (A Attr))
+(NEGATE 0 (Pl Nom) LINK *-1 PL-V OR DU-V BARRIER NOT-ADV-PCLE OR CS LINK NEGATE *-1 (Pl Nom) BARRIER S-BOUNDARY)
+(NEGATE 0 (Pl Nom) LINK *-1 COPULAS BARRIER NOT-ADV-PCLE LINK 0 Pl3)
+(NEGATE *1 NP-HEAD-NOM OR Ess BARRIER NOT-A-ADV)
+(NEGATE *-1 (Refl Acc) BARRIER NOT-ADV)
+(*1C N OR Cmp/SplitR BARRIER NOT-ANPMOD OR (PUNCT RIGHT) OR CC LINK NOT 1 Po OR PREGEN)
+(NEGATE 1 Prop OR Ill)
+(NEGATE 1 COMMA LINK 1 N)
+(NEGATE 1 Gen LINK *1 Po OR PREGEN BARRIER NP-BOUNDARY)
+(NEGATE 0 Pl LINK *-1 Pl3 BARRIER VFIN) ;
 	#$ Dat lea čuovvovaš sajis.
 	#$ Ánne-Sofe buvttii varas biergguid.
 	#$ Mun čállen romit reivve go don.	
@@ -3860,7 +3879,11 @@ REMOVE:Wr1782 REAL-V IF (-1 COPULAS)(0 Nom)(NEGATE 0 PrfPrc)(1 (Pron Rel));
 REMOVE:Wr1784 VFIN IF (*-1 COPULAS BARRIER NOT-ADV-INDEF)(0 Attr)(1 N OR EOS);
 
 #!! * **Wr1785**
-SELECT:Wr1785 A IF (*-1 COPULAS BARRIER NOT-ADV-INDEF)(NEGATE 0 REAL-V OR Ord OR N)(1 N OR EOS);
+SELECT:Wr1785 (A Attr) IF (*-1 COPULAS BARRIER NOT-ADV-INDEF)(NEGATE 0 REAL-V OR Ord OR N)(1 N);
+	#$ ...de dilli orru leamen earalágan.
+
+#!! * **Wr1785b**
+SELECT:Wr1785 (A Sg Nom) IF (*-1 COPULAS BARRIER NOT-ADV-INDEF)(NEGATE 0 REAL-V OR Ord OR N)(1 EOS);
 	#$ ...de dilli orru leamen earalágan.
 
 #!! * **Wr1786xc**
@@ -5391,7 +5414,8 @@ REMOVE:TESTr2026 Gen - Dem IF (*-2 TRANS-V BARRIER S-BOUNDARY OR Pr OR Acc)(NEGA
 	#% Juos mearriduvvo meahcceeatnamiid nuppástuvvan geavaheapmi golmma ja dušše golmma stivrralahtu doarjagiin ja olles uhcitlohku vuođđudallá oainnus sámi kultuvrra, boazodoalu, meahcásteami, ealáhusdoaimmaheami ja servodateallima destii mii lea árvvoštallojuvvon Sámedikki válddahusaid vuođul, de sáhttá uhcitlohku ovtta oli stivrračoahkkima áigge gáibidit ášši Sámedikki gieđahallamii. # destii is N Ill
 	#% Mun lean lohkan ollu girjjiid dán dálvvi.
 
-
+REMOVE:TopicalisedObj Gen IF (0 Acc)(1 ("leđe") + Sg3)(2 Sg + Nom)(3 TV + PrfPrc);
+REMOVE:TopicalisedObj Nom IF (0 Acc)(1 ("leđe") + Sg3)(2 Sg + Nom)(3 TV + PrfPrc);
 
 REMOVE:NotAcc Acc IF (0 Gen OR Nom)(NOT *0 TV);
 
@@ -6084,10 +6108,16 @@ SELECT:GerundiumTEST Acc (*-1 TRANS-V + FMAINV BARRIER Acc LINK NEGATE *-1 Acc B
 #!! * **NomIfProp** Removes Acc and Gen when you Prop because you are Nom. To the left is a sg3-verb. Should not hit Prop that are Sem/Plc.
 REMOVE:NomIfProp Acc OR Gen IF (*-1 SG3-V BARRIER SV-BOUNDARY OR COMMA)
 (NEGATE *-1 Acc OR (A Attr) BARRIER SG3-V LINK *-1 Nom BARRIER SG3-V LINK *-1 SG3-V)
-(0 (N Nom) + Prop OR (N Acc) + Prop)(NEGATE 0 (Prop Sem/Plc))(NEGATE -1 Acc LINK *1 Ill BARRIER NOT-Attr)(NEGATE 0 Gen LINK 1 N - Prop - ABBR LINK *-2 SG3-V LINK -1 Nom) ;
+(0 (N Nom) + Prop OR (N Acc) + Prop)
+(NEGATE 0 (Prop Sem/Plc))
+(NEGATE -1 Acc LINK *1 Ill BARRIER NOT-Attr)
+(NEGATE 0 Gen LINK 1 N - Prop - ABBR LINK *-2 SG3-V LINK -1 Nom)
+(NEGATE 0 Acc LINK *-1 VFIN BARRIER SV-BOUNDARY OR COMMA LINK -1 Nom) ;
 	#$ Logi minuvtta maŋŋel nagodii Sørøy Glimt čiekči Stig Martinsen dulbet bohtosa ovttain moalain.
 	#% Issát ásai Beer Lahai Roi birrasiin. 
-	#% Doppe Abram čuorvvui Hearrá nama. 
+	#% Doppe Abram čuorvvui Hearrá nama.
+	#% Máárjá šoddâdij Jeesus.
+	
 
 #!! * **NomIfProp2** Removes Acc and Nom when you are Prop Sem/Plc because you are Gen. To the left is a sg3-verb. To the right is a noun.
 REMOVE:NomIfProp2 (Nom Sem/Plc) OR (Acc Sem/Plc) (*-1 SG3-V BARRIER SV-BOUNDARY)(NEGATE 0 Sem/Fem OR Sem/Mal OR (Prop Sem/Sur))(0 (N Nom) + (Prop Sem/Plc) OR (N Acc) + (Prop Sem/Plc))(*1 N BARRIER NOT-Attr) ;
@@ -6097,6 +6127,9 @@ REMOVE:NomIfProp2 (Nom Sem/Plc) OR (Acc Sem/Plc) (*-1 SG3-V BARRIER SV-BOUNDARY)
 
 #!! * **NomSentFin** Selects Nom if you are Acc or Gen and EOS is to yoru right. Copulas is found to the left 
 SELECT:NomSentFin1 Nom (*-1 FMAINV + COPULAS BARRIER NOT-NPMOD)(0 Acc OR Gen LINK 1 EOC) ;
+
+#!!
+REMOVE:NomIfSVO Acc IF (-1 Adv)(0 Sg + Nom)(1 V + TV + Sg3)(*2 Acc BARRIER NOT-NPMOD);
 
 
 #!! Accusative or Illative
