@@ -440,6 +440,7 @@ POSITIVE-V
 
 
 
+
 ### Adverbial sets and their complements
 
 
@@ -845,6 +846,7 @@ OKTA
 
 
 
+
 * Sets for animals
 
 
@@ -1103,7 +1105,7 @@ Inf should be Actio Essive
 
 
 
-
+Existential sentences -- same as next?
 
 
 Verb in plural 

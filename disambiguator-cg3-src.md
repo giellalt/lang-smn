@@ -662,6 +662,7 @@ expression **WORD - premodifiers**.
 
 
 
+
 The set **NOT-NPMOD** is used to find barriers between NPs.
 Typical usage: ... (*1 N BARRIER NOT-NPMOD) ...
 meaning: Scan to the first noun, ignoring anything that can be
@@ -1229,6 +1230,9 @@ der
 
 
 ## Verbs
+
+* DADJAT wants illative
+
 
 * **vazzid** chooses väzziđ when Ill or čoođâ to the right --  vazzâđ venytellä vs. väzziđ kävellä
 
@@ -1858,39 +1862,7 @@ The rules are not documented yet
 
 
 
-### Attribute disambiguation
 
-* **AttrTitle**
-
-* **AttrVFIN** removes Attr in front of VFIN
-
-
-
-* **AttrnotNA** removes Attr when no N or A to the right
-
-
-
-### Rules for Attr between Dem and N
-
-* **AAttrDemSg1, AAttrDemPl1** 
-
-* **AAttrDemSg2, AAttrDemPl2** 
-
-* **AAttrDemSg3, AAttrDemPl3** 
-
-* **AAttrDemSgIll, AAttrDemPlIll** 
-
-* **AAttrDemSgLoc, AAttrDemPlLoc** 
-
-
-
-* **AAttrDemdakkar** 
-
-
-
-* **AAttrN** no copulas close to the left
-
-* **AAttrCop**  copulas close to the left
 
 
 
@@ -1977,6 +1949,8 @@ The rules are not documented yet
 * **Wr1784**
 
 * **Wr1785**
+
+* **Wr1785b**
 
 * **Wr1786xc**
 
@@ -2136,6 +2110,42 @@ The rules are no documented yet
 * **DemAcc**
 
 * **DemAttr**
+
+
+
+### Attribute disambiguation
+
+* **AttrTitle**
+
+* **AttrVFIN** removes Attr in front of VFIN
+
+
+
+* **AttrnotNA** removes Attr when no N or A to the right
+
+
+
+### Rules for Attr between Dem and N
+
+* **AAttrDemSg1, AAttrDemPl1** 
+
+* **AAttrDemSg2, AAttrDemPl2** 
+
+* **AAttrDemSg3, AAttrDemPl3** 
+
+* **AAttrDemSgIll, AAttrDemPlIll** 
+
+* **AAttrDemSgLoc, AAttrDemPlLoc** 
+
+
+
+* **AAttrDemdakkar** 
+
+
+
+* **AAttrN** no copulas close to the left
+
+* **AAttrCop**  copulas close to the left
 
 
 
@@ -2669,7 +2679,6 @@ The rules are no documented yet
 
 
 
-
 ###  Reflexive pronouns: acc or gen
 
 
@@ -2925,9 +2934,11 @@ The rules are no documented yet
 
 * **NomIfProp** Removes Acc and Gen when you Prop because you are Nom. To the left is a sg3-verb. Should not hit Prop that are Sem/Plc.
 
+
 * **NomIfProp2** Removes Acc and Nom when you are Prop Sem/Plc because you are Gen. To the left is a sg3-verb. To the right is a noun.
 
 * **NomSentFin** Selects Nom if you are Acc or Gen and EOS is to yoru right. Copulas is found to the left 
+
 
 
 Accusative or Illative

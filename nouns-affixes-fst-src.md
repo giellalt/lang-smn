@@ -932,6 +932,12 @@ this is for loanwords without stem change
 
  * **LEXICON S_AAJA** 
 
+
+
+ * **LEXICON AAIGA_DIM** 
+
+
+
  * **LEXICON S_KARRII** 
 
 
@@ -978,7 +984,7 @@ this is for loanwords without stem change
 
  * **LEXICON S_CISSAAS** ! stem: cissá 
 
- * **LEXICON X_CISSAAS** 
+ * **LEXICON X_CISSAAS** stem čissá
 
  * **LEXICON S_VUALAAS** 
 
@@ -997,6 +1003,7 @@ this is for loanwords without stem change
  * **LEXICON X_KUAVDAS_SG** 
 
  * **LEXICON S_ALGAAS** stem alga 
+
 
 
 
