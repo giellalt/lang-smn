@@ -3554,7 +3554,8 @@ LEXICON AAIGA_COMMON_SG !!≈ * **@CODE@**
 +N+Sg+Loc:^SV^SLEN%>st CPXsuff ;    ! čalluustis čallustis 
 +N+Sg+Loc+Err/Orth:%>st CPXsuff ;   ! čalluustis čallustis 
 +N+Sg+Com:%>in CPXsuff ;            ! perruinis 
- 
++N+Der1+Der/Dimin: AAIGA_DIM ;
+
 LEXICON S_AAIGA_PL !!≈ * **@CODE@** 
 +N+Cmp/SgNom:â^WG^RLEN%> Rhash ; ! aaigâsopâmuš 
 +N+Cmp/SgGen:^SV^SLEN%> Rhash ; 
@@ -3577,7 +3578,29 @@ LEXICON S_AAJA  !!≈ * **@CODE@**
 +N+Cmp/SgNom:â^WG^RVSH%> Rhash ; ! ajârobdâ 
 AAIGA_COMMON_SG ; 
 AAIGA_COMMON_PL ; 
+
+
  
+LEXICON AAIGA_DIM !!≈ * **@CODE@** 
++N+Sg+Nom:%>š K ; 
++N+Sg+Gen:%>užii K ; 
++N+Sg+Acc:%>užii K ; 
++N+Sg+Ill:%>užán K ; 
++N+Sg+Loc:%>užist K ; 
++N+Sg+Com:%>žijn K ; 
++N+Sg+Abe:%>žuttáá K ; 
++N+Ess:%>žin K ; 
++N+Par:%>žid K ; 
++N+Pl+Nom:%>užiih K ; 
++N+Pl+Gen:%>užij K ; 
++N+Pl+Acc:%>užijd K ; 
++N+Pl+Ill:%>užijd K ; 
++N+Pl+Loc:%>užijn K ; 
++N+Pl+Com:%>užij GUIN ; 
++N+Pl+Abe:%>užijttáá K ; 
+
+
+
 LEXICON S_KARRII !!≈ * **@CODE@** 
 +N: X_KARRII ; 
 +N+Sg+Nom:^SV^SLEN VPXsuff12nom ; ! nijbám 
@@ -3751,7 +3774,7 @@ LEXICON S_CISSAAS !!≈ * **@CODE@** ! stem: cissá
 +N+Par:^SVž^SLEN^SVLOW%>id K ;                 ! cissáážid 
 S_ALGAAS_PX ; 
  
-LEXICON X_CISSAAS !!≈ * **@CODE@** 
+LEXICON X_CISSAAS !!≈ * **@CODE@** stem čissá
 +Sg+Nom:^SVš^SLEN K ;      ! cissááš 
 +Sg+Gen:^SV^SLEN K ;       ! cissáá 
 +Sg+Acc:^SV^SLEN K ;       ! cissáá 
@@ -3834,21 +3857,24 @@ LEXICON X_KUAVDAS_SG !!≈ * **@CODE@**
 +Par+Err/Orth:ž^WG^RLEN%>id K ;       ! páárnážid 
  
 LEXICON S_ALGAAS  !!≈ * **@CODE@** stem alga 
-+N+Sg+Ill:^EA^CSH%>žân K ;             ! algažân 
-+N+Ess:^EA^CSH%>žin K ;                ! algažin 
-+N+Par:^EA^CSH%>žid K ;                ! algažid 
-+N+Sg+Nom:^SV^EA^SLEN%>š K ;      ! algaaš 
-+N+Sg+Gen:^SV^EA^SLEN K ;       ! algaa 
-+N+Sg+Acc:^SV^EA^SLEN K ;       ! algaa 
-+N+Sg+Loc:^SV^EA^SLEN%>st K ;   ! algaast 
-+N+Sg+Com:%>in K ;           ! algain 
-+N+Sg+Abe:^SV^EA^SLEN%>ttáá K ; ! algaattáá 
-+N: X_SVSLENh_PL ; 
- 
++N: X_ALGAAS ;
 +N+Cmp/SgNom:^SVš^SLEN%>  Rhash ; 
 +N+Cmp/SgGen:^SV^SLEN%>  Rhash ; 
 +N+Cmp/PlGen:%>i  Rhash ; 
 S_ALGAAS_PX ; 
+
+LEXICON X_ALGAAS
++Sg+Nom:^SV^EA^SLEN%>š K ;      ! algaaš 
++Sg+Gen:^SV^EA^SLEN K ;       ! algaa 
++Sg+Acc:^SV^EA^SLEN K ;       ! algaa 
++Sg+Ill:^EA^CSH%>žân K ;             ! algažân 
++Sg+Loc:^SV^EA^SLEN%>st K ;   ! algaast 
++Sg+Com:%>in K ;           ! algain 
++Sg+Abe:^SV^EA^SLEN%>ttáá K ; ! algaattáá 
++Ess:^EA^CSH%>žin K ;                ! algažin 
++Par:^EA^CSH%>žid K ;                ! algažid 
++N: X_SVSLENh_PL ; 
+ 
  
 LEXICON S_ALGAAS_PX 
 +N+Sg+Nom:^EA%> VPXsuff12nom ; ! XXX algam 
