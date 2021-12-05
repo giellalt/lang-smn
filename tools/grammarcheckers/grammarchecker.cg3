@@ -1416,7 +1416,7 @@ LIST ALU = "alu" "gasu" "govddu" "guhku" "losu" "stuoru" "viiddu" "čieŋu" ;
 # These are ABBR:
 LIST REAL-TITLE =  "prof" "fil.tri" "hr" "kapt" "korp" "lekt" "lic" "ltn" "mag.art" "mag" "merc" "miss" "Mr" "mr" "Mrs" "mrs" "odont" "oecon" "ossod.dir" ;
  
-LIST TITLE-LIKE = "kästee" "justitiárius" "majesteet" "miss" "naabur" ;
+LIST TITLE-LIKE = "kästee" "justitiárius" "majesteet" "miss" "naabur" "hiärrá" ;
 # Ránnjá Ole Vuolab imašta manne ....
 
 #!! * Sets for nouns as pred
@@ -2000,6 +2000,7 @@ LIST &msyn-extneg-sg3-pl3 = &msyn-extneg-sg3-pl3 ;
 LIST &msyn-obj-sgnom-sgacc = &msyn-obj-sgnom-sgacc ;
 LIST &msyn-plobj-nom-acc = &msyn-plobj-nom-acc ; # same as next???
 LIST &msyn-obj-plnom-placc = &msyn-obj-plnom-placc ;
+LIST &msyn-top-placc-plnom = &msyn-top-placc-plnom ;
 LIST &msyn-extsubj-ill-nom = &msyn-extsubj-ill-nom ; # vi vil ha nom
 LIST &msyn-extsubj-acc-nom = &msyn-extsubj-acc-nom ; # vi vil ha nom
 LIST &msyn-dem-locattr-gen = &msyn-dem-locattr-gen ;	
@@ -2222,11 +2223,19 @@ COPY:msyn-pred-acc-nom (Nom &SUGGEST) EXCEPT Acc TARGET (N &msyn-pred-acc-nom);
 
 #!! Predicative
 
-ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred)  TARGET (A Attr) IF (NOT 0 (Arab Ord) OR (A Sg Nom))(NOT 1 N)(1 EOS) ;
+ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred)  TARGET (A) IF (0C Attr) (NOT 0 (Arab Ord) OR (A Sg Nom))(NOT 1 N OR A OR PrfPrc)(1 EOS) ;
 COPY:msyn-adj-attr-pred (Sg Nom &SUGGEST) EXCEPT (Attr) TARGET ( A &msyn-adj-attr-pred);
 
     #% Tot lii hirmâd.
     #$ Tot lii hirmâd styeres.
+
+ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A) IF (0C Attr)(NOT 0 (Arab Ord))(*-1 COPULAS BARRIER V OR S-BOUNDARY LINK *-1 Nom) (NEGATE *1 N BARRIER NOT-A-CC)(NEGATE 1 CC OR COMMA LINK 1 A LINK 1 N)(NEGATE 1 CC OR COMMA LINK 1 PUNCT LINK 1 A LINK 1 N)(NEGATE 1 (A Attr) OR ? LINK *1 N BARRIER NOT-NPMOD)(NEGATE 1 A + Sg + Nom OR (Pron Pers) OR PrfPrc)(NEGATE 0 ("puoh") LINK 1 Pron LINK *1 N)(NOT 0 (A Sg Nom) OR Adv OR Pcle)(NEGATE 1 COMMA OR ("-") LINK 1 ("mut") LINK *1 (A Attr) BARRIER NOT-NPMODADV)(NEGATE 0 Superl LINK 1 CC LINK 1 ("eenâb" Superl) OR ("iänááš") LINK 1 A LINK 1 N)(NEGATE 1 (Num Attr) LINK 1 N)(NEGATE 0 ("eenâb") LINK 1 PrfPrc);
+COPY:msyn-adj-attr-pred (Sg Nom &SUGGEST) EXCEPT Attr TARGET (A &msyn-adj-attr-pred) ;
+
+#% Mun lam fiskis.
+#$ Mun lam fiskâd.
+
+#ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (*-1 COPULAS BARRIER V OR GRAMCHK-S-BOUNDARY LINK *-1 Nom) (NEGATE 1 N)(NEGATE 1 CC OR COMMA LINK 1 A LINK 1 N)(NEGATE 1 (A Attr) OR ? LINK *1 N BARRIER NPNH)(NEGATE 1 (A Sg Nom) OR (Pron Pers))(NEGATE 0 ("visot") OR ("buot") LINK 1 Pron LINK *1 N)(NEGATE 0 PRED-ATTR-ADJ)(NEGATE 1 COMMA OR CC LINK 1 (A Attr) OR PRED-ATTR-ADJ)(NOT 0 (A Sg Nom))(NEGATE 1 COMMA OR ("-") LINK 1 ("muhto") LINK *1 (A Attr) BARRIER NPNHA)(NEGATE 0 Superl LINK 1 CC LINK 1 ("eanet" Superl) OR ("eanemus") LINK 1 A LINK 1 N)(NEGATE 1 (Num Attr) LINK 1 N)(NEGATE 0 ("eanet") LINK 1 PrfPrc);
 
 
 
@@ -2342,15 +2351,15 @@ COPY:msyn-obj-sgnom-sgacc (Acc &SUGGEST) EXCEPT Nom TARGET (N Sg &msyn-obj-sgnom
 
 
 #!! Acc shall be Nom
-ADD:msyn-acc-obj-top (&msyn-acc-obj-top) TARGET N IF (0C Pl + Acc - Sem/Time LINK *-1 BOS BARRIER Nom)(1 Der/Pass + Sg3)(2 Adv)(NOT *3 TV);
+ADD:msyn-top-placc-plnom (&msyn-top-placc-plnom) TARGET N IF (0C Pl + Acc - Sem/Time LINK *-1 BOS BARRIER Nom)(1 Der/Pass + Sg3)(2 Adv)(NOT *3 TV);
 #$ Anarâškielâlijd noomâid kiävttoo uccáá.
 #% Anarâškielâliih noomah kiävttojeh uccáá.
 
 # Inarinsaamenkielisiä nimiä käytetään vähän
 
-#ADD:msyn-acc-obj-top (&msyn-acc-obj-top) TARGET N IF (0C Pl + Acc - Sem/Time LINK *-1 BOS BARRIER Nom)(1 Neg + Sg3)(2 ConNeg LINK NOT 0 TV);
-ADD:msyn-acc-obj-top (&msyn-acc-obj-top) TARGET N IF (NOT -1 ("mihheen"))(0C Pl + Acc - Sem/Time LINK *-1 BOS BARRIER Nom)(1 Neg + Sg3 LINK NOT *1 TV);
-COPY:msyn-acc-obj-top (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &msyn-acc-obj-top);
+#ADD:msyn-top-placc-plnom (&msyn-top-placc-plnom) TARGET N IF (0C Pl + Acc - Sem/Time LINK *-1 BOS BARRIER Nom)(1 Neg + Sg3)(2 ConNeg LINK NOT 0 TV);
+ADD:msyn-top-placc-plnom (&msyn-top-placc-plnom) TARGET N IF (NOT -1 ("mihheen"))(0C Pl + Acc - Sem/Time LINK *-1 BOS BARRIER Nom)(1 Neg + Sg3 LINK NOT *1 TV);
+COPY:msyn-top-placc-plnom (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &msyn-top-placc-plnom);
 
 #% {tiäđuid} ij kavnuu.
 #$ tiäđuh iä kavnuu.
@@ -2436,14 +2445,6 @@ COPY:msyn-det-nom-acc (Acc &SUGGEST) EXCEPT Nom TARGET (Pron Dem Pl &msyn-det-no
 
 
 #!! Attributive forms
-
-ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A) IF (0C Attr)(NOT 0 (Arab Ord))(*-1 COPULAS BARRIER V OR S-BOUNDARY LINK *-1 Nom) (NEGATE *1 N BARRIER NOT-A-CC)(NEGATE 1 CC OR COMMA LINK 1 A LINK 1 N)(NEGATE 1 CC OR COMMA LINK 1 PUNCT LINK 1 A LINK 1 N)(NEGATE 1 (A Attr) OR ? LINK *1 N BARRIER NOT-NPMOD)(NEGATE 1 A + Sg + Nom OR (Pron Pers))(NEGATE 0 ("puoh") LINK 1 Pron LINK *1 N)(NOT 0 (A Sg Nom) OR Adv OR Pcle)(NEGATE 1 COMMA OR ("-") LINK 1 ("mut") LINK *1 (A Attr) BARRIER NOT-NPMODADV)(NEGATE 0 Superl LINK 1 CC LINK 1 ("eenâb" Superl) OR ("iänááš") LINK 1 A LINK 1 N)(NEGATE 1 (Num Attr) LINK 1 N)(NEGATE 0 ("eenâb") LINK 1 PrfPrc);
-COPY:msyn-adj-attr-pred (Sg Nom &SUGGEST) EXCEPT Attr TARGET (A &msyn-adj-attr-pred) ;
-
-#% Mun lam fiskis.
-#$ Mun lam fiskâd.
-
-#ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (*-1 COPULAS BARRIER V OR GRAMCHK-S-BOUNDARY LINK *-1 Nom) (NEGATE 1 N)(NEGATE 1 CC OR COMMA LINK 1 A LINK 1 N)(NEGATE 1 (A Attr) OR ? LINK *1 N BARRIER NPNH)(NEGATE 1 (A Sg Nom) OR (Pron Pers))(NEGATE 0 ("visot") OR ("buot") LINK 1 Pron LINK *1 N)(NEGATE 0 PRED-ATTR-ADJ)(NEGATE 1 COMMA OR CC LINK 1 (A Attr) OR PRED-ATTR-ADJ)(NOT 0 (A Sg Nom))(NEGATE 1 COMMA OR ("-") LINK 1 ("muhto") LINK *1 (A Attr) BARRIER NPNHA)(NEGATE 0 Superl LINK 1 CC LINK 1 ("eanet" Superl) OR ("eanemus") LINK 1 A LINK 1 N)(NEGATE 1 (Num Attr) LINK 1 N)(NEGATE 0 ("eanet") LINK 1 PrfPrc);
 
 
 #!! mii + nominative should be mii + acc
