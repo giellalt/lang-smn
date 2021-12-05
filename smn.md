@@ -18667,6 +18667,9 @@ Predicative
 
 
 
+
+
+
 Confusion rules # dáppe mun lean
 
 Sg1 for PrfPrc
@@ -18741,9 +18744,6 @@ Det + N agreement
 
 
 Attributive forms
-
-
-
 
 
 mii + nominative should be mii + acc
