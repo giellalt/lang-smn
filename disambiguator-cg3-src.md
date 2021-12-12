@@ -1304,6 +1304,7 @@ Conjunctions
 * **ollasitAdv** selects
 
 
+
 * **Adverbs and not Nouns**
 
 - uáli
@@ -1315,10 +1316,6 @@ Adverbs and not Pronouns
 
 
 ## Pronouns 
-
-iänááš
-
-
 
 
 * **recipr, reciprPl** select Recipr
