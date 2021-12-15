@@ -7,11 +7,15 @@
 if WANT_GRAMCHECK
 
 # List here (space separated) all yaml files to be run as part of make check:
-TESTS=
+TESTS=\
+	interferens_celkkuuh2.yaml \
+	interferens_celkkuuh3.yaml 
 
 # List tests that are presently (expected) failures here, ie things that should
 # be fixed *later*, but is not critical at the moment:
-XFAIL_TESTS=
+XFAIL_TESTS=\
+	interferens_celkkuuh2.yaml \
+	interferens_celkkuuh3.yaml 
 
 endif # WANT_GRAMCHECK
 
