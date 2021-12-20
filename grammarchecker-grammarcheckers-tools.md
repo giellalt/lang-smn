@@ -479,6 +479,7 @@ If these are found in Adv contexts, we treat them as adverbs.
 
 
 
+
 ### Sets of elements with common syntactic behaviour
 
 
@@ -517,6 +518,7 @@ TRANS-V is the set for verbs really taking objects
 
 
 STRICT-TRANS-V is the set for verbs which don't let a GenAcc be a modifier of anything else than an object, e.g. Mun organiseren eatni gievkkanis. - eatni wants to be the object
+
 
 
 
@@ -1117,8 +1119,19 @@ Verb in plural
 
 
 
+
+
+### Postpositions
+
+
+
+
+
 ### Predicative
 
+
+
+## Agreement error with predicative
 
 
 
@@ -1167,6 +1180,10 @@ Plain object of TV in Nom shall be Acc
 
 
 Acc shall be Nom
+
+
+Acc shall be Ill
+
 
 
 
