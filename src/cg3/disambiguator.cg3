@@ -863,7 +863,8 @@ LIST COM-V = "algâttiđ" "älgiđ" "arvâlâddâđ" "árvvohuššat" "ávkašuv
 		#Note that "leaikkastallat" has two homonymous variants:
 		#leaikkastallat1 (IV), leaikkastallat2+Com
 
-LIST ILL-V = "aibâšiđ" "älgiđ" "asâiduđ" "pokkiđ" "peessâđ" "čokánistiđ" "čujottiđ" "vaikuttiđ" "teivâđ" "turvâstiđ" "tuuttâđ" "kuullâđ" "kuoskâđ" "hárjániđ" "irgediđ" "irgástallat" "oskođ" "lijkkuđ" "lyettiđ" "vyelgiđ" "maccâđ" "mieđettiđ" "miettâđ" "njeeijâđ" "uápásmuđ" "enittiđ" "oskođ" "riemmâđ" "valmiđ" "uásálistiđ" "suttâđ" "vaikuttiđ" "västidiđ" "vyelgiđ" ;
+LIST ILL-V = "aibâšiđ" "älgiđ" "asâiduđ" "pokkiđ" "peessâđ" "čokánistiđ" "čujottiđ" "vaikuttiđ" "teivâđ" "turvâstiđ" "tuuttâđ" "kuoskâđ" "hárjániđ" "irgediđ" "irgástallat" "oskođ" "lijkkuđ" "lyettiđ"  "vyelgiđ" "maccâđ" "mieđettiđ" "miettâđ" "njeeijâđ" "uápásmuđ" "enittiđ" "oskođ" "riemmâđ" "valmiđ" "uásálistiđ" "suttâđ" "vaikuttiđ" "västidiđ" "vyelgiđ" "vaiguttiđ" ;
+# Removed since they also take Acc: "kuullâđ" 
  		
 
 LIST TRANSL-V = "jápmit" "duššat" "hávkat" "náitalit" "gaskkalduvvat" "nohkat" "goarránit" "heahpanit" "boakčánit" "šlundut" "ráigánit" "vuollánit" "gopmánit" "fuotnánit" "roahppánit" "reakčanit" "bieđganit" "luoddanit" "guvggodit" "liegganit" "suorganit" "báhkkanit" "cuovkanit" "hedjonit" "lohppet" "goikat" "galbmot" "goallut" "ruostut" "buoidut" "guvggodit" "suvrut" "suddâdiđ" ;
@@ -2682,7 +2683,9 @@ SELECT:ahccamet N-PX + FIRST-PX (-1 BOC OR COMMA)(*1 EOC OR COMMA) ;
 	#$ Áhččámet, don guhte leat almmis. # also "áhččámet" N Sg Nom
  
 #!! * Nouns:  **AccPxSg1** after a TV verb. Exception for Aux.
-SELECT:PxSg1Acc (N Acc PxSg1)  IF ((-1 TRANS-V + Sg1 - OPRED-V LINK NOT 0 AUX) OR (-1 TRANS-V + PrfPrc - OPRED-V LINK -1 COPULAS + Sg1) OR (-1 TRANS-V + ConNeg - OPRED-V LINK -1 Neg + Sg1))(NEGATE *-1 VFIN - Sg1 BARRIER S-BOUNDARY OR CS)(NEGATE *1 Acc BARRIER REAL-V LINK NOT 1 Po)(NEGATE *1 ("et") BARRIER WORD);
+SELECT:PxSg1Acc (N Acc PxSg1)  IF ((-1 TRANS-V + Sg1 - OPRED-V LINK NOT 0 AUX) OR (-1 TRANS-V + PrfPrc - OPRED-V LINK -1 COPULAS + Sg1) OR (-1 TRANS-V + ConNeg - OPRED-V LINK -1 Neg + Sg1))(NEGATE *-1 VFIN - Sg1 BARRIER S-BOUNDARY OR CS)(NOT -1 ILL-V)(NEGATE *1 Acc BARRIER REAL-V LINK NOT 1 Po)(NEGATE *1 ("et") BARRIER WORD);
+	#$ Mun oskom Imelân.
+
 
 #!! * Nouns:  **AccPxSg1** after a TV Inf verb.
 SELECT:PxSg1Acc (N Acc PxSg1)  IF (*-1 TRANS-V + Inf - OPRED-V BARRIER NOT-NPMOD LINK *-1 SG1-V BARRIER NOT-ADV-PCLE LINK NOT 0 ("leđe"))(NEGATE 0 Dem) ;
@@ -2795,9 +2798,10 @@ SELECT:PxSgIllPx Ill IF (0 Sem/Plc OR Sem/Txt)(1 Acc OR EOS) (NEGATE 0 Po LINK -
 	#% Dan duođaštit čállosat..
 
 
+SELECT:PxSg3 PxSg3 IF (*-1 Sg + Nom BARRIER @CVP)(0 Adv);
 
 
-REMOVE:PxPlaceV PxSg3 (0 Loc OR Adv LINK 0* PLACE-V OR ("leđe") BARRIER SV-BOUNDARY) ;
+REMOVE:PxPlaceV PxSg3 (0 Loc LINK 0* PLACE-V OR ("leđe") BARRIER SV-BOUNDARY) ;
 	#$ Muhto čohkkájin ovtta sajis livttisin gollan duolba geađggi alde ja gehččen čáhcái.
 	#$ Čuđiid jagiid vásáhusat ja duođašteamit leat buori muddui oidnosis , ahte álbmot ii sáhte šaddat kristtalažžan giela haga maid Ipmil oktii lea bidjan sin váimmuide ja sin baksamiidda .
 
@@ -3781,7 +3785,7 @@ REMOVE:Wr1782 REAL-V IF (-1 COPULAS)(0 Nom)(NEGATE 0 PrfPrc)(1 (Pron Rel));
 REMOVE:Wr1784 VFIN IF (*-1 COPULAS BARRIER NOT-ADV-INDEF)(0 Attr)(1 N OR EOS);
 
 #!! * **Wr1785**
-SELECT:Wr1785 (A Attr) IF (*-1 COPULAS BARRIER NOT-ADV-INDEF)(NEGATE 0 REAL-V OR Ord OR N)(1 N);
+SELECT:Wr1785 (A Attr) IF (*-1 COPULAS BARRIER NOT-ADV-INDEF)(NEGATE 0 REAL-V OR Ord OR N)(1 N OR A);
 	#$ ...de dilli orru leamen earalágan.
 
 #!! * **Wr1785b**
