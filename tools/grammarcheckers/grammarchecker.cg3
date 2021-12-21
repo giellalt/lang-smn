@@ -824,8 +824,8 @@ LIST COM-V = "algâttiđ" "älgiđ" "arvâlâddâđ" "árvvohuššat" "ávkašuv
 		#Note that "leaikkastallat" has two homonymous variants:
 		#leaikkastallat1 (IV), leaikkastallat2+Com
 
-LIST ILL-V = "aibâšiđ" "älgiđ" "asâiduđ" "pokkiđ" "peessâđ" "čokánistiđ" "čujottiđ" "vaikuttiđ" "teivâđ" "turvâstiđ" "tuuttâđ" "kuullâđ" "kuoskâđ" "hárjániđ" "irgediđ" "irgástallat" "oskođ" "lijkkuđ" "lyettiđ"  "vyelgiđ" "maccâđ" "mieđettiđ" "miettâđ" "njeeijâđ" "uápásmuđ" "enittiđ" "oskođ" "riemmâđ" "valmiđ" "uásálistiđ" "suttâđ" "vaikuttiđ" "västidiđ" "vyelgiđ" "vaiguttiđ" ;
-
+LIST ILL-V = "aibâšiđ" "älgiđ" "asâiduđ" "pokkiđ" "peessâđ" "čokánistiđ" "čujottiđ" "vaikuttiđ" "teivâđ" "turvâstiđ" "tuuttâđ" "kuoskâđ" "hárjániđ" "irgediđ" "irgástallat" "oskođ" "lijkkuđ" "lyettiđ"  "vyelgiđ" "maccâđ" "mieđettiđ" "miettâđ" "njeeijâđ" "uápásmuđ" "enittiđ" "oskođ" "riemmâđ" "valmiđ" "uásálistiđ" "suttâđ" "vaikuttiđ" "västidiđ" "vyelgiđ" "vaiguttiđ" ;
+# Removed since they also take Acc: "kuullâđ" 
  		
 
 LIST TRANSL-V = "jápmit" "duššat" "hávkat" "náitalit" "gaskkalduvvat" "nohkat" "goarránit" "heahpanit" "boakčánit" "šlundut" "ráigánit" "vuollánit" "gopmánit" "fuotnánit" "roahppánit" "reakčanit" "bieđganit" "luoddanit" "guvggodit" "liegganit" "suorganit" "báhkkanit" "cuovkanit" "hedjonit" "lohppet" "goikat" "galbmot" "goallut" "ruostut" "buoidut" "guvggodit" "suvrut" "suddâdiđ" ;
@@ -2379,25 +2379,6 @@ COPY:msyn-obj-plnom-placc (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &msyn-obj-plnom
 #% Lam valjim táid saanijd.
 # olen valinnut nämä sanat
 
-#!! Plain object of TV in Nom shall be Acc
-
-ADD:msyn-obj-sgnom-sgacc (&msyn-obj-sgnom-sgacc) TARGET N IF (*-1 VFIN + TV  BARRIER NOT-NPMODADV LINK -1 Nom LINK *-1 BOS BARRIER Acc)(0C N + Sg + Nom)(NOT 0 TITLE LINK 1 Prop);
-COPY:msyn-obj-sgnom-sgacc (Acc &SUGGEST) EXCEPT Nom TARGET (N Sg &msyn-obj-sgnom-sgacc);
-#% Mun juuvâm ain mielkki.
-#$ Mun juuvâm ain mielhi.
-
-ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (*-1 VFIN + TV  BARRIER NOT-NPMODADV LINK -1 Nom)(0C N + Pl + Nom);
-COPY:msyn-obj-plnom-placc (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &msyn-obj-plnom-placc);
-
-ADD:msyn-obj-sgnom-sgacc (&msyn-obj-sgnom-sgacc) TARGET N IF (-1 PrfPrc + TV)(*-2 VFIN BARRIER NOT-NPMODADV LINK -1 Nom LINK *-1 BOS BARRIER Acc)(0C N + Sg + Nom);
-COPY:msyn-obj-sgnom-sgacc (Acc &SUGGEST) EXCEPT Nom TARGET (N Sg &msyn-obj-sgnom-sgacc);
-#% Mun lam ain juunâm mielkki.
-#$ Mun lam ain juuhâm mielhi.
-
-ADD:msyn-obj-sgnom-sgacc (&msyn-obj-sgnom-sgacc) TARGET N IF (1 PrfPrc + TV)(*-1 VFIN BARRIER NOT-NPMODADV LINK -1 Nom)(0C N + Sg + Nom);
-COPY:msyn-obj-sgnom-sgacc (Acc &SUGGEST) EXCEPT Nom TARGET (N Sg &msyn-obj-sgnom-sgacc);
-#% Mun lam ain mielkki juunâm.
-#$ Mun lam ain mielhi juuhâm.
 
 
 #!! Acc shall be Nom
@@ -2428,6 +2409,27 @@ COPY:msyn-top-placc-plnom (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &msyn-top-placc
 #$ Mut tuorâstuvâi ij kavnuu.
 #$ Kähirijd lâi talle kolgâm uážudiđ pävirpitáigijn kiddâ.
 #$ Siämmáámuđusijd teermâid ij uážžum kuohtii kevttiđ.
+
+
+#!! Plain object of TV in Nom shall be Acc
+
+ADD:msyn-obj-sgnom-sgacc (&msyn-obj-sgnom-sgacc) TARGET N IF (*-1 VFIN + TV  BARRIER NOT-NPMODADV LINK -1 Nom LINK *-1 BOS BARRIER Acc)(0C N + Sg + Nom)(NOT 0 TITLE LINK 1 Prop);
+COPY:msyn-obj-sgnom-sgacc (Acc &SUGGEST) EXCEPT Nom TARGET (N Sg &msyn-obj-sgnom-sgacc);
+#% Mun juuvâm ain mielkki.
+#$ Mun juuvâm ain mielhi.
+
+ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (*-1 VFIN + TV  BARRIER NOT-NPMODADV LINK -1 Nom)(0C N + Pl + Nom);
+COPY:msyn-obj-plnom-placc (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &msyn-obj-plnom-placc);
+
+ADD:msyn-obj-sgnom-sgacc (&msyn-obj-sgnom-sgacc) TARGET N IF (-1 PrfPrc + TV)(*-2 VFIN BARRIER NOT-NPMODADV LINK -1 Nom LINK *-1 BOS BARRIER Acc)(0C N + Sg + Nom);
+COPY:msyn-obj-sgnom-sgacc (Acc &SUGGEST) EXCEPT Nom TARGET (N Sg &msyn-obj-sgnom-sgacc);
+#% Mun lam ain juunâm mielkki.
+#$ Mun lam ain juuhâm mielhi.
+
+ADD:msyn-obj-sgnom-sgacc (&msyn-obj-sgnom-sgacc) TARGET N IF (1 PrfPrc + TV)(*-1 VFIN BARRIER NOT-NPMODADV LINK -1 Nom)(0C N + Sg + Nom);
+COPY:msyn-obj-sgnom-sgacc (Acc &SUGGEST) EXCEPT Nom TARGET (N Sg &msyn-obj-sgnom-sgacc);
+#% Mun lam ain mielkki juunâm.
+#$ Mun lam ain mielhi juuhâm.
 
 #!! ### Imperative errors
 
