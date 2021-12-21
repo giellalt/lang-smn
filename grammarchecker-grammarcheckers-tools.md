@@ -1143,6 +1143,15 @@ Predicative
 
 
 
+NP plus Illative
+
+
+
+
+
+
+
+
 
 Confusion rules # dáppe mun lean
 
