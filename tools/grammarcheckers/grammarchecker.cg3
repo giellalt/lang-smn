@@ -824,7 +824,7 @@ LIST COM-V = "algâttiđ" "älgiđ" "arvâlâddâđ" "árvvohuššat" "ávkašuv
 		#Note that "leaikkastallat" has two homonymous variants:
 		#leaikkastallat1 (IV), leaikkastallat2+Com
 
-LIST ILL-V = "aibâšiđ" "älgiđ" "asâiduđ" "pokkiđ" "peessâđ" "čokánistiđ" "čujottiđ" "vaikuttiđ" "teivâđ" "turvâstiđ" "tuuttâđ" "kuullâđ" "kuoskâđ" "hárjániđ" "irgediđ" "irgástallat" "oskođ" "lijkkuđ" "lyettiđ"  "vyelgiđ" "maccâđ" "mieđettiđ" "miettâđ" "njeeijâđ" "uápásmuđ" "enittiđ" "oskođ" "riemmâđ" "valmiđ" "uásálistiđ" "suttâđ" "vaikuttiđ" "västidiđ" "vyelgiđ" ;
+LIST ILL-V = "aibâšiđ" "älgiđ" "asâiduđ" "pokkiđ" "peessâđ" "čokánistiđ" "čujottiđ" "vaikuttiđ" "teivâđ" "turvâstiđ" "tuuttâđ" "kuullâđ" "kuoskâđ" "hárjániđ" "irgediđ" "irgástallat" "oskođ" "lijkkuđ" "lyettiđ"  "vyelgiđ" "maccâđ" "mieđettiđ" "miettâđ" "njeeijâđ" "uápásmuđ" "enittiđ" "oskođ" "riemmâđ" "valmiđ" "uásálistiđ" "suttâđ" "vaikuttiđ" "västidiđ" "vyelgiđ" "vaiguttiđ" ;
 
  		
 
@@ -1243,6 +1243,8 @@ LIST ESS-ADVL-N = "arvedálki" "arvi" "argâ" "poškâ" "äijih" ("adj." N) ("ku
 # These nouns/adjectives in essiv can get @ADVL:
 # LIST ESS-PROB-ADVL-N = ("adj." N) "puáris" ("nuorâ" N) ;
  
+# These nouns like their complements in the illative
+LIST N-WITH-ILL = "tárbu" "aggâ" "suijâ" ;
 
 #!! * Time sets
 # - - - - -
@@ -2024,6 +2026,7 @@ LIST &msyn-ness-acc-nom = &msyn-ness-acc-nom ; # Muu ličij > Mun ...
 LIST &msyn-ness-ill-nom = &msyn-ness-ill-nom ; # Munnui ličij > Mun ...
 LIST &msyn-pred-acc-nom =  &msyn-pred-acc-nom ; # Taah láá aašijd.
 LIST &msyn-v-sg1-prfprc = &msyn-v-sg1-prfprc ;
+LIST &msyn-npcompl-ess-ill = &msyn-npcompl-ess-ill ;
 LIST &real-pisso-pissood = &real-pisso-pissood ;
 
 MAPPING-PREFIX = & ;
@@ -2266,6 +2269,23 @@ COPY:msyn-adj-attr-pred (Sg Nom &SUGGEST) EXCEPT Attr TARGET (A &msyn-adj-attr-p
 #$ Viste lii mielâttes tievâ.
 
 #ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (*-1 COPULAS BARRIER V OR GRAMCHK-S-BOUNDARY LINK *-1 Nom) (NEGATE 1 N)(NEGATE 1 CC OR COMMA LINK 1 A LINK 1 N)(NEGATE 1 (A Attr) OR ? LINK *1 N BARRIER NPNH)(NEGATE 1 (A Sg Nom) OR (Pron Pers))(NEGATE 0 ("visot") OR ("buot") LINK 1 Pron LINK *1 N)(NEGATE 0 PRED-ATTR-ADJ)(NEGATE 1 COMMA OR CC LINK 1 (A Attr) OR PRED-ATTR-ADJ)(NOT 0 (A Sg Nom))(NEGATE 1 COMMA OR ("-") LINK 1 ("muhto") LINK *1 (A Attr) BARRIER NPNHA)(NEGATE 0 Superl LINK 1 CC LINK 1 ("eanet" Superl) OR ("eanemus") LINK 1 A LINK 1 N)(NEGATE 1 (Num Attr) LINK 1 N)(NEGATE 0 ("eanet") LINK 1 PrfPrc);
+
+
+#!! NP plus Illative
+
+ADD:msyn-npcompl-ess-ill (&msyn-npcompl-ess-ill) TARGET N IF (-1 N-WITH-ILL)(0 Ess);
+COPY:msyn-npcompl-ess-ill (Sg Ill &SUGGEST) EXCEPT Ess TARGET (N &msyn-npcompl-ess-ill);
+
+#% Must lii tárbu toorjân.  
+#$ Must lii tárbu torjui. 
+
+ADD:msyn-npcompl-ess-ill (&msyn-npcompl-ess-ill) TARGET N + Ess IF (1 Loc)(2 ("leđe"))(3 N-WITH-ILL);
+COPY:msyn-npcompl-ess-ill (Sg Ill &SUGGEST) EXCEPT Ess TARGET (N &msyn-npcompl-ess-ill);
+
+
+#% Maggaar toorjân sist ličij tárbu. 
+#$ Maggaar torjui sist ličij tárbu. 
+
 
 
 
