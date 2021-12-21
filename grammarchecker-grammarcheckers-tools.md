@@ -542,7 +542,6 @@ STRICT-TRANS-V is the set for verbs which don't let a GenAcc be a modifier of an
 
 
 
-
 ### Valency sets
 
 
@@ -1181,17 +1180,19 @@ Sg1 for PrfPrc
 
 
 
-Plain object of TV in Nom shall be Acc
-
-
-
-
 
 
 Acc shall be Nom
 
 
 Acc shall be Ill
+
+
+
+
+
+
+Plain object of TV in Nom shall be Acc
 
 
 
