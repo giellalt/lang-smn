@@ -647,7 +647,7 @@ LIST OLLU = "ollu" "eenâs" ;
 # ------------------------------------
 SET LEX-ADV = Adv - (AA) ;
 
-SET NOT-ADV-DE            = WORD - Adv ;
+SET NOT-ADV-DE         = WORD - Adv ;
 SET NOT-ADV            = NOT-ADV-DE OR CLB ;
 SET NOT-ADV-N          = NOT-ADV - N;
 SET NOT-ADV-PCLE       = NOT-ADV - Pcle ;
@@ -2255,7 +2255,7 @@ COPY:msyn-predagr-pl3-sg3 (Sg3 &SUGGEST) EXCEPT Pl3 TARGET ("ij" V Neg Ind &msyn
 
 #!! Predicative
 
-ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred)  TARGET (A) IF (0C Attr) (NOT 0 (Arab Ord) OR (A Sg Nom))(NOT 1 N OR A OR PrfPrc)(1 EOS) ;
+ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred)  TARGET (A) IF (0C Attr) (NOT 0 (Arab Ord) OR (A Sg Nom))(NOT 1 N OR A OR PrfPrc)(1 EOS)(NOT 1 ("...")) ;
 COPY:msyn-adj-attr-pred (Sg Nom &SUGGEST) EXCEPT (Attr) TARGET ( A &msyn-adj-attr-pred);
 
     #% Tot lii hirmâd.
@@ -2388,12 +2388,12 @@ ADD:msyn-top-placc-plnom (&msyn-top-placc-plnom) TARGET N IF (0C Pl + Acc - Sem/
 
 
 #!! Acc shall be Ill
-ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF (*-1 ILL-V BARRIER NOT-NPMODADV LINK -1 Nom)(0 Acc)(NOT 0 Ill);
+ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF (*-1 ILL-V BARRIER NOT-NPMODADV OR (":") LINK -1 Nom)(0 Acc)(NOT 0 Ill OR PxSg3);
 COPY:msyn-obj-acc-ill (Ill &SUGGEST) EXCEPT Acc TARGET (N &msyn-obj-acc-ill) ;
 #%: Ideologia kuáská kielâid.
 #$: Ideologia kuáská kieláid.
 
-ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF (*-1 ILL-V BARRIER NOT-NPMODADV LINK -1 Nom)(0 Gen)(NOT 0 Ill)(1 EOS OR CC)(NOT *1 Ill);
+ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF (*-1 ILL-V BARRIER NOT-NPMODADV OR (":") LINK -1 Nom)(0 Gen)(NOT 0 Ill OR Adv)(1 EOS OR CC)(NOT *1 Ill);
 COPY:msyn-obj-acc-ill (Ill &SUGGEST) EXCEPT Gen TARGET (N &msyn-obj-acc-ill) ;
 
 # Inarinsaamenkielisiä nimiä käytetään vähän
@@ -2418,7 +2418,7 @@ COPY:msyn-obj-sgnom-sgacc (Acc &SUGGEST) EXCEPT Nom TARGET (N Sg &msyn-obj-sgnom
 #% Mun juuvâm ain mielkki.
 #$ Mun juuvâm ain mielhi.
 
-ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (*-1 VFIN + TV  BARRIER NOT-NPMODADV LINK -1 Nom)(0C N + Pl + Nom);
+ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (*-1 VFIN + TV  BARRIER NOT-NPMODADV LINK -1 Nom)(0C N + Pl + Nom)(NOT *1 V + Pl3 BARRIER NOT-ADV);
 COPY:msyn-obj-plnom-placc (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &msyn-obj-plnom-placc);
 
 ADD:msyn-obj-sgnom-sgacc (&msyn-obj-sgnom-sgacc) TARGET N IF (-1 PrfPrc + TV)(*-2 VFIN BARRIER NOT-NPMODADV LINK -1 Nom LINK *-1 BOS BARRIER Acc)(0C N + Sg + Nom);
