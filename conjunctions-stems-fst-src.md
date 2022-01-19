@@ -3,8 +3,8 @@
 
 
 
- * **LEXICON Conjunction  **
- * ja Cc ;          
+* **LEXICON Conjunction  **
+* ja Cc ;          
 
 
 * * *

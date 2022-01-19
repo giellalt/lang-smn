@@ -6,10 +6,10 @@
 
 
 
- * **LEXICON Particle  **
+* **LEXICON Particle  **
 
- ges pcle ; 
- kes pcle ; 
+ges pcle ; 
+kes pcle ; 
 
 
 

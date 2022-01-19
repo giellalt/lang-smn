@@ -2,22 +2,22 @@
 # Inari Saami adverbs
 
 ## The morphology
- * **LEXICON ADV ** the Adv tag
+* **LEXICON ADV ** the Adv tag
 
- * **LEXICON PxADV  ** the Adv tag and Ill Px
-
-
- * **LEXICON NAAL ** 
+* **LEXICON PxADV  ** the Adv tag and Ill Px
 
 
- * **LEXICON BEL-ADV ** 
+* **LEXICON NAAL ** 
 
- * **LEXICON PEL-ADV ** 
+
+* **LEXICON BEL-ADV ** 
+
+* **LEXICON PEL-ADV ** 
 
 
 ## The stems
 
- * **LEXICON Adverb **
+* **LEXICON Adverb **
 
 
 

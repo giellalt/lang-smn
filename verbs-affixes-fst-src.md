@@ -28,10 +28,10 @@ whereas for the verbs, the stem vowel is added here in the affixes file.
 
 ## Auxiliaries
 
- **LEXICON NEG**  = lists all forms of the negation verb
+**LEXICON NEG**  = lists all forms of the negation verb
 
 
- **LEXICON LEDE**  = lists all forms of the copula
+**LEXICON LEDE**  = lists all forms of the copula
 
 
 
@@ -495,7 +495,7 @@ as 2SYLL_ID, but only 3 person
 
 
 
- ** **LEXICON VINFINITES_EELLID !**
+** **LEXICON VINFINITES_EELLID !**
 
 
 
@@ -974,7 +974,7 @@ as 2SYLL_ID, but only 3 person
 - C_MERIDUD (Sg3 uvvoo)
 
 
- * **LEXICON C_TABAHTUD** Sg3 -uvá
+* **LEXICON C_TABAHTUD** Sg3 -uvá
 
 
 
@@ -986,7 +986,7 @@ as 2SYLL_ID, but only 3 person
 
 
 
- * **LEXICON C_MERIDUD** Sg3 -uvvoo
+* **LEXICON C_MERIDUD** Sg3 -uvvoo
 
 
 
@@ -1073,16 +1073,16 @@ Here come the case variation for VAbess, and flag for VGen, they are invariant a
 
 ## Case lexica
 
- * **LEXICON VABESS** to handle Abessive variation, hánnáá, hennáá, hinnáá.
- * **LEXICON VGEN**  flag for VGen
+* **LEXICON VABESS** to handle Abessive variation, hánnáá, hennáá, hinnáá.
+* **LEXICON VGEN**  flag for VGen
 
 ## Derivation lexica
 These point to different nominal paradigms.
 
- * **LEXICON DER_MAS** 
- * **LEXICON IJJE** 
- * **LEXICON IJJE_PRSPRC** 
- * **LEXICON NOMACT**  for -náál suffixation.
+* **LEXICON DER_MAS** 
+* **LEXICON IJJE** 
+* **LEXICON IJJE_PRSPRC** 
+* **LEXICON NOMACT**  for -náál suffixation.
 
 
 ## Flag section
@@ -1090,19 +1090,19 @@ These point to different nominal paradigms.
 The lexica in this section add the *@C.NeedNoun@* flag, thereby allowing them to 
 become the second part of N + (V > N) compounds.
 
- **LEXICON FLAG_3HUKSIM** should not be disallowed by ENDLEX @D.NeedNoun.ON@
+**LEXICON FLAG_3HUKSIM** should not be disallowed by ENDLEX @D.NeedNoun.ON@
 
- **LEXICON FLAG_3KIEDAVUSSAM** should not be disallowed by ENDLEX @D.NeedNoun.ON@
+**LEXICON FLAG_3KIEDAVUSSAM** should not be disallowed by ENDLEX @D.NeedNoun.ON@
 
- **LEXICON FLAG_CTAHHEE** should not be disallowed by ENDLEX @D.NeedNoun.ON@
-
-
+**LEXICON FLAG_CTAHHEE** should not be disallowed by ENDLEX @D.NeedNoun.ON@
 
 
 
 
 
- **LEXICON FLAG_K** should not be disallowed by ENDLEX @D.NeedNoun.ON@
+
+
+**LEXICON FLAG_K** should not be disallowed by ENDLEX @D.NeedNoun.ON@
 
 
 

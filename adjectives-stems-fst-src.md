@@ -2,16 +2,16 @@
 # Inari Saami adjectives
 
 
- * **LEXICON LAST_CMP_ADJ ** cmp last part
+* **LEXICON LAST_CMP_ADJ ** cmp last part
 
 
 
- * **LEXICON AdjectiveRoot ** is the list of adjectives
+* **LEXICON AdjectiveRoot ** is the list of adjectives
 
 
 
- * **aalmuglâš:aalmugl ANOLASJ "kansallinen" ; ** 
- * **boreaallâš:boreaall ANOLASJ "boreaalinen" ; ** etc.
+* **aalmuglâš:aalmugl ANOLASJ "kansallinen" ; ** 
+* **boreaallâš:boreaall ANOLASJ "boreaalinen" ; ** etc.
 
 
 Lyhentynyt attr.

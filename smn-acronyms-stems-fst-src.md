@@ -8,7 +8,7 @@ small-capital letter combinations.
 
 ## The main part
 
- * **LEXICON Acronym-smn   ** divides the acros in the 3 types just mentioned.
+* **LEXICON Acronym-smn   ** divides the acros in the 3 types just mentioned.
 
 
 

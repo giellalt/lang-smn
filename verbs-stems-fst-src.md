@@ -206,8 +206,8 @@
 
 ## Auxiliaries
 
- * ij+V+IV+Neg: NEG ; 
- * leđe+V+IV: LEDE ; 
+* ij+V+IV+Neg: NEG ; 
+* leđe+V+IV: LEDE ; 
 
 
 Main verbs

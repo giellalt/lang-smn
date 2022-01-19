@@ -1142,15 +1142,6 @@ Predicative
 
 
 
-NP plus Illative
-
-
-
-
-
-
-
-
 
 Confusion rules # dáppe mun lean
 
@@ -1185,7 +1176,10 @@ Sg1 for PrfPrc
 Acc shall be Nom
 
 
+
 Acc shall be Ill
+
+
 
 
 
@@ -1223,7 +1217,27 @@ Plain object of TV in Nom shall be Acc
 
 
 
-## Noun phrase agreement
+## Noun phrase internal phenomena NP 
+
+
+### Noun phrase complements
+
+N + Ill
+
+
+
+
+
+
+
+
+
+### Quantor phrases
+
+
+
+
+### Noun phrase agreement NP 
 
 
 Det + N agreement

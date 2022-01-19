@@ -2,39 +2,39 @@
 # Pronouns for Inari Saami
 
 
- * **LEXICON Pronoun **
+* **LEXICON Pronoun **
 
 
 ## Personal pronouns
 
- * **LEXICON Personal **
+* **LEXICON Personal **
 
 
- * **LEXICON perspronsg ** with contlex K and not G (munge)
+* **LEXICON perspronsg ** with contlex K and not G (munge)
 
- * **LEXICON persprondu **
+* **LEXICON persprondu **
 
- * **LEXICON perspronpl **
+* **LEXICON perspronpl **
 
 
 
 Demonstrative pronouns
 
- * **LEXICON Demonstrative **
+* **LEXICON Demonstrative **
 
 
- * **LEXICON TIET **
+* **LEXICON TIET **
 
- * **LEXICON TOT **
+* **LEXICON TOT **
 
- * **LEXICON TUOT **
+* **LEXICON TUOT **
 
 
- * **LEXICON TI-TUO **
+* **LEXICON TI-TUO **
 
- * **LEXICON TA **
+* **LEXICON TA **
 
- * **LEXICON TYE **
+* **LEXICON TYE **
 
 
 
@@ -45,7 +45,7 @@ Demonstrative pronouns
 
 ## Reflexive pronouns
 
- * **LEXICON Reflexive **
+* **LEXICON Reflexive **
 
 
 
@@ -61,7 +61,7 @@ Demonstrative pronouns
 
 ## Reciprocal pronouns
 
- * **LEXICON Reciprocal **
+* **LEXICON Reciprocal **
 
 
 
@@ -77,20 +77,20 @@ Demonstrative pronouns
 
 
 
- * **LEXICON miiInterRel **
+* **LEXICON miiInterRel **
 
 
- * **LEXICON kiiInterRel **
+* **LEXICON kiiInterRel **
 
 
 
- * **LEXICON MK ** common for mii and kii
+* **LEXICON MK ** common for mii and kii
 
- * **LEXICON MK-long **
+* **LEXICON MK-long **
 
- * **LEXICON MK-short **
+* **LEXICON MK-short **
 
- * **LEXICON MK-low **
+* **LEXICON MK-low **
 
 
 
@@ -129,7 +129,7 @@ Demonstrative pronouns
 
 
 
- LEXICON SIAMMAS_PRON  without WG
+LEXICON SIAMMAS_PRON  without WG
 
 
 

@@ -2,16 +2,16 @@
 # Propernoun lexicon, Inari Sámi specific names 
 
 
- **LEXICON Prefix-Proper **
+**LEXICON Prefix-Proper **
 
 
 First part of complex names
 
- * Alemus FirstTag ;     
- * Cuávis FirstTag ;     
+* Alemus FirstTag ;     
+* Cuávis FirstTag ;     
 
 
- **LEXICON ProperNoun-smn **
+**LEXICON ProperNoun-smn **
 Ordinary names
 
 
