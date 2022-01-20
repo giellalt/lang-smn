@@ -1,7 +1,25 @@
 
 I N A R I   S A A M I  G R A M M A R   C H E C K E R
+================================================================== 
 
 
+Development setup:   
+---------------------- 
+```
+cd $GTLANGS/lang-smn
+./autogen.sh
+./configure --with-hfst --enable-syntax --enable-grammarchecker --enable-tokenisers --enable-alignment --enable-reversed-intersect
+make
+cd tools/grammarcheckers
+make dev
+```
+
+Then edit/test as:   
+```
+echo "Sun ij puátá." | sh modes/smngram.mode  # from the terminal
+Hint: There are very many modes in the modes folder, look at them.
+emacs grammarchecker.cg3  # and C-c C-i / C-c C-c if you use emacs and have cg-mode installed
+```
 
 
 
@@ -30,8 +48,10 @@ on the basis of the tags listed here, those set names are not visible in the out
 
 
 
+### Tags declared as single-membered LISTs 
 
-### Beginning and end of sentence
+
+#### Beginning and end of sentence
 BOS 
 EOS
 
@@ -64,6 +84,7 @@ PUNCT
 
 COMMA
 ¶
+?
 
 
 
@@ -181,6 +202,8 @@ Der/Aadv
 Err/Orth
 Err/Orth-spes
 
+* @NO CODE@
+* @NO CODE@
 
 
 ### Semantic tags
@@ -202,6 +225,7 @@ Der/ID
 Sem/Lang
 Sem/Mal
 Sem/Measr
+Sem/Measr_Time
 Sem/Money
 Sem/Obj
 Sem/Obj-el
@@ -217,8 +241,7 @@ Sem/Txt
 Der/Year
 
 HAB-ACTOR
-HAB-ACTOR-NOT-HUMAN
-
+HAB-ACTOR-NOT-HUMAN make this like the sme one 
 
 PROP-ATTR
 PROP-SUR
@@ -252,6 +275,7 @@ TIME-N
 @ADVL
 @HAB>
 @<HAB
+@HAB
 @>N
 @Interj
 @N<
@@ -301,9 +325,11 @@ SYN-V
 
 
 
+SETS
+----
 
 
-## Sets containing sets of lists and tags
+### Sets containing sets of lists and tags
 
 This part of the file lists a large number of sets based partly upon the tags defined above, and 
 partly upon lexemes drawn from the lexicon.
@@ -1050,20 +1076,21 @@ ALLSYNTAG
 
 ### Grammarchecker sets
 
-naming: &errortype-errorsubtype-is-shouldbe
-naming: &errortype-errorsubtype-comment
+name convention for error tags: ´´&errortype-errorsubtype-is-shouldbe´´
 
 
 
 
 
-Verb agreement rules
+RULE SECTION
+============
 
-Sg3/Pl3 errors
 
 
 
+# Verb agreement rules
 
+## Sg3/Pl3 errors
 
 
 
@@ -1074,6 +1101,7 @@ Sg3/Pl3 errors
 
 
 
+## Duaali
 
 
 
@@ -1081,6 +1109,7 @@ Sg3/Pl3 errors
 
 
 
+## Pluraali
 
 
 
@@ -1089,78 +1118,90 @@ Sg3/Pl3 errors
 
 
 
-Suomen nessesiivirakenne
 
 
 
 
+## Suomen nessesiivirakenne
 
 
 
 
 
 
-Inf should be Actio Essive
 
 
 
 
+## Inf should be Actio Essive
 
-Existential sentences -- same as next?
 
 
-Verb in plural 
 
 
 
+## Existential sentences -- same as next?
 
+msyn-ext-sg3-pl3
 
+msyn-extv-sg3-pl3
+Iäruh omâstemráhtusist: mieđetteijee já kieldee häämi
 
+### Verb in plural 
 
 
 
 
-### Postpositions
-
-
-
-
-
-### Predicative
-
-
-
-## Agreement error with predicative
-
-
-
-Predicative
-
-
-
-
-
-
-
-
-Confusion rules # dáppe mun lean
-
-Sg1 for PrfPrc
-
-
-
-### Plural objects
-
-
-
-
-
+msyn-extneg-sg3-pl3
 
 
 
 
 
 ### Existential sentences and habitives
+
+
+
+
+
+
+
+
+## Postpositions
+
+msyn-po-placc-plgen
+
+
+
+
+## Predicative
+
+msyn-pred-acc-nom
+
+### Agreement error with predicative
+
+msyn-predagr-pl3-sg3
+
+
+msyn-adj-attr-pred
+
+
+
+
+
+
+
+## Confusion rules
+
+Sg1 for PrfPrc
+
+
+
+
+## Plural objects
+
+
+
 
 
 
@@ -1182,11 +1223,12 @@ Acc shall be Ill
 
 
 
+### Inarinsaamenkielisiä nimiä käytetään vähän
 
 
 
 
-Plain object of TV in Nom shall be Acc
+### Plain object of TV in Nom shall be Acc
 
 
 
@@ -1203,6 +1245,7 @@ Plain object of TV in Nom shall be Acc
 
 
 
+### Accusative subjects in passive 
 
 
 
@@ -1218,14 +1261,14 @@ Plain object of TV in Nom shall be Acc
 
 
 
-## Noun phrase internal phenomena NP 
+## Noun phrase internal phenomena 
 
 
 ### Noun phrase complements
 
 N + Ill
 
-
+msyn-ncompl-ess-sgill
 
 
 
@@ -1255,23 +1298,29 @@ mii + nominative should be mii + acc
 
 
 
-Adjectives in attributive position
+### Adjectives in attributive position
 
 
 
-Numeral phrases
+## Numeral phrases
 
+msyn-num-par-gen
 The rule is: 2-6 + gensg, 7- + par
 
 
+msyn-num-gen-par
 
 
 
 
 
-Lexical rules
+## Lexical rules
+
+real-pisso-pissood
 
 
+
+The gramamrchecker file ends here.
 
 * * *
 <small>This (part of) documentation was generated from [../tools/grammarcheckers/grammarchecker.cg3](http://github.com/giellalt/lang-smn/blob/main/../tools/grammarcheckers/grammarchecker.cg3)</small>
