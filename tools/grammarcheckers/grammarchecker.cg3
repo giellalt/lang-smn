@@ -2029,6 +2029,7 @@ LIST &msyn-pred-acc-nom =  &msyn-pred-acc-nom ; # Taah láá aašijd.
 LIST &msyn-quant-gen-nom =  &msyn-quant-gen-nom ; # Taah láá aašijd.
 LIST &msyn-predagr-pl3-sg3 = &msyn-predagr-pl3-sg3 ;
 LIST &msyn-top-placc-plnom = &msyn-top-placc-plnom ;
+LIST &msyn-v-actio-sg1 = &msyn-v-actio-sg1 ;
 LIST &msyn-v-du3-conneg = &msyn-v-du3-conneg ;
 LIST &msyn-v-prfprc-sg1 = &msyn-v-prfprc-sg1 ;
 LIST &msyn-v-sg1-prfprc = &msyn-v-sg1-prfprc ;
@@ -2090,6 +2091,15 @@ COPY:msyn-agr-other-sg1 (Ind Prt Sg1 &SUGGEST) EXCEPT (Actio Num) TARGET (V  &ms
 ADD:msyn-agr-other-sg1 (&msyn-agr-other-sg1) TARGET V IF (NOT -2 Sup OR Sg1)(-1C Pron + Sg1 + Nom)(-1 BOS OR PUNCT)(0 V)(NOT 0 Sg1);
 COPY:msyn-agr-other-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prs &msyn-agr-other-sg1);
 
+
+
+#!! msyn-v-actio-sg1
+ADD:msyn-v-actio-sg1 (&msyn-v-actio-sg1) TARGET V IF (*-1C Pron + Sg1 + Nom)(0 V)(NOT 0 Sg1);
+COPY:msyn-v-actio-sg1 (Ind Prs Sg1 &SUGGEST) EXCEPT (Actio Nom) TARGET (V Actio &msyn-v-actio-sg1);
+
+
+#!! ### Sg2
+
 #!! nmsyn-agr-other-sg2
 ADD:msyn-agr-other-sg2 (&msyn-agr-other-sg2) TARGET V IF (NOT -2 Sup OR Sg2)(NOT *-2 Sg2 BARRIER SV-BOUNDARY)(-1C Pron + Sg2 + Nom)(0 (V Ind Prs))(NOT 0 Sg2);
 COPY:msyn-agr-other-sg2 (Sg2 &SUGGEST) EXCEPT VNOTSG2 TARGET (V Ind Prs &msyn-agr-other-sg2);
@@ -2143,6 +2153,7 @@ COPY:msyn-agr-other-sg3 (Pl3 &SUGGEST) EXCEPT VNOTPL3 TARGET (V Ind Prt &msyn-ag
 #fi Ne tulee.
 #% Toh puátá.
 #$ Toh puátih.
+
 
 
 #!! ## Suomen nessesiivirakenne
