@@ -1244,7 +1244,7 @@ LIST ESS-ADVL-N = "arvedálki" "arvi" "argâ" "poškâ" "äijih" ("adj." N) ("ku
 # LIST ESS-PROB-ADVL-N = ("adj." N) "puáris" ("nuorâ" N) ;
  
 # These nouns like their complements in the illative
-LIST N-WITH-ILL = "tárbu" "aggâ" "suijâ" ;
+LIST N-WITH-ILL = "tárbu" "aggâ" "suijâ" "vaikuttâs" ;
 
 #!! * Time sets
 # - - - - -
@@ -1987,6 +1987,7 @@ SET CCCOMMA = CC OR COMMA ;
 #!! naming: &errortype-errorsubtype-comment
 #LIST &msyn-vchain-prfprc = &msyn-vchain-prfprc ;
 LIST &msyn-adj-attr-pred = &msyn-adj-attr-pred ;
+LIST &msyn-adj-gen-nom = &msyn-adj-gen-nom ;
 LIST &msyn-agr = &msyn-agr ;
 LIST &msyn-agr-other-du1 = &msyn-agr-other-du1 ;
 LIST &msyn-agr-other-du2 = &msyn-agr-other-du2 ;
@@ -2009,6 +2010,7 @@ LIST &msyn-mii-sgnom-placc = &msyn-mii-sgnom-placc ;
 LIST &msyn-ness-acc-nom = &msyn-ness-acc-nom ; # Muu ličij > Mun ...
 LIST &msyn-ness-ill-nom = &msyn-ness-ill-nom ; # Munnui ličij > Mun ...
 LIST &msyn-ncompl-ess-sgill = &msyn-ncompl-ess-sgill ;
+LIST &msyn-ncompl-placc-plill = &msyn-ncompl-placc-plill ;
 LIST &msyn-num-acc-par = &msyn-num-acc-par ;
 LIST &msyn-num-gen-par = &msyn-num-gen-par ;
 LIST &msyn-num-par-gen = &msyn-num-par-gen ;
@@ -2372,9 +2374,10 @@ ADD:msyn-top-placc-plnom (&msyn-top-placc-plnom) TARGET N IF (0C Pl + Acc - Sem/
 #$ Anarâškielâliih noomah kiävttojeh uccáá.
 
 
+#% Motomeh suomâkielâ vaikuttâsah tábáhtusâid láá tuhhiittum anarâškielân.
 
 #!! Acc shall be Ill
-ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF (*-1 ILL-V);# BARRIER NOT-NPMODADV OR (":") LINK -1 Nom)(0 Acc)(NOT 0 Ill OR PxSg3);
+ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF (*-1 ILL-V BARRIER NOT-NPMODADV OR (":") LINK -1 Nom)(0 Acc)(NOT 0 Ill OR PxSg3);
 COPY:msyn-obj-acc-ill (Ill &SUGGEST) EXCEPT Acc TARGET (N Acc &msyn-obj-acc-ill) ;
 #%: Ideologia kuáská kielâid.
 #$: Ideologia kuáská kieláid.
@@ -2447,9 +2450,9 @@ COPY:msyn-imp-nom-acc (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &msyn-imp-nom-acc);
 #!!Accusative subjects in passive 
 
 # b) Suomâkielâ partitiiv passiivráhtusijn; sämikielâst passiiv ohtâvuođâst lii nominatiiv já verbâ maaŋgâlovvoost.
-MAP:msyn-pass-accsubj-nomsubj (&msyn-pass-accsubj-nomsubj) TARGET N IF (0C Acc + Pl)(1 Der/Pass + Pl3 OR LEXICALISED-PASS-V + Pl3)(NOT 1 PrfPrc OR TV);
+MAP:msyn-pass-accsubj-nomsubj (&msyn-pass-accsubj-nomsubj) TARGET N IF (NOT -1 N + Nom)(0C Acc + Pl)(1 Der/Pass + Pl3 OR LEXICALISED-PASS-V + Pl3)(NOT 1 PrfPrc OR TV);
 
-MAP:msyn-pass-accsubj-nomsubj (&msyn-pass-accsubj-nomsubj) TARGET N IF (0C Acc + Pl)(1 COMMA LINK 1 Rel LINK *1 COMMA LINK 1 Der/Pass + Pl3 OR LEXICALISED-PASS-V + Pl3 LINK NOT 0 PrfPrc OR TV);
+MAP:msyn-pass-accsubj-nomsubj (&msyn-pass-accsubj-nomsubj) TARGET N IF (NOT -1 N + Nom)(0C Acc + Pl)(1 COMMA LINK 1 Rel LINK *1 COMMA LINK 1 Der/Pass + Pl3 OR LEXICALISED-PASS-V + Pl3 LINK NOT 0 PrfPrc OR TV);
 COPY:msyn-pass-accsubj-nomsubj (Nom &SUGGEST) EXCEPT (Acc &msyn-pass-accsubj-nomsubj) TARGET (N Pl &msyn-pass-accsubj-nomsubj);
 
 
@@ -2460,11 +2463,15 @@ COPY:msyn-pass-accsubj-nomsubj (Nom &SUGGEST) EXCEPT (Acc &msyn-pass-accsubj-nom
 #% Sämikielâlijd nomâttâsâid, moh láá ovdil kevttum, kiävttojeh tääl uccáá.
 
 
-MAP:msyn-pass-accsubj-nomsubj (&msyn-pass-accsubj-nomsubj) TARGET N IF (0C Acc + Pl)(1 ("leđe") + Pl3 OR Sg3) (2 PrfPrc + Der/Pass OR LEXICALISED-PASS-V);
+MAP:msyn-pass-accsubj-nomsubj (&msyn-pass-accsubj-nomsubj) TARGET N IF (NOT -1 N + Nom)(0C Acc + Pl)(1 ("leđe") + Pl3 OR Sg3) (2 PrfPrc + Der/Pass OR LEXICALISED-PASS-V);
 COPY:msyn-pass-accsubj-nomsubj (Nom &SUGGEST) EXCEPT (Acc &msyn-pass-accsubj-nomsubj) TARGET (N Pl &msyn-pass-accsubj-nomsubj);
 
 #% Tävirijd láppojii ääitist.
 #$ Tävireh láppojii ääitist.
+
+#% Vaikuttâsah tävirijd láppojii ääitist.
+#% Vaikuttâsah tävireh láppojii ääitist.
+#$ Vaikuttâsah täviráid láppojii ääitist.
 
 #% Tävirijd láá lappum ääitist.
 #$ Tävireh láá lappum ääitist. 
@@ -2497,11 +2504,16 @@ COPY:msyn-ncompl-ess-sgill (Sg Ill &SUGGEST) EXCEPT Ess TARGET (N &msyn-ncompl-e
 #$ Must lii tárbu torjui. 
 
 ADD:msyn-ncompl-ess-sgill (&msyn-ncompl-ess-sgill) TARGET N + Ess IF (1 Loc)(2 ("leđe"))(3 N-WITH-ILL);
-COPY:msyn-ncompl-ess-sgill (Sg Ill &SUGGEST) EXCEPT Ess TARGET (N &msyn-ncompl-ess-sgill);
-
+COPY:msyn-ncompl-ess-sgill (Sg Ill &SUGGEST) EXCEPT Ess TARGET (N Ill &msyn-ncompl-ess-sgill);
 
 #% Maggaar toorjân sist ličij tárbu. 
 #$ Maggaar torjui sist ličij tárbu. 
+
+ADD:msyn-ncompl-placc-plill (&msyn-ncompl-placc-plill) TARGET N + Pl + Acc IF (-1 N-WITH-ILL);
+COPY:msyn-ncompl-placc-plill (Ill &SUGGEST) EXCEPT Acc TARGET (N Pl Acc &msyn-ncompl-placc-plill);
+
+#% Motomeh suomâkielâ vaikuttâsah tábáhtusâid láá tuhhiittum anarâškielân.
+#$ Motomeh suomâkielâ vaikuttâsah tábáhtussáid láá tuhhiittum anarâškielân.
 
 
 
@@ -2536,6 +2548,12 @@ COPY:msyn-mii-sgnom-placc (Pl Acc &SUGGEST) EXCEPT (Sg Nom) TARGET ( N &msyn-mii
 
 ADD:msyn-mii-sgnom-placc (&msyn-mii-sgnom-placc) TARGET N IF (-2 BOS)(-1 ("kii"))(0C (N Sg Nom))(1 (N Nom) OR (Pron Nom))(*2 LEDE);
 COPY:msyn-mii-sgnom-placc (Pl Acc &SUGGEST) EXCEPT (Sg Nom) TARGET ( N &msyn-mii-sgnom-placc);
+
+
+#!! Adjectives in attributive position
+
+ADD:msyn-adj-gen-nom (&msyn-adj-gen-nom) TARGET A IF (0 A + Gen)(1C N + Nom);
+COPY:msyn-adj-gen-nom (Nom &SUGGEST) EXCEPT Gen TARGET (A Gen &msyn-adj-gen-nom);
 
 
 #!! Numeral phrases
