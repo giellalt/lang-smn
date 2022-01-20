@@ -17742,8 +17742,8 @@ Der/Aadv
 Err/Orth
 Err/Orth-spes
 
-* @NO CODE@
-* @NO CODE@
+- LIST DER-A-ADV = (Der/lasj Der/AAdv Adv) ; #
+- SET NOT-DER-A-ADV = Adv - DER-A-ADV ; #
 
 
 ### Semantic tags
@@ -17780,12 +17780,13 @@ Sem/Time
 Sem/Txt
 Der/Year
 
-HAB-ACTOR
-HAB-ACTOR-NOT-HUMAN make this like the sme one 
+
+### Names
 
 PROP-ATTR
 PROP-SUR
 
+### Time sets
 TIME-N-SET
 NOT-TIME
 TIME-N
@@ -17869,7 +17870,7 @@ SETS
 ----
 
 
-### Sets containing sets of lists and tags
+Sets containing sets of lists and tags
 
 This part of the file lists a large number of sets based partly upon the tags defined above, and 
 partly upon lexemes drawn from the lexicon.
@@ -17877,49 +17878,44 @@ See the sourcefile itself to inspect the sets, what follows here is an overview 
 
 
 
-### Sets for Single-word sets
+### Sets for Single-word entities
 
-go, and the set INITIAL for initial letters 
-go
-INITIAL
+The set **go** for *ko*, , and the set INITIAL for initial letters 
+
 
 
 ### Sets for word or not
 
-WORD
-REAL-WORD
-REAL-WORD-NOT-ABBR
-WORD-NOT-de
-NOT-COMMA
+- WORD =  any word
+- REAL-WORD-NOT-ABBR
+- WORD-NOT-de
+- NOT-COMMA
+Note! We also have CLB_NOT-COMMA
 
 
 ### Derivational affixes
 
-DER-V
+- DER-V
+- DER-N
+- DER-A1
+- DER-A
+- A-V
+- A-NOT-V
 
-DER-N
-
-DER-A1
-
-DER-A
-
-A-V
-
-A-NOT-V
 
 ### Case sets
 
-ADLVCASE
+- LIST ACCILL = Acc Ill ; #
+- LIST ADVLCASE = Ill Loc Com Ess ;  #
 
 
 
-CASE-HALFAGREEMENT
-CASE-AGREEMENT
-CASE
-
-NOT-NOM
-NOT-GEN
-NOT-ACC
+- LIST CASE-HALFAGREEMENT = Ill (Sg Loc) (Pl Com) Ess ;   #
+- LIST CASE-AGREEMENT = Nom Acc Gen (Pl Ill) Loc Com Ess ;   #
+- LIST CASE = Nom Acc Gen Ill Loc Com Ess ;  #
+- SET NOT-NOM = CASE - Nom ;  #
+- SET NOT-GEN = CASE - Gen ;  #
+- SET NOT-ACC = CASE - Acc ;  #
 
 ### Verb sets
 
@@ -17929,19 +17925,12 @@ NOT-V
 ### Sets for finiteness and mood
 
 REAL-NEG
-
 MOOD-V
-
 GC
-
 VFIN
-
 VFIN-POS
-
 VFIN-NOT-IMPRT
-
 VFIN-NOT-NEG
-
 NOT-PRFPRC
 
 
@@ -17956,27 +17945,32 @@ PL1-V
 PL2-V
 PL3-V
 
+PERNUM
 
 
 POSITIVE-V
 
 
+### Some subsets of the VFIN sets
+SG-V, DU-V, PL-V, etc.
 
 
 
 
 
+### Imperative sets
 
-
+No one so far
 
 
 ### Sets consisting of forms of "leđe" (these ones need to be rewritten)
+LEDE, LEAN, LEAT, ...
 
 
 
 
 ### Pronoun sets
-
+MUN, DON, SON, MOAI, ...
 
 
 
@@ -17997,6 +17991,8 @@ POSITIVE-V
 
 
 ### Adjectival sets and their complements
+LEX-A, A-CASE, ...
+
 
 
 
@@ -18008,6 +18004,8 @@ POSITIVE-V
 
 
 ### Adverbial sets and their complements
+LEX-ADV, LEX-ADV-DE, ...
+
 
 
 
@@ -18019,6 +18017,7 @@ POSITIVE-V
 
 
 ### Sets for coordinators
+Foc, NEGFOC, ...
 
 
 
@@ -18033,7 +18032,13 @@ If these are found in Adv contexts, we treat them as adverbs.
 
 
 
+LACCAT-ADV
 
+MOD-NP-ADV
+
+MOD-ADV-ADV
+
+EASKKA
 
 
 
@@ -18058,7 +18063,7 @@ The REAL-V set thus awaits a fix to the preprocess V ... N bug.
 
 
 
-* The set COPULAS is for predicative constructions
+- The set COPULAS is for predicative constructions
 
 
 
@@ -18078,8 +18083,9 @@ TRANS-V is the set for verbs really taking objects
 
 
 
-* Sets for verbs choosing oblique objects or adverbials
-* **STVLIST** is the list of strictly transitive verbs. In the rules, refer not to STVLIST, but to the set STV defined below.
+- Sets for verbs choosing oblique objects or adverbials
+- **STVLIST** is the list of strictly transitive verbs. In the rules, refer not to STVLIST, but to the set STV defined below.
+
 
 
 
@@ -18110,6 +18116,15 @@ STRICT-TRANS-V is the set for verbs which don't let a GenAcc be a modifier of an
 
 ### Valency sets
 
+INF-V
+
+
+ACC-INF-V
+
+
+
+
+OPRED-V
 
 
 
@@ -18156,13 +18171,7 @@ STRICT-TRANS-V is the set for verbs which don't let a GenAcc be a modifier of an
 
 
 
-
-
-
-
-
-
-* **PLACE-V** Those get only not locative if the target is a member TOOL, ABSTR-TOOL or ANIMATE or CONCEPT. Selects more locatives than ONLY-PLACE-LOC-V 
+- **PLACE-V** Those get only not locative if the target is a member TOOL, ABSTR-TOOL or ANIMATE or CONCEPT. Selects more locatives than ONLY-PLACE-LOC-V 
 
 
 
@@ -18206,7 +18215,8 @@ STRICT-TRANS-V is the set for verbs which don't let a GenAcc be a modifier of an
 
 
 
-
+### Other adjective sets
+A-N, A-N-CASE, ...
 
 
 
@@ -18219,6 +18229,7 @@ STRICT-TRANS-V is the set for verbs which don't let a GenAcc be a modifier of an
 
 
 ### NP sets defined according to their morphosyntactic features
+
 
 
 
@@ -18278,17 +18289,12 @@ The words in the set **N-PO** can be both N and Po, the set takes that into acco
 ### Nominal sets defined according to their semantical properties
 
 
-* Spatial noun sets. These nouns behave like postpositions
+- Spatial noun sets. These nouns behave like postpositions
 
 
 
 
-* Time sets
-
-
-
-
-
+- Time sets
 
 
 
@@ -18317,7 +18323,12 @@ The words in the set **N-PO** can be both N and Po, the set takes that into acco
 
 
 
-* Amount sets
+
+
+
+
+
+- Amount sets
 
 
 
@@ -18345,9 +18356,9 @@ OKTA
 
 
 
-* Sets for nouns with morpho-syntactic preferences
+- Sets for nouns with morpho-syntactic preferences
 
-* Number-related sets
+- Number-related sets
 
 
 
@@ -18358,7 +18369,7 @@ OKTA
 
 
 
-* Sets for case, possessive, etc.
+- Sets for case, possessive, etc.
 
 
 
@@ -18372,7 +18383,7 @@ OKTA
 
 
 
-* Sets for nouns as pred
+- Sets for nouns as pred
 
 
 
@@ -18414,8 +18425,9 @@ OKTA
 
 
 
-* Sets for animals
+- Sets for animals
 
+GEN-ANIMAL, PREDATOR. BIRD, ...
 
 
 
@@ -18428,8 +18440,8 @@ OKTA
 
 
 
-* Sets for things
 
+- Sets for things
 
 
 
@@ -18446,11 +18458,11 @@ OKTA
 
 
 
-* Sets for qualities
 
+- Sets for qualities
 
-* Sets for things, not necessarily tools
 
+- Sets for things, not necessarily tools
 
 
 
@@ -18468,22 +18480,22 @@ OKTA
 
 
 
-* Sets for things such that people can be inside them:
 
-* Sets for things such that people cannot be inside them:
+- Sets for things such that people can be inside them:
 
+- Sets for things such that people cannot be inside them:
 
 
 
 
 
-* Part-whole sets for human
 
+- Part-whole sets for human
 
 
 
-* Sets for places
 
+- Sets for places
 
 
 
@@ -18513,8 +18525,8 @@ OKTA
 
 
 
-* Sets that can both be buildings/places and represent humans
 
+- Sets that can both be buildings/places and represent humans
 
 
 
@@ -18569,7 +18581,8 @@ OKTA
 
 
 
-* Sets denoting relations
+
+- Sets denoting relations
 
 
 
@@ -18626,23 +18639,35 @@ RULE SECTION
 ============
 
 
+- Example marking: Wrong = #%
+- Example marking: Correct = #$
+- Example marking: Finnish = #f
+
+
 
 
 # Verb agreement rules
 
 ## Sg3/Pl3 errors
 
+msyn-agr-sg3-pl3
+
+msyn-agr (this should be updated)
 
 
+msyn-v-prfprc-sg1
 
+msyn-agr-other-sg1
 
+msyn-agr-other-sg1
 
-
+nmsyn-agr-other-sg2
 
 
 
 ## Duaali
 
+msyn-agr-other-du1
 
 
 
@@ -18651,20 +18676,26 @@ RULE SECTION
 
 ## Pluraali
 
+msyn-agr-other-pl1
+
+
+
+syn-agr-other-pl2
 
 
 
 
 
+Suomâkielâ sárnumkielâ epikongruens maaŋgâlovo 3. persovnist 
 
-
-
-
+msyn-agr-other-sg3
 
 
 ## Suomen nessesiivirakenne
 
+msyn-ness-acc-nom
 
+msyn-ness-acc-nom
 
 
 
@@ -18675,6 +18706,7 @@ RULE SECTION
 
 ## Inf should be Actio Essive
 
+msyn-orrood-inf-actioess
 
 
 
@@ -18708,6 +18740,13 @@ msyn-extneg-sg3-pl3
 
 
 ## Postpositions
+
+
+
+syn-po-nom-gen
+
+
+
 
 msyn-po-placc-plgen
 
@@ -18745,48 +18784,65 @@ Sg1 for PrfPrc
 
 
 
+msyn-v-sg3-conneg
+
+msyn-v-du3-conneg
 
 
 
+msyn-dem-locattr-gen
+
+msyn-obj-plnom-placc	
 
 
 
+### Acc shall be Nom
+
+syn-top-placc-plnom 
 
 
 
-Acc shall be Nom
+### Acc shall be Ill
 
-
-
-Acc shall be Ill
+msyn-obj-acc-ill
 
 
 
 
 ### Inarinsaamenkielisiä nimiä käytetään vähän
 
+msyn-top-placc-plnom
 
 
 
 ### Plain object of TV in Nom shall be Acc
 
+msyn-obj-sgnom-sgacc
 
 
+
+msyn-obj-plnom-placc
 
 
 ### Imperative errors
 
+Suomâkielâ imperatiiv mieđetteijee häämist, mast objekt sajehäämmin lii maaŋgâlovo nominatiiv mut sämikielâst akkusatiiv:
 
+msyn-imp-nom-acc
 
 
 ## Infinitive errors
 
+look at this
 
 
 
 
 ### Accusative subjects in passive 
 
+b) Suomâkielâ partitiiv passiivráhtusijn; sämikielâst passiiv ohtâvuođâst lii nominatiiv já verbâ maaŋgâlovvoost.
+
+msyn-pass-accsubj-nomsubj
 
 
 
@@ -18819,6 +18875,7 @@ msyn-ncompl-ess-sgill
 
 ### Quantor phrases
 
+msyn-quant-gen-nom
 
 
 
@@ -18827,6 +18884,7 @@ msyn-ncompl-ess-sgill
 
 Det + N agreement
 
+msyn-det-nom-acc
 
 
 
@@ -18835,20 +18893,29 @@ Attributive forms
 
 mii + nominative should be mii + acc
 
+msyn-mii-sgnom-placc
+
 
 
 
 ### Adjectives in attributive position
 
+msyn-adj-gen-nom
 
 
 ## Numeral phrases
+Commented out, Comment in to test the 2-6 and 7+ sets...
+
 
 msyn-num-par-gen
 The rule is: 2-6 + gensg, 7- + par
 
+msyn-num-par-gen
+
 
 msyn-num-gen-par
+
+msyn-num-acc-par
 
 
 
