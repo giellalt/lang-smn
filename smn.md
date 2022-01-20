@@ -18661,6 +18661,13 @@ msyn-agr-other-sg1
 
 msyn-agr-other-sg1
 
+
+
+msyn-v-actio-sg1
+
+
+### Sg2
+
 nmsyn-agr-other-sg2
 
 
@@ -18689,6 +18696,7 @@ syn-agr-other-pl2
 Suomâkielâ sárnumkielâ epikongruens maaŋgâlovo 3. persovnist 
 
 msyn-agr-other-sg3
+
 
 
 ## Suomen nessesiivirakenne
