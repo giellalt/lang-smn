@@ -18757,12 +18757,14 @@ Plain object of TV in Nom shall be Acc
 
 
 
+
 ## Noun phrase internal phenomena NP 
 
 
 ### Noun phrase complements
 
 N + Ill
+
 
 
 
@@ -18790,6 +18792,10 @@ Attributive forms
 
 mii + nominative should be mii + acc
 
+
+
+
+Adjectives in attributive position
 
 
 
