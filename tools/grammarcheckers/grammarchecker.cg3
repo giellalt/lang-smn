@@ -2094,8 +2094,8 @@ COPY:msyn-agr-other-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prs &msyn-ag
 
 
 #!! msyn-v-actio-sg1
-ADD:msyn-v-actio-sg1 (&msyn-v-actio-sg1) TARGET V IF (*-1C Pron + Sg1 + Nom)(0 V)(NOT 0 Sg1);
-COPY:msyn-v-actio-sg1 (Ind Prs Sg1 &SUGGEST) EXCEPT (Actio Nom) TARGET (V Actio &msyn-v-actio-sg1);
+ADD:msyn-v-actio-sg1 (&msyn-v-actio-sg1) TARGET V IF (*-1C Pron + Sg1 + Nom)(0 V + Actio + Nom)(NOT 0 Sg1);
+COPY:msyn-v-actio-sg1 (Ind Prs Sg1 &SUGGEST) EXCEPT (Actio Nom) TARGET (V Actio Nom &msyn-v-actio-sg1);
 
 
 #!! ### Sg2
@@ -2559,13 +2559,13 @@ COPY:msyn-pass-accsubj-nomsubj (Nom &SUGGEST) EXCEPT (Acc &msyn-pass-accsubj-nom
 
 #!! msyn-ncompl-ess-sgill
 ADD:msyn-ncompl-ess-sgill (&msyn-ncompl-ess-sgill) TARGET N IF (-1 N-WITH-ILL)(0 Ess);
-COPY:msyn-ncompl-ess-sgill (Sg Ill &SUGGEST) EXCEPT Ess TARGET (N &msyn-ncompl-ess-sgill);
+COPY:msyn-ncompl-ess-sgill (Sg Ill &SUGGEST) EXCEPT Ess TARGET (N Ess &msyn-ncompl-ess-sgill);
 
 #% Must lii tárbu toorjân.  
 #$ Must lii tárbu torjui. 
 
 ADD:msyn-ncompl-ess-sgill (&msyn-ncompl-ess-sgill) TARGET N + Ess IF (1 Loc)(2 ("leđe"))(3 N-WITH-ILL);
-COPY:msyn-ncompl-ess-sgill (Sg Ill &SUGGEST) EXCEPT Ess TARGET (N Ill &msyn-ncompl-ess-sgill);
+COPY:msyn-ncompl-ess-sgill (Sg Ill &SUGGEST) EXCEPT Ess TARGET (N Ess &msyn-ncompl-ess-sgill);
 
 #% Maggaar toorjân sist ličij tárbu. 
 #$ Maggaar torjui sist ličij tárbu. 
