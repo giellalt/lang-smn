@@ -2181,15 +2181,20 @@ COPY:msyn-agr-sg3-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V &msyn-agr-sg3-pl3);
 #$ Tast láá uápis ääših
 
 ADD:msyn-agr-other-pl3 (&msyn-agr-other-pl3) TARGET V IF 
+ (*-1 N + Pl + Nom BARRIER NOT-ADV-PCLE LINK NOT 0 NPL_WITH_VSG3)
+ (0C V + Ind + Sg3 OR V + Cond + Sg3)
+ (NOT 0 Pl3)(NOT 0 Foc/ge);
+
+ADD:msyn-agr-other-pl3 (&msyn-agr-other-pl3) TARGET V IF 
  (NOT -2 Sup OR Sg3)
  (NOT *-1C Pron + Pl3 + Nom OR Dem + Pl + Nom OR N + Pl + Nom BARRIER NOT-ADV-PCLE)
  (NOT -1 NPL_WITH_VSG3)
- (0C V + Ind + Sg3)
+ (0C V + Ind + Sg3 OR V + Cond + Sg3)
  (NOT 0 Pl3)(NOT 0 Foc/ge)
  (*1 N + Pl + Nom); #ž BARRIER NOT-NPMOD);
 
-COPY:msyn-agr-other-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Ind Prs &msyn-agr-other-pl3);
-COPY:msyn-agr-other-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Ind Prt &msyn-agr-other-pl3);
+COPY:msyn-agr-other-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Prs &msyn-agr-other-pl3);
+COPY:msyn-agr-other-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Prt &msyn-agr-other-pl3);
 
 #% Viäsust juáhhoo juávhoid tagareh almoneh, moh kovvejeh ääši.
 #$ Viäsust juáhhojeh juávhoid tagareh almoneh, moh kovvejeh ääši.
