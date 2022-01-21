@@ -2581,10 +2581,14 @@ COPY:msyn-ncompl-placc-plill (Ill &SUGGEST) EXCEPT Acc TARGET (N Pl Acc &msyn-nc
 #!! ### Quantor phrases
 
 #!! msyn-quant-gen-nom
-ADD:msyn-quant-gen-nom (&msyn-quant-gen-nom) TARGET Num IF (1 N)(0 Num + Gen)(NOT 0 ("ohtâ"));
-COPY:msyn-quant-gen-nom (Gen &SUGGEST) EXCEPT Num TARGET (N &msyn-quant-gen-nom);
+# ADD:msyn-quant-gen-nom (&msyn-quant-gen-nom) TARGET Num IF (0 Num + Nom)(1 N + Gen OR N + Acc)(NOT 0 ("ohtâ"));
+# COPY:msyn-quant-gen-nom (Gen &SUGGEST) EXCEPT Num TARGET (Num Gen &msyn-quant-gen-nom);
 
+#$ Kihheen ij pyevti palvâliđ kyehti hiärá. # Nom 
+#$ Kihheen ij pyevti palvâliđ kyevti hiärá. # Gen + N.Gen (obj)
 
+# kyehti hiärá lii ...
+# kyevti hiärást lii ..
 
 #!! ### Noun phrase agreement NP 
 
