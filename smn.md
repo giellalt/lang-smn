@@ -17555,17 +17555,16 @@ cd tools/grammarcheckers
 make dev
 ```
 
-Then edit/test as:   
+Then edit/test as follows:   
 ```
-echo "Sun ij puátá." | sh modes/smngram.mode  # from the terminal
+echo "Sun ij puátá." | sh modes/smngram.mode  
 ```
 
-Hint: There are very many modes in the modes folder, look at them.
+Hint: There are very many modes in the `modes` folder, look at them.
 
 If you use emacs and have cg-mode installed, you may run analysis with C-c C-i / C-c C-c
 
 See also [the documentation on grammarchecker testing](https://giellalt.github.io/proof/gramcheck/doc/grammarchecker_testing.html)
-
 
 
 
@@ -18804,6 +18803,7 @@ Sg3/Pl3 errors: Suomâkielâ sárnumkielâ epikongruens maaŋgâlovo 3. persovni
 Subject to the right
 
 msyn-agr-sg3-pl3
+
 
 
 
