@@ -17781,6 +17781,8 @@ Sem/Txt
 Der/Year
 
 
+This ends the semtag list.
+
 ### Names
 
 PROP-ATTR
@@ -17793,7 +17795,7 @@ TIME-N
 
 
 
-###  Syntactic tags
+### Syntactic tags
 
 @+FAUXV
 @+FMAINV
