@@ -33,27 +33,18 @@
 #!! ```
 
 # ---------------------- #
-#!!   Then edit/test as:   
+#!!   Then edit/test as follows:   
 # ---------------------- #
 #
 #!! ```
-#!! echo "Sun ij puátá." | sh modes/smngram.mode  # from the terminal
+#!! echo "Sun ij puátá." | sh modes/smngram.mode  
 #!! ```
 
-#!! Hint: There are very many modes in the modes folder, look at them.
+#!! Hint: There are very many modes in the `modes` folder, look at them.
 
 #!! If you use emacs and have cg-mode installed, you may run analysis with C-c C-i / C-c C-c
 
 #!! See also [the documentation on grammarchecker testing](https://giellalt.github.io/proof/gramcheck/doc/grammarchecker_testing.html)
-#
-# ---------------------- #
-#   Other debug-pipes:   #
-# ---------------------- #
-#
-# ls modes/
-#
-# ---------------------- #
-
 
 # The pipeline (but use modes, above)
 #  echo "Sun ij puátá." | hfst-tokenise --giella-cg  ../tokenisers/tokeniser-gramcheck-gt-desc.pmhfst | vislcg3 -g disambiguator.cg3 | vislcg3 -g grammarchecker.cg3 -t
