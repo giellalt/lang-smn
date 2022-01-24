@@ -7,6 +7,11 @@
 
 This page documents the work on the [Inari Saami grammatical analyser](http://github.com/giellalt/lang-smn). 
 
+## Lingustic tools
+
+- [Inari Saami speller for LibreOffice](https://github.com/giellalt/lang-smn/blob/main/docs/smn_LO-voikko-5.0.oxt) (press "Download" in the low-left corner, and open the file in LibreOffice) 
+
+
 ## Lingustic documentation
 
 -   [Lyhyt kuvaus inarinsaamen kielestä (Marja-Liisa Olthuis)](LyhytKuvausInarinsaamesta.pdf)
