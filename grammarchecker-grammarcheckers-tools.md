@@ -208,49 +208,49 @@ Der/InchL
 Der/Dimin
 Der/Aadv
 
-@NO CODE@ ;
-SET NOT-DER-A-ADV = Adv - DER-A-ADV ; #
+- LIST DER-A-ADV = (Der/lasj Der/AAdv Adv) ; # ;
+- SET NOT-DER-A-ADV = Adv - DER-A-ADV ; #
 
 ### Error tags
 
-Err/Orth
-Err/Orth-spes
+- All Err/Orth tags
+- Err/Orth-spes for all Err/Orth save the simple one
 
 
 
 ### Semantic tags
 
-<vdic>
-HUMAN
-Sem/Act
-Sem/Ani
-Sem/Atr
-Sem/Body
-Sem/Clth
-Der/Date
-Sem/Domain
-Sem/Feat-phys
-Sem/Fem
-Sem/Group
-Sem/Hum
-Sem/ID
-Sem/Lang
-Sem/Mal
-Sem/Measr
-Sem/Measr_Time
-Sem/Money
-Sem/Obj
-Sem/Obj-el
-Sem/Org
-Sem/Perc-emo
-Sem/Plc
-Sem/Sign
-Sem/State-sick
-Sem/Sur
-Sem/Time
-Sem/Time
-Sem/Txt
-Der/Year
+- vdic
+- HUMAN
+- Sem/Act
+- Sem/Ani
+- Sem/Atr
+- Sem/Body
+- Sem/Clth
+- Der/Date
+- Sem/Domain
+- Sem/Feat-phys
+- Sem/Fem
+- Sem/Group
+- Sem/Hum
+- Sem/ID
+- Sem/Lang
+- Sem/Mal
+- Sem/Measr
+- Sem/Measr_Time
+- Sem/Money
+- Sem/Obj
+- Sem/Obj-el
+- Sem/Org
+- Sem/Perc-emo
+- Sem/Plc
+- Sem/Sign
+- Sem/State-sick
+- Sem/Sur
+- Sem/Time
+- Sem/Time
+- Sem/Txt
+- Der/Year
 
 
 This ends the semtag list.
@@ -1447,6 +1447,10 @@ msyn-pass-accsubj-nomsubj
 N + Ill
 
 msyn-ncompl-ess-sgill
+
+
+
+
 
 
 

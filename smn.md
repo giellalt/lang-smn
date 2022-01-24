@@ -1,5 +1,6108 @@
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/cg3/valency.cg3](http://github.com/giellalt/lang-smn/blob/main/../src/cg3/valency.cg3)</small>
+I N A R I   S A A M I   D I S A M B I G U A T O R               
+==================================================================
+
+
+
+
+
+
+# DELIMITERS 
+
+Sentence delimiters are the following: <.> <!> <?> <...> <¶>
+
+
+# TAGS AND SETS
+
+
+
+## Tags
+
+
+This section lists all the tags inherited from the fst, and used as tags
+in the syntactic analysis. The next section, **Sets**, contains sets defined
+on the basis of the tags listed here, those set names are not visible in the output.
+
+
+
+
+### Beginning and end of sentence
+BOS 
+EOS
+
+
+
+### Parts of speech tags
+
+N
+A
+Adv
+V
+Pron
+CS
+CC
+CC-CS
+Po
+Pr
+Pcle
+Num
+Interj
+ABBR
+ACR
+CLB
+LEFT
+RIGHT
+WEB
+QMARK
+PPUNCT 
+
+PUNCT
+
+COMMA
+¶
+
+
+
+### Tags for POS sub-categories
+
+- Pers
+- Dem
+- Interr
+- Indef
+- Recipr
+- Refl
+- Rel
+- Coll
+- NomAg
+- Prop
+- Arab
+- Romertall
+- URL
+
+### Tags for morphosyntactic properties
+
+**Case:**
+- Nom
+- Acc
+- Gen
+- Ill
+- Loc
+- Com
+- Ess
+- Par
+- Sg
+- Du
+- Pl
+
+**Compounding:**
+- Cmp - a compound
+- Cmp/SplitR
+- Cmp/SgNom Cmp/SgGen
+- Cmp/SgGen
+- Cmp/Attr
+- Cmp/Hyph
+
+**Possessives:**
+- PxSg1
+- PxSg2
+- PxSg3
+- PxDu1
+- PxDu2
+- PxDu3
+- PxPl1
+- PxPl2
+- PxPl3
+- Px - all of the above in one list
+
+**Adjectival features:**
+- Comp
+- Superl
+- Attr
+- Ord
+
+Qst
+IV
+TV 
+Prt
+Prs
+Ind
+Pot
+Cond
+Imprt
+
+**Person and Number:**
+- Sg1
+- Sg2
+- Sg3
+- Du1
+- Du2
+- Du3
+- Pl1
+- Pl2
+- Pl3
+
+**Verb features:**
+- Inf
+- ConNeg
+- Neg
+- PrfPrc
+- VGen
+- PrsPrc
+- Ger
+- Sup
+- Actio
+- VAbess
+
+### Tags for clitic particles
+
+- Foc/ba
+- Foc/baa
+- Foc/baan
+- Foc/ban
+- Foc/be
+- Foc/gas
+- Foc/ge
+- Foc/gen
+- Foc/ges
+- Foc/gis
+- Foc/gin
+- Foc/go
+- Foc/han
+- Foc/kin
+- Foc/nii
+- Foc/sun
+- Foc/uv
+
+
+### Derivation tags
+
+* Der/PassL Der/PassS smn Der/Pass
+* Der/NomAg
+* NomAg
+* Der/AAdv
+* Der/ag
+* Der/ahasas
+* Der/adda
+* Der/alla
+* Der/Car
+* Der/Caus
+* Der/d
+* Der/Dimin
+* Der/InchL
+* Der/ivvaas
+* Der/l
+* Der/laakan
+* Der/lasj
+* Der/mas
+* Der/NomAct
+* Der/sasj
+* Der/st
+* Der/t
+* Der/tt
+* Der/taa
+* Der/upmi
+* Der/vualasas
+* Der/vuota
+
+`<vdic>`
+
+
+Err/Orth
+
+
+
+### Semantic tags
+
+
+HUMAN
+
+HAB-ACTOR
+HAB-ACTOR-NOT-HUMAN
+
+
+
+PROP-ATTR
+PROP-SUR
+
+
+
+TIME-N-SET
+NOT-TIME
+TIME-N
+
+
+
+###  Syntactic tags
+
+- `@+FAUXV	 `
+- `@+FMAINV	 `
+- `@-FAUXV	 `
+- `@-FMAINV	 `
+- `@-FSUBJ>	 `
+- `@-F<OBJ	 `
+- `@-FOBJ>	 `
+- `@-FSPRED<OBJ`
+- `@-F<ADVL	 `
+- `@-FADVL>	 `
+- `@-F<SPRED	 `
+- `@-F<OPRED	 `
+- `@-FSPRED>	 `
+- `@-FOPRED>	 `
+- `@>ADVL`
+- `@ADVL<`
+- `@<ADVL`
+- `@ADVL>`
+- `@ADVL `
+- `@HAB> `
+- `@<HAB `
+- `@>N		 `
+- `@Interj	 `
+- `@N<		 `
+- `@>A		 `
+- `@P<		 `
+- `@>P		 `
+- `@HNOUN	 `
+- `@INTERJ	 `
+- `@>Num	 `
+- `@Pron<	 `
+- `@>Pron	 `
+- `@Num<	 `
+- `@OBJ		 `
+- `@<OBJ	 `
+- `@OBJ>	 `
+- `@OPRED	 `
+- `@<OPRED	 `
+- `@OPRED>	 `
+- `@PCLE	 `
+- `@COMP-CS< `
+- `@SPRED	 `
+- `@<SPRED	 `
+- `@SPRED>	 `
+- `@SUBJ	 `
+- `@<SUBJ	 `
+- `@SUBJ>	 `
+- `SUBJ		 `
+- `SPRED	 `
+- `OPRED	 `
+- `@PPRED	 `
+- `@APP		 `
+- `@APP-N<	 `
+- `@APP-Pron<`
+- `@APP>Pron `
+- `@APP-Num< `
+- `@APP-ADVL<`
+- `@VOC		 `
+- `@CVP		 `
+- `@CNP		 `
+- `OBJ		 `
+- `<OBJ		 `
+- `OBJ>		 `
+- `<OBJ-OTHERS`
+- `OBJ>-OTHERS`
+- `SYN-V`
+* `@X`
+
+
+
+
+
+## Sets containing sets of lists and tags
+
+This part of the file lists a large number of sets based partly upon the tags defined above, and 
+partly upon lexemes drawn from the lexicon.
+See the sourcefile itself to inspect the sets, what follows here is an overview of the set types.
+
+
+
+### Sets for Single-word sets
+
+OKTA and go, and the set INITIAL for initial letters 
+go
+INITIAL
+
+
+### Sets for word or not
+
+WORD
+REAL-WORD
+REAL-WORD-NOT-ABBR
+WORD-NOT-de
+NOT-COMMA
+
+
+### Derivational affixes
+
+DER-V
+
+DER-N
+
+DER-A1
+DER-A
+
+A-V
+
+A-NOT-V
+
+
+
+
+
+
+### Case sets
+
+ADLVCASE
+
+
+CASE-HALFAGREEMENT
+CASE-AGREEMENT
+CASE
+
+NOT-NOM
+NOT-GEN
+NOT-ACC
+
+### Verb sets
+
+
+NOT-V
+
+### Sets for finiteness and mood
+
+REAL-NEG
+
+MOOD-V
+
+GC
+
+VFIN
+
+VFIN-POS
+
+VFIN-NOT-IMPRT
+
+VFIN-NOT-NEG
+
+NOT-PRFPRC
+
+
+### Sets for person
+
+
+SG1-V
+SG2-V
+SG3-V
+DU1-V
+DU2-V
+DU3-V
+PL1-V
+PL2-V
+PL3-V
+
+POSITIVE-V
+
+
+
+
+
+### Sets consisting of forms of "leđe" (these ones need to be rewritten)
+
+
+
+
+### Pronoun sets
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Adjectival sets and their complements
+
+
+
+
+
+
+
+
+
+### Adverbial sets and their complements
+
+
+
+
+
+
+
+
+
+
+### Sets for coordinators
+
+
+
+
+
+
+
+
+
+### Sets for adverbs that have lookalikes
+Here come some adverbs that have identical twins in other POS. 
+If these are found in Adv contexts, we treat them as adverbs.
+
+
+
+
+
+### Sets of elements with common syntactic behaviour
+
+
+### Sets for verbs
+
+
+V is all readings with a V tag in them, REAL-V should
+be the ones without an N tag following the V.  
+The REAL-V set thus awaits a fix to the preprocess V ... N bug.
+
+
+
+* The set COPULAS is for predicative constructions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TRANS-V is the set for verbs really taking objects
+
+
+
+
+* Sets for verbs choosing oblique objects or adverbials
+* **STVLIST** is the list of strictly transitive verbs. In the rules, refer not to STVLIST, but to the set STV defined below.
+
+
+
+STRICT-TRANS-V is the set for verbs which don't let a GenAcc be a modifier of anything else than an object, e.g. Mun organiseren eatni gievkkanis. - eatni wants to be the object
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Valency sets
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* **PLACE-V** Those get only not locative if the target is a member TOOL, ABSTR-TOOL or ANIMATE or CONCEPT. Selects more locatives than ONLY-PLACE-LOC-V 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Adverb sets
+
+
+
+
+
+
+
+
+
+### Adjective sets
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### NP sets defined according to their morphosyntactic features
+
+
+
+
+
+
+
+
+
+### The PRE-NP-HEAD family of sets
+
+These sets model noun phrases (NPs). The idea is to first define whatever can
+occur in front of the head of the NP, and thereafter negate that with the
+expression **WORD - premodifiers**.
+
+
+
+
+
+
+
+
+
+
+The set **NOT-NPMOD** is used to find barriers between NPs.
+Typical usage: ... (*1 N BARRIER NOT-NPMOD) ...
+meaning: Scan to the first noun, ignoring anything that can be
+part of the noun phrase of that noun (i.e., "scan to the next NP head")
+
+
+
+
+
+
+### Other negatively defined morphosyntactic noun sets
+
+
+
+
+
+
+
+
+
+
+
+
+### Noun sets
+
+Nominal sets defined according to their morphophonological properties
+Sets for lexeme homonymy (most of them are moved to where the actual rules are.)
+
+
+The words in the set **N-PO** can be both N and Po, the set takes that into account.
+
+
+
+### Nominal sets defined according to their semantical properties
+
+
+* Spatial noun sets. These nouns behave like postpositions
+
+
+
+
+* Time sets
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* Amount sets
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+OKTA
+
+
+
+
+* Sets for nouns with morpho-syntactic preferences
+
+* Number-related sets
+
+
+
+
+
+
+* Sets for case, possessive, etc.
+
+
+
+
+
+
+
+
+
+
+
+
+
+* Sets for nouns as pred
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* Sets for animals
+
+
+
+
+
+
+
+
+
+
+
+
+
+* Sets for things
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* Sets for qualities
+
+
+* Sets for things, not necessarily tools
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* Sets for things such that people can be inside them:
+
+* Sets for things such that people cannot be inside them:
+
+
+
+
+
+
+* Part-whole sets for human
+
+
+
+
+* Sets for places
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* Sets that can both be buildings/places and represent humans
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* Sets denoting relations
+
+
+
+
+
+### Miscellaneous sets
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Border sets and their complements
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Syntactic sets
+
+ALLSYNTAG
+
+*These were the set types.*
+
+
+# RULE SECTION
+Here follow the rules.
+
+
+
+This is the first section. Here we put safe rules with no or minimal context.
+
+## Removing unwanted names
+
+
+
+## Numbers
+
+Ruleset for numbers from sme, and adjusted.
+
+
+
+
+
+
+
+
+
+
+
+
+* **SemID** Strange number is ID.
+
+* **Insertwww** Inserts the Sem/Adr tag to all url expressions
+
+* **ArabNom** says that sentence-initial Arabic numeral is Nom unless followed by Po
+
+* **Arab1** says that "1" is Nom, look at this
+
+* **ArabNomPlc** gives Nom tu numerls following placenames
+
+* **Arab** rule for Apertium
+
+
+* **mustalid** adds <vdic> to language of telling and quoting, like: ... dadjá Aili Kestkitalo.
+
+
+* **PlcSur1** The Linda Englad rule: name is Sur not Plc if having a surname
+
+* **PlcSur2**
+
+
+* **PlcSur4**
+
+
+## Focus clitics
+* **Qst** removes Foc/uv if Qst and "?" at the ende of the sentence
+* **FocUv** is the revert rule, it removes  Qst for Foc/uv if there is no "?"
+
+* **NoWackern** says that if the word is not number 2 in the sentence it is not Foc (todo: phrase level, not word)
+
+
+
+## SECTION 2, more context
+
+
+## Numerals
+
+
+* **NumRom** in beginning of sentence
+
+* **sasjnum** chooses num gen to the left of sâš
+
+
+* **NotOrdIfABBR**
+
+
+
+## Imperatives
+
+See also *Imprt or Ind* some sections down.
+
+
+### 
+
+
+* **NotUvImprt** here it is adverb etc.
+
+* **NotImprtAfterLede** removes Imprt if leđe one to the left
+
+* **ImprtInit** selects sentence-initial imperative when followed by Ill
+
+
+* **ImprtDál** 
+
+
+* **ImprtComma** 
+
+* **ImprtNotVGen**
+
+* **NotImprtInd** 
+
+* **NotImprtConNeg** 
+
+* **NotImprtA** 
+
+* **NotImprtN** 
+
+
+* **NotImprtVFIN** 
+
+
+
+
+
+
+
+
+
+## Lexicalised derivations
+
+
+
+
+
+* **derN** removes DER-N if lexicalised non-essives
+
+
+
+* **derA** removes DER-A if lexicalised A
+
+* **derAdv** removes DER-Adv if lexicalised Adv
+
+* **derPass** removes DER-PASS if lexicalised V
+
+* **derV** removes DER-V if lexicalised V,
+
+
+
+
+
+### Particular verbs
+
+
+
+
+
+* **PrsPrcIfA**
+
+
+
+
+
+
+
+## Propernouns
+
+###  Removing or selecting proper nouns that are lookalikes
+
+
+
+*Removes **PropPl**, but problems with names as Davviriikkaid Ráđi, there we want Prop Pl
+
+
+* **PronNotProp**
+
+
+
+* **PropAttrIfPropx** removes Attr if no Prop on the right side
+
+* **PropInsideProp** Selects Prop if capital letter inside clause
+
+
+* **PropAttr** Removes (Prop Attr), but not if to the right is Prop or Ord OR ABBR 
+
+* **PropSur** Selects (Prop Sem/Sur) if finite verb to the left. Immediately to the right is Sem/Fem OR Sem/Mal
+
+
+* **r**
+
+
+
+
+* **PropAttr1** Selects Attr if you are Sem/Fem OR Sem/Mal, Sem/Sur or INITIAL and to your right is Prop which is Sem/Fem OR Sem/Mal or Sem/Sur 
+
+
+
+
+
+
+
+
+
+### MISC
+
+
+
+
+der
+
+*Removes **derNEss** if lexicalised, and both nouns are essive.
+
+
+
+
+
+
+
+
+## Verbs
+
+* DADJAT wants illative
+
+
+* **vazzid** chooses väzziđ when Ill or čoođâ to the right --  vazzâđ venytellä vs. väzziđ kävellä
+
+
+## Adjectives or nouns
+
+
+
+## Adjectives, nouns, not adverbs
+
+* **Aifeambbo** selects A after eambbo
+
+
+
+## Subjunctions
+
+Conjunctions
+
+
+
+## Adverbs
+
+### Adverbs or postpositions
+
+### Adverbs or nouns
+
+
+### Specific adverbs
+
+###  buoh
+* IFF **buotAdv** : buot Adv in front of Superl ok smn
+
+
+* **mannelTimeAdv** golbma jagi maŋŋel
+
+
+* **oovtast**
+
+* **AdvSTV** váldit mielde, oahppat bajil. eará? STRICT-TRANS-V is too strong
+
+
+* **pyereest**
+
+
+* **miätáV**  
+
+
+
+
+* **oddasitAdv**
+
+
+
+
+
+* **oktanAdv**
+
+* **ovttasAdv**
+
+
+
+* **oktiiAdv** select
+
+
+
+
+
+
+* **ollasitAdv** selects
+
+
+
+* **Adverbs and not Nouns**
+
+- uáli
+
+Adverbs and not Pronouns
+
+* **siste** is adv
+
+
+
+## Pronouns 
+
+
+* **recipr, reciprPl** select Recipr
+
+
+
+
+
+### Nouns, not verbs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+puáttiđ, not pađđeeđ (Prt: Sg3 poođij, Du1 poođijm, Du2 poođijd, Du3 poođijn, Pl1 poođijm, Pl2 poođijd)
+* puáttiđ = tulla, pađđeeđ =käyttäytyä_levottomasti_(vasovasta_vaatimesta)
+* We will make rules for pađđeeđ when we see examples of its use.
+
+
+
+### Lexical selection - nouns
+
+
+
+
+
+### Remove Imperative
+
+* Some brave rules for removing Imprt
+
+
+
+
+
+
+
+
+
+
+
+### Verb or Noun?
+
+
+
+
+
+
+
+
+
+
+* **datPers** selects Pers. I made it stronger than it was. ref. r897 in sme-dis.rle
+
+
+
+## Px constraints 
+
+### PX Number
+
+
+
+
+### From sme	
+
+
+First select Px, then remove all remaining Px
+
+* Set with adjectives, which are documented to have Px in our corpus
+
+* **PxAlone** Remove Px if it is only word in the sentence, and not a typical px-term
+
+
+
+
+
+* **NPxPrfPrc** Remove Px if PrfPrc with  leat to the left
+
+
+* Nouns: **NomPxSg1** (not Ess) as the only word in a sentence. Needs no disambiguation.
+
+
+* Nouns:  **AccPxSg1** after a TV verb. Exception for Aux.
+
+
+* Nouns:  **AccPxSg1** after a TV Inf verb.
+
+
+* **PxSg1LocAcc** is Acc to the right.
+
+* **PxSg1Acc** is Acc to the right.
+
+
+* coordination **PxSg1coord** 
+
+* **PxSg1coordLast** for the last word of a coordination
+
+
+* **PxSg2AccImprt** if  TV Imprt to the left
+
+* **PxSg2AccPrfPrc** after PrfPrc 
+
+* **NotPxSg2** if no Sg2 
+
+
+* Nouns: **PxSg3AccPrfPrc** if PrfPrc and Sg3 to the left
+
+
+
+
+
+
+
+*  **PxSg3GenPo2** in front of Po, to the left of the owner
+
+
+
+* **PxGenNorPo**  
+
+
+
+
+* **PXAccCoor**  
+
+
+
+* **PxSgIllPx**  
+
+
+
+
+
+
+
+
+We end section 2 by removing all remaining Px
+
+* **KillPx** removes all remaining Px readings
+
+
+
+* **NotVGenIfDer** removes VGen if 0 = Der/Pass or Der...(r947)
+
+
+* **NotImprtIfAttrLeft** removes Imprt after attribute
+
+* **NotImprtIfRel** removes Imprt after Rel, unify this with other left context (r948)
+
+
+
+
+* **VSg1IfLeftMun** selects Sg1 when "mun" is to the left (r949)
+
+
+
+
+* **VSG1IfRightMun** selects Sg1 when "mun" is to the right (r950)
+
+
+### Sg2 - early cycle, safe rules
+
+
+* **VSG2IfLeftDon** selects Sg2 when "tun" is to the left (r951)
+
+
+
+* **VSG2IfRightDon** selects Sg2 when "tun" is to the right (r952)
+
+
+### Sg3 - early cycle, safe rules
+
+* **VSG3IfLeftSon** selects Sg3 when "sun" is to the left (r954)
+
+* **VSG3IfRithgSon** selects Sg3 when "sun" is to the right (r954)
+
+* **VNotSg3When12Left** removes Sg3 if 12 Pron immediate left (r955)
+
+
+* **NegSg3BeforeFoc** selects Neg before Foc/ge or ConNeg (r959)
+
+* **vfin** removes verb reading when the reading should be noun  
+
+
+
+
+
+
+
+* **VDu1IfMoaiLeft** selects Du1 when "moai" left (r960)
+
+* **VDu1IfMoaiRight** selects Du1 when "moai" right (r961)
+
+
+
+### Pl3 - early cycle, safe rules
+
+Select...
+
+* **r976** SE V Pl1 if *-1 SII
+
+
+
+
+* **r982** removes Prt Sg2 if Pl3 subject - 6002
+
+
+* **VPl3Lookalikes** removes "verbs" like "mane" and "peri" (r984) - 274
+
+* **VSg3Lookalikes** removes "verbs" like "skuvlii" 
+
+
+OBS: denne er ikke helt bra
+
+
+
+
+
+
+
+
+
+
+
+
+
+* **NPlbeforeRel, NSgbeforeRel** select N in front of Rel and MO
+
+## Adjectives and adverbs
+
+### Adv or not?
+maid has many readings and as Rel it is a member of S-BOUNDARY. Therefore we need to disambiguate it early in this file. Most important is to select Adv. Because of that A and N still can have Vfin readings, it is difficult to make very general rules.
+
+* **vaikkomii** was an IFF rule, but we weaken it to SELECT
+
+
+
+
+
+* **Interj** or not
+
+
+
+* **comparAdv**
+
+
+
+
+
+
+
+* **AttrABBRNum**
+
+
+
+
+
+
+
+* **PoParantes** selects Po after paranteces
+
+
+
+* **PrGen1** selects Pr
+
+* **PrGen2** selects Pr
+
+
+* **PrNoCompl** removes Pr if no complement to the right	
+
+
+* **PoGen** selects Po
+
+
+
+
+* **vuollaiPo** selects
+
+
+
+* **gaskkasPo** selects
+
+
+
+* **NwhenPo** removes N if Po
+
+
+
+
+
+* **compNomHead** NP-HEAD-NOM (ADVL) go NP-HEAD-NOM (ADVL). VFIN-NOT-IMPRT pga manglende disamgiguering
+
+
+* **compMisc** go geassebuođut, go dán áigge
+
+
+* **compCoord** coordination	
+
+* **compCoordAttr** coordination again, now with Attr. Speacial rule because of that Attr also has other readings.	
+
+* **compInf** 
+
+* **compInfCoor** 
+
+
+
+* **killAllnotComp** Removes analysis which are not @COMP-CS<
+
+*
+
+
+
+
+# MAPPING OF CC AND CS
+
+Mostly we map both @CNP and @CVP, then we select @CNP, after that we remove them so @CVP remains
+
+* **cnpCompSC** Map @CNP if @COMP-CS< or COMPAR ahte
+
+* **cnpCompSpec** special rule because of PrfPrc = VFIN
+
+* **CSasCNPCVP** Map some CSs both @CNP @CVP
+
+* **CSasCVP** Map @CVP to CS
+
+* **CCasCNPCVP** Map (@CNP @CVP) to CC
+
+* **ahteCNP** ahte CC @CNP, remove the rest
+
+* **killAllahtenotCS** All other occurrences of "et" are CSs.
+
+* **vaiCCCNP** vai as CC or CS
+
+* **vaiCC** remove vai as CC 
+
+* **vaiCCNegQst1** vai CC @CVP before Neg or question
+
+* **vaiCCNegQst2** vai CC @CNP in question about two alternatives
+
+
+
+* **killAllvainotCSCVP** Select all vai CS @CVP	
+
+
+* **CVPNPron** No finite verb or verbalactivity in front N/Pron @CNP N/Pron	
+
+
+* **CVPnoVfin** No potential finite verb following
+
+* **CVPnoVfin** Infitive following
+
+
+* **CVPInfInf** between to Inf
+
+* **CVPadvladvl** between to ADVL
+
+
+* **CVPAdvAdv** between to Adv
+
+
+* **CVPActioNom** 
+
+
+
+
+
+
+
+* **CVPnoVfinAdvl** No finite verb in front ADVLCASE @CNP ADVLCASE	
+
+
+
+
+* **CVPMiella**
+
+
+
+* **CVPAdvNom** Nom @CNP Adv Nom	
+
+
+
+
+
+* **CVPAccAdv** Acc @CNP Adv Acc	
+
+* **CVP**
+
+* **CS**
+
+
+* **killAllCNP** removes all remaining @CNP
+
+* **XCC-CS** removes CC and CS with no synttag
+
+
+
+
+* **Interr** selects interrogative pronouns in questions
+
+* **InterrIfPot** selects interrogative pronouns in potential sentences, and after that we remove the remaining Interr
+
+
+* **munPl3** removes Pron Pers Pl3 if there is no verb agreement
+
+* **Rel** selects Rel
+
+* **RelSg1, RelSg2** select Rel
+
+* **RelPl** selects Rel
+
+* **RelPl** removes Rel
+
+
+
+
+## Numerals
+
+* **NumAccCurrency** Selects (Num Acc)	
+
+* **NumNom** Selects (Num Nom) 
+
+* **NumNomCoord** Selects (Num Nom) 
+
+* **r1082** Selects (Num Nom) 
+
+* **year** Selects (Num Gen)
+
+* **numunit** Selects (Num Gen) + NUMUNIT 
+
+* **NumGenPo** Selects Gen if you are Num and there is a Gen following the first Gen to the right *gávcci máná njuni ovddas* 
+
+* **jagiGen**
+
+* **Locattr**
+
+* **Illattr**
+
+* **LocIllattr**
+
+* **numPlAccn**
+
+
+
+* **WWNumOrdIllAttr** selects Ill Attr and Loc Attr for numerals and ordinals
+
+
+* **WWNumOrdAttr**
+
+* **galleIndef**
+
+* **galleIndef**
+
+* **galleNum**
+
+
+* **nubbiGen**
+
+* **nubbiIndef**
+
+
+* **nubbiOrd**
+
+* **nubbiOrdManu**
+
+
+* **nubbiOrdSuperl**
+
+* **nnubbiIndefIll**
+
+* **nnubbiOrdLex**
+
+* **nnubbiIndefOkta**
+
+* **nnubbiOrdEss**
+
+* **nnubbiIndefAcc**
+
+
+
+* **nnubbiAttr**
+
+* **nKillnubbiOrd**
+
+
+
+## Indefinite pronouns
+The rules are not documented yet
+
+* **mihheen** attr if neg + mihheen + NP
+
+
+* **IndefAttr2** Selects (Indef Attr) 
+
+* **IndefAttr3** Selects (Indef Attr)
+
+
+
+* **NoAttr** Removes Attr if you are Pron and first one to your right is (Pron Rel)	
+
+* **NoIndefAttr** Removes (Indef Attr) if first one to the right is (Pron Pers Loc)
+
+* **NoIndefGen** Removes (Pron Gen Indef) or (Pron Acc Indef) if intransitive mainverb to the left and end of sentence to the right *muhto gávdnojit maid eará*
+
+
+
+
+* **IndefNotAdv**
+
+
+* **IndefNotAdvL**
+
+
+* **MiiPl**
+
+
+
+
+* **DemSgNom** selects Dem Nom Sg if VFIN Sg3
+
+
+
+
+* **sierraAAttr**
+
+
+
+* **Comp** rules select Comp A
+
+
+
+
+
+
+
+* **AdvManimus** 
+
+
+
+* **AttrAdv** 
+
+* **Cmp/SplitRA**
+
+* **CopANom** 
+
+
+* **ANom**  removes A Nom
+
+* **AAttr**  selects A Attr
+
+* **OrdAttr**
+
+
+* **AdvN** removes Adv   
+
+* **AAttrPunct**    
+
+
+
+* **AttrTIME**    
+
+* **AAttrCoord1** coordination, first part
+
+* **AAttrCoord2** coordination, first part
+
+* **PrfPrcCoordA** selects PrfPrc in coordination with an A
+
+
+
+
+
+
+
+
+* Remove Nom, Acc and Gen if Comp
+
+
+
+
+* **APlNomafterCop** selects A Pl Nom after copulas and Pl Nom OR Pl Pron
+
+* **APlNomafterCop2** selects A Pl Nom after copulas and Pl Nom OR Pl Pron
+
+* **APlNomafterDu** selects A Pl Nom after copulas and Du
+
+* **ASgNomNoSubj** selects A Sg Nom after copulas Sg3 or Neg Sg3
+
+* **ASgNomafterCop** selects A Sg Nom after copulas and Sg Nom, not so strong constraint for the target
+
+
+* **ASgNomEssCopNeg** selects A Sg Nom after copulas Sg3 or Neg Sg3s, 
+
+
+* dsfa
+
+* **AcompGo** Selects (A Comp Nom) even if there is no verb (ellipse)
+
+* **Wr1775xc** Selects (A Sg Nom) if you are (N Sg Loc), Der/NomAg or (NN A). Copulas is to the left. EOS or CLB is to the right
+
+* **Wr1776xc** selects (A Sg Nom) 
+
+* **Wr1777c**
+
+
+* **Wr1778xc**
+
+* **Wr1779xc**
+
+* **Wr1780c**
+
+* **Wr1781c**
+
+* **Wr1782**
+
+
+* **Wr1784**
+
+* **Wr1785**
+
+* **Wr1785b**
+
+* **Wr1786xc**
+
+* **Wr1787c**
+
+* **Wr1788xc**
+
+* **Wr1789xc**
+
+* **Wr1791xc**
+
+* **Wr1796xc**
+
+
+
+
+
+
+
+
+
+
+## And now some rules for adverbs that modify adjectives
+
+* **AdvModA2**
+
+* **AdvModA3**
+
+* **AdvModA4**
+
+* **NomAg**
+
+* **Nom**
+
+* **Nom**
+
+* **vfin**
+
+
+
+
+## ConNeg forms
+
+Number following the rule headers below refer to numbers of hit in a 13 053 859 word corpus.
+
+* **ConNegImp** selects ConNeg Imprt if Neg Imprt to the left. - 4265
+
+* **PrfPrcConNeg**  to ConNeg Aux after PrfPrc
+
+* **ConNegIfNeg** selects Ind ConNeg if Neg Ind to the left. This is the main (and common) ConNeg rule. - 660327
+
+
+* **ConNegPrfPrc** selects ConNeg for leat when topicalised PrfPrc between Neg and leat - 713
+
+
+* **NotConNegIfNotNeg** removes ConNeg if no Neg to the left. Consider unifying with NotConNegNotNeg. - 1094269
+
+
+
+* **NotConNegNotNeg** removes remaining ConNegs whenever no Neg to the left. - 5862
+
+
+
+
+
+
+
+* **VGen** selects VGen after VGEN-V-TRIGGER-verb
+
+
+
+* **VGen4**
+
+
+
+
+* **KillAllVGen** removes all VGen (r1842)
+
+
+## Supinum vs. potential -- no example found in large corpus
+
+## Perfect Participle
+
+* **r1844** removes PrfPrc if 0 is the second N in an N and ... N construction
+
+* **r1844** removes PrfPrc if 0 is the second N in an N and Gen ... N construction (this is marginal)
+
+
+
+* **r1852** selects PrfPrc if copula to the left
+
+* **r1853** selects PrfPrc if Rel to the left which again is linked to copula
+
+
+### Topicalized version
+
+the following chapter should be possible to unify.
+
+* **r1855** selects PrfPrc if Nom to the left linked to copula
+
+* **r1857** selects PrfPrc if Acc to the left linked to copula
+
+* **r1858** selects PrfPrc if NP head to the left linked to copula
+
+* **r1857** selects PrfPrc if copula to the left
+
+* **r1861** selects PrfPrc if VFIN to the left
+
+
+
+* **r3576** selects PrfPrc if Acc to the left linked to activity verb
+
+
+## Actio
+
+
+## Present participle
+*orrut vs. orrot) 
+## Rules for "addit" (which is an adjective, but more often a verb)
+## Actio Loc = N Loc
+
+
+* **ActioLoc** is an IFF rule, we also need rule for 'leat', like in lea go bieru oastimis
+
+
+
+## Nouns or verbs
+
+The rules are no documented yet
+
+* **VFINAttr**
+
+
+* **ActEssIfSensationv**	
+
+* **NoActorIfSg3**
+
+* **GenIfPo**
+
+## Demonstrative pronouns, agreement in DP - should it be moved to after verbmappings? 
+The rules are no documented yet
+
+* **DemAttr**
+
+
+
+* **IndefAgree** guhtege goappašat iešguhtege guhte
+
+
+
+* **DemCASEPl**
+
+* **DemCASESg**
+
+* **DemAttrNum**
+
+* **DemAcc**
+
+* **DemAttr**
+
+
+
+### Attribute disambiguation
+
+* **AttrTitle**
+
+* **AttrVFIN** removes Attr in front of VFIN
+
+
+
+* **AttrnotNA** removes Attr when no N or A to the right
+
+
+
+### Rules for Attr between Dem and N
+
+* **AAttrDemSg1, AAttrDemPl1** 
+
+* **AAttrDemSg2, AAttrDemPl2** 
+
+* **AAttrDemSg3, AAttrDemPl3** 
+
+* **AAttrDemSgIll, AAttrDemPlIll** 
+
+* **AAttrDemSgLoc, AAttrDemPlLoc** 
+
+
+
+* **AAttrDemdakkar** 
+
+
+
+* **AAttrN** no copulas close to the left
+
+* **AAttrCop**  copulas close to the left
+
+
+
+# VERB MAPPINGS
+
+Lexical disambiguation of verbs
+
+
+
+## Verbs as predicatives (@SPRED>) and (@<OPRED) 
+
+### The tags (@SPRED>) and (@<OPRED) target  PrfPrc
+The rules are no documented yet
+
+
+## Verbs as prenominal participles (@>N):
+
+* Some verbs will not be @>N
+
+* **NPrfPrc1** with 1C N Nom
+
+
+* **NPrfPrc2** with -1C Dem or Num or Attr or Indef
+
+* **NPrfPrc3** with PrfPrc or ConNeg to the left, the N can be different cases
+
+
+
+* **NPrfPrc4** mannat in front of TIME
+
+* **NPrfPrcPr** after Pr 
+
+* **NPrfPrcPo** before Po
+
+* **NPrfPrcGen** after Gen
+
+
+* **NPrfPrc6** the verb can be to the right
+
+
+
+* **NPrfPrcCoor** coordination
+
+### (@+FAUXV) and (@+FMAINV) target Neg, orrut
+* **+FAUXVNeg**
+
+* **+FMAINVorrut** finite orrut
+
+* **FAUXVorrut** finite orrut
+
+* **FAUXVorrut** infinite orrut
+
+### (@<SUBJ)  target Inf
+
+
+
+
+* **<SUBJInf2**
+
+* **r354**
+
+* **<SUBJInf3**
+
+* **<SUBJInf4**
+
+
+* **<SUBJInf6**
+
+* **SUBJ>Inf**
+
+### (@<SPRED)  target Inf
+
+
+
+
+
+
+
+
+### (@<ADVL)  target Inf, Actio Ess
+
+
+
+
+
+
+
+
+
+
+
+
+
+### @-F<OBJ  target Inf 
+
+
+
+
+
+### (@A<)  target Inf 	
+* **AInf** Inf 	
+
+### (@N<)  target Inf, Actio Ess
+
+
+
+
+
+
+* **N<Infcoor**
+
+
+### (@<ADVL)  target Inf, Actio Ess
+
+
+
+
+* **ADVLActioEss** Inf 		
+
+
+### (@<OBJ)  target Inf, Actio Ess, PrfPrc 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* **OBJActioEss** Inf 		
+
+* **OBJPrfPrc** PrfPrc 			
+
+
+
+
+### (@+FMAINV) and (@+FAUXV) and (@-FAUXV)
+
+
+
+
+* **+FMAINVcop** COPULAS verbs     
+
+* **+FAUXVaux** AUX  verbs     
+
+* **+FAUXVboahtit** boahtit as AUX      
+
+* **-FAUXVaux** AUX verbs     
+
+* **+FMAINVcopInfconstr** leat before Inf     
+
+
+
+* **+FAUXVCop**  copulas coming before the mainverb
+
+* **+FAUXVCop**  copulas coming before the mainverb, relative clause inbetween
+
+
+* **+FMAINVHabconstr**  in habitive constructions    
+
+* **+FMAINVCoopCoord** coordination  
+
+* **+FAUXVleat**  
+
+* **+FMAINVAux1**  
+
+* **-FMAINVAux2**  
+
+* **+FAUXVCop**  copulas coming after the mainverb
+
+
+* **+FMAINVCop**  copulas 	
+
+
+
+### The big general @+FMAINV rule
+
+* **+FMAINV**  to the remaining finite verbs which are not AUX    
+
+
+
+
+* **+FMAINV**  to finite verb after mainverb
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### (@-FMAINV) and (@-FAUXV)
+
+* **-FAUXVConNegCop**  to ConNeg COPULAS   
+
+* **-FAUXVConNegAux**  to ConNeg AUX-OR-MAIN   
+
+* **-FAUXVConNegAux**  to ConNeg AUX   
+
+* **-FMAINVConNeg**  to ConNeg   
+
+
+
+
+
+
+
+* **-FMAINVConNeg**  to ConNeg
+
+* **-FMAINVConNeg**  to ConNeg Aux after PrfPrc
+
+
+
+
+
+
+* **-FAUXVPrfPrcAux**  to PrfPrc AUX  before Inf or Actio Ess
+
+* **-FMAINVPrfPrc**  to PrfPrc 
+
+* **-FMAINVPrfPrcEss**  to PrfPrc before Ess
+
+* **-FMAINVPrfPrcleat**  to PrfPrc leat
+
+* **-FMAINVPrfPrcafterAuxAux**  to PrfPrc after two Auxs
+
+* **-FMAINVPrfPrccoord**  to PrfPrc coordination	
+
+* **-FMAINVPrfPrccoord**  to PrfPrc coordination	
+
+* **-FMAINVPrfbeforeAux**  to PrfPrc before the Aux	
+
+* **-FMAINVPrfafterMan**  to PrfPrc before the Aux	
+
+
+* **-FMAINVInf**  to Inf
+
+
+* **-FMAUXVActioEss**  to Actio Ess
+
+* **-FMAINVActioEss**  to Actio Ess
+
+* **+FAUXV** to  Aux
+
+* **NPrsPrc1** with 1C N Nom
+
+
+
+* **ActioNom** with 1C N Nom
+
+* **<ADVLVAbess** VAbess ADVL
+
+* **<ADVLVGen** VGen ADVL
+
+* **ADVL>VGen** VGen ADVL
+
+* **<ADVLGer** Gerundium ADVL
+
+* **ADVLGer>**
+
+* **-FMAINVLoc** Actio Loc
+
+
+
+
+
+
+
+
+
+
+# NOUNS
+
+# CASE DISAMBIGUATION
+
+## Num as subject, tricky cases - the rule should be here because of the verbdisambiguation
+
+
+
+
+
+
+
+
+## ACCUSATIVE-ILLATIVE DISAMBIGUATION
+
+
+
+
+
+
+## ACCUSATIVE-GENITIVE DISAMBIGUATION
+
+
+## Secure rules for choosing Acc
+
+
+
+* **PGenN** selects Gen when (Pron Pers) to the left and N to the right *mu sámevuođa iđuid*
+
+* **CoGen1** (quite strict) selects the first of coordinated genitives *riikkaid, čearuid ja boazoorohagaid ovttasbarggu*
+
+
+###  Semantihkka: Choosing accusative or genitive semantically
+
+
+
+* **vuoiAcc** selects accusative if *vuoi* or *vuoi surgat* to the left 
+
+
+
+
+
+
+
+* **SEMnotPossessor** Removes Gen if you are not a possible possessor (a human) # HAB-ACTOR
+
+
+* **SEMnotHUM** removes Gen. This is when an NP is thought to be the OBJ, because it's not in the human sets and to the right is NON-FAMILY *njálgáid mánáide*. 
+
+* **SEMXr2066** Removes Gen if there is a human or org to the right, exeption for *čállingiela áhčči* and so on
+
+
+
+
+
+* **SEMXxr2071** Removes Gen: Nobody can possess a Proper name? Except from (Pron Pers) and Sem/Fem OR Sem/Mal
+
+
+
+* **SEMdep** Select Gen if main-organization in front of department   
+* **SEMorghum** select gen if organization or education in front of human   
+
+
+* **SEMXr2073** Remove Gen: Accusative in front of a human group *loktema sámiid buorrin*
+
+* **SEMr2074** Selects Gen in front of HUMAN-GROUP
+
+* **SEMactor** Select Gen in front of ABSTRACT and RIEKTEDILLI *unnitlogu oaidninčiegas*
+
+* **SEMXr2076** Selects Gen if you are HUMAN or Pron with an ABSTRACT to your right *iežaset vuoigatvuođa*
+
+* **VocNom** 
+
+
+
+* **SEMyouareNom** Removes Gen and Acc when 0 FAMILY or PROFESSION because you are Nom. Not if -1 Num and VFIN is LEDE or IV *Oahpai go Sire sámegiela*
+
+* **SEMyouareGen** Removes Nom if movement verb to the left and illative to the right, because you are the modifier of Ill *mannat Madame Tussaud kabinehttii*
+
+* **SEMnotNom** Removes Nom if a Nom to the right followed by a transitive verb. 0 is animate and to the right is Ill. You are the modifier of Ill
+
+
+
+
+
+* **SEMXxr2081** Removes Gen if NATION or POLITICAL-PLACE are to your right *dilálašvuođaid sámi*
+
+* **SEMXr2087** Selects Gen if you have "eennâm" or "guovu" immediately to your right *Gomorra eatnamii*
+
+* **SEMplcGen2** Removes Gen in front of a GENERAL-PLACE or POLITICAL-PLACE, if you are a noun *bidjen hildu sadjásis* 
+
+* **SEMplcGen3** Removes Gen in front of GENERAL-PLACE or POLITICAL-PLACE, if you are ABSTR-TEXT or TEXT *cealkámušaid guovlluid dearvvašvuođafitnodagaid jahkedieđáhusain*
+
+* **SEMXr2079** Removes Gen if you are Acc in front of MANNU *guđii virggi skábmanánu 1. b.*
+
+
+
+
+* **SEMxhab** Selects Acc if COPULAS to the left of HAB-ACTOR *lea min*
+
+* **EMeallimamuorra** Selects Gen eallima muorra
+
+
+* **ACRGen** Selects genitive: NRK Sápmi
+
+* **ACRAttr** Selects genitive: IL Nordlys
+
+
+
+* **SEMXr2096** Removes genitive: because Accusative in front of an organization
+
+* **SEMGenORG** selects Gen (modifier): in front of an organization *Stáhta Oahpahuskantuvra*
+
+
+
+* **SEMgen1** removes Acc if buot, gait or buohkat in front of a genitive, followed by a plural noun *buot Norlándda ohppiid*
+
+
+* **SEMgen2** removes Acc if bargat or dihte are FMAINV or Inf and are found somewhere to the left of a Gen, which is followed by a noun *bargame boazodoallolága ođastemiin*
+
+* **SEMXr2103** Selects accusative: OASSI is usually accusative *hálddaša stuora oasi*
+
+
+* **SEMXxr2104** Selects accusative: if WRITING-ACTIVITY-V to the left and you are a TEXT *čállá vaidaga*
+
+* **SEMXxacc**Removes accusative: if WRITING-ACTIVITY-V to the left and a noun to the right *čállit Norgga vásáhusaid*
+
+
+
+
+* **SEMXxr2108** Selects genitive if you are SAPMI with an Acc/Gen immediately to your left and a noun immediately to your right *girji sámi áššiid (birra)*
+
+* **SEMsapmiModifier** Selects genitive (modifier): Sámi, suoma or ruoŧa  as modifier of noun *sámi oahpahus*
+
+
+
+
+
+* **SEMtext** (modifier) selects genitive (modifier) if you are a TEXT in front of KLASS *doalloplána čuoggái*
+
+
+
+* **SEMgiella2** Gen if you are Pron followed by giella *iežas giella*
+
+
+
+
+### Other genitive rules
+
+* **topGEN** Selects Gen if sentence intitial. To the right a Prf Prc that modifies nominative *Stáhta nammadan láhtu*
+
+* **NomQst** Selects Nom in a Qst-sentence. To the left is Nom and leat with a Qst-particle *Leat go álbmotmeahcit veahkaváldi*
+
+
+***lassinIll** Selects Ill if first one to the left is lassin *lassin Sarai*
+
+
+
+### Gen and preposition/postposition
+
+
+
+* **GenAPP** Selects genitive when a preposition to the left, or when a postposition to the right *rastá riikarájiid*
+
+
+* **NomIfPo** removes Nom if sentence initial, because it modifies Gen
+
+
+* **GenPoCoordPunct** Selects genitive for coordinated postpositions: with PUNKT to the left 
+
+* **GenPoCoord** Selects genitive for coordinated postpositions *ráŋggáštusa ja buhtadusa hárrái*
+
+
+* **GenGenPo** (modifies pp-phrase) selects Gen in front of postposition-phrase *álgojagiid soađi maŋŋá*
+
+* **GenORG** (modifies Loc) selects Gen if you are MAIN-ORGANIZATION and to your right is Loc *dearvvašvuođafitnodagaid jahkedieđáhusain*
+
+* **SEMnom** (modifies Nom) removes Acc if sentence boundary or adv to the left. To the right is Nom followed by a transitive verb and Acc *stálu beana njoallu háviid*
+
+
+
+### Genitive in place adverbials ROUTE
+
+* **GenPlc** Selects genitive if you are ROUTE, and there is a MOVEMENT-V to your left or right *boahtiba dán geainnu*
+
+
+### Temporal adverbials: Choosing accusative or genitive TIME
+
+* **GenMannuOrdRight** selects Gen if you are mannu and to your right is A Ord *miessemánu 10.*
+
+* **GenMannuOrdLeft** selects Gen if you are mannu, to your left is Ord and to your right is a numeral
+
+
+
+* **TIMEobs** selects Gen if you are time, and to your right is an intransitive real-verb. No adverbials allowed to the right *vuolggán bearjadaga*
+
+
+
+
+
+* **GenJuohke** selects Gen if juohke or seamma to the left *juohke dálvvi*
+
+* **GenJahkiNum** selects Gen if you are jahki num with a numeral to your right *Skuvlajagi 1998-99*
+
+* **AigiModifier** (modifier) selects Gen if aigi to the right *konferánssa áiggi*
+
+* **GenHávvi2** selects Gen for hávvi if a transitive verb cannot be found somewhere in the sentence
+
+* **GenGeardi** selects Gen if the beginning of the sentence to the left *Eará háviid*
+
+* **GenRbeaivi** (modifier) selects Gen if riegádanbeaivi to your right 
+
+* **GenDURadj1** selects Gen if a duration adverbial to the left 
+
+* **GenDURadj2** removes Gen for TIME-N, if duration adjective to the left *olles dálvvi*
+
+* **NoTimeAccII** removes Acc for time if POINT-IN-TIME verb to the left 
+
+* **timeADVL** selects Gen for time: when perfectum participle or infinitive to the left are time adverbial verbs or not time object verbs, to the left of this there shall be an auxiliary *lean čoavdán cealkagiid maŋimuš áiggi*
+
+
+
+
+
+
+
+
+
+
+
+
+### Accusative or Genitive
+
+* **theAccusative** selects Acc if you are a N or Pron with CC to your right, followed by Acc and a CLB or VFIN *gápmagiid ja vuoddagiid, sii geavahedje*
+
+
+
+
+
+
+
+* **NotGenitive** selects Acc if you are a N or Pron with punctuation marks to your right, followed by a noun-phrase boundary
+
+
+
+
+
+
+###  Reflexive pronouns: acc or gen
+
+
+
+
+
+
+
+* **GenIES** (modifier) selects (Pron Refl Gen) if NON-FAMILY OR ("piäládâh") OR SAMEDIGGI-GEN to the right *iežaset mánáide*
+
+
+* **AccIES** SELECTS accusative object (Pron Refl Acc)  
+
+* **AccIES** (modifier) removes accusative object (Pron Refl Acc) if Ill or Loc to the right, but not if a transitive verb is found to the left 
+
+
+* **GenIESinf** removes (Pron Refl Gen) if a transitive verb to the left and an Inf to the right 
+
+
+
+
+### Accusative object 
+
+
+* **AccActioEss** Selects accusative: when a Strict transitive verb actio ess to the left, but not if there is an other Acc to the right followed by EOS
+
+* **AccEss** removes Acc when you are SAPMI-N-HEAD with an Ess to your right, but not if there is a transitive mainverb to the left *dutkama duogážin*
+
+
+***topOBJPers** Removes Gen if you are Acc, and to you right is a Pron followed by a transitive verb. You have to be sentence initial
+
+***AccVAbess** Selects Gen if to the right is abessive 
+
+* **topOBJ1** Selects accusative: when a Strict transitive verb to the right (topicalized object) *beaskka geavahedje*
+
+
+* **topOBJ2** Selects Acc when a transitive finite mainverb to the right (less strict) *dan juohkehaš fuobmá*
+
+
+
+
+* **topOBJ3** Selects Acc. It is not depending on a transitive verb like topOBJ1 and 2, but selects Acc when Aux to the left, but only if there is no chanse of it beeing a Nom 
+
+* **AccTV1** Selects accusative: when a Strict transitive verb to the left (barrier exludes everything but: adv, N Ess , N Loc and Pcle). No Acc allowed to the left of the verb. No Acc allowed to the right of you, except pronouns and education (sentenceboundary and N Ess as barriers). Only numunit numerals are allowed to the left. You are not Acc if you are: time, ruote or Pron Indef. Neither if you are Pron Refl with Gen to your right followed by N Ess. Neither if you are Pron Refl with Gen to your right followed by Po. N Nom and Ger not allowed immediatly to your right. You are not Acc if you are a Nom cased Prop and the verb is some kind of verbalactivityverb and ahte or sentenceboundary is to the right. Vdic not allowed immediately to your left. If váldit is the verb, you are likely to be a Gen if Ill-body noun is found to the right. *oste mielkki gávppis*
+
+
+
+
+* **PronNP** (removes Acc): selects Gen for Pron Pers if Acc or Ill to the right, given that there is a secure object or that no transitive verb is found *bija ruđa mu kontoi*
+
+
+* **r2206** selects Gen when a finite verb to the left and Nom or Acc to the right *lohkaba su girjji*
+
+
+* **r2271** Removes genitive when a transitive verb to the left and you (not if you are a pronoun) are followed by Ill/Loc/Com/Adv: *doalvvui stálu meahccái*
+
+* **AccTV2** Selects accusative: when a transitive verb to the left. No Acc allowed to the left in the sentence (sentenceboundary as a barrier). No Acc allowed to the right (barriers are CC, comma and sentenceboundary). Note that Gen to the right followed by a noun is allowed. You shall not be: route, time, Pron Dem. You are not Acc if you are: Gen-cased Pron or Animate with Ill immediately to your right. No Acc, Com, N Nom or Gerundium allowed immediately to your right. No Gen followed by Po allowed immediately to your right. A SG3-verb is only allowed to your left (barriers excluding everything except NP-heads and adverbs, PrfPrc is also a barrier) if there is a Nom left to the SG3-verb. No vdic allowed immediately to your left. You are not Acc if: you are a Nom-cased Prop, followed by ahte or EOS and the verb found to the left (SV-boundary) is some kind of verbalactivityverb or a humanagentverb.
+
+* **AccTV3** Selects accusative: when transitive verb to the left, if it doesn't find a barrier: comma, Num, real-v, Ess, s-boundary. Acc not allowed to the left of the verb. Not Acc if animate or Gen in front of Ill. Numerals the only Acc allowed to the right. Not Num, time route or adv. Not Com or Ger immediately to the right. Neither Po. Not Acc if sg3-verb to the left without a Nom to its left. Not Pron Dem followed by N, neither Pron Rel followed by time. No vdic immediately to your left. No Nom-cased Prop with some sort of verbal activity to its left is allowed..  
+
+
+* **OLDr2466** Selects accusative: when transitive verb to the left, but not if the TV is FAUX OR LOC-V
+
+
+
+
+* **AccInf** Selects Acc if the verb to the left is TV + Inf (you are the obj of the Inf). Differs from the other rules by not beeing restricted by an Acc to the right *hállat eatnigiela*
+
+* **AccCOP** Selects Acc if copulas to the left and nominative to the left of COP *gápmagat leat áhči*
+
+
+### Gen modifiers inside NP 
+
+* **GenNP1** Selects Gen for Pron Pers (modifier): if NP-BOUNDARY OR Acc (but not if the finite verb is TV) to the left and N to right 
+
+* **GenNP2** Selects Gen for N (modifier): if CC "já" immediately to your left and accusative to your right *ja sámi jurddašanvuogi*
+
+* **GenNP3** Selects Gen (modifier): if first one to right is Nom or Loc *Norgga oaivegávpogis*
+
+* **GenNP4** (modifier) selects Gen -1 BOS or COMMA, 1 Nom *nissoniid bargu*
+
+* **GenNPCo** (modifier) Selects Pron Pers Gen if Nom to the left of ja *Mun ja mu ustibat*
+
+* **GenRefl** (modifier) selects Gen in front of a noun in accusative or nominative case *iežaset oiviliid*
+
+
+
+* **AccAfterCC** Select accusative: if genitiv to the left, and CC "já" to the left of genitive *eamiálbmot- ja globaliserenprošeavtta koordináhtor*
+
+
+
+
+### Accusative in coordination
+
+
+
+* **CoAcc1** Selects Acc when NP inbetween commas *guolleoivviid, dáraid, debbuid, buđeittaid, boares rásiid*
+
+
+* **CoAcc2** Select Acc if coordinator to your left and accusative to the left of the coordinator *deaja dahje sávtta*
+
+
+* **CoAcc3** Selects Acc in front of *ja* if there is a secure Acc to the right *semináraid ja diehtojuohkinčoahkimiid*
+
+
+* **CoAccJA** Selects Acc when "já" to the left and comma to the left of "já" with a secure Acc to the left of comma *sámegiela, ja heajos dárogiela.*
+
+* **CoAccJA2** Selects Acc in front of Gen + Po if ja in front of Acc *ja ruhtan sávzzaid ovddas*
+
+
+
+
+### Intransitive verbs can sometimes be transitive
+
+* **IVasTV** Selects Acc if you are GEOGRAPHICAL-PLACE, ABSTR-ROUTE or EDUCATION and somewhere in the sentence is a intransitive verb acting as a transitive verb *sii vázzet skuvlla*
+
+
+
+
+
+* **IVsahttit** Selects Acc 
+
+
+
+* **NewGen** (complement of numerals) Selects Gen Sg when Num Sg to the left *guhtta kilu*
+
+
+
+* **NewGenCo** (coordinated complement of numerals) Selects Gen if Num Acc + NewGen found to the left of "já" *máŋga dáhpáhusa ja digaštallama*
+
+* **ALU4** Selects Acc if you are Num and to your right Num Acc followed by MEASURE OR ALU/A *guokte golbma mehtara alu* 
+
+
+
+* **NumTimeMannel** Selects Acc for Num before TIME MANNEL
+
+
+
+* **GenBoaris** Selects Gen in golbma *jagi* boaris
+
+- Ritva comment: Find a rule for "viđa" aswell, this hits "mehter" as it should
+
+
+* **XXr2002** Selects genitive if there is a numeral immediately to your left, and you are TIME: *golbma jagi*
+
+
+
+### Numerals 
+
+
+* **NumMoney** Selects Gen if you are a numeral and immediately to your right is CURRENCY *vihtta ruvnnu*
+
+
+
+
+
+* **NumAcc1** Selects Acc if you have a transitive verb to the left and you are a numeral followed by a noun  *oste guokte mielkki*
+
+* **NumJahki** Removes Acc if you are a numeral and JAHKI-NUM is immediately to your left *mávssii mannan jagi 43 ruvnnu*
+
+* **NomIfNum** Removes Acc if Gen to the right (because you are Nom). Transitive verb with an Acc to the right *máŋga gávpeolbmá lonuhedje fáhcaid*
+
+* **NumAcc2** Selects Acc for singular numerals if there is a transitive verb somewhere in the sentence and the numeral is followed by a noun *logi báhkkoma* OBS
+
+
+
+* **GenIfNum** (complement of numerals) Selects Gen Sg if there is a Num Sg to your left *guđa geardde* 
+
+* **NumAccCo** (coordinated num) Selects Acc if you are Num Sg and to your right: CC with a Num to the right *guokte ja eanemusat golbma*
+
+* **NumAccIV** Selects Acc 
+
+
+
+
+* **NumAccPlRight** Selects Acc when transitive verb to the left. You are Num Pl and to your right is Acc *goarui viđaid gápmagiid*
+
+* **NumAccPlLeft** Selects Acc when tranistive verb to the right (same as the previous. Only differs in which direction the verb is found). *galliid sabehiid don ostet*	
+
+* **NumAccPlLeft** Selects Acc if you are N Acc Pl and to your left is Num Acc Pl *galliid sabegiid*		
+
+
+
+* **NumOkta** Selects Acc if 0 okta followed by a noun. Transitive verb to the left *oidnen ovtta nieidda*
+
+
+
+
+
+* **QUANgenCoord** Selects Gen for coordinated complement of a numeral
+
+* **QUANgen1** Selects Gen if a numeral with Nom-case to the left and 3Pl-verb to the right
+
+* **QUANr2142** Selects Gen if a numeral to the left and genitive to the right. Transitive verb not allowed to the left.
+
+
+
+
+### Leftover accusatives
+
+
+***COMPInfAcc** Selects Acc if you are Gen and to the left is an Inf TV @COMP-CS<
+
+
+
+
+* **AccInf2** Selects Acc if Inf immediately to the RIGHT *guliid čoallut*
+
+* **AccNomCOPconstr** Selects Acc in front of Inf; only if there is no chance for itself beeing Nom
+
+
+* **AccTV4** Selects Acc if transitive mainverb to the left. Lots of restrictions to the right
+
+
+
+* **AccPronRel** Selects (Pron Rel Acc) when a secure Acc or Nom to the left *gáibidedje internáhttaskuvlla man*
+
+* **AccPronRel2** Selects (Pron Rel Acc) when somewhere in the sentence is a Nom (barrier is sv-boundary), but only if leat isn't the main verb. *geaid eamiálbmogat* 
+
+* **AccPronRel3** Selects Acc if there is a (Pron Rel Nom) to the right. Obs: not hit nominatives, hence negations. *eanu mii šealgá*	
+
+* **AccActioLoc** Selects Acc when transitive Actio Loc somewhere in the sentence *guldeleames muitalusaid*
+
+
+* **AccAhte** Selects Acc when *ahte* is found to the right 
+
+* **AccAux** Selects Acc if beginning of sentence to the right and aux, not leat,  is to the left. No Acc allowed to the left *láđđi fertejetne oastit*
+
+
+* **HabGenAdvl** Removes Acc; in a habitive adverbial construction with Gen, but only if there is no chans of 0 beeing Nom *Dat lea áhči*
+
+* **AccIll** Selects Acc if a strict transitive verb is found to the left and Ill to your right. You are not allowed to be a possible modifier of ill: Pron, Px. *buktán heasttaid meahccái*
+
+
+
+
+* **Gerundium0** Selects Acc as the complement of Ger
+
+* **Gerundium1** Removes Gen if no other object available for the preceding tv-verb
+
+
+* **Gerundium2** Selects Acc in front of Ger, but not if it is not HAB-ACTOR/Pron Pers. No transitive verb allowed to the left, exept it it has an object of its own.
+
+* **GerundiumTEST** Selects Acc 
+* **GerundiumTEST** selects Gen for HAB-ACTOR and Pron Pers in front of Ger, but only if there is an Acc belonging to a transitive to the left
+
+
+
+
+
+
+
+
+* **NomIfProp** Removes Acc and Gen when you Prop because you are Nom. To the left is a sg3-verb. Should not hit Prop that are Sem/Plc.
+
+
+* **NomIfProp2** Removes Acc and Nom when you are Prop Sem/Plc because you are Gen. To the left is a sg3-verb. To the right is a noun.
+
+* **NomSentFin** Selects Nom if you are Acc or Gen and EOS is to yoru right. Copulas is found to the left 
+
+
+
+Accusative or Illative
+
+
+
+## Nominative or accusative or genitive
+
+
+* **NAr2266** Selects Nom
+
+
+
+* **NAAccEllipsis2** Selects Acc
+
+
+
+* **NAr2288** Removes Nom
+
+
+
+
+## Nominative
+
+
+
+
+
+
+* **NDr2300** Selects Nom if Gen immediately to the left. You are N-SG-NOM and to your right is SG3-V *Du ášši lea dehálaš*
+
+
+
+* **NDr2306** Selects Nom for (N Nom) if to the left is "ohtâ" or "nubbe" *okta lihtter*
+
+
+
+* **NDr2308** Selects Nom for PROP
+
+
+
+### Vocatives, subjects of sentence fragments
+* **NDr2309** Selects Nom
+
+* **NDr2310** Selects Nom	
+
+* **NDr2311** Selects Nom
+
+
+
+
+* **NDr2313** Selects Nom
+
+* **NDr2314** Selects Nom
+
+* **NDr2315** Selects Nom
+
+
+### Nominative in titles and sentence fragments
+
+* **NDr2317** Selects Nom: A single word is nominative
+
+
+* **NDr2318** Selects Nom: A single word with a numeral in front of it is nominative
+
+* **NDr2319** Selects Nom: An NP head with a genitive modifier is nominative
+
+* **NDr2320** Selects Nom: A title is nominative if it has a Nom reading at all
+
+* **NDr2321** Selects Nom: An NP head with an Attr modifier is nominative
+
+* **onlyProp** Selects Nom
+
+
+
+### Nominative after "ko", "mahte", "dugo" and "nugo"
+
+
+* **NDr2325** Selects Nom
+
+* **NDr2326** Selects Nom
+
+
+* **NumNomgo** Selects (Num Nom)
+
+
+
+
+
+### Preverbal subjects
+
+* **NDr2331** Selects (N Nom)
+
+* **NDr2332** Selects (Num Nom)
+
+* **NDr2333** Selects (Num Nom)	
+
+* **NDr2334** Selects Nom
+
+* **NDr2335** Selects Nom
+
+* **NDr2336** selects (N Sg Nom) when 1 SG3-V
+
+
+* **NDr2338** Selects (N Sg Nom)	
+
+* **NDr2339** Selects (N Sg Nom)	
+
+
+
+* **NDr2341** Selects Nom
+
+* **NDr2341** Selects Nom
+
+* **NDr2343** Selects (Sg Nom)
+
+* **NDr2345** Selects Nom
+
+* **NDr2350** Selects Nom
+
+* **NDr2351** Selects Nom
+
+* **NDr2357** Selects (A Pl Nom)
+
+* **NDr2359** Selects (A Pl Nom)
+
+
+
+
+### Postverbal subjects
+
+* **NDr2360** Selects Nom
+
+* **NDr2361** Selects Nom
+
+
+* **NDr2364** Selects (Sg Nom)
+
+
+
+* **NDr2368** Selects (N Pl Nom)
+
+* **NDr2370** Selects (Num Nom)
+
+* **NDr2372** Selects (Pron Pl Nom)
+
+* **NDr2373** Selects Nom
+
+* **NDr2375** Selects Nom
+
+* **NDr2376** Selects Nom
+
+* **PostVNom** Selects Nom if a singular third person verb to the left with no Nom to the left of it
+
+
+
+* **PostVNomComp** Selects (N Sg Nom)
+
+
+### Nominative predicatives
+
+
+* **NDr2378** Selects (Sg Nom)
+
+* **ND** selects Nom if; you are HUMAN and immediately to your right is a place. Leat is to the left, and there is HUMAN or Pers to the left of leat *Son lei oahpaheaddji Kárášjogas*
+
+* **NDr2379** Selects (Sg Nom)
+
+* **NDr2380** Selects (Pl Nom)
+
+* **NDr2382** Selects (Pl Nom)
+
+* **NDr2383** Selects Nom
+
+* **NDr2384** Selects Nom
+
+* **NDr2385** Selects Nom
+
+### Nominative as objects in existential clauses
+
+* **NDSgr2388** Selects Nom
+
+* **NDPlr2388** Selects Nom
+
+* **NDr2389** Selects Nom
+
+* **NDr2390** Selects Nom
+
+* **NDr2391** Selects Nom 
+
+### Nominative in coordination and apposition
+
+
+* **NDr2399** Selects Nom  
+
+* **NDr2400** Selects Nom
+
+* **NDr2401** Selects Nom
+
+* **NDr2402** Selects Nom
+
+* **NDr2403** Selects Nom
+
+* **NDr3529** Selects Nom	
+
+
+
+
+* **NDr2406** Selects Nom
+
+* **NDr2407** Selects Nom
+
+* **NDr2408** Selects Nom
+
+* **NDr2409** Selects Nom
+
+* **NDr2411** Selects Nom
+
+* **NDr2412** Selects Nom
+
+* **NDr2413** Selects Nom
+
+* **NomCCNom** Selects Nom
+
+* **NDr2416** Selects Nom
+
+* **NDr2417** Selects Nom
+
+* **NDr2418** Selects Nom
+
+### Nominative in parallell constructions
+
+* **NDr2422** Selects Nom
+
+* **NDr2423** selects Nom if it finds a Nom to the left of CC and to the left of a verb. No verb allowed to the right *eamit barggai vuođđoskuvllas ja isit fas gymnásas*
+
+* **nomHnoun** Selects Nom
+
+* **SOV** Selects Nom in front of an Acc	
+
+
+### Not nominative
+* **NDr2424** Removes Nom
+
+* **NDr2425** Removes Nom
+
+* **NDr2426** Removes Nom, but not Actio 
+
+
+
+* **ND** Removes Nom	
+
+
+
+
+
+## Comitative rules
+
+Assuming there is Sg Com / Pl Gen homonymy in Inari Saami. There is, but far more marginal than
+for North Saami, the following rules should be revised to account for that.
+
+### NP internal disambiguation of Com
+
+* **PlSg-W** removes Pl when SG-WORD
+
+
+* **LocPlur** removes Sg when PLURALIZER or OASSI OR HEADOFPARTS
+
+
+* **NumCom** selects Num Com: guvttiin nieiddain if not plural-noun like: guvttiin heajain
+
+* **ComDemNum1** selects N Com if there is a Dem or Num or buorre + Com to the left: Exception for plural-nouns  
+
+* **Comburiin** selects N Com if there is a safe N Com to the right: buriin vugiin  
+
+
+* **ComCOM-A** selects Sg Com after COM-A
+
+* **ComComAdv1** selects Com after COM-ADV or juohke
+
+
+
+### Disambiguation based upon verb valency
+
+
+* **LocLocVL1, LocLocVR** select Pl Loc if there is a LOC-V
+
+
+* **LLocAccLocVL** select Pl Loc if there is a ACC-LOC-V
+
+* **Loc-v** select Sg Loc if LOC-V to the left in the clause. No mainverb to the right in the clause
+
+### Disambiguation of Com depending on Adv or certain verb or N
+
+* **ComComAdv1** selects Com for ACTOR OR ACTOR-ROLE after og before COM-ADV 
+
+
+* **ComComplPl-N** selects Sg Com for HUMAN, ORGANIZATION, INSTITUTION, STATE, EVENT-TOOL-ACTIVITY, láhka when there is a COM-COMPL-N to the left or right
+
+* **Comoktavuohta** selects Sg Com when oktavuohta is to the left or right
+
+* **ComDU-NR** selects Sg Com after Pers dualis: moai áhčiin, munno vieljain
+
+
+* **ComHumanOrg** selects HUMAN Sg Com after HUMAN, ORGANIZATION, INSTITUTION
+
+### Animate nouns
+* **ComAnimate** selecst Sg Com if there is an animate to the left, and the noun itself is not a ABSTR-TEXT,  TEXT,  PLACE,  INDUSTRY,  EDUCATION,  INSTITUTION,  ANIMATE
+
+* **ComProp** selecst Prop Sg Com for person names. Exception for habitive constructions.
+
+
+* **FinalComForAni** where philosophy is that you are with someone, not on someone
+
+### HAB-ACTOR in habitive-constructions
+
+* **LocHab1, LocHab2** select Pl when HAB-ACTOR
+
+
+* **LocHab1, LocHab2** select Pl when HAB-ACTOR
+
+
+### Disambiguation based upon verb valency 
+
+### COM-V 
+* **ComVR, ComVL** select Com when COM-V
+
+
+
+
+### tools (concrete and abstract)
+
+* **ComTool1, ComTool2, ComToolCoord** select Com TOOL when ACTIVITY-V, MOVEMENT-V, PLACE-V-V 
+
+* **ComHumanVerbalV** selects Com HUMAN when VERBAL-ACTIVITY-V or báhcit
+
+
+
+
+
+
+
+
+
+
+### Dynamic-verbs
+
+* **LocdynamicVR, LocdynamicVL** select Pl Loc if there is a DYNAMIC-V and the noun itself is not a TOOL, ABSTR-TOOL, WRITING-TOOL, CONCEPT, HUMAN, VEHICLE, buorre, Der/NomAc
+
+* **LocdynamicVR** selects Pl Loc
+
+
+* **LocdynamicVL** selects Pl Loc
+
+
+
+
+
+### Event-tool-actio
+Most actio can be both tool and event. 
+
+
+### PLACE-V
+
+* **ComPlaceV** select Com ANIMATE, CONCEPT, TOOL, ABSTR-TOOL, EVENT-TOOL-ACTIVITY if there is a PLACE-V
+
+### Movement-verbs
+
+* **ComboahtitR** selects Sg Com 
+
+* **ComboahtitV–** selects Sg Com for animate eller pron
+
+* **ComMovemVL**  selects Sg Com over Pl Loc for a movement verb 
+
+* **ComMovemVR** selects Sg Com over Pl Loc for a movement verb
+
+
+
+* **ComDynV** Dynamic-verbs selects Com when TOOL, ABSTR-TOOL, WRITING-TOOL, CONCEPT, EVENT-TOOL-ACTIVITY
+
+
+* Dynamic-verb selects Com when HUMAN, but not for HUMAN-SOURCE-VEHICLE-V 
+
+
+* **ComBody** Body-activity-verb Selects Com when BODY, for BODY-ACTIVITY-V or VERBAL-ACTIVITY-V
+
+
+
+* **LocCop** selects Pl Loc if event
+
+
+* Coordination
+
+
+
+### Locative and comitative - Disambiguation based upon coordination
+
+
+
+
+
+
+### And then we remove the remaining Sg Com analysis
+
+
+
+
+
+Final Com/Loc rule: Remove Com.
+
+* **KillComSg** This is the final Com/Loc rule, and it chooses Pl Loc. Remove this for grammar checker.
+
+
+
+
+* **miiPlAcc** selects acc noun if mii or kii to the left
+
+* **AccTV1NoC** was Eckhard's late version of AccTV1 without C. We will look at this.
+
+* **AccEOS** is The Dangerous Rule: it is the last rule before removing all leftover Acc. It only selects Acc if Nom is not an option, dont change this btw, and the end of the sentence is the next one to the right
+
+* **genRel** removes genitive if Rel to your right *ožžot olbmot skoviid maid*
+
+* **genAcc** selects Acc 
+
+* **genNom** removes Acc
+
+
+* **DemAcc** selects Den Acc after the last acc-disambiguation of nouns
+
+* **KillAcc** Removes Acc if you are Gen 
+
+
+
+
+
+
+
+
+## Essive  
+
+
+
+
+## Finite or not
+
+### Finite
+
+* **r2906** Sg2 if Sg2
+
+
+### Not Finite
+
+* **r2824** 
+
+
+
+
+
+
+
+
+
+
+### Infinitive
+
+
+## Indicative or imperative
+
+## Verbs according to person and number
+
+### Sg1 - First person singular
+
+
+
+
+
+
+
+
+
+
+
+### Du1 - First person dual 
+
+
+* **Du1IfDu1** selects Du1 with a left context Du1 ... ja ... 
+
+
+* **NoDu1** removes Du1 if no MOAI or Du1 around.
+
+### Pl3
+
+* Pl3 not Pl Gen
+
+
+* **Pl3IfPlSubj** Pl3 if Pl noun to the left
+
+* **Pl3IfPlSubj** Pl3 if safe plural (incl pron) to the left
+
+
+
+* **Sg2LeftDon** selects Sg2 in Rel phrase if don to the left of it
+
+
+* **allPrtSg2** removes PrtSg2 if PrsPl3
+
+
+## Passive
+## Infinitive
+## Present Participle
+## Actio/Perfect Participle 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# NOMEN
+
+
+## Case rules
+
+
+## Other rules for nouns and pronouns
+
+## Determiners
+## Adverbs and adjectives
+
+
+## Adverbs not nouns
+
+
+# NOUNS
+
+
+
+
+
+## Adverb or Participle
+
+
+
+Genitive not Nominative
+
+* **GenModifiesN** is a tentative rule to be modified
+
+
+
+
+## Variant lemmas
+
+
+
+* Remove lemma2 if lemma 1
+
+
+
+
+
+
+* **cleanSemClass** cleans up if a word has more semclasses. This is just a start.
+
+
+
+
+
+
+
+### And then we remove the verbs which didn't get any syntactic tag, in favour of verbs with syntactic tags.
+
+* **realverbX**
+
+
+
+* **IfonlyVerb** selects the FMAINV reading in the cohort
+
+* **IfonlyConNeg** ConNeg if it is @-FMAINV or @-FAUXV
+
+
+### **killifVinCohort** This rule removes all other readings, if there is a mapped V reading in the same cohort. Every case which this goes wrong, should be fixed in mapping rules or previous disrules.
+
+* **TEST** selects some infinte verb readings in the cohort
+
+* **X**
+
+
+
+
+
+
+
+
+
+# Removing Err/Orth
+
+Denne regelen fjerner Err/Orth når det er samme lemma, sjøl om morfologien er forskjellig.
+
+
+
+* **errsub** removes err/orth forms
+
+
+
+
+
+
+
+
+
+
+
+Test: Go for minimal weight.
+
+
+
+# Substitute rules
+
+These 12 substitute rules add the <smn> language code to all words, to govern 
+their behaviour in the subsequent cg files. The rules are removed when this
+file is ported to Apertium.
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/cg3/disambiguator.cg3](http://github.com/giellalt/lang-smn/blob/main/../src/cg3/disambiguator.cg3)</small>
+
+
+
+
+
+
+# DELIMITERS 
+
+Sentence delimiters are the following: <.> <!> <?> <...> <¶>
+
+
+# TAGS AND SETS
+
+
+
+## Tags
+
+
+This section lists all the tags inherited from the fst, and used as tags
+in the syntactic analysis. The next section, **Sets**, contains sets defined
+on the basis of the tags listed here, those set names are not visible in the output.
+
+
+
+
+### Beginning and end of sentence
+BOS 
+EOS
+
+
+
+### Parts of speech tags
+
+N
+A
+Adv
+V
+Pron
+CS
+CC
+Po
+Pr
+Pcle
+Num
+Interj
+ABBR
+ACR
+CLB
+LEFT
+RIGHT
+WEB
+PUNCT 
+
+
+
+
+### Tags for POS sub-categories
+
+Pers
+Dem
+Interr
+Indef
+Recipr
+Refl
+Rel
+Coll
+NomAg
+G3
+Prop
+
+
+
+### Tags for morphosyntactic properties
+
+Nom
+Acc
+Gen
+Ill
+Loc
+Com
+Ess
+Sg
+Du
+Pl
+RCmpnd
+Cmpnd
+SgNomCmp
+SgGenCmp
+ShCmp
+PxSg1
+PxSg2
+PxSg3
+PxDu1
+PxDu2
+PxDu3
+PxPl1
+PxPl2
+PxPl3
+Comp
+Superl
+Attr
+Ord
+Qst
+IV
+TV 
+Prt
+Prs
+Ind
+Pot
+Cond
+Imprt
+ImprtII
+Sg1
+Sg2
+Sg3
+Du1
+Du2
+Du3
+Pl1
+Pl2
+Pl3
+Inf
+ConNeg
+Neg
+PrfPrc
+VGen
+PrsPrc
+Ger
+Sup
+Actio
+
+
+### Tags for clitic particles
+Foc/ge
+Foc/gen
+Foc/ges
+Foc/gis
+Foc/naj
+Foc/ba
+Foc/be
+Foc/hal
+Foc/han
+Foc/bat
+Foc/son
+
+
+### Derivation tags
+
+Der/PassL Der/PassS
+Der/NomAg
+NomAg
+Der/adda
+Der/ahtti
+Der/alla
+Der/asti
+Der/easti
+Der/d
+Der/eaddji
+Der/eamoš
+Der/amoš
+Der/geahtes
+Der/gielat
+Der/NuA (what is NuA?) 
+Der/h
+Der/heapmi
+Der/hudda
+Der/huhtti
+Der/huvva
+Der/halla
+Der/j
+Der/l
+Der/laš
+Der/las
+Der/hat
+Der/mállet
+Der/meahttun
+Der/muš
+Der/NomAct
+Der/st
+Der/stuvva
+Der/upmi
+Der/supmi
+Der/vuotâ
+Der/kyetti
+Der/lagan
+Der/lágán
+Der/lágaš
+Der/jagáš
+Der/jahkásaš
+Der/diibmosaš
+Der/dássásaš
+Der/A
+Der/Dimin
+Der/viđá
+Der/viđi
+Der/veara
+Der/duohke
+Der/duohkai
+Der/vuolle
+Der/vuollai
+Der/vuolde
+<vdic>
+
+
+### Semantic tags
+
+
+
+
+
+
+
+###  Syntactic tags
+
+@+FAUXV
+@+FMAINV
+@-FAUXV
+@-FMAINV
+@-FSUBJ>
+@-F<OBJ
+@-FOBJ>
+@-FSPRED<OBJ
+@-F<ADVL
+@-FADVL>
+@-F<SPRED
+@-F<OPRED
+@-FSPRED>
+@-FOPRED>
+@>ADVL
+@ADVL<
+@<ADVL
+@ADVL>
+@ADVL
+@HAB>
+@<HAB
+@>N
+@>Interj
+@N<
+@>A
+@P<
+@>P
+@HNOUN
+@INTERJ
+@>Num
+@Pron<
+@>Pron
+@Num<
+@OBJ
+@<OBJ
+@OBJ>
+@OPRED
+@<OPRED
+@OPRED>
+@PCLE
+@COMP-CS<
+@SPRED
+@<SPRED
+@SPRED>
+@SUBJ
+@<SUBJ
+@SUBJ>
+@PPRED
+@APP
+@APP-N<
+@APP-Pron<
+@APP>Pron
+@APP-Num<
+@APP-ADVL<
+@VOC
+@CVP
+@CNP
+@X
+
+
+
+
+
+## Sets containing sets of lists and tags
+
+This part of the file lists a large number of sets based partly upon the tags defined above, and 
+partly upon lexemes drawn from the lexicon.
+See the sourcefile itself to inspect the sets, what follows here is an overview of the set types.
+
+
+
+### Sets for Single-word sets
+
+OKTA and go, and the set INITIAL for initial letters 
+OKTA
+go
+INITIAL
+
+
+### Sets for word or not
+
+WORD
+REAL-WORD
+REAL-WORD-NOT-ABBR
+WORD-NOT-de
+NOT-COMMA
+
+
+### Derivational affixes
+
+DER-V
+
+DER-N
+
+DER-A1
+
+DER-A
+
+A-V
+
+A-NOT-V
+
+### Case sets
+
+ADLVCASE
+
+
+CASE-HALFAGREEMENT
+CASE-AGREEMENT
+CASE
+
+NOT-NOM
+NOT-GEN
+NOT-ACC
+
+### Verb sets
+
+
+NOT-V
+
+### Sets for finiteness and mood
+
+REAL-NEG
+
+MOOD-V
+
+GC
+
+VFIN
+
+VFIN-POS
+
+VFIN-NOT-IMPRT
+
+VFIN-NOT-NEG
+
+NOT-PRFPRC
+
+
+### Sets for person
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Sets consisting of forms of "leđe" (these ones need to be rewritten)
+
+
+
+
+### Pronoun sets
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Adjectival sets and their complements
+
+
+
+
+
+
+
+
+
+### Adverbial sets and their complements
+
+
+
+
+
+
+
+
+
+
+### Sets for coordinators
+
+
+
+
+
+
+
+
+### Sets for adverbs that have lookalikes
+Here come some adverbs that have identical twins in other POS. 
+If these are found in Adv contexts, we treat them as adverbs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Sets of elements with common syntactic behaviour
+
+
+### Sets for verbs
+
+
+V is all readings with a V tag in them, REAL-V should
+be the ones without an N tag following the V.  
+The REAL-V set thus awaits a fix to the preprocess V ... N bug.
+
+
+
+* The set COPULAS is for predicative constructions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TRANS-V is the set for verbs really taking objects
+
+
+
+
+* Sets for verbs choosing oblique objects or adverbials
+* **STVLIST** is the list of strictly transitive verbs. In the rules, refer not to STVLIST, but to the set STV defined below.
+
+
+
+STRICT-TRANS-V is the set for verbs which don't let a GenAcc be a modifier of anything else than an object, e.g. Mun organiseren eatni gievkkanis. - eatni wants to be the object
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Valency sets
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* **PLACE-V** Those get only not locative if the target is a member TOOL, ABSTR-TOOL or ANIMATE or CONCEPT. Selects more locatives than ONLY-PLACE-LOC-V 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Adverb sets
+
+
+
+
+
+
+
+
+
+### Adjective sets
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### NP sets defined according to their morphosyntactic features
+
+
+
+
+
+
+
+
+
+
+### The PRE-NP-HEAD family of sets
+
+These sets model noun phrases (NPs). The idea is to first define whatever can
+occur in front of the head of the NP, and thereafter negate that with the
+expression **WORD - premodifiers**.
+
+
+
+
+
+
+
+
+
+
+
+The set **NOT-NPMOD** is used to find barriers between NPs.
+Typical usage: ... (*1 N BARRIER NPT-NPMOD) ...
+meaning: Scan to the first noun, ignoring anything that can be
+part of the noun phrase of that noun (i.e., "scan to the next NP head")
+
+
+
+
+
+
+### Other negatively defined morphosyntactic noun sets
+
+
+
+
+
+
+
+
+
+
+
+
+### Noun sets
+
+Nominal sets defined according to their morphophonological properties
+Sets for lexeme homonymy (most of them are moved to where the actual rules are.)
+
+
+The words in the set **N-PO** can be both N and Po, the set takes that into account.
+
+
+### The LAHKA set family
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Nominal sets defined according to their semantical properties
+
+
+* Spatial noun sets. These nouns behave like postpositions
+
+
+
+
+* Time sets
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* Amount sets
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* Sets for nouns with morpho-syntactic preferences
+
+* Number-related sets
+
+
+
+
+
+
+* Sets for case, possessive, etc.
+
+
+
+
+
+
+
+
+
+
+
+
+
+* Sets for nouns as pred
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* Sets for animals
+
+
+
+
+
+
+
+
+
+
+
+
+
+* Sets for things
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* Sets for qualities
+
+
+* Sets for things, not necessarily tools
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* Sets for things such that people can be inside them:
+
+* Sets for things such that people cannot be inside them:
+
+
+
+
+
+
+* Part-whole sets for human
+
+
+
+
+* Sets for places
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* Sets that can both be buildings/places and represent humans
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* Sets denoting relations
+
+
+
+
+
+### Miscellaneous sets
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Border sets and their complements
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Multilingual sets
+
+
+Conjunction sets
+
+
+
+### Syntactic sets
+
+ALLSYNTAG
+NON-APP
+
+*These were the set types.*
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/cg3/introdisambiguation.cg3](http://github.com/giellalt/lang-smn/blob/main/../src/cg3/introdisambiguation.cg3)</small>
+
 ## Guessing: Rule for adding Sem/Date as a tag to readings which looks like dates
 
 
@@ -4194,307 +10297,735 @@ The previous two rules look marginal.
 
 * * *
 <small>This (part of) documentation was generated from [../src/cg3/coredisambiguation.cg3](http://github.com/giellalt/lang-smn/blob/main/../src/cg3/coredisambiguation.cg3)</small>
+# Inari Saami morphophonological rule file
 
+This file documents the [phonology.twolc file](http://github.com/giellalt/lang-smn/blob/main/src/fst/phonology.twolc) 
 
 
+Here we govern all morphophonological processes.
 
+# Alphabet 
 
 
+## The Inari Saami letters
 
+*  a á â ä b c d e f g h i j k l m n o õ p q 
+  r s t u v w x y z æ ä ø ö å               
+  č đ ŋ ŧ š ž                               
 
+*  A Á Â Å B C D E F G H I J K L M N O Õ P Q 
+  R S T U V W X Y Z Æ Ä Ø Ö Å               
+  Č Đ Ŋ Ŧ Š Ž                               
+* ** %-                                        ** hyphen
+* ** '       ** the hyphen as hyphen
+* **  ⎈      ** the ghost sign used in compounding, does not work in hfst
 
+### Accented letters, just in case
 
+*  É Ó Ú Í À È Ò Ù Ì Ë Ü Ï Ê Ô Û Î Ã Ý þ Ð   
+  é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý þ ð   
+  ß ª ß ç                                   
 
 
 
+Literal quotes and angles must be escaped (cf morpheme boundaries further down):
+* »
+«
+>
+<
+
+
+
+### Archiphonemes
 
 
+* **a5:a á5:á e5:e i5:i u5:u y5:y o5:o ä5:ä  **  these do not change 
+* **i2:i u2:u â2:â  **  this is final i, u in contract verbs etc changing to e, o
+* **i3:i            **  this is invariant i
+* **i4:i            **  this is the underlying i consonant
+* **i6:0            ** a fake vowel, to get WG rules to function, e.g. kyehtlov (kyehti6lov)
+* **c5:c č5:č d5:d h5:h j5:j l5:l m5:m ŋ5:ŋ r5:r t5:t z5:z  **  these do not change
+* **b6:b d6:d g6:g ** clitic consonants, jiemge, epke
+* **j6:0           ** a fake consonant, to get WG rules to function, e.g. puávui
+* **p4:p  k4:k  l4:l t4:t č4:č c4:c **  these are consonants that change in cg
+* ** ':'           ** is the real apostroph
 
+Then some more abstract archiphonemes
+These are dependent upon the **Triggers** in the next section
+* **%^RC:0      ** = root cons., lengthened by ^CLEN - máán%RCu máánnun
+* **%^RV:0      ** = root vowel, lengthened by ^RLEN - ta%^RVvlu taavlu 
+* **%^SC:0      ** = stem cons, %^SC:j, pluss lengthen after earlier shortening by %^CSH, see lyeme
+* **%^SV:0      ** = stem vowel, lengthened by ^SLEN u:uu - táálu%^SV tááloost
+* **%^VO:0      ** = vowel copy
 
+### Triggers
+These symbols govern the behaviour of the archiphonemes above.
 
 
+* **%^CLEN:0    ** = Cons lengthening, with ^RC
+* **%^CSH:0     ** = Cons shortening, laaŋkku - laaŋkun
+* **%^RVSH:0    ** = Root vowel shortening
+* **%^FCD:0     ** = Final consonant deletion 
+* **%^FVD:0     ** = Final vowel deletion 
+* **%^EA:0      ** = Stem vowel: e and i to a/á in ill, and root vowel ä>á, e(e)>iä, ie>iä, ye>uá
+* **%^EX:0      ** = Stem vowel: i to â where it should have been á, this is Err/Orth only
+* **%^RLEN:0    ** = Root vowel lengthening
+* **%^SLEN:0    ** = Stem vowel lengthening
+* **%^SVLOW:0   ** = Stem vowel lowering â>á and u>o - árppu árppoin, Root vowel shortening when more than one cns in consonant centre and suffix starts with i
+* **%^SVSH:0    ** = Stem vowel shortening kappeer kaperân
+* **%^WG:0      ** = Weak grade trigger
+* **%^ÁE:0      ** = á to e in 3-syll, triggered by ^WG
+* **%^ÁI:0      ** = á to i in 3-syll, triggered by ^WG
+* **%^VHIGH:0   ** = High rootvow for verbs: e>iä, a>o, o>u, ää>áá, ee>iä, note also: ie>iä, ye>uá, uo>uá
+* **%^VBACK:0   ** = Back rootvow for verbs: ä(ä)>a(a), á>aa, uá>o, ye>uo
+* **%^BLOCK:0   ** = This symbol just to block otherwise triggering contexts
+* **%^IUML:0    ** = â to e in front of high suffixes 
 
+Trigger ordering in twolc and lexc, from left to right:
 
+{SV,ÁE,ÁI}  {EA,EX,SC}  {FCD|,VD} {WG,CSH} CLEN  {VHIGH,VBACK}  {RVSH,RLEN} {SLEN,SVSH}  SVLOW
 
 
 
+## Morpheme boundaries:
 
+Here we define the suffix border >
+The other borders are not used yet, but still defined:
 
+* **«**:  Derivational prefix
+* **»**:  Derivational suffix
+* **%<**:  Inflectional prefx
+* **%>**:  Inflectional suffix
+* **%^**:  (exceptional) soft hyphenation point
+and the symbol #, which is Word boundary for both lexicalised and dynamic compounds
 
+End of alphabet definitions
 
 
+Sets
 
+* ** Vow = a á â ä e i o u y æ ø ö å             ** 
+**       i2 u2 â2                                ** 
+**       i3                                      ** 
+**       a5 á5 i5 u5 y5 o5 ä5                    ** 
+**       i6                                      ** 
+**       é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý     ** 
+**       A Á Â Ä E I O U Y Æ Ø Ö Å               ** 
+**       É Ó Ú Í À È Ò Ú Ì Ë Ü Ï Ê Ô Û Î Ã Ý     ** 
+**       %^RV %^SV ;                             ** 
+* ** RealVow = a á â ä e i o u y æ ø ö å         ** 
+       y5 i2 i3 i5 i6 â2                       
+**       é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý     ** 
+**       A Á Â Ä E I O U Y Æ Ø Ö Å               ** 
+**       É Ó Ú Í À È Ò Ú Ì Ë Ü Ï Ê Ô Û Î Ã Ý ;   ** 
+* ** Cns = b c č d đ f g h j k l m n ŋ           ** 
+**       p q r s š t ŧ v w x z ž                 ** 
+**       B C Č D Đ F G H J K L M N Ŋ             ** 
+**       P Q R S Š T Ŧ V W X Z Ž                 ** 
+**       g2 k2 m2 n2                             ** 
+**       b3 d3 g3 m3 h3                          ** 
+       p4 k4 r4 l4  i4  t4 c4 č4               
+       h5 j5 ŋ5 t5 c5 l5 t5 d5 r5 z5 j6        
+       %^RC %^SC   ;                           
+*  UnvoicedCns = c č f h k p s š t  ;          
+* ** Geminate = b d g p h t k c f z l m n ŋ r s š v ; **  
+* ** Sgm = Vow Cns ;                                  ** 
+* ** NotSuffixBorder = %^FCD %^FVD %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^EX %^ÁI %^SVSH Vow Cns ; ** 
+* ** Triggers =        %^FCD %^FVD %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^EX %^ÁI %^SVSH %^VHIGH %^VBACK %^IUML ; ** 
+*  TriggersnotFCVD =             %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^EX %^ÁI %^SVSH %^VHIGH %^VBACK %^IUML ; 
+* ** StemCns = b b3 d d3 g g2 g3 h h2 h3         ** 
+**           j l m m2 m3 m8 n n8 n2 ŋ r s  ;     ** 
 
 
 
 
+# Definition section
 
+Introducing a WG right context 
+```WeakGrade =  (RealVow:) [:RealVow |i6:]  (Cns:) ([%^SV:|%^ÁI:](%^ÁE:)) (%^FCD:) %^WG:0   ; ```  
 
 
 
+As we look at more cases, the WeakGrade definition tends to be longer. 
+We want to keep it short, but we want the code to work Thus, we document.
+* The second :RealVow is there for long consonant stems
+* The (Cns:) is there for consonant stems
+* -č: is there for the č:i pair of eeč^RCi:eijijn
+* The i6: is there for kyehtlov (kyehti6lov)
 
 
 
+# Rule section
 
 
+First we list the consonant rules, thereafter the vowel ones.
 
+## Consonant rules
 
+### Consonant gradation and shortening rules
 
+First gradation and shortening. They are in the same rules, to avoid rule conflicts.
 
+**RULE: x:y consonant gradation ** =  WG gives x:x and x:y, when there is no consonant lengthening  
 
+* *tu^RVp^RCe^WG*
+* *tu0v0e0*
+* *käähir^WG>*
+* *käävir0>*
+* *juáh^RCu^WG^RVSH>ttáá*
+* *juáv0u00>ttáá*
 
 
 
+**RULE: hh:vv** =  já%^RVhhá%^SVl%^ÁI : jäävvil
 
 
 
+**RULE: Quality change of root consonant x:yy** =  consonant lengthening after WG, changing h:v, p:v, c:s
 
+* *va^RVh%^RCo^WG^CLEN>im*
+* *va0vvo00>im*
 
 
+**RULE: t:đ, also tk4:đh gradation, part 1 ** =   
 
+* *puáttee#vuot^RCâ^FVD^WG>i5i5*
+* *puáttee#vuođ0000>ii*
+* *jo^RVtk4â^WG^RLEN>*
+* *joođhâ00>*
+* *vädis#vuot^RCâ^FVD^WG>i5i5*
+* *vädis#vuođ0000>ii*
 
+**RULE: k4:h gradation for kk4, tk4, rkk4, lkk4** =  
 
+* *totk4os^WG*
+* *tođhos0*
 
 
+**RULE: xx:yy gradation for xx4** =   puáhhoin, sukk4á:suhháást
 
+* *mä^RVtk4i^WG^RLEN>.#.*
+* *määđhi00>.#.*
 
+* *su^RVkk4á^SV^WG^CLEN^SLEN>st*
+* *su0hháá000>st*
 
 
 
+**RULE: t4:đ and c4, č4, p4 gradation for tt:đ etc. ** 
 
+* *ru^RVtt4â^WG^RLEN>*
+* *ruu0đâ00>*
 
 
 
+**RULE: ht:vt, ks:vs etc. gradation** =  ht:vt, we use h 
 
 
+* *pihtâs^WG*
+* *pivtâs0*
 
 
 
+### Consonant shortening rules
 
+**RULE: k:0 gradation and shortening for xkk4** =  for lkk4, rkk4, vkk4
 
 
+* *la^RVvkk4â^WG^RLEN*
+* *laav0hâ00*
 
 
+**RULE: xyy:xy gradation A** =   há%^RVi4ttás%^ÁI
 
+* *á^RVrppu^WG^RLEN>*
+* *áár0pu00>*
+* *á^RVrppu^WG^RVSH>ttáá*
+* *á0r0pu00>ttáá*
+* *riänttus^WG>*
+* *riän0tus0>*
 
 
 
+**RULE: č:0 in čč4 consonant gradation when CLEN** = when čč4
 
+* *lu^RVčč4â^WG^RLEN^SVLOW>in*
+* *luu0já000>in*
 
 
+**RULE: From i4j to j when WG and CSH** = e.g. sai4joos:sajoos
 
 
 
 
+**RULE: xx:x consonant gradation and shortening and x:x shortening** =   weak grade **or** consonant shortening (Both in same rule)
 
+*Tests:*
+* *ku^RVrrâ^CSH^RLEN>n*
+* *kuu0râ00>n*
+* *so^RVllâ^CSH^RLEN>n*
+* *soo0lâ00>n*
+* *vi^RVššâ^CSH^RVSH>vettee*
+* *vi00šâ00>vettee*
+* *la^RVs^RCe^SVtt^RLEN^SLEN>vettee*
+* *laas0ee0t00>vettee*
+* *cuozzâ^WG^RLEN>*
+* *cuo0zâ00>*
+* *vá^RVddu^CSH^RLEN>n*
+* *váá0du00>n*
+* *haavvâr^CSH^SVSH>ist*
+* *ha00vâr00>ist*
+* *pottáák^SC^CSH^SVSH>ist*
+* *po0t0ákk00>ist*
+* *kahhaan^CSH^SVSH>ân*
+* *ka0h0an00>ân*
 
 
+**RULE: tt:t  - final consonant and consonant gradation** = consonant gradation, and 3syll verbs in -tt lose t in front of cns-initial suff
 
+* *las^RCe^SVtt^CLEN^SLEN>*
+* *lassee0t00>*
 
+**RULE: nnj to nj shortening weak grade and consonant shortening** =  special rule, e.g. konnjâl -> konjâlân puánnjá
 
 
+**RULE: Word final consonant deletion                 ** = for vaskâm:vaaskâ
 
+* *va^RVskâm^FCD^RLEN*
+* *vaaskâ000*
+* *njuolgâd^FCD^RVSH*
+* *njuolgâ000*
 
 
+**RULE: Final m in stems, smm to sm  ** = 
 
 
+**RULE: Wordfinal consonants part 1**  e%^RVlâčč
+1)
+2)jurdâččmân:jurdâšmân ju%^RVrdâčč%^RLEN%>mân
+3)  šš>š in hárávušš>vetteđ 
 
 
+* *hárávušš>vetteđ*
+* *hárávu0š>vetteđ*
+* *konnjâl^CSH>ân*
+* *kon0jâl0>ân*
+* *suán^RCju^CLEN>n*
+* *suánnju0>n*
+* *haamit^SC^CSH^SVSH>ist*
+* *ha0mitt00>ist*
+* *su^RVkk4á^SV^WG^CLEN^SLEN>st*
+* *su0hháá000>st*
 
 
 
 
 
+### Consonant lengthening rules
 
 
 
+**RULE: Lengthening of half-long root consonant x:xx** =  riččá piiru piirrun niisu niissun
 
+**RULE: Lengthening of root consonant x:yy** =  consonant lengthening after WG - h:vv, p:vv, c:ss
 
+* *ka^RVss^RCa^SV^WG^CLEN^SLEN>st*
+* *ka0ss0aa000>st*
+* *va^RVh^RCe^SV^WG^CLEN^SLEN>st*
+* *va0vvee000>st*
+* *va^RVh^RCe^SV^CLEN^SLEN>n*
+* *va0hhee00>n*
 
+**RULE: Lengthening of consonant h5** =    this one does not fit into the general rule because of h5:h
 
+*TEST:*
+* *put^RCe^SVst^CLEN^SLEN>*
+* *putteest00>*
+* *ke^RVp^RCidm^CLEN^RLEN^SLEN>ân*
+* *keeppidm000>ân*
+* *kieh^RCâ^WG^CLEN^SVLOW>in*
+* *kievvá000>in*
+* *i^RVšš^RCe^SV^WG^CLEN^SLEN>st*
+* *i0šš0ee000>st*
+* *kol^RCe^CLEN>*
+* *kolle0>*
+* *kiel^RCâ^CLEN>n*
+* *kiellâ0>n*
 
 
+**RULE: č:ij part 1** =  
 
+**RULE: Lengthening root consonant j:ij 1** =  for saje:saijeen 
 
 
+**RULE: č:ij and j:ij part 2** =  
 
+*Tests:*
+* *sa^RVj^RCe^SV^CLEN^SLEN>n*
+* *sa0ijee00>n*
+* *pááj^RCá^CLEN>n*
+* *pááijá0>n*
+* *vaj^RCe^SVd^CLEN^SLEN>*
+* *vaijeed00>*
 
 
 
 
+**RULE: nj to nnj consonant lengthening** =  special rule, suánju : suánnjun for Par and Ess
 
 
 
+**RULE: Consonant lengthening after xx:x and xy:zy weak grade with x4 on upper side** =   k4, č, p4  kukse:kuvssijn  
 
 
+**RULE: Consonant lengthening xy:xyy ** = 
 
 
 
+### Stem consonant and suffix consonant rules
 
 
+**RULE: Assimilation of consonants t d š**  delet t in front of -ttáá, avoid -tttáá
 
+* *haamit>ttáá*
+* *haami0>ttáá*
 
 
 
+**RULE: Wordfinal consonants part 2**  e%^RVlâčč cummâlâhč:cummâlâhš
 
+**RULE: Final consonant x:xx** =  pottáák potákkân  
 
 
+**RULE: Clitic devoicing** =  for focus particle bá to pá after unvoiced stem cns.
 
+**RULE: Gerund devoicing ** =   dijn to tijn after stems in tšs
 
 
+## Vowel rules
 
+### First syllable vowel shortening rules
 
+*Tests:*
+* *koonnjâl^CSH>ân*
+* *ko0n0jâl0>ân*
+* *kappeer^CSH^SVSH>ist*
+* *ka0p0er00>ist*
+* *čäällim^CSH>ist*
+* *čä00lim0>ist*
+* *muusik^SC^CSH^RVSH>ist*
+* *mu0sikk00>ist*
+* *aarrân^CSH>ân*
+* *a00rân0>ân*
+* *kiirrâs^RVSH>ân*
+* *ki0rrâs0>ân*
 
 
 
+**RULE: Vowel shortening VV:V** = ráávhu- : rávhoid, käähir%^CSH%>id kuuđiâ%^RVSH%>žân
+1. svnlow
+1. čääci : čassijn
+1. kaamuv kammust
+1. pááppár : pápárân páápp4ár%^ÁI%^WG%^RVSH%>id
+1. pááppár : pápárân viijđás%^ÁE%^WG%^RVSH> 
+1. njääh^RCe^CLEN^RVSH> = njähhe>
+1. njääh^RCe^CLEN^RVSH> = njähhe>
 
 
+**RULE: Long vowel shortening** = (example?), no ^CSH, since that gives Vy:0
 
+**RULE: e:0 in passive** \\
 
 
+*Tests:*
+* *mááh^RCu^WG^CLEN^SVLOW>in*
+* *má0vvo000>in*
+* *mool^RCâ^WG^RVSH>ttáá*
+* *mo0l0â00>ttáá*
 
+**RULE: e:0 in passive** = special rule for getting ej̣ittáá instead of ej̣ittáá.
 
+**RULE: Underlying long vowel shortening iä:e and ää:ä or a** = čääh%^RCu2%^CLEN%^VBACK%>um
 
 
+3st stems viäskár veskirin, časkes časkes ča%^RVskas%^ÁE viäskár%^ÁI%^WG%^RVSH
 
+* *kaavpug^CSH^RVSH^SVSH>ân*
+* *ka0vpug000>ân*
 
 
 
+* *mool^RCâ^WG>*
+* *mool0â0>*
 
 
+* *käähir^WG>*
+* *käävir0>*
 
+* *juáh^RCu^WG^RVSH>ttáá*
+* *juáv0u00>ttáá*
 
 
 
 
 
+### First syllable vowel lengthening rules
 
+**RULE: Root vowel lenghtening in many stems** =  no rootvowel length if stem vowel lengthens and the consonantcentre consists of two or more consonants 
 
+* *kä^RVvnâst^WG^VBACK^RLEN>*
+* *kaavnâst000>*
 
+* *le^RVkk4â^WG^RLEN>*
+* *lee0hâ00>*
 
+* *he^RVrkkib^WG^RLENttáá*
+* *heer0kib00ttáá*
 
 
+* *nju^RVne^SV^WG^RLEN^SLEN>st*
+* *njuunee000>st*
 
 
 
+**RULE: Root vowel o5:u ** = 
 
 
 
 
+**RULE: Root vowel ä:ää lenghtening and diphthongisation e:iä** = special rule, for avoiding conflict spä%^RVi4lih%^WG%^RLEN, 
 
 
+**RULE: Root vowel o lengthening** =  alge : oolgijn 
 
+* *a^RVlge^WG^RLEN>id*
+* *oolgi00>jd*
 
 
 
+**RULE: Root vowel u lengthening with vowel change before suffix i** =  alge : oolgijn 
 
+* *mu^RVšti^WG^VHIGH^RLEN>j*
+* *muušti000>j*
+* *lo^RVh^RCá^WG^VHIGH^RLEN>im*
+* *luuv0á000>im*
+* *ku^RVlgâ^WG^VHIGH^RLEN>i3*
+* *kuulgâ000>i*
+* *hu^RVm^RCo^SVb^RVSH>ist*
+* *hu0m0o0b0>ist*
+* *hu^RVm^RCo^SVb^WG^RVSH^SVSH>ân*
+* *hu0m0o0b000>ân*
 
 
+### First syllable vowel change rules
 
+All instances of the same vowel alternation are in the same rule.
 
+a rules
 
+**RULE: Root vowel change a:o before suffix i and for contract verbs** =  alge : olgijn 
 
+**RULE: Root vowel o:u for contract verbs and Root vowel change o:u before suffix i** 
 
 
+* *tohhi2>đ*
+* *tuhhi>đ*
+* *lo^RVh^RCá^WG^VHIGH^RLEN>im*
+* *luuv0á000>im*
 
 
 
 
+### ä rules
 
+**RULE: Monophthongisation rule iä:ee 1** =  
+1)
 
+**RULE: iä:e rule 1 and second syllable Fleeting vowel before suffix        ** =  Note: many rules in one
 
 
 
+**RULE: iä:e and iä:ee rule 2 and Diphthongisation i5ä to ie** =  
 
+* *siämmu2>đ>*
+* *s0emmu>đ>*
 
 
 
 
+**RULE: Different rules for ä:a, first vowel (or only vowel)** =  čääci:čassijn, läbži:labžijn lään^RCi%>id
 
+* *njääh^RCi^WG^VBACK>i3*
+* *njaav0i00>i*
 
 
 
+**RULE: ää to aa, second vowel** =  á:o in pairs like kuátij -> koođij, säämi -> saamij čäällu%^VBACK%>m lään^RCi%>id
 
 
 
+**RULE: ää to áá and á0 in Illative and Sg3** =  ... for säämi > sáámán
 
 
 
+* *sääm^RCi^EA>n*
+* *sáám0á0>n*
 
 
+**RULE: äRV to áá in Illative and Sg3** =  ... for täsni -> táásnán
 
 
+* *tä^RVsni^EA^CSH^RLEN>n*
+* *táásná000>n*
 
+**RULE: Vowel lengthening äRV to aa ** =  äigi aaigijd
 
+* *sälkki2>đ>*
+* *salkki>đ>*
+* *sääm^RCi^WG>in*
+* *saam0i0>jn*
+* *sääm^RCi^WG>id*
+* *saam0i0>jd*
+* *stäävi2>đ>*
+* *staavi>đ>*
+* *stäävi2>j>*
+* *staavi>j>*
+* *stäävi2>i3>*
+* *staavi>i>*
+* *stäävi2>jeh>*
+* *stääve>jeh>*
+* *kä^RVvnâst^WG^VBACK^RLEN^SLEN>*
+* *kaavnâst0000>*
 
 
+#### á rules
 
+**RULE: Root vowel change for á to ä with i in second syllable** =  päävir , já%^RVhhá%^SVl%^ÁI%^WG%^RLEN>
 
 
+* *páápp4ár^ÁI^WG^RLEN*
+* *pää0vir000*
 
 
+**RULE: Root and stem vowel á:a for verbs** 
 
 
+* *pá^RVkk4u^VBACK>m>*
+* *pa0kku0>m>*
 
+* *pá^RVkk4u^WG^RLEN>im>*
+* *páá0hu00>im>*
 
 
+### á and uá rules
 
+**RULE: Monophthongisation rule uá:o0 part 2: Vowel shortening for uá ** =  for uábbi -> obbijn  čuál%^RCi%^WG%>in tuái4jâl%^CSH%^VBACK%^RVSH%>âm
 
 
+**RULE: Monophthongisation rule u:o and root vowel change u:o, special rule for olmooš and contract verbs** = 
 
+* *uái4nu2>đ*
+* *o0inu>đ*
 
 
+**RULE: Diphthong rule uá:uo and uá:oo, part 2** =  
 
 
 
+**RULE: Diphthongisation e to iä, part 1 ** =   
 
 
+**RULE: Root vowel aa:áá in C-stems with stemvowel u, part 1** =  ahhu:áhu
 
 
+**RULE: Root vowel aa:áá in C-stems with stemvowel u, part 2** =  ahhu:ááhu
 
 
 
 
 
+**RULE: ie to iä in Illative and Sg3 ** =  kiem´ni -> kiämnán, veerdi : viärdán peerru2%^CLEN%^VHIGH%^RVSH%>o
 
 
 
 
+**RULE: Diphthongisation uo:uá** =   
 
 
+**RULE: ye to uá and uo, part 1 ** =  Part 1 of ye to uá for kyeli : kuálán  
 
 
+**RULE: ye to uá, part 2** =  Part 2 of ye to uá for kyeli : kuálán
 
+* *kyel^RCi3^EA^CLEN>m*
+* *kuállá00>m*
 
+**RULE: ye to uo, part 2 ** =  Part 2 of ye to uá for kyeli : kuolijn
 
+**RULE: uá to ye and uo to ye, part 1 ** =  Part 1 luámmán : lyeme čuággás%^ÁI%^WG%^RLEN%>
 
+* *vuolle^CLEN>en*
+* *vyelle0>en*
 
+**RULE: uá to ye, part 2** =  Part 2 luámmán : lyeme
 
+**RULE: uo to ye, part 2** =  vyelleen, vyeleem,vyelih
 
 
 
 
+### Second syllable rules
 
+**RULE: Second syllable vowel change á to e or i in 3syll stems** = puttás- > putes, triggers are ^ÁE and ^ÁI já%^RVhhá%^SVl%^ÁI%^WG%^RLEN%> pu5árrás%^ÁI%^WG%>umos
 
+*Test:*
+* *puttás^ÁE^WG>*
+* *pu0tes00>*
 
+**RULE: Stemvowel shortening  áá and aa to e or i in 3syll** = puttás- > putes, triggers are ^ÁE and ^ÁI
 
+*Tests:*
+* *nahha^SVr^ÁE^WG^RLEN>*
+* *na0ve0r000>*
+* *nahha^SVr^ÁE^WG^RLEN*
+* *na0ve0r000*
 
 
 
+**RULE: Stem vowel e to a for a root vowel.** =  alge to aalgan
 
+*Tests:*
+* *a^RVlge^SV^EA^SLEN>š*
+* *a0lgaa00>š*
+* *a^RVlge^SV^EA^SLEN*
+* *a0lgaa00*
+* *a^RVlge^EA^CSH^RLEN>n*
+* *aalga000>n*
+* *va^RVh^RCe^SV^EA^CLEN^SLEN>m*
+* *va0hhaa000>m*
 
+**RULE: Stem vowel e to á for other root vowel** =  if e stem
 
+**RULE: Stem vowel i to á for other root vowel.** =  e.g. säämi > Ill sáámán 
 
+**RULE: Stem vowel i to â for other root vowel, as a common error.** =  e.g. säämi > Ill Err/Orth sáámân 
 
 
+**RULE: Stem vowel i to e in front of j** =  
 
 
 
+**RULE: Stem vowel â to a in Pl Nom -h** =  silbâ to siilbah  %^WG%^RLEN%>hlove%>h
 
 
+* *so^RVllâ^WG^RLEN>h*
+* *soo0la00>h*
 
+**RULE: Stem vowel â > á change before i** = sollâ to sooláid 
 
 
+* *so^RVllâ^WG^RLEN^SVLOW>in*
+* *soo0lá000>in*
 
 
 
@@ -4502,5801 +11033,98 @@ The previous two rules look marginal.
 
 
 
+**RULE: Stem vowel i3:0** = 
 
 
 
+**RULE: Stem vowel u:o change before suffix** =  
+2) 
 
 
+**RULE: Stem vowel u2:o change before suffix** =  
 
+* *uáinu>o*
+* *uáino>o*
 
 
 
 
+**RULE: Second vowel shortening** = eemeed : emedân, savvoon : savo 
 
+**Tests**
+* *kulluutt^SVSH>*
+* *kull0u0t0>*
+* *eemeed^CSH^SVSH>ân*
+* *e0m0ed00>ân*
+* *kappeer^CSH^SVSH>ân*
+* *ka0p0er00>ân*
 
+**RULE: Stem vowel:0 in front of â** = aiguu:aaigâ
 
 
+**RULE: Stem â deleting** = kandâ:kandii
 
 
 
+* *a^RVlgâi^FVD^WG^CLEN>i5*
+* *a0lg0i000>i*
 
+### Suffix vowel rules
 
+**RULE: Suffix vowel lengthening** = long á in kissáást, nuorâ : nuorááin, hyeni:hyeneest
 
 
+**Tests**
+* *ki^RVssá^SV^WG^CLEN^SLEN>st*
+* *ki0ssáá000>st*
+* *mi^RVllo^SV^WG^CLEN^SLEN>st*
+* *mi0lloo000>st*
+* *huksi^SVm^SLEN>ist*
+* *huksiim0>ist*
+* *táál^RCu^SV^WG^RVSH^SLEN^SVLOW>st*
+* *táál0oo0000>st*
 
+**RULE: Suffix i5:j for lexicon APINA** = salijn
 
 
+**RULE: Suffix i5:0 and i5ä:e** = *timotein oboen*, not *Chariliein*
 
 
+**RULE: Suffix i:j for i and e-stems** =  
 
 
+**RULE: Vowel copy in suffix** =  for imperative Sg3, at least
 
 
+### Suffix consonant rules
 
 
+**RULE: Adjective illative in -vân after u** =  
 
+**RULE: Shortening u for vân illative** =  
 
+## Other rules
 
+**RULE: Word final vowel deletion** = for vaskâm:vaaskâ
 
+*Tests:*
+* *sollâ^FVD>ii*
+* *soll00>ii*
 
+**RULE: Potential vowel shortening for contract verbs** =  -áážep becomes -áš etc.
 
 
 
+**RULE: Insertion of pleonastic hyphen** = for compounding of two vowels *stovli-ijâ*
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+*Tests:*
+* *skä^RVi4nâ^VBACK>đ*
+* *ska0inâ0>đ*
+* *hu^RVm^RCo^SVb^WG^RLEN^SLEN^RLEN^SLEN*
+* *huum0oob00000*
 * * *
-<small>This (part of) documentation was generated from [../src/cg3/valency.cg3](http://github.com/giellalt/lang-smn/blob/main/../src/cg3/valency.cg3)</small>
-
-
-
-
-
-
-# DELIMITERS 
-
-Sentence delimiters are the following: <.> <!> <?> <...> <¶>
-
-
-# TAGS AND SETS
-
-
-
-## Tags
-
-
-This section lists all the tags inherited from the fst, and used as tags
-in the syntactic analysis. The next section, **Sets**, contains sets defined
-on the basis of the tags listed here, those set names are not visible in the output.
-
-
-
-
-### Beginning and end of sentence
-BOS 
-EOS
-
-
-
-### Parts of speech tags
-
-N
-A
-Adv
-V
-Pron
-CS
-CC
-Po
-Pr
-Pcle
-Num
-Interj
-ABBR
-ACR
-CLB
-LEFT
-RIGHT
-WEB
-PUNCT 
-
-
-
-
-### Tags for POS sub-categories
-
-Pers
-Dem
-Interr
-Indef
-Recipr
-Refl
-Rel
-Coll
-NomAg
-G3
-Prop
-
-
-
-### Tags for morphosyntactic properties
-
-Nom
-Acc
-Gen
-Ill
-Loc
-Com
-Ess
-Sg
-Du
-Pl
-RCmpnd
-Cmpnd
-SgNomCmp
-SgGenCmp
-ShCmp
-PxSg1
-PxSg2
-PxSg3
-PxDu1
-PxDu2
-PxDu3
-PxPl1
-PxPl2
-PxPl3
-Comp
-Superl
-Attr
-Ord
-Qst
-IV
-TV 
-Prt
-Prs
-Ind
-Pot
-Cond
-Imprt
-ImprtII
-Sg1
-Sg2
-Sg3
-Du1
-Du2
-Du3
-Pl1
-Pl2
-Pl3
-Inf
-ConNeg
-Neg
-PrfPrc
-VGen
-PrsPrc
-Ger
-Sup
-Actio
-
-
-### Tags for clitic particles
-Foc/ge
-Foc/gen
-Foc/ges
-Foc/gis
-Foc/naj
-Foc/ba
-Foc/be
-Foc/hal
-Foc/han
-Foc/bat
-Foc/son
-
-
-### Derivation tags
-
-Der/PassL Der/PassS
-Der/NomAg
-NomAg
-Der/adda
-Der/ahtti
-Der/alla
-Der/asti
-Der/easti
-Der/d
-Der/eaddji
-Der/eamoš
-Der/amoš
-Der/geahtes
-Der/gielat
-Der/NuA (what is NuA?) 
-Der/h
-Der/heapmi
-Der/hudda
-Der/huhtti
-Der/huvva
-Der/halla
-Der/j
-Der/l
-Der/laš
-Der/las
-Der/hat
-Der/mállet
-Der/meahttun
-Der/muš
-Der/NomAct
-Der/st
-Der/stuvva
-Der/upmi
-Der/supmi
-Der/vuotâ
-Der/kyetti
-Der/lagan
-Der/lágán
-Der/lágaš
-Der/jagáš
-Der/jahkásaš
-Der/diibmosaš
-Der/dássásaš
-Der/A
-Der/Dimin
-Der/viđá
-Der/viđi
-Der/veara
-Der/duohke
-Der/duohkai
-Der/vuolle
-Der/vuollai
-Der/vuolde
-<vdic>
-
-
-### Semantic tags
-
-
-
-
-
-
-
-###  Syntactic tags
-
-@+FAUXV
-@+FMAINV
-@-FAUXV
-@-FMAINV
-@-FSUBJ>
-@-F<OBJ
-@-FOBJ>
-@-FSPRED<OBJ
-@-F<ADVL
-@-FADVL>
-@-F<SPRED
-@-F<OPRED
-@-FSPRED>
-@-FOPRED>
-@>ADVL
-@ADVL<
-@<ADVL
-@ADVL>
-@ADVL
-@HAB>
-@<HAB
-@>N
-@>Interj
-@N<
-@>A
-@P<
-@>P
-@HNOUN
-@INTERJ
-@>Num
-@Pron<
-@>Pron
-@Num<
-@OBJ
-@<OBJ
-@OBJ>
-@OPRED
-@<OPRED
-@OPRED>
-@PCLE
-@COMP-CS<
-@SPRED
-@<SPRED
-@SPRED>
-@SUBJ
-@<SUBJ
-@SUBJ>
-@PPRED
-@APP
-@APP-N<
-@APP-Pron<
-@APP>Pron
-@APP-Num<
-@APP-ADVL<
-@VOC
-@CVP
-@CNP
-@X
-
-
-
-
-
-## Sets containing sets of lists and tags
-
-This part of the file lists a large number of sets based partly upon the tags defined above, and 
-partly upon lexemes drawn from the lexicon.
-See the sourcefile itself to inspect the sets, what follows here is an overview of the set types.
-
-
-
-### Sets for Single-word sets
-
-OKTA and go, and the set INITIAL for initial letters 
-OKTA
-go
-INITIAL
-
-
-### Sets for word or not
-
-WORD
-REAL-WORD
-REAL-WORD-NOT-ABBR
-WORD-NOT-de
-NOT-COMMA
-
-
-### Derivational affixes
-
-DER-V
-
-DER-N
-
-DER-A1
-
-DER-A
-
-A-V
-
-A-NOT-V
-
-### Case sets
-
-ADLVCASE
-
-
-CASE-HALFAGREEMENT
-CASE-AGREEMENT
-CASE
-
-NOT-NOM
-NOT-GEN
-NOT-ACC
-
-### Verb sets
-
-
-NOT-V
-
-### Sets for finiteness and mood
-
-REAL-NEG
-
-MOOD-V
-
-GC
-
-VFIN
-
-VFIN-POS
-
-VFIN-NOT-IMPRT
-
-VFIN-NOT-NEG
-
-NOT-PRFPRC
-
-
-### Sets for person
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Sets consisting of forms of "leđe" (these ones need to be rewritten)
-
-
-
-
-### Pronoun sets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Adjectival sets and their complements
-
-
-
-
-
-
-
-
-
-### Adverbial sets and their complements
-
-
-
-
-
-
-
-
-
-
-### Sets for coordinators
-
-
-
-
-
-
-
-
-### Sets for adverbs that have lookalikes
-Here come some adverbs that have identical twins in other POS. 
-If these are found in Adv contexts, we treat them as adverbs.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Sets of elements with common syntactic behaviour
-
-
-### Sets for verbs
-
-
-V is all readings with a V tag in them, REAL-V should
-be the ones without an N tag following the V.  
-The REAL-V set thus awaits a fix to the preprocess V ... N bug.
-
-
-
-* The set COPULAS is for predicative constructions
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-TRANS-V is the set for verbs really taking objects
-
-
-
-
-* Sets for verbs choosing oblique objects or adverbials
-* **STVLIST** is the list of strictly transitive verbs. In the rules, refer not to STVLIST, but to the set STV defined below.
-
-
-
-STRICT-TRANS-V is the set for verbs which don't let a GenAcc be a modifier of anything else than an object, e.g. Mun organiseren eatni gievkkanis. - eatni wants to be the object
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Valency sets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* **PLACE-V** Those get only not locative if the target is a member TOOL, ABSTR-TOOL or ANIMATE or CONCEPT. Selects more locatives than ONLY-PLACE-LOC-V 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Adverb sets
-
-
-
-
-
-
-
-
-
-### Adjective sets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### NP sets defined according to their morphosyntactic features
-
-
-
-
-
-
-
-
-
-
-### The PRE-NP-HEAD family of sets
-
-These sets model noun phrases (NPs). The idea is to first define whatever can
-occur in front of the head of the NP, and thereafter negate that with the
-expression **WORD - premodifiers**.
-
-
-
-
-
-
-
-
-
-
-
-The set **NOT-NPMOD** is used to find barriers between NPs.
-Typical usage: ... (*1 N BARRIER NPT-NPMOD) ...
-meaning: Scan to the first noun, ignoring anything that can be
-part of the noun phrase of that noun (i.e., "scan to the next NP head")
-
-
-
-
-
-
-### Other negatively defined morphosyntactic noun sets
-
-
-
-
-
-
-
-
-
-
-
-
-### Noun sets
-
-Nominal sets defined according to their morphophonological properties
-Sets for lexeme homonymy (most of them are moved to where the actual rules are.)
-
-
-The words in the set **N-PO** can be both N and Po, the set takes that into account.
-
-
-### The LAHKA set family
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Nominal sets defined according to their semantical properties
-
-
-* Spatial noun sets. These nouns behave like postpositions
-
-
-
-
-* Time sets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* Amount sets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* Sets for nouns with morpho-syntactic preferences
-
-* Number-related sets
-
-
-
-
-
-
-* Sets for case, possessive, etc.
-
-
-
-
-
-
-
-
-
-
-
-
-
-* Sets for nouns as pred
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* Sets for animals
-
-
-
-
-
-
-
-
-
-
-
-
-
-* Sets for things
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* Sets for qualities
-
-
-* Sets for things, not necessarily tools
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* Sets for things such that people can be inside them:
-
-* Sets for things such that people cannot be inside them:
-
-
-
-
-
-
-* Part-whole sets for human
-
-
-
-
-* Sets for places
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* Sets that can both be buildings/places and represent humans
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* Sets denoting relations
-
-
-
-
-
-### Miscellaneous sets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Border sets and their complements
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Multilingual sets
-
-
-Conjunction sets
-
-
-
-### Syntactic sets
-
-ALLSYNTAG
-NON-APP
-
-*These were the set types.*
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/cg3/introdisambiguation.cg3](http://github.com/giellalt/lang-smn/blob/main/../src/cg3/introdisambiguation.cg3)</small>
-I N A R I   S A A M I   D I S A M B I G U A T O R               
-==================================================================
-
-
-
-
-
-
-# DELIMITERS 
-
-Sentence delimiters are the following: <.> <!> <?> <...> <¶>
-
-
-# TAGS AND SETS
-
-
-
-## Tags
-
-
-This section lists all the tags inherited from the fst, and used as tags
-in the syntactic analysis. The next section, **Sets**, contains sets defined
-on the basis of the tags listed here, those set names are not visible in the output.
-
-
-
-
-### Beginning and end of sentence
-BOS 
-EOS
-
-
-
-### Parts of speech tags
-
-N
-A
-Adv
-V
-Pron
-CS
-CC
-CC-CS
-Po
-Pr
-Pcle
-Num
-Interj
-ABBR
-ACR
-CLB
-LEFT
-RIGHT
-WEB
-QMARK
-PPUNCT 
-
-PUNCT
-
-COMMA
-¶
-
-
-
-### Tags for POS sub-categories
-
-- Pers
-- Dem
-- Interr
-- Indef
-- Recipr
-- Refl
-- Rel
-- Coll
-- NomAg
-- Prop
-- Arab
-- Romertall
-- URL
-
-### Tags for morphosyntactic properties
-
-**Case:**
-- Nom
-- Acc
-- Gen
-- Ill
-- Loc
-- Com
-- Ess
-- Par
-- Sg
-- Du
-- Pl
-
-**Compounding:**
-- Cmp - a compound
-- Cmp/SplitR
-- Cmp/SgNom Cmp/SgGen
-- Cmp/SgGen
-- Cmp/Attr
-- Cmp/Hyph
-
-**Possessives:**
-- PxSg1
-- PxSg2
-- PxSg3
-- PxDu1
-- PxDu2
-- PxDu3
-- PxPl1
-- PxPl2
-- PxPl3
-- Px - all of the above in one list
-
-**Adjectival features:**
-- Comp
-- Superl
-- Attr
-- Ord
-
-Qst
-IV
-TV 
-Prt
-Prs
-Ind
-Pot
-Cond
-Imprt
-
-**Person and Number:**
-- Sg1
-- Sg2
-- Sg3
-- Du1
-- Du2
-- Du3
-- Pl1
-- Pl2
-- Pl3
-
-**Verb features:**
-- Inf
-- ConNeg
-- Neg
-- PrfPrc
-- VGen
-- PrsPrc
-- Ger
-- Sup
-- Actio
-- VAbess
-
-### Tags for clitic particles
-
-- Foc/ba
-- Foc/baa
-- Foc/baan
-- Foc/ban
-- Foc/be
-- Foc/gas
-- Foc/ge
-- Foc/gen
-- Foc/ges
-- Foc/gis
-- Foc/gin
-- Foc/go
-- Foc/han
-- Foc/kin
-- Foc/nii
-- Foc/sun
-- Foc/uv
-
-
-### Derivation tags
-
-* Der/PassL Der/PassS smn Der/Pass
-* Der/NomAg
-* NomAg
-* Der/AAdv
-* Der/ag
-* Der/ahasas
-* Der/adda
-* Der/alla
-* Der/Car
-* Der/Caus
-* Der/d
-* Der/Dimin
-* Der/InchL
-* Der/ivvaas
-* Der/l
-* Der/laakan
-* Der/lasj
-* Der/mas
-* Der/NomAct
-* Der/sasj
-* Der/st
-* Der/t
-* Der/tt
-* Der/taa
-* Der/upmi
-* Der/vualasas
-* Der/vuota
-
-`<vdic>`
-
-
-Err/Orth
-
-
-
-### Semantic tags
-
-
-HUMAN
-
-HAB-ACTOR
-HAB-ACTOR-NOT-HUMAN
-
-
-
-PROP-ATTR
-PROP-SUR
-
-
-
-TIME-N-SET
-NOT-TIME
-TIME-N
-
-
-
-###  Syntactic tags
-
-- `@+FAUXV	 `
-- `@+FMAINV	 `
-- `@-FAUXV	 `
-- `@-FMAINV	 `
-- `@-FSUBJ>	 `
-- `@-F<OBJ	 `
-- `@-FOBJ>	 `
-- `@-FSPRED<OBJ`
-- `@-F<ADVL	 `
-- `@-FADVL>	 `
-- `@-F<SPRED	 `
-- `@-F<OPRED	 `
-- `@-FSPRED>	 `
-- `@-FOPRED>	 `
-- `@>ADVL`
-- `@ADVL<`
-- `@<ADVL`
-- `@ADVL>`
-- `@ADVL `
-- `@HAB> `
-- `@<HAB `
-- `@>N		 `
-- `@Interj	 `
-- `@N<		 `
-- `@>A		 `
-- `@P<		 `
-- `@>P		 `
-- `@HNOUN	 `
-- `@INTERJ	 `
-- `@>Num	 `
-- `@Pron<	 `
-- `@>Pron	 `
-- `@Num<	 `
-- `@OBJ		 `
-- `@<OBJ	 `
-- `@OBJ>	 `
-- `@OPRED	 `
-- `@<OPRED	 `
-- `@OPRED>	 `
-- `@PCLE	 `
-- `@COMP-CS< `
-- `@SPRED	 `
-- `@<SPRED	 `
-- `@SPRED>	 `
-- `@SUBJ	 `
-- `@<SUBJ	 `
-- `@SUBJ>	 `
-- `SUBJ		 `
-- `SPRED	 `
-- `OPRED	 `
-- `@PPRED	 `
-- `@APP		 `
-- `@APP-N<	 `
-- `@APP-Pron<`
-- `@APP>Pron `
-- `@APP-Num< `
-- `@APP-ADVL<`
-- `@VOC		 `
-- `@CVP		 `
-- `@CNP		 `
-- `OBJ		 `
-- `<OBJ		 `
-- `OBJ>		 `
-- `<OBJ-OTHERS`
-- `OBJ>-OTHERS`
-- `SYN-V`
-* `@X`
-
-
-
-
-
-## Sets containing sets of lists and tags
-
-This part of the file lists a large number of sets based partly upon the tags defined above, and 
-partly upon lexemes drawn from the lexicon.
-See the sourcefile itself to inspect the sets, what follows here is an overview of the set types.
-
-
-
-### Sets for Single-word sets
-
-OKTA and go, and the set INITIAL for initial letters 
-go
-INITIAL
-
-
-### Sets for word or not
-
-WORD
-REAL-WORD
-REAL-WORD-NOT-ABBR
-WORD-NOT-de
-NOT-COMMA
-
-
-### Derivational affixes
-
-DER-V
-
-DER-N
-
-DER-A1
-DER-A
-
-A-V
-
-A-NOT-V
-
-
-
-
-
-
-### Case sets
-
-ADLVCASE
-
-
-CASE-HALFAGREEMENT
-CASE-AGREEMENT
-CASE
-
-NOT-NOM
-NOT-GEN
-NOT-ACC
-
-### Verb sets
-
-
-NOT-V
-
-### Sets for finiteness and mood
-
-REAL-NEG
-
-MOOD-V
-
-GC
-
-VFIN
-
-VFIN-POS
-
-VFIN-NOT-IMPRT
-
-VFIN-NOT-NEG
-
-NOT-PRFPRC
-
-
-### Sets for person
-
-
-SG1-V
-SG2-V
-SG3-V
-DU1-V
-DU2-V
-DU3-V
-PL1-V
-PL2-V
-PL3-V
-
-POSITIVE-V
-
-
-
-
-
-### Sets consisting of forms of "leđe" (these ones need to be rewritten)
-
-
-
-
-### Pronoun sets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Adjectival sets and their complements
-
-
-
-
-
-
-
-
-
-### Adverbial sets and their complements
-
-
-
-
-
-
-
-
-
-
-### Sets for coordinators
-
-
-
-
-
-
-
-
-
-### Sets for adverbs that have lookalikes
-Here come some adverbs that have identical twins in other POS. 
-If these are found in Adv contexts, we treat them as adverbs.
-
-
-
-
-
-### Sets of elements with common syntactic behaviour
-
-
-### Sets for verbs
-
-
-V is all readings with a V tag in them, REAL-V should
-be the ones without an N tag following the V.  
-The REAL-V set thus awaits a fix to the preprocess V ... N bug.
-
-
-
-* The set COPULAS is for predicative constructions
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-TRANS-V is the set for verbs really taking objects
-
-
-
-
-* Sets for verbs choosing oblique objects or adverbials
-* **STVLIST** is the list of strictly transitive verbs. In the rules, refer not to STVLIST, but to the set STV defined below.
-
-
-
-STRICT-TRANS-V is the set for verbs which don't let a GenAcc be a modifier of anything else than an object, e.g. Mun organiseren eatni gievkkanis. - eatni wants to be the object
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Valency sets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* **PLACE-V** Those get only not locative if the target is a member TOOL, ABSTR-TOOL or ANIMATE or CONCEPT. Selects more locatives than ONLY-PLACE-LOC-V 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Adverb sets
-
-
-
-
-
-
-
-
-
-### Adjective sets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### NP sets defined according to their morphosyntactic features
-
-
-
-
-
-
-
-
-
-### The PRE-NP-HEAD family of sets
-
-These sets model noun phrases (NPs). The idea is to first define whatever can
-occur in front of the head of the NP, and thereafter negate that with the
-expression **WORD - premodifiers**.
-
-
-
-
-
-
-
-
-
-
-The set **NOT-NPMOD** is used to find barriers between NPs.
-Typical usage: ... (*1 N BARRIER NOT-NPMOD) ...
-meaning: Scan to the first noun, ignoring anything that can be
-part of the noun phrase of that noun (i.e., "scan to the next NP head")
-
-
-
-
-
-
-### Other negatively defined morphosyntactic noun sets
-
-
-
-
-
-
-
-
-
-
-
-
-### Noun sets
-
-Nominal sets defined according to their morphophonological properties
-Sets for lexeme homonymy (most of them are moved to where the actual rules are.)
-
-
-The words in the set **N-PO** can be both N and Po, the set takes that into account.
-
-
-
-### Nominal sets defined according to their semantical properties
-
-
-* Spatial noun sets. These nouns behave like postpositions
-
-
-
-
-* Time sets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* Amount sets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-OKTA
-
-
-
-
-* Sets for nouns with morpho-syntactic preferences
-
-* Number-related sets
-
-
-
-
-
-
-* Sets for case, possessive, etc.
-
-
-
-
-
-
-
-
-
-
-
-
-
-* Sets for nouns as pred
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* Sets for animals
-
-
-
-
-
-
-
-
-
-
-
-
-
-* Sets for things
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* Sets for qualities
-
-
-* Sets for things, not necessarily tools
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* Sets for things such that people can be inside them:
-
-* Sets for things such that people cannot be inside them:
-
-
-
-
-
-
-* Part-whole sets for human
-
-
-
-
-* Sets for places
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* Sets that can both be buildings/places and represent humans
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* Sets denoting relations
-
-
-
-
-
-### Miscellaneous sets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Border sets and their complements
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Syntactic sets
-
-ALLSYNTAG
-
-*These were the set types.*
-
-
-# RULE SECTION
-Here follow the rules.
-
-
-
-This is the first section. Here we put safe rules with no or minimal context.
-
-## Removing unwanted names
-
-
-
-## Numbers
-
-Ruleset for numbers from sme, and adjusted.
-
-
-
-
-
-
-
-
-
-
-
-
-* **SemID** Strange number is ID.
-
-* **Insertwww** Inserts the Sem/Adr tag to all url expressions
-
-* **ArabNom** says that sentence-initial Arabic numeral is Nom unless followed by Po
-
-* **Arab1** says that "1" is Nom, look at this
-
-* **ArabNomPlc** gives Nom tu numerls following placenames
-
-* **Arab** rule for Apertium
-
-
-* **mustalid** adds <vdic> to language of telling and quoting, like: ... dadjá Aili Kestkitalo.
-
-
-* **PlcSur1** The Linda Englad rule: name is Sur not Plc if having a surname
-
-* **PlcSur2**
-
-
-* **PlcSur4**
-
-
-## Focus clitics
-* **Qst** removes Foc/uv if Qst and "?" at the ende of the sentence
-* **FocUv** is the revert rule, it removes  Qst for Foc/uv if there is no "?"
-
-* **NoWackern** says that if the word is not number 2 in the sentence it is not Foc (todo: phrase level, not word)
-
-
-
-## SECTION 2, more context
-
-
-## Numerals
-
-
-* **NumRom** in beginning of sentence
-
-* **sasjnum** chooses num gen to the left of sâš
-
-
-* **NotOrdIfABBR**
-
-
-
-## Imperatives
-
-See also *Imprt or Ind* some sections down.
-
-
-### 
-
-
-* **NotUvImprt** here it is adverb etc.
-
-* **NotImprtAfterLede** removes Imprt if leđe one to the left
-
-* **ImprtInit** selects sentence-initial imperative when followed by Ill
-
-
-* **ImprtDál** 
-
-
-* **ImprtComma** 
-
-* **ImprtNotVGen**
-
-* **NotImprtInd** 
-
-* **NotImprtConNeg** 
-
-* **NotImprtA** 
-
-* **NotImprtN** 
-
-
-* **NotImprtVFIN** 
-
-
-
-
-
-
-
-
-
-## Lexicalised derivations
-
-
-
-
-
-* **derN** removes DER-N if lexicalised non-essives
-
-
-
-* **derA** removes DER-A if lexicalised A
-
-* **derAdv** removes DER-Adv if lexicalised Adv
-
-* **derPass** removes DER-PASS if lexicalised V
-
-* **derV** removes DER-V if lexicalised V,
-
-
-
-
-
-### Particular verbs
-
-
-
-
-
-* **PrsPrcIfA**
-
-
-
-
-
-
-
-## Propernouns
-
-###  Removing or selecting proper nouns that are lookalikes
-
-
-
-*Removes **PropPl**, but problems with names as Davviriikkaid Ráđi, there we want Prop Pl
-
-
-* **PronNotProp**
-
-
-
-* **PropAttrIfPropx** removes Attr if no Prop on the right side
-
-* **PropInsideProp** Selects Prop if capital letter inside clause
-
-
-* **PropAttr** Removes (Prop Attr), but not if to the right is Prop or Ord OR ABBR 
-
-* **PropSur** Selects (Prop Sem/Sur) if finite verb to the left. Immediately to the right is Sem/Fem OR Sem/Mal
-
-
-* **r**
-
-
-
-
-* **PropAttr1** Selects Attr if you are Sem/Fem OR Sem/Mal, Sem/Sur or INITIAL and to your right is Prop which is Sem/Fem OR Sem/Mal or Sem/Sur 
-
-
-
-
-
-
-
-
-
-### MISC
-
-
-
-
-der
-
-*Removes **derNEss** if lexicalised, and both nouns are essive.
-
-
-
-
-
-
-
-
-## Verbs
-
-* DADJAT wants illative
-
-
-* **vazzid** chooses väzziđ when Ill or čoođâ to the right --  vazzâđ venytellä vs. väzziđ kävellä
-
-
-## Adjectives or nouns
-
-
-
-## Adjectives, nouns, not adverbs
-
-* **Aifeambbo** selects A after eambbo
-
-
-
-## Subjunctions
-
-Conjunctions
-
-
-
-## Adverbs
-
-### Adverbs or postpositions
-
-### Adverbs or nouns
-
-
-### Specific adverbs
-
-###  buoh
-* IFF **buotAdv** : buot Adv in front of Superl ok smn
-
-
-* **mannelTimeAdv** golbma jagi maŋŋel
-
-
-* **oovtast**
-
-* **AdvSTV** váldit mielde, oahppat bajil. eará? STRICT-TRANS-V is too strong
-
-
-* **pyereest**
-
-
-* **miätáV**  
-
-
-
-
-* **oddasitAdv**
-
-
-
-
-
-* **oktanAdv**
-
-* **ovttasAdv**
-
-
-
-* **oktiiAdv** select
-
-
-
-
-
-
-* **ollasitAdv** selects
-
-
-
-* **Adverbs and not Nouns**
-
-- uáli
-
-Adverbs and not Pronouns
-
-* **siste** is adv
-
-
-
-## Pronouns 
-
-
-* **recipr, reciprPl** select Recipr
-
-
-
-
-
-### Nouns, not verbs
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-puáttiđ, not pađđeeđ (Prt: Sg3 poođij, Du1 poođijm, Du2 poođijd, Du3 poođijn, Pl1 poođijm, Pl2 poođijd)
-* puáttiđ = tulla, pađđeeđ =käyttäytyä_levottomasti_(vasovasta_vaatimesta)
-* We will make rules for pađđeeđ when we see examples of its use.
-
-
-
-### Lexical selection - nouns
-
-
-
-
-
-### Remove Imperative
-
-* Some brave rules for removing Imprt
-
-
-
-
-
-
-
-
-
-
-
-### Verb or Noun?
-
-
-
-
-
-
-
-
-
-
-* **datPers** selects Pers. I made it stronger than it was. ref. r897 in sme-dis.rle
-
-
-
-## Px constraints 
-
-### PX Number
-
-
-
-
-### From sme	
-
-
-First select Px, then remove all remaining Px
-
-* Set with adjectives, which are documented to have Px in our corpus
-
-* **PxAlone** Remove Px if it is only word in the sentence, and not a typical px-term
-
-
-
-
-
-* **NPxPrfPrc** Remove Px if PrfPrc with  leat to the left
-
-
-* Nouns: **NomPxSg1** (not Ess) as the only word in a sentence. Needs no disambiguation.
-
-
-* Nouns:  **AccPxSg1** after a TV verb. Exception for Aux.
-
-
-* Nouns:  **AccPxSg1** after a TV Inf verb.
-
-
-* **PxSg1LocAcc** is Acc to the right.
-
-* **PxSg1Acc** is Acc to the right.
-
-
-* coordination **PxSg1coord** 
-
-* **PxSg1coordLast** for the last word of a coordination
-
-
-* **PxSg2AccImprt** if  TV Imprt to the left
-
-* **PxSg2AccPrfPrc** after PrfPrc 
-
-* **NotPxSg2** if no Sg2 
-
-
-* Nouns: **PxSg3AccPrfPrc** if PrfPrc and Sg3 to the left
-
-
-
-
-
-
-
-*  **PxSg3GenPo2** in front of Po, to the left of the owner
-
-
-
-* **PxGenNorPo**  
-
-
-
-
-* **PXAccCoor**  
-
-
-
-* **PxSgIllPx**  
-
-
-
-
-
-
-
-
-We end section 2 by removing all remaining Px
-
-* **KillPx** removes all remaining Px readings
-
-
-
-* **NotVGenIfDer** removes VGen if 0 = Der/Pass or Der...(r947)
-
-
-* **NotImprtIfAttrLeft** removes Imprt after attribute
-
-* **NotImprtIfRel** removes Imprt after Rel, unify this with other left context (r948)
-
-
-
-
-* **VSg1IfLeftMun** selects Sg1 when "mun" is to the left (r949)
-
-
-
-
-* **VSG1IfRightMun** selects Sg1 when "mun" is to the right (r950)
-
-
-### Sg2 - early cycle, safe rules
-
-
-* **VSG2IfLeftDon** selects Sg2 when "tun" is to the left (r951)
-
-
-
-* **VSG2IfRightDon** selects Sg2 when "tun" is to the right (r952)
-
-
-### Sg3 - early cycle, safe rules
-
-* **VSG3IfLeftSon** selects Sg3 when "sun" is to the left (r954)
-
-* **VSG3IfRithgSon** selects Sg3 when "sun" is to the right (r954)
-
-* **VNotSg3When12Left** removes Sg3 if 12 Pron immediate left (r955)
-
-
-* **NegSg3BeforeFoc** selects Neg before Foc/ge or ConNeg (r959)
-
-* **vfin** removes verb reading when the reading should be noun  
-
-
-
-
-
-
-
-* **VDu1IfMoaiLeft** selects Du1 when "moai" left (r960)
-
-* **VDu1IfMoaiRight** selects Du1 when "moai" right (r961)
-
-
-
-### Pl3 - early cycle, safe rules
-
-Select...
-
-* **r976** SE V Pl1 if *-1 SII
-
-
-
-
-* **r982** removes Prt Sg2 if Pl3 subject - 6002
-
-
-* **VPl3Lookalikes** removes "verbs" like "mane" and "peri" (r984) - 274
-
-* **VSg3Lookalikes** removes "verbs" like "skuvlii" 
-
-
-OBS: denne er ikke helt bra
-
-
-
-
-
-
-
-
-
-
-
-
-
-* **NPlbeforeRel, NSgbeforeRel** select N in front of Rel and MO
-
-## Adjectives and adverbs
-
-### Adv or not?
-maid has many readings and as Rel it is a member of S-BOUNDARY. Therefore we need to disambiguate it early in this file. Most important is to select Adv. Because of that A and N still can have Vfin readings, it is difficult to make very general rules.
-
-* **vaikkomii** was an IFF rule, but we weaken it to SELECT
-
-
-
-
-
-* **Interj** or not
-
-
-
-* **comparAdv**
-
-
-
-
-
-
-
-* **AttrABBRNum**
-
-
-
-
-
-
-
-* **PoParantes** selects Po after paranteces
-
-
-
-* **PrGen1** selects Pr
-
-* **PrGen2** selects Pr
-
-
-* **PrNoCompl** removes Pr if no complement to the right	
-
-
-* **PoGen** selects Po
-
-
-
-
-* **vuollaiPo** selects
-
-
-
-* **gaskkasPo** selects
-
-
-
-* **NwhenPo** removes N if Po
-
-
-
-
-
-* **compNomHead** NP-HEAD-NOM (ADVL) go NP-HEAD-NOM (ADVL). VFIN-NOT-IMPRT pga manglende disamgiguering
-
-
-* **compMisc** go geassebuođut, go dán áigge
-
-
-* **compCoord** coordination	
-
-* **compCoordAttr** coordination again, now with Attr. Speacial rule because of that Attr also has other readings.	
-
-* **compInf** 
-
-* **compInfCoor** 
-
-
-
-* **killAllnotComp** Removes analysis which are not @COMP-CS<
-
-*
-
-
-
-
-# MAPPING OF CC AND CS
-
-Mostly we map both @CNP and @CVP, then we select @CNP, after that we remove them so @CVP remains
-
-* **cnpCompSC** Map @CNP if @COMP-CS< or COMPAR ahte
-
-* **cnpCompSpec** special rule because of PrfPrc = VFIN
-
-* **CSasCNPCVP** Map some CSs both @CNP @CVP
-
-* **CSasCVP** Map @CVP to CS
-
-* **CCasCNPCVP** Map (@CNP @CVP) to CC
-
-* **ahteCNP** ahte CC @CNP, remove the rest
-
-* **killAllahtenotCS** All other occurrences of "et" are CSs.
-
-* **vaiCCCNP** vai as CC or CS
-
-* **vaiCC** remove vai as CC 
-
-* **vaiCCNegQst1** vai CC @CVP before Neg or question
-
-* **vaiCCNegQst2** vai CC @CNP in question about two alternatives
-
-
-
-* **killAllvainotCSCVP** Select all vai CS @CVP	
-
-
-* **CVPNPron** No finite verb or verbalactivity in front N/Pron @CNP N/Pron	
-
-
-* **CVPnoVfin** No potential finite verb following
-
-* **CVPnoVfin** Infitive following
-
-
-* **CVPInfInf** between to Inf
-
-* **CVPadvladvl** between to ADVL
-
-
-* **CVPAdvAdv** between to Adv
-
-
-* **CVPActioNom** 
-
-
-
-
-
-
-
-* **CVPnoVfinAdvl** No finite verb in front ADVLCASE @CNP ADVLCASE	
-
-
-
-
-* **CVPMiella**
-
-
-
-* **CVPAdvNom** Nom @CNP Adv Nom	
-
-
-
-
-
-* **CVPAccAdv** Acc @CNP Adv Acc	
-
-* **CVP**
-
-* **CS**
-
-
-* **killAllCNP** removes all remaining @CNP
-
-* **XCC-CS** removes CC and CS with no synttag
-
-
-
-
-* **Interr** selects interrogative pronouns in questions
-
-* **InterrIfPot** selects interrogative pronouns in potential sentences, and after that we remove the remaining Interr
-
-
-* **munPl3** removes Pron Pers Pl3 if there is no verb agreement
-
-* **Rel** selects Rel
-
-* **RelSg1, RelSg2** select Rel
-
-* **RelPl** selects Rel
-
-* **RelPl** removes Rel
-
-
-
-
-## Numerals
-
-* **NumAccCurrency** Selects (Num Acc)	
-
-* **NumNom** Selects (Num Nom) 
-
-* **NumNomCoord** Selects (Num Nom) 
-
-* **r1082** Selects (Num Nom) 
-
-* **year** Selects (Num Gen)
-
-* **numunit** Selects (Num Gen) + NUMUNIT 
-
-* **NumGenPo** Selects Gen if you are Num and there is a Gen following the first Gen to the right *gávcci máná njuni ovddas* 
-
-* **jagiGen**
-
-* **Locattr**
-
-* **Illattr**
-
-* **LocIllattr**
-
-* **numPlAccn**
-
-
-
-* **WWNumOrdIllAttr** selects Ill Attr and Loc Attr for numerals and ordinals
-
-
-* **WWNumOrdAttr**
-
-* **galleIndef**
-
-* **galleIndef**
-
-* **galleNum**
-
-
-* **nubbiGen**
-
-* **nubbiIndef**
-
-
-* **nubbiOrd**
-
-* **nubbiOrdManu**
-
-
-* **nubbiOrdSuperl**
-
-* **nnubbiIndefIll**
-
-* **nnubbiOrdLex**
-
-* **nnubbiIndefOkta**
-
-* **nnubbiOrdEss**
-
-* **nnubbiIndefAcc**
-
-
-
-* **nnubbiAttr**
-
-* **nKillnubbiOrd**
-
-
-
-## Indefinite pronouns
-The rules are not documented yet
-
-* **mihheen** attr if neg + mihheen + NP
-
-
-* **IndefAttr2** Selects (Indef Attr) 
-
-* **IndefAttr3** Selects (Indef Attr)
-
-
-
-* **NoAttr** Removes Attr if you are Pron and first one to your right is (Pron Rel)	
-
-* **NoIndefAttr** Removes (Indef Attr) if first one to the right is (Pron Pers Loc)
-
-* **NoIndefGen** Removes (Pron Gen Indef) or (Pron Acc Indef) if intransitive mainverb to the left and end of sentence to the right *muhto gávdnojit maid eará*
-
-
-
-
-* **IndefNotAdv**
-
-
-* **IndefNotAdvL**
-
-
-* **MiiPl**
-
-
-
-
-* **DemSgNom** selects Dem Nom Sg if VFIN Sg3
-
-
-
-
-* **sierraAAttr**
-
-
-
-* **Comp** rules select Comp A
-
-
-
-
-
-
-
-* **AdvManimus** 
-
-
-
-* **AttrAdv** 
-
-* **Cmp/SplitRA**
-
-* **CopANom** 
-
-
-* **ANom**  removes A Nom
-
-* **AAttr**  selects A Attr
-
-* **OrdAttr**
-
-
-* **AdvN** removes Adv   
-
-* **AAttrPunct**    
-
-
-
-* **AttrTIME**    
-
-* **AAttrCoord1** coordination, first part
-
-* **AAttrCoord2** coordination, first part
-
-* **PrfPrcCoordA** selects PrfPrc in coordination with an A
-
-
-
-
-
-
-
-
-* Remove Nom, Acc and Gen if Comp
-
-
-
-
-* **APlNomafterCop** selects A Pl Nom after copulas and Pl Nom OR Pl Pron
-
-* **APlNomafterCop2** selects A Pl Nom after copulas and Pl Nom OR Pl Pron
-
-* **APlNomafterDu** selects A Pl Nom after copulas and Du
-
-* **ASgNomNoSubj** selects A Sg Nom after copulas Sg3 or Neg Sg3
-
-* **ASgNomafterCop** selects A Sg Nom after copulas and Sg Nom, not so strong constraint for the target
-
-
-* **ASgNomEssCopNeg** selects A Sg Nom after copulas Sg3 or Neg Sg3s, 
-
-
-* dsfa
-
-* **AcompGo** Selects (A Comp Nom) even if there is no verb (ellipse)
-
-* **Wr1775xc** Selects (A Sg Nom) if you are (N Sg Loc), Der/NomAg or (NN A). Copulas is to the left. EOS or CLB is to the right
-
-* **Wr1776xc** selects (A Sg Nom) 
-
-* **Wr1777c**
-
-
-* **Wr1778xc**
-
-* **Wr1779xc**
-
-* **Wr1780c**
-
-* **Wr1781c**
-
-* **Wr1782**
-
-
-* **Wr1784**
-
-* **Wr1785**
-
-* **Wr1785b**
-
-* **Wr1786xc**
-
-* **Wr1787c**
-
-* **Wr1788xc**
-
-* **Wr1789xc**
-
-* **Wr1791xc**
-
-* **Wr1796xc**
-
-
-
-
-
-
-
-
-
-
-## And now some rules for adverbs that modify adjectives
-
-* **AdvModA2**
-
-* **AdvModA3**
-
-* **AdvModA4**
-
-* **NomAg**
-
-* **Nom**
-
-* **Nom**
-
-* **vfin**
-
-
-
-
-## ConNeg forms
-
-Number following the rule headers below refer to numbers of hit in a 13 053 859 word corpus.
-
-* **ConNegImp** selects ConNeg Imprt if Neg Imprt to the left. - 4265
-
-* **PrfPrcConNeg**  to ConNeg Aux after PrfPrc
-
-* **ConNegIfNeg** selects Ind ConNeg if Neg Ind to the left. This is the main (and common) ConNeg rule. - 660327
-
-
-* **ConNegPrfPrc** selects ConNeg for leat when topicalised PrfPrc between Neg and leat - 713
-
-
-* **NotConNegIfNotNeg** removes ConNeg if no Neg to the left. Consider unifying with NotConNegNotNeg. - 1094269
-
-
-
-* **NotConNegNotNeg** removes remaining ConNegs whenever no Neg to the left. - 5862
-
-
-
-
-
-
-
-* **VGen** selects VGen after VGEN-V-TRIGGER-verb
-
-
-
-* **VGen4**
-
-
-
-
-* **KillAllVGen** removes all VGen (r1842)
-
-
-## Supinum vs. potential -- no example found in large corpus
-
-## Perfect Participle
-
-* **r1844** removes PrfPrc if 0 is the second N in an N and ... N construction
-
-* **r1844** removes PrfPrc if 0 is the second N in an N and Gen ... N construction (this is marginal)
-
-
-
-* **r1852** selects PrfPrc if copula to the left
-
-* **r1853** selects PrfPrc if Rel to the left which again is linked to copula
-
-
-### Topicalized version
-
-the following chapter should be possible to unify.
-
-* **r1855** selects PrfPrc if Nom to the left linked to copula
-
-* **r1857** selects PrfPrc if Acc to the left linked to copula
-
-* **r1858** selects PrfPrc if NP head to the left linked to copula
-
-* **r1857** selects PrfPrc if copula to the left
-
-* **r1861** selects PrfPrc if VFIN to the left
-
-
-
-* **r3576** selects PrfPrc if Acc to the left linked to activity verb
-
-
-## Actio
-
-
-## Present participle
-*orrut vs. orrot) 
-## Rules for "addit" (which is an adjective, but more often a verb)
-## Actio Loc = N Loc
-
-
-* **ActioLoc** is an IFF rule, we also need rule for 'leat', like in lea go bieru oastimis
-
-
-
-## Nouns or verbs
-
-The rules are no documented yet
-
-* **VFINAttr**
-
-
-* **ActEssIfSensationv**	
-
-* **NoActorIfSg3**
-
-* **GenIfPo**
-
-## Demonstrative pronouns, agreement in DP - should it be moved to after verbmappings? 
-The rules are no documented yet
-
-* **DemAttr**
-
-
-
-* **IndefAgree** guhtege goappašat iešguhtege guhte
-
-
-
-* **DemCASEPl**
-
-* **DemCASESg**
-
-* **DemAttrNum**
-
-* **DemAcc**
-
-* **DemAttr**
-
-
-
-### Attribute disambiguation
-
-* **AttrTitle**
-
-* **AttrVFIN** removes Attr in front of VFIN
-
-
-
-* **AttrnotNA** removes Attr when no N or A to the right
-
-
-
-### Rules for Attr between Dem and N
-
-* **AAttrDemSg1, AAttrDemPl1** 
-
-* **AAttrDemSg2, AAttrDemPl2** 
-
-* **AAttrDemSg3, AAttrDemPl3** 
-
-* **AAttrDemSgIll, AAttrDemPlIll** 
-
-* **AAttrDemSgLoc, AAttrDemPlLoc** 
-
-
-
-* **AAttrDemdakkar** 
-
-
-
-* **AAttrN** no copulas close to the left
-
-* **AAttrCop**  copulas close to the left
-
-
-
-# VERB MAPPINGS
-
-Lexical disambiguation of verbs
-
-
-
-## Verbs as predicatives (@SPRED>) and (@<OPRED) 
-
-### The tags (@SPRED>) and (@<OPRED) target  PrfPrc
-The rules are no documented yet
-
-
-## Verbs as prenominal participles (@>N):
-
-* Some verbs will not be @>N
-
-* **NPrfPrc1** with 1C N Nom
-
-
-* **NPrfPrc2** with -1C Dem or Num or Attr or Indef
-
-* **NPrfPrc3** with PrfPrc or ConNeg to the left, the N can be different cases
-
-
-
-* **NPrfPrc4** mannat in front of TIME
-
-* **NPrfPrcPr** after Pr 
-
-* **NPrfPrcPo** before Po
-
-* **NPrfPrcGen** after Gen
-
-
-* **NPrfPrc6** the verb can be to the right
-
-
-
-* **NPrfPrcCoor** coordination
-
-### (@+FAUXV) and (@+FMAINV) target Neg, orrut
-* **+FAUXVNeg**
-
-* **+FMAINVorrut** finite orrut
-
-* **FAUXVorrut** finite orrut
-
-* **FAUXVorrut** infinite orrut
-
-### (@<SUBJ)  target Inf
-
-
-
-
-* **<SUBJInf2**
-
-* **r354**
-
-* **<SUBJInf3**
-
-* **<SUBJInf4**
-
-
-* **<SUBJInf6**
-
-* **SUBJ>Inf**
-
-### (@<SPRED)  target Inf
-
-
-
-
-
-
-
-
-### (@<ADVL)  target Inf, Actio Ess
-
-
-
-
-
-
-
-
-
-
-
-
-
-### @-F<OBJ  target Inf 
-
-
-
-
-
-### (@A<)  target Inf 	
-* **AInf** Inf 	
-
-### (@N<)  target Inf, Actio Ess
-
-
-
-
-
-
-* **N<Infcoor**
-
-
-### (@<ADVL)  target Inf, Actio Ess
-
-
-
-
-* **ADVLActioEss** Inf 		
-
-
-### (@<OBJ)  target Inf, Actio Ess, PrfPrc 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* **OBJActioEss** Inf 		
-
-* **OBJPrfPrc** PrfPrc 			
-
-
-
-
-### (@+FMAINV) and (@+FAUXV) and (@-FAUXV)
-
-
-
-
-* **+FMAINVcop** COPULAS verbs     
-
-* **+FAUXVaux** AUX  verbs     
-
-* **+FAUXVboahtit** boahtit as AUX      
-
-* **-FAUXVaux** AUX verbs     
-
-* **+FMAINVcopInfconstr** leat before Inf     
-
-
-
-* **+FAUXVCop**  copulas coming before the mainverb
-
-* **+FAUXVCop**  copulas coming before the mainverb, relative clause inbetween
-
-
-* **+FMAINVHabconstr**  in habitive constructions    
-
-* **+FMAINVCoopCoord** coordination  
-
-* **+FAUXVleat**  
-
-* **+FMAINVAux1**  
-
-* **-FMAINVAux2**  
-
-* **+FAUXVCop**  copulas coming after the mainverb
-
-
-* **+FMAINVCop**  copulas 	
-
-
-
-### The big general @+FMAINV rule
-
-* **+FMAINV**  to the remaining finite verbs which are not AUX    
-
-
-
-
-* **+FMAINV**  to finite verb after mainverb
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### (@-FMAINV) and (@-FAUXV)
-
-* **-FAUXVConNegCop**  to ConNeg COPULAS   
-
-* **-FAUXVConNegAux**  to ConNeg AUX-OR-MAIN   
-
-* **-FAUXVConNegAux**  to ConNeg AUX   
-
-* **-FMAINVConNeg**  to ConNeg   
-
-
-
-
-
-
-
-* **-FMAINVConNeg**  to ConNeg
-
-* **-FMAINVConNeg**  to ConNeg Aux after PrfPrc
-
-
-
-
-
-
-* **-FAUXVPrfPrcAux**  to PrfPrc AUX  before Inf or Actio Ess
-
-* **-FMAINVPrfPrc**  to PrfPrc 
-
-* **-FMAINVPrfPrcEss**  to PrfPrc before Ess
-
-* **-FMAINVPrfPrcleat**  to PrfPrc leat
-
-* **-FMAINVPrfPrcafterAuxAux**  to PrfPrc after two Auxs
-
-* **-FMAINVPrfPrccoord**  to PrfPrc coordination	
-
-* **-FMAINVPrfPrccoord**  to PrfPrc coordination	
-
-* **-FMAINVPrfbeforeAux**  to PrfPrc before the Aux	
-
-* **-FMAINVPrfafterMan**  to PrfPrc before the Aux	
-
-
-* **-FMAINVInf**  to Inf
-
-
-* **-FMAUXVActioEss**  to Actio Ess
-
-* **-FMAINVActioEss**  to Actio Ess
-
-* **+FAUXV** to  Aux
-
-* **NPrsPrc1** with 1C N Nom
-
-
-
-* **ActioNom** with 1C N Nom
-
-* **<ADVLVAbess** VAbess ADVL
-
-* **<ADVLVGen** VGen ADVL
-
-* **ADVL>VGen** VGen ADVL
-
-* **<ADVLGer** Gerundium ADVL
-
-* **ADVLGer>**
-
-* **-FMAINVLoc** Actio Loc
-
-
-
-
-
-
-
-
-
-
-# NOUNS
-
-# CASE DISAMBIGUATION
-
-## Num as subject, tricky cases - the rule should be here because of the verbdisambiguation
-
-
-
-
-
-
-
-
-## ACCUSATIVE-ILLATIVE DISAMBIGUATION
-
-
-
-
-
-
-## ACCUSATIVE-GENITIVE DISAMBIGUATION
-
-
-## Secure rules for choosing Acc
-
-
-
-* **PGenN** selects Gen when (Pron Pers) to the left and N to the right *mu sámevuođa iđuid*
-
-* **CoGen1** (quite strict) selects the first of coordinated genitives *riikkaid, čearuid ja boazoorohagaid ovttasbarggu*
-
-
-###  Semantihkka: Choosing accusative or genitive semantically
-
-
-
-* **vuoiAcc** selects accusative if *vuoi* or *vuoi surgat* to the left 
-
-
-
-
-
-
-
-* **SEMnotPossessor** Removes Gen if you are not a possible possessor (a human) # HAB-ACTOR
-
-
-* **SEMnotHUM** removes Gen. This is when an NP is thought to be the OBJ, because it's not in the human sets and to the right is NON-FAMILY *njálgáid mánáide*. 
-
-* **SEMXr2066** Removes Gen if there is a human or org to the right, exeption for *čállingiela áhčči* and so on
-
-
-
-
-
-* **SEMXxr2071** Removes Gen: Nobody can possess a Proper name? Except from (Pron Pers) and Sem/Fem OR Sem/Mal
-
-
-
-* **SEMdep** Select Gen if main-organization in front of department   
-* **SEMorghum** select gen if organization or education in front of human   
-
-
-* **SEMXr2073** Remove Gen: Accusative in front of a human group *loktema sámiid buorrin*
-
-* **SEMr2074** Selects Gen in front of HUMAN-GROUP
-
-* **SEMactor** Select Gen in front of ABSTRACT and RIEKTEDILLI *unnitlogu oaidninčiegas*
-
-* **SEMXr2076** Selects Gen if you are HUMAN or Pron with an ABSTRACT to your right *iežaset vuoigatvuođa*
-
-* **VocNom** 
-
-
-
-* **SEMyouareNom** Removes Gen and Acc when 0 FAMILY or PROFESSION because you are Nom. Not if -1 Num and VFIN is LEDE or IV *Oahpai go Sire sámegiela*
-
-* **SEMyouareGen** Removes Nom if movement verb to the left and illative to the right, because you are the modifier of Ill *mannat Madame Tussaud kabinehttii*
-
-* **SEMnotNom** Removes Nom if a Nom to the right followed by a transitive verb. 0 is animate and to the right is Ill. You are the modifier of Ill
-
-
-
-
-
-* **SEMXxr2081** Removes Gen if NATION or POLITICAL-PLACE are to your right *dilálašvuođaid sámi*
-
-* **SEMXr2087** Selects Gen if you have "eennâm" or "guovu" immediately to your right *Gomorra eatnamii*
-
-* **SEMplcGen2** Removes Gen in front of a GENERAL-PLACE or POLITICAL-PLACE, if you are a noun *bidjen hildu sadjásis* 
-
-* **SEMplcGen3** Removes Gen in front of GENERAL-PLACE or POLITICAL-PLACE, if you are ABSTR-TEXT or TEXT *cealkámušaid guovlluid dearvvašvuođafitnodagaid jahkedieđáhusain*
-
-* **SEMXr2079** Removes Gen if you are Acc in front of MANNU *guđii virggi skábmanánu 1. b.*
-
-
-
-
-* **SEMxhab** Selects Acc if COPULAS to the left of HAB-ACTOR *lea min*
-
-* **EMeallimamuorra** Selects Gen eallima muorra
-
-
-* **ACRGen** Selects genitive: NRK Sápmi
-
-* **ACRAttr** Selects genitive: IL Nordlys
-
-
-
-* **SEMXr2096** Removes genitive: because Accusative in front of an organization
-
-* **SEMGenORG** selects Gen (modifier): in front of an organization *Stáhta Oahpahuskantuvra*
-
-
-
-* **SEMgen1** removes Acc if buot, gait or buohkat in front of a genitive, followed by a plural noun *buot Norlándda ohppiid*
-
-
-* **SEMgen2** removes Acc if bargat or dihte are FMAINV or Inf and are found somewhere to the left of a Gen, which is followed by a noun *bargame boazodoallolága ođastemiin*
-
-* **SEMXr2103** Selects accusative: OASSI is usually accusative *hálddaša stuora oasi*
-
-
-* **SEMXxr2104** Selects accusative: if WRITING-ACTIVITY-V to the left and you are a TEXT *čállá vaidaga*
-
-* **SEMXxacc**Removes accusative: if WRITING-ACTIVITY-V to the left and a noun to the right *čállit Norgga vásáhusaid*
-
-
-
-
-* **SEMXxr2108** Selects genitive if you are SAPMI with an Acc/Gen immediately to your left and a noun immediately to your right *girji sámi áššiid (birra)*
-
-* **SEMsapmiModifier** Selects genitive (modifier): Sámi, suoma or ruoŧa  as modifier of noun *sámi oahpahus*
-
-
-
-
-
-* **SEMtext** (modifier) selects genitive (modifier) if you are a TEXT in front of KLASS *doalloplána čuoggái*
-
-
-
-* **SEMgiella2** Gen if you are Pron followed by giella *iežas giella*
-
-
-
-
-### Other genitive rules
-
-* **topGEN** Selects Gen if sentence intitial. To the right a Prf Prc that modifies nominative *Stáhta nammadan láhtu*
-
-* **NomQst** Selects Nom in a Qst-sentence. To the left is Nom and leat with a Qst-particle *Leat go álbmotmeahcit veahkaváldi*
-
-
-***lassinIll** Selects Ill if first one to the left is lassin *lassin Sarai*
-
-
-
-### Gen and preposition/postposition
-
-
-
-* **GenAPP** Selects genitive when a preposition to the left, or when a postposition to the right *rastá riikarájiid*
-
-
-* **NomIfPo** removes Nom if sentence initial, because it modifies Gen
-
-
-* **GenPoCoordPunct** Selects genitive for coordinated postpositions: with PUNKT to the left 
-
-* **GenPoCoord** Selects genitive for coordinated postpositions *ráŋggáštusa ja buhtadusa hárrái*
-
-
-* **GenGenPo** (modifies pp-phrase) selects Gen in front of postposition-phrase *álgojagiid soađi maŋŋá*
-
-* **GenORG** (modifies Loc) selects Gen if you are MAIN-ORGANIZATION and to your right is Loc *dearvvašvuođafitnodagaid jahkedieđáhusain*
-
-* **SEMnom** (modifies Nom) removes Acc if sentence boundary or adv to the left. To the right is Nom followed by a transitive verb and Acc *stálu beana njoallu háviid*
-
-
-
-### Genitive in place adverbials ROUTE
-
-* **GenPlc** Selects genitive if you are ROUTE, and there is a MOVEMENT-V to your left or right *boahtiba dán geainnu*
-
-
-### Temporal adverbials: Choosing accusative or genitive TIME
-
-* **GenMannuOrdRight** selects Gen if you are mannu and to your right is A Ord *miessemánu 10.*
-
-* **GenMannuOrdLeft** selects Gen if you are mannu, to your left is Ord and to your right is a numeral
-
-
-
-* **TIMEobs** selects Gen if you are time, and to your right is an intransitive real-verb. No adverbials allowed to the right *vuolggán bearjadaga*
-
-
-
-
-
-* **GenJuohke** selects Gen if juohke or seamma to the left *juohke dálvvi*
-
-* **GenJahkiNum** selects Gen if you are jahki num with a numeral to your right *Skuvlajagi 1998-99*
-
-* **AigiModifier** (modifier) selects Gen if aigi to the right *konferánssa áiggi*
-
-* **GenHávvi2** selects Gen for hávvi if a transitive verb cannot be found somewhere in the sentence
-
-* **GenGeardi** selects Gen if the beginning of the sentence to the left *Eará háviid*
-
-* **GenRbeaivi** (modifier) selects Gen if riegádanbeaivi to your right 
-
-* **GenDURadj1** selects Gen if a duration adverbial to the left 
-
-* **GenDURadj2** removes Gen for TIME-N, if duration adjective to the left *olles dálvvi*
-
-* **NoTimeAccII** removes Acc for time if POINT-IN-TIME verb to the left 
-
-* **timeADVL** selects Gen for time: when perfectum participle or infinitive to the left are time adverbial verbs or not time object verbs, to the left of this there shall be an auxiliary *lean čoavdán cealkagiid maŋimuš áiggi*
-
-
-
-
-
-
-
-
-
-
-
-
-### Accusative or Genitive
-
-* **theAccusative** selects Acc if you are a N or Pron with CC to your right, followed by Acc and a CLB or VFIN *gápmagiid ja vuoddagiid, sii geavahedje*
-
-
-
-
-
-
-
-* **NotGenitive** selects Acc if you are a N or Pron with punctuation marks to your right, followed by a noun-phrase boundary
-
-
-
-
-
-
-###  Reflexive pronouns: acc or gen
-
-
-
-
-
-
-
-* **GenIES** (modifier) selects (Pron Refl Gen) if NON-FAMILY OR ("piäládâh") OR SAMEDIGGI-GEN to the right *iežaset mánáide*
-
-
-* **AccIES** SELECTS accusative object (Pron Refl Acc)  
-
-* **AccIES** (modifier) removes accusative object (Pron Refl Acc) if Ill or Loc to the right, but not if a transitive verb is found to the left 
-
-
-* **GenIESinf** removes (Pron Refl Gen) if a transitive verb to the left and an Inf to the right 
-
-
-
-
-### Accusative object 
-
-
-* **AccActioEss** Selects accusative: when a Strict transitive verb actio ess to the left, but not if there is an other Acc to the right followed by EOS
-
-* **AccEss** removes Acc when you are SAPMI-N-HEAD with an Ess to your right, but not if there is a transitive mainverb to the left *dutkama duogážin*
-
-
-***topOBJPers** Removes Gen if you are Acc, and to you right is a Pron followed by a transitive verb. You have to be sentence initial
-
-***AccVAbess** Selects Gen if to the right is abessive 
-
-* **topOBJ1** Selects accusative: when a Strict transitive verb to the right (topicalized object) *beaskka geavahedje*
-
-
-* **topOBJ2** Selects Acc when a transitive finite mainverb to the right (less strict) *dan juohkehaš fuobmá*
-
-
-
-
-* **topOBJ3** Selects Acc. It is not depending on a transitive verb like topOBJ1 and 2, but selects Acc when Aux to the left, but only if there is no chanse of it beeing a Nom 
-
-* **AccTV1** Selects accusative: when a Strict transitive verb to the left (barrier exludes everything but: adv, N Ess , N Loc and Pcle). No Acc allowed to the left of the verb. No Acc allowed to the right of you, except pronouns and education (sentenceboundary and N Ess as barriers). Only numunit numerals are allowed to the left. You are not Acc if you are: time, ruote or Pron Indef. Neither if you are Pron Refl with Gen to your right followed by N Ess. Neither if you are Pron Refl with Gen to your right followed by Po. N Nom and Ger not allowed immediatly to your right. You are not Acc if you are a Nom cased Prop and the verb is some kind of verbalactivityverb and ahte or sentenceboundary is to the right. Vdic not allowed immediately to your left. If váldit is the verb, you are likely to be a Gen if Ill-body noun is found to the right. *oste mielkki gávppis*
-
-
-
-
-* **PronNP** (removes Acc): selects Gen for Pron Pers if Acc or Ill to the right, given that there is a secure object or that no transitive verb is found *bija ruđa mu kontoi*
-
-
-* **r2206** selects Gen when a finite verb to the left and Nom or Acc to the right *lohkaba su girjji*
-
-
-* **r2271** Removes genitive when a transitive verb to the left and you (not if you are a pronoun) are followed by Ill/Loc/Com/Adv: *doalvvui stálu meahccái*
-
-* **AccTV2** Selects accusative: when a transitive verb to the left. No Acc allowed to the left in the sentence (sentenceboundary as a barrier). No Acc allowed to the right (barriers are CC, comma and sentenceboundary). Note that Gen to the right followed by a noun is allowed. You shall not be: route, time, Pron Dem. You are not Acc if you are: Gen-cased Pron or Animate with Ill immediately to your right. No Acc, Com, N Nom or Gerundium allowed immediately to your right. No Gen followed by Po allowed immediately to your right. A SG3-verb is only allowed to your left (barriers excluding everything except NP-heads and adverbs, PrfPrc is also a barrier) if there is a Nom left to the SG3-verb. No vdic allowed immediately to your left. You are not Acc if: you are a Nom-cased Prop, followed by ahte or EOS and the verb found to the left (SV-boundary) is some kind of verbalactivityverb or a humanagentverb.
-
-* **AccTV3** Selects accusative: when transitive verb to the left, if it doesn't find a barrier: comma, Num, real-v, Ess, s-boundary. Acc not allowed to the left of the verb. Not Acc if animate or Gen in front of Ill. Numerals the only Acc allowed to the right. Not Num, time route or adv. Not Com or Ger immediately to the right. Neither Po. Not Acc if sg3-verb to the left without a Nom to its left. Not Pron Dem followed by N, neither Pron Rel followed by time. No vdic immediately to your left. No Nom-cased Prop with some sort of verbal activity to its left is allowed..  
-
-
-* **OLDr2466** Selects accusative: when transitive verb to the left, but not if the TV is FAUX OR LOC-V
-
-
-
-
-* **AccInf** Selects Acc if the verb to the left is TV + Inf (you are the obj of the Inf). Differs from the other rules by not beeing restricted by an Acc to the right *hállat eatnigiela*
-
-* **AccCOP** Selects Acc if copulas to the left and nominative to the left of COP *gápmagat leat áhči*
-
-
-### Gen modifiers inside NP 
-
-* **GenNP1** Selects Gen for Pron Pers (modifier): if NP-BOUNDARY OR Acc (but not if the finite verb is TV) to the left and N to right 
-
-* **GenNP2** Selects Gen for N (modifier): if CC "já" immediately to your left and accusative to your right *ja sámi jurddašanvuogi*
-
-* **GenNP3** Selects Gen (modifier): if first one to right is Nom or Loc *Norgga oaivegávpogis*
-
-* **GenNP4** (modifier) selects Gen -1 BOS or COMMA, 1 Nom *nissoniid bargu*
-
-* **GenNPCo** (modifier) Selects Pron Pers Gen if Nom to the left of ja *Mun ja mu ustibat*
-
-* **GenRefl** (modifier) selects Gen in front of a noun in accusative or nominative case *iežaset oiviliid*
-
-
-
-* **AccAfterCC** Select accusative: if genitiv to the left, and CC "já" to the left of genitive *eamiálbmot- ja globaliserenprošeavtta koordináhtor*
-
-
-
-
-### Accusative in coordination
-
-
-
-* **CoAcc1** Selects Acc when NP inbetween commas *guolleoivviid, dáraid, debbuid, buđeittaid, boares rásiid*
-
-
-* **CoAcc2** Select Acc if coordinator to your left and accusative to the left of the coordinator *deaja dahje sávtta*
-
-
-* **CoAcc3** Selects Acc in front of *ja* if there is a secure Acc to the right *semináraid ja diehtojuohkinčoahkimiid*
-
-
-* **CoAccJA** Selects Acc when "já" to the left and comma to the left of "já" with a secure Acc to the left of comma *sámegiela, ja heajos dárogiela.*
-
-* **CoAccJA2** Selects Acc in front of Gen + Po if ja in front of Acc *ja ruhtan sávzzaid ovddas*
-
-
-
-
-### Intransitive verbs can sometimes be transitive
-
-* **IVasTV** Selects Acc if you are GEOGRAPHICAL-PLACE, ABSTR-ROUTE or EDUCATION and somewhere in the sentence is a intransitive verb acting as a transitive verb *sii vázzet skuvlla*
-
-
-
-
-
-* **IVsahttit** Selects Acc 
-
-
-
-* **NewGen** (complement of numerals) Selects Gen Sg when Num Sg to the left *guhtta kilu*
-
-
-
-* **NewGenCo** (coordinated complement of numerals) Selects Gen if Num Acc + NewGen found to the left of "já" *máŋga dáhpáhusa ja digaštallama*
-
-* **ALU4** Selects Acc if you are Num and to your right Num Acc followed by MEASURE OR ALU/A *guokte golbma mehtara alu* 
-
-
-
-* **NumTimeMannel** Selects Acc for Num before TIME MANNEL
-
-
-
-* **GenBoaris** Selects Gen in golbma *jagi* boaris
-
-- Ritva comment: Find a rule for "viđa" aswell, this hits "mehter" as it should
-
-
-* **XXr2002** Selects genitive if there is a numeral immediately to your left, and you are TIME: *golbma jagi*
-
-
-
-### Numerals 
-
-
-* **NumMoney** Selects Gen if you are a numeral and immediately to your right is CURRENCY *vihtta ruvnnu*
-
-
-
-
-
-* **NumAcc1** Selects Acc if you have a transitive verb to the left and you are a numeral followed by a noun  *oste guokte mielkki*
-
-* **NumJahki** Removes Acc if you are a numeral and JAHKI-NUM is immediately to your left *mávssii mannan jagi 43 ruvnnu*
-
-* **NomIfNum** Removes Acc if Gen to the right (because you are Nom). Transitive verb with an Acc to the right *máŋga gávpeolbmá lonuhedje fáhcaid*
-
-* **NumAcc2** Selects Acc for singular numerals if there is a transitive verb somewhere in the sentence and the numeral is followed by a noun *logi báhkkoma* OBS
-
-
-
-* **GenIfNum** (complement of numerals) Selects Gen Sg if there is a Num Sg to your left *guđa geardde* 
-
-* **NumAccCo** (coordinated num) Selects Acc if you are Num Sg and to your right: CC with a Num to the right *guokte ja eanemusat golbma*
-
-* **NumAccIV** Selects Acc 
-
-
-
-
-* **NumAccPlRight** Selects Acc when transitive verb to the left. You are Num Pl and to your right is Acc *goarui viđaid gápmagiid*
-
-* **NumAccPlLeft** Selects Acc when tranistive verb to the right (same as the previous. Only differs in which direction the verb is found). *galliid sabehiid don ostet*	
-
-* **NumAccPlLeft** Selects Acc if you are N Acc Pl and to your left is Num Acc Pl *galliid sabegiid*		
-
-
-
-* **NumOkta** Selects Acc if 0 okta followed by a noun. Transitive verb to the left *oidnen ovtta nieidda*
-
-
-
-
-
-* **QUANgenCoord** Selects Gen for coordinated complement of a numeral
-
-* **QUANgen1** Selects Gen if a numeral with Nom-case to the left and 3Pl-verb to the right
-
-* **QUANr2142** Selects Gen if a numeral to the left and genitive to the right. Transitive verb not allowed to the left.
-
-
-
-
-### Leftover accusatives
-
-
-***COMPInfAcc** Selects Acc if you are Gen and to the left is an Inf TV @COMP-CS<
-
-
-
-
-* **AccInf2** Selects Acc if Inf immediately to the RIGHT *guliid čoallut*
-
-* **AccNomCOPconstr** Selects Acc in front of Inf; only if there is no chance for itself beeing Nom
-
-
-* **AccTV4** Selects Acc if transitive mainverb to the left. Lots of restrictions to the right
-
-
-
-* **AccPronRel** Selects (Pron Rel Acc) when a secure Acc or Nom to the left *gáibidedje internáhttaskuvlla man*
-
-* **AccPronRel2** Selects (Pron Rel Acc) when somewhere in the sentence is a Nom (barrier is sv-boundary), but only if leat isn't the main verb. *geaid eamiálbmogat* 
-
-* **AccPronRel3** Selects Acc if there is a (Pron Rel Nom) to the right. Obs: not hit nominatives, hence negations. *eanu mii šealgá*	
-
-* **AccActioLoc** Selects Acc when transitive Actio Loc somewhere in the sentence *guldeleames muitalusaid*
-
-
-* **AccAhte** Selects Acc when *ahte* is found to the right 
-
-* **AccAux** Selects Acc if beginning of sentence to the right and aux, not leat,  is to the left. No Acc allowed to the left *láđđi fertejetne oastit*
-
-
-* **HabGenAdvl** Removes Acc; in a habitive adverbial construction with Gen, but only if there is no chans of 0 beeing Nom *Dat lea áhči*
-
-* **AccIll** Selects Acc if a strict transitive verb is found to the left and Ill to your right. You are not allowed to be a possible modifier of ill: Pron, Px. *buktán heasttaid meahccái*
-
-
-
-
-* **Gerundium0** Selects Acc as the complement of Ger
-
-* **Gerundium1** Removes Gen if no other object available for the preceding tv-verb
-
-
-* **Gerundium2** Selects Acc in front of Ger, but not if it is not HAB-ACTOR/Pron Pers. No transitive verb allowed to the left, exept it it has an object of its own.
-
-* **GerundiumTEST** Selects Acc 
-* **GerundiumTEST** selects Gen for HAB-ACTOR and Pron Pers in front of Ger, but only if there is an Acc belonging to a transitive to the left
-
-
-
-
-
-
-
-
-* **NomIfProp** Removes Acc and Gen when you Prop because you are Nom. To the left is a sg3-verb. Should not hit Prop that are Sem/Plc.
-
-
-* **NomIfProp2** Removes Acc and Nom when you are Prop Sem/Plc because you are Gen. To the left is a sg3-verb. To the right is a noun.
-
-* **NomSentFin** Selects Nom if you are Acc or Gen and EOS is to yoru right. Copulas is found to the left 
-
-
-
-Accusative or Illative
-
-
-
-## Nominative or accusative or genitive
-
-
-* **NAr2266** Selects Nom
-
-
-
-* **NAAccEllipsis2** Selects Acc
-
-
-
-* **NAr2288** Removes Nom
-
-
-
-
-## Nominative
-
-
-
-
-
-
-* **NDr2300** Selects Nom if Gen immediately to the left. You are N-SG-NOM and to your right is SG3-V *Du ášši lea dehálaš*
-
-
-
-* **NDr2306** Selects Nom for (N Nom) if to the left is "ohtâ" or "nubbe" *okta lihtter*
-
-
-
-* **NDr2308** Selects Nom for PROP
-
-
-
-### Vocatives, subjects of sentence fragments
-* **NDr2309** Selects Nom
-
-* **NDr2310** Selects Nom	
-
-* **NDr2311** Selects Nom
-
-
-
-
-* **NDr2313** Selects Nom
-
-* **NDr2314** Selects Nom
-
-* **NDr2315** Selects Nom
-
-
-### Nominative in titles and sentence fragments
-
-* **NDr2317** Selects Nom: A single word is nominative
-
-
-* **NDr2318** Selects Nom: A single word with a numeral in front of it is nominative
-
-* **NDr2319** Selects Nom: An NP head with a genitive modifier is nominative
-
-* **NDr2320** Selects Nom: A title is nominative if it has a Nom reading at all
-
-* **NDr2321** Selects Nom: An NP head with an Attr modifier is nominative
-
-* **onlyProp** Selects Nom
-
-
-
-### Nominative after "ko", "mahte", "dugo" and "nugo"
-
-
-* **NDr2325** Selects Nom
-
-* **NDr2326** Selects Nom
-
-
-* **NumNomgo** Selects (Num Nom)
-
-
-
-
-
-### Preverbal subjects
-
-* **NDr2331** Selects (N Nom)
-
-* **NDr2332** Selects (Num Nom)
-
-* **NDr2333** Selects (Num Nom)	
-
-* **NDr2334** Selects Nom
-
-* **NDr2335** Selects Nom
-
-* **NDr2336** selects (N Sg Nom) when 1 SG3-V
-
-
-* **NDr2338** Selects (N Sg Nom)	
-
-* **NDr2339** Selects (N Sg Nom)	
-
-
-
-* **NDr2341** Selects Nom
-
-* **NDr2341** Selects Nom
-
-* **NDr2343** Selects (Sg Nom)
-
-* **NDr2345** Selects Nom
-
-* **NDr2350** Selects Nom
-
-* **NDr2351** Selects Nom
-
-* **NDr2357** Selects (A Pl Nom)
-
-* **NDr2359** Selects (A Pl Nom)
-
-
-
-
-### Postverbal subjects
-
-* **NDr2360** Selects Nom
-
-* **NDr2361** Selects Nom
-
-
-* **NDr2364** Selects (Sg Nom)
-
-
-
-* **NDr2368** Selects (N Pl Nom)
-
-* **NDr2370** Selects (Num Nom)
-
-* **NDr2372** Selects (Pron Pl Nom)
-
-* **NDr2373** Selects Nom
-
-* **NDr2375** Selects Nom
-
-* **NDr2376** Selects Nom
-
-* **PostVNom** Selects Nom if a singular third person verb to the left with no Nom to the left of it
-
-
-
-* **PostVNomComp** Selects (N Sg Nom)
-
-
-### Nominative predicatives
-
-
-* **NDr2378** Selects (Sg Nom)
-
-* **ND** selects Nom if; you are HUMAN and immediately to your right is a place. Leat is to the left, and there is HUMAN or Pers to the left of leat *Son lei oahpaheaddji Kárášjogas*
-
-* **NDr2379** Selects (Sg Nom)
-
-* **NDr2380** Selects (Pl Nom)
-
-* **NDr2382** Selects (Pl Nom)
-
-* **NDr2383** Selects Nom
-
-* **NDr2384** Selects Nom
-
-* **NDr2385** Selects Nom
-
-### Nominative as objects in existential clauses
-
-* **NDSgr2388** Selects Nom
-
-* **NDPlr2388** Selects Nom
-
-* **NDr2389** Selects Nom
-
-* **NDr2390** Selects Nom
-
-* **NDr2391** Selects Nom 
-
-### Nominative in coordination and apposition
-
-
-* **NDr2399** Selects Nom  
-
-* **NDr2400** Selects Nom
-
-* **NDr2401** Selects Nom
-
-* **NDr2402** Selects Nom
-
-* **NDr2403** Selects Nom
-
-* **NDr3529** Selects Nom	
-
-
-
-
-* **NDr2406** Selects Nom
-
-* **NDr2407** Selects Nom
-
-* **NDr2408** Selects Nom
-
-* **NDr2409** Selects Nom
-
-* **NDr2411** Selects Nom
-
-* **NDr2412** Selects Nom
-
-* **NDr2413** Selects Nom
-
-* **NomCCNom** Selects Nom
-
-* **NDr2416** Selects Nom
-
-* **NDr2417** Selects Nom
-
-* **NDr2418** Selects Nom
-
-### Nominative in parallell constructions
-
-* **NDr2422** Selects Nom
-
-* **NDr2423** selects Nom if it finds a Nom to the left of CC and to the left of a verb. No verb allowed to the right *eamit barggai vuođđoskuvllas ja isit fas gymnásas*
-
-* **nomHnoun** Selects Nom
-
-* **SOV** Selects Nom in front of an Acc	
-
-
-### Not nominative
-* **NDr2424** Removes Nom
-
-* **NDr2425** Removes Nom
-
-* **NDr2426** Removes Nom, but not Actio 
-
-
-
-* **ND** Removes Nom	
-
-
-
-
-
-## Comitative rules
-
-Assuming there is Sg Com / Pl Gen homonymy in Inari Saami. There is, but far more marginal than
-for North Saami, the following rules should be revised to account for that.
-
-### NP internal disambiguation of Com
-
-* **PlSg-W** removes Pl when SG-WORD
-
-
-* **LocPlur** removes Sg when PLURALIZER or OASSI OR HEADOFPARTS
-
-
-* **NumCom** selects Num Com: guvttiin nieiddain if not plural-noun like: guvttiin heajain
-
-* **ComDemNum1** selects N Com if there is a Dem or Num or buorre + Com to the left: Exception for plural-nouns  
-
-* **Comburiin** selects N Com if there is a safe N Com to the right: buriin vugiin  
-
-
-* **ComCOM-A** selects Sg Com after COM-A
-
-* **ComComAdv1** selects Com after COM-ADV or juohke
-
-
-
-### Disambiguation based upon verb valency
-
-
-* **LocLocVL1, LocLocVR** select Pl Loc if there is a LOC-V
-
-
-* **LLocAccLocVL** select Pl Loc if there is a ACC-LOC-V
-
-* **Loc-v** select Sg Loc if LOC-V to the left in the clause. No mainverb to the right in the clause
-
-### Disambiguation of Com depending on Adv or certain verb or N
-
-* **ComComAdv1** selects Com for ACTOR OR ACTOR-ROLE after og before COM-ADV 
-
-
-* **ComComplPl-N** selects Sg Com for HUMAN, ORGANIZATION, INSTITUTION, STATE, EVENT-TOOL-ACTIVITY, láhka when there is a COM-COMPL-N to the left or right
-
-* **Comoktavuohta** selects Sg Com when oktavuohta is to the left or right
-
-* **ComDU-NR** selects Sg Com after Pers dualis: moai áhčiin, munno vieljain
-
-
-* **ComHumanOrg** selects HUMAN Sg Com after HUMAN, ORGANIZATION, INSTITUTION
-
-### Animate nouns
-* **ComAnimate** selecst Sg Com if there is an animate to the left, and the noun itself is not a ABSTR-TEXT,  TEXT,  PLACE,  INDUSTRY,  EDUCATION,  INSTITUTION,  ANIMATE
-
-* **ComProp** selecst Prop Sg Com for person names. Exception for habitive constructions.
-
-
-* **FinalComForAni** where philosophy is that you are with someone, not on someone
-
-### HAB-ACTOR in habitive-constructions
-
-* **LocHab1, LocHab2** select Pl when HAB-ACTOR
-
-
-* **LocHab1, LocHab2** select Pl when HAB-ACTOR
-
-
-### Disambiguation based upon verb valency 
-
-### COM-V 
-* **ComVR, ComVL** select Com when COM-V
-
-
-
-
-### tools (concrete and abstract)
-
-* **ComTool1, ComTool2, ComToolCoord** select Com TOOL when ACTIVITY-V, MOVEMENT-V, PLACE-V-V 
-
-* **ComHumanVerbalV** selects Com HUMAN when VERBAL-ACTIVITY-V or báhcit
-
-
-
-
-
-
-
-
-
-
-### Dynamic-verbs
-
-* **LocdynamicVR, LocdynamicVL** select Pl Loc if there is a DYNAMIC-V and the noun itself is not a TOOL, ABSTR-TOOL, WRITING-TOOL, CONCEPT, HUMAN, VEHICLE, buorre, Der/NomAc
-
-* **LocdynamicVR** selects Pl Loc
-
-
-* **LocdynamicVL** selects Pl Loc
-
-
-
-
-
-### Event-tool-actio
-Most actio can be both tool and event. 
-
-
-### PLACE-V
-
-* **ComPlaceV** select Com ANIMATE, CONCEPT, TOOL, ABSTR-TOOL, EVENT-TOOL-ACTIVITY if there is a PLACE-V
-
-### Movement-verbs
-
-* **ComboahtitR** selects Sg Com 
-
-* **ComboahtitV–** selects Sg Com for animate eller pron
-
-* **ComMovemVL**  selects Sg Com over Pl Loc for a movement verb 
-
-* **ComMovemVR** selects Sg Com over Pl Loc for a movement verb
-
-
-
-* **ComDynV** Dynamic-verbs selects Com when TOOL, ABSTR-TOOL, WRITING-TOOL, CONCEPT, EVENT-TOOL-ACTIVITY
-
-
-* Dynamic-verb selects Com when HUMAN, but not for HUMAN-SOURCE-VEHICLE-V 
-
-
-* **ComBody** Body-activity-verb Selects Com when BODY, for BODY-ACTIVITY-V or VERBAL-ACTIVITY-V
-
-
-
-* **LocCop** selects Pl Loc if event
-
-
-* Coordination
-
-
-
-### Locative and comitative - Disambiguation based upon coordination
-
-
-
-
-
-
-### And then we remove the remaining Sg Com analysis
-
-
-
-
-
-Final Com/Loc rule: Remove Com.
-
-* **KillComSg** This is the final Com/Loc rule, and it chooses Pl Loc. Remove this for grammar checker.
-
-
-
-
-* **miiPlAcc** selects acc noun if mii or kii to the left
-
-* **AccTV1NoC** was Eckhard's late version of AccTV1 without C. We will look at this.
-
-* **AccEOS** is The Dangerous Rule: it is the last rule before removing all leftover Acc. It only selects Acc if Nom is not an option, dont change this btw, and the end of the sentence is the next one to the right
-
-* **genRel** removes genitive if Rel to your right *ožžot olbmot skoviid maid*
-
-* **genAcc** selects Acc 
-
-* **genNom** removes Acc
-
-
-* **DemAcc** selects Den Acc after the last acc-disambiguation of nouns
-
-* **KillAcc** Removes Acc if you are Gen 
-
-
-
-
-
-
-
-
-## Essive  
-
-
-
-
-## Finite or not
-
-### Finite
-
-* **r2906** Sg2 if Sg2
-
-
-### Not Finite
-
-* **r2824** 
-
-
-
-
-
-
-
-
-
-
-### Infinitive
-
-
-## Indicative or imperative
-
-## Verbs according to person and number
-
-### Sg1 - First person singular
-
-
-
-
-
-
-
-
-
-
-
-### Du1 - First person dual 
-
-
-* **Du1IfDu1** selects Du1 with a left context Du1 ... ja ... 
-
-
-* **NoDu1** removes Du1 if no MOAI or Du1 around.
-
-### Pl3
-
-* Pl3 not Pl Gen
-
-
-* **Pl3IfPlSubj** Pl3 if Pl noun to the left
-
-* **Pl3IfPlSubj** Pl3 if safe plural (incl pron) to the left
-
-
-
-* **Sg2LeftDon** selects Sg2 in Rel phrase if don to the left of it
-
-
-* **allPrtSg2** removes PrtSg2 if PrsPl3
-
-
-## Passive
-## Infinitive
-## Present Participle
-## Actio/Perfect Participle 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# NOMEN
-
-
-## Case rules
-
-
-## Other rules for nouns and pronouns
-
-## Determiners
-## Adverbs and adjectives
-
-
-## Adverbs not nouns
-
-
-# NOUNS
-
-
-
-
-
-## Adverb or Participle
-
-
-
-Genitive not Nominative
-
-* **GenModifiesN** is a tentative rule to be modified
-
-
-
-
-## Variant lemmas
-
-
-
-* Remove lemma2 if lemma 1
-
-
-
-
-
-
-* **cleanSemClass** cleans up if a word has more semclasses. This is just a start.
-
-
-
-
-
-
-
-### And then we remove the verbs which didn't get any syntactic tag, in favour of verbs with syntactic tags.
-
-* **realverbX**
-
-
-
-* **IfonlyVerb** selects the FMAINV reading in the cohort
-
-* **IfonlyConNeg** ConNeg if it is @-FMAINV or @-FAUXV
-
-
-### **killifVinCohort** This rule removes all other readings, if there is a mapped V reading in the same cohort. Every case which this goes wrong, should be fixed in mapping rules or previous disrules.
-
-* **TEST** selects some infinte verb readings in the cohort
-
-* **X**
-
-
-
-
-
-
-
-
-
-# Removing Err/Orth
-
-Denne regelen fjerner Err/Orth når det er samme lemma, sjøl om morfologien er forskjellig.
-
-
-
-* **errsub** removes err/orth forms
-
-
-
-
-
-
-
-
-
-
-
-Test: Go for minimal weight.
-
-
-
-# Substitute rules
-
-These 12 substitute rules add the <smn> language code to all words, to govern 
-their behaviour in the subsequent cg files. The rules are removed when this
-file is ported to Apertium.
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/cg3/disambiguator.cg3](http://github.com/giellalt/lang-smn/blob/main/../src/cg3/disambiguator.cg3)</small>
+<small>This (part of) documentation was generated from [../src/fst/phonology.twolc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/phonology.twolc)</small>
 # Inari Sámi morphological analyser
 
 This file documents the Inari Sámi morphological analyser. The tags in bold are the ones in use in the analyser.
@@ -10949,6 +11777,28 @@ with +CmpNP/Only to end here.
 The `@D.NeedNoun.ON@` flag diacritic is used to block illegal compounds.
 * * *
 <small>This (part of) documentation was generated from [../src/fst/root.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/root.lexc)</small>
+# Possessive suffixes for Inari Saami
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/affixes/possessive-suffixes.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/affixes/possessive-suffixes.lexc)</small>
 # Symbol affixes
 
 
@@ -10958,77 +11808,2354 @@ The `@D.NeedNoun.ON@` flag diacritic is used to block illegal compounds.
 
 * * *
 <small>This (part of) documentation was generated from [../src/fst/affixes/symbols.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/affixes/symbols.lexc)</small>
-# Continuation lexicons for abbreviations
+# Propernoun morphology for Inari Saami
 
-## Lexica for adding tags and periods
+TODO:
+These are not in use:
+ANAR DUBAI DUBAI-plc DUBAI-sur MAKI 
 
-## The sublexica
+* **LEXICON Proper_infix** is the de Silva lexicon
 
-### Continuation lexicons for abbrs both with and witout final period
+* **LEXICON FirstTag**
+
+* **LEXICON TEMPORARY**
+
+* **LEXICON V_TEMPORARY**
 
 
-* **LEXICON ab-noun**
-
-* **LEXICON ab-adj**
-
-* **LEXICON ab-adv**
-
-* **LEXICON ab-num**
-
-### Lexicons without final period
-
-* **LEXICON ab-nodot-noun**  The bulk
-
-* **LEXICON ab-nodot-adj**
-
-* **LEXICON ab-nodot-adv**
-
-* **LEXICON ab-nodot-num**
-
-### Lexicons with final period
-
-* **LEXICON ab-dot-noun**  This is the lexicon for abbrs that must have a period.
-
-* **LEXICON ab-dot-adj**  This is the lexicon for abbrs that must have a period.
-
-* **LEXICON ab-dot-adv**  This is the lexicon for abbrs that must have a period.
-
-* **LEXICON ab-dot-num**  This is the lexicon for abbrs that must have a period.
-
-* **LEXICON ab-dot-cc**
+* **LEXICON NIEMI**
 
 
 
-* **LEXICON ab-verb**  A lexicon for "gč." and perhaps also other abbreviated verbs.
+* **LEXICON ACCRA** SM1
+
+* **LEXICON ACCRA-ani**
 
 
-* **LEXICON ab-dot-verb**
+* **LEXICON ACCRA-femsur**
+* **LEXICON ACCRA-fem**
 
-* **LEXICON ab-nodot-verb**
+* **LEXICON ACCRA-malfem**
+
+* **LEXICON ACCRA-malsur**
+
+* **LEXICON ACCRA-mal**
+
+* **LEXICON ACCRA-objplc**
+
+* **LEXICON ACCRA-obj**
+* **LEXICON ACCRA-org**
+
+* **LEXICON ACCRA-A_MWE-plc**
+
+* **LEXICON ACCRA-A-org**
+
+* **LEXICON ACCRA-A-plc**
+
+* **LEXICON ACCRA-A-fem**
+
+* **LEXICON ACCRA_MWE-plc**
 
 
-* **LEXICON ab-dot-IVprfprc**
+* **LEXICON ACCRA-plc**
+
+* **LEXICON ACCRA-sur**
 
 
-* **LEXICON nodot-attrnomaccgen-infl**
-
-* **LEXICON nodot-attr-infl**
-
-* **LEXICON nodot-nomaccgen-infl**
+* **LEXICON JUUHA-plc** similar to JUUHA
 
 
-* **LEXICON dot-attrnomaccgen-infl**
-
-* **LEXICON dot-attr**
-
-* **LEXICON dot-nomaccgen-infl**
+* **LEXICON JUUHA** similar to JUUHA, stem ju
 
 
-* **LEXICON DOT** - Adds the dot to dotted abbreviations.
+* **LEXICON LUOHTA** similar to VADDU
+
+
+* **LEXICON LUOHTA-plc**   
+
+* **LEXICON LUOHTA-mal**
+
+* **LEXICON LUOHTA-fem**
+
+
+
+
+
+* **LEXICON LUOHTA_PL** similar to ALGA_PL X_PUUVSAH
+
+
+
+
+* **LEXICON VUONA** similar to ALGA
+
+
+* **LEXICON VUONA-plc** similar to ALGA
+
+
+* **LEXICON VUONA-fem** similar to ALGA
+
+
+
+
+
+
+
+
+
+
+* **LEXICON KURRA-plc** similar to SOLLA
+
+
+* **LEXICON KURRA** similar to SOLLA
+
+
+* **LEXICON KAAVA-plc** similar to KIELA
+
+
+* **LEXICON KAAVA** similar to KIELA 
+
+
+* **LEXICON NJOBZA** similar to 2ALGA
+
+* **LEXICON NJOBZA-plc** similar to 2ALGA
+
+* **LEXICON NJOBZA-ani** similar to 2ALGA
+
+
+
+* **LEXICON LASSA-plc** similar to FADDA
+
+
+* **LEXICON LASSA**  Similar to FADDA
+
+
+
+
+* **LEXICON JAVRI-plc** jävri, jeggi
+
+
+* **LEXICON JAVRI-mal** 
+
+* **LEXICON JAVRI-fem** 
+
+
+* **LEXICON JAVRI-ani** 
+
+* **LEXICON JAVRI** similar to AIGI, but only Sg. Some case forms should be deleted for names? Only difference to VUONA is Ess/Par. Are they in use for names?
+
+
+
+* **LEXICON JAAVRIH-plc**  JAVRI-plurals, e.g. Kähteejäävrih
+
+
+* **LEXICON JAAVRIH**  plurals for JAVRI
+
+
+
+
+
+
+
+
+
+
+
+
+* **LEXICON VAARI** to SAAMI
+
+
+* **LEXICON VAARI-plc** 
+
+
+* **LEXICON VAARIH-plc**  VAARI-plurals
+
+
+* **LEXICON VAARIH** VAARI-plurals
+
+
+
+
+
+
+* **LEXICON CIELGI** to CAACI
+
+
+* **LEXICON CIELGI-plc** to CAACI
+
+
+
+
+
+
+
+* **LEXICON NYERI** similar to KYELI
+
+
+* **LEXICON NYERI-plc** similar to KYELI
+
+
+
+* **LEXICON TUPE**  Similar to NJUNE
+
+
+* **LEXICON TUPE-plc**  Similar to NJUNE
+
+
+* **LEXICON TUPE-ani**  Similar to NJUNE
+
+
+* **LEXICON VASE-plc**  Similar to VAHE
+
+
+* **LEXICON VASE**
+
+
+* **LEXICON POHE** nearly similar to VAHE
+
+* **LEXICON POHE-plc** similar to VAHE
+
+
+* **LEXICON POHE-ani** similar to VAHE
+
+
+* **LEXICON POHE-mal** similar to VAHE
+
+
+
+
+* **LEXICON MOKKE** similar to ALGE
+
+* **LEXICON MOKKE-plc** similar to ALGE 
+
+* **LEXICON MOKKE-sur** similar to ALGE 
+
+* **LEXICON MOKKE-org** similar to ALGE 
+
+* **LEXICON MOKKE-fem** similar to ALGE 
+
+* **LEXICON MOKKE-mal** similar to ALGE 
+
+* **LEXICON MOKKE-ani** similar to ALGE 
+
+
+
+* **LEXICON NIJTTO**
+
+* **LEXICON NIJTTO-plc**  Similar to SIJVO
+
+
+* **LEXICON ROTO** similar to LAJO and X_LAJO
+
+
+* **LEXICON ROTO-plc** similar to LAJO and X_LAJO 
+
+
+
+* **LEXICON LAADUH** 
+
+* **LEXICON LAADUH-plc** Plural to LUOHTA-plc
+
+
+
+* **LEXICON LONDON**
+
+
+* **LEXICON LONDON-LOAN-obj**
+* **LEXICON LONDON-LOAN-org**
+* **LEXICON LONDON-LOAN-plc**
+
+* **LEXICON LONDON-ani**
+* **LEXICON LONDON-atr**
+* **LEXICON LONDON-fem**
+
+* **LEXICON LONDON-malfem**
+
+* **LEXICON LONDON-malplc**
+
+* **LEXICON LONDON-malsur**
+
+* **LEXICON LONDON-mal**
+
+* **LEXICON LONDON-obj**
+
+* **LEXICON LONDON-orgsur**
+
+* **LEXICON LONDON-org**
+
+* **LEXICON LONDON-orgplc**
+
+
+* **LEXICON LONDON_MWE-plc**
+
+* **LEXICON LONDON-plc**
+
+* **LEXICON LONDON-sur**
+
+
+* **LEXICON LONDONBERN-plc**
+
+
+
+
+* **LEXICON AANAAR** Goes to EEMEED
+
+
+* **LEXICON AANAAR-plc**
+
+* **LEXICON AANAAR-mal**
+
+* **LEXICON AANAAR-fem**
+
+
+
+
+
+LEXICON KIARUN = 3KIELES
+
+
+**LEXICON LUOBAL** Similar to VEESKIR
+
+* **LEXICON LUOBAL-plc** Similar to VEESKIR
+
+
+
+* **LEXICON LUOBBALEH** plural forms 
+
+
+* **LEXICON LUOBBALEH-plc** Plural to LUOBAL-plc
+
+* **LEXICON LUOBBALEH-org** Plural to LUOBAL-plc
+
+* **LEXICON LUOBBALEH-ani** Plural to LUOBAL-plc
+
+
+
+* **LEXICON MAARIT** 
+
+
+* **LEXICON MAARIT-fem similar to 3POTTAAK** 
+
+* **LEXICON MAARIT-mal similar to 3POTTAAK** 
+
+
+* **LEXICON SAVO-plc** similar to ALGA
+
+* **LEXICON SAVO** similar to ALGA
+
+
+* **LEXICON KUOLBA-plc** similar to POOVSA
+
+
+* **LEXICON KUOLBA**  similar to POOVSA
+
+
+
+
+* **LEXICON LYEME** 
+
+
+
+
+
+
+
+
+
+
+* **LEXICON ANDARAS**  this is for loanwords without stem change, 3-syll. cons end
+
+
+
+* **LEXICON ANDARAS-mal** similar to KUNAGAS
+
+* **LEXICON ANDARAS-org** similar to KUNAGAS
+
+
+
+* **LEXICON ANDARAS-plc** similar to KUNAGAS
+
+
+
+* **LEXICON IANUDAH-plc**  Similar to 4JOTOLAH
+
+
+
+
+
+
+
+
+
+* **LEXICON KALDEE** Similar to TAHHEE
+
+* **LEXICON KALDEE-plc**  Similar to TAHHEE
+
+* **LEXICON KALDEE-org**  Similar to TAHHEE
+
+
+* **LEXICON KALDEE_PL-plc**  Similar to TAHHEE_PL
+
+* **LEXICON KALDEE-mal**
+
+* **LEXICON KALDEE-fem**
+
+* **LEXICON KALDEE_PL** Similar to TAHHEE
+
+
+
+
+* **LEXICON SUALUI** similar to PUASUI and KUAVSUI
+
+
+
+* **LEXICON SUALUI-plc** similar to PUASUI and KUAVSUI. 
+
+
+
+* **LEXICON SUOLLUUH-plc** SUALUI-plc plurals 
+
+
+* **LEXICON SUOLLUUH** SUALUI-plc plurals 
+
+
+* *LEXICON PIRUKAAMUV-plc*
+
+* *LEXICON PIRUKAAMUV*
+
+
+
+
+**LEXICON PAALGIS** similar to KAARBIS
+
+**LEXICON Prop_h_PL-plc**  gives %>h etc. to vowel stems
+
+**LEXICON Prop_h_PL**  gives %>h etc. to vowel stems
+
+
+
+
+
+* **LEXICON HANNOLA-plc**
+
+* **LEXICON HANNOLA-sur**
+
+
+
+
+
+* **LEXICON ERVASTI** 
+
+
+
+
+
+
+
+
+
+
+
+* **LEXICON BISSAU-plc**
+
+
+* **LEXICON ERVASTI-plcmal**
+
+
+
+* **LEXICON ERVASTI-fem**
+
+
+* **LEXICON ERVASTI-mal**
+
+
+* **LEXICON ERVASTI-obj**
+
+* **LEXICON ERVASTI-org**
+
+* **LEXICON ERVASTI-plc**
+
+* **LEXICON ERVASTI-sur**
+
+
+* **LEXICON BERN**
+
+
+* **LEXICON BERN-LOAN-obj**
+* **LEXICON BERN-LOAN-org**
+* **LEXICON BERN-LOAN-plc**
+
+* **LEXICON BERN-ani**
+
+
+* **LEXICON BERN-fem**
+
+* **LEXICON BERN-mal**
+
+* **LEXICON BERN-objsur**
+* **LEXICON BERN-obj**
+* **LEXICON BERN-orgsur**
+* **LEXICON BERN-org**
+
+
+* **LEXICON BERN_MWE-plc**
+
+* **LEXICON BERN-plc**
+
+* **LEXICON BERN-surmal**
+* **LEXICON BERN-sur**
+
+
+* **LEXICON OY-plc** ad hoc 
+
+* **LEXICON OY-sur** ad hoc 
+
+* **LEXICON OY-fem** ad hoc 
+
+
+* **LEXICON C-FI-NEN**
+
+
+* **LEXICON C-FI-NEN-plc**
+
+* **LEXICON C-FI-NEN-sur**
+
+* **LEXICON C-FI-NEN-org**
+
+
+* **LEXICON DUBAI**
+
+* **LEXICON DUBAI-mal**
+
+* **LEXICON DUBAI-fem**
+
+* **LEXICON DUBAI-sur**
+
+* **LEXICON DUBAI-obj**
+
+* **LEXICON DUBAI_MWE-plc**
+
+* **LEXICON DUBAI-plc**
+
+* **LEXICON DUBAI-org**
+
+* **LEXICON GATA-plc**
+
+* **LEXICON JOKULL-plc**
+
+
+
+
+* **LEXICON MAKI-plc**
+
+* **LEXICON MAKI-sur**
+
+
+
+* **LEXICON PIPPI-LOAN-plc**
+
+* **LEXICON PIPPI-ani**
+* **LEXICON PIPPI-femsur**
+
+* **LEXICON PIPPI-fem**
+
+* **LEXICON PIPPI-malfem**
+
+* **LEXICON PIPPI-mal**
+
+* **LEXICON PIPPI-obj**
+* **LEXICON PIPPI-org**
+* **LEXICON PIPPI_MWE-plc**
+
+* **LEXICON PIPPI-plc**
+
+* **LEXICON PIPPI-sur**
+
+* **LEXICON RONDANE-LOAN**
+
+
+* **LEXICON RONDANE-SG-LOAN**
+
+* **LEXICON RONDANE-SG-plc**
+
+* **LEXICON RONDANE-fem**
+
+* **LEXICON RONDANE-mal**
+
+* **LEXICON RONDANE-obj**
+* **LEXICON RONDANE-org**
+* **LEXICON RONDANE-plc**
+
+* **LEXICON RONDANE-sur**
+
+* **LEXICON RONDANE**
+
+
+
+
+
+
+
+
+
+
+
+
+
+| --- | --- | --- 
+
+
+
+
+
+
+
+* **LEXICON UAIVAS**   similar to KUAVDAS
+
+
+* **LEXICON UAIVAS-plc** similar to KUAVDAS. 
+
+
+
+
+
+* **LEXICON SUANJU** similar to LAAVU
+
+* **LEXICON SUANJU-plc** similar to LAAVU
+
+
+* **LEXICON SUANJU-ani** similar to LAAVU
+
+* **LEXICON SUANJU-fem** similar to LAAVU
+
+
+
+
+
+
+
+
+* **LEXICON EENA-plc** no stem in stems/smn-propernouns.le≈c
+
+
+
+* **LEXICON EENNAM-plc** similar to EEMEED
+
+* **LEXICON EENNAM-mal** similar to EEMEED
+
+* **LEXICON EENNAM** similar to EEMEED
+
+
+
+* **LEXICON ENAMEH-plc** similar to EEMEED
+
+
+* **LEXICON ENAMEH**  plurals for EEMEED
+
+
+* **LEXICON MAADIJ**  Similar to AARRAN
+
+* **LEXICON MAADIJ-plc**  Similar to AARRAN
+
+
+
+* **LEXICON CUAJA** similar to TAALU2
+
+
+* **LEXICON CUAJA-plc** similar to TAALU2
+
+* **LEXICON CUAJA-fem** XXX check this
+
+
+
+
+
+
+* **LEXICON JAAVRAS-plc**  
+
+* **LEXICON JAAVRAS-mal**  
+
+
+* **LEXICON JAAVRAS**  
+
+**LEXICON SUOLLUS-plc** 
+
+
+**LEXICON SUOLLUS** 
+
+
+
+* **LEXICON JUUVAS-plc** 
+
+
+
+
+* **LEXICON VUONAS-plc** 
+
+* **LEXICON VUONAS-ani**
+
+* **LEXICON VUONAS-mal**
+
+
+* **LEXICON VUONAS**  
+
+
+* **LEXICON VUONIIH-plc** Plural to VUONAS-plc
+
+* **LEXICON VUONIIH** plural forms 
+
+
+* **LEXICON VAARAAS-plc**  
+
+
+* **LEXICON VAARAAS**  vá^RVrá
+
+
+
+* **LEXICON LAADUS**  
+
+* **LEXICON LAADUS-plc** 
+
+
+
+* **LEXICON LADDUUH**  
+
+* **LEXICON LADDUUH-plc**  Similar to SPALVAAS plural
+
+
+* **LEXICON AALAAS-plc**  Similar to ALGAAS
+
+
+* **LEXICON AALAAS** 
+
+* **LEXICON SIALGAS-plc**  Similar to KUAVDAS
+
+* **LEXICON SIALGAS-mal**  Similar to KUAVDAS
+
+
+* **LEXICON SIALGAS**  
+
+
+
+
+
+
+
+* **LEXICON SME_NAMES-org** 
+
+
+* **LEXICON SME_NAMES-mal** 
+
+* **LEXICON SME_NAMES-fem**
+
+* **LEXICON SME_NAMES-sur**
+
+* **LEXICON SME_NAMES-plc**
+
+
+
+* **LEXICON SME_NAMES_PERS** Attr to North Saami person names
+
+* **LEXICON SME_NAMES** temp. only Sg+Nom and Cmp to North Saami names
+
+
+
+
+
+* **LEXICON PERSNAME-NOMCMP** e.g. Anttikandâ,  
+
+* **LEXICON PERSNAME-GENCMP** e.g. , Aanti-kyevtis
+
+
+* **LEXICON flagK** 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/abbreviations.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/affixes/abbreviations.lexc)</small>
+<small>This (part of) documentation was generated from [../src/fst/affixes/propernouns.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/affixes/propernouns.lexc)</small>
+# Inflection lexica for Inari Saami verbs
+
+This file contains the morphology for the Inari Saami verbs. 
+
+The morphophonological processes are governed by triggers. When there are more
+triggers, tney must be ordered as follows (where {A,B} C means *A or B, thereafter C*):
+
+{SV,ÁE,ÁI}  {EA,SC}  FCD {WG,CSH} CLEN  {VHIGH,VBACK}  {RVSH,RLEN} EA {SLEN,SVSH}  SVLOW
+
+## Overview of the file
+
+1. Auxiliaries
+1. NEG
+1. LEDE
+1. 2-syllabic: 2SYLL_ etc. (classified according to infinitive suffix)
+1. 3-syllabic
+1. 4-syllabic
+1. Unclassified: verbstems, 3v, 4v
+
+
+*A note on morphophonology:*
+The consonant gradation setup for verbs is to a certain extent different
+from the one for nouns. For the nouns, the stem vowel is part of the stem, 
+whereas for the verbs, the stem vowel is added here in the affixes file.
+
+
+
+## Auxiliaries
+
+**LEXICON NEG**  = lists all forms of the negation verb
+
+
+**LEXICON LEDE**  = lists all forms of the copula
+
+
+
+
+
+
+
+
+
+## The regular verbs
+### Order of lexica
+We present lexica for even, odd and contracted stems. Finally come lexica for flag diacritica.
+
+Transitivity: Lexica marked \_IV and \_TV get **+IV** and **+TV** tags before 
+being redirected to common inflection.
+
+Within each lexicon, the suffixes are ordered as follows:
+1. Infinites
+1. Indicative
+1. Conditional
+1. Potential
+1. Derivations
+
+
+## Even-syllable stems
+
+### AD verbs (verbs ending in *-âđ*)
+
+#### LEXICON 2SYLL\_HAAHAD
+
+
+
+
+
+
+#### LEXICON 2SYLL\_AASSAD ( 48 verbs)
+* 2SYLL_AASSAD - aassâđ ääss
+- Inf:â%>đ K ;
+- Ind+Prs+Sg3:á^CSH^VHIGH áásá,
+- Ind+Prs+Pl3:i^CSH%>h ääsih, rvow like Inf,
+- ConNeg:â^WG rvow like Inf,
+- Ind+Prt+Sg1:i^VBACK%>m aassim
+
+
+
+
+
+
+
+
+
+
+
+
+### Full paradigms
+
+#### LEXICON 2SYLL\_VIEZZAD
+
+
+
+
+
+
+
+
+
+
+
+#### LEXICON 2SYLL\_SPELLAD 
+Similar to 2SYLL\_ETTAD, but less CSH, don't know yet how much. 20 verbs
+
+
+
+
+
+
+
+
+
+#### LEXICON 2SYLL\_VIHKAD 
+
+
+
+#### LEXICON 2SYLL\_ETTAD 
+* 2SYLL_ETTAD ettâđ e^RVtt4
+- Inf:â^VHIGH%>đ
+- Ind+Prs+Sg3:á^CSH^VHIGH  iätá
+- Ind+Prs+Pl3:e^CSH%>h
+- ConNeg:â^WG^VHIGH^RLEN
+- Ind+Prt+Sg1:i%>m
+
+
+
+
+
+
+
+
+
+
+#### LEXICON 2SYLL\_KAVNAD 
+* 2SYLL_KAVNAD  as ETTAD as ETTAD but with VBACK kavnâđ kä^RVvn, only RV ä in stem tothis lexicon 57 verbs
+- Inf:
+- Ind+Prs+Sg3: kávná
+- Ind+Prs+Pl3: kävnih
+- ConNeg: kaavnâ
+- Ind+Prt+Sg1: kavnim
+
+
+
+
+
+
+
+
+
+
+
+
+
+#### LEXICON 2SYLL\_KALGAD (only TV)
+* 2SYLL_KALGAD kalgâđ
+- Inf:
+- Ind+Prs+Sg3:  kálgá
+- Ind+Prs+Pl3: kälgih
+- ConNeg: kaalgâ
+- Ind+Prt+Sg1: kalgim
+
+
+
+
+
+
+
+
+#### LEXICON 2SYLL\_KOLGAD 
+
+
+#### LEXICON 2SYLL\_COGGAD 
+* 2SYLL_COGGAD kolgâđ ka^RVlg
+- Inf:
+- Ind+Prs+Sg3: kalga
+- Ind+Prs+Pl3: kalgeh
+- ConNeg: koolgâ
+- Ind+Prt+Sg1: kolgim
+
+
+
+
+
+
+
+
+
+
+
+
+#### LEXICON 2SYLL\_KULGAD 
+* 2SYLL_KULGAD kulgâđ ko^RVlg
+- Inf:
+- Ind+Prs+Sg3: kolgá
+- Ind+Prs+Pl3: kolgeh
+- ConNeg: kuulgâ
+- Ind+Prt+Sg1: kulgim
+
+
+Distinct from SODDAD with short vowel in past tense (du)
+Turns out it was not distinct after all. Preper for fusing KULGAD and SODDAD
+
+
+
+#### LEXICON 2SYLL\_SODDAD 
+* 2SYLL_SODDAD šoddâđ ša^RVdd
+- Inf:
+- Ind+Prs+Sg3: šadda
+- Ind+Prs+Pl3: šaddeh
+- ConNeg: šoodâ
+- Ind+Prt+Sg1: šoddim
+
+
+
+
+
+
+
+
+
+
+
+
+#### LEXICON 2SYLL\_TOOLLAD (12 verbs)
+* 2SYLL_TOOLLAD - toollâđ,  tuáll
+- Inf:â^VBACK%>đ
+- Ind+Prs+Sg3: tuálá, á^CSH
+- Ind+Prs+Pl3:i^CSH%>h tuálih, rvow like Sg3
+- ConNeg:â^WG^VHIGH^RLEN rvow like Sg3
+- Prt+Sg1:i^VBACK^RLEN%>m toollim
+
+
+
+
+
+
+
+
+
+
+
+#### LEXICON 2SYLL\_OPPAD 
+* 2SYLL_OPPAD oppâđ uápp
+- Inf:
+- Ind+Prs+Sg3: uáppá
+- Ind+Prs+Pl3: uáppih
+- ConNeg: oopâ
+- Ind+Prt+Sg1: oppim
+
+suggested stem = tuáll
+Impossible to see the differences in diphtong length
+
+
+
+
+
+
+
+
+
+
+
+#### LEXICON 2SYLL\_TOOHAD 38 verbs
+* 2SYLL_TOOHAD - toohâđ, ta^RVh^RC
+- Inf: = 2SYLL_MOONNAD
+- Ind+Prs+Sg3:á^CSH taha,
+- Ind+Prs+Pl3:e^CSH%>h taheh, rvow like Sg3
+- Ind+Prt+Sg3:â^WG^VHIGH^RLEN%>i  juuvâi
+- ConNeg: rvow like Inf = 2SYLL_MOONNAD
+- Ind+Prt+Sg1: toohim = 2SYLL_MOONNAD
+
+
+
+
+
+
+
+#### LEXICON 2SYLL\_MMOONNAD 24 verbs
+* 2SYLL_MOONNAD - moonnâđ ma^RVnn
+- Inf:â^VHIGH^RLEN%>đ (functions also for ääss)
+- Ind+Prs+Sg3:á^CSH mana,
+- Ind+Prs+Pl3:e^CSH%>h maneh, rvow like Sg3
+- ConNeg:â^WG^VHIGH^RLEN rvow like Inf
+- Ind+Prt+Sg1:i^VHIGH^RLEN%>m moonnim
+
+
+
+
+nuuvâ, iige noovâ
+
+
+
+
+
+
+
+
+#### LEXICON 2SYLL\_VIIRRAD 
+
+
+
+
+
+
+
+
+
+
+#### LEXICON 2SYLL\_VIISSAD 
+* 2SYLL_VIISSAD - viiššâđ, vi^RVšš
+- Inf:â^VHIGH^RLEN%>đ
+- Ind+Prs+Sg3:á^CSH višá,
+- Ind+Prs+Pl3:e^CSH^RVSH%>h, rvow like Sg3 višeh
+- ConNeg:â^WG^RLEN viišâ, rvow like Inf
+- Ind+Prt+Sg1:i^RLEN%>m viiššim
+
+
+
+
+
+
+
+
+
+
+
+
+#### LEXICON 2SYLL\_CIEPPAD  like 2SYLL_KIESSAD but less CSH 4 verbs. 34 verbs
+
+
+
+
+#### LEXICON 2SYLL\_KIESSAD
+* 2SYLL_KIESSAD - kiessâđ, kiess
+- Inf:â%>đ
+- Ind+Prs+Sg3:á^CSH^VHIGH kiäsá,
+- Ind+Prs+Pl3:i^CSH%>h kiesih
+- ConNeg:â^WG rvow like Inf kiesâ
+- Ind+Prt+Sg1:i%>m  kiessim
+
+
+
+
+
+
+
+#### LEXICON 2SYLL\_VUOLLAD  ye to ua vyešš 71 verbs
+* 2SYLL_VUOLLAD - vuollâđ, vuoll OBS: not Prs+Pl3 vowel like the others
+- Inf:â%>đ
+- Ind+Prs+Sg3:á^CSH^VHIGH vuálá,
+- Ind+Prs+Pl3:i^CSH%>h  vyelih
+- ConNeg:â^WG rvow like Inf vuolâ
+- Ind+Prt+Sg1:i%>m vuollim
+
+
+
+
+
+
+
+
+
+
+#### LEXICON 2SYLL\_LUOIKKAD RUOTTAD\_LUOIKKAD, passive, no Der/l, otherw like ruottad, 3 verbs
+
+#### LEXICON 2SYLL\_RUOTTAD
+
+
+#### LEXICON 2SYLL\_LUOIKKAD, no passive
+
+
+
+
+
+
+
+
+
+### ED verbs
+
+#### LEXICON 2SYLL\_KALVED kalveđ without RLEN Prs+Sg1. 8 verbs
+* 2SYLL_KALVED kalveđ ka^RVlv
+- kalvam
+- kalva
+- kalveh
+- kalve
+
+
+
+#### LEXICON 2SYLL\_POHTED  with RLEN Prs+Sg1. 31 verbs
+* 2SYLL_POHTED pohteđ:po5^RVht
+- poovtám RLEN
+- pohtá
+- pohteh
+- povte
+
+
+
+
+
+
+
+
+
+
+
+
+#### LEXICON 2SYLL\_PIHTED 82 verbs
+* 2SYLL_PIHTED pihteđ pi^RVht
+- pivtám
+- pihtá
+- pihteh
+- pivte
+
+
+
+
+
+
+
+
+
+### EED verbs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### ID verbs
+
+#### 2SYLL\_UADDID
+* 2SYLL_UADDID
+- Ind+Prs+Sg1: čálám
+- Ind+Prs+Sg3: čáálá
+- Ind+Prs+Pl3: čäälih NB! čäällih?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+as 2SYLL_ID, but only 3 person
+
+#### 2SYLL\_ID celkkiđ
+
+
+
+
+
+
+
+
+
+#### 2SYLL\_EELLID
+* 2SYLL_EELLID: iälám iälá eelih ij ele
+
+
+
+** **LEXICON VINFINITES_EELLID !**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* 2SYLL_PAACCID pääcciđ
+- Ind+Prs+Sg1: páásám
+- Ind+Prs+Sg3: páácá
+- Ind+Prs+Pl3: pääcih NB! pääccih?
+
+
+
+
+
+
+
+
+
+
+
+#### 2SYLL_VYELGID like VYEIJID, but -i for reduced forms. 7 verbs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### OD verbs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### OOD verbs
+* 2SYLL_OOD
+- Prt+Du1 njivvoim WG CLEN
+
+
+
+
+
+
+
+
+
+
+#### 2SYLL\_ORROOD
+* 2SYLL_ORROOD  like 2SYLL_OOD, but different triggers here and there
+- Prt+Du1 oroim WG
+
+
+
+
+
+
+
+
+
+
+
+### UD verbs
+
+#### 2SYLL\_KUARRUD
+* 2SYLL_KUARRUD  long dipht => -o
+- Inf: kuárruđ
+- Ind+Prs+Sg3: kuáru
+- Ind+Prs+Pl3: kuáruh
+- ConNeg: kuáru, kuáro
+- Ind+Prt+Sg1: koorrum
+
+
+
+
+
+
+
+
+
+
+
+
+#### 2SYLL\_UD
+* 2SYLL_UD
+- Inf: ruábbuđ
+- Ind+Prs+Sg3: ruábbu
+- Ind+Prs+Pl3: ruábbuh
+- ConNeg: ruábu
+- Ind+Prt+Sg1: ruábbum
+
+
+
+
+
+
+
+
+
+
+
+#### 2SYLL\_UAZZUID
+* 2SYLL_UAZZUD
+- Inf: uážžuđ
+- Ind+Prs+Sg3: uážžu
+- Ind+Prs+Pl3: uážžuh
+- ConNeg: uážu
+- Ind+Prt+Sg1: ožžum
+
+
+
+
+
+
+
+
+###  Common even lexica
+
+
+
+
+
+
+
+## Odd-syllable stems
+
+
+
+* 3_KUIKETTID = 3_LEKKASID. TODO: Unify (?)
+
+
+* 3_LEKKASID (no stem change, but going to ODDLEX)
+- Sg1: %>âm, Sg3: ^CLEN^RLEN (note: ODDLEX :-(
+
+
+
+* 3_CIELATTID (stem-final tt shortening) cielâttiđ: cielât Length change in stem: Consonant change only
+- Sg1: %>âm, Sg3: ^CLEN^RLEN
+
+
+
+
+
+
+* 3_VYEJETTID (2syll vow short in Inf, long in Sg3, 1st syll V lengthening) vyejettiđ vyejeet
+- Sg1: %>âm, Sg3: ^RLEN^SLEN
+
+
+
+
+
+
+
+
+
+* 3_ADELID
+- Sg1: %>âm, Sg3: ^CLEN
+
+
+
+
+
+
+
+
+
+
+* 3_MERIDID
+- Sg1: %>âm, Sg3: ^CLEN^RLEN
+
+
+
+
+
+
+* 3_PUTESTID (cns and vow lengthening) putestiđ: putteest Length change in stem: Short V in Inf (before V)
+- Sg1: %>âm, Sg3: ^CLEN^SLEN
+
+
+
+
+
+
+
+* 3_COKKIITTID (stem-final tt shortening + 2syll vow shortening cokkiittiđ cokkit.
+- Sg1: %>âm, Sg3: ^SVSH
+- difference in negation + Action Ess, Loc.. compared to 3_COKKIITTID)
+- Length change in stem: Long V in Inf (before C#).
+
+
+
+
+
+
+
+### Common lexicons inflecting odd-syllabic verbs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Derivational extentions to 3-syllabic verbs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### 4-syllabic
+
+* 4v
+* 4_ADELISTID
+* 4_KAVNATTATTAD
+* 4_TUHHID
+
+
+## Contracted stems
+
+###  j stems
+* Contracted j-stems
+- C_COKKAD (áj-contracted)
+- Ind Prs Pl3 čokkájeh
+- C_PALLAD (aj-contracted)
+- C_TUHHID (ej-contracted)
+- C_RAMMUD (oj-contracted)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###  v stems
+
+* Contracted v-stems
+- C_TABAHTUD (Sg3 -uvá)
+- C_MERIDUD (Sg3 uvvoo)
+
+
+* **LEXICON C_TABAHTUD** Sg3 -uvá
+
+
+
+
+
+
+
+
+
+
+
+* **LEXICON C_MERIDUD** Sg3 -uvvoo
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 4-syllabic
+
+**LEXICON 4SYLL_KYETTID** 
+
+
+
+
+
+
+
+
+
+
+**LEXICON 4_ADELISTID** 
+
+
+
+
+
+
+
+
+
+
+**LEXICON 4_ITTID** 
+
+
+
+
+
+
+
+
+
+
+
+
+**LEXICON 4_UHCAD** 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Other lexica
+Here come the case variation for VAbess, and flag for VGen, they are invariant above and thus collected here.
+
+## Case lexica
+
+* **LEXICON VABESS** to handle Abessive variation, hánnáá, hennáá, hinnáá.
+* **LEXICON VGEN**  flag for VGen
+
+## Derivation lexica
+These point to different nominal paradigms.
+
+* **LEXICON DER_MAS** 
+* **LEXICON IJJE** 
+* **LEXICON IJJE_PRSPRC** 
+* **LEXICON NOMACT**  for -náál suffixation.
+
+
+## Flag section
+
+The lexica in this section add the *@C.NeedNoun@* flag, thereby allowing them to 
+become the second part of N + (V > N) compounds.
+
+**LEXICON FLAG_3HUKSIM** should not be disallowed by ENDLEX @D.NeedNoun.ON@
+
+**LEXICON FLAG_3KIEDAVUSSAM** should not be disallowed by ENDLEX @D.NeedNoun.ON@
+
+**LEXICON FLAG_CTAHHEE** should not be disallowed by ENDLEX @D.NeedNoun.ON@
+
+
+
+
+
+
+
+**LEXICON FLAG_K** should not be disallowed by ENDLEX @D.NeedNoun.ON@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/affixes/verbs.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/affixes/verbs.lexc)</small>
+
+
+# Adjective affixes
+
+This file contains the morphology for the Inari Saami adjectives.
+
+The morphophonological processes are governed by triggers. When there are more
+triggers, tney must be ordered as follows (where {A,B} C means *A or B, thereafter C*):
+
+{SV,ÁE,ÁI}  SC  FCD {WG,CSH} CLEN  {VHIGH,VBACK}  {RVSH,RLEN} EA {SLEN,SVSH}  SVLOW
+
+
+
+## Adjectives with attr only
+
+**LEXICON ATTR** for stems with only attribute form, gives Attr, svt. sends to Cmp.
+
+
+## Even-syllable stems
+
+
+**LEXICON SIAHA** for siähá. It gives only Attr and Sg/Pl Nom. Fix?
+
+
+
+
+
+
+
+**LEXICON SKELMA** directing to X_ALGA, attr skelmâ
+
+
+
+
+
+
+
+
+
+
+
+
+**LEXICON CEPPI** directing to X_AIGI, attr. čepis
+
+**LEXICON UCCE** 
+
+**LEXICON SUVRE** 
+
+
+**LEXICON KUKKE** directing to X_ALGE, attr. kuhes
+
+
+
+
+**LEXICON PASE** directing to X_NJUNE via HUMO_REST, attr. pase                  
+
+**LEXICON HUMO** directing to X_NJUNE via HUMO_REST, attr. humos                  
+
+**LEXICON HUMO_REST** 
+
+
+**LEXICON UAMI** directing to X_SAAMI, attr. uá'mi
+
+**LEXICON LAAMI** directing to X_SAAMI, attr. lämis
+
+**LEXICON LAAMI_REST** 
+
+
+**LEXICON PYERI** directing to X_KYELI, attr. pyeri
+
+
+
+**LEXICON HYENI** directing to X_KYELI, attr. hyenes
+
+
+**LEXICON NUORA** directing to X_KIELA, attr. nuora
+
+
+
+
+
+## Odd-syllable stems
+
+**LEXICON NJUORAS** directing to X_RUONAS, attr. njuorâs
+
+
+**LEXICON UAMIS** directing to X_RUONAS, as an own group because of FCD, attr. uámi, čuámi, often used in compounds
+
+
+
+**LEXICON HAANIS** directing to X_PAAVIR, attr. hänis
+
+
+**LEXICON TIMES** directing to X_PAAVIR, attr. timmâ
+
+
+**LEXICON KIARGUS_nocomp**  like HAANIS, directing to X_PAAVIR, 
+
+
+**LEXICON HAAITIS** directing to X_VEESKIR, attr. rähis, not in use
+
+**LEXICON HEEITUG** directing to X_PAAVIR, attr. heitugis, heitugâs
+
+
+**LEXICON VAANIS** directing to  X_PAAVIR, attr. väni
+
+**LEXICON NJAALGIS** directing to NJAALGIS_COMMON, Attr. njaalgâ and njälgis
+
+**LEXICON RAAPIS** directing to NJAALGIS_COMMON, Attr. räpis 
+
+**LEXICON NJAALGIS_COMMON** directing to  X_KAARBIS
+
+**LEXICON KOSKES** directing to  X_VEESKIR, attr. koške
+
+
+**LEXICON NJOLGES** directing to  X_VEESKIR, attr. njolges
+
+
+
+**LEXICON FIIJNES**  no noun cont.lex with this pattern
+
+
+
+**LEXICON KOOIDAS** directing to  X_VEESKIR, attr. koidâ
+
+
+**LEXICON SUOTAS** directing to  X_VEESKIR, attr. suotâs
+
+
+**LEXICON LIAGUS** like SUOTAS except for CSH
+
+
+
+**LEXICON SENES** not fitting in X_PELES because of CSH attr. seŋes
+
+
+
+
+**LEXICON KEPPIS** directing to X_LITTER, attr. keppâ
+
+**LEXICON PASTEL** directing to X_LITTER, attr. pastelis; adj is PASTEL
+
+**LEXICON FISKAD** directing to X_LITTER, attr. fiskis (fikâdis)
+
+
+**LEXICON JUOLLAD** directing to X_EEMEED, attr, juolis, juolâdis, juolâdâs
+
+**LEXICON A_LITTER** directing to X_LITTER
+
+
+
+
+
+
+
+**LEXICON ALMOS** directing to X_SAJOS, attr. almos
+
+
+
+**LEXICON SOOHAD_nocomp** directing to X_EEMEED, attr. sohâdis
+
+
+**LEXICON SOOHAD** directing to X_EEMEED, attr. sohâdis
+
+**LEXICON SOOHAD_NULLATTR** 
+
+**LEXICON SOOHAD_NOATTR** 
+
+**LEXICON MAAJEEB-COMP** comparative lexicon
+
+
+**LEXICON PEEGGALM** directing to X_EEMEED, attr. sohâdis
+
+
+**LEXICON JUARBUDEKES** 
+
+**LEXICON JUARBUDEVES** 
+
+**LEXICON JUARBUDEKES_INFL** 
+
+
+
+
+LEXICON A_KOLME ad hoc three syllable stem > LITTER
+
+
+**LEXICON KUBDUV** . It doesn't fit with KAAMUV because of kubduvân, kubduvist
+
+**LEXICON KUBDUV_COMP** 
+
+
+## Contracted stems
+
+**LEXICON ALKKEE** directing to X_TAHHEE, attr. älkkees
+
+
+**LEXICON A_IJJE** 
+
+**LEXICON TTETTEE** 
+
+**LEXICON PYECCEE** directing to X_TAHHEE, attr. pyeccee
+
+
+**LEXICON ALKKEE_COMMON** common for ALKKEE and PYECCEE
+
+
+**LEXICON A_KAANDAS** directing to X_KAANDAS, no attr, half congruence
+
+**LEXICON A_TUULAS** directing to X_KAANDAS, no attr, half congruence
+
+
+**LEXICON STYERES** directing to X_KAARBIS, attr. stuorrâ
+
+**LEXICON RIGES** directing to X_KAARBIS, attr. riges, 3st comparision
+
+
+
+
+**LEXICON MUOTTII** almost like KARRII, direct to it?
+
+
+**LEXICON A_VUALAAS** 
+
+
+**LEXICON SIAMMAS** 
+
+
+**LEXICON JIAVTAS** 
+
+
+
+**LEXICON TAASSAS** 
+
+
+## 4 syll stems
+
+**LEXICON A_KUNAGAS** directing to  X_KUNAGAS; syeligâs, is like kunâgâs but FCD is not enough to create the comparation
+
+
+
+
+
+**LEXICON UANIHASJ** directing to LAS_SUF, attr, -âš
+
+**LEXICON KIERDAVAS** 
+
+
+**LEXICON UANIHASJ_INFL** 
+
+
+**LEXICON UNOHAS** directing to LAS_SUF, attr, -is
+
+
+**LEXICON ANOLASJ** directing to LAS_COMMON, attr, -âš
+Adj - pooliitlâš: # attr. pooliitlâš; puolikongruenssi mahdollinen (#-paikat), puolikongr. asemesta SgNom.
+
+**LEXICON LAGAN** directing to A_LITTER, attr. -lágán
+
+
+
+
+
+
+
+**LEXICON MUSTOTTEM** pls note e > iä in sg ill; no comparation
+
+**LEXICON A_INDECL** not all forms., attr = Sg. Nom.
+
+
+**LEXICON OLMOOSMETTUM**, not all forms. attr. = Sg. Nom.
+
+**LEXICON METTUMforms** 
+
+
+
+
+## Der/Comp+Aarision
+
+
+* **LEXICON COMPe** NUORA uses this lexicon
+
+
+* **LEXICON VVCOMPe** ALKKEE uses this lexicon; giving älkkeb etc.
+
+
+
+* **LEXICON COMPclen** NUORA uses this lexicon
+
+
+* **LEXICON CCOMPe** STYERES and MUOTTII use this lexicon
+
+
+* **LEXICON eCOMP**
+
+
+* **LEXICON COMPo** NJUORAS, NJAALGIS uses this lexicon
+
+
+* **LEXICON eCOMP-SUF** 
+
+* **LEXICON oCOMP-SUF** 
+
+
+* **LEXICON CCOMP-SUF**  STYERES uses this lexicon
+
+
+* **LEXICON COMP-SUF** 
+
+
+
+* **LEXICON VVCOMP-SUF** 
+
+
+* **LEXICON COMP-SUFclen** 
+
+
+* **LEXICON SUP_MUS**
+
+* **LEXICON SUP_MUSJ** majemuš
+
+
+* **LEXICON MUS**  asdf
+
+* **LEXICON MUSj** SUP_MUSJ uses this lexicon, eg. majemuš
+
+
+* **LEXICON CMUS**  STYERES uses this lexicon
+
+
+* **LEXICON MOS**
+
+* **LEXICON MUS-SUF**
+
+* **LEXICON MUSj-SUF**
+
+* **LEXICON CMUS-SUF**
+
+**LEXICON P-COMP-ERR-ORTH** 
+
+
+* **LEXICON A_VUOTA** for derivation
+
+* **LEXICON FLAG_2KIELA** @C.NeedNoun@
+
+* **LEXICON A_ADV** for derivation
+
+
+
+
+
+* **LEXICON A_LAGAN** for derivation
+
+**LEXICON A_LASJ** 
+
+**LEXICON ATTR_R** sends to R, NAMAG, SAS, CMP_ADJ.
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/affixes/adjectives.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/affixes/adjectives.lexc)</small>
+
+# Inari Saami number <-> text
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* **LEXICON ARABICCASES**  adds +Arab
+
+* **LEXICON ARABICCASE**  adds +Arab
+
+* **LEXICON ARABICCASE0**  adds +Arab
+
+
+* **LEXICON DIGITCASES**  to distinguish between 0 and oblique
+
+* **LEXICON DIGITCASE0**
+
+
+
+
+
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/affixes/numerals.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/affixes/numerals.lexc)</small>
 
 # Sublexica for nominal morphology 
 
@@ -12184,2376 +15311,77 @@ TODO: Move derivation lexica here
 
 * * *
 <small>This (part of) documentation was generated from [../src/fst/affixes/nouns.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/affixes/nouns.lexc)</small>
+# Continuation lexicons for abbreviations
 
+## Lexica for adding tags and periods
 
-# Adjective affixes
+## The sublexica
 
-This file contains the morphology for the Inari Saami adjectives.
+### Continuation lexicons for abbrs both with and witout final period
 
-The morphophonological processes are governed by triggers. When there are more
-triggers, tney must be ordered as follows (where {A,B} C means *A or B, thereafter C*):
 
-{SV,ÁE,ÁI}  SC  FCD {WG,CSH} CLEN  {VHIGH,VBACK}  {RVSH,RLEN} EA {SLEN,SVSH}  SVLOW
+* **LEXICON ab-noun**
 
+* **LEXICON ab-adj**
 
+* **LEXICON ab-adv**
 
-## Adjectives with attr only
+* **LEXICON ab-num**
 
-**LEXICON ATTR** for stems with only attribute form, gives Attr, svt. sends to Cmp.
+### Lexicons without final period
 
+* **LEXICON ab-nodot-noun**  The bulk
 
-## Even-syllable stems
+* **LEXICON ab-nodot-adj**
 
+* **LEXICON ab-nodot-adv**
 
-**LEXICON SIAHA** for siähá. It gives only Attr and Sg/Pl Nom. Fix?
+* **LEXICON ab-nodot-num**
 
+### Lexicons with final period
 
+* **LEXICON ab-dot-noun**  This is the lexicon for abbrs that must have a period.
 
+* **LEXICON ab-dot-adj**  This is the lexicon for abbrs that must have a period.
 
+* **LEXICON ab-dot-adv**  This is the lexicon for abbrs that must have a period.
 
+* **LEXICON ab-dot-num**  This is the lexicon for abbrs that must have a period.
 
+* **LEXICON ab-dot-cc**
 
-**LEXICON SKELMA** directing to X_ALGA, attr skelmâ
 
 
+* **LEXICON ab-verb**  A lexicon for "gč." and perhaps also other abbreviated verbs.
 
 
+* **LEXICON ab-dot-verb**
 
+* **LEXICON ab-nodot-verb**
 
 
+* **LEXICON ab-dot-IVprfprc**
 
 
+* **LEXICON nodot-attrnomaccgen-infl**
 
+* **LEXICON nodot-attr-infl**
 
+* **LEXICON nodot-nomaccgen-infl**
 
-**LEXICON CEPPI** directing to X_AIGI, attr. čepis
 
-**LEXICON UCCE** 
+* **LEXICON dot-attrnomaccgen-infl**
 
-**LEXICON SUVRE** 
+* **LEXICON dot-attr**
 
+* **LEXICON dot-nomaccgen-infl**
 
-**LEXICON KUKKE** directing to X_ALGE, attr. kuhes
 
-
-
-
-**LEXICON PASE** directing to X_NJUNE via HUMO_REST, attr. pase                  
-
-**LEXICON HUMO** directing to X_NJUNE via HUMO_REST, attr. humos                  
-
-**LEXICON HUMO_REST** 
-
-
-**LEXICON UAMI** directing to X_SAAMI, attr. uá'mi
-
-**LEXICON LAAMI** directing to X_SAAMI, attr. lämis
-
-**LEXICON LAAMI_REST** 
-
-
-**LEXICON PYERI** directing to X_KYELI, attr. pyeri
-
-
-
-**LEXICON HYENI** directing to X_KYELI, attr. hyenes
-
-
-**LEXICON NUORA** directing to X_KIELA, attr. nuora
-
-
-
-
-
-## Odd-syllable stems
-
-**LEXICON NJUORAS** directing to X_RUONAS, attr. njuorâs
-
-
-**LEXICON UAMIS** directing to X_RUONAS, as an own group because of FCD, attr. uámi, čuámi, often used in compounds
-
-
-
-**LEXICON HAANIS** directing to X_PAAVIR, attr. hänis
-
-
-**LEXICON TIMES** directing to X_PAAVIR, attr. timmâ
-
-
-**LEXICON KIARGUS_nocomp**  like HAANIS, directing to X_PAAVIR, 
-
-
-**LEXICON HAAITIS** directing to X_VEESKIR, attr. rähis, not in use
-
-**LEXICON HEEITUG** directing to X_PAAVIR, attr. heitugis, heitugâs
-
-
-**LEXICON VAANIS** directing to  X_PAAVIR, attr. väni
-
-**LEXICON NJAALGIS** directing to NJAALGIS_COMMON, Attr. njaalgâ and njälgis
-
-**LEXICON RAAPIS** directing to NJAALGIS_COMMON, Attr. räpis 
-
-**LEXICON NJAALGIS_COMMON** directing to  X_KAARBIS
-
-**LEXICON KOSKES** directing to  X_VEESKIR, attr. koške
-
-
-**LEXICON NJOLGES** directing to  X_VEESKIR, attr. njolges
-
-
-
-**LEXICON FIIJNES**  no noun cont.lex with this pattern
-
-
-
-**LEXICON KOOIDAS** directing to  X_VEESKIR, attr. koidâ
-
-
-**LEXICON SUOTAS** directing to  X_VEESKIR, attr. suotâs
-
-
-**LEXICON LIAGUS** like SUOTAS except for CSH
-
-
-
-**LEXICON SENES** not fitting in X_PELES because of CSH attr. seŋes
-
-
-
-
-**LEXICON KEPPIS** directing to X_LITTER, attr. keppâ
-
-**LEXICON PASTEL** directing to X_LITTER, attr. pastelis; adj is PASTEL
-
-**LEXICON FISKAD** directing to X_LITTER, attr. fiskis (fikâdis)
-
-
-**LEXICON JUOLLAD** directing to X_EEMEED, attr, juolis, juolâdis, juolâdâs
-
-**LEXICON A_LITTER** directing to X_LITTER
-
-
-
-
-
-
-
-**LEXICON ALMOS** directing to X_SAJOS, attr. almos
-
-
-
-**LEXICON SOOHAD_nocomp** directing to X_EEMEED, attr. sohâdis
-
-
-**LEXICON SOOHAD** directing to X_EEMEED, attr. sohâdis
-
-**LEXICON SOOHAD_NULLATTR** 
-
-**LEXICON SOOHAD_NOATTR** 
-
-**LEXICON MAAJEEB-COMP** comparative lexicon
-
-
-**LEXICON PEEGGALM** directing to X_EEMEED, attr. sohâdis
-
-
-**LEXICON JUARBUDEKES** 
-
-**LEXICON JUARBUDEVES** 
-
-**LEXICON JUARBUDEKES_INFL** 
-
-
-
-
-LEXICON A_KOLME ad hoc three syllable stem > LITTER
-
-
-**LEXICON KUBDUV** . It doesn't fit with KAAMUV because of kubduvân, kubduvist
-
-**LEXICON KUBDUV_COMP** 
-
-
-## Contracted stems
-
-**LEXICON ALKKEE** directing to X_TAHHEE, attr. älkkees
-
-
-**LEXICON A_IJJE** 
-
-**LEXICON TTETTEE** 
-
-**LEXICON PYECCEE** directing to X_TAHHEE, attr. pyeccee
-
-
-**LEXICON ALKKEE_COMMON** common for ALKKEE and PYECCEE
-
-
-**LEXICON A_KAANDAS** directing to X_KAANDAS, no attr, half congruence
-
-**LEXICON A_TUULAS** directing to X_KAANDAS, no attr, half congruence
-
-
-**LEXICON STYERES** directing to X_KAARBIS, attr. stuorrâ
-
-**LEXICON RIGES** directing to X_KAARBIS, attr. riges, 3st comparision
-
-
-
-
-**LEXICON MUOTTII** almost like KARRII, direct to it?
-
-
-**LEXICON A_VUALAAS** 
-
-
-**LEXICON SIAMMAS** 
-
-
-**LEXICON JIAVTAS** 
-
-
-
-**LEXICON TAASSAS** 
-
-
-## 4 syll stems
-
-**LEXICON A_KUNAGAS** directing to  X_KUNAGAS; syeligâs, is like kunâgâs but FCD is not enough to create the comparation
-
-
-
-
-
-**LEXICON UANIHASJ** directing to LAS_SUF, attr, -âš
-
-**LEXICON KIERDAVAS** 
-
-
-**LEXICON UANIHASJ_INFL** 
-
-
-**LEXICON UNOHAS** directing to LAS_SUF, attr, -is
-
-
-**LEXICON ANOLASJ** directing to LAS_COMMON, attr, -âš
-Adj - pooliitlâš: # attr. pooliitlâš; puolikongruenssi mahdollinen (#-paikat), puolikongr. asemesta SgNom.
-
-**LEXICON LAGAN** directing to A_LITTER, attr. -lágán
-
-
-
-
-
-
-
-**LEXICON MUSTOTTEM** pls note e > iä in sg ill; no comparation
-
-**LEXICON A_INDECL** not all forms., attr = Sg. Nom.
-
-
-**LEXICON OLMOOSMETTUM**, not all forms. attr. = Sg. Nom.
-
-**LEXICON METTUMforms** 
-
-
-
-
-## Der/Comp+Aarision
-
-
-* **LEXICON COMPe** NUORA uses this lexicon
-
-
-* **LEXICON VVCOMPe** ALKKEE uses this lexicon; giving älkkeb etc.
-
-
-
-* **LEXICON COMPclen** NUORA uses this lexicon
-
-
-* **LEXICON CCOMPe** STYERES and MUOTTII use this lexicon
-
-
-* **LEXICON eCOMP**
-
-
-* **LEXICON COMPo** NJUORAS, NJAALGIS uses this lexicon
-
-
-* **LEXICON eCOMP-SUF** 
-
-* **LEXICON oCOMP-SUF** 
-
-
-* **LEXICON CCOMP-SUF**  STYERES uses this lexicon
-
-
-* **LEXICON COMP-SUF** 
-
-
-
-* **LEXICON VVCOMP-SUF** 
-
-
-* **LEXICON COMP-SUFclen** 
-
-
-* **LEXICON SUP_MUS**
-
-* **LEXICON SUP_MUSJ** majemuš
-
-
-* **LEXICON MUS**  asdf
-
-* **LEXICON MUSj** SUP_MUSJ uses this lexicon, eg. majemuš
-
-
-* **LEXICON CMUS**  STYERES uses this lexicon
-
-
-* **LEXICON MOS**
-
-* **LEXICON MUS-SUF**
-
-* **LEXICON MUSj-SUF**
-
-* **LEXICON CMUS-SUF**
-
-**LEXICON P-COMP-ERR-ORTH** 
-
-
-* **LEXICON A_VUOTA** for derivation
-
-* **LEXICON FLAG_2KIELA** @C.NeedNoun@
-
-* **LEXICON A_ADV** for derivation
-
-
-
-
-
-* **LEXICON A_LAGAN** for derivation
-
-**LEXICON A_LASJ** 
-
-**LEXICON ATTR_R** sends to R, NAMAG, SAS, CMP_ADJ.
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/adjectives.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/affixes/adjectives.lexc)</small>
-# Inflection lexica for Inari Saami verbs
-
-This file contains the morphology for the Inari Saami verbs. 
-
-The morphophonological processes are governed by triggers. When there are more
-triggers, tney must be ordered as follows (where {A,B} C means *A or B, thereafter C*):
-
-{SV,ÁE,ÁI}  {EA,SC}  FCD {WG,CSH} CLEN  {VHIGH,VBACK}  {RVSH,RLEN} EA {SLEN,SVSH}  SVLOW
-
-## Overview of the file
-
-1. Auxiliaries
-1. NEG
-1. LEDE
-1. 2-syllabic: 2SYLL_ etc. (classified according to infinitive suffix)
-1. 3-syllabic
-1. 4-syllabic
-1. Unclassified: verbstems, 3v, 4v
-
-
-*A note on morphophonology:*
-The consonant gradation setup for verbs is to a certain extent different
-from the one for nouns. For the nouns, the stem vowel is part of the stem, 
-whereas for the verbs, the stem vowel is added here in the affixes file.
-
-
-
-## Auxiliaries
-
-**LEXICON NEG**  = lists all forms of the negation verb
-
-
-**LEXICON LEDE**  = lists all forms of the copula
-
-
-
-
-
-
-
-
-
-## The regular verbs
-### Order of lexica
-We present lexica for even, odd and contracted stems. Finally come lexica for flag diacritica.
-
-Transitivity: Lexica marked \_IV and \_TV get **+IV** and **+TV** tags before 
-being redirected to common inflection.
-
-Within each lexicon, the suffixes are ordered as follows:
-1. Infinites
-1. Indicative
-1. Conditional
-1. Potential
-1. Derivations
-
-
-## Even-syllable stems
-
-### AD verbs (verbs ending in *-âđ*)
-
-#### LEXICON 2SYLL\_HAAHAD
-
-
-
-
-
-
-#### LEXICON 2SYLL\_AASSAD ( 48 verbs)
-* 2SYLL_AASSAD - aassâđ ääss
-- Inf:â%>đ K ;
-- Ind+Prs+Sg3:á^CSH^VHIGH áásá,
-- Ind+Prs+Pl3:i^CSH%>h ääsih, rvow like Inf,
-- ConNeg:â^WG rvow like Inf,
-- Ind+Prt+Sg1:i^VBACK%>m aassim
-
-
-
-
-
-
-
-
-
-
-
-
-### Full paradigms
-
-#### LEXICON 2SYLL\_VIEZZAD
-
-
-
-
-
-
-
-
-
-
-
-#### LEXICON 2SYLL\_SPELLAD 
-Similar to 2SYLL\_ETTAD, but less CSH, don't know yet how much. 20 verbs
-
-
-
-
-
-
-
-
-
-#### LEXICON 2SYLL\_VIHKAD 
-
-
-
-#### LEXICON 2SYLL\_ETTAD 
-* 2SYLL_ETTAD ettâđ e^RVtt4
-- Inf:â^VHIGH%>đ
-- Ind+Prs+Sg3:á^CSH^VHIGH  iätá
-- Ind+Prs+Pl3:e^CSH%>h
-- ConNeg:â^WG^VHIGH^RLEN
-- Ind+Prt+Sg1:i%>m
-
-
-
-
-
-
-
-
-
-
-#### LEXICON 2SYLL\_KAVNAD 
-* 2SYLL_KAVNAD  as ETTAD as ETTAD but with VBACK kavnâđ kä^RVvn, only RV ä in stem tothis lexicon 57 verbs
-- Inf:
-- Ind+Prs+Sg3: kávná
-- Ind+Prs+Pl3: kävnih
-- ConNeg: kaavnâ
-- Ind+Prt+Sg1: kavnim
-
-
-
-
-
-
-
-
-
-
-
-
-
-#### LEXICON 2SYLL\_KALGAD (only TV)
-* 2SYLL_KALGAD kalgâđ
-- Inf:
-- Ind+Prs+Sg3:  kálgá
-- Ind+Prs+Pl3: kälgih
-- ConNeg: kaalgâ
-- Ind+Prt+Sg1: kalgim
-
-
-
-
-
-
-
-
-#### LEXICON 2SYLL\_KOLGAD 
-
-
-#### LEXICON 2SYLL\_COGGAD 
-* 2SYLL_COGGAD kolgâđ ka^RVlg
-- Inf:
-- Ind+Prs+Sg3: kalga
-- Ind+Prs+Pl3: kalgeh
-- ConNeg: koolgâ
-- Ind+Prt+Sg1: kolgim
-
-
-
-
-
-
-
-
-
-
-
-
-#### LEXICON 2SYLL\_KULGAD 
-* 2SYLL_KULGAD kulgâđ ko^RVlg
-- Inf:
-- Ind+Prs+Sg3: kolgá
-- Ind+Prs+Pl3: kolgeh
-- ConNeg: kuulgâ
-- Ind+Prt+Sg1: kulgim
-
-
-Distinct from SODDAD with short vowel in past tense (du)
-Turns out it was not distinct after all. Preper for fusing KULGAD and SODDAD
-
-
-
-#### LEXICON 2SYLL\_SODDAD 
-* 2SYLL_SODDAD šoddâđ ša^RVdd
-- Inf:
-- Ind+Prs+Sg3: šadda
-- Ind+Prs+Pl3: šaddeh
-- ConNeg: šoodâ
-- Ind+Prt+Sg1: šoddim
-
-
-
-
-
-
-
-
-
-
-
-
-#### LEXICON 2SYLL\_TOOLLAD (12 verbs)
-* 2SYLL_TOOLLAD - toollâđ,  tuáll
-- Inf:â^VBACK%>đ
-- Ind+Prs+Sg3: tuálá, á^CSH
-- Ind+Prs+Pl3:i^CSH%>h tuálih, rvow like Sg3
-- ConNeg:â^WG^VHIGH^RLEN rvow like Sg3
-- Prt+Sg1:i^VBACK^RLEN%>m toollim
-
-
-
-
-
-
-
-
-
-
-
-#### LEXICON 2SYLL\_OPPAD 
-* 2SYLL_OPPAD oppâđ uápp
-- Inf:
-- Ind+Prs+Sg3: uáppá
-- Ind+Prs+Pl3: uáppih
-- ConNeg: oopâ
-- Ind+Prt+Sg1: oppim
-
-suggested stem = tuáll
-Impossible to see the differences in diphtong length
-
-
-
-
-
-
-
-
-
-
-
-#### LEXICON 2SYLL\_TOOHAD 38 verbs
-* 2SYLL_TOOHAD - toohâđ, ta^RVh^RC
-- Inf: = 2SYLL_MOONNAD
-- Ind+Prs+Sg3:á^CSH taha,
-- Ind+Prs+Pl3:e^CSH%>h taheh, rvow like Sg3
-- Ind+Prt+Sg3:â^WG^VHIGH^RLEN%>i  juuvâi
-- ConNeg: rvow like Inf = 2SYLL_MOONNAD
-- Ind+Prt+Sg1: toohim = 2SYLL_MOONNAD
-
-
-
-
-
-
-
-#### LEXICON 2SYLL\_MMOONNAD 24 verbs
-* 2SYLL_MOONNAD - moonnâđ ma^RVnn
-- Inf:â^VHIGH^RLEN%>đ (functions also for ääss)
-- Ind+Prs+Sg3:á^CSH mana,
-- Ind+Prs+Pl3:e^CSH%>h maneh, rvow like Sg3
-- ConNeg:â^WG^VHIGH^RLEN rvow like Inf
-- Ind+Prt+Sg1:i^VHIGH^RLEN%>m moonnim
-
-
-
-
-nuuvâ, iige noovâ
-
-
-
-
-
-
-
-
-#### LEXICON 2SYLL\_VIIRRAD 
-
-
-
-
-
-
-
-
-
-
-#### LEXICON 2SYLL\_VIISSAD 
-* 2SYLL_VIISSAD - viiššâđ, vi^RVšš
-- Inf:â^VHIGH^RLEN%>đ
-- Ind+Prs+Sg3:á^CSH višá,
-- Ind+Prs+Pl3:e^CSH^RVSH%>h, rvow like Sg3 višeh
-- ConNeg:â^WG^RLEN viišâ, rvow like Inf
-- Ind+Prt+Sg1:i^RLEN%>m viiššim
-
-
-
-
-
-
-
-
-
-
-
-
-#### LEXICON 2SYLL\_CIEPPAD  like 2SYLL_KIESSAD but less CSH 4 verbs. 34 verbs
-
-
-
-
-#### LEXICON 2SYLL\_KIESSAD
-* 2SYLL_KIESSAD - kiessâđ, kiess
-- Inf:â%>đ
-- Ind+Prs+Sg3:á^CSH^VHIGH kiäsá,
-- Ind+Prs+Pl3:i^CSH%>h kiesih
-- ConNeg:â^WG rvow like Inf kiesâ
-- Ind+Prt+Sg1:i%>m  kiessim
-
-
-
-
-
-
-
-#### LEXICON 2SYLL\_VUOLLAD  ye to ua vyešš 71 verbs
-* 2SYLL_VUOLLAD - vuollâđ, vuoll OBS: not Prs+Pl3 vowel like the others
-- Inf:â%>đ
-- Ind+Prs+Sg3:á^CSH^VHIGH vuálá,
-- Ind+Prs+Pl3:i^CSH%>h  vyelih
-- ConNeg:â^WG rvow like Inf vuolâ
-- Ind+Prt+Sg1:i%>m vuollim
-
-
-
-
-
-
-
-
-
-
-#### LEXICON 2SYLL\_LUOIKKAD RUOTTAD\_LUOIKKAD, passive, no Der/l, otherw like ruottad, 3 verbs
-
-#### LEXICON 2SYLL\_RUOTTAD
-
-
-#### LEXICON 2SYLL\_LUOIKKAD, no passive
-
-
-
-
-
-
-
-
-
-### ED verbs
-
-#### LEXICON 2SYLL\_KALVED kalveđ without RLEN Prs+Sg1. 8 verbs
-* 2SYLL_KALVED kalveđ ka^RVlv
-- kalvam
-- kalva
-- kalveh
-- kalve
-
-
-
-#### LEXICON 2SYLL\_POHTED  with RLEN Prs+Sg1. 31 verbs
-* 2SYLL_POHTED pohteđ:po5^RVht
-- poovtám RLEN
-- pohtá
-- pohteh
-- povte
-
-
-
-
-
-
-
-
-
-
-
-
-#### LEXICON 2SYLL\_PIHTED 82 verbs
-* 2SYLL_PIHTED pihteđ pi^RVht
-- pivtám
-- pihtá
-- pihteh
-- pivte
-
-
-
-
-
-
-
-
-
-### EED verbs
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### ID verbs
-
-#### 2SYLL\_UADDID
-* 2SYLL_UADDID
-- Ind+Prs+Sg1: čálám
-- Ind+Prs+Sg3: čáálá
-- Ind+Prs+Pl3: čäälih NB! čäällih?
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-as 2SYLL_ID, but only 3 person
-
-#### 2SYLL\_ID celkkiđ
-
-
-
-
-
-
-
-
-
-#### 2SYLL\_EELLID
-* 2SYLL_EELLID: iälám iälá eelih ij ele
-
-
-
-** **LEXICON VINFINITES_EELLID !**
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* 2SYLL_PAACCID pääcciđ
-- Ind+Prs+Sg1: páásám
-- Ind+Prs+Sg3: páácá
-- Ind+Prs+Pl3: pääcih NB! pääccih?
-
-
-
-
-
-
-
-
-
-
-
-#### 2SYLL_VYELGID like VYEIJID, but -i for reduced forms. 7 verbs
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### OD verbs
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### OOD verbs
-* 2SYLL_OOD
-- Prt+Du1 njivvoim WG CLEN
-
-
-
-
-
-
-
-
-
-
-#### 2SYLL\_ORROOD
-* 2SYLL_ORROOD  like 2SYLL_OOD, but different triggers here and there
-- Prt+Du1 oroim WG
-
-
-
-
-
-
-
-
-
-
-
-### UD verbs
-
-#### 2SYLL\_KUARRUD
-* 2SYLL_KUARRUD  long dipht => -o
-- Inf: kuárruđ
-- Ind+Prs+Sg3: kuáru
-- Ind+Prs+Pl3: kuáruh
-- ConNeg: kuáru, kuáro
-- Ind+Prt+Sg1: koorrum
-
-
-
-
-
-
-
-
-
-
-
-
-#### 2SYLL\_UD
-* 2SYLL_UD
-- Inf: ruábbuđ
-- Ind+Prs+Sg3: ruábbu
-- Ind+Prs+Pl3: ruábbuh
-- ConNeg: ruábu
-- Ind+Prt+Sg1: ruábbum
-
-
-
-
-
-
-
-
-
-
-
-#### 2SYLL\_UAZZUID
-* 2SYLL_UAZZUD
-- Inf: uážžuđ
-- Ind+Prs+Sg3: uážžu
-- Ind+Prs+Pl3: uážžuh
-- ConNeg: uážu
-- Ind+Prt+Sg1: ožžum
-
-
-
-
-
-
-
-
-###  Common even lexica
-
-
-
-
-
-
-
-## Odd-syllable stems
-
-
-
-* 3_KUIKETTID = 3_LEKKASID. TODO: Unify (?)
-
-
-* 3_LEKKASID (no stem change, but going to ODDLEX)
-- Sg1: %>âm, Sg3: ^CLEN^RLEN (note: ODDLEX :-(
-
-
-
-* 3_CIELATTID (stem-final tt shortening) cielâttiđ: cielât Length change in stem: Consonant change only
-- Sg1: %>âm, Sg3: ^CLEN^RLEN
-
-
-
-
-
-
-* 3_VYEJETTID (2syll vow short in Inf, long in Sg3, 1st syll V lengthening) vyejettiđ vyejeet
-- Sg1: %>âm, Sg3: ^RLEN^SLEN
-
-
-
-
-
-
-
-
-
-* 3_ADELID
-- Sg1: %>âm, Sg3: ^CLEN
-
-
-
-
-
-
-
-
-
-
-* 3_MERIDID
-- Sg1: %>âm, Sg3: ^CLEN^RLEN
-
-
-
-
-
-
-* 3_PUTESTID (cns and vow lengthening) putestiđ: putteest Length change in stem: Short V in Inf (before V)
-- Sg1: %>âm, Sg3: ^CLEN^SLEN
-
-
-
-
-
-
-
-* 3_COKKIITTID (stem-final tt shortening + 2syll vow shortening cokkiittiđ cokkit.
-- Sg1: %>âm, Sg3: ^SVSH
-- difference in negation + Action Ess, Loc.. compared to 3_COKKIITTID)
-- Length change in stem: Long V in Inf (before C#).
-
-
-
-
-
-
-
-### Common lexicons inflecting odd-syllabic verbs
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Derivational extentions to 3-syllabic verbs
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### 4-syllabic
-
-* 4v
-* 4_ADELISTID
-* 4_KAVNATTATTAD
-* 4_TUHHID
-
-
-## Contracted stems
-
-###  j stems
-* Contracted j-stems
-- C_COKKAD (áj-contracted)
-- Ind Prs Pl3 čokkájeh
-- C_PALLAD (aj-contracted)
-- C_TUHHID (ej-contracted)
-- C_RAMMUD (oj-contracted)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-###  v stems
-
-* Contracted v-stems
-- C_TABAHTUD (Sg3 -uvá)
-- C_MERIDUD (Sg3 uvvoo)
-
-
-* **LEXICON C_TABAHTUD** Sg3 -uvá
-
-
-
-
-
-
-
-
-
-
-
-* **LEXICON C_MERIDUD** Sg3 -uvvoo
-
-
-
-
-
-
-
-
-
-
-
-
-
-## 4-syllabic
-
-**LEXICON 4SYLL_KYETTID** 
-
-
-
-
-
-
-
-
-
-
-**LEXICON 4_ADELISTID** 
-
-
-
-
-
-
-
-
-
-
-**LEXICON 4_ITTID** 
-
-
-
-
-
-
-
-
-
-
-
-
-**LEXICON 4_UHCAD** 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Other lexica
-Here come the case variation for VAbess, and flag for VGen, they are invariant above and thus collected here.
-
-## Case lexica
-
-* **LEXICON VABESS** to handle Abessive variation, hánnáá, hennáá, hinnáá.
-* **LEXICON VGEN**  flag for VGen
-
-## Derivation lexica
-These point to different nominal paradigms.
-
-* **LEXICON DER_MAS** 
-* **LEXICON IJJE** 
-* **LEXICON IJJE_PRSPRC** 
-* **LEXICON NOMACT**  for -náál suffixation.
-
-
-## Flag section
-
-The lexica in this section add the *@C.NeedNoun@* flag, thereby allowing them to 
-become the second part of N + (V > N) compounds.
-
-**LEXICON FLAG_3HUKSIM** should not be disallowed by ENDLEX @D.NeedNoun.ON@
-
-**LEXICON FLAG_3KIEDAVUSSAM** should not be disallowed by ENDLEX @D.NeedNoun.ON@
-
-**LEXICON FLAG_CTAHHEE** should not be disallowed by ENDLEX @D.NeedNoun.ON@
-
-
-
-
-
-
-
-**LEXICON FLAG_K** should not be disallowed by ENDLEX @D.NeedNoun.ON@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+* **LEXICON DOT** - Adds the dot to dotted abbreviations.
 
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/verbs.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/affixes/verbs.lexc)</small>
-
-# Inari Saami number <-> text
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* **LEXICON ARABICCASES**  adds +Arab
-
-* **LEXICON ARABICCASE**  adds +Arab
-
-* **LEXICON ARABICCASE0**  adds +Arab
-
-
-* **LEXICON DIGITCASES**  to distinguish between 0 and oblique
-
-* **LEXICON DIGITCASE0**
-
-
-
-
-
-
-
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/numerals.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/affixes/numerals.lexc)</small>
-# Possessive suffixes for Inari Saami
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/possessive-suffixes.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/affixes/possessive-suffixes.lexc)</small>
-# Propernoun morphology for Inari Saami
-
-TODO:
-These are not in use:
-ANAR DUBAI DUBAI-plc DUBAI-sur MAKI 
-
-* **LEXICON Proper_infix** is the de Silva lexicon
-
-* **LEXICON FirstTag**
-
-* **LEXICON TEMPORARY**
-
-* **LEXICON V_TEMPORARY**
-
-
-* **LEXICON NIEMI**
-
-
-
-* **LEXICON ACCRA** SM1
-
-* **LEXICON ACCRA-ani**
-
-
-* **LEXICON ACCRA-femsur**
-* **LEXICON ACCRA-fem**
-
-* **LEXICON ACCRA-malfem**
-
-* **LEXICON ACCRA-malsur**
-
-* **LEXICON ACCRA-mal**
-
-* **LEXICON ACCRA-objplc**
-
-* **LEXICON ACCRA-obj**
-* **LEXICON ACCRA-org**
-
-* **LEXICON ACCRA-A_MWE-plc**
-
-* **LEXICON ACCRA-A-org**
-
-* **LEXICON ACCRA-A-plc**
-
-* **LEXICON ACCRA-A-fem**
-
-* **LEXICON ACCRA_MWE-plc**
-
-
-* **LEXICON ACCRA-plc**
-
-* **LEXICON ACCRA-sur**
-
-
-* **LEXICON JUUHA-plc** similar to JUUHA
-
-
-* **LEXICON JUUHA** similar to JUUHA, stem ju
-
-
-* **LEXICON LUOHTA** similar to VADDU
-
-
-* **LEXICON LUOHTA-plc**   
-
-* **LEXICON LUOHTA-mal**
-
-* **LEXICON LUOHTA-fem**
-
-
-
-
-
-* **LEXICON LUOHTA_PL** similar to ALGA_PL X_PUUVSAH
-
-
-
-
-* **LEXICON VUONA** similar to ALGA
-
-
-* **LEXICON VUONA-plc** similar to ALGA
-
-
-* **LEXICON VUONA-fem** similar to ALGA
-
-
-
-
-
-
-
-
-
-
-* **LEXICON KURRA-plc** similar to SOLLA
-
-
-* **LEXICON KURRA** similar to SOLLA
-
-
-* **LEXICON KAAVA-plc** similar to KIELA
-
-
-* **LEXICON KAAVA** similar to KIELA 
-
-
-* **LEXICON NJOBZA** similar to 2ALGA
-
-* **LEXICON NJOBZA-plc** similar to 2ALGA
-
-* **LEXICON NJOBZA-ani** similar to 2ALGA
-
-
-
-* **LEXICON LASSA-plc** similar to FADDA
-
-
-* **LEXICON LASSA**  Similar to FADDA
-
-
-
-
-* **LEXICON JAVRI-plc** jävri, jeggi
-
-
-* **LEXICON JAVRI-mal** 
-
-* **LEXICON JAVRI-fem** 
-
-
-* **LEXICON JAVRI-ani** 
-
-* **LEXICON JAVRI** similar to AIGI, but only Sg. Some case forms should be deleted for names? Only difference to VUONA is Ess/Par. Are they in use for names?
-
-
-
-* **LEXICON JAAVRIH-plc**  JAVRI-plurals, e.g. Kähteejäävrih
-
-
-* **LEXICON JAAVRIH**  plurals for JAVRI
-
-
-
-
-
-
-
-
-
-
-
-
-* **LEXICON VAARI** to SAAMI
-
-
-* **LEXICON VAARI-plc** 
-
-
-* **LEXICON VAARIH-plc**  VAARI-plurals
-
-
-* **LEXICON VAARIH** VAARI-plurals
-
-
-
-
-
-
-* **LEXICON CIELGI** to CAACI
-
-
-* **LEXICON CIELGI-plc** to CAACI
-
-
-
-
-
-
-
-* **LEXICON NYERI** similar to KYELI
-
-
-* **LEXICON NYERI-plc** similar to KYELI
-
-
-
-* **LEXICON TUPE**  Similar to NJUNE
-
-
-* **LEXICON TUPE-plc**  Similar to NJUNE
-
-
-* **LEXICON TUPE-ani**  Similar to NJUNE
-
-
-* **LEXICON VASE-plc**  Similar to VAHE
-
-
-* **LEXICON VASE**
-
-
-* **LEXICON POHE** nearly similar to VAHE
-
-* **LEXICON POHE-plc** similar to VAHE
-
-
-* **LEXICON POHE-ani** similar to VAHE
-
-
-* **LEXICON POHE-mal** similar to VAHE
-
-
-
-
-* **LEXICON MOKKE** similar to ALGE
-
-* **LEXICON MOKKE-plc** similar to ALGE 
-
-* **LEXICON MOKKE-sur** similar to ALGE 
-
-* **LEXICON MOKKE-org** similar to ALGE 
-
-* **LEXICON MOKKE-fem** similar to ALGE 
-
-* **LEXICON MOKKE-mal** similar to ALGE 
-
-* **LEXICON MOKKE-ani** similar to ALGE 
-
-
-
-* **LEXICON NIJTTO**
-
-* **LEXICON NIJTTO-plc**  Similar to SIJVO
-
-
-* **LEXICON ROTO** similar to LAJO and X_LAJO
-
-
-* **LEXICON ROTO-plc** similar to LAJO and X_LAJO 
-
-
-
-* **LEXICON LAADUH** 
-
-* **LEXICON LAADUH-plc** Plural to LUOHTA-plc
-
-
-
-* **LEXICON LONDON**
-
-
-* **LEXICON LONDON-LOAN-obj**
-* **LEXICON LONDON-LOAN-org**
-* **LEXICON LONDON-LOAN-plc**
-
-* **LEXICON LONDON-ani**
-* **LEXICON LONDON-atr**
-* **LEXICON LONDON-fem**
-
-* **LEXICON LONDON-malfem**
-
-* **LEXICON LONDON-malplc**
-
-* **LEXICON LONDON-malsur**
-
-* **LEXICON LONDON-mal**
-
-* **LEXICON LONDON-obj**
-
-* **LEXICON LONDON-orgsur**
-
-* **LEXICON LONDON-org**
-
-* **LEXICON LONDON-orgplc**
-
-
-* **LEXICON LONDON_MWE-plc**
-
-* **LEXICON LONDON-plc**
-
-* **LEXICON LONDON-sur**
-
-
-* **LEXICON LONDONBERN-plc**
-
-
-
-
-* **LEXICON AANAAR** Goes to EEMEED
-
-
-* **LEXICON AANAAR-plc**
-
-* **LEXICON AANAAR-mal**
-
-* **LEXICON AANAAR-fem**
-
-
-
-
-
-LEXICON KIARUN = 3KIELES
-
-
-**LEXICON LUOBAL** Similar to VEESKIR
-
-* **LEXICON LUOBAL-plc** Similar to VEESKIR
-
-
-
-* **LEXICON LUOBBALEH** plural forms 
-
-
-* **LEXICON LUOBBALEH-plc** Plural to LUOBAL-plc
-
-* **LEXICON LUOBBALEH-org** Plural to LUOBAL-plc
-
-* **LEXICON LUOBBALEH-ani** Plural to LUOBAL-plc
-
-
-
-* **LEXICON MAARIT** 
-
-
-* **LEXICON MAARIT-fem similar to 3POTTAAK** 
-
-* **LEXICON MAARIT-mal similar to 3POTTAAK** 
-
-
-* **LEXICON SAVO-plc** similar to ALGA
-
-* **LEXICON SAVO** similar to ALGA
-
-
-* **LEXICON KUOLBA-plc** similar to POOVSA
-
-
-* **LEXICON KUOLBA**  similar to POOVSA
-
-
-
-
-* **LEXICON LYEME** 
-
-
-
-
-
-
-
-
-
-
-* **LEXICON ANDARAS**  this is for loanwords without stem change, 3-syll. cons end
-
-
-
-* **LEXICON ANDARAS-mal** similar to KUNAGAS
-
-* **LEXICON ANDARAS-org** similar to KUNAGAS
-
-
-
-* **LEXICON ANDARAS-plc** similar to KUNAGAS
-
-
-
-* **LEXICON IANUDAH-plc**  Similar to 4JOTOLAH
-
-
-
-
-
-
-
-
-
-* **LEXICON KALDEE** Similar to TAHHEE
-
-* **LEXICON KALDEE-plc**  Similar to TAHHEE
-
-* **LEXICON KALDEE-org**  Similar to TAHHEE
-
-
-* **LEXICON KALDEE_PL-plc**  Similar to TAHHEE_PL
-
-* **LEXICON KALDEE-mal**
-
-* **LEXICON KALDEE-fem**
-
-* **LEXICON KALDEE_PL** Similar to TAHHEE
-
-
-
-
-* **LEXICON SUALUI** similar to PUASUI and KUAVSUI
-
-
-
-* **LEXICON SUALUI-plc** similar to PUASUI and KUAVSUI. 
-
-
-
-* **LEXICON SUOLLUUH-plc** SUALUI-plc plurals 
-
-
-* **LEXICON SUOLLUUH** SUALUI-plc plurals 
-
-
-* *LEXICON PIRUKAAMUV-plc*
-
-* *LEXICON PIRUKAAMUV*
-
-
-
-
-**LEXICON PAALGIS** similar to KAARBIS
-
-**LEXICON Prop_h_PL-plc**  gives %>h etc. to vowel stems
-
-**LEXICON Prop_h_PL**  gives %>h etc. to vowel stems
-
-
-
-
-
-* **LEXICON HANNOLA-plc**
-
-* **LEXICON HANNOLA-sur**
-
-
-
-
-
-* **LEXICON ERVASTI** 
-
-
-
-
-
-
-
-
-
-
-
-* **LEXICON BISSAU-plc**
-
-
-* **LEXICON ERVASTI-plcmal**
-
-
-
-* **LEXICON ERVASTI-fem**
-
-
-* **LEXICON ERVASTI-mal**
-
-
-* **LEXICON ERVASTI-obj**
-
-* **LEXICON ERVASTI-org**
-
-* **LEXICON ERVASTI-plc**
-
-* **LEXICON ERVASTI-sur**
-
-
-* **LEXICON BERN**
-
-
-* **LEXICON BERN-LOAN-obj**
-* **LEXICON BERN-LOAN-org**
-* **LEXICON BERN-LOAN-plc**
-
-* **LEXICON BERN-ani**
-
-
-* **LEXICON BERN-fem**
-
-* **LEXICON BERN-mal**
-
-* **LEXICON BERN-objsur**
-* **LEXICON BERN-obj**
-* **LEXICON BERN-orgsur**
-* **LEXICON BERN-org**
-
-
-* **LEXICON BERN_MWE-plc**
-
-* **LEXICON BERN-plc**
-
-* **LEXICON BERN-surmal**
-* **LEXICON BERN-sur**
-
-
-* **LEXICON OY-plc** ad hoc 
-
-* **LEXICON OY-sur** ad hoc 
-
-* **LEXICON OY-fem** ad hoc 
-
-
-* **LEXICON C-FI-NEN**
-
-
-* **LEXICON C-FI-NEN-plc**
-
-* **LEXICON C-FI-NEN-sur**
-
-* **LEXICON C-FI-NEN-org**
-
-
-* **LEXICON DUBAI**
-
-* **LEXICON DUBAI-mal**
-
-* **LEXICON DUBAI-fem**
-
-* **LEXICON DUBAI-sur**
-
-* **LEXICON DUBAI-obj**
-
-* **LEXICON DUBAI_MWE-plc**
-
-* **LEXICON DUBAI-plc**
-
-* **LEXICON DUBAI-org**
-
-* **LEXICON GATA-plc**
-
-* **LEXICON JOKULL-plc**
-
-
-
-
-* **LEXICON MAKI-plc**
-
-* **LEXICON MAKI-sur**
-
-
-
-* **LEXICON PIPPI-LOAN-plc**
-
-* **LEXICON PIPPI-ani**
-* **LEXICON PIPPI-femsur**
-
-* **LEXICON PIPPI-fem**
-
-* **LEXICON PIPPI-malfem**
-
-* **LEXICON PIPPI-mal**
-
-* **LEXICON PIPPI-obj**
-* **LEXICON PIPPI-org**
-* **LEXICON PIPPI_MWE-plc**
-
-* **LEXICON PIPPI-plc**
-
-* **LEXICON PIPPI-sur**
-
-* **LEXICON RONDANE-LOAN**
-
-
-* **LEXICON RONDANE-SG-LOAN**
-
-* **LEXICON RONDANE-SG-plc**
-
-* **LEXICON RONDANE-fem**
-
-* **LEXICON RONDANE-mal**
-
-* **LEXICON RONDANE-obj**
-* **LEXICON RONDANE-org**
-* **LEXICON RONDANE-plc**
-
-* **LEXICON RONDANE-sur**
-
-* **LEXICON RONDANE**
-
-
-
-
-
-
-
-
-
-
-
-
-
-| --- | --- | --- 
-
-
-
-
-
-
-
-* **LEXICON UAIVAS**   similar to KUAVDAS
-
-
-* **LEXICON UAIVAS-plc** similar to KUAVDAS. 
-
-
-
-
-
-* **LEXICON SUANJU** similar to LAAVU
-
-* **LEXICON SUANJU-plc** similar to LAAVU
-
-
-* **LEXICON SUANJU-ani** similar to LAAVU
-
-* **LEXICON SUANJU-fem** similar to LAAVU
-
-
-
-
-
-
-
-
-* **LEXICON EENA-plc** no stem in stems/smn-propernouns.le≈c
-
-
-
-* **LEXICON EENNAM-plc** similar to EEMEED
-
-* **LEXICON EENNAM-mal** similar to EEMEED
-
-* **LEXICON EENNAM** similar to EEMEED
-
-
-
-* **LEXICON ENAMEH-plc** similar to EEMEED
-
-
-* **LEXICON ENAMEH**  plurals for EEMEED
-
-
-* **LEXICON MAADIJ**  Similar to AARRAN
-
-* **LEXICON MAADIJ-plc**  Similar to AARRAN
-
-
-
-* **LEXICON CUAJA** similar to TAALU2
-
-
-* **LEXICON CUAJA-plc** similar to TAALU2
-
-* **LEXICON CUAJA-fem** XXX check this
-
-
-
-
-
-
-* **LEXICON JAAVRAS-plc**  
-
-* **LEXICON JAAVRAS-mal**  
-
-
-* **LEXICON JAAVRAS**  
-
-**LEXICON SUOLLUS-plc** 
-
-
-**LEXICON SUOLLUS** 
-
-
-
-* **LEXICON JUUVAS-plc** 
-
-
-
-
-* **LEXICON VUONAS-plc** 
-
-* **LEXICON VUONAS-ani**
-
-* **LEXICON VUONAS-mal**
-
-
-* **LEXICON VUONAS**  
-
-
-* **LEXICON VUONIIH-plc** Plural to VUONAS-plc
-
-* **LEXICON VUONIIH** plural forms 
-
-
-* **LEXICON VAARAAS-plc**  
-
-
-* **LEXICON VAARAAS**  vá^RVrá
-
-
-
-* **LEXICON LAADUS**  
-
-* **LEXICON LAADUS-plc** 
-
-
-
-* **LEXICON LADDUUH**  
-
-* **LEXICON LADDUUH-plc**  Similar to SPALVAAS plural
-
-
-* **LEXICON AALAAS-plc**  Similar to ALGAAS
-
-
-* **LEXICON AALAAS** 
-
-* **LEXICON SIALGAS-plc**  Similar to KUAVDAS
-
-* **LEXICON SIALGAS-mal**  Similar to KUAVDAS
-
-
-* **LEXICON SIALGAS**  
-
-
-
-
-
-
-
-* **LEXICON SME_NAMES-org** 
-
-
-* **LEXICON SME_NAMES-mal** 
-
-* **LEXICON SME_NAMES-fem**
-
-* **LEXICON SME_NAMES-sur**
-
-* **LEXICON SME_NAMES-plc**
-
-
-
-* **LEXICON SME_NAMES_PERS** Attr to North Saami person names
-
-* **LEXICON SME_NAMES** temp. only Sg+Nom and Cmp to North Saami names
-
-
-
-
-
-* **LEXICON PERSNAME-NOMCMP** e.g. Anttikandâ,  
-
-* **LEXICON PERSNAME-GENCMP** e.g. , Aanti-kyevtis
-
-
-* **LEXICON flagK** 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/propernouns.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/affixes/propernouns.lexc)</small>
+<small>This (part of) documentation was generated from [../src/fst/affixes/abbreviations.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/affixes/abbreviations.lexc)</small>
 
 # Inari Saami acronyms
 
@@ -14591,835 +15419,7 @@ LEXICON KIARUN = 3KIELES
 * **LEXICON acrooblique**
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/acronyms.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/affixes/acronyms.lexc)</small>
-# Inari Saami morphophonological rule file
-
-This file documents the [phonology.twolc file](http://github.com/giellalt/lang-smn/blob/main/src/fst/phonology.twolc) 
-
-
-Here we govern all morphophonological processes.
-
-# Alphabet 
-
-
-## The Inari Saami letters
-
-*  a á â ä b c d e f g h i j k l m n o õ p q 
-  r s t u v w x y z æ ä ø ö å               
-  č đ ŋ ŧ š ž                               
-
-*  A Á Â Å B C D E F G H I J K L M N O Õ P Q 
-  R S T U V W X Y Z Æ Ä Ø Ö Å               
-  Č Đ Ŋ Ŧ Š Ž                               
-* ** %-                                        ** hyphen
-* ** '       ** the hyphen as hyphen
-* **  ⎈      ** the ghost sign used in compounding, does not work in hfst
-
-### Accented letters, just in case
-
-*  É Ó Ú Í À È Ò Ù Ì Ë Ü Ï Ê Ô Û Î Ã Ý þ Ð   
-  é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý þ ð   
-  ß ª ß ç                                   
-
-
-
-Literal quotes and angles must be escaped (cf morpheme boundaries further down):
-* »
-«
->
-<
-
-
-
-### Archiphonemes
-
-
-* **a5:a á5:á e5:e i5:i u5:u y5:y o5:o ä5:ä  **  these do not change 
-* **i2:i u2:u â2:â  **  this is final i, u in contract verbs etc changing to e, o
-* **i3:i            **  this is invariant i
-* **i4:i            **  this is the underlying i consonant
-* **i6:0            ** a fake vowel, to get WG rules to function, e.g. kyehtlov (kyehti6lov)
-* **c5:c č5:č d5:d h5:h j5:j l5:l m5:m ŋ5:ŋ r5:r t5:t z5:z  **  these do not change
-* **b6:b d6:d g6:g ** clitic consonants, jiemge, epke
-* **j6:0           ** a fake consonant, to get WG rules to function, e.g. puávui
-* **p4:p  k4:k  l4:l t4:t č4:č c4:c **  these are consonants that change in cg
-* ** ':'           ** is the real apostroph
-
-Then some more abstract archiphonemes
-These are dependent upon the **Triggers** in the next section
-* **%^RC:0      ** = root cons., lengthened by ^CLEN - máán%RCu máánnun
-* **%^RV:0      ** = root vowel, lengthened by ^RLEN - ta%^RVvlu taavlu 
-* **%^SC:0      ** = stem cons, %^SC:j, pluss lengthen after earlier shortening by %^CSH, see lyeme
-* **%^SV:0      ** = stem vowel, lengthened by ^SLEN u:uu - táálu%^SV tááloost
-* **%^VO:0      ** = vowel copy
-
-### Triggers
-These symbols govern the behaviour of the archiphonemes above.
-
-
-* **%^CLEN:0    ** = Cons lengthening, with ^RC
-* **%^CSH:0     ** = Cons shortening, laaŋkku - laaŋkun
-* **%^RVSH:0    ** = Root vowel shortening
-* **%^FCD:0     ** = Final consonant deletion 
-* **%^FVD:0     ** = Final vowel deletion 
-* **%^EA:0      ** = Stem vowel: e and i to a/á in ill, and root vowel ä>á, e(e)>iä, ie>iä, ye>uá
-* **%^EX:0      ** = Stem vowel: i to â where it should have been á, this is Err/Orth only
-* **%^RLEN:0    ** = Root vowel lengthening
-* **%^SLEN:0    ** = Stem vowel lengthening
-* **%^SVLOW:0   ** = Stem vowel lowering â>á and u>o - árppu árppoin, Root vowel shortening when more than one cns in consonant centre and suffix starts with i
-* **%^SVSH:0    ** = Stem vowel shortening kappeer kaperân
-* **%^WG:0      ** = Weak grade trigger
-* **%^ÁE:0      ** = á to e in 3-syll, triggered by ^WG
-* **%^ÁI:0      ** = á to i in 3-syll, triggered by ^WG
-* **%^VHIGH:0   ** = High rootvow for verbs: e>iä, a>o, o>u, ää>áá, ee>iä, note also: ie>iä, ye>uá, uo>uá
-* **%^VBACK:0   ** = Back rootvow for verbs: ä(ä)>a(a), á>aa, uá>o, ye>uo
-* **%^BLOCK:0   ** = This symbol just to block otherwise triggering contexts
-* **%^IUML:0    ** = â to e in front of high suffixes 
-
-Trigger ordering in twolc and lexc, from left to right:
-
-{SV,ÁE,ÁI}  {EA,EX,SC}  {FCD|,VD} {WG,CSH} CLEN  {VHIGH,VBACK}  {RVSH,RLEN} {SLEN,SVSH}  SVLOW
-
-
-
-## Morpheme boundaries:
-
-Here we define the suffix border >
-The other borders are not used yet, but still defined:
-
-* **«**:  Derivational prefix
-* **»**:  Derivational suffix
-* **%<**:  Inflectional prefx
-* **%>**:  Inflectional suffix
-* **%^**:  (exceptional) soft hyphenation point
-and the symbol #, which is Word boundary for both lexicalised and dynamic compounds
-
-End of alphabet definitions
-
-
-Sets
-
-* ** Vow = a á â ä e i o u y æ ø ö å             ** 
-**       i2 u2 â2                                ** 
-**       i3                                      ** 
-**       a5 á5 i5 u5 y5 o5 ä5                    ** 
-**       i6                                      ** 
-**       é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý     ** 
-**       A Á Â Ä E I O U Y Æ Ø Ö Å               ** 
-**       É Ó Ú Í À È Ò Ú Ì Ë Ü Ï Ê Ô Û Î Ã Ý     ** 
-**       %^RV %^SV ;                             ** 
-* ** RealVow = a á â ä e i o u y æ ø ö å         ** 
-       y5 i2 i3 i5 i6 â2                       
-**       é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý     ** 
-**       A Á Â Ä E I O U Y Æ Ø Ö Å               ** 
-**       É Ó Ú Í À È Ò Ú Ì Ë Ü Ï Ê Ô Û Î Ã Ý ;   ** 
-* ** Cns = b c č d đ f g h j k l m n ŋ           ** 
-**       p q r s š t ŧ v w x z ž                 ** 
-**       B C Č D Đ F G H J K L M N Ŋ             ** 
-**       P Q R S Š T Ŧ V W X Z Ž                 ** 
-**       g2 k2 m2 n2                             ** 
-**       b3 d3 g3 m3 h3                          ** 
-       p4 k4 r4 l4  i4  t4 c4 č4               
-       h5 j5 ŋ5 t5 c5 l5 t5 d5 r5 z5 j6        
-       %^RC %^SC   ;                           
-*  UnvoicedCns = c č f h k p s š t  ;          
-* ** Geminate = b d g p h t k c f z l m n ŋ r s š v ; **  
-* ** Sgm = Vow Cns ;                                  ** 
-* ** NotSuffixBorder = %^FCD %^FVD %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^EX %^ÁI %^SVSH Vow Cns ; ** 
-* ** Triggers =        %^FCD %^FVD %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^EX %^ÁI %^SVSH %^VHIGH %^VBACK %^IUML ; ** 
-*  TriggersnotFCVD =             %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^EX %^ÁI %^SVSH %^VHIGH %^VBACK %^IUML ; 
-* ** StemCns = b b3 d d3 g g2 g3 h h2 h3         ** 
-**           j l m m2 m3 m8 n n8 n2 ŋ r s  ;     ** 
-
-
-
-
-# Definition section
-
-Introducing a WG right context 
-```WeakGrade =  (RealVow:) [:RealVow |i6:]  (Cns:) ([%^SV:|%^ÁI:](%^ÁE:)) (%^FCD:) %^WG:0   ; ```  
-
-
-
-As we look at more cases, the WeakGrade definition tends to be longer. 
-We want to keep it short, but we want the code to work Thus, we document.
-* The second :RealVow is there for long consonant stems
-* The (Cns:) is there for consonant stems
-* -č: is there for the č:i pair of eeč^RCi:eijijn
-* The i6: is there for kyehtlov (kyehti6lov)
-
-
-
-# Rule section
-
-
-First we list the consonant rules, thereafter the vowel ones.
-
-## Consonant rules
-
-### Consonant gradation and shortening rules
-
-First gradation and shortening. They are in the same rules, to avoid rule conflicts.
-
-**RULE: x:y consonant gradation ** =  WG gives x:x and x:y, when there is no consonant lengthening  
-
-* *tu^RVp^RCe^WG*
-* *tu0v0e0*
-* *käähir^WG>*
-* *käävir0>*
-* *juáh^RCu^WG^RVSH>ttáá*
-* *juáv0u00>ttáá*
-
-
-
-**RULE: hh:vv** =  já%^RVhhá%^SVl%^ÁI : jäävvil
-
-
-
-**RULE: Quality change of root consonant x:yy** =  consonant lengthening after WG, changing h:v, p:v, c:s
-
-* *va^RVh%^RCo^WG^CLEN>im*
-* *va0vvo00>im*
-
-
-**RULE: t:đ, also tk4:đh gradation, part 1 ** =   
-
-* *puáttee#vuot^RCâ^FVD^WG>i5i5*
-* *puáttee#vuođ0000>ii*
-* *jo^RVtk4â^WG^RLEN>*
-* *joođhâ00>*
-* *vädis#vuot^RCâ^FVD^WG>i5i5*
-* *vädis#vuođ0000>ii*
-
-**RULE: k4:h gradation for kk4, tk4, rkk4, lkk4** =  
-
-* *totk4os^WG*
-* *tođhos0*
-
-
-**RULE: xx:yy gradation for xx4** =   puáhhoin, sukk4á:suhháást
-
-* *mä^RVtk4i^WG^RLEN>.#.*
-* *määđhi00>.#.*
-
-* *su^RVkk4á^SV^WG^CLEN^SLEN>st*
-* *su0hháá000>st*
-
-
-
-**RULE: t4:đ and c4, č4, p4 gradation for tt:đ etc. ** 
-
-* *ru^RVtt4â^WG^RLEN>*
-* *ruu0đâ00>*
-
-
-
-**RULE: ht:vt, ks:vs etc. gradation** =  ht:vt, we use h 
-
-
-* *pihtâs^WG*
-* *pivtâs0*
-
-
-
-### Consonant shortening rules
-
-**RULE: k:0 gradation and shortening for xkk4** =  for lkk4, rkk4, vkk4
-
-
-* *la^RVvkk4â^WG^RLEN*
-* *laav0hâ00*
-
-
-**RULE: xyy:xy gradation A** =   há%^RVi4ttás%^ÁI
-
-* *á^RVrppu^WG^RLEN>*
-* *áár0pu00>*
-* *á^RVrppu^WG^RVSH>ttáá*
-* *á0r0pu00>ttáá*
-* *riänttus^WG>*
-* *riän0tus0>*
-
-
-
-**RULE: č:0 in čč4 consonant gradation when CLEN** = when čč4
-
-* *lu^RVčč4â^WG^RLEN^SVLOW>in*
-* *luu0já000>in*
-
-
-**RULE: From i4j to j when WG and CSH** = e.g. sai4joos:sajoos
-
-
-
-
-**RULE: xx:x consonant gradation and shortening and x:x shortening** =   weak grade **or** consonant shortening (Both in same rule)
-
-*Tests:*
-* *ku^RVrrâ^CSH^RLEN>n*
-* *kuu0râ00>n*
-* *so^RVllâ^CSH^RLEN>n*
-* *soo0lâ00>n*
-* *vi^RVššâ^CSH^RVSH>vettee*
-* *vi00šâ00>vettee*
-* *la^RVs^RCe^SVtt^RLEN^SLEN>vettee*
-* *laas0ee0t00>vettee*
-* *cuozzâ^WG^RLEN>*
-* *cuo0zâ00>*
-* *vá^RVddu^CSH^RLEN>n*
-* *váá0du00>n*
-* *haavvâr^CSH^SVSH>ist*
-* *ha00vâr00>ist*
-* *pottáák^SC^CSH^SVSH>ist*
-* *po0t0ákk00>ist*
-* *kahhaan^CSH^SVSH>ân*
-* *ka0h0an00>ân*
-
-
-**RULE: tt:t  - final consonant and consonant gradation** = consonant gradation, and 3syll verbs in -tt lose t in front of cns-initial suff
-
-* *las^RCe^SVtt^CLEN^SLEN>*
-* *lassee0t00>*
-
-**RULE: nnj to nj shortening weak grade and consonant shortening** =  special rule, e.g. konnjâl -> konjâlân puánnjá
-
-
-**RULE: Word final consonant deletion                 ** = for vaskâm:vaaskâ
-
-* *va^RVskâm^FCD^RLEN*
-* *vaaskâ000*
-* *njuolgâd^FCD^RVSH*
-* *njuolgâ000*
-
-
-**RULE: Final m in stems, smm to sm  ** = 
-
-
-**RULE: Wordfinal consonants part 1**  e%^RVlâčč
-1)
-2)jurdâččmân:jurdâšmân ju%^RVrdâčč%^RLEN%>mân
-3)  šš>š in hárávušš>vetteđ 
-
-
-* *hárávušš>vetteđ*
-* *hárávu0š>vetteđ*
-* *konnjâl^CSH>ân*
-* *kon0jâl0>ân*
-* *suán^RCju^CLEN>n*
-* *suánnju0>n*
-* *haamit^SC^CSH^SVSH>ist*
-* *ha0mitt00>ist*
-* *su^RVkk4á^SV^WG^CLEN^SLEN>st*
-* *su0hháá000>st*
-
-
-
-
-
-### Consonant lengthening rules
-
-
-
-**RULE: Lengthening of half-long root consonant x:xx** =  riččá piiru piirrun niisu niissun
-
-**RULE: Lengthening of root consonant x:yy** =  consonant lengthening after WG - h:vv, p:vv, c:ss
-
-* *ka^RVss^RCa^SV^WG^CLEN^SLEN>st*
-* *ka0ss0aa000>st*
-* *va^RVh^RCe^SV^WG^CLEN^SLEN>st*
-* *va0vvee000>st*
-* *va^RVh^RCe^SV^CLEN^SLEN>n*
-* *va0hhee00>n*
-
-**RULE: Lengthening of consonant h5** =    this one does not fit into the general rule because of h5:h
-
-*TEST:*
-* *put^RCe^SVst^CLEN^SLEN>*
-* *putteest00>*
-* *ke^RVp^RCidm^CLEN^RLEN^SLEN>ân*
-* *keeppidm000>ân*
-* *kieh^RCâ^WG^CLEN^SVLOW>in*
-* *kievvá000>in*
-* *i^RVšš^RCe^SV^WG^CLEN^SLEN>st*
-* *i0šš0ee000>st*
-* *kol^RCe^CLEN>*
-* *kolle0>*
-* *kiel^RCâ^CLEN>n*
-* *kiellâ0>n*
-
-
-**RULE: č:ij part 1** =  
-
-**RULE: Lengthening root consonant j:ij 1** =  for saje:saijeen 
-
-
-**RULE: č:ij and j:ij part 2** =  
-
-*Tests:*
-* *sa^RVj^RCe^SV^CLEN^SLEN>n*
-* *sa0ijee00>n*
-* *pááj^RCá^CLEN>n*
-* *pááijá0>n*
-* *vaj^RCe^SVd^CLEN^SLEN>*
-* *vaijeed00>*
-
-
-
-
-**RULE: nj to nnj consonant lengthening** =  special rule, suánju : suánnjun for Par and Ess
-
-
-
-**RULE: Consonant lengthening after xx:x and xy:zy weak grade with x4 on upper side** =   k4, č, p4  kukse:kuvssijn  
-
-
-**RULE: Consonant lengthening xy:xyy ** = 
-
-
-
-### Stem consonant and suffix consonant rules
-
-
-**RULE: Assimilation of consonants t d š**  delet t in front of -ttáá, avoid -tttáá
-
-* *haamit>ttáá*
-* *haami0>ttáá*
-
-
-
-**RULE: Wordfinal consonants part 2**  e%^RVlâčč cummâlâhč:cummâlâhš
-
-**RULE: Final consonant x:xx** =  pottáák potákkân  
-
-
-**RULE: Clitic devoicing** =  for focus particle bá to pá after unvoiced stem cns.
-
-**RULE: Gerund devoicing ** =   dijn to tijn after stems in tšs
-
-
-## Vowel rules
-
-### First syllable vowel shortening rules
-
-*Tests:*
-* *koonnjâl^CSH>ân*
-* *ko0n0jâl0>ân*
-* *kappeer^CSH^SVSH>ist*
-* *ka0p0er00>ist*
-* *čäällim^CSH>ist*
-* *čä00lim0>ist*
-* *muusik^SC^CSH^RVSH>ist*
-* *mu0sikk00>ist*
-* *aarrân^CSH>ân*
-* *a00rân0>ân*
-* *kiirrâs^RVSH>ân*
-* *ki0rrâs0>ân*
-
-
-
-**RULE: Vowel shortening VV:V** = ráávhu- : rávhoid, käähir%^CSH%>id kuuđiâ%^RVSH%>žân
-1. svnlow
-1. čääci : čassijn
-1. kaamuv kammust
-1. pááppár : pápárân páápp4ár%^ÁI%^WG%^RVSH%>id
-1. pááppár : pápárân viijđás%^ÁE%^WG%^RVSH> 
-1. njääh^RCe^CLEN^RVSH> = njähhe>
-1. njääh^RCe^CLEN^RVSH> = njähhe>
-
-
-**RULE: Long vowel shortening** = (example?), no ^CSH, since that gives Vy:0
-
-**RULE: e:0 in passive** \\
-
-
-*Tests:*
-* *mááh^RCu^WG^CLEN^SVLOW>in*
-* *má0vvo000>in*
-* *mool^RCâ^WG^RVSH>ttáá*
-* *mo0l0â00>ttáá*
-
-**RULE: e:0 in passive** = special rule for getting ej̣ittáá instead of ej̣ittáá.
-
-**RULE: Underlying long vowel shortening iä:e and ää:ä or a** = čääh%^RCu2%^CLEN%^VBACK%>um
-
-
-3st stems viäskár veskirin, časkes časkes ča%^RVskas%^ÁE viäskár%^ÁI%^WG%^RVSH
-
-* *kaavpug^CSH^RVSH^SVSH>ân*
-* *ka0vpug000>ân*
-
-
-
-* *mool^RCâ^WG>*
-* *mool0â0>*
-
-
-* *käähir^WG>*
-* *käävir0>*
-
-* *juáh^RCu^WG^RVSH>ttáá*
-* *juáv0u00>ttáá*
-
-
-
-
-
-### First syllable vowel lengthening rules
-
-**RULE: Root vowel lenghtening in many stems** =  no rootvowel length if stem vowel lengthens and the consonantcentre consists of two or more consonants 
-
-* *kä^RVvnâst^WG^VBACK^RLEN>*
-* *kaavnâst000>*
-
-* *le^RVkk4â^WG^RLEN>*
-* *lee0hâ00>*
-
-* *he^RVrkkib^WG^RLENttáá*
-* *heer0kib00ttáá*
-
-
-* *nju^RVne^SV^WG^RLEN^SLEN>st*
-* *njuunee000>st*
-
-
-
-**RULE: Root vowel o5:u ** = 
-
-
-
-
-**RULE: Root vowel ä:ää lenghtening and diphthongisation e:iä** = special rule, for avoiding conflict spä%^RVi4lih%^WG%^RLEN, 
-
-
-**RULE: Root vowel o lengthening** =  alge : oolgijn 
-
-* *a^RVlge^WG^RLEN>id*
-* *oolgi00>jd*
-
-
-
-**RULE: Root vowel u lengthening with vowel change before suffix i** =  alge : oolgijn 
-
-* *mu^RVšti^WG^VHIGH^RLEN>j*
-* *muušti000>j*
-* *lo^RVh^RCá^WG^VHIGH^RLEN>im*
-* *luuv0á000>im*
-* *ku^RVlgâ^WG^VHIGH^RLEN>i3*
-* *kuulgâ000>i*
-* *hu^RVm^RCo^SVb^RVSH>ist*
-* *hu0m0o0b0>ist*
-* *hu^RVm^RCo^SVb^WG^RVSH^SVSH>ân*
-* *hu0m0o0b000>ân*
-
-
-### First syllable vowel change rules
-
-All instances of the same vowel alternation are in the same rule.
-
-a rules
-
-**RULE: Root vowel change a:o before suffix i and for contract verbs** =  alge : olgijn 
-
-**RULE: Root vowel o:u for contract verbs and Root vowel change o:u before suffix i** 
-
-
-* *tohhi2>đ*
-* *tuhhi>đ*
-* *lo^RVh^RCá^WG^VHIGH^RLEN>im*
-* *luuv0á000>im*
-
-
-
-
-### ä rules
-
-**RULE: Monophthongisation rule iä:ee 1** =  
-1)
-
-**RULE: iä:e rule 1 and second syllable Fleeting vowel before suffix        ** =  Note: many rules in one
-
-
-
-**RULE: iä:e and iä:ee rule 2 and Diphthongisation i5ä to ie** =  
-
-* *siämmu2>đ>*
-* *s0emmu>đ>*
-
-
-
-
-**RULE: Different rules for ä:a, first vowel (or only vowel)** =  čääci:čassijn, läbži:labžijn lään^RCi%>id
-
-* *njääh^RCi^WG^VBACK>i3*
-* *njaav0i00>i*
-
-
-
-**RULE: ää to aa, second vowel** =  á:o in pairs like kuátij -> koođij, säämi -> saamij čäällu%^VBACK%>m lään^RCi%>id
-
-
-
-**RULE: ää to áá and á0 in Illative and Sg3** =  ... for säämi > sáámán
-
-
-
-* *sääm^RCi^EA>n*
-* *sáám0á0>n*
-
-
-**RULE: äRV to áá in Illative and Sg3** =  ... for täsni -> táásnán
-
-
-* *tä^RVsni^EA^CSH^RLEN>n*
-* *táásná000>n*
-
-**RULE: Vowel lengthening äRV to aa ** =  äigi aaigijd
-
-* *sälkki2>đ>*
-* *salkki>đ>*
-* *sääm^RCi^WG>in*
-* *saam0i0>jn*
-* *sääm^RCi^WG>id*
-* *saam0i0>jd*
-* *stäävi2>đ>*
-* *staavi>đ>*
-* *stäävi2>j>*
-* *staavi>j>*
-* *stäävi2>i3>*
-* *staavi>i>*
-* *stäävi2>jeh>*
-* *stääve>jeh>*
-* *kä^RVvnâst^WG^VBACK^RLEN^SLEN>*
-* *kaavnâst0000>*
-
-
-#### á rules
-
-**RULE: Root vowel change for á to ä with i in second syllable** =  päävir , já%^RVhhá%^SVl%^ÁI%^WG%^RLEN>
-
-
-* *páápp4ár^ÁI^WG^RLEN*
-* *pää0vir000*
-
-
-**RULE: Root and stem vowel á:a for verbs** 
-
-
-* *pá^RVkk4u^VBACK>m>*
-* *pa0kku0>m>*
-
-* *pá^RVkk4u^WG^RLEN>im>*
-* *páá0hu00>im>*
-
-
-### á and uá rules
-
-**RULE: Monophthongisation rule uá:o0 part 2: Vowel shortening for uá ** =  for uábbi -> obbijn  čuál%^RCi%^WG%>in tuái4jâl%^CSH%^VBACK%^RVSH%>âm
-
-
-**RULE: Monophthongisation rule u:o and root vowel change u:o, special rule for olmooš and contract verbs** = 
-
-* *uái4nu2>đ*
-* *o0inu>đ*
-
-
-**RULE: Diphthong rule uá:uo and uá:oo, part 2** =  
-
-
-
-**RULE: Diphthongisation e to iä, part 1 ** =   
-
-
-**RULE: Root vowel aa:áá in C-stems with stemvowel u, part 1** =  ahhu:áhu
-
-
-**RULE: Root vowel aa:áá in C-stems with stemvowel u, part 2** =  ahhu:ááhu
-
-
-
-
-
-**RULE: ie to iä in Illative and Sg3 ** =  kiem´ni -> kiämnán, veerdi : viärdán peerru2%^CLEN%^VHIGH%^RVSH%>o
-
-
-
-
-**RULE: Diphthongisation uo:uá** =   
-
-
-**RULE: ye to uá and uo, part 1 ** =  Part 1 of ye to uá for kyeli : kuálán  
-
-
-**RULE: ye to uá, part 2** =  Part 2 of ye to uá for kyeli : kuálán
-
-* *kyel^RCi3^EA^CLEN>m*
-* *kuállá00>m*
-
-**RULE: ye to uo, part 2 ** =  Part 2 of ye to uá for kyeli : kuolijn
-
-**RULE: uá to ye and uo to ye, part 1 ** =  Part 1 luámmán : lyeme čuággás%^ÁI%^WG%^RLEN%>
-
-* *vuolle^CLEN>en*
-* *vyelle0>en*
-
-**RULE: uá to ye, part 2** =  Part 2 luámmán : lyeme
-
-**RULE: uo to ye, part 2** =  vyelleen, vyeleem,vyelih
-
-
-
-
-### Second syllable rules
-
-**RULE: Second syllable vowel change á to e or i in 3syll stems** = puttás- > putes, triggers are ^ÁE and ^ÁI já%^RVhhá%^SVl%^ÁI%^WG%^RLEN%> pu5árrás%^ÁI%^WG%>umos
-
-*Test:*
-* *puttás^ÁE^WG>*
-* *pu0tes00>*
-
-**RULE: Stemvowel shortening  áá and aa to e or i in 3syll** = puttás- > putes, triggers are ^ÁE and ^ÁI
-
-*Tests:*
-* *nahha^SVr^ÁE^WG^RLEN>*
-* *na0ve0r000>*
-* *nahha^SVr^ÁE^WG^RLEN*
-* *na0ve0r000*
-
-
-
-**RULE: Stem vowel e to a for a root vowel.** =  alge to aalgan
-
-*Tests:*
-* *a^RVlge^SV^EA^SLEN>š*
-* *a0lgaa00>š*
-* *a^RVlge^SV^EA^SLEN*
-* *a0lgaa00*
-* *a^RVlge^EA^CSH^RLEN>n*
-* *aalga000>n*
-* *va^RVh^RCe^SV^EA^CLEN^SLEN>m*
-* *va0hhaa000>m*
-
-**RULE: Stem vowel e to á for other root vowel** =  if e stem
-
-**RULE: Stem vowel i to á for other root vowel.** =  e.g. säämi > Ill sáámán 
-
-**RULE: Stem vowel i to â for other root vowel, as a common error.** =  e.g. säämi > Ill Err/Orth sáámân 
-
-
-**RULE: Stem vowel i to e in front of j** =  
-
-
-
-**RULE: Stem vowel â to a in Pl Nom -h** =  silbâ to siilbah  %^WG%^RLEN%>hlove%>h
-
-
-* *so^RVllâ^WG^RLEN>h*
-* *soo0la00>h*
-
-**RULE: Stem vowel â > á change before i** = sollâ to sooláid 
-
-
-* *so^RVllâ^WG^RLEN^SVLOW>in*
-* *soo0lá000>in*
-
-
-
-
-
-
-
-**RULE: Stem vowel i3:0** = 
-
-
-
-**RULE: Stem vowel u:o change before suffix** =  
-2) 
-
-
-**RULE: Stem vowel u2:o change before suffix** =  
-
-* *uáinu>o*
-* *uáino>o*
-
-
-
-
-**RULE: Second vowel shortening** = eemeed : emedân, savvoon : savo 
-
-**Tests**
-* *kulluutt^SVSH>*
-* *kull0u0t0>*
-* *eemeed^CSH^SVSH>ân*
-* *e0m0ed00>ân*
-* *kappeer^CSH^SVSH>ân*
-* *ka0p0er00>ân*
-
-**RULE: Stem vowel:0 in front of â** = aiguu:aaigâ
-
-
-**RULE: Stem â deleting** = kandâ:kandii
-
-
-
-* *a^RVlgâi^FVD^WG^CLEN>i5*
-* *a0lg0i000>i*
-
-### Suffix vowel rules
-
-**RULE: Suffix vowel lengthening** = long á in kissáást, nuorâ : nuorááin, hyeni:hyeneest
-
-
-**Tests**
-* *ki^RVssá^SV^WG^CLEN^SLEN>st*
-* *ki0ssáá000>st*
-* *mi^RVllo^SV^WG^CLEN^SLEN>st*
-* *mi0lloo000>st*
-* *huksi^SVm^SLEN>ist*
-* *huksiim0>ist*
-* *táál^RCu^SV^WG^RVSH^SLEN^SVLOW>st*
-* *táál0oo0000>st*
-
-**RULE: Suffix i5:j for lexicon APINA** = salijn
-
-
-**RULE: Suffix i5:0 and i5ä:e** = *timotein oboen*, not *Chariliein*
-
-
-**RULE: Suffix i:j for i and e-stems** =  
-
-
-**RULE: Vowel copy in suffix** =  for imperative Sg3, at least
-
-
-### Suffix consonant rules
-
-
-**RULE: Adjective illative in -vân after u** =  
-
-**RULE: Shortening u for vân illative** =  
-
-## Other rules
-
-**RULE: Word final vowel deletion** = for vaskâm:vaaskâ
-
-*Tests:*
-* *sollâ^FVD>ii*
-* *soll00>ii*
-
-**RULE: Potential vowel shortening for contract verbs** =  -áážep becomes -áš etc.
-
-
-
-**RULE: Insertion of pleonastic hyphen** = for compounding of two vowels *stovli-ijâ*
-
-
-*Tests:*
-* *skä^RVi4nâ^VBACK>đ*
-* *ska0inâ0>đ*
-* *hu^RVm^RCo^SVb^WG^RLEN^SLEN^RLEN^SLEN*
-* *huum0oob00000*
-* * *
-<small>This (part of) documentation was generated from [../src/fst/phonology.twolc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/phonology.twolc)</small>#Inari Saami compounding
+<small>This (part of) documentation was generated from [../src/fst/affixes/acronyms.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/affixes/acronyms.lexc)</small>#Inari Saami compounding
 
 LEXICON Rhash - adding lower # and pointing at R
 
@@ -15471,25 +15471,6 @@ LEXICON RNum_after_cmp_flags - going to Noun, should it be to NounRoot?
 * titityy Interj ;           
 * * *
 <small>This (part of) documentation was generated from [../src/fst/stems/interjections.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/stems/interjections.lexc)</small>
-# Particles
-
-
-
-
-
-
-* **LEXICON Particle  **
-
-ges pcle ; 
-kes pcle ; 
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/stems/particles.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/stems/particles.lexc)</small>
 # File containing North Saami abbreviations 
 
 ## Lexica for adding tags and periods
@@ -15565,359 +15546,6 @@ the sentence can be considered as true cases.
 
 * * *
 <small>This (part of) documentation was generated from [../src/fst/stems/conjunctions.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/stems/conjunctions.lexc)</small>
-
-
-# Inari Saami noun roots
-
-
-
-
-
-
-## 1. Even-syllable stems
-* â-stems
-* á-stems
-* o-stems
-* a-stems
-* ä-stems
-* e-stems
-* i stems
-* u stems
-* Four-syllabic even stems
-* 2.1 Stems without consonant gradation
-* 2.1.1 2nd syll vowel does not alternate (MO Ia)
-* 2.1.2 2nd syll vowel alternates (MO Ib)
-* 2.2 Stems without consonant gradation
-3. Ohter cases, all kind of changes
-
-
-
-
-
-
-
-
-
-* **LEXICON MiddleNouns **
-
-
-
-* **LEXICON NAMAG ** gives »»» and directs to NAMAG, both from adj and numerals
-
-* **LEXICON SAS ** , both from adj and numerals
-
-
-* **LEXICON NAMAGCont**
-
-* **LEXICON SASCont** ,
-
-
-* *LEXICON Gen_DER   * 
-
-* *LEXICON Nom_DER   * 
-
-
-* *LEXICON DER-AG  * 
-
-* *LEXICON DER-SAS  * 
-
-
-## The split into different noun types according to Px
-
-* **LEXICON Noun ** is split into NounNoPx, NounPxKin, NounPx.
-    - **            NounNoPx ;  ** No flag, no Px
-    - **@P.Px.add@  NounPxKin ; ** TODO: add a flag @P.Nom3Px.add@ when we know how it works
-    - **@P.Px.add@  NounPx ;    ** with a @P.Px.add@ flag, and with Px (= most nouns)
-
-* **LEXICON NounNoPx   ** move here the nouns not taking Px.
-
-* **LEXICON NounPxKin **For the moment, kinship words go like NounPx and need not be moved here.
-
-
-## The standard list of noun stems
-
-The nouns are reverse-sorted according to contlex,
-and thereafter according to stem.
-
-
-
-* **LEXICON NounPx ** here we put all normal nouns, as before
-
-From corpus
-From missinglist
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/stems/nouns.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/stems/nouns.lexc)</small>
-# Inari Saami adjectives
-
-
-* **LEXICON LAST_CMP_ADJ ** cmp last part
-
-
-
-* **LEXICON AdjectiveRoot ** is the list of adjectives
-
-
-
-* **aalmuglâš:aalmugl ANOLASJ "kansallinen" ; ** 
-* **boreaallâš:boreaall ANOLASJ "boreaalinen" ; ** etc.
-
-
-Lyhentynyt attr.
-
-
-Attr. venytetty + -s
-
-
-Attr. -is
-
-
-
-
-
-
-
-Attr. -es (KARITIIVADJ.) Attr. muštottes / muštottemes
-
-
-
-
--METTUM / -MÁTTUM
-
-
--sâš
-
-
-
-Lyhentynyt attr. + -IS
-
-From corpus
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/stems/adjectives.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/stems/adjectives.lexc)</small>
-
-# Inari Saami acronyms
-
-This file contains a loop for random capital-letter acronyms, 
-as well as two lists of common acronyms: letter-number acronyms and 
-small-capital letter combinations.
-
-## The main part
-
-* **LEXICON Acronym-smn   ** divides the acros in the 3 types just mentioned.
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/stems/smn-acronyms.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/stems/smn-acronyms.lexc)</small>
-# Pronouns for Inari Saami
-
-
-* **LEXICON Pronoun **
-
-
-## Personal pronouns
-
-* **LEXICON Personal **
-
-
-* **LEXICON perspronsg ** with contlex K and not G (munge)
-
-* **LEXICON persprondu **
-
-* **LEXICON perspronpl **
-
-
-
-Demonstrative pronouns
-
-* **LEXICON Demonstrative **
-
-
-* **LEXICON TIET **
-
-* **LEXICON TOT **
-
-* **LEXICON TUOT **
-
-
-* **LEXICON TI-TUO **
-
-* **LEXICON TA **
-
-* **LEXICON TYE **
-
-
-
-
-
-
-
-
-## Reflexive pronouns
-
-* **LEXICON Reflexive **
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Reciprocal pronouns
-
-* **LEXICON Reciprocal **
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* **LEXICON miiInterRel **
-
-
-* **LEXICON kiiInterRel **
-
-
-
-* **LEXICON MK ** common for mii and kii
-
-* **LEXICON MK-long **
-
-* **LEXICON MK-short **
-
-* **LEXICON MK-low **
-
-
-
-
-## Indefinite pronouns
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-LEXICON SIAMMAS_PRON  without WG
-
-
-
-
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/stems/pronouns.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/stems/pronouns.lexc)</small>
 # Subjunctions
 
 
@@ -16147,6 +15775,80 @@ Transitive verbs
 
 * * *
 <small>This (part of) documentation was generated from [../src/fst/stems/verbs.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/stems/verbs.lexc)</small>
+# Inari Saami adjectives
+
+
+* **LEXICON LAST_CMP_ADJ ** cmp last part
+
+
+
+* **LEXICON AdjectiveRoot ** is the list of adjectives
+
+
+
+* **aalmuglâš:aalmugl ANOLASJ "kansallinen" ; ** 
+* **boreaallâš:boreaall ANOLASJ "boreaalinen" ; ** etc.
+
+
+Lyhentynyt attr.
+
+
+Attr. venytetty + -s
+
+
+Attr. -is
+
+
+
+
+
+
+
+Attr. -es (KARITIIVADJ.) Attr. muštottes / muštottemes
+
+
+
+
+-METTUM / -MÁTTUM
+
+
+-sâš
+
+
+
+Lyhentynyt attr. + -IS
+
+From corpus
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/adjectives.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/stems/adjectives.lexc)</small>
 
 # Inari Saami numerals
 
@@ -16235,6 +15937,289 @@ Transitive verbs
 
 * * *
 <small>This (part of) documentation was generated from [../src/fst/stems/numerals.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/stems/numerals.lexc)</small>
+
+
+# Inari Saami noun roots
+
+
+
+
+
+
+## 1. Even-syllable stems
+* â-stems
+* á-stems
+* o-stems
+* a-stems
+* ä-stems
+* e-stems
+* i stems
+* u stems
+* Four-syllabic even stems
+* 2.1 Stems without consonant gradation
+* 2.1.1 2nd syll vowel does not alternate (MO Ia)
+* 2.1.2 2nd syll vowel alternates (MO Ib)
+* 2.2 Stems without consonant gradation
+3. Ohter cases, all kind of changes
+
+
+
+
+
+
+
+
+
+* **LEXICON MiddleNouns **
+
+
+
+* **LEXICON NAMAG ** gives »»» and directs to NAMAG, both from adj and numerals
+
+* **LEXICON SAS ** , both from adj and numerals
+
+
+* **LEXICON NAMAGCont**
+
+* **LEXICON SASCont** ,
+
+
+* *LEXICON Gen_DER   * 
+
+* *LEXICON Nom_DER   * 
+
+
+* *LEXICON DER-AG  * 
+
+* *LEXICON DER-SAS  * 
+
+
+## The split into different noun types according to Px
+
+* **LEXICON Noun ** is split into NounNoPx, NounPxKin, NounPx.
+    - **            NounNoPx ;  ** No flag, no Px
+    - **@P.Px.add@  NounPxKin ; ** TODO: add a flag @P.Nom3Px.add@ when we know how it works
+    - **@P.Px.add@  NounPx ;    ** with a @P.Px.add@ flag, and with Px (= most nouns)
+
+* **LEXICON NounNoPx   ** move here the nouns not taking Px.
+
+* **LEXICON NounPxKin **For the moment, kinship words go like NounPx and need not be moved here.
+
+
+## The standard list of noun stems
+
+The nouns are reverse-sorted according to contlex,
+and thereafter according to stem.
+
+
+
+* **LEXICON NounPx ** here we put all normal nouns, as before
+
+From corpus
+From missinglist
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/nouns.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/stems/nouns.lexc)</small>
+# Pronouns for Inari Saami
+
+
+* **LEXICON Pronoun **
+
+
+## Personal pronouns
+
+* **LEXICON Personal **
+
+
+* **LEXICON perspronsg ** with contlex K and not G (munge)
+
+* **LEXICON persprondu **
+
+* **LEXICON perspronpl **
+
+
+
+Demonstrative pronouns
+
+* **LEXICON Demonstrative **
+
+
+* **LEXICON TIET **
+
+* **LEXICON TOT **
+
+* **LEXICON TUOT **
+
+
+* **LEXICON TI-TUO **
+
+* **LEXICON TA **
+
+* **LEXICON TYE **
+
+
+
+
+
+
+
+
+## Reflexive pronouns
+
+* **LEXICON Reflexive **
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Reciprocal pronouns
+
+* **LEXICON Reciprocal **
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* **LEXICON miiInterRel **
+
+
+* **LEXICON kiiInterRel **
+
+
+
+* **LEXICON MK ** common for mii and kii
+
+* **LEXICON MK-long **
+
+* **LEXICON MK-short **
+
+* **LEXICON MK-low **
+
+
+
+
+## Indefinite pronouns
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LEXICON SIAMMAS_PRON  without WG
+
+
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/pronouns.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/stems/pronouns.lexc)</small>
+# Particles
+
+
+
+
+
+
+* **LEXICON Particle  **
+
+ges pcle ; 
+kes pcle ; 
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/particles.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/stems/particles.lexc)</small>
 # Inari Saami adverbs
 
 ## The morphology
@@ -16259,21 +16244,21 @@ Transitive verbs
 
 * * *
 <small>This (part of) documentation was generated from [../src/fst/stems/adverbs.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/stems/adverbs.lexc)</small>
-# Inari Saami adpositions
 
+# Inari Saami acronyms
 
+This file contains a loop for random capital-letter acronyms, 
+as well as two lists of common acronyms: letter-number acronyms and 
+small-capital letter combinations.
 
+## The main part
 
-
-
-
-
-
+* **LEXICON Acronym-smn   ** divides the acros in the 3 types just mentioned.
 
 
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/stems/adpositions.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/stems/adpositions.lexc)</small>
+<small>This (part of) documentation was generated from [../src/fst/stems/smn-acronyms.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/stems/smn-acronyms.lexc)</small>
 # Propernoun lexicon, Inari Sámi specific names 
 
 
@@ -16326,9 +16311,8 @@ Geographical names
 
 * * *
 <small>This (part of) documentation was generated from [../src/fst/stems/smn-propernouns.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/stems/smn-propernouns.lexc)</small>
-# The Inari Sámi dates
+# Inari Saami adpositions
 
-This is a file generating Inari Sámi date expressions.
 
 
 
@@ -16341,7 +16325,7 @@ This is a file generating Inari Sámi date expressions.
 
 
 * * *
-<small>This (part of) documentation was generated from [../src/transcriptions/transcriptor-ttsdate-digit2text.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/transcriptions/transcriptor-ttsdate-digit2text.lexc)</small>
+<small>This (part of) documentation was generated from [../src/fst/stems/adpositions.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/stems/adpositions.lexc)</small>
 
 
 We describe here how abbreviations are in Inari Sami are read out, e.g.
@@ -16359,27 +16343,6 @@ For example:
 
 * * *
 <small>This (part of) documentation was generated from [../src/transcriptions/transcriptor-abbrevs2text.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/transcriptions/transcriptor-abbrevs2text.lexc)</small>
-# The Inari Sámi dates 
-
-
-This is a file generating Inari Sámi date expressions.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/transcriptions/transcriptor-date-digit2text.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/transcriptions/transcriptor-date-digit2text.lexc)</small>
 
 # Inari Saami number <-> text
 
@@ -16486,6 +16449,43 @@ This is a file generating Inari Sámi date expressions.
 
 * * *
 <small>This (part of) documentation was generated from [../src/transcriptions/transcriptor-numbers-digit2text.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/transcriptions/transcriptor-numbers-digit2text.lexc)</small>
+# The Inari Sámi dates 
+
+
+This is a file generating Inari Sámi date expressions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/transcriptions/transcriptor-date-digit2text.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/transcriptions/transcriptor-date-digit2text.lexc)</small>
+# The Inari Sámi dates
+
+This is a file generating Inari Sámi date expressions.
+
+
+
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/transcriptions/transcriptor-ttsdate-digit2text.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/transcriptions/transcriptor-ttsdate-digit2text.lexc)</small>
 
 
 
@@ -17748,49 +17748,49 @@ Der/InchL
 Der/Dimin
 Der/Aadv
 
-@NO CODE@ ;
-SET NOT-DER-A-ADV = Adv - DER-A-ADV ; #
+- LIST DER-A-ADV = (Der/lasj Der/AAdv Adv) ; # ;
+- SET NOT-DER-A-ADV = Adv - DER-A-ADV ; #
 
 ### Error tags
 
-Err/Orth
-Err/Orth-spes
+- All Err/Orth tags
+- Err/Orth-spes for all Err/Orth save the simple one
 
 
 
 ### Semantic tags
 
-<vdic>
-HUMAN
-Sem/Act
-Sem/Ani
-Sem/Atr
-Sem/Body
-Sem/Clth
-Der/Date
-Sem/Domain
-Sem/Feat-phys
-Sem/Fem
-Sem/Group
-Sem/Hum
-Sem/ID
-Sem/Lang
-Sem/Mal
-Sem/Measr
-Sem/Measr_Time
-Sem/Money
-Sem/Obj
-Sem/Obj-el
-Sem/Org
-Sem/Perc-emo
-Sem/Plc
-Sem/Sign
-Sem/State-sick
-Sem/Sur
-Sem/Time
-Sem/Time
-Sem/Txt
-Der/Year
+- vdic
+- HUMAN
+- Sem/Act
+- Sem/Ani
+- Sem/Atr
+- Sem/Body
+- Sem/Clth
+- Der/Date
+- Sem/Domain
+- Sem/Feat-phys
+- Sem/Fem
+- Sem/Group
+- Sem/Hum
+- Sem/ID
+- Sem/Lang
+- Sem/Mal
+- Sem/Measr
+- Sem/Measr_Time
+- Sem/Money
+- Sem/Obj
+- Sem/Obj-el
+- Sem/Org
+- Sem/Perc-emo
+- Sem/Plc
+- Sem/Sign
+- Sem/State-sick
+- Sem/Sur
+- Sem/Time
+- Sem/Time
+- Sem/Txt
+- Der/Year
 
 
 This ends the semtag list.
@@ -18987,6 +18987,10 @@ msyn-pass-accsubj-nomsubj
 N + Ill
 
 msyn-ncompl-ess-sgill
+
+
+
+
 
 
 
