@@ -2181,7 +2181,7 @@ COPY:msyn-agr-sg3-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V &msyn-agr-sg3-pl3);
 #$ Tast láá uápis ääših
 
 ADD:msyn-agr-other-pl3 (&msyn-agr-other-pl3) TARGET V IF 
- (*-1 N + Pl + Nom BARRIER NOT-ADV-PCLE LINK NOT 0 NPL_WITH_VSG3)
+ (*-1 N + Pl + Nom BARRIER NOT-ADV-PCLE LINK NOT 0 NPL_WITH_VSG3 OR ABBR)
  (0C V + Ind + Sg3 OR V + Cond + Sg3)
  (NOT 0 Pl3)(NOT 0 Foc/ge);
 
@@ -2191,7 +2191,7 @@ ADD:msyn-agr-other-pl3 (&msyn-agr-other-pl3) TARGET V IF
  (NOT -1 NPL_WITH_VSG3)
  (0C V + Ind + Sg3 OR V + Cond + Sg3)
  (NOT 0 Pl3)(NOT 0 Foc/ge)
- (*1 N + Pl + Nom); #ž BARRIER NOT-NPMOD);
+ (*1 N + Pl + Nom BARRIER NOT-NPMOD LINK NOT 0 ABBR LINK NOT 1 Pl3);
 
 COPY:msyn-agr-other-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Prs &msyn-agr-other-pl3);
 COPY:msyn-agr-other-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Prt &msyn-agr-other-pl3);
@@ -2482,7 +2482,8 @@ ADD:msyn-top-placc-plnom (&msyn-top-placc-plnom) TARGET N IF (0C Pl + Acc - Sem/
 #!! msyn-obj-acc-ill
 #ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF (*-1 ILL-V BARRIER NOT-NPMODADV OR (":") LINK *-1 Nom)(0 Acc)(NOT 0 Ill OR PxSg3); # just to remember we used to want subjects
 
-ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF (*-1 ILL-V BARRIER NOT-NPMODADV OR (":"))(0 Acc)(NOT 0 Ill OR PxSg3);
+ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF (*-1 ILL-V BARRIER NOT-NPMODADV OR (":"))(0 Acc)(NOT 0 Ill OR PxSg3)(NOT 1 Pron + Ill);
+ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF (*-1 ILL-V BARRIER NOT-NPMODADV OR (":"))(0 Acc)(NOT 0 Ill OR PxSg3)(NOT *1 N + Ill BARRIER NOT-NPMOD);
 COPY:msyn-obj-acc-ill (Ill &SUGGEST) EXCEPT Acc TARGET (N Acc &msyn-obj-acc-ill) ;
 #%: Ideologia kuáská kielâid.
 #$: Ideologia kuáská kieláid.
@@ -2490,7 +2491,7 @@ COPY:msyn-obj-acc-ill (Ill &SUGGEST) EXCEPT Acc TARGET (N Acc &msyn-obj-acc-ill)
 ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF (*-1 ILL-V BARRIER NOT-NPMODADV OR (":") LINK *-1 Nom)(0 Gen)(NOT 0 Ill OR Adv)(1 EOS OR CC)(NOT *1 Ill);
 COPY:msyn-obj-acc-ill (Ill &SUGGEST) EXCEPT Gen TARGET (N Gen &msyn-obj-acc-ill) ;
 
-ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET Pron IF (*-1 ILL-V BARRIER NOT-NPMODADV OR (":") LINK *-1 Nom)(0 Acc)(NOT 0 Ill OR PxSg3);
+ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET Pron IF (*-1 ILL-V BARRIER NOT-NPMODADV OR (":") LINK *-1 Nom)(0 Acc)(NOT 0 Ill OR PxSg3)(NOT 1 TV + Inf);
 ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET Pron IF (*-2 ILL-V BARRIER NOT-NPMODADV OR (":") LINK *-1 Nom)(-1 Pron + Ill)(0 Acc)(NOT 0 Ill OR PxSg3);
 COPY:msyn-obj-acc-ill (Ill &SUGGEST) EXCEPT Acc TARGET (Pron Acc &msyn-obj-acc-ill) ;
 
@@ -2539,8 +2540,8 @@ COPY:msyn-obj-plnom-placc (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &msyn-obj-plnom
 #!! Suomâkielâ imperatiiv mieđetteijee häämist, mast objekt sajehäämmin lii maaŋgâlovo nominatiiv mut sämikielâst akkusatiiv:
 
 #!! msyn-imp-nom-acc
-ADD:msyn-imp-nom-acc (&msyn-imp-nom-acc) TARGET N IF (-2C Imprt)(-1 PRE-NP-HEAD)(0C Pl + Nom)(NOT 0 Acc OR Gen);
-ADD:msyn-imp-nom-acc (&msyn-imp-nom-acc) TARGET N IF (-1C Imprt)(0C Nom)(NOT 0 Acc OR Gen);
+ADD:msyn-imp-nom-acc (&msyn-imp-nom-acc) TARGET N IF (-2C TV + Imprt)(-1 PRE-NP-HEAD)(0C Pl + Nom)(NOT 0 Acc OR Gen);
+ADD:msyn-imp-nom-acc (&msyn-imp-nom-acc) TARGET N IF (-1C TV + Imprt)(0C Nom)(NOT 0 Acc OR Gen);
 COPY:msyn-imp-nom-acc (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &msyn-imp-nom-acc);
 #fi	Myy nämä kalat - 
 #% Vyebdi taah kyeleh!
@@ -2684,7 +2685,7 @@ COPY:msyn-mii-sgnom-placc (Pl Acc &SUGGEST) EXCEPT (Sg Nom) TARGET ( N &msyn-mii
 #!! ### Adjectives in attributive position
 
 #!! msyn-adj-gen-nom
-ADD:msyn-adj-gen-nom (&msyn-adj-gen-nom) TARGET A IF (0 A + Gen)(1C N + Nom);
+ADD:msyn-adj-gen-nom (&msyn-adj-gen-nom) TARGET A IF (0C A + Gen)(1C N + Nom);
 COPY:msyn-adj-gen-nom (Nom &SUGGEST) EXCEPT Gen TARGET (A Gen &msyn-adj-gen-nom);
 
 
