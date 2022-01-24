@@ -804,8 +804,9 @@ LIST COM-V = "algâttiđ" "älgiđ" "arvâlâddâđ" "árvvohuššat" "ávkašuv
 		#Note that "leaikkastallat" has two homonymous variants:
 		#leaikkastallat1 (IV), leaikkastallat2+Com
 
-LIST ILL-V = "aibâšiđ" "älgiđ" "asâiduđ" "pokkiđ" "peessâđ" "čokánistiđ" "čujottiđ" ("čuoppâđ" Ex/V Ex/TV Der/Pass) "vaikuttiđ" "teivâđ" "turvâstiđ" "tuuttâđ" "kuoskâđ" "hárjániđ" "irgediđ" "irgástallat" "juohhuđ" "oskođ" "lijkkuđ" "lyettiđ"  "vyelgiđ" "maccâđ" "mieđettiđ" "miettâđ" "njeeijâđ" "enittiđ" "oskođ" "peessâđ" "riemmâđ" "valmiđ" "uásálistiđ" "uápásmuđ" "suttâđ" "vaikuttiđ" "västidiđ" "vyelgiđ" "vaiguttiđ" "vuáđuduđ" ; #!!= - @CODE@
+LIST ILL-V = "aibâšiđ" "älgiđ" "asâiduđ" "pokkiđ" "peessâđ" "čokánistiđ" "čujottiđ" ("čuoppâđ" Ex/V Ex/TV Der/Pass) "vaikuttiđ" "teivâđ" "turvâstiđ" "tuuttâđ" "kuoskâđ" "hárjániđ" "irgediđ" "irgástallat" ("juáhuđ" Ex/V Der/Pass V) "juohhuđ" ("jyehiđ" Ex/V Ex/TV Der/Pass) "oskođ" "lijkkuđ" "lyettiđ"  "vyelgiđ" "maccâđ" "mieđettiđ" "miettâđ" "njeeijâđ" "enittiđ" "oskođ" "peessâđ" "riemmâđ" "valmiđ" "uásálistiđ" "uápásmuđ" "suttâđ" "vaikuttiđ" "västidiđ" "vyelgiđ" "vaiguttiđ" "vuáđuduđ" ; #!!= - @CODE@
 # Removed since they also take Acc: "kuullâđ" 
+
  		
 
 LIST TRANSL-V = "jápmit" "duššat" "hávkat" "náitalit" "gaskkalduvvat" "nohkat" "goarránit" "heahpanit" "boakčánit" "šlundut" "ráigánit" "vuollánit" "gopmánit" "fuotnánit" "roahppánit" "reakčanit" "bieđganit" "luoddanit" "guvggodit" "liegganit" "suorganit" "báhkkanit" "cuovkanit" "hedjonit" "lohppet" "goikat" "galbmot" "goallut" "ruostut" "buoidut" "guvggodit" "suvrut" "suddâdiđ" ; #!!= - @CODE@
@@ -2011,6 +2012,7 @@ LIST &msyn-posspl-acc-gen =  &msyn-posspl-acc-gen ;
 LIST &msyn-pred-acc-nom =  &msyn-pred-acc-nom ; 
 LIST &msyn-quant-gen-nom =  &msyn-quant-gen-nom ;
 LIST &msyn-predagr-pl3-sg3 = &msyn-predagr-pl3-sg3 ;
+LIST &msyn-top-nom-acc = &msyn-top-nom-acc ;
 LIST &msyn-top-placc-plnom = &msyn-top-placc-plnom ;
 LIST &msyn-v-actio-sg1 = &msyn-v-actio-sg1 ;
 LIST &msyn-v-du3-conneg = &msyn-v-du3-conneg ;
@@ -2175,7 +2177,7 @@ COPY:msyn-agr-other-pl2 (Pl2 &SUGGEST) EXCEPT VNOTPL2 TARGET (V Ind Prs &msyn-ag
 #!! Subject to the right
 
 #!! msyn-agr-sg3-pl3
-ADD:msyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET V IF (NOT *-1 Sg + Nom OR Sg3 + Nom BARRIER NOT-ADV OR (","))(0C ("leđe") + Sg3)(*1 Pl + Nom BARRIER NOT-NPMODADV OR PUNCT + RIGHT OR PUNCT + LEFT LINK NOT *1 V + Pl3);
+ADD:msyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET V IF (NOT *-1 Sg + Nom OR Sg3 + Nom BARRIER NOT-ADV OR (","))(0C COPULAS + Sg3)(*1 Pl + Nom BARRIER NOT-NPMODADV OR PUNCT + RIGHT OR PUNCT + LEFT LINK NOT *1 V + Pl3);
 COPY:msyn-agr-sg3-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V &msyn-agr-sg3-pl3);
 #% Tast lii uápis ääših
 #$ Tast láá uápis ääših
@@ -2191,7 +2193,7 @@ ADD:msyn-agr-other-pl3 (&msyn-agr-other-pl3) TARGET V IF
  (NOT -1 NPL_WITH_VSG3)
  (0C V + Ind + Sg3 OR V + Cond + Sg3)
  (NOT 0 Pl3)(NOT 0 Foc/ge)
- (*1 N + Pl + Nom BARRIER NOT-NPMOD LINK NOT 0 ABBR LINK NOT 1 Pl3);
+ (*1 N + Pl + Nom BARRIER NOT-NPMOD - (A Pl Nom) - Ill - Loc LINK NOT 0 ABBR LINK NOT 1 Pl3);
 
 COPY:msyn-agr-other-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Prs &msyn-agr-other-pl3);
 COPY:msyn-agr-other-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Prt &msyn-agr-other-pl3);
@@ -2475,6 +2477,13 @@ ADD:msyn-top-placc-plnom (&msyn-top-placc-plnom) TARGET N IF (0C Pl + Acc - Sem/
 #$ Anarâškielâliih noomah kiävttojeh uccáá.
 
 
+ADD:msyn-top-nom-acc (&msyn-top-nom-acc) TARGET N IF (0C Nom - Sem/Time LINK *-1 BOS BARRIER Nom)(*1 N + Nom BARRIER NOT-NPMOD LINK 1 Ind + Sg3);
+COPY:msyn-top-nom-acc (Acc &SUGGEST) EXCEPT Nom TARGET (N Nom &msyn-top-nom-acc) ;
+
+ADD:msyn-top-nom-acc (&msyn-top-nom-acc) TARGET N IF (0C Nom - Sem/Time LINK *-1 BOS BARRIER Nom)(1 Pron + Pers + Nom)(2 Ind + Sg3);
+COPY:msyn-top-nom-acc (Acc &SUGGEST) EXCEPT Nom TARGET (N Nom &msyn-top-nom-acc) ;
+#% Suullân peeli sun lii porgâm.
+
 #% Motomeh suomâkielâ vaikuttâsah tábáhtusâid láá tuhhiittum anarâškielân.
 
 #!! ### Acc shall be Ill
@@ -2482,17 +2491,18 @@ ADD:msyn-top-placc-plnom (&msyn-top-placc-plnom) TARGET N IF (0C Pl + Acc - Sem/
 #!! msyn-obj-acc-ill
 #ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF (*-1 ILL-V BARRIER NOT-NPMODADV OR (":") LINK *-1 Nom)(0 Acc)(NOT 0 Ill OR PxSg3); # just to remember we used to want subjects
 
-ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF (*-1 ILL-V BARRIER NOT-NPMODADV OR (":"))(0 Acc)(NOT 0 Ill OR PxSg3)(NOT 1 Pron + Ill);
-ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF (*-1 ILL-V BARRIER NOT-NPMODADV OR (":"))(0 Acc)(NOT 0 Ill OR PxSg3)(NOT *1 N + Ill BARRIER NOT-NPMOD);
+ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF (*-1 ILL-V + IV BARRIER NOT-NPMODADV OR (":") LINK NOT 0 TV)(0 Acc)(NOT 0 Ill OR PxSg3)(NOT 1 Pron + Ill);
+ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF (*-1 ILL-V + IV BARRIER NOT-NPMODADV OR (":") LINK NOT 0 TV)(0 Acc)(NOT 0 Ill OR PxSg3)(NOT *1 N + Ill BARRIER NOT-NPMOD);
 COPY:msyn-obj-acc-ill (Ill &SUGGEST) EXCEPT Acc TARGET (N Acc &msyn-obj-acc-ill) ;
 #%: Ideologia kuáská kielâid.
 #$: Ideologia kuáská kieláid.
 
-ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF (*-1 ILL-V BARRIER NOT-NPMODADV OR (":") LINK *-1 Nom)(0 Gen)(NOT 0 Ill OR Adv)(1 EOS OR CC)(NOT *1 Ill);
+ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF (*-1 ILL-V + IV BARRIER NOT-NPMODADV OR (":") LINK *-1 Nom)(0 Gen)(NOT 0 Ill OR Adv)(1 EOS OR CC)(NOT *1 Ill);
 COPY:msyn-obj-acc-ill (Ill &SUGGEST) EXCEPT Gen TARGET (N Gen &msyn-obj-acc-ill) ;
 
-ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET Pron IF (*-1 ILL-V BARRIER NOT-NPMODADV OR (":") LINK *-1 Nom)(0 Acc)(NOT 0 Ill OR PxSg3)(NOT 1 TV + Inf);
-ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET Pron IF (*-2 ILL-V BARRIER NOT-NPMODADV OR (":") LINK *-1 Nom)(-1 Pron + Ill)(0 Acc)(NOT 0 Ill OR PxSg3);
+ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET Pron IF (*-1 ILL-V + IV BARRIER NOT-NPMODADV OR (":")  LINK NOT 0 TV LINK *-1 Nom)(0 Acc)(NOT 0 Ill OR PxSg3)(NEGATE 0 (N Nom Sg) LINK *-1 (V Sg3) BARRIER NOT-NPMODADV)(NEGATE 0 (N Nom Pl) LINK *-1 (V Pl3) BARRIER NOT-NPMODADV)(NOT 1 TV + Inf);
+
+ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET Pron IF (*-2 ILL-V + IV BARRIER NOT-NPMODADV OR (":")  LINK NOT 0 TV LINK *-1 Nom)(-1 Pron + Ill)(0 Acc)(NOT 0 Ill OR PxSg3)(NEGATE 0 (N Nom Sg) LINK *-2 (V Sg3) BARRIER NOT-NPMODADV)(NEGATE 0 (N Nom Pl) LINK *-2 (V Pl3) BARRIER NOT-NPMODADV);
 COPY:msyn-obj-acc-ill (Ill &SUGGEST) EXCEPT Acc TARGET (Pron Acc &msyn-obj-acc-ill) ;
 
 
