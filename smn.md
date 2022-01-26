@@ -1729,6 +1729,8 @@ TIME-N
 
 ###  Syntactic tags
 
+Tag structure: @self>mother or @mother<self or @self
+
 - `@+FAUXV	 `
 - `@+FMAINV	 `
 - `@-FAUXV	 `
