@@ -18699,6 +18699,7 @@ name convention for error tags: ´´&errortype-errorsubtype-is-shouldbe´´
 
 
 
+
 - ===========================================================
 - ===========================================================
 - ===========================================================
@@ -18717,8 +18718,6 @@ RULE SECTION
 
 
 # Verb agreement rules
-
-msyn-agr (this should be updated)
 
 
 ## Singulaari
@@ -18841,6 +18840,7 @@ msyn-ext-sg3-pl3
 msyn-extv-sg3-pl3
 Iäruh omâstemráhtusist: mieđetteijee já kieldee häämi
 
+
 ### Verb in plural 
 
 
@@ -18865,7 +18865,7 @@ msyn-extneg-sg3-pl3
 
 
 
-syn-po-nom-gen
+msyn-po-nom-gen
 
 
 
@@ -18929,6 +18929,7 @@ syn-top-placc-plnom
 ### Acc shall be Ill
 
 msyn-obj-acc-ill
+
 
 
 
