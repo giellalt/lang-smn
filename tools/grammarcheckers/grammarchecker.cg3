@@ -1974,7 +1974,6 @@ SET CCCOMMA = CC OR COMMA ;
 
 LIST &msyn-adj-attr-pred = &msyn-adj-attr-pred ;
 LIST &msyn-adj-gen-nom = &msyn-adj-gen-nom ;
-LIST &msyn-agr = &msyn-agr ;
 LIST &msyn-agr-other-du1 = &msyn-agr-other-du1 ;
 LIST &msyn-agr-other-du2 = &msyn-agr-other-du2 ;
 LIST &msyn-agr-other-du3 = &msyn-agr-other-du3 ;
@@ -2023,6 +2022,9 @@ LIST &real-pisso-pissood = &real-pisso-pissood ;
 
 MAPPING-PREFIX = & ;
 
+TEMPLATE nextWordCrossSent = (-1 (*)); # Adding mark to word that find the reference word to the left
+TEMPLATE previousWordCrossSent = (1 (*)); # and vice versa
+
 
 #!! - ===========================================================
 #!! - ===========================================================
@@ -2045,10 +2047,6 @@ ADD (&typo &SUGGESTWF) (<spelled>);
 
 
 #!! # Verb agreement rules
-
-#!! msyn-agr (this should be updated)
-ADD:msyn-agr (&msyn-agr) TARGET V IF (-1C Sg + Nom)(0C VFIN)(NOT 0 Sg3)(NEGATE 0 ConNeg LINK *-1 Neg)(NOT *-2 CC LINK -1 Sg + Nom);
-COPY:msyn-agr (Sg3 &SUGGEST) EXCEPT VNOTSG3 TARGET (V Ind Prs &msyn-agr);
 
 
 #!! ## Singulaari
@@ -2179,6 +2177,10 @@ COPY:msyn-agr-other-pl2 (Pl2 &SUGGEST) EXCEPT VNOTPL2 TARGET (V Ind Prs &msyn-ag
 #!! msyn-agr-sg3-pl3
 ADD:msyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET V IF (NOT *-1 Sg + Nom OR Sg3 + Nom BARRIER NOT-ADV OR (","))(0C COPULAS + Sg3)(*1 Pl + Nom BARRIER NOT-NPMODADV OR PUNCT + RIGHT OR PUNCT + LEFT LINK NOT *1 V + Pl3);
 COPY:msyn-agr-sg3-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V &msyn-agr-sg3-pl3);
+ADDRELATION:msyn-agr-sg3-pl3 ($2) (Pl Nom) FROM (-1 V + Sg3 LINK 0 (&msyn-agr-sg3-pl3));
+ADDRELATION:msyn-agr-sg3-pl3 ($2) (Pl Nom) FROM (-2 V + Sg3 LINK 0 (&msyn-agr-sg3-pl3));
+ADDRELATION:msyn-agr-sg3-pl3 ($2) (Pl Nom) FROM (-3 V + Sg3 LINK 0 (&msyn-agr-sg3-pl3));
+ADDRELATION:msyn-agr-sg3-pl3 ($2) (Pl Nom) FROM (-4 V + Sg3 LINK 0 (&msyn-agr-sg3-pl3));
 #% Tast lii uápis ääših
 #$ Tast láá uápis ääših
 
@@ -2197,7 +2199,9 @@ ADD:msyn-agr-other-pl3 (&msyn-agr-other-pl3) TARGET V IF
 
 COPY:msyn-agr-other-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Prs &msyn-agr-other-pl3);
 COPY:msyn-agr-other-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Prt &msyn-agr-other-pl3);
-
+ADDRELATION:msyn-agr-other-pl3 ($2) (N Pl Nom) FROM (-1 V LINK 0 (&msyn-agr-other-pl3));
+ADDRELATION:msyn-agr-other-pl3 ($2) (N Pl Nom) FROM (-2 V LINK 0 (&msyn-agr-other-pl3));
+	
 #% Viäsust juáhhoo juávhoid tagareh almoneh, moh kovvejeh ääši.
 #$ Viäsust juáhhojeh juávhoid tagareh almoneh, moh kovvejeh ääši.
 
@@ -2278,6 +2282,10 @@ COPY:msyn-ext-sg3-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET ("leđe" V Ind Prs &msyn-
 #!! Iäruh omâstemráhtusist: mieđetteijee já kieldee häämi
 ADD:msyn-extv-sg3-pl3 (&msyn-extv-sg3-pl3) TARGET V IF (-1 Loc)(0 LEDE + Sg3)(*1 N + Pl + Nom BARRIER NOT-ADV-PCLE);
 COPY:msyn-extv-sg3-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Ind Prs &msyn-extv-sg3-pl3) ;
+ADDRELATION:msyn-extv-sg3-pl3 ($2) N + Pl + Nom FROM (-1 V + LEDE + Sg3 LINK 0 (&msyn-extv-sg3-pl3));
+ADDRELATION:msyn-extv-sg3-pl3 ($2) N + Pl + Nom FROM (-2 V + LEDE + Sg3 LINK 0 (&msyn-extv-sg3-pl3));
+ADDRELATION:msyn-extv-sg3-pl3 ($2) N + Pl + Nom FROM (-3 V + LEDE + Sg3 LINK 0 (&msyn-extv-sg3-pl3));
+	
 #% Must lii kyeleh onne.
 #$ Must láá kyeleh.
 #fi Minulla on kaloja.
@@ -2287,6 +2295,7 @@ COPY:msyn-extv-sg3-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Ind Prs &msyn-extv-sg
 ADD:msyn-extv-numeral-sg3-pl3 (&msyn-extv-numeral-sg3-pl3) TARGET V IF (-1 Loc)(0 LEDE + Sg3)(1 Num + Nom LINK NOT 0 OHTA);
 COPY:msyn-extv-numeral-sg3-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Ind Prs &msyn-extv-numeral-sg3-pl3) ;
 COPY:msyn-extv-numeral-sg3-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Ind Prt &msyn-extv-numeral-sg3-pl3) ;
+ADDRELATION:msyn-extv-numeral-sg3-pl3 ($2) Num + Nom FROM (-1 V + LEDE + Sg3 LINK 0 (&msyn-extv-numeral-sg3-pl3));
 #% Must {lii} kyehti kyele.
 #$ Must láá kyehti kyele.
 #fi Minulla on kaksi kalaa. - 
@@ -2303,6 +2312,9 @@ COPY:msyn-extneg-sg3-pl3 (Pl3 Foc/ge &SUGGEST) EXCEPT (Sg3 Foc/ge) TARGET ("ij" 
 
 ADD:msyn-extneg-sg3-pl3 (&msyn-extneg-sg3-pl3) TARGET V IF (*-1 Loc BARRIER NOT-ADV)(0C ("ij") + Sg3)(*1C N + Pl + Nom BARRIER Sg + Nom OR CS OR Neg + Pl3) ;
 COPY:msyn-extneg-sg3-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET ("ij" V Neg Ind &msyn-extneg-sg3-pl3) ;
+ADDRELATION:msyn-extneg-sg3-pl3 ($2) N + Pl + Nom FROM (-1 ("ij") + Sg3 LINK 0 (&msyn-extneg-sg3-pl3));
+ADDRELATION:msyn-extneg-sg3-pl3 ($2) N + Pl + Nom FROM (-2 ("ij") + Sg3 LINK 0 (&msyn-extneg-sg3-pl3));
+ADDRELATION:msyn-extneg-sg3-pl3 ($2) N + Pl + Nom FROM (-3 ("ij") + Sg3 LINK 0 (&msyn-extneg-sg3-pl3));
 #% Šiljoost ij lah innig poccuuh.
 #% Šiljoost iä lah innig poccuid.
 #% Šiljoost ij lah innig poccuid.
@@ -2348,7 +2360,7 @@ COPY:msyn-extsubj-ill-nom (Nom &SUGGEST) EXCEPT Ill TARGET (N Pl &msyn-extsubj-i
 
 
 
-#!! syn-po-nom-gen
+#!! msyn-po-nom-gen
 ADD:msyn-po-nom-gen (&msyn-po-nom-gen) TARGET (N Sg Nom) IF (NOT 0 Gen) (1C Po);
 COPY:msyn-po-nom-gen (Gen &SUGGEST) EXCEPT (Nom &msyn-po-nom-gen) TARGET (N Sg &msyn-po-nom-gen);
 
@@ -2380,6 +2392,10 @@ COPY:msyn-pred-acc-nom (Nom &SUGGEST) EXCEPT Acc TARGET (N &msyn-pred-acc-nom);
 #!! msyn-predagr-pl3-sg3
 ADD:msyn-predagr-pl3-sg3 (&msyn-predagr-pl3-sg3) TARGET Neg IF (0 Pl3)(1 ("leđe") + ConNeg)(*2 N + Sg + Nom BARRIER NOT-NPMODADVL);
 COPY:msyn-predagr-pl3-sg3 (Sg3 &SUGGEST) EXCEPT Pl3 TARGET ("ij" V Neg Ind &msyn-predagr-pl3-sg3);
+ADDRELATION:msyn-predagr-pl3-sg3 ($2) (N Sg Nom) FROM (-2 Neg LINK 0 (&msyn-predagr-pl3-sg3)) ;
+ADDRELATION:msyn-predagr-pl3-sg3 ($2) (N Sg Nom) FROM (-3 Neg LINK 0 (&msyn-predagr-pl3-sg3)) ;
+ADDRELATION:msyn-predagr-pl3-sg3 ($2) (N Sg Nom) FROM (-4 Neg LINK 0 (&msyn-predagr-pl3-sg3)) ;
+ADDRELATION:msyn-predagr-pl3-sg3 ($2) (N Sg Nom) FROM (-5 Neg LINK 0 (&msyn-predagr-pl3-sg3)) ;
 
 #% Iä lah toorjâ.
 #$ Ij lah toorjâ.
@@ -2494,6 +2510,11 @@ COPY:msyn-top-nom-acc (Acc &SUGGEST) EXCEPT Nom TARGET (N Nom &msyn-top-nom-acc)
 ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF (*-1 ILL-V + IV BARRIER NOT-NPMODADV OR (":") LINK NOT 0 TV)(0 Acc)(NOT 0 Ill OR PxSg3)(NOT 1 Pron + Ill);
 ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF (*-1 ILL-V + IV BARRIER NOT-NPMODADV OR (":") LINK NOT 0 TV)(0 Acc)(NOT 0 Ill OR PxSg3)(NOT *1 N + Ill BARRIER NOT-NPMOD);
 COPY:msyn-obj-acc-ill (Ill &SUGGEST) EXCEPT Acc TARGET (N Acc &msyn-obj-acc-ill) ;
+ADDRELATION:msyn-obj-acc-ill ($2) (V) FROM (1 N + Acc LINK 0 (&msyn-obj-acc-ill)) ;
+ADDRELATION:msyn-obj-acc-ill ($2) (V) FROM (2 N + Acc LINK 0 (&msyn-obj-acc-ill)) ;
+ADDRELATION:msyn-obj-acc-ill ($2) (V) FROM (3 N + Acc LINK 0 (&msyn-obj-acc-ill)) ;
+ADDRELATION:msyn-obj-acc-ill ($2) (V) FROM (4 N + Acc LINK 0 (&msyn-obj-acc-ill)) ;
+
 #%: Ideologia kuáská kielâid.
 #$: Ideologia kuáská kieláid.
 
