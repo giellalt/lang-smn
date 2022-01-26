@@ -398,6 +398,8 @@ SET TIME-N = TIME-N-SET - NOT-TIME ;  #!! TIME-N
 
 #!! ###  Syntactic tags
 
+#!! Tag structure: @self>mother or @mother<self or @self
+
 LIST @+FAUXV = @+FAUXV ;	         #!! - `@+FAUXV	 `
 LIST @+FMAINV = @+FMAINV ;	         #!! - `@+FMAINV	 `
 LIST @-FAUXV = @-FAUXV ;	         #!! - `@-FAUXV	 `
@@ -1438,7 +1440,7 @@ LIST ALU = "alu" "gasu" "govddu" "guhku" "losu" "stuoru" "viiddu" "čieŋu" ;
 # These are ABBR:
 LIST REAL-TITLE =  "prof" "fil.tri" "hr" "kapt" "korp" "lekt" "lic" "ltn" "mag.art" "mag" "merc" "miss" "Mr" "mr" "Mrs" "mrs" "odont" "oecon" "ossod.dir" ;
  
-LIST TITLE-LIKE = "kästee" "justitiárius" "majesteet" "miss" "naabur" "hiärrá" ;
+LIST TITLE-LIKE = "kästee" "justitiárius" "majesteet" "miss" "naabur" "hiärrá" "ollâpappâ" ;
 # Ránnjá Ole Vuolab imašta manne ....
 
 #!! * Sets for nouns as pred
@@ -1510,7 +1512,7 @@ LIST HUMAN-GROUP =  "aalmug" (".*álbmot"r) (".*bearaš"r) (".*čearda"r) "airâ
   ## group of humans that connot be a building at the same time
  
 LIST PROFESSION1 = (".*advokaat"r)  (".*tuámmár"r) "arkeoloog" (".*artist"r) (".*assistent"r) "ákšualmai" (".*pargee"r) "pyeredeijjee" "áámmátolmooš" (".*hovdâ"r)  (".*áámmát"r)
-(".*keččee"r) (".*stivrejeijee"r)(".*konsulent"r) "pargoviehâ" "liäiboo" "pappâ" "palvâleijee" (".*čällee"r) (".*pijgá"r)  (".*vyebdee"r) (".*terapeut"r)  (".*astronaut"r) "pispe" (".*pivdee"r)  "eennâmviljâleijee" "puásuituállee" "tuodârsämmilâš" "poolismiäštár" (".*vyeijee"r) "puovtâdeijee" 
+(".*keččee"r) (".*stivrejeijee"r)(".*konsulent"r) "pargoviehâ" "liäiboo" (".*pappâ"r) "palvâleijee" (".*čällee"r) (".*pijgá"r)  (".*vyebdee"r) (".*terapeut"r)  (".*astronaut"r) "pispe" (".*pivdee"r)  "eennâmviljâleijee" "puásuituállee" "tuodârsämmilâš" "poolismiäštár" (".*vyeijee"r) "puovtâdeijee" 
 "čiehčee" "čorgejeijee" (".*čuojâtteijee"r) 
 "taaiđar" (".*taaidar"r) "tálulâš" "eemeed" "táluiššeed" "tärhisteijee" "orjâlâš" (".*tipšoo"r) (".*toimâtteijee"r) (".*tuáhtár"r) "tulkkâ" "tuáijár"  (".*totkee"r) 
 "ealáhusdoalli" "eallo#doalli" "eennâmviljâleijee" "eananhearrá" (".*sadjásaš"r) "eatnandoalli"
@@ -1528,7 +1530,7 @@ LIST PROFESSION1 = (".*advokaat"r)  (".*tuámmár"r) "arkeoloog" (".*artist"r) (
 
 SET PROFESSION = PROFESSION1 - Prop ;
 
-LIST OFFICE = "ovdâsteijee" "eennâmhiärrá" "bajitbáhppa" "boazodoallohoavda" (".*čálli"r) "dekána" "farao" "fylkkaráđđi" "kunâgâs" "komserjâs" (".*ministtar"r) "nissonáirras" "politijkkár" "prinses" "ráđđe#láhttu" "ruvdnaprinseassa" "ságadoalli" "sámedemokráhtta" "sámediggeáirras" "sámediggepresideanta" "sátnejođiheaddji" "stivrralahttu" "hovdâ" "president" "minister" "várrepresideanta" ;
+LIST OFFICE = "ovdâsteijee" "eennâmhiärrá" "ollâpappâ" "boazodoallohoavda" (".*čálli"r) "dekána" "farao" "fylkkaráđđi" "kunâgâs" "komserjâs" (".*ministtar"r) "nissonáirras" "politijkkár" "prinses" "ráđđe#láhttu" "ruvdnaprinseassa" "ságadoalli" "sámedemokráhtta" "sámediggeáirras" "sámediggepresideanta" "sátnejođiheaddji" "stivrralahttu" "hovdâ" "president" "minister" "várrepresideanta" ;
 
 SET TITLE = REAL-TITLE OR TITLE-LIKE OR PROFESSION OR OFFICE OR Actor ; 
 
