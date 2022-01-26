@@ -1498,7 +1498,7 @@ LIST PROFESSION1 = (".*advokaat"r)  (".*tuámmár"r) "arkeoloog" (".*artist"r) (
 
 SET PROFESSION = PROFESSION1 - Prop ;
 
-LIST OFFICE = "ovdâsteijee" "eennâmhiärrá" "bajitbáhppa" "boazodoallohoavda" (".*čálli"r) "dekána" "farao" "fylkkaráđđi" "kunâgâs" "komserjâs" (".*ministtar"r) "nissonáirras" "politijkkár" "prinses" "ráđđe#láhttu" "ruvdnaprinseassa" "ságadoalli" "sámedemokráhtta" "sámediggeáirras" "sámediggepresideanta" "sátnejođiheaddji" "stivrralahttu" "hovdâ" "president" "minister" "várrepresideanta" ;
+LIST OFFICE = "ovdâsteijee" "eennâmhiärrá" "ollâpappâ" "boazodoallohoavda" (".*čálli"r) "dekána" "farao" "fylkkaráđđi" "kunâgâs" "komserjâs" (".*ministtar"r) "nissonáirras" "politijkkár" "prinses" "ráđđe#láhttu" "ruvdnaprinseassa" "ságadoalli" "sámedemokráhtta" "sámediggeáirras" "sámediggepresideanta" "sátnejođiheaddji" "stivrralahttu" "hovdâ" "president" "minister" "várrepresideanta" ;
 
 SET TITLE = REAL-TITLE OR TITLE-LIKE OR PROFESSION OR OFFICE OR Actor ; 
 
@@ -2428,6 +2428,7 @@ COPY:msyn-v-sg1-prfprc (PrfPrc &SUGGEST) EXCEPT (Ind Prs Sg1) TARGET (V &msyn-v-
 #% Sun lii huunjâm
 #$ Sun lii huunnjâm
 #$ - Jiem tieđe poolâm-uv vâi maid, mut tot juurdâ lii váhá ilgâd.
+#$ Te proofeet Joona lâi merâpiäđu čuávjist kulmâ peeivi. 
 
 # čilgen:
 #ADD-njuolggadus: lasihan &msyn-v-sg1-prfprc  jos gurotbealde lea indikatiiva ja ieš lea prs sg1
@@ -2488,15 +2489,15 @@ COPY:msyn-obj-plnom-placc (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &msyn-obj-plnom
 #!! ### Acc shall be Nom
 
 #!! syn-top-placc-plnom 
-ADD:msyn-top-placc-plnom (&msyn-top-placc-plnom) TARGET N IF (0C Pl + Acc - Sem/Time LINK *-1 BOS BARRIER Nom)(1 Der/Pass + Sg3)(2 Adv)(NOT *3 TV);
+ADD:msyn-top-placc-plnom (&msyn-top-placc-plnom) TARGET N IF (*-1 BOS BARRIER TV)(0C Pl + Acc - Sem/Time LINK *-1 BOS BARRIER Nom)(1 Der/Pass + Sg3)(2 Adv)(NOT *3 TV);
 #% Anarâškielâlijd noomâid kiävttoo uccáá.
 #$ Anarâškielâliih noomah kiävttojeh uccáá.
 
 
-ADD:msyn-top-nom-acc (&msyn-top-nom-acc) TARGET N IF (0C Nom - Sem/Time LINK *-1 BOS BARRIER Nom)(*1 N + Nom BARRIER NOT-NPMOD LINK 1 Ind + Sg3);
+ADD:msyn-top-nom-acc (&msyn-top-nom-acc) TARGET N IF (0C Nom - Sem/Time - TITLE LINK *-1 BOS BARRIER Nom)(*1 N + Nom BARRIER NOT-NPMOD LINK 1 Ind + Sg3);
 COPY:msyn-top-nom-acc (Acc &SUGGEST) EXCEPT Nom TARGET (N Nom &msyn-top-nom-acc) ;
 
-ADD:msyn-top-nom-acc (&msyn-top-nom-acc) TARGET N IF (0C Nom - Sem/Time LINK *-1 BOS BARRIER Nom)(1 Pron + Pers + Nom)(2 Ind + Sg3);
+ADD:msyn-top-nom-acc (&msyn-top-nom-acc) TARGET N IF (0C Nom - Sem/Time - TITLE LINK *-1 BOS BARRIER Nom)(1 Pron + Pers + Nom)(2 Ind + Sg3);
 COPY:msyn-top-nom-acc (Acc &SUGGEST) EXCEPT Nom TARGET (N Nom &msyn-top-nom-acc) ;
 #% Suullân peeli sun lii porgâm.
 
@@ -2510,10 +2511,10 @@ COPY:msyn-top-nom-acc (Acc &SUGGEST) EXCEPT Nom TARGET (N Nom &msyn-top-nom-acc)
 ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF (*-1 ILL-V + IV BARRIER NOT-NPMODADV OR (":") LINK NOT 0 TV)(0 Acc)(NOT 0 Ill OR PxSg3)(NOT 1 Pron + Ill);
 ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF (*-1 ILL-V + IV BARRIER NOT-NPMODADV OR (":") LINK NOT 0 TV)(0 Acc)(NOT 0 Ill OR PxSg3)(NOT *1 N + Ill BARRIER NOT-NPMOD);
 COPY:msyn-obj-acc-ill (Ill &SUGGEST) EXCEPT Acc TARGET (N Acc &msyn-obj-acc-ill) ;
-ADDRELATION:msyn-obj-acc-ill ($2) (V) FROM (1 N + Acc LINK 0 (&msyn-obj-acc-ill)) ;
-ADDRELATION:msyn-obj-acc-ill ($2) (V) FROM (2 N + Acc LINK 0 (&msyn-obj-acc-ill)) ;
-ADDRELATION:msyn-obj-acc-ill ($2) (V) FROM (3 N + Acc LINK 0 (&msyn-obj-acc-ill)) ;
-ADDRELATION:msyn-obj-acc-ill ($2) (V) FROM (4 N + Acc LINK 0 (&msyn-obj-acc-ill)) ;
+ADDRELATION:msyn-obj-acc-ill ($2) (ILL-V) FROM (1 N + Acc LINK 0 (&msyn-obj-acc-ill)) ;
+ADDRELATION:msyn-obj-acc-ill ($2) (ILL-V) FROM (2 N + Acc LINK 0 (&msyn-obj-acc-ill)) ;
+ADDRELATION:msyn-obj-acc-ill ($2) (ILL-V) FROM (3 N + Acc LINK 0 (&msyn-obj-acc-ill)) ;
+ADDRELATION:msyn-obj-acc-ill ($2) (ILL-V) FROM (4 N + Acc LINK 0 (&msyn-obj-acc-ill)) ;
 
 #%: Ideologia kuáská kielâid.
 #$: Ideologia kuáská kieláid.
@@ -2531,7 +2532,7 @@ COPY:msyn-obj-acc-ill (Ill &SUGGEST) EXCEPT Acc TARGET (Pron Acc &msyn-obj-acc-i
 
 #ADD:msyn-top-placc-plnom (&msyn-top-placc-plnom) TARGET N IF (0C Pl + Acc - Sem/Time LINK *-1 BOS BARRIER Nom)(1 Neg + Sg3)(2 ConNeg LINK NOT 0 TV);
 #!! msyn-top-placc-plnom
-ADD:msyn-top-placc-plnom (&msyn-top-placc-plnom) TARGET N IF (NOT -1 ("mihheen"))(0C Pl + Acc - Sem/Time LINK *-1 BOS BARRIER Nom)(1 Neg + Sg3 LINK NOT *1 TV);
+ADD:msyn-top-placc-plnom (&msyn-top-placc-plnom) TARGET N IF (*-1 BOS BARRIER TV)(NOT 0 TITLE LINK 1 Prop)(NOT -1 ("mihheen"))(0C Pl + Acc - Sem/Time LINK *-1 BOS BARRIER Nom)(1 Neg + Sg3 LINK NOT *1 TV);
 COPY:msyn-top-placc-plnom (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &msyn-top-placc-plnom);
 
 #% {tiäđuid} ij kavnuu.
@@ -2541,6 +2542,7 @@ COPY:msyn-top-placc-plnom (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &msyn-top-placc
 #$ Mut tuorâstuvâi ij kavnuu.
 #$ Kähirijd lâi talle kolgâm uážudiđ pävirpitáigijn kiddâ.
 #$ Siämmáámuđusijd teermâid ij uážžum kuohtii kevttiđ.
+#$ Fäŋgejeijeeh tolvuu Jeesus ollâpappâ Kaifas kuuvl.
 
 
 #!! ### Plain object of TV in Nom shall be Acc
