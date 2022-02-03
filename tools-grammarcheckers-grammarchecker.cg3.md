@@ -1447,6 +1447,11 @@ msyn-pass-accsubj-nomsubj
 ## Noun phrase internal phenomena 
 
 
+### Noun phrase possessor
+
+
+
+
 ### Noun phrase complements
 
 N + Ill
