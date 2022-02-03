@@ -2641,6 +2641,15 @@ COPY:msyn-pass-accsubj-nomsubj (Nom &SUGGEST) EXCEPT (Acc &msyn-pass-accsubj-nom
 #!! ## Noun phrase internal phenomena 
 
 
+#!! ### Noun phrase possessor
+
+
+MAP:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N IF (-1 BOS)(0 N + Pl + Acc)(1 N + Nom)(NOT *1 TV BARRIER S-BOUNDARY);
+COPY:msyn-posspl-acc-gen (Gen &SUGGEST) EXCEPT (Acc &msyn-posspl-acc-gen) TARGET (N Pl &msyn-posspl-acc-gen);
+
+#% Siijđoid lehâstem tábáhtuvá itten.
+#$ Siijđoi
+
 #!! ### Noun phrase complements
 
 #!! N + Ill
