@@ -14330,6 +14330,7 @@ LEXICON A_KOLME ad hoc three syllable stem > LITTER
 
 
 
+
 **LEXICON MUOTTII** almost like KARRII, direct to it?
 
 
