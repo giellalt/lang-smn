@@ -28,18 +28,14 @@ jobs:
         with:
           spellers: false
           fst: hfst
-
-      # Use GitHub Deploy Action to build and deploy to Github
-      - uses: jeffreytse/jekyll-deploy-action@v0.3.1
+      - name: 🔨 install dependencies & build site
+        uses: limjh16/jekyll-action-ts@v2
         with:
-          provider: ‘github’
-          token: ${{ secrets.GITHUB_TOKEN }} # It’s your Personal Access Token(PAT)
-          repository: ‘’             # Default is current repository
-          branch: ‘gh-pages’         # Default is gh-pages for github provider
-          jekyll_src: ‘./docs/‘           # Default is root directory
-          jekyll_cfg: ‘_config.yml’  # Default is _config.yml
-          jekyll_baseurl: ‘’         # Default is according to _config.yml
-          bundler_ver: ‘>=0’         # Default is latest bundler version
-          cname: ‘’                  # Default is to not use a cname
-          actor: ‘’                  # Default is the GITHUB_ACTOR
-          pre_build_commands: ‘’     # Installing additional dependencies (Arch Linux)
+          enable_cache: true
+          jekyll_src: lang/docs/
+      - name: 🚀 deploy gh pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: lang/docs/
+          enable_jekyll: true
