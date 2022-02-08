@@ -2,7 +2,7 @@
 # Inari Saami adverbs
 
 ## The morphology
-* **LEXICON ADV** the Adv tag
+* **LEXICON ADV** adds the +Adv tag
 
 * **LEXICON PxADV** the Adv tag and Ill Px
 
