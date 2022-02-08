@@ -32,22 +32,11 @@ $ echo "márffibiillagáffe" | hfst-tokenise --giella-cg tokeniser-disamb-gt-des
 Pmatch documentation:
 https://kitwiki.csc.fi/twiki/bin/view/KitWiki/HfstPmatch
 
-
-
-
-
-
-
-
-
-
-
 Apart from what's in our morphology, there are
 1) unknown word-like forms, and
 2) unmatched strings
 We want to give 1) a match, but let 2) be treated specially by hfst-tokenise -a
 TODO: Could use something like this, but built-in's don't include šžđčŋ:
-
 
 Simply give an empty reading when something is unknown:
 hfst-tokenise --giella-cg will treat such empty analyses as unknowns, and
@@ -55,10 +44,7 @@ remove empty analyses from other readings. Empty readings are also
 legal in CG, they get a default baseform equal to the wordform, but
 no tag to check, so it's safer to let hfst-tokenise handle them.
 
-
 Needs hfst-tokenise to output things differently depending on the tag they get
-
-
 
 * * *
 <small>This (part of) documentation was generated from [../tools/tokenisers/tokeniser-disamb-gt-desc.eighties.pmscript](http://github.com/giellalt/lang-smn/blob/main/../tools/tokenisers/tokeniser-disamb-gt-desc.eighties.pmscript)</small>

@@ -1,144 +1,57 @@
 
 # Pronouns for Inari Saami
 
-
-* **LEXICON Pronoun **
-
+* **LEXICON Pronoun**
 
 ## Personal pronouns
 
-* **LEXICON Personal **
+* **LEXICON Personal**
 
+* **LEXICON perspronsg** with contlex K and not G (munge)
 
-* **LEXICON perspronsg ** with contlex K and not G (munge)
+* **LEXICON persprondu**
 
-* **LEXICON persprondu **
-
-* **LEXICON perspronpl **
-
-
+* **LEXICON perspronpl**
 
 Demonstrative pronouns
 
-* **LEXICON Demonstrative **
+* **LEXICON Demonstrative**
 
+* **LEXICON TIET**
 
-* **LEXICON TIET **
+* **LEXICON TOT**
 
-* **LEXICON TOT **
+* **LEXICON TUOT**
 
-* **LEXICON TUOT **
+* **LEXICON TI-TUO**
 
+* **LEXICON TA**
 
-* **LEXICON TI-TUO **
-
-* **LEXICON TA **
-
-* **LEXICON TYE **
-
-
-
-
-
-
-
+* **LEXICON TYE**
 
 ## Reflexive pronouns
 
-* **LEXICON Reflexive **
-
-
-
-
-
-
-
-
-
-
-
-
+* **LEXICON Reflexive**
 
 ## Reciprocal pronouns
 
-* **LEXICON Reciprocal **
+* **LEXICON Reciprocal**
 
+* **LEXICON miiInterRel**
 
+* **LEXICON kiiInterRel**
 
+* **LEXICON MK** common for mii and kii
 
+* **LEXICON MK-long**
 
+* **LEXICON MK-short**
 
-
-
-
-
-
-
-
-
-
-* **LEXICON miiInterRel **
-
-
-* **LEXICON kiiInterRel **
-
-
-
-* **LEXICON MK ** common for mii and kii
-
-* **LEXICON MK-long **
-
-* **LEXICON MK-short **
-
-* **LEXICON MK-low **
-
-
-
+* **LEXICON MK-low**
 
 ## Indefinite pronouns
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-LEXICON SIAMMAS_PRON  without WG
-
-
-
-
-
-
-
-
-
+LEXICON SIAMMAS_PRON without WG
 
 * * *
 <small>This (part of) documentation was generated from [../src/fst/stems/pronouns.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/stems/pronouns.lexc)</small>

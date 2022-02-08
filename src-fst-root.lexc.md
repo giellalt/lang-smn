@@ -14,7 +14,6 @@ This file documents the Inari Sámi morphological analyser. The tags in bold are
 * **+ABBR** 
 * **+Symbol** = independent symbols in the text stream, like £, €, ©
 
-
 ### Tags for sub-POS
 
 * **+Prop** - Propernoun
@@ -43,12 +42,9 @@ This file documents the Inari Sámi morphological analyser. The tags in bold are
 * **+Gram/IAbbr**:  Intransitive abbreviation (it takes no argument)
 * **+Gram/3syll**: trisyllabic verbs
 
-
-
 ## Grammatical properties
 
 * **+IV +TV** 
-
 
 ### Number
 * **+Sg +Pl +Du** 
@@ -79,7 +75,6 @@ This file documents the Inari Sámi morphological analyser. The tags in bold are
 * **+Spat**    Spatial adverbs
 * **+Temp** Temporal adverbs
 
-
 ### Tense - mood
 * **+Ind +Pot +Cond +Imprt +ImprtII** 
 * **+Prs +Prt** 
@@ -91,7 +86,6 @@ This file documents the Inari Sámi morphological analyser. The tags in bold are
 * **+PrsPrc +PrfPrc** 
 * **+VGen +VAbess** 
 * **+Actio** 
-
 
 ## Derivation tags
 
@@ -134,16 +128,9 @@ just specify +Der|+Der1 .. +Der5 and you are set.
 |            |            |            | **+Der/upmi** | VN | 
 |            |            |            | **+Der/mas** | VN | 
 
-
-
-
-
-
-
 ### Other derivations
 
 Other/unclassified derivations, can appear in all positions:
-
 
 * **+Der/ag** neeljičievâg neeljijienâg kuulmâloonjâg neeljičievâg neeljijienâg
 * **+Der/ahasas** 85-ahasâš škovlâahasâš
@@ -154,7 +141,6 @@ Other/unclassified derivations, can appear in all positions:
 * **+Ex/N** - This tag is not added in lexc. The POS tag before derivation is converted into this tag when compiling FST for disambiguation.
 * **+Ex/A** - This tag is not added in lexc. The POS tag before derivation is converted into this tag when compiling FST for disambiguation.
 * **+Ex/V** - This tag is not added in lexc. The POS tag before derivation is converted into this tag when compiling FST for disambiguation.
-
 
 ### Clitics
 
@@ -388,14 +374,12 @@ Other/unclassified derivations, can appear in all positions:
 * **+Sem/Wthr** weather
 * **+Sem/Year** 
 
-
 ## Punctuation
 
 * **+CLB +PUNCT +HYPH** 
 * **+PAR +LEFT +RIGHT** 
 * **+URL** 
 * **+CLBfinal**  Sentence final abbreviated expression ending in full stop, the full stop is ambiguous
-
 
 ## Morphophonemes
 
@@ -454,7 +438,6 @@ Other/unclassified derivations, can appear in all positions:
 * **+Use/PMatch** = for preprocessing
 * **@P.Pmatch.Backtrack@** = for preprocessing
 
-
 ## Variants within the same paradigm
 * **+v1** 
  **+v2** 
@@ -463,8 +446,6 @@ Other/unclassified derivations, can appear in all positions:
 * **+Hom1** 
  **+Hom2** for different homonymous lexemes
 * **+Allegro** 
-
-
 
 ## Compound tags
 
@@ -511,8 +492,6 @@ The second part of the compound may require that the previous (left part) is:
 * **+CmpN/SgGenLeft** Singular Genitive
 * **+CmpN/PlGenLeft** Plural Genitive
 
-
-
 ## Language tagged names
 
 * **+OLang/ENG** 
@@ -524,7 +503,6 @@ The second part of the compound may require that the previous (left part) is:
 * **+OLang/SWE** 
 * **+OLang/UND** 
 * **+OLang/RUS** 
-
 
 ## Flag diacritics
 We have manually optimised the structure of our lexicon using following
@@ -565,7 +543,6 @@ do no harm.
 |  **@P.CmpHyph.TRUE@** | Flag to control hyphenated compounds like proper nouns
 |  **@N.CmpHyph.TRUE@** | Flag to control hyphenated compounds like proper nouns
 
-
 Use the following flag diacritics to control downcasing of derived proper
 nouns (e.g. Finnish Pariisi -> pariisilainen). See e.g. North Sámi for how to use
 these flags. There exists a ready-made regex that will do the actual down-casing
@@ -597,7 +574,6 @@ given the proper use of these flags.
 | **@D.SpaceCmp.ON@**  | Flag to tag compounds written with a space
 | **@C.SpaceCmp@**  | Flag to tag compounds written with a space
 
-
 Basic lexica, pointing to the other lexicon files
 
 # Lexicon Root where everyting starts
@@ -619,27 +595,21 @@ Basic lexica, pointing to the other lexicon files
 * **Punctuation ;** 
 * **Symbols ;** 
 
-
 We split of the 3 lexica defined above already here:
 
 * **LEXICON Abbreviation** directing to both smi (common) and smn abbrs.
 	* **Abbreviation-smn ;** 
 	* **Abbreviation-smi ;** 
 
-
 * **LEXICON Acronym** splitting in common and smn
 	* **Acronym-smi ;** 
 	* **Acronym-smn ;** 
-
-
 
 * **LEXICON ProperNoun** point
 	* **Prefix-Proper ;** 
 	* **ProperNoun-smn ;** 
 	* **@N.CmpHyph.TRUE@ ProperNoun-smi-nocomp ;**  Lexicon for short names - always require hyphen
 	* **ProperNoun-smi ;** 
-
-
 
 # Lexicon ENDLEX 
 And this is the ENDLEX of everything:

@@ -2,7 +2,6 @@
 
 # Verb stems
 
-
 ## Overview
 * Reference to VGen 
 * Auxiliaries
@@ -195,29 +194,15 @@
 ### Unclassified verbs
 * verbstem (no info)
 
-
-
-
-
-
-
-
-
-
 ## Auxiliaries
 
-* ij+V+IV+Neg: NEG ; 
-* leđe+V+IV: LEDE ; 
-
+* ij+V+IV+Neg: NEG ;
+* leđe+V+IV: LEDE ;
 
 Main verbs
 
-
 Intransitive verbs
 Transitive verbs
-
-
-
 
 * * *
 <small>This (part of) documentation was generated from [../src/fst/stems/verbs.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/stems/verbs.lexc)</small>

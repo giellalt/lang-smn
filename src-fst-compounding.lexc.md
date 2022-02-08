@@ -6,19 +6,15 @@ LEXICON R -  Flags to control compounding
 
 LEXICON Rnoun - 
 
-
 LEXICON RAlmostReal -  lexicalising the 3-part compounds, with the tag ShCmp
-
 
 LEXICON Rreal - This initial recursive/compounding lexicon adds flags to 
 control compounding, before going to the real compounding lexicon.
 This is the former R lexicon, renamed to avoid the MiddleNouns loop
 
-
 LEXICON RrealAfterCmpNFlags - coming from Rreal
 
 LEXICON nounflag -  coming from previous, going to the Root lexica
-
 
 LEXICON RHyph - This initial recursive/compounding lexicon adds flags to
 control compounding, before going to the real compounding lexicon

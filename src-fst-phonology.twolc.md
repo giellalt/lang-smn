@@ -3,11 +3,9 @@
 
 This file documents the [phonology.twolc file](http://github.com/giellalt/lang-smn/blob/main/src/fst/phonology.twolc) 
 
-
 Here we govern all morphophonological processes.
 
 # Alphabet 
-
 
 ## The Inari Saami letters
 
@@ -28,18 +26,13 @@ Here we govern all morphophonological processes.
   é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý þ ð   
   ß ª ß ç                                   
 
-
-
 Literal quotes and angles must be escaped (cf morpheme boundaries further down):
 * »
 «
 >
 <
 
-
-
 ### Archiphonemes
-
 
 * **a5:a á5:á e5:e i5:i u5:u y5:y o5:o ä5:ä  **  these do not change 
 * **i2:i u2:u â2:â  **  this is final i, u in contract verbs etc changing to e, o
@@ -62,7 +55,6 @@ These are dependent upon the **Triggers** in the next section
 
 ### Triggers
 These symbols govern the behaviour of the archiphonemes above.
-
 
 * **%^CLEN:0    ** = Cons lengthening, with ^RC
 * **%^CSH:0     ** = Cons shortening, laaŋkku - laaŋkun
@@ -87,8 +79,6 @@ Trigger ordering in twolc and lexc, from left to right:
 
 {SV,ÁE,ÁI}  {EA,EX,SC}  {FCD|,VD} {WG,CSH} CLEN  {VHIGH,VBACK}  {RVSH,RLEN} {SLEN,SVSH}  SVLOW
 
-
-
 ## Morpheme boundaries:
 
 Here we define the suffix border >
@@ -102,7 +92,6 @@ The other borders are not used yet, but still defined:
 and the symbol #, which is Word boundary for both lexicalised and dynamic compounds
 
 End of alphabet definitions
-
 
 Sets
 
@@ -138,15 +127,10 @@ Sets
 * ** StemCns = b b3 d d3 g g2 g3 h h2 h3         ** 
 **           j l m m2 m3 m8 n n8 n2 ŋ r s  ;     ** 
 
-
-
-
 # Definition section
 
 Introducing a WG right context 
 ```WeakGrade =  (RealVow:) [:RealVow |i6:]  (Cns:) ([%^SV:|%^ÁI:](%^ÁE:)) (%^FCD:) %^WG:0   ; ```  
-
-
 
 As we look at more cases, the WeakGrade definition tends to be longer. 
 We want to keep it short, but we want the code to work Thus, we document.
@@ -155,10 +139,7 @@ We want to keep it short, but we want the code to work Thus, we document.
 * -č: is there for the č:i pair of eeč^RCi:eijijn
 * The i6: is there for kyehtlov (kyehti6lov)
 
-
-
 # Rule section
-
 
 First we list the consonant rules, thereafter the vowel ones.
 
@@ -177,17 +158,12 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 * *juáh^RCu^WG^RVSH>ttáá*
 * *juáv0u00>ttáá*
 
-
-
 **RULE: hh:vv** =  já%^RVhhá%^SVl%^ÁI : jäävvil
-
-
 
 **RULE: Quality change of root consonant x:yy** =  consonant lengthening after WG, changing h:v, p:v, c:s
 
 * *va^RVh%^RCo^WG^CLEN>im*
 * *va0vvo00>im*
-
 
 **RULE: t:đ, also tk4:đh gradation, part 1 ** =   
 
@@ -203,7 +179,6 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 * *totk4os^WG*
 * *tođhos0*
 
-
 **RULE: xx:yy gradation for xx4** =   puáhhoin, sukk4á:suhháást
 
 * *mä^RVtk4i^WG^RLEN>.#.*
@@ -212,31 +187,22 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 * *su^RVkk4á^SV^WG^CLEN^SLEN>st*
 * *su0hháá000>st*
 
-
-
 **RULE: t4:đ and c4, č4, p4 gradation for tt:đ etc. ** 
 
 * *ru^RVtt4â^WG^RLEN>*
 * *ruu0đâ00>*
 
-
-
 **RULE: ht:vt, ks:vs etc. gradation** =  ht:vt, we use h 
-
 
 * *pihtâs^WG*
 * *pivtâs0*
-
-
 
 ### Consonant shortening rules
 
 **RULE: k:0 gradation and shortening for xkk4** =  for lkk4, rkk4, vkk4
 
-
 * *la^RVvkk4â^WG^RLEN*
 * *laav0hâ00*
-
 
 **RULE: xyy:xy gradation A** =   há%^RVi4ttás%^ÁI
 
@@ -247,18 +213,12 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 * *riänttus^WG>*
 * *riän0tus0>*
 
-
-
 **RULE: č:0 in čč4 consonant gradation when CLEN** = when čč4
 
 * *lu^RVčč4â^WG^RLEN^SVLOW>in*
 * *luu0já000>in*
 
-
 **RULE: From i4j to j when WG and CSH** = e.g. sai4joos:sajoos
-
-
-
 
 **RULE: xx:x consonant gradation and shortening and x:x shortening** =   weak grade **or** consonant shortening (Both in same rule)
 
@@ -282,14 +242,12 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 * *kahhaan^CSH^SVSH>ân*
 * *ka0h0an00>ân*
 
-
 **RULE: tt:t  - final consonant and consonant gradation** = consonant gradation, and 3syll verbs in -tt lose t in front of cns-initial suff
 
 * *las^RCe^SVtt^CLEN^SLEN>*
 * *lassee0t00>*
 
 **RULE: nnj to nj shortening weak grade and consonant shortening** =  special rule, e.g. konnjâl -> konjâlân puánnjá
-
 
 **RULE: Word final consonant deletion                 ** = for vaskâm:vaaskâ
 
@@ -298,15 +256,12 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 * *njuolgâd^FCD^RVSH*
 * *njuolgâ000*
 
-
 **RULE: Final m in stems, smm to sm  ** = 
-
 
 **RULE: Wordfinal consonants part 1**  e%^RVlâčč
 1)
 2)jurdâččmân:jurdâšmân ju%^RVrdâčč%^RLEN%>mân
 3)  šš>š in hárávušš>vetteđ 
-
 
 * *hárávušš>vetteđ*
 * *hárávu0š>vetteđ*
@@ -319,13 +274,7 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 * *su^RVkk4á^SV^WG^CLEN^SLEN>st*
 * *su0hháá000>st*
 
-
-
-
-
 ### Consonant lengthening rules
-
-
 
 **RULE: Lengthening of half-long root consonant x:xx** =  riččá piiru piirrun niisu niissun
 
@@ -354,11 +303,9 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 * *kiel^RCâ^CLEN>n*
 * *kiellâ0>n*
 
-
 **RULE: č:ij part 1** =  
 
 **RULE: Lengthening root consonant j:ij 1** =  for saje:saijeen 
-
 
 **RULE: č:ij and j:ij part 2** =  
 
@@ -370,39 +317,26 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 * *vaj^RCe^SVd^CLEN^SLEN>*
 * *vaijeed00>*
 
-
-
-
 **RULE: nj to nnj consonant lengthening** =  special rule, suánju : suánnjun for Par and Ess
-
-
 
 **RULE: Consonant lengthening after xx:x and xy:zy weak grade with x4 on upper side** =   k4, č, p4  kukse:kuvssijn  
 
-
 **RULE: Consonant lengthening xy:xyy ** = 
 
-
-
 ### Stem consonant and suffix consonant rules
-
 
 **RULE: Assimilation of consonants t d š**  delet t in front of -ttáá, avoid -tttáá
 
 * *haamit>ttáá*
 * *haami0>ttáá*
 
-
-
 **RULE: Wordfinal consonants part 2**  e%^RVlâčč cummâlâhč:cummâlâhš
 
 **RULE: Final consonant x:xx** =  pottáák potákkân  
 
-
 **RULE: Clitic devoicing** =  for focus particle bá to pá after unvoiced stem cns.
 
 **RULE: Gerund devoicing ** =   dijn to tijn after stems in tšs
-
 
 ## Vowel rules
 
@@ -422,8 +356,6 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 * *kiirrâs^RVSH>ân*
 * *ki0rrâs0>ân*
 
-
-
 **RULE: Vowel shortening VV:V** = ráávhu- : rávhoid, käähir%^CSH%>id kuuđiâ%^RVSH%>žân
 1. svnlow
 1. čääci : čassijn
@@ -433,11 +365,9 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 1. njääh^RCe^CLEN^RVSH> = njähhe>
 1. njääh^RCe^CLEN^RVSH> = njähhe>
 
-
 **RULE: Long vowel shortening** = (example?), no ^CSH, since that gives Vy:0
 
 **RULE: e:0 in passive** \\
-
 
 *Tests:*
 * *mááh^RCu^WG^CLEN^SVLOW>in*
@@ -449,27 +379,19 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 
 **RULE: Underlying long vowel shortening iä:e and ää:ä or a** = čääh%^RCu2%^CLEN%^VBACK%>um
 
-
 3st stems viäskár veskirin, časkes časkes ča%^RVskas%^ÁE viäskár%^ÁI%^WG%^RVSH
 
 * *kaavpug^CSH^RVSH^SVSH>ân*
 * *ka0vpug000>ân*
 
-
-
 * *mool^RCâ^WG>*
 * *mool0â0>*
-
 
 * *käähir^WG>*
 * *käävir0>*
 
 * *juáh^RCu^WG^RVSH>ttáá*
 * *juáv0u00>ttáá*
-
-
-
-
 
 ### First syllable vowel lengthening rules
 
@@ -484,26 +406,17 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 * *he^RVrkkib^WG^RLENttáá*
 * *heer0kib00ttáá*
 
-
 * *nju^RVne^SV^WG^RLEN^SLEN>st*
 * *njuunee000>st*
 
-
-
 **RULE: Root vowel o5:u ** = 
 
-
-
-
 **RULE: Root vowel ä:ää lenghtening and diphthongisation e:iä** = special rule, for avoiding conflict spä%^RVi4lih%^WG%^RLEN, 
-
 
 **RULE: Root vowel o lengthening** =  alge : oolgijn 
 
 * *a^RVlge^WG^RLEN>id*
 * *oolgi00>jd*
-
-
 
 **RULE: Root vowel u lengthening with vowel change before suffix i** =  alge : oolgijn 
 
@@ -518,7 +431,6 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 * *hu^RVm^RCo^SVb^WG^RVSH^SVSH>ân*
 * *hu0m0o0b000>ân*
 
-
 ### First syllable vowel change rules
 
 All instances of the same vowel alternation are in the same rule.
@@ -529,14 +441,10 @@ a rules
 
 **RULE: Root vowel o:u for contract verbs and Root vowel change o:u before suffix i** 
 
-
 * *tohhi2>đ*
 * *tuhhi>đ*
 * *lo^RVh^RCá^WG^VHIGH^RLEN>im*
 * *luuv0á000>im*
-
-
-
 
 ### ä rules
 
@@ -545,37 +453,24 @@ a rules
 
 **RULE: iä:e rule 1 and second syllable Fleeting vowel before suffix        ** =  Note: many rules in one
 
-
-
 **RULE: iä:e and iä:ee rule 2 and Diphthongisation i5ä to ie** =  
 
 * *siämmu2>đ>*
 * *s0emmu>đ>*
-
-
-
 
 **RULE: Different rules for ä:a, first vowel (or only vowel)** =  čääci:čassijn, läbži:labžijn lään^RCi%>id
 
 * *njääh^RCi^WG^VBACK>i3*
 * *njaav0i00>i*
 
-
-
 **RULE: ää to aa, second vowel** =  á:o in pairs like kuátij -> koođij, säämi -> saamij čäällu%^VBACK%>m lään^RCi%>id
 
-
-
 **RULE: ää to áá and á0 in Illative and Sg3** =  ... for säämi > sáámán
-
-
 
 * *sääm^RCi^EA>n*
 * *sáám0á0>n*
 
-
 **RULE: äRV to áá in Illative and Sg3** =  ... for täsni -> táásnán
-
 
 * *tä^RVsni^EA^CSH^RLEN>n*
 * *táásná000>n*
@@ -599,18 +494,14 @@ a rules
 * *kä^RVvnâst^WG^VBACK^RLEN^SLEN>*
 * *kaavnâst0000>*
 
-
 #### á rules
 
 **RULE: Root vowel change for á to ä with i in second syllable** =  päävir , já%^RVhhá%^SVl%^ÁI%^WG%^RLEN>
 
-
 * *páápp4ár^ÁI^WG^RLEN*
 * *pää0vir000*
 
-
 **RULE: Root and stem vowel á:a for verbs** 
-
 
 * *pá^RVkk4u^VBACK>m>*
 * *pa0kku0>m>*
@@ -618,44 +509,28 @@ a rules
 * *pá^RVkk4u^WG^RLEN>im>*
 * *páá0hu00>im>*
 
-
 ### á and uá rules
 
 **RULE: Monophthongisation rule uá:o0 part 2: Vowel shortening for uá ** =  for uábbi -> obbijn  čuál%^RCi%^WG%>in tuái4jâl%^CSH%^VBACK%^RVSH%>âm
-
 
 **RULE: Monophthongisation rule u:o and root vowel change u:o, special rule for olmooš and contract verbs** = 
 
 * *uái4nu2>đ*
 * *o0inu>đ*
 
-
 **RULE: Diphthong rule uá:uo and uá:oo, part 2** =  
-
-
 
 **RULE: Diphthongisation e to iä, part 1 ** =   
 
-
 **RULE: Root vowel aa:áá in C-stems with stemvowel u, part 1** =  ahhu:áhu
-
 
 **RULE: Root vowel aa:áá in C-stems with stemvowel u, part 2** =  ahhu:ááhu
 
-
-
-
-
 **RULE: ie to iä in Illative and Sg3 ** =  kiem´ni -> kiämnán, veerdi : viärdán peerru2%^CLEN%^VHIGH%^RVSH%>o
-
-
-
 
 **RULE: Diphthongisation uo:uá** =   
 
-
 **RULE: ye to uá and uo, part 1 ** =  Part 1 of ye to uá for kyeli : kuálán  
-
 
 **RULE: ye to uá, part 2** =  Part 2 of ye to uá for kyeli : kuálán
 
@@ -673,9 +548,6 @@ a rules
 
 **RULE: uo to ye, part 2** =  vyelleen, vyeleem,vyelih
 
-
-
-
 ### Second syllable rules
 
 **RULE: Second syllable vowel change á to e or i in 3syll stems** = puttás- > putes, triggers are ^ÁE and ^ÁI já%^RVhhá%^SVl%^ÁI%^WG%^RLEN%> pu5árrás%^ÁI%^WG%>umos
@@ -691,8 +563,6 @@ a rules
 * *na0ve0r000>*
 * *nahha^SVr^ÁE^WG^RLEN*
 * *na0ve0r000*
-
-
 
 **RULE: Stem vowel e to a for a root vowel.** =  alge to aalgan
 
@@ -712,44 +582,27 @@ a rules
 
 **RULE: Stem vowel i to â for other root vowel, as a common error.** =  e.g. säämi > Ill Err/Orth sáámân 
 
-
 **RULE: Stem vowel i to e in front of j** =  
 
-
-
 **RULE: Stem vowel â to a in Pl Nom -h** =  silbâ to siilbah  %^WG%^RLEN%>hlove%>h
-
 
 * *so^RVllâ^WG^RLEN>h*
 * *soo0la00>h*
 
 **RULE: Stem vowel â > á change before i** = sollâ to sooláid 
 
-
 * *so^RVllâ^WG^RLEN^SVLOW>in*
 * *soo0lá000>in*
 
-
-
-
-
-
-
 **RULE: Stem vowel i3:0** = 
-
-
 
 **RULE: Stem vowel u:o change before suffix** =  
 2) 
-
 
 **RULE: Stem vowel u2:o change before suffix** =  
 
 * *uáinu>o*
 * *uáino>o*
-
-
-
 
 **RULE: Second vowel shortening** = eemeed : emedân, savvoon : savo 
 
@@ -763,10 +616,7 @@ a rules
 
 **RULE: Stem vowel:0 in front of â** = aiguu:aaigâ
 
-
 **RULE: Stem â deleting** = kandâ:kandii
-
-
 
 * *a^RVlgâi^FVD^WG^CLEN>i5*
 * *a0lg0i000>i*
@@ -774,7 +624,6 @@ a rules
 ### Suffix vowel rules
 
 **RULE: Suffix vowel lengthening** = long á in kissáást, nuorâ : nuorááin, hyeni:hyeneest
-
 
 **Tests**
 * *ki^RVssá^SV^WG^CLEN^SLEN>st*
@@ -788,18 +637,13 @@ a rules
 
 **RULE: Suffix i5:j for lexicon APINA** = salijn
 
-
 **RULE: Suffix i5:0 and i5ä:e** = *timotein oboen*, not *Chariliein*
-
 
 **RULE: Suffix i:j for i and e-stems** =  
 
-
 **RULE: Vowel copy in suffix** =  for imperative Sg3, at least
 
-
 ### Suffix consonant rules
-
 
 **RULE: Adjective illative in -vân after u** =  
 
@@ -815,10 +659,7 @@ a rules
 
 **RULE: Potential vowel shortening for contract verbs** =  -áážep becomes -áš etc.
 
-
-
 **RULE: Insertion of pleonastic hyphen** = for compounding of two vowels *stovli-ijâ*
-
 
 *Tests:*
 * *skä^RVi4nâ^VBACK>đ*

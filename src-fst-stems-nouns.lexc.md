@@ -1,12 +1,10 @@
 
 
-
 # Inari Saami noun roots
 
-
-
-
-
+* **LEXICON NounRoot**
+* **Noun ;**
+* **FirstComponent ;**
 
 ## 1. Even-syllable stems
 * â-stems
@@ -24,99 +22,54 @@
 * 2.2 Stems without consonant gradation
 3. Ohter cases, all kind of changes
 
+* **LEXICON LastNouns**
+* **heivi+CmpN/SgNomLeft+CmpNP/Suff+Sem/Dummytag:he^RVi4vi 2AIGI ;**
 
+* **LEXICON FirstComponent**
+* **pessijâš+N+Cmp/SgNom+Sem/Time:pessijâš Rnoun ;**
+* **luáppijâš+N+Cmp/SgNom+Sem/Time:luáppijâš Rnoun ;**
+helduv+N+Cmp/SgNom+Sem/Time:helduv Rnoun ; helduv+N+Cmp/SgNom+Sem/Time:helduv Rnoun ;    * ...
 
+* **LEXICON MiddleNouns**
+* **njune+N+Cmp/Sh+Sem/Hum:njun Rnoun ;**
+* **njälmi+N+Cmp/Sh+Sem/Body:njälm Rnoun ;** tags_via_apertium
 
+* **LEXICON NAMAG** gives »»» and directs to NAMAG, both from adj and numerals
 
-
-
-
-
-* **LEXICON MiddleNouns **
-
-
-
-* **LEXICON NAMAG ** gives »»» and directs to NAMAG, both from adj and numerals
-
-* **LEXICON SAS ** , both from adj and numerals
-
+* **LEXICON SAS** , both from adj and numerals
 
 * **LEXICON NAMAGCont**
 
 * **LEXICON SASCont** ,
 
+* *LEXICON Gen_DER* 
 
-* *LEXICON Gen_DER   * 
+* *LEXICON Nom_DER* 
 
-* *LEXICON Nom_DER   * 
+* *LEXICON DER-AG* 
 
-
-* *LEXICON DER-AG  * 
-
-* *LEXICON DER-SAS  * 
-
+* *LEXICON DER-SAS* 
 
 ## The split into different noun types according to Px
 
-* **LEXICON Noun ** is split into NounNoPx, NounPxKin, NounPx.
-    - **            NounNoPx ;  ** No flag, no Px
-    - **@P.Px.add@  NounPxKin ; ** TODO: add a flag @P.Nom3Px.add@ when we know how it works
-    - **@P.Px.add@  NounPx ;    ** with a @P.Px.add@ flag, and with Px (= most nouns)
+* **LEXICON Noun** is split into NounNoPx, NounPxKin, NounPx.
+    - **NounNoPx ;** No flag, no Px
+    - **@P.Px.add@ NounPxKin ;** TODO: add a flag @P.Nom3Px.add@ when we know how it works
+    - **@P.Px.add@ NounPx ;** with a @P.Px.add@ flag, and with Px (= most nouns)
 
-* **LEXICON NounNoPx   ** move here the nouns not taking Px.
+* **LEXICON NounNoPx** move here the nouns not taking Px.
 
-* **LEXICON NounPxKin **For the moment, kinship words go like NounPx and need not be moved here.
-
+* **LEXICON NounPxKin**For the moment, kinship words go like NounPx and need not be moved here.
 
 ## The standard list of noun stems
 
 The nouns are reverse-sorted according to contlex,
 and thereafter according to stem.
 
-
-
-* **LEXICON NounPx ** here we put all normal nouns, as before
+* **LEXICON NounPx** here we put all normal nouns, as before
 
 From corpus
 From missinglist
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 * * *
 <small>This (part of) documentation was generated from [../src/fst/stems/nouns.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/stems/nouns.lexc)</small>
