@@ -22,4 +22,8 @@ Object names or organizations
 Geographical names
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/stems/smn-propernouns.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/stems/smn-propernouns.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/stems/smn-propernouns.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/stems/smn-propernouns.lexc)</small>
+
+---
+

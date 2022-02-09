@@ -30,4 +30,8 @@ just do Px1, Px2, Px3, and change tags from sme to smn in apertium.
 * **LEXICON Px_K**
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/possessive-suffixes.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/affixes/possessive-suffixes.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/affixes/possessive-suffixes.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/affixes/possessive-suffixes.lexc)</small>
+
+---
+

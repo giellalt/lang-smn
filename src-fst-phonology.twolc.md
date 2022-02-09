@@ -9,22 +9,22 @@ Here we govern all morphophonological processes.
 
 ## The Inari Saami letters
 
-*  a á â ä b c d e f g h i j k l m n o õ p q 
-  r s t u v w x y z æ ä ø ö å               
-  č đ ŋ ŧ š ž                               
+* a á â ä b c d e f g h i j k l m n o õ p q
+ r s t u v w x y z æ ä ø ö å
+ č đ ŋ ŧ š ž
 
-*  A Á Â Å B C D E F G H I J K L M N O Õ P Q 
-  R S T U V W X Y Z Æ Ä Ø Ö Å               
-  Č Đ Ŋ Ŧ Š Ž                               
-* ** %-                                        ** hyphen
-* ** '       ** the hyphen as hyphen
-* **  ⎈      ** the ghost sign used in compounding, does not work in hfst
+* A Á Â Å B C D E F G H I J K L M N O Õ P Q
+ R S T U V W X Y Z Æ Ä Ø Ö Å
+ Č Đ Ŋ Ŧ Š Ž
+* **%-** hyphen
+* **'** the hyphen as hyphen
+* **⎈** the ghost sign used in compounding, does not work in hfst
 
 ### Accented letters, just in case
 
-*  É Ó Ú Í À È Ò Ù Ì Ë Ü Ï Ê Ô Û Î Ã Ý þ Ð   
-  é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý þ ð   
-  ß ª ß ç                                   
+* É Ó Ú Í À È Ò Ù Ì Ë Ü Ï Ê Ô Û Î Ã Ý þ Ð
+ é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý þ ð
+ ß ª ß ç
 
 Literal quotes and angles must be escaped (cf morpheme boundaries further down):
 * »
@@ -34,46 +34,46 @@ Literal quotes and angles must be escaped (cf morpheme boundaries further down):
 
 ### Archiphonemes
 
-* **a5:a á5:á e5:e i5:i u5:u y5:y o5:o ä5:ä  **  these do not change 
-* **i2:i u2:u â2:â  **  this is final i, u in contract verbs etc changing to e, o
-* **i3:i            **  this is invariant i
-* **i4:i            **  this is the underlying i consonant
-* **i6:0            ** a fake vowel, to get WG rules to function, e.g. kyehtlov (kyehti6lov)
-* **c5:c č5:č d5:d h5:h j5:j l5:l m5:m ŋ5:ŋ r5:r t5:t z5:z  **  these do not change
-* **b6:b d6:d g6:g ** clitic consonants, jiemge, epke
-* **j6:0           ** a fake consonant, to get WG rules to function, e.g. puávui
-* **p4:p  k4:k  l4:l t4:t č4:č c4:c **  these are consonants that change in cg
-* ** ':'           ** is the real apostroph
+* **a5:a á5:á e5:e i5:i u5:u y5:y o5:o ä5:ä**  these do not change 
+* **i2:i u2:u â2:â**  this is final i, u in contract verbs etc changing to e, o
+* **i3:i**  this is invariant i
+* **i4:i**  this is the underlying i consonant
+* **i6:0** a fake vowel, to get WG rules to function, e.g. kyehtlov (kyehti6lov)
+* **c5:c č5:č d5:d h5:h j5:j l5:l m5:m ŋ5:ŋ r5:r t5:t z5:z**  these do not change
+* **b6:b d6:d g6:g** clitic consonants, jiemge, epke
+* **j6:0** a fake consonant, to get WG rules to function, e.g. puávui
+* **p4:p k4:k l4:l t4:t č4:č c4:c**  these are consonants that change in cg
+* **':'** is the real apostroph
 
 Then some more abstract archiphonemes
 These are dependent upon the **Triggers** in the next section
-* **%^RC:0      ** = root cons., lengthened by ^CLEN - máán%RCu máánnun
-* **%^RV:0      ** = root vowel, lengthened by ^RLEN - ta%^RVvlu taavlu 
-* **%^SC:0      ** = stem cons, %^SC:j, pluss lengthen after earlier shortening by %^CSH, see lyeme
-* **%^SV:0      ** = stem vowel, lengthened by ^SLEN u:uu - táálu%^SV tááloost
-* **%^VO:0      ** = vowel copy
+* **%^RC:0** = root cons., lengthened by ^CLEN - máán%RCu máánnun
+* **%^RV:0** = root vowel, lengthened by ^RLEN - ta%^RVvlu taavlu 
+* **%^SC:0** = stem cons, %^SC:j, pluss lengthen after earlier shortening by %^CSH, see lyeme
+* **%^SV:0** = stem vowel, lengthened by ^SLEN u:uu - táálu%^SV tááloost
+* **%^VO:0** = vowel copy
 
 ### Triggers
 These symbols govern the behaviour of the archiphonemes above.
 
-* **%^CLEN:0    ** = Cons lengthening, with ^RC
-* **%^CSH:0     ** = Cons shortening, laaŋkku - laaŋkun
-* **%^RVSH:0    ** = Root vowel shortening
-* **%^FCD:0     ** = Final consonant deletion 
-* **%^FVD:0     ** = Final vowel deletion 
-* **%^EA:0      ** = Stem vowel: e and i to a/á in ill, and root vowel ä>á, e(e)>iä, ie>iä, ye>uá
-* **%^EX:0      ** = Stem vowel: i to â where it should have been á, this is Err/Orth only
-* **%^RLEN:0    ** = Root vowel lengthening
-* **%^SLEN:0    ** = Stem vowel lengthening
-* **%^SVLOW:0   ** = Stem vowel lowering â>á and u>o - árppu árppoin, Root vowel shortening when more than one cns in consonant centre and suffix starts with i
-* **%^SVSH:0    ** = Stem vowel shortening kappeer kaperân
-* **%^WG:0      ** = Weak grade trigger
-* **%^ÁE:0      ** = á to e in 3-syll, triggered by ^WG
-* **%^ÁI:0      ** = á to i in 3-syll, triggered by ^WG
-* **%^VHIGH:0   ** = High rootvow for verbs: e>iä, a>o, o>u, ää>áá, ee>iä, note also: ie>iä, ye>uá, uo>uá
-* **%^VBACK:0   ** = Back rootvow for verbs: ä(ä)>a(a), á>aa, uá>o, ye>uo
-* **%^BLOCK:0   ** = This symbol just to block otherwise triggering contexts
-* **%^IUML:0    ** = â to e in front of high suffixes 
+* **%^CLEN:0** = Cons lengthening, with ^RC
+* **%^CSH:0** = Cons shortening, laaŋkku - laaŋkun
+* **%^RVSH:0** = Root vowel shortening
+* **%^FCD:0** = Final consonant deletion 
+* **%^FVD:0** = Final vowel deletion 
+* **%^EA:0** = Stem vowel: e and i to a/á in ill, and root vowel ä>á, e(e)>iä, ie>iä, ye>uá
+* **%^EX:0** = Stem vowel: i to â where it should have been á, this is Err/Orth only
+* **%^RLEN:0** = Root vowel lengthening
+* **%^SLEN:0** = Stem vowel lengthening
+* **%^SVLOW:0** = Stem vowel lowering â>á and u>o - árppu árppoin, Root vowel shortening when more than one cns in consonant centre and suffix starts with i
+* **%^SVSH:0** = Stem vowel shortening kappeer kaperân
+* **%^WG:0** = Weak grade trigger
+* **%^ÁE:0** = á to e in 3-syll, triggered by ^WG
+* **%^ÁI:0** = á to i in 3-syll, triggered by ^WG
+* **%^VHIGH:0** = High rootvow for verbs: e>iä, a>o, o>u, ää>áá, ee>iä, note also: ie>iä, ye>uá, uo>uá
+* **%^VBACK:0** = Back rootvow for verbs: ä(ä)>a(a), á>aa, uá>o, ye>uo
+* **%^BLOCK:0** = This symbol just to block otherwise triggering contexts
+* **%^IUML:0** = â to e in front of high suffixes 
 
 Trigger ordering in twolc and lexc, from left to right:
 
@@ -95,37 +95,37 @@ End of alphabet definitions
 
 Sets
 
-* ** Vow = a á â ä e i o u y æ ø ö å             ** 
-**       i2 u2 â2                                ** 
-**       i3                                      ** 
-**       a5 á5 i5 u5 y5 o5 ä5                    ** 
-**       i6                                      ** 
-**       é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý     ** 
-**       A Á Â Ä E I O U Y Æ Ø Ö Å               ** 
-**       É Ó Ú Í À È Ò Ú Ì Ë Ü Ï Ê Ô Û Î Ã Ý     ** 
-**       %^RV %^SV ;                             ** 
-* ** RealVow = a á â ä e i o u y æ ø ö å         ** 
-       y5 i2 i3 i5 i6 â2                       
-**       é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý     ** 
-**       A Á Â Ä E I O U Y Æ Ø Ö Å               ** 
-**       É Ó Ú Í À È Ò Ú Ì Ë Ü Ï Ê Ô Û Î Ã Ý ;   ** 
-* ** Cns = b c č d đ f g h j k l m n ŋ           ** 
-**       p q r s š t ŧ v w x z ž                 ** 
-**       B C Č D Đ F G H J K L M N Ŋ             ** 
-**       P Q R S Š T Ŧ V W X Z Ž                 ** 
-**       g2 k2 m2 n2                             ** 
-**       b3 d3 g3 m3 h3                          ** 
-       p4 k4 r4 l4  i4  t4 c4 č4               
-       h5 j5 ŋ5 t5 c5 l5 t5 d5 r5 z5 j6        
-       %^RC %^SC   ;                           
-*  UnvoicedCns = c č f h k p s š t  ;          
-* ** Geminate = b d g p h t k c f z l m n ŋ r s š v ; **  
-* ** Sgm = Vow Cns ;                                  ** 
-* ** NotSuffixBorder = %^FCD %^FVD %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^EX %^ÁI %^SVSH Vow Cns ; ** 
-* ** Triggers =        %^FCD %^FVD %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^EX %^ÁI %^SVSH %^VHIGH %^VBACK %^IUML ; ** 
-*  TriggersnotFCVD =             %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^EX %^ÁI %^SVSH %^VHIGH %^VBACK %^IUML ; 
-* ** StemCns = b b3 d d3 g g2 g3 h h2 h3         ** 
-**           j l m m2 m3 m8 n n8 n2 ŋ r s  ;     ** 
+* **Vow = a á â ä e i o u y æ ø ö å** 
+**i2 u2 â2** 
+**i3** 
+**a5 á5 i5 u5 y5 o5 ä5** 
+**i6** 
+**é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý** 
+**A Á Â Ä E I O U Y Æ Ø Ö Å** 
+**É Ó Ú Í À È Ò Ú Ì Ë Ü Ï Ê Ô Û Î Ã Ý** 
+**%^RV %^SV ;** 
+* **RealVow = a á â ä e i o u y æ ø ö å** 
+y5 i2 i3 i5 i6 â2
+**é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý** 
+**A Á Â Ä E I O U Y Æ Ø Ö Å** 
+**É Ó Ú Í À È Ò Ú Ì Ë Ü Ï Ê Ô Û Î Ã Ý ;** 
+* **Cns = b c č d đ f g h j k l m n ŋ** 
+**p q r s š t ŧ v w x z ž** 
+**B C Č D Đ F G H J K L M N Ŋ** 
+**P Q R S Š T Ŧ V W X Z Ž** 
+**g2 k2 m2 n2** 
+**b3 d3 g3 m3 h3** 
+p4 k4 r4 l4 i4 t4 c4 č4
+h5 j5 ŋ5 t5 c5 l5 t5 d5 r5 z5 j6
+%^RC %^SC ;
+* UnvoicedCns = c č f h k p s š t ;
+* **Geminate = b d g p h t k c f z l m n ŋ r s š v ;**  
+* **Sgm = Vow Cns ;** 
+* **NotSuffixBorder = %^FCD %^FVD %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^EX %^ÁI %^SVSH Vow Cns ;** 
+* **Triggers = %^FCD %^FVD %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^EX %^ÁI %^SVSH %^VHIGH %^VBACK %^IUML ;** 
+* TriggersnotFCVD = %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^EX %^ÁI %^SVSH %^VHIGH %^VBACK %^IUML ;
+* **StemCns = b b3 d d3 g g2 g3 h h2 h3** 
+**j l m m2 m3 m8 n n8 n2 ŋ r s ;** 
 
 # Definition section
 
@@ -666,5 +666,10 @@ a rules
 * *ska0inâ0>đ*
 * *hu^RVm^RCo^SVb^WG^RLEN^SLEN^RLEN^SLEN*
 * *huum0oob00000*
+
 * * *
-<small>This (part of) documentation was generated from [../src/fst/phonology.twolc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/phonology.twolc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/phonology.twolc](https://github.com/giellalt/lang-smn/blob/main/src/fst/phonology.twolc)</small>
+
+---
+

@@ -456,4 +456,8 @@ ALLSYNTAG
 *These were the set types.*
 
 * * *
-<small>This (part of) documentation was generated from [../tools/grammarcheckers/spellchecker.cg3](http://github.com/giellalt/lang-smn/blob/main/../tools/grammarcheckers/spellchecker.cg3)</small>
+
+<small>This (part of) documentation was generated from [tools/grammarcheckers/spellchecker.cg3](https://github.com/giellalt/lang-smn/blob/main/tools/grammarcheckers/spellchecker.cg3)</small>
+
+---
+

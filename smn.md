@@ -1,3 +1,7 @@
+# Inari Sami description 
+
+All documents in one file
+
 
 I N A R I   S A A M I   D I S A M B I G U A T O R               
 ==================================================================
@@ -2067,10 +2071,20 @@ their behaviour in the subsequent cg files. The rules are removed when this
 file is ported to Apertium.
 
 * * *
-<small>This (part of) documentation was generated from [../src/cg3/disambiguator.cg3](http://github.com/giellalt/lang-smn/blob/main/../src/cg3/disambiguator.cg3)</small>
+
+<small>This (part of) documentation was generated from [src/cg3/disambiguator.cg3](https://github.com/giellalt/lang-smn/blob/main/src/cg3/disambiguator.cg3)</small>
+
+---
+
+
 
 * * *
-<small>This (part of) documentation was generated from [../src/cg3/valency.cg3](http://github.com/giellalt/lang-smn/blob/main/../src/cg3/valency.cg3)</small>
+
+<small>This (part of) documentation was generated from [src/cg3/valency.cg3](https://github.com/giellalt/lang-smn/blob/main/src/cg3/valency.cg3)</small>
+
+---
+
+
 
 ## Guessing: Rule for adding Sem/Date as a tag to readings which looks like dates
 
@@ -4742,7 +4756,12 @@ The previous two rules look marginal.
 # Removing Err/Orth
 
 * * *
-<small>This (part of) documentation was generated from [../src/cg3/coredisambiguation.cg3](http://github.com/giellalt/lang-smn/blob/main/../src/cg3/coredisambiguation.cg3)</small>
+
+<small>This (part of) documentation was generated from [src/cg3/coredisambiguation.cg3](https://github.com/giellalt/lang-smn/blob/main/src/cg3/coredisambiguation.cg3)</small>
+
+---
+
+
 
 # DELIMITERS 
 
@@ -5174,7 +5193,12 @@ NON-APP
 *These were the set types.*
 
 * * *
-<small>This (part of) documentation was generated from [../src/cg3/introdisambiguation.cg3](http://github.com/giellalt/lang-smn/blob/main/../src/cg3/introdisambiguation.cg3)</small>#Inari Saami compounding
+
+<small>This (part of) documentation was generated from [src/cg3/introdisambiguation.cg3](https://github.com/giellalt/lang-smn/blob/main/src/cg3/introdisambiguation.cg3)</small>
+
+---
+
+#Inari Saami compounding
 
 LEXICON Rhash - adding lower # and pointing at R
 
@@ -5208,7 +5232,12 @@ control compounding, before going to the real compounding lexicon
 LEXICON RNum_after_cmp_flags - going to Noun, should it be to NounRoot?
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/compounding.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/compounding.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/compounding.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/compounding.lexc)</small>
+
+---
+
+
 # Inari Saami morphophonological rule file
 
 This file documents the [phonology.twolc file](http://github.com/giellalt/lang-smn/blob/main/src/fst/phonology.twolc) 
@@ -5219,22 +5248,22 @@ Here we govern all morphophonological processes.
 
 ## The Inari Saami letters
 
-*  a á â ä b c d e f g h i j k l m n o õ p q 
-  r s t u v w x y z æ ä ø ö å               
-  č đ ŋ ŧ š ž                               
+* a á â ä b c d e f g h i j k l m n o õ p q
+ r s t u v w x y z æ ä ø ö å
+ č đ ŋ ŧ š ž
 
-*  A Á Â Å B C D E F G H I J K L M N O Õ P Q 
-  R S T U V W X Y Z Æ Ä Ø Ö Å               
-  Č Đ Ŋ Ŧ Š Ž                               
-* ** %-                                        ** hyphen
-* ** '       ** the hyphen as hyphen
-* **  ⎈      ** the ghost sign used in compounding, does not work in hfst
+* A Á Â Å B C D E F G H I J K L M N O Õ P Q
+ R S T U V W X Y Z Æ Ä Ø Ö Å
+ Č Đ Ŋ Ŧ Š Ž
+* **%-** hyphen
+* **'** the hyphen as hyphen
+* **⎈** the ghost sign used in compounding, does not work in hfst
 
 ### Accented letters, just in case
 
-*  É Ó Ú Í À È Ò Ù Ì Ë Ü Ï Ê Ô Û Î Ã Ý þ Ð   
-  é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý þ ð   
-  ß ª ß ç                                   
+* É Ó Ú Í À È Ò Ù Ì Ë Ü Ï Ê Ô Û Î Ã Ý þ Ð
+ é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý þ ð
+ ß ª ß ç
 
 Literal quotes and angles must be escaped (cf morpheme boundaries further down):
 * »
@@ -5244,46 +5273,46 @@ Literal quotes and angles must be escaped (cf morpheme boundaries further down):
 
 ### Archiphonemes
 
-* **a5:a á5:á e5:e i5:i u5:u y5:y o5:o ä5:ä  **  these do not change 
-* **i2:i u2:u â2:â  **  this is final i, u in contract verbs etc changing to e, o
-* **i3:i            **  this is invariant i
-* **i4:i            **  this is the underlying i consonant
-* **i6:0            ** a fake vowel, to get WG rules to function, e.g. kyehtlov (kyehti6lov)
-* **c5:c č5:č d5:d h5:h j5:j l5:l m5:m ŋ5:ŋ r5:r t5:t z5:z  **  these do not change
-* **b6:b d6:d g6:g ** clitic consonants, jiemge, epke
-* **j6:0           ** a fake consonant, to get WG rules to function, e.g. puávui
-* **p4:p  k4:k  l4:l t4:t č4:č c4:c **  these are consonants that change in cg
-* ** ':'           ** is the real apostroph
+* **a5:a á5:á e5:e i5:i u5:u y5:y o5:o ä5:ä**  these do not change 
+* **i2:i u2:u â2:â**  this is final i, u in contract verbs etc changing to e, o
+* **i3:i**  this is invariant i
+* **i4:i**  this is the underlying i consonant
+* **i6:0** a fake vowel, to get WG rules to function, e.g. kyehtlov (kyehti6lov)
+* **c5:c č5:č d5:d h5:h j5:j l5:l m5:m ŋ5:ŋ r5:r t5:t z5:z**  these do not change
+* **b6:b d6:d g6:g** clitic consonants, jiemge, epke
+* **j6:0** a fake consonant, to get WG rules to function, e.g. puávui
+* **p4:p k4:k l4:l t4:t č4:č c4:c**  these are consonants that change in cg
+* **':'** is the real apostroph
 
 Then some more abstract archiphonemes
 These are dependent upon the **Triggers** in the next section
-* **%^RC:0      ** = root cons., lengthened by ^CLEN - máán%RCu máánnun
-* **%^RV:0      ** = root vowel, lengthened by ^RLEN - ta%^RVvlu taavlu 
-* **%^SC:0      ** = stem cons, %^SC:j, pluss lengthen after earlier shortening by %^CSH, see lyeme
-* **%^SV:0      ** = stem vowel, lengthened by ^SLEN u:uu - táálu%^SV tááloost
-* **%^VO:0      ** = vowel copy
+* **%^RC:0** = root cons., lengthened by ^CLEN - máán%RCu máánnun
+* **%^RV:0** = root vowel, lengthened by ^RLEN - ta%^RVvlu taavlu 
+* **%^SC:0** = stem cons, %^SC:j, pluss lengthen after earlier shortening by %^CSH, see lyeme
+* **%^SV:0** = stem vowel, lengthened by ^SLEN u:uu - táálu%^SV tááloost
+* **%^VO:0** = vowel copy
 
 ### Triggers
 These symbols govern the behaviour of the archiphonemes above.
 
-* **%^CLEN:0    ** = Cons lengthening, with ^RC
-* **%^CSH:0     ** = Cons shortening, laaŋkku - laaŋkun
-* **%^RVSH:0    ** = Root vowel shortening
-* **%^FCD:0     ** = Final consonant deletion 
-* **%^FVD:0     ** = Final vowel deletion 
-* **%^EA:0      ** = Stem vowel: e and i to a/á in ill, and root vowel ä>á, e(e)>iä, ie>iä, ye>uá
-* **%^EX:0      ** = Stem vowel: i to â where it should have been á, this is Err/Orth only
-* **%^RLEN:0    ** = Root vowel lengthening
-* **%^SLEN:0    ** = Stem vowel lengthening
-* **%^SVLOW:0   ** = Stem vowel lowering â>á and u>o - árppu árppoin, Root vowel shortening when more than one cns in consonant centre and suffix starts with i
-* **%^SVSH:0    ** = Stem vowel shortening kappeer kaperân
-* **%^WG:0      ** = Weak grade trigger
-* **%^ÁE:0      ** = á to e in 3-syll, triggered by ^WG
-* **%^ÁI:0      ** = á to i in 3-syll, triggered by ^WG
-* **%^VHIGH:0   ** = High rootvow for verbs: e>iä, a>o, o>u, ää>áá, ee>iä, note also: ie>iä, ye>uá, uo>uá
-* **%^VBACK:0   ** = Back rootvow for verbs: ä(ä)>a(a), á>aa, uá>o, ye>uo
-* **%^BLOCK:0   ** = This symbol just to block otherwise triggering contexts
-* **%^IUML:0    ** = â to e in front of high suffixes 
+* **%^CLEN:0** = Cons lengthening, with ^RC
+* **%^CSH:0** = Cons shortening, laaŋkku - laaŋkun
+* **%^RVSH:0** = Root vowel shortening
+* **%^FCD:0** = Final consonant deletion 
+* **%^FVD:0** = Final vowel deletion 
+* **%^EA:0** = Stem vowel: e and i to a/á in ill, and root vowel ä>á, e(e)>iä, ie>iä, ye>uá
+* **%^EX:0** = Stem vowel: i to â where it should have been á, this is Err/Orth only
+* **%^RLEN:0** = Root vowel lengthening
+* **%^SLEN:0** = Stem vowel lengthening
+* **%^SVLOW:0** = Stem vowel lowering â>á and u>o - árppu árppoin, Root vowel shortening when more than one cns in consonant centre and suffix starts with i
+* **%^SVSH:0** = Stem vowel shortening kappeer kaperân
+* **%^WG:0** = Weak grade trigger
+* **%^ÁE:0** = á to e in 3-syll, triggered by ^WG
+* **%^ÁI:0** = á to i in 3-syll, triggered by ^WG
+* **%^VHIGH:0** = High rootvow for verbs: e>iä, a>o, o>u, ää>áá, ee>iä, note also: ie>iä, ye>uá, uo>uá
+* **%^VBACK:0** = Back rootvow for verbs: ä(ä)>a(a), á>aa, uá>o, ye>uo
+* **%^BLOCK:0** = This symbol just to block otherwise triggering contexts
+* **%^IUML:0** = â to e in front of high suffixes 
 
 Trigger ordering in twolc and lexc, from left to right:
 
@@ -5305,37 +5334,37 @@ End of alphabet definitions
 
 Sets
 
-* ** Vow = a á â ä e i o u y æ ø ö å             ** 
-**       i2 u2 â2                                ** 
-**       i3                                      ** 
-**       a5 á5 i5 u5 y5 o5 ä5                    ** 
-**       i6                                      ** 
-**       é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý     ** 
-**       A Á Â Ä E I O U Y Æ Ø Ö Å               ** 
-**       É Ó Ú Í À È Ò Ú Ì Ë Ü Ï Ê Ô Û Î Ã Ý     ** 
-**       %^RV %^SV ;                             ** 
-* ** RealVow = a á â ä e i o u y æ ø ö å         ** 
-       y5 i2 i3 i5 i6 â2                       
-**       é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý     ** 
-**       A Á Â Ä E I O U Y Æ Ø Ö Å               ** 
-**       É Ó Ú Í À È Ò Ú Ì Ë Ü Ï Ê Ô Û Î Ã Ý ;   ** 
-* ** Cns = b c č d đ f g h j k l m n ŋ           ** 
-**       p q r s š t ŧ v w x z ž                 ** 
-**       B C Č D Đ F G H J K L M N Ŋ             ** 
-**       P Q R S Š T Ŧ V W X Z Ž                 ** 
-**       g2 k2 m2 n2                             ** 
-**       b3 d3 g3 m3 h3                          ** 
-       p4 k4 r4 l4  i4  t4 c4 č4               
-       h5 j5 ŋ5 t5 c5 l5 t5 d5 r5 z5 j6        
-       %^RC %^SC   ;                           
-*  UnvoicedCns = c č f h k p s š t  ;          
-* ** Geminate = b d g p h t k c f z l m n ŋ r s š v ; **  
-* ** Sgm = Vow Cns ;                                  ** 
-* ** NotSuffixBorder = %^FCD %^FVD %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^EX %^ÁI %^SVSH Vow Cns ; ** 
-* ** Triggers =        %^FCD %^FVD %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^EX %^ÁI %^SVSH %^VHIGH %^VBACK %^IUML ; ** 
-*  TriggersnotFCVD =             %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^EX %^ÁI %^SVSH %^VHIGH %^VBACK %^IUML ; 
-* ** StemCns = b b3 d d3 g g2 g3 h h2 h3         ** 
-**           j l m m2 m3 m8 n n8 n2 ŋ r s  ;     ** 
+* **Vow = a á â ä e i o u y æ ø ö å** 
+**i2 u2 â2** 
+**i3** 
+**a5 á5 i5 u5 y5 o5 ä5** 
+**i6** 
+**é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý** 
+**A Á Â Ä E I O U Y Æ Ø Ö Å** 
+**É Ó Ú Í À È Ò Ú Ì Ë Ü Ï Ê Ô Û Î Ã Ý** 
+**%^RV %^SV ;** 
+* **RealVow = a á â ä e i o u y æ ø ö å** 
+y5 i2 i3 i5 i6 â2
+**é ó ú í à è ò ù ì ë ü ï ê ô û î ã ý** 
+**A Á Â Ä E I O U Y Æ Ø Ö Å** 
+**É Ó Ú Í À È Ò Ú Ì Ë Ü Ï Ê Ô Û Î Ã Ý ;** 
+* **Cns = b c č d đ f g h j k l m n ŋ** 
+**p q r s š t ŧ v w x z ž** 
+**B C Č D Đ F G H J K L M N Ŋ** 
+**P Q R S Š T Ŧ V W X Z Ž** 
+**g2 k2 m2 n2** 
+**b3 d3 g3 m3 h3** 
+p4 k4 r4 l4 i4 t4 c4 č4
+h5 j5 ŋ5 t5 c5 l5 t5 d5 r5 z5 j6
+%^RC %^SC ;
+* UnvoicedCns = c č f h k p s š t ;
+* **Geminate = b d g p h t k c f z l m n ŋ r s š v ;**  
+* **Sgm = Vow Cns ;** 
+* **NotSuffixBorder = %^FCD %^FVD %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^EX %^ÁI %^SVSH Vow Cns ;** 
+* **Triggers = %^FCD %^FVD %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^EX %^ÁI %^SVSH %^VHIGH %^VBACK %^IUML ;** 
+* TriggersnotFCVD = %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^EX %^ÁI %^SVSH %^VHIGH %^VBACK %^IUML ;
+* **StemCns = b b3 d d3 g g2 g3 h h2 h3** 
+**j l m m2 m3 m8 n n8 n2 ŋ r s ;** 
 
 # Definition section
 
@@ -5876,8 +5905,14 @@ a rules
 * *ska0inâ0>đ*
 * *hu^RVm^RCo^SVb^WG^RLEN^SLEN^RLEN^SLEN*
 * *huum0oob00000*
+
 * * *
-<small>This (part of) documentation was generated from [../src/fst/phonology.twolc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/phonology.twolc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/phonology.twolc](https://github.com/giellalt/lang-smn/blob/main/src/fst/phonology.twolc)</small>
+
+---
+
+
 
 # Inari Saami noun roots
 
@@ -5951,11 +5986,21 @@ From corpus
 From missinglist
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/stems/nouns.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/stems/nouns.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/stems/nouns.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/stems/nouns.lexc)</small>
+
+---
+
+
 # Inari Saami adpositions
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/stems/adpositions.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/stems/adpositions.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/stems/adpositions.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/stems/adpositions.lexc)</small>
+
+---
+
+
 
 # Inari Saami acronyms
 
@@ -5968,7 +6013,12 @@ small-capital letter combinations.
 * **LEXICON Acronym-smn** divides the acros in the 3 types just mentioned.
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/stems/smn-acronyms.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/stems/smn-acronyms.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/stems/smn-acronyms.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/stems/smn-acronyms.lexc)</small>
+
+---
+
+
 # Particles
 
 * **LEXICON pcle**
@@ -5986,7 +6036,12 @@ ges pcle ;
 kes pcle ;
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/stems/particles.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/stems/particles.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/stems/particles.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/stems/particles.lexc)</small>
+
+---
+
+
 # Inari Saami adverbs
 
 ## The morphology
@@ -6005,7 +6060,12 @@ kes pcle ;
 * **LEXICON Adverb**
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/stems/adverbs.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/stems/adverbs.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/stems/adverbs.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/stems/adverbs.lexc)</small>
+
+---
+
+
 # Interjections
 
 * **LEXICON Interj**
@@ -6022,8 +6082,14 @@ amahmis Interj "ai niin" ; amahmis Interj "ai niin" ;    * ...
 * kulâ Interj ;
 * na Interj "no" ;
 * titityy Interj ;
+
 * * *
-<small>This (part of) documentation was generated from [../src/fst/stems/interjections.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/stems/interjections.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/stems/interjections.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/stems/interjections.lexc)</small>
+
+---
+
+
 # Pronouns for Inari Saami
 
 * **LEXICON Pronoun**
@@ -6079,7 +6145,12 @@ Demonstrative pronouns
 LEXICON SIAMMAS_PRON without WG
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/stems/pronouns.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/stems/pronouns.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/stems/pronouns.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/stems/pronouns.lexc)</small>
+
+---
+
+
 # Subjunctions
 
 * **LEXICON Cs**
@@ -6091,8 +6162,14 @@ LEXICON Subjunction
 * **tegu Cs ;**
 * **ete Cs ;**
 jos:jos Cs ; jos:jos Cs ;   * and 2o more
+
 * * *
-<small>This (part of) documentation was generated from [../src/fst/stems/subjunctions.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/stems/subjunctions.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/stems/subjunctions.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/stems/subjunctions.lexc)</small>
+
+---
+
+
 
 # Inari Saami numerals
 
@@ -6205,7 +6282,12 @@ In principle as the above.
 * **LEXICON ORDINAL**
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/stems/numerals.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/stems/numerals.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/stems/numerals.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/stems/numerals.lexc)</small>
+
+---
+
+
 # Inari Saami adjectives
 
 * **LEXICON LAST_CMP_ADJ** cmp last part
@@ -6232,7 +6314,12 @@ Lyhentynyt attr. + -IS
 From corpus
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/stems/adjectives.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/stems/adjectives.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/stems/adjectives.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/stems/adjectives.lexc)</small>
+
+---
+
+
 
 # Verb stems
 
@@ -6439,7 +6526,12 @@ Intransitive verbs
 Transitive verbs
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/stems/verbs.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/stems/verbs.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/stems/verbs.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/stems/verbs.lexc)</small>
+
+---
+
+
 # Propernoun lexicon, Inari Sámi specific names 
 
 **LEXICON Prefix-Proper**
@@ -6463,7 +6555,12 @@ Object names or organizations
 Geographical names
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/stems/smn-propernouns.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/stems/smn-propernouns.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/stems/smn-propernouns.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/stems/smn-propernouns.lexc)</small>
+
+---
+
+
 # File containing Inari Saami abbreviations 
 
 ## Lexica for adding tags and periods
@@ -6507,7 +6604,12 @@ is less common and thus only the occurences in the middle of
 the sentence can be considered as true cases.
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/stems/smn-abbreviations.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/stems/smn-abbreviations.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/stems/smn-abbreviations.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/stems/smn-abbreviations.lexc)</small>
+
+---
+
+
 # Conjunctions 
 
 * **LEXICON Cc**
@@ -6521,7 +6623,12 @@ the sentence can be considered as true cases.
 teikkâ Cc ; teikkâ Cc ;   * ...
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/stems/conjunctions.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/stems/conjunctions.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/stems/conjunctions.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/stems/conjunctions.lexc)</small>
+
+---
+
+
 # Possessive suffixes for Inari Saami
 
 We generate PxSg1, PxDu1, PxPl1, etc, despite there being no difference
@@ -6553,7 +6660,12 @@ just do Px1, Px2, Px3, and change tags from sme to smn in apertium.
 * **LEXICON Px_K**
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/possessive-suffixes.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/affixes/possessive-suffixes.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/affixes/possessive-suffixes.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/affixes/possessive-suffixes.lexc)</small>
+
+---
+
+
 
 # Sublexica for nominal morphology 
 
@@ -7396,7 +7508,12 @@ this is for loanwords without stem change
 TODO: Move derivation lexica here 
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/nouns.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/affixes/nouns.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/affixes/nouns.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/affixes/nouns.lexc)</small>
+
+---
+
+
 
 # Inari Saami acronyms
 
@@ -7415,7 +7532,12 @@ TODO: Move derivation lexica here
 * **LEXICON acrooblique**
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/acronyms.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/affixes/acronyms.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/affixes/acronyms.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/affixes/acronyms.lexc)</small>
+
+---
+
+
 
 # Inari Saami number <-> text
 
@@ -7516,7 +7638,12 @@ TODO: Move derivation lexica here
 * **LEXICON ROMNUMTAGOBL**
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/numerals.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/affixes/numerals.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/affixes/numerals.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/affixes/numerals.lexc)</small>
+
+---
+
+
 # Propernoun morphology for Inari Saami
 
 TODO:
@@ -8015,7 +8142,12 @@ LEXICON KIARUN = 3KIELES
 * **LEXICON flagK** 
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/propernouns.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/affixes/propernouns.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/affixes/propernouns.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/affixes/propernouns.lexc)</small>
+
+---
+
+
 
 # Adjective affixes
 
@@ -8250,7 +8382,12 @@ Adj - pooliitlâš: # attr. pooliitlâš; puolikongruenssi mahdollinen (#-paikat
 **LEXICON ATTR_R** sends to R, NAMAG, SAS, CMP_ADJ.
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/adjectives.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/affixes/adjectives.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/affixes/adjectives.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/affixes/adjectives.lexc)</small>
+
+---
+
+
 # Inflection lexica for Inari Saami verbs
 
 This file contains the morphology for the Inari Saami verbs. 
@@ -8628,7 +8765,12 @@ become the second part of N + (V > N) compounds.
 **LEXICON FLAG_K** should not be disallowed by ENDLEX @D.NeedNoun.ON@
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/verbs.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/affixes/verbs.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/affixes/verbs.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/affixes/verbs.lexc)</small>
+
+---
+
+
 # Symbol affixes
 
 * **LEXICON Noun_symbols_possibly_inflected**
@@ -8640,8 +8782,14 @@ become the second part of N + (V > N) compounds.
 * **LEXICON SYMBOL_NO_suff**
 
 * **LEXICON SYMBOL_suff**
+
 * * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/symbols.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/affixes/symbols.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/affixes/symbols.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/affixes/symbols.lexc)</small>
+
+---
+
+
 # Continuation lexicons for abbreviations
 
 ## Lexica for adding tags and periods
@@ -8703,7 +8851,12 @@ become the second part of N + (V > N) compounds.
 * **LEXICON DOT** - Adds the dot to dotted abbreviations.
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/abbreviations.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/affixes/abbreviations.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/affixes/abbreviations.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/affixes/abbreviations.lexc)</small>
+
+---
+
+
 # Inari Sámi morphological analyser
 
 This file documents the Inari Sámi morphological analyser. The tags in bold are the ones in use in the analyser.
@@ -9324,8 +9477,14 @@ And this is the ENDLEX of everything:
 The `@D.CmpOnly.FALSE@` flag diacritic is ued to disallow words tagged
 with +CmpNP/Only to end here.
 The `@D.NeedNoun.ON@` flag diacritic is used to block illegal compounds.
+
 * * *
-<small>This (part of) documentation was generated from [../src/fst/root.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/root.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/root.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/root.lexc)</small>
+
+---
+
+
 
 retroflex plosive, voiceless		t`  ʈ	    0288, 648 (` = ASCII 096)
 retroflex plosive, voiced		d`	ɖ		0256, 598
@@ -9485,24 +9644,44 @@ advanced tongue root				_A
 retracted tongue root			_q
 
 * * *
-<small>This (part of) documentation was generated from [../src/phonetics/txt2ipa.xfscript](http://github.com/giellalt/lang-smn/blob/main/../src/phonetics/txt2ipa.xfscript)</small>
+
+<small>This (part of) documentation was generated from [src/phonetics/txt2ipa.xfscript](https://github.com/giellalt/lang-smn/blob/main/src/phonetics/txt2ipa.xfscript)</small>
+
+---
+
+
 # The Inari Sámi dates
 
 This is a file generating Inari Sámi date expressions.
 
 * * *
-<small>This (part of) documentation was generated from [../src/transcriptions/transcriptor-ttsdate-digit2text.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/transcriptions/transcriptor-ttsdate-digit2text.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/transcriptions/transcriptor-ttsdate-digit2text.lexc](https://github.com/giellalt/lang-smn/blob/main/src/transcriptions/transcriptor-ttsdate-digit2text.lexc)</small>
+
+---
+
+
 
 # Inari Saami number <-> text
 
 * * *
-<small>This (part of) documentation was generated from [../src/transcriptions/transcriptor-numbers-digit2text.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/transcriptions/transcriptor-numbers-digit2text.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/transcriptions/transcriptor-numbers-digit2text.lexc](https://github.com/giellalt/lang-smn/blob/main/src/transcriptions/transcriptor-numbers-digit2text.lexc)</small>
+
+---
+
+
 # The Inari Sámi dates 
 
 This is a file generating Inari Sámi date expressions.
 
 * * *
-<small>This (part of) documentation was generated from [../src/transcriptions/transcriptor-date-digit2text.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/transcriptions/transcriptor-date-digit2text.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/transcriptions/transcriptor-date-digit2text.lexc](https://github.com/giellalt/lang-smn/blob/main/src/transcriptions/transcriptor-date-digit2text.lexc)</small>
+
+---
+
+
 
 We describe here how abbreviations are in Inari Sami are read out, e.g.
 for text-to-speech systems.
@@ -9517,7 +9696,12 @@ For example:
 * esim.:esimerkiksi # ; 
 
 * * *
-<small>This (part of) documentation was generated from [../src/transcriptions/transcriptor-abbrevs2text.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/transcriptions/transcriptor-abbrevs2text.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/transcriptions/transcriptor-abbrevs2text.lexc](https://github.com/giellalt/lang-smn/blob/main/src/transcriptions/transcriptor-abbrevs2text.lexc)</small>
+
+---
+
+
 
 # TAGS AND SETS
 
@@ -9975,7 +10159,12 @@ ALLSYNTAG
 *These were the set types.*
 
 * * *
-<small>This (part of) documentation was generated from [../tools/grammarcheckers/spellchecker.cg3](http://github.com/giellalt/lang-smn/blob/main/../tools/grammarcheckers/spellchecker.cg3)</small>
+
+<small>This (part of) documentation was generated from [tools/grammarcheckers/spellchecker.cg3](https://github.com/giellalt/lang-smn/blob/main/tools/grammarcheckers/spellchecker.cg3)</small>
+
+---
+
+
 I N A R I    S A A M I    G R A M M A R    C H E C K E R
 ================================================================== 
 
@@ -10821,7 +11010,12 @@ real-pisso-pissood
 The gramamrchecker file ends here.
 
 * * *
-<small>This (part of) documentation was generated from [../tools/grammarcheckers/grammarchecker.cg3](http://github.com/giellalt/lang-smn/blob/main/../tools/grammarcheckers/grammarchecker.cg3)</small>Requires a recent version of HFST (3.10.0 / git revision>=3aecdbc)
+
+<small>This (part of) documentation was generated from [tools/grammarcheckers/grammarchecker.cg3](https://github.com/giellalt/lang-smn/blob/main/tools/grammarcheckers/grammarchecker.cg3)</small>
+
+---
+
+Requires a recent version of HFST (3.10.0 / git revision>=3aecdbc)
 Then just:
 $ make
 $ echo "ja, ja" | hfst-tokenise --giella-cg tokeniser-disamb-gt-desc.pmhfst
@@ -10870,39 +11064,29 @@ no tag to check, so it's safer to let hfst-tokenise handle them.
 Needs hfst-tokenise to output things differently depending on the tag they get
 
 * * *
-<small>This (part of) documentation was generated from [../tools/tokenisers/tokeniser-disamb-gt-desc.eighties.pmscript](http://github.com/giellalt/lang-smn/blob/main/../tools/tokenisers/tokeniser-disamb-gt-desc.eighties.pmscript)</small>Requires a recent version of HFST (3.10.0 / git revision>=3aecdbc)
+
+<small>This (part of) documentation was generated from [tools/tokenisers/tokeniser-disamb-gt-desc.eighties.pmscript](https://github.com/giellalt/lang-smn/blob/main/tools/tokenisers/tokeniser-disamb-gt-desc.eighties.pmscript)</small>
+
+---
+
+# Grammar checker tokenisation for smn
+
+Requires a recent version of HFST (3.10.0 / git revision>=3aecdbc)
 Then just:
+```
 $ make
 $ echo "ja, ja" | hfst-tokenise --giella-cg tokeniser-disamb-gt-desc.pmhfst
-
-Issues:
-- [X] Ambiguous input
-- Seems to work fine
-- [X] Ambiguous multiword expessions with ambiguous tokenisation
-- Seems to work – represented within lexc now; hfst-tokenise also
-supports forms on the analyses now
-- [X] Ambiguous multiword expessions need reorganising after CG
-- The module cg-mwesplit takes wordforms from readings and turns them into
-new cohorts
-- [X] Unknown words
-- The set-difference method only works for words without
-flag diacritics (even though we should be working only on the form-side?)
-and leads to binary blow-up: With only lower unknowns, we get 45M;
-lower+upper gives 67M, while no unknowns gives 27M
-- Fixed instead by treating empty analyses as unknown-tokens in
-hfst-tokenise, and outputting unmatched strings with a prefix
-- [ ] Treat input that's within superblanks as unmatched
-- probably requires a change in hfst-tokenise itself
-- [X] Try >1 space for ambiguous MWE's? – represented within lexc now
-- [ ] Try set-difference-unknowns method with regular hfst commands?
+```
 
 More usage examples:
+```
 $ echo "Juos gorreválggain lea (dárbbašlaš) deavdit gáibádusa boasttu olmmoš, man mielde lahtuid." | hfst-tokenise --giella-cg tokeniser-disamb-gt-desc.pmhfst
 $ echo "(gáfe) 'ja' ja 3. ja? ц jaja ukjend \"ukjend\"" | hfst-tokenise --giella-cg tokeniser-disamb-gt-desc.pmhfst
 $ echo "márffibiillagáffe" | hfst-tokenise --giella-cg tokeniser-disamb-gt-desc.pmhfst
+```
 
 Pmatch documentation:
-https://kitwiki.csc.fi/twiki/bin/view/KitWiki/HfstPmatch
+<https://kitwiki.csc.fi/twiki/bin/view/KitWiki/HfstPmatch>
 
 Characters which have analyses in the lexicon, but can appear without spaces
 before/after, that is, with no context conditions, and adjacent to words:
@@ -10943,7 +11127,12 @@ Finally we mark as a token any sequence making up a:
 * URL in context
 
 * * *
-<small>This (part of) documentation was generated from [../tools/tokenisers/tokeniser-gramcheck-gt-desc.pmscript](http://github.com/giellalt/lang-smn/blob/main/../tools/tokenisers/tokeniser-gramcheck-gt-desc.pmscript)</small># Tokeniser for smn
+
+<small>This (part of) documentation was generated from [tools/tokenisers/tokeniser-gramcheck-gt-desc.pmscript](https://github.com/giellalt/lang-smn/blob/main/tools/tokenisers/tokeniser-gramcheck-gt-desc.pmscript)</small>
+
+---
+
+# Tokeniser for smn
 
 Usage:
 ```
@@ -10955,7 +11144,7 @@ $ echo "márffibiillagáffe" | hfst-tokenise --giella-cg tokeniser-disamb-gt-des
 ```
 
 Pmatch documentation:
-https://kitwiki.csc.fi/twiki/bin/view/KitWiki/HfstPmatch
+<https://kitwiki.csc.fi/twiki/bin/view/KitWiki/HfstPmatch>
 
 Characters which have analyses in the lexicon, but can appear without spaces
 before/after, that is, with no context conditions, and adjacent to words:
@@ -11001,4 +11190,8 @@ Finally we mark as a token any sequence making up a:
 * URL in context
 
 * * *
-<small>This (part of) documentation was generated from [../tools/tokenisers/tokeniser-disamb-gt-desc.pmscript](http://github.com/giellalt/lang-smn/blob/main/../tools/tokenisers/tokeniser-disamb-gt-desc.pmscript)</small>
+
+<small>This (part of) documentation was generated from [tools/tokenisers/tokeniser-disamb-gt-desc.pmscript](https://github.com/giellalt/lang-smn/blob/main/tools/tokenisers/tokeniser-disamb-gt-desc.pmscript)</small>
+
+---
+

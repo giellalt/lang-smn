@@ -11,4 +11,8 @@ small-capital letter combinations.
 * **LEXICON Acronym-smn** divides the acros in the 3 types just mentioned.
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/stems/smn-acronyms.lexc](http://github.com/giellalt/lang-smn/blob/main/../src/fst/stems/smn-acronyms.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/stems/smn-acronyms.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/stems/smn-acronyms.lexc)</small>
+
+---
+
