@@ -947,7 +947,7 @@ First map all COMP-CS<, then remove the other readings
 
 * **killAllnotComp** Removes analysis which are not @COMP-CS<
 
-*
+- *This was the kill all not Comp rule!!*
 
 * **goCSbeforeComp** Selects CS analysis in front of @COMP-CS<
 
@@ -2670,8 +2670,4 @@ The previous two rules look marginal.
 # Removing Err/Orth
 
 * * *
-
 <small>This (part of) documentation was generated from [src/cg3/coredisambiguation.cg3](https://github.com/giellalt/lang-smn/blob/main/src/cg3/coredisambiguation.cg3)</small>
-
----
-

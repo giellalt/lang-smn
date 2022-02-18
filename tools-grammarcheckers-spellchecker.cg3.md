@@ -33,7 +33,6 @@ CLB
 LEFT
 RIGHT
 WEB
-QMARK
 PPUNCT 
 PUNCT
 
@@ -183,9 +182,6 @@ Sem/Txt
 
 HUMAN
 
-HAB-ACTOR
-HAB-ACTOR-NOT-HUMAN
-
 PROP-ATTR
 PROP-SUR
 
@@ -280,8 +276,6 @@ INITIAL
 ### Sets for word or not
 
 WORD
-REAL-WORD
-REAL-WORD-NOT-ABBR
 WORD-NOT-de
 NOT-COMMA
 
@@ -343,8 +337,6 @@ DU3-V
 PL1-V
 PL2-V
 PL3-V
-
-POSITIVE-V
 
 ### Sets consisting of forms of "leđe" (these ones need to be rewritten)
 
@@ -451,13 +443,7 @@ OKTA
 
 ### Syntactic sets
 
-ALLSYNTAG
-
 *These were the set types.*
 
 * * *
-
 <small>This (part of) documentation was generated from [tools/grammarcheckers/spellchecker.cg3](https://github.com/giellalt/lang-smn/blob/main/tools/grammarcheckers/spellchecker.cg3)</small>
-
----
-

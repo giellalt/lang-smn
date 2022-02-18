@@ -39,7 +39,6 @@ CLB
 LEFT
 RIGHT
 WEB
-QMARK
 PPUNCT 
 
 PUNCT
@@ -195,9 +194,6 @@ Err/Orth
 
 HUMAN
 
-HAB-ACTOR
-HAB-ACTOR-NOT-HUMAN
-
 PROP-ATTR
 PROP-SUR
 
@@ -292,8 +288,6 @@ INITIAL
 ### Sets for word or not
 
 WORD
-REAL-WORD
-REAL-WORD-NOT-ABBR
 WORD-NOT-de
 NOT-COMMA
 
@@ -355,8 +349,6 @@ DU3-V
 PL1-V
 PL2-V
 PL3-V
-
-POSITIVE-V
 
 ### Sets consisting of forms of "leđe" (these ones need to be rewritten)
 
@@ -462,8 +454,6 @@ OKTA
 ### Border sets and their complements
 
 ### Syntactic sets
-
-ALLSYNTAG
 
 *These were the set types.*
 
@@ -798,7 +788,7 @@ maid has many readings and as Rel it is a member of S-BOUNDARY. Therefore we nee
 
 * **killAllnotComp** Removes analysis which are not @COMP-CS<
 
-*
+- *This was the kill all not Comp rule!!*
 
 # MAPPING OF CC AND CS
 
@@ -1363,6 +1353,8 @@ The rules are no documented yet
 * **SEMXr2066** Removes Gen if there is a human or org to the right, exeption for *čállingiela áhčči* and so on
 
 * **SEMXxr2071** Removes Gen: Nobody can possess a Proper name? Except from (Pron Pers) and Sem/Fem OR Sem/Mal
+
+* **SEMXxPropOrg** Removes Gen: Who can possess Prop Sem/Org?    Names or their possessed ones can !!
 
 * **SEMdep** Select Gen if main-organization in front of department   
 * **SEMorghum** select gen if organization or education in front of human   
@@ -2067,8 +2059,4 @@ their behaviour in the subsequent cg files. The rules are removed when this
 file is ported to Apertium.
 
 * * *
-
 <small>This (part of) documentation was generated from [src/cg3/disambiguator.cg3](https://github.com/giellalt/lang-smn/blob/main/src/cg3/disambiguator.cg3)</small>
-
----
-

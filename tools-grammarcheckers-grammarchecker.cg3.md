@@ -62,7 +62,6 @@ WEB
 CLB
 LEFT
 RIGHT
-QMARK
 PPUNCT 
 PUNCT
 COMMA
@@ -183,8 +182,8 @@ Der/InchL
 Der/Dimin
 Der/Aadv
 
-- LIST DER-A-ADV = (Der/lasj Der/AAdv Adv) ; # ;
-- SET NOT-DER-A-ADV = Adv - DER-A-ADV ; #
+- LIST DER-A-ADV = (Der/lasj Der/AAdv Adv) ;  ;
+- SET NOT-DER-A-ADV = Adv - DER-A-ADV ; 
 
 ### Error tags
 
@@ -331,7 +330,6 @@ The set **go** for *ko*, , and the set INITIAL for initial letters
 ### Sets for word or not
 
 - WORD =  any word
-- REAL-WORD-NOT-ABBR
 - WORD-NOT-de
 - NOT-COMMA
 Note! We also have CLB_NOT-COMMA
@@ -347,26 +345,26 @@ Note! We also have CLB_NOT-COMMA
 
 ### Case sets
 
-- LIST ACCILL = Acc Ill ; #
-- LIST ADVLCASE = Ill Loc Com Ess ;  #
-- LIST CASE-HALFAGREEMENT = Ill (Sg Loc) (Pl Com) Ess ;   #
-- LIST CASE-AGREEMENT = Nom Acc Gen (Pl Ill) Loc Com Ess ;   #
-- LIST CASE = Nom Acc Gen Ill Loc Com Ess ;  #
-- SET NOT-NOM = CASE - Nom ;  #
-- SET NOT-GEN = CASE - Gen ;  #
-- SET NOT-ACC = CASE - Acc ;  #
+- LIST ACCILL = Acc Ill ; 
+- LIST ADVLCASE = Ill Loc Com Ess ;  
+- LIST CASE-HALFAGREEMENT = Ill (Sg Loc) (Pl Com) Ess ;   
+- LIST CASE-AGREEMENT = Nom Acc Gen (Pl Ill) Loc Com Ess ;   
+- LIST CASE = Nom Acc Gen Ill Loc Com Ess ;  
+- SET NOT-NOM = CASE - Nom ;  
+- SET NOT-GEN = CASE - Gen ;  
+- SET NOT-ACC = CASE - Acc ;  
 
 ### Verb sets
 
-- SET NOT-V = WORD - V ;  #
-- SET REAL-NEG = Neg - Sup ;  #
-- SET MOOD-V = Ind OR Pot OR Imprt OR ImprtII OR Cond OR (Neg Sup) ;  #
-- LIST GC = ("gč") ;  #
-- SET VFIN = GC OR MOOD-V - ConNeg ;  #
-- SET VFIN-POS = MOOD-V - ConNeg - Neg ;  #
-- SET VFIN-NOT-IMPRT = VFIN - Imprt ;  #
-- SET VFIN-NOT-NEG = VFIN - Neg ;  #
-- SET NOT-PRFPRC = WORD - PrfPrc ;  #
+- SET NOT-V = WORD - V ;  
+- SET REAL-NEG = Neg - Sup ;  
+- SET MOOD-V = Ind OR Pot OR Imprt OR ImprtII OR Cond OR (Neg Sup) ;  
+- LIST GC = ("gč") ;  
+- SET VFIN = GC OR MOOD-V - ConNeg ;  
+- SET VFIN-POS = MOOD-V - ConNeg - Neg ;  
+- SET VFIN-NOT-IMPRT = VFIN - Imprt ;  
+- SET VFIN-NOT-NEG = VFIN - Neg ;  
+- SET NOT-PRFPRC = WORD - PrfPrc ;  
 
 ### Sets for person
 SG1-V
@@ -379,9 +377,7 @@ PL1-V
 PL2-V
 PL3-V
 
-- LIST PERNUM = Sg1 Sg2 Sg3 Du1 Du2 Du3 Pl1 Pl2 Pl3 ;  #
-
-POSITIVE-V
+- LIST PERNUM = Sg1 Sg2 Sg3 Du1 Du2 Du3 Pl1 Pl2 Pl3 ;  
 
 ### Some subsets of the VFIN sets
 SG-V, DU-V, PL-V,
@@ -437,126 +433,126 @@ TRANS-V is the set for verbs really taking objects
 
 STRICT-TRANS-V is the set for verbs which don't let a GenAcc be a modifier of anything else than an object, e.g. Mun organiseren eatni gievkkanis. - eatni wants to be the object
 
-- LIST COM-V = "algâttiđ" "älgiđ" "arvâlâddâđ" "árvvohuššat" "ávkašuvvat" "bálddastahttit" "bálddalastit" "bártašuvvat" "birgehallat" "birget" "bivvat" "buohtastahttit" "čoahkkinastit" "deaivvadit" "tevdiđ" "digaštallat" "doarrut" "duhkoraddat" "elettiđ" "flirtet" "gávnnadit" "gárvodit" "giksašuvvat" "gilvalit" "gulahallat" "gulaskuddat" "hilbošit" "joatkit" "juogadit" "jyehiđ" "láhttet" "leaikkastallat" "lohpádaddat" "lohpádallat" "lonuhit" "meannudit" "malssidit" "molssodit" "náitalit" "uástiđ" "oktiibidjat" "oahpásmuvvat" "ovttasbargat" "ovttastahttit" "rahčat" "reivvestaddat" "riidalit" "riiddáskit" "rohcošit" "ságastit" "seaguhit" "servvoštallat" "servvoštaddat" "soabadit" "käydä" "soahtat" "soardit" "stálostallat" "stoahkat" "šiehtadallat" "šiehtadit" "šiehttat" "veahkehit" "veardidit" "vijđediđ" "vrd" ; #
+- LIST COM-V = "algâttiđ" "älgiđ" "arvâlâddâđ" "árvvohuššat" "ávkašuvvat" "bálddastahttit" "bálddalastit" "bártašuvvat" "birgehallat" "birget" "bivvat" "buohtastahttit" "čoahkkinastit" "deaivvadit" "tevdiđ" "digaštallat" "doarrut" "duhkoraddat" "elettiđ" "flirtet" "gávnnadit" "gárvodit" "giksašuvvat" "gilvalit" "gulahallat" "gulaskuddat" "hilbošit" "joatkit" "juogadit" "jyehiđ" "láhttet" "leaikkastallat" "lohpádaddat" "lohpádallat" "lonuhit" "meannudit" "malssidit" "molssodit" "náitalit" "uástiđ" "oktiibidjat" "oahpásmuvvat" "ovttasbargat" "ovttastahttit" "rahčat" "reivvestaddat" "riidalit" "riiddáskit" "rohcošit" "ságastit" "seaguhit" "servvoštallat" "servvoštaddat" "soabadit" "käydä" "soahtat" "soardit" "stálostallat" "stoahkat" "šiehtadallat" "šiehtadit" "šiehttat" "veahkehit" "veardidit" "vijđediđ" "vrd" ; 
 
-- LIST ILL-V = "aibâšiđ" "älgiđ" "asâiduđ" "pokkiđ" "peessâđ" "čokánistiđ" "čujottiđ" ("čuoppâđ" Ex/V Ex/TV Der/Pass) "vaikuttiđ" "teivâđ" "turvâstiđ" "tuuttâđ" "kuoskâđ" "hárjániđ" "irgediđ" "irgástallat" ("juáhuđ" Ex/V Der/Pass V) "juohhuđ" ("jyehiđ" Ex/V Ex/TV Der/Pass) "oskođ" "lijkkuđ" "lyettiđ"  "vyelgiđ" "maccâđ" "mieđettiđ" "miettâđ" "njeeijâđ" "enittiđ" "oskođ" "peessâđ" "riemmâđ" "valmiđ" "uásálistiđ" "uápásmuđ" "suttâđ" "vaikuttiđ" "västidiđ" "vyelgiđ" "vaiguttiđ" "vuáđuduđ" ; #
+- LIST ILL-V = "aibâšiđ" "älgiđ" "asâiduđ" "pokkiđ" "peessâđ" "čokánistiđ" "čujottiđ" ("čuoppâđ" Ex/V Ex/TV Der/Pass) "vaikuttiđ" "teivâđ" "turvâstiđ" "tuuttâđ" "kuoskâđ" "hárjániđ" "irgediđ" "irgástallat" ("juáhuđ" Ex/V Der/Pass V) "juohhuđ" ("jyehiđ" Ex/V Ex/TV Der/Pass) "oskođ" "lijkkuđ" "lyettiđ"  "vyelgiđ" "maccâđ" "mieđettiđ" "miettâđ" "njeeijâđ" "enittiđ" "oskođ" "peessâđ" "riemmâđ" "valmiđ" "uásálistiđ" "uápásmuđ" "suttâđ" "vaikuttiđ" "västidiđ" "vyelgiđ" "vaiguttiđ" "vuáđuduđ" ; 
 
-- LIST TRANSL-V = "jápmit" "duššat" "hávkat" "náitalit" "gaskkalduvvat" "nohkat" "goarránit" "heahpanit" "boakčánit" "šlundut" "ráigánit" "vuollánit" "gopmánit" "fuotnánit" "roahppánit" "reakčanit" "bieđganit" "luoddanit" "guvggodit" "liegganit" "suorganit" "báhkkanit" "cuovkanit" "hedjonit" "lohppet" "goikat" "galbmot" "goallut" "ruostut" "buoidut" "guvggodit" "suvrut" "suddâdiđ" ; #
+- LIST TRANSL-V = "jápmit" "duššat" "hávkat" "náitalit" "gaskkalduvvat" "nohkat" "goarránit" "heahpanit" "boakčánit" "šlundut" "ráigánit" "vuollánit" "gopmánit" "fuotnánit" "roahppánit" "reakčanit" "bieđganit" "luoddanit" "guvggodit" "liegganit" "suorganit" "báhkkanit" "cuovkanit" "hedjonit" "lohppet" "goikat" "galbmot" "goallut" "ruostut" "buoidut" "guvggodit" "suvrut" "suddâdiđ" ; 
 
-- LIST REKS-V = "áibbašit" "teivâđ" "dorvvastit" "tuuttâđ" "käyttää" "hárjániđ" "oskođ" "lijkkuđ" "mieđettiđ" "enittiđ" "valmiđ" "käydä" "searvat" "vyelgiđ" "beroštit" "kieldiđ" "bihtit" "ceavzit" "dinet" "tulkkâđ" "eastadallat" "eastadit" "huolâttiđ" "fuollat" "geargat" "lakkađ" "luohpat" "oassálastit" "váikkuhit" "váruhit" ; #
+- LIST REKS-V = "áibbašit" "teivâđ" "dorvvastit" "tuuttâđ" "käyttää" "hárjániđ" "oskođ" "lijkkuđ" "mieđettiđ" "enittiđ" "valmiđ" "käydä" "searvat" "vyelgiđ" "beroštit" "kieldiđ" "bihtit" "ceavzit" "dinet" "tulkkâđ" "eastadallat" "eastadit" "huolâttiđ" "fuollat" "geargat" "lakkađ" "luohpat" "oassálastit" "váikkuhit" "váruhit" ; 
 
-- LIST ACC-LOC-V = "kieldiđ" "čuávvuđ" "earuhit" "kieldiđ" "jtak" ; #
+- LIST ACC-LOC-V = "kieldiđ" "čuávvuđ" "earuhit" "kieldiđ" "jtak" ; 
 
-- LIST ACC-ILL-V = "addit" "bidjat" "merhâšiđ"; #
+- LIST ACC-ILL-V = "addit" "bidjat" "merhâšiđ"; 
 
-- LIST MIELDE-V = "addit" "bidjat" "täiđiđ" "leđe" "uástiđ" "uážžuđ" "väldiđ" ; #
+- LIST MIELDE-V = "addit" "bidjat" "täiđiđ" "leđe" "uástiđ" "uážžuđ" "väldiđ" ; 
 
-- LIST TIME-ADVL-V = "áhásiđ" "ássat" "porgâđ" "ajasta" "anoa" "eelliđ" "fievridiđ" "guohtut" "joatkit" "láddet" "máttááttiđ" "peividiđ" ; #
+- LIST TIME-ADVL-V = "áhásiđ" "ássat" "porgâđ" "ajasta" "anoa" "eelliđ" "fievridiđ" "guohtut" "joatkit" "láddet" "máttááttiđ" "peividiđ" ; 
 
-- LIST TIMEOBJECT-V = "addit" "kevttiđ" "arvâlâddâđ" "bálvalit" "čuávvuđ" "tevdiđ" "diŋgot" "iävtuttiđ" "fátmmastit" "vaattâđ" "kavnâđ" "kevttiđ" "ajasta" "guhkidit" "hábmet" "tekstiä" "juolludit" "lasettiđ" "liigudit" "loahpahit" "loaktit" "markeret" "meridiđ" "molsut" "oanidit" "uážžuđ" "käydä" "šiehttat" "várret" "vijđediđ" ; #
+- LIST TIMEOBJECT-V = "addit" "kevttiđ" "arvâlâddâđ" "bálvalit" "čuávvuđ" "tevdiđ" "diŋgot" "iävtuttiđ" "fátmmastit" "vaattâđ" "kavnâđ" "kevttiđ" "ajasta" "guhkidit" "hábmet" "tekstiä" "juolludit" "lasettiđ" "liigudit" "loahpahit" "loaktit" "markeret" "meridiđ" "molsut" "oanidit" "uážžuđ" "käydä" "šiehttat" "várret" "vijđediđ" ; 
 
-- LIST DURATION-V = "áhásiđ" "porgâđ" "ajasta" "čuoigâđ" "eelliđ" "gollat" "guohtut" "leđe" "väzziđ"; #
+- LIST DURATION-V = "áhásiđ" "porgâđ" "ajasta" "čuoigâđ" "eelliđ" "gollat" "guohtut" "leđe" "väzziđ"; 
 
-- LIST POINT-IN-TIME-V = "árrit" "orostittiđ" "estiđ" "cakkadit" "cakkastallat" "lijkkuđ" "doallat" "duostut" "dustet" "eastadit" "kieldiđ" "goahcat" "heađuštit" "estiđ" ; #
+- LIST POINT-IN-TIME-V = "árrit" "orostittiđ" "estiđ" "cakkadit" "cakkastallat" "lijkkuđ" "doallat" "duostut" "dustet" "eastadit" "kieldiđ" "goahcat" "heađuštit" "estiđ" ; 
 
-- LIST ROUTE-ADVL-V = "puáttiđ" "čuoigâđ" ; #
+- LIST ROUTE-ADVL-V = "puáttiđ" "čuoigâđ" ; 
 
-- LIST ROUTEOBJECT-V = "ásahit" "bidjat" "botnjat" "basuhit" "pyerediđ" "čielgâsmittiđ" "čuovvulit" "čielgiđ" "čuárvuđ" "čurvet" "dieđihit" "lujittaa" "duorggastit" "kevttiđ" "geahpedit" "geahpidit" "gudnejahttit" "tutkâđ" "kieđâvuššâđ" "kyeđđiđ" "gilljut" "heahtit" "čuárvuđ" "huikkádit" "juoigâđ" "lávluđ" "luuhâđ" "loahpahit" "meridiđ" "máidnut" "lujittaa" "njulget" "máttááttiđ" "toohâđ" "sivdnidit" "tutkâđ" "kepidiđ" "válmmaštit" "vurket" ; #
+- LIST ROUTEOBJECT-V = "ásahit" "bidjat" "botnjat" "basuhit" "pyerediđ" "čielgâsmittiđ" "čuovvulit" "čielgiđ" "čuárvuđ" "čurvet" "dieđihit" "lujittaa" "duorggastit" "kevttiđ" "geahpedit" "geahpidit" "gudnejahttit" "tutkâđ" "kieđâvuššâđ" "kyeđđiđ" "gilljut" "heahtit" "čuárvuđ" "huikkádit" "juoigâđ" "lávluđ" "luuhâđ" "loahpahit" "meridiđ" "máidnut" "lujittaa" "njulget" "máttááttiđ" "toohâđ" "sivdnidit" "tutkâđ" "kepidiđ" "válmmaštit" "vurket" ; 
 
-- LIST HAB-V = "puáttiđ" "leđe" "goallut" "sorjođ" "jápmit" "šoddâđ" ; #
+- LIST HAB-V = "puáttiđ" "leđe" "goallut" "sorjođ" "jápmit" "šoddâđ" ; 
 
 ### Valency sets
 
-- LIST INF-V = "enittiđ" "áhásiđ" "áiguđ" "älgiđ" "ásahit" "paggiđ" "povčâstiđ" "peessâđ" "lijkkuđ" "anoa" "bivvat" "ajasta" "puáttiđ" "käskeä" "čokkáđ" "čokánistiđ" "čokániđ" "pisániđ" "čuoččastit" "čuárvuđ" "čurggodit" ("ettâđ" Der/PassL) ("ettâđ" Der/PassS) "tovâttiđ" "táttuđ" "täiđiđ" "tarbâšiđ" "miäruštâllâđ" "suovvâđ" "tuáivuđ" "hoputtaa" "oskeldâttâđ" "ferttiđ" "huámášiđ" "huolâttiđ" "kolgâđ" "vaattâđ" "gárrut" "karttâđ" "iskâđ" "geargat" "geatnegahttit" "ajasta" "vaijeeđ" "koččođ" "háhppehit" "halijdiđ" "hárjániđ" "käydä" "lávet" "lijkkuđ" "morániđ" "vyelgiđ" "mättiđ" "máššat" "movttiidahttit" "mušteđ" "nagodit" "navdit" "máttááttiđ" "oahpástuvvat" "máttáđ" "uážžuđ" "enittiđ" "laskea" "riepmat" "sättiđ" "seahtit" "anoa" "sättiđ" "suovvat" "šoddâđ" "maaššâđ" "vaijeeđ" "tekemään" "koirasta" "vuogáiduvvat" "vyelgiđ" "vuollánit" "vyerdiđ"; #
+- LIST INF-V = "enittiđ" "áhásiđ" "áiguđ" "älgiđ" "ásahit" "paggiđ" "povčâstiđ" "peessâđ" "lijkkuđ" "anoa" "bivvat" "ajasta" "puáttiđ" "käskeä" "čokkáđ" "čokánistiđ" "čokániđ" "pisániđ" "čuoččastit" "čuárvuđ" "čurggodit" ("ettâđ" Der/PassL) ("ettâđ" Der/PassS) "tovâttiđ" "táttuđ" "täiđiđ" "tarbâšiđ" "miäruštâllâđ" "suovvâđ" "tuáivuđ" "hoputtaa" "oskeldâttâđ" "ferttiđ" "huámášiđ" "huolâttiđ" "kolgâđ" "vaattâđ" "gárrut" "karttâđ" "iskâđ" "geargat" "geatnegahttit" "ajasta" "vaijeeđ" "koččođ" "háhppehit" "halijdiđ" "hárjániđ" "käydä" "lávet" "lijkkuđ" "morániđ" "vyelgiđ" "mättiđ" "máššat" "movttiidahttit" "mušteđ" "nagodit" "navdit" "máttááttiđ" "oahpástuvvat" "máttáđ" "uážžuđ" "enittiđ" "laskea" "riepmat" "sättiđ" "seahtit" "anoa" "sättiđ" "suovvat" "šoddâđ" "maaššâđ" "vaijeeđ" "tekemään" "koirasta" "vuogáiduvvat" "vyelgiđ" "vuollánit" "vyerdiđ"; 
 
-- LIST ACC-INF-V = "anoa" "čuárvuđ" "tovâttiđ" "suovvâđ" "koččođ" "movttiidahttit" "anoa" "suovvat" ; #
+- LIST ACC-INF-V = "anoa" "čuárvuđ" "tovâttiđ" "suovvâđ" "koččođ" "movttiidahttit" "anoa" "suovvat" ; 
 
-- LIST OPRED-V = "alidit" "kevttiđ" "algâttiđ" "ásahit" "porgâđ" "bidjat" "ceavzit" "ettâđ" "dahkaluddat" "toohâđ" "lijkkuđ" "tubdâđ" "dulkot" "karttâđ" "kevttiđ" "keččâđ" "käskeä" "koččođ" "kvalifiseret" "málet" "meroštallat" "navdit" "uáiniđ" "merhâšiđ" "visásmittiđ" "väldiđ" "valjiđ" "rábmot" "vihahit" ; #
+- LIST OPRED-V = "alidit" "kevttiđ" "algâttiđ" "ásahit" "porgâđ" "bidjat" "ceavzit" "ettâđ" "dahkaluddat" "toohâđ" "lijkkuđ" "tubdâđ" "dulkot" "karttâđ" "kevttiđ" "keččâđ" "käskeä" "koččođ" "kvalifiseret" "málet" "meroštallat" "navdit" "uáiniđ" "merhâšiđ" "visásmittiđ" "väldiđ" "valjiđ" "rábmot" "vihahit" ; 
 
-- LIST OKTII-V = ("puállu" Der/huvva) "goallostit" "nuhostiđ" "bidjat" "kiinni" "suddâdiđ" "käydä" "bidjat" "iskeä" "keessiv" "kuullâđ" "rehkenastit" "ordnet" "käydä" "gávnnadit" "heivehit" "toimâđ" "keččâliđ" "jhkin" "seaguhit" "sorrot" ; #
+- LIST OKTII-V = ("puállu" Der/huvva) "goallostit" "nuhostiđ" "bidjat" "kiinni" "suddâdiđ" "käydä" "bidjat" "iskeä" "keessiv" "kuullâđ" "rehkenastit" "ordnet" "käydä" "gávnnadit" "heivehit" "toimâđ" "keččâliđ" "jhkin" "seaguhit" "sorrot" ; 
 
-- LIST VGEN-V-TRIGGER = "peessâđ" "bidjat" "bijadit" "anoa" "puáttiđ" "pyehtiđ" "čuággiđ" "čuávvuđ" "pyehtiđ" "duolmmadit" "uážžuđ" "heiviđ" "kolgâđ" "girdit" "gálašit" "kavnâđ" "goastit" "kuáđuttiđ" "gurgalit" "gárgidit" "jávkkihit" "joatkit" "reissiđ" "jorgut" "loahpahit" "vyelgiđ" "mátkkoštit" "njahkalit"  "njoammut" "oasálastit" "rasttildit" "kaksijalkaisista" "sihkkelastit" "váccašit" "vájuldit" "vánddardit" "viekkimpiergâs" "viehkalit" "viežžat" "vyeijiđ" "vyelgiđ" ; #
+- LIST VGEN-V-TRIGGER = "peessâđ" "bidjat" "bijadit" "anoa" "puáttiđ" "pyehtiđ" "čuággiđ" "čuávvuđ" "pyehtiđ" "duolmmadit" "uážžuđ" "heiviđ" "kolgâđ" "girdit" "gálašit" "kavnâđ" "goastit" "kuáđuttiđ" "gurgalit" "gárgidit" "jávkkihit" "joatkit" "reissiđ" "jorgut" "loahpahit" "vyelgiđ" "mátkkoštit" "njahkalit"  "njoammut" "oasálastit" "rasttildit" "kaksijalkaisista" "sihkkelastit" "váccašit" "vájuldit" "vánddardit" "viekkimpiergâs" "viehkalit" "viežžat" "vyeijiđ" "vyelgiđ" ; 
 
-- LIST VGEN-V = "bassit" "bárdnat" "bealkit" "biškut" "puáttiđ" "purrâđ" "civkit" "čárvut" "čäälliđ" "čeargut" "čierrut" "čuoigâđ" "čuárvuđ" "doarggistit" "duorrat" "fáiput" "garrudit" "gállit" "uuccâđ" "geargat" "geavzut" "gievvut" "gilljut" "girdit" "kuullâđ" "kyeddiđ" "heahpanaddat" "hoigat" "holvut" "čuárvuđ" "hupmat" "jápmit" "reissiđ" "jorgut" "juoigâđ" "láddjet" "lávluđ" "luoibmat" "murdit" "njáhkat" "njoammut" "njurgut" "uáđđiđ" "oahkut" "uáiniđ" "orroođ" "reaškit" "riidet" "rohkut" "kaksijalkaisista" "ruossut" "sáđđat" "sihkkelastit" "skeaikit" "skierbmut" "soabbut" "speažžut" "suhkat" "suoibut" "šlivgut" "šloahtat" "šnjirgut" "väzziđ" "viekkimpiergâs" "vuoijâđ" "vyeijiđ" "vuohčut" "vyeittiđ" "vuoššat" ; #
+- LIST VGEN-V = "bassit" "bárdnat" "bealkit" "biškut" "puáttiđ" "purrâđ" "civkit" "čárvut" "čäälliđ" "čeargut" "čierrut" "čuoigâđ" "čuárvuđ" "doarggistit" "duorrat" "fáiput" "garrudit" "gállit" "uuccâđ" "geargat" "geavzut" "gievvut" "gilljut" "girdit" "kuullâđ" "kyeddiđ" "heahpanaddat" "hoigat" "holvut" "čuárvuđ" "hupmat" "jápmit" "reissiđ" "jorgut" "juoigâđ" "láddjet" "lávluđ" "luoibmat" "murdit" "njáhkat" "njoammut" "njurgut" "uáđđiđ" "oahkut" "uáiniđ" "orroođ" "reaškit" "riidet" "rohkut" "kaksijalkaisista" "ruossut" "sáđđat" "sihkkelastit" "skeaikit" "skierbmut" "soabbut" "speažžut" "suhkat" "suoibut" "šlivgut" "šloahtat" "šnjirgut" "väzziđ" "viekkimpiergâs" "vuoijâđ" "vyeijiđ" "vuohčut" "vyeittiđ" "vuoššat" ; 
 
-- LIST SOURCE-V = "vaattâđ" ; #
+- LIST SOURCE-V = "vaattâđ" ; 
 
-- LIST MOVEMENT-V = "ádjit" "peessâđ" "puáttiđ" "čuoigâđ" "čuoiggadit" "fárret" "finadit" "finihit" "heiviđ" "gálašit" "gállit" "girdit" "johttát" "reissiđ" "jorahallat" "vyelgiđ" "mátkkoštit" "njoammut" "njuiket" "enittiđ" "riidet" "kaksijalkaisista" "sáhtostit" "sihkkelastit" "soabbulit" "soabbut" "šloahtat" "váccašit" "vádjolit" "vájaldit" "vájuldit" "vánddardit" "väzziđ" "viehkalit" "viekkimpiergâs" "viežžat" "vuodjalit" "vuoijâđ" "vyeijiđ" "vuojadit" "vuojâččiđ" "vyelgiđ" ; #
+- LIST MOVEMENT-V = "ádjit" "peessâđ" "puáttiđ" "čuoigâđ" "čuoiggadit" "fárret" "finadit" "finihit" "heiviđ" "gálašit" "gállit" "girdit" "johttát" "reissiđ" "jorahallat" "vyelgiđ" "mátkkoštit" "njoammut" "njuiket" "enittiđ" "riidet" "kaksijalkaisista" "sáhtostit" "sihkkelastit" "soabbulit" "soabbut" "šloahtat" "váccašit" "vádjolit" "vájaldit" "vájuldit" "vánddardit" "väzziđ" "viehkalit" "viekkimpiergâs" "viežžat" "vuodjalit" "vuoijâđ" "vyeijiđ" "vuojadit" "vuojâččiđ" "vyelgiđ" ; 
 
-- LIST JOHTIT = "čuoigâđ" "čuoiggadit" "gálašit" "gállit" "girdit" "johttát" "reissiđ" "mátkkoštit" "njoammut" "riidet" "kaksijalkaisista" "sihkkelastit" "soabbulit" "soabbut" "šloahtat" "váccašit" "vádjolit" "vájaldit" "vájuldit" "vánddardit" "väzziđ" "viehkalit" "viekkimpiergâs" "vuodjalit" "vuoijâđ" "vyeijiđ" "vuojadit" "vuojâččiđ" ; #
+- LIST JOHTIT = "čuoigâđ" "čuoiggadit" "gálašit" "gállit" "girdit" "johttát" "reissiđ" "mátkkoštit" "njoammut" "riidet" "kaksijalkaisista" "sihkkelastit" "soabbulit" "soabbut" "šloahtat" "váccašit" "vádjolit" "vájaldit" "vájuldit" "vánddardit" "väzziđ" "viehkalit" "viekkimpiergâs" "vuodjalit" "vuoijâđ" "vyeijiđ" "vuojadit" "vuojâččiđ" ; 
 
-- LIST HUMAN-ACTIVITY-V = "áitit" "bassit" "báhčit" "bealuštit" "beaskidit" "beastit" "bidjat" "biebmat" "anoa" "puáldiđ" "botket" "pyehtiđ" "buvttadit" "iskeä" "kiinni" "jtak" "čäälliđ" "čuággiđ" "čoavdit" "čugget" "čuoppâđ" "dearpalit" "dearpat" "dearvvahit" "tevdiđ" "devdnet" "hoivata" "tehdä" "doarrádallat" "doidit" "dolastit" "čuojahit" "dovddastit" "dubmet" "duddjot" "duvdilit" "ferdnet" "gáhkket" "gárvodit" "gásttašit" "gávkat" "keččâđ" "gilvit" "kuárruđ" "koddeđ" "kangaspuilla" "koččođ" "kuškâdiđ" "goivet" "luávdiđ" "gottihit" "guldalit" "guolástit" "hábmet" "hervet" "hoigat" "hoitát" "hukset" "huškut" "huškkohallat" "jugahit" "juuhâđ" "juksat" "juogadit" "jyehiđ" "láddjet" "láibut" "láktadit" "loaiddastit" "luddet" "merket" "mihtidit" "murret" "lujittaa" "náitalit" "njuoskadit" "máttááttiđ" "uástiđ" "uuccâđ" "olahit" "rahpat" "toohâđ" "ráidnet" "rátkit" "registreret" "rekruteret" "riŋget" "ruohkkat" "sahát" "vuolgâttiđ" "sáltet" "sárgut" "sihkkut" "siktet" "skihtardit" "skoalkalit" "tevdnet" "vadjat" "veahkehit" "vikšet" "vuáđudiđ" "vuosehit" "vuoidat" "vuoiddadit" "vyeittiđ" "vuostáiváldit" "vuoššat" "vyebdiđ" "vurket" ; #
+- LIST HUMAN-ACTIVITY-V = "áitit" "bassit" "báhčit" "bealuštit" "beaskidit" "beastit" "bidjat" "biebmat" "anoa" "puáldiđ" "botket" "pyehtiđ" "buvttadit" "iskeä" "kiinni" "jtak" "čäälliđ" "čuággiđ" "čoavdit" "čugget" "čuoppâđ" "dearpalit" "dearpat" "dearvvahit" "tevdiđ" "devdnet" "hoivata" "tehdä" "doarrádallat" "doidit" "dolastit" "čuojahit" "dovddastit" "dubmet" "duddjot" "duvdilit" "ferdnet" "gáhkket" "gárvodit" "gásttašit" "gávkat" "keččâđ" "gilvit" "kuárruđ" "koddeđ" "kangaspuilla" "koččođ" "kuškâdiđ" "goivet" "luávdiđ" "gottihit" "guldalit" "guolástit" "hábmet" "hervet" "hoigat" "hoitát" "hukset" "huškut" "huškkohallat" "jugahit" "juuhâđ" "juksat" "juogadit" "jyehiđ" "láddjet" "láibut" "láktadit" "loaiddastit" "luddet" "merket" "mihtidit" "murret" "lujittaa" "náitalit" "njuoskadit" "máttááttiđ" "uástiđ" "uuccâđ" "olahit" "rahpat" "toohâđ" "ráidnet" "rátkit" "registreret" "rekruteret" "riŋget" "ruohkkat" "sahát" "vuolgâttiđ" "sáltet" "sárgut" "sihkkut" "siktet" "skihtardit" "skoalkalit" "tevdnet" "vadjat" "veahkehit" "vikšet" "vuáđudiđ" "vuosehit" "vuoidat" "vuoiddadit" "vyeittiđ" "vuostáiváldit" "vuoššat" "vyebdiđ" "vurket" ; 
 
-- LIST BODY-ACTIVITY-V = "purrâđ" "čiekčat" "čujuhit" "čuorbmat" "kuullâđ" "jhk" "jorahit" "lihkahit" "lihkastahttit" "luptiđ" "njávkkadit" "njávkkastit" "uáiniđ" "seavvit" ; #
+- LIST BODY-ACTIVITY-V = "purrâđ" "čiekčat" "čujuhit" "čuorbmat" "kuullâđ" "jhk" "jorahit" "lihkahit" "lihkastahttit" "luptiđ" "njávkkadit" "njávkkastit" "uáiniđ" "seavvit" ; 
 
-- LIST PLACING-ACTIVITY-V = "bidjat" "buonjostit" ; #
+- LIST PLACING-ACTIVITY-V = "bidjat" "buonjostit" ; 
 
-- LIST WRITING-ACTIVITY-V = "čäälliđ" ; #
+- LIST WRITING-ACTIVITY-V = "čäälliđ" ; 
 
-- LIST HANDICRAFT-ACTIVITY-V = "buddet" "botnit" "kuárruđ" "hervet" "vadjat" "vikšet" ; #
+- LIST HANDICRAFT-ACTIVITY-V = "buddet" "botnit" "kuárruđ" "hervet" "vadjat" "vikšet" ; 
 
-- LIST DADJAT = "naggiđ" "ettâđ" "luuhâđ" "muštâliđ" ; #
+- LIST DADJAT = "naggiđ" "ettâđ" "luuhâđ" "muštâliđ" ; 
 
-- LIST HUPMAT = "dáikit" "dárostit" "digaštallat" "digaštit" "tuoldâđ" "háladit" "háleštit" "hállat" "hoallat" "humadit" "hupmat" "logaldallat" "máidnut" "máinnašit" "muitaladdat" "njurgut" "merhâšiđ" "savkalit" "ságastaddat" "ságastallat" "ságastit" "sámástit" "sámistit" "sárdnidit" "sárdnut" "sártnodit" "solžat" "suomastit" ; #
+- LIST HUPMAT = "dáikit" "dárostit" "digaštallat" "digaštit" "tuoldâđ" "háladit" "háleštit" "hállat" "hoallat" "humadit" "hupmat" "logaldallat" "máidnut" "máinnašit" "muitaladdat" "njurgut" "merhâšiđ" "savkalit" "ságastaddat" "ságastallat" "ságastit" "sámástit" "sámistit" "sárdnidit" "sárdnut" "sártnodit" "solžat" "suomastit" ; 
 
-- LIST VERBAL-ACTIVITY = "arvâlâddâđ" "celkkiđ" "čielgiđ" "naggiđ" "basuhit" "bealkit" "cuoigut" "čuárvuđ" "čurvet" "ettâđ" "deattastit" "gielistit" "gilljut" "gopmulit" "háladit" "háleštit" "hállat" "hoallat" "čuárvuđ" "huikkádit" "jtak" "juoigâđ" "kommenteret" "lávluđ" "luuhâđ" "muštâliđ" "kutsua" "kutsua" "ravviđ" "sivdnidit" "váruhit" "västidiđ" ; #
+- LIST VERBAL-ACTIVITY = "arvâlâddâđ" "celkkiđ" "čielgiđ" "naggiđ" "basuhit" "bealkit" "cuoigut" "čuárvuđ" "čurvet" "ettâđ" "deattastit" "gielistit" "gilljut" "gopmulit" "háladit" "háleštit" "hállat" "hoallat" "čuárvuđ" "huikkádit" "jtak" "juoigâđ" "kommenteret" "lávluđ" "luuhâđ" "muštâliđ" "kutsua" "kutsua" "ravviđ" "sivdnidit" "váruhit" "västidiđ" ; 
 
-- LIST HUMAN-AGENT-V = "áŋgiruššat" "ásahit" "beahttit" "pyerediđ" "čielgâsmittiđ" "čuovvulit" "dássidit" "deattastit" "tiäduttiđ" "dieđihit" "tievvâđ" "lujittaa" "geahpedit" "geahpidit" "gudnejahttit" "tutkâđ" "illudit" "lassánit" "liekkadallat" "loahpahit" "luohpat" "meridiđ" "moivašuhttit" "kutsua" "lujittaa" "oassálastit" "tutkâđ" "kepidiđ" "váikkuhit" "válmmaštit" "verrošit" "vurket" ; #
+- LIST HUMAN-AGENT-V = "áŋgiruššat" "ásahit" "beahttit" "pyerediđ" "čielgâsmittiđ" "čuovvulit" "dássidit" "deattastit" "tiäduttiđ" "dieđihit" "tievvâđ" "lujittaa" "geahpedit" "geahpidit" "gudnejahttit" "tutkâđ" "illudit" "lassánit" "liekkadallat" "loahpahit" "luohpat" "meridiđ" "moivašuhttit" "kutsua" "lujittaa" "oassálastit" "tutkâđ" "kepidiđ" "váikkuhit" "válmmaštit" "verrošit" "vurket" ; 
 
-- LIST NOT-HUMAN-OBJECT-V = "porgâđ" "purrâđ" "čäälliđ" "luuhâđ" "vyeijiđ" ; #
+- LIST NOT-HUMAN-OBJECT-V = "porgâđ" "purrâđ" "čäälliđ" "luuhâđ" "vyeijiđ" ; 
 
-- LIST USUALLY-IV =  "boradit" ; #
+- LIST USUALLY-IV =  "boradit" ; 
 
-- LIST INTELLECTUAL-ACTIVITY-V = "tubdâđ" "huámášiđ" "huámášiđ" "huobmát" "jurddahit" "jurddašit" "smiehttat" ; #
+- LIST INTELLECTUAL-ACTIVITY-V = "tubdâđ" "huámášiđ" "huámášiđ" "huobmát" "jurddahit" "jurddašit" "smiehttat" ; 
 
-- LIST VEHICLE-PLACE-V = "addit" "bearrat" "gaikkihit" "vaattâđ" "geiget" "uástiđ" "uážžuđ" "suoládit" "väldiđ"  ; #
+- LIST VEHICLE-PLACE-V = "addit" "bearrat" "gaikkihit" "vaattâđ" "geiget" "uástiđ" "uážžuđ" "suoládit" "väldiđ"  ; 
 
-- LIST VEHICLE-TOOL-V = "peessâđ" "puáttiđ" "pyehtiđ" "pyehtiđ" "fievridiđ" "vuolggahit" ; #
+- LIST VEHICLE-TOOL-V = "peessâđ" "puáttiđ" "pyehtiđ" "pyehtiđ" "fievridiđ" "vuolggahit" ; 
 
-- LIST ABSTR-ENTITY-COM-V = "investeret" "lihkosmuvvat" "lihkostuvvat" "lihkustuvvat" "ruttâdiđ"; #
+- LIST ABSTR-ENTITY-COM-V = "investeret" "lihkosmuvvat" "lihkostuvvat" "lihkustuvvat" "ruttâdiđ"; 
 
-- LIST ONLY-PLACE-LOC-V = "algâttiđ" "bártidit" "porgâđ" "čokánistiđ" "toohâđ" "iskâđ" "olahit" "veahkehit" ; #
+- LIST ONLY-PLACE-LOC-V = "algâttiđ" "bártidit" "porgâđ" "čokánistiđ" "toohâđ" "iskâđ" "olahit" "veahkehit" ; 
 
-- LIST HUMAN-LOC-V = "kevttiđ" "pääcciđ" "kevttiđ" "käskeä" "kutsua" ; #
+- LIST HUMAN-LOC-V = "kevttiđ" "pääcciđ" "kevttiđ" "käskeä" "kutsua" ; 
 
 - **PLACE-V** Those get only not locative if the target is a member TOOL, ABSTR-TOOL or ANIMATE or CONCEPT. Selects more locatives than ONLY-PLACE-LOC-V 
-- LIST PLACE-V = "ássat" "buolvvastallat" "buolvvastit" "čippostallat" "čokkáđ" "čohkahit" "čuážžuđ" "čuččodit" "morihit" "gullát" "morránit" "orroođ" "orodit" "stuorrut" "veallát" "veallahit" ; #
+- LIST PLACE-V = "ássat" "buolvvastallat" "buolvvastit" "čippostallat" "čokkáđ" "čohkahit" "čuážžuđ" "čuččodit" "morihit" "gullát" "morránit" "orroođ" "orodit" "stuorrut" "veallát" "veallahit" ; 
 
-- LIST ABSTR-PLACE-V = "váilut" "käydä" "hiehpat" "siskeldiđ" "käydä" "šiehttat"; #
+- LIST ABSTR-PLACE-V = "váilut" "käydä" "hiehpat" "siskeldiđ" "käydä" "šiehttat"; 
 
-- LIST STATE-V = "eelliđ" ; #
+- LIST STATE-V = "eelliđ" ; 
 
-- LIST REM-WITH-PARTS = "gaikkihit" ; #
+- LIST REM-WITH-PARTS = "gaikkihit" ; 
 
-- LIST PERCEPTION-V = "áicat" "tubdâđ" "ealvit" "huámášiđ" "huámášiđ" "kuullâđ" "haksit" "huobmát" "huomihit" "uáiniđ" ; #
+- LIST PERCEPTION-V = "áicat" "tubdâđ" "ealvit" "huámášiđ" "huámášiđ" "kuullâđ" "haksit" "huobmát" "huomihit" "uáiniđ" ; 
 
-- LIST ILLNESS-V = "buohcat" "buohccát" ;  #
+- LIST ILLNESS-V = "buohcat" "buohccát" ;  
 
-- LIST ADV-PX-V = "keččâđ" ; #
+- LIST ADV-PX-V = "keččâđ" ; 
 
-- LIST MUITALIT = "arvâlâddâđ" "anoa" "boagustit" "celkkiđ" "cuoigut" "čielgiđ" "čurvet" "čuárvuđ" "ettâđ" "dahkaluddat" "deattastit" "tiäduttiđ" "tuáivuđ" "epidiđ" "geardduhit" "geažuhit" "gielistit" "gilljut" "hállat" "hoallat" "čuárvuđ" "huikkádit" "imaštallat" "jtak" "jievžat" "juoigâđ" "jurdilit" "jurddašit" "kommenteret" "lávluđ" "lasettiđ" "loahpahit" "luuhâđ" "lopediđ" "máidnut" "máinnašit" "muštâliđ" "unohtamisen" "nágget" "njávggádit" "merhâšiđ" "ravviđ" "savkalit" "sárdnidit" "šuohkihit" "váidalit" "váruhit" "västidiđ" ; #
+- LIST MUITALIT = "arvâlâddâđ" "anoa" "boagustit" "celkkiđ" "cuoigut" "čielgiđ" "čurvet" "čuárvuđ" "ettâđ" "dahkaluddat" "deattastit" "tiäduttiđ" "tuáivuđ" "epidiđ" "geardduhit" "geažuhit" "gielistit" "gilljut" "hállat" "hoallat" "čuárvuđ" "huikkádit" "imaštallat" "jtak" "jievžat" "juoigâđ" "jurdilit" "jurddašit" "kommenteret" "lávluđ" "lasettiđ" "loahpahit" "luuhâđ" "lopediđ" "máidnut" "máinnašit" "muštâliđ" "unohtamisen" "nágget" "njávggádit" "merhâšiđ" "ravviđ" "savkalit" "sárdnidit" "šuohkihit" "váidalit" "váruhit" "västidiđ" ; 
 
-- LIST LEXICALISED-PASS-V = "kevttuđ" ; #
+- LIST LEXICALISED-PASS-V = "kevttuđ" ; 
 
 ### Adverb sets
 
 ### Adjective sets
 
-- LIST DEHALAS = "táválâš" "dehálaš" "tehálâš" "mearkkašahtti" "epitáválâš" "máhđulâš" "suohtas" ; #
+- LIST DEHALAS = "táválâš" "dehálaš" "tehálâš" "mearkkašahtti" "epitáválâš" "máhđulâš" "suohtas" ; 
 
 ### Other adjective sets
 A-N, A-N-CASE, ...
-- LIST A-N = "buoidi" "čeppi" "headju" "heittot" "jalla" "neavri" "nuorâ" "oahpis" "oarbbis" "räähis" "riges" "váivváš" "vuoras"; #
+- LIST A-N = "buoidi" "čeppi" "headju" "heittot" "jalla" "neavri" "nuorâ" "oahpis" "oarbbis" "räähis" "riges" "váivváš" "vuoras"; 
 
-- LIST GRADE-A = "fávru" "headju"; #
+- LIST GRADE-A = "fávru" "headju"; 
 
-- LIST A-LEX-AS-NOUN = "adj." "kuávdáš" "nuorâ" "oahpis" "váivi" "uáinojeijee"; #
+- LIST A-LEX-AS-NOUN = "adj." "kuávdáš" "nuorâ" "oahpis" "váivi" "uáinojeijee"; 
 
-- LIST TIME-A = "čuávuvâš" "čuávuvâš" "maŋit" "majemuš" "ovdebáš" ("vyelgiđ" PrfPrc) ("vássit" PrfPrc)   ;  #
+- LIST TIME-A = "čuávuvâš" "čuávuvâš" "maŋit" "majemuš" "ovdebáš" ("vyelgiđ" PrfPrc) ("vássit" PrfPrc)   ;  
 
-- LIST DURATION-A = "heila" "eanas" "eenâb" "geažo" "geažos" "guhkki" "obba" "melgâd" "stuárudâh" "oles" "puoh" ; #
+- LIST DURATION-A = "heila" "eanas" "eenâb" "geažo" "geažos" "guhkki" "obba" "melgâd" "stuárudâh" "oles" "puoh" ; 
 
-- LIST POINT-IN-TIME-SPEC = "toovláš" "eres" "iežá" "nubbe" ; #
+- LIST POINT-IN-TIME-SPEC = "toovláš" "eres" "iežá" "nubbe" ; 
 
 ### NP sets defined according to their morphosyntactic features
 
@@ -598,13 +594,13 @@ OKTA
 
 - Sets for nouns as pred
 
-- LIST FAMILY-ONLY-HUMAN = (Prop Sem/Mal) (Prop Sem/Fem) (Prop Sem/Sur) "isoisälle" "kaavâ" "isoisälle" "bárdnemánná" "käälis" "čeahci" "čeahcit" "eemeed" "eahki" "kaavâ" "kaavâ" "iänui" "goaski" "pelikyeimi" "isän" "irgi" "käälis" "alge" "isoisälle" "manje" "isää" "madâräijih" "máttaráhkku" "moarsi" "muoŧŧá" "muoŧŧal" "náittosguoibmi" "neahpi" "uábbi" "oabbábealle" "miespuolinen" "oappáš" "oarpmealle" "osku#guoibmi" "ristváhnen" (".*sássa"r) "siessal" "siessá" "vieljaš" "viljâ" "vielljabealle" "vilbealle" "vuohppa" "vuonáhkku" "vyene" ; #
+- LIST FAMILY-ONLY-HUMAN = (Prop Sem/Mal) (Prop Sem/Fem) (Prop Sem/Sur) "isoisälle" "kaavâ" "isoisälle" "bárdnemánná" "käälis" "čeahci" "čeahcit" "eemeed" "eahki" "kaavâ" "kaavâ" "iänui" "goaski" "pelikyeimi" "isän" "irgi" "käälis" "alge" "isoisälle" "manje" "isää" "madâräijih" "máttaráhkku" "moarsi" "muoŧŧá" "muoŧŧal" "náittosguoibmi" "neahpi" "uábbi" "oabbábealle" "miespuolinen" "oappáš" "oarpmealle" "osku#guoibmi" "ristváhnen" (".*sássa"r) "siessal" "siessá" "vieljaš" "viljâ" "vielljabealle" "vilbealle" "vuohppa" "vuonáhkku" "vyene" ; 
 
-- LIST FAMILY-ALSO-ABSTRACT = "eeči" "áddjá" "áhkku" "peerâ" "enni" "oapmahaš" "sohka" "sohkagoddi" "váhnen" "veahka" ; #
+- LIST FAMILY-ALSO-ABSTRACT = "eeči" "áddjá" "áhkku" "peerâ" "enni" "oapmahaš" "sohka" "sohkagoddi" "váhnen" "veahka" ; 
 
-- LIST NON-FAMILY = "alge" "algaaš" "divššohas" "alge" (".*guoibmi"r) "vierailija" "naabur" "lagamuš" (".*mánná"r) "mánáš" (".*nieida"r) "nieidâš" (".*nisson"r) (".*nisu"r) "nuorâ" "oskkuviellja" "ustev" (".*olmmoš"r) "naabur" "roppâ" "sámenuorra" "sämmilâš" "skippáár" "ustev" "smávvagánda" (".*ustit"r) "skippáár" "viijses" ; #
+- LIST NON-FAMILY = "alge" "algaaš" "divššohas" "alge" (".*guoibmi"r) "vierailija" "naabur" "lagamuš" (".*mánná"r) "mánáš" (".*nieida"r) "nieidâš" (".*nisson"r) (".*nisu"r) "nuorâ" "oskkuviellja" "ustev" (".*olmmoš"r) "naabur" "roppâ" "sámenuorra" "sämmilâš" "skippáár" "ustev" "smávvagánda" (".*ustit"r) "skippáár" "viijses" ; 
 
-- LIST HUMAN-LIKE = "beahtu" "beargalat" "eŋgel" "háldi" "hearrá" "immeel" "stállu" "suodjalus#eŋgel" "ulda" ; #
+- LIST HUMAN-LIKE = "beahtu" "beargalat" "eŋgel" "háldi" "hearrá" "immeel" "stállu" "suodjalus#eŋgel" "ulda" ; 
 
 - Sets for animals
 
@@ -633,8 +629,6 @@ GEN-ANIMAL, PREDATOR. BIRD, ...
 ### Border sets and their complements
 
 ### Syntactic sets
-
-ALLSYNTAG
 
 *These were the set types.*
 
@@ -753,6 +747,8 @@ Sg1 for PrfPrc
 
 ## Plural objects
 
+### ConNeg Better: Target whatever is there and should have been a conneg. !!!
+
 msyn-v-sg3-conneg
 
 msyn-v-du3-conneg
@@ -844,8 +840,4 @@ real-pisso-pissood
 The gramamrchecker file ends here.
 
 * * *
-
 <small>This (part of) documentation was generated from [tools/grammarcheckers/grammarchecker.cg3](https://github.com/giellalt/lang-smn/blob/main/tools/grammarcheckers/grammarchecker.cg3)</small>
-
----
-
