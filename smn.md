@@ -7884,6 +7884,9 @@ a rules
 * *lo^RVh^RCá^WG^VHIGH^RLEN>im*
 * *luuv0á000>im*
 
+* *ho^RVrtte*
+* *hu0rttijn*
+
 ### ä rules
 
 **RULE: Monophthongisation rule iä:ee 1** =  
