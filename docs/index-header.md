@@ -3,7 +3,7 @@
 [![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)](https://giellalt.github.io/MaturityClassification.html)
 [![License](https://img.shields.io/github/license/giellalt/lang-smn)](https://github.com/giellalt/lang-smn/blob/main/LICENSE)
 [![Issues](https://img.shields.io/github/issues/giellalt/lang-smn)](https://github.com/giellalt/lang-smn/issues)
-[![Build status](https://github.com/giellalt/lang-smn/workflows/Speller%20CI+CD/badge.svg)](https://github.com/giellalt/lang-smn/actions)
+[![Build Status](https://divvun-tc.thetc.se/api/github/v1/repository/giellalt/lang-smn/main/badge.svg)](https://github.com/giellalt/lang-smn/actions)
 
 This page documents the work on the [Inari Saami grammatical analyser](http://github.com/giellalt/lang-smn). 
 
