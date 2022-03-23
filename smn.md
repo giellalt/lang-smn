@@ -9680,7 +9680,9 @@ This is a file generating Inari Sámi date expressions.
 I N A R I    S A A M I    G R A M M A R    C H E C K E R
 ================================================================== 
 
-Development setup for running the grammarchecker 
+# Development setup
+
+Compiling the grammarchecker:
 
 ```
 cd $GTLANGS/lang-smn
@@ -9692,17 +9694,16 @@ make dev
 ```
 
 Then edit/test as follows:   
+
 ```
 echo "Sun ij puátá." | sh modes/smngram.mode  
 ```
 
-Hint: There are very many modes in the `modes` folder, look at them.
-
+There are very many modes in the `modes` folder, look at them.
 If you use emacs and have cg-mode installed, you may run analysis with C-c C-i / C-c C-c
-
 See also [the documentation on grammarchecker testing](https://giellalt.github.io/proof/gramcheck/doc/grammarchecker_testing.html)
 
-# DELIMITERS, TAGS AND SETS
+# Delimiters, tags and sets
 
 Sentence delimiters are the following: <.> <!> <?> <...> <¶>
 
@@ -9720,6 +9721,7 @@ EOS
 
 ### Parts of speech tags
 
+-
 N
 A
 Adv
@@ -9733,10 +9735,11 @@ Pr
 Pcle
 Num
 Interj
+
+-
 ABBR
 ACR
 WEB
-
 CLB
 LEFT
 RIGHT
@@ -9748,6 +9751,7 @@ COMMA
 
 ### Tags for POS sub-categories
 
+-
 Pers
 Dem
 Interr
@@ -10314,10 +10318,10 @@ GEN-ANIMAL, PREDATOR. BIRD, ...
 
 name convention for error tags: ´´&errortype-errorsubtype-is-shouldbe´´
 
-- ===========================================================
-- ===========================================================
-- ===========================================================
  
+
+ 
+
  
 
 RULE SECTION
@@ -10327,157 +10331,215 @@ RULE SECTION
 - Example marking: Correct = #$
 - Example marking: Finnish = #f
 
-# Verb agreement rules
+**Speller suggestions rule** ADD @typo - make sure the suggestions survive the cg mangling:
 
-## Singulaari
+## Verb agreement rules
 
-### Sg1
+### Singulaari
 
-msyn-agr-other-sg1
+#### Sg1
 
-msyn-agr-other-sg1
+**Agreement rule:** msyn-agr-other-sg1, *Mun puátá/puáđám*
 
-msyn-v-prfprc-sg1
+**Agreement rule:** msyn-agr-other-sg1
 
-Subject to the left
+**Agreement rule:** msyn-v-prfprc-sg1, Subject to the left
 
-msyn-v-actio-sg1
-Subject to the left
+**Agreement rule:** msyn-v-actio-sg1, Subject to the left
 
-### Sg2
+#### Sg2
 
-nmsyn-agr-other-sg2
-Subject to the left
+**Agreement rule:** msyn-agr-other-sg2, Subject to the left, *Tun puátá/puáđah*
 
-### Sg3
+#### Sg3
 
-msyn-agr-other-sg3
-Subject to the left
+**Agreement rule:** msyn-agr-other-sg3, Subject to the left, *Toh puátá/puátih.*
 
-## Duaali
+### Duaali
 
-### Du1
+#### Du1
 
-msyn-agr-other-du1
+**Agreement rule:** msyn-agr-other-du1
 
-### Du2
+#### Du2
 
-## Pluraali
+**Agreement rule:** 
 
-### Pl1
+### Pluraali
 
-msyn-agr-other-pl1
+#### Pl1
 
-### Pl2
+**Agreement rule:** msyn-agr-other-pl1, *Mij puátá/puáttip.*
 
-syn-agr-other-pl2
+#### Pl2
 
-### Pl3
+**Agreement rule:** syn-agr-other-pl2, *Tij puátá/puátivetteđ.*
+
+#### Pl3
 
 Sg3/Pl3 errors: Suomâkielâ sárnumkielâ epikongruens maaŋgâlovo 3. persovnist 
 
-Subject to the right
+**Agreement rule:** Subject to the right, msyn-agr-sg3-pl3
 
-msyn-agr-sg3-pl3
+**Agreement rule:** 
+
+**Agreement rule:** 
 
 ## Suomen nessesiivirakenne
 
-msyn-ness-acc-nom
+**Agreement rule:** msyn-ness-acc-nom
 
-msyn-ness-acc-nom
+**Agreement rule:** msyn-ness-acc-nom
 
-## Inf should be Actio Essive
+**Agreement rule:** 
 
-msyn-orrood-inf-actioess
+**Agreement rule:** 
 
-## Existential sentences -- same as next?
+### Inf should be Actio Essive
 
-msyn-ext-sg3-pl3
+**Agreement rule:** msyn-orrood-inf-actioess
 
-msyn-extv-sg3-pl3
-Iäruh omâstemráhtusist: mieđetteijee já kieldee häämi
+**Agreement rule:** 
+
+### Existential sentences -- same as next?
+
+**Agreement rule:** msyn-ext-sg3-pl3
+
+**Agreement rule:** msyn-extv-sg3-pl3, Iäruh omâstemráhtusist: mieđetteijee já kieldee häämi
 
 ### Verb in plural 
 
-msyn-extneg-sg3-pl3
+**Agreement rule:** 
+
+**Agreement rule:** msyn-extneg-sg3-pl3
+
+**Agreement rule:** 
 
 ### Existential sentences and habitives
 
-## Postpositions
+**Agreement rule:** 
 
-msyn-po-nom-gen
+**Agreement rule:** 
 
-msyn-po-placc-plgen
+**Agreement rule:** 
 
-## Predicative
+**Agreement rule:** 
 
-msyn-pred-acc-nom
+**Agreement rule:** 
 
-### Agreement error with predicative
+### Postpositions
 
-msyn-predagr-pl3-sg3
+**Agreement rule:** msyn-po-nom-gen
 
-msyn-adj-attr-pred
+**Agreement rule:** 
 
-## Confusion rules
+**Agreement rule:** msyn-po-placc-plgen
 
-Sg1 for PrfPrc
+### Predicative
 
-## Plural objects
+**Agreement rule:** msyn-pred-acc-nom
+
+#### Agreement error with predicative
+
+**Agreement rule:** msyn-predagr-pl3-sg3
+
+**Agreement rule:** msyn-adj-attr-pred
+
+**Agreement rule:** 
+
+### Confusion rules
+
+**Agreement rule:** Sg1 for PrfPrc
+
+### Plural objects
+
+**Agreement rule:** 
+
+**Agreement rule:** 
 
 ### ConNeg Better: Target whatever is there and should have been a conneg. !!!
 
-msyn-v-sg3-conneg
+**Agreement rule:** msyn-v-sg3-conneg
 
-msyn-v-du3-conneg
+**Agreement rule:** msyn-v-du3-conneg
 
-msyn-dem-locattr-gen
+**Agreement rule:** 
 
-msyn-obj-plnom-placc	
+**Agreement rule:** msyn-dem-locattr-gen
+
+**Agreement rule:** msyn-obj-plnom-placc	
 
 ### Acc shall be Nom
 
-syn-top-placc-plnom 
+**Agreement rule:** syn-top-placc-plnom 
+
+**Agreement rule:** 
+
+**Agreement rule:** 
 
 ### Acc shall be Ill
 
-msyn-obj-acc-ill
+**Agreement rule:** msyn-obj-acc-ill
 
-### Inarinsaamenkielisiä nimiä käytetään vähän
+**Agreement rule:** 
 
-msyn-top-placc-plnom
+**Agreement rule:** 
 
-### Plain object of TV in Nom shall be Acc
+**Agreement rule:** 
 
-msyn-obj-sgnom-sgacc
+**Agreement rule:** 
 
-msyn-obj-plnom-placc
+#### Inarinsaamenkielisiä nimiä käytetään vähän
+
+**Agreement rule:** msyn-top-placc-plnom
+
+#### Plain object of TV in Nom shall be Acc
+
+**Agreement rule:** msyn-obj-sgnom-sgacc
+
+**Agreement rule:** 
+
+**Agreement rule:** 
+
+**Agreement rule:** msyn-obj-plnom-placc
 
 ### Imperative errors
 
 Suomâkielâ imperatiiv mieđetteijee häämist, mast objekt sajehäämmin lii maaŋgâlovo nominatiiv mut sämikielâst akkusatiiv:
 
-msyn-imp-nom-acc
+**Agreement rule:** msyn-imp-nom-acc
 
-## Infinitive errors
+**Agreement rule:** 
 
-look at this
-
-### Accusative subjects in passive 
+#### Accusative subjects in passive 
 
 b) Suomâkielâ partitiiv passiivráhtusijn; sämikielâst passiiv ohtâvuođâst lii nominatiiv já verbâ maaŋgâlovvoost.
 
-msyn-pass-accsubj-nomsubj
+**Agreement rule:** msyn-pass-accsubj-nomsubj
+
+**Agreement rule:** 
+
+**Agreement rule:** 
+
+**Agreement rule:** 
 
 ## Noun phrase internal phenomena 
 
 ### Noun phrase possessor
 
+**Agreement rule:** 
+
 ### Noun phrase complements
 
 N + Ill
 
-msyn-ncompl-ess-sgill
+**Agreement rule:** msyn-ncompl-ess-sgill
+
+**Agreement rule:** 
+
+**Agreement rule:** 
+
+**Agreement rule:** 
 
 ### Quantor phrases
 
@@ -10487,17 +10549,19 @@ msyn-quant-gen-nom
 
 Det + N agreement
 
-msyn-det-nom-acc
+**Agreement rule:** msyn-det-nom-acc
 
 Attributive forms
 
 mii + nominative should be mii + acc
 
-msyn-mii-sgnom-placc
+**Agreement rule:** msyn-mii-sgnom-placc
+
+**Agreement rule:** 
 
 ### Adjectives in attributive position
 
-msyn-adj-gen-nom
+**Agreement rule:** msyn-adj-gen-nom
 
 ## Numeral phrases
 Commented out, Comment in to test the 2-6 and 7+ sets...
@@ -10505,15 +10569,15 @@ Commented out, Comment in to test the 2-6 and 7+ sets...
 msyn-num-par-gen
 The rule is: 2-6 + gensg, 7- + par
 
-msyn-num-par-gen
+**Agreement rule:** msyn-num-par-gen
 
-msyn-num-gen-par
+**Agreement rule:** msyn-num-gen-par
 
-msyn-num-acc-par
+**Agreement rule:** msyn-num-acc-par
 
 ## Lexical rules
 
-real-pisso-pissood
+**Realword error rule:** real-pisso-pissood
 
 The gramamrchecker file ends here.
 
