@@ -28,7 +28,7 @@
 * **LEXICON FirstComponent**
 * **pessijâš+N+Cmp/SgNom+Sem/Time:pessijâš Rnoun ;**
 * **luáppijâš+N+Cmp/SgNom+Sem/Time:luáppijâš Rnoun ;**
-helduv+N+Cmp/SgNom+Sem/Time:helduv Rnoun ; helduv+N+Cmp/SgNom+Sem/Time:helduv Rnoun ;    * ...
+* ...
 
 * **LEXICON MiddleNouns**
 * **njune+N+Cmp/Sh+Sem/Hum:njun Rnoun ;**

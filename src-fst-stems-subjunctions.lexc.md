@@ -9,7 +9,7 @@ LEXICON Subjunction
 * **tassaaš% ko Cs ;**
 * **tegu Cs ;**
 * **ete Cs ;**
-jos:jos Cs ; jos:jos Cs ;   * and 2o more
+* and 2o more
 
 * * *
 

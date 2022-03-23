@@ -10,7 +10,7 @@
 * **aa-a Interj ;**
 * **aamen Interj "aamen" ;**
 * ai Interj "hoi" ;
-amahmis Interj "ai niin" ; amahmis Interj "ai niin" ;    * ...
+* ...
 * het-het Interj ;
 * kulâ Interj ;
 * na Interj "no" ;

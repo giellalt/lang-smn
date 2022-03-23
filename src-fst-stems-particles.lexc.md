@@ -11,7 +11,7 @@
 * **ama pcle "kai" ;**
 * **amahân pcle ;**
 * **amal pcle "kai" ;**
-ansun:ansun pcle "että" ; ansun:ansun pcle "että" ;   * ... and 60 more
+* ... and 60 more
 ges pcle ;
 kes pcle ;
 

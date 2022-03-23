@@ -187,7 +187,8 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 * *su^RVkk4á^SV^WG^CLEN^SLEN>st*
 * *su0hháá000>st*
 
-**RULE: t4:đ and c4, č4, p4 gradation for tt:đ etc. ** 
+**RULE: t4:đ and c4, č4, p4 gradation for tt:đ etc.** 
+čuottâlm:čuođâlm njuottâs 
 
 * *ru^RVtt4â^WG^RLEN>*
 * *ruu0đâ00>*
@@ -242,21 +243,21 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 * *kahhaan^CSH^SVSH>ân*
 * *ka0h0an00>ân*
 
-**RULE: tt:t  - final consonant and consonant gradation** = consonant gradation, and 3syll verbs in -tt lose t in front of cns-initial suff
+**RULE: tt:t  - final consonant and consonant gradation**  = consonant gradation, and 3syll verbs in -tt lose t in front of cns-initial suff
 
 * *las^RCe^SVtt^CLEN^SLEN>*
 * *lassee0t00>*
 
 **RULE: nnj to nj shortening weak grade and consonant shortening** =  special rule, e.g. konnjâl -> konjâlân puánnjá
 
-**RULE: Word final consonant deletion                 ** = for vaskâm:vaaskâ
+**RULE: Word final consonant deletion** = for vaskâm:vaaskâ
 
 * *va^RVskâm^FCD^RLEN*
 * *vaaskâ000*
 * *njuolgâd^FCD^RVSH*
 * *njuolgâ000*
 
-**RULE: Final m in stems, smm to sm  ** = 
+**RULE: Final m in stems, smm to sm** = 
 
 **RULE: Wordfinal consonants part 1**  e%^RVlâčč
 1)
@@ -321,7 +322,7 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 
 **RULE: Consonant lengthening after xx:x and xy:zy weak grade with x4 on upper side** =   k4, č, p4  kukse:kuvssijn  
 
-**RULE: Consonant lengthening xy:xyy ** = 
+**RULE: Consonant lengthening xy:xyy**  ( fix: døp Cz om til Cx)
 
 ### Stem consonant and suffix consonant rules
 
@@ -336,7 +337,7 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 
 **RULE: Clitic devoicing** =  for focus particle bá to pá after unvoiced stem cns.
 
-**RULE: Gerund devoicing ** =   dijn to tijn after stems in tšs
+**RULE: Gerund devoicing** =   dijn to tijn after stems in tšs
 
 ## Vowel rules
 
@@ -529,20 +530,20 @@ a rules
 
 **RULE: Root vowel aa:áá in C-stems with stemvowel u, part 2** =  ahhu:ááhu
 
-**RULE: ie to iä in Illative and Sg3 ** =  kiem´ni -> kiämnán, veerdi : viärdán peerru2%^CLEN%^VHIGH%^RVSH%>o
+**RULE: ie to iä in Illative and Sg3** =  kiem´ni -> kiämnán, veerdi : viärdán peerru2%^CLEN%^VHIGH%^RVSH%>o
 
 **RULE: Diphthongisation uo:uá** =   
 
-**RULE: ye to uá and uo, part 1 ** =  Part 1 of ye to uá for kyeli : kuálán  
+**RULE: ye to uá and uo, part 1** =  Part 1 of ye to uá for kyeli : kuálán  
 
 **RULE: ye to uá, part 2** =  Part 2 of ye to uá for kyeli : kuálán
 
 * *kyel^RCi3^EA^CLEN>m*
 * *kuállá00>m*
 
-**RULE: ye to uo, part 2 ** =  Part 2 of ye to uá for kyeli : kuolijn
+**RULE: ye to uo, part 2** =  Part 2 of ye to uá for kyeli : kuolijn
 
-**RULE: uá to ye and uo to ye, part 1 ** =  Part 1 luámmán : lyeme čuággás%^ÁI%^WG%^RLEN%>
+**RULE: uá to ye and uo to ye, part 1** =  Part 1 luámmán : lyeme čuággás%^ÁI%^WG%^RLEN%>
 
 * *vuolle^CLEN>en*
 * *vyelle0>en*

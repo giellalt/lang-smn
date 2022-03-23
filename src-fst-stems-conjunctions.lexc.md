@@ -9,7 +9,7 @@
 * **ađai Cc "taikka" ;**
 * **adai Cc "tai" ;**
 * **tâi Cc ;**
-teikkâ Cc ; teikkâ Cc ;   * ...
+* ...
 
 * * *
 
