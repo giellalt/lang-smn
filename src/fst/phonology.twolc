@@ -269,9 +269,9 @@ Cx:Cy <=> Vow: _  Cz:Cy WeakGrade %^CLEN: ; !RULE RC
 
 
 
-"t4:đ and c4, č4, p4 gradation for tt:đ etc." 
+"t4:đ and c4, č4, p4 gradation for tt:đ etc."
 !! **RULE: @RULENAME@** 
-Cy:Cz <=> Cx: _  WeakGrade ; !RULE RC !! čuottâlm:čuođâlm njuottâs 
+Cy:Cz <=> Cx: _  WeakGrade ;  !! čuottâlm:čuođâlm njuottâs 
        where Cx in ( t  c  č  p  ) 
              Cy in ( t4 c4 č4 p4 ) 
              Cz in ( đ  s  j  v  ) 
@@ -381,7 +381,7 @@ Cx:0 <=> Vow: _ Cy: WeakGrade \%^CLEN: ; !RULE RC !! 1) when WG
  
 
 "tt:t  - final consonant and consonant gradation"
-!! **RULE: @RULENAME@** = consonant gradation, and 3syll verbs in -tt lose t in front of cns-initial suff
+!! **RULE: @RULENAME@**  = consonant gradation, and 3syll verbs in -tt lose t in front of cns-initial suff
 t:0 <=> Vow:                _ [t:|t4:] WeakGrade \%^CLEN: ; !RULE SC !! 1) WG, not CLEN
         Vow:                _ [t:|t4:] ConsonantShorting \%^CLEN:  ; !RULE SC !! 2) CSH
         [RealVow:|%^SV:|%>] _ [t:|t4:] (i6:) Triggers:* [.#.| %>] \Vow  ; !RULE SC !! 3) uáivátt : uáivát
@@ -398,7 +398,7 @@ n:0 <=> n _ j ConsonantShorting \%^CLEN: ;!RULE RC !! 1)  vinnjooh:vinjohân
         n _ j WeakGrade \%^CLEN: ; !RULE RC !! 2)lonnjâ:loonjáin 
 
 
-"Word final consonant deletion"                 
+"Word final consonant deletion"
 !!  **RULE: @RULENAME@** = for vaskâm:vaaskâ
 Cx:0 <=> _ ([%^ÁI:|%^ÁE:]) %^FCD: ;  !RULE SC
           where Cx in (d n m t v j s š) ;
@@ -410,7 +410,7 @@ Cx:0 <=> _ ([%^ÁI:|%^ÁE:]) %^FCD: ;  !RULE SC
 !!€ njuolgâ000
 
 	
-"Final m in stems, smm to sm"  
+"Final m in stems, smm to sm"
 !!  **RULE: @RULENAME@** = 
 m:0 <=>  s _ m [Triggers: - %^FCD:]* [.#.|%>]   ; !RULE SC !! 1) puttáás_min 
          s _   [Triggers: - %^FCD:]*      %>  m ; !RULE SC !! 2) stoorgâs_mân  sto%^RVrgâsm
@@ -538,8 +538,8 @@ j:i <=> Vow: _ %^RC: :Vow (Cns:+) (%^SV:) Cns:* %^CLEN: ([%^RVSH:|%^RLEN:]) (%^S
         matched ;
 
 
-"Consonant lengthening xy:xyy" ! fix: døp Cz om til Cx
-!! **RULE: @RULENAME@** = 
+"Consonant lengthening xy:xyy"
+!! **RULE: @RULENAME@**  ( fix: døp Cz om til Cx)
 %^RC:Cx <=> Vow:  Cy:  Cz: _ Vow:+ Cns:+ %^CLEN:  ;  !RULE RC
         where Cy in ( k m  m ŋ h h  h l l l h r r r v v ) 
               Cz in ( s p  s k c t  č c č p c c š t c č ) 
@@ -583,7 +583,7 @@ Cx:Cy <=> :UnvoicedCns (UnvoicedCns:) Triggers:* %> #: _ ;
       	    Cy in (p  t  k  )
 	    matched ;
 
-"Gerund devoicing" 
+"Gerund devoicing"
 !! **RULE: @RULENAME@** =   dijn to tijn after stems in tšs
 d:t <=> [t|š|s] %> Triggers:* _ i j n ;
 
@@ -631,6 +631,7 @@ Vy:0 <=> Vx: _  Cns:+ [ Cns: - %^RC:0 ] [Vow: - u2:]  %^WG: (%^CLEN:) %^SVLOW: %
 
 
 ! čäällu2^VBACK^RVSH>čč>im
+
 "Long vowel shortening"
 !! **RULE: @RULENAME@** = (example?), no ^CSH, since that gives Vy:0
 Vy:0 <=> Vx: _ [Cns: - č:] Cns:* (%^RC:) [Vow: - u2:]  %^WG:  %^RVSH: %^SVLOW: [%>|.#.] \e ; !RULE RV !! 2st stems
@@ -1038,7 +1039,7 @@ a:á <=> [Cns|.#.|#] _ %^RV: Cns: Cns: u [š|ž] %^CSH: (%^RLEN:) [%>|.#.]  ; !R
 
 
 
-"ie to iä in Illative and Sg3" 
+"ie to iä in Illative and Sg3"
 !! **RULE: @RULENAME@** =  kiem´ni -> kiämnán, veerdi : viärdán peerru2%^CLEN%^VHIGH%^RVSH%>o
 e:ä <=> [i | e: ] _  Cns:+ Vow:  [%^EA:|%^EX:] Triggers:* [%>|.#.] ;  !RULE RV 
         [i | e: ] _  Cns:+ Vow:  Triggers:* %^VHIGH:  [%>|.#.] ;  !RULE RV 
@@ -1058,7 +1059,7 @@ o:á <=> u _ Cns:+ u: [i4: | j | š | ž] %^WG: ([%^RVSH:|%^RLEN:]) [%>|.#.] ;  
         u _ Cns:+ [o|u|á|i|u2:] %^VHIGH: (%^RVSH:) [%>|.#.] ; !RULE RV  !! 4) vuoll- > vuállus ruáttá
 
 
-"ye to uá and uo, part 1" 
+"ye to uá and uo, part 1"
 !! **RULE: @RULENAME@** =  Part 1 of ye to uá for kyeli : kuálán  
 y:u <=> _ e:  Cns:+ Vow:  [%^EA:|%^EX:] ([%^CSH:| %^CLEN:]) (%^RLEN:)   [%>|.#.] ;   !RULE RV 
         _ :o  Cns:+ :i (%^WG:) (%^CLEN:) (%^VBACK:|%^VHIGH:) ([%^RVSH: |%^RLEN:] ) %> [i:|j|i3:|š|ž] ; !RULE RV  !syej%^RCi%^RVSH%^CLEN%>in
@@ -1080,7 +1081,7 @@ e:á <=> y: _  Cns:+ [Vow: - u2:]  [%^EA:|%^EX:] (%^CSH:|%^CLEN:|%^WG:) (%^RLEN:
 !!€ kyel^RCi3^EA^CLEN>m
 !!€ kuállá00>m
 
-"ye to uo, part 2 "
+"ye to uo, part 2"
 !! **RULE: @RULENAME@** =  Part 2 of ye to uá for kyeli : kuolijn
 e:o <=> y: _  Cns:+ :i (%^WG:) (%^CLEN:) (%^VBACK:) ([%^RVSH:|%^RLEN:]) %> [i:|j |i3:| š | ž ] ; !RULE RV 
         y: _  Cns:+ :i (%^WG:) (%^CLEN:)  %^VBACK:  ([%^RVSH:|%^RLEN:]) %> [m|h] ;  !RULE RV 
@@ -1090,7 +1091,7 @@ e:o <=> y: _  Cns:+ :i (%^WG:) (%^CLEN:) (%^VBACK:) ([%^RVSH:|%^RLEN:]) %> [i:|j
         y: _  Cns:+ i2:i %> [i|i3:i|Cns]  ;  !RULE RV 
         y: _  Cns:+  u2:u  Triggers:*   %>  ;  !RULE RV 
 
-"uá to ye and uo to ye, part 1" 
+"uá to ye and uo to ye, part 1"
 !! **RULE: @RULENAME@** =  Part 1 luámmán : lyeme čuággás%^ÁI%^WG%^RLEN%>
 u:y <=> _ á: Cns:+ á: (%^SV:) [l|m:|s|n:|r] [%^ÁI:|%^ÁE:] (%^FCD:) %^WG: [%^RLEN:|%^RVSH:] ([%^SVSH:|%^SLEN:]) [%>|.#.] ; !RULE RV 
         _ o: Cns:+ [e ([%^WG:|%^CLEN:]) %> e|i %^CSH: %> h] ; !RULE RV 
