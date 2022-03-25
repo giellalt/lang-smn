@@ -10363,7 +10363,7 @@ RULE SECTION
 
 #### Du2
 
-**Agreement rule:** 
+**Agreement rule:** msyn-agr-other-du2 *Tuoi koolgâi/kolgáid tääl algâttiđ monnii sämmilâškampanja.*
 
 ### Pluraali
 
@@ -10381,125 +10381,127 @@ Sg3/Pl3 errors: Suomâkielâ sárnumkielâ epikongruens maaŋgâlovo 3. persovni
 
 **Agreement rule:** Subject to the right, msyn-agr-sg3-pl3
 
-**Agreement rule:** 
+**Agreement rule:** msyn-agr-other-pl3
 
-**Agreement rule:** 
+**Agreement rule:** msyn-agr-other-pl3
 
 ## Suomen nessesiivirakenne
 
 **Agreement rule:** msyn-ness-acc-nom
 
+**Agreement rule:** msyn-ness-acc-nom *Muu ličij/liččim kolgâm porgâđ taam tállán.* (???)
+
+**Agreement rule:** msyn-ness-acc-nom *Ij-uv/Jieh-uv tuu/tun kolgâm vyelgiđ suáluikuávlun Jennyin?*
+
 **Agreement rule:** msyn-ness-acc-nom
 
-**Agreement rule:** 
-
-**Agreement rule:** 
+**Agreement rule:** msyn-ness-acc-nom *Suu/Sun koolgâi forgâ porgâđ miärádâs.*
 
 ### Inf should be Actio Essive
 
-**Agreement rule:** msyn-orrood-inf-actioess
+**Agreement rule:** msyn-orrood-inf-actioess *Mun orom leđe/lemin ennuv velgus anarâškielân.*
 
-**Agreement rule:** 
+**Agreement rule:** msyn-plobj-nom-acc *Nubeh tobdeh kuobbâreh/kuobbârijd ivneest.*
 
 ### Existential sentences -- same as next?
 
-**Agreement rule:** msyn-ext-sg3-pl3
+**Agreement rule:** msyn-ext-sg3-pl3 *Must lii/láá uđđâ autoh.*
 
-**Agreement rule:** msyn-extv-sg3-pl3, Iäruh omâstemráhtusist: mieđetteijee já kieldee häämi
+**Agreement rule:** msyn-extv-sg3-pl3, *Iäruh omâstemráhtusist: mieđetteijee já kieldee häämi.*
 
 ### Verb in plural 
 
-**Agreement rule:** 
+**Agreement rule:** msyn-extv-numeral-sg3-pl3
 
 **Agreement rule:** msyn-extneg-sg3-pl3
 
-**Agreement rule:** 
+**Agreement rule:** msyn-extneg-sg3-pl3
 
 ### Existential sentences and habitives
 
-**Agreement rule:** 
+**Agreement rule:** msyn-extsubj-ill-nom
 
-**Agreement rule:** 
+**Agreement rule:** msyn-extsubj-ill-nom *Šiljoost láá poccuuh/poccuid.*
 
-**Agreement rule:** 
+**Agreement rule:** msyn-extsubj-acc-nom
 
-**Agreement rule:** 
+**Agreement rule:** msyn-extv-sg3-pl3 
 
-**Agreement rule:** 
+**Agreement rule:** msyn-extsubj-ill-nom
 
 ### Postpositions
 
 **Agreement rule:** msyn-po-nom-gen
 
-**Agreement rule:** 
+**Agreement rule:** msyn-po-nom-gen
 
-**Agreement rule:** msyn-po-placc-plgen
+**Agreement rule:** msyn-po-placc-plgen *Vuoigâdvuotä nubástittiđ kielâ jieijâs táárbuid/táárbui mield.*
 
 ### Predicative
 
-**Agreement rule:** msyn-pred-acc-nom
+**Agreement rule:** msyn-pred-acc-nom *Taah láá čielgâ aašijd/ááših.*
 
 #### Agreement error with predicative
 
-**Agreement rule:** msyn-predagr-pl3-sg3
+**Agreement rule:** msyn-predagr-pl3-sg3 *Iä/Ij lah toorjâ.*
 
 **Agreement rule:** msyn-adj-attr-pred
 
-**Agreement rule:** 
+**Agreement rule:** msyn-adj-attr-pred *Mun lam fiskis/fiskâd.*
 
 ### Confusion rules
 
-**Agreement rule:** Sg1 for PrfPrc
+**Agreement rule:** msyn-v-sg1-prfprc *Sun lii huunjâm/huunnjâm.*
 
 ### Plural objects
 
-**Agreement rule:** 
+**Agreement rule:** msyn-plobj-nom-acc
 
-**Agreement rule:** 
+**Agreement rule:** msyn-plobj-nom-acc
 
 ### ConNeg Better: Target whatever is there and should have been a conneg. !!!
 
-**Agreement rule:** msyn-v-sg3-conneg
+**Agreement rule:** msyn-v-sg3-conneg *Sun ij lah/lii.*
 
-**Agreement rule:** msyn-v-du3-conneg
+**Agreement rule:** msyn-v-du3-conneg *Noomah iä vuáđuduv/vuáđuduu.*
 
-**Agreement rule:** 
+**Agreement rule:** msyn-v-sg3-conneg *Sun ij puávtáččij/puávtáččii vyelgiđ.*
 
 **Agreement rule:** msyn-dem-locattr-gen
 
-**Agreement rule:** msyn-obj-plnom-placc	
+**Agreement rule:** msyn-obj-plnom-placc (6 rules) *Lam valjim taah säänih/saanijd.*
 
 ### Acc shall be Nom
 
-**Agreement rule:** syn-top-placc-plnom 
+**Agreement rule:** syn-top-placc-plnom *Anarâškielâlijd/Anarâškielâliih noomâid kiävttoo/kiävttojeh uccáá.*
 
-**Agreement rule:** 
+**Agreement rule:**  msyn-top-nom-acc
 
-**Agreement rule:** 
+**Agreement rule:** msyn-top-nom-acc 
 
 ### Acc shall be Ill
 
 **Agreement rule:** msyn-obj-acc-ill
 
-**Agreement rule:** 
+**Agreement rule:** msyn-obj-acc-ill *Ideologia kuáská kielâid/kieláid.*
 
-**Agreement rule:** 
+**Agreement rule:** msyn-obj-acc-ill
 
-**Agreement rule:** 
+**Agreement rule:** msyn-obj-acc-ill
 
-**Agreement rule:** 
+**Agreement rule:** msyn-obj-acc-ill
 
 #### Inarinsaamenkielisiä nimiä käytetään vähän
 
-**Agreement rule:** msyn-top-placc-plnom
+**Agreement rule:** msyn-top-placc-plnom *tiäđuid/tiäđuh ij kavnuu.*
 
 #### Plain object of TV in Nom shall be Acc
 
-**Agreement rule:** msyn-obj-sgnom-sgacc
+**Agreement rule:** msyn-obj-sgnom-sgacc *Mun juuvâm ain mielkki/mielhi.*
 
-**Agreement rule:** 
+**Agreement rule:** msyn-obj-sgnom-sgacc *Mun lam ain juunâm mielkki/mielhi.*
 
-**Agreement rule:** 
+**Agreement rule:** msyn-obj-sgnom-sgacc)
 
 **Agreement rule:** msyn-obj-plnom-placc
 
@@ -10509,7 +10511,9 @@ Suomâkielâ imperatiiv mieđetteijee häämist, mast objekt sajehäämmin lii m
 
 **Agreement rule:** msyn-imp-nom-acc
 
-**Agreement rule:** 
+**Agreement rule:** msyn-imp-nom-acc
+
+Outcommented...
 
 #### Accusative subjects in passive 
 
@@ -10517,29 +10521,29 @@ b) Suomâkielâ partitiiv passiivráhtusijn; sämikielâst passiiv ohtâvuođâs
 
 **Agreement rule:** msyn-pass-accsubj-nomsubj
 
-**Agreement rule:** 
+**Agreement rule:** msyn-pass-accsubj-nomsubj: *Sämikielâlijd/Sämikielâliih nomâttâsâid kiävttojeh uccáá.*
 
-**Agreement rule:** 
+**Agreement rule:** msyn-pass-accsubj-nomsubj *Tävirijd/Tävireh láppojii ääitist.*
 
-**Agreement rule:** 
+**Agreement rule:** msyn-pass-accsubj-nomsubj: *Páárnán iä adeluu talkkâsijd/talkkâseh tipšopeeivi ääigi.*
 
 ## Noun phrase internal phenomena 
 
 ### Noun phrase possessor
 
-**Agreement rule:** 
+**Agreement rule:** msyn-posspl-acc-gen. *Siijđoid/Siijđoi lehâstem tábáhtuvá itten.*
 
 ### Noun phrase complements
 
 N + Ill
 
-**Agreement rule:** msyn-ncompl-ess-sgill
+**Agreement rule:** msyn-ncompl-ess-sgill: *Must lii tárbu toorjân/torjui.*
 
-**Agreement rule:** 
+**Agreement rule:** msyn-ncompl-ess-sgill: *Maggaar toorjân/torjui sist ličij tárbu.*
 
-**Agreement rule:** 
+**Agreement rule:** msyn-ncompl-placc-plill: *Motomeh suomâkielâ vaikuttâsah/tábáhtussáid tábáhtusâid láá tuhhiittum anarâškielân.*
 
-**Agreement rule:** 
+**Agreement rule:** msyn-ncompl-placc-plill
 
 ### Quantor phrases
 
@@ -10549,19 +10553,19 @@ msyn-quant-gen-nom
 
 Det + N agreement
 
-**Agreement rule:** msyn-det-nom-acc
+**Agreement rule:** msyn-det-nom-acc: Puurâ tuoh/tuoid rusinijd!
 
 Attributive forms
 
 mii + nominative should be mii + acc
 
-**Agreement rule:** msyn-mii-sgnom-placc
+**Agreement rule:** msyn-mii-sgnom-placc: Mii historjá/historjáid taat lii
 
 **Agreement rule:** 
 
 ### Adjectives in attributive position
 
-**Agreement rule:** msyn-adj-gen-nom
+**Agreement rule:** msyn-adj-gen-nom (A.Gen + N.Nom)
 
 ## Numeral phrases
 Commented out, Comment in to test the 2-6 and 7+ sets...
@@ -10569,11 +10573,11 @@ Commented out, Comment in to test the 2-6 and 7+ sets...
 msyn-num-par-gen
 The rule is: 2-6 + gensg, 7- + par
 
-**Agreement rule:** msyn-num-par-gen
+**Agreement rule:** msyn-num-par-gen: Must láá kyehti kyellid/kyele
 
-**Agreement rule:** msyn-num-gen-par
+**Agreement rule:** msyn-num-gen-par:  8 kaandâ/kandâd
 
-**Agreement rule:** msyn-num-acc-par
+**Agreement rule:** msyn-num-acc-par: 8 kaandâ/kandâd
 
 ## Lexical rules
 
