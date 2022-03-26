@@ -37,7 +37,7 @@ exception_lexicons="(flagK)"
 generator_file=src/generator-gt-norm
 
 # How many lemmas maximally for each lexicon:
-lemmacount=10
+lemmacount=20
 
 # Specify path to the dir containing the script used for generation:
 script_dir=$giella_core/scripts
