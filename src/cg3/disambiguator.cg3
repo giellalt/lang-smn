@@ -1428,11 +1428,11 @@ LIST SG-WORD = ("addit" Der/upmi) "almolašvuotâ" "anistupmi" "arvi" "áigemear
 
  # Nominals that probably do not have a Px ('1600-logus').
 
-LIST N-PX = "áddjá" "eeči" "áhkku" "alge" "peenuv" "biigá" "käälis" "enni" "kaavâ" "gáibmi" "pelikyeimi" "hearrá" "nieidâ" "uábbi" "ustev" "räähis" "reŋgâ" "skippáár" "ustev" "ustibaš" "ustit" "viljâ" ;
+LIST N-PX = "äijih" "eeči" "ákku" "alge" "peenuv" "pijgá" "käälis" "enni" "kaavâ" "käimi" "pelikyeimi" "hiärrá" "nieidâ" "uábbi" "ustev" "räähis" "reŋgâ" "skippáár" "ustev" "viljâ" ;
 
  # Nominals that well may have a Px. 
 
-LIST ALU = "alu" "gasu" "govddu" "guhku" "losu" "stuoru" "viiddu" "čieŋu" ;
+LIST ALU = "alo" "kaso" "kobdo" "kuho" "loso" "stuoru" ;
 
 	  # Those are words that only appear in one form, which Nickel calls A/G.
     # They are only in a predicative position.
@@ -1440,7 +1440,7 @@ LIST ALU = "alu" "gasu" "govddu" "guhku" "losu" "stuoru" "viiddu" "čieŋu" ;
 # These are ABBR:
 LIST REAL-TITLE =  "prof" "fil.tri" "hr" "kapt" "korp" "lekt" "lic" "ltn" "mag.art" "mag" "merc" "miss" "Mr" "mr" "Mrs" "mrs" "odont" "oecon" "ossod.dir" ;
  
-LIST TITLE-LIKE = "kästee" "justitiárius" "majesteet" "miss" "naabur" "hiärrá" "ollâpappâ" ;
+LIST TITLE-LIKE = "kästee" "majesteet" "miss" "naabur" "hiärrá" "ollâpappâ" ;
 # Ránnjá Ole Vuolab imašta manne ....
 
 #!! * Sets for nouns as pred
@@ -1448,7 +1448,7 @@ LIST TITLE-LIKE = "kästee" "justitiárius" "majesteet" "miss" "naabur" "hiärr�
 
 # subcategorizing for a particular case
 
-LIST LOC-COMPL-N = "ávki" "árvalus" "dovdu" "ibárdâs" "ovdâmerkkâ" "maainâs" ;
+LIST LOC-COMPL-N = "ávki" "árvalus" "tobdo" "ibárdâs" "ovdâmerkkâ" "maainâs" ;
 
   # Nouns that take a locative
   # There is also an idiomatic use of "ovdâmerkkâ" in the constructions "ovdamearkka dihte" and "ovdâmerkkâ" (Ess).
@@ -1523,9 +1523,9 @@ LIST PROFESSION1 = (".*advokaat"r)  (".*tuámmár"r) "arkeoloog" (".*artist"r) (
 "máilmmimeašttir" "máhttájeaddji" "máttasápmi" "mearraalmmái" "mearraolmmái" "mearrasápmi" "miššoneara" "musea#bargi" "musihkkadahkki" "musihkkár"
 "návetvázzi" "čaittâleijee" "njunuš#jurista" "noaidi" "offiseara" (".*oahpahalli"r) (".*oahpaheaddji"r) "uáppee" ("oaivadit" Der/NomAg) "oaivámuš" "ođashoavda" "ođaslohkki" "ossodatdirektevra" "ossodatdirektøra" 
 "parkeren#fákta" "pedagoga" "plánejeaddji" "poolis" "poolis" ("prentet" Der/NomAg) "proofeet" "professor" 
-"rádjefákta" "rádjesoalddát" "raavâadeleijee" "kundáhovdâ" "reainnár" "rävdee" "reŋgâ" "uáivitoimâtteijee" "rehketdoallodárkkisteaddji" "rehketdoalli" "rehtor" "ruhttejeaddji" "ruvdnaprinsa" ("lihaksia" Der/NomAg)
-"sámediggeráđđi" "sámeduojár" "sárdnideaddji" "sávzadoalli" "sealgeeadni" "sester" "silbarávdi" "snihkkár" "soalddát" "sosionoma" "spábbačiekčanhárjeheaddji" "spábbačiekči" "stipendiáhta" "studeanta" "sundi" "suohkanbáhppa" "suohkan#plánejeaddji" 
-"šibitdoalli" "táksevuoddji" "telefonvástideaddji" "tuollár" "turistaofelaš" "uksafákta" "universitehtalektor"  
+"räjialmai" "rádjesoalddát" "raavâadeleijee" "kundáhovdâ" "reainnár" "rävdee" "reŋgâ" "uáivitoimâtteijee" "rehketdoallodárkkisteaddji" "rehketdoalli" "rehtor" "ruhttejeaddji" "ruvdnaprinsa" ("lihaksia" Der/NomAg)
+"sámediggeráđđi" "sámeduojár" "särnideijee" "savzâkeččee" "selgienni" "sester" "silbârävdee" "snihkkár" "soalddát" "sosionoma" "spábbačiekčanhárjeheaddji" "spábbačiekči" "stipendiaat" "uáppee" "sundi" "suohkanbáhppa" "suohkan#plánejeaddji" 
+"šibitdoalli" "táksevuoddji" "telefonvástideaddji" "tuollár" "turistaofelaš" "uksafákta" "ollâopâttâhlehtor"  
 "váldodoaimmaheaddji" "viessohoiddár" "vuoktačuohppi" ;
 
 SET PROFESSION = PROFESSION1 - Prop ;
@@ -3787,11 +3787,11 @@ REMOVE:Wr1782 REAL-V IF (-1 COPULAS)(0 Nom)(NEGATE 0 PrfPrc)(1 (Pron Rel));
 REMOVE:Wr1784 VFIN IF (*-1 COPULAS BARRIER NOT-ADV-INDEF)(0 Attr)(1 N OR EOS);
 
 #!! * **Wr1785**
-SELECT:Wr1785 (A Attr) IF (*-1 COPULAS BARRIER NOT-ADV-INDEF)(NEGATE 0 REAL-V OR Ord OR N)(1 N OR A);
+REMOVE:Wr1785 (A Sg Nom) IF (*-1 COPULAS BARRIER NOT-ADV-INDEF)(0 A + Attr)(NEGATE 0 REAL-V OR Ord OR N)(1 N OR A);
 	#$ ...de dilli orru leamen earalágan.
 
 #!! * **Wr1785b**
-SELECT:Wr1785 (A Sg Nom) IF (*-1 COPULAS BARRIER NOT-ADV-INDEF)(NEGATE 0 REAL-V OR Ord OR N)(1 EOS);
+REMOVE:Wr1785 (A Attr) IF (*-1 COPULAS BARRIER NOT-ADV-INDEF)(0 A + Sg + Nom)(NEGATE 0 REAL-V OR Ord OR N)(1 EOS);
 	#$ ...de dilli orru leamen earalágan.
 
 #!! * **Wr1786xc**
