@@ -199,10 +199,15 @@
 * ij+V+IV+Neg: NEG ;
 * leđe+V+IV: LEDE ;
 
-Main verbs
+## VGenVerbs
+* väzziđ:vä^RVzz 2SYLL_ID_IV ; vääzin
+* jotteeđ:jo^RVt^RC 2SYLL_JOTTEED_IV ; YAML jođen
 
-Intransitive verbs
-Transitive verbs
+## Main verbs
+
+Intransitive and transitive verbs are marked with sublexica ending in **_IV** orr **_TV**.
+Sublexica without these endings are not yet classified for transitivity, and
+end up *not* receiving *+IV* or *+TV* tags.
 
 * * *
 

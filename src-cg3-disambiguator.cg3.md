@@ -1511,7 +1511,20 @@ The rules are no documented yet
 
 * **r2271** Removes genitive when a transitive verb to the left and you (not if you are a pronoun) are followed by Ill/Loc/Com/Adv: *doalvvui stálu meahccái*
 
-* **AccTV2** Selects accusative: when a transitive verb to the left. No Acc allowed to the left in the sentence (sentenceboundary as a barrier). No Acc allowed to the right (barriers are CC, comma and sentenceboundary). Note that Gen to the right followed by a noun is allowed. You shall not be: route, time, Pron Dem. You are not Acc if you are: Gen-cased Pron or Animate with Ill immediately to your right. No Acc, Com, N Nom or Gerundium allowed immediately to your right. No Gen followed by Po allowed immediately to your right. A SG3-verb is only allowed to your left (barriers excluding everything except NP-heads and adverbs, PrfPrc is also a barrier) if there is a Nom left to the SG3-verb. No vdic allowed immediately to your left. You are not Acc if: you are a Nom-cased Prop, followed by ahte or EOS and the verb found to the left (SV-boundary) is some kind of verbalactivityverb or a humanagentverb.
+* **AccTV2** Selects accusative: when a transitive verb to the left.
+No Acc allowed to the left in the sentence (sentenceboundary as a barrier).
+No Acc allowed to the right (barriers are CC, comma and sentenceboundary).
+Note that Gen to the right followed by a noun is allowed.
+You shall not be: route, time, Pron Dem.
+You are not Acc if you are: Gen-cased Pron or Animate with Ill immediately to your right.
+No Acc, Com, N Nom or Gerundium allowed immediately to your right.
+No Gen followed by Po allowed immediately to your right.
+A SG3-verb is only allowed to your left ...
+(barriers excluding everything except NP-heads and adverbs, PrfPrc is also a barrier)
+if there is a Nom left to the SG3-verb.
+No vdic allowed immediately to your left.
+You are not Acc if: you are a Nom-cased Prop, followed by ahte or EOS
+and the verb found to the left (SV-boundary) is some kind of verbalactivityverb or a humanagentverb.
 
 * **AccTV3** Selects accusative: when transitive verb to the left, if it doesn't find a barrier: comma, Num, real-v, Ess, s-boundary. Acc not allowed to the left of the verb. Not Acc if animate or Gen in front of Ill. Numerals the only Acc allowed to the right. Not Num, time route or adv. Not Com or Ger immediately to the right. Neither Po. Not Acc if sg3-verb to the left without a Nom to its left. Not Pron Dem followed by N, neither Pron Rel followed by time. No vdic immediately to your left. No Nom-cased Prop with some sort of verbal activity to its left is allowed..  
 
