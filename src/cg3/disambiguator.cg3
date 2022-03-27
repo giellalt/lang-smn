@@ -5624,7 +5624,20 @@ REMOVE:r2271 Gen IF (*-1 TRANS-V - ("porgâđ") BARRIER SV-BOUNDARY OR Acc OR CO
 	#% Ja dál mun goittotge lean riegádahttán bártni su boaresvuođa beivviin.
 	#% Leat maid bargame dálá boazodoallolága ođastemiin.
 
-#!! * **AccTV2** Selects accusative: when a transitive verb to the left. No Acc allowed to the left in the sentence (sentenceboundary as a barrier). No Acc allowed to the right (barriers are CC, comma and sentenceboundary). Note that Gen to the right followed by a noun is allowed. You shall not be: route, time, Pron Dem. You are not Acc if you are: Gen-cased Pron or Animate with Ill immediately to your right. No Acc, Com, N Nom or Gerundium allowed immediately to your right. No Gen followed by Po allowed immediately to your right. A SG3-verb is only allowed to your left (barriers excluding everything except NP-heads and adverbs, PrfPrc is also a barrier) if there is a Nom left to the SG3-verb. No vdic allowed immediately to your left. You are not Acc if: you are a Nom-cased Prop, followed by ahte or EOS and the verb found to the left (SV-boundary) is some kind of verbalactivityverb or a humanagentverb.
+#!! * **AccTV2** Selects accusative: when a transitive verb to the left.
+#!! No Acc allowed to the left in the sentence (sentenceboundary as a barrier).
+#!! No Acc allowed to the right (barriers are CC, comma and sentenceboundary).
+#!! Note that Gen to the right followed by a noun is allowed.
+#!! You shall not be: route, time, Pron Dem.
+#!! You are not Acc if you are: Gen-cased Pron or Animate with Ill immediately to your right.
+#!! No Acc, Com, N Nom or Gerundium allowed immediately to your right.
+#!! No Gen followed by Po allowed immediately to your right.
+#!! A SG3-verb is only allowed to your left ...
+#!! (barriers excluding everything except NP-heads and adverbs, PrfPrc is also a barrier)
+#!! if there is a Nom left to the SG3-verb.
+#!! No vdic allowed immediately to your left.
+#!! You are not Acc if: you are a Nom-cased Prop, followed by ahte or EOS
+#!! and the verb found to the left (SV-boundary) is some kind of verbalactivityverb or a humanagentverb.
 SELECT:AccTV2 Acc IF (*-1C TRANS-V - Imprt BARRIER NOT-NPMODADV LINK NEGATE *-1 Acc - Num BARRIER S-BOUNDARY OR (N Ess) OR NEGFOC)
 (0 NP-HEAD-ACC LINK NEGATE *1 Acc BARRIER CC OR COMMA OR SV-BOUNDARY LINK NOT 0 (Pron Gen) LINK *1 N BARRIER NOT-NPMOD OR COMMA)
 (NEGATE *-1 NUM BARRIER NOT-Attr LINK NOT 0 NUMUNIT)
