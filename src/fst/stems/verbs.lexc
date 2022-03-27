@@ -216,12 +216,21 @@
 
 LEXICON VerbRoot
 
+Auxiliaries ;
 @P.Vgen.add@ VGenVerbs ;
  Verbs ;
 
+
+!! ## Auxiliaries
+
+LEXICON Auxiliaries
+ij+V+IV+Neg: NEG ; !!≈ * @CODE@
+leđe+V+IV: LEDE ; !!≈ * @CODE@
+
+!! ## VGenVerbs
 LEXICON VGenVerbs
-väzziđ:vä^RVzz 2SYLL_ID_IV ; ! vääzin
-jotteeđ:jo^RVt^RC 2SYLL_JOTTEED_IV ; ! YAML jođen
+väzziđ:vä^RVzz 2SYLL_ID_IV ;  !!≈ * @CODE@ vääzin
+jotteeđ:jo^RVt^RC 2SYLL_JOTTEED_IV ;  !!≈ * @CODE@ YAML jođen
 kaččâđ:kä^RVčč 2SYLL_KAVNAD_IV ; ! ¢kaačâm káččá kaačân
 čuoigâđ:čyei4g 2SYLL_RUOTTAD_IV ; ! čuoi4ˊg !former: 2SYLL_VUOLLAD čuoigân
 suuhâđ:su^RVh^RC 2SYLL_TOOHAD_IV ; !suuvân
@@ -248,21 +257,15 @@ toohâđ:ta^RVh^RC 2SYLL_TOOHAD_TV ; !YAML
 huolâstuđ:huolâst C_TABAHTUD_TV ; ! huolâstuđ
 čibástâllâđ:čibástâll 4_KAVNATTATTAD_IV ; !čibástâlân
 
+
+
+!! ## Main verbs
 LEXICON Verbs
 
-!! ## Auxiliaries
-! ===========
+!! Intransitive and transitive verbs are marked with sublexica ending in **_IV** orr **_TV**.
+!! Sublexica without these endings are not yet classified for transitivity, and
+!! end up *not* receiving *+IV* or *+TV* tags.
 
-ij+V+IV+Neg: NEG ; !!≈ * @CODE@
-leđe+V+IV: LEDE ; !!≈ * @CODE@
-
-
-!! Main verbs
-! ===============
-
-
-!! Intransitive verbs
-!! Transitive verbs
 aassâđ:ääss 2SYLL_AASSAD_IV ; !¢ aasâm áásá !YAML ääsih or äässih ?
 aatelistiđ:aatelist 4_ADELISTID_TV ;
 ameriklistiđ:ameriklist 4_ADELISTID_TV "amerikkalaistaa" ;
@@ -602,7 +605,7 @@ falâdâttâđ:falâ 4_DATTAD_TV ;
 falâlistiđ:falâlist 4_ADELISTID ;
 falâliđ:fa^RVl^RCâl 3_MERIDID ; !¢ faallâl
 njejâliđ:nje^RVj^RCâl 3_MERIDID ; !¢ njeeijâl
-punjâliđ:pu^RVnj^RCâl 3_MERIDID ; !¢ puunnjâl
+punjâliđ:pu^RVnj^RCâl 3_ADELID_TV ; !¢ puunnjâl
 lomâliđ:lo^RVm^RCâl 3_MERIDID ; !¢ loommâl
 piejâliđ:piej^RCâl 3_MERIDID ; !¢ pieijâl
 falâluhčâđ:falâl 4_UHCAD ;
@@ -4427,7 +4430,7 @@ suogârdâllâđ:suogârdâll 4_KAVNATTATTAD ; ! suoˊgârdâll
 suoijiđ:syei4j C_TUHHID_TV ;
 suoiniđ:syei4n C_TUHHID ;
 suoivânistiđ:suoi4vânist 4_ADELISTID ;
-suojâliđ:suoj^RCâl 3_KUIKETTID_TV ; ! suoˊjâl
+suojâliđ:suoj^RCâl 3_ADELID_TV ; ! suoˊjâl
 suoksâdiđ:suoksâd 3_LEKKASID ;
 suoksâđ:syek4s 2SYLL_RUOTTAD ; ! former: 2SYLL_VUOLLAD
 suollâgittiđ:suollâgitt 4_ITTID ;
