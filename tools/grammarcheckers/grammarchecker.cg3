@@ -2164,7 +2164,10 @@ COPY:msyn-agr-other-pl2 (Pl2 &SUGGEST) EXCEPT VNOTPL2 TARGET (V Ind Prs &msyn-ag
 #!! Sg3/Pl3 errors: Suomâkielâ sárnumkielâ epikongruens maaŋgâlovo 3. persovnist 
 
 #!!  **Agreement rule:** Subject to the right, msyn-agr-sg3-pl3
-ADD:msyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET V IF (NOT *-1 Sg + Nom OR Sg3 + Nom BARRIER NOT-ADV OR (","))(0C COPULAS + Sg3)(*1 Pl + Nom BARRIER NOT-NPMODADV OR PUNCT + RIGHT OR PUNCT + LEFT LINK NOT *1 V + Pl3);
+ADD:msyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET V IF
+	(NOT *-1 Sg + Nom OR Sg3 + Nom BARRIER NOT-ADV OR (","))
+	(0C COPULAS + Sg3)
+	(*1 Pl + Nom BARRIER NOT-NPMODADV OR PUNCT + RIGHT OR PUNCT + LEFT LINK NOT *1 V + Pl3);
 COPY:msyn-agr-sg3-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V &msyn-agr-sg3-pl3);
 ADDRELATION:msyn-agr-sg3-pl3 ($2) (Pl Nom) FROM (-1 V + Sg3 LINK 0 (&msyn-agr-sg3-pl3));
 ADDRELATION:msyn-agr-sg3-pl3 ($2) (Pl Nom) FROM (-2 V + Sg3 LINK 0 (&msyn-agr-sg3-pl3));
