@@ -38,7 +38,6 @@ XFAIL_TESTS=\
 	interferens_celkkuuh2.yaml \
 	interferens_celkkuuh3.yaml \
 	interferens_celkkuuh4.yaml \
-	msyn-adj-gen-nom.yaml \
 	msyn-ext-pl3-sg3.yaml \
 	msyn-ext-sg3-pl3.yaml \
 	msyn-ncompl-acc-ill.yaml \
