@@ -19,13 +19,18 @@ TESTS=\
 	msyn-ncompl-ess-sgill.yaml \
 	msyn-ncompl-placc-plill.yaml \
 	msyn-obj-acc-ill.yaml \
+	msyn-obj-nom-acc.yaml \
 	msyn-pass-accsubj-nomsubj.yaml \
+	msyn-po-acc-gen.yaml \
 	msyn-po-nom-gen.yaml \
 	msyn-posspl-acc-gen.yaml \
 	msyn-pred-acc-nom.yaml \
 	msyn-quant-gen-nom.yaml \
 	msyn-refl-sg-pl.yaml \
-	msyn-v-actio-sg1.yaml 
+	msyn-v-actio-sg1.yaml \
+	ovdamearkkat.yaml \
+	wikipedia.yaml
+
 
 # List tests that are presently (expected) failures here, ie things that should
 # be fixed *later*, but is not critical at the moment:
@@ -39,13 +44,17 @@ XFAIL_TESTS=\
 	msyn-ncompl-acc-ill.yaml \
 	msyn-ncompl-placc-plill.yaml \
 	msyn-obj-acc-ill.yaml \
+	msyn-obj-nom-acc.yaml \
 	msyn-pass-accsubj-nomsubj.yaml \
+	msyn-po-acc-gen.yaml \
 	msyn-po-nom-gen.yaml \
 	msyn-posspl-acc-gen.yaml \
 	msyn-pred-acc-nom.yaml \
 	msyn-quant-gen-nom.yaml \
 	msyn-refl-sg-pl.yaml \
-	msyn-v-actio-sg1.yaml
+	msyn-v-actio-sg1.yaml \
+	ovdamearkkat.yaml \
+	wikipedia.yaml
 
 endif # WANT_GRAMCHECK
 
