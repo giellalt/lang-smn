@@ -2185,7 +2185,7 @@ ADD:msyn-agr-other-pl3 (&msyn-agr-other-pl3) TARGET V IF
 #!!  **Agreement rule:** msyn-agr-other-pl3
 ADD:msyn-agr-other-pl3 (&msyn-agr-other-pl3) TARGET V IF 
  (NOT -2 Sup OR Sg3)
- (NOT *-1C Pron + Pl3 + Nom OR Dem + Pl + Nom OR N + Pl + Nom BARRIER NOT-ADV-PCLE)
+ (NOT *-1C Pron + Nom OR Dem + Nom OR N + Nom BARRIER NOT-ADV-PCLE)
  (NOT -1 NPL_WITH_VSG3)
  (0C V + Ind + Sg3 OR V + Cond + Sg3)
  (NOT 0 Pl3)(NOT 0 Foc/ge)
@@ -2755,7 +2755,7 @@ COPY:msyn-mii-sgnom-placc (Pl Acc &SUGGEST) EXCEPT (Sg Nom) TARGET ( N &msyn-mii
 #!! ### Adjectives in attributive position
 
 #!!  **Agreement rule:** msyn-adj-gen-nom (A.Gen + N.Nom)
-ADD:msyn-adj-gen-nom (&msyn-adj-gen-nom) TARGET A IF (0C A + Gen)(1C N + Nom);
+ADD:msyn-adj-gen-nom (&msyn-adj-gen-nom) TARGET A IF (0 A + Sg + Gen OR A + Sg + Acc)(NOT 0 A + Sg + Nom)(1C N + Nom);
 COPY:msyn-adj-gen-nom (Nom &SUGGEST) EXCEPT Gen TARGET (A Gen &msyn-adj-gen-nom);
 
 
