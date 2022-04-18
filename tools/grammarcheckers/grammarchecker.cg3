@@ -1980,11 +1980,11 @@ LIST &msyn-agr-other-sg3 = &msyn-agr-other-sg3 ;
 LIST &msyn-agr-sg3-pl3 = &msyn-agr-sg3-pl3 ;
 LIST &msyn-dem-locattr-gen = &msyn-dem-locattr-gen ;	
 LIST &msyn-det-nom-acc = &msyn-det-nom-acc ;
-LIST &msyn-ext-sg3-pl3 = &msyn-ext-sg3-pl3 ;
+LIST &msyn-extv-sg3-pl3 = &msyn-extv-sg3-pl3 ;
 LIST &msyn-extneg-sg3-pl3 = &msyn-extneg-sg3-pl3 ;
 LIST &msyn-extsubj-acc-nom = &msyn-extsubj-acc-nom ; 
 LIST &msyn-extsubj-ill-nom = &msyn-extsubj-ill-nom ; 
-LIST &msyn-extv-numeral-sg3-pl3 = &msyn-ext-pl3-numeral ;
+LIST &msyn-extv-numeral-sg3-pl3 = &msyn-extv-pl3-numeral ;
 LIST &msyn-imp-nom-acc = &msyn-imp-nom-acc ;
 LIST &msyn-mii-sgnom-placc = &msyn-mii-sgnom-placc ;
 LIST &msyn-ness-acc-nom = &msyn-ness-acc-nom ; 
@@ -2260,20 +2260,14 @@ COPY:msyn-orrood-inf-actioess (Actio Ess &SUGGEST) EXCEPT Inf TARGET (V Inf &msy
 #$ Mun orom lemin ennuv velgus anarâškielân.
 
 
-#!!  **Agreement rule:** msyn-plobj-nom-acc *Nubeh tobdeh kuobbâreh/kuobbârijd ivneest.*
-ADD:msyn-plobj-nom-acc (&msyn-plobj-nom-acc) TARGET (N Pl Nom) IF (*-1 TRANS-V  BARRIER NOT-NPMOD OR CLB OR PUNCT LINK NOT 0 Pl3 LINK *-1 (N Pl Nom))(NOT 0 ABBR OR Num)(NEGATE -1 PrfPrc LINK *-1 N BARRIER VFIN);
-COPY:msyn-plobj-nom-acc (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &msyn-plobj-nom-acc);
 
-# Trans: Others know mushrooms by.their.color.
-#% Nubeh tobdeh kuobbâreh ivneest.
-#$ Nubeh tobdeh kuobbârijd ivneest.
-#fi toiset tuntevat sienet väristä.
+#!! ### Existential sentences
 
-#!! ### Existential sentences -- same as next?
+#!! Here, the verb should be plural. The interference comes from Finnish e-sentences, where the verb is in the ingular. 
 
-#!!  **Agreement rule:** msyn-ext-sg3-pl3 *Must lii/láá uđđâ autoh.*
-ADD:msyn-ext-sg3-pl3 (&msyn-ext-sg3-pl3) TARGET V IF (*-1 Loc BARRIER NOT-ADV-PCLE)(0 ("leđe" V Ind Prs Sg3))(*1 N + Pl + Nom BARRIER NOT-NPMODADV OR @CVP OR S-BOUNDARY);
-COPY:msyn-ext-sg3-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET ("leđe" V Ind Prs &msyn-ext-sg3-pl3) ;
+#!!  **Agreement rule:** msyn-extv-sg3-pl3 *Must lii/láá uđđâ autoh.*
+ADD:msyn-extv-sg3-pl3 (&msyn-extv-sg3-pl3) TARGET V IF (*-1 Loc BARRIER NOT-ADV-PCLE)(0 ("leđe" V Ind Prs Sg3))(*1 N + Pl + Nom BARRIER NOT-NPMODADV OR @CVP OR S-BOUNDARY);
+COPY:msyn-extv-sg3-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET ("leđe" V Ind Prs &msyn-extv-sg3-pl3) ;
 #% Must lii uđđâ autoh.
 #$ Must láá uđđâ autoh.
 
@@ -2288,7 +2282,6 @@ ADDRELATION:msyn-extv-sg3-pl3 ($2) N + Pl + Nom FROM (-3 V + LEDE + Sg3 LINK 0 (
 #$ Must láá kyeleh.
 #fi Minulla on kaloja.
 
-#!! ### Verb in plural 
 
 #!!  **Agreement rule:** msyn-extv-numeral-sg3-pl3
 ADD:msyn-extv-numeral-sg3-pl3 (&msyn-extv-numeral-sg3-pl3) TARGET V IF (-1 Loc)(0 LEDE + Sg3)(1 Num + Nom LINK NOT 0 OHTA);
@@ -2298,7 +2291,7 @@ ADDRELATION:msyn-extv-numeral-sg3-pl3 ($2) Num + Nom FROM (-1 V + LEDE + Sg3 LIN
 #% Must {lii} kyehti kyele.
 #$ Must láá kyehti kyele.
 #fi Minulla on kaksi kalaa. - 
-#ADD:msyn-ext-vagr (&msyn-ext-vagr) TARGET N IF (-2 Loc)(-1 LEDE + Pl3)(0 Num);
+#ADD:msyn-extv-vagr (&msyn-extv-vagr) TARGET N IF (-2 Loc)(-1 LEDE + Pl3)(0 Num);
 
 
 
@@ -2478,89 +2471,12 @@ ADD:msyn-v-sg3-conneg (&msyn-v-sg3-conneg) TARGET V IF (-1 Neg) (NOT *-2 ConNeg)
 COPY:msyn-v-sg3-conneg (ConNeg &SUGGEST) EXCEPT Sg3 TARGET (V Cond Prs &msyn-v-sg3-conneg);
 #% Sun ij puávtáččij vyelgiđ.
 #$ Sun ij puávtáččii vyelgiđ.
-	
-
-#!!  **Agreement rule:** msyn-dem-locattr-gen
-ADD:msyn-dem-locattr-gen (&msyn-dem-locattr-gen) TARGET Dem IF (NOT *0 LOC-V BARRIER SV-BOUNDARY)(0 Sg + Loc)(NOT 0 Loc + Attr)(1 N + Sg + Loc)(NOT 1 Prop OR Sem/Plc); # Loc Attr > Gen?
-COPY:msyn-dem-locattr-gen (Gen &SUGGEST) EXCEPT (Loc Attr) TARGET (Dem &msyn-dem-locattr-gen);
-	
-#!!  **Agreement rule:** msyn-obj-plnom-placc (6 rules) *Lam valjim taah säänih/saanijd.*
-ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-1 VFIN + Sg1)(0C N + Pl + Nom);
-ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-2 VFIN + Sg1)(-1 PrfPrc)(0C N + Pl + Nom);
-ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-2 VFIN + Sg1)(-1 Pl + Nom)(0C N + Pl + Nom);
-ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-2 VFIN + Sg1)(-1 Pl + Nom OR Attr)(0C N + Pl + Nom);
-ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-3 VFIN + Sg1)(-1 Pl + Nom OR Attr)(-2 PrfPrc)(0C N + Pl + Nom);
-ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-3 VFIN + Sg1)(-1 Pl + Nom OR Attr)(-2 Pl + Nom)(0C N + Pl + Nom);
-COPY:msyn-obj-plnom-placc (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &msyn-obj-plnom-placc);
-#$ Lam valjim taah säänih.
-#% Lam valjim táid saanijd.
-# olen valinnut nämä sanat
 
 
 
-#!! ### Acc shall be Nom
 
-#!!  **Agreement rule:** syn-top-placc-plnom *Anarâškielâlijd/Anarâškielâliih noomâid kiävttoo/kiävttojeh uccáá.*
-ADD:msyn-top-placc-plnom (&msyn-top-placc-plnom) TARGET N IF (*-1 BOS BARRIER TV)(0C Pl + Acc - Sem/Time LINK *-1 BOS BARRIER Nom)(1 Der/Pass + Sg3)(2 Adv)(NOT *3 TV);
-#% Anarâškielâlijd noomâid kiävttoo uccáá.
-#$ Anarâškielâliih noomah kiävttojeh uccáá.
+#!! ### Singular objects
 
-#!!  **Agreement rule:**  msyn-top-nom-acc
-ADD:msyn-top-nom-acc (&msyn-top-nom-acc) TARGET N IF (0C Nom - Sem/Time - TITLE LINK *-1 BOS BARRIER Nom)(*1 N + Nom BARRIER NOT-NPMOD LINK 1 Ind + Sg3);
-COPY:msyn-top-nom-acc (Acc &SUGGEST) EXCEPT Nom TARGET (N Nom &msyn-top-nom-acc) ;
-
-#!! **Agreement rule:** msyn-top-nom-acc 
-ADD:msyn-top-nom-acc (&msyn-top-nom-acc) TARGET N IF (0C Nom - Sem/Time - TITLE LINK *-1 BOS BARRIER Nom)(1 Pron + Pers + Nom)(2 Ind + Sg3);
-COPY:msyn-top-nom-acc (Acc &SUGGEST) EXCEPT Nom TARGET (N Nom &msyn-top-nom-acc) ;
-#% Suullân peeli sun lii porgâm.
-
-#% Motomeh suomâkielâ vaikuttâsah tábáhtusâid láá tuhhiittum anarâškielân.
-
-#!! ### Acc shall be Ill
-
-#!!  **Agreement rule:** msyn-obj-acc-ill
-#ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF (*-1 ILL-V BARRIER NOT-NPMODADV OR (":") LINK *-1 Nom)(0 Acc)(NOT 0 Ill OR PxSg3); # just to remember we used to want subjects
-ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF (*-1 ILL-V + IV BARRIER NOT-NPMODADV OR (":") LINK NOT 0 TV)(0 Acc)(NOT 0 Ill OR PxSg3)(NOT 1 Pron + Ill);
-
-#!!  **Agreement rule:** msyn-obj-acc-ill *Ideologia kuáská kielâid/kieláid.*
-ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF (*-1 ILL-V + IV BARRIER NOT-NPMODADV OR (":") LINK NOT 0 TV)(0 Acc)(NOT 0 Ill OR PxSg3)(NOT *1 N + Ill BARRIER NOT-NPMOD);
-COPY:msyn-obj-acc-ill (Ill &SUGGEST) EXCEPT Acc TARGET (N Acc &msyn-obj-acc-ill) ;
-ADDRELATION:msyn-obj-acc-ill ($2) (ILL-V) FROM (1 N + Acc LINK 0 (&msyn-obj-acc-ill)) ;
-ADDRELATION:msyn-obj-acc-ill ($2) (ILL-V) FROM (2 N + Acc LINK 0 (&msyn-obj-acc-ill)) ;
-ADDRELATION:msyn-obj-acc-ill ($2) (ILL-V) FROM (3 N + Acc LINK 0 (&msyn-obj-acc-ill)) ;
-ADDRELATION:msyn-obj-acc-ill ($2) (ILL-V) FROM (4 N + Acc LINK 0 (&msyn-obj-acc-ill)) ;
-
-#%: Ideologia kuáská kielâid.
-#$: Ideologia kuáská kieláid.
-
-#!!  **Agreement rule:** msyn-obj-acc-ill
-ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF (*-1 ILL-V + IV BARRIER NOT-NPMODADV OR (":") LINK *-1 Nom)(0 Gen)(NOT 0 Ill OR Adv)(1 EOS OR CC)(NOT *1 Ill);
-COPY:msyn-obj-acc-ill (Ill &SUGGEST) EXCEPT Gen TARGET (N Gen &msyn-obj-acc-ill) ;
-
-#!! **Agreement rule:** msyn-obj-acc-ill
-ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET Pron IF (*-1 ILL-V + IV BARRIER NOT-NPMODADV OR (":")  LINK NOT 0 TV LINK *-1 Nom)(0 Acc)(NOT 0 Ill OR PxSg3)(NEGATE 0 (N Nom Sg) LINK *-1 (V Sg3) BARRIER NOT-NPMODADV)(NEGATE 0 (N Nom Pl) LINK *-1 (V Pl3) BARRIER NOT-NPMODADV)(NOT 1 TV + Inf);
-
-#!!  **Agreement rule:** msyn-obj-acc-ill
-ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET Pron IF (*-2 ILL-V + IV BARRIER NOT-NPMODADV OR (":")  LINK NOT 0 TV LINK *-1 Nom)(-1 Pron + Ill)(0 Acc)(NOT 0 Ill OR PxSg3)(NEGATE 0 (N Nom Sg) LINK *-2 (V Sg3) BARRIER NOT-NPMODADV)(NEGATE 0 (N Nom Pl) LINK *-2 (V Pl3) BARRIER NOT-NPMODADV);
-COPY:msyn-obj-acc-ill (Ill &SUGGEST) EXCEPT Acc TARGET (Pron Acc &msyn-obj-acc-ill) ;
-
-
-#!! #### Inarinsaamenkielisiä nimiä käytetään vähän
-
-#ADD:msyn-top-placc-plnom (&msyn-top-placc-plnom) TARGET N IF (0C Pl + Acc - Sem/Time LINK *-1 BOS BARRIER Nom)(1 Neg + Sg3)(2 ConNeg LINK NOT 0 TV);
-
-#!!  **Agreement rule:** msyn-top-placc-plnom *tiäđuid/tiäđuh ij kavnuu.*
-ADD:msyn-top-placc-plnom (&msyn-top-placc-plnom) TARGET N IF (*-1 BOS BARRIER TV)(NOT 0 TITLE LINK 1 Prop)(NOT -1 ("mihheen"))(0C Pl + Acc - Sem/Time LINK *-1 BOS BARRIER Nom)(1 Neg + Sg3 LINK NOT *1 TV);
-COPY:msyn-top-placc-plnom (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &msyn-top-placc-plnom);
-
-#% {tiäđuid} ij kavnuu.
-#$ tiäđuh iä kavnuu.
-# tietoja ei löydy
-#$ Mut taid pihtâsijd ij lamaškin nuuvt älkkee nuollâđ.
-#$ Mut tuorâstuvâi ij kavnuu.
-#$ Kähirijd lâi talle kolgâm uážudiđ pävirpitáigijn kiddâ.
-#$ Siämmáámuđusijd teermâid ij uážžum kuohtii kevttiđ.
-#$ Fäŋgejeijeeh tolvuu Jeesus ollâpappâ Kaifas kuuvl.
 
 
 #!! #### Plain object of TV in Nom shall be Acc
@@ -2583,9 +2499,107 @@ COPY:msyn-obj-sgnom-sgacc (Acc &SUGGEST) EXCEPT Nom TARGET (N Sg &msyn-obj-sgnom
 #% Mun lam ain mielkki juunâm.
 #$ Mun lam ain mielhi juuhâm.
 
+
+#!! ### Plural objects
+
+#!! Finnish plural objects are in the nominative, in Inari Saami they are in the accusative.
+
 #!!  **Agreement rule:** msyn-obj-plnom-placc
 ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (*-1 VFIN + TV  BARRIER NOT-NPMODADV LINK -1 Nom)(0C N + Pl + Nom)(NOT *1 V + Pl3 BARRIER NOT-ADV);
 COPY:msyn-obj-plnom-placc (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &msyn-obj-plnom-placc);
+
+
+#!!  **Agreement rule:** msyn-plobj-nom-acc *Nubeh tobdeh kuobbâreh/kuobbârijd ivneest.*
+ADD:msyn-plobj-nom-acc (&msyn-plobj-nom-acc) TARGET (N Pl Nom) IF (*-1 TRANS-V  BARRIER NOT-NPMOD OR CLB OR PUNCT LINK NOT 0 Pl3 LINK *-1 (N Pl Nom))(NOT 0 ABBR OR Num)(NEGATE -1 PrfPrc LINK *-1 N BARRIER VFIN);
+COPY:msyn-plobj-nom-acc (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &msyn-plobj-nom-acc);
+
+# Trans: Others know mushrooms by.their.color.
+#% Nubeh tobdeh kuobbâreh ivneest.
+#$ Nubeh tobdeh kuobbârijd ivneest.
+#fi toiset tuntevat sienet väristä.
+
+
+#!!  **Agreement rule:** msyn-obj-plnom-placc (6 rules) *Lam valjim taah säänih/saanijd.*
+ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-1 VFIN + Sg1)(0C N + Pl + Nom);
+ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-2 VFIN + Sg1)(-1 PrfPrc)(0C N + Pl + Nom);
+ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-2 VFIN + Sg1)(-1 Pl + Nom)(0C N + Pl + Nom);
+ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-2 VFIN + Sg1)(-1 Pl + Nom OR Attr)(0C N + Pl + Nom);
+ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-3 VFIN + Sg1)(-1 Pl + Nom OR Attr)(-2 PrfPrc)(0C N + Pl + Nom);
+ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-3 VFIN + Sg1)(-1 Pl + Nom OR Attr)(-2 Pl + Nom)(0C N + Pl + Nom);
+COPY:msyn-obj-plnom-placc (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &msyn-obj-plnom-placc);
+#$ Lam valjim taah säänih.
+#% Lam valjim táid saanijd.
+# olen valinnut nämä sanat
+
+
+
+#!!  **Agreement rule:**  msyn-top-nom-acc
+ADD:msyn-top-nom-acc (&msyn-top-nom-acc) TARGET N IF (0C Nom - Sem/Time - TITLE LINK *-1 BOS BARRIER Nom)(*1 N + Nom BARRIER NOT-NPMOD LINK 1 Ind + Sg3);
+COPY:msyn-top-nom-acc (Acc &SUGGEST) EXCEPT Nom TARGET (N Nom &msyn-top-nom-acc) ;
+
+#!! **Agreement rule:** msyn-top-nom-acc 
+ADD:msyn-top-nom-acc (&msyn-top-nom-acc) TARGET N IF (0C Nom - Sem/Time - TITLE LINK *-1 BOS BARRIER Nom)(1 Pron + Pers + Nom)(2 Ind + Sg3);
+COPY:msyn-top-nom-acc (Acc &SUGGEST) EXCEPT Nom TARGET (N Nom &msyn-top-nom-acc) ;
+#% Suullân peeli sun lii porgâm.
+
+#% Motomeh suomâkielâ vaikuttâsah tábáhtusâid láá tuhhiittum anarâškielân.
+
+
+
+#!! ### Acc shall be Ill
+
+#!!  **Agreement rule:** msyn-obj-acc-ill
+#ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF (*-1 ILL-V BARRIER NOT-NPMODADV OR (":") LINK *-1 Nom)(0 Acc)(NOT 0 Ill OR PxSg3); # just to remember we used to want subjects
+ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF (*-1 ILL-V + IV BARRIER NOT-NPMODADV OR (":") LINK NOT 0 TV)(0 Acc)(NOT 0 Ill OR PxSg3)(NOT 1 Pron + Ill);
+
+#!!  **Agreement rule:** msyn-obj-acc-ill *Ideologia kuáská kielâid/kieláid.*
+ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF (*-1 ILL-V + IV BARRIER NOT-NPMODADV OR (":") LINK NOT 0 TV)(0 Acc)(NOT 0 Ill OR PxSg3)(NOT *1 N + Ill BARRIER NOT-NPMOD);
+COPY:msyn-obj-acc-ill (Ill &SUGGEST) EXCEPT Acc TARGET (N Acc &msyn-obj-acc-ill) ;
+ADDRELATION:msyn-obj-acc-ill ($2) (ILL-V) FROM (1 N + Acc LINK 0 (&msyn-obj-acc-ill)) ;
+ADDRELATION:msyn-obj-acc-ill ($2) (ILL-V) FROM (2 N + Acc LINK 0 (&msyn-obj-acc-ill)) ;
+ADDRELATION:msyn-obj-acc-ill ($2) (ILL-V) FROM (3 N + Acc LINK 0 (&msyn-obj-acc-ill)) ;
+ADDRELATION:msyn-obj-acc-ill ($2) (ILL-V) FROM (4 N + Acc LINK 0 (&msyn-obj-acc-ill)) ;
+
+#%: Ideologia kuáská kielâid.
+#$: Ideologia kuáská kieláid.
+
+#!! ### Acc shall be Nom
+
+#!!  **Agreement rule:** syn-top-placc-plnom *Anarâškielâlijd/Anarâškielâliih noomâid kiävttoo/kiävttojeh uccáá.*
+ADD:msyn-top-placc-plnom (&msyn-top-placc-plnom) TARGET N IF (*-1 BOS BARRIER TV)(0C Pl + Acc - Sem/Time LINK *-1 BOS BARRIER Nom)(1 Der/Pass + Sg3)(2 Adv)(NOT *3 TV);
+#% Anarâškielâlijd noomâid kiävttoo uccáá.
+#$ Anarâškielâliih noomah kiävttojeh uccáá.
+
+
+#!!  **Agreement rule:** msyn-top-placc-plnom *tiäđuid/tiäđuh ij kavnuu.*
+ADD:msyn-top-placc-plnom (&msyn-top-placc-plnom) TARGET N IF (*-1 BOS BARRIER TV)(NOT 0 TITLE LINK 1 Prop)(NOT -1 ("mihheen"))(0C Pl + Acc - Sem/Time LINK *-1 BOS BARRIER Nom)(1 Neg + Sg3 LINK NOT *1 TV);
+COPY:msyn-top-placc-plnom (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &msyn-top-placc-plnom);
+
+#% {tiäđuid} ij kavnuu.
+#$ tiäđuh iä kavnuu.
+# tietoja ei löydy
+#$ Mut taid pihtâsijd ij lamaškin nuuvt älkkee nuollâđ.
+#$ Mut tuorâstuvâi ij kavnuu.
+#$ Kähirijd lâi talle kolgâm uážudiđ pävirpitáigijn kiddâ.
+#$ Siämmáámuđusijd teermâid ij uážžum kuohtii kevttiđ.
+#$ Fäŋgejeijeeh tolvuu Jeesus ollâpappâ Kaifas kuuvl.
+
+
+
+#!! ### Acc shall be Ill
+
+#!!  **Agreement rule:** msyn-obj-acc-ill
+ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF (*-1 ILL-V + IV BARRIER NOT-NPMODADV OR (":") LINK *-1 Nom)(0 Gen)(NOT 0 Ill OR Adv)(1 EOS OR CC)(NOT *1 Ill);
+COPY:msyn-obj-acc-ill (Ill &SUGGEST) EXCEPT Gen TARGET (N Gen &msyn-obj-acc-ill) ;
+
+#!! **Agreement rule:** msyn-obj-acc-ill
+ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET Pron IF (*-1 ILL-V + IV BARRIER NOT-NPMODADV OR (":")  LINK NOT 0 TV LINK *-1 Nom)(0 Acc)(NOT 0 Ill OR PxSg3)(NEGATE 0 (N Nom Sg) LINK *-1 (V Sg3) BARRIER NOT-NPMODADV)(NEGATE 0 (N Nom Pl) LINK *-1 (V Pl3) BARRIER NOT-NPMODADV)(NOT 1 TV + Inf);
+
+#!!  **Agreement rule:** msyn-obj-acc-ill
+ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET Pron IF (*-2 ILL-V + IV BARRIER NOT-NPMODADV OR (":")  LINK NOT 0 TV LINK *-1 Nom)(-1 Pron + Ill)(0 Acc)(NOT 0 Ill OR PxSg3)(NEGATE 0 (N Nom Sg) LINK *-2 (V Sg3) BARRIER NOT-NPMODADV)(NEGATE 0 (N Nom Pl) LINK *-2 (V Pl3) BARRIER NOT-NPMODADV);
+COPY:msyn-obj-acc-ill (Ill &SUGGEST) EXCEPT Acc TARGET (Pron Acc &msyn-obj-acc-ill) ;
+
+
 
 
 #!! ### Imperative errors
@@ -2665,6 +2679,11 @@ COPY:msyn-pass-accsubj-nomsubj (Nom &SUGGEST) EXCEPT (Acc &msyn-pass-accsubj-nom
 
 #!! ## Noun phrase internal phenomena 
 
+#!! ### Demonstratives
+
+#!!  **Agreement rule:** msyn-dem-locattr-gen
+ADD:msyn-dem-locattr-gen (&msyn-dem-locattr-gen) TARGET Dem IF (NOT *0 LOC-V BARRIER SV-BOUNDARY)(0 Sg + Loc)(NOT 0 Loc + Attr)(1 N + Sg + Loc)(NOT 1 Prop OR Sem/Plc); # Loc Attr > Gen?
+COPY:msyn-dem-locattr-gen (Gen &SUGGEST) EXCEPT (Loc Attr) TARGET (Dem &msyn-dem-locattr-gen);
 
 #!! ### Noun phrase possessor
 
@@ -2711,22 +2730,10 @@ COPY:msyn-ncompl-placc-plill (Ill &SUGGEST) EXCEPT Acc TARGET (N Pl Acc &msyn-nc
 
 
 
-#!! ### Quantor phrases
-
-#!! msyn-quant-gen-nom
-# ADD:msyn-quant-gen-nom (&msyn-quant-gen-nom) TARGET Num IF (0 Num + Nom)(1 N + Gen OR N + Acc)(NOT 0 ("ohtâ"));
-# COPY:msyn-quant-gen-nom (Gen &SUGGEST) EXCEPT Num TARGET (Num Gen &msyn-quant-gen-nom);
-
-#$ Kihheen ij pyevti palvâliđ kyehti hiärá. # Nom 
-#$ Kihheen ij pyevti palvâliđ kyevti hiärá. # Gen + N.Gen (obj)
-
-# kyehti hiärá lii ...
-# kyevti hiärást lii ..
-
 #!! ### Noun phrase agreement NP 
 
 
-#!! Det + N agreement
+#!! ### Det + N agreement
 
 #!!  **Agreement rule:** msyn-det-nom-acc: Puurâ tuoh/tuoid rusinijd!
 ADD:msyn-det-nom-acc (&msyn-det-nom-acc) TARGET Pron + Dem + Pl + Nom IF (1 N + Pl + Acc);
@@ -2759,14 +2766,10 @@ ADD:msyn-adj-gen-nom (&msyn-adj-gen-nom) TARGET A IF (0 A + Sg + Gen OR A + Sg +
 COPY:msyn-adj-gen-nom (Nom &SUGGEST) EXCEPT Gen TARGET (A Gen &msyn-adj-gen-nom);
 
 
-#!! ## Numeral phrases
-#!! Commented out, Comment in to test the 2-6 and 7+ sets...
-#ADD:test-6 &msyn-num-par-gen TARGET Num IF (0 TWO-TO-SIX);
-#ADD:test-7 &msyn-num-gen-par TARGET Num IF (0 SEVEN-AND-MORE);
 
 
-#!! msyn-num-par-gen
-#!! The rule is: 2-6 + gensg, 7- + par
+#!! ### Quantor phrases
+
 
 #!!  **Agreement rule:** msyn-num-par-gen: Must láá kyehti kyellid/kyele
 ADD:msyn-num-par-gen (&msyn-num-par-gen) TARGET N IF (-1 TWO-TO-SIX)(0C N + Par)(NOT 0 Gen);
@@ -2794,6 +2797,25 @@ COPY:msyn-num-acc-par (Par &SUGGEST) EXCEPT (Sg Acc) TARGET (N &msyn-num-acc-par
 #% Must láá čiččâm {kyele}.
 #$ Must láá čiččâm kyellid.
 
+#!! msyn-quant-gen-nom
+# ADD:msyn-quant-gen-nom (&msyn-quant-gen-nom) TARGET Num IF (0 Num + Nom)(1 N + Gen OR N + Acc)(NOT 0 ("ohtâ"));
+# COPY:msyn-quant-gen-nom (Gen &SUGGEST) EXCEPT Num TARGET (Num Gen &msyn-quant-gen-nom);
+
+#$ Kihheen ij pyevti palvâliđ kyehti hiärá. # Nom 
+#$ Kihheen ij pyevti palvâliđ kyevti hiärá. # Gen + N.Gen (obj)
+
+# kyehti hiärá lii ...
+# kyevti hiärást lii ..
+
+
+#!! ## Numeral phrases
+#!! Commented out, Comment in to test the 2-6 and 7+ sets...
+#ADD:test-6 &msyn-num-par-gen TARGET Num IF (0 TWO-TO-SIX);
+#ADD:test-7 &msyn-num-gen-par TARGET Num IF (0 SEVEN-AND-MORE);
+
+
+#!! msyn-num-par-gen
+#!! The rule is: 2-6 + gensg, 7- + par
 
 
 
