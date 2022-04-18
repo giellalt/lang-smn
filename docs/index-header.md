@@ -46,9 +46,21 @@ This page documents the work on the [Inari Saami grammatical analyser](http://gi
     Cree](/lang-crk/developingwork.html)
 - [Automatic analysis of Inari Saami text](http://giellatekno.uit.no/cgi/d-smn.eng.html)
 
-The Inari Saami MT project (2014-2016)
---------------------------------------
 
+
+## The Inari Saami grammar checker project (2021-)
+
+The idea is to make a grammarchecker for Inari Saami L2 writers.
+
+### Links
+
+- [Documentation](https://giellalt.github.io/lang-smn/tools-grammarcheckers-grammarchecker.cg3.html) of the [grammarchecker file](https://github.com/giellalt/lang-smn/blob/main/tools/grammarcheckers/grammarchecker.cg3)
+- [Test files](https://github.com/giellalt/lang-smn/tree/main/tools/grammarcheckers/tests)
+
+
+
+
+## The Inari Saami MT project (2014-2016)
 
 -   [Background information on the Inari Saami
     project](docu-smn-background.html)
