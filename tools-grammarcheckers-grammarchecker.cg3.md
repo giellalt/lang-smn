@@ -723,15 +723,13 @@ Sg3/Pl3 errors: Suomâkielâ sárnumkielâ epikongruens maaŋgâlovo 3. persovni
 
 **Agreement rule:** msyn-orrood-inf-actioess *Mun orom leđe/lemin ennuv velgus anarâškielân.*
 
-**Agreement rule:** msyn-plobj-nom-acc *Nubeh tobdeh kuobbâreh/kuobbârijd ivneest.*
+### Existential sentences
 
-### Existential sentences -- same as next?
+Here, the verb should be plural. The interference comes from Finnish e-sentences, where the verb is in the ingular. 
 
-**Agreement rule:** msyn-ext-sg3-pl3 *Must lii/láá uđđâ autoh.*
+**Agreement rule:** msyn-extv-sg3-pl3 *Must lii/láá uđđâ autoh.*
 
 **Agreement rule:** msyn-extv-sg3-pl3, *Iäruh omâstemráhtusist: mieđetteijee já kieldee häämi.*
-
-### Verb in plural 
 
 **Agreement rule:** msyn-extv-numeral-sg3-pl3
 
@@ -789,13 +787,25 @@ Sg3/Pl3 errors: Suomâkielâ sárnumkielâ epikongruens maaŋgâlovo 3. persovni
 
 **Agreement rule:** msyn-v-sg3-conneg *Sun ij puávtáččij/puávtáččii vyelgiđ.*
 
-**Agreement rule:** msyn-dem-locattr-gen
+### Singular objects
+
+#### Plain object of TV in Nom shall be Acc
+
+**Agreement rule:** msyn-obj-sgnom-sgacc *Mun juuvâm ain mielkki/mielhi.*
+
+**Agreement rule:** msyn-obj-sgnom-sgacc *Mun lam ain juunâm mielkki/mielhi.*
+
+**Agreement rule:** msyn-obj-sgnom-sgacc)
+
+### Plural objects
+
+Finnish plural objects are in the nominative, in Inari Saami they are in the accusative.
+
+**Agreement rule:** msyn-obj-plnom-placc
+
+**Agreement rule:** msyn-plobj-nom-acc *Nubeh tobdeh kuobbâreh/kuobbârijd ivneest.*
 
 **Agreement rule:** msyn-obj-plnom-placc (6 rules) *Lam valjim taah säänih/saanijd.*
-
-### Acc shall be Nom
-
-**Agreement rule:** syn-top-placc-plnom *Anarâškielâlijd/Anarâškielâliih noomâid kiävttoo/kiävttojeh uccáá.*
 
 **Agreement rule:**  msyn-top-nom-acc
 
@@ -807,25 +817,19 @@ Sg3/Pl3 errors: Suomâkielâ sárnumkielâ epikongruens maaŋgâlovo 3. persovni
 
 **Agreement rule:** msyn-obj-acc-ill *Ideologia kuáská kielâid/kieláid.*
 
-**Agreement rule:** msyn-obj-acc-ill
+### Acc shall be Nom
 
-**Agreement rule:** msyn-obj-acc-ill
-
-**Agreement rule:** msyn-obj-acc-ill
-
-#### Inarinsaamenkielisiä nimiä käytetään vähän
+**Agreement rule:** syn-top-placc-plnom *Anarâškielâlijd/Anarâškielâliih noomâid kiävttoo/kiävttojeh uccáá.*
 
 **Agreement rule:** msyn-top-placc-plnom *tiäđuid/tiäđuh ij kavnuu.*
 
-#### Plain object of TV in Nom shall be Acc
+### Acc shall be Ill
 
-**Agreement rule:** msyn-obj-sgnom-sgacc *Mun juuvâm ain mielkki/mielhi.*
+**Agreement rule:** msyn-obj-acc-ill
 
-**Agreement rule:** msyn-obj-sgnom-sgacc *Mun lam ain juunâm mielkki/mielhi.*
+**Agreement rule:** msyn-obj-acc-ill
 
-**Agreement rule:** msyn-obj-sgnom-sgacc)
-
-**Agreement rule:** msyn-obj-plnom-placc
+**Agreement rule:** msyn-obj-acc-ill
 
 ### Imperative errors
 
@@ -851,6 +855,10 @@ b) Suomâkielâ partitiiv passiivráhtusijn; sämikielâst passiiv ohtâvuođâs
 
 ## Noun phrase internal phenomena 
 
+### Demonstratives
+
+**Agreement rule:** msyn-dem-locattr-gen
+
 ### Noun phrase possessor
 
 **Agreement rule:** msyn-posspl-acc-gen. *Siijđoid/Siijđoi lehâstem tábáhtuvá itten.*
@@ -867,13 +875,9 @@ N + Ill
 
 **Agreement rule:** msyn-ncompl-placc-plill
 
-### Quantor phrases
-
-msyn-quant-gen-nom
-
 ### Noun phrase agreement NP 
 
-Det + N agreement
+### Det + N agreement
 
 **Agreement rule:** msyn-det-nom-acc: Puurâ tuoh/tuoid rusinijd!
 
@@ -889,17 +893,21 @@ mii + nominative should be mii + acc
 
 **Agreement rule:** msyn-adj-gen-nom (A.Gen + N.Nom)
 
-## Numeral phrases
-Commented out, Comment in to test the 2-6 and 7+ sets...
-
-msyn-num-par-gen
-The rule is: 2-6 + gensg, 7- + par
+### Quantor phrases
 
 **Agreement rule:** msyn-num-par-gen: Must láá kyehti kyellid/kyele
 
 **Agreement rule:** msyn-num-gen-par:  8 kaandâ/kandâd
 
 **Agreement rule:** msyn-num-acc-par: 8 kaandâ/kandâd
+
+msyn-quant-gen-nom
+
+## Numeral phrases
+Commented out, Comment in to test the 2-6 and 7+ sets...
+
+msyn-num-par-gen
+The rule is: 2-6 + gensg, 7- + par
 
 ## Lexical rules
 
