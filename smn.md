@@ -9881,6 +9881,8 @@ Der/vuota
 Der/InchL
 Der/Dimin
 Der/Aadv
+Der/Comp
+Der/Superl
 
 - LIST DER-A-ADV = (Der/lasj Der/AAdv Adv) ;  ;
 - SET NOT-DER-A-ADV = Adv - DER-A-ADV ; 
@@ -10499,6 +10501,12 @@ Finnish plural objects are in the nominative, in Inari Saami they are in the acc
 
 **Agreement rule:** msyn-obj-plnom-placc
 
+**Agreement rule:** msyn-obj-plnom-placc
+
+**Agreement rule:** msyn-obj-plnom-placc
+
+**Agreement rule:** msyn-obj-plnom-placc
+
 **Agreement rule:** msyn-plobj-nom-acc *Nubeh tobdeh kuobbâreh/kuobbârijd ivneest.*
 
 **Agreement rule:** msyn-obj-plnom-placc (6 rules) *Lam valjim taah säänih/saanijd.*
@@ -10542,6 +10550,8 @@ Outcommented...
 b) Suomâkielâ partitiiv passiivráhtusijn; sämikielâst passiiv ohtâvuođâst lii nominatiiv já verbâ maaŋgâlovvoost.
 
 **Agreement rule:** msyn-pass-accsubj-nomsubj
+
+**Agreement rule:** msyn-pass-accsubj-nomsubj *Sämikielâlijd nomâttâsâid iä jur kevttuu.*
 
 **Agreement rule:** msyn-pass-accsubj-nomsubj: *Sämikielâlijd/Sämikielâliih nomâttâsâid kiävttojeh uccáá.*
 
