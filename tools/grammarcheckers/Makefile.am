@@ -15,7 +15,7 @@ GIELLA_GC_WHSPACE_ANAL_SRC=analyser-gt-whitespace.regex
 
 # Will by default use the one in src/cg3/disambiguator.cg3. To use a
 # different file, specify anther filename here:
-GIELLA_GC_DISAMBIGUATOR_SRC=disambiguator.cg3
+GIELLA_GC_DISAMBIGUATOR_SRC=grc-disambiguator.cg3
 
 # If a valency file is used, specify its name here:
 GIELLA_GC_VALENCY=
@@ -30,7 +30,7 @@ LOCAL_GC_ZIP_FILES=grc-disambiguator.bin
 # protecting the speller suggestions. This one is applied after the regular
 # disambiguation, and will disambiguate the suggestions _after_ the rest of
 # the sentence is disambiguated.
-grc-disambiguator.cg3: disambiguator.cg3
+grc-disambiguator.cg3: grc-disambiguator.cg3
 	$(AM_V_GEN)grep -v 'PROTECT' $< > $@
 
 #### END: Local build targets:   ####
