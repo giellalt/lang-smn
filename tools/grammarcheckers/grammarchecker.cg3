@@ -1971,6 +1971,7 @@ SET CCCOMMA = CC OR COMMA ;
 
 LIST &msyn-adj-attr-pred = &msyn-adj-attr-pred ;
 LIST &msyn-adj-gen-nom = &msyn-adj-gen-nom ;
+LIST &msyn-adj-sg-pl = &msyn-adj-sg-pl ;
 LIST &msyn-agr-other-du1 = &msyn-agr-other-du1 ;
 LIST &msyn-agr-other-du2 = &msyn-agr-other-du2 ;
 LIST &msyn-agr-other-du3 = &msyn-agr-other-du3 ;
@@ -2101,19 +2102,13 @@ COPY:msyn-agr-other-sg2 (Sg2 &SUGGEST) EXCEPT VNOTSG2 TARGET (V Ind Prs &msyn-ag
 #!! #### Sg3
 
 
-#!!  **Agreement rule:** msyn-agr-other-sg3, Subject to the left, *Toh puátá/puátih.*
-ADD:msyn-agr-other-sg3 (&msyn-agr-other-sg3) TARGET V IF
-	(NOT -2 Sup OR Sg3)
-	(*-1C Pron + Pl3 + Nom OR Dem + Pl + Nom OR N + Pl + Nom BARRIER NOT-ADV-PCLE)
-	(NOT -1 NPL_WITH_VSG3)
-	(0C V + Ind + Sg3)
-	(NOT 0 Pl3)
-	(NOT 0 Foc/ge);
-COPY:msyn-agr-other-sg3 (Pl3 &SUGGEST) EXCEPT VNOTPL3 TARGET (V Ind Prs &msyn-agr-other-sg3);
-COPY:msyn-agr-other-sg3 (Pl3 &SUGGEST) EXCEPT VNOTPL3 TARGET (V Ind Prt &msyn-agr-other-sg3);
-#fi Ne tulee.
-#% Toh puátá.
-#$ Toh puátih.
+#!!  **Agreement rule:** msyn-agr-other-sg3, Subject to the left, *Sun puáđah/puátá*
+ADD:msyn-agr-other-sg3 (&msyn-agr-other-sg3) TARGET V IF (NOT -2 Sup OR Sg3)(NOT *-2 Sg3 BARRIER SV-BOUNDARY)(*-1C Pron + Sg3 + Nom OR N + Sg + Nom BARRIER NOT-ADV-PCLE)(0 (V Ind Prs))(NOT 0 Sg3);
+COPY:msyn-agr-other-sg3 (Sg3 &SUGGEST) EXCEPT VNOTSG3 TARGET (V Ind Prs &msyn-agr-other-sg3);
+
+#% Sun puáđáh.
+#$ Sun puátá.
+
 
 
 
@@ -2186,6 +2181,23 @@ ADDRELATION:msyn-agr-sg3-pl3 ($2) (Pl Nom) FROM (-4 V + Sg3 LINK 0 (&msyn-agr-sg
 
 #% Kuáđist kavnui liteh.
 #$ Kuáđist kávnojii liteh.
+
+
+#!!  **Agreement rule:** msyn-agr-other-pl3, Subject to the left, *Toh puátá/puátih.*
+ADD:msyn-agr-other-pl3 (&msyn-agr-other-pl3) TARGET V IF
+	(NOT -2 Sup OR Sg3)
+	(*-1C Pron + Pl3 + Nom OR Dem + Pl + Nom OR N + Pl + Nom BARRIER NOT-ADV-PCLE)
+	(NOT -1 NPL_WITH_VSG3)
+	(0C V + Ind + Sg3)
+	(NOT 0 Pl3)
+	(NOT 0 Foc/ge);
+COPY:msyn-agr-other-pl3 (Pl3 &SUGGEST) EXCEPT VNOTPL3 TARGET (V Ind Prs &msyn-agr-other-pl3);
+COPY:msyn-agr-other-pl3 (Pl3 &SUGGEST) EXCEPT VNOTPL3 TARGET (V Ind Prt &msyn-agr-other-pl3);
+#fi Ne tulee.
+#% Toh puátá.
+#$ Toh puátih.
+
+
 
 #!!  **Agreement rule:** msyn-agr-other-pl3
 ADD:msyn-agr-other-pl3 (&msyn-agr-other-pl3) TARGET V IF 
@@ -2834,6 +2846,9 @@ COPY:msyn-mii-sgnom-placc (Pl Acc &SUGGEST) EXCEPT (Sg Nom) TARGET ( N &msyn-mii
 ADD:msyn-adj-gen-nom (&msyn-adj-gen-nom) TARGET A IF (0 A + Sg + Gen OR A + Sg + Acc)(NOT 0 A + Sg + Nom OR Der/Comp OR Der/Superl)(1C N + Nom);
 COPY:msyn-adj-gen-nom (Nom &SUGGEST) EXCEPT Gen TARGET (A Gen &msyn-adj-gen-nom);
 
+
+ADD:msyn-adj-sg-pl (&msyn-adj-sg-pl) TARGET A IF (0 A + Sg + Gen)(NOT 0 A + Nom)(1C N + Pl + Nom);
+COPY:msyn-adj-sg-pl (Pl Nom &SUGGEST) EXCEPT (Sg Gen) TARGET (A Gen &msyn-adj-sg-pl);
 
 
 
