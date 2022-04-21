@@ -677,7 +677,7 @@ RULE SECTION
 
 #### Sg3
 
-**Agreement rule:** msyn-agr-other-sg3, Subject to the left, *Toh puátá/puátih.*
+**Agreement rule:** msyn-agr-other-sg3, Subject to the left, *Sun puáđah/puátá*
 
 ### Duaali
 
@@ -704,6 +704,8 @@ RULE SECTION
 Sg3/Pl3 errors: Suomâkielâ sárnumkielâ epikongruens maaŋgâlovo 3. persovnist 
 
 **Agreement rule:** Subject to the right, msyn-agr-sg3-pl3
+
+**Agreement rule:** msyn-agr-other-pl3, Subject to the left, *Toh puátá/puátih.*
 
 **Agreement rule:** msyn-agr-other-pl3
 
