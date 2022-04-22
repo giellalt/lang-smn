@@ -2619,7 +2619,11 @@ COPY:msyn-top-nom-acc (Acc &SUGGEST) EXCEPT Nom TARGET (N Nom &msyn-top-nom-acc)
 
 #!!  **Agreement rule:** msyn-obj-acc-ill
 #ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF (*-1 ILL-V BARRIER NOT-NPMODADV OR (":") LINK *-1 Nom)(0 Acc)(NOT 0 Ill OR PxSg3); # just to remember we used to want subjects
-ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF (*-1 ILL-V + IV BARRIER NOT-NPMODADV OR (":") LINK NOT 0 TV)(0 Acc)(NOT 0 Ill OR PxSg3)(NOT 1 Pron + Ill);
+ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF 
+(*-1 ILL-V + IV BARRIER NOT-NPMODADV OR (":") LINK NOT 0 TV)
+(0 Acc)
+(NOT 0 Ill OR PxSg3)
+(NOT 1 Ill);
 
 #!!  **Agreement rule:** msyn-obj-acc-ill *Ideologia kuáská kielâid/kieláid.*
 ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF (*-1 ILL-V + IV BARRIER NOT-NPMODADV OR (":") LINK NOT 0 TV)(0 Acc)(NOT 0 Ill OR PxSg3)(NOT *1 N + Ill BARRIER NOT-NPMOD);
@@ -2769,7 +2773,11 @@ COPY:msyn-dem-locattr-gen (Gen &SUGGEST) EXCEPT (Loc Attr) TARGET (Dem &msyn-dem
 #!! ### Noun phrase possessor
 
 #!!  **Agreement rule:** msyn-posspl-acc-gen. *Siijđoid/Siijđoi lehâstem tábáhtuvá itten.*
-MAP:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N IF (-1 BOS)(0 N + Pl + Acc)(1 N + Nom)(NOT *1 TV BARRIER S-BOUNDARY);
+MAP:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N IF 
+(NOT *-1 TV BARRIER NOT-NPMOD)
+(0 N + Pl + Acc)
+(1 N)
+(NOT *1 TV BARRIER S-BOUNDARY);
 COPY:msyn-posspl-acc-gen (Gen &SUGGEST) EXCEPT (Acc &msyn-posspl-acc-gen) TARGET (N Pl &msyn-posspl-acc-gen);
 
 #% Siijđoid lehâstem tábáhtuvá itten.
