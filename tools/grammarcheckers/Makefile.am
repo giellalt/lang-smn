@@ -22,7 +22,7 @@ GIELLA_GC_VALENCY=
 
 # If there are additional, language specific files used in the GC archive,
 # specify here:
-LOCAL_GC_ZIP_FILES=grc-disambiguator.bin
+LOCAL_GC_ZIP_FILES=
 
 #### BEGIN: Local build targets: ####
 
