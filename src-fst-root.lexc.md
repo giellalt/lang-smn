@@ -166,19 +166,26 @@ Other/unclassified derivations, can appear in all positions:
  **+Foc/sun** 
 **+Foc/uv** ... focus particles.
 
-### Usage tags
+## Error tags
+
+All Err-tags must have a normative form as lemma except Err/Lex
 
 * **+Err/Orth** - substandard, not in normative fst
 * **+Err/Lex** - substandard, not in normative fst, no normative lemma
 * **+Err/Hyph** - substandard, not in normative fst
 * **+Err/SpaceCmp** - substandard, not in normative fst
 * **+Err/MissingSpace** - in use in smi lexc
+
+### Usage tags
+
 * **+MWE** - MultiWord Expression, used for abbreviation extraction for preprocess.sh
 * **+Use/-PLX** - do not include in Polderland spellers (most likely irrelevant for smn)
 * **+Use/-Spell** - do not include in speller (even though the entry is formally correct)
 * **+Use/SpellNoSugg** - Recognized, but not suggested in speller 
-* **+Use/GC** - only retained in the HFST Grammar Checker disambiguation analyser
-* **+Use/-GC** - never retained in the HFST Grammar Checker disambiguation analyser
+* **+Use/GC** – **only** retained in the HFST Grammar Checker disambiguation analyser
+* **+Use/-GC** – **never** retained in the HFST Grammar Checker disambiguation analyser
+* **+Use/TTS** – **only** retained in the HFST Text-To-Speech disambiguation analyser
+* **+Use/-TTS** – **never** retained in the HFST Text-To-Speech disambiguation analyser
 
 ## Semantic tags
 
