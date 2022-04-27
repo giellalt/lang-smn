@@ -640,7 +640,7 @@ LIST PLACE-ADV =  "bajábealde" "davábealde" "lagabus" "máttabealde" "nuorttab
 # There will usually be a Gen in front. 
 
 LIST DOPPE = "paijeen" "paijeel" "tast" "taa" "tääbbin" "tääbbin" "tast" "tiebbin" "tuo" "tiegu" "tobbeen" ("tovben" Adv) "tuohun" "tuođe" "olgon" ;
-# Adverbs with a locativic form, but don´t get Loc as a tag. 
+# ABBRdverbs with a locativic form, but don´t get Loc as a tag. 
 
 LIST DOHKO = "pajas" "báldii" "teehi" "tiehu" "tuohunteehin" "tovhon" "kyevtkooskân" "kuorân" "máádás" "olgos" "pááikán" "siisâ" "vyebdimnáál" ;
 # Adverbs with a illativic form, but they don´t get Ill as a tag.
@@ -1984,10 +1984,11 @@ LIST &msyn-agr-sg3-pl3 = &msyn-agr-sg3-pl3 ;
 LIST &msyn-dem-locattr-gen = &msyn-dem-locattr-gen ;	
 LIST &msyn-det-nom-acc = &msyn-det-nom-acc ;
 LIST &msyn-extv-sg3-pl3 = &msyn-extv-sg3-pl3 ;
+LIST &msyn-extv-pl3-sg3 = &msyn-extv-pl3-sg3 ;
 LIST &msyn-extneg-sg3-pl3 = &msyn-extneg-sg3-pl3 ;
 LIST &msyn-extsubj-acc-nom = &msyn-extsubj-acc-nom ; 
 LIST &msyn-extsubj-ill-nom = &msyn-extsubj-ill-nom ; 
-LIST &msyn-extv-numeral-sg3-pl3 = &msyn-extv-pl3-numeral ;
+LIST &msyn-extv-numeral-sg3-pl3 = &msyn-extv-numeral-sg3-pl3 ;
 LIST &msyn-imp-nom-acc = &msyn-imp-nom-acc ;
 LIST &msyn-mii-sgnom-placc = &msyn-mii-sgnom-placc ;
 LIST &msyn-ness-acc-nom = &msyn-ness-acc-nom ; 
@@ -2297,13 +2298,19 @@ COPY:msyn-orrood-inf-actioess (Actio Ess &SUGGEST) EXCEPT Inf TARGET (V Inf &msy
 #!! Here, the verb should be plural. The interference comes from Finnish e-sentences, where the verb is in the ingular. 
 
 #!!  **Agreement rule:** msyn-extv-sg3-pl3 *Must lii/láá uđđâ autoh.*
-ADD:msyn-extv-sg3-pl3 (&msyn-extv-sg3-pl3) TARGET V IF (*-1 Loc BARRIER NOT-ADV-PCLE)(0 ("leđe" V Ind Prs Sg3))(*1 N + Pl + Nom BARRIER NOT-NPMODADV OR @CVP OR S-BOUNDARY);
+ADD:msyn-extv-sg3-pl3 (&msyn-extv-sg3-pl3) TARGET V IF 
+(*-1 Loc OR DOPPE BARRIER NOT-ADV-PCLE)
+(0 ("leđe" V Ind Prs Sg3))
+(*1 N + Pl + Nom BARRIER NOT-NPMODADV OR @CVP OR S-BOUNDARY);
 COPY:msyn-extv-sg3-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET ("leđe" V Ind Prs &msyn-extv-sg3-pl3) ;
 #% Must lii uđđâ autoh.
 #$ Must láá uđđâ autoh.
 
 #!!  **Agreement rule:** msyn-extv-sg3-pl3, *Iäruh omâstemráhtusist: mieđetteijee já kieldee häämi.*
-ADD:msyn-extv-sg3-pl3 (&msyn-extv-sg3-pl3) TARGET V IF (-1 Loc)(0 LEDE + Sg3)(*1 N + Pl + Nom BARRIER NOT-ADV-PCLE);
+ADD:msyn-extv-sg3-pl3 (&msyn-extv-sg3-pl3) TARGET V IF 
+(-1 Loc OR DOPPE)
+(0 LEDE + Sg3)
+(*1 N + Pl + Nom BARRIER NOT-ADV-PCLE);
 COPY:msyn-extv-sg3-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Ind Prs &msyn-extv-sg3-pl3) ;
 ADDRELATION:msyn-extv-sg3-pl3 ($2) N + Pl + Nom FROM (-1 V + LEDE + Sg3 LINK 0 (&msyn-extv-sg3-pl3));
 ADDRELATION:msyn-extv-sg3-pl3 ($2) N + Pl + Nom FROM (-2 V + LEDE + Sg3 LINK 0 (&msyn-extv-sg3-pl3));
@@ -2314,8 +2321,23 @@ ADDRELATION:msyn-extv-sg3-pl3 ($2) N + Pl + Nom FROM (-3 V + LEDE + Sg3 LINK 0 (
 #fi Minulla on kaloja.
 
 
+#!!  **Agreement rule:** msyn-extv-pl3-sg3 *Must lii/láá uđđâ autoh.*
+ADD:msyn-extv-pl3-sg3 (&msyn-extv-pl3-sg3) TARGET V IF 
+(*-1 Loc OR DOPPE BARRIER NOT-ADV-PCLE)
+(0 ("leđe" V Ind Prs Pl3))
+(*1 N + Sg + Nom BARRIER NOT-NPMODADV OR @CVP OR S-BOUNDARY LINK NOT 1 CC);
+COPY:msyn-extv-pl3-sg3 (Sg3 &SUGGEST) EXCEPT Pl3 TARGET ("leđe" V Ind Prs &msyn-extv-pl3-sg3) ;
+#% Must lii uđđâ autoh.
+#$ Must láá uđđâ autoh.
+
+
+
+
 #!!  **Agreement rule:** msyn-extv-numeral-sg3-pl3
-ADD:msyn-extv-numeral-sg3-pl3 (&msyn-extv-numeral-sg3-pl3) TARGET V IF (-1 Loc)(0 LEDE + Sg3)(1 Num + Nom LINK NOT 0 OHTA);
+ADD:msyn-extv-numeral-sg3-pl3 (&msyn-extv-numeral-sg3-pl3) TARGET V IF 
+(*-1 Loc OR DOPPE BARRIER NOT-ADV-PCLE)
+(0 LEDE + Sg3)
+(*1 Num + Nom BARRIER NOT-ADV-PCLE LINK NOT 0 OHTA OR Sem/Date OR Sem/Year OR Sem/ID LINK *1 N);
 COPY:msyn-extv-numeral-sg3-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Ind Prs &msyn-extv-numeral-sg3-pl3) ;
 COPY:msyn-extv-numeral-sg3-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Ind Prt &msyn-extv-numeral-sg3-pl3) ;
 ADDRELATION:msyn-extv-numeral-sg3-pl3 ($2) Num + Nom FROM (-1 V + LEDE + Sg3 LINK 0 (&msyn-extv-numeral-sg3-pl3));
