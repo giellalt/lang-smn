@@ -2392,7 +2392,11 @@ REMOVE Adv IF (-1 BOS)(0 ("te"))(*1 N BARRIER NOT-NPMOD LINK 1 VFIN);
 #!! ## Adverbs
 
 #!! ### Adverbs or postpositions
-REMOVE:AdvNotPo Po IF (NOT -1 Gen)(0 Adv); #remove_in_grc
+# grc-removal
+REMOVE:AdvNotPo Po IF (NEGATE -1 Gen OR Acc)(0 Adv); 
+	#$GRAM Pargo tábáhtuvá paaihijd ulguubeln.
+	
+	#remove_in_grc
 
 #!! ### Adverbs or nouns
 
