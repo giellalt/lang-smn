@@ -2018,6 +2018,10 @@ LIST &msyn-v-sg1-prfprc = &msyn-v-sg1-prfprc ;
 LIST &msyn-v-sg3-conneg = &msyn-v-sg3-conneg ;
 LIST &real-pisso-pissood = &real-pisso-pissood ;
 
+LIST &msyn-subj-gen-nom.yaml = &msyn-subj-gen-nom.yaml ;
+LIST &msyn-extsubj-gen-nom.yaml = &msyn-extsubj-gen-nom.yaml ;
+LIST &msyn-obj-nom-acc.yaml = &msyn-obj-nom-acc.yaml ;
+
 MAPPING-PREFIX = & ;
 
 TEMPLATE nextWordCrossSent = (-1 (*)); # Adding mark to word that find the reference word to the left
@@ -2474,10 +2478,26 @@ COPY:msyn-v-sg1-prfprc (PrfPrc &SUGGEST) EXCEPT (Ind Prs Sg1) TARGET (V &msyn-v-
 #COPY-njuolggadus: bidjan dohko PrfPrc ja sáni &SUGGEST (maksá "evttot dan") 
 
 
+LIST &msyn-subj-gen-nom.yaml = &msyn-subj-gen-nom.yaml ;
+LIST &msyn-extsubj-gen-nom.yaml = &msyn-extsubj-gen-nom.yaml ;
+LIST &msyn-obj-nom-acc.yaml = &msyn-obj-nom-acc.yaml ;
+
+
+
+
+#!! ### Subjects
+
+ADD:msyn-subj-gen-nom.yaml (&msyn-subj-gen-nom.yaml) TARGET N IF (0C N + Sg + Gen LINK *-1 BOS BARRIER Ind)(1 V + Sg3);
+COPY:msyn-subj-gen-nom.yaml (Nom &SUGGEST) EXCEPT Gen TARGET (N Sg &msyn-subj-gen-nom.yaml) ;
+
 
 	
 
 #!! ### Plural objects
+
+
+
+#!! ### Plural 2020
 
 #!!  **Agreement rule:** msyn-plobj-nom-acc
 ADD:msyn-plobj-nom-acc (&msyn-plobj-nom-acc) TARGET N IF (*-2 Pl + Nom)(-1 TV + Ind + Pl3 LINK NOT 0 Der/Pass)(0C N + Pl + Nom)(NOT -1 PrfPrc LINK *-1 N BARRIER VFIN);
