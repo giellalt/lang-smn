@@ -10438,6 +10438,8 @@ Here, the verb should be plural. The interference comes from Finnish e-sentences
 
 **Agreement rule:** msyn-extv-sg3-pl3, *Iäruh omâstemráhtusist: mieđetteijee já kieldee häämi.*
 
+**Agreement rule:** msyn-extv-pl3-sg3 *Must lii/láá uđđâ autoh.*
+
 **Agreement rule:** msyn-extv-numeral-sg3-pl3
 
 **Agreement rule:** msyn-extneg-sg3-pl3
