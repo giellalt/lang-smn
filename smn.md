@@ -10480,7 +10480,11 @@ Here, the verb should be plural. The interference comes from Finnish e-sentences
 
 **Agreement rule:** msyn-v-sg1-prfprc *Sun lii huunjâm/huunnjâm.*
 
+### Subjects
+
 ### Plural objects
+
+### Plural 2020
 
 **Agreement rule:** msyn-plobj-nom-acc
 
