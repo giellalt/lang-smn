@@ -50,7 +50,6 @@ TESTS=\
 # List tests that are presently (expected) failures here, ie things that should
 # be fixed *later*, but is not critical at the moment:
 XFAIL_TESTS=\
-	interferens_celkkuuh2.yaml \
 	interferens_celkkuuh3.yaml \
 	interferens_celkkuuh4.yaml \
 	msyn-det-nom-acc.yaml \
@@ -65,7 +64,6 @@ XFAIL_TESTS=\
 	msyn-num-par-gen.yaml \
 	msyn-num-par-nom.yaml \
 	msyn-obj-acc-ill.yaml \
-	msyn-obj-nom-acc.yaml \
 	msyn-pass-accsubj-nomsubj.yaml \
 	msyn-po-acc-gen.yaml \
 	msyn-po-nom-gen.yaml \
