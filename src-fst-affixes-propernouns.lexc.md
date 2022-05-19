@@ -87,6 +87,8 @@ ANAR DUBAI DUBAI-plc DUBAI-sur MAKI
 
 * **LEXICON JAVRI-plc** jävri, jeggi
 
+* **LEXICON JAVRI-org** Ráámátservi
+
 * **LEXICON JAVRI-mal** 
 
 * **LEXICON JAVRI-fem** 

@@ -220,6 +220,7 @@ Der/Superl
 - Sem/Obj
 - Sem/Obj-el
 - Sem/Org
+- Sem/Par
 - Sem/Perc-emo
 - Sem/Plc
 - Sem/Sign
@@ -705,6 +706,8 @@ Sg3/Pl3 errors: Suomâkielâ sárnumkielâ epikongruens maaŋgâlovo 3. persovni
 
 **Agreement rule:** Subject to the right, msyn-agr-sg3-pl3
 
+**Agreement rule:** msyn-agr-sg3-pl3, Subject to the left, *80 puátá/puáđah*
+
 **Agreement rule:** msyn-agr-other-pl3, Subject to the left, *Toh puátá/puátih.*
 
 **Agreement rule:** msyn-agr-other-pl3
@@ -766,6 +769,10 @@ Here, the verb should be plural. The interference comes from Finnish e-sentences
 ### Predicative
 
 **Agreement rule:** msyn-pred-acc-nom *Taah láá čielgâ aašijd/ááših.*
+
+**Agreement rule:** msyn-pred-acc-nom *Lii-uv toos synonymáid/synonym*
+
+**Agreement rule:** msyn-pred-ill-nom *Lii-uv toos synonymijd/synonym*
 
 #### Agreement error with predicative
 
@@ -881,9 +888,15 @@ b) Suomâkielâ partitiiv passiivráhtusijn; sämikielâst passiiv ohtâvuođâs
 
 **Agreement rule:** msyn-posspl-acc-gen. *Siijđoid/Siijđoi lehâstem tábáhtuvá itten.*
 
+**Agreement rule:** msyn-posspl-acc-gen. coordination: *uásálistiđ párnáid/párnái já nuorâi leiráid*
+
+**Agreement rule:** msyn-posspl-acc-gen. coordination: *uásálistiđ párnáid/párnái já nuorâi leiráid*
+
 ### Noun phrase complements
 
 N + Ill
+
+**Agreement rule:** msyn-posspl-ill-gen: *uásálistiđ párnáid/párnái leiráid stuorrâhâžžân.*
 
 **Agreement rule:** msyn-ncompl-ess-sgill: *Must lii tárbu toorjân/torjui.*
 
@@ -911,6 +924,12 @@ mii + nominative should be mii + acc
 
 **Agreement rule:** msyn-adj-gen-nom (A.Gen + N.Nom)
 
+**Agreement rule:** msyn-adj-nom-acc
+
+### Quantors in attributive positions
+
+**Agreement rule:** msyn-quant-nom-gen (A.Gen + N.Nom)
+
 ### Quantor phrases
 
 **Agreement rule:** msyn-num-par-gen: Must láá kyehti kyellid/kyele
@@ -927,9 +946,13 @@ Commented out, Comment in to test the 2-6 and 7+ sets...
 msyn-num-par-gen
 The rule is: 2-6 + gensg, 7- + par
 
+## Adverbial rules
+
 ## Lexical rules
 
 **Realword error rule:** real-pisso-pissood
+
+**Realword error rule:** real-pele-peeli
 
 The gramamrchecker file ends here.
 
