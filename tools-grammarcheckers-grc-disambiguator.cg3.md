@@ -739,7 +739,7 @@ Select...
 
 * **VPl3Lookalikes** removes "verbs" like "mane" and "peri" (r984) - 274
 
-* **VSg3Lookalikes** removes "verbs" like "skuvlii" 
+* **VSg3Lookalikes** removes "verbs" like "skuvlii" Remove rule to make grammarchecker work.
 
 OBS: denne er ikke helt bra
 

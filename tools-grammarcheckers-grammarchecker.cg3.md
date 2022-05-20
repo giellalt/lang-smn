@@ -714,6 +714,10 @@ Sg3/Pl3 errors: Suomâkielâ sárnumkielâ epikongruens maaŋgâlovo 3. persovni
 
 **Agreement rule:** msyn-agr-other-pl3
 
+## Complement of negative verb
+
+**Agreement rule:** &msyn-negcompl-sg3-conneg
+
 ## Suomen nessesiivirakenne
 
 **Agreement rule:** msyn-ness-acc-nom

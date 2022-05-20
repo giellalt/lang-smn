@@ -10419,6 +10419,10 @@ Sg3/Pl3 errors: Suomâkielâ sárnumkielâ epikongruens maaŋgâlovo 3. persovni
 
 **Agreement rule:** msyn-agr-other-pl3
 
+## Complement of negative verb
+
+**Agreement rule:** &msyn-negcompl-sg3-conneg
+
 ## Suomen nessesiivirakenne
 
 **Agreement rule:** msyn-ness-acc-nom
@@ -11403,7 +11407,7 @@ Select...
 
 * **VPl3Lookalikes** removes "verbs" like "mane" and "peri" (r984) - 274
 
-* **VSg3Lookalikes** removes "verbs" like "skuvlii" 
+* **VSg3Lookalikes** removes "verbs" like "skuvlii" Remove rule to make grammarchecker work.
 
 OBS: denne er ikke helt bra
 
