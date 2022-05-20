@@ -1997,6 +1997,7 @@ LIST &msyn-extsubj-ill-nom = &msyn-extsubj-ill-nom ;
 LIST &msyn-extv-numeral-sg3-pl3 = &msyn-extv-numeral-sg3-pl3 ;
 LIST &msyn-imp-nom-acc = &msyn-imp-nom-acc ;
 LIST &msyn-mii-sgnom-placc = &msyn-mii-sgnom-placc ;
+LIST &msyn-negcompl-cg3-conneg = &msyn-negcompl-cg3-conneg ;
 LIST &msyn-ness-acc-nom = &msyn-ness-acc-nom ; 
 LIST &msyn-ness-ill-nom = &msyn-ness-ill-nom ; 
 LIST &msyn-ncompl-ess-sgill = &msyn-ncompl-ess-sgill ;
@@ -2245,7 +2246,11 @@ ADDRELATION:msyn-agr-other-pl3 ($2) (N Pl Nom) FROM (-2 V LINK 0 (&msyn-agr-othe
 #$ Viäsust juáhhojeh tagareh almoneh, moh kovvejeh ääši.
 
 
+#!! ## Complement of negative verb
 
+#!! **Agreement rule:** &msyn-negcompl-cg3-conneg
+MAP:msyn-negcompl-cg3-conneg (&msyn-negcompl-cg3-conneg) TARGET V IF (*-1 Neg + Sg3 BARRIER NOT-ADV) (0 Ind + Prs + Sg3);
+COPY:msyn-negcompl-cg3-conneg (ConNeg &SUGGEST) EXCEPT (Ind Prs Sg3) TARGET (V &msyn-negcompl-cg3-conneg) ;
 
 #!! ## Suomen nessesiivirakenne
 
