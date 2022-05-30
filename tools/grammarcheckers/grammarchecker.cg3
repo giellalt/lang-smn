@@ -2198,7 +2198,7 @@ ADDRELATION:msyn-agr-sg3-pl3 ($2) (Pl Nom) FROM (-4 V + Sg3 LINK 0 (&msyn-agr-sg
 
 
 #!!  **Agreement rule:** msyn-agr-sg3-pl3, Subject to the left, *80 puátá/puáđah*
-ADD:msyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET V IF (*-1C Num BARRIER V LINK NOT 0 OHTA)(0 V + Sg3);
+ADD:msyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET V IF (*-1C Num BARRIER N OR Pron OR V LINK NOT 0 OHTA OR Sem/ID OR ("<[A-ZÁÄČŠ].*>r") LINK NOT -1 BOS)(0 V + Sg3);
 COPY:msyn-agr-sg3-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V &msyn-agr-sg3-pl3);
 
 
@@ -2552,7 +2552,7 @@ LIST &msyn-obj-nom-acc = &msyn-obj-nom-acc ;
 
 #!! ### Subjects
 
-ADD:msyn-subj-gen-nom (&msyn-subj-gen-nom) TARGET N IF (0C N + Sg + Gen LINK *-1 BOS BARRIER Ind)(1 V + Sg3);
+ADD:msyn-subj-gen-nom (&msyn-subj-gen-nom) TARGET N IF (0C N + Sg + Gen LINK *-1 BOS BARRIER Ind)(NEGATE 0 HUMAN)(1 V + Sg3);
 COPY:msyn-subj-gen-nom (Nom &SUGGEST) EXCEPT Gen TARGET (N Sg &msyn-subj-gen-nom) ;
 
 
@@ -2646,7 +2646,7 @@ COPY:msyn-obj-plnom-placc (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &msyn-obj-plnom
 
 #!!  **Agreement rule:** msyn-obj-plnom-placc
 ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF 
-(*-1 TV + PrfPrc BARRIER NOT-NPMODADV LINK -1 Nom)
+(*-1 TV + PrfPrc BARRIER NOT-NPMODADV LINK NOT 0 Pass OR Der/Pass LINK -1 Nom)
 (0C N + Pl + Nom)
 (NOT *1 V + Pl3 BARRIER NOT-ADV);
 COPY:msyn-obj-plnom-placc (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &msyn-obj-plnom-placc);
@@ -2673,7 +2673,7 @@ COPY:msyn-obj-plnom-placc (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &msyn-obj-plnom
 
 
 #!!  **Agreement rule:** msyn-plobj-nom-acc *Nubeh tobdeh kuobbâreh/kuobbârijd ivneest.*
-ADD:msyn-plobj-nom-acc (&msyn-plobj-nom-acc) TARGET (N Pl Nom) IF (*-1 TRANS-V  BARRIER NOT-NPMOD OR CLB OR PUNCT LINK NOT 0 Pl3 LINK *-1 (N Pl Nom))(NOT 0 ABBR OR Num)(NEGATE -1 PrfPrc LINK *-1 N BARRIER VFIN);
+ADD:msyn-plobj-nom-acc (&msyn-plobj-nom-acc) TARGET (N Pl Nom) IF (*-1 TRANS-V  BARRIER NOT-NPMOD OR CLB OR PUNCT LINK NOT 0 Pl3 LINK *-1 N + Pl + Nom OR Pron + Pl + Nom)(NOT 0 ABBR OR Num)(NEGATE -1 PrfPrc LINK *-1 N BARRIER VFIN);
 COPY:msyn-plobj-nom-acc (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &msyn-plobj-nom-acc);
 
 # Trans: Others know mushrooms by.their.color.
@@ -2714,7 +2714,7 @@ COPY:msyn-top-nom-acc (Acc &SUGGEST) EXCEPT Nom TARGET (N Nom &msyn-top-nom-acc)
 #!!  **Agreement rule:** msyn-obj-acc-ill
 #ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF (*-1 ILL-V BARRIER NOT-NPMODADV OR (":") LINK *-1 Nom)(0 Acc)(NOT 0 Ill OR PxSg3); # just to remember we used to want subjects
 ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF 
-(*-1 ILL-V + IV BARRIER NOT-NPMODADV OR (":") LINK NOT 0 TV)
+(*-1 ILL-V + IV BARRIER NOT-NPMODADV OR (":") LINK NOT 0 TV LINK NOT *-1 Ill)
 (0 Acc)
 (NOT 0 Ill OR PxSg3)
 (NOT 1 Ill);
@@ -3004,8 +3004,8 @@ COPY:msyn-adj-sg-pl (Pl Nom &SUGGEST) EXCEPT (Sg Gen) TARGET (A Gen &msyn-adj-sg
 
 #!! ### Quantors in attributive positions
 
-#!!  **Agreement rule:** msyn-quant-nom-gen (A.Gen + N.Nom)
-ADD:msyn-quant-nom-gen (&msyn-quant-nom-gen) TARGET Num IF (0 Num + Sg + Nom)(NOT 0 Num + Sg + Gen)(1C N + NOT-NOM);
+#!!  **Agreement rule:** msyn-quant-nom-gen (A.Gen + N.Nom) # add Ord
+ADD:msyn-quant-nom-gen (&msyn-quant-nom-gen) TARGET Num IF (0 Num + Ord + Sg + Nom)(NOT 0 Num + Sg + Gen OR Sem/Year OR Arab)(1C N + NOT-NOM LINK NOT 0 Loc);
 COPY:msyn-quant-nom-gen (Gen &SUGGEST) EXCEPT Nom TARGET (Num Nom &msyn-quant-nom-gen);
 
  
