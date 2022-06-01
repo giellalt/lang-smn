@@ -2646,7 +2646,7 @@ COPY:msyn-obj-plnom-placc (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &msyn-obj-plnom
 
 #!!  **Agreement rule:** msyn-obj-plnom-placc
 ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF 
-(*-1 TV + PrfPrc BARRIER NOT-NPMODADV LINK NOT 0 Pass OR Der/Pass LINK -1 Nom)
+(*-1 TV + PrfPrc BARRIER NOT-NPMODADV LINK NOT 0 Der/Pass LINK -1 Nom)
 (0C N + Pl + Nom)
 (NOT *1 V + Pl3 BARRIER NOT-ADV);
 COPY:msyn-obj-plnom-placc (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &msyn-obj-plnom-placc);
@@ -2697,7 +2697,7 @@ COPY:msyn-obj-plnom-placc (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &msyn-obj-plnom
 
 
 #!!  **Agreement rule:**  msyn-top-nom-acc
-ADD:msyn-top-nom-acc (&msyn-top-nom-acc) TARGET N IF (0C Nom - Sem/Time - TITLE LINK *-1 BOS BARRIER Nom)(*1 N + Nom BARRIER NOT-NPMOD LINK 1 Ind + Sg3);
+ADD:msyn-top-nom-acc (&msyn-top-nom-acc) TARGET N IF (0C Nom - Sem/Time - TITLE LINK *-1 BOS BARRIER Nom)(*1 N + Nom BARRIER NOT-NPMOD OR ("já") LINK 1C Ind + Sg3);
 COPY:msyn-top-nom-acc (Acc &SUGGEST) EXCEPT Nom TARGET (N Nom &msyn-top-nom-acc) ;
 
 #!! **Agreement rule:** msyn-top-nom-acc 
