@@ -190,6 +190,10 @@ Imprt
 
 Err/Orth
 
+### Numeral sets
+
+OKTA
+
 ### Semantic tags
 
 HUMAN
@@ -468,7 +472,7 @@ This is the first section. Here we put safe rules with no or minimal context.
 
 Ruleset for numbers from sme, and adjusted.
 
-* **SemID** Strange number is ID.
+* **SemID** Strange number is ID. (no it need not be
 
 * **Insertwww** Inserts the Sem/Adr tag to all url expressions
 
@@ -531,6 +535,8 @@ See also *Imprt or Ind* some sections down.
 * **NotImprtN** 
 
 * **NotImprtVFIN** 
+
+Partitive after numerals
 
 ## Lexicalised derivations
 

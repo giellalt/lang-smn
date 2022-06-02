@@ -932,7 +932,7 @@ mii + nominative should be mii + acc
 
 ### Quantors in attributive positions
 
-**Agreement rule:** msyn-quant-nom-gen (A.Gen + N.Nom)
+**Agreement rule:** msyn-quant-nom-gen (A.Gen + N.Nom) # add Ord
 
 ### Quantor phrases
 
