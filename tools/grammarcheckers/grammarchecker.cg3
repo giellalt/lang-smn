@@ -2870,12 +2870,14 @@ COPY:msyn-dem-locattr-gen (Gen &SUGGEST) EXCEPT (Loc Attr) TARGET (Dem &msyn-dem
 ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF 
 (NOT *-1 TV BARRIER NOT-NPMOD)
 (0 N + Pl + Acc)
+(NOT 0 PX OR Gen)
 (1 N OR Actio + Nom LINK NOT *1 TV + V BARRIER S-BOUNDARY);
 
 #!!  **Agreement rule:** msyn-posspl-acc-gen. coordination: *uásálistiđ párnáid/párnái já nuorâi leiráid*
 ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF 
 (NOT *-1 TV BARRIER NOT-NPMOD) # XXX váralaš?
 (0 N + Pl + Acc)
+(NOT 0 PX OR Gen)
 (1 CC)
 (2 N + Pl OR &msyn-posspl-acc-gen LINK 1 N OR Actio + Nom LINK NOT *1 TV + V BARRIER S-BOUNDARY);
 
@@ -2883,6 +2885,7 @@ ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF
 ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF 
 (*-1 V BARRIER NOT-NPMOD) # testing...
 (0 N + Pl + Acc)
+(NOT 0 PX OR Gen)
 (1 CC)
 (2 N + Pl OR &msyn-posspl-acc-gen LINK 1 N OR Actio + Nom LINK NOT *1 TV + V BARRIER S-BOUNDARY);
 #$ Škovlim maŋa puávtáh uásálistiđ párnáid já nuorâi leiráid stuorrâhâžžân.
@@ -2890,6 +2893,7 @@ ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF
 ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF 
 #(NOT *-1 TV BARRIER NOT-NPMOD)
 (0 N + Pl + Acc)
+(NOT 0 PX OR Gen)
 (1 CC)
 (2 N + Pl OR N + Pl + Acc LINK 1 N OR Actio + Nom LINK NOT *1 TV + V BARRIER S-BOUNDARY);
 
@@ -2902,6 +2906,7 @@ COPY:msyn-attr-other-com-gen (Gen &SUGGEST) EXCEPT Com TARGET (A Pl &msyn-attr-c
 # postposition phrase
 ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF 
 (0 N + Pl + Acc)
+(NOT 0 PX OR Gen)
 (1 Po LINK NOT 1 Gen);
 	## Mun lam huámmášâm tom jieččân párnáid puotâ.
 
