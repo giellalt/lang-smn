@@ -2871,7 +2871,9 @@ ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF
 (NOT *-1 TV BARRIER NOT-NPMOD)
 (0 N + Pl + Acc)
 (NOT 0 PX OR Gen)
+(NOT 1 Prop)
 (1 N OR Actio + Nom LINK NOT *1 TV + V BARRIER S-BOUNDARY);
+#$ Mun vuájálitám paas jiegâid Belsebul išij.
 
 #!!  **Agreement rule:** msyn-posspl-acc-gen. coordination: *uásálistiđ párnáid/párnái já nuorâi leiráid*
 ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF 
@@ -3034,16 +3036,30 @@ COPY:msyn-num-par-gen (Sg Gen &SUGGEST) EXCEPT Par TARGET (N &msyn-num-par-gen);
 LIST SGGENACC = (Sg Gen) (Sg Acc) ;
 
 #!!  **Agreement rule:** msyn-num-gen-par:  8 kaandâ/kandâd
-ADD:msyn-num-gen-par (&msyn-num-gen-par) TARGET N IF (-1 Num LINK 0 SEVEN-AND-MORE)(0C N + Sg + Gen)(NOT 0 ABBR OR Par)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Rom)(NOT 0 Sem/Time OR Sem/Date OR Sem/Time-clock)(NOT 1 Po OR N OR A) ;
+ADD:msyn-num-gen-par (&msyn-num-gen-par) TARGET N IF 
+(-1 Num OR A + Arab LINK 0 SEVEN-AND-MORE)
+(0C N + Sg + Gen)
+(NOT 0 ABBR OR Par)
+(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Rom)
+(NOT 0 Sem/Time OR Sem/Date OR Sem/Time-clock)
+(NOT 1 Po OR N OR A) ;
 COPY:msyn-num-gen-par (Par &SUGGEST) EXCEPT (Sg Gen) TARGET (N &msyn-num-gen-par) ;
 
 #!!  **Agreement rule:** msyn-num-acc-par: 8 kaandâ/kandâd
-ADD:msyn-num-acc-par (&msyn-num-acc-par) TARGET N IF (-1 Num LINK 0 SEVEN-AND-MORE)(0 N + Sg + Acc)(NOT 0 ABBR OR Par)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Rom)(NOT 0 Sem/Time OR Sem/Time-clock)(NOT 1 Po OR N OR A) ;
+ADD:msyn-num-acc-par (&msyn-num-acc-par) TARGET N IF 
+(-1 Num OR A + Arab LINK 0 SEVEN-AND-MORE)
+(0 N + Sg + Acc)
+(NOT 0 ABBR OR Par)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Rom)
+(NOT 0 Sem/Time OR Sem/Time-clock)
+(NOT 1 Po OR N OR A) ;
 COPY:msyn-num-acc-par (Par &SUGGEST) EXCEPT (Sg Acc) TARGET (N &msyn-num-acc-par) ;
 #% Toh láá 8 kaandâ.
 #$ Toh láá 8 kandâd.
 #% Must láá čiččâm {kyele}.
 #$ Must láá čiččâm kyellid.
+
+
+
 
 #!! msyn-quant-gen-nom
 # ADD:msyn-quant-gen-nom (&msyn-quant-gen-nom) TARGET Num IF (0 Num + Nom)(1 N + Gen OR N + Acc)(NOT 0 ("ohtâ"));
