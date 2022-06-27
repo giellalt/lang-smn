@@ -2868,7 +2868,7 @@ COPY:msyn-dem-locattr-gen (Gen &SUGGEST) EXCEPT (Loc Attr) TARGET (Dem &msyn-dem
 
 #!!  **Agreement rule:** msyn-posspl-acc-gen. *Siijđoid/Siijđoi lehâstem tábáhtuvá itten.*
 ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF 
-(NOT *-1 TV BARRIER NOT-NPMOD)
+(NEGATE *-1 TV BARRIER NOT-NPMOD) ## <????
 (0 N + Pl + Acc)
 (NOT 0 PX OR Gen)
 (NOT 1 Prop)
@@ -2877,7 +2877,7 @@ ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF
 
 #!!  **Agreement rule:** msyn-posspl-acc-gen. coordination: *uásálistiđ párnáid/párnái já nuorâi leiráid*
 ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF 
-(NOT *-1 TV BARRIER NOT-NPMOD) # XXX váralaš?
+(NEGATE *-1 TV BARRIER NOT-NPMOD) # XXX váralaš?
 (0 N + Pl + Acc)
 (NOT 0 PX OR Gen)
 (1 CC)
@@ -2912,7 +2912,7 @@ ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF
 (1 Po LINK NOT 1 Gen);
 	## Mun lam huámmášâm tom jieččân párnáid puotâ.
 
-COPY:msyn-posspl-acc-gen (Gen &SUGGEST) EXCEPT (Acc &msyn-posspl-acc-gen) TARGET (N Pl &msyn-posspl-acc-gen);
+COPY:msyn-posspl-acc-gen (Gen &SUGGEST) EXCEPT Acc TARGET (N Pl &msyn-posspl-acc-gen);
 
 
 #% Siijđoid lehâstem tábáhtuvá itten.
