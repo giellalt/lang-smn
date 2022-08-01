@@ -3012,10 +3012,13 @@ COPY:msyn-adj-sg-pl (Pl Nom &SUGGEST) EXCEPT (Sg Gen) TARGET (A Gen &msyn-adj-sg
 #!! ### Quantors in attributive positions
 
 #!!  **Agreement rule:** msyn-quant-nom-gen (A.Gen + N.Nom) # add Ord
-ADD:msyn-quant-nom-gen (&msyn-quant-nom-gen) TARGET Num IF (0 Num + Ord + Sg + Nom)(NOT 0 Num + Sg + Gen OR Sem/Year OR Arab)(1C N + NOT-NOM LINK NOT 0 Loc);
+ADD:msyn-quant-nom-gen (&msyn-quant-nom-gen) TARGET Num IF
+(0 Num + Ord + Sg + Nom)
+(NOT 0 Num + Sg + Gen OR Sem/Year OR Arab)
+(1C N + NOT-NOM LINK NOT 0 Loc);
 COPY:msyn-quant-nom-gen (Gen &SUGGEST) EXCEPT Nom TARGET (Num Nom &msyn-quant-nom-gen);
 
- 
+
 
 
 #!! ### Quantor phrases
