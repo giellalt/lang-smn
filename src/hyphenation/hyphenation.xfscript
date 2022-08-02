@@ -28,8 +28,11 @@ define Vow [ a | á | e | i | o | u | y | æ | ø | å | ä | ö |
              ë | ü | ï | â | ê | ô | û | î | ã | ý
              Ë | Ü | Ï | Â | Ê | Ô | Û | Î | Ã | Ý ] ;
 
-define 2ndVow [ e | a | u | o | i | á | y | ø | ä | 
-                E | A | U | O | I | Á | Y | Ø | Ä ] ;
+! smn diphthongs: /iä/, /ie/, /uo/, /uá/, /ye/, ==> 2ndVow = ä, á, e, o
+! smn loanword diphthongs: neutralistiđ, fauna, leutnánta
+
+define 2ndVow [ e | i | u | o | á | ä | 
+                E | I | U | O | Á | Ä ] ;
 
 !define 3dVow [ u | U ] ;
 
@@ -50,18 +53,18 @@ define EOA [ e | E | o | O | a | A ] ;
 define IAO [ i | I | a | A | o | O ] ;
 define Oslash   [ ø | Ø ] ; ! Renamed from Ø to avoid non-ASCII chars
 define UI  [ u | U | i | I ] ;
-
+! what about á, ä, â ?
 
 define UAAdipht     [ u á | U á | U Á ] ;
 define IEdipht      [ i e | I e | I E ] ;
 define UOdipht      [ u o | U o | U O ] ;
-define EAdipht      [ e a | E a | E A ] ;
-define OAdipht      [ o a | O a | O A ] ;
-define OUdipht      [ o u | O u | O U ] ; ! jour-na-lis-sta
+!define EAdipht      [ e a | E a | E A ] ;
+!define OAdipht      [ o a | O a | O A ] ;
+!define OUdipht      [ o u | O u | O U ] ; ! jour-na-lis-sta
 define AUdipht      [ a u | A u | A U ] ; ! fau-na, Lauv-sjø-vo-la, Kår-ve-jau-re ok.
 define EUdipht      [ e u | E u | E U ] ; ! leut-nán-ta
-define AEdipht      [ a e | A e | A E ] ; ! lae-sta-di-us,
-define OslashYdipht [ ø y | Ø y | Ø Y ] ; ! nøyt-rála  ! Renamed from ØYdipht to avoid non-ASCII chars
+!define AEdipht      [ a e | A e | A E ] ; ! lae-sta-di-us,
+!define OslashYdipht [ ø y | Ø y | Ø Y ] ; ! nøyt-rála  ! Renamed from ØYdipht to avoid non-ASCII chars
 define OEdipht      [ o e | O e | O E ] ; ! goe-the
 define IOslashdipht [ i ø | I ø | I Ø ] ; ! skiøld     ! Renamed from IØdipht to avoid non-ASCII chars
 define IOdipht      [ i o | I o | I O ] ; ! skiold, nation
@@ -75,8 +78,8 @@ define YEdipht      [ y e | Y e | Y E ] ; ! kye-li
 
 
 
-define dipht [ IEdipht | UAAdipht | UOdipht | EAdipht | OAdipht | OUdipht | AUdipht |
-               EUdipht | AEdipht | OslashYdipht | OEdipht | IOslashdipht | IOdipht |
+define dipht [ IEdipht | UAAdipht | UOdipht | AUdipht |
+               EUdipht | OEdipht | IOslashdipht | IOdipht |
                IAEdipht | YEdipht ] ;
 
 !define tripht [ EAUtripht | IEUtripht ] ;
@@ -137,11 +140,11 @@ define 4cns        [..] -> %^ || Vow r           _ d n j ,
 define longdiphthong [..] -> %^ || dipht _ [ [ [đ|l|r] f ] 
                                            | [ [đ|g]  g ] 
                                            | [ [l|r]   g ] 
-                                                         ] i [ s t | j (d|n) | h ] .#. ;
+                                                           ] i [ s t | j (d|n) | h ] .#. ;
                                                          
 !define longdiphthong [..] -> %_ || dipht _  Cns Cns (Cns) Vow [ j d | s t | j (n) | h ] .#. ;
 
-define unvoicedwg  [..] -> %^ || Vow (Cns) h [ n | m | l | j | r ] _   [ n | m | l | j | r ] Vow ; !guvhl^li
+!define unvoicedwg  [..] -> %^ || Vow (Cns) h [ n | m | l | j | r ] _   [ n | m | l | j | r ] Vow ; !guvhl^li
 define dissnas     [..] -> %^ || Vow         [ đ | i | l | r | v ] _ [ b m | d n (j) | g ŋ ] ; !ráv^dnji
 ! define palatal     [..] -> %^ || Vow (Cns) Cns _ d j ,
 !                                  Vow (Cns) Cns _ l j ,
@@ -204,7 +207,7 @@ afterlong
 .o. 4cns
 !.o. unvoiced
 .o. longdiphthong ! testing 
-.o. unvoicedwg
+!.o. unvoicedwg
 .o. dissnas
 .o. palatal
 !.o. s2cns
