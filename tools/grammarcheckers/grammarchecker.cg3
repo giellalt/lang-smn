@@ -1127,13 +1127,13 @@ SET PRE-NP-HEAD = (Prop Attr) OR (Prop @>N) OR A OR (ABBR Attr)
          OR ("pyeri") OR (A Sg Nom)
          OR (Pron Pers Gen) OR (N Gen) OR (A Gen) OR BUOT OR
          Num OR Cmp/SplitR OR CC OR (Pron Dem) OR (Pron Refl Gen) OR (Indef Attr) OR 
-         (PrfPrc @>N) OR PrsPrc OR (A Ord) ;
+         (PrfPrc @>N) OR PrsPrc OR (A Ord) OR CC ;
          # The strict version of items that can only be premodifiers, not parts of the predicate
          
 # SET PRE-NP-V = PrfPrc OR PrsPrc OR Der/NomAg OR Actio OR Der/NomAct OR (V A) OR (Prs Sg3) + Ind OR (Prs Sg1) + Ind OR (Imprt Du2) ;
     # to be used together with PRE-NP-HEAD before @>N is disambiguated
          
-# SET NP-MEMBER   = PRE-NP-HEAD OR N ;
+SET NP-MEMBER   = PRE-NP-HEAD OR N ;
 
 SET PRE-A-N     = (Pron Pers Gen) OR (Pron Pers Acc) OR (Pron Indef) OR Num OR (A Ord) OR (Pron Dem) OR (Pron Refl Gen) OR (Pron Refl Acc) ; # Acc pga av manglende disambiguering tidlig i fila
 
@@ -1153,6 +1153,7 @@ LIST PUNCT-RIGHT = (PUNCT RIGHT) ;
 #!! part of the noun phrase of that noun (i.e., "scan to the next NP head")
 
 SET NOT-NPMOD     = WORD - PRE-NP-HEAD OR ABBR OR @CVP ;                     
+SET NOT-COORD-NPMOD     = WORD - NP-MEMBER OR ABBR OR @CVP ;                     
 # This is the previous NPNH (npnh) set.
 # NOT-NPMOD  = "NOT-PRE-NP-HEAD"
  
@@ -2868,16 +2869,23 @@ COPY:msyn-dem-locattr-gen (Gen &SUGGEST) EXCEPT (Loc Attr) TARGET (Dem &msyn-dem
 
 #!!  **Agreement rule:** msyn-posspl-acc-gen. *Siijđoid/Siijđoi lehâstem tábáhtuvá itten.*
 ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF 
-(NEGATE *-1 TV BARRIER NOT-NPMOD) ## <????
+(NEGATE *-1 TV BARRIER NOT-COORD-NPMOD) ## <????
 (0 N + Pl + Acc)
 (NOT 0 PX OR Gen)
 (NOT 1 Prop)
 (1 N OR Actio + Nom LINK NOT *1 TV + V BARRIER S-BOUNDARY);
 #$ Mun vuájálitám paas jiegâid Belsebul išij.
 
+#ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF 
+#(NEGATE *-1 TV BARRIER NOT-NPMOD) ## <????
+#(0 N + Pl + Acc)
+#(NOT 0 PX OR Gen)
+#(NOT 1 Prop)
+#(1 N OR Actio + Nom LINK NOT *1 TV + V BARRIER S-BOUNDARY);
+
 #!!  **Agreement rule:** msyn-posspl-acc-gen. coordination: *uásálistiđ párnáid/párnái já nuorâi leiráid*
 ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF 
-(NEGATE *-1 TV BARRIER NOT-NPMOD) # XXX váralaš?
+(NEGATE *-1 TV BARRIER NOT-COORD-NPMOD) # XXX váralaš?
 (0 N + Pl + Acc)
 (NOT 0 PX OR Gen)
 (1 CC)
@@ -2885,7 +2893,7 @@ ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF
 
 #!!  **Agreement rule:** msyn-posspl-acc-gen. coordination: *uásálistiđ párnáid/párnái já nuorâi leiráid*
 ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF 
-(*-1 V BARRIER NOT-NPMOD) # testing...
+(*-1 V BARRIER NOT-COORD-NPMOD) # testing...
 (0 N + Pl + Acc)
 (NOT 0 PX OR Gen)
 (1 CC)
