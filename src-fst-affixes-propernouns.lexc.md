@@ -248,6 +248,7 @@ LEXICON KIARUN = 3KIELES
 * **LEXICON KALDEE-plc**  Similar to TAHHEE
 
 * **LEXICON KALDEE-org**  Similar to TAHHEE
+* **LEXICON KALDEE-sur**  Similar to TAHHEE
 
 * **LEXICON KALDEE_PL-plc**  Similar to TAHHEE_PL
 
