@@ -1416,7 +1416,7 @@ LIST ALU = "alu" "gasu" "govddu" "guhku" "losu" "stuoru" "viiddu" "čieŋu" ;
 # These are ABBR:
 LIST REAL-TITLE =  "prof" "fil.tri" "hr" "kapt" "korp" "lekt" "lic" "ltn" "mag.art" "mag" "merc" "miss" "Mr" "mr" "Mrs" "mrs" "odont" "oecon" "ossod.dir" ;
  
-LIST TITLE-LIKE = "kästee" "justitiárius" "majesteet" "miss" "naabur" "hiärrá" ;
+LIST TITLE-LIKE = "kästee" "justitiárius" "majesteet" "miss" "naabur" "hiärrá" "tonttu" ;
 # Ránnjá Ole Vuolab imašta manne ....
 
 #!! - Sets for nouns as pred
@@ -1491,9 +1491,9 @@ LIST PROFESSION1 = (".*advokaat"r)  (".*tuámmár"r) "arkeoloog" (".*artist"r) (
 (".*keččee"r) (".*stivrejeijee"r)(".*konsulent"r) "pargoviehâ" "liäiboo" "pappâ" "palvâleijee" (".*čällee"r) (".*pijgá"r)  (".*vyebdee"r) (".*terapeut"r)  (".*astronaut"r) "pispe" (".*pivdee"r)  "eennâmviljâleijee" "puásuituállee" "tuodârsämmilâš" "poolismiäštár" (".*vyeijee"r) "puovtâdeijee" 
 "čiehčee" "čorgejeijee" (".*čuojâtteijee"r) 
 "taaiđar" (".*taaidar"r) "tálulâš" "eemeed" "táluiššeed" "tärhisteijee" "orjâlâš" (".*tipšoo"r) (".*toimâtteijee"r) (".*tuáhtár"r) "tulkkâ" "tuáijár"  (".*totkee"r) 
-"ealáhusdoalli" "eallo#doalli" "eennâmviljâleijee" "eananhearrá" (".*sadjásaš"r) "eatnandoalli"
+"eennâmviljâleijee" "eennâmhiärrá" (".*sadjásaš"r) 
 "fáldi" "fitnodatdoaibmi" "fitnodatoamasteaddji" 
-"kävppijâs" "giellaráđđi" (".*veahkki"r) "kirdemmaašin" "girko#bálvaleaddji" "girkodulka" "gollerávdi" "kunâgâs" "govvadáidár" "kovvejeijee" "kuáđutteijee" "kyelipivdee"
+"kävppijâs" "giellaráđđi" (".*veahkki"r) "kirdemmaašin" "girko#bálvaleaddji" "kirkkotulkkâ" "kollečeppi" "kunâgâs" "kovetaaidâr" "kovvejeijee" "kuáđutteijee" "kyelipivdee"
 "hárjuttâllee" (".*teknihkar"r) (".*jođiheaddji"r) "johttisápmi" "johttisápmelaš" (".*journalista"r) "kiäisár" "kirurga" "kokkâ" "kuráhtor" "korefereanta" "kursaoahppi" 
 "lágideaddji" "láibu" "lávlu" "leanut" "logopeda" "luhkkár" 
 "máilmmimeašttir" "máhttájeaddji" "máttasápmi" "mearraalmmái" "mearraolmmái" "mearrasápmi" "miššoneara" "musea#bargi" "musihkkadahkki" "musihkkár"
@@ -2707,13 +2707,16 @@ COPY:msyn-obj-plnom-placc (Acc &SUGGEST) EXCEPT Nom TARGET (N Pl &msyn-obj-plnom
 
 
 #!!  **Agreement rule:**  msyn-top-nom-acc
-ADD:msyn-top-nom-acc (&msyn-top-nom-acc) TARGET N IF (0C Nom - Sem/Time - TITLE LINK *-1 BOS BARRIER Nom)(*1 N + Nom BARRIER NOT-NPMOD OR ("já") LINK 1C Ind + Sg3);
+ADD:msyn-top-nom-acc (&msyn-top-nom-acc) TARGET N IF
+	(0C Nom - Sem/Time - TITLE LINK *-1 BOS BARRIER Nom)
+	(*1 N + Nom BARRIER NOT-NPMOD OR ("já") OR COMMA LINK 1C Ind + Sg3 + TV);
 COPY:msyn-top-nom-acc (Acc &SUGGEST) EXCEPT Nom TARGET (N Nom &msyn-top-nom-acc) ;
 
 #!! **Agreement rule:** msyn-top-nom-acc 
-ADD:msyn-top-nom-acc (&msyn-top-nom-acc) TARGET N IF (0C Nom - Sem/Time - TITLE LINK *-1 BOS BARRIER Nom)(1 Pron + Pers + Nom)(2 Ind + Sg3);
+ADD:msyn-top-nom-acc (&msyn-top-nom-acc) TARGET N IF (0C Nom - Sem/Time - TITLE LINK *-1 BOS BARRIER Nom)(1 Pron + Pers + Nom)(2 Ind + Sg3 + TV);
 COPY:msyn-top-nom-acc (Acc &SUGGEST) EXCEPT Nom TARGET (N Nom &msyn-top-nom-acc) ;
 #% Suullân peeli sun lii porgâm.
+#$ Suullân peeli, sun eeđâi.
 
 #% Motomeh suomâkielâ vaikuttâsah tábáhtusâid láá tuhhiittum anarâškielân.
 
