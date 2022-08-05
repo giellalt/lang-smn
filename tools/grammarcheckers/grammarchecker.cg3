@@ -228,6 +228,7 @@ LIST VAbess = VAbess ;		   #!! VAbess
 
 LIST Foc/ge = Foc/Pos-ge Foc/Neg-ge   ;	   #!! Foc/ge
 LIST Foc/gen = Foc/gen   ;  #!! Foc/gen
+LIST Foc/gin = Foc/gin   ;  #!! Foc/gin
 LIST Foc/ges = Foc/ges  ;  #!! Foc/ges
 LIST Foc/gis = Foc/gis  ;  #!! Foc/gis
 LIST Foc/naj = Foc/naj   ;  #!! Foc/naj
@@ -528,6 +529,12 @@ LIST HABEO-SG3 = ("leđe" Sg3) (V Neg Sg3) ("šoddâđ" Sg3) ;
 
 LIST HABEO-PL3 = ("leđe" Pl3) (V Neg Pl3) ("šoddâđ" Pl3) ;
 
+#!! ### QUASI-TV
+#!! Mun vuolgim raapâid pajas. Verb accepts accusative in front of adverb.
+
+LIST QUASI-TV = "vyelgiđ" "moonnâđ" "kaččâđ" "väzziđ" "puáttiđ" "juurrâđ" "koččâđ" "vierrâđ"  ; # adjectives that may modify adverbs
+
+
 #!! ### Pronoun sets
 # ------------
 #!! MUN, DON, SON, MOAI, ...
@@ -633,7 +640,7 @@ LIST MOVT = "govt" ("maht" Adv) "maht" "mot" "mov" "maht" ;
 
 LIST MO-MANge = "tondiet" "kuás" "gokko" "kost" "kuus" "govt" ("maht" Adv) "maggaar" "maht" "mane" ("mane" Adv) "maht" "mot" "mov" "maht" ("nugo" @CVP) (V Qst);
  
-SET MO = MO-MANge - Foc/ge ; 
+SET MO = MO-MANge - Foc/gin ; 
  
  # Introduce finite clauses.
  
@@ -2460,7 +2467,7 @@ COPY:msyn-po-nom-gen (Gen &SUGGEST) EXCEPT (Nom &msyn-po-nom-gen) TARGET (N Pl &
 
 
 #!!  **Agreement rule:** msyn-po-placc-plgen *Vuoigâdvuotä nubástittiđ kielâ jieijâs táárbuid/táárbui mield.*
-ADD:msyn-po-placc-plgen (&msyn-po-placc-plgen) TARGET N IF (NOT *-1 TV)(0 Pl + Acc)(1 ADV-PO);
+ADD:msyn-po-placc-plgen (&msyn-po-placc-plgen) TARGET N IF (NOT *-1 TV OR QUASI-TV)(0 Pl + Acc)(1 ADV-PO);
 COPY:msyn-po-placc-plgen (Gen &SUGGEST) EXCEPT Acc TARGET (N Pl &msyn-po-placc-plgen);
 
 #% Vuoigâdvuotä nubástittiđ kielâ jieijâs táárbuid mield.
@@ -2875,7 +2882,8 @@ ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF
 (0 N + Pl + Acc)
 (NOT 0 PX OR Gen)
 (NOT 1 Prop)
-(1 N OR Actio + Nom LINK NOT *1 TV + V BARRIER S-BOUNDARY);
+(1 N OR Actio + Nom LINK NOT *1 TV + V BARRIER S-BOUNDARY)
+(NEGATE *1 TV BARRIER S-BOUNDARY);
 #$ Mun vuájálitám paas jiegâid Belsebul išij.
 
 #ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF 
