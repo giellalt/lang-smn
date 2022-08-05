@@ -48,12 +48,14 @@ TESTS=\
     msyn-v-actio-sg1.yaml \
     neg-adj-gen-nom.yaml \
     neg-interferens_celkkuuh.yaml \
+    neg-obj-plnom-placc.yaml \
     neg-posspl-acc-gen.yaml \
+    neg-top-nom-acc.yaml \
     neg-quant-nom-gen.yaml \
-	ovdamearkkat.yaml \
-	science.yaml \
+    ovdamearkkat.yaml \
+    science.yaml \
     typos.yaml \
-	wikipedia.yaml
+    wikipedia.yaml
 
 # List tests that are presently (expected) failures here, ie things that should
 # be fixed *later*, but is not critical at the moment:
@@ -62,7 +64,7 @@ XFAIL_TESTS=\
 	interferens_celkkuuh4.yaml \
 	msyn-det-nom-acc.yaml \
 	msyn-ext-pl3-sg3.yaml \
-    msyn-agr-sg3-du3.yaml \
+	msyn-agr-sg3-du3.yaml \
 	msyn-ext-sg3-pl3.yaml \
 	msyn-extsubj-gen-nom.yaml \
 	msyn-extsubj-ill-nom.yaml \
@@ -85,8 +87,10 @@ XFAIL_TESTS=\
 	msyn-v-actio-sg1.yaml \
     neg-adj-gen-nom.yaml \
     neg-interferens_celkkuuh.yaml \
+    neg-obj-plnom-placc.yaml \
     neg-posspl-acc-gen.yaml \
     neg-quant-nom-gen.yaml \
+    neg-top-nom-acc.yaml \
 	ovdamearkkat.yaml \
 	science.yaml \
     typos.yaml \
