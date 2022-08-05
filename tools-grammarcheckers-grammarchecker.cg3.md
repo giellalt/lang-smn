@@ -158,6 +158,7 @@ VAbess
 
 Foc/ge
 Foc/gen
+Foc/gin
 Foc/ges
 Foc/gis
 Foc/naj
@@ -398,6 +399,9 @@ No one so far
 
 ### Sets consisting of forms of "leđe" (these ones need to be rewritten)
 LEDE, LEAN, LEAT, ...
+
+### QUASI-TV
+Mun vuolgim raapâid pajas. Verb accepts accusative in front of adverb.
 
 ### Pronoun sets
 MUN, DON, SON, MOAI, ...
