@@ -5744,7 +5744,7 @@ SELECT:GenNP2 (N Gen)  IF (-1 ("já"))(NEGATE 0 TITLE LINK 1 Prop)(1 (N Acc))(NE
 	#% Sii ožžot geavahit eatnama ja gáttiid ja elliideaset ja iežaset ealáhussii. # Deaivá dán vaikko eat hálit dan.
 
 #!! * **GenNP3** Selects Gen (modifier): if first one to right is Nom or Loc *Norgga oaivegávpogis*
-SELECT:GenNP3 Gen IF (*-1 BOS OR COMMA OR XGO BARRIER NOT-Attr)(0 Gen - Num)(1 (N Loc) OR (N Nom) LINK NOT 0 Prop)(NEGATE 0 (Pron Interr) OR (Pron Rel))(NEGATE 0 TITLE + Nom LINK 1 (Prop Nom))(NEGATE 0 (Pron Dem) + Acc)(NEGATE 0 (Sg Nom) LINK *1 SG3-V BARRIER VFIN OR Nom);
+SELECT:GenNP3 Gen IF (*-1 BOS OR COMMA OR XGO BARRIER NOT-Attr)(NOT 0 Num OR Ord)(1 (N Loc) OR (N Nom) LINK NOT 0 Prop)(NEGATE 0 (Pron Interr) OR (Pron Rel))(NEGATE 0 TITLE + Nom LINK 1 (Prop Nom))(NEGATE 0 (Pron Dem) + Acc)(NEGATE 0 (Sg Nom) LINK *1 SG3-V BARRIER VFIN OR Nom);
 	#$ Ánde orru Oslos, Norgga oaivegávpogis.
 	#$ Nieidda eadni ii sihtan vuolgit, muhto nisu hásttii.
 	#$ Organisašuvnna bláđđi, man gohčodit Fokusin muitala ahte gonagas Olav su áiggistis lei bivdán beassat leat servodaga suodjaleaddji.
@@ -6584,7 +6584,7 @@ SELECT:NDr2391 Nom IF (*-1 Loc BARRIER SV-BOUNDARY OR Nom LINK *-1 COPULAS BARRI
   	#$  Plána lei ahte galggai čađahit johtaluslohkamiid diimmá jagi skuhtervuodjimis ja bievlavuodjimis.
 
 #!! * **NDr2399** Selects Nom  
-SELECT:NDr2399 Nom IF (*-1 CRD BARRIER NOT-NPMODADV LINK -1 Nom LINK NOT 0 Acc LINK NEGATE *-1 NOT-AUX-V BARRIER NOT-NPMODADV)(NEGATE 0 VFIN)(1C NP-BOUNDARY); 
+SELECT:NDr2399 Nom IF (*-1 CRD BARRIER NOT-NPMODADV LINK -1 Nom LINK NOT 0 Acc LINK NEGATE *-1 NOT-AUX-V BARRIER NOT-NPMODADV)(NEGATE 0 VFIN)(1C NP-BOUNDARY)(NOT 1 TV); 
 	#$  Divššohas dahje su ovddasteaddji gii oaivvilda ahte... Comment: Please add the whole sentence in stead of "..."!
 
 #!! * **NDr2400** Selects Nom
@@ -7268,7 +7268,7 @@ REMOVE Pcle IF (-1 BOS)(0 Adv);
 #!! Genitive not Nominative
 
 #!! * **GenModifiesN** is a tentative rule to be modified
-REMOVE:GenModifiesN Nom IF (0 Gen)(1 N);
+REMOVE:GenModifiesN Nom IF (0 N + Gen)(1 N);
 
 AFTER-SECTIONS
 
