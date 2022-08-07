@@ -3163,8 +3163,8 @@ MAP:compInfCoor (@COMP-CS<) TARGET Inf (-1 ("já") OR ("dahje") LINK *-1 @COMP-C
 
 SECTION
  	
-#!! * **killAllnotComp** Removes analysis which are not @COMP-CS<
-SELECT:killAllnotComp  @COMP-CS< ;	
+#!! * **killAllnotComp** Removes analysis which are not @COMP-CS< -- it seems this rule is not relevant in a grc context.
+#SELECT:killAllnotComp  @COMP-CS< ;	
 
 #!!     - *This was the kill all not Comp rule!!*
 
@@ -5746,7 +5746,7 @@ SELECT:GenNP2 (N Gen)  IF (-1 ("já"))(NEGATE 0 TITLE LINK 1 Prop)(1 (N Acc))(NE
 	#% Sii ožžot geavahit eatnama ja gáttiid ja elliideaset ja iežaset ealáhussii. # Deaivá dán vaikko eat hálit dan.
 
 #!! * **GenNP3** Selects Gen (modifier): if first one to right is Nom or Loc *Norgga oaivegávpogis*
-SELECT:GenNP3 Gen IF (*-1 BOS OR COMMA OR XGO BARRIER NOT-Attr)(0 Gen - Num)(1 (N Loc) OR (N Nom) LINK NOT 0 Prop)(NEGATE 0 (Pron Interr) OR (Pron Rel))(NEGATE 0 TITLE + Nom LINK 1 (Prop Nom))(NEGATE 0 (Pron Dem) + Acc)(NEGATE 0 (Sg Nom) LINK *1 SG3-V BARRIER VFIN OR Nom);
+SELECT:GenNP3 Gen IF (*-1 BOS OR COMMA OR XGO BARRIER NOT-Attr)(NOT 0 Num OR A)(1 (N Loc) OR (N Nom) LINK NOT 0 Prop)(NEGATE 0 (Pron Interr) OR (Pron Rel))(NEGATE 0 TITLE + Nom LINK 1 (Prop Nom))(NEGATE 0 (Pron Dem) + Acc)(NEGATE 0 (Sg Nom) LINK *1 SG3-V BARRIER VFIN OR Nom);
 	#$ Ánde orru Oslos, Norgga oaivegávpogis.
 	#$ Nieidda eadni ii sihtan vuolgit, muhto nisu hásttii.
 	#$ Organisašuvnna bláđđi, man gohčodit Fokusin muitala ahte gonagas Olav su áiggistis lei bivdán beassat leat servodaga suodjaleaddji.
@@ -6335,7 +6335,7 @@ SELECT:onlyProp (Prop Nom) IF (-1*  (":") OR LEFT BARRIER WORD - Prop) (*1 PUNCT
 	
 
 #!! * **NDr2325** Selects Nom
-SELECT:NDr2325 Nom IF (*-1 go BARRIER NOT-NP LINK NOT -1 VFIN)(NEGATE 0 Acc OR VFIN)(1 EOC);
+SELECT:NDr2325 Nom IF (*-1 go BARRIER NOT-NP LINK NOT -1 VFIN)(NEGATE 0 Acc OR Gen OR Sem/Time OR VFIN)(1 EOC);
 	#$ Ii leat almmustuvvan oktage stuorit go gásttašeaddji Johanas.
 
 #!! * **NDr2326** Selects Nom
@@ -6586,7 +6586,7 @@ SELECT:NDr2391 Nom IF (*-1 Loc BARRIER SV-BOUNDARY OR Nom LINK *-1 COPULAS BARRI
   	#$  Plána lei ahte galggai čađahit johtaluslohkamiid diimmá jagi skuhtervuodjimis ja bievlavuodjimis.
 
 #!! * **NDr2399** Selects Nom  
-SELECT:NDr2399 Nom IF (*-1 CRD BARRIER NOT-NPMODADV LINK -1 Nom LINK NOT 0 Acc LINK NEGATE *-1 NOT-AUX-V BARRIER NOT-NPMODADV)(NEGATE 0 VFIN)(1C NP-BOUNDARY); 
+SELECT:NDr2399 Nom IF (*-1 CRD BARRIER NOT-NPMODADV LINK -1 Nom LINK NOT 0 Acc LINK NEGATE *-1 NOT-AUX-V BARRIER NOT-NPMODADV)(NEGATE 0 VFIN)(1C NP-BOUNDARY)(NOT 1 TV); 
 	#$  Divššohas dahje su ovddasteaddji gii oaivvilda ahte... Comment: Please add the whole sentence in stead of "..."!
 
 #!! * **NDr2400** Selects Nom
@@ -6706,7 +6706,7 @@ REMOVE:NDr2425 Nom IF (*-1 VFIN BARRIER NOT-ADV-PCLE LINK NOT 0 COPULAS OR FAUXV
 	#$ Dii galgabehtet vuđolaččat bargat.
 
 #!! * **NDr2426** Removes Nom, but not Actio 
-REMOVE:NDr2426 Nom - Actio IF (*-1 BOC BARRIER NOT-NP)(NEGATE 1 Prop)(*1C (N Nom) BARRIER CC OR CLB OR NOT-NPMOD OR PUNCT LINK *1 VFIN BARRIER NOT-NP)(NEGATE 1 (Interr Nom))(NEGATE -1 Gen LINK 1 ABBR);
+REMOVE:NDr2426 Nom - Actio IF (*-1 BOC BARRIER NOT-NP)(NEGATE 0 A)(NEGATE 1 Prop)(*1C (N Nom) BARRIER CC OR CLB OR NOT-NPMOD OR PUNCT LINK *1 VFIN BARRIER NOT-NP)(NEGATE 1 (Interr Nom))(NEGATE -1 Gen LINK 1 ABBR);
 	#$ Romssa universitehta vuosttaš čielgadeapmi sámi dutkama birra dahkkui...
 
 
@@ -7270,8 +7270,8 @@ REMOVE Pcle IF (-1 BOS)(0 Adv);
 
 #!! Genitive not Nominative
 
-#!! * **GenModifiesN** is a tentative rule to be modified
-REMOVE:GenModifiesN Nom IF (0 Gen)(1 N);
+#!! * **GenModifiesN** is a tentative rule to be modified ... or removed. Sukk.
+#REMOVE:GenModifiesN Nom IF (0 N + Gen)(1 N);
 
 AFTER-SECTIONS
 
