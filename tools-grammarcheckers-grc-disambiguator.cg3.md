@@ -792,7 +792,7 @@ maid has many readings and as Rel it is a member of S-BOUNDARY. Therefore we nee
 
 * **compInfCoor** 
 
-* **killAllnotComp** Removes analysis which are not @COMP-CS<
+* **killAllnotComp** Removes analysis which are not @COMP-CS< -- it seems this rule is not relevant in a grc context.
 
 - *This was the kill all not Comp rule!!*
 
@@ -2041,7 +2041,7 @@ Final Com/Loc rule: Remove Com.
 
 Genitive not Nominative
 
-* **GenModifiesN** is a tentative rule to be modified
+* **GenModifiesN** is a tentative rule to be modified ... or removed. Sukk.
 
 ## Variant lemmas
 

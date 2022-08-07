@@ -171,7 +171,7 @@ Foc/son
 
 ### Derivation tags
 
-Der/PassL Der/PassS (Der/Pass = both)
+Der/Pass
 Der/NomAg
 Actor (= NomAg and Der/NomAg)
 Der/alla
@@ -474,7 +474,7 @@ STRICT-TRANS-V is the set for verbs which don't let a GenAcc be a modifier of an
 
 ### Valency sets
 
-- LIST INF-V = "enittiđ" "áhásiđ" "áiguđ" "älgiđ" "ásahit" "paggiđ" "povčâstiđ" "peessâđ" "lijkkuđ" "anoa" "bivvat" "ajasta" "puáttiđ" "käskeä" "čokkáđ" "čokánistiđ" "čokániđ" "pisániđ" "čuoččastit" "čuárvuđ" "čurggodit" ("ettâđ" Der/PassL) ("ettâđ" Der/PassS) "tovâttiđ" "táttuđ" "täiđiđ" "tarbâšiđ" "miäruštâllâđ" "suovvâđ" "tuáivuđ" "hoputtaa" "oskeldâttâđ" "ferttiđ" "huámášiđ" "huolâttiđ" "kolgâđ" "vaattâđ" "gárrut" "karttâđ" "iskâđ" "geargat" "geatnegahttit" "ajasta" "vaijeeđ" "koččođ" "háhppehit" "halijdiđ" "hárjániđ" "käydä" "lávet" "lijkkuđ" "morániđ" "vyelgiđ" "mättiđ" "máššat" "movttiidahttit" "mušteđ" "nagodit" "navdit" "máttááttiđ" "oahpástuvvat" "máttáđ" "uážžuđ" "enittiđ" "laskea" "riepmat" "sättiđ" "seahtit" "anoa" "sättiđ" "suovvat" "šoddâđ" "maaššâđ" "vaijeeđ" "tekemään" "koirasta" "vuogáiduvvat" "vyelgiđ" "vuollánit" "vyerdiđ"; 
+- LIST INF-V = "enittiđ" "áhásiđ" "áiguđ" "älgiđ" "ásahit" "paggiđ" "povčâstiđ" "peessâđ" "lijkkuđ" "anoa" "bivvat" "ajasta" "puáttiđ" "käskeä" "čokkáđ" "čokánistiđ" "čokániđ" "pisániđ" "čuoččastit" "čuárvuđ" "čurggodit" ("ettâđ" Der/Pass) "tovâttiđ" "táttuđ" "täiđiđ" "tarbâšiđ" "miäruštâllâđ" "suovvâđ" "tuáivuđ" "hoputtaa" "oskeldâttâđ" "ferttiđ" "huámášiđ" "huolâttiđ" "kolgâđ" "vaattâđ" "gárrut" "karttâđ" "iskâđ" "geargat" "geatnegahttit" "ajasta" "vaijeeđ" "koččođ" "háhppehit" "halijdiđ" "hárjániđ" "käydä" "lávet" "lijkkuđ" "morániđ" "vyelgiđ" "mättiđ" "máššat" "movttiidahttit" "mušteđ" "nagodit" "navdit" "máttááttiđ" "oahpástuvvat" "máttáđ" "uážžuđ" "enittiđ" "laskea" "riepmat" "sättiđ" "seahtit" "anoa" "sättiđ" "suovvat" "šoddâđ" "maaššâđ" "vaijeeđ" "tekemään" "koirasta" "vuogáiduvvat" "vyelgiđ" "vuollánit" "vyerdiđ"; 
 
 - LIST ACC-INF-V = "anoa" "čuárvuđ" "tovâttiđ" "suovvâđ" "koččođ" "movttiidahttit" "anoa" "suovvat" ; 
 
