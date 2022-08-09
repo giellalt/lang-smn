@@ -2642,7 +2642,9 @@ COPY:msyn-adj-attr-pred (Sg Nom &SUGGEST) EXCEPT Attr TARGET (A &msyn-adj-attr-p
 #!! ### Confusion rules
 
 #!!  **Agreement rule:** msyn-v-sg1-prfprc *Sun lii huunjâm/huunnjâm.*
-ADD:msyn-v-sg1-prfprc (&msyn-v-sg1-prfprc) TARGET V IF (*-1 Prs OR Prt  BARRIER NOT-ADV OR ConNeg OR Pron + Sg1 LINK NOT 0 ConNeg)(0C (Prs Sg1));
+ADD:msyn-v-sg1-prfprc (&msyn-v-sg1-prfprc) TARGET V IF
+	(*-1 Prs OR Prt  BARRIER NOT-ADV OR ConNeg OR Pron + Sg1 LINK NOT 0 ConNeg)
+	(0C (Prs Sg1));
 COPY:msyn-v-sg1-prfprc (PrfPrc &SUGGEST) EXCEPT (Ind Prs Sg1) TARGET (V &msyn-v-sg1-prfprc);
 #% Sun lii huunjâm
 #$ Sun lii huunnjâm
