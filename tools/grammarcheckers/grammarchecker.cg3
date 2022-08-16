@@ -2156,7 +2156,7 @@ COPY:msyn-agr-other-sg2 (Sg2 &SUGGEST) EXCEPT VNOTSG2 TARGET (V Ind Prs &msyn-ag
 ADD:msyn-agr-sg1-sg3 (&msyn-agr-sg1-sg3) TARGET V + Ind IF
 	(NOT -2 V + Sup OR V + Sg3)
 	(NOT *-2 V + Sg3 BARRIER SV-BOUNDARY)
-	(-1C Pron + Sg3 + Nom OR N + Sg + Nom BARRIER NOT-ADV-PCLE OR CLB OR PUNCT)
+	(*-1C Pron + Sg3 + Nom OR N + Sg + Nom BARRIER NOT-ADV-PCLE OR CLB OR PUNCT)
 	(0 (V Ind Prs Sg1));
 COPY:msyn-agr-sg1-sg3 (Sg3 &SUGGEST) EXCEPT Sg1 TARGET (V Ind Prs &msyn-agr-sg1-sg3);
 
@@ -2167,7 +2167,7 @@ COPY:msyn-agr-sg1-sg3 (Sg3 &SUGGEST) EXCEPT Sg1 TARGET (V Ind Prs &msyn-agr-sg1-
 ADD:msyn-agr-sg2-sg3 (&msyn-agr-sg2-sg3) TARGET V + Ind IF
 	(NOT -2 V + Sup OR V + Sg3)
 	(NOT *-2 V + Sg3 BARRIER SV-BOUNDARY)
-	(-1C Pron + Sg3 + Nom ) #OR N + Sg + Nom BARRIER NOT-ADV-PCLE OR CLB OR PUNCT)
+	(*-1C Pron + Sg3 + Nom OR N + Sg + Nom BARRIER NOT-ADV-PCLE OR CLB OR PUNCT)
 	(0 (V Ind Prs Sg2));
 COPY:msyn-agr-sg2-sg3 (Sg3 &SUGGEST) EXCEPT Sg2 TARGET (V Ind Prs &msyn-agr-sg2-sg3);
 
