@@ -86,13 +86,7 @@ XFAIL_TESTS=\
 	msyn-refl-sg-pl.yaml \
 	msyn-top-nom-acc.yaml \
 	msyn-v-actio-sg1.yaml \
-	neg-adj-gen-nom.yaml \
-	neg-interferens_celkkuuh.yaml \
-	neg-obj-plnom-placc.yaml \
-	neg-pass-accsubj-nomsubj.yaml \
 	neg-posspl-acc-gen.yaml \
-	neg-quant-nom-gen.yaml \
-	neg-top-nom-acc.yaml \
 	ovdamearkkat.yaml \
 	science.yaml \
 	typos.yaml \
