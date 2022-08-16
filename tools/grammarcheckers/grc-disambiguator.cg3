@@ -2191,8 +2191,8 @@ REMOVE:NotImprtConNeg Imprt IF (*-1 ConNeg BARRIER COMMA OR SV-BOUNDARY);
 #!! * **NotImprtA** 
 REMOVE:NotImprtA Imprt IF (-1 A LINK NOT 0 Ess);
 
-#!! * **NotImprtN** 
-REMOVE:NotImprtN Imprt IF (-1 N OR Po);
+#!! * **NotImprtN** not grc 
+#REMOVE:NotImprtN Imprt IF (-1 N OR Po);
  	#$ Čuorvvas gullo Ramas. 
  	#$ Boarrásis leai dat vel eanaš ealáhussan ge.
  # This will work fine when headings no longer interfere.
@@ -2620,8 +2620,8 @@ SELECT:r693 A IF (0 ("kuávdáš"))(1 N LINK NOT 0 TIME OR PLACE);
 
 #!! ### Remove Imperative
 
-#!! * Some brave rules for removing Imprt
-REMOVE:TESTImprt Imprt - ConNeg - Neg IF (NEGATE -1 CC OR BOS OR COMMA OR (":") OR (";") OR ("joo") OR PUNCT OR ("""))(NEGATE 0 (Imprt Sg3) LINK -1 (Pron Sg3) OR (N Sg) OR ("naa"))(NEGATE 0 (Imprt Sg3) LINK 1 (Pron Sg3) OR (N Sg));
+#!! * Some brave rules for removing Imprt not grc
+#REMOVE:TESTImprt Imprt - ConNeg - Neg IF (NEGATE -1 CC OR BOS OR COMMA OR (":") OR (";") OR ("joo") OR PUNCT OR ("""))(NEGATE 0 (Imprt Sg3) LINK -1 (Pron Sg3) OR (N Sg) OR ("naa"))(NEGATE 0 (Imprt Sg3) LINK 1 (Pron Sg3) OR (N Sg));
 	#% Geas ležžet bealjit, son gullos!
 	#% Nu báitos din čuovggas ge olbmuide.
 
