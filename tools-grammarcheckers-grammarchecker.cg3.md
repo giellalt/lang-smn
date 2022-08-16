@@ -682,7 +682,11 @@ RULE SECTION
 
 #### Sg3
 
-**Agreement rule:** msyn-agr-other-sg3, Subject to the left, *Sun puáđah/puátá*
+**Agreement rule:** msyn-agr-sg1-sg3, Subject to the left, *Sun puáđam/puátá*
+
+**Agreement rule:** msyn-agr-sg2-sg3, Subject to the left, *Sun puáđah/puátá*
+
+**Agreement rule:** msyn-agr-imprt-sg3, Subject to the left, *Sun puáđah/puátá*
 
 ### Duaali
 

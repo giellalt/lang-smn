@@ -532,7 +532,7 @@ See also *Imprt or Ind* some sections down.
 
 * **NotImprtA** 
 
-* **NotImprtN** 
+* **NotImprtN** not grc 
 
 * **NotImprtVFIN** 
 
@@ -649,7 +649,7 @@ puáttiđ, not pađđeeđ (Prt: Sg3 poođij, Du1 poođijm, Du2 poođijd, Du3 poo
 
 ### Remove Imperative
 
-* Some brave rules for removing Imprt
+* Some brave rules for removing Imprt not grc
 
 ### Verb or Noun?
 
