@@ -1990,6 +1990,7 @@ LIST &msyn-adj-gen-nom = &msyn-adj-gen-nom ;
 LIST &msyn-adj-sg-pl = &msyn-adj-sg-pl ;
 LIST &msyn-advl-plloc-sgcom = &msyn-advl-plloc-sgcom ;
 LIST &msyn-advl-plgen-sgill = &msyn-advl-plgen-sgill ;
+LIST &msyn-agr-imprt-sg3 = &msyn-agr-imprt-sg3 ;
 LIST &msyn-agr-other-du1 = &msyn-agr-other-du1 ;
 LIST &msyn-agr-other-du2 = &msyn-agr-other-du2 ;
 LIST &msyn-agr-other-du3 = &msyn-agr-other-du3 ;
@@ -1997,7 +1998,8 @@ LIST &msyn-agr-other-pl1 = &msyn-agr-other-pl1 ;
 LIST &msyn-agr-other-pl2 = &msyn-agr-other-pl2 ;
 LIST &msyn-agr-other-sg1 = &msyn-agr-other-sg1 ;
 LIST &msyn-agr-other-sg2 = &msyn-agr-other-sg2 ;
-LIST &msyn-agr-other-sg3 = &msyn-agr-other-sg3 ;
+LIST &msyn-agr-sg1-sg3 = &msyn-agr-sg1-sg3 ;
+LIST &msyn-agr-sg2-sg3 = &msyn-agr-sg2-sg3 ;
 LIST &msyn-agr-sg3-pl3 = &msyn-agr-sg3-pl3 ;
 LIST &msyn-attr-com-gen = &msyn-attr-com-gen ;
 LIST &msyn-dem-locattr-gen = &msyn-dem-locattr-gen ;	
@@ -2150,19 +2152,35 @@ COPY:msyn-agr-other-sg2 (Sg2 &SUGGEST) EXCEPT VNOTSG2 TARGET (V Ind Prs &msyn-ag
 
 #!! #### Sg3
 
+#!!  **Agreement rule:** msyn-agr-sg1-sg3, Subject to the left, *Sun puáđam/puátá*
+ADD:msyn-agr-sg1-sg3 (&msyn-agr-sg1-sg3) TARGET V + Ind IF
+	(NOT -2 V + Sup OR V + Sg3)
+	(NOT *-2 V + Sg3 BARRIER SV-BOUNDARY)
+	(-1C Pron + Sg3 + Nom OR N + Sg + Nom BARRIER NOT-ADV-PCLE OR CLB OR PUNCT)
+	(0 (V Ind Prs Sg1));
+COPY:msyn-agr-sg1-sg3 (Sg3 &SUGGEST) EXCEPT Sg1 TARGET (V Ind Prs &msyn-agr-sg1-sg3);
 
-#!!  **Agreement rule:** msyn-agr-other-sg3, Subject to the left, *Sun puáđah/puátá*
-ADD:msyn-agr-other-sg3 (&msyn-agr-other-sg3) TARGET V + Ind IF
-	(NOT -2 Sup OR Sg3)
-	(NOT *-2 Sg3 BARRIER SV-BOUNDARY)
-	(*-1C Pron + Sg3 + Nom OR N + Sg + Nom BARRIER NOT-ADV-PCLE OR CLB OR PUNCT)
-	(0 (V Ind Prs PERNUM))
-	(NOT 0 Sg3);
-COPY:msyn-agr-other-sg3 (Sg3 &SUGGEST) EXCEPT VNOTSG3 TARGET (V Ind Prs &msyn-agr-other-sg3);
+#% Sun puáđám.
+#$ Sun puátá.
+
+#!!  **Agreement rule:** msyn-agr-sg2-sg3, Subject to the left, *Sun puáđah/puátá*
+ADD:msyn-agr-sg2-sg3 (&msyn-agr-sg2-sg3) TARGET V + Ind IF
+	(NOT -2 V + Sup OR V + Sg3)
+	(NOT *-2 V + Sg3 BARRIER SV-BOUNDARY)
+	(-1C Pron + Sg3 + Nom ) #OR N + Sg + Nom BARRIER NOT-ADV-PCLE OR CLB OR PUNCT)
+	(0 (V Ind Prs Sg2));
+COPY:msyn-agr-sg2-sg3 (Sg3 &SUGGEST) EXCEPT Sg2 TARGET (V Ind Prs &msyn-agr-sg2-sg3);
 
 #% Sun puáđáh.
 #$ Sun puátá.
 
+#!!  **Agreement rule:** msyn-agr-imprt-sg3, Subject to the left, *Sun puáđah/puátá*
+ADD:msyn-agr-imprt-sg3 (&msyn-agr-imprt-sg3) TARGET V IF
+#	(NOT -2 V + Sup OR V + Sg3)
+#	(NOT *-2 V + Sg3 BARRIER SV-BOUNDARY)
+	(*-1C Pron + Sg3 + Nom OR N + Sg + Nom BARRIER NOT-ADV-PCLE OR CLB OR PUNCT)
+		(0 (V Imprt Sg2));
+COPY:msyn-agr-imprt-sg3 (Ind Prs Sg3 &SUGGEST) EXCEPT (Imprt Sg2) TARGET (V &msyn-agr-imprt-sg3);
 
 
 
