@@ -14,7 +14,6 @@ TESTS=\
     msyn-adj-gen-nom.yaml \
     msyn-adj-sg-pl.yaml \
     msyn-agr-other-pl3.yaml \
-    msyn-agr-other-sg3.yaml \
     msyn-agr-sg3-du3.yaml \
     msyn-agr-sg3-pl3.yaml \
     msyn-det-nom-acc.yaml \
