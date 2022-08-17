@@ -720,6 +720,10 @@ Sg3/Pl3 errors: Suomâkielâ sárnumkielâ epikongruens maaŋgâlovo 3. persovni
 
 **Agreement rule:** Subject to the right, msyn-agr-sg3-pl3
 
+**Agreement rule:** msyn-agr-sg3-du3 
+
+**Agreement rule:** msyn-agr-sg3-pl3, Subject to the left, *80 puátá/puáđah*
+
 **Agreement rule:** msyn-agr-sg3-pl3, Subject to the left, *80 puátá/puáđah*
 
 **Agreement rule:** msyn-agr-other-pl3, Subject to the left, *Toh puátá/puátih.*
