@@ -18,7 +18,6 @@ TESTS=\
     msyn-agr-sg3-pl3.yaml \
     msyn-det-nom-acc.yaml \
     msyn-ext-pl3-sg3.yaml \
-    msyn-ext-sg3-pl3.yaml \
     msyn-extneg-sg3-pl3.yaml \
     msyn-extsubj-acc-nom.yaml \
     msyn-extsubj-gen-nom.yaml \
@@ -64,8 +63,6 @@ XFAIL_TESTS=\
 	interferens_celkkuuh4.yaml \
 	msyn-det-nom-acc.yaml \
 	msyn-ext-pl3-sg3.yaml \
-	msyn-agr-sg3-du3.yaml \
-	msyn-ext-sg3-pl3.yaml \
 	msyn-extsubj-gen-nom.yaml \
 	msyn-extsubj-ill-nom.yaml \
 	msyn-extv-sg3-pl3.yaml \
