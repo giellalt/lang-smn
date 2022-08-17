@@ -698,6 +698,12 @@ RULE SECTION
 
 **Agreement rule:** msyn-agr-other-du2 *Tuoi koolgâi/kolgáid tääl algâttiđ monnii sämmilâškampanja.*
 
+#### Du3
+
+**Agreement rule:** msyn-agr-sg3-du3 
+
+**Agreement rule:** msyn-agr-sg3-du3 
+
 ### Pluraali
 
 #### Pl1

@@ -10410,6 +10410,12 @@ RULE SECTION
 
 **Agreement rule:** msyn-agr-other-du2 *Tuoi koolgâi/kolgáid tääl algâttiđ monnii sämmilâškampanja.*
 
+#### Du3
+
+**Agreement rule:** msyn-agr-sg3-du3 
+
+**Agreement rule:** msyn-agr-sg3-du3 
+
 ### Pluraali
 
 #### Pl1
@@ -11408,7 +11414,7 @@ We end section 2 by removing all remaining Px
 
 * **VSG3IfRithgSon** selects Sg3 when "sun" is to the right (r954)
 
-* **VNotSg3When12Left** removes Sg3 if 12 Pron immediate left (r955)
+* **VNotSg3When12Left** removes Sg3 if 12 Pron immediate left (r955) # remove grc
 
 * **NegSg3BeforeFoc** selects Neg before Foc/ge or ConNeg (r959)
 
