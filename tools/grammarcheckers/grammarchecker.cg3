@@ -1984,12 +1984,13 @@ SET CCCOMMA = CC OR COMMA ;
 
 #!! name convention for error tags: ´´&errortype-errorsubtype-is-shouldbe´´
 
+
 LIST &msyn-adj-attr-pred = &msyn-adj-attr-pred ;
-LIST &msyn-adj-nom-acc = &msyn-adj-nom-acc ;
 LIST &msyn-adj-gen-nom = &msyn-adj-gen-nom ;
+LIST &msyn-adj-nom-acc = &msyn-adj-nom-acc ;
 LIST &msyn-adj-sg-pl = &msyn-adj-sg-pl ;
-LIST &msyn-advl-plloc-sgcom = &msyn-advl-plloc-sgcom ;
 LIST &msyn-advl-plgen-sgill = &msyn-advl-plgen-sgill ;
+LIST &msyn-advl-plloc-sgcom = &msyn-advl-plloc-sgcom ;
 LIST &msyn-agr-imprt-sg3 = &msyn-agr-imprt-sg3 ;
 LIST &msyn-agr-other-du1 = &msyn-agr-other-du1 ;
 LIST &msyn-agr-other-du2 = &msyn-agr-other-du2 ;
@@ -2006,23 +2007,25 @@ LIST &msyn-agr-sg3-pl3 = &msyn-agr-sg3-pl3 ;
 LIST &msyn-attr-com-gen = &msyn-attr-com-gen ;
 LIST &msyn-dem-locattr-gen = &msyn-dem-locattr-gen ;	
 LIST &msyn-det-nom-acc = &msyn-det-nom-acc ;
-LIST &msyn-extv-sg3-pl3 = &msyn-extv-sg3-pl3 ;
-LIST &msyn-extv-pl3-sg3 = &msyn-extv-pl3-sg3 ;
 LIST &msyn-extneg-sg3-pl3 = &msyn-extneg-sg3-pl3 ;
 LIST &msyn-extsubj-acc-nom = &msyn-extsubj-acc-nom ; 
+LIST &msyn-extsubj-gen-nom = &msyn-extsubj-gen-nom ;
 LIST &msyn-extsubj-ill-nom = &msyn-extsubj-ill-nom ; 
 LIST &msyn-extv-numeral-sg3-pl3 = &msyn-extv-numeral-sg3-pl3 ;
+LIST &msyn-extv-pl3-sg3 = &msyn-extv-pl3-sg3 ;
+LIST &msyn-extv-sg3-pl3 = &msyn-extv-sg3-pl3 ;
 LIST &msyn-imp-nom-acc = &msyn-imp-nom-acc ;
 LIST &msyn-mii-sgnom-placc = &msyn-mii-sgnom-placc ;
+LIST &msyn-ncompl-ess-sgill = &msyn-ncompl-ess-sgill ;
+LIST &msyn-ncompl-placc-plill = &msyn-ncompl-placc-plill ;
 LIST &msyn-negcompl-sg3-conneg = &msyn-negcompl-sg3-conneg ;
 LIST &msyn-ness-acc-nom = &msyn-ness-acc-nom ; 
 LIST &msyn-ness-ill-nom = &msyn-ness-ill-nom ; 
-LIST &msyn-ncompl-ess-sgill = &msyn-ncompl-ess-sgill ;
-LIST &msyn-ncompl-placc-plill = &msyn-ncompl-placc-plill ;
 LIST &msyn-num-acc-par = &msyn-num-acc-par ;
 LIST &msyn-num-gen-par = &msyn-num-gen-par ;
 LIST &msyn-num-par-gen = &msyn-num-par-gen ;
 LIST &msyn-obj-acc-ill = &msyn-obj-acc-ill ;
+LIST &msyn-obj-nom-acc = &msyn-obj-nom-acc ;
 LIST &msyn-obj-plnom-placc = &msyn-obj-plnom-placc ;
 LIST &msyn-obj-sgnom-sgacc = &msyn-obj-sgnom-sgacc ;
 LIST &msyn-orrood-inf-actioess = &msyn-orrood-inf-actioess ;
@@ -2033,9 +2036,10 @@ LIST &msyn-po-placc-plgen = &msyn-po-placc-plgen ;
 LIST &msyn-posspl-acc-gen =  &msyn-posspl-acc-gen ; 
 LIST &msyn-pred-acc-nom =  &msyn-pred-acc-nom ; 
 LIST &msyn-pred-ill-nom =  &msyn-pred-ill-nom ; 
+LIST &msyn-predagr-pl3-sg3 = &msyn-predagr-pl3-sg3 ;
 LIST &msyn-quant-gen-nom =  &msyn-quant-gen-nom ;
 LIST &msyn-quant-nom-gen = &msyn-quant-nom-gen ;
-LIST &msyn-predagr-pl3-sg3 = &msyn-predagr-pl3-sg3 ;
+LIST &msyn-subj-gen-nom = &msyn-subj-gen-nom ;
 LIST &msyn-top-nom-acc = &msyn-top-nom-acc ;
 LIST &msyn-top-placc-plnom = &msyn-top-placc-plnom ;
 LIST &msyn-v-actio-sg1 = &msyn-v-actio-sg1 ;
@@ -2043,12 +2047,9 @@ LIST &msyn-v-du3-conneg = &msyn-v-du3-conneg ;
 LIST &msyn-v-prfprc-sg1 = &msyn-v-prfprc-sg1 ;
 LIST &msyn-v-sg1-prfprc = &msyn-v-sg1-prfprc ;
 LIST &msyn-v-sg3-conneg = &msyn-v-sg3-conneg ;
-LIST &real-pisso-pissood = &real-pisso-pissood ;
 LIST &real-pele-peeli = &real-pele-peeli ;
+LIST &real-pisso-pissood = &real-pisso-pissood ;
 
-LIST &msyn-subj-gen-nom = &msyn-subj-gen-nom ;
-LIST &msyn-extsubj-gen-nom = &msyn-extsubj-gen-nom ;
-LIST &msyn-obj-nom-acc = &msyn-obj-nom-acc ;
 
 MAPPING-PREFIX = & ;
 
@@ -2305,7 +2306,7 @@ COPY:msyn-agr-sg3-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V &msyn-agr-sg3-pl3);
 #!!  **Agreement rule:** msyn-agr-sg3-pl3, Subject to the left, *80 puátá/puáđah*
 ADD:msyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET (V Sg3) IF
 	(NEGATE 0 (V Pl3))
-        (*-1 (Loc Pl) - Prop  BARRIER NOT-ADV-PCLE - N LINK -1 (".*%"r) + Num + Arab LINK NOT 0 ("<[A-ZÁÄČŠ].*>r") LINK NOT 1 PUNCT);
+        (*-1 (Loc Pl) - Prop  BARRIER NOT-ADV-PCLE - N LINK -1 (".*%"r) + Num + Arab OR ("peeli") LINK NOT 0 ("<[A-ZÁÄČŠ].*>r") LINK NOT 1 PUNCT);
 COPY:msyn-agr-sg3-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V &msyn-agr-sg3-pl3);
 
 
@@ -2712,9 +2713,6 @@ COPY:msyn-v-sg1-prfprc (PrfPrc &SUGGEST) EXCEPT (Ind Prs Sg1) TARGET (V &msyn-v-
 #COPY-njuolggadus: bidjan dohko PrfPrc ja sáni &SUGGEST (maksá "evttot dan") 
 
 
-LIST &msyn-subj-gen-nom = &msyn-subj-gen-nom ;
-LIST &msyn-extsubj-gen-nom = &msyn-extsubj-gen-nom ;
-LIST &msyn-obj-nom-acc = &msyn-obj-nom-acc ;
 
 
 
@@ -2788,23 +2786,33 @@ COPY:msyn-v-sg3-conneg (ConNeg &SUGGEST) EXCEPT Sg3 TARGET (V Cond Prs &msyn-v-s
 #!! #### Plain object of TV in Nom shall be Acc
 
 #!!  **Agreement rule:** msyn-obj-sgnom-sgacc *Mun juuvâm ain mielkki/mielhi.*
-ADD:msyn-obj-sgnom-sgacc (&msyn-obj-sgnom-sgacc) TARGET N IF (*-1 VFIN + TV  BARRIER NOT-NPMODADV LINK -1 Nom LINK *-1 BOS BARRIER Acc)(0C N + Sg + Nom)(NOT 0 TITLE LINK 1 Prop);
+ADD:msyn-obj-sgnom-sgacc (&msyn-obj-sgnom-sgacc) TARGET N IF
+	(*-1 VFIN + TV  BARRIER NOT-NPMODADV LINK -1 Nom LINK *-1 BOS BARRIER Acc)
+	(0C N + Sg + Nom)
+	(NOT 0 TITLE LINK 1 Prop);
 COPY:msyn-obj-sgnom-sgacc (Acc &SUGGEST) EXCEPT Nom TARGET (N Sg &msyn-obj-sgnom-sgacc);
 #% Mun juuvâm ain mielkki.
 #$ Mun juuvâm ain mielhi.
 
 #!! **Agreement rule:** msyn-obj-sgnom-sgacc *Mun lam ain juunâm mielkki/mielhi.*
-ADD:msyn-obj-sgnom-sgacc (&msyn-obj-sgnom-sgacc) TARGET N IF (-1 PrfPrc + TV)(*-2 VFIN BARRIER NOT-NPMODADV LINK -1 Nom LINK *-1 BOS BARRIER Acc)(0C N + Sg + Nom);
+ADD:msyn-obj-sgnom-sgacc (&msyn-obj-sgnom-sgacc) TARGET N IF
+	(-1 PrfPrc + TV)
+	(*-2 VFIN BARRIER NOT-NPMODADV LINK -1 Nom LINK *-1 BOS BARRIER Acc)
+	(0C N + Sg + Nom);
 COPY:msyn-obj-sgnom-sgacc (Acc &SUGGEST) EXCEPT Nom TARGET (N Sg &msyn-obj-sgnom-sgacc);
 #% Mun lam ain juunâm mielkki.
 #$ Mun lam ain juuhâm mielhi.
 
 #!!  **Agreement rule:** msyn-obj-sgnom-sgacc)
-ADD:msyn-obj-sgnom-sgacc (&msyn-obj-sgnom-sgacc) TARGET N IF (1 PrfPrc + TV)(*-1 VFIN BARRIER NOT-NPMODADV LINK -1 Nom)(0C N + Sg + Nom);
+ADD:msyn-obj-sgnom-sgacc (&msyn-obj-sgnom-sgacc) TARGET N IF
+	(1 PrfPrc + TV)
+	(*-1 VFIN BARRIER NOT-NPMODADV LINK -1 Nom)
+	(0C N + Sg + Nom);
 COPY:msyn-obj-sgnom-sgacc (Acc &SUGGEST) EXCEPT Nom TARGET (N Sg &msyn-obj-sgnom-sgacc);
 #% Mun lam ain mielkki juunâm.
 #$ Mun lam ain mielhi juuhâm.
 
+#% Mun uástám peeli leeibijn.
 
 #!! ### Plural objects
 
