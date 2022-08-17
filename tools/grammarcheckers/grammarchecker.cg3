@@ -2000,6 +2000,7 @@ LIST &msyn-agr-other-sg1 = &msyn-agr-other-sg1 ;
 LIST &msyn-agr-other-sg2 = &msyn-agr-other-sg2 ;
 LIST &msyn-agr-sg1-sg3 = &msyn-agr-sg1-sg3 ;
 LIST &msyn-agr-sg2-sg3 = &msyn-agr-sg2-sg3 ;
+LIST &msyn-agr-sg3-du3 = &msyn-agr-sg3-du3 ;
 LIST &msyn-agr-sg3-pl3 = &msyn-agr-sg3-pl3 ;
 LIST &msyn-attr-com-gen = &msyn-attr-com-gen ;
 LIST &msyn-dem-locattr-gen = &msyn-dem-locattr-gen ;	
@@ -2212,6 +2213,21 @@ COPY:msyn-agr-other-du2 (Du2 &SUGGEST) EXCEPT VNOTDU2 TARGET (V  &msyn-agr-other
 #$ Tuoi kolgáid tääl algâttiđ monnii sämmilâškampanja
 
 
+#!! #### Du3
+
+#!!  **Agreement rule:** msyn-agr-sg3-du3 
+ADD:msyn-agr-sg3-du3 (&msyn-agr-sg3-du3) TARGET V IF
+	(-1 Pron + Pers + Du3 + Nom)
+	(0 (V Ind Sg3));
+#COPY:msyn-agr-sg3-du3 (Du3 &SUGGEST) EXCEPT Sg3 TARGET (V  &msyn-agr-du3-sg3);
+
+#!!  **Agreement rule:** msyn-agr-sg3-du3 
+ADD:msyn-agr-sg3-du3 (&msyn-agr-sg3-du3) TARGET V IF
+	(-1 N + Sg + Nom LINK -1 CC LINK -1 N + Sg + Nom)
+	(0 (V Ind Sg3));
+COPY:msyn-agr-sg3-du3 (Du3 &SUGGEST) EXCEPT Sg3 TARGET (V  &msyn-agr-du3-sg3);
+
+# Sehe sarves já áldu šoddâd čoorvijd jyehi ive.
 
 #!! ### Pluraali
 
@@ -2273,7 +2289,7 @@ ADDRELATION:msyn-agr-sg3-pl3 ($2) (Pl Nom) FROM (-4 V + Sg3 LINK 0 (&msyn-agr-sg
 
 #!!  **Agreement rule:** msyn-agr-sg3-pl3, Subject to the left, *80 puátá/puáđah*
 ADD:msyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET V IF
-	(*-1C Num BARRIER N OR Pron OR V OR (")") LINK NOT 0 OHTA OR Sem/ID OR ("<[A-ZÁÄČŠ].*>r") LINK NOT -1 BOS)
+	(*-1C NUM BARRIER Nom OR V OR (")") LINK NOT 0 Sem/ID OR ("<[A-ZÁÄČŠ].*>r") LINK NOT 1 PUNCT)
 	(0 V + Sg3);
 COPY:msyn-agr-sg3-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V &msyn-agr-sg3-pl3);
 
