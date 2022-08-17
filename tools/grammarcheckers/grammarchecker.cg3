@@ -1998,6 +1998,7 @@ LIST &msyn-agr-other-pl1 = &msyn-agr-other-pl1 ;
 LIST &msyn-agr-other-pl2 = &msyn-agr-other-pl2 ;
 LIST &msyn-agr-other-sg1 = &msyn-agr-other-sg1 ;
 LIST &msyn-agr-other-sg2 = &msyn-agr-other-sg2 ;
+LIST &msyn-agr-pl3-sg3 = &msyn-agr-pl3-sg3 ;
 LIST &msyn-agr-sg1-sg3 = &msyn-agr-sg1-sg3 ;
 LIST &msyn-agr-sg2-sg3 = &msyn-agr-sg2-sg3 ;
 LIST &msyn-agr-sg3-du3 = &msyn-agr-sg3-du3 ;
@@ -2219,11 +2220,11 @@ COPY:msyn-agr-other-du2 (Du2 &SUGGEST) EXCEPT VNOTDU2 TARGET (V  &msyn-agr-other
 ADD:msyn-agr-sg3-du3 (&msyn-agr-sg3-du3) TARGET V IF
 	(-1 Pron + Pers + Du3 + Nom)
 	(0 (V Ind Sg3));
-#COPY:msyn-agr-sg3-du3 (Du3 &SUGGEST) EXCEPT Sg3 TARGET (V  &msyn-agr-du3-sg3);
+COPY:msyn-agr-sg3-du3 (Du3 &SUGGEST) EXCEPT Sg3 TARGET (V  &msyn-agr-sg3-du3);
 
 #!!  **Agreement rule:** msyn-agr-sg3-du3 
 ADD:msyn-agr-sg3-du3 (&msyn-agr-sg3-du3) TARGET V IF
-	(-1 N + Sg + Nom LINK -1 CC LINK -1 N + Sg + Nom)
+	(-1 N + Sg + Nom LINK 0 Sem/Hum OR Sem/Ani OR Sem/Org LINK -1 CC LINK -1 N + Sg + Nom LINK 0 Sem/Hum OR Sem/Ani OR Sem/Org)
 	(0 (V Ind Sg3));
 COPY:msyn-agr-sg3-du3 (Du3 &SUGGEST) EXCEPT Sg3 TARGET (V  &msyn-agr-du3-sg3);
 
@@ -2271,9 +2272,10 @@ COPY:msyn-agr-other-pl2 (Pl2 &SUGGEST) EXCEPT VNOTPL2 TARGET (V Ind Prs &msyn-ag
 #!! Sg3/Pl3 errors: Suomâkielâ sárnumkielâ epikongruens maaŋgâlovo 3. persovnist 
 
 #!!  **Agreement rule:** Subject to the right, msyn-agr-sg3-pl3
-ADD:msyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET V IF
+ADD:msyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET (V Sg3) IF
+	(NEGATE 0 (V Pl3))
 	(NOT *-1 Sg + Nom OR Sg3 + Nom BARRIER NOT-ADV OR (","))
-	(0C COPULAS + Sg3 OR ("kavnuđ") + Sg3)
+	(0C COPULAS OR ("kavnuđ"))
 	(*1 Pl + Nom BARRIER NOT-NPMODADV OR PUNCT + RIGHT OR PUNCT + LEFT LINK NOT *1 V + Pl3);
 COPY:msyn-agr-sg3-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V &msyn-agr-sg3-pl3);
 ADDRELATION:msyn-agr-sg3-pl3 ($2) (Pl Nom) FROM (-1 V + Sg3 LINK 0 (&msyn-agr-sg3-pl3));
@@ -2286,6 +2288,13 @@ ADDRELATION:msyn-agr-sg3-pl3 ($2) (Pl Nom) FROM (-4 V + Sg3 LINK 0 (&msyn-agr-sg
 #% Kuáđist kavnui liteh.
 #$ Kuáđist kávnojii liteh.
 
+# du3 skal bli pl3
+#!!  **Agreement rule:** msyn-agr-sg3-du3 
+ADD:msyn-agr-sg3-du3 (&msyn-agr-sg3-du3) TARGET V IF
+	(-1 Pron + Pers + Du3 + Nom)
+	(0 (V Ind Sg3));
+COPY:msyn-agr-sg3-du3 (Du3 &SUGGEST) EXCEPT Sg3 TARGET (V  &msyn-agr-sg3-du3);
+
 
 #!!  **Agreement rule:** msyn-agr-sg3-pl3, Subject to the left, *80 puátá/puáđah*
 ADD:msyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET V IF
@@ -2293,6 +2302,19 @@ ADD:msyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET V IF
 	(0 V + Sg3);
 COPY:msyn-agr-sg3-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V &msyn-agr-sg3-pl3);
 
+#!!  **Agreement rule:** msyn-agr-sg3-pl3, Subject to the left, *80 puátá/puáđah*
+ADD:msyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET (V Sg3) IF
+	(NEGATE 0 (V Pl3))
+        (*-1 (Loc Pl) - Prop  BARRIER NOT-ADV-PCLE - N LINK -1 (".*%"r) + Num + Arab LINK NOT 0 ("<[A-ZÁÄČŠ].*>r") LINK NOT 1 PUNCT);
+COPY:msyn-agr-sg3-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V &msyn-agr-sg3-pl3);
+
+
+ADD:msyn-agr-pl3-sg3 (&msyn-agr-pl3-sg3) TARGET (V Pl3) IF
+	(NEGATE 0 (V Sg3))
+        (*-1 (Loc Sg) - Prop BARRIER NOT-ADV-PCLE - N LINK -1 (".*%"r) + Num + Arab LINK NOT 0 ("<[A-ZÁÄČŠ].*>r") LINK NOT 1 PUNCT);
+COPY:msyn-agr-pl3-sg3 (Sg3 &SUGGEST) EXCEPT Pl3 TARGET (V &msyn-agr-pl3-sg3);
+#% 
+#$ 
 
 #!!  **Agreement rule:** msyn-agr-other-pl3, Subject to the left, *Toh puátá/puátih.*
 ADD:msyn-agr-other-pl3 (&msyn-agr-other-pl3) TARGET V IF
@@ -2701,7 +2723,7 @@ LIST &msyn-obj-nom-acc = &msyn-obj-nom-acc ;
 
 ADD:msyn-subj-gen-nom (&msyn-subj-gen-nom) TARGET N IF
 	(NOT -1 ("jyehi"))
-	(0C N + Sg + Gen LINK *-1 BOS BARRIER Ind)
+	(0C N + Sg + Gen LINK *-1 BOS BARRIER Ind OR NUM)
 	(NEGATE 0 HUMAN)
 	(1 V + Sg3);
 COPY:msyn-subj-gen-nom (Nom &SUGGEST) EXCEPT Gen TARGET (N Sg &msyn-subj-gen-nom) ;
@@ -3239,6 +3261,9 @@ ADD:msyn-num-gen-par (&msyn-num-gen-par) TARGET N IF
 (NOT 0 Sem/Time OR Sem/Date OR Sem/Time-clock)
 (NOT 1 Po OR N OR A) ;
 COPY:msyn-num-gen-par (Par &SUGGEST) EXCEPT (Sg Gen) TARGET (N &msyn-num-gen-par) ;
+
+#% 80 päärni joteh rippâškoovlâ.
+#$ 80 pärnid joteh rippâškoovlâ.
 
 #!!  **Agreement rule:** msyn-num-acc-par: 8 kaandâ/kandâd
 ADD:msyn-num-acc-par (&msyn-num-acc-par) TARGET N IF 
