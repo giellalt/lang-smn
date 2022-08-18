@@ -32,7 +32,7 @@ TESTS=\
     msyn-num-par-gen.yaml \
     msyn-num-par-nom.yaml \
     msyn-obj-acc-ill.yaml \
-    msyn-obj-nom-acc.yaml \
+    msyn-obj-sgnom-sgacc.yaml \
     msyn-obj-plnom-placc.yaml \
     msyn-pass-accsubj-nomsubj.yaml \
     msyn-po-acc-gen.yaml \
