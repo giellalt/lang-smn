@@ -10078,7 +10078,7 @@ Note! We also have CLB_NOT-COMMA
 
 - SET NOT-V = WORD - V ;  
 - SET REAL-NEG = Neg - Sup ;  
-- SET MOOD-V = Ind OR Pot OR Imprt OR ImprtII OR Cond OR (Neg Sup) ;  
+- SET MOOD-V = Ind OR Pot OR Imprt OR Cond OR (Neg Sup) ;  
 - LIST GC = ("gč") ;  
 - SET VFIN = GC OR MOOD-V - ConNeg ;  
 - SET VFIN-POS = MOOD-V - ConNeg - Neg ;  
