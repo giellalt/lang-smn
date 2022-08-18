@@ -460,7 +460,7 @@ SET NOT-ACC = CASE - Acc ;  #!!= - @CODE@
 
 SET NOT-V = WORD - V ;  #!!= - @CODE@
 SET REAL-NEG = Neg - Sup ;  #!!= - @CODE@
-SET MOOD-V = Ind OR Pot OR Imprt OR ImprtII OR Cond OR (Neg Sup) ;  #!!= - @CODE@
+SET MOOD-V = Ind OR Pot OR Imprt OR Cond OR (Neg Sup) ;  #!!= - @CODE@
 LIST GC = ("gč") ;  #!!= - @CODE@
 SET VFIN = GC OR MOOD-V - ConNeg ;  #!!= - @CODE@
 SET VFIN-POS = MOOD-V - ConNeg - Neg ;  #!!= - @CODE@
@@ -2798,7 +2798,8 @@ COPY:msyn-v-sg3-conneg (ConNeg &SUGGEST) EXCEPT Sg3 TARGET (V Cond Prs &msyn-v-s
 ADD:msyn-obj-sgnom-sgacc (&msyn-obj-sgnom-sgacc) TARGET N IF
 	(*-1 VFIN + TV  BARRIER NOT-NPMODADV LINK -1 Nom LINK *-1 BOS BARRIER Acc)
 	(0C N + Sg + Nom)
-	(NOT 0 TITLE LINK 1 Prop);
+	(NEGATE 0 TITLE LINK 1 Prop)
+	;
 COPY:msyn-obj-sgnom-sgacc (Acc &SUGGEST) EXCEPT Nom TARGET (N Sg &msyn-obj-sgnom-sgacc);
 #% Mun juuvâm ain mielkki.
 #$ Mun juuvâm ain mielhi.
