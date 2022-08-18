@@ -1359,9 +1359,10 @@ SET NUM = Num - OHTA ;
 
 LIST TWO-TO-SIX = "kyehti" "kulmâ" "nelji" "vittâ" "kuttâ" "2" "3" "4" "5" "6" ("<[2-6],[0-9]+>"r) ("^<[1-5]\-[2-6]>$"r) "2-3" "2-4" "3-4" "3-5" "4-5" "4-6" "5-6" ;
 
-SET NUM-WORD = ("^<[a-z][a-z].*>$"r Num) ;
+SET NUM-WORD = ("^<[a-záäâčđŋšž][a-záäâčđŋšž].*>$"r Num) ;
 
 SET SEVEN-AND-MORE-WORD = NUM-WORD - TWO-TO-SIX - OHTA - MANGA - MUADDI - KALLE ; # - Sem/ID should fix Sem/ID, now 8 is Sem/ID
+
 LIST SEVEN-AND-MORE-ARABIC = "7" "8" "9" ("^<[1-9][0-9]>$"r) ("<[1-9][0-9][0-9]>"r) "5-7" "6-7" "7-8" "7-9" "8-9" "8-10" ;
 # 7+ should include 8,74 but not 3,74.
 
@@ -2306,13 +2307,13 @@ COPY:msyn-agr-sg3-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V &msyn-agr-sg3-pl3);
 #!!  **Agreement rule:** msyn-agr-sg3-pl3, Subject to the left, *80 puátá/puáđah*
 ADD:msyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET (V Sg3) IF
 	(NEGATE 0 (V Pl3))
-        (*-1 (Loc Pl) - Prop  BARRIER NOT-ADV-PCLE - N LINK -1 (".*%"r) + Num + Arab OR ("peeli") LINK NOT 0 ("<[A-ZÁÄČŠ].*>r") LINK NOT 1 PUNCT);
+        (*-1 (Loc Pl) - Prop  BARRIER NOT-ADV-PCLE - N LINK -1 (".*%"r) + Num + Arab OR ("peeli") + Sg + Nom LINK NOT 1 PUNCT);
 COPY:msyn-agr-sg3-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V &msyn-agr-sg3-pl3);
 
 
 ADD:msyn-agr-pl3-sg3 (&msyn-agr-pl3-sg3) TARGET (V Pl3) IF
 	(NEGATE 0 (V Sg3))
-        (*-1 (Loc Sg) - Prop BARRIER NOT-ADV-PCLE - N LINK -1 (".*%"r) + Num + Arab LINK NOT 0 ("<[A-ZÁÄČŠ].*>r") LINK NOT 1 PUNCT);
+        (*-1 (Loc Sg) - Prop BARRIER NOT-ADV-PCLE - N LINK -1 (".*%"r) + Num + Arab OR ("peeli") + Sg + Nom LINK NOT 1 PUNCT);
 COPY:msyn-agr-pl3-sg3 (Sg3 &SUGGEST) EXCEPT Pl3 TARGET (V &msyn-agr-pl3-sg3);
 #% 
 #$ 
