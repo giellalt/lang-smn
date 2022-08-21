@@ -2470,9 +2470,33 @@ ADDRELATION:msyn-extv-sg3-pl3 ($2) N + Pl + Nom FROM (-3 V + LEDE + Sg3 LINK 0 (
 
 #!!  **Agreement rule:** msyn-extv-pl3-sg3 *Must lii/láá uđđâ autoh.*
 ADD:msyn-extv-pl3-sg3 (&msyn-extv-pl3-sg3) TARGET V IF 
-(*-1 Loc OR DOPPE BARRIER NOT-ADV-PCLE)
-(0 ("leđe" V Ind Prs Pl3))
-(*1 N + Sg + Nom BARRIER NOT-NPMODADV OR @CVP OR S-BOUNDARY LINK NOT 1 CC);
+	(*-1 Loc OR DOPPE BARRIER NOT-ADV-PCLE)
+	(0 ("leđe" V Ind Prs Pl3))
+	(*1 N + Sg + Nom BARRIER NOT-NPMODADV OR @CVP OR S-BOUNDARY LINK NOT 1 CC);
+COPY:msyn-extv-pl3-sg3 (Sg3 &SUGGEST) EXCEPT Pl3 TARGET ("leđe" V Ind Prs &msyn-extv-pl3-sg3) ;
+#!!  **Agreement rule:** msyn-extv-pl3-sg3 *Liihân/Lááhân must uđđâ autoh.*
+ADD:msyn-extv-pl3-sg3 (&msyn-extv-pl3-sg3) TARGET V IF 
+	(0 ("leđe" V Ind Prs Pl3 Foc/han))
+	(1 Pron + Loc)
+	(*2 N + Sg + Nom BARRIER NOT-NPMODADV OR @CVP OR S-BOUNDARY LINK NOT 1 CC);
+COPY:msyn-extv-pl3-sg3 (Sg3 Foc/han &SUGGEST) EXCEPT (Pl3 Foc/han) TARGET ("leđe" V Ind Prs &msyn-extv-pl3-sg3) ;
+#!!  **Agreement rule:** msyn-extv-pl3-sg3 *Liihân/Lááhân must uđđâ autoh.*
+ADD:msyn-extv-pl3-sg3 (&msyn-extv-pl3-sg3) TARGET V IF 
+	(0 ("leđe" V Ind Prs Pl3 Qst))
+	(1 Pron + Loc)
+	(*2 N + Sg + Nom BARRIER NOT-NPMODADV OR @CVP OR S-BOUNDARY LINK NOT 1 CC);
+COPY:msyn-extv-pl3-sg3 (Sg3 Qst &SUGGEST) EXCEPT (Pl3 Qst) TARGET ("leđe" V Ind Prs &msyn-extv-pl3-sg3) ;
+#!!  **Agreement rule:** msyn-extv-pl3-sg3 *Liihân/Lááhân must uđđâ autoh.*
+ADD:msyn-extv-pl3-sg3 (&msyn-extv-pl3-sg3) TARGET V IF 
+	(0 ("leđe" V Ind Prs Pl3 Foc/uv))
+	(1 Pron + Loc)
+	(*2 N + Sg + Nom BARRIER NOT-NPMODADV OR @CVP OR S-BOUNDARY LINK NOT 1 CC);
+COPY:msyn-extv-pl3-sg3 (Sg3 Foc/uv &SUGGEST) EXCEPT (Pl3 Foc/uv) TARGET ("leđe" V Ind Prs &msyn-extv-pl3-sg3) ;
+#!!  **Agreement rule:** msyn-extv-pl3-sg3 *Lii/Láá must uđđâ autoh.*
+ADD:msyn-extv-pl3-sg3 (&msyn-extv-pl3-sg3) TARGET V IF 
+	(0 ("leđe" V Ind Prs Pl3))
+	(1 Pron + Loc)
+	(*2 N + Sg + Nom BARRIER NOT-NPMODADV OR @CVP OR S-BOUNDARY LINK NOT 1 CC);
 COPY:msyn-extv-pl3-sg3 (Sg3 &SUGGEST) EXCEPT Pl3 TARGET ("leđe" V Ind Prs &msyn-extv-pl3-sg3) ;
 #% Must lii uđđâ autoh.
 #$ Must láá uđđâ autoh.

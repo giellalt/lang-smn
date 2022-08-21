@@ -69,8 +69,6 @@ XFAIL_TESTS=\
 	msyn-imp-nom-acc.yaml \
 	msyn-ncompl-acc-ill.yaml \
 	msyn-ncompl-placc-plill.yaml \
-	msyn-num-acc-par.yaml \
-	msyn-num-par-gen.yaml \
 	msyn-num-par-nom.yaml \
 	msyn-obj-acc-ill.yaml \
 	msyn-pass-accsubj-nomsubj.yaml \
