@@ -2601,11 +2601,15 @@ COPY:msyn-extsubj-ill-nom (Nom &SUGGEST) EXCEPT Ill TARGET (N Pl &msyn-extsubj-i
 
 
 #!!  **Agreement rule:** msyn-po-nom-gen
-ADD:msyn-po-nom-gen (&msyn-po-nom-gen) TARGET (N Sg Nom) IF (NOT 0 Gen) (1C Po);
+ADD:msyn-po-nom-gen (&msyn-po-nom-gen) TARGET (N Sg Nom) IF
+	(NOT 0 Gen)
+	(1 Po); # C
 COPY:msyn-po-nom-gen (Gen &SUGGEST) EXCEPT (Nom &msyn-po-nom-gen) TARGET (N Sg &msyn-po-nom-gen);
 
 #!!  **Agreement rule:** msyn-po-nom-gen
-ADD:msyn-po-nom-gen (&msyn-po-nom-gen) TARGET (N Pl Nom) IF (NOT 0 Gen) (1C Po);
+ADD:msyn-po-nom-gen (&msyn-po-nom-gen) TARGET (N Pl Nom) IF
+	(NOT 0 Gen)
+	(1 Po); # C
 COPY:msyn-po-nom-gen (Gen &SUGGEST) EXCEPT (Nom &msyn-po-nom-gen) TARGET (N Pl &msyn-po-nom-gen);
 
 
@@ -2822,7 +2826,7 @@ COPY:msyn-v-sg3-conneg (ConNeg &SUGGEST) EXCEPT Sg3 TARGET (V Cond Prs &msyn-v-s
 ADD:msyn-obj-sgnom-sgacc (&msyn-obj-sgnom-sgacc) TARGET N IF
 	(*-1 VFIN + TV  BARRIER NOT-NPMODADV LINK -1 Nom LINK *-1 BOS BARRIER Acc)
 	(0C N + Sg + Nom)
-	(NEGATE 0 TITLE LINK 1 Prop)
+	(NEGATE 0 TITLE LINK 1 Prop OR ("<[A-ZÁŠČ].*>"r))
 	;
 COPY:msyn-obj-sgnom-sgacc (Acc &SUGGEST) EXCEPT Nom TARGET (N Sg &msyn-obj-sgnom-sgacc);
 #% Mun juuvâm ain mielkki.
