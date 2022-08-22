@@ -2010,6 +2010,7 @@ LIST &msyn-agr-other-sg1 = &msyn-agr-other-sg1 ;
 LIST &msyn-agr-other-sg2 = &msyn-agr-other-sg2 ;
 LIST &msyn-agr-pl3-sg3 = &msyn-agr-pl3-sg3 ;
 LIST &msyn-agr-sg1-sg3 = &msyn-agr-sg1-sg3 ;
+LIST &msyn-agr-sg2-sg1 = &msyn-agr-sg2-sg1 ;
 LIST &msyn-agr-sg2-sg3 = &msyn-agr-sg2-sg3 ;
 LIST &msyn-agr-sg3-du3 = &msyn-agr-sg3-du3 ;
 LIST &msyn-agr-sg3-pl3 = &msyn-agr-sg3-pl3 ;
@@ -2095,6 +2096,12 @@ ADD (&typo &SUGGESTWF) (<spelled>);
 
 #!! #### Sg1
 
+
+ADD:msyn-agr-sg2-sg1 (&msyn-agr-sg2-sg1) TARGET V IF
+	(-1C Pron + Sg1 + Nom)
+	(0 V + Ind + Sg2)
+	;
+COPY:msyn-agr-sg2-sg1 (Sg1 &SUGGEST) EXCEPT Sg2 TARGET (V Ind Prt &msyn-agr-sg2-sg1);
 
 #!! **Agreement rule:** msyn-agr-other-sg1, *Mun puátá/puáđám*
 ADD:msyn-agr-other-sg1 (&msyn-agr-other-sg1) TARGET V IF
