@@ -2583,11 +2583,31 @@ COPY:msyn-extsubj-acc-nom (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &msyn-extsubj-a
 
 
 ADD:msyn-extsubj-acc-nom (&msyn-extsubj-acc-nom) TARGET N IF
-	(*-1 LEDE + ConNeg BARRIER NOT-NPMODADV LINK -1 Neg LINK -1 Loc OR Po LINK NOT -1 ("mii" Interr))
+#	(*-1 LEDE + ConNeg BARRIER NOT-NPMODADV LINK -1 Neg LINK -1 Loc OR Po LINK NOT -1 ("mii" Interr))
+	(*-1 LEDE + ConNeg  LINK -1 Neg LINK -1 Loc OR Po LINK NOT -1 ("mii" Interr))
 	(NOT -1 ("mihheen"))
 	(0C (N Pl Acc))
 	(NEGATE *1 TV + Ger OR TV + PrfPrc OR TV + Inf BARRIER S-BOUNDARY OR VFIN) ;
 COPY:msyn-extsubj-acc-nom (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &msyn-extsubj-acc-nom) ;
+
+
+
+ADD:msyn-extsubj-gen-nom (&msyn-extsubj-gen-nom) TARGET N + Gen IF
+	(*-1 LEDE + ConNeg LINK -1 Neg LINK -1 Loc OR Po) # LINK NOT -1 ("mii" Interr))
+	(0C N + Gen) 
+    (NOT 1 N + Gen)
+	;
+COPY:msyn-extsubj-gen-nom (Nom &SUGGEST) EXCEPT Gen TARGET (N  &msyn-extsubj-gen-nom) ;
+#% "Sist ij lah alda sämikielâlij huolhij {torjuu}£{toorjâ} finnimnáál."   
+
+
+#	(*-1 LEDE + ConNeg BARRIER NOT-NPMODADV LINK -1 Neg LINK -1 Loc OR Po) # LINK NOT -1 ("mii" Interr))
+
+#	(NOT -1 ("mihheen"))
+
+#	(NEGATE *1 TV + Ger OR TV + PrfPrc OR TV + Inf BARRIER S-BOUNDARY OR VFIN) 
+
+
 
 
 #!!  **Agreement rule:** msyn-extv-sg3-pl3 
