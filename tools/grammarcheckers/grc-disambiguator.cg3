@@ -4910,7 +4910,7 @@ SELECT:NumNomYear (Num Nom) IF ((0 Sem/Year LINK -1 Sem/Sur LINK 2 (":") OR (";"
 
 #!! ## ACCUSATIVE-ILLATIVE DISAMBIGUATION
 
-REMOVE:IllNotAcc Acc IF (0 Ill)(NOT *-1 TV)(1 EOS);
+REMOVE:IllNotAcc Acc IF (0 Ill)(NEGATE *0 TV);
 
 REMOVE:IllNotAcc Acc IF (0 A + Ill)(1C N + Ill);
 
