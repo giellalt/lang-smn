@@ -2597,7 +2597,7 @@ COPY:msyn-extsubj-acc-nom (Nom &SUGGEST) EXCEPT Acc TARGET (N Pl &msyn-extsubj-a
 ADD:msyn-extsubj-gen-nom (&msyn-extsubj-gen-nom) TARGET N + Gen IF
 	(*-1 LEDE + ConNeg LINK -1 Neg LINK -1 Loc OR Po) # LINK NOT -1 ("mii" Interr))
 	(0C N + Gen) 
-    (NOT 1 N + Gen)
+    (NOT 1 N + Gen OR N + Nom)
 	;
 COPY:msyn-extsubj-gen-nom (Nom &SUGGEST) EXCEPT Gen TARGET (N  &msyn-extsubj-gen-nom) ;
 #% "Sist ij lah alda sämikielâlij huolhij {torjuu}£{toorjâ} finnimnáál."   
@@ -3161,15 +3161,18 @@ ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF
 #!!  **Agreement rule:** msyn-posspl-acc-gen. coordination: *uásálistiđ párnáid/párnái já nuorâi leiráid*
 ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF 
 (*-1 V BARRIER NOT-COORD-NPMOD) # testing...
+(NOT -1 Gen)
 (0 N + Pl + Acc)
 (NOT 0 PX OR Gen)
 (1 CC)
-(2 N + Pl + Gen OR &msyn-posspl-acc-gen LINK 1 N OR Actio + Nom LINK NOT *1 TV + V BARRIER S-BOUNDARY);
+(2 N + Pl + Gen OR &msyn-posspl-acc-gen LINK 1 N OR Actio + Nom LINK NOT *1 TV BARRIER S-BOUNDARY);
+
 #$ Škovlim maŋa puávtáh uásálistiđ párnáid já nuorâi leiráid stuorrâhâžžân.
 #$ Jiem lah jieš puáhtám luuhâđ táid kiirjijd já klassikkoid sämikielân
 
 ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF 
 #(NOT *-1 TV BARRIER NOT-NPMOD)
+(NOT -1 Gen)
 (0 N + Pl + Acc)
 (NOT 0 PX OR Gen)
 (1 CC)
