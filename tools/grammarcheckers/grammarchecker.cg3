@@ -2506,7 +2506,7 @@ ADD:msyn-extv-pl3-sg3 (&msyn-extv-pl3-sg3) TARGET V IF
 	(0 ("leđe" V Ind Prs Pl3))
 	(1 Pron + Loc)
 	(*2 N + Sg + Nom BARRIER NOT-NPMODADV OR @CVP OR S-BOUNDARY LINK NOT 1 CC);
-COPY:msyn-extv-pl3-sg3 (Sg3 &SUGGEST) EXCEPT Pl3 TARGET ("leđe" V Ind Prs &msyn-extv-pl3-sg3) ;
+COPY:msyn-extv-pl3-sg3 (Sg3 &SUGGEST) EXCEPT (Pl3 &msyn-extv-pl3-sg3) TARGET ("leđe" V Ind Prs &msyn-extv-pl3-sg3) ;
 #% Must lii uđđâ autoh.
 #$ Must láá uđđâ autoh.
 
@@ -2518,9 +2518,11 @@ ADD:msyn-extv-numeral-sg3-pl3 (&msyn-extv-numeral-sg3-pl3) TARGET V IF
 (*-1 Loc OR DOPPE BARRIER NOT-ADV-PCLE)
 (0 LEDE + Sg3)
 (*1 Num + Nom BARRIER NOT-ADV-PCLE LINK NOT 0 OHTA OR Sem/Date OR Sem/Year OR Sem/ID LINK *1 N);
-COPY:msyn-extv-numeral-sg3-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Ind Prs &msyn-extv-numeral-sg3-pl3) ;
-COPY:msyn-extv-numeral-sg3-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V Ind Prt &msyn-extv-numeral-sg3-pl3) ;
+COPY:msyn-extv-numeral-sg3-pl3 (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-extv-numeral-sg3-pl3) OR (Sg3 &msyn-extv-numeral-sg3-pl3 &msyn-extv-sg3-pl3) TARGET (V Ind Prs &msyn-extv-numeral-sg3-pl3) ;
+COPY:msyn-extv-numeral-sg3-pl3 (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-extv-numeral-sg3-pl3) OR (Sg3 &msyn-extv-numeral-sg3-pl3 &msyn-extv-sg3-pl3) TARGET (V Ind Prt &msyn-extv-numeral-sg3-pl3) ;
 ADDRELATION:msyn-extv-numeral-sg3-pl3 ($2) Num + Nom FROM (-1 V + LEDE + Sg3 LINK 0 (&msyn-extv-numeral-sg3-pl3));
+#% Muu šiljoost lii kyehti rástágáá. # fn
+#% Muu šiljoost lii ain kyehti rástágáá. # tp
 #% Must {lii} kyehti kyele.
 #$ Must láá kyehti kyele.
 #fi Minulla on kaksi kalaa. - 
