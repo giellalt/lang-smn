@@ -2327,7 +2327,7 @@ COPY:msyn-agr-sg3-du3 (Du3 &SUGGEST) EXCEPT Sg3 TARGET (V  &msyn-agr-sg3-du3);
 
 #!!  **Agreement rule:** msyn-agr-sg3-pl3, Subject to the left, *80 puátá/puáđah*
 ADD:msyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET V IF
-	(*-1C NUM BARRIER Nom OR V OR (")") LINK NOT 0 Sem/ID OR ("<[A-ZÁÄČŠ].*>r") OR Gen LINK NOT 1 PUNCT)
+	(*-1C NUM BARRIER Nom OR V OR (")") OR S-BOUNDARY LINK NOT 0 Sem/ID OR ("<[A-ZÁÄČŠ].*>r") OR Gen LINK NOT 1 PUNCT)
 	(0 V + Sg3);
 COPY:msyn-agr-sg3-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (V &msyn-agr-sg3-pl3);
 #% 80 puátá.
