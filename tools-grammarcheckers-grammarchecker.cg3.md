@@ -664,6 +664,10 @@ RULE SECTION
 
 ## Verb agreement rules
 
+### Imperativ rules
+
+#### Sg 3
+
 ### Singulaari
 
 #### Sg1
