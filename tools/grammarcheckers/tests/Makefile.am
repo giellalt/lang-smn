@@ -24,6 +24,7 @@ TESTS=\
     msyn-extsubj-ill-nom.yaml \
     msyn-extv-sg3-pl3.yaml \
     msyn-imp-nom-acc.yaml \
+    myn-imp-pl3-sg3.yaml \
     msyn-ncompl-acc-ill.yaml \
     msyn-ncompl-ess-sgill.yaml \
     msyn-ncompl-placc-plill.yaml \
@@ -62,12 +63,8 @@ XFAIL_TESTS=\
 	interferens_celkkuuh3.yaml \
 	interferens_celkkuuh4.yaml \
 	msyn-extsubj-ill-nom.yaml \
-	msyn-extv-sg3-pl3.yaml \
-	msyn-imp-nom-acc.yaml \
 	msyn-ncompl-acc-ill.yaml \
-	msyn-ncompl-placc-plill.yaml \
 	msyn-num-par-nom.yaml \
-	msyn-obj-acc-ill.yaml \
 	msyn-pass-accsubj-nomsubj.yaml \
 	msyn-po-acc-gen.yaml \
 	msyn-po-nom-gen.yaml \

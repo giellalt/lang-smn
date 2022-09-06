@@ -2025,6 +2025,7 @@ LIST &msyn-extv-numeral-sg3-pl3 = &msyn-extv-numeral-sg3-pl3 ;
 LIST &msyn-extv-pl3-sg3 = &msyn-extv-pl3-sg3 ;
 LIST &msyn-extv-sg3-pl3 = &msyn-extv-sg3-pl3 ;
 LIST &msyn-imp-nom-acc = &msyn-imp-nom-acc ;
+LIST &msyn-imp-pl3-sg3 = &msyn-imp-pl3-sg3 ;
 LIST &msyn-mii-sgnom-placc = &msyn-mii-sgnom-placc ;
 LIST &msyn-ncompl-ess-sgill = &msyn-ncompl-ess-sgill ;
 LIST &msyn-ncompl-placc-plill = &msyn-ncompl-placc-plill ;
@@ -2089,6 +2090,15 @@ ADD (&typo &SUGGESTWF) (<spelled>);
 
 
 #!! ## Verb agreement rules
+
+
+#!! ### Imperativ rules
+
+#!! #### Sg 3
+ADD:msyn-imp-pl3-sg3 (&msyn-imp-pl3-sg3) TARGET V + Imprt IF
+	(0 Imprt + Pl3)
+	(*1 N + Sg + Nom BARRIER NOT-NPMOD);
+COPY:msyn-imp-pl3-sg3 (Sg3 &SUGGEST) EXCEPT (Pl3 &msyn-imp-pl3-sg3) TARGET (V Imprt &msyn-imp-pl3-sg3); 
 
 
 #!! ### Singulaari
