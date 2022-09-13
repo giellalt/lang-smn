@@ -153,6 +153,20 @@ LIST Cmp/SgGen = Cmp/SgGen ;    #!! - Cmp/SgGen
 LIST Cmp/Attr = Cmp/Attr ;      #!! - Cmp/Attr
 LIST Cmp/Hyph = Cmp/Hyph ;      #!! - Cmp/Hyph
 
+
+#!! **Compounding:**
+
+LIST CmpNP/All = CmpNP/All ;	 #!! - CmpNP/ tags
+LIST CmpNP/First = CmpNP/First ; #!! - CmpNP/ tags
+LIST CmpNP/Pref = CmpNP/Pref ;	 #!! - CmpNP/ tags
+LIST CmpNP/Last = CmpNP/Last ;	 #!! - CmpNP/ tags
+LIST CmpNP/Suff = CmpNP/Suff ;	 #!! - CmpNP/ tags
+LIST CmpNP/None = CmpNP/None ;	 #!! - CmpNP/ tags
+LIST CmpNP/Only = CmpNP/Only ;	 #!! - CmpNP/ tags
+
+
+
+
 #!! **Possessives:**
 LIST PxSg1 = PxSg1 ;	   #!! - PxSg1
 LIST PxSg2 = PxSg2 ;	   #!! - PxSg2
@@ -7427,6 +7441,15 @@ SUBSTITUTE (Pron) (Pron <smn>) WORD ; #RemoveFromApertium
 SUBSTITUTE (CC) (CC <smn>) WORD ; #RemoveFromApertium
 SUBSTITUTE (CS) (CS <smn>) WORD ; #RemoveFromApertium
 SUBSTITUTE (Pcle) (Pcle <smn>) WORD ; #RemoveFromApertium
+
+
+# Here we remove compound tags in order to be able to generate compound words, cf.
+# Sämikielâst láá eromâš muotâsaanijd.
+# which will not generate the correct 'muotâsäänih' without the rule deleting Cmp/SgNom
+ 
+SUBSTITUTE SUB:1 (Cmp/SgNom) (*) TARGET (Cmp/SgNom) ;    #!! - Cmp/SgNom 
+SUBSTITUTE SUB:1 (Cmp/SgGen) (*) TARGET (Cmp/SgGen) ;    #!! - Cmp/SgGen
+
 
 
 	# Disambiguating the semantic tags
