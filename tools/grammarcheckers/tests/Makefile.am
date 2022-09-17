@@ -17,7 +17,6 @@ TESTS=\
     msyn-agr-sg3-du3.yaml \
     msyn-agr-sg3-pl3.yaml \
     msyn-det-nom-acc.yaml \
-    msyn-dynamic-compounds.yaml \
     msyn-ext-pl3-sg3.yaml \
     msyn-extneg-sg3-pl3.yaml \
     msyn-extsubj-acc-nom.yaml \
@@ -62,7 +61,6 @@ TESTS=\
 XFAIL_TESTS=\
 	interferens_celkkuuh3.yaml \
 	interferens_celkkuuh4.yaml \
-	msyn-dynamic-compounds.yaml \
 	msyn-ncompl-acc-ill.yaml \
 	msyn-pass-accsubj-nomsubj.yaml \
 	msyn-po-acc-gen.yaml \
