@@ -30,7 +30,7 @@ Documentation
 
 Documentation can be found at:
 
--   <https://giellalt.uit.no/lang/smn/j-smn.html>
+- [Language specific documentation](https://giellalt.github.io/lang-smn/)
 -   <https://giellalt.uit.no/index.html>
 
 Core dependencies
