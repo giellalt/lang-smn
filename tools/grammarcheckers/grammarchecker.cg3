@@ -2049,6 +2049,7 @@ LIST &msyn-ness-acc-nom = &msyn-ness-acc-nom ;
 LIST &msyn-ness-ill-nom = &msyn-ness-ill-nom ; 
 LIST &msyn-num-acc-par = &msyn-num-acc-par ;
 LIST &msyn-num-gen-par = &msyn-num-gen-par ;
+LIST &msyn-num-gen-num = &msyn-num-gen-num ;
 LIST &msyn-num-par-gen = &msyn-num-par-gen ;
 LIST &msyn-obj-acc-ill = &msyn-obj-acc-ill ;
 LIST &msyn-obj-nom-acc = &msyn-obj-nom-acc ;
@@ -2063,8 +2064,11 @@ LIST &msyn-posspl-acc-gen =  &msyn-posspl-acc-gen ;
 LIST &msyn-pred-acc-nom =  &msyn-pred-acc-nom ; 
 LIST &msyn-pred-ill-nom =  &msyn-pred-ill-nom ; 
 LIST &msyn-predagr-pl3-sg3 = &msyn-predagr-pl3-sg3 ;
+LIST &msyn-pronagr-loc-gen =  &msyn-pronagr-loc-gen ;
 LIST &msyn-quant-gen-nom =  &msyn-quant-gen-nom ;
 LIST &msyn-quant-nom-gen = &msyn-quant-nom-gen ;
+LIST &msyn-refl-pxsg3-pxsg1 = &msyn-refl-pxsg3-pxsg1 ;
+LIST &msyn-refl-pxsg3-pxsg2 = &msyn-refl-pxsg3-pxsg2 ;
 LIST &msyn-subj-gen-nom = &msyn-subj-gen-nom ;
 LIST &msyn-top-nom-acc = &msyn-top-nom-acc ;
 LIST &msyn-top-placc-plnom = &msyn-top-placc-plnom ;
@@ -2777,7 +2781,12 @@ ADDRELATION:msyn-predagr-pl3-sg3 ($2) (N Sg Nom) FROM (-5 Neg LINK 0 (&msyn-pred
 #$ Päikkinoomah iä lah siäilum.
 
 #!!  **Agreement rule:** msyn-adj-attr-pred
-ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred)  TARGET (A) IF (0C Attr) (NOT 0 (Arab Ord) OR (A Sg Nom))(NOT 1 N OR A OR PrfPrc)(1 EOS)(NOT 1 ("...")) ;
+ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred)  TARGET (A) IF
+	(0 Attr)
+	(NOT 0 (Arab Ord) OR (A Sg Nom))
+#	(NOT 1 N OR A OR PrfPrc)
+	(1 EOS)
+	(NOT 1 ("...")) ;
 COPY:msyn-adj-attr-pred (Sg Nom &SUGGEST) EXCEPT (Attr &msyn-adj-attr-pred) TARGET ( A &msyn-adj-attr-pred);
 
     #% Tot lii hirmâd.
@@ -3079,8 +3088,22 @@ ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET Pron IF (*-2 ILL-V + IV BARRIER 
 COPY:msyn-obj-acc-ill (Ill &SUGGEST) EXCEPT (Acc &msyn-obj-acc-ill) TARGET (Pron Acc &msyn-obj-acc-ill) ;
 
 
+#!! ## Reflexive pronoun errors
 
-#!! ### Imperative errors
+#!! ### Agreement error for reflexive pronoun bound by subject
+ADD:msyn-refl-pxsg3-pxsg1 (&msyn-refl-pxsg3-pxsg1) TARGET Refl IF
+	(*-1 V + Sg1 BARRIER VFIN)
+	(0 Refl + PxSg3);
+COPY:msyn-refl-pxsg3-pxsg1 (PxSg1 &SUGGEST) EXCEPT (PxSg3 &msyn-refl-pxsg3-pxsg1) TARGET (Pron &msyn-refl-pxsg3-pxsg1);
+ADDRELATION:msyn-refl-pxsg3-pxsg1 ($2) (V Sg1) FROM (*1 (Pron &msyn-refl-pxsg3-pxsg1));
+
+ADD:msyn-refl-pxsg3-pxsg2 (&msyn-refl-pxsg3-pxsg2) TARGET Refl IF
+	(*-1 V + Sg2 BARRIER VFIN)
+	(0 Refl + PxSg3);
+COPY:msyn-refl-pxsg3-pxsg2 (PxSg2 &SUGGEST) EXCEPT (PxSg3 &msyn-refl-pxsg3-pxsg2) TARGET (Pron &msyn-refl-pxsg3-pxsg2);
+ADDRELATION:msyn-refl-pxsg3-pxsg2 ($2) (V Sg2) FROM (*1 (Pron &msyn-refl-pxsg3-pxsg2));
+
+#!! ## Imperative errors
 
 #!! Suomâkielâ imperatiiv mieđetteijee häämist, mast objekt sajehäämmin lii maaŋgâlovo nominatiiv mut sämikielâst akkusatiiv:
 
@@ -3179,7 +3202,12 @@ COPY:msyn-pass-accsubj-nomsubj (Nom &SUGGEST) EXCEPT (Acc &msyn-pass-accsubj-nom
 #!! ### Demonstratives
 
 #!!  **Agreement rule:** msyn-dem-locattr-gen
-ADD:msyn-dem-locattr-gen (&msyn-dem-locattr-gen) TARGET Dem IF (NOT *0 LOC-V BARRIER SV-BOUNDARY)(0 Sg + Loc)(NOT 0 Loc + Attr)(1 N + Sg + Loc)(NOT 1 Prop OR Sem/Plc); # Loc Attr > Gen?
+ADD:msyn-dem-locattr-gen (&msyn-dem-locattr-gen) TARGET Dem IF
+	(NOT *0 LOC-V BARRIER SV-BOUNDARY)
+	(0 Sg + Loc)
+	(NOT 0 Loc + Attr)
+	(1 N + Sg + Loc)
+	(NOT 1 Prop OR Sem/Plc); # Loc Attr > Gen?
 COPY:msyn-dem-locattr-gen (Gen &SUGGEST) EXCEPT (Loc Attr &msyn-dem-locattr-gen) TARGET (Dem &msyn-dem-locattr-gen);
 
 #!! ### Noun phrase possessor
@@ -3373,6 +3401,18 @@ COPY:msyn-mii-sgnom-placc (Pl Acc &SUGGEST) EXCEPT (Sg Nom &msyn-mii-sgnom-placc
 ADD:msyn-mii-sgnom-placc (&msyn-mii-sgnom-placc) TARGET N IF (-2 BOS)(-1 ("kii"))(0C (N Sg Nom))(1 (N Nom) OR (Pron Nom))(*2 LEDE);
 COPY:msyn-mii-sgnom-placc (Pl Acc &SUGGEST) EXCEPT (Sg Nom &msyn-mii-sgnom-placc) TARGET ( N &msyn-mii-sgnom-placc);
 
+#!! ### Pronouns in attributive position
+
+ADD:msyn-pronagr-loc-gen (&msyn-pronagr-loc-gen) TARGET Pron IF
+	(0 Sg + Loc)
+	(NOT 0 Loc + Attr)
+	(NOT *0 LOC-V BARRIER SV-BOUNDARY)
+	(*1 N + Sg + Loc BARRIER NOT-NPMOD LINK NOT 0 Prop OR Sem/Plc);
+COPY:msyn-pronagr-loc-gen (Gen &SUGGEST) EXCEPT (Loc &msyn-pronagr-loc-gen) TARGET (Pron &msyn-pronagr-loc-gen);
+ADDRELATION:msyn-pronagr-loc-gen ($2) (N Sg Loc) FROM (*-1 &msyn-pronagr-loc-gen);
+
+#% Mast teevstâst lii tääl saahâ?
+#$ Mon teevstâst lii tääl saahâ?
 
 #!! ### Adjectives in attributive position
 
@@ -3382,6 +3422,7 @@ ADD:msyn-adj-gen-nom (&msyn-adj-gen-nom) TARGET A IF
 	(0 A + Sg + Gen OR A + Sg + Acc)
 	(1C N + Nom);
 COPY:msyn-adj-gen-nom (Nom &SUGGEST) EXCEPT (Gen &msyn-adj-gen-nom) TARGET (A Gen &msyn-adj-gen-nom);
+ADDRELATION:msyn-adj-gen-nom ($2) (N Nom) FROM (-1  &msyn-adj-gen-nom);
 
 #!!  **Agreement rule:** msyn-adj-nom-acc
 ADD:msyn-adj-nom-acc (&msyn-adj-nom-acc) TARGET A IF
@@ -3410,6 +3451,7 @@ ADD:msyn-quant-nom-gen (&msyn-quant-nom-gen) TARGET Num IF
 (NOT 0 Num + Sg + Gen OR Sem/Year OR Arab)
 (1C N + NOT-NOM LINK NOT 0 Loc);
 COPY:msyn-quant-nom-gen (Gen &SUGGEST) EXCEPT (Nom &msyn-quant-nom-gen) TARGET (Num Nom &msyn-quant-nom-gen);
+
 
 
 
@@ -3476,6 +3518,13 @@ COPY:msyn-num-acc-par (Par &SUGGEST) EXCEPT (Sg Acc &msyn-num-acc-par) TARGET (N
 #ADD:test-6 &msyn-num-par-gen TARGET Num IF (0 TWO-TO-SIX);
 #ADD:test-7 &msyn-num-gen-par TARGET Num IF (0 SEVEN-AND-MORE);
 
+
+ADD:msyn-num-gen-num (&msyn-num-gen-num) TARGET Num IF
+	(-1 LEDE + Ind)
+	(0 Num + Sg + Gen)
+	(1 N + Sg + Gen)
+	(2 EOS);
+COPY:msyn-num-gen-num (Nom &SUGGEST) EXCEPT (Gen &msyn-num-gen-num) TARGET (Num &msyn-num-gen-num);
 
 #!! msyn-num-par-gen
 #!! The rule is: 2-6 + gensg, 7- + par
