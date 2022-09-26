@@ -2153,7 +2153,7 @@ COPY:msyn-agr-other-sg1 (Ind Prt Sg1 &SUGGEST) EXCEPT (Actio Num &msyn-agr-other
 #!!  **Agreement rule:** msyn-agr-other-sg1
 ADD:msyn-agr-other-sg1 (&msyn-agr-other-sg1) TARGET V IF
 	(NOT -2 Sup OR Sg1)
-	(-1C Pron + Sg1 + Nom)
+	(*-1C Pron + Sg1 + Nom BARRIER NOT-ADV-PCLE)
 	(-1 BOS OR PUNCT)
 	(0 V + PERNUM)
 	(NOT 0 Sg1);
