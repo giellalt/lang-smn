@@ -755,6 +755,16 @@ Sg3/Pl3 errors: Suomâkielâ sárnumkielâ epikongruens maaŋgâlovo 3. persovni
 
 **Agreement rule:** msyn-agr-other-pl3
 
+## Conneg verbs
+
+### ConNeg Better: Target whatever is there and should have been a conneg. !!!
+
+**Agreement rule:** msyn-v-sg3-conneg *Sun ij lah/lii.*
+
+**Agreement rule:** msyn-v-du3-conneg *Noomah iä vuáđuduv/vuáđuduu.*
+
+**Agreement rule:** msyn-v-sg3-conneg *Sun ij puávtáččij/puávtáččii vyelgiđ.*
+
 ## Complement of negative verb
 
 **Agreement rule:** &msyn-negcompl-sg3-conneg
@@ -815,22 +825,6 @@ Here, the verb should be plural. The interference comes from Finnish e-sentences
 
 **Agreement rule:** msyn-po-placc-plgen *Vuoigâdvuotä nubástittiđ kielâ jieijâs táárbuid/táárbui mield.*
 
-## Predicative
-
-**Agreement rule:** msyn-pred-acc-nom *Taah láá čielgâ aašijd/ááših.*
-
-**Agreement rule:** msyn-pred-acc-nom *Lii-uv toos synonymáid/synonym*
-
-**Agreement rule:** msyn-pred-ill-nom *Lii-uv toos synonymijd/synonym*
-
-### Agreement error with predicative
-
-**Agreement rule:** msyn-predagr-pl3-sg3 *Iä/Ij lah toorjâ.*
-
-**Agreement rule:** msyn-adj-attr-pred
-
-**Agreement rule:** msyn-adj-attr-pred *Mun lam fiskis/fiskâd.*
-
 ## Confusion rules
 
 ### Sg1 vs. PrfPrc
@@ -873,14 +867,6 @@ Finnish plural objects are in the nominative, in Inari Saami they are in the acc
 
 **Agreement rule:** msyn-plobj-nom-acc
 
-### ConNeg Better: Target whatever is there and should have been a conneg. !!!
-
-**Agreement rule:** msyn-v-sg3-conneg *Sun ij lah/lii.*
-
-**Agreement rule:** msyn-v-du3-conneg *Noomah iä vuáđuduv/vuáđuduu.*
-
-**Agreement rule:** msyn-v-sg3-conneg *Sun ij puávtáččij/puávtáččii vyelgiđ.*
-
 ### Topicalised object
 
 **Agreement rule:**  msyn-top-nom-acc
@@ -909,9 +895,27 @@ Finnish plural objects are in the nominative, in Inari Saami they are in the acc
 
 **Agreement rule:** msyn-obj-acc-ill
 
-## Reflexive pronoun errors
+## Predicative
 
-### Agreement error for reflexive pronoun bound by subject
+**Agreement rule:** msyn-pred-acc-nom *Taah láá čielgâ aašijd/ááših.*
+
+**Agreement rule:** msyn-pred-acc-nom *Lii-uv toos synonymáid/synonym*
+
+**Agreement rule:** msyn-pred-ill-nom *Lii-uv toos synonymijd/synonym*
+
+### Agreement error with predicative
+
+**Agreement rule:** msyn-predagr-pl3-sg3 *Iä/Ij lah toorjâ.*
+
+**Agreement rule:** msyn-adj-attr-pred
+
+**Agreement rule:** msyn-adj-attr-pred *Mun lam fiskis/fiskâd.*
+
+## Embedded clause errors
+
+### Reflexive pronoun errors
+
+#### Agreement error for reflexive pronoun bound by subject
 
 ## Imperative errors
 
