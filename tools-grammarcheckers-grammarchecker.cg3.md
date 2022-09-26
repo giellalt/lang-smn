@@ -96,9 +96,8 @@ Gen
 Ill
 Loc
 Com
-Abe
 Ess
-Par
+Ess
 Sg
 Du
 Pl
@@ -445,7 +444,7 @@ TRANS-V is the set for verbs really taking objects
 
 STRICT-TRANS-V is the set for verbs which don't let a GenAcc be a modifier of anything else than an object, e.g. Mun organiseren eatni gievkkanis. - eatni wants to be the object
 
-- LIST COM-V = "algâttiđ" "älgiđ" "arvâlâddâđ" "árvvohuššat" "ávkašuvvat" "bálddastahttit" "bálddalastit" "bártašuvvat" "birgehallat" "birget" "bivvat" "buohtastahttit" "čoahkkinastit" "deaivvadit" "tevdiđ" "digaštallat" "doarrut" "duhkoraddat" "elettiđ" "flirtet" "gávnnadit" "gárvodit" "giksašuvvat" "gilvalit" "gulahallat" "gulaskuddat" "herskustâllâđ" "hilbošit" "joatkit" "juogadit" "jyehiđ" "láhttet" "leaikkastallat" "lohpádaddat" "lohpádallat" "lonuhit" "meannudit" "malssidit" "molssodit" "náitalit" "uástiđ" "oktiibidjat" "oahpásmuvvat" "ovttasbargat" "ovttastahttit" "rahčat" "reivvestaddat" "riidalit" "riiddáskit" "rohcošit" "ságastit" "seaguhit" "servvoštallat" "servvoštaddat" "soabadit" "käydä" "soahtat" "soardit" "stálostallat" "stoahkat" "šiehtadallat" "šiehtadit" "šiehttat" "veahkehit" "veardidit" "vijđediđ" "vrd" ; 
+- LIST COM-V = "algâttiđ" "älgiđ" "arvâlâddâđ" "árvvohuššat" "ávkašuvvat" "bálddastahttit" "bálddalastit" "bártašuvvat" "birgehallat" "birget" "bivvat" "buohtastahttit" "čoahkkinastit" "deaivvadit" "tevdiđ" "digaštallat" "doarrut" "duhkoraddat" "elettiđ" "flirtet" "gávnnadit" "gárvodit" "giksašuvvat" "gilvalit" "gulahallat" "gulaskuddat" "hilbošit" "joatkit" "juogadit" "jyehiđ" "láhttet" "leaikkastallat" "lohpádaddat" "lohpádallat" "lonuhit" "meannudit" "malssidit" "molssodit" "náitalit" "uástiđ" "oktiibidjat" "oahpásmuvvat" "ovttasbargat" "ovttastahttit" "rahčat" "reivvestaddat" "riidalit" "riiddáskit" "rohcošit" "ságastit" "seaguhit" "servvoštallat" "servvoštaddat" "soabadit" "käydä" "soahtat" "soardit" "stálostallat" "stoahkat" "šiehtadallat" "šiehtadit" "šiehttat" "veahkehit" "veardidit" "vijđediđ" "vrd" ; 
 
 - LIST ILL-V = "aibâšiđ" "älgiđ" "asâiduđ" "pokkiđ" "peessâđ" "čokánistiđ" "čujottiđ" ("čuoppâđ" Ex/V Ex/TV Der/Pass) "vaikuttiđ" "teivâđ" "turvâstiđ" "tuuttâđ" "kuoskâđ" "hárjániđ" "irgediđ" "irgástallat" ("juáhuđ" Ex/V Der/Pass V) "juohhuđ" ("jyehiđ" Ex/V Ex/TV Der/Pass) "oskođ" "lijkkuđ" "lyettiđ"  "vyelgiđ" "maccâđ" "mieđettiđ" "miettâđ" "njeeijâđ" "enittiđ" "oskođ" "peessâđ" "riemmâđ" "valmiđ" "uásálistiđ" "uápásmuđ" "suttâđ" "vaikuttiđ" "västidiđ" "vyelgiđ" "vaiguttiđ" "vuáđuduđ" ; 
 
@@ -547,24 +546,6 @@ STRICT-TRANS-V is the set for verbs which don't let a GenAcc be a modifier of an
 - LIST LEXICALISED-PASS-V = "kevttuđ" ; 
 
 ### Adverb sets
-
-#### Adverbs as predicates
-in combination with verbs
-
-- COM-ADV
-LIST COM-ADV = "fárrolaga" "oovtâst" "oktanaga" "ovttamielas" "oovtâst" "ovttasráđiid" "searválagaid" "searválaga" ;
-
-Could also be perceived as particles within complexs verbs.
-
-- LOC-ADV
-
-#### Other adverb sets
-
-- GRADE-ADV
-
-- PLURALIZER
-
-- BUOT
 
 ### Adjective sets
 
@@ -755,16 +736,6 @@ Sg3/Pl3 errors: Suomâkielâ sárnumkielâ epikongruens maaŋgâlovo 3. persovni
 
 **Agreement rule:** msyn-agr-other-pl3
 
-## Conneg verbs
-
-### ConNeg Better: Target whatever is there and should have been a conneg. !!!
-
-**Agreement rule:** msyn-v-sg3-conneg *Sun ij lah/lii.*
-
-**Agreement rule:** msyn-v-du3-conneg *Noomah iä vuáđuduv/vuáđuduu.*
-
-**Agreement rule:** msyn-v-sg3-conneg *Sun ij puávtáččij/puávtáččii vyelgiđ.*
-
 ## Complement of negative verb
 
 **Agreement rule:** &msyn-negcompl-sg3-conneg
@@ -781,11 +752,11 @@ Sg3/Pl3 errors: Suomâkielâ sárnumkielâ epikongruens maaŋgâlovo 3. persovni
 
 **Agreement rule:** msyn-ness-acc-nom *Suu/Sun koolgâi forgâ porgâđ miärádâs.*
 
-## Inf should be Actio Essive
+### Inf should be Actio Essive
 
 **Agreement rule:** msyn-orrood-inf-actioess *Mun orom leđe/lemin ennuv velgus anarâškielân.*
 
-## Existential sentences
+### Existential sentences
 
 Here, the verb should be plural. The interference comes from Finnish e-sentences, where the verb is in the ingular. 
 
@@ -805,7 +776,7 @@ Here, the verb should be plural. The interference comes from Finnish e-sentences
 
 **Agreement rule:** msyn-extneg-sg3-pl3
 
-## Existential sentences and habitives
+### Existential sentences and habitives
 
 **Agreement rule:** msyn-extsubj-ill-nom
 
@@ -817,7 +788,7 @@ Here, the verb should be plural. The interference comes from Finnish e-sentences
 
 **Agreement rule:** msyn-extsubj-ill-nom
 
-## Postpositions
+### Postpositions
 
 **Agreement rule:** msyn-po-nom-gen
 
@@ -825,15 +796,43 @@ Here, the verb should be plural. The interference comes from Finnish e-sentences
 
 **Agreement rule:** msyn-po-placc-plgen *Vuoigâdvuotä nubástittiđ kielâ jieijâs táárbuid/táárbui mield.*
 
-## Confusion rules
+### Predicative
 
-### Sg1 vs. PrfPrc
+**Agreement rule:** msyn-pred-acc-nom *Taah láá čielgâ aašijd/ááših.*
+
+**Agreement rule:** msyn-pred-acc-nom *Lii-uv toos synonymáid/synonym*
+
+**Agreement rule:** msyn-pred-ill-nom *Lii-uv toos synonymijd/synonym*
+
+#### Agreement error with predicative
+
+**Agreement rule:** msyn-predagr-pl3-sg3 *Iä/Ij lah toorjâ.*
+
+**Agreement rule:** msyn-adj-attr-pred
+
+**Agreement rule:** msyn-adj-attr-pred *Mun lam fiskis/fiskâd.*
+
+### Confusion rules
 
 **Agreement rule:** msyn-v-sg1-prfprc *Sun lii huunjâm/huunnjâm.*
 
-## Subjects
+### Subjects
 
-## Objects
+### Plural objects
+
+### Plural 2020
+
+**Agreement rule:** msyn-plobj-nom-acc
+
+**Agreement rule:** msyn-plobj-nom-acc
+
+### ConNeg Better: Target whatever is there and should have been a conneg. !!!
+
+**Agreement rule:** msyn-v-sg3-conneg *Sun ij lah/lii.*
+
+**Agreement rule:** msyn-v-du3-conneg *Noomah iä vuáđuduv/vuáđuduu.*
+
+**Agreement rule:** msyn-v-sg3-conneg *Sun ij puávtáččij/puávtáččii vyelgiđ.*
 
 ### Singular objects
 
@@ -861,19 +860,9 @@ Finnish plural objects are in the nominative, in Inari Saami they are in the acc
 
 **Agreement rule:** msyn-obj-plnom-placc (6 rules) *Lam valjim taah säänih/saanijd.*
 
-### Plural 2020
-
-**Agreement rule:** msyn-plobj-nom-acc
-
-**Agreement rule:** msyn-plobj-nom-acc
-
-### Topicalised object
-
 **Agreement rule:**  msyn-top-nom-acc
 
 **Agreement rule:** msyn-top-nom-acc 
-
-## Oblique objects
 
 ### Acc shall be Ill
 
@@ -895,29 +884,7 @@ Finnish plural objects are in the nominative, in Inari Saami they are in the acc
 
 **Agreement rule:** msyn-obj-acc-ill
 
-## Predicative
-
-**Agreement rule:** msyn-pred-acc-nom *Taah láá čielgâ aašijd/ááših.*
-
-**Agreement rule:** msyn-pred-acc-nom *Lii-uv toos synonymáid/synonym*
-
-**Agreement rule:** msyn-pred-ill-nom *Lii-uv toos synonymijd/synonym*
-
-### Agreement error with predicative
-
-**Agreement rule:** msyn-predagr-pl3-sg3 *Iä/Ij lah toorjâ.*
-
-**Agreement rule:** msyn-adj-attr-pred
-
-**Agreement rule:** msyn-adj-attr-pred *Mun lam fiskis/fiskâd.*
-
-## Embedded clause errors
-
-### Reflexive pronoun errors
-
-#### Agreement error for reflexive pronoun bound by subject
-
-## Imperative errors
+### Imperative errors
 
 Suomâkielâ imperatiiv mieđetteijee häämist, mast objekt sajehäämmin lii maaŋgâlovo nominatiiv mut sämikielâst akkusatiiv:
 
@@ -955,8 +922,6 @@ b) Suomâkielâ partitiiv passiivráhtusijn; sämikielâst passiiv ohtâvuođâs
 
 **Agreement rule:** msyn-posspl-acc-gen. coordination: *uásálistiđ párnáid/párnái já nuorâi leiráid*
 
-**Half congruence rule**
-
 ### Noun phrase complements
 
 N + Ill
@@ -984,8 +949,6 @@ mii + nominative should be mii + acc
 **Agreement rule:** msyn-mii-sgnom-placc: Mii historjá/historjáid taat lii
 
 **Agreement rule:** 
-
-### Pronouns in attributive position
 
 ### Adjectives in attributive position
 
@@ -1015,19 +978,13 @@ The rule is: 2-6 + gensg, 7- + par
 
 ## Adverbial rules
 
-**Adverbial rule:** msyn-advl-loc-com
-
-## Relative clause errors
-
-### Relative pronoun agreement
-
 ## Lexical rules
 
 **Realword error rule:** real-pisso-pissood
 
 **Realword error rule:** real-pele-peeli
 
-**Realword error rule:** real-mahtengin-mahten
+## Syntactical rules
 
 The gramamrchecker file ends here.
 

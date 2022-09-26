@@ -85,16 +85,6 @@ COMMA
 - Cmp/Attr
 - Cmp/Hyph
 
-**Compounding:**
-
-- CmpNP/ tags
-- CmpNP/ tags
-- CmpNP/ tags
-- CmpNP/ tags
-- CmpNP/ tags
-- CmpNP/ tags
-- CmpNP/ tags
-
 **Possessives:**
 - PxSg1
 - PxSg2
@@ -1035,7 +1025,7 @@ The rules are not documented yet
 
 * **Wr1787c**
 
-* **Wr1788xc** remove attr if no N (/removed in grc)
+* **Wr1788xc**
 
 * **Wr1789xc**
 
@@ -1153,7 +1143,7 @@ The rules are no documented yet
 
 * **AttrVFIN** removes Attr in front of VFIN
 
-* **AttrnotNA** removes Attr when no N or A to the right (not in grc)
+* **AttrnotNA** removes Attr when no N or A to the right
 
 ### Rules for Attr between Dem and N
 
@@ -2086,9 +2076,6 @@ Test: Go for minimal weight.
 These 12 substitute rules add the <smn> language code to all words, to govern 
 their behaviour in the subsequent cg files. The rules are removed when this
 file is ported to Apertium.
-
-- Cmp/SgNom 
-- Cmp/SgGen
 
 * * *
 <small>This (part of) documentation was generated from [tools/grammarcheckers/grc-disambiguator.cg3](https://github.com/giellalt/lang-smn/blob/main/tools/grammarcheckers/grc-disambiguator.cg3)</small>
