@@ -61,7 +61,6 @@ TESTS=\
 XFAIL_TESTS=\
 	interferens_celkkuuh3.yaml \
 	interferens_celkkuuh4.yaml \
-	msyn-ncompl-acc-ill.yaml \
 	msyn-pass-accsubj-nomsubj.yaml \
 	msyn-po-acc-gen.yaml \
 	msyn-po-nom-gen.yaml \
