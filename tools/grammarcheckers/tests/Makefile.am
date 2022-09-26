@@ -31,6 +31,7 @@ TESTS=\
     msyn-num-acc-par.yaml \
     msyn-num-nom-par.yaml \
     msyn-num-par-gen.yaml \
+    msyn-num-par-nom.yaml \
     msyn-obj-acc-ill.yaml \
     msyn-obj-sgnom-sgacc.yaml \
     msyn-obj-plnom-placc.yaml \
@@ -41,7 +42,6 @@ TESTS=\
     msyn-pred-acc-nom.yaml \
     msyn-quant-gen-nom.yaml \
     msyn-refl-sg-pl.yaml \
-    msyn-rel-sg-pl.yaml \
     msyn-subj-gen-nom.yaml \
     msyn-top-nom-acc.yaml \
     msyn-v-actio-sg1.yaml \
@@ -62,6 +62,9 @@ TESTS=\
 XFAIL_TESTS=\
 	interferens_celkkuuh3.yaml \
 	interferens_celkkuuh4.yaml \
+	msyn-extsubj-ill-nom.yaml \
+	msyn-ncompl-acc-ill.yaml \
+	msyn-num-par-nom.yaml \
 	msyn-pass-accsubj-nomsubj.yaml \
 	msyn-po-acc-gen.yaml \
 	msyn-po-nom-gen.yaml \
