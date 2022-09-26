@@ -41,6 +41,7 @@ TESTS=\
     msyn-pred-acc-nom.yaml \
     msyn-quant-gen-nom.yaml \
     msyn-refl-sg-pl.yaml \
+    msyn-rel-sg-pl.yaml \
     msyn-subj-gen-nom.yaml \
     msyn-top-nom-acc.yaml \
     msyn-v-actio-sg1.yaml \
