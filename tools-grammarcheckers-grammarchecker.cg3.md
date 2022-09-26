@@ -909,7 +909,11 @@ Finnish plural objects are in the nominative, in Inari Saami they are in the acc
 
 **Agreement rule:** msyn-obj-acc-ill
 
-### Imperative errors
+## Reflexive pronoun errors
+
+### Agreement error for reflexive pronoun bound by subject
+
+## Imperative errors
 
 Suomâkielâ imperatiiv mieđetteijee häämist, mast objekt sajehäämmin lii maaŋgâlovo nominatiiv mut sämikielâst akkusatiiv:
 
@@ -976,6 +980,8 @@ mii + nominative should be mii + acc
 **Agreement rule:** msyn-mii-sgnom-placc: Mii historjá/historjáid taat lii
 
 **Agreement rule:** 
+
+### Pronouns in attributive position
 
 ### Adjectives in attributive position
 

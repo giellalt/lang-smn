@@ -1035,7 +1035,7 @@ The rules are not documented yet
 
 * **Wr1787c**
 
-* **Wr1788xc**
+* **Wr1788xc** remove attr if no N (/removed in grc)
 
 * **Wr1789xc**
 
@@ -1153,7 +1153,7 @@ The rules are no documented yet
 
 * **AttrVFIN** removes Attr in front of VFIN
 
-* **AttrnotNA** removes Attr when no N or A to the right
+* **AttrnotNA** removes Attr when no N or A to the right (not in grc)
 
 ### Rules for Attr between Dem and N
 
