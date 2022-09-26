@@ -2069,6 +2069,7 @@ LIST &msyn-quant-gen-nom =  &msyn-quant-gen-nom ;
 LIST &msyn-quant-nom-gen = &msyn-quant-nom-gen ;
 LIST &msyn-refl-pxsg3-pxsg1 = &msyn-refl-pxsg3-pxsg1 ;
 LIST &msyn-refl-pxsg3-pxsg2 = &msyn-refl-pxsg3-pxsg2 ;
+LIST &msyn-rel-sg-pl = &msyn-rel-sg-pl ;
 LIST &msyn-subj-gen-nom = &msyn-subj-gen-nom ;
 LIST &msyn-top-nom-acc = &msyn-top-nom-acc ;
 LIST &msyn-top-placc-plnom = &msyn-top-placc-plnom ;
@@ -3555,6 +3556,22 @@ ADD:msyn-advl-acc-loc (&msyn-advl-acc-loc) TARGET N IF
 COPY:msyn-advl-acc-loc (Loc &SUGGEST) EXCEPT (Acc &msyn-advl-acc-loc) TARGET (N &msyn-advl-acc-loc);
 ADDRELATION:msyn-advl-acc-loc ($2) LOC-ADV FROM (*1 N LINK 0 (&msyn-advl-acc-loc));
 
+#!! ## Relative clause errors
+
+#!! ### Relative pronoun agreement
+
+ADD:msyn-rel-sg-pl (&msyn-rel-sg-pl) TARGET Pron IF
+	(-2 N + Pl)
+	(-1 (","))
+	(0 Rel + Sg);
+COPY:msyn-rel-sg-pl (Pl Gen &SUGGEST) EXCEPT (Sg Gen &msyn-rel-sg-pl) TARGET (Pron &msyn-rel-sg-pl);
+COPY:msyn-rel-sg-pl (Pl Acc &SUGGEST) EXCEPT (Sg Acc &msyn-rel-sg-pl) TARGET (Pron &msyn-rel-sg-pl);
+COPY:msyn-rel-sg-pl (Pl Ill &SUGGEST) EXCEPT (Sg Ill &msyn-rel-sg-pl) TARGET (Pron &msyn-rel-sg-pl);
+COPY:msyn-rel-sg-pl (Pl Loc &SUGGEST) EXCEPT (Sg Loc &msyn-rel-sg-pl) TARGET (Pron &msyn-rel-sg-pl);
+COPY:msyn-rel-sg-pl (Pl Com &SUGGEST) EXCEPT (Sg Com &msyn-rel-sg-pl) TARGET (Pron &msyn-rel-sg-pl);
+ADDRELATION:msyn-rel-sg-pl ($2) N + Pl FROM (2 Rel LINK 0 (&msyn-rel-sg-pl));
+
+
 
 #!! ## Lexical rules
 
@@ -3571,7 +3588,7 @@ ADDRELATION:real-pele-peeli ($2) (Adv) FROM (1 ("peeli" &real-pele-peeli));
 
 #!!  **Realword error rule:** real-mahtengin-mahten
 ADD:real-mahtengin-mahten (&real-mahtengin-mahten) TARGET ("mahten" Foc/gin) IF  (*-1 Neg);
-COPY:real-mahtengin-mahten ("mahten" Adv &SUGGEST) EXCEPT (Foc/gin &real-mahtengin-mahten) TARGET (&real-mahtengin-mahten) ;
+COPY:real-mahtengin-mmsyn-rel-sg-plahten ("mahten" Adv &SUGGEST) EXCEPT (Foc/gin &real-mahtengin-mahten) TARGET (&real-mahtengin-mahten) ;
 ADDRELATION:real-mahtengin-mahten ($2) (Neg) FROM (*1 ("mahten" &real-mahtengin-mahten));
 
 
