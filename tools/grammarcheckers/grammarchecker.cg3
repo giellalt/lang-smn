@@ -310,6 +310,11 @@ LIST Sem/Year = Sem/Year ;                  #!! - Der/Year
 
 #!! This ends the semtag list.
 
+# Valency tags
+
+LIST <RE-Ill-Ani> = <RE-Ill-Ani> ;
+
+
 #!! ### Names
 
 LIST PROP-ATTR = Sem/Mal Sem/Sur Sem/Fem ; #!! PROP-ATTR
@@ -320,6 +325,14 @@ SET TIME-N-SET = N + Sem/Time ;  #!! TIME-N-SET
 LIST NOT-TIME = "čäciollee" "lope" "vuáru" ; #!! NOT-TIME
 SET TIME-N = TIME-N-SET - NOT-TIME ;  #!! TIME-N
 
+
+LIST HUM-PRON = ("buohkat" Pron Indef Pl) ("eará" Pron Indef Pl Nom) "eambbosat" "eambbogat" "earrása" "eatnagat" "gaikkat" "galládat" ("gii nu") "guoktásat" ("juohkehaš" Pron Indef) "mun" "don" "son" "dii" "sii" "gallis" "giiat" "giijai" "giinai" "gii" "ieš" "iešgii" "iešgiijai" "iešgiinai" "olus" "ollut" "olut" "ollugat" "kihheen" "kiäsnii" "kiästnii" "kiäinnii" "kiässán" "kiännán";
+
+LIST HUM-A = "kiinnálaš" ("vuosttaš" A Ord Pl Nom);
+
+SUBSTITUTE Pron (Pron Sem/Hum) TARGET HUM-PRON (NEGATE 0 Sem/Hum);
+SUBSTITUTE N (N Sem/Hum) TARGET Der/NomAg (NEGATE 0 Sem/Hum);
+SUBSTITUTE A (A Sem/Hum) TARGET HUM-A - Attr (NEGATE 0 Sem/Hum);
 
 
 #!! ### Syntactic tags
@@ -3410,6 +3423,13 @@ ADD:msyn-advl-plgen-sgill (&msyn-advl-plgen-sgill) TARGET (N Pl Gen) IF
 	(*1 ILL-V BARRIER NOT-AUX-ADV LINK *1 EOS OR S-BOUNDARY BARRIER Ill);
 COPY:msyn-advl-plgen-sgill (Sg Ill &SUGGEST) EXCEPT (Pl Gen &msyn-advl-plgen-sgill) TARGET (N &msyn-advl-plgen-sgill) ;
 ADDRELATION:msyn-advl-plgen-sgill ($2) ILL-V FROM (*-1 N LINK 0 (&msyn-advl-plgen-sgill));
+
+
+
+#!! ## Valency rules
+ADD:msyn-gen-ill-recipientverbs (&msyn-gen-ill-recipientverbs) TARGET (Pron Sem/Hum Sg Gen) IF (*-1 <RE-Ill-Ani> + V BARRIER NOT-ADV-PCLE LINK NOT *-1 Ill BARRIER NOT-ADV-PCLE) (NOT 1 N);
+COPY:msyn-gen-ill-recipientverbs (Ill &SUGGEST) EXCEPT (Gen &msyn-gen-ill-recipientverbs) TARGET (&msyn-gen-ill-recipientverbs);
+## Tom sun ij lah kuássin muštâlâm kiässán.
 
 
 
