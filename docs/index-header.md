@@ -7,12 +7,9 @@
 
 This page documents the work on the [Inari Saami grammatical analyser](http://github.com/giellalt/lang-smn). 
 
-## Lingustic tools
-
-- [Inari Saami speller for LibreOffice](https://github.com/giellalt/lang-smn/blob/main/docs/smn_LO-voikko-5.0.oxt) (press "Download" in the low-left corner, and open the file in LibreOffice) 
 
 
-## Lingustic documentation
+## Lingustic documentation of the language model
 
 -   [Lyhyt kuvaus inarinsaamen kielestä (Marja-Liisa Olthuis)](LyhytKuvausInarinsaamesta.pdf)
 -   [Documentation on Inari Saami hyphenation](docu-hyphenation.txt)
@@ -24,7 +21,7 @@ This page documents the work on the [Inari Saami grammatical analyser](http://gi
 -   [Verbal inflection (passive)](PassiveVerbs.html)
 -   [Table showing vowel change in passive](PassiveVowelChange.html)
 
-## Testing and development
+## Testing and development of the language model
 
 ### Testing
 -   [Generation of Inari Saami
@@ -52,7 +49,6 @@ This page documents the work on the [Inari Saami grammatical analyser](http://gi
 
 The idea is to make a grammarchecker for Inari Saami L2 writers.
 
-### Links
 
 - [Documentation](https://giellalt.github.io/lang-smn/tools-grammarcheckers-grammarchecker.cg3.html) of the [grammarchecker file](https://github.com/giellalt/lang-smn/blob/main/tools/grammarcheckers/grammarchecker.cg3)
 - [Test files](https://github.com/giellalt/lang-smn/tree/main/tools/grammarcheckers/tests)
@@ -62,12 +58,13 @@ The idea is to make a grammarchecker for Inari Saami L2 writers.
 
 ## The Inari Saami MT project (2014-2016)
 
--   [Background information on the Inari Saami
+-   [Background information on the Inari Saami grammarchecker
     project](docu-smn-background.html)
 -   [MT project pages + all meeting
     memos](/mt/smesmn/NorthSaamiInariSaamiMachineTranslation.html)
 -   [Plan for our team work (2015)](TeamWorkPlan.html)
 
+(See also the in-source documentation under `tools/grammarchecker` below)
 
 # In-source documentation
 
