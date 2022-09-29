@@ -2761,11 +2761,16 @@ ADDRELATION:msyn-predagr-pl3-sg3 ($2) (N Sg Nom) FROM (-5 Neg LINK 0 (&msyn-pred
 #$ Päikkinoomah iä lah siäilum.
 
 #!!  **Agreement rule:** msyn-adj-attr-pred
-ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred)  TARGET (A) IF (0C Attr) (NOT 0 (Arab Ord) OR (A Sg Nom))(NOT 1 N OR A OR PrfPrc)(1 EOS)(NOT 1 ("...")) ;
+#ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred)  TARGET (A) IF (0C Attr) (NOT 0 (Arab Ord) OR (A Sg Nom))(NOT 1 N OR A OR PrfPrc)(1 EOS)(NOT 1 ("...")) ;
+#ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred)  TARGET (A Attr) IF (0C Attr) (1 CC LINK 1 &msyn-adj-attr-pred OR (A Sg Nom) LINK NOT 1 EOS) (NOT 0 (Arab Ord) OR (A Sg Nom)) ;
+ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred)  TARGET (A) IF (0C Attr) (NOT 0 (Arab Ord) OR (A Sg Nom))(NOT 1 N OR A OR PrfPrc)(NOT 1 ("...")) ;
+ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred)  TARGET (A Attr) IF (0C Attr) (1 CC LINK 1 &msyn-adj-attr-pred OR (A Sg Nom) LINK NOT 1 N OR A OR PrfPrc) (NOT 0 (Arab Ord) OR (A Sg Nom)) ;
 COPY:msyn-adj-attr-pred (Sg Nom &SUGGEST) EXCEPT (Attr &msyn-adj-attr-pred) TARGET ( A &msyn-adj-attr-pred);
 
     #% Tot lii hirmâd.
     #$ Tot lii hirmâd styeres.
+    #% Lii-uv tekstâ uánihis teikâ kuhes onne?
+    #$ Lii-uv tekstâ uánihâš teikâ kukke onne?
 
 #!!  **Agreement rule:** msyn-adj-attr-pred *Mun lam fiskis/fiskâd.*
 ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A) IF 
