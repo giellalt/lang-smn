@@ -13,6 +13,7 @@ TESTS=\
     interferens_celkkuuh4.yaml \
     msyn-adj-gen-nom.yaml \
     msyn-adj-sg-pl.yaml \
+    msyn-advl-plloc-sgcom.yaml \
     msyn-agr-other-pl3.yaml \
     msyn-agr-sg3-du3.yaml \
     msyn-agr-sg3-pl3.yaml \
@@ -61,6 +62,7 @@ TESTS=\
 XFAIL_TESTS=\
 	interferens_celkkuuh3.yaml \
 	interferens_celkkuuh4.yaml \
+	msyn-advl-plloc-sgcom.yaml \
 	msyn-extsubj-ill-nom.yaml \
 	msyn-ncompl-acc-ill.yaml \
 	msyn-pass-accsubj-nomsubj.yaml \
