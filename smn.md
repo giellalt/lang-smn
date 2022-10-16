@@ -10299,6 +10299,8 @@ Sets for lexeme homonymy (most of them are moved to where the actual rules are.)
 
 The words in the set **N-PO** can be both N and Po, the set takes that into account.
 
+Nouns that have dangerous homonyms
+
 ### Nominal sets defined according to their semantical properties
 
 - Spatial noun sets. These nouns behave like postpositions
@@ -10704,7 +10706,7 @@ The gramamrchecker file ends here.
 
 * * *
 <small>This (part of) documentation was generated from [tools/grammarcheckers/grammarchecker.cg3](https://github.com/giellalt/lang-smn/blob/main/tools/grammarcheckers/grammarchecker.cg3)</small>
-I N A R I   S A A M I   D I S A M B I G U A T O R               
+I N A R I   S A A M I   G R A M M A R C H E C K E R   D I S A M B I G U A T O R               
 ==================================================================
 
 # DELIMITERS 
@@ -12221,6 +12223,7 @@ The rules are no documented yet
 * **r2206** selects Gen when a finite verb to the left and Nom or Acc to the right *lohkaba su girjji*
 
 * **r2271** Removes genitive when a transitive verb to the left and you (not if you are a pronoun) are followed by Ill/Loc/Com/Adv: *doalvvui stálu meahccái*
+Removed for grc (evaluate this!)
 
 * **AccTV2** Selects accusative: when a transitive verb to the left.
 No Acc allowed to the left in the sentence (sentenceboundary as a barrier).
@@ -12473,7 +12476,7 @@ Accusative or Illative
 
 * **NDr2376** Selects Nom
 
-* **PostVNom** Selects Nom if a singular third person verb to the left with no Nom to the left of it
+* **PostVNom** Selects Nom if a singular third person verb to the left with no Nom to the left of it -- REMOVE FOR GRC
 
 * **PostVNomComp** Selects (N Sg Nom)
 

@@ -587,6 +587,8 @@ Sets for lexeme homonymy (most of them are moved to where the actual rules are.)
 
 The words in the set **N-PO** can be both N and Po, the set takes that into account.
 
+Nouns that have dangerous homonyms
+
 ### Nominal sets defined according to their semantical properties
 
 - Spatial noun sets. These nouns behave like postpositions
