@@ -46,12 +46,29 @@ TESTS=\
     msyn-top-nom-acc.yaml \
     msyn-v-actio-sg1.yaml \
     neg-adj-gen-nom.yaml \
+    neg-adj-attr-pred.yaml \
+    neg-adj-gen-nom.yaml \
+    neg-advl-plgen-sgill.yaml \
+    neg-agr-imprt-sg3.yaml \
+    neg-agr-other-pl3.yaml \
+    neg-agr-other-sg2.yaml \
+    neg-agr-other-sg3.yaml \
+    neg-agr-sg3-pl3.yaml \
+    neg-extsubj-acc-nom.yaml \
     neg-interferens_celkkuuh.yaml \
+    neg-obj-acc-ill.yaml \
     neg-obj-plnom-placc.yaml \
+    neg-obj-sgnom-sgacc.yaml \
     neg-pass-accsubj-nomsubj.yaml \
+    neg-po-nom-gen.yaml \
+    neg-po-placc-plgen.yaml \
     neg-posspl-acc-gen.yaml \
-    neg-top-nom-acc.yaml \
+    neg-posspl-ill-gen.yaml \
     neg-quant-nom-gen.yaml \
+    neg-subj-gen-nom.yaml \
+    neg-top-nom-acc.yaml \
+    neg-v-prfprc-sg1.yaml \
+    neg-v-sg1-prfprc.yaml \
     ovdamearkkat.yaml \
     science.yaml \
     typos.yaml \
@@ -65,6 +82,7 @@ XFAIL_TESTS=\
 	msyn-advl-plloc-sgcom.yaml \
 	msyn-extsubj-ill-nom.yaml \
 	msyn-ncompl-acc-ill.yaml \
+	msyn-obj-sgnom-sgacc.yaml \
 	msyn-pass-accsubj-nomsubj.yaml \
 	msyn-po-acc-gen.yaml \
 	msyn-po-nom-gen.yaml \
@@ -74,8 +92,17 @@ XFAIL_TESTS=\
 	msyn-refl-sg-pl.yaml \
 	msyn-top-nom-acc.yaml \
 	msyn-v-actio-sg1.yaml \
+	neg-adj-attr-pred.yaml \
+	neg-agr-imprt-sg3.yaml \
+	neg-agr-other-pl3.yaml \
+	neg-agr-sg3-pl3.yaml \
+	neg-obj-acc-ill.yaml \
+	neg-obj-sgnom-sgacc.yaml \
+	neg-po-nom-gen.yaml \
 	neg-posspl-acc-gen.yaml \
-	ovdamearkkat.yaml \
+	neg-posspl-ill-gen.yaml \
+	neg-subj-gen-nom.yaml \
+	neg-v-sg1-prfprc.yaml \	ovdamearkkat.yaml \
 	science.yaml \
 	typos.yaml \
 	wikipedia.yaml
