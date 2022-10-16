@@ -14,7 +14,7 @@
 # giellatekno@uit.no or feedback@divvun.no
 
 # ====================================================================
-#!! I N A R I   S A A M I   D I S A M B I G U A T O R               
+#!! I N A R I   S A A M I   G R A M M A R C H E C K E R   D I S A M B I G U A T O R               
 #!! ==================================================================
 # ==================================================================== 
 
@@ -2305,7 +2305,9 @@ REMOVE:PronNotProp Prop IF (0 Pron) ;
 
 
 #!! * **PropAttrIfPropx** removes Attr if no Prop on the right side
-REMOVE:PropAttrIfPropx (Prop Attr) - Der/lasj IF (NEGATE *1 Prop BARRIER REAL-WORD-NOT-ABBR OR COMMA)(NEGATE 1 CC LINK 1 (Prop Attr) LINK *1 Prop BARRIER REAL-WORD-NOT-ABBR OR COMMA);
+REMOVE:PropAttrIfPropx (Prop Attr) - Der/lasj IF
+	(NEGATE *1 Prop BARRIER REAL-WORD-NOT-ABBR OR COMMA)
+	(NEGATE 1 CC LINK 1 (Prop Attr) LINK *1 Prop BARRIER REAL-WORD-NOT-ABBR OR COMMA LINK NOT 0 ("Kuhes"));
 	#$ Ášši 05/01 Ođđa áššiid dieđiheapmi.
 	
 #!! * **PropInsideProp** Selects Prop if capital letter inside clause
@@ -3619,7 +3621,13 @@ SELECT:Comp Comp IF (NEGATE -1 ("naa") OR ("oovtnáál") OR CC)(NEGATE 0 (Pl Nom
  # adverbial reading. It comes here because this is where it is first needed.
 	
 #!! * **AdvManimus** 
-REMOVE:AdvManimus Adv IF (NEGATE *-1 REAL-V BARRIER S-BOUNDARY)(0 A)(NEGATE 1C A)(NEGATE *1 REAL-V BARRIER S-BOUNDARY); # This rule makes sense to this sentence.
+#REMOVE:AdvManimus Adv IF
+#	(NEGATE *-1 REAL-V BARRIER S-BOUNDARY)
+#	(0 A)
+#	(NEGATE 1C A)
+#	(NEGATE *1 REAL-V BARRIER S-BOUNDARY)
+#;
+# This rule makes sense to this sentence.
 	#$ Maŋimus maid Will Turneris oinniimet lei go son vuojui meara bodnái.
 
 
@@ -3658,7 +3666,17 @@ REMOVE:ANom (A Nom) IF
 	#% Dálut eai lean nu ráhpadat ođđasishuksenáigge.
 
 #!! * **AAttr**  selects A Attr
-SELECT:AAttr (A Attr) - ("nubbe") IF (NOT 0 (VV A) OR Adv - Superl OR Inf)(NEGATE 0 PrfPrc LINK *-1 REAL-COPULAS BARRIER REAL-V)(NEGATE 1 PREGEN)(NEGATE *-1 COPULAS BARRIER NOT-A-ADV-PCLE) (*1 N - Ess BARRIER NOT-NPMOD OR Dem OR Indef OR Num LINK NOT 1 Po)(NEGATE 0 Gen LINK -1 (Dem Gen))(NEGATE 1 CC LINK 1 Num OR N)(NEGATE 0 (Pl Nom) LINK 1 VFIN + Pl3) (NEGATE 0 (Neg Sup) LINK 1 Inf) ;
+SELECT:AAttr (A Attr) - ("nubbe") IF
+	(NOT 0 (VV A) OR Adv - Superl OR Inf)
+	(NEGATE 0 PrfPrc LINK *-1 REAL-COPULAS BARRIER REAL-V)
+	(NEGATE 1 PREGEN)
+	(NEGATE *-1 COPULAS BARRIER NOT-A-ADV-PCLE)
+	(*1 N - Ess BARRIER NOT-NPMOD OR CLB OR Dem OR Indef OR Num LINK NOT 1 Po)
+	(NEGATE 0 Gen LINK -1 (Dem Gen))
+	(NEGATE 1 CC LINK 1 Num OR N)
+	(NEGATE 0 (Pl Nom) LINK 1 VFIN + Pl3)
+	(NEGATE 0 (Neg Sup) LINK 1 Inf)
+	;
 	#$ Máttimus sápmelaččat eahpidedje dáža dutkiid eanet go davit sápmelaččat. # davit
 	#$ ...main leat mielde dušše priváhta oasálaččat, ii leat...
 	#$ Sámedikki ásaheapmi lea eanet ideologalaš go čielga mearrádus. # čielga
@@ -3686,7 +3704,11 @@ SELECT:AAttrPunct (A Attr)  IF (1 PUNCT LINK *1 Attr BARRIER NOT-ADV LINK *1 N B
 	
 
 #!! * **AttrTIME**    
-SELECT:AttrTIME (A Attr) IF (NEGATE 0 Num OR PrfPrc)(NEGATE 0 Adv LINK *-1 REAL-V BARRIER NOT-ADV-PCLE)(NEGATE 0 Pl LINK *-1 Pl3 BARRIER VFIN)(*1 TIME BARRIER WORD - Num LINK NOT 0 PX);  
+SELECT:AttrTIME (A Attr) IF
+	(NEGATE 0 Num OR PrfPrc)
+	(NEGATE 0 Adv LINK *-1 REAL-V BARRIER NOT-ADV-PCLE)
+	(NEGATE 0 Pl LINK *-1 Pl3 BARRIER VFIN)
+	(*1 TIME BARRIER CLB OR WORD - Num LINK NOT 0 PX);  
 	#$ Guovdageaidnu čájehii fámuid vuosttaš minuvtta rájes.
 	#$ Ollu jagiid mielde lei dáhpin šaddan ahte stuorra gánddat bohte min geahčái lávvardaga ja sotnabeaivve go radios ledje sáddagat skeittástan- ja čuoigangilvvuin.	
 	#% Dálut eai lean nu ráhpadat ođđasishuksenáigge
@@ -3818,7 +3840,7 @@ REMOVE:Wr1782 REAL-V IF (-1 COPULAS)(0 Nom)(NEGATE 0 PrfPrc)(1 (Pron Rel));
 REMOVE:Wr1784 VFIN IF (*-1 COPULAS BARRIER NOT-ADV-INDEF)(0 Attr)(1 N OR EOS);
 
 #!! * **Wr1785**
-REMOVE:Wr1785 (A Sg Nom) IF (*-1 COPULAS BARRIER NOT-ADV-INDEF)(0 A + Attr)(NEGATE 0 REAL-V OR Ord OR N)(1 N OR A);
+REMOVE:Wr1785 (A Sg Nom) IF (*-1 COPULAS BARRIER NOT-ADV-INDEF)(0 A + Attr)(NEGATE 0 REAL-V OR Ord OR N)(1C N OR A);
 	#$ ...de dilli orru leamen earalágan.
 
 #!! * **Wr1785b**
@@ -5641,13 +5663,14 @@ SELECT:r2206 Gen IF (*-1 VFIN BARRIER N OR (Pers Pron) OR CLB)(0 N OR Pron LINK 
 
 
 #!! * **r2271** Removes genitive when a transitive verb to the left and you (not if you are a pronoun) are followed by Ill/Loc/Com/Adv: *doalvvui stálu meahccái*
-REMOVE:r2271 Gen IF (*-1 TRANS-V - ("porgâđ") BARRIER SV-BOUNDARY OR Acc OR COMMA LINK NEGATE *-1C Acc BARRIER SV-BOUNDARY)(0 (N Acc) LINK NOT 0 (Pron))
-(1 Ill OR Loc OR Com OR Adv LINK NEGATE *1 Acc BARRIER TRANS-V)(NEGATE 0 Refl)
-(NEGATE *-1 Pr OR NUM BARRIER NP-BOUNDARY)
-(NEGATE *-1 ("mii") BARRIER Acc OR S-BOUNDARY OR Po)
-(NEGATE *-1 CC BARRIER NOT-NP LINK *-1 GASKAL BARRIER S-BOUNDARY)
-(NEGATE *-1 HEADOFPARTS LINK 1 Gen LINK 1 Loc)
-(NOT *2 REAL-V BARRIER S-BOUNDARY);
+#!! Removed for grc (evaluate this!)
+#REMOVE:r2271 Gen IF (*-1 TRANS-V - ("porgâđ") BARRIER SV-BOUNDARY OR Acc OR COMMA LINK NEGATE *-1C Acc BARRIER SV-BOUNDARY)(0 (N Acc) LINK NOT 0 (Pron))
+#(1 Ill OR Loc OR Com OR Adv LINK NEGATE *1 Acc BARRIER TRANS-V)(NEGATE 0 Refl)
+#(NEGATE *-1 Pr OR NUM BARRIER NP-BOUNDARY)
+#(NEGATE *-1 ("mii") BARRIER Acc OR S-BOUNDARY OR Po)
+#(NEGATE *-1 CC BARRIER NOT-NP LINK *-1 GASKAL BARRIER S-BOUNDARY)
+#(NEGATE *-1 HEADOFPARTS LINK 1 Gen LINK 1 Loc)
+#(NOT *2 REAL-V BARRIER S-BOUNDARY);
 	#$ De son doalvvui stálu meahccái.
 	#$ Biera oahpaha matematihka munnje.
 	#$ Duopmár bosádii vuoru johtui. 
@@ -6495,8 +6518,8 @@ SELECT:NDr2376 Nom IF (*-1 VERBAL-ACTIVITY-V BARRIER NOT-NPMOD LINK -1 COMMA LIN
 	#$ Don leat jallu, dadjá Tomi.
 	#$ Don leat jallu, dadjá Tomi skihpár.
 	
-#!! * **PostVNom** Selects Nom if a singular third person verb to the left with no Nom to the left of it
-SELECT:PostVNom ( Sg Nom)  IF (*-1C SG3-V BARRIER NOT-NPMODADV - Qst OR PrfPrc LINK NEGATE *-1 (Sg Nom) OR (Pron Sg3) BARRIER S-BOUNDARY)(NEGATE 0 Gen LINK *1 N BARRIER NOT-NPMOD)(NEGATE 0 Loc LINK *1 (Sg Nom) BARRIER VFIN)(NEGATE 0 Po OR Loc)(NEGATE 0 Attr LINK 1 N);
+#!! * **PostVNom** Selects Nom if a singular third person verb to the left with no Nom to the left of it -- REMOVE FOR GRC
+#SELECT:PostVNom ( Sg Nom)  IF (*-1C SG3-V BARRIER NOT-NPMODADV - Qst OR PrfPrc LINK NEGATE *-1 (Sg Nom) OR (Pron Sg3) BARRIER S-BOUNDARY)(NEGATE 0 Gen LINK *1 N BARRIER NOT-NPMOD)(NEGATE 0 Loc LINK *1 (Sg Nom) BARRIER VFIN)(NEGATE 0 Po OR Loc)(NEGATE 0 Attr LINK 1 N);
 	#$ Lávvui gullá maid uvssot. 
 	#% Bovnnas lei viessu, ja viesus lei nuorra nisu mánnáváivvis.
 	#% Son lea njulgen čielggi, ja lea nuorra ja searra.
@@ -7301,7 +7324,7 @@ REMOVE:GenSplitR Cmp/SgGen (0 Cmp/SplitR) ; #This one doesn't function i apertiu
 REMOVE:GenSplitR (cmp_sggen) (0 (cmp_splitr)) ; #For apertium 
 
 SELECT:AdvwhenAPl Adv (0 A + Pl OR Dem + Loc) ;
-SELECT:Attr (A Attr)(NOT 0 Adv OR DEHALAS LINK 1 N) ;
+SELECT:Attr (A Attr)(NOT 0 Adv OR DEHALAS LINK 1C N) ;
 SELECT:Nom Nom (0 DEHALAS + Attr LINK -1 COPULAS + FMAINV) ;
 
 #!! * **cleanSemClass** cleans up if a word has more semclasses. This is just a start.
