@@ -102,7 +102,8 @@ XFAIL_TESTS=\
 	neg-posspl-acc-gen.yaml \
 	neg-posspl-ill-gen.yaml \
 	neg-subj-gen-nom.yaml \
-	neg-v-sg1-prfprc.yaml \	ovdamearkkat.yaml \
+	neg-v-sg1-prfprc.yaml \
+	ovdamearkkat.yaml \
 	science.yaml \
 	typos.yaml \
 	wikipedia.yaml
