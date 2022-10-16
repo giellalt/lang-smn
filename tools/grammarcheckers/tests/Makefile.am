@@ -45,7 +45,6 @@ TESTS=\
     msyn-subj-gen-nom.yaml \
     msyn-top-nom-acc.yaml \
     msyn-v-actio-sg1.yaml \
-    neg-adj-gen-nom.yaml \
     neg-adj-attr-pred.yaml \
     neg-adj-gen-nom.yaml \
     neg-advl-plgen-sgill.yaml \
@@ -93,6 +92,7 @@ XFAIL_TESTS=\
 	msyn-top-nom-acc.yaml \
 	msyn-v-actio-sg1.yaml \
 	neg-adj-attr-pred.yaml \
+	neg-adj-gen-nom.yaml \
 	neg-agr-imprt-sg3.yaml \
 	neg-agr-other-pl3.yaml \
 	neg-agr-sg3-pl3.yaml \
