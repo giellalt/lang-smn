@@ -657,7 +657,9 @@ LIST MOVT = "govt" ("maht" Adv) "maht" "mot" "mov" "maht" ;
 LIST MO-MANge = "tondiet" "kuás" "gokko" "kost" "kuus" "govt" ("maht" Adv) "maggaar" "maht" "mane" ("mane" Adv) "maht" "mot" "mov" "maht" ("nugo" @CVP) (V Qst);
  
 SET MO = MO-MANge - Foc/gin ; 
- 
+
+LIST QUANTOR-ADV = "ennuv" ("maŋgâ" Num Pl Nom) ("maŋgâ" Pron Indef Pl Nom) ;
+
  # Introduce finite clauses.
  
 LIST PLACE-ADV =  "bajábealde" "davábealde" "lagabus" "máttabealde" "nuorttabealde" "oarjjábealde" "oarjjabealde" "olggobeale" "vuolábealde" ;
@@ -2063,6 +2065,7 @@ LIST &msyn-posspl-acc-gen =  &msyn-posspl-acc-gen ;
 LIST &msyn-pred-acc-nom =  &msyn-pred-acc-nom ; 
 LIST &msyn-pred-ill-nom =  &msyn-pred-ill-nom ; 
 LIST &msyn-predagr-pl3-sg3 = &msyn-predagr-pl3-sg3 ;
+LIST &msyn-quadv-sg-pl = &msyn-quadv-sg-pl ;
 LIST &msyn-quant-gen-nom =  &msyn-quant-gen-nom ;
 LIST &msyn-quant-nom-gen = &msyn-quant-nom-gen ;
 LIST &msyn-subj-gen-nom = &msyn-subj-gen-nom ;
@@ -3408,6 +3411,17 @@ COPY:msyn-num-acc-par (Par &SUGGEST) EXCEPT (Sg Acc &msyn-num-acc-par) TARGET (N
 #$ Must láá čiččâm kyellid.
 
 
+#!! ### Quantor adverbs
+
+ADD:xmsyn-quadv-sg-pl (&msyn-quadv-sg-pl) TARGET N IF
+	(*-1 QUANTOR-ADV BARRIER NOT-NPMOD)
+	(0 N + Sg + Nom)
+	(NOT 0 Sem/Time OR Sem/Time-clock)
+	;
+COPY:msyn-quadv-sg-pl (Pl Nom &SUGGEST) EXCEPT (Sg Nom &msyn-quadv-sg-pl) TARGET (N &msyn-quadv-sg-pl) ;
+ADDRELATION:msyn-quadv-sg-pl ($2) ("ennuv") OR ("maŋgâ") FROM (*1 &msyn-quadv-sg-pl) ; 
+#% Ruánááenâmist láá ennuv enâmânvärrejeijee.
+#$ Ruánááenâmist láá ennuv enâmânvärrejeijeeh. 
 
 
 #!! msyn-quant-gen-nom
