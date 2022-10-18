@@ -10682,6 +10682,8 @@ mii + nominative should be mii + acc
 
 **Agreement rule:** msyn-num-acc-par: 8 kaandâ/kandâd
 
+### Quantor adverbs
+
 msyn-quant-gen-nom
 
 ## Numeral phrases
