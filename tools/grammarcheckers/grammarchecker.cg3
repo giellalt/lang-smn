@@ -1025,6 +1025,7 @@ SET N-TIMEOBJECT-V = MOVEMENT-V OR ACTIVITY-V OR VERBAL-ACTIVITY-V OR INTELLECTU
 
 LIST MUITALIT = "arvâlâddâđ" "anoa" "boagustit" "celkkiđ" "cuoigut" "čielgiđ" "čurvet" "čuárvuđ" "ettâđ" "dahkaluddat" "deattastit" "tiäduttiđ" "tuáivuđ" "epidiđ" "geardduhit" "geažuhit" "gielistit" "gilljut" "hállat" "hoallat" "čuárvuđ" "huikkádit" "imaštallat" "jtak" "jievžat" "juoigâđ" "jurdilit" "jurddašit" "kommenteret" "lávluđ" "lasettiđ" "loahpahit" "luuhâđ" "lopediđ" "máidnut" "máinnašit" "muštâliđ" "unohtamisen" "nágget" "njávggádit" "merhâšiđ" "ravviđ" "savkalit" "sárdnidit" "šuohkihit" "váidalit" "váruhit" "västidiđ" ; #!!= - @CODE@
 
+LIST SARNUD = "dáikit" "dárostit" "digáštallat" "digaštit" "háladit" "logaldallat" "máidnut" "mainâšiđ" "muitaladdat" "njurgođ" "ságastaddat" "sámástiđ" "sámistit" "särnidiđ" "sárnuđ" "sártnodit" "savâstâllâđ" "savâstiđ" "solžat" "sovkkâliđ" "suomâstiđ" "tuoldâđ" "uáivildiđ" "šuáláđ" ;
 
 
 LIST LEXICALISED-PASS-V = "kevttuđ" ; #!!= - @CODE@
@@ -2012,6 +2013,7 @@ LIST &msyn-adj-pred-attr = &msyn-adj-pred-attr ;
 LIST &msyn-adj-sg-pl = &msyn-adj-sg-pl ;
 LIST &msyn-advl-plgen-sgill = &msyn-advl-plgen-sgill ;
 LIST &msyn-advl-plloc-sgcom = &msyn-advl-plloc-sgcom ;
+LIST &msyn-advl-plloc-sgill = &msyn-advl-plloc-sgill ;
 LIST &msyn-agr-imprt-sg3 = &msyn-agr-imprt-sg3 ;
 LIST &msyn-agr-other-du1 = &msyn-agr-other-du1 ;
 LIST &msyn-agr-other-du2 = &msyn-agr-other-du2 ;
@@ -3029,12 +3031,19 @@ COPY:msyn-top-nom-acc (Acc &SUGGEST) EXCEPT (Nom &msyn-top-nom-acc) TARGET (N No
 
 #!!  **Agreement rule:** msyn-obj-acc-ill
 #ADD:xmsyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF (*-1 ILL-V BARRIER NOT-NPMODADV OR (":") LINK *-1 Nom)(0 Acc)(NOT 0 Ill OR PxSg3); # just to remember we used to want subjects
-ADD:xmsyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF 
-(*-1 ILL-V + IV BARRIER NOT-NPMODADV OR (":") LINK NOT 0 TV LINK NOT *-1 Ill)
-(0 Acc)
-(NOT 0 Ill OR PxSg3)
-(NOT 1 ("pajas") OR ("vuálus") OR ("vuálos"))
-(NOT *1 N + Ill BARRIER NOT-NPMOD);
+ADD:xmsyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF
+	(*-1 ILL-V + IV BARRIER NOT-NPMODADV OR (":") LINK NOT 0 TV LINK NOT *-1 Ill)
+	(0 Acc)
+	(NOT 0 Ill OR PxSg3)
+	(NOT 1 ("pajas") OR ("vuálus") OR ("vuálos"))
+	(NOT *1 N + Ill BARRIER NOT-NPMOD);
+
+
+ADD:xmsyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF
+	(*1 ILL-V + IV BARRIER  (":") LINK NOT 0 TV LINK NOT *-1 Ill)
+	(0 Acc)
+	(NOT 0 Ill OR PxSg3)
+	(NOT *1 N + Ill BARRIER NOT-NPMOD);
 
 #!!  **Agreement rule:** msyn-obj-acc-ill *Ideologia kuáská kielâid/kieláid.*
 ADD:xmsyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF 
@@ -3461,8 +3470,17 @@ ADDRELATION:msyn-quadv-sg-pl ($2) ("ennuv") OR ("maŋgâ") FROM (*1 &msyn-quadv-
 
 #!! ## Adverbial rules
 
-ADD:xmsyn-advl-plloc-sgcom (&msyn-advl-plloc-sgcom) TARGET N IF (*-1 ("oovtâst") OR Num + Sg + Com OR A + Sg + Com BARRIER NOT-NPMOD)(0 N + Pl + Loc);
+ADD:xmsyn-advl-plloc-sgcom (&msyn-advl-plloc-sgcom) TARGET N IF
+	(*-1 ("oovtâst") OR Num + Sg + Com OR A + Sg + Com)
+	(0 N + Pl + Loc);
 COPY:msyn-advl-plloc-sgcom (Sg Com &SUGGEST) EXCEPT (Pl Loc &msyn-advl-plloc-sgcom) TARGET (N &msyn-advl-plloc-sgcom) ;
+
+ADD:xmsyn-advl-plloc-sgill (&msyn-advl-plloc-sgill) TARGET N IF
+	(*1 SARNUD)
+	(0  N + Sem/Lang + Pl + Loc);
+COPY:msyn-advl-plloc-sgill (Sg Ill &SUGGEST) EXCEPT (Pl Loc &msyn-advl-plloc-sgill) TARGET (N &msyn-advl-plloc-sgill) ;
+
+
 
 #% Kyevtkielâlâš olmooš pasta toimâđ kuovttijn kielâin.
 
