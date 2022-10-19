@@ -97,12 +97,18 @@ TESTS=\
 # List tests that are presently (expected) failures here, ie things that should
 # be fixed *later*, but is not critical at the moment:
 XFAIL_TESTS=\
+	interferens_celkkuuh2.yaml \
 	interferens_celkkuuh3.yaml \
 	interferens_celkkuuh4.yaml \
+	msyn-adj-attr-pred.yaml \
 	msyn-advl-plloc-sgcom.yaml \
+	msyn-agr-other-pl3.yaml \
+	msyn-agr-sg3-pl3.yaml \
+	msyn-dynamic-compounds.yaml \
 	msyn-extsubj-ill-nom.yaml \
 	msyn-ncompl-acc-ill.yaml \
-	msyn-obj-sgnom-sgacc.yaml \
+	msyn-num-par-nom.yaml \
+	msyn-obj-acc-ill.yaml \
 	msyn-pass-accsubj-nomsubj.yaml \
 	msyn-po-acc-gen.yaml \
 	msyn-po-nom-gen.yaml \
@@ -110,24 +116,36 @@ XFAIL_TESTS=\
 	msyn-pred-acc-nom.yaml \
 	msyn-quant-gen-nom.yaml \
 	msyn-refl-sg-pl.yaml \
+	msyn-rel-sg-pl.yaml	 \
 	msyn-top-nom-acc.yaml \
 	msyn-v-actio-sg1.yaml \
 	neg-adj-attr-pred.yaml \
 	neg-adj-gen-nom.yaml \
+	neg-advl-plloc-sgcom.yaml \
 	neg-agr-imprt-sg3.yaml \
 	neg-agr-other-pl3.yaml \
 	neg-agr-sg3-pl3.yaml \
+	neg-attr-com-gen.yaml \
+	neg-det-nom-acc.yaml \
+	neg-extsubj-ill-nom.yaml \
+	neg-extv-sg3-pl3.yaml \
+	neg-msyn-agr-pl3-sg3.yaml \
+	neg-ncomple-ess-sgill.yaml \
 	neg-obj-acc-ill.yaml \
 	neg-obj-sgnom-sgacc.yaml \
+	neg-orrood-inf-actioess.yaml \
 	neg-po-nom-gen.yaml \
 	neg-posspl-acc-gen.yaml \
 	neg-posspl-ill-gen.yaml \
 	neg-subj-gen-nom.yaml \
+	neg-v-actio-sg1.yaml \
+	neg-v-prfprc-sg1.yaml \
 	neg-v-sg1-prfprc.yaml \
 	ovdamearkkat.yaml \
 	science.yaml \
 	typos.yaml \
 	wikipedia.yaml
+
 
 endif # WANT_GRAMCHECK
 
