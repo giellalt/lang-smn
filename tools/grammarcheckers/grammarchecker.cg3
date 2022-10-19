@@ -2008,6 +2008,7 @@ SET CCCOMMA = CC OR COMMA ;
 LIST &msyn-adj-attr-pred = &msyn-adj-attr-pred ;
 LIST &msyn-adj-gen-nom = &msyn-adj-gen-nom ;
 LIST &msyn-adj-nom-acc = &msyn-adj-nom-acc ;
+LIST &msyn-adj-pred-attr = &msyn-adj-pred-attr ;
 LIST &msyn-adj-sg-pl = &msyn-adj-sg-pl ;
 LIST &msyn-advl-plgen-sgill = &msyn-advl-plgen-sgill ;
 LIST &msyn-advl-plloc-sgcom = &msyn-advl-plloc-sgcom ;
@@ -2339,7 +2340,7 @@ COPY:msyn-agr-sg3-du3 (Du3 &SUGGEST) EXCEPT (Sg3 &msyn-agr-sg3-du3) TARGET (V  &
 
 #!!  **Agreement rule:** msyn-agr-sg3-pl3, Subject to the left, *80 puátá/puáđah*
 ADD:xmsyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET V IF
-	(*-1C NUM BARRIER Nom OR V OR (")") OR S-BOUNDARY LINK NOT 0 Sem/ID OR ("<[A-ZÁÄČŠ].*>r") OR Gen LINK NOT 1 PUNCT)
+	(*-1C NUM BARRIER Nom OR V OR (")") OR S-BOUNDARY LINK NOT 0 Sem/ID OR Sem/Year OR ("<[A-ZÁÄČŠ].*>r") OR Gen LINK NOT 1 PUNCT)
 	(0 V + Sg3);
 COPY:msyn-agr-sg3-pl3 (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-agr-sg3-pl3) TARGET (V &msyn-agr-sg3-pl3);
 #% 80 puátá.
@@ -2758,6 +2759,18 @@ ADDRELATION:msyn-predagr-pl3-sg3 ($2) (N Sg Nom) FROM (-5 Neg LINK 0 (&msyn-pred
 #% Iä lah alda sämikielâlij huolhij toorjâ finnimnáál. 
 #$ Ij lah alda sämikielâlij huolhij toorjâ finnimnáál. 
 #$ Päikkinoomah iä lah siäilum.
+
+ADD:xmsyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET A IF
+	(0C Sg + Nom)
+	(1 N)
+	;
+COPY:msyn-adj-pred-attr (Attr &SUGGEST) EXCEPT (Sg Nom &msyn-adj-pred-attr) TARGET ( A &msyn-adj-pred-attr);
+
+ADD:xmsyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET A IF
+	(0C Pl + Nom)
+	(1 N + Pl)
+	;
+COPY:msyn-adj-pred-attr (Attr &SUGGEST) EXCEPT (Pl Nom &msyn-adj-pred-attr) TARGET ( A &msyn-adj-pred-attr);
 
 #!!  **Agreement rule:** msyn-adj-attr-pred
 #ADD:xmsyn-adj-attr-pred (&msyn-adj-attr-pred)  TARGET (A) IF (0C Attr) (NOT 0 (Arab Ord) OR (A Sg Nom))(NOT 1 N OR A OR PrfPrc)(1 EOS)(NOT 1 ("...")) ;
