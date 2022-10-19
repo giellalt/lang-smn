@@ -10158,7 +10158,7 @@ STRICT-TRANS-V is the set for verbs which don't let a GenAcc be a modifier of an
 
 - LIST COM-V = "algâttiđ" "älgiđ" "arvâlâddâđ" "árvvohuššat" "ávkašuvvat" "bálddastahttit" "bálddalastit" "bártašuvvat" "birgehallat" "birget" "bivvat" "buohtastahttit" "čoahkkinastit" "deaivvadit" "tevdiđ" "digaštallat" "doarrut" "duhkoraddat" "elettiđ" "flirtet" "gávnnadit" "gárvodit" "giksašuvvat" "gilvalit" "gulahallat" "gulaskuddat" "hilbošit" "joatkit" "juogadit" "jyehiđ" "láhttet" "leaikkastallat" "lohpádaddat" "lohpádallat" "lonuhit" "meannudit" "malssidit" "molssodit" "náitalit" "uástiđ" "oktiibidjat" "oahpásmuvvat" "ovttasbargat" "ovttastahttit" "rahčat" "reivvestaddat" "riidalit" "riiddáskit" "rohcošit" "ságastit" "seaguhit" "servvoštallat" "servvoštaddat" "soabadit" "käydä" "soahtat" "soardit" "stálostallat" "stoahkat" "šiehtadallat" "šiehtadit" "šiehttat" "veahkehit" "veardidit" "vijđediđ" "vrd" ; 
 
-- LIST ILL-V = "aibâšiđ" "älgiđ" "asâiduđ" "pokkiđ" "peessâđ" "čokánistiđ" "čujottiđ" ("čuoppâđ" Ex/V Ex/TV Der/Pass) "vaikuttiđ" "teivâđ" "turvâstiđ" "tuuttâđ" "kuoskâđ" "hárjániđ" "irgediđ" "irgástallat" ("juáhuđ" Ex/V Der/Pass V) "juohhuđ" ("jyehiđ" Ex/V Ex/TV Der/Pass) "oskođ" "lijkkuđ" "lyettiđ"  "vyelgiđ" "maccâđ" "mieđettiđ" "miettâđ" "moonnâđ" "njeeijâđ" "enittiđ" "oskođ" "peessâđ" "riemmâđ" "valmiđ" "uásálistiđ" "uápásmuđ" "suttâđ" "vaikuttiđ" "västidiđ" "vyelgiđ" "vaiguttiđ" "vuáđuduđ" ; 
+- LIST ILL-V = "aibâšiđ" "älgiđ" "asâiduđ" "pokkiđ" "peessâđ" "čokánistiđ" "čujottiđ" ("čuoppâđ" Ex/V Ex/TV Der/Pass) "vaikuttiđ" "teivâđ" "turvâstiđ" "tuuttâđ" "kuoskâđ" "hárjániđ" "irgediđ" "irgástallat" ("juáhuđ" Ex/V Der/Pass V) "juohhuđ" ("jyehiđ" Ex/V Ex/TV Der/Pass) "oskođ" "lijkkuđ" "lyettiđ"  "vyelgiđ" "maccâđ" "mieđettiđ" "miettâđ" "njeeijâđ" "enittiđ" "oskođ" "peessâđ" "riemmâđ" "valmiđ" "uásálistiđ" "uápásmuđ" "suttâđ" "vaikuttiđ" "västidiđ" "vyelgiđ" "vaiguttiđ" "vuáđuduđ" ; 
 
 - LIST TRANSL-V = "jápmit" "duššat" "hávkat" "náitalit" "gaskkalduvvat" "nohkat" "goarránit" "heahpanit" "boakčánit" "šlundut" "ráigánit" "vuollánit" "gopmánit" "fuotnánit" "roahppánit" "reakčanit" "bieđganit" "luoddanit" "guvggodit" "liegganit" "suorganit" "báhkkanit" "cuovkanit" "hedjonit" "lohppet" "goikat" "galbmot" "goallut" "ruostut" "buoidut" "guvggodit" "suvrut" "suddâdiđ" ; 
 
@@ -10186,7 +10186,7 @@ STRICT-TRANS-V is the set for verbs which don't let a GenAcc be a modifier of an
 
 ### Valency sets
 
-- LIST INF-V = "enittiđ" "áhásiđ" "áiguđ" "älgiđ" "asâttiđ" "paggiđ" "povčâstiđ" "peessâđ" "lijkkuđ" "anoa" "pallâđ" "puáttiđ" "koččođ" "čokkáđ" "čokánistiđ" "čokániđ" "pisániđ" "čuožâstiđ" "čuárvuđ" "čurggodit" ("ettâđ" Der/Pass) "tovâttiđ" "táttuđ" "täiđiđ" "tarbâšiđ" "miäruštâllâđ" "suovvâđ" "tuáivuđ" "huáputtiđ" "oskeldâttâđ" "ferttiđ" "huámášiđ" "huolâttiđ" "kolgâđ" "pyehtiđ" "vaattâđ" "gárrut" "karttâđ" "iskâđ" "kiergâniđ" "kennigâttiđ" "vaijeeđ" "koččođ" "happiittiđ" "halijdiđ" "hárjániđ" "laaviđ" "lijkkuđ" "morániđ" "vyelgiđ" "mättiđ" "movttiidittiđ" "mušteđ" "vaijeeđ" "nabdeđ" "máttááttiđ" "uápásmiđ" "máttáđ" "uážžuđ" "enittiđ" "riemmâđ" "sättiđ" "seahtit" "áánnuđ" "sättiđ" "suovvâđ" "šoddâđ" "maaššâđ" "vaijeeđ" "vyelgiđ" "vuálániđ" "vyerdiđ"; 
+- LIST INF-V = "enittiđ" "áhásiđ" "áiguđ" "älgiđ" "ásahit" "paggiđ" "povčâstiđ" "peessâđ" "lijkkuđ" "anoa" "bivvat" "ajasta" "puáttiđ" "käskeä" "čokkáđ" "čokánistiđ" "čokániđ" "pisániđ" "čuoččastit" "čuárvuđ" "čurggodit" ("ettâđ" Der/Pass) "tovâttiđ" "táttuđ" "täiđiđ" "tarbâšiđ" "miäruštâllâđ" "suovvâđ" "tuáivuđ" "hoputtaa" "oskeldâttâđ" "ferttiđ" "huámášiđ" "huolâttiđ" "kolgâđ" "vaattâđ" "gárrut" "karttâđ" "iskâđ" "geargat" "geatnegahttit" "ajasta" "vaijeeđ" "koččođ" "háhppehit" "halijdiđ" "hárjániđ" "käydä" "lávet" "lijkkuđ" "morániđ" "vyelgiđ" "mättiđ" "máššat" "movttiidahttit" "mušteđ" "nagodit" "navdit" "máttááttiđ" "oahpástuvvat" "máttáđ" "uážžuđ" "enittiđ" "laskea" "riepmat" "sättiđ" "seahtit" "anoa" "sättiđ" "suovvat" "šoddâđ" "maaššâđ" "vaijeeđ" "tekemään" "koirasta" "vuogáiduvvat" "vyelgiđ" "vuollánit" "vyerdiđ"; 
 
 - LIST ACC-INF-V = "anoa" "čuárvuđ" "tovâttiđ" "suovvâđ" "koččođ" "movttiidahttit" "anoa" "suovvat" ; 
 
@@ -10271,7 +10271,7 @@ A-N, A-N-CASE, ...
 
 - LIST A-LEX-AS-NOUN = "adj." "kuávdáš" "nuorâ" "oahpis" "váivi" "uáinojeijee"; 
 
-- LIST TIME-A = "čuávuvâš" "čuávuvâš" "maŋit" "majemuš" "ovdebáš" "moonnâm" "puáttee" "ittáš" "tot" "taat" "tiet" "tuot" ("vyelgiđ" PrfPrc) ("vássit" PrfPrc)   ;  
+- LIST TIME-A = "čuávuvâš" "čuávuvâš" "maŋit" "majemuš" "ovdebáš" ("vyelgiđ" PrfPrc) ("vássit" PrfPrc)   ;  
 
 - LIST DURATION-A = "heila" "eanas" "eenâb" "geažo" "geažos" "guhkki" "obba" "melgâd" "stuárudâh" "oles" "puoh" ; 
 
@@ -10298,8 +10298,6 @@ Nominal sets defined according to their morphophonological properties
 Sets for lexeme homonymy (most of them are moved to where the actual rules are.)
 
 The words in the set **N-PO** can be both N and Po, the set takes that into account.
-
-Nouns that have dangerous homonyms
 
 ### Nominal sets defined according to their semantical properties
 
@@ -10682,8 +10680,6 @@ mii + nominative should be mii + acc
 
 **Agreement rule:** msyn-num-acc-par: 8 kaandâ/kandâd
 
-### Quantor adverbs
-
 msyn-quant-gen-nom
 
 ## Numeral phrases
@@ -10708,7 +10704,7 @@ The gramamrchecker file ends here.
 
 * * *
 <small>This (part of) documentation was generated from [tools/grammarcheckers/grammarchecker.cg3](https://github.com/giellalt/lang-smn/blob/main/tools/grammarcheckers/grammarchecker.cg3)</small>
-I N A R I   S A A M I   G R A M M A R C H E C K E R   D I S A M B I G U A T O R               
+I N A R I   S A A M I   D I S A M B I G U A T O R               
 ==================================================================
 
 # DELIMITERS 
@@ -12225,7 +12221,6 @@ The rules are no documented yet
 * **r2206** selects Gen when a finite verb to the left and Nom or Acc to the right *lohkaba su girjji*
 
 * **r2271** Removes genitive when a transitive verb to the left and you (not if you are a pronoun) are followed by Ill/Loc/Com/Adv: *doalvvui stálu meahccái*
-Removed for grc (evaluate this!)
 
 * **AccTV2** Selects accusative: when a transitive verb to the left.
 No Acc allowed to the left in the sentence (sentenceboundary as a barrier).
@@ -12478,7 +12473,7 @@ Accusative or Illative
 
 * **NDr2376** Selects Nom
 
-* **PostVNom** Selects Nom if a singular third person verb to the left with no Nom to the left of it -- REMOVE FOR GRC
+* **PostVNom** Selects Nom if a singular third person verb to the left with no Nom to the left of it
 
 * **PostVNomComp** Selects (N Sg Nom)
 

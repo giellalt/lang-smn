@@ -1,5 +1,5 @@
 
-I N A R I   S A A M I   G R A M M A R C H E C K E R   D I S A M B I G U A T O R               
+I N A R I   S A A M I   D I S A M B I G U A T O R               
 ==================================================================
 
 # DELIMITERS 
@@ -1516,7 +1516,6 @@ The rules are no documented yet
 * **r2206** selects Gen when a finite verb to the left and Nom or Acc to the right *lohkaba su girjji*
 
 * **r2271** Removes genitive when a transitive verb to the left and you (not if you are a pronoun) are followed by Ill/Loc/Com/Adv: *doalvvui stálu meahccái*
-Removed for grc (evaluate this!)
 
 * **AccTV2** Selects accusative: when a transitive verb to the left.
 No Acc allowed to the left in the sentence (sentenceboundary as a barrier).
@@ -1769,7 +1768,7 @@ Accusative or Illative
 
 * **NDr2376** Selects Nom
 
-* **PostVNom** Selects Nom if a singular third person verb to the left with no Nom to the left of it -- REMOVE FOR GRC
+* **PostVNom** Selects Nom if a singular third person verb to the left with no Nom to the left of it
 
 * **PostVNomComp** Selects (N Sg Nom)
 
