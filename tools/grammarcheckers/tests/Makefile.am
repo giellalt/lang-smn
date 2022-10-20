@@ -13,8 +13,10 @@ TESTS=\
 	interferens_celkkuuh4.yaml \
 	msyn-adj-attr-pred.yaml \
 	msyn-adj-gen-nom.yaml \
+	msyn-adj-pred-attr.yaml \
 	msyn-adj-sg-pl.yaml \
 	msyn-advl-plloc-sgcom.yaml \
+	msyn-advl-plloc-sgill.yaml \
 	msyn-agr-imprt-sg3.yaml \
 	msyn-agr-other-pl3.yaml \
 	msyn-agr-other-sg2.yaml \
