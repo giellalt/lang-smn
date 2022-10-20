@@ -3046,12 +3046,22 @@ ADD:xmsyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF
 	(NOT *1 N + Ill BARRIER NOT-NPMOD);
 
 #!!  **Agreement rule:** msyn-obj-acc-ill *Ideologia kuáská kielâid/kieláid.*
-ADD:xmsyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF 
-(*-1 ILL-V + IV BARRIER NOT-NPMODADV OR (":") LINK NOT 0 TV)
-(0 Acc)
-(NOT 0 Ill OR PxSg3)
-(NOT 1 ("pajas") OR ("vuálus") OR ("vuálos"))
-(NOT *1 N + Ill BARRIER NOT-NPMOD);
+ADD:xmsyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF
+	(*-1 ILL-V + IV BARRIER NOT-NPMODADV OR (":") LINK NOT 0 TV)
+	(0 Acc)
+	(NOT 0 Ill OR PxSg3)
+	(NOT 1 ("pajas") OR ("vuálus") OR ("vuálos"))
+	(NOT *1 N + Ill BARRIER NOT-NPMOD);
+
+LIST ILL-N = "tiervâpuáttim" ;
+
+#!!  **Agreement rule:** msyn-obj-acc-ill *Ideologia kuáská kielâid/kieláid.*
+ADD:xmsyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF
+	(*-1 ILL-N BARRIER NOT-NPMODADV OR (":"))
+	(0 Acc)
+	(NOT 0 Ill OR PxSg3)
+	(NOT 1 ("pajas") OR ("vuálus") OR ("vuálos"))
+	(NOT *1 N + Ill BARRIER NOT-NPMOD);
 
 COPY:msyn-obj-acc-ill (Ill &SUGGEST) EXCEPT (Acc &msyn-obj-acc-ill) TARGET (N Acc &msyn-obj-acc-ill) ;
 ADDRELATION:msyn-obj-acc-ill ($2) (ILL-V) FROM (1 N + Acc LINK 0 (&msyn-obj-acc-ill)) ;
