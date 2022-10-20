@@ -872,6 +872,8 @@ Finnish plural objects are in the nominative, in Inari Saami they are in the acc
 
 **Agreement rule:** msyn-obj-acc-ill *Ideologia kuáská kielâid/kieláid.*
 
+**Agreement rule:** msyn-obj-acc-ill *Ideologia kuáská kielâid/kieláid.*
+
 ### Acc shall be Nom
 
 **Agreement rule:** syn-top-placc-plnom *Anarâškielâlijd/Anarâškielâliih noomâid kiävttoo/kiävttojeh uccáá.*
