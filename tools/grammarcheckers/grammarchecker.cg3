@@ -2159,10 +2159,11 @@ COPY:msyn-agr-other-sg1 (Sg1 &SUGGEST) EXCEPT (VNOTSG1 &msyn-agr-other-sg1) TARG
 
 #!!  **Agreement rule:** msyn-v-prfprc-sg1, Subject to the left
 ADD:xmsyn-v-prfprc-sg1 (&msyn-v-prfprc-sg1) TARGET V IF 
-(NOT *-2 V + Sg1) 
-(*-1 Pron + Sg1 + Nom BARRIER NOT-ADV-PCLE)
-(0 V + PrfPrc)
-(NOT 0 Sg1);
+	(NOT *-2 V + Sg1) 
+	(*-1 Pron + Sg1 + Nom BARRIER NOT-ADV-PCLE)
+	(0 V + PrfPrc)
+	(NOT 0 Sg1)
+	(NOT 1 Sg1);
 COPY:msyn-v-prfprc-sg1 (Ind Prs Sg1 &SUGGEST) EXCEPT (PrfPrc &msyn-v-prfprc-sg1) TARGET (V &msyn-v-prfprc-sg1);
 #% Mun váldám.
 #$ Mun vááldám.
@@ -2824,9 +2825,10 @@ COPY:msyn-adj-attr-pred (Sg Nom &SUGGEST) EXCEPT (Attr &msyn-adj-attr-pred) TARG
 
 #!!  **Agreement rule:** msyn-v-sg1-prfprc *Sun lii huunjâm/huunnjâm.*
 ADD:xmsyn-v-sg1-prfprc (&msyn-v-sg1-prfprc) TARGET V IF
-	(*-1 Prs OR Prt  BARRIER NOT-ADV OR ConNeg OR Pron + Sg1 LINK NOT 0 ConNeg)
+	(*-1 Prs OR Prt  BARRIER NOT-ADV OR ConNeg OR Pron + Sg1 LINK NOT 0 ConNeg OR Loc)
 	(0C (Prs Sg1));
 COPY:msyn-v-sg1-prfprc (PrfPrc &SUGGEST) EXCEPT (Ind Prs Sg1 &msyn-v-sg1-prfprc) TARGET (V &msyn-v-sg1-prfprc);
+#% Ruotâst kale tarbâšiččim pihtâsijd, jiemge halijdâm tohon Avveel pivtâsvuárháin vyelgiđ.
 #% Sun lii huunjâm
 #$ Sun lii huunnjâm
 #$ - Jiem tieđe poolâm-uv vâi maid, mut tot juurdâ lii váhá ilgâd.
@@ -3040,6 +3042,7 @@ ADD:xmsyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF
 
 
 ADD:xmsyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF
+	(NOT *-1 TV BARRIER NOT-NPMOD)
 	(*1 ILL-V + IV BARRIER  (":") LINK NOT 0 TV LINK NOT *-1 Ill)
 	(0 Acc)
 	(NOT 0 Ill OR PxSg3)
