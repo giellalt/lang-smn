@@ -2252,19 +2252,6 @@ REMOVE:derN DER-N IF (0 LEX-N LINK NEGATE 0 Ess OR ("toohâđ"));
 
 REMOVE:semNomAg Der/NomAg IF (0 NomAg);
 
-#!! * **derA** removes DER-A if lexicalised A
-REMOVE:derA DER-A IF (0 LEX-A);
- 	## Dábálaš mearrádusat.
-
-#!! * **derAdv** removes DER-Adv if lexicalised Adv
-REMOVE:derAdv DER-A-ADV (0 ADV-NOT-DER-A) ;
- 
-#!! * **derPass** removes DER-PASS if lexicalised V
-#REMOVE:derPass DER-PASS (0 V-NOT-DER-PASS) ;
- 
-#!! * **derV** removes DER-V if lexicalised V,
-REMOVE:derV DER-V IF (0 LEX-V) ; 
-
 
 
 
@@ -6074,7 +6061,7 @@ SELECT:AccInf2 Acc IF (*1C TRANS-V + Inf OR (V TV PrfPrc) OR (V Actio Ess) BARRI
 	#% Jagis 2007 álggii Giellatekno bargat interaktiivvalaš pedagogalaš prográmmaiguin.
 
 #!! * **AccNomCOPconstr** Selects Acc in front of Inf; only if there is no chance for itself beeing Nom
-SELECT:AccNomCOPconstr Acc IF (1 TRANS-V - FAUXV)(*-1 (N Nom) BARRIER NOT-NPMODADV LINK *-1 COPULAS + FMAINV BARRIER SV-BOUNDARY LINK *-1 HAB-ACTOR + Loc OR (N Loc) OR (N Nom) BARRIER BOC) ;
+SELECT:AccNomCOPconstr Acc IF (1 TRANS-V - FAUXV)(*-1 (N Nom) BARRIER NOT-NPMODADV OR COMMA LINK *-1 COPULAS + FMAINV BARRIER SV-BOUNDARY LINK *-1 HAB-ACTOR + Loc OR (N Loc) OR (N Nom) BARRIER BOC) ;
 	#$ Divššohasas lea vuoigatvuohta iežas journála geahččat.
   
 	
