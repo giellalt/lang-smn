@@ -2226,7 +2226,7 @@ ADD:xmsyn-agr-imprt-sg3 (&msyn-agr-imprt-sg3) TARGET V IF
 #	(NOT -2 V + Sup OR V + Sg3)
 #	(NOT *-2 V + Sg3 BARRIER SV-BOUNDARY)
 	(*-1C Pron + Sg3 + Nom OR N + Sg + Nom BARRIER NOT-ADV-PCLE OR CLB OR PUNCT)
-		(0 (V Imprt Sg2));
+		(0 (V Imprt Sg2))(NEGATE 0 (Ind Prs Sg3));
 COPY:msyn-agr-imprt-sg3 (Ind Prs Sg3 &SUGGEST) EXCEPT (Imprt Sg2 &msyn-agr-imprt-sg3) TARGET (V &msyn-agr-imprt-sg3);
 
 
