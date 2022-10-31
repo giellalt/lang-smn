@@ -12679,8 +12679,6 @@ Final Com/Loc rule: Remove Com.
 
 * **DemAcc** selects Den Acc after the last acc-disambiguation of nouns
 
-* **KillAcc** Removes Acc if you are Gen 
-
 ## Essive  
 
 ## Finite or not
