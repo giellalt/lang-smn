@@ -2781,7 +2781,7 @@ COPY:msyn-adj-pred-attr (Attr &SUGGEST) EXCEPT (Pl Nom &msyn-adj-pred-attr) TARG
 ADD:xmsyn-adj-attr-pred (&msyn-adj-attr-pred)  TARGET (A) IF
 	(0C Attr)
 	(NOT 0 (Arab Ord) OR (A Sg Nom))
-	(NOT 1 N OR A OR PrfPrc)
+	(NOT 1 N OR A OR PrfPrc OR ?)
 	(NOT 1 CC LINK 1 A + Attr)
 	(NOT 1 ("...")) ;
 ADD:xmsyn-adj-attr-pred (&msyn-adj-attr-pred)  TARGET (A Attr) IF (0C Attr) (1 CC LINK 1 &msyn-adj-attr-pred OR (A Sg Nom) LINK NOT 1 N OR A OR PrfPrc OR CC) (NOT 0 (Arab Ord) OR (A Sg Nom)) ;
