@@ -610,7 +610,8 @@ LIST QUANT-PRON = "ollu" "eenâs" "ucánjii" "váháš" "ucánjii" "ucánjii" ;
 LIST PRESENTATION-PRON = "mihheen" "kihheen" "mii" "kii" "miinii" "kiinii" ;
 
 
-#!! ### Adjectival sets and their complements
+# Adjective sets
+#!! ### Adjectival sets and their complements 
 # -------------------------------------
 #!! LEX-A, A-CASE, ...
 
@@ -629,6 +630,7 @@ SET NOT-A-CC = WORD - A-CC ;
 # This set was removed, for a good reason?
 SET NOT-A-ADV = WORD - A - Adv OR ("meid") ;
 
+LIST CONCORD-A = "taggaar" ("<(.*)lâš>"r) ;
 
 LIST NOMINAL-A = "guoktilaš" "lámis" "kuáskulâš" ("suddo" Der/lasj) "viijses";
 
@@ -2765,12 +2767,14 @@ ADDRELATION:msyn-predagr-pl3-sg3 ($2) (N Sg Nom) FROM (-5 Neg LINK 0 (&msyn-pred
 
 ADD:xmsyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET A IF
 	(0C Sg + Nom)
+	(NOT 0  CONCORD-A)
 	(1 N)
 	;
 COPY:msyn-adj-pred-attr (Attr &SUGGEST) EXCEPT (Sg Nom &msyn-adj-pred-attr) TARGET ( A &msyn-adj-pred-attr);
 
 ADD:xmsyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET A IF
 	(0C Pl + Nom)
+	(NOT 0  CONCORD-A)
 	(1 N + Pl)
 	;
 COPY:msyn-adj-pred-attr (Attr &SUGGEST) EXCEPT (Pl Nom &msyn-adj-pred-attr) TARGET ( A &msyn-adj-pred-attr);
@@ -2987,7 +2991,15 @@ ADD:xmsyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF
 (NEGATE *1 V + Pl3 BARRIER NOT-ADV);
 COPY:msyn-obj-plnom-placc (Acc &SUGGEST) EXCEPT (Nom &msyn-obj-plnom-placc) TARGET (N Pl &msyn-obj-plnom-placc);
 #% Puoh iä lah omâstâm poccuuh.
+#% Puoh iä lah omâstâm tuše poccuuh.
 #$ Puoh iä lah omâstâm  .
+
+#!!  **Agreement rule:** msyn-obj-plnom-placc
+ADD:xmsyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF 
+(-1 Adv LINK -1 REALTV + PrfPrc LINK *-1 Nom)
+(0C N + Pl + Nom)
+(NEGATE *1 V + Pl3 BARRIER NOT-ADV);
+COPY:msyn-obj-plnom-placc (Acc &SUGGEST) EXCEPT (Nom &msyn-obj-plnom-placc) TARGET (N Pl &msyn-obj-plnom-placc);
 
 
 
@@ -3036,19 +3048,22 @@ COPY:msyn-top-nom-acc (Acc &SUGGEST) EXCEPT (Nom &msyn-top-nom-acc) TARGET (N No
 #!!  **Agreement rule:** msyn-obj-acc-ill
 #ADD:xmsyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF (*-1 ILL-V BARRIER NOT-NPMODADV OR (":") LINK *-1 Nom)(0 Acc)(NOT 0 Ill OR PxSg3); # just to remember we used to want subjects
 ADD:xmsyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF
+#	(NOT *-1 TV BARRIER NOT-NPMOD)
+	(0 Acc)
+	(*1 ILL-V + IV BARRIER  (":") OR N + Ill)
+	(NOT 0 Ill OR PxSg3)
+	(NEGATE 0 Gen LINK 1 Po)
+	;
+#	(NOT *1 N + Ill BARRIER NOT-NPMOD);
+
+
+ADD:xmsyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF
 	(*-1 ILL-V + IV BARRIER NOT-NPMODADV OR (":") LINK NOT 0 TV LINK NOT *-1 Ill)
 	(0 Acc)
 	(NOT 0 Ill OR PxSg3)
 	(NOT 1 ("pajas") OR ("vuálus") OR ("vuálos"))
 	(NOT *1 N + Ill BARRIER NOT-NPMOD);
 
-
-ADD:xmsyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF
-	(NOT *-1 TV BARRIER NOT-NPMOD)
-	(*1 ILL-V + IV BARRIER  (":") LINK NOT 0 TV LINK NOT *-1 Ill)
-	(0 Acc)
-	(NOT 0 Ill OR PxSg3)
-	(NOT *1 N + Ill BARRIER NOT-NPMOD);
 
 #!!  **Agreement rule:** msyn-obj-acc-ill *Ideologia kuáská kielâid/kieláid.*
 ADD:xmsyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF
@@ -3521,7 +3536,9 @@ COPY:msyn-gen-ill-recipientverbs (Ill &SUGGEST) EXCEPT (Gen &msyn-gen-ill-recip
 
 #!! ## Double possessive rules
 
-ADD:msyn-NPx-N (&msyn-NPx-N) TARGET (N Acc) IF (0 PxSg3 OR PxDu3 OR PxPl3); #(*-1 (Pron Refl Acc)); # BARRIER NOT-NPMOD - COMMA - CC LINK 0 PxSg3 OR PxDu3 OR PxPl3);
+#ADD:msyn-NPx-N (&msyn-NPx-N) TARGET (N Acc) IF
+#	(0 PxSg3 OR PxDu3 OR PxPl3);
+#(*-1 (Pron Refl Acc)); # BARRIER NOT-NPMOD - COMMA - CC LINK 0 PxSg3 OR PxDu3 OR PxPl3);
 	## toh jiečânâč enâmijn ässee aalmugeh, moh nabdojeh algâässen, ko sij láá maajeeldpuátteeh aalmugist, mii eennâm väldidem tâi asâttem tâi táálái riijkâraajij šoddâm ääigi aasâi enâmist tâi ton eennâmtieđâlâš kuávlust, moos eennâm kulá, já kiäh vuoigâdvuođâlâš sajattuvâst peerusthánnáá láá siäiluttâm ollásávt tâi uásild jieijâs sosiaallâš, ekonomâlâš, kulttuurlâš já poolitlâš vuáháduvâidis.
 
 
