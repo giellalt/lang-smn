@@ -11404,8 +11404,6 @@ First select Px, then remove all remaining Px
 
 We end section 2 by removing all remaining Px
 
-* **KillPx** removes all remaining Px readings
-
 * **NotVGenIfDer** removes VGen if 0 = Der/Pass or Der...(r947)
 
 * **NotImprtIfAttrLeft** removes Imprt after attribute
