@@ -10698,6 +10698,8 @@ The rule is: 2-6 + gensg, 7- + par
 
 ## Valency rules
 
+## Double possessive rules
+
 ## Lexical rules
 
 **Realword error rule:** real-pisso-pissood
