@@ -2669,10 +2669,6 @@ SELECT:datPers Pers IF (0 DAT-PRON)(NEGATE 0 ("dasgo") OR ("danin") OR ("tastko"
 
 # (rules to be written)
 	
-	# Then, if that is not possible: Remove them.
-	
-REMOVE:PxSgNotDu DU-PX IF (0 SG-PX);
-REMOVE:PxSgNotPl PL-PX IF (0 SG-PX);
 
 #!! ### From sme	
 
@@ -2831,10 +2827,6 @@ REMOVE:PxPlaceV PxSg3 (0 Loc LINK 0* PLACE-V OR ("leđe") BARRIER SV-BOUNDARY) ;
 
 
 #!! We end section 2 by removing all remaining Px
-
-#!! * **KillPx** removes all remaining Px readings
-REMOVE:KillPx  Px (NEGATE 0 Adv) ;
-
 
 
 #!! * **NotVGenIfDer** removes VGen if 0 = Der/Pass or Der...(r947)
