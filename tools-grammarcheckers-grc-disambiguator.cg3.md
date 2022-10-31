@@ -802,10 +802,6 @@ Mostly we map both @CNP and @CVP, then we select @CNP, after that we remove them
 
 * **CCasCNPCVP** Map (@CNP @CVP) to CC
 
-* **ahteCNP** ahte CC @CNP, remove the rest
-
-* **killAllahtenotCS** All other occurrences of "et" are CSs.
-
 * **vaiCCCNP** vai as CC or CS
 
 * **vaiCC** remove vai as CC 
