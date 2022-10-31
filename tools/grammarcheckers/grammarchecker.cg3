@@ -2783,7 +2783,8 @@ ADD:xmsyn-adj-attr-pred (&msyn-adj-attr-pred)  TARGET (A) IF
 	(NOT 0 (Arab Ord) OR (A Sg Nom))
 	(NOT 1 N OR A OR PrfPrc OR ?)
 	(NOT 1 CC LINK 1 A + Attr)
-	(NOT 1 ("...")) ;
+	(NOT 1 ("...")) 
+	(NOT 1 CC OR COMMA LINK 1 (A Attr));
 ADD:xmsyn-adj-attr-pred (&msyn-adj-attr-pred)  TARGET (A Attr) IF (0C Attr) (1 CC LINK 1 &msyn-adj-attr-pred OR (A Sg Nom) LINK NOT 1 N OR A OR PrfPrc OR CC) (NOT 0 (Arab Ord) OR (A Sg Nom)) ;
 COPY:msyn-adj-attr-pred (Sg Nom &SUGGEST) EXCEPT (Attr &msyn-adj-attr-pred) TARGET ( A &msyn-adj-attr-pred);
 
@@ -2791,6 +2792,7 @@ COPY:msyn-adj-attr-pred (Sg Nom &SUGGEST) EXCEPT (Attr &msyn-adj-attr-pred) TARG
     #$ Tot lii hirmâd styeres.
     #% Lii-uv tekstâ uánihis teikâ kuhes onne?
     #$ Lii-uv tekstâ uánihâš teikâ kukke onne?
+    #$ toh jiečânâč enâmijn ässee hiäimuaalmugeh, moh spiekâsteh čielgâsávt eennâm eres aalmugjuávhuin {sosiaallâš}, kulttuurlâš já ekonomâlâš tile peeleest já moi sajattâh miärášuvá ollásávt tâi uásild sii jieijâs vuovij tâi ärbivuovij tâi sierânâslahâasâttâs mield; já
 
 #!!  **Agreement rule:** msyn-adj-attr-pred *Mun lam fiskis/fiskâd.*
 ADD:xmsyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A) IF 
@@ -3516,6 +3518,11 @@ ADD:xmsyn-gen-ill-recipientverbs (&msyn-gen-ill-recipientverbs) TARGET (Pron Sem
 COPY:msyn-gen-ill-recipientverbs (Ill &SUGGEST) EXCEPT (Gen &msyn-gen-ill-recipientverbs) TARGET (&msyn-gen-ill-recipientverbs);
 ## Tom sun ij lah kuássin muštâlâm kiässán.
 
+
+#!! ## Double possessive rules
+
+ADD:msyn-NPx-N (&msyn-NPx-N) TARGET (N Acc) IF (0 PxSg3 OR PxDu3 OR PxPl3); #(*-1 (Pron Refl Acc)); # BARRIER NOT-NPMOD - COMMA - CC LINK 0 PxSg3 OR PxDu3 OR PxPl3);
+	## toh jiečânâč enâmijn ässee aalmugeh, moh nabdojeh algâässen, ko sij láá maajeeldpuátteeh aalmugist, mii eennâm väldidem tâi asâttem tâi táálái riijkâraajij šoddâm ääigi aasâi enâmist tâi ton eennâmtieđâlâš kuávlust, moos eennâm kulá, já kiäh vuoigâdvuođâlâš sajattuvâst peerusthánnáá láá siäiluttâm ollásávt tâi uásild jieijâs sosiaallâš, ekonomâlâš, kulttuurlâš já poolitlâš vuáháduvâidis.
 
 
 #!! ## Lexical rules
