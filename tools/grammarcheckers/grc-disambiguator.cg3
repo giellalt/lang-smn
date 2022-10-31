@@ -1955,7 +1955,7 @@ SET NOT-CC = WORD - CC ;
 
 SET NOT-PCLE = WORD - Pcle ;
 
-LIST COMPAR = ("dávji" A Comp) "eenâb" "eenâb" "ereslágán" "eres" "iežá" "eereeb" "seammás" "siämmáálágán" "seamma_láhkái" ;
+LIST COMPAR = ("dávji" A Comp) "eenâb" "eenâb" "ereslágán" "eres" "iežá" "eereeb" "seammás" "siämmáálágán" "seamma_láhkái" "sehe" ;
  
  # These combine with "ko" Pcle, but COMPAR stands for 'comparison' rather than
  # 'comparative'.
@@ -3182,15 +3182,7 @@ MAP:CSasCVP (@CVP) TARGET CS (NEGATE 0 Indef) ;
 
 #!! * **CCasCNPCVP** Map (@CNP @CVP) to CC
 MAP:CCasCNPCVP (@CNP @CVP) TARGET CC ;
-
-#!! * **ahteCNP** ahte CC @CNP, remove the rest
-IFF:ahteCNP ("et" CC @CNP) IF (-1 COMPAR OR Comp)(0 ("et"))(1 COMPAR OR Comp);
-	#$ Dárogiel sánit bohtet eanet ahte eanet sámegiela sisa.
-	#$ Dat šattai heajut ahte heajut.
-	#$ Áiggi mielde eanet ahte eanet lohkagohtet sámegillii.
 	
-#!! * **killAllahtenotCS** All other occurrences of "et" are CSs.
-SELECT:killAllahtenotCS ("et" CS) ; 
 
 #!! * **vaiCCCNP** vai as CC or CS
 SELECT:vaiCCCNP (CC @CVP) IF (0 ("vâi")) (*-1 Inf BARRIER REAL-V OR CLB)(*1 Inf BARRIER REAL-V);
