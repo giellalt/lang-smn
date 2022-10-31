@@ -11253,14 +11253,6 @@ Partitive after numerals
 
 * **derN** removes DER-N if lexicalised non-essives
 
-* **derA** removes DER-A if lexicalised A
-
-* **derAdv** removes DER-Adv if lexicalised Adv
-
-* **derPass** removes DER-PASS if lexicalised V
-
-* **derV** removes DER-V if lexicalised V,
-
 ### Particular verbs
 
 * **PrsPrcIfA**
