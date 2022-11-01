@@ -6485,7 +6485,13 @@ SELECT:NDr2373 Nom IF (*-1C PL3-V BARRIER NOT-ADV-PCLE OR MO LINK *-1 BOC BARRIE
 	#% Arkiivaávdnasat galget sáddejuvvot go leat sullii 25-30 jagi boarrásat. #Comment: Why is this marked? 
 
 #!! * **NDr2375** Selects Nom
-SELECT:NDr2375 Nom IF (*-1 COMMA BARRIER NOT-NPMOD LINK NEGATE *-1 MAIN-V BARRIER S-BOUNDARY)(NEGATE *1 VFIN BARRIER S-BOUNDARY)(NEGATE 0 Adv OR ("leđe" PrfPrc) OR Imprt OR Po OR VFIN)(NEGATE 0 Actio LINK 1 ("árvulâš")) ;#(NEGATE 0 PrfPrc LINK *-1 MOVT LINK -1 ("naa") LINK -1 ("leđe"));
+SELECT:NDr2375 Nom IF
+	(*-1 COMMA BARRIER NOT-NPMOD LINK NEGATE *-1 MAIN-V BARRIER S-BOUNDARY)
+	(NEGATE *1 VFIN BARRIER S-BOUNDARY)
+	(NEGATE 0 Attr LINK *1 N BARRIER NOT-A)
+	(NEGATE 0 Adv OR ("leđe" PrfPrc) OR Imprt OR Po OR VFIN)
+	(NEGATE 0 Actio LINK 1 ("árvulâš")) ;
+#(NEGATE 0 PrfPrc LINK *-1 MOVT LINK -1 ("naa") LINK -1 ("leđe"));
 	#$ Dá dat leat, 350 ruvnno.
 	#% Eará guovlluin gos leat vel unnit sámit go Finnmárkkus, leamaš dákkár ákkain vel stuorát deaddu almmolaš ságastallamis.  # It should not take the latter one.
 
