@@ -10118,7 +10118,7 @@ Mun vuolgim raapâid pajas. Verb accepts accusative in front of adverb.
 ### Pronoun sets
 MUN, DON, SON, MOAI, ...
 
-### Adjectival sets and their complements
+### Adjectival sets and their complements 
 LEX-A, A-CASE, ...
 
 ### Adverbial sets and their complements
@@ -10561,6 +10561,8 @@ Here, the verb should be plural. The interference comes from Finnish e-sentences
 ### Plural objects
 
 Finnish plural objects are in the nominative, in Inari Saami they are in the accusative.
+
+**Agreement rule:** msyn-obj-plnom-placc
 
 **Agreement rule:** msyn-obj-plnom-placc
 
@@ -12253,6 +12255,8 @@ and the verb found to the left (SV-boundary) is some kind of verbalactivityverb 
 * **GenNPCo** (modifier) Selects Pron Pers Gen if Nom to the left of ja *Mun ja mu ustibat*
 
 * **GenRefl** (modifier) selects Gen in front of a noun in accusative or nominative case *iežaset oiviliid*
+
+* **Gen Not Acc**
 
 * **AccAfterCC** Select accusative: if genitiv to the left, and CC "já" to the left of genitive *eamiálbmot- ja globaliserenprošeavtta koordináhtor*
 

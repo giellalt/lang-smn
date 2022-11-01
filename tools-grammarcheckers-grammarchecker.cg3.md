@@ -406,7 +406,7 @@ Mun vuolgim raapâid pajas. Verb accepts accusative in front of adverb.
 ### Pronoun sets
 MUN, DON, SON, MOAI, ...
 
-### Adjectival sets and their complements
+### Adjectival sets and their complements 
 LEX-A, A-CASE, ...
 
 ### Adverbial sets and their complements
@@ -849,6 +849,8 @@ Here, the verb should be plural. The interference comes from Finnish e-sentences
 ### Plural objects
 
 Finnish plural objects are in the nominative, in Inari Saami they are in the accusative.
+
+**Agreement rule:** msyn-obj-plnom-placc
 
 **Agreement rule:** msyn-obj-plnom-placc
 

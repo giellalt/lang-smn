@@ -1541,6 +1541,8 @@ and the verb found to the left (SV-boundary) is some kind of verbalactivityverb 
 
 * **GenRefl** (modifier) selects Gen in front of a noun in accusative or nominative case *iežaset oiviliid*
 
+* **Gen Not Acc**
+
 * **AccAfterCC** Select accusative: if genitiv to the left, and CC "já" to the left of genitive *eamiálbmot- ja globaliserenprošeavtta koordináhtor*
 
 ### Accusative in coordination
