@@ -5767,7 +5767,8 @@ SELECT:GenRefl Gen IF (0 (Pron Refl) + Gen)(*1 (N Acc) OR (N Nom) BARRIER NOT-At
 	#$ Lehpetgo iežadet diŋggaid dolvon?
 	#$ Vaikko leatge sámeaktivista, de it dárbbat iežat čivgga dahkat givssidanoaffarin.
 
-
+#!! * **Gen Not Acc**
+REMOVE:GenNotAcc Acc IF (*-1 TV)(0 N + Gen)(1 N + Acc);
 
 #!! * **AccAfterCC** Select accusative: if genitiv to the left, and CC "já" to the left of genitive *eamiálbmot- ja globaliserenprošeavtta koordináhtor*
 #SELECT:AccAfterCC (N Acc)  IF (-1 (N Gen) LINK -1 ("já"))(0 (N Acc))(NEGATE *1 (N Acc) OR (N Nom) OR (N Ess) OR (N Loc) BARRIER NOT-Attr OR PUNCT-LEFT)(NEGATE 0 V)(NEGATE 1 Gen LINK 1 (N Loc))(NEGATE *1 Gen LINK 1 Po);  
@@ -7288,7 +7289,7 @@ REMOVE:lemma2 LEMMA2 IF (0 LEMMA1);
 
 LIST TYP-A = "árat" "pyeri" "čeppi" ;
 
-SELECT:NPlwhenAPl (N Pl) + $$CASE (0 A + $$CASE LINK NOT 0 TYP-A) ;
+#SELECT:NPlwhenAPl (N Pl) + $$CASE (0 A + $$CASE LINK NOT 0 TYP-A) ;
 
 SELECT:NomCCNom Nom (-1 CC LINK -1C Nom) ;
 SELECT:AttrwhenAdv Attr (0 Adv - ("njuolgâdâs") LINK 1 N)(NEGATE -1 ("maht") OR REAL-V)(NEGATE 0 ("ucánjii") OR ("ucánjii") LINK 1 Prop)(NEGATE 0 DEHALAS LINK *0 COPULAS + FMAINV BARRIER SV-BOUNDARY);
