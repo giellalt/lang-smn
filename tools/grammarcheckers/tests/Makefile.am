@@ -40,7 +40,6 @@ TESTS=\
 	msyn-num-acc-par.yaml \
 	msyn-num-nom-par.yaml \
 	msyn-num-par-gen.yaml \
-	msyn-num-par-nom.yaml \
 	msyn-obj-acc-ill.yaml \
 	msyn-obj-plnom-placc.yaml \
 	msyn-obj-sgnom-sgacc.yaml \
@@ -93,6 +92,7 @@ TESTS=\
 	neg-v-sg1-prfprc.yaml \
 	ovdamearkkat.yaml \
 	science.yaml \
+	syn-OVS-OSV.yaml \
 	typos.yaml \
 	wikipedia.yaml
 
@@ -143,6 +143,7 @@ XFAIL_TESTS=\
 	neg-v-actio-sg1.yaml \
 	ovdamearkkat.yaml \
 	science.yaml \
+	syn-OVS-OSV.yaml \
 	typos.yaml \
 	wikipedia.yaml
 
