@@ -3536,9 +3536,8 @@ COPY:msyn-gen-ill-recipientverbs (Ill &SUGGEST) EXCEPT (Gen &msyn-gen-ill-recip
 
 #!! ## Double possessive rules
 
-#ADD:msyn-NPx-N (&msyn-NPx-N) TARGET (N Acc) IF
-#	(0 PxSg3 OR PxDu3 OR PxPl3);
-#(*-1 (Pron Refl Acc)); # BARRIER NOT-NPMOD - COMMA - CC LINK 0 PxSg3 OR PxDu3 OR PxPl3);
+ADD:msyn-NPx-N (&msyn-NPx-N) TARGET (N Acc) IF
+	(0 PxSg3 OR PxDu3 OR PxPl3)(*-1 (Pron Refl Acc) BARRIER NOT-NPMOD - COMMA - CC LINK 0 PxSg3 OR PxDu3 OR PxPl3);
 	## toh jiečânâč enâmijn ässee aalmugeh, moh nabdojeh algâässen, ko sij láá maajeeldpuátteeh aalmugist, mii eennâm väldidem tâi asâttem tâi táálái riijkâraajij šoddâm ääigi aasâi enâmist tâi ton eennâmtieđâlâš kuávlust, moos eennâm kulá, já kiäh vuoigâdvuođâlâš sajattuvâst peerusthánnáá láá siäiluttâm ollásávt tâi uásild jieijâs sosiaallâš, ekonomâlâš, kulttuurlâš já poolitlâš vuáháduvâidis.
 
 
