@@ -17,7 +17,7 @@ endif # CAN_HFST
 # be fixed *later*, but is not critical at the moment:
 XFAIL_TESTS=pair-test-positive.sh \
             pair-test-negative.sh \
-            pair-test-hfst.sh.in
+            pair-test-hfst.sh
 
 # Make sure all tests scripts are included in the distributed tarballs:
 EXTRA_DIST=pair-test-positive.sh.in \
