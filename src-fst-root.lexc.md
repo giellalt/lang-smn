@@ -187,199 +187,298 @@ All Err-tags must have a normative form as lemma except Err/Lex
 * **+Use/TTS** – **only** retained in the HFST Text-To-Speech disambiguation analyser
 * **+Use/-TTS** – **never** retained in the HFST Text-To-Speech disambiguation analyser
 
-## Semantic tags
+### Semantic tags to help disambiguation & synt. analysis: (before POS)
 
-* **+Sem/Act** 
-* **+Sem/Act_Fruit** 
-* **+Sem/Act_Plc** 
-* **+Sem/Act_Route** 
-* **+Sem/Act_Tool-it** 
-* **+Sem/Amount** 
-* **+Sem/Amount_Semcon** 
-* **+Sem/Ani** 
-* **+Sem/Ani-bird** Bird names
-* **+Sem/Ani-fish** Fish names
-* **+Sem/Ani-insect** Insect names
-* **+Sem/Ani_Body-abstr_Hum** 
-* **+Sem/Ani_Buildpart** 
-* **+Sem/Ani_Group** 
-* **+Sem/Ani_Group_Hum** 
-* **+Sem/Ani_Group_Prod-vis** 
-* **+Sem/Ani_Hum** 
-* **+Sem/Ani_Veh** 
-* **+Sem/Aniprod** 
-* **+Sem/Aniprod_Hum** 
-* **+Sem/Aniprod_Obj-clo** 
-* **+Sem/Aniprod_Perc-phys** 
-* **+Sem/Aniprod_Plc_Route** 
-* **+Sem/Atr** 
-* **+Sem/Body** denotes bodyparts
-* **+Sem/Body-abstr** 
-* **+Sem/Body-abstr_Feat-psych** 
-* **+Sem/Body-abstr_Prod-audio_Semcon** 
-* **+Sem/Body_Food** 
-* **+Sem/Body_Hum** 
-* **+Sem/Body_Mat** 
-* **+Sem/Body_Measr** 
-* **+Sem/Body_Plc** 
-* **+Sem/Body_Plc-elevate** 
-* **+Sem/Build** 
-* **+Sem/Build-room** 
-* **+Sem/Build_Edu_Org** 
-* **+Sem/Build_Org** 
-* **+Sem/Buildpart** 
-* **+Sem/Buildpart_Cat_Ctain_Mat** 
-* **+Sem/Buildpart_Ctain_Obj** 
-* **+Sem/Cat** 
-* **+Sem/Clth** clothes
-* **+Sem/Clth-jewl** 
-* **+Sem/Clth-jewl_Curr** 
-* **+Sem/Clthpart** 
-* **+Sem/Ctain** 
-* **+Sem/Ctain-abstr** 
-* **+Sem/Ctain-clth** 
-* **+Sem/Ctain-clth_Veh** 
-* **+Sem/Ctain_Furn** 
-* **+Sem/Ctain_Tool** 
-* **+Sem/Curr** 
-* **+Sem/Dance** 
-* **+Sem/Date** 
-* **+Sem/Dir** 
-* **+Sem/Domain** 
-* **+Sem/Domain_Hum** 
-* **+Sem/Domain_Prod-audio** 
-* **+Sem/Drink** 
-* **+Sem/Drink_Plant** 
-* **+Sem/Dummytag** 
-* **+Sem/Edu** 
-* **+Sem/Edu_Event** 
-* **+Sem/Edu_Geom** 
-* **+Sem/Edu_Hum** 
-* **+Sem/Edu_Mat** 
-* **+Sem/Edu_Org** 
-* **+Sem/Event** 
-* **+Sem/Event_Food** 
-* **+Sem/Event_Plc** 
-* **+Sem/Event_Time** 
-* **+Sem/Feat** 
-* **+Sem/Feat-measr** 
-* **+Sem/Feat-measr_Plc** 
-* **+Sem/Feat-phys** 
-* **+Sem/Feat-phys_Tool-write** 
-* **+Sem/Feat-phys_Veh** 
-* **+Sem/Feat-phys_Wthr** 
-* **+Sem/Feat-psych** 
-* **+Sem/Feat-psych_Plc** 
-* **+Sem/Feat_Plant** 
-* **+Sem/Fem** 
-* **+Sem/Food** 
-* **+Sem/Food-med** 
-* **+Sem/Food_Plant** 
-* **+Sem/Fruit** 
-* **+Sem/Fruit_Hum** 
-* **+Sem/Furn** 
-* **+Sem/Game_Obj-play** 
-* **+Sem/Geom** 
-* **+Sem/Geom_Obj** 
-* **+Sem/Group_Hum** 
-* **+Sem/Group_Hum_Org** 
-* **+Sem/Group_Hum_Plc** 
-* **+Sem/Group_Txt** 
-* **+Sem/Hum** 
-* **+Sem/Hum_Lang** 
-* **+Sem/Hum_Lang_Plc** 
-* **+Sem/Hum_Mat_Tool** 
-* **+Sem/Hum_Obj** 
-* **+Sem/Hum_Org** 
-* **+Sem/Hum_Plc** 
-* **+Sem/Hum_Veh** 
-* **+Sem/ID** 
-* **+Sem/Ideol** 
-* **+Sem/Lang**  Languages
-* **+Sem/Lang_Tool** 
-* **+Sem/Mal** 
-* **+Sem/Mat** 
-* **+Sem/Mat_Plant** 
-* **+Sem/Mat_Txt** 
-* **+Sem/Measr** 
-* **+Sem/Measr_Sign** 
-* **+Sem/Measr_Time** 
-* **+Sem/Money** 
-* **+Sem/Money_Obj** 
-* **+Sem/Money_Txt** 
-* **+Sem/Obj** 
-* **+Sem/Obj-clo** 
-* **+Sem/Obj-el**           
-* **+Sem/Obj-ling** 
-* **+Sem/Obj-play** 
-* **+Sem/Obj-rope** 
-* **+Sem/Obj-surfc** 
-* **+Sem/Obj_Semcon** 
-* **+Sem/Obj_State** 
-* **+Sem/Obj_Veh** 
-* **+Sem/Org** 
-* **+Sem/Org_Prod-audio** 
-* **+Sem/Org_Prod-cogn** 
-* **+Sem/Org_Prod-vis** 
-* **+Sem/Org_Rule** 
-* **+Sem/Org_Txt** 
-* **+Sem/Part** 
-* **+Sem/Perc-cogn** 
-* **+Sem/Perc-emo** 
-* **+Sem/Perc-phys** 
-* **+Sem/Plant**   Plant names
-* **+Sem/Plant-fungus**    Fungi names
-* **+Sem/Plant_Plantpart** 
-* **+Sem/Plantpart** 
-* **+Sem/Plc** denotes places
-* **+Sem/Plc-abstr** 
-* **+Sem/Plc-abstr_Rel_State** 
-* **+Sem/Plc-abstr_Route** 
-* **+Sem/Plc-elevate** 
-* **+Sem/Plc-line** 
-* **+Sem/Plc-water** 
-* **+Sem/Plc_Route** 
-* **+Sem/Plc_Substnc** 
-* **+Sem/Plc_Substnc_Wthr** 
-* **+Sem/Plc_Time** 
-* **+Sem/Plc_Tool-catch** 
-* **+Sem/Plc_Txt** 
-* **+Sem/Plc_Wthr** 
-* **+Sem/Pos** 
-* **+Sem/Process** 
-* **+Sem/Prod** 
-* **+Sem/Prod-audio** 
-* **+Sem/Prod-audio_Txt** 
-* **+Sem/Prod-cogn** 
-* **+Sem/Prod-cogn_Txt** 
-* **+Sem/Prod-ling** 
-* **+Sem/Prod-vis** 
-* **+Sem/Rel** 
-* **+Sem/Route** 
-* **+Sem/Rule** 
-* **+Sem/Semcon** 
-* **+Sem/Semcon_Txt** 
-* **+Sem/Sign** 
-* **+Sem/State** 
-* **+Sem/State-sick** 
-* **+Sem/Substnc** 
-* **+Sem/Substnc_Wthr** 
-* **+Sem/Sur** 
-* **+Sem/Time** 
-* **+Sem/Time-clock** 
-* **+Sem/Time_Wthr** 
-* **+Sem/Tool** 
-* **+Sem/Tool-catch** 
-* **+Sem/Tool-clean** 
-* **+Sem/Tool-it** 
-* **+Sem/Tool-measr** 
-* **+Sem/Tool-music** 
-* **+Sem/Tool-write** 
-* **+Sem/Txt** 
-* **+Sem/Veh** 
-* **+Sem/Wpn** 
-* **+Sem/Wthr** weather
-* **+Sem/Year** 
+* +Sem/Act = Activity
+* +Sem/Adr = Webadr
+* +Sem/Amount = Amount
+* +Sem/Ani = Animate
+* +Sem/Aniprod = Animal Product
+* +Sem/Body = Bodypart
+* +Sem/Body-abstr = siellu, vuoig?a, jierbmi, (noe man kan bruke i fysisk aktivitet som en kroppsdel, f.eks. synet, stemmen, etc.)
+* +Sem/Build = Building
+* +Sem/Build-room = Room in a building, typically place to be
+* +Sem/Buildpart = Part of Bulding, like the wall
+* +Sem/Cat = Category
+* +Sem/Clth = Clothes
+* +Sem/Clth-jewl = Jewelery
+* +Sem/Clthpart = part of clothes, boallu, sávdnji...
+* +Sem/Ctain = Container
+* +Sem/Ctain-abstr = Abstract container like bank account
+* +Sem/Ctain-clth = Soft container, like a rucksack
+* +Sem/Curr = Currency like dollár, Not Money
+* +Sem/Date = Date
+* +Sem/Dance = Dance
+* +Sem/Dir = Direction like GPS-kursa
+* +Sem/Domain = Domain like politics, reindeerherding (a system of actions)
+* +Sem/Drink = Drink
+* +Sem/Dummytag = Dummytag
+* +Sem/Edu = Educational event
+* +Sem/Event = Event
+* +Sem/Feat = Feature, like Árvu. (noe som man kan ha mye eller lite av, det kan være en skala og som er på en måte karakteriserende. (høyde, vekt, farge, kreativitet etc.)
+* +Sem/Feat-phys = Physiological feature, ivdni, fárda
+* +Sem/Feat-psych = Psychological feauture
+* +Sem/Feat-measr = Psychological feauture
+* +Sem/Fem = Female name
+* +Sem/Food = Food
+* +Sem/Food-med = Medicine
+* +Sem/Fruit = Fruits, vegetables, seeds, nuts
+* +Sem/Furn = Furniture
+* +Sem/Game = Game
+* +Sem/Geom = Geometrical object
+* +Sem/Group = Animal or Human Group
+* +Sem/Hum = Human
+* +Sem/Hum-abstr = Human abstract
+* +Sem/Hum-prof = Human professional
+* +Sem/Ideol = Ideology
+* +Sem/ID = ID
+* +Sem/Lang = Language
+* +Sem/Mal = Male name
+* +Sem/Mat = Material for producing things
+* +Sem/Measr = Measure
+* +Sem/Money = Has to do with money, like wages, not Curr(ency)
+* +Sem/Obj = Object
+* +Sem/Obj-clo = Cloth
+* +Sem/Obj-cogn = Cloth
+* +Sem/Obj-el = (Electrical) machine or apparatus
+* +Sem/Obj-ling = Object with something written on it
+* +Sem/Obj-rope = flexible ropelike object
+* +Sem/Obj-surfc = Surface object
+* +Sem/Org = Organisation
+* +Sem/Part = Feature, oassi, bealli
+* Perc = (perception) er noe man kan kjenne i en begrensa periode og som er forårsaka av noe utenifra, f.eks. Mus lea ballu. Mus lea bavččas.
+* +Sem/Perc-cogn =
+* +Sem/Perc-emo = Emotional perception
+* +Sem/Perc-phys = Physical perception
+* +Sem/Perc-psych = Psychological perception
+* +Sem/Phonenr = Telephone number
+* +Sem/Plant = Plant
+* +Sem/Plantpart = Plant part
+* +Sem/Plc = Place
+* +Sem/Plc-abstr = Abstract place
+* +Sem/Plc-elevate = Place
+* +Sem/Plc-line = Place
+* +Sem/Plc-water = Place
+* +Sem/Pos = Position (as in social position job)
+* +Sem/Process = Process
+* +Sem/Prod = Product
+* +Sem/Prod-audio = Audio product
+* +Sem/Prod-cogn = Cognition product
+* +Sem/Prod-ling = Linguistic product
+* +Sem/Prod-vis = Visual product
+* +Sem/Rel = Relation
+* +Sem/Route = Route
+* +Sem/Rule = Rule or convention
+* +Sem/Semcon = Semantic concept
+* +Sem/Sign = Sign (e.g. numbers, punctuation)
+* +Sem/Sport = Sport
+* +Sem/State =
+* +Sem/State-sick = Illness
+* +Sem/Substnc = Substance, like Air and Water
+* +Sem/Sur = Surname
+* +Sem/Symbol = Symbol
+* +Sem/Time = Time
+* +Sem/Time-clock = Time clock
+* +Sem/Tool = Prototypical tool for repairing things
+* +Sem/Tool-catch = Tool used for catching (e.g. fish)
+* +Sem/Tool-clean = Tool used for cleaning
+* +Sem/Tool-it = Tool used in IT
+* +Sem/Tool-measr = Tool used for measuring
+* +Sem/Tool-music = Music instrument
+* +Sem/Tool-write = Writing tool
+* +Sem/Txt = Text (girji, lávlla...)
+* +Sem/Veh = Vehicle
+* +Sem/Wpn = Weapon
+* +Sem/Wthr = The Weather or the state of ground
+* +Sem/Year - year (i.e. 1000 - 2999), used only for numerals
+
+### semtags to be checked
+
+### Multiple Semantic tags:
+* +Sem/Act_Fruit
+* +Sem/Act_Group Activity and Group
+* +Sem/Act_Hum Activity and Human
+* +Sem/Act_Plc   A persons job is an activity, and a place as well
+* +Sem/Act_Route Activity and Route, ie johtolat
+* +Sem/Act_Tool-it
+* **+Sem/Amount_Build**   Amount and Building
+* +Sem/Amount_Semcon
+* +Sem/Ani_Body-abstr_Hum
+* +Sem/Ani_Build
+* +Sem/Ani_Buildpart
+* +Sem/Ani_Build_Hum_Txt
+* +Sem/Ani-fish
+* +Sem/Ani_Group
+* +Sem/Ani_Group_Hum
+* +Sem/Ani_Group_Prod-vis
+* +Sem/Ani_Hum
+* +Sem/Ani_Hum_Plc
+* +Sem/Ani_Hum_Time
+* +Sem/Ani_Plc
+* +Sem/Ani_Plc_Txt
+* +Sem/Ani_Time
+* +Sem/Ani_Veh
+* +Sem/Aniprod_Hum
+* +Sem/Aniprod_Obj-clo
+* +Sem/Aniprod_Perc-phys
+* +Sem/Aniprod_Plc
+* +Sem/Aniprod_Plc_Route
+* +Sem/Body-abstr_Feat-psych
+* +Sem/Body-abstr_Prod-audio_Semcon
+* +Sem/Body_Body-abstr
+* +Sem/Body_Clth
+* +Sem/Body_Food
+* +Sem/Body_Group_Hum
+* +Sem/Body_Group_Hum_Time
+* +Sem/Body_Hum
+* +Sem/Body_Mat
+* +Sem/Body_Measr
+* +Sem/Body_Obj_Tool-catch
+* +Sem/Body_Plc
+* +Sem/Body_Plc-elevate
+* +Sem/Body_Time
+* +Sem/Build_Clthpart
+* +Sem/Build_Edu_Org
+* +Sem/Build_Event_Org
+* +Sem/Build_Obj
+* +Sem/Build_Org
+* +Sem/Build_Route
+* +Sem/Build-room_Cat_Ctain_Mat
+* +Sem/Buildpart_Cat
+* +Sem/Buildpart_Cat_Ctain
+* +Sem/Buildpart_Cat_Ctain_Mat
+* +Sem/Buildpart_Ctain
+* +Sem/Buildpart_Ctain_Mat
+* +Sem/Buildpart_Ctain_Obj
+* +Sem/Cat_Group_Hum
+* +Sem/Cat_Group_Hum_Plc
+* +Sem/Cat_Edu
+* +Sem/Cat_Obj
+* +Sem/Clth-jewl_Curr
+* +Sem/Clth-jewl_Curr_Obj
+* +Sem/Clth-jewl_Curr_Obj_Org
+* +Sem/Clth-jewl_Fruit
+* +Sem/Clth-jewl_Money
+* +Sem/Clth-jewl_Plant
+* +Sem/Clth_Hum
+* +Sem/Clth_Obj-clo
+* +Sem/Ctain-abstr_Org
+* +Sem/Ctain-clth_Plant
+* +Sem/Ctain-clth_Veh
+* +Sem/Ctain_Feat-phys
+* +Sem/Ctain_Furn
+* +Sem/Ctain_Plc
+* +Sem/Ctain_Tool
+* +Sem/Ctain_Tool-measr
+* +Sem/Curr_Org
+* +Sem/Dance_Org
+* +Sem/Dance_Prod-audio
+* +Sem/Domain_Food-med
+* +Sem/Domain_Hum
+* +Sem/Domain_Prod-audio
+* +Sem/Drink_Plant
+* +Sem/Edu_Event
+* +Sem/Edu_Geom
+* +Sem/Edu_Group_Hum
+* +Sem/Edu_Hum
+* +Sem/Edu_Mat
+* +Sem/Edu_Org
+* +Sem/Event_Food
+* +Sem/Event_Hum
+* +Sem/Event_Plc
+* +Sem/Event_Plc-elevate
+* +Sem/Event_Time
+* +Sem/Feat-measr_Plc
+* +Sem/Feat-phys_Tool-write
+* +Sem/Feat-phys_Veh
+* +Sem/Feat-phys_Wthr
+* +Sem/Feat-psych_Hum
+* +Sem/Feat-psych_Plc
+* +Sem/Food_Obj-surfc
+* +Sem/Feat_Plant
+* +Sem/Food_Perc-phys
+* +Sem/Food_Plant
+* +Sem/Food_Sign
+* +Sem/Fruit_Hum
+* +Sem/Game_Obj-play
+* +Sem/Geom_Hum_Plc
+* +Sem/Geom_Obj
+* +Sem/Group_Hum
+* +Sem/Group_Hum_Org
+* +Sem/Group_Hum_Plc
+* +Sem/Group_Hum_Plc-abstr
+* +Sem/Group_Hum_Prod-vis
+* +Sem/Group_Hum_Time
+* +Sem/Group_Org
+* +Sem/Group_Prod-vis
+* +Sem/Group_Sign
+* +Sem/Group_Txt
+* +Sem/Hum_Lang
+* +Sem/Hum_Lang_Plc
+* +Sem/Hum_Lang_Time
+* +Sem/Hum_Mat_Tool
+* +Sem/Hum_Obj
+* +Sem/Hum_Org
+* +Sem/Hum_Sign
+* +Sem/Hum_Part
+* +Sem/Hum_Plant
+* +Sem/Hum_Plc
+* +Sem/Hum_Sign
+* +Sem/Hum_Tool
+* +Sem/Hum_Tool-it = Human
+* +Sem/Hum_Veh
+* +Sem/Hum_Wthr
+* +Sem/Lang_Tool
+* +Sem/Mat_Plant
+* +Sem/Mat_Txt
+* +Sem/Measr_Obj_Time
+* +Sem/Measr_Sign = Sign (e.g. numbers, punctuation)
+* +Sem/Measr_Time
+* +Sem/Money_Obj
+* +Sem/Money_Org
+* +Sem/Money_Part
+* +Sem/Money_Txt
+* +Sem/Obj-play
+* +Sem/Obj-play_Sport
+* +Sem/Obj_Semcon
+* +Sem/Obj_Sign
+* +Sem/Obj_Veh
+* +Sem/Clth-jewl_Org
+* +Sem/Obj_Symbol
+* +Sem/Org_Rule
+* +Sem/Org_Buildpart 
+* +Sem/Org_Txt
+* +Sem/Org_Veh
+* +Sem/Part_Prod-cogn
+* +Sem/Part_Substnc
+* +Sem/Perc-emo_Wthr
+* +Sem/Plant_Plantpart
+* +Sem/Plant_Tool
+* +Sem/Plant_Tool-measr
+* +Sem/Plc-abstr_Rel_State
+* +Sem/Plc-abstr_Route
+* +Sem/Plc_Pos
+* +Sem/Plc_Route
+* +Sem/Plc_Semcon
+* +Sem/Plc_State
+* +Sem/Plc_Substnc
+* +Sem/Plc_Substnc_Wthr
+* +Sem/Plc_Time
+* +Sem/Plc_Tool-catch
+* +Sem/Plc_Txt
+* +Sem/Plc_Wthr
+* +Sem/Prod-audio_Txt
+* +Sem/Prod-cogn_Txt
+* +Sem/Semcon_Txt
+* +Sem/Obj_State
+* +Sem/Substnc_Wthr
+* +Sem/Plc_Time_Wthr
+* +Sem/Time_Wthr
+* +Sem/State-sick_Substnc
+* +Sem/Obj-ling_Obj-surfc
+* +Sem/Org_Prod-audio
+* +Sem/Org_Prod-cogn
+* +Sem/Org_Prod-vis
 
 ## Punctuation
 
