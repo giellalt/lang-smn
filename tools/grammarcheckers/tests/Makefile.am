@@ -11,6 +11,7 @@ TESTS=\
 	interferens_celkkuuh2.yaml \
 	interferens_celkkuuh3.yaml \
 	interferens_celkkuuh4.yaml \
+	interferens_celkkuuh5.yaml \
 	msyn-adj-attr-pred.yaml \
 	msyn-adj-gen-nom.yaml \
 	msyn-adj-pred-attr.yaml \
@@ -102,6 +103,7 @@ XFAIL_TESTS=\
 	interferens_celkkuuh2.yaml \
 	interferens_celkkuuh3.yaml \
 	interferens_celkkuuh4.yaml \
+	interferens_celkkuuh5.yaml \
 	msyn-adj-attr-pred.yaml \
 	msyn-advl-plloc-sgcom.yaml \
 	msyn-agr-sg3-pl3.yaml \
