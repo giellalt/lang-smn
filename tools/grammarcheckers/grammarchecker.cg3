@@ -2347,7 +2347,8 @@ COPY:msyn-agr-sg3-du3 (Du3 &SUGGEST) EXCEPT (Sg3 &msyn-agr-sg3-du3) TARGET (V  &
 
 #!!  **Agreement rule:** msyn-agr-sg3-pl3, Subject to the left, *80 puátá/puáđah*
 ADD:xmsyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET V IF
-	(*-1C NUM BARRIER Nom OR V OR (")") OR S-BOUNDARY LINK NOT 0 Sem/ID OR Sem/Year OR ("<[A-ZÁÄČŠ].*>r") OR Gen LINK NOT 1 PUNCT)
+	(*-1C NUM BARRIER Nom OR V OR (")") OR S-BOUNDARY LINK NOT 0 Sem/ID OR Sem/Year OR ("<[A-ZÁÄČŠ].*>r") OR Gen LINK NOT 1 PUNCT OR Sem/Measr_Time)
+	(NEGATE 0 MOD-ASP LINK *1 TV + Inf BARRIER Acc LINK *1 EOS OR S-BOUNDARY BARRIER Acc)
 	(0 V + Sg3);
 COPY:msyn-agr-sg3-pl3 (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-agr-sg3-pl3) TARGET (V &msyn-agr-sg3-pl3);
 #% 80 puátá.
@@ -2359,9 +2360,10 @@ COPY:msyn-agr-sg3-pl3 (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-agr-sg3-pl3) TARGET (V &m
 #!!  **Agreement rule:** msyn-agr-sg3-pl3, Subject to the left, *80 puátá/puáđah*
 ADD:xmsyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET (V Sg3) IF
 	(NEGATE 0 (V Pl3))
+	(NEGATE 0 MOD-ASP LINK *1 TV + Inf BARRIER Acc LINK *1 EOS OR S-BOUNDARY BARRIER Acc)
         (*-1 (Loc Pl) - Prop  BARRIER NOT-ADV-PCLE - N LINK -1 (".*%"r) + Num + Arab OR ("peeli") + Sg + Nom LINK NOT 1 PUNCT);
 COPY:msyn-agr-sg3-pl3 (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-agr-sg3-pl3) TARGET (V &msyn-agr-sg3-pl3);
-
+#$ Kalle cuobbuu kalga cummâlistiđ # ok
 
 ADD:xmsyn-agr-pl3-sg3 (&msyn-agr-pl3-sg3) TARGET (V Pl3) IF
 	(NEGATE 0 (V Sg3))
