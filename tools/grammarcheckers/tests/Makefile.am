@@ -105,7 +105,6 @@ XFAIL_TESTS=\
 	interferens_celkkuuh4.yaml \
 	interferens_celkkuuh5.yaml \
 	msyn-adj-attr-pred.yaml \
-	msyn-advl-plloc-sgcom.yaml \
 	msyn-agr-sg3-pl3.yaml \
 	msyn-dynamic-compounds.yaml \
 	msyn-extsubj-ill-nom.yaml \
