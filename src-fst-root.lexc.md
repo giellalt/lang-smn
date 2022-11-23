@@ -559,15 +559,15 @@ All Err-tags must have a normative form as lemma except Err/Lex
 
 The prefix (before "/") is **Cmp**.
 
-* **+Cmp/Hyph** compounds
-* **+Cmp/SgNom** compounds
-* **+Cmp/PlNom** compounds
-* **+Cmp/Attr** compounds
-* **+Cmp/SgGen** compounds
-* **+Cmp/PlGen** compounds
-* **+Cmp/SplitR** compounds
-* **+Cmp/Sh** compounds
-* **+Cmp** This tag to mark there is a compound.
+* **+Cmp/Hyph** compounds where first part ends in -
+* **+Cmp/SgNom** compounds where first part is Sg Nom
+* **+Cmp/PlNom** compounds where first part is Pl Nom
+* **+Cmp/Attr** compounds where first part is Attr
+* **+Cmp/SgGen** compounds where first part is Sg Gen
+* **+Cmp/PlGen** compounds where first part is Pl Gen
+* **+Cmp/SplitR** compounds where first part is a split compound hmm
+* **+Cmp/Sh** compounds where first part is a short form
+* **+Cmp** This tag to mark there is a compound. It comes after the Cmp/xxx tag.
 
 ### These tags govern the parts of the compound
 
