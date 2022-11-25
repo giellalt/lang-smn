@@ -631,7 +631,7 @@ SET NOT-A-CC = WORD - A-CC ;
 # This set was removed, for a good reason?
 SET NOT-A-ADV = WORD - A - Adv OR ("meid") ;
 
-LIST CONCORD-A = "taggaar" (".*lâš"r) ; # 
+LIST CONCORD-A = "pyeri" "taggaar" (".*lâš"r) (".*sâš"r) (".*vâš"r) ; # 
 
 LIST NOMINAL-A = "guoktilaš" "lámis" "kuáskulâš" ("suddo" Der/lasj) "viijses";
 
@@ -2861,10 +2861,10 @@ COPY:msyn-v-sg1-prfprc (PrfPrc &SUGGEST) EXCEPT (Ind Prs Sg1 &msyn-v-sg1-prfprc)
 
 #!! ### Subjects
 
-ADD:xmsyn-subj-gen-nom (&msyn-subj-gen-nom) TARGET N IF
+ADD:xmsyn-subj-gen-nomx (&msyn-subj-gen-nom) TARGET N IF
 	(NOT -1 ("jyehi"))
-	(0C N + Sg + Gen LINK *-1 BOS BARRIER Ind OR NUM)
-	(NEGATE 0 HUMAN)
+	(0C N + Sg + Gen LINK NOT 0 Nom LINK *-1 BOS BARRIER Ind OR NUM)
+	(NEGATE 0 HUMAN OR Nom)
 	(NEGATE 0 VAHKKU-DUR LINK -1 TIME-A)
 	(1 V + Sg3)
 	(NEGATE 1 ("leđe") LINK 1 MANNER-A LINK 1 TV)
