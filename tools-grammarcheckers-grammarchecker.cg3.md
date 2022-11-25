@@ -834,6 +834,8 @@ Here, the verb should be plural. The interference comes from Finnish e-sentences
 
 **Agreement rule:** msyn-v-sg3-conneg *Sun ij puávtáččij/puávtáččii vyelgiđ.*
 
+### Lii Adj Sg Nom + object
+
 ### Singular objects
 
 #### Plain object of TV in Nom shall be Acc
