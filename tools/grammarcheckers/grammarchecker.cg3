@@ -314,6 +314,7 @@ LIST Sem/Year = Sem/Year ;                  #!! - Der/Year
 
 LIST <RE-Ill-Ani> = <RE-Ill-Ani> ;
 
+LIST <TH-Inf> = <TH-Inf> ;
 
 #!! ### Names
 
@@ -2925,6 +2926,17 @@ COPY:msyn-v-sg3-conneg (ConNeg &SUGGEST) EXCEPT (Sg3 &msyn-v-sg3-conneg) TARGET 
 #$ Sun ij puávtáččii vyelgiđ.
 
 
+
+
+#!! ### Lii Adj Sg Nom + object
+
+ADD:msyn-obj-nom-acc (&msyn-obj-nom-acc) TARGET N + Sg + Nom IF 
+	(*-1 ("leđe" Ind Sg3)) 
+	(1 A + <TH-Inf>)
+	 (2 V + TV + Inf );
+	 
+COPY:msyn-obj-nom-acc (Acc &SUGGEST) EXCEPT (Nom &msyn-obj-nom-acc) TARGET &msyn-obj-nom-acc ;
+ADDRELATION:msyn-obj-nom-acc  ($2) (A) FROM (-1 N LINK 0 (&msyn-obj-nom-acc)) ; 
 
 
 #!! ### Singular objects
