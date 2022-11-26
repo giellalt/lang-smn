@@ -131,8 +131,6 @@ ANAR DUBAI DUBAI-plc DUBAI-sur MAKI
 
 * **LEXICON POHE-plc** similar to VAHE
 
-* **LEXICON POHE-ani** similar to VAHE
-
 * **LEXICON POHE-mal** similar to VAHE
 
 * **LEXICON MOKKE** similar to ALGE
