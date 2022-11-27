@@ -6635,6 +6635,8 @@ ANAR DUBAI DUBAI-plc DUBAI-sur MAKI
 
 * **LEXICON TUPE-ani**  Similar to NJUNE
 
+ *LEXICON TUPE-mal**  Similar to NJUNE
+
 * **LEXICON VASE-plc**  Similar to VAHE
 
 * **LEXICON VASE**
