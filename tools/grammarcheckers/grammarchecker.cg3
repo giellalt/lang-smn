@@ -135,6 +135,7 @@ SET PUNCT = PPUNCT - QMARK ;  #!! PUNCT
 LIST COMMA = "," ;  #!! COMMA
 LIST ¶ = ¶;   #!! ¶
 LIST ? = ? ;  #!! ?
+LIST MWE = MWE ; #!! MWE
 
 
 
@@ -3591,5 +3592,14 @@ ADD:syn-OVS-OSV (&syn-OVS-OSV) TARGET VFIN IF (*-1 Acc BARRIER NOT-ADV-PCLE) (1 
 MOVE:syn-OVS-OSV (V &syn-OVS-OSV) AFTER (1 (N Nom) OR (Pron Nom)) ;
 ADDRELATION:syn-OVS-OSV ("$2") (N) FROM (*1 (V &syn-OVS-OSV));
 
-#!! The gramamrchecker file ends here.
+#!! The grammarchecker file ends here.
 
+
+	# ====================== #
+		AFTER-SECTIONS
+	# ====================== #
+
+	# Tag removal rules to prepare for generation
+
+SUBSTITUTE (MWE) (*) TARGET MWE ;
+	## Guollefestivála geassemánus ja Riddu Riđđu suoidnemánus.
