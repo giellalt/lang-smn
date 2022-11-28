@@ -9879,6 +9879,7 @@ PUNCT
 COMMA
 ¶
 ?
+MWE
 
 ### Tags for POS sub-categories
 
@@ -10807,7 +10808,7 @@ The rule is: 2-6 + gensg, 7- + par
 
 ## Syntactical rules
 
-The gramamrchecker file ends here.
+The grammarchecker file ends here.
 
 * * *
 <small>This (part of) documentation was generated from [tools/grammarcheckers/grammarchecker.cg3](https://github.com/giellalt/lang-smn/blob/main/tools/grammarcheckers/grammarchecker.cg3)</small>
