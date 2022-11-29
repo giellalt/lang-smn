@@ -121,17 +121,13 @@ XFAIL_TESTS=\
 	msyn-rel-sg-pl.yaml	 \
 	msyn-top-nom-acc.yaml \
 	msyn-v-actio-sg1.yaml \
-	neg-adj-attr-pred.yaml \
 	neg-adj-gen-nom.yaml \
-	neg-advl-plloc-sgcom.yaml \
 	neg-agr-imprt-sg3.yaml \
 	neg-agr-other-pl3.yaml \
-	neg-agr-sg3-pl3.yaml \
 	neg-attr-com-gen.yaml \
 	neg-det-nom-acc.yaml \
 	neg-extsubj-ill-nom.yaml \
 	neg-extv-sg3-pl3.yaml \
-	neg-msyn-agr-pl3-sg3.yaml \
 	neg-ncomple-ess-sgill.yaml \
 	neg-obj-acc-ill.yaml \
 	neg-obj-sgnom-sgacc.yaml \
@@ -140,7 +136,6 @@ XFAIL_TESTS=\
 	neg-posspl-acc-gen.yaml \
 	neg-posspl-ill-gen.yaml \
 	neg-subj-gen-nom.yaml \
-	neg-v-actio-sg1.yaml \
 	ovdamearkkat.yaml \
 	science.yaml \
 	syn-OVS-OSV.yaml \
