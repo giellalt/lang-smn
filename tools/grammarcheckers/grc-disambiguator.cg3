@@ -2634,7 +2634,8 @@ REMOVE:chalme ("čuálmi") IF (0 ("čalme") + N + Pl + Gen)(*0 Sem/Body);
 
 #!! ### Verb or Noun?
 
-
+#Deike njuolggadus leđe: leeđi
+REMOVE:NOTleeđi ("leeđi") IF ( 0 (Sg Acc) OR (Sg Gen)) ;
 
 SELECT:VFINSg3TEST VFIN-NOT-IMPRT + Sg3 IF (*-1 NP-HEAD-SG-NOM BARRIER NOT-NPMODADV LINK NOT 0 VFIN LINK NEGATE *-1 VFIN BARRIER S-BOUNDARY)(NEGATE *1 VFIN BARRIER S-BOUNDARY)(NEGATE 0 Pl3 LINK *-1 NP-HEAD-PL-NOM)(NEGATE 0 Gen LINK 1 Po) ;
 	#$ Fápmu čiehká iežas luottaid.
