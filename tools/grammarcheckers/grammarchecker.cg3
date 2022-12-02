@@ -1,8 +1,8 @@
 # -*- cg-pre-pipe: "hfst-tokenise -g ../../tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst" -*-
 # Divvun & Giellatekno - open source grammars for Sámi and other languages
-# Copyright © 2000-2016 UiT The arctic University of Norway 
+# Copyright © 2000-2016 UiT The arctic University of Norway
 # http://giellatekno.uit.no & http://divvun.no
-# 
+#
 # This program is free software; you can redistribute and/or modify
 # this file under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
@@ -13,10 +13,10 @@
 # Other licensing options are available upon request, please contact
 # giellatekno@uit.no or feedback@divvun.no
 
-#   ================================================================== 
+#   ==================================================================
 #!!       I N A R I    S A A M I    G R A M M A R    C H E C K E R
-#!! ================================================================== 
-#   ================================================================== 
+#!! ==================================================================
+#   ==================================================================
 
 #  Sámi language technology 2003-2017, UiT The arctic University of Norway #
 
@@ -24,7 +24,7 @@
 #!! # Development setup
 
 #!! Compiling the grammarchecker:
- 
+
 #!! ```
 #!! cd $GTLANGS/lang-smn
 #!! ./autogen.sh
@@ -34,10 +34,10 @@
 #!! make dev
 #!! ```
 
-#!!   Then edit/test as follows:   
+#!!   Then edit/test as follows:
 
 #!! ```
-#!! echo "Sun ij puátá." | sh modes/smngram.mode  
+#!! echo "Sun ij puátá." | sh modes/smngram.mode
 #!! ```
 
 #!! There are very many modes in the `modes` folder, look at them.
@@ -61,25 +61,25 @@
       # Disambiguation rules
        # One-cohort disambiguation - cycle 0
        # Local disambiguation - cycles 1 and 2
-       # Cycle 1a: Special cases 
+       # Cycle 1a: Special cases
        # Cycle 1b: Cleaning up after the special cases
-       # Cycle 2: Other local disambiguation 
+       # Cycle 2: Other local disambiguation
        # Mapping of COMP-CS<, CC and CS
        # More diambiguation
-       # Verb mappings 
+       # Verb mappings
        # Disambiguating nouns
-       # Mainly mapping-rules   
+       # Mainly mapping-rules
        # Disambiguating nouns
   	   # Case disambiguation
-       # Cycle 3: Global disambiguation 
-	   # Cycle 4: Syntactic disambiguation 
+       # Cycle 3: Global disambiguation
+	   # Cycle 4: Syntactic disambiguation
 	   # Cycle 5: Post-syntactic morphological disambiguation
 
 # =============================== #
 #!! # Delimiters, tags and sets
 # =============================== #
 
-DELIMITERS = "<.>" "<!>" "<?>" "<...>" "<¶>" sent ; 
+DELIMITERS = "<.>" "<!>" "<?>" "<...>" "<¶>" sent ;
 #!! Sentence delimiters are the following: <.> <!> <?> <...> <¶>
 
 #PARENTHESES = "<$(>" "<$)>" "<$[>" "<$]>" "<${>" "<$}>" "<$«>" "<$»>" ;
@@ -94,10 +94,10 @@ SETS
 #!! in the syntactic analysis. The next section, **Sets**, contains sets defined
 #!! on the basis of the tags listed here, those set names are not visible in the output.
 
-#!! ### Tags declared as single-membered LISTs 
+#!! ### Tags declared as single-membered LISTs
 
 #!! #### Beginning and end of sentence
-LIST BOS = (>>>) (<s>) ;  #!! BOS 
+LIST BOS = (>>>) (<s>) ;  #!! BOS
 LIST EOS = (<<<) (</s>) ; #!! EOS
 
 # We define end of clause and beginning of clause in a way so that the file
@@ -130,7 +130,7 @@ LIST CLB = CLB ;	    #!! CLB
 LIST LEFT = LEFT ;	    #!! LEFT
 LIST RIGHT = RIGHT ;    #!! RIGHT
 LIST QMARK = """ ; # "  #!! QMARK
-LIST PPUNCT = PUNCT ;   #!! PPUNCT 
+LIST PPUNCT = PUNCT ;   #!! PPUNCT
 SET PUNCT = PPUNCT - QMARK ;  #!! PUNCT
 LIST COMMA = "," ;  #!! COMMA
 LIST ¶ = ¶;   #!! ¶
@@ -171,7 +171,7 @@ LIST Sg = Sg ;   #!! Sg
 LIST Du = Du ;   #!! Du
 LIST Pl = Pl ;   #!! Pl
 LIST Cmp/SplitR = Cmp/SplitR ;	   #!! Cmp/SplitR
-LIST Cmp/SgNom = Cmp/SgNom ; #!! Cmp/SgNom 
+LIST Cmp/SgNom = Cmp/SgNom ; #!! Cmp/SgNom
 LIST Cmp/SgGen = Cmp/SgGen ; #!! Cmp/SgGen
 LIST PxSg1 = PxSg1 ;	   #!! PxSg1
 LIST PxSg2 = PxSg2 ;	   #!! PxSg2
@@ -193,7 +193,7 @@ LIST Ord = Ord ;		   #!! Ord
 LIST Qst = Qst ;		   #!! Qst
 
 LIST IV = IV ; #!! IV
-LIST TV = TV ; #!! TV 
+LIST TV = TV ; #!! TV
 LIST Prt = Prt;				   #!! Prt
 LIST Prs = Prs ;			   #!! Prs
 LIST Ind = Ind ;			   #!! Ind
@@ -412,7 +412,7 @@ SET NOT-FAUXV = FMAINV OR OBJ + V OR ADVL + V ; #!! - NOT-FAUXV = FMAINV OR OBJ 
 
 #!! The following work after the mapping rules for verbs:
 
-SET SYN-V = FMAINV OR FAUXV OR V + SUBJ OR OBJ + V OR ADVL + V OR (V @>N) OR (V @N<) OR (V @A<) ; #!! - SYN-V 
+SET SYN-V = FMAINV OR FAUXV OR V + SUBJ OR OBJ + V OR ADVL + V OR (V @>N) OR (V @N<) OR (V @A<) ; #!! - SYN-V
 LIST @X = @X ;    #!! - @X (this last one for unassigned functions)
 
 
@@ -423,7 +423,7 @@ LIST @X = @X ;    #!! - @X (this last one for unassigned functions)
 
 #!! Sets containing sets of lists and tags
 
-#!! This part of the file lists a large number of sets based partly upon the tags defined above, and 
+#!! This part of the file lists a large number of sets based partly upon the tags defined above, and
 #!! partly upon lexemes drawn from the lexicon.
 #!! See the sourcefile itself to inspect the sets, what follows here is an overview of the set types.
 
@@ -431,12 +431,12 @@ LIST @X = @X ;    #!! - @X (this last one for unassigned functions)
 
 #!! ### Sets for Single-word entities
 
-#!! The set **go** for *ko*, , and the set INITIAL for initial letters 
+#!! The set **go** for *ko*, , and the set INITIAL for initial letters
 
-LIST go = "ko" ; 
+LIST go = "ko" ;
 LIST INITIAL = "a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m"
         "n" "o" "p" "q" "r" "s" "t" "u" "v" "w" "x" "y" "z"
-        "á" "æ" "ø" "å" "ö" "ä" ; 
+        "á" "æ" "ø" "å" "ö" "ä" ;
 
 
 #!! ### Sets for word or not
@@ -485,7 +485,7 @@ SET NOT-PRFPRC = WORD - PrfPrc ;  #!!= - @CODE@
 
 
 #!! ### Sets for person
-# - - - - 
+# - - - -
 LIST SG1-V = (V Sg1) ;  #!! SG1-V
 LIST SG2-V = (V Sg2) ;  #!! SG2-V
 LIST SG3-V = (V Sg3) ;  #!! SG3-V
@@ -532,11 +532,11 @@ LIST VNOTPL3 = Sg1 Sg2 Sg3 Du1 Du2 Du3 Pl1 Pl2 ;
 #!! LEDE, LEAN, LEAT, ...
 LIST LEDE = "leđe" ("leeđi" N Sg Gen) ;
 SET LEAN = ("leđe" Prs Sg1) + Ind OR ("leđe" V Prt ConNeg);
-SET LEAT = ("leđe" Prs Pl1) + Ind OR ("leđe" V Prs Pl3) + Ind OR 
+SET LEAT = ("leđe" Prs Pl1) + Ind OR ("leđe" V Prs Pl3) + Ind OR
  ("leđe" V Prs Sg2) + Ind OR ("leđe" V Inf) OR ("leđe" V Prs ConNeg) + Ind ;
 
 SET LEAT-FIN-NOT-IMPRT = ("leđe" V) - Imprt;
- 
+
 LIST PRFPRC-V = (V PrfPrc) ;
 LIST LEATPRFPRC = ("leđe" PrfPrc) ;
 SET PRC-NOT-LEAT = PRFPRC-V - LEATPRFPRC ;
@@ -574,8 +574,8 @@ SET PRON-DU = MOAI OR DOAI OR SOAI ;
 
 SET PPRON-NOT-SII = MUN OR DON OR SON OR MOAI OR DOAI OR SOAI OR MII-PERS OR DII ;
 
-LIST PPRON-GEN = (Sg1 Gen) (Sg2 Gen) (Sg3 Gen) (Du1 Gen) (Du2 Gen) (Du3 Gen) 
-	(Pl1 Gen) (Pl2 Gen) (Pl3 Gen) (p1 sg gen) (p2 sg gen) (p3 sg gen) (p1 du gen) (p2 du gen) (p3 du gen) 
+LIST PPRON-GEN = (Sg1 Gen) (Sg2 Gen) (Sg3 Gen) (Du1 Gen) (Du2 Gen) (Du3 Gen)
+	(Pl1 Gen) (Pl2 Gen) (Pl3 Gen) (p1 sg gen) (p2 sg gen) (p3 sg gen) (p1 du gen) (p2 du gen) (p3 du gen)
 	(p1 pl gen) (p2 pl gen) (p3 pl gen) ;
 
 SET PPRON-NOT-GEN = (Pron Pers) - PPRON-GEN ;
@@ -597,10 +597,10 @@ LIST THIRD-PX = PxSg3 PxDu3 PxPl3 ;
 LIST SG-PX = PxSg1 PxSg2 PxSg3 ;
 LIST DU-PX = PxDu1 PxDu2 PxDu3 ;
 LIST PL-PX = PxPl1 PxPl2 PxPl3 ;
-	
+
 LIST PX = PxSg1 PxDu1 PxPl1 PxSg2 PxDu2 PxPl2 PxSg3 PxDu3 PxPl3 ;
 
-LIST DU-NR = Du1 Du2 Du3 ; 
+LIST DU-NR = Du1 Du2 Du3 ;
 
 SET NOT-SG-PRON = DU-PRON OR PL-PRON ;
 
@@ -613,7 +613,7 @@ LIST PRESENTATION-PRON = "mihheen" "kihheen" "mii" "kii" "miinii" "kiinii" ;
 
 
 # Adjective sets
-#!! ### Adjectival sets and their complements 
+#!! ### Adjectival sets and their complements
 # -------------------------------------
 #!! LEX-A, A-CASE, ...
 
@@ -632,16 +632,16 @@ SET NOT-A-CC = WORD - A-CC ;
 # This set was removed, for a good reason?
 SET NOT-A-ADV = WORD - A - Adv OR ("meid") ;
 
-LIST CONCORD-A = "pyeri" "taggaar" (".*lâš"r) (".*sâš"r) (".*vâš"r) ; # 
+LIST CONCORD-A = "pyeri" "taggaar" (".*lâš"r) (".*sâš"r) (".*vâš"r) ; #
 
 LIST NOMINAL-A = "guoktilaš" "lámis" "kuáskulâš" ("suddo" Der/lasj) "viijses";
 
 LIST ADVMOD-A = "ármuttes" "čuvtij" "hirmâd"  ; # adjectives that may modify adverbs
 
 LIST OLLU = "ollu" "eenâs" ;
- 
+
  # and many others
- 
+
 #!! ### Adverbial sets and their complements
 # ------------------------------------
 #!! LEX-ADV, LEX-ADV-DE, ...
@@ -654,23 +654,23 @@ SET NOT-ADV-N          = NOT-ADV - N;
 SET NOT-ADV-PCLE       = NOT-ADV - Pcle ;
 SET NOT-ADV-INDEF      = NOT-ADV - Indef ;
 SET NOT-ADV-PCLE-ILL-LOC-COM = WORD - Adv - Pcle - Ill - Loc - Com;
-SET NOT-A-ADV-PCLE = WORD - Pcle - A - Adv OR ("meid") ; # 
+SET NOT-A-ADV-PCLE = WORD - Pcle - A - Adv OR ("meid") ; #
 
 LIST MOVT = "govt" ("maht" Adv) "maht" "mot" "mov" "maht" ;
 
 LIST MO-MANge = "tondiet" "kuás" "gokko" "kost" "kuus" "govt" ("maht" Adv) "maggaar" "maht" "mane" ("mane" Adv) "maht" "mot" "mov" "maht" ("nugo" @CVP) (V Qst);
- 
-SET MO = MO-MANge - Foc/gin ; 
+
+SET MO = MO-MANge - Foc/gin ;
 
 LIST QUANTOR-ADV = "ennuv" ("maŋgâ" Num Pl Nom) ("maŋgâ" Pron Indef Pl Nom) ;
 
  # Introduce finite clauses.
- 
+
 LIST PLACE-ADV =  "bajábealde" "davábealde" "lagabus" "máttabealde" "nuorttabealde" "oarjjábealde" "oarjjabealde" "olggobeale" "vuolábealde" ;
-# There will usually be a Gen in front. 
+# There will usually be a Gen in front.
 
 LIST DOPPE = "paijeen" "paijeel" "tast" "taa" "tääbbin" "tääbbin" "tast" "tiebbin" "tuo" "tiegu" "tobbeen" ("tovben" Adv) "tuohun" "tuođe" "olgon" ;
-# ABBRdverbs with a locativic form, but don´t get Loc as a tag. 
+# ABBRdverbs with a locativic form, but don´t get Loc as a tag.
 
 LIST DOHKO = "pajas" "báldii" "teehi" "tiehu" "tuohunteehin" "tovhon" "kyevtkooskân" "kuorân" "máádás" "olgos" "pááikán" "siisâ" "vyebdimnáál" ;
 # Adverbs with a illativic form, but they don´t get Ill as a tag.
@@ -687,28 +687,28 @@ LIST XGO = "mahte" "dugo" "nugo" "seammaládjego" "seammaláhkáigo" ;
   # Compounds
 LIST SEAMMAX = "seamma_ládje" "seamma_láhkái" ;
   # Those combine with go
-  
+
 LIST MADE = "mađe" "mađi" ;
-LIST DADE = "dađe" "dađi" ; 
-  
+LIST DADE = "dađe" "dađi" ;
+
 SET CRD = COMMA OR CC OR NEGFOC OR XGO OR ("/") OR ("-") OR DADE ;
 	# coordinators
-	
-SET NOT-CRD = WORD - CRD ; 
-	
-SET LCRD = @CNP OR ("asdfasdf") ; 
+
+SET NOT-CRD = WORD - CRD ;
+
+SET LCRD = @CNP OR ("asdfasdf") ;
     # local coordinator
 SET GCRD = @CVP OR ("sadfasdf") ;
     # global coordinator
-    
+
 SET CRD2 = (@CNP) OR COMMA OR NEGFOC OR XGO OR ("/") OR ("-") OR DADE ;
     # AFTER LCRD vs. GCRD disambiguation
-    
+
 #!! ### Sets for adverbs that have lookalikes
 # -------------------------------------
- #!! Here come some adverbs that have identical twins in other POS. 
+ #!! Here come some adverbs that have identical twins in other POS.
  #!! If these are found in Adv contexts, we treat them as adverbs.
- 
+
 
 
 LIST LACCAT-ADV = "absolutlâš" "nuváhánnáá" "aitosaččat" "aktiivlâš" "julgâlâš" "analogalaš" "automaatlâš" "álgoálgosaš" "álgovuolggalaš" "ärbivuáválâš" "beaivválaččat" "biologalaš" ("buhttenriekti" Der/lasj) ("puustav" Der/lasj) "kirjálávt" "etnisâš" "táválâš" "duođalaččat" ("dutkanpolitihkka" Der/lasj) "epitáválâš" "eahpeformálalaš" "eahpekritihkalaš" "eahpevirggálaš" "eaktodáhtolaččat" "ekologalaš" "ekologálaš" "ekonomâlâš" "eksplisihtalaš" "elektronlâš" ("epidiđ" VAbess) "eettisâš" "etymologalaš" "áámmátlâš" "fonehtalaš" "fonologalaš" "fonotávttalaš" "hámálâš" ("fysiologa" Der/lasj) "gaskamearálaš" "anolâs" "tohálâš" "geográfalaš" "gielalaš" ("girkoriekti" Der/lasj) "globálalaččat" ("gorri" Der/lasj) "govttolaš" "haaldâtlâš" "historjálâš" "ideologalaš" "iešheanálaš" "implisihtalaččat" "ihásávt" "jeavddalaččat" ("jietnadatoahppa" Der/lasj) "riehtiopâlâš" "konkreetlâš" "kriittâlâš" "kronologalaš" "kulturhistorjjálaš" "kulturpolitihkalaš" "kultuvrralaš" "logihkalaš" ("luohtu" Der/lasj) "máŋggafágalaš" "mekánalaš" ("metoda" Der/lasj) "moralalaš" "morálalaš" "morfologalaš" "aalmuglâš" "negatiivlâš" "njálmmálaččat" "njuolgguslaččat" "oaiveáššálaš" "almos" "ollágin" "oktasaččat" "oktilaš" "ollásávt" "oppalaččat" "optimalalaččat" "ovttabealálaš" "ovttajienalaš" "oovtâmielâlâš" "pedagogalaš" "pooliitlâš" "anolâs" "prinsihpalaš" ("priváhtariekti" Der/lasj) "profehtalaš" "psykologalaš" "ráfálaččat" ("reálapolitihkka" Der/lasj) "riektehistorjjálaš" "vuoigâlâš" "almugijkoskâsâš" "sámegielalaš" "riikkagottálaš" "ruđâlâš" "ruumâšlâš" "sámepolitihkalaš" "sekundáralaččat" "semantihkalaš" "servodatávkkálaš" ("siviilariekti" Der/lasj) "sosiálalaš" ("stáhtapolitihkka" Der/lasj) "strategalaš" "teknisâš" "teorehtalaš" "topográfalaš" ("válduäšši" Der/lasj) "virgálâš" "virolaš" ;  #!! LACCAT-ADV
@@ -753,18 +753,18 @@ LIST NOT-REAL-V = (Actio Nom) (Actio Gen) (Actio Loc) (Actio Com) PrsPrc ;
 
 SET REAL-V = V - NOT-REAL-V  ;
 	#!! V is all readings with a V tag in them, REAL-V should
-	#!! be the ones without an N tag following the V.  
+	#!! be the ones without an N tag following the V.
 	#!! The REAL-V set thus awaits a fix to the preprocess V ... N bug.
-            
+
 SET LEX-V = V - DER-V ;
        # VERB but not DER-V
- 
+
  # The set REAL is smaller than COPULAS, made for verbs with PrfPrc complements: Seammás REAL-COPULAS son dovdan iežas...
 LIST REAL-COPULAS = "täiđiđ" "leđe" "sättiđ" "vaijeeđ" ;
 
 #!! - The set COPULAS is for predicative constructions
 LIST COPULAS = "täiđiđ" "karttâđ" "leđe" "sättiđ" "šoddâđ" "orroođ" "vaijeeđ" ;
- #  "pääcciđ" ? 
+ #  "pääcciđ" ?
  # 'Dáidit' can appear without 'leat'.
 
 SET NOT-COP-V = V - COPULAS ;
@@ -775,28 +775,28 @@ LIST MOD-ASP = "áiguđ" "lijkkuđ" "täiđiđ" "tarbâšiđ" "ferttiđ" "kolgâ
 
 LIST AUX-OR-MAIN = "áiguđ" "älgiđ" "peessâđ" "puáttiđ" "pyehtiđ" "kolgâđ" "halijdiđ" "mättiđ" "enittiđ" "orroođ" "vaijeeđ";
 
- # These verbs can take arguments, so they do not belong in the AUX group, 
- # but they are nevertheless mapped to (@+FAUXV). 
+ # These verbs can take arguments, so they do not belong in the AUX group,
+ # but they are nevertheless mapped to (@+FAUXV).
  # Added "älgiđ" to the group (Lene) - Made rules for "puáttiđ" which  sometimes can be AUX
- # Magga (1982: 120): áigut, dáidit, deaivat, fertet, galgat, lávet, máhttit, oažžut, sáhttit, soaitit, veadjit - in some of the meanings 
- # Halvhjelpeverb: álgit, berret, dohkket, gártat, heivet, liigut, šaddat - in some of the meanings 
- 
+ # Magga (1982: 120): áigut, dáidit, deaivat, fertet, galgat, lávet, máhttit, oažžut, sáhttit, soaitit, veadjit - in some of the meanings
+ # Halvhjelpeverb: álgit, berret, dohkket, gártat, heivet, liigut, šaddat - in some of the meanings
+
 SET AUX = COPULAS OR Neg OR MOD-ASP OR AUX-OR-MAIN ;
- 
+
 SET NOT-AUX = WORD - AUX ; #
-SET NOT-AUX-ADV = WORD - AUX - Adv ; # 
+SET NOT-AUX-ADV = WORD - AUX - Adv ; #
 SET NOT-AUX-V = V - AUX ; # This is former V-NOT-AUX
- # The set of verbs that cannot be auxiliaries. 
+ # The set of verbs that cannot be auxiliaries.
 			  # Does not include AUX-OR-MAIN.
 SET VFIN-NOT-AUX = VFIN - AUX ;
 
 SET MAIN-V = V - COPULAS - Neg - MOD-ASP OR ("orroođ") ;
- 
+
 # All active verbs with a TV tag, including AUX-OR-MAIN.
 
 LIST V-TRANS = (V TV) (Der/tt V)  (Der/Caus V) ;
 
- 
+
 SET TRANS-ACT-NOT-AUX-V =  V-TRANS - Der/Pass - AUX ;
 
 #!! TRANS-V is the set for verbs really taking objects
@@ -807,14 +807,14 @@ SET TRANS-V = V-TRANS - Der/Pass + REAL-V ;
 #SET TRANS-V = V-TRANS - Der/Pass - (Actio Nom) - (Actio Gen)  - (Actio Loc) -  (Actio Com) - PrsPrc ;
 
 #!! - Sets for verbs choosing oblique objects or adverbials
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+# - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # bargat "čoallut" "purrâđ" lohkat "gazzat" vuoššat
 #!! - **STVLIST** is the list of strictly transitive verbs. In the rules, refer not to STVLIST, but to the set STV defined below.
 
 LIST STVLIST = (Der/h V) (Der/Caus V) "adeliđ" "amašit" "kevttiđ" "algâttiđ" "ánsášiđ" "arvâlâddâđ" "ervidiđ" "myös" "asâttiđ" "avžuđ" "luptiđ" "poossâđ" "peerrâđ" "piemmâđ" "pieijâđ" "turmella" "turmella" "orostittiđ" "siäiludiđ" ("pääcciđ" der_h) "puáldiđ" "cuvnâđ" "purâttiđ" ("purrâđ" der_h) "pyerettiđ" "pyehtiđ" "pyerediđ" "estiđ" "coggalit" ("tuvkkâliđ" Der/l) "celkkiđ" "cegget" "olášuttiđ" "kiinni" "čielgâsmittiđ" ("čielgâđ" der_d) "čielgiđ" "čuággiđ" "čuávdiđ" "čuággiđ" "naggiđ" ("čuážžuđ" der_h) "čuoppâđ" "lyödä" "čuávuliđ" ("čuávvuđ" der_l) "ettâđ" "tovâttiđ" ("toohâđ" der_h) "toohâđ" "tähidiđ" "táttuđ" "tarbâšiđ" "tarbâšiđ" "tarkkuđ" "västidiđ" "teivâđ" "tiäduttiđ" "tevdiđ" "tiettiđ" "hoivata" "suovvâđ" "doahttalit" "toimâttiđ" ("toimâđ" der_h) "lijkkuđ" ("doallat" der_h) "doallat" "pyehtiđ" "konkr." "tuhhiittiđ" ("tuhhiđ" der_h) "tubdâđ" "dovddahit" ("tubdâđ" der_h) "lujittaa" "epidiđ" "omâstiđ" "eaktudit" "iällááttiđ" "elettiđ" ("eelliđ" der_h) "iävtuttiđ" "iävtuttiđ" "faallâđ" "uážžuđ" "fievridiđ" "huámášiđ" "huolâttiđ" ("fuollat" der_h) "huámášiđ" "karveđ" "gaskkustit" "gazzat" "kááijuđ" "kaattâđ" "vaattâđ" "raijiđ" "kavnâđ" ("gávnnadit" Sg1) ("gávnnadit" Sg2) ("gávnnadit" Sg3) ("kavnâđ" der_d sg) "geahčadit" ("keččâđ" der_d) "keččâđ" "keessiv" "geatnegahttit" "kevttiđ" "kieđâvuššâđ" "luukku" "koddeđ" "koččođ" "käskeä" ("koččođ" der_d) "kuškâdiđ" "luávdiđ" "goldit" "vahtiđ" ("olla" der_h) "kuoddâliđ" "kyeddiđ" "kyeđđiđ" "kuáđuttiđ" "tutkâđ" "guorrat" "jhk" ("guoskat" der_h) "hábmet" "skappuđ" "omistaa" "lakata" ("lakkađ" der_h) "heivehit" ("käydä" der_h) "hilgođ" "addiđ" "keččâliđ" "iskâđ" ("keččâliđ" der_d) "jeahkit" "olla" ("reissiđ" der_h) "juksat" "jyehiđ" "juolludit" "karttiđ" "lágidit" "láhčit" "laiguuttiđ" "loahpahit" ("nuuhâđ" der_h) "lopediđ" "luptiđ" "hupenevasta" "hupenevasta" ("hupenevasta" der_h) "luoitit" "monâttiđ" "merhâšiđ" "mielddisbuktit" "movttiidahttit" ("movttiidit" der_ahtti) "muddet" "muštâliđ" "mušteđ" "unohtamisen" "kutsua" "kutsua" "kutsua" "lujittaa" "lujittaa" "njiellâđ" "paikasta" "uáiniđ" "uástiđ" "merhâšiđ" "oamastit" "uážžuđ" "peividiđ" "ođastit" "ollašuhttit" "organiseret" "asia" "ovdediđ" "ovdâstiđ" "ovdediđ" "prioriteret" "raijiđ" "ravviđ" "ráfáidahttit" "rávhuiduttiđ" "toohâđ" "cuvnâđ" "ravviđ" "paikasta" "särkeä" "sakŋadit" "vuolgâttiđ" "sáhtostit" "tuáivuđ" "seaguhit" "siäiludiđ" ("siäiluđ" der_h) "visásmittiđ" "anoa" "siskeldiđ" "siskeldiđ" "suojâliđ" "suovvat" "kepidiđ" "vađastit" "vahaduttiđ" "aibâšiđ" "väldiđ" "valjiđ" "várret" "ansoja" "váttásmahttit" "vijđediđ" "vuhtiiváldit" "vuáđudiđ" "vuođđudallat" "vuohttit" "vyeittiđ" "vuojuhit" ("vuodjut" der_h) "vuoruhit" "vuostáiváldit" "vuosttaldit" "vyebdiđ" ;
 
 	# Strictly transitiv-verbs - a start. This set is ment as a help choosing Acc or Gen. Example: "Mun borren eatni kafeás." - there is Gen, no Acc, even if the verb is transitive. That´s why "purrâđ" is not in this set.
-	# These verbs: "addit", "uážžuđ" and "uážžuđ" can, when it´s about sex, be without object: "Son oaččui gonagasa bártnis." 
+	# These verbs: "addit", "uážžuđ" and "uážžuđ" can, when it´s about sex, be without object: "Son oaččui gonagasa bártnis."
 
 SET STRICT-TV-V = STVLIST + V - Der/Pass OR ("čielgat") + Der/d - Der/Pass  ; # because of apertium is čielgat here. I don't understand why it doesn't function inside the set.
 
@@ -824,24 +824,24 @@ SET STRICT-TRANS-V = STRICT-TV-V + REAL-V ;
 
 LIST LOC-V = "ávkkástallat" "ballat" "peessâđ" "beroštit" "kieldiđ" "bihtit" "ceavzit" "dinet" "tulkkâđ" "eastadallat" "eastadit" "heiviđ" "huolâttiđ" "fuollat" "karveđ" "gažadit" "lakkađ" "estiđ" "ilbmat" "jtak" "jearralit" "luohpat" "máinnašit" "mainâstiđ" "nohkkot" "oassádallat" "oassálastit" "spiehkastit" "vaibâđ" "váruhit" "västidiđ" "veaddit" ;
 
-		#Note that "huolâttiđ" obviously has two homonymous variants: 
+		#Note that "huolâttiđ" obviously has two homonymous variants:
 		#fuolahit1+Acc, fuolahit2+Loc
 
 LIST COM-V = "algâttiđ" "älgiđ" "arvâlâddâđ" "árvvohuššat" "ávkašuvvat" "bálddastahttit" "bálddalastit" "bártašuvvat" "birgehallat" "birget" "bivvat" "buohtastahttit" "čoahkkinastit" "deaivvadit" "tevdiđ" "digaštallat" "doarrut" "duhkoraddat" "elettiđ" "flirtet" "gávnnadit" "gárvodit" "giksašuvvat" "gilvalit" "gulahallat" "gulaskuddat" "hilbošit" "joatkit" "juogadit" "jyehiđ" "láhttet" "leaikkastallat" "lohpádaddat" "lohpádallat" "lonuhit" "meannudit" "malssidit" "molssodit" "náitalit" "uástiđ" "oktiibidjat" "oahpásmuvvat" "ovttasbargat" "ovttastahttit" "rahčat" "reivvestaddat" "riidalit" "riiddáskit" "rohcošit" "ságastit" "seaguhit" "servvoštallat" "servvoštaddat" "soabadit" "käydä" "soahtat" "soardit" "stálostallat" "stoahkat" "šiehtadallat" "šiehtadit" "šiehttat" "veahkehit" "veardidit" "vijđediđ" "vrd" ; #!!= - @CODE@
- 
+
 		#Note that "leaikkastallat" has two homonymous variants:
 		#leaikkastallat1 (IV), leaikkastallat2+Com
 
 LIST ILL-V = "aibâšiđ" "älgiđ" "asâiduđ" "pokkiđ" "peessâđ" "čokánistiđ" "čujottiđ" ("čuoppâđ" Ex/V Ex/TV Der/Pass) "vaikuttiđ" "teivâđ" "turvâstiđ" "tuuttâđ" "kuoskâđ" "hárjániđ" "irgediđ" "irgástallat" ("juáhuđ" Ex/V Der/Pass V) "juohhuđ" ("jyehiđ" Ex/V Ex/TV Der/Pass) "oskođ" "lijkkuđ" "lyettiđ"  "vyelgiđ" "maccâđ" "mieđettiđ" "miettâđ" "moonnâđ" "njeeijâđ" "enittiđ" "oskođ" "peessâđ" "riemmâđ" "valmiđ" "uásálistiđ" "uápásmuđ" "suttâđ" "vaikuttiđ" "västidiđ" "vyelgiđ" "vaiguttiđ" "vuáđuduđ" ; #!!= - @CODE@
-# Removed since they also take Acc: "kuullâđ" 
-	
+# Removed since they also take Acc: "kuullâđ"
+
 
 LIST TRANSL-V = "jápmit" "duššat" "hávkat" "náitalit" "gaskkalduvvat" "nohkat" "goarránit" "heahpanit" "boakčánit" "šlundut" "ráigánit" "vuollánit" "gopmánit" "fuotnánit" "roahppánit" "reakčanit" "bieđganit" "luoddanit" "guvggodit" "liegganit" "suorganit" "báhkkanit" "cuovkanit" "hedjonit" "lohppet" "goikat" "galbmot" "goallut" "ruostut" "buoidut" "guvggodit" "suvrut" "suddâdiđ" ; #!!= - @CODE@
 
   # Taken from Helander (2001) p. 89, might be useful in the future as those verbs typically take humans and places in illative case.
-  
+
 LIST REKS-V = "áibbašit" "teivâđ" "dorvvastit" "tuuttâđ" "käyttää" "hárjániđ" "oskođ" "lijkkuđ" "mieđettiđ" "enittiđ" "valmiđ" "käydä" "searvat" "vyelgiđ" "beroštit" "kieldiđ" "bihtit" "ceavzit" "dinet" "tulkkâđ" "eastadallat" "eastadit" "huolâttiđ" "fuollat" "geargat" "lakkađ" "luohpat" "oassálastit" "váikkuhit" "váruhit" ; #!!= - @CODE@
-# This set is for giving infitives @ADVL after the verb.  
+# This set is for giving infitives @ADVL after the verb.
 
 LIST ACC-LOC-V = "kieldiđ" "čuávvuđ" "earuhit" "kieldiđ" "jtak" ; #!!= - @CODE@
 
@@ -854,13 +854,13 @@ LIST MIELDE-V = "addit" "bidjat" "täiđiđ" "leđe" "uástiđ" "uážžuđ" "v�
 # Son attii girjji mielde.
 
 LIST TIME-ADVL-V = "áhásiđ" "ássat" "porgâđ" "ajasta" "anoa" "eelliđ" "fievridiđ" "guohtut" "joatkit" "láddet" "máttááttiđ" "peividiđ" ; #!!= - @CODE@
- 
+
     # Do not take members of the time set as an object
-    
+
 LIST TIMEOBJECT-V = "addit" "kevttiđ" "arvâlâddâđ" "bálvalit" "čuávvuđ" "tevdiđ" "diŋgot" "iävtuttiđ" "fátmmastit" "vaattâđ" "kavnâđ" "kevttiđ" "ajasta" "guhkidit" "hábmet" "tekstiä" "juolludit" "lasettiđ" "liigudit" "loahpahit" "loaktit" "markeret" "meridiđ" "molsut" "oanidit" "uážžuđ" "käydä" "šiehttat" "várret" "vijđediđ" ; #!!= - @CODE@
 
-    # might take time as an object - verbs which are not members of PLACE-V: 
-    
+    # might take time as an object - verbs which are not members of PLACE-V:
+
 LIST DURATION-V = "áhásiđ" "porgâđ" "ajasta" "čuoigâđ" "eelliđ" "gollat" "guohtut" "leđe" "väzziđ"; #!!= - @CODE@
 
 LIST POINT-IN-TIME-V = "árrit" "orostittiđ" "estiđ" "cakkadit" "cakkastallat" "lijkkuđ" "doallat" "duostut" "dustet" "eastadit" "kieldiđ" "goahcat" "heađuštit" "estiđ" ; #!!= - @CODE@
@@ -868,8 +868,8 @@ LIST POINT-IN-TIME-V = "árrit" "orostittiđ" "estiđ" "cakkadit" "cakkastallat"
 LIST PEIVI = "vuossargâ" "vástuppeivi" ;
 
 LIST ROUTE-ADVL-V = "puáttiđ" "čuoigâđ" ; #!!= - @CODE@
- 
-    # bevegelse langsmed noe, innafor et bestemt område   
+
+    # bevegelse langsmed noe, innafor et bestemt område
 LIST ROUTEOBJECT-V = "ásahit" "bidjat" "botnjat" "basuhit" "pyerediđ" "čielgâsmittiđ" "čuovvulit" "čielgiđ" "čuárvuđ" "čurvet" "dieđihit" "lujittaa" "duorggastit" "kevttiđ" "geahpedit" "geahpidit" "gudnejahttit" "tutkâđ" "kieđâvuššâđ" "kyeđđiđ" "gilljut" "heahtit" "čuárvuđ" "huikkádit" "juoigâđ" "lávluđ" "luuhâđ" "loahpahit" "meridiđ" "máidnut" "lujittaa" "njulget" "máttááttiđ" "toohâđ" "sivdnidit" "tutkâđ" "kepidiđ" "válmmaštit" "vurket" ; #!!= - @CODE@
 
 LIST HAB-V = "puáttiđ" "leđe" "goallut" "sorjođ" "jápmit" "šoddâđ" ; #!!= - @CODE@
@@ -879,51 +879,51 @@ LIST HAB-V = "puáttiđ" "leđe" "goallut" "sorjođ" "jápmit" "šoddâđ" ; #!!
 # - - - - - - -
 
 LIST INF-V = "enittiđ" "áhásiđ" "áiguđ" "älgiđ" "asâttiđ" "paggiđ" "povčâstiđ" "peessâđ" "lijkkuđ" "anoa" "pallâđ" "puáttiđ" "koččođ" "čokkáđ" "čokánistiđ" "čokániđ" "pisániđ" "čuožâstiđ" "čuárvuđ" "čurggodit" ("ettâđ" Der/Pass) "tovâttiđ" "táttuđ" "täiđiđ" "tarbâšiđ" "miäruštâllâđ" "suovvâđ" "tuáivuđ" "huáputtiđ" "oskeldâttâđ" "ferttiđ" "huámášiđ" "huolâttiđ" "kolgâđ" "pyehtiđ" "vaattâđ" "gárrut" "karttâđ" "iskâđ" "kiergâniđ" "kennigâttiđ" "vaijeeđ" "koččođ" "happiittiđ" "halijdiđ" "hárjániđ" "laaviđ" "lijkkuđ" "morániđ" "vyelgiđ" "mättiđ" "movttiidittiđ" "mušteđ" "vaijeeđ" "nabdeđ" "máttááttiđ" "uápásmiđ" "máttáđ" "uážžuđ" "enittiđ" "riemmâđ" "sättiđ" "seahtit" "áánnuđ" "sättiđ" "suovvâđ" "šoddâđ" "maaššâđ" "vaijeeđ" "vyelgiđ" "vuálániđ" "vyerdiđ"; #!!= - @CODE@
- 
+
 
 LIST ACC-INF-V = "anoa" "čuárvuđ" "tovâttiđ" "suovvâđ" "koččođ" "movttiidahttit" "anoa" "suovvat" ; #!!= - @CODE@
 
  # These are verbs taking accusative objects and infinitives at the same time;
- 
+
  # a subset of INF-V.
 
 
 LIST OPRED-V = "alidit" "kevttiđ" "algâttiđ" "ásahit" "porgâđ" "bidjat" "ceavzit" "ettâđ" "dahkaluddat" "toohâđ" "lijkkuđ" "tubdâđ" "dulkot" "karttâđ" "kevttiđ" "keččâđ" "käskeä" "koččođ" "kvalifiseret" "málet" "meroštallat" "navdit" "uáiniđ" "merhâšiđ" "visásmittiđ" "väldiđ" "valjiđ" "rábmot" "vihahit" ; #!!= - @CODE@
 
  # Verbs that occur with objects that have secondary predicates.
- 
+
 LIST OKTII-V = ("puállu" Der/huvva) "goallostit" "nuhostiđ" "bidjat" "kiinni" "suddâdiđ" "käydä" "bidjat" "iskeä" "keessiv" "kuullâđ" "rehkenastit" "ordnet" "käydä" "gávnnadit" "heivehit" "toimâđ" "keččâliđ" "jhkin" "seaguhit" "sorrot" ; #!!= - @CODE@
 
- # Danger: This list could be too long, in certain respects. 
+ # Danger: This list could be too long, in certain respects.
  # TODO: Think of counter examples, i.e. sentences where we have these verbs, but where oktii is not an adverbial.
- 
+
 LIST VGEN-V-TRIGGER = "peessâđ" "bidjat" "bijadit" "anoa" "puáttiđ" "pyehtiđ" "čuággiđ" "čuávvuđ" "pyehtiđ" "duolmmadit" "uážžuđ" "heiviđ" "kolgâđ" "girdit" "gálašit" "kavnâđ" "goastit" "kuáđuttiđ" "gurgalit" "gárgidit" "jávkkihit" "joatkit" "reissiđ" "jorgut" "loahpahit" "vyelgiđ" "mátkkoštit" "njahkalit"  "njoammut" "oasálastit" "rasttildit" "kaksijalkaisista" "sihkkelastit" "váccašit" "vájuldit" "vánddardit" "viekkimpiergâs" "viehkalit" "viežžat" "vyeijiđ" "vyelgiđ" ; #!!= - @CODE@
 
 LIST VGEN-V = "jäämmiđ" "jorgođ" "juoigâđ" "karodiđ" "kiergâniđ" "kirdeđ" "kuullâđ" "kyeddiđ" "lávluđ" "likkođ" "nijtteđ" "njaahâđ" "njurgođ" "orroođ" "passeeđ" "pelkkiđ" "piškođ" "povvâstiđ" "povvustiđ" "puáttiđ" "purrâđ" "raccastiđ" "reissiđ" "sárnuđ" "snjirgođ" "suuhâđ" "tuárgistiđ" "uáiniđ" "uáđđiđ" "uigâđ" "uuccâđ" "väzziđ" "vuoijâđ" "vuoššâđ" "vyeijiđ" "vyeittiđ" "čäälliđ" "čárvuđ" "čiärguđ" "čiärruđ" "čuárvuđ" "čuárvuđ" "čuoigâđ" ;
 # "bárdnat" "civkit" "duorrat" "fáiput" "gállit" "geavzut" "gievvut" "gilljut" "heahpanaddat" "holvut" "luoibmat" "murdit" "njoammut" "oahkut" "rohkut" "sáđđat" "sihkkelastit" "soabbut" "speažžut" "suoibut" "vuohčut" "šlivgut" "šloahtat"
 
 
- 
+
 LIST SOURCE-V = "vaattâđ" ; #!!= - @CODE@
 
-     
+
 LIST MOVEMENT-V = "ádjit" "peessâđ" "puáttiđ" "čuoigâđ" "čuoiggadit" "fárret" "finadit" "finihit" "heiviđ" "gálašit" "gállit" "girdit" "johttát" "reissiđ" "jorahallat" "vyelgiđ" "mátkkoštit" "njoammut" "njuiket" "enittiđ" "riidet" "kaksijalkaisista" "sáhtostit" "sihkkelastit" "soabbulit" "soabbut" "šloahtat" "váccašit" "vádjolit" "vájaldit" "vájuldit" "vánddardit" "väzziđ" "viehkalit" "viekkimpiergâs" "viežžat" "vuodjalit" "vuoijâđ" "vyeijiđ" "vuojadit" "vuojâččiđ" "vyelgiđ" ; #!!= - @CODE@
  # These verbs typically combine with place adverbials in the genitive case @ADVL
  # (i.e. not accusative) I am not sure if the verbs in the second line do that too. They denote movement anyway.
  # These verbs take GEOGRAPHICAL-PLACE in Acc @OBJ.
- 
+
 LIST JOHTIT = "čuoigâđ" "čuoiggadit" "gálašit" "gállit" "girdit" "johttát" "reissiđ" "mátkkoštit" "njoammut" "riidet" "kaksijalkaisista" "sihkkelastit" "soabbulit" "soabbut" "šloahtat" "váccašit" "vádjolit" "vájaldit" "vájuldit" "vánddardit" "väzziđ" "viehkalit" "viekkimpiergâs" "vuodjalit" "vuoijâđ" "vyeijiđ" "vuojadit" "vuojâččiđ" ; #!!= - @CODE@
 
-  
+
 LIST HUMAN-ACTIVITY-V = "äštiđ" "enittiđ" "hammiđ" "herviđ" "hoittáđ" "huksiđ" "huškođ" "išediđ" "juksâđ" "juuhâđ" "jyehiđ" "jyehiđ" "kárvudâttâđ" "kästiđ" "kavkkâđ" "keččâđ" "koddeđ" "koččođ" "kuálástiđ" "kuárruđ" "kuldâliđ" "kuškâdiđ" "lahtâdiđ" "lehâstiđ" "liäibuđ" "luávdiđ" "luoddiđ" "máttááttiđ" "merkkiđ" "mittediđ" "naaijâđ" "nijtteđ" "njuoskâdiđ" "pääččiđ" "passeeđ" "piäluštiđ" "piäluštiđ" "pieijâđ" "piemmâđ" "puáldiđ" "puovtâdiđ" "putestiđ" "pyehtiđ" "registeeriđ" "sáhháđ" "salttiđ" "sárguđ" "sárguđ" "sárnuđ" "sikkođ" "suáittiđ" "suáittiđ" "terppâđ" "tevdiđ" "tiervâttiđ" "toohâđ" "tuáijuđ" "tubdâstiđ" "tuommiđ" "uástiđ" "uigâđ" "uuccâđ" "vipšâđ" "vooijâđ" "vuástáväldiđ" "vuáđudiđ" "vuoidâđ" "vuolgâttiđ" "vuorkkiđ" "vuoššâđ" "vyebdiđ" "vyeittiđ" "čäälliđ" "čäittiđ" "čuággiđ" "čuávdiđ" "čuoggiđ" "čuoppâđ" ;  #!!= - @CODE@
 # Cf. also: "beaskidit" "botket" "dearpalit" "devdnet" "doarrádallat" "doidit" "dolastit" "duvdilit" "ferdnet" "gáhkket" "gilvit" "goivet" "gottihit" "huškkohallat" "jugahit" "loaiddastit" "murret" "rátkit" "rekruteret" "ruohkkat" "siktet" "skihtardit" "skoalkalit" "vuoiddadit"
 
 
-  # in contrast to abstract "activities" and static verbs. 
+  # in contrast to abstract "activities" and static verbs.
   # According to the rules choosing Loc or Com, all activity-verbs do not select TOOL, ABSTR-TOOL, CONCEPT or HUMAN in (Pl Loc).
-  
+
 LIST BODY-ACTIVITY-V = "purrâđ" "čiekčat" "čujuhit" "čuorbmat" "kuullâđ" "jhk" "jorahit" "lihkahit" "lihkastahttit" "luptiđ" "njávkkadit" "njávkkastit" "uáiniđ" "seavvit" ; #!!= - @CODE@
-  
+
     # These verbs can also have BODY as a tool. The verb-set belongs to the superset of dynamic-verbs, so they will also work with TOOL and ABSTR-TOOL in Com. "Giehta" is in both the TOOL-set and the BODY-set because it selects in Com to a lot of verbs.
 
 LIST PLACING-ACTIVITY-V = "bidjat" "buonjostit" ; #!!= - @CODE@
@@ -938,7 +938,7 @@ LIST DADJAT = "naggiđ" "ettâđ" "luuhâđ" "muštâliđ" ; #!!= - @CODE@
 # This set is for  cealkkavástta: DADJAT + Acc + Inf or PrfPrc
 
 LIST HUPMAT = "mainâšiđ" "merhâšiđ" "njurgođ" "sámástiđ" "särnidiđ" "sárnuđ" "sárnuđ" "sárnuđ" "savâstâllâđ" "savâstâllâđ" "savâstâllâđ" "savâstiđ" "sovkkâliđ" "suomâstiđ" "tigáštâllâđ" "tuoldâđ" "šuáláđ" ;  #!!= - @CODE@
-# "dáikit" "dárostit" "digaštit" "háladit" "logaldallat" "máidnut" "muitaladdat" "ságastaddat" "sámistit" "sártnodit" "solžat" 
+# "dáikit" "dárostit" "digaštit" "háladit" "logaldallat" "máidnut" "muitaladdat" "ságastaddat" "sámistit" "sártnodit" "solžat"
 
 # These should not take HUMAN as object
 
@@ -946,7 +946,7 @@ LIST VERBAL-ACTIVITY = "arvâlâddâđ" "celkkiđ" "čielgiđ" "naggiđ" "basuhi
 
 SET VERBAL-ACTIVITY-V = VERBAL-ACTIVITY OR HUPMAT ;
 
-#Under construction! (as most of the other LISTs) 
+#Under construction! (as most of the other LISTs)
     # According to the rules choosing Loc or Com, the these verbs select TOOL, ABSTR-TOOL, CONCEPT or HUMAN in (Pl Loc).
     # SATNI in Com
 
@@ -994,22 +994,22 @@ LIST HUMAN-LOC-V = "kevttiđ" "pääcciđ" "kevttiđ" "käskeä" "kutsua" ; #!!=
     # According to the rules choosing Loc or Com, these verbs choose only (Sg Com) if CONCEPT or HUMAN or "sääni".
     # Abstract
 
-#!! - **PLACE-V** Those get only not locative if the target is a member TOOL, ABSTR-TOOL or ANIMATE or CONCEPT. Selects more locatives than ONLY-PLACE-LOC-V 
+#!! - **PLACE-V** Those get only not locative if the target is a member TOOL, ABSTR-TOOL or ANIMATE or CONCEPT. Selects more locatives than ONLY-PLACE-LOC-V
 LIST PLACE-V = "ássat" "buolvvastallat" "buolvvastit" "čippostallat" "čokkáđ" "čohkahit" "čuážžuđ" "čuččodit" "morihit" "gullát" "morránit" "orroođ" "orodit" "stuorrut" "veallát" "veallahit" ; #!!= - @CODE@
-  
+
 LIST ABSTR-PLACE-V = "váilut" "käydä" "hiehpat" "siskeldiđ" "käydä" "šiehttat"; #!!= - @CODE@
     # Verbs without agent
 
   # TIME/AIGODAT are locative
-  
+
 LIST STATE-V = "eelliđ" ; #!!= - @CODE@
 
-  
+
 LIST REM-WITH-PARTS = "gaikkihit" ; #!!= - @CODE@
 
-    # Belongs to the DYNAMIC-V. They also take PARTS in comitative case. 
-    
-  
+    # Belongs to the DYNAMIC-V. They also take PARTS in comitative case.
+
+
 LIST PERCEPTION-V = "áicat" "tubdâđ" "ealvit" "huámášiđ" "huámášiđ" "kuullâđ" "haksit" "huobmát" "huomihit" "uáiniđ" ; #!!= - @CODE@
 
 LIST ILLNESS-V = "buohcat" "buohccát" ;  #!!= - @CODE@
@@ -1017,7 +1017,7 @@ LIST ILLNESS-V = "buohcat" "buohccát" ;  #!!= - @CODE@
 
 LIST ADV-PX-V = "keččâđ" ; #!!= - @CODE@
 	# son geahččá birrasis
-  
+
 # HIERARCHY:
 
 #SET STATIC-V = PLACE-V OR EMOTION-V OR PERCEPTION-V ;
@@ -1026,7 +1026,7 @@ SET DYNAMIC-V = ACTIVITY-V OR MOVEMENT-V OR VERBAL-ACTIVITY-V OR HUMAN-AGENT-V O
 
     # According to the rules choosing Loc or Com, dynamic-verbs do not select TOOL, ABSTR-TOOL or CONCEPT in (Pl Loc).
     # Human becomes either Loc or Com depending on its subset membership.
-    
+
 SET N-TIMEOBJECT-V = MOVEMENT-V OR ACTIVITY-V OR VERBAL-ACTIVITY-V OR INTELLECTUAL-ACTIVITY-V OR PLACE-V ;
 
     # Those verb sets in addition to TIMEADVERBIAL-V do not take TIME expressions as objects
@@ -1049,17 +1049,17 @@ LIST LEXICALISED-PASS-V = "kevttuđ" ; #!!= - @CODE@
 LIST COM-ADV = "fárrolaga" "oovtâst" "oktanaga" "ovttamielas" "oovtâst" "ovttasráđiid" "searválagaid" "searválaga" ;
 
     # Could also be perceived as particles within complexs verbs.
-    
+
 # others: vuhti combines with váldit - Com
 
 # Other adverb sets
-# - - - - - - - - - 
+# - - - - - - - - -
 
 LIST GRADE-ADV =  "aaibâs" "meendu" ("eštuu" Adv) ("eenâb" Adv) "epitáválâš" "hirmâd" "eromâš" "ila" "hirmâd" ("maht" Adv) ("melgâd" Adv) "masa" "kukken" "muhtun_muddui" "naa" "oalle" "melgâd" ("oles" Adv) "čuuvtij" ("oovtnáál" Adv) ("ucánjii" Adv) ("ucánjii" Adv) ("ucánjii" Adv) "vehá" "ucánjii" "ucánjii" "ucánjii" "melgâd" ;
 
 LIST PLURALIZER = "puoh" "puohlágán" "ereslágán" "jiešlágán" "kuohtuuh" ;
     # Singular nouns can have a plural form combined with those
-  
+
 LIST BUOT = "puoh" ;
 
 #!! ### Adjective sets
@@ -1070,15 +1070,15 @@ LIST ADJCOMP-WITH-PL = "áášánkullee" "acâkkistee" "adeleijee" "áijáá" "�
 # Lexical valency sets
 # - - - - - - - - - - -
     # here we have adjectives according to their semantic properties
-    
-LIST NUMAG-A = "čeppi" "viššâl" "läški" ;    
+
+LIST NUMAG-A = "čeppi" "viššâl" "läški" ;
 # This set for vuovdi etc., not for nisson etc.
 # Here thus not ?stuorra vuovdi, etc,
 
-# in periphrastic constructions (together with "leđe") 
-# these subcategorize for comitative, locative etc. depending on 
+# in periphrastic constructions (together with "leđe")
+# these subcategorize for comitative, locative etc. depending on
 # the noun's semantic properties
-    
+
 LIST COM-A = "duhtameahttun" "duđavaš" "tuđâvâš" "stuárudâh" "oles" ;
 
 LIST ILL-A = "gullevaš" "paa";
@@ -1087,10 +1087,10 @@ LIST ILL-A = "gullevaš" "paa";
 LIST ACTIVITY-A = "hilbat" "oskkáldas" ;
 
     # denote som kind of activity, might take HUMAN comitative?
-    
+
 LIST DEHALAS = "táválâš" "dehálaš" "tehálâš" "mearkkašahtti" "epitáválâš" "máhđulâš" "suohtas" ; #!!= - @CODE@
 # When Attr = pred.form
-#smeerr	Lea suohtas kurssas. # not Attr 
+#smeerr	Lea suohtas kurssas. # not Attr
 #smeerr	Lea čuovvovaš kurssas. # Attr
 
 # Nickel: predicative adjectives (take a complement) "fargat" "heavnnas" "sáiggas" "suhtas"
@@ -1099,34 +1099,34 @@ LIST DEHALAS = "táválâš" "dehálaš" "tehálâš" "mearkkašahtti" "epitáv�
 # - - - - - - - - - - -
 #!! A-N, A-N-CASE, ...
 LIST A-N = "buoidi" "čeppi" "headju" "heittot" "jalla" "neavri" "nuorâ" "oahpis" "oarbbis" "räähis" "riges" "váivváš" "vuoras"; #!!= - @CODE@
-    
+
     # nouns that have very specific semantics and are derived from adjectives
     # those nouns are animate
-    
+
 LIST A-N-CASE = "varas" ;
-    # adjectives which are also nouns in other cases than nominative 
+    # adjectives which are also nouns in other cases than nominative
 
 LIST NON-GRADE-A = "sämmilâš" "alternatiiva" ;
-    # gradable under certain circumstances, for example if we write "naa" "hirmâd" "eromâš" "oalle" "oles" "ucánjii" 
+    # gradable under certain circumstances, for example if we write "naa" "hirmâd" "eromâš" "oalle" "oles" "ucánjii"
     # mon dagahallan NU sápmelažžan = jeg later som jeg er SÅÅ same/samisk?
-    # mon anán du VIEHKA sápmelažžan 
-    
+    # mon anán du VIEHKA sápmelažžan
+
 LIST GRADE-A = "fávru" "headju"; #!!= - @CODE@
     # The ones that have a strong adjective meaning, and are inclined to be adjectives rather than nouns in Ess constructions
 
 LIST A-LEX-AS-NOUN = "adj." "kuávdáš" "nuorâ" "oahpis" "váivi" "uáinojeijee"; #!!= - @CODE@
     # Those are quite strongly lexicalized as nouns. NBNB Earlier LEX-A, but this was another set
-    
+
 LIST TIME-A = "čuávuvâš" "čuávuvâš" "maŋit" "majemuš" "ovdebáš" "moonnâm" "puáttee" "ittáš" "tot" "taat" "tiet" "tuot" ("vyelgiđ" PrfPrc) ("vássit" PrfPrc)   ;  #!!= - @CODE@
 
 LIST DURATION-A = "heila" "eanas" "eenâb" "geažo" "geažos" "guhkki" "obba" "melgâd" "stuárudâh" "oles" "puoh" ; #!!= - @CODE@
-    
+
 LIST POINT-IN-TIME-SPEC = "toovláš" "eres" "iežá" "nubbe" ; #!!= - @CODE@
 
-LIST MANNER-A = "älkkee" "vaigâd" "väädis" "tiivrâs" "máhđuttem" "máhđulâš" "hiäivulâš" "hälbi" "väivi" ;  
+LIST MANNER-A = "älkkee" "vaigâd" "väädis" "tiivrâs" "máhđuttem" "máhđulâš" "hiäivulâš" "hälbi" "väivi" ;
 
 #!! ### NP sets defined according to their morphosyntactic features
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ##! N-SG-NOM, ...
 
@@ -1161,16 +1161,16 @@ SET NP-HEAD-GEN    = (Pron Gen) OR (N Gen) OR (A Gen) - Der/NomAct - Cmp/SplitR 
 #!! expression **WORD - premodifiers**.
 
 
-SET PRE-NP-HEAD = (Prop Attr) OR (Prop @>N) OR A OR (ABBR Attr) 
+SET PRE-NP-HEAD = (Prop Attr) OR (Prop @>N) OR A OR (ABBR Attr)
          OR ("pyeri") OR (A Sg Nom)
          OR (Pron Pers Gen) OR (N Gen) OR (A Gen) OR BUOT OR
-         Num OR Cmp/SplitR OR CC OR (Pron Dem) OR (Pron Refl Gen) OR (Indef Attr) OR 
+         Num OR Cmp/SplitR OR CC OR (Pron Dem) OR (Pron Refl Gen) OR (Indef Attr) OR
          (PrfPrc @>N) OR PrsPrc OR (A Ord) OR CC ;
          # The strict version of items that can only be premodifiers, not parts of the predicate
-         
+
 # SET PRE-NP-V = PrfPrc OR PrsPrc OR Der/NomAg OR Actio OR Der/NomAct OR (V A) OR (Prs Sg3) + Ind OR (Prs Sg1) + Ind OR (Imprt Du2) ;
     # to be used together with PRE-NP-HEAD before @>N is disambiguated
-         
+
 SET NP-MEMBER   = PRE-NP-HEAD OR N ;
 
 SET PRE-A-N     = (Pron Pers Gen) OR (Pron Pers Acc) OR (Pron Indef) OR Num OR (A Ord) OR (Pron Dem) OR (Pron Refl Gen) OR (Pron Refl Acc) ; # Acc pga av manglende disambiguering tidlig i fila
@@ -1190,23 +1190,23 @@ LIST PUNCT-RIGHT = (PUNCT RIGHT) ;
 #!! meaning: Scan to the first noun, ignoring anything that can be
 #!! part of the noun phrase of that noun (i.e., "scan to the next NP head")
 
-SET NOT-NPMOD     = WORD - PRE-NP-HEAD OR ABBR OR @CVP ;                     
-SET NOT-COORD-NPMOD     = WORD - NP-MEMBER OR ABBR OR @CVP ;                     
+SET NOT-NPMOD     = WORD - PRE-NP-HEAD OR ABBR OR @CVP ;
+SET NOT-COORD-NPMOD     = WORD - NP-MEMBER OR ABBR OR @CVP ;
 # This is the previous NPNH (npnh) set.
 # NOT-NPMOD  = "NOT-PRE-NP-HEAD"
- 
-SET NOT-NPMOD-ACC     = NOT-NPMOD - Acc OR ABBR ; 
-SET NOT-NPMOD-ACC-ADV     = NOT-NPMOD - Acc - Adv OR ABBR ; 
-# To be used in mappingrules, before the disambuation of Acc and Gen.                     
 
-SET NOT-NPMODADV    = WORD - PRE-NP-HEAD - Adv OR MO;                      
-SET NOT-NPMODADVL   = WORD - PRE-NP-HEAD - Pr - Po - Adv OR MO;                      
+SET NOT-NPMOD-ACC     = NOT-NPMOD - Acc OR ABBR ;
+SET NOT-NPMOD-ACC-ADV     = NOT-NPMOD - Acc - Adv OR ABBR ;
+# To be used in mappingrules, before the disambuation of Acc and Gen.
+
+SET NOT-NPMODADV    = WORD - PRE-NP-HEAD - Adv OR MO;
+SET NOT-NPMODADVL   = WORD - PRE-NP-HEAD - Pr - Po - Adv OR MO;
 # NOT-NPMODADV = "NOT-PRE-NP-HEAD-OR-ADV"
-SET NOT-NPMODADV-INDEF   = WORD - PRE-NP-HEAD - Adv - Indef ;              
+SET NOT-NPMODADV-INDEF   = WORD - PRE-NP-HEAD - Adv - Indef ;
 # NOT-NPMODADVI = "     ...-OR-INDEF"
- SET NOT-NPMODADVII  = WORD - PRE-NP-HEAD - Adv - Indef - Ill ;        
+ SET NOT-NPMODADVII  = WORD - PRE-NP-HEAD - Adv - Indef - Ill ;
 # Illative indir.obj.
-SET NOT-NPMODADVIIP = WORD - PRE-NP-HEAD - Adv - Indef - Ill - Pcle ; 
+SET NOT-NPMODADVIIP = WORD - PRE-NP-HEAD - Adv - Indef - Ill - Pcle ;
 # <== is this our NOT-NPMOD set?
 SET NOT-NPMODCC   = WORD - PRE-NP-HEAD - COMMA - LCRD ;
 # SET NAPP     = WORD - PRE-APP ;
@@ -1215,7 +1215,7 @@ SET NOT-NPMODCC   = WORD - PRE-NP-HEAD - COMMA - LCRD ;
 # ... Most sloppy BARRIERs
 
 # Set for NP with participle premodifier
-# ... IF *-1 X BARRIER NOT-NPMOD OR 
+# ... IF *-1 X BARRIER NOT-NPMOD OR
 # LocComIll are ok, but only with a PrfPcc to the right
 
 #!! ### Other negatively defined morphosyntactic noun sets
@@ -1230,11 +1230,11 @@ SET NOT-N-A = WORD - N - A ;
 # SET NOT-NAPrfCC = WORD - N - A - CC - PrfPrc ;
 
 SET NOT-NP = VFIN-NOT-NEG OR ConNeg OR Inf OR Pcle OR Interj OR CS ;
- # The set NP-BOUNDARY is bigger. 
+ # The set NP-BOUNDARY is bigger.
 
 # SET CLB_NOT-COMMA = CLB - COMMA OR PUNCT-LEFT OR PUNCT-RIGHT ;
 
-# SET NOT-QMARK = WORD OR CLB OR PUNCT - QMARK ; 
+# SET NOT-QMARK = WORD OR CLB OR PUNCT - QMARK ;
 
 # SET W-NOT-ACC-GEN = WORD - Acc - Gen ;
 
@@ -1248,12 +1248,12 @@ SET NOT-NP = VFIN-NOT-NEG OR ConNeg OR Inf OR Pcle OR Interj OR CS ;
 
 #!! The words in the set **N-PO** can be both N and Po, the set takes that into account.
 #LIST N-PO = "äigi" "pelivaalmâš" "jtak" "kooskâst" "kuávdáš" "oovdâst" "ráji" "vuástá" "guvlui" ;
-LIST N-PO = "äigi" "kuávdáš" "vuástá" ; 
+LIST N-PO = "äigi" "kuávdáš" "vuástá" ;
 
 #!! Nouns that have dangerous homonyms
 LIST DANGEROUSNOUN = "leeđi" "tušše" ;
 
-  
+
 #!! ### Nominal sets defined according to their semantical properties
 # -------------------------------------------------------------
 
@@ -1261,23 +1261,23 @@ LIST DANGEROUSNOUN = "leeđi" "tušše" ;
 
 #!! - Spatial noun sets. These nouns behave like postpositions
 # LIST SPATIAL-N = "kuávlu" "osku" "tuovŋâs" "vuáđu" ;
- 
+
 # These nouns in essiv get @ADVL:
 LIST ESS-ADVL-N = "arvedálki" "arvi" "argâ" "poškâ" "äijih" ("adj." N) ("kume" N) "piäivádâh" "beaivvadat" "pieggâ" "pievlâ" ("puolâš" N) "purgâ" "čakčaseavdnjat" "čáppadálki" "čuoškâ" "čuovâ" "cuáŋoi"  (".*dálki"r) "čäciollee" "fiärttu" "goalki" "guoldu" "mánuttep" "miärkká" "muotâ" "njáhcu" "obbadálki" ("tevkkâd" N) "vorrâ" "veaigi";
 
 # These nouns/adjectives in essiv can get @ADVL:
 # LIST ESS-PROB-ADVL-N = ("adj." N) "puáris" ("nuorâ" N) ;
- 
+
 # These nouns like their complements in the illative
 LIST N-WITH-ILL = "tárbu" "aggâ" "suijâ" "vaikuttâs" "uáinus" "piärán" "uásálistem" ;
 
 #!! - Time sets
 # - - - - -
 
-LIST MANNU = "uđđâivemáánu" "kuovâmáánu" "njuhčâmáánu" "njuuvčâmáánu" "cuáŋuimáánu" "cuáŋuimáánu" "káránâsmáánu" "vyesimáánu" "kesimáánu" "syeinimáánu" "porgemáánu" "čohčâmáánu" "roovvâdmáánu" "skammâmáánu" "juovlâmáánu" 
+LIST MANNU = "uđđâivemáánu" "kuovâmáánu" "njuhčâmáánu" "njuuvčâmáánu" "cuáŋuimáánu" "cuáŋuimáánu" "káránâsmáánu" "vyesimáánu" "kesimáánu" "syeinimáánu" "porgemáánu" "čohčâmáánu" "roovvâdmáánu" "skammâmáánu" "juovlâmáánu"
 
 LIST AIGODAT = "äigi" (".*áigodat"r) "álgoáigi" "bargoáigi" "soahteáigi" "soahtegaskaáigi" ;
- 
+
 LIST VAHKKU-DUR = "álgojahki" "árrageassi" "peivi" "jándur" "bodda" "čakča" "čohčâkeesi" "čakčaseavdnjat" "čyeti" "tälvi" "tijme" "eahketbodda" "keesi" "kiđđâ" "ijjâ" "iđitbodda" "ihe" "jahkebealli" "čyeti" "kaleanddarjahki" "loahppajahki" ("[0-9]*-#lohku"r) "maŋŋe#giđđa" "máánu" "miinut" "njealjádasjahki" "skuvlajahki" "ajannäyttäjä" "vahkkoloahppa" "okko" ;
 # these are periodes and can be Acc
 
@@ -1288,17 +1288,17 @@ LIST VAHKKU-TIME = "b" "pessijááh" "biidnovahkku" "bievlajahki" "bivdoáigi" (
  # The quoteless jahki here is since the preprocessor is not fine-tuned
  # yet, it still gives '"1870-" # jahki N Sg Com'. # lets see if "dbm" works
  # Duomma:lea
- 
+
 SET VAHKKU = VAHKKU-DUR OR VAHKKU-TIME ;
- 
+
 LIST JAHKI-NUM = "ihe" "skuvlajahki" ;
 
     # Years which can be numerated
- 
+
 # LIST PARTTIME = "čavčča#bealle" ;
 	# This set is for finding Gen in expressions like PARTTIME OR TIME Gen.
 
-LIST AIGI = "äigi" (".*äigi"r) ; 
+LIST AIGI = "äigi" (".*äigi"r) ;
 
 # LIST SP-BEAIVI = "albmáimannan#beaivi" "bargočoahkkin#beaivi" "beassášbeaivi" "mánnodat" "vuossárga" "disdat" "maŋŋebárga" "gaskavahkku" "duorastat" "bearjadat" "juovlabeaivi" "lávvardat" "lávvordat" "sotnabeaivi" "sábbát" "skilleduorastat" ;
 
@@ -1321,7 +1321,7 @@ SET TIME = MANNU OR VAHKKU OR AIGI OR YEAR ;
   # But fix!!
   # "Sámediggeráđđi   lea áigodagas doallan   5 čoahkkima."
   # Today believed to be obj.
-  
+
 SET NOTIME = N - TIME ;
 
 LIST GEASSET = "dálvet" "dálvit" "kiđđuv" "keessiv" ("keessiv" Adv) "čakčat" ;
@@ -1340,7 +1340,7 @@ SET TIME-ADV = TIME-MARKER OR OTHER-TIME-ADV OR GEASSET;
 # LIST PLACE-PO = "duohken" ;
 
 #!! - Amount sets
- 
+
 LIST VOLUME = "cl" "litter" (".*lihtter"r) "dl" "litter" "ml"  ;
 
 LIST WEIGHT = "mg" "kg" "kiilu" "gilo" "tonna" ;
@@ -1359,7 +1359,7 @@ SET MEASURE = VOLUME OR WEIGHT OR LENGTH OR AMOUNT OR TEMPERATURE OR TIME-UNIT O
 LIST CURRENCY = "denára" "dollár" "euro" "kruvdnu" "kr" "ru" "rubel" "ruvnâ" "ruvnâ" "¢" "€" "$";
 
 # SET CURRENCY-GEN = CURRENCY + Gen ;
- 	
+
 
 LIST NUMUNIT = "čyeti" "duhát" "miljovdna" "mill" "milj" "miljárda" "mrd";
 
@@ -1417,7 +1417,7 @@ LIST NPL_WITH_VSG3 = "Nettidigisäänih" "Ovtâstum aalmugeh" "kiddânjâs" "kid
 
 
  # Nominals that appear with plural numerals.
- 
+
 LIST SG-WORD = ("adeliđ" Der/upmi) "almolašvuotâ" "anistupmi" "arvi" "áigemearri" "algâ" "áŋgirvuohta" "ávvu" "ballu"   "pargottesvuotâ" "pággu" ("poovčâs" Der/vuota) "puásuituálu" "borakeahttáivuohta" "buorredáhtolašvuohta" (".*deaddu"r) "diehtemeahttunvuohta" "osko" "avustus" "tárukielâ" "duhtavašvuohta" "Finnmárkoláhka" "fuolalašvuohta" "gaskkamuddu" "gávvilvuohta" "geargatvuohta" "geardun" "kevttim" "tohálâšvuotâ" "giellageavaheapmi" "gihtta" "giitevašvuohta" "gudnejahttin" "fáámu" "guossoheapmi" "kyevtkielâlâšvuotâ" "hearvásvuohta" "jieštobdo" "ilo" "imaštallan" "ipmilbalolašvuohta" "ibárdâs" "isitvuohta" "juonalašvuohta" "kulturduogáš" "kulturgelbbolašvuohta" "láhkavuođđu" "luándu" "luondduvuođđu" "loppâ" "máŋggabealatvuohta" "mielkki" "mielâ" "šlundi#miella" "miellasuvvan" "muurâš" "muotâ" "muusik" "uámitobdo" "olahahttivuohta" "ovdâsvástádâs" "ovtâspargo" "ovttajienalašvuohta" "ovttadássásašvuohta"  (".*politihkka"r) "ráffi" "ráávhu" "ávusvuotâ" "rähisvuotâ" "rávisvuohta" "riska" "roahkkatvuohta" "säämi" "sámegielmáhttu" "sámekultuvra" "ustevvuotâ" "vanhurskkisvuohta" "vásáhusduogáš" "veahkaválddálašvuohta" "tääpi" ("vuárnuđ" Der/NomAct) "vuástálistem" ;
 
 # Words that are used in singular unless their plurality is stressed by words such as "goappaš", "kuohtuuh", "ereslágán", "máŋgalágan" or Num or Ord.
@@ -1428,10 +1428,10 @@ LIST SG-WORD = ("adeliđ" Der/upmi) "almolašvuotâ" "anistupmi" "arvi" "áigeme
 # LIST LOC-N = (".*dilálašvuohta"r) "tábáhtus" "ibárdâs"  ;
 
   # Those nouns appear in locative unless a head asks for comitative.
-  
+
 # LIST VUOHKI = (".*vuohki"r)  ;
 # Usually in comitative, see rule
-  
+
 # LIST N-NOPXLIST = "kevttim" "almolašvuotâ" "áimu" "áigemearri" "äigi" "álbmotjienasteapmi" "álgoálgu" "álgo#stávval" "algâ" "älkkee" ("ärvidiđ" Der/NomAct) "bargoáigi" "kume" ("peividiđ" Der/NomAct) "bievlajahki" "puátteevuotâ" "boahtu" "puásuituálu" "piätu" ("pyeri" Comp) "ceelhâ" "čakča" "čohčâkeesi" "čaabâkirjálâšvuotâ" "syeligâs" "čiehča" "tälvi" "taažâ" "divregiksi" "aarrân" "toovláš" "tovben" "eehid" "eennâmhiärrá" "fylkkaviessu" "Finnmárkkuopmodat" "geatnegas" "geavahanriektelaš" "geavat" "gaskkamuddu" "gárvi" "keesi" "genitiivahápmi" "kukká" "kiđđâ" "giellageavaheapmi" "kirkkosijdâ" "hálddašanguovlu" "háldejaš" "kiirâs" "historjá" "ihe" "japma" "jotteel" "johgáddi" "jotteem" "kiilu" "laahâ" "leansmánne#árvvošteapmi" "loppâ" "logaheapmi" "lohku" "lope" "luándu" "maŋŋi" "máŋggaidlohku" "meallu" "meannudeapmi" "mielladearvvašvuođa#dikšu" "mušto" "keeči" "nuoraidskuvladássi" "nuppádas" "nuppát" ("máttááttiđ" Der/NomAct) "kuáskulâš" "uuđâs" "uđđâihe" "ohtâvuotâ" "olámuddo" "olle" "olmooš" "oornig" "ovttaidlohku" "ovtâspargo" "predikatiiva" "ráávhu" "rávásmanahki" "riektegeavat" "riikkaarkivára" "sämmilâš" "sisriika" "suijâ" "Skjerstad-ášši" "smávvaskuvladássi" "salgâ" "minister" "stuorradiggi" "suohtta" "várá" "unnitlogugiella" "okko" "valljodat" "viijđes" "viso" ("[0-9]*-#lohku"r) Coll ;
 # atnit muittus / árvvus
 
@@ -1439,7 +1439,7 @@ LIST SG-WORD = ("adeliđ" Der/upmi) "almolašvuotâ" "anistupmi" "arvi" "áigeme
 
 LIST N-PX = "áddjá" "eeči" "áhkku" "alge" "peenuv" "biigá" "käälis" "enni" "kaavâ" "gáibmi" "pelikyeimi" "hearrá" "nieidâ" "uábbi" "ustev" "räähis" "reŋgâ" "skippáár" "ustev" "ustibaš" "ustit" "viljâ" ;
 
- # Nominals that well may have a Px. 
+ # Nominals that well may have a Px.
 
 LIST ALU = "alu" "gasu" "govddu" "guhku" "losu" "stuoru" "viiddu" "čieŋu" ;
 
@@ -1448,7 +1448,7 @@ LIST ALU = "alu" "gasu" "govddu" "guhku" "losu" "stuoru" "viiddu" "čieŋu" ;
 
 # These are ABBR:
 LIST REAL-TITLE =  "prof" "fil.tri" "hr" "kapt" "korp" "lekt" "lic" "ltn" "mag.art" "mag" "merc" "miss" "Mr" "mr" "Mrs" "mrs" "odont" "oecon" "ossod.dir" ;
- 
+
 LIST TITLE-LIKE = "kästee" "justitiárius" "majesteet" "miss" "naabur" "hiärrá" "tonttu" ;
 # Ránnjá Ole Vuolab imašta manne ....
 
@@ -1461,7 +1461,7 @@ LIST LOC-COMPL-N = "ávki" "árvalus" "dovdu" "ibárdâs" "ovdâmerkkâ" "maain�
 
   # Nouns that take a locative
   # There is also an idiomatic use of "ovdâmerkkâ" in the constructions "ovdamearkka dihte" and "ovdâmerkkâ" (Ess).
-  
+
 
 LIST COM-COMPL-N = "ákkastallan" "pargo" "čoahkkin" "dahkamuš" "dárbbašmeahttun" "dearvuohta" "teivâdem" "digaštallan" "duhkoraddan" "earrodearvvuođat" "earru" "koskâvuotâ" "lihkku" "ohtâvuotâ" "oktiibidjan" "ovttaoaivilis" "ovttasbargočoahkkin" "ovtâspargo" "ovttastallan" "ovttasássi" "ovttasbargošiehtadus" "ovttastus" "ságastallan" "šiehtadus" "vuostálaga" ;
 
@@ -1469,16 +1469,16 @@ SET LOC-HEAD = LOC-V OR LOC-COMPL-N ;
 
 SET COM-HEAD = COM-V OR OKTII-V OR COM-COMPL-N ;
 
-  
+
 LIST PREGEN = "álggogeahčen" "beallemuttus" "beallemuddu" ("peeli" N Sg Loc) "gaskamuddu" "gaskkamuddu" ("koskâvuotâ" N Sg Loc) "loahpageahčen" "loahpa#geahči" "ohtâvuotâ" "ovtâspargo" ;
 
  # Nouns and adjectives that take a preceding genitive.
- 
- 
+
+
 
 # Possessor hierarchy
 #                          +            P  o  s  s  e  s  s  e  d		    |
-# Possible possessors      +  FAMILY    FAMILY-ALSO-ABSTRACT    NON-FAMILY  + 
+# Possible possessors      +  FAMILY    FAMILY-ALSO-ABSTRACT    NON-FAMILY  +
 # ------------------------ +  --------    -----------------   ------------  |
 # Prop Sem/Plc                 +                      x               x		    |
 # HUMAN-INDIVIDUAL         +      x               x               x		    |
@@ -1511,7 +1511,7 @@ LIST NON-FAMILY = "alge" "algaaš" "divššohas" "alge" (".*guoibmi"r) "vieraili
 LIST HUMAN-LIKE = "beahtu" "beargalat" "eŋgel" "háldi" "hearrá" "immeel" "stállu" "suodjalus#eŋgel" "ulda" ; #!!= - @CODE@
 
 # This set is used in Gen/Acc-rules.
-     
+
 LIST SAPMI = "orjâlâš" "julevsápmi" "lullisápmi" "máttasápmi" "mearrasápmi" "nuortasápmi" "oarjesápmi" "sämmilâš" "Sápmi" ;
 
 
@@ -1519,22 +1519,22 @@ SET HUMAN-INDIVIDUAL = HUMAN-LIKE OR FAMILY OR NON-FAMILY OR ("kii") OR ("kii") 
 
 LIST HUMAN-GROUP =  "aalmug" (".*álbmot"r) (".*bearaš"r) (".*čearda"r) "airâskodde" "juávkku" (".*guovttis"r) (".*guovttos"r) (".*joavku"r) (".*kommišuvdna"r) (".*komiteá"r) "ráiđu" "niävvu" ("sämmilâš" N Pl) "ucceebloho" (".*veahka"r) ;
   # group of humans that connot be a building at the same time
- 
+
 LIST PROFESSION1 = (".*advokaat"r)  (".*tuámmár"r) "arkeoloog" (".*artist"r) (".*assistent"r) "ákšualmai" (".*pargee"r) "pyeredeijjee" "áámmátolmooš" (".*hovdâ"r)  (".*áámmát"r)
-(".*keččee"r) (".*stivrejeijee"r)(".*konsulent"r) "pargoviehâ" "liäiboo" "pappâ" "palvâleijee" (".*čällee"r) (".*pijgá"r)  (".*vyebdee"r) (".*terapeut"r)  (".*astronaut"r) "pispe" (".*pivdee"r)  "eennâmviljâleijee" "puásuituállee" "tuodârsämmilâš" "poolismiäštár" (".*vyeijee"r) "puovtâdeijee" 
-"čiehčee" "čorgejeijee" (".*čuojâtteijee"r) 
-"taaiđar" (".*taaidar"r) "tálulâš" "eemeed" "táluiššeed" "tärhisteijee" "orjâlâš" (".*tipšoo"r) (".*toimâtteijee"r) (".*tuáhtár"r) "tulkkâ" "tuáijár"  (".*totkee"r) 
-"eennâmviljâleijee" "eennâmhiärrá" (".*sadjásaš"r) 
-"fáldi" "fitnodatdoaibmi" "fitnodatoamasteaddji" 
+(".*keččee"r) (".*stivrejeijee"r)(".*konsulent"r) "pargoviehâ" "liäiboo" "pappâ" "palvâleijee" (".*čällee"r) (".*pijgá"r)  (".*vyebdee"r) (".*terapeut"r)  (".*astronaut"r) "pispe" (".*pivdee"r)  "eennâmviljâleijee" "puásuituállee" "tuodârsämmilâš" "poolismiäštár" (".*vyeijee"r) "puovtâdeijee"
+"čiehčee" "čorgejeijee" (".*čuojâtteijee"r)
+"taaiđar" (".*taaidar"r) "tálulâš" "eemeed" "táluiššeed" "tärhisteijee" "orjâlâš" (".*tipšoo"r) (".*toimâtteijee"r) (".*tuáhtár"r) "tulkkâ" "tuáijár"  (".*totkee"r)
+"eennâmviljâleijee" "eennâmhiärrá" (".*sadjásaš"r)
+"fáldi" "fitnodatdoaibmi" "fitnodatoamasteaddji"
 "kävppijâs" "giellaráđđi" (".*veahkki"r) "kirdemmaašin" "girko#bálvaleaddji" "kirkkotulkkâ" "kollečeppi" "kunâgâs" "kovetaaidâr" "kovvejeijee" "kuáđutteijee" "kyelipivdee"
-"hárjuttâllee" (".*teknihkar"r) (".*jođiheaddji"r) "johttisápmi" "johttisápmelaš" (".*journalista"r) "kiäisár" "kirurga" "kokkâ" "kuráhtor" "korefereanta" "kursaoahppi" 
-"lágideaddji" "láibu" "lávlu" "leanut" "logopeda" "luhkkár" 
+"hárjuttâllee" (".*teknihkar"r) (".*jođiheaddji"r) "johttisápmi" "johttisápmelaš" (".*journalista"r) "kiäisár" "kirurga" "kokkâ" "kuráhtor" "korefereanta" "kursaoahppi"
+"lágideaddji" "láibu" "lávlu" "leanut" "logopeda" "luhkkár"
 "máilmmimeašttir" "máhttájeaddji" "máttasápmi" "mearraalmmái" "mearraolmmái" "mearrasápmi" "miššoneara" "musea#bargi" "musihkkadahkki" "musihkkár"
-"návetvázzi" "čaittâleijee" "njunuš#jurista" "noaidi" "offiseara" (".*oahpahalli"r) (".*oahpaheaddji"r) "uáppee" ("oaivadit" Der/NomAg) "oaivámuš" "ođashoavda" "ođaslohkki" "ossodatdirektevra" "ossodatdirektøra" 
-"parkeren#fákta" "pedagoga" "plánejeaddji" "poolis" "poolis" ("prentet" Der/NomAg) "proofeet" "professor" 
+"návetvázzi" "čaittâleijee" "njunuš#jurista" "noaidi" "offiseara" (".*oahpahalli"r) (".*oahpaheaddji"r) "uáppee" ("oaivadit" Der/NomAg) "oaivámuš" "ođashoavda" "ođaslohkki" "ossodatdirektevra" "ossodatdirektøra"
+"parkeren#fákta" "pedagoga" "plánejeaddji" "poolis" "poolis" ("prentet" Der/NomAg) "proofeet" "professor"
 "rádjefákta" "rádjesoalddát" "raavâadeleijee" "kundáhovdâ" "reainnár" "rävdee" "reŋgâ" "uáivitoimâtteijee" "rehketdoallodárkkisteaddji" "rehketdoalli" "rehtor" "ruhttejeaddji" "ruvdnaprinsa" ("lihaksia" Der/NomAg)
-"sámediggeráđđi" "sámeduojár" "sárdnideaddji" "sávzadoalli" "sealgeeadni" "sester" "silbarávdi" "snihkkár" "soalddát" "sosionoma" "spábbačiekčanhárjeheaddji" "spábbačiekči" "stipendiáhta" "studeanta" "sundi" "suohkanbáhppa" "suohkan#plánejeaddji" 
-"šibitdoalli" "táksevuoddji" "telefonvástideaddji" "tuollár" "turistaofelaš" "uksafákta" "universitehtalektor"  
+"sámediggeráđđi" "sámeduojár" "sárdnideaddji" "sávzadoalli" "sealgeeadni" "sester" "silbarávdi" "snihkkár" "soalddát" "sosionoma" "spábbačiekčanhárjeheaddji" "spábbačiekči" "stipendiáhta" "studeanta" "sundi" "suohkanbáhppa" "suohkan#plánejeaddji"
+"šibitdoalli" "táksevuoddji" "telefonvástideaddji" "tuollár" "turistaofelaš" "uksafákta" "universitehtalektor"
 "váldodoaimmaheaddji" "viessohoiddár" "vuoktačuohppi" ;
 
 
@@ -1542,12 +1542,12 @@ SET PROFESSION = PROFESSION1 - Prop ;
 
 LIST OFFICE = "ovdâsteijee" "eennâmhiärrá" "ollâpappâ" "boazodoallohoavda" (".*čálli"r) "dekána" "farao" "fylkkaráđđi" "kunâgâs" "komserjâs" (".*ministtar"r) "nissonáirras" "politijkkár" "prinses" "ráđđe#láhttu" "ruvdnaprinseassa" "ságadoalli" "sámedemokráhtta" "sámediggeáirras" "sámediggepresideanta" "sátnejođiheaddji" "stivrralahttu" "hovdâ" "president" "minister" "várrepresideanta" ;
 
-SET TITLE = REAL-TITLE OR TITLE-LIKE OR PROFESSION OR OFFICE OR Actor ; 
+SET TITLE = REAL-TITLE OR TITLE-LIKE OR PROFESSION OR OFFICE OR Actor ;
 
 LIST HUM-FUNCTION =  "buohcci" "divššohas" "kandidáhtta" "kandidáhta" "nomáda" "oahppanolmmoš" "oktavuođaolmmoš" "olbmobárdni" "pasieanta" "ráđđealmmái" "riika#vuloš" "sámedemokráhtta" "skohtervuoddji" "soahteolmmái" "stáhtaboargár" "suttolaš" "turista" "virgeguoibmi" "virgeolmmoš" "vuorasolmmoš" ;
  #XXX bad name
  # Don´t add veahkki + Ess.
- 
+
 LIST HUM-ATTR =  "adj." "divššohas" "eanaeaiggát" "eaiggát" "fástaássi" "gávttehas" "informánta" "lestadiánalaš" "sámegielat" "suttolaš" ;
     # adjectival
 
@@ -1556,19 +1556,19 @@ LIST HUM-VERB = "ässee" "puáris" "palvâleijee" "bálvalanguoibmi" "boazoeaigg
 
 LIST NATIONAL-IDENTITY-NOT-SAPMI = (".*sápmelaš"r) "taažâ" "dánskalaš" "taažâ" "saksalâš" "guovdageaidnolaš" "hollandlaš" "indiaan" "israellaš" "judálaš" "juudalâš" "kvena" "maya-#indiána" "nuortalaš" "olgoriikalaš" "palestinalaš" "romalaš" "romer" "samarialaš" ;
 
-     # Also regional identity 
+     # Also regional identity
  # Duomma:lea
-      
+
 LIST SUOPMA = "Davvi-Ruoŧŧa" "Davvi-Suopma" "Lulli-Ruoŧŧa" "Lulli-Suopma" "Mátta-Ruoŧŧa" "Mátta-Suopma" "Oarje-Ruoŧŧa" "Oarje-Suopma" "ruoššâ" "Ruošša" "ruoŧŧa" "Ruoŧŧa" "suopma" "Suopma" ;
-     
-      
+
+
 # This set is used in Gen/Acc-rules.
  # Duomma:lea
 
 SET NATIONAL-IDENTITY = NATIONAL-IDENTITY-NOT-SAPMI OR SAPMI ;
 
 
-SET NOT-HUMAN = N - HUMAN ; 
+SET NOT-HUMAN = N - HUMAN ;
 
 #!! - Sets for animals
 
@@ -1594,18 +1594,18 @@ SET ANIMAL = GEN-ANIMAL OR HUNT-ANIMAL OR BOAZU OR FISH OR PREDATOR OR BIRD ;
 
 
 SET ANIMATE = HUMAN OR ANIMAL ;
- 
+
 
 #!! - Sets for things
 
-LIST TOOL = "šordeäimi" "ákšu" "tyejipiergâs" "pastem" "bastevuogga" "orrâ" "báddenrusttet" "peenuv" "bieggamillorusttet" "purrâmâš" "tiŋgâ" (".*bissu"r) (".*bivddus"r)  "piivtâs" "boazonjuovvan#niibi" "puttâl" "purrâmâš" "buiku" "buođđu" 
-"čääci" "čaalâ" "čohhoom" "čujonas" "čyeimi" "datneárpu" "taaiđâ" "taalhâs" "tiättur" (".*mašiidna"r) "doarta" "puzzâvuoggâ" "tullâ" "tortti" "tyeji" "sijmá" "ettetviidni" "viärmádâh" 
-"gáddenuohtti" "gáidánuohtti" "gáffal" "gáktesoadjá" "gazirdanniibi" "giehta" "giehtaváđđu" "gievdni" "giikan" "gohppu" "golgadat" "golle#bánno" "gurutgiehta" 
-"hárpa" "jávre#vuogga" "joddu" "joddu-#buođđu" "kohppa" "kruvdnu" 
+LIST TOOL = "šordeäimi" "ákšu" "tyejipiergâs" "pastem" "bastevuogga" "orrâ" "báddenrusttet" "peenuv" "bieggamillorusttet" "purrâmâš" "tiŋgâ" (".*bissu"r) (".*bivddus"r)  "piivtâs" "boazonjuovvan#niibi" "puttâl" "purrâmâš" "buiku" "buođđu"
+"čääci" "čaalâ" "čohhoom" "čujonas" "čyeimi" "datneárpu" "taaiđâ" "taalhâs" "tiättur" (".*mašiidna"r) "doarta" "puzzâvuoggâ" "tullâ" "tortti" "tyeji" "sijmá" "ettetviidni" "viärmádâh"
+"gáddenuohtti" "gáidánuohtti" "gáffal" "gáktesoadjá" "gazirdanniibi" "giehta" "giehtaváđđu" "gievdni" "giikan" "gohppu" "golgadat" "golle#bánno" "gurutgiehta"
+"hárpa" "jávre#vuogga" "joddu" "joddu-#buođđu" "kohppa" "kruvdnu"
 "láhkki" "láibi" "liidna" "liidnesihkaldat" "liššá" "luovosbeana" "luossa#vuogga" "luovos#fierbmi" "lyra" "maŋŋečanus"
 "maašin" "miekki" (".*mihttu"r) "millo" (".*telefovdna"r) "mohtorsahá" "muorječoaggi" "muorravuogga" "náálu" "nijbe" "njozon" "njuovvan#niibi" "oar-#juolgi"
-"oaggunstággu" "oaggunstávrá" "olgešgiehta" "olju" "riffal" "roahkkefierbmi" "ruttâ" "ruvnâ" 
-(".*sahá"r) "sáibma" "sáiti" "sältti" "seilâ" "siibma" "siholdâh" "sirppi" "skárbban" "skerreeh" "snäldee" (".*soabbi"r) "saaveeh" "soavvelvuogga" "spánnja" "speallanmašiidna" "spihkár" "vuoggâ" "stávrá" "stivrran" "suoppâin" "suormâ" "šlivgun#boksa" 
+"oaggunstággu" "oaggunstávrá" "olgešgiehta" "olju" "riffal" "roahkkefierbmi" "ruttâ" "ruvnâ"
+(".*sahá"r) "sáibma" "sáiti" "sältti" "seilâ" "siibma" "siholdâh" "sirppi" "skárbban" "skerreeh" "snäldee" (".*soabbi"r) "saaveeh" "soavvelvuogga" "spánnja" "speallanmašiidna" "spihkár" "vuoggâ" "stávrá" "stivrran" "suoppâin" "suormâ" "šlivgun#boksa"
 "váđđu" "veahkke#mohtor" "veaike#baste" "velgi" "vijne" "vuogga" "vuoiddas" "vuoigŋan#mašiidna" ;
 
 
@@ -1635,8 +1635,8 @@ LIST SATNI = "adjektijvâ" "advearba" "bárahisstávvalvearba" (".*tearbma"r) "t
 
 SET ABSTR-TOOL = SOUND OR ABSTR-T ;
 
-# Premilinary dividing of the set as a help for dimambiguating "kuullâđ" vs. "gullát".  
- 
+# Premilinary dividing of the set as a help for dimambiguating "kuullâđ" vs. "gullát".
+
 #Those are typically comitative (instead of locative) if they go together with verbs from the LIST HUMAN-AGENT-V and probably also from INTELLECTUAL-ACTIVITY-V. The counterpart for locative is until now SITUATION, we might have to consider making a new list ABSTR-TOOL comprising SITUATION and other elements.
 
 #!! - Sets for qualities
@@ -1648,33 +1648,33 @@ SET ABSTR-TOOL = SOUND OR ABSTR-T ;
 # - - - - - - - - - - - - - - - -
 
 # LIST MATERIAL = "aamnâs" "päkki" (".*náhkki"r) "gámas" "gihtta" "gusanáhkki" "materiaal" "muorâ" "nähki" "ullo" "sávzzanáhkki" "silbâ" "stääli" ;
-  
+
 # LIST PLANT-PART = "lääđi" "ruohtas" "upmol" ;
- 
-    # of plants etc. 
-  
+
+    # of plants etc.
+
 # LIST SHOE = "čázet" "káálluh" "gálssot" "kaamâ" (".*gáma"r) "sovskaamuv" "gummestevvel" (".*guohpá"r) (".*loabát"r) "njuorjjot" "nuhtat" "nuvttat" "njuuppâh" "saaveeh" "steevvil" "sisttet" "skárri" "kaamâ" "steevvil" "sukká" (".*suohkku"r) ;
 
     # anything that will go on feet. IV-verbs like "väzziđ" can take these as objekt.
-    
+
 # LIST BEDCLOTHES = "peskâ" "gávnnit" "oađđádagat" "rátnu" "roavgu" "seaŋga";
 
-    # anything that can be used as bedclothing. IV-verbs like "uáđđiđ" can take these as objekt. 
-    
+    # anything that can be used as bedclothing. IV-verbs like "uáđđiđ" can take these as objekt.
+
 LIST CLOTHES = "poovij" "päiđi" (".*báidi"r) "peskâ" (".*bealjus"r) "piivtâs" "poovij" (".*boagán"r)  (".*buksa"r) (".*buser"r) (".*busir"r) (".*bivttas"r) "čalmelaasah" (".*čuhppa"r) "haamit" "dorka" "fáhcca" (".*gahpir"r) "gákti" "piivtâs" (".*gákti"r) "gistta" (".*hámet"r) (".*liidni"r) (".*luhkka"r) "rahpot" (".*readdju"r) (".*reddjo"r) "T-báidi" (".*váhcca"r) (".*váhttu"r) (".*vuolpu"r) ;
-   
+
 
 # LIST FOOD = (".*biebmu"r) (".*biergu"r) (".*borramuš"r)  (".*muorji"r) "fuođâr" (".*guolli"r) "viljan" (".*mális"r) (".*jáffu"r) "juŋŋâ"  (".*láibi"r) "määli" "määli" "märfi" "niesti" "sare" "spelle" (".*gáhkku"r) ;
 
 
     # potential tool for political activity etc., potential place for other food, insects etc.
-    
+
 # LIST LIQUID = "bohccomielki" "bruvsa" "buolleviidni" "buolleviidna" "buollin#viidna" "buollánviidna" "buollánviidni" "čääci" "čáhppesmuorjesákta" "čielgamielki" "deadja" "duolvačáhci" "juoma" "gáiccamielki" "gearra" "girkoviidna" "girkoviidni" "goden" "gusamielki" "juhâmâš" "juhkamuš" "kirkoviidna" "kirkoviidni" "mielkki" "rihppaviidna" "rihppaviidni" "ruksesviidna" "ruksesviidni" "sarritsákta" "sáivačáhci" "sákta" "sávzzamielki" "suvramielki" "viidna" "vijne" "vilgesviidna" "vilgesviidni" "vuola" "vuolla" ;
-    
+
 # LIST PLANT = "alášbađverássi" "alitdiehpperássi" "ávža" "báhpačehporaš" "beahci" "bastilislátnjá" "beahceguolbba" "beatnatnjuovččarássi" "biehtárguhkká" "biehtárrássi" "bievlaguolbba" "boallorássi" "biello#daŋas" "biellorássi" "cizáš#vuolpu" "duopma" "duottarbusságeahpil" "fiikkonmuorra" "fiskesrássi" "gálla" "gámasuoidni" "gáiski" "gáskálas" "gieddeguolbba" "gieddemáđir" "gollerássi" "guossa" "heasttagazzarássi" "horbmá" "jámešbátni" "jeagil" "juopmu" "lastamuorra" "lageš" "leaibi" "miestta" "muotkenjárgaguolbba" "niittoguolbba" "njálanjuovčča" "oaivejeagil" "oaksi" "rásseguolbba" "reatká" "sállja" "sieđga" "skáhpi" "skierri" "soahki" "suhpi" "uvlo#rássi" "vándádivga" "vilgesmáđir" "vuodjarássi" "vuovdeguolbba" ;
 
     # Plants could be actors in fairytales (Alice)
-    
+
 
 # LIST FURNITURE = "áltár" "beavdi" "hildu" "ildu" "seaŋga" "skáhppe" "soffá" "stuollu" ;
 
@@ -1686,12 +1686,12 @@ LIST SMALL-VEHICLE = "aasi" "peenuv" "fievrošibit" "ergi" "hiävuš" (".*sáhtt
 
 SET VEHICLE = SPACIOUS-VEHICLE OR SMALL-VEHICLE ;
 
-LIST TEXT = "aabis" (".*listu"r) (".*čálus"r) (".*girji"r) (".*-girji"r) (".*gažaldat"r) (".*aviisa"r) (".*áviisa"r) (".*bábir"r) (".*logahallan"r) 
-"bargobihttá" (".*prográmma"r) (".*lávlla"r) (".*bláđđi"r) (".*mearrádus"r) "bušeahttapoasta" (".*čála"r) (".*cealkámuš"r) "čuovus" 
-(".*teaksta"r) (".*dieđáhus"r) (".*journála"r) "dokument" (".*girje"r)  
-"šleđgâpostâ" (".*eksamen"r) "eksámenbihttá" 
-"fáddásiidu" "fáksa" "gáldu" "gullugovva" "journála#čállin" "journáladiehtu" 
-"kárttá" "lääđi" (".*láhka"r) "läđđee" "leaksu" "mátkemuitalus" "mielddus" 
+LIST TEXT = "aabis" (".*listu"r) (".*čálus"r) (".*girji"r) (".*-girji"r) (".*gažaldat"r) (".*aviisa"r) (".*áviisa"r) (".*bábir"r) (".*logahallan"r)
+"bargobihttá" (".*prográmma"r) (".*lávlla"r) (".*bláđđi"r) (".*mearrádus"r) "bušeahttapoasta" (".*čála"r) (".*cealkámuš"r) "čuovus"
+(".*teaksta"r) (".*dieđáhus"r) (".*journála"r) "dokument" (".*girje"r)
+"šleđgâpostâ" (".*eksamen"r) "eksámenbihttá"
+"fáddásiidu" "fáksa" "gáldu" "gullugovva" "journála#čállin" "journáladiehtu"
+"kárttá" "lääđi" (".*láhka"r) "läđđee" "leaksu" "mátkemuitalus" "mielddus"
 "neahttasiidu" "novealla" (".*raporta"r) (".*reive"r) "riektedieđa" "roomaan" "liäksu" "ruovttusiidu" (".*konvenšuvdna"r)  "särni" "sitáhtta" "lovottâh" "telegrámma" "sujâttâs" ;
 
   # A potential place (locative?) for sth. written.
@@ -1699,33 +1699,33 @@ LIST TEXT = "aabis" (".*listu"r) (".*čálus"r) (".*girji"r) (".*-girji"r) (".*g
 
 LIST ABSTR-TEXT =  "ibárdâs" (".*plána"r) (".*mearrádus"r) (".*evttohus"r)  (".*njuolggadus"r) (".*ortnet"r) (".*árvalus"r) (".*cealkámuš"r) "cuvccas" "toimâ" "iähtu" "eanačujuhus" "koččâmâš" "gáhtten#eaktu" "gáldokoda" "pákkum" "giellagažaldat" "koččâmâš" "lappekodisilla" "miärádâs" "luođaleaktu" (".*mearrádus"r) "maainâs" "muštâlus" "resolušuvdna" "sáme#kodisilla" (".*soahpamuš"r) ;
 
-  # A potential place (locative?) for sth. written, spoken or abstract activity 
-  
+  # A potential place (locative?) for sth. written, spoken or abstract activity
+
 #!! - Part-whole sets for human
 
 LIST BODY = "alimat" "aski" "ámadadju" "bahta" "bahtačalbmi" "bahtaráigi" "bavssa" "bállosuotna" "bátni" "beađbelađas" "bealgi" "beallji" "tiŋgâ" "biežadákti" "billu" "buđđá" "bullječalbmi" "čalbmečiehka" "čalbmedeahkki" "čalbmegolláš" "čalbmegulbmi" "čalbmeguolga" "čalbmeluopma" "čalme" "čatnan#gođđu" "čeabet" "čelččen" "čeŋkkeš" "čibbeskálžu" "čibbi" "čižžebátni" "čižži" "čielgeađa" "čielgedákti" "čielgi" "čoalli" "čoamohas" "čoarbbealdeahkki" "čoarbbeallađas" "čoarbbealli" "čoavji" "čorbma" "čorbmaoassi" "čorbmaváimmus" "čorbmavuođđu" "čotta" "čuožžamasdeahkki" "čurti" "čuvdi" "dábba" "dáđvi" "dáktegođus" "dákti" "dávdi" "deahkkegođus" "deahkki" "erttet" "erttetdeahkki" "gahpárus" "gahperus" "ganjalčalbmi" "gardnjil" "gaskasuorbma" "gassačoalli" "gassaváhkká" "gáddu" "gáibi" "kállu" "gánis" "gátnis" "geađđi" "geahpis" "giegir" "giehta" "giehtadeahkki" "giehtagávva" "giehtaramas" "giehtaruohtas" "giehtasealgi" "giehtaváibmu" "gilga" "gipsajuolgi" "goapmirváimmus" "goaŧŧočotta" "goaŧŧu" "goikedákti" "gorut" "kulo" "guoggomas" "guoggomasráksá" "gurutgiehta" "hárdu" "heaggaroasmmoheapmi" "jarri" "juolgebealgi" "juolgečelččen" "juolgedeahkki" "juolgegávva" "juolgelađas" "juolgeláhpi" "juolgemátta" "juolgesuorbma" "juolgevuođđu" "jyelgi" "loođâs" "láhpelađas" "mane" "maŋŋebuoidi" "mánágoahtečotta" "mánágoahti" "mielganjunni" "monimuš" "monin" "monnejođas" "monneráksá" "morčesuotna" "morči" "muohtu" "náhpi" "nealgečoavji" "niehkki" "nierra" "niskegohpi" "niski" "njálbmi" "njiehcehas" "njune" "njuovčča" "oaiveassi" "oaivečohkka" "oaivi" "oalgedeahkki" "oalgenorasdeahkki" "oalgenorasváhkká" "oalgi" "oalul" "obbalággá" "orbbeš" "raddi" "rápma" "roppâ" "rumaš#golggus" "rumašlahttu" "rumašnjalbi" "sáhppesuvri" "rumašlahttu" "rumašnjalbi" "aske" "sáhppesuvri" "sijđo" "siskkitbeallji" "sotkenoalli" "spirralat" "suolbmudanoalli" "suormâ" "suorbmageahči" "šušmi" "váhkkádeahkki" "váimu" "vuohččecuozza" "vuoivvas" "vuokta" "vyeleeb" "vuorggu" "garragiehta" ;
 
 # LIST WEATHER-ENTITY = "polvâ" "arvi" "muotâ" ;
 
-   
+
 #!! - Sets for places
-LIST BUILDING = "äitti" (".*skuvla"r) "tuuvááš" "badjedállu" "postâ" "buhcciidsiida" (".*viessu"r) "kävppi" "äitti" 
+LIST BUILDING = "äitti" (".*skuvla"r) "tuuvááš" "badjedállu" "postâ" "buhcciidsiida" (".*viessu"r) "kävppi" "äitti"
 (".*dállu"r)  (".*buvri"r)
-"geaidnogievkkan" "kuáti" "gávpi" "kirkko" "hotealla" "kaféa" "krámbuvda" "láđđu" "láhtu" "láávu" "lonuhusgávpi" "návet" "návetgoahti" "návste" "návstu" 
+"geaidnogievkkan" "kuáti" "gávpi" "kirkko" "hotealla" "kaféa" "krámbuvda" "láđđu" "láhtu" "láávu" "lonuhusgávpi" "návet" "návetgoahti" "návste" "návstu"
 "oktasaš#barta" "poasta" "rámbuvra" "rásseláđđu" "stálla" "stálle" "stállja" "tupe" "synagoga" "šloahtta" "tempel" "universiteahtta" "visti" ;
 
-LIST GENERAL-PLACE = "alme" "almmiravda" "almmiriika" "areála" (".*guovlu"r) "aassâmpäikki" "badjegeardi" "badjeeana" "sijdâ" "päikki" "báktehárji" "piäldu" "biegga#báiki" "piirâs" "boazoguohtoneana" "buođđosadji" 
-"čakčaeana" "čakčaeana" "čakča#báiki" "čakčaorohat" "syeligâs" "čoahkkebáiki" 
-"dálvebáiki" "dálveeana" "dálveguohtoneana" "dálveorohat" "davviriika" "davvisiida" "dánssa#báiki" "diggebáiki" "dimbbar#čuohppan#sadji" "aarrân" "duiska#eana" "eanandoallo-#eana" "eanandoalloeana" "earre#sadji" "fanasláttasadji" "fágabiras" 
-"gádde#báiki" "gádde#ravda" "gávpebáiki" "gávpemárkan" "kaavpug" "gávpotpoarta" "geaidnoguorra" "geaidnoravda" "geassebáiki" "geasseeana" "geasseguohtoneana" "geasseorohat" "geassesadji" "sijdâ" "giddagas#báiki" "giđđabáiki" "gieddeeana" "gilvvagárdi" "gilvvohallanbáiki" "girkogárdi" "goahtesadji" "goikeeana" "guoddinseaŋga" "guollebáiki" "guollebivdosadji" "guohtoneana" "guohtuneana" "guottetbáiki" "hámman" "hávdeeana" "helvet" "jeaggeeana" "jeagelguohtuneana" "jienastanbáiki" 
+LIST GENERAL-PLACE = "alme" "almmiravda" "almmiriika" "areála" (".*guovlu"r) "aassâmpäikki" "badjegeardi" "badjeeana" "sijdâ" "päikki" "báktehárji" "piäldu" "biegga#báiki" "piirâs" "boazoguohtoneana" "buođđosadji"
+"čakčaeana" "čakčaeana" "čakča#báiki" "čakčaorohat" "syeligâs" "čoahkkebáiki"
+"dálvebáiki" "dálveeana" "dálveguohtoneana" "dálveorohat" "davviriika" "davvisiida" "dánssa#báiki" "diggebáiki" "dimbbar#čuohppan#sadji" "aarrân" "duiska#eana" "eanandoallo-#eana" "eanandoalloeana" "earre#sadji" "fanasláttasadji" "fágabiras"
+"gádde#báiki" "gádde#ravda" "gávpebáiki" "gávpemárkan" "kaavpug" "gávpotpoarta" "geaidnoguorra" "geaidnoravda" "geassebáiki" "geasseeana" "geasseguohtoneana" "geasseorohat" "geassesadji" "sijdâ" "giddagas#báiki" "giđđabáiki" "gieddeeana" "gilvvagárdi" "gilvvohallanbáiki" "girkogárdi" "goahtesadji" "goikeeana" "guoddinseaŋga" "guollebáiki" "guollebivdosadji" "guohtoneana" "guohtuneana" "guottetbáiki" "hámman" "hávdeeana" "helvet" "jeaggeeana" "jeagelguohtuneana" "jienastanbáiki"
 "kálka#eana" "kontineanta" "lassieana" "láigoeana" "luome#eana" "luossabáiki" "luonddubiras" "máilbme#čiehka" "maailm" "márkan"   "meahcceeana" "meahccegilli" "njáskan#báiki" "njunušsadji" "nuortaeana"
-"oahppobáiki" "oaivegállobáiki" "oktasašeana" "oktasašorohat" "olgobáiki" "olgoriika" "paalgâs" "orrunbáiki" "priváhtaeana" 
+"oahppobáiki" "oaivegállobáiki" "oktasašeana" "oktasašorohat" "olgobáiki" "olgoriika" "paalgâs" "orrunbáiki" "priváhtaeana"
 "rasttidan#báiki" "ránnáriika" "riddo#eana" "staatâ" "päikki" "ruovdemáđidja" "ruovttueana"
-"tuovŋâs" "sáidebáiki" "sámieana" "sámeeana" "sámevearroeana" "sallju" "siida" "siseana" "skoaltabáiki" "skuvlabiras" (".*šillju"r) "stáhtaeana" "stáhta#sadji" 
+"tuovŋâs" "sáidebáiki" "sámieana" "sámeeana" "sámevearroeana" "sallju" "siida" "siseana" "skoaltabáiki" "skuvlabiras" (".*šillju"r) "stáhtaeana" "stáhta#sadji"
 "TV-šearbma" "váhneneana" "várddobáiki" "vearroeana" "viessosadji" "viesttar#bađa#eana" "virgebáiki" "vuoiŋŋastanbáiki" "vuopmeeana" ;
 
 LIST NATURE-PLACE = "almennet" "ávži" "pähti" "beahcevuovdi" "borri" "buollán#ávži" "coagis" "čácáduh" "čolpi" "darfejeaggi" "dearbmi" "duottarjávri" "duottaroassi" "juuhâ"
-"aajâ" "fiervá" "riddo" "gáisá" "gáisi" "gárggu" "gárgu" "kieddi" "gieva#jeaggi" "gohpi" "gohppi" "gorži" "guolbba" "gurra" "jävri" "jávregáddi" "jeaggi" "jiehkki" "juuhâ" "johka#gaska" "johkagáddi" "johkaleahki" "johkanjálbmi" 
+"aajâ" "fiervá" "riddo" "gáisá" "gáisi" "gárggu" "gárgu" "kieddi" "gieva#jeaggi" "gohpi" "gohppi" "gorži" "guolbba" "gurra" "jävri" "jávregáddi" "jeaggi" "jiehkki" "juuhâ" "johka#gaska" "johkagáddi" "johkaleahki" "johkanjálbmi"
 "láddu" "láttu" "latnja" "lavdnjejeaggi" "laaja" "luptâ" "luohkká" "luohtâ" "luándu" "luoppal" "luossajohka" "meahccegieddi" "meerâ" "mielli" "mohkki" "muotki" "njargâ" "njune" "oaivi" "oalgejohka" "oalgi" "orda" "orrit" "rádja#čázádat"
 "reašši" "riddogáddi" "riddo" "riidi" "ruovttugieddi" "soahkevuovdi" "stealli" "várrevielti" "vaarâ" "vearroduottar" "vielti" "vuohppi" "vuotnabahta" "vuotnagáddi" ;
 
@@ -1740,7 +1740,7 @@ SET GEOGRAPHICAL-PLACE = NATURE-PLACE OR SETTLEMENT-PLACE ;
 LIST GEN-POLITICAL-PLACE = "kaavpug" "sijdâ" (".*suohkan"r) "leenâ" "paalgâs" "rääji" "staatâ" "riikkarádji" "ruovttugávpot" "sámeeana" "Sámeeana" "siseatnangilli" "staatâ" "válgabiire" "vuotnagávpot" ;
 
   # can also function as an actor
-  
+
 LIST FYLKA = "Finnmárku" "Romsa" "Nordlánda" "Lulli-Trøndelag" "Davvi-Trøndelag"
        "Hedmárku" "Akershus" "Buskerud" "Vestfold" "Østfold" (".*Agder"r)
        "Rogalánda" "Hordalánda" "Opplánda" "Fjordane" "Romsdal" "Telemark" ;
@@ -1749,14 +1749,14 @@ LIST NORGA = (".*Norga"r) "norga" "norggabealli" ;
 
 LIST NATION-NOT-NORGA = "Columbia" "davvi#ruoŧŧa" "Duiska" "Frankriika" "Guatemala" "Israel" "Kanada" (".*Amerihká"r) "naššuvdna" "staatâ"  "Ruoŧŧa" "Sápmi" "sämmilâš" "Skandinávia" "staatâ" "Suopma" (".*Ruošša"r) ;
 
-    
+
 SET NATION = NATION-NOT-NORGA OR NORGA ;
 
 SET POLITICAL-PLACE = NATION OR GEN-POLITICAL-PLACE OR FYLKA OR (".*gielda"r) ;
 
     # Can be an actor
 
-  
+
 # This set is important for distiguishing "vyeijiđ" and "vuoijâđ", so there shouldn`t be words which can be combined with "vuoijâđ":
 LIST CONCRETE-ROUTE = (".*máđidja"r) (".*máđii"r) (".*bálggis"r) (".*luodda"r) (".*geaidnu"r) (".*gáhtta"r) (".*guorra"r) (".*láhttu"r) (".*ráigi"r) "ráiđu" "spáiddarráidu" ;
  # and others!
@@ -1764,50 +1764,50 @@ LIST CONCRETE-ROUTE = (".*máđidja"r) (".*máđii"r) (".*bálggis"r) (".*luodda
 LIST ABSTR-ROUTE = "koskâ" "mätki" "miila" "mohkki" "tuvra" ;
 
 SET ROUTE = CONCRETE-ROUTE OR ABSTR-ROUTE ;
- 
+
 
 LIST WATER = "aajâ" "meerâ" "ääldis" "basseaŋŋa" "čääci" (".*čázádat"r)  "juuhâ" "aajâ" "jävri" "juuhâ" "luohtâ" "meerâ" "sálteája" "vuodjanálddis" "vuojadanálddis" "vuonâ" ;
 
 LIST GOAHTI-PLACE = "aarrân" "boaššu" "loaidu" "reahpenráigi" "soggi";
- 
+
 
 LIST ROOM = (".*kantuvra"r) (".*latnja"r) "bártniidhivsset" "veeskir" "káámmár" "káámmár" "garáša" "kievkkân" "guovllukantuvra" "hyysig" "lášmmohallansále" "lášmmohallansálla" "luptâ" "nieiddaidhivsset" "sallju" "tupe" "studio" "šiljo" ;
 
 SET PLACE = GEOGRAPHICAL-PLACE OR POLITICAL-PLACE OR GENERAL-PLACE OR ROUTE OR BUILDING OR ROOM OR GOAHTI-PLACE ;
 
 
-LIST MAIN-ORGANIZATION = (Prop Sem/Org) "alimusriekti" "ámtadiggi" (".*ásahus"r) "bargokantuvra" "rippâškovlâ" "bálvalandoaibma" "bearráigeahččanorgána" (".*bellodat"r) "buohccestohpu" "pyecceiviäsu" "buhcciidsiida" "dearvvašvuođafitnodat" (".*departemeanta"r) "dearvvašvuođadutkanguovddáš" "tigge" (".*direktoráhta"r) "tuámustovli" 
-"eanajuohkindiggi" "esiväldi" "Finnmárkokommišuvdna" "firbmá" "fitnodat" "leenâ" "leenâ" 
-"geahččo#doaibma" "geahččoeiseváldi" "gelbbolašvuođaguovddáš" "giddagas" "gieldda#diggi" "giellaguovddáš" "giellakantuvra" "giellaráđđi" "girjerájus" "kirkko" "girkoráđđi" "gozihankomitea" "guovddášeiseváldi" "guovllubuohcceviessu" 
-"haldâttâsorgaan" "hállehus" "tiervâsvuođâkuávdáš" "fylkkadiggi" "lágádâs" "justiskomitea" "klinihkka" "komitea" "kommišuvdna" (".*lávdegoddi"r)  (".*listu"r)  "párnáikärdi" "media" "meieriija" "suáldát" "musea" 
-"nationála#diggi" "oahpahusdoaibma" "oahpahuskantuvra" (".*organisašuvdna"r) "orgaan" "parlameanta" "psykiatriijabuohcceviessu" "preassa" "hallittâs" (".*ráđđi"r) "Sámediggi" "sämitigge" "sámeinstitušuvdna" "sámekomitea" "sámemišuvdna" "sámemusea" "sámesiida" "servikodde" (".*searvi"r) "ohtsâškodde" "sierraduopmostuollu" (".*skuvla"r) "skuvlakantuvra" "staatâ" "stuorradiggi" "suodjalankomitea" "alue" (".*stivra"r) "synagoga" 
-"universiteahtta" "universitehta" "universitehtabuohcceviessu"  
+LIST MAIN-ORGANIZATION = (Prop Sem/Org) "alimusriekti" "ámtadiggi" (".*ásahus"r) "bargokantuvra" "rippâškovlâ" "bálvalandoaibma" "bearráigeahččanorgána" (".*bellodat"r) "buohccestohpu" "pyecceiviäsu" "buhcciidsiida" "dearvvašvuođafitnodat" (".*departemeanta"r) "dearvvašvuođadutkanguovddáš" "tigge" (".*direktoráhta"r) "tuámustovli"
+"eanajuohkindiggi" "esiväldi" "Finnmárkokommišuvdna" "firbmá" "fitnodat" "leenâ" "leenâ"
+"geahččo#doaibma" "geahččoeiseváldi" "gelbbolašvuođaguovddáš" "giddagas" "gieldda#diggi" "giellaguovddáš" "giellakantuvra" "giellaráđđi" "girjerájus" "kirkko" "girkoráđđi" "gozihankomitea" "guovddášeiseváldi" "guovllubuohcceviessu"
+"haldâttâsorgaan" "hállehus" "tiervâsvuođâkuávdáš" "fylkkadiggi" "lágádâs" "justiskomitea" "klinihkka" "komitea" "kommišuvdna" (".*lávdegoddi"r)  (".*listu"r)  "párnáikärdi" "media" "meieriija" "suáldát" "musea"
+"nationála#diggi" "oahpahusdoaibma" "oahpahuskantuvra" (".*organisašuvdna"r) "orgaan" "parlameanta" "psykiatriijabuohcceviessu" "preassa" "hallittâs" (".*ráđđi"r) "Sámediggi" "sämitigge" "sámeinstitušuvdna" "sámekomitea" "sámemišuvdna" "sámemusea" "sámesiida" "servikodde" (".*searvi"r) "ohtsâškodde" "sierraduopmostuollu" (".*skuvla"r) "skuvlakantuvra" "staatâ" "stuorradiggi" "suodjalankomitea" "alue" (".*stivra"r) "synagoga"
+"universiteahtta" "universitehta" "universitehtabuohcceviessu"
 "dearvvašvuođastašuvdna" "alue" "riddogielda" "ruovttugielda" "sámegielda" "vuotnagielda" ;
 
 LIST DEPARTMENT =  "doaibmaguovddáš" "fakultehta" "etáhtta" (".*guovddáš"r)  "haldâttâs" "lágádâs" "toimâttâh" "giellakantuvra" "mearridanorgána"  (".*ovttadat"r) (".*ossodat"r) ;
- 
+
 SET ORGANIZATION = DEPARTMENT OR MAIN-ORGANIZATION OR Sem/Org ; #Not sure about Sem/Org
- 
+
 #!! - Sets that can both be buildings/places and represent humans
 
 LIST INSTITUTION =  "kuávdáš" "lágádâs" "kulturráđđi" "searvegodderáđđi" ;
 
 # the previous items can both represent abstract processes and humans
- 
+
 
 # Two aspects: Place and institution:
 # and a couple of other words that do not really have to do with that
 # suits "väzziđ" + Acc
 LIST EDUCATION = (".*skuvla"r) (".*gursa"r) (".*kursa"r) (".*oahppu"r) "badjedássi" "rippâškovlâ" "boazodoallofága" "boazodoallosuorgi" "dásseárvofága" "aamnâs"
-"gaskadássi" "giellafága" "luohkká" "luonddufága" "musihkkadiibmu" "musihkkasuorgi" "oahppofálaldat" "oahppoinstitušuvdna" "oahppoásahus" "oahppodássi" 
+"gaskadássi" "giellafága" "luohkká" "luonddufága" "musihkkadiibmu" "musihkkasuorgi" "oahppofálaldat" "oahppoinstitušuvdna" "oahppoásahus" "oahppodássi"
 "sámegielfága" "sámegiel#gaskafága" "seminára" "škovlâ" "stáhtainternáhtta" "stáhtainternáhta" "stuorraskuvla" "universiteahtta" "universitehta" "vuolledássi" ;
 
 # suits to LANGUAGE Gen
 # LIST LESSON =  "álgokursa" "dáiddaoahpahus" "gaskafága" "gealbu" "tohálâšvuotâ" "giellaovdáneapmi" "fálaldat" "joatkka#fáddá" "joatkkakursa" "lávdaoahppofálaldat" "lohkanbajioahppu" "máhttu" "musihkkadiibmu" "oahppa" "oahppofálaldat" "opâttâs" "váldofága" "vuođđofága" ;
- 
 
-LIST OTHER-INDUSTRY = (".*ealáhus"r) "biedjo#bivdu" "pivdo" "puásuituálu" "Deanubivdu" "tyeji" "ealáhusdoaibma" "eennâmtuálu" "fuođđobivdu" 
-"geasse#guollebivdu" "giđđa#guollebivdu" "goddebivdu" "guollebivdu" "industriija" "johka#luossabivdu" "lassiealáhus" "luossabivdu" "oapmedoallu" "riektepolitihkka" "rievssatbivdu" "ruvkedoaibma" 
+
+LIST OTHER-INDUSTRY = (".*ealáhus"r) "biedjo#bivdu" "pivdo" "puásuituálu" "Deanubivdu" "tyeji" "ealáhusdoaibma" "eennâmtuálu" "fuođđobivdu"
+"geasse#guollebivdu" "giđđa#guollebivdu" "goddebivdu" "guollebivdu" "industriija" "johka#luossabivdu" "lassiealáhus" "luossabivdu" "oapmedoallu" "riektepolitihkka" "rievssatbivdu" "ruvkedoaibma"
 "sáivaguollebivdu" "sáivabivdu" "sosiálapolitihkka" "šákša#dorske#bivdu" "sámeduodji" "smávva#bivdu" "šibitdoallu" ;
 
 # Not related to certain political verbs
@@ -1816,7 +1816,7 @@ LIST OTHER-INDUSTRY = (".*ealáhus"r) "biedjo#bivdu" "pivdo" "puásuituálu" "De
 LIST POLITICAL-INDUSTRY = (".*politihkka"r) ;
  # Related to certain political verbs
  # Duomma:lea
- 
+
 SET INDUSTRY = POLITICAL-INDUSTRY OR OTHER-INDUSTRY ;
 
 LIST RIEKTEDILLI = "bajithearrávuohta" "bálvalusfálaldat" "čearddalašvuohta" "diggegirji" "dilálašvuohta" "ealáhusvuođđu" "eanajuohkinsuohkan" "eanadoallobuvttadeapmi" "eanavuovdinkantuvra" "haldâttâs" "kulttuur" "matrihkal" "meahcceriggodat" "omâdâh" "rádjemearka" "rääji" "rääji" "resursageavaheapmi" "riektedilli" "riekteáddejupmi" "riddomearraguovlu" "sierraortnet" "stáhtaeana" "suodjalanguovlu" "váldofierpmádat" "vearronjuolggadus" "vuoigatvuođadilálašvuohta" (".*vuoigatvuohta"r) "vuovde#atnu" "vuovde#njuolggadus" "suverenitehta" "kulturdoarjja" ;
@@ -1839,33 +1839,33 @@ SET ACTOR = ANIMATE OR INSTITUTION OR ORGANIZATION ;
 
 LIST STATE = "bahávuohta" "dearvvasvuohta" "koskâvuotâ" "mielladearvvašvuohta" "ráávhu" "váivi" "iše";
 
-  
+
 LIST OTHER-ABSTR-ENTITY = "äšši" (".*prošeakta"r) (".*plána"r) "eestâ" "čuolmâ" ;
 
   # can represent a concrete entity
 
 LIST MONEY = "ánssu" "árvu" (".*bálká"r) (".*bušeahtta"r) (".*buhtadus"r) "ánssu" "máksu" (".*doarjja"r)
-(".*gollu"r) "hadde" "juolludeapmi" "juolludus" ("liigudit" Der/NomAct) "máksu" 
+(".*gollu"r) "hadde" "juolludeapmi" "juolludus" ("liigudit" Der/NomAct) "máksu"
  "renttâ" (".*ruhta"r) "sákku" "ánssu" "tienas" "velgi" "viäru" "vuáittu" ;
 
     # Ambiguous with respect to concreteness, either the symbolic amount or the concrete coins and bills
 
 SET ABSTR-ENTITY = MONEY OR STATE OR OTHER-ABSTR-ENTITY ;
 
- 
-LIST GEN-CONCEPT = "anistupmi" "algâ" "áŋgirvuohta" "áigumuš" "ärbivyehi" "ávžžuhus" 
-"ballu" "palvâlus" "bálvaluskvaliteahtta" "bargomálle" "puáđus" "dárbu" "tääsi" "toimâ" "duođaštangeatnegasvuohta" "duogáš" "eaiggátvuohta" "eallinvuohki" "erohus" "evttohus" 
+
+LIST GEN-CONCEPT = "anistupmi" "algâ" "áŋgirvuohta" "áigumuš" "ärbivyehi" "ávžžuhus"
+"ballu" "palvâlus" "bálvaluskvaliteahtta" "bargomálle" "puáđus" "dárbu" "tääsi" "toimâ" "duođaštangeatnegasvuohta" "duogáš" "eaiggátvuohta" "eallinvuohki" "erohus" "evttohus"
 "fádda" "friddjavuohta" "fuolalašvuohta" "gaskamearri" "gaskaoapmi" "geargatvuohta" "kenigâsvuotâ" "tohálâšvuotâ" "gudnejahttin" "kunnee" "hállu" "hástalus" "isitvuohta"
-"konflikta" "kontákta" "kulturduogáš" "kulturmáhttu" "kvaliteahtta" "loppâ" "loatnaetymologiija" "lope" 
+"konflikta" "kontákta" "kulturduogáš" "kulturmáhttu" "kvaliteahtta" "loppâ" "loatnaetymologiija" "lope"
 "máhttu" "máŋggabealatvuohta" "mielâ" "mihttomearri" "molssaeaktu" "mušto" "uámitobdo" "ohtâvuotâ" "olahahttivuohta" "ovdâmerkkâ" "ovdâsvástádâs" "ovttadássásašvuohta" "uáinu"
-"ráffi" "ráávhu" "rähisvuotâ" "pirâldâs" "riekteprinsihppa" "rolla" "sámegielmáhttu" "sámekultuvra" "sihkkarastin#strategiija" "strategiija" "šiehtadallanfáddá" "symbola#systema" 
+"ráffi" "ráávhu" "rähisvuotâ" "pirâldâs" "riekteprinsihppa" "rolla" "sámegielmáhttu" "sámekultuvra" "sihkkarastin#strategiija" "strategiija" "šiehtadallanfáddá" "symbola#systema"
 "ulme" "ustevvuotâ" "vanhurskkisvuohta" "váimu" "váikkuhanfápmu" "vaikuttâs" "váldosivva" "vásáhusduogáš" "puástuvuotâ" "virgelohpi" "vuordâ" (".*vuoigatvuohta"r) ;
- 
+
   # very abstract
-  # Adding words to this set, consider if they suit to the SG-WORD-set as well. 
-  
-    
-   
+  # Adding words to this set, consider if they suit to the SG-WORD-set as well.
+
+
+
 LIST STRUCTURE = "algâ" "loppâ" "struktuvra" "maŋŋegeahči" "lasattâs" "loahppageahči" "álgogeahči" "álgooassi" "sisdoallu" "veršuvdna" ;
 
 LIST PROPERTY = "burrodat" "fastivuohta" "hedjodat" "allodat" "gassodat" "kvaliteahtta" "sturrodat" "guhkkodat" "govdodat" "häämi" "ivne" "väri" "dovdomearka" "iešvuohta" "viidodat" ;
@@ -1874,32 +1874,32 @@ LIST IDEOLOGY = "buddhisma" "geahččanguovlu" "kommunisma" "oaidninčiehka" "os
 
 SET CONCEPT = GEN-CONCEPT OR STRUCTURE OR PROPERTY OR IDEOLOGY ;
 
-  
+
 LIST ACTIVITY = "aktivitehta" (".*dutkamuš"r) "elämys" "dearvvašvuođadutkan" "fuolaheapmi" "kejâstâh" "čielgiittâs" "heahtebargu"  (".*lodden"r) "lodden" "mätki" "návetbargu" "sisafárren" "šiehtadallan" ;
 
   # semantically comparable to Actio forms + lexicalized Der/NomAct forms.
   # probably change of state in the course of time
-  
+
 LIST PROCESS = (".*proseassa"r) ;
 
     # Reminds of time sets
-    
+
 LIST TOPIC = "areálaášši" "áideášši" "boazodoalloášši" (".*-#ášši"r) "buhtadusášši" "bušeahttagáržžidanášši"
 "čázádathuksen#ášši" "čiekŋudanfáddá" "čoahkkin#ášši" "diggeášši" "doarjja#juohkin#ášši"
-"eallinášši" "eaŋkalášši" "eanaoastinášši" 
+"eallinášši" "eaŋkalášši" "eanaoastinášši"
 "giellaášši" "girkoášši" "gudnerihkkun#ášši" "guolle#ášši" "guovlogáhttenášši" "hálddašanášši" "huksenášši" "individuála#ášši" "juogadanášši" "konsešuvdnaášši"
-"lassiášši" "luonddugáhtten#ášši" "meroštan#ášši" "mudden#ášši" "namma#logahallan#ášši" "nággoášši" "rádjaášši" "ráfáiduhttinášši" "rávdnje#huksenášši" "riidoášši" 
-"sámeášši" "sisbuksa#ášši" "suohkanstivrraášši" 
-"plánaášši" "riekteášši"  
+"lassiášši" "luonddugáhtten#ášši" "meroštan#ášši" "mudden#ášši" "namma#logahallan#ášši" "nággoášši" "rádjaášši" "ráfáiduhttinášši" "rávdnje#huksenášši" "riidoášši"
+"sámeášši" "sisbuksa#ášši" "suohkanstivrraášši"
+"plánaášši" "riekteášši"
 "sámeášši" "suopman#ášši" "váiddaášši" "váidinášši" "válduäšši" "vearroduottarášši" "vuoigatvuođaášši" ;
 
 SET ABSTRACT = ABSTR-ENTITY OR CONCEPT OR ACTIVITY ;
- 
-  
+
+
 LIST DILLI = (".*dilli"r) ;
 
   # Likely to be locative in most contexts
-  
+
 LIST WEATHER-SITUATION = "piäivádâh" "pievlâ" "puolâš" (".*dálki"r)  "fiärttu" "goalki" "sijvo" "jođádat" "lieggâstielâs" "linádat" "oppas" "vašo" "purgâ" "ilbmi" "polvâ" "čuoškâ" "čoaskin" "pieggâ" "nuorttadat" "davádat" "oarjjádat" "kesipieggâ" "orjješbiegga" "nuortabiegga" "obbadálki" "balvadálki" "balva#ilbmi" "arvi" "savda" "savda#arvi" "liehmu" "láfubiegga" "äijih" "johtti" "kállu" "viätu" "hieibma" "šlahtti" "seaŋáš" "purgâ" "guoldu" "dobadat" "čäciollee" "moarri" "geardni" "cuáŋoi" "jealahas" "jalahâs" "geasádat" "dálvvádat" "jáldu" "lievhnu" "galmma" "guostta" "čođđolat" "čođđálat" "sealádat" "šearádat" "bálgu" "bálggádat" ;
 
 SET SITUATION = DILLI OR WEATHER-SITUATION ;
@@ -1909,8 +1909,8 @@ SET ACTOR-ROLE = HUMAN OR ORGANIZATION OR POLITICAL-PLACE OR EDUCATION OR Sem/Or
 
 LIST EVENT-TOOL-ACTIVITY = Der/NomAct "addin" "dearvvašvuođaiskkadeapmi" "goddin" "hárjehallan" "jápmin" "ráđđádallan" "šiehtadallan" "vázzin" ;
 
-LIST EVENT = (".*čoahkkin"r) "čoakkalmas" (".*márkan"r) "boazodoallošiehtadallan" "cup" "čuoigan#cup" "teivâdem" "toimâohtâdâh" "juhle" (".*festivála"r) 
-"heejah" (".*gilvu"r) "konferens" "konsert" "kurssâ" "maailmsuáti" "mätki" "mearridanproseassa" "prosessâ" 
+LIST EVENT = (".*čoahkkin"r) "čoakkalmas" (".*márkan"r) "boazodoallošiehtadallan" "cup" "čuoigan#cup" "teivâdem" "toimâohtâdâh" "juhle" (".*festivála"r)
+"heejah" (".*gilvu"r) "konferens" "konsert" "kurssâ" "maailmsuáti" "mätki" "mearridanproseassa" "prosessâ"
 "ruhkos" "suáti" (".*válga"r) "vuosttaščájálmas" ;
  #XXX bad name, too general
 
@@ -1922,23 +1922,23 @@ SET ABSTR-PLACE = ORGANIZATION OR INSTITUTION OR EVENT OR EDUCATION OR INDUSTRY 
 #!! - Sets denoting relations
 
 LIST OASSI = "gonagasoassi" "riika#oassi" "riikkaoassi" "uási" "teakstaoassi" "váldooassi" ;
- 
-	# Might be useful for partitive constructions.	
+
+	# Might be useful for partitive constructions.
 	# Try to make a set of nouns wich not will be Gen in a AccGen string.
-	
+
 LIST HEADOFPARTS = "eanetlohku" "ucceebloho" "mearri" "nissonoassi" "uási" "váldooassi" "peeli" "guhtemuš" "kuohtuuh" "proseanta" "%" Sem/Part ;
 
-  # This may be a better partitive set.	
+  # This may be a better partitive set.
 
 #!! ### Miscellaneous sets
 # ------------------
 
 LIST GASKAL = "gaskal" "gaskkal" "gaskii" "jtak" "kooskâst" ;
- 
+
  # p-positions that like coordination
- 
+
 #LIST TIME-PP = "badjel" "čoođâ" "eereeb" "gaskkal" "kuávdáš" "maŋa" "maŋa" "kejimield" "ovdâl" ;
- 
+
 
 # this set does not contain ordinals, I am not sure if that is necessary.
 
@@ -1949,7 +1949,7 @@ SET NOT-CC = WORD - CC ;
 SET NOT-PCLE = WORD - Pcle ;
 
 LIST COMPAR = ("dávji" A Comp) "eenâb" "eenâb" "ereslágán" "eres" "iežá" "eereeb" "seammás" "siämmáálágán" "seamma_láhkái" ;
- 
+
  # These combine with "ko" Pcle, but COMPAR stands for 'comparison' rather than
  # 'comparative'.
 
@@ -1971,23 +1971,23 @@ LIST BOUNDARYSYMBOLS =  "\;" ":" "-" "–" ;
 
 # This set if for disambiguating rules after mapping @CVP and @CNP to all CS and CC readings, therefore we cannot have @CVP in the set
 SET S-BOUNDARY-NOT-CVP = CP OR BOUNDARYSYMBOLS OR ("mut") OR ("joo" Adv) OR (Neg Sup) ;
-	
+
 SET S-BOUNDARY = CP OR BOUNDARYSYMBOLS OR ("mut") OR ("joo" Adv) OR (Neg Sup) OR (@CVP) OR ("val" Adv Qst) ;
 	# does not include CS, because of "ko" in questions, before it is disambugated.
 	# includes CP
-	# this one includes @CVP, the conjunction which actually connects two sentences (each with a finite verb) to each other, 
+	# this one includes @CVP, the conjunction which actually connects two sentences (each with a finite verb) to each other,
 	# and not @CNP, which coordinates internal NP-/AdvP-/AP ... coordination
 	# To be used only AFTER the disambiguation of @CVP and @CNP taking place in the chapter right before "Disambiguating pronouns"
 
 
 SET BOC = S-BOUNDARY OR BOS ;
-SET BOC-PUNCT = BOC - ("-") - ("–") ; 
+SET BOC-PUNCT = BOC - ("-") - ("–") ;
 SET EOC = S-BOUNDARY OR EOS ;
 
 SET NP-BOUNDARY = BOS OR EOS OR REAL-CLB OR VFIN OR Inf OR (Actio Ess) OR ConNeg OR VGen OR Sup OR PPRON-NOT-GEN OR Recipr OR Po OR Pr OR Pcle OR ("jed") OR Interj OR CS OR CP OR @CVP ;
 
 
-# This set contains FMAINV with @, which means that it functions for all kind of mainverbs after the verb-mapping rules 
+# This set contains FMAINV with @, which means that it functions for all kind of mainverbs after the verb-mapping rules
 SET SV-BOUNDARY = S-BOUNDARY OR Inf - AUX OR Sup OR FMAINV ;
  # VFIN-NOT-AUX ;
  # should be MAIN-V linked to VFIN-aux to the left. (cg-3)
@@ -1995,7 +1995,7 @@ SET SV-BOUNDARY = S-BOUNDARY OR Inf - AUX OR Sup OR FMAINV ;
 
 SET SVF-BOUNDARY = S-BOUNDARY OR VFIN ;
 
-# This set is ment to use in rules for disambiguating due to verbs or verbsets. 
+# This set is ment to use in rules for disambiguating due to verbs or verbsets.
 # Here we search for either an S-BOUNDARY or a finite verb, either aux or main.
 
 SET CCCOMMA = CC OR COMMA ;
@@ -2038,12 +2038,12 @@ LIST &msyn-agr-sg2-sg3 = &msyn-agr-sg2-sg3 ;
 LIST &msyn-agr-sg3-du3 = &msyn-agr-sg3-du3 ;
 LIST &msyn-agr-sg3-pl3 = &msyn-agr-sg3-pl3 ;
 LIST &msyn-attr-com-gen = &msyn-attr-com-gen ;
-LIST &msyn-dem-locattr-gen = &msyn-dem-locattr-gen ;	
+LIST &msyn-dem-locattr-gen = &msyn-dem-locattr-gen ;
 LIST &msyn-det-nom-acc = &msyn-det-nom-acc ;
 LIST &msyn-extneg-sg3-pl3 = &msyn-extneg-sg3-pl3 ;
-LIST &msyn-extsubj-acc-nom = &msyn-extsubj-acc-nom ; 
+LIST &msyn-extsubj-acc-nom = &msyn-extsubj-acc-nom ;
 LIST &msyn-extsubj-gen-nom = &msyn-extsubj-gen-nom ;
-LIST &msyn-extsubj-ill-nom = &msyn-extsubj-ill-nom ; 
+LIST &msyn-extsubj-ill-nom = &msyn-extsubj-ill-nom ;
 LIST &msyn-extv-numeral-sg3-pl3 = &msyn-extv-numeral-sg3-pl3 ;
 LIST &msyn-extv-pl3-sg3 = &msyn-extv-pl3-sg3 ;
 LIST &msyn-extv-sg3-pl3 = &msyn-extv-sg3-pl3 ;
@@ -2053,8 +2053,8 @@ LIST &msyn-mii-sgnom-placc = &msyn-mii-sgnom-placc ;
 LIST &msyn-ncompl-ess-sgill = &msyn-ncompl-ess-sgill ;
 LIST &msyn-ncompl-placc-plill = &msyn-ncompl-placc-plill ;
 LIST &msyn-negcompl-sg3-conneg = &msyn-negcompl-sg3-conneg ;
-LIST &msyn-ness-acc-nom = &msyn-ness-acc-nom ; 
-LIST &msyn-ness-ill-nom = &msyn-ness-ill-nom ; 
+LIST &msyn-ness-acc-nom = &msyn-ness-acc-nom ;
+LIST &msyn-ness-ill-nom = &msyn-ness-ill-nom ;
 LIST &msyn-num-acc-par = &msyn-num-acc-par ;
 LIST &msyn-num-gen-par = &msyn-num-gen-par ;
 LIST &msyn-num-par-gen = &msyn-num-par-gen ;
@@ -2064,12 +2064,12 @@ LIST &msyn-obj-plnom-placc = &msyn-obj-plnom-placc ;
 LIST &msyn-obj-sgnom-sgacc = &msyn-obj-sgnom-sgacc ;
 LIST &msyn-orrood-inf-actioess = &msyn-orrood-inf-actioess ;
 LIST &msyn-pass-accsubj-nomsubj = &msyn-pass-accsubj-nomsubj ;
-LIST &msyn-plobj-nom-acc = &msyn-plobj-nom-acc ; 
+LIST &msyn-plobj-nom-acc = &msyn-plobj-nom-acc ;
 LIST &msyn-po-nom-gen = &msyn-po-nom-gen ;
 LIST &msyn-po-placc-plgen = &msyn-po-placc-plgen ;
-LIST &msyn-posspl-acc-gen =  &msyn-posspl-acc-gen ; 
-LIST &msyn-pred-acc-nom =  &msyn-pred-acc-nom ; 
-LIST &msyn-pred-ill-nom =  &msyn-pred-ill-nom ; 
+LIST &msyn-posspl-acc-gen =  &msyn-posspl-acc-gen ;
+LIST &msyn-pred-acc-nom =  &msyn-pred-acc-nom ;
+LIST &msyn-pred-ill-nom =  &msyn-pred-ill-nom ;
 LIST &msyn-predagr-pl3-sg3 = &msyn-predagr-pl3-sg3 ;
 LIST &msyn-quadv-sg-pl = &msyn-quadv-sg-pl ;
 LIST &msyn-quant-gen-nom =  &msyn-quant-gen-nom ;
@@ -2125,7 +2125,7 @@ ADD (&typo &SUGGESTWF) (<spelled>);
 ADD:xmsyn-imp-pl3-sg3 (&msyn-imp-pl3-sg3) TARGET V + Imprt IF
 	(0 Imprt + Pl3)
 	(*1 N + Sg + Nom BARRIER NOT-NPMOD);
-COPY:msyn-imp-pl3-sg3 (Sg3 &SUGGEST) EXCEPT (Pl3 &msyn-imp-pl3-sg3) TARGET (V Imprt &msyn-imp-pl3-sg3); 
+COPY:msyn-imp-pl3-sg3 (Sg3 &SUGGEST) EXCEPT (Pl3 &msyn-imp-pl3-sg3) TARGET (V Imprt &msyn-imp-pl3-sg3);
 
 
 #!! ### Singulaari
@@ -2170,8 +2170,8 @@ COPY:msyn-agr-other-sg1 (Sg1 &SUGGEST) EXCEPT (VNOTSG1 &msyn-agr-other-sg1) TARG
 
 
 #!!  **Agreement rule:** msyn-v-prfprc-sg1, Subject to the left
-ADD:xmsyn-v-prfprc-sg1 (&msyn-v-prfprc-sg1) TARGET V IF 
-	(NOT *-2 V + Sg1) 
+ADD:xmsyn-v-prfprc-sg1 (&msyn-v-prfprc-sg1) TARGET V IF
+	(NOT *-2 V + Sg1)
 	(*-1 Pron + Sg1 + Nom BARRIER NOT-ADV-PCLE)
 	(0 V + PrfPrc)
 	(NOT 0 Sg1)
@@ -2181,7 +2181,7 @@ COPY:msyn-v-prfprc-sg1 (Ind Prs Sg1 &SUGGEST) EXCEPT (PrfPrc &msyn-v-prfprc-sg1)
 #$ Mun vááldám.
 #$ Lamhân mun váldám tom.
 #$ Mun lam.
-#$ Jiävttáá kävppirievedem maŋa mun smietâškuottim, lam-uv mun kuássin uáinám poolis tuođâlii pargoost skelmâigijn. 
+#$ Jiävttáá kävppirievedem maŋa mun smietâškuottim, lam-uv mun kuássin uáinám poolis tuođâlii pargoost skelmâigijn.
 
 #!!  **Agreement rule:** msyn-v-actio-sg1, Subject to the left
 ADD:xmsyn-v-actio-sg1 (&msyn-v-actio-sg1) TARGET V IF (*-1C Pron + Sg1 + Nom BARRIER NOT-ADV-PCLE)(0 V + Actio + Nom)(NOT 0 Sg1);
@@ -2273,13 +2273,13 @@ COPY:msyn-agr-other-du2 (Du2 &SUGGEST) EXCEPT (VNOTDU2 &msyn-agr-other-du2) TARG
 
 #!! #### Du3
 
-#!!  **Agreement rule:** msyn-agr-sg3-du3 
+#!!  **Agreement rule:** msyn-agr-sg3-du3
 ADD:xmsyn-agr-sg3-du3 (&msyn-agr-sg3-du3) TARGET V IF
 	(-1 Pron + Pers + Du3 + Nom)
 	(0 (V Ind Sg3));
 COPY:msyn-agr-sg3-du3 (Du3 &SUGGEST) EXCEPT (Sg3 &msyn-agr-sg3-du3) TARGET (V  &msyn-agr-sg3-du3);
 
-#!!  **Agreement rule:** msyn-agr-sg3-du3 
+#!!  **Agreement rule:** msyn-agr-sg3-du3
 ADD:xmsyn-agr-sg3-du3 (&msyn-agr-sg3-du3) TARGET V IF
 	(-1 N + Sg + Nom LINK 0 Sem/Hum OR Sem/Ani OR Sem/Org LINK -1 CC LINK -1 N + Sg + Nom LINK 0 Sem/Hum OR Sem/Ani OR Sem/Org)
 	(0 (V Ind Sg3));
@@ -2326,7 +2326,7 @@ COPY:msyn-agr-other-pl2 (Pl2 &SUGGEST) EXCEPT (VNOTPL2 &msyn-agr-other-pl2) TARG
 
 #!! #### Pl3
 
-#!! Sg3/Pl3 errors: Suomâkielâ sárnumkielâ epikongruens maaŋgâlovo 3. persovnist 
+#!! Sg3/Pl3 errors: Suomâkielâ sárnumkielâ epikongruens maaŋgâlovo 3. persovnist
 
 #!!  **Agreement rule:** Subject to the right, msyn-agr-sg3-pl3
 ADD:xmsyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET (V Sg3) IF
@@ -2346,7 +2346,7 @@ ADDRELATION:msyn-agr-sg3-pl3 ($2) (Pl Nom) FROM (-4 V + Sg3 LINK 0 (&msyn-agr-sg
 #$ Kuáđist kávnojii liteh.
 
 # du3 skal bli pl3
-#!!  **Agreement rule:** msyn-agr-sg3-du3 
+#!!  **Agreement rule:** msyn-agr-sg3-du3
 ADD:xmsyn-agr-sg3-du3 (&msyn-agr-sg3-du3) TARGET V IF
 	(-1 Pron + Pers + Du3 + Nom)
 	(0 (V Ind Sg3));
@@ -2377,8 +2377,8 @@ ADD:xmsyn-agr-pl3-sg3 (&msyn-agr-pl3-sg3) TARGET (V Pl3) IF
 	(NEGATE 0 (V Sg3))
         (*-1 (Loc Sg) - Prop BARRIER NOT-ADV-PCLE - N LINK -1 (".*%"r) + Num + Arab OR ("peeli") + Sg + Nom LINK NOT 1 PUNCT);
 COPY:msyn-agr-pl3-sg3 (Sg3 &SUGGEST) EXCEPT (Pl3 &msyn-agr-pl3-sg3) TARGET (V &msyn-agr-pl3-sg3);
-#% 
-#$ 
+#%
+#$
 
 #!!  **Agreement rule:** msyn-agr-other-pl3, Subject to the left, *Toh puátá/puátih.*
 ADD:xmsyn-agr-other-pl3 (&msyn-agr-other-pl3) TARGET V IF
@@ -2398,7 +2398,7 @@ COPY:msyn-agr-other-pl3 (Pl3 &SUGGEST) EXCEPT (VNOTPL3 &msyn-agr-other-pl3) TARG
 
 
 #!!  **Agreement rule:** msyn-agr-other-pl3
-ADD:xmsyn-agr-other-pl3 (&msyn-agr-other-pl3) TARGET V IF 
+ADD:xmsyn-agr-other-pl3 (&msyn-agr-other-pl3) TARGET V IF
 	(*-1 N + Pl + Nom BARRIER NOT-NPMODADV OR CC OR CLB OR PUNCT LINK NOT 0 NPL_WITH_VSG3 OR ABBR)
 	(NEGATE *-1 ("čuovâ" N Pl Nom) LINK 1 ("alne"))
 	(0C V + Ind + Sg3 OR V + Cond + Sg3)
@@ -2407,7 +2407,7 @@ ADD:xmsyn-agr-other-pl3 (&msyn-agr-other-pl3) TARGET V IF
 	(NOT 1 Sg + Nom OR Pron + Sg3 + Nom);
 
 #!!  **Agreement rule:** msyn-agr-other-pl3
-ADD:xmsyn-agr-other-pl3 (&msyn-agr-other-pl3) TARGET V IF 
+ADD:xmsyn-agr-other-pl3 (&msyn-agr-other-pl3) TARGET V IF
  (NOT -2 Sup OR Sg3)
  (NOT *-1C Pron + Nom OR Dem + Nom OR N + Nom BARRIER NOT-ADV-PCLE)
  (NOT -1 NPL_WITH_VSG3)
@@ -2421,7 +2421,7 @@ COPY:msyn-agr-other-pl3 (Pl3 Foc/ge &SUGGEST) EXCEPT (Sg3 Foc/ge &msyn-agr-other
 COPY:msyn-agr-other-pl3 (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-agr-other-pl3) TARGET (V Ind &msyn-agr-other-pl3); # Neg
 ADDRELATION:msyn-agr-other-pl3 ($2) (N Pl Nom) FROM (-1 V LINK 0 (&msyn-agr-other-pl3));
 ADDRELATION:msyn-agr-other-pl3 ($2) (N Pl Nom) FROM (-2 V LINK 0 (&msyn-agr-other-pl3));
-	
+
 #% Viäsust juáhhoo juávhoid tagareh almoneh, moh kovvejeh ääši.
 #$ Viäsust juáhhojeh juávhoid tagareh almoneh, moh kovvejeh ääši.
 
@@ -2496,10 +2496,10 @@ COPY:msyn-orrood-inf-actioess (Actio Ess &SUGGEST) EXCEPT (Inf &msyn-orrood-inf-
 
 #!! ### Existential sentences
 
-#!! Here, the verb should be plural. The interference comes from Finnish e-sentences, where the verb is in the ingular. 
+#!! Here, the verb should be plural. The interference comes from Finnish e-sentences, where the verb is in the ingular.
 
 #!!  **Agreement rule:** msyn-extv-sg3-pl3 *Must lii/láá uđđâ autoh.*
-ADD:msyn-extv-sg3-pl3 (&msyn-extv-sg3-pl3) TARGET V IF 
+ADD:msyn-extv-sg3-pl3 (&msyn-extv-sg3-pl3) TARGET V IF
 (*-1 Loc OR DOPPE OR Sem/Part BARRIER NOT-ADV-PCLE)
 (0 ("leđe" V Ind Prs Sg3))
 (*1 N + Pl + Nom BARRIER NOT-NPMODADV OR @CVP OR S-BOUNDARY);
@@ -2508,7 +2508,7 @@ COPY:msyn-extv-sg3-pl3 (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-extv-sg3-pl3) TARGET ("l
 #$ Must láá uđđâ autoh.
 
 #!!  **Agreement rule:** msyn-extv-sg3-pl3, *Iäruh omâstemráhtusist: mieđetteijee já kieldee häämi.*
-ADD:msyn-extv-sg3-pl3 (&msyn-extv-sg3-pl3) TARGET V IF 
+ADD:msyn-extv-sg3-pl3 (&msyn-extv-sg3-pl3) TARGET V IF
 (-1 Loc OR DOPPE)
 (0 LEDE + Sg3)
 (*1 N + Pl + Nom BARRIER NOT-ADV-PCLE);
@@ -2516,38 +2516,38 @@ COPY:msyn-extv-sg3-pl3 (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-extv-sg3-pl3) TARGET (V 
 ADDRELATION:msyn-extv-sg3-pl3 ($2) N + Pl + Nom FROM (-1 V + LEDE + Sg3 LINK 0 (&msyn-extv-sg3-pl3));
 ADDRELATION:msyn-extv-sg3-pl3 ($2) N + Pl + Nom FROM (-2 V + LEDE + Sg3 LINK 0 (&msyn-extv-sg3-pl3));
 ADDRELATION:msyn-extv-sg3-pl3 ($2) N + Pl + Nom FROM (-3 V + LEDE + Sg3 LINK 0 (&msyn-extv-sg3-pl3));
-	
+
 #% Must lii kyeleh onne.
 #$ Must láá kyeleh.
 #fi Minulla on kaloja.
 
 
 #!!  **Agreement rule:** msyn-extv-pl3-sg3 *Must lii/láá uđđâ autoh.*
-ADD:msyn-extv-pl3-sg3 (&msyn-extv-pl3-sg3) TARGET V IF 
+ADD:msyn-extv-pl3-sg3 (&msyn-extv-pl3-sg3) TARGET V IF
 	(*-1 Loc OR DOPPE BARRIER NOT-ADV-PCLE)
 	(0 ("leđe" V Ind Prs Pl3))
 	(*1 N + Sg + Nom BARRIER NOT-NPMODADV OR @CVP OR S-BOUNDARY LINK NOT 1 CC);
 COPY:msyn-extv-pl3-sg3 (Sg3 &SUGGEST) EXCEPT (Pl3 &msyn-extv-pl3-sg3) TARGET ("leđe" V Ind Prs &msyn-extv-pl3-sg3) ;
 #!!  **Agreement rule:** msyn-extv-pl3-sg3 *Liihân/Lááhân must uđđâ autoh.*
-ADD:msyn-extv-pl3-sg3 (&msyn-extv-pl3-sg3) TARGET V IF 
+ADD:msyn-extv-pl3-sg3 (&msyn-extv-pl3-sg3) TARGET V IF
 	(0 ("leđe" V Ind Prs Pl3 Foc/han))
 	(1 Pron + Loc)
 	(*2 N + Sg + Nom BARRIER NOT-NPMODADV OR @CVP OR S-BOUNDARY LINK NOT 1 CC);
 COPY:msyn-extv-pl3-sg3 (Sg3 Foc/han &SUGGEST) EXCEPT (Pl3 Foc/han  &msyn-extv-pl3-sg3) TARGET ("leđe" V Ind Prs &msyn-extv-pl3-sg3) ;
 #!!  **Agreement rule:** msyn-extv-pl3-sg3 *Liihân/Lááhân must uđđâ autoh.*
-ADD:msyn-extv-pl3-sg3 (&msyn-extv-pl3-sg3) TARGET V IF 
+ADD:msyn-extv-pl3-sg3 (&msyn-extv-pl3-sg3) TARGET V IF
 	(0 ("leđe" V Ind Prs Pl3 Qst))
 	(1 Pron + Loc)
 	(*2 N + Sg + Nom BARRIER NOT-NPMODADV OR @CVP OR S-BOUNDARY LINK NOT 1 CC);
 COPY:msyn-extv-pl3-sg3 (Sg3 Qst &SUGGEST) EXCEPT (Pl3 Qst  &msyn-extv-pl3-sg3) TARGET ("leđe" V Ind Prs &msyn-extv-pl3-sg3) ;
 #!!  **Agreement rule:** msyn-extv-pl3-sg3 *Liihân/Lááhân must uđđâ autoh.*
-ADD:msyn-extv-pl3-sg3 (&msyn-extv-pl3-sg3) TARGET V IF 
+ADD:msyn-extv-pl3-sg3 (&msyn-extv-pl3-sg3) TARGET V IF
 	(0 ("leđe" V Ind Prs Pl3 Foc/uv))
 	(1 Pron + Loc)
 	(*2 N + Sg + Nom BARRIER NOT-NPMODADV OR @CVP OR S-BOUNDARY LINK NOT 1 CC);
 COPY:msyn-extv-pl3-sg3 (Sg3 Foc/uv &SUGGEST) EXCEPT (Pl3 Foc/uv  &msyn-extv-pl3-sg3) TARGET ("leđe" V Ind Prs &msyn-extv-pl3-sg3) ;
 #!!  **Agreement rule:** msyn-extv-pl3-sg3 *Lii/Láá must uđđâ autoh.*
-ADD:msyn-extv-pl3-sg3 (&msyn-extv-pl3-sg3) TARGET V IF 
+ADD:msyn-extv-pl3-sg3 (&msyn-extv-pl3-sg3) TARGET V IF
 	(0 ("leđe" V Ind Prs Pl3))
 	(1 Pron + Loc)
 	(*2 N + Sg + Nom BARRIER NOT-NPMODADV OR @CVP OR S-BOUNDARY LINK NOT 1 CC);
@@ -2559,7 +2559,7 @@ COPY:msyn-extv-pl3-sg3 (Sg3 &SUGGEST) EXCEPT (Pl3 &msyn-extv-pl3-sg3) TARGET ("l
 
 
 #!!  **Agreement rule:** msyn-extv-numeral-sg3-pl3
-ADD:msyn-extv-numeral-sg3-pl3 (&msyn-extv-numeral-sg3-pl3) TARGET V IF 
+ADD:msyn-extv-numeral-sg3-pl3 (&msyn-extv-numeral-sg3-pl3) TARGET V IF
 (*-1 Loc OR DOPPE BARRIER NOT-ADV-PCLE)
 (0 LEDE + Sg3)
 (*1 Num + Nom BARRIER NOT-ADV-PCLE LINK NOT 0 OHTA OR Sem/Date OR Sem/Year OR Sem/ID LINK *1 N);
@@ -2570,7 +2570,7 @@ ADDRELATION:msyn-extv-numeral-sg3-pl3 ($2) Num + Nom FROM (-1 V + LEDE + Sg3 LIN
 #% Muu šiljoost lii ain kyehti rástágáá. # tp
 #% Must {lii} kyehti kyele.
 #$ Must láá kyehti kyele.
-#fi Minulla on kaksi kalaa. - 
+#fi Minulla on kaksi kalaa. -
 #ADD:xmsyn-extv-vagr (&msyn-extv-vagr) TARGET N IF (-2 Loc)(-1 LEDE + Pl3)(0 Num);
 
 
@@ -2591,7 +2591,7 @@ ADDRELATION:msyn-extneg-sg3-pl3 ($2) N + Pl + Nom FROM (-3 ("ij") + Sg3 LINK 0 (
 #% Šiljoost iä lah innig poccuid.
 #% Šiljoost ij lah innig poccuid.
 #$ Šiljoost iä lah innig poccuuh.
-#fi Pihalla ei ole enää poroja. - 
+#fi Pihalla ei ole enää poroja. -
 #$ Ij ton peeleest, iä toh valmâštâlmeh lam tohhum taangin “älkkees” vuáváámân...
 
 
@@ -2603,8 +2603,8 @@ ADDRELATION:msyn-extneg-sg3-pl3 ($2) N + Pl + Nom FROM (-3 ("ij") + Sg3 LINK 0 (
 # e-subject in Pl Acc based on Finnish partitive
 #ADD:xmsyn-esubj-plnom (&msyn-esubj-plnom) TARGET N IF (*-1 LEDE + Pl3 BARRIER NOT-NPMOD LINK -1 Loc)(0C (N Pl Acc) OR (N Pl Ill));
 #COPY:msyn-esubj-plnom (Nom &SUGGEST) EXCEPT Ill TARGET (N Pl &msyn-esubj-plnom) ;
-#fi Pihalla on poroja. - 
-#$ Šiljoost láá poccuuh. 
+#fi Pihalla on poroja. -
+#$ Šiljoost láá poccuuh.
 #% Šiljoost láá poccuid.
 #% Šiljoost láá čapis poccuid.
 #$ Must láá kyeleh onne.
@@ -2647,19 +2647,19 @@ ADD:msyn-extsubj-gen-nom (&msyn-extsubj-gen-nom) TARGET N + Gen IF
 	(NOT 1 N + Gen OR N + Nom OR Po)
 	;
 COPY:msyn-extsubj-gen-nom (Nom &SUGGEST) EXCEPT (Gen &msyn-extsubj-gen-nom) TARGET (N  &msyn-extsubj-gen-nom) ;
-#% "Sist ij lah alda sämikielâlij huolhij {torjuu}£{toorjâ} finnimnáál."   
+#% "Sist ij lah alda sämikielâlij huolhij {torjuu}£{toorjâ} finnimnáál."
 
 
 #	(*-1 LEDE + ConNeg BARRIER NOT-NPMODADV LINK -1 Neg LINK -1 Loc OR Po) # LINK NOT -1 ("mii" Interr))
 
 #	(NOT -1 ("mihheen"))
 
-#	(NEGATE *1 TV + Ger OR TV + PrfPrc OR TV + Inf BARRIER S-BOUNDARY OR VFIN) 
+#	(NEGATE *1 TV + Ger OR TV + PrfPrc OR TV + Inf BARRIER S-BOUNDARY OR VFIN)
 
 
 
 
-#!!  **Agreement rule:** msyn-extv-sg3-pl3 
+#!!  **Agreement rule:** msyn-extv-sg3-pl3
 ADD:msyn-extv-sg3-pl3 (&msyn-extv-sg3-pl3) TARGET V IF (-1 Loc)(0 LEDE + Sg3)(1 Num + Nom)(NOT 1 OHTA);
 COPY:msyn-extv-sg3-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (LEDE &msyn-extv-sg3-pl3);
 
@@ -2758,7 +2758,7 @@ ADD:xmsyn-pred-ill-nom (&msyn-pred-ill-nom) TARGET (N Pl Ill) IF (-5 BOS)(-4 ("l
 COPY:msyn-pred-ill-nom (Sg Nom &SUGGEST) EXCEPT (Pl Ill &msyn-pred-ill-nom) TARGET (N Pl &msyn-pred-ill-nom);
 
 #%Sämikielâst láá eromâš saanijd.
-#$Sämikieläst láá eromâš säänih. 
+#$Sämikieläst láá eromâš säänih.
 
 
 #!! #### Agreement error with predicative
@@ -2773,8 +2773,8 @@ ADDRELATION:msyn-predagr-pl3-sg3 ($2) (N Sg Nom) FROM (-5 Neg LINK 0 (&msyn-pred
 
 #% Iä lah toorjâ.
 #$ Ij lah toorjâ.
-#% Iä lah alda sämikielâlij huolhij toorjâ finnimnáál. 
-#$ Ij lah alda sämikielâlij huolhij toorjâ finnimnáál. 
+#% Iä lah alda sämikielâlij huolhij toorjâ finnimnáál.
+#$ Ij lah alda sämikielâlij huolhij toorjâ finnimnáál.
 #$ Päikkinoomah iä lah siäilum.
 
 ADD:xmsyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET A IF
@@ -2799,7 +2799,7 @@ ADD:xmsyn-adj-attr-pred (&msyn-adj-attr-pred)  TARGET (A) IF
 	(NOT 0 (Arab Ord) OR (A Sg Nom))
 	(NOT 1 N OR A OR PrfPrc OR ?)
 	(NOT 1 CC LINK 1 A + Attr)
-	(NOT 1 ("...")) 
+	(NOT 1 ("..."))
 	(NOT 1 CC OR COMMA LINK 1 (A Attr));
 ADD:xmsyn-adj-attr-pred (&msyn-adj-attr-pred)  TARGET (A Attr) IF (0C Attr) (1 CC LINK 1 &msyn-adj-attr-pred OR (A Sg Nom) LINK NOT 1 N OR A OR PrfPrc OR CC) (NOT 0 (Arab Ord) OR (A Sg Nom)) ;
 COPY:msyn-adj-attr-pred (Sg Nom &SUGGEST) EXCEPT (Attr &msyn-adj-attr-pred) TARGET ( A &msyn-adj-attr-pred);
@@ -2811,10 +2811,10 @@ COPY:msyn-adj-attr-pred (Sg Nom &SUGGEST) EXCEPT (Attr &msyn-adj-attr-pred) TARG
     #$ toh jiečânâč enâmijn ässee hiäimuaalmugeh, moh spiekâsteh čielgâsávt eennâm eres aalmugjuávhuin {sosiaallâš}, kulttuurlâš já ekonomâlâš tile peeleest já moi sajattâh miärášuvá ollásávt tâi uásild sii jieijâs vuovij tâi ärbivuovij tâi sierânâslahâasâttâs mield; já
 
 #!!  **Agreement rule:** msyn-adj-attr-pred *Mun lam fiskis/fiskâd.*
-ADD:xmsyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A) IF 
+ADD:xmsyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A) IF
   (0C Attr)
   (NOT 0 (Arab Ord))
-  (*-1 COPULAS BARRIER V OR S-BOUNDARY LINK *-1 Nom) 
+  (*-1 COPULAS BARRIER V OR S-BOUNDARY LINK *-1 Nom)
   (NOT 1 Adv)
   (NEGATE *1 N BARRIER NOT-A-CC)
   (NEGATE 1 CC OR COMMA LINK 1 A OR PrfPrc OR PrsPrc LINK 1 N)
@@ -2850,11 +2850,11 @@ COPY:msyn-v-sg1-prfprc (PrfPrc &SUGGEST) EXCEPT (Ind Prs Sg1 &msyn-v-sg1-prfprc)
 #% Sun lii huunjâm
 #$ Sun lii huunnjâm
 #$ - Jiem tieđe poolâm-uv vâi maid, mut tot juurdâ lii váhá ilgâd.
-#$ Te proofeet Joona lâi merâpiäđu čuávjist kulmâ peeivi. 
+#$ Te proofeet Joona lâi merâpiäđu čuávjist kulmâ peeivi.
 
 # čilgen:
 #ADD-njuolggadus: lasihan &msyn-v-sg1-prfprc  jos gurotbealde lea indikatiiva ja ieš lea prs sg1
-#COPY-njuolggadus: bidjan dohko PrfPrc ja sáni &SUGGEST (maksá "evttot dan") 
+#COPY-njuolggadus: bidjan dohko PrfPrc ja sáni &SUGGEST (maksá "evttot dan")
 
 
 
@@ -2887,7 +2887,7 @@ ADD:xmsyn-subj-ill-nom (&msyn-subj-ill-nom) TARGET N IF
 COPY:msyn-subj-ill-nom (Nom &SUGGEST) EXCEPT (Ill &msyn-subj-ill-nom) TARGET (N Pl &msyn-subj-ill-nom) ;
 
 ## Taah kištoid uárnejuvvojii Anarist.
-	
+
 
 #!! ### Plural objects
 
@@ -2941,13 +2941,13 @@ COPY:msyn-v-sg3-conneg (ConNeg &SUGGEST) EXCEPT (Sg3 &msyn-v-sg3-conneg) TARGET 
 
 #!! ### Lii Adj Sg Nom + object
 
-ADD:msyn-obj-nom-acc (&msyn-obj-nom-acc) TARGET N + Sg + Nom IF 
-	(*-1 ("leđe" Ind Sg3)) 
+ADD:msyn-obj-nom-acc (&msyn-obj-nom-acc) TARGET N + Sg + Nom IF
+	(*-1 ("leđe" Ind Sg3))
 	(1 A + <TH-Inf>)
 	 (2 V + TV + Inf );
-	 
+
 COPY:msyn-obj-nom-acc (Acc &SUGGEST) EXCEPT (Nom &msyn-obj-nom-acc) TARGET &msyn-obj-nom-acc ;
-ADDRELATION:msyn-obj-nom-acc  ($2) (A) FROM (-1 N LINK 0 (&msyn-obj-nom-acc)) ; 
+ADDRELATION:msyn-obj-nom-acc  ($2) (A) FROM (-1 N LINK 0 (&msyn-obj-nom-acc)) ;
 
 
 #!! ### Singular objects
@@ -2961,7 +2961,7 @@ ADD:xmsyn-obj-sgnom-sgacc (&msyn-obj-sgnom-sgacc) TARGET N IF
 	(*-1 VFIN + TV BARRIER NOT-NPMODADV LINK *-1 Nom BARRIER NOT-NPMODADV LINK *-1 BOS BARRIER Acc)
 	(0C N + Sg + Nom)
 	(NEGATE 0 TITLE LINK 1 Prop OR ("<[A-ZÁŠČ].*>"r))
-	
+
 	;
 COPY:msyn-obj-sgnom-sgacc (Acc &SUGGEST) EXCEPT (Nom &msyn-obj-sgnom-sgacc) TARGET (N Sg &msyn-obj-sgnom-sgacc);
 #% Mun juuvâm ain mielkki.
@@ -2992,7 +2992,7 @@ COPY:msyn-obj-sgnom-sgacc (Acc &SUGGEST) EXCEPT (Nom &msyn-obj-sgnom-sgacc) TARG
 #!! Finnish plural objects are in the nominative, in Inari Saami they are in the accusative.
 
 #!!  **Agreement rule:** msyn-obj-plnom-placc
-ADD:xmsyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF 
+ADD:xmsyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF
 (*-1 VFIN + TV BARRIER NOT-NPMODADV OR LEDE LINK -1 Nom)
 (0C N + Pl + Nom)
 (NOT *1 V + Pl3 BARRIER NOT-ADV);
@@ -3000,7 +3000,7 @@ COPY:msyn-obj-plnom-placc (Acc &SUGGEST) EXCEPT (Nom &msyn-obj-plnom-placc) TARG
 #$ Rikosijd toohâm nisoneh pyehtih siämmáá-áigásávt leđe viehâvääldi uhreh.
 
 #!!  **Agreement rule:** msyn-obj-plnom-placc
-ADD:xmsyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF 
+ADD:xmsyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF
 (*-1 TV + PrfPrc BARRIER NOT-NPMODADV LINK NOT 0 Der/Pass LINK -1 Nom)
 (0C N + Pl + Nom)
 (NOT *1 V + Pl3 BARRIER NOT-ADV);
@@ -3008,7 +3008,7 @@ COPY:msyn-obj-plnom-placc (Acc &SUGGEST) EXCEPT (Nom &msyn-obj-plnom-placc) TARG
 
 
 #!!  **Agreement rule:** msyn-obj-plnom-placc
-ADD:xmsyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF 
+ADD:xmsyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF
 (*-1 TV + ConNeg BARRIER NOT-NPMODADV LINK -1 Nom)
 (0C N + Pl + Nom)
 (NOT *1 V + Pl3 BARRIER NOT-ADV);
@@ -3017,7 +3017,7 @@ COPY:msyn-obj-plnom-placc (Acc &SUGGEST) EXCEPT (Nom &msyn-obj-plnom-placc) TARG
 #$ Puoh iä omâstâm  .
 
 #!!  **Agreement rule:** msyn-obj-plnom-placc
-ADD:xmsyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF 
+ADD:xmsyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF
 (*-1 REALTV + PrfPrc BARRIER NOT-NPMODADV LINK *-1 Nom)
 (0C N + Pl + Nom)
 (NEGATE *1 V + Pl3 BARRIER NOT-ADV);
@@ -3027,7 +3027,7 @@ COPY:msyn-obj-plnom-placc (Acc &SUGGEST) EXCEPT (Nom &msyn-obj-plnom-placc) TARG
 #$ Puoh iä lah omâstâm  .
 
 #!!  **Agreement rule:** msyn-obj-plnom-placc
-ADD:xmsyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF 
+ADD:xmsyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF
 (-1 Adv LINK -1 REALTV + PrfPrc LINK *-1 Nom)
 (0C N + Pl + Nom)
 (NEGATE *1 V + Pl3 BARRIER NOT-ADV);
@@ -3070,7 +3070,7 @@ ADD:xmsyn-top-nom-acc (&msyn-top-nom-acc) TARGET N IF
 	(*1 N + Nom BARRIER NOT-NPMOD OR ("já") OR COMMA LINK 1C Ind + Sg3 + TV);
 COPY:msyn-top-nom-acc (Acc &SUGGEST) EXCEPT (Nom &msyn-top-nom-acc)  TARGET (N Nom &msyn-top-nom-acc) ;
 
-#!! **Agreement rule:** msyn-top-nom-acc 
+#!! **Agreement rule:** msyn-top-nom-acc
 ADD:xmsyn-top-nom-acc (&msyn-top-nom-acc) TARGET N IF (0C Nom - Sem/Time - TITLE LINK *-1 BOS BARRIER Nom)(1 Pron + Pers + Nom)(2 Ind + Sg3 + TV);
 COPY:msyn-top-nom-acc (Acc &SUGGEST) EXCEPT (Nom &msyn-top-nom-acc) TARGET (N Nom &msyn-top-nom-acc) ;
 #% Suullân peeli sun lii porgâm.
@@ -3178,9 +3178,9 @@ ADD:xmsyn-imp-nom-acc (&msyn-imp-nom-acc) TARGET N IF (-2C TV + Imprt)(-1 PRE-NP
 #!!  **Agreement rule:** msyn-imp-nom-acc
 ADD:xmsyn-imp-nom-acc (&msyn-imp-nom-acc) TARGET N IF (-1C TV + Imprt)(0C Nom)(NOT 0 Acc OR Gen);
 COPY:msyn-imp-nom-acc (Acc &SUGGEST) EXCEPT (Nom &msyn-imp-nom-acc) TARGET (N &msyn-imp-nom-acc);
-#fi	Myy nämä kalat - 
+#fi	Myy nämä kalat -
 #% Vyebdi taah kyeleh!
-#$ Vyebdi taid kuolijd! 
+#$ Vyebdi taid kuolijd!
 #% Čääli maainâs aalgâ!
 #$ Čääli mainâs aalgâ!
 
@@ -3199,7 +3199,7 @@ COPY:msyn-imp-nom-acc (Acc &SUGGEST) EXCEPT (Nom &msyn-imp-nom-acc) TARGET (N &m
 
 
 
-#!! #### Accusative subjects in passive 
+#!! #### Accusative subjects in passive
 
 #!! b) Suomâkielâ partitiiv passiivráhtusijn; sämikielâst passiiv ohtâvuođâst lii nominatiiv já verbâ maaŋgâlovvoost.
 
@@ -3226,9 +3226,9 @@ ADD:xmsyn-pass-accsubj-nomsubj (&msyn-pass-accsubj-nomsubj) TARGET N IF
 COPY:msyn-pass-accsubj-nomsubj (Nom &SUGGEST) EXCEPT (Acc &msyn-pass-accsubj-nomsubj) TARGET (N Pl &msyn-pass-accsubj-nomsubj);
 
 
-#fi	Saamenkielisiä nimityksiä käytetään vähän. - 
-##	Sämikielâlijd nomâttâsâid kiävttojeh uccáá. 
-#$ 	Sämikielâliih nomâttâsah kiävttojeh uccáá. 
+#fi	Saamenkielisiä nimityksiä käytetään vähän. -
+##	Sämikielâlijd nomâttâsâid kiävttojeh uccáá.
+#$ 	Sämikielâliih nomâttâsah kiävttojeh uccáá.
 #$ Sämikielâliih nomâttâsah, moh láá ovdil kevttum, kiävttojeh tääl uccáá.
 #% Sämikielâlijd nomâttâsâid, moh láá ovdil kevttum, kiävttojeh tääl uccáá.
 
@@ -3248,13 +3248,13 @@ COPY:msyn-pass-accsubj-nomsubj (Nom &SUGGEST) EXCEPT (Acc &msyn-pass-accsubj-nom
 #$ Vaikuttâsah täviráid láppojii ääitist.
 
 #% Tävirijd láá lappum ääitist.
-#$ Tävireh láá lappum ääitist. 
+#$ Tävireh láá lappum ääitist.
 
 #% Tävirijd lii lappum ääitist.
 #$ Tävireh láá lappum ääitist.
 
 #% Mon ennuv kiirjijd láá tiilájum?
-#$ Mon ennuv kirjeh láá tiilájum? 
+#$ Mon ennuv kirjeh láá tiilájum?
 
 #!!  **Agreement rule:** msyn-pass-accsubj-nomsubj: *Páárnán iä adeluu talkkâsijd/talkkâseh tipšopeeivi ääigi.*
 ADD:xmsyn-pass-accsubj-nomsubj (&msyn-pass-accsubj-nomsubj) TARGET N IF (NOT -3 Nom)(-2 ("leđe") + Pl3 OR Sg3) (-1 PrfPrc + Der/Pass OR LEXICALISED-PASS-V)(0C Acc + Pl);
@@ -3264,7 +3264,7 @@ COPY:msyn-pass-accsubj-nomsubj (Nom &SUGGEST) EXCEPT (Acc &msyn-pass-accsubj-nom
 #$ Páárnán iä adeluu talkkâseh tipšopeeivi ääigi.
 
 
-#!! ## Noun phrase internal phenomena 
+#!! ## Noun phrase internal phenomena
 
 #!! ### Demonstratives
 
@@ -3285,7 +3285,7 @@ ADD:xmsyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF
 	(NEGATE *1 TV BARRIER S-BOUNDARY);
 #$ Mun vuájálitám paas jiegâid Belsebul išij.
 
-#ADD:xmsyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF 
+#ADD:xmsyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF
 #(NEGATE *-1 TV BARRIER NOT-NPMOD) ## <????
 #(0 N + Pl + Acc)
 #(NOT 0 PX OR Gen)
@@ -3293,7 +3293,7 @@ ADD:xmsyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF
 #(1 N OR Actio + Nom LINK NOT *1 TV + V BARRIER S-BOUNDARY);
 
 #!!  **Agreement rule:** msyn-posspl-acc-gen. coordination: *uásálistiđ párnáid/párnái já nuorâi leiráid*
-ADD:xmsyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF 
+ADD:xmsyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF
 (NEGATE *-1 TV BARRIER NOT-COORD-NPMOD) # XXX váralaš?
 (0 N + Pl + Acc)
 (NOT 0 PX OR Gen)
@@ -3301,7 +3301,7 @@ ADD:xmsyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF
 (2 N + Pl OR &msyn-posspl-acc-gen LINK 1 N OR Actio + Nom LINK NOT *1 TV + V BARRIER S-BOUNDARY);
 
 #!!  **Agreement rule:** msyn-posspl-acc-gen. coordination: *uásálistiđ párnáid/párnái já nuorâi leiráid*
-ADD:xmsyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF 
+ADD:xmsyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF
 (*-1 V BARRIER NOT-COORD-NPMOD) # testing...
 (NOT -1 Gen)
 (0 N + Pl + Acc)
@@ -3312,7 +3312,7 @@ ADD:xmsyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF
 #$ Škovlim maŋa puávtáh uásálistiđ párnáid já nuorâi leiráid stuorrâhâžžân.
 #$ Jiem lah jieš puáhtám luuhâđ táid kiirjijd já klassikkoid sämikielân
 
-ADD:xmsyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF 
+ADD:xmsyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF
 #(NOT *-1 TV BARRIER NOT-NPMOD)
 (NOT -1 Gen)
 (0 N + Pl + Acc)
@@ -3327,7 +3327,7 @@ ADD:xmsyn-attr-other-com-gen (&msyn-attr-com-gen) TARGET A + Pl + Com IF (1 N + 
 COPY:msyn-attr-other-com-gen (Gen &SUGGEST) EXCEPT (Com &msyn-attr-com-gen) TARGET (A Pl &msyn-attr-com-gen);
 
 # postposition phrase
-ADD:xmsyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N IF 
+ADD:xmsyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N IF
 (0 N + Pl + Acc)
 (NOT 0 PX OR Gen)
 (1 Po)
@@ -3361,15 +3361,15 @@ COPY:msyn-posspl-ill-gen (Gen &SUGGEST) EXCEPT (Ill &msyn-posspl-ill-gen) TARGET
 ADD:xmsyn-ncompl-ess-sgill (&msyn-ncompl-ess-sgill) TARGET N IF (-1 N-WITH-ILL)(0 Ess);
 COPY:msyn-ncompl-ess-sgill (Sg Ill &SUGGEST) EXCEPT (Ess &msyn-ncompl-ess-sgill) TARGET (N Ess &msyn-ncompl-ess-sgill);
 
-#% Must lii tárbu toorjân.  
-#$ Must lii tárbu torjui. 
+#% Must lii tárbu toorjân.
+#$ Must lii tárbu torjui.
 
 #!!  **Agreement rule:** msyn-ncompl-ess-sgill: *Maggaar toorjân/torjui sist ličij tárbu.*
 ADD:xmsyn-ncompl-ess-sgill (&msyn-ncompl-ess-sgill) TARGET N + Ess IF (1 Loc)(2 ("leđe"))(3 N-WITH-ILL);
 COPY:msyn-ncompl-ess-sgill (Sg Ill &SUGGEST) EXCEPT (Ess &msyn-ncompl-ess-sgill) TARGET (N Ess &msyn-ncompl-ess-sgill);
 
-#% Maggaar toorjân sist ličij tárbu. 
-#$ Maggaar torjui sist ličij tárbu. 
+#% Maggaar toorjân sist ličij tárbu.
+#$ Maggaar torjui sist ličij tárbu.
 
 #!!  **Agreement rule:** msyn-ncompl-placc-plill: *Motomeh suomâkielâ vaikuttâsah/tábáhtussáid tábáhtusâid láá tuhhiittum anarâškielân.*
 ADD:xmsyn-ncompl-placc-plill (&msyn-ncompl-placc-plill) TARGET N + Pl + Acc IF (*-1 N-WITH-ILL BARRIER NOT-NPMOD);
@@ -3389,7 +3389,7 @@ COPY:msyn-ncompl-placc-plill (Ill &SUGGEST) EXCEPT (Acc &msyn-ncompl-placc-plill
 
 
 
-#!! ### Noun phrase agreement NP 
+#!! ### Noun phrase agreement NP
 
 
 #!! ### Det + N agreement
@@ -3414,7 +3414,7 @@ COPY:msyn-mii-sgnom-placc (Pl Acc &SUGGEST) EXCEPT (Sg Nom &msyn-mii-sgnom-placc
 #% Mii historjá taat lii?
 #$ Mii historjáid taat lii?
 
-#!!  **Agreement rule:** 
+#!!  **Agreement rule:**
 ADD:xmsyn-mii-sgnom-placc (&msyn-mii-sgnom-placc) TARGET N IF (-2 BOS)(-1 ("kii"))(0C (N Sg Nom))(1 (N Nom) OR (Pron Nom))(*2 LEDE);
 COPY:msyn-mii-sgnom-placc (Pl Acc &SUGGEST) EXCEPT (Sg Nom &msyn-mii-sgnom-placc) TARGET ( N &msyn-mii-sgnom-placc);
 
@@ -3435,7 +3435,7 @@ ADD:xmsyn-adj-nom-acc (&msyn-adj-nom-acc) TARGET A IF
 	(NOT 0 A + Attr OR Der/Comp OR Der/Superl OR ("tuše"))
 	(1C N + Acc);
 COPY:msyn-adj-nom-acc (Acc &SUGGEST) EXCEPT (Nom &msyn-adj-nom-acc) TARGET (A &msyn-adj-nom-acc);
-ADDRELATION:msyn-adj-nom-acc ($2) (N) FROM (-1 A LINK 0 (&msyn-adj-nom-acc)) ; 
+ADDRELATION:msyn-adj-nom-acc ($2) (N) FROM (-1 A LINK 0 (&msyn-adj-nom-acc)) ;
 
 #$ Mij nuurrâp siämmáámuđusiih sierâid oovtâ sajan.
 
@@ -3477,7 +3477,7 @@ COPY:msyn-num-par-gen (Sg Gen &SUGGEST) EXCEPT (Par &msyn-num-par-gen) TARGET (N
 LIST SGGENACC = (Sg Gen) (Sg Acc) ;
 
 #!!  **Agreement rule:** msyn-num-gen-par:  8 kaandâ/kandâd
-ADD:xmsyn-num-gen-par (&msyn-num-gen-par) TARGET N IF 
+ADD:xmsyn-num-gen-par (&msyn-num-gen-par) TARGET N IF
 (-1 Num OR A + Arab LINK 0 SEVEN-AND-MORE)
 (0C N + Sg + Gen)
 (NOT 0 ABBR OR Par)
@@ -3490,7 +3490,7 @@ COPY:msyn-num-gen-par (Par &SUGGEST) EXCEPT (Sg Gen &msyn-num-gen-par) TARGET (N
 #$ 80 pärnid joteh rippâškoovlâ.
 
 #!!  **Agreement rule:** msyn-num-acc-par: 8 kaandâ/kandâd
-ADD:xmsyn-num-acc-par (&msyn-num-acc-par) TARGET N IF 
+ADD:xmsyn-num-acc-par (&msyn-num-acc-par) TARGET N IF
 (-1 Num OR A + Arab LINK 0 SEVEN-AND-MORE)
 (0 N + Sg + Acc)
 (NOT 0 ABBR OR Par)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Rom)
@@ -3511,16 +3511,16 @@ ADD:xmsyn-quadv-sg-pl (&msyn-quadv-sg-pl) TARGET N IF
 	(NOT 0 Sem/Time OR Sem/Time-clock)
 	;
 COPY:msyn-quadv-sg-pl (Pl Nom &SUGGEST) EXCEPT (Sg Nom &msyn-quadv-sg-pl) TARGET (N &msyn-quadv-sg-pl) ;
-ADDRELATION:msyn-quadv-sg-pl ($2) ("ennuv") OR ("maŋgâ") FROM (*1 &msyn-quadv-sg-pl) ; 
+ADDRELATION:msyn-quadv-sg-pl ($2) ("ennuv") OR ("maŋgâ") FROM (*1 &msyn-quadv-sg-pl) ;
 #% Ruánááenâmist láá ennuv enâmânvärrejeijee.
-#$ Ruánááenâmist láá ennuv enâmânvärrejeijeeh. 
+#$ Ruánááenâmist láá ennuv enâmânvärrejeijeeh.
 
 
 #!! msyn-quant-gen-nom
 # ADD:xmsyn-quant-gen-nom (&msyn-quant-gen-nom) TARGET Num IF (0 Num + Nom)(1 N + Gen OR N + Acc)(NOT 0 ("ohtâ"));
 # COPY:msyn-quant-gen-nom (Gen &SUGGEST) EXCEPT Num TARGET (Num Gen &msyn-quant-gen-nom);
 
-#$ Kihheen ij pyevti palvâliđ kyehti hiärá. # Nom 
+#$ Kihheen ij pyevti palvâliđ kyehti hiärá. # Nom
 #$ Kihheen ij pyevti palvâliđ kyevti hiärá. # Gen + N.Gen (obj)
 
 # kyehti hiärá lii ...
@@ -3581,7 +3581,7 @@ ADD:msyn-NPx-N (&msyn-NPx-N) TARGET (N Acc) OR (N Ill) OR (N Nom) IF
 	(0 $$Px)(*-1 (Pron Refl Acc) OR (Pron Refl Gen) BARRIER NOT-NPMOD - COMMA - CC LINK 0 $$Px);
 	## toh jiečânâč enâmijn ässee aalmugeh, moh nabdojeh algâässen, ko sij láá maajeeldpuátteeh aalmugist, mii eennâm väldidem tâi asâttem tâi táálái riijkâraajij šoddâm ääigi aasâi enâmist tâi ton eennâmtieđâlâš kuávlust, moos eennâm kulá, já kiäh vuoigâdvuođâlâš sajattuvâst peerusthánnáá láá siäiluttâm ollásávt tâi uásild jieijâs sosiaallâš, ekonomâlâš, kulttuurlâš já poolitlâš vuáháduvâidis.
 	## Rock and roll kuittâg-uv monâttij jieijâs {sajattuvâs} 1950-lovo loopâst.
-	
+
 COPY:msyn-NPx-N (&SUGGEST) EXCEPT (PxSg3 &msyn-NPx-N) OR (PxPl3 &msyn-NPx-N) OR (PxDu3 &msyn-NPx-N) TARGET (&msyn-NPx-N);
 
 
