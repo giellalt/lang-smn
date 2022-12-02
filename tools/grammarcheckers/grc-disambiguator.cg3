@@ -2842,7 +2842,7 @@ REMOVE:NotImprtIfAttrLeft Imprt IF (NEGATE -1 BOC OR COMMA)(NEGATE -1 CC LINK -1
 #!! * **NotImprtIfRel** removes Imprt after Rel, unify this with other left context (r948)
 REMOVE:NotImprtIfRel Imprt IF (*-1C Rel BARRIER S-BOUNDARY OR CC OR COMMA);
 
-REMOVE:muhtoNotConNeg ConNeg IF (NEGATE *-1 Neg BARRIER ("mut"));
+REMOVE:muhtoNotConNeg ConNeg IF (NEGATE *-1 Neg BARRIER ("mut") OR ("teikkâ") OR ("veik") OR ("veikâ") OR ("jis"));
 
 
 
@@ -4904,7 +4904,7 @@ SELECT:NumNomYear (Num Nom) IF ((0 Sem/Year LINK -1 Sem/Sur LINK 2 (":") OR (";"
 
 #!! ## ACCUSATIVE-ILLATIVE DISAMBIGUATION
 
-REMOVE:IllNotAcc Acc IF (0 Ill)(NEGATE *0 TV);
+REMOVE:IllNotAcc Acc IF (0 Ill)(NEGATE *0 TV BARRIER S-BOUNDARY);
 
 REMOVE:IllNotAcc Acc IF (0 A + Ill)(1C N + Ill);
 
@@ -6360,7 +6360,7 @@ SELECT:NumNomgo (Num Nom) IF (-1 go LINK -1 Comp LINK NEGATE *-1 TRANS-V BARRIER
 	# The noun is very seldon, if it as at all.
 
 #!! * **NDr2331** Selects (N Nom)
-SELECT:NDr2331 (N Nom) IF (*-1 (Dem Nom) BARRIER NOT-A)(NEGATE 0 ("leapma" Der/Dimin) OR Px);
+SELECT:NDr2331 (N Nom) IF (*-1 (Dem Nom) BARRIER NOT-A LINK NEGATE 0 Pron)(NEGATE 0 ("leapma" Der/Dimin) OR Px);
 	#$ Noađđespagáin leat dat geažit guokte golbma tumá guhku.
 	#$ ...ja ahte dat dáhttu čielgasit berre doahttaluvvot. 
 
