@@ -1,6 +1,6 @@
 
 I N A R I    S A A M I    G R A M M A R    C H E C K E R
-================================================================== 
+==================================================================
 
 # Development setup
 
@@ -15,10 +15,10 @@ cd tools/grammarcheckers
 make dev
 ```
 
-Then edit/test as follows:   
+Then edit/test as follows:
 
 ```
-echo "Sun ij puátá." | sh modes/smngram.mode  
+echo "Sun ij puátá." | sh modes/smngram.mode
 ```
 
 There are very many modes in the `modes` folder, look at them.
@@ -35,10 +35,10 @@ This section lists all the tags inherited from the fst, and used as tags
 in the syntactic analysis. The next section, **Sets**, contains sets defined
 on the basis of the tags listed here, those set names are not visible in the output.
 
-### Tags declared as single-membered LISTs 
+### Tags declared as single-membered LISTs
 
 #### Beginning and end of sentence
-BOS 
+BOS
 EOS
 
 ### Parts of speech tags
@@ -65,7 +65,7 @@ WEB
 CLB
 LEFT
 RIGHT
-PPUNCT 
+PPUNCT
 PUNCT
 COMMA
 ¶
@@ -103,7 +103,7 @@ Sg
 Du
 Pl
 Cmp/SplitR
-Cmp/SgNom 
+Cmp/SgNom
 Cmp/SgGen
 PxSg1
 PxSg2
@@ -125,7 +125,7 @@ Ord
 Qst
 
 IV
-TV 
+TV
 Prt
 Prs
 Ind
@@ -320,7 +320,7 @@ TIME-N
 
 The following work after the mapping rules for verbs:
 
-- SYN-V 
+- SYN-V
 - @X (this last one for unassigned functions)
 
 SETS
@@ -328,13 +328,13 @@ SETS
 
 Sets containing sets of lists and tags
 
-This part of the file lists a large number of sets based partly upon the tags defined above, and 
+This part of the file lists a large number of sets based partly upon the tags defined above, and
 partly upon lexemes drawn from the lexicon.
 See the sourcefile itself to inspect the sets, what follows here is an overview of the set types.
 
 ### Sets for Single-word entities
 
-The set **go** for *ko*, , and the set INITIAL for initial letters 
+The set **go** for *ko*, , and the set INITIAL for initial letters
 
 ### Sets for word or not
 
@@ -407,7 +407,7 @@ Mun vuolgim raapâid pajas. Verb accepts accusative in front of adverb.
 ### Pronoun sets
 MUN, DON, SON, MOAI, ...
 
-### Adjectival sets and their complements 
+### Adjectival sets and their complements
 LEX-A, A-CASE, ...
 
 ### Adverbial sets and their complements
@@ -417,7 +417,7 @@ LEX-ADV, LEX-ADV-DE, ...
 Foc, NEGFOC, ...
 
 ### Sets for adverbs that have lookalikes
-Here come some adverbs that have identical twins in other POS. 
+Here come some adverbs that have identical twins in other POS.
 If these are found in Adv contexts, we treat them as adverbs.
 
 LACCAT-ADV
@@ -433,7 +433,7 @@ EASKKA
 ### Sets for verbs
 
 V is all readings with a V tag in them, REAL-V should
-be the ones without an N tag following the V.  
+be the ones without an N tag following the V.
 The REAL-V set thus awaits a fix to the preprocess V ... N bug.
 
 - The set COPULAS is for predicative constructions
@@ -525,7 +525,7 @@ STRICT-TRANS-V is the set for verbs which don't let a GenAcc be a modifier of an
 
 - LIST HUMAN-LOC-V = "kevttiđ" "pääcciđ" "kevttiđ" "käskeä" "kutsua" ; 
 
-- **PLACE-V** Those get only not locative if the target is a member TOOL, ABSTR-TOOL or ANIMATE or CONCEPT. Selects more locatives than ONLY-PLACE-LOC-V 
+- **PLACE-V** Those get only not locative if the target is a member TOOL, ABSTR-TOOL or ANIMATE or CONCEPT. Selects more locatives than ONLY-PLACE-LOC-V
 - LIST PLACE-V = "ássat" "buolvvastallat" "buolvvastit" "čippostallat" "čokkáđ" "čohkahit" "čuážžuđ" "čuččodit" "morihit" "gullát" "morránit" "orroođ" "orodit" "stuorrut" "veallát" "veallahit" ; 
 
 - LIST ABSTR-PLACE-V = "váilut" "käydä" "hiehpat" "siskeldiđ" "käydä" "šiehttat"; 
@@ -705,9 +705,9 @@ RULE SECTION
 
 #### Du3
 
-**Agreement rule:** msyn-agr-sg3-du3 
+**Agreement rule:** msyn-agr-sg3-du3
 
-**Agreement rule:** msyn-agr-sg3-du3 
+**Agreement rule:** msyn-agr-sg3-du3
 
 ### Pluraali
 
@@ -721,11 +721,11 @@ RULE SECTION
 
 #### Pl3
 
-Sg3/Pl3 errors: Suomâkielâ sárnumkielâ epikongruens maaŋgâlovo 3. persovnist 
+Sg3/Pl3 errors: Suomâkielâ sárnumkielâ epikongruens maaŋgâlovo 3. persovnist
 
 **Agreement rule:** Subject to the right, msyn-agr-sg3-pl3
 
-**Agreement rule:** msyn-agr-sg3-du3 
+**Agreement rule:** msyn-agr-sg3-du3
 
 **Agreement rule:** msyn-agr-sg3-pl3, Subject to the left, *80 puátá/puáđah*
 
@@ -759,7 +759,7 @@ Sg3/Pl3 errors: Suomâkielâ sárnumkielâ epikongruens maaŋgâlovo 3. persovni
 
 ### Existential sentences
 
-Here, the verb should be plural. The interference comes from Finnish e-sentences, where the verb is in the ingular. 
+Here, the verb should be plural. The interference comes from Finnish e-sentences, where the verb is in the ingular.
 
 **Agreement rule:** msyn-extv-sg3-pl3 *Must lii/láá uđđâ autoh.*
 
@@ -785,7 +785,7 @@ Here, the verb should be plural. The interference comes from Finnish e-sentences
 
 **Agreement rule:** msyn-extsubj-acc-nom
 
-**Agreement rule:** msyn-extv-sg3-pl3 
+**Agreement rule:** msyn-extv-sg3-pl3
 
 **Agreement rule:** msyn-extsubj-ill-nom
 
@@ -867,7 +867,7 @@ Finnish plural objects are in the nominative, in Inari Saami they are in the acc
 
 **Agreement rule:**  msyn-top-nom-acc
 
-**Agreement rule:** msyn-top-nom-acc 
+**Agreement rule:** msyn-top-nom-acc
 
 ### Acc shall be Ill
 
@@ -901,7 +901,7 @@ Suomâkielâ imperatiiv mieđetteijee häämist, mast objekt sajehäämmin lii m
 
 Outcommented...
 
-#### Accusative subjects in passive 
+#### Accusative subjects in passive
 
 b) Suomâkielâ partitiiv passiivráhtusijn; sämikielâst passiiv ohtâvuođâst lii nominatiiv já verbâ maaŋgâlovvoost.
 
@@ -915,7 +915,7 @@ b) Suomâkielâ partitiiv passiivráhtusijn; sämikielâst passiiv ohtâvuođâs
 
 **Agreement rule:** msyn-pass-accsubj-nomsubj: *Páárnán iä adeluu talkkâsijd/talkkâseh tipšopeeivi ääigi.*
 
-## Noun phrase internal phenomena 
+## Noun phrase internal phenomena
 
 ### Demonstratives
 
@@ -943,7 +943,7 @@ N + Ill
 
 **Agreement rule:** msyn-ncompl-placc-plill
 
-### Noun phrase agreement NP 
+### Noun phrase agreement NP
 
 ### Det + N agreement
 
@@ -955,7 +955,7 @@ mii + nominative should be mii + acc
 
 **Agreement rule:** msyn-mii-sgnom-placc: Mii historjá/historjáid taat lii
 
-**Agreement rule:** 
+**Agreement rule:**
 
 ### Adjectives in attributive position
 
