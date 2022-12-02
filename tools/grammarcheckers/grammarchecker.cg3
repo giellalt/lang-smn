@@ -2075,6 +2075,7 @@ LIST &msyn-quadv-sg-pl = &msyn-quadv-sg-pl ;
 LIST &msyn-quant-gen-nom =  &msyn-quant-gen-nom ;
 LIST &msyn-quant-nom-gen = &msyn-quant-nom-gen ;
 LIST &msyn-subj-gen-nom = &msyn-subj-gen-nom ;
+LIST &msyn-subj-ill-nom = &msyn-subj-ill-nom ;
 LIST &msyn-top-nom-acc = &msyn-top-nom-acc ;
 LIST &msyn-top-placc-plnom = &msyn-top-placc-plnom ;
 LIST &msyn-v-actio-sg1 = &msyn-v-actio-sg1 ;
@@ -2862,7 +2863,7 @@ COPY:msyn-v-sg1-prfprc (PrfPrc &SUGGEST) EXCEPT (Ind Prs Sg1 &msyn-v-sg1-prfprc)
 
 #!! ### Subjects
 
-ADD:xmsyn-subj-gen-nomx (&msyn-subj-gen-nom) TARGET N IF
+ADD:xmsyn-subj-gen-nom (&msyn-subj-gen-nom) TARGET N IF
 	(NOT -1 ("jyehi"))
 	(0C N + Sg + Gen LINK NOT 0 Nom LINK *-1 BOS BARRIER Ind OR NUM)
 	(NEGATE 0 HUMAN OR Nom)
@@ -2877,6 +2878,15 @@ COPY:msyn-subj-gen-nom (Nom &SUGGEST) EXCEPT (Gen &msyn-subj-gen-nom) TARGET (N 
 ## Uusâ tun vala tijmestâd vyeijimpele luodâst, sun kočoi Codex ko vájáldutij tom-uv.
 ## Uusâ tun vala tijmestâd vyeijimpele luodâst.
 
+
+ADD:xmsyn-subj-ill-nom (&msyn-subj-ill-nom) TARGET N IF
+	(0C N + Pl + Ill LINK NOT 0 Nom LINK *-1 BOS BARRIER Ind)
+	(NEGATE 0 VAHKKU-DUR LINK -1 TIME-A)
+	(1 V + Der/Pass)
+	;
+COPY:msyn-subj-ill-nom (Nom &SUGGEST) EXCEPT (Ill &msyn-subj-ill-nom) TARGET (N Pl &msyn-subj-ill-nom) ;
+
+## Taah kištoid uárnejuvvojii Anarist.
 	
 
 #!! ### Plural objects
@@ -3026,7 +3036,12 @@ COPY:msyn-obj-plnom-placc (Acc &SUGGEST) EXCEPT (Nom &msyn-obj-plnom-placc) TARG
 
 
 #!!  **Agreement rule:** msyn-plobj-nom-acc *Nubeh tobdeh kuobbâreh/kuobbârijd ivneest.*
-ADD:xmsyn-plobj-nom-acc (&msyn-plobj-nom-acc) TARGET (N Pl Nom) IF (*-1 TRANS-V  BARRIER NOT-NPMOD OR CLB OR PUNCT LINK NOT 0 Pl3 LINK *-1 N + Pl + Nom OR Pron + Pl + Nom)(NOT 0 ABBR OR Num)(NEGATE -1 PrfPrc LINK *-1 N BARRIER VFIN);
+ADD:xmsyn-plobj-nom-acc (&msyn-plobj-nom-acc) TARGET (N Pl Nom) IF
+	(*-1 TRANS-V  BARRIER NOT-NPMOD OR CLB OR PUNCT LINK NOT 0 Pl3 LINK *-1 N + Pl + Nom OR Pron + Pl + Nom)
+	(*-1 TRANS-V  BARRIER NOT-NPMOD OR CLB OR PUNCT LINK NOT -1 Acc)
+	(NOT 0 ABBR OR Num)
+	(NEGATE -1 PrfPrc LINK *-1 N BARRIER VFIN)
+	;
 COPY:msyn-plobj-nom-acc (Acc &SUGGEST) EXCEPT (Nom &msyn-plobj-nom-acc) TARGET (N Pl &msyn-plobj-nom-acc);
 
 # Trans: Others know mushrooms by.their.color.
@@ -3380,7 +3395,8 @@ COPY:msyn-ncompl-placc-plill (Ill &SUGGEST) EXCEPT (Acc &msyn-ncompl-placc-plill
 #!! ### Det + N agreement
 
 #!!  **Agreement rule:** msyn-det-nom-acc: Puurâ tuoh/tuoid rusinijd!
-ADD:xmsyn-det-nom-acc (&msyn-det-nom-acc) TARGET Pron + Dem + Pl + Nom IF (1 N + Pl + Acc);
+ADD:xmsyn-det-nom-acc (&msyn-det-nom-acc) TARGET Pron + Dem + Pl + Nom IF
+	(1 N + Pl + Acc);
 COPY:msyn-det-nom-acc (Acc &SUGGEST) EXCEPT (Nom &msyn-det-nom-acc) TARGET (Pron Dem Pl &msyn-det-nom-acc);
 
 #%  Puurâ tuoh rusinijd!
