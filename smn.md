@@ -11395,7 +11395,7 @@ der
 
 ## Adjectives, nouns, not adverbs
 
-* **Aifeambbo** selects A after eambbo
+* **Aifeambbo** selects N after eambbo
 
 ## Subjunctions
 
@@ -11772,7 +11772,7 @@ The rules are not documented yet
 
 * **AAttrPunct**    
 
-* **AttrTIME**    
+* **AttrTIME**    grc -- no logic here.
 
 * **AAttrCoord1** coordination, first part -- grc
 
