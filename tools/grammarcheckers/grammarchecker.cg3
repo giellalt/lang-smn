@@ -629,7 +629,7 @@ SET NOT-Attr = WORD - Attr ;
 SET NOT-A-PCLE = WORD - A - Pcle ;
 SET NOT-A-CC = WORD - A-CC ;
 
-LIST ATTRONLY = "anarâškiel" "eeđâb" "fakkâ" "fastâ" "hirmâd" "huámášekkis" "hyperkorrekt" "korrekt" "läättinkiel" "nuorttâkiel" "nuuvtkočodum" "ohtuunis" "olmâ" "oovdiš" "oovtâkiel" "orjâlâškiel" "pajekiel" "prelimináár" "puigâ" "ruotâkiel" "ruoŧâkiel" "sämikiel" "sierâ" "suomâkiel" "tommittáá" "ubâ" "váháš" "vuáđusämikiel" "vuoigâ" ;
+LIST ATTRONLY = "anarâškiel" "eeđâb" "fakkâ" "fastâ" "hirmâd" "huámášekkis" "hyperkorrekt" "korrekt" "läättinkiel" "nuorttâkiel" "nuuvtkočodum" "ohtuunis" "olmâ" "oovdiš" "oovtâkiel" "orjâlâškiel" "pajekiel" "prelimináár" "puigâ" "ruotâkiel" "ruoŧâkiel" "sämikiel" "sierâ" "suomâkiel" "tiätu" "tommittáá" "ubâ" "váháš" "vuáđusämikiel" "vuoigâ" ;
 
 # This set was removed, for a good reason?
 SET NOT-A-ADV = WORD - A - Adv OR ("meid") ;
@@ -2017,6 +2017,7 @@ SET CCCOMMA = CC OR COMMA ;
 #!! name convention for error tags: ´´&errortype-errorsubtype-is-shouldbe´´
 
 
+LIST &msyn-adj-attr-other = &msyn-adj-attr-other ;
 LIST &msyn-adj-attr-pred = &msyn-adj-attr-pred ;
 LIST &msyn-adj-gen-nom = &msyn-adj-gen-nom ;
 LIST &msyn-adj-nom-acc = &msyn-adj-nom-acc ;
@@ -2796,14 +2797,36 @@ COPY:msyn-adj-pred-attr (Attr &SUGGEST) EXCEPT (Pl Nom &msyn-adj-pred-attr) TARG
 #!!  **Agreement rule:** msyn-adj-attr-pred
 #ADD:xmsyn-adj-attr-pred (&msyn-adj-attr-pred)  TARGET (A) IF (0C Attr) (NOT 0 (Arab Ord) OR (A Sg Nom))(NOT 1 N OR A OR PrfPrc)(1 EOS)(NOT 1 ("...")) ;
 #ADD:xmsyn-adj-attr-pred (&msyn-adj-attr-pred)  TARGET (A Attr) IF (0C Attr) (1 CC LINK 1 &msyn-adj-attr-pred OR (A Sg Nom) LINK NOT 1 EOS) (NOT 0 (Arab Ord) OR (A Sg Nom)) ;
+
+ADD:xmsyn-adj-attr-other (&msyn-adj-attr-other)  TARGET (A) IF
+	(0C ATTRONLY)
+	(NOT 1 N OR A OR PrfPrc OR ?)
+	(NEGATE 1 CC LINK 1 A + Attr)
+	(NOT 1 ("..."))
+	(NEGATE 1 CC OR COMMA LINK 1 (A Attr))
+	;
+ADDRELATION:xmsyn-adj-attr-other ($2) (N) FROM (*1 Pron + Rel LINK *1 A LINK 0 (&msyn-adj-attr-other));
+#ADDCOHORT:xsyn-adj-attr-new (
+# Oppâkiirjijn sättih ovdâmerkkân leđe koveh ” pennuin ”, moh iä lah puigâ. " # puigâ pennuuh
+# Goal: Oppâkiirjijn sättih ovdâmerkkân leđe koveh ” pennuin ”, moh iä lah puigâ pennuuh.
+# Procedure: Take noun from before rel.pron and generate as same number but in same form as rel.pron.
+# ADDCOHORT ("<go >" "go" CS &ADDED &msyn-valency-go-not-fs) BEFORE &msyn-valency-go-not-fs; ????
+# Because of &ADDED, divvun-suggest will treat this as a non-central word of the error (just like with the &LINK tag).
+
+# 
+
+
 ADD:xmsyn-adj-attr-pred (&msyn-adj-attr-pred)  TARGET (A) IF
 	(0C Attr)
-	(NOT 0 (Arab Ord) OR (A Sg Nom))
+	(NOT 0 (Arab Ord) OR (A Sg Nom) OR ATTRONLY)
 	(NOT 1 N OR A OR PrfPrc OR ?)
 	(NOT 1 CC LINK 1 A + Attr)
 	(NOT 1 ("..."))
 	(NOT 1 CC OR COMMA LINK 1 (A Attr));
-ADD:xmsyn-adj-attr-pred (&msyn-adj-attr-pred)  TARGET (A Attr) IF (0C Attr) (1 CC LINK 1 &msyn-adj-attr-pred OR (A Sg Nom) LINK NOT 1 N OR A OR PrfPrc OR CC) (NOT 0 (Arab Ord) OR (A Sg Nom)) ;
+ADD:xmsyn-adj-attr-pred (&msyn-adj-attr-pred)  TARGET (A Attr) IF 
+	(0C Attr) 
+	(1 CC LINK 1 &msyn-adj-attr-pred OR (A Sg Nom) LINK NOT 1 N OR A OR PrfPrc OR CC) 
+	(NOT 0 (Arab Ord) OR (A Sg Nom)) ;
 COPY:msyn-adj-attr-pred (Sg Nom &SUGGEST) EXCEPT (Attr &msyn-adj-attr-pred) TARGET ( A &msyn-adj-attr-pred);
 
     #% Tot lii hirmâd.
@@ -2815,7 +2838,7 @@ COPY:msyn-adj-attr-pred (Sg Nom &SUGGEST) EXCEPT (Attr &msyn-adj-attr-pred) TARG
 #!!  **Agreement rule:** msyn-adj-attr-pred *Mun lam fiskis/fiskâd.*
 ADD:xmsyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A) IF
   (0C Attr)
-  (NOT 0 (Arab Ord))
+  (NOT 0 (Arab Ord) OR ATTRONLY)
   (*-1 COPULAS BARRIER V OR S-BOUNDARY LINK *-1 Nom)
   (NOT 1 Adv)
   (NEGATE *1 N BARRIER NOT-A-CC)
