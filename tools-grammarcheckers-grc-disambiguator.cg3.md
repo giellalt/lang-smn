@@ -961,7 +961,7 @@ The rules are not documented yet
 
 * **AttrTIME**    
 
-* **AAttrCoord1** coordination, first part
+* **AAttrCoord1** coordination, first part -- grc
 
 * **AAttrCoord2** coordination, first part
 
@@ -1007,7 +1007,7 @@ The rules are not documented yet
 
 * **Wr1785b**
 
-* **Wr1786xc**
+* **Wr1786xc** grc
 
 * **Wr1787c**
 
