@@ -3670,7 +3670,7 @@ REMOVE:AdvN Adv IF (NEGATE -2 NOT-AUX-V)(-1 Gen OR Dem OR Indef LINK NEGATE -1 P
 	#$ Muhto dán geasi gal áiggun bargat vai dinen veháš ruđaid.
 
 #!! * **AAttrPunct**    
-SELECT:AAttrPunct (A Attr)  IF (1 PUNCT LINK *1 Attr BARRIER NOT-ADV LINK *1 N BARRIER WORD) ;
+SELECT:AAttrPunct (A Attr)  IF (1 PUNCT LINK *1 Attr BARRIER NOT-ADV LINK NOT 0 Arab LINK *1 N BARRIER WORD) ;
 	#$ Dalle sáhttá beaktilit háhkat guovtte ja maiddái golmmagielat (maiddái suomagielat) gelbbolašvuođa.Gonagas sáhttá mearridit dábálaš njuolggadusaid báikkálaš dilálašvuođaid ektui.
 
 	
@@ -3685,13 +3685,13 @@ SELECT:AttrTIME (A Attr) IF
 	#$ Ollu jagiid mielde lei dáhpin šaddan ahte stuorra gánddat bohte min geahčái lávvardaga ja sotnabeaivve go radios ledje sáddagat skeittástan- ja čuoigangilvvuin.	
 	#% Dálut eai lean nu ráhpadat ođđasishuksenáigge
  
-#!! * **AAttrCoord1** coordination, first part
-SELECT:AAttrCoord1 (A Attr) IF (1 ("já") OR ("dahje") OR COMMA LINK *1 (A Attr) OR ("nubbe") OR PrfPrc OR PrsPrc BARRIER NOT-ADV-PCLE LINK 1 N)(NEGATE -1 ("leđe") LINK *3 Attr OR PrfPrc LINK NOT 1 Nom) ;
-	#$ Duodji lei deaŧalaš sivva manne olbmot Gáivuonas birgejedje nu bures váttes jagiid vuosttaš ja nuppi máilbmesoađi gaskkas.
-	#$ ...go galgá válljejuvvot gaskal vejolaš ja dohkálaš iskkadan- ja dikšunvugiid. # vejolaš
-	#$ Olbmot geat ellet náitoslágan dahje guimmešvuođalágan gaskavuođain. # náitoslágan
-	#$ ...go viidáset gaskkusta oppalaččat álbmoga historjjálaš, kultuvrralaš ja politihkalaš dieđuid. # kultuvrralaš
- 	#$ Ráđđehus hálida erenoamažit buktit ovdan ILO-konvenšuvnna nr. 169 eamiálbmogiid ja čearddaid birra iehčanas stáhtain, jagi 1966 ON-konvenšuvnna siviila ja politihkalaš vuoigatvuođaid birra artihkal 27,...
+#!! * **AAttrCoord1** coordination, first part -- grc
+#SELECT:AAttrCoord1 (A Attr) IF (1 ("já") OR ("dahje") OR COMMA LINK *1 (A Attr) OR ("nubbe") OR PrfPrc OR PrsPrc BARRIER NOT-ADV-PCLE LINK 1 N)(NEGATE -1 ("leđe") LINK *3 Attr OR PrfPrc LINK NOT 1 Nom) ;
+#	#$ Duodji lei deaŧalaš sivva manne olbmot Gáivuonas birgejedje nu bures váttes jagiid vuosttaš ja nuppi máilbmesoađi gaskkas.
+#	#$ ...go galgá válljejuvvot gaskal vejolaš ja dohkálaš iskkadan- ja dikšunvugiid. # vejolaš
+#	#$ Olbmot geat ellet náitoslágan dahje guimmešvuođalágan gaskavuođain. # náitoslágan
+#	#$ ...go viidáset gaskkusta oppalaččat álbmoga historjjálaš, kultuvrralaš ja politihkalaš dieđuid. # kultuvrralaš
+# 	#$ Ráđđehus hálida erenoamažit buktit ovdan ILO-konvenšuvnna nr. 169 eamiálbmogiid ja čearddaid birra iehčanas stáhtain, jagi 1966 ON-konvenšuvnna siviila ja politihkalaš vuoigatvuođaid birra artihkal 27,...
 
 #!! * **AAttrCoord2** coordination, first part
 SELECT:AAttrCoord2 (A Attr) IF (NEGATE 0 Prop)(1 COMMA LINK 1 Attr LINK 1 ("já") OR ("dahje") LINK *1 HEAD-N BARRIER NOT-NPMODADV);
@@ -3819,9 +3819,9 @@ REMOVE:Wr1785 (A Sg Nom) IF (*-1 COPULAS BARRIER NOT-ADV-INDEF)(0 A + Attr)(NEGA
 REMOVE:Wr1785 (A Attr) IF (*-1 COPULAS BARRIER NOT-ADV-INDEF)(0 A + Sg + Nom)(NEGATE 0 REAL-V OR Ord OR N)(1 EOS);
 	#$ ...de dilli orru leamen earalágan.
 
-#!! * **Wr1786xc**
-SELECT:Wr1786xc A IF (-2 (N Sg Nom))(-1 ("leđe" Sg3))(NEGATE 0 N OR PrfPrc OR Inf)(NEGATE 0 Ill LINK 1 PrfPrc)(NEGATE 0 Adv LINK 1 A); 
-	#$ Sin váilevaš oahppu ja giellamáhttu lea guhkit áiggi leamaš heađušteaddjin. 	 # guhkit
+#!! * **Wr1786xc** grc
+#SELECT:Wr1786xc A IF (-2 (N Sg Nom))(-1 ("leđe" Sg3))(NEGATE 0 N OR PrfPrc OR Inf)(NEGATE 0 Ill LINK 1 PrfPrc)(NEGATE 0 Adv LINK 1 A); 
+#	#$ Sin váilevaš oahppu ja giellamáhttu lea guhkit áiggi leamaš heađušteaddjin. 	 # guhkit
 
 #!! * **Wr1787c**
 REMOVE:Wr1787c (A Attr) IF (0 A)(1 COMMA)(NEGATE 2 A OR PrsPrc)(NEGATE 2 CC LINK 1 Attr);
