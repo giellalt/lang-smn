@@ -2391,8 +2391,8 @@ REMOVE:PRED N IF (*-1 LEDE + VFIN BARRIER NOT-NPMODADV)(0 A + Sg + Nom)(1 Adv OR
 
 #!! ## Adjectives, nouns, not adverbs
 
-#!! * **Aifeambbo** selects A after eambbo
-SELECT:Aifeambbo A - Px IF (-1 ("eenâb") OR ("eenâb"))(NEGATE 0 Pl);
+#!! * **Aifeambbo** selects N after eambbo
+SELECT:Aifeambbo N - Px IF (-1 ("eenâb") OR ("eenâb"))(NEGATE 0 Pl);
 	#$ Muhto eenâb eahpidahtti lea ....
 
 
@@ -3675,13 +3675,15 @@ SELECT:AAttrPunct (A Attr)  IF (1 PUNCT LINK *1 Attr BARRIER NOT-ADV LINK NOT 0 
 
 	
 
-#!! * **AttrTIME**    
-SELECT:AttrTIME (A Attr) IF
-	(NEGATE 0 Num OR PrfPrc)
-	(NEGATE 0 Adv LINK *-1 REAL-V BARRIER NOT-ADV-PCLE)
-	(NEGATE 0 Pl LINK *-1 Pl3 BARRIER VFIN)
-	(*1 TIME BARRIER CLB OR WORD - Num LINK NOT 0 PX);  
+#!! * **AttrTIME**    grc -- no logic here.
+#SELECT:AttrTIME (A Attr) IF
+#	(NEGATE 0 Num OR PrfPrc)
+#	(NEGATE 0 Adv LINK *-1 REAL-V BARRIER NOT-ADV-PCLE)
+#	(NEGATE 0 Pl LINK *-1 Pl3 BARRIER VFIN)
+#	(*1 TIME BARRIER CLB OR WORD - Num LINK NOT 0 PX);  
 	#$ Guovdageaidnu čájehii fámuid vuosttaš minuvtta rájes.
+	#$ Mun illudin vuosttaš beaivvi.
+	#$ Mun illudin vuosttaš skeaŋkkas.
 	#$ Ollu jagiid mielde lei dáhpin šaddan ahte stuorra gánddat bohte min geahčái lávvardaga ja sotnabeaivve go radios ledje sáddagat skeittástan- ja čuoigangilvvuin.	
 	#% Dálut eai lean nu ráhpadat ođđasishuksenáigge
  
