@@ -582,7 +582,7 @@ der
 
 ## Adjectives, nouns, not adverbs
 
-* **Aifeambbo** selects N after eambbo
+* **Aifeambbo** selects N after eambbo grc -- strange A to N.
 
 ## Subjunctions
 
