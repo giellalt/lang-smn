@@ -10644,6 +10644,10 @@ Here, the verb should be plural. The interference comes from Finnish e-sentences
 
 **Agreement rule:** msyn-v-sg3-conneg *Sun ij puávtáččij/puávtáččii vyelgiđ.*
 
+## Participle as ConNeg in past tense
+
+### Negative gives participle msyn-v-sg1-prfprc
+
 ### Lii Adj Sg Nom + object
 
 ### Singular objects
