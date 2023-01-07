@@ -4947,7 +4947,7 @@ SELECT:CoGen1 Gen IF (0 Gen LINK 1 COMMA LINK 1C Gen LINK 1 ("já") OR ("dahje")
 
 
 #!! * **vuoiAcc** selects accusative if *vuoi* or *vuoi surgat* to the left 
-SELECT:vuoiAcc Acc IF ((*-1 ("vuoi") BARRIER NOT-NPMODADV) OR (*-1 ("murâšlâš") BARRIER NOT-NPMODADV LINK -1 ("vuoi"))) ;
+SELECT:vuoiAcc Acc IF ((*-1 ("vuoi") BARRIER NOT-NPMODADV OR COMMA) OR (*-1 ("murâšlâš") BARRIER NOT-NPMODADV LINK -1 ("vuoi"))) ;
 	#$ Vuoi mu, maid mun dál galggan?
 	#$ Vuoi dan olbmo gean bokte fillehusat bohtet.
 	#$ Vuoi surgat dan gándda!
@@ -6735,7 +6735,7 @@ REMOVE:ND Nom IF (0 HUMAN + Gen)(*1 BODY BARRIER NOT-NPMOD) ;
 #!! ### NP internal disambiguation of Com
 
 #!! * **PlSg-W** removes Pl when SG-WORD
-REMOVE:PlSg-W Pl IF (0 SG-WORD LINK NOT 0 VFIN)(NEGATE *-1 Ord BARRIER NOT-NPMOD)(*-1 BOS LINK NEGATE *1 PLURALIZER BARRIER S-BOUNDARY);
+REMOVE:PlSg-W SG-WORD + Pl IF (0 SG-WORD LINK NOT 0 VFIN)(NEGATE *-1 Ord BARRIER NOT-NPMOD)(*-1 BOS LINK NEGATE *1 PLURALIZER BARRIER S-BOUNDARY);
 	#$ Go funet lea guolli goddomin, de fitná olmmoš buođu luhtte dušše oktii jándoris savdnjileamen joddu amas dat dierrut, suollemasat dainna doaivvuin ahte nago de lea boađistan.
 	#$ Buoremus sámepolitihkka ožžojuvvo áigálii sámi veahkadaga ja ráđđehusa gaskaneas ipmárdusain.
 
