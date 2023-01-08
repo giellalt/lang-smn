@@ -120,8 +120,6 @@ XFAIL_TESTS=\
 	msyn-rel-sg-pl.yaml	 \
 	msyn-top-nom-acc.yaml \
 	msyn-v-actio-sg1.yaml \
-	neg-adj-gen-nom.yaml \
-	neg-agr-imprt-sg3.yaml \
 	neg-agr-other-pl3.yaml \
 	neg-attr-com-gen.yaml \
 	neg-extsubj-ill-nom.yaml \
