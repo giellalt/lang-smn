@@ -2248,7 +2248,7 @@ ADD:msyn-NPx-N (&msyn-NPx-N) TARGET (N Acc) OR (N Ill) OR (N Nom) IF
 COPY:msyn-NPx-N (&SUGGEST) EXCEPT (PxSg3 &msyn-NPx-N) OR (PxPl3 &msyn-NPx-N) OR (PxDu3 &msyn-NPx-N) TARGET (&msyn-NPx-N);
 
 
-#!! ### Internal noun phrase number and case agreement 
+#!! ### Number and case agreement 
 
 
 #!! ### Det + N agreement
@@ -2904,7 +2904,7 @@ ADDRELATION:msyn-extneg-sg3-pl3 ($2) N + Pl + Nom FROM (-3 ("ij") + Sg3 LINK 0 (
 
 
 
-#!! ### Existential sentences and habitives
+#!! ### E-sentences and habitives
 
 # e-subject in Pl Acc based on Finnish partitive
 #ADD:xmsyn-esubj-plnom (&msyn-esubj-plnom) TARGET N IF (*-1 LEDE + Pl3 BARRIER NOT-NPMOD LINK -1 Loc)(0C (N Pl Acc) OR (N Pl Ill));
@@ -2919,10 +2919,16 @@ ADDRELATION:msyn-extneg-sg3-pl3 ($2) N + Pl + Nom FROM (-3 ("ij") + Sg3 LINK 0 (
 
 
 #!! **Agreement rule:** msyn-extsubj-ill-nom
-ADD:msyn-extsubj-ill-nom-sg (&msyn-extsubj-ill-nom) TARGET N IF (*-1 LEDE + Sg3 BARRIER NOT-A-ADV-PCLE LINK -1 Loc)(0C (N Pl Ill))(NEGATE *1 TV + Ger OR TV + PrfPrc OR TV + Inf BARRIER S-BOUNDARY OR VFIN) ;
+ADD:msyn-extsubj-ill-nom-sg (&msyn-extsubj-ill-nom) TARGET N IF 
+	(*-1 LEDE + Sg3 BARRIER NOT-A-ADV-PCLE LINK -1 Loc LINK NOT -1 N OR Pron + Indef + Pl + Nom)
+	(0C (N Pl Ill))
+	(NEGATE *1 TV + Ger OR TV + PrfPrc OR TV + Inf BARRIER S-BOUNDARY OR VFIN) ;
 
 #!!  **Agreement rule:** msyn-extsubj-ill-nom *Šiljoost láá poccuuh/poccuid.*
-ADD:msyn-extsubj-ill-nom-pl (&msyn-extsubj-ill-nom) TARGET N IF (*-1 LEDE + Pl3 BARRIER NOT-A-ADV-PCLE LINK -1 Loc)(0C (N Pl Ill))(NEGATE *1 TV + Ger OR TV + PrfPrc OR TV + Inf BARRIER S-BOUNDARY OR VFIN) ;
+ADD:msyn-extsubj-ill-nom-pl (&msyn-extsubj-ill-nom) TARGET N IF 
+	(*-1 LEDE + Pl3 BARRIER NOT-A-ADV-PCLE LINK -1 Loc LINK NOT -1 N OR Pron + Indef + Pl + Nom)
+	(0C (N Pl Ill))
+	(NEGATE *1 TV + Ger OR TV + PrfPrc OR TV + Inf BARRIER S-BOUNDARY OR VFIN) ;
 COPY:msyn-extsubj-ill-nom (Nom &SUGGEST) EXCEPT (Ill &msyn-extsubj-ill-nom) TARGET (N Pl &msyn-extsubj-ill-nom) ;
 #$ Šiljoost láá poccuuh.
 #% Šiljoost láá ain {poccuid}.
@@ -2970,7 +2976,11 @@ ADD:msyn-extv-sg3-pl3 (&msyn-extv-sg3-pl3) TARGET V IF (-1 Loc)(0 LEDE + Sg3)(1 
 COPY:msyn-extv-sg3-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (LEDE &msyn-extv-sg3-pl3);
 
 #!!  **Agreement rule:** msyn-extsubj-ill-nom
-ADD:msyn-extsubj-ill-nom (&msyn-extsubj-ill-nom) TARGET N IF (-1 LEDE + Sg3 OR LEDE + Pl3)(-2 Loc)(0C N + Pl + Ill);
+ADD:msyn-extsubj-ill-nom (&msyn-extsubj-ill-nom) TARGET N IF 
+	(NOT -3 N OR Pron + Indef + Pl + Nom)
+	(-2 Loc)
+	(-1 LEDE + Sg3 OR LEDE + Pl3)
+	(0C N + Pl + Ill);
 COPY:msyn-extsubj-ill-nom (Nom &SUGGEST) EXCEPT Ill TARGET (N Pl &msyn-extsubj-ill-nom);
 
 
@@ -3010,7 +3020,7 @@ COPY:msyn-subj-ill-nom (Nom &SUGGEST) EXCEPT (Ill &msyn-subj-ill-nom) TARGET (N 
 
 
 
-#!! ### Suomen nessesiivirakenne acc > nom
+#!! ### Finnish nessesiivi: acc > nom
 
 #!!  **Agreement rule:** msyn-ness-acc-nom
 ADD:xmsyn-ness-acc-nom (&msyn-ness-acc-nom) TARGET (Pron Pers Acc) IF (1 ("leđe") + Cond)(2 PrfPrc)(*3 Inf + IV BARRIER NOT-ADV-DE);
@@ -3150,13 +3160,13 @@ COPY:msyn-top-placc-plnom (Nom &SUGGEST) EXCEPT (Acc &msyn-top-placc-plnom) TARG
 
 #!! ### Singular objects
 
-#!! #### Singular objects in ordinary position
+#!! #### Ordinary singular objects
 
 #!! Hmm, no rules for this, it seems.
 
 
 
-#!! #### Objects in LEDE + OBJ + Th-ADJ + TV constructions
+#!! #### LEDE + OBJ + Th-ADJ + TV
 
 #!! ** Object rule ** Object in unexpected post-copula position: *Onne lii kandâ/kaandâ älkkee uáiniđ*
 ADD:msyn-obj-nom-acc (&msyn-obj-nom-acc) TARGET N + Sg + Nom IF
@@ -3370,7 +3380,7 @@ COPY:msyn-imp-nom-acc (Acc &SUGGEST) EXCEPT (Nom &msyn-imp-nom-acc) TARGET (N &m
 
 #!! ## Predicative
 
-#!! ### Case errors Acc > Nom in predicative
+#!! ### Acc > Nom in predicative
 
 #!!  **Agreement rule:** msyn-pred-acc-nom *Taah láá čielgâ aašijd/ááših.*
 ADD:xmsyn-pred-acc-nom (&msyn-pred-acc-nom) TARGET Acc IF (*-1 ("leđe") + Ind BARRIER NOT-NPMOD OR ("mihheen"))(NOT 0 Arab OR Nom)(NOT *0 TV)(NOT *-1 BOS LINK 1 ("mii") OR ("kii"));
@@ -3710,20 +3720,24 @@ ADDRELATION:real-pele-peeli ("$2") (Adv) FROM (1 ("peeli" &real-pele-peeli));
 
 #!! ## Word order rules
 
+#!! **Syntax rule:** syn-OVS-OSV
 ADD:syn-OVS-OSV (&syn-OVS-OSV) TARGET VFIN IF (*-1 Acc BARRIER NOT-ADV-PCLE) (1 (N Nom) OR (Pron Nom));
 ##  Eres detaljijd puáhtá lohhee jieš kuvâttâllâđ.
 ##  Eres detaljijd lohhee puáhtá jieš kuvâttâllâđ.
 MOVE:syn-OVS-OSV (V &syn-OVS-OSV) AFTER (1 (N Nom) OR (Pron Nom)) ;
 ADDRELATION:syn-OVS-OSV ("$2") (N) FROM (*1 (V &syn-OVS-OSV));
 
+
 #!! The grammarchecker file ends here.
 
-
+#!! ## AFTER-SECTIONS
 	# ====================== #
 		AFTER-SECTIONS
 	# ====================== #
 
 	# Tag removal rules to prepare for generation
 
+#!! SUBSTITUTE MWE (*)
 SUBSTITUTE (MWE) (*) TARGET MWE ;
 	## Guollefestivála geassemánus ja Riddu Riđđu suoidnemánus.
+
