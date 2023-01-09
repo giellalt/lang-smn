@@ -272,12 +272,12 @@ LIST KALLE = "kalle" ;
 SET NUM = Num - OHTA ;
 
 
-LIST TWO-TO-SIX = "kyehti" "kulmâ" "nelji" "vittâ" "kuttâ" "2" "3" "4" "5" "6" ("<[2-6],[0-9]+>"r) ("^<[1-5]\-[2-6]>$"r) "2-3" "2-4" "3-4" "3-5" "4-5" "4-6" "5-6" ;
+LIST TWO-TO-SIX = "kyehti" "kulmâ" "nelji" "vittâ" "kuttâ" "2" "3" "4" "5" "6" ("[2-6],[0-9]+"r) ("^[1-5]\-[2-6]$"r) "2-3" "2-4" "3-4" "3-5" "4-5" "4-6" "5-6" ;
 
-SET NUM-WORD = ("^<[a-z][a-z].*>$"r Num) ;
+SET NUM-WORD = ("[a-záäâčđŋšž][a-záäâčđŋšž]*"r Num) ;
 
 SET SEVEN-AND-MORE-WORD = NUM-WORD - TWO-TO-SIX - OHTA - MANGA - MUADDI - KALLE ; # - Sem/ID should fix Sem/ID, now 8 is Sem/ID
-LIST SEVEN-AND-MORE-ARABIC = "7" "8" "9" ("^<[1-9][0-9]>$"r) ("<[1-9][0-9][0-9]>"r) "5-7" "6-7" "7-8" "7-9" "8-9" "8-10" ;
+LIST SEVEN-AND-MORE-ARABIC = "7" "8" "9" ("[1-9][0-9]"r) ("[1-9][0-9][0-9]"r) ("([7-9]|[1-9][0-9]+),[0-9]+"r) "5-7" "6-7" "7-8" "7-9" "8-9" "8-10" ;
 # 7+ should include 8,74 but not 3,74.
 
 SET SEVEN-AND-MORE = SEVEN-AND-MORE-WORD OR SEVEN-AND-MORE-ARABIC ;
@@ -2022,9 +2022,19 @@ SET CCCOMMA = CC OR COMMA ;
 
 BEFORE-SECTIONS
 
-# Do not touch the speller suggestions:
 
-SECTION
+# Do not touch speller output:
+
+PROTECT (<spelled>) ;
+
+
+	# ====================== #
+	#  Disambiguation rules  #
+	# ====================== #
+	         SECTION         #
+	# ====================== #
+
+
 #!! This is the first section. Here we put safe rules with no or minimal context.
 
 #!! ## Removing unwanted names
@@ -3325,19 +3335,24 @@ MAP:CC-CS (@X) TARGET CC-CS ;
 
 
 #!! * **Interr** selects interrogative pronouns in questions
-SELECT:Interr Interr IF ((-1 COMMA LINK *-1 CS LINK *-1 BOS BARRIER NOT-PCLE) OR (*-1 BOC BARRIER NOT-PCLE LINK NOT 0 ("meid") OR Interr) OR
-(-1 COMMA LINK -1 HUMAN + Nom LINK *-1 BOC BARRIER WORD))(0 Rel OR Indef LINK NOT 0 ("maht" Adv) LINK *1 ("?"));
+REMOVE:Interr Rel IF
+	((-1 COMMA LINK *-1 CS LINK *-1 BOS BARRIER NOT-PCLE) OR
+	 (-1 COMMA LINK -1 HUMAN + Nom LINK *-1 BOC BARRIER WORD) OR
+	 (*-1 BOC BARRIER NOT-PCLE LINK NOT 0 ("meid") OR Interr))
+	(0 Interr LINK NOT 0 ("maht" Adv) LINK *1 ("?"));
 	#$ Juos Ipmil lea min beale, gii lea min vuostái?
 	#$ Maid don doaivvut, mun gielistan?
 	#$ Na maid don diŋgojit?
 	#$ - Áhčči, mii lea duot čáppa alit násti doppe guhkkelis?
 	#% Maid mii dál vihtaniiguin?
+	#$ Lii-uv kiinii tunjin uápis nisonijd viehâvääldi čuosâttâhhân?
 
 #!! * **InterrIfPot** selects interrogative pronouns in potential sentences, and after that we remove the remaining Interr
 SELECT:InterrIfPot Interr IF (*-1 BOC BARRIER NOT-PCLE)(0 Rel)(*1 TRANS-V + Pot BARRIER S-BOUNDARY OR VFIN-POS);
 	#$ Na maid dal juo dagažat ja maid it dagaš.
 
-REMOVE:KillInterr Interr IF ;
+# Not for grc
+#REMOVE:KillInterr Interr IF ;
 
 #!! * **munPl3** removes Pron Pers Pl3 if there is no verb agreement
 #REMOVE:munPl3 Pers + Nom IF (NEGATE *-1 PL1-V BARRIER NOT-ADV-PCLE)(0 ("mii" Nom))(*1 SG3-V BARRIER PL1-V OR SV-BOUNDARY LINK NOT 0 Pl1);
@@ -4901,12 +4916,68 @@ SELECT:NumNomCop (Num Nom) IF ((*-1 COPULAS + FMAINV BARRIER NOT-ADV-PCLE LINK *
 SELECT:NumNomYear (Num Nom) IF ((0 Sem/Year LINK -1 Sem/Sur LINK 2 (":") OR (";") OR (PUNCT RIGHT)) OR (1 MANNU)) ;
 
 
+#!! ### Gen modifiers inside NP 
 
+#!! * **GenNP1** Selects Gen for Pron Pers (modifier): if NP-BOUNDARY OR Acc (but not if the finite verb is TV) to the left and N to right 
+SELECT:GenNP1 (Pron Pers Gen) IF
+	(-1 NP-BOUNDARY - TRANS-V OR Acc OR Sem/Plc + Loc)
+	(*1 N BARRIER NOT-NPMOD)
+	(NEGATE 0 Gen LINK 1 Po)
+	(NEGATE 0 ("mii") OR ("kii"));# LINK *1 N + Pl + Acc BARRIER NOT-NPMOD LINK *1 VFIN); 
+	#$ Min mánáin leat ollu stohkosat.
+	#$ Dál lea du vuorru.
+        #$ Gáivuonas su áhčis leat guokte oambeali ja guokte vilbeali.
+        #$ Mii aavhijd tast lii?
 
+#!! * **GenNP2** Selects Gen for N (modifier): if CC "já" immediately to your left and accusative to your right *ja sámi jurddašanvuogi*
+SELECT:GenNP2 (N Gen)  IF (-1 ("já"))(NEGATE 0 TITLE LINK 1 Prop)(1 (N Acc))(NEGATE 0 V OR ABBR OR Attr);
+	#$ Miššonbarggu álggu rájes juo Leem háliidii oahppat sámegiela ja sámi jurddašanvuogi.
+	#% Sii ožžot geavahit eatnama ja gáttiid ja elliideaset ja iežaset ealáhussii. # Deaivá dán vaikko eat hálit dan.
 
+#!! * **GenNP3** Selects Gen (modifier): if first one to right is Nom or Loc *Norgga oaivegávpogis*
+SELECT:GenNP3 Gen IF (*-1 BOS OR COMMA OR XGO BARRIER NOT-Attr)(NOT 0 Num OR A)(1 (N Loc) OR (N Nom) LINK NOT 0 Prop)(NEGATE 0 (Pron Interr) OR (Pron Rel))(NEGATE 0 TITLE + Nom LINK 1 (Prop Nom))(NEGATE 0 (Pron Dem) + Acc)(NEGATE 0 (Sg Nom) LINK *1 SG3-V BARRIER VFIN OR Nom);
+	#$ Ánde orru Oslos, Norgga oaivegávpogis.
+	#$ Nieidda eadni ii sihtan vuolgit, muhto nisu hásttii.
+	#$ Organisašuvnna bláđđi, man gohčodit Fokusin muitala ahte gonagas Olav su áiggistis lei bivdán beassat leat servodaga suodjaleaddji.
+	#$ Jovsset, su irgi, gii lei rehálaš olmmái ii ge hálidan heahppašuhttit su, áiggui earránit sus suoli.
+	#% Čáhppesmurjjiid olbmot gazze milkkiin ovdal.
+
+#!! * **GenNP4** (modifier) selects Gen -1 BOS or COMMA, 1 Nom *nissoniid bargu*
+#SELECT:GenNP4 (N Gen) (*-1 BOS OR COMMA)(1 (N Nom))(NEGATE 0 Num)(NEGATE 1 Inf)(NEGATE 0 (Pron Pers)) ;
+	#$ Galgágo buot bivttasráhkadeapmi leat nissoniid bargu?
+	#% Mu oabbá lea bargan dán skuvlla rektorin.
+	#% Sudno heasttat bivvet olgun vaikko leage buolaš. #Comment: This one is not meant for pronouns: they have GenNP1. 
+
+#!! * **GenNPCo** (modifier) Selects Pron Pers Gen if Nom to the left of ja *Mun ja mu ustibat*
+SELECT:GenNPCo (Pron Pers Gen) IF (-1 ("já") LINK -1 Nom) ;
+	#$ Mun ja mu ustibat manaimet kinoi geahččat ođđaseamos Harry Potter-filmma.
+
+#!! * **GenRefl** (modifier) selects Gen in front of a noun in accusative or nominative case *iežaset oiviliid*
+SELECT:GenRefl Gen IF (0 (Pron Refl) + Gen)(*1 (N Acc) OR (N Nom) BARRIER NOT-Attr) ;
+	#$ Atrihkkalat leat čálliid iežaset ovddasvástádus ja lohkkit berrejit daid lohkat kritihkkalaččat ja hábmet iežaset oaiviliid historjjá birra ja otná ja ihttá sámi skuvlla birra.
+	#$ Lehpetgo iežadet diŋggaid dolvon?
+	#$ Vaikko leatge sámeaktivista, de it dárbbat iežat čivgga dahkat givssidanoaffarin.
+
+#!! * **Gen Not Acc**
+REMOVE:GenNotAcc Acc IF (*-1 TV)(0 N + Gen)(1 N + Acc);
+
+#!! * **AccAfterCC** Select accusative: if genitiv to the left, and CC "já" to the left of genitive *eamiálbmot- ja globaliserenprošeavtta koordináhtor*
+#SELECT:AccAfterCC (N Acc)  IF (-1 (N Gen) LINK -1 ("já"))(0 (N Acc))(NEGATE *1 (N Acc) OR (N Nom) OR (N Ess) OR (N Loc) BARRIER NOT-Attr OR PUNCT-LEFT)(NEGATE 0 V)(NEGATE 1 Gen LINK 1 (N Loc))(NEGATE *1 Gen LINK 1 Po);  
+	#% Son oassásdoallá dál sámi historjjálaš girjebarggus ja lea máŋggafágalaš eamiálbmot- ja globaliserenprošeavtta koordináhtor. #Deaivá dán vaikko eat hálit dan.
+	#% Lávdegoddi lea maiddái atnán áiggi ságastallat davviruoŧa čearuid ja Romssa boazoorohagaid gaskaneas váttisvuođaid birra. # Seamma.
+
+# Alternatively this rule is not needed after removal of all Acc "KillAcc?", but for now it stays.
+#SELECT:GenNP2 Gen (-1 NP-BOUNDARY)(*1 N BARRIER NOT-NPMOD)(NEGATE 0 Gen LINK 1 Po);
+	#$ Soai lohkaba Harry Potter-girjji eaŋgalasgillii.
+ # Jurddaš ná: Gii sáhttá oamastit gean/man? 
+ 
 #!! ## ACCUSATIVE-ILLATIVE DISAMBIGUATION
 
-REMOVE:IllNotAcc Acc IF (0 Ill)(NEGATE *0 TV BARRIER S-BOUNDARY);
+REMOVE:IllNotAcc Acc IF
+	(NEGATE 0 ("skippáár"))
+	(0 Ill)
+	(NEGATE *0 TV BARRIER S-BOUNDARY)
+	(NOT -1 ("<[Mm]ii>"r));
 
 REMOVE:IllNotAcc Acc IF (0 A + Ill)(1C N + Ill);
 
@@ -5453,10 +5524,11 @@ REMOVE:TESTr2026 Gen - Dem IF (*-2 TRANS-V BARRIER S-BOUNDARY OR Pr OR Acc)(NEGA
 REMOVE:TopicalisedObj Gen IF (0 Acc)(1 ("leđe") + Sg3)(2 Sg + Nom)(3 TV + PrfPrc);
 REMOVE:TopicalisedObj Nom IF (0 Acc)(1 ("leđe") + Sg3)(2 Sg + Nom)(3 TV + PrfPrc);
 
-REMOVE:NotAcc Acc IF (0 Gen OR Nom)(NOT *0 TV);
+REMOVE:NotAccAck Acc IF
+	(0 Gen OR Nom)
+	(NOT *0 TV)
+ 	(NEGATE -1 ("mii") OR ("kii"));# LINK *1 N + Pl + Acc BARRIER NOT-NPMOD LINK *1 VFIN);                                                                                                       
 
-
- 	
 #!! ###  Reflexive pronouns: acc or gen
 
 SELECT:jies_sg3 PxSg3 IF (*-1 V + Sg3 BARRIER VFIN)(0 Pron + Refl) ;
@@ -5733,56 +5805,6 @@ REMOVE:AccCOP Acc IF (*-1 COPULAS + FMAINV BARRIER NOT-NPMOD OR CC LINK *-1 (N N
 	#Commet: (1 EOC OR COMMA OR NEGFOC) dárkkis dán oasi korpusis.. 
 
 
-#!! ### Gen modifiers inside NP 
-
-#!! * **GenNP1** Selects Gen for Pron Pers (modifier): if NP-BOUNDARY OR Acc (but not if the finite verb is TV) to the left and N to right 
-SELECT:GenNP1 (Pron Pers Gen) IF (-1 NP-BOUNDARY - TRANS-V OR Acc OR Sem/Plc + Loc)(*1 N BARRIER NOT-NPMOD)(NEGATE 0 Gen LINK 1 Po) ;
-	#$ Min mánáin leat ollu stohkosat.
-	#$ Dál lea du vuorru.
-	#$ Gáivuonas su áhčis leat guokte oambeali ja guokte vilbeali.
-
-#!! * **GenNP2** Selects Gen for N (modifier): if CC "já" immediately to your left and accusative to your right *ja sámi jurddašanvuogi*
-SELECT:GenNP2 (N Gen)  IF (-1 ("já"))(NEGATE 0 TITLE LINK 1 Prop)(1 (N Acc))(NEGATE 0 V OR ABBR OR Attr);
-	#$ Miššonbarggu álggu rájes juo Leem háliidii oahppat sámegiela ja sámi jurddašanvuogi.
-	#% Sii ožžot geavahit eatnama ja gáttiid ja elliideaset ja iežaset ealáhussii. # Deaivá dán vaikko eat hálit dan.
-
-#!! * **GenNP3** Selects Gen (modifier): if first one to right is Nom or Loc *Norgga oaivegávpogis*
-SELECT:GenNP3 Gen IF (*-1 BOS OR COMMA OR XGO BARRIER NOT-Attr)(NOT 0 Num OR A)(1 (N Loc) OR (N Nom) LINK NOT 0 Prop)(NEGATE 0 (Pron Interr) OR (Pron Rel))(NEGATE 0 TITLE + Nom LINK 1 (Prop Nom))(NEGATE 0 (Pron Dem) + Acc)(NEGATE 0 (Sg Nom) LINK *1 SG3-V BARRIER VFIN OR Nom);
-	#$ Ánde orru Oslos, Norgga oaivegávpogis.
-	#$ Nieidda eadni ii sihtan vuolgit, muhto nisu hásttii.
-	#$ Organisašuvnna bláđđi, man gohčodit Fokusin muitala ahte gonagas Olav su áiggistis lei bivdán beassat leat servodaga suodjaleaddji.
-	#$ Jovsset, su irgi, gii lei rehálaš olmmái ii ge hálidan heahppašuhttit su, áiggui earránit sus suoli.
-	#% Čáhppesmurjjiid olbmot gazze milkkiin ovdal.
-
-#!! * **GenNP4** (modifier) selects Gen -1 BOS or COMMA, 1 Nom *nissoniid bargu*
-#SELECT:GenNP4 (N Gen) (*-1 BOS OR COMMA)(1 (N Nom))(NEGATE 0 Num)(NEGATE 1 Inf)(NEGATE 0 (Pron Pers)) ;
-	#$ Galgágo buot bivttasráhkadeapmi leat nissoniid bargu?
-	#% Mu oabbá lea bargan dán skuvlla rektorin.
-	#% Sudno heasttat bivvet olgun vaikko leage buolaš. #Comment: This one is not meant for pronouns: they have GenNP1. 
-
-#!! * **GenNPCo** (modifier) Selects Pron Pers Gen if Nom to the left of ja *Mun ja mu ustibat*
-SELECT:GenNPCo (Pron Pers Gen) IF (-1 ("já") LINK -1 Nom) ;
-	#$ Mun ja mu ustibat manaimet kinoi geahččat ođđaseamos Harry Potter-filmma.
-
-#!! * **GenRefl** (modifier) selects Gen in front of a noun in accusative or nominative case *iežaset oiviliid*
-SELECT:GenRefl Gen IF (0 (Pron Refl) + Gen)(*1 (N Acc) OR (N Nom) BARRIER NOT-Attr) ;
-	#$ Atrihkkalat leat čálliid iežaset ovddasvástádus ja lohkkit berrejit daid lohkat kritihkkalaččat ja hábmet iežaset oaiviliid historjjá birra ja otná ja ihttá sámi skuvlla birra.
-	#$ Lehpetgo iežadet diŋggaid dolvon?
-	#$ Vaikko leatge sámeaktivista, de it dárbbat iežat čivgga dahkat givssidanoaffarin.
-
-#!! * **Gen Not Acc**
-REMOVE:GenNotAcc Acc IF (*-1 TV)(0 N + Gen)(1 N + Acc);
-
-#!! * **AccAfterCC** Select accusative: if genitiv to the left, and CC "já" to the left of genitive *eamiálbmot- ja globaliserenprošeavtta koordináhtor*
-#SELECT:AccAfterCC (N Acc)  IF (-1 (N Gen) LINK -1 ("já"))(0 (N Acc))(NEGATE *1 (N Acc) OR (N Nom) OR (N Ess) OR (N Loc) BARRIER NOT-Attr OR PUNCT-LEFT)(NEGATE 0 V)(NEGATE 1 Gen LINK 1 (N Loc))(NEGATE *1 Gen LINK 1 Po);  
-	#% Son oassásdoallá dál sámi historjjálaš girjebarggus ja lea máŋggafágalaš eamiálbmot- ja globaliserenprošeavtta koordináhtor. #Deaivá dán vaikko eat hálit dan.
-	#% Lávdegoddi lea maiddái atnán áiggi ságastallat davviruoŧa čearuid ja Romssa boazoorohagaid gaskaneas váttisvuođaid birra. # Seamma.
-
-# Alternatively this rule is not needed after removal of all Acc "KillAcc?", but for now it stays.
-#SELECT:GenNP2 Gen (-1 NP-BOUNDARY)(*1 N BARRIER NOT-NPMOD)(NEGATE 0 Gen LINK 1 Po);
-	#$ Soai lohkaba Harry Potter-girjji eaŋgalasgillii.
- # Jurddaš ná: Gii sáhttá oamastit gean/man? 
- 
 
 
 #!! ### Accusative in coordination
@@ -6188,7 +6210,11 @@ REMOVE:NomIfSVO Acc IF (-1 Adv)(0 Sg + Nom)(1 V + TV + Sg3)(*2 Acc BARRIER NOT-N
 #!! Accusative or Illative
 SELECT:AccNotIll Acc IF (0 (Pl Ill))( -1 ("mihheen") OR ("kihheen"));
 
-SELECT:IllNotAcc Ill IF (0 (Pl Acc)) (NOT *0 TV) ;
+SELECT:IllNotAcc Ill IF
+	(0 (Pl Acc))
+	(NOT 0 ("skippáár"))	
+	(NOT *0 TV)
+	(NEGATE -1 ("mii") OR ("kii"));# LINK *1 N + Pl + Acc BARRIER NOT-NPMOD LINK *1 VFIN);
 
 
 #!! ## Nominative or accusative or genitive
@@ -7283,15 +7309,15 @@ AFTER-SECTIONS
 
 
 #!! ## Variant lemmas
-LIST LEMMA1 = "Annika" "aalmug" "aarrân" "pargee" "peeli" "pessijááh" "käälis" "boalvvir" ("puáris" A Comp) "puuvsah" "čábmit" "muččâd" "čyeti" "dadjalit" "dahkamuš" "dálolaš"  ("taat" Pron Dem Pl Com) (".*doalut"r) "toovláš" "eanaláigo#boahtu" "Elle" "káámmár" "kirje" (".*geaisár"r) (".*gursa"r) "Jáhkob" "Jovnna" "kaleandar" (".*keallir"r) "läbži"
+LIST LEMMA1 = "Annika" "aalmug""pargee" "pessijááh" "käälis" "boalvvir" ("puáris" A Comp) "puuvsah" "čábmit" "muččâd" "čyeti" "dadjalit" "dahkamuš" "dálolaš"  ("taat" Pron Dem Pl Com) (".*doalut"r) "toovláš" "eanaláigo#boahtu" "Elle" "káámmár" "kirje" (".*geaisár"r) (".*gursa"r) "Jáhkob" "Jovnna" "kaleandar" (".*keallir"r) "läbži"
 "lihpar" ("[0-9]*-lohku"r) "Máret" (".*mállásat"r) ("mieđettiđ") (".*mirko"r) "moattis" "motocrossa" "muurâš" (".*muslima"r) (".*Norga"r) "uvnâ" "kuáskulâš" (".*rádji"r) "rájes" ("riges" A Comp Pl Nom) "ruošša#čuhti" "ruvnâ" "säplig" "smávvadálolaš" "speeijâl" "suoivâ" "puoh" "viššâl" "vuálá" ;
     # first dictionary form
 
-LIST LEMMA2 = "Annik" "álbmut" "aarrân" "bargit" "peeli" ("yleisnimitys" Der/Dimin) "boadnjá" "kävppijâs" ("puáris" Comp Der/AAdv Adv) "buksa" "čápmit" "muččâd" "čyeti" ("ettâđ" Der/l) ("toohâđ" Der/muš) ("dáigut" Der/NomAg N Sg Com) ("táálu" Der/lasj) ("toimâohtâdâh" Der/Dimin)  (".*doallu"r) "eanaláigo#boađđu" "Elli"  "káámmár" "girje" (".*geaissir"r) (".*gurse"r)  "Jáhkot" "Jovdna" "Jovna" "kalender" (".*keallár"r) "lávžá"
+LIST LEMMA2 = "Annik" "álbmut" "bargit" "boadnjá" "kävppijâs" ("puáris" Comp Der/AAdv Adv) "buksa" "čápmit" "muččâd" "čyeti" ("ettâđ" Der/l) ("toohâđ" Der/muš) ("dáigut" Der/NomAg N Sg Com) ("táálu" Der/lasj) ("toimâohtâdâh" Der/Dimin)  (".*doallu"r) "eanaláigo#boađđu" "Elli"  "káámmár" "girje" (".*geaissir"r) (".*gurse"r)  "Jáhkot" "Jovdna" "Jovna" "kalender" (".*keallár"r) "lávžá"
 "libar" ("[0-9]*-loahku"r) ("[0-9]*-logus"r) "Máre" (".*mális"r) "mieđidit" (".*mirku"r) (".*mirkko"r) "moattes" "motocross" "mora" (".*muslim"r) (".*Norge"r) "oama" ("uási" Der/lasj) (".*rádjá"r) "rájis" ("riges" Comp Der/AAdv Adv) "ruošša#čuđđi" "ruvnâ" "säplig" ("smávvadállu" Der/lasj) "speeijâl" "suoivvan" "viso"  "viššalaš" "vuolli" ;
 
 
-#!! * Remove lemma2 if lemma 1
+#!! * Remove lemma2 if lemma 1  
 REMOVE:lemma2 LEMMA2 IF (0 LEMMA1);
 	#% Leago Čáhppes Bearral oahpis dutnje?
 
