@@ -75,7 +75,6 @@ TESTS=\
 	neg-extv-sg3-pl3.yaml \
 	neg-interferens_celkkuuh.yaml \
 	neg-ncomple-ess-sgill.yaml \
-	neg-num-plnom-par.yaml \
 	neg-obj-acc-ill.yaml \
 	neg-obj-plnom-placc.yaml \
 	neg-obj-sgnom-sgacc.yaml \
@@ -121,15 +120,12 @@ XFAIL_TESTS=\
 	msyn-rel-sg-pl.yaml	 \
 	msyn-top-nom-acc.yaml \
 	msyn-v-actio-sg1.yaml \
-	neg-extsubj-ill-nom.yaml \
 	neg-extv-sg3-pl3.yaml \
 	neg-ncomple-ess-sgill.yaml \
-	neg-num-plnom-par.yaml \
 	neg-obj-acc-ill.yaml \
 	neg-obj-sgnom-sgacc.yaml \
 	neg-orrood-inf-actioess.yaml \
 	neg-po-nom-gen.yaml \
-	neg-posspl-acc-gen.yaml \
 	neg-subj-gen-nom.yaml \
 	ovdamearkkat.yaml \
 	science.yaml \
