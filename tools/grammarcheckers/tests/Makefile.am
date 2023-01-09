@@ -26,6 +26,7 @@ TESTS=\
 	msyn-agr-sg2-sg3.yaml \
 	msyn-agr-sg3-du3.yaml \
 	msyn-agr-sg3-pl3.yaml \
+	msyn-attr-com-gen.yaml \
 	msyn-det-nom-acc.yaml \
 	msyn-dynamic-compounds.yaml \
 	msyn-ext-pl3-sg3.yaml \
@@ -68,7 +69,6 @@ TESTS=\
 	neg-agr-other-sg2.yaml \
 	neg-agr-other-sg3.yaml \
 	neg-agr-sg3-pl3.yaml \
-	neg-attr-com-gen.yaml \
 	neg-det-nom-acc.yaml \
 	neg-extsubj-acc-nom.yaml \
 	neg-extsubj-ill-nom.yaml \
@@ -105,6 +105,7 @@ XFAIL_TESTS=\
 	interferens_celkkuuh4.yaml \
 	interferens_celkkuuh5.yaml \
 	msyn-adj-attr-pred.yaml \
+	msyn-attr-com-gen.yaml \
 	msyn-dynamic-compounds.yaml \
 	msyn-extsubj-ill-nom.yaml \
 	msyn-ncompl-acc-ill.yaml \
@@ -120,8 +121,6 @@ XFAIL_TESTS=\
 	msyn-rel-sg-pl.yaml	 \
 	msyn-top-nom-acc.yaml \
 	msyn-v-actio-sg1.yaml \
-	neg-agr-other-pl3.yaml \
-	neg-attr-com-gen.yaml \
 	neg-extsubj-ill-nom.yaml \
 	neg-extv-sg3-pl3.yaml \
 	neg-ncomple-ess-sgill.yaml \
@@ -131,7 +130,6 @@ XFAIL_TESTS=\
 	neg-orrood-inf-actioess.yaml \
 	neg-po-nom-gen.yaml \
 	neg-posspl-acc-gen.yaml \
-	neg-posspl-ill-gen.yaml \
 	neg-subj-gen-nom.yaml \
 	ovdamearkkat.yaml \
 	science.yaml \
