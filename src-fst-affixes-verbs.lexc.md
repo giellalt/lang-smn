@@ -134,6 +134,7 @@ Turns out it was not distinct after all. Preper for fusing KULGAD and SODDAD
 - Ind+Prs+Pl3: uáppih
 - ConNeg: oopâ
 - Ind+Prt+Sg1: oppim
+- Der/InchL: opâškyettiđ
 
 suggested stem = tuáll
 Impossible to see the differences in diphtong length

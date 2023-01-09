@@ -365,6 +365,7 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 1. pááppár : pápárân viijđás%^ÁE%^WG%^RVSH> 
 1. njääh^RCe^CLEN^RVSH> = njähhe>
 1. njääh^RCe^CLEN^RVSH> = njähhe>
+1. essee : esseid, suklaa : suklaid
 
 **RULE: Long vowel shortening** = (example?), no ^CSH, since that gives Vy:0
 

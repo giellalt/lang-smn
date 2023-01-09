@@ -7170,6 +7170,7 @@ Turns out it was not distinct after all. Preper for fusing KULGAD and SODDAD
 - Ind+Prs+Pl3: uáppih
 - ConNeg: oopâ
 - Ind+Prt+Sg1: oppim
+- Der/InchL: opâškyettiđ
 
 suggested stem = tuáll
 Impossible to see the differences in diphtong length
@@ -7823,6 +7824,7 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 1. pááppár : pápárân viijđás%^ÁE%^WG%^RVSH> 
 1. njääh^RCe^CLEN^RVSH> = njähhe>
 1. njääh^RCe^CLEN^RVSH> = njähhe>
+1. essee : esseid, suklaa : suklaid
 
 **RULE: Long vowel shortening** = (example?), no ^CSH, since that gives Vy:0
 
@@ -9838,19 +9840,17 @@ See also [the documentation on grammarchecker testing](https://giellalt.github.i
 
 Sentence delimiters are the following: <.> <!> <?> <...> <¶>
 
-## Tags
+## Tags and sets
 
 This section lists all the tags inherited from the fst, and used as tags
 in the syntactic analysis. The next section, **Sets**, contains sets defined
 on the basis of the tags listed here, those set names are not visible in the output.
 
-### Tags declared as single-membered LISTs
-
-#### Beginning and end of sentence
+### Beginning / end of sentence
 BOS
 EOS
 
-### Parts of speech tags
+### Parts of speech
 
 -
 N
@@ -9881,7 +9881,7 @@ COMMA
 ?
 MWE
 
-### Tags for POS sub-categories
+### POS sub-categories
 
 -
 Pers
@@ -9898,7 +9898,7 @@ Allegro
 Arab
 Rom
 
-### Tags for morphosyntactic properties
+### Morphosyntactic properties
 
 Nom
 Acc
@@ -9964,7 +9964,7 @@ Sup
 Actio
 VAbess
 
-### Tags for clitic particles
+### Clitic particles
 
 Foc/ge
 Foc/gen
@@ -9979,7 +9979,7 @@ Foc/han
 Foc/bat
 Foc/son
 
-### Derivation tags
+### Derivation 
 
 Der/Pass
 Der/NomAg
@@ -10007,7 +10007,7 @@ Der/Superl
 - All Err/Orth tags
 - Err/Orth-spes for all Err/Orth save the simple one
 
-### Semantic tags
+### Semtags
 
 - vdic
 - HUMAN
@@ -10044,15 +10044,15 @@ Der/Superl
 
 This ends the semtag list.
 
-### Names
-
 PROP-ATTR
 PROP-SUR
 
-### Time sets
 TIME-N-SET
 NOT-TIME
 TIME-N
+
+### Valency tags
+See also the valency file in src/cg3
 
 ### Syntactic tags
 
@@ -10197,35 +10197,61 @@ PL3-V
 
 - LIST PERNUM = Sg1 Sg2 Sg3 Du1 Du2 Du3 Pl1 Pl2 Pl3 ;  
 
-### Some subsets of the VFIN sets
+### Finite verb sets
+
 SG-V, DU-V, PL-V,
 DU-PL-V
 1-2-V
 VNOTSG1 (for all other persons than Sg1), VNOTSG2, ...
 
-### Imperative sets
-
 No one so far
 
-### Sets consisting of forms of "leđe" (these ones need to be rewritten)
+z### Copula sets 
+
+(these ones need to be rewritten)
+
 LEDE, LEAN, LEAT, ...
 
 ### QUASI-TV
 Mun vuolgim raapâid pajas. Verb accepts accusative in front of adverb.
 
 ### Pronoun sets
+
 MUN, DON, SON, MOAI, ...
 
-### Adjectival sets and their complements
+### Adjective sets
+
 LEX-A, A-CASE, ...
 
-### Adverbial sets and their complements
+- SET LEX-A = A - DER-A ;  
+
+- SET A-CASE = A - Attr - Adv ;  
+
+- LIST A-CC = A CC ;  
+
+- SET NOT-A = WORD - A ;   This is former NOT-ADJ
+- SET NOT-A-COMMA = WORD - A - COMMA ;  
+- SET NOT-Attr = WORD - Attr ;  
+- SET NOT-A-PCLE = WORD - A - Pcle ;  
+- SET NOT-A-CC = WORD - A-CC ;  
+
+- LIST ATTRONLY = "anarâškiel" "eeđâb" "fakkâ" "fastâ" "hirmâd" "huámášekkis" "hyperkorrekt" "korrekt" "läättinkiel" "nuorttâkiel" "nuuvtkočodum" "ohtuunis" "olmâ" "oovdiš" "oovtâkiel" "orjâlâškiel" "pajekiel" "prelimináár" "puigâ" "ruotâkiel" "ruoŧâkiel" "sämikiel" "sierâ" "suomâkiel" "tiätu" "tommittáá" "ubâ" "váháš" "vuáđusämikiel" "vuoigâ" ;  
+
+This set was removed, for a good reason?
+- SET NOT-A-ADV = WORD - A - Adv OR ("meid") ;  
+
+- LIST CONCORD-A = "pyeri" "taggaar" (".*lâš"r) (".*sâš"r) (".*vâš"r) (".*muš"r) ;  = this is the set for adj agreeing with N.
+
+### Adverbial sets
+
 LEX-ADV, LEX-ADV-DE, ...
 
-### Sets for coordinators
+### Coordinator sets
+
 Foc, NEGFOC, ...
 
-### Sets for adverbs that have lookalikes
+### Adverbs that have lookalikes
+
 Here come some adverbs that have identical twins in other POS.
 If these are found in Adv contexts, we treat them as adverbs.
 
@@ -10239,7 +10265,7 @@ EASKKA
 
 ### Sets of elements with common syntactic behaviour
 
-### Sets for verbs
+### Verb sets
 
 V is all readings with a V tag in them, REAL-V should
 be the ones without an N tag following the V.
@@ -10300,7 +10326,7 @@ STRICT-TRANS-V is the set for verbs which don't let a GenAcc be a modifier of an
 
 - LIST JOHTIT = "čuoigâđ" "čuoiggadit" "gálašit" "gállit" "girdit" "johttát" "reissiđ" "mátkkoštit" "njoammut" "riidet" "kaksijalkaisista" "sihkkelastit" "soabbulit" "soabbut" "šloahtat" "váccašit" "vádjolit" "vájaldit" "vájuldit" "vánddardit" "väzziđ" "viehkalit" "viekkimpiergâs" "vuodjalit" "vuoijâđ" "vyeijiđ" "vuojadit" "vuojâččiđ" ; 
 
-- LIST HUMAN-ACTIVITY-V = "äštiđ" "enittiđ" "hammiđ" "herviđ" "hoittáđ" "huksiđ" "huškođ" "išediđ" "juksâđ" "juuhâđ" "jyehiđ" "jyehiđ" "kárvudâttâđ" "kästiđ" "kavkkâđ" "keččâđ" "koddeđ" "koččođ" "kuálástiđ" "kuárruđ" "kuldâliđ" "kuškâdiđ" "lahtâdiđ" "lehâstiđ" "liäibuđ" "luávdiđ" "luoddiđ" "máttááttiđ" "merkkiđ" "mittediđ" "naaijâđ" "nijtteđ" "njuoskâdiđ" "pääččiđ" "passeeđ" "piäluštiđ" "piäluštiđ" "pieijâđ" "piemmâđ" "puáldiđ" "puovtâdiđ" "putestiđ" "pyehtiđ" "registeeriđ" "sáhháđ" "salttiđ" "sárguđ" "sárguđ" "sárnuđ" "sikkođ" "suáittiđ" "suáittiđ" "terppâđ" "tevdiđ" "tiervâttiđ" "toohâđ" "tuáijuđ" "tubdâstiđ" "tuommiđ" "uástiđ" "uigâđ" "uuccâđ" "vipšâđ" "vooijâđ" "vuástáväldiđ" "vuáđudiđ" "vuoidâđ" "vuolgâttiđ" "vuorkkiđ" "vuoššâđ" "vyebdiđ" "vyeittiđ" "čäälliđ" "čäittiđ" "čuággiđ" "čuávdiđ" "čuoggiđ" "čuoppâđ" ;  
+- LIST HUMAN-ACTIVITY-V = "äštiđ" "enittiđ" "hammiđ" "herviđ" "hoittáđ" "huksiđ" "huškođ" "išediđ" "juksâđ" "juuhâđ" "jyehiđ" "jyehiđ" "kárvudâttâđ" "kästiđ" "kavkkâđ" "keččâđ" "koddeđ" "koččođ" "kuálástiđ" "kuárruđ" "kuldâliđ" "kuškâdiđ" "lahtâdiđ" "lehâstiđ" "liäibuđ" "luávdiđ" "luoddiđ" "máttááttiđ" "merkkiđ" "mittediđ" "naaijâđ" "nijtteđ" "njuoskâdiđ" "pääččiđ" "passeeđ" "piäluštiđ" "piäluštiđ" "pieijâđ" "piemmâđ" "puáldiđ" "puovtâdiđ" "putestiđ" "pyehtiđ" "registeeriđ" "sáhháđ" "salttiđ" "sárguđ" "sárguđ" "sárnuđ" "sikkođ" "suáittiđ" "suáittiđ" "terppâđ" "tevdiđ" "tiervâttiđ" "toimâđ" "toohâđ" "tuáijuđ" "tubdâstiđ" "tuommiđ" "uástiđ" "uigâđ" "uuccâđ" "vipšâđ" "vooijâđ" "vuástáväldiđ" "vuáđudiđ" "vuoidâđ" "vuolgâttiđ" "vuorkkiđ" "vuoššâđ" "vyebdiđ" "vyeittiđ" "čäälliđ" "čäittiđ" "čuággiđ" "čuávdiđ" "čuoggiđ" "čuoppâđ" ;  
 
 - LIST BODY-ACTIVITY-V = "purrâđ" "čiekčat" "čujuhit" "čuorbmat" "kuullâđ" "jhk" "jorahit" "lihkahit" "lihkastahttit" "luptiđ" "njávkkadit" "njávkkastit" "uáiniđ" "seavvit" ; 
 
@@ -10357,9 +10383,13 @@ STRICT-TRANS-V is the set for verbs which don't let a GenAcc be a modifier of an
 
 ### Adjective sets
 
+Lexical valency sets for adjectives.
+here we have adjectives according to their semantic properties
+
 - LIST DEHALAS = "táválâš" "dehálaš" "tehálâš" "mearkkašahtti" "epitáválâš" "máhđulâš" "suohtas" ; 
 
-### Other adjective sets
+Other adjective sets
+
 A-N, A-N-CASE, ...
 - LIST A-N = "buoidi" "čeppi" "headju" "heittot" "jalla" "neavri" "nuorâ" "oahpis" "oarbbis" "räähis" "riges" "váivváš" "vuoras"; 
 
@@ -10390,14 +10420,14 @@ part of the noun phrase of that noun (i.e., "scan to the next NP head")
 
 ### Noun sets
 
-Nominal sets defined according to their morphophonological properties
+Nominal sets defined morphophonologically
 Sets for lexeme homonymy (most of them are moved to where the actual rules are.)
 
 The words in the set **N-PO** can be both N and Po, the set takes that into account.
 
 Nouns that have dangerous homonyms
 
-### Nominal sets defined according to their semantical properties
+### Nominal sets defined semantically
 
 - Spatial noun sets. These nouns behave like postpositions
 
@@ -10453,7 +10483,7 @@ GEN-ANIMAL, PREDATOR. BIRD, ...
 
 *These were the set types.*
 
-### Grammarchecker sets
+## Grammarchecker sets
 
 name convention for error tags: ´´&errortype-errorsubtype-is-shouldbe´´
 
@@ -10463,270 +10493,13 @@ name convention for error tags: ´´&errortype-errorsubtype-is-shouldbe´´
 
  
 
-RULE SECTION
-============
+# RULE SECTION
 
 - Example marking: Wrong = #%
 - Example marking: Correct = #$
 - Example marking: Finnish = #f
 
 **Speller suggestions rule** ADD @typo - make sure the suggestions survive the cg mangling:
-
-## Verb agreement rules
-
-### Imperativ rules
-
-#### Sg 3
-
-### Singulaari
-
-#### Sg1
-
-**Agreement rule:** msyn-agr-other-sg1, *Mun puátá/puáđám*
-
-**Agreement rule:** msyn-agr-other-sg1
-
-**Agreement rule:** msyn-v-prfprc-sg1, Subject to the left
-
-**Agreement rule:** msyn-v-actio-sg1, Subject to the left
-
-#### Sg2
-
-**Agreement rule:** msyn-agr-other-sg2, Subject to the left, *Tun puátá/puáđah*
-
-#### Sg3
-
-**Agreement rule:** msyn-agr-sg1-sg3, Subject to the left, *Sun puáđam/puátá*
-
-**Agreement rule:** msyn-agr-sg2-sg3, Subject to the left, *Sun puáđah/puátá*
-
-**Agreement rule:** msyn-agr-imprt-sg3, Subject to the left, *Sun puáđah/puátá*
-
-### Duaali
-
-#### Du1
-
-**Agreement rule:** msyn-agr-other-du1
-
-#### Du2
-
-**Agreement rule:** msyn-agr-other-du2 *Tuoi koolgâi/kolgáid tääl algâttiđ monnii sämmilâškampanja.*
-
-#### Du3
-
-**Agreement rule:** msyn-agr-sg3-du3
-
-**Agreement rule:** msyn-agr-sg3-du3
-
-### Pluraali
-
-#### Pl1
-
-**Agreement rule:** msyn-agr-other-pl1, *Mij puátá/puáttip.*
-
-#### Pl2
-
-**Agreement rule:** syn-agr-other-pl2, *Tij puátá/puátivetteđ.*
-
-#### Pl3
-
-Sg3/Pl3 errors: Suomâkielâ sárnumkielâ epikongruens maaŋgâlovo 3. persovnist
-
-**Agreement rule:** Subject to the right, msyn-agr-sg3-pl3
-
-**Agreement rule:** msyn-agr-sg3-du3
-
-**Agreement rule:** msyn-agr-sg3-pl3, Subject to the left, *80 puátá/puáđah*
-
-**Agreement rule:** msyn-agr-sg3-pl3, Subject to the left, *80 puátá/puáđah*
-
-**Agreement rule:** msyn-agr-other-pl3, Subject to the left, *Toh puátá/puátih.*
-
-**Agreement rule:** msyn-agr-other-pl3
-
-**Agreement rule:** msyn-agr-other-pl3
-
-## Complement of negative verb
-
-**Agreement rule:** &msyn-negcompl-sg3-conneg
-
-## Suomen nessesiivirakenne
-
-**Agreement rule:** msyn-ness-acc-nom
-
-**Agreement rule:** msyn-ness-acc-nom *Muu ličij/liččim kolgâm porgâđ taam tállán.* (???)
-
-**Agreement rule:** msyn-ness-acc-nom *Ij-uv/Jieh-uv tuu/tun kolgâm vyelgiđ suáluikuávlun Jennyin?*
-
-**Agreement rule:** msyn-ness-acc-nom
-
-**Agreement rule:** msyn-ness-acc-nom *Suu/Sun koolgâi forgâ porgâđ miärádâs.*
-
-### Inf should be Actio Essive
-
-**Agreement rule:** msyn-orrood-inf-actioess *Mun orom leđe/lemin ennuv velgus anarâškielân.*
-
-### Existential sentences
-
-Here, the verb should be plural. The interference comes from Finnish e-sentences, where the verb is in the ingular.
-
-**Agreement rule:** msyn-extv-sg3-pl3 *Must lii/láá uđđâ autoh.*
-
-**Agreement rule:** msyn-extv-sg3-pl3, *Iäruh omâstemráhtusist: mieđetteijee já kieldee häämi.*
-
-**Agreement rule:** msyn-extv-pl3-sg3 *Must lii/láá uđđâ autoh.*
-**Agreement rule:** msyn-extv-pl3-sg3 *Liihân/Lááhân must uđđâ autoh.*
-**Agreement rule:** msyn-extv-pl3-sg3 *Liihân/Lááhân must uđđâ autoh.*
-**Agreement rule:** msyn-extv-pl3-sg3 *Liihân/Lááhân must uđđâ autoh.*
-**Agreement rule:** msyn-extv-pl3-sg3 *Lii/Láá must uđđâ autoh.*
-
-**Agreement rule:** msyn-extv-numeral-sg3-pl3
-
-**Agreement rule:** msyn-extneg-sg3-pl3
-
-**Agreement rule:** msyn-extneg-sg3-pl3
-
-### Existential sentences and habitives
-
-**Agreement rule:** msyn-extsubj-ill-nom
-
-**Agreement rule:** msyn-extsubj-ill-nom *Šiljoost láá poccuuh/poccuid.*
-
-**Agreement rule:** msyn-extsubj-acc-nom
-
-**Agreement rule:** msyn-extv-sg3-pl3
-
-**Agreement rule:** msyn-extsubj-ill-nom
-
-### Postpositions
-
-**Agreement rule:** msyn-po-nom-gen
-
-**Agreement rule:** msyn-po-nom-gen
-
-**Agreement rule:** msyn-po-placc-plgen *Vuoigâdvuotä nubástittiđ kielâ jieijâs táárbuid/táárbui mield.*
-
-### Predicative
-
-**Agreement rule:** msyn-pred-acc-nom *Taah láá čielgâ aašijd/ááših.*
-
-**Agreement rule:** msyn-pred-acc-nom *Lii-uv toos synonymáid/synonym*
-
-**Agreement rule:** msyn-pred-ill-nom *Lii-uv toos synonymijd/synonym*
-
-#### Agreement error with predicative
-
-**Agreement rule:** msyn-predagr-pl3-sg3 *Iä/Ij lah toorjâ.*
-
-**Agreement rule:** msyn-adj-attr-pred
-
-**Agreement rule:** msyn-adj-attr-pred *Mun lam fiskis/fiskâd.*
-
-### Confusion rules
-
-**Agreement rule:** msyn-v-sg1-prfprc *Sun lii huunjâm/huunnjâm.*
-
-### Subjects
-
-### Plural objects
-
-### Plural 2020
-
-**Agreement rule:** msyn-plobj-nom-acc
-
-**Agreement rule:** msyn-plobj-nom-acc
-
-### ConNeg Better: Target whatever is there and should have been a conneg. !!!
-
-**Agreement rule:** msyn-v-sg3-conneg *Sun ij lah/lii.*
-
-**Agreement rule:** msyn-v-du3-conneg *Noomah iä vuáđuduv/vuáđuduu.*
-
-**Agreement rule:** msyn-v-sg3-conneg *Sun ij puávtáččij/puávtáččii vyelgiđ.*
-
-## Participle as ConNeg in past tense
-
-### Negative gives participle msyn-v-sg1-prfprc
-
-### Lii Adj Sg Nom + object
-
-### Singular objects
-
-#### Plain object of TV in Nom shall be Acc
-
-**Agreement rule:** msyn-obj-sgnom-sgacc *Mun juuvâm ain mielkki/mielhi.*
-
-**Agreement rule:** msyn-obj-sgnom-sgacc *Mun lam ain juunâm mielkki/mielhi.*
-
-**Agreement rule:** msyn-obj-sgnom-sgacc)
-
-### Plural objects
-
-Finnish plural objects are in the nominative, in Inari Saami they are in the accusative.
-
-**Agreement rule:** msyn-obj-plnom-placc
-
-**Agreement rule:** msyn-obj-plnom-placc
-
-**Agreement rule:** msyn-obj-plnom-placc
-
-**Agreement rule:** msyn-obj-plnom-placc
-
-**Agreement rule:** msyn-obj-plnom-placc
-
-**Agreement rule:** msyn-plobj-nom-acc *Nubeh tobdeh kuobbâreh/kuobbârijd ivneest.*
-
-**Agreement rule:** msyn-obj-plnom-placc (6 rules) *Lam valjim taah säänih/saanijd.*
-
-**Agreement rule:**  msyn-top-nom-acc
-
-**Agreement rule:** msyn-top-nom-acc
-
-### Acc shall be Ill
-
-**Agreement rule:** msyn-obj-acc-ill
-
-**Agreement rule:** msyn-obj-acc-ill *Ideologia kuáská kielâid/kieláid.*
-
-**Agreement rule:** msyn-obj-acc-ill *Ideologia kuáská kielâid/kieláid.*
-
-### Acc shall be Nom
-
-**Agreement rule:** syn-top-placc-plnom *Anarâškielâlijd/Anarâškielâliih noomâid kiävttoo/kiävttojeh uccáá.*
-
-**Agreement rule:** msyn-top-placc-plnom *tiäđuid/tiäđuh ij kavnuu.*
-
-### Acc shall be Ill
-
-**Agreement rule:** msyn-obj-acc-ill
-
-**Agreement rule:** msyn-obj-acc-ill
-
-**Agreement rule:** msyn-obj-acc-ill
-
-### Imperative errors
-
-Suomâkielâ imperatiiv mieđetteijee häämist, mast objekt sajehäämmin lii maaŋgâlovo nominatiiv mut sämikielâst akkusatiiv:
-
-**Agreement rule:** msyn-imp-nom-acc
-
-**Agreement rule:** msyn-imp-nom-acc
-
-Outcommented...
-
-#### Accusative subjects in passive
-
-b) Suomâkielâ partitiiv passiivráhtusijn; sämikielâst passiiv ohtâvuođâst lii nominatiiv já verbâ maaŋgâlovvoost.
-
-**Agreement rule:** msyn-pass-accsubj-nomsubj
-
-**Agreement rule:** msyn-pass-accsubj-nomsubj *Sämikielâlijd nomâttâsâid iä jur kevttuu.*
-
-**Agreement rule:** msyn-pass-accsubj-nomsubj: *Sämikielâlijd/Sämikielâliih nomâttâsâid kiävttojeh uccáá.*
-
-**Agreement rule:** msyn-pass-accsubj-nomsubj *Tävirijd/Tävireh láppojii ääitist.*
-
-**Agreement rule:** msyn-pass-accsubj-nomsubj: *Páárnán iä adeluu talkkâsijd/talkkâseh tipšopeeivi ääigi.*
 
 ## Noun phrase internal phenomena
 
@@ -10756,7 +10529,9 @@ N + Ill
 
 **Agreement rule:** msyn-ncompl-placc-plill
 
-### Noun phrase agreement NP
+### Double possessive rules
+
+### Internal noun phrase number and case agreement 
 
 ### Det + N agreement
 
@@ -10780,7 +10555,11 @@ mii + nominative should be mii + acc
 
 **Agreement rule:** msyn-quant-nom-gen (A.Gen + N.Nom) # add Ord
 
+### Relative pronoun in N + Rel
+
 ### Quantor phrases
+
+#### Numeral phrases
 
 **Agreement rule:** msyn-num-par-gen: Must láá kyehti kyellid/kyele
 
@@ -10788,21 +10567,291 @@ mii + nominative should be mii + acc
 
 **Agreement rule:** msyn-num-acc-par: 8 kaandâ/kandâd
 
-### Quantor adverbs
+#### Quantor adverbs
 
 msyn-quant-gen-nom
 
-## Numeral phrases
-Commented out, Comment in to test the 2-6 and 7+ sets...
+## Verb agreement rules
 
-msyn-num-par-gen
-The rule is: 2-6 + gensg, 7- + par
+### Indicative person agreement
+
+#### Sg1
+
+**Agreement rule:** msyn-agr-other-sg1, *Mun puátá/puáđám*
+
+**Agreement rule:** msyn-agr-other-sg1
+
+**Agreement rule:** msyn-v-prfprc-sg1, Subject to the left
+
+**Agreement rule:** msyn-v-actio-sg1, Subject to the left
+
+#### Sg2
+
+**Agreement rule:** msyn-agr-other-sg2, Subject to the left, *Tun puátá/puáđah*
+
+#### Sg3
+
+**Agreement rule:** msyn-agr-sg1-sg3, Subject to the left, *Sun puáđam/puátá*
+
+**Agreement rule:** msyn-agr-sg2-sg3, Subject to the left, *Sun puáđah/puátá*
+
+**Agreement rule:** msyn-agr-imprt-sg3, Subject to the left, *Sun puáđah/puátá*
+
+#### Du1
+
+**Agreement rule:** msyn-agr-other-du1
+
+#### Du2
+
+**Agreement rule:** msyn-agr-other-du2 *Tuoi koolgâi/kolgáid tääl algâttiđ monnii sämmilâškampanja.*
+
+#### Du3
+
+**Agreement rule:** msyn-agr-sg3-du3
+
+**Agreement rule:** msyn-agr-sg3-du3
+
+#### Pl1
+
+**Agreement rule:** msyn-agr-other-pl1, *Mij puátá/puáttip.*
+
+#### Pl2
+
+**Agreement rule:** syn-agr-other-pl2, *Tij puátá/puátivetteđ.*
+
+#### Pl3
+
+Sg3/Pl3 errors: Suomâkielâ sárnumkielâ epikongruens maaŋgâlovo 3. persovnist
+
+**Agreement rule:** Subject to the right, msyn-agr-sg3-pl3
+
+**Agreement rule:** msyn-agr-sg3-du3
+
+**Agreement rule:** msyn-agr-sg3-pl3, Subject to the left, *80 puátá/puáđah*
+
+**Agreement rule:** msyn-agr-sg3-pl3, Subject to the left, *80 puátá/puáđah*
+
+**Agreement rule:** msyn-agr-other-pl3, Subject to the left, *Toh puátá/puátih.*
+
+**Agreement rule:** msyn-agr-other-pl3
+
+**Agreement rule:** msyn-agr-other-pl3
+
+### Imperativ rules
+
+### Infinite verbforms
+
+#### Inf should be Actio Essive
+
+**Agreement rule:** msyn-orrood-inf-actioess *Mun orom leđe/lemin ennuv velgus anarâškielân.*
+
+#### ConNeg in present tense
+
+**Agreement rule:** &msyn-negcompl-sg3-conneg
+
+**Agreement rule:** msyn-v-sg3-conneg *Sun ij lah/lii.*
+
+**Agreement rule:** msyn-v-du3-conneg *Noomah iä vuáđuduv/vuáđuduu.*
+
+**Agreement rule:** msyn-v-sg3-conneg *Sun ij puávtáččij/puávtáččii vyelgiđ.*
+
+#### ConNeg in past tense
+
+**Agreement rule**  Negative gives participle msyn-v-sg1-prfprc
+
+#### Sg1 should be Participle
+
+**Agreement rule:** msyn-v-sg1-prfprc *Sun lii huunjâm/huunnjâm.*
+
+## Existential sentences
+
+### Verb should be plural. 
+
+The interference comes from Finnish e-sentences, where the verb is in the singular.
+
+**Agreement rule:** msyn-extv-sg3-pl3 *Must lii/láá uđđâ autoh.*
+
+**Agreement rule:** msyn-extv-sg3-pl3, *Iäruh omâstemráhtusist: mieđetteijee já kieldee häämi.*
+
+**Agreement rule:** msyn-extv-pl3-sg3 *Must lii/láá uđđâ autoh.*
+**Agreement rule:** msyn-extv-pl3-sg3 *Liihân/Lááhân must uđđâ autoh.*
+**Agreement rule:** msyn-extv-pl3-sg3 *Liihân/Lááhân must uđđâ autoh.*
+**Agreement rule:** msyn-extv-pl3-sg3 *Liihân/Lááhân must uđđâ autoh.*
+**Agreement rule:** msyn-extv-pl3-sg3 *Lii/Láá must uđđâ autoh.*
+
+**Agreement rule:** msyn-extv-numeral-sg3-pl3
+
+**Agreement rule:** msyn-extneg-sg3-pl3
+
+**Agreement rule:** msyn-extneg-sg3-pl3
+
+### Existential sentences and habitives
+
+**Agreement rule:** msyn-extsubj-ill-nom
+
+**Agreement rule:** msyn-extsubj-ill-nom *Šiljoost láá poccuuh/poccuid.*
+
+**Agreement rule:** msyn-extsubj-acc-nom
+
+**Agreement rule:** msyn-extv-sg3-pl3
+
+**Agreement rule:** msyn-extsubj-ill-nom
+
+## Subjects
+
+### Subjects gen > nom
+
+### Suomen nessesiivirakenne acc > nom
+
+**Agreement rule:** msyn-ness-acc-nom
+
+**Agreement rule:** msyn-ness-acc-nom *Muu ličij/liččim kolgâm porgâđ taam tállán.* (???)
+
+**Agreement rule:** msyn-ness-acc-nom *Ij-uv/Jieh-uv tuu/tun kolgâm vyelgiđ suáluikuávlun Jennyin?*
+
+**Agreement rule:** msyn-ness-acc-nom
+
+**Agreement rule:** msyn-ness-acc-nom *Suu/Sun koolgâi forgâ porgâđ miärádâs.*
+
+**Agreement rule:** msyn-pass-accsubj-nomsubj: *Sämikielâlijd/Sämikielâliih nomâttâsâid kiävttojeh uccáá.*
+
+**Agreement rule:** msyn-pass-accsubj-nomsubj *Tävirijd/Tävireh láppojii ääitist.*
+
+**Agreement rule:** msyn-pass-accsubj-nomsubj: *Páárnán iä adeluu talkkâsijd/talkkâseh tipšopeeivi ääigi.*
+
+### Subjects in passive: acc > nom
+
+b) Suomâkielâ partitiiv passiivráhtusijn; sämikielâst passiiv ohtâvuođâst lii nominatiiv já verbâ maaŋgâlovvoost.
+
+**Agreement rule:** msyn-pass-accsubj-nomsubj
+
+**Agreement rule:** msyn-pass-accsubj-nomsubj *Sämikielâlijd nomâttâsâid iä jur kevttuu.*
+
+**Agreement rule:** syn-top-placc-plnom *Anarâškielâlijd/Anarâškielâliih noomâid kiävttoo/kiävttojeh uccáá.*
+
+**Agreement rule:** msyn-top-placc-plnom *tiäđuid/tiäđuh ij kavnuu.*
+
+## Objects
+
+### Singular objects
+
+#### Singular objects in ordinary position
+
+Hmm, no rules for this, it seems.
+
+#### Objects in LEDE + OBJ + Th-ADJ + TV constructions
+
+** Object rule ** Object in unexpected post-copula position: *Onne lii kandâ/kaandâ älkkee uáiniđ*
+
+#### Topicalised objects
+
+**Agreement rule:**  msyn-top-nom-acc
+
+**Agreement rule:** msyn-top-nom-acc
+
+### Plural objects
+
+These are often put in nominative, due to Finnish plural objects.
+
+**Agreement rule:** msyn-plobj-nom-acc
+
+**Agreement rule:** msyn-plobj-nom-acc
+
+**Agreement rule:** msyn-obj-sgnom-sgacc *Mun juuvâm ain mielkki/mielhi.*
+
+**Agreement rule:** msyn-obj-sgnom-sgacc *Mun lam ain juunâm mielkki/mielhi.*
+
+**Agreement rule:** msyn-obj-sgnom-sgacc)
+
+**Agreement rule:** msyn-obj-plnom-placc
+
+**Agreement rule:** msyn-obj-plnom-placc
+
+**Agreement rule:** msyn-obj-plnom-placc
+
+**Agreement rule:** msyn-obj-plnom-placc
+
+**Agreement rule:** msyn-obj-plnom-placc
+
+**Agreement rule:** msyn-plobj-nom-acc *Nubeh tobdeh kuobbâreh/kuobbârijd ivneest.*
+
+**Agreement rule:** msyn-obj-plnom-placc (6 rules) *Lam valjim taah säänih/saanijd.*
+
+### Imperative objects
+
+Nom should be acc in imperative
+
+Suomâkielâ imperatiiv mieđetteijee häämist, mast objekt sajehäämmin lii maaŋgâlovo nominatiiv mut sämikielâst akkusatiiv:
+
+**Agreement rule:** msyn-imp-nom-acc
+
+**Agreement rule:** msyn-imp-nom-acc
+
+Outcommented...
+
+## Predicative
+
+### Case errors Acc > Nom in predicative
+
+**Agreement rule:** msyn-pred-acc-nom *Taah láá čielgâ aašijd/ááših.*
+
+**Agreement rule:** msyn-pred-acc-nom *Lii-uv toos synonymáid/synonym*
+
+**Agreement rule:** msyn-pred-acc-nom as previous but -2 leđe
+
+**Agreement rule:** msyn-pred-acc-nom as previous but -3 leđe
+
+**Agreement rule:** msyn-pred-acc-nom complements of leđe should be Nom. As previous but -4 leđe
+
+**Agreement rule:** msyn-pred-ill-nom *Lii-uv toos synonymijd/synonym*
+
+### Agreement error with predicative
+
+**Agreement rule:** msyn-predagr-pl3-sg3 *Iä/Ij lah toorjâ.*
+
+**Agreement rule:** msyn-adj-pred-attr Plural adjectives should be Attr in front of N.
+
+**Agreement rule:** msyn-adj-attr-other
+
+**Agreement rule:** msyn-adj-attr-pred *Tot lii hirmâd*
+
+**Agreement rule:** msyn-adj-attr-pred *Mun lam fiskis/fiskâd.*
 
 ## Adverbial rules
 
-## Valency rules
+### Adverbial case errors
 
-## Double possessive rules
+#### Acc > Ill
+
+**Agreement rule:** msyn-obj-acc-ill
+
+**Agreement rule:** msyn-obj-acc-ill *Ideologia kuáská kielâid/kieláid.*
+
+**Agreement rule:** msyn-obj-acc-ill *Ideologia kuáská kielâid/kieláid.*
+
+**Agreement rule:** msyn-obj-acc-ill
+
+**Agreement rule:** msyn-obj-acc-ill
+
+**Agreement rule:** msyn-obj-acc-ill
+
+#### PlLoc > SgCom
+
+#### PlLoc > SgIll
+
+#### PlGen > SgIll
+
+#### Ess > SgIll
+
+### Postposition internal case errors
+
+**Agreement rule:** msyn-po-nom-gen
+
+**Agreement rule:** msyn-po-nom-gen
+
+**Agreement rule:** msyn-po-placc-plgen *Vuoigâdvuotä nubástittiđ kielâ jieijâs táárbuid/táárbui mield.*
+
+### Valency errors
 
 ## Lexical rules
 
@@ -10810,7 +10859,7 @@ The rule is: 2-6 + gensg, 7- + par
 
 **Realword error rule:** real-pele-peeli
 
-## Syntactical rules
+## Word order rules
 
 The grammarchecker file ends here.
 
