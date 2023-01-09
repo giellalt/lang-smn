@@ -1324,6 +1324,24 @@ The rules are no documented yet
 
 ## Num as subject, tricky cases - the rule should be here because of the verbdisambiguation
 
+### Gen modifiers inside NP 
+
+* **GenNP1** Selects Gen for Pron Pers (modifier): if NP-BOUNDARY OR Acc (but not if the finite verb is TV) to the left and N to right 
+
+* **GenNP2** Selects Gen for N (modifier): if CC "já" immediately to your left and accusative to your right *ja sámi jurddašanvuogi*
+
+* **GenNP3** Selects Gen (modifier): if first one to right is Nom or Loc *Norgga oaivegávpogis*
+
+* **GenNP4** (modifier) selects Gen -1 BOS or COMMA, 1 Nom *nissoniid bargu*
+
+* **GenNPCo** (modifier) Selects Pron Pers Gen if Nom to the left of ja *Mun ja mu ustibat*
+
+* **GenRefl** (modifier) selects Gen in front of a noun in accusative or nominative case *iežaset oiviliid*
+
+* **Gen Not Acc**
+
+* **AccAfterCC** Select accusative: if genitiv to the left, and CC "já" to the left of genitive *eamiálbmot- ja globaliserenprošeavtta koordináhtor*
+
 ## ACCUSATIVE-ILLATIVE DISAMBIGUATION
 
 ## ACCUSATIVE-GENITIVE DISAMBIGUATION
@@ -1526,24 +1544,6 @@ and the verb found to the left (SV-boundary) is some kind of verbalactivityverb 
 * **AccInf** Selects Acc if the verb to the left is TV + Inf (you are the obj of the Inf). Differs from the other rules by not beeing restricted by an Acc to the right *hállat eatnigiela*
 
 * **AccCOP** Selects Acc if copulas to the left and nominative to the left of COP *gápmagat leat áhči*
-
-### Gen modifiers inside NP 
-
-* **GenNP1** Selects Gen for Pron Pers (modifier): if NP-BOUNDARY OR Acc (but not if the finite verb is TV) to the left and N to right 
-
-* **GenNP2** Selects Gen for N (modifier): if CC "já" immediately to your left and accusative to your right *ja sámi jurddašanvuogi*
-
-* **GenNP3** Selects Gen (modifier): if first one to right is Nom or Loc *Norgga oaivegávpogis*
-
-* **GenNP4** (modifier) selects Gen -1 BOS or COMMA, 1 Nom *nissoniid bargu*
-
-* **GenNPCo** (modifier) Selects Pron Pers Gen if Nom to the left of ja *Mun ja mu ustibat*
-
-* **GenRefl** (modifier) selects Gen in front of a noun in accusative or nominative case *iežaset oiviliid*
-
-* **Gen Not Acc**
-
-* **AccAfterCC** Select accusative: if genitiv to the left, and CC "já" to the left of genitive *eamiálbmot- ja globaliserenprošeavtta koordináhtor*
 
 ### Accusative in coordination
 
@@ -2032,7 +2032,7 @@ Genitive not Nominative
 
 ## Variant lemmas
 
-* Remove lemma2 if lemma 1
+* Remove lemma2 if lemma 1  
 
 * **cleanSemClass** cleans up if a word has more semclasses. This is just a start.
 
