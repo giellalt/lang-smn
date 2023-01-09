@@ -720,7 +720,7 @@ N + Ill
 
 ### Double possessive rules
 
-### Internal noun phrase number and case agreement 
+### Number and case agreement 
 
 ### Det + N agreement
 
@@ -874,7 +874,7 @@ The interference comes from Finnish e-sentences, where the verb is in the singul
 
 **Agreement rule:** msyn-extneg-sg3-pl3
 
-### Existential sentences and habitives
+### E-sentences and habitives
 
 **Agreement rule:** msyn-extsubj-ill-nom
 
@@ -890,7 +890,7 @@ The interference comes from Finnish e-sentences, where the verb is in the singul
 
 ### Subjects gen > nom
 
-### Suomen nessesiivirakenne acc > nom
+### Finnish nessesiivi: acc > nom
 
 **Agreement rule:** msyn-ness-acc-nom
 
@@ -924,11 +924,11 @@ b) Suomâkielâ partitiiv passiivráhtusijn; sämikielâst passiiv ohtâvuođâs
 
 ### Singular objects
 
-#### Singular objects in ordinary position
+#### Ordinary singular objects
 
 Hmm, no rules for this, it seems.
 
-#### Objects in LEDE + OBJ + Th-ADJ + TV constructions
+#### LEDE + OBJ + Th-ADJ + TV
 
 ** Object rule ** Object in unexpected post-copula position: *Onne lii kandâ/kaandâ älkkee uáiniđ*
 
@@ -980,7 +980,7 @@ Outcommented...
 
 ## Predicative
 
-### Case errors Acc > Nom in predicative
+### Acc > Nom in predicative
 
 **Agreement rule:** msyn-pred-acc-nom *Taah láá čielgâ aašijd/ááših.*
 
@@ -1050,7 +1050,13 @@ Outcommented...
 
 ## Word order rules
 
+**Syntax rule:** syn-OVS-OSV
+
 The grammarchecker file ends here.
+
+## AFTER-SECTIONS
+
+SUBSTITUTE MWE (*)
 
 * * *
 <small>This (part of) documentation was generated from [tools/grammarcheckers/grammarchecker.cg3](https://github.com/giellalt/lang-smn/blob/main/tools/grammarcheckers/grammarchecker.cg3)</small>
