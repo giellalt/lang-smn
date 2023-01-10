@@ -1255,11 +1255,28 @@ LIST NUMMAR = (".*nummar"r) "njuolggotlf" "nr" "vuorkááššenr" ;
 LIST KLASS = "äšši" "bálkáceahkki" "čuágástuh" "s" "sijđo" "§" "§§" "paragráfa" "uási" "kap" "káppálâh";
 
 LIST OHTA = "ohtâ" "1"; #!! OKTA
+LIST MANGA = "maŋgâ" "maŋgâlov" ;
+LIST MUADDI = "muáddi" ;
+LIST KALLE = "kalle" ;
 
 SET NUM = Num - OHTA ;
 
-LIST TWO-TO-SIX = "kyehti" "kulmâ" "nelji" "vittâ" "kuttâ" "2" "3" "4" "5" "6" "err-extv-pl3" "3)" "4)" "5)" "6)" ; # ) er feil
-SET SEVEN-AND-MORE = Num - TWO-TO-SIX - OHTA ;
+LIST TWO-TO-SIX = "kyehti" "kulmâ" "nelji" "vittâ" "kuttâ"
+	"2" "3" "4" "5" "6"
+	("[2-6],[0-9]+"r)
+	("[1-5]\-[2-6]"r)
+	"2-3" "2-4" "3-4" "3-5" "4-5" "4-6" "5-6" ;
+
+SET NUM-WORD = ("[a-záäâčđŋšž][a-záäâčđŋšž].*"r Num) ;
+
+SET SEVEN-AND-MORE-WORD = NUM-WORD - TWO-TO-SIX - OHTA - MANGA - MUADDI - KALLE ; # - Sem/ID should fix Sem/ID, now 8 is Sem/ID
+
+LIST SEVEN-AND-MORE-ARABIC = "7" "8" "9"
+	("[1-9][0-9]"r) ("[1-9][0-9][0-9]"r)
+	"5-7" "6-7" "7-8" "7-9" "8-9" "8-10" ;
+# 7+ should include 8,74 but not 3,74.
+
+SET SEVEN-AND-MORE = SEVEN-AND-MORE-WORD OR SEVEN-AND-MORE-ARABIC ;
 
 # LIST PEOPLE-NUM = "guovttis" "golmmas" "njealjis" "viđas" "guđas" "čiežas" "gávccis" "ovccis" "logis" ;
 
@@ -1904,8 +1921,11 @@ REMOVE V IF (0 N)(-1 (Pron Attr))(*1 VFIN BARRIER GRAMCHK-S-BOUNDARY);
 
 #SELECT Attr OR Gen IF (1 N)(0 <spelled>);	
 
-	
+	# Partitive
+	# ---------
+
+REMOVE:NoPar Par IF (NOT *-1 SEVEN-AND-MORE)(NOT 1 ("vuástá"));
 	
 	# oamastangehčosat
 
-#REMOVE:SpellPx Px - Sem/Hum - Sem/Ani - Sem/Body IF (0 N - Px);	
+REMOVE:SpellPx Px - Sem/Hum - Sem/Ani - Sem/Body IF (0 N - Px);	
