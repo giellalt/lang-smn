@@ -1,3 +1,4 @@
+
 ! Divvun & Giellatekno - open source grammars for Sámi and other languages
 ! Copyright © 2000-2010 The University of Tromsø & the Norwegian Sámi Parliament
 ! http://giellatekno.uit.no & http://divvun.no
@@ -19,7 +20,7 @@
 
 LEXICON G  !!≈ * **@CODE@** for ijgo, jiemge, but not *kielâgo
 +Foc/ge:%>#g6e  ENDLEX ;
-+Foc/go:%>#g6o   ENDLEX ;
++Foc/go+Use/SpellNoSugg:%>#g6o   ENDLEX ; ! parempi: "ij ko"
 KG ; 
 
 LEXICON K !!≈ *  **@CODE@** for kielâgin, but not *ijgo, *jiemge
@@ -28,15 +29,15 @@ KG ;
 
 LEXICON KG !!≈ * **@CODE@** all clitics except go, ge ... and except gin
 :%> ENDLEX ; ! clitic-less forms ! %>  because .#. doesn't function as it should in twolc-rules
-+Qst+Use/NG:%>#uv KG2 ;
++Qst+Err/Orth:%>#uv KG2 ;
 +Qst:%>#%-uv KG2 ;
 +Foc/uv:%>#%-uv KG2 ;
 +Foc/uv+Foc/gis:%>#%-uvks KG2 ;
 +Foc/ba:%>#b6a   ENDLEX ;
 +Foc/ba+Err/Orth:%>#b6â   ENDLEX ;
-+Foc/baa:%>#b6á  ENDLEX ;
-+Foc/baan:%>#b6án  ENDLEX ;
-+Foc/ban:%>#b6an  ENDLEX ;
+!+Foc/baa:%>#b6á  ENDLEX ; 
+!+Foc/baan:%>#b6án  ENDLEX ;
+!+Foc/ban:%>#b6an  ENDLEX ;
 +Foc/gas:%>#g6âs  ENDLEX ;
 +Foc/ges:%>#g6es  ENDLEX ;
 +Foc/gis:%>#g6is  ENDLEX ;
