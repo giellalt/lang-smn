@@ -619,6 +619,8 @@ Conjunctions
 
 * **ollasitAdv** selects
 
+**tuárviAdv** SELECT
+
 * **Adverbs and not Nouns**
 
 - uáli

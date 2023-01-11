@@ -690,6 +690,8 @@ name convention for error tags: ´´&errortype-errorsubtype-is-shouldbe´´
 
 **Speller suggestions rule** ADD @typo - make sure the suggestions survive the cg mangling:
 
+## Singleton words
+
 ## Noun phrase internal phenomena
 
 ### Demonstratives

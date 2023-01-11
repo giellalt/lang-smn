@@ -3303,6 +3303,8 @@ Conjunctions
 
 * **ollasitAdv** selects
 
+**tuárviAdv** SELECT
+
 * **Adverbs and not Nouns**
 
 - uáli
@@ -10501,6 +10503,8 @@ name convention for error tags: ´´&errortype-errorsubtype-is-shouldbe´´
 
 **Speller suggestions rule** ADD @typo - make sure the suggestions survive the cg mangling:
 
+## Singleton words
+
 ## Noun phrase internal phenomena
 
 ### Demonstratives
@@ -11490,6 +11494,8 @@ Conjunctions
 * **oktiiAdv** select
 
 * **ollasitAdv** selects
+
+**tuárviAdv** SELECT
 
 * **Adverbs and not Nouns**
 
