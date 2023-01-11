@@ -2082,6 +2082,7 @@ LIST &msyn-v-du3-conneg = &msyn-v-du3-conneg ;
 LIST &msyn-v-prfprc-sg1 = &msyn-v-prfprc-sg1 ;
 LIST &msyn-v-sg1-prfprc = &msyn-v-sg1-prfprc ;
 LIST &msyn-v-sg3-conneg = &msyn-v-sg3-conneg ;
+LIST &real-love-lope = &real-love-lope ;
 LIST &real-pele-peeli = &real-pele-peeli ;
 LIST &real-pisso-pissood = &real-pisso-pissood ;
 LIST &real-tuáivu-tuoivâ = &real-tuáivu-tuoivâ ; # toivo - toive, toive (håp) e-cealkkagis.
@@ -2114,7 +2115,11 @@ SECTION
 #!! **Speller suggestions rule** ADD @typo - make sure the suggestions survive the cg mangling:
 ADD (&typo &SUGGESTWF) (<spelled>);
 
+#!! ## Singleton words
 
+ADD:real-love-lope (&real-love-lope) TARGET ("love") IF
+	(*1 Inf BARRIER NOT-ADV);
+COPY:real-love-lope ("lope" N Sg Nom &SUGGEST) EXCEPT ("love" Num Sg Nom &real-love-lope) TARGET (Num &real-love-lope); 
 
 #!! ## Noun phrase internal phenomena
 
@@ -2367,11 +2372,14 @@ COPY:msyn-num-gen-par (Par &SUGGEST) EXCEPT (Sg Gen &msyn-num-gen-par) TARGET (N
 #!!  **Agreement rule:** msyn-num-acc-par: 8 kaandâ/kandâd
 ADD:xmsyn-num-acc-par (&msyn-num-acc-par) TARGET N IF
 (-1 Num OR A + Arab LINK 0 SEVEN-AND-MORE)
-(0 N + Sg + Acc)
+(0 N + Sg + Acc OR N + Sg + Nom OR N + Sg + Gen)
 (NOT 0 ABBR OR Par)(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Rom)
 (NOT 0 Sem/Time OR Sem/Time-clock)
 (NOT 1 Po OR N OR A) ;
 COPY:msyn-num-acc-par (Par &SUGGEST) EXCEPT (Sg Acc &msyn-num-acc-par) TARGET (N &msyn-num-acc-par) ;
+COPY:msyn-num-acc-par (Par &SUGGEST) EXCEPT (Sg Nom &msyn-num-acc-par) TARGET (N &msyn-num-acc-par) ;
+COPY:msyn-num-acc-par (Par &SUGGEST) EXCEPT (Sg Gen &msyn-num-acc-par) TARGET (N &msyn-num-acc-par) ;
+
 #% Toh láá 8 kaandâ.
 #$ Toh láá 8 kandâd.
 #% Must láá čiččâm {kyele}.
@@ -2732,11 +2740,12 @@ COPY:msyn-imp-pl3-sg3 (Sg3 &SUGGEST) EXCEPT (Pl3 &msyn-imp-pl3-sg3) TARGET (V Im
 #!! #### Inf should be Actio Essive
 
 #!!  **Agreement rule:** msyn-orrood-inf-actioess *Mun orom leđe/lemin ennuv velgus anarâškielân.*
-ADD:xmsyn-orrood-inf-actioess (&msyn-orrood-inf-actioess) TARGET (V Inf) IF (-1 ("orroođ") + Ind);
+ADD:xmsyn-orrood-inf-actioess (&msyn-orrood-inf-actioess) TARGET (V Inf) IF 
+	(-1 ("orroođ") + Ind LINK NOT -1 ("maht"));
 COPY:msyn-orrood-inf-actioess (Actio Ess &SUGGEST) EXCEPT (Inf &msyn-orrood-inf-actioess) TARGET (V Inf &msyn-orrood-inf-actioess);
 #% Mun orom leđe ennuv velgus anarâškielân.
 #$ Mun orom lemin ennuv velgus anarâškielân.
-
+#$ Maht oro vyeijiđ Euroop čoođâ	
 
 
 
@@ -2991,7 +3000,8 @@ ADD:msyn-extv-sg3-pl3 (&msyn-extv-sg3-pl3) TARGET V IF
 	(-1 Loc)
 	(0 LEDE + Sg3)
 	(1 Num + Nom) # 
-	(NOT 1 OHTA);
+	(NOT 1 OHTA)
+	(NOT 1 ("lope") LINK *1 Inf BARRIER NOT-ADV);
 COPY:msyn-extv-sg3-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (LEDE &msyn-extv-sg3-pl3);
 
 #!!  **Agreement rule:** msyn-extsubj-ill-nom
