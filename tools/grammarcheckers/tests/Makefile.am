@@ -117,14 +117,12 @@ XFAIL_TESTS=\
 	msyn-pred-acc-nom.yaml \
 	msyn-quant-gen-nom.yaml \
 	msyn-refl-sg-pl.yaml \
-	msyn-rel-sg-pl.yaml	 \
 	msyn-top-nom-acc.yaml \
 	msyn-v-actio-sg1.yaml \
 	neg-extv-sg3-pl3.yaml \
 	neg-ncomple-ess-sgill.yaml \
 	neg-obj-acc-ill.yaml \
 	neg-obj-sgnom-sgacc.yaml \
-	neg-orrood-inf-actioess.yaml \
 	neg-po-nom-gen.yaml \
 	neg-subj-gen-nom.yaml \
 	ovdamearkkat.yaml \
