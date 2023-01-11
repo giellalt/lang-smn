@@ -2513,6 +2513,9 @@ SELECT:oktiiAdv5 Adv IF (0 ("ohtii") OR ("golbmii") OR ("vihttii") OR ("guhttii"
 SELECT:ollasitAdv1 ("tievâslâš" Adv) IF ((-1 REAL-V - INF-V) OR (*1 Loc OR Ill BARRIER NOT-A-ADV) OR (*1 NP-HEAD-GEN BARRIER NOT-A-ADV LINK 1 Po) ) ;
 	#$ ...ahte historjjálaš ovdáneapmi čielggaduvvo ollásit. 
 
+#!! **tuárviAdv** SELECT
+SELECT:tuárviAdv Adv IF (-1 V)(0 ("tuárvi"))(1 A OR N);
+
 #!! 
 #SELECT:ubaAdv Adv IF (0 ("ubâ")) 1 
 
@@ -5464,6 +5467,7 @@ SELECT:timeADVL2 TIME + Gen IF
 (NOT -1 Pron + Pers + Gen)
 (*1 FMAINV - ("golahit") BARRIER SV-BOUNDARY)
 (NEGATE 0 Nom LINK *1 FMAINV + COPULAS OR FMAINV + DURATION-V BARRIER SV-BOUNDARY)
+(NOT 0 ("tijme"))
 (NEGATE 1 MANNEL)  ;	
 	#$ Dán geasi áiggun bargat.
 	#% Eahket gollá jođánit.
