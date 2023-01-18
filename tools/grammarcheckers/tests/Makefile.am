@@ -103,7 +103,6 @@ XFAIL_TESTS=\
 	interferens_celkkuuh3.yaml \
 	interferens_celkkuuh4.yaml \
 	interferens_celkkuuh5.yaml \
-	msyn-adj-attr-pred.yaml \
 	msyn-attr-com-gen.yaml \
 	msyn-dynamic-compounds.yaml \
 	msyn-extsubj-ill-nom.yaml \
@@ -120,7 +119,6 @@ XFAIL_TESTS=\
 	msyn-top-nom-acc.yaml \
 	msyn-v-actio-sg1.yaml \
 	neg-extv-sg3-pl3.yaml \
-	neg-ncomple-ess-sgill.yaml \
 	neg-obj-acc-ill.yaml \
 	neg-obj-sgnom-sgacc.yaml \
 	neg-po-nom-gen.yaml \
