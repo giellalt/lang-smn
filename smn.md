@@ -9879,6 +9879,7 @@ RIGHT
 PPUNCT
 PUNCT
 COMMA
+EXCLMARK
 ¶
 ?
 MWE
@@ -12770,7 +12771,7 @@ for North Saami, the following rules should be revised to account for that.
 
 * **ComProp** selecst Prop Sg Com for person names. Exception for habitive constructions.
 
-* **FinalComForAni** where philosophy is that you are with someone, not on someone
+* **FinalComForAni** where philosophy is that you are with someone, not on someone # grc too general.
 
 ### HAB-ACTOR in habitive-constructions
 
