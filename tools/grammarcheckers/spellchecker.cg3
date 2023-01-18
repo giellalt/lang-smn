@@ -1896,8 +1896,8 @@ SET GRAMCHK-S-BOUNDARY = (Pron Interr) OR (Pron Rel) OR ("muhto") OR ("de" Adv) 
 
 ADD:spelled (&typo &SUGGESTWF) (<spelled>) ;
 
-ADD:Err/Orth (&typo) (Err/Orth) (NOT 0 (*) - (Err/Orth)) ;
-COPY:Err/Orth (&SUGGEST) EXCEPT (Ex/N Ex/V Ex/A Ex/IV Ex/TV Err/Orth) TARGET (Err/Orth &typo) ;
+ADD:SpellErrOrth (&typo) (Err/Orth) (NOT 0 (*) - (Err/Orth)) ;
+COPY:SpellErrOrth (&SUGGEST) EXCEPT (Ex/N Ex/V Ex/A Ex/IV Ex/TV Err/Orth) TARGET (Err/Orth &typo) ;
 
 
 	
@@ -1912,7 +1912,7 @@ SELECT:SpellCop COPULAS IF (1 Inf)(0 <spelled>);
 
 SELECT:SpellInf Inf IF (-1 <aux>)(0 V + <spelled>);
 
-REMOVE V IF (0 N)(-1 (Pron Attr))(*1 VFIN BARRIER GRAMCHK-S-BOUNDARY);	
+REMOVE:SpellNoV V IF (0 N)(-1 (Pron Attr))(*1 VFIN BARRIER GRAMCHK-S-BOUNDARY);	
 	
 	
 	# Noun phrases
@@ -1924,7 +1924,7 @@ REMOVE V IF (0 N)(-1 (Pron Attr))(*1 VFIN BARRIER GRAMCHK-S-BOUNDARY);
 	# Partitive
 	# ---------
 
-REMOVE:NoPar Par IF (NOT *-1 SEVEN-AND-MORE)(NOT 1 ("vuástá"));
+REMOVE:SpellNoPar Par IF (NOT *-1 SEVEN-AND-MORE)(NOT 1 ("vuástá"));
 	
 	# oamastangehčosat
 
