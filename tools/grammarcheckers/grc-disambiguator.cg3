@@ -5872,7 +5872,7 @@ SELECT:CoAccJA2 Acc IF (*-2 STRICT-TRANS-V BARRIER SV-BOUNDARY)(*-1 ("já") BARR
 #!! ### Intransitive verbs can sometimes be transitive
 
 #!! * **IVasTV** Selects Acc if you are GEOGRAPHICAL-PLACE, ABSTR-ROUTE or EDUCATION and somewhere in the sentence is a intransitive verb acting as a transitive verb *sii vázzet skuvlla*
-SELECT:IVasTV Acc IF ((*-1 JOHTIT + IV BARRIER SV-BOUNDARY OR Pr LINK 0 IV) OR (*1 MOVEMENT-V + IV OR JOHTIT + IV BARRIER SV-BOUNDARY LINK NOT 0 ("vyelgiđ") OR ("vyelgiđ") OR ("puáttiđ")))(0 GEOGRAPHICAL-PLACE OR ROUTE OR EDUCATION)(NEGATE 1 Po OR ROOM) ; #(NEGATE -1 CC LINK *1 VFIN) ;
+REMOVE:IVasTV Gen IF ((*-1 JOHTIT + IV BARRIER SV-BOUNDARY OR Pr LINK 0 IV) OR (*1 MOVEMENT-V + IV OR JOHTIT + IV BARRIER SV-BOUNDARY LINK NOT 0 ("vyelgiđ") OR ("vyelgiđ") OR ("puáttiđ")))(0 GEOGRAPHICAL-PLACE OR ROUTE OR EDUCATION)(NEGATE 1 Po OR ROOM) ; #(NEGATE -1 CC LINK *1 VFIN) ;
 #SELECT:IVasTV EDUCATION + Acc IF (*0 ("väzziđ") BARRIER SV-BOUNDARY)(NEGATE 1 Po OR ROOM) ;
 	#$ Čuoigat vári.
 	#$ Mun váccán vákkiid, vuvddiid ja váriid.	
@@ -6883,8 +6883,8 @@ SELECT:ComProp (Prop Sg Com) IF (0 Sem/Mal OR Sem/Fem OR Sem/Sur OR Sem/Ani)(NEG
 	#$ Moai Sisseliin leimme áidna oahpaheaddjit vuosttaš jagiid.
 
 
-#!! * **FinalComForAni** where philosophy is that you are with someone, not on someone
-REMOVE:FinalComForAni Loc IF (0 Sg + Com)(NOT *1 VFIN); # BARRIER SV-BOUNDARY);
+#!! * **FinalComForAni** where philosophy is that you are with someone, not on someone # grc too general.
+#REMOVE:FinalComForAni Loc IF (0 Sg + Com)(NOT *1 VFIN); # BARRIER SV-BOUNDARY);
 		      #$ Sunnuu enni lii siste táálust kissáin.
 
 #!! ### HAB-ACTOR in habitive-constructions
@@ -7062,12 +7062,12 @@ SELECT:NoVerbCom (Sg Com) IF (0 (Pl Loc) LINK *-1 ("mii" Interr Acc) BARRIER VFI
 
 
 
-REMOVE:KillLocPl (Pl Loc) IF (0 (Sg Com) LINK 0 TOOL OR Sem/Clth OR Sem/Body OR Sem/Money OR Sem/Sign OR Sem/Perc-emo OR Sem/Lang OR Sem/Domain - ("iäláttâs") OR VEHICLE OR Sem/Feat-phys OR Sem/State-sick OR ("lasattâs") OR ("tihttel") LINK NOT 0 ("čalme") OR ("suotna"))(NEGATE -1 (Dem Pl Loc))  ;
+REMOVE:KillLocPl (N Pl Loc) IF (0 (Sg Com) LINK 0 TOOL OR Sem/Clth OR Sem/Body OR Sem/Money OR Sem/Sign OR Sem/Perc-emo OR Sem/Lang OR Sem/Domain - ("iäláttâs") OR VEHICLE OR Sem/Feat-phys OR Sem/State-sick OR ("lasattâs") OR ("tihttel") LINK NOT 0 ("čalme") OR ("suotna"))(NEGATE -1 Dem + Pl + Loc)(NEGATE 1 N + Pl + Loc)  ;
 
 #!! Final Com/Loc rule: Remove Com.
 
 #!! * **KillComSg** This is the final Com/Loc rule, and it chooses Pl Loc. Remove this for grammar checker.
-REMOVE:KillComSg (Sg Com) IF (0 (Pl Loc)) ;
+#REMOVE:KillComSg (Sg Com) IF (0 (Pl Loc)) ;
 	#$ Giellakantuvrras ii leat formála váldi álggahit gielladoaimmaid etáhtain, muhto veahkehit.
 		
 		
