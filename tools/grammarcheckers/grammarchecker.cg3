@@ -293,6 +293,9 @@ LIST Sem/Txt = Sem/Txt ;				    #!! - Sem/Txt
 LIST Sem/Year = Sem/Year ;                  #!! - Der/Year
 
 
+LIST Sem/Mat = Sem/Body_Mat Sem/Edu_Mat Sem/Mat Sem/Mat_Plant Sem/Mat_Txt ; # Material #Sem: cannot pass through it without destroying it, ráhkadit juoidá X:s. Niibi lea X-Loc-Sg. #Dán báhkis šaddá čáppa gohppu.
+LIST Sem/Substnc = Sem/Plc_Substnc Sem/Plc_Substnc_Wthr Sem/State-sick_Substnc Sem/Substnc Sem/Substnc_Wthr ; #Sem: can pass through it without destroying it
+
 #!! This ends the semtag list.
 
 
@@ -1237,6 +1240,10 @@ SET NOT-NP = VFIN-NOT-NEG OR ConNeg OR Inf OR Pcle OR Interj OR CS ;
 
 
 #!! ### Noun sets
+
+# Substantives not propernouns
+
+SET SUBSTANTIVE = N - Prop ;
 
 #!! Nominal sets defined morphophonologically
 #!! Sets for lexeme homonymy (most of them are moved to where the actual rules are.)
@@ -2217,7 +2224,7 @@ COPY:msyn-posspl-ill-gen (Gen &SUGGEST) EXCEPT (Ill &msyn-posspl-ill-gen) TARGET
 #$ piäjá aainâs-uv muu jurduin puoh pittáid sajasis.
 
 #!!  **Agreement rule:** msyn-ncompl-ess-sgill: *Must lii tárbu toorjân/torjui.*
-ADD:xmsyn-ncompl-ess-sgill (&msyn-ncompl-ess-sgill) TARGET N IF (-1 N-WITH-ILL)(0 Ess);
+ADD:xmsyn-ncompl-ess-sgill (&msyn-ncompl-ess-sgill) TARGET N IF (-1 N-WITH-ILL LINK NOT 0 PX)(0 Ess LINK NOT 0 Sg + Ill);
 COPY:msyn-ncompl-ess-sgill (Sg Ill &SUGGEST) EXCEPT (Ess &msyn-ncompl-ess-sgill) TARGET (N Ess &msyn-ncompl-ess-sgill);
 
 #% Must lii tárbu toorjân.
@@ -2662,11 +2669,23 @@ COPY:msyn-agr-sg3-pl3 (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-agr-sg3-pl3) TARGET (V &m
 
 ADD:xmsyn-agr-pl3-sg3 (&msyn-agr-pl3-sg3) TARGET (V Pl3) IF
 	(NEGATE 0 (V Sg3))
-    (*-1 (Loc Sg) - Prop BARRIER NOT-ADV-PCLE - N LINK -1 (".*%"r) + Num + Arab OR ("peeli") + Sg + Nom LINK NOT 1 PUNCT)
-    (*1 N + Sg + Nom BARRIER NOT-NPMOD) ;    
+	(0 LEDE)
+	(*-1 SUBSTANTIVE + Loc + Sg  #BARRIER NOT-ADV-PCLE-ILL-LOC-COM
+	  LINK -1 (".*%"r) + Num + Arab OR ("peeli") + Sg + Nom
+	LINK NOT 1 PUNCT)
+	(*1 N + Sg + Nom BARRIER V)
+	;    
+ADD:xmsyn-agr-pl3-sg3 (&msyn-agr-pl3-sg3) TARGET (V Pl3) IF
+	(NEGATE 0 (V Sg3) OR LEDE)
+	(*-1 SUBSTANTIVE + Loc + Sg  #BARRIER NOT-ADV-PCLE-ILL-LOC-COM
+	  LINK -1 (".*%"r) + Num + Arab OR ("peeli") + Sg + Nom
+	  LINK NOT 1 PUNCT)
+	;    
 COPY:msyn-agr-pl3-sg3 (Sg3 &SUGGEST) EXCEPT (Pl3 &msyn-agr-pl3-sg3) TARGET (V &msyn-agr-pl3-sg3);
 #% 7 kandâd láá.., 5 kaandâ láá ..., 5 kaandâst lii nuárvui. 5 kaandâst lii/láá kyeleh. 
 #% 75 % ulmust láá/lii čääci.
+#$ Paijeel 80 % čääsist Suomâst joteh/jotá puuđhâst.
+#$ 75 %:d ulmuin lii/láá suopmelaččat.
 #$ 7080 % siskáldâsâst láá lamaš suu čalluuh.
 
 #!!  **Agreement rule:** msyn-agr-other-pl3, Subject to the left, *Toh puátá/puátih.*
@@ -2886,9 +2905,11 @@ COPY:msyn-extv-pl3-sg3 (Sg3 &SUGGEST) EXCEPT (Pl3 &msyn-extv-pl3-sg3) TARGET ("l
 
 #!!  **Agreement rule:** msyn-extv-numeral-sg3-pl3
 ADD:msyn-extv-numeral-sg3-pl3 (&msyn-extv-numeral-sg3-pl3) TARGET V IF
-(*-1 Loc OR DOPPE BARRIER NOT-ADV-PCLE)
-(0 LEDE + Sg3)
-(*1 Num + Nom BARRIER NOT-ADV-PCLE LINK NOT 0 OHTA OR Sem/Date OR Sem/Year OR Sem/ID LINK NOT 1 ("%") LINK *1 N);
+	(*-1 Loc OR DOPPE BARRIER NOT-ADV-PCLE)
+	(0 LEDE + Sg3)
+	(*1 Num + Nom BARRIER NOT-ADV-PCLE
+	  LINK NOT 0 OHTA OR Sem/Date OR Sem/Year OR Sem/ID OR (".*%"r)
+	  LINK *1 N);
 COPY:msyn-extv-numeral-sg3-pl3 (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-extv-numeral-sg3-pl3) OR (Sg3 &msyn-extv-numeral-sg3-pl3 &msyn-extv-sg3-pl3) TARGET (V Ind Prs &msyn-extv-numeral-sg3-pl3) ;
 COPY:msyn-extv-numeral-sg3-pl3 (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-extv-numeral-sg3-pl3) OR (Sg3 &msyn-extv-numeral-sg3-pl3 &msyn-extv-sg3-pl3) TARGET (V Ind Prt &msyn-extv-numeral-sg3-pl3) ;
 ADDRELATION:msyn-extv-numeral-sg3-pl3 ($2) Num + Nom FROM (-1 V + LEDE + Sg3 LINK 0 (&msyn-extv-numeral-sg3-pl3));
@@ -3550,8 +3571,25 @@ COPY:msyn-adj-attr-pred (Sg Nom &SUGGEST) EXCEPT (Attr &msyn-adj-attr-pred) TARG
 ADD:xmsyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A) IF
   (0C Attr)
   (NOT 0 (Arab Ord) OR ATTRONLY)
+  (*-1 COPULAS + Qst BARRIER V OR S-BOUNDARY LINK 1 Nom)
+#  (NOT 1 Adv)
+  (NEGATE *1 N BARRIER NOT-A-CC)
+  (NEGATE 1 CC OR COMMA LINK 1 A OR PrfPrc OR PrsPrc LINK 1 N)
+  (NEGATE 1 CC OR COMMA LINK 1 PUNCT LINK 1 A LINK 1 N)
+  (NEGATE 1 (A Attr) OR ? LINK *1 N BARRIER NOT-NPMOD)
+  (NEGATE 1 A + Sg + Nom OR (Pron Pers) OR PrfPrc)
+  (NEGATE 0 ("puoh") LINK 1 Pron LINK *1 N)
+  (NOT 0 (A Sg Nom) OR Adv OR Pcle)
+  (NEGATE 1 COMMA OR ("-") LINK 1 ("mut") LINK *1 (A Attr) BARRIER NOT-NPMODADV)
+  (NEGATE 0 Superl LINK 1 CC LINK 1 ("eenâb" Superl) OR ("iänááš") LINK 1 A LINK 1 N)
+  (NEGATE 1 (Num Attr) LINK 1 N)
+  (NEGATE 0 ("eenâb") LINK 1 PrfPrc);
+
+ADD:xmsyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A) IF
+  (0C Attr)
+  (NOT 0 (Arab Ord) OR ATTRONLY)
   (*-1 COPULAS BARRIER V OR S-BOUNDARY LINK *-1 Nom)
-  (NOT 1 Adv)
+#  (NOT 1 Adv)
   (NEGATE *1 N BARRIER NOT-A-CC)
   (NEGATE 1 CC OR COMMA LINK 1 A OR PrfPrc OR PrsPrc LINK 1 N)
   (NEGATE 1 CC OR COMMA LINK 1 PUNCT LINK 1 A LINK 1 N)
@@ -3594,24 +3632,24 @@ ADD:xmsyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF
 	(*1 ILL-V + IV BARRIER  (":") OR N + Ill OR S-BOUNDARY)
 	(NOT 0 Ill OR PxSg3 LINK *1 EOS BARRIER PrfPrc)
 	(NEGATE 0 Gen LINK 1 Po)
+	(NOT *1 N + Ill BARRIER NOT-NPMOD)
 	;
-#	(NOT *1 N + Ill BARRIER NOT-NPMOD);
-
+#% Mun eeđâm: Sodoma eennâm piäsá tuámupeeivi älkkeebeht ko tun
 
 ADD:xmsyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF
-	(*-1 ILL-V + IV BARRIER NOT-NPMODADV OR (":") LINK NOT 0 TV LINK NOT *-1 Ill)
+	(*-1 ILL-V + IV BARRIER NOT-NPMODADV OR (":") OR COMMA LINK NOT 0 TV LINK NOT *-1 Ill)
 	(0 Acc)
 	(NOT 0 Ill OR PxSg3)
-	(NOT 1 ("pajas") OR ("vuálus") OR ("vuálos"))
+	(NOT 1 ("pajas") OR ("vuálus") OR ("vuálos") OR TV + Inf)
 	(NOT *1 N + Ill BARRIER NOT-NPMOD);
 
 
 #!!  **Agreement rule:** msyn-obj-acc-ill *Ideologia kuáská kielâid/kieláid.*
 ADD:xmsyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF
-	(*-1 ILL-V + IV BARRIER NOT-NPMODADV OR (":") LINK NOT 0 TV LINK NOT *-1 Ill BARRIER S-BOUNDARY)
+	(*-1 ILL-V + IV BARRIER NOT-NPMODADV OR (":") OR COMMA LINK NOT 0 TV LINK NOT *-1 Ill BARRIER S-BOUNDARY)
 	(0 Acc)
 	(NOT 0 Ill OR PxSg3)
-	(NOT 1 ("pajas") OR ("vuálus") OR ("vuálos"))
+	(NOT 1 ("pajas") OR ("vuálus") OR ("vuálos") OR TV + Inf)
 	(NOT *1 N + Ill BARRIER NOT-NPMOD);
 
 LIST ILL-N = "tiervâpuáttim" ;
@@ -3639,7 +3677,13 @@ ADD:xmsyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF (*-1 ILL-V + IV BARRIER NO
 COPY:msyn-obj-acc-ill (Ill &SUGGEST) EXCEPT (Gen  &msyn-obj-acc-ill) TARGET (N Gen &msyn-obj-acc-ill) ;
 
 #!! **Agreement rule:** msyn-obj-acc-ill
-ADD:xmsyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET Pron IF (*-1 ILL-V + IV BARRIER NOT-NPMODADV OR (":")  LINK NOT 0 TV LINK *-1 Nom)(0 Acc)(NOT 0 Ill OR PxSg3)(NEGATE 0 (N Nom Sg) LINK *-1 (V Sg3) BARRIER NOT-NPMODADV)(NEGATE 0 (N Nom Pl) LINK *-1 (V Pl3) BARRIER NOT-NPMODADV)(NOT 1 TV + Inf);
+ADD:xmsyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET Pron IF
+	(*-1 ILL-V + IV BARRIER NOT-NPMODADV OR (":")  LINK NOT 0 TV LINK *-1 Nom)
+	(0 Acc)
+	(NOT 0 Ill OR PxSg3)
+	(NEGATE 0 (N Nom Sg) LINK *-1 (V Sg3) BARRIER NOT-NPMODADV)
+	(NEGATE 0 (N Nom Pl) LINK *-1 (V Pl3) BARRIER NOT-NPMODADV)
+	(NOT 1 TV + Inf OR Ess);
 
 #!!  **Agreement rule:** msyn-obj-acc-ill
 ADD:xmsyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET Pron IF (*-2 ILL-V + IV BARRIER NOT-NPMODADV OR (":")  LINK NOT 0 TV LINK *-1 Nom)(-1 Pron + Ill)(0 Acc)(NOT 0 Ill OR PxSg3)(NEGATE 0 (N Nom Sg) LINK *-2 (V Sg3) BARRIER NOT-NPMODADV)(NEGATE 0 (N Nom Pl) LINK *-2 (V Pl3) BARRIER NOT-NPMODADV);
@@ -3654,6 +3698,11 @@ ADD:xmsyn-advl-plloc-sgcom (&msyn-advl-plloc-sgcom) TARGET N IF
 	(*0 HUMAN-ACTIVITY-V BARRIER S-BOUNDARY)
 	(NOT *-1 MUITALIT)
 	(0 N + Pl + Loc + Sem/Org OR N + Pl + Loc + Sem/Hum);
+ADD:xmsyn-advl-plloc-sgcom (&msyn-advl-plloc-sgcom) TARGET N IF
+	(*0 HUMAN-ACTIVITY-V BARRIER S-BOUNDARY)
+	(NOT *-1 MUITALIT)
+	(-1 Num + Sg + Com)
+	(0 N + Pl + Loc);
 ADD:xmsyn-advl-plloc-sgcom (&msyn-advl-plloc-sgcom) TARGET N IF
 	(NOT *-1 MUITALIT)
 	(*-1 ("oovtâst") OR A + Sg + Com)
