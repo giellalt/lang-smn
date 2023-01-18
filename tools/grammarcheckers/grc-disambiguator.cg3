@@ -2556,6 +2556,11 @@ REMOVE:Killrecipr Recipr IF ;
 
 LIST N-NOT-V = "viste" "kielâ" "lávlla" "muddu" "nieidâ" "škovlâ" "kuávlu" ;
 
+REMOVE:NnotPtc PrfPrc IF
+	(*-1 COPULAS + Ind LINK -1 Adv OR Loc)
+	(0 Sg + Nom)
+	;
+
 REMOVE Imprt (0 N LINK *1 ("leđe") - Imprt BARRIER REAL-V OR S-BOUNDARY)  ;
 	#$ Giela boahtteáigái lea erenoamáš dehálaš ahte nuorain stuorát proseantaoassi go gaskaleamos buolvvas máhttet hállat kymrigiela .
 	
@@ -4032,7 +4037,16 @@ SELECT:Yr1853 PrfPrc IF (*-1C Rel LINK -1 Pron OR N LINK *-1 REAL-COPULAS BARRIE
 #!! the following chapter should be possible to unify.
 
 #!! * **r1855** selects PrfPrc if Nom to the left linked to copula
-SELECT:Yr1855 PrfPrc IF (*-1 Nom BARRIER SV-BOUNDARY LINK *-1 REAL-COPULAS BARRIER NOT-ADV-PCLE LINK NEGATE *-1 Nom BARRIER S-BOUNDARY)(NEGATE 0 Ess LINK 1 (A Nom) OR PrfPrc)(NEGATE 0 Actio LINK 1 PrfPrc LINK 0 MAIN-V LINK NOT 0 VFIN)(NEGATE 1 ("árvulâš"))(NEGATE 1 CC LINK 1 Actio LINK NOT 0 PrfPrc)(NEGATE 0 Actio OR N LINK *1 ("leđe" PrfPrc) BARRIER COPULAS)(NEGATE 0 AUX);
+SELECT:Yr1855 PrfPrc IF
+	(*-1 Nom BARRIER SV-BOUNDARY LINK *-1 REAL-COPULAS BARRIER NOT-ADV-PCLE
+	     LINK NEGATE *-1 Nom BARRIER S-BOUNDARY)
+	(NEGATE 0 N + Sg + Nom)
+	(NEGATE 0 Ess LINK 1 (A Nom) OR PrfPrc)
+	(NEGATE 0 Actio LINK 1 PrfPrc LINK 0 MAIN-V LINK NOT 0 VFIN)
+	(NEGATE 1 ("árvulâš"))
+	(NEGATE 1 CC LINK 1 Actio LINK NOT 0 PrfPrc)
+	(NEGATE 0 Actio OR N LINK *1 ("leđe" PrfPrc) BARRIER COPULAS)
+	(NEGATE 0 AUX);
 	## Muhtin biirres leat gávcci áirasa leamaš nissonolbmot, ja eará biirres leat buohkat geat leat válljejuvvon leamaš dievddut.
 
 #!! * **r1857** selects PrfPrc if Acc to the left linked to copula
@@ -7357,7 +7371,8 @@ REMOVE:cleanSemClass Sem/Mal IF (0 Sem/Plc);
 REMOVE:cleanSemClass Sem/Fem IF (0 Sem/Plc);
 
 SELECT:cleanSemClass Sem/Mal (0 Sem/Sur) ;
-SELECT:cleanSemClass TIME-N (0 Sem/Measr OR Sem/Org) ;
+#SELECT:cleanSemClass TIME-N (0 Sem/Measr OR Sem/Org) ; # trying to avoid deleting different lemmas
+REMOVE:cleanSemClass TIME-N IF (0 TIME-N LINK 0 Sem/Measr OR Sem/Org) ;
 SELECT:cleanSemClass Sem/Ani (0 Sem/Hum) ;
 	#$ Nussir
 
@@ -7374,7 +7389,8 @@ MAP:realverbX (@X) TARGET REAL-V  ;
 
 
 #!! * **IfonlyVerb** selects the FMAINV reading in the cohort
-SELECT:IfonlyVerb FMAINV IF (NEGATE *0 FMAINV);# BARRIER S-BOUNDARY);#(NOT 0 FAUXV)(NEGATE *-1 ("ko") LINK *-1 VFIN) ;
+SELECT:IfonlyVerb FMAINV IF (NEGATE *0 VFIN);# BARRIER S-BOUNDARY);#(NOT 0 FAUXV)(NEGATE *-1 ("ko") LINK *-1 VFIN) ;
+#SELECT:IfonlyVerb FMAINV IF (NEGATE *0 FMAINV);# BARRIER S-BOUNDARY);#(NOT 0 FAUXV)(NEGATE *-1 ("ko") LINK *-1 VFIN) ;
 #SELECT:IfonlyVerb FMAINV IF (NEGATE *0 FMAINV BARRIER S-BOUNDARY)(NOT 0 FAUXV)(NEGATE *-1 ("ko") LINK *-1 VFIN) ;
 	#$ Juohke loddi gielainis lávlu.
 	#$ Das maŋŋá dajan juoidá álbmotrievtti mearkkašumi birra, ja geavahan das veahkkin ođđaseamos riektegáldu.
