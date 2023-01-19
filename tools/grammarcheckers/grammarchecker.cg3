@@ -2020,6 +2020,7 @@ SET CCCOMMA = CC OR COMMA ;
 #!! name convention for error tags: ´´&errortype-errorsubtype-is-shouldbe´´
 
 
+LIST &easteregg = &easteregg ;
 LIST &msyn-adj-attr-other = &msyn-adj-attr-other ;
 LIST &msyn-adj-attr-pred = &msyn-adj-attr-pred ;
 LIST &msyn-adj-gen-nom = &msyn-adj-gen-nom ;
@@ -3817,7 +3818,8 @@ ADD:xreal-pele-peeli (&real-pele-peeli) TARGET ("pele") IF  (-1 ("suullân"));
 COPY:real-pele-peeli ("peeli" N Sem/Part Sg Nom &SUGGEST) EXCEPT ("pele" Po &real-pele-peeli) TARGET (&real-pele-peeli) ;
 ADDRELATION:real-pele-peeli ("$2") (Adv) FROM (1 ("peeli" &real-pele-peeli));
 
-
+ADD:easteregg (&easteregg) TARGET ("nuvviDgrammarchecker") ;
+COPY:easteregg ("19.1.2023" Num  &SUGGEST) EXCEPT ("nuvviDgrammarchecker" &easteregg) TARGET (&easteregg);
 
 #!! ## Word order rules
 
