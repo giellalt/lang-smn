@@ -10506,15 +10506,17 @@ name convention for error tags: ´´&errortype-errorsubtype-is-shouldbe´´
 
 ## Singleton words
 
+**Speller suggestions rule** &real-love-lope
+
 ## Noun phrase internal phenomena
 
 ### Demonstratives
 
-**Agreement rule:** msyn-dem-locattr-gen
+**Agreement rule:** `msyn-dem-locattr-gen`
 
 ### Noun phrase possessor
 
-**Agreement rule:** msyn-posspl-acc-gen. *Siijđoid/Siijđoi lehâstem tábáhtuvá itten.*
+**Agreement rule:** `msyn-posspl-acc-gen`. *Siijđoid/Siijđoi lehâstem tábáhtuvá itten.*
 
 **Agreement rule:** msyn-posspl-acc-gen. coordination: *uásálistiđ párnáid/párnái já nuorâi leiráid*
 
@@ -10581,6 +10583,8 @@ msyn-quant-gen-nom
 ### Indicative person agreement
 
 #### Sg1
+
+**Agreement rule:** `msyn-agr-sg2-sg1`, 
 
 **Agreement rule:** msyn-agr-other-sg1, *Mun puátá/puáđám*
 
