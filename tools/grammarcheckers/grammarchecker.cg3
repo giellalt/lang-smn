@@ -654,7 +654,9 @@ LIST MO-MANge = "tondiet" "kuás" "gokko" "kost" "kuus" "govt" ("maht" Adv) "mag
 
 SET MO = MO-MANge - Foc/gin ;
 
-LIST QUANTOR-ADV = "ennuv" ("maŋgâ" Num Pl Nom) ("maŋgâ" Pron Indef Pl Nom) ;
+LIST UNITQUANTOR-ADV = ("maŋgâ" Num Pl Nom) ("maŋgâ" Pron Indef Pl Nom) ;
+LIST MASSQUANTOR-ADV = ("maŋgâ" Num Pl Nom) ("maŋgâ" Pron Indef Pl Nom) ;
+SET QUANTOR-ADV =  UNITQUANTOR-ADV OR MASSQUANTOR-ADV ;
 
  # Introduce finite clauses.
 
@@ -2400,7 +2402,7 @@ COPY:msyn-num-acc-par (Par &SUGGEST) EXCEPT (Sg Gen &msyn-num-acc-par) TARGET (N
 #!! #### Quantor adverbs
 
 ADD:xmsyn-quadv-sg-pl (&msyn-quadv-sg-pl) TARGET N IF
-	(*-1 QUANTOR-ADV BARRIER NOT-NPMOD)
+	(*-1 UNITQUANTOR-ADV BARRIER NOT-NPMOD)
 	(0 N + Sg + Nom)
 	(NOT 0 Sem/Time OR Sem/Time-clock)
 	;
@@ -2929,7 +2931,7 @@ ADD:msyn-extv-numeral-sg3-pl3 (&msyn-extv-numeral-sg3-pl3) TARGET V IF
 	(*-1 Loc OR DOPPE BARRIER NOT-ADV-PCLE)
 	(0 LEDE + Sg3)
 	(*1 Num + Nom BARRIER NOT-ADV-PCLE
-	  LINK NOT 0 OHTA OR Sem/Date OR Sem/Year OR Sem/ID OR (".*%"r)
+	  LINK NOT 0 OHTA OR Sem/Date OR Sem/Year OR Sem/ID OR (".*%"r) OR Sem/Time-clock
 	  LINK *1 N);
 COPY:msyn-extv-numeral-sg3-pl3 (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-extv-numeral-sg3-pl3) OR (Sg3 &msyn-extv-numeral-sg3-pl3 &msyn-extv-sg3-pl3) TARGET (V Ind Prs &msyn-extv-numeral-sg3-pl3) ;
 COPY:msyn-extv-numeral-sg3-pl3 (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-extv-numeral-sg3-pl3) OR (Sg3 &msyn-extv-numeral-sg3-pl3 &msyn-extv-sg3-pl3) TARGET (V Ind Prt &msyn-extv-numeral-sg3-pl3) ;
