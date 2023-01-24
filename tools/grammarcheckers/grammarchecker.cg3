@@ -2022,6 +2022,7 @@ SET CCCOMMA = CC OR COMMA ;
 #!! name convention for error tags: ´´&errortype-errorsubtype-is-shouldbe´´
 
 
+
 LIST &easteregg = &easteregg ;
 LIST &msyn-adj-attr-other = &msyn-adj-attr-other ;
 LIST &msyn-adj-attr-pred = &msyn-adj-attr-pred ;
@@ -2128,6 +2129,7 @@ ADD (&typo &SUGGESTWF) (<spelled>);
 
 #!! ## Singleton words
 
+#!! **Speller suggestions rule** &real-love-lope
 ADD:real-love-lope (&real-love-lope) TARGET ("love") IF
 	(*1 Inf BARRIER NOT-ADV);
 COPY:real-love-lope ("lope" N Sg Nom &SUGGEST) EXCEPT ("love" Num Sg Nom &real-love-lope) TARGET (Num &real-love-lope); 
@@ -2136,13 +2138,13 @@ COPY:real-love-lope ("lope" N Sg Nom &SUGGEST) EXCEPT ("love" Num Sg Nom &real-l
 
 #!! ### Demonstratives
 
-#!!  **Agreement rule:** msyn-dem-locattr-gen
+#!!  **Agreement rule:** `msyn-dem-locattr-gen`
 ADD:xmsyn-dem-locattr-gen (&msyn-dem-locattr-gen) TARGET Dem IF (NOT *0 LOC-V BARRIER SV-BOUNDARY)(0 Sg + Loc)(NOT 0 Loc + Attr)(1 N + Sg + Loc)(NOT 1 Prop OR Sem/Plc); # Loc Attr > Gen?
 COPY:msyn-dem-locattr-gen (Gen &SUGGEST) EXCEPT (Loc Attr &msyn-dem-locattr-gen) TARGET (Dem &msyn-dem-locattr-gen);
 
 #!! ### Noun phrase possessor
 
-#!!  **Agreement rule:** msyn-posspl-acc-gen. *Siijđoid/Siijđoi lehâstem tábáhtuvá itten.*
+#!!  **Agreement rule:** `msyn-posspl-acc-gen`. *Siijđoid/Siijđoi lehâstem tábáhtuvá itten.*
 ADD:xmsyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF
 	(NOT -1 PRESENTATION-PRON OR A + Attr)
 	(NEGATE *-1 TV BARRIER SV-BOUNDARY) ## <????
@@ -2180,6 +2182,7 @@ ADD:xmsyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF
 
 #$ Škovlim maŋa puávtáh uásálistiđ párnáid já nuorâi leiráid stuorrâhâžžân.
 #$ Jiem lah jieš puáhtám luuhâđ táid kiirjijd já klassikkoid sämikielân
+
 
 ADD:xmsyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF
 #(NOT *-1 TV BARRIER NOT-NPMOD)
@@ -2436,11 +2439,13 @@ ADDRELATION:msyn-quadv-sg-pl ($2) ("ennuv") OR ("maŋgâ") FROM (*1 &msyn-quadv-
 
 #!! #### Sg1
 
+#!! **Agreement rule:** `msyn-agr-sg2-sg1`, 
 ADD:xmsyn-agr-sg2-sg1 (&msyn-agr-sg2-sg1) TARGET V IF
 	(-1C Pron + Sg1 + Nom)
 	(0 V + Ind + Sg2)
 	;
 COPY:msyn-agr-sg2-sg1 (Sg1 &SUGGEST) EXCEPT (Sg2 &msyn-agr-sg2-sg1) TARGET (V Ind Prt &msyn-agr-sg2-sg1);
+
 
 #!! **Agreement rule:** msyn-agr-other-sg1, *Mun puátá/puáđám*
 ADD:xmsyn-agr-other-sg1 (&msyn-agr-other-sg1) TARGET V IF
