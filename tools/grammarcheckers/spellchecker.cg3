@@ -1915,6 +1915,11 @@ SELECT:SpellInf Inf IF (-1 <aux>)(0 V + <spelled>);
 REMOVE:SpellNoV V IF (0 N)(-1 (Pron Attr))(*1 VFIN BARRIER GRAMCHK-S-BOUNDARY);	
 	
 	
+	# Propernnouns
+	# ------------
+
+REMOVE:NoPropSugg Prop IF (NOT -1 BOS)(0 <spelled>);	
+
 	# Noun phrases
 	# ------------
 
