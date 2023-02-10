@@ -9883,6 +9883,7 @@ EXCLMARK
 ¶
 ?
 MWE
+Cmp, but two-word muotâsaanijd seems like an error
 
 ### POS sub-categories
 
