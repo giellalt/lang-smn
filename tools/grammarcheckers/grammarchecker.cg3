@@ -118,7 +118,7 @@ LIST EXCLMARK = "!" ; #!! EXCLMARK
 LIST ¶ = ¶;   #!! ¶
 LIST ? = ? ;  #!! ?
 LIST MWE = MWE ; #!! MWE
-
+LIST Cmp = Cmp ; #!! Cmp, but two-word muotâsaanijd seems like an error
 
 
 #!! ### POS sub-categories
@@ -3002,6 +3002,10 @@ ADD:msyn-extsubj-ill-nom-pl (&msyn-extsubj-ill-nom) TARGET N IF
 	(*-1 LEDE + Pl3 BARRIER NOT-A-ADV-PCLE LINK -1 Loc LINK NOT -1 N OR Pron + Indef + Pl + Nom)
 	(0C (N Pl Ill))
 	(NEGATE *1 TV + Ger OR TV + PrfPrc OR TV + Inf BARRIER S-BOUNDARY OR VFIN) ;
+#ADD:msyn-extsubj-ill-nom-pl (&msyn-extsubj-ill-nom) TARGET N IF 
+#	(-1 Cmp LINK *-1 LEDE + Pl3 BARRIER NOT-A-ADV-PCLE LINK -1 Loc LINK NOT -1 N OR Pron + Indef + Pl + Nom)
+#	(0C (N Pl Ill))
+#	(NEGATE *1 TV + Ger OR TV + PrfPrc OR TV + Inf BARRIER S-BOUNDARY OR VFIN) ;
 COPY:msyn-extsubj-ill-nom (Nom &SUGGEST) EXCEPT (Ill &msyn-extsubj-ill-nom) TARGET (N Pl &msyn-extsubj-ill-nom) ;
 #$ Šiljoost láá poccuuh.
 #% Šiljoost láá ain {poccuid}.
