@@ -33,6 +33,12 @@ LOCAL_GC_ZIP_FILES=after-speller-disambiguator.bin
 after-speller-disambiguator.cg3: grc-disambiguator.cg3
 	$(AM_V_GEN)grep -v 'PROTECT' $< > $@
 
+# Add valency info to speller suggestions:
+%-postspell.cg3: %.cg3
+	$(AM_V_GEN)$(SED) -e 's/^# Error tags$$/&\n\nLIST <spelled> = <spelled> ;/' \
+		-e 's/^SUBSTITUTE \(.*\);/SUBSTITUTE \1 (0 <spelled>)  ;/' \
+		< $< > $@
+
 #### END: Local build targets:   ####
 
 #### Do NOT edit below here: ####
