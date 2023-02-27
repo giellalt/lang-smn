@@ -19,7 +19,6 @@ Then edit/test as follows:
 
 ```
 echo "Sun ij puátá." | sh modes/smngram.mode
-echo "Sun ij puátá." | sh modes/smngram-release.mode
 ```
 
 There are very many modes in the `modes` folder, look at them.
@@ -171,7 +170,7 @@ Foc/han
 Foc/bat
 Foc/son
 
-### Derivation 
+### Derivation
 
 Der/Pass
 Der/NomAg
@@ -398,7 +397,7 @@ VNOTSG1 (for all other persons than Sg1), VNOTSG2, ...
 
 No one so far
 
-z### Copula sets 
+z### Copula sets
 
 (these ones need to be rewritten)
 
@@ -415,22 +414,22 @@ MUN, DON, SON, MOAI, ...
 
 LEX-A, A-CASE, ...
 
-- SET LEX-A = A - DER-A ;  
+- SET LEX-A = A - DER-A ; 
 
-- SET A-CASE = A - Attr - Adv ;  
+- SET A-CASE = A - Attr - Adv ; 
 
-- LIST A-CC = A CC ;  
+- LIST A-CC = A CC ; 
 
 - SET NOT-A = WORD - A ;   This is former NOT-ADJ
-- SET NOT-A-COMMA = WORD - A - COMMA ;  
-- SET NOT-Attr = WORD - Attr ;  
-- SET NOT-A-PCLE = WORD - A - Pcle ;  
-- SET NOT-A-CC = WORD - A-CC ;  
+- SET NOT-A-COMMA = WORD - A - COMMA ; 
+- SET NOT-Attr = WORD - Attr ; 
+- SET NOT-A-PCLE = WORD - A - Pcle ; 
+- SET NOT-A-CC = WORD - A-CC ; 
 
-- LIST ATTRONLY = "anarâškiel" "eeđâb" "fakkâ" "fastâ" "hirmâd" "huámášekkis" "hyperkorrekt" "korrekt" "läättinkiel" "nuorttâkiel" "nuuvtkočodum" "ohtuunis" "olmâ" "oovdiš" "oovtâkiel" "orjâlâškiel" "pajekiel" "prelimináár" "puigâ" "ruotâkiel" "ruoŧâkiel" "sämikiel" "sierâ" "suomâkiel" "tiätu" "tommittáá" "ubâ" "váháš" "vuáđusämikiel" "vuoigâ" ;  
+- LIST ATTRONLY = "anarâškiel" "eeđâb" "fakkâ" "fastâ" "hirmâd" "huámášekkis" "hyperkorrekt" "korrekt" "läättinkiel" "nuorttâkiel" "nuuvtkočodum" "ohtuunis" "olmâ" "oovdiš" "oovtâkiel" "orjâlâškiel" "pajekiel" "prelimináár" "puigâ" "ruotâkiel" "ruoŧâkiel" "sämikiel" "sierâ" "suomâkiel" "tiätu" "tommittáá" "ubâ" "váháš" "vuáđusämikiel" "vuoigâ" ; 
 
 This set was removed, for a good reason?
-- SET NOT-A-ADV = WORD - A - Adv OR ("meid") ;  
+- SET NOT-A-ADV = WORD - A - Adv OR ("meid") ; 
 
 - LIST CONCORD-A = "pyeri" "taggaar" (".*lâš"r) (".*sâš"r) (".*vâš"r) (".*muš"r) ;  = this is the set for adj agreeing with N.
 
@@ -679,12 +678,6 @@ GEN-ANIMAL, PREDATOR. BIRD, ...
 
 name convention for error tags: ´´&errortype-errorsubtype-is-shouldbe´´
 
- 
-
- 
-
- 
-
 # RULE SECTION
 
 - Example marking: Wrong = #%
@@ -707,10 +700,6 @@ name convention for error tags: ´´&errortype-errorsubtype-is-shouldbe´´
 
 **Agreement rule:** `msyn-posspl-acc-gen`. *Siijđoid/Siijđoi lehâstem tábáhtuvá itten.*
 
-**Agreement rule:** msyn-posspl-acc-gen. coordination: *uásálistiđ párnáid/párnái já nuorâi leiráid*
-
-**Agreement rule:** msyn-posspl-acc-gen. coordination: *uásálistiđ párnáid/párnái já nuorâi leiráid*
-
 ### Noun phrase complements
 
 N + Ill
@@ -727,7 +716,7 @@ N + Ill
 
 ### Double possessive rules
 
-### Number and case agreement 
+### Number and case agreement
 
 ### Det + N agreement
 
@@ -773,7 +762,7 @@ msyn-quant-gen-nom
 
 #### Sg1
 
-**Agreement rule:** `msyn-agr-sg2-sg1`, 
+**Agreement rule:** `msyn-agr-sg2-sg1`,
 
 **Agreement rule:** msyn-agr-other-sg1, *Mun puátá/puáđám*
 
@@ -833,8 +822,6 @@ Sg3/Pl3 errors: Suomâkielâ sárnumkielâ epikongruens maaŋgâlovo 3. persovni
 
 **Agreement rule:** msyn-agr-other-pl3
 
-**Agreement rule:** msyn-agr-other-pl3
-
 ### Imperativ rules
 
 ### Infinite verbforms
@@ -863,7 +850,7 @@ Sg3/Pl3 errors: Suomâkielâ sárnumkielâ epikongruens maaŋgâlovo 3. persovni
 
 ## Existential sentences
 
-### Verb should be plural. 
+### Verb should be plural.
 
 The interference comes from Finnish e-sentences, where the verb is in the singular.
 
@@ -903,14 +890,6 @@ The interference comes from Finnish e-sentences, where the verb is in the singul
 
 **Agreement rule:** msyn-ness-acc-nom
 
-**Agreement rule:** msyn-ness-acc-nom *Muu ličij/liččim kolgâm porgâđ taam tállán.* (???)
-
-**Agreement rule:** msyn-ness-acc-nom *Ij-uv/Jieh-uv tuu/tun kolgâm vyelgiđ suáluikuávlun Jennyin?*
-
-**Agreement rule:** msyn-ness-acc-nom
-
-**Agreement rule:** msyn-ness-acc-nom *Suu/Sun koolgâi forgâ porgâđ miärádâs.*
-
 **Agreement rule:** msyn-pass-accsubj-nomsubj: *Sämikielâlijd/Sämikielâliih nomâttâsâid kiävttojeh uccáá.*
 
 **Agreement rule:** msyn-pass-accsubj-nomsubj *Tävirijd/Tävireh láppojii ääitist.*
@@ -922,12 +901,6 @@ The interference comes from Finnish e-sentences, where the verb is in the singul
 b) Suomâkielâ partitiiv passiivráhtusijn; sämikielâst passiiv ohtâvuođâst lii nominatiiv já verbâ maaŋgâlovvoost.
 
 **Agreement rule:** msyn-pass-accsubj-nomsubj
-
-**Agreement rule:** msyn-pass-accsubj-nomsubj *Sämikielâlijd nomâttâsâid iä jur kevttuu.*
-
-**Agreement rule:** syn-top-placc-plnom *Anarâškielâlijd/Anarâškielâliih noomâid kiävttoo/kiävttojeh uccáá.*
-
-**Agreement rule:** msyn-top-placc-plnom *tiäđuid/tiäđuh ij kavnuu.*
 
 ## Objects
 
@@ -950,8 +923,6 @@ Hmm, no rules for this, it seems.
 ### Plural objects
 
 These are often put in nominative, due to Finnish plural objects.
-
-**Agreement rule:** msyn-plobj-nom-acc
 
 **Agreement rule:** msyn-plobj-nom-acc
 
@@ -983,8 +954,6 @@ Suomâkielâ imperatiiv mieđetteijee häämist, mast objekt sajehäämmin lii m
 
 **Agreement rule:** msyn-imp-nom-acc
 
-**Agreement rule:** msyn-imp-nom-acc
-
 Outcommented...
 
 ## Predicative
@@ -994,12 +963,6 @@ Outcommented...
 **Agreement rule:** msyn-pred-acc-nom *Taah láá čielgâ aašijd/ááših.*
 
 **Agreement rule:** msyn-pred-acc-nom *Lii-uv toos synonymáid/synonym*
-
-**Agreement rule:** msyn-pred-acc-nom as previous but -2 leđe
-
-**Agreement rule:** msyn-pred-acc-nom as previous but -3 leđe
-
-**Agreement rule:** msyn-pred-acc-nom complements of leđe should be Nom. As previous but -4 leđe
 
 **Agreement rule:** msyn-pred-ill-nom *Lii-uv toos synonymijd/synonym*
 
@@ -1011,8 +974,6 @@ Outcommented...
 
 **Agreement rule:** msyn-adj-attr-other
 
-**Agreement rule:** msyn-adj-attr-pred *Tot lii hirmâd*
-
 **Agreement rule:** msyn-adj-attr-pred *Mun lam fiskis/fiskâd.*
 
 ## Adverbial rules
@@ -1020,12 +981,6 @@ Outcommented...
 ### Adverbial case errors
 
 #### Acc > Ill
-
-**Agreement rule:** msyn-obj-acc-ill
-
-**Agreement rule:** msyn-obj-acc-ill *Ideologia kuáská kielâid/kieláid.*
-
-**Agreement rule:** msyn-obj-acc-ill *Ideologia kuáská kielâid/kieláid.*
 
 **Agreement rule:** msyn-obj-acc-ill
 
@@ -1068,4 +1023,4 @@ The grammarchecker file ends here.
 SUBSTITUTE MWE (*)
 
 * * *
-<small>This (part of) documentation was generated from [tools/grammarcheckers/grammarchecker.cg3](https://github.com/giellalt/lang-smn/blob/main/tools/grammarcheckers/grammarchecker.cg3)</small>
+<small>This (part of) documentation was generated from [tools/grammarcheckers/grammarchecker-release.cg3](https://github.com/giellalt/lang-smn/blob/main/tools/grammarcheckers/grammarchecker-release.cg3)</small>
