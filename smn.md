@@ -11897,6 +11897,12 @@ Outcommented...
 
 **Realword error rule:** real-pele-peeli
 
+**Realword error rule:** real-keesi-keessiv 
+
+**Realword error rule:** real-keessiv-keesi 
+
+## Easteregg rule
+
 ## Word order rules
 
 **Syntax rule:** syn-OVS-OSV
