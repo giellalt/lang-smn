@@ -38,6 +38,7 @@
 
 #!! ```
 #!! echo "Sun ij puátá." | sh modes/smngram.mode
+#!! echo "Sun ij puátá." | sh modes/smngram-release.mode
 #!! ```
 
 #!! There are very many modes in the `modes` folder, look at them.
@@ -45,7 +46,8 @@
 #!! See also [the documentation on grammarchecker testing](https://giellalt.github.io/proof/gramcheck/doc/grammarchecker_testing.html)
 
 # The pipeline (but use modes, above)
-# echo "Sun ij puátá." | hfst-tokenise --giella-cg  ../tokenisers/tokeniser-gramcheck-gt-desc.pmhfst | vislcg3 -g disambiguator.cg3 | vislcg3 -g grammarchecker.cg3 -t
+# echo "Sun ij puátá." | hfst-tokenise --giella-cg  ../tokenisers/tokeniser-gramcheck-gt-desc.pmhfst | vislcg3 -g grc-disambiguator.cg3 | vislcg3 -g grammarchecker.cg3 -t
+# echo "Sun ij puátá." | hfst-tokenise --giella-cg  ../tokenisers/tokeniser-gramcheck-gt-desc.pmhfst | vislcg3 -g grc-disambiguator.cg3 | vislcg3 -g grammarchecker-release.cg3 -t
 # For text (the sed part is quickfix for URL bug
 # cat text.txt | hfst-tokenise --giella-cg  ../tokenisers/tokeniser-gramcheck-gt-desc.pmhfst | vislcg3 -g ../tokenisers/mwe-dis.cg3 | cg-mwesplit | vislcg3 | vislcg3 -g disambiguator.cg3 | vislcg3 -g grammarchecker.cg3 -t
 
