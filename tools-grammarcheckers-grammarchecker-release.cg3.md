@@ -19,6 +19,7 @@ Then edit/test as follows:
 
 ```
 echo "Sun ij puátá." | sh modes/smngram.mode
+echo "Sun ij puátá." | sh modes/smngram-release.mode
 ```
 
 There are very many modes in the `modes` folder, look at them.
