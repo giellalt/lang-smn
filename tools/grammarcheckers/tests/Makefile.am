@@ -16,6 +16,7 @@ TESTS=\
 	msyn-adj-gen-nom.yaml \
 	msyn-adj-pred-attr.yaml \
 	msyn-adj-sg-pl.yaml \
+	msyn-advl-plgen-sgill.yaml \
 	msyn-advl-plloc-sgcom.yaml \
 	msyn-advl-plloc-sgill.yaml \
 	msyn-agr-imprt-sg3.yaml \
@@ -40,6 +41,8 @@ TESTS=\
 	msyn-ncompl-ess-sgill.yaml \
 	msyn-ncompl-placc-plill.yaml \
 	msyn-num-acc-par.yaml \
+	msyn-num-gen-par.yaml \
+	msyn-num-nom-acc.yaml \
 	msyn-num-nom-par.yaml \
 	msyn-num-par-gen.yaml \
 	msyn-obj-acc-ill.yaml \
@@ -51,6 +54,8 @@ TESTS=\
 	msyn-po-nom-gen.yaml \
 	msyn-posspl-acc-gen.yaml \
 	msyn-pred-acc-nom.yaml \
+	msyn-pred-ill-nom.yaml \
+	msyn-predagr-pl3-sg3.yaml \
 	msyn-quant-gen-nom.yaml \
 	msyn-quant-nom-gen.yaml \
 	msyn-refl-sg-pl.yaml \
