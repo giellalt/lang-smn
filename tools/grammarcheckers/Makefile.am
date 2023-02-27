@@ -22,7 +22,8 @@ GIELLA_GC_VALENCY_SRC=valency.cg3
 
 # If there are additional, language specific files used in the GC archive,
 # specify here:
-LOCAL_GC_ZIP_FILES=after-speller-disambiguator.bin
+LOCAL_GC_ZIP_FILES=after-speller-disambiguator.bin \
+					valency-postspell.bin
 
 #### BEGIN: Local build targets: ####
 
