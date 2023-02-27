@@ -2098,6 +2098,8 @@ LIST &msyn-v-du3-conneg = &msyn-v-du3-conneg ;
 LIST &msyn-v-prfprc-sg1 = &msyn-v-prfprc-sg1 ;
 LIST &msyn-v-sg1-prfprc = &msyn-v-sg1-prfprc ;
 LIST &msyn-v-sg3-conneg = &msyn-v-sg3-conneg ;
+LIST &real-keesi-keessiv = &real-keesi-keessiv ;
+LIST &real-keessiv-keesi = &real-keessiv-keesi ;
 LIST &real-love-lope = &real-love-lope ;
 LIST &real-pele-peeli = &real-pele-peeli ;
 LIST &real-pisso-pissood = &real-pisso-pissood ;
@@ -2376,7 +2378,7 @@ LIST SGGENACC = (Sg Gen) (Sg Acc) ;
 
 #!!  **Agreement rule:** msyn-num-gen-par:  8 kaandâ/kandâd
 ADD:xmsyn-num-gen-par (&msyn-num-gen-par) TARGET N IF
-(-1 Num OR A + Arab LINK 0 SEVEN-AND-MORE)
+(-1 Num OR A + Arab LINK 0 SEVEN-AND-MORE LINK NOT 0 Ord)
 (0C N + Sg + Gen)
 (NOT 0 ABBR OR Par)
 (NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Rom)
@@ -3833,8 +3835,21 @@ ADD:xreal-pele-peeli (&real-pele-peeli) TARGET ("pele") IF  (-1 ("suullân"));
 COPY:real-pele-peeli ("peeli" N Sem/Part Sg Nom &SUGGEST) EXCEPT ("pele" Po &real-pele-peeli) TARGET (&real-pele-peeli) ;
 ADDRELATION:real-pele-peeli ("$2") (Adv) FROM (1 ("peeli" &real-pele-peeli));
 
+#!! **Realword error rule:** real-keesi-keessiv 
+ADD:xreal-keesi-keessiv (&real-keesi-keessiv) TARGET ("keesi") IF (*-1 V BARRIER NOT-ADV) ;
+COPY:real-keesi-keessiv ("keessiv" Adv &SUGGEST) EXCEPT ("keesi" N Sg Gen &real-keesi-keessiv) TARGET (&real-keesi-keessiv) ;
+
+#!! **Realword error rule:** real-keessiv-keesi 
+ADD:xreal-keessiv-keesi (&real-keessiv-keesi) TARGET ("keessiv") IF (-1 A OR PrsPrc) ;
+COPY:real-keessiv-keesi ("keesi" N Sg Nom &SUGGEST) EXCEPT ("keessiv" Adv &real-keessiv-keesi) TARGET (&real-keessiv-keesi) ;
+
+
+LIST &real-keessiv-keesi = &real-keessiv-keesi ;
+
+#!! ## Easteregg rule
+
 ADD:easteregg (&easteregg) TARGET ("nuvviDgrammarchecker") ;
-COPY:easteregg ("19.1.2023" Num  &SUGGEST) EXCEPT ("nuvviDgrammarchecker" &easteregg) TARGET (&easteregg);
+COPY:easteregg ("27.2.2023" Num  &SUGGEST) EXCEPT ("nuvviDgrammarchecker" &easteregg) TARGET (&easteregg);
 
 #!! ## Word order rules
 
