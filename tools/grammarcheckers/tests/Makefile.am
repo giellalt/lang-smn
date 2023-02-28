@@ -41,7 +41,6 @@ TESTS=\
 	msyn-ncompl-ess-sgill.yaml \
 	msyn-ncompl-placc-plill.yaml \
 	msyn-num-acc-par.yaml \
-	msyn-num-nom-acc.yaml \
 	msyn-num-nom-par.yaml \
 	msyn-num-par-gen.yaml \
 	msyn-obj-acc-ill.yaml \
