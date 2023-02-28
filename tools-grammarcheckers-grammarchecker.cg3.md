@@ -432,7 +432,7 @@ LEX-A, A-CASE, ...
 This set was removed, for a good reason?
 - SET NOT-A-ADV = WORD - A - Adv OR ("meid") ;  
 
-- LIST CONCORD-A = "pyeri" "taggaar" (".*lâš"r) (".*sâš"r) (".*vâš"r) (".*muš"r) ;  = this is the set for adj agreeing with N.
+- LIST CONCORD-A = "maggaar" "pyeri" "taggaar" "tyeggáár" "tieggáár" (".*lâš"r) (".*sâš"r) (".*vâš"r) (".*muš"r) ;  = this is the set for adj agreeing with N.
 
 ### Adverbial sets
 
