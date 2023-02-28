@@ -1384,6 +1384,7 @@ LIST OHTA = "ohtâ" "1"; #!! OKTA
 LIST MANGA = "maŋgâ" "maŋgâlov" ;
 LIST MUADDI = "muáddi" ;
 LIST KALLE = "kalle" ;
+LIST PELNUB = "pelnub" "laknub" ;
 
 SET NUM = Num - OHTA OR Arab - OHTA;
 
@@ -1396,7 +1397,7 @@ LIST TWO-TO-SIX = "kyehti" "kulmâ" "nelji" "vittâ" "kuttâ"
 
 SET NUM-WORD = ("[a-záäâčđŋšž][a-záäâčđŋšž].*"r Num) ;
 
-SET SEVEN-AND-MORE-WORD = NUM-WORD - TWO-TO-SIX - OHTA - MANGA - MUADDI - KALLE ; # - Sem/ID should fix Sem/ID, now 8 is Sem/ID
+SET SEVEN-AND-MORE-WORD = NUM-WORD - TWO-TO-SIX - OHTA - MANGA - MUADDI - KALLE - PELNUB ; # - Sem/ID should fix Sem/ID, now 8 is Sem/ID
 
 LIST SEVEN-AND-MORE-ARABIC = "7" "8" "9"
 	("[1-9][0-9]"r) ("[1-9][0-9][0-9]"r)
@@ -2905,7 +2906,8 @@ ADDRELATION:msyn-extv-sg3-pl3 ($2) N + Pl + Nom FROM (-3 V + LEDE + Sg3 LINK 0 (
 ADD:msyn-extv-pl3-sg3 (&msyn-extv-pl3-sg3) TARGET V IF
 	(*-1 Loc OR DOPPE BARRIER NOT-ADV-PCLE)
 	(0 ("leđe" V Ind Prs Pl3))
-	(*1 (N Sg Nom) - Coll BARRIER NOT-NPMODADV OR NUM OR ("maŋgâ" Pron) OR @CVP OR S-BOUNDARY LINK NOT 0 (Sg Gen) OR (Sg Acc) LINK NEGATE 1 CC OR COMMA LINK *1 (N Nom) BARRIER NOT-NPMODADV);
+	(*1 (N Sg Nom) - Coll BARRIER NOT-NPMODADV OR NUM OR ("maŋgâ" Pron) OR @CVP OR S-BOUNDARY LINK NOT 0 (Sg Gen) OR (Sg Acc) LINK NEGATE 1 CC OR COMMA LINK *1 (N Nom) BARRIER NOT-NPMODADV)
+	(NEGATE *1 (NomAg Sg Nom) LINK 1 (Prop Sem/Mal) OR (Prop Sem/Sur) OR (Prop Sem/Fem) LINK *1 (Pl Nom));
 	#$ Anarâškielâst {láá-uv} maaŋgâs, kiäh láá näävt porgâm.
 	#$ Áigápuátutorjust {láá} 3 uási.
 	#$ Biodiversiteetpargojuávhust {láá} olášuttem toorjân ráhtám virgeomâháid já čanosjuávhuid kenigittee toimâohjelm.
