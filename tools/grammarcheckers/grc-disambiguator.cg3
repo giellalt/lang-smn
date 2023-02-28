@@ -3690,7 +3690,7 @@ SELECT:AAttr (A Attr) - ("nubbe") IF
 	#% Oahpaheaddji šattai geavahit buot čehppodagas, amas massit vátna oahppiidis.
 
 #!! * **OrdAttr**
-SELECT:OrdAttr (Ord Attr)  - ("nubbe") IF (1 N) ;
+SELECT:OrdAttr (Ord Attr)  - ("nubbe") IF (NOT 0 Arab)(1 N) ;
 	#$ Son lea viđát luohkás.
 
 
@@ -4242,6 +4242,7 @@ SELECT:AAttrN (A Attr) IF (NEGATE *-1 COPULAS BARRIER NP-HEAD-NOM OR NOT-AUX-V)(
 #!! * **AAttrCop**  copulas close to the left
 SELECT:AAttrCop (A Attr) IF (*-1 COPULAS BARRIER NOT-ADV)(NEGATE 0 Adv LINK 1 A) 
 (NEGATE 0 (A Pl) LINK *-1 COPULAS LINK -1 Pl OR Pl1 OR Pl2 OR Pl3)
+(NOT 0 Arab)
 (1 A OR N LINK NOT 0 Superl OR Ord)
 (NEGATE 1 Gen LINK *1 Po OR Loc OR Inf BARRIER NP-BOUNDARY OR Indef)(NEGATE 1 Adv OR REAL-V OR ADVLCASE)(*2 go OR EOC OR Neg BARRIER NOT-NP);
 	#$ Sis-Finnmárkkus lea vuolit gaskamearálaš bruttoboahtu go fylkkas...  # vuolit
