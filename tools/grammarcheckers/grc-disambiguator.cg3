@@ -3549,7 +3549,8 @@ SELECT:IndefAttr2 (Indef Attr) IF (0C Pron - ("nubbe"))(NOT 0 Ill OR Loc)((*1 N 
 	#$ Dattetge ii leat muitaluvvon makkárge namahan veara geavahanriiddu birra dálolaččaid ja boazodoalu gaskkas.
 
 #!! * **IndefAttr3** Selects (Indef Attr)
-SELECT:IndefAttr3 (Indef Attr) IF (1 (A Attr))(*2 HEAD-N BARRIER NP-BOUNDARY);
+REMOVE:IndefAttr3a (Pron Nom) IF (0 Indef + Attr) (1 (A Attr))(*2 HEAD-N BARRIER NP-BOUNDARY);
+REMOVE:IndefAttr3b (Pron Acc) IF (0 Indef + Attr) (1 (A Attr))(*2 HEAD-N BARRIER NP-BOUNDARY);
 	#$ ...ja eará almmolaš dahje priváhta doaibma. Comment: Please write the whole sentence as an example. 
 
 
