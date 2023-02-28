@@ -110,7 +110,6 @@ XFAIL_TESTS=\
 	msyn-extsubj-ill-nom.yaml \
 	msyn-ncompl-acc-ill.yaml \
 	msyn-num-par-nom.yaml \
-	msyn-obj-acc-ill.yaml \
 	msyn-pass-accsubj-nomsubj.yaml \
 	msyn-po-acc-gen.yaml \
 	msyn-po-nom-gen.yaml \
