@@ -1385,7 +1385,7 @@ LIST MANGA = "maŋgâ" "maŋgâlov" ;
 LIST MUADDI = "muáddi" ;
 LIST KALLE = "kalle" ;
 
-SET NUM = Num - OHTA ;
+SET NUM = Num - OHTA OR Arab - OHTA;
 
 
 LIST TWO-TO-SIX = "kyehti" "kulmâ" "nelji" "vittâ" "kuttâ"
@@ -2905,7 +2905,10 @@ ADDRELATION:msyn-extv-sg3-pl3 ($2) N + Pl + Nom FROM (-3 V + LEDE + Sg3 LINK 0 (
 ADD:msyn-extv-pl3-sg3 (&msyn-extv-pl3-sg3) TARGET V IF
 	(*-1 Loc OR DOPPE BARRIER NOT-ADV-PCLE)
 	(0 ("leđe" V Ind Prs Pl3))
-	(*1 N + Sg + Nom BARRIER NOT-NPMODADV OR @CVP OR S-BOUNDARY OR NUM LINK NOT 1 CC);
+	(*1 (N Sg Nom) - Coll BARRIER NOT-NPMODADV OR NUM OR @CVP OR S-BOUNDARY OR NUM LINK NOT 0 (Sg Gen) OR (Sg Acc) LINK NOT 1 CC);
+	#$ Anarâškielâst {láá-uv} maaŋgâs, kiäh láá näävt porgâm.
+	#$ Áigápuátutorjust {láá} 3 uási.
+	#$ Biodiversiteetpargojuávhust {láá} olášuttem toorjân ráhtám virgeomâháid já čanosjuávhuid kenigittee toimâohjelm.
 COPY:msyn-extv-pl3-sg3 (Sg3 &SUGGEST) EXCEPT (Pl3 &msyn-extv-pl3-sg3) TARGET ("leđe" V Ind Prs &msyn-extv-pl3-sg3) ;
 #!!  **Agreement rule:** msyn-extv-pl3-sg3 *Liihân/Lááhân must uđđâ autoh.*
 ADD:msyn-extv-pl3-sg3 (&msyn-extv-pl3-sg3) TARGET V IF
@@ -3745,7 +3748,7 @@ ADD:xmsyn-advl-plloc-sgcom (&msyn-advl-plloc-sgcom) TARGET N IF
 	(0 N + Pl + Loc);
 ADD:xmsyn-advl-plloc-sgcom (&msyn-advl-plloc-sgcom) TARGET N IF
 	(NOT *-1 MUITALIT)
-	(*-1 ("oovtâst") OR A + Sg + Com)
+	(*-1 ("oovtâst") OR (A Sg Com) LINK NEGATE 0 (A Pl Loc))
 	(0 N + Pl + Loc);
 #ADD:xmsyn-advl-plloc-sgcom (&msyn-advl-plloc-sgcom) TARGET N IF
 #	(*-1 Num + Sg LINK NEGATE 0 ("ohtâ"))
