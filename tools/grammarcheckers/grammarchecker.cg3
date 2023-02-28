@@ -2072,6 +2072,7 @@ LIST &msyn-num-acc-par = &msyn-num-acc-par ;
 LIST &msyn-num-gen-par = &msyn-num-gen-par ;
 LIST &msyn-num-par-gen = &msyn-num-par-gen ;
 LIST &msyn-num-plnom-par = &msyn-num-plnom-par ;
+LIST &msyn-num-pl-sg = &msyn-num-pl-sg ;
 LIST &msyn-obj-acc-ill = &msyn-obj-acc-ill ;
 LIST &msyn-obj-nom-acc = &msyn-obj-nom-acc ;
 LIST &msyn-obj-plnom-placc = &msyn-obj-plnom-placc ;
@@ -2352,9 +2353,10 @@ COPY:msyn-quant-nom-gen (Gen &SUGGEST) EXCEPT (Nom &msyn-quant-nom-gen) TARGET (
 
 #!! ### Relative pronoun in N + Rel
 
-ADD:xmsyn-rel-sg-pl (&msyn-rel-sg-pl) TARGET Rel IF
+ADD:xmsyn-rel-sg-pl (&msyn-rel-sg-pl) TARGET Rel + Sg IF
 	(-2 N + Pl)
 	(-1 COMMA)
+	(NOT 0 Rel + Pl)
 	(0 Rel + Sg)
 	;
 COPY:msyn-rel-sg-pl (Pl Com &SUGGEST) EXCEPT (Sg Com &msyn-rel-sg-pl) TARGET (Rel &msyn-rel-sg-pl);
@@ -3675,11 +3677,12 @@ ADD:xmsyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF
 #	(NOT *-1 TV BARRIER NOT-NPMOD)
 	(0 Acc)
 	(*1 ILL-V + IV BARRIER  (":") OR N + Ill OR S-BOUNDARY)
-	(NOT 0 Ill OR PxSg3 LINK *1 EOS BARRIER PrfPrc)
+	(NEGATE 0 Ill OR PxSg3 LINK *1 EOS BARRIER PrfPrc)
 	(NEGATE 0 Gen LINK 1 Po)
 	(NOT *1 N + Ill BARRIER NOT-NPMOD)
 	;
 #% Mun eeđâm: Sodoma eennâm piäsá tuámupeeivi älkkeebeht ko tun
+#$ Aanaar kieldâst raijiittâsâid láá jo hárjánâm.
 
 ADD:xmsyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF
 	(*-1 ILL-V + IV BARRIER NOT-NPMODADV OR (":") OR COMMA LINK NOT 0 TV OR PrsPrc LINK NOT *-1 Ill)
@@ -3701,7 +3704,7 @@ LIST ILL-N = "tiervâpuáttim" ;
 
 #!!  **Agreement rule:** msyn-obj-acc-ill *Ideologia kuáská kielâid/kieláid.*
 ADD:xmsyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF
-	(*-1 ILL-N BARRIER NOT-NPMODADV OR (":"))
+	(*-1 ILL-V BARRIER NOT-NPMODADV OR (":"))
 	(0 Acc)
 	(NOT 0 Ill OR PxSg3)
 	(NOT 1 ("pajas") OR ("vuálus") OR ("vuálos"))
