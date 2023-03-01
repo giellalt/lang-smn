@@ -2353,13 +2353,15 @@ COPY:msyn-quant-nom-gen (Gen &SUGGEST) EXCEPT (Nom &msyn-quant-nom-gen) TARGET (
 
 #!! ### Relative pronoun in N + Rel
 
-ADD:xmsyn-rel-sg-pl (&msyn-rel-sg-pl) TARGET Rel + Sg IF
-	(-2 N + Pl)
-	(-1 COMMA)
-	(NOT 0 Rel + Pl)
-	(0 Rel + Sg)
-	;
-COPY:msyn-rel-sg-pl (Pl Com &SUGGEST) EXCEPT (Sg Com &msyn-rel-sg-pl) TARGET (Rel &msyn-rel-sg-pl);
+#ADD:xmsyn-rel-sg-pl (&msyn-rel-sg-pl) TARGET Rel + Sg IF
+#	(-2 N + Pl)
+#	(-1 COMMA)
+#	(NOT 0 Rel + Pl)
+#	(*1 V + Pl3)
+#	;
+#COPY:msyn-rel-sg-pl (Pl Com &SUGGEST) EXCEPT (Sg Com &msyn-rel-sg-pl) TARGET (Rel &msyn-rel-sg-pl);
+
+#% Kolonisistemproosees lii kuáđđám luodâidis algâaalmugáid, mii ovdâmerkkân sämmilij pehti lii vaiguttâm toos et ...
 
 #!! ### Quantor phrases
 
@@ -3704,7 +3706,7 @@ LIST ILL-N = "tiervâpuáttim" ;
 
 #!!  **Agreement rule:** msyn-obj-acc-ill *Ideologia kuáská kielâid/kieláid.*
 ADD:xmsyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF
-	(*-1 ILL-V BARRIER NOT-NPMODADV OR (":"))
+	(*-1 ILL-V BARRIER NOT-NPMODADV OR (":") LINK NOT 0 PrsPrc)
 	(0 Acc)
 	(NOT 0 Ill OR PxSg3)
 	(NOT 1 ("pajas") OR ("vuálus") OR ("vuálos"))
@@ -3718,6 +3720,7 @@ ADDRELATION:msyn-obj-acc-ill ($2) (ILL-V) FROM (4 N + Acc LINK 0 (&msyn-obj-acc-
 
 #%: Ideologia kuáská kielâid.
 #$: Ideologia kuáská kieláid.
+#$: Čuákkim äššilistoost lâi kyehti puásuituálun kyeskee ciälkkámuš tuhhiittem.
 
 
 #!!  **Agreement rule:** msyn-obj-acc-ill
