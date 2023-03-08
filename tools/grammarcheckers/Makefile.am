@@ -10,7 +10,7 @@ SUBDIRS = filters . tests
 
 GIELLA_GC_MWEDIS_SRC=mwe-dis.cg3
 GIELLA_GC_SPELLER_CG_SRC=spellchecker.cg3
-GIELLA_GC_GRAMCHECKER_SRC=grammarchecker.cg3
+GIELLA_GC_GRAMCHECKER_SRC=grammarchecker-release.cg3
 GIELLA_GC_WHSPACE_ANAL_SRC=analyser-gt-whitespace.regex
 
 # Will by default use the one in src/cg3/disambiguator.cg3. To use a
@@ -28,7 +28,7 @@ LOCAL_GC_ZIP_FILES=after-speller-disambiguator.bin \
 #### BEGIN: Local build targets: ####
 
 grammarchecker-release.cg3: grammarchecker.cg3 release.awk
-	$(AM_V_GEN)$(GAWK) -f release.awk grammarchecker.cg3 $@
+	$(AM_V_GEN)$(GAWK) -f release.awk grammarchecker.cg3 > $@
 
 # Copy the standard disambiguator file as the grc version, but without
 # protecting the speller suggestions. This one is applied after the regular
