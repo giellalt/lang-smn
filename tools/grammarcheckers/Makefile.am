@@ -27,6 +27,9 @@ LOCAL_GC_ZIP_FILES=after-speller-disambiguator.bin \
 
 #### BEGIN: Local build targets: ####
 
+grammarchecker-release.cg3: grammarchecker.cg3 release.awk
+	$(AM_V_GEN)$(GAWK) -f release.awk grammarchecker.cg3 $@
+
 # Copy the standard disambiguator file as the grc version, but without
 # protecting the speller suggestions. This one is applied after the regular
 # disambiguation, and will disambiguate the suggestions _after_ the rest of
