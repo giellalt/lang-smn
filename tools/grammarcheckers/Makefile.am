@@ -23,12 +23,14 @@ GIELLA_GC_VALENCY_SRC=valency.cg3
 # If there are additional, language specific files used in the GC archive,
 # specify here:
 LOCAL_GC_ZIP_FILES=after-speller-disambiguator.bin \
-					valency-postspell.bin
+					valency-postspell.bin \
+					grammarchecker.bin
 
 #### BEGIN: Local build targets: ####
 
-grammarchecker-release.cg3: grammarchecker.cg3 release.awk
-	$(AM_V_GEN)$(GAWK) -f release.awk grammarchecker.cg3 > $@
+grammarchecker-release.cg3: $(srcdir)/grammarchecker.cg3 \
+							$(GIELLA_CORE)/scripts/gc-release.awk
+	$(AM_V_GEN)$(GAWK) -f $(GIELLA_CORE)/scripts/gc-release.awk $< > $@
 
 # Copy the standard disambiguator file as the grc version, but without
 # protecting the speller suggestions. This one is applied after the regular
