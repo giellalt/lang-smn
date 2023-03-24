@@ -6755,6 +6755,8 @@ LEXICON KIARUN = 3KIELES
 
 * **LEXICON ANDARAS-plc** similar to KUNAGAS
 
+* **LEXICON ANDARAS-obj** similar to KUNAGAS
+
 * **LEXICON IANUDAH-plc**  Similar to 4JOTOLAH
 
 * **LEXICON KALDEE** Similar to TAHHEE
