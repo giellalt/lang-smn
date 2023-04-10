@@ -1,0 +1,39 @@
+
+Texts for evaluation:
+
+freecorpus/converted/smn/science
+freecorpus/converted/smn/blogs
+boundcorpus/converted/smn/news/yle
+boundcorpus/converted/smn/news/kieras
+boundcorpus/converted/smn/news/anaras
+
+ccat -l smn freecorpus/converted/smn/science freecorpus/converted/smn/blogs boundcorpus/converted/smn/news/yle boundcorpus/converted/smn/news/kieras boundcorpus/converted/smn/news/anaras|wc -w
+
+----
+
+In order to evaluate precision we ran a test on a larger corpus of blogs, news and science texts. These text were not written by L2 speakers.
+
+Size of test corpus: 1266071 words. Total alarms for relevant error types: 227.
+>>> 227/1266071
+.00017929484207441762
+(the number does not include alerms for sentences having been destroyed in the corpus conversion process)
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{l|r|r|r}
+\hline \bf Error type    & \bf TP & \bf FP & \bf Precision \\ 
+\hline
+Ext. verb Sg3 $\rightarrow$ Pl3 &  9 &  2  & 81.0 \% \\ 
+Ext. verb Pl3 $\rightarrow$ Sg3 &  7 &  57 & 11.0 \% \\ 
+E-subj acc $\rightarrow$ nom    &  5 &  45 & 10.0 \% \\
+E-subj gen $\rightarrow$ nom    &  4 &  46 &  8.0 \% \\ 
+Obj plnom $\rightarrow$ placc   &  4 &  66 &  5.7 \% \\ 
+\hline
+Overall precision               & 27 & 227 & 10.6 \% \\
+\hline
+\end{tabular}
+\end{center}
+\caption{\label{newsandscience} Evaluation of Inari Saami \textit{GramDivvun} on a corpus of news and science texts (N=1266071)}
+\end{table}
+
+The best result (35 \%) is for Ext.verb.sg3 -> pl3.
