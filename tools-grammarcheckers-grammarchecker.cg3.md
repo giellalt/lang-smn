@@ -871,7 +871,7 @@ The interference comes from Finnish e-sentences, where the verb is in the singul
 
 **Agreement rule:** msyn-extv-sg3-pl3, *Iäruh omâstemráhtusist: mieđetteijee já kieldee häämi.*
 
-**Agreement rule:** msyn-extv-pl3-sg3 *Must lii/láá uđđâ autoh.*
+**Agreement rule:** msyn-extv-pl3-sg3 
 **Agreement rule:** msyn-extv-pl3-sg3 *Liihân/Lááhân must uđđâ autoh.*
 **Agreement rule:** msyn-extv-pl3-sg3 *Liihân/Lááhân must uđđâ autoh.*
 **Agreement rule:** msyn-extv-pl3-sg3 *Liihân/Lááhân must uđđâ autoh.*
