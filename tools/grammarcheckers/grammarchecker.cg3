@@ -3030,10 +3030,11 @@ COPY:msyn-extsubj-ill-nom (Nom &SUGGEST) EXCEPT (Ill &msyn-extsubj-ill-nom) TARG
 ADD:msyn-extsubj-acc-nom (&msyn-extsubj-acc-nom) TARGET N IF
 	(*-1 LEDE + Sg3 OR LEDE + Pl3 OR ("kavnuđ") + Pl3 BARRIER NOT-NPMODADV LINK -1 Loc OR Po LINK NOT -1 ("mii" Interr))
 	(0C (N Pl Acc))
-	(NEGATE *1 TV + Ger OR TV + PrfPrc OR TV + Inf BARRIER S-BOUNDARY OR VFIN) ;
+	(NEGATE *1 TV + Ger OR TV + PrfPrc OR TV + Inf OR TV + PrsPrc OR TV + Actio BARRIER S-BOUNDARY OR VFIN) ;
 COPY:msyn-extsubj-acc-nom (Nom &SUGGEST) EXCEPT (Acc &msyn-extsubj-acc-nom) TARGET (N Pl &msyn-extsubj-acc-nom) ;
-#$ Párnáást lii uáivilijdis olgospyehtimân vuoigâdvuotâ uuccâđ, vuástáväldiđ já levâttiđ tiäđu já jurduid rijjâ, jis tot ij luávkkáá iärásij vuoigâdvuođâid.
-# Problem: e-subj is vuoigâdvuotâ, not iáivilijdis.
+	#$ Párnáást lii uáivilijdis olgospyehtimân vuoigâdvuotâ uuccâđ, vuástáväldiđ já levâttiđ tiäđu já jurduid rijjâ, jis tot ij luávkkáá iärásij vuoigâdvuođâid.
+	# Problem: e-subj is vuoigâdvuotâ, not iáivilijdis.
+	#$ Italialijn nisonijn lijjii siemin bigimááh pajalist, mut egyptilijn lijjii čapis haalareh já sierânâs pusseer pajalist, já nube spellest lâi vala ollásávt {vuoptâid} čiehhee čapis kappeer, tuše muáđuh uáinojii.
 
 
 ADD:msyn-extsubj-acc-nom (&msyn-extsubj-acc-nom) TARGET N IF
