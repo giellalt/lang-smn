@@ -3040,7 +3040,7 @@ COPY:msyn-extsubj-acc-nom (Nom &SUGGEST) EXCEPT (Acc &msyn-extsubj-acc-nom) TARG
 ADD:msyn-extsubj-acc-nom (&msyn-extsubj-acc-nom) TARGET N IF
 #	(*-1 LEDE + ConNeg BARRIER NOT-NPMODADV LINK -1 Neg LINK -1 Loc OR Po LINK NOT -1 ("mii" Interr))
 	(*-1 LEDE + ConNeg BARRIER S-BOUNDARY OR VFIN OR Inf OR PrfPrc LINK -1 Neg LINK -1 Loc OR Po LINK NOT -1 ("mii" Interr))
-	(NOT -1 ("mihheen"))
+	(NEGATE *-1 PRESENTATION-PRON BARRIER NOT-ADV - (A Attr) - ?)
 	(0C (N Pl Acc))
 	(NEGATE *1 TV + Ger OR TV + PrfPrc OR TV + Inf BARRIER S-BOUNDARY OR VFIN) ;
 COPY:msyn-extsubj-acc-nom (Nom &SUGGEST) EXCEPT (Acc &msyn-extsubj-acc-nom) TARGET (N Pl &msyn-extsubj-acc-nom) ;
@@ -3485,14 +3485,14 @@ COPY:msyn-imp-nom-acc (Acc &SUGGEST) EXCEPT (Nom &msyn-imp-nom-acc) TARGET (N &m
 #!! ### Acc > Nom in predicative
 
 #!!  **Agreement rule:** msyn-pred-acc-nom *Taah láá čielgâ aašijd/ááših.*
-ADD:xmsyn-pred-acc-nom (&msyn-pred-acc-nom) TARGET Acc IF (*-1 ("leđe") + Ind BARRIER NOT-NPMOD OR ("mihheen"))(NOT 0 Arab OR Nom)(NOT *0 TV)(NOT *-1 BOS LINK 1 ("mii") OR ("kii"));
+ADD:xmsyn-pred-acc-nom (&msyn-pred-acc-nom) TARGET Acc IF (*-1 ("leđe") + Ind BARRIER NOT-NPMOD OR PRESENTATION-PRON)(NOT 0 Arab OR Nom)(NOT *0 TV)(NOT *-1 BOS LINK 1 ("mii") OR ("kii"));
 COPY:msyn-pred-acc-nom (Nom &SUGGEST) EXCEPT (Acc  &msyn-pred-acc-nom) TARGET (N &msyn-pred-acc-nom);
 #% Taah láá čielgâ aašijd
 #$ Mii tiet lii aašijd.
 #$ Taah láá čielgâ ááših
 
 
-ADD:xmsyn-pred-acc-nom (&msyn-pred-acc-nom) TARGET (N Pl Acc) IF (*-1 Loc OR Ill BARRIER NOT-ADV OR ("mihheen") LINK -1 ("leđe") LINK -1 Loc OR Ill);
+ADD:xmsyn-pred-acc-nom (&msyn-pred-acc-nom) TARGET (N Pl Acc) IF (*-1 Loc OR Ill BARRIER NOT-ADV OR PRESENTATION-PRON LINK -1 ("leđe") LINK -1 Loc OR Ill);
 COPY:msyn-pred-acc-nom (Nom &SUGGEST) EXCEPT (Acc &msyn-pred-acc-nom) TARGET (N Pl &msyn-pred-acc-nom);
 
 
