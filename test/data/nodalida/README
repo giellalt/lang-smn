@@ -1,0 +1,24 @@
+
+
+
+
+
+mkdir misc/nodalida
+
+ccat -l smn ~/freecorpus/converted/smn/science/ |hfst-tokenise -i tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst |sed 's/ \([.?!] \)/\1£/g;'|tr '£' '\n'|sed 's/ \([:;,]\)/\1/g;'|divvun-checker -a tools/grammarcheckers/smn.zcheck|grep -v '{"errs":\[\],"text":"' > misc/nodalida/positives_science.csv
+
+ccat -l smn ~/freecorpus/converted/smn/blogs/ |hfst-tokenise -i tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst |sed 's/ \([.?!] \)/\1£/g;'|tr '£' '\n'|sed 's/ \([:;,]\)/\1/g;'|divvun-checker -a tools/grammarcheckers/smn.zcheck|grep -v '{"errs":\[\],"text":"' > misc/nodalida/positives_blogs.csv
+
+ccat -l smn ~/boundcorpus/converted/smn/news/yle/ |hfst-tokenise -i tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst |sed 's/ \([.?!] \)/\1£/g;'|tr '£' '\n'|sed 's/ \([:;,]\)/\1/g;'|divvun-checker -a tools/grammarcheckers/smn.zcheck|grep -v '{"errs":\[\],"text":"' > misc/nodalida/positives_news_yle.csv
+
+ccat -l smn ~/boundcorpus/converted/smn/news/kieras/ |hfst-tokenise -i tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst |sed 's/ \([.?!] \)/\1£/g;'|tr '£' '\n'|sed 's/ \([:;,]\)/\1/g;'|divvun-checker -a tools/grammarcheckers/smn.zcheck|grep -v '{"errs":\[\],"text":"' > misc/nodalida/positives_news_kieras.csv
+
+ccat -l smn ~/boundcorpus/converted/smn/news/anaras/ |hfst-tokenise -i tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst |sed 's/ \([.?!] \)/\1£/g;'|tr '£' '\n'|sed 's/ \([:;,]\)/\1/g;'|divvun-checker -a tools/grammarcheckers/smn.zcheck|grep -v '{"errs":\[\],"text":"' > misc/nodalida/positives_news_anaras.csv
+
+
+
+
+
+for i in blogs news_anaras news_kieras news_yle science ; do grep  '"msyn-extv-sg3-pl3"' positives_$i.csv |rev|cut -d'"' -f2|rev|sed 's/^/  - "/'|sed 's/$/"/' > snt.$i.csv ; done 
+
+
