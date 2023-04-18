@@ -2229,14 +2229,15 @@ COPY:msyn-posspl-acc-gen (Gen &SUGGEST) EXCEPT (Acc &msyn-posspl-acc-gen) TARGET
 
 #!!  **Agreement rule:** msyn-posspl-ill-gen: *uásálistiđ párnáid/párnái leiráid stuorrâhâžžân.*
 ADD:xmsyn-posspl-ill-gen (&msyn-posspl-ill-gen) TARGET N + Pl IF
-	(*-1C V BARRIER NOT-NPMOD LINK NOT 0 TV OR  <TH-Ill-Any>) # testing...
-	(0 N + Pl + Ill)
+	(*-1C V BARRIER NOT-NPMOD LINK NOT 0 TV OR <TH-Ill-Any>) # testing...
+	(0 N + Pl + Ill + Sem/Hum)
 	(1 N OR Actio + Nom LINK NOT *1 TV + V BARRIER S-BOUNDARY)
-	(NOT 1 DANGEROUSNOUN OR TV)
+	(NOT 1 DANGEROUSNOUN OR TV OR <TH-Ill-Any>)
 	;
 COPY:msyn-posspl-ill-gen (Gen &SUGGEST) EXCEPT (Ill &msyn-posspl-ill-gen) TARGET (N Pl &msyn-posspl-ill-gen);
-#$ Škovlim maŋa puávtáh uásálistiđ párnáid leiráid stuorrâhâžžân.
-#$ piäjá aainâs-uv muu jurduin puoh pittáid sajasis.
+	#$ Škovlim maŋa puávtáh uásálistiđ párnáid leiráid stuorrâhâžžân.
+	#$ piäjá aainâs-uv muu jurduin puoh pittáid sajasis.
+	#$ Sun čielgij, maht vala Suomâ haldâttâs 1959 kieđâvušâi ILO sopâmuš já adelij staatârááđán celkkuu, et Suomâst iä lah algâ-aalmugáid kullee aalmugeh ollágin, aaibâs uccâ sämmilâšhiäimuid väldihánnáá uáinun.
 
 #!!  **Agreement rule:** msyn-ncompl-ess-sgill: *Must lii tárbu toorjân/torjui.*
 ADD:xmsyn-ncompl-ess-sgill (&msyn-ncompl-ess-sgill) TARGET N IF (-1 N-WITH-ILL LINK NOT 0 PX)(0 Ess LINK NOT 0 Sg + Ill);
@@ -3030,7 +3031,7 @@ COPY:msyn-extsubj-ill-nom (Nom &SUGGEST) EXCEPT (Ill &msyn-extsubj-ill-nom) TARG
 ADD:msyn-extsubj-acc-nom (&msyn-extsubj-acc-nom) TARGET N IF
 	(*-1 LEDE + Sg3 OR LEDE + Pl3 OR ("kavnuđ") + Pl3 BARRIER NOT-NPMODADV LINK -1 Loc OR Po LINK NOT -1 ("mii" Interr))
 	(0C (N Pl Acc))
-	(NEGATE *1 TV + Ger OR TV + PrfPrc OR TV + Inf OR TV + PrsPrc OR TV + Actio OR TV +VAbess BARRIER S-BOUNDARY OR VFIN) ;
+	(NEGATE *1 TV + Ger OR TV + PrfPrc OR TV + Inf OR TV + PrsPrc OR TV + Actio OR TV + VAbess BARRIER S-BOUNDARY OR VFIN) ;
 COPY:msyn-extsubj-acc-nom (Nom &SUGGEST) EXCEPT (Acc &msyn-extsubj-acc-nom) TARGET (N Pl &msyn-extsubj-acc-nom) ;
 	#$ Párnáást lii uáivilijdis olgospyehtimân vuoigâdvuotâ uuccâđ, vuástáväldiđ já levâttiđ tiäđu já jurduid rijjâ, jis tot ij luávkkáá iärásij vuoigâdvuođâid.
 	# Problem: e-subj is vuoigâdvuotâ, not iáivilijdis.
@@ -3042,7 +3043,7 @@ ADD:msyn-extsubj-acc-nom (&msyn-extsubj-acc-nom) TARGET N IF
 	(*-1 LEDE + ConNeg BARRIER S-BOUNDARY OR VFIN OR Inf OR PrfPrc OR (N Nom) OR (Pron Nom) LINK -1 Neg LINK -1 Loc OR Po LINK NOT -1 ("mii" Interr))
 	(NEGATE *-1 PRESENTATION-PRON BARRIER NOT-ADV - (A Attr) - ?)
 	(0C (N Pl Acc))
-	(NEGATE *1 TV + Ger OR TV + PrfPrc OR TV + Inf OR OR TV + PrsPrc OR OR TV + Actio OR TV + VAbess BARRIER S-BOUNDARY OR VFIN)
+	(NEGATE *1 TV + Ger OR TV + PrfPrc OR TV + Inf OR TV + PrsPrc OR TV + Actio OR TV + VAbess BARRIER S-BOUNDARY OR VFIN)
 	(NEGATE 1 VFIN + TV) ;
 COPY:msyn-extsubj-acc-nom (Nom &SUGGEST) EXCEPT (Acc &msyn-extsubj-acc-nom) TARGET (N Pl &msyn-extsubj-acc-nom) ;
 	#$ Sunjin tot lâi eromâšávt vyehi šeštiđ ääigi, ko hoppuus máttáátteijest ij lamaš ain asto jieš ruggâđ puoh {sänilistoid}.
