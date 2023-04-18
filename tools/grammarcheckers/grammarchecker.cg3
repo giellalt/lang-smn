@@ -2884,12 +2884,13 @@ COPY:msyn-v-sg1-prfprc (PrfPrc &SUGGEST) EXCEPT (Ind Prs Sg1 &msyn-v-sg1-prfprc)
 
 #!!  **Agreement rule:** msyn-extv-sg3-pl3 *Must lii/láá uđđâ autoh.*
 ADD:msyn-extv-sg3-pl3 (&msyn-extv-sg3-pl3) TARGET V IF
-(*-1 Loc OR DOPPE OR Sem/Part BARRIER NOT-ADV-PCLE)
+(*-1 Loc OR DOPPE OR Sem/Part BARRIER NOT-ADV-PCLE LINK NEGATE -1 Sem/Part + (Sg Nom))
 (0 ("leđe" V Ind Prs Sg3))
-(*1 N + Pl + Nom BARRIER NOT-NPMODADV OR @CVP OR S-BOUNDARY);
+(*1 N + Pl + Nom BARRIER NOT-NPMODADV OR @CVP OR S-BOUNDARY OR (N Sg Nom));
 COPY:msyn-extv-sg3-pl3 (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-extv-sg3-pl3) TARGET ("leđe" V Ind Prs &msyn-extv-sg3-pl3) ;
-#% Must lii uđđâ autoh.
-#$ Must láá uđđâ autoh.
+	#% Must lii uđđâ autoh.
+	#$ Must láá uđđâ autoh.
+	#$ Stuorrâ šiev peeli internet-máttááttâsâst {lii} tot, et uáppeeh já máttáátteijeeh pyehtih leđe kost peri, jis peri tiätumaašin já jotelis internet-ohtâvuotâ lii juáhhást.
 
 #!!  **Agreement rule:** msyn-extv-sg3-pl3, *Iäruh omâstemráhtusist: mieđetteijee já kieldee häämi.*
 ADD:msyn-extv-sg3-pl3 (&msyn-extv-sg3-pl3) TARGET V IF
