@@ -2710,23 +2710,25 @@ COPY:msyn-agr-sg3-pl3 (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-agr-sg3-pl3) TARGET (V &m
 ADD:xmsyn-agr-pl3-sg3 (&msyn-agr-pl3-sg3) TARGET (V Pl3) IF
 	(NEGATE 0 (V Sg3))
 	(0 LEDE)
-	(*-1 SUBSTANTIVE + Loc + Sg  #BARRIER NOT-ADV-PCLE-ILL-LOC-COM
+	(*-1 SUBSTANTIVE + Loc + Sg BARRIER S-BOUNDARY OR VFIN OR (N Pl) #BARRIER NOT-ADV-PCLE-ILL-LOC-COM
 	  LINK -1 (".*%"r) + Num + Arab OR ("peeli") + Sg + Nom
 	LINK NOT 1 PUNCT)
 	(*1 N + Sg + Nom BARRIER V)
 	;    
 ADD:xmsyn-agr-pl3-sg3 (&msyn-agr-pl3-sg3) TARGET (V Pl3) IF
 	(NEGATE 0 (V Sg3) OR LEDE)
-	(*-1 SUBSTANTIVE + Loc + Sg  #BARRIER NOT-ADV-PCLE-ILL-LOC-COM
+	(*-1 SUBSTANTIVE + Loc + Sg BARRIER S-BOUNDARY OR VFIN OR (N Pl) #BARRIER NOT-ADV-PCLE-ILL-LOC-COM
 	  LINK -1 (".*%"r) + Num + Arab OR ("peeli") + Sg + Nom
 	  LINK NOT 1 PUNCT)
-	;    
+	; 
+	   
 COPY:msyn-agr-pl3-sg3 (Sg3 &SUGGEST) EXCEPT (Pl3 &msyn-agr-pl3-sg3) TARGET (V &msyn-agr-pl3-sg3);
-#% 7 kandâd láá.., 5 kaandâ láá ..., 5 kaandâst lii nuárvui. 5 kaandâst lii/láá kyeleh. 
-#% 75 % ulmust láá/lii čääci.
-#$ Paijeel 80 % čääsist Suomâst joteh/jotá puuđhâst.
-#$ 75 %:d ulmuin lii/láá suopmelaččat.
-#$ 7080 % siskáldâsâst láá lamaš suu čalluuh.
+	#% 7 kandâd láá.., 5 kaandâ láá ..., 5 kaandâst lii nuárvui. 5 kaandâst lii/láá kyeleh. 
+	#% 75 % ulmust láá/lii čääci.
+	#$ Paijeel 80 % čääsist Suomâst joteh/jotá puuđhâst.
+	#$ 75 %:d ulmuin lii/láá suopmelaččat.
+	#$ 7080 % siskáldâsâst láá lamaš suu čalluuh.
+	#$ Stuorrâ šiev peeli internet-máttááttâsâst lii tot, et uáppeeh já máttáátteijeeh {pyehtih} leđe kost peri, jis peri tiätumaašin já jotelis internet-ohtâvuotâ lii juáhhást.
 
 #!!  **Agreement rule:** msyn-agr-other-pl3, Subject to the left, *Toh puátá/puátih.*
 ADD:xmsyn-agr-other-pl3 (&msyn-agr-other-pl3) TARGET V IF
