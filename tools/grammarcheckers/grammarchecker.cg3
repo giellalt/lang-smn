@@ -3431,16 +3431,18 @@ COPY:msyn-plobj-nom-acc (Acc &SUGGEST) EXCEPT (Nom &msyn-plobj-nom-acc) TARGET (
 
 
 #!!  **Agreement rule:** msyn-obj-plnom-placc (6 rules) *Lam valjim taah säänih/saanijd.*
-ADD:xmsyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-1 VFIN + Sg1 + TV)(0C N + Pl + Nom);
-ADD:xmsyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-2 VFIN + Sg1)(-1 PrfPrc + TV)(0C N + Pl + Nom);
-ADD:xmsyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-2 VFIN + Sg1 + TV)(-1 Pl + Nom)(0C N + Pl + Nom);
-ADD:xmsyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-2 VFIN + Sg1 + TV)(-1 Pl + Nom OR Attr)(0C N + Pl + Nom);
-ADD:xmsyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-3 VFIN + Sg1)(-1 Pl + Nom OR Attr)(-2 PrfPrc + TV)(0C N + Pl + Nom);
-ADD:xmsyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-3 VFIN + Sg1 + TV)(-1 Pl + Nom OR Attr)(-2 Pl + Nom)(0C N + Pl + Nom);
+ADD:xmsyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-1 VFIN + Sg1 + TV LINK NOT 0 PrsPrc OR (N Gen) OR (N Nom))(0C N + Pl + Nom);
+ADD:xmsyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-2 VFIN + Sg1 LINK NOT 0 PrsPrc OR (N Gen) OR (N Nom))(-1 PrfPrc + TV)(0C N + Pl + Nom);
+ADD:xmsyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-2 VFIN + Sg1 + TV LINK NOT 0 PrsPrc OR (N Gen) OR (N Nom))(-1 Pl + Nom)(0C N + Pl + Nom);
+ADD:xmsyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-2 VFIN + Sg1 + TV LINK NOT 0 PrsPrc OR (N Gen) OR (N Nom))(-1 Pl + Nom OR Attr)(0C N + Pl + Nom);
+ADD:xmsyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-3 VFIN + Sg1 LINK NOT 0 PrsPrc OR (N Gen) OR (N Nom))(-1 Pl + Nom OR Attr)(-2 PrfPrc + TV)(0C N + Pl + Nom);
+ADD:xmsyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-3 VFIN + Sg1 + TV LINK NOT 0 PrsPrc OR (N Gen) OR (N Nom))(-1 Pl + Nom OR Attr)(-2 Pl + Nom)(0C N + Pl + Nom);
 COPY:msyn-obj-plnom-placc (Acc &SUGGEST) EXCEPT (Nom &msyn-obj-plnom-placc) TARGET (N Pl &msyn-obj-plnom-placc);
-#$ Lam valjim taah säänih.
-#% Lam valjim táid saanijd.
-# olen valinnut nämä sanat
+	#$ Lam valjim taah säänih.
+	#% Lam valjim táid saanijd.
+	# olen valinnut nämä sanat
+	#$ Kevttee uáinust vyelgee vuávám – pargopáájást vuolgâjuurdân tuáimih sämmilij kevttim {rievah} já kerriseh.
+
 
 
 
