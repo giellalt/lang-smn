@@ -2690,7 +2690,7 @@ COPY:msyn-agr-sg3-du3 (Du3 &SUGGEST) EXCEPT (Sg3 &msyn-agr-sg3-du3) TARGET (V  &
 ADD:xmsyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET V IF
 	(*-1C NUM - Rom BARRIER Nom OR V OR (")") OR S-BOUNDARY OR COMMA OR Loc LINK NOT 0 Sem/ID OR Sem/Year OR ("<[A-ZÁÄČŠ].*>r") OR Gen OR KALLE LINK NOT 1 PUNCT OR Sem/Measr_Time OR ADVLCASE OR Adv)
 	(NEGATE 0 MOD-ASP LINK *1 TV + Inf BARRIER Acc LINK *1 EOS OR S-BOUNDARY BARRIER Acc)
-	(0 V + Sg3)(NEGATE *1 (Pron Sg3) OR (N Sg Nom) OR (Indef Sg Nom) BARRIER NOT-ADV-PCLE - Inf - PrfPrc - ConNeg - ADVLCASE - Gen - (Acc Sg))
+	(0 V + Sg3)(NEGATE *1 (Pron Sg3) OR (N Sg Nom) OR (Indef Sg Nom) BARRIER NOT-ADV-PCLE - Inf - PrfPrc - ConNeg - ADVLCASE - Gen - (Acc Sg) - Attr)
 	(NEGATE 0 Foc/han OR ("<[A-Z|Á][a-z|áâđäčš]*>"r));
 COPY:msyn-agr-sg3-pl3 (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-agr-sg3-pl3) TARGET (V &msyn-agr-sg3-pl3);
 	#% 80 puátá.
@@ -2699,6 +2699,7 @@ COPY:msyn-agr-sg3-pl3 (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-agr-sg3-pl3) TARGET (V &m
 	#$ Já kyevti saajeest oro tego kiinii ličij čokkáámin, mottoom uáppee ooinij.
 	## Kuulmâ ihán {ij} arvam ollágin.
 	#$ 30 {Ij} pajaspaijaanmist kihheen vääldi káálgu ige riemâ kálgun.
+	#$ 2 Suu {servidij} stuorrâ olmoošjuávkku, já sun pyeredij sii.
 
 
 #!!  **Agreement rule:** msyn-agr-sg3-pl3, Subject to the left, *80 puátá/puáđah*
