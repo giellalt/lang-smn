@@ -2688,14 +2688,15 @@ COPY:msyn-agr-sg3-du3 (Du3 &SUGGEST) EXCEPT (Sg3 &msyn-agr-sg3-du3) TARGET (V  &
 
 #!!  **Agreement rule:** msyn-agr-sg3-pl3, Subject to the left, *80 puátá/puáđah*
 ADD:xmsyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET V IF
-	(*-1C NUM BARRIER Nom OR V OR (")") OR S-BOUNDARY OR COMMA OR Loc LINK NOT 0 Sem/ID OR Sem/Year OR ("<[A-ZÁÄČŠ].*>r") OR Gen OR KALLE LINK NOT 1 PUNCT OR Sem/Measr_Time)
+	(*-1C NUM - Rom BARRIER Nom OR V OR (")") OR S-BOUNDARY OR COMMA OR Loc LINK NOT 0 Sem/ID OR Sem/Year OR ("<[A-ZÁÄČŠ].*>r") OR Gen OR KALLE LINK NOT 1 PUNCT OR Sem/Measr_Time OR ADVLCASE)
 	(NEGATE 0 MOD-ASP LINK *1 TV + Inf BARRIER Acc LINK *1 EOS OR S-BOUNDARY BARRIER Acc)
-	(0 V + Sg3);
+	(0 V + Sg3)(NEGATE *1 (Pron Sg3) OR (N Sg Nom) BARRIER NOT-ADV-PCLE - Inf - PrfPrc - ConNeg);
 COPY:msyn-agr-sg3-pl3 (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-agr-sg3-pl3) TARGET (V &msyn-agr-sg3-pl3);
-#% 80 puátá.
-#$ 80 puáđah.
-#$ Kale haajâ muu kuulmâ kilomeetter pyerámääđhi ääigi váhá láivuččij.
-#$ Já kyevti saajeest oro tego kiinii ličij čokkáámin, mottoom uáppee ooinij.
+	#% 80 puátá.
+	#$ 80 puáđah.
+	#$ Kale haajâ muu kuulmâ kilomeetter pyerámääđhi ääigi váhá láivuččij.
+	#$ Já kyevti saajeest oro tego kiinii ličij čokkáámin, mottoom uáppee ooinij.
+	## Kuulmâ ihán {ij} arvam ollágin.
 
 
 #!!  **Agreement rule:** msyn-agr-sg3-pl3, Subject to the left, *80 puátá/puáđah*
@@ -3577,7 +3578,7 @@ ADDRELATION:msyn-predagr-pl3-sg3 ($2) (N Sg Nom) FROM (-5 Neg LINK 0 (&msyn-pred
 
 ADD:xmsyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET A IF
 	(0C Sg + Nom)
-	(NOT 0  CONCORD-A OR Ord)
+	(NOT 0  CONCORD-A OR Ord OR (N Sg Nom))
 	(1 N LINK NOT 0 Ess)
 	;
 COPY:msyn-adj-pred-attr (Attr &SUGGEST) EXCEPT (Sg Nom &msyn-adj-pred-attr) TARGET ( A &msyn-adj-pred-attr);
