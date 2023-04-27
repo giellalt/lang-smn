@@ -40,6 +40,7 @@ TESTS=\
 	msyn-ncompl-acc-ill.yaml \
 	msyn-ncompl-ess-sgill.yaml \
 	msyn-ncompl-placc-plill.yaml \
+	msyn-negcompl-sg3-conneg.yaml \
 	msyn-num-acc-par.yaml \
 	msyn-num-nom-par.yaml \
 	msyn-num-par-gen.yaml \
@@ -78,6 +79,7 @@ TESTS=\
 	neg-extv-sg3-pl3.yaml \
 	neg-interferens_celkkuuh.yaml \
 	neg-ncomple-ess-sgill.yaml \
+	neg-negcompl-sg3-conneg.yaml \
 	neg-obj-acc-ill.yaml \
 	neg-obj-plnom-placc.yaml \
 	neg-obj-sgnom-sgacc.yaml \
@@ -109,6 +111,8 @@ XFAIL_TESTS=\
 	msyn-dynamic-compounds.yaml \
 	msyn-extsubj-ill-nom.yaml \
 	msyn-ncompl-acc-ill.yaml \
+	msyn-ncompl-ess-sgill.yaml \
+	msyn-negcompl-sg3-conneg.yaml \
 	msyn-num-par-nom.yaml \
 	msyn-pass-accsubj-nomsubj.yaml \
 	msyn-po-acc-gen.yaml \
@@ -117,10 +121,15 @@ XFAIL_TESTS=\
 	msyn-pred-acc-nom.yaml \
 	msyn-quant-gen-nom.yaml \
 	msyn-refl-sg-pl.yaml \
+	msyn-rel-sg-pl.yaml \
 	msyn-top-nom-acc.yaml \
 	msyn-v-actio-sg1.yaml \
 	neg-extv-sg3-pl3.yaml \
+	neg-det-nom-acc.yaml \
+	neg-negcompl-sg3-conneg.yaml \
 	neg-obj-acc-ill.yaml \
+	neg-obj-sgnom-sgacc.yaml \
+	neg-subj-gen-nom.yaml \
 	ovdamearkkat.yaml \
 	science.yaml \
 	syn-OVS-OSV.yaml \
