@@ -1717,7 +1717,7 @@ Accusative or Illative
 
 * **NDr2335** Selects Nom
 
-* **NDr2336** selects (N Sg Nom) when 1 SG3-V
+* **NDr2336** selects (N Sg Nom) when 1 SG3-V (grc: also Actio?)
 
 * **NDr2338** Selects (N Sg Nom)	
 

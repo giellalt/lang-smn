@@ -765,6 +765,8 @@ mii + nominative should be mii + acc
 
 #### Quantor adverbs
 
+#### Quantor adverb complementss
+
 msyn-quant-gen-nom
 
 ## Verb agreement rules
