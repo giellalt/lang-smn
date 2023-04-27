@@ -10,6 +10,26 @@ Tests:
   - "Škovlim maŋa puávtáh uásálistiđ {párnáid}£{párnái} já nuorâi {leiráid}{leirâi} stuorrâhâžžân."
   - "Čielgiittâsâst, mii lii taan muštâlus vuáđdun čiälgá, et motomijn kieldâin já staatâ virgeomâhijn iä lah tärkkilis tiäđuh {jieškote-uv}£{jieškođe-uv} {sämikielâi}£{sämikielâ} iäruin. " #  -- genpl - gensg - what rule?
 
+  - "Uávsih {leggistui}£{leggistuvvojii} tuulân."
+
 #$# F: Moin naalijn teevstâst iäruttuvvojeh uánádâsâid já numerijd?
 #$# R: Moin naalijn uánádâsah já numereh iäruttuvvojeh teevstâst?
 #$# R: Moin naalijn uánádâsâid já numerijd puáhtá iäruttiđ teevstâst?
+
+  - "Kolonisistemproosees lii kuáđđám luodâidis algâaalmugáid, mii ovdâmerkkân sämmilij pehti lii {vaikuttâm}${vaiguttâm} toos et sist lii távjá {vyeligâš}£{vyeligis} {jiešáárvutobdo}${jiešárvutobdo}."
+# error msk: "vyeligâš has an err-orth vyelligâš with vyelligis as attribute. The error detector finds both but generates only one of them, and the result is flagged as fp2 and causes fn2 for lii/láá. TODO: Report.
+
+# Compound problem:
+# This is ok without "šaddo". The grc cannot generate compound suggestions.
+# It gives: šaddo+N+Cmp/SgNom+Cmp#šlaajâ+N+Pl+Nom, 
+# this works with hdsmn but not in grc
+  - "Suomâkielâst {maŋgâ}${maaŋgah} {šaddošlaajâ}${šaddošlaajah} láá finnim nommânis ellee noomâ."
+
+# Cannot find maŋgâ error if verb is wrong.
+# This works:
+  - "Suomâkielâst {maŋgâ}${maaŋgah} {šlaajâ}${šlaajah} {lii}£{verb,sg3-pl3|láá} finnim nommânis ellee noomâ."
+# This as well:
+  - "Suomâkielâst maaŋgah šlaajah {lii}£{verb,sg3-pl3|láá} finnim nommânis ellee noomâ."
+# This does not:
+  - "Suomâkielâst {maŋgâ}${maaŋgah} {šlaajâ}${šlaajah} {lii}£{verb,sg3-pl3|láá} finnim nommânis ellee noomâ."
+# ... and the problem is the missing maŋgâ > maaŋgah correction.
