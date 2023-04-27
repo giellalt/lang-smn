@@ -5867,7 +5867,14 @@ SELECT:CoAcc3 Acc IF (0 Acc LINK 1 ("já") OR ("dahje") LINK *1C Acc BARRIER NOT
 
 	
 #!! * **CoAccJA** Selects Acc when "já" to the left and comma to the left of "já" with a secure Acc to the left of comma *sámegiela, ja heajos dárogiela.*
-SELECT:CoAccJA Acc IF ((*-1 ("já") BARRIER SV-BOUNDARY OR Nom OR FAUXV LINK -1 COMMA LINK -1C Acc) OR (*-1 ("já") BARRIER SV-BOUNDARY OR Nom OR FAUXV LINK -1C Acc))(NEGATE 0 Num)(NEGATE 0 Gen LINK 1 Acc LINK 1 @CNP)(NEGATE 1 Gen LINK 1 Po)(NEGATE 1 Nom OR Acc OR Attr)(NEGATE *1 FMAINV BARRIER S-BOUNDARY OR COMMA)(NEGATE 1 (A Ess) LINK 1 Acc);
+SELECT:CoAccJA Acc IF 
+	((*-1 ("já") BARRIER SV-BOUNDARY OR N OR FAUXV LINK -1 COMMA LINK -1C Acc) OR (*-1 ("já") BARRIER SV-BOUNDARY OR N OR FAUXV LINK -1C Acc))
+	(NEGATE 0 Num)
+	(NEGATE 0 Gen LINK 1 Acc LINK 1 @CNP)
+	(NEGATE 1 Gen LINK 1 Po)
+	(NEGATE 1 Nom OR Acc OR Attr)
+	(NEGATE *1 FMAINV BARRIER S-BOUNDARY OR COMMA)
+	(NEGATE 1 (A Ess) LINK 1 Acc);
 	#$ Mu givssidedje danin go hállen sámegiela, ja heajos dárogiela.
 	#$ Gusa-, gálbbi- ja gáiccanáhkis mearragátti sámit ráhkadedje gápmagiid, ja sávzzanáhkis dorkkaid ja roavgguid.
 	#% 1995 rájes son lea leamaš Sámi joatkkaskuvllas Kárášjogas, gos son lea oahpahan dearvvašvuođa- ja sosiálafága vuođđokurssa ja veahkkedivššár ja ambulánsa joatkkakurssa.
@@ -5986,7 +5993,8 @@ REMOVE:NomIfNum Acc IF (1 (N Gen))(2 NOT-FAUXV + TRANS-V)(*3 (N Acc) BARRIER NOT
 	#Comment: The subject is a numeral.
 
 #!! * **NumAcc2** Selects Acc for singular numerals if there is a transitive verb somewhere in the sentence and the numeral is followed by a noun *logi báhkkoma* OBS
-SELECT:NumAcc2 Acc IF (0* NOT-FAUXV + TRANS-V BARRIER SV-BOUNDARY)(0 NUM + Sg LINK NOT 0 NUMUNIT OR Sem/Year)(*1 (N Acc) OR (N Gen) BARRIER NOT-Attr LINK NOT 0 Ill)(NEGATE *-1 COPULAS + FMAINV BARRIER SV-BOUNDARY)(NEGATE *-1 Der/Pass OR (Dem Nom) BARRIER NOT-ADV)(NEGATE *1 COPULAS + FMAINV BARRIER COMMA OR SV-BOUNDARY)(NEGATE -1 NUMMAR);
+SELECT:NumAcc2 Acc IF (*1 NOT-FAUXV + TRANS-V BARRIER SV-BOUNDARY LINK *1 EOS BARRIER Acc)(0 NUM + Sg LINK NOT 0 NUMUNIT OR Sem/Year)(*1 (N Acc) OR (N Gen) BARRIER NOT-Attr LINK NOT 0 Ill)(NEGATE *-1 COPULAS + FMAINV BARRIER SV-BOUNDARY)(NEGATE *-1 Der/Pass OR (Dem Nom) BARRIER NOT-ADV)(NEGATE *1 COPULAS + FMAINV BARRIER COMMA OR SV-BOUNDARY)(NEGATE -1 NUMMAR);
+SELECT:NumAcc2 Acc IF (*-1 NOT-FAUXV + TRANS-V BARRIER SV-BOUNDARY LINK *-1 BOS BARRIER Acc)(0 NUM + Sg LINK NOT 0 NUMUNIT OR Sem/Year)(*1 (N Acc) OR (N Gen) BARRIER NOT-Attr LINK NOT 0 Ill)(NEGATE *-1 COPULAS + FMAINV BARRIER SV-BOUNDARY)(NEGATE *-1 Der/Pass OR (Dem Nom) BARRIER NOT-ADV)(NEGATE *1 COPULAS + FMAINV BARRIER COMMA OR SV-BOUNDARY)(NEGATE -1 NUMMAR);
 	#$ Sii máhtte áddekeahttá bajillohkat logi báhkkoma ja Áhččámet.
 	#$ Áiggun dušše geahččat moadde filmma.
 	#$ Dákkár dáhpáhusat, ja máŋga iežá dáhpáhusa ja digaštallama dahke munnje persovnnalaččat váttisin dáid gažaldagaid mat bohciidedje Gáivuonas. 
@@ -6429,7 +6437,13 @@ SELECT:NDr2333 (Num Nom) IF (*1 TIME + Gen BARRIER NOT-A LINK *1 ("leđe") BARRI
 	#$ Vuosttaš logi minuvtta lei buorre áigodat Nordlysa ektui.
 
 #!! * **NDr2334** Selects Nom
-SELECT:NDr2334 Nom IF (*-1 BOC OR PUNCT BARRIER NOT-NPMODADV OR (Dem Acc))(0 Sg OR ABBR LINK NOT 0 Ord)(NEGATE 0 Adv - ("oovtnáál") OR Loc OR Po OR VFIN)(NEGATE 0 Ess LINK *1 Nom BARRIER NOT-NPMOD)(NEGATE 0 Ess LINK *1 OPRED-V BARRIER SV-BOUNDARY LINK *0 Nom BARRIER WORD)(NEGATE 0 Attr LINK *1 N BARRIER NOT-NPMOD)((*1C SG3-V BARRIER NOT-ADV-PCLE) OR (1 (N Com) OR (N Loc) LINK *1C SG3-V BARRIER NOT-ADV-PCLE LINK NEGATE *1 (Sg Nom) BARRIER NOT-NPMOD));
+SELECT:NDr2334 Nom IF 
+	(*-1 BOC OR PUNCT BARRIER NOT-NPMODADV OR (Dem Acc))
+	(0 Sg OR ABBR LINK NOT 0 Ord)(NEGATE 0 Adv - ("oovtnáál") OR Loc OR Po OR VFIN)
+	(NEGATE 0 Ess LINK *1 Nom BARRIER NOT-NPMOD)
+	(NEGATE 0 Ess LINK *1 OPRED-V BARRIER SV-BOUNDARY LINK *0 Nom BARRIER WORD)
+	(NEGATE 0 Attr LINK *1 N BARRIER NOT-NPMOD)
+	((*1C SG3-V BARRIER NOT-ADV-PCLE) OR (1 (N Com) OR (N Loc) LINK *1C SG3-V BARRIER NOT-ADV-PCLE LINK NEGATE *1 (Sg Nom) BARRIER NOT-NPMOD));
 	#$ ...ahte doaimma jođihangoddi vejolaččat mearrida... Comment: We are supposed to have full sentences without the "..." so we can check it with smedist whenever needed!
 	#$ Almmolaš sámi ságastallan lea vejolaš.
 
@@ -6437,8 +6451,12 @@ SELECT:NDr2334 Nom IF (*-1 BOC OR PUNCT BARRIER NOT-NPMODADV OR (Dem Acc))(0 Sg 
 SELECT:NDr2335 Nom IF (*-1 BOC OR PUNCT BARRIER NOT-NPMODADV OR (Dem Acc))(0 Sg)(NEGATE 0 Adv OR Loc)(NEGATE 0 Ess)(NEGATE 0 Attr LINK *1 N BARRIER NOT-NPMOD)(1 (Num Nom))(*2C SG3-V BARRIER NOT-ADV-PCLE);	
 	#$ NOU 1995:6 cealká earret eará nu.
 
-#!! * **NDr2336** selects (N Sg Nom) when 1 SG3-V
-SELECT:NDr2336 (N Sg Nom) IF (NEGATE 0 Acc OR Po OR Loc)(1 SG3-V LINK NEGATE 0 N)(NEGATE *2C Nom BARRIER S-BOUNDARY) (NEGATE 0 Ess LINK *-1 Nom BARRIER REAL-V);
+#!! * **NDr2336** selects (N Sg Nom) when 1 SG3-V (grc: also Actio?)
+SELECT:NDr2336 (N Sg Nom) IF 
+	(NEGATE 0 Acc OR Po OR Loc)
+	(1 SG3-V LINK NEGATE 0 N)
+	(NEGATE *2C Nom BARRIER S-BOUNDARY) 
+	(NEGATE 0 Ess LINK *-1 Nom BARRIER REAL-V);
 	#$ Doaibmaplána árvvoštallan čájeha maiddái dan.
 	#% Dan ášši ferte čilget nállevealaheami ektui sierra. # Comment: Topicalised object.
 	#% Dainnago sámegiela bissovašvuohta beaivválaš giellan lea boatkanan.
@@ -6768,7 +6786,7 @@ REMOVE:NDr2425 Nom IF (*-1 VFIN BARRIER NOT-ADV-PCLE LINK NOT 0 COPULAS OR FAUXV
 	#$ Dii galgabehtet vuđolaččat bargat.
 
 #!! * **NDr2426** Removes Nom, but not Actio 
-REMOVE:NDr2426 Nom - Actio IF (*-1 BOC BARRIER NOT-NP)(NEGATE 0 A)(NEGATE 1 Prop)(*1C (N Nom) BARRIER CC OR CLB OR NOT-NPMOD OR PUNCT LINK *1 VFIN BARRIER NOT-NP)(NEGATE 1 (Interr Nom))(NEGATE -1 Gen LINK 1 ABBR);
+#REMOVE:NDr2426 Nom - Actio IF (*-1 BOC BARRIER NOT-NP)(NEGATE 0 A OR Num OR Attr)(NEGATE 1 Prop)(*1C (N Nom) BARRIER CC OR CLB OR NOT-NPMOD OR PUNCT LINK *1 VFIN BARRIER NOT-NP)(NEGATE 1 (Interr Nom))(NEGATE -1 Gen LINK 1 ABBR);
 	#$ Romssa universitehta vuosttaš čielgadeapmi sámi dutkama birra dahkkui...
 
 
@@ -7317,7 +7335,8 @@ REMOVE:propBOC Prop (-1 BOC)(NEGATE 1 CC LINK 1 Prop) (NEGATE 1 ORGANIZATION OR 
 
 	#$ Girjjis leat boares govat.
 
-REMOVE (Sg Nom) (1 VFIN + Pl3) ;
+# grc
+#REMOVE (Sg Nom) (1 VFIN + Pl3) ;
 
 SELECT A (0 Attr LINK 0 N LINK 1 N) ;
 	#$ Lea suohtas kurssas. <= her er ikke Attr analysen riktig
