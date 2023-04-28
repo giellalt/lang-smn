@@ -149,6 +149,7 @@ LIST Gen = Gen ; #!! Gen
 LIST Ill = Ill ; #!! Ill
 LIST Loc = Loc ; #!! Loc
 LIST Com = Com ; #!! Com
+LIST Abe = Abe ; #!! Ess
 LIST Ess = Ess ; #!! Ess
 LIST Par = Par ; #!! Ess
 LIST Sg = Sg ;   #!! Sg
@@ -2032,7 +2033,10 @@ SET CCCOMMA = CC OR COMMA ;
 
 
 LIST &easteregg = &easteregg ;
-LIST &msyn-adj-attr-gen = &msyn-adj-attr-gen ;
+LIST &msyn-adj-attr-sggen = &msyn-adj-attr-sggen ;
+LIST &msyn-adj-attr-plgen = &msyn-adj-attr-plgen ;
+LIST &msyn-adj-attr-sgacc = &msyn-adj-attr-sgacc ;
+LIST &msyn-adj-attr-placc = &msyn-adj-attr-placc ;
 LIST &msyn-adj-attr-other = &msyn-adj-attr-other ;
 LIST &msyn-adj-attr-pred = &msyn-adj-attr-pred ;
 LIST &msyn-adj-gen-nom = &msyn-adj-gen-nom ;
@@ -3424,9 +3428,9 @@ COPY:msyn-obj-plnom-placc (Acc &SUGGEST) EXCEPT (Nom &msyn-obj-plnom-placc) TARG
 
 #!!  **Agreement rule:** msyn-obj-plnom-placc
 ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF
-(*-1 REALTV + PrfPrc BARRIER NOT-NPMODADV LINK *-1 Nom)
-(0C N + Pl + Nom)
-(NEGATE *1 V + Pl3 BARRIER NOT-ADV);
+	(*-1 REALTV + PrfPrc BARRIER NOT-NPMODADV LINK NOT 1 CC LINK *-1 Nom)
+	(0C N + Pl + Nom)
+	(NEGATE *1 V + Pl3 BARRIER NOT-ADV);
 COPY:msyn-obj-plnom-placc (Acc &SUGGEST) EXCEPT (Nom &msyn-obj-plnom-placc) TARGET (N Pl &msyn-obj-plnom-placc);
 #% Puoh iä lah omâstâm poccuuh.
 #% Puoh iä lah omâstâm tuše poccuuh.
@@ -3708,15 +3712,40 @@ COPY:msyn-adj-attr-pred (Sg Nom &SUGGEST) EXCEPT (Attr &msyn-adj-attr-pred) TARG
 
 
 # ## Sun puátá vuosmuš/vuosmuu keerdi.
-ADD:msyn-adj-attr-gen (&msyn-adj-attr-gen) TARGET A IF
+ADD:msyn-adj-attr-sggen (&msyn-adj-attr-sggen) TARGET A IF
 	(0C Attr)
 	(0  CONCORD-A)
-	(1 N LINK NOT 0 Sg + Nom)
+	(1 N LINK 0 Sg + Gen OR Sg + Ill OR Sg + Loc OR Sg + Abe)
 	;
-COPY:msyn-adj-attr-gen (Sg Gen &SUGGEST) EXCEPT (Attr &msyn-adj-attr-gen) TARGET ( A &msyn-adj-attr-gen);
+COPY:msyn-adj-attr-sggen (Sg Gen &SUGGEST) EXCEPT (Attr &msyn-adj-attr-sggen) TARGET ( A &msyn-adj-attr-sggen);
 ## Sun puátá vuosmuš keerdi.
 ## Sun puátá vuosmu keerdi.
 
+# ## Sun puátá vuosmuš/vuosmuu keerdi.
+ADD:msyn-adj-attr-plgen (&msyn-adj-attr-plgen) TARGET A IF
+	(0C Attr)
+	(0  CONCORD-A)
+	(1 N LINK 0 Pl + Gen OR Sg + Ill OR Sg + Loc OR Sg + Abe)
+	;
+COPY:msyn-adj-attr-plgen (Sg Gen &SUGGEST) EXCEPT (Attr &msyn-adj-attr-plgen) TARGET ( A &msyn-adj-attr-plgen);
+## Sun puátá vuosmuš keerdi.
+## Sun puátá vuosmu keerdi.
+
+# ## Sun puátá vuosmuš/vuosmuu keerdi.
+ADD:msyn-adj-attr-sgacc (&msyn-adj-attr-sgacc) TARGET A IF
+	(0C Attr)
+	(0  CONCORD-A)
+	(1 N LINK NOT 0 Sg + Acc)
+	;
+COPY:msyn-adj-attr-sgacc (Sg Acc &SUGGEST) EXCEPT (Attr &msyn-adj-attr-sgacc) TARGET ( A &msyn-adj-attr-sgacc);
+
+# ## Sun puátá vuosmuš/vuosmuu keerdi.
+ADD:msyn-adj-attr-placc (&msyn-adj-attr-placc) TARGET A IF
+	(0C Attr)
+	(0  CONCORD-A)
+	(1 N LINK NOT 0 Sg + Acc)
+	;
+COPY:msyn-adj-attr-placc (Sg Acc &SUGGEST) EXCEPT (Attr &msyn-adj-attr-placc) TARGET ( A &msyn-adj-attr-placc);
 
 
 #!! ## Adverbial rules
