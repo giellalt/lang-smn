@@ -624,7 +624,7 @@ LIST ATTRONLY = "anarâškiel" "eeđâb" "fakkâ" "fastâ" "hirmâd" "huámáše
 #!! This set was removed, for a good reason?
 SET NOT-A-ADV = WORD - A - Adv OR ("meid") ; #!!= - @CODE@ 
 
-LIST CONCORD-A = "maggaar" "pyeri" "taggaar" "tyeggáár" "tieggáár" (".*lâš"r) (".*sâš"r) (".*vâš"r) (".*muš"r) ; #!!= - @CODE@ = this is the set for adj agreeing with N.
+LIST CONCORD-A = "maggaar" "pyeri" "siämmáš" "taggaar" "tyeggáár" "tieggáár" (".*láš"r) (".*lâš"r) (".*laš"r) (".*sâš"r) (".*vâš"r) (".*muš"r) ; #!!= - @CODE@ = this is the set for adj agreeing with N.
 
 LIST NOMINAL-A = "guoktilaš" "lámis" "kuáskulâš" ("suddo" Der/lasj) "viijses";
 
@@ -2032,6 +2032,7 @@ SET CCCOMMA = CC OR COMMA ;
 
 
 LIST &easteregg = &easteregg ;
+LIST &msyn-adj-attr-gen = &msyn-adj-attr-gen ;
 LIST &msyn-adj-attr-other = &msyn-adj-attr-other ;
 LIST &msyn-adj-attr-pred = &msyn-adj-attr-pred ;
 LIST &msyn-adj-gen-nom = &msyn-adj-gen-nom ;
@@ -3361,7 +3362,7 @@ COPY:msyn-plobj-nom-acc (Acc &SUGGEST) EXCEPT (Nom &msyn-plobj-nom-acc) TARGET (
 
 
 #!!  **Agreement rule:** msyn-obj-sgnom-sgacc *Mun juuvâm ain mielkki/mielhi.*
-ADD:msyn-obj-sgnom-sgacc (&msyn-obj-sgnom-sgacc) TARGET N IF
+ADD:xmsyn-obj-sgnom-sgacc (&msyn-obj-sgnom-sgacc) TARGET N IF
 	(*-1 VFIN + Ind + TV BARRIER NOT-NPMODADV OR RIGHT OR S-BOUNDARY LINK *-1 Nom BARRIER NOT-NPMODADV LINK *-1 BOS BARRIER Acc)
 	(NEGATE *-1 VERBAL-ACTIVITY + Ind LINK *-1 COMMA OR QMARK)
 	(0C N + Sg + Nom)
@@ -3585,7 +3586,11 @@ COPY:msyn-pred-ill-nom (Sg Nom &SUGGEST) EXCEPT (Pl Ill &msyn-pred-ill-nom) TARG
 #!! ### Agreement error with predicative
 
 #!!  **Agreement rule:** msyn-predagr-pl3-sg3 *Iä/Ij lah toorjâ.*
-ADD:msyn-predagr-pl3-sg3 (&msyn-predagr-pl3-sg3) TARGET Neg IF (NOT -1 Pl + Nom) (0 Pl3)(1 ("leđe") + ConNeg)(*2 N + Sg + Nom BARRIER NOT-NPMODADVL);
+ADD:msyn-predagr-pl3-sg3 (&msyn-predagr-pl3-sg3) TARGET Neg IF 
+	(NOT -1 Pl + Nom) 
+	(0 Pl3)
+	(1 ("leđe") + ConNeg)
+	(*2 N + Sg + Nom BARRIER NOT-NPMODADVL);
 COPY:msyn-predagr-pl3-sg3 (Sg3 &SUGGEST) EXCEPT (Pl3 &msyn-predagr-pl3-sg3) TARGET ("ij" V Neg Ind &msyn-predagr-pl3-sg3);
 ADDRELATION:msyn-predagr-pl3-sg3 ($2) (N Sg Nom) FROM (-2 Neg LINK 0 (&msyn-predagr-pl3-sg3)) ;
 ADDRELATION:msyn-predagr-pl3-sg3 ($2) (N Sg Nom) FROM (-3 Neg LINK 0 (&msyn-predagr-pl3-sg3)) ;
@@ -3600,15 +3605,16 @@ ADDRELATION:msyn-predagr-pl3-sg3 ($2) (N Sg Nom) FROM (-5 Neg LINK 0 (&msyn-pred
 
 ADD:msyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET A IF
 	(0C Sg + Nom)
-	(NOT 0  CONCORD-A OR Ord)
+	(NOT 0  CONCORD-A OR Ord OR Der/Comp OR Der/Superl)
 	(1 N LINK NOT 0 Ess OR NOUN-OR-ADV)
 	;
 COPY:msyn-adj-pred-attr (Attr &SUGGEST) EXCEPT (Sg Nom &msyn-adj-pred-attr) TARGET ( A &msyn-adj-pred-attr);
 
 #!!  **Agreement rule:** msyn-adj-pred-attr Plural adjectives should be Attr in front of N.
 ADD:msyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET A IF
+	(NOT -1 ("leđe"))
 	(0C Pl + Nom)
-	(NOT 0  CONCORD-A)
+	(NOT 0  CONCORD-A OR Der/Comp OR Der/Superl)
 	(1 N + Pl)
 	;
 COPY:msyn-adj-pred-attr (Attr &SUGGEST) EXCEPT (Pl Nom &msyn-adj-pred-attr) TARGET ( A &msyn-adj-pred-attr);
@@ -3618,7 +3624,7 @@ COPY:msyn-adj-pred-attr (Attr &SUGGEST) EXCEPT (Pl Nom &msyn-adj-pred-attr) TARG
 #ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred)  TARGET (A Attr) IF (0C Attr) (1 CC LINK 1 &msyn-adj-attr-pred OR (A Sg Nom) LINK NOT 1 EOS) (NOT 0 (Arab Ord) OR (A Sg Nom)) ;
 
 #!!  **Agreement rule:** msyn-adj-attr-other
-ADD:msyn-adj-attr-other (&msyn-adj-attr-other)  TARGET (A) IF
+ADD:xmsyn-adj-attr-other (&msyn-adj-attr-other)  TARGET (A) IF
 	(0C ATTRONLY)
 	(NOT 1 N OR A OR PrfPrc OR ?)
 	(NEGATE 1 CC LINK 1 A + Attr)
@@ -3701,7 +3707,15 @@ COPY:msyn-adj-attr-pred (Sg Nom &SUGGEST) EXCEPT (Attr &msyn-adj-attr-pred) TARG
 
 
 
-
+# ## Sun puátá vuosmuš/vuosmuu keerdi.
+ADD:msyn-adj-attr-gen (&msyn-adj-attr-gen) TARGET A IF
+	(0C Attr)
+	(0  CONCORD-A)
+	(1 N LINK NOT 0 Sg + Nom)
+	;
+COPY:msyn-adj-attr-gen (Sg Gen &SUGGEST) EXCEPT (Attr &msyn-adj-attr-gen) TARGET ( A &msyn-adj-attr-gen);
+## Sun puátá vuosmuš keerdi.
+## Sun puátá vuosmu keerdi.
 
 
 
