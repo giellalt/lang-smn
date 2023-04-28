@@ -4051,7 +4051,11 @@ SELECT:Yr1855 PrfPrc IF
 	## Muhtin biirres leat gávcci áirasa leamaš nissonolbmot, ja eará biirres leat buohkat geat leat válljejuvvon leamaš dievddut.
 
 #!! * **r1857** selects PrfPrc if Acc to the left linked to copula
-SELECT:Yr1857 PrfPrc IF (*-1 Acc BARRIER NOT-ADV LINK *-1 REAL-COPULAS BARRIER NOT-NPMODADV)(NEGATE 0 Actio LINK -1 PrsPrc)(NEGATE 1 COMMA LINK *1 Actio BARRIER NOT-NPMOD)(NEGATE 0 Actio LINK *1 PrfPrc BARRIER NOT-ADV-PCLE);
+SELECT:Yr1857 PrfPrc IF 
+	(*-1 Acc BARRIER NOT-ADV LINK *-1 REAL-COPULAS BARRIER NOT-NPMODADV)
+	(NEGATE 0 Actio) # LINK -1 PrsPrc) uási fáddá lâi anarâškielâ máttááttâllâm
+	(NEGATE 1 COMMA LINK *1 Actio BARRIER NOT-NPMOD)
+	(NEGATE 0 Actio LINK *1 PrfPrc BARRIER NOT-ADV-PCLE);
 	## Leago barggu ohcan? 
 
 #!! * **r1858** selects PrfPrc if NP head to the left linked to copula
@@ -5632,7 +5636,7 @@ SELECT:AccVAbess Acc (0 (N Gen) LINK 1 (TV VAbess))(NEGATE -1 Num) ;
 
 #!! * **topOBJ1** Selects accusative: when a Strict transitive verb to the right (topicalized object) *beaskka geavahedje*
 SELECT:topOBJ1 Acc IF 
-(*1 STRICT-TRANS-V BARRIER SV-BOUNDARY OR COMMA OR XGO OR Acc LINK NOT 0 FAUXV OR VAbess LINK NEGATE *1 Acc - Rel OR ("et") OR Inf OR VAbess OR VFIN - Neg BARRIER S-BOUNDARY OR COMMA)
+(*1 STRICT-TRANS-V BARRIER SV-BOUNDARY OR COMMA OR XGO OR Acc LINK NOT 0 FAUXV OR VAbess OR Actio OR Der/NomAct LINK NEGATE *1 Acc - Rel OR ("et") OR Inf OR VAbess OR VFIN - Neg BARRIER S-BOUNDARY OR COMMA)
 (NEGATE 0 (Sg Nom) - Px LINK *-1  V + Sg3  BARRIER SV-BOUNDARY LINK NEGATE *-1C Nom BARRIER SV-BOUNDARY)
 (NEGATE 0 (Sg Nom) - Px LINK *1  V + Sg3  BARRIER NOT-ADV-PCLE)
 (NEGATE 0 (Sg Nom) - Px LINK -1 CC LINK -1 Nom LINK *3  V + Du3  OR  V + Pl3  BARRIER NOT-ADV-PCLE)
@@ -6534,7 +6538,7 @@ SELECT:NDr2361 (N Sg Nom) IF (*-1 SG3-V BARRIER NOT-NPMODADVIIP OR CP LINK NOT 0
 
 
 #!! * **NDr2364** Selects (Sg Nom)
-SELECT:NDr2364 (Sg Nom) IF (*-1 (Imprt Sg3) BARRIER NOT-NP)(NEGATE 0 Acc OR Ess);
+SELECT:NDr2364 (Sg Nom) IF (*-1C (Imprt Sg3) BARRIER NOT-NP)(NEGATE 0 Acc OR Ess);
 	#$ Nu báitos din čuovggas ge olbmuide.
 
 
