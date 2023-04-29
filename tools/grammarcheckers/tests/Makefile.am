@@ -128,8 +128,6 @@ XFAIL_TESTS=\
 	neg-det-nom-acc.yaml \
 	neg-negcompl-sg3-conneg.yaml \
 	neg-obj-acc-ill.yaml \
-	neg-obj-sgnom-sgacc.yaml \
-	neg-subj-gen-nom.yaml \
 	ovdamearkkat.yaml \
 	science.yaml \
 	syn-OVS-OSV.yaml \
