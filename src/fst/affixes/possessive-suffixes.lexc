@@ -23,6 +23,8 @@
 !+PxSg1:âm Px_K ; ! Nom only
 !CPXsuffrest ;
 
+! cons-final stem
+
 LEXICON CPXsuff  !!≈ * **@CODE@**
 +PxSg1:%>ân Px_K ; ! All other cases
 +PxSg1+Err/Orth:%>âm Px_K ; ! korpusas
@@ -35,11 +37,37 @@ LEXICON CPXsuff  !!≈ * **@CODE@**
 +PxPl2:%>âd Px_K ;
 +PxPl3:%>is Px_K ;
 
+
+
+! vowel-final stem
+
+LEXICON VPXsuff  !!≈ * **@CODE@** -n, -d, -s
+VPXsuff12 ; ! -n, d
+VPXsuff3 ;  ! -s
+
+
+LEXICON VPXsuff12  !!≈ * **@CODE@**
+VPXsuff1 ;
+VPXsuff2 ; ! 2 person, all cases
+
+
+LEXICON VPXsuff12nom  !!≈ * **@CODE@**  -m/-n, -d, -s
+VPXsuff1nom ;
+VPXsuff2nom ;
+
+LEXICON VPXsuff1nom
++PxSg1:%>m Px_K ; ! algam
++PxDu1:%>m Px_K ; !
++PxPl1:%>m Px_K ; !
+
+LEXICON VPXsuff2nom ! 2TAHO needs different triggers for 1 and 2
+VPXsuff2 ; ! 2 person, all cases
+
 LEXICON VPXsuff1 !!≈ * **@CODE@**
 +PxSg1:%>n Px_K ; !
++PxSg1+Err/Orth:%>m Px_K ; ! korpusas
 +PxDu1:%>n Px_K ; !
 +PxPl1:%>n Px_K ; !
-
 
 LEXICON VPXsuff2 !!≈ * **@CODE@**
 +PxSg2:%>d Px_K ; !
@@ -47,28 +75,6 @@ LEXICON VPXsuff2 !!≈ * **@CODE@**
 +PxPl2:%>d Px_K ; !
 
 
-
-LEXICON VPXsuff  !!≈ * **@CODE@** -n, -d, -s
-VPXsuff12 ; ! -n, d
-VPXsuff3 ;  ! -s
-
-LEXICON VPXsuff12nom  !!≈ * **@CODE@**  -m/-n, -d, -s
-+PxSg1:%>m Px_K ; ! algam
-+PxDu1:%>m Px_K ; !
-+PxPl1:%>m Px_K ; !
-VPXsuff12rest ; ! 2 person, all cases
-
-LEXICON VPXsuff12  !!≈ * **@CODE@**
-+PxSg1:%>n Px_K ; !
-+PxSg1+Err/Orth:%>m Px_K ; ! korpusas
-+PxDu1:%>n Px_K ; !
-+PxPl1:%>n Px_K ; !
-VPXsuff12rest ; ! 2 person, all cases
-
-LEXICON VPXsuff12rest  !!≈ * **@CODE@** 2 person, all cases
-+PxSg2:%>d Px_K ;
-+PxDu2:%>d Px_K ;
-+PxPl2:%>d Px_K ;
 
 
 LEXICON VPXsuff3  !!≈ * **@CODE@**

@@ -655,8 +655,6 @@ LEXICON 2KISSA_SG !!≈ * **@CODE@**
  
  
 LEXICON KISSA_DIM !!≈ * **@CODE@** 
- 
- 
 +N+Sg+Nom:^SV^SLEN%>š K ; !linjá:li^RVnjá liinjáš, we need a cont.lex 
 +N+Sg+Gen:^SV^SLEN K ; !linjá:li^RVnjá linjáá 
 +N+Sg+Acc:^SV^SLEN K ; !linjá:li^RVnjá linjáá 
@@ -777,10 +775,29 @@ LEXICON 2TAHO !!≈ * **@CODE@** only for taho, similar to 2LAJO except from Pl+
 +N: 2TAHO_PL ; 
  
 LEXICON 2TAHO_SG  !!≈ * **@CODE@** 
+! Special cases:
 +Sg+Com:^WG^CLEN%>in K ;  !tavoin 
-+Sg+Loc:^SV^WG^CLEN^SLEN%>st K ;  !tavvoost+N+Pl+Ill:^WG^CLEN%>id K ;  !tavvoid 
++Sg+Loc:^SV^WG^CLEN^SLEN%>st K ;  !tavvoost+N+Pl+Loc:^WG^CLEN%>id K ;  !tavvoid 
+! Common cases
  X_LAJO_TAHO_SG ; 
- LAJO_TAHO_PX_SG ; 
++Cmp/SgNom: Rhash ; 
++Cmp/SgGen:^WG%> Rhash ; 
+! Px
++Sg+Nom:^SV^CLEN^SLEN VPXsuff1nom ;   ! tahhoom 
++Sg+Nom:^SV^CLEN^SLEN VPXsuff2    ;   ! tahhoom 
++Sg+Gen:^SV^CLEN^SLEN VPXsuff1 ;      ! tahhoon 
++Sg+Acc:^SV^CLEN^SLEN VPXsuff1 ;      ! tahhoon 
++Sg+Gen:^SV^WG^CLEN^SLEN VPXsuff2 ;           ! tavvood 
++Sg+Acc:^SV^WG^CLEN^SLEN VPXsuff2 ;           ! tavvood 
++Sg+Nom:^SV^CLEN^SLEN VPXsuff3 ;      ! tavvoos 
++Sg+Gen:^SV^WG^RLEN^SLEN VPXsuff3 ;   ! tavvoos 
++Sg+Acc:^SV^WG^RLEN^SLEN VPXsuff3 ;   ! tavvoos 
++Sg+Ill:%>s CPXsuff ;                 ! lajosis 
++Sg+Loc:^WG%>st CPXsuff ;             ! lajostis 
++Sg+Com:^WG%>in CPXsuff ;             ! lajoinis 
++Ess:%>n CPXsuff ;                    ! lajonân 
+:^WG%> Gen_DER ; 
+:%> Nom_DER ; 
  
 LEXICON 2TAHO_PL  !!≈ * **@CODE@** 
  X_OKKO_PL ; 
@@ -792,20 +809,20 @@ LEXICON 2LAJO  !!≈ * **@CODE@**
 +N: 2LAJO_PL ; 
  
 LEXICON 2LAJO_SG !!≈ * **@CODE@** 
+! Special cases:
 +Sg+Com:^WG%>in K ;  !lajoin 
 +Sg+Loc:^SV^WG^RLEN^SLEN%>st K ;  !laajoost 
+! Common cases
  X_LAJO_TAHO_SG ; 
- LAJO_TAHO_PX_SG ; 
- 
-LEXICON LAJO_TAHO_PX_SG !!≈ * **@CODE@** 
 +Cmp/SgNom: Rhash ; 
 +Cmp/SgGen:^WG%> Rhash ; 
- ! XXX katso näitä 
-+Sg+Nom:^SV^CLEN^SLEN VPXsuff12nom ;  ! laijood 
-+Sg+Gen:^SV^CLEN^SLEN VPXsuff12 ;     ! laijood 
-+Sg+Acc:^SV^CLEN^SLEN VPXsuff12 ;     ! laijood 
+! Px  
++Sg+Nom:^SV^CLEN^SLEN VPXsuff1nom ;   ! laijood 
++Sg+Nom:^SV^CLEN^SLEN VPXsuff2    ;   ! laijood 
 +Sg+Nom:^SV^CLEN^SLEN VPXsuff3 ;      ! laijoos 
++Sg+Gen:^SV^CLEN^SLEN VPXsuff12 ;     ! laijood 
 +Sg+Gen:^SV^WG^RLEN^SLEN VPXsuff3 ;   ! laajoos 
++Sg+Acc:^SV^CLEN^SLEN VPXsuff12 ;     ! laijood 
 +Sg+Acc:^SV^WG^RLEN^SLEN VPXsuff3 ;   ! laajoos 
 +Sg+Ill:%>s CPXsuff ; ! lajosis 
 +Sg+Loc:^WG%>st CPXsuff ; ! lajostis 
@@ -815,7 +832,10 @@ LEXICON LAJO_TAHO_PX_SG !!≈ * **@CODE@**
 :%> Nom_DER ; 
  
  
+ 
 LEXICON X_LAJO_TAHO_SG !!≈ * **@CODE@** 
++Cmp/SgNom: Rhash ; 
++Cmp/SgGen:^WG%> Rhash ; 
 +Sg+Nom: K ;  !laj̣o 
 +Sg+Gen:^WG K ;  !lajo 
 +Sg+Acc:^WG K ;  !lajo 
@@ -823,13 +843,8 @@ LEXICON X_LAJO_TAHO_SG !!≈ * **@CODE@**
 +Sg+Abe:^WG%>ttáá K ;  !lajottáá 
 +Ess:^SV^CLEN^SLEN%>n    K ;  !laijoon 
 +Par:^SV^CLEN^SLEN%>d    K ; !laijood 
-+Sg+Gen:^SV^CLEN^SLEN VPXsuff12 ;  ! 
-+Sg+Gen:^SV^CLEN^SLEN VPXsuff3 ;  ! 
-+Sg+Acc:^SV^CLEN^SLEN VPXsuff12 ;  ! 
-+Sg+Acc:^SV^CLEN^SLEN VPXsuff3 ;  ! 
-+Sg+Ill:^WG%>s CPXsuff ;  ! 
-+Sg+Loc:^WG%>st CPXsuff ;  ! 
- 
+
+
 LEXICON 2LAJO_PL !!≈ * **@CODE@** 
  X_LAJO_PL ; 
 +Cmp/PlGen:^WG%>i Rhash ; 
