@@ -3356,7 +3356,11 @@ ADDRELATION:msyn-plobj-nom-acc ($2) (TV) FROM (*1 N  LINK 0 (&msyn-plobj-nom-acc
 
 
 #!!  **Agreement rule:** msyn-plobj-nom-acc
-ADD:msyn-plobj-nom-acc (&msyn-plobj-nom-acc) TARGET N IF (*-2 Pl + Nom)(-1 TV + Ind + Pl3 LINK NOT 0 Der/Pass)(0C N + Pl + Nom)(NOT -1 PrfPrc LINK *-1 N BARRIER VFIN);
+ADD:msyn-plobj-nom-acc (&msyn-plobj-nom-acc) TARGET N IF 
+	(*-2 Pl + Nom)
+	(-1 TV + Ind + Pl3 LINK NOT 0 Der/Pass)
+	(0C N + Pl + Nom)
+	(NOT -1 PrfPrc LINK *-1 N BARRIER VFIN);
 
 #!!  **Agreement rule:** msyn-plobj-nom-acc
 ADD:msyn-plobj-nom-acc (&msyn-plobj-nom-acc) TARGET N IF (*-2 Sg + Nom)(-1 TV + Ind + Sg3 LINK NOT 0 Der/Pass)(0C N + Pl + Nom)(NOT -1 PrfPrc LINK *-1 N BARRIER VFIN);
@@ -3370,7 +3374,7 @@ ADD:xmsyn-obj-sgnom-sgacc (&msyn-obj-sgnom-sgacc) TARGET N IF
 	(*-1 VFIN + Ind + TV BARRIER NOT-NPMODADV OR RIGHT OR S-BOUNDARY LINK *-1 Nom BARRIER NOT-NPMODADV LINK *-1 BOS BARRIER Acc)
 	(NEGATE *-1 VERBAL-ACTIVITY + Ind LINK *-1 COMMA OR QMARK)
 	(0C N + Sg + Nom)
-	(NEGATE 0 ACR)
+	(NEGATE 0 ACR OR ("<.*[lnryö]>"r)) # njoammil, derby, ministeriö Nom = Acc
 	(NEGATE 0 TITLE LINK 1 Prop OR ("<[A-ZÁŠČ].*>"r))
 	(NEGATE -1 COMMA LINK 2 EOS)
 	;
@@ -3384,6 +3388,7 @@ COPY:msyn-obj-sgnom-sgacc (Acc &SUGGEST) EXCEPT (Nom &msyn-obj-sgnom-sgacc) TARG
 ADD:msyn-obj-sgnom-sgacc (&msyn-obj-sgnom-sgacc) TARGET N IF
 	(-1 PrfPrc + TV)
 	(*-2 VFIN BARRIER NOT-NPMODADV LINK -1 Nom LINK *-1 BOS BARRIER Acc)
+	(NEGATE 0 ACR OR ("<.*[lnryö]>"r)) # njoammil, derby, ministeriö Nom = Acc	
 	(0C N + Sg + Nom);
 COPY:msyn-obj-sgnom-sgacc (Acc &SUGGEST) EXCEPT (Nom &msyn-obj-sgnom-sgacc) TARGET (N Sg &msyn-obj-sgnom-sgacc);
 #% Mun lam ain juunâm mielkki.
@@ -3393,6 +3398,7 @@ COPY:msyn-obj-sgnom-sgacc (Acc &SUGGEST) EXCEPT (Nom &msyn-obj-sgnom-sgacc) TARG
 ADD:msyn-obj-sgnom-sgacc (&msyn-obj-sgnom-sgacc) TARGET N IF
 	(1 PrfPrc + TV)
 	(*-1 VFIN BARRIER NOT-NPMODADV LINK -1 Nom)
+	(NEGATE 0 ACR OR ("<.*[lnryö]>"r)) # njoammil, derby, ministeriö Nom = Acc
 	(0C N + Sg + Nom);
 COPY:msyn-obj-sgnom-sgacc (Acc &SUGGEST) EXCEPT (Nom &msyn-obj-sgnom-sgacc) TARGET (N Sg &msyn-obj-sgnom-sgacc);
 #% Mun lam ain mielkki juunâm.
@@ -3526,7 +3532,11 @@ COPY:msyn-imp-nom-acc (Acc &SUGGEST) EXCEPT (Nom &msyn-imp-nom-acc) TARGET (N &m
 #!! ### Acc > Nom in predicative
 
 #!!  **Agreement rule:** msyn-pred-acc-nom *Taah láá čielgâ aašijd/ááših.*
-ADD:msyn-pred-acc-nom (&msyn-pred-acc-nom) TARGET Acc IF (*-1 ("leđe") + Ind BARRIER NOT-NPMOD OR PRESENTATION-PRON)(NOT 0 Arab OR Nom)(NOT *0 TV)(NOT *-1 BOS LINK 1 ("mii") OR ("kii"));
+ADD:msyn-pred-acc-nom (&msyn-pred-acc-nom) TARGET Acc IF 
+	(*-1 ("leđe") + Ind BARRIER NOT-NPMOD OR PRESENTATION-PRON)
+	(NOT 0 Arab OR Nom OR ACR OR ("<.*[lnryö]>"r)) # njoammil, derby, ministeriö Nom = Acc
+	(NOT *0 TV)
+	(NOT *-1 BOS LINK 1 ("mii") OR ("kii"));
 COPY:msyn-pred-acc-nom (Nom &SUGGEST) EXCEPT (Acc  &msyn-pred-acc-nom) TARGET (N &msyn-pred-acc-nom);
 #% Taah láá čielgâ aašijd
 #$ Mii tiet lii aašijd.
@@ -3735,7 +3745,7 @@ COPY:msyn-adj-attr-plgen (Sg Gen &SUGGEST) EXCEPT (Attr &msyn-adj-attr-plgen) TA
 ADD:msyn-adj-attr-sgacc (&msyn-adj-attr-sgacc) TARGET A IF
 	(0C Attr)
 	(0  CONCORD-A)
-	(1 N LINK NOT 0 Sg + Acc)
+	(1 N + Sg + Acc)
 	;
 COPY:msyn-adj-attr-sgacc (Sg Acc &SUGGEST) EXCEPT (Attr &msyn-adj-attr-sgacc) TARGET ( A &msyn-adj-attr-sgacc);
 
@@ -3743,7 +3753,7 @@ COPY:msyn-adj-attr-sgacc (Sg Acc &SUGGEST) EXCEPT (Attr &msyn-adj-attr-sgacc) TA
 ADD:msyn-adj-attr-placc (&msyn-adj-attr-placc) TARGET A IF
 	(0C Attr)
 	(0  CONCORD-A)
-	(1 N LINK NOT 0 Sg + Acc)
+	(1 N + Sg + Acc)
 	;
 COPY:msyn-adj-attr-placc (Sg Acc &SUGGEST) EXCEPT (Attr &msyn-adj-attr-placc) TARGET ( A &msyn-adj-attr-placc);
 
@@ -3889,6 +3899,7 @@ COPY:msyn-n-ess-ill (Sg Ill &SUGGEST) EXCEPT (Ess &msyn-n-ess-ill) TARGET (N &ms
 #!!  **Agreement rule:** msyn-po-nom-gen
 ADD:msyn-po-nom-gen (&msyn-po-nom-gen) TARGET (N Sg Nom) IF
 	(NOT 0 Gen)
+	(NEGATE 0 ACR OR ("<.*[lnryö]>"r)) # njoammil, derby, ministeriö Nom = Acc = Gen
 	(1 Po)
 #	(NOT 1 Pron)
 	; # C
