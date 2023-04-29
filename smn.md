@@ -5728,8 +5728,6 @@ WG, blank Ill, DLEN, RVSH, SVLOW
 
 * **LEXICON 2LAJO_SG** 
 
-* **LEXICON LAJO_TAHO_PX_SG** 
-
 * **LEXICON X_LAJO_TAHO_SG** 
 
 * **LEXICON 2LAJO_PL** 
@@ -6486,17 +6484,15 @@ just do Px1, Px2, Px3, and change tags from sme to smn in apertium.
 
 * **LEXICON CPXsuff**
 
-* **LEXICON VPXsuff1**
-
-* **LEXICON VPXsuff2**
-
 * **LEXICON VPXsuff** -n, -d, -s
-
-* **LEXICON VPXsuff12nom**  -m/-n, -d, -s
 
 * **LEXICON VPXsuff12**
 
-* **LEXICON VPXsuff12rest** 2 person, all cases
+* **LEXICON VPXsuff12nom**  -m/-n, -d, -s
+
+* **LEXICON VPXsuff1**
+
+* **LEXICON VPXsuff2**
 
 * **LEXICON VPXsuff3**
 
