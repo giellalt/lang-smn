@@ -10,17 +10,7 @@
 ! Other licensing options are available upon request, please contact
 ! giellatekno@uit.no or feedback@divvun.no
 
-
 !! # Inari Saami noun roots
-
-
-
-
-
-LEXICON NounRoot  !!≈ * **@CODE@**
- Noun ;   !!≈ * **@CODE@**
- FirstComponent ;   !!≈ * **@CODE@**
-! HyphNouns ;  
 
 !! ## 1. Even-syllable stems
 !! * â-stems
@@ -38,24 +28,18 @@ LEXICON NounRoot  !!≈ * **@CODE@**
 !! * 2.2 Stems without consonant gradation
 !! 3. Ohter cases, all kind of changes
 
-! Tehtävä:
-! Jokainen sana pitää olla vain kerran, esim. yksi aabis, yksi aaigâ.
-! surutta poistaa jos sanalla on toinen leksikko.
-! Käännökset ovat tietysti hauskoja, ne voidaan säilyttää
-! Muuten voi laittaa jatkoleksikon mielen mukaan, tärkeä on poistaa dubletit.
 
 
-! Work with miniparadigms
-! The 
 
-! asdfasdf These words already have miniparadigms
-! Correct order is com, loc, ill, gen
 
-LEXICON LastNouns   !!≈ * **@CODE@**
+LEXICON NounRoot   !!≈ * **@CODE@** is the basic lexicon, dividing into
+ FirstComponent ;  !!≈ * **@CODE@** , nouns only in use as cmp first parts, and
+ Noun ;            !!≈ * **@CODE@** , the noun list itself.
+
+
+LEXICON LastNouns   !!≈ * **@CODE@** pointed to from compounds.lexc
 heivi+CmpN/SgNomLeft+CmpNP/Suff+Sem/Dummytag:he^RVi4vi 2AIGI ;   !!≈ * **@CODE@**
 
-!LEXICON MaleRelative
-!čeeci:čeec^RCi 2CAACI ;
 
 LEXICON FirstComponent   !!≈ * **@CODE@**
 maadâ+A+Cmp/Attr+Sem/Cat:maadâ Rnoun ; ! tags_via_apertium
@@ -122,7 +106,7 @@ trans+A+Cmp/Attr+Sem/Dummytag:trans Rnoun ;
 kieles+A+Cmp/Attr+Sem/Dummytag:kieles Rnoun ;
 
 
-LEXICON MiddleNouns !!≈ * **@CODE@**
+LEXICON MiddleNouns !!≈ * **@CODE@** , referred to from compounding.lexc
 njune+N+Cmp/Sh+Sem/Hum:njun Rnoun ;  !!≈ * **@CODE@**
 njälmi+N+Cmp/Sh+Sem/Body:njälm Rnoun ;  !!≈ * **@CODE@** tags_via_apertium
 uáivi+N+Cmp/Sh+Sem/Body_Plc-elevate:uáiv Rnoun ; ! tags_via_apertium
@@ -666,11 +650,14 @@ koškee+Sem/Dummytag:koške C_LOHHEE "" ;
 läbžipallee+Sem/Dummytag:läbži#palle C_LOHHEE "" ;
 tuáimee+Sem/Dummytag:tuáime C_LOHHEE "" ;
 jottee+Sem/Dummytag:jotte C_LOHHEE "" ;
-asâttâhtipšoo+Sem/Dummytag:asâttâh#tipšo C_LOHHEE "" ;
-meccitipšoo+Sem/Dummytag:mecci#tipšo C_LOHHEE "" ;
-tuonârokke+Sem/Dummytag:tuonâ#ro^RVkk4e 2ALGE "" ;
-miesârokke+Sem/Dummytag:miesâ#ro^RVkk4e 2ALGE "" ;
-šyejirokke+Sem/Dummytag:šyeji#ro^RVkk4e 2ALGE "" ;
+čuudâlávloo+Sem/Hum:čuudâ#lávlo C_LOHHEE "" ;
+oopperalávloo+Sem/Hum:ooppera#lávlo C_LOHHEE "" ;
+lávloo+Sem/Hum:lávlo C_LOHHEE "" ;
+asâttâhtipšoo+Sem/Hum:asâttâh#tipšo C_LOHHEE "" ;
+meccitipšoo+Sem/Hum:mecci#tipšo C_LOHHEE "" ;
+tuonârokke+Sem/Hum:tuonâ#ro^RVkk4e 2ALGE "" ;
+miesârokke+Sem/Hum:miesâ#ro^RVkk4e 2ALGE "" ;
+šyejirokke+Sem/Hum:šyeji#ro^RVkk4e 2ALGE "" ;
 álgu-urbe+Sem/Dummytag:álgu-#u^RVrbe 2ALGE "" ;
 áŋu-urbe+Sem/Dummytag:áŋu-#u^RVrbe 2ALGE "" ;
 algâurbe+Sem/Dummytag:algâ#u^RVrbe 2ALGE "" ;
@@ -4680,6 +4667,7 @@ konttur+Sem/Dummytag:konttur 3LITTER "konttori" ;
 váldukonttur+Sem/Dummytag:váldu#konttur 3LITTER "pääkonttori" ;
 pirrâdâhkoddekonttur+Sem/Dummytag:pirrâdâh#kodde#konttur 3LITTER "piirikuntakonttori" ;
 starttâmoottor+Sem/Dummytag:starttâ#moottor 3EEMEED "starttimoottori" ;
+F1A-moottor+Sem/Dummytag:F1A-#moottor 3EEMEED "F1A-moottori" ;
 puáldimmoottor+Sem/Dummytag:puáldim#moottor 3EEMEED "polttomoottori" ;
 roottor+Sem/Dummytag:roottor 3LITTER "roottori" ;
 suámsurtori+Sem/Dummytag:suámsur#tori APINA "kirpputori" ;
@@ -11619,6 +11607,8 @@ kááijumhárjuttâs+Sem/Dummytag:kááijum#hárjuttâss 4KUNAGAS ;
 tiälkkukumeštâs+Sem/Dummytag:tiälkku#kumeštâss 4KUNAGAS ;
 iäpádus+Sem/Dummytag:iäpáduss 4KUNAGAS ;
 ravvimpalvâlus+CmpN/SgN+CmpN/SgG+Sem/Dummytag:ravvim#palvâluss 4KUNAGAS ;
+kantapalvâlus+CmpN/SgN+CmpN/SgG+Sem/Dummytag:kanta#palvâluss 4KUNAGAS ;
+kanta-palvâlus+CmpN/SgN+CmpN/SgG+Sem/Dummytag:kanta-palvâluss 4KUNAGAS ;
 etimus+Sem/Dummytag:etimuss 4KUNAGAS ;
 julgáštus+Sem/Dummytag:julgáštuss 4KUNAGAS ;
 njihânjâš+Sem/Dummytag:njihânjâšš 4KUNAGAS ;
@@ -15778,7 +15768,7 @@ taažâsuormâlostâ+Sem/Plant:taažâsuormâ#lo^RVstâ 2ALGA "" ;
 taažâárhu+Sem/Plant:taažâ#á^RVrhu 2AIRU "norjanarho" ;
 tablet+Sem/Food-med:tablet 3LITTER "tabletti" ;	!¢tabletáin, tabletist, tabletân, tablet tags_via_apertium
 tahhee+Sem/Hum:tahhe C_LOHHEE "suorittaja" ;	! YAML ¢tahhein, tahhest, tahhei, tahhee tags_via_apertium
-taho+Sem/Act:ta^RVh^RCo 2TAHO ;	!YAML  tags_via_apertium
+taho+Sem/Act:ta^RVh^RCo 2TAHO "teko" ;	!YAML  tags_via_apertium
 tahtâ+Sem/Feat-measr:ta^RVhtâ 2KUSSA "tahti" ;	! tags_via_apertium
 taigacivkkee+Sem/Ani-bird:taiga#civkke C_TAHHEE "taigakirvinen" ;
 taigakuškástâh+Sem/Ani-bird:taiga#kuškást 4JOTOLAH "taigakuovi" ;
