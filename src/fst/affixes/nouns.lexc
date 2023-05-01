@@ -774,7 +774,11 @@ LEXICON 2TAHO !!≈ * **@CODE@** only for taho, similar to 2LAJO except from Pl+
 +N: 2TAHO_SG ; 
 +N: 2TAHO_PL ; 
  
-LEXICON 2TAHO_SG  !!≈ * **@CODE@** 
+LEXICON 2TAHO_SG  !!≈ * **@CODE@**
+2TAHO_SG_NOTPX ;
+LAHO_TAHO_SG_PX ;
+
+LEXICON 2TAHO_SG_NOTPX
 ! Special cases:
 +Sg+Com:^WG^CLEN%>in K ;  !tavoin 
 +Sg+Loc:^SV^WG^CLEN^SLEN%>st K ;  !tavvoost+N+Pl+Loc:^WG^CLEN%>id K ;  !tavvoid 
@@ -782,20 +786,24 @@ LEXICON 2TAHO_SG  !!≈ * **@CODE@**
  X_LAJO_TAHO_SG ; 
 +Cmp/SgNom: Rhash ; 
 +Cmp/SgGen:^WG%> Rhash ; 
-! Px
+
+LEXICON LAHO_TAHO_SG_PX
 +Sg+Nom:^SV^CLEN^SLEN VPXsuff1nom ;   ! tahhoom 
-+Sg+Nom:^SV^CLEN^SLEN VPXsuff2    ;   ! tahhoom 
++Sg+Nom:^SV^CLEN^SLEN VPXsuff2    ;   ! tahhood
++Sg+Nom:^SV^CLEN^SLEN VPXsuff3 ;      ! tahhoos 
+
 +Sg+Gen:^SV^CLEN^SLEN VPXsuff1 ;      ! tahhoon 
++Sg+Gen:^SV^WG^CLEN^SLEN VPXsuff2 ;   ! tavvood 
 +Sg+Acc:^SV^CLEN^SLEN VPXsuff1 ;      ! tahhoon 
-+Sg+Gen:^SV^WG^CLEN^SLEN VPXsuff2 ;           ! tavvood 
-+Sg+Acc:^SV^WG^CLEN^SLEN VPXsuff2 ;           ! tavvood 
-+Sg+Nom:^SV^CLEN^SLEN VPXsuff3 ;      ! tavvoos 
-+Sg+Gen:^SV^WG^RLEN^SLEN VPXsuff3 ;   ! tavvoos 
-+Sg+Acc:^SV^WG^RLEN^SLEN VPXsuff3 ;   ! tavvoos 
-+Sg+Ill:%>s CPXsuff ;                 ! lajosis 
-+Sg+Loc:^WG%>st CPXsuff ;             ! lajostis 
-+Sg+Com:^WG%>in CPXsuff ;             ! lajoinis 
-+Ess:%>n CPXsuff ;                    ! lajonân 
++Sg+Acc:^SV^WG^CLEN^SLEN VPXsuff2 ;   ! tavvood 
+
++Sg+Gen:^SV^WG^RLEN^SLEN VPXsuff3 ;   ! taavoos 
++Sg+Acc:^SV^WG^RLEN^SLEN VPXsuff3 ;   ! taavoos 
+
++Sg+Ill:%>s CPXsuff ;                 ! tahos-
++Sg+Loc:^WG%>st CPXsuff ;             ! tavost-
++Sg+Com:^WG%>in CPXsuff ;             ! tavoin-
++Ess:%>n CPXsuff ;                    ! tahon-
 :^WG%> Gen_DER ; 
 :%> Nom_DER ; 
  
@@ -817,17 +825,24 @@ LEXICON 2LAJO_SG !!≈ * **@CODE@**
 +Cmp/SgNom: Rhash ; 
 +Cmp/SgGen:^WG%> Rhash ; 
 ! Px  
-+Sg+Nom:^SV^CLEN^SLEN VPXsuff1nom ;   ! laijood 
-+Sg+Nom:^SV^CLEN^SLEN VPXsuff2    ;   ! laijood 
-+Sg+Nom:^SV^CLEN^SLEN VPXsuff3 ;      ! laijoos 
-+Sg+Gen:^SV^CLEN^SLEN VPXsuff12 ;     ! laijood 
-+Sg+Gen:^SV^WG^RLEN^SLEN VPXsuff3 ;   ! laajoos 
-+Sg+Acc:^SV^CLEN^SLEN VPXsuff12 ;     ! laijood 
-+Sg+Acc:^SV^WG^RLEN^SLEN VPXsuff3 ;   ! laajoos 
-+Sg+Ill:%>s CPXsuff ; ! lajosis 
-+Sg+Loc:^WG%>st CPXsuff ; ! lajostis 
-+Sg+Com:^WG%>in CPXsuff ;  ! lajoinis 
-+Ess:%>n CPXsuff ;         ! lajonân 
++Sg+Nom:^SV^CLEN^SLEN VPXsuff1nom ;   ! ittoom laijoom 
++Sg+Nom:^SV^CLEN^SLEN VPXsuff2    ;   ! ittood laijood 
++Sg+Nom:^SV^CLEN^SLEN VPXsuff3 ;      ! ittoos laijoos 
+
++Sg+Gen:^SV^CLEN^SLEN VPXsuff1 ;      ! ittoon tahhoon 
++Sg+Gen:^SV^WG^RLEN^SLEN VPXsuff2 ;   ! iiđood tavvood 
++Sg+Acc:^SV^CLEN^SLEN VPXsuff1 ;      ! ittoon tahhoon 
++Sg+Acc:^SV^WG^RLEN^SLEN VPXsuff2 ;   ! iiđood tavvood 
+
++Sg+Gen+Use/NG:^SV^WG^RLEN^SLEN VPXsuff3 ; ! iiđoos laajoos 
++Sg+Acc+Use/NG:^SV^WG^RLEN^SLEN VPXsuff3 ; ! iiđoos laajoos 
++Sg+Gen:^SV^WG VPXsuff3 ;                  ! iđos lajos 
++Sg+Acc:^SV^WG VPXsuff3 ;                  ! iđos lajos 
+
++Sg+Ill:%>s CPXsuff ;                 ! itos- 
++Sg+Loc:^WG%>st CPXsuff ;             ! iđost-
++Sg+Com:^WG%>in CPXsuff ;             ! iđoin-
++Ess:%>n CPXsuff ;                    ! iton-
 :^WG%> Gen_DER ; 
 :%> Nom_DER ; 
  
