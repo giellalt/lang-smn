@@ -149,7 +149,7 @@ LEXICON A_KOLME ad hoc three syllable stem > LITTER
 
 **LEXICON JIAVTAS** 
 
-**LEXICON TAASSAS** 
+**LEXICON TAASSAS** note táássáš itself is not here.
 
 ## 4 syll stems
 

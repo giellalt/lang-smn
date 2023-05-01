@@ -393,6 +393,8 @@ STRICT-TRANS-V is the set for verbs which don't let a GenAcc be a modifier of an
 
 ### Adjective sets
 
+- LIST CONCORD-A = "maggaar" "pyeri" "siämmáš" "taggaar" "tyeggáár" "tieggáár" (".*lágán"r) (".*láš"r) (".*lâš"r) (".*laš"r) (".*sâš"r) (".*vâš"r) (".*muš"r) Der/lasj ;  = this is the set for adj agreeing with N.
+
 ### NP sets defined according to their morphosyntactic features
 
 ### The PRE-NP-HEAD family of sets
@@ -953,7 +955,7 @@ The rules are not documented yet
 
 * **ANom**  removes A Nom
 
-* **AAttr**  selects A Attr
+* **AAttr**  selects A Attr remove grc
 
 * **OrdAttr**
 

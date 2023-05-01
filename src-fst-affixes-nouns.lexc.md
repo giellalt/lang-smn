@@ -194,7 +194,7 @@ WG, blank Ill, DLEN, RVSH, SVLOW
 
 * **LEXICON 2TAHO** only for taho, similar to 2LAJO except from Pl+Ill, almost similar to 2SPAHA 
 
-* **LEXICON 2TAHO_SG** 
+* **LEXICON 2TAHO_SG**
 
 * **LEXICON 2TAHO_PL** 
 

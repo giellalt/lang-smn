@@ -2,10 +2,6 @@
 
 # Inari Saami noun roots
 
-* **LEXICON NounRoot**
-* **Noun ;**
-* **FirstComponent ;**
-
 ## 1. Even-syllable stems
 * â-stems
 * á-stems
@@ -22,7 +18,11 @@
 * 2.2 Stems without consonant gradation
 3. Ohter cases, all kind of changes
 
-* **LEXICON LastNouns**
+* **LEXICON NounRoot** is the basic lexicon, dividing into
+* **FirstComponent ;** , nouns only in use as cmp first parts, and
+* **Noun ;** , the noun list itself.
+
+* **LEXICON LastNouns** pointed to from compounds.lexc
 * **heivi+CmpN/SgNomLeft+CmpNP/Suff+Sem/Dummytag:he^RVi4vi 2AIGI ;**
 
 * **LEXICON FirstComponent**
@@ -30,7 +30,7 @@
 * **luáppijâš+N+Cmp/SgNom+Sem/Time:luáppijâš Rnoun ;**
 * ...
 
-* **LEXICON MiddleNouns**
+* **LEXICON MiddleNouns** , referred to from compounding.lexc
 * **njune+N+Cmp/Sh+Sem/Hum:njun Rnoun ;**
 * **njälmi+N+Cmp/Sh+Sem/Body:njälm Rnoun ;** tags_via_apertium
 

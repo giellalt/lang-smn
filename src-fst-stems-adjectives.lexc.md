@@ -1,7 +1,9 @@
 
 # Inari Saami adjectives
 
-* **LEXICON LAST_CMP_ADJ** cmp last part
+* **LEXICON CMP_ADJ**  adds +Cmp tag
+
+* **LEXICON LAST_CMP_ADJ** is for cmp last part (one member)
 
 * **LEXICON AdjectiveRoot** is the list of adjectives
 
