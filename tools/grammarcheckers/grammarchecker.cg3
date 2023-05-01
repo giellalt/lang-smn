@@ -676,6 +676,8 @@ LIST DOHKO = "pajas" "báldii" "teehi" "tiehu" "tuohunteehin" "tovhon" "kyevtkoo
 
 #!! ### Coordinator sets
 
+LIST CC-INCLUSIVE = "ja" "já" ;
+
 #!! Foc, NEGFOC, ...
 SET Foc = Foc/ge  OR Foc/gen  OR Foc/ges  OR Foc/gis  OR Foc/naj OR Foc/ba  OR Foc/be  OR Foc/hal  OR Foc/han  OR Foc/bat OR Foc/son ;
 
@@ -1391,7 +1393,7 @@ LIST MUADDI = "muáddi" ;
 LIST KALLE = "kalle" ;
 LIST PELNUB = "pelnub" "laknub" ;
 
-SET NUM = Num - OHTA OR Arab - OHTA;
+SET NUM = Num - OHTA - Rom OR Arab - OHTA;
 
 
 LIST TWO-TO-SIX = "kyehti" "kulmâ" "nelji" "vittâ" "kuttâ"
@@ -1406,7 +1408,7 @@ SET SEVEN-AND-MORE-WORD = NUM-WORD - TWO-TO-SIX - OHTA - MANGA - MUADDI - KALLE 
 
 LIST SEVEN-AND-MORE-ARABIC = "7" "8" "9"
 	("[1-9][0-9]"r) ("[1-9][0-9][0-9]"r)
-	"5-7" "6-7" "7-8" "7-9" "8-9" "8-10" ;
+	"[1-6]-7" "[1-7]-8" "[1-8]-9" "[1-9]-10" ;
 # 7+ should include 8,74 but not 3,74.
 
 SET SEVEN-AND-MORE = SEVEN-AND-MORE-WORD OR SEVEN-AND-MORE-ARABIC ;
@@ -2359,7 +2361,7 @@ COPY:msyn-adj-sg-pl (Pl Nom &SUGGEST) EXCEPT (Sg Gen &msyn-adj-sg-pl) TARGET (A 
 #!!  **Agreement rule:** msyn-quant-nom-gen (A.Gen + N.Nom) # add Ord
 ADD:msyn-quant-nom-gen (&msyn-quant-nom-gen) TARGET Num IF
 (0 Num + Ord + Sg + Nom)
-(NOT 0 Num + Sg + Gen OR Sem/Year OR Arab)
+(NOT 0 Num + Sg + Gen OR Sem/Year OR Arab OR Sem/ID OR Rom)
 (1C N + NOT-NOM LINK NOT 0 Loc);
 COPY:msyn-quant-nom-gen (Gen &SUGGEST) EXCEPT (Nom &msyn-quant-nom-gen) TARGET (Num Nom &msyn-quant-nom-gen);
 
@@ -2399,7 +2401,7 @@ ADD:msyn-num-gen-par (&msyn-num-gen-par) TARGET N IF
 (-1 Num OR A + Arab LINK 0 SEVEN-AND-MORE LINK NOT 0 Ord)
 (0C N + Sg + Gen)
 (NOT 0 ABBR OR Par)
-(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Rom)
+(NOT -1 ("<[1-2][0-9][0-9][0-9]>"r) OR ("<.* %>"r) OR Sem/Measr_Time OR Sem/Year OR Sem/ID OR Rom)
 (NOT 0 PEIVI) # Sem/Time OR Sem/Date OR Sem/Time-clock)
 (NOT 1 Po OR N OR A) ;
 COPY:msyn-num-gen-par (Par &SUGGEST) EXCEPT (Sg Gen &msyn-num-gen-par) TARGET (N &msyn-num-gen-par) ;
@@ -2490,7 +2492,7 @@ COPY:msyn-agr-sg2-sg1 (Sg1 &SUGGEST) EXCEPT (Sg2 &msyn-agr-sg2-sg1) TARGET (V In
 #!! **Agreement rule:** msyn-agr-other-sg1, *Mun puátá/puáđám*
 ADD:msyn-agr-other-sg1 (&msyn-agr-other-sg1) TARGET V IF
 	(NOT -2 Sg1)
-	(NOT -2 CC LINK -1 Sg + Nom)
+	(NOT -2 CC-INCLUSIVE LINK -1 Sg + Nom)
 	(-1C Pron + Sg1 + Nom)
 	(0 V + Ind + PERNUM)
 	(NOT 0 Sg1)
@@ -2626,7 +2628,7 @@ COPY:msyn-agr-sg3-du3 (Du3 &SUGGEST) EXCEPT (Sg3 &msyn-agr-sg3-du3) TARGET (V  &
 
 #!!  **Agreement rule:** msyn-agr-sg3-du3
 ADD:msyn-agr-sg3-du3 (&msyn-agr-sg3-du3) TARGET V IF
-	(-1 N + Sg + Nom LINK 0 Sem/Hum OR Sem/Ani OR Sem/Org LINK -1 CC LINK -1 N + Sg + Nom LINK 0 Sem/Hum OR Sem/Ani OR Sem/Org)
+	(-1 N + Sg + Nom LINK 0 Sem/Hum OR Sem/Ani OR Sem/Org LINK -1 CC-INCLUSIVE LINK -1 N + Sg + Nom LINK 0 Sem/Hum OR Sem/Ani OR Sem/Org)
 	(0 (V Ind Sg3));
 COPY:msyn-agr-sg3-du3 (Du3 &SUGGEST) EXCEPT (Sg3 &msyn-agr-du3-sg3) TARGET (V  &msyn-agr-du3-sg3);
 
@@ -2676,9 +2678,9 @@ ADD:msyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET (V Sg3) IF
 	(NOT *-1 Sg + Nom OR Sg3 + Nom BARRIER NOT-ADV OR (","))
 	(0C COPULAS OR ("kavnuđ"))
 	(*1 Sg + Nom BARRIER NOT-NPMODADV OR @CVP OR PUNCT + RIGHT OR PUNCT + LEFT
-#	LINK NOT *1 V + Pl3
-	LINK 1 CC
-	LINK *1 N + Nom BARRIER NOT-NPMOD);
+	#	LINK NOT *1 V + Pl3
+		LINK 1 CC-INCLUSIVE
+		LINK *1 N + Nom BARRIER NOT-NPMOD);
 ADD:msyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET (V Sg3) IF
 	(NEGATE 0 (V Pl3))
 	(NOT *-1 Sg + Nom OR Sg3 + Nom BARRIER NOT-ADV OR (","))
@@ -2716,7 +2718,11 @@ COPY:msyn-agr-sg3-du3 (Du3 &SUGGEST) EXCEPT (Sg3 &msyn-agr-sg3-du3) TARGET (V  &
 
 #!!  **Agreement rule:** msyn-agr-sg3-pl3, Subject to the left, *80 puátá/puáđah*
 ADD:msyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET V IF
-	(*-1C NUM BARRIER Nom OR V OR (")") OR S-BOUNDARY OR COMMA OR Loc LINK NOT 0 Sem/ID OR Sem/Year OR ("<[A-ZÁÄČŠ].*>r") OR Gen OR KALLE LINK NOT 1 PUNCT OR Sem/Measr_Time)
+	(*-1C NUM BARRIER Nom OR V OR (")") OR S-BOUNDARY OR COMMA OR Loc 
+		LINK NOT 0 Sem/ID OR Sem/Year OR Sem/Date OR Sem/Time OR Sem/Time-clock 
+			OR Rom OR ("<[A-ZÁÄČŠ].*>r") OR Gen OR KALLE 
+			LINK NOT 1 PUNCT OR Sem/Measr_Time OR Sem/Time OR ("§") OR ("<([A-ZÁÄČŠ].*)>i") # after Num
+			LINK NOT -2 ("nr")) # before Num
 	(NEGATE 0 MOD-ASP LINK *1 TV + Inf BARRIER Acc LINK *1 EOS OR S-BOUNDARY BARRIER Acc)
 	(0 V + Sg3);
 COPY:msyn-agr-sg3-pl3 (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-agr-sg3-pl3) TARGET (V &msyn-agr-sg3-pl3);
@@ -2728,9 +2734,9 @@ COPY:msyn-agr-sg3-pl3 (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-agr-sg3-pl3) TARGET (V &m
 
 #!!  **Agreement rule:** msyn-agr-sg3-pl3, Subject to the left, *80 puátá/puáđah*
 ADD:msyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET (V Sg3) IF
+	(*-1 (Loc Pl) - Prop  BARRIER NOT-ADV-PCLE - N LINK -1 (".*%"r) + Num + Arab OR ("peeli") + Sg + Nom)
 	(NEGATE 0 (V Pl3))
-	(NEGATE 0 MOD-ASP LINK *1 TV + Inf BARRIER Acc LINK *1 EOS OR S-BOUNDARY BARRIER Acc)
-        (*-1 (Loc Pl) - Prop  BARRIER NOT-ADV-PCLE - N LINK -1 (".*%"r) + Num + Arab OR ("peeli") + Sg + Nom LINK NOT 1 PUNCT);
+	(NEGATE 0 MOD-ASP LINK *1 TV + Inf BARRIER Acc LINK *1 EOS OR S-BOUNDARY BARRIER Acc);
 COPY:msyn-agr-sg3-pl3 (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-agr-sg3-pl3) TARGET (V &msyn-agr-sg3-pl3);
 #$ Kalle cuobbuu kalga cummâlistiđ # ok
 #$ Čiččâm peellid almottii, et säämi kielâlaahâ ij kuoskâ sijjân
@@ -2761,7 +2767,7 @@ COPY:msyn-agr-pl3-sg3 (Sg3 &SUGGEST) EXCEPT (Pl3 &msyn-agr-pl3-sg3) TARGET (V &m
 #!!  **Agreement rule:** msyn-agr-other-pl3, Subject to the left, *Toh puátá/puátih.*
 ADD:msyn-agr-other-pl3 (&msyn-agr-other-pl3) TARGET V IF
 	(NOT -2 Sup OR Sg3)
-	(*-1C Pron + Pl3 + Nom OR Dem + Pl + Nom OR N + Pl + Nom  BARRIER NOT-ADV-PCLE OR VFIN OR CC OR CLB OR PUNCT)
+	(*-1C Pron + Pl3 + Nom OR Dem + Pl + Nom OR N + Pl + Nom  BARRIER NOT-ADV-PCLE OR VFIN OR CC-INCLUSIVE OR CLB OR PUNCT)
 	(NOT -1 NPL_WITH_VSG3)
 	(0C V + Ind + Sg3)
 	(NOT 0 Pl3)
@@ -2777,7 +2783,7 @@ COPY:msyn-agr-other-pl3 (Pl3 &SUGGEST) EXCEPT (VNOTPL3 &msyn-agr-other-pl3) TARG
 
 #!!  **Agreement rule:** msyn-agr-other-pl3
 ADD:msyn-agr-other-pl3 (&msyn-agr-other-pl3) TARGET V IF
-	(*-1 N + Pl + Nom BARRIER NOT-NPMODADV OR CC OR CLB OR PUNCT LINK NOT 0 NPL_WITH_VSG3 OR ABBR)
+	(*-1 N + Pl + Nom BARRIER NOT-NPMODADV OR CC-INCLUSIVE OR CLB OR PUNCT LINK NOT 0 NPL_WITH_VSG3 OR ABBR)
 	(NEGATE *-1 ("čuovâ" N Pl Nom) LINK 1 ("alne"))
 	(0C V + Ind + Sg3 OR V + Cond + Sg3)
 	(NOT 0 Pl3)
@@ -2942,7 +2948,7 @@ ADDRELATION:msyn-extv-sg3-pl3 ($2) N + Pl + Nom FROM (-3 V + LEDE + Sg3 LINK 0 (
 ADD:msyn-extv-pl3-sg3 (&msyn-extv-pl3-sg3) TARGET V IF
 	(*-1 Loc OR DOPPE BARRIER NOT-ADV-PCLE)
 	(0 ("leđe" V Ind Prs Pl3))
-	(*1 (N Sg Nom) OR (A Sg Nom) - Coll BARRIER NOT-NPMODADV OR NUM OR ("maŋgâ" Pron) OR @CVP OR S-BOUNDARY LINK NOT 0 (Sg Gen) OR (Sg Acc) LINK NEGATE 1 CC OR COMMA LINK *1 (N Nom) OR (A Nom) BARRIER NOT-NPMODADV)
+	(*1 (N Sg Nom) OR (A Sg Nom) - Coll BARRIER NOT-NPMODADV OR NUM OR ("maŋgâ" Pron) OR @CVP OR S-BOUNDARY LINK NOT 0 (Sg Gen) OR (Sg Acc) LINK NEGATE 1 CC-INCLUSIVE OR COMMA LINK *1 (N Nom) OR (A Nom) BARRIER NOT-NPMODADV)
 	(NEGATE *1 (NomAg Sg Nom) LINK 1 (Prop Sem/Mal) OR (Prop Sem/Sur) OR (Prop Sem/Fem) LINK *1 (Pl Nom));
 	#$ Anarâškielâst {láá-uv} maaŋgâs, kiäh láá näävt porgâm.
 	#$ Áigápuátutorjust {láá} 3 uási.
@@ -3086,7 +3092,7 @@ ADD:msyn-extsubj-gen-nom (&msyn-extsubj-gen-nom) TARGET N + Gen IF
 	(NOT 1 N + Gen OR N + Nom OR Po)
 	(NEGATE 0 Sem/Hum OR HUMAN LINK 1 (Actio TV) LINK *1 (N Nom) BARRIER NOT-NPMOD)
 	(NEGATE -1 Num - OHTA)
-	(NEGATE -1 CC LINK -1 Gen LINK -1 Num - OHTA)
+	(NEGATE -1 CC-INCLUSIVE LINK -1 Gen LINK -1 Num - OHTA)
 	;
 COPY:msyn-extsubj-gen-nom (Nom &SUGGEST) EXCEPT (Gen &msyn-extsubj-gen-nom) TARGET (N  &msyn-extsubj-gen-nom) ;
 	#% "Sist ij lah alda sämikielâlij huolhij {torjuu}£{toorjâ} finnimnáál."
@@ -3433,7 +3439,7 @@ COPY:msyn-obj-plnom-placc (Acc &SUGGEST) EXCEPT (Nom &msyn-obj-plnom-placc) TARG
 
 #!!  **Agreement rule:** msyn-obj-plnom-placc
 ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF
-	(*-1 REALTV + PrfPrc BARRIER NOT-NPMODADV LINK NOT 1 CC LINK *-1 Nom)
+	(*-1 REALTV + PrfPrc BARRIER NOT-NPMODADV LINK NOT 1 CC-INCLUSIVE LINK *-1 Nom)
 	(0C N + Pl + Nom)
 	(NEGATE *1 V + Pl3 BARRIER NOT-ADV);
 COPY:msyn-obj-plnom-placc (Acc &SUGGEST) EXCEPT (Nom &msyn-obj-plnom-placc) TARGET (N Pl &msyn-obj-plnom-placc);
@@ -3658,9 +3664,9 @@ COPY:msyn-adj-pred-attr (Attr &SUGGEST) EXCEPT (Pl Nom &msyn-adj-pred-attr) TARG
 ADD:xmsyn-adj-attr-other (&msyn-adj-attr-other)  TARGET (A) IF
 	(0C ATTRONLY)
 	(NOT 1 N OR A OR PrfPrc OR ?)
-	(NEGATE 1 CC LINK 1 A + Attr)
+	(NEGATE 1 CC-INCLUSIVE LINK 1 A + Attr)
 	(NOT 1 ("..."))
-	(NEGATE 1 CC OR COMMA LINK 1 (A Attr))
+	(NEGATE 1 CC-INCLUSIVE OR COMMA LINK 1 (A Attr))
 	;
 ADDRELATION:xmsyn-adj-attr-other ($2) (N) FROM (*1 Pron + Rel LINK *1 A LINK 0 (&msyn-adj-attr-other));
 #ADDCOHORT:xsyn-adj-attr-new (
@@ -3677,12 +3683,12 @@ ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred)  TARGET (A) IF
 	(0C Attr)
 	(NOT 0 (Arab Ord) OR (A Sg Nom) OR ATTRONLY)
 	(NOT 1 N OR A OR PrfPrc OR ?)
-	(NOT 1 CC LINK 1 A + Attr)
+	(NOT 1 CC-INCLUSIVE LINK 1 A + Attr)
 	(NOT 1 ("..."))
-	(NOT 1 CC OR COMMA LINK 1 (A Attr));
+	(NOT 1 CC-INCLUSIVE OR COMMA LINK 1 (A Attr));
 ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred)  TARGET (A Attr) IF 
 	(0C Attr) 
-	(1 CC LINK 1 &msyn-adj-attr-pred OR (A Sg Nom) LINK NOT 1 N OR A OR PrfPrc OR CC) 
+	(1 CC-INCLUSIVE LINK 1 &msyn-adj-attr-pred OR (A Sg Nom) LINK NOT 1 N OR A OR PrfPrc OR CC) 
 	(NOT 0 (Arab Ord) OR (A Sg Nom)) ;
 COPY:msyn-adj-attr-pred (Sg Nom &SUGGEST) EXCEPT (Attr &msyn-adj-attr-pred) TARGET ( A &msyn-adj-attr-pred);
 
@@ -3699,14 +3705,14 @@ ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A) IF
   (*-1 COPULAS + Qst BARRIER V OR S-BOUNDARY LINK 1 Nom)
 #  (NOT 1 Adv)
   (NEGATE *1 N BARRIER NOT-A-CC)
-  (NEGATE 1 CC OR COMMA LINK 1 A OR PrfPrc OR PrsPrc LINK 1 N)
-  (NEGATE 1 CC OR COMMA LINK 1 PUNCT LINK 1 A LINK 1 N)
+  (NEGATE 1 CC-INCLUSIVE OR COMMA LINK 1 A OR PrfPrc OR PrsPrc LINK 1 N)
+  (NEGATE 1 CC-INCLUSIVE OR COMMA LINK 1 PUNCT LINK 1 A LINK 1 N)
   (NEGATE 1 (A Attr) OR ? LINK *1 N BARRIER NOT-NPMOD)
   (NEGATE 1 A + Sg + Nom OR (Pron Pers) OR PrfPrc)
   (NEGATE 0 ("puoh") LINK 1 Pron LINK *1 N)
   (NOT 0 (A Sg Nom) OR Adv OR Pcle)
   (NEGATE 1 COMMA OR ("-") LINK 1 ("mut") LINK *1 (A Attr) BARRIER NOT-NPMODADV)
-  (NEGATE 0 Superl LINK 1 CC LINK 1 ("eenâb" Superl) OR ("iänááš") LINK 1 A LINK 1 N)
+  (NEGATE 0 Superl LINK 1 CC-INCLUSIVE LINK 1 ("eenâb" Superl) OR ("iänááš") LINK 1 A LINK 1 N)
   (NEGATE 1 (Num Attr) LINK 1 N)
   (NEGATE 0 ("eenâb") LINK 1 PrfPrc);
 
@@ -3716,14 +3722,14 @@ ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A) IF
   (*-1 COPULAS BARRIER V OR S-BOUNDARY LINK *-1 Nom)
 #  (NOT 1 Adv)
   (NEGATE *1 N BARRIER NOT-A-CC)
-  (NEGATE 1 CC OR COMMA LINK 1 A OR PrfPrc OR PrsPrc LINK 1 N)
-  (NEGATE 1 CC OR COMMA LINK 1 PUNCT LINK 1 A LINK 1 N)
+  (NEGATE 1 CC-INCLUSIVE OR COMMA LINK 1 A OR PrfPrc OR PrsPrc LINK 1 N)
+  (NEGATE 1 CC-INCLUSIVE OR COMMA LINK 1 PUNCT LINK 1 A LINK 1 N)
   (NEGATE 1 (A Attr) OR ? LINK *1 N BARRIER NOT-NPMOD)
   (NEGATE 1 A + Sg + Nom OR (Pron Pers) OR PrfPrc)
   (NEGATE 0 ("puoh") LINK 1 Pron LINK *1 N)
   (NOT 0 (A Sg Nom) OR Adv OR Pcle)
   (NEGATE 1 COMMA OR ("-") LINK 1 ("mut") LINK *1 (A Attr) BARRIER NOT-NPMODADV)
-  (NEGATE 0 Superl LINK 1 CC LINK 1 ("eenâb" Superl) OR ("iänááš") LINK 1 A LINK 1 N)
+  (NEGATE 0 Superl LINK 1 CC-INCLUSIVE LINK 1 ("eenâb" Superl) OR ("iänááš") LINK 1 A LINK 1 N)
   (NEGATE 1 (Num Attr) LINK 1 N)
   (NEGATE 0 ("eenâb") LINK 1 PrfPrc);
 
