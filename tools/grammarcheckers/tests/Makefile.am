@@ -85,6 +85,7 @@ TESTS=\
 	neg-obj-sgnom-sgacc.yaml \
 	neg-orrood-inf-actioess.yaml \
 	neg-pass-accsubj-nomsubj.yaml \
+	neg-plobj-nom-acc.yaml \
 	neg-po-nom-gen.yaml \
 	neg-po-placc-plgen.yaml \
 	neg-posspl-acc-gen.yaml \
@@ -115,6 +116,7 @@ XFAIL_TESTS=\
 	msyn-negcompl-sg3-conneg.yaml \
 	msyn-num-par-nom.yaml \
 	msyn-pass-accsubj-nomsubj.yaml \
+	neg-plobj-nom-acc.yaml \
 	msyn-po-acc-gen.yaml \
 	msyn-po-nom-gen.yaml \
 	msyn-posspl-acc-gen.yaml \
