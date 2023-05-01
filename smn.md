@@ -14030,7 +14030,7 @@ Genitive not Nominative
 
 * **realverbX**
 
-* **IfonlyVerb** selects the FMAINV reading in the cohort
+* **IfonlyVerb** selects the FMAINV reading in the cohort ... to hard
 
 * **IfonlyConNeg** ConNeg if it is @-FMAINV or @-FAUXV
 
