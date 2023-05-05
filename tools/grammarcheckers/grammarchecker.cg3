@@ -616,6 +616,7 @@ LIST A-CC = A CC ; #!!= - @CODE@
 
 SET NOT-A = WORD - A ; #!!= - @CODE@  This is former NOT-ADJ
 SET NOT-A-COMMA = WORD - A - COMMA ; #!!= - @CODE@ 
+SET NOT-A-COMMA-CC = WORD - A - COMMA - CC ; #!!= - @CODE@ 
 SET NOT-Attr = WORD - Attr ; #!!= - @CODE@ 
 SET NOT-A-PCLE = WORD - A - Pcle ; #!!= - @CODE@ 
 SET NOT-A-CC = WORD - A-CC ; #!!= - @CODE@ 
@@ -2061,6 +2062,7 @@ LIST &msyn-agr-sg2-sg1 = &msyn-agr-sg2-sg1 ;
 LIST &msyn-agr-sg2-sg3 = &msyn-agr-sg2-sg3 ;
 LIST &msyn-agr-sg3-du3 = &msyn-agr-sg3-du3 ;
 LIST &msyn-agr-sg3-pl3 = &msyn-agr-sg3-pl3 ;
+LIST &msyn-agr-ii-pl3 = &msyn-agr-ii-pl3 ;
 LIST &msyn-attr-com-gen = &msyn-attr-com-gen ;
 LIST &msyn-dem-locattr-gen = &msyn-dem-locattr-gen ;
 LIST &msyn-det-nom-acc = &msyn-det-nom-acc ;
@@ -2689,8 +2691,7 @@ ADD:msyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET (V Sg3) IF
 	LINK 1 COMMA
 	LINK 1 N + Nom
 	LINK 1 CC
-	LINK NOT *1 V + Pl3
-);
+	LINK NOT *1 V + Pl3);
 
 ADD:msyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET (V Sg3) IF
 	(NEGATE 0 (V Pl3))
@@ -2702,6 +2703,14 @@ ADDRELATION:msyn-agr-sg3-pl3 ($2) (Pl Nom) FROM (-1 V + Sg3 LINK 0 (&msyn-agr-sg
 ADDRELATION:msyn-agr-sg3-pl3 ($2) (Pl Nom) FROM (-2 V + Sg3 LINK 0 (&msyn-agr-sg3-pl3));
 ADDRELATION:msyn-agr-sg3-pl3 ($2) (Pl Nom) FROM (-3 V + Sg3 LINK 0 (&msyn-agr-sg3-pl3));
 ADDRELATION:msyn-agr-sg3-pl3 ($2) (Pl Nom) FROM (-4 V + Sg3 LINK 0 (&msyn-agr-sg3-pl3));
+
+
+ADD:msyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET Neg IF
+	(0 Sg3)
+	(NOT *-1 Sg + Nom OR Sg3 + Nom BARRIER NOT-ADV OR (","))
+	(*1 ConNeg LINK *1 Pl + Nom BARRIER NOT-NPMODADV OR @CVP OR PUNCT + RIGHT OR PUNCT + LEFT LINK NOT *1 V + Pl3)
+	;
+COPY:msyn-agr-sg3-pl3 (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-agr-sg3-pl3) TARGET (V &msyn-agr-Sg3-pl3);
 #% Tast lii uápis ääših
 #$ Tast láá uápis ääših
 
@@ -2719,7 +2728,7 @@ COPY:msyn-agr-sg3-du3 (Du3 &SUGGEST) EXCEPT (Sg3 &msyn-agr-sg3-du3) TARGET (V  &
 #!!  **Agreement rule:** msyn-agr-sg3-pl3, Subject to the left, *80 puátá/puáđah*
 ADD:msyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET V IF
 	(*-1C NUM BARRIER Nom OR V OR (")") OR S-BOUNDARY OR COMMA OR Loc 
-		LINK NOT 0 Sem/ID OR Sem/Year OR Sem/Date OR Sem/Time OR Sem/Time-clock 
+		LINK NOT 0 Sem/ID OR Sem/Year OR Sem/Date OR Sem/Time # OR Sem/Time-clock: 1-2 iä ... 
 			OR Rom OR ("<[A-ZÁÄČŠ].*>r") OR Gen OR KALLE 
 			LINK NOT 1 PUNCT OR Sem/Measr_Time OR Sem/Time OR ("§") OR ("<([A-ZÁÄČŠ].*)>i") # after Num
 			LINK NOT -2 ("nr")) # before Num
@@ -3704,7 +3713,7 @@ ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A) IF
   (NOT 0 (Arab Ord) OR ATTRONLY)
   (*-1 COPULAS + Qst BARRIER V OR S-BOUNDARY LINK 1 Nom)
 #  (NOT 1 Adv)
-  (NEGATE *1 N BARRIER NOT-A-CC)
+  (NEGATE *1 N BARRIER NOT-A-COMMA-CC)
   (NEGATE 1 CC-INCLUSIVE OR COMMA LINK 1 A OR PrfPrc OR PrsPrc LINK 1 N)
   (NEGATE 1 CC-INCLUSIVE OR COMMA LINK 1 PUNCT LINK 1 A LINK 1 N)
   (NEGATE 1 (A Attr) OR ? LINK *1 N BARRIER NOT-NPMOD)
@@ -3721,9 +3730,14 @@ ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A) IF
   (NOT 0 (Arab Ord) OR ATTRONLY)
   (*-1 COPULAS BARRIER V OR S-BOUNDARY LINK *-1 Nom)
 #  (NOT 1 Adv)
-  (NEGATE *1 N BARRIER NOT-A-CC)
-  (NEGATE 1 CC-INCLUSIVE OR COMMA LINK 1 A OR PrfPrc OR PrsPrc LINK 1 N)
-  (NEGATE 1 CC-INCLUSIVE OR COMMA LINK 1 PUNCT LINK 1 A LINK 1 N)
+  (NEGATE *1 N BARRIER NOT-A-COMMA-CC)
+  (NEGATE 1 CC OR COMMA LINK 1 A OR PrfPrc OR PrsPrc LINK 1 N)
+  (NEGATE 1 CC OR COMMA LINK 1 PUNCT LINK 1 A LINK 1 N)
+  (NEGATE 1                                                      CC OR COMMA LINK 1 Attr LINK 1 N)
+  (NEGATE 1                              COMMA LINK 1 A + Attr LINK 1 CC LINK 1 A + Attr LINK 1 N)
+  (NEGATE 1 COMMA LINK 1 A + Attr LINK 1 COMMA LINK 1 A + Attr LINK 1 CC LINK 1 A + Attr LINK 1 N)
+  (NEGATE 1 COMMA LINK 1 A + Attr LINK 1 COMMA LINK 1 A + Attr LINK 1 
+                                         COMMA LINK 1 A + Attr LINK 1 CC LINK 1 A + Attr LINK 1 N)
   (NEGATE 1 (A Attr) OR ? LINK *1 N BARRIER NOT-NPMOD)
   (NEGATE 1 A + Sg + Nom OR (Pron Pers) OR PrfPrc)
   (NEGATE 0 ("puoh") LINK 1 Pron LINK *1 N)
