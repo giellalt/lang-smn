@@ -9343,6 +9343,8 @@ First part of complex names
 * Cuávis FirstTag ;
 
 **LEXICON ProperNoun-smn**
+Indeclineable
+
 Ordinary names
 
 Family names
@@ -10240,6 +10242,7 @@ LEX-A, A-CASE, ...
 
 - SET NOT-A = WORD - A ;   This is former NOT-ADJ
 - SET NOT-A-COMMA = WORD - A - COMMA ;  
+- SET NOT-A-COMMA-CC = WORD - A - COMMA - CC ;  
 - SET NOT-Attr = WORD - Attr ;  
 - SET NOT-A-PCLE = WORD - A - Pcle ;  
 - SET NOT-A-CC = WORD - A-CC ;  
@@ -11325,6 +11328,7 @@ LEX-A, A-CASE, ...
 
 - SET NOT-A = WORD - A ;   This is former NOT-ADJ
 - SET NOT-A-COMMA = WORD - A - COMMA ;  
+- SET NOT-A-COMMA-CC = WORD - A - COMMA - CC ;  
 - SET NOT-Attr = WORD - Attr ;  
 - SET NOT-A-PCLE = WORD - A - Pcle ;  
 - SET NOT-A-CC = WORD - A-CC ;  

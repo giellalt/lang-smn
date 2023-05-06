@@ -9,6 +9,8 @@ First part of complex names
 * Cuávis FirstTag ;
 
 **LEXICON ProperNoun-smn**
+Indeclineable
+
 Ordinary names
 
 Family names
