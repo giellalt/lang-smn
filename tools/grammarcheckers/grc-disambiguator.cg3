@@ -2222,11 +2222,12 @@ REMOVE:GenNotImprt Imprt IF (0 Gen)(*1 N BARRIER NOT-NPMOD-ACC-ADV LINK *1 VFIN)
 #$ Kielâ maassâd finnim monâttum suhâpuolvân lii korrâ pargo.
 
 REMOVE:NomNotImprt Imprt IF (0 Nom)(*1 V + Sg3 BARRIER NOT-NPMOD-ACC-ADV);
-#$ Kielâ lingvistlâš ovdedem läävee juohhuđ kuulmâ suárgán.
+	#$ Kielâ lingvistlâš ovdedem läävee juohhuđ kuulmâ suárgán.
 
 REMOVE:ImprtNotInf Inf IF (-1 BOS)(0 Imprt + Pl2)(NOT *1 VFIN);
 
-REMOVE:InfNotImprt Imprt IF (*-1 VFIN)(0 Inf);
+REMOVE:InfNotImprt Imprt IF (*-1 VFIN BARRIER CS)(0 Inf);
+	#$GRAM
 
 REMOVE:ImprtNotIndSg3 Ind + Sg3 IF (-1 BOS)(0 Imprt + Sg2)(*1 ("!"));
 
