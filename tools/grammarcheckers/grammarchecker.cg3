@@ -2700,7 +2700,7 @@ ADD:msyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET (V Sg3) IF
 	(NEGATE 0 (V Pl3))
 	(NOT *-1 Sg + Nom OR Sg3 + Nom BARRIER NOT-ADV OR (","))
 	(0C COPULAS OR ("kavnuđ"))
-	(*1 Pl + Nom BARRIER NOT-NPMODADV OR @CVP OR PUNCT + RIGHT OR PUNCT + LEFT LINK NOT *1 V + Pl3)
+	(*1 Pl + Nom BARRIER NOT-NPMODADV OR @CVP OR PUNCT + RIGHT OR PUNCT + LEFT LINK NOT 0 (Sg Nom) LINK NOT *1 V + Pl3)
 	;
 COPY:msyn-agr-sg3-pl3 (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-agr-sg3-pl3) TARGET (V &msyn-agr-sg3-pl3);
 ADDRELATION:msyn-agr-sg3-pl3 ($2) (Pl Nom) FROM (-1 V + Sg3 LINK 0 (&msyn-agr-sg3-pl3));
@@ -2812,7 +2812,7 @@ ADD:msyn-agr-other-pl3 (&msyn-agr-other-pl3) TARGET V IF
 	(NOT -1 NPL_WITH_VSG3)
 	(0C V + Ind + Sg3 OR V + Cond + Sg3)
 	(NOT 0 Pl3)(NOT 0 Foc/ge)
-	(*1 N + Pl + Nom BARRIER @CVP OR NOT-NPMODADV - (A Pl Nom) - Ill - Loc LINK NOT 0 ABBR LINK NOT 1 Pl3);
+	(*1 N + Pl + Nom BARRIER @CVP OR NOT-NPMODADV - (A Pl Nom) - Ill - Loc LINK NOT 0 ABBR OR (Sg Nom) LINK NOT 1 Pl3);
 
 COPY:msyn-agr-other-pl3 (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-agr-other-pl3) TARGET (V Prs &msyn-agr-other-pl3);
 COPY:msyn-agr-other-pl3 (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-agr-other-pl3) TARGET (V Prt &msyn-agr-other-pl3);
