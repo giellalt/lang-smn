@@ -2733,18 +2733,18 @@ LIST ADDRESS = ("<.*tie>r") ("<.*polku>r") ("<.*kuja>r") ("<.*katu>r") ;
 #!!  **Agreement rule:** msyn-agr-sg3-pl3, Subject to the left, *80 puátá/puáđah*
 ADD:msyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET V IF
 	(*-1C NUM BARRIER Nom OR V OR (")") OR S-BOUNDARY OR COMMA OR Loc 
-		LINK NOT 0 Sem/ID OR Sem/Year OR Sem/Date OR Sem/Time # OR Sem/Time-clock: 1-2 iä ... 
-			OR Rom OR ("<[A-ZÁÄČŠ].*>r") OR Gen OR KALLE 
-			LINK NOT -1 ("nr") OR ADDRESS OR KLASS # before Num
+		LINK NOT 0 Sem/ID OR Sem/Year OR Sem/Date OR Sem/Time OR Sem/Time-clock OR Rom OR ("<[A-ZÁÄČŠ].*>r") OR Gen OR KALLE LINK NOT -1 ("nr") OR ADDRESS OR KLASS OR (ACR Nom) # before Num
 			LINK NOT 2 PUNCT OR Sem/Measr_Time OR Sem/Time OR ("§") OR ("<([A-ZÁÄČŠ].*)>i")) # after Num
 	(NEGATE 0 MOD-ASP LINK *1 TV + Inf BARRIER Acc LINK *1 EOS OR S-BOUNDARY BARRIER Acc)
 	(0 V + Sg3)
+	(NEGATE 0 (N Nom))
 	(NOT 1 (A Sg Nom) OR (N Sg Nom));
 COPY:msyn-agr-sg3-pl3 (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-agr-sg3-pl3) TARGET (V &msyn-agr-sg3-pl3);
-#% 80 puátá.
-#$ 80 puáđah.
-#$ Kale haajâ muu kuulmâ kilomeetter pyerámääđhi ääigi váhá láivuččij.
-#$ Já kyevti saajeest oro tego kiinii ličij čokkáámin, mottoom uáppee ooinij.
+	#% 80 puátá.
+	#$ 80 puáđah.
+	#$ Kale haajâ muu kuulmâ kilomeetter pyerámääđhi ääigi váhá láivuččij.
+	#$ Já kyevti saajeest oro tego kiinii ličij čokkáámin, mottoom uáppee ooinij.
+	#$ Niillas lii ráhtâm klassilâš muusik nuottârähtein, multi-instrumentalistâ Roope Mäenpäin kyehti {skiärru}.
 
 
 #!!  **Agreement rule:** msyn-agr-sg3-pl3, Subject to the left, *80 puátá/puáđah*
