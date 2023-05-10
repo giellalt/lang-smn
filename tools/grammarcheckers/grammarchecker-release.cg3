@@ -830,7 +830,7 @@ LIST LOC-V = "ávkkástallat" "ballat" "peessâđ" "beroštit" "kieldiđ" "bihti
 		#Note that "huolâttiđ" obviously has two homonymous variants:
 		#fuolahit1+Acc, fuolahit2+Loc
 
-LIST COM-V = "algâttiđ" "älgiđ" "arvâlâddâđ" "árvvohuššat" "ávkašuvvat" "bálddastahttit" "bálddalastit" "bártašuvvat" "birgehallat" "birget" "bivvat" "buohtastahttit" "čoahkkinastit" "deaivvadit" "tevdiđ" "digaštallat" "doarrut" "duhkoraddat" "elettiđ" "flirtet" "gávnnadit" "gárvodit" "giksašuvvat" "gilvalit" "gulahallat" "gulaskuddat" "hilbošit" "joatkit" "juogadit" "jyehiđ" "láhttet" "leaikkastallat" "lohpádaddat" "lohpádallat" "lonuhit" "meannudit" "malssidit" "molssodit" "náitalit" "uástiđ" "oktiibidjat" "oahpásmuvvat" "ovttasbargat" "ovttastahttit" "rahčat" "reivvestaddat" "riidalit" "riiddáskit" "rohcošit" "ságastit" "seaguhit" "servvoštallat" "servvoštaddat" "soabadit" "käydä" "soahtat" "soardit" "stálostallat" "stoahkat" "šiehtadallat" "šiehtadit" "šiehttat" "veahkehit" "veardidit" "vijđediđ" "vrd" ; #!!= - @CODE@
+LIST COM-V = "algâttiđ" "älgiđ" "arvâlâddâđ" "viärdádâllâđ" "pártáskiđ" "piergiittâllâđ" "piergiđ" "pallâđ" "čuákkimistiđ" "teivâđ" "tevdiđ" "tigáštâllâđ" "tuárruđ" "sierâdiđ" "elettiđ" "flirttađ" "gávnnadit" "kárvuttiđ" "váivášuđ" "kištottâllâđ" "gulahallat" "gulaskuddat" "hilbošit" "juátkiđ" "jyehiđ" "lattiđ" "leakkastallat" "lohpádaddat" "lohpádallat" "lonottiđ" "molsođ" "naaijâđ" "oktiibidjat" "uápásmiđ" "ovttasbargat" "ovttastahttit" "ruhnođ" "reivvestaddat" "rijdâliđ" "rijdáskiđ" "rohcošit" "sárnuđ" "siävuttiđ" "servuustâllâđ" "sovâttâllâđ" "soottâđ" "sierâdiđ" "šietâdiđ" "sooppâđ" "išediđ" "verdidiđ" "vijđediđ" "vrd" ; #!!= - @CODE@
 
 		#Note that "leaikkastallat" has two homonymous variants:
 		#leaikkastallat1 (IV), leaikkastallat2+Com
@@ -2700,7 +2700,8 @@ ADD:msyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET (V Sg3) IF
 	(NEGATE 0 (V Pl3))
 	(NOT *-1 Sg + Nom OR Sg3 + Nom BARRIER NOT-ADV OR (","))
 	(0C COPULAS OR ("kavnuđ"))
-	(*1 Pl + Nom BARRIER NOT-NPMODADV OR @CVP OR PUNCT + RIGHT OR PUNCT + LEFT LINK NOT *1 V + Pl3);
+	(*1 Pl + Nom BARRIER NOT-NPMODADV OR @CVP OR PUNCT + RIGHT OR PUNCT + LEFT LINK NOT 0 (Sg Nom) LINK NOT *1 V + Pl3)
+	;
 COPY:msyn-agr-sg3-pl3 (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-agr-sg3-pl3) TARGET (V &msyn-agr-sg3-pl3);
 ADDRELATION:msyn-agr-sg3-pl3 ($2) (Pl Nom) FROM (-1 V + Sg3 LINK 0 (&msyn-agr-sg3-pl3));
 ADDRELATION:msyn-agr-sg3-pl3 ($2) (Pl Nom) FROM (-2 V + Sg3 LINK 0 (&msyn-agr-sg3-pl3));
@@ -2727,21 +2728,23 @@ ADD:msyn-agr-sg3-du3 (&msyn-agr-sg3-du3) TARGET V IF
 	(0 (V Ind Sg3));
 COPY:msyn-agr-sg3-du3 (Du3 &SUGGEST) EXCEPT (Sg3 &msyn-agr-sg3-du3) TARGET (V  &msyn-agr-sg3-du3);
 
+LIST ADDRESS = ("<.*tie>r") ("<.*polku>r") ("<.*kuja>r") ("<.*katu>r") ;
 
 #!!  **Agreement rule:** msyn-agr-sg3-pl3, Subject to the left, *80 puátá/puáđah*
 ADD:msyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET V IF
 	(*-1C NUM BARRIER Nom OR V OR (")") OR S-BOUNDARY OR COMMA OR Loc 
-		LINK NOT 0 Sem/ID OR Sem/Year OR Sem/Date OR Sem/Time # OR Sem/Time-clock: 1-2 iä ... 
-			OR Rom OR ("<[A-ZÁÄČŠ].*>r") OR Gen OR KALLE 
-			LINK NOT 1 PUNCT OR Sem/Measr_Time OR Sem/Time OR ("§") OR ("<([A-ZÁÄČŠ].*)>i") # after Num
-			LINK NOT -2 ("nr")) # before Num
+		LINK NOT 0 Sem/ID OR Sem/Year OR Sem/Date OR Sem/Time OR Sem/Time-clock OR Rom OR ("<[A-ZÁÄČŠ].*>r") OR Gen OR KALLE LINK NOT -1 ("nr") OR ADDRESS OR KLASS OR (ACR Nom) # before Num
+			LINK NOT 2 PUNCT OR Sem/Measr_Time OR Sem/Time OR ("§") OR ("<([A-ZÁÄČŠ].*)>i")) # after Num
 	(NEGATE 0 MOD-ASP LINK *1 TV + Inf BARRIER Acc LINK *1 EOS OR S-BOUNDARY BARRIER Acc)
-	(0 V + Sg3);
+	(0 V + Sg3)
+	(NEGATE 0 (N Nom))
+	(NOT 1 (A Sg Nom) OR (N Sg Nom));
 COPY:msyn-agr-sg3-pl3 (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-agr-sg3-pl3) TARGET (V &msyn-agr-sg3-pl3);
-#% 80 puátá.
-#$ 80 puáđah.
-#$ Kale haajâ muu kuulmâ kilomeetter pyerámääđhi ääigi váhá láivuččij.
-#$ Já kyevti saajeest oro tego kiinii ličij čokkáámin, mottoom uáppee ooinij.
+	#% 80 puátá.
+	#$ 80 puáđah.
+	#$ Kale haajâ muu kuulmâ kilomeetter pyerámääđhi ääigi váhá láivuččij.
+	#$ Já kyevti saajeest oro tego kiinii ličij čokkáámin, mottoom uáppee ooinij.
+	#$ Niillas lii ráhtâm klassilâš muusik nuottârähtein, multi-instrumentalistâ Roope Mäenpäin kyehti {skiärru}.
 
 
 #!!  **Agreement rule:** msyn-agr-sg3-pl3, Subject to the left, *80 puátá/puáđah*
@@ -2809,7 +2812,7 @@ ADD:msyn-agr-other-pl3 (&msyn-agr-other-pl3) TARGET V IF
 	(NOT -1 NPL_WITH_VSG3)
 	(0C V + Ind + Sg3 OR V + Cond + Sg3)
 	(NOT 0 Pl3)(NOT 0 Foc/ge)
-	(*1 N + Pl + Nom BARRIER @CVP OR NOT-NPMODADV - (A Pl Nom) - Ill - Loc LINK NOT 0 ABBR LINK NOT 1 Pl3);
+	(*1 N + Pl + Nom BARRIER @CVP OR NOT-NPMODADV - (A Pl Nom) - Ill - Loc LINK NOT 0 ABBR OR (Sg Nom) LINK NOT 1 Pl3);
 
 COPY:msyn-agr-other-pl3 (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-agr-other-pl3) TARGET (V Prs &msyn-agr-other-pl3);
 COPY:msyn-agr-other-pl3 (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-agr-other-pl3) TARGET (V Prt &msyn-agr-other-pl3);
@@ -3778,11 +3781,12 @@ COPY:msyn-adj-attr-sggen (Sg Gen &SUGGEST) EXCEPT (Attr &msyn-adj-attr-sggen) TA
 ADD:msyn-adj-attr-plgen (&msyn-adj-attr-plgen) TARGET A IF
 	(0C Attr)
 	(0  CONCORD-A)
-	(1 N LINK 0 Pl + Gen OR Sg + Ill OR Sg + Loc OR Sg + Abe)
+	(1 N LINK 0 Pl + Gen OR Sg + Ill OR Sg + Loc OR Sg + Abe LINK NOT 0 (Sg Nom))
 	;
 COPY:msyn-adj-attr-plgen (Sg Gen &SUGGEST) EXCEPT (Attr &msyn-adj-attr-plgen) TARGET ( A &msyn-adj-attr-plgen);
-## Sun puátá vuosmuš keerdi.
-## Sun puátá vuosmu keerdi.
+	## Sun puátá vuosmuš keerdi.
+	## Sun puátá vuosmu keerdi.
+	#$ Suu kuuvl poođij talle mottoom {spiitaallâš} almai.
 
 # ## Sun puátá vuosmuš/vuosmuu keerdi.
 ADD:msyn-adj-attr-sgacc (&msyn-adj-attr-sgacc) TARGET A IF
@@ -3894,24 +3898,26 @@ COPY:msyn-obj-acc-ill (Ill &SUGGEST) EXCEPT (Acc &msyn-obj-acc-ill) TARGET (Pron
 
 #!! #### PlLoc > SgCom
 
-ADD:msyn-advl-plloc-sgcom (&msyn-advl-plloc-sgcom) TARGET N IF
-	(*0 HUMAN-ACTIVITY-V BARRIER S-BOUNDARY)
-	(NOT *-1 MUITALIT)
-	(0 N + Pl + Loc + Sem/Org OR N + Pl + Loc + Sem/Hum);
-ADD:msyn-advl-plloc-sgcom (&msyn-advl-plloc-sgcom) TARGET N IF
-	(*0 HUMAN-ACTIVITY-V BARRIER S-BOUNDARY)
-	(NOT *-1 MUITALIT)
-	(-1 Num + Sg + Com)
-	(0 N + Pl + Loc);
-ADD:msyn-advl-plloc-sgcom (&msyn-advl-plloc-sgcom) TARGET N IF
-	(NOT *-1 MUITALIT)
-	(*-1 ("oovtâst") OR (A Sg Com) LINK NEGATE 0 (A Pl Loc))
-	(0 N + Pl + Loc);
+#ADD:xmsyn-advl-plloc-sgcom (&msyn-advl-plloc-sgcom) TARGET N IF
+#	(*0 COM-V BARRIER S-BOUNDARY)
+#	(NOT *-1 MUITALIT)
+#	(0 N + Pl + Loc + Sem/Org OR N + Pl + Loc + Sem/Hum);
+#ADD:xmsyn-advl-plloc-sgcom (&msyn-advl-plloc-sgcom) TARGET N IF
+#	(*0 COM-V BARRIER S-BOUNDARY)
+#	(NOT *-1 MUITALIT)
+#	(-1 Num + Sg + Com)
+#	(0 N + Pl + Loc);
+#ADD:xmsyn-advl-plloc-sgcom (&msyn-advl-plloc-sgcom) TARGET N IF
+#	(NOT *-1 MUITALIT)
+#	(*-1 ("oovtâst") BARRIER Com OR Pl1 LINK NEGATE 0 (A Pl Loc))
+#	(0 N + Pl + Loc)
+#	(NOT 0 Sem/Time OR Sem/Plc);
+	
 #ADD:msyn-advl-plloc-sgcom (&msyn-advl-plloc-sgcom) TARGET N IF
 #	(*-1 Num + Sg LINK NEGATE 0 ("ohtâ"))
 #	(0 N + Pl + Loc);
 
-COPY:msyn-advl-plloc-sgcom (Sg Com &SUGGEST) EXCEPT (Pl Loc &msyn-advl-plloc-sgcom) TARGET (N &msyn-advl-plloc-sgcom) ;
+COPY:xmsyn-advl-plloc-sgcom (Sg Com &SUGGEST) EXCEPT (Pl Loc &msyn-advl-plloc-sgcom) TARGET (N &msyn-advl-plloc-sgcom) ;
 
 #!! #### PlLoc > SgIll
 

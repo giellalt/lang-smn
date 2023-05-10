@@ -3909,8 +3909,10 @@ ADD:xmsyn-advl-plloc-sgcom (&msyn-advl-plloc-sgcom) TARGET N IF
 	(0 N + Pl + Loc);
 ADD:xmsyn-advl-plloc-sgcom (&msyn-advl-plloc-sgcom) TARGET N IF
 	(NOT *-1 MUITALIT)
-	(*-1 ("oovtâst") LINK NEGATE 0 (A Pl Loc))
-	(0 N + Pl + Loc);
+	(*-1 ("oovtâst") BARRIER Com OR Pl1 LINK NEGATE 0 (A Pl Loc))
+	(0 N + Pl + Loc)
+	(NOT 0 Sem/Time OR Sem/Plc);
+	
 #ADD:msyn-advl-plloc-sgcom (&msyn-advl-plloc-sgcom) TARGET N IF
 #	(*-1 Num + Sg LINK NEGATE 0 ("ohtâ"))
 #	(0 N + Pl + Loc);
