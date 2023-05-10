@@ -116,6 +116,9 @@ LIST QMARK = """ ; # "  #!! QMARK
 LIST PPUNCT = PUNCT ;   #!! PPUNCT
 SET PUNCT = PPUNCT - QMARK ;  #!! PUNCT
 LIST COMMA = "," ;  #!! COMMA
+LIST CITATION = "«" "“" "\"" "„" "‟" "'" "‹" "‘" "‚" "‛" "❛" "❝" "❮" "〝" "〟" "»" "“" "\"" "'" "›" "’" "❜" "❞" "❯" "〞" "＂" ; 
+LIST HYPHEN = "-" ;
+LIST LEFT-QUOT = "«" "“" "„"  "‟" "‹" "‘" "‚" "‛" "❛" "❝" "❮" "〝" "〟"; 
 LIST EXCLMARK = "!" ; #!! EXCLMARK
 LIST ¶ = ¶;   #!! ¶
 LIST ? = ? ;  #!! ?
@@ -1213,17 +1216,17 @@ SET NOT-NPMOD-ACC     = NOT-NPMOD - Acc OR ABBR ;
 SET NOT-NPMOD-ACC-ADV     = NOT-NPMOD - Acc - Adv OR ABBR ;
 # To be used in mappingrules, before the disambuation of Acc and Gen.
 
-SET NOT-NPMODADV    = WORD - PRE-NP-HEAD - Adv OR MO;
-SET NOT-NPMODADVL   = WORD - PRE-NP-HEAD - Pr - Po - Adv OR MO;
+SET NOT-NPMODADV    = (*) - PRE-NP-HEAD - Adv OR MO;
+SET NOT-NPMODADVL   = (*) - PRE-NP-HEAD - Pr - Po - Adv OR MO;
 # NOT-NPMODADV = "NOT-PRE-NP-HEAD-OR-ADV"
-SET NOT-NPMODADV-INDEF   = WORD - PRE-NP-HEAD - Adv - Indef ;
+SET NOT-NPMODADV-INDEF   = (*) - PRE-NP-HEAD - Adv - Indef ;
 # NOT-NPMODADVI = "     ...-OR-INDEF"
- SET NOT-NPMODADVII  = WORD - PRE-NP-HEAD - Adv - Indef - Ill ;
+ SET NOT-NPMODADVII  = (*) - PRE-NP-HEAD - Adv - Indef - Ill ;
 # Illative indir.obj.
-SET NOT-NPMODADVIIP = WORD - PRE-NP-HEAD - Adv - Indef - Ill - Pcle ;
+SET NOT-NPMODADVIIP = (*) - PRE-NP-HEAD - Adv - Indef - Ill - Pcle ;
 # <== is this our NOT-NPMOD set?
-SET NOT-NPMODCC   = WORD - PRE-NP-HEAD - COMMA - LCRD ;
-# SET NAPP     = WORD - PRE-APP ;
+SET NOT-NPMODCC   = (*) - PRE-NP-HEAD - COMMA - LCRD ;
+# SET NAPP     = (*) - PRE-APP ;
 
 # SET TOLERANT-PRENPP = V ; (everything non-NP-head!)
 # ... Most sloppy BARRIERs
@@ -2896,7 +2899,7 @@ COPY:msyn-v-sg3-conneg (ConNeg &SUGGEST) EXCEPT (Sg3 &msyn-v-sg3-conneg) TARGET 
 #!! #### ConNeg in past tense
 
 #!! **Agreement rule**  Negative gives participle msyn-v-sg1-prfprc
-ADD:msyn-v-sg1-prfprc (&msyn-v-sg1-prfprc) TARGET V IF
+ADD:msyn-v-sg1-prfprc (&msyn-v-sg1-prfprc) TARGET (V Sg1) IF
 	(-1 Neg)
 	(NOT *-2 ConNeg)
 	(0 V + Ind OR Cond)
@@ -2910,7 +2913,7 @@ COPY:msyn-v-sg1-prfprc (PrfPrc &SUGGEST) EXCEPT (Ind Prs Sg1 &msyn-v-sg1-prfprc)
 #!! #### Sg1 should be Participle
 
 #!!  **Agreement rule:** msyn-v-sg1-prfprc *Sun lii huunjâm/huunnjâm.*
-ADD:msyn-v-sg1-prfprc (&msyn-v-sg1-prfprc) TARGET V IF
+ADD:msyn-v-sg1-prfprc (&msyn-v-sg1-prfprc) TARGET (V Prs Sg1) IF
 	(*-1 Prs OR Prt  BARRIER NOT-ADV OR ConNeg OR Pron + Sg1 LINK NOT 0 ConNeg OR Loc)
 	(0C (Prs Sg1));
 COPY:msyn-v-sg1-prfprc (PrfPrc &SUGGEST) EXCEPT (Ind Prs Sg1 &msyn-v-sg1-prfprc) TARGET (V &msyn-v-sg1-prfprc);
@@ -3432,7 +3435,7 @@ COPY:msyn-obj-sgnom-sgacc (Acc &SUGGEST) EXCEPT (Nom &msyn-obj-sgnom-sgacc) TARG
 
 #!!  **Agreement rule:** msyn-obj-plnom-placc
 ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF
-(*-1 VFIN + TV - <spelled> BARRIER NOT-NPMODADV OR LEDE LINK -1 Nom)
+(*-1 VFIN + TV - <spelled> BARRIER NOT-NPMODADV OR LEDE OR CITATION LINK -1 Nom)
 (0C N + Pl + Nom)
 (NOT *1 V + Pl3 BARRIER NOT-ADV);
 COPY:msyn-obj-plnom-placc (Acc &SUGGEST) EXCEPT (Nom &msyn-obj-plnom-placc) TARGET (N Pl &msyn-obj-plnom-placc);
