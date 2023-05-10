@@ -307,6 +307,9 @@ LIST Sem/Substnc = Sem/Plc_Substnc Sem/Plc_Substnc_Wthr Sem/State-sick_Substnc S
 
 #!! This ends the semtag list.
 
+SET Sem/Human = Sem/Hum OR Sem/Sur OR Sem/Mal OR Sem/Fem OR Sem/Org ;
+SET Sem/Animate = Sem/Hum OR Sem/Ani OR Sem/Sur OR Sem/Mal OR Sem/Fem OR Sem/Org ;
+
 
 LIST PROP-ATTR = Sem/Mal Sem/Sur Sem/Fem ; #!! PROP-ATTR
 LIST PROP-SUR = Sem/Sur Sem/Mal Sem/Fem ; #!! PROP-SUR
@@ -3444,7 +3447,7 @@ COPY:msyn-obj-plnom-placc (Acc &SUGGEST) EXCEPT (Nom &msyn-obj-plnom-placc) TARG
 
 #!!  **Agreement rule:** msyn-obj-plnom-placc
 ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF
-(*-1 TV + PrfPrc BARRIER NOT-NPMODADV LINK NOT 0 Der/Pass LINK -1 Nom)
+(*-1 TV + PrfPrc BARRIER NOT-NPMODADV LINK NOT 0 Der/Pass LINK *-1 COPULAS BARRIER NOT-ADV-PCLE LINK -1 Nom LINK 0 Sem/Hum OR Pers)
 (0C N + Pl + Nom)
 (NOT *1 V + Pl3 BARRIER NOT-ADV);
 COPY:msyn-obj-plnom-placc (Acc &SUGGEST) EXCEPT (Nom &msyn-obj-plnom-placc) TARGET (N Pl &msyn-obj-plnom-placc);
@@ -3461,13 +3464,14 @@ COPY:msyn-obj-plnom-placc (Acc &SUGGEST) EXCEPT (Nom &msyn-obj-plnom-placc) TARG
 
 #!!  **Agreement rule:** msyn-obj-plnom-placc
 ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF
-	(*-1 REALTV + PrfPrc BARRIER NOT-NPMODADV LINK NOT 1 CC-INCLUSIVE LINK *-1 Nom)
+	(*-1 REALTV + PrfPrc BARRIER NOT-NPMODADV LINK NOT 1 CC-INCLUSIVE LINK *-1 Nom LINK 0 Sem/Hum OR Pers)
 	(0C N + Pl + Nom)
 	(NEGATE *1 V + Pl3 BARRIER NOT-ADV);
 COPY:msyn-obj-plnom-placc (Acc &SUGGEST) EXCEPT (Nom &msyn-obj-plnom-placc) TARGET (N Pl &msyn-obj-plnom-placc);
-#% Puoh iä lah omâstâm poccuuh.
-#% Puoh iä lah omâstâm tuše poccuuh.
-#$ Puoh iä lah omâstâm  .
+	#% Puoh iä lah omâstâm poccuuh.
+	#% Puoh iä lah omâstâm tuše poccuuh.
+	#$ Puoh iä lah omâstâm.
+	#$ Luándu peeivih {láá} oovdâst toohâm peeivih, kuás kii peri puáhtá juhlođ mii luándu, puáttiđ fáárun já orniđ tábáhtus.
 
 #!!  **Agreement rule:** msyn-obj-plnom-placc
 ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF
@@ -3494,18 +3498,18 @@ COPY:msyn-plobj-nom-acc (Acc &SUGGEST) EXCEPT (Nom &msyn-plobj-nom-acc) TARGET (
 
 
 #!!  **Agreement rule:** msyn-obj-plnom-placc (6 rules) *Lam valjim taah säänih/saanijd.*
-ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-1 VFIN + Sg1 + TV)(0C N + Pl + Nom)(NEGATE *1 (V Pl3) BARRIER NOT-ADV-PCLE);
-ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-2 VFIN + Sg1)(-1 PrfPrc + TV)(0C N + Pl + Nom)(NEGATE *1 (V Pl3) BARRIER NOT-ADV-PCLE);
-ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-2 VFIN + Sg1 + TV)(-1 Pl + Nom)(0C N + Pl + Nom)(NEGATE *1 (V Pl3) BARRIER NOT-ADV-PCLE);
-ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-2 VFIN + Sg1 + TV)(-1 Pl + Nom OR Attr)(0C N + Pl + Nom)(NEGATE *1 (V Pl3) BARRIER NOT-ADV-PCLE);
+ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-1 VFIN + Sg1 + TV LINK NOT 0 IV)(0C N + Pl + Nom)(NEGATE *1 (V Pl3) BARRIER NOT-ADV-PCLE);
+ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-2 VFIN + Sg1 LINK NOT 0 IV)(-1 PrfPrc + TV)(0C N + Pl + Nom)(NEGATE *1 (V Pl3) BARRIER NOT-ADV-PCLE);
+ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-2 VFIN + Sg1 + TV LINK NOT 0 IV)(-1 Pl + Nom)(0C N + Pl + Nom)(NEGATE *1 (V Pl3) BARRIER NOT-ADV-PCLE);
+ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-2 VFIN + Sg1 + TV LINK NOT 0 IV)(-1 Pl + Nom OR Attr)(0C N + Pl + Nom)(NEGATE *1 (V Pl3) BARRIER NOT-ADV-PCLE);
 	#$ Juhlijd kulá tiäđust-uv meiddei Säämi suuvâ laavlâ, mon tievâsliih Matti Morottaja jurgâlâm sämikielâlâš {säänih} kávnojeh om. suomâkielâg Wikipediast: Säämi suuvâ laavlâ ( liŋkkâ lekkâs uđđâ laasân ).
 ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-3 VFIN + Sg1)(-1 Pl + Nom OR Attr)(-2 PrfPrc + TV)(0C N + Pl + Nom)(NEGATE *1 (V Pl3) BARRIER NOT-ADV-PCLE);
 ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-3 VFIN + Sg1 + TV)(-1 Pl + Nom OR Attr)(-2 Pl + Nom)(0C N + Pl + Nom)(NEGATE *1 (V Pl3) BARRIER NOT-ADV-PCLE);
 COPY:msyn-obj-plnom-placc (Acc &SUGGEST) EXCEPT (Nom &msyn-obj-plnom-placc) TARGET (N Pl &msyn-obj-plnom-placc);
-#$ Lam valjim taah säänih.
-#% Lam valjim táid saanijd.
-# olen valinnut nämä sanat
-
+	#$ Lam valjim taah säänih.
+	#% Lam valjim táid saanijd.
+	# olen valinnut nämä sanat
+	#$ Nuáidi tehálumos rituaalkálvu lâi nuáidirumbu, mon poccuu näähkist keldum cuozâ oolâ lijjii sargum myyttiliih {kovoseh}.
 
 
 
