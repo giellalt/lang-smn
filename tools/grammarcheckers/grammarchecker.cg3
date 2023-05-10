@@ -3439,6 +3439,7 @@ COPY:msyn-obj-sgnom-sgacc (Acc &SUGGEST) EXCEPT (Nom &msyn-obj-sgnom-sgacc) TARG
 #!!  **Agreement rule:** msyn-obj-plnom-placc
 ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF
 (*-1 VFIN + TV - <spelled> BARRIER NOT-NPMODADV OR LEDE OR CITATION OR IV LINK -1 Nom)
+(NEGATE *-1 (TV Pl3) - <spelled> BARRIER NOT-NPMODADV OR LEDE OR CITATION OR IV LINK -1 Nom LINK NOT 0 Pl3 OR Pl)
 (0C N + Pl + Nom)
 (NOT *1 V + Pl3 BARRIER NOT-ADV);
 COPY:msyn-obj-plnom-placc (Acc &SUGGEST) EXCEPT (Nom &msyn-obj-plnom-placc) TARGET (N Pl &msyn-obj-plnom-placc);
