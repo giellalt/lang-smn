@@ -11104,9 +11104,13 @@ Der/Superl
 - All Err/Orth tags
 - Err/Orth-spes for all Err/Orth save the simple one
 
-### Semtags
+### Secondary tags
 
 - vdic
+- spelling error
+
+### Semtags
+
 - HUMAN
 - Sem/Act
 - Sem/Ani
