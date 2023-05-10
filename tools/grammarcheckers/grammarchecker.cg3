@@ -3438,13 +3438,14 @@ COPY:msyn-obj-sgnom-sgacc (Acc &SUGGEST) EXCEPT (Nom &msyn-obj-sgnom-sgacc) TARG
 
 #!!  **Agreement rule:** msyn-obj-plnom-placc
 ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF
-(*-1 VFIN + TV - <spelled> BARRIER NOT-NPMODADV OR LEDE OR CITATION OR IV LINK -1 Nom)
+(*-1 VFIN + TV - <spelled> BARRIER NOT-NPMODADV OR LEDE OR CC OR CITATION OR IV LINK -1 Nom)
 (NEGATE *-1 (TV Pl3) - <spelled> BARRIER NOT-NPMODADV OR LEDE OR CITATION OR IV LINK -1 Nom LINK NOT 0 Pl3 OR Pl)
 (0C N + Pl + Nom)
 (NOT *1 V + Pl3 BARRIER NOT-ADV);
 COPY:msyn-obj-plnom-placc (Acc &SUGGEST) EXCEPT (Nom &msyn-obj-plnom-placc) TARGET (N Pl &msyn-obj-plnom-placc);
 	#$ Rikosijd toohâm nisoneh pyehtih siämmáá-áigásávt leđe viehâvääldi uhreh.
 	#$ Jis tun aasah peerâtáálust, te aassâmkolloon tipšokoloh tuhhiittuvvojeh ađai čääsist, liegâdmist já eres peerâtáálu koloin šaddee {koloh}.
+	#$ Suuhân piegah tottâleh já {pááruh-uv}.
 
 #!!  **Agreement rule:** msyn-obj-plnom-placc
 ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF
@@ -3499,10 +3500,10 @@ COPY:msyn-plobj-nom-acc (Acc &SUGGEST) EXCEPT (Nom &msyn-plobj-nom-acc) TARGET (
 
 
 #!!  **Agreement rule:** msyn-obj-plnom-placc (6 rules) *Lam valjim taah säänih/saanijd.*
-ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-1 VFIN + Sg1 + TV LINK NOT 0 IV)(0C N + Pl + Nom)(NEGATE *1 (V Pl3) BARRIER NOT-ADV-PCLE);
-ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-2 VFIN + Sg1 LINK NOT 0 IV)(-1 PrfPrc + TV)(0C N + Pl + Nom)(NEGATE *1 (V Pl3) BARRIER NOT-ADV-PCLE);
-ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-2 VFIN + Sg1 + TV LINK NOT 0 IV)(-1 Pl + Nom)(0C N + Pl + Nom)(NEGATE *1 (V Pl3) BARRIER NOT-ADV-PCLE);
-ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-2 VFIN + Sg1 + TV LINK NOT 0 IV)(-1 Pl + Nom OR Attr)(0C N + Pl + Nom)(NEGATE *1 (V Pl3) BARRIER NOT-ADV-PCLE);
+ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-1 VFIN + Sg1 + TV LINK NOT 0 IV OR PrfPrc OR <spelled>)(0C N + Pl + Nom)(NEGATE *1 (V Pl3) BARRIER NOT-ADV-PCLE);
+ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-2 VFIN + Sg1 LINK NOT 0 IV OR PrfPrc OR <spelled>)(-1 PrfPrc + TV)(0C N + Pl + Nom)(NEGATE *1 (V Pl3) BARRIER NOT-ADV-PCLE);
+ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-2 VFIN + Sg1 + TV LINK NOT 0 IV OR PrfPrc OR <spelled>)(-1 Pl + Nom)(0C N + Pl + Nom)(NEGATE *1 (V Pl3) BARRIER NOT-ADV-PCLE);
+ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-2 VFIN + Sg1 + TV LINK NOT 0 IV OR PrfPrc OR <spelled>)(-1 Pl + Nom OR Attr)(0C N + Pl + Nom)(NEGATE *1 (V Pl3) BARRIER NOT-ADV-PCLE);
 	#$ Juhlijd kulá tiäđust-uv meiddei Säämi suuvâ laavlâ, mon tievâsliih Matti Morottaja jurgâlâm sämikielâlâš {säänih} kávnojeh om. suomâkielâg Wikipediast: Säämi suuvâ laavlâ ( liŋkkâ lekkâs uđđâ laasân ).
 ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-3 VFIN + Sg1)(-1 Pl + Nom OR Attr)(-2 PrfPrc + TV)(0C N + Pl + Nom)(NEGATE *1 (V Pl3) BARRIER NOT-ADV-PCLE);
 ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF (-3 VFIN + Sg1 + TV)(-1 Pl + Nom OR Attr)(-2 Pl + Nom)(0C N + Pl + Nom)(NEGATE *1 (V Pl3) BARRIER NOT-ADV-PCLE);
