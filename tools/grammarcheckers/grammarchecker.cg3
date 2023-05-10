@@ -259,11 +259,13 @@ SET NOT-DER-A-ADV = Adv - DER-A-ADV ; #!!= - @CODE@
 LIST Err/Orth = Err/Orth Err/Orth-a/á Err/Orth-nom/gen Err/Orth-nom/acc Err/DerSub Err/CmpSub Err/UnspaceCmp Err/HyphSub Err/SpaceCmp Err/Spellrelax err_orth_mt ; #!! - All Err/Orth tags
 LIST Err/Orth-spes = Err/Orth-a/á Err/Orth-nom/gen Err/Orth-nom/acc Err/DerSub Err/CmpSub Err/UnspaceCmp Err/HyphSub Err/SpaceCmp Err/Spellrelax err_orth_a_á_mt err_orth_nom_acc_mt err_orth_nom_gen_mt  ; #!! - Err/Orth-spes for all Err/Orth save the simple one
 
+#!! ### Secondary tags
 
+LIST <vdic> = <vdic> ;				        #!! - vdic
+LIST <spelled> = <spelled> ;				#!! - spelling error
 
 #!! ### Semtags
 
-LIST <vdic> = <vdic> ;				        #!! - vdic
 LIST HUMAN = Sem/Fem Sem/Mal Sem/Sur ;	    #!! - HUMAN
 LIST Sem/Act = Sem/Act ;				    #!! - Sem/Act
 LIST Sem/Ani = Sem/Ani ;				    #!! - Sem/Ani
@@ -3430,7 +3432,7 @@ COPY:msyn-obj-sgnom-sgacc (Acc &SUGGEST) EXCEPT (Nom &msyn-obj-sgnom-sgacc) TARG
 
 #!!  **Agreement rule:** msyn-obj-plnom-placc
 ADD:msyn-obj-plnom-placc (&msyn-obj-plnom-placc) TARGET N IF
-(*-1 VFIN + TV BARRIER NOT-NPMODADV OR LEDE LINK -1 Nom)
+(*-1 VFIN + TV - <spelled> BARRIER NOT-NPMODADV OR LEDE LINK -1 Nom)
 (0C N + Pl + Nom)
 (NOT *1 V + Pl3 BARRIER NOT-ADV);
 COPY:msyn-obj-plnom-placc (Acc &SUGGEST) EXCEPT (Nom &msyn-obj-plnom-placc) TARGET (N Pl &msyn-obj-plnom-placc);
