@@ -3401,7 +3401,7 @@ LIST SGNOM-SGACC-N = (".*kielâ"r) ;
 
 #!!  **Agreement rule:** msyn-obj-sgnom-sgacc *Mun juuvâm ain mielkki/mielhi.*
 ADD:xmsyn-obj-sgnom-sgacc (&msyn-obj-sgnom-sgacc) TARGET N IF
-	(*-1 VFIN + Ind + TV BARRIER NOT-NPMODADV OR RIGHT OR S-BOUNDARY LINK *-1 Nom BARRIER NOT-NPMODADV LINK *-1 BOS BARRIER Acc)
+	(*-1 VFIN + Ind + TV BARRIER NOT-NPMODADV OR RIGHT OR S-BOUNDARY LINK NOT 0 (N Gen) LINK *-1 Nom BARRIER NOT-NPMODADV LINK *-1 BOS BARRIER Acc)
 	(NEGATE *-1 VERBAL-ACTIVITY + Ind LINK *-1 COMMA OR QMARK)
 	(0C N + Sg + Nom)
 	(NEGATE 0 (Sg Acc) OR (Sg Gen) OR SGNOM-SGACC-N)
@@ -3410,6 +3410,7 @@ ADD:xmsyn-obj-sgnom-sgacc (&msyn-obj-sgnom-sgacc) TARGET N IF
 	(NEGATE -1 COMMA LINK 2 EOS)
 	;
 COPY:msyn-obj-sgnom-sgacc (Acc &SUGGEST) EXCEPT (Nom &msyn-obj-sgnom-sgacc) TARGET (N Sg &msyn-obj-sgnom-sgacc);
+	#$ 
 	#% Mun juuvâm ain mielkki.
 	#$ Mun juuvâm ain mielhi.
 	#$ "Na pargeen nuuvt, kandâ!"
@@ -3785,7 +3786,7 @@ ADD:msyn-adj-attr-sggen (&msyn-adj-attr-sggen) TARGET A IF
 	(NEGATE *-1 ("leđe") OR ("šoddâđ") BARRIER NOT-NPMODADVIIP LINK -1 Nom)
 	(0C Attr)
 	(0  CONCORD-A)
-	(NEGATE 1 A + Sg + Nom LINK 1 N + Sg + Nom)
+	(NEGATE *1 (N Sg Nom) BARRIER (*) - (A Sg Nom) - Gen)
 	(1 N LINK 0 Sg + Gen OR Sg + Ill OR Sg + Loc OR Sg + Abe)
 	(NOT 1 N + Sg + Nom)
 	;
@@ -3793,6 +3794,7 @@ COPY:msyn-adj-attr-sggen (Sg Gen &SUGGEST) EXCEPT (Attr &msyn-adj-attr-sggen) TA
 	## Sun puátá vuosmuš keerdi.
 	## Sun puátá vuosmu keerdi.
 	## Šoŋŋâdâhnubástus, ton puáhtám negatiivliih vaikuttâsah luándu maaŋgâhámásâšvuotân já kulttuur hárjuttemiävttoid, uđđâ puáđulâššlaajah já luánduresurssijguin vijđáht ávhástâllâm, mii lii lasanâm {arktâlâš} kuávlust, äštih sämikulttuur já {arktâlâš} algâaalmugij puátteevuođâ.
+	#$ Tave-eennâmlâš säämi kielâlävdikodde, Suomâ sämitigge já Päikkieennâm kielâi tutkâmkuávdáš láá ruttâdâm haavâ.
 
 # ## Sun puátá vuosmuš/vuosmuu keerdi.
 ADD:msyn-adj-attr-plgen (&msyn-adj-attr-plgen) TARGET A IF
