@@ -2686,7 +2686,7 @@ COPY:msyn-agr-other-pl2 (Pl2 &SUGGEST) EXCEPT (VNOTPL2 &msyn-agr-other-pl2) TARG
 #!! Sg3/Pl3 errors: Suomâkielâ sárnumkielâ epikongruens maaŋgâlovo 3. persovnist
 
 #!!  **Agreement rule:** Subject to the right, msyn-agr-sg3-pl3
-ADD:msyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET (V Sg3) IF
+ADD:xmsyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET (V Sg3) IF
 	(NEGATE 0 (V Pl3))
 	(NOT *-1 Sg + Nom OR Sg3 + Nom BARRIER NOT-ADV OR (","))
 	(0C COPULAS OR ("kavnuđ"))
@@ -2694,7 +2694,7 @@ ADD:msyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET (V Sg3) IF
 	#	LINK NOT *1 V + Pl3
 		LINK 1 CC-INCLUSIVE
 		LINK *1 N + Nom BARRIER NOT-NPMOD);
-ADD:msyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET (V Sg3) IF
+ADD:xmsyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET (V Sg3) IF
 	(NEGATE 0 (V Pl3))
 	(NOT *-1 Sg + Nom OR Sg3 + Nom BARRIER NOT-ADV OR (","))
 	(0C COPULAS OR ("kavnuđ"))
@@ -2704,7 +2704,7 @@ ADD:msyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET (V Sg3) IF
 	LINK 1 CC
 	LINK NOT *1 V + Pl3);
 
-ADD:msyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET (V Sg3) IF
+ADD:xmsyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET (V Sg3) IF
 	(NEGATE 0 (V Pl3))
 	(NOT *-1 Sg + Nom OR Sg3 + Nom BARRIER NOT-ADV OR (","))
 	(0C COPULAS OR ("kavnuđ"))
@@ -2717,7 +2717,7 @@ ADDRELATION:msyn-agr-sg3-pl3 ($2) (Pl Nom) FROM (-3 V + Sg3 LINK 0 (&msyn-agr-sg
 ADDRELATION:msyn-agr-sg3-pl3 ($2) (Pl Nom) FROM (-4 V + Sg3 LINK 0 (&msyn-agr-sg3-pl3));
 
 
-ADD:msyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET Neg IF
+ADD:xmsyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET Neg IF
 	(0 Sg3)
 	(NOT *-1 Sg + Nom OR Sg3 + Nom BARRIER NOT-ADV OR (","))
 	(*1 ConNeg LINK *1 Pl + Nom BARRIER NOT-NPMODADV OR @CVP OR PUNCT + RIGHT OR PUNCT + LEFT LINK NOT *1 V + Pl3)
@@ -2739,7 +2739,7 @@ COPY:msyn-agr-sg3-du3 (Du3 &SUGGEST) EXCEPT (Sg3 &msyn-agr-sg3-du3) TARGET (V  &
 LIST ADDRESS = ("<.*tie>r") ("<.*polku>r") ("<.*kuja>r") ("<.*katu>r") ;
 
 #!!  **Agreement rule:** msyn-agr-sg3-pl3, Subject to the left, *80 puátá/puáđah*
-ADD:msyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET V IF
+ADD:xmsyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET V IF
 	(*-1C NUM BARRIER Nom OR V OR (")") OR S-BOUNDARY OR COMMA OR Loc 
 		LINK NOT 0 Sem/ID OR Sem/Year OR Sem/Date OR Sem/Time OR Sem/Time-clock OR Rom OR ("<[A-ZÁÄČŠ].*>r") OR Gen OR KALLE LINK NOT -1 ("nr") OR ADDRESS OR KLASS OR (ACR Nom) # before Num
 			LINK NOT 2 PUNCT OR Sem/Measr_Time OR Sem/Time OR ("§") OR ("<([A-ZÁÄČŠ].*)>i")) # after Num
@@ -2756,7 +2756,7 @@ COPY:msyn-agr-sg3-pl3 (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-agr-sg3-pl3) TARGET (V &m
 
 
 #!!  **Agreement rule:** msyn-agr-sg3-pl3, Subject to the left, *80 puátá/puáđah*
-ADD:msyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET (V Sg3) IF
+ADD:xmsyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET (V Sg3) IF
 	(*-1 (Loc Pl) - Prop  BARRIER NOT-ADV-PCLE - N LINK -1 (".*%"r) + Num + Arab OR ("peeli") + Sg + Nom)
 	(NEGATE 0 (V Pl3))
 	(NEGATE 0 MOD-ASP LINK *1 TV + Inf BARRIER Acc LINK *1 EOS OR S-BOUNDARY BARRIER Acc);
@@ -3161,9 +3161,10 @@ COPY:msyn-extsubj-ill-nom (Nom &SUGGEST) EXCEPT Ill TARGET (N Pl &msyn-extsubj-i
 #!! ### Subjects gen > nom
 
 ADD:msyn-subj-gen-nom (&msyn-subj-gen-nom) TARGET N IF
-	(NOT -1 ("jyehi"))
-	(0C N + Sg + Gen LINK NOT 0 Nom LINK *-1 BOS BARRIER Ind OR NUM)
-	(NEGATE 0 HUMAN OR Nom)
+	(NOT -1 ("jyehi") OR Pr)
+	(0C N + Sg + Gen)
+	(0 N LINK NOT 0 Nom LINK *-1 BOS BARRIER Ind OR NUM)
+	(NEGATE 0 HUMAN OR Nom OR Sem/Time OR Sem/Sign OR ABBR)
 	(NEGATE 0 VAHKKU-DUR LINK -1 TIME-A)
 	(1 V + Sg3)
 	(NEGATE 1 ("leđe") LINK 1 MANNER-A LINK 1 TV)
@@ -3891,7 +3892,7 @@ ADDRELATION:msyn-obj-acc-ill ($2) (ILL-V) FROM (4 N + Acc LINK 0 (&msyn-obj-acc-
 
 
 #!!  **Agreement rule:** msyn-obj-acc-ill
-ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF 
+ADD:xmsyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF 
 	(*-1 ILL-V + IV BARRIER NOT-NPMODADV OR (":") LINK NOT 0 PrsPrc OR Der/NomAg LINK *-1 Nom)
 	(0 Gen)
 	(NOT 0 Ill OR Adv OR VAHKKU OR JAHKI-NUM)
@@ -3900,7 +3901,7 @@ ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF
 COPY:msyn-obj-acc-ill (Ill &SUGGEST) EXCEPT (Gen  &msyn-obj-acc-ill) TARGET (N Gen &msyn-obj-acc-ill) ;
 
 #!! **Agreement rule:** msyn-obj-acc-ill
-ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET Pron IF
+ADD:xmsyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET Pron IF
 	(*-1 ILL-V + IV BARRIER NOT-NPMODADV OR (":")  LINK NOT 0 TV LINK *-1 Nom)
 	(0 Acc)
 	(NOT 0 Ill OR PxSg3)
@@ -3909,7 +3910,7 @@ ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET Pron IF
 	(NOT 1 TV + Inf OR Ess);
 
 #!!  **Agreement rule:** msyn-obj-acc-ill
-ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET Pron IF (*-2 ILL-V + IV BARRIER NOT-NPMODADV OR (":")  LINK NOT 0 TV LINK *-1 Nom)(-1 Pron + Ill)(0 Acc)(NOT 0 Ill OR PxSg3)(NEGATE 0 (N Nom Sg) LINK *-2 (V Sg3) BARRIER NOT-NPMODADV)(NEGATE 0 (N Nom Pl) LINK *-2 (V Pl3) BARRIER NOT-NPMODADV);
+ADD:xmsyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET Pron IF (*-2 ILL-V + IV BARRIER NOT-NPMODADV OR (":")  LINK NOT 0 TV LINK *-1 Nom)(-1 Pron + Ill)(0 Acc)(NOT 0 Ill OR PxSg3)(NEGATE 0 (N Nom Sg) LINK *-2 (V Sg3) BARRIER NOT-NPMODADV)(NEGATE 0 (N Nom Pl) LINK *-2 (V Pl3) BARRIER NOT-NPMODADV);
 COPY:msyn-obj-acc-ill (Ill &SUGGEST) EXCEPT (Acc &msyn-obj-acc-ill) TARGET (Pron Acc &msyn-obj-acc-ill) ;
 
 
