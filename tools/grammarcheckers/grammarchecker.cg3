@@ -3405,7 +3405,7 @@ LIST SGNOM-SGACC-N = (".*kielâ"r) ;
 ADD:xmsyn-obj-sgnom-sgacc (&msyn-obj-sgnom-sgacc) TARGET N IF
 	(*-1 VFIN + Ind + TV BARRIER NOT-NPMODADV OR RIGHT OR S-BOUNDARY LINK NOT 0 (N Gen) LINK *-1 Nom BARRIER NOT-NPMODADV LINK *-1 BOS BARRIER Acc)
 	(NEGATE *-1 VERBAL-ACTIVITY + Ind LINK *-1 COMMA OR QMARK)
-	(0C N + Sg + Nom)
+	(0C N + Sg + Nom LINK NEGATE *-1 (V Sg3) BARRIER NOT-NPMOD)
 	(NEGATE 0 (Sg Acc) OR (Sg Gen) OR SGNOM-SGACC-N OR (Prop Sem/Sur) OR (Prop Sem/Fem) OR (Prop Sem/Mal))
 	(NEGATE 0 ACR OR ("<.*[lnryö]>"r)) # njoammil, derby, ministeriö Nom = Acc
 	(NEGATE 0 TITLE LINK 1 Prop OR ("<[A-ZÁŠČ].*>"r))
@@ -3418,6 +3418,7 @@ COPY:msyn-obj-sgnom-sgacc (Acc &SUGGEST) EXCEPT (Nom &msyn-obj-sgnom-sgacc) TARG
 	#$ Mun juuvâm ain mielhi.
 	#$ "Na pargeen nuuvt, kandâ!"
 	#$ Sun čielgij, maht vala Suomâ haldâttâs 1959 kieđâvušâi {ILO} sopâmuš já adelij staatârááđán celkkuu, et Suomâst iä lah algâ-aalmugáid kullee aalmugeh ollágin, aaibâs uccâ sämmilâšhiäimuid väldihánnáá uáinun.
+	#$ SPR toimâvuávám olášut SPR {stivrâ}, mii čokkân suulân neljii ivveest.
 
 #!! **Agreement rule:** msyn-obj-sgnom-sgacc *Mun lam ain juunâm mielkki/mielhi.*
 ADD:msyn-obj-sgnom-sgacc (&msyn-obj-sgnom-sgacc) TARGET N IF
