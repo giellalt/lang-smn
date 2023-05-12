@@ -2180,7 +2180,7 @@ REMOVE:NotImprtAfterLede Imprt IF (-1 ("leđe"));
 REMOVE:ImprtInit Prs IF (-1 PUNCT OR BOS)(0 Imprt + Sg2)(1 Pers + Ill);
 ## Muštâl munjin.
 
-REMOVE:NotImprtCC Imprt IF (NOT -2 Imprt)(-1 CC);
+REMOVE:NotImprtCC Imprt IF (NOT *-2 Imprt)(-1 CC);
 
 #!! * **ImprtDál** 
 SELECT:ImprtDál Imprt IF (-1 BOS OR PUNCT OR REAL-CLB)(1 ("tääl"));
@@ -2197,7 +2197,7 @@ REMOVE:ImprtNotVGen VGen IF (-1 BOS OR PUNCT OR REAL-CLB)(0 Imprt)(NEGATE *1C VF
 REMOVE:NotImprtInd Imprt IF (*-1/* (neg) OR Neg  BARRIER CLB OR Ind);
 
 #!! * **NotImprtConNeg** 
-REMOVE:NotImprtConNeg Imprt IF (*-1 ConNeg BARRIER COMMA OR SV-BOUNDARY);
+REMOVE:NotImprtConNeg Imprt IF (*-1 ConNeg BARRIER COMMA OR SV-BOUNDARY)(NOT 0 Neg LINK *1 ConNeg);
  	#$ Go bohciida soahpameahttunvuohta das ahte galget go journála... 
  	#$ Mánát eai gillen dálu čorget.
  	#$ Na muhto don it leat dasa nama čállán!
