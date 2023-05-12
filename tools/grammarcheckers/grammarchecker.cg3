@@ -843,8 +843,9 @@ LIST COM-V = "algâttiđ" "älgiđ" "arvâlâddâđ" "viärdádâllâđ" "párt�
 		#Note that "leaikkastallat" has two homonymous variants:
 		#leaikkastallat1 (IV), leaikkastallat2+Com
 
-LIST ILL-V = "aibâšiđ" "älgiđ" "asâiduđ" "pokkiđ" "peessâđ" "čokánistiđ" "čujottiđ" ("čuoppâđ" Ex/V Ex/TV Der/Pass) "vaikuttiđ" "turvâstiđ" "tuuttâđ" "kuoskâđ" "hárjániđ" "irgediđ" "irgástallat" ("juáhuđ" Ex/V Der/Pass V) "juohhuđ" ("jyehiđ" Ex/V Ex/TV Der/Pass) "oskođ" "lijkkuđ" "lyettiđ"  "vyelgiđ" "maccâđ" "mieđettiđ" "miettâđ" "moonnâđ" "njeeijâđ" "enittiđ" "oskođ" "peessâđ" "riemmâđ" "valmiđ" "uásálistiđ" "uápásmuđ" "suttâđ" "vaikuttiđ" "västidiđ" "vyelgiđ" "vaiguttiđ" "vuáđuduđ" ; #!!= - @CODE@
+LIST ILL-V = "aibâšiđ" "asâiduđ" "pokkiđ" "peessâđ" "čokánistiđ" "čujottiđ" ("čuoppâđ" Ex/V Ex/TV Der/Pass) "vaikuttiđ" "turvâstiđ" "tuuttâđ" "kuoskâđ" "hárjániđ" "irgediđ" "irgástallat" ("juáhuđ" Ex/V Der/Pass V) "juohhuđ" ("jyehiđ" Ex/V Ex/TV Der/Pass) "lijkkuđ" "lyettiđ"  "vyelgiđ" "maccâđ" "mieđettiđ" "miettâđ" "moonnâđ" "njeeijâđ" "enittiđ" "oskođ" "peessâđ" "riemmâđ" "valmiđ" "uásálistiđ" "uápásmuđ" "suttâđ" "vaikuttiđ" "västidiđ" "vyelgiđ" "vaiguttiđ" "vuáđuduđ" ; #!!= - @CODE@
 # Removed since they also take Acc: "kuullâđ" "teivâđ" 
+# Removed since it seems not to take nouns: "älgiđ" 
 
 LIST TRANSL-V = "jápmit" "duššat" "hávkat" "náitalit" "gaskkalduvvat" "nohkat" "goarránit" "heahpanit" "boakčánit" "šlundut" "ráigánit" "vuollánit" "gopmánit" "fuotnánit" "roahppánit" "reakčanit" "bieđganit" "luoddanit" "guvggodit" "liegganit" "suorganit" "báhkkanit" "cuovkanit" "hedjonit" "lohppet" "goikat" "galbmot" "goallut" "ruostut" "buoidut" "guvggodit" "suvrut" "suddâdiđ" ; #!!= - @CODE@
 
@@ -3893,7 +3894,7 @@ ADDRELATION:msyn-obj-acc-ill ($2) (ILL-V) FROM (4 N + Acc LINK 0 (&msyn-obj-acc-
 
 #!!  **Agreement rule:** msyn-obj-acc-ill
 ADD:xmsyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF 
-	(*-1 ILL-V + IV BARRIER NOT-NPMODADV OR (":") LINK NOT 0 PrsPrc OR Der/NomAg LINK *-1 Nom)
+	(*-1C ILL-V + IV BARRIER NOT-NPMODADV OR (":") LINK NOT 0 PrsPrc OR Der/NomAg LINK *-1 Nom)
 	(0 Gen)
 	(NOT 0 Ill OR Adv OR VAHKKU OR JAHKI-NUM)
 	(1 EOS OR CC)
