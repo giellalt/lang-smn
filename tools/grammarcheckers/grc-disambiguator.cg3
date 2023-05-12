@@ -2349,7 +2349,7 @@ SELECT:firstname Sem/Fem OR Sem/Mal (0 Sem/Plc)((1 FAMILY OR NON-FAMILY) OR (*1 
 	#$ Rama bártnit ledje Saba ja Dedan.
 
 
-SELECT:PropGen_a Gen IF (0C Prop LINK NEGATE 0 Sem/Fem OR Sem/Mal)(1 ORGANIZATION); #Lene: la inn C for å unngå at den treffer Lea osv.
+SELECT:PropGen_a Gen IF (0C Prop LINK NEGATE 0 Sem/Fem OR Sem/Mal)(1 ORGANIZATION)(NOT 1 VFIN); #Lene: la inn C for å unngå at den treffer Lea osv.
 SELECT:PropGen_b Gen IF (0C Prop LINK NEGATE 0 Sem/Fem OR Sem/Mal)(1 PROFESSION OR SAPMI LINK 1 ORGANIZATION); #Lene: la inn C for å unngå at den treffer Lea osv.
 	#$ Oslo universiteahta namas Oslo namma lea genitiivvas.
 	#$ 1982:s gitta 1993 rádjái jođihii son Norgga Álbmotmusea sámi ossodaga Oslos.
