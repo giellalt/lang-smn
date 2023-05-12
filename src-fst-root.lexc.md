@@ -182,6 +182,7 @@ All Err-tags must have a normative form as lemma except Err/Lex
 * **+Use/-PLX** - do not include in Polderland spellers (most likely irrelevant for smn)
 * **+Use/-Spell** - do not include in speller (even though the entry is formally correct)
 * **+Use/SpellNoSugg** - Recognized, but not suggested in speller 
+* **+Use/NGminip** Not for miniparadigm in NDS dicts
 * **+Use/GC** – **only** retained in the HFST Grammar Checker disambiguation analyser
 * **+Use/-GC** – **never** retained in the HFST Grammar Checker disambiguation analyser
 * **+Use/TTS** – **only** retained in the HFST Text-To-Speech disambiguation analyser
