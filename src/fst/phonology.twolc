@@ -1317,7 +1317,6 @@ i:j <=> [i: | e: | i2: | i3: ] Triggers:*   %> _ [l|d|n|m|g|t|%>|.#.|#];  !RULE 
 
 !! ### Suffix consonant rules
 
-
 "Adjective illative in -vân after u"
 !! **RULE: @RULENAME@** =  
 j:v <=> u u:  %> _ â n ; !RULE SUFF
@@ -1330,18 +1329,21 @@ u:0 <=> u _  %> :v ; !RULE SV
 
 "Word final vowel deletion"
 !!  **RULE: @RULENAME@** = for vaskâm:vaaskâ
-Vx:0 <=> _  %^FVD: (%^WG:|%^CSH:) [.#.|%>] ;  !RULE SC
+Vx:0 <=> _  %^FVD: (%^WG:|%^CSH:) (%^CLEN:) (i) [.#.|%>] ;  !RULE SC
           where Vx in (â i);
 
 !! *Tests:*
 !!€ sollâ^FVD>ii
 !!€ soll00>ii
 
+!!€ a^RVlgâ^FVD^WG^CLENi>
+!!€ a0lg0000i>i
+
+
 "Potential vowel shortening for contract verbs"
 !! **RULE: @RULENAME@** =  -áážep becomes -áš etc.
 Vx:0 <=> Vx _ %> š [.#.|v|j] ; !RULE SV
 	where Vx in (a á i o u ) ;
-
 
 
 "Insertion of pleonastic hyphen"
