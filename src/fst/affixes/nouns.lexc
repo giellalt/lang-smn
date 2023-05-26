@@ -63,10 +63,10 @@ LEXICON nounstems !!≈ **@CODE@** contains words that should be classified, for
 !! This is the basic even-syllable lexicon. 
 !! (Note: 2VADDU differs from 2ALGA in having CLEN for Sg+Com and Pl+Ill , rlen svlow, ess:-) 
  
-LEXICON 2AIRU  !!≈ * **@CODE@** (subtype of the 2ALGA basic lexicon) 
+LEXICON 2AIRU  !!≈ * **@CODE@** (subtype of 2ALGA) 
+2ALGA_SG_WITHOUT_DIMINUTIIVE ; ! same paradigm as algâ 
+2PUUVSAH_PL2_WITHOUT_DIMINUTIVE  ; 
 +N+Der1+Der/Dimin: 2AIRU_DIM ; ! own dim with Gen -uu 
-2ALGA_SG_WITHOUT_DIMINUTIIVE ; ! same case paradigm as algâ 
- 2PUUVSAH_PL2  ; 
  
 LEXICON 2ALGA  !!≈ * **@CODE@** (basic lexicon) 
  2ALGA_SG ; 
@@ -192,6 +192,10 @@ LEXICON 2PUUVSAH_PL   !!≈ * **@CODE@** (basic lexicon)
 2PUUVSAH_PL2 ; !!≈ * **@CODE@** 
  
 LEXICON 2PUUVSAH_PL2  !!≈ * **@CODE@** (pointed to by 2KUMPPI) 
++N+Der1+Der/Dimin+N:^CLEN 2ALGA_PL_DIM ; !kaandâš nieidâš kuuđhâš puvssiih 
+2PUUVSAH_PL2_WITHOUT_DIMINUTIVE ;
+
+LEXICON 2PUUVSAH_PL2_WITHOUT_DIMINUTIVE
 +N: X_ALGA_PL ; 
 +N+Cmp/SgNom: Rhash ; ! 
 +N+Cmp/PlGen:^WG^RLEN%>i Rhash ; ! 
@@ -201,7 +205,6 @@ LEXICON 2PUUVSAH_PL2  !!≈ * **@CODE@** (pointed to by 2KUMPPI)
 +N+Pl+Loc:^WG%>in CPXsuff ;                 ! viljâinis 
 +N+Pl+Com:^WG%>id CPXsuffCOM ;  ! 
 +N:^WG Gen_DER ; 
-+N+Der1+Der/Dimin+N:^CLEN 2ALGA_PL_DIM ; !kaandâš nieidâš kuuđhâš puvssiih 
  
 LEXICON X_WG_RLEN_PL_Loc !!≈ * **@CODE@** plural forms with ^WG and ^^WG^RLEN 
 +Pl+Loc:^WG^RLEN%>in K ;                 ! puuvsâin 
