@@ -662,6 +662,9 @@ a rules
 * *sollâ^FVD>ii*
 * *soll00>ii*
 
+* *a^RVlgâ^FVD^WG^CLENi>*
+* *a0lg0000i>i*
+
 **RULE: Potential vowel shortening for contract verbs** =  -áážep becomes -áš etc.
 
 **RULE: Insertion of pleonastic hyphen** = for compounding of two vowels *stovli-ijâ*

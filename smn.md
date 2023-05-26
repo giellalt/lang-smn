@@ -5566,7 +5566,7 @@ These two lexica are temporary lexica for words waiting to be classified.
 This is the basic even-syllable lexicon. 
 (Note: 2VADDU differs from 2ALGA in having CLEN for Sg+Com and Pl+Ill , rlen svlow, ess:-) 
 
-* **LEXICON 2AIRU** (subtype of the 2ALGA basic lexicon) 
+* **LEXICON 2AIRU** (subtype of 2ALGA) 
 
 * **LEXICON 2ALGA** (basic lexicon) 
 
@@ -8122,6 +8122,9 @@ a rules
 *Tests:*
 * *sollâ^FVD>ii*
 * *soll00>ii*
+
+* *a^RVlgâ^FVD^WG^CLENi>*
+* *a0lg0000i>i*
 
 **RULE: Potential vowel shortening for contract verbs** =  -áážep becomes -áš etc.
 
