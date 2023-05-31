@@ -41,13 +41,11 @@ These two lexica are temporary lexica for words waiting to be classified.
 This is the basic even-syllable lexicon. 
 (Note: 2VADDU differs from 2ALGA in having CLEN for Sg+Com and Pl+Ill , rlen svlow, ess:-) 
 
-* **LEXICON 2AIRU** (subtype of 2ALGA) 
-
 * **LEXICON 2ALGA** (basic lexicon) 
 
-* **LEXICON X_ALGA** (common to all POS) 
-
 * **LEXICON 2ALGA_SG** (Px paradigms) 
+
+* **LEXICON X_ALGA** (common to all POS) 
 
 * **LEXICON X_ALGA_SG** case paradigms sg a^RVlgâ, ku^RVssâ 
 
@@ -56,11 +54,11 @@ This is the basic even-syllable lexicon.
 * **LEXICON X_ALGA_PL_COMMON** Pl Nom and directing to 
 * **X_WG_RLEN_PL_Loc ;** 
 
+* **LEXICON 2AIRU** (subtype of 2ALGA) 
+
 * **LEXICON 2AIRU_SG_DIM** a^RVlgâ 
 
 * **LEXICON 2AIRU_PL_DIM** 
-
-* **LEXICON 2ALGA_DIM** 
 
 * **LEXICON 2ALGA_SG_DIM** a^RVlgâ 
 
@@ -317,6 +315,10 @@ X_CAACI_VYEHI_SG ;)
 * **LEXICON 2AIGI_SG** 
 
 * **LEXICON 2AIGI_PL** 
+
+* ''LEXICON AIGI_DIM_SG''  pe^RVi4vi
+
+* ''LEXICON AIGI_DIM_PL'' 
 
 * **LEXICON X_AIGI_SG** 
 

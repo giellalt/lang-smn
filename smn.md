@@ -5566,13 +5566,11 @@ These two lexica are temporary lexica for words waiting to be classified.
 This is the basic even-syllable lexicon. 
 (Note: 2VADDU differs from 2ALGA in having CLEN for Sg+Com and Pl+Ill , rlen svlow, ess:-) 
 
-* **LEXICON 2AIRU** (subtype of 2ALGA) 
-
 * **LEXICON 2ALGA** (basic lexicon) 
 
-* **LEXICON X_ALGA** (common to all POS) 
-
 * **LEXICON 2ALGA_SG** (Px paradigms) 
+
+* **LEXICON X_ALGA** (common to all POS) 
 
 * **LEXICON X_ALGA_SG** case paradigms sg a^RVlgâ, ku^RVssâ 
 
@@ -5581,11 +5579,11 @@ This is the basic even-syllable lexicon.
 * **LEXICON X_ALGA_PL_COMMON** Pl Nom and directing to 
 * **X_WG_RLEN_PL_Loc ;** 
 
+* **LEXICON 2AIRU** (subtype of 2ALGA) 
+
 * **LEXICON 2AIRU_SG_DIM** a^RVlgâ 
 
 * **LEXICON 2AIRU_PL_DIM** 
-
-* **LEXICON 2ALGA_DIM** 
 
 * **LEXICON 2ALGA_SG_DIM** a^RVlgâ 
 
@@ -5842,6 +5840,10 @@ X_CAACI_VYEHI_SG ;)
 * **LEXICON 2AIGI_SG** 
 
 * **LEXICON 2AIGI_PL** 
+
+* ''LEXICON AIGI_DIM_SG''  pe^RVi4vi
+
+* ''LEXICON AIGI_DIM_PL'' 
 
 * **LEXICON X_AIGI_SG** 
 
@@ -7876,7 +7878,15 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 
 **RULE: Root vowel ä:ää lenghtening and diphthongisation e:iä** = special rule, for avoiding conflict spä%^RVi4lih%^WG%^RLEN, 
 
+* *pe^RVi4vi^EA^WG>žân*
+* *piäivá00>žân*
+
+* *pe^RVi4vi^EA^CLEN>i5n*
+* *piäivá00>in*
+
 **RULE: Root vowel o lengthening** =  alge : oolgijn 
+5) toovâd moonnum
+poovtám  o5o
 
 * *a^RVlge^WG^RLEN>id*
 * *oolgi00>jd*
@@ -7987,6 +7997,12 @@ a rules
 **RULE: Diphthong rule uá:uo and uá:oo, part 2** =  
 
 **RULE: Diphthongisation e to iä, part 1 ** =   
+1) P1: e > i; ergi:iärgán 1, veerdi:viärdán ! eeč^RCi^EA^CLEN^RVSH>s
+
+piävu>s piähho>on piäváččii  - not meendu
+veerrá%^EA%^CSH>
+peeh%^RCá%^VHIGH> peeh%^RC 
+SV: mánuttep : mánuttiäpán
 
 **RULE: Root vowel aa:áá in C-stems with stemvowel u, part 1** =  ahhu:áhu
 
@@ -8045,6 +8061,7 @@ a rules
 **RULE: Stem vowel e to á for other root vowel** =  if e stem
 
 **RULE: Stem vowel i to á for other root vowel.** =  e.g. säämi > Ill sáámán 
+SV uábbám iännásis
 
 **RULE: Stem vowel i to â for other root vowel, as a common error.** =  e.g. säämi > Ill Err/Orth sáámân 
 

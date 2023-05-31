@@ -415,7 +415,15 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 
 **RULE: Root vowel ä:ää lenghtening and diphthongisation e:iä** = special rule, for avoiding conflict spä%^RVi4lih%^WG%^RLEN, 
 
+* *pe^RVi4vi^EA^WG>žân*
+* *piäivá00>žân*
+
+* *pe^RVi4vi^EA^CLEN>i5n*
+* *piäivá00>in*
+
 **RULE: Root vowel o lengthening** =  alge : oolgijn 
+5) toovâd moonnum
+poovtám  o5o
 
 * *a^RVlge^WG^RLEN>id*
 * *oolgi00>jd*
@@ -526,6 +534,12 @@ a rules
 **RULE: Diphthong rule uá:uo and uá:oo, part 2** =  
 
 **RULE: Diphthongisation e to iä, part 1 ** =   
+1) P1: e > i; ergi:iärgán 1, veerdi:viärdán ! eeč^RCi^EA^CLEN^RVSH>s
+
+piävu>s piähho>on piäváččii  - not meendu
+veerrá%^EA%^CSH>
+peeh%^RCá%^VHIGH> peeh%^RC 
+SV: mánuttep : mánuttiäpán
 
 **RULE: Root vowel aa:áá in C-stems with stemvowel u, part 1** =  ahhu:áhu
 
@@ -584,6 +598,7 @@ a rules
 **RULE: Stem vowel e to á for other root vowel** =  if e stem
 
 **RULE: Stem vowel i to á for other root vowel.** =  e.g. säämi > Ill sáámán 
+SV uábbám iännásis
 
 **RULE: Stem vowel i to â for other root vowel, as a common error.** =  e.g. säämi > Ill Err/Orth sáámân 
 
