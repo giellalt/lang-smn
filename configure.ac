@@ -173,7 +173,6 @@ gt_PROG_VFST
 
 # Tests and sets up vislcg3
 gt_PROG_VISLCG3
-AM_CONDITIONAL([HAVE_VISLCG_FILTER], [false])  # TODO
 
 # Tests and sets up XML to lexc conversion
 gt_PROG_SAXON
