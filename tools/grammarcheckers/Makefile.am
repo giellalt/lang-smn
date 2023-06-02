@@ -30,7 +30,7 @@ LOCAL_GC_ZIP_FILES=after-speller-disambiguator.bin \
 
 if HAVE_VISLCG_FILTER
 grammarchecker-release.bin: grammarchecker.cg3
-	$(AM_V_CGCOMP)"$(VISLCG3)" --grammar $< --grammar-bin $@ --grammar-only --nrules-v "^X"
+	$(AM_V_CGCOMP)"$(VISLCG3)" --grammar $< --grammar-bin $@ --grammar-only --nrules-v "^x"
 else
 grammarchecker-release.cg3: $(srcdir)/grammarchecker.cg3 \
 							$(GIELLA_CORE)/scripts/gc-release.awk
