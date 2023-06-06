@@ -7862,6 +7862,9 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 
 **RULE: Root vowel lenghtening in many stems** =  no rootvowel length if stem vowel lengthens and the consonantcentre consists of two or more consonants 
 
+* *pä^RVi4kk4i^EA^WG^RLEN>š*
+* *páái0há000>š*
+
 * *kä^RVvnâst^WG^VBACK^RLEN>*
 * *kaavnâst000>*
 
@@ -8015,6 +8018,9 @@ SV: mánuttep : mánuttiäpán
 **RULE: ye to uá and uo, part 1** =  Part 1 of ye to uá for kyeli : kuálán  
 
 **RULE: ye to uá, part 2** =  Part 2 of ye to uá for kyeli : kuálán
+
+* *syei4ni^EA^WG^RLEN>š*
+* *suáiná000>š*
 
 * *kyel^RCi3^EA^CLEN>m*
 * *kuállá00>m*
