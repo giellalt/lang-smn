@@ -5530,7 +5530,7 @@ Adj - pooliitlâš: # attr. pooliitlâš; puolikongruenssi mahdollinen (#-paikat
 Note: Triggers **must** be put in this order ("|" meaning "or") in 
 order for the morphophonology to work: 
 
-{SV,ÁE,ÁI}  {EA,EX,SC}  {FCD,VD} {WG,CSH} CLEN  {VHIGH,VBACK}  {RVSH,RLEN} {SLEN,SVSH}  SVLOW 
+{SV,ÁE,ÁI}  {EA,EX,SC}  {FCD,FVD} {WG,CSH} CLEN  {VHIGH,VBACK}  {RVSH,RLEN} {SLEN,SVSH}  SVLOW 
 
 ## Table of content for this file 
 1. Unclassified lexica 
@@ -7540,7 +7540,7 @@ These symbols govern the behaviour of the archiphonemes above.
 
 Trigger ordering in twolc and lexc, from left to right:
 
-{SV,ÁE,ÁI}  {EA,EX,SC}  {FCD|,VD} {WG,CSH} CLEN  {VHIGH,VBACK}  {RVSH,RLEN} {SLEN,SVSH}  SVLOW
+{SV,ÁE,ÁI}  {EA,EX,SC}  {FCD|FVD} {WG,CSH} CLEN  {VHIGH,VBACK}  {RVSH,RLEN} {SLEN,SVSH}  SVLOW
 
 ## Morpheme boundaries:
 
