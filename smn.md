@@ -5848,6 +5848,8 @@ X_CAACI_VYEHI_SG ;)
 * **LEXICON X_AIGI_SG** 
 
 ### 2KYELI - 2SYEJI lexicon family 
+ne pitää yhdistää, yksi ero: 
+X-leksikossa Sg Ill erilainen 
 
 * **LEXICON 2KYELI** i-e-á, similar to 2ALGE, except from -i some places.     
 
