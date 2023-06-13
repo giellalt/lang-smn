@@ -531,6 +531,9 @@ OBS ^EA -> VHIGH?
 viäskár:veeskir viäskár%^ÁI%^WG%^RLEN
 paaccim čaallum
 
+* *čäähâ^WG^VBACK^RVSH#škyett4*
+* *čaavâ000#škye0t*
+
 **RULE: ää to áá and á0 in Illative and Sg3** =  ... for säämi > sáámán
 :á  XXX
 sámásis
@@ -597,20 +600,30 @@ puáhháá : poovij ! XXX
 * *o0inu>đ*
 
 **RULE: Diphthong rule uá:uo and uá:oo, part 2** =  
+uá > uo
+uá > uo
 
 **RULE: Diphthongisation e to iä, part 1 ** =   
-1) P1: e > i; ergi:iärgán 1, veerdi:viärdán ! eeč^RCi^EA^CLEN^RVSH>s
-
-piävu>s piähho>on piäváččii  - not meendu
+ergi:iärgán eeč^RCi^EA^CLEN^RVSH>s
+čevžuin čiävžui če%^RVvžui4%^WG>
+piävu>s piähho>on piäváččii not meendu
 veerrá%^EA%^CSH>
 peeh%^RCá%^VHIGH> peeh%^RC 
+
 SV: mánuttep : mánuttiäpán
+
+* *ce^RVlkk4u2^CLEN^VHIGH^RVSH>o*
+* *ciälkko000>o*
 
 **RULE: Root vowel aa:áá in C-stems with stemvowel u, part 1** =  ahhu:áhu
 
 **RULE: Root vowel aa:áá in C-stems with stemvowel u, part 2** =  ahhu:ááhu
 
 **RULE: ie to iä in Illative and Sg3** =  kiem´ni -> kiämnán, veerdi : viärdán peerru2%^CLEN%^VHIGH%^RVSH%>o
+čevžuin čiävžui
+piähhoo
+eellá%^CSH%^VHIGH
+PrfPrc Err/Orth
 
 **RULE: Diphthongisation uo:uá** =   
 
