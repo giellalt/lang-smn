@@ -7616,6 +7616,8 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 
 **RULE: x:y consonant gradation ** =  WG gives x:x and x:y, when there is no consonant lengthening  
 
+* *ta^RVh^RCâ^WG^VHIGH#škyett4*
+* ???
 * *tu^RVp^RCe^WG*
 * *tu0v0e0*
 * *käähir^WG>*
@@ -7987,6 +7989,9 @@ OBS ^EA -> VHIGH?
 * *njääh^RCi^WG^VBACK>i3*
 * *njaav0i00>i*
 
+* *kä^RVvnâ^WG^VBACK#škyett4*
+* *ka0vnâ00#škye0t*
+
 **RULE: ää to aa, second vowel** =  á:o in pairs like kuátij -> koođij, säämi -> saamij čäällu%^VBACK%>m lään^RCi%>id
 viäskár:veeskir viäskár%^ÁI%^WG%^RLEN
 paaccim čaallum
@@ -7995,14 +8000,13 @@ paaccim čaallum
 :á  XXX
 sámásis
 njálmásis
-:á  XXX
-ny: %%^VHIGH%^CLEN%^RVSH
+:á
 
 * *sääm^RCi^EA>nmake*
 * *sáám0á0>n*
 
 **RULE: äRV to áá in Illative and Sg3** =  ... for täsni -> táásnán
-čevžuin čiävžui RLEN added
+čevžuin čiävžui RLEN
 
 * *tä^RVsni^EA^CSH^RLEN>n*
 * *táásná000>n*
