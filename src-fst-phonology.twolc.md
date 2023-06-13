@@ -206,6 +206,9 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 * *laav0hâ00*
 
 **RULE: xyy:xy gradation A** =   há%^RVi4ttás%^ÁI
+1) WG
+2) CSH  !he%^RVi4ttug
+3) 
 
 * *á^RVrppu^WG^RLEN>*
 * *áár0pu00>*
@@ -220,8 +223,13 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 * *luu0já000>in*
 
 **RULE: From i4j to j when WG and CSH** = e.g. sai4joos:sajoos
+1) when WG
+2) when CSH 
+3) ?
 
 **RULE: xx:x consonant gradation and shortening and x:x shortening** =   weak grade **or** consonant shortening (Both in same rule)
+1) when WG
+2) when CSH  
 
 *Tests:*
 * *ku^RVrrâ^CSH^RLEN>n*
@@ -244,6 +252,12 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 * *ka0h0an00>ân*
 
 **RULE: tt:t  - final consonant and consonant gradation**  = consonant gradation, and 3syll verbs in -tt lose t in front of cns-initial suff
+1) WG, not CLEN
+2) CSH
+3) uáivátt : uáivát
+4) olášuttem:olášutmân
+5) uáiváátt>ân uáiváátân
+6) uápásmittijm>uápásmitijm
 
 * *las^RCe^SVtt^CLEN^SLEN>*
 * *lassee0t00>*
@@ -258,6 +272,8 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 * *njuolgâ000*
 
 **RULE: Final m in stems, smm to sm** = 
+1) puttáás_min 
+2) stoorgâs_mân  sto%^RVrgâsm
 
 **RULE: Wordfinal consonants part 1**  e%^RVlâčč
 1)
@@ -305,6 +321,7 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 * *kiellâ0>n*
 
 **RULE: č:ij part 1** =  
+eeč%^RCi:eijijn eeč%^RCi%^WG%^CLEN%^SVLOW%>in
 
 **RULE: Lengthening root consonant j:ij 1** =  for saje:saijeen 
 
@@ -358,16 +375,11 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 * *ki0rrâs0>ân*
 
 **RULE: Vowel shortening VV:V** = ráávhu- : rávhoid, käähir%^CSH%>id kuuđiâ%^RVSH%>žân
-1. svnlow
-1. čääci : čassijn
-1. kaamuv kammust
-1. pááppár : pápárân páápp4ár%^ÁI%^WG%^RVSH%>id
-1. pááppár : pápárân viijđás%^ÁE%^WG%^RVSH> 
-1. njääh^RCe^CLEN^RVSH> = njähhe>
-1. njääh^RCe^CLEN^RVSH> = njähhe>
 1. essee : esseid, suklaa : suklaid
 
 **RULE: Long vowel shortening** = (example?), no ^CSH, since that gives Vy:0
+3syll kaavpug:kavpugân 
+táálhudem koomerdem
 
 **RULE: e:0 in passive** \\
 
@@ -398,6 +410,7 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 ### First syllable vowel lengthening rules
 
 **RULE: Root vowel lenghtening in many stems** =  no rootvowel length if stem vowel lengthens and the consonantcentre consists of two or more consonants 
+2syll and 3syll 
 
 * *kä^RVvnâst^WG^VBACK^RLEN>*
 * *kaavnâst000>*
@@ -412,8 +425,16 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 * *njuunee000>st*
 
 **RULE: Root vowel o5:u ** = 
+puhtii
 
 **RULE: Root vowel ä:ää lenghtening and diphthongisation e:iä** = special rule, for avoiding conflict spä%^RVi4lih%^WG%^RLEN, 
+1) vä%^RVr%^RCid
+2)
+3)já%^RVhhá%^SVl%^ÁI%^WG%^RLEN>
+4)
+5) e:iä, ergi -> iärgán
+6) too much here?
+7) čevžuin čiävžui če%^RVvžui4%^WG>
 
 * *pe^RVi4vi^EA^WG>žân*
 * *piäivá00>žân*
@@ -422,6 +443,9 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 * *piäivá00>in*
 
 **RULE: Root vowel o lengthening** =  alge : oolgijn 
+1)
+2)
+3)
 5) toovâd moonnum
 poovtám  o5o
 
@@ -429,6 +453,12 @@ poovtám  o5o
 * *oolgi00>jd*
 
 **RULE: Root vowel u lengthening with vowel change before suffix i** =  alge : oolgijn 
+1)
+2)
+3)
+4) puuvtijd
+5) juuttu>m
+5) juuttâl
 
 * *mu^RVšti^WG^VHIGH^RLEN>j*
 * *muušti000>j*
@@ -448,8 +478,16 @@ All instances of the same vowel alternation are in the same rule.
 a rules
 
 **RULE: Root vowel change a:o before suffix i and for contract verbs** =  alge : olgijn 
+contr 
+contr 
 
 **RULE: Root vowel o:u for contract verbs and Root vowel change o:u before suffix i** 
+juttuum
+?
+alge : olgijn, remove đ because of inf.
+XXX ny
+1) poccuu puásui  
+([%^RLEN:|%^RVSH:]) (%^SLEN:) [%>|.#.] 5) jutâlâm juuttâl
 
 * *tohhi2>đ*
 * *tuhhi>đ*
@@ -463,32 +501,49 @@ a rules
 
 **RULE: Monophthongisation rule iä:ee 1** =  
 1)
+2)viäskár veeskir iäbbár eebir 
+estuđ
 
 **RULE: iä:e rule 1 and second syllable Fleeting vowel before suffix        ** =  Note: many rules in one
+1)  i:0 for iđ C verbs 
+2)  i:0 for uđ C verbs
+melluu
+4) cokkiitt%^CLEN%^RLEN%^SLEN%>mân
 
 **RULE: iä:e and iä:ee rule 2 and Diphthongisation i5ä to ie** =  
+estuđ kiä5ptu2 > kieptuđ
 
 * *siämmu2>đ>*
 * *s0emmu>đ>*
 
 **RULE: Different rules for ä:a, first vowel (or only vowel)** =  čääci:čassijn, läbži:labžijn lään^RCi%>id
+OBS ^EA -> VHIGH?
 
 * *njääh^RCi^WG^VBACK>i3*
 * *njaav0i00>i*
 
 **RULE: ää to aa, second vowel** =  á:o in pairs like kuátij -> koođij, säämi -> saamij čäällu%^VBACK%>m lään^RCi%>id
+viäskár:veeskir viäskár%^ÁI%^WG%^RLEN
+paaccim čaallum
 
 **RULE: ää to áá and á0 in Illative and Sg3** =  ... for säämi > sáámán
+:á  XXX
+sámásis
+njálmásis
+:á  XXX
+ny: %%^VHIGH%^CLEN%^RVSH
 
-* *sääm^RCi^EA>n*
+* *sääm^RCi^EA>nmake*
 * *sáám0á0>n*
 
 **RULE: äRV to áá in Illative and Sg3** =  ... for täsni -> táásnán
+čevžuin čiävžui RLEN added
 
 * *tä^RVsni^EA^CSH^RLEN>n*
 * *táásná000>n*
 
 **RULE: Vowel lengthening äRV to aa ** =  äigi aaigijd
+kä%^RVlgâ%^WG%^VBACK%^RLEN%>m
 
 * *sälkki2>đ>*
 * *salkki>đ>*
@@ -525,8 +580,14 @@ a rules
 ### á and uá rules
 
 **RULE: Monophthongisation rule uá:o0 part 2: Vowel shortening for uá ** =  for uábbi -> obbijn  čuál%^RCi%^WG%>in tuái4jâl%^CSH%^VBACK%^RVSH%>âm
+sopâvetteđ tojâdâm
+uáinu
 
 **RULE: Monophthongisation rule u:o and root vowel change u:o, special rule for olmooš and contract verbs** = 
+ulmu : olmooš, olmožin, carefully with only initial vowel
+oođđim            
+sopâvetteđ tojâdâm
+puáhháá : poovij ! XXX
 
 * *uái4nu2>đ*
 * *o0inu>đ*
@@ -550,6 +611,7 @@ SV: mánuttep : mánuttiäpán
 **RULE: Diphthongisation uo:uá** =   
 
 **RULE: ye to uá and uo, part 1** =  Part 1 of ye to uá for kyeli : kuálán  
+[i | Cns] ; ! ryettâ^WG^VBACK^RLEN>m
 
 **RULE: ye to uá, part 2** =  Part 2 of ye to uá for kyeli : kuálán
 
@@ -609,7 +671,7 @@ SV uábbám iännásis
 * *so^RVllâ^WG^RLEN>h*
 * *soo0la00>h*
 
-**RULE: Stem vowel â > á change before i** = sollâ to sooláid 
+**RULE: Stem vowel â to á change before i** = sollâ to sooláid 
 
 * *so^RVllâ^WG^RLEN^SVLOW>in*
 * *soo0lá000>in*
@@ -617,14 +679,17 @@ SV uábbám iännásis
 **RULE: Stem vowel i3:0** = 
 
 **RULE: Stem vowel u:o change before suffix** =  
+1) olmooš, olmožin
 2) 
 
 **RULE: Stem vowel u2:o change before suffix** =  
+SVLOW together with u?
 
 * *uáinu>o*
 * *uáino>o*
 
 **RULE: Second vowel shortening** = eemeed : emedân, savvoon : savo 
+eemeed : emedân sai4joos
 
 **Tests**
 * *kulluutt^SVSH>*
