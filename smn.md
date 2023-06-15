@@ -7848,7 +7848,10 @@ eeč%^RCi:eijijn eeč%^RCi%^WG%^CLEN%^SVLOW%>in
 3syll kaavpug:kavpugân 
 táálhudem koomerdem
 
-**RULE: e:0 in passive** \\
+**RULE: e:0 in passive and elsewhere** \\
+2st stems
+kaavpug:kavpugân 
+táálhudem koomerdem
 
 *Tests:*
 * *mááh^RCu^WG^CLEN^SVLOW>in*
@@ -7856,7 +7859,7 @@ táálhudem koomerdem
 * *mool^RCâ^WG^RVSH>ttáá*
 * *mo0l0â00>ttáá*
 
-**RULE: e:0 in passive** = special rule for getting ej̣ittáá instead of ej̣ittáá.
+**RULE: e:0 in passive and elsewhere** = special rule for getting ej̣ittáá instead of ej̣ittáá.
 
 **RULE: Underlying long vowel shortening iä:e and ää:ä or a** = čääh%^RCu2%^CLEN%^VBACK%>um
 
@@ -8068,6 +8071,10 @@ puáhháá : poovij ! XXX
 uá > uo
 uá > uo
 
+**RULE: Root vowel aa:áá in C-stems with stemvowel u, part 1** =  ahhu:áhu
+
+**RULE: Root vowel aa:áá in C-stems with stemvowel u, part 2** =  ahhu:ááhu
+
 **RULE: Diphthongisation e to iä, part 1 ** =   
 ergi:iärgán eeč^RCi^EA^CLEN^RVSH>s
 čevžuin čiävžui če%^RVvžui4%^WG>
@@ -8080,10 +8087,6 @@ SV: mánuttep : mánuttiäpán
 * *ce^RVlkk4u2^CLEN^VHIGH^RVSH>o*
 * *ciälkko000>o*
 
-**RULE: Root vowel aa:áá in C-stems with stemvowel u, part 1** =  ahhu:áhu
-
-**RULE: Root vowel aa:áá in C-stems with stemvowel u, part 2** =  ahhu:ááhu
-
 **RULE: ie to iä in Illative and Sg3** =  kiem´ni -> kiämnán, veerdi : viärdán peerru2%^CLEN%^VHIGH%^RVSH%>o
 čevžuin čiävžui
 piähhoo
@@ -8093,9 +8096,15 @@ PrfPrc Err/Orth
 **RULE: Diphthongisation uo:uá** =   
 
 **RULE: ye to uá and uo, part 1** =  Part 1 of ye to uá for kyeli : kuálán  
-[i | Cns] ; ! ryettâ^WG^VBACK^RLEN>m
+syej%^RCi%^RVSH%^CLEN%>in
+[i|Cns]; ryettâ^WG^VBACK^RLEN>m
+
+* *ryettâ^WG#škyett4*
+* *ruo0tâ0#škye0t*
 
 **RULE: ye to uá, part 2** =  Part 2 of ye to uá for kyeli : kuálán
+not ryetáim:
+not ryetáim:
 
 * *kyel^RCi3^EA^CLEN>m*
 * *kuállá00>m*
