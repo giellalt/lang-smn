@@ -641,13 +641,16 @@ Vy:0 <=> Vx: _  Cns:+ [ Cns: - %^RC:0 ] [Vow: - u2:]          %^WG:  (%^CLEN:) %
 Vy:0 <=> Vx: _ [Cns: - č:] Cns:* (%^RC:) [Vow: - u2:]  %^WG:          %^RVSH: %^SVLOW: [%>|.#.] \e ; ! RV !! 2st stems
          Vx: _  Cns:+                    Vow:  Cns:    %^CSH:         %^RVSH: %^SVSH: [%>|.#.] ; !! 3syll kaavpug:kavpugân 
          Vx: _  Cns:+                    Vow: (%^SV:) Cns:+ Vow: Cns: %^RVSH: [%>|.#.] ; !! táálhudem koomerdem
-       where Vx in ( a e i o u y á ä ) 
-             Vy in ( a e i o u y á ä ) 
+       where Vx in ( a i o u y á ä ) 
+             Vy in ( a i o u y á ä ) 
        matched ;
 
-"e:0 in passive"
+"e:0 in passive and elsewhere"
 !! **RULE: @RULENAME@** \\
-e:0 <=>   e: _  Cns:+ u2:u   ([%^WG: | %^CSH:]) (%^CLEN:) %^VBACK: %^RVSH:  [%>|.#.] ; ! RV 
+e:0 <=> e: _ [Cns: - č:] Cns:* (%^RC:) [Vow: - u2:] %^WG:                     %^RVSH: %^SVLOW: [%>|.#.] \e ; !! 2st stems
+        e: _  Cns:+                     u2:u      ([%^WG:| %^CSH:]) (%^CLEN:) %^VBACK: %^RVSH: [%>|.#.] ; 
+        e: _  Cns:+                          Vow:  Cns:    %^CSH:              %^RVSH: %^SVSH: [%>|.#.] ; !! kaavpug:kavpugân 
+        e: _  Cns:+                     Vow: (%^SV:) Cns:+ Vow: Cns:                   %^RVSH: [%>|.#.] ; !! táálhudem koomerdem
 
 
 !! *Tests:*
@@ -1029,6 +1032,19 @@ u:o <=>  [.#.|#] _     Cns:+ u:o (%^SV:) [š|ž]  %^WG: (%^SLEN:)  %^SVLOW: [%>|
 
 
 
+
+"Root vowel aa:áá in C-stems with stemvowel u, part 1"
+!! **RULE: @RULENAME@** =  ahhu:áhu
+a:á <=> [Cns|.#.|#] _ %^RV: Cns: Cns: u [š|ž] %^CSH: (%^RLEN:) [%>|.#.]  ; ! RV 
+
+
+"Root vowel aa:áá in C-stems with stemvowel u, part 2"
+!! **RULE: @RULENAME@** =  ahhu:ááhu
+%^RV:á <=> [Cns|.#.|#] a:á _ Cns: Cns: u       [š|ž]   %^CSH: %^RLEN: [%>|.#.]   ;  ! RV !! 1)
+                  \Vow: o: _ Cns:+     u [i4:|j|š|ž]  %^WG: (%^RVSH:) [%>|.#.] ;  ! RV  !! 2) poccu puásui
+
+
+
 "Diphthongisation e to iä, part 1" 
 !! **RULE: @RULENAME@** =   
 e:i <=>  _ Vow:  Cns:+ [i2:|e:|i:|i3:] [%^EA:|%^EX:] ([%^CSH:|%^CLEN:]) ([%^RLEN:|%^RVSH:])   [%>|.#.] ;!! ergi:iärgán eeč^RCi^EA^CLEN^RVSH>s
@@ -1046,26 +1062,13 @@ e:i <=>  _ Vow:  Cns:+ [i2:|e:|i:|i3:] [%^EA:|%^EX:] ([%^CSH:|%^CLEN:]) ([%^RLEN
 !!€ ce^RVlkk4u2^CLEN^VHIGH^RVSH>o
 !!€ ciälkko000>o
 
-"Root vowel aa:áá in C-stems with stemvowel u, part 1"
-!! **RULE: @RULENAME@** =  ahhu:áhu
-a:á <=> [Cns|.#.|#] _ %^RV: Cns: Cns: u [š|ž] %^CSH: (%^RLEN:) [%>|.#.]  ; ! RV 
-
-
-"Root vowel aa:áá in C-stems with stemvowel u, part 2"
-!! **RULE: @RULENAME@** =  ahhu:ááhu
-%^RV:á <=> [Cns|.#.|#] a:á _ Cns: Cns: u       [š|ž]   %^CSH: %^RLEN: [%>|.#.]   ;  ! RV !! 1)
-                  \Vow: o: _ Cns:+     u [i4:|j|š|ž]  %^WG: (%^RVSH:) [%>|.#.] ;  ! RV  !! 2) poccu puásui
-
-
-
-
 
 "ie to iä in Illative and Sg3"
 !! **RULE: @RULENAME@** =  kiem´ni -> kiämnán, veerdi : viärdán peerru2%^CLEN%^VHIGH%^RVSH%>o
 e:ä <=> [i | e: ] _  Cns:+ Vow:        [%^EA:|%^EX:] Triggers:* [%>|.#.] ;	
         [i | e: ] _  Cns:+ Vow:        Triggers:* %^VHIGH:      [%>|.#.] ;  
-        :i        _  Cns:+ [u|á|o|â2:] (%^WG:) (%^CLEN:) %^VHIGH: ([%^RLEN:|%^RVSH:]) [%>|.#.] ; !! čevžuin čiävžui
-        :i        _  Cns:+ u2:o        Triggers:*               [%>|.#.] ; !! piähhoo
+       :i        _  Cns:+ [u|á|o|â2:] (%^WG:) (%^CLEN:) %^VHIGH: ([%^RLEN:|%^RVSH:]) [%>|.#.] ; !! čevžuin čiävžui
+       :i        _  Cns:+ u2:o        Triggers:*               [%>|.#.] ; !! piähhoo
          \Vow :i  _  Cns:+ á           (%^CSH:) %^VHIGH:        [%>|.#.] \[Cns|Vow] ; !! eellá%^CSH%^VHIGH
          \Vow :i  _  Cns:+    â2:       %^VHIGH:                 %> m ;   !! PrfPrc Err/Orth
 
@@ -1082,21 +1085,24 @@ o:á <=> u _ Cns:+ u: [i4:|j|š|ž] %^WG: ([%^RVSH:|%^RLEN:]) [%>|.#.] ;  ! RV !
 
 "ye to uá and uo, part 1"
 !! **RULE: @RULENAME@** =  Part 1 of ye to uá for kyeli : kuálán  
-y:u <=> _ e:  Cns:+ Vow:  [%^EA:|%^EX:] ([%^CSH:| %^CLEN:]) (%^RLEN:)   [%>|.#.] ;   ! RV 
-        _ :o  Cns:+ :i                   (%^WG:) (%^CLEN:) (%^VBACK:|%^VHIGH:) ([%^RVSH: |%^RLEN:]) %> [i:|j|i3:|š|ž] ; ! RV  !syej%^RCi%^RVSH%^CLEN%>in
-        _ :o  Cns:+ :i                   (%^WG:) (%^CLEN:) %^VBACK: (%^RLEN:|%^RVSH:) %> [m | h] ; ! RV  
-        _ :o  Cns:+ [â:|á |u2:] (Cns:+) ([%^WG:| %^CSH:])  (%^CLEN:) %^VBACK: [%^RLEN:|%^RVSH:] [%>|.#.] ; !! [i | Cns] ; ! ryettâ^WG^VBACK^RLEN>m
-        _ :o  Cns:+ :i                    %^WG: %^CLEN: %^SVLOW: %> i: ; ! RV 
-        _ :o  Cns:  Cns: :i               %^WG: %^CLEN:  %^RVSH: %> [i:|i3:] ; ! RV 
-        _ :o  Cns:+ i2:i                                         %> [i|i3:i|Cns] ;  ! RV 
-        _ e:  Cns:+ [:Vow|i6:]      (%^CSH:|%^WG:) (%^CLEN:) %^VHIGH: ([%^RVSH: |%^RLEN:]) [%>|.#.] ;  ! RV 
+y:u <=> _ e:  Cns:+  Vow:  [%^EA:|%^EX:] ([%^CSH:|%^CLEN:])                       (%^RLEN:)          [%>|.#.|#] ;  
+        _ e:  Cns:+ [:Vow|i6:]    (%^CSH:|%^WG:) (%^CLEN:)        %^VHIGH:       ([%^RLEN:|%^RVSH:]) [%>|.#.|#] ;  ! RV 
+        _ :o  Cns:+ :i                   (%^WG:) (%^CLEN:) ([%^VBACK:|%^VHIGH:]) ([%^RLEN:|%^RVSH:])  %> [i:|j|i3:|š|ž] ; !! syej%^RCi%^RVSH%^CLEN%>in
+        _ :o  Cns:+ :i                   (%^WG:) (%^CLEN:)        %^VBACK:       ([%^RLEN:|%^RVSH:])  %> [m|h] ;  
+        _ :o  Cns:+ [â:|á|u2:] (Cns:+) ([%^WG:|%^CSH:]) (%^CLEN:) %^VBACK:        [%^RLEN:|%^RVSH:]  [%>|.#.|#] ; !! [i|Cns]; ryettâ^WG^VBACK^RLEN>m
+        _ :o  Cns:+ :i                    %^WG:   %^CLEN:         %^SVLOW:                            %>  i: ; 
+        _ :o  Cns:  Cns: :i               %^WG:   %^CLEN:                                  %^RVSH:    %> [i:|i3:] ; 
+        _ :o  Cns:+ i2:i                                                                              %> [i|i3:i|Cns] ;  ! RV 
+        _ :o  Cns:+ â                     %^WG:  # ;
 
+!!€ ryettâ^WG#škyett4
+!!€ ruo0tâ0#škye0t
 
 "ye to uá, part 2"
 !! **RULE: @RULENAME@** =  Part 2 of ye to uá for kyeli : kuálán
-e:á <=> y: _  Cns:+ [Vow: - u2:]  [%^EA:|%^EX:] (%^CSH:|%^CLEN:|%^WG:) (%^RLEN:)  [%>|.#.] \[i:|j |i3:| š | ž ]  ; ! RV 
-        y: _  Cns:+ [u:|á|o|â2:]  (%^CSH:|%^WG:) (%^CLEN:) (%^VHIGH:) (%^RLEN:) [%>|.#.] \[l|i] ;  ! RV  ! not ryetáim:
-        y: _  Cns:+ i6: %^VHIGH:    [%>|.#.] \[l|i] ;  ! RV  ! not ryetáim:
+e:á <=> y: _  Cns:+ [Vow: - u2:] [%^EA:|%^EX:] (%^CSH:|%^CLEN:|%^WG:) (%^RLEN:) [%>|.#.] \[i:|j|i3:| š | ž ] ;
+        y: _  Cns:+ [u:|á|o|â2:] (%^CSH:|%^WG:) (%^CLEN:) (%^VHIGH:) (%^RLEN:)  [%>|.#.] \[l|i] ;  !! not ryetáim:
+        y: _  Cns:+ i6:                                    %^VHIGH:             [%>|.#.] \[l|i] ;  !! not ryetáim:
         y: _  Cns:+ u2:o Triggers:* [%>|.#.]  ;  ! RV  ! not ryetáim:
 
 !!€ kyel^RCi3^EA^CLEN>m
@@ -1104,13 +1110,14 @@ e:á <=> y: _  Cns:+ [Vow: - u2:]  [%^EA:|%^EX:] (%^CSH:|%^CLEN:|%^WG:) (%^RLEN:
 
 "ye to uo, part 2"
 !! **RULE: @RULENAME@** =  Part 2 of ye to uá for kyeli : kuolijn
-e:o <=> y: _  Cns:+ :i (%^WG:) (%^CLEN:) (%^VBACK:) ([%^RVSH:|%^RLEN:]) %> [i:|j |i3:| š | ž ] ; ! RV 
-        y: _  Cns:+ :i (%^WG:) (%^CLEN:)  %^VBACK:  ([%^RVSH:|%^RLEN:]) %> [m|h] ;  ! RV 
-        y: _  Cns:+ [ â:|á ] (Cns:+)  ([%^WG: | %^CSH:]) (%^CLEN:) %^VBACK: [%^RLEN:|%^RVSH:]   [%>|.#.] ; ![i | Cns ] ; ! RV  !ryettâ^WG^VBACK^RLEN>m
+e:o <=> y: _  Cns:+ :i (%^WG:) (%^CLEN:) (%^VBACK:) ([%^RVSH:|%^RLEN:]) %> [i:|j |i3:|š|ž] ;
+        y: _  Cns:+ :i (%^WG:) (%^CLEN:)  %^VBACK:  ([%^RVSH:|%^RLEN:]) %> [m|h] ;  
+        y: _  Cns:+ [â:|á ] (Cns:+)  ([%^WG: | %^CSH:]) (%^CLEN:) %^VBACK: [%^RLEN:|%^RVSH:] [%>|.#.] ; ![i|Cns]; ryettâ^WG^VBACK^RLEN>m
         y: _  Cns:+ :i %^WG: %^CLEN: %^SVLOW: %> i: ; ! RV 
-        y: _  Cns: Cns: :i  %^WG: %^CLEN: %^RVSH: %>  [i:|i3:]  ; ! RV 
+        y: _  Cns: Cns: :i  %^WG: %^CLEN: %^RVSH: %>  [i:|i3:]  ;
         y: _  Cns:+ i2:i %> [i|i3:i|Cns]  ;  ! RV 
         y: _  Cns:+  u2:u  Triggers:*   %>  ;  ! RV 
+        y: _  Cns:+ â                     %^WG:  # ;
 
 "uá to ye and uo to ye, part 1"
 !! **RULE: @RULENAME@** =  Part 1 luámmán : lyeme čuággás%^ÁI%^WG%^RLEN%>
