@@ -602,6 +602,9 @@ puáhháá : poovij ! XXX
 * *uái4nu2>đ*
 * *o0inu>đ*
 
+* *tuállâ^WG^VBACK^RVSH#škyett4*
+* *to00lâ000#škye0t*
+
 **RULE: Diphthong rule uá:uo and uá:oo, part 2** =  
 uá > uo
 uá > uo
