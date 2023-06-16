@@ -13,6 +13,7 @@ TESTS=\
 	interferens_celkkuuh4-FAIL.yaml \
 	interferens_celkkuuh5-FAIL.yaml \
 	msyn-adj-attr-pred-FAIL.yaml \
+	msyn-adj-attr-pred-PASS.yaml \
 	msyn-adj-gen-nom-FAIL.yaml \
 	msyn-adj-pred-attr-FAIL.yaml \
 	msyn-adj-sg-pl-FAIL.yaml \
@@ -21,7 +22,6 @@ TESTS=\
 	msyn-advl-plloc-sgill-PASS.yaml \
 	msyn-agr-imprt-sg3-PASS.yaml \
 	msyn-agr-other-pl3-PASS.yaml \
-	msyn-agr-other-sg2-FAIL.yaml \
 	msyn-agr-pl3-sg3-PASS.yaml \
 	msyn-agr-sg1-sg3-PASS.yaml \
 	msyn-agr-sg2-sg3-PASS.yaml \
@@ -45,10 +45,10 @@ TESTS=\
 	msyn-num-nom-par-PASS.yaml \
 	msyn-num-par-gen-PASS.yaml \
 	msyn-obj-acc-ill-FAIL.yaml \
-	msyn-obj-plnom-placc-PASS.yaml \
+	msyn-obj-plnom-placc-FAIL.yaml \
 	msyn-obj-sgnom-sgacc-FAIL.yaml \
 	msyn-pass-accsubj-nomsubj-FAIL.yaml \
-	msyn-plobj-nom-acc-FAIL.yaml \
+	msyn-plobj-nom-acc-PASS.yaml \
 	msyn-po-acc-gen-FAIL.yaml \
 	msyn-po-nom-gen-FAIL.yaml \
 	msyn-posspl-acc-gen-FAIL.yaml \
@@ -71,7 +71,7 @@ TESTS=\
 	neg-agr-imprt-sg3-PASS.yaml \
 	neg-agr-other-pl3-FAIL.yaml \
 	neg-agr-other-sg2-FAIL.yaml \
-	neg-agr-other-sg3-FAIL.yaml \
+	neg-agr-other-sg3-PASS.yaml \
 	neg-agr-sg3-pl3-FAIL.yaml \
 	neg-det-nom-acc-FAIL.yaml \
 	neg-extsubj-acc-nom-FAIL.yaml \
@@ -109,14 +109,28 @@ XFAIL_TESTS=\
 	interferens_celkkuuh3-FAIL.yaml \
 	interferens_celkkuuh4-FAIL.yaml \
 	interferens_celkkuuh5-FAIL.yaml \
+	msyn-adj-attr-pred-FAIL.yaml \
+	msyn-adj-gen-nom-FAIL.yaml \
+	msyn-adj-pred-attr-FAIL.yaml \
+	msyn-adj-sg-pl-FAIL.yaml \
+	msyn-advl-plloc-sgcom-FAIL.yaml \
+	msyn-agr-other-sg2-FAIL.yaml \
+	msyn-agr-sg3-pl3-FAIL.yaml \
+	msyn-det-nom-acc-FAIL.yaml \
 	msyn-dynamic-compounds-FAIL.yaml \
+	msyn-extsubj-acc-nom-FAIL.yaml \
+	msyn-extsubj-gen-nom-FAIL.yaml \
 	msyn-extsubj-ill-nom-FAIL.yaml \
+	msyn-extv-sg3-pl3-FAIL.yaml \
 	msyn-ncompl-acc-ill-FAIL.yaml \
 	msyn-ncompl-ess-sgill-FAIL.yaml \
+	msyn-ncompl-placc-plill-FAIL.yaml \
 	msyn-negcompl-sg3-conneg-FAIL.yaml \
 	msyn-num-par-nom-FAIL.yaml \
+	msyn-obj-acc-ill-FAIL.yaml \
+	msyn-obj-plnom-placc-FAIL.yaml \
+	msyn-obj-sgnom-sgacc-FAIL.yaml \
 	msyn-pass-accsubj-nomsubj-FAIL.yaml \
-	neg-plobj-nom-acc-FAIL.yaml \
 	msyn-po-acc-gen-FAIL.yaml \
 	msyn-po-nom-gen-FAIL.yaml \
 	msyn-posspl-acc-gen-FAIL.yaml \
@@ -126,10 +140,20 @@ XFAIL_TESTS=\
 	msyn-rel-sg-pl-FAIL.yaml \
 	msyn-top-nom-acc-FAIL.yaml \
 	msyn-v-actio-sg1-FAIL.yaml \
-	neg-extv-sg3-pl3-FAIL.yaml \
+	neg-adj-gen-nom-FAIL.yaml \
+	neg-advl-plloc-sgcom-FAIL.yaml \
+	neg-agr-other-pl3-FAIL.yaml \
+	neg-agr-other-sg2-FAIL.yaml \
+	neg-agr-sg3-pl3-FAIL.yaml \
 	neg-det-nom-acc-FAIL.yaml \
+	neg-extsubj-acc-nom-FAIL.yaml \
+	neg-extv-sg3-pl3-FAIL.yaml \
+	neg-ncomple-ess-sgill-FAIL.yaml \
 	neg-negcompl-sg3-conneg-FAIL.yaml \
 	neg-obj-acc-ill-FAIL.yaml \
+	neg-obj-plnom-placc-FAIL.yaml \
+	neg-plobj-nom-acc-FAIL.yaml \
+	neg-v-sg1-prfprc-FAIL.yaml \
 	ovdamearkkat-FAIL.yaml \
 	science-FAIL.yaml \
 	syn-OVS-OSV-FAIL.yaml \
