@@ -3381,9 +3381,6 @@ X_KAARBIS_SG ;
  
 LEXICON C_KAARBIS_SG !!≈ * **@CODE@** 
 +N: X_KAARBIS_SG ;
-C_KAARBIS_SG_OBL ;
-
-LEXICON C_KAARBIS_SG_OBL
 +N+Cmp/SgNom:^WG^RVSH%> Rhash ; !njälgiskävppi kepispoccee ká^RVrbás^ÁI^WG^RLEN%> 
 !+N+Cmp/SgNom:^WG^RLEN%>  Rhash ; 
 +N+Cmp/SgGen:^FCD%> Rhash ; 
@@ -3409,17 +3406,9 @@ LEXICON C_KAARBIS_PL !!≈ * **@CODE@**
 +N+Pl+Com:^FCD%>id CPXsuffCOM ;  ! 
 +N+Pl+Loc:^FCD%>in CPXsuff ;  ! 
 
-LEXICON PELES ! all this to avoid ^WG^RLEN in sg nom for peles
-! Sg Nom from 3TERES
-X_KAARBIS_SG_OBL ;
-C_KAARBIS_PL ;
-C_KAARBIS_SG_OBL ;
 
 LEXICON X_KAARBIS_SG  !!≈ * **@CODE@** 
 +Sg+Nom:^WG^RLEN K ;        ! käärbis 
-X_KAARBIS_SG_OBL ;
-
-LEXICON X_KAARBIS_SG_OBL 
 +Sg+Gen:^FCD K ;            ! kárbá 
 +Sg+Acc:^FCD K ;            ! kárbá 
 +Sg+Ill:^FCD%>s   K ;       ! kárbás 
@@ -3428,6 +3417,46 @@ LEXICON X_KAARBIS_SG_OBL
 +Sg+Abe:^FCD^RVSH%>ttáá K ; ! kárbáttáá 
 +Ess:^WG^RVSH%>in K ;       ! kärbisin 
 +Par:^WG^RVSH%>id K ;       ! kärbisid 
+ 
+LEXICON C_PELES  !!≈ * **@CODE@** 
++N:  X_PELES  ; 
++N+Sg+Nom:^FCD VPXsuff12 ; ! XXX check! 
++N+Sg+Gen:^FCD VPXsuff12 ; ! 
++N+Sg+Acc:^FCD VPXsuff12 ; ! 
++N+Sg+Nom:^FCD VPXsuff3 ;  ! 
++N+Sg+Gen:^FCD VPXsuff3 ;  ! 
++N+Sg+Acc:^FCD VPXsuff3 ;  ! 
++N+Sg+Com:%>in CPXsuff ;   ! 
++N+Sg+Ill:^FCD%>s CPXsuff ; 
++N+Sg+Loc:^FCD%>st CPXsuff ; 
++N+Ess:^FCD%>n CPXsuff ; 
++N+Pl+Gen:%>id CPXsuff ;     ! 
++N+Pl+Acc:%>id CPXsuff ;     ! 
++N+Pl+Com:%>id CPXsuffCOM ;  ! 
++N+Pl+Loc:%>in CPXsuff ;     ! j 
+ 
+LEXICON X_PELES  !!≈ * **@CODE@** 
++Sg+Nom:^WG^RVSH K ;        ! peles 
++Cmp/SgNom:^WG^RVSH%>  Rhash ; 
++Cmp/SgGen:^FCD%>  Rhash ; 
++Cmp/PlGen:^FCD%>i  Rhash ; 
++Sg+Gen:^FCD K ;            ! piällá
++Sg+Acc:^FCD K ;            ! piällá 
++Sg+Ill:^FCD%>s   K ;       ! piällás
++Sg+Ill+Err/Orth:pellâs K ;
++Sg+Loc:^FCD%>st K ;        ! piällást
++Sg+Loc+Err/Orth:pellâst K ;
++Sg+Com:^FCD%>in K;         ! piälláin 
++Sg+Abe:^FCD^WG%>ttáá K ;   ! piälláttáá 
++Ess:^WG^RVSH%>in K ;       ! pelesin piällásin
++Par:^WG^RVSH%>id K ;       ! pelesid piällásid
++Pl+Nom:^FCD%>h K ;         ! piälláh 
++Pl+Gen:^FCD%>i K ;         ! piällái 
++Pl+Acc:^FCD%>id K ;        ! piälláid 
++Pl+Ill:^FCD%>id K ;        ! piälláid 
++Pl+Loc:^FCD%>in K ;        ! piälláin 
++Pl+Com:^FCD^WG%>i GUIN ;   ! piälláiguin     
++Pl+Abe:^FCD^WG%>ittáá K ;  ! piälláittáá 
  
 LEXICON C_MORCES  !!≈ * **@CODE@** 
 +N:  X_MORCES  ; 
