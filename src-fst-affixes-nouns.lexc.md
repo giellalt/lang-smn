@@ -670,6 +670,10 @@ this is for loanwords without stem change
 
 * **LEXICON X_KAARBIS_SG** 
 
+* **LEXICON C_PELES** 
+
+* **LEXICON X_PELES** 
+
 * **LEXICON C_MORCES** 
 
 * **LEXICON X_MORCES** 
