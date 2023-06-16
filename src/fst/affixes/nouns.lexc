@@ -3380,7 +3380,10 @@ X_KAARBIS_SG ;
  
  
 LEXICON C_KAARBIS_SG !!≈ * **@CODE@** 
-+N: X_KAARBIS_SG ; 
++N: X_KAARBIS_SG ;
+C_KAARBIS_SG_OBL ;
+
+LEXICON C_KAARBIS_SG_OBL
 +N+Cmp/SgNom:^WG^RVSH%> Rhash ; !njälgiskävppi kepispoccee ká^RVrbás^ÁI^WG^RLEN%> 
 !+N+Cmp/SgNom:^WG^RLEN%>  Rhash ; 
 +N+Cmp/SgGen:^FCD%> Rhash ; 
@@ -3405,9 +3408,18 @@ LEXICON C_KAARBIS_PL !!≈ * **@CODE@**
 +N+Pl+Ill:^FCD%>id CPXsuff ;  ! 
 +N+Pl+Com:^FCD%>id CPXsuffCOM ;  ! 
 +N+Pl+Loc:^FCD%>in CPXsuff ;  ! 
- 
+
+LEXICON PELES ! all this to avoid ^WG^RLEN in sg nom for peles
+! Sg Nom from 3TERES
+X_KAARBIS_SG_OBL ;
+C_KAARBIS_PL ;
+C_KAARBIS_SG_OBL ;
+
 LEXICON X_KAARBIS_SG  !!≈ * **@CODE@** 
-+Sg+Nom:^WG^RLEN K ;        ! käärbis 
++N+Sg+Nom:^WG^RLEN K ;        ! käärbis 
+X_KAARBIS_SG_OBL ;
+
+LEXICON X_KAARBIS_SG_OBL 
 +Sg+Gen:^FCD K ;            ! kárbá 
 +Sg+Acc:^FCD K ;            ! kárbá 
 +Sg+Ill:^FCD%>s   K ;       ! kárbás 
