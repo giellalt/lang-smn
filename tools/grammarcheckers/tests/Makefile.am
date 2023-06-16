@@ -10,6 +10,7 @@ if WANT_GRAMCHECK
 TESTS=\
 	interferens_celkkuuh2-FAIL.yaml \
 	interferens_celkkuuh3-FAIL.yaml \
+	interferens_celkkuuh3-PASS.yaml \
 	interferens_celkkuuh4-FAIL.yaml \
 	interferens_celkkuuh5-FAIL.yaml \
 	msyn-adj-attr-pred-FAIL.yaml \
@@ -17,8 +18,10 @@ TESTS=\
 	msyn-adj-gen-nom-FAIL.yaml \
 	msyn-adj-pred-attr-FAIL.yaml \
 	msyn-adj-sg-pl-FAIL.yaml \
+	msyn-adj-sg-pl-PASS.yaml \
 	msyn-advl-plgen-sgill-PASS.yaml \
 	msyn-advl-plloc-sgcom-FAIL.yaml \
+	msyn-advl-plloc-sgcom-PASS.yaml \
 	msyn-advl-plloc-sgill-PASS.yaml \
 	msyn-agr-imprt-sg3-PASS.yaml \
 	msyn-agr-other-pl3-PASS.yaml \
@@ -27,6 +30,7 @@ TESTS=\
 	msyn-agr-sg2-sg3-PASS.yaml \
 	msyn-agr-sg3-du3-PASS.yaml \
 	msyn-agr-sg3-pl3-FAIL.yaml \
+	msyn-agr-sg3-pl3-PASS.yaml \
 	msyn-attr-com-gen-PASS.yaml \
 	msyn-det-nom-acc-FAIL.yaml \
 	msyn-dynamic-compounds-FAIL.yaml \
