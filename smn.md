@@ -7157,6 +7157,10 @@ Similar to 2SYLL\_ETTAD, but less CSH, don't know yet how much. 20 verbs
 Distinct from SODDAD with short vowel in past tense (du)
 Turns out it was not distinct after all. Preper for fusing KULGAD and SODDAD
 
+- LEXICON LEDE = back to KULGAD
+
+** **LEXICON EVEN_PRT_KULGAD**
+
 #### LEXICON 2SYLL\_SODDAD 
 * 2SYLL_SODDAD šoddâđ ša^RVdd
 - Inf:
