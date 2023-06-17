@@ -672,7 +672,7 @@ this is for loanwords without stem change
 
 * **LEXICON C_PELES** 
 
-* **LEXICON X_PELES** 
+* **LEXICON X_PELES** piällás^ÁE
 
 * **LEXICON C_MORCES** 
 
