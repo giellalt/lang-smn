@@ -350,7 +350,7 @@ i4:0 <=> Vow: _   j: WeakGrade ;                           !! 1) when WG
 
 "xx:x consonant gradation and shortening and x:x shortening"
 !! **RULE: @RULENAME@** =   weak grade **or** consonant shortening (Both in same rule)
-Cx:0 <=> Vow: _ Cy: WeakGrade         \%^CLEN: ; !! 1) when WG
+Cx:0 <=> Vow: _ Cy: (%^RC:) WeakGrade         \%^CLEN: ; !! 1) when WG
          Vow: _ Cy: ConsonantShorting \%^CLEN: ; !! 2) when CSH  
 	where Cx in ( b c c  č  č d đ f g h j k k  l m n ŋ p p  r s š v z ž ) !t in tt:t rule
 	      Cy in ( b c c4 č4 č d đ f g h j k k4 l m n ŋ p p4 r s š v z ž ) 
@@ -994,7 +994,7 @@ i:0 <=> \Vow: _ ä: Cns:+ i2:i                              %>    [i|i3:i|Cns] ;
 !! **RULE: @RULENAME@** =  for uábbi -> obbijn  čuál%^RCi%^WG%>in tuái4jâl%^CSH%^VBACK%^RVSH%>âm
 á:0 <=> u: _ Cns:+ i                     %^WG: %^CLEN: %^SVLOW:                   %> i:  ;  ! RV 
         u: _ Cns:+ :i                    %^WG:                            %^RVSH: %> i:  ;  ! RV 
-        u: _ Cns:+ [i|u|â|u2:] (Cns:+) ([%^WG:|%^CSH:|%^CLEN:]) %^VBACK: %^RVSH: [%>|.#.] ; !! sopâvetteđ tojâdâm
+        u: _ Cns:+ [i|u|â|u2:] (Cns:+) ([%^WG:|%^CSH:|%^CLEN:]) %^VBACK: %^RVSH: [%>|.#.|#] ; !! sopâvetteđ tojâdâm
         u: _ Cns:+  u                                      %^VBACK: %^RVSH:      [%>|.#.] ; !! uáinu
         u: _ Cns:+ i2:i                                                           %> [i|i3:i|Cns]  ;  ! RV 
         u: _ Cns:+ u2:u                ([%^WG: | %^CSH:]) (%^CLEN:) (%^VBACK:)    %>   ; ! RV  !*
