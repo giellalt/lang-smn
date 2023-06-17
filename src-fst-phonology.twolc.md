@@ -376,7 +376,7 @@ eeč%^RCi:eijijn eeč%^RCi%^WG%^CLEN%^SVLOW%>in
 * *kiirrâs^RVSH>ân*
 * *ki0rrâs0>ân*
 
-**RULE: Vowel shortening VV:V** = ráávhu- : rávhoid, käähir%^CSH%>id kuuđiâ%^RVSH%>žân
+**RULE: Vowel shortening VV:V (e in own rule)** = ráávhu- : rávhoid, käähir%^CSH%>id kuuđiâ%^RVSH%>žân
 1. essee : esseid, suklaa : suklaid
 
 **RULE: Long vowel shortening** = (example?), no ^CSH, since that gives Vy:0
@@ -387,6 +387,8 @@ táálhudem koomerdem
 2st stems
 kaavpug:kavpugân 
 táálhudem koomerdem
+
+1. essee : esseid, suklaa : suklaid                                                                                    
 
 *Tests:*
 * *mááh^RCu^WG^CLEN^SVLOW>in*
@@ -619,7 +621,6 @@ ergi:iärgán eeč^RCi^EA^CLEN^RVSH>s
 piävu>s piähho>on piäváččii not meendu
 veerrá%^EA%^CSH>
 peeh%^RCá%^VHIGH> peeh%^RC 
-
 SV: mánuttep : mánuttiäpán
 
 * *ce^RVlkk4u2^CLEN^VHIGH^RVSH>o*
@@ -648,6 +649,9 @@ not ryetáim:
 * *kuállá00>m*
 
 **RULE: ye to uo, part 2** =  Part 2 of ye to uá for kyeli : kuolijn
+
+* *lyei4kk4â^WG^VBACK^RLEN#škyett4*
+* *luoi0hâ000#škye0t*
 
 **RULE: uá to ye and uo to ye, part 1** =  Part 1 luámmán : lyeme čuággás%^ÁI%^WG%^RLEN%>
 
