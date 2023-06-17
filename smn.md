@@ -6087,7 +6087,7 @@ this is for loanwords without stem change
 
 * **LEXICON X_JAAVVIL_SG** 
 
-* **LEXICON 3TERES** 
+* **LEXICON 3TERES** = ki5ällás^ÁE
 
 * **LEXICON 3PAAVIR** NGA+Abe blank, WG Ess, CSH for the rest 
 
