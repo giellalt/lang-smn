@@ -13,7 +13,8 @@ TESTS=\
 	interferens_celkkuuh3-PASS.yaml \
 	interferens_celkkuuh4-FAIL.yaml \
 	interferens_celkkuuh5-FAIL.yaml \
-	msyn-adj-attr-pred-FAIL.yaml \
+	msyn-adj-attr-gen-FAIL.yaml \
+	msyn-adj-attr-gen-PASS.yaml \
 	msyn-adj-attr-pred-PASS.yaml \
 	msyn-adj-gen-nom-FAIL.yaml \
 	msyn-adj-pred-attr-FAIL.yaml \
@@ -33,36 +34,52 @@ TESTS=\
 	msyn-agr-sg3-pl3-PASS.yaml \
 	msyn-attr-com-gen-PASS.yaml \
 	msyn-det-nom-acc-FAIL.yaml \
+	msyn-det-nom-acc-PASS.yaml \
 	msyn-dynamic-compounds-FAIL.yaml \
 	msyn-ext-pl3-sg3-PASS.yaml \
 	msyn-extneg-sg3-pl3-PASS.yaml \
 	msyn-extsubj-acc-nom-FAIL.yaml \
+	msyn-extsubj-acc-nom-PASS.yaml \
 	msyn-extsubj-gen-nom-FAIL.yaml \
+	msyn-extsubj-gen-nom-PASS.yaml \
 	msyn-extsubj-ill-nom-FAIL.yaml \
+	msyn-extsubj-ill-nom-PASS.yaml \
 	msyn-extv-sg3-pl3-FAIL.yaml \
+	msyn-extv-sg3-pl3-PASS.yaml \
 	msyn-imp-nom-acc-PASS.yaml \
 	msyn-ncompl-acc-ill-FAIL.yaml \
+	msyn-ncompl-acc-ill-PASS.yaml \
 	msyn-ncompl-ess-sgill-FAIL.yaml \
+	msyn-ncompl-ess-sgill-PASS.yaml \
 	msyn-ncompl-placc-plill-FAIL.yaml \
+	msyn-ncompl-placc-plill-PASS.yaml \
 	msyn-negcompl-sg3-conneg-FAIL.yaml \
 	msyn-num-acc-par-PASS.yaml \
 	msyn-num-nom-par-PASS.yaml \
 	msyn-num-par-gen-PASS.yaml \
 	msyn-obj-acc-ill-FAIL.yaml \
+	msyn-obj-acc-ill-PASS.yaml \
 	msyn-obj-plnom-placc-FAIL.yaml \
+	msyn-obj-plnom-placc-PASS.yaml \
 	msyn-obj-sgnom-sgacc-FAIL.yaml \
+	msyn-obj-sgnom-sgacc-PASS.yaml \
 	msyn-pass-accsubj-nomsubj-FAIL.yaml \
+	msyn-pass-accsubj-nomsubj-PASS.yaml \
 	msyn-plobj-nom-acc-PASS.yaml \
 	msyn-po-acc-gen-FAIL.yaml \
 	msyn-po-nom-gen-FAIL.yaml \
+	msyn-po-nom-gen-PASS.yaml \
 	msyn-posspl-acc-gen-FAIL.yaml \
+	msyn-posspl-acc-gen-PASS.yaml \
 	msyn-pred-acc-nom-FAIL.yaml \
+	msyn-pred-acc-nom-PASS.yaml
 	msyn-pred-ill-nom-PASS.yaml \
 	msyn-predagr-pl3-sg3-PASS.yaml \
 	msyn-quant-gen-nom-FAIL.yaml \
 	msyn-quant-nom-gen-PASS.yaml \
 	msyn-refl-sg-pl-FAIL.yaml \
 	msyn-rel-sg-pl-FAIL.yaml \
+	msyn-rel-sg-pl-PASS.yaml \
 	msyn-subj-gen-nom-PASS.yaml \
 	msyn-top-nom-acc-FAIL.yaml \
 	msyn-v-actio-sg1-FAIL.yaml \
@@ -113,6 +130,7 @@ XFAIL_TESTS=\
 	interferens_celkkuuh3-FAIL.yaml \
 	interferens_celkkuuh4-FAIL.yaml \
 	interferens_celkkuuh5-FAIL.yaml \
+	msyn-adj-attr-gen-FAIL.yaml \
 	msyn-adj-attr-pred-FAIL.yaml \
 	msyn-adj-gen-nom-FAIL.yaml \
 	msyn-adj-pred-attr-FAIL.yaml \
