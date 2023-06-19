@@ -618,13 +618,16 @@ uá > uo
 **RULE: Diphthongisation e to iä, part 1 ** =   
 ergi:iärgán eeč^RCi^EA^CLEN^RVSH>s
 čevžuin čiävžui če%^RVvžui4%^WG>
+peeh%^RCá%^VHIGH> peeh%^RC 
 piävu>s piähho>on piäváččii not meendu
 veerrá%^EA%^CSH>
-peeh%^RCá%^VHIGH> peeh%^RC 
 SV: mánuttep : mánuttiäpán
 
 * *ce^RVlkk4u2^CLEN^VHIGH^RVSH>o*
 * *ciälkko000>o*
+
+* *eellá^CSH^VHIGH>mušš^FCD*
+* *iä0lá00>muš00*
 
 **RULE: ie to iä in Illative and Sg3** =  kiem´ni -> kiämnán, veerdi : viärdán peerru2%^CLEN%^VHIGH%^RVSH%>o
 čevžuin čiävžui
