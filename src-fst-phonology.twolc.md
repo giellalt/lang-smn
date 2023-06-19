@@ -735,6 +735,9 @@ eemeed : emedân sai4joos
 * *kappeer^CSH^SVSH>ân*
 * *ka0p0er00>ân*
 
+* *feeri2>i3tt^SVSH*
+* *feer0>itt0*
+
 **RULE: Stem vowel:0 in front of â** = aiguu:aaigâ
 
 **RULE: Stem â deleting** = kandâ:kandii
@@ -769,6 +772,9 @@ eemeed : emedân sai4joos
 **RULE: Adjective illative in -vân after u** =  
 
 **RULE: Shortening u for vân illative** =  
+
+* *hárdu2>utt^SVSH*
+* *hárd0>utt0*
 
 ## Other rules
 
