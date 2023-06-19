@@ -871,8 +871,8 @@ i:0 <=> \Vow: _ ä: Cns:+ i2:i                              %>    [i|i3:i|Cns] ;
 "Different rules for ä:a, first vowel (or only vowel)"
 !! **RULE: @RULENAME@** =  čääci:čassijn, läbži:labžijn lään^RCi%>id
 ä:a <=>      _ [ä:|%^RV:] Cns:+ [i|â|a|á|o|u2:] (Cns:+)  ([%^WG: | %^CSH:]) (%^CLEN:) (%^CLEN:) %^VBACK: ([%^RVSH:|%^RLEN:]) (%^SLEN:) [%>|.#.|#] ; ! RV 
-             _ [ä:|%^RV:] Cns:+ :i   (%^WG:)  ([%^RVSH:|%^RLEN:])            %> [i:|i3:] ;  ! RV 
-             _ [ä:|%^RV:] Cns:+ :i    %^WG:   [%^CLEN:|%^RLEN: ]  (%^SVLOW:) %> i: ;  ! RV !čääci:čassijn
+             _ [ä:|%^RV:] Cns:+ [i2:|:i]   (%^WG:)  ([%^RVSH:|%^RLEN:])            %> [i:|i3:] ;  ! RV 
+             _ [ä:|%^RV:] Cns:+ [i2:|:i]    %^WG:   [%^CLEN:|%^RLEN: ]  (%^SVLOW:) %> i: ;  ! RV !čääci:čassijn
              _     %^RV:  Cns:+ :i    %^WG:            %^RLEN:               %> i: ; ! RV  !ä%^RVi4gi%^WG%^RLEN%>id
              _ ä:0        Cns:+ Vow:         %^WG:   %^CLEN:  %^RVSH:        %> i:  ; ! RV !! čääci : čassijn
              _ ä:a        Cns:+ i2:i                                         %> [i|i3:i|Cns]  ;  ! RV  !cntrV
@@ -983,7 +983,7 @@ i:0 <=> \Vow: _ ä: Cns:+ i2:i                              %>    [i|i3:i|Cns] ;
 "Root and stem vowel á:a for verbs"
 !! **RULE: @RULENAME@** 
 á:a <=> [Cns|.#.|#] _        Cns:+ u2:u  %>   ;  ! RV ! conflict when \Vow:
-        [Cns|.#.]   _        Cns:+ i2:i %>    [i|i3:i|Cns]  ; ! RV 
+        [Cns|.#.]   _        Cns:+ i2: %>    [i|i3:i|Cns]  ; ! RV 
         \Vow:       _ [%^RV:|á:] Cns:+ [u:|u2:] ([%^WG: | %^CSH:]) (%^CLEN:) %^VBACK: (%^RLEN:|%^RVSH:)  [%>|.#.]   ; ! 2st verb pákkuđ: pakkum/h/u
         \Vow:    á: _         Cns:+ [u:|u2:] ([%^WG: | %^CSH:]) (%^CLEN:) %^VBACK: (%^RLEN:) [%>|.#.]   ; ! nááđđu%^VBACK%^RLEN%>m naađđu>m
 \Vow: a (%^RV:) Cns:+ _  ([%^CSH:|%^WG:])  (%^CLEN:) (%^RLEN:) [%>|.#.] ;  ! SV  !trying this as a phonological rule for -eđ verbs
@@ -1295,6 +1295,7 @@ u2:o <=> Cns: _ Triggers:* %> [j Vow|o] ; !! SVLOW together with u?
 Vx:0 <=> _ Vx: (Cns:+) (%^FCD:) (%^CSH:|%^WG:) ([%^RLEN:|%^RVSH:]) %^SVSH: ; !! eemeed : emedân sai4joos
     where Vx in ( e o a á u i y ä ) ;
 
+	
 !! **Tests**
 !!€ kulluutt^SVSH>
 !!€ kull0u0t0>
@@ -1302,6 +1303,13 @@ Vx:0 <=> _ Vx: (Cns:+) (%^FCD:) (%^CSH:|%^WG:) ([%^RLEN:|%^RVSH:]) %^SVSH: ; !! 
 !!€ e0m0ed00>ân
 !!€ kappeer^CSH^SVSH>ân
 !!€ ka0p0er00>ân
+
+
+"Causative i deletion"
+i2:0 <=> Cns: _ %> i3: Cns:+ %^SVSH: ;
+
+!!€ feeri2>i3tt^SVSH
+!!€ feer0>itt0
 
 "Stem vowel:0 in front of â"
 !! **RULE: @RULENAME@** = aiguu:aaigâ
@@ -1373,7 +1381,12 @@ j:v <=> u u:  %> _ â n ; ! SUFF
 
 "Shortening u for vân illative"
 !! **RULE: @RULENAME@** =  
-u:0 <=> u _  %> :v ; ! SV
+u:0 <=>      u _  %> :v ; ! SV
+        u2: %> _ Cns:+ %^SVSH: ;
+
+!!€ hárdu2>utt^SVSH
+!!€ hárd0>utt0
+
 
 !! ## Other rules
 
