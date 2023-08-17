@@ -312,11 +312,11 @@ X_CAACI_VYEHI_SG ;)
 
 * **LEXICON X_AIGI** similar to 2VADDU except from EA for Sg+Ill 
 
-* **LEXICON 2AIGI_SG** 
+* **LEXICON 2AIGI_SG** ä^RVi4gi
 
 * **LEXICON 2AIGI_PL** 
 
-* ''LEXICON AIGI_DIM_SG''  pe^RVi4vi
+* ''LEXICON AIGI_DIM_SG''  pe^RVi4vi, ä^RVi4gi
 
 * ''LEXICON AIGI_DIM_PL'' 
 
