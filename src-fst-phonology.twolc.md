@@ -543,6 +543,7 @@ paaccim čaallum
 :á  XXX
 sámásis
 njálmásis
+
 :á
 
 * *sääm^RCi^EA>nmake*
@@ -550,6 +551,9 @@ njálmásis
 
 **RULE: äRV to áá in Illative and Sg3** =  ... for täsni -> táásnán
 čevžuin čiävžui RLEN
+
+* *hä^RVvdi^EA^WG^RLEN>š*
+* *háávdá000>š*
 
 * *tä^RVsni^EA^CSH^RLEN>n*
 * *táásná000>n*
@@ -644,9 +648,12 @@ syej%^RCi%^RVSH%^CLEN%>in
 * *ryettâ^WG#škyett4*
 * *ruo0tâ0#škye0t*
 
-**RULE: ye to uá, part 2** =  Part 2 of ye to uá for kyeli : kuálán
-not ryetáim:
-not ryetáim:
+**RULE: e to á in ye to uá, part 2 and Stem vowel e to á for other root vowel** =  Part 2 of ye to uá for kyeli : kuálán
+*ryetáim:
+*ryetáim:
+
+* *mo^RVkk4e^SV^EA^WG^CLEN^SLEN*
+* *mo0hháá0000*
 
 * *kyel^RCi3^EA^CLEN>m*
 * *kuállá00>m*
@@ -693,8 +700,6 @@ not ryetáim:
 * *va^RVh^RCe^SV^EA^CLEN^SLEN>m*
 * *va0hhaa000>m*
 
-**RULE: Stem vowel e to á for other root vowel** =  if e stem
-
 **RULE: Stem vowel i to á for other root vowel.** =  e.g. säämi > Ill sáámán 
 SV uábbám iännásis
 
@@ -740,7 +745,25 @@ eemeed : emedân sai4joos
 
 **RULE: Stem vowel:0 in front of â** = aiguu:aaigâ
 
-**RULE: Stem â deleting** = kandâ:kandii
+**RULE: Stem â deleting** = kandâ:kandii ... built without ^FVD (sigh)
+
+* *če^RVrdâi^WG>ih*
+* *če0rd0i0>ih*
+
+* *če^RVrdâi^WG>j*
+* *če0rd0i0>j*
+
+* *če^RVrdâi^WG>id*
+* *če0rd0i0>jd*
+
+**RULE: Word final vowel deletion** = This unfortunately both for word and stem vowel deletion just now.
+
+*Tests:*
+* *sollâ^FVD>ii*
+* *soll00>ii*
+
+* *a^RVlgâ^FVD^WG^CLENi>*
+* *a0lg0000i>i*
 
 * *a^RVlgâi^FVD^WG^CLEN>i5*
 * *a0lg0i000>i*
@@ -761,7 +784,7 @@ eemeed : emedân sai4joos
 
 **RULE: Suffix i5:j for lexicon APINA** = salijn
 
-**RULE: Suffix i5:0 and i5ä:e** = *timotein oboen*, not *Chariliein*
+**RULE: Suffix i5:0 for loanwords** = *timotein, Charlien*, not *timoteiin, Chariliein*, change (invariant) i5 to something else?
 
 **RULE: Suffix i:j for i and e-stems** =  
 
@@ -775,17 +798,6 @@ eemeed : emedân sai4joos
 
 * *hárdu2>utt^SVSH*
 * *hárd0>utt0*
-
-## Other rules
-
-**RULE: Word final vowel deletion** = for vaskâm:vaaskâ
-
-*Tests:*
-* *sollâ^FVD>ii*
-* *soll00>ii*
-
-* *a^RVlgâ^FVD^WG^CLENi>*
-* *a0lg0000i>i*
 
 **RULE: Potential vowel shortening for contract verbs** =  -áážep becomes -áš etc.
 

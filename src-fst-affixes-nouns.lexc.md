@@ -56,14 +56,6 @@ This is the basic even-syllable lexicon.
 
 * **LEXICON 2AIRU** (subtype of 2ALGA) 
 
-* **LEXICON 2AIRU_SG_DIM** a^RVlgâ 
-
-* **LEXICON 2AIRU_PL_DIM** 
-
-* **LEXICON 2ALGA_SG_DIM** a^RVlgâ 
-
-* **LEXICON 2ALGA_PL_DIM** 
-
 ### 2PUUVSAH lexicon family, stem is pu^RVk4s^RCâ 
 This for plural only nouns. Note: Sg forms in compounds 
 * **LEXICON 2PUUVSAH_PL** (basic lexicon) 
@@ -108,8 +100,6 @@ So far it has only one member, juuvâš, and no Px
 * **LEXICON X_JUUVAS_SG** stem is ju^RVh^RC 
 * **LEXICON X_JUUVAS_PL** 
 
-* **LEXICON JUUHA_DIM** (a lexicon to create deminutives; Not for lexicalised words already being in deminutive) 
-
 ### 2KIELA lexicon family 
 WG, blank Ill, DLEN, RVSH, SVLOW 
 
@@ -127,16 +117,14 @@ WG, blank Ill, DLEN, RVSH, SVLOW
 
 * **LEXICON X_KIELA_SG** 
 
-* **LEXICON KIELA_DIM** 
-
 ### JUUHA-KIELA common forms 
 * **LEXICON JUUHA_KIELA_SG** 
 
-* **LEXICON X_WG_RVSH_PL_notILL** 
+* **LEXICON X_WG_RVSH_PL_notILL**
 
 ### 2TELTTA lexicon family 
 
-* **LEXICON 2TELTTA** Check: is this identical to KISSA? 
+* **LEXICON 2TELTTA** teltta Check: is this identical to KISSA? 
 
 * **LEXICON 2TELTTA_SG** 
 
@@ -158,17 +146,11 @@ WG, blank Ill, DLEN, RVSH, SVLOW
 
 * **LEXICON X_FADDA_PL** 
 
-* **LEXICON FADDA_SG_DIM** fá^RVddá 
-
-* **LEXICON FADDA_PL_DIM** 
-
 ### 2KISSA lexicon family 
 
 * **LEXICON 2KISSA**  No root vowel lengthening 
 
 * **LEXICON 2KISSA_SG** 
-
-* **LEXICON KISSA_DIM** 
 
 * **LEXICON 2KISSA_PL** 
 
@@ -178,7 +160,7 @@ WG, blank Ill, DLEN, RVSH, SVLOW
 
 ### 2CAANA lexicon family 
 
-* *LEXICON 2CAANA*:  !čá^RVn^RCá 
+* *LEXICON 2CAANA*: čááná - čá^RVn^RCá 
 
 * **LEXICON 2CAANA_SG** 
 
@@ -249,12 +231,6 @@ WG, blank Ill, DLEN, RVSH, SVLOW
 
 * **LEXICON X_NIJBE_PL** 
 
-* **LEXICON 2ALGE_DIM** 
-
-* **LEXICON 2ALGE_SG_DIM** a^RVlgâ 
-
-* **LEXICON 2ALGE_PL_DIM** 
-
 ### 2VAHE lexicon family 
 
 * **LEXICON 2VAHE** 
@@ -316,10 +292,6 @@ X_CAACI_VYEHI_SG ;)
 
 * **LEXICON 2AIGI_PL** 
 
-* ''LEXICON AIGI_DIM_SG''  pe^RVi4vi, ä^RVi4gi
-
-* ''LEXICON AIGI_DIM_PL'' 
-
 * **LEXICON X_AIGI_SG** 
 
 ### 2KYELI - 2SYEJI lexicon family 
@@ -350,7 +322,7 @@ X-leksikossa Sg Ill erilainen
 
 * **LEXICON 2KIRKKO_SG** 
 
-* **LEXICON 2NJAMMA** > KIRKKO_NJAMMA, but WG CLEN for Sg+Loc: loho:lovvoost 
+* **LEXICON 2NJAMMA** njamma > KIRKKO_NJAMMA, but WG CLEN for Sg+Loc: loho:lovvoost 
 
 * **LEXICON KIRKKO_NJAMMA_SG**   
 
@@ -382,7 +354,6 @@ X-leksikossa Sg Ill erilainen
 
 * **LEXICON X_OKKO_PL** Pl+Acc WG, Pl+Ill WG CLEN 
 
-* **LEXICON LAAVU_DIM** 
 * **LEXICON 2RAAVHU** like 2LAAVU, but long vowel in cmp. 
 
 * **LEXICON 2RAAVHU_SG** 
@@ -439,9 +410,9 @@ X-leksikossa Sg Ill erilainen
 
 * **LEXICON X_NIISU_PL** 
 
-* **LEXICON 2VAALJA** 
+* **LEXICON 2VAALJA** vaaljâ
 
-* **LEXICON 2VAALJA_SG** 
+* **LEXICON 2VAALJA_SG** vaaljâ : va^RVljâ
 
 * **LEXICON 2VAALJA_PL** 
 
@@ -704,8 +675,6 @@ this is for loanwords without stem change
 
 * **LEXICON S_AAJA** 
 
-* **LEXICON AAIGA_DIM** 
-
 * **LEXICON S_KARRII** 
 
 * **LEXICON X_KARRII** 
@@ -845,6 +814,68 @@ this is for loanwords without stem change
 ## Derivations 
 
 TODO: Move derivation lexica here 
+
+### Diminutive derivations _DIM
+
+### 2 syllabic stems
+
+#### final â
+
+* **LEXICON 2JUUHA_SG_DIM** (a lexicon to create deminutives; Not for lexicalised words already being in deminutive) 
+
+* **LEXICON 2ALGA_SG_DIM** a^RVlgâ done witout FVD, both ways work
+
+* **LEXICON 2ALGA_PL_DIM**  a^RVlgâ
+
+* **LEXICON 2KIELA_DIM** done with FVD, both ways work
+
+#### final á
+
+* **LEXICON FADDA_SG_DIM** fá^RVddá 
+
+* **LEXICON 2FADDA_PL_DIM** 
+
+* **LEXICON 2KISSA_DIM** 
+
+#### final e
+
+* **LEXICON 2ALGE_SG_DIM**  a^RVlge alge, mo^RVkk4e mokke
+
+* **LEXICON 2ALGE_PL_DIM** 
+
+#### Final i
+
+* ''LEXICON 2AIGI_SG_DIM''  pe^RVi4vi, ä^RVi4gi
+
+* ''LEXICON 2AIGI_PL_DIM'' 
+
+#### final u , tentative
+
+* **LEXICON 2AIRU_SG_DIM** a^RVlgâ 
+
+* **LEXICON 2AIRU_PL_DIM** 
+
+* **LEXICON 2LAAVU_DIM** 
+
+### contracted stem, final â, 
+
+* **LEXICON 2AAIGA_DIM** 
+
+### 3-syllabic
+
+3LITTER --> 4C_RASTAGAS
+
+### 4-syllabic
+
+tbw.
+
+### 4-syllabic contracted
+
+tbw.
+
+### Vowel-final loanwords
+
+tbw.
 
 * * *
 
