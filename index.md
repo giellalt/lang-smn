@@ -77,3 +77,4 @@ Here's a list of documentation pages built from structured comments in the sourc
         * [tokeniser-disamb-gt-desc.eighties.pmscript](tools-tokenisers-tokeniser-disamb-gt-desc.eighties.pmscript.html) ([src](https://github.com/giellalt/lang-smn/blob/main/tools/tokenisers/tokeniser-disamb-gt-desc.eighties.pmscript))
         * [tokeniser-disamb-gt-desc.pmscript](tools-tokenisers-tokeniser-disamb-gt-desc.pmscript.html) ([src](https://github.com/giellalt/lang-smn/blob/main/tools/tokenisers/tokeniser-disamb-gt-desc.pmscript))
         * [tokeniser-gramcheck-gt-desc.pmscript](tools-tokenisers-tokeniser-gramcheck-gt-desc.pmscript.html) ([src](https://github.com/giellalt/lang-smn/blob/main/tools/tokenisers/tokeniser-gramcheck-gt-desc.pmscript))
+        * [tokeniser-tts-cggt-desc.pmscript](tools-tokenisers-tokeniser-tts-cggt-desc.pmscript.html) ([src](https://github.com/giellalt/lang-smn/blob/main/tools/tokenisers/tokeniser-tts-cggt-desc.pmscript))
