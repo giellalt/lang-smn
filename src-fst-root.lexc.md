@@ -611,6 +611,7 @@ The second part of the compound may require that the previous (left part) is:
 * **+OLang/SWE** 
 * **+OLang/UND** 
 * **+OLang/RUS** 
+* +OLang/PARA - parallelle navn, navnet skal ikke overføres til andre samisk språk
 
 ## Flag diacritics
 We have manually optimised the structure of our lexicon using following
