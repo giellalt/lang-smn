@@ -204,6 +204,7 @@ Der/Superl
 
 - vdic
 - spelling error
+- adjectives with homonymous attributive and predicative forms
 
 ### Semtags
 
