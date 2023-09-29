@@ -257,6 +257,7 @@ LIST Der/vualasas = Der/vualasas    ; #!! * Der/vualasas
 LIST Der/vuota    = Der/vuota       ; #!! * Der/vuota
 
 LIST <vdic> = <vdic>                ; #!! `<vdic>`
+LIST <AttrPred> = <AttrPred>        ; #!! - adjectives with homonymous attributive and predicative forms
 
 
 LIST Err/Orth = Err/Orth Err/Orth-a/á Err/Orth-nom/gen Err/Orth-nom/acc Err/DerSub Err/CmpSub Err/UnspaceCmp Err/HyphSub Err/SpaceCmp Err/Spellrelax err_orth_mt ; #!! Err/Orth
@@ -2025,6 +2026,9 @@ SET CCCOMMA = CC OR COMMA ;
 #!! Here follow the rules.
 
 BEFORE-SECTIONS
+
+SUBSTITUTE (A) (A <AttrPred>) TARGET A IF (0 Attr LINK 0 (A Nom)); # this rule needs to be before disambiguation starts
+	## Martin Luther King lâi {kuávdáš} roolâst Ovtâstum staatâi aalmuglâšriehtilihâstâsâst já poorgâi 1950- já 1960-lovoin eromâšávt maadâstaatâi čappâdij aalmuglâšrievtij tubdâstem pyerrin. 
 
 
 # Do not touch speller output:

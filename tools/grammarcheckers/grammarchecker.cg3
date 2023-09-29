@@ -266,6 +266,7 @@ LIST Err/Orth-spes = Err/Orth-a/á Err/Orth-nom/gen Err/Orth-nom/acc Err/DerSub 
 
 LIST <vdic> = <vdic> ;				        #!! - vdic
 LIST <spelled> = <spelled> ;				#!! - spelling error
+LIST <AttrPred> = <AttrPred> ;				#!! - adjectives with homonymous attributive and predicative forms
 
 #!! ### Semtags
 
@@ -3717,7 +3718,7 @@ ADDRELATION:xmsyn-adj-attr-other ($2) (N) FROM (*1 Pron + Rel LINK *1 A LINK 0 (
 #!!  **Agreement rule:** msyn-adj-attr-pred *Tot lii hirmâd*
 ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred)  TARGET (A) IF
 	(0C Attr)
-	(NOT 0 (Arab Ord) OR (A Sg Nom) OR ATTRONLY)
+	(NOT 0 (Arab Ord) OR (A Sg Nom) OR ATTRONLY OR <AttrPred>)
 	(NOT 1 N OR A OR PrfPrc OR ?)
 	(NOT 1 CC-INCLUSIVE LINK 1 A + Attr)
 	(NOT 1 ("..."))
@@ -3725,7 +3726,7 @@ ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred)  TARGET (A) IF
 ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred)  TARGET (A Attr) IF 
 	(0C Attr) 
 	(1 CC-INCLUSIVE LINK 1 &msyn-adj-attr-pred OR (A Sg Nom) LINK NOT 1 N OR A OR PrfPrc OR CC) 
-	(NOT 0 (Arab Ord) OR (A Sg Nom)) ;
+	(NOT 0 (Arab Ord) OR (A Sg Nom) OR <AttrPred>) ;
 COPY:msyn-adj-attr-pred (Sg Nom &SUGGEST) EXCEPT (Attr &msyn-adj-attr-pred) TARGET ( A &msyn-adj-attr-pred);
 
     #% Tot lii hirmâd.
@@ -3737,7 +3738,7 @@ COPY:msyn-adj-attr-pred (Sg Nom &SUGGEST) EXCEPT (Attr &msyn-adj-attr-pred) TARG
 #!!  **Agreement rule:** msyn-adj-attr-pred *Mun lam fiskis/fiskâd.*
 ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A) IF
   (0C Attr)
-  (NOT 0 (Arab Ord) OR ATTRONLY)
+  (NOT 0 (Arab Ord) OR ATTRONLY OR <AttrPred>)
   (*-1 COPULAS + Qst BARRIER V OR S-BOUNDARY LINK 1 Nom)
 #  (NOT 1 Adv)
   (NEGATE *1 N BARRIER NOT-A-COMMA-CC)
@@ -3754,7 +3755,7 @@ ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A) IF
 
 ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A) IF
   (0C Attr)
-  (NOT 0 (Arab Ord) OR ATTRONLY)
+  (NOT 0 (Arab Ord) OR ATTRONLY OR <AttrPred>)
   (*-1 COPULAS BARRIER V OR S-BOUNDARY LINK *-1 Nom)
 #  (NOT 1 Adv)
   (NEGATE *1 N BARRIER NOT-A-COMMA-CC)
@@ -3781,7 +3782,7 @@ COPY:msyn-adj-attr-pred (Sg Nom &SUGGEST) EXCEPT (Attr &msyn-adj-attr-pred) TARG
 #$ Viste lii mielâttes tievâ.
 #$ Suoi láin kuohtuuh hirmâd nánnáás já tottâleijee párnááh.
 
-#ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (*-1 COPULAS BARRIER V OR GRAMCHK-S-BOUNDARY LINK *-1 Nom) (NEGATE 1 N)(NEGATE 1 CC OR COMMA LINK 1 A LINK 1 N)(NEGATE 1 (A Attr) OR ? LINK *1 N BARRIER NPNH)(NEGATE 1 (A Sg Nom) OR (Pron Pers))(NEGATE 0 ("visot") OR ("buot") LINK 1 Pron LINK *1 N)(NEGATE 0 PRED-ATTR-ADJ)(NEGATE 1 COMMA OR CC LINK 1 (A Attr) OR PRED-ATTR-ADJ)(NOT 0 (A Sg Nom))(NEGATE 1 COMMA OR ("-") LINK 1 ("muhto") LINK *1 (A Attr) BARRIER NPNHA)(NEGATE 0 Superl LINK 1 CC LINK 1 ("eanet" Superl) OR ("eanemus") LINK 1 A LINK 1 N)(NEGATE 1 (Num Attr) LINK 1 N)(NEGATE 0 ("eanet") LINK 1 PrfPrc);
+#ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (*-1 COPULAS BARRIER V OR GRAMCHK-S-BOUNDARY LINK *-1 Nom) (NEGATE 1 N)(NEGATE 1 CC OR COMMA LINK 1 A LINK 1 N)(NEGATE 1 (A Attr) OR ? LINK *1 N BARRIER NPNH)(NEGATE 1 (A Sg Nom) OR (Pron Pers))(NEGATE 0 ("visot") OR ("buot") LINK 1 Pron LINK *1 N)(NEGATE 0  OR <AttrPred>)(NEGATE 1 COMMA OR CC LINK 1 (A Attr) OR PRED-ATTR-ADJ)(NOT 0 (A Sg Nom))(NEGATE 1 COMMA OR ("-") LINK 1 ("muhto") LINK *1 (A Attr) BARRIER NPNHA)(NEGATE 0 Superl LINK 1 CC LINK 1 ("eanet" Superl) OR ("eanemus") LINK 1 A LINK 1 N)(NEGATE 1 (Num Attr) LINK 1 N)(NEGATE 0 ("eanet") LINK 1 PrfPrc);
 
 
 
