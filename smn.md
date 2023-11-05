@@ -3144,11 +3144,22 @@ This is the first section. Here we put safe rules with no or minimal context.
 
 ## Removing unwanted names
 
+SUSPICIOUSNAME ffor remivong propernouns Ai Ain Lie Sun Ta Van Viste Ive
+
 ## Numbers
 
 Ruleset for numbers from sme, and adjusted.
 
-* **SemID** Strange number is ID. (no it need not be
+SELECT  if Sem/Date is Num
+
+"Choose if not currency"
+SELECT Sem/Year 
+
+**Sem/ID** if § to the left
+
+REMOVE 
+
+Remove all **Sem/ID** 
 
 * **Insertwww** Inserts the Sem/Adr tag to all url expressions
 
