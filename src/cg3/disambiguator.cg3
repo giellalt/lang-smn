@@ -2033,13 +2033,19 @@ SECTION
 LIST SUSPICIOUSNAME = "Ai" "Ain" "Lie" "Sun" "Ta" "Van" "Viste" "Ive" ;
 
 REMOVE SUSPICIOUSNAME IF (0 Adv OR A OR N) ;
+#!! @RULENAME@ ffor remivong propernouns Ai Ain Lie Sun Ta Van Viste Ive
 
 #!! ## Numbers
 
 #!! Ruleset for numbers from sme, and adjusted.
 
 SELECT:SemYear Sem/Date (0 Num) ;
+#!! @RULENAME@  if Sem/Date is Num
+
+#!! "Choose if not currency"
 SELECT:SemYear Sem/Year (0 Num)(NOT -1 CURRENCY)(NOT 1 CURRENCY OR MEASURE OR ("ive")) ;
+#!! @RULENAME@ Sem/Year 
+
 	#% Bures boahtin 2016 beaivái
 SELECT:SemYear Sem/Year (0 Num)(NOT -1 CURRENCY)(1 Po) ;
 SELECT:SemYear Sem/Year (0 Num)(1 ("ive") + Pl) ; #apertium
@@ -2056,6 +2062,7 @@ SELECT:ArabNom (Arab Nom) (-1 BOS)(NEGATE 1 Po)(NEGATE 1 Sem/Time LINK 1 ("äigi
 SELECT:Arab1 (Arab Nom)(0 ("1")) ;
 	#$ a) Álgogursa 1 sámegielas
 
+#!! **Sem/ID** if § to the left
 SELECT:Sem/ID Sem/ID IF (-1 ("§")) ; 
 REMOVE:Sem/ID Sem/ID IF (1 CURRENCY) ; 
 
@@ -2064,14 +2071,17 @@ SELECT:Arab Arab IF (NOT 0 Ord OR Prop OR Arab + Err/Orth) ; # In Apertium we ge
 REMOVE:diNom Coll (-1 ("tij") OR ("tijme")) ;
 
 REMOVE:dyn  Arab (0 Prop) ; # foreløpig løsning, til vi har ny løsning for numerals.lexc
+#!! @RULENAME@ 
 
+
+#!! Remove all **Sem/ID** 
 REMOVE:NoSemID Sem/ID ;
 
 
 ###################3
 
 
-#!! * **SemID** Strange number is ID. (no it need not be
+#! * **SemID** Strange number is ID. (no it need not be
 #SELECT:SemID Sem/ID ;
 
 #!! * **Insertwww** Inserts the Sem/Adr tag to all url expressions
