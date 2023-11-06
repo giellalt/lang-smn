@@ -474,14 +474,14 @@ SUSPICIOUSNAME ffor remivong propernouns Ai Ain Lie Sun Ta Van Viste Ive
 
 Ruleset for numbers from sme, and adjusted.
 
-SELECT  if Sem/Date is Num
+SELECT:SemYear  if Sem/Date is Num
 
 "Choose if not currency"
-SELECT Sem/Year 
+SELECT:SemYear Sem/Year 
 
 **Sem/ID** if § to the left
 
-REMOVE 
+REMOVE:dyn 
 
 Remove all **Sem/ID** 
 
