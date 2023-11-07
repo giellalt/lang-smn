@@ -2020,12 +2020,13 @@ SET CCCOMMA = CC OR COMMA ;
 #!! # RULE SECTION
 #!! Here follow the rules.
 
-BEFORE-SECTIONS
+BEFORE-SECTIONS  #!! **@CODE@**
 
-# Do not touch the speller suggestions:
-PROTECT (<spelled>) ;
+#!! Do not touch the speller suggestions:
+PROTECT (<spelled>) ; #!! * @CODE@
 
-SECTION
+SECTION  #!! **@CODE@**
+
 #!! This is the first section. Here we put safe rules with no or minimal context.
 
 #!! ## Removing unwanted names
@@ -2033,18 +2034,18 @@ SECTION
 LIST SUSPICIOUSNAME = "Ai" "Ain" "Lie" "Sun" "Ta" "Van" "Viste" "Ive" ;
 
 REMOVE SUSPICIOUSNAME IF (0 Adv OR A OR N) ;
-#!! @RULENAME@ ffor remivong propernouns Ai Ain Lie Sun Ta Van Viste Ive
+#!! @RULENAME@ for remivong propernouns Ai Ain Lie Sun Ta Van Viste Ive
 
 #!! ## Numbers
 
 #!! Ruleset for numbers from sme, and adjusted.
 
 SELECT:SemYear Sem/Date (0 Num) ;
-#!! @RULENAME@  if Sem/Date is Num
+#!! @RULENAME@ SemYear if Sem/Date is Num
 
-#!! "Choose if not currency"
+
 SELECT:SemYear Sem/Year (0 Num)(NOT -1 CURRENCY)(NOT 1 CURRENCY OR MEASURE OR ("ive")) ;
-#!! @RULENAME@ Sem/Year 
+#!! **@RULENAME@ Sem/Year** Choose if not currency
 
 	#% Bures boahtin 2016 beaivái
 SELECT:SemYear Sem/Year (0 Num)(NOT -1 CURRENCY)(1 Po) ;
@@ -2070,8 +2071,8 @@ SELECT:Arab Arab IF (NOT 0 Ord OR Prop OR Arab + Err/Orth) ; # In Apertium we ge
 
 REMOVE:diNom Coll (-1 ("tij") OR ("tijme")) ;
 
-REMOVE:dyn  Arab (0 Prop) ; # foreløpig løsning, til vi har ny løsning for numerals.lexc
-#!! @RULENAME@ 
+REMOVE:dyn  Arab (0 Prop) ; 
+#!! **@RULENAME@ dyn** Arab if Prop # foreløpig løsning, til vi har ny løsning for numerals.lexc
 
 
 #!! Remove all **Sem/ID** 
