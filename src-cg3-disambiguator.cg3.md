@@ -464,24 +464,30 @@ OKTA
 # RULE SECTION
 Here follow the rules.
 
+**@NO CODE@**
+
+Do not touch the speller suggestions:
+* @NO CODE@
+
+**@NO CODE@**
+
 This is the first section. Here we put safe rules with no or minimal context.
 
 ## Removing unwanted names
 
-SUSPICIOUSNAME ffor remivong propernouns Ai Ain Lie Sun Ta Van Viste Ive
+SUSPICIOUSNAME for remivong propernouns Ai Ain Lie Sun Ta Van Viste Ive
 
 ## Numbers
 
 Ruleset for numbers from sme, and adjusted.
 
-SELECT:SemYear  if Sem/Date is Num
+SELECT:SemYear SemYear if Sem/Date is Num
 
-"Choose if not currency"
-SELECT:SemYear Sem/Year 
+**SELECT:SemYear Sem/Year** Choose if not currency
 
 **Sem/ID** if § to the left
 
-REMOVE:dyn 
+**REMOVE:dyn dyn** Arab if Prop # foreløpig løsning, til vi har ny løsning for numerals.lexc
 
 Remove all **Sem/ID** 
 
