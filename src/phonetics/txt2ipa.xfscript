@@ -107,7 +107,7 @@ echo << Rules >>
 
 ! Here comes the other rules
 
-define ijRule  i -> j || Vow _ ;
+define ijRule  i -> j || [Vow - i] _ ;
 
 define slRule  s -> š || [.#.|%#|%-] _ l ;
 
@@ -228,8 +228,6 @@ define olju l %^ j -> l ə %^ j || [.#.|%#|%^] (s) o _ u ,
                                   [.#.|%#|%^]  p  u _ a  ,
 								  [.#.|%#|%^]  b  u _ o  ;
 
-define FinalLightT t -> h ||          _ .#. ;
-define FinalLightD d -> h || Vow  j   _ .#. ;
 
 define sClusterWeak s p %^ p   ->   s %^ p     || Vow _ Vow ,, 
                     s t %^ t   ->   s %^ t     || Vow _ Vow ,,
@@ -760,8 +758,6 @@ read regex [
 .o. StrongNasalClusters
 .o. olju
 .o. StrongGrade
-.o. FinalLightT
-.o. FinalLightD
 .o. sClusterWeak
 .o. StopCluster  
 .o. tkRule  
