@@ -2171,6 +2171,14 @@ ADD:real-love-lope (&real-love-lope) TARGET ("love") IF
 COPY:real-love-lope ("lope" N Sg Nom &SUGGEST) EXCEPT ("love" Num Sg Nom &real-love-lope) TARGET (Num &real-love-lope); 
 #% mun koijâdim välmejeijest love eelliđ hiivsigist. 
 
+#!! ## moadde kerdi > moddii
+
+ADD:xmsyn-moddii (&msyn-moddii) TARGET ("muáddi" Num Sg Nom) IF	(1 ("kerdi" N Sg Nom));
+ADDRELATION (DELETE1) (Num &msyn-moddii) TO (1 ("kerdi" N Sg Nom)) ;
+
+COPY:xmsyn-moddii ("moddii" Adv &SUGGEST) EXCEPT ("muáddi" Num Sg Nom &msyn-moddii) TARGET (&msyn-moddii);
+	## uáčču uáiniđ moolâviermi hiáilumin muáddi kerdi.
+
 #!! ## Noun phrase internal phenomena
 
 #!! ### Demonstratives
