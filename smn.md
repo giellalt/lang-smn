@@ -11813,6 +11813,8 @@ name convention for error tags: ´´&errortype-errorsubtype-is-shouldbe´´
 
 **Speller suggestions rule** &real-love-lope
 
+## moadde kerdi > moddii
+
 ## Noun phrase internal phenomena
 
 ### Demonstratives
