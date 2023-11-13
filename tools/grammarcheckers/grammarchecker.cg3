@@ -2173,13 +2173,21 @@ COPY:real-love-lope ("lope" N Sg Nom &SUGGEST) EXCEPT ("love" Num Sg Nom &real-l
 
 #!! ## moadde kerdi > moddii
 
-ADD:xmsyn-moddii (&msyn-moddii) TARGET ("muáddi" Num Sg Nom) IF	(1 ("kerdi" N Sg Nom));
+ADD:xmsyn-moddii (&msyn-moddii) TARGET ("muáddi" Num Sg Nom) OR ("maŋgâ" Num Sg Nom) IF	(1 ("kerdi" N Sg Nom));
 ADDRELATION (DELETE1) (Num &msyn-moddii) TO (1 ("kerdi" N Sg Nom)) ;
 
-COPY:xmsyn-moddii ("moddii" Adv &SUGGEST) EXCEPT ("muáddi" Num Sg Nom &msyn-moddii) TARGET (&msyn-moddii);
+COPY:xmsyn-moddii ("moddii" Adv &SUGGEST) EXCEPT ("muáddi" Num Sg Nom &msyn-moddii) TARGET ("muáddi" &msyn-moddii);
 	## uáčču uáiniđ moolâviermi hiáilumin muáddi kerdi.
 
+COPY:xmsyn-moddii ("maŋgii" Adv &SUGGEST) EXCEPT ("maŋgâ" Num Sg Nom &msyn-moddii) TARGET ("maŋgâ" &msyn-moddii);
+
 #!! ## Noun phrase internal phenomena
+
+#!! ### Possessive pronouns > reflexive pronouns
+
+ADD:msyn-suu-jieijas (&msyn-suu-jieijas) TARGET ("sun" Pers Sg3 Gen) OR ("sun" Pers Sg3 Acc) IF (*-1 ("sun" Pers Sg3 Nom) OR (N Prop Nom Sem/Fem) OR (N Prop Nom Sem/Mal) OR (N Prop Nom Sem/Sur) BARRIER S-BOUNDARY); 
+	## Sun vuolgij suu viistán ullopääiđih soolâst.
+
 
 #!! ### Demonstratives
 
