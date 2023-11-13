@@ -708,6 +708,8 @@ name convention for error tags: ´´&errortype-errorsubtype-is-shouldbe´´
 
 ## Noun phrase internal phenomena
 
+### Possessive pronouns > reflexive pronouns
+
 ### Demonstratives
 
 **Agreement rule:** `msyn-dem-locattr-gen`
