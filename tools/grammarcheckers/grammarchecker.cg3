@@ -3687,15 +3687,15 @@ ADD:msyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET A IF
 	(0C Sg + Nom)
 	(NEGATE *-1 ("leđe" V Ind) OR ("šoddâđ" V Ind) LINK -1 Nom OR Loc OR Adv OR CS) # Taat uási/et lii viehâ herkki pieggáid.
 	(NEGATE *-1 ("leđe" ConNeg) OR ("šoddâđ" ConNeg) LINK -1 Neg LINK -1 Nom OR Loc OR Adv OR CS) # Mihheen ij lah máhđuttem Imelân
-	(NEGATE 0  CONCORD-A OR Ord OR Der/Comp OR Der/Superl OR N + Gen)
+	(NEGATE 0  CONCORD-A OR Ord OR Der/Comp OR Der/Superl OR N + Gen OR <AttrPred>)
 	(NEGATE -1 Interr LINK *1 ("leđe")) # man koorãs luonddu lea
 	(NEGATE -1 BOS LINK 2 N + Ill OR N + Loc OR N + Ess OR N + Abe LINK *1 EOS BARRIER V) # Vaalmâš uđâsmitmân!
 	(NEGATE -2 BOS LINK 3 N + Ill OR N + Loc OR N + Ess OR N + Abe LINK *1 EOS BARRIER V) # - Vaalmâš uđâsmitmân!
 	(1 N LINK NOT 0 Ess OR NOUN-OR-ADV)
 	;
 COPY:msyn-adj-pred-attr (Attr &SUGGEST) EXCEPT (Sg Nom &msyn-adj-pred-attr) TARGET ( A &msyn-adj-pred-attr);
-
-#$ Taat uási lii viehâ herkki pieggáid.
+	## lâi {vaigâdis} finniđ kiddâ.
+	#$ Taat uási lii viehâ herkki pieggáid.
 
 
 #!!  **Agreement rule:** msyn-adj-pred-attr Plural adjectives should be Attr in front of N.
