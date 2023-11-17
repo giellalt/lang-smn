@@ -2209,6 +2209,9 @@ LIST &msyn-v-du3-conneg = &msyn-v-du3-conneg ;
 LIST &msyn-v-prfprc-sg1 = &msyn-v-prfprc-sg1 ;
 LIST &msyn-v-sg1-prfprc = &msyn-v-sg1-prfprc ;
 LIST &msyn-v-sg3-conneg = &msyn-v-sg3-conneg ;
+LIST &syn-delete-adv-phrasal-verb = &syn-delete-adv-phrasal-verb ;
+LIST &syn-phrasal-verb-phrasal-verb  = &syn-phrasal-verb-phrasal-verb ;
+LIST &syn-phrasal-verb-lexical-verb = &syn-phrasal-verb-lexical-verb ;
 LIST &real-keesi-keessiv = &real-keesi-keessiv ;
 LIST &real-keessiv-keesi = &real-keessiv-keesi ;
 LIST &real-love-lope = &real-love-lope ;
@@ -2280,6 +2283,19 @@ COPY:xmsyn-moddii ("ohtii" Adv &SUGGEST) EXCEPT ("oovtâ" Num Sg Nom &msyn-moddi
 ADD:xmsyn-suu-jieijas (&msyn-suu-jieijas) TARGET ("sun" Pers Sg3 Gen) OR ("sun" Pers Sg3 Acc) IF (*-1 ("sun" Pers Sg3 Nom) OR (N Prop Nom Sem/Fem) OR (N Prop Nom Sem/Mal) OR (N Prop Nom Sem/Sur) BARRIER S-BOUNDARY); 
 	## Sun vuolgij suu viistán ullopääiđih soolâst.
 
+#!! ### Phrasal verbs
+
+	# syntactic errors
+	# ----------------
+
+	# Redundant adverbs in phrasal verbs 2->1
+	# -----------------------------------------------------
+ADD:xsyn-delete-adv-phrasal-verb (&syn-delete-adv-phrasal-verb) TARGET (Adv) IF (0 ("kiddâ") LINK -1 (Loc)) (*0  ("tolliđ") BARRIER S-BOUNDARY) ;
+	## Sun tollij suu viiđâ ihášij uccâ uábi kieđâst kiddâ.  
+
+ADDRELATION (DELETE1) (V &syn-delete-adv-phrasal-verb) TO (*0 (Adv &syn-delete-adv-phrasal-verb) BARRIER (*) - Pcle) ;
+
+COPY:xsyn-delete-adv-phrasal-verb (&DELETE) EXCEPT (&syn-delete-adv-phrasal-verb) TARGET (Adv &syn-delete-adv-phrasal-verb) ;
 
 #!! ### Demonstratives
 
