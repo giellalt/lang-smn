@@ -12391,6 +12391,7 @@ Imprt
 * Der/vuota
 
 `<vdic>`
+copula
 - adjectives with homonymous attributive and predicative forms
 
 Err/Orth
