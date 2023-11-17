@@ -2171,6 +2171,14 @@ ADD:real-love-lope (&real-love-lope) TARGET ("love") IF
 COPY:real-love-lope ("lope" N Sg Nom &SUGGEST) EXCEPT ("love" Num Sg Nom &real-love-lope) TARGET (Num &real-love-lope); 
 #% mun koijâdim välmejeijest love eelliđ hiivsigist. 
 
+#!! ## äigin > ääigi
+
+
+ADD:msyn-äigin-ääigi (&msyn-äigin-ääigi) TARGET ("äigi" N Ess) OR ("äigi" N Sg Acc PxDu1) OR ("äigi" N Sg Acc PxPl1) OR ("äigi" N Sg Acc PxSg1) OR ("äigi" N Gen PxDu1) OR ("äigi" N Gen PxPl1) OR ("äigi" N Gen PxSg1) IF
+	(-1 (N Gen));
+COPY:&msyn-äigin-ääigi ("äigi" N Sg Gen &SUGGEST) EXCEPT ("äigi" N Ess &msyn-äigin-ääigi) OR ("äigi" N Sg Acc PxDu1 &msyn-äigin-ääigi) OR ("äigi" N Sg Acc PxPl1 &msyn-äigin-ääigi) OR ("äigi" N Sg Acc PxSg1 &msyn-äigin-ääigi) OR ("äigi" N Gen PxDu1 &msyn-äigin-ääigi) OR ("äigi" N Gen PxPl1 &msyn-äigin-ääigi) OR ("äigi" N Gen PxSg1 &msyn-äigin-ääigi) TARGET (&msyn-äigin-ääigi);
+	## Sunnuu eenih láin iällám torist konsert äigin.
+
 #!! ## moadde kerdi > moddii
 
 ADD:xmsyn-moddii (&msyn-moddii) TARGET (Num Sg Nom) OR (Num Sg Gen) IF	(1 ("kerdi" N Sg Nom) OR ("kerdi" N Sg Gen));
