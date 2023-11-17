@@ -11315,39 +11315,11 @@ Der/Superl
 - spelling error
 - adjectives with homonymous attributive and predicative forms
 
-### Semtags
+### Semantic tags
 
-- HUMAN
-- Sem/Act
-- Sem/Ani
 - Sem/Atr
-- Sem/Body
-- Sem/Clth
-- Der/Date
-- Sem/Domain
-- Sem/Feat-phys
-- Sem/Fem
-- Sem/Group
-- Sem/Hum
-- Sem/ID
-- Sem/Lang
-- Sem/Mal
-- Sem/Measr
-- Sem/Measr_Time
-- Sem/Money
-- Sem/Obj
-- Sem/Obj-el
-- Sem/Org
-- Sem/Par
-- Sem/Perc-emo
-- Sem/Plc
-- Sem/Sign
-- Sem/State-sick
-- Sem/Sur
-- Sem/Time
-- Sem/Time
-- Sem/Txt
-- Der/Year
+
+HUMAN
 
 This ends the semtag list.
 
