@@ -2278,15 +2278,18 @@ COPY:xmsyn-moddii ("ohtii" Adv &SUGGEST) EXCEPT ("oovtâ" Num Sg Nom &msyn-moddi
 
 #!! ## Noun phrase internal phenomena
 
+ADD:xmsyn-jyehi_nom-jyehi_gen (&msyn-jyehi_nom-jyehi_gen) TARGET (N Sg Nom) + Sem/Time (NEGATE 0 Gen) (-1 ("jyehi" Attr));
+	## jyehi {peivi}
+	
+COPY:xmsyn-jyehi_nom-jyehi_gen (Gen &SUGGEST) EXCEPT (Nom &msyn-jyehi_nom-jyehi_gen) TARGET (&msyn-jyehi_nom-jyehi_gen) ;
+
 #!! ### Possessive pronouns > reflexive pronouns
 
 ADD:xmsyn-suu-jieijas (&msyn-suu-jieijas) TARGET ("sun" Pers Sg3 Gen) OR ("sun" Pers Sg3 Acc) IF (*-1 ("sun" Pers Sg3 Nom) OR (N Prop Nom Sem/Fem) OR (N Prop Nom Sem/Mal) OR (N Prop Nom Sem/Sur) BARRIER S-BOUNDARY); 
 	## Sun vuolgij suu viistán ullopääiđih soolâst.
+	
 
 #!! ### Phrasal verbs
-
-	# syntactic errors
-	# ----------------
 
 	# Redundant adverbs in phrasal verbs 2->1
 	# -----------------------------------------------------
