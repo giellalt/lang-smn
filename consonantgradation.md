@@ -2,15 +2,18 @@ Dássemolsašuddan
 ================
 
 Lean buohtastahttán yaml-fiillaid konsonántaguovddážiid (KG).
-egrep 'N\+(S|E).*:' test/src/dict-gt-yamls/N-lex_* | egrep '(Nom|Gen|Ill|Loc|Com|Ess)' |l
 
+```
+egrep 'N\+(S|E).*:' test/src/dict-gt-yamls/N-lex_* | egrep '(Nom|Gen|Ill|Loc|Com|Ess)' |l
+```
 
 Fuomášumit:
 
 ## 1) Lokatiivvas KG guhkku go soggevokála guhkku. 
 
-máttavokála á ii álo guhko čállingielas ( á = á).  Njuolggadusat?
-Dát mearkkaša ahte jus  ^SLEN sáhtášii maiddái váikkuhit KG guhkkumii.
+Máttavokála *á* ii álo guhko čállingielas ( *á = á*).  Njuolggadusat?
+
+Dát mearkkaša ahte jus  `^SLEN` sáhtášii maiddái váikkuhit `KG? guhkkumii.
 
 ## 2) Dábálaččamus minsttar:
 
@@ -136,32 +139,38 @@ Nom, Com, Ess: xy ja Gen, Ill ja Loc: xy    - diftoŋggat!
 
 Dát čuvvot seammá minstara:
 
-| Nom	|	Gen	|	Ill	|	Loc	|	Com	[	Ess	|	Komm |	
-| ------| ------| ------| ------| ------| ------| ------|		    	
-| vsk	|	vsk	|	vsk	|	vsk	|	vsk	[	vsk	| |
-| nnj	|	nj	|	nj	|	nj	|	nnj	[	nnj	| |
-| itt	|	it	|	it	|	it	|	itt	[	itt	|   i4tt |
+
+| Nom	|	Gen	|	Ill	|	Loc	|	Com	|	Ess	|	Komm |
+|------|--------|-------|-------|------| ------| ------|
+| vsk	|	vsk	|	vsk	|	vsk	|	vsk	|	vsk	|   |
+| nnj	|	nj	|	nj	|	nj	|	nnj	|	nnj	|  |
+| itt	|	it	|	it	|	it	|	itt	|	itt	|   i4tt |
+
 
 Dát čuvvot seammá minstara + guhkkon Loc
 
-Nom		Gen		Ill		Loc			Com		Ess		
-mpp		mp		mp		mppáá/mp	mpp		mpp
-rpp		rp		rp		rppáá/rp	rpp		rpp
-rtt		rt		rt		rttee/rt	rtt		rtt	  narte
-ŋkk		ŋk		ŋk		ŋkkee/ŋk	ŋkk		ŋkk	  luŋkke seŋkka saŋkko
-ltt		lt		lt		lttaa/lt		ltt		ltt
-lpp		lp		lp		lppaa/lp	lpp		lpp
-icc		ic		ic		iccee		icc		icc	
-rcc		rc		rc		rccoo		rcc		rcc	
-jtt		jt		jt		jttoo/jt 	jtt		jtt	
-ntt		nt		nt		nt			ntt		ntt
-ncc		nc		nc		nc			ncc		ncc
-itt		it		it		it			itt		itt
-jtt		jt		jt		jttoo		jtt		jtt  nijtto
+| Nom	| 	Gen	|	Ill	|	Loc	|	Com|		Ess	|	|
+| ------| ------| ------| ------| ------| ------| ------|		    	
+|Nom	|	Gen	|	Ill	|	Loc		|	Com		| Ess  |		
+|mpp	|	mp	|	mp	|	mppáá/mp|	mpp		| mpp  |
+|rpp	|	rp	|	rp	|	rppáá/rp|	rpp		| rpp  |
+|rtt	|	rt	|	rt	|	rttee/rt|	rtt		| rtt  |	  narte
+|ŋkk		|	ŋk	|	ŋk	|	ŋkkee/ŋk|	ŋkk		| ŋ|kk	  luŋkke seŋkka saŋkko
+|ltt	|	lt	|	lt	|	lttaa/lt|	ltt	    | ltt  |
+|lpp	|	lp	|	lp	|	lppaa/lp|	lpp		| lpp  |
+|icc	|	ic	|	ic	|	iccee	|	icc		| icc  |	
+|rcc	|	rc	|	rc	|	rccoo	|	rcc		| rcc  |	
+|jtt	|	jt	|	jt	|	jttoo/jt| 	jtt		| jtt  |	
+|ntt	|	nt	|	nt	|	nt		|	ntt		| ntt  |
+|ncc	|	nc	|	nc	|	nc		|	ncc		| ncc  |
+|itt	|	it	|	it	|	it		|	itt		| itt  |
+|jtt	|	jt	|	jt	|	jttoo	|	jtt		| jtt  |nijtto
 
 
 ## 6) Dát čuvvot eará minstara: Nom = Ess, Gen = Loc   diftoŋŋa  maŋŋel 
 
+| Nom	| 	Gen	|	Ill	|	Loc	|	Com|		Ess	|	|
+| ------| ------| ------| ------| ------| ------| ------|		    	
 | lkk	|	lh	|	lk	|	lh		|	lh	|	lkk
 | ikk	|	ih	|	ik	|	ih		|	ih	|	ikk
 | rkk	|	rh	|	rk	|	rh		|	rh	|	rkk   
@@ -189,20 +198,22 @@ jtt		jt		jt		jttoo		jtt		jtt  nijtto
 
 ## 8) Okta konsonánta => guhkkon essiiva
 
-c		s		c		s		ss		cc
-č		j		č		j		j		čč
-đ		đ		đ		đVV		đ		đđ
-h		h		h		h		h		hh  	 		sááhá  sááhhán  (á = áá)
-h		v		h		v		vv		h   			<== kiehâ juáhu mááhu ruáhu
-h		v		h		vvVV	vv		hh 				spaha  vahe
-j		j		j		jVV		j   	ij
-l		l		l		lVV		l		ll
-m		m		m		m		m		mm
-n		n		n		nVV		n		nn
-nj		nj		nj		nj		nj		nnj	 		suáṇju suánjust
-p		v		p		vVV		v		pp 				ripá lope  áá!
-r		r		r		rVV		r		rr   		vuárrun
-v		v		v		vVV		v		vv
-t		đ		t		đVV		đ		tt
-š		š		š		ššVV	šš		šš  		iše iššijn  !!!
+| Nom	| 	Gen	|	Ill	|	Loc	|	Com|		Ess	|	|
+| --|-------| ------| ------| ------| ------| ------------|		    	
+| c	|	s	|	c	|	s	|	ss	|	cc	 |	      |
+| č	|	j	|	č	|	j	|	j	|	čč	 |		  		    |
+| đ	|	đ	|	đ	|	đVV	|	đ	|	đđ	 |									    |
+| h	|	h	|	h	|	h	|	h	|	hh   |	 		sááhá  sááhhán  (á = áá)    |
+| h	|	v	|	h	|	v	|	vv	|	h    |			<== kiehâ juáhu mááhu ruáhu |
+| h	|	v	|	h	|	vvVV|	vv	|	hh 	 |			spaha  vahe				    |
+| j	|	j	|	j	|	jVV	|	j   |	ij	 |									    |
+| l	|	l	|	l	|	lVV	|	l	|	ll	 |									    |
+| m	|	m	|	m	|	m	|	m	|	mm	 |									    |
+| n	|	n	|	n	|	nVV	|	n	|	nn	 |									    |
+| nj|	nj	|	nj	|	nj	|	nj	|	nnj	 |		suáṇju suánjust			    |
+| p	|	v	|	p	|	vVV	|	v	|	pp 	 |			ripá lope  áá!			    |
+| r	|	r	|	r	|	rVV	|	r	|	rr   |		vuárrun						    |
+| v	|	v	|	v	|	vVV	|	v	|	vv	 |									    |
+| t	|	đ	|	t	|	đVV	|	đ	|	tt	 |									    |
+| š	|	š	|	š	|	ššVV|	šš	|	šš   |		iše iššijn  !!!				    |
 
