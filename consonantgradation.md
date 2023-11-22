@@ -13,9 +13,9 @@ Fuomášumit:
 
 Máttavokála *á* ii álo guhko čállingielas ( *á = á*).  Njuolggadusat?
 
-Dát mearkkaša ahte jus  `^SLEN` sáhtášii maiddái váikkuhit `KG? guhkkumii.
+Dát mearkkaša ahte  `^SLEN` sáhtášii maiddái váikkuhit `KG? guhkkumii.
 
-## 2) Dábálaččamus minsttar:
+## 2) Dábáleaamos minsttar:
 
 Ill = Gen = Loc 
 Com = Nom = Ess = guhkkon Loc
