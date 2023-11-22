@@ -58,6 +58,8 @@ Com = Nom = Ess = guhkkon Loc
 
 ## 4) Čuovvovaččain ii leat dássemolsun:
 
+Dahje: Doppe lea dássemolsun, muhto ii čállingielas.
+
 ```
 bd
 bž
@@ -79,10 +81,13 @@ lb
 lg
 lj
 lm
+lst
 mb
+ndr tundra
 nj
 ŋg
 pš
+r  		pyerá - spiehkastat
 rd
 rg
 rh
@@ -101,11 +106,9 @@ tr
 vd
 vl
 vr  
-ndr tundra
-lst
 vsk  <===   rávsku+N+Sg+Gen:  ráávsku
-r  		pyerá - spiehkastat
 ```
+
 
 
 ## 5) Čuovvovaččain lea Nom, Com, Ess, Gen, Ill ja Loc
