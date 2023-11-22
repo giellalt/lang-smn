@@ -6,50 +6,56 @@ egrep 'N\+(S|E).*:' test/src/dict-gt-yamls/N-lex_* | egrep '(Nom|Gen|Ill|Loc|Com
 
 
 Fuomášumit:
-1) Lokatiivvas KG guhkku go soggevokála guhkku. máttavokála á ii álo guhko čállingielas ( á = á).  Njuolggadusat?
+
+## 1) Lokatiivvas KG guhkku go soggevokála guhkku. 
+
+máttavokála á ii álo guhko čállingielas ( á = á).  Njuolggadusat?
 Dát mearkkaša ahte jus  ^SLEN sáhtášii maiddái váikkuhit KG guhkkumii.
 
-2) Dábálaččamus minsttar:
+## 2) Dábálaččamus minsttar:
+
 Ill = Gen = Loc 
 Com = Nom = Ess = guhkkon Loc
 
 
-Nom		Gen		Ill		Loc			Com		Ess			lexc:
-
-bb		b		b		b			bb		bb					   uábbi + cuápci, monoph. dihte		
-cc		c		c		c			cc		cc
-dd		d		d		d			dd		dd			dd
-dd		d		d		dd			dd		dd			dd
-gg		g		g		gg			gg		gg			gg
-kk		h		k		h/hh		hh		kk			k4k4
-kk		k		k		kk			kk		kk			kk
-ll		l		l		l/ll		ll		ll			ll
-mm		m		m		mm			mm		mm			mm
-nn		n		n		nn			nn		nn			nn
-pp		p		p		p/pp		pp		pp			pp
-rr		r		r		rr			rr		rr			rr		
-ss		s		s		s/ss		ss		ss			ss
-šš		š		š		šš			šš		šš			šš		
-tt		t		t		tt			tt		tt			tt
-vv		v		v		v			vv	    vv			vv
-
-
-3) Sierra minsttar go vokálaguovddáš guhkku:
-
-Nom		Gen		Ill		Loc			Com		Ess			
-		VVC		VVC		VVC			VVC
-ll	   	l		l		l			l		ll 			ll			sollâ soolâ sooḷân soolâst sooláin  so%^RVllâ
-rr		r		r		r			r		rr 		 	rr			korrâ 
-ŋŋ		ŋ		ŋ		ŋ			ŋ		ŋŋ	 		ŋŋ			čiŋŋâ
-
-vv		v		v		v			vv		vv			vv
-kk		h		k		h			hh		kk			k4k4
-čč	   	j      č	    j	 		j 		čč 		čč4		kiäčču kiäj̣u  kiäj̣ust kiäj̣oin    lu%^RVčč4â
+|   Nom	|	Gen	|	Ill	|	Loc		|	Com	|	Ess		|	lexc:	|   
+| ------| ------| ------| ------    | ------| ------| ------|		    
+|   bb	|	b	|	b	|	b		|	bb	|	bb		|			|      uábbi + cuápci, monoph. dihte		
+|   cc	|	c	|	c	|	c		|	cc	|	cc		|			|   
+|   dd	|	d	|	d	|	d		|	dd	|	dd		|	dd		|   
+|   dd	|	d	|	d	|	dd		|	dd	|	dd		|	dd		|   
+|   gg	|	g	|	g	|	gg		|	gg	|	gg		|	gg		|   
+|   kk	|	h	|	k	|	h/hh	|	hh	|	kk		|	k4k4	|   
+|   kk	|	k	|	k	|	kk		|	kk	|	kk		|	kk		|   
+|   ll	|	l	|	l	|	l/ll	|	ll	|	ll		|	ll		|   
+|   mm	|	m	|	m	|	mm		|	mm	|	mm		|	mm		|   
+|   nn	|	n	|	n	|	nn		|	nn	|	nn		|	nn		|   
+|   pp	|	p	|	p	|	p/pp	|	pp	|	pp		|	pp		|   
+|   rr	|	r	|	r	|	rr		|	rr	|	rr		|	rr		|   
+|   ss	|	s	|	s	|	s/ss	|	ss	|	ss		|	ss		|   
+|   šš	|	š	|	š	|	šš		|	šš	|	šš		|	šš		|   
+|   tt	|	t	|	t	|	tt		|	tt	|	tt		|	tt		|   
+|   vv	|	v	|	v	|	v		|	vv	|    vv		|	vv		|   
 
 
+## 3) Sierra minsttar go vokálaguovddáš guhkku:
 
-4) Čuovvovaččain ii leat dássemolsun:
+| Nom	|	Gen	|	Ill		|Loc	|		Com	|	Ess		|	Kommentárat
+| ------| ------| ------| ------    | ------    | ------| ------|		    
+| 		|VVC	|	VVC		|VVC	|		VVC	|			|  |
+| ll	|  	l	|	l		|l		|	l		|ll 		|	ll		|	sollâ soolâ sooḷân soolâst sooláin  so%^RVllâ
+| rr	|	r	|	r		|r		|	r		|rr 		| 	rr	|		korrâ 
+| ŋŋ		|	|ŋ		ŋ	|	ŋ	|		ŋ	|	ŋŋ	 	|	ŋŋ		|	čiŋŋâ
+| 		|		|			|		|			|			| |
+| vv	|	v	|	v		|v		|	vv		|vv			|vv |
+| kk	|	h	|	k		|h		|	hh		|kk			|k4k4 | 
+| čč	|   j   | 	č	    |j	 	|	j 		|čč 		|	čč4		|	kiäčču kiäj̣u  kiäj̣ust kiäj̣oin    lu%^RVčč4â
 
+
+
+## 4) Čuovvovaččain ii leat dássemolsun:
+
+```
 bd
 bž
 hj
@@ -96,38 +102,45 @@ ndr tundra
 lst
 vsk  <===   rávsku+N+Sg+Gen:  ráávsku
 r  		pyerá - spiehkastat
+```
 
 
-5) Čuovvovaččain lea Nom, Com, Ess: xy ja Gen, Ill ja Loc: xy    - diftoŋggat!
-Nom		Gen		Ill		Loc		Com		Ess			lexc			
-id		id		id		id		in		in
-im		im		im		im		im		im
-in		in		in		in		in		in 		i4n
-is		is		is		is		is		is 		i4s
-iv		iv		iv		iv		iv		iv			i4v
-bd		bd		bd		bd		bd		bd	
-nd		bd		bd		bd		nd		nd	
-pc		pc		pc		pc		pc		pc      cuápci	?
+## 5) Čuovvovaččain lea Nom, Com, Ess, Gen, Ill ja Loc
 
-rj		rj		rj		rj		rj		rj	
-vd		vd		vd		vd		vd		vd	
-vl		vl		vl		vl		vl		vl	
-bd		bd		bd		bd		bd		bd	
-nd		nd		nd		nd		nd		nd	
-ht		ht		ht		ht		ht		ht
-st		st		st		st		st		st
-rš		rš		rš		rš		rš		rš
-rj		rj		rj		rj		rj		rj
-ld		ld		ld		ld		ld		ld
-rg		rg		rg		rg		rg		rg
-st		st		st		st		st		st
-lg		lg		lg		lg		lg		lg
+Nom, Com, Ess: xy ja Gen, Ill ja Loc: xy    - diftoŋggat!
+
+| Nom	|	Gen	|	Ill	|	Loc	|	Com	|	Ess	|		lexc	|	
+| ------| ------| ------| ------    | ------| ------| ------|		    	
+| id	|	id	|	id	|	id	|	in	|	in	|				|
+| im	|	im	|	im	|	im	|	im	|	im	|				|
+| in	|	in	|	in	|	in	|	in	|	in 	|	i4n			|
+| is	|	is	|	is	|	is	|	is	|	is 	|	i4s			|
+| iv	|	iv	|	iv	|	iv	|	iv	|	iv	|		i4v		|
+| bd	|	bd	|	bd	|	bd	|	bd	|	bd	|				|
+| nd	|	bd	|	bd	|	bd	|	nd	|	nd	|				|
+| pc	|	pc	|	pc	|	pc	|	pc	|	pc  |    cuápci	?	|
+| 		|		|		|		|		|		|				|
+| rj	|	rj	|	rj	|	rj	|	rj	|	rj	|				|
+| vd	|	vd	|	vd	|	vd	|	vd	|	vd	|				|
+| vl	|	vl	|	vl	|	vl	|	vl	|	vl	|				|
+| bd	|	bd	|	bd	|	bd	|	bd	|	bd	|				|
+| nd	|	nd	|	nd	|	nd	|	nd	|	nd	|				|
+| ht	|	ht	|	ht	|	ht	|	ht	|	ht	|				|
+| st	|	st	|	st	|	st	|	st	|	st	|				|
+| rš	|	rš	|	rš	|	rš	|	rš	|	rš	|				|
+| rj	|	rj	|	rj	|	rj	|	rj	|	rj	|				|
+| ld	|	ld	|	ld	|	ld	|	ld	|	ld	|				|
+| rg	|	rg	|	rg	|	rg	|	rg	|	rg	|				|
+| st	|	st	|	st	|	st	|	st	|	st	|				|
+| lg	|	lg	|	lg	|	lg	|	lg	|	lg	|				|
 
 Dát čuvvot seammá minstara:
-Nom		Gen		Ill		Loc		Com		Ess			
-vsk	vsk		vsk		vsk		vsk		vsk
-nnj	nj		nj		nj		nnj		nnj
-itt	it		it		it		itt		itt		i4tt
+
+| Nom	|	Gen	|	Ill	|	Loc	|	Com	[	Ess	|	Komm |	
+| ------| ------| ------| ------| ------| ------| ------|		    	
+| vsk	|	vsk	|	vsk	|	vsk	|	vsk	[	vsk	| |
+| nnj	|	nj	|	nj	|	nj	|	nnj	[	nnj	| |
+| itt	|	it	|	it	|	it	|	itt	[	itt	|   i4tt |
 
 Dát čuvvot seammá minstara + guhkkon Loc
 
@@ -147,32 +160,34 @@ itt		it		it		it			itt		itt
 jtt		jt		jt		jttoo		jtt		jtt  nijtto
 
 
-6) Dát čuvvot eará minstara: Nom = Ess, Gen = Loc   diftoŋŋa  maŋŋel 
+## 6) Dát čuvvot eará minstara: Nom = Ess, Gen = Loc   diftoŋŋa  maŋŋel 
 
-lkk		lh		lk		lh			lh		lkk
-ikk		ih		ik		ih			ih		ikk
-rkk		rh		rk		rh			rh		rkk   
-tk		đh		tk		đh			đh		tk
-vkk		vh		vk		vh			vh		vkk
+| lkk	|	lh	|	lk	|	lh		|	lh	|	lkk
+| ikk	|	ih	|	ik	|	ih		|	ih	|	ikk
+| rkk	|	rh	|	rk	|	rh		|	rh	|	rkk   
+| tk	|	đh	|	tk	|	đh		|	đh	|	tk
+| vkk	|	vh	|	vk	|	vh		|	vh	|	vkk
 
-) Lokativ: Guhkkon soggevokála ii váikkut KG:i 
-Nom		Gen		Ill		Loc		Com		Ess		lexc
-						CVV	
-hč		vč		hč		vč		včč		hč		h4č
-hč		vč		hč		vč		včč		hč		h4č
-ht		vt		ht		vt		vtt		ht              pähti
-ks		vs		ks		vs		vss		ks  	k4s  	ráksá kukse
-rkk		rh		rk		rh		rh		rkk    rkk4 		<==
-rkk		rh		rk		rh		rh		rkk		rkk4
-tk		đh		tk		đh		đh		tk	  	tk4		utke
+## 7) Lokativ: Guhkkon soggevokála ii váikkut KG:i 
+
+| Nom	| 	Gen	|	Ill	|	Loc	|	Com|		Ess	|	|
+| ------| ------| ------| ------| ------| ------| ------|		    	
+| 		| 		|		|CVV	|	   |			|	|
+| hč	| 	vč	|	hč	|	vč	|	včč|		hč	|	|
+| hč	| 	vč	|	hč	|	vč	|	včč|		hč	|	|
+| ht	| 	vt	|	ht	|	vt	|	vtt|		ht  |   |     pähti
+| ks	| 	vs	|	ks	|	vs	|	vss|		ks  |	| 	ráksá kukse
+| rkk	| 	rh	|	rk	|	rh	|	rh |		rkk |   | 		<==
+| rkk	| 	rh	|	rk	|	rh	|	rh |		rkk	|	|
+| tk	| 	đh	|	tk	|	đh	|	đh |		tk	|  	|	utke
+| 		| 		|		|		|	   |			|	|
+| 		| 		|		|		|	   |			|	|
+| 		| 		|		|CVV	|	   |			|	|
+| h		| v		|h		|vv		|v	   |	hh 		|h%^|taho  	<==== !!   
+| š		| š		|š		|ššVV	|š	   |	šš  	|	|vaṣ̌o vašoin
 
 
-						CVV
-h		v		h		vv		v		hh 		h%^RC	taho  	<==== !!   
-š		š		š		ššVV	š		šš  		vaṣ̌o vašoin
-
-
-8) Okta konsonánta => guhkkon essiiva
+## 8) Okta konsonánta => guhkkon essiiva
 
 c		s		c		s		ss		cc
 č		j		č		j		j		čč
