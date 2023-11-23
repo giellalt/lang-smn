@@ -2194,6 +2194,8 @@ LIST &msyn-posspl-acc-gen =  &msyn-posspl-acc-gen ;
 LIST &msyn-pred-acc-nom =  &msyn-pred-acc-nom ;
 LIST &msyn-pred-ill-nom =  &msyn-pred-ill-nom ;
 LIST &msyn-predagr-pl3-sg3 = &msyn-predagr-pl3-sg3 ;
+LIST &msyn-pron-acc-gen = &msyn-pron-acc-gen ;
+LIST &msyn-pron-gen-acc = &msyn-pron-gen-acc ;
 LIST &msyn-quadv-sg-pl = &msyn-quadv-sg-pl ;
 LIST &msyn-qucompl-sg-pl = &msyn-qucompl-sg-pl ;
 LIST &msyn-quant-gen-nom =  &msyn-quant-gen-nom ;
@@ -2317,8 +2319,8 @@ ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF
 	(NOT 1 Prop OR Pron)
 	(1 N OR Actio + Nom LINK NOT *1 TV + V BARRIER S-BOUNDARY)
 	(NEGATE *1 TV BARRIER S-BOUNDARY);
-#$ Mun vuájálitám paas jiegâid Belsebul išij.
-#$ vIj ubâ autoi čuovâidgin luodâ alne.
+	#$ Mun vuájálitám paas jiegâid Belsebul išij.
+	#$ vIj ubâ autoi čuovâidgin luodâ alne.
 
 #ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF
 #(NEGATE *-1 TV BARRIER NOT-NPMOD) ## <????
@@ -2344,8 +2346,8 @@ ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF
 (1 CC)
 (2 N + Pl + Gen OR &msyn-posspl-acc-gen LINK 1 N OR Actio + Nom LINK NOT *1 TV BARRIER S-BOUNDARY);
 
-#$ Škovlim maŋa puávtáh uásálistiđ párnáid já nuorâi leiráid stuorrâhâžžân.
-#$ Jiem lah jieš puáhtám luuhâđ táid kiirjijd já klassikkoid sämikielân
+	#$ Škovlim maŋa puávtáh uásálistiđ párnáid já nuorâi leiráid stuorrâhâžžân.
+	#$ Jiem lah jieš puáhtám luuhâđ táid kiirjijd já klassikkoid sämikielân
 
 
 ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF
@@ -2373,10 +2375,30 @@ ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N IF
 	## Mun lam huámmášâm tom jieččân párnáid puotâ.
 
 COPY:msyn-posspl-acc-gen (Gen &SUGGEST) EXCEPT (Acc &msyn-posspl-acc-gen) TARGET (N Pl &msyn-posspl-acc-gen);
+	#% Siijđoid lehâstem tábáhtuvá itten.
+	#$ Siijđoi
+	
+	# Demonstrative pronouns sg acc>sg gen before postpositions
+	
+ADD:msyn-pron-acc-gen (&msyn-pron-acc-gen) TARGET (Pron Sg Acc Dem) IF
+(NOT 0 PX OR Gen)(1 Po)(NEGATE 1 Pr LINK *1 Gen); #(NOT 1 Adv)	
+	## {Tom} saajeest sun moijái Jennyn, kij nirvái maasâd.
+	## Eenist ij vissâsávt lamâš miheen {tom} vuástá. 
+	## Juávkku siida nuorâin lâi čokkánâm tom pirrâ.
+
+	# Demonstrative pronouns sg gen>sg acc in other contexts
+
+COPY:msyn-pron-acc-gen (Gen &SUGGEST) EXCEPT (Acc &msyn-pron-acc-gen) TARGET (&msyn-pron-acc-gen);
 
 
-#% Siijđoid lehâstem tábáhtuvá itten.
-#$ Siijđoi
+ADD:msyn-pron-gen-acc (&msyn-pron-gen-acc) TARGET (Pron Sg Gen Dem) IF
+(NEGATE 1 Po OR N OR A OR Num OR Attr);
+	## Tom lii vaigâdis čielgiđ
+	## Vááldáh {taan} liijkás tuođâst. 
+	## jis sun ooinij {taan}? > taam
+	## mut {taan} sun ij iberdâm
+
+COPY:msyn-pron-gen-acc (Acc &SUGGEST) EXCEPT (Gen &msyn-pron-gen-acc) TARGET (&msyn-pron-gen-acc);
 
 #!! ### Noun phrase complements
 
