@@ -4001,6 +4001,14 @@ ADD:msyn-adj-attr-placc (&msyn-adj-attr-placc) TARGET A IF
 COPY:msyn-adj-attr-placc (Pl Acc &SUGGEST) EXCEPT (Attr &msyn-adj-attr-placc) TARGET ( A &msyn-adj-attr-placc);
 
 
+#!! ## Dimin after ucca rules
+
+ADD:msyn-dimin-after-ucca (&msyn-dimin-after-ucca) TARGET N IF (NEGATE 0 Der/Dimin)(-1 ("ucce" A Attr) )	;
+	## Suu ucce nieidâ.
+	## Juuvâriddoost láá karsâjum masa puoh uccâ muorah já miestuuh. 
+
+COPY:msyn-dimin-after-ucca (Ex/N Der/Dimin &SUGGEST) EXCEPT (&msyn-dimin-after-ucca) BEFORE N TARGET (N &msyn-dimin-after-ucca);
+
 #!! ## Adverbial rules
 
 #!! These rules target adverbial cases, many of them the acc-ill lookalike *-âid/-áid*.
