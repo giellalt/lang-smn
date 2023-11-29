@@ -12117,6 +12117,8 @@ The challenge is to avoid cases where the A is not part of the NP, like:
 
 **Agreement rule:** msyn-adj-attr-pred *Mun lam fiskis/fiskâd.*
 
+## Dimin after ucca rules
+
 ## Adverbial rules
 
 These rules target adverbial cases, many of them the acc-ill lookalike *-âid/-áid*.
