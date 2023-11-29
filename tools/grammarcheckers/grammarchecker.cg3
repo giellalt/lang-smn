@@ -2402,16 +2402,21 @@ ADD:xmsyn-pron-gen-acc (&msyn-pron-gen-acc) TARGET (Pron Sg Gen Dem) IF
 COPY:msyn-pron-gen-acc (Acc &SUGGEST) EXCEPT (Gen &msyn-pron-gen-acc) TARGET (&msyn-pron-gen-acc);
 
 
-ADD:xmsyn-pron-plill-sgacc (&msyn-pron-plill-placc) TARGET ("tot" Pron Pl Ill Dem) IF (-1 TV + VFIN OR TV + Inf OR TV + PrfPrc OR TV + ConNeg);
+ADD:xmsyn-pron-plill-sgacc (&msyn-pron-plill-placc) TARGET ("tot" Pron Pl Ill Dem) IF (-1 TV + VFIN OR TV + Inf OR TV + PrfPrc OR TV + ConNeg LINK NEGATE 0 <TH-Ill-Any>);
 	## Sun stellij toid várugávt sajestis. 
 	## ákku lâi kiddim toid čovgâsávt. 
-	## Mut toid ij ubâ huámmášân peivipaštust. 
 	## Kihheen ij lamâš muštám toid moonnâm peeivi huušâst. 
 	## Tego ulmuuh nomâttij toid. 
 	## Muu kaandâkaandâ huksij toid ucce ääiđi. 
 	## Muu viljâ ij tuálvum toid. 
 	## Vissâ tergâdumos ličij lamâš finniđ toid maasâd, ama?
 	#$ Spellâ lâi nuuhâm já Agnes čokkái sino alne já {toid}£{tain} ij kuškânâm voorâ jyelgist.
+	## Nuuvt, sun pargâ {toid}£{pron,plill-placc|taid}.
+	#$ Sun lâi hárjánâm toid. 
+	
+ADD:xmsyn-pron-plill-sgacc (&msyn-pron-plill-placc) TARGET ("tot" Pron Pl Ill Dem) IF (*1 TV + VFIN OR TV + Inf OR TV + PrfPrc OR TV + ConNeg BARRIER NOT-ADV-PCLE - (V Neg) - ("leđe" Ind) - (A Attr) LINK NEGATE 0 <TH-Ill-Any>);	
+	## Mut toid ij ubâ huámmášân peivipaštust. 
+	#$ Sun toid lâi hárjánâm.
 	
 COPY:msyn-pron-gen-acc (Acc &SUGGEST) EXCEPT (Ill &msyn-pron-plill-placc) TARGET (Pl Ill &msyn-pron-plill-placc);
 	## 
