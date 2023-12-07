@@ -3836,8 +3836,8 @@ ADDRELATION:msyn-predagr-pl3-sg3 ($2) (N Sg Nom) FROM (-5 Neg LINK 0 (&msyn-pred
 #$ Päikkinoomah iä lah siäilum.
 
 ADD:msyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET (A Sg Nom) IF
-	(NEGATE *-1 ("leđe" V Ind) OR ("šoddâđ" V Ind) LINK -1 Nom OR Loc OR Adv OR CS) # Taat uási/et lii viehâ herkki pieggáid.
-	(NEGATE *-1 ("leđe" ConNeg) OR ("šoddâđ" ConNeg) LINK -1 Neg LINK -1 Nom OR Loc OR Adv OR CS) # Mihheen ij lah máhđuttem Imelân
+	(NEGATE 0 <TH-Ill-Any> LINK 1 Ill) # Taat uási/et lii viehâ herkki pieggáid.
+	(NEGATE 1 Sem/Hum + Ill OR Sem/Fem + Ill OR Sem/Mal + Ill OR Sem/Sur + Ill) # Mihheen ij lah máhđuttem Imelân
 	(NEGATE 0  CONCORD-A OR Ord OR Der/Comp OR Der/Superl OR N + Gen OR <AttrPred>)
 	(NEGATE -1 Interr LINK *1 ("leđe")) # man koorãs luonddu lea
 	(NEGATE -1 BOS LINK 2 N + Ill OR N + Loc OR N + Ess OR N + Abe LINK *1 EOS BARRIER V) # Vaalmâš uđâsmitmân!
@@ -4003,10 +4003,11 @@ COPY:msyn-adj-attr-placc (Pl Acc &SUGGEST) EXCEPT (Attr &msyn-adj-attr-placc) TA
 
 #!! ## Dimin after ucca rules
 
-ADD:msyn-dimin-after-ucca (&msyn-dimin-after-ucca) TARGET N IF (NEGATE 0 Der/Dimin)(-1 ("ucce" A Attr) )	;
+ADD:msyn-dimin-after-ucca (&msyn-dimin-after-ucca) TARGET N IF (NEGATE 0 Der/Dimin)(*-1 ("ucce" A Attr) BARRIER (*) - Attr)	;
 	## Suu ucce nieidâ.
 	## Juuvâriddoost láá karsâjum masa puoh uccâ muorah já miestuuh. 
 	## Tust lii maailm nánnáámus ucce njune. 
+	## Sun lâi tego nukke, ucce juármááš nukke.
 
 COPY:msyn-dimin-after-ucca (Ex/N Der/Dimin &SUGGEST) EXCEPT (&msyn-dimin-after-ucca) BEFORE N TARGET (N &msyn-dimin-after-ucca);
 
