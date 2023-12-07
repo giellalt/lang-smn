@@ -2161,6 +2161,7 @@ LIST &msyn-agr-ii-pl3 = &msyn-agr-ii-pl3 ;
 LIST &msyn-attr-com-gen = &msyn-attr-com-gen ;
 LIST &msyn-dem-locattr-gen = &msyn-dem-locattr-gen ;
 LIST &msyn-det-nom-acc = &msyn-det-nom-acc ;
+LIST &msyn-dimin-after-ucca = &msyn-dimin-after-ucca ;
 LIST &msyn-extneg-sg3-pl3 = &msyn-extneg-sg3-pl3 ;
 LIST &msyn-extsubj-acc-nom = &msyn-extsubj-acc-nom ;
 LIST &msyn-extsubj-gen-nom = &msyn-extsubj-gen-nom ;
@@ -4005,10 +4006,13 @@ COPY:msyn-adj-attr-placc (Pl Acc &SUGGEST) EXCEPT (Attr &msyn-adj-attr-placc) TA
 
 ADD:msyn-dimin-after-ucca (&msyn-dimin-after-ucca) TARGET N IF (NEGATE 0 Der/Dimin)(*-1 ("ucce" A Attr) BARRIER (*) - Attr)	;
 	## Suu ucce nieidâ.
-	## Juuvâriddoost láá karsâjum masa puoh uccâ muorah já miestuuh. 
 	## Tust lii maailm nánnáámus ucce njune. 
 	## Sun lâi tego nukke, ucce juármááš nukke.
-
+	
+ADD:msyn-dimin-after-ucca (&msyn-dimin-after-ucca) TARGET N IF (NEGATE 0 Der/Dimin)(-1 CC LINK -1 Der/Dimin OR &msyn-dimin-after-ucca LINK *-1 ("ucce" A Attr) BARRIER (*) - Attr)	;
+	## Juuvâriddoost láá karsâjum masa puoh uccâ muorah já miestuuh. 
+	
+	
 COPY:msyn-dimin-after-ucca (Ex/N Der/Dimin &SUGGEST) EXCEPT (&msyn-dimin-after-ucca) BEFORE N TARGET (N &msyn-dimin-after-ucca);
 
 #!! ## Adverbial rules
