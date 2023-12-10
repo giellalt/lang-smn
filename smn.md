@@ -9218,7 +9218,7 @@ From corpus
 * ...
 
 * **LEXICON MiddleNouns** , referred to from compounding.lexc
-* **njune+N+Cmp/Sh+Sem/Hum:njun Rnoun ;**
+* **njune+N+Cmp/Sh+Sem/Body:njun Rnoun ;**
 * **njälmi+N+Cmp/Sh+Sem/Body:njälm Rnoun ;** tags_via_apertium
 
 * **LEXICON NAMAG** gives »»» and directs to NAMAG, both from adj and numerals
