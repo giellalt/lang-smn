@@ -884,6 +884,10 @@ The interference comes from Finnish e-sentences, where the verb is in the singul
 
 **Agreement rule:** msyn-extsubj-ill-nom
 
+## Verb agreement outside of existential and habitive sentences
+
+**Agreement rule:** msyn-sg3-pl3
+
 ## Subjects
 
 ### Subjects gen > nom
