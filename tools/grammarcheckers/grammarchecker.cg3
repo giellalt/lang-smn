@@ -2206,6 +2206,7 @@ LIST &msyn-refl-sg-pl = &msyn-refl-sg-pl ;
 LIST &msyn-rel-sg-pl = &msyn-rel-sg-pl ;
 LIST &msyn-subj-gen-nom = &msyn-subj-gen-nom ;
 LIST &msyn-subj-ill-nom = &msyn-subj-ill-nom ;
+LIST &msyn-sg3-pl3 = &msyn-sg3-pl3 ;
 LIST &msyn-top-nom-acc = &msyn-top-nom-acc ;
 LIST &msyn-top-placc-plnom = &msyn-top-placc-plnom ;
 LIST &msyn-v-actio-sg1 = &msyn-v-actio-sg1 ;
@@ -3327,6 +3328,12 @@ ADD:msyn-extsubj-ill-nom (&msyn-extsubj-ill-nom) TARGET N IF
 	(0C N + Pl + Ill);
 COPY:msyn-extsubj-ill-nom (Nom &SUGGEST) EXCEPT Ill TARGET (N Pl &msyn-extsubj-ill-nom);
 
+#!! ## Verb agreement outside of existential and habitive sentences
+
+#!!  **Agreement rule:** msyn-sg3-pl3
+ADD:xmsyn-sg3-pl3 (&msyn-sg3-pl3) TARGET (Sg3 V) IF	(-1 (Pron Pl Nom) + Pl OR (Pers Pl Nom) + Pl3 LINK NOT 0 Sg OR Sg3 LINK NEGATE *-1 (V Pl3) BARRIER NOT-ADV-PCLE)(NOT 0 (V Pl3));
+COPY:msyn-sg3-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (&msyn-sg3-pl3);
+	## Sun vuájui juolgijdis piäiváduttemân, moh lâi jo piäivádum.
 
 
 
