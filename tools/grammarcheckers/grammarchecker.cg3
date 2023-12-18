@@ -3104,9 +3104,12 @@ COPY:msyn-v-sg1-prfprc (PrfPrc &SUGGEST) EXCEPT (Ind Prs Sg1 &msyn-v-sg1-prfprc)
 #COPY-njuolggadus: bidjan dohko PrfPrc ja sáni &SUGGEST (maksá "evttot dan")
 
 
+# !! ## PrtSg3 PrtSg3 should be infinitive after movement verbs
 
-
-
+ADD:xmsyn-prtsg3-inf (&msyn-prtsg3-inf) TARGET (Prt Sg3) - (Qst) IF
+	(-1 (<PU-Inf> Prt Sg3))(NOT 1 ("uv" Pcle));
+COPY:msyn-prtsg3-inf (Inf &SUGGEST) EXCEPT (Ind Prt Sg3 &msyn-prtsg3-inf) TARGET (&msyn-prtsg3-inf) ;
+	## Uksâkiällu čuojâi, já Agnes kaačâi {lehâstij} uuvsâ.
 
 
 #!! ## Existential sentences
