@@ -2174,6 +2174,7 @@ LIST &msyn-part-after-num = &msyn-part-after-num ;
 LIST &msyn-imp-nom-acc = &msyn-imp-nom-acc ;
 LIST &msyn-imp-pl3-sg3 = &msyn-imp-pl3-sg3 ;
 LIST &msyn-mii-sgnom-placc = &msyn-mii-sgnom-placc ;
+LIST &msyn-moddii = &msyn-moddii ;
 LIST &msyn-ncompl-ess-sgill = &msyn-ncompl-ess-sgill ;
 LIST &msyn-ncompl-placc-plill = &msyn-ncompl-placc-plill ;
 LIST &msyn-negcompl-sg3-conneg = &msyn-negcompl-sg3-conneg ;
@@ -2287,30 +2288,35 @@ COPY:&msyn-äigin-ääigi (Gen &SUGGEST) EXCEPT (Nom &msyn-äigi-ääigi) TARGET
 
 #!! ## moadde kerdi > moddii
 
-ADD:xmsyn-moddii (&msyn-moddii) TARGET (Num Sg Nom) OR (Num Sg Gen) IF	(1 ("kerdi" N Sg Nom) OR ("kerdi" N Sg Gen));
-ADDRELATION (DELETE1) (Num &msyn-moddii) TO (1 ("kerdi" N Sg Nom) OR ("kerdi" N Sg Gen)) ;
+ADD:msyn-moddii (&msyn-moddii) TARGET (Num Sg Nom) OR (Num Sg Gen) IF	(1 ("kerdi" N Sg Nom) OR ("kerdi" N Sg Gen));
 
-COPY:xmsyn-moddii ("moddii" Adv &SUGGEST) EXCEPT ("muáddi" Num Sg Nom &msyn-moddii) TARGET ("muáddi" &msyn-moddii);
+ADD (&COERROR &msyn-moddii) ("kerdi" N Sg) IF (0 Nom OR Gen)(-1 &msyn-moddii);
+ADDRELATION (DELETE1) ("kerdi" N Sg &msyn-moddii) TO (-1 (Num &msyn-moddii)) ;
+
+
+
+
+COPY:msyn-moddii ("moddii" Adv &SUGGEST) EXCEPT ("muáddi" Num Sg Nom &msyn-moddii) TARGET ("muáddi" &msyn-moddii);
 	## uáčču uáiniđ moolâviermi hiáilumin muáddi kerdi.
 
-COPY:xmsyn-moddii ("maŋgii" Adv &SUGGEST) EXCEPT ("maŋgâ" Num Sg Nom &msyn-moddii) TARGET ("maŋgâ" &msyn-moddii);
+COPY:msyn-moddii ("maŋgii" Adv &SUGGEST) EXCEPT ("maŋgâ" Num Sg Nom &msyn-moddii) TARGET ("maŋgâ" &msyn-moddii);
 
-COPY:xmsyn-moddii ("ohtii" Adv &SUGGEST) EXCEPT ("oovtâ" Num Sg Nom &msyn-moddii) TARGET ("oovtâ" &msyn-moddii);
+COPY:msyn-moddii ("ohtii" Adv &SUGGEST) EXCEPT ("oovtâ" Num Sg Nom &msyn-moddii) TARGET ("oovtâ" &msyn-moddii);
 
-COPY:xmsyn-moddii ("kuohtii" Adv &SUGGEST) EXCEPT ("kyehti" Num Sg Nom &msyn-moddii) TARGET ("kyehti" &msyn-moddii);
+COPY:msyn-moddii ("kuohtii" Adv &SUGGEST) EXCEPT ("kyehti" Num Sg Nom &msyn-moddii) TARGET ("kyehti" &msyn-moddii);
 
-COPY:xmsyn-moddii ("kulmii" Adv &SUGGEST) EXCEPT ("kulmâ" Num Sg Nom &msyn-moddii) TARGET ("kulmâ" &msyn-moddii);
+COPY:msyn-moddii ("kulmii" Adv &SUGGEST) EXCEPT ("kulmâ" Num Sg Nom &msyn-moddii) TARGET ("kulmâ" &msyn-moddii);
 	## Henrik lâi tuolmân táálu lappâd jo kulmâ kerdi. 
 	
-COPY:xmsyn-moddii ("neljii" Adv &SUGGEST) EXCEPT ("nelji" Num Sg Nom &msyn-moddii) TARGET ("nelji" &msyn-moddii);
+COPY:msyn-moddii ("neljii" Adv &SUGGEST) EXCEPT ("nelji" Num Sg Nom &msyn-moddii) TARGET ("nelji" &msyn-moddii);
 
-COPY:xmsyn-moddii ("vittii" Adv &SUGGEST) EXCEPT ("vittâ" Num Sg Nom &msyn-moddii) TARGET ("vittâ" &msyn-moddii);
+COPY:msyn-moddii ("vittii" Adv &SUGGEST) EXCEPT ("vittâ" Num Sg Nom &msyn-moddii) TARGET ("vittâ" &msyn-moddii);
 
-COPY:xmsyn-moddii ("kuttii" Adv &SUGGEST) EXCEPT ("kuttâ" Num Sg Nom &msyn-moddii) TARGET ("kuttâ" &msyn-moddii);
+COPY:msyn-moddii ("kuttii" Adv &SUGGEST) EXCEPT ("kuttâ" Num Sg Nom &msyn-moddii) TARGET ("kuttâ" &msyn-moddii);
 
-COPY:xmsyn-moddii ("čiččii" Adv &SUGGEST) EXCEPT ("čiččâm" Num Sg Nom &msyn-moddii) TARGET ("čiččâm" &msyn-moddii);
+COPY:msyn-moddii ("čiččii" Adv &SUGGEST) EXCEPT ("čiččâm" Num Sg Nom &msyn-moddii) TARGET ("čiččâm" &msyn-moddii);
 
-COPY:xmsyn-moddii ("kahcii" Adv &SUGGEST) EXCEPT ("käävci" Num Sg Nom &msyn-moddii) TARGET ("käävci" &msyn-moddii);
+COPY:msyn-moddii ("kahcii" Adv &SUGGEST) EXCEPT ("käävci" Num Sg Nom &msyn-moddii) TARGET ("käävci" &msyn-moddii);
 
 
 #!! ## Noun phrase internal phenomena
@@ -2587,7 +2593,7 @@ ADD:msyn-gen-after-num (&msyn-gen-after-num) TARGET (N Nom) IF
 COPY:msyn-gen-after-num (Gen &SUGGEST) EXCEPT (Nom &msyn-gen-after-num) TARGET (&msyn-gen-after-num) ;
 
 ADD:msyn-part-after-num (&msyn-part-after-num) TARGET (N Nom) IF
-(*-1 (Num Sg Nom) BARRIER NOT-Attr LINK NOT 0 ("1") OR ("oovtâ") OR Ord OR Sem/Year OR Arab OR Sem/ID OR Rom OR NUM-6)(NEGATE 0 Par);
+(*-1 (Num Sg Nom) BARRIER NOT-Attr LINK NOT 0 ("1") OR ("oovtâ") OR Ord OR Sem/Year OR Arab OR Sem/ID OR Rom OR NUM-6)(NEGATE 0 Par OR &msyn-moddii);
 COPY:msyn-part-after-num (Par &SUGGEST) EXCEPT (Sg Nom &msyn-part-after-num) TARGET (&msyn-part-after-num) ;
 
 	## Oholoopâ ääigi puáhtá leđe vittâ cekki liegâs.
