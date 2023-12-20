@@ -2268,6 +2268,20 @@ ADD:msyn-äigin-ääigi (&msyn-äigin-ääigi) TARGET ("äigi" N Ess) OR ("äigi
 	(-1 (N Gen));
 COPY:&msyn-äigin-ääigi ("äigi" N Sg Gen &SUGGEST) EXCEPT ("äigi" N Ess &msyn-äigin-ääigi) OR ("äigi" N Sg Acc PxDu1 &msyn-äigin-ääigi) OR ("äigi" N Sg Acc PxPl1 &msyn-äigin-ääigi) OR ("äigi" N Sg Acc PxSg1 &msyn-äigin-ääigi) OR ("äigi" N Gen PxDu1 &msyn-äigin-ääigi) OR ("äigi" N Gen PxPl1 &msyn-äigin-ääigi) OR ("äigi" N Gen PxSg1 &msyn-äigin-ääigi) TARGET (&msyn-äigin-ääigi);
 	## Sunnuu eenih láin iällám torist konsert äigin.
+	
+#!! ## äigi (Nom) > ääigi (Gen)
+
+ADD:msyn-äigi-ääigi (&msyn-äigi-ääigi) TARGET ("äigi" N Sg Nom) IF
+	(-1 ("siämmáá") OR ("váhá") OR ("ubâ") OR Num - Sem/Date - Sem/Year OR (N Gen) OR  (Pron Gen));
+COPY:&msyn-äigin-ääigi (Gen &SUGGEST) EXCEPT (Nom &msyn-äigi-ääigi) TARGET (&msyn-äigi-ääigi);
+	## ličij jieš Sopperost kesiluámu äigi. 
+	## Sun tieđij ete äigi algij nuuhâđ, já suu koolgâi forgâ porgâđ miärádâs.
+	## Sun lâi lopedâm, ete Agnes puáhtá puáttij pááikán pel ohtnubálov äigi.
+	## Já sun hepânij váhá, ko sun lâi sooppâm maŋedis äigi tuše tondiet ko sust lâi hyenes uámitobdo čiehâdum pakkeet keežild. 
+	## Anton čuojâttičij oovce äigi, já puohah škoovlâst tieđij tom.
+	## Jenny koijâdij já siämmáá äigi capciistij Agnes seelgi. 
+	## Agnesist moonâi ain äigi ko sun čaalij sämikielân. 
+
 
 #!! ## moadde kerdi > moddii
 
@@ -2280,6 +2294,22 @@ COPY:xmsyn-moddii ("moddii" Adv &SUGGEST) EXCEPT ("muáddi" Num Sg Nom &msyn-mod
 COPY:xmsyn-moddii ("maŋgii" Adv &SUGGEST) EXCEPT ("maŋgâ" Num Sg Nom &msyn-moddii) TARGET ("maŋgâ" &msyn-moddii);
 
 COPY:xmsyn-moddii ("ohtii" Adv &SUGGEST) EXCEPT ("oovtâ" Num Sg Nom &msyn-moddii) TARGET ("oovtâ" &msyn-moddii);
+
+COPY:xmsyn-moddii ("kuohtii" Adv &SUGGEST) EXCEPT ("kyehti" Num Sg Nom &msyn-moddii) TARGET ("kyehti" &msyn-moddii);
+
+COPY:xmsyn-moddii ("kulmii" Adv &SUGGEST) EXCEPT ("kulmâ" Num Sg Nom &msyn-moddii) TARGET ("kulmâ" &msyn-moddii);
+	## Henrik lâi tuolmân táálu lappâd jo kulmâ kerdi. 
+	
+COPY:xmsyn-moddii ("neljii" Adv &SUGGEST) EXCEPT ("nelji" Num Sg Nom &msyn-moddii) TARGET ("nelji" &msyn-moddii);
+
+COPY:xmsyn-moddii ("vittii" Adv &SUGGEST) EXCEPT ("vittâ" Num Sg Nom &msyn-moddii) TARGET ("vittâ" &msyn-moddii);
+
+COPY:xmsyn-moddii ("kuttii" Adv &SUGGEST) EXCEPT ("kuttâ" Num Sg Nom &msyn-moddii) TARGET ("kuttâ" &msyn-moddii);
+
+COPY:xmsyn-moddii ("čiččii" Adv &SUGGEST) EXCEPT ("čiččâm" Num Sg Nom &msyn-moddii) TARGET ("čiččâm" &msyn-moddii);
+
+COPY:xmsyn-moddii ("kahcii" Adv &SUGGEST) EXCEPT ("käävci" Num Sg Nom &msyn-moddii) TARGET ("käävci" &msyn-moddii);
+
 
 #!! ## Noun phrase internal phenomena
 
@@ -3331,7 +3361,7 @@ COPY:msyn-extsubj-ill-nom (Nom &SUGGEST) EXCEPT Ill TARGET (N Pl &msyn-extsubj-i
 #!! ## Verb agreement outside of existential and habitive sentences
 
 #!!  **Agreement rule:** msyn-sg3-pl3
-ADD:xmsyn-sg3-pl3 (&msyn-sg3-pl3) TARGET (Sg3 V) IF	(-1 (Pron Pl Nom) + Pl OR (Pers Pl Nom) + Pl3 LINK NOT 0 Sg OR Sg3 LINK NEGATE *-1 (V Pl3) BARRIER NOT-ADV-PCLE)(NOT 0 (V Pl3));
+ADD:msyn-sg3-pl3 (&msyn-sg3-pl3) TARGET (Sg3 V) IF	(-1 (Pron Pl Nom) + Pl OR (Pers Pl Nom) + Pl3 LINK NOT 0 Sg OR Sg3 LINK NEGATE *-1 (V Pl3) BARRIER NOT-ADV-PCLE)(NOT 0 (V Pl3));
 COPY:msyn-sg3-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (&msyn-sg3-pl3);
 	## Sun vuájui juolgijdis piäiváduttemân, moh lâi jo piäivádum.
 
