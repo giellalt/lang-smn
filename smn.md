@@ -11787,6 +11787,8 @@ name convention for error tags: ´´&errortype-errorsubtype-is-shouldbe´´
 
 ## äigin > ääigi
 
+## äigi (Nom) > ääigi (Gen)
+
 ## moadde kerdi > moddii
 
 ## Noun phrase internal phenomena
