@@ -1,6 +1,6 @@
 # -*- cg-pre-pipe: "hfst-tokenise -g ../../tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst" -*-
 # Divvun & Giellatekno - open source grammars for Sámi and other languages
-# Copyright © 2000-2016 UiT The arctic University of Norway
+# Copyright © 2000-2023 UiT The arctic University of Norway
 # http://giellatekno.uit.no & http://divvun.no
 #
 # This program is free software; you can redistribute and/or modify
@@ -2169,6 +2169,8 @@ LIST &msyn-extsubj-ill-nom = &msyn-extsubj-ill-nom ;
 LIST &msyn-extv-numeral-sg3-pl3 = &msyn-extv-numeral-sg3-pl3 ;
 LIST &msyn-extv-pl3-sg3 = &msyn-extv-pl3-sg3 ;
 LIST &msyn-extv-sg3-pl3 = &msyn-extv-sg3-pl3 ;
+LIST &msyn-gen-after-num = &msyn-gen-after-num ;
+LIST &msyn-part-after-num = &msyn-part-after-num ;
 LIST &msyn-imp-nom-acc = &msyn-imp-nom-acc ;
 LIST &msyn-imp-pl3-sg3 = &msyn-imp-pl3-sg3 ;
 LIST &msyn-mii-sgnom-placc = &msyn-mii-sgnom-placc ;
@@ -2572,6 +2574,31 @@ ADD:xmsyn-adj-sg-pl (&msyn-adj-sg-pl) TARGET A IF
 	(NOT 0 ("tuše"))
 	(1C N + Pl + Nom);
 COPY:msyn-adj-sg-pl (Pl Nom &SUGGEST) EXCEPT (Sg Gen &msyn-adj-sg-pl) TARGET (A Gen &msyn-adj-sg-pl);
+
+
+#!! ### Numeral phrases - case and number of nouns
+	# 2-6 + gen
+	# > 6 + part
+	
+LIST NUM-6 = "maŋgâ" "oovtâ" "kyehti" "kulmâ" "nelji" "vittâ" "kuttâ" "1" "2" "3" "4" "5" "6" ;
+
+ADD:msyn-gen-after-num (&msyn-gen-after-num) TARGET (N Nom) IF
+(*-1 (Num Sg Nom) + NUM-6 BARRIER NOT-Attr LINK NOT 0 ("1") OR ("oovtâ") OR Ord OR Sem/Year OR Arab OR Sem/ID OR Rom)(NEGATE 0 Gen);
+COPY:msyn-gen-after-num (Gen &SUGGEST) EXCEPT (Nom &msyn-gen-after-num) TARGET (&msyn-gen-after-num) ;
+
+ADD:msyn-part-after-num (&msyn-part-after-num) TARGET (N Nom) IF
+(*-1 (Num Sg Nom) BARRIER NOT-Attr LINK NOT 0 ("1") OR ("oovtâ") OR Ord OR Sem/Year OR Arab OR Sem/ID OR Rom OR NUM-6)(NEGATE 0 Par);
+COPY:msyn-part-after-num (Par &SUGGEST) EXCEPT (Sg Nom &msyn-part-after-num) TARGET (&msyn-part-after-num) ;
+
+	## Oholoopâ ääigi puáhtá leđe vittâ cekki liegâs.
+	## Sajân lâi ceggejum kyehti lyevi. 
+	## Molsâiähtun lâi kyehti ilgâdis ääši.
+	## Must lii kyehti spellâ, Agnes eeđâi äijihân. 
+	## Sun pajânij epivisesin kulmâ portháš. 
+	#$ Lii tuše kyehtlovkulmâ cekkid.
+	## Hettiih kulmânubálo ihásijd nieidâid, mut jieh tuostâ sárnuđ muin.
+	## Pááikán liin aainâs-uv kulmâčyeđe kilomeetter.
+	#$ Munnust lii paijeel kulmâčyeđe kilomeetter määđhi. 
 
 #!! ### Quantors in attributive positions
 
