@@ -742,7 +742,7 @@ LEXICON 2NJUNE_SG !!≈ * **@CODE@**
 +N+Sg+Ill:^EA^CSH%>s CPXsuff ;  !  njunásis 
 +N+Sg+Com:^WG%>in CPXsuff ;  ! njunijnis 
 +N+Ess:%>n CPXsuff ;                        ! njunenis 
-+N+Der1+Der/Dimin: 2ALGE_PL_DIM ; 
++N+Der1+Der/Dimin: 2ALGE_SG_DIM ; 
 +N+Der1+Der/lasj:^EA^WG%>l ANOLASJ ; 
 +N+Der1+Der2+Der/Car:^WG%>tt MUSTOTTEM ; 
  
@@ -1831,7 +1831,8 @@ LEXICON APINA_SG  !!≈ * **@CODE@**
 +N+Sg+Com:%>in CPXsuff ;  ! viinijnis 
 +N+Ess:%>n CPXsuff ;      ! apinanis 
 +N:%> Gen_DER ; 
- 
++N+Der1+Der/Dimin: APINA_SG_DIM ;
+
 LEXICON APINA_PL !!≈ * **@CODE@** 
 +N: X_h_PL ; 
 +N+Cmp/SgNom: Rhash ; 
@@ -1841,6 +1842,7 @@ LEXICON APINA_PL !!≈ * **@CODE@**
 +N+Pl+Acc:%>id CPXsuff ;  ! 
 +N+Pl+Ill:%>id CPXsuff ;  ! 
 +N+Pl+Com:%>id CPXsuffCOM ;  ! 
++N+Der1+Der/Dimin: APINA_PL_DIM ;
  
  
 LEXICON X_APINA_SG !!≈ * **@CODE@** (common for different POS) 
@@ -4476,27 +4478,33 @@ LEXICON 2AAIGA_DIM !!≈ * **@CODE@**
 
 !! ### 3-syllabic
 
-!! 3LITTER --> 4C_RASTAGAS
+LEXICON APINA_SG_DIM
+3SYLL_SG_DIM ; ! todo -- check
 
-!LEXICON 3SYLL_SG_DIM
-!+N+Sg+Nom:%>š K ; 
-!+N+Sg+Gen:%>užii K ; 
-!+N+Sg+Acc:%>užii K ; 
-!+N+Sg+Ill:%>užán K ; 
-!+N+Sg+Loc:%>užiist K ; 
-!+N+Sg+Com:%>žijn K ; 
-!+N+Sg+Abe:%>žuttáá K ; 
-!+N+Ess:%>žin K ; 
-!+N+Par:%>žid K ; 
-!
-!LEXICON 3SYLL_PL_DIM
-!+N+Pl+Nom:%>užiih K ; 
-!+N+Pl+Gen:%>užij K ; 
-!+N+Pl+Acc:%>užijd K ; 
-!+N+Pl+Ill:%>užijd K ; 
-!+N+Pl+Loc:%>užijn K ; 
-!+N+Pl+Com:%>užij GUIN ; 
-!+N+Pl+Abe:%>užijttáá K ; 
+LEXICON APINA_PL_DIM
+3SYLL_PL_DIM ; ! todo -- check
+
+LEXICON 3SYLL_SG_DIM
++N+Sg+Nom:%>š K ; 
++N+Sg+Gen:%>užii K ; 
++N+Sg+Acc:%>užii K ; 
++N+Sg+Ill:%>užán K ; 
++N+Sg+Loc:%>užiist K ; 
++N+Sg+Com:%>žijn K ; 
++N+Sg+Abe:%>žuttáá K ; 
++N+Ess:%>žin K ; 
++N+Par:%>žid K ; 
+
+LEXICON 3SYLL_PL_DIM
++N+Pl+Nom:%>užiih K ; 
++N+Pl+Gen:%>užij K ; 
++N+Pl+Acc:%>užijd K ; 
++N+Pl+Ill:%>užijd K ; 
++N+Pl+Loc:%>užijn K ; 
++N+Pl+Com:%>užij GUIN ; 
++N+Pl+Abe:%>užijttáá K ; 
+
+!! 3LITTER --> 4C_RASTAGAS
 
 
 !! ### 4-syllabic
