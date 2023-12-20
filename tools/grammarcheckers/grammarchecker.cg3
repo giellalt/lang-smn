@@ -4224,6 +4224,26 @@ COPY:msyn-n-ess-ill (Sg Ill &SUGGEST) EXCEPT (Ess &msyn-n-ess-ill) TARGET (N &ms
 #$ Puoh ij kannat muštâliđ lohhei.
 
 
+#!! #### Gen > Loc laa pággu
+
+ADD:msyn-gen-loc-paggu (&msyn-gen-loc-paggu) TARGET Gen OR Acc IF (1 ("leđe") LINK 1 ("pággu" Nom)) (0 Sem/Hum OR Sem/Fem OR Sem/Mal OR Pers)(NEGATE 0 Loc) ;
+ADD:msyn-gen-loc-paggu (&msyn-gen-loc-paggu) TARGET Gen OR Acc IF (1 ("pággu" Nom) LINK 1 ("leđe")) (0 Sem/Hum OR Sem/Fem OR Sem/Mal OR Pers)(NEGATE 0 Loc) ;
+COPY:msyn-gen-loc-paggu (Loc &SUGGEST) EXCEPT (Gen &msyn-gen-loc-paggu) OR (Acc &msyn-gen-loc-paggu) TARGET (&msyn-gen-loc-paggu) ;
+	## Talle suu lâi pággu pisániđ já vuoiŋâđ váhá äigi ovdil ko puovdij juátkiđ. 
+	## Suu lâi pággu čokkâđ seeŋgâ oolâ já kyeđđiđ teddildâh täässiv peiviloovdân. 
+	## Ella eeni lâi pággu luovâttij, já nuuvt sun monâttij peerâ puásuimeerhâ.
+	## Agnes lâi pággu uáččuđ uáđđij tääl.
+	## Talle suu lâi pággu pisániđ já vuoiŋâđ váhá äigi ovdil ko puovdij juátkiđ. 
+	## Jorreeräätis lâi kenski čunžáámus já hirmâdumos, mon Agnes lâi kuássin uáinám, te suu lâi pággu povvâstiđ. 
+	## Taan kerdi Agnes lâi pággu vyelgiđ tuoddarân, ige tuostâm smiettâđ ete mon kuhás.
+	## Suu lâi pággu oppâđ lase. 
+	## Talle suu ličij pággu pisánij savâstâllâđ.
+	## Ääših ornišuv; toi lâi pággu ornišuv.
+	## Suu lâi pággu mieđettij ete valjim lâi vaigâdis, mut ij, sun ličij valjim Henrik. 
+	## Mut mast tom tiätá veik munjin puáđáččij hiivsigeeti iho já muu ličij pággu pajânij, sun smietâi. 
+	## Ko Agnes poođij pááikán Sopperost Kiärun aldasijn vyesimáánust, sust lâi pággu mainâstiđ Jennyn suu kesivuáváámijd. 
+
+
 
 
 #!! ### Postposition internal case errors
@@ -4297,7 +4317,7 @@ COPY:easteregg ("27.2.2023" Num  &SUGGEST) EXCEPT ("nuvviDgrammarchecker" &easte
 #!! ## Word order rules
 
 #!! **Syntax rule:** syn-OVS-OSV
-ADD:xsyn-OVS-OSV (&syn-OVS-OSV) TARGET VFIN IF (*-1 Acc BARRIER NOT-ADV-PCLE LINK NOT 0 Nom) (1 (N Nom) OR (Pron Nom));
+ADD:xsyn-OVS-OSV (&syn-OVS-OSV) TARGET VFIN - ("leđe") IF (*-1 Acc BARRIER NOT-ADV-PCLE LINK NOT 0 Nom) (1 (N Nom) OR (Pron Nom));
 ##  Eres detaljijd puáhtá lohhee jieš kuvâttâllâđ.
 ##  Eres detaljijd lohhee puáhtá jieš kuvâttâllâđ.
 MOVE:syn-OVS-OSV (V &syn-OVS-OSV) AFTER (1 (N Nom) OR (Pron Nom)) ;
