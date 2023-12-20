@@ -12155,6 +12155,8 @@ These rules target adverbial cases, many of them the acc-ill lookalike *-âid/-�
 
 #### Ess > SgIll
 
+#### Gen > Loc laa pággu
+
 ### Postposition internal case errors
 
 **Agreement rule:** msyn-po-nom-gen
