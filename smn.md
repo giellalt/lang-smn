@@ -11845,6 +11845,8 @@ mii + nominative should be mii + acc
 
 **Agreement rule:** msyn-adj-nom-acc
 
+### Numeral phrases - case and number of nouns
+
 ### Quantors in attributive positions
 
 **Agreement rule:** msyn-quant-nom-gen (A.Gen + N.Nom) # add Ord
