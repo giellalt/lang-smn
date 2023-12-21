@@ -2595,7 +2595,7 @@ COPY:msyn-gen-after-num (Gen &SUGGEST) EXCEPT (Nom &msyn-gen-after-num) TARGET (
 ADD:msyn-part-after-num (&msyn-part-after-num) TARGET (N Nom) IF
 (*-1 (Num Sg Nom) BARRIER NOT-Attr LINK NOT 0 ("1") OR ("oovtâ") OR Ord OR Sem/Year OR Arab OR Sem/ID OR Rom OR NUM-6)(NEGATE 0 Par OR &msyn-moddii);
 COPY:msyn-part-after-num (Par &SUGGEST) EXCEPT (Sg Nom &msyn-part-after-num) TARGET (&msyn-part-after-num) ;
-
+	## Tast lijjii kulmânubáloh ive. 
 	## Oholoopâ ääigi puáhtá leđe vittâ cekki liegâs.
 	## Sajân lâi ceggejum kyehti lyevi. 
 	## Molsâiähtun lâi kyehti ilgâdis ääši.
@@ -4116,6 +4116,11 @@ ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF
 	(NOT 0 Ill OR PxSg3)
 	(NOT 1 ("pajas") OR ("vuálus") OR ("vuálos") OR TV + Inf)
 	(NOT *1 N + Ill BARRIER NOT-NPMOD);
+	
+	
+ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET (N Acc) OR (Pron Acc) IF (0 Sem/Hum OR Sem/Mal OR Sem/Fem OR Sem/Ani OR Pers)(NOT 0 Ill)(*-1 ("keččâđ") BARRIER NOT-ADV-PCLE);
+	## Anton moijái já keejâi suu.
+	## Sun keejâi puhelin.
 
 
 #!!  **Agreement rule:** msyn-obj-acc-ill *Ideologia kuáská kielâid/kieláid.*
