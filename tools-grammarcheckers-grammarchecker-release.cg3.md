@@ -204,40 +204,13 @@ Der/Superl
 
 - vdic
 - spelling error
+- adjectives with homonymous attributive and predicative forms
 
-### Semtags
+### Semantic tags
 
-- HUMAN
-- Sem/Act
-- Sem/Ani
 - Sem/Atr
-- Sem/Body
-- Sem/Clth
-- Der/Date
-- Sem/Domain
-- Sem/Feat-phys
-- Sem/Fem
-- Sem/Group
-- Sem/Hum
-- Sem/ID
-- Sem/Lang
-- Sem/Mal
-- Sem/Measr
-- Sem/Measr_Time
-- Sem/Money
-- Sem/Obj
-- Sem/Obj-el
-- Sem/Org
-- Sem/Par
-- Sem/Perc-emo
-- Sem/Plc
-- Sem/Sign
-- Sem/State-sick
-- Sem/Sur
-- Sem/Time
-- Sem/Time
-- Sem/Txt
-- Der/Year
+
+HUMAN
 
 This ends the semtag list.
 
@@ -703,7 +676,15 @@ name convention for error tags: ´´&errortype-errorsubtype-is-shouldbe´´
 
 **Speller suggestions rule** &real-love-lope
 
+## äigin > ääigi
+
+## moadde kerdi > moddii
+
 ## Noun phrase internal phenomena
+
+### Possessive pronouns > reflexive pronouns
+
+### Phrasal verbs
 
 ### Demonstratives
 
@@ -1026,6 +1007,8 @@ The challenge is to avoid cases where the A is not part of the NP, like:
 **Agreement rule:** msyn-adj-attr-pred *Tot lii hirmâd*
 
 **Agreement rule:** msyn-adj-attr-pred *Mun lam fiskis/fiskâd.*
+
+## Dimin after ucca rules
 
 ## Adverbial rules
 
