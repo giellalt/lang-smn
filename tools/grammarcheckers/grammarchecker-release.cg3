@@ -266,49 +266,132 @@ LIST Err/Orth-spes = Err/Orth-a/á Err/Orth-nom/gen Err/Orth-nom/acc Err/DerSub 
 
 LIST <vdic> = <vdic> ;				        #!! - vdic
 LIST <spelled> = <spelled> ;				#!! - spelling error
+LIST <AttrPred> = <AttrPred> ;				#!! - adjectives with homonymous attributive and predicative forms
 
-#!! ### Semtags
+#!! ### Semantic tags
 
-LIST HUMAN = Sem/Fem Sem/Mal Sem/Sur ;	    #!! - HUMAN
-LIST Sem/Act = Sem/Act ;				    #!! - Sem/Act
-LIST Sem/Ani = Sem/Ani ;				    #!! - Sem/Ani
-LIST Sem/Atr = Sem/Atr ;				    #!! - Sem/Atr
-LIST Sem/Body = Sem/Body ;				    #!! - Sem/Body
-LIST Sem/Clth = Sem/Clth ;				    #!! - Sem/Clth
-LIST Sem/Date = Sem/Date ;                  #!! - Der/Date
-LIST Sem/Domain = Sem/Domain ;			    #!! - Sem/Domain
-LIST Sem/Feat-phys = Sem/Feat-phys ;	    #!! - Sem/Feat-phys
-LIST Sem/Fem = Sem/Fem ;				    #!! - Sem/Fem
-LIST Sem/Group = Sem/Group ;			    #!! - Sem/Group
-LIST Sem/Hum = Sem/Hum ;                    #!! - Sem/Hum
-LIST Sem/ID = Sem/ID ;                      #!! - Sem/ID
-LIST Sem/Lang = Sem/Lang ;				    #!! - Sem/Lang
-LIST Sem/Mal = Sem/Mal ;				    #!! - Sem/Mal
-LIST Sem/Measr = Sem/Measr ;			    #!! - Sem/Measr
-LIST Sem/Measr_Time = Sem/Measr_Time ;      #!! - Sem/Measr_Time
-LIST Sem/Money = Sem/Money ;			    #!! - Sem/Money
-LIST Sem/Obj = Sem/Obj ;				    #!! - Sem/Obj
-LIST Sem/Obj-el = Sem/Obj-el ;			    #!! - Sem/Obj-el
-LIST Sem/Org = Sem/Org ;				    #!! - Sem/Org
-LIST Sem/Part = Sem/Part ;				    #!! - Sem/Par
-LIST Sem/Perc-emo = Sem/Perc-emo ;		    #!! - Sem/Perc-emo
-LIST Sem/Plc = Sem/Plc ;				    #!! - Sem/Plc
-LIST Sem/Sign = Sem/Sign ;				    #!! - Sem/Sign
-LIST Sem/State-sick = Sem/State-lang-sick ; #!! - Sem/State-sick
-LIST Sem/Sur = Sem/Sur ;				    #!! - Sem/Sur
-LIST Sem/Time = Sem/Time ;				    #!! - Sem/Time
-LIST Sem/Time-clock = Sem/Time-clock ;	    #!! - Sem/Time
-LIST Sem/Txt = Sem/Txt ;				    #!! - Sem/Txt
-LIST Sem/Year = Sem/Year ;                  #!! - Der/Year
-
-
+LIST Sem/Act = Sem/Act Sem/Act_Group Sem/Act_Plc Sem/Act_Route; #Activity #Ollet guhká dainna X-Com (Veaigin bisánasttii Ristenge geahččat, man guhkás Lemet-gázzi juo ledje ollen dainna divvunbargguin.) # bargu
+LIST Sem/Adr = Sem/Adr ;
+LIST Sem/Amount = Sem/Amount Sem/Amount_Build Sem/Amount_Semcon;
+LIST Sem/Ani = Sem/Ani Sem/Ani-fish Sem/Ani_Build_Hum_Txt Sem/Ani_Buildpart Sem/Ani_Group Sem/Ani_Group_Hum Sem/Ani_Hum Sem/Ani_Hum_Plc Sem/Ani_Hum_Time Sem/Ani_Body-abstr_Hum Sem/Ani_Plc Sem/Ani_Plc_Txt Sem/Ani_Time Sem/Ani_Veh ; #Animal #bivdit X-Loc veahki.
+LIST Sem/Ani-fish = Sem/Ani-fish ;
+LIST Sem/Aniprod = Sem/Aniprod Sem/Aniprod_Hum
+Sem/Aniprod_Obj-clo Sem/Aniprod_Perc-phys Sem/Aniprod_Plc ;
+LIST Sem/Body = Sem/Body Sem/Body_Body-abstr Sem/Body_Clth Sem/Body_Food Sem/Body_Group_Hum Sem/Body_Group_Hum_Time Sem/Body_Hum Sem/Body_Mat Sem/Body_Measr Sem/Body_Obj_Tool-catch Sem/Body_Plc Sem/Body_Time ; #Body #Buohkat ceggejedje gieđa. Mon gal attán dutnje bealji vuollái. Go duos dás speččohallá bahtii de gal buollá bargomokta! Čuolda basttii sus alemii.
+LIST Sem/Body-abstr = Sem/Ani_Body-abstr_Hum Sem/Body-abstr Sem/Body-abstr_Prod-audio_Semcon Sem/Body_Body-abstr ; # jierbmi, siellu, ...
+LIST Sem/Build = Sem/Amount_Build Sem/Ani_Build Sem/Ani_Build_Hum_Txt Sem/Build Sem/Build_Buildpart Sem/Build_Clthpart Sem/Build_Edu_Org Sem/Build_Event_Org Sem/Build_Org Sem/Build_Route ; #Build #Sem #Syn: hukset X deike
+LIST Sem/Build-room = Sem/Build-room ;
+LIST Sem/Buildpart = Sem/Ani_Buildpart Sem/Buildpart Sem/Buildpart_Plc Sem/Build_Buildpart ; #Building part, e.g. room #Sem:+con,+count,-mova #Syn: mannat X sisa
+LIST Sem/Cat = Sem/Cat ;
+LIST Sem/Clth = Sem/Body_Clth Sem/Clth Sem/Clth_Hum ; #Clothes #Sem #bidjat X ala/badjelii.
+LIST Sem/Clth-jewl = Sem/Clth-jewl Sem/Clth-jewl_Curr Sem/Clth-jewl_Curr_Obj Sem/Clth-jewl_Fruit Sem/Clth-jewl_Money Sem/Clth-jewl_Plant Sem/Org_Clth-jewl ; #Clothes jewelry #Synt: bidjat X ala. *bidjat X badjelii.
+LIST Sem/Clthpart  = Sem/Build_Clthpart Sem/Clthpart  ;
+LIST Sem/Ctain = Sem/Ctain Sem/Ctain_Feat-phys Sem/Ctain_Furn Sem/Ctain_Plc Sem/Ctain_Tool Sem/Ctain_Tool-measr ; #Container #Sem:+mova #Syn: bidjat juoidá X sisa
+LIST Sem/Ctain-abstr = Sem/Ctain-abstr Sem/Ctain-abstr_Org ;
+LIST Sem/Curr = Sem/Clth-jewl_Curr Sem/Curr Sem/Curr_Org; #Syn: Mun mávssan dasa 100 X. Dat máksá 100 X.
+LIST Sem/Date = Sem/Date ;
+LIST Sem/Dance = Sem/Dance Sem/Dance_Org Sem/Dance_Prod-audio ; #Ollugat dánso swinga lávddi ovddabeale.
+LIST Sem/Dir = Sem/Dir ;
+LIST Sem/Domain = Sem/Domain Sem/Domain_Food-med Sem/Domain_Prod-audio;
+LIST Sem/Drink = Sem/Drink ;
+LIST Sem/Dummytag = Sem/Dummytag ;
+LIST Sem/Edu = Sem/Build_Edu_Org Sem/Edu Sem/Edu_Event Sem/Edu_Group_Hum Sem/Edu_Hum Sem/Edu_Mat Sem/Edu_Org ; # vázzit X-Acc. addit X-Acc. X:s lea beroštupmi.
+LIST Sem/Event = Sem/Build_Event_Org Sem/Edu_Event Sem/Event Sem/Event_Food Sem/Event_Hum Sem/Event_Plc Sem/Event_Plc-elevate Sem/Event_Time ; # X maŋŋel mun ferten vuolgit. X:s leat ollu olbmot. *Lean leamaš doppe X:Gen.
+#LIST Sem/Feat-cogn = Sem/Feat-cogn ; # oaidnu, oamedovdu, viissisvuohta
+LIST Sem/Feat = Sem/Feat Sem/Feat_Plant ; #many -vuohta and -dat nouns
+LIST Sem/Feat-measr = Sem/Feat-measr ;
+LIST Sem/Feat-phys = Sem/Ctain_Feat-phys Sem/Feat-phys Sem/Feat-phys_Tool-write Sem/Feat-phys_Veh Sem/Feat-phys_Wthr ;
+LIST Sem/Feat-psych = Sem/Body-abstr_Feat-psych Sem/Feat-psych Sem/Feat-psych_Hum ; #not touchable, not countable ("beroštupmi" "gáđašvuohta" "mokta" "sáhkkiivuohta") - Mus lea X,  Son lea X-adj persovdna # muitu
+LIST Sem/Fem = Sem/Fem ;
+LIST Sem/Food = Sem/Body_Food Sem/Event_Food Sem/Food Sem/Food_Perc-phys Sem/Food_Plant ; #Syn: bassit/borrat/sohpat X-Acc. mon im læk borram dam guolest. mun boran iđitbiepmu. mus lea iđitbiebmu fárus. birgui borastuvvat
+LIST Sem/Food-med = Sem/Domain_Food-med Sem/Food-med ;
+LIST Sem/Fruit = Sem/Fruit Sem/Fruit_Plant ;
+LIST Sem/Furn = Sem/Ctain_Furn Sem/Furn Sem/Food_Obj-surfc; #Syn: bidjat X vissui: čohkkedit X ala
+LIST Sem/Game = Sem/Game Sem/Game_Obj-play ;
+LIST Sem/Geom = Sem/Geom Sem/Geom_Obj ;
+LIST Sem/Group = Sem/Act_Group Sem/Ani_Group Sem/Ani_Group_Hum Sem/Body_Group_Hum Sem/Body_Group_Hum_Time Sem/Edu_Group_Hum Sem/Group Sem/Group_Hum Sem/Group_Hum_Org Sem/Group_Hum_Plc Sem/Group_Hum_Prod-vis Sem/Group_Org Sem/Group_Sign Sem/Group_Txt ; #Bárdni lea riggámus sogas. -Plc
+LIST Sem/Hum = Sem/Ani_Body-abstr_Hum Sem/Ani_Build_Hum_Txt Sem/Ani_Group_Hum Sem/Ani_Hum Sem/Ani_Hum_Plc Sem/Ani_Hum_Time Sem/Aniprod_Hum Sem/Body_Group_Hum Sem/Body_Hum Sem/Clth_Hum Sem/Edu_Group_Hum Sem/Event_Hum Sem/Feat-psych_Hum Sem/Group_Hum Sem/Body_Group_Hum_Time Sem/Group_Hum_Org Sem/Group_Hum_Plc Sem/Group_Hum_Prod-vis Sem/Hum Sem/Hum_Lang Sem/Hum_Lang_Plc Sem/Hum_Lang_Time Sem/Hum_Obj Sem/Hum_Org Sem/Hum_Plant Sem/Hum_Plc Sem/Hum_Sign Sem/Hum_Tool Sem/Hum_Veh Sem/Hum_Wthr ; #Human
+#LIST Sem/Hum-kin = Sem/Hum-kin ; #Human kinship
+LIST Sem/Hum-abstr = Sem/Hum-abstr ;
+LIST Sem/Hum-prof = Sem/Hum-prof ;
+LIST Sem/ID = Sem/ID ;
+LIST Sem/Ideol = Sem/Ideol ;
+LIST Sem/Lang = Sem/Hum_Lang Sem/Lang Sem/Lang_Tool ; #Syn: hállat X:illatiiva. Son hállá X:Acc. Jorgalan dán X:lokatiiva Y:illatiiva.
+LIST Sem/Mal = Sem/Mal ;
 LIST Sem/Mat = Sem/Body_Mat Sem/Edu_Mat Sem/Mat Sem/Mat_Plant Sem/Mat_Txt ; # Material #Sem: cannot pass through it without destroying it, ráhkadit juoidá X:s. Niibi lea X-Loc-Sg. #Dán báhkis šaddá čáppa gohppu.
+LIST Sem/Measr = Sem/Body_Measr Sem/Measr Sem/Measr_Sign Sem/Measr_Time ; # Lea lassánan 100 X-Loc.
+LIST Sem/Money = Sem/Clth-jewl_Money Sem/Money Sem/Money_Obj Sem/Money_Part Sem/Money_Txt ; #Mun mávssán X. Mii ávžžuhit vuovdit alimus X-Ill (haddái). ruhtadit doaibmabušeahtain. vuovdit/bidjat ruđast - selge for penger
+LIST Sem/Obj = Sem/Body_Obj_Tool-catch Sem/Clth-jewl_Curr_Obj Sem/Geom_Obj Sem/Hum_Obj Sem/Money_Obj Sem/Obj Sem/Obj_Semcon Sem/Obj_State Sem/Obj_Veh ; # concrete object, movable #Syn: Mun guoskkán X-Acc. Dá livčče dutnje X-Nom (sabehat). čievččastit geađggi johkii
+#LIST Sem/Obj-com = Sem/Obj-com ; #communication object #hálan telefuvnnas/e-poasttas #sádden X bokte
+LIST Sem/Obj-clo = Sem/Aniprod_Obj-clo Sem/Obj-clo ; #bidjat juoidá Obj-clo sisa
+LIST Sem/Obj-el = Sem/Obj-el ; # moveable, countable, touchable, electrical objects that can be turned on and of,  mus lea X alde, mun bijan X ala
+LIST Sem/Obj-ling = Sem/Obj-ling Sem/Obj-ling_Obj-surfc ;
+LIST Sem/Obj-play = Sem/Game_Obj-play Sem/Obj-play_Sport ;
+LIST Sem/Obj-rope = Sem/Obj-rope ;
+LIST Sem/Obj-surfc = Sem/Obj-surfc Sem/Obj-ling_Obj-surfc Sem/Food_Obj-surfc ;
+LIST Sem/Org = Sem/Build_Edu_Org Sem/Build_Event_Org Sem/Build_Org Sem/Ctain-abstr_Org Sem/Curr_Org Sem/Dance_Org Sem/Edu_Org Sem/Group_Hum_Org Sem/Group_Org Sem/Hum_Org Sem/Org Sem/Org_Clth-jewl Sem/Org_Prod-cogn Sem/Org_Rule Sem/Org_Txt Sem/Org_Veh ;
+LIST Sem/Part = Sem/Part Sem/Money_Part Sem/Part_Prod-cogn ; # bealli, oassi
+LIST Sem/Perc-emo = Sem/Perc-emo Sem/Perc-emo_Wthr ; #Sem not touchable, not countable ("ballu" "suhttu" "vaši") -  Mun dovddan garra X. Mun lean X+Loc # moraš
+LIST Sem/Perc-phys = Sem/Aniprod_Perc-phys Sem/Food_Perc-phys Sem/Perc-phys Sem/Perc-emo_Wthr ; # anistupmi, oaidnu
+LIST Sem/Plant = Sem/Clth-jewl_Plant Sem/Ctain-clth_Plant Sem/Feat_Plant Sem/Food_Plant Sem/Fruit_Plant Sem/Hum_Plant Sem/Mat_Plant Sem/Plant Sem/Plant_Plantpart Sem/Plant_Tool Sem/Plant_Tool-measr ; #čáhccet X-Acc #X-Nom šaddet
+LIST Sem/Plantpart = Sem/Plant_Plantpart Sem/Plantpart ; #čáhccet X-Acc #X-Nom šaddet
+LIST Sem/Plc = Sem/Act_Plc Sem/Ani_Hum_Plc Sem/Ani_Plc Sem/Ani_Plc_Txt Sem/Aniprod_Plc Sem/Body_Plc Sem/Buildpart_Plc Sem/Ctain_Plc Sem/Event_Plc Sem/Event_Plc-elevate Sem/Feat-psych_Plc Sem/Group_Hum_Plc Sem/Hum_Lang_Plc Sem/Hum_Plc Sem/Plc Sem/Plc_Pos Sem/Plc_Route Sem/Plc_Semcon Sem/Plc_State Sem/Plc_Substnc Sem/Plc_Substnc_Wthr Sem/Plc_Time Sem/Plc_Tool-catch Sem/Plc_Wthr;
+LIST Sem/Plc-abstr = Sem/Plc-abstr Sem/Plc-abstr_Rel_State Sem/Plc-abstr_Route ;
+LIST Sem/Plc-elevate = Sem/Plc-elevate ;
+LIST Sem/Plc-line = Sem/Plc-line ;
+LIST Sem/Plc-water = Sem/Plc-water ;
+LIST Sem/Pos = Sem/Plc_Pos Sem/Pos ; #Social position (job etc.)
+LIST Sem/Prod = Sem/Prod ; #jáhkku
+LIST Sem/Prod-audio = Sem/Body-abstr_Prod-audio_Semcon Sem/Dance_Prod-audio Sem/Domain_Prod-audio Sem/Prod-audio Sem/Prod-audio_Txt ; #attáldat
+LIST Sem/Prod-cogn = Sem/Org_Prod-cogn Sem/Part_Prod-cogn Sem/Prod-cogn Sem/Prod-cogn_Txt ; # muittuhus, ipmárdus, jáhkku, osku, vuordámuš, viisodat? diehtu?
+LIST Sem/Prod-ling = Sem/Prod-ling ;
+LIST Sem/Prod-vis = Sem/Group_Hum_Prod-vis Sem/Prod-vis ;
+LIST Sem/Rel = Sem/Plc-abstr_Rel_State Sem/Rel ;
+LIST Sem/Route = Sem/Act_Route Sem/Build_Route Sem/Plc-abstr_Route Sem/Plc_Route Sem/Route ;
+LIST Sem/Rule = Sem/Org_Rule Sem/Rule ;
+LIST Sem/Semcon = Sem/Amount_Semcon Sem/Body-abstr_Prod-audio_Semcon Sem/Obj_Semcon Sem/Plc_Semcon Sem/Semcon Sem/Semcon_Txt ; # semantic concept
+LIST Sem/Sign = Sem/Group_Sign Sem/Hum_Sign Sem/Measr_Sign Sem/Obj_Sign Sem/Sign ;
+LIST Sem/Sport = Sem/Obj-play_Sport Sem/Sport ;
+LIST Sem/State = Sem/Plc-abstr_Rel_State Sem/Plc_State Sem/State Sem/State_Obj ; # lihkku, ipmilbalolašvuohta, mokta, váivi, váttisvuohta
+LIST Sem/State-sick = Sem/State-sick Sem/State-sick_Substnc ;
 LIST Sem/Substnc = Sem/Plc_Substnc Sem/Plc_Substnc_Wthr Sem/State-sick_Substnc Sem/Substnc Sem/Substnc_Wthr ; #Sem: can pass through it without destroying it
+LIST Sem/Time = Sem/Ani_Hum_Time Sem/Ani_Time Sem/Body_Time Sem/Body_Group_Hum_Time Sem/Event_Time Sem/Hum_Lang_Time Sem/Measr_Time Sem/Plc_Time Sem/Time Sem/Time_Wthr ;
+LIST Sem/Time-clock = Sem/Time-clock ;
+LIST Sem/Tool = Sem/Ctain_Tool Sem/Hum_Tool Sem/Lang_Tool Sem/Plant_Tool Sem/Tool ;
+LIST Sem/Tool-catch = Sem/Body_Obj_Tool-catch Sem/Plc_Tool-catch Sem/Tool-catch ;
+LIST Sem/Tool-clean = Sem/Tool-clean ;
+LIST Sem/Tool-it = Sem/Tool-it ;
+LIST Sem/Tool-measr = Sem/Ctain_Tool-measr Sem/Plant_Tool-measr Sem/Tool-measr ;
+LIST Sem/Tool-music = Sem/Tool-music ;
+LIST Sem/Tool-write = Sem/Feat-phys_Tool-write Sem/Tool-write ;
+LIST Sem/Txt = Sem/Ani_Build_Hum_Txt Sem/Ani_Plc_Txt Sem/Group_Txt Sem/Mat_Txt Sem/Money_Txt Sem/Org_Txt Sem/Prod-audio_Txt Sem/Prod-cogn_Txt Sem/Semcon_Txt Sem/Txt ; #Syn: Čále dearvvuođaidat guossegirjámet! # das čuožžu
+LIST Sem/Veh = Sem/Ani_Veh Sem/Ctain-clth_Veh Sem/Feat-phys_Veh Sem/Hum_Veh Sem/Obj_Veh Sem/Org_Veh Sem/Veh ;	#Syn: Vuolggán X:Com
+#LIST Sem/Veh-cntain = Sem/Veh-cntain ; #Manan X sisa. #vuolggán X:Com.
+LIST Sem/Wthr = Sem/Feat-phys_Wthr Sem/Hum_Wthr Sem/Perc-emo_Wthr Sem/Plc_Substnc_Wthr Sem/Plc_Wthr Sem/Substnc_Wthr Sem/Time_Wthr Sem/Wthr ; #Sem: Birget X:Ess. jietna gullui X-Loc (balvvas). Olgun/Odne lea + Wthr-Nom. ?Man ollu lea Wthr-Nom? Wthr-Gen maŋŋel boahtá X. Makkár lea dálki/siivu? #Ex: árvi, borga, muohtá, čoaskadálki, baján, bievla, bodnejiekŋa, bivdodálki, gasis, guoldu
+LIST Sem/Wpn = Sem/Wpn ; #oaggut oaggunstákkuin, goddit X+Com
+LIST Sem/Year = Sem/Year ;
+
+
+LIST Sem/Measr_Time = Sem/Measr_Time ;
+
+
+LIST Sem/Sur = Sem/Sur ;
+#LIST Tit = Tit ;
+
+SET Sem/Human = Sem/Hum OR Sem/Hum-prof OR Sem/Sur OR Sem/Mal OR Sem/Fem OR Sem/Org ;
+SET Sem/Animate = Sem/Hum OR Sem/Ani OR Sem/Sur OR Sem/Mal OR Sem/Fem OR Sem/Org ;
+	# Has to be a set so that multiple tags are included
+SET Sem/AnimateNotOrg = Sem/Hum OR Sem/Ani OR Sem/Sur OR Sem/Mal OR Sem/Fem ;
+LIST Sem/Concrete-NotAnimate-NotPlace = Sem/Clth Sem/Clth-jewl Sem/Clthpart Sem/Ctain Sem/Drink Sem/Food Sem/Food-med Sem/Mat Sem/Money Sem/Obj Sem/Obj-clo Sem/Obj-el Sem/Substnc Sem/Tool Sem/Tool-catch Sem/Tool-measr Sem/Tool-music  Sem/Tool-write  Sem/Txt  Sem/Veh Sem/Wpn ;
+SET Sem/Place = Sem/Plc OR Sem/Plc-water OR Sem/Plc-elevate OR Sem/Plc-line OR Sem/Build OR Sem/Buildpart OR Sem/Org ;
+
+SET Sem/Hum-prop = Sem/Sur OR Sem/Mal OR Sem/Fem ;
+
+SET Sem/Abstract = Sem/Act OR Sem/Amount OR Sem/Body-abstr OR Sem/Domain OR Sem/Edu OR Sem/Prod-cogn OR Sem/Perc-emo OR Sem/Prod-audio OR Sem/Event OR Sem/Feat OR Sem/Feat-phys OR Der/NomAct OR Sem/Lang OR Sem/Money OR Sem/State OR Sem/State-sick OR Sem/Semcon OR Sem/Txt OR Sem/Time OR Sem/Dummytag;LIST Sem/Atr = Sem/Atr ;				    #!! - Sem/Atr
+
+LIST HUMAN = Sem/Fem Sem/Mal Sem/Sur ;	    #!! HUMAN
 
 #!! This ends the semtag list.
-
-SET Sem/Human = Sem/Hum OR Sem/Sur OR Sem/Mal OR Sem/Fem OR Sem/Org ;
-SET Sem/Animate = Sem/Hum OR Sem/Ani OR Sem/Sur OR Sem/Mal OR Sem/Fem OR Sem/Org ;
 
 
 LIST PROP-ATTR = Sem/Mal Sem/Sur Sem/Fem ; #!! PROP-ATTR
@@ -2078,6 +2161,7 @@ LIST &msyn-agr-ii-pl3 = &msyn-agr-ii-pl3 ;
 LIST &msyn-attr-com-gen = &msyn-attr-com-gen ;
 LIST &msyn-dem-locattr-gen = &msyn-dem-locattr-gen ;
 LIST &msyn-det-nom-acc = &msyn-det-nom-acc ;
+LIST &msyn-dimin-after-ucca = &msyn-dimin-after-ucca ;
 LIST &msyn-extneg-sg3-pl3 = &msyn-extneg-sg3-pl3 ;
 LIST &msyn-extsubj-acc-nom = &msyn-extsubj-acc-nom ;
 LIST &msyn-extsubj-gen-nom = &msyn-extsubj-gen-nom ;
@@ -2111,6 +2195,9 @@ LIST &msyn-posspl-acc-gen =  &msyn-posspl-acc-gen ;
 LIST &msyn-pred-acc-nom =  &msyn-pred-acc-nom ;
 LIST &msyn-pred-ill-nom =  &msyn-pred-ill-nom ;
 LIST &msyn-predagr-pl3-sg3 = &msyn-predagr-pl3-sg3 ;
+LIST &msyn-pron-acc-gen = &msyn-pron-acc-gen ;
+LIST &msyn-pron-gen-acc = &msyn-pron-gen-acc ;
+LIST &msyn-pron-plill-placc = &msyn-pron-plill-placc ;
 LIST &msyn-quadv-sg-pl = &msyn-quadv-sg-pl ;
 LIST &msyn-qucompl-sg-pl = &msyn-qucompl-sg-pl ;
 LIST &msyn-quant-gen-nom =  &msyn-quant-gen-nom ;
@@ -2126,6 +2213,9 @@ LIST &msyn-v-du3-conneg = &msyn-v-du3-conneg ;
 LIST &msyn-v-prfprc-sg1 = &msyn-v-prfprc-sg1 ;
 LIST &msyn-v-sg1-prfprc = &msyn-v-sg1-prfprc ;
 LIST &msyn-v-sg3-conneg = &msyn-v-sg3-conneg ;
+LIST &syn-delete-adv-phrasal-verb = &syn-delete-adv-phrasal-verb ;
+LIST &syn-phrasal-verb-phrasal-verb  = &syn-phrasal-verb-phrasal-verb ;
+LIST &syn-phrasal-verb-lexical-verb = &syn-phrasal-verb-lexical-verb ;
 LIST &real-keesi-keessiv = &real-keesi-keessiv ;
 LIST &real-keessiv-keesi = &real-keessiv-keesi ;
 LIST &real-love-lope = &real-love-lope ;
@@ -2170,7 +2260,49 @@ ADD:real-love-lope (&real-love-lope) TARGET ("love") IF
 COPY:real-love-lope ("lope" N Sg Nom &SUGGEST) EXCEPT ("love" Num Sg Nom &real-love-lope) TARGET (Num &real-love-lope); 
 #% mun koijâdim välmejeijest love eelliđ hiivsigist. 
 
+#!! ## äigin > ääigi
+
+
+ADD:msyn-äigin-ääigi (&msyn-äigin-ääigi) TARGET ("äigi" N Ess) OR ("äigi" N Sg Acc PxDu1) OR ("äigi" N Sg Acc PxPl1) OR ("äigi" N Sg Acc PxSg1) OR ("äigi" N Gen PxDu1) OR ("äigi" N Gen PxPl1) OR ("äigi" N Gen PxSg1) IF
+	(-1 (N Gen));
+COPY:&msyn-äigin-ääigi ("äigi" N Sg Gen &SUGGEST) EXCEPT ("äigi" N Ess &msyn-äigin-ääigi) OR ("äigi" N Sg Acc PxDu1 &msyn-äigin-ääigi) OR ("äigi" N Sg Acc PxPl1 &msyn-äigin-ääigi) OR ("äigi" N Sg Acc PxSg1 &msyn-äigin-ääigi) OR ("äigi" N Gen PxDu1 &msyn-äigin-ääigi) OR ("äigi" N Gen PxPl1 &msyn-äigin-ääigi) OR ("äigi" N Gen PxSg1 &msyn-äigin-ääigi) TARGET (&msyn-äigin-ääigi);
+	## Sunnuu eenih láin iällám torist konsert äigin.
+
+#!! ## moadde kerdi > moddii
+
+#ADD:xmsyn-moddii (&msyn-moddii) TARGET (Num Sg Nom) OR (Num Sg Gen) IF	(1 ("kerdi" N Sg Nom) OR ("kerdi" N Sg Gen));
+ADDRELATION (DELETE1) (Num &msyn-moddii) TO (1 ("kerdi" N Sg Nom) OR ("kerdi" N Sg Gen)) ;
+
+COPY:xmsyn-moddii ("moddii" Adv &SUGGEST) EXCEPT ("muáddi" Num Sg Nom &msyn-moddii) TARGET ("muáddi" &msyn-moddii);
+	## uáčču uáiniđ moolâviermi hiáilumin muáddi kerdi.
+
+COPY:xmsyn-moddii ("maŋgii" Adv &SUGGEST) EXCEPT ("maŋgâ" Num Sg Nom &msyn-moddii) TARGET ("maŋgâ" &msyn-moddii);
+
+COPY:xmsyn-moddii ("ohtii" Adv &SUGGEST) EXCEPT ("oovtâ" Num Sg Nom &msyn-moddii) TARGET ("oovtâ" &msyn-moddii);
+
 #!! ## Noun phrase internal phenomena
+
+#ADD:xmsyn-jyehi_nom-jyehi_gen (&msyn-jyehi_nom-jyehi_gen) TARGET (N Sg Nom) + Sem/Time (NEGATE 0 Gen) (-1 ("jyehi" Attr));
+	## jyehi {peivi}
+	
+COPY:xmsyn-jyehi_nom-jyehi_gen (Gen &SUGGEST) EXCEPT (Nom &msyn-jyehi_nom-jyehi_gen) TARGET (&msyn-jyehi_nom-jyehi_gen) ;
+
+#!! ### Possessive pronouns > reflexive pronouns
+
+#ADD:xmsyn-suu-jieijas (&msyn-suu-jieijas) TARGET ("sun" Pers Sg3 Gen) OR ("sun" Pers Sg3 Acc) IF (*-1 ("sun" Pers Sg3 Nom) OR (N Prop Nom Sem/Fem) OR (N Prop Nom Sem/Mal) OR (N Prop Nom Sem/Sur) BARRIER S-BOUNDARY); 
+	## Sun vuolgij suu viistán ullopääiđih soolâst.
+	
+
+#!! ### Phrasal verbs
+
+	# Redundant adverbs in phrasal verbs 2->1
+	# -----------------------------------------------------
+#ADD:xsyn-delete-adv-phrasal-verb (&syn-delete-adv-phrasal-verb) TARGET (Adv) IF (0 ("kiddâ") LINK -1 (Loc)) (*0  ("tolliđ") BARRIER S-BOUNDARY) ;
+	## Sun tollij suu viiđâ ihášij uccâ uábi kieđâst kiddâ.  
+
+ADDRELATION (DELETE1) (V &syn-delete-adv-phrasal-verb) TO (*0 (Adv &syn-delete-adv-phrasal-verb) BARRIER (*) - Pcle) ;
+
+COPY:xsyn-delete-adv-phrasal-verb (&DELETE) EXCEPT (&syn-delete-adv-phrasal-verb) TARGET (Adv &syn-delete-adv-phrasal-verb) ;
 
 #!! ### Demonstratives
 
@@ -2189,8 +2321,8 @@ ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF
 	(NOT 1 Prop OR Pron)
 	(1 N OR Actio + Nom LINK NOT *1 TV + V BARRIER S-BOUNDARY)
 	(NEGATE *1 TV BARRIER S-BOUNDARY);
-#$ Mun vuájálitám paas jiegâid Belsebul išij.
-#$ vIj ubâ autoi čuovâidgin luodâ alne.
+	#$ Mun vuájálitám paas jiegâid Belsebul išij.
+	#$ vIj ubâ autoi čuovâidgin luodâ alne.
 
 #ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF
 #(NEGATE *-1 TV BARRIER NOT-NPMOD) ## <????
@@ -2216,8 +2348,8 @@ ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF
 (1 CC)
 (2 N + Pl + Gen OR &msyn-posspl-acc-gen LINK 1 N OR Actio + Nom LINK NOT *1 TV BARRIER S-BOUNDARY);
 
-#$ Škovlim maŋa puávtáh uásálistiđ párnáid já nuorâi leiráid stuorrâhâžžân.
-#$ Jiem lah jieš puáhtám luuhâđ táid kiirjijd já klassikkoid sämikielân
+	#$ Škovlim maŋa puávtáh uásálistiđ párnáid já nuorâi leiráid stuorrâhâžžân.
+	#$ Jiem lah jieš puáhtám luuhâđ táid kiirjijd já klassikkoid sämikielân
 
 
 ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF
@@ -2245,10 +2377,50 @@ ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N IF
 	## Mun lam huámmášâm tom jieččân párnáid puotâ.
 
 COPY:msyn-posspl-acc-gen (Gen &SUGGEST) EXCEPT (Acc &msyn-posspl-acc-gen) TARGET (N Pl &msyn-posspl-acc-gen);
+	#% Siijđoid lehâstem tábáhtuvá itten.
+	#$ Siijđoi
+	
+	# Demonstrative pronouns sg acc>sg gen before postpositions
+	
+ADD:msyn-pron-acc-gen (&msyn-pron-acc-gen) TARGET (Pron Sg Acc Dem) IF
+(NOT 0 PX OR Gen)(1 Po)(NEGATE 1 Pr LINK *1 Gen); #(NOT 1 Adv)	
+	## {Tom} saajeest sun moijái Jennyn, kij nirvái maasâd.
+	## Eenist ij vissâsávt lamâš miheen {tom} vuástá. 
+	## Juávkku siida nuorâin lâi čokkánâm tom pirrâ.
+
+	# Demonstrative pronouns sg gen>sg acc in other contexts
+
+COPY:msyn-pron-acc-gen (Gen &SUGGEST) EXCEPT (Acc &msyn-pron-acc-gen) TARGET (&msyn-pron-acc-gen);
 
 
-#% Siijđoid lehâstem tábáhtuvá itten.
-#$ Siijđoi
+#ADD:xmsyn-pron-gen-acc (&msyn-pron-gen-acc) TARGET (Pron Sg Gen Dem) IF
+#(NEGATE 1 Po OR N OR A OR Num OR Attr);
+	## Tom lii vaigâdis čielgiđ
+	## Vááldáh {taan} liijkás tuođâst. 
+	## jis sun ooinij {taan}? > taam
+	## mut {taan} sun ij iberdâm
+
+COPY:msyn-pron-gen-acc (Acc &SUGGEST) EXCEPT (Gen &msyn-pron-gen-acc) TARGET (&msyn-pron-gen-acc);
+
+
+#ADD:xmsyn-pron-plill-sgacc (&msyn-pron-plill-placc) TARGET ("tot" Pron Pl Ill Dem) IF (-1 TV + VFIN OR TV + Inf OR TV + PrfPrc OR TV + ConNeg LINK NEGATE 0 <TH-Ill-Any>);
+	## Sun stellij toid várugávt sajestis. 
+	## ákku lâi kiddim toid čovgâsávt. 
+	## Kihheen ij lamâš muštám toid moonnâm peeivi huušâst. 
+	## Tego ulmuuh nomâttij toid. 
+	## Muu kaandâkaandâ huksij toid ucce ääiđi. 
+	## Muu viljâ ij tuálvum toid. 
+	## Vissâ tergâdumos ličij lamâš finniđ toid maasâd, ama?
+	#$ Spellâ lâi nuuhâm já Agnes čokkái sino alne já {toid}£{tain} ij kuškânâm voorâ jyelgist.
+	## Nuuvt, sun pargâ {toid}£{pron,plill-placc|taid}.
+	#$ Sun lâi hárjánâm toid. 
+	
+#ADD:xmsyn-pron-plill-sgacc (&msyn-pron-plill-placc) TARGET ("tot" Pron Pl Ill Dem) IF (*1 TV + VFIN OR TV + Inf OR TV + PrfPrc OR TV + ConNeg BARRIER NOT-ADV-PCLE - (V Neg) - ("leđe" Ind) - (A Attr) LINK NEGATE 0 <TH-Ill-Any>);	
+	## Mut toid ij ubâ huámmášân peivipaštust. 
+	#$ Sun toid lâi hárjánâm.
+	
+COPY:msyn-pron-gen-acc (Acc &SUGGEST) EXCEPT (Ill &msyn-pron-plill-placc) TARGET (Pl Ill &msyn-pron-plill-placc);
+	## 
 
 #!! ### Noun phrase complements
 
@@ -3664,19 +3836,20 @@ ADDRELATION:msyn-predagr-pl3-sg3 ($2) (N Sg Nom) FROM (-5 Neg LINK 0 (&msyn-pred
 #$ Ij lah alda sämikielâlij huolhij toorjâ finnimnáál.
 #$ Päikkinoomah iä lah siäilum.
 
-ADD:msyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET A IF
-	(0C Sg + Nom)
-	(NEGATE *-1 ("leđe" V Ind) OR ("šoddâđ" V Ind) LINK -1 Nom OR Loc OR Adv OR CS) # Taat uási/et lii viehâ herkki pieggáid.
-	(NEGATE *-1 ("leđe" ConNeg) OR ("šoddâđ" ConNeg) LINK -1 Neg LINK -1 Nom OR Loc OR Adv OR CS) # Mihheen ij lah máhđuttem Imelân
-	(NEGATE 0  CONCORD-A OR Ord OR Der/Comp OR Der/Superl OR N + Gen)
+ADD:msyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET (A Sg Nom) IF
+	(NEGATE 0 <TH-Ill-Any> LINK 1 Ill) # Taat uási/et lii viehâ herkki pieggáid.
+	(NEGATE 1 Sem/Hum + Ill OR Sem/Fem + Ill OR Sem/Mal + Ill OR Sem/Sur + Ill) # Mihheen ij lah máhđuttem Imelân
+	(NEGATE 0  CONCORD-A OR Ord OR Der/Comp OR Der/Superl OR N + Gen OR <AttrPred>)
 	(NEGATE -1 Interr LINK *1 ("leđe")) # man koorãs luonddu lea
 	(NEGATE -1 BOS LINK 2 N + Ill OR N + Loc OR N + Ess OR N + Abe LINK *1 EOS BARRIER V) # Vaalmâš uđâsmitmân!
 	(NEGATE -2 BOS LINK 3 N + Ill OR N + Loc OR N + Ess OR N + Abe LINK *1 EOS BARRIER V) # - Vaalmâš uđâsmitmân!
-	(1 N LINK NOT 0 Ess OR NOUN-OR-ADV)
-	;
-COPY:msyn-adj-pred-attr (Attr &SUGGEST) EXCEPT (Sg Nom &msyn-adj-pred-attr) TARGET ( A &msyn-adj-pred-attr);
-
-#$ Taat uási lii viehâ herkki pieggáid.
+	(*1 N BARRIER NOT-A LINK NOT 0 Inf OR VFIN OR Ess OR NOUN-OR-ADV)
+	(NEGATE *1 Adv OR Loc OR Po BARRIER NOT-ADV - Gen - CC LINK 1 COPULAS)
+	(NEGATE *1 Sem/Plc + Loc OR Sem/Plc + Loc OR Sem/Build + Loc BARRIER NOT-NPMOD LINK 1 EOS OR CC OR CS OR Rel LINK NEGATE *-1 VFIN - COPULAS BARRIER CS OR Rel);
+COPY:msyn-adj-pred-attr (Attr &SUGGEST) EXCEPT (Sg Nom &msyn-adj-pred-attr) TARGET (A &msyn-adj-pred-attr);
+	## lâi {vaigâdis} finniđ kiddâ.
+	#$ Taat uási lii viehâ herkki pieggáid.
+	## Maid {iimâš} saanijd tun čááláh? 
 
 
 #!!  **Agreement rule:** msyn-adj-pred-attr Plural adjectives should be Attr in front of N.
@@ -3717,7 +3890,7 @@ ADDRELATION:xmsyn-adj-attr-other ($2) (N) FROM (*1 Pron + Rel LINK *1 A LINK 0 (
 #!!  **Agreement rule:** msyn-adj-attr-pred *Tot lii hirmâd*
 ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred)  TARGET (A) IF
 	(0C Attr)
-	(NOT 0 (Arab Ord) OR (A Sg Nom) OR ATTRONLY)
+	(NOT 0 (Arab Ord) OR (A Sg Nom) OR ATTRONLY OR <AttrPred>)
 	(NOT 1 N OR A OR PrfPrc OR ?)
 	(NOT 1 CC-INCLUSIVE LINK 1 A + Attr)
 	(NOT 1 ("..."))
@@ -3725,7 +3898,7 @@ ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred)  TARGET (A) IF
 ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred)  TARGET (A Attr) IF 
 	(0C Attr) 
 	(1 CC-INCLUSIVE LINK 1 &msyn-adj-attr-pred OR (A Sg Nom) LINK NOT 1 N OR A OR PrfPrc OR CC) 
-	(NOT 0 (Arab Ord) OR (A Sg Nom)) ;
+	(NOT 0 (Arab Ord) OR (A Sg Nom) OR <AttrPred>) ;
 COPY:msyn-adj-attr-pred (Sg Nom &SUGGEST) EXCEPT (Attr &msyn-adj-attr-pred) TARGET ( A &msyn-adj-attr-pred);
 
     #% Tot lii hirmâd.
@@ -3737,7 +3910,7 @@ COPY:msyn-adj-attr-pred (Sg Nom &SUGGEST) EXCEPT (Attr &msyn-adj-attr-pred) TARG
 #!!  **Agreement rule:** msyn-adj-attr-pred *Mun lam fiskis/fiskâd.*
 ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A) IF
   (0C Attr)
-  (NOT 0 (Arab Ord) OR ATTRONLY)
+  (NOT 0 (Arab Ord) OR ATTRONLY OR <AttrPred>)
   (*-1 COPULAS + Qst BARRIER V OR S-BOUNDARY LINK 1 Nom)
 #  (NOT 1 Adv)
   (NEGATE *1 N BARRIER NOT-A-COMMA-CC)
@@ -3754,7 +3927,7 @@ ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A) IF
 
 ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A) IF
   (0C Attr)
-  (NOT 0 (Arab Ord) OR ATTRONLY)
+  (NOT 0 (Arab Ord) OR ATTRONLY OR <AttrPred>)
   (*-1 COPULAS BARRIER V OR S-BOUNDARY LINK *-1 Nom)
 #  (NOT 1 Adv)
   (NEGATE *1 N BARRIER NOT-A-COMMA-CC)
@@ -3781,7 +3954,7 @@ COPY:msyn-adj-attr-pred (Sg Nom &SUGGEST) EXCEPT (Attr &msyn-adj-attr-pred) TARG
 #$ Viste lii mielâttes tievâ.
 #$ Suoi láin kuohtuuh hirmâd nánnáás já tottâleijee párnááh.
 
-#ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (*-1 COPULAS BARRIER V OR GRAMCHK-S-BOUNDARY LINK *-1 Nom) (NEGATE 1 N)(NEGATE 1 CC OR COMMA LINK 1 A LINK 1 N)(NEGATE 1 (A Attr) OR ? LINK *1 N BARRIER NPNH)(NEGATE 1 (A Sg Nom) OR (Pron Pers))(NEGATE 0 ("visot") OR ("buot") LINK 1 Pron LINK *1 N)(NEGATE 0 PRED-ATTR-ADJ)(NEGATE 1 COMMA OR CC LINK 1 (A Attr) OR PRED-ATTR-ADJ)(NOT 0 (A Sg Nom))(NEGATE 1 COMMA OR ("-") LINK 1 ("muhto") LINK *1 (A Attr) BARRIER NPNHA)(NEGATE 0 Superl LINK 1 CC LINK 1 ("eanet" Superl) OR ("eanemus") LINK 1 A LINK 1 N)(NEGATE 1 (Num Attr) LINK 1 N)(NEGATE 0 ("eanet") LINK 1 PrfPrc);
+#ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (*-1 COPULAS BARRIER V OR GRAMCHK-S-BOUNDARY LINK *-1 Nom) (NEGATE 1 N)(NEGATE 1 CC OR COMMA LINK 1 A LINK 1 N)(NEGATE 1 (A Attr) OR ? LINK *1 N BARRIER NPNH)(NEGATE 1 (A Sg Nom) OR (Pron Pers))(NEGATE 0 ("visot") OR ("buot") LINK 1 Pron LINK *1 N)(NEGATE 0  OR <AttrPred>)(NEGATE 1 COMMA OR CC LINK 1 (A Attr) OR PRED-ATTR-ADJ)(NOT 0 (A Sg Nom))(NEGATE 1 COMMA OR ("-") LINK 1 ("muhto") LINK *1 (A Attr) BARRIER NPNHA)(NEGATE 0 Superl LINK 1 CC LINK 1 ("eanet" Superl) OR ("eanemus") LINK 1 A LINK 1 N)(NEGATE 1 (Num Attr) LINK 1 N)(NEGATE 0 ("eanet") LINK 1 PrfPrc);
 
 
 
@@ -3829,11 +4002,18 @@ ADD:msyn-adj-attr-placc (&msyn-adj-attr-placc) TARGET A IF
 COPY:msyn-adj-attr-placc (Pl Acc &SUGGEST) EXCEPT (Attr &msyn-adj-attr-placc) TARGET ( A &msyn-adj-attr-placc);
 
 
+#!! ## Dimin after ucca rules
 
-
-
-
-
+ADD:msyn-dimin-after-ucca (&msyn-dimin-after-ucca) TARGET N IF (NEGATE 0 Der/Dimin)(*-1 ("ucce" A Attr) BARRIER (*) - Attr)	;
+	## Suu ucce nieidâ.
+	## Tust lii maailm nánnáámus ucce njune. 
+	## Sun lâi tego nukke, ucce juármááš nukke.
+	
+ADD:msyn-dimin-after-ucca (&msyn-dimin-after-ucca) TARGET N IF (NEGATE 0 Der/Dimin)(-1 CC LINK -1 Der/Dimin OR &msyn-dimin-after-ucca LINK *-1 ("ucce" A Attr) BARRIER (*) - Attr)	;
+	## Juuvâriddoost láá karsâjum masa puoh uccâ muorah já miestuuh. 
+	
+	
+COPY:msyn-dimin-after-ucca (Ex/N Der/Dimin &SUGGEST) EXCEPT (&msyn-dimin-after-ucca) BEFORE N TARGET (N &msyn-dimin-after-ucca);
 
 #!! ## Adverbial rules
 
@@ -4044,7 +4224,7 @@ COPY:easteregg ("27.2.2023" Num  &SUGGEST) EXCEPT ("nuvviDgrammarchecker" &easte
 #!! ## Word order rules
 
 #!! **Syntax rule:** syn-OVS-OSV
-#ADD:xsyn-OVS-OSV (&syn-OVS-OSV) TARGET VFIN IF (*-1 Acc BARRIER NOT-ADV-PCLE) (1 (N Nom) OR (Pron Nom));
+#ADD:xsyn-OVS-OSV (&syn-OVS-OSV) TARGET VFIN IF (*-1 Acc BARRIER NOT-ADV-PCLE LINK NOT 0 Nom) (1 (N Nom) OR (Pron Nom));
 ##  Eres detaljijd puáhtá lohhee jieš kuvâttâllâđ.
 ##  Eres detaljijd lohhee puáhtá jieš kuvâttâllâđ.
 MOVE:syn-OVS-OSV (V &syn-OVS-OSV) AFTER (1 (N Nom) OR (Pron Nom)) ;
