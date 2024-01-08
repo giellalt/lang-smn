@@ -18,16 +18,31 @@ fi
 ######### USER Variables - change these to your liking: #########
 # Codes for the word forms to be generated - list as many or few as needed:
 morf_codes="+N+Sg+Nom+PxSg2 \
+            +N+Sg+Nom+PxSg1 \
+            +N+Sg+Nom+PxSg3 \
+            +N+Sg+Gen+PxSg1 \
             +N+Sg+Gen+PxSg2 \
+            +N+Sg+Gen+PxSg3 \
+            +N+Sg+Ill+PxSg1 \
             +N+Sg+Ill+PxSg2 \
+            +N+Sg+Ill+PxSg3 \
+            +N+Sg+Loc+PxSg1 \
             +N+Sg+Loc+PxSg2 \
+            +N+Sg+Loc+PxSg3 \
+            +N+Sg+Com+PxSg1 \
             +N+Sg+Com+PxSg2 \
-            +N+Ess+PxSg2
-            +N+Pl+Gen+PxSg2 \
+            +N+Sg+Com+PxSg3 \
+            +N+Ess+PxSg2 \
+            +N+Pl+Acc+PxSg1 \
             +N+Pl+Acc+PxSg2 \
-            +N+Pl+Ill+PxSg2 \
+            +N+Pl+Acc+PxSg3 \
+            +N+Pl+Acc+PxSg2 \
+            +N+Pl+Loc+PxSg1 \
             +N+Pl+Loc+PxSg2 \
-            +N+Pl+Com+PxSg2"
+            +N+Pl+Loc+PxSg3 \
+            +N+Pl+Com+PxSg1 \
+            +N+Pl+Com+PxSg2 \
+            +N+Pl+Com+PxSg3"
 
 # Lexicon source file for lexicons and lemmas:
 source_file=src/fst/stems/nouns.lexc
@@ -39,7 +54,7 @@ exception_lexicons="(nounstems|Rnoun)"
 generator_file=src/generator-gt-norm
 
 # How many lemmas maximally for each lexicon:
-lemmacount=20
+lemmacount=5
 
 # Specify path to the dir containing the script used for generation:
 script_dir=$giella_core/scripts
