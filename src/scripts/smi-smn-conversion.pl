@@ -80,6 +80,7 @@ while(<>) {
 # changing to WG inflection
 	s/Valle ACCRA/Va^RVlle MOKKE/g ;
 	s/Ville ACCRA/Vi4^RVlle MOKKE/g ;
+	s/Maarit LONDON/Maarit MAARIT/g ;
 
 # sme special symbols
 #	s/\^//g ;
