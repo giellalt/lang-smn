@@ -1074,6 +1074,8 @@ These rules target adverbial cases, many of them the acc-ill lookalike *-Ã¢id/-Ã
 
 **Syntax rule:** syn-OVS-OSV
 
+## Question particle rules
+
 The grammarchecker file ends here.
 
 ## AFTER-SECTIONS
