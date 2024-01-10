@@ -523,6 +523,7 @@ LIST INITIAL = "a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m"
 #!! ### Sets for word or not
 
 LIST WORD = N A Adv V Pron CS CC Po Pr Interj Pcle Num ABBR ACR  \? ; #!! - WORD =  any word
+LIST CONTENT-WORD = N A Adv V Pron Num ABBR ACR ; 
 SET REAL-WORD-NOT-ABBR = WORD - Num - Ord - (ABBR N) ; # This is former REALWORD-NOTABBR #!! - REAL-WORD-NOT-ABBR
 SET WORD-NOT-de = WORD - ("joo") ; #!! - WORD-NOT-de
 SET NOT-COMMA = WORD - COMMA ;  #!! - NOT-COMMA
@@ -4327,6 +4328,14 @@ ADD:xsyn-OVS-OSV (&syn-OVS-OSV) TARGET VFIN - ("leđe") IF (*-1 Acc BARRIER NOT-
 ##  Eres detaljijd lohhee puáhtá jieš kuvâttâllâđ.
 MOVE:syn-OVS-OSV (V &syn-OVS-OSV) AFTER (1 (N Nom) OR (Pron Nom)) ;
 ADDRELATION:syn-OVS-OSV ("$2") (N) FROM (*1 (V &syn-OVS-OSV));
+
+
+#!! ## Question particle rules
+
+ADD:xmsyn-uv (&msyn-uv) TARGET CONTENT-WORD IF (-1 BOS)(1 ("?"))(NOT 0 Qst);
+COPY:msyn-uv (Qst &SUGGEST) EXCEPT (&msyn-uv) TARGET (&msyn-uv);
+	## Tääl? > Tääll-uv? 
+	## uáđá? > uáđá-uv?
 
 
 #!! The grammarchecker file ends here.
