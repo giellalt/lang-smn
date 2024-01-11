@@ -2434,7 +2434,7 @@ COPY:msyn-pron-acc-gen (Gen &SUGGEST) EXCEPT (Acc &msyn-pron-acc-gen) TARGET (&m
 
 
 ADD:xmsyn-pron-gen-acc (&msyn-pron-gen-acc) TARGET (Pron Sg Gen Dem) IF
-(NEGATE 1 Po OR N OR A OR Num OR Attr);
+(NEGATE 1 Po OR N OR A OR Num OR Attr)(NEGATE 0 Acc OR <spelled>);
 	## Tom lii vaigâdis čielgiđ
 	## Vááldáh {taan} liijkás tuođâst. 
 	## jis sun ooinij {taan}? > taam
@@ -3911,6 +3911,7 @@ ADDRELATION:msyn-predagr-pl3-sg3 ($2) (N Sg Nom) FROM (-5 Neg LINK 0 (&msyn-pred
 #$ Päikkinoomah iä lah siäilum.
 
 ADD:msyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET (A Sg Nom) IF
+	(NOT 0 Attr OR Adv)
 	(NEGATE 0 <TH-Ill-Any> LINK 1 Ill) # Taat uási/et lii viehâ herkki pieggáid.
 	(NEGATE 1 Sem/Hum + Ill OR Sem/Fem + Ill OR Sem/Mal + Ill OR Sem/Sur + Ill) # Mihheen ij lah máhđuttem Imelân
 	(NEGATE 0  CONCORD-A OR Ord OR Der/Comp OR Der/Superl OR N + Gen OR <AttrPred>)
@@ -3928,6 +3929,7 @@ COPY:msyn-adj-pred-attr (Attr &SUGGEST) EXCEPT (Sg Nom &msyn-adj-pred-attr) TARG
 
 #!!  **Agreement rule:** msyn-adj-pred-attr Plural adjectives should be Attr in front of N.
 ADD:msyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET A IF
+	(NOT 0 Attr OR Adv)
 	(NEGATE *1 Acc BARRIER NOT-NPMOD LINK 1 TV)
 	(0C Pl + Nom)
 	(NOT -1 ("leđe") OR ("šoddâđ"))
