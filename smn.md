@@ -6133,7 +6133,7 @@ this is for loanwords without stem change
 
 * **LEXICON X_AARRAN_SG** 
 
-* **LEXICON 3RUONAS** nuurras WG NEP,  blank for the rest 
+* **LEXICON 3RUONAS** ruonâs:ruonâs, nuurras WG NEP,  blank for the rest 
 
 * **LEXICON X_RUONAS** WG NEP,  blank for the rest 
 
