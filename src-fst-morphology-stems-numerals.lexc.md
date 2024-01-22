@@ -112,7 +112,7 @@ In principle as the above.
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/stems/numerals.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/stems/numerals.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/stems/numerals.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/stems/numerals.lexc)</small>
 
 ---
 

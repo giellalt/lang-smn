@@ -5270,7 +5270,7 @@ NON-APP
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/affixes/abbreviations.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/affixes/abbreviations.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/affixes/abbreviations.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/affixes/abbreviations.lexc)</small>
 
 ---
 
@@ -5294,7 +5294,7 @@ NON-APP
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/affixes/acronyms.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/affixes/acronyms.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/affixes/acronyms.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/affixes/acronyms.lexc)</small>
 
 ---
 
@@ -5536,7 +5536,7 @@ Adj - pooliitlâš: # attr. pooliitlâš; puolikongruenssi mahdollinen (#-paikat
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/affixes/adjectives.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/affixes/adjectives.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/affixes/adjectives.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/affixes/adjectives.lexc)</small>
 
 ---
 
@@ -6421,7 +6421,7 @@ tbw.
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/affixes/nouns.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/affixes/nouns.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/affixes/nouns.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/affixes/nouns.lexc)</small>
 
 ---
 
@@ -6527,7 +6527,7 @@ tbw.
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/affixes/numerals.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/affixes/numerals.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/affixes/numerals.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/affixes/numerals.lexc)</small>
 
 ---
 
@@ -6562,7 +6562,7 @@ just do Px1, Px2, Px3, and change tags from sme to smn in apertium.
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/affixes/possessive-suffixes.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/affixes/possessive-suffixes.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/affixes/possessive-suffixes.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/affixes/possessive-suffixes.lexc)</small>
 
 ---
 
@@ -7071,7 +7071,7 @@ LEXICON KIARUN = 3KIELES
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/affixes/propernouns.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/affixes/propernouns.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/affixes/propernouns.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/affixes/propernouns.lexc)</small>
 
 ---
 
@@ -7090,7 +7090,7 @@ LEXICON KIARUN = 3KIELES
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/affixes/symbols.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/affixes/symbols.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/affixes/symbols.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/affixes/symbols.lexc)</small>
 
 ---
 
@@ -7478,7 +7478,7 @@ become the second part of N + (V > N) compounds.
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/affixes/verbs.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/affixes/verbs.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/affixes/verbs.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/affixes/verbs.lexc)</small>
 
 ---
 
@@ -7517,7 +7517,7 @@ LEXICON RNum_after_cmp_flags - going to Noun, should it be to NounRoot?
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/compounding.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/compounding.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/compounding.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/compounding.lexc)</small>
 
 ---
 
@@ -8334,7 +8334,7 @@ eemeed : emedân sai4joos
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/phonology.twolc](https://github.com/giellalt/lang-smn/blob/main/src/fst/phonology.twolc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/phonology.twolc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/phonology.twolc)</small>
 
 ---
 
@@ -9071,7 +9071,7 @@ The `@D.NeedNoun.ON@` flag diacritic is used to block illegal compounds.
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/root.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/root.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/root.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/root.lexc)</small>
 
 ---
 
@@ -9105,7 +9105,7 @@ From corpus
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/stems/adjectives.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/stems/adjectives.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/stems/adjectives.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/stems/adjectives.lexc)</small>
 
 ---
 
@@ -9114,7 +9114,7 @@ From corpus
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/stems/adpositions.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/stems/adpositions.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/stems/adpositions.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/stems/adpositions.lexc)</small>
 
 ---
 
@@ -9138,7 +9138,7 @@ From corpus
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/stems/adverbs.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/stems/adverbs.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/stems/adverbs.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/stems/adverbs.lexc)</small>
 
 ---
 
@@ -9157,7 +9157,7 @@ From corpus
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/stems/conjunctions.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/stems/conjunctions.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/stems/conjunctions.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/stems/conjunctions.lexc)</small>
 
 ---
 
@@ -9181,7 +9181,7 @@ From corpus
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/stems/interjections.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/stems/interjections.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/stems/interjections.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/stems/interjections.lexc)</small>
 
 ---
 
@@ -9260,7 +9260,7 @@ From missinglist
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/stems/nouns.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/stems/nouns.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/stems/nouns.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/stems/nouns.lexc)</small>
 
 ---
 
@@ -9378,7 +9378,7 @@ In principle as the above.
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/stems/numerals.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/stems/numerals.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/stems/numerals.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/stems/numerals.lexc)</small>
 
 ---
 
@@ -9401,7 +9401,7 @@ kes pcle ;
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/stems/particles.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/stems/particles.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/stems/particles.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/stems/particles.lexc)</small>
 
 ---
 
@@ -9462,7 +9462,7 @@ LEXICON SIAMMAS_PRON without WG
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/stems/pronouns.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/stems/pronouns.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/stems/pronouns.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/stems/pronouns.lexc)</small>
 
 ---
 
@@ -9511,7 +9511,7 @@ the sentence can be considered as true cases.
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/stems/smn-abbreviations.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/stems/smn-abbreviations.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/stems/smn-abbreviations.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/stems/smn-abbreviations.lexc)</small>
 
 ---
 
@@ -9529,7 +9529,7 @@ small-capital letter combinations.
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/stems/smn-acronyms.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/stems/smn-acronyms.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/stems/smn-acronyms.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/stems/smn-acronyms.lexc)</small>
 
 ---
 
@@ -9560,7 +9560,7 @@ Geographical names
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/stems/smn-propernouns.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/stems/smn-propernouns.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/stems/smn-propernouns.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/stems/smn-propernouns.lexc)</small>
 
 ---
 
@@ -9579,7 +9579,7 @@ LEXICON Subjunction
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/stems/subjunctions.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/stems/subjunctions.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/stems/subjunctions.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/stems/subjunctions.lexc)</small>
 
 ---
 
@@ -9796,7 +9796,7 @@ end up *not* receiving *+IV* or *+TV* tags.
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/stems/verbs.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/stems/verbs.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/stems/verbs.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/stems/verbs.lexc)</small>
 
 ---
 
@@ -9961,7 +9961,7 @@ retracted tongue root			_q
 
 * * *
 
-<small>This (part of) documentation was generated from [src/phonetics/txt2ipa.xfscript](https://github.com/giellalt/lang-smn/blob/main/src/phonetics/txt2ipa.xfscript)</small>
+<small>This (part of) documentation was generated from [src/fst/phonetics/txt2ipa.xfscript](https://github.com/giellalt/lang-smn/blob/main/src/fst/phonetics/txt2ipa.xfscript)</small>
 
 ---
 
@@ -9981,7 +9981,7 @@ For example:
 
 * * *
 
-<small>This (part of) documentation was generated from [src/transcriptions/transcriptor-abbrevs2text.lexc](https://github.com/giellalt/lang-smn/blob/main/src/transcriptions/transcriptor-abbrevs2text.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/transcriptions/transcriptor-abbrevs2text.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/transcriptions/transcriptor-abbrevs2text.lexc)</small>
 
 ---
 
@@ -9992,7 +9992,7 @@ This is a file generating Inari Sámi date expressions.
 
 * * *
 
-<small>This (part of) documentation was generated from [src/transcriptions/transcriptor-date-digit2text.lexc](https://github.com/giellalt/lang-smn/blob/main/src/transcriptions/transcriptor-date-digit2text.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/transcriptions/transcriptor-date-digit2text.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/transcriptions/transcriptor-date-digit2text.lexc)</small>
 
 ---
 
@@ -10002,7 +10002,7 @@ This is a file generating Inari Sámi date expressions.
 
 * * *
 
-<small>This (part of) documentation was generated from [src/transcriptions/transcriptor-numbers-digit2text.lexc](https://github.com/giellalt/lang-smn/blob/main/src/transcriptions/transcriptor-numbers-digit2text.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/transcriptions/transcriptor-numbers-digit2text.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/transcriptions/transcriptor-numbers-digit2text.lexc)</small>
 
 ---
 
@@ -10013,7 +10013,7 @@ This is a file generating Inari Sámi date expressions.
 
 * * *
 
-<small>This (part of) documentation was generated from [src/transcriptions/transcriptor-ttsdate-digit2text.lexc](https://github.com/giellalt/lang-smn/blob/main/src/transcriptions/transcriptor-ttsdate-digit2text.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/transcriptions/transcriptor-ttsdate-digit2text.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/transcriptions/transcriptor-ttsdate-digit2text.lexc)</small>
 
 ---
 

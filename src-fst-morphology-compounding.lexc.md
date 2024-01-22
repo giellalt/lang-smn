@@ -33,7 +33,7 @@ LEXICON RNum_after_cmp_flags - going to Noun, should it be to NounRoot?
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/compounding.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/compounding.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/compounding.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/compounding.lexc)</small>
 
 ---
 
