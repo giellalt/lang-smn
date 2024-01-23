@@ -2587,14 +2587,22 @@ COPY:msyn-adj-sg-pl (Pl Nom &SUGGEST) EXCEPT (Sg Gen &msyn-adj-sg-pl) TARGET (A 
 	# 2-6 + gen
 	# > 6 + part
 	
+LIST ONE-smn = "oovtâ" ;
+LIST ONE-sme = "okta" ;
+LIST ONE-sma = "okta" ;
+LIST ONE-smj = "okta" ;
+
+SET ONE = ONE-smn OR ONE-sme OR ONE-sma OR ONE-smj ;
+	
 LIST NUM-6 = "maŋgâ" "oovtâ" "kyehti" "kulmâ" "nelji" "vittâ" "kuttâ" "1" "2" "3" "4" "5" "6" ;
 
 ADD:msyn-gen-after-num (&msyn-gen-after-num) TARGET (N Nom) IF
-(*-1 (Num Sg Nom) + NUM-6 BARRIER NOT-Attr LINK NOT 0 ("1") OR ("oovtâ") OR Ord OR Sem/Year OR Arab OR Sem/ID OR Rom)(NEGATE 0 Gen);
+(*-1 (Num Sg Nom) + NUM-6 BARRIER NOT-Attr LINK NOT 0 ("1") OR ONE OR Ord OR Sem/Year OR Arab OR Sem/ID OR Rom)(NEGATE 0 Gen);
 COPY:msyn-gen-after-num (Gen &SUGGEST) EXCEPT (Nom &msyn-gen-after-num) TARGET (&msyn-gen-after-num) ;
 
+
 ADD:msyn-part-after-num (&msyn-part-after-num) TARGET (N Nom) IF
-(*-1 (Num Sg Nom) BARRIER NOT-Attr LINK NOT 0 ("1") OR ("oovtâ") OR Ord OR Sem/Year OR Arab OR Sem/ID OR Rom OR NUM-6)(NEGATE 0 Par OR &msyn-moddii);
+(*-1 (Num Sg Nom) BARRIER NOT-Attr LINK NOT 0 ("1") OR ONE OR Ord OR Sem/Year OR Arab OR Sem/ID OR Rom OR NUM-6)(NEGATE 0 Par OR &msyn-moddii);
 COPY:msyn-part-after-num (Par &SUGGEST) EXCEPT (Sg Nom &msyn-part-after-num) TARGET (&msyn-part-after-num) ;
 	## Tast lijjii kulmânubáloh ive. 
 	## Oholoopâ ääigi puáhtá leđe vittâ cekki liegâs.
