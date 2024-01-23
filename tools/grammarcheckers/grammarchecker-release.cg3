@@ -1,6 +1,6 @@
 # -*- cg-pre-pipe: "hfst-tokenise -g ../../tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst" -*-
 # Divvun & Giellatekno - open source grammars for Sámi and other languages
-# Copyright © 2000-2016 UiT The arctic University of Norway
+# Copyright © 2000-2023 UiT The arctic University of Norway
 # http://giellatekno.uit.no & http://divvun.no
 #
 # This program is free software; you can redistribute and/or modify
@@ -523,6 +523,7 @@ LIST INITIAL = "a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m"
 #!! ### Sets for word or not
 
 LIST WORD = N A Adv V Pron CS CC Po Pr Interj Pcle Num ABBR ACR  \? ; #!! - WORD =  any word
+LIST CONTENT-WORD = N A Adv V Pron Num ABBR ACR ; 
 SET REAL-WORD-NOT-ABBR = WORD - Num - Ord - (ABBR N) ; # This is former REALWORD-NOTABBR #!! - REAL-WORD-NOT-ABBR
 SET WORD-NOT-de = WORD - ("joo") ; #!! - WORD-NOT-de
 SET NOT-COMMA = WORD - COMMA ;  #!! - NOT-COMMA
@@ -2169,9 +2170,12 @@ LIST &msyn-extsubj-ill-nom = &msyn-extsubj-ill-nom ;
 LIST &msyn-extv-numeral-sg3-pl3 = &msyn-extv-numeral-sg3-pl3 ;
 LIST &msyn-extv-pl3-sg3 = &msyn-extv-pl3-sg3 ;
 LIST &msyn-extv-sg3-pl3 = &msyn-extv-sg3-pl3 ;
+LIST &msyn-gen-after-num = &msyn-gen-after-num ;
+LIST &msyn-part-after-num = &msyn-part-after-num ;
 LIST &msyn-imp-nom-acc = &msyn-imp-nom-acc ;
 LIST &msyn-imp-pl3-sg3 = &msyn-imp-pl3-sg3 ;
 LIST &msyn-mii-sgnom-placc = &msyn-mii-sgnom-placc ;
+LIST &msyn-moddii = &msyn-moddii ;
 LIST &msyn-ncompl-ess-sgill = &msyn-ncompl-ess-sgill ;
 LIST &msyn-ncompl-placc-plill = &msyn-ncompl-placc-plill ;
 LIST &msyn-negcompl-sg3-conneg = &msyn-negcompl-sg3-conneg ;
@@ -2206,6 +2210,7 @@ LIST &msyn-refl-sg-pl = &msyn-refl-sg-pl ;
 LIST &msyn-rel-sg-pl = &msyn-rel-sg-pl ;
 LIST &msyn-subj-gen-nom = &msyn-subj-gen-nom ;
 LIST &msyn-subj-ill-nom = &msyn-subj-ill-nom ;
+LIST &msyn-sg3-pl3 = &msyn-sg3-pl3 ;
 LIST &msyn-top-nom-acc = &msyn-top-nom-acc ;
 LIST &msyn-top-placc-plnom = &msyn-top-placc-plnom ;
 LIST &msyn-v-actio-sg1 = &msyn-v-actio-sg1 ;
@@ -2267,18 +2272,53 @@ ADD:msyn-äigin-ääigi (&msyn-äigin-ääigi) TARGET ("äigi" N Ess) OR ("äigi
 	(-1 (N Gen));
 COPY:&msyn-äigin-ääigi ("äigi" N Sg Gen &SUGGEST) EXCEPT ("äigi" N Ess &msyn-äigin-ääigi) OR ("äigi" N Sg Acc PxDu1 &msyn-äigin-ääigi) OR ("äigi" N Sg Acc PxPl1 &msyn-äigin-ääigi) OR ("äigi" N Sg Acc PxSg1 &msyn-äigin-ääigi) OR ("äigi" N Gen PxDu1 &msyn-äigin-ääigi) OR ("äigi" N Gen PxPl1 &msyn-äigin-ääigi) OR ("äigi" N Gen PxSg1 &msyn-äigin-ääigi) TARGET (&msyn-äigin-ääigi);
 	## Sunnuu eenih láin iällám torist konsert äigin.
+	
+#!! ## äigi (Nom) > ääigi (Gen)
+
+ADD:msyn-äigi-ääigi (&msyn-äigi-ääigi) TARGET ("äigi" N Sg Nom) IF
+	(-1 ("siämmáá") OR ("váhá") OR ("ubâ") OR Num - Sem/Date - Sem/Year OR (N Gen) OR  (Pron Gen));
+COPY:&msyn-äigin-ääigi (Gen &SUGGEST) EXCEPT (Nom &msyn-äigi-ääigi) TARGET (&msyn-äigi-ääigi);
+	## ličij jieš Sopperost kesiluámu äigi. 
+	## Sun tieđij ete äigi algij nuuhâđ, já suu koolgâi forgâ porgâđ miärádâs.
+	## Sun lâi lopedâm, ete Agnes puáhtá puáttij pááikán pel ohtnubálov äigi.
+	## Já sun hepânij váhá, ko sun lâi sooppâm maŋedis äigi tuše tondiet ko sust lâi hyenes uámitobdo čiehâdum pakkeet keežild. 
+	## Anton čuojâttičij oovce äigi, já puohah škoovlâst tieđij tom.
+	## Jenny koijâdij já siämmáá äigi capciistij Agnes seelgi. 
+	## Agnesist moonâi ain äigi ko sun čaalij sämikielân. 
+
 
 #!! ## moadde kerdi > moddii
 
-#ADD:xmsyn-moddii (&msyn-moddii) TARGET (Num Sg Nom) OR (Num Sg Gen) IF	(1 ("kerdi" N Sg Nom) OR ("kerdi" N Sg Gen));
-ADDRELATION (DELETE1) (Num &msyn-moddii) TO (1 ("kerdi" N Sg Nom) OR ("kerdi" N Sg Gen)) ;
+ADD:msyn-moddii (&msyn-moddii) TARGET (Num Sg Nom) OR (Num Sg Gen) IF	(1 ("kerdi" N Sg Nom) OR ("kerdi" N Sg Gen));
 
-COPY:xmsyn-moddii ("moddii" Adv &SUGGEST) EXCEPT ("muáddi" Num Sg Nom &msyn-moddii) TARGET ("muáddi" &msyn-moddii);
+ADD (&COERROR &msyn-moddii) ("kerdi" N Sg) IF (0 Nom OR Gen)(-1 &msyn-moddii);
+ADDRELATION (DELETE1) ("kerdi" N Sg &msyn-moddii) TO (-1 (Num &msyn-moddii)) ;
+
+
+
+
+COPY:msyn-moddii ("moddii" Adv &SUGGEST) EXCEPT ("muáddi" Num Sg Nom &msyn-moddii) TARGET ("muáddi" &msyn-moddii);
 	## uáčču uáiniđ moolâviermi hiáilumin muáddi kerdi.
 
-COPY:xmsyn-moddii ("maŋgii" Adv &SUGGEST) EXCEPT ("maŋgâ" Num Sg Nom &msyn-moddii) TARGET ("maŋgâ" &msyn-moddii);
+COPY:msyn-moddii ("maŋgii" Adv &SUGGEST) EXCEPT ("maŋgâ" Num Sg Nom &msyn-moddii) TARGET ("maŋgâ" &msyn-moddii);
 
-COPY:xmsyn-moddii ("ohtii" Adv &SUGGEST) EXCEPT ("oovtâ" Num Sg Nom &msyn-moddii) TARGET ("oovtâ" &msyn-moddii);
+COPY:msyn-moddii ("ohtii" Adv &SUGGEST) EXCEPT ("oovtâ" Num Sg Nom &msyn-moddii) TARGET ("oovtâ" &msyn-moddii);
+
+COPY:msyn-moddii ("kuohtii" Adv &SUGGEST) EXCEPT ("kyehti" Num Sg Nom &msyn-moddii) TARGET ("kyehti" &msyn-moddii);
+
+COPY:msyn-moddii ("kulmii" Adv &SUGGEST) EXCEPT ("kulmâ" Num Sg Nom &msyn-moddii) TARGET ("kulmâ" &msyn-moddii);
+	## Henrik lâi tuolmân táálu lappâd jo kulmâ kerdi. 
+	
+COPY:msyn-moddii ("neljii" Adv &SUGGEST) EXCEPT ("nelji" Num Sg Nom &msyn-moddii) TARGET ("nelji" &msyn-moddii);
+
+COPY:msyn-moddii ("vittii" Adv &SUGGEST) EXCEPT ("vittâ" Num Sg Nom &msyn-moddii) TARGET ("vittâ" &msyn-moddii);
+
+COPY:msyn-moddii ("kuttii" Adv &SUGGEST) EXCEPT ("kuttâ" Num Sg Nom &msyn-moddii) TARGET ("kuttâ" &msyn-moddii);
+
+COPY:msyn-moddii ("čiččii" Adv &SUGGEST) EXCEPT ("čiččâm" Num Sg Nom &msyn-moddii) TARGET ("čiččâm" &msyn-moddii);
+
+COPY:msyn-moddii ("kahcii" Adv &SUGGEST) EXCEPT ("käävci" Num Sg Nom &msyn-moddii) TARGET ("käävci" &msyn-moddii);
+
 
 #!! ## Noun phrase internal phenomena
 
@@ -2394,7 +2434,7 @@ COPY:msyn-pron-acc-gen (Gen &SUGGEST) EXCEPT (Acc &msyn-pron-acc-gen) TARGET (&m
 
 
 #ADD:xmsyn-pron-gen-acc (&msyn-pron-gen-acc) TARGET (Pron Sg Gen Dem) IF
-#(NEGATE 1 Po OR N OR A OR Num OR Attr);
+#(NEGATE 1 Po OR N OR A OR Num OR Attr)(NEGATE 0 Acc OR <spelled>);
 	## Tom lii vaigâdis čielgiđ
 	## Vááldáh {taan} liijkás tuođâst. 
 	## jis sun ooinij {taan}? > taam
@@ -2541,6 +2581,39 @@ ADDRELATION:msyn-adj-nom-acc ($2) (N) FROM (-1 A LINK 0 (&msyn-adj-nom-acc)) ;
 #	(NOT 0 ("tuše"))
 #	(1C N + Pl + Nom);
 COPY:msyn-adj-sg-pl (Pl Nom &SUGGEST) EXCEPT (Sg Gen &msyn-adj-sg-pl) TARGET (A Gen &msyn-adj-sg-pl);
+
+
+#!! ### Numeral phrases - case and number of nouns
+	# 2-6 + gen
+	# > 6 + part
+	
+LIST ONE-smn = "oovtâ" ;
+LIST ONE-sme = "okta" ;
+LIST ONE-sma = "okta" ;
+LIST ONE-smj = "okta" ;
+
+SET ONE = ONE-smn OR ONE-sme OR ONE-sma OR ONE-smj ;
+	
+LIST NUM-6 = "maŋgâ" "oovtâ" "kyehti" "kulmâ" "nelji" "vittâ" "kuttâ" "1" "2" "3" "4" "5" "6" ;
+
+ADD:msyn-gen-after-num (&msyn-gen-after-num) TARGET (N Nom) IF
+(*-1 (Num Sg Nom) + NUM-6 BARRIER NOT-Attr LINK NOT 0 ("1") OR ONE OR Ord OR Sem/Year OR Arab OR Sem/ID OR Rom)(NEGATE 0 Gen);
+COPY:msyn-gen-after-num (Gen &SUGGEST) EXCEPT (Nom &msyn-gen-after-num) TARGET (&msyn-gen-after-num) ;
+
+
+ADD:msyn-part-after-num (&msyn-part-after-num) TARGET (N Nom) IF
+(*-1 (Num Sg Nom) BARRIER NOT-Attr LINK NOT 0 ("1") OR ONE OR Ord OR Sem/Year OR Arab OR Sem/ID OR Rom OR NUM-6)(NEGATE 0 Par OR &msyn-moddii);
+COPY:msyn-part-after-num (Par &SUGGEST) EXCEPT (Sg Nom &msyn-part-after-num) TARGET (&msyn-part-after-num) ;
+	## Tast lijjii kulmânubáloh ive. 
+	## Oholoopâ ääigi puáhtá leđe vittâ cekki liegâs.
+	## Sajân lâi ceggejum kyehti lyevi. 
+	## Molsâiähtun lâi kyehti ilgâdis ääši.
+	## Must lii kyehti spellâ, Agnes eeđâi äijihân. 
+	## Sun pajânij epivisesin kulmâ portháš. 
+	#$ Lii tuše kyehtlovkulmâ cekkid.
+	## Hettiih kulmânubálo ihásijd nieidâid, mut jieh tuostâ sárnuđ muin.
+	## Pááikán liin aainâs-uv kulmâčyeđe kilomeetter.
+	#$ Munnust lii paijeel kulmâčyeđe kilomeetter määđhi. 
 
 #!! ### Quantors in attributive positions
 
@@ -3104,9 +3177,12 @@ COPY:msyn-v-sg1-prfprc (PrfPrc &SUGGEST) EXCEPT (Ind Prs Sg1 &msyn-v-sg1-prfprc)
 #COPY-njuolggadus: bidjan dohko PrfPrc ja sáni &SUGGEST (maksá "evttot dan")
 
 
+# !! ## PrtSg3 PrtSg3 should be infinitive after movement verbs
 
-
-
+#ADD:xmsyn-prtsg3-inf (&msyn-prtsg3-inf) TARGET (Prt Sg3) - (Qst) IF
+#	(-1 (<PU-Inf> Prt Sg3))(NOT 1 ("uv" Pcle));
+COPY:msyn-prtsg3-inf (Inf &SUGGEST) EXCEPT (Ind Prt Sg3 &msyn-prtsg3-inf) TARGET (&msyn-prtsg3-inf) ;
+	## Uksâkiällu čuojâi, já Agnes kaačâi {lehâstij} uuvsâ.
 
 
 #!! ## Existential sentences
@@ -3324,6 +3400,12 @@ ADD:msyn-extsubj-ill-nom (&msyn-extsubj-ill-nom) TARGET N IF
 	(0C N + Pl + Ill);
 COPY:msyn-extsubj-ill-nom (Nom &SUGGEST) EXCEPT Ill TARGET (N Pl &msyn-extsubj-ill-nom);
 
+#!! ## Verb agreement outside of existential and habitive sentences
+
+#!!  **Agreement rule:** msyn-sg3-pl3
+ADD:msyn-sg3-pl3 (&msyn-sg3-pl3) TARGET (Sg3 V) IF	(-1 (Pron Pl Nom) + Pl OR (Pers Pl Nom) + Pl3 LINK NOT 0 Sg OR Sg3 LINK NEGATE *-1 (V Pl3) BARRIER NOT-ADV-PCLE)(NOT 0 (V Pl3));
+COPY:msyn-sg3-pl3 (Pl3 &SUGGEST) EXCEPT Sg3 TARGET (&msyn-sg3-pl3);
+	## Sun vuájui juolgijdis piäiváduttemân, moh lâi jo piäivádum.
 
 
 
@@ -3837,6 +3919,7 @@ ADDRELATION:msyn-predagr-pl3-sg3 ($2) (N Sg Nom) FROM (-5 Neg LINK 0 (&msyn-pred
 #$ Päikkinoomah iä lah siäilum.
 
 ADD:msyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET (A Sg Nom) IF
+	(NOT 0 Attr OR Adv)
 	(NEGATE 0 <TH-Ill-Any> LINK 1 Ill) # Taat uási/et lii viehâ herkki pieggáid.
 	(NEGATE 1 Sem/Hum + Ill OR Sem/Fem + Ill OR Sem/Mal + Ill OR Sem/Sur + Ill) # Mihheen ij lah máhđuttem Imelân
 	(NEGATE 0  CONCORD-A OR Ord OR Der/Comp OR Der/Superl OR N + Gen OR <AttrPred>)
@@ -3854,6 +3937,7 @@ COPY:msyn-adj-pred-attr (Attr &SUGGEST) EXCEPT (Sg Nom &msyn-adj-pred-attr) TARG
 
 #!!  **Agreement rule:** msyn-adj-pred-attr Plural adjectives should be Attr in front of N.
 ADD:msyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET A IF
+	(NOT 0 Attr OR Adv)
 	(NEGATE *1 Acc BARRIER NOT-NPMOD LINK 1 TV)
 	(0C Pl + Nom)
 	(NOT -1 ("leđe") OR ("šoddâđ"))
@@ -4043,6 +4127,11 @@ ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET N IF
 	(NOT 0 Ill OR PxSg3)
 	(NOT 1 ("pajas") OR ("vuálus") OR ("vuálos") OR TV + Inf)
 	(NOT *1 N + Ill BARRIER NOT-NPMOD);
+	
+	
+ADD:msyn-obj-acc-ill (&msyn-obj-acc-ill) TARGET (N Acc) OR (Pron Acc) IF (0 Sem/Hum OR Sem/Mal OR Sem/Fem OR Sem/Ani OR Pers)(NOT 0 Ill)(*-1 ("keččâđ") BARRIER NOT-ADV-PCLE);
+	## Anton moijái já keejâi suu.
+	## Sun keejâi puhelin.
 
 
 #!!  **Agreement rule:** msyn-obj-acc-ill *Ideologia kuáská kielâid/kieláid.*
@@ -4151,6 +4240,26 @@ COPY:msyn-n-ess-ill (Sg Ill &SUGGEST) EXCEPT (Ess &msyn-n-ess-ill) TARGET (N &ms
 #$ Puoh ij kannat muštâliđ lohhei.
 
 
+#!! #### Gen > Loc laa pággu
+
+ADD:msyn-gen-loc-paggu (&msyn-gen-loc-paggu) TARGET Gen OR Acc IF (1 ("leđe") LINK 1 ("pággu" Nom)) (0 Sem/Hum OR Sem/Fem OR Sem/Mal OR Pers)(NEGATE 0 Loc) ;
+ADD:msyn-gen-loc-paggu (&msyn-gen-loc-paggu) TARGET Gen OR Acc IF (1 ("pággu" Nom) LINK 1 ("leđe")) (0 Sem/Hum OR Sem/Fem OR Sem/Mal OR Pers)(NEGATE 0 Loc) ;
+COPY:msyn-gen-loc-paggu (Loc &SUGGEST) EXCEPT (Gen &msyn-gen-loc-paggu) OR (Acc &msyn-gen-loc-paggu) TARGET (&msyn-gen-loc-paggu) ;
+	## Talle suu lâi pággu pisániđ já vuoiŋâđ váhá äigi ovdil ko puovdij juátkiđ. 
+	## Suu lâi pággu čokkâđ seeŋgâ oolâ já kyeđđiđ teddildâh täässiv peiviloovdân. 
+	## Ella eeni lâi pággu luovâttij, já nuuvt sun monâttij peerâ puásuimeerhâ.
+	## Agnes lâi pággu uáččuđ uáđđij tääl.
+	## Talle suu lâi pággu pisániđ já vuoiŋâđ váhá äigi ovdil ko puovdij juátkiđ. 
+	## Jorreeräätis lâi kenski čunžáámus já hirmâdumos, mon Agnes lâi kuássin uáinám, te suu lâi pággu povvâstiđ. 
+	## Taan kerdi Agnes lâi pággu vyelgiđ tuoddarân, ige tuostâm smiettâđ ete mon kuhás.
+	## Suu lâi pággu oppâđ lase. 
+	## Talle suu ličij pággu pisánij savâstâllâđ.
+	## Ääših ornišuv; toi lâi pággu ornišuv.
+	## Suu lâi pággu mieđettij ete valjim lâi vaigâdis, mut ij, sun ličij valjim Henrik. 
+	## Mut mast tom tiätá veik munjin puáđáččij hiivsigeeti iho já muu ličij pággu pajânij, sun smietâi. 
+	## Ko Agnes poođij pááikán Sopperost Kiärun aldasijn vyesimáánust, sust lâi pággu mainâstiđ Jennyn suu kesivuáváámijd. 
+
+
 
 
 #!! ### Postposition internal case errors
@@ -4224,11 +4333,19 @@ COPY:easteregg ("27.2.2023" Num  &SUGGEST) EXCEPT ("nuvviDgrammarchecker" &easte
 #!! ## Word order rules
 
 #!! **Syntax rule:** syn-OVS-OSV
-#ADD:xsyn-OVS-OSV (&syn-OVS-OSV) TARGET VFIN IF (*-1 Acc BARRIER NOT-ADV-PCLE LINK NOT 0 Nom) (1 (N Nom) OR (Pron Nom));
+#ADD:xsyn-OVS-OSV (&syn-OVS-OSV) TARGET VFIN - ("leđe") IF (*-1 Acc BARRIER NOT-ADV-PCLE LINK NOT 0 Nom) (1 (N Nom) OR (Pron Nom));
 ##  Eres detaljijd puáhtá lohhee jieš kuvâttâllâđ.
 ##  Eres detaljijd lohhee puáhtá jieš kuvâttâllâđ.
 MOVE:syn-OVS-OSV (V &syn-OVS-OSV) AFTER (1 (N Nom) OR (Pron Nom)) ;
 ADDRELATION:syn-OVS-OSV ("$2") (N) FROM (*1 (V &syn-OVS-OSV));
+
+
+#!! ## Question particle rules
+
+#ADD:xmsyn-uv (&msyn-uv) TARGET CONTENT-WORD IF (-1 BOS)(1 ("?"))(NOT 0 Qst);
+COPY:msyn-uv (Qst &SUGGEST) EXCEPT (&msyn-uv) TARGET (&msyn-uv);
+	## Tääl? > Tääll-uv? 
+	## uáđá? > uáđá-uv?
 
 
 #!! The grammarchecker file ends here.
