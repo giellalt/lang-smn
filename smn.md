@@ -10697,6 +10697,8 @@ name convention for error tags: ´´&errortype-errorsubtype-is-shouldbe´´
 
 ## äigin > ääigi
 
+## äigi (Nom) > ääigi (Gen)
+
 ## moadde kerdi > moddii
 
 ## Noun phrase internal phenomena
@@ -10752,6 +10754,8 @@ mii + nominative should be mii + acc
 **Agreement rule:** msyn-adj-gen-nom (A.Gen + N.Nom)
 
 **Agreement rule:** msyn-adj-nom-acc
+
+### Numeral phrases - case and number of nouns
 
 ### Quantors in attributive positions
 
@@ -10902,6 +10906,10 @@ The interference comes from Finnish e-sentences, where the verb is in the singul
 **Agreement rule:** msyn-extv-sg3-pl3
 
 **Agreement rule:** msyn-extsubj-ill-nom
+
+## Verb agreement outside of existential and habitive sentences
+
+**Agreement rule:** msyn-sg3-pl3
 
 ## Subjects
 
@@ -11057,6 +11065,8 @@ These rules target adverbial cases, many of them the acc-ill lookalike *-âid/-�
 
 #### Ess > SgIll
 
+#### Gen > Loc laa pággu
+
 ### Postposition internal case errors
 
 **Agreement rule:** msyn-po-nom-gen
@@ -11082,6 +11092,8 @@ These rules target adverbial cases, many of them the acc-ill lookalike *-âid/-�
 ## Word order rules
 
 **Syntax rule:** syn-OVS-OSV
+
+## Question particle rules
 
 The grammarchecker file ends here.
 
