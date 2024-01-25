@@ -13,7 +13,7 @@ GTHOME=$(echo $GTHOME)
 
 PATTERN=$1
 L_FILE="in.txt"
-cut -d '!' -f1 src/fst/stems/verbs.lexc | egrep $PATTERN | tr '+' ':' | cut -d ':' -f1>$L_FILE
+cut -d '!' -f1 src/fst/morphology/stems/verbs.lexc | egrep $PATTERN | grep -v Err| tr '+' ':' | cut -d ':' -f1>$L_FILE
 
 P_FILE="test/data/testverbinfinites.txt"
 
@@ -21,8 +21,8 @@ for lemma in $(cat $L_FILE);
 do
  for form in $(cat $P_FILE);
  do
-   echo "${lemma}${form}" | $HLOOKUP $GTLANGS/lang-smn/src/generator-gt-norm.hfstol # xfst
-#      echo "${lemma}${form}" | $HLOOKUP $GTLANGS/lang-smn/src/generator-gt-norm.hfstol # hfst
+   echo "${lemma}${form}" | $HLOOKUP $GTLANGS/lang-smn/src/fst/generator-gt-norm.hfstol # xfst
+#      echo "${lemma}${form}" | $HLOOKUP $GTLANGS/lang-smn/src/fst/generator-gt-norm.hfstol # hfst
  done
 done
 
