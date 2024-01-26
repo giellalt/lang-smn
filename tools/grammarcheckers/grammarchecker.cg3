@@ -2289,7 +2289,13 @@ COPY:&msyn-äigin-ääigi (Gen &SUGGEST) EXCEPT (Nom &msyn-äigi-ääigi) TARGET
 
 #!! ## moadde kerdi > moddii
 
-ADD:msyn-moddii (&msyn-moddii) TARGET (Num Sg Nom) OR (Num Sg Gen) IF	(1 ("kerdi" N Sg Nom) OR ("kerdi" N Sg Gen));
+LIST TIMES-ADV-smn = ("kerdi" N Sg Nom) ("kerdi" N Sg Gen)  ;
+LIST TIMES-ADV-sme = ("geardde" Adv) ;
+LISTE TIMES-ADV-sma = ("aejkie" N Sg Gen) ;
+LIST TIMES-ADV-smj = ("bálle" N Sg Gen) ;
+SET TIMES-ADV = TIMES-ADV-smn OR TIMES-ADV-sme OR TIMES-ADV-sma OR TIMES-ADV-smj ;
+
+ADD:msyn-moddii (&msyn-moddii) TARGET (Num Sg Nom) OR (Num Sg Gen) IF	(1 TIMES-ADV);
 
 ADD (&COERROR &msyn-moddii) ("kerdi" N Sg) IF (0 Nom OR Gen)(-1 &msyn-moddii);
 ADDRELATION (DELETE1) ("kerdi" N Sg &msyn-moddii) TO (-1 (Num &msyn-moddii)) ;
@@ -2587,7 +2593,7 @@ COPY:msyn-adj-sg-pl (Pl Nom &SUGGEST) EXCEPT (Sg Gen &msyn-adj-sg-pl) TARGET (A 
 	# 2-6 + gen
 	# > 6 + part
 	
-LIST ONE-smn = "oovtâ" ;
+LIST ONE-smn = "ohtâ" ;
 LIST ONE-sme = "okta" ;
 LIST ONE-sma = "akte" ;
 LIST ONE-smj = "okta" ;
@@ -4088,12 +4094,18 @@ COPY:msyn-adj-attr-placc (Pl Acc &SUGGEST) EXCEPT (Attr &msyn-adj-attr-placc) TA
 
 #!! ## Dimin after ucca rules
 
-ADD:msyn-dimin-after-ucca (&msyn-dimin-after-ucca) TARGET N IF (NEGATE 0 Der/Dimin)(*-1 ("ucce" A Attr) BARRIER (*) - Attr)	;
+LIST SMALL-A-smj = "unne" ;
+LIST SMALL-A-sma = "onne" ;
+LIST SMALL-A-sme = "unna" ;
+LIST SMALL-A-smn = "ucce" ;
+SET SMALL-A = SMALL-A-smj OR SMALL-A-sma OR SMALL-A-sme OR SMALL-A-smn ;
+
+ADD:msyn-dimin-after-ucca (&msyn-dimin-after-ucca) TARGET N IF (NEGATE 0 Der/Dimin)(*-1 SMALL-A + (A Attr) BARRIER (*) - Attr)	;
 	## Suu ucce nieidâ.
 	## Tust lii maailm nánnáámus ucce njune. 
 	## Sun lâi tego nukke, ucce juármááš nukke.
 	
-ADD:msyn-dimin-after-ucca (&msyn-dimin-after-ucca) TARGET N IF (NEGATE 0 Der/Dimin)(-1 CC LINK -1 Der/Dimin OR &msyn-dimin-after-ucca LINK *-1 ("ucce" A Attr) BARRIER (*) - Attr)	;
+ADD:msyn-dimin-after-ucca (&msyn-dimin-after-ucca) TARGET N IF (NEGATE 0 Der/Dimin)(-1 CC LINK -1 Der/Dimin OR &msyn-dimin-after-ucca LINK *-1 SMALL-A + (A Attr) BARRIER (*) - Attr)	;
 	## Juuvâriddoost láá karsâjum masa puoh uccâ muorah já miestuuh. 
 	
 	
