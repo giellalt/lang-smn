@@ -1859,7 +1859,7 @@ LEXICON APINA_SG  !!≈ * **@CODE@**
 +N+Sg+Com:%>in CPXsuff ;  ! viinijnis 
 +N+Ess:%>n CPXsuff ;      ! apinanis 
 +N:%> Gen_DER ; 
-+N+Der1+Der/Dimin: APINA_SG_DIM ;
+!+N+Der1+Der/Dimin: APINA_SG_DIM ; ! No apinadim
 
 LEXICON APINA_PL !!≈ * **@CODE@** 
 +N: X_h_PL ; 
@@ -1870,7 +1870,7 @@ LEXICON APINA_PL !!≈ * **@CODE@**
 +N+Pl+Acc:%>id CPXsuff ;  ! 
 +N+Pl+Ill:%>id CPXsuff ;  ! 
 +N+Pl+Com:%>id CPXsuffCOM ;  ! 
-+N+Der1+Der/Dimin: APINA_PL_DIM ;
+!+N+Der1+Der/Dimin: APINA_PL_DIM ; ! No apinadim
  
  
 LEXICON X_APINA_SG !!≈ * **@CODE@** (common for different POS) 
@@ -1974,7 +1974,7 @@ LEXICON 4CAHALIG_SG  !!≈ * **@CODE@**
 +N+Cmp/SgGen: Rhash ; 
 +N:%> Nom_DER ; 
 +N:%> Gen_DER ; 
-+N+Der1+Der/Dimin: 4C_RASTAGAS_SG ; ! 
++N+Der1+Der/Dimin:g%>áá 4C_RASTAGAS_SG ; ! 
 +N+Sg+Nom:g%>áá VPXsuff12nom ;  ! 
 +N+Sg+Gen:g%>áá VPXsuff12 ;  ! 
 +N+Sg+Acc:g%>áá VPXsuff12 ;  ! 
@@ -1988,7 +1988,7 @@ LEXICON 4CAHALIG_SG  !!≈ * **@CODE@**
  
 LEXICON 4CAHALIG_PL  !!≈ * **@CODE@** 
 +N: X_eh_PL ; 
-+N+Der1+Der/Dimin: 4C_RASTAGAS_PL ; !kieđâš 
++N+Der1+Der/Dimin:g%>áá 4C_RASTAGAS_PL ; !kieđâš 
 +N+Cmp/PlGen:%>ij Rhash ; 
 +N+Pl+Gen:%>ijd CPXsuff ;  ! 
 +N+Pl+Acc:%>ijd CPXsuff ;  ! 
@@ -2886,8 +2886,8 @@ LEXICON 3VUONJAS  !!≈ * **@CODE@**  kierâš, stem: kierrâ, px kierâččâm
 +N+Pl+Ill:^CSH%>ijd CPXsuff ;    ! pihtâsijdân 
 +N+Pl+Loc:^CSH%>ijn CPXsuff ;    ! pihtâsijnân 
 +N+Pl+Com:^CSH%>ijd CPXsuffCOM ; ! pihtâsijdân guin 
-+N+Der1+Der/Dimin:čč^CSH 4C_RASTAGAS_SG ; !njuámmilâš 
-+N+Der1+Der/Dimin:čč^CSH 4C_RASTAGAS_PL ; !njuámmilâš 
++N+Der1+Der/Dimin:ččá^CSH 4C_RASTAGAS_SG ; !njuámmilâš 
++N+Der1+Der/Dimin:ččá^CSH 4C_RASTAGAS_PL ; !njuámmilâš 
 
  
 LEXICON 3CEVE !!≈ * **@CODE@** only for this lemma. It could go to 3LYEME but needs modifications of rules to get iä:e and -tt-, and the worst part is v:vv 
@@ -4513,7 +4513,7 @@ LEXICON 2AAIGA_DIM !!≈ * **@CODE@**
 +N+Sg+Nom:%>š K ; 
 +N+Sg+Gen:%>užii K ; 
 +N+Sg+Acc:%>užii K ; 
-+N+Sg+Ill:%>užán K ; 
++N+Sg+Ill:%>užân K ; 
 +N+Sg+Loc:%>užiist K ; 
 +N+Sg+Com:%>žijn K ; 
 +N+Sg+Abe:%>žuttáá K ; 
@@ -4530,11 +4530,11 @@ LEXICON 2AAIGA_DIM !!≈ * **@CODE@**
 
 !! ### 3-syllabic
 
-LEXICON APINA_SG_DIM
-3SYLL_SG_DIM ; ! todo -- check
-
-LEXICON APINA_PL_DIM
-3SYLL_PL_DIM ; ! todo -- check
+! No apinadim
+! LEXICON APINA_SG_DIM
+! 3SYLL_SG_DIM ; ! todo -- check
+! LEXICON APINA_PL_DIM
+! 3SYLL_PL_DIM ; ! todo -- check
 
 LEXICON 3SYLL_SG_DIM
 +N+Sg+Nom:%>š K ; 
