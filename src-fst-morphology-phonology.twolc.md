@@ -431,7 +431,7 @@ táálhudem koomerdem
 * *nju^RVne^SV^WG^RLEN^SLEN>st*
 * *njuunee000>st*
 
-**RULE: Root vowel o5:u ** = 
+**RULE: Root vowel o5:u** = 
 puhtii
 
 **RULE: Root vowel ä:ää lenghtening and diphthongisation e:iä** = special rule, for avoiding conflict spä%^RVi4lih%^WG%^RLEN, 
