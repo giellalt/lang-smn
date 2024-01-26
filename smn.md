@@ -7644,7 +7644,7 @@ h5 j5 ŋ5 t5 c5 l5 t5 d5 r5 z5 j6
 * UnvoicedCns = c č f h k p s š t ;
 * **Geminate = b d g p h t k c f z l m n ŋ r s š v ;**  
 * **Sgm = Vow Cns ;** 
-* **NotSuffixBorder = %^FCD %^FVD %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^EX %^ÁI %^SVSH Vow Cns ;** 
+* **NotSuffixBorder = %^FCD %^FVD %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^EX %^ÁI %^SVSH %^VHIGH %^VBACK %^IUML Vow Cns ;** 
 * **Triggers = %^FCD %^FVD %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^EX %^ÁI %^SVSH %^VHIGH %^VBACK %^IUML ;** 
 * TriggersnotFCVD = %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^EX %^ÁI %^SVSH %^VHIGH %^VBACK %^IUML ;
 * **StemCns = b b3 d d3 g g2 g3 h h2 h3** 
@@ -8011,16 +8011,18 @@ a rules
 contr 
 contr 
 
-**RULE: Root vowel o:u for contract verbs and Root vowel change o:u before suffix i** 
+**RULE: Root vowel o:u for contract verbs and Root vowel change o:u before suffix i and stem vowel o:u sometimes** 
 juttuum
 ?
 alge : olgijn, remove đ because of inf.
+XXX ny
 XXX ny
 1) poccuu puásui  
 ([%^RLEN:|%^RVSH:]) (%^SLEN:) [%>|.#.] 5) jutâlâm juuttâl
 
 * *tohhi2>đ*
 * *tuhhi>đ*
+
 * *lo^RVh^RCá^WG^VHIGH^RLEN>im*
 * *luuv0á000>im*
 
@@ -8296,6 +8298,12 @@ eemeed : emedân sai4joos
 **RULE: Suffix vowel lengthening** = long á in kissáást, nuorâ : nuorááin, hyeni:hyeneest
 
 **Tests**
+* *pa^RVrgo^SV^WG^VHIGH^SLEN*
+* *pa0rguu000*
+
+* *ke^RVrho^SV^WG^VHIGH^SLEN*
+* *ke0rhuu000*
+
 * *ki^RVssá^SV^WG^CLEN^SLEN>st*
 * *ki0ssáá000>st*
 * *mi^RVllo^SV^WG^CLEN^SLEN>st*
