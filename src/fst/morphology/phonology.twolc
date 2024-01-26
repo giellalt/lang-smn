@@ -149,7 +149,7 @@ Sets
  UnvoicedCns = c č f h k p s š t  ;          !!≈ * @CODE@
  Geminate = b d g p h t k c f z l m n ŋ r s š v ; !!≈ * **@CODE@**  
  Sgm = Vow Cns ;                                  !!≈ * **@CODE@** 
- NotSuffixBorder = %^FCD %^FVD %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^EX %^ÁI %^SVSH Vow Cns ; !!≈ * **@CODE@** 
+ NotSuffixBorder = %^FCD %^FVD %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^EX %^ÁI %^SVSH %^VHIGH %^VBACK %^IUML Vow Cns ; !!≈ * **@CODE@** 
  Triggers =        %^FCD %^FVD %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^EX %^ÁI %^SVSH %^VHIGH %^VBACK %^IUML ; !!≈ * **@CODE@** 
  TriggersnotFCVD =             %^WG %^CSH %^CLEN %^SLEN %^RLEN %^RVSH %^SVLOW %^ÁE %^EA %^EX %^ÁI %^SVSH %^VHIGH %^VBACK %^IUML ; !!≈ * @CODE@
  StemCns = b b3 d d3 g g2 g3 h h2 h3         !!≈ * **@CODE@** 
@@ -815,19 +815,23 @@ a:o <=> [Cns|.#.|#] _  %^RV:  Cns:+ e:   (%^WG:) ([%^RLEN: |%^CLEN:] )  %> i: ; 
               \Vow: _ (%^RV:)  Cns:+  â (Cns:+) ([%^CLEN:|%^CSH:|%^WG:]) %^VBACK:  ([%^RLEN:|%^RVSH:]) (%^SLEN:) [%>|.#.] ;  ! RV !! 5) jutâlâm juuttâl
 
 
-"Root vowel o:u for contract verbs and Root vowel change o:u before suffix i"
+"Root vowel o:u for contract verbs and Root vowel change o:u before suffix i and stem vowel o:u sometimes"
 !! **RULE: @RULENAME@** 
-o:u <=> [Cns|.#.] _  (%^RV:) Cns:+ u2:u         Triggers:*                   %>   ; !! juttuum
-        [Cns|.#.] _          Cns:+                                      i2:i %> [i|i3:i|Cns] ; !! ?
+o:u <=> .#. Cns:* _  (%^RV:) Cns:+ u2:u         Triggers:*                   %>   ; !! juttuum
+        .#. Cns:* _          Cns:+                                      i2:i %> [i|i3:i|Cns] ; !! ?
                   _  %^RV:   Cns:  (Cns:) e:i   (%^WG:) ([%^RLEN: |%^CLEN:]) %> [i:|m|v|p] ; !! alge : olgijn, remove đ because of inf.
-            \Vow: _ (%^RV:)  Cns:+ [â|a|i|á|u]  (%^WG:|%^CSH:) (%^CLEN:) %^VHIGH: ; !! XXX ny
+            \Vow: _  %^RV:   Cns:+ [â|a|i|á|u]  (%^WG:|%^CSH:) (%^CLEN:) %^VHIGH: ; !! XXX ny
+   [#|.#.] \Vow:+ _ (%^RV:)  Cns:+ [â|a|i|á|u]  (%^WG:|%^CSH:) (%^CLEN:) %^VHIGH: ; !! XXX ny
             \Vow: _ %^RV:á   Cns:+ u [i4:|j|š|ž] %^WG:                            (%^RVSH:) [%>|.#.] ; !! 1) poccuu puásui  
-            \Vow: _ (%^RV:)  Cns:+ â Cns:+     ([%^WG:|%^CSH:]) (%^CLEN:) %^VBACK: ; !! ([%^RLEN:|%^RVSH:]) (%^SLEN:) [%>|.#.] 5) jutâlâm juuttâl
-[a|o|i|u] (%^RV:) Cns:+ _ (%^SV:)    %^EA:     ([%^WG:|%^CSH:]) (%^CLEN:) ([%^RLEN:|%^RVSH:]) (%^SLEN:) [%>|.#.] ;
+   [#|.#.]  \Vow: _ (%^RV:)  Cns:+ â Cns:+     ([%^WG:|%^CSH:]) (%^CLEN:) %^VBACK: ; !! ([%^RLEN:|%^RVSH:]) (%^SLEN:) [%>|.#.] 5) jutâlâm juuttâl
+
+[a|o|i|u] (%^RV:) Cns:+ _ (%^SV:)   %^EA:    ([%^WG:|%^CSH:]) (%^CLEN:)          ([%^RLEN:|%^RVSH:]) (%^SLEN:) [%>|.#.] ;
+     :Vow (%^RV:) Cns:+ _ (%^SV:)              %^WG:          (%^CLEN:) %^VHIGH: ([%^RLEN:|%^RVSH:]) (%^SLEN:) [%>|.#.] ;
 
 
 !!€ tohhi2>đ
 !!€ tuhhi>đ
+
 !!€ lo^RVh^RCá^WG^VHIGH^RLEN>im
 !!€ luuv0á000>im
 
@@ -1371,6 +1375,12 @@ Vx:0 <=> _  %^FVD: (%^WG:|%^CSH:) (%^CLEN:) (i) [.#.|%>] ;  ! SC
 
 
 !! **Tests**
+!!€ pa^RVrgo^SV^WG^VHIGH^SLEN
+!!€ pa0rguu000
+
+!!€ ke^RVrho^SV^WG^VHIGH^SLEN
+!!€ ke0rhuu000
+
 !!€ ki^RVssá^SV^WG^CLEN^SLEN>st
 !!€ ki0ssáá000>st
 !!€ mi^RVllo^SV^WG^CLEN^SLEN>st
