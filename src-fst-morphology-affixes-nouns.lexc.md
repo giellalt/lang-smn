@@ -741,13 +741,11 @@ this is for loanwords without stem change
 
     - *LEXICON 4C_RASTAGAS_PL*  the pl ones 
 
-    - *LEXICON X_RASTAGAS* sg cases 
+    - *LEXICON X_RASTAGAS_SG* sg cases 
 
 * **LEXICON 3OPPUS** 
 
 * **LEXICON 3ALMAS** 
-
-* **LEXICON ALMAS_COMMON** 
 
 * **LEXICON C_SARVES** sarves, jalŋes 
 
@@ -826,8 +824,6 @@ TODO: Move derivation lexica here
 * **LEXICON 2ALGA_SG_DIM** a^RVlgâ done witout FVD, both ways work
 
 * **LEXICON 2ALGA_PL_DIM**  a^RVlgâ
-
-* **LEXICON 2KIELA_DIM** done with FVD, both ways work
 
 #### final á
 
