@@ -19,20 +19,20 @@ fi
 
 ######### USER Variables - change these to your liking: #########
 # Codes for the word forms to be generated - list as many or few as needed:
-morf_codes="+N+Der/Dimin+N+Sg+Nom \
-            +N+Der/Dimin+N+Sg+Gen \
-            +N+Der/Dimin+N+Sg+Ill \
-            +N+Der/Dimin+N+Sg+Loc \
-            +N+Der/Dimin+N+Sg+Com \
-            +N+Der/Dimin+N+Sg+Abe \
-            +N+Der/Dimin+N+Par \
-            +N+Der/Dimin+N+Ess \
-            +N+Der/Dimin+N+Pl+Nom\
-            +N+Der/Dimin+N+Pl+Gen \
-            +N+Der/Dimin+N+Pl+Acc \
-            +N+Der/Dimin+N+Pl+Ill \
-            +N+Der/Dimin+N+Pl+Loc \
-            +N+Der/Dimin+N+Pl+Abe"
+morf_codes="+N+Der1+Der/Dimin+N+Sg+Nom \
+            +N+Der1+Der/Dimin+N+Sg+Gen \
+            +N+Der1+Der/Dimin+N+Sg+Ill \
+            +N+Der1+Der/Dimin+N+Sg+Loc \
+            +N+Der1+Der/Dimin+N+Sg+Com \
+            +N+Der1+Der/Dimin+N+Sg+Abe \
+            +N+Der1+Der/Dimin+N+Par \
+            +N+Der1+Der/Dimin+N+Ess \
+            +N+Der1+Der/Dimin+N+Pl+Nom\
+            +N+Der1+Der/Dimin+N+Pl+Gen \
+            +N+Der1+Der/Dimin+N+Pl+Acc \
+            +N+Der1+Der/Dimin+N+Pl+Ill \
+            +N+Der1+Der/Dimin+N+Pl+Loc \
+            +N+Der1+Der/Dimin+N+Pl+Abe"
 
 # Lexicon source file for lexicons and lemmas:
 source_file=src/fst/morphology/stems/nouns.lexc
@@ -44,7 +44,7 @@ exception_lexicons="(nounstems|Rnoun|_PL|S_KAANDAS|S_ALGAAS|S_CISSAAS|S_KAAHUS|S
 generator_file=src/fst/generator-gt-norm
 
 # How many lemmas maximally for each lexicon:
-lemmacount=1
+lemmacount=15
 
 # Specify path to the dir containing the script used for generation:
 script_dir=$giella_core/scripts
