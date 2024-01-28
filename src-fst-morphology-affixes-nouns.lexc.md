@@ -265,7 +265,20 @@ i-i-i > 2SOLLA (?); MLO: no, difference in sg Com and pl Ill
 
 ### 2CAACI - 2VYEHI lexicon family TODO -- 
 WG, Ill EA, Com CLEN SVLOW, Ess **with** CLEN 
-* **LEXICON 2CAACI** (basic lexicon 
+
+* **LEXICON 2CAACI** čääc^RCi ==> čä^RVc^RCi
+
+* **LEXICON 2CAACI_SG** 
+
+* **LEXICON 2CAACI_PL** common Pl forms for Px 
+
+* **LEXICON X_CAACI_SG** common Sg case forms 
+
+* **LEXICON X_CAACI_PL** 
+
+* ''LEXICON 2CAACI_SG_DIM''  pe^RVi4vi, ä^RVi4gi
+
+* ''LEXICON 2CAACI_PL_DIM'' 
 
 * **LEXICON 2VYEHI** WG, Ill EA, Com CLEN SVLOW, Ess **without** CLEN 
 
