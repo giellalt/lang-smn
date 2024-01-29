@@ -385,8 +385,6 @@ SET Sem/AnimateNotOrg = Sem/Hum OR Sem/Ani OR Sem/Sur OR Sem/Mal OR Sem/Fem ;
 LIST Sem/Concrete-NotAnimate-NotPlace = Sem/Clth Sem/Clth-jewl Sem/Clthpart Sem/Ctain Sem/Drink Sem/Food Sem/Food-med Sem/Mat Sem/Money Sem/Obj Sem/Obj-clo Sem/Obj-el Sem/Substnc Sem/Tool Sem/Tool-catch Sem/Tool-measr Sem/Tool-music  Sem/Tool-write  Sem/Txt  Sem/Veh Sem/Wpn ;
 SET Sem/Place = Sem/Plc OR Sem/Plc-water OR Sem/Plc-elevate OR Sem/Plc-line OR Sem/Build OR Sem/Buildpart OR Sem/Org ;
 
-SET Sem/Hum-prop = Sem/Sur OR Sem/Mal OR Sem/Fem ;
-
 SET Sem/Abstract = Sem/Act OR Sem/Amount OR Sem/Body-abstr OR Sem/Domain OR Sem/Edu OR Sem/Prod-cogn OR Sem/Perc-emo OR Sem/Prod-audio OR Sem/Event OR Sem/Feat OR Sem/Feat-phys OR Der/NomAct OR Sem/Lang OR Sem/Money OR Sem/State OR Sem/State-sick OR Sem/Semcon OR Sem/Txt OR Sem/Time OR Sem/Dummytag;LIST Sem/Atr = Sem/Atr ;				    #!! - Sem/Atr
 
 LIST HUMAN = Sem/Fem Sem/Mal Sem/Sur ;	    #!! HUMAN
@@ -394,8 +392,6 @@ LIST HUMAN = Sem/Fem Sem/Mal Sem/Sur ;	    #!! HUMAN
 #!! This ends the semtag list.
 
 
-LIST PROP-ATTR = Sem/Mal Sem/Sur Sem/Fem ; #!! PROP-ATTR
-LIST PROP-SUR = Sem/Sur Sem/Mal Sem/Fem ; #!! PROP-SUR
 
 SET TIME-N-SET = N + Sem/Time ;  #!! TIME-N-SET
 LIST NOT-TIME = "čäciollee" "lope" "vuáru" ; #!! NOT-TIME
@@ -575,7 +571,7 @@ LIST DU1-V = (V Du1) ;  #!! DU1-V
 LIST DU2-V = (V Du2) ;  #!! DU2-V
 LIST DU3-V = (V Du3) ;  #!! DU3-V
 LIST PL1-V = (V Pl1) ;  #!! PL1-V
-LIST PL2-V = (V Pl3) ;  #!! PL2-V
+LIST PL2-V = (V Pl2) ;  #!! PL2-V
 LIST PL3-V = (V Pl3) ;  #!! PL3-V
 
 LIST PERNUM = Sg1 Sg2 Sg3 Du1 Du2 Du3 Pl1 Pl2 Pl3 ;  #!!= - @CODE@
@@ -682,7 +678,6 @@ LIST SG-PX = PxSg1 PxSg2 PxSg3 ;
 LIST DU-PX = PxDu1 PxDu2 PxDu3 ;
 LIST PL-PX = PxPl1 PxPl2 PxPl3 ;
 
-LIST PX = PxSg1 PxDu1 PxPl1 PxSg2 PxDu2 PxPl2 PxSg3 PxDu3 PxPl3 ;
 
 LIST DU-NR = Du1 Du2 Du3 ;
 
@@ -751,9 +746,10 @@ LIST MO-MANge = "tondiet" "kuás" "gokko" "kost" "kuus" "govt" ("maht" Adv) "mag
 SET MO = MO-MANge - Foc/gin ;
 
 # Correct is plural of maŋgâ, but it occurs in singular as well -- testing baseform. TODO: More adverbs here.
-LIST UNITQUANTOR-ADV = ("maŋgâ") ; # ("maŋgâ" Num Pl Nom) ("maŋgâ" Pron Indef Pl Nom) ;
-LIST MASSQUANTOR-ADV = ("maŋgâ") ; # ("maŋgâ" Num Pl Nom) ("maŋgâ" Pron Indef Pl Nom) ;
-SET QUANTOR-ADV =  UNITQUANTOR-ADV OR MASSQUANTOR-ADV ;
+#LIST UNITQUANTOR-ADV = ("maŋgâ") ; # ("maŋgâ" Num Pl Nom) ("maŋgâ" Pron Indef Pl Nom) ;
+#LIST MASSQUANTOR-ADV = ("maŋgâ") ; # ("maŋgâ" Num Pl Nom) ("maŋgâ" Pron Indef Pl Nom) ;
+#SET QUANTOR-ADV =  UNITQUANTOR-ADV OR MASSQUANTOR-ADV ;
+LIST QUANTOR-ADV = "maŋgâ" ; # awaiting more adverbs
 
  # Introduce finite clauses.
 
@@ -1240,8 +1236,6 @@ LIST N-SG-NOM = (N Sg Nom);
 SET LEX-N = N - DER-N ;
 
 LIST PROP = (N Prop);
-
-SET COMMON-N = N - Prop;
 
 SET HEAD-N = N - Cmp/SplitR ;
 
@@ -2232,8 +2226,9 @@ LIST &syn-OVS-OSV = &syn-OVS-OSV ;
 
 MAPPING-PREFIX = & ;
 
-TEMPLATE nextWordCrossSent = (-1 (*)); # Adding mark to word that find the reference word to the left
-TEMPLATE previousWordCrossSent = (1 (*)); # and vice versa
+# Not in use (and in need of "OR"?)
+#TEMPLATE nextWordCrossSent = (-1 (*)); # Adding mark to word that find the reference word to the left
+#TEMPLATE previousWordCrossSent = (1 (*)); # and vice versa
 
 
 #!!  
@@ -2291,7 +2286,7 @@ COPY:&msyn-äigin-ääigi (Gen &SUGGEST) EXCEPT (Nom &msyn-äigi-ääigi) TARGET
 
 LIST TIMES-ADV-smn = ("kerdi" N Sg Nom) ("kerdi" N Sg Gen)  ;
 LIST TIMES-ADV-sme = ("geardde" Adv) ;
-LISTE TIMES-ADV-sma = ("aejkie" N Sg Gen) ;
+LIST TIMES-ADV-sma = ("aejkie" N Sg Gen) ;
 LIST TIMES-ADV-smj = ("bálle" N Sg Gen) ;
 SET TIMES-ADV = TIMES-ADV-smn OR TIMES-ADV-sme OR TIMES-ADV-sma OR TIMES-ADV-smj ;
 
@@ -2363,7 +2358,7 @@ ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF
 	(NOT -1 PRESENTATION-PRON OR A + Attr)
 	(NEGATE *-1 TV BARRIER SV-BOUNDARY) ## <????
 	(0 N + Pl + Acc)
-	(NOT 0 PX OR Gen OR Ill OR FOC)
+	(NOT 0 Px OR Gen OR Ill OR FOC)
 	(NOT 1 Prop OR Pron)
 	(1 N OR Actio + Nom LINK NOT *1 TV + V BARRIER S-BOUNDARY)
 	(NEGATE *1 TV BARRIER S-BOUNDARY);
@@ -2373,7 +2368,7 @@ ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF
 #ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF
 #(NEGATE *-1 TV BARRIER NOT-NPMOD) ## <????
 #(0 N + Pl + Acc)
-#(NOT 0 PX OR Gen)
+#(NOT 0 Px OR Gen)
 #(NOT 1 Prop)
 #(1 N OR Actio + Nom LINK NOT *1 TV + V BARRIER S-BOUNDARY);
 
@@ -2381,7 +2376,7 @@ ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF
 ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF
 (NEGATE *-1 TV BARRIER NOT-COORD-NPMOD) # XXX váralaš?
 (0 N + Pl + Acc)
-(NOT 0 PX OR Gen)
+(NOT 0 Px OR Gen)
 (1 CC)
 (2 N + Pl + Gen OR &msyn-posspl-acc-gen LINK 1 N OR Actio + Nom LINK NOT *1 TV + V BARRIER S-BOUNDARY);
 
@@ -2390,7 +2385,7 @@ ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF
 (*-1 V BARRIER NOT-COORD-NPMOD) # testing...
 (NOT -1 Gen)
 (0 N + Pl + Acc)
-(NOT 0 PX OR Gen)
+(NOT 0 Px OR Gen)
 (1 CC)
 (2 N + Pl + Gen OR &msyn-posspl-acc-gen LINK 1 N OR Actio + Nom LINK NOT *1 TV BARRIER S-BOUNDARY);
 
@@ -2402,7 +2397,7 @@ ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N + Pl IF
 #(NOT *-1 TV BARRIER NOT-NPMOD)
 (NOT -1 Gen)
 (0 N + Pl + Acc)
-(NOT 0 PX OR Gen)
+(NOT 0 Px OR Gen)
 (1 CC)
 (2 N + Pl + Gen LINK 1 N OR Actio + Nom LINK NOT *1 TV + V BARRIER S-BOUNDARY);
 
@@ -2415,7 +2410,7 @@ COPY:msyn-attr-other-com-gen (Gen &SUGGEST) EXCEPT (Com &msyn-attr-com-gen) TARG
 # postposition phrase
 ADD:msyn-posspl-acc-gen (&msyn-posspl-acc-gen) TARGET N IF
 (0 N + Pl + Acc)
-(NOT 0 PX OR Gen)
+(NOT 0 Px OR Gen)
 (1 Po)
 (NOT 1 Adv)
 (NEGATE 1 ("pajas") OR ("vuálus") OR ("vuálos") LINK *-1 QUASI-TV)
@@ -2429,7 +2424,7 @@ COPY:msyn-posspl-acc-gen (Gen &SUGGEST) EXCEPT (Acc &msyn-posspl-acc-gen) TARGET
 	# Demonstrative pronouns sg acc>sg gen before postpositions
 	
 ADD:msyn-pron-acc-gen (&msyn-pron-acc-gen) TARGET (Pron Sg Acc Dem) IF
-(NOT 0 PX OR Gen)(1 Po)(NEGATE 1 Pr LINK *1 Gen); #(NOT 1 Adv)	
+(NOT 0 Px OR Gen)(1 Po)(NEGATE 1 Pr LINK *1 Gen); #(NOT 1 Adv)	
 	## {Tom} saajeest sun moijái Jennyn, kij nirvái maasâd.
 	## Eenist ij vissâsávt lamâš miheen {tom} vuástá. 
 	## Juávkku siida nuorâin lâi čokkánâm tom pirrâ.
@@ -2486,7 +2481,7 @@ COPY:msyn-posspl-ill-gen (Gen &SUGGEST) EXCEPT (Ill &msyn-posspl-ill-gen) TARGET
 	#$ Sun čielgij, maht vala Suomâ haldâttâs 1959 kieđâvušâi ILO sopâmuš já adelij staatârááđán celkkuu, et Suomâst iä lah algâ-aalmugáid kullee aalmugeh ollágin, aaibâs uccâ sämmilâšhiäimuid väldihánnáá uáinun.
 
 #!!  **Agreement rule:** msyn-ncompl-ess-sgill: *Must lii tárbu toorjân/torjui.*
-ADD:msyn-ncompl-ess-sgill (&msyn-ncompl-ess-sgill) TARGET N IF (-1 N-WITH-ILL LINK NOT 0 PX)(0 Ess LINK NOT 0 Sg + Ill);
+ADD:msyn-ncompl-ess-sgill (&msyn-ncompl-ess-sgill) TARGET N IF (-1 N-WITH-ILL LINK NOT 0 Px)(0 Ess LINK NOT 0 Sg + Ill);
 COPY:msyn-ncompl-ess-sgill (Sg Ill &SUGGEST) EXCEPT (Ess &msyn-ncompl-ess-sgill) TARGET (N Ess &msyn-ncompl-ess-sgill);
 
 #% Must lii tárbu toorjân.
@@ -2594,11 +2589,10 @@ COPY:msyn-adj-sg-pl (Pl Nom &SUGGEST) EXCEPT (Sg Gen &msyn-adj-sg-pl) TARGET (A 
 	# > 6 + part
 	
 LIST ONE-smn = "ohtâ" ;
-LIST ONE-sme = "okta" ;
+LIST ONE-sme-smj = "okta" ;
 LIST ONE-sma = "akte" ;
-LIST ONE-smj = "okta" ;
 
-SET ONE = ONE-smn OR ONE-sme OR ONE-sma OR ONE-smj ;
+SET ONE = ONE-smn OR ONE-sme-smj OR ONE-sma ;
 	
 LIST NUM-6 = "maŋgâ" "maŋga" "oovtâ" "okta" "akte" "kyehti" "guokte" "göökte" "kulmâ" "golbma" "golme" "nelji" "njeallje" "njieljie" "njielje" "nieljie" "nielje" "vittâ" "vihtta" "vïjhte" "kuttâ" "guhtta" "govhte" "2" "3" "4" "5" "6" ;
 
@@ -2705,14 +2699,14 @@ COPY:msyn-quadv-sg-pl (Pl Nom &SUGGEST) EXCEPT (Sg Nom &msyn-quadv-sg-pl) TARGET
 #!! #### Quantor adverb complementss
 
 ADD:msyn-qucompl-sg-pl (&msyn-qucompl-sg-pl) TARGET N IF
-	(*-1 UNITQUANTOR-ADV BARRIER NOT-NPMOD)
+	(*-1 QUANTOR-ADV BARRIER NOT-NPMOD)
 	(0 N + Sg + Nom)
 	(NOT 0 Sem/Time OR Sem/Time-clock)
 	;
 COPY:msyn-qucompl-sg-pl (Pl Nom &SUGGEST) EXCEPT (Sg Nom &msyn-qucompl-sg-pl) TARGET (N &msyn-qucompl-sg-pl) ;
 
 ADD:msyn-qucompl-sg-pl (&msyn-qucompl-sg-pl) TARGET N IF
-	(*-1 UNITQUANTOR-ADV BARRIER NOT-NPMOD)
+	(*-1 QUANTOR-ADV BARRIER NOT-NPMOD)
 	(0 N + Sg + Gen)
 	(NOT 0 Sem/Time OR Sem/Time-clock)
 	;
@@ -4335,7 +4329,6 @@ ADD:real-keessiv-keesi (&real-keessiv-keesi) TARGET ("keessiv") IF (-1 A OR PrsP
 COPY:real-keessiv-keesi ("keesi" N Sg Nom &SUGGEST) EXCEPT ("keessiv" Adv &real-keessiv-keesi) TARGET (&real-keessiv-keesi) ;
 
 
-LIST &real-keessiv-keesi = &real-keessiv-keesi ;
 
 #!! ## Easteregg rule
 
