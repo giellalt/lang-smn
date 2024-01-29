@@ -214,9 +214,6 @@ HUMAN
 
 This ends the semtag list.
 
-PROP-ATTR
-PROP-SUR
-
 TIME-N-SET
 NOT-TIME
 TIME-N
