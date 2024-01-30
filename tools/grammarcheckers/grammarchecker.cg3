@@ -2342,6 +2342,12 @@ LIST SHE-sma = "dïhte" ;
 LIST SHE-smj = "juohkka" ;
 SET SHE = SHE-smn OR SHE-sme OR SHE-sma OR SHE-smj ;
 
+LIST I-smn = "mun" ;
+LIST I-sme = "mun" ;
+LIST I-sma = "manne" ;
+LIST I-smj = "mån" ;
+SET I = I-smn OR I-sme OR I-sma OR I-smj ;
+
 ADD:xmsyn-suu-jieijas (&msyn-suu-jieijas) TARGET SHE + (Pers Sg3 Gen) OR SHE + (Pers Sg3 Acc) IF (*-1 SHE + (Pers Sg3 Nom) OR (N Prop Nom Sem/Fem) OR (N Prop Nom Sem/Mal) OR (N Prop Nom Sem/Sur) BARRIER S-BOUNDARY); 
 	## Sun vuolgij suu viistán ullopääiđih soolâst.
 	
@@ -3033,11 +3039,16 @@ COPY:msyn-agr-sg3-pl3 (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-agr-sg3-pl3) TARGET (V &m
 	#$ Kale haajâ muu kuulmâ kilomeetter pyerámääđhi ääigi váhá láivuččij.
 	#$ Já kyevti saajeest oro tego kiinii ličij čokkáámin, mottoom uáppee ooinij.
 	#$ Niillas lii ráhtâm klassilâš muusik nuottârähtein, multi-instrumentalistâ Roope Mäenpäin kyehti {skiärru}.
-
+	
+LIST HALF-smn = "peeli" ;
+LIST HALF-sme = "bealli" ;
+LIST HALF-smj = "bielle" ;
+LIST HALF-sma = "bielie" ;
+SET HALF = HALF-smn OR HALF-sme OR HALF-smj OR HALF-sma ;
 
 #!!  **Agreement rule:** msyn-agr-sg3-pl3, Subject to the left, *80 puátá/puáđah*
 ADD:xmsyn-agr-sg3-pl3 (&msyn-agr-sg3-pl3) TARGET (V Sg3) IF
-	(*-1 (Loc Pl) - Prop  BARRIER NOT-ADV-PCLE - N LINK -1 (".*%"r) + Num + Arab OR ("peeli") + Sg + Nom)
+	(*-1 (Loc Pl) - Prop  BARRIER NOT-ADV-PCLE - N LINK -1 (".*%"r) + Num + Arab OR HALF + Sg + Nom)
 	(NEGATE 0 (V Pl3))
 	(NEGATE 0 MOD-ASP LINK *1 TV + Inf BARRIER Acc LINK *1 EOS OR S-BOUNDARY BARRIER Acc);
 COPY:msyn-agr-sg3-pl3 (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-agr-sg3-pl3) TARGET (V &msyn-agr-sg3-pl3);
@@ -3048,14 +3059,14 @@ ADD:msyn-agr-pl3-sg3 (&msyn-agr-pl3-sg3) TARGET (V Pl3) IF
 	(NEGATE 0 (V Sg3))
 	(0 LEDE)
 	(*-1 SUBSTANTIVE + Loc + Sg BARRIER S-BOUNDARY OR VFIN OR (N Pl) #BARRIER NOT-ADV-PCLE-ILL-LOC-COM
-	  LINK -1 (".*%"r) + Num + Arab OR ("peeli") + Sg + Nom
+	  LINK -1 (".*%"r) + Num + Arab OR HALF + Sg + Nom
 	LINK NOT 1 PUNCT)
 	(*1 N + Sg + Nom BARRIER V)
 	;    
 ADD:msyn-agr-pl3-sg3 (&msyn-agr-pl3-sg3) TARGET (V Pl3) IF
 	(NEGATE 0 (V Sg3) OR LEDE)
 	(*-1 SUBSTANTIVE + Loc + Sg BARRIER S-BOUNDARY OR VFIN OR (N Pl) #BARRIER NOT-ADV-PCLE-ILL-LOC-COM
-	  LINK -1 (".*%"r) + Num + Arab OR ("peeli") + Sg + Nom
+	  LINK -1 (".*%"r) + (Num Arab) OR HALF + (Sg Nom)
 	  LINK NOT 1 PUNCT)
 	; 
 	   
@@ -3137,9 +3148,15 @@ COPY:msyn-imp-pl3-sg3 (Sg3 &SUGGEST) EXCEPT (Pl3 &msyn-imp-pl3-sg3) TARGET (V Im
 
 #!! #### Inf should be Actio Essive
 
+LIST SEEM-smn = "orroođ" ;
+LIST SEEM-sme = "orrut" ;
+LIST SEEM-sma = "årrodh" ;
+LIST SEEM-smj = "årrot" ;
+SET SEEM = SEEM-smn OR SEEM-sme OR SEEM-sma OR SEEM-smj ;
+
 #!!  **Agreement rule:** msyn-orrood-inf-actioess *Mun orom leđe/lemin ennuv velgus anarâškielân.*
 ADD:msyn-orrood-inf-actioess (&msyn-orrood-inf-actioess) TARGET (V Inf) IF 
-	(-1 ("orroođ") + Ind LINK NOT -1 ("maht"));
+	(-1 SEEM + Ind LINK NOT -1 ("maht"));
 COPY:msyn-orrood-inf-actioess (Actio Ess &SUGGEST) EXCEPT (Inf &msyn-orrood-inf-actioess) TARGET (V Inf &msyn-orrood-inf-actioess);
 #% Mun orom leđe ennuv velgus anarâškielân.
 #$ Mun orom lemin ennuv velgus anarâškielân.
