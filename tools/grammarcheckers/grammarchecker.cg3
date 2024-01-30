@@ -1,6 +1,6 @@
 # -*- cg-pre-pipe: "hfst-tokenise -g ../../tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst" -*-
 # Divvun & Giellatekno - open source grammars for Sámi and other languages
-# Copyright © 2000-2023 UiT The arctic University of Norway
+# Copyright © 2000-2024 UiT The arctic University of Norway
 # http://giellatekno.uit.no & http://divvun.no
 #
 # This program is free software; you can redistribute and/or modify
@@ -18,7 +18,7 @@
 #!! ==================================================================
 #   ==================================================================
 
-#  Sámi language technology 2003-2017, UiT The arctic University of Norway #
+#  Sámi language technology 2003-2024, UiT The arctic University of Norway #
 
 
 #!! # Development setup
@@ -2323,22 +2323,49 @@ COPY:msyn-moddii ("kahcii" Adv &SUGGEST) EXCEPT ("käävci" Num Sg Nom &msyn-mod
 
 #!! ## Noun phrase internal phenomena
 
-ADD:xmsyn-jyehi_nom-jyehi_gen (&msyn-jyehi_nom-jyehi_gen) TARGET (N Sg Nom) + Sem/Time (NEGATE 0 Gen) (-1 ("jyehi" Attr));
+LIST EVERY-smn = "jyehi" ;
+LIST EVERY-sme = "juohke" ;
+LIST EVERY-sma = "fïerhte" ;
+LIST EVERY-smj = "juohkka" ;
+SET EVERY = EVERY-smn OR EVERY-sme OR EVERY-sma OR EVERY-smj ;
+
+ADD:xmsyn-jyehi_nom-jyehi_gen (&msyn-jyehi_nom-jyehi_gen) TARGET (N Sg Nom) + Sem/Time (NEGATE 0 Gen) (-1 EVERY + Attr);
 	## jyehi {peivi}
 	
 COPY:xmsyn-jyehi_nom-jyehi_gen (Gen &SUGGEST) EXCEPT (Nom &msyn-jyehi_nom-jyehi_gen) TARGET (&msyn-jyehi_nom-jyehi_gen) ;
 
 #!! ### Possessive pronouns > reflexive pronouns
 
-ADD:xmsyn-suu-jieijas (&msyn-suu-jieijas) TARGET ("sun" Pers Sg3 Gen) OR ("sun" Pers Sg3 Acc) IF (*-1 ("sun" Pers Sg3 Nom) OR (N Prop Nom Sem/Fem) OR (N Prop Nom Sem/Mal) OR (N Prop Nom Sem/Sur) BARRIER S-BOUNDARY); 
+LIST SHE-smn = "sun" ;
+LIST SHE-sme = "son" ;
+LIST SHE-sma = "dïhte" ;
+LIST SHE-smj = "juohkka" ;
+SET SHE = SHE-smn OR SHE-sme OR SHE-sma OR SHE-smj ;
+
+ADD:xmsyn-suu-jieijas (&msyn-suu-jieijas) TARGET SHE + (Pers Sg3 Gen) OR SHE + (Pers Sg3 Acc) IF (*-1 SHE + (Pers Sg3 Nom) OR (N Prop Nom Sem/Fem) OR (N Prop Nom Sem/Mal) OR (N Prop Nom Sem/Sur) BARRIER S-BOUNDARY); 
 	## Sun vuolgij suu viistán ullopääiđih soolâst.
+	
+COPY:xmsyn-suu-jieijas ("jieš" Refl Gen PxSg3 &SUGGEST) EXCEPT ("sun" Pers Sg3 Gen &msyn-suu-jieijas) OR ("sun" Pers Sg3 Acc &msyn-suu-jieijas) TARGET (Pers &msyn-suu-jieijas);
 	
 
 #!! ### Phrasal verbs
 
 	# Redundant adverbs in phrasal verbs 2->1
 	# -----------------------------------------------------
-ADD:xsyn-delete-adv-phrasal-verb (&syn-delete-adv-phrasal-verb) TARGET (Adv) IF (0 ("kiddâ") LINK -1 (Loc)) (*0  ("tolliđ") BARRIER S-BOUNDARY) ;
+	
+LIST TIGHT-smn = "kiddâ" ;
+LIST TIGHT-sme = "gitta" ;
+LIST TIGHT-sma = "öövre" ;
+LIST TIGHT-smj = "gitta" ;
+SET TIGHT = TIGHT-smn OR TIGHT-sme OR TIGHT-sma OR TIGHT-smj ;
+
+LIST HOLD-smn = "tolliđ" ;
+LIST HOLD-sme = "doallat" ;
+LIST HOLD-sma = "bïksedh" ;
+LIST HOLD-smj = "duohppit" ;
+SET HOLD = HOLD-smn OR HOLD-sme OR HOLD-sma OR HOLD-smj ;
+
+ADD:xsyn-delete-adv-phrasal-verb (&syn-delete-adv-phrasal-verb) TARGET (Adv) IF (0 TIGHT LINK -1 (Loc)) (*0 HOLD BARRIER S-BOUNDARY) ;
 	## Sun tollij suu viiđâ ihášij uccâ uábi kieđâst kiddâ.  
 
 ADDRELATION (DELETE1) (V &syn-delete-adv-phrasal-verb) TO (*0 (Adv &syn-delete-adv-phrasal-verb) BARRIER (*) - Pcle) ;
@@ -2455,8 +2482,15 @@ ADD:xmsyn-pron-plill-sgacc (&msyn-pron-plill-placc) TARGET ("tot" Pron Pl Ill De
 	#$ Spellâ lâi nuuhâm já Agnes čokkái sino alne já {toid}£{tain} ij kuškânâm voorâ jyelgist.
 	## Nuuvt, sun pargâ {toid}£{pron,plill-placc|taid}.
 	#$ Sun lâi hárjánâm toid. 
+
+LIST BE-smj = "liehket" ;
+LIST BE-sma = "leah" ;
+LIST BE-sme = "leat" ;
+LIST BE-smn = "leđe" ;
+SET BE = BE-smj OR BE-sma OR BE-sme OR BE-smn ;
+
 	
-ADD:xmsyn-pron-plill-sgacc (&msyn-pron-plill-placc) TARGET ("tot" Pron Pl Ill Dem) IF (*1 TV + VFIN OR TV + Inf OR TV + PrfPrc OR TV + ConNeg BARRIER NOT-ADV-PCLE - (V Neg) - ("leđe" Ind) - (A Attr) LINK NEGATE 0 <TH-Ill-Any>);	
+ADD:xmsyn-pron-plill-sgacc (&msyn-pron-plill-placc) TARGET ("tot" Pron Pl Ill Dem) IF (*1 TV + VFIN OR TV + Inf OR TV + PrfPrc OR TV + ConNeg BARRIER NOT-ADV-PCLE - (V Neg) - BE + (Ind) - (A Attr) LINK NEGATE 0 <TH-Ill-Any>);	
 	## Mut toid ij ubâ huámmášân peivipaštust. 
 	#$ Sun toid lâi hárjánâm.
 	
@@ -3194,9 +3228,9 @@ COPY:msyn-prtsg3-inf (Inf &SUGGEST) EXCEPT (Ind Prt Sg3 &msyn-prtsg3-inf) TARGET
 #!!  **Agreement rule:** msyn-extv-sg3-pl3 *Must lii/láá uđđâ autoh.*
 ADD:msyn-extv-sg3-pl3 (&msyn-extv-sg3-pl3) TARGET V IF
 	(*-1 Loc OR DOPPE OR Sem/Part BARRIER NOT-ADV-PCLE LINK NEGATE -1 Sem/Part + (Sg Nom))
-	(0 ("leđe" V Ind Prs Sg3))
+	(0 BE + (V Ind Prs Sg3))
 	(*1 N + Pl + Nom BARRIER NOT-NPMODADV OR @CVP OR S-BOUNDARY OR (N Sg Nom));
-COPY:msyn-extv-sg3-pl3 (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-extv-sg3-pl3) TARGET ("leđe" V Ind Prs &msyn-extv-sg3-pl3) ;
+COPY:msyn-extv-sg3-pl3 (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-extv-sg3-pl3) TARGET BE + (V Ind Prs &msyn-extv-sg3-pl3) ;
 	#% Must lii uđđâ autoh.
 	#$ Must láá uđđâ autoh.
 	#$ Stuorrâ šiev peeli internet-máttááttâsâst {lii} tot, et uáppeeh já máttáátteijeeh pyehtih leđe kost peri, jis peri tiätumaašin já jotelis internet-ohtâvuotâ lii juáhhást.
@@ -3219,38 +3253,38 @@ ADDRELATION:msyn-extv-sg3-pl3 ($2) N + Pl + Nom FROM (-3 V + LEDE + Sg3 LINK 0 (
 #!!  **Agreement rule:** msyn-extv-pl3-sg3 
 ADD:msyn-extv-pl3-sg3 (&msyn-extv-pl3-sg3) TARGET V IF
 	(*-1 Loc OR DOPPE BARRIER NOT-ADV-PCLE LINK NEGATE *-1 (N Pl Nom) OR (Pron Pl Nom) OR (Pron Pl3 Nom) BARRIER NOT-ADV-PCLE)
-	(0 ("leđe" V Ind Prs Pl3))
+	(0 BE + (V Ind Prs Pl3))
 	(*1 (N Sg Nom) OR (A Sg Nom) - Coll BARRIER NOT-NPMODADV OR NUM OR ("maŋgâ" Pron) OR @CVP OR S-BOUNDARY LINK NOT 0 (Sg Gen) OR (Sg Acc) LINK NEGATE 1 CC-INCLUSIVE OR COMMA LINK *1 (N Nom) OR (A Nom) BARRIER NOT-NPMODADV)
 	(NEGATE *1 (NomAg Sg Nom) LINK 1 (Prop Sem/Mal) OR (Prop Sem/Sur) OR (Prop Sem/Fem) LINK *1 (Pl Nom));
 	#$ Jis párnáá lii väädis iberdiđ sárnum tâi olgospyehtiđ jieijâs jurduid vuovijguin, moh sust {láá}, kielâ ovdánem puáhtá ain-uv tuárjuđ kevttimáin pehtilittum lattimkielâ lasseen meid sevimijd tâi kommunikistemkuuvijd.
 	#$ Anarâškielâst {láá-uv} maaŋgâs, kiäh láá näävt porgâm.
 	#$ Áigápuátutorjust {láá} 3 uási.
 	#$ Biodiversiteetpargojuávhust {láá} olášuttem toorjân ráhtám virgeomâháid já čanosjuávhuid kenigittee toimâohjelm.
-COPY:msyn-extv-pl3-sg3 (Sg3 &SUGGEST) EXCEPT (Pl3 &msyn-extv-pl3-sg3) TARGET ("leđe" V Ind Prs &msyn-extv-pl3-sg3) ;
+COPY:msyn-extv-pl3-sg3 (Sg3 &SUGGEST) EXCEPT (Pl3 &msyn-extv-pl3-sg3) TARGET BE + (V Ind Prs &msyn-extv-pl3-sg3) ;
 #!!  **Agreement rule:** msyn-extv-pl3-sg3 *Liihân/Lááhân must uđđâ autoh.*
 ADD:msyn-extv-pl3-sg3 (&msyn-extv-pl3-sg3) TARGET V IF
-	(0 ("leđe" V Ind Prs Pl3 Foc/han))
+	(0 BE + (V Ind Prs Pl3 Foc/han))
 	(1 Pron + Loc)
 	(*2 N + Sg + Nom BARRIER NOT-NPMODADV OR @CVP OR S-BOUNDARY LINK NOT 1 CC);
-COPY:msyn-extv-pl3-sg3 (Sg3 Foc/han &SUGGEST) EXCEPT (Pl3 Foc/han  &msyn-extv-pl3-sg3) TARGET ("leđe" V Ind Prs &msyn-extv-pl3-sg3) ;
+COPY:msyn-extv-pl3-sg3 (Sg3 Foc/han &SUGGEST) EXCEPT (Pl3 Foc/han  &msyn-extv-pl3-sg3) TARGET BE + (V Ind Prs &msyn-extv-pl3-sg3) ;
 #!!  **Agreement rule:** msyn-extv-pl3-sg3 *Liihân/Lááhân must uđđâ autoh.*
 ADD:msyn-extv-pl3-sg3 (&msyn-extv-pl3-sg3) TARGET V IF
-	(0 ("leđe" V Ind Prs Pl3 Qst))
+	(0 BE + (V Ind Prs Pl3 Qst))
 	(1 Pron + Loc)
 	(*2 N + Sg + Nom BARRIER NOT-NPMODADV OR @CVP OR S-BOUNDARY LINK NOT 1 CC);
-COPY:msyn-extv-pl3-sg3 (Sg3 Qst &SUGGEST) EXCEPT (Pl3 Qst  &msyn-extv-pl3-sg3) TARGET ("leđe" V Ind Prs &msyn-extv-pl3-sg3) ;
+COPY:msyn-extv-pl3-sg3 (Sg3 Qst &SUGGEST) EXCEPT (Pl3 Qst  &msyn-extv-pl3-sg3) TARGET BE + (V Ind Prs &msyn-extv-pl3-sg3) ;
 #!!  **Agreement rule:** msyn-extv-pl3-sg3 *Liihân/Lááhân must uđđâ autoh.*
 ADD:msyn-extv-pl3-sg3 (&msyn-extv-pl3-sg3) TARGET V IF
-	(0 ("leđe" V Ind Prs Pl3 Foc/uv))
+	(0 BE + (V Ind Prs Pl3 Foc/uv))
 	(1 Pron + Loc)
 	(*2 N + Sg + Nom BARRIER NOT-NPMODADV OR @CVP OR S-BOUNDARY LINK NOT 1 CC);
-COPY:msyn-extv-pl3-sg3 (Sg3 Foc/uv &SUGGEST) EXCEPT (Pl3 Foc/uv  &msyn-extv-pl3-sg3) TARGET ("leđe" V Ind Prs &msyn-extv-pl3-sg3) ;
+COPY:msyn-extv-pl3-sg3 (Sg3 Foc/uv &SUGGEST) EXCEPT (Pl3 Foc/uv  &msyn-extv-pl3-sg3) TARGET BE + (V Ind Prs &msyn-extv-pl3-sg3) ;
 #!!  **Agreement rule:** msyn-extv-pl3-sg3 *Lii/Láá must uđđâ autoh.*
 ADD:msyn-extv-pl3-sg3 (&msyn-extv-pl3-sg3) TARGET V IF
-	(0 ("leđe" V Ind Prs Pl3))
+	(0 BE + (V Ind Prs Pl3))
 	(1 Pron + Loc)
 	(*2 N + Sg + Nom BARRIER NOT-NPMODADV OR @CVP OR S-BOUNDARY LINK NOT 1 CC);
-COPY:msyn-extv-pl3-sg3 (Sg3 &SUGGEST) EXCEPT (Pl3 &msyn-extv-pl3-sg3) TARGET ("leđe" V Ind Prs &msyn-extv-pl3-sg3) ;
+COPY:msyn-extv-pl3-sg3 (Sg3 &SUGGEST) EXCEPT (Pl3 &msyn-extv-pl3-sg3) TARGET BE + (V Ind Prs &msyn-extv-pl3-sg3) ;
 #% Must lii uđđâ autoh.
 #$ Must láá uđđâ autoh.
 
@@ -3594,7 +3628,7 @@ COPY:msyn-top-placc-plnom (Nom &SUGGEST) EXCEPT (Acc &msyn-top-placc-plnom) TARG
 
 #!! ** Object rule ** Object in unexpected post-copula position: *Onne lii kandâ/kaandâ älkkee uáiniđ*
 ADD:msyn-obj-nom-acc (&msyn-obj-nom-acc) TARGET N + Sg + Nom IF
-	(*-1 ("leđe" Ind Sg3))
+	(*-1 BE + (Ind Sg3))
 	(1 A + <TH-Inf>)
 	 (2 V + TV + Inf );
 COPY:msyn-obj-nom-acc (Acc &SUGGEST) EXCEPT (Nom &msyn-obj-nom-acc) TARGET &msyn-obj-nom-acc ;
