@@ -603,7 +603,7 @@ Nouns that have dangerous homonyms
 
 - Amount sets
 
-OKTA
+OHTA
 
 - Sets for nouns with morpho-syntactic preferences
 
