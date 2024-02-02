@@ -11874,7 +11874,7 @@ mii + nominative should be mii + acc
 
 #### Quantor adverbs
 
-#### Quantor adverb complementss
+#### Quantor adverb complements
 
 msyn-quant-gen-nom
 
