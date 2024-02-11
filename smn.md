@@ -7829,6 +7829,9 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 
 **RULE: Lengthening of half-long root consonant x:xx** =  riččá piiru piirrun niisu niissun
 
+* *sa^RVh^RCâi5^WG^CLEN>i*
+* *sa0vv0i00>i*
+
 **RULE: Lengthening of root consonant x:yy** =  consonant lengthening after WG - h:vv, p:vv, c:ss
 
 * *ka^RVss^RCa^SV^WG^CLEN^SLEN>st*
