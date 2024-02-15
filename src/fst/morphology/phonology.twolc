@@ -165,8 +165,8 @@ Sets
 
 Definitions
 
-WeakGrade =         (RealVow:) [:RealVow - č: |i6:] (Vow:) (Cns:+) ([%^SV:|%^ÁI:|%^ÁE:])  (%^EA:)        ([%^FCD:|%^FVD:]) %^WG:0 ;   
-ConsonantShorting = (RealVow:) [:RealVow - č: |i6:] (Vow:) (Cns:+) ([%^SV:|%^ÁI:|%^ÁE:]) ([%^EA:|%^EX:]) ([%^FCD:|%^FVD:]) %^CSH:0 ;  
+WeakGrade =         (RealVow:) [:RealVow - č: |i5:|i6:] (Vow:) (Cns:+) ([%^SV:|%^ÁI:|%^ÁE:])  (%^EA:)        ([%^FCD:|%^FVD:]) %^WG:0 ;   
+ConsonantShorting = (RealVow:) [:RealVow - č: |i5:|i6:] (Vow:) (Cns:+) ([%^SV:|%^ÁI:|%^ÁE:]) ([%^EA:|%^EX:]) ([%^FCD:|%^FVD:]) %^CSH:0 ;  
 Syll = :* Cns:+ Vow: :* ; 
 
 !! As we look at more cases, the WeakGrade definition tends to be longer. 
@@ -192,10 +192,13 @@ Rules
 
 "x:y consonant gradation" ! (xxx kánske RC nubbi njuolggadusas?)
 !! **RULE: @RULENAME@** =  WG gives x:x and x:y, when there is no consonant lengthening  
-Cx:Cy <=> Vow: _ (%^RC: ) WeakGrade ([%^VHIGH:|%^VBACK:]) ([%^RVSH:|%^RLEN:]) (%^SLEN:) (%^SVLOW:) [.#.|%>|#] ; ! RC only \CLEN makes conflict
+Cx:Cy <=> Vow: _ (%^RC: ) WeakGrade (%^CLEN:) ([%^VHIGH:|%^VBACK:]) ([%^RVSH:|%^RLEN:]) (%^SLEN:) (%^SVLOW:) [.#.|%>|#] ; ! RC only \CLEN makes conflict
 	where Cx in ( h p c č )    
               Cy in ( v v s j )    
 		  matched ;
+
+!!€ sa^RVh^RCâi5^WG^CLEN>i
+!!€ sa0vv0i00>i
 
 !!€ ta^RVh^RCâ^WG^VHIGH#škyett4
 !!€ 
@@ -220,15 +223,6 @@ h:v <=> Vow:     _ h: WeakGrade %^CLEN: ; ! RC  !! 1) WG h:v h:
 ! ka0h0an00>ân
 
 
-"Quality change of root consonant x:yy"
-!! **RULE: @RULENAME@** =  consonant lengthening after WG, changing h:v, p:v, c:s
-Cx:Cy <=> Vow: _ %^RC: :Vow+ Cns:* [Triggers: -  %^FCD:]* %^WG: %^CLEN: (%^VHIGH:|%^VBACK:) (%^RVSH:) ([%^SVLOW: |%^SLEN:]) %> [i:|s|u|o|ž|e h|e m|á] ; ! RC
-	where Cx in ( h p c )
-	      Cy in ( v v s ) 
-		  matched ;
-
-!!€ va^RVh%^RCo^WG^CLEN>im
-!!€ va0vvo00>im
 
 
 "t:đ, also tk4:đh gradation, part 1" 
@@ -453,23 +447,35 @@ Cx:0 <=> Vow: _  Cy:     (%^CLEN:) (%^RLEN:) (%^SLEN:|%^SVSH:) [.#.| %>] \Sgm: ;
 
 "Lengthening of half-long root consonant x:xx"
 !! **RULE: @RULENAME@** =  riččá piiru piirrun niisu niissun
-%^RC:Cy <=> Vow:  :Cx _ [:Vow+|Vow:] Sgm:* Triggers:* %^CLEN: ; ! RC  !! Cx, not Cx:  čeec%^RCi%^CLEN%>n
+%^RC:Cy <=> Vow:  Cx _ :Vow+ Sgm:* Triggers:* %^CLEN: ; ! RC  !! Cx, not Cx:  čeec%^RCi%^CLEN%>n
+!%^RC:Cy <=> Vow:  :Cx _ [:Vow+|Vow:] Sgm:* Triggers:* %^CLEN: ; ! RC  !! Cx, not Cx:  čeec%^RCi%^CLEN%>n To be deleted, we go for x:yy
  	where Cx in ( b c č d g k l r s h m n đ v ŋ p š z ž t )  
  	      Cy in ( b c č d g k l r s h m n đ v ŋ p š z ž t ) 
  		  matched ;
 
-!!€ sa^RVh^RCâi5^WG^CLEN>i
-!!€ sa0vv0i00>i
 
 
-"Lengthening of root consonant x:yy"
-!! **RULE: @RULENAME@** =  consonant lengthening after WG - h:vv, p:vv, c:ss
-%^RC:Cy <=> Vow: Cx:Cy _ :Vow+ Cns:* [Triggers: - %^FCD:]* %^WG: %^CLEN: (%^VHIGH:|%^VBACK:) (%^RVSH:) ([%^SVLOW: |%^SLEN:]) %> [i:|s|u|o|ž |e h | e m |á] ;
+"Quality change of root consonant x:yy"
+!! **RULE: @RULENAME@** =  consonant lengthening after WG, changing h:v, p:v, c:s
+Cx:Cy <=> Vow: _ %^RC: (Vow:) :Vow+ Cns:* [Triggers: -  %^FCD:]* %^WG: %^CLEN: (%^VHIGH:|%^VBACK:) (%^RVSH:) ([%^SVLOW: |%^SLEN:]) %> [i:|s|u|o|ž|e h|e m|á] ; ! RC
 	where Cx in ( h p c )
 	      Cy in ( v v s ) 
 		  matched ;
 
-!kassa:kassaast
+"Lengthening of root consonant x:yy"
+!! **RULE: @RULENAME@** =  consonant lengthening after WG - h:vv, p:vv, c:ss
+%^RC:Cy <=> Vow: Cx:Cy _ (Vow:) :Vow+ Cns:* [Triggers: - %^FCD:]* %^WG: %^CLEN: (%^VHIGH:|%^VBACK:) (%^RVSH:) ([%^SVLOW: |%^SLEN:]) %> [i:|s|u|o|ž |e h | e m |á] ;
+	where Cx in ( h p c )
+	      Cy in ( v v s ) 
+		  matched ;
+
+
+!!€ va^RVh%^RCo^WG^CLEN>im
+!!€ va0vvo00>im
+
+
+!!€ sa^RVh^RCâi5^WG^CLEN>i
+!!€ sa0vv0i00>i
 !!€ ka^RVss^RCa^SV^WG^CLEN^SLEN>st
 !!€ ka0ss0aa000>st
 !vahe vavveest
