@@ -151,6 +151,9 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 
 **RULE: x:y consonant gradation ** =  WG gives x:x and x:y, when there is no consonant lengthening  
 
+* *sa^RVh^RCâi5^WG^CLEN>i*
+* *sa0vv0i00>i*
+
 * *ta^RVh^RCâ^WG^VHIGH#škyett4*
 * ???
 * *tu^RVp^RCe^WG*
@@ -161,11 +164,6 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 * *juáv0u00>ttáá*
 
 **RULE: hh:vv** =  já%^RVhhá%^SVl%^ÁI : jäävvil
-
-**RULE: Quality change of root consonant x:yy** =  consonant lengthening after WG, changing h:v, p:v, c:s
-
-* *va^RVh%^RCo^WG^CLEN>im*
-* *va0vvo00>im*
 
 **RULE: t:đ, also tk4:đh gradation, part 1 ** =   
 
@@ -297,11 +295,15 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 
 **RULE: Lengthening of half-long root consonant x:xx** =  riččá piiru piirrun niisu niissun
 
-* *sa^RVh^RCâi5^WG^CLEN>i*
-* *sa0vv0i00>i*
+**RULE: Quality change of root consonant x:yy** =  consonant lengthening after WG, changing h:v, p:v, c:s
 
 **RULE: Lengthening of root consonant x:yy** =  consonant lengthening after WG - h:vv, p:vv, c:ss
 
+* *va^RVh%^RCo^WG^CLEN>im*
+* *va0vvo00>im*
+
+* *sa^RVh^RCâi5^WG^CLEN>i*
+* *sa0vv0i00>i*
 * *ka^RVss^RCa^SV^WG^CLEN^SLEN>st*
 * *ka0ss0aa000>st*
 * *va^RVh^RCe^SV^WG^CLEN^SLEN>st*
