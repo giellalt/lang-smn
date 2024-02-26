@@ -12208,7 +12208,7 @@ SUBSTITUTE MWE (*)
 * * *
 <small>This (part of) documentation was generated from [tools/grammarcheckers/grammarchecker.cg3](https://github.com/giellalt/lang-smn/blob/main/tools/grammarcheckers/grammarchecker.cg3)</small>
 I N A R I   S A A M I   G R A M M A R C H E C K E R   D I S A M B I G U A T O R               
-==================================================================
+================================================================================
 
 # DELIMITERS 
 
