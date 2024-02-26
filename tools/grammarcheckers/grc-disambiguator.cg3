@@ -3390,7 +3390,7 @@ SELECT:Rel Rel IF (*-1 NOT-AUX-V BARRIER S-BOUNDARY LINK *-1 NP-HEAD-NOM BARRIER
 	#$ ...ahte olbmot besset oaidnit maid sii sáhttet vuordit.
 
 #!! * **RelSg1, RelSg2** select Rel
-SELECT:RelSg1 (Rel Sg) IF  (-1C NP-HEAD-SG OR (Num Sg))(NEGATE *-2 NUM BARRIER NOT-NPMOD)(*1 VFIN)(*1 TRANS-V);
+SELECT:RelSg1 (Rel Sg) IF  (-1C NP-HEAD-SG OR (Num Sg))(NEGATE *-2 NUM BARRIER NOT-NPMOD)(*1 VFIN)(*1 TRANS-V)(NEGATE 0 Interr LINK 1 Pers LINK 0 Sg2 OR Du2 OR Pl2);
 REMOVE:RelSg2 (Rel Sg)  IF ((*-1 (N Sg) BARRIER WORD LINK *-1 CC BARRIER NOT-NPMOD LINK -1 N) OR (-1 Interr));
 	#$ Mun oasttán peanna ja bliántta, maid mun dárbbašan skuvllas.
 	#$ Nubbi maid fuobmáimet lei ahte... 
@@ -6202,7 +6202,7 @@ SELECT:AccPronRel (Pron Rel Acc)  IF ((-1C Acc OR Nom) OR (-1 COMMA LINK -1C Acc
 	#% Stáhta nammadan láhttu ja sadjásašláhttu galgaba deavdit gáibádusaid, maid Lahtut ja sadjásašláhtut nammaduvvojit gitta njealji jagi rádjai. #Odd sentence btw..
 	
 #!! * **AccPronRel2** Selects (Pron Rel Acc) when somewhere in the sentence is a Nom (barrier is sv-boundary), but only if leat isn't the main verb. *geaid eamiálbmogat* 
-SELECT:AccPronRel2 (Pron Rel Acc) IF (*1 Nom BARRIER NOT-NPMOD LINK *1 TRANS-V + FMAINV BARRIER SV-BOUNDARY OR Acc LINK NEGATE *1 Acc BARRIER S-BOUNDARY OR COMMA) ;
+SELECT:AccPronRel2 (Pron Rel Acc) IF (*1 Nom BARRIER NOT-NPMOD LINK *1 TRANS-V + FMAINV BARRIER SV-BOUNDARY OR Acc LINK NEGATE *1 Acc BARRIER S-BOUNDARY OR COMMA)(NEGATE 0 Interr LINK 1 Pers LINK 0  Sg2 OR Du2 OR Pl2) ;
 	#$ Genadutkit geaid eamiálbmogat miehtá máilmmi leat vuosttaldan garrasit, leat dál jođus Sápmái, ja sii ohcet sámi dievdduid genadutkamii.
 	#$ Juohke gielddas ožžot olbmot skoviid maid sii galget deavdit ja sii jearahallet maiddái olbmuid, muhto Isaksen imašta kommišuvnna bargovugiid.
 	#$ Eadni dal ieš čohkká ommangáttis ja boraha uhca nieiddažis gean son doallá askkistis.
