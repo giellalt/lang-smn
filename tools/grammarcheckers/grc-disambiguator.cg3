@@ -1,6 +1,6 @@
 # -*- cg-pre-pipe: "$GTHOME/giella-core/scripts/preprocess --abbr=$GTHOME/langs/sme/tools/preprocess/abbr.txt | hfst-optimised-lookup  $GTHOME/langs/sme/src/analyser-disamb-gt-desc.hfstol | $GTHOME/giella-core/scripts/lookup2cg" -*-
 # Divvun & Giellatekno - open source grammars for Sámi and other languages
-# Copyright © 2000-2016 UiT The arctic University of Norway 
+# Copyright © 2000-2024 UiT The arctic University of Norway 
 # http://giellatekno.uit.no & http://divvun.no
 #
 # This program is free software; you can redistribute and/or modify
@@ -13,12 +13,12 @@
 # Other licensing options are available upon request, please contact
 # giellatekno@uit.no or feedback@divvun.no
 
-# ====================================================================
+# ==================================================================================
 #!! I N A R I   S A A M I   G R A M M A R C H E C K E R   D I S A M B I G U A T O R               
-#!! ==================================================================
-# ==================================================================== 
+#!! ================================================================================
+# ================================================================================== 
 
-#  Sámi language technology 2003-2017, UiT The arctic University of Norway #
+#  Sámi language technology 2003-2024, UiT The arctic University of Norway #
 
 
 
@@ -1102,7 +1102,7 @@ LIST COM-ADV = "fárrolaga" "oovtâst" "oktanaga" "ovttamielas" "oovtâst" "ovtt
 # Other adverb sets
 # - - - - - - - - - 
 
-LIST GRADE-ADV =  "aaibâs" "meendu" ("eštuu" Adv) ("eenâb" Adv) "erenoamán" "epitáválâš" "hirmâd" "eromâš" "ila" "hirmâd" ("melgâd" Adv) ("mearkkašahtti" Adv) "masa" "kukken" "muhtun_muddui" "naa" "oalle" "melgâd" ("oles" Adv) "čuuvtij" ("oovtnáál" Adv) ("ucánjii" Adv) ("ucánjii" Adv) ("ucánjii" Adv) "vehá" "ucánjii" "ucánjii" "ucánjii" "melgâd" ;
+LIST GRADE-ADV =  "aaibâs" "meendu" ("eštuu" Adv) ("eenâb" Adv) "erenoamán" "epitáválâš" "hirmâd" "eromâš" "ila" "hirmâd" ("melgâd" Adv) ("mearkkašahtti" Adv) "masa" "kukken" "muhtun_muddui" "naa" "oalle" "melgâd" ("oles" Adv) "čuuvtij" ("oovtnáál" Adv) ("ucánjii" Adv) ("ucánjii" Adv) ("ucánjii" Adv) "vehá" "ubâ" "ucánjii" "ucánjii" "ucánjii" "melgâd" ;
 # Fjerna: ("maht" Adv) 
 # lii tehálâš kuldâliđ, ete maht nuorah aašijd uáinih
 
@@ -3827,9 +3827,10 @@ SELECT:Wr1776xc (A Sg Nom) IF (-1 NP-HEAD-SG-NOM LINK NOT 0 (A Attr) OR Adv)(*-2
 	#% Skuvlaráđđehusas lei vuoigatvuohta loahpahit diekkár gánnetmeahttun fálaldaga.
 
 #!! * **Wr1777c**
-SELECT:Wr1777c (Sg Nom) IF (*-1 Ill BARRIER NOT-ADV-PCLE LINK *-1 COPULAS BARRIER NOT-ADV-PCLE)(*-1 SG3-V BARRIER NOT-AUX-V)(NEGATE 0 PrfPrc OR ILL-A)(NEGATE 0 NUM LINK *1 ALU OR ("viälgulâš") BARRIER NP-BOUNDARY) (NOT 1 Po);
+SELECT:Wr1777c (Sg Nom) IF (*-1 Ill BARRIER NOT-ADV-PCLE LINK *-1 COPULAS BARRIER NOT-ADV-PCLE)(*-1 SG3-V BARRIER NOT-AUX-V)(NEGATE 0 PrfPrc OR ILL-A)(NEGATE 0 NUM LINK *1 ALU OR ("viälgulâš") BARRIER NP-BOUNDARY) (NOT 1 Po)(NEGATE 0 Gen LINK 1 N);
 	#$ ... muhtun gii lei sutnje velggolaš logi duhát taleantta.
 	#$ Mus lea dutnje juoga dadjamuš.
+	#$GRAM 
 
 
 #!! * **Wr1778xc**
@@ -4275,7 +4276,7 @@ SELECT:AAttrN (A Attr) IF
 	(NOT 0 CONCORD-A)
 	(NEGATE *-1 COPULAS BARRIER NP-HEAD-NOM OR NOT-AUX-V)
 	(NEGATE 0 Num OR Inf OR Comp OR ("nubbe") OR V) (NEGATE 0 Adv LINK 1 Gen LINK 1 N)
-	(NEGATE 0 Adv LINK 1C (N Gen))(1 N OR A LINK NOT 0 TIME OR PLACE)
+	(NEGATE 0 Adv LINK 1C (N Gen) OR V)(1 N OR A LINK NOT 0 TIME OR PLACE)
 	(NEGATE 1 VFIN OR Inf OR PREGEN OR Prop)
 	(NEGATE 0 (N Sg Nom) LINK *-1 SG3-V BARRIER NOT-NPMODADV LINK NEGATE *-1 NP-HEAD-NOM BARRIER S-BOUNDARY)
 	(NEGATE *-1 ("ko") BARRIER NOT-NP LINK NOT -1 VFIN LINK NOT 1 EOS)
