@@ -203,7 +203,29 @@ LEXICON KUKKE !!≈ **@CODE@** directing to X_ALGE, attr. kuhes
 
 LEXICON PASE !!≈ **@CODE@** directing to X_NJUNE via HUMO_REST, attr. pase                  
 +A+Attr: K ;
-HUMO_REST ;
++A: X_NJUNE ;
++A+Der1+Der/Comp+A:^SVb^WG PASE_cmpsuf ; ! huumoob; humobeht
++A+Der1+Der/Comp+A+Der2+Der/Dimin+A+Sg+Nom:^SVb^WGâš K ; !needs lexicon
++A+Der1+Der/Comp+A+Der4+Der/AAdv+Adv:^SVb^WGbeht K ; !čepibeht	čeppi čeepib čepibeht
++A:p P-COMP-ERR-ORTH ;
++A:^WG%> MUS ;
++A+Cmp/Attr:^WG%>s ATTR_R ;
++A+Cmp/SgNom: R ;
++A+Der4+Der/AAdv+Adv:^SV^WG^RLEN^SLEN%>ht K ; !huumooht, loojeeht
++A:%> A_VUOTA ;
+
+LEXICON PASE_cmpsuf 
++Sg+Nom:^CLEN K ;
++Sg+Gen:^CLEN K ;
++Sg+Acc:^CLEN K ;
++Sg+Ill:^SLEN%>ân K ;
++Sg+Loc:^SLEN%>ist K ;
++Sg+Com:^SLEN%>áin K ;
++Sg+Abe:%>ttáá K ;
++Ess:^SLEN%>in K ;
++Par:^SLEN%>id K ;
+ :^SLEN X_eh_PL ;
++Err/Orth: X_eh_PL ;
 
 LEXICON HUMO !!≈ **@CODE@** directing to X_NJUNE via HUMO_REST, attr. humos                  
 +A+Attr:^WG%>s K ;
@@ -250,15 +272,32 @@ LEXICON PYERI !!≈ **@CODE@** directing to X_KYELI, attr. pyeri
 +A+Der4+Der/AAdv+Adv:e^SV^WG%>est K ;
 
 
-LEXICON HYENI !!≈ **@CODE@** directing to X_KYELI, attr. hyenes
-+A+Attr:e^WG^RVSH%>s  K ; 
-+A:i3 X_KYELI	  ;
-+A:e^SV^WG eCOMP ; ! hyeneeb; hyenebeht
+LEXICON HYENI !!≈ **@CODE@** se^RVl^RC directing to X_KYELI, attr. hyenes
++A+Attr:e^WG%>s  K ; 
++A:i3^RLEN X_KYELI	  ;
++A+Der1+Der/Comp+A+Sg+Nom:ee^WG^RLENb K ;
++A+Der1+Der/Comp+A+Sg+Gen:ee^WG^RLENb K ;
++A+Der1+Der/Comp+A+Sg+Acc:ee^WG^RLENb K ;
++A+Der1+Der/Comp+A: HYENI_COMP_ADVLCASE  ;
+
++A+Der1+Der/Comp+A+Der4+Der/AAdv+Adv:e^SV^WG^RLENbeht K ; 
 +A:e^WG MUS ;
 +A:i3%> A_VUOTA ;
 +A+Cmp/Attr:e^WG%>s ATTR_R ; 
 +A+Der4+Der/AAdv+Adv:e^SV^WG%>eht K ;
 +A+Der4+Der/AAdv+Adv:e^SV^WG%>est K ;
+
+! +A:e^SV^WG^RLEN eCOMP ; ! hyeneeb; hyenebeht, seeleeb
+
+LEXICON HYENI_COMP_ADVLCASE
++Sg+Ill:e^WGb%>ân K ;              ! njeđebân
++Sg+Loc:e^WGb%>ist K ;             ! njeđebist
++Sg+Com:e^WGb%>áin K ;             ! njeđebáin
++Sg+Abe:ee^WG^RLENb^SLEN%>ttáá K ; ! njeeđeebttää
++Ess:e^WG^RLENb%>in K ;            ! njeđebin
++Par:e^WG^RLENb%>id K ;            ! njeđebid
+    :e^WGb X_eh_PL ; ! check this
+
 
 
 LEXICON NUORA !!≈ **@CODE@** directing to X_KIELA, attr. nuora
@@ -576,6 +615,13 @@ LEXICON A_LITTER !!≈ **@CODE@** directing to X_LITTER
 ATTR ;
 +A: X_LITTER ;
 !fiskâdub fiskâduboh fijnásuboi vaigâdub tergâdub pehtilub
++A:%>u COMPo ; 
++A:%>u MOS ;
++A+Cmp/Attr:i%>s ATTR_R ;
++A:%> A_VUOTA ;
++A: A_ADV ; !muččâdávt joskâdávt
++A+Attr:i%>s A_LAGAN ; !čapisláván
+
 +A: A_LASJ ; !  
 
 
@@ -1161,7 +1207,7 @@ LEXICON oCOMP-SUF  !!≈ * **@CODE@**
 +Sg+Nom:b K ;
 +Sg+Gen:b K ;
 +Sg+Acc:b K ;
-+Sg+Ill:ub%>on K ; !
++Sg+Ill:b%>on K ; !
 +Sg+Loc:bb%>oost K ;
 +Sg+Com:bb%>oin K ; ! XXX
 +Sg+Abe:b%>ttáá K ;
