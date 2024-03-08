@@ -41,7 +41,7 @@ triggers, tney must be ordered as follows (where {A,B} C means *A or B, thereaft
 
 **LEXICON PYERI** directing to X_KYELI, attr. pyeri
 
-**LEXICON HYENI** directing to X_KYELI, attr. hyenes
+**LEXICON HYENI** se^RVl^RC directing to X_KYELI, attr. hyenes
 
 **LEXICON NUORA** directing to X_KIELA, attr. nuora
 
