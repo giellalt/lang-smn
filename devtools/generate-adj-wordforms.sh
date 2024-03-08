@@ -20,13 +20,12 @@ fi
 ######### USER Variables - change these to your liking: #########
 # Codes for the word forms to be generated - list as many or few as needed:
 morf_codes="+A+Sg+Nom \
-            +A+Sg+Gen \
-            +A+Sg+Ill \
-            +A+Sg+Loc \
-            +A+Pl+Nom \
             +A+Attr \
-            +A+Comp+Pl+Nom"
-            
+            +A+Der/Comp+A+Sg+Nom \
+            +A+Der/Comp+A+Sg+Gen \
+            +A+Der/Comp+A+Sg+Ill \
+            +A+Der/Comp+A+Pl+Nom \
+            +A+Der/Superl+A+Sg+Nom"
 
 # Lexicon source file for lexicons and lemmas:
 source_file=src/fst/morphology/stems/adjectives.lexc
@@ -51,3 +50,9 @@ script_dir=$giella_core/scripts
         "$generator_file" \
         "$lemmacount" \
         "$exception_lexicons"
+
+
+#            +A+Sg+Gen \
+#            +A+Sg+Ill \
+#            +A+Pl+Nom \
+#            +A+Attr \
