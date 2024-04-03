@@ -13791,6 +13791,8 @@ and the verb found to the left (SV-boundary) is some kind of verbalactivityverb 
 
 * **GenBoaris** Selects Gen in golbma *jagi* boaris
 
+* **Genihásâš** Selects Gen in *oovce* ihásâš kandâ
+
 - Ritva comment: Find a rule for "viđa" aswell, this hits "mehter" as it should
 
 * **XXr2002** Selects genitive if there is a numeral immediately to your left, and you are TIME: *golbma jagi*
