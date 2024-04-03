@@ -616,7 +616,8 @@ The second part of the compound may require that the previous (left part) is:
 ## Flag diacritics
 We have manually optimised the structure of our lexicon using following
 flag diacritics to restrict morhpological combinatorics - only allow compounds
-with verbs if the verb is further derived into a noun again:
+with verbs if the verb is further derived into a noun again.
+The P sets positive value, the C clears it.
 
 | Flag | Explanation
 | --- | --- 

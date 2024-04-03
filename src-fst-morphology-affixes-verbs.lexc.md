@@ -357,6 +357,7 @@ Here come the case variation for VAbess, and flag for VGen, they are invariant a
 ## Case lexica
 
 * **LEXICON VABESS** to handle Abessive variation, hánnáá, hennáá, hinnáá.
+
 * **LEXICON VGEN**  flag for VGen
 
 ## Derivation lexica

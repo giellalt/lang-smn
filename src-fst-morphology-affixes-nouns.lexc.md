@@ -640,7 +640,7 @@ this is for loanwords without stem change
 
 * **LEXICON 3POOVIJ** 
 
-* **LEXICON C_OLMOOS** lexicon for olmooš 
+* **LEXICON C_OLMOOS** lexicon for olmooš, stem is ulmu 
 
 * **LEXICON C_OLMOOS_PL** 
 
@@ -806,7 +806,7 @@ this is for loanwords without stem change
 
 * **LEXICON C_LOHHEE_PL** redirects to  C_TAHHEE, but adds NomAg 
 
-* **LEXICON C_TAHHEE** 
+* **LEXICON C_TAHHEE** STEM IS: myersse
 
 * **LEXICON C_TAHHEE_SG** 
 
