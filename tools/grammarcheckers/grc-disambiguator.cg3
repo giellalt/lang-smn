@@ -5605,7 +5605,7 @@ REMOVE:NotGenitive Gen IF (NEGATE *-1 Pr OR Num BARRIER NOT-NPMOD)(0 NOTIME OR P
 	#$ Jos sámegiela universitehta eksámen (vuođđofága dahje gaskafága) ii adnojuvvo bálkábajidanfágan, de mii evttohat ahet sáthta juolluda stipeanddaid oahpaheddjiide geat váldet dán eksámena.
 	#$ Huitfeldt - fidnii munnje olles govvaalbuma maid su eadni lei govvidan Finnmárkku-mátkkis iežas vánhemiiguin 1901:s.
 
-REMOVE:TESTr2026 Gen - Dem IF (*-2 TRANS-V BARRIER S-BOUNDARY OR Pr OR Acc)(NEGATE *-1 Pr OR CC OR (Num Nom) BARRIER NOT-NPMOD)(-1 Gen)(0 NOTIME OR Pron)(NEGATE 0 ALU)((*1 CLB BARRIER NOT-ADV-PCLE) OR (*1 TIME BARRIER NOT-NPMOD OR Num OR CRD) OR (1 Adv LINK 1 COMMA OR EOS))
+REMOVE:TESTr2026 Gen - Dem IF (*-2 TRANS-V BARRIER S-BOUNDARY OR Pr OR Acc)(NEGATE *-1 Pr OR CC OR (Num Nom) BARRIER NOT-NPMOD)(-1 Gen)(0 NOTIME OR Pron)(NEGATE 0 ALU)((*1 CLB BARRIER NOT-ADV-PCLE) OR (*1 TIME BARRIER NOT-NPMOD OR Num OR CRD) OR (1 Adv LINK 1 COMMA OR EOS))(NEGATE 1 Po)
 (NEGATE 1 COMMA LINK 1 Gen LINK *1 Po OR (N Ill) OR (N Loc) BARRIER V)(NEGATE -1 Gen LINK -1 CC LINK -1 Gen);
 	#$ ...ahte vuhtiiváldit divššohasa dárbbuid, beroštumiid ja riektesihkarvuođa dearvvašvuođabálvalusa ektui. 
 	#$ Sámi servodat dárbbaša dárbbašlaš veahki hukset min iežamet oahpahusvuogádaga guhkit áiggi boahtteáiggis. 
@@ -6379,7 +6379,7 @@ SELECT:acc Acc IF (0 Nom - HUMAN LINK 1 STRICT-TRANS-V LINK 1 EOS)(NEGATE -1 Acc
 
 
 #!! * **NDr2300** Selects Nom if Gen immediately to the left. You are N-SG-NOM and to your right is SG3-V *Du ášši lea dehálaš*
-SELECT:NDr2300 Nom IF ((-1 Gen) OR (-1 Po LINK -1 Gen))(NEGATE -1 (Pron Dem Gen))(0 N-SG-NOM LINK NOT 0 Loc)(NEGATE 0 PrfPrc OR Ill OR Po)(1 SG3-V);
+SELECT:NDr2300 Nom IF ((-1 Gen) OR (-1 Po LINK -1 Gen))(NEGATE -1 (Pron Dem Gen))(0 N-SG-NOM LINK NOT 0 Loc)(NEGATE 0 PrfPrc OR Ill OR Po)(1 SG3-V)(NEGATE 1 Po);
 	#$ Du ášši lea dehalaš.
 	#$ Dan ášši ferte dutkat.
  #Comment: HMM, brave.. - but it seems to work!
