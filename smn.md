@@ -12135,6 +12135,8 @@ The challenge is to avoid cases where the A is not part of the NP, like:
 
 **Agreement rule:** msyn-predagr-pl3-sg3 *Iä/Ij lah toorjâ.*
 
+### Adjective errors
+
 **Agreement rule:** msyn-adj-pred-attr Plural adjectives should be Attr in front of N.
 
 **Agreement rule:** msyn-adj-attr-other
