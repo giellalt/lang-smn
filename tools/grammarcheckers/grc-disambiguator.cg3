@@ -6010,7 +6010,12 @@ SELECT:NumTimeMannel Acc IF (0 Num)(1 TIME)(2 MANNEL);
 #!! * **GenBoaris** Selects Gen in golbma *jagi* boaris
 SELECT:GenBoaris Gen IF (-1 (Num Gen))(0 TIME + Sg)(1 ("puáris"));
 	#$ Son lea viđa jagi boaris.
-	#% Sápmelaččaid historjá álbmogin lea duháhiid jagiid boaris, muhto dálá ássanguovlluin sápmelaččat eai leat ássan nu guhká.	
+	#% Sápmelaččaid historjá álbmogin lea duháhiid jagiid boaris, muhto dálá ássanguovlluin sápmelaččat eai leat ássan nu guhká.
+	
+#!! * **Genihásâš** Selects Gen in *oovce* ihásâš kandâ
+SELECT:Genihásâš Gen IF (0 (Num Sg Gen) - Rom - Sem/Date)(1 ("ihásâš"));
+	#$ Oovce ihásâš kandâ lâi uáivi verd uánihub ko Agnes.
+
 	
 #! * __ALU6__ Selects Gen if 0 MEASURE and Num right
 #!!     - Ritva comment: Find a rule for "viđa" aswell, this hits "mehter" as it should
@@ -6194,7 +6199,7 @@ SELECT:AccTV4 Acc IF (*-1 TRANS-V + FMAINV - ("porgâđ") BARRIER NOT-NPMODADV L
 # Pron Rel
 
 #!! * **AccPronRel** Selects (Pron Rel Acc) when a secure Acc or Nom to the left *gáibidedje internáhttaskuvlla man*
-SELECT:AccPronRel (Pron Rel Acc)  IF ((-1C Acc OR Nom) OR (-1 COMMA LINK -1C Acc OR Nom))(0 ("mii"))(NEGATE *2 ("leđe") + FMAINV BARRIER SV-BOUNDARY)(NEGATE 1 Nom LINK *2 Der/Pass BARRIER SV-BOUNDARY)(*1 VFIN) ;
+	SELECT:AccPronRel (Pron Rel Acc)  IF ((-1C Acc OR Nom) OR (-1 COMMA LINK -1C Acc OR Nom))(0 ("mii"))(NEGATE *2 ("leđe") + FMAINV BARRIER SV-BOUNDARY)(NEGATE 1 Nom LINK *2 Der/Pass BARRIER SV-BOUNDARY)(*1 VFIN) ;
 	#$ Lullisámit gáibidedje internáhttaskuvlla man stáhta jođihii.
 	#$ Oahppit lohke jitnosit čálabáikkiid maid ledje bajil oahppan.
 	#% Lii-uvsun tot mon jiärmáás juurdâ.
@@ -6202,17 +6207,17 @@ SELECT:AccPronRel (Pron Rel Acc)  IF ((-1C Acc OR Nom) OR (-1 COMMA LINK -1C Acc
 	#% Stáhta nammadan láhttu ja sadjásašláhttu galgaba deavdit gáibádusaid, maid Lahtut ja sadjásašláhtut nammaduvvojit gitta njealji jagi rádjai. #Odd sentence btw..
 	
 #!! * **AccPronRel2** Selects (Pron Rel Acc) when somewhere in the sentence is a Nom (barrier is sv-boundary), but only if leat isn't the main verb. *geaid eamiálbmogat* 
-SELECT:AccPronRel2 (Pron Rel Acc) IF (*1 Nom BARRIER NOT-NPMOD LINK *1 TRANS-V + FMAINV BARRIER SV-BOUNDARY OR Acc LINK NEGATE *1 Acc BARRIER S-BOUNDARY OR COMMA)(NEGATE 0 Interr LINK 1 Pers LINK 0  Sg2 OR Du2 OR Pl2) ;
+	SELECT:AccPronRel2 (Pron Rel Acc) IF (*1 Nom BARRIER NOT-NPMOD LINK *1 TRANS-V + FMAINV BARRIER SV-BOUNDARY OR Acc LINK NEGATE *1 Acc BARRIER S-BOUNDARY OR COMMA)(NEGATE 0 Interr LINK 1 Pers LINK 0  Sg2 OR Du2 OR Pl2) ;
 	#$ Genadutkit geaid eamiálbmogat miehtá máilmmi leat vuosttaldan garrasit, leat dál jođus Sápmái, ja sii ohcet sámi dievdduid genadutkamii.
 	#$ Juohke gielddas ožžot olbmot skoviid maid sii galget deavdit ja sii jearahallet maiddái olbmuid, muhto Isaksen imašta kommišuvnna bargovugiid.
 	#$ Eadni dal ieš čohkká ommangáttis ja boraha uhca nieiddažis gean son doallá askkistis.
 	
 #!! * **AccPronRel3** Selects Acc if there is a (Pron Rel Nom) to the right. Obs: not hit nominatives, hence negations. *eanu mii šealgá*	
-SELECT:AccPronRel3 Acc IF (0 (N Acc))(1C (Pron Rel) + Nom)(NEGATE *-1 BOS BARRIER NOT-NPMODADV)(NEGATE *-1 ("leđe") + FMAINV BARRIER SV-BOUNDARY)(NEGATE 0 Prop)(NEGATE -1 Pr); 
+	SELECT:AccPronRel3 Acc IF (0 (N Acc))(1C (Pron Rel) + Nom)(NEGATE *-1 BOS BARRIER NOT-NPMODADV)(NEGATE *-1 ("leđe") + FMAINV BARRIER SV-BOUNDARY)(NEGATE 0 Prop)(NEGATE -1 Pr); 
 	#$ De eŋgel čájehii munnje eallima čázi eanu mii šealgá dego kristálla..
 	
 #!! * **AccActioLoc** Selects Acc when transitive Actio Loc somewhere in the sentence *guldeleames muitalusaid*
-SELECT:AccActioLoc Acc IF (*0 (TV Actio Loc) BARRIER S-BOUNDARY OR COMMA OR TRANS-V + FMAINV OR Inf)(NEGATE 0 Num);
+	SELECT:AccActioLoc Acc IF (*0 (TV Actio Loc) BARRIER S-BOUNDARY OR COMMA OR TRANS-V + FMAINV OR Inf)(NEGATE 0 Num);
 	#$ Son ii váiban goassege guldaleames áhčis muitalusaid.
 	#$ Sii jáhkke ahte eatnigiela geavaheapmi hehtte oahppamis riikka váldogiela ja nu muđuige oahpahusa.
 	#$ Lávdegoddi lea dasa lassin guorahallan báikkálaš riekteáddejumiid Finnmárkkus ja vuordimis áigu dán ilbmadit iežas boahtte čielggadeami mielddusin.
