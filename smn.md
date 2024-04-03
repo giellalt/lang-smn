@@ -5534,6 +5534,24 @@ Adj - pooliitlâš: # attr. pooliitlâš; puolikongruenssi mahdollinen (#-paikat
 
 **LEXICON ATTR_R** sends to R, NAMAG, SAS, CMP_ADJ.
 
+# Derivation
+
+* **LEXICON NAMAG** gives »»» and directs to NAMAG, both from adj and numerals
+
+* **LEXICON SAS** , both from adj and numerals
+
+* **LEXICON NAMAGCont**
+
+* **LEXICON SASCont** ,
+
+* *LEXICON Gen_DER* 
+
+* *LEXICON Nom_DER* 
+
+* *LEXICON DER-AG* 
+
+* *LEXICON DER-SAS* 
+
 * * *
 
 <small>This (part of) documentation was generated from [src/fst/morphology/affixes/adjectives.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/affixes/adjectives.lexc)</small>
@@ -9242,22 +9260,6 @@ From corpus
 * **LEXICON MiddleNouns** , referred to from compounding.lexc
 * **njune+N+Cmp/Sh+Sem/Body:njun Rnoun ;**
 * **njälmi+N+Cmp/Sh+Sem/Body:njälm Rnoun ;** tags_via_apertium
-
-* **LEXICON NAMAG** gives »»» and directs to NAMAG, both from adj and numerals
-
-* **LEXICON SAS** , both from adj and numerals
-
-* **LEXICON NAMAGCont**
-
-* **LEXICON SASCont** ,
-
-* *LEXICON Gen_DER* 
-
-* *LEXICON Nom_DER* 
-
-* *LEXICON DER-AG* 
-
-* *LEXICON DER-SAS* 
 
 ## The split into different noun types according to Px
 

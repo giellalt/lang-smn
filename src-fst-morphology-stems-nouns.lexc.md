@@ -34,22 +34,6 @@
 * **njune+N+Cmp/Sh+Sem/Body:njun Rnoun ;**
 * **njälmi+N+Cmp/Sh+Sem/Body:njälm Rnoun ;** tags_via_apertium
 
-* **LEXICON NAMAG** gives »»» and directs to NAMAG, both from adj and numerals
-
-* **LEXICON SAS** , both from adj and numerals
-
-* **LEXICON NAMAGCont**
-
-* **LEXICON SASCont** ,
-
-* *LEXICON Gen_DER* 
-
-* *LEXICON Nom_DER* 
-
-* *LEXICON DER-AG* 
-
-* *LEXICON DER-SAS* 
-
 ## The split into different noun types according to Px
 
 * **LEXICON Noun** is split into NounNoPx, NounPxKin, NounPx.
