@@ -44,7 +44,6 @@
 * `tools/`
     * `grammarcheckers/`
         * [grammarchecker-release.cg3](tools-grammarcheckers-grammarchecker-release.cg3.html) ([src](https://github.com/giellalt/lang-smn/blob/main/tools/grammarcheckers/grammarchecker-release.cg3))
-            * `/`
         * [grammarchecker.cg3](tools-grammarcheckers-grammarchecker.cg3.html) ([src](https://github.com/giellalt/lang-smn/blob/main/tools/grammarcheckers/grammarchecker.cg3))
         * [grc-disambiguator.cg3](tools-grammarcheckers-grc-disambiguator.cg3.html) ([src](https://github.com/giellalt/lang-smn/blob/main/tools/grammarcheckers/grc-disambiguator.cg3))
         * [spellchecker.cg3](tools-grammarcheckers-spellchecker.cg3.html) ([src](https://github.com/giellalt/lang-smn/blob/main/tools/grammarcheckers/spellchecker.cg3))
