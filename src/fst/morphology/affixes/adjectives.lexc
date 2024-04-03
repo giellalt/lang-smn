@@ -1433,3 +1433,57 @@ LEXICON ATTR_R  !!≈ **@CODE@** sends to R, NAMAG, SAS, CMP_ADJ.
  SAS ;
  CMP_ADJ ;
 
+
+!! # Derivation
+
+LEXICON NAMAG !!≈ * **@CODE@** gives »»» and directs to NAMAG, both from adj and numerals
++Cmp#:»»# NAMAGCont ;
+!#:»»# NAMATLAGANLAGASCont ;
+
+LEXICON SAS !!≈ * **@CODE@** , both from adj and numerals
++Cmp#:»»# SASCont ;
+
+ 
+LEXICON NAMAGCont!!≈ * **@CODE@**
+tääsi+CmpN/SgN+CmpN/SgG+Sem/Plc:tááság DER-AG ; ! tags_via_apertium
+čiehâ+Sem/Plc:čievâg DER-AG ; ! tags_via_apertium
+jienâ+Sem/Body-abstr_Prod-audio_Semcon:jienâg DER-AG ; ! tags_via_apertium
+lonnjâ+Sem/Buildpart:loonjâg DER-AG ; ! tags_via_apertium
+čuárvi+Sem/Body_Mat:čuárvág DER-AG ; ! tags_via_apertium
+uáivi+CmpN/SgN+CmpN/SgG+Sem/Body_Plc-elevate:uáivág DER-AG ; ! tags_via_apertium
+njälmi+Sem/Body:njáálmág DER-AG ; ! tags_via_apertium
+kerdi+Sem/Plc_Time:kiärdág DER-AG ; ! tags_via_apertium
+
+LEXICON SASCont!!≈ * **@CODE@** ,
+ihe+Sem/Time:ihás DER-SAS ; ! tags_via_apertium
+ihe+Err/Orth+Sem/Time:ihas DER-SAS ; ! tags_via_apertium
+peivi+Sem/Time:piäivás DER-SAS ; ! tags_via_apertium
+kerdi+Sem/Plc_Time:kiärdás DER-SAS ; ! tags_via_apertium
+jienâ+Sem/Body-abstr_Prod-audio_Semcon:jienâs DER-SAS ; ! tags_via_apertium
+tääsi+Sem/Plc:tásás DER-SAS ;  ! ollâtásásâš tags_via_apertium
+nummeer+Sem/Sign:»»»-nummeers DER-SAS ;
+sijđo+Sem/Txt:»»»-sijđos DER-SAS ;
+suormâräigi+Sem/Dummytag:»»»-suormâráigás DER-SAS ;
+kiilu+Sem/Measr:»»»-kilus DER-SAS ;
+sentti+Sem/Measr:»»»-senttis DER-SAS ;
+meetter+Sem/Measr:»»»-meetter DER-SAS ;
+meetter+Sem/Measr:»»»meetter DER-SAS ;
+
+
+LEXICON Gen_DER   !!≈ * *@CODE@* 
++Der1+Der/lasj:l ANOLASJ ; 
++Der1+Der/lasj+Err/Orth:ll ANOLASJ ; ! historjállâš
+!+Der+Der/vualasas:#-vuálás ANOLASJ ; ! Compounding better way: gen+vuálásâš
++Der1+Der/Car:tt MUSTOTTEM ; 
+
+LEXICON Nom_DER   !!≈ * *@CODE@* 
++Der1+Der/lasj:l ANOLASJ ; ! XXX not at all? Trond
+
+
+LEXICON DER-AG  !!≈ * *@CODE@* 
++N+Der+Der/ag:  PASTEL ; !+N because of redirection from numeral-file
+
+LEXICON DER-SAS  !!≈ * *@CODE@* 
++N+Der2+Der/sasj:  ANOLASJ ; !+N because of redirection from numeral-file
+
+
