@@ -750,7 +750,7 @@ LIST MOVT = "govt" ("maht" Adv) "maht" "mot" "mov" "maht" ;
 
 LIST MO-MANge = "tondiet" "kuás" "gokko" "kost" "kuus" "govt" ("maht" Adv) "maggaar" "maht" "mane" ("mane" Adv) "maht" "mot" "mov" "maht" ("nugo" @CVP) (V Qst);
  
-SET MO = MO-MANge - Foc/ge ; 
+SET MO = MO-MANge - Foc/ge - Foc/nii ; 
  
  # Introduce finite clauses.
  
@@ -3999,7 +3999,7 @@ SELECT:ConNegPrfPrc ConNeg IF (*-1 PrfPrc BARRIER NOT-ADV-PCLE LINK *-1 Neg BARR
 
 
 #!! * **NotConNegIfNotNeg** removes ConNeg if no Neg to the left. Consider unifying with NotConNegNotNeg. - 1094269
-REMOVE:NotConNegIfNotNeg ConNeg IF (NEGATE *-1 Neg BARRIER CLB OR Ind)(NEGATE *-1 Nom LINK -1 Neg)(NEGATE *-1 (@CVP) BARRIER NOT-A-ADV LINK *-1 ConNeg BARRIER VFIN)(NEGATE -1 ("já" CC) OR ("dahje" CC) LINK **-1 ConNeg LINK -1 Neg); 
+REMOVE:NotConNegIfNotNeg ConNeg IF (NEGATE *-1 Neg BARRIER CLB OR Ind)(NEGATE *-1 Nom BARRIER CLB OR Ind LINK -1 Neg)(NEGATE *-1 (@CVP) BARRIER NOT-A-ADV LINK *-1 ConNeg BARRIER VFIN)(NEGATE -1 ("já" CC) OR ("dahje" CC) LINK **-1 ConNeg LINK -1 Neg); 
  	#$ Juohke muorra mii ii šaddat buriid šattuid, čullojuvvo ja bálkestuvvo dollii.
  	#$ Gávpot mii lea vári alde, ii sáhte leat čihkosis.
  	#% Bearehan dal son ii geige vel gieđa ja váldde maiddái eallima muoras ja bora ja beasa nu eallit agálaččat.
