@@ -4037,8 +4037,21 @@ ADDRELATION:msyn-predagr-pl3-sg3 ($2) (N Sg Nom) FROM (-5 Neg LINK 0 (&msyn-pred
 #$ Ij lah alda sämikielâlij huolhij toorjâ finnimnáál.
 #$ Päikkinoomah iä lah siäilum.
 
+#!! ### Adjective errors
+
+LIST BEALLE-CONGR-A = (Der/Comp A) (Der/Superl A) (".*vâš"r) (".*lâš"r) (".*sâš"r) (".*gâš"r) ;
+	# Nom + Nom Jenny čuávuvâš pastem lâi-uv jo tievâ.
+	# Gen + Gen Mun lam luoihâttâm jieččân čuávuváá máttáátteijee kirje. 
+	# Gen/Nom + Acc Mun čálám čuávuváá reeivâ. / Talle sun kuulâi uccâ, várugâs colkkâs.
+	# Gen/Nom + Ill läävdi alne čuožžuu sämmiliih ráppáámin aainâs-uv muádituhháátuáivásii olmoošjuávkun. / Mun lijkkuum muu čuávuváá paargon.
+	# Com + Com Mun vuálgám máátkán čuávuváin usteváin.
+	# Gen/Nom + Loc Mun orom tääl muu čuávuváá viäsust.
+	# Gen/Nom + Ess Sun šadda pyereeb máttáátteijen. /pyerebin máttáátteijen
+
+
+
 ADD:msyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET (A Sg Nom) IF
-	(NOT 0 Attr OR Adv)
+	(NOT 0 Attr OR Adv OR BEALLE-CONGR-A)
 	(NEGATE 0 <TH-Ill-Any> LINK 1 Ill) # Taat uási/et lii viehâ herkki pieggáid.
 	(NEGATE 1 Sem/Hum + Ill OR Sem/Fem + Ill OR Sem/Mal + Ill OR Sem/Sur + Ill) # Mihheen ij lah máhđuttem Imelân
 	(NEGATE 0  CONCORD-A OR Ord OR Der/Comp OR Der/Superl OR N + Gen OR <AttrPred>)
@@ -4052,6 +4065,7 @@ COPY:msyn-adj-pred-attr (Attr &SUGGEST) EXCEPT (Sg Nom &msyn-adj-pred-attr) TARG
 	## lâi {vaigâdis} finniđ kiddâ.
 	#$ Taat uási lii viehâ herkki pieggáid.
 	## Maid {iimâš} saanijd tun čááláh? 
+	#$ Sálttáás liemâ, timmâ Epirgu já potákkeh liččii vala {njálgásuboh} čuávuváá peeivi, máállás ko lieggij.
 
 
 #!!  **Agreement rule:** msyn-adj-pred-attr Plural adjectives should be Attr in front of N.
