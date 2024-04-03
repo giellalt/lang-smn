@@ -487,11 +487,13 @@ poovtám  o5o
 
 All instances of the same vowel alternation are in the same rule.
 
-a rules
+### a rules
 
 **RULE: Root vowel change a:o before suffix i and for contract verbs** =  alge : olgijn 
 contr 
 contr 
+
+### o rules
 
 **RULE: Root vowel o:u for contract verbs and Root vowel change o:u before suffix i and stem vowel o:u sometimes** 
 juttuum

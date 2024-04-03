@@ -5708,7 +5708,7 @@ WG, blank Ill, DLEN, RVSH, SVLOW
 
 ### 2KISSA lexicon family 
 
-* **LEXICON 2KISSA**  No root vowel lengthening 
+* **LEXICON 2KISSA** ki^RVssá No root vowel lengthening
 
 * **LEXICON 2KISSA_SG** 
 
@@ -5836,10 +5836,6 @@ WG, Ill EA, Com CLEN SVLOW, Ess **with** CLEN
 
 * **LEXICON X_CAACI_PL** 
 
-* ''LEXICON 2CAACI_SG_DIM''  pe^RVi4vi, ä^RVi4gi
-
-* ''LEXICON 2CAACI_PL_DIM'' 
-
 * **LEXICON 2VYEHI** WG, Ill EA, Com CLEN SVLOW, Ess **without** CLEN 
 
 * **LEXICON 2VYEHI_SG** sg forms 
@@ -5897,7 +5893,7 @@ X-leksikossa Sg Ill erilainen
 
 * **LEXICON 2NJAMMA** njamma > KIRKKO_NJAMMA, but WG CLEN for Sg+Loc: loho:lovvoost 
 
-* **LEXICON KIRKKO_NJAMMA_SG**   
+* **LEXICON KIRKKO_NJAMMA_SG** stem nja^RVmma  
 
 * **LEXICON KIRKKO_NJAMMA_PL**   
 
@@ -6218,7 +6214,7 @@ this is for loanwords without stem change
 
 * **LEXICON X_PELES** piällás^ÁE
 
-* **LEXICON C_MORCES** 
+* **LEXICON C_MORCES** stem: morččás^ÁE
 
 * **LEXICON X_MORCES** 
 
@@ -6320,7 +6316,7 @@ this is for loanwords without stem change
 
 * **LEXICON 3ALMAS** 
 
-* **LEXICON C_SARVES** sarves, jalŋes 
+* **LEXICON C_SARVES** sarves, jalŋes stem: sarv, jalŋ
 
 * **LEXICON C_SARVES_SG** 
 
@@ -6414,9 +6410,15 @@ TODO: Move derivation lexica here
 
 #### Final i
 
+* ''LEXICON 2CAACI_SG_DIM''  pe^RVi4vi, ä^RVi4gi
+
+* ''LEXICON 2CAACI_PL_DIM'' 
+
 * ''LEXICON 2AIGI_SG_DIM''  pe^RVi4vi, ä^RVi4gi
 
 * ''LEXICON 2AIGI_PL_DIM'' 
+
+#### final o
 
 #### final u , tentative
 
@@ -8038,11 +8040,13 @@ poovtám  o5o
 
 All instances of the same vowel alternation are in the same rule.
 
-a rules
+### a rules
 
 **RULE: Root vowel change a:o before suffix i and for contract verbs** =  alge : olgijn 
 contr 
 contr 
+
+### o rules
 
 **RULE: Root vowel o:u for contract verbs and Root vowel change o:u before suffix i and stem vowel o:u sometimes** 
 juttuum
