@@ -457,14 +457,14 @@ Cx:0 <=> Vow: _  Cy:     (%^CLEN:) (%^RLEN:) (%^SLEN:|%^SVSH:) [.#.| %>] \Sgm: ;
 
 "Quality change of root consonant x:yy"
 !! **RULE: @RULENAME@** =  consonant lengthening after WG, changing h:v, p:v, c:s
-Cx:Cy <=> Vow: _ %^RC: (Vow:) :Vow+ Cns:* [Triggers: -  %^FCD:]* %^WG: %^CLEN: (%^VHIGH:|%^VBACK:) (%^RVSH:) ([%^SVLOW: |%^SLEN:]) %> [i:|s|u|o|ž|e h|e m|á] ; ! RC
+Cx:Cy <=> Vow: _ %^RC: (Vow:) :Vow+ Cns:* [Triggers: -  %^FCD:]* %^WG: %^CLEN: (%^VHIGH:|%^VBACK:) (%^RVSH:) ([%^SVLOW: |%^SLEN:]) %> [i:|i5:|s|u|o|ž|e h|e m|á] ; ! RC
 	where Cx in ( h p c )
 	      Cy in ( v v s ) 
 		  matched ;
 
 "Lengthening of root consonant x:yy"
 !! **RULE: @RULENAME@** =  consonant lengthening after WG - h:vv, p:vv, c:ss
-%^RC:Cy <=> Vow: Cx:Cy _ (Vow:) :Vow+ Cns:* [Triggers: - %^FCD:]* %^WG: %^CLEN: (%^VHIGH:|%^VBACK:) (%^RVSH:) ([%^SVLOW: |%^SLEN:]) %> [i:|s|u|o|ž |e h | e m |á] ;
+%^RC:Cy <=> Vow: Cx:Cy _ (Vow:) :Vow+ Cns:* [Triggers: - %^FCD:]* %^WG: %^CLEN: (%^VHIGH:|%^VBACK:) (%^RVSH:) ([%^SVLOW: |%^SLEN:]) %> [i:|i5:|s|u|o|ž |e h | e m |á] ;
 	where Cx in ( h p c )
 	      Cy in ( v v s ) 
 		  matched ;
