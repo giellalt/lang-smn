@@ -472,6 +472,8 @@ This is the first section. Here we put safe rules with no or minimal context.
 
 ## Removing unwanted names
 
+## Idiosyncratic homonymies
+
 ## Numbers
 
 Ruleset for numbers from sme, and adjusted.
