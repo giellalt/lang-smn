@@ -6410,7 +6410,7 @@ TODO: Move derivation lexica here
 
 #### Final i
 
-* ''LEXICON 2CAACI_SG_DIM''  pe^RVi4vi, ä^RVi4gi
+* ''LEXICON 2CAACI_SG_DIM'' stem:  čä^RVc^RCi
 
 * ''LEXICON 2CAACI_PL_DIM'' 
 
