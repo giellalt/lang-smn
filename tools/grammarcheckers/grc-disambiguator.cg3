@@ -2052,6 +2052,16 @@ LIST SUSPICIOUSNAME = "Ai" "Ain" "Lie" "Sun" "Ta" "Van" "Viste" "Ive" ;
 
 REMOVE SUSPICIOUSNAME IF (0 Adv OR A OR N) ;
 
+#!! ## Idiosyncratic homonymies
+
+# "rähtiđ" vs. "rahti" Der/Dimin
+REMOVE ("rahti" Der/Dimin) IF (0 (Sg Gen) OR (Sg Acc))(NEGATE *-1 ("uccâ") BARRIER NOT-Attr) ;
+	## Te uážui oskođ, et talle tuške šoodâi, rahtii pissoid ornigân já vyelgiškuottii tom kuobžâ pivdeđ.
+	
+# "piccoođ" V Ind Prt vs. "pisso" N Sem/Wpn Pl vs. "pissoo" A
+REMOVE ("piccoođ" V Ind Prt) IF (0 ("pisso" N Pl Acc))(-1 TV + VFIN) ;
+	## Te uážui oskođ, et talle tuške šoodâi, rahtii pissoid ornigân já vyelgiškuottii tom kuobžâ pivdeđ.
+
 #!! ## Numbers
 
 #!! Ruleset for numbers from sme, and adjusted.
