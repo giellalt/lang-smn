@@ -4039,7 +4039,12 @@ ADDRELATION:msyn-predagr-pl3-sg3 ($2) (N Sg Nom) FROM (-5 Neg LINK 0 (&msyn-pred
 
 #!! ### Adjective errors
 
-LIST BEALLE-CONGR-A = (Der/Comp A) (Der/Superl A) (".*vâš"r) (".*lâš"r) (".*sâš"r) (".*gâš"r) ;
+LIST CONGRUENCE-A-sma = (Der/Comp A) (Der/Superl A) "væjkeles";
+LIST CONGRUENCE-A-smj = "buorre" ;
+LIST CONGRUENCE-A-sme = "buorre" ;
+LIST CONGRUENCE-A-smn = "pyeri" (Der/Comp A) (Der/Superl A) (".*vâš"r) (".*lâš"r) (".*sâš"r) (".*gâš"r) (".*bâš"r) ;
+SET CONGRUENCE-A = CONGRUENCE-A-sma OR CONGRUENCE-A-smj OR CONGRUENCE-A-sme OR CONGRUENCE-A-smn ;
+
 	# Nom + Nom Jenny čuávuvâš pastem lâi-uv jo tievâ. /Sunnui poođij pyereeb mielâ.
 	# Gen + Gen Mun lam luoihâttâm jieččân čuávuváá máttáátteijee kirje. 
 	# Gen/Nom + Acc Mun čálám čuávuváá reeivâ. / Talle sun kuulâi uccâ, várugâs colkkâs.
@@ -4051,7 +4056,7 @@ LIST BEALLE-CONGR-A = (Der/Comp A) (Der/Superl A) (".*vâš"r) (".*lâš"r) (".*
 
 
 ADD:msyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET (A Sg Nom) IF
-	(NOT 0 Attr OR Adv OR BEALLE-CONGR-A)
+	(NOT 0 Attr OR Adv OR CONGRUENCE-A)
 	(NEGATE 0 <TH-Ill-Any> LINK 1 Ill) # Taat uási/et lii viehâ herkki pieggáid.
 	(NEGATE 1 Sem/Hum + Ill OR Sem/Fem + Ill OR Sem/Mal + Ill OR Sem/Sur + Ill) # Mihheen ij lah máhđuttem Imelân
 	(NEGATE 0  CONCORD-A OR Ord OR Der/Comp OR Der/Superl OR N + Gen OR <AttrPred>)
