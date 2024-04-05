@@ -5595,7 +5595,7 @@ These two lexica are temporary lexica for words waiting to be classified.
 **LEXICON nounstems** contains words that should be classified, for now directed to: 
 * **3LITTER ;** 
 
-## Even-syllable stem lexica 
+## Two-syllable (even) stem lexica 
 
 ### The 2ALGA lexicon family 
 This is the basic even-syllable lexicon. 
@@ -6006,7 +6006,7 @@ this is for loanwords without stem change
 
 * **LEXICON X_h_PL_notILL** 
 
-## Four-syllable stems 
+## Four-syllable (even) stem lexica
 
 ### 4KUNAGAS lexicon family 
 
@@ -6048,11 +6048,35 @@ this is for loanwords without stem change
 
 ### 4PUHELIN lexicon family 
 
-* **LEXICON 4PUHELIN**  Only a few words in this category 
+* **LEXICON 4PUHELIN**  stem: puhelim
 
 ### 2KOLLIISTALLAM lexicon family 
 
 * **LEXICON 2KOLLIISTALLAM** 
+
+* **LEXICON 4JOTOLAH**  splitting in sg pl 
+
+* **LEXICON JOHTOLAH_OBL** common for N and A 
+
+* **LEXICON 4JOTOLAH_PL** 
+
+* **LEXICON 4KAPULUH** stem: kápul
+
+* **LEXICON 4KUBALOH** stem: kubál
+
+* **LEXICON 4LAS_NOUN** stem = aanaarl 
+
+* **LEXICON LAS_COMMON** 
+
+* **LEXICON X_LAS_COMMON_SG** normâl lâš:-lii-nouns and adjs 
+
+* **LEXICON X_LAS_COMMON_PL** NOrmal plural and plural tantum cases, olympialiih 
+
+* **LEXICON OLYMPIALIIH_PL** 
+
+* **LEXICON LAS_SUF** 
+
+* **LEXICON MUS_NOUN** type uáiváámus, aldemus 
 
 ## Odd-syllable stems 
 
@@ -6326,34 +6350,6 @@ this is for loanwords without stem change
 
 * **LEXICON X_SARVES_PL** 
 
-### 4-syllabic 
-
-* **LEXICON 4JOTOLAH**  splitting in sg pl 
-
-* **LEXICON JOHTOLAH_OBL** common for N and A 
-
-* **LEXICON 4JOTOLAH_PL** 
-
-* **LEXICON 4KAPULUH** 
-
-* **LEXICON 4KUBALOH** 
-
-* **LEXICON 4LAS_NOUN** stem = aanaarl 
-
-* **LEXICON LAS_COMMON** 
-
-* **LEXICON X_LAS_COMMON_SG** normâl lâš:-lii-nouns and adjs 
-
-* **LEXICON X_LAS_COMMON_PL** NOrmal plural and plural tantum cases, olympialiih 
-
-* **LEXICON OLYMPIALIIH_PL** 
-
-* **LEXICON LAS_SUF** 
-
-* **LEXICON MUS_NOUN** type uáiváámus, aldemus 
-
-## Contracted stems 
-
 * **LEXICON C_EIJE** 
 
 * **LEXICON C_LOHHEE** 
@@ -6378,11 +6374,11 @@ this is for loanwords without stem change
 
 * **LEXICON GUIN** is here to give -guin and the Use/NG -gijn. 
 
-## Derivations 
+# Derivations 
 
 TODO: Move derivation lexica here 
 
-### Diminutive derivations _DIM
+## Diminutive derivations _DIM
 
 ### 2 syllabic stems
 
@@ -6438,11 +6434,9 @@ TODO: Move derivation lexica here
 
 ### 4-syllabic
 
-tbw.
+* ''LEXICON 4JOTOLAH_SG_DIM'' stem kápul + uv
 
-### 4-syllabic contracted
-
-tbw.
+* ''LEXICON 4JOTOLAH_PL_DIM'' stem kápul + uv
 
 ### Vowel-final loanwords
 
