@@ -733,6 +733,3 @@ The `@D.NeedNoun.ON@` flag diacritic is used to block illegal compounds.
 * * *
 
 <small>This (part of) documentation was generated from [src/fst/morphology/root.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/root.lexc)</small>
-
----
-

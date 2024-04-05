@@ -1,6 +1,10 @@
-# Inari Sami description 
+# Inari Sami language model documentation
 
-All documents in one file
+All doc-comment documentation in one large file.
+
+---
+
+# src-cg3-coredisambiguation.cg3.md 
 
 
 
@@ -2674,7 +2678,14 @@ The previous two rules look marginal.
 # Removing Err/Orth
 
 * * *
+
 <small>This (part of) documentation was generated from [src/cg3/coredisambiguation.cg3](https://github.com/giellalt/lang-smn/blob/main/src/cg3/coredisambiguation.cg3)</small>
+
+---
+
+# src-cg3-disambiguator.cg3.md 
+
+
 I N A R I   S A A M I   D I S A M B I G U A T O R               
 ==================================================================
 
@@ -4773,7 +4784,14 @@ their behaviour in the subsequent cg files. The rules are removed when this
 file is ported to Apertium.
 
 * * *
+
 <small>This (part of) documentation was generated from [src/cg3/disambiguator.cg3](https://github.com/giellalt/lang-smn/blob/main/src/cg3/disambiguator.cg3)</small>
+
+---
+
+# src-cg3-introdisambiguation.cg3.md 
+
+
 
 # DELIMITERS 
 
@@ -5204,10 +5222,24 @@ NON-APP
 *These were the set types.*
 
 * * *
+
 <small>This (part of) documentation was generated from [src/cg3/introdisambiguation.cg3](https://github.com/giellalt/lang-smn/blob/main/src/cg3/introdisambiguation.cg3)</small>
 
+---
+
+# src-cg3-valency.cg3.md 
+
+
+
 * * *
+
 <small>This (part of) documentation was generated from [src/cg3/valency.cg3](https://github.com/giellalt/lang-smn/blob/main/src/cg3/valency.cg3)</small>
+
+---
+
+# src-fst-morphology-affixes-abbreviations.lexc.md 
+
+
 # Continuation lexicons for abbreviations
 
 ## Lexica for adding tags and periods
@@ -5274,6 +5306,8 @@ NON-APP
 
 ---
 
+# src-fst-morphology-affixes-acronyms.lexc.md 
+
 
 
 # Inari Saami acronyms
@@ -5297,6 +5331,8 @@ NON-APP
 <small>This (part of) documentation was generated from [src/fst/morphology/affixes/acronyms.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/affixes/acronyms.lexc)</small>
 
 ---
+
+# src-fst-morphology-affixes-adjectives.lexc.md 
 
 
 
@@ -5394,8 +5430,6 @@ triggers, tney must be ordered as follows (where {A,B} C means *A or B, thereaft
 **LEXICON A_LITTER** directing to X_LITTER
 
 **LEXICON ALMOS** directing to X_SAJOS, attr. almos
-
-**LEXICON MAGGAAR** as SOOHAD_NOCOMP, BUT WITHOUT ATTR.
 
 **LEXICON SOOHAD_nocomp** directing to X_EEMEED, attr. sohâdis
 
@@ -5557,6 +5591,8 @@ Adj - pooliitlâš: # attr. pooliitlâš; puolikongruenssi mahdollinen (#-paikat
 <small>This (part of) documentation was generated from [src/fst/morphology/affixes/adjectives.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/affixes/adjectives.lexc)</small>
 
 ---
+
+# src-fst-morphology-affixes-nouns.lexc.md 
 
 
 
@@ -6466,6 +6502,8 @@ tbw.
 
 ---
 
+# src-fst-morphology-affixes-numerals.lexc.md 
+
 
 
 # Inari Saami number <-> text
@@ -6572,6 +6610,8 @@ tbw.
 
 ---
 
+# src-fst-morphology-affixes-possessive-suffixes.lexc.md 
+
 
 # Possessive suffixes for Inari Saami
 
@@ -6606,6 +6646,8 @@ just do Px1, Px2, Px3, and change tags from sme to smn in apertium.
 <small>This (part of) documentation was generated from [src/fst/morphology/affixes/possessive-suffixes.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/affixes/possessive-suffixes.lexc)</small>
 
 ---
+
+# src-fst-morphology-affixes-propernouns.lexc.md 
 
 
 # Propernoun morphology for Inari Saami
@@ -7116,6 +7158,8 @@ LEXICON KIARUN = 3KIELES
 
 ---
 
+# src-fst-morphology-affixes-symbols.lexc.md 
+
 
 # Symbol affixes
 
@@ -7134,6 +7178,8 @@ LEXICON KIARUN = 3KIELES
 <small>This (part of) documentation was generated from [src/fst/morphology/affixes/symbols.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/affixes/symbols.lexc)</small>
 
 ---
+
+# src-fst-morphology-affixes-verbs.lexc.md 
 
 
 # Inflection lexica for Inari Saami verbs
@@ -7524,6 +7570,8 @@ become the second part of N + (V > N) compounds.
 
 ---
 
+# src-fst-morphology-compounding.lexc.md 
+
 #Inari Saami compounding
 
 LEXICON Rhash - adding lower # and pointing at R
@@ -7562,6 +7610,8 @@ LEXICON RNum_after_cmp_flags - going to Noun, should it be to NounRoot?
 <small>This (part of) documentation was generated from [src/fst/morphology/compounding.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/compounding.lexc)</small>
 
 ---
+
+# src-fst-morphology-phonology.twolc.md 
 
 
 # Inari Saami morphophonological rule file
@@ -8394,6 +8444,8 @@ eemeed : emedân sai4joos
 
 ---
 
+# src-fst-morphology-root.lexc.md 
+
 
 # Inari Sámi morphological analyser
 
@@ -9132,6 +9184,8 @@ The `@D.NeedNoun.ON@` flag diacritic is used to block illegal compounds.
 
 ---
 
+# src-fst-morphology-stems-adjectives.lexc.md 
+
 
 # Inari Saami adjectives
 
@@ -9166,6 +9220,8 @@ From corpus
 
 ---
 
+# src-fst-morphology-stems-adpositions.lexc.md 
+
 
 # Inari Saami adpositions
 
@@ -9174,6 +9230,8 @@ From corpus
 <small>This (part of) documentation was generated from [src/fst/morphology/stems/adpositions.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/stems/adpositions.lexc)</small>
 
 ---
+
+# src-fst-morphology-stems-adverbs.lexc.md 
 
 
 # Inari Saami adverbs
@@ -9199,6 +9257,8 @@ From corpus
 
 ---
 
+# src-fst-morphology-stems-conjunctions.lexc.md 
+
 
 # Conjunctions 
 
@@ -9217,6 +9277,8 @@ From corpus
 <small>This (part of) documentation was generated from [src/fst/morphology/stems/conjunctions.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/stems/conjunctions.lexc)</small>
 
 ---
+
+# src-fst-morphology-stems-interjections.lexc.md 
 
 
 # Interjections
@@ -9241,6 +9303,8 @@ From corpus
 <small>This (part of) documentation was generated from [src/fst/morphology/stems/interjections.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/stems/interjections.lexc)</small>
 
 ---
+
+# src-fst-morphology-stems-nouns.lexc.md 
 
 
 
@@ -9304,6 +9368,8 @@ From missinglist
 <small>This (part of) documentation was generated from [src/fst/morphology/stems/nouns.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/stems/nouns.lexc)</small>
 
 ---
+
+# src-fst-morphology-stems-numerals.lexc.md 
 
 
 
@@ -9423,6 +9489,8 @@ In principle as the above.
 
 ---
 
+# src-fst-morphology-stems-particles.lexc.md 
+
 
 # Particles
 
@@ -9445,6 +9513,8 @@ kes pcle ;
 <small>This (part of) documentation was generated from [src/fst/morphology/stems/particles.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/stems/particles.lexc)</small>
 
 ---
+
+# src-fst-morphology-stems-pronouns.lexc.md 
 
 
 # Pronouns for Inari Saami
@@ -9507,6 +9577,8 @@ LEXICON SIAMMAS_PRON without WG
 
 ---
 
+# src-fst-morphology-stems-smn-abbreviations.lexc.md 
+
 
 # File containing Inari Saami abbreviations 
 
@@ -9556,6 +9628,8 @@ the sentence can be considered as true cases.
 
 ---
 
+# src-fst-morphology-stems-smn-acronyms.lexc.md 
+
 
 
 # Inari Saami acronyms
@@ -9573,6 +9647,8 @@ small-capital letter combinations.
 <small>This (part of) documentation was generated from [src/fst/morphology/stems/smn-acronyms.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/stems/smn-acronyms.lexc)</small>
 
 ---
+
+# src-fst-morphology-stems-smn-propernouns.lexc.md 
 
 
 # Propernoun lexicon, Inari Sámi specific names 
@@ -9605,6 +9681,8 @@ Geographical names
 
 ---
 
+# src-fst-morphology-stems-subjunctions.lexc.md 
+
 
 # Subjunctions
 
@@ -9623,6 +9701,8 @@ LEXICON Subjunction
 <small>This (part of) documentation was generated from [src/fst/morphology/stems/subjunctions.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/stems/subjunctions.lexc)</small>
 
 ---
+
+# src-fst-morphology-stems-verbs.lexc.md 
 
 
 
@@ -9841,6 +9921,8 @@ end up *not* receiving *+IV* or *+TV* tags.
 
 ---
 
+# src-fst-phonetics-txt2ipa.xfscript.md 
+
 
 
 retroflex plosive, voiceless		t`  ʈ	    0288, 648 (` = ASCII 096)
@@ -10006,6 +10088,8 @@ retracted tongue root			_q
 
 ---
 
+# src-fst-transcriptions-transcriptor-abbrevs2text.lexc.md 
+
 
 
 We describe here how abbreviations are in Inari Sami are read out, e.g.
@@ -10026,6 +10110,8 @@ For example:
 
 ---
 
+# src-fst-transcriptions-transcriptor-date-digit2text.lexc.md 
+
 
 # The Inari Sámi dates 
 
@@ -10037,6 +10123,8 @@ This is a file generating Inari Sámi date expressions.
 
 ---
 
+# src-fst-transcriptions-transcriptor-numbers-digit2text.lexc.md 
+
 
 
 # Inari Saami number <-> text
@@ -10046,6 +10134,8 @@ This is a file generating Inari Sámi date expressions.
 <small>This (part of) documentation was generated from [src/fst/transcriptions/transcriptor-numbers-digit2text.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/transcriptions/transcriptor-numbers-digit2text.lexc)</small>
 
 ---
+
+# src-fst-transcriptions-transcriptor-ttsdate-digit2text.lexc.md 
 
 
 # The Inari Sámi dates
@@ -10057,6 +10147,8 @@ This is a file generating Inari Sámi date expressions.
 <small>This (part of) documentation was generated from [src/fst/transcriptions/transcriptor-ttsdate-digit2text.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/transcriptions/transcriptor-ttsdate-digit2text.lexc)</small>
 
 ---
+
+# tools-grammarcheckers-grammarchecker-release.cg3.md 
 
 
 I N A R I    S A A M I    G R A M M A R    C H E C K E R
@@ -11143,7 +11235,14 @@ The grammarchecker file ends here.
 SUBSTITUTE MWE (*)
 
 * * *
+
 <small>This (part of) documentation was generated from [tools/grammarcheckers/grammarchecker-release.cg3](https://github.com/giellalt/lang-smn/blob/main/tools/grammarcheckers/grammarchecker-release.cg3)</small>
+
+---
+
+# tools-grammarcheckers-grammarchecker.cg3.md 
+
+
 I N A R I    S A A M I    G R A M M A R    C H E C K E R
 ==================================================================
 
@@ -12227,7 +12326,14 @@ The grammarchecker file ends here.
 SUBSTITUTE MWE (*)
 
 * * *
+
 <small>This (part of) documentation was generated from [tools/grammarcheckers/grammarchecker.cg3](https://github.com/giellalt/lang-smn/blob/main/tools/grammarcheckers/grammarchecker.cg3)</small>
+
+---
+
+# tools-grammarcheckers-grc-disambiguator.cg3.md 
+
+
 I N A R I   S A A M I   G R A M M A R C H E C K E R   D I S A M B I G U A T O R               
 ================================================================================
 
@@ -14304,7 +14410,14 @@ their behaviour in the subsequent cg files. The rules are removed when this
 file is ported to Apertium.
 
 * * *
+
 <small>This (part of) documentation was generated from [tools/grammarcheckers/grc-disambiguator.cg3](https://github.com/giellalt/lang-smn/blob/main/tools/grammarcheckers/grc-disambiguator.cg3)</small>
+
+---
+
+# tools-grammarcheckers-spellchecker.cg3.md 
+
+
 
 # TAGS AND SETS
 
@@ -14752,7 +14865,14 @@ OKTA
 *These were the set types.*
 
 * * *
-<small>This (part of) documentation was generated from [tools/grammarcheckers/spellchecker.cg3](https://github.com/giellalt/lang-smn/blob/main/tools/grammarcheckers/spellchecker.cg3)</small>Requires a recent version of HFST (3.10.0 / git revision>=3aecdbc)
+
+<small>This (part of) documentation was generated from [tools/grammarcheckers/spellchecker.cg3](https://github.com/giellalt/lang-smn/blob/main/tools/grammarcheckers/spellchecker.cg3)</small>
+
+---
+
+# tools-tokenisers-tokeniser-disamb-gt-desc.eighties.pmscript.md 
+
+Requires a recent version of HFST (3.10.0 / git revision>=3aecdbc)
 Then just:
 $ make
 $ echo "ja, ja" | hfst-tokenise --giella-cg tokeniser-disamb-gt-desc.pmhfst
@@ -14805,6 +14925,8 @@ Needs hfst-tokenise to output things differently depending on the tag they get
 <small>This (part of) documentation was generated from [tools/tokenisers/tokeniser-disamb-gt-desc.eighties.pmscript](https://github.com/giellalt/lang-smn/blob/main/tools/tokenisers/tokeniser-disamb-gt-desc.eighties.pmscript)</small>
 
 ---
+
+# tools-tokenisers-tokeniser-disamb-gt-desc.pmscript.md 
 
 # Tokeniser for smn
 
@@ -14869,6 +14991,8 @@ Finally we mark as a token any sequence making up a:
 
 ---
 
+# tools-tokenisers-tokeniser-gramcheck-gt-desc.pmscript.md 
+
 # Grammar checker tokenisation for smn
 
 Requires a recent version of HFST (3.10.0 / git revision>=3aecdbc)
@@ -14932,6 +15056,8 @@ Finally we mark as a token any sequence making up a:
 
 ---
 
+# tools-tokenisers-tokeniser-tts-cggt-desc.pmscript.md 
+
 # TTS tokenisation for smj
 
 Requires a recent version of HFST (3.10.0 / git revision>=3aecdbc)
@@ -14993,6 +15119,3 @@ Needs hfst-tokenise to output things differently depending on the tag they get
 * * *
 
 <small>This (part of) documentation was generated from [tools/tokenisers/tokeniser-tts-cggt-desc.pmscript](https://github.com/giellalt/lang-smn/blob/main/tools/tokenisers/tokeniser-tts-cggt-desc.pmscript)</small>
-
----
-

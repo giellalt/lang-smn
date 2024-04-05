@@ -56,6 +56,3 @@ LEXICON SIAMMAS_PRON without WG
 * * *
 
 <small>This (part of) documentation was generated from [src/fst/morphology/stems/pronouns.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/stems/pronouns.lexc)</small>
-
----
-

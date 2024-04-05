@@ -19,6 +19,3 @@
 * * *
 
 <small>This (part of) documentation was generated from [src/fst/morphology/affixes/acronyms.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/affixes/acronyms.lexc)</small>
-
----
-

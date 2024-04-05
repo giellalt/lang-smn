@@ -429,4 +429,5 @@ NON-APP
 *These were the set types.*
 
 * * *
+
 <small>This (part of) documentation was generated from [src/cg3/introdisambiguation.cg3](https://github.com/giellalt/lang-smn/blob/main/src/cg3/introdisambiguation.cg3)</small>

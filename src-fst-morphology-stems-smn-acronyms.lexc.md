@@ -13,6 +13,3 @@ small-capital letter combinations.
 * * *
 
 <small>This (part of) documentation was generated from [src/fst/morphology/stems/smn-acronyms.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/stems/smn-acronyms.lexc)</small>
-
----
-

@@ -95,8 +95,6 @@ triggers, tney must be ordered as follows (where {A,B} C means *A or B, thereaft
 
 **LEXICON ALMOS** directing to X_SAJOS, attr. almos
 
-**LEXICON MAGGAAR** as SOOHAD_NOCOMP, BUT WITHOUT ATTR.
-
 **LEXICON SOOHAD_nocomp** directing to X_EEMEED, attr. sohâdis
 
 **LEXICON SOOHAD** directing to X_EEMEED, attr. sohâdis
@@ -255,6 +253,3 @@ Adj - pooliitlâš: # attr. pooliitlâš; puolikongruenssi mahdollinen (#-paikat
 * * *
 
 <small>This (part of) documentation was generated from [src/fst/morphology/affixes/adjectives.lexc](https://github.com/giellalt/lang-smn/blob/main/src/fst/morphology/affixes/adjectives.lexc)</small>
-
----
-
