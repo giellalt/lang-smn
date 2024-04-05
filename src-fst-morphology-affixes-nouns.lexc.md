@@ -8,20 +8,22 @@ order for the morphophonology to work:
 {SV,ÁE,ÁI}  {EA,EX,SC}  {FCD,FVD} {WG,CSH} CLEN  {VHIGH,VBACK}  {RVSH,RLEN} {SLEN,SVSH}  SVLOW 
 
 ## Table of content for this file 
+Inflection lexica
 1. Unclassified lexica 
-1. Even-syllable stems 
-1. Two-syllabic 
-1. Four-syllabic even stems 
-1. Odd-syllabic stems 
-1. Contract stems 
+2. Even-syllable stems 
+2.1. Two-syllabic 
+2.2. Four-syllabic even stems 
+3. Odd-syllabic stems 
+4. Contract stems 
+Derivation lexica 
 
-# The continuation lexica 
+# Inflection lexica 
 
 Lexicons starting with 2 are bisyllabic words, 
 with 3 are trisyllabic, with 4 are quadrosyllabic. 
 The contract ones start with **C** or **S**. 
 Lexicons starting with **X** are pointed to from stem files 
-*nouns.lexc, adjective.lexc, propernouns.lexc*. 
+*nouns.lexc, adjective.lexc, propernouns.lexc*, hence the **X_** (all parts of speech)
 The lexica referred to as *basic lexica* are the ones found in the 
 stems/nouns.lexc file. 
 
@@ -452,7 +454,7 @@ this is for loanwords without stem change
 
 * **LEXICON 4KUNAGAS** 
 
-* **LEXICON X_KUNAGAS** 
+* **LEXICON X_KUNAGAS** stem: kunâgâss
 
 * **LEXICON 4KUNAGAS_SG** 
 
@@ -534,7 +536,7 @@ this is for loanwords without stem change
 
 * **LEXICON 3EEMEED** 
 
-* **LEXICON X_EEMEED** 
+* **LEXICON X_EEMEED** stem: eemeed
 
 * **LEXICON 3EEMEED_SG** 
 
@@ -632,7 +634,7 @@ this is for loanwords without stem change
 
 * **LEXICON 3CEVE** only for this lemma. It could go to 3LYEME but needs modifications of rules to get iä:e and -tt-, and the worst part is v:vv 
 
-* **LEXICON 3LYEME** 
+* **LEXICON 3LYEME** stem: luámmá^SVn^ÁE 
 
 * **LEXICON 3HUKSIM** NGA + Abe blank, SLEN for the rest 
 
@@ -656,7 +658,7 @@ this is for loanwords without stem change
 
 * **LEXICON X_KAAMUV_COMMON** 
 
-* **LEXICON C_POOVIJC** 
+* **LEXICON C_POOVIJC** stem: puáhhá
 
 * **LEXICON 3POOVIJ** 
 
@@ -776,7 +778,7 @@ this is for loanwords without stem change
 
     - *LEXICON X_RASTAGAS_SG* sg cases 
 
-* **LEXICON 3OPPUS** 
+* **LEXICON 3OPPUS** stem: oppu 
 
 * **LEXICON 3ALMAS** 
 
@@ -814,7 +816,7 @@ this is for loanwords without stem change
 
 * **LEXICON GUIN** is here to give -guin and the Use/NG -gijn. 
 
-# Derivations 
+# Derivation lexica 
 
 TODO: Move derivation lexica here 
 
@@ -872,11 +874,27 @@ TODO: Move derivation lexica here
 
 3LITTER --> 4C_RASTAGAS
 
+    - *LEXICON 3EEMEED_SG_DIM*  the sg ones 
+
+    - *LEXICON 3EEMEED_PL_DIM*  the pl ones 
+
+    - *LEXICON 3EEMEED_SG_DIM_CASE* sg cases 
+
+    - *LEXICON 3EEMEED_PL_DIM_CASE* pl cases 
+
 ### 4-syllabic
+
+#### -uv: -uvâš, -uvvii
 
 * ''LEXICON 4JOTOLAH_SG_DIM'' stem kápul + uv
 
 * ''LEXICON 4JOTOLAH_PL_DIM'' stem kápul + uv
+
+#### -âss: -âsâš, -âssii
+
+* ''LEXICON 4KUNAGAS_SG_DIM'' stem kápul + uv
+
+* ''LEXICON 4KUNAGAS_PL_DIM'' stem kápul + uv
 
 ### Vowel-final loanwords
 
