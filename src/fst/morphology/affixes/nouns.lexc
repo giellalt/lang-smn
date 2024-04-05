@@ -57,7 +57,7 @@ LEXICON nounstems !!≈ **@CODE@** contains words that should be classified, for
  
  
  
-!! ## Even-syllable stem lexica 
+!! ## Two-syllable (even) stem lexica 
  
 !! ### The 2ALGA lexicon family 
 !! This is the basic even-syllable lexicon. 
@@ -1936,8 +1936,8 @@ LEXICON X_h_PL_notILL !!≈ * **@CODE@**
  
  
  
-!! ## Four-syllable stems 
-!    =================== 
+!! ## Four-syllable (even) stem lexica
+!    =================================
  
  
 !! ### 4KUNAGAS lexicon family 
@@ -2112,7 +2112,7 @@ LEXICON X_MANUTTEP_PL   !!≈ * **@CODE@**
  
 !! ### 4PUHELIN lexicon family 
  
-LEXICON 4PUHELIN   !!≈ * **@CODE@**  Only a few words in this category 
+LEXICON 4PUHELIN   !!≈ * **@CODE@**  stem: puhelim
 +N+Sg+Nom:^FCDn K ;          ! puhelin 
 +N+Cmp/SgNom:^FCDn%> Rhash ; 
 +N+Cmp/SgGen:^FCDn%> Rhash ; 
@@ -2145,7 +2145,8 @@ LEXICON 4PUHELIN   !!≈ * **@CODE@**  Only a few words in this category
 +N+Pl+Ill:%>ijd CPXsuff ;  ! 
 +N+Pl+Loc:%>ijn CPXsuff ;  ! 
 +N+Pl+Com:%>ijd CPXsuffCOM ;  ! 
- 
++N: 4JOTOLAH_SG_DIM ;
++N: 4JOTOLAH_PL_DIM ;
  
 !! ### 2KOLLIISTALLAM lexicon family 
  
@@ -2179,7 +2180,213 @@ LEXICON 2KOLLIISTALLAM  !!≈ * **@CODE@**
 +N+Pl+Loc:%>mijn CPXsuff ;  ! 
 +N+Pl+Com:%>mijd CPXsuffCOM ;  ! 
 +N+Ess:%>lâmn CPXsuff ;  ! 
+
+
  
+ 
+!LEXICON 4COHASAS  !!≈ * ''@CODE@'' 
+!+N: LAS_COMMON ; 
+!+N: LAS_SUF ; 
+ 
+LEXICON 4JOTOLAH  !!≈ * **@CODE@**  splitting in sg pl 
+ 4JOTOLAH_SG ; 
+ 4JOTOLAH_PL ; 
+ 
+LEXICON 4JOTOLAH_SG 
++N+Sg+Nom:âh K ; 
+JOHTOLAH_OBL ; 
++N+Cmp/SgNom:âh Rhash ; 
++N+Cmp/SgGen:uv Rhash ; ! XXX 
++N+Cmp/PlGen:uvâ%>i Rhash ; ! XXX 
++N:âh Nom_DER ; 
++N:uv 4JOTOLAH_SG_DIM ; 
+ 
+LEXICON JOHTOLAH_OBL    !!≈ * **@CODE@** common for N and A 
++N+Sg+Gen:uv K ; 
++N+Sg+Acc:uv K ; 
++N+Sg+Ill:âh%>ân K ; 
++N+Sg+Loc:uvv%>âst K ; 
++N+Sg+Loc+Use/NG:uv%>âst K ; ! 
++N+Sg+Com:uvv%>áin K ; 
++N+Sg+Com+Use/NG:uv%>áin K ; 
++N+Sg+Abe:uv%>ttáá K ; 
++N+Ess:âhhâ%>n K ; 
++N+Par:âhhâ%>d K ; 
++N+Sg+Nom:%>uvá VPXsuff12nom ;  ! px forms rástágáám 
++N+Sg+Gen:%>uvá VPXsuff12 ;     ! rástágáád 
++N+Sg+Acc:%>uvá VPXsuff12 ;     ! rástágáád 
++N+Sg+Nom:%>uvá VPXsuff3 ;      ! rástágáás 
++N+Sg+Acc:uvâ VPXsuff3 ; 
++N+Sg+Gen:uvâ VPXsuff3 ; 
++N+Sg+Ill:%>uvás CPXsuff ;      ! rástágáásân 
++N+Sg+Loc:%>uvást CPXsuff ;     ! rástágáástân 
++N+Sg+Com:%>uváin CPXsuff ;     !  rástágáinân 
++N+Ess:%>uvná VPXsuff12 ; 
+ 
+LEXICON 4JOTOLAH_PL  !!≈ * **@CODE@** 
++N+Pl+Nom:uva%>h K ; 
++N+Pl+Gen:uvâ%>i K ; 
++N+Pl+Acc:uvâ%>id K ; 
++N+Pl+Ill:uvvá%>id K ; 
++N+Pl+Loc:uvâ%>in K ; 
++N+Pl+Com:uvâ%>i GUIN ; 
++N+Pl+Abe:uvâ%>ittáá K ; 
++N+Pl+Gen:%>uvid CPXsuff ;  ! XXX check 
++N+Pl+Acc:%>uvid CPXsuff ;  ! 
++N+Pl+Ill:%>uvid CPXsuff ;  ! 
++N+Pl+Loc:%>uvin CPXsuff ;  ! 
++N+Pl+Com:%>uvid CPXsuffCOM ;  ! 
++N:uv 4JOTOLAH_PL_DIM ; 
+ 
+LEXICON 4KAPULUH  !!≈ * **@CODE@** stem: kápul
++N+Sg+Nom:uh K ; 
++N+Sg+Nom+Use/NG:oh K ; 
++N+Sg+Nom+Use/NG:âh K ; 
++N+Sg+Loc:uvvâst K ; 
++N+Sg+Com:uváin K ; 
++N+Ess:uhhân K ; 
++N+Ess+Use/NG:ohhân K ; 
++N+Par:uhhâd K ; 
++N+Par+Use/NG:ohhâd K ; 
++N+Cmp/SgNom:uh Rhash ; 
++N+Cmp/SgGen:uv Rhash ; ! XXX 
++N+Cmp/PlGen:uvâ%>i Rhash ; ! XXX 
++N:âh Nom_DER ;
++N:uv 4JOTOLAH_SG_DIM ;
+JOHTOLAH_OBL ; 
+ 4JOTOLAH_PL ; 
+ 
+ 
+LEXICON 4KUBALOH  !!≈ * **@CODE@** stem: kubál
++N+Sg+Nom:oh K ; 
++N+Cmp/SgNom:oh Rhash ; 
++N+Cmp/SgGen:uv Rhash ; ! XXX 
++N+Cmp/PlGen:uvâ%>i Rhash ; ! XXX 
++N:âh Nom_DER ;
++N:uv 4JOTOLAH_SG_DIM ; 
+JOHTOLAH_OBL ;
+ 4JOTOLAH_PL ; 
+ 
+ 
+LEXICON 4LAS_NOUN !!≈ * **@CODE@** stem = aanaarl 
++N: LAS_COMMON ; 
++N: LAS_PX ; 
++N+Cmp/SgNom:âš Rhash ; 
++N+Cmp/SgGen:âš Rhash ; 
++N+Cmp/PlGen:ij Rhash ; 
+ 
+LEXICON LAS_PX 
++Sg+Nom:^FCD%>â VPXsuff12nom ; ! aanaarlâžžâm     
++Sg+Acc:^FCD%>â VPXsuff12 ;    ! 
++Sg+Acc:^FCD%>â VPXsuff3 ;     !   
++Sg+Gen:^FCD%>â VPXsuff12 ;    !    
++Sg+Gen:^FCD%>â VPXsuff3 ;     ! 
++Sg+Ill: CPXsuff ;             ! 
++Sg+Loc:^FCD%>âst CPXsuff ;    !      
++Sg+Com:^FCD%>âin CPXsuff ;    ! 
++Ess:^FCD%>n CPXsuff ;         ! 
++Pl+Gen:^FCD%>âid CPXsuff ;    ! 
++Pl+Acc:^FCD%>âid CPXsuff ;    ! 
++Pl+Ill:^FCD%>âid CPXsuff ;    ! 
++Pl+Loc:^FCD%>âin CPXsuff ;    ! 
++Pl+Com:^FCD%>âid CPXsuffCOM ; ! 
+ 
+ 
+LEXICON LAS_COMMON !!≈ * **@CODE@** 
+X_LAS_COMMON_SG ; 
+X_LAS_COMMON_PL ; 
+ 
+ 
+LEXICON X_LAS_COMMON_SG !!≈ * **@CODE@** normâl lâš:-lii-nouns and adjs 
++Sg+Nom:âš K ; 
++Sg+Nom+Err/Orth:aš K ; 
++Sg+Gen:ii K ; 
++Sg+Acc:ii K ; 
++Sg+Ill:âžâ%>n K ; 
++Sg+Loc:ii%>st K ; 
++Sg+Com:i%>in K ; 
++Sg+Abe:ii%>ttáá K ; 
++Ess:âžžâ%>n K ; 
++Par:âžžâ%>d K ; 
+ 
+ 
+LEXICON X_LAS_COMMON_PL !!≈ * **@CODE@** NOrmal plural and plural tantum cases, olympialiih 
++Pl+Nom:ii%>h K ; 
++Pl+Gen:ij K ; 
++Pl+Acc:i%>id K ; 
++Pl+Ill+Use/NG:i%>id K ; 
++Pl+Ill:áid K ; 
++Pl+Loc:i%>in K ; 
++Pl+Com:ij GUIN ; 
++Pl+Abe:ij%>ttáá K ; 
+ 
+ 
+LEXICON OLYMPIALIIH_PL !!≈ * **@CODE@** 
++N: X_LAS_COMMON_PL ; 
++N+Cmp/SgNom:âš Rhash ; 
++N+Cmp/PlGen:ij Rhash ; 
+ 
+ 
+ 
+LEXICON LAS_SUF  !!≈ * **@CODE@** 
++Sg+Gen:áá K ; 
++Sg+Acc:áá K ; 
++Sg+Ill:%>âžân K ; 
++Sg+Loc:áá%>st K ; 
++Sg+Com:á%>in K ; 
++Sg+Abe:áá%>ttáá K ; 
++Ess:âžž%>ân K ; 
++Par:âžž%>âd K ; 
++Pl+Nom:áá%>h K ; 
++Pl+Gen:á%>i K ; 
++Pl+Acc:á%>id K ; 
++Pl+Ill:á%>id K ; 
++Pl+Loc:á%>in K ; 
++Pl+Com:á%>i GUIN ; 
++Pl+Abe:á%>ittáá K ; 
+ 
+ 
+LEXICON MUS_NOUN   !!≈ * **@CODE@** type uáiváámus, aldemus 
++N+Sg+Nom:s K ; 
++N+Sg+Gen:u K ; 
++N+Sg+Acc:u K ; 
++N+Sg+Ill:%>in K ; 
++N+Sg+Loc:%>ust K ; 
++N+Sg+Com:%>in K ; 
++N+Sg+Abe:%>uttáá K ; 
++N+Ess:žž%>ân K ; 
++N+Par:žž%>âd K ; 
++N+Pl+Nom:%>uh K ; 
++N+Pl+Nom+Err/Orth:%>sah K ; ! 11 uáiváámusah in corp 
++N+Pl+Gen:%>i K ; 
++N+Pl+Acc:%>id K ; 
++N+Pl+Ill:%>id K ; 
++N+Pl+Loc:%>in K ; 
++N+Pl+Com:%>i GUIN ; 
++N+Pl+Abe:%>ittáá K ; 
++N+Cmp/SgNom:s Rhash ; 
++N+Cmp/SgGen:u Rhash ; 
++N+Cmp/PlGen:%>i Rhash ; 
+ 
++N+Sg+Nom:%>á VPXsuff12nom ;  ! XXX check! 
++N+Sg+Gen:%>á VPXsuff12 ;     ! 
++N+Sg+Acc:%>á VPXsuff12 ;     ! 
++N+Sg+Nom:%>á VPXsuff3 ;      ! 
++N+Sg+Gen:%>á VPXsuff3 ;      ! 
++N+Sg+Acc:%>á VPXsuff3 ;      ! 
++N+Sg+Ill:%>ás CPXsuff ;      ! 
++N+Sg+Loc:%>ást CPXsuff ;     ! 
++N+Sg+Com:%>áin CPXsuff ;     ! 
++N+Ess:%>ná VPXsuff12 ; 
++N+Pl+Gen:%>id CPXsuff ;  ! 
++N+Pl+Acc:%>id CPXsuff ;  ! 
++N+Pl+Ill:%>id CPXsuff ;  ! 
++N+Pl+Loc:%>in CPXsuff ;  ! 
++N+Pl+Com:%>id CPXsuffCOM ;  ! 
+ 
+
+
+
  
 !! ## Odd-syllable stems 
 !    =================== 
@@ -3084,7 +3291,10 @@ LEXICON 3POOVSA_PL !!≈ * **@CODE@**  plurals for 3POOVSA
 +N+Pl+Com:%>ijd CPXsuffCOM ; ! 
 +N+Pl+Loc:%>ijn CPXsuff ;    ! 
 +N+Der1+Der/Dimin+N:á X_SVSLENh_PL ;
- 
+
+
+
+
 !! ## Contracted stems 
 !    =================== 
  
@@ -3970,210 +4180,6 @@ LEXICON X_SARVES_PL !!≈ * **@CODE@**
  
  
  
-!! ### 4-syllabic 
- 
- 
-!LEXICON 4COHASAS  !!≈ * ''@CODE@'' 
-!+N: LAS_COMMON ; 
-!+N: LAS_SUF ; 
- 
-LEXICON 4JOTOLAH  !!≈ * **@CODE@**  splitting in sg pl 
- 4JOTOLAH_SG ; 
- 4JOTOLAH_PL ; 
- 
-LEXICON 4JOTOLAH_SG 
-+N+Sg+Nom:âh K ; 
-JOHTOLAH_OBL ; 
-+N+Cmp/SgNom:âh Rhash ; 
-+N+Cmp/SgGen:uv Rhash ; ! XXX 
-+N+Cmp/PlGen:uvâ%>i Rhash ; ! XXX 
-+N:âh Nom_DER ; 
- 
- 
-LEXICON JOHTOLAH_OBL    !!≈ * **@CODE@** common for N and A 
-+N+Sg+Gen:uv K ; 
-+N+Sg+Acc:uv K ; 
-+N+Sg+Ill:âh%>ân K ; 
-+N+Sg+Loc:uvv%>âst K ; 
-+N+Sg+Loc+Use/NG:uv%>âst K ; ! 
-+N+Sg+Com:uvv%>áin K ; 
-+N+Sg+Com+Use/NG:uv%>áin K ; 
-+N+Sg+Abe:uv%>ttáá K ; 
-+N+Ess:âhhâ%>n K ; 
-+N+Par:âhhâ%>d K ; 
-+N+Sg+Nom:%>uvá VPXsuff12nom ;  ! px forms rástágáám 
-+N+Sg+Gen:%>uvá VPXsuff12 ;     ! rástágáád 
-+N+Sg+Acc:%>uvá VPXsuff12 ;     ! rástágáád 
-+N+Sg+Nom:%>uvá VPXsuff3 ;      ! rástágáás 
-+N+Sg+Acc:uvâ VPXsuff3 ; 
-+N+Sg+Gen:uvâ VPXsuff3 ; 
-+N+Sg+Ill:%>uvás CPXsuff ;      ! rástágáásân 
-+N+Sg+Loc:%>uvást CPXsuff ;     ! rástágáástân 
-+N+Sg+Com:%>uváin CPXsuff ;     !  rástágáinân 
-+N+Ess:%>uvná VPXsuff12 ; 
- 
-LEXICON 4JOTOLAH_PL  !!≈ * **@CODE@** 
-+N+Pl+Nom:uva%>h K ; 
-+N+Pl+Gen:uvâ%>i K ; 
-+N+Pl+Acc:uvâ%>id K ; 
-+N+Pl+Ill:uvvá%>id K ; 
-+N+Pl+Loc:uvâ%>in K ; 
-+N+Pl+Com:uvâ%>i GUIN ; 
-+N+Pl+Abe:uvâ%>ittáá K ; 
-+N+Pl+Gen:%>uvid CPXsuff ;  ! XXX check 
-+N+Pl+Acc:%>uvid CPXsuff ;  ! 
-+N+Pl+Ill:%>uvid CPXsuff ;  ! 
-+N+Pl+Loc:%>uvin CPXsuff ;  ! 
-+N+Pl+Com:%>uvid CPXsuffCOM ;  ! 
- 
- 
-LEXICON 4KAPULUH  !!≈ * **@CODE@** 
-+N+Sg+Nom:uh K ; 
-+N+Sg+Nom+Use/NG:oh K ; 
-+N+Sg+Nom+Use/NG:âh K ; 
-+N+Sg+Loc:uvvâst K ; 
-+N+Sg+Com:uváin K ; 
-+N+Ess:uhhân K ; 
-+N+Ess+Use/NG:ohhân K ; 
-+N+Par:uhhâd K ; 
-+N+Par+Use/NG:ohhâd K ; 
-+N+Cmp/SgNom:uh Rhash ; 
-+N+Cmp/SgGen:uv Rhash ; ! XXX 
-+N+Cmp/PlGen:uvâ%>i Rhash ; ! XXX 
-+N:âh Nom_DER ; 
-JOHTOLAH_OBL ; 
- 4JOTOLAH_PL ; 
- 
- 
-LEXICON 4KUBALOH  !!≈ * **@CODE@** 
-+N+Sg+Nom:oh K ; 
-+N+Cmp/SgNom:oh Rhash ; 
-+N+Cmp/SgGen:uv Rhash ; ! XXX 
-+N+Cmp/PlGen:uvâ%>i Rhash ; ! XXX 
-+N:âh Nom_DER ; 
-JOHTOLAH_OBL ; 
- 4JOTOLAH_PL ; 
- 
- 
-LEXICON 4LAS_NOUN !!≈ * **@CODE@** stem = aanaarl 
-+N: LAS_COMMON ; 
-+N: LAS_PX ; 
-+N+Cmp/SgNom:âš Rhash ; 
-+N+Cmp/SgGen:âš Rhash ; 
-+N+Cmp/PlGen:ij Rhash ; 
- 
-LEXICON LAS_PX 
-+Sg+Nom:^FCD%>â VPXsuff12nom ; ! aanaarlâžžâm     
-+Sg+Acc:^FCD%>â VPXsuff12 ;    ! 
-+Sg+Acc:^FCD%>â VPXsuff3 ;     !   
-+Sg+Gen:^FCD%>â VPXsuff12 ;    !    
-+Sg+Gen:^FCD%>â VPXsuff3 ;     ! 
-+Sg+Ill: CPXsuff ;             ! 
-+Sg+Loc:^FCD%>âst CPXsuff ;    !      
-+Sg+Com:^FCD%>âin CPXsuff ;    ! 
-+Ess:^FCD%>n CPXsuff ;         ! 
-+Pl+Gen:^FCD%>âid CPXsuff ;    ! 
-+Pl+Acc:^FCD%>âid CPXsuff ;    ! 
-+Pl+Ill:^FCD%>âid CPXsuff ;    ! 
-+Pl+Loc:^FCD%>âin CPXsuff ;    ! 
-+Pl+Com:^FCD%>âid CPXsuffCOM ; ! 
- 
- 
-LEXICON LAS_COMMON !!≈ * **@CODE@** 
-X_LAS_COMMON_SG ; 
-X_LAS_COMMON_PL ; 
- 
- 
-LEXICON X_LAS_COMMON_SG !!≈ * **@CODE@** normâl lâš:-lii-nouns and adjs 
-+Sg+Nom:âš K ; 
-+Sg+Nom+Err/Orth:aš K ; 
-+Sg+Gen:ii K ; 
-+Sg+Acc:ii K ; 
-+Sg+Ill:âžâ%>n K ; 
-+Sg+Loc:ii%>st K ; 
-+Sg+Com:i%>in K ; 
-+Sg+Abe:ii%>ttáá K ; 
-+Ess:âžžâ%>n K ; 
-+Par:âžžâ%>d K ; 
- 
- 
-LEXICON X_LAS_COMMON_PL !!≈ * **@CODE@** NOrmal plural and plural tantum cases, olympialiih 
-+Pl+Nom:ii%>h K ; 
-+Pl+Gen:ij K ; 
-+Pl+Acc:i%>id K ; 
-+Pl+Ill+Use/NG:i%>id K ; 
-+Pl+Ill:áid K ; 
-+Pl+Loc:i%>in K ; 
-+Pl+Com:ij GUIN ; 
-+Pl+Abe:ij%>ttáá K ; 
- 
- 
-LEXICON OLYMPIALIIH_PL !!≈ * **@CODE@** 
-+N: X_LAS_COMMON_PL ; 
-+N+Cmp/SgNom:âš Rhash ; 
-+N+Cmp/PlGen:ij Rhash ; 
- 
- 
- 
-LEXICON LAS_SUF  !!≈ * **@CODE@** 
-+Sg+Gen:áá K ; 
-+Sg+Acc:áá K ; 
-+Sg+Ill:%>âžân K ; 
-+Sg+Loc:áá%>st K ; 
-+Sg+Com:á%>in K ; 
-+Sg+Abe:áá%>ttáá K ; 
-+Ess:âžž%>ân K ; 
-+Par:âžž%>âd K ; 
-+Pl+Nom:áá%>h K ; 
-+Pl+Gen:á%>i K ; 
-+Pl+Acc:á%>id K ; 
-+Pl+Ill:á%>id K ; 
-+Pl+Loc:á%>in K ; 
-+Pl+Com:á%>i GUIN ; 
-+Pl+Abe:á%>ittáá K ; 
- 
- 
-LEXICON MUS_NOUN   !!≈ * **@CODE@** type uáiváámus, aldemus 
-+N+Sg+Nom:s K ; 
-+N+Sg+Gen:u K ; 
-+N+Sg+Acc:u K ; 
-+N+Sg+Ill:%>in K ; 
-+N+Sg+Loc:%>ust K ; 
-+N+Sg+Com:%>in K ; 
-+N+Sg+Abe:%>uttáá K ; 
-+N+Ess:žž%>ân K ; 
-+N+Par:žž%>âd K ; 
-+N+Pl+Nom:%>uh K ; 
-+N+Pl+Nom+Err/Orth:%>sah K ; ! 11 uáiváámusah in corp 
-+N+Pl+Gen:%>i K ; 
-+N+Pl+Acc:%>id K ; 
-+N+Pl+Ill:%>id K ; 
-+N+Pl+Loc:%>in K ; 
-+N+Pl+Com:%>i GUIN ; 
-+N+Pl+Abe:%>ittáá K ; 
-+N+Cmp/SgNom:s Rhash ; 
-+N+Cmp/SgGen:u Rhash ; 
-+N+Cmp/PlGen:%>i Rhash ; 
- 
-+N+Sg+Nom:%>á VPXsuff12nom ;  ! XXX check! 
-+N+Sg+Gen:%>á VPXsuff12 ;     ! 
-+N+Sg+Acc:%>á VPXsuff12 ;     ! 
-+N+Sg+Nom:%>á VPXsuff3 ;      ! 
-+N+Sg+Gen:%>á VPXsuff3 ;      ! 
-+N+Sg+Acc:%>á VPXsuff3 ;      ! 
-+N+Sg+Ill:%>ás CPXsuff ;      ! 
-+N+Sg+Loc:%>ást CPXsuff ;     ! 
-+N+Sg+Com:%>áin CPXsuff ;     ! 
-+N+Ess:%>ná VPXsuff12 ; 
-+N+Pl+Gen:%>id CPXsuff ;  ! 
-+N+Pl+Acc:%>id CPXsuff ;  ! 
-+N+Pl+Ill:%>id CPXsuff ;  ! 
-+N+Pl+Loc:%>in CPXsuff ;  ! 
-+N+Pl+Com:%>id CPXsuffCOM ;  ! 
- 
- 
-!! ## Contracted stems 
-!    ================ 
  
  
 LEXICON C_EIJE  !!≈ * **@CODE@** 
@@ -4289,12 +4295,12 @@ LEXICON GUIN  !!≈ * **@CODE@** is here to give -guin and the Use/NG -gijn.
  
  
  
-!! ## Derivations 
+!! # Derivations 
 ! ================================= 
  
 !! TODO: Move derivation lexica here 
 
-!! ### Diminutive derivations _DIM
+!! ## Diminutive derivations _DIM
 ! LEXICON 2_DIM !!≈ * ''@CODE@'' kissá + Der/Dim + this lexicon 
 ! +N+Sg+Nom:^RLEN%>š K ;                         ! 
 ! +N+Sg+Gen:^SV^SLEN K ;                         ! 
@@ -4680,12 +4686,27 @@ LEXICON 2AAIGA_DIM !!≈ * **@CODE@**
 
 !! ### 4-syllabic
 
-!! tbw.
+LEXICON 4JOTOLAH_SG_DIM  !!≈ * ''@CODE@'' stem kápul + uv
++N+Sg+Nom:%>âš K ; 
++N+Sg+Gen:%>vii K ; 
++N+Sg+Acc:%>vii K ; 
++N+Sg+Ill:%>âžân K ; 
++N+Sg+Loc:%>viist K ; 
++N+Sg+Com:%>vijn K ; 
++N+Sg+Abe:%>viittáá K ; 
++N+Ess:%>âžin K ; 
++N+Par:%>âžid K ; 
 
 
-!! ### 4-syllabic contracted
+LEXICON 4JOTOLAH_PL_DIM  !!≈ * ''@CODE@'' stem kápul + uv
++N+Pl+Nom:%>viih K ; 
++N+Pl+Gen:%>vij K ; 
++N+Pl+Acc:%>vijd K ; 
++N+Pl+Ill:%>vijd K ; 
++N+Pl+Loc:%>vijn K ; 
++N+Pl+Com:%>vij GUIN ; 
++N+Pl+Abe:%>vijttáá K ; 
 
-!! tbw.
 
  
  
@@ -4693,7 +4714,7 @@ LEXICON 2AAIGA_DIM !!≈ * **@CODE@**
 
 !! tbw.
 
-! To be deleted 
+! ..To be deleted? 
  
 !LEXICON 2SOLLA_DIM !!≈ * ''@CODE@'' 
 !+N+Sg+Nom:^WG^RLEN%>š K ; 
