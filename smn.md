@@ -7957,7 +7957,6 @@ táálhudem koomerdem
 2st stems
 kaavpug:kavpugân 
 táálhudem koomerdem
-
 1. essee : esseid, suklaa : suklaid                                                                                    
 
 *Tests:*
