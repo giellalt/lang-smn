@@ -7,6 +7,7 @@
 -   [Test configuration](TestConfiguration.html)
 -   [Compare continuation lexicons](generatewordforms.html)
 -   [Yaml-tiedostojen tarkistaminen](TarkistaaYaml-tiedostot.html)
+-   [Test diary](test-diary.md)
 
 ### Development and use
 -   [Analysaattorin tehtävälista](AnalysaattorinTehtavalista.html)
