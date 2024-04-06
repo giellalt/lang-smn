@@ -558,7 +558,7 @@ this is for loanwords without stem change
 
 * **LEXICON X_LITTER_SG_not_Par**  for numerals 
 
-* **LEXICON 3PIEHAIN** to v1 3PIEHAINonly and v2 3PIEHANJ 
+* **LEXICON 3PIEHAIN** to v1 3PIEHAIN only and v2 3PIEHANJ 
 
 * **LEXICON 3JAAVVIL** 
 
