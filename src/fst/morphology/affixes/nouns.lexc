@@ -1038,8 +1038,8 @@ LEXICON 2CAACI !!≈ * **@CODE@** čääc^RCi ==> čä^RVc^RCi
 ! 2VYEHI ; ! We now test conflating 2CAACI and 2VYEHI (since Ess and Par are the same after all). 
 ! we now try dividing them.
 
-+N+Ess:^RLEN^CLEN%>n K ;               ! čääccin 
-+N+Par:^RLEN^CLEN%>d K ;               ! čääccid 
++N+Ess:^CLEN^RLEN%>n K ;               ! čääccin 
++N+Par:^CLEN^RLEN%>d K ;               ! čääccid 
 +N+Ess+Err/Orth:^RLEN%>n K ;           ! čääcin, eečin +Err/Orth 
 +N+Par+Err/Orth:^RLEN%>d K ;           ! +Err/Orth 
 2CAACI_SG ; 
@@ -1054,13 +1054,13 @@ LEXICON 2CAACI_SG !!≈ * **@CODE@**
 +N+Cmp/SgGen+Err/Orth:^WG%> Rhash ; !čäsilodeh 
 +N+Cmp/SgGen:^WG^RLEN%> Rhash ; ! 
 +N+Cmp/SgGen:^WG^RLEN%>i Rhash ; ! 
-+N+Sg+Nom:^EA^RLEN^CLEN VPXsuff12nom ;          ! iäččád iäččám 
-+N+Sg+Nom+Err/Orth:^EX^RLEN^CLEN VPXsuff12nom ; ! iäččâd iäččâm 
++N+Sg+Nom:^EA^CLEN^RLEN VPXsuff12nom ;          ! iäččád iäččám 
++N+Sg+Nom+Err/Orth:^EX^CLEN^RLEN VPXsuff12nom ; ! iäččâd iäččâm 
 +N+Sg+Nom+Err/Orth:^CLEN VPXsuff3 ;   ! eeččis eeččis corp: eččis 
-+N+Sg+Nom:^RLEN^CLEN VPXsuff3 ;           ! eeččis eeččis corp: eččis 
-+N+Sg+Gen:^EA^RLEN^CLEN VPXsuff12 ;       ! iäččán iäččád 
++N+Sg+Nom:^CLEN^RLEN VPXsuff3 ;           ! eeččis eeččis corp: eččis 
++N+Sg+Gen:^EA^CLEN^RLEN VPXsuff12 ;       ! iäččán iäččád 
 +N+Sg+Gen:^WG^RLEN VPXsuff3 ;             ! eejis 
-+N+Sg+Acc:^EA^RLEN^CLEN VPXsuff12 ;       ! iäččán 
++N+Sg+Acc:^EA^CLEN^RLEN VPXsuff12 ;       ! iäččán 
 +N+Sg+Acc:^WG^RLEN VPXsuff3 ;             ! eejis 
 +N+Sg+Ill:^EA^CLEN%>s CPXsuff ; ! iäččásis iäččásâd iäččásân čáccásân 
 +N+Sg+Loc:^WG%>st CPXsuff ;     ! sajestis ejistân ejistâd ejistis 
@@ -1090,7 +1090,13 @@ LEXICON X_CAACI_SG !!≈ * **@CODE@** common Sg case forms
  
 LEXICON X_CAACI_PL!!≈ * **@CODE@** 
 +Pl+Ill:^WG^CLEN%>id K ; ! čassijd  
- :^RLEN X_WG_RVSH_PL_notILL ; 
++Pl+Nom:^WG^RLEN%>h K ;                      ! kievah 
++Pl+Acc:^WG^RLEN%>id K ;                     ! kievâid 
++Pl+Gen+Use/NG:^WG^RVSH%>i K ;               ! kievâi, časij 
++Pl+Gen:^WG^RLEN%>i K ;                      ! kievâi, čaasij 
++Pl+Loc:^WG^RLEN%>in K ;                     ! kievâin 
++Pl+Com:^WG^RVSH%>i GUIN ;                   ! kievâiguin 
++Pl+Abe:^WG^RVSH%>ittáá K ;                  ! kievâittáá 
 
 
 ! ======= vyehi
@@ -1553,7 +1559,7 @@ LEXICON 2LAAVU_SG !!≈ * **@CODE@**
 +N+Cmp/PlGen:^WG^RLEN%>i Rhash ; ! 
 +N+Cmp/PlGen:^WG^SVLOW%>i Rhash ; 
  
-+N+Sg+Nom:^RLEN^CLEN VPXsuff12nom ;  ! lá^RVv^RCu 
++N+Sg+Nom:^CLEN^RLEN VPXsuff12nom ;  ! lá^RVv^RCu 
 +N+Sg+Gen:^WG^RLEN VPXsuff12 ;       ! mááttun 
 +N+Sg+Gen:^WG^RLEN VPXsuff3 ;        ! mááđus láávus 
 +N+Sg+Acc:^WG^RLEN VPXsuff12 ;       ! mááttun 
@@ -1581,8 +1587,8 @@ LEXICON X_LAAVU_SG  !!≈ * **@CODE@**
 +Sg+Com+Use/NG:^WG^RLEN^SVLOW%>oin K ; ! láávooin 
 +Sg+Abe:^WG%>ttáá K ;                  ! lávuttáá 
 +Sg+Abe+Use/NG:^WG^SVLOW%>ttáá K ;     ! vuárottáá 
-+Par:^RLEN^CLEN%>d K ;                 ! láávvud 
-+Ess:^RLEN^CLEN%>n K ;                 ! láávvun 
++Par:^CLEN^RLEN%>d K ;                 ! láávvud 
++Ess:^CLEN^RLEN%>n K ;                 ! láávvun 
  
  
 LEXICON 2LAAVU_PL !!≈ * **@CODE@** 
@@ -2431,9 +2437,9 @@ LEXICON 3KEPIDEM  !!≈ * **@CODE@**
 +N+Sg+Abe:em%>ttáá K ;                    ! kepidemttáá 
 +N+Ess:m^CLEN^RLEN^SLEN%>in K ;           ! keeppidmin   
 +N+Par:m^CLEN^RLEN^SLEN%>id K ;           ! keeppidmid   
-+N+Sg+Nom:^RLEN^CLEN%>mâ VPXsuff12nom ;  ! 
-+N+Sg+Gen:^RLEN^CLEN%>mâ VPXsuff12 ;  ! 
-+N+Sg+Acc:^RLEN^CLEN%>mâ VPXsuff12 ;  ! 
++N+Sg+Nom:^CLEN^RLEN%>mâ VPXsuff12nom ;  ! 
++N+Sg+Gen:^CLEN^RLEN%>mâ VPXsuff12 ;  ! 
++N+Sg+Acc:^CLEN^RLEN%>mâ VPXsuff12 ;  ! 
 +N+Sg+Nom:%>mi VPXsuff3 ;  ! 
 +N+Sg+Gen:%>mi VPXsuff3 ;  ! 
 +N+Sg+Acc:%>mi VPXsuff3 ;  ! 
@@ -2449,11 +2455,11 @@ LEXICON 3KEPIDEM_PL  !!≈ * **@CODE@**
 +N:m^CLEN^RLEN^SLEN X_eh_PL ; 
 +N:em%> Nom_DER ; 
 +N:em%> Gen_DER ; 
-+N+Pl+Gen:^RLEN^CLEN%>mijd CPXsuff ;  ! 
-+N+Pl+Acc:^RLEN^CLEN%>mijd CPXsuff ;  ! 
-+N+Pl+Ill:^RLEN^CLEN%>mijd CPXsuff ;  ! 
-+N+Pl+Loc:^RLEN^CLEN%>mijn CPXsuff ;  ! 
-+N+Pl+Com:^RLEN^CLEN%>mijd CPXsuffCOM ;  ! 
++N+Pl+Gen:^CLEN^RLEN%>mijd CPXsuff ;  ! 
++N+Pl+Acc:^CLEN^RLEN%>mijd CPXsuff ;  ! 
++N+Pl+Ill:^CLEN^RLEN%>mijd CPXsuff ;  ! 
++N+Pl+Loc:^CLEN^RLEN%>mijn CPXsuff ;  ! 
++N+Pl+Com:^CLEN^RLEN%>mijd CPXsuffCOM ;  ! 
  
  
 LEXICON 3POTTAAK  !!≈ * **@CODE@** 
