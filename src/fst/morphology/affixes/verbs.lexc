@@ -434,9 +434,12 @@ LEXICON EVEN_IND_PRT_VIEZZAD
 +Sg1:i%>m K ;          ! viežžim
 +Sg2:i%>h K ;          ! viežžih
 +Sg3:â^WG%>i K ;       ! viežâi
-+Du1:á^WG^CLEN%>im K ; ! viežáim
-+Du2:á^WG^CLEN%>id K ; ! viežáid
-+Du3:á^WG^CLEN%>in K ; ! viežáin
++Du1:á^WG%>im K ; ! viežáim
++Du2:á^WG%>id K ; ! viežáid
++Du3:á^WG%>in K ; ! viežáin
+!+Du1:á^WG^CLEN%>im K ; ! viežáim
+!+Du2:á^WG^CLEN%>id K ; ! viežáid
+!+Du3:á^WG^CLEN%>in K ; ! viežáin
 +Pl1:â^WG%>im K ;	   ! viežâim
 +Pl2:â^WG%>id K ;      ! viežâid
 +Pl3:i%>i3 K ;	       ! viežžii
@@ -4252,7 +4255,7 @@ LEXICON ODD_VINFINITES_ADELID !
 +Ind+Prt+ConNeg:%>âm K ;
 +Cond+Prs+ConNeg:%>iččii K ;
 +Pot+Prs+ConNeg:%>ižžii K ;
-+Imprt+ConNeg:^RLEN^CLEN K ; !cuáŋul should be cuáŋŋul
++Imprt+ConNeg:^CLEN^RLEN K ; !cuáŋul should be cuáŋŋul
 +VAbess:^CLEN VABESS ;
 +Actio+Nom:%>em NOMACT ;
 +Actio+Nom+Err/Orth:%>im NOMACT ;
@@ -4503,7 +4506,7 @@ LEXICON ODD_PRS_CONNEG_rlen    !
 
 !LEXICON ODD_PRS_CONNEG_wg    ! * **@CODE@**
 !+Ind+Prs+ConNeg:^WG^RLEN K ;             ! ceegât
-!+Ind+Prs+ConNeg+Use/NG:^WG^RLEN^CLEN K ; ! ceeggât
+!+Ind+Prs+ConNeg+Use/NG:^WG^CLEN^RLEN K ; ! ceeggât
 
 
 
@@ -4584,16 +4587,49 @@ LEXICON ODD_DU_ERRORTH  !
 LEXICON 3_DERIVED_LOW  ! lexicon to be determined
 +V+Ind+Prs+Sg3:^RLEN^SLEN    K ; ! no ^VHIGH
 +V+Ind+Prs+Du2:^RLEN^SLEN%>vettee K ;
++V+Ind+Prs+ConNeg:^RLEN^SLEN K ;
++V+VAbess:^RLEN^SLEN VABESS ;
++V+VAbess+Err/Orth:^RLEN^SLEN%>hinnáá K ;
++V+VAbess+Err/Orth:^RLEN^SLEN%>hennáá K ;
++V+Actio+Ill:^RLEN^SLEN%>mân K ;
++V+Actio+Ess:^RLEN^SLEN%>min K ;
++V+Actio+Loc:^RLEN^SLEN%>mist K ;
++V+Ger:^RLEN^SLEN%>dijn K ;
++V+Ger+PxSg1:^RLEN^SLEN%>dijnân K ;
++V+Ger+PxSg2:^RLEN^SLEN%>dijnâd K ;
++V+Ger+PxSg3:^RLEN^SLEN%>dijnis K ;
 3_DERIVED_REST ; ! the rest
 
 LEXICON 3_DERIVED  ! lexicon POHTED
 +V+Ind+Prs+Sg3:^VHIGH^RLEN^SLEN    K ; ! ^VHIGH
 +V+Ind+Prs+Du2:^RLEN^SLEN%>vettee K ;
++V+Ind+Prs+ConNeg:^RLEN^SLEN K ;
++V+VAbess:^RLEN^SLEN VABESS ;
++V+VAbess+Err/Orth:^RLEN^SLEN%>hinnáá K ;
++V+VAbess+Err/Orth:^RLEN^SLEN%>hennáá K ;
++V+Actio+Ill:^RLEN^SLEN%>mân K ;
++V+Actio+Ess:^RLEN^SLEN%>min K ;
++V+Actio+Loc:^RLEN^SLEN%>mist K ;
++V+Ger:^RLEN^SLEN%>dijn K ;
++V+Ger+PxSg1:^RLEN^SLEN%>dijnân K ;
++V+Ger+PxSg2:^RLEN^SLEN%>dijnâd K ;
++V+Ger+PxSg3:^RLEN^SLEN%>dijnis K ;
 3_DERIVED_REST ; ! the rest
 
 LEXICON 3_DERIVED_SLEN  ! lexicon kalveđ
 +V+Ind+Prs+Sg3:^SLEN    K ; ! ^VHIGH
 +V+Ind+Prs+Du2:^SLEN%>vettee K ;
++V+Ind+Prs+ConNeg:^SLEN K ;
++V+VAbess:^SLEN VABESS ;
++V+VAbess+Err/Orth:^SLEN%>hinnáá K ;
++V+VAbess+Err/Orth:^SLEN%>hennáá K ;
++V+Actio+Ill:^SLEN%>mân K ;
++V+Actio+Ess:^SLEN%>min K ;
++V+Actio+Loc:^SLEN%>mist K ;
++V+Ger:^SLEN%>dijn K ;
++V+Ger+PxSg1:^SLEN%>dijnân K ;
++V+Ger+PxSg2:^SLEN%>dijnâd K ;
++V+Ger+PxSg3:^SLEN%>dijnis K ;
 3_DERIVED_REST ; ! the rest
 
 
@@ -4662,25 +4698,14 @@ LEXICON 3_DERIVED_REST  ! lexicon
 +V+PrsPrc:%> IJJE_PRSPRC ;
 +V+PrfPrc:^RVSH%>âm K ;
 
-+V+Ind+Prs+ConNeg:^RLEN^SLEN K ;
 +V+Ind+Prt+ConNeg:^RVSH%>âm K ; !tojâdâm ^RVSH
 +V+Cond+Prs+ConNeg:%>iččii K ;
 +V+Pot+Prs+ConNeg:^RVSH%>ižžii K ; !tojâdižžii ^RVSH
 +V+Imprt+ConNeg: K ;
 
-+V+VAbess:^RLEN^SLEN VABESS ;
-+V+VAbess+Err/Orth:^RLEN^SLEN%>hinnáá K ;
-+V+VAbess+Err/Orth:^RLEN^SLEN%>hennáá K ;
 
 +V+Actio+Nom:^RVSH%>em NOMACT ;
-+V+Actio+Ill:^RLEN^SLEN%>mân K ;
-+V+Actio+Ess:^RLEN^SLEN%>min K ;
-+V+Actio+Loc:^RLEN^SLEN%>mist K ;
 +V+Actio+Com:^RLEN^SLEN%>máin K ;
-+V+Ger:^RLEN^SLEN%>dijn K ;
-+V+Ger+PxSg1:^RLEN^SLEN%>dijnân K ;
-+V+Ger+PxSg2:^RLEN^SLEN%>dijnâd K ;
-+V+Ger+PxSg3:^RLEN^SLEN%>dijnis K ;
 
 
 LEXICON 3_DERIVED_CLEN  ! lexicon
