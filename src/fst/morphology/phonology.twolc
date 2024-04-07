@@ -513,7 +513,13 @@ Cx:Cy <=> Vow: _ %^RC: (Vow:) :Vow+ Cns:* [Triggers: -  %^FCD:]* %^WG: %^CLEN: (
 
 "č:ij part 1"
 !! **RULE: @RULENAME@** =  
-č:i <=> Vow: _ %^RC:  WeakGrade %^CLEN: ; !!  eeč%^RCi:eijijn eeč%^RCi%^WG%^CLEN%^SVLOW%>in
+č:i <=> Vow: _ %^RC: i %^WG: %^CLEN: ; !!  eeč%^RCi:eijijn eeč%^RCi%^WG%^CLEN%^SVLOW%>in
+
+!!€ e^RVč^RCi^WG^CLEN>in 
+!!€ e0ij0i00>jn
+
+!!€ e^RVč^RCi^WG^CLEN>id
+!!€ eij0i00>jd
 
 "Lengthening root consonant j:ij 1"
 !! **RULE: @RULENAME@** =  for saje:saijeen 
@@ -522,7 +528,7 @@ j:i <=> Vow: _ %^RC: :Vow (Cns:+) (%^SV:) Cns:* %^CLEN: ([%^RVSH:|%^RLEN:]) (%^S
 
 "č:ij and j:ij part 2"
 !! **RULE: @RULENAME@** =  
-%^RC:j <=> Vow: č:i _ WeakGrade %^CLEN: ; ! RC !! 1)  eeč%^RCi:eijijn
+%^RC:j <=> Vow: č:i _ %^WG: %^CLEN: ; ! RC !! 1)  eeč%^RCi:eijijn
            Vow: j:i _ Vow:+ (%^SV:) Cns:*  %^CLEN: ; ! RC !! 2) syej%^RCi3%^CLEN%^RVSH%>in suoijijn
 
 !! *Tests:*
@@ -748,6 +754,7 @@ e:0 <=> e: _ [Cns: - č:] Cns:* (%^RC:) [Vow: - u2:] %^WG:                      
 
 
 
+
 "Root vowel o5:u"
 !! **RULE: @RULENAME@** = 
 o5:u <=> \Vow: _ %^RV: Cns:+   i (%^WG:) (%^CLEN:)   (%^RLEN:) [%>|.#.] ;  !! puhtii
@@ -757,8 +764,8 @@ o5:u <=> \Vow: _ %^RV: Cns:+   i (%^WG:) (%^CLEN:)   (%^RLEN:) [%>|.#.] ;  !! pu
 
 "Root vowel ä:ää lenghtening and diphthongisation e:iä"
 !! **RULE: @RULENAME@** = special rule, for avoiding conflict spä%^RVi4lih%^WG%^RLEN, 
-%^RV:ä <=> ä _ Cns:+  Vow:+        Cns:+                     %^CLEN:   %^RLEN: ;                   !! 1) vä%^RVr%^RCid
-           ä _ Cns:+  Vow: (Vow:) (Cns:+)    (%^WG: |%^CSH:)           %^RLEN: (%^SLEN:) (%^SVSH:) [%>|.#.] ; !! 2)
+%^RV:ä <=> ä _ Cns:+  Vow:+        Cns:*                     %^CLEN:   %^RLEN: ;                   !! 1) vä%^RVr%^RCid
+           ä _ Cns:+  Vow: (Vow:)  Cns:*    (%^WG: |%^CSH:)           %^RLEN: (%^SLEN:) (%^SVSH:) [%>|.#.] ; !! 2)
           :ä _ Cns:*  :i (%^SV:)   Cns %^ÁI: %^WG:          (%^CLEN:)  %^RLEN:  [%>|.#.] ;  !! 3)já%^RVhhá%^SVl%^ÁI%^WG%^RLEN>
            ä _ Cns:+  i:                     %^WG:                     %^RLEN:  [%>|.#.] \i: ;  !! 4)
          e:i _ Cns:+  i:     [%^EA:|%^EX:] ([%^WG:|%^CSH:]) (%^CLEN:) (%^RLEN:) [%>|.#.] ; !! 5) e:iä, ergi -> iärgán
@@ -770,6 +777,9 @@ o5:u <=> \Vow: _ %^RV: Cns:+   i (%^WG:) (%^CLEN:)   (%^RLEN:) [%>|.#.] ;  !! pu
 
 !!€ pe^RVi4vi^EA^CLEN>i5n
 !!€ piäivá00>in
+
+!!€ čä^RVc^RCi^CLEN^RLEN>d
+!!€ čääcci00>d
 
 
 
@@ -837,7 +847,8 @@ o:u <=> .#. Cns:* _  (%^RV:) Cns:+ u2:u         Triggers:*                   %> 
             \Vow: _ %^RV:á   Cns:+ u [i4:|j|š|ž] %^WG:                            (%^RVSH:) [%>|.#.] ; !! 1) poccuu puásui  
    [#|.#.]  \Vow: _ (%^RV:)  Cns:+ â Cns:+     ([%^WG:|%^CSH:]) (%^CLEN:) %^VBACK: ; !! ([%^RLEN:|%^RVSH:]) (%^SLEN:) [%>|.#.] 5) jutâlâm juuttâl
 
-[a|o|i|u] (%^RV:) Cns:+ _ (%^SV:)   %^EA:    ([%^WG:|%^CSH:]) (%^CLEN:)          ([%^RLEN:|%^RVSH:]) (%^SLEN:) [%>|.#.] ;
+![a|o|i|u] (%^RV:) Cns:+ _ (%^SV:)   %^EA:    ([%^WG:|%^CSH:]) (%^CLEN:)          ([%^RLEN:|%^RVSH:]) (%^SLEN:) [%>|.#.] ; remove LC i due to sijvo : siijvon, not *siijvun 
+   [a|o|u] (%^RV:) Cns:+ _ (%^SV:)   %^EA:    ([%^WG:|%^CSH:]) (%^CLEN:)          ([%^RLEN:|%^RVSH:]) (%^SLEN:) [%>|.#.] ;
      :Vow (%^RV:) Cns:+ _ (%^SV:)              %^WG:          (%^CLEN:) %^VHIGH: ([%^RLEN:|%^RVSH:]) (%^SLEN:) [%>|.#.] ;
 
 
