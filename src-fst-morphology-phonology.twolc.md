@@ -330,6 +330,12 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 **RULE: č:ij part 1** =  
 eeč%^RCi:eijijn eeč%^RCi%^WG%^CLEN%^SVLOW%>in
 
+* *e^RVč^RCi^WG^CLEN>in*
+* *e0ij0i00>jn*
+
+* *e^RVč^RCi^WG^CLEN>id*
+* *eij0i00>jd*
+
 **RULE: Lengthening root consonant j:ij 1** =  for saje:saijeen 
 
 **RULE: č:ij and j:ij part 2** =  
@@ -452,6 +458,9 @@ puhtii
 
 * *pe^RVi4vi^EA^CLEN>i5n*
 * *piäivá00>in*
+
+* *čä^RVc^RCi^CLEN^RLEN>d*
+* *čääcci00>d*
 
 **RULE: Root vowel o lengthening** =  alge : oolgijn 
 1)
