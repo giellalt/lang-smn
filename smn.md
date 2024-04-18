@@ -6262,7 +6262,7 @@ this is for loanwords without stem change
 
 * **LEXICON C_OLMOOS_PL** 
 
-* **LEXICON C_KAARBIS** 
+* **LEXICON C_KAARBIS** stem:  ká^RVrbás^ÁI
 
 * **LEXICON X_KAARBIS** 
 
@@ -6465,6 +6465,8 @@ TODO: Move derivation lexica here
 ### contracted stem, final â, 
 
 * **LEXICON 2AAIGA_DIM** 
+
+* **LEXICON C_KAARBIS_SG_DIM**  stem ká^RVrbás^ÁI
 
 ### 3-syllabic
 
