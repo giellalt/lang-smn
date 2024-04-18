@@ -2284,7 +2284,11 @@ LEXICON 4LAS_NOUN !!≈ * **@CODE@** stem = aanaarl
 +N+Cmp/SgGen:âš Rhash ; 
 +N+Cmp/PlGen:ij Rhash ; 
  
-LEXICON LAS_PX 
+LEXICON LAS_PX
+LAS_PX_SG ;
+LAS_PX_PL ;
+
+LEXICON LAS_PX_SG 
 +Sg+Nom:^FCD%>â VPXsuff12nom ; ! aanaarlâžžâm     
 +Sg+Acc:^FCD%>â VPXsuff12 ;    ! 
 +Sg+Acc:^FCD%>â VPXsuff3 ;     !   
@@ -2294,6 +2298,8 @@ LEXICON LAS_PX
 +Sg+Loc:^FCD%>âst CPXsuff ;    !      
 +Sg+Com:^FCD%>âin CPXsuff ;    ! 
 +Ess:^FCD%>n CPXsuff ;         ! 
+
+LEXICON LAS_PX_PL 
 +Pl+Gen:^FCD%>âid CPXsuff ;    ! 
 +Pl+Acc:^FCD%>âid CPXsuff ;    ! 
 +Pl+Ill:^FCD%>âid CPXsuff ;    ! 
@@ -3423,7 +3429,7 @@ LEXICON C_OLMOOS_PL  !!≈ * **@CODE@**
 +N+NomAg+Der1+Der/Dimin: 3OPPUS_PL ; !elleežijd  elleežii 
  
  
-LEXICON C_KAARBIS  !!≈ * **@CODE@** 
+LEXICON C_KAARBIS  !!≈ * **@CODE@** stem:  ká^RVrbás^ÁI
 C_KAARBIS_SG ; 
 C_KAARBIS_PL ; 
  
@@ -3439,7 +3445,7 @@ LEXICON C_KAARBIS_SG !!≈ * **@CODE@**
 +N+Cmp/SgGen:^FCD%> Rhash ; 
 +N:^WG^RLEN%> Nom_DER ; 
 +N:^FCD%> Gen_DER ; 
-+N+NomAg+Der1+Der/Dimin: 3OPPUS_SG ; 
++N+NomAg+Der1+Der/Dimin: C_KAARBIS_SG_DIM ; 
 +N+Sg+Com:^FCD%>in CPXsuff ; ! kárbáinis 
 +N+Sg+Nom:^FCD%> VPXsuff ;   ! kárbás 
 +N+Sg+Gen:^FCD%> VPXsuff ;   ! kárbás 
@@ -3459,7 +3465,7 @@ LEXICON C_KAARBIS_PL !!≈ * **@CODE@**
 +N+Pl+Ill:^FCD%>id CPXsuff ;  ! 
 +N+Pl+Com:^FCD%>id CPXsuffCOM ;  ! 
 +N+Pl+Loc:^FCD%>in CPXsuff ;  ! 
-+N+NomAg+Der1+Der/Dimin: 3OPPUS_PL ; 
++N+NomAg+Der1+Der/Dimin:^FCD C_KAARBIS_PL_DIM ; 
 
 
 LEXICON X_KAARBIS_SG  !!≈ * **@CODE@** 
@@ -4646,21 +4652,47 @@ LEXICON 2LAAVU_PL_DIM
 
 LEXICON 2AAIGA_DIM !!≈ * **@CODE@** 
 +N+Sg+Nom:%>š K ; 
-+N+Sg+Gen:%>užii K ; 
-+N+Sg+Acc:%>užii K ; 
-+N+Sg+Ill:%>užân K ; 
-+N+Sg+Loc:%>užiist K ; 
-+N+Sg+Com:%>užijn K ; 
++N+Sg+Gen:%>žii K ; 
++N+Sg+Acc:%>žii K ; 
++N+Sg+Ill:%>žân K ; 
++N+Sg+Loc:%>žiist K ; 
++N+Sg+Com:%>žijn K ; 
 +N+Sg+Abe:%>žiittáá K ; 
-+N+Ess:%>užin K ; 
-+N+Par:%>užid K ; 
-+N+Pl+Nom:%>užiih K ; 
-+N+Pl+Gen:%>užij K ; 
-+N+Pl+Acc:%>užijd K ; 
-+N+Pl+Ill:%>užijd K ; 
-+N+Pl+Loc:%>užijn K ; 
-+N+Pl+Com:%>užij GUIN ; 
-+N+Pl+Abe:%>užijttáá K ; 
++N+Ess:%>žin K ; 
++N+Par:%>žid K ; 
++N+Pl+Nom:%>žiih K ; 
++N+Pl+Gen:%>žij K ; 
++N+Pl+Acc:%>žijd K ; 
++N+Pl+Ill:%>žijd K ; 
++N+Pl+Loc:%>žijn K ; 
++N+Pl+Com:%>žij GUIN ; 
++N+Pl+Abe:%>žijttáá K ; 
+
+! C_KAARBIS
+! This is the same as X_LAS_COMMON and could be unified.
+
+LEXICON C_KAARBIS_SG_DIM  !!≈ * **@CODE@**  stem ká^RVrbás^ÁI
++N: LAS_PX_SG ; ! px
++N+Sg+Nom:%>âš K ;       ! kárbásâš
++N+Sg+Gen:%>ii K ;       ! kárbásii
++N+Sg+Acc:%>ii K ;       ! kárbásii
++N+Sg+Ill:%>âžân K ;     ! kárbásâžân
++N+Sg+Loc:%>iist K ;     ! kárbásiist
++N+Sg+Com:%>ijn K ;      ! kárbásijn
++N+Sg+Abe:%>iittáá K ;   ! kárbásiittáá
++N+Ess:%>âžân K ;        ! kárbásâžân
++N+Par:%>âžâd K ; 
+
+LEXICON C_KAARBIS_PL_DIM
++N: LAS_PX_PL ; ! px
++N+Pl+Nom:%>iih K ; 
++N+Pl+Gen:%>ij K ; 
++N+Pl+Acc:%>ijd K ; 
++N+Pl+Ill:%>ijd K ; 
++N+Pl+Loc:%>ijn K ; 
++N+Pl+Com:%>ij GUIN ; 
++N+Pl+Abe:%>ijttáá K ; 
+
 
 
 !! ### 3-syllabic
