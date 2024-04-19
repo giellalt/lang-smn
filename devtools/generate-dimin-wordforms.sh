@@ -44,7 +44,7 @@ exception_lexicons="(2KOLLIISTALLAM|2KUMPPI_PL|2LAAVU_PL|2LAJO|2SOLLA_PL|2TAHO|2
 generator_file=src/fst/generator-gt-norm
 
 # How many lemmas maximally for each lexicon:
-lemmacount=15
+lemmacount=50
 
 # Specify path to the dir containing the script used for generation:
 script_dir=$giella_core/scripts
