@@ -840,6 +840,10 @@ TODO: Move derivation lexica here
 
 * **LEXICON 2KISSA_DIM** 
 
+* **LEXICON 2KYELI_SG_DIM** 
+
+* **LEXICON 2KYELI_PL_DIM** 
+
 #### final e
 
 * **LEXICON 2ALGE_SG_DIM**  a^RVlge alge, mo^RVkk4e mokke
