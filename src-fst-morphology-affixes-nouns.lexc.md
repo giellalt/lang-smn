@@ -211,6 +211,8 @@ WG, blank Ill, DLEN, RVSH, SVLOW
 
 * **LEXICON 2ALGE** 
 
+* **LEXICON 2NIJTTO_PL** 
+
 * **LEXICON X_ALGE** 
 
 * **LEXICON 2ALGE_SG** 
@@ -861,6 +863,10 @@ TODO: Move derivation lexica here
 * ''LEXICON 2AIGI_PL_DIM'' 
 
 #### final o
+
+* **LEXICON 2NIJTTO_SG_DIM**  sisdoallu lea vel 2ALGE, galgá 2NIJTTO_.._DIM
+
+* **LEXICON 2NIJTTO_PL_DIM** 
 
 #### final u , tentative
 
