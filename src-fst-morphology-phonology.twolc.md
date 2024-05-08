@@ -328,8 +328,8 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 * *kiellâ0>n*
 
 **RULE: č:ij part 1** =  
+* eeč%^RCi:eijijn eeč%^RCi%^WG%^CLEN%^SVLOW%>in
 eeč%^RCi:eijijn eeč%^RCi%^WG%^CLEN%^SVLOW%>in
-
 * *e^RVč^RCi^WG^CLEN>in*
 * *e0ij0i00>jn*
 
