@@ -216,8 +216,8 @@ gt_CONFIG_FILES
 ##### BEGIN: Add language-specific list of files to ######
 ########## be processed by autoconf below here: ##########
 
-AC_CONFIG_FILES([test/src/morphology/testnounlemmas.sh], \
-      [chmod a+x test/src/morphology/testnounlemmas.sh])
+AC_CONFIG_FILES([src/fst/morphology/test/testnounlemmas.sh], \
+      [chmod a+x src/fst/morphology/test/testnounlemmas.sh])
       
 ############ END: Language-specific scripts. #############
 
