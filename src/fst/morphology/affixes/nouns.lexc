@@ -227,7 +227,19 @@ LEXICON 2JUUHA !!≈ * **@CODE@** (basic lexicon)
  2JUUHA_SG ; 
  2JUUHA_PL ; 
  
+LEXICON 2RUAHU !!≈ * **@CODE@** (special case with u dim)
+ 2RUAHU_SG ; 
+ 2RUAHU_PL ; 
+ 
+LEXICON 2RUAHU_SG !!≈ * **@CODE@** 
++N+Der1+Der/Dimin: 2RUAHU_SG_DIM ; ! u final dim
+2JUUHA_SG_NOT_DIM ;               ! business as usual
+
 LEXICON 2JUUHA_SG !!≈ * **@CODE@** 
++N+Der1+Der/Dimin: 2JUUHA_SG_DIM ; ! not u final dim
+2JUUHA_SG_NOT_DIM ;                ! business as usual
+
+LEXICON 2JUUHA_SG_NOT_DIM
 +N: X_JUUHA_SG ; 
 +N+Cmp/SgNom:^RVSH%> Rhash ; 
 +N+Cmp/SgGen:^WG^RVSH%> Rhash ; 
@@ -244,9 +256,16 @@ LEXICON 2JUUHA_SG !!≈ * **@CODE@**
 +N+Ess:%>n CPXsuff ;          ! kiehân 
 +N:^WG%> Gen_DER ; 
 +N:^RVSH%> Nom_DER ; !máhulâš 
-+N+Der1+Der/Dimin: 2JUUHA_SG_DIM ; ! 
  
+LEXICON 2RUAHU_PL !!≈ * **@CODE@** 
++N+Der1+Der/Dimin: 2RUAHU_PL_DIM ; ! u final dim
+2JUUHA_PL_NOT_DIM ;               ! business as usual
+
 LEXICON 2JUUHA_PL !!≈ * **@CODE@** 
++N+Der1+Der/Dimin: 2JUUHA_PL_DIM ; !kaandâš nieidâš tuulâš 
+2JUUHA_PL_NOT_DIM ;
+
+LEXICON 2JUUHA_PL_NOT_DIM
 +N: X_JUUHA_PL ; 
 +N+Cmp/SgNom:%> Rhash ; !stihápuuvsah 
 +N+Pl+Gen:^WG%>id CPXsuff ;  ! 
@@ -255,7 +274,6 @@ LEXICON 2JUUHA_PL !!≈ * **@CODE@**
 +N+Cmp/PlGen:^WG%>i Rhash ; 
 +N+Pl+Loc:^WG%>in CPXsuff ;  ! 
 +N+Pl+Com:^WG%>id CPXsuffCOM ;  ! 
-+N+Der1+Der/Dimin: 2JUUHA_PL_DIM ; !kaandâš nieidâš tuulâš 
  
 LEXICON X_JUUHA_SG  !!≈ * **@CODE@** (common POS Sg) 
 +Sg+Com:^WG^CLEN^SVLOW%>in K ; ! kievváin 
@@ -4565,12 +4583,12 @@ LEXICON 2CAACI_SG_DIM !!≈ * ''@CODE@'' stem:  čä^RVc^RCi
 +N+Sg+Nom:^EA^WG^RLEN%>š K ;     ! čáásáš 
 +N+Sg+Gen:^EA^WG^CLEN%>á K ;     ! čássáá
 +N+Sg+Acc:^EA^WG^CLEN%>á K ;     ! čássáá
-+N+Sg+Ill:^EA^WG^CLEN%>žân K ;   ! čásážân
++N+Sg+Ill:^EA^WG%>žân K ;   ! čásážân
 +N+Sg+Loc:^EA^WG^CLEN%>ást K ;   ! čássáást
 +N+Sg+Com:^EA^WG^CLEN%>i5n K ;   ! čássáin
 +N+Sg+Abe:^EA^WG^CLEN%>áttáá K ; ! čássááttáá
-+N+Ess:^EA^WG^CLEN%>ážin K ;      ! čássáážin
-+N+Par:^EA^WG^CLEN%>ážid K ;      ! čássáážid
++N+Ess:^EA^WG%>ážin K ;      ! čásáážin
++N+Par:^EA^WG%>ážid K ;      ! čásáážid
 
 LEXICON 2CAACI_PL_DIM !!≈ * ''@CODE@'' 
 +N+Pl+Nom:^EA^WG^CLEN%>áh K ;     ! čássááh
@@ -4718,6 +4736,30 @@ LEXICON 2LAAVU_PL_DIM
 +N+Pl+Loc:^WG^RLEN^VBACK%>in K ; 
 +N+Pl+Com:^WG^RLEN^VBACK%>i GUIN ; 
 +N+Pl+Abe:^WG^RLEN^VBACK%>ittáá K ; 
+
+
+LEXICON 2RUAHU_SG_DIM !!≈ * **@CODE@** 
++N+Sg+Nom:^WG^RLEN%>š K ; 
++N+Sg+Gen:^WG^CLEN^VBACK%>u K ;     ! 
++N+Sg+Acc:^WG^CLEN^VBACK%>u K ;     ! 
++N+Sg+Ill:^WG%>žân K ;         !
++N+Sg+Loc:^WG^CLEN^VBACK%>ust K ;   ! 
++N+Sg+Com:^WG^CLEN^VBACK%>in K ;     !
++N+Sg+Abe:^WG^CLEN^VBACK%>ittáá K ; ! 
++N+Cmp/SgNom:^WG%>š Rhash ; 
++N+Cmp/SgGen:^RVSH%>i Rhash ; 
++N+Ess:^WG%>žin K ; 
++N+Par:^WG%>žid K ; 
+ 
+LEXICON 2RUAHU_PL_DIM
++N+Pl+Nom:^WG^CLEN^VBACK%>uh K ; 
++N+Pl+Gen:^WG^CLEN^VBACK%>j K ; 
++N+Cmp/PlGen:^WG^CLEN^VBACK%>j  Rhash ; 
++N+Pl+Acc:^WG^CLEN^VBACK%>id K ; 
++N+Pl+Ill:^WG^CLEN^VBACK%>id K ; 
++N+Pl+Loc:^WG^CLEN^VBACK%>in K ; 
++N+Pl+Com:^WG^CLEN^VBACK%>j GUIN ; 
++N+Pl+Abe:^WG^CLEN^VBACK%>ittáá K ; 
 
 
 
