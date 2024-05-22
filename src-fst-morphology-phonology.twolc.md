@@ -535,7 +535,10 @@ melluu
 4) cokkiitt%^CLEN%^RLEN%^SLEN%>mân
 
 **RULE: iä:e and iä:ee rule 2 and Diphthongisation i5ä to ie** =  
-estuđ kiä5ptu2 > kieptuđ
+estuđ ki5äptu2 > kieptuđ
+
+* *vi5äh^RCu^WG^CLEN^VBACK>u*
+* *vievvu000>u*
 
 * *siämmu2>đ>*
 * *s0emmu>đ>*

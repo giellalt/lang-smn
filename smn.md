@@ -5684,7 +5684,13 @@ X_ALGA_PL_COMMON ;)
 
 * **LEXICON 2JUUHA** (basic lexicon) 
 
+* **LEXICON 2RUAHU** (special case with u dim)
+
+* **LEXICON 2RUAHU_SG** 
+
 * **LEXICON 2JUUHA_SG** 
+
+* **LEXICON 2RUAHU_PL** 
 
 * **LEXICON 2JUUHA_PL** 
 
@@ -5806,6 +5812,8 @@ WG, blank Ill, DLEN, RVSH, SVLOW
 ### 2ALME - 2ALGE - 2NIJBE lexicon family 
 
 * **LEXICON 2ALGE** 
+
+* **LEXICON 2NIJTTO** as alge, but with special dim
 
 * **LEXICON 2NIJTTO_PL** 
 
@@ -6471,6 +6479,8 @@ TODO: Move derivation lexica here
 * **LEXICON 2AIRU_PL_DIM** 
 
 * **LEXICON 2LAAVU_DIM** 
+
+* **LEXICON 2RUAHU_SG_DIM** 
 
 ### contracted stem, final â, 
 
@@ -8162,7 +8172,10 @@ melluu
 4) cokkiitt%^CLEN%^RLEN%^SLEN%>mân
 
 **RULE: iä:e and iä:ee rule 2 and Diphthongisation i5ä to ie** =  
-estuđ kiä5ptu2 > kieptuđ
+estuđ ki5äptu2 > kieptuđ
+
+* *vi5äh^RCu^WG^CLEN^VBACK>u*
+* *vievvu000>u*
 
 * *siämmu2>đ>*
 * *s0emmu>đ>*
