@@ -453,11 +453,9 @@ Cx:0 <=> Vow: _  Cy:     (%^CLEN:) (%^RLEN:) (%^SLEN:|%^SVSH:) [.#.| %>] \Sgm: ;
  	      Cy in ( b c č d g k l r s h m n đ v ŋ p š z ž t ) 
  		  matched ;
 
-
-
 "Quality change of root consonant x:yy"
 !! **RULE: @RULENAME@** =  consonant lengthening after WG, changing h:v, p:v, c:s
-Cx:Cy <=> Vow: _ %^RC: (Vow:) :Vow+ Cns:* [Triggers: -  %^FCD:]* %^WG: %^CLEN: (%^VHIGH:|%^VBACK:) (%^RVSH:) ([%^SVLOW: |%^SLEN:]) %> [i:|i5:|s|u|o|ž|e h|h|e m|á] ; ! RC
+Cx:Cy <=> Vow: _ %^RC: (Vow:) :Vow+ Cns:* [Triggers: -  %^FCD:]* %^WG: %^CLEN: (%^VHIGH:|%^VBACK:) (%^RVSH:) ([%^SVLOW: |%^SLEN:]) %> [i:|i5:|j|s|u|o|ž|e h|h|e m|á] ; ! RC
 	where Cx in ( h p c )
 	      Cy in ( v v s ) 
 		  matched ;
@@ -465,7 +463,7 @@ Cx:Cy <=> Vow: _ %^RC: (Vow:) :Vow+ Cns:* [Triggers: -  %^FCD:]* %^WG: %^CLEN: (
 
 "Lengthening of root consonant x:yy"
 !! **RULE: @RULENAME@** =  consonant lengthening after WG - h:vv, p:vv, c:ss
-%^RC:Cy <=> Vow: Cx:Cy _ (Vow:) :Vow+ Cns:* [Triggers: - %^FCD:]* %^WG: %^CLEN: (%^VHIGH:|%^VBACK:) (%^RVSH:) ([%^SVLOW: |%^SLEN:]) %> [i:|i5:|s|u|o|ž|e h|e m|á] ;
+%^RC:Cy <=> Vow: Cx:Cy _ (Vow:) :Vow+ Cns:* [Triggers: - %^FCD:]* %^WG: %^CLEN: (%^VHIGH:|%^VBACK:) (%^RVSH:) ([%^SVLOW: |%^SLEN:]) %> [i:|i5:|j|s|u|o|ž|e h|e m|á] ;
 	where Cx in ( h p c )
 	      Cy in ( v v s ) 
 		  matched ;
@@ -513,7 +511,7 @@ Cx:Cy <=> Vow: _ %^RC: (Vow:) :Vow+ Cns:* [Triggers: -  %^FCD:]* %^WG: %^CLEN: (
 
 "č:ij part 1"
 !! **RULE: @RULENAME@** =  
-č:i <=> Vow: _ %^RC: i %^WG: %^CLEN: ;
+č:i <=> Vow: _ %^RC: :i %^WG: %^CLEN: ;
 !! * eeč%^RCi:eijijn eeč%^RCi%^WG%^CLEN%^SVLOW%>in
 !!  eeč%^RCi:eijijn eeč%^RCi%^WG%^CLEN%^SVLOW%>in
 !!€ e^RVč^RCi^WG^CLEN>in 
@@ -1065,9 +1063,9 @@ u:o <=>  [.#.|#] _     Cns:+ u:o (%^SV:) [š|ž]  %^WG: (%^SLEN:)  %^SVLOW: [%>|
 
 "Diphthong rule uá:uo and uá:oo, part 2"
 !! **RULE: @RULENAME@** =  
-á:o <=> u5: _ Cns:+ u2:u                    ([%^WG:|%^CSH:]) (%^CLEN:) (%^VBACK:)           %>  ; !! uá > uo
-        u5: _ Cns:+ u                                                   %^VBACK: (%^RLEN:) [%>|.#.]  ;  !! uá > uo
-        u5: _ Cns:* [u2:|u]                 ([%^WG:|%^CSH:]) (%^CLEN:) %^VBACK: (%^RVSH:)   %> [m|h|u] ;  ! RV ! should not hit pu5áhtu2%>o but ču5árvu2 OBS
+á:o <=> u5: _ Cns:+ u2:u                    ([%^WG:|%^CSH:]) (%^CLEN:) (%^VBACK:)           %>      ; !! uá > uo
+        u5: _ Cns:+ u                                                   %^VBACK: (%^RLEN:) [%>|.#.] ; !! uá > uo
+        u5: _ Cns:* [u2:|u]                 ([%^WG:|%^CSH:]) (%^CLEN:)  %^VBACK: (%^RVSH:)  %> [m|h|u|i] ;  ! RV ! should not hit pu5áhtu2%>o but ču5árvu2 OBS
         u:  _ Cns:+ :i                        %^WG:                                         %> i: ;  ! RV  ! 
         u:  _ Cns:+ [i|â|a|á|u] (Cns:+)      (%^WG:|%^CSH:)(%^CLEN:)  %^VBACK: (%^RLEN:) (%^SLEN:) [%>|.#.]  ;  ! RV  ! oođđim  
         u:  _ Cns:+ Vow:      j    %^ÁI:      %^WG: [%>|.#.] ;  ! RV !puáhháá poovij 
