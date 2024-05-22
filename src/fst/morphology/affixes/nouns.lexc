@@ -809,17 +809,17 @@ LEXICON 2ALGE !!≈ * **@CODE@**
 2ALGE_SG ; 
 2ALGE_PL ; 
 
-LEXICON 2NIJTTO
+LEXICON 2NIJTTO !!≈ * **@CODE@** as alge, but with special dim
 2NIJTTO_SG ;
 2NIJTTO_PL ;
 
 LEXICON 2NIJTTO_SG
-+N+Der1+Der/Dimin: 2NIJTTO_SG_DIM ; !a^RVlge alga (e:a) S_ALGAAS algaaš ko^RVlle  S_CISSAAS kollááš 
++N+Der1+Der/Dimin: 2NIJTTO_SG_DIM ; ! special dim for -o only
 +N: X_ALGE_SG ; 
    2ALGE_SG_PX ;
 
 LEXICON 2NIJTTO_PL  !!≈ * **@CODE@** 
-+N+Der1+Der/Dimin: 2ALGE_PL_DIM ; !a^RVlge alga (e:a) S_ALGAAS algaaš ko^RVlle  S_CISSAAS kollááš 
++N+Der1+Der/Dimin: 2ALGE_PL_DIM ; ! .. as for sg
 +N: X_ALGE_PL ; 
 2ALGE_PL_PX ;
 
@@ -4446,24 +4446,24 @@ LEXICON 2KIELA_PL_DIM
 !! #### final á
 
 LEXICON 2CAANA_SG_DIM
-+N+Sg+Nom:^SV^WG^RLEN^SLEN%>š K ;           ! má^RVn^RCá čáánááš
-+N+Sg+Gen:^SV^WG^RLEN^SLEN K ;        ! čáánáá
-+N+Sg+Acc:^SV^WG^RLEN^SLEN K ;        ! 
++N+Sg+Nom:^SV^WG^RLEN^SLEN%>š K ;      ! má^RVn^RCá čáánááš
++N+Sg+Gen:^SV^WG^RLEN^SLEN K ;         ! čáánáá
++N+Sg+Acc:^SV^WG^RLEN^SLEN K ;         ! 
 +N+Sg+Ill:^WG%>žân K ;                 ! čánážân
 +N+Sg+Loc:^SV^WG^VHIGH^SLEN%>st K ;    ! čáánáást
-+N+Sg+Com:^WG^VHIGH%>in K ;            ! čáánááin
-+N+Sg+Abe:^SV^WG^VHIGH^SLEN%>ttáá K ;  ! čánáttáá
++N+Sg+Com:^WG^VHIGH^SLEN%>in K ;       ! čáánááin
++N+Sg+Abe:^SV^WG^VHIGH%>ttáá K ;       ! čánáttáá
 +N+Ess:^WG%>žin K ;                    ! čánážin 
 +N+Par:^WG%>žid K ;                    ! čánážid
 
 LEXICON 2CAANA_PL_DIM 
-+N+Pl+Nom:^SV^WG^VHIGH^SLEN%>h K ;  ! kirhuuh
-+N+Pl+Gen:^WG^VHIGH%>i K ;          ! kirhui
-+N+Pl+Acc:^WG^VHIGH%>id K ;         ! kirhuid
-+N+Pl+Ill:^WG^VHIGH%>id K ;         ! kirhuid
-+N+Pl+Loc:^WG^VHIGH%>in K ;         ! kirhuin
-+N+Pl+Com:^WG^VHIGH%>i GUIN ;        ! kirhuiguin
-+N+Pl+Abe:^WG^VHIGH%>ittáá K ;       ! kirhuittáá
++N+Pl+Nom:^SV^WG^VHIGH^RLEN^SLEN%>h K ;  ! 
++N+Pl+Gen:^WG^VHIGH^RLEN^SLEN%>i K ;          ! 
++N+Pl+Acc:^WG^VHIGH^RLEN^SLEN%>id K ;         ! 
++N+Pl+Ill:^WG^VHIGH^RLEN^SLEN%>id K ;         ! 
++N+Pl+Loc:^WG^VHIGH^RLEN^SLEN%>in K ;         ! 
++N+Pl+Com:^WG^VHIGH%>i GUIN ;                 ! 
++N+Pl+Abe:^WG^VHIGH^RLEN^SLEN%>ittáá K ;      ! 
 
 LEXICON 2FADDA_DIM 
 +N: FADDA_SG_DIM ; 
@@ -4484,13 +4484,13 @@ LEXICON FADDA_SG_DIM  !!≈ * **@CODE@** fá^RVddá
 +Par:^WGž%>id K ; 
  
 LEXICON 2FADDA_PL_DIM  !!≈ * **@CODE@** 
-+Pl+Nom:ii%>h K ; 
-+Pl+Gen:ij K ; 
-+Pl+Acc:i%>id K ; 
-+Pl+Ill:i%>id K ; 
-+Pl+Loc:i%>in K ; 
++Pl+Nom:á%>h K ; 
++Pl+Gen:á%>j K ; 
++Pl+Acc:á%>id K ; 
++Pl+Ill:á%>id K ; 
++Pl+Loc:á%>in K ; 
 +Pl+Com:^FVD%>ij GUIN ; 
-+Pl+Abe:ij%>ttáá K ; 
++Pl+Abe:i%>ttáá K ; 
  
  
 LEXICON 2KISSA_DIM !!≈ * **@CODE@** 
@@ -4502,7 +4502,7 @@ LEXICON 2KISSA_SG_DIM
 +N+Sg+Nom:^SV^WG^CLEN^SLEN%>š K ;           ! 
 +N+Sg+Gen:^SV^WG^CLEN^VHIGH^SLEN K ;        ! 
 +N+Sg+Acc:^SV^WG^CLEN^VHIGH^SLEN K ;        ! 
-+N+Sg+Ill:^WG%>žân K ;                      ! 
++N+Sg+Ill:^EA^WG%>žân K ;                   ! 
 +N+Sg+Loc:^SV^WG^CLEN^VHIGH^SLEN%>st K ;    ! 
 +N+Sg+Com:^WG^CLEN^VHIGH%>in K ;            ! 
 +N+Sg+Abe:^SV^WG^CLEN^VHIGH^SLEN%>ttáá K ;  ! 
