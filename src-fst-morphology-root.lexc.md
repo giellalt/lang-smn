@@ -45,6 +45,7 @@ This file documents the Inari Sámi morphological analyser. The tags in bold are
 ## Grammatical properties
 
 * **+IV +TV** 
+* **+SentInit** 
 
 ### Number
 * **+Sg +Pl +Du** 
