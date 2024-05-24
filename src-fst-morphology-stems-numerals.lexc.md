@@ -107,6 +107,7 @@ In principle as the above.
 * **LEXICON ARABICCOMPOUNDS**   arabic as first part, 
 
 * **LEXICON NUMERALCOMPOUNDS**: numeral as first part: duhatjienat,
+logigielat, etc. 2nd part in affixes/adjectives.lexc
 
 * **LEXICON ORDINAL**
 
