@@ -154,6 +154,7 @@ Other/unclassified derivations, can appear in all positions:
  **+Foc/gan** 
  **+Foc/gas** 
  **+Foc/ge** 
+ **+Foc/gen** 
  **+Foc/ges** 
  **+Foc/gin** 
  **+Foc/gis** 
