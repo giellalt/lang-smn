@@ -1,1 +1,1 @@
-pushd test/src/ ; make check SUBDIRS=. ; popd
+pushd ../src/fst/test/ ; make check SUBDIRS=. ; popd
