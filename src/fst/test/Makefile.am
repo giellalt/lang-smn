@@ -46,3 +46,4 @@ XFAIL_TESTS=run-dict-gt-norm-genyaml-testcases.sh \
 ####### Other targets: ###########
 clean-local:
 	-rm -f *.txt
+include $(top_srcdir)/../giella-core/am-shared/devtest-include.am
