@@ -37,6 +37,7 @@ TESTS=\
 	msyn-agr-sg3-du3-PASS.yaml \
 	msyn-agr-sg3-pl3-FAIL.yaml \
 	msyn-agr-sg3-pl3-PASS.yaml \
+	msyn-attr-com-gen-FAIL.yaml \
 	msyn-attr-com-gen-PASS.yaml \
 	msyn-det-nom-acc-FAIL.yaml \
 	msyn-det-nom-acc-PASS.yaml \
@@ -151,6 +152,7 @@ XFAIL_TESTS=\
 	msyn-advl-plloc-sgcom-FAIL.yaml \
 	msyn-agr-other-sg2-FAIL.yaml \
 	msyn-agr-sg3-pl3-FAIL.yaml \
+	msyn-attr-com-gen-FAIL.yaml \
 	msyn-det-nom-acc-FAIL.yaml \
 	msyn-dynamic-compounds-FAIL.yaml \
 	msyn-extsubj-acc-nom-FAIL.yaml \
