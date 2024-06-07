@@ -1,1 +1,4 @@
-pushd ../src/fst/test/ ; make check SUBDIRS=. ; popd
+#!/bin/bash
+pushd ../src/fst/test/ || exit 2
+make devtest SUBDIRS=.
+popd || exit 2
