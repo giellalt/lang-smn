@@ -193,8 +193,8 @@ Rules
 "x:y consonant gradation" ! (xxx kánske RC nubbi njuolggadusas?)
 !! **RULE: @RULENAME@** =  WG gives x:x and x:y, when there is no consonant lengthening  
 Cx:Cy <=> Vow: _ (%^RC: ) WeakGrade (%^CLEN:) ([%^VHIGH:|%^VBACK:]) ([%^RVSH:|%^RLEN:]) (%^SLEN:) (%^SVLOW:) [.#.|%>|#] ; ! RC only \CLEN makes conflict
-	where Cx in ( h p c č )    
-              Cy in ( v v s j )    
+	where Cx in ( h p c )    
+              Cy in ( v v s )    
 		  matched ;
 
 !!€ sa^RVh^RCâi5^WG^CLEN>i
@@ -210,6 +210,10 @@ Cx:Cy <=> Vow: _ (%^RC: ) WeakGrade (%^CLEN:) ([%^VHIGH:|%^VBACK:]) ([%^RVSH:|%^
 ! juáhu to juávuttáá
 !!€ juáh^RCu^WG^RVSH>ttáá
 !!€ juáv0u00>ttáá
+
+"č:j consonant gradation" ! (xxx kánske RC nubbi njuolggadusas?)
+!! **RULE: @RULENAME@** =  WG gives x:x and x:y, when there is no consonant lengthening  
+č:j <=> Vow: _ (%^RC: ) (RealVow:) ([i5:|i6:]) (Vow:) (Cns:+) ([%^SV:|%^ÁI:|%^ÁE:]) ([%^FCD:|%^FVD:]) %^WG:0 (%^CLEN:) ([%^VHIGH:|%^VBACK:]) ([%^RVSH:|%^RLEN:]) (%^SLEN:) (%^SVLOW:) [.#.|%>|#] ;
 
 
 
@@ -511,14 +515,18 @@ Cx:Cy <=> Vow: _ %^RC: (Vow:) :Vow+ Cns:* [Triggers: -  %^FCD:]* %^WG: %^CLEN: (
 
 "č:ij part 1"
 !! **RULE: @RULENAME@** =  
-č:i <=> Vow: _ %^RC: :i (%^EA:) %^WG: %^CLEN: ;
-!! * eeč%^RCi:eijijn eeč%^RCi%^WG%^CLEN%^SVLOW%>in
-!!  eeč%^RCi:eijijn eeč%^RCi%^WG%^CLEN%^SVLOW%>in
-!!€ e^RVč^RCi^WG^CLEN>in 
-!!€ e0ij0i00>jn
+č:i <=> Vow: _ %^RC:j i: (%^EA:) %^WG: %^CLEN: ;
+!! * eeč^RCi:eijijn eeč^RCi^WG^CLEN^SVLOW>in
+!!  eeč^RCi:eijijn eeč^RCi^WG^CLEN^SVLOW>in
+!!€  e^RVč^RCi^WG^CLEN>in 
+!!€  e0  ij  i0  0    >jn
+!!€ ke^RVč^RCi^EA^WG^CLEN>á
+!!€ kiä  ij  á0  0  0    >á
+!!€ ke^RVč^RCi^WG^RLEN
+!!€ kee  j0  i0  0
 
 !!€ e^RVč^RCi^WG^CLEN>id
-!!€ eij0i00>jd
+!!€ ei  j0  i0  0    >jd
 
 "Lengthening root consonant j:ij 1"
 !! **RULE: @RULENAME@** =  for saje:saijeen 
