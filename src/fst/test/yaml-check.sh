@@ -1,1 +1,1 @@
-pushd . ; make check SUBDIRS=. ; popd
+pushd . ; make devtest SUBDIRS=. ; popd
