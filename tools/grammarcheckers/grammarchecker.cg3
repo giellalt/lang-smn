@@ -1,6 +1,6 @@
 # -*- cg-pre-pipe: "hfst-tokenise -g ../../tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst" -*-
 # Divvun & Giellatekno - open source grammars for Sámi and other languages
-# Copyright © 2000-2024 UiT The arctic University of Norway
+# Copyright © 2000-2024 UiT The Arctic University of Norway
 # http://giellatekno.uit.no & http://divvun.no
 #
 # This program is free software; you can redistribute and/or modify
@@ -18,7 +18,7 @@
 #!! ==================================================================
 #   ==================================================================
 
-#  Sámi language technology 2003-2024, UiT The arctic University of Norway #
+#  Sámi language technology 2003-2024, UiT The Arctic University of Norway #
 
 
 #!! # Development setup
@@ -2197,6 +2197,7 @@ LIST &msyn-predagr-pl3-sg3 = &msyn-predagr-pl3-sg3 ;
 LIST &msyn-pron-acc-gen = &msyn-pron-acc-gen ;
 LIST &msyn-pron-gen-acc = &msyn-pron-gen-acc ;
 LIST &msyn-pron-plill-placc = &msyn-pron-plill-placc ;
+LIST &msyn-Pron_N-NPx = &msyn-Pron_N-NPx ;
 LIST &msyn-quadv-sg-pl = &msyn-quadv-sg-pl ;
 LIST &msyn-qucompl-sg-pl = &msyn-qucompl-sg-pl ;
 LIST &msyn-quant-gen-nom =  &msyn-quant-gen-nom ;
@@ -2335,25 +2336,6 @@ ADD:xmsyn-jyehi_nom-jyehi_gen (&msyn-jyehi_nom-jyehi_gen) TARGET (N Sg Nom) + Se
 	
 COPY:xmsyn-jyehi_nom-jyehi_gen (Gen &SUGGEST) EXCEPT (Nom &msyn-jyehi_nom-jyehi_gen) TARGET (&msyn-jyehi_nom-jyehi_gen) ;
 
-#!! ### Possessive pronouns > reflexive pronouns
-
-LIST SHE-smn = "sun" ;
-LIST SHE-sme = "son" ;
-LIST SHE-sma = "dïhte" ;
-LIST SHE-smj = "juohkka" ;
-SET SHE = SHE-smn OR SHE-sme OR SHE-sma OR SHE-smj ;
-
-LIST I-smn = "mun" ;
-LIST I-sme = "mun" ;
-LIST I-sma = "manne" ;
-LIST I-smj = "mån" ;
-SET I = I-smn OR I-sme OR I-sma OR I-smj ;
-
-ADD:xmsyn-suu-jieijas (&msyn-suu-jieijas) TARGET SHE + (Pers Sg3 Gen) OR SHE + (Pers Sg3 Acc) IF (*-1 SHE + (Pers Sg3 Nom) OR (N Prop Nom Sem/Fem) OR (N Prop Nom Sem/Mal) OR (N Prop Nom Sem/Sur) BARRIER S-BOUNDARY); 
-	## Sun vuolgij suu viistán ullopääiđih soolâst.
-	
-COPY:xmsyn-suu-jieijas ("jieš" Refl Gen PxSg3 &SUGGEST) EXCEPT ("sun" Pers Sg3 Gen &msyn-suu-jieijas) OR ("sun" Pers Sg3 Acc &msyn-suu-jieijas) TARGET (Pers &msyn-suu-jieijas);
-	
 
 #!! ### Phrasal verbs
 
@@ -2572,6 +2554,43 @@ COPY:msyn-ncompl-placc-plill (Ill &SUGGEST) EXCEPT (Acc &msyn-ncompl-placc-plill
 #	;
 #COPY:msyn-ncompl-placc-plill (Ill &SUGGEST) EXCEPT (Acc &msyn-ncompl-placc-plill) TARGET (N Pl Acc &msyn-ncompl-placc-plill);
 
+#!! ### Possessive rules - Sem/Body
+
+ADD:msyn-Pron_N-NPx (&msyn-Pron_N-NPx) TARGET N + Sem/Body OR N + Sem/Clth IF (*-1 (Pers Gen Sg3) BARRIER (*) - Attr LINK *-1 (V Sg3) LINK *-1 (N Nom Sg) + Sem/Hum OR (Pers Nom Sg3) OR ("tot" Pron Dem Sg Nom));
+
+COPY:msyn-Pron_N-NPx (PxSg3 SUGGEST) EXCEPT (&msyn-Pron_N-NPx) TARGET (N &msyn-Pron_N-NPx);
+
+ADD:msyn-Pron_N-NPx (&msyn-Pron_N-NPx) TARGET (Pers Sg3 Gen) IF (*1 N + Sem/Clth OR N + Sem/Body BARRIER (*) - Attr) (*-1 (V Sg3) LINK *-1 (N Nom Sg) + Sem/Hum OR (Pers Nom Sg3) OR ("tot" Pron Dem Sg Nom));
+
+SUBSTITUTE (&msyn-Pron_N-NPx) (co&msyn-Pron_N-NPx) TARGET (SUGGEST);
+
+ADDRELATION (DELETE1 LEFT) (N &msyn-Pron_N-NPx) TO (*-1 (Pers Gen Sg3 &msyn-Pron_N-NPx));
+
+	## Sun tuubdâi vala Trond liegâsvuođâ suu nierâst
+	#$ Sun tuubdâi vala Trond liegâsvuođâ nierâstis
+	## Risten luuvij {suu uáivi}¥{pron,poss-pxsg3|uáivis} já moijái.
+	#$ Äšši lâi juurrâm suu uáivist ubâ määđhi tavas.
+	
+
+#!! ### Possessive pronouns > reflexive pronouns
+
+LIST SHE-smn = "sun" ;
+LIST SHE-sme = "son" ;
+LIST SHE-sma = "dïhte" ;
+LIST SHE-smj = "juohkka" ;
+SET SHE = SHE-smn OR SHE-sme OR SHE-sma OR SHE-smj ;
+
+LIST I-smn = "mun" ;
+LIST I-sme = "mun" ;
+LIST I-sma = "manne" ;
+LIST I-smj = "mån" ;
+SET I = I-smn OR I-sme OR I-sma OR I-smj ;
+
+ADD:xmsyn-suu-jieijas (&msyn-suu-jieijas) TARGET SHE + (Pers Sg3 Gen) OR SHE + (Pers Sg3 Acc) IF (*-1 SHE + (Pers Sg3 Nom) OR (N Prop Nom Sem/Fem) OR (N Prop Nom Sem/Mal) OR (N Prop Nom Sem/Sur) BARRIER S-BOUNDARY)(NEGATE 0 &msyn-Pron_N-NPx); 
+	## Sun vuolgij suu viistán ullopääiđih soolâst.
+	
+COPY:xmsyn-suu-jieijas ("jieš" Refl Gen PxSg3 &SUGGEST) EXCEPT ("sun" Pers Sg3 Gen &msyn-suu-jieijas) OR ("sun" Pers Sg3 Acc &msyn-suu-jieijas) TARGET (Pers &msyn-suu-jieijas);
+	
 
 
 #!! ### Double possessive rules
