@@ -151,6 +151,12 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 
 **RULE: x:y consonant gradation ** =  WG gives x:x and x:y, when there is no consonant lengthening  
 
+**RULE: č:j consonant gradation ** =  WG gives x:x and x:y, when there is no consonant lengthening  
+- Not č:j if iä to its left. TODO check vowel sequences with i but not ä and vice versa.
+
+* *ke^RVč^RCi^EA^WG^CLEN>á*
+* *kiäijá000>á*
+
 * *sa^RVh^RCâi5^WG^CLEN>i*
 * *sa0vv0i00>i*
 
@@ -162,6 +168,8 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 * *käävir0>*
 * *juáh^RCu^WG^RVSH>ttáá*
 * *juáv0u00>ttáá*
+
+**RULE: č:j consonant gradation ** =  WG gives x:x and x:y, when there is no consonant lengthening  
 
 **RULE: hh:vv** =  já%^RVhhá%^SVl%^ÁI : jäävvil
 
@@ -328,13 +336,17 @@ First gradation and shortening. They are in the same rules, to avoid rule confli
 * *kiellâ0>n*
 
 **RULE: č:ij part 1** =  
-* eeč%^RCi:eijijn eeč%^RCi%^WG%^CLEN%^SVLOW%>in
-eeč%^RCi:eijijn eeč%^RCi%^WG%^CLEN%^SVLOW%>in
+* eeč^RCi:eijijn eeč^RCi^WG^CLEN^SVLOW>in
+eeč^RCi:eijijn eeč^RCi^WG^CLEN^SVLOW>in
 * *e^RVč^RCi^WG^CLEN>in*
-* *e0ij0i00>jn*
+* *e0* `ij` (Eng. i0 0 >jn)
+* *ke^RVč^RCi^EA^WG^CLEN>á*
+* *kiä* `ij` (Eng. á0 0 0 >á)
+* *ke^RVč^RCi^WG^RLEN*
+* *kee* `j0` (Eng. i0 0)
 
 * *e^RVč^RCi^WG^CLEN>id*
-* *eij0i00>jd*
+* *ei* `j0` (Eng. i0 0 >jd)
 
 **RULE: Lengthening root consonant j:ij 1** =  for saje:saijeen 
 
