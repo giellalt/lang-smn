@@ -192,10 +192,18 @@ Rules
 
 "x:y consonant gradation" ! (xxx kánske RC nubbi njuolggadusas?)
 !! **RULE: @RULENAME@** =  WG gives x:x and x:y, when there is no consonant lengthening  
-Cx:Cy <=> Vow: _ (%^RC: ) WeakGrade (%^CLEN:) ([%^VHIGH:|%^VBACK:]) ([%^RVSH:|%^RLEN:]) (%^SLEN:) (%^SVLOW:) [.#.|%>|#] ; ! RC only \CLEN makes conflict
+Cx:Cy <=> Vow: _ ([%^RC: - :j] ) WeakGrade (%^CLEN:) ([%^VHIGH:|%^VBACK:]) ([%^RVSH:|%^RLEN:]) (%^SLEN:) (%^SVLOW:) [.#.|%>|#] ; ! RC only \CLEN makes conflict
 	where Cx in ( h p c )    
               Cy in ( v v s )    
 		  matched ;
+
+"č:j consonant gradation" 
+!! **RULE: @RULENAME@** =  WG gives x:x and x:y, when there is no consonant lengthening  
+č:j <=> [[[:Vow - :i] [Vow: - :ä]]|[[Cns|.#.|#] Vow:]] _ ([%^RC: - :j] ) WeakGrade (%^CLEN:) ([%^VHIGH:|%^VBACK:]) ([%^RVSH:|%^RLEN:]) (%^SLEN:) (%^SVLOW:) [.#.|%>|#] ;
+!! - Not č:j if iä to its left. TODO check vowel sequences with i but not ä and vice versa.
+
+!!€ ke^RVč^RCi^EA^WG^CLEN>á
+!!€ kiäijá000>á
 
 !!€ sa^RVh^RCâi5^WG^CLEN>i
 !!€ sa0vv0i00>i
@@ -211,9 +219,9 @@ Cx:Cy <=> Vow: _ (%^RC: ) WeakGrade (%^CLEN:) ([%^VHIGH:|%^VBACK:]) ([%^RVSH:|%^
 !!€ juáh^RCu^WG^RVSH>ttáá
 !!€ juáv0u00>ttáá
 
-"č:j consonant gradation" ! (xxx kánske RC nubbi njuolggadusas?)
+!"č:j consonant gradation" ! (xxx kánske RC nubbi njuolggadusas?)
 !! **RULE: @RULENAME@** =  WG gives x:x and x:y, when there is no consonant lengthening  
-č:j <=> Vow: _ (%^RC: ) (RealVow:) ([i5:|i6:]) (Vow:) (Cns:+) ([%^SV:|%^ÁI:|%^ÁE:]) ([%^FCD:|%^FVD:]) %^WG:0 (%^CLEN:) ([%^VHIGH:|%^VBACK:]) ([%^RVSH:|%^RLEN:]) (%^SLEN:) (%^SVLOW:) [.#.|%>|#] ;
+!č:j <=> Vow: _ (%^RC: ) (RealVow:) ([i5:|i6:]) (Vow:) (Cns:+) ([%^SV:|%^ÁI:|%^ÁE:]) ([%^FCD:|%^FVD:]) %^WG:0 (%^CLEN:) ([%^VHIGH:|%^VBACK:]) ([%^RVSH:|%^RLEN:]) (%^SLEN:) (%^SVLOW:) [.#.|%>|#] ;
 
 
 
@@ -515,7 +523,7 @@ Cx:Cy <=> Vow: _ %^RC: (Vow:) :Vow+ Cns:* [Triggers: -  %^FCD:]* %^WG: %^CLEN: (
 
 "č:ij part 1"
 !! **RULE: @RULENAME@** =  
-č:i <=> Vow: _ %^RC:j i: (%^EA:) %^WG: %^CLEN: ;
+č:i <=> [[[Cns|.#.|#] e (:0)]|[:i :ä]] _ %^RC: i: (%^EA:) %^WG: %^CLEN: ;
 !! * eeč^RCi:eijijn eeč^RCi^WG^CLEN^SVLOW>in
 !!  eeč^RCi:eijijn eeč^RCi^WG^CLEN^SVLOW>in
 !!€  e^RVč^RCi^WG^CLEN>in 
