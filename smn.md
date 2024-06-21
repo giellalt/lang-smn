@@ -11976,8 +11976,6 @@ name convention for error tags: ´´&errortype-errorsubtype-is-shouldbe´´
 
 ## Noun phrase internal phenomena
 
-### Possessive pronouns > reflexive pronouns
-
 ### Phrasal verbs
 
 ### Demonstratives
@@ -12005,6 +12003,10 @@ N + Ill
 **Agreement rule:** msyn-ncompl-placc-plill: *Motomeh suomâkielâ vaikuttâsah/tábáhtussáid tábáhtusâid láá tuhhiittum anarâškielân.*
 
 **Agreement rule:** msyn-ncompl-placc-plill
+
+### Possessive rules - Sem/Body
+
+### Possessive pronouns > reflexive pronouns
 
 ### Double possessive rules
 
