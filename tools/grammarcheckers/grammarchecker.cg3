@@ -2558,17 +2558,20 @@ COPY:msyn-ncompl-placc-plill (Ill &SUGGEST) EXCEPT (Acc &msyn-ncompl-placc-plill
 
 ADD:msyn-Pron_N-NPx (&msyn-Pron_N-NPx) TARGET N + Sem/Body OR N + Sem/Clth IF (*-1 (Pers Gen Sg3) BARRIER (*) - Attr LINK *-1 (V Sg3) LINK *-1 (N Nom Sg) + Sem/Hum OR (Pers Nom Sg3) OR ("tot" Pron Dem Sg Nom));
 
-COPY:msyn-Pron_N-NPx (PxSg3 SUGGEST) EXCEPT (&msyn-Pron_N-NPx) TARGET (N &msyn-Pron_N-NPx);
+COPY:msyn-Pron_N-NPx (PxSg3 SUGGEST) TARGET (N &msyn-Pron_N-NPx);
 
 ADD:msyn-Pron_N-NPx (&msyn-Pron_N-NPx) TARGET (Pers Sg3 Gen) IF (*1 N + Sem/Clth OR N + Sem/Body BARRIER (*) - Attr) (*-1 (V Sg3) LINK *-1 (N Nom Sg) + Sem/Hum OR (Pers Nom Sg3) OR ("tot" Pron Dem Sg Nom));
 
-SUBSTITUTE (&msyn-Pron_N-NPx) (co&msyn-Pron_N-NPx) TARGET (SUGGEST);
-
 ADDRELATION (DELETE1 LEFT) (N &msyn-Pron_N-NPx) TO (*-1 (Pers Gen Sg3 &msyn-Pron_N-NPx));
 
-	## Sun tuubdâi vala Trond liegâsvuođâ suu nierâst
-	#$ Sun tuubdâi vala Trond liegâsvuođâ nierâstis
-	## Risten luuvij {suu uáivi}¥{pron,poss-pxsg3|uáivis} já moijái.
+SUBSTITUTE (&msyn-Pron_N-NPx) (co&msyn-Pron_N-NPx) TARGET (SUGGEST);
+	# co&msyn-Pron_N-NPx brukes når vi vil ha det ilag med  SUGGEST, co betyr ikkje at det er den mindre viktige delen av feilen
+
+
+	## Sun tuubdâi vala Trond liegâsvuođâ suu nierâst.
+	#$ Sun tuubdâi vala Trond liegâsvuođâ nierâstis.
+	## Risten luuvij suu uáivi já moijái.
+	#$ Risten luuvij uáivis já moijái.
 	#$ Äšši lâi juurrâm suu uáivist ubâ määđhi tavas.
 	
 
