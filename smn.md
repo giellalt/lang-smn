@@ -9103,6 +9103,7 @@ The second part of the compound may require that the previous (left part) is:
 * **+OLang/NNO** 
 * **+OLang/NOB** 
 * **+OLang/SME** 
+* **+OLang/SMJ** 
 * **+OLang/SMA** 
 * **+OLang/SWE** 
 * **+OLang/UND** 
