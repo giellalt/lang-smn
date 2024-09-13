@@ -6546,8 +6546,6 @@ tbw.
 
 * **LEXICON CICCAM** to be checked
 
-* **LEXICON iLOV**
-
 * **LEXICON LOV**
 
 * **LEXICON NUBALOH**
@@ -9413,7 +9411,6 @@ From missinglist
 # src-fst-morphology-stems-numerals.lexc.md 
 
 
-
 # Inari Saami numerals
 
 * **LEXICON Numeral**
@@ -9512,8 +9509,6 @@ Gen' means shortened forms, lov = the ten denominator
 - Gen' = 
 
 * **LEXICON TENS**
-
-* **LEXICON LOGI2**
 
 * **LEXICON LOGI** pointing to tens (LOV) and numbers (ONES)
 

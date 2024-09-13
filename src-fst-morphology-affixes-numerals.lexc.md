@@ -18,8 +18,6 @@
 
 * **LEXICON CICCAM** to be checked
 
-* **LEXICON iLOV**
-
 * **LEXICON LOV**
 
 * **LEXICON NUBALOH**

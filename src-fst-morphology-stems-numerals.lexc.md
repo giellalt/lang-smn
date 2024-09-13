@@ -1,5 +1,4 @@
 
-
 # Inari Saami numerals
 
 * **LEXICON Numeral**
@@ -98,8 +97,6 @@ Gen' means shortened forms, lov = the ten denominator
 - Gen' = 
 
 * **LEXICON TENS**
-
-* **LEXICON LOGI2**
 
 * **LEXICON LOGI** pointing to tens (LOV) and numbers (ONES)
 
