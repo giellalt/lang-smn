@@ -84,19 +84,24 @@ In principle as the above.
 
 * **LEXICON LOGAAT**
 
+## Under hundred
+
+### Numeral agreement, an overview
+Gen' means shortened forms, lov = the ten denominator
+- Nominative: Nom + lov + Nom
+- Genitive: Gen' + lov + Gen
+- Illative: Gen' + lohán + Ill
+- Locative: Gen' + lov + Loc
+- Comitative: Com + lov-Com + Com
+- Essive: Ess + lov-Ess + Com
+
+- Gen' = 
+
 * **LEXICON TENS**
 
-* **LEXICON LOGIi**
+* **LEXICON LOGI2**
 
-* **LEXICON LOGIhc**
-
-* **LEXICON oohceLOGIhc**
-
-* **LEXICON LOGItt**
-
-* **LEXICON LOGI**
-
-* **LEXICON LOGIm**
+* **LEXICON LOGI** pointing to tens (LOV) and numbers (ONES)
 
 * **LEXICON ONES** to card and ord
 

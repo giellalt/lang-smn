@@ -6548,33 +6548,7 @@ tbw.
 
 * **LEXICON iLOV**
 
-* **LEXICON iLOVE**
-
-* **LEXICON LOV_OBLi**
-
 * **LEXICON LOV**
-
-* **LEXICON plussLOVE**
-
-* **LEXICON LOV_OBL**
-
-* **LEXICON hcLOV**
-
-* **hcLOV_OBL ;**
-
-* **LEXICON hcLOV_OBL**
-
-* **LEXICON ttLOV**
-
-* **LEXICON ttLOVE**
-
-* **LEXICON LOV_OBLtt**
-
-* **LEXICON mLOV**
-
-* **LEXICON mLOVE**
-
-* **LEXICON mLOV_OBL**
 
 * **LEXICON NUBALOH**
 
@@ -9181,6 +9155,24 @@ given the proper use of these flags.
 | **@D.SpaceCmp.ON@**  | Flag to tag compounds written with a space
 | **@C.SpaceCmp@**  | Flag to tag compounds written with a space
 
+Use the following flag diacritics to control harmony in numeral case inflection
+
+| Flag | Explanation
+| --- | --- 
+|  **@U.Case.SgNom@** | Unifies with case Nominative
+|  **@U.Case.PlNom@** | Unifies with case Nominative
+|  **@U.Case.SgGen@** | Unifies with case Genitive
+|  **@U.Case.PlGen@** | Unifies with case Genitive
+|  **@U.Case.PlAcc@** | Unifies with case Accusative
+|  **@U.Case.SgLoc@** | Unifies with case Locative
+|  **@U.Case.PlLoc@** | Unifies with case Locative
+|  **@U.Case.SgIll@** | Unifies with case Illative
+|  **@U.Case.PlIll@** | Unifies with case Illative
+|  **@U.Case.SgCom@** | Unifies with case Comitative
+|  **@U.Case.Ess@** | Unifies with case Essive
+|  **@U.Number.Sg@** | Unifies with number Singular - perhaps not in use
+|  **@U.Number.Pl@** | Unifies with number Plural - perhaps not in use
+
 Basic lexica, pointing to the other lexicon files
 
 # Lexicon Root where everyting starts
@@ -9506,19 +9498,24 @@ In principle as the above.
 
 * **LEXICON LOGAAT**
 
+## Under hundred
+
+### Numeral agreement, an overview
+Gen' means shortened forms, lov = the ten denominator
+- Nominative: Nom + lov + Nom
+- Genitive: Gen' + lov + Gen
+- Illative: Gen' + lohán + Ill
+- Locative: Gen' + lov + Loc
+- Comitative: Com + lov-Com + Com
+- Essive: Ess + lov-Ess + Com
+
+- Gen' = 
+
 * **LEXICON TENS**
 
-* **LEXICON LOGIi**
+* **LEXICON LOGI2**
 
-* **LEXICON LOGIhc**
-
-* **LEXICON oohceLOGIhc**
-
-* **LEXICON LOGItt**
-
-* **LEXICON LOGI**
-
-* **LEXICON LOGIm**
+* **LEXICON LOGI** pointing to tens (LOV) and numbers (ONES)
 
 * **LEXICON ONES** to card and ord
 

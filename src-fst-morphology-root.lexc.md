@@ -687,6 +687,24 @@ given the proper use of these flags.
 | **@D.SpaceCmp.ON@**  | Flag to tag compounds written with a space
 | **@C.SpaceCmp@**  | Flag to tag compounds written with a space
 
+Use the following flag diacritics to control harmony in numeral case inflection
+
+| Flag | Explanation
+| --- | --- 
+|  **@U.Case.SgNom@** | Unifies with case Nominative
+|  **@U.Case.PlNom@** | Unifies with case Nominative
+|  **@U.Case.SgGen@** | Unifies with case Genitive
+|  **@U.Case.PlGen@** | Unifies with case Genitive
+|  **@U.Case.PlAcc@** | Unifies with case Accusative
+|  **@U.Case.SgLoc@** | Unifies with case Locative
+|  **@U.Case.PlLoc@** | Unifies with case Locative
+|  **@U.Case.SgIll@** | Unifies with case Illative
+|  **@U.Case.PlIll@** | Unifies with case Illative
+|  **@U.Case.SgCom@** | Unifies with case Comitative
+|  **@U.Case.Ess@** | Unifies with case Essive
+|  **@U.Number.Sg@** | Unifies with number Singular - perhaps not in use
+|  **@U.Number.Pl@** | Unifies with number Plural - perhaps not in use
+
 Basic lexica, pointing to the other lexicon files
 
 # Lexicon Root where everyting starts

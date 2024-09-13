@@ -20,33 +20,7 @@
 
 * **LEXICON iLOV**
 
-* **LEXICON iLOVE**
-
-* **LEXICON LOV_OBLi**
-
 * **LEXICON LOV**
-
-* **LEXICON plussLOVE**
-
-* **LEXICON LOV_OBL**
-
-* **LEXICON hcLOV**
-
-* **hcLOV_OBL ;**
-
-* **LEXICON hcLOV_OBL**
-
-* **LEXICON ttLOV**
-
-* **LEXICON ttLOVE**
-
-* **LEXICON LOV_OBLtt**
-
-* **LEXICON mLOV**
-
-* **LEXICON mLOVE**
-
-* **LEXICON mLOV_OBL**
 
 * **LEXICON NUBALOH**
 
