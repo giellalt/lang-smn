@@ -12,30 +12,29 @@
 ! Other licensing options are available upon request, please contact
 ! giellatekno@uit.no or feedback@divvun.no
 
-
 !! # Inari Saami numerals
 
-
-
 LEXICON Numeral !!≈ * **@CODE@**
-HUNDREDSM ;		! 200M
-čyeti HUNDREDM ;	! 100M
-TENSM ;			! 20-99M
-TEENSM ;		! 10-19M
-ONESM ;			! 1-9M
-HUNDREDST ;		! 200000-999999
-HUNDREDST ;		! 200000-999999
-čyeti  HUNDREDT ;	! 100000-100999
-TENST ;			! 20000-99999,10000-10999
-TEENST ;		! 11000-19999
-ONEST ;			! 2000-9999
-tuhháát  THOUSAND ;	! 1000-1999
-UNDERTHOUSAND ;		! 100-999
-TENS ;			! 20-99
-TEENS ;			! 10-19
-ONES ;			! 1-9
+
+HUNDREDSM ;         ! 200M
+čyeti HUNDREDM ;    ! 100M
+TENSM ;             ! 20-99M
+TEENSM ;            ! 10-19M
+ONESM ;             ! 1-9M
+HUNDREDST ;         ! 200000-999999
+HUNDREDST ;         ! 200000-999999
+čyeti  HUNDREDT ;   ! 100000-100999
+TENST ;             ! 20000-99999,10000-10999
+TEENST ;            ! 11000-19999
+ONEST ;             ! 2000-9999
+tuhháát  THOUSAND ; ! 1000-1999
+UNDERTHOUSAND ;     ! 100-999
+TENS ;              ! 20-99
+TEENS ;             ! 10-19
+ONES ;              ! 1-9
+
 num-imprecise ;         ! kalle, ...
-MISCNUM ;			! pelnub
+MISCNUM ;           ! pelnub
 ARABICS          ; ! for the arabic numerals !
 ROMAN           ; ! for the roman numerals  !
 NUM-PREFIXES    ; ! for §34 etc.            !
@@ -44,26 +43,26 @@ LOHKAI ;
 
 
 LEXICON HUNDREDSM   !!≈ * **@CODE@**
-kyehti   CUODIM ;
+kyehti CUODIM ;
 kulmâ  CUODIM ;
 nelji  CUODIM ;
 vittâ  CUODIM ;
 kuttâ  CUODIM ;
-čiččâm  CUODIM ;
-käävci  CUODIM ;
+čiččâm CUODIM ;
+käävci CUODIM ;
 oovce  CUODIM ;
 
 LEXICON CUODIM  !!≈ * **@CODE@**
 čyeti HUNDREDM ;
 
 LEXICON HUNDREDM  !!≈ * **@CODE@**
-TENSM ;
-TEENSM ;
-  ONESM ;
+ TENSM ;
+ TEENSM ;
+ ONESM ;
  MILJON ;
 
 LEXICON TEENSM  !!≈ * **@CODE@**
-  TEENM ;
+ TEENM ;
 
 LEXICON TEENM  !!≈ * **@CODE@**
 ohtâ:oht^RVâ  LOHKAIM ;
@@ -268,36 +267,114 @@ LEXICON CUODI  !!≈ * **@CODE@** 200-699 with +Acc
 čyet HUNDRED ;
 
 LEXICON HUNDRED  !!≈ * **@CODE@**
-TENS ;
-TEENS ;
-  ONES ;
+ TENS ;
+ TEENS ;
+ ONES ;
  CYETI ;
 
 LEXICON TEENS  !!≈ * **@CODE@**
   TEEN ;
 
 LEXICON TEEN  !!≈ * **@CODE@**
-oht LOHKAI ;
-ohtâ LOHKAI ;
-!ohtâ+Err/Orth:oovt LOHKAI ; ! this needs checking
-kyeht LOHKAI ;
-kyehti LOHKAI ;
-!kyehti+Err/Orth:kyevt LOHKAI ; ! this needs checking
-!kyehti+Err/Orth:kyevti LOHKAI ; ! this needs checking
-kulmâ LOHKAI ;
-kulm:kulm LOHKAI ;
-nelji LOHKAI ;
-vitt LOHKAI ;
-vittâ:vittâ LOHKAI ;
-vit:vit LOHKAI ;
-!vittâ+Err/Orth:viđâ LOHKAI ; ! this needs checking
-kutt LOHKAI ;
-kuttâ LOHKAI ;
-kut:kut LOHKAI ;
-!kuttâ+Err/Orth:kuđâ LOHKAI ; ! this needs checking
-čiččâm LOHKAI ;
-käävci LOHKAI ;
-oovce LOHKAI ;
+
+
+@U.Case.SgNom@oht:@U.Case.SgNom@oht LOHKAI ;    ! 
+@U.Case.PlNom@oht:@U.Case.PlNom@ohtâah LOHKAI ;  ! 
+@U.Case.SgGen@oht:@U.Case.SgGen@ohtââ LOHKAI ;   ! 
+@U.Case.PlGen@oht:@U.Case.PlGen@ohtââi LOHKAI ;  ! 
+@U.Case.PlAcc@oht:@U.Case.PlAcc@ohtââid LOHKAI ; ! 
+@U.Case.PlIll@oht:@U.Case.PlIll@ohtâid LOHKAI ;  ! 
+@U.Case.PlLoc@oht:@U.Case.PlLoc@ohtâin LOHKAI ;  ! 
+@U.Case.SgCom@oht:@U.Case.SgCom@ohtâin LOHKAI ;  ! 
+  @U.Case.Ess@oht:@U.Case.Ess@ohtân LOHKAI ;       ! 
+
+@U.Case.SgNom@kyeht:@U.Case.SgNom@kyeht LOHKAI ;    ! kulmâlovkuttâ
+@U.Case.PlNom@kyeht:@U.Case.PlNom@kyevtih LOHKAI ;  ! kuulmahlovehkuuđah
+@U.Case.SgGen@kyeht:@U.Case.SgGen@kyevt LOHKAI ;   ! kuulmâlovkuuđâ, kuulmâlovkuuđâst, kuulmâlovkuutân also Loc, Ill
+@U.Case.PlGen@kyeht:@U.Case.PlGen@kuovtij LOHKAI ;  ! kuulmâiluvijku(u)đâi, kuulmâiluvijku(u)đâiguin, also PlCom
+@U.Case.PlAcc@kyeht:@U.Case.PlAcc@kuovtijd LOHKAI ; ! kuulmâidluuvijdkuuđâid
+@U.Case.PlIll@kyeht:@U.Case.PlIll@kuovttijd LOHKAI ;  ! kulmáidluvvijdkuuđáid
+@U.Case.PlLoc@kyeht:@U.Case.PlLoc@kuovttijn LOHKAI ;  ! kulmáinluvvijnkuuđáin
+@U.Case.SgCom@kyeht:@U.Case.SgCom@kuovttijn LOHKAI ;  ! kulmáinluvvijnkuuđáin kulmáinluvvijnovttáin
+@U.Case.Ess@kyeht:@U.Case.Ess@kyehtin LOHKAI ;       ! kulmânlovveenkuttân
+
+@U.Case.SgNom@kulmâ:@U.Case.SgNom@kulmâ LOHKAI ;    ! kulmâlovkuttâ
+@U.Case.PlNom@kulmâ:@U.Case.PlNom@kuulmah LOHKAI ;  ! kuulmahlovehkuuđah
+@U.Case.SgGen@kulmâ:@U.Case.SgGen@kuulmâ LOHKAI ;   ! kuulmâlovkuuđâ, kuulmâlovkuuđâst, kuulmâlovkuutân also Loc, Ill
+@U.Case.PlGen@kulmâ:@U.Case.PlGen@kuulmâi LOHKAI ;  ! kuulmâiluvijku(u)đâi, kuulmâiluvijku(u)đâiguin, also PlCom
+@U.Case.PlAcc@kulmâ:@U.Case.PlAcc@kuulmâid LOHKAI ; ! kuulmâidluuvijdkuuđâid
+@U.Case.PlIll@kulmâ:@U.Case.PlIll@kulmáid LOHKAI ;  ! kulmáidluvvijdkuuđáid
+@U.Case.PlLoc@kulmâ:@U.Case.PlLoc@kulmáin LOHKAI ;  ! kulmáinluvvijnkuuđáin
+@U.Case.SgCom@kulmâ:@U.Case.SgCom@kulmáin LOHKAI ;  ! kulmáinluvvijnkuuđáin kulmáinluvvijnovttáin
+@U.Case.Ess@kulmâ:@U.Case.Ess@kulmân LOHKAI ;       ! kulmânlovveenkuttân
+
+@U.Case.SgNom@nelji:@U.Case.SgNom@nelji LOHKAI ;    ! kulmâlovkuttâ
+@U.Case.PlNom@nelji:@U.Case.PlNom@neeljih LOHKAI ;  ! kuulmahlovehkuuđah
+@U.Case.SgGen@nelji:@U.Case.SgGen@neelji LOHKAI ;   ! kuulmâlovkuuđâ, kuulmâlovkuuđâst, kuulmâlovkuutân also Loc, Ill
+@U.Case.PlGen@nelji:@U.Case.PlGen@neeljij LOHKAI ;  ! kuulmâiluvijku(u)đâi, kuulmâiluvijku(u)đâiguin, also PlCom
+@U.Case.PlGen@nelji:@U.Case.PlGen@neljij LOHKAI ;   ! kuulmâiluvijku(u)đâi, kuulmâiluvijku(u)đâiguin, also PlCom
+@U.Case.PlAcc@nelji:@U.Case.PlAcc@neeljijd LOHKAI ; ! kuulmâidluuvijdkuuđâid
+@U.Case.PlIll@nelji:@U.Case.PlIll@neljijd LOHKAI ;  ! kulmáidluvvijdkuuđáid
+@U.Case.PlLoc@nelji:@U.Case.PlLoc@neljijn LOHKAI ;  ! kulmáinluvvijnkuuđáin
+@U.Case.SgCom@nelji:@U.Case.SgCom@neljijn LOHKAI ;  ! kulmáinluvvijnkuuđáin kulmáinluvvijnovttáin
+@U.Case.Ess@nelji:@U.Case.Ess@neljin LOHKAI ;       ! kulmânlovveenkuttân
+
+@U.Case.SgNom@vitt:@U.Case.SgNom@vitt LOHKAI ;    
+@U.Case.SgNom@vitt:@U.Case.SgNom@vit LOHKAI ;     
+@U.Case.PlNom@vitt:@U.Case.PlNom@viiđah LOHKAI ;  
+@U.Case.SgGen@vitt:@U.Case.SgGen@viđâ LOHKAI ;    
+@U.Case.PlGen@vitt:@U.Case.PlGen@viđâi LOHKAI ;   
+@U.Case.PlGen@vitt:@U.Case.PlGen@viiđâi LOHKAI ;  
+@U.Case.PlAcc@vitt:@U.Case.PlAcc@viiđâid LOHKAI ; 
+@U.Case.PlIll@vitt:@U.Case.PlIll@viiđâid LOHKAI ; 
+@U.Case.PlLoc@vitt:@U.Case.PlLoc@viiđáin LOHKAI ; 
+@U.Case.SgCom@vitt:@U.Case.SgCom@viiđáin LOHKAI ; 
+@U.Case.Ess@vitt:@U.Case.Ess@vittân LOHKAI ;      
+
+@U.Case.SgNom@kutt:@U.Case.SgNom@kutt LOHKAI ;   
+@U.Case.SgNom@kutt:@U.Case.SgNom@kut LOHKAI ;    
+@U.Case.PlNom@kutt:@U.Case.PlNom@kuuđah LOHKAI ; 
+@U.Case.SgGen@kutt:@U.Case.SgGen@kuđâ LOHKAI ;   
+@U.Case.PlGen@kutt:@U.Case.PlGen@kuđâi LOHKAI ;  
+@U.Case.PlGen@kutt:@U.Case.PlGen@kuuđâi LOHKAI ; 
+@U.Case.PlAcc@kutt:@U.Case.PlAcc@kuuđâid LOHKAI ;
+@U.Case.PlIll@kutt:@U.Case.PlIll@kuuđâid LOHKAI ;
+@U.Case.PlLoc@kutt:@U.Case.PlLoc@kuuđáin LOHKAI ;
+@U.Case.SgCom@kutt:@U.Case.SgCom@kuuđáin LOHKAI ;
+@U.Case.Ess@kutt:@U.Case.Ess@kuttân LOHKAI ;     
+
+@U.Case.SgNom@čiččâm:@U.Case.SgNom@čiččâm LOHKAI ; ! čiččâmlovkuttâ
+@U.Case.PlNom@čiččâm:@U.Case.PlNom@čiččâm LOHKAI ; ! čiččâmlovehkuuđah
+@U.Case.SgGen@čiččâm:@U.Case.SgGen@čiččâm LOHKAI ; ! čiččâmlovkuuđâ, kuulmâlovkuuđâst, kuulmâlovkuutân also Loc, Ill
+@U.Case.PlGen@čiččâm:@U.Case.PlGen@čiččâm LOHKAI ; ! čiččâmluvijku(u)đâi, kuulmâiluvijku(u)đâiguin, also PlCom
+@U.Case.PlAcc@čiččâm:@U.Case.PlAcc@čiččâm LOHKAI ; ! čiččâmluuvijdkuuđâid
+@U.Case.PlIll@čiččâm:@U.Case.PlIll@čiččâm LOHKAI ; ! čiččâmluvvijdkuuđáid
+@U.Case.PlLoc@čiččâm:@U.Case.PlLoc@čiččâm LOHKAI ; ! čiččâmluvvijnkuuđáin
+@U.Case.SgCom@čiččâm:@U.Case.SgCom@čiččâm LOHKAI ; ! čiččâmluvvijnkuuđáin kulmáinluvvijnovttáin
+@U.Case.Ess@čiččâm:@U.Case.Ess@čiččâm LOHKAI ;     ! čiččâmlovveenkuttân
+
+@U.Case.SgNom@käävci:@U.Case.SgNom@käävci LOHKAI ;   
+@U.Case.PlNom@käävci:@U.Case.PlNom@käävcih LOHKAI ;  
+@U.Case.SgGen@käävci:@U.Case.SgGen@käävci LOHKAI ;   
+@U.Case.PlGen@käävci:@U.Case.PlGen@kavcij LOHKAI ;   
+@U.Case.PlGen@käävci:@U.Case.PlGen@kaavcij LOHKAI ;  
+@U.Case.PlAcc@käävci:@U.Case.PlAcc@kaavcijd LOHKAI ; 
+@U.Case.PlIll@käävci:@U.Case.PlIll@kavccijd LOHKAI ; 
+@U.Case.PlLoc@käävci:@U.Case.PlLoc@kavccijn LOHKAI ; 
+@U.Case.SgCom@käävci:@U.Case.SgCom@kavccijn LOHKAI ; 
+  @U.Case.Ess@käävci:@U.Case.Ess@käävcin LOHKAI ;    
+
+@U.Case.SgNom@oovce:@U.Case.SgNom@oovce LOHKAI ;   ! oovcenubáloh
+@U.Case.PlNom@oovce:@U.Case.PlNom@oovceh LOHKAI ;  ! oovcehnubálov
+@U.Case.SgGen@oovce:@U.Case.SgGen@oovce LOHKAI ;   ! oovcenubálov, oovcenubálovveest, oovcenubálohán
+@U.Case.PlGen@oovce:@U.Case.PlGen@ovcij LOHKAI ;   ! ovcijnubáluvij
+@U.Case.PlGen@oovce:@U.Case.PlGen@oovcij LOHKAI ;  ! oovcijnubálunij
+@U.Case.PlAcc@oovce:@U.Case.PlAcc@oovcijd LOHKAI ; ! oovcijdnubáluuvijd
+@U.Case.PlIll@oovce:@U.Case.PlIll@ovccijd LOHKAI ; ! ovccijdnubáluvvijd
+@U.Case.PlLoc@oovce:@U.Case.PlLoc@ovccijn LOHKAI ; ! ovccijdnubáluvvijn
+@U.Case.SgCom@oovce:@U.Case.SgCom@ovccijn LOHKAI ; ! ovccijnnubáluvvijn
+  @U.Case.Ess@oovce:@U.Case.Ess@ohcen LOHKAI ;     ! oovcenubálohheen
+
 
 
 LEXICON LOHKAI  !!≈ * **@CODE@**
@@ -306,7 +383,7 @@ nubáloh+Err/Orth:nuba# NUBALOH ;
  LOGAAT ;
 
 LEXICON LOGAAT  !!≈ * **@CODE@**
-nubálovváád+A+Ord:nubá#lovváád  X_EEMEED ; 
+nubálovváád+A+Ord:nubá#lovváád  X_EEMEED ; ! to be fixed for flags
 
 
 !! ## Under hundred
@@ -345,7 +422,15 @@ nubálovváád+A+Ord:nubá#lovváád  X_EEMEED ;
 LEXICON TENS  !!≈ * **@CODE@**
 lovváád+A+Ord:lovváád X_EEMEED ; 
 
-kyeht:kyeht^RC LOGI2 ;
+@U.Case.SgNom@kyeht:@U.Case.SgNom@kyeht LOGI ;    ! kyehtlovkuttâ
+@U.Case.PlNom@kyeht:@U.Case.PlNom@kyevtih LOGI ;  ! kuulmahlovehkuuđah
+@U.Case.SgGen@kyeht:@U.Case.SgGen@kyevt LOGI ;   ! kyevtlovkuuđâ, kyevtlovkuuđâst, kyevtlovkuutân also Loc, Ill
+@U.Case.PlGen@kyeht:@U.Case.PlGen@kuovtij LOGI ;  ! kuulmâiluvijku(u)đâi, kuulmâiluvijku(u)đâiguin, also PlCom
+@U.Case.PlAcc@kyeht:@U.Case.PlAcc@kuovtijd LOGI ; ! kuulmâidluuvijdkuuđâid
+@U.Case.PlIll@kyeht:@U.Case.PlIll@kuovttijd LOGI ;  ! kulmáidluvvijdkuuđáid
+@U.Case.PlLoc@kyeht:@U.Case.PlLoc@kuovttijn LOGI ;  ! kulmáinluvvijnkuuđáin
+@U.Case.SgCom@kyeht:@U.Case.SgCom@kuovttijn LOGI ;  ! kuovttijnluvvijnkuuđáin kuovttijnluvvijnovttáin
+@U.Case.Ess@kyeht:@U.Case.Ess@kyehtin LOGI ;       ! kyehtinlovveenkuttân
 
 @U.Case.SgNom@kulmâ:@U.Case.SgNom@kulmâ LOGI ;    ! kulmâlovkuttâ
 @U.Case.PlNom@kulmâ:@U.Case.PlNom@kuulmah LOGI ;  ! kuulmahlovehkuuđah
@@ -357,8 +442,6 @@ kyeht:kyeht^RC LOGI2 ;
 @U.Case.SgCom@kulmâ:@U.Case.SgCom@kulmáin LOGI ;  ! kulmáinluvvijnkuuđáin kulmáinluvvijnovttáin
 @U.Case.Ess@kulmâ:@U.Case.Ess@kulmân LOGI ;       ! kulmânlovveenkuttân
 
-!nelji:ne^RVlji LOGI ;
-
 @U.Case.SgNom@nelji:@U.Case.SgNom@nelji LOGI ;    ! kulmâlovkuttâ
 @U.Case.PlNom@nelji:@U.Case.PlNom@neeljih LOGI ;  ! kuulmahlovehkuuđah
 @U.Case.SgGen@nelji:@U.Case.SgGen@neelji LOGI ;   ! kuulmâlovkuuđâ, kuulmâlovkuuđâst, kuulmâlovkuutân also Loc, Ill
@@ -369,8 +452,6 @@ kyeht:kyeht^RC LOGI2 ;
 @U.Case.PlLoc@nelji:@U.Case.PlLoc@neljijn LOGI ;  ! kulmáinluvvijnkuuđáin
 @U.Case.SgCom@nelji:@U.Case.SgCom@neljijn LOGI ;  ! kulmáinluvvijnkuuđáin kulmáinluvvijnovttáin
 @U.Case.Ess@nelji:@U.Case.Ess@neljin LOGI ;       ! kulmânlovveenkuttân
-
-!vitt:vi LOGItt ;
 
 @U.Case.SgNom@vitt:@U.Case.SgNom@vitt LOGI ;    ! kulmâlovkuttâ
 @U.Case.SgNom@vitt:@U.Case.SgNom@vit LOGI ;     ! kulmâlovkuttâ
@@ -384,8 +465,6 @@ kyeht:kyeht^RC LOGI2 ;
 @U.Case.SgCom@vitt:@U.Case.SgCom@viiđáin LOGI ; ! kulmáinluvvijnkuuđáin kulmáinluvvijnovttáin
 @U.Case.Ess@vitt:@U.Case.Ess@vittân LOGI ;      ! kulmânlovveenkuttân
 
-!kutt:ku LOGItt ;
-
 @U.Case.SgNom@kutt:@U.Case.SgNom@kutt LOGI ;    ! kulmâlovkuttâ
 @U.Case.SgNom@kutt:@U.Case.SgNom@kut LOGI ;     ! kulmâlovkuttâ
 @U.Case.PlNom@kutt:@U.Case.PlNom@kuuđah LOGI ;  ! kuulmahlovehkuuđah
@@ -398,19 +477,15 @@ kyeht:kyeht^RC LOGI2 ;
 @U.Case.SgCom@kutt:@U.Case.SgCom@kuuđáin LOGI ; ! kulmáinluvvijnkuuđáin kulmáinluvvijnovttáin
 @U.Case.Ess@kutt:@U.Case.Ess@kuttân LOGI ;      ! kulmânlovveenkuttân
 
-!čiččâm:čičč5âm LOGIm ;
-
-@U.Case.SgNom@čiččâm:@U.Case.SgNom@čiččâm LOGI ; ! kulmâlovkuttâ
-@U.Case.PlNom@čiččâm:@U.Case.PlNom@čiččâm LOGI ; ! kuulmahlovehkuuđah
-@U.Case.SgGen@čiččâm:@U.Case.SgGen@čiččâm LOGI ; ! kuulmâlovkuuđâ, kuulmâlovkuuđâst, kuulmâlovkuutân also Loc, Ill
-@U.Case.PlGen@čiččâm:@U.Case.PlGen@čiččâm LOGI ; ! kuulmâiluvijku(u)đâi, kuulmâiluvijku(u)đâiguin, also PlCom
-@U.Case.PlAcc@čiččâm:@U.Case.PlAcc@čiččâm LOGI ; ! kuulmâidluuvijdkuuđâid
-@U.Case.PlIll@čiččâm:@U.Case.PlIll@čiččâm LOGI ; ! kulmáidluvvijdkuuđáid
-@U.Case.PlLoc@čiččâm:@U.Case.PlLoc@čiččâm LOGI ; ! kulmáinluvvijnkuuđáin
-@U.Case.SgCom@čiččâm:@U.Case.SgCom@čiččâm LOGI ; ! kulmáinluvvijnkuuđáin kulmáinluvvijnovttáin
-@U.Case.Ess@čiččâm:@U.Case.Ess@čiččâm LOGI ;     ! kulmânlovveenkuttân
-
-!kähci:kä^RVhc^RCi LOGIhc ;
+@U.Case.SgNom@čiččâm:@U.Case.SgNom@čiččâm LOGI ; ! čiččâmlovkuttâ
+@U.Case.PlNom@čiččâm:@U.Case.PlNom@čiččâm LOGI ; ! čiččâmlovehkuuđah
+@U.Case.SgGen@čiččâm:@U.Case.SgGen@čiččâm LOGI ; ! čiččâmlovkuuđâ, kuulmâlovkuuđâst, kuulmâlovkuutân also Loc, Ill
+@U.Case.PlGen@čiččâm:@U.Case.PlGen@čiččâm LOGI ; ! čiččâmluvijku(u)đâi, kuulmâiluvijku(u)đâiguin, also PlCom
+@U.Case.PlAcc@čiččâm:@U.Case.PlAcc@čiččâm LOGI ; ! čiččâmluuvijdkuuđâid
+@U.Case.PlIll@čiččâm:@U.Case.PlIll@čiččâm LOGI ; ! čiččâmluvvijdkuuđáid
+@U.Case.PlLoc@čiččâm:@U.Case.PlLoc@čiččâm LOGI ; ! čiččâmluvvijnkuuđáin
+@U.Case.SgCom@čiččâm:@U.Case.SgCom@čiččâm LOGI ; ! čiččâmluvvijnkuuđáin kulmáinluvvijnovttáin
+@U.Case.Ess@čiččâm:@U.Case.Ess@čiččâm LOGI ;     ! čiččâmlovveenkuttân
 
 @U.Case.SgNom@kähci:@U.Case.SgNom@kähci LOGI ;    ! kulmâlovkuttâ
 @U.Case.PlNom@kähci:@U.Case.PlNom@käävcih LOGI ;  ! kuulmahlovehkuuđah
@@ -422,8 +497,6 @@ kyeht:kyeht^RC LOGI2 ;
 @U.Case.PlLoc@kähci:@U.Case.PlLoc@kavccijn LOGI ; ! kulmáinluvvijnkuuđáin
 @U.Case.SgCom@kähci:@U.Case.SgCom@kavccijn LOGI ; ! kulmáinluvvijnkuuđáin kulmáinluvvijnovttáin
 @U.Case.Ess@kähci:@U.Case.Ess@kähcin LOGI ;       ! kulmânlovveenkuttân
-
-!ohce:o^RVhc^RCe LOGIhc ;
 
 @U.Case.SgNom@ohce:@U.Case.SgNom@ohce LOGI ;    ! kulmâlovkuttâ
 @U.Case.PlNom@ohce:@U.Case.PlNom@oovceh LOGI ;  ! kuulmahlovehkuuđah
@@ -437,16 +510,12 @@ kyeht:kyeht^RC LOGI2 ;
 @U.Case.Ess@ohce:@U.Case.Ess@ohcen LOGI ;       ! kulmânlovveenkuttân
 
 muáddi:muáddi LOV ;
-muádlov:muád#  iLOV ;
 
-LEXICON LOGI2  !!≈ * **@CODE@**
-lov: iLOV ;
-lov: ONES ;
 
 
 
 LEXICON LOGI  !!≈ * **@CODE@** pointing to tens (LOV) and numbers (ONES)
-lov: LOV ; ! For whole tens
+ LOV ; ! For whole tens
 @U.Case.SgNom@lov:@U.Case.SgNom@lov ONES ;
 @U.Case.PlNom@lov:@U.Case.PlNom@loveh ONES ;
 @U.Case.SgGen@lov:@U.Case.SgGen@lov ONES ;
