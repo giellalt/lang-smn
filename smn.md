@@ -9171,6 +9171,19 @@ Use the following flag diacritics to control harmony in numeral case inflection
 |  **@U.Number.Sg@** | Unifies with number Singular - perhaps not in use
 |  **@U.Number.Pl@** | Unifies with number Plural - perhaps not in use
 
+| Flag diacritic | Explanation
+| :------------- |:-----------
+| @U.number.one@ | Flag used to give arabic numerals in smj different cases ;
+| @U.number.two@ | Flag used to give arabic numerals in smj different cases ;
+| @U.number.three@ | Flag used to give arabic numerals in smj different cases ;
+| @U.number.four@ | Flag used to give arabic numerals in smj different cases ;
+| @U.number.five@ | Flag used to give arabic numerals in smj different cases ;
+| @U.number.six@ | Flag used to give arabic numerals in smj different cases ;
+| @U.number.seven@ | Flag used to give arabic numerals in smj different cases ;
+| @U.number.eight@ | Flag used to give arabic numerals in smj different cases ;
+| @U.number.nine@ | Flag used to give arabic numerals in smj different cases ;
+| @U.number.zero@ | Flag used to give arabic numerals in smj different cases ;
+
 Basic lexica, pointing to the other lexicon files
 
 # Lexicon Root where everyting starts
