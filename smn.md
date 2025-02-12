@@ -14460,8 +14460,6 @@ Denne regelen fjerner Err/Orth når det er samme lemma, sjøl om morfologien er 
 
 * **errsub** removes err/orth forms
 
-Test: Go for minimal weight.
-
 # Substitute rules
 
 These 12 substitute rules add the <smn> language code to all words, to govern 
