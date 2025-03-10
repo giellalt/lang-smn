@@ -6594,6 +6594,10 @@ tbw.
 
 * **LEXICON ARABICCASEORD-ERR**
 
+* __LEXICON ARABICLOOPCOLL__ collectives
+
+* __LEXICON ARABICDELIMITERCOLL__ collectives
+
 * **LEXICON ARABICCASECOLL**
 
 * **LEXICON ROMNUMTAGOBL**
@@ -9537,6 +9541,8 @@ Gen' means shortened forms, lov = the ten denominator
 logigielat, etc. 2nd part in affixes/adjectives.lexc
 
 * **LEXICON ORDINAL**
+
+* __LEXICON ARABIC-COLL__
 
 * * *
 
