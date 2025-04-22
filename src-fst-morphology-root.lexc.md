@@ -41,6 +41,7 @@ This file documents the Inari Sámi morphological analyser. The tags in bold are
 * **+Gram/TIAbbr**:  Both transitive and intransitive abbreviation
 * **+Gram/IAbbr**:  Intransitive abbreviation (it takes no argument)
 * **+Gram/3syll**: trisyllabic verbs
+* **+Span** - used for numerical expressions denoting spans or intervals, like 5-10, 2012-2015, etc  
 
 ## Grammatical properties
 
