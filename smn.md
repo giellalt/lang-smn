@@ -9431,7 +9431,11 @@ From missinglist
 
 # Inari Saami numerals
 
+## Main lexicon
+
 * **LEXICON Numeral**
+
+## The million layer
 
 * **LEXICON HUNDREDSM**
 
@@ -9453,7 +9457,7 @@ From missinglist
 
 * **LEXICON MILJON**
 
-# Under the million
+## The under the million
 
 In principle as the above.
 
