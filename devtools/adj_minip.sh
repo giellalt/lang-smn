@@ -16,8 +16,8 @@ PATTERN=$1
 L_FILE="in.txt"
 cut -d '!' -f1 src/fst/morphology/stems/adjectives.lexc | egrep $PATTERN |grep -v Err | tr '+' ':' | cut -d ':' -f1>$L_FILE
 
-#P_FILE="test/data/testadjparadigm.txt"
-P_FILE="test/data/adj_paradigm.txt"
+#P_FILE="src/fst/morphology/test/testadjparadigm.txt"
+P_FILE="src/fst/morphology/test/adj_paradigm.txt"
 
 for lemma in $(cat $L_FILE);
 do

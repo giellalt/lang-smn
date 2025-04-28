@@ -19,7 +19,7 @@ PATTERN=$1
 L_FILE="in.txt"
 cut -d '!' -f1 src/fst/morphology/stems/pronouns.lexc | egrep $PATTERN |grep -v Err | tr '+' ':'| cut -d ':' -f1>$L_FILE
 
-P_FILE="test/data/testrelpronparadigm.txt"
+P_FILE="src/fst/morphology/test/testrelpronparadigm.txt"
 
 for lemma in $(cat $L_FILE);
 do
