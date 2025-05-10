@@ -2,13 +2,13 @@
 # Test script for proper noun lemma generation
 #
 # change settings here:
-POS=propernouns
+POS=smn-propernouns
 source_file=@abs_srcdir@/../stems/${POS}.lexc
 generator_file=@abs_builddir@/../../generator-gt-norm
 analyser_file=@abs_builddir@/../../analyser-gt-norm
 tags="+N+Prop+Sg+Nom"
 # advanced settings (leave empty or write full args)
-xtags=
+xtags="-t +N+Prop+Pl+Nom -t +N+Prop+Attr"
 inclusions=
 exclusions="--exclude '(FirstTag|Proper_infix|\+Use\/MT)'"
 # avoid changing common sritping stuff here:
