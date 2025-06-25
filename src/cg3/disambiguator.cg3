@@ -523,7 +523,7 @@ LIST INITIAL = "a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m"
 
 LIST WORD = N A Adv V Pron CS CC Po Pr Interj Pcle Num ABBR ACR  \? ; #!! WORD
  # any word
-# SET REAL-WORD = WORD - Num - Ord ; #!! REAL-WORD
+SET REAL-WORD = WORD - Num - Ord ; #!! REAL-WORD
 SET REAL-WORD-NOT-ABBR = WORD - Num - Ord - (ABBR N) ; # This is former REALWORD-NOTABBR #!! REAL-WORD-NOT-ABBR
 SET WORD-NOT-de = WORD - ("joo") ; #!! WORD-NOT-de
 SET NOT-COMMA = WORD - COMMA ;  #!! NOT-COMMA
@@ -1332,8 +1332,9 @@ LIST VAHKKU-TIME = "b" "pessijááh" "biidnovahkku" "bievlajahki" "bivdoáigi" (
  
 SET VAHKKU = VAHKKU-DUR OR VAHKKU-TIME ;
  
-LIST JAHKI-NUM = "ihe" "skuvlajahki" ;
+LIST JAHKI-NUM = "ihe" "škovlâihe" ;
 
+LIST MAAOAA = "mäa" "moa" "mKr." "oKr." ; # 
     # Years which can be numerated
  
 # LIST PARTTIME = "čavčča#bealle" ;
@@ -2158,6 +2159,8 @@ REMOVE:sasjnum (Abe Attr) IF (0 Num + Gen)(1 ("<.*sâš>"r));
 #!! * **NotOrdIfABBR**
 REMOVE:NotOrdIfABBR Ord IF (0 ABBR) ;
 
+
+#!! * Nom
 
 
 #!! ## Imperatives
@@ -3418,7 +3421,26 @@ SELECT:NumAccCurrency (Num Acc) IF (NEGATE *-1 COPULAS BARRIER NOT-ADV - CLB)(NE
 SELECT:NumNom (Num Nom) IF  (-1 ABBR OR ACR OR ("§") OR ("paragráfa") OR ("káppálâh") OR HEADOFPARTS OR JAHKI-NUM OR TEXT LINK NOT 0 Ess)(NEGATE -1 ("b" ABBR))(NEGATE -1 ("nr"))(0 Num)(NEGATE 1 Ill - Attr OR Loc - Attr)(NEGATE -1 JAHKI-NUM OR TEXT LINK 2 Po);
 	#$ ... maid KITH gárvvistii ja almmuhii geasset 2001.
 	#$ Son vuittii Davviriikkaid Ráđi girjjálašvuođabálkkašumi jagi 1991 dán girjji ovddas.
-	
+
+#!! * **NumNom** Selects (Num Nom) 
+SELECT:NumNom (Num Nom) IF  (-1 JAHKI-NUM)(0 Sem/Year);
+
+#!! * **NumNom** Selects (Num Nom) 
+SELECT:NumNom (Num Nom) IF (0 Sem/Year)  (1 JAHKI-NUM);
+
+#!! * **NumNom** Selects (Num Nom) 
+SELECT:NumNom (Num Nom) IF (0 Num)  (1 JAHKI-NUM - Gen);
+
+#!! * **NumNom** Selects (Num Nom) 
+SELECT:NumNom (Num Nom) IF  (0 Num)(1 MAAOAA) ;
+
+#!! * **NumNom** Selects (Num Nom) between para
+SELECT:NumNom (Num Nom) IF  (-1 PUNCT + LEFT) (0 Num)(1 PUNCT + RIGHT) ;
+
+#!! * **NumNom** Selects (Num Nom) in equation
+SELECT:NumNom (Num Nom) IF  (*-1 BOS BARRIER REAL-WORD) (0 Num)(*1 EOS OR CLB BARRIER REAL-WORD);
+
+
 #!! * **NumNomCoord** Selects (Num Nom) 
 SELECT:NumNomCoord (Num Nom) IF  (-1 ("já") OR ("dahje") LINK -1 Num LINK -1 ABBR OR ACR OR ("§") OR ("paragráfa") OR ("káppálâh") OR HEADOFPARTS OR JAHKI-NUM OR TEXT LINK NOT 0 Ess)(NEGATE -1 ("b" ABBR))(NEGATE -1 ("nr"))(0 Num)(NEGATE 1 Ill - Attr OR Loc - Attr);
 	#$ Riekti oaivvilda dán vuoigatvuođadilálašvuođa dál sáhttit lea ain eanet cieggan almmá vuostálastima haga nu go leamaš vássán áiggis gitta das rájes go advokáhta Schiefloe almmuhii girjjiidis jagiin 1952 ja 1955.
