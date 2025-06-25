@@ -292,6 +292,7 @@ INITIAL
 ### Sets for word or not
 
 WORD
+REAL-WORD
 WORD-NOT-de
 NOT-COMMA
 
@@ -524,6 +525,8 @@ Remove all **Sem/ID**
 * **sasjnum** chooses num gen to the left of sâš
 
 * **NotOrdIfABBR**
+
+* Nom
 
 ## Imperatives
 
@@ -892,6 +895,18 @@ Mostly we map both @CNP and @CVP, then we select @CNP, after that we remove them
 * **NumAccCurrency** Selects (Num Acc)	
 
 * **NumNom** Selects (Num Nom) 
+
+* **NumNom** Selects (Num Nom) 
+
+* **NumNom** Selects (Num Nom) 
+
+* **NumNom** Selects (Num Nom) 
+
+* **NumNom** Selects (Num Nom) 
+
+* **NumNom** Selects (Num Nom) between para
+
+* **NumNom** Selects (Num Nom) in equation
 
 * **NumNomCoord** Selects (Num Nom) 
 

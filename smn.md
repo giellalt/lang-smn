@@ -2979,6 +2979,7 @@ INITIAL
 ### Sets for word or not
 
 WORD
+REAL-WORD
 WORD-NOT-de
 NOT-COMMA
 
@@ -3211,6 +3212,8 @@ Remove all **Sem/ID**
 * **sasjnum** chooses num gen to the left of sâš
 
 * **NotOrdIfABBR**
+
+* Nom
 
 ## Imperatives
 
@@ -3579,6 +3582,18 @@ Mostly we map both @CNP and @CVP, then we select @CNP, after that we remove them
 * **NumAccCurrency** Selects (Num Acc)	
 
 * **NumNom** Selects (Num Nom) 
+
+* **NumNom** Selects (Num Nom) 
+
+* **NumNom** Selects (Num Nom) 
+
+* **NumNom** Selects (Num Nom) 
+
+* **NumNom** Selects (Num Nom) 
+
+* **NumNom** Selects (Num Nom) between para
+
+* **NumNom** Selects (Num Nom) in equation
 
 * **NumNomCoord** Selects (Num Nom) 
 
@@ -6795,6 +6810,8 @@ ANAR DUBAI DUBAI-plc DUBAI-sur MAKI
 * **LEXICON MOKKE-mal** similar to ALGE 
 
 * **LEXICON MOKKE-ani** similar to ALGE 
+
+* **LEXICON MOKKE-obj** similar to ALGE 
 
 * **LEXICON NIJTTO**
 
@@ -15188,3 +15205,13 @@ Needs hfst-tokenise to output things differently depending on the tag they get
 * * *
 
 <small>This (part of) documentation was generated from [tools/tokenisers/tokeniser-tts-cggt-desc.pmscript](https://github.com/giellalt/lang-smn/blob/main/tools/tokenisers/tokeniser-tts-cggt-desc.pmscript)</small>
+
+---
+
+# tools-tts-valency.cg3.md 
+
+
+
+* * *
+
+<small>This (part of) documentation was generated from [tools/tts/valency.cg3](https://github.com/giellalt/lang-smn/blob/main/tools/tts/valency.cg3)</small>

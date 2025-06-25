@@ -147,6 +147,8 @@ ANAR DUBAI DUBAI-plc DUBAI-sur MAKI
 
 * **LEXICON MOKKE-ani** similar to ALGE 
 
+* **LEXICON MOKKE-obj** similar to ALGE 
+
 * **LEXICON NIJTTO**
 
 * **LEXICON NIJTTO-plc**  Similar to SIJVO
