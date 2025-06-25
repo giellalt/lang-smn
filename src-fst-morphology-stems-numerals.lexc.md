@@ -69,13 +69,17 @@ In principle as the above.
 
 * **LEXICON UNDERTHOUSAND**
 
-* **LEXICON SEVENHUNDREDS** 700-900 with +Par
+* **LEXICON HUNDREDS** 200-999
 
-* **LEXICON TWOHUNDREDS** 200-699 with +Acc
+* **LEXICON KULMACUODI** maaŋgâi
 
-* **LEXICON SEVENCUODI** 700-900 with +Par
+* **LEXICON VITTACUODI**
 
-* **LEXICON CUODI** 200-699 with +Acc
+* **LEXICON KULMA_VITTACUODI**
+
+* **LEXICON CICCAMCUODI** 700-900 with +Par, we comment Par out
+
+* **LEXICON CUODI** to be emptied for *CYEDE
 
 * **LEXICON HUNDRED**
 
@@ -98,7 +102,7 @@ Gen' means shortened forms, lov = the ten denominator
 - Comitative: Com + lov-Com + Com
 - Essive: Ess + lov-Ess + Com
 
-- Gen' = 
+- Gen' =
 
 * **LEXICON TENS**
 
@@ -110,7 +114,7 @@ Gen' means shortened forms, lov = the ten denominator
 
 * **LEXICON MISCNUM**
 
-* **LEXICON ARABICCOMPOUNDS**   arabic as first part, 
+* **LEXICON ARABICCOMPOUNDS**   arabic as first part,
 
 * **LEXICON NUMERALCOMPOUNDS**: numeral as first part: duhatjienat,
 logigielat, etc. 2nd part in affixes/adjectives.lexc
