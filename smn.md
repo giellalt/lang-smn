@@ -9182,6 +9182,7 @@ Use the following flag diacritics to control harmony in numeral case inflection
 | --- | --- 
 |  **@U.Case.SgNom@** | Unifies with case Nominative
 |  **@U.Case.PlNom@** | Unifies with case Nominative
+|  **@U.Case.SgAcc@** | Unifies with case Accusative
 |  **@U.Case.SgGen@** | Unifies with case Genitive
 |  **@U.Case.PlGen@** | Unifies with case Genitive
 |  **@U.Case.PlAcc@** | Unifies with case Accusative
