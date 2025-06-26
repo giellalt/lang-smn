@@ -16,7 +16,7 @@ GIELLA_ANL_FUNCTIONS_SRC=functions.cg3
 GIELLA_ANL_DEPENDENCY_SRC=dependency.cg3
 
 # Tokeniser:
-GIELLA_ANL_TOKENISER=tokeniser-disamb-gt-desc.pmhfst
+GIELLA_ANL_TOKENISER=tokeniser-tts-cggt-desc.pmhfst
 
 # List transcriptor source files from src/transcriptions/ (without extension)
 # that should NOT be included in the tts text processing (by default everything
@@ -25,9 +25,26 @@ GIELLA_ANL_REMOVE_TRANSCRIPTORS=transcriptor-date-digit2text
 
 # If there are additional, language specific files used in the GC archive,
 # specify here:
-LOCAL_ANL_ZIP_FILES=
-
+LOCAL_ANL_ZIP_FILES=generated-remove-lexicalised-compounds.bin \
+					acro2text.hfstol \
+					text2phontext.hfstol
+  
 #### BEGIN: Local build targets: ####
+
+# Copy to file with another name, to work around VPATH / CG3 INCLUDE incomps:
+generated-remove-lexicalised-compounds.cg3: remove-lexicalised-compounds.cg3
+	$(AM_V_CP)cp -f $< $@
+
+# Compile acro conversion to spelled out letters:
+acro2text.hfstol: acro2text.regex
+	$(AM_V_RGX2FST)$(HFST_REGEXP2FST) -S -i $< \
+		| $(HFST_FST2FST) -O -o $@
+
+# Convert normalised text to some sort of phonemic form:
+text2phontext.hfstol: text2phontext.regex
+	$(AM_V_RGX2FST)$(HFST_REGEXP2FST) -S -i $< \
+		| $(HFST_FST2FST) -O -o $@
+
 
 #### END: Local build targets:   ####
 
