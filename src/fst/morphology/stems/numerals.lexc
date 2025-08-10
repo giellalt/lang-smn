@@ -100,7 +100,7 @@ LEXICON LOGIM  !!≈ * **@CODE@**
  love MILJON ;
  love ONESM  ;
 
-LEXICON ONESM  !!≈ * **@CODE@**
+LEXICON ONESM            !!≈ * **@CODE@**
  miljon%  OVERTHOUSANDS ;
    kyehti MILJON        ;
     kulmâ MILJON        ;
@@ -112,7 +112,7 @@ LEXICON ONESM  !!≈ * **@CODE@**
     oovce MILJON        ;
 
 LEXICON MILJON  !!≈ * **@CODE@**
- % miljona%  OVERTHOUSANDS ;
+ % miljona%   OVERTHOUSANDS ;
 
 ! =================
 !! ## The under the million
@@ -125,8 +125,6 @@ LEXICON OVERTHOUSANDS !!≈ * **@CODE@**
    čyeđe HUNDREDT      ; ! 100.000.000
          TENST         ; !  20.000.000
          TEENST        ; !  10.000.000
-         TWOST         ; !   2.000.000
-         SEVENST       ; !   7.000.000
  tuhháát THOUSAND      ; !   1.000.000
          UNDERTHOUSAND ;
          TENS          ;
@@ -136,32 +134,30 @@ LEXICON OVERTHOUSANDS !!≈ * **@CODE@**
 
 
 LEXICON HUNDREDST !!≈ * **@CODE@**
-          kyeht        TWOCUODIT   ; ! 200000-299999
- kyeht+Err/Orth:kyehti TWOCUODIT   ; ! 200000-299999
-          kulmâ        TWOCUODIT   ; ! 300000-399999
-          nelji        TWOCUODIT   ; ! 400000-499999
-           vitt        TWOCUODIT   ; ! 500000-599999
-           kutt        TWOCUODIT   ; ! 600000-699999
-  vitt+Err/Orth:vit    TWOCUODIT   ; ! 500000-599999
-  kutt+Err/Orth:kut    TWOCUODIT   ; ! 600000-699999
-  vitt+Err/Orth:vittâ  TWOCUODIT   ; ! 500000-599999
-  kutt+Err/Orth:kuttâ  TWOCUODIT   ; ! 600000-699999
-         čiččâm        SEVENCUODIT ; ! 700000-799999
-         käävci        SEVENCUODIT ; ! 800000-899999
-          oovce        SEVENCUODIT ; ! 900000-999999
+          kyeht        CYEDET   ; ! 200000-299999
+ kyeht+Err/Orth:kyehti CYEDET   ; ! 200000-299999
+          kulmâ        CYEDET   ; ! 300000-399999
+          nelji        CYEDET   ; ! 400000-499999
+           vitt        CYEDET   ; ! 500000-599999
+           kutt        CYEDET   ; ! 600000-699999
+  vitt+Err/Orth:vit    CYEDET   ; ! 500000-599999
+  kutt+Err/Orth:kut    CYEDET   ; ! 600000-699999
+  vitt+Err/Orth:vittâ  CYEDET   ; ! 500000-599999
+  kutt+Err/Orth:kuttâ  CYEDET   ; ! 600000-699999
+         čiččâm        CYEDET ; ! 700000-799999
+         käävci        CYEDET ; ! 800000-899999
+          oovce        CYEDET ; ! 900000-999999
 
-LEXICON TWOCUODIT !!≈ * **@CODE@**
+LEXICON CYEDET !!≈ * **@CODE@**
  čyeđe HUNDREDT ; ! 100000-199999
 
-LEXICON SEVENCUODIT !!≈ * **@CODE@**
- čyeđe HUNDREDT ;
 
 LEXICON HUNDREDT	 !!≈ * **@CODE@**  X = 1-9, Y = 0-9
               TENST        ; ! X2XYYY, X10YYY
               TEENST       ; ! X1XYYY
- ohtâ:oht^RVâ TWOTHOUSANDS ; ! Same tuhháát as 2000
-              ONEST        ; ! XX0YYY
+ ohtâ:oht^RVâ THOUSANDS ;    ! Same tuhháát as 2000
               THOUSANDS    ; ! X00YYY
+              ONEST        ; ! XX0YYY
 
 LEXICON TEENST !!≈ * **@CODE@**
   TEENT ;
@@ -199,34 +195,22 @@ LEXICON TENST !!≈ * **@CODE@**
           ohcelov:ohce#lov   LOGIT ;
 
 LEXICON LOGIT !!≈ * **@CODE@**
-              THOUSANDS ;
  ohtâ:oht^RVâ THOUSANDS ;
               ONEST     ;
+              THOUSANDS ;
 
 LEXICON ONEST !!≈ * **@CODE@**
-  TWOST   ; ! 2000-6999
-  SEVENST ; ! 7000-9999
+ kyeht THOUSANDS ; ! 2000-2999
+ kulmâ THOUSANDS ; ! etc.
+ nelji THOUSANDS ;
+ vittâ THOUSANDS ;
+ kuttâ THOUSANDS ;
+čiččâm THOUSANDS ;
+käävci THOUSANDS ;
+ oovce THOUSANDS ;
 
 LEXICON THOUSANDS !!≈ * **@CODE@**
  tuhháát THOUSAND ; ! 1000-1999
-
-LEXICON TWOST !!≈ * **@CODE@**
- kyeht TWOTHOUSANDS ;
- kulmâ TWOTHOUSANDS ;
- nelji TWOTHOUSANDS ;
- vittâ TWOTHOUSANDS ;
- kuttâ TWOTHOUSANDS ;
-
-LEXICON SEVENST !!≈ * **@CODE@**
- čiččâm SEVENTHOUSANDS ;
- käävci SEVENTHOUSANDS ;
-  oovce SEVENTHOUSANDS ;
-
-LEXICON TWOTHOUSANDS       !!≈ * **@CODE@** 2000 - 6999
- tuhháát THOUSAND ;
-
-LEXICON SEVENTHOUSANDS  !!≈ * **@CODE@** 7000 - 9999
- tuhháát THOUSAND ;
 
 
 LEXICON THOUSAND !!≈ * **@CODE@**
@@ -236,9 +220,11 @@ LEXICON THOUSAND !!≈ * **@CODE@**
        ONES          ; ! 1001-1009
  +Num: X_POTTAAK     ; ! 1000
 
-!===========================
+
+
+!    ===========================
 !! # Here starts the 999 numbers
-!===========================
+!    ===========================
 
 LEXICON UNDERTHOUSAND !!≈ * **@CODE@**
                                    HUNDREDS ;
@@ -260,32 +246,31 @@ LEXICON ONECYETI
 
 
 LEXICON HUNDREDS  !!≈ * **@CODE@** 200-999
-   oht+Use/NG:oht       CUODI       ;
+  ohtâ+Use/NG:oht       CUODI       ;
        kyehti:kyeht^RCi KYEHTICUODI ;
- kyeht+Use/NG:kyeht     CUODI       ;
+kyehti+Use/NG:kyeht     CUODI       ;
         kulmâ:ku^RVlmâ  KULMACUODI  ;
-  kulm+Use/NG:kulm      CUODI       ;
+ kulmâ+Use/NG:kulm      CUODI       ;
         nelji:ne^RVlji  KYEHTICUODI ;
         vittâ:vi^RVtt4â VITTACUODI  ;
-  vitt+Use/NG:vitt      CUODI       ;
-   vit+Use/NG:vit       CUODI       ;
+ vittâ+Use/NG:vitt      CUODI       ;
+ vittâ+Use/NG:vit       CUODI       ;
         kuttâ:ku^RVtt4â VITTACUODI  ;
-  kutt+Use/NG:kutt      CUODI       ;
-   kut+Use/NG:kut       CUODI       ;
- käävc+Use/NG:käävc     CUODI       ;
-  kävc+Use/NG:kävc      CUODI       ;
+ kuttâ+Use/NG:kutt      CUODI       ;
+ kuttâ+Use/NG:kut       CUODI       ;
        čiččâm:čiččâm    CICCAMCUODI ;
        käävci:käävc^RCi KYEHTICUODI ;
+käävci+Use/NG:käävc     CUODI       ;
+käävci+Use/NG:kävc      CUODI       ;
         oovce:oovc^RCe  KYEHTICUODI ;
 
 
 
 LEXICON KYEHTICUODI
  @U.Case.SgNom@:@U.Case.SgNom@                  CUODI            ;
-! @U.Case.SgGen@:@U.Case.SgGen@                  CUODI            ;
  @U.Case.SgGen@:@U.Case.SgGen@^WG^RLEN          CUODI            ; !oovtâ K ;
- @U.Case.SgIll@:@U.Case.SgIll@^EA^RLEN       CUODI            ; ! oohtân K ;
- @U.Case.SgLoc@:@U.Case.SgLoc@^WG^RLEN      CUODI            ; ! oovtâst K ;
+ @U.Case.SgIll@:@U.Case.SgIll@^EA^RLEN          CUODI            ; ! oohtân K ;
+ @U.Case.SgLoc@:@U.Case.SgLoc@^WG^RLEN          CUODI            ; ! oovtâst K ;
  @U.Case.SgCom@:@U.Case.SgCom@^WG^CLEN^RVSH%>in CUODI            ; !   neljijn
    @U.Case.Ess@:@U.Case.Ess@%>n                 CUODI            ; ! ohtân	 K ;
  @U.Case.PlNom@:@U.Case.PlNom@^WG^RLEN%>h       CUODI            ; !oovtah K ;
@@ -342,30 +327,31 @@ LEXICON CICCAMCUODI  !!≈ * **@CODE@** 700-900 with +Par, we comment Par out
  @U.Case.SgGen@:@U.Case.SgGen@%>       NUMERALCOMPOUNDS ;
 
 
-LEXICON CUODI  !!≈ * **@CODE@** to be emptied for *CYEDE
- čyeđe: CYEDE   ;
-  čyet  HUNDRED ;
+LEXICON CUODI  !!≈ * **@CODE@** kept for čyet
+        čyeđe: CYEDE   ;
+ čyeđe+Use/NG:čyet  HUNDRED ;
 
 LEXICON CYEDE
-          @U.Case.SgNom@+Num+Sg+Nom:@U.Case.SgNom@čyeđe      K                ; ! kyeli
-          @U.Case.SgGen@+Num+Sg+Gen:@U.Case.SgGen@čyeđe      K                ; ! kyele
-          @U.Case.SgAcc@+Num+Sg+Acc:@U.Case.SgAcc@čyeđe      K                ; ! kyele
-          @U.Case.SgIll@+Num+Sg+Ill:@U.Case.SgIll@čuátán     K                ; ! kuálán
-          @U.Case.SgLoc@+Num+Sg+Loc:@U.Case.SgLoc@čyeđeest   K                ; ! kyeleest
-          @U.Case.SgCom@+Num+Sg+Com:@U.Case.SgCom@čuođijn    K                ; ! kuolijn
-          @U.Case.SgGen@+Num+Sg+Abe:@U.Case.SgGen@čyeđettáá  K                ; ! kyelettáá
-               @U.Case.Ess@+Num+Ess:@U.Case.Ess@čyettin      K                ; ! kyellin
-          @U.Case.PlNom@+Num+Pl+Nom:@U.Case.PlNom@čyeđeh     K                ; ! kyeleh
-          @U.Case.PlGen@+Num+Pl+Gen:@U.Case.PlGen@čuođij     K                ; ! kuolij
-          @U.Case.PlAcc@+Num+Pl+Acc:@U.Case.PlAcc@čuođijd    K                ; ! kuolijd
-          @U.Case.PlIll@+Num+Pl+Ill:@U.Case.PlIll@čuođijd    K                ; ! kuolijd
-          @U.Case.PlLoc@+Num+Pl+Loc:@U.Case.PlLoc@čuođijn    K                ; ! kuolijn
-          @U.Case.PlGen@+Num+Pl+Com:@U.Case.PlGen@čuođijguin K                ; ! kuolijguin
- @U.Case.PlGen@+Num+Pl+Com+Err/Orth:@U.Case.PlGen@čuođijgijn K                ; ! kuolijguin
-          @U.Case.PlGen@+Num+Pl+Abe:@U.Case.PlGen@čuođijttáá K                ; ! kuolijttáá
+          @U.Case.SgNom@+Num+Sg+Nom:@U.Case.SgNom@čyeđe      HUNDRED ; ! kyeli
+          @U.Case.SgGen@+Num+Sg+Gen:@U.Case.SgGen@čyeđe      HUNDRED ; ! kyele
+          @U.Case.SgAcc@+Num+Sg+Acc:@U.Case.SgAcc@čyeđe      HUNDRED ; ! kyele
+          @U.Case.SgIll@+Num+Sg+Ill:@U.Case.SgIll@čuátán     HUNDRED ; ! kuálán
+          @U.Case.SgLoc@+Num+Sg+Loc:@U.Case.SgLoc@čyeđeest   HUNDRED ; ! kyeleest
+          @U.Case.SgCom@+Num+Sg+Com:@U.Case.SgCom@čuođijn    HUNDRED ; ! kuolijn
+          @U.Case.SgGen@+Num+Sg+Abe:@U.Case.SgGen@čyeđettáá  HUNDRED ; ! kyelettáá
+               @U.Case.Ess@+Num+Ess:@U.Case.Ess@čyettin      HUNDRED ; ! kyellin
+          @U.Case.PlNom@+Num+Pl+Nom:@U.Case.PlNom@čyeđeh     HUNDRED ; ! kyeleh
+          @U.Case.PlGen@+Num+Pl+Gen:@U.Case.PlGen@čuođij     HUNDRED ; ! kuolij
+          @U.Case.PlAcc@+Num+Pl+Acc:@U.Case.PlAcc@čuođijd    HUNDRED ; ! kuolijd
+          @U.Case.PlIll@+Num+Pl+Ill:@U.Case.PlIll@čuođijd    HUNDRED ; ! kuolijd
+          @U.Case.PlLoc@+Num+Pl+Loc:@U.Case.PlLoc@čuođijn    HUNDRED ; ! kuolijn
+          @U.Case.PlGen@+Num+Pl+Com:@U.Case.PlGen@čuođijguin HUNDRED ; ! kuolijguin
+ @U.Case.PlGen@+Num+Pl+Com+Err/Orth:@U.Case.PlGen@čuođijgijn HUNDRED ; ! kuolijguin
+          @U.Case.PlGen@+Num+Pl+Abe:@U.Case.PlGen@čuođijttáá HUNDRED ; ! kuolijttáá
        @U.Case.SgGen@+Num+Cmp/SgGen:@U.Case.SgGen@čyet%>     NUMERALCOMPOUNDS ;
 
 LEXICON HUNDRED  !!≈ * **@CODE@**
+  K     ; ! monitor this
   TENS  ;
   TEENS ;
   ONES  ;
