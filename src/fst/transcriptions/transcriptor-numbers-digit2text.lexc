@@ -115,11 +115,12 @@ LEXICON TEENM
 2:kyehti LOHKAIM ;
 3:kulmâ LOHKAIM ;
 4:nelji LOHKAIM ;
-5+Use/NG:vittâ LOHKAIM ;
-6+Use/NG:kuttâ LOHKAIM ;
+5:vittâ LOHKAIM ;
 5:vitt LOHKAIM ;
-5+Use/NG:vit LOHKAIM ;
-6:kutt LOHKAIM ;
+5:vit+Use/NG LOHKAIM ;
+6:kuttâ LOHKAIM ;
+6:kutt+Use/NG LOHKAIM ;
+6:kut+Use/NG LOHKAIM ;
 7:čiččâm LOHKAIM ;
 8:käävci LOHKAIM ;
 9:oovce LOHKAIM ;
@@ -133,7 +134,9 @@ LEXICON TENSM
 3:kulmâ LOGIM ;
 4:nelji LOGIM ;
 5:vittâ LOGIM ;
+5:vitt+Use/NG LOGIM ;
 6:kuttâ LOGIM ;
+6:kutt+Use/NG LOGIM ;
 7:čiččâm LOGIM ;
 8:käävci LOGIM ;
 9:oovce LOGIM ;
@@ -175,17 +178,20 @@ LEXICON OVERTHOUSANDS
 
 
 LEXICON HUNDREDST
-2:kyeht  TWOCUODIT ;	! 200000-299999
-2+Use/NG:kyehti  TWOCUODIT ;	! 200000-299999
+2:kyehti  TWOCUODIT ;	! 200000-299999
+2:kyeht+Use/NG  TWOCUODIT ;	! 200000-299999
 3:kulmâ TWOCUODIT ;	! 300000-399999
 4:nelji TWOCUODIT ;	! 400000-499999
-5:vitt TWOCUODIT ;	! 500000-599999
-5+Use/NG:vit TWOCUODIT ;	! 500000-599999
-6:kutt TWOCUODIT ;	! 600000-699999
-6+Use/NG:kut TWOCUODIT ;	! 600000-699999
+5:vittâ TWOCUODIT ;	! 500000-599999
+5:vitt+Use/NG TWOCUODIT ;	! 500000-599999
+5:vit+Use/NG TWOCUODIT ;	! 500000-599999
+6:kuttâ TWOCUODIT ;	! 600000-699999
+6:kutt+Use/NG TWOCUODIT ;	! 600000-699999
+6:kut+Use/NG TWOCUODIT ;	! 600000-699999
 7:čiččâm SEVENCUODIT ;	! 700000-799999
 8:käävci SEVENCUODIT ;	! 800000-899999
 9:oovce SEVENCUODIT ;	! 900000-999999
+
 
 LEXICON TWOCUODIT
 :čyeđe HUNDREDT ;	! 100000-199999
@@ -206,15 +212,15 @@ LEXICON TEENST
 LEXICON TEENT
 %0:love THOUSANDS ;
 1:ohtâ LOHKAIT ;
-2:kyeht LOHKAIT ;
-2:kyehti+Use/NG LOHKAIT ;
+2:kyehti LOHKAIT ;
+2:kyeht+Use/NG LOHKAIT ;
 3:kulmâ LOHKAIT ;
 4:nelji LOHKAIT ;
-5:vitt LOHKAIT ;
-5:vittâ+Use/NG LOHKAIT ;
+5:vittâ LOHKAIT ;
+5:vitt+Use/NG LOHKAIT ;
 5:vit+Use/NG LOHKAIT ;
-6:kutt LOHKAIT ;
-6:kuttâ+Use/NG LOHKAIT ;
+6:kuttâ LOHKAIT ;
+6:kutt+Use/NG LOHKAIT ;
 6:kut+Use/NG LOHKAIT ;
 7:čiččâm LOHKAIT ;
 8:käävci LOHKAIT ;
@@ -228,8 +234,12 @@ LEXICON TENST
 3:kulmâlov LOGIT ;
 3:kulmlov+Use/NG LOGIT ;
 4:neljilov LOGIT ;
-5:vittlov LOGIT ;
-6:kuttlov LOGIT ;
+5:vittâlov LOGIT ;
+5:vittlov+Use/NG LOGIT ;
+5:vittlov+Use/NG LOGIT ;
+6:kutâlov LOGIT ;
+6:kuttlov+Use/NG LOGIT ;
+6:kutlov+Use/NG LOGIT ;
 7:čiččâmlov LOGIT ;
 8:kähcilov LOGIT ;
 9:ohcelov LOGIT ;
@@ -247,8 +257,8 @@ LEXICON THOUSANDS
 1:tuhháát THOUSAND ;    ! 1000-1999
 
 LEXICON TWOST
-2:kyeht TWOTHOUSANDS ;
-2+Use/NG:kyehti TWOTHOUSANDS ;
+2:kyehti TWOTHOUSANDS ;
+2:kyeht+Use/NG TWOTHOUSANDS ;
 3:kulmâ TWOTHOUSANDS ;
 4:nelji TWOTHOUSANDS ;
 5:vittâ TWOTHOUSANDS ;
@@ -286,25 +296,34 @@ LEXICON HUNDREDS ! 200-999
 7:čiččâm SEVENCUODI ;
 8:käävci SEVENCUODI ;
 9:oovce SEVENCUODI ;
-2:kyeht CUODI ;
-2:kyehti+Use/NG CUODI ;
+2:kyehti CUODI ;
+2:kyeht+Use/NG CUODI ;
 3:kulmâ CUODI ;
 3:kulm+Use/NG CUODI ;
 4:nelji CUODI ;
 5:vittâ+Use/NG CUODI ;
-5:vitt CUODI ;
+5:vitt+Use/NG CUODI ;
 5:vit+Use/NG CUODI ;
-6:kuttâ+Use/NG CUODI ;
-6:kutt CUODI ;
+6:kuttâ CUODI ;
+6:kutt+Use/NG CUODI ;
 6:kut+Use/NG CUODI ;
 
 LEXICON SEVENCUODI ! 700-900 with +Par
 %0%0:čyeđe # ;
-:čyet HUNDRED_FOR_CUODI ;
+:čyeti HUNDRED_FOR_CUODI ;
 
 LEXICON CUODI ! 200-699 with +Acc
 %0%0:čyeđe # ;
-:čyet HUNDRED_FOR_CUODI ;
+:čyeti HUNDRED_FOR_CUODI ;
+
+! Alkuperäinen:
+!LEXICON SEVENCUODI ! 700-900 with +Par
+!%0%0:čyeđe # ;
+!:čyet HUNDRED_FOR_CUODI ;
+!
+!LEXICON CUODI ! 200-699 with +Acc
+!%0%0:čyeđe # ;
+!:čyet HUNDRED_FOR_CUODI ;
 
 LEXICON HUNDRED_FOR_CUODI
 TENS ;
@@ -322,14 +341,16 @@ LEXICON TEENS
 
 LEXICON TEEN
 1:oht LOHKAI ;
-2:kyeht LOHKAI ;
-2+Use/NG:kyehti LOHKAI ;
+2:kyehti LOHKAI ;
+2:kyeht+Use/NG LOHKAI ;
 3:kulmâ LOHKAI ;
 3:kulm+Use/NG LOHKAI ;
 4:nelji LOHKAI ;
-5:vitt LOHKAI ;
+5:vittâ LOHKAI ;
+5:vitt+Use/NG LOHKAI ;
 5:vit+Use/NG LOHKAI ;
-6:kutt LOHKAI ;
+6:kuttâ LOHKAI ;
+6:kutt+Use/NG LOHKAI ;
 6:kut+Use/NG LOHKAI ;
 7:čiččâm LOHKAI ;
 8:käävci LOHKAI ;
@@ -346,13 +367,15 @@ LEXICON TENS
 1%0:love # ;
 1%0%.:lovváád # ; 
 2:kyeht LOGI ;
-3:kulm+Use/NG LOGI ;
 3:kulmâ LOGI ;
+3:kulm+Use/NG LOGI ;
 4:nelji LOGI ;
+5:vittâ LOGI ;
 5:vit+Use/NG LOGI ;
-5:vitt LOGI ;
+5:vitt+Use/NG LOGI ;
+6:kuttâ LOGI ;
 6:kut+Use/NG LOGI ;
-6:kutt LOGI ;
+6:kutt+Use/NG  LOGI ;
 7:čiččâm LOGI ;
 8:kähci LOGI ;
 9:ohce LOGI ;
