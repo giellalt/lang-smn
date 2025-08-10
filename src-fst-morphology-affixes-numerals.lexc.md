@@ -1,10 +1,10 @@
 
 
-# Inari Saami number <-> text
+# Inari Saami numeral morphology
 
-* **LEXICON num**
+* **LEXICON num** for unanalysed entities, pointing to numsg
 
-* **LEXICON numsg**
+* **LEXICON numsg** gives Sg Nom, Acc, Gen.
 
 * **LEXICON KYEHTI**
 

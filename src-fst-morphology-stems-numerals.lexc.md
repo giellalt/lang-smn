@@ -35,9 +35,7 @@ In principle as the above.
 
 * **LEXICON HUNDREDST**
 
-* **LEXICON TWOCUODIT**
-
-* **LEXICON SEVENCUODIT**
+* **LEXICON CYEDET**
 
 * **LEXICON HUNDREDT**  X = 1-9, Y = 0-9
 
@@ -55,14 +53,6 @@ In principle as the above.
 
 * **LEXICON THOUSANDS**
 
-* **LEXICON TWOST**
-
-* **LEXICON SEVENST**
-
-* **LEXICON TWOTHOUSANDS** 2000 - 6999
-
-* **LEXICON SEVENTHOUSANDS** 7000 - 9999
-
 * **LEXICON THOUSAND**
 
 # Here starts the 999 numbers
@@ -79,7 +69,7 @@ In principle as the above.
 
 * **LEXICON CICCAMCUODI** 700-900 with +Par, we comment Par out
 
-* **LEXICON CUODI** to be emptied for *CYEDE
+* **LEXICON CUODI** kept for čyet
 
 * **LEXICON HUNDRED**
 
