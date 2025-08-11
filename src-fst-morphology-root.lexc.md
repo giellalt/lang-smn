@@ -487,7 +487,7 @@ All Err-tags must have a normative form as lemma except Err/Lex
 ## Punctuation
 
 * **+CLB +PUNCT +HYPH** 
-* **+PAR +LEFT +RIGHT** 
+* **+PAR +LEFT +RIGHT +MIDDLE** 
 * **+URL** 
 * **+CLBfinal**  Sentence final abbreviated expression ending in full stop, the full stop is ambiguous
 
