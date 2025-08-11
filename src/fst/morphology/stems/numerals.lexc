@@ -248,7 +248,7 @@ LEXICON ONECYETI
 LEXICON HUNDREDS  !!≈ * **@CODE@** 200-999
   ohtâ+Use/NG:oht       CUODI       ;
        kyehti:kyeht^RCi KYEHTICUODI ;
-kyehti+Use/NG:kyeht     CUODI       ;
+kyehti+Use/NG+Err/Orth:kyeht     CUODI       ;
         kulmâ:ku^RVlmâ  KULMACUODI  ;
  kulmâ+Use/NG:kulm      CUODI       ;
         nelji:ne^RVlji  KYEHTICUODI ;
@@ -279,7 +279,7 @@ LEXICON KYEHTICUODI
  @U.Case.PlIll@:@U.Case.PlIll@^WG^CLEN^RVSH%>id CUODI            ; !ovttáid K ;
  @U.Case.PlLoc@:@U.Case.PlLoc@^WG^RLEN%>in      CUODI            ; !oovtâin K ;
  @U.Case.PlCom@:@U.Case.PlCom@^WG^RVSH          CUODI            ; !ovtâiguin K ;
- @U.Case.SgGen@:@U.Case.SgGen@^WG^RLEN%>        NUMERALCOMPOUNDS ;
+! @U.Case.SgGen@:@U.Case.SgGen@^WG^RLEN%>        NUMERALCOMPOUNDS ;
 
 
 
@@ -307,7 +307,7 @@ LEXICON KULMA_VITTACUODI   !!≈ * **@CODE@**
   @U.Case.PlGen@:@U.Case.PlGen@^WG%>i       CUODI            ; !viđâi
   @U.Case.PlLoc@:@U.Case.PlLoc@^WG^RLEN%>in CUODI            ; !viiđâin
   @U.Case.PlGen@:@U.Case.PlGen@^WG%>iguin   CUODI            ; !viđâiguin
-  @U.Case.SgGen@:@U.Case.SgGen@^WG^RLEN     NUMERALCOMPOUNDS ;
+!  @U.Case.SgGen@:@U.Case.SgGen@^WG^RLEN     NUMERALCOMPOUNDS ;
 
 
 LEXICON CICCAMCUODI  !!≈ * **@CODE@** 700-900 with +Par, we comment Par out
@@ -324,12 +324,12 @@ LEXICON CICCAMCUODI  !!≈ * **@CODE@** 700-900 with +Par, we comment Par out
  @U.Case.PlIll@:@U.Case.PlIll@á%>id    CUODI            ; !ovttáid K ;
  @U.Case.PlLoc@:@U.Case.PlLoc@á%>in    CUODI            ; !oovtâin K ;
  @U.Case.PlGen@:@U.Case.PlGen@i%>iguin CUODI            ; !ovtâiguin K ;
- @U.Case.SgGen@:@U.Case.SgGen@%>       NUMERALCOMPOUNDS ;
+! @U.Case.SgGen@+Cmp:@U.Case.SgGen@#       NUMERALCOMPOUNDS ;
 
 
 LEXICON CUODI  !!≈ * **@CODE@** kept for čyet
         čyeđe: CYEDE   ;
- čyeđe+Use/NG:čyet  HUNDRED ;
+ čyeđe+Use/NG+Err/Orth:čyet  HUNDRED ;
 
 LEXICON CYEDE
           @U.Case.SgNom@+Num+Sg+Nom:@U.Case.SgNom@čyeđe      HUNDRED ; ! kyeli
@@ -348,7 +348,7 @@ LEXICON CYEDE
           @U.Case.PlGen@+Num+Pl+Com:@U.Case.PlGen@čuođijguin HUNDRED ; ! kuolijguin
  @U.Case.PlGen@+Num+Pl+Com+Err/Orth:@U.Case.PlGen@čuođijgijn HUNDRED ; ! kuolijguin
           @U.Case.PlGen@+Num+Pl+Abe:@U.Case.PlGen@čuođijttáá HUNDRED ; ! kuolijttáá
-       @U.Case.SgGen@+Num+Cmp/SgGen:@U.Case.SgGen@čyet%>     NUMERALCOMPOUNDS ;
+       @U.Case.SgGen@+Num+Cmp/SgGen+Cmp:@U.Case.SgGen@čyet#     NUMERALCOMPOUNDS ;
 
 LEXICON HUNDRED  !!≈ * **@CODE@**
   K     ; ! monitor this
@@ -417,7 +417,7 @@ LEXICON TEEN  !!≈ * **@CODE@**
   @U.Case.SgCom@nelji:@U.Case.SgCom@neljijn   LOHKAI ;
 
    @U.Case.SgNom@vitt:@U.Case.SgNom@vitt      LOHKAI ;
-   @U.Case.SgNom@vitt+Use/NG:@U.Case.SgNom@vit       LOHKAI ;
+   @U.Case.SgNom@vitt+Use/NG+Err/Orth:@U.Case.SgNom@vit       LOHKAI ; ! Use/NG should be enough :-(
    @U.Case.PlNom@vitt:@U.Case.PlNom@viiđah    LOHKAI ;
    @U.Case.SgGen@vitt:@U.Case.SgGen@viđâ      LOHKAI ;
    @U.Case.PlGen@vitt:@U.Case.PlGen@viđâi     LOHKAI ;
@@ -429,7 +429,7 @@ LEXICON TEEN  !!≈ * **@CODE@**
      @U.Case.Ess@vitt:@U.Case.Ess@vittân      LOHKAI ;
 
    @U.Case.SgNom@kutt:@U.Case.SgNom@kutt      LOHKAI ;
-   @U.Case.SgNom@kutt+Use/NG:@U.Case.SgNom@kut       LOHKAI ;
+   @U.Case.SgNom@kutt+Use/NG+Err/Orth:@U.Case.SgNom@kut       LOHKAI ; ! Use/NG should be enough :-(
    @U.Case.SgCom@kutt:@U.Case.SgCom@kuuđáin   LOHKAI ;
    @U.Case.SgGen@kutt:@U.Case.SgGen@kuđâ      LOHKAI ;
    @U.Case.SgAcc@kutt:@U.Case.SgAcc@kuđâ      LOHKAI ;
@@ -543,7 +543,6 @@ LEXICON TENS  !!≈ * **@CODE@**
   @U.Case.PlAcc@kyeht:@U.Case.PlAcc@kuovtijd  LOGI     ; ! kuulmâidluuvijdkuuđâid
   @U.Case.PlIll@kyeht:@U.Case.PlIll@kuovttijd LOGI     ; ! kulmáidluvvijdkuuđáid
   @U.Case.PlLoc@kyeht:@U.Case.PlLoc@kuovttijn LOGI     ; ! kulmáinluvvijnkuuđáin
-  @U.Case.PlGen@kyeht:@U.Case.PlGen@kuovtij   LOGI     ; ! kuulmâiluvijku(u)đâi, kuulmâiluvijku(u)đâiguin, also PlCom
   @U.Case.PlCom@kyeht:@U.Case.PlCom@kuovtij   LOGI     ; ! kuulmâiluvijku(u)đâi, kuulmâiluvijku(u)đâiguin, also PlCom
 
   @U.Case.SgNom@kulmâ:@U.Case.SgNom@kulmâ     LOGI     ; ! kulmâlovkuttâ
@@ -570,14 +569,14 @@ LEXICON TENS  !!≈ * **@CODE@**
     @U.Case.Ess@nelji:@U.Case.Ess@neljin      LOGI     ; ! kulmânlovveenkuttân
   @U.Case.PlNom@nelji:@U.Case.PlNom@neeljih   LOGI     ; ! kuulmahlovehkuuđah
   @U.Case.PlGen@nelji:@U.Case.PlGen@neeljij   LOGI     ; ! kuulmâiluvijku(u)đâi, kuulmâiluvijku(u)đâiguin, also PlCom
-  @U.Case.PlGen@nelji:@U.Case.PlGen@neljij    LOGI     ; ! kuulmâiluvijku(u)đâi, kuulmâiluvijku(u)đâiguin, also PlCom
+  @U.Case.PlGen@nelji+Use/NG+Err/Orth:@U.Case.PlGen@neljij    LOGI     ; ! kuulmâiluvijku(u)đâi, kuulmâiluvijku(u)đâiguin, also PlCom
   @U.Case.PlAcc@nelji:@U.Case.PlAcc@neeljijd  LOGI     ; ! kuulmâidluuvijdkuuđâid
   @U.Case.PlIll@nelji:@U.Case.PlIll@neljijd   LOGI     ; ! kulmáidluvvijdkuuđáid
   @U.Case.PlLoc@nelji:@U.Case.PlLoc@neljijn   LOGI     ; ! kulmáinluvvijnkuuđáin
   @U.Case.PlCom@nelji:@U.Case.PlCom@neeljij   LOGI     ; ! kuulmâiluvijku(u)đâi, kuulmâiluvijku(u)đâiguin, also PlCom
 
    @U.Case.SgNom@vitt:@U.Case.SgNom@vitt      LOGI     ; ! kulmâlovkuttâ
-   @U.Case.SgNom@vitt+Use/NG:@U.Case.SgNom@vit       LOGI     ; ! kulmâlovkuttâ
+   @U.Case.SgNom@vitt+Use/NG+Err/Orth:@U.Case.SgNom@vit       LOGI     ; ! kulmâlovkuttâ +Use/NG should be enough, but is not :-(
    @U.Case.SgGen@vitt:@U.Case.SgGen@viđâ      LOGI     ; ! kuulmâlovkuuđâ, kuulmâlovkuuđâst, kuulmâlovkuutân also Loc, Ill
    @U.Case.SgAcc@vitt:@U.Case.SgAcc@viđâ      LOGI     ; ! kuulmâlovkuuđâ, kuulmâlovkuuđâst, kuulmâlovkuutân also Loc, Ill
    @U.Case.SgIll@vitt:@U.Case.SgIll@viđâ      LOGI     ; ! kuulmâlovkuuđâ, kuulmâlovkuuđâst, kuulmâlovkuutân also Loc, Ill
@@ -593,7 +592,7 @@ LEXICON TENS  !!≈ * **@CODE@**
    @U.Case.PlCom@vitt:@U.Case.PlCom@viđâi     LOGI     ; ! kuulmâiluvijku(u)đâi, kuulmâiluvijku(u)đâiguin, also PlCom
 
    @U.Case.SgNom@kutt:@U.Case.SgNom@kutt      LOGI     ; ! kulmâlovkuttâ
-   @U.Case.SgNom@kutt:@U.Case.SgNom@kut       LOGI     ; ! kulmâlovkuttâ
+   @U.Case.SgNom@kutt+Use/NG+Err/Orth:@U.Case.SgNom@kut       LOGI     ; ! kulmâlovkuttâ
    @U.Case.SgGen@kutt:@U.Case.SgGen@kuđâ      LOGI     ; ! kuulmâlovkuuđâ, kuulmâlovkuuđâst, kuulmâlovkuutân also Loc, Ill
    @U.Case.SgAcc@kutt:@U.Case.SgAcc@kuđâ      LOGI     ; ! kuulmâlovkuuđâ, kuulmâlovkuuđâst, kuulmâlovkuutân also Loc, Ill
    @U.Case.SgIll@kutt:@U.Case.SgIll@kuđâ      LOGI     ; ! kuulmâlovkuuđâ, kuulmâlovkuuđâst, kuulmâlovkuutân also Loc, Ill
