@@ -174,7 +174,7 @@ LEXICON OVERTHOUSANDS
      %0%0%0%0:        TENS          ;
      %0%0%0%0:        TEENS         ;
    %0%0%0%0%0:        ONES          ;
- %0%0%0%0%0%0:        #             ; !  x000000
+ %0%0%0%0%0%0:        COMMASECTION             ; !  x000000
 
 
 LEXICON HUNDREDST
@@ -281,7 +281,7 @@ UNDERTHOUSAND ;	   ! 1100-1999
 %0: TENS ;	   ! 1020-1099
 %0: TEENS ;	   ! 1010-1019
 %0%0: ONES ;	   ! 1001-1009
-%0%0%0: # ;	   ! 1000
+%0%0%0: COMMASECTION ;	   ! 1000
 
 !===========================
 !Here starts the 999 numbers
@@ -308,20 +308,20 @@ LEXICON HUNDREDS ! 200-999
 6:kut+Use/NG+Err/Orth CUODI ;
 
 LEXICON SEVENCUODI ! 700-900 with +Par
-%0%0:čyeđe # ;
+%0%0:čyeđe COMMASECTION ;
 :čyeđe HUNDRED_FOR_CUODI ;
 
 LEXICON CUODI ! 200-699 with +Acc
-%0%0:čyeđe # ;
+%0%0:čyeđe COMMASECTION ;
 :čyeđe HUNDRED_FOR_CUODI ;
 
 ! Alkuperäinen:
 !LEXICON SEVENCUODI ! 700-900 with +Par
-!%0%0:čyeđe # ;
+!%0%0:čyeđe COMMASECTION ;
 !:čyet HUNDRED_FOR_CUODI ;
 !
 !LEXICON CUODI ! 200-699 with +Acc
-!%0%0:čyeđe # ;
+!%0%0:čyeđe COMMASECTION ;
 !:čyet HUNDRED_FOR_CUODI ;
 
 LEXICON HUNDRED_FOR_CUODI
@@ -333,7 +333,7 @@ LEXICON HUNDRED
 TENS ;
 TEENS ;
 %0: ONES ;
-%0%0: # ;
+%0%0: COMMASECTION ;
 
 LEXICON TEENS
 1: TEEN ;
@@ -356,15 +356,15 @@ LEXICON TEEN
 9:oovce LOHKAI ;
 
 LEXICON LOHKAI
-:nubáloh # ;
+:nubáloh COMMASECTION ;
 %.: LOGAAT ;
 
 LEXICON LOGAAT
-:nubálovváád # ; 
+:nubálovváád COMMASECTION ; 
 
 LEXICON TENS
-1%0:love # ;
-1%0%.:lovváád # ; 
+1%0:love COMMASECTION ;
+1%0%.:lovváád COMMASECTION ; 
 2:kyeht LOGI ;
 3:kulmâ LOGI ;
 3:kulm+Use/NG+Err/Orth LOGI ;
@@ -380,7 +380,7 @@ LEXICON TENS
 9:ohce LOGI ;
 
 LEXICON LOGI
-%0:lov # ;
+%0:lov COMMASECTION ;
 :lov ONES ;
 
 LEXICON ONES
@@ -388,27 +388,27 @@ CARDINAL ;
 ORDINAL ;
 
 LEXICON CARDINAL
-1:ohtâ # ;
-2:kyehti # ;
-3:kulmâ # ;
-4:nelji # ;
-5:vittâ # ;
-6:kuttâ # ;
-7:čiččâm # ;
-8:käävci # ;
-9:oovce # ;
+1:ohtâ COMMASECTION ;
+2:kyehti COMMASECTION ;
+3:kulmâ COMMASECTION ;
+4:nelji COMMASECTION ;
+5:vittâ COMMASECTION ;
+6:kuttâ COMMASECTION ;
+7:čiččâm COMMASECTION ;
+8:käävci COMMASECTION ;
+9:oovce COMMASECTION ;
 
 
 LEXICON ORDINAL		   
-1%.:vuossâmuš     # ;   
-2%.:nubbe   # ;		   
-3%.:kuálmád   # ;	   
-4%.:niäljád # ;	   
-5%.:viiđâd   # ;		   
-6%.:kuuđâd   # ;		   
-7%.:čiččâd    # ;	   
-8%.:káávcád   # ;	   
-9%.:oovcád    # ;	   
+1%.:vuossâmuš     COMMASECTION ;   
+2%.:nubbe   COMMASECTION ;		   
+3%.:kuálmád   COMMASECTION ;	   
+4%.:niäljád COMMASECTION ;	   
+5%.:viiđâd   COMMASECTION ;		   
+6%.:kuuđâd   COMMASECTION ;		   
+7%.:čiččâd    COMMASECTION ;	   
+8%.:káávcád   COMMASECTION ;	   
+9%.:oovcád    COMMASECTION ;	   
 
 
 
@@ -429,15 +429,15 @@ LEXICON COMMA
 
 LEXICON COMMASECTION 
                   ENDLEX ; 
-  % komma% :,      NUMBERSECTION ;
-  % čuokkis% :%.   NUMBERSECTION ; ! these will overlap with dates
-  % kolon% :%:     NUMBERSECTION ;
-  % sárggis% :%-   NUMBERSECTION ; 
- % lea% :%=        NUMBERSECTION ; 
- % gráda% :%°      NUMBERSECTION ; 
- % paragráfa% :§   NUMBERSECTION ; 
-  % násti% :%*     NUMBERSECTION ; 
- % ja% :&          NUMBERSECTION ; 
+  ,:% cekki%       NUMBERSECTION ;
+  %.:% čyegis%    NUMBERSECTION ; ! these will overlap with dates
+  %::% tublečyegis%      NUMBERSECTION ;
+  %-:% säärgis%    NUMBERSECTION ; 
+ %=:% lii%         NUMBERSECTION ; 
+ °:% cekkid%       NUMBERSECTION ; 
+ §:% cekki%    NUMBERSECTION ; 
+ %*: % täsni%      NUMBERSECTION ; 
+ &:% já%           NUMBERSECTION ; 
 
 
 
