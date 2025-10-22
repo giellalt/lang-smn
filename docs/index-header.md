@@ -5,6 +5,7 @@
 [![License](https://img.shields.io/github/license/giellalt/lang-smn)](https://github.com/giellalt/lang-smn/blob/main/LICENSE)
 [![Issues](https://img.shields.io/github/issues/giellalt/lang-smn)](https://github.com/giellalt/lang-smn/issues)
 [![Build Status](https://builds.giellalt.org/api/badge/lang-smn?label=CI)](https://builds.giellalt.org/pipelines/lang-smn/builds/latest)
+[![Glottolog](https://img.shields.io/badge/Glottolog-green)](https://glottolog.org/resource/languoid/id/inar1241)
 
 This page documents the work on the [Inari Saami grammatical analyser](http://github.com/giellalt/lang-smn). 
 
