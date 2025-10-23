@@ -9,7 +9,6 @@
 
 This page documents the work on the [Inari Saami grammatical analyser](http://github.com/giellalt/lang-smn). 
 
-
 ## Documentation pages
 
 - [Lingustic documentation of the language model](lingustic-documentation.md)
