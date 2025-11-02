@@ -302,6 +302,7 @@ LIST Sem/Feat = Sem/Feat Sem/Feat_Plant ; #many -vuohta and -dat nouns
 LIST Sem/Feat-measr = Sem/Feat-measr ;
 LIST Sem/Feat-phys = Sem/Ctain_Feat-phys Sem/Feat-phys Sem/Feat-phys_Tool-write Sem/Feat-phys_Veh Sem/Feat-phys_Wthr ;
 LIST Sem/Feat-psych = Sem/Body-abstr_Feat-psych Sem/Feat-psych Sem/Feat-psych_Hum ; #not touchable, not countable ("beroštupmi" "gáđašvuohta" "mokta" "sáhkkiivuohta") - Mus lea X,  Son lea X-adj persovdna # muitu
+LIST Sem/Feat-psych_Plc = Sem/Feat-psych_Plc ;
 LIST Sem/Fem = Sem/Fem ;
 LIST Sem/Food = Sem/Body_Food Sem/Event_Food Sem/Food Sem/Food_Perc-phys Sem/Food_Plant ; #Syn: bassit/borrat/sohpat X-Acc. mon im læk borram dam guolest. mun boran iđitbiepmu. mus lea iđitbiebmu fárus. birgui borastuvvat
 LIST Sem/Food-med = Sem/Domain_Food-med Sem/Food-med ;
@@ -918,7 +919,7 @@ LIST LOC-V = "ávkkástallat" "ballat" "peessâđ" "beroštit" "kieldiđ" "bihti
 		#Note that "huolâttiđ" obviously has two homonymous variants:
 		#fuolahit1+Acc, fuolahit2+Loc
 
-LIST COM-V = "algâttiđ" "älgiđ" "arvâlâddâđ" "viärdádâllâđ" "pártáskiđ" "piergiittâllâđ" "piergiđ" "pallâđ" "čuákkimistiđ" "teivâđ" "tevdiđ" "tigáštâllâđ" "tuárruđ" "sierâdiđ" "elettiđ" "flirttađ" "gávnnadit" "išediđ" "kárvuttiđ" "váivášuđ" "kištottâllâđ" "gulahallat" "gulaskuddat" "hilbošit" "juátkiđ" "jyehiđ" "lattiđ" "leakkastallat" "lohpádaddat" "lohpádallat" "lonottiđ" "molsođ" "naaijâđ" "oktiibidjat" "uápásmiđ" "ovttasbargat" "ovttastahttit" "ruhnođ" "reivvestaddat" "rijdâliđ" "rijdáskiđ" "rohcošit" "sárnuđ" "siävuttiđ" "servuustâllâđ" "sovâttâllâđ" "soottâđ" "sierâdiđ" "šietâdiđ" "sooppâđ" "toimâđ" "verdidiđ" "vijđediđ" "vrd" ; #!!= - @CODE@
+LIST COM-V = "algâttiđ" "älgiđ" "arvâlâddâđ" "čuákkimistiđ" "elettiđ" "flirttađ" "gávnnadit" "gulahallat" "gulaskuddat" "hilbošit" "išediđ" "juátkiđ" "jyehiđ" "kárvuttiđ" "kištottâllâđ" "lattiđ" "leakkastallat" "lohpádaddat" "lohpádallat" "lonottiđ" "molsođ" "naaijâđ" "oktiibidjat" "ovdániđ" "ovttasbargat" "ovttastahttit" "pallâđ" "pártáskiđ" "piergiđ" "piergiittâllâđ" "reivvestaddat" "rijdâliđ" "rijdáskiđ" "rohcošit" "ruhnođ" "sárnuđ" "servuustâllâđ" "siävuttiđ" "sierâdiđ" "sierâdiđ" "sooppâđ" "soottâđ" "sovâttâllâđ" "šietâdiđ" "teivâđ" "tevdiđ" "tigáštâllâđ" "toimâđ" "tuárruđ" "uápásmiđ" "váivášuđ" "verdidiđ" "viärdádâllâđ" "vijđediđ" "vrd"  ; #!!= - @CODE@
 
 		#Note that "leaikkastallat" has two homonymous variants:
 		#leaikkastallat1 (IV), leaikkastallat2+Com
@@ -4372,7 +4373,7 @@ ADD:xmsyn-advl-plloc-sgcom (&msyn-advl-plloc-sgcom) TARGET N IF
 	(*0 COM-V BARRIER S-BOUNDARY)
 	(NOT *-1 MUITALIT)
 	(0 N + Pl + Loc)
-	(0 Sem/Org OR Sem/Hum OR Sem/Semcon);
+	(0 Sem/Org OR Sem/Hum OR Sem/Semcon OR Sem/Feat-psych_Plc);
 ADD:xmsyn-advl-plloc-sgcom (&msyn-advl-plloc-sgcom) TARGET N IF
 	(*0 COM-V BARRIER S-BOUNDARY)
 	(NOT *-1 MUITALIT)
