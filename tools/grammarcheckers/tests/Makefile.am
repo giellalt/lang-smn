@@ -26,7 +26,7 @@ TESTS=\
 	msyn-adj-sg-pl-FAIL.yaml \
 	msyn-adj-sg-pl-PASS.yaml \
 	msyn-advl-plgen-sgill-PASS.yaml \
-	msyn-advl-plloc-sgcom-FAIL.yaml \
+	msyn-advl-sgcom-plloc-FAIL.yaml \
 	msyn-advl-plloc-sgcom-PASS.yaml \
 	msyn-advl-plloc-sgill-PASS.yaml \
 	msyn-agr-imprt-sg3-PASS.yaml \
@@ -149,7 +149,7 @@ XFAIL_TESTS=\
 	msyn-adj-gen-nom-FAIL.yaml \
 	msyn-adj-pred-attr-FAIL.yaml \
 	msyn-adj-sg-pl-FAIL.yaml \
-	msyn-advl-plloc-sgcom-FAIL.yaml \
+        msyn-advl-sgcom-plloc-FAIL.yaml \
 	msyn-agr-other-sg2-FAIL.yaml \
 	msyn-agr-sg3-pl3-PASS.yaml \
 	msyn-agr-sg3-pl3-FAIL.yaml \
