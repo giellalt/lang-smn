@@ -78,6 +78,7 @@ Here's a list of documentation pages built from structured comments in the sourc
             * [transcriptor-abbrevs2text.lexc](src-fst-transcriptions-transcriptor-abbrevs2text.lexc.html) ([src](https://github.com/giellalt/lang-smn/blob/main/src/fst/transcriptions/transcriptor-abbrevs2text.lexc))
             * [transcriptor-date-digit2text.lexc](src-fst-transcriptions-transcriptor-date-digit2text.lexc.html) ([src](https://github.com/giellalt/lang-smn/blob/main/src/fst/transcriptions/transcriptor-date-digit2text.lexc))
             * [transcriptor-numbers-digit2text.lexc](src-fst-transcriptions-transcriptor-numbers-digit2text.lexc.html) ([src](https://github.com/giellalt/lang-smn/blob/main/src/fst/transcriptions/transcriptor-numbers-digit2text.lexc))
+            * [transcriptor-symbols2text.lexc](src-fst-transcriptions-transcriptor-symbols2text.lexc.html) ([src](https://github.com/giellalt/lang-smn/blob/main/src/fst/transcriptions/transcriptor-symbols2text.lexc))
             * [transcriptor-ttsdate-digit2text.lexc](src-fst-transcriptions-transcriptor-ttsdate-digit2text.lexc.html) ([src](https://github.com/giellalt/lang-smn/blob/main/src/fst/transcriptions/transcriptor-ttsdate-digit2text.lexc))
 * `tools/`
     * `grammarcheckers/`
