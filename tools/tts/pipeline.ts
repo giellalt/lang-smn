@@ -7,11 +7,14 @@ import * as speech from './.divvun-rt/speech.ts';
 export default function smnTextTTS(entry: StringEntry): Command {
   let x = hfst.tokenize("tokenise", entry, { model_path: "tokeniser-tts-cggt-desc.pmhfst" });
   x = divvun.blanktag("whitespace",     x, { model_path: "analyser-gt-whitespace.hfst" });
+  x = cg3.vislcg3("remove-lexicalised", x, { model_path: "generated-remove-lexicalised-compounds.bin" });
+  x = cg3.vislcg3("valency",            x, { model_path: "valency.bin" });
   x = cg3.vislcg3("mwe-dis",            x, { model_path: "mwe-dis.bin" });
   x = cg3.mwesplit("mwesplit",          x);
   x = cg3.vislcg3("disamb",             x, { model_path: "disambiguator.bin" });
   x = cg3.vislcg3("functions",          x, { model_path: "functions.bin" });
   x = cg3.vislcg3("deps",               x, { model_path: "dependency.bin" });
+  x = cg3.vislcg3("disamb-cleanup",     x, { model_path: "disamb-cleanups.bin" });
   x = speech.normalize(
     "normaliser", x,
     {
@@ -30,6 +33,7 @@ export default function smnTextTTS(entry: StringEntry): Command {
       }
     }
   );
+  x = cg3.vislcg3("norm-cleanup", x, { model_path: "normalisation-cleanups.bin" });
   x = speech.phon("text2phon", x, { model: "text2phontext.hfstol", tag_models: { "ACR": "acro2text.hfstol" } });
   x = cg3.sentences("phon",    x, { mode: "phonological" });
   return x;
@@ -41,11 +45,14 @@ export default function smnTextTTS(entry: StringEntry): Command {
 export function localTTSTest_dev(entry: StringEntry): Command {
   let x = hfst.tokenize("tokenise", entry, { model_path: "@./tokeniser-tts-cggt-desc.pmhfst" });
   x = divvun.blanktag("whitespace",     x, { model_path: "@./analyser-gt-whitespace.hfst" });
+  x = cg3.vislcg3("remove-lexicalised", x, { model_path: "@./remove-lexicalised-compounds.cg3" });
+  x = cg3.vislcg3("valency",            x, { model_path: "@../../src/cg3/valency.cg3" });
   x = cg3.vislcg3("mwe-dis",            x, { model_path: "@../tokenisers/mwe-dis.cg3" });
   x = cg3.mwesplit("mwesplit",          x);
   x = cg3.vislcg3("disamb",             x, { model_path: "@../../src/cg3/disambiguator.cg3" });
   x = cg3.vislcg3("functions",          x, { model_path: "@../../src/cg3/functions.cg3" });
   x = cg3.vislcg3("deps",               x, { model_path: "@../../src/cg3/dependency.cg3" });
+  x = cg3.vislcg3("disamb-cleanup",     x, { model_path: "@./disamb-cleanups.cg3" });
   x = speech.normalize(
     "normaliser", x,
     {
@@ -64,6 +71,7 @@ export function localTTSTest_dev(entry: StringEntry): Command {
       }
     }
   );
+  x = cg3.vislcg3("norm-cleanup", x, { model_path: "@./normalisation-cleanups.cg3" });
   x = speech.phon("text2phon", x, { model: "@./text2phontext.hfstol", tag_models: { "ACR": "@./acro2text.hfstol" } });
   x = cg3.sentences("phon",    x, { mode: "phonological" });
   return x;
