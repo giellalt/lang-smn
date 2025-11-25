@@ -3345,13 +3345,28 @@ ADDRELATION:msyn-extv-sg3-pl3 ($2) N + Pl + Nom FROM (-3 (V Sg3) + LEDE OR (V Sg
 #$ Must láá kyeleh.
 #fi Minulla on kaloja.
 
+ADD:msyn-extv-pl3-sg3 (&msyn-extv-pl3-sg3) TARGET V IF
+	(*-1 Loc OR DOPPE BARRIER NOT-ADV-PCLE
+	    LINK NEGATE *-1 (N Pl Nom) OR (Pron Pl Nom) OR (Pron Pl3 Nom)
+	        BARRIER NOT-ADV-PCLE)
+	(0 BE + (V Ind Prs Pl3))
+	(*1 (N Sg Nom) OR (A Sg Nom) - Coll
+	    BARRIER NOT-NPMODADV OR NUM OR ("maŋgâ" Pron) OR @CVP OR S-BOUNDARY
+        	LINK NEGATE 1 CC-INCLUSIVE OR COMMA LINK *1 (N Nom) OR (A Nom) BARRIER NOT-NPMODADV);
 
 #!!  **Agreement rule:** msyn-extv-pl3-sg3 
 ADD:msyn-extv-pl3-sg3 (&msyn-extv-pl3-sg3) TARGET V IF
-	(*-1 Loc OR DOPPE BARRIER NOT-ADV-PCLE LINK NEGATE *-1 (N Pl Nom) OR (Pron Pl Nom) OR (Pron Pl3 Nom) BARRIER NOT-ADV-PCLE)
+	(*-1 Loc OR DOPPE BARRIER NOT-ADV-PCLE
+	    LINK NEGATE *-1 (N Pl Nom) OR (Pron Pl Nom) OR (Pron Pl3 Nom)
+	        BARRIER NOT-ADV-PCLE)
 	(0 BE + (V Ind Prs Pl3))
-	(*1 (N Sg Nom) OR (A Sg Nom) - Coll BARRIER NOT-NPMODADV OR NUM OR ("maŋgâ" Pron) OR @CVP OR S-BOUNDARY LINK NOT 0 (Sg Gen) OR (Sg Acc) LINK NEGATE 1 CC-INCLUSIVE OR COMMA LINK *1 (N Nom) OR (A Nom) BARRIER NOT-NPMODADV)
-	(NEGATE *1 (NomAg Sg Nom) LINK 1 (Prop Sem/Mal) OR (Prop Sem/Sur) OR (Prop Sem/Fem) LINK *1 (Pl Nom));
+	(*1 (N Sg Nom) OR (A Sg Nom) - Coll
+	    BARRIER NOT-NPMODADV OR NUM OR ("maŋgâ" Pron) OR @CVP OR S-BOUNDARY
+	        LINK NOT 0 (Sg Gen) OR (Sg Acc)
+        	LINK NEGATE 1 CC-INCLUSIVE OR COMMA LINK *1 (N Nom) OR (A Nom) BARRIER NOT-NPMODADV)
+	(NEGATE *1 (NomAg Sg Nom)
+	    LINK 1 (Prop Sem/Mal) OR (Prop Sem/Sur) OR (Prop Sem/Fem)
+	    LINK *1 (Pl Nom));
 	#$ Jis párnáá lii väädis iberdiđ sárnum tâi olgospyehtiđ jieijâs jurduid vuovijguin, moh sust {láá}, kielâ ovdánem puáhtá ain-uv tuárjuđ kevttimáin pehtilittum lattimkielâ lasseen meid sevimijd tâi kommunikistemkuuvijd.
 	#$ Anarâškielâst {láá-uv} maaŋgâs, kiäh láá näävt porgâm.
 	#$ Áigápuátutorjust {láá} 3 uási.
