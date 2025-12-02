@@ -1,303 +1,299 @@
 # Error messages for language: en
-# Generated from XML by xml-conv
 
-## Default patterns: re:real-.*
-lyöntivirhe = Lyöntivirhe
-    .desc = Väärä sana tässä yhteydessä
 
-## Default patterns: re:msyn-wrong-case.*, re:msyn-wrong_case.*
-väärä-sanamuoto = Väärä sanamuoto
-    .desc = {$1} Väärä sijamuoto
+double-space-before = Space error
+    .desc = There are two spaces in front of "{$1}"
 
-## Default patterns: re:punct-aistton.*
-lainausmerkit = Lainausmerkit
-    .desc = Väärä lainausmerkkien käyttö
-    .example-1 = Doarjja addo vuosttažettiin {«}Sámi dutkama prográmmii{»} (2001–05)
+ellipsis = Ellipsis
+    .desc = You have used three periods, "{$1}". Here an ellipsis would have been a better choice.
 
-## Default patterns: re:no-space-after-paren.*, re:no-space-before-paren.*
-puuttuva-välilyönti = Puuttuva välilyönti
-    .desc = Välilyönti puuttuu ennen sulkeita tai niiden jälkeen  {$1}
-    .example-1 = Vuoigatvuođa Lávdegotti{(}SVL{)}čilgehus
+easteregg = Compilation date
+    .desc = This grammarchecker was compiled on the folloing date:
 
-msyn-v-prfprc-sg1 = Virhe ensimmäisessä persoonassa.
-    .desc = Sana {$1} näyttää partisiipilta. Olisiko ensimmäinen persoona parempi?
+lainausmerkit = Quotation marks
+    .desc = Wrong quotation mark
 
-msyn-agr-other-sg1 = Verbi ensimmäisessä persoonassa.
-    .desc = Verbimuotoa {$1} käytetään 'mun'-sanan jälkeen. Olisiko ensimmäinen persoona parempi?
+lyöntivirhe = Spelling error
+    .desc = The word means something different here
 
-msyn-agr-sg2-sg1 = Verbi ensimmäisessä persoonassa.
-    .desc = Verbimuotoa {$1} käytetään 'mun'-sanan jälkeen. Olisiko ensimmäinen persoona parempi?
+msyn-v-prfprc-sg1 = Error in first person singular.
+    .desc = The word "{$1}" looks like a participle, but in this context first person singular works better.
 
-msyn-agr-sg3-du3 = Verbi kolmannen persoonan kaksikossa.
-    .desc = Verbimuotoa {$1} käytetään 'suoi'-sanan jälkeen. Olisiko kolmannen persoonan kaksikko parempi?
+msyn-agr-other-sg1 = First person singular after 'mun'.
+    .desc = The verb-form "{$1}" follows 'mun', and should probably be first person singular.
 
-msyn-v-actio-sg1 = Verbi ensimmäisessä persoonassa.
-    .desc = Verbimuotoa {$1} käytetään 'mun'-sanan jälkeen. Olisiko ensimmäinen persoona parempi kuin aktio?
+msyn-agr-sg2-sg1 = First person singular after 'mun'.
+    .desc = The verb-form "{$1}" follows 'mun', and should probably be first person singular.
 
-msyn-agr-other-sg2 = Virhe toisessa persoonassa.
-    .desc = Verbimuoto {$1} esiintyy 'tun'-sanan jälkeen. Olisiko toinen persoona parempi?
+msyn-agr-sg3-du3 = Third person dual.
+    .desc = The verb-form "{$1}" follows 'suoi', and should probably be third person dual.
 
-msyn-agr-sg1-sg3 = Verbi yksikön kolmannessa persoonassa.
-    .desc = Verbimuoto {$1} esiintyy yksiköllisen subjektin jälkeen. Olisiko kolmas persoona parempi?
+msyn-v-actio-sg1 = First person singular after 'mun'.
+    .desc = The verb-form "{$1}" follows 'mun', and should probably be first person singular and not actio.
 
-msyn-agr-sg2-sg3 = Verbi yksikön kolmannessa persoonassa.
-    .desc = Verbimuoto {$1} esiintyy yksiköllisen subjektin jälkeen. Olisiko kolmas persoona parempi?
+msyn-agr-other-sg2 = Second person singular after 'tun'.
+    .desc = The verb-form "{$1}" follows 'tun', and should probably be second person singular.
 
-msyn-agr-pl3-sg3 = Verbi yksikön kolmannessa persoonassa.
-    .desc = Verbimuoto {$1} esiintyy yksiköllisen subjektin jälkeen. Olisiko kolmas persoona parempi?
+msyn-agr-sg1-sg3 = Third person singular.
+    .desc = The verb-form "{$1}" follows a subject in singular, and should probably be third person singular.
 
-msyn-agr-imprt-sg3 = Verbi yksikön kolmannessa persoonassa.
-    .desc = Verbimuoto {$1} esiintyy yksiköllisen subjektin jälkeen. Olisiko kolmas persoona parempi?
+msyn-agr-sg2-sg3 = Third person singular.
+    .desc = The verb-form "{$1}" follows a subject in singular, and should probably be third person singular.
 
-msyn-agr-other-pl3 = Verbi monikön kolmannessa persoonassa.
-    .desc = Verbimuoto {$1} esiintyy yksiköllisen subjektin {$2} jälkeen. Olisiko monikko parempi?
+msyn-agr-pl3-sg3 = Third person singular.
+    .desc = The verb-form "{$1}" follows a subject in singular, and should probably be third person singular.
 
-msyn-pred-acc-nom = Predikatiivi pitäisi olla nominatiivissa.
-    .desc = Sana {$1} näyttää olevan akkusatiivissa oleva predikatiivi. Olisiko nominatiivi parempi?
+msyn-agr-imprt-sg3 = Third person singular.
+    .desc = The verb-form "{$1}" follows a subject in singular, and should probably be third person singular.
 
-msyn-pred-ill-nom = Predikatiivi pitäisi olla nominatiivissa.
-    .desc = Sana {$1} näyttää olevan illsatiivissa oleva predikatiivi. Olisiko nominatiivi parempi?
+msyn-agr-other-pl3 = Third person plural.
+    .desc = The verb-form "{$1}" follows the subject "$2", and should probably be plural singular.
 
-msyn-predagr-pl3-sg3 = Verbi yksikössä, jos predikatiivi on yksikössä.
-    .desc = Verbimuoto {$1} esiintyy ennen yksiköllistä predikatiivia {$2} . Olisiko monikko parempi?
+msyn-pred-acc-nom = Predicative should be in the nominative.
+    .desc = The word "{$1}" seems to be a predicative in the accusative, and should probably be in the nominative.
 
-msyn-agr-other-du1 = Verbi kaksikon ensimmäisessä persoonassa.
-    .desc = Verbimuoto {$1} esiintyy 'muoi'-sanan jälkeen. Olisiko kaksikon ensimmäinen persoona parempi?
+msyn-pred-ill-nom = Predicative should be in the nominative.
+    .desc = The word "{$1}" seems to be a predicative in the illative, and should probably be in the nominative.
 
-msyn-agr-other-du2 = Verbi kaksikon toisessa persoonassa.
-    .desc = Verbimuoto {$1} esiintyy 'tuoi'-sanan jälkeen. Olisiko kaksikon toinen persoona parempi?
+msyn-predagr-pl3-sg3 = Third person singular for negative predicative.
+    .desc = The verb-form "{$1}" preceeds a predicative in singular, "$2", and should probably be in the plural.
 
-msyn-agr-other-du3 = Verbi kaksikon kolmannessa persoonassa.
-    .desc = Verbimuoto {$1} esiintyy 'suoi'-sanan jälkeen. Olisiko kaksikon toinen persoona parempi?
+msyn-agr-other-du1 = First person dual after 'muai'.
+    .desc = The verb-form "{$1}" follows 'muai', and should probably be first person dual.
 
-msyn-agr-other-pl1 = Verbi monikon ensimmäisessä persoonassa.
-    .desc = Verbimuoto {$1} esiintyy 'mij'-sanan jälkeen. Olisiko monikon ensimmäinen persoona parempi?
+msyn-agr-other-du2 = Second person dual after 'tuai'.
+    .desc = The verb-form "{$1}" follows 'tuoi', and should probably be second person dual.
 
-msyn-agr-other-pl2 = Verbi monikon toisessa persoonassa.
-    .desc = Verbimuoto {$1} esiintyy 'tij'-sanan jälkeen. Olisiko monikon toinen persoona parempi?
+msyn-agr-other-du3 = Third person dual after 'suai'.
+    .desc = The verb-form "{$1}" follows 'suai', and should probably be second person dual.
 
-msyn-agr-sg3-pl3 = Verbi monikon kolmannessa persoonassa.
-    .desc = Verbimuoto {$1} esiintyy monikon subjektin {$2} edessä. Olisiko monikon kolmas persoona parempi?
+msyn-agr-other-pl1 = First person singular after 'mij'.
+    .desc = The verb-form "{$1}" follows 'mij', and should probably be first person plural.
 
-msyn-orrood-inf-actioess = Aktion essiivi 'orroođ'-verbin jälkeen.
-    .desc = Verbimuoto {$1} esiintyy 'orroođ'-sanan jälkeen. Olisiko aktion essiivi (oro lemin -rakenne) parempi?
+msyn-agr-other-pl2 = Second person singular after 'tij'.
+    .desc = The verb-form "{$1}" follows 'tij', and should probably be second person plural.
 
-msyn-extsubj-ill-nom = Nominatiivi eksistentiaalilauseissa.
-    .desc = Sana {$1} näyttäisi olevan eksistentiaalilauseen subjekti. Sen tulisi olla nominatiivissa.
+msyn-agr-sg3-pl3 = Verb in third person plural.
+    .desc = The verb-form "{$1}" preceeds the plural subject "$2", and should probably be third person plural.
 
-msyn-extsubj-gen-nom = Nominatiivi eksistentiaalilauseissa.
-    .desc = Sana {$1} näyttäisi olevan eksistentiaalilauseen subjekti. Sen tulisi olla nominatiivissa.
+msyn-orrood-inf-actioess = Actio essive after 'orroođ'.
+    .desc = The verb-form "{$1}" follows 'orroođ', and should probably be in Actio Essive.
 
-msyn-extsubj-acc-nom = Nominatiivi eksistentiaalilauseissa.
-    .desc = Sana {$1} näyttää olevan eksistentiaalilauseen subjekti. Sen tulisi olla nominatiivissa.
+msyn-extsubj-ill-nom = Nominative in existential sentences.
+    .desc = The word "{$1}" seems to be the subject of an existential clause, it should be in nominative.
 
-msyn-extv-sg3-pl3 = Monikko, jos subjekti on monikossa.
-    .desc = Verbimuodon {$1} subjekti {$2} on monikossa. Tulisiko verbinkin olla monikossa?
+msyn-extsubj-gen-nom = Nominative in existential sentences.
+    .desc = The word "{$1}" seems to be the subject of an existential clause, it should be in nominative.
 
-msyn-extv-pl3-sg3 = Monikko, jos subjekti on monikossa.
-    .desc = Verbimuodon {$1} subjekti {$2} on yksikössä. Tulisiko verbinkin olla yksikössä?
+msyn-extsubj-acc-nom = Nominative in existential sentences.
+    .desc = The work "{$1}" seems to be the subject of an existential clause, it should be in nominative.
 
-msyn-extv-numeral-sg3-pl3 = Monikko, jos subjekti on lukusana.
-    .desc = Verbimuodon {$1} subjekti {$2} son lukusana. Tulisiko verbinkin olla monikossa?
+msyn-extv-sg3-pl3 = Plural for plural subject.
+    .desc = The verb-form "{$1}" has a plural subject "$2", and should be plural.
 
-msyn-extneg-sg3-pl3 = Verbi monikossa kielteisessä eksistentiaalilauseissa.
-    .desc = Sana {$1} näyttäisi olevan eksistentiaalilauseen verbi. Siinä tapauksessa senkin tulisi olla monikossa.
+msyn-extv-pl3-sg3 = Singular for singular subject.
+    .desc = The verb-form "{$1}" has a singular subject "$2", and should be singular.
 
-msyn-extv-vagr = Monikko, jos subjekti on monikossa.
-    .desc = Verbimuodolla {$1} on monikollinen subjekti. Siinä tapauksessa verbinkin tulisi olla monikossa.
+msyn-extv-numeral-sg3-pl3 = Plural for numeral subject.
+    .desc = The verb-form "{$1}" has a numeral phrase as subject, and should be plural.
 
-msyn-imp-nom-acc = Imparatiiviobjekti akkusatiivissa.
-    .desc = Substantiivi {$1} on nominatiivissa, mutta se on imperatiivin objekti. Tulisiko sen olla akkusatiivissa?
+msyn-extneg-sg3-pl3 = Plural verb in negative existential sentences.
+    .desc = The word "{$1}" seems to be the verb of an existential clause, it should be in plural when the subject is in the plural.
 
-msyn-det-nom-acc = Nominatiivimäärite akkusatiivilausekkeessa.
-    .desc = Determinatiivi {$1} on nominatiivissa, mutta se on akkusatiivisanan määrite ja pitäisi itse olla akkusatiivissa.
+msyn-extv-vagr = Plural for plural subject.
+    .desc = The verb-form "{$1}" has a plural subject, and should be plural.
 
-msyn-v-sg3-conneg = Kieltomuoto kieltoverbin jälkeen.
-    .desc = Verbi {$1} tulee kieltoverbin jälkeen, ja pitäisi sen takia olla kieltomuodossa.
+msyn-imp-nom-acc = Imperative object in accusative.
+    .desc = The noun "{$1}" is in the nominative, but is the object of an imperative and should be in accusative.
 
-msyn-v-du3-conneg = Kieltomuoto kieltoverbin jälkeen.
-    .desc = Verbi {$1} tulee kieltoverbin jälkeen, ja pitäisi sen takia olla kieltomuodossa.
+msyn-det-nom-acc = Nominative determiner in accusative phrase.
+    .desc = The determiner "{$1}" is in the nominative, but it modifies an accusative noun and should be in the same case.
 
-msyn-esubj-plnom = Eksistentiaalilauseen subjekti nominatiivissa.
-    .desc = Substantiivi {$1} näyttäisi olevan eksistentilauseen subjekti. Sen tulisi olla sen vuoksi nominatiivissa.
+msyn-v-sg3-conneg = Negative verbform after negative verb.
+    .desc = The verb "{$1}" follows a negative verb, and should thus have the negative form.
 
-msyn-imp-pl3-sg3 = Imperatiivi yksikössä, jos subjekti on yksikössä.
-    .desc = Verbimuoto {$1} esiintyy ennen yksiköllistä substantiivia {$2} . Olisiko yksikkö parempi?
+msyn-v-du3-conneg = Negative verbform after negative verb.
+    .desc = The verb "{$1}" follows a negative verb, and should thus have the negative form.
 
-msyn-obj-sgnom-sgacc = Akkusatiiviobjekti yksikössä.
-    .desc = Substantiivi {$1} on nominatiivissa, mutta se on ilmeisesti objekti, ja sen pitäisi siis olla akkusatiivissa.
+msyn-esubj-plnom = Existential subject in nominative.
+    .desc = The noun "{$1}" seems to be the subject of an existential clause, in which case it should be in the nominative.
 
-msyn-obj-nom-acc = Akkusatiiviobjekti yksikössä.
-    .desc = Substantiivi {$1} on nominatiivissa, mutta se näyttää olevan objekti, ja sen pitäisi olla akkusatiivissa.
+msyn-imp-pl3-sg3 = Third person singular for imperative.
+    .desc = The verb-form "{$1}" preceeds a noun in singular, "$2", and should probably be in the singular.
 
-msyn-obj-acc-ill = Illatiiviobjekti.
-    .desc = Substantiivi {$1} on akkusaatiivissa, mutta se on verbin {$2} komplementti, ja sen pitäisi sen takia olla illatiivissa.
+msyn-obj-sgnom-sgacc = Accusative singular object.
+    .desc = The noun "{$1}" is in the nominative, but is probably an object and should be in accusative.
 
-msyn-obj-plnom-placc = Akkusatiiviobjekti monikossa.
-    .desc = Substantiivi {$1} on nominatiivissa, mutta se on ilmeisesti objekti, ja pitäisi siis olla akkusatiivissa.
+msyn-obj-nom-acc = Accusative singular object.
+    .desc = The noun "{$1}" is in the nominative, but is probably an object and should be in accusative.
 
-msyn-top-placc-plnom = Monikollinen subjekti ei ole nominatiivissa.
-    .desc = Substantiivi {$1} on akkusatiivissa. Se näyttäisi olevan lauseen subjekti. Siinä tapauksessa sen tulisi olla nominatiivissa.
+msyn-obj-acc-ill = Oblique object in illativ.
+    .desc = The noun "{$1}" is in the accusative, but the verb "$2" selects illative.
 
-msyn-top-nom-acc = Objekti ei ole akkusatiivissa.
-    .desc = Substantiivi {$1} on nominatiivissa. Se näyttäisi olevan lauseen objekti. Siinä tapauksessa sen tulisi olla akkusatiivissa.
+msyn-obj-plnom-placc = Accusative plural object.
+    .desc = The noun "{$1}" is in the nominative, but is probably an object and should be in accusative.
 
-msyn-pass-accsubj-nomsubj = Akkusatiiviobjekti monikossa.
-    .desc = Substantiivi {$1} on nominatiivissa. Se näyttäisi olevan lauseen objekti. Siinä tapauksessa sen tulisi olla akkusatiivissa.
+msyn-top-placc-plnom = Subject not in nominative plural.
+    .desc = The noun "{$1}" is in the accusative, but is probably a subject and should be in nominative.
 
-msyn-posspl-acc-gen = Possessori genetiivissä.
-    .desc = Substantiivi {$1} on akkusatiivissa. Se näyttäisi olevan omistaja. Siinä tapauksessa sen tulisi olla genetiivissa.
+msyn-top-nom-acc = Object not in accusative.
+    .desc = The noun "{$1}" is in the nominative, but is probably an object and should be in the accusative.
 
-msyn-posspl-ill-gen = Possessori genetiivissä.
-    .desc = Substantiivi {$1} on illatiivissa. Se näyttäisi olevan omistaja. Siinä tapauksessa sen tulisi olla genetiivissa.
+msyn-pass-accsubj-nomsubj = Accusative plural object.
+    .desc = The noun "{$1}" is in the nominative, but is probably an object and should be in accusative.
 
-msyn-n-ess-ill = Illatiivi eikä essiivi
-    .desc = Verbi {$1} on kolmannessa persoonassa, mutta tulee kieltoverbin jälkeen ja pitäisi olla kieltomuodossa.
+msyn-posspl-acc-gen = Possessor in genitive.
+    .desc = The noun "{$1}" is in the accusative, but is probably a possessor and should be in genitive.
 
-msyn-negcompl-sg3-conneg = Kieltomuoto kieltoverbin jälkeen.
-    .desc = Verbi {$1} on kolmannessa persoonassa, mutta tulee kieltoverbin jälkeen ja pitäisi olla kieltomuodossa.
+msyn-posspl-ill-gen = Possessor in genitive.
+    .desc = The noun "{$1}" is in the illative, but is probably a possessor and should be in genitive.
 
-msyn-num-gensg = Akkusatiiviobjekti monikossa.
-    .desc = Jos lukusana on alle 7, niin {$1}:n tulisi olla genetiivissä.
+msyn-n-ess-ill = Essive noun should be illative
+    .desc = The noun "{$1}" is in essive, but in this context it should probably be in te illative.
 
-msyn-num-par-gen = Genetiivi suurempien lukujen jälkeen.
-    .desc = Jos lukusana on 2-6, siinä tapauksessa {$1}:n tulisi olla genetiivissä.
+msyn-negcompl-sg3-conneg = Connegative verb after negation verb.
+    .desc = The verb "{$1}" is in the third persion, but it follows a negative verb and should probably be in the negative form.
 
-msyn-num-gen-par = Partitiivi suurempien lukujen jälkeen.
-    .desc = Jos lukusana on 7 tai sitä suurempi, siinä tapauksessa {$1} tulisi olla partitiivissa.
+msyn-num-gensg = Accusative plural object.
+    .desc = The noun "{$1}" is in the nominative, but is probably an object and should be in accusative.
 
-msyn-num-acc-par = Partitiivi suurempien lukujen jälkeen.
-    .desc = Jos lukusana on 7 tai sitä suurempi, siinä tapauksessa {$1} tulisi olla partitiivissa.
+msyn-num-par-gen = Genetive after low numeral.
+    .desc = The noun "{$1}" follows a low numeral and should be in the genetive.
 
-msyn-ncompl-ess-sgill = Illatiivi tiettyjen substantiivien jälkeen.
-    .desc = Substantiivi {$1} tulee illatiivia vaativan substantiivin jälkeen.
+msyn-num-gen-par = Partitive after high numeral.
+    .desc = The noun "{$1}" follows a numeral and should be in the partitive.
 
-msyn-ncompl-placc-plill = Illatiivi tiettyjen substantiivien jälkeen.
-    .desc = Substantiivi {$1} tulee illatiivia vaativan substantiivin jälkeen.
+msyn-num-acc-par = Partitive after high numeral.
+    .desc = The noun "{$1}" follows a numeral and should be in the partitive.
 
-msyn-mii-sgnom-placc = Akkusatiivi 'mii'- ja 'kii'-sanojen jälkeen.
-    .desc = Sana {$1} on nominatiivissa, mutta se esiintyy kysymyssanan jälkeen. Siinä tapauksessa sen tulisi olla monikon akkusatiivissa.
+msyn-ncompl-ess-sgill = Illative after certain nouns.
+    .desc = The noun "{$1}" follows a noun that takes illative complements.
 
-msyn-po-nom-gen = Genetiivi postposition edellä.
-    .desc = Sana {$1} on nominatiivissa, mutta se esiintyy postposition edellä. Sen vuoksi sen tulisi todennäköisesti olla genetiivissä.
+msyn-ncompl-placc-plill = Illative after certain nouns.
+    .desc = The noun "{$1}" follows a noun that takes illative complements.
 
-msyn-po-placc-plgen = Genetiivi postposition edellä.
-    .desc = Sana {$1} on akkusatiivissa, mutta se esiintyy postposition edellä. Sen vuoksi sen tulisi todennäköisesti olla genetiivissä.
+msyn-mii-sgnom-placc = Accusative after mii and kii
+    .desc = The noun "{$1}" is in the nominative, but is following an interrogative pronoun and should be in the accusative plural.
 
-msyn-dem-locattr-gen = Puolikongruenssi genetiivissä lokatiivin edellä.
-    .desc = Sana {$1} on lokatiivissa, mutta se esiintyy ennen lokatiivissa olevaa substantiivia. Sen vuoksi sen tulisi ehkä olla genetiivissä.
+msyn-po-nom-gen = Genitive before postposition
+    .desc = The noun "{$1}" is in the nominative, but is following by a postpositiond and should be in the genitive.
 
-msyn-negcompl-cg3-conneg = Kieltomuoto kieltoverbin  jälkeen
-    .desc = Sana  {$1} tulee kieltoverbin jälkeen ja pitäisi luultavasti olla kieltomuodossa.
+msyn-po-placc-plgen = Genitive before postposition
+    .desc = The noun "{$1}" is in the accusative, but is following by a postpositiond and should be in the genitive.
 
-msyn-ness-acc-nom = Nominatiivisubjekti nessessiivirakenteessa
-    .desc = Sana {$1} on akkusatiivissa. Vaikka lause ilmaisee pakollisuutta, sen täytyy olla nominatiivissa.
+msyn-dem-locattr-gen = Half-congruence with genitive before locative noun
+    .desc = The word "{$1}" is in the locative, but is preceeding a locative noun and should be in the genitive.
 
-msyn-NPx-N = Ylimääräinen omistusliite
-    .desc = Sanalla {$1} on omistusliite. Olisiko parempi olla käyttämättä sitä?
+msyn-negcompl-cg3-conneg = Negative verbform after negative verb
+    .desc = The word "{$1}" follows a negative verb, and should probably be a negative form
 
-msyn-plobj-nom-acc = Monikon objekti akkusatiivissa
-    .desc = Sana {$1} on nominatiivissa. Se on luultavasti verbin {$2} objekti, ja pitäisi olla akkusatiivissa.
+msyn-ness-acc-nom = Nominative subject in neccessity constructions
+    .desc = The word "{$1}" is in the accusative. Even though it expresses necessity, it should be in the nominative
 
-msyn-adj-pred-attr = Attribuuttimuoto esiintyy predikatiivina
-    .desc = Sana {$1} on attribuuttimuodossa, mutta tässä yhteydessä predikatiivi näyttäisi sopivan paremmin.
+msyn-NPx-N = Superfluous possessive suffix
+    .desc = The word "{$1}" carries a Px. It seems better off without it.
 
-msyn-adj-attr-pred = Attribuuttimuoto esiintyy predikatiivina
-    .desc = Sana {$1} on attribuuttimuodossa, mutta tässä yhteydessä predikatiivi näyttäisi sopivan paremmin.
+msyn-ness-ill-nom = Nominative subject in neccessity constructions
+    .desc = The word "{$1}" is in the illative. Even though it expresses necessity, it should be in the nominative
 
-msyn-adj-attr-sgacc = Attribuuttimuoto pitäisi olla akkusatiivissa
-    .desc = Sana {$1} on attribuuttimuodossa, mutta tässä yhteydessä akkusatiivi näyttäisi sopivan paremmin.
+msyn-plobj-nom-acc = Plural objects in the accusative
+    .desc = The word "{$1}" is in the nominative. Since it probably is an object of the verb "$2", it should be in accusative.
 
-msyn-adj-attr-placc = Attribuuttimuoto pitäisi olla akkusatiivissa
-    .desc = Sana {$1} on attribuuttimuodossa, mutta tässä yhteydessä akkusatiivi näyttäisi sopivan paremmin.
+msyn-adj-pred-attr = Predicative form should be ttributive
+    .desc = The word "{$1}" is in the attributive form, but in this context predicative seems to be a better choice.
 
-msyn-adj-attr-sggen = Attribuuttimuoto pitäisi olla genetiivissa
-    .desc = Sana {$1} on attribuuttimuodossa, mutta tässä yhteydessä genetiivi näyttäisi sopivan paremmin.
+msyn-adj-attr-pred = Attributive form should be predicative
+    .desc = The word "{$1}" is in the attributive form, but in this context predicative seems to be a better choice.
 
-msyn-adj-attr-plgen = Attribuuttimuoto pitäisi olla genetiivissa
-    .desc = Sana {$1} on attribuuttimuodossa, mutta tässä yhteydessä genetiivi näyttäisi sopivan paremmin.
+msyn-adj-attr-sgacc = Attributive form should be accusative
+    .desc = The word "{$1}" is in the attributive form, but in this context accusative seems to be a better choice.
 
-msyn-adj-attr-other = Attribuuttimuoto pitäisi käyttää eri tavalla
-    .desc = Sana {$1} on attribuuttimuodossa, mutta tarvitsee substantiivin. Olisiko {$2} sopiva?
+msyn-adj-attr-placc = Attributive form should be accusative
+    .desc = The word "{$1}" is in the attributive form, but in this context accusative seems to be a better choice.
 
-msyn-adj-gen-nom = Adjektiivimuoto esiintyy nominatiivissa
-    .desc = Sana {$1} on genetiivimuodossa, mutta tässä yhteydessä nominatiivi näyttäisi sopivan paremmin.
+msyn-adj-attr-sggen = Attributive form should be genitive
+    .desc = The word "{$1}" is in the attributive form, but in this context genitive seems to be a better choice.
 
-msyn-adj-nom-acc = Adjektiivimuoto esiintyy nominatiivissa
-    .desc = Sana {$1} on nominatiivimuodossa, mutta ennen akkusatiivi, kuten {$2}, akkusatiivi näyttäisi sopivan paremmin.
+msyn-adj-attr-plgen = Attributive form should be genitive
+    .desc = The word "{$1}" is in the attributive form, but in this context genitive seems to be a better choice.
 
-msyn-adj-sg-pl = Adjektiivi pitäisi olla nominatiivissa
-    .desc = Adjektiivi {$1} on yksikössä, mutta ennen monikon substantiivi, kuten {$2}, monikko näyttäisi sopivan paremmin.
+msyn-adj-attr-other = Attributive form should be rewritten
+    .desc = The word "{$1}" is in the attributive form, and it needs a noun behind it. What about "$2"?
 
-msyn-subj-gen-nom = Subjekti pitäisi olla  nominatiivissa
-    .desc = Sana {$1} on genetiivimuodossa, mutta tässä yhteydessä nominatiivi näyttäisi sopivan paremmin.
+msyn-adj-gen-nom = Adjjective form should be nominative
+    .desc = The word "{$1}" is in the genitive, but in this context nominative seems to be a better choice.
 
-msyn-subj-ill-nom = Nominatiivi passiivilauseissa.
-    .desc = Sana {$1} näyttäisi olevan passiivilauseen subjekti. Sen tulisi olla nominatiivissa.
+msyn-adj-nom-acc = Adjective form should be accusative
+    .desc = The word "{$1}" is in the nominative, but before accusative, here "$2", accusative seems to be a better choice.
 
-msyn-quant-gen-nom = Kvanttori pitäisi olla  nominatiivissa
-    .desc = Sana {$1} on genetiivimuodossa, mutta tässä yhteydessä nominatiivi näyttäisi sopivan paremmin.
+msyn-adj-sg-pl = Adjective should be in the plural
+    .desc = The adjective "{$1}" is in the singular, but before plural nouns, here "$2", plural seems to be a better choice.
+msyn-subj-gen-nom = Subject should be nominative
+    .desc = The word "{$1}" is in the genitive, but in this context nominative seems to be a better choice.
 
-msyn-qucompl-sg-pl = Substantiivin tulisi olla monikossa monikon kvanttorin jälkeen
-    .desc = Sana {$1} on nominatiivimuodossa, mutta {$2} jälkeen monikko sopivan paremmin.
+msyn-subj-ill-nom = Nominative in passive sentences.
+    .desc = The word "{$1}" seems to be the subject of a passive clause, it should be in nominative.
 
-msyn-rel-sg-pl = Realiivipronomini tulisi olla monikossa monikollisen substantiivin jälkeen
-    .desc = Sana {$1} on nominatiivimuodossa, mutta {$2} jälkeen monikko sopivan paremmin.
+msyn-quant-gen-nom = Quantifier should be nominative
+    .desc = The word "{$1}" is in the genitive, but in this context nominative seems to be a better choice.
 
-msyn-quant-nom-gen = Kvanttori pitäisi olla  genetiivissa
-    .desc = Sana {$1} on nominatiivimuodossa, mutta tässä yhteydessä genetiivi näyttäisi sopivan paremmin.
+msyn-qucompl-sg-pl = Noun should be plural after plural quantor
+    .desc = The word "{$1}" is in the singular, but after "$2" plural seems to be a better choice.
 
-msyn-attr-com-gen = Attribuutti pitäisi olla  genetiivissa
-    .desc = Sana {$1} on komitatiivimuodossa, mutta tässä yhteydessä genetiivi näyttäisi sopivan paremmin.
+msyn-rel-sg-pl = Relative pronoun should be plural after plural noun
+    .desc = The word "{$1}" is in the singular, but after "$2" plural seems to be a better choice.
 
-msyn-advl-plloc-sgcom = Adverbiaalimuoto esiintyy komitatiivissa
-    .desc = Sana {$1} on lokatiivimuodossa, mutta komitatiivi näyttäisi sopivan paremmin.
+msyn-quant-nom-gen = Quantifier should be genetive
+    .desc = The word "{$1}" is in the nominitive, but in this context genetive seems to be a better choice.
 
-msyn-advl-plloc-sgill = Adverbiaalimuoto esiintyy illatiivissa
-    .desc = Sana {$1} on lokatiivimuodossa, mutta illatiivi näyttäisi sopivan paremmin.
+msyn-attr-com-gen = Attribute should be genetive
+    .desc = The word "{$1}" is in the comitative, but in this context genetive seems to be a better choice.
 
-msyn-advl-plloc-sgnom = Adverbiaalimuoto esiintyy nominatiivissa
-    .desc = Sana {$1} on lokatiivimuodossa, mutta nominatiivi näyttäisi sopivan paremmin.
+msyn-advl-plloc-sgcom = Adverbial form should be comitative
+    .desc = The word "{$1}" is in the locative, but here comitative seems to be a better choice.
 
-msyn-advl-plgen-sgill = Adverbiaalimuoto esiintyy illatiivissa
-    .desc = Sana {$1} on genetiivimuodossa, mutta ennen illatiiviverbiä, kuten {$2}, illatiivi näyttäisi sopivan paremmin.
+msyn-advl-plloc-sgill = Adverbial form should be illative
+    .desc = The word "{$1}" is in the locative, but here illative seems to be a better choice.
 
-msyn-v-sg1-prfprc = Yksikön ensimmäisen persoonan tulisi olla partisiippi.
-    .desc = Sana {$1} on yksikön ensimmäisessä persoonassa, mutta tässä yhteydessä partisiippi näyttäisi sopivan paremmin.
+msyn-advl-plloc-sgnom = Adverbial form should be nominative
+    .desc = The word "{$1}" is in the locative, but here nominative seems to be a better choice.
 
-real-love-lope = "love" pitänee olla "lope"
-    .desc = Sana {$1} on käytössä ennen infinitiiviä, mutta tässä yhteydessä "lope"  näyttäisi sopivan paremmin.
+msyn-advl-plgen-sgill = Adverbial form should be illative
+    .desc = The word "{$1}" is in the genitive, but before an illative verb, here "$2", illative seems to be a better choice.
 
-real-pisso-pissood = "pissom" pitäisi olla "pissoom"
-    .desc = Sana {$1} on käytössä kontekstissa "muu $1", mutta tässä yhteydessä partisiippi näyttäisi sopivan paremmin.
+msyn-v-sg1-prfprc = First person should be participle
+    .desc = The word "{$1}" is a present first person form, but in this context participle seems to be a better choice.
 
-real-pele-peeli = "pele" pitäisi olla "peeli"
-    .desc = Sana {$1} on käytössä sanan {$2} jälkeen, mutta tässä yhteydessä "peli" näyttäisi sopivan paremmin.
+no-space-after-punct-mark = Space errors
+    .desc = There is no space after the punctuation mark "{$1}"
 
-syn-OVS-OSV = Sanajärjestys objektin jälkeen
-    .desc = Sana {$2} on käytössä sanan {$1} jälkeen, mutta tässä yhteydessä toinen järjestys näyttäisi sopivan paremmin.
+puuttuva-välilyönti = Parenthesis missing space
+    .desc = There is no space before or after the parenthesis "{$1}"
 
-typo = Lyöntivirhe
-    .desc = Sana {$1} puuttuu korjausohjelman sanalistasta.
+real-love-lope = "love" should perhaps be "lope"
+    .desc = The word "{$1}" is used in front of an infinitive, it seems the noun "lope" is a better choice.
 
-double-space-before = Sanavälivirhe
-    .desc = Ennen {$1} on kaksi välilyöntimerkkiä
+real-pisso-pissood = "pissom" should be "pissoom"
+    .desc = The word "{$1}" is used as "muu $1", in this context participle seems to be a better choice.
 
-space-after-paren-beg = Sanavälivirhe
-    .desc = Ylimääräinen välilyönti ensimmäisen hakasulun {$1} jälkeen
+real-pele-peeli = "pele" should probably be "peeli"
+    .desc = The word "{$1}" is used after "$2", in this context, "peeli" seems to be a better choice.
 
-space-before-paren-end = Välilyöntivirhe
-    .desc = Ylimääräinen välilyönti ennen oikea sulkua {$1}
+space-after-paren-beg = Space errors
+    .desc = There is a superfluous space after the opening parenthesis "{$1}"
 
-space-before-punct-mark = Välilyöntivirhe
-    .desc = {$1} vasemmalla puolella on väli.
+space-before-paren-end = Space error
+    .desc = There is a space before the closing parenthesis "{$1}"
 
-no-space-after-punct-mark = Välilyöntivirhe
-    .desc = Välimerkin {$1} jälkeen puuttuu välilyönti
+space-before-punct-mark = Space error
+    .desc = There is a space in front of the punctuation mark "{$1}"
 
-ellipsis = Ellipse
-    .desc = Tun lah kiävttám 3 čuággá. Toos heivee kevttiđ ellipsa, "…".
+syn-OVS-OSV = Word order after topicalised object
+    .desc = The word "$2" is used after "{$1}", the opposite order seems to be a better choice.
 
-easteregg = Peivimeeri
-    .desc = Tot kielâoppaprogram lii tan peivist:
+typo = Spelling error
+    .desc = The word "{$1}" is missing in the spell checker.
+
+väärä-sanamuoto = Wrong form
+    .desc = "{$1}" seems to be in the wrong case
 
