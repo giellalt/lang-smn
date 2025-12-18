@@ -307,3 +307,41 @@ typo = Časkemfeilâ
 väärä-sanamuoto = Puástu sänihäämi
       .desc =  "{$1}" Puástu sajehäämi
 
+msyn-dimin-after-ucca = Njuolgâdusnommâ
+    .desc = Čielgiittâs puátá
+
+msyn-gen-after-num = Njuolgâdusnommâ
+    .desc = Čielgiittâs puátá
+
+msyn-moddiimsyn-gen-after-num = Njuolgâdusnommâ
+    .desc = Čielgiittâs puátá
+
+msyn-part-after-num = Njuolgâdusnommâ
+    .desc = Čielgiittâs puátá
+
+msyn-Pron_N-NPx = Njuolgâdusnommâ
+    .desc = Čielgiittâs puátá
+
+msyn-pron-acc-gen = Njuolgâdusnommâ
+    .desc = Čielgiittâs puátá
+
+msyn-pron-gen-acc = Njuolgâdusnommâ
+    .desc = Čielgiittâs puátá
+
+msyn-pron-plill-placc = Njuolgâdusnommâ
+    .desc = Čielgiittâs puátá
+
+msyn-quadv-sg-pl = Njuolgâdusnommâ
+    .desc = Čielgiittâs puátá
+
+msyn-sg3-pl3 = Njuolgâdusnommâ
+    .desc = Čielgiittâs puátá
+
+real-keesi-keessiv = Njuolgâdusnommâ
+    .desc = Čielgiittâs puátá
+
+real-keessiv-keesi = Njuolgâdusnommâ
+    .desc = Čielgiittâs puátá
+
+syn-delete-adv-phrasal-verb = Njuolgâdusnommâ
+    .desc = Čielgiittâs puátá

@@ -297,3 +297,41 @@ typo = Spelling error
 väärä-sanamuoto = Wrong form
     .desc = "$1" seems to be in the wrong case
 
+msyn-dimin-after-ucca = Diminutive after uccâ
+    .desc = čielgiittâs
+    
+msyn-gen-after-num = Genitive after numeral
+
+msyn-moddii = Njuolgâdusnommâ
+    .desc = čielgiittâs
+
+msyn-part-after-num = Partitive after numeral
+    .desc = čielgiittâs
+
+msyn-Pron_N-NPx = Njuolgâdusnommâ
+    .desc = čielgiittâs
+
+msyn-pron-acc-gen = Njuolgâdusnommâ
+    .desc = čielgiittâs
+
+msyn-pron-gen-acc = Njuolgâdusnommâ
+    .desc = čielgiittâs
+
+msyn-pron-plill-placc = Njuolgâdusnommâ
+    .desc = čielgiittâs
+
+msyn-quadv-sg-pl = Njuolgâdusnommâ
+    .desc = čielgiittâs
+
+msyn-sg3-pl3 = Njuolgâdusnommâ
+    .desc = čielgiittâs
+
+real-keesi-keessiv = Njuolgâdusnommâ
+    .desc = čielgiittâs
+
+real-keessiv-keesi = Njuolgâdusnommâ
+    .desc = čielgiittâs
+
+syn-delete-adv-phrasal-verb = Njuolgâdusnommâ
+    .desc = čielgiittâs
+
