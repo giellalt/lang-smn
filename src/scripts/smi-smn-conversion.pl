@@ -65,6 +65,8 @@ while(<>) {
 	s/^Markku\+/!Markku+/g ;
 	s/^Matti\+/!Matti+/g ;
 	s/^Mikko\+/!Mikko+/g ;
+	s/^Palestina\+/!Palestina+/g ;
+	s/^Argentina\+/!Argentina+/g ;
 	s/^Pertti\+/!Pertti+/g ;
 	s/^Saksa\+/!Saksa+/g ;
 	s/^Salla\+/!Salla+/g ;
