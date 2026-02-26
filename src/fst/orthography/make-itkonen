@@ -1,0 +1,7 @@
+all: itkonen2smn.hfst
+
+itkonen2smn.hfst: itkonen2smn.xfscript
+	hfst-xfst -F itkonen2smn.xfscript
+clean:
+	rm -f itkonen2smn.hfst
+

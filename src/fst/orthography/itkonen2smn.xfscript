@@ -1,0 +1,83 @@
+! Divvun & Giellatekno - open source grammars for Sámi and other languages
+! Copyright © 2000-2010 The University of Tromsø & the Norwegian Sámi Parliament
+! http://giellatekno.uit.no & http://divvun.no
+!
+! This program is free software; you can redistribute and/or modify
+! this file under the terms of the GNU General Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version. The GNU General Public License
+! is found at http://www.gnu.org/licenses/gpl.html. It is
+! also available in the file $GTHOME/LICENSE.txt.
+!
+! Other licensing options are available upon request, please contact
+! giellatekno@hum.uit.no or feedback@divvun.no
+
+
+! To compile, do:
+
+! make
+
+! The command in the makefile is:
+! hfst-xfst -F itkonen2smn.xfscript
+
+! ======
+! Conversion from Itkonen to modern orthography
+! =======
+
+echo <<defining Cns and Vow...>>
+
+define Vow [a|ȧ|ä|á|â|e|æ|i|ī|o|u|ū|y
+           |A|Ȧ|Ä|Á|Â|E|Æ|I|Ī|O|U|Ū|Y];
+define Cns [b|c|č|ʒ|ǯ|d|đ|f|g|h|j|k|l|m|n|ŋ|p|r|s|š|v|z|ž|t
+           |B|C|Č|Ʒ|Ǯ|D|Đ|F|G|H|J|K|L|M|N|Ŋ|P|R|S|Š|V|Z|Ž|T];
+
+
+define Sgm [Cns|Vow ] ;
+define Syll Cns* Vow+ Cns* ;
+
+echo << Rules >>
+
+define ij2i i -> 0 || [.#.|Cns] Vow+ _ j ; ! laijo > lajo
+define j2i j -> i || Vow _ Cns ;      ! bijla > biila
+define ae2e æ -> e ;
+define oa2uaa o a -> u á ;
+define yv2v y -> 0 || Vow _ v ;
+define yC2vC y -> v || Vow _ [Cns - v] ;
+define u2v u -> v  || Vow _ [l|r|m|n|g] Vow ;
+define 2sta2schwaa a -> â || .#. Cns* Vow+  Cns+ _ [Cns|.#.] ;
+define 3sta2schwaa a -> â || .#. Syll Cns* Vow+  Cns+ _ [Cns|.#.] ;
+define 4sta2schwaa a -> â || .#. Syll Syll Cns* Vow+  Cns+ _ [Cns|.#.] ;
+define mmnotschwaa â -> a || .#. n j a m m _ ;
+define aacute [ȧ -> á] ;
+define eae2iae e -> i || .#. Cns* _ ä ;
+define scaron ǯ -> š || _ .#. ;
+define zcaron ǯ -> ž ;
+define z ʒ -> z ;
+ǯð
+echo << Compile... >>
+
+read regex [ ij2i
+.o. j2i
+.o. ae2e
+.o. oa2uaa
+.o. yv2v
+.o. yC2vC
+.o. u2v
+.o. 2sta2schwaa
+.o. 3sta2schwaa
+.o. 4sta2schwaa
+.o. mmnotschwaa
+.o. aacute
+.o. eae2iae
+.o. scaron
+.o. zcaron
+.o. z
+] ;
+
+save itkonen2smn.hfst
+
+echo << ... fertig >>
+
+
+
+
