@@ -13,15 +13,17 @@
 ! giellatekno@hum.uit.no or feedback@divvun.no
 
 
-! To compile, do:
+! To compile, stand in lang-smn/src/fst/orthography and do:
+! make -f make-itkonen
+! To use the script:
+! echo laađas | hfst-lookup -q itkonen2smn.hfst
+! The result should be:
+! laađas<tab>laađâs
 
-! make
 
-! The command in the makefile is:
-! hfst-xfst -F itkonen2smn.xfscript
 
 ! ======
-! Conversion from Itkonen to modern orthography
+! Conversion from Itkonen to modern Inari Saami orthography
 ! =======
 
 echo <<defining Cns and Vow...>>
