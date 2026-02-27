@@ -40,7 +40,7 @@ define Syll Cns* Vow+ Cns* ;
 echo << Rules >>
 
 define ij2i i -> 0 || [.#.|Cns] Vow+ _ j ; ! laijo > lajo
-define j2i j -> i || Vow _ Cns ;      ! bijla > biila
+define j2i j -> i || [Vow - i] _ [.#.|Cns - [v|n|m|r|s]] ;      ! bijla > biila
 define ae2e æ -> e ;
 define oa2uaa o a -> u á ;
 define yv2v y -> 0 || Vow _ v ;
