@@ -43,9 +43,12 @@ define ij2i i -> 0 || [.#.|Cns] Vow+ _ j ; ! laijo > lajo
 define j2i j -> i || [Vow - i] _ [.#.|Cns - [v|n|m|r|s]] ;      ! bijla > biila
 define ae2e æ -> e ;
 define oa2uaa o a -> u á ;
-define yv2v y -> 0 || Vow _ v ;
+define yv2v y -> 0 || [Vow - á] _ v ;
+define oayv2oavv y -> v || [o a|e ä] _ v ; 
 define yC2vC y -> v || Vow _ [Cns - v] ;
-define u2v u -> v  || Vow _ [l|r|m|n|g] Vow ;
+define ieuj2ievj u -> v || i e _ j ;
+define vu2v u -> 0 || u o _ v ;
+define u2v u -> v  || Vow _ [l|r|m|n|g|ʒ|ǯ] Vow ;
 define 2sta2schwaa a -> â || .#. Cns* Vow+  Cns+ _ [Cns|.#.] ;
 define 3sta2schwaa a -> â || .#. Syll Cns* Vow+  Cns+ _ [Cns|.#.] ;
 define 4sta2schwaa a -> â || .#. Syll Syll Cns* Vow+  Cns+ _ [Cns|.#.] ;
@@ -55,16 +58,19 @@ define eae2iae e -> i || .#. Cns* _ ä ;
 define scaron ǯ -> š || _ .#. ;
 define zcaron ǯ -> ž ;
 define z ʒ -> z ;
-ǯð
+
 echo << Compile... >>
 
 read regex [ ij2i
 .o. j2i
 .o. ae2e
-.o. oa2uaa
-.o. yv2v
+.o. oayv2oavv
 .o. yC2vC
+.o. ieuj2ievj
+.o. vu2v
 .o. u2v
+.o. yv2v
+.o. oa2uaa
 .o. 2sta2schwaa
 .o. 3sta2schwaa
 .o. 4sta2schwaa
