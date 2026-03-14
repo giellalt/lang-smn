@@ -302,8 +302,8 @@ msyn-dimin-after-ucca = Diminutive after uccâ
     
 msyn-gen-after-num = Genitive after numeral
 
-msyn-moddii = Njuolgâdusnommâ
-    .desc = čielgiittâs
+msyn-moddii = Moddii
+    .desc = It is idiomatically more common to write "moddii" than "modde {$1}".
 
 msyn-part-after-num = Partitive after numeral
     .desc = čielgiittâs

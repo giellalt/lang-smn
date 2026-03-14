@@ -45,6 +45,9 @@ msyn-agr-imprt-sg3 = Verbâ oovtâlovo kuálmád persovnist.
 msyn-agr-other-pl3 = Verbâ maangâlovo kuálmád persovnist.
     .desc = Verbâhäämi "{$1}" kiävttoo oovtâlovvoost leijee subjekt "$2" maŋa. Ličij-uv maangâloho pyereeb?
 
+msyn-moddii = Moddii
+    .desc = Lii idiomalávt pyereeb čäälliđ "moddii" ko "modde {$1}".
+
 msyn-pred-acc-nom = Predikatiiv kolgâččij leđe nominatiivist.
     .desc = Sääni "{$1}" oro lemin predikatiiv akkusatiivist. Ličij-uv nominatiiv pyereeb?
 
