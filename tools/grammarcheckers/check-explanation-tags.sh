@@ -32,7 +32,7 @@ echo "\n"
 
 echo "Number of tags missing in errors.source.xml: "
 comm -23 xxg xxx | wc -l
-echo "The tags missing in errors.xml were: "
+echo "The tags missing in errors.source.xml were: "
 comm -23 xxg xxx
 echo "\n"
 
