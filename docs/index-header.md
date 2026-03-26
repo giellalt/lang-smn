@@ -24,6 +24,7 @@ This page documents the work on the [Inari Saami grammatical analyser](http://gi
 
 - [Lingustic documentation of the language model](lingustic-documentation.md)
 - [Testing and development of the language model](testing-and-development.md)
+- [Accuracy report of spellers (for developers)](typosreport/index.html)
 
 
 ## Project pages
