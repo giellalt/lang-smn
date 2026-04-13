@@ -40,7 +40,7 @@ define Syll Cns* Vow+ Cns* ;
 echo << Rules >>
 
 echo << j to i rules >>
-define ij2i i -> 0 || [.#.|Cns] Vow+ _ j ; ! laijo > lajo
+define ij2i i -> 0 || [.#.|Cns+] [Vow|æ æ] _ j Vow .#. ; ! laijo > lajo, čuoijađ > čuoijâđ, teejâ
 define j2iC j -> i || [Vow - i] _ [Cns|.#.] ;
 define j2iSyll j -> i || [Vow - i] _ [.#.|Cns - [v|n|m|r|s]] Syll ;      ! bijla > biila
 
@@ -52,8 +52,11 @@ define yC2vC     y -> v || Vow _ [Cns - v] ;
 define ieuj2ievj u -> v || i e _ j ;
 define vu2v      u -> 0 || u o _ v ;
 define u2v       u -> v || Vow _ [l|r|m|n|d|g|ʒ|ǯ] Vow ;
+define uv2u      u -> v || Vow _ v  Vow [Cns Cns i |Cns .#.] ;
+define uv2vv     u -> 0 || Vow _ v  Vow [Cns Vow |.#.] ;
 
 echo << Other vowel rules >>
+define yv2vv y -> v || Vow _ v ;
 define ii2ij i -> j || Syll i _ Cns ; ! ciriidiđ
 define eae2iae e -> i, E -> I || _ ä ;
 define ae2e æ -> e ;
@@ -61,7 +64,8 @@ define aumlbeforei ä -> á, Ä -> Á || [.#.|Cns|ä|Ä] _ (ä) Cns+ [Vow - [i|e
 define 2sta2schwaa a -> â || .#. Cns* Vow+  Cns+ _ [Cns|.#.] ;
 define 3sta2schwaa a -> â || .#. Syll Cns* Vow+  Cns+ _ [Cns|.#.] ;
 define 4sta2schwaa a -> â || .#. Syll Syll Cns* Vow+  Cns+ _ [Cns|.#.] ;
-define mmnotschwaa â -> a || .#. n j a m m _ ;
+define mmnotschwaa â -> a || .#. n j a m m _ ,,
+                   â -> a || .#. a l d _ ;
 define aacute [ȧ -> á] ;
 define eae2iae e -> i || .#. Cns* _ ä ;
 
@@ -71,6 +75,7 @@ define zcaron ǯ -> ž ;
 define finalch č -> š || _ .#. ;
 define z2s z -> s ;
 define edz2z ʒ -> z ;
+define ngjnj ŋ -> n || _ j ;
 
 echo << Compile... >>
 
@@ -82,7 +87,11 @@ read regex [ ij2i
 .o. ieuj2ievj
 .o. vu2v
 .o. u2v
+.o. uv2u     ! v -> 0 || Vow u _ Vow [Cns Vow|.#.] ;
+.o. uv2vv    ! u -> v || Vow _ v Vow Cns [Cns|.#.] ;
 
+
+.o. yv2vv
 .o. ii2ij
 .o. yv2v
 .o. oa2uaa
@@ -100,6 +109,7 @@ read regex [ ij2i
 .o. finalch
 .o. z2s
 .o. edz2z
+.o. ngjnj
 ] ;
 
 save itkonen2smn.hfst
