@@ -28,8 +28,9 @@
 
 echo <<defining Cns and Vow...>>
 
-define Vow [a|ȧ|ä|á|â|e|æ|i|ī|o|u|ū|y
-           |A|Ȧ|Ä|Á|Â|E|Æ|I|Ī|O|U|Ū|Y];
+define Vow [a|ȧ|ä|á|â|e|æ|i|{ī}|o|u|{ū}|y
+           |A|Ȧ|Ä|Á|Â|E|Æ|I|{Ī}|O|U|{Ū}|Y
+	   |à|{à}|{ȧ}|ü];
 define Cns [b|c|č|ʒ|ǯ|d|đ|f|g|h|j|k|l|m|n|ŋ|p|r|s|š|v|z|ž|t
            |B|C|Č|Ʒ|Ǯ|D|Đ|F|G|H|J|K|L|M|N|Ŋ|P|R|S|Š|V|Z|Ž|T];
 
@@ -38,6 +39,12 @@ define Sgm [Cns|Vow ] ;
 define Syll Cns* Vow+ Cns* ;
 
 echo << Rules >>
+
+echo << Unicode normalisation rules >>
+
+define aaccent  {à} -> á, {ȧ} -> á, {á} -> á, à -> á ;
+
+define umacron ü -> u u , {ū} -> u u  ; 
 
 echo << j to i rules >>
 define ij2i i -> 0 || [.#.|Cns+] [Vow|æ æ] _ j Vow .#. ; ! laijo > lajo, čuoijađ > čuoijâđ, teejâ
@@ -54,10 +61,14 @@ define vu2v      u -> 0 || u o _ v ;
 define u2v       u -> v || Vow _ [l|r|m|n|d|g|ʒ|ǯ] Vow ;
 define uv2u      u -> v || Vow _ v  Vow [Cns Cns i |Cns .#.] ;
 define uv2vv     u -> 0 || Vow _ v  Vow [Cns Vow |.#.] ;
+define uuu2uuv     u u u -> u u v ;
 
 echo << Other vowel rules >>
+define VVyv2VVv y -> 0 || [ o a | i ä ] _ v Cns Vow .#. ;
 define yv2vv y -> v || Vow _ v ;
-define ii2ij i -> j || Syll i _ Cns ; ! ciriidiđ
+define ii2ij i -> j || Syll i _ [ d i đ
+                                | [š|s] k y e t t i đ
+				] ; ! ciriidiđ
 define eae2iae e -> i, E -> I || _ ä ;
 define ae2e æ -> e ;
 define aumlbeforei ä -> á, Ä -> Á || [.#.|Cns|ä|Ä] _ (ä) Cns+ [Vow - [i|e]] ;
@@ -77,9 +88,21 @@ define z2s z -> s ;
 define edz2z ʒ -> z ;
 define ngjnj ŋ -> n || _ j ;
 
+echo << Late rules >>
+
+define suff s -> š || _ k y e t t i đ ;
+
+define corrwords s y v n i -> s y y n i ,,
+                 h y v s i g -> h y y s i g ,,
+		 s y v n ä đ -> s y y n á đ ,,
+		 s y v n ä ä t t i đ -> s y y n á á t t i đ
+		 ; 
+
 echo << Compile... >>
 
-read regex [ ij2i
+read regex [ aaccent
+.o. umacron
+.o. ij2i
 .o. j2iC
 .o. j2iSyll
 .o. oayv2oavv
@@ -89,8 +112,8 @@ read regex [ ij2i
 .o. u2v
 .o. uv2u     ! v -> 0 || Vow u _ Vow [Cns Vow|.#.] ;
 .o. uv2vv    ! u -> v || Vow _ v Vow Cns [Cns|.#.] ;
-
-
+.o. uuu2uuv
+.o. VVyv2VVv
 .o. yv2vv
 .o. ii2ij
 .o. yv2v
@@ -110,6 +133,8 @@ read regex [ ij2i
 .o. z2s
 .o. edz2z
 .o. ngjnj
+.o. suff
+.o. corrwords
 ] ;
 
 save itkonen2smn.hfst
