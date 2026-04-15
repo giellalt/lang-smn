@@ -47,7 +47,20 @@ define aaccent  {à} -> á, {ȧ} -> á, {á} -> á, à -> á ;
 define umacron ü -> u u , {ū} -> u u  ; 
 
 echo << j to i rules >>
-define ij2i i -> 0 || [.#.|Cns+] [Vow|æ æ] _ j Vow .#. ; ! laijo > lajo, čuoijađ > čuoijâđ, teejâ
+define ij2j i -> 0 || [.#.|Cns+] [Vow|a a
+				     |e e
+				     |e ä
+				     |i e
+				     |i ä
+				     |o a
+				     |u o
+				     |u ȧ
+				     |y e
+				     |æ æ
+				     |ȧ ȧ
+                                     |ä ä
+				     ] _ j Vow [.#.|[l a s|[l|s] i đ]] ;
+        ! laijo > lajo, čuoijađ > čuoijâđ, teejâ
 define j2iC j -> i || [Vow - i] _ [Cns|.#.] ;
 define j2iSyll j -> i || [Vow - i] _ [.#.|Cns - [v|n|m|r|s]] Syll ;      ! bijla > biila
 
@@ -102,7 +115,7 @@ echo << Compile... >>
 
 read regex [ aaccent
 .o. umacron
-.o. ij2i
+.o. ij2j
 .o. j2iC
 .o. j2iSyll
 .o. oayv2oavv
