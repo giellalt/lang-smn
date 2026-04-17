@@ -43,8 +43,10 @@ echo << Rules >>
 echo << Unicode normalisation rules >>
 
 define aaccent  {à} -> á, {ȧ} -> á, {á} -> á, à -> á ;
+define various δ -> đ , {s̀} -> š ;
 
 define umacron ü -> u u , {ū} -> u u  ; 
+define aacute [ȧ -> á] ;
 
 echo << j to i rules >>
 define ij2j i -> 0 || [.#.|Cns+] [Vow|a a
@@ -54,10 +56,10 @@ define ij2j i -> 0 || [.#.|Cns+] [Vow|a a
 				     |i ä
 				     |o a
 				     |u o
-				     |u ȧ
+				     |u á
 				     |y e
 				     |æ æ
-				     |ȧ ȧ
+				     |á á
                                      |ä ä
 				     ] _ j Vow [.#.|[l a s|[l|s] i đ]] ;
         ! laijo > lajo, čuoijađ > čuoijâđ, teejâ
@@ -74,7 +76,7 @@ define vu2v      u -> 0 || u o _ v ;
 define u2v       u -> v || Vow _ [l|r|m|n|d|g|ʒ|ǯ] Vow ;
 define uv2u      u -> v || Vow _ v  Vow [Cns Cns i |Cns .#.] ;
 define uv2vv     u -> 0 || Vow _ v  Vow [Cns Vow |.#.] ;
-define uuu2uuv     u u u -> u u v ;
+define uuu2uuv     u u u -> u u v ,, u o u -> u o v ;
 
 echo << Other vowel rules >>
 define VVyv2VVv y -> 0 || [ o a | i ä ] _ v Cns Vow .#. ;
@@ -83,14 +85,15 @@ define ii2ij i -> j || Syll i _ [ d i đ
                                 | [š|s] k y e t t i đ
 				] ; ! ciriidiđ
 define eae2iae e -> i, E -> I || _ ä ;
+define aeaei2aeae i -> 0 || (æ) æ _ ;
 define ae2e æ -> e ;
 define aumlbeforei ä -> á, Ä -> Á || [.#.|Cns|ä|Ä] _ (ä) Cns+ [Vow - [i|e]] ;
-define 2sta2schwaa a -> â || .#. Cns* Vow+  Cns+ _ [Cns|.#.] ;
+define aumlafteraacute ä -> á || á (Vow) Cns+ _ (Cns) .#. ;
+define 2sta2schwaa a -> â || .#. Cns* [Vow - a] ([Vow - a])  Cns+ _ [Cns|.#.] ;
 define 3sta2schwaa a -> â || .#. Syll Cns* Vow+  Cns+ _ [Cns|.#.] ;
 define 4sta2schwaa a -> â || .#. Syll Syll Cns* Vow+  Cns+ _ [Cns|.#.] ;
 define mmnotschwaa â -> a || .#. n j a m m _ ,,
                    â -> a || .#. a l d _ ;
-define aacute [ȧ -> á] ;
 define eae2iae e -> i || .#. Cns* _ ä ;
 
 echo << Consonant rules >>
@@ -100,12 +103,16 @@ define finalch č -> š || _ .#. ;
 define z2s z -> s ;
 define edz2z ʒ -> z ;
 define ngjnj ŋ -> n || _ j ;
-
+define dh2d đ -> d || _ [u|â] š š â đ ;
 echo << Late rules >>
 
 define suff s -> š || _ k y e t t i đ ;
+define oh2ah o -> â || Syll Cns Syll Cns  _ h .#. ;
+
+define wordfinal [..] -> â || v u o t _ .#. ;
 
 define corrwords s y v n i -> s y y n i ,,
+                 a t v e n t -> a d v e n t ,,
                  h y v s i g -> h y y s i g ,,
 		 s y v n ä đ -> s y y n á đ ,,
 		 s y v n ä ä t t i đ -> s y y n á á t t i đ
@@ -114,7 +121,9 @@ define corrwords s y v n i -> s y y n i ,,
 echo << Compile... >>
 
 read regex [ aaccent
+.o. various
 .o. umacron
+.o. aacute
 .o. ij2j
 .o. j2iC
 .o. j2iSyll
@@ -132,13 +141,14 @@ read regex [ aaccent
 .o. yv2v
 .o. oa2uaa
 .o. aumlbeforei
+.o. aumlafteraacute
+.o. aeaei2aeae
 .o. ae2e
 .o. eae2iae
 .o. 2sta2schwaa
 .o. 3sta2schwaa
 .o. 4sta2schwaa
 .o. mmnotschwaa
-.o. aacute
 .o. eae2iae
 .o. scaron
 .o. zcaron
@@ -146,7 +156,10 @@ read regex [ aaccent
 .o. z2s
 .o. edz2z
 .o. ngjnj
+.o. dh2d
 .o. suff
+.o. oh2ah
+.o. wordfinal
 .o. corrwords
 ] ;
 
