@@ -26,7 +26,7 @@
 ! Conversion from Itkonen to modern Inari Saami orthography
 ! =======
 
-echo <<defining Cns and Vow...>>
+echo << Defining Cns and Vow...>>
 
 define Vow [a|ȧ|ä|á|â|e|æ|i|{ī}|o|u|{ū}|y
            |A|Ȧ|Ä|Á|Â|E|Æ|I|{Ī}|O|U|{Ū}|Y
@@ -94,7 +94,14 @@ define 3sta2schwaa a -> â || .#. Syll Cns* Vow+  Cns+ _ [Cns|.#.] ;
 define 4sta2schwaa a -> â || .#. Syll Syll Cns* Vow+  Cns+ _ [Cns|.#.] ;
 define mmnotschwaa â -> a || .#. n j a m m _ ,,
                    â -> a || .#. a l d _ ;
-define eae2iae e -> i || .#. Cns* _ ä ;
+
+define infsuff a -> â || _ đ .#. ;
+
+define correctinfsuff â -> a || .#. [ a r v
+                                    | b a l l ] _ đ ;
+
+
+define Ceae2iae e -> i || .#. Cns* _ ä ;
 
 echo << Consonant rules >>
 define scaron ǯ -> š || _ .#. ;
@@ -104,6 +111,7 @@ define z2s z -> s ;
 define edz2z ʒ -> z ;
 define ngjnj ŋ -> n || _ j ;
 define dh2d đ -> d || _ [u|â] š š â đ ;
+
 echo << Late rules >>
 
 define suff s -> š || _ k y e t t i đ ;
@@ -149,7 +157,9 @@ read regex [ aaccent
 .o. 3sta2schwaa
 .o. 4sta2schwaa
 .o. mmnotschwaa
-.o. eae2iae
+.o. infsuff
+.o. correctinfsuff
+.o. Ceae2iae
 .o. scaron
 .o. zcaron
 .o. finalch
