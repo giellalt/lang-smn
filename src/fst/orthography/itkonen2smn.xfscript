@@ -47,6 +47,7 @@ define various δ -> đ , {s̀} -> š ;
 
 define umacron ü -> u u , {ū} -> u u  ; 
 define aacute [ȧ -> á] ;
+define ad  a -> đ || á _ .#. ; ! skoalkkàa
 
 echo << j to i rules >>
 define ij2j i -> 0 || [.#.|Cns+] [Vow|a a
@@ -94,7 +95,7 @@ define 3sta2schwaa a -> â || .#. Syll Cns* Vow+  Cns+ _ [Cns|.#.] ;
 define 4sta2schwaa a -> â || .#. Syll Syll Cns* Vow+  Cns+ _ [Cns|.#.] ;
 define mmnotschwaa â -> a || .#. n j a m m _ ,,
                    â -> a || .#. a l d _ ;
-
+define 2staschwaa a -> â || .#. Syll _ Cns â Cns+ â đ .#. ; ! faškarâššâđ
 define infsuff a -> â || _ đ .#. ;
 
 define correctinfsuff â -> a || .#. [ a r v
@@ -123,7 +124,8 @@ define corrwords s y v n i -> s y y n i ,,
                  a t v e n t -> a d v e n t ,,
                  h y v s i g -> h y y s i g ,,
 		 s y v n ä đ -> s y y n á đ ,,
-		 s y v n ä ä t t i đ -> s y y n á á t t i đ
+		 s y v n ä ä t t i đ -> s y y n á á t t i đ ,,
+		 v á a l d á t t â l l â đ -> v á l d á t t â l l â đ
 		 ; 
 
 echo << Compile... >>
@@ -132,6 +134,7 @@ read regex [ aaccent
 .o. various
 .o. umacron
 .o. aacute
+.o. ad
 .o. ij2j
 .o. j2iC
 .o. j2iSyll
@@ -157,6 +160,7 @@ read regex [ aaccent
 .o. 3sta2schwaa
 .o. 4sta2schwaa
 .o. mmnotschwaa
+.o. 2staschwaa
 .o. infsuff
 .o. correctinfsuff
 .o. Ceae2iae
