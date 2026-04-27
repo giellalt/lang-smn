@@ -40,14 +40,29 @@ define Syll Cns* Vow+ Cns* ;
 
 echo << Rules >>
 
+echo << Various types of noise >>
+
+define informantsexception  M -> 0 || ä ä p i s _ ;
+define daima d Ä -> đ || _ .#. ; ! Äimä salbalidÄ -> salbaliđ
+define informants Ä       -> 0,
+                  K       -> 0,
+		  (s) A M -> 0,
+		  ö J P M -> 0,
+		  s M     -> 0,
+		  w A P   -> 0,
+		  v / A P -> 0,
+		  s E V   -> 0 || _ .#. ; ! informant marking at the end of words
+
 echo << Unicode normalisation rules >>
 
-define aaccent  {à} -> á, {ȧ} -> á, {á} -> á, à -> á ;
-define various δ -> đ , {s̀} -> š ;
+define agrave à -> á  ;
+define aaccent  {à} -> á, {ȧ} -> á, {á} -> á ;
+define various δ -> đ , {s̀} -> š , {ə̆} -> 0 ; ! ocr errors
 
 define umacron ü -> u u , {ū} -> u u  ; 
 define aacute [ȧ -> á] ;
 define ad  a -> đ || á _ .#. ; ! skoalkkàa
+define finalerrors Ä -> 0, {~} -> 0 || _ .#. ; ! Äimä, tilde does not work
 
 echo << j to i rules >>
 define ij2j i -> 0 || [.#.|Cns+] [Vow|a a
@@ -105,7 +120,7 @@ define correctinfsuff â -> a || .#. [ a r v
 define Ceae2iae e -> i || .#. Cns* _ ä ;
 
 echo << Consonant rules >>
-define scaron ǯ -> š || _ .#. ;
+define scaron ǯ -> š || _ [{-}|.#.] ;
 define zcaron ǯ -> ž ;
 define finalch č -> š || _ .#. ;
 define z2s z -> s ;
@@ -130,11 +145,17 @@ define corrwords s y v n i -> s y y n i ,,
 
 echo << Compile... >>
 
-read regex [ aaccent
+read regex [ informantsexception
+.o. daima 
+.o. informants
+.o. agrave
+.o. aaccent
 .o. various
 .o. umacron
 .o. aacute
 .o. ad
+.o. daima
+.o. finalerrors
 .o. ij2j
 .o. j2iC
 .o. j2iSyll
