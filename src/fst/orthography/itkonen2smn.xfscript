@@ -64,7 +64,10 @@ define aacute [ȧ -> á] ;
 define ad  a -> đ || á _ .#. ; ! skoalkkàa
 define finalerrors Ä -> 0, {~} -> 0 || _ .#. ; ! Äimä, tilde does not work
 
+define finalddh d -> đ || [g|k] y e t t i _ ;
+
 echo << j to i rules >>
+
 define ij2j i -> 0 || [.#.|Cns+] [Vow|a a
 				     |e e
 				     |e ä
@@ -88,11 +91,11 @@ define yv2v      y -> 0 || [Vow - á] _ v ;
 define oayv2oavv y -> v || [o a|e ä] _ v ; 
 define yC2vC     y -> v || Vow _ [Cns - v] ;
 define ieuj2ievj u -> v || i e _ j ;
-define vu2v      u -> 0 || u o _ v ;
+define vu2v      u -> 0 || [u o|a] _ v ; ! suouva -> suovâ, nauver -> naver
 define u2v       u -> v || Vow _ [l|r|m|n|d|g|ʒ|ǯ] Vow ;
 define uv2u      u -> v || Vow _ v  Vow [Cns Cns i |Cns .#.] ;
-define uv2vv     u -> 0 || Vow _ v  Vow [Cns Vow |.#.] ;
-define uuu2uuv     u u u -> u u v ,, u o u -> u o v ;
+define uv2vv     u -> 0 || Vow _ v  Vow [Cns Vow |.#.] ; 
+define uuu2uuv   o o u -> o o v ,, u u u -> u u v ,, u o u -> u o v ; ! soovsâđ
 
 echo << Other vowel rules >>
 define VVyv2VVv y -> 0 || [ o a | i ä ] _ v Cns Vow .#. ;
@@ -102,16 +105,20 @@ define ii2ij i -> j || Syll i _ [ d i đ
 				] ; ! ciriidiđ
 define eae2iae e -> i, E -> I || _ ä ;
 define aeaei2aeae i -> 0 || (æ) æ _ ;
-define ae2e æ -> e ;
+define ae2e æ -> e ; ! vædduđ -> vedduđ
 define aumlbeforei ä -> á, Ä -> Á || [.#.|Cns|ä|Ä] _ (ä) Cns+ [Vow - [i|e]] ;
+define aumlafteru ä -> á || u _ ; ! kuäddȧ -> kuáddá
 define aumlafteraacute ä -> á || á (Vow) Cns+ _ (Cns) .#. ;
-define 2sta2schwaa a -> â || .#. Cns* [Vow - a] ([Vow - a])  Cns+ _ [Cns|.#.] ;
-define 3sta2schwaa a -> â || .#. Syll Cns* Vow+  Cns+ _ [Cns|.#.] ;
+define 2sta2schwaa a -> â || .#. Cns* Vow (Vow)  Cns+ _ [Cns|.#.] ;
+define 3sta2schwaa a -> â || .#. Syll Cns* Vow+  Cns+ _ [Cns|.#.] ; ! patrulla > patrullâ
 define 4sta2schwaa a -> â || .#. Syll Syll Cns* Vow+  Cns+ _ [Cns|.#.] ;
-define mmnotschwaa â -> a || .#. n j a m m _ ,,
-                   â -> a || .#. a l d _ ;
-define 2staschwaa a -> â || .#. Syll _ Cns â Cns+ â đ .#. ; ! faškarâššâđ
-define infsuff a -> â || _ đ .#. ;
+define mmnotschwaa â -> a || .#. [ n j a m m 
+                                 | a l d
+                                 | m u o r
+				 ] _ ;
+define 2staschwaa  a -> â || .#. Syll _ Cns â Cns+ â đ .#. ; ! faškarâššâđ
+define infsuff     a -> â || _ [ đ .#.           ! 
+                           | v u o t .#. ] ; ! avđagasvuota -> avđagâsvuotâ
 
 define correctinfsuff â -> a || .#. [ a r v
                                     | b a l l ] _ đ ;
@@ -156,6 +163,7 @@ read regex [ informantsexception
 .o. ad
 .o. daima
 .o. finalerrors
+.o. finalddh
 .o. ij2j
 .o. j2iC
 .o. j2iSyll
