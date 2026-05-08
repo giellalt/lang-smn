@@ -60,6 +60,7 @@ define aaccent  {à} -> á, {ȧ} -> á, {á} -> á ;
 define various δ -> đ , {s̀} -> š , {ə̆} -> 0 ; ! ocr errors
 
 define umacron ü -> u u , {ū} -> u u  ; 
+define 3aacute ȧ -> â || .#. Cns* Vow+ Cns+ Vow+ Cns+ _ ǯ .#. ; ! [g|r|l|n|h]
 define aacute [ȧ -> á] ;
 define ad  a -> đ || á _ .#. ; ! skoalkkàa
 define finalerrors Ä -> 0, {~} -> 0 || _ .#. ; ! Äimä, tilde does not work
@@ -127,13 +128,16 @@ define correctinfsuff â -> a || .#. [ a r v
 define Ceae2iae e -> i || .#. Cns* _ ä ;
 
 echo << Consonant rules >>
+
 define scaron ǯ -> š || _ [{-}|.#.] ;
 define zcaron ǯ -> ž ;
 define finalch č -> š || _ .#. ;
 define z2s z -> s ;
 define edz2z ʒ -> z ;
 define ngjnj ŋ -> n || _ j ;
-define dh2d đ -> d || _ [u|â] š š â đ ;
+define dh2d đ -> d || _ [[u|â] š š â đ
+                        | i đ .#.
+			];
 
 echo << Late rules >>
 
@@ -150,6 +154,7 @@ define corrwords s y v n i -> s y y n i ,,
 		 v á a l d á t t â l l â đ -> v á l d á t t â l l â đ
 		 ; 
 
+
 echo << Compile... >>
 
 read regex [ informantsexception
@@ -159,6 +164,7 @@ read regex [ informantsexception
 .o. aaccent
 .o. various
 .o. umacron
+.o. 3aacute
 .o. aacute
 .o. ad
 .o. daima
