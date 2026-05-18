@@ -57,7 +57,7 @@ echo << Unicode normalisation rules >>
 
 define agrave à -> á  ;
 define aaccent  {à} -> á, {ȧ} -> á, {á} -> á ;
-define various δ -> đ , {s̀} -> š , {ə̆} -> 0 ; ! ocr errors
+define various δ -> đ , {s̀} -> š , {s̄} -> š , {ə̆} -> 0 ; ! ocr errors
 
 define umacron ü -> u u , {ū} -> u u  ; 
 define 3aacute ȧ -> â || .#. Cns* Vow+ Cns+ Vow+ Cns+ _ ǯ .#. ; ! [g|r|l|n|h]
@@ -65,7 +65,11 @@ define aacute [ȧ -> á] ;
 define ad  a -> đ || [á|à] _ .#. ; ! skoalkkàa
 define finalerrors Ä -> 0, {~} -> 0 || _ .#. ; ! Äimä, tilde does not work
 
-define finalddh d -> đ || [g|k] y e t t i _ ;
+define finalddh d -> đ || i _ .#. ;
+
+define correctfinalddh č u á s s i đ  -> č u á s s i d ,,
+                       p ä s k i đ    -> p ä s k i d ,,
+                       T a a v v i đ  -> T a a v v i d ;
 
 echo << j to i rules >>
 
@@ -98,26 +102,39 @@ define uv2u      u -> v || Vow _ v  Vow [Cns Cns i |Cns .#.] ;
 define uv2vv     u -> 0 || Vow _ v  Vow [Cns Vow |.#.] ; 
 define uuu2uuv   o o u -> o o v ,, u u u -> u u v ,, u o u -> u o v ; ! soovsâđ
 
+
 echo << Other vowel rules >>
+
 define VVyv2VVv y -> 0 || [ o a | i ä ] _ v Cns Vow .#. ;
-define yv2vv y -> v || Vow _ v ;
-define ii2ij i -> j || Syll i _ [ d i đ
-                                | [š|s] k y e t t i đ
-				] ; ! ciriidiđ
+
+define yv2vv    y -> v || Vow _ v ;
+
+define ii2ij    i -> j || Syll i _ [ d i đ
+                                   | [š|s] k y e t t i đ
+		         	   ] ; ! ciriidiđ
+
 define eae2iae e -> i, E -> I || _ ä ;
-define aeaei2aeae i -> 0 || æ æ _ ; ! fejlâ
-define ae2e æ -> e ; ! vædduđ -> vedduđ
+
+define e2i             e -> i || t u t t _ đ .#. ;
+
+define aeaei2aeae      i -> 0 || æ æ _ ; ! fejlâ
+
+define ae2e            æ -> e ; ! vædduđ -> vedduđ
+
 define aumlbeforei ä -> á, Ä -> Á || [.#.|Cns|ä|Ä] _ (ä) Cns+ [Vow - [i|e]] ;
-define aumlafteru ä -> á , a -> á || u _ ; ! kuäddȧ -> kuáddá, vuahuđ -> vuáhuđ
-define aumlafteraacute ä -> á || á (Vow) Cns+ _ (Cns) .#. ;
+
+define aumlafteru  ä -> á, a -> á || u _ ; ! kuäddȧ -> kuáddá, vuahuđ -> vuáhuđ
+
+define aumlafteraacute     ä -> á || á (Vow) Cns+ _ (Cns) .#. ;
+
 define 2sta2schwaa a -> â || .#. Cns* Vow (Vow)  Cns+ _ [Cns|.#.] ;
+
 define 3sta2schwaa a -> â || .#. Syll Cns* Vow+  Cns+ _ [Cns+ [.#.|Vow Cns]|.#.] ; ! patrulla > patrullâ
+
 define 4sta2schwaa a -> â || .#. Syll Cns Syll Cns* Vow+  Cns+ _ [Cns|.#.] ;
-define mmnotschwaa â -> a || .#. [ n j a m m 
-                                 | a l d
-                                 | m u o r
-				 ] _ ;
+
 define 2staschwaa  a -> â || .#. Syll _ Cns â Cns+ â đ .#. ; ! faškarâššâđ
+
 define infsuff     a -> â || _ [ đ .#.           ! 
                                | v u o t .#.
 			       ] ; ! avđagasvuota -> avđagâsvuotâ
@@ -125,30 +142,47 @@ define infsuff     a -> â || _ [ đ .#.           !
 define correctinfsuff â -> a || .#. [ a r v
                                     | b a l l ] _ đ ;
 
+define mmnotschwaa â -> a || .#. [ n j a m m 
+                                 | a l d
+				 | a n
+				 | a s k
+                                 | m u o r
+				 ] _ ;
+
 
 define Ceae2iae e -> i || .#. Cns* _ ä ;
 
 echo << Consonant rules >>
 
-define scaron ǯ -> š || _ [{-}|.#.] ;
-define zcaron ǯ -> ž ;
-define finalch č -> š || _ .#. ;
-define z2s z -> s ;
-define edz2z ʒ -> z ;
-define ngjnj ŋ -> n || _ j ;
-define dh2d đ -> d || _ [[u|â] š š â đ
-                        | i đ .#.
-			| â s .#.
-			];
+define scaron   ǯ -> š || _ [{-}|.#.] ;
+
+define zcaron   ǯ -> ž ;
+
+define finalch  č -> š || _ .#. ;
+
+define z2s      z -> s ;
+
+define edz2z    ʒ -> z ;
+
+define ngjnj    ŋ -> n || _ j ;
+
+define dh2d     đ -> d || _ [[u|â] š š â đ
+                            | i đ .#.
+		            | â s .#.
+			    ];
+
 define finald2dh d -> đ || [ â l l â
                            | â š š â
                            | s i
 			   ] _ .#. ;
+
 define d2dh      d -> đ ||   g y e _ e t t i đ ;
 
 define strings b đ -> b d ;
 
 define finalstrings [ đ a s ] -> d â s || _ .#. ;
+
+
 echo << Late rules >>
 
 define suff s -> š || _ k y e t t i đ ;
@@ -165,8 +199,13 @@ define corrwords k o b d o đ -> k o b đ o đ ,,
                  h y v s i g -> h y y s i g ,,
 		 s y v n ä đ -> s y y n á đ ,,
 		 s y v n ä ä t t i đ -> s y y n á á t t i đ ,,
-		 v á a l d á t t â l l â đ -> v á l d á t t â l l â đ
-		 ; 
+		 v á a l d á t t â l l â đ -> v á l d á t t â l l â đ ,,
+		 a a b o s t o l -> a b o s t o l ,,
+		 a a i m â k k â š š â đ -> a i m â k k â š š â đ ,,
+		 a d d e l i s t i đ -> a d e l i s t i đ ,,
+		 a d d e l i đ -> a d e l i đ ,,
+		 a d d e l u đ -> a d e l u đ 
+	 ; 
 
 
 echo << Compile... >>
@@ -184,6 +223,7 @@ read regex [ informantsexception
 .o. daima
 .o. finalerrors
 .o. finalddh
+.o. correctfinalddh
 .o. ij2j
 .o. j2iC
 .o. j2iSyll
@@ -203,15 +243,16 @@ read regex [ informantsexception
 .o. aumlbeforei
 .o. aumlafteraacute
 .o. aeaei2aeae
+.o. e2i
 .o. ae2e
 .o. eae2iae
 .o. 2sta2schwaa
 .o. 3sta2schwaa
 .o. 4sta2schwaa
-.o. mmnotschwaa
 .o. 2staschwaa
 .o. infsuff
 .o. correctinfsuff
+.o. mmnotschwaa
 .o. Ceae2iae
 .o. scaron
 .o. zcaron
