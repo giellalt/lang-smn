@@ -634,6 +634,8 @@ SET DU-PL-V = DU1-V OR DU2-V OR DU3-V OR PL1-V OR PL2-V OR PL3-V ;
 
 SET 1-2-V = SG1-V OR SG2-V OR DU1-V OR DU2-V OR PL1-V OR PL2-V ;
 
+SET NUMBER = Sg OR Pl ;
+
 #!! ### Sets consisting of forms of "leđe" (these ones need to be rewritten)
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 SET LEAN = ("leđe" Prs Sg1) + Ind OR ("leđe" V Prt ConNeg);
@@ -2548,6 +2550,10 @@ SELECT:siste Adv IF (-1 V)(0 ("siste"))(*1 N + Loc BARRIER NOT-NPMOD);
 
 
 #!! ## Pronouns
+
+#!! ### Relative pronouns
+
+REMOVE:RelNotIndef Indef IF (-2 N + Pl)(-1 COMMA)(0 Rel + Pl);
 
 #!!
 SELECT:suoi Pron IF (0 Du3 + Nom)(*1 V + Du3 BARRIER NOT-ADV);
