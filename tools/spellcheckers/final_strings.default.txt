@@ -44,3 +44,26 @@ uin:oin	5
 âst:ist	5
 š:s	3
 
+# Mined from the regenerated typos-generated-err.tsv. Each was checked for how
+# many rows the pattern ALREADY resolves correctly, across how many distinct
+# stems the failures run, and whether the reverse rewrite occurs at all:
+#
+#   rule        match   already-right   failing   stems   reverse
+#   âdis:is        30               0        30      27         0
+#   âs:is          65              33        32      32         1
+#   eđ:iđ           8               0         8       8         0
+#
+# âdis:is and eđ:iđ are clean families - the attributive of -âd adjectives
+# (českâd -> českis, written *českâdis) and the infinitive of -ittiđ verbs
+# (asâiduttiđ, written *asâidutteđ). âs:is is the -âs variant of the same
+# attributive and is the one with real exposure, 33 rows already right against
+# 32 wrong; it was kept only because building it costs nothing measurable.
+#
+# Rejected: ih:eh (464 matches, 442 already right against 22 failures - a rule
+# there risks 20x what it gains), h:eh (33 matches, 31 already right), f:v (46
+# failing rows but all one stem, vahtiđ), ájá:aijâ (46 rows, one stem),
+# kkâdis:kis (4 stems, worth exactly +1 row in the end), and the aggressivlâš
+# and aktivlâš suffix families, which are one lemma each.
+âdis:is	3
+âs:is	3
+eđ:iđ	3
