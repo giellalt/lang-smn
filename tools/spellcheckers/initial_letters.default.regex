@@ -1,13 +1,25 @@
+! Initial-letter edits. Read only when INITIAL_EDITS in
+! Makefile.mod-desktop-hfst.am is 'regex' or 'both'; it is 'no' at present,
+! so nothing here is compiled into the shipped error model.
+!
+! The alphabet is every letter attested word-initially in the smn lexicon.
+! Deliberately absent: â, đ, ŋ and ž (and their capitals) never begin an smn
+! word - the single â- entry in the stem files is the compound-final element
+! â-maadâ. Also absent: q, w, x, æ, ø and å, which are not smn letters; their
+! handful of word-initial attestations are unassimilated foreign material
+! (watti, wales-, xylitol, xhosa-, Åland, Ørsta) and none of them appear in
+! editdist.default.txt either.
 [
-[ [A|Á|B|C|Č|D|E|F|G|H|I|J|K|L|M|N|O|P|R|S|Š|T|U|V|Y|Ä|Æ|Ø|Ö|Å] ->
-  [A|Á|B|C|Č|D|E|F|G|H|I|J|K|L|M|N|O|P|R|S|Š|T|U|V|Y|Ä|Æ|Ø|Ö|Å] ]::20 
+[ [A|Á|Ä|B|C|Č|D|E|F|G|H|I|J|K|L|M|N|O|P|R|S|Š|T|U|V|Y|Z|Ö] ->
+  [A|Á|Ä|B|C|Č|D|E|F|G|H|I|J|K|L|M|N|O|P|R|S|Š|T|U|V|Y|Z|Ö] ]::20
 |
-[ [a|á|b|c|č|d|e|f|g|h|i|j|k|l|m|n|o|p|r|s|š|t|u|v|y|ä|æ|ø|ö|å] ->
-  [a|á|b|c|č|d|e|f|g|h|i|j|k|l|m|n|o|p|r|s|š|t|u|v|y|ä|æ|ø|ö|å] ]::20 
+[ [a|á|ä|b|c|č|d|e|f|g|h|i|j|k|l|m|n|o|p|r|s|š|t|u|v|y|z|ö] ->
+  [a|á|ä|b|c|č|d|e|f|g|h|i|j|k|l|m|n|o|p|r|s|š|t|u|v|y|z|ö] ]::20
 |
 [
 a -> A,
 á -> Á,
+ä -> Ä,
 b -> B,
 c -> C,
 č -> Č,
@@ -24,18 +36,13 @@ m -> M,
 n -> N,
 o -> O,
 p -> P,
-q -> Q,
 r -> R,
 s -> S,
 š -> Š,
 t -> T,
 u -> U,
 v -> V,
-w -> W,
 y -> Y,
-æ -> Æ,
-ø -> Ø,
-å -> Å,
-ä -> Ä,
+z -> Z,
 ö -> Ö ]::25
 ] ;
