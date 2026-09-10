@@ -82,17 +82,11 @@ linux](https://wiki.apertium.org/wiki/Installation_of_grammar_libraries)
 
 Further details and dependencies are described on the GiellaLT [Getting Started](https://giellalt.uit.no/infra/GettingStarted.html) pages.
 
-Downloading
------------
+Downloading source code
+-----------------------
 
-Using Git:
 ```
 git clone https://github.com/giellalt/lang-smn
-```
-
-Using Subversion:
-```
-svn checkout https://github.com/giellalt/lang-smn.git/trunk lang-smn
 ```
 
 Building and installation
