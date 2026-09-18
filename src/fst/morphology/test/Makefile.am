@@ -18,7 +18,6 @@ GENERATION_TESTS=
 XFAIL_TESTS=generate-adjective-paradigm.sh \
 			generate-verb-paradigm.sh	  \
 			generate-propernoun-lemmas.sh \
-			generate-verb-lemmas.sh		  \
 			generate-adjective-lemmas.sh  \
 			generate-noun-lemmas.sh
 
