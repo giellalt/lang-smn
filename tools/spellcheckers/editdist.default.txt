@@ -96,6 +96,12 @@ q	á	4
 w	š	4
 x	č	4
 
+## A pair listed once also sets the reverse at the same weight (editdist.py,
+## giella-core 1.16.12 and later). These reverses stay at the default weight:
+## a for o and á for i cost top-1 and top-5 rows when they were cheap.
+a	o	10
+á	i	10
+
 ## Swaps. NB! Please note that these depend on the variable
 ## USE_SWAPS in Makefile.am in this directory. Also note that
 ## enabling swaps is computationally expensive. See note in
